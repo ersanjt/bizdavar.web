@@ -1,12 +1,14 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>وبلاگ | بیزدوار گروپ</title>
-  <link rel="icon" href="../assets/images/brand/favicon.png" type="image/png">
+  <link rel="icon" href="../assets/images/brand/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles/fonts.css">
+  <link rel="stylesheet" href="../assets/styles/typography.css">
+  <link rel="stylesheet" href="../assets/styles/icons.css">
   <link rel="stylesheet" href="../assets/styles/tokens.css">
   <link rel="stylesheet" href="../assets/styles/style.css">
   <link rel="stylesheet" href="../assets/styles/layout.css">
@@ -53,9 +55,10 @@
   <button class="back-to-top" id="backToTop" aria-label="بازگشت به بالا">↑</button>
 
   <script src="../assets/scripts/config/paths.js"></script>
-  <script src="../assets/scripts/config/site-config.js"></script>
-  <script src="js/site-components.js"></script>
-  <script src="js/main.js"></script>
+  <script src="../assets/scripts/config/site-config.js"></script>
+  <script src="../assets/scripts/components/biz-icons.js"></script>
+  <script src="../assets/scripts/components/site-components.js"></script>
+  <script src="../assets/scripts/main.js"></script>
   <script>
     const crumbs = [
       { name: 'خانه', url: 'index.html' },
@@ -64,7 +67,7 @@
     injectSeo({
       title: 'وبلاگ بیزدوار | بازاریابی دیجیتال، طراحی وب و تجهیزات صنعتی',
       description: 'مقالات تخصصی بیزدوار گروپ: بازاریابی دیجیتال، Fast Web Studio، سنسورهای صنعتی VEGA و راهکارهای رشد کسب‌وکار.',
-      canonical: 'https://bizdavar.com/blog.html',
+      canonical: 'https://bizdavar.com/pages/blog.html',
       type: 'website'
     });
     renderSiteChrome();

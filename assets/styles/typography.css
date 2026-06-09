@@ -1,0 +1,129 @@
+/**
+ * Bizdavar — Typography system
+ * سلسله‌مراتب تایپوگرافی پویا و خوانا
+ */
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'kern' 1, 'liga' 1;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  letter-spacing: 0.01em;
+}
+
+/* عناوین — Estedad */
+h1, h2, h3, h4, h5, h6,
+.hero__title,
+.section__title,
+.page-hero h1,
+.fast-hero__title,
+.fast-promo__title,
+.service-card__title,
+.stat__number,
+.trust-bar__value,
+.process-step__title,
+.cta-banner h2,
+.cta-banner--pro h2,
+.form-title,
+.related-links__title,
+.prose h2,
+.prose h3,
+.vega-hero__title,
+.vega-product-card__name,
+.prosense-hero__title,
+.prosense-category-block__head h2 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.02em;
+  line-height: var(--leading-tight);
+}
+
+h1, .hero__title, .page-hero h1, .vega-hero__title, .prosense-hero__title {
+  font-weight: var(--fw-black);
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+}
+
+@supports (text-wrap: balance) {
+  h1, h2, h3, .hero__title, .section__title, .page-hero h1 {
+    text-wrap: balance;
+  }
+}
+
+.section__title {
+  font-size: var(--text-section);
+}
+
+/* ناوبری و دکمه‌ها */
+.nav__link,
+.nav__cta,
+.btn,
+.mobile-header__cta,
+.mobile-bottom-nav__label,
+.service-nav a,
+.section__eyebrow,
+.section__tag,
+.hero__badge,
+.fast-hero__title,
+.breadcrumb {
+  font-family: var(--font-display);
+}
+
+.btn,
+.nav__cta,
+.mobile-header__cta {
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.01em;
+}
+
+/* متن بدنه */
+p, li, label, input, textarea, select, .form-desc,
+.section__desc, .hero__desc, .service-card__desc,
+.prose p, .page-hero p, .contact-info__value {
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+}
+
+/* اعداد و لاتین */
+[dir='ltr'], .stat__number, .portfolio-card__domain, .trust-bar__value {
+  font-variant-numeric: tabular-nums;
+}
+
+/* برچسب‌ها */
+.section__eyebrow,
+.section__tag,
+.service-card__link,
+.blog-item__cat,
+.vega-product-card__badge,
+.prosense-highlight-card__badge {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.04em;
+}
+
+/* کارت‌های محصول */
+.product-item h3,
+.feature-item h3,
+.portfolio-card h3,
+.blog-item h3,
+.testimonial-item cite {
+  font-family: var(--font-display);
+  font-weight: var(--fw-semibold);
+}
+
+/* فوتر */
+.footer__title {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+}
+
+.footer__links,
+.footer__brand p,
+.footer__bottom {
+  font-family: var(--font-body);
+}

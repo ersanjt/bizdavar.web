@@ -13,6 +13,9 @@
     ? `https://wa.me/${C.contact.whatsapp}?text=${encodeURIComponent(C.contact.whatsappMessage)}`
     : path(R.contact);
 
+  const ic = (name, opts) => (window.BD_ICON ? window.BD_ICON(name, opts) : '');
+  const linkArrow = () => (window.BD_LINK_ARROW ? window.BD_LINK_ARROW() : '');
+
 
 
   function isActive(page) {
@@ -194,7 +197,7 @@
 
         <p>${p.excerpt}</p>
 
-        <a href="${path(p.slug)}" class="service-card__link">ادامه مطلب ←</a>
+        <a href="${path(p.slug)}" class="service-card__link">ادامه مطلب${linkArrow()}</a>
 
       </article>
 
@@ -234,7 +237,7 @@
 
              ${external ? 'target="_blank" rel="noopener noreferrer"' : ''}>
 
-            ${external ? 'مشاهده وبسایت' : 'مشاهده صفحه'} ←
+            ${external ? 'مشاهده وبسایت' : 'مشاهده صفحه'}${linkArrow()}
 
           </a>
 
@@ -247,13 +250,13 @@
 
 
   const navItems = [
-    { page: 'home', route: R.home, label: 'خانه', icon: '🏠' },
-    { page: 'about', route: R.about, label: 'درباره ما', icon: 'ℹ️' },
-    { page: 'services', route: R.services, label: 'خدمات', icon: '📋' },
-    { page: 'portfolio', route: R.portfolio, label: 'نمونه‌کارها', icon: '💼' },
-    { page: 'fast', route: R.fast, label: 'طراحی سایت', icon: '🌐' },
-    { page: 'blog', route: R.blog, label: 'وبلاگ', icon: '📝' },
-    { page: 'contact', route: R.contact, label: 'تماس', icon: '📞' }
+    { page: 'home', route: R.home, label: 'خانه', icon: 'home' },
+    { page: 'about', route: R.about, label: 'درباره ما', icon: 'info' },
+    { page: 'services', route: R.services, label: 'خدمات', icon: 'list' },
+    { page: 'portfolio', route: R.portfolio, label: 'نمونه‌کارها', icon: 'briefcase' },
+    { page: 'fast', route: R.fast, label: 'طراحی سایت', icon: 'globe' },
+    { page: 'blog', route: R.blog, label: 'وبلاگ', icon: 'article' },
+    { page: 'contact', route: R.contact, label: 'تماس', icon: 'phone' }
   ];
 
   window.renderSiteChrome = function () {
@@ -267,11 +270,11 @@
       topBar.innerHTML = `
         <div class="container">
           <div class="top-bar__contact">
-            <a href="mailto:${C.contact.email}">📧 ${C.contact.email}</a>
+            <a href="mailto:${C.contact.email}">${ic('mail', { size: 16 })} ${C.contact.email}</a>
             ${C.contact.phone
-              ? `<a href="tel:${C.contact.phone}">📞 ${C.contact.phoneDisplay || C.contact.phone}</a>`
-              : `<span>📞 ${C.contact.phoneDisplay}</span>`}
-            <span>🕐 ${C.contact.workingHours}</span>
+              ? `<a href="tel:${C.contact.phone}">${ic('phone', { size: 16 })} ${C.contact.phoneDisplay || C.contact.phone}</a>`
+              : `<span>${ic('phone', { size: 16 })} ${C.contact.phoneDisplay}</span>`}
+            <span>${ic('clock', { size: 16 })} ${C.contact.workingHours}</span>
           </div>
           <div class="top-bar__social">
             <a href="${C.contact.instagram}" target="_blank" rel="noopener noreferrer me">Instagram</a>
@@ -287,7 +290,7 @@
 
       const drawerLinks = navItems.map(n =>
         `<a href="${path(n.route)}" class="mobile-drawer__link${isActive(n.page)}">
-          <span class="mobile-drawer__icon">${n.icon}</span>
+          <span class="mobile-drawer__icon">${ic(n.icon, { size: 22 })}</span>
           <span>${n.label}</span>
         </a>`
       ).join('');
@@ -316,7 +319,7 @@
           <div class="mobile-header__actions">
             <a href="${wa}" class="mobile-header__icon-btn mobile-header__icon-btn--wa"
                aria-label="واتساپ"
-               ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''}>💬</a>
+               ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''}>${ic('whatsapp', { size: 20, variant: 'white' })}</a>
             <a href="${path(R.contact)}" class="mobile-header__cta">تماس</a>
             <button type="button" class="mobile-header__menu" id="mobileMenuBtn" aria-label="منو" aria-expanded="false">
               <span></span><span></span><span></span>
@@ -327,16 +330,16 @@
         <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
           <div class="mobile-drawer__head">
             <img src="${path(A.logo)}" alt="${C.siteName}" height="32">
-            <button type="button" class="mobile-drawer__close" id="mobileDrawerClose" aria-label="بستن منو">✕</button>
+            <button type="button" class="mobile-drawer__close" id="mobileDrawerClose" aria-label="بستن منو">${ic('close', { size: 20 })}</button>
           </div>
           <nav class="mobile-drawer__nav" aria-label="منوی موبایل">
             ${drawerLinks}
           </nav>
           <div class="mobile-drawer__contact">
-            <a href="mailto:${C.contact.email}" class="mobile-drawer__contact-item">📧 ${C.contact.email}</a>
+            <a href="mailto:${C.contact.email}" class="mobile-drawer__contact-item">${ic('mail', { size: 16 })} ${C.contact.email}</a>
             ${C.contact.phone
-              ? `<a href="tel:${C.contact.phone}" class="mobile-drawer__contact-item">📞 ${C.contact.phoneDisplay || C.contact.phone}</a>`
-              : `<span class="mobile-drawer__contact-item">📞 ${C.contact.phoneDisplay}</span>`}
+              ? `<a href="tel:${C.contact.phone}" class="mobile-drawer__contact-item">${ic('phone', { size: 16 })} ${C.contact.phoneDisplay || C.contact.phone}</a>`
+              : `<span class="mobile-drawer__contact-item">${ic('phone', { size: 16 })} ${C.contact.phoneDisplay}</span>`}
             <div class="mobile-drawer__social">
               <a href="${C.contact.instagram}" target="_blank" rel="noopener noreferrer me">Instagram</a>
               <a href="${C.contact.linkedin}" target="_blank" rel="noopener noreferrer me">LinkedIn</a>
@@ -398,9 +401,9 @@
 
         <div class="footer__mobile">
           <div class="mobile-footer-cta">
-            <a href="${path(R.contact)}" class="mobile-footer-cta__btn mobile-footer-cta__btn--primary">📩 فرم تماس</a>
+            <a href="${path(R.contact)}" class="mobile-footer-cta__btn mobile-footer-cta__btn--primary">${ic('send', { size: 18 })} فرم تماس</a>
             <a href="${wa}" class="mobile-footer-cta__btn mobile-footer-cta__btn--wa"
-               ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''}>💬 واتساپ</a>
+               ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''}>${ic('whatsapp', { size: 18 })} واتساپ</a>
           </div>
           <div class="mobile-footer-accordions">
             <details class="mobile-footer-acc" open>
@@ -447,20 +450,20 @@
     }
 
     const bottomItems = [
-      { page: 'home', route: R.home, label: 'خانه', icon: '🏠' },
-      { page: 'services', route: R.services, label: 'خدمات', icon: '📋' },
-      { page: 'fast', route: R.fast, label: 'سایت', icon: '🌐' },
-      { page: 'contact', route: R.contact, label: 'تماس', icon: '📞' }
+      { page: 'home', route: R.home, label: 'خانه', icon: 'home' },
+      { page: 'services', route: R.services, label: 'خدمات', icon: 'list' },
+      { page: 'fast', route: R.fast, label: 'سایت', icon: 'globe' },
+      { page: 'contact', route: R.contact, label: 'تماس', icon: 'phone' }
     ];
 
     bottomNav.innerHTML = bottomItems.map(item => `
       <a href="${path(item.route)}" class="mobile-bottom-nav__item${isActive(item.page) ? ' active' : ''}">
-        <span class="mobile-bottom-nav__icon">${item.icon}</span>
+        <span class="mobile-bottom-nav__icon">${ic(item.icon, { size: 22 })}</span>
         <span class="mobile-bottom-nav__label">${item.label}</span>
       </a>
     `).join('') + `
       <button type="button" class="mobile-bottom-nav__item" id="mobileBottomMenu" aria-label="باز کردن منو">
-        <span class="mobile-bottom-nav__icon">☰</span>
+        <span class="mobile-bottom-nav__icon">${ic('menu', { size: 22 })}</span>
         <span class="mobile-bottom-nav__label">منو</span>
       </button>`;
   };
@@ -589,6 +592,26 @@
 
       email: C.contact.email,
 
+      foundingDate: '2013',
+
+      founder: {
+
+        '@type': 'Person',
+
+        name: 'Ersan Jahed Tabrizi',
+
+        jobTitle: 'Founder',
+
+        url: C.contact.linkedin,
+
+        sameAs: C.contact.linkedin
+
+      },
+
+      areaServed: ['TR', 'AM', 'IR', 'AE', 'DE', 'US', 'GB', 'LB', 'IQ', 'GE', 'IT'],
+
+      knowsAbout: ['Digital Marketing', 'Web Design', 'Industrial Equipment', 'Fintech', 'SEO'],
+
       address: {
 
         '@type': 'PostalAddress',
@@ -599,7 +622,7 @@
 
       },
 
-      sameAs: [C.contact.linkedin, C.contact.instagram],
+      sameAs: [C.contact.linkedin, C.contact.instagram, `https://${C.domains.alt}`],
 
       contactPoint: {
 
@@ -916,6 +939,170 @@
   };
 
 
+
+  window.renderCredibilitySection = function (containerId) {
+    const I = window.BIZDAVAR_INTEL;
+    const el = document.getElementById(containerId);
+    if (!el || !I) return;
+    const f = I.leadership.founder;
+    el.innerHTML = `
+      <section class="section intel-section" aria-labelledby="cred-heading">
+        <div class="container">
+          <div class="section__header section__header--pro">
+            <span class="section__eyebrow">اعتبار و تجربه</span>
+            <h2 class="section__title" id="cred-heading">چرا بیزدوار گروپ؟</h2>
+            <p class="section__desc">داده‌های تأییدشده از پروفایل حرفه‌ای، نمونه‌کارها و سوابق اجرایی</p>
+          </div>
+          <div class="intel-stats">
+            <div class="intel-stat"><strong>${f.projectsCount}</strong><span>پروژه وب و پلتفرم</span></div>
+            <div class="intel-stat"><strong>${f.countriesCount}</strong><span>کشور</span></div>
+            <div class="intel-stat"><strong>${f.experienceYears}</strong><span>سال تجربه</span></div>
+            <div class="intel-stat"><strong>${I.identity.foundedDisplay}</strong><span>شروع فعالیت</span></div>
+          </div>
+          <div class="intel-proof-grid">
+            ${I.socialProof.highlights.map(h => `
+              <article class="intel-proof-card">
+                <span class="intel-proof-card__cat">${h.category}</span>
+                <p>${h.text}</p>
+                <footer><cite>${h.source}</cite> · ${h.year}</footer>
+              </article>
+            `).join('')}
+          </div>
+          <p class="intel-note text-center mt-24">منابع: <a href="${f.linkedin}" target="_blank" rel="noopener noreferrer me">LinkedIn بنیان‌گذار</a> · <a href="${path(R.portfolio)}">نمونه‌کارها</a> · <a href="${path(R.about)}">درباره کامل</a></p>
+        </div>
+      </section>`;
+  };
+
+  window.renderCompanyIntelAbout = function () {
+    const I = window.BIZDAVAR_INTEL;
+    if (!I) return;
+    const f = I.leadership.founder;
+
+    const identityEl = document.getElementById('intelIdentity');
+    if (identityEl) {
+      identityEl.innerHTML = `
+        <div class="intel-identity-grid">
+          <dl class="intel-dl">
+            <div><dt>نام رسمی</dt><dd>${I.identity.legalNameFa} (${I.identity.legalName})</dd></div>
+            <div><dt>تأسیس</dt><dd>${I.identity.foundedDisplay}</dd></div>
+            <div><dt>دامنه‌ها</dt><dd dir="ltr">${I.identity.domains.join(' · ')}</dd></div>
+            <div><dt>زبان‌های خدمت</dt><dd>${I.identity.languages.join('، ')}</dd></div>
+          </dl>
+          <ul class="intel-hq-list">
+            ${I.identity.headquarters.map(h => `
+              <li><strong>${h.city}، ${h.country}</strong><span>${h.role}</span></li>
+            `).join('')}
+          </ul>
+        </div>`;
+    }
+
+    const leaderEl = document.getElementById('intelLeader');
+    if (leaderEl) {
+      leaderEl.innerHTML = `
+        <article class="intel-leader-card">
+          <div class="intel-leader-card__head">
+            <h3>${f.nameFa}</h3>
+            <p>${f.titleFa} · ${f.experienceYears} سال · ${f.projectsCount} پروژه</p>
+            <a href="${f.linkedin}" class="service-card__link" target="_blank" rel="noopener noreferrer me">پروفایل LinkedIn${linkArrow()}</a>
+          </div>
+          <p>${f.bioFa}</p>
+          <div class="intel-tags">
+            ${f.expertise.map(e => `<span class="intel-tag">${e}</span>`).join('')}
+          </div>
+          <h4>تحصیلات</h4>
+          <ul class="intel-list">${f.education.map(e => `<li>${e}</li>`).join('')}</ul>
+        </article>`;
+    }
+
+    const areasEl = document.getElementById('intelAreas');
+    if (areasEl) {
+      areasEl.innerHTML = I.activityAreas.map(a => `
+        <div class="intel-area-card">
+          <h3>${a.title}</h3>
+          <ul>${a.items.map(i => `<li>${i}</li>`).join('')}</ul>
+        </div>
+      `).join('');
+    }
+
+    const ecoEl = document.getElementById('intelEcosystem');
+    if (ecoEl) {
+      ecoEl.innerHTML = I.ecosystem.map(b => `
+        <div class="intel-eco-card">
+          <strong>${b.name}</strong>
+          <span class="intel-eco-card__type">${b.type}</span>
+          <p>${b.note}</p>
+        </div>
+      `).join('');
+    }
+
+    const presenceEl = document.getElementById('intelPresence');
+    if (presenceEl) {
+      presenceEl.innerHTML = `
+        <p class="section__desc">${I.presence.summaryFa}</p>
+        <div class="intel-presence-tags">
+          ${I.presence.countries.map(c => `<span class="intel-tag intel-tag--country">${c}</span>`).join('')}
+        </div>`;
+    }
+
+    const credEl = document.getElementById('intelCredentials');
+    if (credEl) {
+      credEl.innerHTML = I.credentials.map(c => `
+        <div class="intel-cred-card">
+          <strong>${c.name}</strong>
+          <span>${c.issuer} — ${c.year}</span>
+        </div>
+      `).join('');
+    }
+
+    const proofEl = document.getElementById('intelSocialProof');
+    if (proofEl) {
+      proofEl.innerHTML = `
+        <div class="intel-proof-grid">
+          ${I.socialProof.highlights.map(h => `
+            <article class="intel-proof-card">
+              <span class="intel-proof-card__cat">${h.category}</span>
+              <p>${h.text}</p>
+              <footer><cite>${h.source}</cite></footer>
+            </article>
+          `).join('')}
+        </div>
+        <ul class="intel-trust-list">
+          ${I.socialProof.trustSignals.map(s => `<li>${s}</li>`).join('')}
+        </ul>`;
+    }
+
+    const faqEl = document.getElementById('intelFaq');
+    if (faqEl) {
+      faqEl.innerHTML = I.faqIntel.map(item => `
+        <details class="faq-item">
+          <summary>${item.q}</summary>
+          <p>${item.a}</p>
+        </details>
+      `).join('');
+    }
+  };
+
+  window.injectIntelFaqSchema = function () {
+    const I = window.BIZDAVAR_INTEL;
+    if (!I || !I.faqIntel) return;
+    const ld = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: I.faqIntel.map(item => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: { '@type': 'Answer', text: item.a }
+      }))
+    };
+    let script = document.getElementById('jsonld-intel-faq');
+    if (!script) {
+      script = document.createElement('script');
+      script.id = 'jsonld-intel-faq';
+      script.type = 'application/ld+json';
+      document.head.appendChild(script);
+    }
+    script.textContent = JSON.stringify(ld);
+  };
 
   window.renderProcessSection = function (containerId) {
 

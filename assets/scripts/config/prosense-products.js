@@ -32,7 +32,7 @@ window.PROSENSE_CATALOG = {
       id: 'fixed',
       title: 'دتکتورهای گاز ثابت',
       titleTr: 'Sabit Gaz Dedektörleri',
-      icon: '📡',
+      icon: 'sensor',
       desc: 'سنسورهای گاز ثابت برای نصب دائم در تاسیسات صنعتی',
       series: [
         { name: 'PQ Serisi', note: 'SIL2, SIL3 sertifikalı', featured: true },
@@ -57,7 +57,7 @@ window.PROSENSE_CATALOG = {
       id: 'portable',
       title: 'دتکتورهای گاز پرتابل',
       titleTr: 'Portatif Gaz Dedektörleri',
-      icon: '🎒',
+      icon: 'bag',
       desc: 'ابزار اندازه‌گیری قابل حمل برای کارکنان و بازرسی میدانی',
       series: [
         { name: 'Gas-Pro', note: 'حرفه‌ای' },
@@ -79,7 +79,7 @@ window.PROSENSE_CATALOG = {
       id: 'flame',
       title: 'دتکتورهای شعله',
       titleTr: 'Alev Dedektörleri',
-      icon: '🔥',
+      icon: 'flame',
       desc: 'شناسایی شعله و آتش در محیط‌های صنعتی و خطرناک',
       series: [
         { name: 'Takex', note: 'Takex' },
@@ -94,7 +94,7 @@ window.PROSENSE_CATALOG = {
       id: 'panels',
       title: 'پنل‌های کنترل',
       titleTr: 'Kontrol Panelleri',
-      icon: '🖥️',
+      icon: 'desktop',
       desc: 'پنل‌های آنالوگ و دیجیتال برای مدیریت چندین دتکتور',
       series: [
         { name: 'S-DP4 Analog', note: '۴ کانال آنالوگ' },
@@ -115,7 +115,7 @@ window.PROSENSE_CATALOG = {
       id: 'parking',
       title: 'سیستم گاز پارکینگ',
       titleTr: 'Otopark Gaz Algılama',
-      icon: '🅿️',
+      icon: 'parking',
       desc: 'سیستم‌های تشخیص CO و NO2 در پارکینگ‌های بسته',
       series: [
         { name: 'PPS Otopark Gaz Algılama', note: 'PPS' },
@@ -127,7 +127,7 @@ window.PROSENSE_CATALOG = {
       id: 'software',
       title: 'نرم‌افزارها',
       titleTr: 'Yazılımlar',
-      icon: '💻',
+      icon: 'monitor',
       desc: 'نرم‌افزار پیکربندی، مانیتورینگ و مدیریت سیستم',
       series: [
         { name: 'S-PVSX', note: 'S-PVSX' },
@@ -144,7 +144,7 @@ window.PROSENSE_CATALOG = {
       id: 'calibration',
       title: 'سیلندر کالیبراسیون',
       titleTr: 'Kalibrasyon Test Tüpü',
-      icon: '🧪',
+      icon: 'lab',
       desc: 'گازهای تست و کالیبراسیون Span',
       series: [
         { name: 'Span / Test Gaz Tüpleri', note: 'Span' },
@@ -157,7 +157,7 @@ window.PROSENSE_CATALOG = {
       id: 'other',
       title: 'سایر تجهیزات',
       titleTr: 'Diğer Ekipmanlar',
-      icon: '🔧',
+      icon: 'wrench',
       desc: 'لوازم جانبی، آژیر، منبع تغذیه و تجهیزات Ex',
       series: [
         { name: 'Gaz Toplama Aparatı', note: 'نمونه‌برداری' },
@@ -170,18 +170,18 @@ window.PROSENSE_CATALOG = {
   ],
 
   industries: [
-    { name: 'نفت و گاز', nameTr: 'Petrol ve Gaz', desc: 'SIL2 sertifikalı سیستم‌های درجه یک', icon: '🛢️' },
-    { name: 'ایستگاه گاز', nameTr: 'Gaz Dağıtım İstasyonları', desc: 'گازهای قابل اشتعال و سمی', icon: '⛽' },
-    { name: 'پارکینگ سرپوشیده', nameTr: 'Kapalı Otoparklar', desc: 'EN 50545-1 — اولین سیستم جهانی', icon: '🅿️' },
-    { name: 'کشتیرانی', nameTr: 'Denizcilik', desc: 'H2S و CH4 — Marine sertifikalı', icon: '🚢' },
-    { name: 'HVAC و Freon', nameTr: 'HVAC - Freon', desc: 'CO2, O2, NH3, Freon', icon: '❄️' },
-    { name: 'تصفیه آب', nameTr: 'Su Arıtma Tesisleri', desc: 'H2S, CH4, NH3, SO2, O2, CO', icon: '💧' },
-    { name: 'پتروشیمی', nameTr: 'Petrokimya', desc: 'ایمنی فرآیند', icon: '⚗️' },
-    { name: 'معدن و تونل', nameTr: 'Maden ve Tüneller', desc: 'SOMA — M1 sertifikalı', icon: '⛏️' },
-    { name: 'فولاد', nameTr: 'Demir Çelik', desc: 'محیط‌های سنگین صنعتی', icon: '🏭' },
-    { name: 'داروسازی', nameTr: 'İlaç Sanayi', desc: 'کنترل گازهای فرآیندی', icon: '💊' },
-    { name: 'غذا و نوشیدنی', nameTr: 'Yemek ve İçecek', desc: 'ایمنی تولید', icon: '🍽️' },
-    { name: 'اتاق شارژ باتری', nameTr: 'Akü Dolum Odaları', desc: 'محافظت در برابر هیدروژن', icon: '🔋' }
+    { name: 'نفت و گاز', nameTr: 'Petrol ve Gaz', desc: 'SIL2 sertifikalı سیستم‌های درجه یک', icon: 'barrel' },
+    { name: 'ایستگاه گاز', nameTr: 'Gaz Dağıtım İstasyonları', desc: 'گازهای قابل اشتعال و سمی', icon: 'gas-station' },
+    { name: 'پارکینگ سرپوشیده', nameTr: 'Kapalı Otoparklar', desc: 'EN 50545-1 — اولین سیستم جهانی', icon: 'parking' },
+    { name: 'کشتیرانی', nameTr: 'Denizcilik', desc: 'H2S و CH4 — Marine sertifikalı', icon: 'ship' },
+    { name: 'HVAC و Freon', nameTr: 'HVAC - Freon', desc: 'CO2, O2, NH3, Freon', icon: 'snowflake' },
+    { name: 'تصفیه آب', nameTr: 'Su Arıtma Tesisleri', desc: 'H2S, CH4, NH3, SO2, O2, CO', icon: 'droplet' },
+    { name: 'پتروشیمی', nameTr: 'Petrokimya', desc: 'ایمنی فرآیند', icon: 'flask' },
+    { name: 'معدن و تونل', nameTr: 'Maden ve Tüneller', desc: 'SOMA — M1 sertifikalı', icon: 'pickaxe' },
+    { name: 'فولاد', nameTr: 'Demir Çelik', desc: 'محیط‌های سنگین صنعتی', icon: 'factory' },
+    { name: 'داروسازی', nameTr: 'İlaç Sanayi', desc: 'کنترل گازهای فرآیندی', icon: 'pill' },
+    { name: 'غذا و نوشیدنی', nameTr: 'Yemek ve İçecek', desc: 'ایمنی تولید', icon: 'utensils' },
+    { name: 'اتاق شارژ باتری', nameTr: 'Akü Dolum Odaları', desc: 'محافظت در برابر هیدروژن', icon: 'battery' }
   ],
 
   academy: {

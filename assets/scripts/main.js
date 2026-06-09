@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  if (window.initDataIcons) initDataIcons();
+
   initMobileMenu();
 
   initBackToTop();
@@ -258,7 +260,7 @@ window.fillContactDetails = function () {
 
     <div class="contact-info__item">
 
-      <div class="contact-info__icon">📧</div>
+      <div class="contact-info__icon">${BD_ICON('mail', { size: 22 })}</div>
 
       <div>
 
@@ -272,7 +274,7 @@ window.fillContactDetails = function () {
 
     <div class="contact-info__item">
 
-      <div class="contact-info__icon">📧</div>
+      <div class="contact-info__icon">${BD_ICON('mail', { size: 22 })}</div>
 
       <div>
 
@@ -286,7 +288,7 @@ window.fillContactDetails = function () {
 
     <div class="contact-info__item">
 
-      <div class="contact-info__icon">📞</div>
+      <div class="contact-info__icon">${BD_ICON('phone', { size: 22 })}</div>
 
       <div>
 
@@ -300,7 +302,7 @@ window.fillContactDetails = function () {
 
     <div class="contact-info__item">
 
-      <div class="contact-info__icon">📍</div>
+      <div class="contact-info__icon">${BD_ICON('pin', { size: 22 })}</div>
 
       <div>
 
@@ -314,7 +316,7 @@ window.fillContactDetails = function () {
 
     <div class="contact-info__item">
 
-      <div class="contact-info__icon">🕐</div>
+      <div class="contact-info__icon">${BD_ICON('clock', { size: 22 })}</div>
 
       <div>
 
@@ -328,7 +330,7 @@ window.fillContactDetails = function () {
 
     <div class="contact-info__item">
 
-      <div class="contact-info__icon">🌐</div>
+      <div class="contact-info__icon">${BD_ICON('globe', { size: 22 })}</div>
 
       <div>
 

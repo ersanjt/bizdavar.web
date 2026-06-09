@@ -6,6 +6,7 @@
   if (!V) return;
 
   const path = (p) => window.resolvePath(p);
+  const ic = (name, opts) => (window.BD_ICON ? window.BD_ICON(name, opts) : '');
 
   function renderHero() {
     const el = document.getElementById('vegaHeroContent');
@@ -27,7 +28,7 @@
         </div>
       </div>
       <div class="vega-hero__visual">
-        <img src="${path('assets/images/content/global-network-connection-world-map-point-and-line-composition-concept-of-global-business-illustration-vector-300x300.jpg')}" alt="شبکه جهانی تامین VEGA — بیزدوار گروپ" width="400" height="400" loading="eager">
+        <img src="${path('assets/images/content/network-map.svg')}" alt="شبکه جهانی تامین VEGA — بیزدوار گروپ" width="400" height="400" loading="eager">
       </div>`;
   }
 
@@ -35,7 +36,7 @@
     const el = document.getElementById('vegaCatNav');
     if (!el) return;
     el.innerHTML = V.categories.map((c, i) =>
-      `<a href="#vega-cat-${c.id}" class="vega-cat-nav__item${i === 0 ? ' active' : ''}">${c.icon} ${c.title}</a>`
+      `<a href="#vega-cat-${c.id}" class="vega-cat-nav__item${i === 0 ? ' active' : ''}">${ic(c.icon, { size: 18 })} ${c.title}</a>`
     ).join('');
   }
 
@@ -58,7 +59,7 @@
           <div class="vega-product-card__tags">
             ${p.applications.map(a => `<span class="vega-product-card__tag">${a}</span>`).join('')}
           </div>
-          <a href="${p.officialRef}" class="vega-product-card__link" target="_blank" rel="noopener noreferrer">مشاهده در کاتالوگ رسمی VEGA ←</a>
+          <a href="${p.officialRef}" class="vega-product-card__link" target="_blank" rel="noopener noreferrer">مشاهده در کاتالوگ رسمی VEGA${window.BD_LINK_ARROW ? BD_LINK_ARROW() : ''}</a>
         </div>
       </article>
     `).join('');
@@ -80,7 +81,7 @@
     if (!el) return;
     el.innerHTML = V.industries.map(ind => `
       <div class="vega-industry-item">
-        <span>${ind.icon}</span>
+        <span>${ic(ind.icon, { size: 22 })}</span>
         <strong>${ind.name}</strong>
         <small dir="ltr">${ind.nameEn}</small>
       </div>

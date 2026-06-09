@@ -1,0 +1,146 @@
+/**
+ * Bizdavar — Custom Icon Styles
+ */
+
+.bd-icon {
+  display: inline-block;
+  flex-shrink: 0;
+  vertical-align: middle;
+  color: var(--navy);
+}
+
+.bd-icon--inline {
+  display: inline-block;
+  vertical-align: -2px;
+  margin-inline-start: 4px;
+}
+
+.bd-icon--white { color: var(--white); }
+.bd-icon--muted { color: var(--text-muted); }
+.bd-icon--accent { color: var(--red); }
+.bd-icon--yellow { color: var(--yellow-dark); }
+
+/* کارت خدمات */
+.service-card__icon {
+  font-size: 0;
+}
+.service-card__icon .bd-icon {
+  width: 28px;
+  height: 28px;
+}
+
+/* ویژگی‌ها */
+.feature-item__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, var(--yellow) 0%, #f5c800 100%);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+.feature-item__icon .bd-icon {
+  width: 26px;
+  height: 26px;
+  color: var(--navy);
+}
+
+/* تماس */
+.contact-info__icon {
+  font-size: 0;
+}
+.contact-info__icon .bd-icon {
+  width: 22px;
+  height: 22px;
+}
+
+/* موبایل — دراور و ناوبری پایین */
+.mobile-drawer__icon,
+.mobile-bottom-nav__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mobile-drawer__icon .bd-icon,
+.mobile-bottom-nav__icon .bd-icon {
+  width: 22px;
+  height: 22px;
+}
+.mobile-bottom-nav__item.active .bd-icon {
+  color: var(--red);
+}
+
+.mobile-header__icon-btn .bd-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--white);
+}
+
+.top-bar__contact .bd-icon,
+.mobile-drawer__contact-item .bd-icon {
+  width: 16px;
+  height: 16px;
+  margin-inline-end: 6px;
+  vertical-align: -3px;
+  color: var(--yellow);
+}
+
+.mobile-footer-cta__btn .bd-icon {
+  width: 18px;
+  height: 18px;
+  margin-inline-end: 6px;
+  vertical-align: -3px;
+}
+
+/* VEGA / Prosense */
+.vega-cat-nav__item .bd-icon,
+.prosense-cat-nav__item .bd-icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: -3px;
+  margin-inline-end: 6px;
+}
+
+.prosense-category-block__icon {
+  font-size: 0;
+}
+.prosense-category-block__icon .bd-icon {
+  width: 36px;
+  height: 36px;
+}
+
+.vega-industry-item > span,
+.prosense-industry-card > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 10px;
+  background: var(--gray-100);
+  border-radius: var(--radius-sm);
+}
+.vega-industry-item .bd-icon,
+.prosense-industry-card .bd-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.prosense-hero__meta .bd-icon {
+  width: 16px;
+  height: 16px;
+  margin-inline-end: 6px;
+  vertical-align: -2px;
+  color: var(--yellow);
+}
+
+.service-card__link .bd-icon--inline {
+  margin-inline-start: 6px;
+}
+
+.back-to-top .bd-icon {
+  width: 20px;
+  height: 20px;
+}

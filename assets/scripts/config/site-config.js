@@ -28,9 +28,9 @@ window.BIZDAVAR_CONFIG = {
   },
 
   assets: {
-    favicon: 'assets/images/brand/favicon.png',
-    logo: 'assets/images/brand/bizdavar-logo.png',
-    ogImage: 'assets/images/content/about-us-1320x682.jpg'
+    favicon: 'assets/images/brand/favicon.svg',
+    logo: 'assets/images/brand/bizdavar-logo.svg',
+    ogImage: 'assets/images/content/about-hero.svg'
   },
 
   contact: {
@@ -54,8 +54,8 @@ window.BIZDAVAR_CONFIG = {
 
   seo: {
     defaultTitle: 'بیزدوار گروپ | خدمات دیجیتال، طراحی سایت و تامین تجهیزات صنعتی',
-    defaultDescription: 'بیزدوار گروپ — آژانس دیجیتال مارکتینگ، طراحی وب حرفه‌ای، مدیریت شبکه‌های اجتماعی و تامین تجهیزات صنعتی. مشاوره رایگان و راهکارهای توسعه کسب‌وکار.',
-    keywords: 'بیزدوار, Bizdavar, بازاریابی دیجیتال, طراحی سایت, SMM, تامین تجهیزات صنعتی, Fast Web Studio',
+    defaultDescription: 'بیزدوار گروپ — آژانس دیجیتال با ۱۲+ سال تجربه و ۱۰۰+ پروژه در ۱۱ کشور. بازاریابی دیجیتال، طراحی وب، فین‌تک، SMM و تامین تجهیزات صنعتی VEGA و Prosense.',
+    keywords: 'بیزدوار, Bizdavar Group, ارسان جاهد تبریزی, بازاریابی دیجیتال, طراحی سایت, SMM, فین‌تک, VEGA, Prosense, Fast Web Studio, آژانس دیجیتال استانبول',
     twitterCard: 'summary_large_image',
     author: 'Bizdavar Group',
     themeColor: '#16163f'
@@ -101,14 +101,22 @@ window.BIZDAVAR_CONFIG = {
       category: 'تجهیزات صنعتی',
       date: '2025-03-20',
       relatedService: 'pages/services.html#industrial'
+    },
+    {
+      slug: 'pages/articles/about-bizdavar-group.html',
+      title: 'بیزدوار گروپ چیست؟ — تاریخچه، تیم و حوزه‌های فعالیت',
+      excerpt: 'شناسنامه کامل بیزدوار: بنیان‌گذار، ۱۱ کشور، ۱۰۰+ پروژه و اکوسیستم برندها.',
+      category: 'درباره شرکت',
+      date: '2026-06-01',
+      relatedService: 'pages/about.html'
     }
   ],
 
   trustMetrics: [
-    { value: '+۱۶', label: 'دامنه مدیریت‌شده' },
-    { value: '۵ روز', label: 'تحویل Fast Studio' },
-    { value: '۴', label: 'حوزه تخصصی' },
-    { value: '۱۰۰٪', label: 'تمرکز بر نتیجه' }
+    { value: '+۱۰۰', label: 'پروژه دیجیتال' },
+    { value: '۱۱', label: 'کشور فعال' },
+    { value: '۱۲+', label: 'سال تجربه' },
+    { value: '+۱۶', label: 'دامنه مدیریت‌شده' }
   ],
 
   processSteps: [

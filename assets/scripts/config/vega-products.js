@@ -16,11 +16,11 @@ window.VEGA_CATALOG = {
   },
 
   categories: [
-    { id: 'level', title: 'اندازه‌گیری سطح', titleEn: 'Level Measurement', icon: '📡' },
-    { id: 'point', title: 'تشخیص نقطه‌سطح', titleEn: 'Point Level / Switching', icon: '🔘' },
-    { id: 'pressure', title: 'اندازه‌گیری فشار', titleEn: 'Pressure', icon: '⏲️' },
-    { id: 'software', title: 'نرم‌افزار و سرویس', titleEn: 'Software & Digital', icon: '💻' },
-    { id: 'accessories', title: 'لوازم جانبی', titleEn: 'Accessories & Spare Parts', icon: '🔧' }
+    { id: 'level', title: 'اندازه‌گیری سطح', titleEn: 'Level Measurement', icon: 'level-sensor' },
+    { id: 'point', title: 'تشخیص نقطه‌سطح', titleEn: 'Point Level / Switching', icon: 'level-point' },
+    { id: 'pressure', title: 'اندازه‌گیری فشار', titleEn: 'Pressure', icon: 'gauge' },
+    { id: 'software', title: 'نرم‌افزار و سرویس', titleEn: 'Software & Digital', icon: 'monitor' },
+    { id: 'accessories', title: 'لوازم جانبی', titleEn: 'Accessories & Spare Parts', icon: 'wrench' }
   ],
 
   featuredProducts: [
@@ -118,21 +118,21 @@ window.VEGA_CATALOG = {
   ],
 
   industries: [
-    { name: 'صنایع شیمیایی', nameEn: 'Chemical industry', icon: '⚗️' },
-    { name: 'صنایع غذایی', nameEn: 'Food industry', icon: '🍽️' },
-    { name: 'داروسازی', nameEn: 'Pharmaceutical', icon: '💊' },
-    { name: 'آب و فاضلاب', nameEn: 'Water & wastewater', icon: '💧' },
-    { name: 'آبزی‌پروری', nameEn: 'Aquaculture', icon: '🐟' },
-    { name: 'مصالح ساختمانی', nameEn: 'Building materials', icon: '🏗️' },
-    { name: 'جذب کربن', nameEn: 'Carbon Capture', icon: '🌿' },
-    { name: 'انرژی', nameEn: 'Energy', icon: '⚡' },
-    { name: 'معدن و فلزات', nameEn: 'Mining & metals', icon: '⛏️' },
-    { name: 'نفت و گاز دریایی', nameEn: 'Oil & gas offshore', icon: '🛢️' },
-    { name: 'صنایع کاغذ', nameEn: 'Paper industry', icon: '📄' },
-    { name: 'پالایش و پتروشیمی', nameEn: 'Refining & petrochemicals', icon: '🏭' },
-    { name: 'کشتی‌سازی', nameEn: 'Ship & yacht building', icon: '🚢' },
-    { name: 'محیط‌زیست و بازیافت', nameEn: 'Environment & recycling', icon: '♻️' },
-    { name: 'سیمان', nameEn: 'Cement', icon: '🧱' }
+    { name: 'صنایع شیمیایی', nameEn: 'Chemical industry', icon: 'flask' },
+    { name: 'صنایع غذایی', nameEn: 'Food industry', icon: 'utensils' },
+    { name: 'داروسازی', nameEn: 'Pharmaceutical', icon: 'pill' },
+    { name: 'آب و فاضلاب', nameEn: 'Water & wastewater', icon: 'droplet' },
+    { name: 'آبزی‌پروری', nameEn: 'Aquaculture', icon: 'fish' },
+    { name: 'مصالح ساختمانی', nameEn: 'Building materials', icon: 'crane' },
+    { name: 'جذب کربن', nameEn: 'Carbon Capture', icon: 'leaf' },
+    { name: 'انرژی', nameEn: 'Energy', icon: 'bolt' },
+    { name: 'معدن و فلزات', nameEn: 'Mining & metals', icon: 'pickaxe' },
+    { name: 'نفت و گاز دریایی', nameEn: 'Oil & gas offshore', icon: 'barrel' },
+    { name: 'صنایع کاغذ', nameEn: 'Paper industry', icon: 'document' },
+    { name: 'پالایش و پتروشیمی', nameEn: 'Refining & petrochemicals', icon: 'factory' },
+    { name: 'کشتی‌سازی', nameEn: 'Ship & yacht building', icon: 'ship' },
+    { name: 'محیط‌زیست و بازیافت', nameEn: 'Environment & recycling', icon: 'recycle' },
+    { name: 'سیمان', nameEn: 'Cement', icon: 'block' }
   ],
 
   digitalServices: {

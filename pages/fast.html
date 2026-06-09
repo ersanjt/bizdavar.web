@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="fa" dir="rtl">
 
@@ -10,20 +10,22 @@
 
   <title>Fast Web Studio | طراحی سایت حرفه‌ای در ۵ روز — بیزدوار</title>
 
-  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+  <link rel="icon" href="../assets/images/brand/favicon.svg" type="image/svg+xml">
 
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 
-  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles/fonts.css">
+  <link rel="stylesheet" href="../assets/styles/typography.css">
+  <link rel="stylesheet" href="../assets/styles/icons.css">
 
-  <link rel="stylesheet" href="css/tokens.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="../assets/styles/tokens.css">
+  <link rel="stylesheet" href="../assets/styles/style.css">
+  <link rel="stylesheet" href="../assets/styles/layout.css">
+  <link rel="stylesheet" href="../assets/styles/responsive.css">
 
 </head>
 
-<body data-page="fast">
+<body data-page="fast" data-depth="1">
 
   <a href="#main-content" class="skip-link">رفتن به محتوای اصلی</a>
 
@@ -59,11 +61,11 @@
 
         <a href="https://www.instagram.com/bizdavar" target="_blank" rel="noopener noreferrer me" aria-label="اینستاگرام">
 
-          <img src="assets/images/instagram.svg" alt="" width="20" height="20">
+          <img src="../assets/images/icons/instagram.svg" alt="" width="20" height="20">
 
         </a>
 
-        <a href="article-fast-studio.html">راهنما</a>
+        <a href="articles/fast-studio.html">راهنما</a>
 
         <a href="contact.html">سفارش</a>
 
@@ -109,7 +111,7 @@
 
           <circle cx="250" cy="40" r="25" fill="none" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="4 4"/>
 
-          <text x="250" y="45" text-anchor="middle" fill="#3B82F6" font-size="16">🌐</text>
+          <g transform="translate(238,22)" stroke="#3B82F6" stroke-width="1.5" fill="none" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="9" ry="4"/><line x1="3" y1="12" x2="21" y2="12"/><circle cx="12" cy="12" r="1.5" fill="#FFDE00" stroke="none"/></g>
 
         </svg>
 
@@ -281,7 +283,7 @@
 
         <div class="service-card">
 
-          <div class="service-card__icon">⚡</div>
+          <div class="service-card__icon" data-bd-icon="bolt" data-bd-size="28"></div>
 
           <h3 class="service-card__title">تحویل سریع</h3>
 
@@ -291,7 +293,7 @@
 
         <div class="service-card">
 
-          <div class="service-card__icon">💰</div>
+          <div class="service-card__icon" data-bd-icon="coin" data-bd-size="28"></div>
 
           <h3 class="service-card__title">قیمت مناسب</h3>
 
@@ -301,7 +303,7 @@
 
         <div class="service-card">
 
-          <div class="service-card__icon">🎨</div>
+          <div class="service-card__icon" data-bd-icon="palette" data-bd-size="28"></div>
 
           <h3 class="service-card__title">طراحی حرفه‌ای</h3>
 
@@ -311,7 +313,7 @@
 
         <div class="service-card">
 
-          <div class="service-card__icon">🛠️</div>
+          <div class="service-card__icon" data-bd-icon="toolbox" data-bd-size="28"></div>
 
           <h3 class="service-card__title">پشتیبانی کامل</h3>
 
@@ -339,11 +341,11 @@
 
 
 
-  <script src="js/site-config.js"></script>
-
-  <script src="js/site-components.js"></script>
-
-  <script src="js/main.js"></script>
+  <script src="../assets/scripts/config/paths.js"></script>
+  <script src="../assets/scripts/config/site-config.js"></script>
+  <script src="../assets/scripts/components/biz-icons.js"></script>
+  <script src="../assets/scripts/components/site-components.js"></script>
+  <script src="../assets/scripts/main.js"></script>
 
   <script>
 
@@ -365,7 +367,7 @@
 
       canonical: 'https://fast.bizdavar.com/',
 
-      ogImage: 'assets/images/about-us-1320x682.jpg'
+      ogImage: 'assets/images/content/about-hero.svg'
 
     });
 

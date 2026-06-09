@@ -7,6 +7,7 @@
 
   const path = (r) => window.resolvePath(r);
   const R = window.BIZDAVAR_CONFIG?.routes || {};
+  const ic = (name, opts) => (window.BD_ICON ? window.BD_ICON(name, opts) : '');
 
   function renderHero() {
     const el = document.getElementById('prosenseHeroContent');
@@ -18,9 +19,9 @@
         <h1 class="prosense-hero__title">محصولات <span>${b.name}</span><br>دتکتور گاز و شعله</h1>
         <p class="prosense-hero__desc">${b.descriptionFa}</p>
         <div class="prosense-hero__meta">
-          <span>📍 ${b.origin}</span>
-          <span>📧 ${b.email}</span>
-          <span dir="ltr">📞 ${b.phone}</span>
+          <span>${ic('pin', { size: 16 })} ${b.origin}</span>
+          <span>${ic('mail', { size: 16 })} ${b.email}</span>
+          <span dir="ltr">${ic('phone', { size: 16 })} ${b.phone}</span>
         </div>
         <div class="hero__actions">
           <a href="${path(R.contact)}" class="btn btn--yellow">استعلام و تامین</a>
@@ -28,7 +29,7 @@
         </div>
       </div>
       <div class="prosense-hero__visual">
-        <img src="${path('assets/images/content/about-us-1320x682.jpg')}" alt="سیستم‌های gaz algılama Prosense — بیزدوار" width="480" height="320" loading="eager" style="border-radius:16px;object-fit:cover;width:100%;max-height:300px">
+        <img src="${path('assets/images/content/about-hero.svg')}" alt="سیستم‌های gaz algılama Prosense — بیزدوار" width="480" height="320" loading="eager" style="border-radius:16px;object-fit:cover;width:100%;max-height:300px">
       </div>`;
   }
 
@@ -48,7 +49,7 @@
     const el = document.getElementById('prosenseCatNav');
     if (!el) return;
     el.innerHTML = P.categories.map(c =>
-      `<a href="#prosense-cat-${c.id}" class="prosense-cat-nav__item">${c.icon} ${c.title}</a>`
+      `<a href="#prosense-cat-${c.id}" class="prosense-cat-nav__item">${ic(c.icon, { size: 18 })} ${c.title}</a>`
     ).join('');
   }
 
@@ -58,7 +59,7 @@
     el.innerHTML = P.categories.map(cat => `
       <div class="prosense-category-block" id="prosense-cat-${cat.id}">
         <div class="prosense-category-block__head">
-          <span class="prosense-category-block__icon">${cat.icon}</span>
+          <span class="prosense-category-block__icon">${ic(cat.icon, { size: 36 })}</span>
           <div>
             <h2>${cat.title}</h2>
             <small>${cat.titleTr}</small>
@@ -82,7 +83,7 @@
     if (!el) return;
     el.innerHTML = P.industries.map(i => `
       <div class="prosense-industry-card">
-        <span>${i.icon}</span>
+        <span>${ic(i.icon, { size: 22 })}</span>
         <strong>${i.name}</strong>
         <small>${i.nameTr}</small>
         <p>${i.desc}</p>

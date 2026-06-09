@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 768 387" role="img" aria-label="*E'3 (' (Ì2/H'1">
+  <defs>
+    <linearGradient id="c" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#16163f"/>
+      <stop offset="100%" stop-color="#2a2a6a"/>
+    </linearGradient>
+  </defs>
+  <rect width="768" height="387" fill="url(#c)" rx="16"/>
+  <rect x="48" y="48" width="320" height="48" rx="8" fill="#FFDE00" opacity="0.9"/>
+  <rect x="48" y="120" width="280" height="16" rx="4" fill="#fff" opacity="0.25"/>
+  <rect x="48" y="150" width="240" height="16" rx="4" fill="#fff" opacity="0.18"/>
+  <rect x="48" y="220" width="180" height="44" rx="22" fill="#E62833"/>
+  <text x="384" y="320" text-anchor="middle" fill="#fff" font-family="Tahoma,sans-serif" font-size="20" opacity="0.8">info@bizdavar.com</text>
+</svg>

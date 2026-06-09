@@ -34,8 +34,16 @@
   --space-section: 80px;
   --space-section-sm: 56px;
 
-  /* Typography */
-  --font-sans: 'Vazirmatn', 'Tahoma', sans-serif;
+  /* Typography — Estedad (display) + Vazirmatn (body) */
+  --font-display: 'Estedad', 'Vazirmatn', 'Tahoma', sans-serif;
+  --font-body: 'Vazirmatn', 'Estedad', 'Tahoma', sans-serif;
+  --font-sans: var(--font-body);
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+  --fw-black: 900;
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
   --text-base: 1rem;
@@ -44,6 +52,8 @@
   --text-2xl: 1.5rem;
   --text-3xl: clamp(1.75rem, 3vw, 2.25rem);
   --text-4xl: clamp(2rem, 4vw, 3rem);
+  --text-hero: clamp(2.25rem, 5.5vw, 3.75rem);
+  --text-section: clamp(1.625rem, 3.2vw, 2.25rem);
   --leading-tight: 1.3;
   --leading-normal: 1.7;
   --leading-relaxed: 1.85;

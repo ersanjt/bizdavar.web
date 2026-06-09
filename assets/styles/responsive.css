@@ -444,6 +444,17 @@
   }
 }
 
+/* ─── Company intel responsive ─── */
+@media (max-width: 900px) {
+  .intel-stats { grid-template-columns: repeat(2, 1fr); }
+  .intel-identity-grid { grid-template-columns: 1fr; }
+  .intel-dl div { grid-template-columns: 1fr; gap: var(--space-1); }
+}
+
+@media (max-width: 480px) {
+  .intel-stats { grid-template-columns: 1fr; }
+}
+
 /* ─── Utility classes (replace inline styles) ─── */
 .mt-16 { margin-top: 16px; }
 .mt-24 { margin-top: 24px; }
