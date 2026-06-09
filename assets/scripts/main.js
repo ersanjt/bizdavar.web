@@ -246,13 +246,20 @@ window.fillContactDetails = function () {
 
 
 
-  const wa = C.contact.whatsapp
+  const channels = C.contact.channels || [];
+  const waUrl = (num) => `https://wa.me/${num}?text=${encodeURIComponent(C.contact.whatsappMessage)}`;
 
-    ? `https://wa.me/${C.contact.whatsapp}?text=${encodeURIComponent(C.contact.whatsappMessage)}`
-
-    : null;
-
-
+  const phoneHtml = channels.length
+    ? channels.map(ch => `
+        <div class="contact-info__phone-row">
+          <span class="contact-info__phone-label">${ch.label}:</span>
+          <a href="tel:${ch.tel}" dir="ltr">${ch.display}</a>
+          ·
+          <a href="${waUrl(ch.whatsapp)}" target="_blank" rel="noopener noreferrer">واتساپ</a>
+        </div>`).join('')
+    : (C.contact.phone
+      ? `<a href="tel:${C.contact.phone}" dir="ltr">${C.contact.phoneDisplay || C.contact.phone}</a>`
+      : C.contact.phoneDisplay);
 
   el.innerHTML = `
 
@@ -288,13 +295,13 @@ window.fillContactDetails = function () {
 
     <div class="contact-info__item">
 
-      <div class="contact-info__icon">${BD_ICON('phone', { size: 22 })}</div>
+      <div class="contact-info__icon">${BD_ICON('whatsapp', { size: 22 })}</div>
 
       <div>
 
-        <div class="contact-info__label">تلفن / واتساپ</div>
+        <div class="contact-info__label">تماس / واتساپ / چت</div>
 
-        <div class="contact-info__value">${C.contact.phone ? `<a href="tel:${C.contact.phone}">${C.contact.phoneDisplay || C.contact.phone}</a>` : C.contact.phoneDisplay}</div>
+        <div class="contact-info__value contact-info__value--phones">${phoneHtml}</div>
 
       </div>
 
@@ -342,23 +349,14 @@ window.fillContactDetails = function () {
 
     </div>
 
-    ${wa ? `<a href="${wa}" class="btn btn--green btn--block mt-16" target="_blank" rel="noopener">پیام در واتساپ</a>` : ''}
+    ${channels.length ? channels.map(ch => `
+      <a href="${waUrl(ch.whatsapp)}" class="btn btn--green btn--block mt-16" target="_blank" rel="noopener noreferrer">
+        واتساپ ${ch.label} — ${ch.display}
+      </a>`).join('') : ''}
 
   `;
 
-
-
-  const waBtn = document.getElementById('whatsappBtn');
-
-  if (waBtn && wa) {
-
-    waBtn.href = wa;
-
-  } else if (waBtn) {
-
-    waBtn.style.display = 'none';
-
-  }
+  setupWhatsappLinks();
 
 };
 
@@ -368,33 +366,74 @@ window.setupWhatsappLinks = function () {
 
   const C = window.BIZDAVAR_CONFIG;
 
-  if (!C || !C.contact.whatsapp) return;
+  if (!C) return;
 
-  const url = `https://wa.me/${C.contact.whatsapp}?text=${encodeURIComponent(C.contact.whatsappMessage)}`;
+  const channels = C.contact.channels || [];
+  const msg = encodeURIComponent(C.contact.whatsappMessage || '');
+  const waUrl = (num) => `https://wa.me/${num}?text=${msg}`;
 
-  document.querySelectorAll('#homeWhatsapp, #whatsappBtn').forEach(el => {
+  if (!channels.length && !C.contact.whatsapp) {
+    document.querySelectorAll('#homeWhatsapp').forEach(el => {
+      if (el) el.textContent = 'تماس سریع';
+    });
+    return;
+  }
 
+  const primary = channels[0] || { whatsapp: C.contact.whatsapp };
+  const primaryUrl = waUrl(primary.whatsapp);
+
+  document.querySelectorAll('#homeWhatsapp').forEach(el => {
     if (el) {
-
-      el.href = url;
-
+      el.href = primaryUrl;
+      el.textContent = 'واتساپ';
       el.target = '_blank';
-
-      el.rel = 'noopener';
-
+      el.rel = 'noopener noreferrer';
     }
-
   });
+
+  const tr = channels.find(c => c.id === 'tr') || channels[0];
+  const ir = channels.find(c => c.id === 'ir') || channels[1];
+
+  const btnTr = document.getElementById('whatsappBtnTr');
+  const btnIr = document.getElementById('whatsappBtnIr');
+  if (btnTr && tr) btnTr.href = waUrl(tr.whatsapp);
+  if (btnIr && ir) btnIr.href = waUrl(ir.whatsapp);
+
+  const legacyBtn = document.getElementById('whatsappBtn');
+  if (legacyBtn && primary) legacyBtn.href = primaryUrl;
 
 };
 
 
+
+function prefillContactFromQuery() {
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+  const params = new URLSearchParams(window.location.search);
+  if (!params.has('product') && !params.has('message') && !params.has('service')) return;
+
+  if (params.get('service')) {
+    const val = params.get('service');
+    const opt = form.service.querySelector(`option[value="${val}"]`);
+    if (opt) form.service.value = val;
+  }
+
+  if (params.get('message')) {
+    form.message.value = params.get('message');
+  } else if (params.get('product')) {
+    const product = params.get('product');
+    form.message.value =
+      `درخواست استعلام قیمت و تامین ${product}.\n\nشرایط کاربرد:\nتعداد مورد نیاز:\n`;
+  }
+}
 
 function initContactForm() {
 
   const form = document.getElementById('contactForm');
 
   if (!form) return;
+
+  prefillContactFromQuery();
 
 
 

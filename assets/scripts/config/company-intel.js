@@ -86,20 +86,57 @@ window.BIZDAVAR_INTEL = {
   ecosystem: [
     { name: 'ZedPay', type: 'فین‌تک / پرداخت', note: 'مدیریت IT و توسعه پلتفرم' },
     { name: 'NetinoHost', type: 'هاستینگ ابری', note: 'VPS، دامنه، سرور اختصاصی' },
-    { name: 'BZ Diamond', type: 'جواهرات', note: 'فروشگاه الماس GIA و lab-grown' },
-    { name: 'Biztejarat', type: 'تجارت B2B', note: 'ابزار دقیق و الکترونیک صنعتی' },
+    { name: 'BZ Diamond', type: 'نمونه‌کار طراحی وب', note: 'فروشگاه WooCommerce، ایمیل و سئو — پروژه مشتری' },
+    { name: 'Biztejarat', type: 'نمونه‌کار SMM', note: 'صفحه اینستاگرام محصولات صنعتی — مدیریت محتوا' },
     { name: 'BZBroker', type: 'صرافی P2P', note: 'پلتفرم کریپتو' },
     { name: 'FXGuard', type: 'CRM واتساپ', note: 'اتوماسیون فروش' },
     { name: 'Bear Event', type: 'رویداد', note: 'بلیت و رویداد آنلاین' },
     { name: 'Gamak', type: 'الکتروموتور', note: 'تامین موتور صنعتی ترکیه' },
-    { name: 'Arian Pumps', type: 'پمپ صنعتی', note: 'تامین پمپ‌های صنعتی' },
+    { name: 'Arian Pumps', type: 'نمونه‌کار طراحی وب', note: 'طراحی وب شرکتی B2B — مشتری خدمات دیجیتال' },
     { name: 'Karen Leather', type: 'صادرات', note: 'بازاریابی B2B چرم' }
   ],
 
   /** حضور جغرافیایی */
   presence: {
     countries: ['ترکیه', 'امارات', 'آلمان', 'آمریکا', 'انگلستان', 'ارمنستان', 'لبنان', 'ایران', 'عراق', 'گرجستان', 'ایتالیا'],
-    summaryFa: 'پروژه‌های اجراشده در ۱۱ کشور — تمرکز عملیاتی بر بازارهای ترکیه، ارمنستان، ایران و خاورمیانه.'
+    summaryFa: 'پروژه‌های اجراشده در ۱۱ کشور — تمرکز عملیاتی بر بازارهای ترکیه، ارمنستان، ایران و خاورمیانه.',
+    mapImage: 'assets/images/content/presence-map.svg',
+    stats: [
+      { value: '۱۱', label: 'کشور فعال' },
+      { value: '۳', label: 'دفتر عملیاتی' },
+      { value: '+۱۰۰', label: 'پروژه بین‌المللی' }
+    ],
+    regions: [
+      {
+        id: 'mena',
+        title: 'خاورمیانه و ترکیه',
+        countries: [
+          { name: 'ترکیه', hub: true, city: 'استانبول', focus: 'فین‌تک · عملیات بین‌المللی' },
+          { name: 'ایران', hub: true, city: 'تبریز', focus: 'صنعت · دیجیتال' },
+          { name: 'امارات', focus: 'تجارت و فین‌تک' },
+          { name: 'عراق', focus: 'B2B صنعتی' },
+          { name: 'لبنان', focus: 'پروژه‌های منطقه‌ای' }
+        ]
+      },
+      {
+        id: 'europe',
+        title: 'اروپا و قفقاز',
+        countries: [
+          { name: 'ارمنستان', hub: true, city: 'ایروان', focus: 'ثبت شرکت · پروژه منطقه‌ای' },
+          { name: 'گرجستان', focus: 'تجارت بین‌الملل' },
+          { name: 'آلمان', focus: 'تامین تجهیزات' },
+          { name: 'انگلستان', focus: 'فین‌تک و مشاوره' },
+          { name: 'ایتالیا', focus: 'پروژه‌های صنعتی' }
+        ]
+      },
+      {
+        id: 'americas',
+        title: 'آمریکا',
+        countries: [
+          { name: 'آمریکا', focus: 'پلتفرم و استارتاپ' }
+        ]
+      }
+    ]
   },
 
   /** گواهینامه‌ها و مهارت‌های تأییدشده */

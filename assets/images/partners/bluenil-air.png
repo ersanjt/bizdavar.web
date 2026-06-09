@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon_dark.png"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon_light.png"
+      media="(prefers-color-scheme: light)"
+    />
+
+    <meta
+      name="description"
+      content="Crypto Payment Gateway | Your complete solution for crypto payments. Create invoices, manage transactions, and accept crypto payments with ease."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zed Gate</title>
+    <script type="module" crossorigin src="/assets/index-D6W95bng.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-oebQFSGZ.css">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

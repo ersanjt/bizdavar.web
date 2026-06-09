@@ -1,19 +1,23 @@
 /**
- * Prosense Products Page
+ * Prosense Products Page — brand colors from prosense.com.tr
+ * Primary: #058d9b (teal) · Navy: #1a2b4a
  */
 .prosense-hero {
-  background: linear-gradient(135deg, #7f1d1d 0%, #b91c1c 45%, #991b1b 100%);
-  color: var(--white);
-  padding: 72px 0 56px;
+  background: #f4f9fa;
+  color: #1a2b4a;
+  padding: 56px 0 48px;
   position: relative;
   overflow: hidden;
+  border-bottom: 4px solid #058d9b;
 }
 
 .prosense-hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 20% 70%, rgba(251, 191, 36, 0.12) 0%, transparent 50%);
+  background:
+    linear-gradient(105deg, rgba(244, 249, 250, 0.97) 42%, rgba(244, 249, 250, 0.55) 68%, rgba(244, 249, 250, 0.2) 100%),
+    url('../images/prosense/slides/mps-hydrocarbon.jpg') center right / cover no-repeat;
   pointer-events: none;
 }
 
@@ -21,16 +25,33 @@
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 40px;
   align-items: center;
 }
 
+.prosense-hero__logo {
+  display: block;
+  width: min(220px, 75%);
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.prosense-hero__eyebrow {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: #058d9b;
+  margin-bottom: 10px;
+  padding-right: 14px;
+  border-right: 4px solid #058d9b;
+}
+
 .prosense-hero__badge {
   display: inline-block;
-  background: rgba(251, 191, 36, 0.2);
-  border: 1px solid rgba(251, 191, 36, 0.45);
-  color: #fde68a;
+  background: rgba(5, 141, 155, 0.12);
+  border: 1px solid rgba(5, 141, 155, 0.35);
+  color: #046d78;
   padding: 6px 14px;
   border-radius: var(--radius-full);
   font-size: var(--text-xs);
@@ -43,24 +64,69 @@
   font-weight: 800;
   line-height: var(--leading-tight);
   margin-bottom: 14px;
+  color: #1a2b4a;
 }
 
-.prosense-hero__title span { color: #fde68a; }
+.prosense-hero__title span { color: #058d9b; }
+
+.prosense-hero__subtitle {
+  font-size: var(--text-xl);
+  font-weight: 800;
+  color: #1a2b4a;
+  margin-bottom: 12px;
+  letter-spacing: 0.01em;
+}
 
 .prosense-hero__desc {
   font-size: var(--text-lg);
-  opacity: 0.94;
+  color: #374151;
   line-height: var(--leading-relaxed);
   margin-bottom: 20px;
 }
 
-.prosense-hero__meta {
+.prosense-hero__stats {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  font-size: var(--text-sm);
-  opacity: 0.9;
+  gap: 16px;
   margin-bottom: 24px;
+}
+
+.prosense-hero__stat {
+  background: var(--white);
+  border: 1px solid #d1e8eb;
+  border-top: 3px solid #058d9b;
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  box-shadow: var(--shadow-sm);
+}
+
+.prosense-hero__stat strong {
+  display: block;
+  font-size: var(--text-lg);
+  color: #1a2b4a;
+}
+
+.prosense-hero__stat span {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.prosense-hero__visual img {
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 40px rgba(5, 141, 155, 0.2);
+  width: 100%;
+  object-fit: cover;
+  max-height: 360px;
+}
+
+.prosense-hero .btn--primary {
+  background: #058d9b;
+  border-color: #058d9b;
+}
+
+.prosense-hero .btn--primary:hover {
+  background: #046d78;
+  border-color: #046d78;
 }
 
 .prosense-highlights {
@@ -71,24 +137,49 @@
 
 .prosense-highlight-card {
   background: var(--white);
-  border-radius: var(--radius);
-  padding: 20px 16px;
-  border-top: 3px solid #dc2626;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--gray-200);
   box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.prosense-highlight-card__media {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.prosense-highlight-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prosense-highlight-card__body {
+  padding: 16px 14px 18px;
+  border-top: 3px solid #058d9b;
 }
 
 .prosense-highlight-card__badge {
   font-size: 10px;
   font-weight: 800;
-  color: #b91c1c;
+  color: #058d9b;
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
 
+.prosense-highlight-card__tr {
+  display: block;
+  font-size: 10px;
+  color: var(--text-muted);
+  margin: 4px 0 6px;
+}
+
 .prosense-highlight-card h3 {
   font-size: var(--text-base);
-  margin: 8px 0 6px;
-  color: #1f2937;
+  margin: 0 0 6px;
+  color: #1a2b4a;
 }
 
 .prosense-highlight-card p {
@@ -103,8 +194,8 @@
   gap: 8px;
   justify-content: center;
   padding: 20px 16px;
-  background: #fef2f2;
-  border-bottom: 1px solid #fecaca;
+  background: #e8f7f8;
+  border-bottom: 1px solid #b8e8ec;
   position: sticky;
   top: 0;
   z-index: var(--z-dropdown);
@@ -113,7 +204,7 @@
 .prosense-cat-nav__item {
   padding: 8px 16px;
   background: var(--white);
-  border: 1px solid #fecaca;
+  border: 1px solid #b8e8ec;
   border-radius: var(--radius-full);
   font-size: 13px;
   font-weight: 600;
@@ -121,9 +212,9 @@
 }
 
 .prosense-cat-nav__item:hover {
-  background: #b91c1c;
+  background: #058d9b;
   color: var(--white);
-  border-color: #b91c1c;
+  border-color: #058d9b;
 }
 
 .prosense-category-block {
@@ -132,22 +223,39 @@
 }
 
 .prosense-category-block__head {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #b8e8ec;
+}
+
+.prosense-category-block__visual img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.prosense-category-block__info {
   display: flex;
   align-items: flex-start;
   gap: 16px;
-  margin-bottom: 20px;
-  padding-bottom: 16px;
-  border-bottom: 2px solid #fecaca;
 }
 
 .prosense-category-block__icon {
   font-size: 2rem;
   line-height: 1;
+  flex-shrink: 0;
+  color: #058d9b;
 }
 
 .prosense-category-block__head h2 {
   font-size: var(--text-2xl);
-  color: #991b1b;
+  color: #046d78;
   margin-bottom: 4px;
 }
 
@@ -181,8 +289,8 @@
 }
 
 .prosense-series-card--featured {
-  border-color: #f87171;
-  background: #fffbfb;
+  border-color: #5ec4cc;
+  background: #f4fbfb;
 }
 
 .prosense-series-card--featured::after {
@@ -190,19 +298,19 @@
   position: absolute;
   top: 8px;
   left: 10px;
-  color: #dc2626;
+  color: #058d9b;
   font-size: 12px;
 }
 
 .prosense-series-card:hover {
-  border-color: #dc2626;
+  border-color: #058d9b;
   box-shadow: var(--shadow-sm);
 }
 
 .prosense-series-card strong {
   display: block;
   font-size: var(--text-sm);
-  color: #1f2937;
+  color: #1a2b4a;
   margin-bottom: 4px;
 }
 
@@ -220,15 +328,34 @@
 .prosense-industry-card {
   background: var(--white);
   border-radius: var(--radius-lg);
-  padding: 22px 18px;
+  overflow: hidden;
   border: 1px solid var(--gray-200);
   text-align: center;
+  transition: var(--transition);
 }
 
-.prosense-industry-card span {
-  font-size: 2rem;
+.prosense-industry-card:hover {
+  border-color: #058d9b;
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+.prosense-industry-card__media {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.prosense-industry-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prosense-industry-card__icon {
   display: block;
-  margin-bottom: 10px;
+  font-size: 1.5rem;
+  margin: 10px 0 6px;
+  color: #058d9b;
 }
 
 .prosense-industry-card strong {
@@ -244,17 +371,44 @@
   direction: ltr;
 }
 
+.prosense-industry-card strong,
+.prosense-industry-card small,
+.prosense-industry-card p {
+  padding: 0 12px;
+}
+
 .prosense-industry-card p {
   font-size: 12px;
   color: var(--text-muted);
-  margin-top: 8px;
+  margin: 8px 0 14px;
 }
 
 .prosense-academy-block {
-  background: linear-gradient(135deg, #1f2937, #374151);
+  background: linear-gradient(135deg, #1a2b4a, #046d78);
   color: var(--white);
   border-radius: var(--radius-lg);
   padding: 36px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.prosense-academy-block__visual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.prosense-academy-block__visual img {
+  width: 100%;
+  border-radius: var(--radius);
+  object-fit: cover;
+  min-height: 160px;
+}
+
+.prosense-academy-block__visual-secondary {
+  margin-top: 24px;
 }
 
 .prosense-academy-block h3 {
@@ -271,36 +425,356 @@
 }
 
 .prosense-academy-topics li {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.12);
   padding: 8px 14px;
   border-radius: var(--radius-full);
   font-size: var(--text-sm);
 }
 
-.prosense-supply-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 14px;
-  list-style: none;
+.prosense-academy-block .btn--yellow {
+  background: #058d9b;
+  color: var(--white);
+  border-color: #058d9b;
 }
 
-.prosense-supply-list li {
+/* Trust bar */
+.prosense-trust-bar {
+  background: #1a2b4a;
+  color: var(--white);
+  padding: 18px 0;
+}
+
+.prosense-trust-bar__inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.prosense-trust-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.prosense-trust-item__icon {
+  flex-shrink: 0;
+  color: #058d9b;
+}
+
+.prosense-trust-item strong {
+  display: block;
+  font-size: var(--text-sm);
+  margin-bottom: 2px;
+}
+
+.prosense-trust-item span {
+  font-size: 11px;
+  opacity: 0.82;
+  line-height: 1.4;
+}
+
+/* Why buy */
+.prosense-why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.prosense-why-card {
   background: var(--white);
-  padding: 18px;
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  border: 1px solid var(--gray-200);
+  border-top: 4px solid #058d9b;
+  box-shadow: var(--shadow-sm);
+}
+
+.prosense-why-card__icon {
+  display: block;
+  color: #058d9b;
+  margin-bottom: 14px;
+}
+
+.prosense-why-card h3 {
+  font-size: var(--text-lg);
+  margin-bottom: 10px;
+  color: #1a2b4a;
+}
+
+.prosense-why-card p {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: var(--leading-relaxed);
+}
+
+/* Purchase steps */
+.prosense-steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.prosense-step {
+  background: var(--white);
   border-radius: var(--radius);
-  border-right: 4px solid #dc2626;
+  padding: 22px 18px;
+  border: 1px solid var(--gray-200);
+  text-align: center;
+}
+
+.prosense-step__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: #058d9b;
+  color: var(--white);
+  font-weight: 800;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  font-size: var(--text-sm);
+}
+
+.prosense-step h3 {
+  font-size: var(--text-base);
+  margin-bottom: 8px;
+  color: #1a2b4a;
+}
+
+.prosense-step p {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Highlight usecase + inquiry */
+.prosense-highlight-card__usecase {
+  font-size: var(--text-sm);
+  color: #1a2b4a;
+  background: #f0fafb;
+  border-right: 3px solid #058d9b;
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  margin-bottom: 14px;
+  line-height: var(--leading-relaxed);
+}
+
+.prosense-highlight-card .prosense-btn-inquiry {
+  margin-top: 4px;
+}
+
+/* Iran industries */
+.prosense-iran-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.prosense-iran-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--gray-200);
+  transition: var(--transition);
+}
+
+.prosense-iran-card:hover {
+  border-color: #058d9b;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.prosense-iran-card__media {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.prosense-iran-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prosense-iran-card__body {
+  padding: 18px 20px 22px;
+}
+
+.prosense-iran-card__icon {
+  color: #058d9b;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.prosense-iran-card h3 {
+  font-size: var(--text-base);
+  margin-bottom: 8px;
+  color: #1a2b4a;
+}
+
+.prosense-iran-card p {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: var(--leading-relaxed);
+}
+
+/* Series inquiry link */
+.prosense-series-card__link {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #058d9b;
+}
+
+.prosense-series-card__link:hover {
+  color: #1a2b4a;
+}
+
+/* Supply cards */
+.prosense-supply-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.prosense-supply-card {
+  background: var(--white);
+  padding: 22px 20px;
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-200);
+  border-right: 4px solid #058d9b;
+}
+
+.prosense-supply-card h4 {
+  font-size: var(--text-base);
+  margin-bottom: 8px;
+  color: #1a2b4a;
+}
+
+.prosense-supply-card p {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+
+.prosense-official-note {
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  padding: 24px;
+  background: #f0fafb;
+  border-radius: var(--radius);
+  margin-top: 40px;
+  border: 1px solid #b8e4e9;
+}
+
+.prosense-official-note a {
+  color: #046d78;
+  font-weight: 600;
+}
+
+/* FAQ */
+.prosense-faq {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.prosense-faq__item {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.prosense-faq__item summary {
+  padding: 18px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  color: #1a2b4a;
+}
+
+.prosense-faq__item summary::-webkit-details-marker {
+  display: none;
+}
+
+.prosense-faq__item summary::before {
+  content: '+';
+  float: left;
+  font-weight: 800;
+  color: #058d9b;
+}
+
+.prosense-faq__item[open] summary::before {
+  content: '−';
+}
+
+.prosense-faq__item p {
+  padding: 0 20px 18px;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+
+/* Sticky CTA */
+.prosense-sticky-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-dropdown);
+  background: #1a2b4a;
+  color: var(--white);
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.prosense-sticky-cta.is-visible {
+  transform: translateY(0);
+}
+
+.prosense-sticky-cta span {
+  font-weight: 600;
+  font-size: var(--text-sm);
+}
+
+.prosense-btn-inquiry {
+  padding: 10px 18px;
   font-size: var(--text-sm);
 }
 
 @media (max-width: 1024px) {
   .prosense-hero .container { grid-template-columns: 1fr; }
+  .prosense-hero__visual { order: -1; }
   .prosense-highlights { grid-template-columns: repeat(2, 1fr); }
+  .prosense-category-block__head { grid-template-columns: 1fr; }
+  .prosense-academy-block { grid-template-columns: 1fr; }
+  .prosense-trust-bar__inner { grid-template-columns: repeat(2, 1fr); }
+  .prosense-steps { grid-template-columns: repeat(3, 1fr); }
+  .prosense-iran-grid { grid-template-columns: repeat(2, 1fr); }
+  .prosense-supply-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
   .prosense-highlights { grid-template-columns: 1fr; }
   .prosense-cat-nav { overflow-x: auto; flex-wrap: nowrap; justify-content: flex-start; }
   .prosense-series-grid { grid-template-columns: 1fr 1fr; }
+  .prosense-why-grid { grid-template-columns: 1fr; }
+  .prosense-steps { grid-template-columns: 1fr; }
+  .prosense-iran-grid { grid-template-columns: 1fr; }
+  .prosense-supply-grid { grid-template-columns: 1fr; }
+  .prosense-trust-bar__inner { grid-template-columns: 1fr; }
+  body[data-page="prosense"] .footer { padding-bottom: 64px; }
 }
 
 @media (max-width: 480px) {

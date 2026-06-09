@@ -1,198 +1,115 @@
 <!DOCTYPE html>
-
 <html lang="fa" dir="rtl">
-
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-
   <title>نمونه‌کارها | بیزدوار گروپ</title>
-
   <link rel="icon" href="../assets/images/brand/favicon.svg" type="image/svg+xml">
-
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-
   <link rel="stylesheet" href="../assets/styles/fonts.css">
   <link rel="stylesheet" href="../assets/styles/typography.css">
   <link rel="stylesheet" href="../assets/styles/icons.css">
-
   <link rel="stylesheet" href="../assets/styles/tokens.css">
   <link rel="stylesheet" href="../assets/styles/style.css">
   <link rel="stylesheet" href="../assets/styles/layout.css">
   <link rel="stylesheet" href="../assets/styles/responsive.css">
-
+  <link rel="stylesheet" href="../assets/styles/portfolio.css">
 </head>
-
 <body data-page="portfolio" data-depth="1">
 
-
-
-  
   <a href="#main-content" class="skip-link">رفتن به محتوای اصلی</a>
-<div class="top-bar" id="topBar"></div>
-
+  <div class="top-bar" id="topBar"></div>
   <header class="header" id="siteHeader"></header>
-
   <nav class="breadcrumbs-wrap" id="breadcrumbs" aria-label="مسیر صفحه"></nav>
-
   <div class="overlay" id="overlay"></div>
 
-
-
-  
   <main id="main-content" class="site-main">
 
-<section class="page-hero page-hero--pro">
-
-    <div class="container">
-
-      <span class="section__tag">نمونه‌کارها</span>
-
-      <h1>پروژه‌ها و برندهایی که با ما رشد کرده‌اند</h1>
-
-      <p>دامنه‌ها و پروژه‌های تحت مدیریت زیرساخت دیجیتال <a href="about.html">بیزدوار گروپ</a>.</p>
-
-    </div>
-
-  </section>
-
-
-
-  <section class="section">
-
-    <div class="container">
-
-      <div class="portfolio-grid" id="portfolioGrid"></div>
-
-    </div>
-
-  </section>
-
-
-
-  <section class="section section--gray">
-
-    <div class="container">
-
-      <div class="section__header">
-
-        <h2 class="section__title">حوزه‌های فعالیت پروژه‌ها</h2>
-
+    <section class="page-hero page-hero--pro">
+      <div class="container">
+        <span class="section__tag">نمونه‌کارها</span>
+        <h1>پروژه‌ها و برندهایی که با ما رشد کرده‌اند</h1>
+        <p>اکوسیستم برندهای بیزدوار، نمونه‌کارهای طراحی وب و SMM، و مشتریانی که خدمات دیجیتال دریافت کرده‌اند — <a href="about.html">درباره بیزدوار</a>.</p>
+        <div class="portfolio-hero-stats" id="portfolioHeroStats"></div>
       </div>
+    </section>
 
-      <div class="tags-cloud">
-
-        <a href="services.html#digital-marketing" class="tags-cloud__tag">فین‌تک و پرداخت</a>
-
-        <span class="tags-cloud__tag">رویداد و بلیت</span>
-
-        <span class="tags-cloud__tag">هلدینگ و سرمایه‌گذاری</span>
-
-        <a href="portfolio.html" class="tags-cloud__tag">هاستینگ و زیرساخت</a>
-
-        <span class="tags-cloud__tag">الماس و جواهر</span>
-
-        <a href="biztejarat.html" class="tags-cloud__tag">تجارت B2B</a>
-
-        <a href="gamak.html" class="tags-cloud__tag">الکتروموتور</a>
-
-        <span class="tags-cloud__tag">هواپیمایی</span>
-
-        <span class="tags-cloud__tag">بروکر و مالی</span>
-
+    <section class="section">
+      <div class="container">
+        <div class="portfolio-toolbar">
+          <div id="portfolioFilters"></div>
+        </div>
+        <div class="portfolio-grid portfolio-grid--pro" id="portfolioGrid"></div>
       </div>
+    </section>
 
-    </div>
+    <section class="section section--gray">
+      <div class="container">
+        <div class="section__header section__header--pro">
+          <span class="section__eyebrow">حوزه‌ها</span>
+          <h2 class="section__title">دامنه فعالیت پروژه‌ها</h2>
+        </div>
+        <div class="tags-cloud portfolio-tags">
+          <a href="services.html#digital-marketing" class="tags-cloud__tag">فین‌تک و پرداخت</a>
+          <span class="tags-cloud__tag">رویداد و بلیت</span>
+          <span class="tags-cloud__tag">هلدینگ و سرمایه‌گذاری</span>
+          <a href="portfolio.html" class="tags-cloud__tag">هاستینگ و زیرساخت</a>
+          <a href="bz-diamond.html" class="tags-cloud__tag">طراحی وب و فروشگاه</a>
+          <a href="biztejarat.html" class="tags-cloud__tag">مدیریت SMM</a>
+          <a href="services.html#industrial" class="tags-cloud__tag">تامین صنعتی</a>
+          <a href="vega.html" class="tags-cloud__tag">سنسور VEGA</a>
+          <a href="prosense.html" class="tags-cloud__tag">دتکتور Prosense</a>
+          <span class="tags-cloud__tag">هواپیمایی</span>
+          <span class="tags-cloud__tag">بروکر و مالی</span>
+        </div>
+      </div>
+    </section>
 
-  </section>
+    <section class="section portfolio-cta">
+      <div class="container cta-banner cta-banner--dark">
+        <h2>پروژه بعدی می‌تواند برند شما باشد</h2>
+        <p>از <a href="fast.html" class="link-yellow">طراحی وب</a> تا مدیریت DNS و SSL — بیزدوار همراه شماست.</p>
+        <div class="cta-banner__actions">
+          <a href="contact.html" class="btn btn--yellow">شروع پروژه جدید</a>
+          <a href="services.html" class="btn btn--primary">مشاهده خدمات</a>
+        </div>
+      </div>
+    </section>
 
-
-
-  <section class="section">
-
-    <div class="container cta-banner cta-banner--dark">
-
-      <h2>پروژه بعدی می‌تواند برند شما باشد</h2>
-
-      <p>از <a href="fast.html" class="link-yellow">طراحی وب</a> تا مدیریت DNS و SSL — بیزدوار همراه شماست.</p>
-
-      <a href="contact.html" class="btn btn--yellow">شروع پروژه جدید</a>
-
-    </div>
-
-  </section>
-
-
-
-  <div id="relatedLinks"></div>
+    <div id="relatedLinks"></div>
   </main>
 
-
-
-
-
   <footer class="footer" id="siteFooter"></footer>
-
   <button class="back-to-top" id="backToTop" aria-label="بازگشت به بالا">↑</button>
-
-
 
   <script src="../assets/scripts/config/paths.js"></script>
   <script src="../assets/scripts/config/site-config.js"></script>
   <script src="../assets/scripts/components/biz-icons.js"></script>
-
   <script src="../assets/scripts/components/site-components.js"></script>
-
+  <script src="../assets/scripts/portfolio-page.js"></script>
   <script src="../assets/scripts/main.js"></script>
-
   <script>
-
     const crumbs = [
-
-      { name: 'خانه', url: 'index.html' },
-
+      { name: 'خانه', url: '../index.html' },
       { name: 'نمونه‌کارها', url: 'portfolio.html' }
-
     ];
-
     injectSeo({
-
       title: 'نمونه‌کارها | پروژه‌های بیزدوار گروپ — ZedPay، ZedGate و...',
-
-      description: 'نمونه‌کارهای بیزدوار: ZedPay، BZ Diamond، Biztejarat، Gamak، Arian Pumps و ۲۵+ برند دیجیتال و صنعتی.',
-
+      description: 'نمونه‌کارهای بیزدوار: ZedPay، BZ Diamond، Biztejarat، Arian Pumps و ۲۹ برند — اکوسیستم، مشتریان و پروژه‌های دیجیتال.',
       keywords: 'نمونه کار, ZedPay, ZedGate, بیزدوار, پورتفولیو',
-
-      canonical: 'https://bizdavar.com/pages/portfolio.html'
-
+      canonical: 'https://bizdavar.com/pages/portfolio.html',
+      ogImage: 'assets/images/content/about-us-1320x682.jpg'
     });
-
     renderSiteChrome();
-
     renderBreadcrumbs(crumbs);
-
     injectBreadcrumbSchema(crumbs);
-
-    renderPortfolioGrid('portfolioGrid');
-
+    initPortfolioPage();
     injectPortfolioSchema();
-
     renderRelatedLinks([
-
       { title: 'خدمات ما', url: 'services.html', desc: 'دیجیتال و صنعتی' },
-
       { title: 'Fast Web Studio', url: 'fast.html', desc: 'طراحی سایت ۵ روزه' },
-
       { title: 'تماس', url: 'contact.html', desc: 'شروع پروژه جدید' }
-
     ]);
-
   </script>
-
 </body>
-
 </html>
-
-

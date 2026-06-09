@@ -17,6 +17,21 @@
   .process-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .industrial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .presence-regions {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .presence-regions .presence-region:last-child {
+    grid-column: 1 / -1;
+    max-width: 360px;
+    margin-inline: auto;
+    width: 100%;
+  }
 }
 
 /* ─── Tablet landscape & small desktop nav compact ─── */
@@ -262,9 +277,42 @@
 
   .features-grid,
   .products-grid,
+  .industrial-grid,
   .testimonials-grid,
   .blog-grid,
   .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .industrial-cta-bar {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    padding: var(--space-6);
+  }
+
+  .industrial-cta-bar__content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .industrial-cta-bar__actions {
+    justify-content: center;
+  }
+
+  .presence-showcase__hero {
+    grid-template-columns: 1fr;
+  }
+
+  .presence-regions {
+    grid-template-columns: 1fr;
+  }
+
+  .presence-regions .presence-region:last-child {
+    max-width: none;
+  }
+
+  .presence-stats {
     grid-template-columns: 1fr;
   }
 
@@ -426,6 +474,7 @@
   .portfolio-card:hover,
   .feature-item--link:hover,
   .product-item--link:hover,
+  .industrial-card--link:hover,
   .client-item--link:hover,
   .related-links__card:hover {
     transform: none;

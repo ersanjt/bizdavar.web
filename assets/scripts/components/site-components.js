@@ -25,14 +25,17 @@
 
 
 
-  function absUrl(path) {
+  function absUrl(urlPath) {
+    if (!urlPath) return `${C.baseUrl}/`;
+    if (urlPath.startsWith('http')) return urlPath;
+    const normalized = urlPath.replace(/^(\.\.\/)+/, '').replace(/^\.\//, '');
+    if (normalized === 'index.html') return `${C.baseUrl}/`;
+    return `${C.baseUrl}/${normalized.replace(/^\//, '')}`;
+  }
 
-    if (!path) return C.baseUrl;
-
-    if (path.startsWith('http')) return path;
-
-    return `${C.baseUrl}/${path.replace(/^\//, '')}`;
-
+  function breadcrumbHref(url) {
+    if (!url || url.startsWith('http') || url.startsWith('#')) return url;
+    return path(url);
   }
 
 
@@ -59,7 +62,7 @@
 
               ${i < last
 
-                ? `<a href="${item.url}" itemprop="item"><span itemprop="name">${item.name}</span></a>`
+                ? `<a href="${breadcrumbHref(item.url)}" itemprop="item"><span itemprop="name">${item.name}</span></a>`
 
                 : `<span itemprop="name" aria-current="page">${item.name}</span>`}
 
@@ -220,8 +223,8 @@
       const external = !p.internal;
 
       const logoHtml = p.logo
-        ? `<div class="portfolio-card__logo"><img src="${path(p.logo)}" alt="${p.name}" loading="lazy"></div>`
-        : '';
+        ? `<div class="portfolio-card__logo"><img src="${path(p.logo)}" alt="لوگوی ${p.name}" loading="lazy" width="160" height="52"></div>`
+        : `<div class="portfolio-card__logo portfolio-card__logo--text"><span>${p.name}</span></div>`;
 
       return `
 
@@ -238,6 +241,7 @@
           </div>
 
           <p class="portfolio-card__domain" dir="ltr">${p.domain}</p>
+          ${p.note ? `<p class="portfolio-card__note">${p.note}</p>` : ''}
 
           <a href="${url}" class="portfolio-card__link"
 
@@ -263,13 +267,13 @@
 
     if (!el || !partners) return;
 
-    const items = limit ? partners.slice(0, limit) : partners;
+    const showcase = partners.filter(p => p.role !== 'supplier');
+    const items = limit ? showcase.slice(0, limit) : showcase;
 
     el.innerHTML = items.map(p => {
 
-      const href = p.internal ? path(p.url) : (p.url.startsWith('http') ? p.url : path(p.url));
-
-      const external = !p.internal && p.url.startsWith('http');
+      const external = p.url.startsWith('http');
+      const href = external ? p.url : path(p.url);
 
       const inner = p.logo
         ? `<img src="${path(p.logo)}" alt="${p.name}" loading="lazy" class="client-item__logo">`
@@ -750,7 +754,7 @@
 
       name: 'تماس با ما — ' + C.siteName,
 
-      url: C.baseUrl + '/contact.html',
+      url: C.baseUrl + '/pages/contact.html',
 
       description: 'فرم تماس و راه‌های ارتباطی با بیزدوار گروپ',
 
@@ -1080,11 +1084,47 @@
     }
 
     const presenceEl = document.getElementById('intelPresence');
-    if (presenceEl) {
+    if (presenceEl && I.presence) {
+      const P = I.presence;
+      const regions = P.regions || [];
+
       presenceEl.innerHTML = `
-        <p class="section__desc">${I.presence.summaryFa}</p>
-        <div class="intel-presence-tags">
-          ${I.presence.countries.map(c => `<span class="intel-tag intel-tag--country">${c}</span>`).join('')}
+        <div class="presence-showcase">
+          <div class="presence-showcase__hero">
+            <div class="presence-showcase__map">
+              <img src="${path(P.mapImage || 'assets/images/content/presence-map.svg')}" alt="نقشه حضور جهانی بیزدوار — ۱۱ کشور" width="480" height="300" loading="lazy">
+            </div>
+            <div class="presence-showcase__intro">
+              <p class="presence-showcase__desc">${P.summaryFa}</p>
+              <div class="presence-stats">
+                ${(P.stats || []).map(s => `
+                  <div class="presence-stat">
+                    <strong>${s.value}</strong>
+                    <span>${s.label}</span>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+          <div class="presence-regions">
+            ${regions.map(region => `
+              <div class="presence-region">
+                <h3 class="presence-region__title">${region.title}</h3>
+                <div class="presence-country-grid">
+                  ${region.countries.map(c => `
+                    <article class="presence-country${c.hub ? ' presence-country--hub' : ''}">
+                      <div class="presence-country__head">
+                        <strong>${c.name}</strong>
+                        ${c.hub ? '<span class="presence-country__badge">هاب</span>' : ''}
+                      </div>
+                      ${c.city ? `<span class="presence-country__city">${c.city}</span>` : ''}
+                      <p class="presence-country__focus">${c.focus}</p>
+                    </article>
+                  `).join('')}
+                </div>
+              </div>
+            `).join('')}
+          </div>
         </div>`;
     }
 
@@ -1147,6 +1187,106 @@
     }
     script.textContent = JSON.stringify(ld);
   };
+
+  window.renderIndustrialSection = function (containerId) {
+
+    const el = document.getElementById(containerId);
+
+    const products = C.industrialProducts;
+
+    if (!el || !products || !products.length) return;
+
+    const accentClass = (a) => (a ? ` industrial-card--${a}` : '');
+
+    const cards = products.map(p => {
+
+      const href = p.internal ? path(p.url) : p.url;
+
+      const external = !p.internal && p.url.startsWith('http');
+
+      const tags = (p.tags || []).map(t => `<span class="industrial-card__tag">${t}</span>`).join('');
+
+      return `
+
+        <a href="${href}" class="industrial-card industrial-card--link${accentClass(p.accent)}"
+
+           ${external ? 'target="_blank" rel="noopener noreferrer"' : ''}>
+
+          <div class="industrial-card__head">
+
+            <div class="industrial-card__logo">
+
+              <img src="${path(p.logo)}" alt="${p.name}" loading="lazy" width="140" height="48">
+
+            </div>
+
+            ${p.badge ? `<span class="industrial-card__badge">${p.badge}</span>` : ''}
+
+          </div>
+
+          <h3 class="industrial-card__title">${p.title}</h3>
+
+          <p class="industrial-card__desc">${p.desc}</p>
+
+          ${tags ? `<div class="industrial-card__tags">${tags}</div>` : ''}
+
+          <span class="industrial-card__cta">${p.cta || 'بیشتر بدانید'}${linkArrow()}</span>
+
+        </a>`;
+
+    }).join('');
+
+    el.innerHTML = `
+
+      <section class="section section--gray landing-industrial" id="products" aria-labelledby="industrial-heading">
+
+        <div class="container">
+
+          <div class="section__header section__header--pro">
+
+            <span class="section__eyebrow">تجهیزات صنعتی</span>
+
+            <h2 class="section__title" id="industrial-heading">تامین تجهیزات و برندهای معتبر</h2>
+
+            <p class="section__desc">سنسور، دتکتور، موتور و پمپ — انتخاب فنی، استعلام قیمت و لجستیک بین‌المللی برای پروژه‌های B2B</p>
+
+          </div>
+
+          <div class="industrial-grid">${cards}</div>
+
+          <div class="industrial-cta-bar">
+
+            <div class="industrial-cta-bar__content">
+
+              <span class="industrial-cta-bar__icon" data-bd-icon="wrench" data-bd-size="28" aria-hidden="true"></span>
+
+              <div>
+
+                <strong>نیاز به مشاوره تامین دارید؟</strong>
+
+                <p>انتخاب مدل، خرید بین‌المللی، حمل و گمرک — پاسخ توسط تیم فنی بیزدوار</p>
+
+              </div>
+
+            </div>
+
+            <div class="industrial-cta-bar__actions">
+
+              <a href="${path(R.contact)}" class="btn btn--yellow">درخواست استعلام</a>
+
+              <a href="${path(R.services)}#industrial" class="btn btn--outline">خدمات صنعتی</a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>`;
+
+  };
+
+
 
   window.renderProcessSection = function (containerId) {
 
