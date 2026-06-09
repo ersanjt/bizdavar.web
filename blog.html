@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>وبلاگ | بیزدوار گروپ</title>
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="blog">
+
+  
+  <a href="#main-content" class="skip-link">رفتن به محتوای اصلی</a>
+<div class="top-bar" id="topBar"></div>
+  <header class="header" id="siteHeader"></header>
+  <nav class="breadcrumbs-wrap" id="breadcrumbs" aria-label="مسیر صفحه"></nav>
+  <div class="overlay" id="overlay"></div>
+
+  
+  <main id="main-content" class="site-main">
+
+<section class="page-hero page-hero--pro">
+    <div class="container">
+      <span class="section__tag">وبلاگ</span>
+      <h1>مطالب تخصصی دیجیتال و صنعت</h1>
+      <p>راهنماها و نکات کاربردی از تیم بیزدوار گروپ.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="blog-grid" id="blogGrid"></div>
+    </div>
+  </section>
+
+  <section class="section section--gray">
+    <div class="container cta-banner">
+      <h2>نیاز به مشاوره تخصصی دارید؟</h2>
+      <p>موضوع مطلب شما را در <a href="contact.html">فرم تماس</a> بنویسید — پاسخگوییم.</p>
+      <a href="contact.html" class="btn btn--primary">درخواست مشاوره</a>
+    </div>
+  </section>
+  </main>
+
+
+
+  <footer class="footer" id="siteFooter"></footer>
+  <button class="back-to-top" id="backToTop" aria-label="بازگشت به بالا">↑</button>
+
+  <script src="js/site-config.js"></script>
+  <script src="js/site-components.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    const crumbs = [
+      { name: 'خانه', url: 'index.html' },
+      { name: 'وبلاگ', url: 'blog.html' }
+    ];
+    injectSeo({
+      title: 'وبلاگ بیزدوار | بازاریابی دیجیتال، طراحی وب و تجهیزات صنعتی',
+      description: 'مقالات تخصصی بیزدوار گروپ: بازاریابی دیجیتال، Fast Web Studio، سنسورهای صنعتی VEGA و راهکارهای رشد کسب‌وکار.',
+      canonical: 'https://bizdavar.com/blog.html',
+      type: 'website'
+    });
+    renderSiteChrome();
+    renderBreadcrumbs(crumbs);
+    injectBreadcrumbSchema(crumbs);
+    renderBlogGrid('blogGrid');
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,501 @@
+/**
+ * Bizdavar — Responsive overrides
+ * Mobile chrome: ≤1100px | Phone: ≤768px | Small: ≤480px
+ */
+
+/* ─── Trust bar & process — tablet ─── */
+@media (max-width: 1024px) {
+  .trust-bar__grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: var(--space-5);
+  }
+
+  .trust-bar__item:nth-child(2)::after {
+    display: none;
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ─── Tablet landscape & small desktop nav compact ─── */
+@media (max-width: 1200px) and (min-width: 1101px) {
+  .nav--desktop {
+    gap: 16px;
+  }
+
+  .nav__link {
+    font-size: 13px;
+  }
+
+  .nav__cta {
+    padding: 10px 16px !important;
+    font-size: 13px !important;
+    white-space: nowrap;
+  }
+
+  .header__logo img {
+    height: 42px;
+  }
+}
+
+/* ─── Tablet: 2-column pricing ─── */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
+
+  .pricing-card--featured {
+    grid-column: 1 / -1;
+    max-width: 420px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+/* ─── Phone & small tablet extras (chrome at 1100 in style.css) ─── */
+@media (max-width: 768px) {
+  .container {
+    width: min(1200px, 94%);
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+  .section {
+    padding: 44px 0;
+  }
+
+  .section__header {
+    margin-bottom: 32px;
+  }
+
+  .section__desc {
+    font-size: 15px;
+    padding: 0 4px;
+  }
+
+  .hero {
+    padding: 48px 0 40px;
+  }
+
+  .hero__desc {
+    font-size: 16px;
+  }
+
+  .hero__card {
+    padding: 24px 20px;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero__actions--center {
+    justify-content: center;
+  }
+
+  .page-hero {
+    padding: 48px 0 36px;
+  }
+
+  .page-hero--compact {
+    padding: 36px 0 28px;
+  }
+
+  .page-hero p {
+    font-size: 15px;
+    padding: 0 8px;
+  }
+
+  .fast-hero {
+    padding: 36px 0 28px;
+  }
+
+  .fast-hero__illustration {
+    padding: 16px;
+    max-width: 100%;
+  }
+
+  .fast-promo {
+    padding: 28px 20px;
+    text-align: center;
+  }
+
+  .fast-promo .btn {
+    width: 100%;
+  }
+
+  .fast-promo__title {
+    font-size: 1.35rem;
+  }
+
+  .about__content h2 {
+    font-size: clamp(1.35rem, 5vw, 1.75rem);
+  }
+
+  .service-card {
+    padding: 28px 20px;
+  }
+
+  .contact-form {
+    padding: 24px 18px;
+  }
+
+  .contact-info h2 {
+    font-size: 1.25rem;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-size: 16px;
+    padding: 14px 14px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+
+  .cta-banner .btn,
+  .cta-banner--dark .btn,
+  .article__cta .btn {
+    width: 100%;
+  }
+
+  .article__cta {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+  }
+
+  .prose {
+    padding: 0 4px;
+  }
+
+  .breadcrumb {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+
+  .breadcrumb::-webkit-scrollbar {
+    display: none;
+  }
+
+  .breadcrumb__item {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .portfolio-card,
+  .blog-item,
+  .feature-item,
+  .product-item {
+    padding: 20px;
+  }
+
+  .pricing-card__current {
+    font-size: 2rem;
+  }
+
+  .pricing-card__ribbon {
+    font-size: 10px;
+    left: -36px;
+    padding: 4px 44px;
+  }
+
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .client-item {
+    padding: 16px 12px;
+    font-size: 12px;
+  }
+
+  .tags-cloud {
+    gap: 8px;
+  }
+
+  .tags-cloud span,
+  .tags-cloud__tag {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .footer__bottom {
+    font-size: 12px;
+    padding: 16px 12px;
+    line-height: 1.6;
+  }
+
+  .top-bar .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero__stats {
+    grid-template-columns: 1fr;
+  }
+
+  .features-grid,
+  .products-grid,
+  .testimonials-grid,
+  .blog-grid,
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .related-links__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about__features {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-map {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-map img {
+    max-height: 220px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-bar {
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+
+  .trust-bar__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+    padding: var(--space-4);
+  }
+
+  .trust-bar__item::after {
+    display: none;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 599px) {
+  .pricing-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 100%;
+  }
+
+  .pricing-card--featured {
+    grid-column: auto;
+    max-width: 100%;
+  }
+}
+
+/* ─── Very small phones ─── */
+@media (max-width: 480px) {
+  .container {
+    width: min(1200px, 96%);
+  }
+
+  .hero__title {
+    font-size: 1.65rem;
+  }
+
+  .hero__stats {
+    gap: 12px;
+  }
+
+  .stat__number {
+    font-size: 1.5rem;
+  }
+
+  .section__title {
+    font-size: 1.4rem;
+  }
+
+  .mobile-header {
+    padding: 8px 12px;
+  }
+
+  .mobile-header__logo img {
+    height: 28px;
+  }
+
+  .mobile-header__cta {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .mobile-header__icon-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .mobile-bottom-nav__label {
+    font-size: 9px;
+  }
+
+  .mobile-bottom-nav__icon {
+    font-size: 18px;
+  }
+
+  .pricing-grid {
+    gap: 16px;
+  }
+
+  .pricing-card__header,
+  .pricing-card__price,
+  .pricing-card__features,
+  .pricing-card__footer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .clients-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .service-detail__visual--card {
+    padding: 24px;
+  }
+
+  .smm-badge {
+    font-size: 3rem;
+  }
+
+  .related-links {
+    padding: 36px 0;
+  }
+
+  .mobile-footer-cta {
+    grid-template-columns: 1fr;
+  }
+
+  .fast-social {
+    gap: 10px;
+    font-size: 13px;
+  }
+}
+
+/* ─── Large screens ─── */
+@media (min-width: 1400px) {
+  .container {
+    width: min(1280px, 90%);
+  }
+}
+
+/* ─── Touch: disable hover lift on coarse pointers ─── */
+@media (hover: none) and (pointer: coarse) {
+  .service-card:hover,
+  .portfolio-card:hover,
+  .feature-item--link:hover,
+  .product-item--link:hover,
+  .client-item--link:hover,
+  .related-links__card:hover {
+    transform: none;
+  }
+}
+
+/* ─── Reduced motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ─── Utility classes (replace inline styles) ─── */
+.mt-16 { margin-top: 16px; }
+.mt-24 { margin-top: 24px; }
+.btn--block { width: 100%; text-align: center; }
+.footer__logo-img {
+  height: 36px;
+  filter: brightness(0) invert(1);
+}
+.footer__logo-img--sm {
+  height: 28px;
+  opacity: 0.9;
+}
+.footer__domain-link { color: var(--yellow); }
+.hero__logo-center { margin: 0 auto 16px; }
+.fast-hero__title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: #1F2937;
+  margin-bottom: 12px;
+}
+.fast-hero__desc {
+  font-size: clamp(1rem, 2.5vw, 18px);
+  color: #4B5563;
+  margin-bottom: 40px;
+}
+.section--no-top { padding-top: 0; }
+.link-yellow { color: var(--yellow); }
+.link-inherit { color: inherit; }
+
+.cta-banner--dark .link-yellow,
+.page-hero .link-yellow {
+  color: var(--yellow);
+}
+
+.contact-info__value,
+.mobile-drawer__contact-item,
+.footer__links a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+.service-nav {
+  scrollbar-width: none;
+}
+
+.service-nav::-webkit-scrollbar {
+  display: none;
+}
