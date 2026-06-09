@@ -1,0 +1,10 @@
+---
+# cPanel Git — auto-deploy on pull (bizdavar.com)
+# DEPLOYPATH توسط cPanel هنگام Deploy تنظیم می‌شود (معمولاً public_html)
+deployment:
+  tasks:
+    - export DEPLOYPATH=${DEPLOYPATH:-$HOME/public_html}
+    - /bin/mkdir -p $DEPLOYPATH/assets $DEPLOYPATH/pages
+    - /bin/cp -f index.html robots.txt sitemap.xml $DEPLOYPATH/
+    - /bin/cp -a assets $DEPLOYPATH/
+    - /bin/cp -a pages $DEPLOYPATH/
