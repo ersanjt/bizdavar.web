@@ -19,6 +19,7 @@ window.BIZDAVAR_CONFIG = {
     contact: 'pages/contact.html',
     privacy: 'pages/privacy.html',
     vega: 'pages/vega.html',
+    prosense: 'pages/prosense.html',
     articles: {
       digitalMarketing: 'pages/articles/digital-marketing.html',
       fastStudio: 'pages/articles/fast-studio.html',

@@ -11,6 +11,8 @@ bizdavar-web/
 │   ├── blog.html
 │   ├── privacy.html
 │   ├── fast.html
+│   ├── vega.html              # کاتالوگ VEGA
+│   ├── prosense.html          # کاتالوگ Prosense
 │   └── articles/              # مقالات وبلاگ
 │       ├── digital-marketing.html
 │       ├── fast-studio.html
