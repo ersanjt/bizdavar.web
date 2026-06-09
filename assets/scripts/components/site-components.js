@@ -4,15 +4,14 @@
 
   if (!C) return;
 
-
-
+  const R = C.routes;
+  const A = C.assets;
+  const path = (p) => window.resolvePath(p);
   const currentPage = document.body.dataset.page || 'home';
 
   const wa = C.contact.whatsapp
-
     ? `https://wa.me/${C.contact.whatsapp}?text=${encodeURIComponent(C.contact.whatsappMessage)}`
-
-    : 'contact.html';
+    : path(R.contact);
 
 
 
@@ -129,7 +128,7 @@
 
       <nav class="service-nav" aria-label="فهرست خدمات">
 
-        ${C.services.map(s => `<a href="${s.slug}">${s.title}</a>`).join('')}
+        ${C.services.map(s => `<a href="${path(s.slug)}">${s.title}</a>`).join('')}
 
       </nav>`;
 
@@ -191,11 +190,11 @@
 
         <span class="blog-item__cat">${p.category}</span>
 
-        <h3><a href="${p.slug}">${p.title}</a></h3>
+        <h3><a href="${path(p.slug)}">${p.title}</a></h3>
 
         <p>${p.excerpt}</p>
 
-        <a href="${p.slug}" class="service-card__link">ادامه مطلب ←</a>
+        <a href="${path(p.slug)}" class="service-card__link">ادامه مطلب ←</a>
 
       </article>
 
@@ -248,13 +247,13 @@
 
 
   const navItems = [
-    { page: 'home', href: 'index.html', label: 'خانه', icon: '🏠' },
-    { page: 'about', href: 'about.html', label: 'درباره ما', icon: 'ℹ️' },
-    { page: 'services', href: 'services.html', label: 'خدمات', icon: '📋' },
-    { page: 'portfolio', href: 'portfolio.html', label: 'نمونه‌کارها', icon: '💼' },
-    { page: 'fast', href: 'fast.html', label: 'طراحی سایت', icon: '🌐' },
-    { page: 'blog', href: 'blog.html', label: 'وبلاگ', icon: '📝' },
-    { page: 'contact', href: 'contact.html', label: 'تماس', icon: '📞' }
+    { page: 'home', route: R.home, label: 'خانه', icon: '🏠' },
+    { page: 'about', route: R.about, label: 'درباره ما', icon: 'ℹ️' },
+    { page: 'services', route: R.services, label: 'خدمات', icon: '📋' },
+    { page: 'portfolio', route: R.portfolio, label: 'نمونه‌کارها', icon: '💼' },
+    { page: 'fast', route: R.fast, label: 'طراحی سایت', icon: '🌐' },
+    { page: 'blog', route: R.blog, label: 'وبلاگ', icon: '📝' },
+    { page: 'contact', route: R.contact, label: 'تماس', icon: '📞' }
   ];
 
   window.renderSiteChrome = function () {
@@ -283,11 +282,11 @@
 
     if (header) {
       const navLinks = navItems.map(n =>
-        `<a href="${n.href}" class="nav__link${isActive(n.page)}">${n.label}</a>`
+        `<a href="${path(n.route)}" class="nav__link${isActive(n.page)}">${n.label}</a>`
       ).join('');
 
       const drawerLinks = navItems.map(n =>
-        `<a href="${n.href}" class="mobile-drawer__link${isActive(n.page)}">
+        `<a href="${path(n.route)}" class="mobile-drawer__link${isActive(n.page)}">
           <span class="mobile-drawer__icon">${n.icon}</span>
           <span>${n.label}</span>
         </a>`
@@ -296,8 +295,8 @@
       header.innerHTML = `
         <div class="header__desktop">
           <div class="container">
-            <a href="index.html" class="header__logo" aria-label="${C.siteName} — صفحه اصلی">
-              <img src="assets/images/bizdavar-logo.png" alt="${C.siteName}" width="140" height="40">
+            <a href="${path(R.home)}" class="header__logo" aria-label="${C.siteName} — صفحه اصلی">
+              <img src="${path(A.logo)}" alt="${C.siteName}" width="140" height="40">
             </a>
             <nav class="nav nav--desktop" id="nav" aria-label="منوی اصلی">
               ${navLinks}
@@ -311,14 +310,14 @@
         </div>
 
         <div class="mobile-header">
-          <a href="index.html" class="mobile-header__logo">
-            <img src="assets/images/bizdavar-logo.png" alt="${C.siteName}" width="110" height="32">
+          <a href="${path(R.home)}" class="mobile-header__logo">
+            <img src="${path(A.logo)}" alt="${C.siteName}" width="110" height="32">
           </a>
           <div class="mobile-header__actions">
             <a href="${wa}" class="mobile-header__icon-btn mobile-header__icon-btn--wa"
                aria-label="واتساپ"
                ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''}>💬</a>
-            <a href="contact.html" class="mobile-header__cta">تماس</a>
+            <a href="${path(R.contact)}" class="mobile-header__cta">تماس</a>
             <button type="button" class="mobile-header__menu" id="mobileMenuBtn" aria-label="منو" aria-expanded="false">
               <span></span><span></span><span></span>
             </button>
@@ -327,7 +326,7 @@
 
         <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
           <div class="mobile-drawer__head">
-            <img src="assets/images/bizdavar-logo.png" alt="${C.siteName}" height="32">
+            <img src="${path(A.logo)}" alt="${C.siteName}" height="32">
             <button type="button" class="mobile-drawer__close" id="mobileDrawerClose" aria-label="بستن منو">✕</button>
           </div>
           <nav class="mobile-drawer__nav" aria-label="منوی موبایل">
@@ -354,29 +353,29 @@
           <div class="container">
             <div class="footer__grid">
               <div class="footer__brand">
-                <a href="index.html">
-                  <img src="assets/images/bizdavar-logo.png" alt="${C.siteName}" class="footer__logo-img">
+                <a href="${path(R.home)}">
+                  <img src="${path(A.logo)}" alt="${C.siteName}" class="footer__logo-img">
                 </a>
                 <p>${C.siteName} — ارائه‌دهنده خدمات دیجیتال، طراحی وب، بازاریابی آنلاین و تامین تجهیزات صنعتی.</p>
               </div>
               <div>
                 <h4 class="footer__title">خدمات</h4>
                 <ul class="footer__links">
-                  <li><a href="services.html#digital-marketing">بازاریابی دیجیتال</a></li>
-                  <li><a href="fast.html">طراحی وب — Fast Studio</a></li>
-                  <li><a href="services.html#smm">مدیریت SMM</a></li>
-                  <li><a href="services.html#industrial">تامین تجهیزات صنعتی</a></li>
+                  <li><a href="${path(R.services)}#digital-marketing">بازاریابی دیجیتال</a></li>
+                  <li><a href="${path(R.fast)}">طراحی وب — Fast Studio</a></li>
+                  <li><a href="${path(R.services)}#smm">مدیریت SMM</a></li>
+                  <li><a href="${path(R.services)}#industrial">تامین تجهیزات صنعتی</a></li>
                 </ul>
               </div>
               <div>
                 <h4 class="footer__title">دسترسی سریع</h4>
                 <ul class="footer__links">
-                  <li><a href="about.html">درباره ما</a></li>
-                  <li><a href="portfolio.html">نمونه‌کارها</a></li>
-                  <li><a href="blog.html">وبلاگ</a></li>
-                  <li><a href="contact.html">تماس با ما</a></li>
-                  <li><a href="index.html#faq">سوالات متداول</a></li>
-                  <li><a href="privacy.html">حریم خصوصی</a></li>
+                  <li><a href="${path(R.about)}">درباره ما</a></li>
+                  <li><a href="${path(R.portfolio)}">نمونه‌کارها</a></li>
+                  <li><a href="${path(R.blog)}">وبلاگ</a></li>
+                  <li><a href="${path(R.contact)}">تماس با ما</a></li>
+                  <li><a href="${path(R.home)}#faq">سوالات متداول</a></li>
+                  <li><a href="${path(R.privacy)}">حریم خصوصی</a></li>
                 </ul>
               </div>
               <div>
@@ -399,7 +398,7 @@
 
         <div class="footer__mobile">
           <div class="mobile-footer-cta">
-            <a href="contact.html" class="mobile-footer-cta__btn mobile-footer-cta__btn--primary">📩 فرم تماس</a>
+            <a href="${path(R.contact)}" class="mobile-footer-cta__btn mobile-footer-cta__btn--primary">📩 فرم تماس</a>
             <a href="${wa}" class="mobile-footer-cta__btn mobile-footer-cta__btn--wa"
                ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''}>💬 واتساپ</a>
           </div>
@@ -407,19 +406,19 @@
             <details class="mobile-footer-acc" open>
               <summary>خدمات</summary>
               <ul>
-                <li><a href="services.html#digital-marketing">بازاریابی دیجیتال</a></li>
-                <li><a href="fast.html">طراحی وب</a></li>
-                <li><a href="services.html#smm">مدیریت SMM</a></li>
-                <li><a href="services.html#industrial">تجهیزات صنعتی</a></li>
+                <li><a href="${path(R.services)}#digital-marketing">بازاریابی دیجیتال</a></li>
+                <li><a href="${path(R.fast)}">طراحی وب</a></li>
+                <li><a href="${path(R.services)}#smm">مدیریت SMM</a></li>
+                <li><a href="${path(R.services)}#industrial">تجهیزات صنعتی</a></li>
               </ul>
             </details>
             <details class="mobile-footer-acc">
               <summary>دسترسی سریع</summary>
               <ul>
-                <li><a href="about.html">درباره ما</a></li>
-                <li><a href="portfolio.html">نمونه‌کارها</a></li>
-                <li><a href="blog.html">وبلاگ</a></li>
-                <li><a href="privacy.html">حریم خصوصی</a></li>
+                <li><a href="${path(R.about)}">درباره ما</a></li>
+                <li><a href="${path(R.portfolio)}">نمونه‌کارها</a></li>
+                <li><a href="${path(R.blog)}">وبلاگ</a></li>
+                <li><a href="${path(R.privacy)}">حریم خصوصی</a></li>
               </ul>
             </details>
             <details class="mobile-footer-acc">
@@ -432,7 +431,7 @@
             </details>
           </div>
           <div class="mobile-footer-copy">
-            <img src="assets/images/bizdavar-logo.png" alt="" class="footer__logo-img footer__logo-img--sm">
+            <img src="${path(A.logo)}" alt="" class="footer__logo-img footer__logo-img--sm">
             <p>© ${new Date().getFullYear()} ${C.siteNameEn}</p>
           </div>
         </div>`;
@@ -448,14 +447,14 @@
     }
 
     const bottomItems = [
-      { page: 'home', href: 'index.html', label: 'خانه', icon: '🏠' },
-      { page: 'services', href: 'services.html', label: 'خدمات', icon: '📋' },
-      { page: 'fast', href: 'fast.html', label: 'سایت', icon: '🌐' },
-      { page: 'contact', href: 'contact.html', label: 'تماس', icon: '📞' }
+      { page: 'home', route: R.home, label: 'خانه', icon: '🏠' },
+      { page: 'services', route: R.services, label: 'خدمات', icon: '📋' },
+      { page: 'fast', route: R.fast, label: 'سایت', icon: '🌐' },
+      { page: 'contact', route: R.contact, label: 'تماس', icon: '📞' }
     ];
 
     bottomNav.innerHTML = bottomItems.map(item => `
-      <a href="${item.href}" class="mobile-bottom-nav__item${isActive(item.page) ? ' active' : ''}">
+      <a href="${path(item.route)}" class="mobile-bottom-nav__item${isActive(item.page) ? ' active' : ''}">
         <span class="mobile-bottom-nav__icon">${item.icon}</span>
         <span class="mobile-bottom-nav__label">${item.label}</span>
       </a>
@@ -500,7 +499,7 @@
 
 
 
-    const ogImg = (meta.ogImage || C.seo.ogImage);
+    const ogImg = (meta.ogImage || A.ogImage);
 
     const ogImgAbs = ogImg.startsWith('http') ? ogImg : `${C.baseUrl}/${ogImg}`;
 
@@ -586,7 +585,7 @@
 
       url: C.baseUrl,
 
-      logo: `${C.baseUrl}/assets/images/bizdavar-logo.png`,
+      logo: `${C.baseUrl}/${A.logo}`,
 
       email: C.contact.email,
 
@@ -844,13 +843,13 @@
 
         name: C.siteNameEn,
 
-        logo: { '@type': 'ImageObject', url: `${C.baseUrl}/assets/images/bizdavar-logo.png` }
+        logo: { '@type': 'ImageObject', url: `${C.baseUrl}/${A.logo}` }
 
       },
 
       mainEntityOfPage: absUrl(article.slug),
 
-      image: article.image ? absUrl(article.image) : `${C.baseUrl}/${C.seo.ogImage}`
+      image: article.image ? absUrl(article.image) : `${C.baseUrl}/${A.ogImage}`
 
     };
 
