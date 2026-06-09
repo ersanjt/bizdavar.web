@@ -296,6 +296,20 @@ ul { list-style: none; }
   text-align: center;
 }
 
+.hero__card--media {
+  padding: 20px;
+  max-width: 100%;
+}
+
+.hero__media-img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  border-radius: calc(var(--radius) - 4px);
+  margin-bottom: 16px;
+  object-fit: cover;
+}
+
 .hero__stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -624,6 +638,40 @@ ul { list-style: none; }
 }
 
 .client-item:hover { transform: translateY(-4px); }
+
+.client-item--logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 88px;
+  padding: 16px 20px;
+}
+
+.client-item__logo {
+  max-width: 130px;
+  max-height: 52px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.client-item__name {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.portfolio-card__logo {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  margin-bottom: 12px;
+}
+
+.portfolio-card__logo img {
+  max-height: 44px;
+  max-width: 150px;
+  object-fit: contain;
+}
 
 /* Contact */
 .contact-grid {

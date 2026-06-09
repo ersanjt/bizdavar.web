@@ -20,17 +20,25 @@ window.BIZDAVAR_CONFIG = {
     privacy: 'pages/privacy.html',
     vega: 'pages/vega.html',
     prosense: 'pages/prosense.html',
+    bzDiamond: 'pages/bz-diamond.html',
+    biztejarat: 'pages/biztejarat.html',
+    gamak: 'pages/gamak.html',
     articles: {
       digitalMarketing: 'pages/articles/digital-marketing.html',
+      whatIsDigitalMarketing: 'pages/articles/what-is-digital-marketing.html',
+      socialMediaManagement: 'pages/articles/social-media-management.html',
       fastStudio: 'pages/articles/fast-studio.html',
-      industrialSensors: 'pages/articles/industrial-sensors.html'
+      industrialSensors: 'pages/articles/industrial-sensors.html',
+      aboutBizdavar: 'pages/articles/about-bizdavar-group.html'
     }
   },
 
   assets: {
     favicon: 'assets/images/brand/favicon.svg',
     logo: 'assets/images/brand/bizdavar-logo.svg',
-    ogImage: 'assets/images/content/about-hero.svg'
+    ogImage: 'assets/images/content/hero-home.jpg',
+    heroImage: 'assets/images/content/hero-home.jpg',
+    aboutImage: 'assets/images/content/about-hero.jpg'
   },
 
   contact: {
@@ -79,12 +87,28 @@ window.BIZDAVAR_CONFIG = {
 
   blogPosts: [
     {
+      slug: 'pages/articles/what-is-digital-marketing.html',
+      title: 'دیجیتال مارکتینگ چیست؟ — راهنمای کامل برای کسب‌وکارها',
+      excerpt: 'تعریف بازاریابی دیجیتال، کانال‌ها و نقش آن در رشد فروش آنلاین.',
+      category: 'بازاریابی دیجیتال',
+      date: '2025-02-10',
+      relatedService: 'pages/services.html#digital-marketing'
+    },
+    {
       slug: 'pages/articles/digital-marketing.html',
       title: 'چگونه بازاریابی دیجیتال فروش را افزایش می‌دهد؟',
       excerpt: 'راهکارهای عملی برای تبدیل بازدیدکننده به مشتری.',
       category: 'بازاریابی دیجیتال',
       date: '2025-04-01',
       relatedService: 'pages/services.html#digital-marketing'
+    },
+    {
+      slug: 'pages/articles/social-media-management.html',
+      title: 'مدیریت شبکه‌های اجتماعی — استراتژی SMM برای برندها',
+      excerpt: 'تولید محتوا، تقویم انتشار و تبلیغات هدفمند در اینستاگرام و لینکدین.',
+      category: 'مدیریت SMM',
+      date: '2025-03-05',
+      relatedService: 'pages/services.html#smm'
     },
     {
       slug: 'pages/articles/fast-studio.html',
@@ -116,7 +140,26 @@ window.BIZDAVAR_CONFIG = {
     { value: '+۱۰۰', label: 'پروژه دیجیتال' },
     { value: '۱۱', label: 'کشور فعال' },
     { value: '۱۲+', label: 'سال تجربه' },
-    { value: '+۱۶', label: 'دامنه مدیریت‌شده' }
+    { value: '+۲۵', label: 'دامنه و برند' }
+  ],
+
+  featuredPartners: [
+    { name: 'ZedPay', url: 'https://zed-pay.com', logo: null },
+    { name: 'BZ Diamond', url: 'https://bzdiamond.com', logo: 'assets/images/partners/bzdiamond.webp' },
+    { name: 'ZedGate', url: 'https://zedgate.ai', logo: null },
+    { name: 'Bear Event', url: 'https://bearevent.co', logo: null },
+    { name: 'NetinoHost', url: 'https://netinohost.com', logo: null },
+    { name: 'Arian Pumps', url: 'https://arianpumps.com', logo: 'assets/images/partners/arian-pumps.png' },
+    { name: 'Gamak', url: 'pages/gamak.html', logo: 'assets/images/partners/gamak.svg', internal: true },
+    { name: 'Adak Sepehr', url: 'pages/portfolio.html', logo: 'assets/images/partners/adak-sepehr.png', internal: true },
+    { name: 'Alimila', url: 'pages/portfolio.html', logo: 'assets/images/partners/alimila.png', internal: true },
+    { name: 'Honar Shop', url: 'pages/portfolio.html', logo: 'assets/images/partners/honar-shop.png', internal: true },
+    { name: 'Smith Tradeland', url: 'pages/portfolio.html', logo: 'assets/images/partners/smith-tradeland.webp', internal: true },
+    { name: 'Imensa', url: 'pages/portfolio.html', logo: 'assets/images/partners/imensa.png', internal: true },
+    { name: 'HangerStyle', url: 'pages/portfolio.html', logo: 'assets/images/partners/hanger-style.png', internal: true },
+    { name: 'Bamauk Visa', url: 'pages/portfolio.html', logo: 'assets/images/partners/bamauk-visa.png', internal: true },
+    { name: 'BlueNil Air', url: 'https://bluenil-air.com', logo: null },
+    { name: 'Fast Studio', url: 'pages/fast.html', logo: null, internal: true }
   ],
 
   processSteps: [
@@ -132,17 +175,31 @@ window.BIZDAVAR_CONFIG = {
     { name: 'ZedGate IO', domain: 'zedgate.io', category: 'زیرساخت فین‌تک', internal: false },
     { name: 'ZedGP', domain: 'zedgp.com', category: 'خدمات مالی', internal: false },
     { name: 'ZedX DMCC', domain: 'zedxdmcc.com', category: 'هلدینگ', internal: false },
-    { name: 'BZ Diamond', domain: 'bzdiamond.com', category: 'الماس و جواهر', internal: false },
+    { name: 'BZ Diamond', domain: 'bzdiamond.com', category: 'الماس و جواهر', internal: true, slug: 'pages/bz-diamond.html', logo: 'assets/images/partners/bzdiamond.webp' },
     { name: 'Zed Diamond', domain: 'zeddiamond.com', category: 'جواهرات', internal: false },
     { name: 'BZ Broker', domain: 'bzbroker.com', category: 'بروکر', internal: false },
-    { name: 'BZ Payment', domain: 'bz-payment.com', category: 'پرداخت', internal: false },
+    { name: 'BZ Payment', domain: 'bz-payment.com', category: 'پرداخت', internal: false, logo: 'assets/images/partners/bz-payment.png' },
     { name: 'BlueNil Air', domain: 'bluenil-air.com', category: 'هواپیمایی', internal: false },
     { name: 'Bridged3', domain: 'bridged3.com', category: 'وب۳', internal: false },
     { name: 'iBan2iBan', domain: 'iban2iban.com', category: 'انتقال مالی', internal: false },
     { name: 'Zed Developer', domain: 'zeddeveloper.com', category: 'توسعه نرم‌افزار', internal: false },
     { name: 'Bear Event', domain: 'bearevent.co', category: 'رویداد و بلیت', internal: false },
     { name: 'NetinoHost', domain: 'netinohost.com', category: 'هاستینگ', internal: false },
-    { name: 'Fast Web Studio', domain: 'fast.bizdavar.com', category: 'طراحی سایت', internal: true, slug: 'pages/fast.html' }
+    { name: 'Fast Web Studio', domain: 'fast.bizdavar.com', category: 'طراحی سایت', internal: true, slug: 'pages/fast.html' },
+    { name: 'Biztejarat', domain: 'biztejarat.com', category: 'تجارت ابزار دقیق', internal: true, slug: 'pages/biztejarat.html' },
+    { name: 'Gamak', domain: 'gamak.com.tr', category: 'الکتروموتور صنعتی', internal: true, slug: 'pages/gamak.html', logo: 'assets/images/partners/gamak.svg' },
+    { name: 'Arian Pumps', domain: 'arianpumps.com', category: 'پمپ صنعتی', internal: false, logo: 'assets/images/partners/arian-pumps.png' },
+    { name: 'Adak Sepehr', domain: 'adaksepehr.com', category: 'صنعت و تجهیزات', internal: false, logo: 'assets/images/partners/adak-sepehr.png' },
+    { name: 'Alimila', domain: 'alimila.com', category: 'تجارت بین‌الملل', internal: false, logo: 'assets/images/partners/alimila.png' },
+    { name: 'Bamauk Visa', domain: 'bamaukvisa.com', category: 'خدمات ویزا', internal: false, logo: 'assets/images/partners/bamauk-visa.png' },
+    { name: 'Honar Shop', domain: 'honarshop.com', category: 'فروشگاه هنری', internal: false, logo: 'assets/images/partners/honar-shop.png' },
+    { name: 'Smith Tradeland', domain: 'smithtradeland.com', category: 'تجارت', internal: false, logo: 'assets/images/partners/smith-tradeland.webp' },
+    { name: 'Imensa', domain: 'imensa.com', category: 'صنعت', internal: false, logo: 'assets/images/partners/imensa.png' },
+    { name: 'HangerStyle', domain: 'hangerstyle.com', category: 'مد و پوشاک', internal: false, logo: 'assets/images/partners/hanger-style.png' },
+    { name: 'Havana', domain: 'havana.com', category: 'برند تجاری', internal: false, logo: 'assets/images/partners/havana.png' },
+    { name: 'Sanat Moharek', domain: 'sanatmoharek.com', category: 'صنعت', internal: false, logo: 'assets/images/partners/sanat-moharek.png' },
+    { name: 'هتل شایان تبریز', domain: 'hotelshayan.ir', category: 'گردشگری و هتلداری', internal: false },
+    { name: 'پتروشیمی تبریز', domain: 'petrotabriz.com', category: 'پتروشیمی', internal: false }
   ]
 };
 

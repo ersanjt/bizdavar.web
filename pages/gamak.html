@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>الکتروموتور Gamak | تامین موتور صنعتی — بیزدوار گروپ</title>
+  <link rel="icon" href="../assets/images/brand/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="../assets/styles/fonts.css">
+  <link rel="stylesheet" href="../assets/styles/typography.css">
+  <link rel="stylesheet" href="../assets/styles/icons.css">
+  <link rel="stylesheet" href="../assets/styles/tokens.css">
+  <link rel="stylesheet" href="../assets/styles/style.css">
+  <link rel="stylesheet" href="../assets/styles/layout.css">
+  <link rel="stylesheet" href="../assets/styles/responsive.css">
+</head>
+<body data-page="gamak" data-depth="1">
+
+  <a href="#main-content" class="skip-link">رفتن به محتوای اصلی</a>
+  <div class="top-bar" id="topBar"></div>
+  <header class="header" id="siteHeader"></header>
+  <nav class="breadcrumbs-wrap" id="breadcrumbs" aria-label="مسیر صفحه"></nav>
+  <div class="overlay" id="overlay"></div>
+
+  <main id="main-content" class="site-main">
+
+  <section class="page-hero page-hero--pro">
+    <div class="container">
+      <img src="../assets/images/partners/gamak.svg" alt="Gamak" width="160" height="48" style="margin-bottom:20px;max-height:48px">
+      <h1>الکتروموتور Gamak</h1>
+      <p>تامین موتورهای الکتریکی صنعتی ترکیه — مشاوره فنی و لجستیک توسط بیزدوار گروپ</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container about-grid">
+      <div class="about__image">
+        <img src="../assets/images/content/gamak-motor.webp" alt="الکتروموتور Gamak" loading="lazy" width="500" height="400">
+      </div>
+      <div class="about__content prose">
+        <h2>درباره Gamak</h2>
+        <p>Gamak یکی از تولیدکنندگان معتبر الکتروموتور در ترکیه است. بیزدوار گروپ و واحد <a href="biztejarat.html">بیزتجارت</a> خدمات تامین، مشاوره انتخاب توان و دور موتور، و لجستیک بین‌المللی را برای پروژه‌های صنعتی ارائه می‌دهد.</p>
+        <h3>کاربردها</h3>
+        <ul>
+          <li>خطوط تولید و نوار نقاله</li>
+          <li>پمپ‌ها و کمپرسورها</li>
+          <li>ماشین‌آلات کشاورزی و غذایی</li>
+          <li>سیستم‌های HVAC صنعتی</li>
+        </ul>
+        <a href="contact.html" class="btn btn--yellow">استعلام قیمت Gamak</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="relatedLinks"></div>
+  </main>
+
+  <footer class="footer" id="siteFooter"></footer>
+  <button class="back-to-top" id="backToTop" aria-label="بازگشت به بالا">↑</button>
+
+  <script src="../assets/scripts/config/paths.js"></script>
+  <script src="../assets/scripts/config/site-config.js"></script>
+  <script src="../assets/scripts/components/biz-icons.js"></script>
+  <script src="../assets/scripts/components/site-components.js"></script>
+  <script src="../assets/scripts/main.js"></script>
+  <script>
+    const crumbs = [
+      { name: 'خانه', url: 'index.html' },
+      { name: 'خدمات صنعتی', url: 'services.html#industrial' },
+      { name: 'Gamak', url: 'gamak.html' }
+    ];
+    injectSeo({
+      title: 'الکتروموتور Gamak | تامین موتور صنعتی — بیزدوار گروپ',
+      description: 'تامین الکتروموتور Gamak ترکیه — مشاوره فنی، انتخاب توان و لجستیک توسط بیزدوار گروپ و بیزتجارت.',
+      keywords: 'Gamak, الکتروموتور, موتور صنعتی, بیزدوار, بیزتجارت',
+      canonical: 'https://bizdavar.com/pages/gamak.html'
+    });
+    renderSiteChrome();
+    renderBreadcrumbs(crumbs);
+    injectBreadcrumbSchema(crumbs);
+    renderRelatedLinks([
+      { title: 'بیزتجارت', url: 'biztejarat.html', desc: 'تجارت B2B' },
+      { title: 'Arian Pumps', url: 'portfolio.html', desc: 'پمپ صنعتی' },
+      { title: 'تماس', url: 'contact.html', desc: 'استعلام' }
+    ]);
+  </script>
+</body>
+</html>

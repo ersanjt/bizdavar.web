@@ -86,12 +86,14 @@ window.BIZDAVAR_INTEL = {
   ecosystem: [
     { name: 'ZedPay', type: 'فین‌تک / پرداخت', note: 'مدیریت IT و توسعه پلتفرم' },
     { name: 'NetinoHost', type: 'هاستینگ ابری', note: 'VPS، دامنه، سرور اختصاصی' },
+    { name: 'BZ Diamond', type: 'جواهرات', note: 'فروشگاه الماس GIA و lab-grown' },
+    { name: 'Biztejarat', type: 'تجارت B2B', note: 'ابزار دقیق و الکترونیک صنعتی' },
     { name: 'BZBroker', type: 'صرافی P2P', note: 'پلتفرم کریپتو' },
     { name: 'FXGuard', type: 'CRM واتساپ', note: 'اتوماسیون فروش' },
-    { name: 'Paparosi', type: 'فودتک', note: 'برند غذایی دیجیتال' },
     { name: 'Bear Event', type: 'رویداد', note: 'بلیت و رویداد آنلاین' },
-    { name: 'Karen Leather', type: 'صادرات', note: 'بازاریابی B2B چرم' },
-    { name: 'JMS Elettropompe', type: 'پمپ صنعتی', note: 'تامین تجهیزات ایتالیا' }
+    { name: 'Gamak', type: 'الکتروموتور', note: 'تامین موتور صنعتی ترکیه' },
+    { name: 'Arian Pumps', type: 'پمپ صنعتی', note: 'تامین پمپ‌های صنعتی' },
+    { name: 'Karen Leather', type: 'صادرات', note: 'بازاریابی B2B چرم' }
   ],
 
   /** حضور جغرافیایی */

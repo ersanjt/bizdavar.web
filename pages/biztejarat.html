@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>بیزتجارت (Biztejarat) | تجارت ابزار دقیق — بیزدوار گروپ</title>
+  <link rel="icon" href="../assets/images/brand/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="../assets/styles/fonts.css">
+  <link rel="stylesheet" href="../assets/styles/typography.css">
+  <link rel="stylesheet" href="../assets/styles/icons.css">
+  <link rel="stylesheet" href="../assets/styles/tokens.css">
+  <link rel="stylesheet" href="../assets/styles/style.css">
+  <link rel="stylesheet" href="../assets/styles/layout.css">
+  <link rel="stylesheet" href="../assets/styles/responsive.css">
+</head>
+<body data-page="biztejarat" data-depth="1">
+
+  <a href="#main-content" class="skip-link">رفتن به محتوای اصلی</a>
+  <div class="top-bar" id="topBar"></div>
+  <header class="header" id="siteHeader"></header>
+  <nav class="breadcrumbs-wrap" id="breadcrumbs" aria-label="مسیر صفحه"></nav>
+  <div class="overlay" id="overlay"></div>
+
+  <main id="main-content" class="site-main">
+
+  <section class="page-hero page-hero--pro">
+    <div class="container">
+      <span class="section__tag">تجارت B2B</span>
+      <h1>بیزتجارت — Biztejarat</h1>
+      <p>تجارت جهانی تجهیزات الکترونیکی، ابزار دقیق و قطعات صنعتی</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container about-grid">
+      <div class="about__image">
+        <img src="../assets/images/content/vega-hero.jpg" alt="تجهیزات صنعتی و ابزار دقیق" loading="lazy" width="660" height="400">
+      </div>
+      <div class="about__content prose">
+        <h2>حوزه فعالیت</h2>
+        <p>بیزتجارت (Biztejarat) بازوی تجاری بیزدوار گروپ در تامین و توزیع تجهیزات الکترونیکی صنعتی، ابزار دقیق، سنسور و قطعات مکانیکی است. این واحد بر پروژه‌های B2B در ایران، ترکیه و بازارهای منطقه‌ای تمرکز دارد.</p>
+        <ul>
+          <li>تامین ابزار دقیق و سنسورهای صنعتی (VEGA، Prosense و...)</li>
+          <li>قطعات الکترونیکی و اتوماسیون</li>
+          <li>مشاوره فنی انتخاب تجهیز</li>
+          <li>لجستیک و گمرک بین‌المللی</li>
+          <li>همکاری با تولیدکنندگان اروپایی و ترکیه</li>
+        </ul>
+        <a href="contact.html" class="btn btn--yellow">استعلام قیمت</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--gray">
+    <div class="container">
+      <div class="features-grid">
+        <a href="vega.html" class="feature-item feature-item--link"><span class="feature-item__icon" data-bd-icon="gauge" data-bd-size="26"></span><h3>VEGA</h3><p>سنسور سطح و فشار</p></a>
+        <a href="prosense.html" class="feature-item feature-item--link"><span class="feature-item__icon" data-bd-icon="shield" data-bd-size="26"></span><h3>Prosense</h3><p>دتکتور گاز و شعله</p></a>
+        <a href="gamak.html" class="feature-item feature-item--link"><span class="feature-item__icon" data-bd-icon="gear" data-bd-size="26"></span><h3>Gamak</h3><p>الکتروموتور صنعتی</p></a>
+        <a href="services.html#industrial" class="feature-item feature-item--link"><span class="feature-item__icon" data-bd-icon="wrench" data-bd-size="26"></span><h3>پمپ صنعتی</h3><p>Arian Pumps و P-Series</p></a>
+      </div>
+    </div>
+  </section>
+
+  <div id="relatedLinks"></div>
+  </main>
+
+  <footer class="footer" id="siteFooter"></footer>
+  <button class="back-to-top" id="backToTop" aria-label="بازگشت به بالا">↑</button>
+
+  <script src="../assets/scripts/config/paths.js"></script>
+  <script src="../assets/scripts/config/site-config.js"></script>
+  <script src="../assets/scripts/components/biz-icons.js"></script>
+  <script src="../assets/scripts/components/site-components.js"></script>
+  <script src="../assets/scripts/main.js"></script>
+  <script>
+    const crumbs = [
+      { name: 'خانه', url: 'index.html' },
+      { name: 'خدمات', url: 'services.html' },
+      { name: 'بیزتجارت', url: 'biztejarat.html' }
+    ];
+    injectSeo({
+      title: 'بیزتجارت (Biztejarat) | تجارت ابزار دقیق — بیزدوار گروپ',
+      description: 'بیزتجارت — تجارت جهانی ابزار دقیق، الکترونیک صنعتی و تامین VEGA/Prosense/Gamak توسط بیزدوار گروپ.',
+      keywords: 'بیزتجارت, Biztejarat, ابزار دقیق, تامین صنعتی, بیزدوار',
+      canonical: 'https://bizdavar.com/pages/biztejarat.html'
+    });
+    renderSiteChrome();
+    renderBreadcrumbs(crumbs);
+    injectBreadcrumbSchema(crumbs);
+    renderRelatedLinks([
+      { title: 'محصولات VEGA', url: 'vega.html', desc: 'کاتالوگ سنسور' },
+      { title: 'Gamak', url: 'gamak.html', desc: 'الکتروموتور' },
+      { title: 'تماس', url: 'contact.html', desc: 'استعلام قیمت' }
+    ]);
+  </script>
+</body>
+</html>

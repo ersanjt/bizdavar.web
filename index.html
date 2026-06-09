@@ -36,8 +36,8 @@
         </div>
       </div>
       <div class="hero__visual">
-        <div class="hero__card">
-          <img src="assets/images/brand/bizdavar-logo.svg" alt="لوگوی بیزدوار گروپ" width="140" height="40" class="hero__logo-center">
+        <div class="hero__card hero__card--media">
+          <img src="assets/images/content/hero-home.jpg" alt="بیزدوار گروپ — آژانس دیجیتال و تامین صنعتی" width="560" height="260" class="hero__media-img" loading="eager">
           <p>دیجیتال مارکتینگ · طراحی وب · تجهیزات صنعتی</p>
           <div class="hero__stats">
             <div><div class="stat__number">+100</div><div class="stat__label">پروژه دیجیتال</div></div>
@@ -113,8 +113,10 @@
       </div>
       <div class="products-grid">
         <a href="pages/vega.html" class="product-item product-item--link"><h3>محصولات VEGA</h3><p>VEGAPULS · VEGABAR · VEGAPOINT — کاتالوگ کامل</p></a>
-        <a href="pages/services.html#industrial" class="product-item product-item--link"><h3>پمپ P-Series</h3><p>پمپ‌های صنعتی با کارایی بالا</p></a>
         <a href="pages/prosense.html" class="product-item product-item--link"><h3>محصولات Prosense</h3><p>PQ · SafeVader · PPS+ — دتکتور گاز و شعله</p></a>
+        <a href="pages/gamak.html" class="product-item product-item--link"><h3>الکتروموتور Gamak</h3><p>موتورهای صنعتی ترکیه — تامین و مشاوره</p></a>
+        <a href="pages/biztejarat.html" class="product-item product-item--link"><h3>بیزتجارت (Biztejarat)</h3><p>تجارت جهانی ابزار دقیق و الکترونیک</p></a>
+        <a href="pages/bz-diamond.html" class="product-item product-item--link"><h3>BZ Diamond</h3><p>الماس GIA · lab-grown · ۹ برش</p></a>
         <a href="pages/contact.html" class="product-item product-item--link"><h3>مشاوره تامین</h3><p>انتخاب، خرید و لجستیک بین‌المللی</p></a>
       </div>
     </div>
@@ -137,7 +139,7 @@
   <section class="section landing-about" id="about">
     <div class="container about-grid">
       <div class="about__image">
-        <img src="assets/images/content/about-hero.svg" alt="درباره بیزدوار گروپ" loading="lazy" width="660" height="341">
+        <img src="assets/images/content/about-hero.jpg" alt="درباره بیزدوار گروپ" loading="lazy" width="660" height="341">
       </div>
       <div class="about__content">
         <span class="section__tag">درباره ما</span>
@@ -162,16 +164,7 @@
         <h2 class="section__title">برندهای همکار</h2>
         <p class="section__desc">برخی پروژه‌های تحت مدیریت بیزدوار</p>
       </div>
-      <div class="clients-grid">
-        <a href="https://zed-pay.com" class="client-item client-item--link" target="_blank" rel="noopener noreferrer">ZedPay</a>
-        <a href="https://zedgate.ai" class="client-item client-item--link" target="_blank" rel="noopener noreferrer">ZedGate</a>
-        <a href="https://bzdiamond.com" class="client-item client-item--link" target="_blank" rel="noopener noreferrer">BZ Diamond</a>
-        <a href="https://bearevent.co" class="client-item client-item--link" target="_blank" rel="noopener noreferrer">Bear Event</a>
-        <a href="https://netinohost.com" class="client-item client-item--link" target="_blank" rel="noopener noreferrer">NetinoHost</a>
-        <a href="https://bluenil-air.com" class="client-item client-item--link" target="_blank" rel="noopener noreferrer">BlueNil Air</a>
-        <a href="https://iban2iban.com" class="client-item client-item--link" target="_blank" rel="noopener noreferrer">iBan2iBan</a>
-        <a href="pages/fast.html" class="client-item client-item--link">Fast Studio</a>
-      </div>
+      <div class="clients-grid" id="homeClientsGrid"></div>
       <p class="text-center mt-24"><a href="pages/portfolio.html" class="service-card__link">مشاهده همه نمونه‌کارها ←</a></p>
     </div>
   </section>
@@ -198,7 +191,7 @@
         <details class="faq-item"><summary>بیزدوار چه خدماتی ارائه می‌دهد؟</summary><p>بازاریابی دیجیتال، طراحی وب، فین‌تک، مدیریت SMM، هاستینگ و تامین تجهیزات صنعتی VEGA و Prosense.</p></details>
         <details class="faq-item"><summary>طراحی سایت چقدر زمان می‌برد؟</summary><p>با Fast Web Studio، تحویل از ۵ روز کاری با پلن‌های $99 تا $299.</p></details>
         <details class="faq-item"><summary>چگونه اعتبار بیزدوار را بررسی کنم؟</summary><p>پروفایل LinkedIn بنیان‌گذار، <a href="pages/portfolio.html">نمونه‌کارها</a>، گواهینامه‌های Google و تماس از info@bizdavar.com.</p></details>
-        <details class="faq-item"><summary>تجهیزات صنعتی از چه برندهایی تامین می‌شود؟</summary><p>VEGA، Prosense، پمپ‌های P-Series و سایر برندهای معتبر جهانی.</p></details>
+        <details class="faq-item"><summary>تجهیزات صنعتی از چه برندهایی تامین می‌شود؟</summary><p>VEGA، Prosense، Gamak، Arian Pumps، بیزتجارت و سایر برندهای معتبر جهانی.</p></details>
       </div>
     </div>
   </section>
@@ -237,6 +230,7 @@
     renderTrustBar('trustBar');
     renderCredibilitySection('credibilitySection');
     renderProcessSection('processSection');
+    renderClientsGrid('homeClientsGrid', 12);
     setupWhatsappLinks();
     renderBlogGrid('homeBlogGrid', 3);
     injectFaqSchema([
@@ -244,7 +238,7 @@
       { q: 'بیزدوار چه خدماتی ارائه می‌دهد؟', a: 'بازاریابی دیجیتال، طراحی وب، فین‌تک، SMM، هاستینگ و تامین تجهیزات صنعتی.' },
       { q: 'طراحی سایت چقدر زمان می‌برد؟', a: 'با Fast Web Studio، تحویل از ۵ روز کاری با پلن‌های $99 تا $299.' },
       { q: 'چگونه اعتبار بیزدوار را بررسی کنم؟', a: 'پروفایل LinkedIn بنیان‌گذار، نمونه‌کارها، گواهینامه‌های Google و info@bizdavar.com.' },
-      { q: 'تجهیزات صنعتی از چه برندهایی تامین می‌شود؟', a: 'VEGA، Prosense، پمپ‌های P-Series و سایر برندهای معتبر جهانی.' }
+      { q: 'تجهیزات صنعتی از چه برندهایی تامین می‌شود؟', a: 'VEGA، Prosense، Gamak، Arian Pumps، بیزتجارت و سایر برندهای معتبر جهانی.' }
     ]);
   </script>
 </body>

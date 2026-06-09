@@ -219,9 +219,15 @@
 
       const external = !p.internal;
 
+      const logoHtml = p.logo
+        ? `<div class="portfolio-card__logo"><img src="${path(p.logo)}" alt="${p.name}" loading="lazy"></div>`
+        : '';
+
       return `
 
         <article class="portfolio-card">
+
+          ${logoHtml}
 
           <div class="portfolio-card__top">
 
@@ -242,6 +248,44 @@
           </a>
 
         </article>`;
+
+    }).join('');
+
+  };
+
+
+
+  window.renderClientsGrid = function (containerId, limit) {
+
+    const el = document.getElementById(containerId);
+
+    const partners = C.featuredPartners;
+
+    if (!el || !partners) return;
+
+    const items = limit ? partners.slice(0, limit) : partners;
+
+    el.innerHTML = items.map(p => {
+
+      const href = p.internal ? path(p.url) : (p.url.startsWith('http') ? p.url : path(p.url));
+
+      const external = !p.internal && p.url.startsWith('http');
+
+      const inner = p.logo
+        ? `<img src="${path(p.logo)}" alt="${p.name}" loading="lazy" class="client-item__logo">`
+        : `<span class="client-item__name">${p.name}</span>`;
+
+      return `
+
+        <a href="${href}" class="client-item client-item--link client-item--logo"
+
+           ${external ? 'target="_blank" rel="noopener noreferrer"' : ''}
+
+           ${p.logo ? `title="${p.name}"` : ''}>
+
+          ${inner}
+
+        </a>`;
 
     }).join('');
 
