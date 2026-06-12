@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="../../assets/styles/tokens.css">
   <link rel="stylesheet" href="../../assets/styles/style.css">
   <link rel="stylesheet" href="../../assets/styles/layout.css">
+  <link rel="stylesheet" href="../../assets/styles/i18n.css">
+  <link rel="stylesheet" href="../../assets/styles/footer.css">
   <link rel="stylesheet" href="../../assets/styles/responsive.css">
 </head>
 <body data-page="article" data-depth="2">
@@ -60,13 +62,16 @@
 
   <script src="../../assets/scripts/config/paths.js"></script>
   <script src="../../assets/scripts/config/site-config.js"></script>
+  <script src="../../assets/scripts/i18n/locales.js"></script>
+  <script src="../../assets/scripts/i18n/i18n.js"></script>
   <script src="../../assets/scripts/components/biz-icons.js"></script>
   <script src="../../assets/scripts/components/site-components.js"></script>
-  <script src="../../assets/scripts/main.js"></script>
+  <script src="../../assets/scripts/i18n/bootstrap.js"></script>
+  <script src="../../assets/scripts/main.js"></script>
   <script>
     const crumbs = [
-      { name: 'خانه', url: 'index.html' },
-      { name: 'وبلاگ', url: 'blog.html' },
+      { page: 'home', url: 'index.html' },
+      { page: 'blog', url: 'blog.html' },
       { name: 'مدیریت شبکه‌های اجتماعی', url: 'social-media-management.html' }
     ];
     injectSeo({

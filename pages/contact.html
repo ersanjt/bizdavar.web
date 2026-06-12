@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="../assets/styles/tokens.css">
   <link rel="stylesheet" href="../assets/styles/style.css">
   <link rel="stylesheet" href="../assets/styles/layout.css">
+  <link rel="stylesheet" href="../assets/styles/i18n.css">
+  <link rel="stylesheet" href="../assets/styles/footer.css">
   <link rel="stylesheet" href="../assets/styles/responsive.css">
 </head>
 <body data-page="contact" data-depth="1">
@@ -120,26 +122,29 @@
 
   <script src="../assets/scripts/config/paths.js"></script>
   <script src="../assets/scripts/config/site-config.js"></script>
+  <script src="../assets/scripts/i18n/locales.js"></script>
+  <script src="../assets/scripts/i18n/i18n.js"></script>
   <script src="../assets/scripts/components/biz-icons.js"></script>
   <script src="../assets/scripts/components/site-components.js"></script>
-  <script src="../assets/scripts/main.js"></script>
+  <script src="../assets/scripts/i18n/bootstrap.js"></script>
+  <script src="../assets/scripts/main.js"></script>
   <script>
-    injectSeo({
-      title: 'تماس با ما | بیزدوار گروپ — مشاوره رایگان',
-      description: 'با بیزدوار گروپ تماس بگیرید: بازاریابی دیجیتال، طراحی سایت، SMM و تامین تجهیزات صنعتی. فرم تماس و ارتباط مستقیم.',
-      canonical: 'https://bizdavar.com/pages/contact.html',
-      ogImage: 'assets/images/content/contact-banner.svg'
+    bizdavarPageInit(function () {
+      injectPageSeo('contact', {
+        canonical: 'https://bizdavar.com/pages/contact.html',
+        ogImage: 'assets/images/content/contact-banner.svg'
+      });
+      const crumbs = [
+        { page: 'home', url: 'index.html' },
+        { page: 'contact', url: 'contact.html' }
+      ];
+      renderSiteChrome();
+      renderBreadcrumbs(crumbs);
+      injectBreadcrumbSchema(crumbs);
+      fillContactDetails();
+      setupWhatsappLinks();
+      injectContactPageSchema();
     });
-    const crumbs = [
-      { name: 'خانه', url: 'index.html' },
-      { name: 'تماس با ما', url: 'contact.html' }
-    ];
-    renderSiteChrome();
-    renderBreadcrumbs(crumbs);
-    injectBreadcrumbSchema(crumbs);
-    fillContactDetails();
-    setupWhatsappLinks();
-    injectContactPageSchema();
   </script>
 </body>
 </html>

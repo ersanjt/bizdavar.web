@@ -1,80 +1,91 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>وبلاگ | بیزدوار گروپ</title>
-  <link rel="icon" href="../assets/images/brand/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+﻿<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>وبلاگ | بیزدوار گروپ</title>
+  <link rel="icon" href="../assets/images/brand/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="../assets/styles/fonts.css">
   <link rel="stylesheet" href="../assets/styles/typography.css">
-  <link rel="stylesheet" href="../assets/styles/icons.css">
+  <link rel="stylesheet" href="../assets/styles/icons.css">
   <link rel="stylesheet" href="../assets/styles/tokens.css">
   <link rel="stylesheet" href="../assets/styles/style.css">
   <link rel="stylesheet" href="../assets/styles/layout.css">
-  <link rel="stylesheet" href="../assets/styles/responsive.css">
-</head>
-<body data-page="blog" data-depth="1">
-
+  <link rel="stylesheet" href="../assets/styles/i18n.css">
+  <link rel="stylesheet" href="../assets/styles/footer.css">
+  <link rel="stylesheet" href="../assets/styles/responsive.css">
+</head>
+<body data-page="blog" data-depth="1">
+
   
   <a href="#main-content" class="skip-link">رفتن به محتوای اصلی</a>
-<div class="top-bar" id="topBar"></div>
-  <header class="header" id="siteHeader"></header>
-  <nav class="breadcrumbs-wrap" id="breadcrumbs" aria-label="مسیر صفحه"></nav>
-  <div class="overlay" id="overlay"></div>
-
+<div class="top-bar" id="topBar"></div>
+  <header class="header" id="siteHeader"></header>
+  <nav class="breadcrumbs-wrap" id="breadcrumbs" aria-label="مسیر صفحه"></nav>
+  <div class="overlay" id="overlay"></div>
+
   
   <main id="main-content" class="site-main">
 
-<section class="page-hero page-hero--pro">
-    <div class="container">
-      <span class="section__tag">وبلاگ</span>
-      <h1>مطالب تخصصی دیجیتال و صنعت</h1>
-      <p>راهنماها و نکات کاربردی از تیم بیزدوار گروپ.</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="blog-grid" id="blogGrid"></div>
-    </div>
-  </section>
-
-  <section class="section section--gray">
-    <div class="container cta-banner">
-      <h2>نیاز به مشاوره تخصصی دارید؟</h2>
-      <p>موضوع مطلب شما را در <a href="contact.html">فرم تماس</a> بنویسید — پاسخگوییم.</p>
-      <a href="contact.html" class="btn btn--primary">درخواست مشاوره</a>
-    </div>
+<section class="page-hero page-hero--pro">
+    <div class="container">
+      <span class="section__tag">وبلاگ</span>
+      <h1>مطالب تخصصی دیجیتال و صنعت</h1>
+      <p>راهنماها و نکات کاربردی از تیم بیزدوار گروپ.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="blog-grid" id="blogGrid"></div>
+    </div>
+  </section>
+
+  <div id="geoStrip"></div>
+
+  <section class="section section--gray">
+    <div class="container cta-banner">
+      <h2>نیاز به مشاوره تخصصی دارید؟</h2>
+      <p>موضوع مطلب شما را در <a href="contact.html">فرم تماس</a> بنویسید — پاسخگوییم.</p>
+      <a href="contact.html" class="btn btn--primary">درخواست مشاوره</a>
+    </div>
   </section>
   </main>
 
-
-
-  <footer class="footer" id="siteFooter"></footer>
-  <button class="back-to-top" id="backToTop" aria-label="بازگشت به بالا">↑</button>
-
+
+
+  <footer class="footer" id="siteFooter"></footer>
+  <button class="back-to-top" id="backToTop" aria-label="بازگشت به بالا">↑</button>
+
   <script src="../assets/scripts/config/paths.js"></script>
   <script src="../assets/scripts/config/site-config.js"></script>
-  <script src="../assets/scripts/components/biz-icons.js"></script>
-  <script src="../assets/scripts/components/site-components.js"></script>
+  <script src="../assets/scripts/i18n/locales.js"></script>
+  <script src="../assets/scripts/i18n/i18n.js"></script>
+  <script src="../assets/scripts/components/biz-icons.js"></script>
+  <script src="../assets/scripts/components/site-components.js"></script>
+  <script src="../assets/scripts/i18n/bootstrap.js"></script>
   <script src="../assets/scripts/main.js"></script>
-  <script>
-    const crumbs = [
-      { name: 'خانه', url: 'index.html' },
-      { name: 'وبلاگ', url: 'blog.html' }
-    ];
-    injectSeo({
-      title: 'وبلاگ بیزدوار | بازاریابی دیجیتال، طراحی وب و تجهیزات صنعتی',
-      description: 'مقالات تخصصی بیزدوار گروپ: بازاریابی دیجیتال، Fast Web Studio، سنسورهای صنعتی VEGA و راهکارهای رشد کسب‌وکار.',
-      canonical: 'https://bizdavar.com/pages/blog.html',
-      type: 'website'
-    });
-    renderSiteChrome();
-    renderBreadcrumbs(crumbs);
-    injectBreadcrumbSchema(crumbs);
-    renderBlogGrid('blogGrid');
-  </script>
-</body>
-</html>
-
+  <script>
+    const crumbs = [
+      { page: 'home', url: 'index.html' },
+      { page: 'blog', url: 'blog.html' }
+    ];
+    injectSeo({
+      title: 'وبلاگ بیزدوار | بازاریابی دیجیتال، طراحی وب و تجهیزات صنعتی',
+      description: 'مقالات تخصصی بیزدوار گروپ: بازاریابی دیجیتال، Fast Web Studio، سنسورهای صنعتی VEGA و راهکارهای رشد کسب‌وکار.',
+      canonical: 'https://bizdavar.com/pages/blog.html',
+      type: 'website'
+    });
+    renderSiteChrome();
+    renderBreadcrumbs(crumbs);
+    injectBreadcrumbSchema(crumbs);
+    renderBlogGrid('blogGrid');
+    renderGeoStrip('geoStrip', {
+      text: 'مقالات تخصصی برای کسب‌وکارهای ایران و ترکیه — بازاریابی دیجیتال، طراحی وب و تامین تجهیزات صنعتی.'
+    });
+    injectBlogListSchema();
+  </script>
+</body>
+</html>
+

@@ -36,9 +36,9 @@ window.BIZDAVAR_CONFIG = {
   assets: {
     favicon: 'assets/images/brand/favicon.svg',
     logo: 'assets/images/brand/bizdavar-logo.svg',
-    ogImage: 'assets/images/content/about-us-1320x682.jpg',
+    ogImage: 'assets/images/content/about-hero.svg',
     heroImage: 'assets/images/content/hero-home.svg',
-    aboutImage: 'assets/images/content/about-us-1320x682.jpg'
+    aboutImage: 'assets/images/content/about-hero.svg'
   },
 
   contact: {
@@ -62,6 +62,17 @@ window.BIZDAVAR_CONFIG = {
     main: 'bizdavar.com',
     alt: 'bizdavar.ir',
     fast: 'fast.bizdavar.com'
+  },
+
+  geo: {
+    headquarters: { city: 'استانبول', country: 'ترکیه', countryCode: 'TR' },
+    summaryFa: 'خدمات از استانبول به ایران، ترکیه و ۱۱ کشور — مشاوره فارسی، واتساپ و تحویل بین‌المللی.',
+    hubs: [
+      { city: 'استانبول', country: 'ترکیه', code: 'TR', role: 'دفتر اصلی · فین‌تک و عملیات بین‌المللی' },
+      { city: 'تبریز', country: 'ایران', code: 'IR', role: 'بازار ایران · پروژه‌های صنعتی و دیجیتال' },
+      { city: 'ایروان', country: 'ارمنستان', code: 'AM', role: 'عملیات منطقه‌ای' }
+    ],
+    markets: ['ایران', 'ترکیه', 'امارات', 'آلمان', 'ارمنستان', 'عراق', 'گرجستان', 'لبنان', 'ایتالیا', 'انگلستان', 'آمریکا']
   },
 
   seo: {
@@ -144,7 +155,7 @@ window.BIZDAVAR_CONFIG = {
     { value: '+۱۰۰', label: 'پروژه دیجیتال' },
     { value: '۱۱', label: 'کشور فعال' },
     { value: '۱۲+', label: 'سال تجربه' },
-    { value: '۳۰+', label: 'پروژه و برند' }
+    { value: '۳۵', label: 'پروژه و برند' }
   ],
 
   featuredPartners: [
@@ -182,7 +193,7 @@ window.BIZDAVAR_CONFIG = {
       name: 'Prosense',
       title: 'دتکتور گاز و شعله',
       desc: 'سیستم‌های ثابت و پرتابل با گواهی SIL2/3 — مناسب معدن، پتروشیمی و پارکینگ',
-      logo: 'assets/images/partners/prosense.png',
+      logo: 'assets/images/partners/prosense.svg',
       url: 'pages/prosense.html',
       internal: true,
       badge: 'ترکیه',
@@ -230,6 +241,12 @@ window.BIZDAVAR_CONFIG = {
     { name: 'Fast Web Studio', domain: 'fast.bizdavar.com', category: 'طراحی سایت', role: 'case-study', internal: true, slug: 'pages/fast.html', logo: 'assets/images/partners/fast-studio.png', note: 'محصول اختصاصی بیزدوار — طراحی سایت ۵ روزه' },
     { name: 'Biztejarat', domain: 'instagram.com/biztejarat', category: 'مدیریت SMM / اینستاگرام', role: 'case-study', internal: true, slug: 'pages/biztejarat.html', logo: 'assets/images/partners/biztejarat.svg', note: 'نمونه‌کار — مدیریت محتوای صنعتی' },
     { name: 'Arian Pumps', domain: 'arianpumps.com', category: 'طراحی وب / B2B', role: 'case-study', internal: false, logo: 'assets/images/partners/arian-pumps.png', note: 'نمونه‌کار — طراحی وب و خدمات دیجیتال' },
+    { name: 'Marvelous Holding', domain: 'marvelousholding.com', category: 'طراحی وب / هلدینگ', role: 'case-study', internal: false, logo: 'assets/images/partners/marvelous-holding.svg', note: 'نمونه‌کار — وبسایت هلدینگ و سرمایه‌گذاری' },
+    { name: 'SMM Turk', domain: 'smm-turk.com', category: 'مدیریت SMM / دیجیتال', role: 'case-study', internal: false, logo: 'assets/images/partners/smm-turk.svg', note: 'نمونه‌کار — بازاریابی دیجیتال و SMM ترکیه' },
+    { name: 'JMS Elettropompe', domain: 'jmselettropompe.it', category: 'طراحی وب / پمپ صنعتی', role: 'case-study', internal: false, logo: 'assets/images/partners/jms-elettropompe.svg', note: 'نمونه‌کار — وب B2B الکتروموتور و پمپ ایتالیا' },
+    { name: 'Karen Leather', domain: 'karenleather.com', category: 'طراحی وب / چرم و مد', role: 'case-study', internal: false, logo: 'assets/images/partners/karen-leather.svg', note: 'نمونه‌کار — فروشگاه آنلاین چرم و پوشاک' },
+    { name: 'Paparosi', domain: 'paparosi.co', category: 'طراحی وب / برند تجاری', role: 'case-study', internal: false, logo: 'assets/images/partners/paparosi.svg', note: 'نمونه‌کار — طراحی وب و هویت برند' },
+    { name: 'NIK Aesthetic', domain: 'nikaesthetic.com', category: 'طراحی وب / کلینیک زیبایی', role: 'case-study', internal: false, logo: 'assets/images/partners/nikaesthetic.svg', note: 'نمونه‌کار — کلینیک بین‌المللی زیبایی و پزشکی' },
     { name: 'Adak Sepehr', domain: 'adaksepehr.com', category: 'صنعت و تجهیزات', role: 'client', internal: false, logo: 'assets/images/partners/adak-sepehr.png' },
     { name: 'Alimila', domain: 'alimila.com', category: 'تجارت بین‌الملل', role: 'client', internal: false, logo: 'assets/images/partners/alimila.png' },
     { name: 'Bamauk Visa', domain: 'bamaukvisa.com', category: 'خدمات ویزا', role: 'client', internal: false, logo: 'assets/images/partners/bamauk-visa.png' },

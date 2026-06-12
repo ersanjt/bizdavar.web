@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="../assets/styles/tokens.css">
   <link rel="stylesheet" href="../assets/styles/style.css">
   <link rel="stylesheet" href="../assets/styles/layout.css">
+  <link rel="stylesheet" href="../assets/styles/i18n.css">
+  <link rel="stylesheet" href="../assets/styles/footer.css">
   <link rel="stylesheet" href="../assets/styles/responsive.css">
   <link rel="stylesheet" href="../assets/styles/portfolio.css">
 </head>
@@ -84,21 +86,25 @@
 
   <script src="../assets/scripts/config/paths.js"></script>
   <script src="../assets/scripts/config/site-config.js"></script>
+  <script src="../assets/scripts/i18n/locales.js"></script>
+  <script src="../assets/scripts/i18n/i18n.js"></script>
   <script src="../assets/scripts/components/biz-icons.js"></script>
   <script src="../assets/scripts/components/site-components.js"></script>
   <script src="../assets/scripts/portfolio-page.js"></script>
+  <script src="../assets/scripts/i18n/bootstrap.js"></script>
   <script src="../assets/scripts/main.js"></script>
+
   <script>
     const crumbs = [
-      { name: 'خانه', url: '../index.html' },
-      { name: 'نمونه‌کارها', url: 'portfolio.html' }
+      { page: 'home', url: 'index.html' },
+      { page: 'portfolio', url: 'portfolio.html' }
     ];
     injectSeo({
       title: 'نمونه‌کارها | پروژه‌های بیزدوار گروپ — ZedPay، ZedGate و...',
-      description: 'نمونه‌کارهای بیزدوار: ZedPay، BZ Diamond، Biztejarat، Arian Pumps و ۲۹ برند — اکوسیستم، مشتریان و پروژه‌های دیجیتال.',
+      description: 'نمونه‌کارهای بیزدوار: ZedPay، BZ Diamond، Marvelous Holding، NIK Aesthetic، Karen Leather و ۳۵ برند — اکوسیستم، مشتریان و پروژه‌های دیجیتال.',
       keywords: 'نمونه کار, ZedPay, ZedGate, بیزدوار, پورتفولیو',
       canonical: 'https://bizdavar.com/pages/portfolio.html',
-      ogImage: 'assets/images/content/about-us-1320x682.jpg'
+      ogImage: 'assets/images/content/about-hero.svg'
     });
     renderSiteChrome();
     renderBreadcrumbs(crumbs);

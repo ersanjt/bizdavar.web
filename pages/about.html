@@ -21,6 +21,8 @@
   <link rel="stylesheet" href="../assets/styles/tokens.css">
   <link rel="stylesheet" href="../assets/styles/style.css">
   <link rel="stylesheet" href="../assets/styles/layout.css">
+  <link rel="stylesheet" href="../assets/styles/i18n.css">
+  <link rel="stylesheet" href="../assets/styles/footer.css">
   <link rel="stylesheet" href="../assets/styles/responsive.css">
 
 </head>
@@ -66,7 +68,7 @@
 
       <div class="about__image">
 
-        <img src="../assets/images/content/about-us-1320x682.jpg" alt="تیم بیزدوار گروپ — پروژه‌های بین‌المللی در ۱۱ کشور" loading="lazy" width="660" height="341">
+        <img src="../assets/images/content/about-hero.svg" alt="تیم بیزدوار گروپ — پروژه‌های بین‌المللی در ۱۱ کشور" loading="lazy" width="660" height="341">
 
       </div>
 
@@ -240,19 +242,23 @@
 
   <script src="../assets/scripts/config/paths.js"></script>
   <script src="../assets/scripts/config/site-config.js"></script>
+  <script src="../assets/scripts/i18n/locales.js"></script>
+  <script src="../assets/scripts/i18n/i18n.js"></script>
   <script src="../assets/scripts/config/company-intel.js"></script>
   <script src="../assets/scripts/components/biz-icons.js"></script>
   <script src="../assets/scripts/components/site-components.js"></script>
+  <script src="../assets/scripts/i18n/bootstrap.js"></script>
 
   <script src="../assets/scripts/main.js"></script>
+
 
   <script>
 
     const crumbs = [
 
-      { name: 'خانه', url: 'index.html' },
+      { page: 'home', url: 'index.html' },
 
-      { name: 'درباره ما', url: 'about.html' }
+      { page: 'about', url: 'about.html' }
 
     ];
 

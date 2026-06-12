@@ -691,3 +691,82 @@ body {
   font-size: var(--text-sm);
   line-height: 1.8;
 }
+
+.geo-strip {
+  background: linear-gradient(135deg, var(--navy) 0%, #1e1e52 100%);
+  color: var(--white);
+  padding: var(--space-6) 0;
+}
+
+.geo-strip__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.geo-strip__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--yellow);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: var(--space-2);
+}
+
+.geo-strip__lead p {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 42ch;
+}
+
+.geo-strip__hubs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.geo-strip__hub {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3) var(--space-4);
+}
+
+.geo-strip__hub strong {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--white);
+}
+
+.geo-strip__country {
+  display: block;
+  font-size: 11px;
+  color: var(--yellow);
+  margin: 2px 0 var(--space-2);
+}
+
+.geo-strip__role {
+  display: block;
+  font-size: 11px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+@media (max-width: 900px) {
+  .geo-strip__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .geo-strip__hubs {
+    grid-template-columns: 1fr;
+  }
+}

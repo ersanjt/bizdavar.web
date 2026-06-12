@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="../assets/styles/tokens.css">
   <link rel="stylesheet" href="../assets/styles/style.css">
   <link rel="stylesheet" href="../assets/styles/layout.css">
+  <link rel="stylesheet" href="../assets/styles/i18n.css">
+  <link rel="stylesheet" href="../assets/styles/footer.css">
   <link rel="stylesheet" href="../assets/styles/responsive.css">
 </head>
 <body data-page="biztejarat" data-depth="1">
@@ -74,6 +76,8 @@
     </div>
   </section>
 
+  <div id="geoStrip"></div>
+
   <div id="relatedLinks"></div>
   </main>
 
@@ -82,13 +86,16 @@
 
   <script src="../assets/scripts/config/paths.js"></script>
   <script src="../assets/scripts/config/site-config.js"></script>
+  <script src="../assets/scripts/i18n/locales.js"></script>
+  <script src="../assets/scripts/i18n/i18n.js"></script>
   <script src="../assets/scripts/components/biz-icons.js"></script>
   <script src="../assets/scripts/components/site-components.js"></script>
-  <script src="../assets/scripts/main.js"></script>
+  <script src="../assets/scripts/i18n/bootstrap.js"></script>
+  <script src="../assets/scripts/main.js"></script>
   <script>
     const crumbs = [
-      { name: 'خانه', url: 'index.html' },
-      { name: 'نمونه‌کارها', url: 'portfolio.html' },
+      { page: 'home', url: 'index.html' },
+      { page: 'portfolio', url: 'portfolio.html' },
       { name: 'بیزتجارت', url: 'biztejarat.html' }
     ];
     injectSeo({
@@ -100,6 +107,16 @@
     renderSiteChrome();
     renderBreadcrumbs(crumbs);
     injectBreadcrumbSchema(crumbs);
+    renderGeoStrip('geoStrip', {
+      text: 'مدیریت محتوای B2B برای بازار ایران — معرفی تجهیزات صنعتی VEGA، Prosense و Gamak با زبان فارسی و انگلیسی.'
+    });
+    injectCaseStudySchema({
+      id: 'biztejarat',
+      name: 'بیزتجارت — مدیریت اینستاگرام محصولات صنعتی',
+      description: 'نمونه‌کار SMM بیزتجارت: تولید محتوای محصولات صنعتی، ابزار دقیق و تجهیزات B2B در اینستاگرام.',
+      service: 'مدیریت شبکه‌های اجتماعی و تولید محتوا',
+      slug: 'pages/biztejarat.html'
+    });
     renderRelatedLinks([
       { title: 'خدمات SMM', url: 'services.html#smm', desc: 'مدیریت شبکه‌های اجتماعی' },
       { title: 'نمونه‌کار BZ Diamond', url: 'bz-diamond.html', desc: 'طراحی وب' },

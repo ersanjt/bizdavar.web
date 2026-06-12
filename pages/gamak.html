@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="../assets/styles/tokens.css">
   <link rel="stylesheet" href="../assets/styles/style.css">
   <link rel="stylesheet" href="../assets/styles/layout.css">
+  <link rel="stylesheet" href="../assets/styles/i18n.css">
+  <link rel="stylesheet" href="../assets/styles/footer.css">
   <link rel="stylesheet" href="../assets/styles/responsive.css">
 </head>
 <body data-page="gamak" data-depth="1">
@@ -52,6 +54,8 @@
     </div>
   </section>
 
+  <div id="geoStrip"></div>
+
   <div id="relatedLinks"></div>
   </main>
 
@@ -60,14 +64,17 @@
 
   <script src="../assets/scripts/config/paths.js"></script>
   <script src="../assets/scripts/config/site-config.js"></script>
+  <script src="../assets/scripts/i18n/locales.js"></script>
+  <script src="../assets/scripts/i18n/i18n.js"></script>
   <script src="../assets/scripts/components/biz-icons.js"></script>
   <script src="../assets/scripts/components/site-components.js"></script>
-  <script src="../assets/scripts/main.js"></script>
+  <script src="../assets/scripts/i18n/bootstrap.js"></script>
+  <script src="../assets/scripts/main.js"></script>
   <script>
     const crumbs = [
-      { name: 'خانه', url: 'index.html' },
+      { page: 'home', url: 'index.html' },
       { name: 'خدمات صنعتی', url: 'services.html#industrial' },
-      { name: 'Gamak', url: 'gamak.html' }
+      { page: 'gamak', url: 'gamak.html' }
     ];
     injectSeo({
       title: 'الکتروموتور Gamak | تامین موتور صنعتی — بیزدوار گروپ',
@@ -78,6 +85,18 @@
     renderSiteChrome();
     renderBreadcrumbs(crumbs);
     injectBreadcrumbSchema(crumbs);
+    renderGeoStrip('geoStrip', {
+      text: 'تامین Gamak از ترکیه به ایران و پروژه‌های منطقه‌ای — مشاوره فنی فارسی، پیش‌فاکتور و لجستیک توسط بیزدوار گروپ.'
+    });
+    injectSupplyBrandSchema({
+      id: 'gamak',
+      name: 'الکتروموتور Gamak',
+      brand: 'Gamak',
+      description: 'تامین الکتروموتور صنعتی Gamak ترکیه — مشاوره انتخاب توان، IE2/IE3 و لجستیک بین‌المللی.',
+      category: 'Industrial Electric Motor',
+      areaServed: ['IR', 'TR'],
+      url: 'pages/gamak.html'
+    });
     renderRelatedLinks([
       { title: 'خدمات صنعتی', url: 'services.html#industrial', desc: 'تامین B2B' },
       { title: 'Arian Pumps', url: 'portfolio.html', desc: 'نمونه‌کار طراحی وب' },

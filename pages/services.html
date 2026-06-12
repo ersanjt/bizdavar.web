@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="../assets/styles/tokens.css">
   <link rel="stylesheet" href="../assets/styles/style.css">
   <link rel="stylesheet" href="../assets/styles/layout.css">
+  <link rel="stylesheet" href="../assets/styles/i18n.css">
+  <link rel="stylesheet" href="../assets/styles/footer.css">
   <link rel="stylesheet" href="../assets/styles/responsive.css">
   <link rel="stylesheet" href="../assets/styles/services.css">
 </head>
@@ -209,6 +211,8 @@
       </div>
     </section>
 
+    <div id="geoStrip"></div>
+
     <section class="section section--yellow services-cta">
       <div class="container cta-banner cta-banner--pro">
         <h2>نیاز به راهکار اختصاصی دارید؟</h2>
@@ -229,14 +233,18 @@
 
   <script src="../assets/scripts/config/paths.js"></script>
   <script src="../assets/scripts/config/site-config.js"></script>
+  <script src="../assets/scripts/i18n/locales.js"></script>
+  <script src="../assets/scripts/i18n/i18n.js"></script>
   <script src="../assets/scripts/components/biz-icons.js"></script>
   <script src="../assets/scripts/components/site-components.js"></script>
   <script src="../assets/scripts/services-page.js"></script>
+  <script src="../assets/scripts/i18n/bootstrap.js"></script>
   <script src="../assets/scripts/main.js"></script>
+
   <script>
     const crumbs = [
-      { name: 'خانه', url: '../index.html' },
-      { name: 'خدمات', url: 'services.html' }
+      { page: 'home', url: 'index.html' },
+      { page: 'services', url: 'services.html' }
     ];
     injectSeo({
       title: 'خدمات بیزدوار | بازاریابی دیجیتال، طراحی وب و تامین تجهیزات',
@@ -250,9 +258,10 @@
     injectBreadcrumbSchema(crumbs);
     initServicesPage();
     injectServiceSchema();
+    renderGeoStrip('geoStrip');
     renderRelatedLinks([
       { title: 'Fast Web Studio', url: 'fast.html', desc: 'طراحی سایت از $99' },
-      { title: 'نمونه‌کارها', url: 'portfolio.html', desc: '۲۹ پروژه و برند' },
+      { title: 'نمونه‌کارها', url: 'portfolio.html', desc: '۳۵ پروژه و برند' },
       { title: 'وبلاگ تخصصی', url: 'blog.html', desc: 'راهنما و مقالات' }
     ]);
   </script>

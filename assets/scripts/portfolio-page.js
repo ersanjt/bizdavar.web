@@ -30,7 +30,7 @@
   function getGroup(category) {
     const c = category || '';
     if (/فین|پرداخت|مالی|بروکر|هلدینگ|وب۳|انتقال/.test(c)) return 'fintech';
-    if (/طراحی|SMM|هاستینگ|رویداد|جواهر|فروشگاه|هنر|مد|هواپیمایی|درگاه|زیرساخت/.test(c)) return 'digital';
+    if (/طراحی|SMM|هاستینگ|رویداد|جواهر|فروشگاه|هنر|مد|چرم|هواپیمایی|درگاه|زیرساخت|برند/.test(c)) return 'digital';
     if (/صنعت|پمپ|پتروشیمی|الکتروموتور|تجهیزات|گردشگری|ویزا|تجارت|پتروشیمی/.test(c)) return 'industrial';
     return 'other';
   }

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="../assets/styles/tokens.css">
   <link rel="stylesheet" href="../assets/styles/style.css">
   <link rel="stylesheet" href="../assets/styles/layout.css">
+  <link rel="stylesheet" href="../assets/styles/i18n.css">
+  <link rel="stylesheet" href="../assets/styles/footer.css">
   <link rel="stylesheet" href="../assets/styles/responsive.css">
   <link rel="stylesheet" href="../assets/styles/prosense.css">
 </head>
@@ -149,6 +151,8 @@
     <a href="contact.html?service=industrial" class="btn btn--yellow prosense-btn-inquiry">تماس</a>
   </div>
 
+  <div id="geoStrip"></div>
+
   <div id="relatedLinks"></div>
 
   </main>
@@ -158,11 +162,15 @@
 
   <script src="../assets/scripts/config/paths.js"></script>
   <script src="../assets/scripts/config/site-config.js"></script>
+  <script src="../assets/scripts/i18n/locales.js"></script>
+  <script src="../assets/scripts/i18n/i18n.js"></script>
   <script src="../assets/scripts/components/biz-icons.js"></script>
   <script src="../assets/scripts/config/prosense-products.js"></script>
   <script src="../assets/scripts/components/site-components.js"></script>
   <script src="../assets/scripts/prosense-page.js"></script>
+  <script src="../assets/scripts/i18n/bootstrap.js"></script>
   <script src="../assets/scripts/main.js"></script>
+
   <script>
     injectSeo({
       title: 'خرید دتکتور Prosense در ایران | PQ, SafeVader, PPS+ — بیزدوار',
@@ -173,15 +181,18 @@
     });
     renderSiteChrome();
     renderBreadcrumbs([
-      { name: 'خانه', url: '../index.html' },
-      { name: 'محصولات Prosense', url: 'prosense.html' }
+      { page: 'home', url: 'index.html' },
+      { page: 'prosense', url: 'prosense.html' }
     ]);
     injectBreadcrumbSchema([
-      { name: 'خانه', url: 'index.html' },
-      { name: 'محصولات Prosense', url: 'pages/prosense.html' }
+      { page: 'home', url: 'index.html' },
+      { page: 'prosense', url: 'pages/prosense.html' }
     ]);
     initProsensePage();
     injectProsenseSchema();
+    renderGeoStrip('geoStrip', {
+      text: 'تامین اصل دتکتور Prosense به ایران — گواهی SIL/M1/EN، مشاوره فارسی و تحویل برای پروژه‌های نفت، گاز و صنعت.'
+    });
     renderRelatedLinks([
       { title: 'محصولات VEGA', url: 'vega.html', desc: 'سنسور سطح و فشار' },
       { title: 'خدمات صنعتی', url: 'services.html#industrial', desc: 'مشاوره تامین' },

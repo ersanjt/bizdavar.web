@@ -239,6 +239,7 @@ function initScrollSpy() {
 window.fillContactDetails = function () {
 
   const C = window.BIZDAVAR_CONFIG;
+  const t = (k, fb) => (window.BIZDAVAR_I18N ? window.BIZDAVAR_I18N.t(k, fb) : (fb ?? k));
 
   const el = document.getElementById('contactDetails');
 
@@ -255,7 +256,7 @@ window.fillContactDetails = function () {
           <span class="contact-info__phone-label">${ch.label}:</span>
           <a href="tel:${ch.tel}" dir="ltr">${ch.display}</a>
           ·
-          <a href="${waUrl(ch.whatsapp)}" target="_blank" rel="noopener noreferrer">واتساپ</a>
+          <a href="${waUrl(ch.whatsapp)}" target="_blank" rel="noopener noreferrer">${t('common.whatsapp', 'واتساپ')}</a>
         </div>`).join('')
     : (C.contact.phone
       ? `<a href="tel:${C.contact.phone}" dir="ltr">${C.contact.phoneDisplay || C.contact.phone}</a>`
@@ -263,7 +264,7 @@ window.fillContactDetails = function () {
 
   el.innerHTML = `
 
-    <h2>راه‌های ارتباطی</h2>
+    <h2>${t('contactPage.connectTitle', 'راه‌های ارتباطی')}</h2>
 
     <div class="contact-info__item">
 
@@ -271,7 +272,7 @@ window.fillContactDetails = function () {
 
       <div>
 
-        <div class="contact-info__label">ایمیل اصلی</div>
+        <div class="contact-info__label">${t('contactPage.emailMain', 'ایمیل اصلی')}</div>
 
         <div class="contact-info__value"><a href="mailto:${C.contact.email}">${C.contact.email}</a></div>
 
@@ -285,7 +286,7 @@ window.fillContactDetails = function () {
 
       <div>
 
-        <div class="contact-info__label">ایمیل جایگزین</div>
+        <div class="contact-info__label">${t('contactPage.emailAlt', 'ایمیل جایگزین')}</div>
 
         <div class="contact-info__value"><a href="mailto:${C.contact.emailAlt}">${C.contact.emailAlt}</a></div>
 
@@ -299,7 +300,7 @@ window.fillContactDetails = function () {
 
       <div>
 
-        <div class="contact-info__label">تماس / واتساپ / چت</div>
+        <div class="contact-info__label">${t('contactPage.phoneLabel', 'تماس / واتساپ')}</div>
 
         <div class="contact-info__value contact-info__value--phones">${phoneHtml}</div>
 
@@ -313,7 +314,7 @@ window.fillContactDetails = function () {
 
       <div>
 
-        <div class="contact-info__label">موقعیت</div>
+        <div class="contact-info__label">${t('contactPage.location', 'موقعیت')}</div>
 
         <div class="contact-info__value">${C.contact.address}</div>
 
@@ -327,7 +328,7 @@ window.fillContactDetails = function () {
 
       <div>
 
-        <div class="contact-info__label">ساعات کاری</div>
+        <div class="contact-info__label">${t('contactPage.hours', 'ساعات کاری')}</div>
 
         <div class="contact-info__value">${C.contact.workingHours}</div>
 
@@ -341,7 +342,7 @@ window.fillContactDetails = function () {
 
       <div>
 
-        <div class="contact-info__label">وبسایت‌ها</div>
+        <div class="contact-info__label">${t('contactPage.websites', 'وبسایت‌ها')}</div>
 
         <div class="contact-info__value" dir="ltr">${C.domains.main} · ${C.domains.fast}</div>
 
@@ -351,7 +352,7 @@ window.fillContactDetails = function () {
 
     ${channels.length ? channels.map(ch => `
       <a href="${waUrl(ch.whatsapp)}" class="btn btn--green btn--block mt-16" target="_blank" rel="noopener noreferrer">
-        واتساپ ${ch.label} — ${ch.display}
+        ${t('common.whatsapp', 'واتساپ')} ${ch.label} — ${ch.display}
       </a>`).join('') : ''}
 
   `;
@@ -365,6 +366,7 @@ window.fillContactDetails = function () {
 window.setupWhatsappLinks = function () {
 
   const C = window.BIZDAVAR_CONFIG;
+  const t = (k, fb) => (window.BIZDAVAR_I18N ? window.BIZDAVAR_I18N.t(k, fb) : (fb ?? k));
 
   if (!C) return;
 
@@ -374,7 +376,7 @@ window.setupWhatsappLinks = function () {
 
   if (!channels.length && !C.contact.whatsapp) {
     document.querySelectorAll('#homeWhatsapp').forEach(el => {
-      if (el) el.textContent = 'تماس سریع';
+      if (el) el.textContent = t('contactPage.quickContact', 'تماس سریع');
     });
     return;
   }
@@ -385,7 +387,7 @@ window.setupWhatsappLinks = function () {
   document.querySelectorAll('#homeWhatsapp').forEach(el => {
     if (el) {
       el.href = primaryUrl;
-      el.textContent = 'واتساپ';
+      el.textContent = t('common.whatsapp', 'واتساپ');
       el.target = '_blank';
       el.rel = 'noopener noreferrer';
     }
@@ -410,7 +412,8 @@ function prefillContactFromQuery() {
   const form = document.getElementById('contactForm');
   if (!form) return;
   const params = new URLSearchParams(window.location.search);
-  if (!params.has('product') && !params.has('message') && !params.has('service')) return;
+  const C = window.BIZDAVAR_CONFIG;
+  if (!params.has('product') && !params.has('message') && !params.has('service') && !params.has('plan')) return;
 
   if (params.get('service')) {
     const val = params.get('service');
@@ -418,12 +421,22 @@ function prefillContactFromQuery() {
     if (opt) form.service.value = val;
   }
 
+  if (params.get('plan') && C?.fast?.planMessages) {
+    form.service.value = 'fast-studio';
+    const plan = params.get('plan');
+    if (!params.get('message') && C.fast.planMessages[plan]) {
+      form.message.value = C.fast.planMessages[plan];
+    }
+  }
+
   if (params.get('message')) {
     form.message.value = params.get('message');
   } else if (params.get('product')) {
     const product = params.get('product');
-    form.message.value =
-      `درخواست استعلام قیمت و تامین ${product}.\n\nشرایط کاربرد:\nتعداد مورد نیاز:\n`;
+    const tpl = (window.BIZDAVAR_I18N
+      ? window.BIZDAVAR_I18N.t('contactPage.productInquiry', '')
+      : '') || 'درخواست استعلام قیمت و تامین {product}.\n\nشرایط کاربرد:\nتعداد مورد نیاز:\n';
+    form.message.value = tpl.replace('{product}', product);
   }
 }
 
@@ -471,19 +484,23 @@ function initContactForm() {
 
 
 
-    const subject = encodeURIComponent(`درخواست تماس — ${data.firstName} ${data.lastName}`);
+    const I = window.BIZDAVAR_I18N;
+    const cp = (k, fb) => (I ? I.t(`contactPage.${k}`, fb) : fb);
+    const fullName = `${data.firstName} ${data.lastName}`;
+    const subjectTpl = cp('mailSubject', 'درخواست تماس — {name}');
+    const subject = encodeURIComponent(subjectTpl.replace('{name}', fullName));
 
     const body = encodeURIComponent(
 
-      `نام: ${data.firstName} ${data.lastName}\n` +
+      `${cp('mailBodyName', 'نام')}: ${fullName}\n` +
 
-      `ایمیل: ${data.email}\n` +
+      `${cp('mailBodyEmail', 'ایمیل')}: ${data.email}\n` +
 
-      `تلفن: ${data.phone || '—'}\n` +
+      `${cp('mailBodyPhone', 'تلفن')}: ${data.phone || '—'}\n` +
 
-      `خدمات: ${data.service}\n\n` +
+      `${cp('mailBodyService', 'خدمات')}: ${data.service}\n\n` +
 
-      `پیام:\n${data.message}`
+      `${cp('mailBodyMessage', 'پیام')}:\n${data.message}`
 
     );
 

@@ -15,6 +15,68 @@
 
   const ic = (name, opts) => (window.BD_ICON ? window.BD_ICON(name, opts) : '');
   const linkArrow = () => (window.BD_LINK_ARROW ? window.BD_LINK_ARROW() : '');
+  const t = (key, fb) => (window.BIZDAVAR_I18N ? window.BIZDAVAR_I18N.t(key, fb) : (fb ?? key));
+
+  function langSwitcherHtml(extraClass) {
+    const I = window.BIZDAVAR_I18N;
+    if (!I) return '';
+    const cur = I.locale;
+    const langs = [
+      { id: 'fa', label: t('common.langFa', 'فارسی') },
+      { id: 'tr', label: t('common.langTr', 'Türkçe') },
+      { id: 'en', label: t('common.langEn', 'English') }
+    ];
+    const current = langs.find(l => l.id === cur) || langs[0];
+    return `<details class="lang-dropdown${extraClass ? ' ' + extraClass : ''}" data-lang-dropdown>
+      <summary class="lang-dropdown__toggle" aria-label="${t('common.langLabel', 'زبان')}">
+        <span class="lang-dropdown__icon">${ic('globe', { size: 15 })}</span>
+        <span class="lang-dropdown__label">${current.label}</span>
+        <span class="lang-dropdown__chev" aria-hidden="true"></span>
+      </summary>
+      <div class="lang-dropdown__panel" role="listbox">
+        ${langs.map(l => `
+          <button type="button" class="lang-dropdown__option${l.id === cur ? ' is-active' : ''}"
+            data-lang="${l.id}" role="option"${l.id === cur ? ' aria-selected="true"' : ''}>
+            ${l.label}
+          </button>
+        `).join('')}
+      </div>
+    </details>`;
+  }
+
+  function bindLangSwitcher(root) {
+    if (!root) return;
+    root.querySelectorAll('[data-lang]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.getAttribute('data-lang');
+        const dropdown = btn.closest('[data-lang-dropdown]');
+        if (dropdown) dropdown.open = false;
+        if (window.BIZDAVAR_I18N && lang !== window.BIZDAVAR_I18N.locale) {
+          window.BIZDAVAR_I18N.setLocale(lang);
+        }
+      });
+    });
+    root.querySelectorAll('[data-lang-dropdown]').forEach(dropdown => {
+      dropdown.addEventListener('toggle', () => {
+        if (!dropdown.open) return;
+        document.querySelectorAll('[data-lang-dropdown][open]').forEach(other => {
+          if (other !== dropdown) other.open = false;
+        });
+      });
+    });
+  }
+
+  function getNavItems() {
+    return [
+      { page: 'home', route: R.home, label: t('nav.home', 'خانه'), icon: 'home' },
+      { page: 'about', route: R.about, label: t('nav.about', 'درباره ما'), icon: 'info' },
+      { page: 'services', route: R.services, label: t('nav.services', 'خدمات'), icon: 'list' },
+      { page: 'portfolio', route: R.portfolio, label: t('nav.portfolio', 'نمونه‌کارها'), icon: 'briefcase' },
+      { page: 'fast', route: R.fast, label: t('nav.webDesign', 'طراحی سایت'), icon: 'globe' },
+      { page: 'blog', route: R.blog, label: t('nav.blog', 'وبلاگ'), icon: 'article' },
+      { page: 'contact', route: R.contact, label: t('nav.contact', 'تماس'), icon: 'phone' }
+    ];
+  }
 
 
 
@@ -33,6 +95,45 @@
     return `${C.baseUrl}/${normalized.replace(/^\//, '')}`;
   }
 
+  function buildContactPoints() {
+    const channels = C.contact.channels || [];
+    const langs = ['Persian', 'English', 'Turkish'];
+    if (channels.length) {
+      return channels.map(ch => ({
+        '@type': 'ContactPoint',
+        contactType: 'customer service',
+        telephone: ch.tel,
+        areaServed: ch.id === 'ir' ? 'IR' : 'TR',
+        availableLanguage: langs,
+        contactOption: 'https://schema.org/WhatsApp'
+      }));
+    }
+    if (C.contact.phone) {
+      return [{
+        '@type': 'ContactPoint',
+        contactType: 'customer service',
+        telephone: C.contact.phone,
+        email: C.contact.email,
+        availableLanguage: langs
+      }];
+    }
+    return [{
+      '@type': 'ContactPoint',
+      contactType: 'customer service',
+      email: C.contact.email,
+      availableLanguage: langs
+    }];
+  }
+
+  function orgAddress() {
+    const hq = C.geo?.headquarters;
+    return {
+      '@type': 'PostalAddress',
+      addressLocality: hq?.city || 'Istanbul',
+      addressCountry: hq?.countryCode || 'TR'
+    };
+  }
+
   function breadcrumbHref(url) {
     if (!url || url.startsWith('http') || url.startsWith('#')) return url;
     return path(url);
@@ -40,13 +141,26 @@
 
 
 
+  function localizeCrumbs(items) {
+    const I = window.BIZDAVAR_I18N;
+    if (!I || !items) return items;
+    return items.map(item => {
+      if (!item.page) return item;
+      const name = item.page === 'home'
+        ? I.t('nav.home', item.name)
+        : I.pageCrumb(item.page, item.name);
+      return { ...item, name };
+    });
+  }
+
   window.renderBreadcrumbs = function (items) {
 
     const el = document.getElementById('breadcrumbs');
 
     if (!el || !items || !items.length) return;
 
-
+    items = localizeCrumbs(items);
+    el.setAttribute('aria-label', t('common.breadcrumbAria', 'مسیر صفحه'));
 
     const last = items.length - 1;
 
@@ -83,6 +197,8 @@
   window.injectBreadcrumbSchema = function (items) {
 
     if (!items || !items.length) return;
+
+    items = localizeCrumbs(items);
 
     const ld = {
 
@@ -154,7 +270,7 @@
 
         <div class="container">
 
-          <h2 class="related-links__title">صفحات مرتبط</h2>
+          <h2 class="related-links__title">${t('common.relatedPages', 'صفحات مرتبط')}</h2>
 
           <div class="related-links__grid">
 
@@ -162,7 +278,7 @@
 
               <a href="${l.url}" class="related-links__card">
 
-                <span class="related-links__label">${l.label || 'مشاهده'}</span>
+                <span class="related-links__label">${l.label || t('common.view', 'مشاهده')}</span>
 
                 <strong>${l.title}</strong>
 
@@ -200,7 +316,7 @@
 
         <p>${p.excerpt}</p>
 
-        <a href="${path(p.slug)}" class="service-card__link">ادامه مطلب${linkArrow()}</a>
+        <a href="${path(p.slug)}" class="service-card__link">${t('common.readMore', 'ادامه مطلب')}${linkArrow()}</a>
 
       </article>
 
@@ -223,7 +339,7 @@
       const external = !p.internal;
 
       const logoHtml = p.logo
-        ? `<div class="portfolio-card__logo"><img src="${path(p.logo)}" alt="لوگوی ${p.name}" loading="lazy" width="160" height="52"></div>`
+        ? `<div class="portfolio-card__logo"><img src="${path(p.logo)}" alt="${p.name}" loading="lazy" width="160" height="52"></div>`
         : `<div class="portfolio-card__logo portfolio-card__logo--text"><span>${p.name}</span></div>`;
 
       return `
@@ -247,7 +363,7 @@
 
              ${external ? 'target="_blank" rel="noopener noreferrer"' : ''}>
 
-            ${external ? 'مشاهده وبسایت' : 'مشاهده صفحه'}${linkArrow()}
+            ${external ? t('common.viewSite', 'مشاهده وبسایت') : t('common.viewPage', 'مشاهده صفحه')}${linkArrow()}
 
           </a>
 
@@ -297,17 +413,8 @@
 
 
 
-  const navItems = [
-    { page: 'home', route: R.home, label: 'خانه', icon: 'home' },
-    { page: 'about', route: R.about, label: 'درباره ما', icon: 'info' },
-    { page: 'services', route: R.services, label: 'خدمات', icon: 'list' },
-    { page: 'portfolio', route: R.portfolio, label: 'نمونه‌کارها', icon: 'briefcase' },
-    { page: 'fast', route: R.fast, label: 'طراحی سایت', icon: 'globe' },
-    { page: 'blog', route: R.blog, label: 'وبلاگ', icon: 'article' },
-    { page: 'contact', route: R.contact, label: 'تماس', icon: 'phone' }
-  ];
-
   window.renderSiteChrome = function () {
+    const navItems = getNavItems();
     const topBar = document.getElementById('topBar');
     const header = document.getElementById('siteHeader');
     const footer = document.getElementById('siteFooter');
@@ -346,15 +453,16 @@
       header.innerHTML = `
         <div class="header__desktop">
           <div class="container">
-            <a href="${path(R.home)}" class="header__logo" aria-label="${C.siteName} — صفحه اصلی">
+            <a href="${path(R.home)}" class="header__logo" aria-label="${C.siteName} — ${t('common.homeAria', 'صفحه اصلی')}">
               <img src="${path(A.logo)}" alt="${C.siteName}" width="140" height="40">
             </a>
-            <nav class="nav nav--desktop" id="nav" aria-label="منوی اصلی">
+            <nav class="nav nav--desktop" id="nav" aria-label="${t('common.mainNav', 'منوی اصلی')}">
               ${navLinks}
+              ${langSwitcherHtml()}
               <a href="${wa}" class="btn btn--primary nav__cta"
-                 ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''}>مشاوره رایگان</a>
+                 ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''}>${t('common.freeConsult', 'مشاوره رایگان')}</a>
             </nav>
-            <button class="menu-toggle" id="menuToggle" aria-label="باز و بسته کردن منو" aria-expanded="false">
+            <button class="menu-toggle" id="menuToggle" aria-label="${t('common.openMenu', 'باز و بسته کردن منو')}" aria-expanded="false">
               <span></span><span></span><span></span>
             </button>
           </div>
@@ -366,10 +474,10 @@
           </a>
           <div class="mobile-header__actions">
             <a href="${wa}" class="mobile-header__icon-btn mobile-header__icon-btn--wa"
-               aria-label="واتساپ"
+               aria-label="${t('common.whatsapp', 'واتساپ')}"
                ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''}>${ic('whatsapp', { size: 20, variant: 'white' })}</a>
-            <a href="${path(R.contact)}" class="mobile-header__cta">تماس</a>
-            <button type="button" class="mobile-header__menu" id="mobileMenuBtn" aria-label="منو" aria-expanded="false">
+            <a href="${path(R.contact)}" class="mobile-header__cta">${t('nav.contact', 'تماس')}</a>
+            <button type="button" class="mobile-header__menu" id="mobileMenuBtn" aria-label="${t('common.menu', 'منو')}" aria-expanded="false">
               <span></span><span></span><span></span>
             </button>
           </div>
@@ -378,9 +486,10 @@
         <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
           <div class="mobile-drawer__head">
             <img src="${path(A.logo)}" alt="${C.siteName}" height="32">
-            <button type="button" class="mobile-drawer__close" id="mobileDrawerClose" aria-label="بستن منو">${ic('close', { size: 20 })}</button>
+            <button type="button" class="mobile-drawer__close" id="mobileDrawerClose" aria-label="${t('common.closeMenu', 'بستن منو')}">${ic('close', { size: 20 })}</button>
           </div>
-          <nav class="mobile-drawer__nav" aria-label="منوی موبایل">
+          <div class="mobile-drawer__lang">${langSwitcherHtml('lang-dropdown--drawer')}</div>
+          <nav class="mobile-drawer__nav" aria-label="${t('common.mobileNav', 'منوی موبایل')}">
             ${drawerLinks}
           </nav>
           <div class="mobile-drawer__contact">
@@ -394,96 +503,163 @@
             </div>
           </div>
           <a href="${wa}" class="btn btn--yellow mobile-drawer__cta"
-             ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''}>مشاوره رایگان</a>
+             ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''}>${t('common.freeConsult', 'مشاوره رایگان')}</a>
         </aside>`;
     }
 
     if (footer) {
+      footer.className = 'footer footer--modern';
+      const year = new Date().getFullYear();
+      const metrics = (window.BIZDAVAR_I18N && window.BIZDAVAR_I18N.getTrustMetrics)
+        ? window.BIZDAVAR_I18N.getTrustMetrics()
+        : (C.trustMetrics || []);
+      const trustPills = metrics.slice(0, 3).map((m, i) =>
+        `<span class="footer__pill${i === 0 ? ' footer__pill--accent' : ''}">${m.value} ${m.label}</span>`
+      ).join('');
+      const channels = C.contact.channels || [];
+      const waMsg = encodeURIComponent(C.contact.whatsappMessage || '');
+      const mailChip = `<a href="mailto:${C.contact.email}" class="footer__chip">
+        <span class="footer__chip-icon">${ic('mail', { size: 16 })}</span>
+        <span class="footer__chip-ltr">${C.contact.email}</span>
+      </a>`;
+      const channelChips = channels.length
+        ? channels.map(ch => `
+          <a href="https://wa.me/${ch.whatsapp}?text=${waMsg}" class="footer__chip footer__chip--wa" target="_blank" rel="noopener noreferrer">
+            <span class="footer__chip-icon">${ic('whatsapp', { size: 16 })}</span>
+            <span class="footer__chip-body">
+              <span class="footer__chip-label">${ch.label}</span>
+              <span class="footer__chip-ltr">${ch.display}</span>
+            </span>
+          </a>`).join('')
+        : (C.contact.phone
+          ? `<a href="tel:${C.contact.phone}" class="footer__chip">
+              <span class="footer__chip-icon">${ic('phone', { size: 16 })}</span>
+              <span class="footer__chip-ltr">${C.contact.phoneDisplay || C.contact.phone}</span>
+            </a>`
+          : '');
+
       footer.innerHTML = `
+        <div class="footer__glow" aria-hidden="true"></div>
         <div class="footer__desktop">
           <div class="container">
-            <div class="footer__grid">
-              <div class="footer__brand">
-                <a href="${path(R.home)}">
-                  <img src="${path(A.logo)}" alt="${C.siteName}" class="footer__logo-img">
+            <div class="footer__main">
+              <div class="footer__brand-col">
+                <a href="${path(R.home)}" class="footer__logo-link">
+                  <img src="${path(A.logo)}" alt="${C.siteName}" class="footer__logo-img" width="140" height="40">
                 </a>
-                <p>${C.siteName} — ارائه‌دهنده خدمات دیجیتال، طراحی وب، بازاریابی آنلاین و تامین تجهیزات صنعتی.</p>
+                <p class="footer__tagline">${t('footer.tagline')}</p>
+                <div class="footer__trust">${trustPills}<span class="footer__pill">${t('footer.hq', 'Istanbul HQ')}</span></div>
+                <p class="footer__social-label">${t('footer.followUs', 'Follow us')}</p>
+                <div class="footer__social">
+                  <a href="${C.contact.instagram}" class="footer__social-btn" target="_blank" rel="noopener noreferrer me" aria-label="Instagram">IG</a>
+                  <a href="${C.contact.linkedin}" class="footer__social-btn" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn">in</a>
+                  <a href="${wa}" class="footer__social-btn footer__social-btn--wa" ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''} aria-label="${t('common.whatsapp')}">${ic('whatsapp', { size: 18 })}</a>
+                </div>
+                ${langSwitcherHtml('lang-dropdown--footer')}
               </div>
-              <div>
-                <h4 class="footer__title">خدمات</h4>
+              <nav class="footer__nav-col" aria-label="${t('footer.services')}">
+                <h4 class="footer__title">${t('footer.services', 'خدمات')}</h4>
                 <ul class="footer__links">
-                  <li><a href="${path(R.services)}#digital-marketing">بازاریابی دیجیتال</a></li>
-                  <li><a href="${path(R.fast)}">طراحی وب — Fast Studio</a></li>
-                  <li><a href="${path(R.services)}#smm">مدیریت SMM</a></li>
-                  <li><a href="${path(R.services)}#industrial">تامین تجهیزات صنعتی</a></li>
+                  <li><a href="${path(R.services)}#digital-marketing">${t('footer.digitalMarketing')}</a></li>
+                  <li><a href="${path(R.fast)}">${t('footer.webFast')}</a></li>
+                  <li><a href="${path(R.services)}#smm">${t('footer.smm')}</a></li>
+                  <li><a href="${path(R.services)}#industrial">${t('footer.industrial')}</a></li>
                 </ul>
-              </div>
-              <div>
-                <h4 class="footer__title">دسترسی سریع</h4>
+              </nav>
+              <nav class="footer__nav-col" aria-label="${t('footer.quickLinks')}">
+                <h4 class="footer__title">${t('footer.quickLinks', 'دسترسی سریع')}</h4>
                 <ul class="footer__links">
-                  <li><a href="${path(R.about)}">درباره ما</a></li>
-                  <li><a href="${path(R.portfolio)}">نمونه‌کارها</a></li>
-                  <li><a href="${path(R.blog)}">وبلاگ</a></li>
-                  <li><a href="${path(R.contact)}">تماس با ما</a></li>
-                  <li><a href="${path(R.home)}#faq">سوالات متداول</a></li>
-                  <li><a href="${path(R.privacy)}">حریم خصوصی</a></li>
+                  <li><a href="${path(R.about)}">${t('nav.about')}</a></li>
+                  <li><a href="${path(R.portfolio)}">${t('nav.portfolio')}</a></li>
+                  <li><a href="${path(R.blog)}">${t('nav.blog')}</a></li>
+                  <li><a href="${path(R.contact)}">${t('footer.contactUs')}</a></li>
+                  <li><a href="${path(R.home)}#faq">${t('footer.faq')}</a></li>
                 </ul>
-              </div>
-              <div>
-                <h4 class="footer__title">ارتباط با ما</h4>
-                <ul class="footer__links">
-                  <li><a href="mailto:${C.contact.email}">${C.contact.email}</a></li>
-                  <li><a href="mailto:${C.contact.emailAlt}">${C.contact.emailAlt}</a></li>
-                  <li><a href="${C.contact.instagram}" target="_blank" rel="noopener noreferrer me">اینستاگرام</a></li>
-                  <li><a href="${C.contact.linkedin}" target="_blank" rel="noopener noreferrer me">لینکدین</a></li>
-                </ul>
+              </nav>
+              <div class="footer__nav-col">
+                <h4 class="footer__title">${t('footer.connect', 'ارتباط با ما')}</h4>
+                <div class="footer__contact-chips">
+                  ${mailChip}
+                  ${channelChips}
+                </div>
+                <div class="footer__domains">
+                  <a href="https://${C.domains.main}" class="footer__domain-badge">${C.domains.main}</a>
+                  <a href="https://${C.domains.alt}" class="footer__domain-badge" target="_blank" rel="noopener noreferrer">${C.domains.alt}</a>
+                </div>
               </div>
             </div>
-            <div class="footer__bottom">
-              © ${new Date().getFullYear()} ${C.siteNameEn} — تمامی حقوق محفوظ است |
-              <a href="https://${C.domains.main}" class="footer__domain-link">${C.domains.main}</a> ·
-              <a href="https://${C.domains.alt}" class="footer__domain-link" target="_blank" rel="noopener noreferrer">${C.domains.alt}</a>
+            <div class="footer__bar">
+              <p class="footer__copy">© ${year} ${C.siteNameEn} — ${t('common.rights', 'تمامی حقوق محفوظ است')}</p>
+              <nav class="footer__legal" aria-label="${t('footer.legal', 'Legal')}">
+                <a href="${path(R.privacy)}">${t('footer.privacy')}</a>
+                <a href="${path(R.home)}#faq">${t('footer.faq')}</a>
+                <a href="${path(R.contact)}">${t('footer.contactUs')}</a>
+              </nav>
             </div>
           </div>
         </div>
 
         <div class="footer__mobile">
+          <div class="mobile-footer-hero">
+            <a href="${path(R.home)}"><img src="${path(A.logo)}" alt="${C.siteName}" class="footer__logo-img footer__logo-img--sm"></a>
+            <p>${t('footer.tagline')}</p>
+            <div class="footer__trust">${trustPills}</div>
+            <div class="footer__social">
+              <a href="${C.contact.instagram}" class="footer__social-btn" target="_blank" rel="noopener noreferrer me" aria-label="Instagram">IG</a>
+              <a href="${C.contact.linkedin}" class="footer__social-btn" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn">in</a>
+              <a href="${wa}" class="footer__social-btn footer__social-btn--wa" ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''} aria-label="${t('common.whatsapp')}">${ic('whatsapp', { size: 18 })}</a>
+            </div>
+            ${langSwitcherHtml('lang-dropdown--drawer')}
+          </div>
           <div class="mobile-footer-cta">
-            <a href="${path(R.contact)}" class="mobile-footer-cta__btn mobile-footer-cta__btn--primary">${ic('send', { size: 18 })} فرم تماس</a>
+            <a href="${path(R.contact)}" class="mobile-footer-cta__btn mobile-footer-cta__btn--primary">${ic('send', { size: 18 })} ${t('common.contactForm')}</a>
             <a href="${wa}" class="mobile-footer-cta__btn mobile-footer-cta__btn--wa"
-               ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''}>${ic('whatsapp', { size: 18 })} واتساپ</a>
+               ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''}>${ic('whatsapp', { size: 18 })} ${t('common.whatsapp')}</a>
           </div>
           <div class="mobile-footer-accordions">
-            <details class="mobile-footer-acc" open>
-              <summary>خدمات</summary>
+            <details class="mobile-footer-acc">
+              <summary>${t('footer.services')}</summary>
               <ul>
-                <li><a href="${path(R.services)}#digital-marketing">بازاریابی دیجیتال</a></li>
-                <li><a href="${path(R.fast)}">طراحی وب</a></li>
-                <li><a href="${path(R.services)}#smm">مدیریت SMM</a></li>
-                <li><a href="${path(R.services)}#industrial">تجهیزات صنعتی</a></li>
+                <li><a href="${path(R.services)}#digital-marketing">${t('footer.digitalMarketing')}</a></li>
+                <li><a href="${path(R.fast)}">${t('footer.webDesign')}</a></li>
+                <li><a href="${path(R.services)}#smm">${t('footer.smm')}</a></li>
+                <li><a href="${path(R.services)}#industrial">${t('footer.industrialShort')}</a></li>
               </ul>
             </details>
             <details class="mobile-footer-acc">
-              <summary>دسترسی سریع</summary>
+              <summary>${t('footer.quickLinks')}</summary>
               <ul>
-                <li><a href="${path(R.about)}">درباره ما</a></li>
-                <li><a href="${path(R.portfolio)}">نمونه‌کارها</a></li>
-                <li><a href="${path(R.blog)}">وبلاگ</a></li>
-                <li><a href="${path(R.privacy)}">حریم خصوصی</a></li>
+                <li><a href="${path(R.about)}">${t('nav.about')}</a></li>
+                <li><a href="${path(R.portfolio)}">${t('nav.portfolio')}</a></li>
+                <li><a href="${path(R.blog)}">${t('nav.blog')}</a></li>
+                <li><a href="${path(R.contact)}">${t('footer.contactUs')}</a></li>
               </ul>
             </details>
             <details class="mobile-footer-acc">
-              <summary>ارتباط</summary>
+              <summary>${t('footer.connectShort')}</summary>
               <ul>
                 <li><a href="mailto:${C.contact.email}">${C.contact.email}</a></li>
-                <li><a href="${C.contact.instagram}" target="_blank" rel="noopener noreferrer me">اینستاگرام</a></li>
-                <li><a href="${C.contact.linkedin}" target="_blank" rel="noopener noreferrer me">لینکدین</a></li>
+                <li><a href="mailto:${C.contact.emailAlt}">${C.contact.emailAlt}</a></li>
+                ${channels.length
+                  ? channels.map(ch => `
+                <li><a href="https://wa.me/${ch.whatsapp}?text=${waMsg}" target="_blank" rel="noopener noreferrer">
+                  <span class="footer__chip-label">${ch.label}</span>
+                  <span dir="ltr">${ch.display}</span>
+                </a></li>`).join('')
+                  : `<li><a href="tel:${C.contact.phone}" dir="ltr">${C.contact.phoneDisplay || C.contact.phone}</a></li>`}
               </ul>
             </details>
           </div>
-          <div class="mobile-footer-copy">
-            <img src="${path(A.logo)}" alt="" class="footer__logo-img footer__logo-img--sm">
-            <p>© ${new Date().getFullYear()} ${C.siteNameEn}</p>
+          <div class="mobile-footer-bar">
+            <p>© ${year} ${C.siteNameEn}</p>
+            <nav class="footer__legal">
+              <a href="${path(R.privacy)}">${t('footer.privacy')}</a>
+              <a href="${path(R.home)}#faq">${t('footer.faq')}</a>
+            </nav>
+            <div class="footer__domains">
+              <a href="https://${C.domains.main}" class="footer__domain-badge">${C.domains.main}</a>
+              <a href="https://${C.domains.alt}" class="footer__domain-badge" target="_blank" rel="noopener noreferrer">${C.domains.alt}</a>
+            </div>
           </div>
         </div>`;
     }
@@ -493,15 +669,15 @@
       bottomNav = document.createElement('nav');
       bottomNav.id = 'mobileBottomNav';
       bottomNav.className = 'mobile-bottom-nav';
-      bottomNav.setAttribute('aria-label', 'ناوبری پایین موبایل');
+      bottomNav.setAttribute('aria-label', t('common.bottomNav', 'ناوبری پایین موبایل'));
       document.body.appendChild(bottomNav);
     }
 
     const bottomItems = [
-      { page: 'home', route: R.home, label: 'خانه', icon: 'home' },
-      { page: 'services', route: R.services, label: 'خدمات', icon: 'list' },
-      { page: 'fast', route: R.fast, label: 'سایت', icon: 'globe' },
-      { page: 'contact', route: R.contact, label: 'تماس', icon: 'phone' }
+      { page: 'home', route: R.home, label: t('nav.home'), icon: 'home' },
+      { page: 'services', route: R.services, label: t('nav.services'), icon: 'list' },
+      { page: 'fast', route: R.fast, label: t('nav.site', 'سایت'), icon: 'globe' },
+      { page: 'contact', route: R.contact, label: t('nav.contact'), icon: 'phone' }
     ];
 
     bottomNav.innerHTML = bottomItems.map(item => `
@@ -510,10 +686,12 @@
         <span class="mobile-bottom-nav__label">${item.label}</span>
       </a>
     `).join('') + `
-      <button type="button" class="mobile-bottom-nav__item" id="mobileBottomMenu" aria-label="باز کردن منو">
+      <button type="button" class="mobile-bottom-nav__item" id="mobileBottomMenu" aria-label="${t('common.openDrawer', 'باز کردن منو')}">
         <span class="mobile-bottom-nav__icon">${ic('menu', { size: 22 })}</span>
-        <span class="mobile-bottom-nav__label">منو</span>
+        <span class="mobile-bottom-nav__label">${t('common.menu')}</span>
       </button>`;
+
+    bindLangSwitcher(header);
   };
 
 
@@ -660,29 +838,11 @@
 
       knowsAbout: ['Digital Marketing', 'Web Design', 'Industrial Equipment', 'Fintech', 'SEO'],
 
-      address: {
-
-        '@type': 'PostalAddress',
-
-        addressLocality: 'Istanbul',
-
-        addressCountry: 'TR'
-
-      },
+      address: orgAddress(),
 
       sameAs: [C.contact.linkedin, C.contact.instagram, `https://${C.domains.alt}`],
 
-      contactPoint: {
-
-        '@type': 'ContactPoint',
-
-        contactType: 'customer service',
-
-        email: C.contact.email,
-
-        availableLanguage: ['Persian', 'English', 'Turkish']
-
-      }
+      contactPoint: buildContactPoints()
 
     };
 
@@ -744,6 +904,24 @@
 
 
 
+  window.injectPageSeo = function (pageKey, overrides) {
+    const o = overrides || {};
+    const titleKey = `pages.${pageKey}.seoTitle`;
+    const descKey = `pages.${pageKey}.seoDescription`;
+    const kwKey = `pages.${pageKey}.seoKeywords`;
+    const title = t(titleKey, null);
+    const description = t(descKey, null);
+    const keywords = t(kwKey, null);
+    return window.injectSeo({
+      ...o,
+      title: title && title !== titleKey ? title : (o.title || C.seo.defaultTitle),
+      description: description && description !== descKey ? description : (o.description || C.seo.defaultDescription),
+      keywords: keywords && keywords !== kwKey ? keywords : (o.keywords || C.seo.keywords)
+    });
+  };
+
+
+
   window.injectContactPageSchema = function () {
 
     const ld = {
@@ -752,11 +930,11 @@
 
       '@type': 'ContactPage',
 
-      name: 'تماس با ما — ' + C.siteName,
+      name: t('contactPage.schemaName', 'تماس با ما — ') + C.siteName,
 
       url: C.baseUrl + '/pages/contact.html',
 
-      description: 'فرم تماس و راه‌های ارتباطی با بیزدوار گروپ',
+      description: t('contactPage.schemaDesc', 'فرم تماس و راه‌های ارتباطی با بیزدوار گروپ'),
 
       mainEntity: {
 
@@ -768,15 +946,11 @@
 
         url: C.baseUrl,
 
-        address: {
+        address: orgAddress(),
 
-          '@type': 'PostalAddress',
+        areaServed: ['TR', 'AM', 'IR', 'AE', 'DE', 'US', 'GB', 'LB', 'IQ', 'GE', 'IT'],
 
-          addressLocality: 'Istanbul',
-
-          addressCountry: 'TR'
-
-        }
+        contactPoint: buildContactPoints()
 
       }
 
@@ -838,7 +1012,13 @@
 
           name: s.title,
 
-          provider: { '@type': 'Organization', name: C.siteNameEn },
+          provider: {
+            '@type': 'Organization',
+            name: C.siteNameEn,
+            areaServed: ['IR', 'TR', 'AM', 'AE', 'DE']
+          },
+
+          areaServed: ['IR', 'TR', 'AM', 'AE', 'DE'],
 
           url: absUrl(s.slug)
 
@@ -850,6 +1030,26 @@
 
     injectJsonLd('jsonld-services', ld);
 
+  };
+
+  window.injectBlogListSchema = function () {
+    if (!C.blogPosts) return;
+    const ld = {
+      '@context': 'https://schema.org',
+      '@type': 'Blog',
+      name: 'وبلاگ بیزدوار گروپ',
+      url: absUrl(R.blog),
+      inLanguage: C.locale,
+      publisher: { '@type': 'Organization', name: C.siteNameEn, url: C.baseUrl },
+      blogPost: C.blogPosts.map(p => ({
+        '@type': 'BlogPosting',
+        headline: p.title,
+        description: p.excerpt,
+        datePublished: p.date,
+        url: absUrl(p.slug)
+      }))
+    };
+    injectJsonLd('jsonld-blog', ld);
   };
 
 
@@ -891,6 +1091,93 @@
   };
 
 
+
+  window.renderGeoStrip = function (containerId, opts) {
+    const el = document.getElementById(containerId);
+    const g = window.BIZDAVAR_I18N ? window.BIZDAVAR_I18N.getGeo() : C.geo;
+    if (!el || !g) return;
+    const text = (opts && opts.text) || g.summaryFa || g.summary;
+    const hubs = g.hubs || [];
+    el.innerHTML = `
+      <section class="geo-strip" aria-label="${t('common.geoAria', 'حوزه جغرافیایی خدمات')}">
+        <div class="container geo-strip__inner">
+          <div class="geo-strip__lead">
+            <span class="geo-strip__eyebrow">${ic('globe', { size: 18 })} ${t('common.globalPresence', 'حضور جهانی')}</span>
+            <p>${text}</p>
+          </div>
+          <ul class="geo-strip__hubs">
+            ${hubs.map(h => `
+              <li class="geo-strip__hub">
+                <strong>${h.city}</strong>
+                <span class="geo-strip__country">${h.country}</span>
+                <span class="geo-strip__role">${h.role}</span>
+              </li>`).join('')}
+          </ul>
+        </div>
+      </section>`;
+  };
+
+  window.injectSupplyBrandSchema = function (data) {
+    if (!data) return;
+    const ld = {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: data.name,
+      description: data.description,
+      brand: { '@type': 'Brand', name: data.brand || data.name },
+      category: data.category,
+      areaServed: data.areaServed || ['IR', 'TR'],
+      offers: {
+        '@type': 'Offer',
+        availability: 'https://schema.org/PreOrder',
+        priceCurrency: 'USD',
+        seller: {
+          '@type': 'Organization',
+          name: C.siteNameEn,
+          areaServed: ['IR', 'TR']
+        },
+        url: data.url ? absUrl(data.url) : absUrl(R.contact)
+      }
+    };
+    injectJsonLd('jsonld-supply-' + (data.id || data.name), ld);
+  };
+
+  window.injectCaseStudySchema = function (data) {
+    if (!data) return;
+    const ld = {
+      '@context': 'https://schema.org',
+      '@type': 'CreativeWork',
+      name: data.name,
+      description: data.description,
+      about: data.service,
+      creator: { '@type': 'Organization', name: C.siteNameEn, url: C.baseUrl },
+      inLanguage: C.locale,
+      url: absUrl(data.slug),
+      areaServed: ['IR', 'TR', 'AM']
+    };
+    injectJsonLd('jsonld-case-' + (data.id || 'study'), ld);
+  };
+
+  window.injectServiceProductSchema = function (data) {
+    if (!data) return;
+    const ld = {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: data.name,
+      description: data.description,
+      provider: { '@type': 'Organization', name: C.siteNameEn, url: C.baseUrl },
+      areaServed: data.areaServed || ['IR', 'TR', 'AM', 'AE', 'DE'],
+      offers: (data.offers || []).map(o => ({
+        '@type': 'Offer',
+        name: o.name,
+        price: o.price,
+        priceCurrency: o.currency || 'USD',
+        url: o.url ? absUrl(o.url) : absUrl(R.contact)
+      })),
+      url: data.url ? absUrl(data.url) : C.baseUrl
+    };
+    injectJsonLd('jsonld-service-product', ld);
+  };
 
   window.injectArticleSchema = function (article) {
 
@@ -956,17 +1243,18 @@
 
     const el = document.getElementById(containerId);
 
-    if (!el || !C.trustMetrics || !C.trustMetrics.length) return;
+    const metrics = window.BIZDAVAR_I18N ? window.BIZDAVAR_I18N.getTrustMetrics() : C.trustMetrics;
+    if (!el || !metrics || !metrics.length) return;
 
     el.innerHTML = `
 
-      <section class="trust-bar" aria-label="شاخص‌های کلیدی بیزدوار">
+      <section class="trust-bar" aria-label="${t('common.trustAria', 'شاخص‌های کلیدی بیزدوار')}">
 
         <div class="container">
 
           <ul class="trust-bar__grid">
 
-            ${C.trustMetrics.map(m => `
+            ${metrics.map(m => `
 
               <li class="trust-bar__item">
 
@@ -997,15 +1285,15 @@
       <section class="section intel-section" aria-labelledby="cred-heading">
         <div class="container">
           <div class="section__header section__header--pro">
-            <span class="section__eyebrow">اعتبار و تجربه</span>
-            <h2 class="section__title" id="cred-heading">چرا بیزدوار گروپ؟</h2>
-            <p class="section__desc">داده‌های تأییدشده از پروفایل حرفه‌ای، نمونه‌کارها و سوابق اجرایی</p>
+            <span class="section__eyebrow">${t('credibility.eyebrow')}</span>
+            <h2 class="section__title" id="cred-heading">${t('credibility.title')}</h2>
+            <p class="section__desc">${t('credibility.desc')}</p>
           </div>
           <div class="intel-stats">
-            <div class="intel-stat"><strong>${f.projectsCount}</strong><span>پروژه وب و پلتفرم</span></div>
-            <div class="intel-stat"><strong>${f.countriesCount}</strong><span>کشور</span></div>
-            <div class="intel-stat"><strong>${f.experienceYears}</strong><span>سال تجربه</span></div>
-            <div class="intel-stat"><strong>${I.identity.foundedDisplay}</strong><span>شروع فعالیت</span></div>
+            <div class="intel-stat"><strong>${f.projectsCount}</strong><span>${t('credibility.projects')}</span></div>
+            <div class="intel-stat"><strong>${f.countriesCount}</strong><span>${t('credibility.countries')}</span></div>
+            <div class="intel-stat"><strong>${f.experienceYears}</strong><span>${t('credibility.years')}</span></div>
+            <div class="intel-stat"><strong>${I.identity.foundedDisplay}</strong><span>${t('credibility.founded')}</span></div>
           </div>
           <div class="intel-proof-grid">
             ${I.socialProof.highlights.map(h => `
@@ -1016,7 +1304,7 @@
               </article>
             `).join('')}
           </div>
-          <p class="intel-note text-center mt-24">منابع: <a href="${f.linkedin}" target="_blank" rel="noopener noreferrer me">LinkedIn بنیان‌گذار</a> · <a href="${path(R.portfolio)}">نمونه‌کارها</a> · <a href="${path(R.about)}">درباره کامل</a></p>
+          <p class="intel-note text-center mt-24">${t('credibility.sources')}: <a href="${f.linkedin}" target="_blank" rel="noopener noreferrer me">${t('credibility.founderLinkedin')}</a> · <a href="${path(R.portfolio)}">${t('credibility.portfolio')}</a> · <a href="${path(R.about)}">${t('credibility.fullAbout')}</a></p>
         </div>
       </section>`;
   };
@@ -1192,7 +1480,7 @@
 
     const el = document.getElementById(containerId);
 
-    const products = C.industrialProducts;
+    const products = window.BIZDAVAR_I18N ? window.BIZDAVAR_I18N.getIndustrialProducts() : C.industrialProducts;
 
     if (!el || !products || !products.length) return;
 
@@ -1230,7 +1518,7 @@
 
           ${tags ? `<div class="industrial-card__tags">${tags}</div>` : ''}
 
-          <span class="industrial-card__cta">${p.cta || 'بیشتر بدانید'}${linkArrow()}</span>
+          <span class="industrial-card__cta">${p.cta || t('common.learnMore', 'بیشتر بدانید')}${linkArrow()}</span>
 
         </a>`;
 
@@ -1244,11 +1532,11 @@
 
           <div class="section__header section__header--pro">
 
-            <span class="section__eyebrow">تجهیزات صنعتی</span>
+            <span class="section__eyebrow">${t('industrial.eyebrow')}</span>
 
-            <h2 class="section__title" id="industrial-heading">تامین تجهیزات و برندهای معتبر</h2>
+            <h2 class="section__title" id="industrial-heading">${t('industrial.title')}</h2>
 
-            <p class="section__desc">سنسور، دتکتور، موتور و پمپ — انتخاب فنی، استعلام قیمت و لجستیک بین‌المللی برای پروژه‌های B2B</p>
+            <p class="section__desc">${t('industrial.desc')}</p>
 
           </div>
 
@@ -1262,9 +1550,9 @@
 
               <div>
 
-                <strong>نیاز به مشاوره تامین دارید؟</strong>
+                <strong>${t('industrial.ctaTitle')}</strong>
 
-                <p>انتخاب مدل، خرید بین‌المللی، حمل و گمرک — پاسخ توسط تیم فنی بیزدوار</p>
+                <p>${t('industrial.ctaDesc')}</p>
 
               </div>
 
@@ -1272,9 +1560,9 @@
 
             <div class="industrial-cta-bar__actions">
 
-              <a href="${path(R.contact)}" class="btn btn--yellow">درخواست استعلام</a>
+              <a href="${path(R.contact)}" class="btn btn--yellow">${t('industrial.ctaBtn')}</a>
 
-              <a href="${path(R.services)}#industrial" class="btn btn--outline">خدمات صنعتی</a>
+              <a href="${path(R.services)}#industrial" class="btn btn--outline">${t('industrial.ctaLink')}</a>
 
             </div>
 
@@ -1292,7 +1580,8 @@
 
     const el = document.getElementById(containerId);
 
-    if (!el || !C.processSteps || !C.processSteps.length) return;
+    const steps = window.BIZDAVAR_I18N ? window.BIZDAVAR_I18N.getProcessSteps() : C.processSteps;
+    if (!el || !steps || !steps.length) return;
 
     el.innerHTML = `
 
@@ -1302,17 +1591,17 @@
 
           <div class="section__header section__header--pro">
 
-            <span class="section__eyebrow">روش کار ما</span>
+            <span class="section__eyebrow">${t('process.eyebrow')}</span>
 
-            <h2 class="section__title" id="process-heading">فرآیند حرفه‌ای همکاری</h2>
+            <h2 class="section__title" id="process-heading">${t('process.title')}</h2>
 
-            <p class="section__desc">از مشاوره اولیه تا تحویل و پشتیبانی — مسیر شفاف و قابل پیگیری</p>
+            <p class="section__desc">${t('process.desc')}</p>
 
           </div>
 
           <ol class="process-grid">
 
-            ${C.processSteps.map(step => `
+            ${steps.map(step => `
 
               <li class="process-step">
 
