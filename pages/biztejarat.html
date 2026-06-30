@@ -2,10 +2,11 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <script src="../assets/scripts/i18n/locale-preload.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>نمونه‌کار بیزتجارت | صفحه محصولات صنعتی اینستاگرام — بیزدوار</title>
-  <link rel="icon" href="../assets/images/brand/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="icon" href="../assets/images/brand/favicon.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../assets/images/brand/apple-touch-icon.png">
   <link rel="stylesheet" href="../assets/styles/fonts.css">
   <link rel="stylesheet" href="../assets/styles/typography.css">
   <link rel="stylesheet" href="../assets/styles/icons.css">
@@ -18,7 +19,7 @@
 </head>
 <body data-page="biztejarat" data-depth="1">
 
-  <a href="#main-content" class="skip-link">رفتن به محتوای اصلی</a>
+  <a href="#main-content" class="skip-link" data-i18n="common.skipLink">رفتن به محتوای اصلی</a>
   <div class="top-bar" id="topBar"></div>
   <header class="header" id="siteHeader"></header>
   <nav class="breadcrumbs-wrap" id="breadcrumbs" aria-label="مسیر صفحه"></nav>
@@ -28,24 +29,24 @@
 
   <section class="page-hero page-hero--pro">
     <div class="container">
-      <span class="section__tag">نمونه‌کار SMM</span>
-      <h1>بیزتجارت — صفحه محصولات صنعتی در اینستاگرام</h1>
-      <p>پروژه مدیریت و تولید محتوای اینستاگرام برای معرفی تجهیزات الکترونیکی، ابزار دقیق و قطعات صنعتی</p>
+      <span class="section__tag" data-i18n="caseStudy.biztejarat.hero.tag">نمونه‌کار SMM</span>
+      <h1 data-i18n="caseStudy.biztejarat.hero.title">بیزتجارت — صفحه محصولات صنعتی در اینستاگرام</h1>
+      <p data-i18n="caseStudy.biztejarat.hero.desc">پروژه مدیریت و تولید محتوای اینستاگرام برای معرفی تجهیزات الکترونیکی، ابزار دقیق و قطعات صنعتی</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container about-grid">
       <div class="about__image">
-        <img src="../assets/images/content/vega-hero.jpg" alt="محتوای صنعتی بیزتجارت در اینستاگرام" loading="lazy" width="660" height="400">
+        <img src="../assets/images/partners/biztejarat.png" alt="محتوای صنعتی بیزتجارت در اینستاگرام — SMM B2B" data-i18n-alt="caseStudy.biztejarat.about.imageAlt" loading="lazy" width="660" height="400">
       </div>
       <div class="about__content prose">
-        <h2>درباره پروژه</h2>
-        <p><strong>بیزتجارت (Biztejarat)</strong> صفحه اینستاگرام محصولات صنعتی است که توسط بیزدوار گروپ راه‌اندازی و مدیریت شده. این پروژه <strong>نمونه‌کار مدیریت SMM و محتوای B2B</strong> است — نه واحد تجاری جداگانهٔ بیزدوار.</p>
-        <p>در این صفحه تجهیزات الکترونیکی، ابزار دقیق، سنسور و قطعات صنعتی (از جمله VEGA، Prosense و برندهای مرتبط) معرفی و مستندسازی می‌شوند.</p>
+        <h2 data-i18n="caseStudy.biztejarat.about.title">درباره پروژه</h2>
+        <p data-i18n-html="caseStudy.biztejarat.about.body"><strong>بیزتجارت (Biztejarat)</strong> صفحه اینستاگرام محصولات صنعتی است که توسط بیزدوار گروپ راه‌اندازی و مدیریت شده. این پروژه <strong>نمونه‌کار مدیریت SMM و محتوای B2B</strong> است — نه واحد تجاری جداگانهٔ بیزدوار.</p>
+        <p data-i18n="caseStudy.biztejarat.about.body2">در این صفحه تجهیزات الکترونیکی، ابزار دقیق، سنسور و قطعات صنعتی (از جمله VEGA، Prosense و برندهای مرتبط) معرفی و مستندسازی می‌شوند.</p>
 
-        <h3>خدمات اجراشده</h3>
-        <ul>
+        <h3 data-i18n="caseStudy.biztejarat.about.servicesTitle">خدمات اجراشده</h3>
+        <ul id="biztejaratServices">
           <li>راه‌اندازی و بهینه‌سازی پروفایل اینستاگرام</li>
           <li>تولید محتوای فارسی/انگلیسی برای محصولات صنعتی</li>
           <li>طراحی گرافیک پست و استوری</li>
@@ -54,8 +55,8 @@
         </ul>
 
         <div class="article__cta">
-          <a href="https://www.instagram.com/biztejarat" class="btn btn--primary" target="_blank" rel="noopener noreferrer me">صفحه اینستاگرام بیزتجارت</a>
-          <a href="services.html#smm" class="btn btn--yellow">خدمات مدیریت SMM</a>
+          <a href="https://www.instagram.com/biztejarat" class="btn btn--primary" target="_blank" rel="noopener noreferrer me" data-i18n="caseStudy.biztejarat.about.ctaInstagram">صفحه اینستاگرام بیزتجارت</a>
+          <a href="services.html#smm" class="btn btn--yellow" data-i18n="caseStudy.biztejarat.about.ctaSmm">خدمات مدیریت SMM</a>
         </div>
       </div>
     </div>
@@ -64,8 +65,8 @@
   <section class="section section--gray">
     <div class="container">
       <div class="section__header">
-        <h2 class="section__title">محصولات معرفی‌شده در صفحه</h2>
-        <p class="section__desc">نمونه حوزه‌هایی که در محتوای بیزتجارت پوشش داده می‌شود — تامین فنی از طریق <a href="services.html#industrial">بیزدوار گروپ</a></p>
+        <h2 class="section__title" data-i18n="caseStudy.biztejarat.products.title">محصولات معرفی‌شده در صفحه</h2>
+        <p class="section__desc" data-i18n-html="caseStudy.biztejarat.products.desc">نمونه حوزه‌هایی که در محتوای بیزتجارت پوشش داده می‌شود — تامین فنی از طریق <a href="services.html#industrial">بیزدوار گروپ</a></p>
       </div>
       <div class="features-grid">
         <a href="vega.html" class="feature-item feature-item--link"><span class="feature-item__icon" data-bd-icon="gauge" data-bd-size="26"></span><h3>VEGA</h3><p>سنسور سطح و فشار</p></a>
@@ -87,27 +88,31 @@
   <script src="../assets/scripts/config/paths.js"></script>
   <script src="../assets/scripts/config/site-config.js"></script>
   <script src="../assets/scripts/i18n/locales.js"></script>
+  <script src="../assets/scripts/i18n/locales-pages.js"></script>
+  <script src="../assets/scripts/i18n/locale-seo.js"></script>
   <script src="../assets/scripts/i18n/i18n.js"></script>
+  <script src="../assets/scripts/i18n/page-i18n.js"></script>
   <script src="../assets/scripts/components/biz-icons.js"></script>
-  <script src="../assets/scripts/components/site-components.js"></script>
+  <script src="../assets/scripts/components/context.js"></script>
+  <script src="../assets/scripts/components/chrome.js"></script>
+  <script src="../assets/scripts/components/schema.js"></script>
+  <script src="../assets/scripts/components/grids.js"></script>
   <script src="../assets/scripts/i18n/bootstrap.js"></script>
-  <script src="../assets/scripts/main.js"></script>
+  <script src="../assets/scripts/main.js"></script>
   <script>
     const crumbs = [
       { page: 'home', url: 'index.html' },
       { page: 'portfolio', url: 'portfolio.html' },
       { name: 'بیزتجارت', url: 'biztejarat.html' }
     ];
-    injectSeo({
-      title: 'نمونه‌کار بیزتجارت | صفحه محصولات صنعتی اینستاگرام — بیزدوار',
-      description: 'نمونه‌کار مدیریت اینستاگرام بیزتجارت: محتوای محصولات صنعتی، ابزار دقیق و SMM توسط بیزدوار گروپ.',
-      keywords: 'بیزتجارت, Biztejarat, اینستاگرام صنعتی, SMM, مدیریت شبکه اجتماعی, بیزدوار',
+    injectPageSeo('biztejarat', {
       canonical: 'https://bizdavar.com/pages/biztejarat.html'
     });
     renderSiteChrome();
     renderBreadcrumbs(crumbs);
     injectBreadcrumbSchema(crumbs);
     renderGeoStrip('geoStrip', {
+      textKey: 'caseStudy.biztejarat.geoText',
       text: 'مدیریت محتوای B2B برای بازار ایران — معرفی تجهیزات صنعتی VEGA، Prosense و Gamak با زبان فارسی و انگلیسی.'
     });
     injectCaseStudySchema({

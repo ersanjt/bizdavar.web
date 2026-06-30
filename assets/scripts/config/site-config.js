@@ -20,9 +20,12 @@ window.BIZDAVAR_CONFIG = {
     privacy: 'pages/privacy.html',
     vega: 'pages/vega.html',
     prosense: 'pages/prosense.html',
+    teltonika: 'pages/teltonika.html',
     bzDiamond: 'pages/bz-diamond.html',
     biztejarat: 'pages/biztejarat.html',
     gamak: 'pages/gamak.html',
+    digiSystem: 'pages/digi-system.html',
+    teraoka: 'pages/teraoka.html',
     articles: {
       digitalMarketing: 'pages/articles/digital-marketing.html',
       whatIsDigitalMarketing: 'pages/articles/what-is-digital-marketing.html',
@@ -34,11 +37,22 @@ window.BIZDAVAR_CONFIG = {
   },
 
   assets: {
-    favicon: 'assets/images/brand/favicon.svg',
-    logo: 'assets/images/brand/bizdavar-logo.svg',
+    favicon: 'assets/images/brand/favicon.png',
+    appleTouchIcon: 'assets/images/brand/apple-touch-icon.png',
+    /** Light backgrounds — header, drawer (Bizda black + var red) */
+    logo: 'assets/images/brand/bizdavar-logo.png',
+    /** Dark backgrounds — footer (Bizda gray + var red, transparent PNG) */
+    logoOnDark: 'assets/images/brand/bizdavar-logo-light.png',
+    logoAlt: 'Bizdavar — official logo',
     ogImage: 'assets/images/content/about-hero.svg',
     heroImage: 'assets/images/content/hero-home.svg',
     aboutImage: 'assets/images/content/about-hero.svg'
+  },
+
+  /** Formspree — set formId from formspree.io and enabled: true to use server submit */
+  formspree: {
+    formId: '',
+    enabled: false
   },
 
   contact: {
@@ -90,6 +104,15 @@ window.BIZDAVAR_CONFIG = {
       basic: 'سلام، می‌خوام پلن پایه Fast Web Studio سفارش بدم',
       store: 'سلام، می‌خوام پلن فروشگاهی Fast Web Studio سفارش بدم',
       pro: 'سلام، می‌خوام پلن حرفه‌ای Fast Web Studio سفارش بدم'
+    }
+  },
+
+  partners: {
+    netinode: {
+      name: 'Netinode',
+      url: 'https://netinode.net/',
+      taglineFa: 'دامنه، هاست، WordPress و SSL',
+      taglineEn: 'Domains, hosting, WordPress & SSL'
     }
   },
 
@@ -160,9 +183,8 @@ window.BIZDAVAR_CONFIG = {
 
   featuredPartners: [
     { name: 'ZedPay', url: 'https://zed-pay.com', logo: 'assets/images/partners/zedpay.png', role: 'ecosystem' },
-    { name: 'ZedGate', url: 'https://zedgate.ai', logo: 'assets/images/partners/zedgate.svg', role: 'ecosystem' },
     { name: 'Bear Event', url: 'https://bearevent.co', logo: 'assets/images/partners/bear-event.png', role: 'ecosystem' },
-    { name: 'NetinoHost', url: 'https://netinohost.com', logo: 'assets/images/partners/netinohost.png', role: 'ecosystem' },
+    { name: 'Netinode', url: 'https://netinode.net/', logo: 'assets/images/partners/netinohost.png', role: 'ecosystem' },
     { name: 'BZ Diamond', url: 'pages/bz-diamond.html', logo: 'assets/images/partners/bzdiamond.webp', role: 'case-study' },
     { name: 'Biztejarat', url: 'pages/biztejarat.html', logo: 'assets/images/partners/biztejarat.svg', role: 'case-study' },
     { name: 'Fast Studio', url: 'pages/fast.html', logo: 'assets/images/partners/fast-studio.png', role: 'case-study' },
@@ -172,8 +194,7 @@ window.BIZDAVAR_CONFIG = {
     { name: 'Adak Sepehr', url: 'https://adaksepehr.com', logo: 'assets/images/partners/adak-sepehr.png', role: 'client' },
     { name: 'Imensa', url: 'https://imensa.com', logo: 'assets/images/partners/imensa.png', role: 'client' },
     { name: 'Smith Tradeland', url: 'https://smithtradeland.com', logo: 'assets/images/partners/smith-tradeland.webp', role: 'client' },
-    { name: 'HangerStyle', url: 'https://hangerstyle.com', logo: 'assets/images/partners/hanger-style.png', role: 'client' },
-    { name: 'BlueNil Air', url: 'https://bluenil-air.com', logo: 'assets/images/partners/bluenil-air.svg', role: 'client' }
+    { name: 'HangerStyle', url: 'https://hangerstyle.com', logo: 'assets/images/partners/hanger-style.png', role: 'client' }
   ],
 
   industrialProducts: [
@@ -193,13 +214,25 @@ window.BIZDAVAR_CONFIG = {
       name: 'Prosense',
       title: 'دتکتور گاز و شعله',
       desc: 'سیستم‌های ثابت و پرتابل با گواهی SIL2/3 — مناسب معدن، پتروشیمی و پارکینگ',
-      logo: 'assets/images/partners/prosense.svg',
+      logo: 'assets/images/partners/prosense.png',
       url: 'pages/prosense.html',
       internal: true,
       badge: 'ترکیه',
       accent: 'teal',
       tags: ['PQ+', 'SafeVader', 'PPS'],
       cta: 'سری‌های محصول'
+    },
+    {
+      name: 'Teltonika',
+      title: 'GPS و Fleet Telematics',
+      desc: 'ردیاب ناوگان، CAN/OBD، BLE، ویدئو — FMB920، FMC650، FTC305 و راهکارهای IoT',
+      logo: 'assets/images/partners/teltonika.png',
+      url: 'pages/teltonika.html',
+      internal: true,
+      badge: 'لیتوانی',
+      accent: 'blue',
+      tags: ['FMB920', 'FTC305', 'DualCam'],
+      cta: 'کاتالوگ Teltonika'
     },
     {
       name: 'Gamak',
@@ -212,6 +245,30 @@ window.BIZDAVAR_CONFIG = {
       accent: 'navy',
       tags: ['IE2/IE3', 'فلنج‌دار', 'پروژه‌ای'],
       cta: 'اطلاعات Gamak'
+    },
+    {
+      name: 'Digi System',
+      title: 'تجهیزات خرده‌فروشی و POS',
+      desc: 'تامین محصولات Digi — ترازو، صندوق فروشگاهی، سیستم‌های POS و تجهیزات خرده‌فروشی',
+      logo: 'assets/images/partners/digi-system.svg',
+      url: 'pages/digi-system.html',
+      internal: true,
+      badge: 'ترکیه',
+      accent: 'red',
+      tags: ['POS', 'Retail', 'Scales'],
+      cta: 'مشاهده محصولات'
+    },
+    {
+      name: 'Teraoka',
+      title: 'ترازو و تجهیزات فروشگاهی',
+      desc: 'تامین کامل محصولات Teraoka Seiko — ترازو، برچسب‌زن، POS و تجهیزات فروشگاهی و صنعتی',
+      logo: 'assets/images/partners/teraoka.svg',
+      url: 'pages/teraoka.html',
+      internal: true,
+      badge: 'ژاپن',
+      accent: 'blue',
+      tags: ['Scales', 'Labeling', 'POS'],
+      cta: 'مشاهده برند'
     }
   ],
 
@@ -223,41 +280,46 @@ window.BIZDAVAR_CONFIG = {
   ],
 
   portfolio: [
-    { name: 'ZedPay', domain: 'zed-pay.com', category: 'فین‌تک / پرداخت', role: 'ecosystem', internal: false, logo: 'assets/images/partners/zedpay.png' },
-    { name: 'ZedGate', domain: 'zedgate.ai', category: 'درگاه دیجیتال', role: 'ecosystem', internal: false, logo: 'assets/images/partners/zedgate.svg' },
-    { name: 'ZedGate IO', domain: 'zedgate.io', category: 'زیرساخت فین‌تک', role: 'ecosystem', internal: false, logo: 'assets/images/partners/zedgate-io.svg' },
-    { name: 'ZedGP', domain: 'zedgp.com', category: 'خدمات مالی', role: 'ecosystem', internal: false, logo: 'assets/images/partners/zedgp.png' },
-    { name: 'ZedX DMCC', domain: 'zedxdmcc.com', category: 'هلدینگ', role: 'ecosystem', internal: false, logo: 'assets/images/partners/zedxdmcc.png' },
+    { name: 'ZedPay', domain: 'zed-pay.com', category: 'فین‌تک / توسعه وب‌اپ', role: 'case-study', internal: false, logo: 'assets/images/partners/zedpay.png', note: 'نمونه‌کار — مدیریت تیم برنامه‌نویسی و توسعه، طراحی وب‌اپلیکیشن، مدیریت شبکه و امنیت، مدیریت ایمیل و ایجاد زیرساخت‌های اولیه' },
+    { name: 'ZedGate IO', domain: 'zedgate.io', category: 'زیرساخت فین‌تک', role: 'ecosystem', internal: false, archived: true, note: 'پروژه غیرفعال' },
+    { name: 'ZedGP', domain: 'zedgp.com', category: 'خدمات مالی', role: 'ecosystem', internal: false, archived: true, note: 'پروژه غیرفعال' },
+    { name: 'ZedX DMCC', domain: 'zedxdmcc.com', category: 'طراحی وب / زیرساخت', role: 'case-study', internal: false, logo: 'assets/images/partners/zedxdmcc.png', note: 'نمونه‌کار — طراحی وبسایت و زیرساخت' },
     { name: 'BZ Diamond', domain: 'bzdiamond.com', category: 'طراحی وب / فروشگاه', role: 'case-study', internal: true, slug: 'pages/bz-diamond.html', logo: 'assets/images/partners/bzdiamond.webp', note: 'نمونه‌کار — WooCommerce و مدیریت ایمیل' },
-    { name: 'Zed Diamond', domain: 'zeddiamond.com', category: 'جواهرات', role: 'ecosystem', internal: false, logo: 'assets/images/partners/zeddiamond.png' },
-    { name: 'BZ Broker', domain: 'bzbroker.com', category: 'بروکر', role: 'ecosystem', internal: false, logo: 'assets/images/partners/bz-broker.png' },
+    { name: 'Zed Diamond', domain: 'zeddiamond.com', category: 'طراحی وب / فروشگاه جواهرات', role: 'case-study', internal: false, logo: 'assets/images/partners/zeddiamond.png', note: 'نمونه‌کار — طراحی وبسایت فروشگاهی و تولید محتوا' },
+    { name: 'BZ Broker', domain: 'bzbroker.com', category: 'طراحی وب / بروکر', role: 'case-study', internal: false, logo: 'assets/images/partners/bz-broker.png', note: 'نمونه‌کار — طراحی وبسایت و تولید محتوا' },
     { name: 'BZ Payment', domain: 'bz-payment.com', category: 'پرداخت', role: 'ecosystem', internal: false, logo: 'assets/images/partners/bz-payment.png' },
-    { name: 'BlueNil Air', domain: 'bluenil-air.com', category: 'هواپیمایی', role: 'client', internal: false, logo: 'assets/images/partners/bluenil-air.svg' },
-    { name: 'Bridged3', domain: 'bridged3.com', category: 'وب۳', role: 'ecosystem', internal: false, logo: 'assets/images/partners/bridged3.png' },
-    { name: 'iBan2iBan', domain: 'iban2iban.com', category: 'انتقال مالی', role: 'ecosystem', internal: false, logo: 'assets/images/partners/iban2iban.png' },
-    { name: 'Zed Developer', domain: 'zeddeveloper.com', category: 'توسعه نرم‌افزار', role: 'ecosystem', internal: false, logo: 'assets/images/partners/zeddeveloper.png' },
+    { name: 'BlueNil Air', domain: 'bluenil-air.com', category: 'هواپیمایی', role: 'client', internal: false, archived: true, note: 'پروژه گذشته — وبسایت به‌دلیل عدم تمدید سرور در دسترس نیست' },
+    { name: 'Bridged3', domain: 'bridged3.com', category: 'مارکت‌پلیس B2B / فروشگاه', role: 'case-study', internal: false, archived: true, note: 'نمونه‌کار ناتمام — هدف پروژه ایجاد فروشگاه B2B و مارکت‌پلیس عمده‌فروشی (مدل علی‌بابا) بود' },
+    { name: 'iBan2iBan', domain: 'iban2iban.com', category: 'زیرساخت ایمیل / SMTP', role: 'case-study', internal: false, note: 'نمونه‌کار — راه‌اندازی سیستم مدیریت SMTP' },
     { name: 'Bear Event', domain: 'bearevent.co', category: 'رویداد و بلیت', role: 'ecosystem', internal: false, logo: 'assets/images/partners/bear-event.png' },
-    { name: 'NetinoHost', domain: 'netinohost.com', category: 'هاستینگ', role: 'ecosystem', internal: false, logo: 'assets/images/partners/netinohost.png' },
+    { name: 'Netinode', domain: 'netinode.net', url: 'https://netinode.net/', category: 'دامنه، هاست و سرور', role: 'case-study', internal: false, logo: 'assets/images/partners/netinohost.png', note: 'نمونه‌کار و سرویس زیرساخت بیزدوار — فروش دامنه، هاست، WordPress Hosting، ایمیل تجاری، DNS و سرور' },
     { name: 'Fast Web Studio', domain: 'fast.bizdavar.com', category: 'طراحی سایت', role: 'case-study', internal: true, slug: 'pages/fast.html', logo: 'assets/images/partners/fast-studio.png', note: 'محصول اختصاصی بیزدوار — طراحی سایت ۵ روزه' },
-    { name: 'Biztejarat', domain: 'instagram.com/biztejarat', category: 'مدیریت SMM / اینستاگرام', role: 'case-study', internal: true, slug: 'pages/biztejarat.html', logo: 'assets/images/partners/biztejarat.svg', note: 'نمونه‌کار — مدیریت محتوای صنعتی' },
+    { name: 'FXGuard', domain: 'fxguard.io', category: 'طراحی وب / CRM و وب‌اپ', role: 'case-study', internal: false, note: 'نمونه‌کار — طراحی وبسایت، وب‌اپلیکیشن و CRM اختصاصی با کدنویسی اختصاصی' },
+    { name: 'FXGuard Exchange', domain: 'exchange.fxguard.io', category: 'طراحی وب / صرافی و فین‌تک', role: 'case-study', internal: false, note: 'نمونه‌کار — طراحی وبسایت صرافی با قابلیت عضویت و ترید ارز' },
+    { name: 'FXGuard Accounting', domain: 'accounting.fxguard.io', category: 'نرم‌افزار حسابداری / فینانس', role: 'case-study', internal: false, note: 'نمونه‌کار — سیستم حسابداری حرفه‌ای با برنامه‌نویسی اختصاصی، مناسب کسب‌وکارهای فینانس و صرافی' },
+    { name: 'Marvispace', domain: 'marvispace.com', category: 'طراحی وب / فروشگاه اختصاصی', role: 'case-study', internal: false, note: 'نمونه‌کار — طراحی وبسایت فروشگاهی اختصاصی با داشبورد ادمین و مدیریت محتوا و محصول' },
+    { name: 'Marvi Society', domain: 'marvisociety.com', category: 'طراحی و توسعه اپلیکیشن موبایل', role: 'case-study', internal: false, note: 'نمونه‌کار — طراحی و برنامه‌نویسی اختصاصی اپلیکیشن iOS و Android' },
+    { name: 'GooPay AI', domain: 'goopay.ai', category: 'هوش مصنوعی / نرم‌افزار اختصاصی', role: 'case-study', internal: false, note: 'نمونه‌کار — طراحی و برنامه‌نویسی اختصاصی سیستم‌های هوش مصنوعی' },
+    { name: 'Grafik Travel', domain: 'grafiktravel.com', url: 'http://grafiktravel.com/', category: 'طراحی وب / گردشگری و MICE', role: 'case-study', internal: false, logo: 'assets/images/partners/grafik-travel.png', note: 'نمونه‌کار — طراحی وبسایت تخصصی برای مجموعه گردشگری و خدمات سازمانی' },
+    { name: 'Biztejarat', domain: 'instagram.com/biztejarat', category: 'مدیریت SMM / اینستاگرام', role: 'case-study', internal: true, slug: 'pages/biztejarat.html', archived: true, note: 'پروژه گذشته — این کسب‌وکار فعلاً غیرفعال شده است' },
     { name: 'Arian Pumps', domain: 'arianpumps.com', category: 'طراحی وب / B2B', role: 'case-study', internal: false, logo: 'assets/images/partners/arian-pumps.png', note: 'نمونه‌کار — طراحی وب و خدمات دیجیتال' },
-    { name: 'Marvelous Holding', domain: 'marvelousholding.com', category: 'طراحی وب / هلدینگ', role: 'case-study', internal: false, logo: 'assets/images/partners/marvelous-holding.svg', note: 'نمونه‌کار — وبسایت هلدینگ و سرمایه‌گذاری' },
+    { name: 'Marvelous Holding', domain: 'marvelousholding.com', category: 'طراحی وب / هلدینگ', role: 'case-study', internal: false, logo: 'assets/images/partners/marvelous-holding.png', note: 'نمونه‌کار — وبسایت هلدینگ و سرمایه‌گذاری' },
     { name: 'SMM Turk', domain: 'smm-turk.com', category: 'مدیریت SMM / دیجیتال', role: 'case-study', internal: false, logo: 'assets/images/partners/smm-turk.svg', note: 'نمونه‌کار — بازاریابی دیجیتال و SMM ترکیه' },
     { name: 'JMS Elettropompe', domain: 'jmselettropompe.it', category: 'طراحی وب / پمپ صنعتی', role: 'case-study', internal: false, logo: 'assets/images/partners/jms-elettropompe.svg', note: 'نمونه‌کار — وب B2B الکتروموتور و پمپ ایتالیا' },
-    { name: 'Karen Leather', domain: 'karenleather.com', category: 'طراحی وب / چرم و مد', role: 'case-study', internal: false, logo: 'assets/images/partners/karen-leather.svg', note: 'نمونه‌کار — فروشگاه آنلاین چرم و پوشاک' },
-    { name: 'Paparosi', domain: 'paparosi.co', category: 'طراحی وب / برند تجاری', role: 'case-study', internal: false, logo: 'assets/images/partners/paparosi.svg', note: 'نمونه‌کار — طراحی وب و هویت برند' },
-    { name: 'NIK Aesthetic', domain: 'nikaesthetic.com', category: 'طراحی وب / کلینیک زیبایی', role: 'case-study', internal: false, logo: 'assets/images/partners/nikaesthetic.svg', note: 'نمونه‌کار — کلینیک بین‌المللی زیبایی و پزشکی' },
-    { name: 'Adak Sepehr', domain: 'adaksepehr.com', category: 'صنعت و تجهیزات', role: 'client', internal: false, logo: 'assets/images/partners/adak-sepehr.png' },
-    { name: 'Alimila', domain: 'alimila.com', category: 'تجارت بین‌الملل', role: 'client', internal: false, logo: 'assets/images/partners/alimila.png' },
-    { name: 'Bamauk Visa', domain: 'bamaukvisa.com', category: 'خدمات ویزا', role: 'client', internal: false, logo: 'assets/images/partners/bamauk-visa.png' },
-    { name: 'Honar Shop', domain: 'honarshop.com', category: 'فروشگاه هنری', role: 'client', internal: false, logo: 'assets/images/partners/honar-shop.png' },
-    { name: 'Smith Tradeland', domain: 'smithtradeland.com', category: 'تجارت', role: 'client', internal: false, logo: 'assets/images/partners/smith-tradeland.webp' },
-    { name: 'Imensa', domain: 'imensa.com', category: 'صنعت', role: 'client', internal: false, logo: 'assets/images/partners/imensa.png' },
-    { name: 'HangerStyle', domain: 'hangerstyle.com', category: 'مد و پوشاک', role: 'client', internal: false, logo: 'assets/images/partners/hanger-style.png' },
-    { name: 'Havana', domain: 'havana.com', category: 'برند تجاری', role: 'client', internal: false, logo: 'assets/images/partners/havana.png' },
-    { name: 'Sanat Moharek', domain: 'sanatmoharek.com', category: 'صنعت', role: 'client', internal: false, logo: 'assets/images/partners/sanat-moharek.png' },
-    { name: 'هتل شایان تبریز', domain: 'hotel-shayan.com', category: 'گردشگری و هتلداری', role: 'client', internal: false, logo: 'assets/images/partners/hotel-shayan.png' },
-    { name: 'پتروشیمی تبریز', domain: 'tpco.ir', category: 'پتروشیمی', role: 'client', internal: false, logo: 'assets/images/partners/petrotabriz.png' }
+    { name: 'Karen Leather', domain: 'karenleather.com', category: 'بازاریابی محصول / چرم و مد', role: 'case-study', internal: false, logo: 'assets/images/partners/karen-leather.png', note: 'نمونه‌کار — بازاریابی محصولات، تولید محتوا و عکاسی صنعتی' },
+    { name: 'Paparosi', domain: 'paparosi.co', category: 'طراحی وب / برند تجاری', role: 'case-study', internal: false, logo: 'assets/images/partners/paparosi.png', note: 'نمونه‌کار — طراحی وب و هویت برند' },
+    { name: 'NIK Aesthetic', domain: 'nikaesthetic.com', category: 'طراحی وب / کلینیک زیبایی', role: 'case-study', internal: false, logo: 'assets/images/partners/nikaesthetic.png', note: 'نمونه‌کار — کلینیک بین‌المللی زیبایی و پزشکی' },
+    { name: 'Adak Sepehr', domain: 'adaksepehr.com', category: 'تامین و فروش / تجهیزات صنعتی', role: 'case-study', internal: false, logo: 'assets/images/partners/adak-sepehr.png', note: 'نمونه‌کار — همکاری در تامین و فروش' },
+    { name: 'Alimila', domain: 'alimila.com', category: 'برندینگ و بازاریابی ۳۶۰°', role: 'case-study', internal: false, logo: 'assets/images/partners/alimila.png', note: 'نمونه‌کار — طراحی لوگو، مدیریت شبکه‌های اجتماعی، تولید محتوا، طراحی وبسایت، بازاریابی و استراتژی فروش و طراحی بسته‌بندی محصولات' },
+    { name: 'Bamauk Visa', domain: 'bamaukvisa.com', category: 'طراحی وب / خدمات ویزا', role: 'case-study', internal: false, logo: 'assets/images/partners/bamauk-visa.png', note: 'نمونه‌کار — طراحی وبسایت و تولید محتوا' },
+    { name: 'Honar Shop', domain: 'honarshop.com', category: 'طراحی وب / تولید محتوا', role: 'case-study', internal: false, logo: 'assets/images/partners/honar-shop.png', note: 'نمونه‌کار — عکاسی صنعتی از محصولات، تولید محتوا و طراحی وبسایت' },
+    { name: 'Smith Tradeland', domain: 'smithtradeland.com', category: 'طراحی وب / تولید محتوا / امنیت', role: 'case-study', internal: false, logo: 'assets/images/partners/smith-tradeland.webp', note: 'نمونه‌کار — طراحی وبسایت، تولید محتوا و امنیت' },
+    { name: 'Imensa', domain: 'imensa.com', category: 'سرمایه‌گذاری / نوآوری', role: 'case-study', internal: false, logo: 'assets/images/partners/imensa.png', note: 'نمونه‌کار — سرمایه‌گذاری، تولید محصولات نوآورانه و خلاق، ایده‌پردازی و توسعه کسب‌وکار' },
+    { name: 'HangerStyle', domain: 'hangerstyle.com', category: 'سفارش بین‌المللی / مد و پوشاک', role: 'case-study', internal: false, logo: 'assets/images/partners/hanger-style.png', note: 'نمونه‌کار — ثبت سفارش از وبسایت‌های بین‌المللی' },
+    { name: 'Havana', domain: 'havana.com', category: 'مشاوره تبلیغات / پشتیبانی وب', role: 'case-study', internal: false, logo: 'assets/images/partners/havana.png', note: 'نمونه‌کار — مشاوره تبلیغاتی، پشتیبانی وب، امنیت شبکه و تولید محتوا' },
+    { name: 'Sanat Moharek', domain: 'sanatm.com', category: 'طراحی وب / بازاریابی صنعتی', role: 'case-study', internal: false, logo: 'assets/images/partners/sanat-moharek.png', note: 'نمونه‌کار — طراحی وب، بازاریابی، مدیریت شبکه‌های اجتماعی و مشاوره تبلیغاتی' },
+    { name: 'هتل شایان تبریز', domain: 'hotel-shayan.com', category: 'طراحی وب / گردشگری و هتلداری', role: 'case-study', internal: false, logo: 'assets/images/partners/hotel-shayan.png', note: 'نمونه‌کار — طراحی وبسایت اختصاصی وردپرسی' },
+    { name: 'پتروشیمی تبریز', domain: 'tpco.ir', category: 'تامین تجهیزات صنعتی / پتروشیمی', role: 'case-study', internal: false, logo: 'assets/images/partners/petrotabriz.png', note: 'نمونه‌کار — تامین تجهیزات صنعتی' }
   ]
 };
 
@@ -270,5 +332,6 @@ window.getWhatsappUrl = function (message) {
 
 window.getProjectUrl = function (project) {
   if (project.internal && project.slug) return window.resolvePath(project.slug);
+  if (project.url) return project.url;
   return `https://${project.domain}`;
 };

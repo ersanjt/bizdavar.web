@@ -1,0 +1,19 @@
+/**
+ * teltonika brand accent overrides
+ */
+body[data-page="teltonika"] {
+  --brand-accent: #0054A6;
+  --brand-accent-dark: #003d7a;
+  --brand-surface: #f0f5fa;
+}
+
+body[data-page="teltonika"] .teltonika-hero {
+  background: #f0f5fa;
+  border-bottom-color: #0054A6;
+}
+
+body[data-page="teltonika"] .teltonika-hero::before {
+  background:
+    linear-gradient(105deg, rgba(244, 249, 250, 0.97) 42%, rgba(244, 249, 250, 0.55) 68%, rgba(244, 249, 250, 0.2) 100%),
+    url('../images/teltonika/hero/fleet-telematics.webp') center right / cover no-repeat;
+}

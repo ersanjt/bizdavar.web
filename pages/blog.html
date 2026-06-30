@@ -2,10 +2,11 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <script src="../assets/scripts/i18n/locale-preload.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>وبلاگ | بیزدوار گروپ</title>
-  <link rel="icon" href="../assets/images/brand/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="icon" href="../assets/images/brand/favicon.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../assets/images/brand/apple-touch-icon.png">
   <link rel="stylesheet" href="../assets/styles/fonts.css">
   <link rel="stylesheet" href="../assets/styles/typography.css">
   <link rel="stylesheet" href="../assets/styles/icons.css">
@@ -19,7 +20,7 @@
 <body data-page="blog" data-depth="1">
 
   
-  <a href="#main-content" class="skip-link">رفتن به محتوای اصلی</a>
+  <a href="#main-content" class="skip-link" data-i18n="common.skipLink">رفتن به محتوای اصلی</a>
 <div class="top-bar" id="topBar"></div>
   <header class="header" id="siteHeader"></header>
   <nav class="breadcrumbs-wrap" id="breadcrumbs" aria-label="مسیر صفحه"></nav>
@@ -30,9 +31,9 @@
 
 <section class="page-hero page-hero--pro">
     <div class="container">
-      <span class="section__tag">وبلاگ</span>
-      <h1>مطالب تخصصی دیجیتال و صنعت</h1>
-      <p>راهنماها و نکات کاربردی از تیم بیزدوار گروپ.</p>
+      <span class="section__tag" data-i18n="blogPage.hero.tag">وبلاگ</span>
+      <h1 data-i18n="blogPage.hero.title">مطالب تخصصی دیجیتال و صنعت</h1>
+      <p data-i18n="blogPage.hero.desc">راهنماها و نکات کاربردی از تیم بیزدوار گروپ.</p>
     </div>
   </section>
 
@@ -46,9 +47,9 @@
 
   <section class="section section--gray">
     <div class="container cta-banner">
-      <h2>نیاز به مشاوره تخصصی دارید؟</h2>
-      <p>موضوع مطلب شما را در <a href="contact.html">فرم تماس</a> بنویسید — پاسخگوییم.</p>
-      <a href="contact.html" class="btn btn--primary">درخواست مشاوره</a>
+      <h2 data-i18n="blogPage.cta.title">نیاز به مشاوره تخصصی دارید؟</h2>
+      <p data-i18n-html="blogPage.cta.desc">موضوع مطلب شما را در <a href="contact.html">فرم تماس</a> بنویسید — پاسخگوییم.</p>
+      <a href="contact.html" class="btn btn--primary" data-i18n="blogPage.cta.btn">درخواست مشاوره</a>
     </div>
   </section>
   </main>
@@ -61,19 +62,23 @@
   <script src="../assets/scripts/config/paths.js"></script>
   <script src="../assets/scripts/config/site-config.js"></script>
   <script src="../assets/scripts/i18n/locales.js"></script>
+  <script src="../assets/scripts/i18n/locales-pages.js"></script>
+  <script src="../assets/scripts/i18n/locale-seo.js"></script>
   <script src="../assets/scripts/i18n/i18n.js"></script>
+  <script src="../assets/scripts/i18n/page-i18n.js"></script>
   <script src="../assets/scripts/components/biz-icons.js"></script>
-  <script src="../assets/scripts/components/site-components.js"></script>
+  <script src="../assets/scripts/components/context.js"></script>
+  <script src="../assets/scripts/components/chrome.js"></script>
+  <script src="../assets/scripts/components/schema.js"></script>
+  <script src="../assets/scripts/components/grids.js"></script>
   <script src="../assets/scripts/i18n/bootstrap.js"></script>
-  <script src="../assets/scripts/main.js"></script>
+  <script src="../assets/scripts/main.js"></script>
   <script>
     const crumbs = [
       { page: 'home', url: 'index.html' },
       { page: 'blog', url: 'blog.html' }
     ];
-    injectSeo({
-      title: 'وبلاگ بیزدوار | بازاریابی دیجیتال، طراحی وب و تجهیزات صنعتی',
-      description: 'مقالات تخصصی بیزدوار گروپ: بازاریابی دیجیتال، Fast Web Studio، سنسورهای صنعتی VEGA و راهکارهای رشد کسب‌وکار.',
+    injectPageSeo('blog', {
       canonical: 'https://bizdavar.com/pages/blog.html',
       type: 'website'
     });
@@ -82,6 +87,7 @@
     injectBreadcrumbSchema(crumbs);
     renderBlogGrid('blogGrid');
     renderGeoStrip('geoStrip', {
+      textKey: 'blogPage.geoText',
       text: 'مقالات تخصصی برای کسب‌وکارهای ایران و ترکیه — بازاریابی دیجیتال، طراحی وب و تامین تجهیزات صنعتی.'
     });
     injectBlogListSchema();

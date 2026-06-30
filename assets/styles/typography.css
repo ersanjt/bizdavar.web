@@ -36,14 +36,19 @@ h1, h2, h3, h4, h5, h6,
 .vega-hero__title,
 .vega-product-card__name,
 .prosense-hero__title,
-.prosense-category-block__head h2 {
+.prosense-category-block__head h2,
+.teltonika-hero__title,
+.gamak-hero__title,
+.digi-hero__title,
+.teraoka-hero__title {
   font-family: var(--font-display);
   font-weight: var(--fw-bold);
   letter-spacing: -0.02em;
   line-height: var(--leading-tight);
 }
 
-h1, .hero__title, .page-hero h1, .vega-hero__title, .prosense-hero__title {
+h1, .hero__title, .page-hero h1, .vega-hero__title, .prosense-hero__title,
+.teltonika-hero__title, .gamak-hero__title, .digi-hero__title, .teraoka-hero__title {
   font-weight: var(--fw-black);
   letter-spacing: -0.03em;
   line-height: 1.12;

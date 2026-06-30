@@ -289,3 +289,69 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Archived / offline past projects */
+.portfolio-archived-wrap {
+  padding-top: 0;
+  padding-bottom: 48px;
+}
+
+.portfolio-archived {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.portfolio-archived__head {
+  margin-bottom: 24px;
+}
+
+.portfolio-archived__head .section__desc {
+  margin-inline: auto;
+  max-width: 560px;
+}
+
+.portfolio-archived__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: start;
+}
+
+.portfolio-archived__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 12px;
+  padding: 14px 18px;
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-200);
+  font-size: var(--text-sm);
+}
+
+.portfolio-archived__item strong {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.portfolio-archived__cat {
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+}
+
+.portfolio-archived__cat::before {
+  content: '·';
+  margin-inline-end: 8px;
+  opacity: 0.5;
+}
+
+.portfolio-archived__note {
+  flex: 1 1 100%;
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  line-height: 1.5;
+}

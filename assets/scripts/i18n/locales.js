@@ -17,7 +17,10 @@ window.BIZDAVAR_LOCALES = {
     seo: {
       defaultTitle: 'بیزدوار گروپ | خدمات دیجیتال، طراحی سایت و تامین تجهیزات صنعتی',
       defaultDescription: 'بیزدوار گروپ — آژانس دیجیتال با ۱۲+ سال تجربه و ۱۰۰+ پروژه در ۱۱ کشور. بازاریابی دیجیتال، طراحی وب، فین‌تک، SMM و تامین VEGA و Prosense.',
-      keywords: 'بیزدوار, Bizdavar Group, طراحی سایت, VEGA, Prosense, Fast Web Studio'
+      keywords: 'بیزدوار, Bizdavar Group, طراحی سایت, VEGA, Prosense, Fast Web Studio',
+      schemaServices: 'خدمات بیزدوار گروپ',
+      schemaBlog: 'وبلاگ بیزدوار گروپ',
+      schemaPortfolio: 'نمونه‌کارهای بیزدوار گروپ'
     },
     common: {
       skipLink: 'رفتن به محتوای اصلی',
@@ -29,6 +32,7 @@ window.BIZDAVAR_LOCALES = {
       whatsapp: 'واتساپ',
       homeAria: 'صفحه اصلی',
       mainNav: 'منوی اصلی',
+      servicesNav: 'فهرست خدمات',
       mobileNav: 'منوی موبایل',
       bottomNav: 'ناوبری پایین موبایل',
       openDrawer: 'باز کردن منو',
@@ -44,6 +48,7 @@ window.BIZDAVAR_LOCALES = {
       inquiry: 'درخواست استعلام',
       contactForm: 'فرم تماس',
       rights: 'تمامی حقوق محفوظ است',
+      articleLocaleNote: 'این مقاله به زبان فارسی منتشر شده است.',
       globalPresence: 'حضور جهانی',
       geoAria: 'حوزه جغرافیایی خدمات',
       trustAria: 'شاخص‌های کلیدی بیزدوار',
@@ -52,6 +57,23 @@ window.BIZDAVAR_LOCALES = {
       langEn: 'English',
       langLabel: 'زبان',
       breadcrumbAria: 'مسیر صفحه'
+    },
+    supplyBrand: {
+      inquiryCta: 'استعلام قیمت و تامین',
+      whyBuyCta: 'چرا از بیزدوار بخرید؟',
+      requestInquiry: 'درخواست استعلام',
+      inquiryCategory: 'استعلام این دسته',
+      inquirySeries: 'استعلام',
+      useCaseLabel: 'کاربرد:',
+      techConsultCta: 'درخواست مشاوره فنی',
+      navTrust: 'چرا بیزدوار',
+      navBuy: 'مسیر خرید',
+      navHighlights: 'محصولات شاخص',
+      navIran: 'صنایع ایران',
+      navFaq: 'سوالات',
+      inquiryTemplate: 'استعلام {product}',
+      officialCatalog: 'کاتالوگ رسمی',
+      orderCodeCta: 'درخواست استعلام کد سفارش'
     },
     nav: {
       home: 'خانه',
@@ -111,9 +133,12 @@ window.BIZDAVAR_LOCALES = {
       ctaBtn: 'درخواست استعلام',
       ctaLink: 'خدمات صنعتی',
       products: [
-        { name: 'VEGA', title: 'سنسور و ابزار دقیق', desc: 'اندازه‌گیری سطح، فشار، جریان و سوئیچ — استاندارد صنایع نفت، پتروشیمی و آب', badge: 'آلمان', cta: 'سری‌های محصول' },
-        { name: 'Prosense', title: 'دتکتور گاز و شعله', desc: 'سیستم‌های ثابت و پرتابل با گواهی SIL2/3 — مناسب معدن، پتروشیمی و پارکینگ', badge: 'ترکیه', cta: 'سری‌های محصول' },
-        { name: 'Gamak', title: 'الکتروموتور صنعتی', desc: 'موتورهای الکتریکی سه‌فاز و تک‌فاز — تامین، مشاوره انتخاب و پشتیبانی فنی', badge: 'ترکیه', cta: 'اطلاعات Gamak' }
+        { name: 'VEGA', title: 'سنسور و ابزار دقیق', desc: 'اندازه‌گیری سطح، فشار، جریان و سوئیچ — استاندارد صنایع نفت، پتروشیمی و آب', badge: 'آلمان', tags: ['VEGAPULS', 'VEGABAR', 'VEGAPOINT'], cta: 'مشاهده کاتالوگ' },
+        { name: 'Prosense', title: 'دتکتور گاز و شعله', desc: 'سیستم‌های ثابت و پرتابل با گواهی SIL2/3 — مناسب معدن، پتروشیمی و پارکینگ', badge: 'ترکیه', tags: ['PQ+', 'SafeVader', 'PPS'], cta: 'سری‌های محصول' },
+        { name: 'Teltonika', title: 'GPS و Fleet Telematics', desc: 'ردیاب ناوگان، CAN/OBD، BLE، ویدئو و راهکارهای IoT — FMB920 · FMC650 · FTC305', badge: 'لیتوانی', tags: ['FMB920', 'FTC305', 'DualCam'], cta: 'کاتالوگ Teltonika' },
+        { name: 'Gamak', title: 'الکتروموتور صنعتی', desc: 'موتورهای الکتریکی سه‌فاز و تک‌فاز — تامین، مشاوره انتخاب و پشتیبانی فنی', badge: 'ترکیه', tags: ['IE2/IE3', 'فلنج‌دار', 'پروژه‌ای'], cta: 'اطلاعات Gamak' },
+        { name: 'Digi System', title: 'تجهیزات خرده‌فروشی و POS', desc: 'تامین محصولات Digi — ترازو، صندوق فروشگاهی، سیستم‌های POS و تجهیزات خرده‌فروشی', badge: 'ترکیه', tags: ['POS', 'Retail', 'Scales'], cta: 'مشاهده محصولات' },
+        { name: 'Teraoka', title: 'ترازو و تجهیزات فروشگاهی', desc: 'تامین کامل محصولات Teraoka Seiko — ترازو، برچسب‌زن، POS و تجهیزات فروشگاهی و صنعتی', badge: 'ژاپن', tags: ['Scales', 'Labeling', 'POS'], cta: 'مشاهده برند' }
       ]
     },
     process: {
@@ -129,10 +154,17 @@ window.BIZDAVAR_LOCALES = {
       countries: 'کشور',
       years: 'سال تجربه',
       founded: 'شروع فعالیت',
+      foundedDisplay: '۱۳۹۲ / ۲۰۱۳',
       sources: 'منابع',
       founderLinkedin: 'LinkedIn بنیان‌گذار',
       portfolio: 'نمونه‌کارها',
-      fullAbout: 'درباره کامل'
+      fullAbout: 'درباره کامل',
+      highlights: [
+        { category: 'بازاریابی دیجیتال', text: 'با اجرای استراتژی‌های نوین بازاریابی دیجیتال، نرخ تبدیل مشتریان به‌طور محسوسی افزایش یافته است.', source: 'پست حرفه‌ای بنیان‌گذار در LinkedIn', year: '2024' },
+        { category: 'تجربه اجرایی', text: 'بیش از ۱۰۰ پروژه وب و پلتفرم سفارشی در ۱۱ کشور — از استارتاپ تا برندهای فین‌تک و صنعتی.', source: 'پروفایل LinkedIn — Ersan J. Tabrizi', year: '2025' },
+        { category: 'فین‌تک', text: 'توسعه و راه‌اندازی پلتفرم‌های پرداخت، داشبورد مدیریتی و یکپارچه‌سازی امنیت Cloudflare برای اکوسیستم ZedPay.', source: 'سوابق حرفه‌ای تأییدشده', year: '2023–2025' },
+        { category: 'صنعت', text: 'مدیریت تامین تجهیزات صنعتی — از پمپ آتش‌نشانی معادن گل‌گهر تا تجهیزات ابزار دقیق بین‌المللی.', source: 'سوابق Sanatm و Europe Gayrimenkul', year: '2015–2024' }
+      ]
     },
     geo: {
       summary: 'خدمات از استانبول به ایران، ترکیه و ۱۱ کشور — مشاوره فارسی، واتساپ و تحویل بین‌المللی.',
@@ -175,7 +207,9 @@ window.BIZDAVAR_LOCALES = {
       aboutTag: 'درباره ما',
       aboutTitle: 'بیزدوار گروپ — شریک رشد کسب‌وکار',
       aboutP1: 'مجموعه‌ای فعال در حوزه خدمات دیجیتال، طراحی وب، بازاریابی آنلاین و تامین تجهیزات صنعتی. ما با تجربه در پروژه‌های بین‌المللی، از فین‌تک و رویداد تا صنعت و هاستینگ، راهکار یکپارچه ارائه می‌دهیم.',
-      aboutP2: 'زیرساخت دیجیتال، مدیریت دامنه، SSL و امنیت نیز بخشی از خدمات ماست.',
+      aboutP2: 'زیرساخت دیجیتال، مدیریت دامنه، SSL و امنیت نیز بخشی از خدمات ماست — میزبانی و دامنه بین‌المللی از طریق <a href="https://netinode.net/" class="service-card__link" target="_blank" rel="noopener noreferrer">Netinode</a>.',
+      aboutHeroImage: 'assets/images/content/about-hero.svg',
+      aboutHeroAlt: 'بیزدوار گروپ — آژانس دیجیتال و صنعتی',
       aboutMore: 'بیشتر درباره بیزدوار',
       aboutInfra: 'مدیریت زیرساخت',
       clientsTitle: 'نمونه‌کارها و پروژه‌ها',
@@ -192,7 +226,7 @@ window.BIZDAVAR_LOCALES = {
         { q: 'بیزدوار چه خدماتی ارائه می‌دهد؟', a: 'بازاریابی دیجیتال، طراحی وب، فین‌تک، مدیریت SMM، هاستینگ و تامین تجهیزات صنعتی VEGA و Prosense.' },
         { q: 'طراحی سایت چقدر زمان می‌برد؟', a: 'با Fast Web Studio، تحویل از ۵ روز کاری با پلن‌های $99 تا $299.' },
         { q: 'چگونه اعتبار بیزدوار را بررسی کنم؟', a: 'پروفایل LinkedIn بنیان‌گذار، نمونه‌کارها، گواهینامه‌های Google و تماس از info@bizdavar.com.' },
-        { q: 'تجهیزات صنعتی از چه برندهایی تامین می‌شود؟', a: 'VEGA، Prosense، Gamak و سایر برندهای معتبر جهانی.' }
+        { q: 'تجهیزات صنعتی از چه برندهایی تامین می‌شود؟', a: 'VEGA، Prosense، Gamak، Digi System، Teraoka و سایر برندهای معتبر جهانی.' }
       ]
     },
     contactPage: {
@@ -222,7 +256,10 @@ window.BIZDAVAR_LOCALES = {
       privacyAgree: 'موافقم.',
       submit: 'ارسال درخواست',
       formNote: 'اطلاعات شما فقط برای پاسخ به درخواست تماس استفاده می‌شود.',
-      formSuccess: 'پیام شما آماده ارسال است. اگر پنجره ایمیل باز نشد، مستقیماً به info@bizdavar.com بنویسید.',
+      formSending: 'در حال ارسال…',
+      formSuccess: 'پیام شما با موفقیت ارسال شد. به‌زودی با شما تماس می‌گیریم.',
+      formSuccessMailto: 'پیام شما آماده ارسال است. اگر پنجره ایمیل باز نشد، مستقیماً به info@bizdavar.com بنویسید.',
+      formError: 'ارسال ناموفق بود. لطفاً دوباره تلاش کنید یا مستقیماً به info@bizdavar.com ایمیل بزنید.',
       waTr: 'واتساپ ترکیه',
       waIr: 'واتساپ ایران',
       mapTitle: 'همکاری بین‌المللی',
@@ -265,7 +302,12 @@ window.BIZDAVAR_LOCALES = {
       privacy: { crumb: 'حریم خصوصی' },
       vega: { crumb: 'محصولات VEGA' },
       prosense: { crumb: 'محصولات Prosense' },
-      gamak: { crumb: 'Gamak' }
+      teltonika: { crumb: 'محصولات Teltonika' },
+      gamak: { crumb: 'Gamak' },
+      digiSystem: { crumb: 'Digi System' },
+      teraoka: { crumb: 'Teraoka Seiko' },
+      bzDiamond: { crumb: 'BZ Diamond' },
+      biztejarat: { crumb: 'بیزتجارت' }
     },
     fast: {
       planBasic: 'سلام، می‌خوام پلن پایه Fast Web Studio سفارش بدم',
@@ -276,7 +318,7 @@ window.BIZDAVAR_LOCALES = {
 
   tr: {
     lang: 'tr',
-    dir: 'rtl',
+    dir: 'ltr',
     localeTag: 'tr_TR',
     siteName: 'Bizdavar Group',
     contact: {
@@ -289,7 +331,10 @@ window.BIZDAVAR_LOCALES = {
     seo: {
       defaultTitle: 'Bizdavar Group | Dijital hizmetler, web tasarım ve endüstriyel tedarik',
       defaultDescription: 'Bizdavar Group — 12+ yıl deneyim, 100+ proje, 11 ülkede dijital ajans. Dijital pazarlama, web tasarım, SMM ve VEGA/Prosense tedariki. İstanbul merkezli.',
-      keywords: 'Bizdavar, web tasarım İstanbul, dijital pazarlama, VEGA, Prosense, Fast Web Studio'
+      keywords: 'Bizdavar, web tasarım İstanbul, dijital pazarlama, VEGA, Prosense, Fast Web Studio',
+      schemaServices: 'Bizdavar Group hizmetleri',
+      schemaBlog: 'Bizdavar Group blog',
+      schemaPortfolio: 'Bizdavar Group portfolyo'
     },
     common: {
       skipLink: 'Ana içeriğe geç',
@@ -301,6 +346,7 @@ window.BIZDAVAR_LOCALES = {
       whatsapp: 'WhatsApp',
       homeAria: 'Ana sayfa',
       mainNav: 'Ana menü',
+      servicesNav: 'Hizmet listesi',
       mobileNav: 'Mobil menü',
       bottomNav: 'Alt mobil navigasyon',
       openDrawer: 'Menüyü aç',
@@ -316,6 +362,7 @@ window.BIZDAVAR_LOCALES = {
       inquiry: 'Teklif iste',
       contactForm: 'İletişim formu',
       rights: 'Tüm hakları saklıdır',
+      articleLocaleNote: 'Bu makale yalnızca Farsça olarak yayınlanmıştır.',
       globalPresence: 'Küresel varlık',
       geoAria: 'Hizmet bölgeleri',
       trustAria: 'Bizdavar temel göstergeleri',
@@ -324,6 +371,23 @@ window.BIZDAVAR_LOCALES = {
       langEn: 'English',
       langLabel: 'Dil',
       breadcrumbAria: 'Sayfa yolu'
+    },
+    supplyBrand: {
+      inquiryCta: 'Fiyat teklifi ve tedarik',
+      whyBuyCta: 'Neden Bizdavar’dan alın?',
+      requestInquiry: 'Teklif iste',
+      inquiryCategory: 'Bu kategori için teklif',
+      inquirySeries: 'Teklif',
+      useCaseLabel: 'Uygulama:',
+      techConsultCta: 'Teknik danışmanlık iste',
+      navTrust: 'Neden Bizdavar',
+      navBuy: 'Satınalma yolu',
+      navHighlights: 'Öne çıkan ürünler',
+      navIran: 'Bölgesel uygulama',
+      navFaq: 'SSS',
+      inquiryTemplate: 'Teklif: {product}',
+      officialCatalog: 'Resmi katalog',
+      orderCodeCta: 'Sipariş kodu teklifi iste'
     },
     nav: {
       home: 'Ana Sayfa',
@@ -383,9 +447,12 @@ window.BIZDAVAR_LOCALES = {
       ctaBtn: 'Teklif iste',
       ctaLink: 'Endüstriyel hizmetler',
       products: [
-        { name: 'VEGA', title: 'Sensör ve ölçüm', desc: 'Seviye, basınç, akış — petrol, petrokimya ve su endüstrileri', badge: 'Almanya', cta: 'Ürün serileri' },
-        { name: 'Prosense', title: 'Gaz ve alev dedektörü', desc: 'SIL2/3 sertifikalı sabit ve taşınabilir sistemler', badge: 'Türkiye', cta: 'Ürün serileri' },
-        { name: 'Gamak', title: 'Endüstriyel elektrik motoru', desc: 'Üç fazlı ve tek fazlı motorlar — tedarik ve teknik destek', badge: 'Türkiye', cta: 'Gamak bilgisi' }
+        { name: 'VEGA', title: 'Sensör ve ölçüm', desc: 'Seviye, basınç, akış — petrol, petrokimya ve su endüstrileri', badge: 'Almanya', tags: ['VEGAPULS', 'VEGABAR', 'VEGAPOINT'], cta: 'Katalog' },
+        { name: 'Prosense', title: 'Gaz ve alev dedektörü', desc: 'SIL2/3 sertifikalı sabit ve taşınabilir sistemler', badge: 'Türkiye', tags: ['PQ+', 'SafeVader', 'PPS'], cta: 'Ürün serileri' },
+        { name: 'Teltonika', title: 'GPS ve Fleet Telematics', desc: 'Filo takip, CAN/OBD, BLE, video ve IoT çözümleri — FMB920 · FMC650 · FTC305', badge: 'Litvanya', tags: ['FMB920', 'FTC305', 'DualCam'], cta: 'Teltonika katalog' },
+        { name: 'Gamak', title: 'Endüstriyel elektrik motoru', desc: 'Üç fazlı ve tek fazlı motorlar — tedarik ve teknik destek', badge: 'Türkiye', tags: ['IE2/IE3', 'Flanşlı', 'Projeye özel'], cta: 'Gamak bilgisi' },
+        { name: 'Digi System', title: 'Perakende ve POS ekipmanları', desc: 'Digi ürün tedariki — terazi, kasa, POS ve perakende sistemleri', badge: 'Türkiye', tags: ['POS', 'Retail', 'Scales'], cta: 'Ürünleri gör' },
+        { name: 'Teraoka', title: 'Terazi ve mağaza ekipmanları', desc: 'Teraoka Seiko ürünlerinin tam tedariki — terazi, etiketleme, POS', badge: 'Japonya', tags: ['Scales', 'Labeling', 'POS'], cta: 'Markayı gör' }
       ]
     },
     process: {
@@ -401,10 +468,17 @@ window.BIZDAVAR_LOCALES = {
       countries: 'Ülke',
       years: 'Yıl deneyim',
       founded: 'Kuruluş',
+      foundedDisplay: '2013',
       sources: 'Kaynaklar',
       founderLinkedin: 'Kurucu LinkedIn',
       portfolio: 'Portfolyo',
-      fullAbout: 'Tam hakkımızda'
+      fullAbout: 'Tam hakkımızda',
+      highlights: [
+        { category: 'Dijital pazarlama', text: 'Modern dijital pazarlama stratejileriyle müşteri dönüşüm oranı belirgin şekilde arttı.', source: 'Kurucunun LinkedIn paylaşımı', year: '2024' },
+        { category: 'Uygulama deneyimi', text: '11 ülkede 100+ özel web ve platform projesi — girişimlerden fintech ve sanayi markalarına kadar.', source: 'LinkedIn profili — Ersan J. Tabrizi', year: '2025' },
+        { category: 'Fintech', text: 'ZedPay ekosistemi için ödeme platformları, yönetim paneli ve Cloudflare güvenlik entegrasyonu geliştirildi.', source: 'Doğrulanmış profesyonel kayıtlar', year: '2023–2025' },
+        { category: 'Sanayi', text: 'Endüstriyel ekipman tedarik yönetimi — Gol-Gohar madenlerinin yangın pompalarından uluslararası enstrümantasyon ekipmanlarına.', source: 'Sanatm ve Europe Gayrimenkul kayıtları', year: '2015–2024' }
+      ]
     },
     geo: {
       summary: 'İstanbul\'dan İran, Türkiye ve 11 ülkeye hizmet — Türkçe danışmanlık, WhatsApp ve uluslararası teslimat.',
@@ -447,7 +521,9 @@ window.BIZDAVAR_LOCALES = {
       aboutTag: 'Hakkımızda',
       aboutTitle: 'Bizdavar Group — büyüme ortağınız',
       aboutP1: 'Dijital hizmetler, web tasarım, online pazarlama ve endüstriyel tedarik alanında faaliyet gösteren bir grup. Fintech\'ten etkinliğe, endüstriden hosting\'e entegre çözümler sunuyoruz.',
-      aboutP2: 'Dijital altyapı, domain, SSL ve güvenlik de hizmetlerimiz arasında.',
+      aboutP2: 'Dijital altyapı, domain, SSL ve güvenlik de hizmetlerimiz arasında — uluslararası hosting ve domain için <a href="https://netinode.net/" class="service-card__link" target="_blank" rel="noopener noreferrer">Netinode</a>.',
+      aboutHeroImage: 'assets/images/content/about-hero-en.svg',
+      aboutHeroAlt: 'Bizdavar Group — dijital ve endüstriyel ajans',
       aboutMore: 'Bizdavar hakkında daha fazla',
       aboutInfra: 'Altyapı yönetimi',
       clientsTitle: 'Portfolyo ve projeler',
@@ -464,7 +540,7 @@ window.BIZDAVAR_LOCALES = {
         { q: 'Bizdavar hangi hizmetleri sunuyor?', a: 'Dijital pazarlama, web tasarım, fintech, SMM, hosting ve VEGA/Prosense endüstriyel tedarik.' },
         { q: 'Web sitesi ne kadar sürede hazır olur?', a: 'Fast Web Studio ile $99–$299 planlarda 5 iş gününden itibaren teslimat.' },
         { q: 'Bizdavar\'ın güvenilirliğini nasıl doğrularım?', a: 'Kurucunun LinkedIn profili, portfolyo, Google sertifikaları ve info@bizdavar.com.' },
-        { q: 'Hangi endüstriyel markalar tedarik ediliyor?', a: 'VEGA, Prosense, Gamak ve diğer güvenilir global markalar.' }
+        { q: 'Hangi endüstriyel markalar tedarik ediliyor?', a: 'VEGA, Prosense, Gamak, Digi System, Teraoka ve diğer güvenilir global markalar.' }
       ]
     },
     contactPage: {
@@ -494,7 +570,10 @@ window.BIZDAVAR_LOCALES = {
       privacyAgree: 'kabul ediyorum.',
       submit: 'Gönder',
       formNote: 'Bilgileriniz yalnızca talebinize yanıt vermek için kullanılır.',
-      formSuccess: 'Mesajınız gönderilmeye hazır. E-posta penceresi açılmazsa info@bizdavar.com adresine yazın.',
+      formSending: 'Gönderiliyor…',
+      formSuccess: 'Mesajınız başarıyla gönderildi. En kısa sürede sizinle iletişime geçeceğiz.',
+      formSuccessMailto: 'Mesajınız gönderilmeye hazır. E-posta penceresi açılmazsa info@bizdavar.com adresine yazın.',
+      formError: 'Gönderim başarısız. Lütfen tekrar deneyin veya doğrudan info@bizdavar.com adresine yazın.',
       waTr: 'WhatsApp Türkiye',
       waIr: 'WhatsApp İran',
       mapTitle: 'Uluslararası iş birliği',
@@ -537,7 +616,12 @@ window.BIZDAVAR_LOCALES = {
       privacy: { crumb: 'Gizlilik' },
       vega: { crumb: 'VEGA ürünleri' },
       prosense: { crumb: 'Prosense ürünleri' },
-      gamak: { crumb: 'Gamak' }
+      teltonika: { crumb: 'Teltonika ürünleri' },
+      gamak: { crumb: 'Gamak' },
+      digiSystem: { crumb: 'Digi System' },
+      teraoka: { crumb: 'Teraoka Seiko' },
+      bzDiamond: { crumb: 'BZ Diamond' },
+      biztejarat: { crumb: 'Biztejarat' }
     },
     fast: {
       planBasic: 'Merhaba, Fast Web Studio temel plan sipariş etmek istiyorum',
@@ -561,7 +645,10 @@ window.BIZDAVAR_LOCALES = {
     seo: {
       defaultTitle: 'Bizdavar Group | Digital services, web design & industrial supply',
       defaultDescription: 'Bizdavar Group — 12+ years, 100+ projects across 11 countries. Digital marketing, web design, SMM, and VEGA/Prosense supply. Istanbul HQ.',
-      keywords: 'Bizdavar, web design Istanbul, digital marketing, VEGA, Prosense, Fast Web Studio'
+      keywords: 'Bizdavar, web design Istanbul, digital marketing, VEGA, Prosense, Fast Web Studio',
+      schemaServices: 'Bizdavar Group services',
+      schemaBlog: 'Bizdavar Group blog',
+      schemaPortfolio: 'Bizdavar Group portfolio'
     },
     common: {
       skipLink: 'Skip to main content',
@@ -573,6 +660,7 @@ window.BIZDAVAR_LOCALES = {
       whatsapp: 'WhatsApp',
       homeAria: 'Home page',
       mainNav: 'Main navigation',
+      servicesNav: 'Services list',
       mobileNav: 'Mobile menu',
       bottomNav: 'Mobile bottom navigation',
       openDrawer: 'Open menu',
@@ -588,6 +676,7 @@ window.BIZDAVAR_LOCALES = {
       inquiry: 'Request quote',
       contactForm: 'Contact form',
       rights: 'All rights reserved',
+      articleLocaleNote: 'This article is available in Persian only.',
       globalPresence: 'Global presence',
       geoAria: 'Service regions',
       trustAria: 'Bizdavar key metrics',
@@ -596,6 +685,23 @@ window.BIZDAVAR_LOCALES = {
       langEn: 'English',
       langLabel: 'Language',
       breadcrumbAria: 'Breadcrumb'
+    },
+    supplyBrand: {
+      inquiryCta: 'Request quote & supply',
+      whyBuyCta: 'Why buy from Bizdavar?',
+      requestInquiry: 'Request quote',
+      inquiryCategory: 'Quote this category',
+      inquirySeries: 'Quote',
+      useCaseLabel: 'Application:',
+      techConsultCta: 'Request technical consulting',
+      navTrust: 'Why Bizdavar',
+      navBuy: 'Purchase path',
+      navHighlights: 'Featured products',
+      navIran: 'Regional use',
+      navFaq: 'FAQ',
+      inquiryTemplate: 'Quote: {product}',
+      officialCatalog: 'Official catalog',
+      orderCodeCta: 'Request order code quote'
     },
     nav: {
       home: 'Home',
@@ -655,9 +761,12 @@ window.BIZDAVAR_LOCALES = {
       ctaBtn: 'Request quote',
       ctaLink: 'Industrial services',
       products: [
-        { name: 'VEGA', title: 'Sensors & instrumentation', desc: 'Level, pressure, flow — oil, petrochemical, and water industries', badge: 'Germany', cta: 'Product lines' },
-        { name: 'Prosense', title: 'Gas & flame detectors', desc: 'SIL2/3 certified fixed and portable systems', badge: 'Turkey', cta: 'Product lines' },
-        { name: 'Gamak', title: 'Industrial electric motors', desc: 'Three-phase and single-phase motors — supply and technical support', badge: 'Turkey', cta: 'Gamak info' }
+        { name: 'VEGA', title: 'Sensors & instrumentation', desc: 'Level, pressure, flow — oil, petrochemical, and water industries', badge: 'Germany', tags: ['VEGAPULS', 'VEGABAR', 'VEGAPOINT'], cta: 'View catalog' },
+        { name: 'Prosense', title: 'Gas & flame detectors', desc: 'SIL2/3 certified fixed and portable systems', badge: 'Turkey', tags: ['PQ+', 'SafeVader', 'PPS'], cta: 'Product lines' },
+        { name: 'Teltonika', title: 'GPS & Fleet Telematics', desc: 'Fleet trackers, CAN/OBD, BLE, video and IoT solutions — FMB920 · FMC650 · FTC305', badge: 'Lithuania', tags: ['FMB920', 'FTC305', 'DualCam'], cta: 'Teltonika catalog' },
+        { name: 'Gamak', title: 'Industrial electric motors', desc: 'Three-phase and single-phase motors — supply and technical support', badge: 'Turkey', tags: ['IE2/IE3', 'Flange mount', 'Project-based'], cta: 'Gamak info' },
+        { name: 'Digi System', title: 'Retail & POS equipment', desc: 'Digi product supply — scales, checkout systems, POS and retail equipment', badge: 'Turkey', tags: ['POS', 'Retail', 'Scales'], cta: 'View products' },
+        { name: 'Teraoka', title: 'Scales & store equipment', desc: 'Full Teraoka Seiko supply — scales, labeling, POS and retail/industrial equipment', badge: 'Japan', tags: ['Scales', 'Labeling', 'POS'], cta: 'View brand' }
       ]
     },
     process: {
@@ -673,10 +782,17 @@ window.BIZDAVAR_LOCALES = {
       countries: 'Countries',
       years: 'Years experience',
       founded: 'Founded',
+      foundedDisplay: '2013',
       sources: 'Sources',
       founderLinkedin: 'Founder LinkedIn',
       portfolio: 'Portfolio',
-      fullAbout: 'Full about page'
+      fullAbout: 'Full about page',
+      highlights: [
+        { category: 'Digital marketing', text: 'With modern digital marketing strategies, customer conversion rates increased significantly.', source: 'Founder\'s LinkedIn post', year: '2024' },
+        { category: 'Delivery experience', text: '100+ custom web and platform projects across 11 countries — from startups to fintech and industrial brands.', source: 'LinkedIn profile — Ersan J. Tabrizi', year: '2025' },
+        { category: 'Fintech', text: 'Built and launched payment platforms, management dashboards, and Cloudflare security integration for the ZedPay ecosystem.', source: 'Verified professional record', year: '2023–2025' },
+        { category: 'Industry', text: 'Managed industrial equipment supply — from fire pumps for Gol-Gohar mines to international instrumentation equipment.', source: 'Sanatm & Europe Gayrimenkul records', year: '2015–2024' }
+      ]
     },
     geo: {
       summary: 'Services from Istanbul to Iran, Turkey, and 11 countries — multilingual support, WhatsApp, and international delivery.',
@@ -719,7 +835,9 @@ window.BIZDAVAR_LOCALES = {
       aboutTag: 'About us',
       aboutTitle: 'Bizdavar Group — your growth partner',
       aboutP1: 'A group active in digital services, web design, online marketing, and industrial supply. Integrated solutions from fintech and events to industry and hosting.',
-      aboutP2: 'Digital infrastructure, domains, SSL, and security are also part of our services.',
+      aboutP2: 'Digital infrastructure, domains, SSL, and security are also part of our services — international hosting and domains via <a href="https://netinode.net/" class="service-card__link" target="_blank" rel="noopener noreferrer">Netinode</a>.',
+      aboutHeroImage: 'assets/images/content/about-hero-en.svg',
+      aboutHeroAlt: 'Bizdavar Group — digital and industrial agency',
       aboutMore: 'More about Bizdavar',
       aboutInfra: 'Infrastructure management',
       clientsTitle: 'Portfolio & projects',
@@ -736,7 +854,7 @@ window.BIZDAVAR_LOCALES = {
         { q: 'What services does Bizdavar offer?', a: 'Digital marketing, web design, fintech, SMM, hosting, and VEGA/Prosense industrial supply.' },
         { q: 'How long does website design take?', a: 'With Fast Web Studio, delivery from 5 business days on plans from $99 to $299.' },
         { q: 'How can I verify Bizdavar\'s credibility?', a: 'Founder LinkedIn, portfolio, Google certifications, and info@bizdavar.com.' },
-        { q: 'Which industrial brands do you supply?', a: 'VEGA, Prosense, Gamak, and other trusted global brands.' }
+        { q: 'Which industrial brands do you supply?', a: 'VEGA, Prosense, Gamak, Digi System, Teraoka, and other trusted global brands.' }
       ]
     },
     contactPage: {
@@ -766,7 +884,10 @@ window.BIZDAVAR_LOCALES = {
       privacyAgree: '.',
       submit: 'Send request',
       formNote: 'Your information is used only to respond to your request.',
-      formSuccess: 'Your message is ready to send. If the email window does not open, write to info@bizdavar.com directly.',
+      formSending: 'Sending…',
+      formSuccess: 'Your message was sent successfully. We will contact you soon.',
+      formSuccessMailto: 'Your message is ready to send. If the email window does not open, write to info@bizdavar.com directly.',
+      formError: 'Sending failed. Please try again or email info@bizdavar.com directly.',
       waTr: 'WhatsApp Turkey',
       waIr: 'WhatsApp Iran',
       mapTitle: 'International collaboration',
@@ -809,7 +930,12 @@ window.BIZDAVAR_LOCALES = {
       privacy: { crumb: 'Privacy' },
       vega: { crumb: 'VEGA products' },
       prosense: { crumb: 'Prosense products' },
-      gamak: { crumb: 'Gamak' }
+      teltonika: { crumb: 'Teltonika products' },
+      gamak: { crumb: 'Gamak' },
+      digiSystem: { crumb: 'Digi System' },
+      teraoka: { crumb: 'Teraoka Seiko' },
+      bzDiamond: { crumb: 'BZ Diamond' },
+      biztejarat: { crumb: 'Biztejarat' }
     },
     fast: {
       planBasic: 'Hello, I would like to order the Fast Web Studio basic plan',

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="Teraoka Seiko label printer for retail stores">
+  <rect width="400" height="240" fill="#f2f6fc"/>
+  <rect x="80" y="60" width="240" height="120" rx="10" fill="#fff" stroke="#003da5" stroke-width="2"/>
+  <rect x="110" y="90" width="180" height="40" rx="4" fill="#003da5" opacity="0.15"/>
+  <rect x="200" y="150" width="80" height="20" rx="3" fill="#003da5"/>
+  <path d="M140 180 L160 200 L180 180" fill="none" stroke="#003da5" stroke-width="3"/>
+</svg>

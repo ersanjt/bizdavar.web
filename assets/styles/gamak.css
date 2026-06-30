@@ -1,0 +1,19 @@
+/**
+ * gamak brand accent overrides
+ */
+body[data-page="gamak"] {
+  --brand-accent: #c45a11;
+  --brand-accent-dark: #9a4209;
+  --brand-surface: #faf6f2;
+}
+
+body[data-page="gamak"] .gamak-hero {
+  background: #faf6f2;
+  border-bottom-color: #c45a11;
+}
+
+body[data-page="gamak"] .gamak-hero::before {
+  background:
+    linear-gradient(105deg, rgba(244, 249, 250, 0.97) 42%, rgba(244, 249, 250, 0.55) 68%, rgba(244, 249, 250, 0.2) 100%),
+    url('../images/gamak/hero/gamak-motor.webp') center right / cover no-repeat;
+}

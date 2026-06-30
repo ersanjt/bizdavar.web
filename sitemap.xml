@@ -134,6 +134,16 @@
 
   <url>
 
+    <loc>https://bizdavar.com/pages/teltonika.html</loc>
+
+    <changefreq>monthly</changefreq>
+
+    <priority>0.9</priority>
+
+  </url>
+
+  <url>
+
     <loc>https://bizdavar.com/pages/vega.html</loc>
 
     <changefreq>monthly</changefreq>
@@ -165,6 +175,26 @@
   <url>
 
     <loc>https://bizdavar.com/pages/gamak.html</loc>
+
+    <changefreq>monthly</changefreq>
+
+    <priority>0.8</priority>
+
+  </url>
+
+  <url>
+
+    <loc>https://bizdavar.com/pages/digi-system.html</loc>
+
+    <changefreq>monthly</changefreq>
+
+    <priority>0.8</priority>
+
+  </url>
+
+  <url>
+
+    <loc>https://bizdavar.com/pages/teraoka.html</loc>
 
     <changefreq>monthly</changefreq>
 

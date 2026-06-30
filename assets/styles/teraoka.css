@@ -1,0 +1,19 @@
+/**
+ * teraoka brand accent overrides
+ */
+body[data-page="teraoka"] {
+  --brand-accent: #003da5;
+  --brand-accent-dark: #002d7a;
+  --brand-surface: #f2f6fc;
+}
+
+body[data-page="teraoka"] .teraoka-hero {
+  background: #f2f6fc;
+  border-bottom-color: #003da5;
+}
+
+body[data-page="teraoka"] .teraoka-hero::before {
+  background:
+    linear-gradient(105deg, rgba(244, 249, 250, 0.97) 42%, rgba(244, 249, 250, 0.55) 68%, rgba(244, 249, 250, 0.2) 100%),
+    url('../images/teraoka/hero/teraoka-retail-hero.webp') center right / cover no-repeat;
+}

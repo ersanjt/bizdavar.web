@@ -1,11 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <script src="assets/scripts/i18n/locale-preload.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>بیزدوار گروپ | خدمات دیجیتال، طراحی سایت و تامین تجهیزات صنعتی</title>
-  <link rel="icon" href="assets/images/brand/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="icon" href="assets/images/brand/favicon.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/images/brand/apple-touch-icon.png">
   <link rel="stylesheet" href="assets/styles/fonts.css">
   <link rel="stylesheet" href="assets/styles/typography.css">
   <link rel="stylesheet" href="assets/styles/icons.css">
@@ -128,7 +129,7 @@
         <span class="section__tag" data-i18n="home.aboutTag">درباره ما</span>
         <h2 data-i18n="home.aboutTitle">بیزدوار گروپ — شریک رشد کسب‌وکار</h2>
         <p data-i18n="home.aboutP1">مجموعه‌ای فعال در حوزه خدمات دیجیتال، طراحی وب، بازاریابی آنلاین و تامین تجهیزات صنعتی.</p>
-        <p data-i18n="home.aboutP2">زیرساخت دیجیتال، مدیریت دامنه، SSL و امنیت نیز بخشی از خدمات ماست.</p>
+        <p data-i18n-html="home.aboutP2">زیرساخت دیجیتال، مدیریت دامنه، SSL و امنیت نیز بخشی از خدمات ماست.</p>
         <p class="mt-16"><a href="pages/about.html" class="service-card__link" data-i18n="home.aboutMore">بیشتر درباره بیزدوار</a></p>
         <div class="about__features">
           <a href="pages/services.html#digital-marketing" class="about__feature" data-i18n="services.digitalMarketing">بازاریابی دیجیتال</a>
@@ -191,10 +192,16 @@
   <script src="assets/scripts/config/paths.js"></script>
   <script src="assets/scripts/config/site-config.js"></script>
   <script src="assets/scripts/i18n/locales.js"></script>
+  <script src="assets/scripts/i18n/locales-pages.js"></script>
+  <script src="assets/scripts/i18n/locale-seo.js"></script>
   <script src="assets/scripts/i18n/i18n.js"></script>
+  <script src="assets/scripts/i18n/page-i18n.js"></script>
   <script src="assets/scripts/config/company-intel.js"></script>
   <script src="assets/scripts/components/biz-icons.js"></script>
-  <script src="assets/scripts/components/site-components.js"></script>
+  <script src="assets/scripts/components/context.js"></script>
+  <script src="assets/scripts/components/chrome.js"></script>
+  <script src="assets/scripts/components/schema.js"></script>
+  <script src="assets/scripts/components/grids.js"></script>
   <script src="assets/scripts/i18n/bootstrap.js"></script>
 
   <script src="assets/scripts/main.js"></script>
@@ -202,10 +209,7 @@
   <script>
     bizdavarPageInit(function () {
       const I = window.BIZDAVAR_I18N;
-      injectSeo({
-        title: window.BIZDAVAR_CONFIG.seo.defaultTitle,
-        description: window.BIZDAVAR_CONFIG.seo.defaultDescription,
-        keywords: window.BIZDAVAR_CONFIG.seo.keywords,
+      injectPageSeo('home', {
         canonical: 'https://bizdavar.com/'
       });
       renderSiteChrome();

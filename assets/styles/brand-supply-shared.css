@@ -1,0 +1,800 @@
+/**
+ * Shared industrial supply brand page styles (Teltonika, Gamak, Digi, Teraoka)
+ * Accent colors & hero images: see gamak.css, digi.css, teraoka.css, teltonika.css
+ */
+:root {
+  --brand-accent: #0054A6;
+  --brand-accent-dark: #003d7a;
+  --brand-surface: #f0f5fa;
+}
+/**
+ * teltonika Products Page — brand colors from teltonika.com.tr
+ * Primary: var(--brand-accent) (teal) · Navy: #1a2b4a
+ */
+.teltonika-hero, .gamak-hero, .digi-hero, .teraoka-hero {
+  background: var(--brand-surface);
+  color: #1a2b4a;
+  padding: 56px 0 48px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 4px solid var(--brand-accent);
+}
+
+.teltonika-hero::before, .gamak-hero::before, .digi-hero::before, .teraoka-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(105deg, rgba(244, 249, 250, 0.97) 42%, rgba(244, 249, 250, 0.55) 68%, rgba(244, 249, 250, 0.2) 100%),
+    url('../images/teltonika/hero/fleet-telematics.webp') center right / cover no-repeat;
+  pointer-events: none;
+}
+
+.teltonika-hero .container, .gamak-hero .container, .digi-hero .container, .teraoka-hero .container {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.teltonika-hero__logo, .gamak-hero__logo, .digi-hero__logo, .teraoka-hero__logo {
+  display: block;
+  width: min(220px, 75%);
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.teltonika-hero__eyebrow, .gamak-hero__eyebrow, .digi-hero__eyebrow, .teraoka-hero__eyebrow {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--brand-accent);
+  margin-bottom: 10px;
+  padding-right: 14px;
+  border-right: 4px solid var(--brand-accent);
+}
+
+.teltonika-hero__badge, .gamak-hero__badge, .digi-hero__badge, .teraoka-hero__badge {
+  display: inline-block;
+  background: rgba(5, 141, 155, 0.12);
+  border: 1px solid rgba(5, 141, 155, 0.35);
+  color: #003d82;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.teltonika-hero__title, .gamak-hero__title, .digi-hero__title, .teraoka-hero__title {
+  font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+  font-weight: var(--fw-extrabold);
+  line-height: 1.15;
+  margin-bottom: 14px;
+  color: #1a2b4a;
+  letter-spacing: -0.03em;
+}
+
+.teltonika-hero__title span, .gamak-hero__title span, .digi-hero__title span, .teraoka-hero__title span { color: var(--brand-accent); }
+
+.teltonika-hero__subtitle, .gamak-hero__subtitle, .digi-hero__subtitle, .teraoka-hero__subtitle {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: var(--fw-semibold);
+  color: #1a2b4a;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+  line-height: 1.45;
+}
+
+.teltonika-hero__desc, .gamak-hero__desc, .digi-hero__desc, .teraoka-hero__desc {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--fw-regular);
+  color: #374151;
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+
+.teltonika-hero__stats, .gamak-hero__stats, .digi-hero__stats, .teraoka-hero__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.teltonika-hero__stat, .gamak-hero__stat, .digi-hero__stat, .teraoka-hero__stat {
+  background: var(--white);
+  border: 1px solid #d1e8eb;
+  border-top: 3px solid var(--brand-accent);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  box-shadow: var(--shadow-sm);
+}
+
+.teltonika-hero__stat strong, .gamak-hero__stat strong, .digi-hero__stat strong, .teraoka-hero__stat strong {
+  display: block;
+  font-size: var(--text-lg);
+  color: #1a2b4a;
+}
+
+.teltonika-hero__stat span, .gamak-hero__stat span, .digi-hero__stat span, .teraoka-hero__stat span {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.teltonika-hero__visual img, .gamak-hero__visual img, .digi-hero__visual img, .teraoka-hero__visual img {
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 40px rgba(5, 141, 155, 0.2);
+  width: 100%;
+  object-fit: cover;
+  max-height: 360px;
+}
+
+.teltonika-hero .btn--primary, .gamak-hero .btn--primary, .digi-hero .btn--primary, .teraoka-hero .btn--primary {
+  background: var(--brand-accent);
+  border-color: var(--brand-accent);
+}
+
+.teltonika-hero .btn--primary:hover, .gamak-hero .btn--primary:hover, .digi-hero .btn--primary:hover, .teraoka-hero .btn--primary:hover {
+  background: #003d82;
+  border-color: #003d82;
+}
+
+.teltonika-highlights, .gamak-highlights, .digi-highlights, .teraoka-highlights {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.teltonika-highlight-card, .gamak-highlight-card, .digi-highlight-card, .teraoka-highlight-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--gray-200);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.teltonika-highlight-card__media, .gamak-highlight-card__media, .digi-highlight-card__media, .teraoka-highlight-card__media {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.teltonika-highlight-card__media img, .gamak-highlight-card__media img, .digi-highlight-card__media img, .teraoka-highlight-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.teltonika-highlight-card__body, .gamak-highlight-card__body, .digi-highlight-card__body, .teraoka-highlight-card__body {
+  padding: 16px 14px 18px;
+  border-top: 3px solid var(--brand-accent);
+}
+
+.teltonika-highlight-card__badge, .gamak-highlight-card__badge, .digi-highlight-card__badge, .teraoka-highlight-card__badge {
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--brand-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.teltonika-highlight-card__tr, .gamak-highlight-card__tr, .digi-highlight-card__tr, .teraoka-highlight-card__tr {
+  display: block;
+  font-size: 10px;
+  color: var(--text-muted);
+  margin: 4px 0 6px;
+}
+
+.teltonika-highlight-card h3, .gamak-highlight-card h3, .digi-highlight-card h3, .teraoka-highlight-card h3 {
+  font-size: var(--text-base);
+  margin: 0 0 6px;
+  color: #1a2b4a;
+}
+
+.teltonika-highlight-card p, .gamak-highlight-card p, .digi-highlight-card p, .teraoka-highlight-card p {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.teltonika-cat-nav, .gamak-cat-nav, .digi-cat-nav, .teraoka-cat-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  padding: 20px 16px;
+  background: #e8f7f8;
+  border-bottom: 1px solid #b8e8ec;
+  position: sticky;
+  top: 0;
+  z-index: var(--z-dropdown);
+}
+
+.teltonika-cat-nav__item, .gamak-cat-nav__item, .digi-cat-nav__item, .teraoka-cat-nav__item {
+  padding: 8px 16px;
+  background: var(--white);
+  border: 1px solid #b8e8ec;
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.teltonika-cat-nav__item:hover, .gamak-cat-nav__item:hover, .digi-cat-nav__item:hover, .teraoka-cat-nav__item:hover {
+  background: var(--brand-accent);
+  color: var(--white);
+  border-color: var(--brand-accent);
+}
+
+.teltonika-category-block, .gamak-category-block, .digi-category-block, .teraoka-category-block {
+  margin-bottom: 48px;
+  scroll-margin-top: 80px;
+}
+
+.teltonika-category-block__head, .gamak-category-block__head, .digi-category-block__head, .teraoka-category-block__head {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #b8e8ec;
+}
+
+.teltonika-category-block__visual img, .gamak-category-block__visual img, .digi-category-block__visual img, .teraoka-category-block__visual img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.teltonika-category-block__info, .gamak-category-block__info, .digi-category-block__info, .teraoka-category-block__info {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.teltonika-category-block__icon, .gamak-category-block__icon, .digi-category-block__icon, .teraoka-category-block__icon {
+  font-size: 2rem;
+  line-height: 1;
+  flex-shrink: 0;
+  color: var(--brand-accent);
+}
+
+.teltonika-category-block__head h2, .gamak-category-block__head h2, .digi-category-block__head h2, .teraoka-category-block__head h2 {
+  font-size: var(--text-2xl);
+  color: #003d82;
+  margin-bottom: 4px;
+}
+
+.teltonika-category-block__head small, .gamak-category-block__head small, .digi-category-block__head small, .teraoka-category-block__head small {
+  display: block;
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  direction: ltr;
+  text-align: right;
+}
+
+.teltonika-category-block__head p, .gamak-category-block__head p, .digi-category-block__head p, .teraoka-category-block__head p {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+.teltonika-series-grid, .gamak-series-grid, .digi-series-grid, .teraoka-series-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.teltonika-series-card, .gamak-series-card, .digi-series-card, .teraoka-series-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 16px 14px;
+  transition: var(--transition);
+  position: relative;
+}
+
+.teltonika-series-card--featured, .gamak-series-card--featured, .digi-series-card--featured, .teraoka-series-card--featured {
+  border-color: #5ec4cc;
+  background: #f4fbfb;
+}
+
+.teltonika-series-card--featured::after, .gamak-series-card--featured::after, .digi-series-card--featured::after, .teraoka-series-card--featured::after {
+  content: '★';
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  color: var(--brand-accent);
+  font-size: 12px;
+}
+
+.teltonika-series-card:hover, .gamak-series-card:hover, .digi-series-card:hover, .teraoka-series-card:hover {
+  border-color: var(--brand-accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.teltonika-series-card strong, .gamak-series-card strong, .digi-series-card strong, .teraoka-series-card strong {
+  display: block;
+  font-size: var(--text-sm);
+  color: #1a2b4a;
+  margin-bottom: 4px;
+}
+
+.teltonika-series-card span, .gamak-series-card span, .digi-series-card span, .teraoka-series-card span {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.teltonika-industries-grid, .gamak-industries-grid, .digi-industries-grid, .teraoka-industries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.teltonika-industry-card, .gamak-industry-card, .digi-industry-card, .teraoka-industry-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--gray-200);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.teltonika-industry-card:hover, .gamak-industry-card:hover, .digi-industry-card:hover, .teraoka-industry-card:hover {
+  border-color: var(--brand-accent);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+.teltonika-industry-card__media, .gamak-industry-card__media, .digi-industry-card__media, .teraoka-industry-card__media {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.teltonika-industry-card__media img, .gamak-industry-card__media img, .digi-industry-card__media img, .teraoka-industry-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.teltonika-industry-card__icon, .gamak-industry-card__icon, .digi-industry-card__icon, .teraoka-industry-card__icon {
+  display: block;
+  font-size: 1.5rem;
+  margin: 10px 0 6px;
+  color: var(--brand-accent);
+}
+
+.teltonika-industry-card strong, .gamak-industry-card strong, .digi-industry-card strong, .teraoka-industry-card strong {
+  display: block;
+  font-size: var(--text-base);
+  margin-bottom: 4px;
+}
+
+.teltonika-industry-card small, .gamak-industry-card small, .digi-industry-card small, .teraoka-industry-card small {
+  display: block;
+  font-size: 11px;
+  color: var(--text-muted);
+  direction: ltr;
+}
+
+.teltonika-industry-card strong,
+.teltonika-industry-card small,
+.teltonika-industry-card p, .gamak-industry-card p, .digi-industry-card p, .teraoka-industry-card p {
+  padding: 0 12px;
+}
+
+.teltonika-industry-card p, .gamak-industry-card p, .digi-industry-card p, .teraoka-industry-card p {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 8px 0 14px;
+}
+
+.teltonika-academy-block, .gamak-academy-block, .digi-academy-block, .teraoka-academy-block {
+  background: linear-gradient(135deg, #1a2b4a, #003d82);
+  color: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.teltonika-academy-block__visual, .gamak-academy-block__visual, .digi-academy-block__visual, .teraoka-academy-block__visual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.teltonika-academy-block__visual img, .gamak-academy-block__visual img, .digi-academy-block__visual img, .teraoka-academy-block__visual img {
+  width: 100%;
+  border-radius: var(--radius);
+  object-fit: cover;
+  min-height: 160px;
+}
+
+.teltonika-academy-block__visual-secondary, .gamak-academy-block__visual-secondary, .digi-academy-block__visual-secondary, .teraoka-academy-block__visual-secondary {
+  margin-top: 24px;
+}
+
+.teltonika-academy-block h3, .gamak-academy-block h3, .digi-academy-block h3, .teraoka-academy-block h3 {
+  font-size: var(--text-2xl);
+  margin-bottom: 10px;
+}
+
+.teltonika-academy-topics, .gamak-academy-topics, .digi-academy-topics, .teraoka-academy-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+  list-style: none;
+}
+
+.teltonika-academy-topics li, .gamak-academy-topics li, .digi-academy-topics li, .teraoka-academy-topics li {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+}
+
+.teltonika-academy-block .btn--yellow, .gamak-academy-block .btn--yellow, .digi-academy-block .btn--yellow, .teraoka-academy-block .btn--yellow {
+  background: var(--brand-accent);
+  color: var(--white);
+  border-color: var(--brand-accent);
+}
+
+/* Trust bar */
+.teltonika-trust-bar, .gamak-trust-bar, .digi-trust-bar, .teraoka-trust-bar {
+  background: #1a2b4a;
+  color: var(--white);
+  padding: 18px 0;
+}
+
+.teltonika-trust-bar__inner, .gamak-trust-bar__inner, .digi-trust-bar__inner, .teraoka-trust-bar__inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.teltonika-trust-item, .gamak-trust-item, .digi-trust-item, .teraoka-trust-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.teltonika-trust-item__icon, .gamak-trust-item__icon, .digi-trust-item__icon, .teraoka-trust-item__icon {
+  flex-shrink: 0;
+  color: var(--brand-accent);
+}
+
+.teltonika-trust-item strong, .gamak-trust-item strong, .digi-trust-item strong, .teraoka-trust-item strong {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.01em;
+  font-size: var(--text-sm);
+  margin-bottom: 2px;
+}
+
+.teltonika-trust-item span, .gamak-trust-item span, .digi-trust-item span, .teraoka-trust-item span {
+  font-family: var(--font-body);
+  font-size: 11px;
+  opacity: 0.82;
+  line-height: 1.55;
+}
+
+/* Why buy */
+.teltonika-why-grid, .gamak-why-grid, .digi-why-grid, .teraoka-why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.teltonika-why-card, .gamak-why-card, .digi-why-card, .teraoka-why-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  border: 1px solid var(--gray-200);
+  border-top: 4px solid var(--brand-accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.teltonika-why-card__icon, .gamak-why-card__icon, .digi-why-card__icon, .teraoka-why-card__icon {
+  display: block;
+  color: var(--brand-accent);
+  margin-bottom: 14px;
+}
+
+.teltonika-why-card h3, .gamak-why-card h3, .digi-why-card h3, .teraoka-why-card h3 {
+  font-size: var(--text-lg);
+  margin-bottom: 10px;
+  color: #1a2b4a;
+}
+
+.teltonika-why-card p, .gamak-why-card p, .digi-why-card p, .teraoka-why-card p {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: var(--leading-relaxed);
+}
+
+/* Purchase steps */
+.teltonika-steps, .gamak-steps, .digi-steps, .teraoka-steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.teltonika-step, .gamak-step, .digi-step, .teraoka-step {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 22px 18px;
+  border: 1px solid var(--gray-200);
+  text-align: center;
+}
+
+.teltonika-step__num, .gamak-step__num, .digi-step__num, .teraoka-step__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: var(--brand-accent);
+  color: var(--white);
+  font-weight: 800;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  font-size: var(--text-sm);
+}
+
+.teltonika-step h3, .gamak-step h3, .digi-step h3, .teraoka-step h3 {
+  font-size: var(--text-base);
+  margin-bottom: 8px;
+  color: #1a2b4a;
+}
+
+.teltonika-step p, .gamak-step p, .digi-step p, .teraoka-step p {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Highlight usecase + inquiry */
+.teltonika-highlight-card__usecase, .gamak-highlight-card__usecase, .digi-highlight-card__usecase, .teraoka-highlight-card__usecase {
+  font-size: var(--text-sm);
+  color: #1a2b4a;
+  background: #f0fafb;
+  border-right: 3px solid var(--brand-accent);
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  margin-bottom: 14px;
+  line-height: var(--leading-relaxed);
+}
+
+.teltonika-highlight-card .teltonika-btn-inquiry, .gamak-highlight-card .gamak-btn-inquiry, .digi-highlight-card .digi-btn-inquiry, .teraoka-highlight-card .teraoka-btn-inquiry {
+  margin-top: 4px;
+}
+
+/* Iran industries */
+.teltonika-iran-grid, .gamak-iran-grid, .digi-iran-grid, .teraoka-iran-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.teltonika-iran-card, .gamak-iran-card, .digi-iran-card, .teraoka-iran-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--gray-200);
+  transition: var(--transition);
+}
+
+.teltonika-iran-card:hover, .gamak-iran-card:hover, .digi-iran-card:hover, .teraoka-iran-card:hover {
+  border-color: var(--brand-accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.teltonika-iran-card__media, .gamak-iran-card__media, .digi-iran-card__media, .teraoka-iran-card__media {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.teltonika-iran-card__media img, .gamak-iran-card__media img, .digi-iran-card__media img, .teraoka-iran-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.teltonika-iran-card__body, .gamak-iran-card__body, .digi-iran-card__body, .teraoka-iran-card__body {
+  padding: 18px 20px 22px;
+}
+
+.teltonika-iran-card__icon, .gamak-iran-card__icon, .digi-iran-card__icon, .teraoka-iran-card__icon {
+  color: var(--brand-accent);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.teltonika-iran-card h3, .gamak-iran-card h3, .digi-iran-card h3, .teraoka-iran-card h3 {
+  font-size: var(--text-base);
+  margin-bottom: 8px;
+  color: #1a2b4a;
+}
+
+.teltonika-iran-card p, .gamak-iran-card p, .digi-iran-card p, .teraoka-iran-card p {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: var(--leading-relaxed);
+}
+
+/* Series inquiry link */
+.teltonika-series-card__link, .gamak-series-card__link, .digi-series-card__link, .teraoka-series-card__link {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--brand-accent);
+}
+
+.teltonika-series-card__link:hover, .gamak-series-card__link:hover, .digi-series-card__link:hover, .teraoka-series-card__link:hover {
+  color: #1a2b4a;
+}
+
+/* Supply cards */
+.teltonika-supply-grid, .gamak-supply-grid, .digi-supply-grid, .teraoka-supply-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.teltonika-supply-card, .gamak-supply-card, .digi-supply-card, .teraoka-supply-card {
+  background: var(--white);
+  padding: 22px 20px;
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-200);
+  border-right: 4px solid var(--brand-accent);
+}
+
+.teltonika-supply-card h4, .gamak-supply-card h4, .digi-supply-card h4, .teraoka-supply-card h4 {
+  font-size: var(--text-base);
+  margin-bottom: 8px;
+  color: #1a2b4a;
+}
+
+.teltonika-supply-card p, .gamak-supply-card p, .digi-supply-card p, .teraoka-supply-card p {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+
+.teltonika-official-note, .gamak-official-note, .digi-official-note, .teraoka-official-note {
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  padding: 24px;
+  background: #f0fafb;
+  border-radius: var(--radius);
+  margin-top: 40px;
+  border: 1px solid #b8e4e9;
+}
+
+.teltonika-official-note a, .gamak-official-note a, .digi-official-note a, .teraoka-official-note a {
+  color: #003d82;
+  font-weight: 600;
+}
+
+/* FAQ */
+.teltonika-faq, .gamak-faq, .digi-faq, .teraoka-faq {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.teltonika-faq__item, .gamak-faq__item, .digi-faq__item, .teraoka-faq__item {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.teltonika-faq__item summary, .gamak-faq__item summary, .digi-faq__item summary, .teraoka-faq__item summary {
+  padding: 18px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  color: #1a2b4a;
+}
+
+.teltonika-faq__item summary::-webkit-details-marker, .gamak-faq__item summary::-webkit-details-marker, .digi-faq__item summary::-webkit-details-marker, .teraoka-faq__item summary::-webkit-details-marker {
+  display: none;
+}
+
+.teltonika-faq__item summary::before, .gamak-faq__item summary::before, .digi-faq__item summary::before, .teraoka-faq__item summary::before {
+  content: '+';
+  float: left;
+  font-weight: 800;
+  color: var(--brand-accent);
+}
+
+.teltonika-faq__item[open] summary::before, .gamak-faq__item[open] summary::before, .digi-faq__item[open] summary::before, .teraoka-faq__item[open] summary::before {
+  content: '−';
+}
+
+.teltonika-faq__item p, .gamak-faq__item p, .digi-faq__item p, .teraoka-faq__item p {
+  padding: 0 20px 18px;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+
+/* Sticky CTA */
+.teltonika-sticky-cta, .gamak-sticky-cta, .digi-sticky-cta, .teraoka-sticky-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-dropdown);
+  background: #1a2b4a;
+  color: var(--white);
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.teltonika-sticky-cta.is-visible, .gamak-sticky-cta.is-visible, .digi-sticky-cta.is-visible, .teraoka-sticky-cta.is-visible {
+  transform: translateY(0);
+}
+
+.teltonika-sticky-cta span, .gamak-sticky-cta span, .digi-sticky-cta span, .teraoka-sticky-cta span {
+  font-weight: 600;
+  font-size: var(--text-sm);
+}
+
+.teltonika-btn-inquiry, .gamak-btn-inquiry, .digi-btn-inquiry, .teraoka-btn-inquiry {
+  padding: 10px 18px;
+  font-size: var(--text-sm);
+}
+
+@media (max-width: 1024px) {
+.teltonika-hero .container, .gamak-hero .container, .digi-hero .container, .teraoka-hero .container { grid-template-columns: 1fr; }
+.teltonika-hero__visual, .gamak-hero__visual, .digi-hero__visual, .teraoka-hero__visual { order: -1; }
+.teltonika-highlights, .gamak-highlights, .digi-highlights, .teraoka-highlights { grid-template-columns: repeat(2, 1fr); }
+.teltonika-category-block__head, .gamak-category-block__head, .digi-category-block__head, .teraoka-category-block__head { grid-template-columns: 1fr; }
+.teltonika-academy-block, .gamak-academy-block, .digi-academy-block, .teraoka-academy-block { grid-template-columns: 1fr; }
+.teltonika-trust-bar__inner, .gamak-trust-bar__inner, .digi-trust-bar__inner, .teraoka-trust-bar__inner { grid-template-columns: repeat(2, 1fr); }
+.teltonika-steps, .gamak-steps, .digi-steps, .teraoka-steps { grid-template-columns: repeat(3, 1fr); }
+.teltonika-iran-grid, .gamak-iran-grid, .digi-iran-grid, .teraoka-iran-grid { grid-template-columns: repeat(2, 1fr); }
+.teltonika-supply-grid, .gamak-supply-grid, .digi-supply-grid, .teraoka-supply-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+.teltonika-highlights, .gamak-highlights, .digi-highlights, .teraoka-highlights { grid-template-columns: 1fr; }
+.teltonika-cat-nav, .gamak-cat-nav, .digi-cat-nav, .teraoka-cat-nav { overflow-x: auto; flex-wrap: nowrap; justify-content: flex-start; }
+.teltonika-series-grid, .gamak-series-grid, .digi-series-grid, .teraoka-series-grid { grid-template-columns: 1fr 1fr; }
+.teltonika-why-grid, .gamak-why-grid, .digi-why-grid, .teraoka-why-grid { grid-template-columns: 1fr; }
+.teltonika-steps, .gamak-steps, .digi-steps, .teraoka-steps { grid-template-columns: 1fr; }
+.teltonika-iran-grid, .gamak-iran-grid, .digi-iran-grid, .teraoka-iran-grid { grid-template-columns: 1fr; }
+.teltonika-supply-grid, .gamak-supply-grid, .digi-supply-grid, .teraoka-supply-grid { grid-template-columns: 1fr; }
+.teltonika-trust-bar__inner, .gamak-trust-bar__inner, .digi-trust-bar__inner, .teraoka-trust-bar__inner { grid-template-columns: 1fr; }
+  body[data-page="teltonika"] .footer { padding-bottom: 64px; }
+}
+
+@media (max-width: 480px) {
+.teltonika-series-grid, .gamak-series-grid, .digi-series-grid, .teraoka-series-grid { grid-template-columns: 1fr; }
+}

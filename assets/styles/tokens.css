@@ -18,6 +18,8 @@
   --text-muted: #4B5563;
   --white: #ffffff;
   --green: #10B981;
+  --whatsapp: #25D366;
+  --whatsapp-hover: #1ebe5d;
   --blue: #3B82F6;
 
   /* Spacing (4px base) */
@@ -39,7 +41,7 @@
   --font-body: 'Vazirmatn', 'Estedad', 'Tahoma', sans-serif;
   --font-sans: var(--font-body);
   --fw-regular: 400;
-  --fw-medium: 500;
+  --fw-medium: 600;
   --fw-semibold: 600;
   --fw-bold: 700;
   --fw-extrabold: 800;

@@ -27,10 +27,25 @@ for (const f of walk(root)) {
   }
 
   c = c.replace(/\n  <script src="[^"]*i18n\/bootstrap\.js"><\/script>/g, '');
-  const comp = `${prefix}scripts/components/site-components.js`;
+  const compScripts = [
+    `${prefix}scripts/components/context.js`,
+    `${prefix}scripts/components/chrome.js`,
+    `${prefix}scripts/components/schema.js`,
+    `${prefix}scripts/components/grids.js`
+  ];
+  const compBlock = compScripts.map(s => `\n  <script src="${s}"></script>`).join('');
+  const compLegacy = `${prefix}scripts/components/site-components.js`;
+  if (!c.includes('components/context.js')) {
+    if (c.includes(compLegacy)) {
+      c = c.replace(`<script src="${compLegacy}"></script>`, compBlock);
+    }
+    changed = true;
+  }
+
   if (!c.includes('i18n/bootstrap.js')) {
     const boot = `\n  <script src="${prefix}scripts/i18n/bootstrap.js"></script>`;
-    c = c.replace(`<script src="${comp}"></script>`, `<script src="${comp}"></script>${boot}`);
+    const lastComp = compScripts[compScripts.length - 1];
+    c = c.replace(`<script src="${lastComp}"></script>`, `<script src="${lastComp}"></script>${boot}`);
     changed = true;
   }
 

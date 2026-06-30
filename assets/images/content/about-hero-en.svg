@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 341" role="img" aria-label="Bizdavar Group  digital and industrial agency">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16163f"/>
+      <stop offset="100%" stop-color="#2a2a6a"/>
+    </linearGradient>
+  </defs>
+  <rect width="660" height="341" fill="url(#bg)" rx="16"/>
+  <circle cx="520" cy="80" r="120" fill="#FFDE00" opacity="0.12"/>
+  <text x="330" y="155" text-anchor="middle" fill="#FFDE00" font-family="system-ui,sans-serif" font-size="42" font-weight="700">Bizdavar Group</text>
+  <text x="330" y="200" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="22" opacity="0.9">Digital &amp; industrial agency</text>
+  <text x="330" y="250" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="16" opacity="0.65">International projects in 11 countries</text>
+</svg>

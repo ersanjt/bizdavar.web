@@ -2,10 +2,11 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <script src="../assets/scripts/i18n/locale-preload.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>حریم خصوصی | بیزدوار گروپ</title>
-  <link rel="icon" href="../assets/images/brand/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="icon" href="../assets/images/brand/favicon.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../assets/images/brand/apple-touch-icon.png">
   <link rel="stylesheet" href="../assets/styles/fonts.css">
   <link rel="stylesheet" href="../assets/styles/typography.css">
   <link rel="stylesheet" href="../assets/styles/icons.css">
@@ -19,7 +20,7 @@
 <body data-page="privacy" data-depth="1">
 
   
-  <a href="#main-content" class="skip-link">رفتن به محتوای اصلی</a>
+  <a href="#main-content" class="skip-link" data-i18n="common.skipLink">رفتن به محتوای اصلی</a>
 <div class="top-bar" id="topBar"></div>
   <header class="header" id="siteHeader"></header>
   <nav class="breadcrumbs-wrap" id="breadcrumbs" aria-label="مسیر صفحه"></nav>
@@ -30,32 +31,35 @@
 
 <section class="page-hero page-hero--compact">
     <div class="container">
-      <h1>سیاست حفظ حریم خصوصی</h1>
-      <p>نحوه جمع‌آوری و استفاده از اطلاعات شما در وبسایت بیزدوار گروپ</p>
+      <h1 data-i18n="privacyPage.hero.title">سیاست حفظ حریم خصوصی</h1>
+      <p data-i18n="privacyPage.hero.desc">نحوه جمع‌آوری و استفاده از اطلاعات شما در وبسایت بیزدوار گروپ</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container prose">
-      <h2>۱. اطلاعاتی که جمع‌آوری می‌شود</h2>
-      <p>هنگام ارسال <a href="contact.html">فرم تماس</a>، نام، ایمیل، شماره تماس (اختیاری)، نوع خدمات و متن پیام شما دریافت می‌شود. این اطلاعات فقط برای پاسخ به درخواست شما استفاده می‌شود.</p>
+      <h2 data-i18n="privacyPage.sections.0.title">۱. اطلاعاتی که جمع‌آوری می‌شود</h2>
+      <p data-i18n-html="privacyPage.sections.0.body">هنگام ارسال <a href="contact.html">فرم تماس</a>، نام، ایمیل، شماره تماس (اختیاری)، نوع خدمات و متن پیام شما دریافت می‌شود. این اطلاعات فقط برای پاسخ به درخواست شما استفاده می‌شود.</p>
 
-      <h2>۲. نحوه استفاده</h2>
-      <ul class="check-list">
+      <h2 data-i18n="privacyPage.sections.1.title">۲. نحوه استفاده</h2>
+      <ul class="check-list" id="privacyUseList">
         <li>پاسخ به درخواست مشاوره و پیشنهاد خدمات</li>
         <li>پیگیری پروژه‌های در حال مذاکره</li>
         <li>بهبود کیفیت خدمات (بدون انتشار عمومی)</li>
       </ul>
 
-      <h2>۳. اشتراک‌گذاری با اشخاص ثالث</h2>
-      <p>اطلاعات شما بدون رضایت صریح شما به اشخاص ثالث فروخته یا منتقل نمی‌شود، مگر الزامات قانونی.</p>
+      <h2 data-i18n="privacyPage.sections.2.title">۳. اشتراک‌گذاری با اشخاص ثالث</h2>
+      <p data-i18n="privacyPage.sections.2.body">اطلاعات شما بدون رضایت صریح شما به اشخاص ثالث فروخته یا منتقل نمی‌شود، مگر الزامات قانونی.</p>
 
-      <h2>۴. کوکی‌ها و تحلیل</h2>
-      <p>این وبسایت استاتیک است و کوکی ردیابی شخص ثالث ندارد. در صورت افزودن ابزار تحلیل (مثل Google Analytics) این صفحه به‌روزرسانی خواهد شد.</p>
+      <h2 data-i18n="privacyPage.sections.3.title">۴. کوکی‌ها و تحلیل</h2>
+      <p data-i18n="privacyPage.sections.3.body">این وبسایت استاتیک است و کوکی ردیابی شخص ثالث ندارد. در صورت افزودن ابزار تحلیل (مثل Google Analytics) این صفحه به‌روزرسانی خواهد شد.</p>
 
-      <h2>۵. ارتباط با ما</h2>
-      <p>برای سوالات حریم خصوصی: <a href="mailto:info@bizdavar.com">info@bizdavar.com</a> یا <a href="contact.html">فرم تماس</a>.</p>
-      <p class="text-muted">آخرین به‌روزرسانی: فروردین ۱۴۰۴</p>
+      <h2 data-i18n="privacyPage.sections.4.title">۵. زبان و تشخیص منطقه</h2>
+      <p data-i18n-html="privacyPage.sections.4.body">برای نمایش زبان مناسب، ممکن است IP شما به ipapi.co یا ipwho.is ارسال شود. ترجیح زبان در localStorage ذخیره می‌شود.</p>
+
+      <h2 data-i18n="privacyPage.sections.5.title">۶. ارتباط با ما</h2>
+      <p data-i18n-html="privacyPage.sections.5.body">برای سوالات حریم خصوصی: <a href="mailto:info@bizdavar.com">info@bizdavar.com</a> یا <a href="contact.html">فرم تماس</a>.</p>
+      <p class="text-muted" data-i18n="privacyPage.updated">آخرین به‌روزرسانی: فروردین ۱۴۰۴</p>
     </div>
   </section>
   </main>
@@ -68,19 +72,23 @@
   <script src="../assets/scripts/config/paths.js"></script>
   <script src="../assets/scripts/config/site-config.js"></script>
   <script src="../assets/scripts/i18n/locales.js"></script>
+  <script src="../assets/scripts/i18n/locales-pages.js"></script>
+  <script src="../assets/scripts/i18n/locale-seo.js"></script>
   <script src="../assets/scripts/i18n/i18n.js"></script>
+  <script src="../assets/scripts/i18n/page-i18n.js"></script>
   <script src="../assets/scripts/components/biz-icons.js"></script>
-  <script src="../assets/scripts/components/site-components.js"></script>
+  <script src="../assets/scripts/components/context.js"></script>
+  <script src="../assets/scripts/components/chrome.js"></script>
+  <script src="../assets/scripts/components/schema.js"></script>
+  <script src="../assets/scripts/components/grids.js"></script>
   <script src="../assets/scripts/i18n/bootstrap.js"></script>
-  <script src="../assets/scripts/main.js"></script>
+  <script src="../assets/scripts/main.js"></script>
   <script>
     const crumbs = [
       { page: 'home', url: 'index.html' },
       { page: 'privacy', url: 'privacy.html' }
     ];
-    injectSeo({
-      title: 'حریم خصوصی | بیزدوار گروپ',
-      description: 'سیاست حفظ حریم خصوصی وبسایت بیزدوار گروپ — نحوه استفاده از اطلاعات فرم تماس.',
+    injectPageSeo('privacy', {
       canonical: 'https://bizdavar.com/pages/privacy.html',
       robots: 'index, follow'
     });
@@ -90,4 +98,4 @@
   </script>
 </body>
 </html>
-
+

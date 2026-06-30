@@ -2,6 +2,24 @@
  * VEGA Products Page — brand colors from vega.com
  * Primary: #FFDE00 (yellow) · Text: #1a1a1a
  */
+body[data-page="vega"] {
+  --vega-accent: #ffde00;
+  --vega-accent-dark: #c9a800;
+  --vega-ink: #1a1a1a;
+  --vega-muted: #4b5563;
+}
+
+body[data-page="vega"] .site-main {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body[data-page="vega"] .section__title,
+body[data-page="vega"] .section__desc {
+  text-wrap: balance;
+}
+
 .vega-hero {
   background: #f8f8f6;
   color: #1a1a1a;
@@ -48,12 +66,13 @@
 
 .vega-hero__eyebrow {
   display: block;
+  font-family: var(--font-display);
   font-size: var(--text-sm);
   font-weight: 700;
   color: #1a1a1a;
   margin-bottom: 10px;
-  padding-right: 14px;
-  border-right: 4px solid #ffde00;
+  padding-inline-end: 14px;
+  border-inline-end: 4px solid #ffde00;
 }
 
 .vega-hero__badge {
@@ -68,25 +87,33 @@
 }
 
 .vega-hero__title {
-  font-size: var(--text-4xl);
-  font-weight: 800;
-  line-height: var(--leading-tight);
+  font-family: var(--font-display);
+  font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+  font-weight: var(--fw-black);
+  line-height: 1.12;
   margin-bottom: 12px;
   color: #1a1a1a;
+  letter-spacing: -0.03em;
 }
 
 .vega-hero__subtitle {
-  font-size: var(--text-lg);
+  font-family: var(--font-display);
+  font-size: clamp(1.0625rem, 1.8vw, 1.25rem);
+  font-weight: var(--fw-semibold);
   color: #374151;
-  line-height: var(--leading-relaxed);
+  line-height: 1.5;
   margin-bottom: 16px;
+  letter-spacing: -0.01em;
 }
 
 .vega-hero__desc {
+  font-family: var(--font-body);
   font-size: var(--text-base);
+  font-weight: var(--fw-regular);
   color: #4b5563;
-  line-height: var(--leading-relaxed);
+  line-height: 1.75;
   margin-bottom: 24px;
+  max-width: 52ch;
 }
 
 .vega-hero__stats {
@@ -171,8 +198,8 @@
 /* Product cards */
 .vega-products-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
 }
 
 .vega-product-card {
@@ -181,8 +208,10 @@
   border: 1px solid var(--gray-200);
   overflow: hidden;
   display: grid;
-  grid-template-columns: 200px 1fr;
-  transition: transform var(--transition), box-shadow var(--transition);
+  grid-template-columns: minmax(200px, 240px) 1fr;
+  align-items: stretch;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 
 .vega-product-card:hover {
@@ -197,7 +226,7 @@
   align-items: center;
   justify-content: center;
   padding: 24px;
-  border-left: 1px solid var(--gray-200);
+  border-inline-start: 1px solid var(--gray-200);
 }
 
 .vega-product-card__media img {
@@ -208,15 +237,20 @@
 }
 
 .vega-product-card__body {
-  padding: 28px 24px;
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
 }
 
 .vega-product-card__badge {
   display: inline-block;
   background: #fff3b0;
   color: #7a6200;
+  font-family: var(--font-display);
   font-size: var(--text-xs);
-  font-weight: 700;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.04em;
   padding: 4px 10px;
   border-radius: var(--radius-full);
   margin-bottom: 8px;
@@ -224,41 +258,48 @@
 
 .vega-product-card__series {
   font-size: var(--text-xs);
+  font-weight: var(--fw-semibold);
   color: var(--text-muted);
   margin-bottom: 6px;
+  letter-spacing: 0.02em;
 }
 
 .vega-product-card__name {
-  font-size: var(--text-2xl);
-  font-weight: 800;
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: var(--fw-extrabold);
   color: #1a1a1a;
   margin-bottom: 10px;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
 }
 
 .vega-product-card__summary {
   font-size: var(--text-sm);
-  color: var(--text-muted);
-  line-height: var(--leading-relaxed);
-  margin-bottom: 16px;
+  color: #374151;
+  line-height: 1.7;
+  margin-bottom: 14px;
 }
 
 .vega-product-card__features {
   list-style: none;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .vega-product-card__features li {
   font-size: var(--text-sm);
-  padding: 4px 0;
-  padding-right: 18px;
+  padding: 5px 0;
+  padding-inline-end: 20px;
   position: relative;
   color: var(--dark);
+  line-height: 1.65;
 }
 
 .vega-product-card__features li::before {
   content: '✓';
   position: absolute;
-  right: 0;
+  inset-inline-end: 0;
+  top: 5px;
   color: #c9a800;
   font-weight: 700;
 }
@@ -267,11 +308,13 @@
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .vega-product-card__tag {
-  font-size: 11px;
+  font-family: var(--font-display);
+  font-size: var(--text-xs);
+  font-weight: var(--fw-semibold);
   background: var(--gray);
   padding: 4px 10px;
   border-radius: var(--radius-full);
@@ -282,11 +325,16 @@
   font-size: var(--text-sm);
   color: var(--dark);
   background: #fffef5;
-  border-right: 3px solid #ffde00;
+  border-inline-end: 3px solid #ffde00;
   padding: 10px 12px;
   border-radius: var(--radius);
   margin-bottom: 14px;
-  line-height: var(--leading-relaxed);
+  line-height: 1.65;
+}
+
+.vega-product-card__usecase strong {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
 }
 
 .vega-product-card__actions {
@@ -294,7 +342,8 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 12px;
-  margin-top: 4px;
+  margin-top: auto;
+  padding-top: 12px;
 }
 
 .vega-product-card__link {
@@ -366,15 +415,18 @@
 }
 
 .vega-why-card h3 {
+  font-family: var(--font-display);
   font-size: var(--text-lg);
+  font-weight: var(--fw-bold);
   margin-bottom: 10px;
   color: #1a1a1a;
+  line-height: 1.35;
 }
 
 .vega-why-card p {
   font-size: var(--text-sm);
   color: var(--text-muted);
-  line-height: var(--leading-relaxed);
+  line-height: 1.65;
 }
 
 /* Purchase steps */
@@ -408,15 +460,18 @@
 }
 
 .vega-step h3 {
+  font-family: var(--font-display);
   font-size: var(--text-base);
+  font-weight: var(--fw-bold);
   margin-bottom: 8px;
   color: #1a1a1a;
+  line-height: 1.35;
 }
 
 .vega-step p {
-  font-size: 12px;
+  font-size: var(--text-sm);
   color: var(--text-muted);
-  line-height: 1.5;
+  line-height: 1.65;
 }
 
 /* Iran industries */
@@ -485,7 +540,7 @@
   padding: 22px 20px;
   border-radius: var(--radius);
   border: 1px solid var(--gray-200);
-  border-right: 4px solid #ffde00;
+  border-inline-end: 4px solid #ffde00;
 }
 
 .vega-supply-card h4 {
@@ -701,7 +756,7 @@
   background: var(--white);
   padding: 24px;
   border-radius: var(--radius);
-  border-right: 4px solid #ffde00;
+  border-inline-end: 4px solid #ffde00;
   box-shadow: var(--shadow-sm);
 }
 
@@ -774,9 +829,9 @@
   padding: 20px;
   border-radius: var(--radius);
   border: 1px solid var(--gray-200);
-  border-right: 4px solid #ffde00;
+  border-inline-end: 4px solid #ffde00;
   font-size: var(--text-sm);
-  font-weight: 500;
+  font-weight: var(--fw-semibold);
 }
 
 .vega-supply-list li::before {
@@ -821,7 +876,12 @@
 
 @media (max-width: 768px) {
   .vega-product-card { grid-template-columns: 1fr; }
-  .vega-product-card__media { border-left: none; border-bottom: 1px solid var(--gray-200); }
+  .vega-product-card__media {
+    border-inline-start: none;
+    border-bottom: 1px solid var(--gray-200);
+    min-height: 200px;
+  }
+  .vega-product-card__body { padding: 20px 18px; }
   .vega-value-grid { grid-template-columns: 1fr; }
   .vega-principles-grid { grid-template-columns: 1fr; }
   .vega-cat-nav { overflow-x: auto; flex-wrap: nowrap; justify-content: flex-start; }

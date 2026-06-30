@@ -254,9 +254,9 @@ window.fillContactDetails = function () {
     ? channels.map(ch => `
         <div class="contact-info__phone-row">
           <span class="contact-info__phone-label">${ch.label}:</span>
-          <a href="tel:${ch.tel}" dir="ltr">${ch.display}</a>
-          ·
-          <a href="${waUrl(ch.whatsapp)}" target="_blank" rel="noopener noreferrer">${t('common.whatsapp', 'واتساپ')}</a>
+          <a href="tel:${ch.tel}" class="contact-info__phone-num" dir="ltr">${ch.display}</a>
+          <span class="contact-info__phone-sep">·</span>
+          <a href="${waUrl(ch.whatsapp)}" class="contact-info__wa-link" target="_blank" rel="noopener noreferrer">${t('common.whatsapp', 'واتساپ')}</a>
         </div>`).join('')
     : (C.contact.phone
       ? `<a href="tel:${C.contact.phone}" dir="ltr">${C.contact.phoneDisplay || C.contact.phone}</a>`
@@ -296,7 +296,7 @@ window.fillContactDetails = function () {
 
     <div class="contact-info__item">
 
-      <div class="contact-info__icon">${BD_ICON('whatsapp', { size: 22 })}</div>
+      <div class="contact-info__icon contact-info__icon--wa">${BD_ICON('whatsapp', { size: 22 })}</div>
 
       <div>
 
@@ -344,16 +344,15 @@ window.fillContactDetails = function () {
 
         <div class="contact-info__label">${t('contactPage.websites', 'وبسایت‌ها')}</div>
 
-        <div class="contact-info__value" dir="ltr">${C.domains.main} · ${C.domains.fast}</div>
+        <div class="contact-info__value contact-info__value--domains" dir="ltr">
+          <a href="https://${C.domains.main}" target="_blank" rel="noopener noreferrer">${C.domains.main}</a>
+          <span class="contact-info__phone-sep">·</span>
+          <a href="https://${C.domains.fast}" target="_blank" rel="noopener noreferrer">${C.domains.fast}</a>
+        </div>
 
       </div>
 
     </div>
-
-    ${channels.length ? channels.map(ch => `
-      <a href="${waUrl(ch.whatsapp)}" class="btn btn--green btn--block mt-16" target="_blank" rel="noopener noreferrer">
-        ${t('common.whatsapp', 'واتساپ')} ${ch.label} — ${ch.display}
-      </a>`).join('') : ''}
 
   `;
 
@@ -448,9 +447,7 @@ function initContactForm() {
 
   prefillContactFromQuery();
 
-
-
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
 
     e.preventDefault();
 
@@ -464,7 +461,8 @@ function initContactForm() {
 
     }
 
-
+    const I = window.BIZDAVAR_I18N;
+    const cp = (k, fb) => (I ? I.t(`contactPage.${k}`, fb) : fb);
 
     const data = {
 
@@ -482,15 +480,11 @@ function initContactForm() {
 
     };
 
-
-
-    const I = window.BIZDAVAR_I18N;
-    const cp = (k, fb) => (I ? I.t(`contactPage.${k}`, fb) : fb);
     const fullName = `${data.firstName} ${data.lastName}`;
     const subjectTpl = cp('mailSubject', 'درخواست تماس — {name}');
-    const subject = encodeURIComponent(subjectTpl.replace('{name}', fullName));
+    const subject = subjectTpl.replace('{name}', fullName);
 
-    const body = encodeURIComponent(
+    const bodyText =
 
       `${cp('mailBodyName', 'نام')}: ${fullName}\n` +
 
@@ -500,19 +494,70 @@ function initContactForm() {
 
       `${cp('mailBodyService', 'خدمات')}: ${data.service}\n\n` +
 
-      `${cp('mailBodyMessage', 'پیام')}:\n${data.message}`
+      `${cp('mailBodyMessage', 'پیام')}:\n${data.message}`;
 
-    );
+    const feedback = document.getElementById('formSuccess');
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const submitLabel = submitBtn?.textContent || '';
 
+    const showFeedback = (key, fallback, tone) => {
+      if (!feedback) return;
+      feedback.hidden = false;
+      feedback.textContent = cp(key, fallback);
+      feedback.classList.remove('form-feedback--error', 'form-feedback--sending');
+      if (tone) feedback.classList.add(`form-feedback--${tone}`);
+    };
 
+    const formspree = C?.formspree;
+    const useFormspree = formspree?.enabled && formspree?.formId;
 
-    window.location.href = `mailto:${C.contact.email}?subject=${subject}&body=${body}`;
+    if (useFormspree) {
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = cp('formSending', 'در حال ارسال…');
+      }
+      showFeedback('formSending', 'در حال ارسال…', 'sending');
 
+      try {
+        const res = await fetch(`https://formspree.io/f/${formspree.formId}`, {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            firstName: data.firstName,
+            lastName: data.lastName,
+            name: fullName,
+            email: data.email,
+            phone: data.phone || '',
+            service: data.service,
+            message: data.message,
+            _subject: subject
+          })
+        });
 
+        if (!res.ok) throw new Error('formspree');
 
-    const success = document.getElementById('formSuccess');
+        showFeedback('formSuccess', 'پیام شما با موفقیت ارسال شد. به‌زودی با شما تماس می‌گیریم.', null);
+        form.reset();
+      } catch {
+        showFeedback('formError', 'ارسال ناموفق بود. لطفاً دوباره تلاش کنید یا مستقیماً به info@bizdavar.com ایمیل بزنید.', 'error');
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = submitLabel || cp('submit', 'ارسال درخواست');
+        }
+      }
+      return;
+    }
 
-    if (success) success.hidden = false;
+    const subjectEnc = encodeURIComponent(subject);
+    const body = encodeURIComponent(bodyText);
+
+    window.location.href = `mailto:${C.contact.email}?subject=${subjectEnc}&body=${body}`;
+
+    showFeedback('formSuccessMailto', 'پیام شما آماده ارسال است. اگر پنجره ایمیل باز نشد، مستقیماً به info@bizdavar.com بنویسید.', null);
 
     form.reset();
 

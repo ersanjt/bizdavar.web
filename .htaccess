@@ -1,0 +1,33 @@
+# Bizdavar Group — security headers (Apache / cPanel)
+# Requires mod_headers (enabled on most cPanel hosts)
+
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=()"
+
+  # CSP — self-hosted fonts; inline scripts for static page boot
+  Header set Content-Security-Policy "\
+    default-src 'self'; \
+    script-src 'self' 'unsafe-inline'; \
+    style-src 'self' 'unsafe-inline'; \
+    font-src 'self' data:; \
+    img-src 'self' data: https:; \
+    connect-src 'self' https://ipapi.co https://ipwho.is https://formspree.io https://*.formspree.io; \
+    frame-ancestors 'self'; \
+    base-uri 'self'; \
+    form-action 'self' mailto: https://formspree.io https://*.formspree.io; \
+    upgrade-insecure-requests"
+</IfModule>
+
+# Cache static assets (optional — adjust if deploy issues)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+</IfModule>

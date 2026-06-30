@@ -1,11 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <script src="../assets/scripts/i18n/locale-preload.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>نمونه‌کارها | بیزدوار گروپ</title>
-  <link rel="icon" href="../assets/images/brand/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="icon" href="../assets/images/brand/favicon.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../assets/images/brand/apple-touch-icon.png">
   <link rel="stylesheet" href="../assets/styles/fonts.css">
   <link rel="stylesheet" href="../assets/styles/typography.css">
   <link rel="stylesheet" href="../assets/styles/icons.css">
@@ -19,7 +20,7 @@
 </head>
 <body data-page="portfolio" data-depth="1">
 
-  <a href="#main-content" class="skip-link">رفتن به محتوای اصلی</a>
+  <a href="#main-content" class="skip-link" data-i18n="common.skipLink">رفتن به محتوای اصلی</a>
   <div class="top-bar" id="topBar"></div>
   <header class="header" id="siteHeader"></header>
   <nav class="breadcrumbs-wrap" id="breadcrumbs" aria-label="مسیر صفحه"></nav>
@@ -29,9 +30,9 @@
 
     <section class="page-hero page-hero--pro">
       <div class="container">
-        <span class="section__tag">نمونه‌کارها</span>
-        <h1>پروژه‌ها و برندهایی که با ما رشد کرده‌اند</h1>
-        <p>اکوسیستم برندهای بیزدوار، نمونه‌کارهای طراحی وب و SMM، و مشتریانی که خدمات دیجیتال دریافت کرده‌اند — <a href="about.html">درباره بیزدوار</a>.</p>
+        <span class="section__tag" data-i18n="portfolioPage.hero.tag">نمونه‌کارها</span>
+        <h1 data-i18n="portfolioPage.hero.title">پروژه‌ها و برندهایی که با ما رشد کرده‌اند</h1>
+        <p data-i18n-html="portfolioPage.hero.desc">اکوسیستم برندهای بیزدوار، نمونه‌کارهای طراحی وب و SMM، و مشتریانی که خدمات دیجیتال دریافت کرده‌اند — <a href="about.html">درباره بیزدوار</a>.</p>
         <div class="portfolio-hero-stats" id="portfolioHeroStats"></div>
       </div>
     </section>
@@ -45,11 +46,13 @@
       </div>
     </section>
 
+    <section class="section section--gray portfolio-archived-wrap" id="portfolioArchived" hidden></section>
+
     <section class="section section--gray">
       <div class="container">
         <div class="section__header section__header--pro">
-          <span class="section__eyebrow">حوزه‌ها</span>
-          <h2 class="section__title">دامنه فعالیت پروژه‌ها</h2>
+          <span class="section__eyebrow" data-i18n="portfolioPage.areas.eyebrow">حوزه‌ها</span>
+          <h2 class="section__title" data-i18n="portfolioPage.areas.title">دامنه فعالیت پروژه‌ها</h2>
         </div>
         <div class="tags-cloud portfolio-tags">
           <a href="services.html#digital-marketing" class="tags-cloud__tag">فین‌تک و پرداخت</a>
@@ -69,11 +72,11 @@
 
     <section class="section portfolio-cta">
       <div class="container cta-banner cta-banner--dark">
-        <h2>پروژه بعدی می‌تواند برند شما باشد</h2>
-        <p>از <a href="fast.html" class="link-yellow">طراحی وب</a> تا مدیریت DNS و SSL — بیزدوار همراه شماست.</p>
+        <h2 data-i18n="portfolioPage.cta.title">پروژه بعدی می‌تواند برند شما باشد</h2>
+        <p data-i18n-html="portfolioPage.cta.desc">از <a href="fast.html" class="link-yellow">طراحی وب</a> تا مدیریت DNS و SSL — بیزدوار همراه شماست.</p>
         <div class="cta-banner__actions">
-          <a href="contact.html" class="btn btn--yellow">شروع پروژه جدید</a>
-          <a href="services.html" class="btn btn--primary">مشاهده خدمات</a>
+          <a href="contact.html" class="btn btn--yellow" data-i18n="portfolioPage.cta.btnPrimary">شروع پروژه جدید</a>
+          <a href="services.html" class="btn btn--primary" data-i18n="portfolioPage.cta.btnSecondary">مشاهده خدمات</a>
         </div>
       </div>
     </section>
@@ -87,9 +90,16 @@
   <script src="../assets/scripts/config/paths.js"></script>
   <script src="../assets/scripts/config/site-config.js"></script>
   <script src="../assets/scripts/i18n/locales.js"></script>
+  <script src="../assets/scripts/i18n/locales-pages.js"></script>
+  <script src="../assets/scripts/i18n/locale-seo.js"></script>
+  <script src="../assets/scripts/i18n/portfolio-meta.js"></script>
   <script src="../assets/scripts/i18n/i18n.js"></script>
+  <script src="../assets/scripts/i18n/page-i18n.js"></script>
   <script src="../assets/scripts/components/biz-icons.js"></script>
-  <script src="../assets/scripts/components/site-components.js"></script>
+  <script src="../assets/scripts/components/context.js"></script>
+  <script src="../assets/scripts/components/chrome.js"></script>
+  <script src="../assets/scripts/components/schema.js"></script>
+  <script src="../assets/scripts/components/grids.js"></script>
   <script src="../assets/scripts/portfolio-page.js"></script>
   <script src="../assets/scripts/i18n/bootstrap.js"></script>
   <script src="../assets/scripts/main.js"></script>
@@ -99,10 +109,7 @@
       { page: 'home', url: 'index.html' },
       { page: 'portfolio', url: 'portfolio.html' }
     ];
-    injectSeo({
-      title: 'نمونه‌کارها | پروژه‌های بیزدوار گروپ — ZedPay، ZedGate و...',
-      description: 'نمونه‌کارهای بیزدوار: ZedPay، BZ Diamond، Marvelous Holding، NIK Aesthetic، Karen Leather و ۳۵ برند — اکوسیستم، مشتریان و پروژه‌های دیجیتال.',
-      keywords: 'نمونه کار, ZedPay, ZedGate, بیزدوار, پورتفولیو',
+    injectPageSeo('portfolio', {
       canonical: 'https://bizdavar.com/pages/portfolio.html',
       ogImage: 'assets/images/content/about-hero.svg'
     });
@@ -111,11 +118,7 @@
     injectBreadcrumbSchema(crumbs);
     initPortfolioPage();
     injectPortfolioSchema();
-    renderRelatedLinks([
-      { title: 'خدمات ما', url: 'services.html', desc: 'دیجیتال و صنعتی' },
-      { title: 'Fast Web Studio', url: 'fast.html', desc: 'طراحی سایت ۵ روزه' },
-      { title: 'تماس', url: 'contact.html', desc: 'شروع پروژه جدید' }
-    ]);
+    if (window.renderPortfolioRelatedLinks) window.renderPortfolioRelatedLinks();
   </script>
 </body>
 </html>

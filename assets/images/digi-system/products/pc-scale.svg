@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="Digi System retail PC weighing scale with label printer">
+  <rect width="400" height="240" fill="#fdf5f6"/>
+  <rect x="40" y="40" width="320" height="160" rx="12" fill="#fff" stroke="#c8102e" stroke-width="2"/>
+  <rect x="70" y="70" width="180" height="60" rx="6" fill="#16163f"/>
+  <text x="160" y="108" fill="#fff" font-family="Arial,sans-serif" font-size="20" text-anchor="middle">2.450 kg</text>
+  <rect x="270" y="60" width="60" height="90" rx="4" fill="#eee"/>
+  <rect x="70" y="150" width="50" height="30" rx="4" fill="#c8102e"/>
+  <rect x="130" y="150" width="50" height="30" rx="4" fill="#16163f"/>
+</svg>

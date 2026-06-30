@@ -6,7 +6,9 @@ window.PROSENSE_CATALOG = {
     name: 'Prosense',
     nameFa: 'پروسنس',
     logo: 'assets/images/prosense/prosense-logo.png',
+    logoAlt: 'Prosense — gas and flame detectors supplied from Turkey',
     heroImage: 'assets/images/prosense/slides/pq-sil.jpg',
+    heroImageAlt: 'Prosense PQ series SIL2 gas detector with hydrocarbon LEL display',
     heroEyebrow: 'تامین رسمی برای پروژه‌های صنعتی ایران',
     heroHeadline: 'دتکتورهای Prosense',
     heroHeadlineSub: 'گاز، شعله و ایمنی فرآیند — تامین اصل با مشاوره فنی فارسی و تحویل در ایران',
@@ -17,7 +19,12 @@ window.PROSENSE_CATALOG = {
     officialUrl: 'https://www.prosense.com.tr/?lang=tr',
     email: 'info@prosense.com.tr',
     phone: '+90 216 306 77 88',
-    descriptionFa: 'بیزدوار گروپ تامین‌کننده دتکتورهای گاز و شعله Prosense برای پروژه‌های ایرانی است. محصول اصل با گواهی SIL/M1/EN، مشاوره انتخاب گاز و مدل به فارسی، پیش‌فاکتور شفاف و لجستیک بین‌المللی تا تحویل.'
+    descriptionFa: 'بیزدوار گروپ تامین‌کننده دتکتورهای گاز و شعله Prosense برای پروژه‌های ایرانی است. محصول اصل با گواهی SIL/M1/EN، مشاوره انتخاب گاز و مدل به فارسی، پیش‌فاکتور شفاف و لجستیک بین‌المللی تا تحویل.',
+    heroStats: [
+      { value: '1000+', label: 'گاز قابل تشخیص' },
+      { value: 'SIL2/3', label: 'گواهی ایمنی' },
+      { value: '12+', label: 'تجربه بیزدوار' }
+    ]
   },
 
   trustSignals: [
@@ -104,7 +111,8 @@ window.PROSENSE_CATALOG = {
       useCaseFa: 'H2S، LEL، O2 — محیط Ex و پروژه‌های SIS',
       badge: 'SIL',
       inquiryName: 'PQ Serisi',
-      image: 'assets/images/prosense/slides/pq-sil.jpg'
+      image: 'assets/images/prosense/slides/pq-sil.jpg',
+      imageAlt: 'Prosense PQ series SIL2 SIL3 fixed gas detector for process safety'
     },
     {
       title: 'SafeVader Serisi',
@@ -113,7 +121,8 @@ window.PROSENSE_CATALOG = {
       useCaseFa: 'گازهای سمی و قابل اشتعال در تاسیسات صنعتی',
       badge: 'Process Safety',
       inquiryName: 'SafeVader Serisi',
-      image: 'assets/images/prosense/slides/mps-hydrocarbon.jpg'
+      image: 'assets/images/prosense/slides/mps-hydrocarbon.jpg',
+      imageAlt: 'Prosense SafeVader process safety gas detector'
     },
     {
       title: 'Marine & Offshore',
@@ -122,7 +131,8 @@ window.PROSENSE_CATALOG = {
       useCaseFa: 'کشتی‌سازی، پلتفرم دریایی، بنادر',
       badge: 'Denizcilik',
       inquiryName: 'Marine Gaz Dedektörü',
-      image: 'assets/images/prosense/slides/marine.jpg'
+      image: 'assets/images/prosense/slides/marine.jpg',
+      imageAlt: 'Prosense marine certified H2S and CH4 gas detection system'
     },
     {
       title: 'MPS™ Hidrokarbon',
@@ -131,7 +141,8 @@ window.PROSENSE_CATALOG = {
       useCaseFa: 'پالایشگاه، خط لوله، مخازن ذخیره',
       badge: 'MPS',
       inquiryName: 'MPS Hidrokarbon Dedektörü',
-      image: 'assets/images/prosense/slides/mps-hydrocarbon.jpg'
+      image: 'assets/images/prosense/slides/mps-hydrocarbon.jpg',
+      imageAlt: 'Prosense MPS hydrocarbon gas detector sensor'
     },
     {
       title: 'PQD VOC',
@@ -140,7 +151,8 @@ window.PROSENSE_CATALOG = {
       useCaseFa: 'صنایع شیمیایی، رنگ، پتروشیمی',
       badge: 'VOC',
       inquiryName: 'PQD VOC Dedektörü',
-      image: 'assets/images/prosense/slides/voc-pqd.jpg'
+      image: 'assets/images/prosense/slides/voc-pqd.jpg',
+      imageAlt: 'Prosense PQD VOC volatile organic compound detector'
     },
     {
       title: 'TÜRKAK — کالیبراسیون',
@@ -149,7 +161,8 @@ window.PROSENSE_CATALOG = {
       useCaseFa: 'نگهداری دوره‌ای دتکتورها — هماهنگی از طریق بیزدوار',
       badge: 'Kalibrasyon',
       inquiryName: 'Kalibrasyon Hizmeti',
-      image: 'assets/images/prosense/slides/turkak-calibration.jpg'
+      image: 'assets/images/prosense/slides/turkak-calibration.jpg',
+      imageAlt: 'Prosense TÜRKAK accredited gas detector calibration service'
     },
     {
       title: 'SOMA Serisi — M1',
@@ -158,7 +171,8 @@ window.PROSENSE_CATALOG = {
       useCaseFa: 'معادن زغال، تونل مترو، کارگاه‌های زیرزمینی',
       badge: 'Maden',
       inquiryName: 'SOMA Serisi',
-      image: 'assets/images/prosense/slides/soma-mine.jpg'
+      image: 'assets/images/prosense/slides/soma-mine.jpg',
+      imageAlt: 'Prosense SOMA M1 mining gas detector for tunnels and coal mines'
     },
     {
       title: 'PPS+ Otopark — EN 50545-1',
@@ -167,7 +181,8 @@ window.PROSENSE_CATALOG = {
       useCaseFa: 'پارکینگ‌های سرپوشیده، مراکز تجاری و بیمارستان',
       badge: 'Otopark',
       inquiryName: 'PPS+ Otopark Sistemi',
-      image: 'assets/images/prosense/slides/pps-parking.webp'
+      image: 'assets/images/prosense/slides/pps-parking.webp',
+      imageAlt: 'Prosense PPS+ EN-50545-1 parking gas detection system for CO and NO2'
     }
   ],
 

@@ -2,10 +2,11 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <script src="../../assets/scripts/i18n/locale-preload.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>چگونه بازاریابی دیجیتال فروش را افزایش می‌دهد؟ | بیزدوار</title>
-  <link rel="icon" href="../../assets/images/brand/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="icon" href="../../assets/images/brand/favicon.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../../assets/images/brand/apple-touch-icon.png">
   <link rel="stylesheet" href="../../assets/styles/fonts.css">
   <link rel="stylesheet" href="../../assets/styles/typography.css">
   <link rel="stylesheet" href="../../assets/styles/icons.css">
@@ -16,10 +17,10 @@
   <link rel="stylesheet" href="../../assets/styles/footer.css">
   <link rel="stylesheet" href="../../assets/styles/responsive.css">
 </head>
-<body data-page="article" data-depth="2">
+<body data-page="article" data-depth="2" data-article="digital-marketing">
 
   
-  <a href="#main-content" class="skip-link">رفتن به محتوای اصلی</a>
+  <a href="#main-content" class="skip-link" data-i18n="common.skipLink">رفتن به محتوای اصلی</a>
 <div class="top-bar" id="topBar"></div>
   <header class="header" id="siteHeader"></header>
   <nav class="breadcrumbs-wrap" id="breadcrumbs" aria-label="مسیر صفحه"></nav>
@@ -71,24 +72,27 @@
   <script src="../../assets/scripts/config/paths.js"></script>
   <script src="../../assets/scripts/config/site-config.js"></script>
   <script src="../../assets/scripts/i18n/locales.js"></script>
+  <script src="../../assets/scripts/i18n/locales-pages.js"></script>
+  <script src="../../assets/scripts/i18n/locale-seo.js"></script>
   <script src="../../assets/scripts/i18n/i18n.js"></script>
+  <script src="../../assets/scripts/i18n/page-i18n.js"></script>
   <script src="../../assets/scripts/components/biz-icons.js"></script>
-  <script src="../../assets/scripts/components/site-components.js"></script>
+  <script src="../../assets/scripts/components/context.js"></script>
+  <script src="../../assets/scripts/components/chrome.js"></script>
+  <script src="../../assets/scripts/components/schema.js"></script>
+  <script src="../../assets/scripts/components/grids.js"></script>
   <script src="../../assets/scripts/i18n/bootstrap.js"></script>
-  <script src="../../assets/scripts/main.js"></script>
+  <script src="../../assets/scripts/main.js"></script>
   <script>
     const crumbs = [
       { page: 'home', url: 'index.html' },
       { page: 'blog', url: 'blog.html' },
       { name: 'بازاریابی دیجیتال و فروش', url: 'digital-marketing.html' }
     ];
-    injectSeo({
-      title: 'چگونه بازاریابی دیجیتال فروش را افزایش می‌دهد؟ | بیزدوار',
-      description: 'راهکارهای عملی بازاریابی دیجیتال برای افزایش فروش: CRO، کمپین تبلیغاتی، سئو و اتوماسیون. راهنمای بیزدوار گروپ.',
-      keywords: 'بازاریابی دیجیتال, افزایش فروش, CRO, سئو, بیزدوار',
+    injectPageSeo('articleDigitalMarketing', {
       canonical: 'https://bizdavar.com/pages/articles/digital-marketing.html',
-      type: 'article',
-      ogImage: 'assets/images/content/network-map.svg'
+      ogImage: 'assets/images/content/network-map.svg',
+      type: 'article'
     });
     injectArticleSchema({
       title: 'چگونه بازاریابی دیجیتال فروش را افزایش می‌دهد؟',

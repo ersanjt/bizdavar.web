@@ -121,6 +121,54 @@
   gap: 16px;
 }
 
+.fast-hosting-bar {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-block-end: 1px solid #bae6fd;
+  padding: 16px 0;
+}
+
+.fast-hosting-bar__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.fast-hosting-bar__text strong {
+  display: block;
+  font-size: 15px;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.fast-hosting-bar__text p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 640px;
+}
+
+.fast-hosting-bar__cta {
+  flex-shrink: 0;
+  font-size: 13px;
+  padding: 10px 18px;
+}
+
+.fast-plan-card__features a,
+.fast-faq__item a {
+  color: var(--navy);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.fast-plan-card__features a:hover,
+.fast-faq__item a:hover {
+  color: #1e40af;
+}
+
 .fast-trust-item {
   display: flex;
   gap: 10px;

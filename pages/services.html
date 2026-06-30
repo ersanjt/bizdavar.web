@@ -2,10 +2,11 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <script src="../assets/scripts/i18n/locale-preload.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>خدمات | بیزدوار گروپ</title>
-  <link rel="icon" href="../assets/images/brand/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="icon" href="../assets/images/brand/favicon.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../assets/images/brand/apple-touch-icon.png">
   <link rel="stylesheet" href="../assets/styles/fonts.css">
   <link rel="stylesheet" href="../assets/styles/typography.css">
   <link rel="stylesheet" href="../assets/styles/icons.css">
@@ -19,7 +20,7 @@
 </head>
 <body data-page="services" data-depth="1">
 
-  <a href="#main-content" class="skip-link">رفتن به محتوای اصلی</a>
+  <a href="#main-content" class="skip-link" data-i18n="common.skipLink">رفتن به محتوای اصلی</a>
   <div class="top-bar" id="topBar"></div>
   <header class="header" id="siteHeader"></header>
   <nav class="breadcrumbs-wrap" id="breadcrumbs" aria-label="مسیر صفحه"></nav>
@@ -29,9 +30,9 @@
 
     <section class="page-hero page-hero--pro">
       <div class="container">
-        <span class="section__tag">خدمات ما</span>
-        <h1>راهکارهای جامع برای رشد کسب‌وکار</h1>
-        <p>از استراتژی دیجیتال تا تامین تجهیزات صنعتی — <a href="about.html">بیزدوار گروپ</a> در چهار محور اصلی همراه شماست.</p>
+        <span class="section__tag" data-i18n="servicesPage.hero.tag">خدمات ما</span>
+        <h1 data-i18n="servicesPage.hero.title">راهکارهای جامع برای رشد کسب‌وکار</h1>
+        <p data-i18n-html="servicesPage.hero.desc">از استراتژی دیجیتال تا تامین تجهیزات صنعتی — <a href="about.html">بیزدوار گروپ</a> در چهار محور اصلی همراه شماست.</p>
         <div class="services-hero-stats" id="servicesHeroStats"></div>
       </div>
     </section>
@@ -41,9 +42,9 @@
     <section class="section section--gray">
       <div class="container">
         <div class="section__header section__header--pro">
-          <span class="section__eyebrow">نمای کلی</span>
-          <h2 class="section__title">چهار محور خدمات بیزدوار</h2>
-          <p class="section__desc">برای مشاهده جزئیات هر خدمت، روی کارت کلیک کنید یا از منوی بالا استفاده کنید.</p>
+          <span class="section__eyebrow" data-i18n="servicesPage.overview.eyebrow">نمای کلی</span>
+          <h2 class="section__title" data-i18n="servicesPage.overview.title">چهار محور خدمات بیزدوار</h2>
+          <p class="section__desc" data-i18n="servicesPage.overview.desc">برای مشاهده جزئیات هر خدمت، روی کارت کلیک کنید یا از منوی بالا استفاده کنید.</p>
         </div>
         <div class="services-overview" id="servicesOverview"></div>
       </div>
@@ -55,11 +56,11 @@
           <div class="service-block__head">
             <span class="service-block__num">01</span>
             <div>
-              <h2 id="svc-dm-title">بازاریابی دیجیتال</h2>
-              <p>Digital Marketing · استراتژی و اجرای کمپین</p>
+              <h2 id="svc-dm-title" data-i18n="servicesPage.blocks.0.title">بازاریابی دیجیتال</h2>
+              <p data-i18n="servicesPage.blocks.0.subtitle">Digital Marketing · استراتژی و اجرای کمپین</p>
             </div>
           </div>
-          <p>در بیزدوار گروپ، با اجرای استراتژی‌های نوین بازاریابی دیجیتال، نرخ تبدیل مشتریان را به‌طور قابل‌توجهی افزایش می‌دهیم. مطلب مرتبط: <a href="articles/digital-marketing.html">چگونه دیجیتال مارکتینگ فروش را افزایش می‌دهد؟</a></p>
+          <p data-i18n-html="servicesPage.blocks.0.body">در بیزدوار گروپ، با اجرای استراتژی‌های نوین بازاریابی دیجیتال، نرخ تبدیل مشتریان را به‌طور قابل‌توجهی افزایش می‌دهیم. مطلب مرتبط: <a href="articles/digital-marketing.html">چگونه دیجیتال مارکتینگ فروش را افزایش می‌دهد؟</a></p>
           <div class="service-block__tags">
             <span class="service-block__tag">Google Ads</span>
             <span class="service-block__tag">سئو</span>
@@ -73,10 +74,10 @@
             <li>اتوماسیون بازاریابی و ایمیل مارکتینگ</li>
             <li>گزارش‌دهی و تحلیل عملکرد</li>
           </ul>
-          <a href="contact.html" class="btn btn--primary">درخواست مشاوره</a>
+          <a href="contact.html" class="btn btn--primary" data-i18n="servicesPage.blocks.0.cta">درخواست مشاوره</a>
         </div>
         <div class="service-block__visual">
-          <img src="../assets/images/content/hero-home.svg" alt="بازاریابی دیجیتال و شبکه جهانی — بیزدوار" loading="lazy" width="400" height="300">
+          <img src="../assets/images/content/hero-home.svg" alt="بازاریابی دیجیتال و شبکه جهانی — بیزدوار" data-i18n-alt="servicesPage.panels.dmImgAlt" loading="lazy" width="400" height="300">
         </div>
       </div>
     </section>
@@ -87,11 +88,11 @@
           <div class="service-block__head">
             <span class="service-block__num">02</span>
             <div>
-              <h2>طراحی و توسعه وب</h2>
-              <p>Web Design · Fast Web Studio</p>
+              <h2 data-i18n="servicesPage.blocks.1.title">طراحی و توسعه وب</h2>
+              <p data-i18n="servicesPage.blocks.1.subtitle">Web Design · Fast Web Studio</p>
             </div>
           </div>
-          <p>طراحی سایت شرکتی، فروشگاه اینترنتی، لندینگ پیج و پنل‌های اختصاصی با تحویل سریع از طریق <a href="fast.html">Fast Web Studio</a>.</p>
+          <p data-i18n-html="servicesPage.blocks.1.body">طراحی سایت شرکتی، فروشگاه اینترنتی، لندینگ پیج و پنل‌های اختصاصی با تحویل سریع از طریق <a href="fast.html">Fast Web Studio</a>.</p>
           <div class="service-block__tags">
             <span class="service-block__tag">ریسپانسیو</span>
             <span class="service-block__tag">WooCommerce</span>
@@ -106,12 +107,12 @@
             <li>آموزش مدیریت و پشتیبانی</li>
             <li><a href="https://arianpumps.com" target="_blank" rel="noopener noreferrer">Arian Pumps</a> — نمونه‌کار طراحی وب B2B</li>
           </ul>
-          <a href="fast.html" class="btn btn--blue">مشاهده پلن‌های Fast Studio</a>
+          <a href="fast.html" class="btn btn--blue" data-i18n="servicesPage.blocks.1.cta">مشاهده پلن‌های Fast Studio</a>
         </div>
         <div class="service-block__visual service-block__visual--panel">
           <h3><a href="fast.html" class="link-inherit">Fast Web Studio</a></h3>
-          <p class="panel-sub">طراحی سایت حرفه‌ای در ۵ روز</p>
-          <p class="price-hint">از $99</p>
+          <p class="panel-sub" data-i18n="servicesPage.panels.webSub">طراحی سایت حرفه‌ای در ۵ روز</p>
+          <p class="price-hint" data-i18n="servicesPage.panels.webPrice">از $99</p>
         </div>
       </div>
     </section>
@@ -122,11 +123,11 @@
           <div class="service-block__head">
             <span class="service-block__num">03</span>
             <div>
-              <h2>مدیریت شبکه‌های اجتماعی (SMM)</h2>
-              <p>Social Media · محتوا و تبلیغات</p>
+              <h2 data-i18n="servicesPage.blocks.2.title">مدیریت شبکه‌های اجتماعی (SMM)</h2>
+              <p data-i18n="servicesPage.blocks.2.subtitle">Social Media · محتوا و تبلیغات</p>
             </div>
           </div>
-          <p>تولید محتوا، مدیریت صفحات، تبلیغات هدفمند در <a href="https://www.instagram.com/bizdavar" target="_blank" rel="noopener noreferrer me">اینستاگرام</a>، <a href="https://www.linkedin.com/in/ersanjt" target="_blank" rel="noopener noreferrer me">لینکدین</a> و سایر پلتفرم‌ها.</p>
+          <p data-i18n-html="servicesPage.blocks.2.body">تولید محتوا، مدیریت صفحات، تبلیغات هدفمند در <a href="https://www.instagram.com/bizdavar" target="_blank" rel="noopener noreferrer me">اینستاگرام</a>، <a href="https://www.linkedin.com/in/ersanjt" target="_blank" rel="noopener noreferrer me">لینکدین</a> و سایر پلتفرم‌ها.</p>
           <div class="service-block__tags">
             <span class="service-block__tag">تقویم محتوا</span>
             <span class="service-block__tag">Paid Social</span>
@@ -138,11 +139,11 @@
             <li>مدیریت تبلیغات Paid Social</li>
             <li>گزارش رشد و تعامل</li>
           </ul>
-          <a href="contact.html" class="btn btn--primary">شروع همکاری SMM</a>
+          <a href="contact.html" class="btn btn--primary" data-i18n="servicesPage.blocks.2.cta">شروع همکاری SMM</a>
         </div>
         <div class="service-block__visual service-block__visual--panel">
           <span class="smm-badge" style="font-size:3rem;font-weight:900">SMM</span>
-          <p class="panel-sub">مدیریت حرفه‌ای شبکه‌های اجتماعی</p>
+          <p class="panel-sub" data-i18n="servicesPage.panels.smmSub">مدیریت حرفه‌ای شبکه‌های اجتماعی</p>
           <div class="smm-platforms">
             <span>Instagram</span>
             <span>LinkedIn</span>
@@ -159,11 +160,11 @@
           <div class="service-block__head">
             <span class="service-block__num">04</span>
             <div>
-              <h2>تامین تجهیزات صنعتی</h2>
-              <p>Industrial Supply · B2B</p>
+              <h2 data-i18n="servicesPage.blocks.3.title">تامین تجهیزات صنعتی</h2>
+              <p data-i18n="servicesPage.blocks.3.subtitle">Industrial Supply · B2B</p>
             </div>
           </div>
-          <p>مشاوره و تامین تجهیزات صنعتی شامل سنسورها، دتکتور گاز، پمپ‌ها، موتور و ابزار دقیق. کاتالوگ: <a href="vega.html">VEGA</a> · <a href="prosense.html">Prosense</a> · <a href="gamak.html">Gamak</a>.</p>
+          <p data-i18n-html="servicesPage.blocks.3.body">مشاوره و تامین تجهیزات صنعتی شامل سنسورها، دتکتور گاز، GPS ناوگان، پمپ‌ها، موتور و ابزار دقیق. کاتالوگ: <a href="vega.html">VEGA</a> · <a href="prosense.html">Prosense</a> · <a href="teltonika.html">Teltonika</a> · <a href="gamak.html">Gamak</a>.</p>
           <div class="service-block__tags">
             <span class="service-block__tag">SIL2/3</span>
             <span class="service-block__tag">لجستیک</span>
@@ -172,28 +173,46 @@
           <ul class="check-list">
             <li><a href="vega.html">سنسورهای VEGA</a> — VEGAPULS، VEGABAR، VEGAPOINT</li>
             <li><a href="prosense.html">Prosense</a> — PQ، SafeVader، SOMA، PPS+</li>
+            <li><a href="teltonika.html">Teltonika</a> — FMB920، FMC650، Fleet Telematics</li>
             <li><a href="gamak.html">الکتروموتور Gamak</a> — موتورهای صنعتی ترکیه</li>
+            <li><a href="digi-system.html">Digi System</a> — POS و تجهیزات خرده‌فروشی</li>
+            <li><a href="teraoka.html">Teraoka Seiko</a> — ترازو و تجهیزات فروشگاهی</li>
             <li>مشاوره فنی و انتخاب تجهیز</li>
             <li>تامین و لجستیک بین‌المللی</li>
           </ul>
-          <a href="contact.html" class="btn btn--yellow">استعلام قیمت تجهیزات</a>
+          <a href="contact.html" class="btn btn--yellow" data-i18n="servicesPage.blocks.3.cta">استعلام قیمت تجهیزات</a>
         </div>
         <div class="service-block__visual">
           <div class="industrial-brands">
             <a href="vega.html" class="industrial-brand">
               <img src="../assets/images/partners/vega.svg" alt="VEGA" width="100" height="40" loading="lazy">
               <strong>VEGA</strong>
-              <small>سنسور سطح و فشار</small>
+              <small data-i18n="servicesPage.panels.vegaSub">سنسور سطح و فشار</small>
             </a>
             <a href="prosense.html" class="industrial-brand">
               <img src="../assets/images/partners/prosense.png" alt="Prosense" width="100" height="40" loading="lazy">
               <strong>Prosense</strong>
-              <small>دتکتور گاز و شعله</small>
+              <small data-i18n="servicesPage.panels.prosenseSub">دتکتور گاز و شعله</small>
+            </a>
+            <a href="teltonika.html" class="industrial-brand">
+              <img src="../assets/images/partners/teltonika.png" alt="Teltonika" width="100" height="40" loading="lazy">
+              <strong>Teltonika</strong>
+              <small data-i18n="servicesPage.panels.teltonikaSub">GPS و Fleet Telematics</small>
             </a>
             <a href="gamak.html" class="industrial-brand">
               <img src="../assets/images/partners/gamak.svg" alt="Gamak" width="100" height="40" loading="lazy">
               <strong>Gamak</strong>
-              <small>الکتروموتور صنعتی</small>
+              <small data-i18n="servicesPage.panels.gamakSub">الکتروموتور صنعتی</small>
+            </a>
+            <a href="digi-system.html" class="industrial-brand">
+              <img src="../assets/images/partners/digi-system.svg" alt="Digi System" width="100" height="40" loading="lazy">
+              <strong>Digi System</strong>
+              <small data-i18n="servicesPage.panels.digiSystemSub">POS و خرده‌فروشی</small>
+            </a>
+            <a href="teraoka.html" class="industrial-brand">
+              <img src="../assets/images/partners/teraoka.svg" alt="Teraoka" width="100" height="40" loading="lazy">
+              <strong>Teraoka</strong>
+              <small data-i18n="servicesPage.panels.teraokaSub">ترازو و فروشگاه</small>
             </a>
           </div>
         </div>
@@ -203,9 +222,9 @@
     <section class="section">
       <div class="container">
         <div class="section__header section__header--pro">
-          <span class="section__eyebrow">فرآیند همکاری</span>
-          <h2 class="section__title">چگونه با ما کار می‌کنید؟</h2>
-          <p class="section__desc">از مشاوره اولیه تا پشتیبانی مستمر — مسیر شفاف و قابل پیگیری</p>
+          <span class="section__eyebrow" data-i18n="servicesPage.process.eyebrow">فرآیند همکاری</span>
+          <h2 class="section__title" data-i18n="servicesPage.process.title">چگونه با ما کار می‌کنید؟</h2>
+          <p class="section__desc" data-i18n="servicesPage.process.desc">از مشاوره اولیه تا پشتیبانی مستمر — مسیر شفاف و قابل پیگیری</p>
         </div>
         <div class="services-process" id="servicesProcess"></div>
       </div>
@@ -215,11 +234,11 @@
 
     <section class="section section--yellow services-cta">
       <div class="container cta-banner cta-banner--pro">
-        <h2>نیاز به راهکار اختصاصی دارید؟</h2>
-        <p>مشاوره رایگان — نمونه پروژه‌ها در <a href="portfolio.html">نمونه‌کارهای بیزدوار</a></p>
+        <h2 data-i18n="servicesPage.cta.title">نیاز به راهکار اختصاصی دارید؟</h2>
+        <p data-i18n-html="servicesPage.cta.desc">مشاوره رایگان — نمونه پروژه‌ها در <a href="portfolio.html">نمونه‌کارهای بیزدوار</a></p>
         <div class="cta-banner__actions">
-          <a href="contact.html" class="btn btn--primary">مشاوره رایگان</a>
-          <a href="portfolio.html" class="btn btn--yellow">مشاهده نمونه‌کارها</a>
+          <a href="contact.html" class="btn btn--primary" data-i18n="servicesPage.cta.btn">مشاوره رایگان</a>
+          <a href="portfolio.html" class="btn btn--yellow" data-i18n="servicesPage.cta.btnSecondary">مشاهده نمونه‌کارها</a>
         </div>
       </div>
     </section>
@@ -234,9 +253,15 @@
   <script src="../assets/scripts/config/paths.js"></script>
   <script src="../assets/scripts/config/site-config.js"></script>
   <script src="../assets/scripts/i18n/locales.js"></script>
+  <script src="../assets/scripts/i18n/locales-pages.js"></script>
+  <script src="../assets/scripts/i18n/locale-seo.js"></script>
   <script src="../assets/scripts/i18n/i18n.js"></script>
+  <script src="../assets/scripts/i18n/page-i18n.js"></script>
   <script src="../assets/scripts/components/biz-icons.js"></script>
-  <script src="../assets/scripts/components/site-components.js"></script>
+  <script src="../assets/scripts/components/context.js"></script>
+  <script src="../assets/scripts/components/chrome.js"></script>
+  <script src="../assets/scripts/components/schema.js"></script>
+  <script src="../assets/scripts/components/grids.js"></script>
   <script src="../assets/scripts/services-page.js"></script>
   <script src="../assets/scripts/i18n/bootstrap.js"></script>
   <script src="../assets/scripts/main.js"></script>
@@ -246,10 +271,7 @@
       { page: 'home', url: 'index.html' },
       { page: 'services', url: 'services.html' }
     ];
-    injectSeo({
-      title: 'خدمات بیزدوار | بازاریابی دیجیتال، طراحی وب و تامین تجهیزات',
-      description: 'خدمات بیزدوار گروپ: بازاریابی دیجیتال، طراحی سایت Fast Studio، مدیریت SMM و تامین تجهیزات صنعتی VEGA و Prosense.',
-      keywords: 'خدمات دیجیتال, طراحی سایت, SMM, VEGA, Prosense, بیزدوار',
+    injectPageSeo('services', {
       canonical: 'https://bizdavar.com/pages/services.html',
       ogImage: 'assets/images/content/hero-home.svg'
     });
@@ -259,11 +281,7 @@
     initServicesPage();
     injectServiceSchema();
     renderGeoStrip('geoStrip');
-    renderRelatedLinks([
-      { title: 'Fast Web Studio', url: 'fast.html', desc: 'طراحی سایت از $99' },
-      { title: 'نمونه‌کارها', url: 'portfolio.html', desc: '۳۵ پروژه و برند' },
-      { title: 'وبلاگ تخصصی', url: 'blog.html', desc: 'راهنما و مقالات' }
-    ]);
+    if (window.renderServicesRelatedLinks) window.renderServicesRelatedLinks();
   </script>
 </body>
 </html>

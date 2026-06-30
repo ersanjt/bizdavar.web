@@ -2,6 +2,7 @@
  * Bizdavar — Responsive overrides
  * Mobile chrome: ≤1100px | Phone: ≤768px | Small: ≤480px
  */
+@import url('mobile-chrome.css');
 
 /* ─── Trust bar & process — tablet ─── */
 @media (max-width: 1024px) {
@@ -20,6 +21,7 @@
 
   .industrial-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-5);
   }
 
   .presence-regions {
@@ -94,25 +96,128 @@
   }
 
   .hero {
-    padding: 48px 0 40px;
+    padding: 40px 0 28px;
   }
 
   .hero__desc {
     font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .hero__badge {
+    font-size: 12px;
+    padding: 5px 12px;
+    margin-bottom: 14px;
+  }
+
+  .hero__title {
+    font-size: clamp(1.55rem, 6.5vw, 2rem);
+    line-height: 1.2;
+    margin-bottom: 14px;
+  }
+
+  .hero__actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .hero__actions .btn {
+    flex: 1 1 calc(50% - 5px);
+    min-width: 0;
+    width: auto;
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+
+  .hero__visual {
+    margin-top: 4px;
   }
 
   .hero__card {
     padding: 24px 20px;
   }
 
-  .hero__actions {
-    flex-direction: column;
-    width: 100%;
+  .hero__card--media {
+    padding: 0;
+    background: transparent;
+    border: none;
+    backdrop-filter: none;
+    box-shadow: none;
   }
 
-  .hero__actions .btn {
-    width: 100%;
-    text-align: center;
+  .hero__card--media > p {
+    display: none;
+  }
+
+  .hero__media-img {
+    margin-bottom: 0;
+    border-radius: var(--radius);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22);
+  }
+
+  /* آمار در trust-bar نمایش داده می‌شود — تکرار در کارت hero حذف */
+  .hero__stats {
+    display: none;
+  }
+
+  .landing-hero {
+    padding-bottom: 12px;
+  }
+
+  .trust-bar {
+    margin-top: -18px;
+    padding-bottom: var(--space-4);
+  }
+
+  .trust-bar__grid {
+    padding: var(--space-4) var(--space-3);
+    gap: var(--space-2);
+  }
+
+  .trust-bar__value {
+    font-size: 1.35rem;
+  }
+
+  .trust-bar__label {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .products-grid,
+  .industrial-grid,
+  .testimonials-grid,
+  .blog-grid,
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-item {
+    padding: 16px 14px;
+    text-align: start;
+  }
+
+  .feature-item__icon {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+
+  .feature-item h3 {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .feature-item p {
+    font-size: 12px;
+    line-height: 1.45;
   }
 
   .hero__actions--center {
@@ -144,6 +249,8 @@
   .fast-promo {
     padding: 28px 20px;
     text-align: center;
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .fast-promo .btn {
@@ -166,8 +273,27 @@
     padding: 24px 18px;
   }
 
+  .contact-info {
+    padding: 22px 18px;
+  }
+
   .contact-info h2 {
     font-size: 1.25rem;
+    margin-bottom: 20px;
+  }
+
+  .contact-info__item {
+    margin-bottom: 18px;
+  }
+
+  .contact-info__phone-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .contact-info__phone-sep {
+    display: none;
   }
 
   .form-group input,
@@ -271,19 +397,6 @@
     align-items: flex-start;
   }
 
-  .hero__stats {
-    grid-template-columns: 1fr;
-  }
-
-  .features-grid,
-  .products-grid,
-  .industrial-grid,
-  .testimonials-grid,
-  .blog-grid,
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
-
   .industrial-cta-bar {
     flex-direction: column;
     align-items: stretch;
@@ -333,24 +446,18 @@
   }
 
   .contact-map img {
-    max-height: 220px;
+    max-height: 240px;
     object-fit: cover;
+    object-position: center;
     width: 100%;
+  }
+
+  .contact-map__text {
+    order: -1;
   }
 
   .footer__grid {
     grid-template-columns: 1fr;
-  }
-
-  .trust-bar {
-    margin-top: 0;
-    padding-bottom: 0;
-  }
-
-  .trust-bar__grid {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-3);
-    padding: var(--space-4);
   }
 
   .trust-bar__item::after {
@@ -381,15 +488,28 @@
   }
 
   .hero__title {
-    font-size: 1.65rem;
-  }
-
-  .hero__stats {
-    gap: 12px;
-  }
-
-  .stat__number {
     font-size: 1.5rem;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+  }
+
+  .hero__actions .btn {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .trust-bar__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .feature-item {
+    padding: 14px 12px;
+  }
+
+  .feature-item h3 {
+    font-size: 13px;
   }
 
   .section__title {
@@ -510,7 +630,7 @@
 .btn--block { width: 100%; text-align: center; }
 .footer__logo-img {
   height: 36px;
-  filter: brightness(0) invert(1);
+  width: auto;
 }
 .footer__logo-img--sm {
   height: 28px;

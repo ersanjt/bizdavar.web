@@ -5,6 +5,6 @@ deployment:
   tasks:
     - export DEPLOYPATH=${DEPLOYPATH:-$HOME/public_html}
     - /bin/mkdir -p $DEPLOYPATH/assets $DEPLOYPATH/pages
-    - /bin/cp -f index.html robots.txt sitemap.xml $DEPLOYPATH/
+    - /bin/cp -f index.html robots.txt sitemap.xml .htaccess $DEPLOYPATH/
     - /bin/cp -a assets $DEPLOYPATH/
     - /bin/cp -a pages $DEPLOYPATH/

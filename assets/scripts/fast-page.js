@@ -2,7 +2,7 @@
  * Fast Web Studio landing page
  */
 (function () {
-  const F = window.FAST_CATALOG;
+  let F = window.FAST_CATALOG;
   const C = window.BIZDAVAR_CONFIG;
   if (!F || !C) return;
 
@@ -10,6 +10,12 @@
   const R = C.routes || {};
   const ic = (name, opts) => (window.BD_ICON ? window.BD_ICON(name, opts) : '');
   const arrow = () => (window.BD_LINK_ARROW ? window.BD_LINK_ARROW() : ' ←');
+  const t = (key, fb) => (window.BIZDAVAR_I18N ? window.BIZDAVAR_I18N.t(key, fb) : (fb ?? key));
+  const ui = (key, fb) => t(`fastPage.ui.${key}`, fb);
+
+  function netinodeUrl() {
+    return (C.partners && C.partners.netinode && C.partners.netinode.url) || 'https://netinode.net/';
+  }
 
   function planMessage(planId) {
     return (C.fast && C.fast.planMessages && C.fast.planMessages[planId]) || `سلام، می‌خوام پلن ${planId} Fast Web Studio سفارش بدم`;
@@ -46,13 +52,13 @@
         <p class="fast-hero__subtitle">${b.subtitle}</p>
         <p class="fast-hero__desc">${b.description}</p>
         <div class="fast-hero__stats">
-          <div class="fast-hero__stat"><strong>۵ روز</strong><span>تحویل استاندارد</span></div>
-          <div class="fast-hero__stat"><strong>$99</strong><span>شروع قیمت</span></div>
-          <div class="fast-hero__stat"><strong>۱۰۰+</strong><span>پروژه بیزدوار</span></div>
+          <div class="fast-hero__stat"><strong>${ui('statDays', '۵ روز')}</strong><span>${ui('statDaysLabel', 'تحویل استاندارد')}</span></div>
+          <div class="fast-hero__stat"><strong>${ui('statPrice', '$99')}</strong><span>${ui('statPriceLabel', 'شروع قیمت')}</span></div>
+          <div class="fast-hero__stat"><strong>${ui('statProjects', '۱۰۰+')}</strong><span>${ui('statProjectsLabel', 'پروژه بیزدوار')}</span></div>
         </div>
         <div class="fast-hero__actions">
-          <a href="#fast-plans" class="btn btn--blue">مشاهده پلن‌ها</a>
-          <a href="${whatsappHref('pro')}" class="btn btn--yellow fast-wa-cta" data-plan="pro">مشاوره در واتساپ</a>
+          <a href="#fast-plans" class="btn btn--blue">${ui('viewPlans', 'مشاهده پلن‌ها')}</a>
+          <a href="${whatsappHref('pro')}" class="btn btn--yellow fast-wa-cta" data-plan="pro">${ui('consultWa', 'مشاوره در واتساپ')}</a>
         </div>
       </div>
       <div class="fast-hero__visual" aria-hidden="true">
@@ -88,15 +94,32 @@
       </div>`;
   }
 
+  function renderHostingBar() {
+    const el = document.getElementById('fastHostingBar');
+    if (!el) return;
+    const note = window.BIZDAVAR_I18N?.raw('fastPage.hostingNote');
+    if (!note) return;
+    const url = netinodeUrl();
+    el.innerHTML = `
+      <div class="container fast-hosting-bar__inner">
+        <div class="fast-hosting-bar__text">
+          <strong>${note.title}</strong>
+          <p>${note.text}</p>
+        </div>
+        <a href="${url}" class="btn btn--yellow fast-hosting-bar__cta" target="_blank" rel="noopener noreferrer">${note.cta}</a>
+      </div>`;
+  }
+
   function renderNav() {
     const el = document.getElementById('fastNav');
     if (!el) return;
+    el.setAttribute('aria-label', ui('navAria', 'بخش‌های Fast Web Studio'));
     const links = [
-      { id: 'fast-plans', label: 'پلن‌ها', icon: 'coin' },
-      { id: 'fast-compare', label: 'مقایسه', icon: 'list' },
-      { id: 'fast-timeline', label: 'مسیر ۵ روزه', icon: 'bolt' },
-      { id: 'fast-showcase', label: 'نمونه‌کارها', icon: 'briefcase' },
-      { id: 'fast-faq', label: 'سوالات', icon: 'info' }
+      { id: 'fast-plans', label: ui('navPlans', 'پلن‌ها'), icon: 'coin' },
+      { id: 'fast-compare', label: ui('navCompare', 'مقایسه'), icon: 'list' },
+      { id: 'fast-timeline', label: ui('navTimeline', 'مسیر ۵ روزه'), icon: 'bolt' },
+      { id: 'fast-showcase', label: ui('navShowcase', 'نمونه‌کارها'), icon: 'briefcase' },
+      { id: 'fast-faq', label: ui('navFaq', 'سوالات'), icon: 'info' }
     ];
     el.innerHTML = links.map((l, i) =>
       `<a href="#${l.id}" class="fast-nav__item${i === 0 ? ' active' : ''}">${ic(l.icon, { size: 16 })} ${l.label}</a>`
@@ -121,14 +144,14 @@
         <div class="fast-plan-card__price">
           <span class="fast-plan-card__old">$${p.oldPrice}</span>
           <span class="fast-plan-card__current">$${p.price}</span>
-          <span class="fast-plan-card__period">پرداخت یک‌باره</span>
+          <span class="fast-plan-card__period">${ui('oneTime', 'پرداخت یک‌باره')}</span>
         </div>
         <ul class="fast-plan-card__features">
           ${p.features.map(f => `<li>${f}</li>`).join('')}
         </ul>
         <footer class="fast-plan-card__foot">
-          <a href="${whatsappHref(p.id)}" class="btn ${planBtnClass(p.accent)} fast-plan-order" data-plan="${p.id}">سفارش در واتساپ</a>
-          <a href="${contactUrl(p.id)}" class="fast-plan-contact">یا فرم تماس${arrow()}</a>
+          <a href="${whatsappHref(p.id)}" class="btn ${planBtnClass(p.accent)} fast-plan-order" data-plan="${p.id}">${ui('orderWa', 'سفارش در واتساپ')}</a>
+          <a href="${contactUrl(p.id)}" class="fast-plan-contact">${ui('orContact', 'یا فرم تماس')}${arrow()}</a>
         </footer>
       </article>
     `).join('');
@@ -147,10 +170,10 @@
       <table class="fast-compare">
         <thead>
           <tr>
-            <th scope="col">امکانات</th>
-            <th scope="col">پایه</th>
-            <th scope="col">فروشگاهی</th>
-            <th scope="col">حرفه‌ای</th>
+            <th scope="col">${ui('compareFeature', 'امکانات')}</th>
+            <th scope="col">${ui('compareBasic', 'پایه')}</th>
+            <th scope="col">${ui('compareStore', 'فروشگاهی')}</th>
+            <th scope="col">${ui('comparePro', 'حرفه‌ای')}</th>
           </tr>
         </thead>
         <tbody>
@@ -200,7 +223,7 @@
         <a href="${url}" class="fast-showcase-card"${ext ? ' target="_blank" rel="noopener noreferrer"' : ''}>
           <span class="fast-showcase-card__cat">${s.category}</span>
           <strong>${s.name}</strong>
-          <span class="fast-showcase-card__link">مشاهده${arrow()}</span>
+          <span class="fast-showcase-card__link">${ui('viewCase', 'مشاهده')}${arrow()}</span>
         </a>`;
     }).join('');
   }
@@ -267,8 +290,10 @@
   }
 
   window.initFastPage = function () {
+    F = (window.BIZDAVAR_I18N && window.BIZDAVAR_I18N.getFastCatalog) ? window.BIZDAVAR_I18N.getFastCatalog() : window.FAST_CATALOG;
     renderHero();
     renderTrustBar();
+    renderHostingBar();
     renderNav();
     renderPlans();
     renderCompare();

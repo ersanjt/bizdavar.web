@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="Teraoka Seiko electronic retail scale and label printer">
+  <defs>
+    <linearGradient id="tbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f2f6fc"/>
+      <stop offset="100%" stop-color="#e3ecfa"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#tbg)"/>
+  <text x="400" y="56" fill="#003da5" font-family="Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle">Teraoka Seiko — Scales &amp; Labeling</text>
+  <rect x="100" y="110" width="260" height="230" rx="14" fill="#fff" stroke="#003da5" stroke-width="3"/>
+  <rect x="130" y="150" width="200" height="70" rx="6" fill="#003da5"/>
+  <text x="230" y="195" fill="#fff" font-family="Arial,sans-serif" font-size="26" text-anchor="middle">¥1,280</text>
+  <rect x="130" y="240" width="60" height="34" rx="5" fill="#003da5"/>
+  <rect x="200" y="240" width="60" height="34" rx="5" fill="#16163f"/>
+  <rect x="270" y="240" width="60" height="34" rx="5" fill="#FFDE00"/>
+  <rect x="420" y="130" width="280" height="180" rx="12" fill="#fff" stroke="#16163f" stroke-width="2"/>
+  <rect x="450" y="160" width="220" height="24" rx="4" fill="#003da5" opacity="0.2"/>
+  <rect x="450" y="195" width="180" height="24" rx="4" fill="#003da5" opacity="0.15"/>
+  <rect x="450" y="230" width="200" height="24" rx="4" fill="#003da5" opacity="0.1"/>
+  <circle cx="620" cy="280" r="28" fill="#003da5"/>
+</svg>

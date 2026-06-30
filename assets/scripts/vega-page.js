@@ -2,17 +2,30 @@
  * VEGA Products Page — Iranian B2B buyer focus
  */
 (function () {
-  const V = window.VEGA_CATALOG;
-  if (!V) return;
+  if (!window.VEGA_CATALOG) return;
+
+  const catalog = () => (
+    window.BIZDAVAR_I18N?.getSupplyCatalog
+      ? window.BIZDAVAR_I18N.getSupplyCatalog('VEGA_CATALOG')
+      : window.VEGA_CATALOG
+  );
+  const t = (key, fb) => (window.BIZDAVAR_I18N ? window.BIZDAVAR_I18N.t(`supplyBrand.${key}`, fb) : fb);
+  const isFa = () => (window.BIZDAVAR_I18N?.locale || 'fa') === 'fa';
 
   const path = (p) => window.resolvePath(p);
   const R = window.BIZDAVAR_CONFIG?.routes || {};
   const ic = (name, opts) => (window.BD_ICON ? window.BD_ICON(name, opts) : '');
   const arrow = () => (window.BD_LINK_ARROW ? window.BD_LINK_ARROW() : ' ←');
 
+  function statValue(b, stat) {
+    if (stat.valueKey && b[stat.valueKey]) return b[stat.valueKey];
+    return stat.value || '';
+  }
+
   function inquiryUrl(productName) {
+    const V = catalog();
     const base = path(R.contact || 'pages/contact.html');
-    const tpl = (V.inquiryTemplate || 'استعلام {product}').replace('{product}', productName);
+    const tpl = (V.inquiryTemplate || t('inquiryTemplate', 'استعلام {product}')).replace('{product}', productName);
     return `${base}?service=industrial&product=${encodeURIComponent(productName)}&message=${encodeURIComponent(tpl)}`;
   }
 
@@ -24,45 +37,47 @@
   function renderHero() {
     const el = document.getElementById('vegaHeroContent');
     if (!el) return;
-    const b = V.brand;
+    const b = catalog().brand;
+    const stats = b.heroStats || [
+      { valueKey: 'founded', label: 'تجربه برند' },
+      { valueKey: 'origin', label: 'تولید آلمان' },
+      { value: '12+', label: 'تجربه بیزدوار' }
+    ];
 
     el.innerHTML = `
       <div class="vega-hero__content">
         <img class="vega-hero__logo" src="${path(b.logo)}" alt="VEGA — Home of Values" width="200" height="48" loading="eager">
-        <span class="vega-hero__claim">${b.heroClaim}</span>
+        <span class="vega-hero__claim">${b.heroClaim || 'HOME OF VALUES'}</span>
         <span class="vega-hero__eyebrow">${b.heroEyebrow}</span>
         <h1 class="vega-hero__title">${b.heroHeadline}</h1>
         <p class="vega-hero__subtitle">${b.heroHeadlineSub}</p>
-        <span class="vega-hero__badge">${b.taglineFa} — ${b.name}</span>
-        <p class="vega-hero__desc">${b.descriptionFa}</p>
-
+        <span class="vega-hero__badge">${b.tagline || b.taglineFa} — ${b.name}</span>
+        <p class="vega-hero__desc">${b.description || b.descriptionFa}</p>
         <div class="vega-hero__stats">
-          <div class="vega-hero__stat"><strong>${b.founded}</strong><span>تجربه برند</span></div>
-          <div class="vega-hero__stat"><strong>${b.origin}</strong><span>تولید آلمان</span></div>
-          <div class="vega-hero__stat"><strong>۱۲+ سال</strong><span>تجربه بیزدوار</span></div>
+          ${stats.map(s => `<div class="vega-hero__stat"><strong>${statValue(b, s)}</strong><span>${s.label}</span></div>`).join('')}
         </div>
-
         <div class="hero__actions mt-24">
-          <a href="${inquiryUrl('VEGA')}" class="btn btn--yellow">استعلام قیمت و تامین</a>
-          <a href="#vega-trust" class="btn btn--primary">چرا از بیزدوار بخرید؟</a>
+          <a href="${inquiryUrl('VEGA')}" class="btn btn--yellow">${t('inquiryCta', 'استعلام قیمت و تامین')}</a>
+          <a href="#vega-trust" class="btn btn--primary">${t('whyBuyCta', 'چرا از بیزدوار بخرید؟')}</a>
         </div>
       </div>
       <div class="vega-hero__visual">
-        <img src="${path(b.heroImage)}" alt="سنسورهای VEGA — ایمنی فرآیند صنعتی" width="520" height="400" loading="eager">
+        <img src="${path(b.heroImage)}" alt="VEGA process instrumentation" width="520" height="400" loading="eager">
       </div>`;
   }
 
   function renderTrustBar() {
+    const V = catalog();
     const el = document.getElementById('vegaTrustBar');
     if (!el || !V.trustSignals) return;
     el.innerHTML = `
       <div class="container vega-trust-bar__inner">
-        ${V.trustSignals.map(t => `
+        ${V.trustSignals.map(item => `
           <div class="vega-trust-item">
-            <span class="vega-trust-item__icon">${ic(t.icon, { size: 22 })}</span>
+            <span class="vega-trust-item__icon">${ic(item.icon, { size: 22 })}</span>
             <div>
-              <strong>${t.label}</strong>
-              <span>${t.desc}</span>
+              <strong>${item.label}</strong>
+              <span>${item.desc}</span>
             </div>
           </div>
         `).join('')}
@@ -85,14 +100,15 @@
   }
 
   function renderCatNav() {
+    const V = catalog();
     const el = document.getElementById('vegaCatNav');
     if (!el) return;
     const links = [
-      { id: 'trust', label: 'چرا بیزدوار', icon: 'target' },
-      { id: 'buy', label: 'مسیر خرید', icon: 'list' },
+      { id: 'trust', label: t('navTrust', 'چرا بیزدوار'), icon: 'target' },
+      { id: 'buy', label: t('navBuy', 'مسیر خرید'), icon: 'list' },
       ...V.categories.map(c => ({ id: c.id, label: c.title, icon: c.icon })),
-      { id: 'iran', label: 'صنایع ایران', icon: 'factory' },
-      { id: 'faq', label: 'سوالات', icon: 'info' }
+      { id: 'iran', label: t('navIran', 'صنایع ایران'), icon: 'factory' },
+      { id: 'faq', label: t('navFaq', 'سوالات'), icon: 'info' }
     ];
     el.innerHTML = links.map((c, i) =>
       `<a href="${navHref(c.id)}" class="vega-cat-nav__item${i === 0 ? ' active' : ''}">${ic(c.icon, { size: 18 })} ${c.label}</a>`
@@ -100,6 +116,7 @@
   }
 
   function renderWhyBuy() {
+    const V = catalog();
     const el = document.getElementById('vegaWhyGrid');
     if (!el || !V.whyBuyFromUs) return;
     el.innerHTML = V.whyBuyFromUs.map(w => `
@@ -112,6 +129,7 @@
   }
 
   function renderPurchaseSteps() {
+    const V = catalog();
     const el = document.getElementById('vegaPurchaseSteps');
     if (!el || !V.purchaseSteps) return;
     el.innerHTML = V.purchaseSteps.map(s => `
@@ -124,20 +142,21 @@
   }
 
   function renderProducts() {
+    const V = catalog();
     const el = document.getElementById('vegaProductsGrid');
     if (!el) return;
 
     el.innerHTML = V.featuredProducts.map(p => `
       <article class="vega-product-card" id="vega-product-${p.id}">
         <div class="vega-product-card__media">
-          <img src="${path(p.image)}" alt="${p.name} — سنسور VEGA" width="200" height="200" loading="lazy">
+          <img src="${path(p.image)}" alt="${p.imageAlt || `${p.name} — VEGA`}" width="200" height="200" loading="lazy">
         </div>
         <div class="vega-product-card__body">
           <span class="vega-product-card__badge">${p.badge}</span>
           <div class="vega-product-card__series">${p.series}</div>
           <h2 class="vega-product-card__name">${p.name}</h2>
-          <p class="vega-product-card__summary">${p.summaryFa}</p>
-          ${p.useCaseFa ? `<p class="vega-product-card__usecase"><strong>کاربرد:</strong> ${p.useCaseFa}</p>` : ''}
+          <p class="vega-product-card__summary">${p.summary || p.summaryFa}</p>
+          ${(p.useCase || p.useCaseFa) ? `<p class="vega-product-card__usecase"><strong>${t('useCaseLabel', 'کاربرد:')}</strong> ${p.useCase || p.useCaseFa}</p>` : ''}
           <ul class="vega-product-card__features">
             ${p.features.map(f => `<li>${f}</li>`).join('')}
           </ul>
@@ -145,8 +164,8 @@
             ${p.applications.map(a => `<span class="vega-product-card__tag">${a}</span>`).join('')}
           </div>
           <div class="vega-product-card__actions">
-            <a href="${inquiryUrl(p.name)}" class="btn btn--yellow vega-btn-inquiry">درخواست استعلام</a>
-            <a href="${p.officialRef}" class="vega-product-card__link" target="_blank" rel="noopener noreferrer">کاتالوگ رسمی${arrow()}</a>
+            <a href="${inquiryUrl(p.name)}" class="btn btn--yellow vega-btn-inquiry">${t('requestInquiry', 'درخواست استعلام')}</a>
+            <a href="${p.officialRef}" class="vega-product-card__link" target="_blank" rel="noopener noreferrer">${t('officialCatalog', 'کاتالوگ رسمی')}${arrow()}</a>
           </div>
         </div>
       </article>
@@ -154,6 +173,7 @@
   }
 
   function renderIranIndustries() {
+    const V = catalog();
     const el = document.getElementById('vegaIranGrid');
     if (!el || !V.iranIndustries) return;
     el.innerHTML = V.iranIndustries.map(ind => `
@@ -171,6 +191,7 @@
   }
 
   function renderValueProps() {
+    const V = catalog();
     const el = document.getElementById('vegaValueGrid');
     if (!el) return;
     el.innerHTML = V.valueProps.map(v => `
@@ -179,7 +200,7 @@
           <img src="${path(v.image)}" alt="${v.titleEn}" width="320" height="180" loading="lazy">
         </div>
         <div class="vega-value-card__body">
-          <small class="vega-value-card__en" dir="ltr">${v.titleEn}</small>
+          <small class="vega-value-card__en" dir="ltr">${isFa() ? v.titleEn : ''}</small>
           <h3>${v.title}</h3>
           <p>${v.desc}</p>
         </div>
@@ -188,6 +209,7 @@
   }
 
   function renderIndustries() {
+    const V = catalog();
     const el = document.getElementById('vegaIndustriesGrid');
     if (!el) return;
     el.innerHTML = V.industries.map(ind => `
@@ -197,12 +219,13 @@
         </div>
         <span class="vega-industry-item__icon">${ic(ind.icon, { size: 20 })}</span>
         <strong>${ind.name}</strong>
-        <small dir="ltr">${ind.nameEn}</small>
+        <small dir="ltr">${isFa() ? ind.nameEn : ''}</small>
       </div>
     `).join('');
   }
 
   function renderPrinciples() {
+    const V = catalog();
     const el = document.getElementById('vegaPrinciplesGrid');
     if (!el) return;
     el.innerHTML = V.measuringPrinciples.map(p => `
@@ -214,17 +237,18 @@
   }
 
   function renderDigital() {
+    const V = catalog();
     const el = document.getElementById('vegaDigitalBlock');
     if (!el) return;
     const d = V.digitalServices;
     el.innerHTML = `
       <div class="vega-digital-block__visual">
-        <img src="${path(d.image)}" alt="پیکربندی سنسور VEGA" width="400" height="225" loading="lazy">
+        <img src="${path(d.image)}" alt="VEGA sensor configuration" width="400" height="225" loading="lazy">
       </div>
       <div class="vega-digital-block__content">
         <h3>${d.title}</h3>
-        <p>${d.descFa}</p>
-        <a href="${inquiryUrl('VEGA')}" class="btn btn--yellow mt-16">درخواست استعلام کد سفارش</a>
+        <p>${d.desc || d.descFa}</p>
+        <a href="${inquiryUrl('VEGA')}" class="btn btn--yellow mt-16">${t('orderCodeCta', 'درخواست استعلام کد سفارش')}</a>
       </div>
       <ul class="vega-digital-block__list">
         ${d.features.map(f => `<li>${f}</li>`).join('')}
@@ -232,6 +256,7 @@
   }
 
   function renderSupply() {
+    const V = catalog();
     const el = document.getElementById('vegaSupplyList');
     if (!el) return;
     el.innerHTML = V.bizdavarServices.map(s => `
@@ -243,6 +268,7 @@
   }
 
   function renderFaq() {
+    const V = catalog();
     const el = document.getElementById('vegaFaq');
     if (!el || !V.faq) return;
     el.innerHTML = V.faq.map((item, i) => `
@@ -254,6 +280,7 @@
   }
 
   function setupCtas() {
+    const V = catalog();
     const msg = (V.inquiryTemplate || '').replace('{product}', 'VEGA');
     const wa = document.getElementById('vegaCtaWhatsapp');
     if (wa) {
@@ -300,13 +327,14 @@
 
   window.injectJsonLdProductList = function () {
     const C = window.BIZDAVAR_CONFIG;
+    const V = catalog();
     if (!C || !V.featuredProducts) return;
 
     const ld = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       name: 'تامین سنسورهای VEGA — بیزدوار گروپ',
-      description: V.brand.descriptionFa,
+      description: V.brand.description || V.brand.descriptionFa,
       numberOfItems: V.featuredProducts.length,
       itemListElement: V.featuredProducts.map((p, i) => ({
         '@type': 'ListItem',
@@ -314,7 +342,7 @@
         item: {
           '@type': 'Product',
           name: p.name,
-          description: p.summaryFa,
+          description: p.summary || p.summaryFa,
           image: `${C.baseUrl}/${p.image}`,
           brand: { '@type': 'Brand', name: 'VEGA' },
           category: p.series,

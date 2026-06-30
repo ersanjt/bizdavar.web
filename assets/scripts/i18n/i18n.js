@@ -69,8 +69,15 @@
       return key;
     },
 
+    raw(key) {
+      const val = getByPath(this.dict, key);
+      if (val !== undefined && val !== null) return val;
+      const fa = window.BIZDAVAR_LOCALES?.fa;
+      return getByPath(fa, key);
+    },
+
     getGeo() {
-      const hubs = this.t('geo.hubs', null);
+      const hubs = this.raw('geo.hubs');
       return {
         summaryFa: this.t('geo.summary'),
         hubs: Array.isArray(hubs) ? hubs : (window.BIZDAVAR_CONFIG?.geo?.hubs || [])
@@ -78,18 +85,155 @@
     },
 
     getTrustMetrics() {
-      return this.t('trustMetrics', window.BIZDAVAR_CONFIG?.trustMetrics || []);
+      const v = this.raw('trustMetrics');
+      return Array.isArray(v) ? v : (window.BIZDAVAR_CONFIG?.trustMetrics || []);
     },
 
     getProcessSteps() {
-      return this.t('processSteps', window.BIZDAVAR_CONFIG?.processSteps || []);
+      const v = this.raw('processSteps');
+      return Array.isArray(v) ? v : (window.BIZDAVAR_CONFIG?.processSteps || []);
     },
 
     getIndustrialProducts() {
       const base = window.BIZDAVAR_CONFIG?.industrialProducts || [];
-      const localized = this.t('industrial.products', null);
+      const localized = this.raw('industrial.products');
       if (!Array.isArray(localized)) return base;
-      return base.map((p, i) => ({ ...p, ...(localized[i] || {}) }));
+      const map = Object.fromEntries(localized.filter(p => p && p.name).map(p => [p.name, p]));
+      return base.map(p => ({ ...p, ...(map[p.name] || {}) }));
+    },
+
+    mergeLocalizedList(key, base) {
+      const localized = this.raw(key);
+      if (!Array.isArray(localized)) return base || [];
+      return (base || []).map((item, i) => ({ ...item, ...(localized[i] || {}) }));
+    },
+
+    getBlogPosts() {
+      return this.mergeLocalizedList('blogPosts', window.BIZDAVAR_CONFIG?.blogPosts || []);
+    },
+
+    getPortfolioItems() {
+      const base = window.BIZDAVAR_CONFIG?.portfolio || [];
+      const localized = this.raw('portfolioMeta');
+      if (!localized || typeof localized !== 'object' || Array.isArray(localized)) {
+        return this.mergeLocalizedList('portfolioMeta', base);
+      }
+      return base.map(p => ({ ...p, ...(localized[p.name] || {}) }));
+    },
+
+    getServicesPageCards() {
+      return this.raw('servicesPage.cards');
+    },
+
+    getFastCatalog() {
+      const base = window.FAST_CATALOG || {};
+      return {
+        ...base,
+        brand: { ...(base.brand || {}), ...(this.raw('fastCatalog.brand') || {}) },
+        trustSignals: this.mergeLocalizedList('fastCatalog.trustSignals', base.trustSignals || []),
+        plans: this.mergeLocalizedList('fastCatalog.plans', base.plans || []),
+        compareRows: this.mergeLocalizedList('fastCatalog.compareRows', base.compareRows || []),
+        timeline: this.mergeLocalizedList('fastCatalog.timeline', base.timeline || []),
+        whyChoose: this.mergeLocalizedList('fastCatalog.whyChoose', base.whyChoose || []),
+        showcases: this.mergeLocalizedList('fastCatalog.showcases', base.showcases || []),
+        faq: this.mergeLocalizedList('fastCatalog.faq', base.faq || [])
+      };
+    },
+
+    getSupplyCatalog(catalogKey) {
+      const keyMap = {
+        GAMAK_CATALOG: 'gamakCatalog',
+        DIGI_SYSTEM_CATALOG: 'digiSystemCatalog',
+        TERAOKA_CATALOG: 'teraokaCatalog',
+        TELTONIKA_CATALOG: 'teltonikaCatalog',
+        VEGA_CATALOG: 'vegaCatalog',
+        PROSENSE_CATALOG: 'prosenseCatalog'
+      };
+      const i18nKey = keyMap[catalogKey];
+      const base = window[catalogKey] || {};
+      if (!i18nKey) return this.normalizeSupplyCatalog(base);
+
+      const brandOverlay = this.raw(`${i18nKey}.brand`) || {};
+      const academyBase = base.academy || {};
+      const academyOverlay = this.raw(`${i18nKey}.academy`) || {};
+
+      let result = this.normalizeSupplyCatalog({
+        ...base,
+        brand: { ...(base.brand || {}), ...brandOverlay },
+        trustSignals: this.mergeLocalizedList(`${i18nKey}.trustSignals`, base.trustSignals || []),
+        whyBuyFromUs: this.mergeLocalizedList(`${i18nKey}.whyBuyFromUs`, base.whyBuyFromUs || []),
+        purchaseSteps: this.mergeLocalizedList(`${i18nKey}.purchaseSteps`, base.purchaseSteps || []),
+        highlights: this.mergeLocalizedList(`${i18nKey}.highlights`, base.highlights || []),
+        categories: this.mergeLocalizedList(`${i18nKey}.categories`, base.categories || []),
+        iranIndustries: this.mergeLocalizedList(`${i18nKey}.iranIndustries`, base.iranIndustries || []),
+        industries: this.mergeLocalizedList(`${i18nKey}.industries`, base.industries || []),
+        services: this.mergeLocalizedList(`${i18nKey}.services`, base.services || []),
+        faq: this.mergeLocalizedList(`${i18nKey}.faq`, base.faq || []),
+        academy: {
+          ...academyBase,
+          ...academyOverlay,
+          topics: Array.isArray(academyOverlay.topics)
+            ? academyOverlay.topics
+            : (academyBase.topics || [])
+        },
+        inquiryTemplate: this.t(`${i18nKey}.inquiryTemplate`, base.inquiryTemplate)
+      });
+
+      if (catalogKey === 'VEGA_CATALOG') {
+        const fpBase = base.featuredProducts || [];
+        const fpLoc = this.raw(`${i18nKey}.featuredProducts`);
+        const ds = base.digitalServices || {};
+        const dsLoc = this.raw(`${i18nKey}.digitalServices`) || {};
+        result = {
+          ...result,
+          featuredProducts: fpBase.map((item, i) => {
+            const loc = Array.isArray(fpLoc) ? fpLoc[i] || {} : {};
+            return {
+              ...item,
+              ...loc,
+              summary: loc.summary || item.summaryFa,
+              useCase: loc.useCase || item.useCaseFa,
+              features: Array.isArray(loc.features) ? loc.features : item.features,
+              applications: Array.isArray(loc.applications) ? loc.applications : item.applications,
+              badge: loc.badge != null && loc.badge !== '' ? loc.badge : item.badge
+            };
+          }),
+          valueProps: this.mergeLocalizedList(`${i18nKey}.valueProps`, base.valueProps || []),
+          measuringPrinciples: this.mergeLocalizedList(`${i18nKey}.measuringPrinciples`, base.measuringPrinciples || []),
+          bizdavarServices: this.mergeLocalizedList(`${i18nKey}.bizdavarServices`, base.bizdavarServices || []),
+          digitalServices: {
+            ...ds,
+            ...dsLoc,
+            desc: dsLoc.desc || ds.desc || ds.descFa
+          }
+        };
+      }
+
+      return result;
+    },
+
+    normalizeSupplyCatalog(cat) {
+      if (!cat || typeof cat !== 'object') return cat;
+      const b = cat.brand || {};
+      const a = cat.academy;
+      return {
+        ...cat,
+        brand: {
+          ...b,
+          tagline: b.tagline || b.taglineFa,
+          description: b.description || b.descriptionFa
+        },
+        highlights: (cat.highlights || []).map(h => ({
+          ...h,
+          useCase: h.useCase || h.useCaseFa
+        })),
+        academy: a ? { ...a, desc: a.desc || a.descFa } : a,
+        featuredProducts: (cat.featuredProducts || []).map(p => ({
+          ...p,
+          summary: p.summary || p.summaryFa,
+          useCase: p.useCase || p.useCaseFa
+        }))
+      };
     },
 
     getFastPlanMessages() {
@@ -105,8 +249,10 @@
       if (!d) return;
       document.documentElement.lang = d.lang;
       document.documentElement.dir = d.dir;
+      document.body.dir = d.dir;
       document.body.classList.toggle('is-ltr', d.dir === 'ltr');
       document.body.classList.toggle('is-rtl', d.dir === 'rtl');
+      document.documentElement.classList.toggle('is-ltr-locale', d.dir === 'ltr');
     },
 
     applyDataI18n() {
@@ -130,6 +276,11 @@
         const val = this.t(key);
         if (val) el.setAttribute('aria-label', val);
       });
+      document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+        const key = el.getAttribute('data-i18n-alt');
+        const val = this.t(key);
+        if (val && val !== key) el.alt = val;
+      });
       const skip = document.querySelector('.skip-link');
       if (skip) skip.textContent = this.t('common.skipLink');
       const btt = document.getElementById('backToTop');
@@ -138,11 +289,26 @@
 
     applyHomeFaqs() {
       const el = document.getElementById('homeFaqGrid');
-      const faqs = this.t('home.faqs', null);
+      const faqs = this.raw('home.faqs');
       if (!el || !Array.isArray(faqs)) return;
+      const dir = this.dict?.dir || 'rtl';
       el.innerHTML = faqs.map(item => `
-        <details class="faq-item"><summary>${item.q}</summary><p>${item.a}</p></details>
+        <details class="faq-item" dir="${dir}">
+          <summary dir="${dir}">${item.q}</summary>
+          <p dir="${dir}">${item.a}</p>
+        </details>
       `).join('');
+    },
+
+    applyAboutHeroImage() {
+      const file = this.raw('home.aboutHeroImage') || 'assets/images/content/about-hero.svg';
+      const alt = this.t('home.aboutHeroAlt', 'Bizdavar Group');
+      const depth = parseInt(document.body.dataset.depth || '0', 10);
+      const prefix = depth ? '../'.repeat(depth) : '';
+      document.querySelectorAll('img[src*="about-hero"]').forEach(img => {
+        img.src = prefix + file;
+        if (alt) img.alt = alt;
+      });
     },
 
     pageCrumb(pageKey, fallback) {
@@ -208,7 +374,7 @@
         const note = document.getElementById('privacy-note');
         if (note && p.formNote) note.textContent = p.formNote;
         const success = document.getElementById('formSuccess');
-        if (success && p.formSuccess) success.textContent = p.formSuccess;
+        if (success && success.hidden && p.formSuccessMailto) success.textContent = p.formSuccessMailto;
       }
 
       const waTr = document.getElementById('whatsappBtnTr');
@@ -246,6 +412,9 @@
     },
 
   async resolveLocale() {
+      if (document.body?.dataset?.page === 'article') {
+        return 'fa';
+      }
       const params = new URLSearchParams(window.location.search);
       if (params.get('lang') && window.BIZDAVAR_LOCALES[params.get('lang')]) {
         localStorage.setItem(STORAGE_KEY, params.get('lang'));
@@ -264,6 +433,7 @@
     },
 
     setLocale(lang) {
+      if (document.body?.dataset?.page === 'article') return;
       if (!window.BIZDAVAR_LOCALES[lang]) return;
       localStorage.setItem(STORAGE_KEY, lang);
       localStorage.setItem(MANUAL_KEY, '1');
@@ -284,7 +454,9 @@
     const qLang = params.get('lang');
     const stored = localStorage.getItem(STORAGE_KEY);
     const manual = localStorage.getItem(MANUAL_KEY) === '1';
-    const pre = (qLang && window.BIZDAVAR_LOCALES[qLang]) ? qLang
+    const articlePage = document.body?.dataset?.page === 'article';
+    const pre = articlePage ? 'fa'
+      : (qLang && window.BIZDAVAR_LOCALES[qLang]) ? qLang
       : (manual && stored && window.BIZDAVAR_LOCALES[stored]) ? stored : null;
     if (pre) applyLocaleData(pre);
   })();

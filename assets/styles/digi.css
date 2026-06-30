@@ -1,0 +1,19 @@
+/**
+ * digi brand accent overrides
+ */
+body[data-page="digiSystem"] {
+  --brand-accent: #c8102e;
+  --brand-accent-dark: #9a0c24;
+  --brand-surface: #fdf5f6;
+}
+
+body[data-page="digiSystem"] .digi-hero {
+  background: #fdf5f6;
+  border-bottom-color: #c8102e;
+}
+
+body[data-page="digiSystem"] .digi-hero::before {
+  background:
+    linear-gradient(105deg, rgba(244, 249, 250, 0.97) 42%, rgba(244, 249, 250, 0.55) 68%, rgba(244, 249, 250, 0.2) 100%),
+    url('../images/digi-system/hero/digi-retail-hero.webp') center right / cover no-repeat;
+}

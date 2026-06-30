@@ -1,6 +1,95 @@
 /**
- * Bizdavar — Typography assets
- * Estedad (عناوین) + Vazirmatn (متن) — فونت‌های فارسی مدرن و پویا
+ * Bizdavar — Typography assets (self-hosted)
+ * Estedad (display) + Vazirmatn (body) · Inter (LTR locales)
+ * Vazirmatn: rastikerdar/vazirmatn v33.003 (OFL)
+ * Estedad: fontsource @5.2.1 arabic subset (OFL)
+ * Inter: fontsource @5.0.16 latin subset (OFL)
  */
-@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
-@import url('https://cdn.jsdelivr.net/gh/rastikerdar/estedad@v7.3/Estedad-font-face.css');
+
+@font-face {
+  font-family: Inter;
+  src: url('../fonts/inter/Inter-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url('../fonts/inter/Inter-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url('../fonts/inter/Inter-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url('../fonts/inter/Inter-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Vazirmatn;
+  src: url('../fonts/vazirmatn/Vazirmatn-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Vazirmatn;
+  src: url('../fonts/vazirmatn/Vazirmatn-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Vazirmatn;
+  src: url('../fonts/vazirmatn/Vazirmatn-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Estedad;
+  src: url('../fonts/estedad/Estedad-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Estedad;
+  src: url('../fonts/estedad/Estedad-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Estedad;
+  src: url('../fonts/estedad/Estedad-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Estedad;
+  src: url('../fonts/estedad/Estedad-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}

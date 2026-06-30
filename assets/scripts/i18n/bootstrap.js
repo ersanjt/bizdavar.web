@@ -42,6 +42,14 @@
 
     'initProsensePage',
 
+    'initTeltonikaPage',
+
+    'initGamakPage',
+
+    'initDigiSystemPage',
+
+    'initTeraokaPage',
+
     'initServicesPage',
 
     'initPortfolioPage',
@@ -74,7 +82,15 @@
 
     'injectJsonLdProductList',
 
-    'injectProsenseSchema'
+    'injectProsenseSchema',
+
+    'injectTeltonikaSchema',
+
+    'injectGamakSchema',
+
+    'injectDigiSystemSchema',
+
+    'injectTeraokaSchema'
 
   ];
 
@@ -89,6 +105,12 @@
     window.BIZDAVAR_I18N.applyContactPage();
 
     window.BIZDAVAR_I18N.applyHomeFaqs();
+
+    window.BIZDAVAR_I18N.applyAboutHeroImage();
+
+    if (typeof window.applyPageI18n === 'function') {
+      window.applyPageI18n();
+    }
   }
 
 
@@ -103,7 +125,11 @@
 
       const wrapped = function (...args) {
 
-        return window.bizdavarReady.then(() => orig.apply(this, args));
+        return window.bizdavarReady.then(() => {
+          const result = orig.apply(this, args);
+          afterLocale();
+          return result;
+        });
 
       };
 
