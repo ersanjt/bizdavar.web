@@ -6,7 +6,7 @@ window.VEGA_CATALOG = {
     name: 'VEGA',
     nameFa: 'وگا',
     logo: 'assets/images/vega/vega-logo.svg',
-    heroImage: 'assets/images/vega/slides/value-process-safety.jpg',
+    heroImage: 'assets/images/vega/vega-logo.svg',
     heroClaim: 'HOME OF VALUES',
     heroEyebrow: 'تامین رسمی برای پروژه‌های صنعتی ایران',
     heroHeadline: 'سنسورهای VEGA — تامین اصل با مشاوره فنی فارسی',
@@ -64,12 +64,12 @@ window.VEGA_CATALOG = {
   ],
 
   iranIndustries: [
-    { name: 'پالایش و پتروشیمی', desc: 'سنسور سطح و فشار برای مخازن، برج‌ها و خطوط لوله', image: 'assets/images/vega/industries/petrochemical.jpg', icon: 'factory' },
-    { name: 'آب و فاضلاب', desc: 'اندازه‌گیری سطح در تصفیه‌خانه و ایستگاه پمپاژ', image: 'assets/images/vega/industries/water.jpg', icon: 'droplet' },
-    { name: 'صنایع غذایی و دارویی', desc: 'سطح‌سنجی بهداشتی بدون تماس — مناسب CIP/SIP', image: 'assets/images/vega/industries/food.jpg', icon: 'utensils' },
-    { name: 'سیمان و معدن', desc: 'سوئیچ و سطح‌سنجی در سیلو و فرآیند مواد فله', image: 'assets/images/vega/industries/cement.jpg', icon: 'block' },
-    { name: 'نفت و گاز', desc: 'ابزار دقیق برای مخازن، جداکننده و فرآیندهای دریایی', image: 'assets/images/vega/industries/offshore.jpg', icon: 'barrel' },
-    { name: 'نیروگاه و انرژی', desc: 'کنترل سطح و فشار در بویلر، مخازن سوخت و HRSG', image: 'assets/images/vega/industries/energy.jpg', icon: 'bolt' }
+    { name: 'پالایش و پتروشیمی', desc: 'سنسور سطح و فشار برای مخازن، برج‌ها و خطوط لوله', image: 'assets/images/content/industrial-placeholder.svg', icon: 'factory' },
+    { name: 'آب و فاضلاب', desc: 'اندازه‌گیری سطح در تصفیه‌خانه و ایستگاه پمپاژ', image: 'assets/images/content/industrial-placeholder.svg', icon: 'droplet' },
+    { name: 'صنایع غذایی و دارویی', desc: 'سطح‌سنجی بهداشتی بدون تماس — مناسب CIP/SIP', image: 'assets/images/content/industrial-placeholder.svg', icon: 'utensils' },
+    { name: 'سیمان و معدن', desc: 'سوئیچ و سطح‌سنجی در سیلو و فرآیند مواد فله', image: 'assets/images/content/industrial-placeholder.svg', icon: 'block' },
+    { name: 'نفت و گاز', desc: 'ابزار دقیق برای مخازن، جداکننده و فرآیندهای دریایی', image: 'assets/images/content/industrial-placeholder.svg', icon: 'barrel' },
+    { name: 'نیروگاه و انرژی', desc: 'کنترل سطح و فشار در بویلر، مخازن سوخت و HRSG', image: 'assets/images/content/industrial-placeholder.svg', icon: 'bolt' }
   ],
 
   faq: [
@@ -113,7 +113,7 @@ window.VEGA_CATALOG = {
       name: 'VEGAPULS 6X',
       series: 'Pro — THE 6X®',
       category: 'level',
-      image: 'assets/images/vega/vegapuls-6x.png',
+      image: 'assets/images/vega/vegapuls-6x.svg',
       badge: 'پرچمدار',
       summaryFa: 'پرچمدار راداری سطح — برای مخازن بلند، دما/فشار بالا و فرآیندهای حساس. پرفروش‌ترین انتخاب برای پتروشیمی و پالایشگاه.',
       useCaseFa: 'مخازن ذخیره، برج تقطیر، سیلو مواد فله — جایی که دقت و پایداری سیگنال حیاتی است.',
@@ -132,7 +132,7 @@ window.VEGA_CATALOG = {
       name: 'VEGAPULS',
       series: 'Basic — Compact Radar',
       category: 'level',
-      image: 'assets/images/vega/vegapuls.png',
+      image: 'assets/images/vega/vegapuls.svg',
       badge: 'فشرده',
       summaryFa: 'رادار فشرده و اقتصادی — جایگزین مطمئن اولتراسونیک؛ مناسب ارتقای سیستم‌های قدیمی.',
       useCaseFa: 'مخازن کوچک و متوسط، آب، مواد شیمیایی — نصب ساده و نگهداری کم.',
@@ -151,7 +151,7 @@ window.VEGA_CATALOG = {
       name: 'VEGABAR',
       series: 'Basic — Pressure Switch',
       category: 'pressure',
-      image: 'assets/images/vega/vegabar.png',
+      image: 'assets/images/vega/vegabar.svg',
       badge: 'فشار',
       summaryFa: 'سوئیچ و ترانسمیتر فشار فشرده — کنترل فشار خطوط لوله و مخازن تحت فشار.',
       useCaseFa: 'خط لوله، مخزن تحت فشار، پمپ — جایی که فشار بحرانی باید کنترل شود.',
@@ -170,7 +170,7 @@ window.VEGA_CATALOG = {
       name: 'VEGAPOINT',
       series: 'Basic — Level Switch',
       category: 'point',
-      image: 'assets/images/vega/vegapoint.png',
+      image: 'assets/images/vega/vegapoint.svg',
       badge: 'سوئیچ',
       summaryFa: 'سوئیچ نقطه‌سطح — جلوگیری از سرریز یا خشک‌شدن پمپ؛ ایمنی فرآیند با سیگنال قطعی.',
       useCaseFa: 'مخازن ذخیره، سیلو، جداکننده — هشدار پر شدن یا خالی شدن مخزن.',
@@ -191,50 +191,50 @@ window.VEGA_CATALOG = {
       title: 'ایمنی فرآیند',
       titleEn: 'Point level detection. Process control.',
       desc: 'جلوگیری از سرریز یا خشک‌شدن مخزن با دقت مطلق — سوئیچ‌های سطح VEGA در هر شرایط سیگنال قابل اعتماد می‌دهند.',
-      image: 'assets/images/vega/slides/value-process-safety.jpg'
+      image: 'assets/images/content/industrial-placeholder.svg'
     },
     {
       title: 'فناوری پیشرفته',
       titleEn: 'Our answer: Yes!',
       desc: 'وقتی اندازه‌گیری شما حیاتی است، VEGA انتخاب درست است. فناوری سطح و فشار VEGA نه تنها پیشرفته است — استاندارد صنعت را تعیین می‌کند.',
-      image: 'assets/images/vega/slides/value-innovation.jpg'
+      image: 'assets/images/content/industrial-placeholder.svg'
     },
     {
       title: 'صنعت ۴.۰',
       titleEn: 'The way to a smart age',
       desc: 'صنعت ۴.۰ به راهکارهای هوشمند برای تحلیل بهینه داده سنسور نیاز دارد — و VEGA آن‌ها را ارائه می‌دهد.',
-      image: 'assets/images/vega/slides/value-digital.jpg'
+      image: 'assets/images/content/industrial-placeholder.svg'
     },
     {
       title: 'اقتصاد هیدروژن',
       titleEn: 'Sensors for the hydrogen economy',
       desc: 'سنسورهای VEGA مقدار و فشار صحیح را در تمام فرآیندهای هیدروژن تضمین می‌کنند.',
-      image: 'assets/images/vega/slides/value-hydrogen.jpg'
+      image: 'assets/images/content/industrial-placeholder.svg'
     }
   ],
 
   industries: [
-    { name: 'صنایع شیمیایی', nameEn: 'Chemical industry', icon: 'flask', image: 'assets/images/vega/industries/chemical.jpg' },
-    { name: 'صنایع غذایی', nameEn: 'Food industry', icon: 'utensils', image: 'assets/images/vega/industries/food.jpg' },
-    { name: 'داروسازی', nameEn: 'Pharmaceutical', icon: 'pill', image: 'assets/images/vega/industries/pharmaceutical.jpg' },
-    { name: 'آب و فاضلاب', nameEn: 'Water & wastewater', icon: 'droplet', image: 'assets/images/vega/industries/water.jpg' },
-    { name: 'آبزی‌پروری', nameEn: 'Aquaculture', icon: 'fish', image: 'assets/images/vega/industries/aquaculture.jpg' },
-    { name: 'مصالح ساختمانی', nameEn: 'Building materials', icon: 'crane', image: 'assets/images/vega/industries/building.jpg' },
-    { name: 'جذب کربن', nameEn: 'Carbon Capture', icon: 'leaf', image: 'assets/images/vega/industries/carbon-capture.png' },
-    { name: 'انرژی', nameEn: 'Energy', icon: 'bolt', image: 'assets/images/vega/industries/energy.jpg' },
-    { name: 'معدن و فلزات', nameEn: 'Mining & metals', icon: 'pickaxe', image: 'assets/images/vega/industries/mining.jpg' },
-    { name: 'نفت و گاز دریایی', nameEn: 'Oil & gas offshore', icon: 'barrel', image: 'assets/images/vega/industries/offshore.jpg' },
-    { name: 'صنایع کاغذ', nameEn: 'Paper industry', icon: 'document', image: 'assets/images/vega/industries/paper.jpg' },
-    { name: 'پالایش و پتروشیمی', nameEn: 'Refining & petrochemicals', icon: 'factory', image: 'assets/images/vega/industries/petrochemical.jpg' },
-    { name: 'کشتی‌سازی', nameEn: 'Ship & yacht building', icon: 'ship', image: 'assets/images/vega/industries/ship.jpg' },
-    { name: 'محیط‌زیست و بازیافت', nameEn: 'Environment & recycling', icon: 'recycle', image: 'assets/images/vega/industries/environment.jpg' },
-    { name: 'سیمان', nameEn: 'Cement', icon: 'block', image: 'assets/images/vega/industries/cement.jpg' }
+    { name: 'صنایع شیمیایی', nameEn: 'Chemical industry', icon: 'flask', image: 'assets/images/content/industrial-placeholder.svg' },
+    { name: 'صنایع غذایی', nameEn: 'Food industry', icon: 'utensils', image: 'assets/images/content/industrial-placeholder.svg' },
+    { name: 'داروسازی', nameEn: 'Pharmaceutical', icon: 'pill', image: 'assets/images/content/industrial-placeholder.svg' },
+    { name: 'آب و فاضلاب', nameEn: 'Water & wastewater', icon: 'droplet', image: 'assets/images/content/industrial-placeholder.svg' },
+    { name: 'آبزی‌پروری', nameEn: 'Aquaculture', icon: 'fish', image: 'assets/images/content/industrial-placeholder.svg' },
+    { name: 'مصالح ساختمانی', nameEn: 'Building materials', icon: 'crane', image: 'assets/images/content/industrial-placeholder.svg' },
+    { name: 'جذب کربن', nameEn: 'Carbon Capture', icon: 'leaf', image: 'assets/images/content/industrial-placeholder.svg' },
+    { name: 'انرژی', nameEn: 'Energy', icon: 'bolt', image: 'assets/images/content/industrial-placeholder.svg' },
+    { name: 'معدن و فلزات', nameEn: 'Mining & metals', icon: 'pickaxe', image: 'assets/images/content/industrial-placeholder.svg' },
+    { name: 'نفت و گاز دریایی', nameEn: 'Oil & gas offshore', icon: 'barrel', image: 'assets/images/content/industrial-placeholder.svg' },
+    { name: 'صنایع کاغذ', nameEn: 'Paper industry', icon: 'document', image: 'assets/images/content/industrial-placeholder.svg' },
+    { name: 'پالایش و پتروشیمی', nameEn: 'Refining & petrochemicals', icon: 'factory', image: 'assets/images/content/industrial-placeholder.svg' },
+    { name: 'کشتی‌سازی', nameEn: 'Ship & yacht building', icon: 'ship', image: 'assets/images/content/industrial-placeholder.svg' },
+    { name: 'محیط‌زیست و بازیافت', nameEn: 'Environment & recycling', icon: 'recycle', image: 'assets/images/content/industrial-placeholder.svg' },
+    { name: 'سیمان', nameEn: 'Cement', icon: 'block', image: 'assets/images/content/industrial-placeholder.svg' }
   ],
 
   digitalServices: {
     title: 'کد سفارش دقیق — بدون حدس و گمان',
     descFa: 'هر سنسور VEGA صدها پیکربندی دارد. ما بر اساس شرایط فرآیند شما، کد سفارش (Order Code) دقیق را استخراج و قیمت رسمی را استعلام می‌کنیم — شما فقط مدل نهایی و پیش‌فاکتور را می‌بینید.',
-    image: 'assets/images/vega/slides/value-digital.jpg',
+    image: 'assets/images/content/industrial-placeholder.svg',
     features: [
       'انتخاب مدل بر اساس شرایط واقعی فرآیند شما',
       'استخراج Order Code از کاتالوگ رسمی VEGA',

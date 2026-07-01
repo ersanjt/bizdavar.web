@@ -64,9 +64,9 @@
 
   const servicesRelatedLinks = {
     fa: [
-      { title: 'Fast Web Studio', url: 'fast.html', desc: 'طراحی سایت از $99' },
-      { title: 'نمونه‌کارها', url: 'portfolio.html', desc: '۳۵ پروژه و برند' },
-      { title: 'وبلاگ تخصصی', url: 'blog.html', desc: 'راهنما و مقالات' }
+      { title: 'Fast Web Studio', url: 'fast', desc: 'طراحی سایت از $99' },
+      { title: 'نمونه‌کارها', url: 'portfolio', desc: '۳۵ پروژه و برند' },
+      { title: 'وبلاگ تخصصی', url: 'blog', desc: 'راهنما و مقالات' }
     ],
     tr: [
       { title: 'Fast Web Studio', url: 'fast.html', desc: '$99\'dan web tasarım' },
@@ -82,9 +82,9 @@
 
   const portfolioRelatedLinks = {
     fa: [
-      { title: 'خدمات ما', url: 'services.html', desc: 'دیجیتال و صنعتی' },
-      { title: 'Fast Web Studio', url: 'fast.html', desc: 'طراحی سایت ۵ روزه' },
-      { title: 'تماس', url: 'contact.html', desc: 'شروع پروژه جدید' }
+      { title: 'خدمات ما', url: 'services', desc: 'دیجیتال و صنعتی' },
+      { title: 'Fast Web Studio', url: 'fast', desc: 'طراحی سایت ۵ روزه' },
+      { title: 'تماس', url: 'contact', desc: 'شروع پروژه جدید' }
     ],
     tr: [
       { title: 'Hizmetlerimiz', url: 'services.html', desc: 'Dijital ve endüstriyel' },

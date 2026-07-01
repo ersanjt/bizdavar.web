@@ -1,6 +1,6 @@
 # Missing assets audit
 
-Generated: 2026-06-30
+Generated: 2026-07-01
 
 Refresh: `node scripts/audit-assets.js`
 
@@ -8,11 +8,11 @@ Refresh: `node scripts/audit-assets.js`
 
 | Metric | Count |
 |--------|------:|
-| Image paths referenced in code | 98 |
-| Image files on disk | 142 |
+| Image paths referenced in code | 57 |
+| Image files on disk | 213 |
 | **Missing (all)** | **0** |
 | Missing partner logos | 0 |
-| Partner files on disk, unused in code | 17 |
+| Partner files on disk, unused in code | 18 |
 
 ## Missing — referenced in code but not on disk
 
@@ -26,13 +26,14 @@ _None._
 
 ### assets/images/partners/
 
-- `assets/images/partners/biztejarat.png`
+- `assets/images/partners/bear-event.png`
 - `assets/images/partners/bluenil-air.png`
 - `assets/images/partners/bluenil-air.svg`
 - `assets/images/partners/bridged3.png`
 - `assets/images/partners/cropped-bz-diamond-logo.png`
 - `assets/images/partners/desktop-logo.png`
 - `assets/images/partners/eh-hotel.png`
+- `assets/images/partners/fast-studio.png`
 - `assets/images/partners/footer-logo-2.png`
 - `assets/images/partners/header-logo-1.png`
 - `assets/images/partners/iban2iban.png`

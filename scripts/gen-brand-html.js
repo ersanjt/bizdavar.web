@@ -193,14 +193,14 @@ function brandHtml(b) {
       });
       renderSiteChrome();
       renderBreadcrumbs([
-        { page: 'home', url: 'index.html' },
-        { page: 'services', url: 'services.html#industrial' },
-        { page: '${b.brandCrumb}', url: '${b.file}' }
+        { page: 'home', url: 'index' },
+        { page: 'services', url: 'services#industrial' },
+        { page: '${b.brandCrumb}', url: '${b.file.replace('.html','')}' }
       ]);
       injectBreadcrumbSchema([
-        { page: 'home', url: 'index.html' },
-        { page: 'services', url: 'pages/services.html#industrial' },
-        { page: '${b.brandCrumb}', url: 'pages/${b.file}' }
+        { page: 'home', url: 'index' },
+        { page: 'services', url: 'pages/services#industrial' },
+        { page: '${b.brandCrumb}', url: 'pages/${b.file.replace('.html','')}' }
       ]);
       ${b.init}();
       ${b.schema}();
@@ -229,7 +229,7 @@ const brands = [
     seo: 'gamak',
     pageKey: 'gamakPage',
     brandCrumb: 'gamak',
-    canonical: 'https://bizdavar.com/pages/gamak.html',
+        canonical: 'https://bizdavar.com/pages/gamak',
     og: 'assets/images/gamak/hero/gamak-motor.webp',
     title: 'خرید الکتروموتور Gamak در ایران | IE2/IE3 — بیزدوار گروپ',
     navLabel: 'دسته‌بندی محصولات Gamak',
@@ -268,7 +268,7 @@ const brands = [
     seo: 'digiSystem',
     pageKey: 'digiSystemPage',
     brandCrumb: 'digiSystem',
-    canonical: 'https://bizdavar.com/pages/digi-system.html',
+    canonical: 'https://bizdavar.com/pages/digi-system',
     og: 'assets/images/partners/digi-system.svg',
     title: 'خرید Digi System | ترازو و POS — بیزدوار گروپ',
     navLabel: 'دسته‌بندی محصولات Digi System',
@@ -306,7 +306,7 @@ const brands = [
     seo: 'teraoka',
     pageKey: 'teraokaPage',
     brandCrumb: 'teraoka',
-    canonical: 'https://bizdavar.com/pages/teraoka.html',
+    canonical: 'https://bizdavar.com/pages/teraoka',
     og: 'assets/images/teraoka/products/luxeed-l-retail-scale.png',
     title: 'خرید Teraoka Seiko | ترازو و POS — بیزدوار گروپ',
     navLabel: 'دسته‌بندی محصولات Teraoka',

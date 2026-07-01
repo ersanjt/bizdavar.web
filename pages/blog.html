@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <script src="../assets/scripts/i18n/locale-preload.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>????? | ??????? ????</title>
+  <title>وبلاگ بیزدوار | بازاریابی دیجیتال، طراحی وب و تجهیزات صنعتی</title>
   <link rel="icon" href="../assets/images/brand/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../assets/images/brand/favicon.png" type="image/png" sizes="32x32">
   <link rel="icon" href="../assets/images/brand/favicon-16.png" type="image/png" sizes="16x16">
@@ -19,14 +19,15 @@
   <link rel="stylesheet" href="../assets/styles/footer.css">
   <link rel="stylesheet" href="../assets/styles/responsive.css">
   <link rel="stylesheet" href="../assets/styles/mobile-chrome.css">
+  <meta name="description" content="مقالات تخصصی بیزدوار گروپ: بازاریابی دیجیتال، Fast Web Studio، سنسورهای صنعتی VEGA و راهکارهای رشد کسب‌وکار.">
 </head>
 <body data-page="blog" data-depth="1">
 
   
-  <a href="#main-content" class="skip-link" data-i18n="common.skipLink">???? ?? ?????? ????</a>
+  <a href="#main-content" class="skip-link" data-i18n="common.skipLink">رفتن به محتوای اصلی</a>
 <div class="top-bar" id="topBar"></div>
   <header class="header" id="siteHeader"></header>
-  <nav class="breadcrumbs-wrap" id="breadcrumbs" aria-label="???? ????"></nav>
+  <nav class="breadcrumbs-wrap" id="breadcrumbs" aria-label="مسیر صفحه"></nav>
   <div class="overlay" id="overlay"></div>
 
   
@@ -34,9 +35,9 @@
 
 <section class="page-hero page-hero--pro">
     <div class="container">
-      <span class="section__tag" data-i18n="blogPage.hero.tag">?????</span>
-      <h1 data-i18n="blogPage.hero.title">????? ????? ??????? ? ????</h1>
-      <p data-i18n="blogPage.hero.desc">???????? ? ???? ??????? ?? ??? ??????? ????.</p>
+      <span class="section__tag" data-i18n="blogPage.hero.tag">وبلاگ</span>
+      <h1 data-i18n="blogPage.hero.title">مطالب تخصصی دیجیتال و صنعت</h1>
+      <p data-i18n="blogPage.hero.desc">راهنماها و نکات کاربردی از تیم بیزدوار گروپ.</p>
     </div>
   </section>
 
@@ -50,9 +51,9 @@
 
   <section class="section section--gray">
     <div class="container cta-banner">
-      <h2 data-i18n="blogPage.cta.title">???? ?? ?????? ????? ??????</h2>
-      <p data-i18n-html="blogPage.cta.desc">????? ???? ??? ?? ?? <a href="contact">??? ????</a> ??????? � ?????????.</p>
-      <a href="contact" class="btn btn--primary" data-i18n="blogPage.cta.btn">??????? ??????</a>
+      <h2 data-i18n="blogPage.cta.title">نیاز به مشاوره تخصصی دارید؟</h2>
+      <p data-i18n-html="blogPage.cta.desc">موضوع مطلب شما را در <a href="contact">فرم تماس</a> بنویسید — پاسخگوییم.</p>
+      <a href="contact" class="btn btn--primary" data-i18n="blogPage.cta.btn">درخواست مشاوره</a>
     </div>
   </section>
   </main>
@@ -60,7 +61,7 @@
 
 
   <footer class="footer" id="siteFooter"></footer>
-  <button class="back-to-top" id="backToTop" aria-label="?????? ?? ????">?</button>
+  <button class="back-to-top" id="backToTop" aria-label="بازگشت به بالا">?</button>
 
   <script src="../assets/scripts/config/paths.js"></script>
   <script src="../assets/scripts/config/site-config.js"></script>
@@ -79,8 +80,8 @@
   <script>
     bizdavarPageInit(function () {
       const crumbs = [
-            { page: 'home', url: 'index.html' },
-            { page: 'blog', url: 'blog.html' }
+            { page: 'home', url: 'index' },
+            { page: 'blog', url: 'blog' }
           ];
           injectPageSeo('blog', {
             canonical: 'https://bizdavar.com/pages/blog',
@@ -92,7 +93,7 @@
           renderBlogGrid('blogGrid');
           renderGeoStrip('geoStrip', {
             textKey: 'blogPage.geoText',
-            text: '?????? ????? ???? ??????????? ????? ? ????? � ????????? ???????? ????? ?? ? ????? ??????? ?????.'
+            text: 'مقالات تخصصی برای کسب‌وکارهای ایران و ترکیه — بازاریابی دیجیتال، طراحی وب و تامین تجهیزات صنعتی.'
           });
           injectBlogListSchema();
             setupWhatsappLinks();

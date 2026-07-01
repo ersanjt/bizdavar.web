@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="../assets/styles/mobile-chrome.css">
   <link rel="stylesheet" href="../assets/styles/brand-supply-shared.css">
   <link rel="stylesheet" href="../assets/styles/gamak.css">
+  <meta name="description" content="تامین اصل الکتروموتور Gamak ترکیه برای پروژه‌های صنعتی ایران. GM/GMB، IE2/IE3، فلنج B3/B5 — مشاوره فنی فارسی، پیش‌فاکتور و لجستیک — بیزدوار گروپ.">
 </head>
 <body data-page="gamak" data-depth="1">
 
@@ -187,14 +188,14 @@
       });
       renderSiteChrome();
       renderBreadcrumbs([
-        { page: 'home', url: 'index.html' },
-        { page: 'services', url: 'services.html#industrial' },
-        { page: 'gamak', url: 'gamak.html' }
+        { page: 'home', url: 'index' },
+        { page: 'services', url: 'services#industrial' },
+        { page: 'gamak', url: 'gamak' }
       ]);
       injectBreadcrumbSchema([
-        { page: 'home', url: 'index.html' },
-        { page: 'services', url: 'pages/services.html#industrial' },
-        { page: 'gamak', url: 'pages/gamak.html' }
+        { page: 'home', url: 'index' },
+        { page: 'services', url: 'pages/services#industrial' },
+        { page: 'gamak', url: 'pages/gamak' }
       ]);
       initGamakPage();
       injectGamakSchema();
@@ -202,7 +203,7 @@
         textKey: 'gamakPage.geoText',
         text: 'تامین Gamak از ترکیه به ایران — مشاوره فنی فارسی، پیش‌فاکتور و لجستیک توسط بیزدوار گروپ.'
       });
-      renderRelatedLinks([{"titleKey":"gamakPage.related.0.title","title":"محصولات VEGA","url":"vega.html","descKey":"gamakPage.related.0.desc","desc":"سنسور سطح و فشار"},{"titleKey":"gamakPage.related.1.title","title":"محصولات Prosense","url":"prosense.html","descKey":"gamakPage.related.1.desc","desc":"دتکتور گاز و شعله"},{"titleKey":"gamakPage.related.2.title","title":"خدمات صنعتی","url":"services.html#industrial","descKey":"gamakPage.related.2.desc","desc":"مشاوره تامین B2B"},{"titleKey":"gamakPage.related.3.title","title":"تماس و استعلام","url":"contact.html","descKey":"gamakPage.related.3.desc","desc":"مشاوره رایگان"}]);
+      renderRelatedLinks([{"title":"محصولات VEGA","url":"teraoka","desc":"سنسور سطح و فشار","titleKey":"gamakPage.related.0.title","descKey":"gamakPage.related.0.desc"},{"title":"محصولات Prosense","url":"digi-system","desc":"دتکتور گاز و شعله","titleKey":"gamakPage.related.1.title","descKey":"gamakPage.related.1.desc"},{"title":"خدمات صنعتی","url":"services#industrial","desc":"مشاوره تامین B2B","titleKey":"gamakPage.related.2.title","descKey":"gamakPage.related.2.desc"},{"title":"تماس و استعلام","url":"contact","desc":"مشاوره رایگان","titleKey":"gamakPage.related.3.title","descKey":"gamakPage.related.3.desc"}]);
       setupWhatsappLinks();
     });
   </script>
