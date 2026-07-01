@@ -6,7 +6,7 @@
   const ctx = window.BD_CTX;
   if (!ctx) return;
   const {
-    C, R, A, path, t, ic, linkArrow, wa, currentPage,
+    C, R, A, path, siteLink, t, ic, linkArrow, wa, currentPage,
     absUrl, breadcrumbHref, localizeCrumbs, buildContactPoints, orgAddress
   } = ctx;
 
@@ -108,7 +108,7 @@
     el.innerHTML = items.map(p => {
 
       const external = p.url.startsWith('http');
-      const href = external ? p.url : path(p.url);
+      const href = external ? p.url : siteLink(p.url);
 
       const inner = p.logo
         ? `<img src="${path(p.logo)}" alt="${p.name}" loading="lazy" class="client-item__logo">`

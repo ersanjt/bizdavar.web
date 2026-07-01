@@ -15,12 +15,73 @@
   const linkArrow = () => (window.BD_LINK_ARROW ? window.BD_LINK_ARROW() : '');
   const t = (key, fb) => (window.BIZDAVAR_I18N ? window.BIZDAVAR_I18N.t(key, fb) : (fb ?? key));
 
+  function pageDepth() {
+    return parseInt(document.body?.dataset?.depth || '0', 10);
+  }
+
+  function splitUrl(url) {
+    const hashIdx = url.indexOf('#');
+    if (hashIdx === -1) return { pathPart: url, hash: '' };
+    return { pathPart: url.slice(0, hashIdx), hash: url.slice(hashIdx) };
+  }
+
+  /** Normalize any internal href to site-root relative path (e.g. pages/contact.html) */
+  function toSiteRootPath(pathPart) {
+    if (!pathPart) return '';
+    let n = pathPart.replace(/^(\.\.\/)+/, '').replace(/^\.\//, '');
+    if (n === 'index.html' || n === '') return '';
+    if (n.startsWith('pages/')) return n;
+
+    const knownPages = new Set([
+      'about.html', 'services.html', 'portfolio.html', 'blog.html', 'contact.html',
+      'privacy.html', 'fast.html', 'vega.html', 'prosense.html', 'teltonika.html',
+      'gamak.html', 'digi-system.html', 'teraoka.html', 'bz-diamond.html', 'biztejarat.html'
+    ]);
+    if (knownPages.has(n)) return `pages/${n}`;
+
+    const depth = pageDepth();
+    if (depth === 2 && document.body?.dataset?.page === 'article') {
+      return `pages/articles/${n}`;
+    }
+    return `pages/${n}`;
+  }
+
+  /** Browser-relative link from any page depth */
+  function siteLink(url) {
+    if (!url || url.startsWith('http') || url.startsWith('mailto:') || url.startsWith('tel:') || url.startsWith('#')) {
+      return url;
+    }
+    const { pathPart, hash } = splitUrl(url);
+    const siteRoot = toSiteRootPath(pathPart);
+    const depth = pageDepth();
+
+    if (siteRoot === '') {
+      if (depth === 0) return `index.html${hash}`;
+      return `${'../'.repeat(depth)}index.html${hash}`;
+    }
+
+    if (depth === 0) return `${siteRoot}${hash}`;
+
+    if (depth === 1) {
+      if (siteRoot.startsWith('pages/articles/')) return `articles/${siteRoot.slice(15)}${hash}`;
+      if (siteRoot.startsWith('pages/')) return `${siteRoot.slice(6)}${hash}`;
+    }
+
+    if (depth === 2) {
+      if (siteRoot.startsWith('pages/articles/')) return `${siteRoot.slice(15)}${hash}`;
+      if (siteRoot.startsWith('pages/')) return `../${siteRoot.slice(6)}${hash}`;
+    }
+
+    return `${'../'.repeat(depth)}${siteRoot}${hash}`;
+  }
+
   function absUrl(urlPath) {
     if (!urlPath) return `${C.baseUrl}/`;
     if (urlPath.startsWith('http')) return urlPath;
-    const normalized = urlPath.replace(/^(\.\.\/)+/, '').replace(/^\.\//, '');
-    if (normalized === 'index.html') return `${C.baseUrl}/`;
-    return `${C.baseUrl}/${normalized.replace(/^\//, '')}`;
+    const { pathPart, hash } = splitUrl(urlPath);
+    const siteRoot = toSiteRootPath(pathPart);
+    if (siteRoot === '') return `${C.baseUrl}/${hash || ''}`.replace(/\/#/, '#').replace(/\/$/, '/') || `${C.baseUrl}/`;
+    return `${C.baseUrl}/${siteRoot}${hash}`;
   }
 
   function buildContactPoints() {
@@ -63,16 +124,7 @@
   }
 
   function breadcrumbHref(url) {
-    if (!url || url.startsWith('http') || url.startsWith('#')) return url;
-    const depth = parseInt(document.body?.dataset?.depth || '0', 10);
-    if (depth > 0 && url === 'index.html') {
-      return `${'../'.repeat(depth)}index.html`;
-    }
-    if (depth > 0 && !url.includes('/') && url.endsWith('.html')) {
-      if (depth === 1) return url;
-      if (depth === 2) return `../${url}`;
-    }
-    return path(url);
+    return siteLink(url);
   }
 
   function localizeCrumbs(items) {
@@ -92,11 +144,12 @@
     R,
     A,
     path,
+    siteLink,
     currentPage,
     get wa() {
       return C.contact.whatsapp
         ? `https://wa.me/${C.contact.whatsapp}?text=${encodeURIComponent(C.contact.whatsappMessage)}`
-        : path(R.contact);
+        : siteLink(R.contact);
     },
     ic,
     linkArrow,

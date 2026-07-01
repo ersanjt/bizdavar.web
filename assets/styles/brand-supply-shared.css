@@ -792,7 +792,13 @@
 .teltonika-iran-grid, .gamak-iran-grid, .digi-iran-grid, .teraoka-iran-grid { grid-template-columns: 1fr; }
 .teltonika-supply-grid, .gamak-supply-grid, .digi-supply-grid, .teraoka-supply-grid { grid-template-columns: 1fr; }
 .teltonika-trust-bar__inner, .gamak-trust-bar__inner, .digi-trust-bar__inner, .teraoka-trust-bar__inner { grid-template-columns: 1fr; }
-  body[data-page="teltonika"] .footer { padding-bottom: 64px; }
+  body[data-page="teltonika"] .footer,
+  body[data-page="gamak"] .footer,
+  body[data-page="digiSystem"] .footer,
+  body[data-page="teraoka"] .footer,
+  body[data-page="fast"] .footer,
+  body[data-page="vega"] .footer,
+  body[data-page="prosense"] .footer { padding-bottom: 64px; }
 }
 
 @media (max-width: 480px) {

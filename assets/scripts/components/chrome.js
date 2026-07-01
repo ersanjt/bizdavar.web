@@ -6,7 +6,7 @@
   const ctx = window.BD_CTX;
   if (!ctx) return;
   const {
-    C, R, A, path, t, ic, linkArrow, wa, currentPage,
+    C, R, A, path, siteLink, t, ic, linkArrow, wa, currentPage,
     absUrl, breadcrumbHref, localizeCrumbs, buildContactPoints, orgAddress
   } = ctx;
 
@@ -160,7 +160,7 @@
 
               return `
 
-              <a href="${l.url}" class="related-links__card">
+              <a href="${siteLink(l.url)}" class="related-links__card">
 
                 <span class="related-links__label">${l.label || t('common.view', 'مشاهده')}</span>
 

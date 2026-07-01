@@ -41,6 +41,11 @@
         seoDescription: 'سیاست حفظ حریم خصوصی وبسایت بیزدوار گروپ — نحوه استفاده از اطلاعات فرم تماس، زبان و تشخیص منطقه.',
         seoKeywords: 'حریم خصوصی, privacy, بیزدوار'
       },
+      contact: {
+        seoTitle: 'تماس با ما | بیزدوار گروپ — مشاوره رایگان',
+        seoDescription: 'با بیزدوار گروپ تماس بگیرید: بازاریابی دیجیتال، طراحی سایت، SMM و تامین تجهیزات صنعتی VEGA و Prosense. فرم تماس، واتساپ و ایمیل.',
+        seoKeywords: 'تماس بیزدوار, مشاوره رایگان, Bizdavar contact, طراحی سایت, VEGA'
+      },
       vega: {
         seoTitle: 'خرید سنسور VEGA در ایران | VEGAPULS، VEGABAR، VEGAPOINT — بیزدوار',
         seoDescription: 'تامین اصل سنسورهای VEGA برای پروژه‌های صنعتی ایران. مشاوره فنی فارسی، کد سفارش دقیق، پیش‌فاکتور شفاف و لجستیک تا ایران — بیزدوار گروپ.',
@@ -148,6 +153,11 @@
         seoDescription: 'Bizdavar Group web sitesi gizlilik politikası — iletişim formu, dil tercihi ve bölge algılama hakkında bilgi.',
         seoKeywords: 'gizlilik politikası, privacy, Bizdavar'
       },
+      contact: {
+        seoTitle: 'İletişim | Bizdavar Group — Ücretsiz danışmanlık',
+        seoDescription: 'Bizdavar Group ile iletişime geçin: dijital pazarlama, web tasarım, SMM ve VEGA/Prosense endüstriyel tedarik. İletişim formu, WhatsApp ve e-posta.',
+        seoKeywords: 'Bizdavar iletişim, ücretsiz danışmanlık, web tasarım, VEGA'
+      },
       vega: {
         seoTitle: 'VEGA sensör tedariki | VEGAPULS, VEGABAR, VEGAPOINT — Bizdavar',
         seoDescription: 'Endüstriyel projeler için orijinal VEGA sensör tedariki. Türkçe/Farsça teknik danışmanlık, şeffaf proforma ve İran’a lojistik — Bizdavar Group.',
@@ -254,6 +264,11 @@
         seoTitle: 'Privacy Policy | Bizdavar Group',
         seoDescription: 'Bizdavar Group website privacy policy — contact form data, language preference and region detection.',
         seoKeywords: 'privacy policy, Bizdavar, GDPR'
+      },
+      contact: {
+        seoTitle: 'Contact us | Bizdavar Group — Free consultation',
+        seoDescription: 'Contact Bizdavar Group: digital marketing, web design, SMM, and VEGA/Prosense industrial supply. Contact form, WhatsApp, and email.',
+        seoKeywords: 'Bizdavar contact, free consultation, web design, VEGA'
       },
       vega: {
         seoTitle: 'VEGA sensor supply | VEGAPULS, VEGABAR, VEGAPOINT — Bizdavar',

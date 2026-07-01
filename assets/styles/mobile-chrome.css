@@ -101,7 +101,11 @@
   /* Page sticky bars sit above bottom nav */
   body.has-mobile-chrome .fast-sticky-cta,
   body.has-mobile-chrome .vega-sticky-cta,
-  body.has-mobile-chrome .prosense-sticky-cta {
+  body.has-mobile-chrome .prosense-sticky-cta,
+  body.has-mobile-chrome .teltonika-sticky-cta,
+  body.has-mobile-chrome .gamak-sticky-cta,
+  body.has-mobile-chrome .digi-sticky-cta,
+  body.has-mobile-chrome .teraoka-sticky-cta {
     bottom: calc(58px + env(safe-area-inset-bottom, 0px));
     z-index: 180;
     border-radius: 14px 14px 0 0;

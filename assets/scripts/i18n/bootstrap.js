@@ -4,6 +4,7 @@
 (function () {
   let localeReady = false;
   let renderSiteChromeOrig = null;
+  let geoStripDone = false;
 
   const RENDER_FNS = [
     'renderSiteChrome',
@@ -50,6 +51,20 @@
     'injectTeraokaSchema'
   ];
 
+  function autoRenderGeoStrip() {
+    if (geoStripDone) return;
+    const el = document.getElementById('geoStrip');
+    if (!el || String(el.innerHTML || '').trim()) return;
+    if (typeof window.renderGeoStrip !== 'function') return;
+    geoStripDone = true;
+    try {
+      window.renderGeoStrip('geoStrip');
+    } catch (e) {
+      geoStripDone = false;
+      console.error('[Bizdavar] renderGeoStrip failed', e);
+    }
+  }
+
   function afterLocale() {
     if (!window.BIZDAVAR_I18N) return;
     window.BIZDAVAR_I18N.applyDataI18n();
@@ -59,6 +74,7 @@
     if (typeof window.applyPageI18n === 'function') {
       window.applyPageI18n();
     }
+    autoRenderGeoStrip();
   }
 
   function ensureSiteChrome() {

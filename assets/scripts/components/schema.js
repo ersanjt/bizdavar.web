@@ -79,9 +79,17 @@
     });
   }
 
+  function activeOgLocale() {
+    const lang = window.BIZDAVAR_I18N?.locale
+      || document.documentElement.getAttribute('lang')
+      || 'fa';
+    const map = { fa: 'fa_IR', tr: 'tr_TR', en: 'en_US' };
+    return map[lang] || C.locale || 'fa_IR';
+  }
+
   function injectOgLocaleAlternates() {
     document.querySelectorAll('meta[property="og:locale:alternate"]').forEach(el => el.remove());
-    const current = C.locale || 'fa_IR';
+    const current = activeOgLocale();
     const alternates = ['fa_IR', 'tr_TR', 'en_US'].filter(tag => tag !== current);
     alternates.forEach(tag => {
       let el = document.querySelector(`meta[property="og:locale:alternate"][content="${tag}"]`);
@@ -129,8 +137,7 @@
 
 
     const ogImg = (meta.ogImage || A.ogImage);
-
-    const ogImgAbs = ogImg.startsWith('http') ? ogImg : `${C.baseUrl}/${ogImg}`;
+    const ogImgAbs = ogImg.startsWith('http') ? ogImg : `${C.baseUrl}/${ogImg.replace(/^\//, '')}`;
 
 
 
@@ -158,7 +165,7 @@
 
     setMeta('og:site_name', C.siteName, true);
 
-    setMeta('og:locale', C.locale, true);
+    setMeta('og:locale', activeOgLocale(), true);
 
     setMeta('twitter:card', C.seo.twitterCard);
 
