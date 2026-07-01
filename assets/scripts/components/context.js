@@ -29,21 +29,28 @@
   function toSiteRootPath(pathPart) {
     if (!pathPart) return '';
     let n = pathPart.replace(/^(\.\.\/)+/, '').replace(/^\.\//, '');
-    if (n === 'index.html' || n === '') return '';
-    if (n.startsWith('pages/')) return n;
+    if (n === 'index' || n === 'index.html' || n === '') return '';
+    if (n.startsWith('pages/')) {
+      return n.endsWith('.html') ? n : `${n}.html`;
+    }
 
     const knownPages = new Set([
-      'about.html', 'services.html', 'portfolio.html', 'blog.html', 'contact.html',
-      'privacy.html', 'fast.html', 'vega.html', 'prosense.html', 'teltonika.html',
-      'gamak.html', 'digi-system.html', 'teraoka.html', 'bz-diamond.html', 'biztejarat.html'
+      'about', 'services', 'portfolio', 'blog', 'contact', 'privacy', 'fast', 'vega',
+      'prosense', 'teltonika', 'gamak', 'digi-system', 'teraoka', 'bz-diamond', 'biztejarat'
     ]);
-    if (knownPages.has(n)) return `pages/${n}`;
+    const stem = n.replace(/\.html$/, '');
+    if (knownPages.has(stem)) return `pages/${stem}.html`;
 
     const depth = pageDepth();
     if (depth === 2 && document.body?.dataset?.page === 'article') {
-      return `pages/articles/${n}`;
+      return stem.includes('.') ? `pages/articles/${n}` : `pages/articles/${stem}.html`;
     }
-    return `pages/${n}`;
+    return stem.includes('.') ? `pages/${n}` : `pages/${stem}.html`;
+  }
+
+  function prettyPath(link) {
+    if (window.BD_prettifyPath) return window.BD_prettifyPath(link);
+    return link.replace(/\.html(?=[#?]|$)/, '').replace(/index\.html$/, '') || './';
   }
 
   /** Browser-relative link from any page depth */
@@ -54,25 +61,26 @@
     const { pathPart, hash } = splitUrl(url);
     const siteRoot = toSiteRootPath(pathPart);
     const depth = pageDepth();
+    let out;
 
     if (siteRoot === '') {
-      if (depth === 0) return `index.html${hash}`;
-      return `${'../'.repeat(depth)}index.html${hash}`;
+      if (depth === 0) out = `./${hash}`;
+      else out = `${'../'.repeat(depth)}${hash}`;
+    } else if (depth === 0) {
+      out = `${siteRoot}${hash}`;
+    } else if (depth === 1) {
+      if (siteRoot.startsWith('pages/articles/')) out = `articles/${siteRoot.slice(15)}${hash}`;
+      else if (siteRoot.startsWith('pages/')) out = `${siteRoot.slice(6)}${hash}`;
+      else out = `${siteRoot}${hash}`;
+    } else if (depth === 2) {
+      if (siteRoot.startsWith('pages/articles/')) out = `${siteRoot.slice(15)}${hash}`;
+      else if (siteRoot.startsWith('pages/')) out = `../${siteRoot.slice(6)}${hash}`;
+      else out = `${siteRoot}${hash}`;
+    } else {
+      out = `${'../'.repeat(depth)}${siteRoot}${hash}`;
     }
 
-    if (depth === 0) return `${siteRoot}${hash}`;
-
-    if (depth === 1) {
-      if (siteRoot.startsWith('pages/articles/')) return `articles/${siteRoot.slice(15)}${hash}`;
-      if (siteRoot.startsWith('pages/')) return `${siteRoot.slice(6)}${hash}`;
-    }
-
-    if (depth === 2) {
-      if (siteRoot.startsWith('pages/articles/')) return `${siteRoot.slice(15)}${hash}`;
-      if (siteRoot.startsWith('pages/')) return `../${siteRoot.slice(6)}${hash}`;
-    }
-
-    return `${'../'.repeat(depth)}${siteRoot}${hash}`;
+    return prettyPath(out);
   }
 
   function absUrl(urlPath) {
@@ -80,8 +88,11 @@
     if (urlPath.startsWith('http')) return urlPath;
     const { pathPart, hash } = splitUrl(urlPath);
     const siteRoot = toSiteRootPath(pathPart);
-    if (siteRoot === '') return `${C.baseUrl}/${hash || ''}`.replace(/\/#/, '#').replace(/\/$/, '/') || `${C.baseUrl}/`;
-    return `${C.baseUrl}/${siteRoot}${hash}`;
+    if (siteRoot === '') {
+      return `${C.baseUrl}/${hash}`.replace(/\/#/, '#').replace(/\/$/, '') || `${C.baseUrl}/`;
+    }
+    const clean = siteRoot.replace(/\.html$/i, '');
+    return `${C.baseUrl}/${clean}${hash}`;
   }
 
   function buildContactPoints() {

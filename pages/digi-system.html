@@ -120,7 +120,7 @@
         <p class="section__desc" data-i18n="digiSystemPage.sections.supply.desc">شریک تامین شما — نه فقط فروشنده</p>
       </div>
       <div class="digi-supply-grid" id="digiSupplyList"></div>
-      <div class="digi-official-note" data-i18n-html="digiSystemPage.officialNote">اطلاعات فنی بر اساس <a href="https://www.digisystem.com.tr/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Digi System</a> است. برای استعلام — <a href="contact.html">با بیزدوار تماس بگیرید</a> · <a href="teraoka.html">Teraoka</a></div>
+      <div class="digi-official-note" data-i18n-html="digiSystemPage.officialNote">اطلاعات فنی بر اساس <a href="https://www.digisystem.com.tr/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Digi System</a> است. برای استعلام — <a href="contact">با بیزدوار تماس بگیرید</a> · <a href="teraoka">Teraoka</a></div>
     </div>
   </section>
 
@@ -140,16 +140,16 @@
       <h2 data-i18n="digiSystemPage.cta.title">آماده استعلام قیمت Digi System هستید؟</h2>
       <p data-i18n="digiSystemPage.cta.desc">نوع فروشگاه، تعداد صندوق و نیاز ترازو legal-for-trade را بفرستید</p>
       <div class="hero__actions hero__actions--center">
-        <a href="contact.html?service=industrial" class="btn btn--primary" id="digiCtaForm" data-i18n="digiSystemPage.cta.btnForm">فرم استعلام</a>
+        <a href="contact?service=industrial" class="btn btn--primary" id="digiCtaForm" data-i18n="digiSystemPage.cta.btnForm">فرم استعلام</a>
         <a href="#" class="btn btn--green" id="digiCtaWhatsapp" data-i18n="common.whatsapp">واتساپ</a>
-        <a href="services.html#industrial" class="btn btn--yellow" data-i18n="digiSystemPage.cta.btnServices">خدمات صنعتی</a>
+        <a href="services#industrial" class="btn btn--yellow" data-i18n="digiSystemPage.cta.btnServices">خدمات صنعتی</a>
       </div>
     </div>
   </section>
 
   <div class="digi-sticky-cta" id="digiStickyCta" hidden>
     <span data-i18n="digiSystemPage.sticky.label">استعلام Digi System</span>
-    <a href="contact.html?service=industrial" class="btn btn--yellow digi-btn-inquiry" data-i18n="common.contact">تماس</a>
+    <a href="contact?service=industrial" class="btn btn--yellow digi-btn-inquiry" data-i18n="common.contact">تماس</a>
   </div>
 
   <div id="geoStrip"></div>
@@ -182,7 +182,7 @@
   <script>
     bizdavarPageInit(function () {
       injectPageSeo('digiSystem', {
-        canonical: 'https://bizdavar.com/pages/digi-system.html',
+        canonical: 'https://bizdavar.com/pages/digi-system',
         ogImage: 'assets/images/partners/digi-system.svg'
       });
       renderSiteChrome();

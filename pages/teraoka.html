@@ -120,7 +120,7 @@
         <p class="section__desc" data-i18n="teraokaPage.sections.supply.desc">شریک تامین شما — نه فقط فروشنده</p>
       </div>
       <div class="teraoka-supply-grid" id="teraokaSupplyList"></div>
-      <div class="teraoka-official-note" data-i18n-html="teraokaPage.officialNote">اطلاعات فنی بر اساس <a href="https://www.teraokaseiko.com/jp/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Teraoka Seiko</a> است. برای استعلام — <a href="contact.html">با بیزدوار تماس بگیرید</a> · <a href="digi-system.html">Digi System</a></div>
+      <div class="teraoka-official-note" data-i18n-html="teraokaPage.officialNote">اطلاعات فنی بر اساس <a href="https://www.teraokaseiko.com/jp/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Teraoka Seiko</a> است. برای استعلام — <a href="contact">با بیزدوار تماس بگیرید</a> · <a href="digi-system">Digi System</a></div>
     </div>
   </section>
 
@@ -140,16 +140,16 @@
       <h2 data-i18n="teraokaPage.cta.title">آماده استعلام قیمت Teraoka هستید؟</h2>
       <p data-i18n="teraokaPage.cta.desc">نوع ترازو، ظرفیت و تعداد صندوق را بفرستید — deli · POS · labeling</p>
       <div class="hero__actions hero__actions--center">
-        <a href="contact.html?service=industrial" class="btn btn--primary" id="teraokaCtaForm" data-i18n="teraokaPage.cta.btnForm">فرم استعلام</a>
+        <a href="contact?service=industrial" class="btn btn--primary" id="teraokaCtaForm" data-i18n="teraokaPage.cta.btnForm">فرم استعلام</a>
         <a href="#" class="btn btn--green" id="teraokaCtaWhatsapp" data-i18n="common.whatsapp">واتساپ</a>
-        <a href="services.html#industrial" class="btn btn--yellow" data-i18n="teraokaPage.cta.btnServices">خدمات صنعتی</a>
+        <a href="services#industrial" class="btn btn--yellow" data-i18n="teraokaPage.cta.btnServices">خدمات صنعتی</a>
       </div>
     </div>
   </section>
 
   <div class="teraoka-sticky-cta" id="teraokaStickyCta" hidden>
     <span data-i18n="teraokaPage.sticky.label">استعلام Teraoka</span>
-    <a href="contact.html?service=industrial" class="btn btn--yellow teraoka-btn-inquiry" data-i18n="common.contact">تماس</a>
+    <a href="contact?service=industrial" class="btn btn--yellow teraoka-btn-inquiry" data-i18n="common.contact">تماس</a>
   </div>
 
   <div id="geoStrip"></div>
@@ -182,7 +182,7 @@
   <script>
     bizdavarPageInit(function () {
       injectPageSeo('teraoka', {
-        canonical: 'https://bizdavar.com/pages/teraoka.html',
+        canonical: 'https://bizdavar.com/pages/teraoka',
         ogImage: 'assets/images/teraoka/products/luxeed-l-retail-scale.png'
       });
       renderSiteChrome();

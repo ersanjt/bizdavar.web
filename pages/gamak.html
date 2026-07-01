@@ -120,7 +120,7 @@
         <p class="section__desc" data-i18n="gamakPage.sections.supply.desc">شریک تامین شما — نه فقط فروشنده</p>
       </div>
       <div class="gamak-supply-grid" id="gamakSupplyList"></div>
-      <div class="gamak-official-note" data-i18n-html="gamakPage.officialNote">اطلاعات فنی بر اساس <a href="https://www.gamak.com/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Gamak</a> است. برای استعلام — <a href="contact.html">با بیزدوار تماس بگیرید</a> · <a href="vega.html">VEGA</a> · <a href="prosense.html">Prosense</a></div>
+      <div class="gamak-official-note" data-i18n-html="gamakPage.officialNote">اطلاعات فنی بر اساس <a href="https://www.gamak.com/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Gamak</a> است. برای استعلام — <a href="contact">با بیزدوار تماس بگیرید</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a></div>
     </div>
   </section>
 
@@ -140,16 +140,16 @@
       <h2 data-i18n="gamakPage.cta.title">آماده استعلام قیمت Gamak هستید؟</h2>
       <p data-i18n="gamakPage.cta.desc">توان kW، دور rpm و نوع فلنج را بفرستید — GM/GMB · IE2/IE3 · B3/B5</p>
       <div class="hero__actions hero__actions--center">
-        <a href="contact.html?service=industrial" class="btn btn--primary" id="gamakCtaForm" data-i18n="gamakPage.cta.btnForm">فرم استعلام</a>
+        <a href="contact?service=industrial" class="btn btn--primary" id="gamakCtaForm" data-i18n="gamakPage.cta.btnForm">فرم استعلام</a>
         <a href="#" class="btn btn--green" id="gamakCtaWhatsapp" data-i18n="common.whatsapp">واتساپ</a>
-        <a href="services.html#industrial" class="btn btn--yellow" data-i18n="gamakPage.cta.btnServices">خدمات صنعتی</a>
+        <a href="services#industrial" class="btn btn--yellow" data-i18n="gamakPage.cta.btnServices">خدمات صنعتی</a>
       </div>
     </div>
   </section>
 
   <div class="gamak-sticky-cta" id="gamakStickyCta" hidden>
     <span data-i18n="gamakPage.sticky.label">استعلام Gamak</span>
-    <a href="contact.html?service=industrial" class="btn btn--yellow gamak-btn-inquiry" data-i18n="common.contact">تماس</a>
+    <a href="contact?service=industrial" class="btn btn--yellow gamak-btn-inquiry" data-i18n="common.contact">تماس</a>
   </div>
 
   <div id="geoStrip"></div>
@@ -182,7 +182,7 @@
   <script>
     bizdavarPageInit(function () {
       injectPageSeo('gamak', {
-        canonical: 'https://bizdavar.com/pages/gamak.html',
+        canonical: 'https://bizdavar.com/pages/gamak',
         ogImage: 'assets/images/gamak/hero/gamak-motor.webp'
       });
       renderSiteChrome();
