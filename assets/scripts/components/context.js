@@ -64,6 +64,14 @@
 
   function breadcrumbHref(url) {
     if (!url || url.startsWith('http') || url.startsWith('#')) return url;
+    const depth = parseInt(document.body?.dataset?.depth || '0', 10);
+    if (depth > 0 && url === 'index.html') {
+      return `${'../'.repeat(depth)}index.html`;
+    }
+    if (depth > 0 && !url.includes('/') && url.endsWith('.html')) {
+      if (depth === 1) return url;
+      if (depth === 2) return `../${url}`;
+    }
     return path(url);
   }
 

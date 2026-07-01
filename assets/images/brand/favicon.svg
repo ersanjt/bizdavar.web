@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" fill="#000"/>
-  <image href="bizdavar-logo.png" x="2" y="10" width="28" height="12" preserveAspectRatio="xMidYMid meet"/>
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Bizdavar">
+  <rect width="32" height="32" fill="#fff"/>
+  <image width="32" height="32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIwSURBVFhH7dPfT5JRHMdx/5Ou+heqq6xma8vLVq0usyAVUEyb4NJ0q5sicyPGzy0jlJaEaxVbaS7SvHDBZJONHyEtcJiCILoBPfhunBZL10036cXzuTrne7475/XdnqeBfU7D3sL/jgyQATJABsiAgwMIhRbR6/V4PBNiXygUqFQqf/buyszMe3K53N7yP6cOGB42YLVaUKvbCQQCeL0vWFpaIhKJkEh8IZ1Oi758Pk8yuUxrq4JkMokkSaJHpFSiWpXE8sf2NjuAVCxSisVErVqtUtncpBSJQqm8G2C1mmlpuUJT0ymCwSAOh43p6WkMD+5z6fJFzl84x/z8J5TKa9zo7qKx8biAarWdqFTt9N29w+rYM3IWu7gv1aOj8MHPN0UbqVYVaxYbee8kyydOk+rsZif6C1UHmExGMXUwGECn62Vg4BbhcFhMqNGoyWQyaDSq+rS1tUJxFbd7XOz7B28zOT5GoUfHd8ND1s02Mn39bM3Ni/OVm3pWlO1kzbbfT4rUASMjwwwNDWIyPcJguCfWfr+f5uazaLUdzM7OijO9vheL1SyQU1PvUF5X4HK5OHb0CK/m/EgvXxM9dBipXGbj+QTpji42njzl68kzpJRtbHi8fwckEgmMRqO4rDZ1LBYjHo/jdDoZHR3F7XaLPp/vDTa7TXyktSwsLGC32/H5fKxls1Aus/U5UH+g8HaKdcdjNv0fKS6GKKVS9bNaDs5vuF+RATJABsgAGbDvgJ9WpHR5mcW3KwAAAABJRU5ErkJggg=="/>
 </svg>

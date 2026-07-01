@@ -1,11 +1,13 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <script src="../assets/scripts/i18n/locale-preload.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>وبلاگ | بیزدوار گروپ</title>
+  <title>????? | ??????? ????</title>
+  <link rel="icon" href="../assets/images/brand/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../assets/images/brand/favicon.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="../assets/images/brand/favicon-16.png" type="image/png" sizes="16x16">
   <link rel="apple-touch-icon" href="../assets/images/brand/apple-touch-icon.png">
   <link rel="stylesheet" href="../assets/styles/fonts.css">
   <link rel="stylesheet" href="../assets/styles/typography.css">
@@ -16,14 +18,15 @@
   <link rel="stylesheet" href="../assets/styles/i18n.css">
   <link rel="stylesheet" href="../assets/styles/footer.css">
   <link rel="stylesheet" href="../assets/styles/responsive.css">
+  <link rel="stylesheet" href="../assets/styles/mobile-chrome.css">
 </head>
 <body data-page="blog" data-depth="1">
 
   
-  <a href="#main-content" class="skip-link" data-i18n="common.skipLink">رفتن به محتوای اصلی</a>
+  <a href="#main-content" class="skip-link" data-i18n="common.skipLink">???? ?? ?????? ????</a>
 <div class="top-bar" id="topBar"></div>
   <header class="header" id="siteHeader"></header>
-  <nav class="breadcrumbs-wrap" id="breadcrumbs" aria-label="مسیر صفحه"></nav>
+  <nav class="breadcrumbs-wrap" id="breadcrumbs" aria-label="???? ????"></nav>
   <div class="overlay" id="overlay"></div>
 
   
@@ -31,9 +34,9 @@
 
 <section class="page-hero page-hero--pro">
     <div class="container">
-      <span class="section__tag" data-i18n="blogPage.hero.tag">وبلاگ</span>
-      <h1 data-i18n="blogPage.hero.title">مطالب تخصصی دیجیتال و صنعت</h1>
-      <p data-i18n="blogPage.hero.desc">راهنماها و نکات کاربردی از تیم بیزدوار گروپ.</p>
+      <span class="section__tag" data-i18n="blogPage.hero.tag">?????</span>
+      <h1 data-i18n="blogPage.hero.title">????? ????? ??????? ? ????</h1>
+      <p data-i18n="blogPage.hero.desc">???????? ? ???? ??????? ?? ??? ??????? ????.</p>
     </div>
   </section>
 
@@ -47,9 +50,9 @@
 
   <section class="section section--gray">
     <div class="container cta-banner">
-      <h2 data-i18n="blogPage.cta.title">نیاز به مشاوره تخصصی دارید؟</h2>
-      <p data-i18n-html="blogPage.cta.desc">موضوع مطلب شما را در <a href="contact.html">فرم تماس</a> بنویسید — پاسخگوییم.</p>
-      <a href="contact.html" class="btn btn--primary" data-i18n="blogPage.cta.btn">درخواست مشاوره</a>
+      <h2 data-i18n="blogPage.cta.title">???? ?? ?????? ????? ??????</h2>
+      <p data-i18n-html="blogPage.cta.desc">????? ???? ??? ?? ?? <a href="contact.html">??? ????</a> ??????? � ?????????.</p>
+      <a href="contact.html" class="btn btn--primary" data-i18n="blogPage.cta.btn">??????? ??????</a>
     </div>
   </section>
   </main>
@@ -57,7 +60,7 @@
 
 
   <footer class="footer" id="siteFooter"></footer>
-  <button class="back-to-top" id="backToTop" aria-label="بازگشت به بالا">↑</button>
+  <button class="back-to-top" id="backToTop" aria-label="?????? ?? ????">?</button>
 
   <script src="../assets/scripts/config/paths.js"></script>
   <script src="../assets/scripts/config/site-config.js"></script>
@@ -74,23 +77,26 @@
   <script src="../assets/scripts/i18n/bootstrap.js"></script>
   <script src="../assets/scripts/main.js"></script>
   <script>
-    const crumbs = [
-      { page: 'home', url: 'index.html' },
-      { page: 'blog', url: 'blog.html' }
-    ];
-    injectPageSeo('blog', {
-      canonical: 'https://bizdavar.com/pages/blog.html',
-      type: 'website'
+    bizdavarPageInit(function () {
+      const crumbs = [
+            { page: 'home', url: 'index.html' },
+            { page: 'blog', url: 'blog.html' }
+          ];
+          injectPageSeo('blog', {
+            canonical: 'https://bizdavar.com/pages/blog.html',
+            type: 'website'
+          });
+          renderSiteChrome();
+          renderBreadcrumbs(crumbs);
+          injectBreadcrumbSchema(crumbs);
+          renderBlogGrid('blogGrid');
+          renderGeoStrip('geoStrip', {
+            textKey: 'blogPage.geoText',
+            text: '?????? ????? ???? ??????????? ????? ? ????? � ????????? ???????? ????? ?? ? ????? ??????? ?????.'
+          });
+          injectBlogListSchema();
+            setupWhatsappLinks();
     });
-    renderSiteChrome();
-    renderBreadcrumbs(crumbs);
-    injectBreadcrumbSchema(crumbs);
-    renderBlogGrid('blogGrid');
-    renderGeoStrip('geoStrip', {
-      textKey: 'blogPage.geoText',
-      text: 'مقالات تخصصی برای کسب‌وکارهای ایران و ترکیه — بازاریابی دیجیتال، طراحی وب و تامین تجهیزات صنعتی.'
-    });
-    injectBlogListSchema();
   </script>
 </body>
 </html>

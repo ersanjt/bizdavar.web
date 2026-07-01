@@ -1,11 +1,13 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <script src="../assets/scripts/i18n/locale-preload.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>خرید الکتروموتور Gamak در ایران | IE2/IE3 — بیزدوار گروپ</title>
+  <link rel="icon" href="../assets/images/brand/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../assets/images/brand/favicon.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="../assets/images/brand/favicon-16.png" type="image/png" sizes="16x16">
   <link rel="apple-touch-icon" href="../assets/images/brand/apple-touch-icon.png">
   <link rel="stylesheet" href="../assets/styles/fonts.css">
   <link rel="stylesheet" href="../assets/styles/typography.css">
@@ -16,12 +18,13 @@
   <link rel="stylesheet" href="../assets/styles/i18n.css">
   <link rel="stylesheet" href="../assets/styles/footer.css">
   <link rel="stylesheet" href="../assets/styles/responsive.css">
+  <link rel="stylesheet" href="../assets/styles/mobile-chrome.css">
   <link rel="stylesheet" href="../assets/styles/brand-supply-shared.css">
   <link rel="stylesheet" href="../assets/styles/gamak.css">
 </head>
 <body data-page="gamak" data-depth="1">
 
-  <a href="#main-content" class="skip-link" data-i18n="common.skipLink">رفتن به محتوای اصلی</a>
+  <a href="#main-content" class="skip-link">رفتن به محتوای اصلی</a>
   <div class="top-bar" id="topBar"></div>
   <header class="header" id="siteHeader"></header>
   <nav class="breadcrumbs-wrap" id="breadcrumbs" aria-label="مسیر صفحه"></nav>
@@ -177,28 +180,31 @@
   <script src="../assets/scripts/main.js"></script>
 
   <script>
-    injectPageSeo('gamak', {
-      canonical: 'https://bizdavar.com/pages/gamak.html',
-      ogImage: 'assets/images/gamak/hero/gamak-motor.webp'
+    bizdavarPageInit(function () {
+      injectPageSeo('gamak', {
+        canonical: 'https://bizdavar.com/pages/gamak.html',
+        ogImage: 'assets/images/gamak/hero/gamak-motor.webp'
+      });
+      renderSiteChrome();
+      renderBreadcrumbs([
+        { page: 'home', url: 'index.html' },
+        { page: 'services', url: 'services.html#industrial' },
+        { page: 'gamak', url: 'gamak.html' }
+      ]);
+      injectBreadcrumbSchema([
+        { page: 'home', url: 'index.html' },
+        { page: 'services', url: 'pages/services.html#industrial' },
+        { page: 'gamak', url: 'pages/gamak.html' }
+      ]);
+      initGamakPage();
+      injectGamakSchema();
+      renderGeoStrip('geoStrip', {
+        textKey: 'gamakPage.geoText',
+        text: 'تامین Gamak از ترکیه به ایران — مشاوره فنی فارسی، پیش‌فاکتور و لجستیک توسط بیزدوار گروپ.'
+      });
+      renderRelatedLinks([{"titleKey":"gamakPage.related.0.title","title":"محصولات VEGA","url":"vega.html","descKey":"gamakPage.related.0.desc","desc":"سنسور سطح و فشار"},{"titleKey":"gamakPage.related.1.title","title":"محصولات Prosense","url":"prosense.html","descKey":"gamakPage.related.1.desc","desc":"دتکتور گاز و شعله"},{"titleKey":"gamakPage.related.2.title","title":"خدمات صنعتی","url":"services.html#industrial","descKey":"gamakPage.related.2.desc","desc":"مشاوره تامین B2B"},{"titleKey":"gamakPage.related.3.title","title":"تماس و استعلام","url":"contact.html","descKey":"gamakPage.related.3.desc","desc":"مشاوره رایگان"}]);
+      setupWhatsappLinks();
     });
-    renderSiteChrome();
-    renderBreadcrumbs([
-      { page: 'home', url: 'index.html' },
-      { page: 'services', url: 'services.html#industrial' },
-      { page: 'gamak', url: 'gamak.html' }
-    ]);
-    injectBreadcrumbSchema([
-      { page: 'home', url: 'index.html' },
-      { page: 'services', url: 'pages/services.html#industrial' },
-      { page: 'gamak', url: 'pages/gamak.html' }
-    ]);
-    initGamakPage();
-    injectGamakSchema();
-    renderGeoStrip('geoStrip', {
-      textKey: 'gamakPage.geoText',
-      text: 'تامین Gamak از ترکیه به ایران — مشاوره فنی فارسی، پیش‌فاکتور و لجستیک توسط بیزدوار گروپ.'
-    });
-    renderRelatedLinks([{"titleKey":"gamakPage.related.0.title","title":"محصولات VEGA","url":"vega.html","descKey":"gamakPage.related.0.desc","desc":"سنسور سطح و فشار"},{"titleKey":"gamakPage.related.1.title","title":"محصولات Prosense","url":"prosense.html","descKey":"gamakPage.related.1.desc","desc":"دتکتور گاز و شعله"},{"titleKey":"gamakPage.related.2.title","title":"خدمات صنعتی","url":"services.html#industrial","descKey":"gamakPage.related.2.desc","desc":"مشاوره تامین B2B"},{"titleKey":"gamakPage.related.3.title","title":"تماس و استعلام","url":"contact.html","descKey":"gamakPage.related.3.desc","desc":"مشاوره رایگان"}]);
   </script>
 </body>
 </html>

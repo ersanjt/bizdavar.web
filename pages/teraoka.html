@@ -1,11 +1,13 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <script src="../assets/scripts/i18n/locale-preload.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>خرید Teraoka Seiko | ترازو و POS — بیزدوار گروپ</title>
+  <link rel="icon" href="../assets/images/brand/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../assets/images/brand/favicon.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="../assets/images/brand/favicon-16.png" type="image/png" sizes="16x16">
   <link rel="apple-touch-icon" href="../assets/images/brand/apple-touch-icon.png">
   <link rel="stylesheet" href="../assets/styles/fonts.css">
   <link rel="stylesheet" href="../assets/styles/typography.css">
@@ -16,12 +18,13 @@
   <link rel="stylesheet" href="../assets/styles/i18n.css">
   <link rel="stylesheet" href="../assets/styles/footer.css">
   <link rel="stylesheet" href="../assets/styles/responsive.css">
+  <link rel="stylesheet" href="../assets/styles/mobile-chrome.css">
   <link rel="stylesheet" href="../assets/styles/brand-supply-shared.css">
   <link rel="stylesheet" href="../assets/styles/teraoka.css">
 </head>
 <body data-page="teraoka" data-depth="1">
 
-  <a href="#main-content" class="skip-link" data-i18n="common.skipLink">رفتن به محتوای اصلی</a>
+  <a href="#main-content" class="skip-link">رفتن به محتوای اصلی</a>
   <div class="top-bar" id="topBar"></div>
   <header class="header" id="siteHeader"></header>
   <nav class="breadcrumbs-wrap" id="breadcrumbs" aria-label="مسیر صفحه"></nav>
@@ -177,28 +180,31 @@
   <script src="../assets/scripts/main.js"></script>
 
   <script>
-    injectPageSeo('teraoka', {
-      canonical: 'https://bizdavar.com/pages/teraoka.html',
-      ogImage: 'assets/images/teraoka/products/luxeed-l-retail-scale.png'
+    bizdavarPageInit(function () {
+      injectPageSeo('teraoka', {
+        canonical: 'https://bizdavar.com/pages/teraoka.html',
+        ogImage: 'assets/images/teraoka/products/luxeed-l-retail-scale.png'
+      });
+      renderSiteChrome();
+      renderBreadcrumbs([
+        { page: 'home', url: 'index.html' },
+        { page: 'services', url: 'services.html#industrial' },
+        { page: 'teraoka', url: 'teraoka.html' }
+      ]);
+      injectBreadcrumbSchema([
+        { page: 'home', url: 'index.html' },
+        { page: 'services', url: 'pages/services.html#industrial' },
+        { page: 'teraoka', url: 'pages/teraoka.html' }
+      ]);
+      initTeraokaPage();
+      injectTeraokaSchema();
+      renderGeoStrip('geoStrip', {
+        textKey: 'teraokaPage.geoText',
+        text: 'تامین Teraoka Seiko به ایران — مشاوره فارسی، پیش‌فاکتور و لجستیک بین‌المللی توسط بیزدوار گروپ.'
+      });
+      renderRelatedLinks([{"titleKey":"teraokaPage.related.0.title","title":"Digi System","url":"digi-system.html","descKey":"teraokaPage.related.0.desc","desc":"ترازو و POS ترکیه"},{"titleKey":"teraokaPage.related.1.title","title":"خدمات صنعتی","url":"services.html#industrial","descKey":"teraokaPage.related.1.desc","desc":"تامین retail B2B"},{"titleKey":"teraokaPage.related.2.title","title":"تماس","url":"contact.html","descKey":"teraokaPage.related.2.desc","desc":"استعلام قیمت"}]);
+      setupWhatsappLinks();
     });
-    renderSiteChrome();
-    renderBreadcrumbs([
-      { page: 'home', url: 'index.html' },
-      { page: 'services', url: 'services.html#industrial' },
-      { page: 'teraoka', url: 'teraoka.html' }
-    ]);
-    injectBreadcrumbSchema([
-      { page: 'home', url: 'index.html' },
-      { page: 'services', url: 'pages/services.html#industrial' },
-      { page: 'teraoka', url: 'pages/teraoka.html' }
-    ]);
-    initTeraokaPage();
-    injectTeraokaSchema();
-    renderGeoStrip('geoStrip', {
-      textKey: 'teraokaPage.geoText',
-      text: 'تامین Teraoka Seiko به ایران — مشاوره فارسی، پیش‌فاکتور و لجستیک بین‌المللی توسط بیزدوار گروپ.'
-    });
-    renderRelatedLinks([{"titleKey":"teraokaPage.related.0.title","title":"Digi System","url":"digi-system.html","descKey":"teraokaPage.related.0.desc","desc":"ترازو و POS ترکیه"},{"titleKey":"teraokaPage.related.1.title","title":"خدمات صنعتی","url":"services.html#industrial","descKey":"teraokaPage.related.1.desc","desc":"تامین retail B2B"},{"titleKey":"teraokaPage.related.2.title","title":"تماس","url":"contact.html","descKey":"teraokaPage.related.2.desc","desc":"استعلام قیمت"}]);
   </script>
 </body>
 </html>

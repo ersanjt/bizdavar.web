@@ -376,6 +376,7 @@
 
 
   window.injectServiceSchema = function () {
+    if (!C.services || !C.services.length) return;
 
     const ld = {
 

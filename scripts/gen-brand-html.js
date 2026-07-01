@@ -11,7 +11,9 @@ function brandHtml(b) {
   <script src="../assets/scripts/i18n/locale-preload.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>${b.title}</title>
+  <link rel="icon" href="../assets/images/brand/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../assets/images/brand/favicon.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="../assets/images/brand/favicon-16.png" type="image/png" sizes="16x16">
   <link rel="apple-touch-icon" href="../assets/images/brand/apple-touch-icon.png">
   <link rel="stylesheet" href="../assets/styles/fonts.css">
   <link rel="stylesheet" href="../assets/styles/typography.css">
@@ -22,6 +24,8 @@ function brandHtml(b) {
   <link rel="stylesheet" href="../assets/styles/i18n.css">
   <link rel="stylesheet" href="../assets/styles/footer.css">
   <link rel="stylesheet" href="../assets/styles/responsive.css">
+  <link rel="stylesheet" href="../assets/styles/mobile-chrome.css">
+  <link rel="stylesheet" href="../assets/styles/brand-supply-shared.css">
   <link rel="stylesheet" href="../assets/styles/${b.css}">
 </head>
 <body data-page="${b.page}" data-depth="1">
@@ -167,6 +171,7 @@ function brandHtml(b) {
   <script src="../assets/scripts/i18n/locales.js"></script>
   <script src="../assets/scripts/i18n/locales-pages.js"></script>
   <script src="../assets/scripts/i18n/locale-seo.js"></script>
+  <script src="../assets/scripts/i18n/supply-catalog-i18n.js"></script>
   <script src="../assets/scripts/i18n/i18n.js"></script>
   <script src="../assets/scripts/i18n/page-i18n.js"></script>
   <script src="../assets/scripts/components/biz-icons.js"></script>
@@ -181,28 +186,31 @@ function brandHtml(b) {
   <script src="../assets/scripts/main.js"></script>
 
   <script>
-    injectPageSeo('${b.seo}', {
-      canonical: '${b.canonical}',
-      ogImage: '${b.og}'
+    bizdavarPageInit(function () {
+      injectPageSeo('${b.seo}', {
+        canonical: '${b.canonical}',
+        ogImage: '${b.og}'
+      });
+      renderSiteChrome();
+      renderBreadcrumbs([
+        { page: 'home', url: 'index.html' },
+        { page: 'services', url: 'services.html#industrial' },
+        { page: '${b.brandCrumb}', url: '${b.file}' }
+      ]);
+      injectBreadcrumbSchema([
+        { page: 'home', url: 'index.html' },
+        { page: 'services', url: 'pages/services.html#industrial' },
+        { page: '${b.brandCrumb}', url: 'pages/${b.file}' }
+      ]);
+      ${b.init}();
+      ${b.schema}();
+      renderGeoStrip('geoStrip', {
+        textKey: '${PK}.geoText',
+        text: '${b.geoText}'
+      });
+      renderRelatedLinks(${JSON.stringify(b.relatedLinks)});
+      setupWhatsappLinks();
     });
-    renderSiteChrome();
-    renderBreadcrumbs([
-      { page: 'home', url: 'index.html' },
-      { page: 'services', url: 'services.html#industrial' },
-      { page: '${b.brandCrumb}', url: '${b.file}' }
-    ]);
-    injectBreadcrumbSchema([
-      { page: 'home', url: 'index.html' },
-      { page: 'services', url: 'pages/services.html#industrial' },
-      { page: '${b.brandCrumb}', url: 'pages/${b.file}' }
-    ]);
-    ${b.init}();
-    ${b.schema}();
-    renderGeoStrip('geoStrip', {
-      textKey: '${PK}.geoText',
-      text: '${b.geoText}'
-    });
-    renderRelatedLinks(${JSON.stringify(b.relatedLinks)});
   </script>
 </body>
 </html>`;
@@ -299,7 +307,7 @@ const brands = [
     pageKey: 'teraokaPage',
     brandCrumb: 'teraoka',
     canonical: 'https://bizdavar.com/pages/teraoka.html',
-    og: 'assets/images/partners/teraoka.svg',
+    og: 'assets/images/teraoka/products/luxeed-l-retail-scale.png',
     title: 'خرید Teraoka Seiko | ترازو و POS — بیزدوار گروپ',
     navLabel: 'دسته‌بندی محصولات Teraoka',
     trustEyebrow: 'چرا از بیزدوار بخرید؟',
@@ -313,7 +321,7 @@ const brands = [
     iranDesc: 'نوع فروشگاه یا آشپزخانه صنعتی را بفرستید — سری مناسب را پیشنهاد می‌دهیم.',
     industriesDesc: 'تجهیزات Teraoka برای retail، HORECA و لجستیک',
     supplyTitle: 'خدمات تامین Teraoka Seiko',
-    officialNote: 'اطلاعات فنی بر اساس <a href="https://www.teraoka.co.jp/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Teraoka Seiko</a> است. برای استعلام — <a href="contact.html">با بیزدوار تماس بگیرید</a> · <a href="digi-system.html">Digi System</a>',
+    officialNote: 'اطلاعات فنی بر اساس <a href="https://www.teraokaseiko.com/jp/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Teraoka Seiko</a> است. برای استعلام — <a href="contact.html">با بیزدوار تماس بگیرید</a> · <a href="digi-system.html">Digi System</a>',
     ctaTitle: 'آماده استعلام قیمت Teraoka هستید؟',
     ctaDesc: 'نوع ترازو، ظرفیت و تعداد صندوق را بفرستید — deli · POS · labeling',
     stickyLabel: 'استعلام Teraoka',
@@ -327,6 +335,7 @@ const brands = [
 ];
 
 for (const b of brands) {
-  fs.writeFileSync(path.join(__dirname, '../pages', b.file), brandHtml(b));
+  const out = path.join(__dirname, '../pages', b.file);
+  fs.writeFileSync(out, brandHtml(b), 'utf8');
   console.log('Wrote', b.file);
 }

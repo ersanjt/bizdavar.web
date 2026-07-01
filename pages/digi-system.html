@@ -1,11 +1,13 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <script src="../assets/scripts/i18n/locale-preload.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>خرید Digi System | ترازو و POS — بیزدوار گروپ</title>
+  <link rel="icon" href="../assets/images/brand/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../assets/images/brand/favicon.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="../assets/images/brand/favicon-16.png" type="image/png" sizes="16x16">
   <link rel="apple-touch-icon" href="../assets/images/brand/apple-touch-icon.png">
   <link rel="stylesheet" href="../assets/styles/fonts.css">
   <link rel="stylesheet" href="../assets/styles/typography.css">
@@ -16,12 +18,13 @@
   <link rel="stylesheet" href="../assets/styles/i18n.css">
   <link rel="stylesheet" href="../assets/styles/footer.css">
   <link rel="stylesheet" href="../assets/styles/responsive.css">
+  <link rel="stylesheet" href="../assets/styles/mobile-chrome.css">
   <link rel="stylesheet" href="../assets/styles/brand-supply-shared.css">
   <link rel="stylesheet" href="../assets/styles/digi.css">
 </head>
 <body data-page="digiSystem" data-depth="1">
 
-  <a href="#main-content" class="skip-link" data-i18n="common.skipLink">رفتن به محتوای اصلی</a>
+  <a href="#main-content" class="skip-link">رفتن به محتوای اصلی</a>
   <div class="top-bar" id="topBar"></div>
   <header class="header" id="siteHeader"></header>
   <nav class="breadcrumbs-wrap" id="breadcrumbs" aria-label="مسیر صفحه"></nav>
@@ -117,7 +120,7 @@
         <p class="section__desc" data-i18n="digiSystemPage.sections.supply.desc">شریک تامین شما — نه فقط فروشنده</p>
       </div>
       <div class="digi-supply-grid" id="digiSupplyList"></div>
-      <div class="digi-official-note" data-i18n-html="digiSystemPage.officialNote">اطلاعات فنی بر اساس <a href="https://www.digisystem.com/tr/retail/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Digi System (DIGI)</a> است. برای استعلام — <a href="contact.html">با بیزدوار تماس بگیرید</a> · <a href="teraoka.html">Teraoka</a></div>
+      <div class="digi-official-note" data-i18n-html="digiSystemPage.officialNote">اطلاعات فنی بر اساس <a href="https://www.digisystem.com.tr/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Digi System</a> است. برای استعلام — <a href="contact.html">با بیزدوار تماس بگیرید</a> · <a href="teraoka.html">Teraoka</a></div>
     </div>
   </section>
 
@@ -177,28 +180,31 @@
   <script src="../assets/scripts/main.js"></script>
 
   <script>
-    injectPageSeo('digiSystem', {
-      canonical: 'https://bizdavar.com/pages/digi-system.html',
-      ogImage: 'assets/images/digi-system/products/sm-6000-retail-scale.png'
+    bizdavarPageInit(function () {
+      injectPageSeo('digiSystem', {
+        canonical: 'https://bizdavar.com/pages/digi-system.html',
+        ogImage: 'assets/images/partners/digi-system.svg'
+      });
+      renderSiteChrome();
+      renderBreadcrumbs([
+        { page: 'home', url: 'index.html' },
+        { page: 'services', url: 'services.html#industrial' },
+        { page: 'digiSystem', url: 'digi-system.html' }
+      ]);
+      injectBreadcrumbSchema([
+        { page: 'home', url: 'index.html' },
+        { page: 'services', url: 'pages/services.html#industrial' },
+        { page: 'digiSystem', url: 'pages/digi-system.html' }
+      ]);
+      initDigiSystemPage();
+      injectDigiSystemSchema();
+      renderGeoStrip('geoStrip', {
+        textKey: 'digiSystemPage.geoText',
+        text: 'تامین Digi System از ترکیه به ایران — مشاوره فارسی، پیش‌فاکتور و لجستیک توسط بیزدوار گروپ.'
+      });
+      renderRelatedLinks([{"titleKey":"digiSystemPage.related.0.title","title":"Teraoka Seiko","url":"teraoka.html","descKey":"digiSystemPage.related.0.desc","desc":"ترازو و POS ژاپن"},{"titleKey":"digiSystemPage.related.1.title","title":"خدمات صنعتی","url":"services.html#industrial","descKey":"digiSystemPage.related.1.desc","desc":"تامین retail B2B"},{"titleKey":"digiSystemPage.related.2.title","title":"تماس","url":"contact.html","descKey":"digiSystemPage.related.2.desc","desc":"استعلام قیمت"}]);
+      setupWhatsappLinks();
     });
-    renderSiteChrome();
-    renderBreadcrumbs([
-      { page: 'home', url: 'index.html' },
-      { page: 'services', url: 'services.html#industrial' },
-      { page: 'digiSystem', url: 'digi-system.html' }
-    ]);
-    injectBreadcrumbSchema([
-      { page: 'home', url: 'index.html' },
-      { page: 'services', url: 'pages/services.html#industrial' },
-      { page: 'digiSystem', url: 'pages/digi-system.html' }
-    ]);
-    initDigiSystemPage();
-    injectDigiSystemSchema();
-    renderGeoStrip('geoStrip', {
-      textKey: 'digiSystemPage.geoText',
-      text: 'تامین Digi System از ترکیه به ایران — مشاوره فارسی، پیش‌فاکتور و لجستیک توسط بیزدوار گروپ.'
-    });
-    renderRelatedLinks([{"titleKey":"digiSystemPage.related.0.title","title":"Teraoka Seiko","url":"teraoka.html","descKey":"digiSystemPage.related.0.desc","desc":"ترازو و POS ژاپن"},{"titleKey":"digiSystemPage.related.1.title","title":"خدمات صنعتی","url":"services.html#industrial","descKey":"digiSystemPage.related.1.desc","desc":"تامین retail B2B"},{"titleKey":"digiSystemPage.related.2.title","title":"تماس","url":"contact.html","descKey":"digiSystemPage.related.2.desc","desc":"استعلام قیمت"}]);
   </script>
 </body>
 </html>

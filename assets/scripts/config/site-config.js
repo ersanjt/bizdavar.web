@@ -38,6 +38,7 @@ window.BIZDAVAR_CONFIG = {
 
   assets: {
     favicon: 'assets/images/brand/favicon.png',
+    faviconSvg: 'assets/images/brand/favicon.svg',
     appleTouchIcon: 'assets/images/brand/apple-touch-icon.png',
     /** Light backgrounds — header, drawer (Bizda black + var red) */
     logo: 'assets/images/brand/bizdavar-logo.png',
