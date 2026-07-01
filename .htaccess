@@ -1,6 +1,20 @@
-# Bizdavar Group — security headers (Apache / cPanel)
-# Requires mod_headers (enabled on most cPanel hosts)
+# Bizdavar Group — Apache / cPanel
+# https://bizdavar.com
 
+# ── General ────────────────────────────────────────────────────────────────
+Options -Indexes
+DirectoryIndex index.html
+
+# Fix Persian/UTF-8 display (e.g. brand pages served as ????)
+AddDefaultCharset UTF-8
+AddType 'text/html; charset=UTF-8' .html
+
+# Block dotfiles (.git, .env, etc.)
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
+
+# ── Security headers (mod_headers) ───────────────────────────────────────
 <IfModule mod_headers.c>
   Header set X-Content-Type-Options "nosniff"
   Header set X-Frame-Options "SAMEORIGIN"
@@ -19,34 +33,54 @@
     base-uri 'self'; \
     form-action 'self' mailto: https://formspree.io https://*.formspree.io; \
     upgrade-insecure-requests"
+
+  # Cache static assets in browser
+  <FilesMatch "\.(css|js|png|jpe?g|webp|svg|gif|ico|woff2?)$">
+    Header set Cache-Control "public, max-age=604800, immutable"
+  </FilesMatch>
 </IfModule>
 
-# Clean URLs — extensionless paths (requires mod_rewrite)
+# ── Compression (mod_deflate) ──────────────────────────────────────────────
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+# ── Clean URLs + HTTPS (mod_rewrite) ───────────────────────────────────────
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
 
+  # www → apex
+  RewriteCond %{HTTP_HOST} ^www\.bizdavar\.com [NC]
+  RewriteRule ^ https://bizdavar.com%{REQUEST_URI} [R=301,L]
+
+  # HTTP → HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
   # /index.html → /
   RewriteRule ^index\.html$ / [R=301,L,NC]
 
-  # External redirect: *.html → clean URL (preserve query string)
+  # External redirect: *.html → extensionless (preserve query string)
   RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
-  RewriteRule ^ %1 [R=301,L,NE]
+  RewriteRule ^ /%1 [R=301,L,NE]
 
-  # Internal rewrite: serve matching .html file
+  # Internal rewrite: /pages/foo → /pages/foo.html
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME}.html -f
   RewriteRule ^(.+?)/?$ $1.html [L]
 </IfModule>
 
-# Cache static assets (optional — adjust if deploy issues)
+# ── Expires (mod_expires) ──────────────────────────────────────────────────
 <IfModule mod_expires.c>
   ExpiresActive On
+  ExpiresByType text/html "access plus 1 hour"
   ExpiresByType text/css "access plus 7 days"
   ExpiresByType application/javascript "access plus 7 days"
   ExpiresByType image/png "access plus 30 days"
   ExpiresByType image/jpeg "access plus 30 days"
   ExpiresByType image/webp "access plus 30 days"
   ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType font/woff2 "access plus 30 days"
 </IfModule>
