@@ -1,4 +1,14 @@
+# Bizdavar Group — https://bizdavar.com
+# Multilingual site (fa / tr / en) — canonical URLs are extensionless
+
 User-agent: *
 Allow: /
 
+# Static assets — not standalone pages
+Disallow: /assets/scripts/
+Disallow: /assets/styles/
+
 Sitemap: https://bizdavar.com/sitemap.xml
+
+# Yandex host preference
+Host: https://bizdavar.com
