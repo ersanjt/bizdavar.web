@@ -29,5 +29,6 @@
   <rect x="276" y="128" width="88" height="8" rx="4" fill="#2563eb" opacity="0.2"/>
   <rect x="276" y="144" width="96" height="8" rx="4" fill="#2563eb" opacity="0.2"/>
   <rect x="276" y="168" width="72" height="20" rx="6" fill="#FFDE00"/>
-  <text x="240" y="292" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#fff" opacity="0.9">Fast Web Studio · Responsive · 5-day delivery</text>
+  <text x="240" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#fff" font-weight="800">Fast Web Studio</text>
+  <text x="240" y="292" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#fff" opacity="0.9">Responsive · WooCommerce · 5-day delivery</text>
 </svg>

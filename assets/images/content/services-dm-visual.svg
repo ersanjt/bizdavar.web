@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" width="480" height="320" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="dmBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#12123a"/>
+      <stop offset="55%" stop-color="#1e1e52"/>
+      <stop offset="100%" stop-color="#2a2a6a"/>
+    </linearGradient>
+    <linearGradient id="barGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#FFDE00" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#FFDE00"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="320" rx="20" fill="url(#dmBg)"/>
+  <circle cx="400" cy="56" r="48" fill="#FFDE00" opacity="0.08"/>
+  <circle cx="56" cy="264" r="36" fill="#E62833" opacity="0.1"/>
+  <rect x="40" y="44" width="200" height="132" rx="14" fill="#fff" fill-opacity="0.06" stroke="#fff" stroke-opacity="0.12"/>
+  <rect x="56" y="72" width="72" height="8" rx="4" fill="#FFDE00" opacity="0.85"/>
+  <rect x="56" y="88" width="120" height="6" rx="3" fill="#fff" opacity="0.35"/>
+  <rect x="56" y="108" width="48" height="56" rx="6" fill="url(#barGrad)"/>
+  <rect x="112" y="120" width="48" height="44" rx="6" fill="url(#barGrad)" opacity="0.75"/>
+  <rect x="168" y="128" width="48" height="36" rx="6" fill="url(#barGrad)" opacity="0.55"/>
+  <path d="M56 176 L200 120" stroke="#FFDE00" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <circle cx="200" cy="120" r="5" fill="#FFDE00"/>
+  <rect x="252" y="52" width="188" height="164" rx="14" fill="#fff" fill-opacity="0.05" stroke="#fff" stroke-opacity="0.1"/>
+  <circle cx="346" cy="120" r="52" fill="none" stroke="#FFDE00" stroke-width="1.5" opacity="0.45"/>
+  <ellipse cx="346" cy="120" rx="52" ry="22" fill="none" stroke="#fff" stroke-width="1" opacity="0.2"/>
+  <ellipse cx="346" cy="120" rx="22" ry="52" fill="none" stroke="#fff" stroke-width="1" opacity="0.2"/>
+  <circle cx="346" cy="68" r="4" fill="#FFDE00"/>
+  <circle cx="398" cy="120" r="4" fill="#E62833"/>
+  <circle cx="346" cy="172" r="4" fill="#FFDE00"/>
+  <circle cx="294" cy="120" r="4" fill="#fff" opacity="0.7"/>
+  <rect x="268" y="228" width="144" height="36" rx="10" fill="#fff" fill-opacity="0.08"/>
+  <rect x="284" y="240" width="52" height="12" rx="6" fill="#FFDE00" opacity="0.9"/>
+  <rect x="344" y="242" width="52" height="8" rx="4" fill="#fff" opacity="0.35"/>
+</svg>
