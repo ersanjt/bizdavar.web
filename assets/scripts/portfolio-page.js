@@ -199,9 +199,9 @@
 
   window.renderPortfolioRelatedLinks = function () {
     const links = rawOr('portfolioPage.relatedLinks', [
-      { title: 'خدمات ما', url: 'services.html', desc: 'دیجیتال و صنعتی' },
-      { title: 'Fast Web Studio', url: 'fast.html', desc: 'طراحی سایت ۵ روزه' },
-      { title: 'تماس', url: 'contact.html', desc: 'شروع پروژه جدید' }
+      { title: 'خدمات ما', url: 'services', desc: 'دیجیتال و صنعتی' },
+      { title: 'Fast Web Studio', url: 'fast', desc: 'طراحی سایت ۵ روزه' },
+      { title: 'تماس', url: 'contact', desc: 'شروع پروژه جدید' }
     ]);
     if (typeof window.renderRelatedLinks === 'function') {
       window.renderRelatedLinks(links);

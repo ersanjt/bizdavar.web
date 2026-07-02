@@ -1,6 +1,6 @@
 # Missing assets audit
 
-Generated: 2026-07-01
+Generated: 2026-07-02
 
 Refresh: `node scripts/audit-assets.js`
 
@@ -8,11 +8,11 @@ Refresh: `node scripts/audit-assets.js`
 
 | Metric | Count |
 |--------|------:|
-| Image paths referenced in code | 57 |
-| Image files on disk | 213 |
+| Image paths referenced in code | 62 |
+| Image files on disk | 220 |
 | **Missing (all)** | **0** |
 | Missing partner logos | 0 |
-| Partner files on disk, unused in code | 18 |
+| Partner files on disk, unused in code | 19 |
 
 ## Missing — referenced in code but not on disk
 
@@ -37,6 +37,7 @@ _None._
 - `assets/images/partners/footer-logo-2.png`
 - `assets/images/partners/header-logo-1.png`
 - `assets/images/partners/iban2iban.png`
+- `assets/images/partners/prosense.png`
 - `assets/images/partners/zedcex.png`
 - `assets/images/partners/zeddeveloper.png`
 - `assets/images/partners/zedgate-io.png`

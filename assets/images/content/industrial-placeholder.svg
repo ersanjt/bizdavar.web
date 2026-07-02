@@ -9,5 +9,5 @@
   <circle cx="400" cy="220" r="90" fill="none" stroke="#d63635" stroke-width="4" opacity="0.85"/>
   <rect x="310" y="300" width="180" height="24" rx="6" fill="#d63635" opacity="0.75"/>
   <rect x="260" y="340" width="280" height="12" rx="4" fill="#fff" opacity="0.25"/>
-  <text x="400" y="420" text-anchor="middle" fill="#fff" font-family="Tahoma,Arial,sans-serif" font-size="22" opacity="0.9">Bizdavar  Industrial Supply</text>
+  <text x="400" y="420" text-anchor="middle" fill="#fff" font-family="Tahoma,Arial,sans-serif" font-size="22" opacity="0.9">Bizdavar Industrial Supply</text>
 </svg>

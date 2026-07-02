@@ -102,7 +102,7 @@ window.FAST_CATALOG = {
   ],
 
   showcases: [
-    { name: 'BZ Diamond', category: 'فروشگاه جواهرات', slug: 'pages/bz-diamond.html', internal: true },
+    { name: 'BZ Diamond', category: 'فروشگاه جواهرات', slug: 'pages/bz-diamond', internal: true },
     { name: 'Karen Leather', category: 'چرم و مد', domain: 'karenleather.com', internal: false },
     { name: 'Marvelous Holding', category: 'هلدینگ', domain: 'marvelousholding.com', internal: false },
     { name: 'NIK Aesthetic', category: 'کلینیک زیبایی', domain: 'nikaesthetic.com', internal: false },
@@ -116,6 +116,6 @@ window.FAST_CATALOG = {
     { q: 'آیا می‌توانم بعداً سایت را گسترش دهم؟', a: 'بله. می‌توانید از پلن پایه شروع کنید و بعد به فروشگاهی یا حرفه‌ای ارتقا دهید. بیزدوار همان پروژه را ادامه می‌دهد.' },
     { q: 'پرداخت چگونه است؟', a: 'معمولاً ۵۰٪ پیش‌پرداخت و ۵۰٪ قبل از تحویل نهایی — از طریق حواله، کارت یا روش‌های بین‌المللی. جزئیات در واتساپ هماهنگ می‌شود.' },
     { q: 'برای کسب‌وکار خارج از ایران هم کار می‌کنید؟', a: 'بله — Fast Web Studio برای ایران، ترکیه، امارات و اروپا اجرا شده. مشاوره فارسی، انگلیسی و ترکی داریم.' },
-    { q: 'تفاوت Fast با سفارش اختصاصی چیست؟', a: 'Fast برای راه‌اندازی سریع با قیمت ثابت است. پروژه‌های بزرگ‌تر (اپلیکیشن، پورتال B2B، چندزبانه پیچیده) از مسیر <a href="services.html#web-design">خدمات طراحی وب</a> پیش می‌روند.' }
+    { q: 'تفاوت Fast با سفارش اختصاصی چیست؟', a: 'Fast برای راه‌اندازی سریع با قیمت ثابت است. پروژه‌های بزرگ‌تر (اپلیکیشن، پورتال B2B، چندزبانه پیچیده) از مسیر <a href="services#web-design">خدمات طراحی وب</a> پیش می‌روند.' }
   ]
 };

@@ -470,5 +470,6 @@
       </button>`;
 
     bindLangSwitcher(header);
+    bindLangSwitcher(footer);
   };
 })();

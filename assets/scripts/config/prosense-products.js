@@ -5,7 +5,7 @@ window.PROSENSE_CATALOG = {
   brand: {
     name: 'Prosense',
     nameFa: 'پروسنس',
-    logo: 'assets/images/partners/vega.svg',
+    logo: 'assets/images/partners/prosense.svg',
     logoAlt: 'Prosense — gas and flame detectors supplied from Turkey',
     heroImage: 'assets/images/content/industrial-placeholder.svg',
     heroImageAlt: 'Prosense PQ series SIL2 gas detector with hydrocarbon LEL display',

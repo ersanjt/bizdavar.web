@@ -87,14 +87,14 @@
       { title: 'تماس', url: 'contact', desc: 'شروع پروژه جدید' }
     ],
     tr: [
-      { title: 'Hizmetlerimiz', url: 'services.html', desc: 'Dijital ve endüstriyel' },
-      { title: 'Fast Web Studio', url: 'fast.html', desc: '5 günde web tasarım' },
-      { title: 'İletişim', url: 'contact.html', desc: 'Yeni proje başlat' }
+      { title: 'Hizmetlerimiz', url: 'services', desc: 'Dijital ve endüstriyel' },
+      { title: 'Fast Web Studio', url: 'fast', desc: '5 günde web tasarım' },
+      { title: 'İletişim', url: 'contact', desc: 'Yeni proje başlat' }
     ],
     en: [
-      { title: 'Our services', url: 'services.html', desc: 'Digital and industrial' },
-      { title: 'Fast Web Studio', url: 'fast.html', desc: '5-day website design' },
-      { title: 'Contact', url: 'contact.html', desc: 'Start a new project' }
+      { title: 'Our services', url: 'services', desc: 'Digital and industrial' },
+      { title: 'Fast Web Studio', url: 'fast', desc: '5-day website design' },
+      { title: 'Contact', url: 'contact', desc: 'Start a new project' }
     ]
   };
 

@@ -8,6 +8,15 @@
   const DEFAULT_OTHER = 'en';
   const GEO_TIMEOUT = 1500;
 
+  function fetchAbortSignal(ms) {
+    if (typeof AbortSignal !== 'undefined' && typeof AbortSignal.timeout === 'function') {
+      return AbortSignal.timeout(ms);
+    }
+    const controller = new AbortController();
+    setTimeout(() => controller.abort(), ms);
+    return controller.signal;
+  }
+
   function getByPath(obj, path) {
     if (!obj || !path) return undefined;
     return path.split('.').reduce((o, k) => (o && o[k] !== undefined ? o[k] : undefined), obj);
@@ -20,13 +29,13 @@
     const lookup = (async () => {
       const endpoints = [
         async () => {
-          const r = await fetch('https://ipapi.co/country_code/', { signal: AbortSignal.timeout(GEO_TIMEOUT) });
+          const r = await fetch('https://ipapi.co/country_code/', { signal: fetchAbortSignal(GEO_TIMEOUT) });
           if (!r.ok) throw new Error('ipapi');
           const code = (await r.text()).trim().toUpperCase();
           return code.length === 2 ? code : null;
         },
         async () => {
-          const r = await fetch('https://ipwho.is/', { signal: AbortSignal.timeout(GEO_TIMEOUT) });
+          const r = await fetch('https://ipwho.is/', { signal: fetchAbortSignal(GEO_TIMEOUT) });
           if (!r.ok) throw new Error('ipwho');
           const j = await r.json();
           return j.success ? String(j.country_code || '').toUpperCase() : null;

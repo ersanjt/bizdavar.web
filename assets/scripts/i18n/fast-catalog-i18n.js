@@ -96,7 +96,7 @@
       { q: 'Can I expand the site later?', a: 'Yes. Start with Basic and upgrade to Store or Pro. Bizdavar continues on the same project.' },
       { q: 'How does payment work?', a: 'Usually 50% upfront and 50% before final delivery — bank transfer, card or international methods. Details are agreed on WhatsApp.' },
       { q: 'Do you work with businesses outside Iran?', a: 'Yes — Fast Web Studio has launched sites in Iran, Turkey, UAE and Europe. Consulting in Persian, English and Turkish.' },
-      { q: 'How is Fast different from custom projects?', a: 'Fast is fixed-price rapid launch. Larger projects (apps, B2B portals, complex multilingual sites) go through our <a href="services.html#web-design">web design services</a>.' }
+      { q: 'How is Fast different from custom projects?', a: 'Fast is fixed-price rapid launch. Larger projects (apps, B2B portals, complex multilingual sites) go through our <a href="services#web-design">web design services</a>.' }
     ]
   };
 
@@ -191,7 +191,7 @@
       { q: 'Siteyi sonra genişletebilir miyim?', a: 'Evet. Temel ile başlayıp Mağaza veya Pro\'ya yükseltebilirsiniz. Bizdavar aynı projeyi sürdürür.' },
       { q: 'Ödeme nasıl yapılır?', a: 'Genelde %50 peşin, %50 teslimden önce — havale, kart veya uluslararası yöntemler. Detaylar WhatsApp\'ta netleşir.' },
       { q: 'İran dışındaki işletmelerle çalışıyor musunuz?', a: 'Evet — İran, Türkiye, BAE ve Avrupa\'da siteler kuruldu. Farsça, İngilizce ve Türkçe danışmanlık.' },
-      { q: 'Fast ile özel proje arasındaki fark nedir?', a: 'Fast sabit fiyatlı hızlı lansman içindir. Büyük projeler (uygulama, B2B portal) <a href="services.html#web-design">web tasarım hizmetlerimiz</a> üzerinden yürür.' }
+      { q: 'Fast ile özel proje arasındaki fark nedir?', a: 'Fast sabit fiyatlı hızlı lansman içindir. Büyük projeler (uygulama, B2B portal) <a href="services#web-design">web tasarım hizmetlerimiz</a> üzerinden yürür.' }
     ]
   };
 
