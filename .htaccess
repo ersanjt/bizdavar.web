@@ -61,8 +61,13 @@ AddType 'text/html; charset=UTF-8' .html
   # /index.html → /
   RewriteRule ^index\.html$ / [R=301,L,NC]
 
-  # /blog → /pages/blog (legacy URL)
+  # /blog → /pages/blog (legacy URL — external canonical redirect)
+  RewriteCond %{THE_REQUEST} \s/blog[\s?] [NC]
   RewriteRule ^blog/?$ /pages/blog [R=301,L]
+
+  # Internal serve /blog and /pages/blog without .html
+  RewriteRule ^blog/?$ pages/blog.html [L]
+  RewriteRule ^pages/blog/?$ pages/blog.html [L]
 
   # External redirect: *.html → extensionless (preserve query string)
   RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]

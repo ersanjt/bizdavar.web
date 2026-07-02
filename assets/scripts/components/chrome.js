@@ -158,9 +158,15 @@
 
               const desc = l.descKey ? t(l.descKey, l.desc) : l.desc;
 
+              const thumb = l.thumb
+                ? `<img src="${path(l.thumb)}" alt="" class="related-links__thumb" width="120" height="72" loading="lazy">`
+                : '';
+
               return `
 
               <a href="${siteLink(l.url)}" class="related-links__card">
+
+                ${thumb}
 
                 <span class="related-links__label">${l.label || t('common.view', 'مشاهده')}</span>
 

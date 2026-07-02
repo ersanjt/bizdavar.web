@@ -42,8 +42,8 @@ window.BIZDAVAR_CONFIG = {
     appleTouchIcon: 'assets/images/brand/apple-touch-icon.png',
     /** Light backgrounds — header, drawer (Bizda black + var red) */
     logo: 'assets/images/brand/bizdavar-logo.png',
-    /** Dark backgrounds — footer (Bizda gray + var red, transparent PNG) */
-    logoOnDark: 'assets/images/brand/bizdavar-logo-on-dark.png',
+    /** Dark backgrounds — footer (white Bizda + red var) */
+    logoOnDark: 'assets/images/brand/bizdavar-logo-footer.svg',
     logoAlt: 'Bizdavar — official logo',
     ogImage: 'assets/images/content/about-hero.svg',
     heroImage: 'assets/images/content/hero-home.svg',

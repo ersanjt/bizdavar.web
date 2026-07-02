@@ -95,6 +95,8 @@
     `).join('');
   }
 
+  const PROCESS_ICONS = ['phone', 'target', 'bolt', 'chart-line'];
+
   function renderProcess() {
     const el = document.getElementById('servicesProcess');
     if (!el) return;
@@ -106,6 +108,7 @@
     ]);
     el.innerHTML = steps.map((s, i) => `
       <div class="services-process__step">
+        <span class="services-process__icon">${ic(PROCESS_ICONS[i] || 'target', { size: 28 })}</span>
         <span class="services-process__num">${i + 1}</span>
         <h4>${s.title}</h4>
         <p>${s.desc}</p>
@@ -122,9 +125,9 @@
 
   window.renderServicesRelatedLinks = function () {
     const links = rawList('servicesPage.relatedLinks', [
-      { title: 'Fast Web Studio', url: 'fast.html', desc: 'طراحی سایت از $99' },
-      { title: 'نمونه‌کارها', url: 'portfolio.html', desc: '۳۵ پروژه و برند' },
-      { title: 'وبلاگ تخصصی', url: 'blog.html', desc: 'راهنما و مقالات' }
+      { title: 'Fast Web Studio', url: 'fast', desc: 'طراحی سایت از $99', thumb: 'assets/images/content/related-thumb-fast.svg' },
+      { title: 'نمونه‌کارها', url: 'portfolio', desc: '۳۵ پروژه و برند', thumb: 'assets/images/content/related-thumb-portfolio.svg' },
+      { title: 'وبلاگ تخصصی', url: 'blog', desc: 'راهنما و مقالات', thumb: 'assets/images/content/related-thumb-blog.svg' }
     ]);
     if (typeof window.renderRelatedLinks === 'function') {
       window.renderRelatedLinks(links);

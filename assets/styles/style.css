@@ -1635,6 +1635,18 @@ a.about__feature:hover {
   box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   border-right: 3px solid var(--yellow);
   transition: transform var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.related-links__thumb {
+  width: 100%;
+  height: auto;
+  max-height: 72px;
+  object-fit: cover;
+  border-radius: calc(var(--radius) - 2px);
+  margin-bottom: 4px;
 }
 
 .related-links__card:hover { transform: translateY(-3px); }

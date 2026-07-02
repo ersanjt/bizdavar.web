@@ -64,19 +64,19 @@
 
   const servicesRelatedLinks = {
     fa: [
-      { title: 'Fast Web Studio', url: 'fast', desc: 'طراحی سایت از $99' },
-      { title: 'نمونه‌کارها', url: 'portfolio', desc: '۳۵ پروژه و برند' },
-      { title: 'وبلاگ تخصصی', url: 'blog', desc: 'راهنما و مقالات' }
+      { title: 'Fast Web Studio', url: 'fast', desc: 'طراحی سایت از $99', thumb: 'assets/images/content/related-thumb-fast.svg' },
+      { title: 'نمونه‌کارها', url: 'portfolio', desc: '۳۵ پروژه و برند', thumb: 'assets/images/content/related-thumb-portfolio.svg' },
+      { title: 'وبلاگ تخصصی', url: 'blog', desc: 'راهنما و مقالات', thumb: 'assets/images/content/related-thumb-blog.svg' }
     ],
     tr: [
-      { title: 'Fast Web Studio', url: 'fast.html', desc: '$99\'dan web tasarım' },
-      { title: 'Portfolyo', url: 'portfolio.html', desc: '35 proje ve marka' },
-      { title: 'Blog', url: 'blog.html', desc: 'Rehberler ve makaleler' }
+      { title: 'Fast Web Studio', url: 'fast', desc: '$99\'dan web tasarım', thumb: 'assets/images/content/related-thumb-fast.svg' },
+      { title: 'Portfolyo', url: 'portfolio', desc: '35 proje ve marka', thumb: 'assets/images/content/related-thumb-portfolio.svg' },
+      { title: 'Blog', url: 'blog', desc: 'Rehberler ve makaleler', thumb: 'assets/images/content/related-thumb-blog.svg' }
     ],
     en: [
-      { title: 'Fast Web Studio', url: 'fast.html', desc: 'Website design from $99' },
-      { title: 'Portfolio', url: 'portfolio.html', desc: '35 projects and brands' },
-      { title: 'Blog', url: 'blog.html', desc: 'Guides and articles' }
+      { title: 'Fast Web Studio', url: 'fast', desc: 'Website design from $99', thumb: 'assets/images/content/related-thumb-fast.svg' },
+      { title: 'Portfolio', url: 'portfolio', desc: '35 projects and brands', thumb: 'assets/images/content/related-thumb-portfolio.svg' },
+      { title: 'Blog', url: 'blog', desc: 'Guides and articles', thumb: 'assets/images/content/related-thumb-blog.svg' }
     ]
   };
 

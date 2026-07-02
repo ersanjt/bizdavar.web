@@ -6,7 +6,7 @@
   const MANUAL_KEY = 'bizdavar_locale_manual';
   const GEO_MAP = { TR: 'tr', IR: 'fa' };
   const DEFAULT_OTHER = 'en';
-  const GEO_TIMEOUT = 2000;
+  const GEO_TIMEOUT = 1500;
 
   function getByPath(obj, path) {
     if (!obj || !path) return undefined;
@@ -14,27 +14,37 @@
   }
 
   async function detectCountryCode() {
-    const endpoints = [
-      async () => {
-        const r = await fetch('https://ipapi.co/country_code/', { signal: AbortSignal.timeout(GEO_TIMEOUT) });
-        if (!r.ok) throw new Error('ipapi');
-        const code = (await r.text()).trim().toUpperCase();
-        return code.length === 2 ? code : null;
-      },
-      async () => {
-        const r = await fetch('https://ipwho.is/', { signal: AbortSignal.timeout(GEO_TIMEOUT) });
-        if (!r.ok) throw new Error('ipwho');
-        const j = await r.json();
-        return j.success ? String(j.country_code || '').toUpperCase() : null;
+    const timeout = new Promise((_, reject) => {
+      setTimeout(() => reject(new Error('geo-timeout')), GEO_TIMEOUT);
+    });
+    const lookup = (async () => {
+      const endpoints = [
+        async () => {
+          const r = await fetch('https://ipapi.co/country_code/', { signal: AbortSignal.timeout(GEO_TIMEOUT) });
+          if (!r.ok) throw new Error('ipapi');
+          const code = (await r.text()).trim().toUpperCase();
+          return code.length === 2 ? code : null;
+        },
+        async () => {
+          const r = await fetch('https://ipwho.is/', { signal: AbortSignal.timeout(GEO_TIMEOUT) });
+          if (!r.ok) throw new Error('ipwho');
+          const j = await r.json();
+          return j.success ? String(j.country_code || '').toUpperCase() : null;
+        }
+      ];
+      for (const fn of endpoints) {
+        try {
+          const code = await fn();
+          if (code) return code;
+        } catch (_) { /* try next */ }
       }
-    ];
-    for (const fn of endpoints) {
-      try {
-        const code = await fn();
-        if (code) return code;
-      } catch (_) { /* try next */ }
+      return null;
+    })();
+    try {
+      return await Promise.race([lookup, timeout]);
+    } catch (_) {
+      return null;
     }
-    return null;
   }
 
   function localeFromCountry(code) {

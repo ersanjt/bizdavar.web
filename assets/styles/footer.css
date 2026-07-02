@@ -41,6 +41,7 @@
 .footer__logo-link {
   display: inline-block;
   width: fit-content;
+  line-height: 0;
 }
 
 .footer__logo-img {
@@ -49,11 +50,13 @@
   width: auto;
   max-width: 168px;
   object-fit: contain;
+  object-position: start center;
 }
 
 .footer__logo-img--sm {
   height: 32px;
   max-width: 140px;
+  margin-inline: auto;
 }
 
 .footer__tagline {
