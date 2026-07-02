@@ -43,6 +43,19 @@
   width: fit-content;
 }
 
+.footer__logo-img {
+  display: block;
+  height: 40px;
+  width: auto;
+  max-width: 168px;
+  object-fit: contain;
+}
+
+.footer__logo-img--sm {
+  height: 32px;
+  max-width: 140px;
+}
+
 .footer__tagline {
   margin: 0;
   font-size: 14px;

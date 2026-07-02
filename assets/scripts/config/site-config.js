@@ -43,7 +43,7 @@ window.BIZDAVAR_CONFIG = {
     /** Light backgrounds — header, drawer (Bizda black + var red) */
     logo: 'assets/images/brand/bizdavar-logo.png',
     /** Dark backgrounds — footer (Bizda gray + var red, transparent PNG) */
-    logoOnDark: 'assets/images/brand/bizdavar-logo-light.png',
+    logoOnDark: 'assets/images/brand/bizdavar-logo-on-dark.png',
     logoAlt: 'Bizdavar — official logo',
     ogImage: 'assets/images/content/about-hero.svg',
     heroImage: 'assets/images/content/hero-home.svg',
@@ -213,7 +213,7 @@ window.BIZDAVAR_CONFIG = {
       title: 'دتکتور گاز و شعله',
       desc: 'سیستم‌های ثابت و پرتابل با گواهی SIL2/3 — مناسب معدن، پتروشیمی و پارکینگ',
       logo: 'assets/images/content/industrial-placeholder.svg',
-      url: 'pages/vega.html',
+      url: 'pages/prosense',
       internal: true,
       badge: 'ترکیه',
       accent: 'teal',

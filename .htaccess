@@ -61,6 +61,9 @@ AddType 'text/html; charset=UTF-8' .html
   # /index.html → /
   RewriteRule ^index\.html$ / [R=301,L,NC]
 
+  # /blog → /pages/blog (legacy URL)
+  RewriteRule ^blog/?$ /pages/blog [R=301,L]
+
   # External redirect: *.html → extensionless (preserve query string)
   RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
   RewriteRule ^ /%1 [R=301,L,NE]

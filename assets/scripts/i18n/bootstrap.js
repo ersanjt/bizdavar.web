@@ -130,7 +130,7 @@
   window.bizdavarWrapRenderFns = wrapRenderFns;
 
   if (window.BIZDAVAR_I18N) {
-    window.bizdavarReady = window.BIZDAVAR_I18N.init()
+    window.bizdavarReady = Promise.resolve(window.BIZDAVAR_I18N.init())
       .then(() => {
         localeReady = true;
         wrapRenderFns();
@@ -144,6 +144,18 @@
         ensureSiteChrome();
         throw err;
       });
+
+    document.addEventListener('bizdavar:locale', () => {
+      afterLocale();
+      if (renderSiteChromeOrig) {
+        try {
+          renderSiteChromeOrig();
+        } catch (e) {
+          console.error('[Bizdavar] locale re-render failed', e);
+        }
+      }
+      afterLocale();
+    });
   } else {
     window.bizdavarReady = Promise.resolve(null).then(() => {
       localeReady = true;

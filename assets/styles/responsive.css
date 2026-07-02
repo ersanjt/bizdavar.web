@@ -628,14 +628,6 @@
 .mt-16 { margin-top: 16px; }
 .mt-24 { margin-top: 24px; }
 .btn--block { width: 100%; text-align: center; }
-.footer__logo-img {
-  height: 36px;
-  width: auto;
-}
-.footer__logo-img--sm {
-  height: 28px;
-  opacity: 0.9;
-}
 .footer__domain-link { color: var(--yellow); }
 .hero__logo-center { margin: 0 auto 16px; }
 .fast-hero__title {
