@@ -254,7 +254,10 @@
           </dl>
           <ul class="intel-hq-list">
             ${I.identity.headquarters.map(h => `
-              <li><strong>${h.city}، ${h.country}</strong><span>${h.role}</span></li>
+              <li class="${h.badge === 'HQ' ? 'intel-hq-list__item--hq' : ''}">
+                <strong>${h.city}، ${h.country}${h.badge ? ` <span class="intel-hq-list__badge">${h.badge}</span>` : ''}</strong>
+                <span>${h.role}</span>
+              </li>
             `).join('')}
           </ul>
         </div>`;
@@ -303,12 +306,53 @@
     if (presenceEl && I.presence) {
       const P = I.presence;
       const regions = P.regions || [];
+      const hub = P.istanbulHub;
+      const waMsg = encodeURIComponent(C.contact.whatsappMessage || '');
+      const hubHtml = hub ? `
+        <article class="presence-istanbul-hub" id="istanbul-hub">
+          <div class="presence-istanbul-hub__head">
+            <div>
+              <span class="presence-istanbul-hub__eyebrow">${hub.subtitle || 'HQ'}</span>
+              <h3 class="presence-istanbul-hub__title">${hub.title}</h3>
+              <p class="presence-istanbul-hub__location">${hub.city}، ${hub.country} · ${hub.timezone || ''}</p>
+            </div>
+            <span class="presence-country__badge presence-istanbul-hub__badge">دفتر اصلی</span>
+          </div>
+          <p class="presence-istanbul-hub__intro">${hub.intro}</p>
+          <ul class="presence-istanbul-hub__services">
+            ${(hub.services || []).map(s => `<li>${s}</li>`).join('')}
+          </ul>
+          <div class="presence-istanbul-hub__meta">
+            <div class="presence-istanbul-hub__meta-item">
+              <span class="presence-istanbul-hub__label">ساعات کاری</span>
+              <span>${hub.workingHours}</span>
+            </div>
+            <div class="presence-istanbul-hub__meta-item">
+              <span class="presence-istanbul-hub__label">زبان‌ها</span>
+              <span>${(hub.languages || []).join(' · ')}</span>
+            </div>
+            <div class="presence-istanbul-hub__meta-item">
+              <span class="presence-istanbul-hub__label">تماس</span>
+              <a href="tel:${hub.phoneTel || C.contact.phone}" dir="ltr">${hub.phone}</a>
+            </div>
+            <div class="presence-istanbul-hub__meta-item">
+              <span class="presence-istanbul-hub__label">ایمیل</span>
+              <a href="mailto:${hub.email || C.contact.email}" dir="ltr">${hub.email || C.contact.email}</a>
+            </div>
+          </div>
+          <div class="presence-istanbul-hub__actions">
+            <a href="https://wa.me/${hub.whatsapp || C.contact.whatsapp}?text=${waMsg}" class="btn btn--yellow" target="_blank" rel="noopener noreferrer">واتساپ استانبول</a>
+            <a href="${path(R.contact)}" class="btn btn--primary">فرم تماس</a>
+          </div>
+          ${hub.note ? `<p class="presence-istanbul-hub__note">${hub.note}</p>` : ''}
+        </article>
+      ` : '';
 
       presenceEl.innerHTML = `
         <div class="presence-showcase">
           <div class="presence-showcase__hero">
             <div class="presence-showcase__map">
-              <img src="${path(P.mapImage || 'assets/images/content/presence-map.svg')}" alt="نقشه حضور جهانی بیزدوار — ۱۱ کشور" width="480" height="300" loading="lazy">
+              <img src="${path(P.mapImage || 'assets/images/content/presence-map.svg')}" alt="نقشه حضور جهانی بیزدوار — دفتر اصلی استانبول" width="480" height="300" loading="lazy">
             </div>
             <div class="presence-showcase__intro">
               <p class="presence-showcase__desc">${P.summaryFa}</p>
@@ -322,6 +366,7 @@
               </div>
             </div>
           </div>
+          ${hubHtml}
           <div class="presence-regions">
             ${regions.map(region => `
               <div class="presence-region">
@@ -335,6 +380,7 @@
                       </div>
                       ${c.city ? `<span class="presence-country__city">${c.city}</span>` : ''}
                       <p class="presence-country__focus">${c.focus}</p>
+                      ${c.detail ? `<p class="presence-country__detail">${c.detail}</p>` : ''}
                     </article>
                   `).join('')}
                 </div>

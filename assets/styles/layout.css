@@ -671,6 +671,158 @@ body {
   line-height: 1.5;
 }
 
+.presence-country__detail {
+  font-size: 11px;
+  color: var(--navy);
+  line-height: 1.45;
+  margin: var(--space-2) 0 0;
+  opacity: 0.85;
+}
+
+/* ─── Istanbul HQ spotlight ─── */
+.presence-istanbul-hub {
+  background: linear-gradient(135deg, var(--navy) 0%, #2a2a6a 100%);
+  color: rgba(255, 255, 255, 0.92);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  margin-bottom: var(--space-10);
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(255, 222, 0, 0.2);
+}
+
+.presence-istanbul-hub__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.presence-istanbul-hub__eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 6px;
+}
+
+.presence-istanbul-hub__title {
+  font-size: var(--text-xl);
+  font-weight: 800;
+  color: var(--white);
+  margin: 0 0 6px;
+}
+
+.presence-istanbul-hub__location {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.presence-istanbul-hub__badge {
+  flex-shrink: 0;
+}
+
+.presence-istanbul-hub__intro {
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 var(--space-5);
+  max-width: 720px;
+}
+
+.presence-istanbul-hub__services {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 20px;
+  margin: 0 0 var(--space-6);
+  padding: 0;
+  list-style: none;
+}
+
+.presence-istanbul-hub__services li {
+  position: relative;
+  padding-inline-start: 16px;
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.presence-istanbul-hub__services li::before {
+  content: '';
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--yellow);
+}
+
+.presence-istanbul-hub__meta {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+  padding: var(--space-5);
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.presence-istanbul-hub__meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: var(--text-sm);
+}
+
+.presence-istanbul-hub__label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.presence-istanbul-hub__meta a {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.presence-istanbul-hub__meta a:hover {
+  text-decoration: underline;
+}
+
+.presence-istanbul-hub__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.presence-istanbul-hub__note {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.65);
+}
+
+@media (max-width: 768px) {
+  .presence-istanbul-hub__services {
+    grid-template-columns: 1fr;
+  }
+
+  .presence-istanbul-hub__meta {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .presence-istanbul-hub__head {
+    flex-direction: column;
+  }
+}
+
 .faq-item {
   background: var(--white);
   border: 1px solid var(--gray-200);
