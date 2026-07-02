@@ -306,4 +306,36 @@
     injectFaqSchema();
     if (window.initDataIcons) initDataIcons();
   };
+
+  window.renderFastRelatedLinks = function () {
+    const links = window.BIZDAVAR_I18N?.raw('fastPage.relatedLinks') || [
+      { title: 'مقاله Fast Studio', url: 'articles/fast-studio', desc: 'راهنمای سفارش' },
+      { title: 'خدمات طراحی وب', url: 'services#web-design', desc: 'جزئیات خدمات' },
+      { title: 'نمونه‌کارها', url: 'portfolio', desc: 'پروژه‌های بیزدوار' }
+    ];
+    if (typeof window.renderRelatedLinks === 'function') {
+      window.renderRelatedLinks(links);
+    }
+  };
+
+  window.injectFastProductSchema = function () {
+    if (typeof window.injectServiceProductSchema !== 'function') return;
+    const fb = {
+      description: 'طراحی سایت حرفه‌ای در ۵ روز — پلن‌های شفاف، واتساپ فارسی و پشتیبانی پس از راه‌اندازی.',
+      offers: [
+        { name: 'پلن پایه', price: '99' },
+        { name: 'پلن فروشگاهی', price: '199' },
+        { name: 'پلن حرفه‌ای', price: '299' }
+      ]
+    };
+    const schema = window.BIZDAVAR_I18N?.raw('fastPage.schema');
+    const data = schema && typeof schema === 'object' ? schema : fb;
+    window.injectServiceProductSchema({
+      name: 'Fast Web Studio',
+      description: data.description || fb.description,
+      url: 'pages/fast',
+      areaServed: ['IR', 'TR', 'AM', 'AE', 'DE'],
+      offers: (data.offers || fb.offers).map(o => ({ ...o, currency: 'USD' }))
+    });
+  };
 })();

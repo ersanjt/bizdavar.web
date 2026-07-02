@@ -109,8 +109,10 @@
       if (typeof window.initPortfolioPage === 'function') window.initPortfolioPage();
       if (typeof window.renderPortfolioRelatedLinks === 'function') window.renderPortfolioRelatedLinks();
     }
-    if (page === 'fast' && typeof window.initFastPage === 'function') {
-      window.initFastPage();
+    if (page === 'fast') {
+      if (typeof window.initFastPage === 'function') window.initFastPage();
+      if (typeof window.renderFastRelatedLinks === 'function') window.renderFastRelatedLinks();
+      if (typeof window.injectFastProductSchema === 'function') window.injectFastProductSchema();
     }
     const supplyInits = {
       gamak: 'initGamakPage',

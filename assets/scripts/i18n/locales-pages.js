@@ -86,6 +86,51 @@
     ]
   };
 
+  const fastRelatedLinks = {
+    fa: [
+      { title: 'مقاله Fast Studio', url: 'articles/fast-studio', desc: 'راهنمای سفارش' },
+      { title: 'خدمات طراحی وب', url: 'services#web-design', desc: 'جزئیات خدمات' },
+      { title: 'نمونه‌کارها', url: 'portfolio', desc: 'پروژه‌های بیزدوار' }
+    ],
+    tr: [
+      { title: 'Fast Studio makalesi', url: 'articles/fast-studio', desc: 'Sipariş rehberi' },
+      { title: 'Web tasarım hizmetleri', url: 'services#web-design', desc: 'Hizmet detayları' },
+      { title: 'Portfolyo', url: 'portfolio', desc: 'Bizdavar projeleri' }
+    ],
+    en: [
+      { title: 'Fast Studio article', url: 'articles/fast-studio', desc: 'Ordering guide' },
+      { title: 'Web design services', url: 'services#web-design', desc: 'Service details' },
+      { title: 'Portfolio', url: 'portfolio', desc: 'Bizdavar projects' }
+    ]
+  };
+
+  const fastSchema = {
+    fa: {
+      description: 'طراحی سایت حرفه‌ای در ۵ روز — پلن‌های شفاف، واتساپ فارسی و پشتیبانی پس از راه‌اندازی.',
+      offers: [
+        { name: 'پلن پایه', price: '99' },
+        { name: 'پلن فروشگاهی', price: '199' },
+        { name: 'پلن حرفه‌ای', price: '299' }
+      ]
+    },
+    tr: {
+      description: '5 günde profesyonel web sitesi — şeffaf planlar, WhatsApp danışmanlık ve yayın sonrası destek.',
+      offers: [
+        { name: 'Temel plan', price: '99' },
+        { name: 'Mağaza planı', price: '199' },
+        { name: 'Pro plan', price: '299' }
+      ]
+    },
+    en: {
+      description: 'Professional website design in 5 days — transparent plans, WhatsApp consulting and post-launch support.',
+      offers: [
+        { name: 'Basic plan', price: '99' },
+        { name: 'Store plan', price: '199' },
+        { name: 'Pro plan', price: '299' }
+      ]
+    }
+  };
+
   const portfolioRelatedLinks = {
     fa: [
       { title: 'خدمات ما', url: 'services', desc: 'دیجیتال و صنعتی' },
@@ -471,6 +516,8 @@
     if (page[lang].fastPage) {
       page[lang].fastPage.hostingNote = fastHostingNote[lang];
       page[lang].fastPage.ui = fastPageUi[lang];
+      page[lang].fastPage.relatedLinks = fastRelatedLinks[lang];
+      page[lang].fastPage.schema = fastSchema[lang];
     }
     Object.assign(window.BIZDAVAR_LOCALES[lang], page[lang], {
       blogPosts: asBlogRows(blogPosts[lang]),

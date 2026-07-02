@@ -40,7 +40,7 @@
 
     <div class="fast-hosting-bar" id="fastHostingBar"></div>
 
-    <nav class="fast-nav" id="fastNav" aria-label="بخش‌های Fast Web Studio"></nav>
+    <nav class="fast-nav" id="fastNav"></nav>
 
     <section class="section" id="fast-plans">
       <div class="container">
@@ -132,7 +132,7 @@
   </main>
 
   <footer class="footer" id="siteFooter"></footer>
-  <button class="back-to-top" id="backToTop" aria-label="بازگشت به بالا">?</button>
+  <button class="back-to-top" id="backToTop" aria-label="بازگشت به بالا">&uarr;</button>
 
   <script src="../assets/scripts/config/paths.js"></script>
   <script src="../assets/scripts/config/site-config.js"></script>
@@ -149,39 +149,34 @@
   <script src="../assets/scripts/components/schema.js"></script>
   <script src="../assets/scripts/components/grids.js"></script>
   <script src="../assets/scripts/fast-page.js"></script>
-  <script src="../assets/scripts/main.js"></script><script src="../assets/scripts/i18n/bootstrap.js"></script>
+  <script>window.__bizdavarChrome = window.renderSiteChrome; window.__initFastPage = window.initFastPage;</script>
+  <script src="../assets/scripts/main.js"></script>
+  <script src="../assets/scripts/i18n/bootstrap.js"></script>
   
   <script>
     bizdavarPageInit(function () {
+      const renderChrome = window.__bizdavarChrome || window.renderSiteChrome;
+      if (typeof renderChrome === 'function') renderChrome();
+
       const crumbs = [
-            { page: 'home', url: 'index' },
-            { page: 'fast', url: 'fast' }
-          ];
-          injectPageSeo('fast', {
-            canonical: 'https://fast.bizdavar.com/',
-            ogImage: 'assets/images/content/hero-home.svg'
-          });
-          renderSiteChrome();
-          renderBreadcrumbs(crumbs);
-          injectBreadcrumbSchema(crumbs);
-          initFastPage();
-          renderGeoStrip('geoStrip', {
-            textKey: 'fastPage.geoText',
-            text: 'طراحی سایت برای کسب‌وکارهای ایران، ترکیه و بازارهای بین‌المللی — تحویل ۵ روزه، واتساپ فارسی و پشتیبانی پس از راه‌اندازی.'
-          });
-          injectServiceProductSchema({
-            name: 'Fast Web Studio',
-            description: 'طراحی سایت حرفه‌ای در ۵ روز — پلن‌های شفاف، واتساپ فارسی و پشتیبانی پس از راه‌اندازی.',
-            url: 'pages/fast',
-            areaServed: ['IR', 'TR', 'AM', 'AE', 'DE'],
-            offers: [
-              { name: 'پلن پایه', price: '99', currency: 'USD' },
-              { name: 'پلن فروشگاهی', price: '199', currency: 'USD' },
-              { name: 'پلن حرفه‌ای', price: '299', currency: 'USD' }
-            ]
-          });
-          renderRelatedLinks([{"title":"مقاله Fast Studio","url":"articles/fast-studio","desc":"راهنمای سفارش"},{"title":"خدمات طراحی وب","url":"services#web-design","desc":"جزئیات خدمات"},{"title":"نمونه‌کارها","url":"portfolio","desc":"پروژه‌های بیزدوار"}]);
-            setupWhatsappLinks();
+        { page: 'home', url: 'index' },
+        { page: 'fast', url: 'pages/fast' }
+      ];
+      injectPageSeo('fast', {
+        canonical: 'https://fast.bizdavar.com/',
+        ogImage: 'assets/images/content/hero-home.svg'
+      });
+      setupWhatsappLinks();
+      renderBreadcrumbs(crumbs);
+      injectBreadcrumbSchema(crumbs);
+      const initFast = window.__initFastPage || window.initFastPage;
+      if (typeof initFast === 'function') initFast();
+      renderGeoStrip('geoStrip', {
+        textKey: 'fastPage.geoText',
+        text: 'طراحی سایت برای کسب‌وکارهای ایران، ترکیه و بازارهای بین‌المللی — تحویل ۵ روزه، واتساپ فارسی و پشتیبانی پس از راه‌اندازی.'
+      });
+      if (window.injectFastProductSchema) window.injectFastProductSchema();
+      if (window.renderFastRelatedLinks) window.renderFastRelatedLinks();
     });
   </script>
 </body>
