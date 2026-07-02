@@ -99,9 +99,10 @@
     const header = document.getElementById('siteHeader');
     const footer = document.getElementById('siteFooter');
     const empty = (el) => el && !String(el.innerHTML || '').trim();
-    if ((empty(header) || empty(footer)) && renderSiteChromeOrig) {
+    const render = renderSiteChromeOrig || window.__bizdavarChrome;
+    if ((empty(header) || empty(footer)) && render) {
       try {
-        renderSiteChromeOrig();
+        render();
       } catch (e) {
         console.error('[Bizdavar] renderSiteChrome failed', e);
       }
@@ -128,6 +129,9 @@
   }
 
   function wrapRenderFns() {
+    if (typeof window.renderSiteChrome === 'function' && !window.__bizdavarChrome) {
+      window.__bizdavarChrome = window.renderSiteChrome;
+    }
     RENDER_FNS.forEach(name => {
       const orig = window[name];
       if (typeof orig !== 'function' || orig.__i18nWrapped) return;
