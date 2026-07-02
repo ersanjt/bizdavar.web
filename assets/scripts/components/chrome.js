@@ -192,7 +192,7 @@
     const navItems = getNavItems();
     const logoAlt = A.logoAlt || C.siteName;
     const headerLogo = A.logo;
-    const footerLogo = A.logoOnDark || A.logo;
+    const footerLogo = A.logo;
     const topBar = document.getElementById('topBar');
     const header = document.getElementById('siteHeader');
     const footer = document.getElementById('siteFooter');
@@ -379,7 +379,7 @@
 
         <div class="footer__mobile">
           <div class="mobile-footer-hero">
-            <a href="${path(R.home)}"><img src="${path(footerLogo)}" alt="${logoAlt}" class="footer__logo-img footer__logo-img--sm"></a>
+            <a href="${path(R.home)}" class="footer__logo-link"><img src="${path(footerLogo)}" alt="${logoAlt}" class="footer__logo-img footer__logo-img--sm"></a>
             <p>${t('footer.tagline')}</p>
             <div class="footer__trust">${trustPills}</div>
             <div class="footer__social">
@@ -387,7 +387,7 @@
               <a href="${C.contact.linkedin}" class="footer__social-btn" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn">in</a>
               <a href="${wa}" class="footer__social-btn footer__social-btn--wa" ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''} aria-label="${t('common.whatsapp')}">${ic('whatsapp', { size: 18 })}</a>
             </div>
-            ${langSwitcherHtml('lang-dropdown--drawer')}
+            ${langSwitcherHtml('lang-dropdown--footer lang-dropdown--drawer')}
           </div>
           <div class="mobile-footer-cta">
             <a href="${path(R.contact)}" class="mobile-footer-cta__btn mobile-footer-cta__btn--primary">${ic('send', { size: 18 })} ${t('common.contactForm')}</a>
@@ -454,7 +454,7 @@
     const bottomItems = [
       { page: 'home', route: R.home, label: t('nav.home'), icon: 'home' },
       { page: 'services', route: R.services, label: t('nav.services'), icon: 'list' },
-      { page: 'portfolio', route: R.portfolio, label: t('nav.portfolio'), icon: 'briefcase' },
+      { page: 'portfolio', route: R.portfolio, label: t('nav.portfolioShort', t('nav.portfolio')), icon: 'briefcase' },
       { page: 'contact', route: R.contact, label: t('nav.contact'), icon: 'phone' }
     ];
 

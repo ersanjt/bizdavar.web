@@ -135,9 +135,10 @@
     transform: translateX(0);
   }
 
-  html.is-ltr .back-to-top {
-    left: auto;
-    right: 16px;
+  html.is-ltr-locale .back-to-top,
+  body.is-ltr .back-to-top {
+    inset-inline-end: 16px;
+    inset-inline-start: auto;
   }
 }
 
@@ -152,6 +153,12 @@
   }
 
   .mobile-bottom-nav__label {
-    font-size: 9px;
+    font-size: 10px;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
