@@ -401,6 +401,21 @@ body {
   border-radius: var(--radius-sm);
   margin-bottom: var(--space-3);
 }
+.intel-hq-list__item--hq {
+  border: 1px solid rgba(255, 222, 0, 0.45);
+  background: linear-gradient(135deg, rgba(22, 22, 63, 0.04) 0%, rgba(255, 222, 0, 0.1) 100%);
+}
+.intel-hq-list__badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--navy);
+  background: var(--yellow);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  margin-inline-start: 6px;
+  vertical-align: middle;
+}
 .intel-hq-list span { display: block; font-size: var(--text-sm); color: var(--text-muted); margin-top: 4px; }
 
 .intel-leader-card {
