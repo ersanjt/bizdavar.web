@@ -524,7 +524,7 @@ window.BIZDAVAR_LOCALES = {
       aboutTitle: 'Bizdavar Group — büyüme ortağınız',
       aboutP1: 'Dijital hizmetler, web tasarım, online pazarlama ve endüstriyel tedarik alanında faaliyet gösteren bir grup. Fintech\'ten etkinliğe, endüstriden hosting\'e entegre çözümler sunuyoruz.',
       aboutP2: 'Dijital altyapı, domain, SSL ve güvenlik de hizmetlerimiz arasında — uluslararası hosting ve domain için <a href="https://netinode.net/" class="service-card__link" target="_blank" rel="noopener noreferrer">Netinode</a>.',
-      aboutHeroImage: 'assets/images/content/about-hero-en.svg',
+      aboutHeroImage: 'assets/images/content/about-hero-tr.svg',
       aboutHeroAlt: 'Bizdavar Group — dijital ve endüstriyel ajans',
       aboutMore: 'Bizdavar hakkında daha fazla',
       aboutInfra: 'Altyapı yönetimi',

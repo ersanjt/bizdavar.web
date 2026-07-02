@@ -8,8 +8,8 @@ Refresh: `node scripts/audit-assets.js`
 
 | Metric | Count |
 |--------|------:|
-| Image paths referenced in code | 62 |
-| Image files on disk | 220 |
+| Image paths referenced in code | 63 |
+| Image files on disk | 221 |
 | **Missing (all)** | **0** |
 | Missing partner logos | 0 |
 | Partner files on disk, unused in code | 19 |
