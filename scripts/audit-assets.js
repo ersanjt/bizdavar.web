@@ -1,118 +1,105 @@
+#!/usr/bin/env node
 /**
- * List image paths referenced in JS/HTML vs files on disk.
- * Run: node scripts/audit-assets.js
+ * Full image/asset audit — local file existence + optional live HTTP check.
  */
 const fs = require('fs');
 const path = require('path');
+const https = require('https');
 
 const ROOT = path.join(__dirname, '..');
-const SCAN_ROOTS = [
-  path.join(ROOT, 'assets', 'scripts'),
-  path.join(ROOT, 'index.html'),
-  path.join(ROOT, 'pages')
-];
+const LIVE = process.argv.includes('--live');
+const refs = new Set();
 
-const IMG_RE = /assets\/images\/[a-zA-Z0-9_./-]+\.(?:png|jpe?g|webp|svg|gif)/gi;
-
-function collectFiles(target, acc = []) {
-  if (!fs.existsSync(target)) return acc;
-  const stat = fs.statSync(target);
-  if (stat.isFile()) {
-    if (/\.(js|html)$/i.test(target)) acc.push(target);
-    return acc;
-  }
-  for (const name of fs.readdirSync(target)) {
-    collectFiles(path.join(target, name), acc);
-  }
-  return acc;
+function add(ref) {
+  const norm = normalize(ref);
+  if (norm) refs.add(norm);
 }
 
-function normalize(p) {
-  return p.replace(/\\/g, '/').replace(/^\//, '');
+function normalize(ref) {
+  if (!ref || typeof ref !== 'string') return null;
+  let r = ref.trim().split('?')[0].split('#')[0];
+  if (/^(https?:|data:|mailto:|#)/i.test(r)) return null;
+  r = r.replace(/^\.\//, '');
+  while (r.startsWith('../')) r = r.slice(3);
+  if (r.startsWith('/')) r = r.slice(1);
+  if (!r.startsWith('assets/')) return null;
+  if (r.includes('${')) return null;
+  if (!/\.(svg|png|jpe?g|webp|gif|ico|woff2?|css|js)$/i.test(r)) return null;
+  return r;
 }
 
-function extractImages(text) {
-  IMG_RE.lastIndex = 0;
-  const found = [];
-  let m;
-  while ((m = IMG_RE.exec(text)) !== null) found.push(normalize(m[0]));
-  return found;
-}
-
-const referenced = new Set();
-for (const root of SCAN_ROOTS) {
-  for (const file of collectFiles(root)) {
-    extractImages(fs.readFileSync(file, 'utf8')).forEach(p => referenced.add(p));
+function scanText(text) {
+  const patterns = [
+    /(?:src|href|content|thumb|logo|image|heroImage|mapImage|ogImage|aboutHeroImage|imageSecondary)\s*[:=]\s*['"]([^'"]+)['"]/gi,
+    /(?:src|href|content)=["']([^"']+)["']/gi,
+    /url\(\s*["']?([^"')]+)["']?\s*\)/gi,
+    /['"](assets\/(?:images|fonts)[^'"]+)['"]/g
+  ];
+  for (const re of patterns) {
+    let m;
+    const r = new RegExp(re.source, re.flags);
+    while ((m = r.exec(text))) add(m[1]);
   }
 }
 
-const imagesRoot = path.join(ROOT, 'assets', 'images');
-const onDisk = new Set();
-function collectImages(dir) {
-  if (!fs.existsSync(dir)) return;
+function walk(dir, exts) {
   for (const name of fs.readdirSync(dir)) {
+    if (name === 'node_modules' || name === '.git') continue;
     const full = path.join(dir, name);
-    if (fs.statSync(full).isDirectory()) collectImages(full);
-    else if (/\.(png|jpe?g|webp|svg|gif)$/i.test(name)) {
-      onDisk.add(normalize(path.relative(ROOT, full)));
+    const st = fs.statSync(full);
+    if (st.isDirectory()) walk(full, exts);
+    else if (exts.has(path.extname(name))) scanText(fs.readFileSync(full, 'utf8'));
+  }
+}
+
+walk(ROOT, new Set(['.html', '.css', '.js']));
+
+const missing = [];
+const badSvg = [];
+for (const norm of [...refs].sort()) {
+  const disk = path.join(ROOT, norm);
+  if (!fs.existsSync(disk)) {
+    missing.push(norm);
+    continue;
+  }
+  if (norm.endsWith('.svg')) {
+    const buf = fs.readFileSync(disk);
+    const bad = [...buf].filter((c) => c < 32 && c !== 9 && c !== 10 && c !== 13);
+    if (bad.length) badSvg.push({ norm, count: bad.length });
+  }
+}
+
+console.log('Unique asset refs:', refs.size);
+console.log('Missing local files:', missing.length);
+missing.forEach((n) => console.log('  MISSING', n));
+console.log('Invalid SVG files:', badSvg.length);
+badSvg.forEach((s) => console.log('  BAD_SVG', s.norm, s.count));
+
+if (!LIVE) process.exit(missing.length || badSvg.length ? 1 : 0);
+
+const urls = [...refs].filter((n) => fs.existsSync(path.join(ROOT, n))).map((n) => `https://bizdavar.com/${n}`);
+let pending = urls.length;
+let liveMissing = 0;
+
+function head(url) {
+  return new Promise((resolve) => {
+    const req = https.request(url, { method: 'HEAD' }, (res) => {
+      resolve(res.statusCode);
+    });
+    req.on('error', () => resolve(0));
+    req.setTimeout(8000, () => { req.destroy(); resolve(0); });
+    req.end();
+  });
+}
+
+(async () => {
+  for (const url of urls) {
+    const code = await head(url);
+    if (code !== 200) {
+      liveMissing++;
+      console.log('  LIVE_FAIL', code, url);
     }
   }
-}
-collectImages(imagesRoot);
-
-const missing = [...referenced].filter(p => !onDisk.has(p)).sort();
-const partnerRefs = [...referenced].filter(p => p.includes('/partners/'));
-const partnerDisk = [...onDisk].filter(p => p.includes('/partners/'));
-const missingPartners = partnerRefs.filter(p => !onDisk.has(p)).sort();
-const unreferencedPartners = partnerDisk.filter(p => !partnerRefs.includes(p)).sort();
-
-function groupByFolder(items) {
-  const groups = {};
-  for (const p of items) {
-    const parts = p.split('/');
-    const key = parts.slice(0, 3).join('/');
-    (groups[key] ||= []).push(p);
-  }
-  return groups;
-}
-
-const lines = [
-  '# Missing assets audit',
-  '',
-  `Generated: ${new Date().toISOString().slice(0, 10)}`,
-  '',
-  'Refresh: `node scripts/audit-assets.js`',
-  '',
-  '## Summary',
-  '',
-  `| Metric | Count |`,
-  `|--------|------:|`,
-  `| Image paths referenced in code | ${referenced.size} |`,
-  `| Image files on disk | ${onDisk.size} |`,
-  `| **Missing (all)** | **${missing.length}** |`,
-  `| Missing partner logos | ${missingPartners.length} |`,
-  `| Partner files on disk, unused in code | ${unreferencedPartners.length} |`,
-  ''
-];
-
-function appendSection(title, items) {
-  lines.push(`## ${title}`, '');
-  if (!items.length) {
-    lines.push('_None._', '');
-    return;
-  }
-  for (const [dir, list] of Object.entries(groupByFolder(items)).sort()) {
-    lines.push(`### ${dir}/`, '');
-    for (const p of list) lines.push(`- \`${p}\``);
-    lines.push('');
-  }
-}
-
-appendSection('Missing — referenced in code but not on disk', missing);
-appendSection('Missing partner logos only', missingPartners);
-appendSection('Partner logos on disk but not referenced', unreferencedPartners);
-
-const outPath = path.join(ROOT, 'docs', 'MISSING-ASSETS.md');
-fs.writeFileSync(outPath, lines.join('\n'), 'utf8');
-console.log('Wrote', path.relative(ROOT, outPath));
-console.log('Referenced:', referenced.size, '| Missing:', missing.length, '| Missing partners:', missingPartners.length);
+  console.log('Live checked:', urls.length, 'failures:', liveMissing);
+  process.exit(missing.length || badSvg.length || liveMissing ? 1 : 0);
+})();

@@ -54,17 +54,20 @@
     partners: '/assets/images/partners/'
   };
 
-  (function fixRelativeAssetRefs() {
+  function fixRelativeAssetRefs() {
     const toRoot = (url) => {
       if (!url || /^(https?:|data:|\/|#|mailto:|tel:)/.test(url)) return null;
       const m = String(url).match(/^(?:\.\.\/)*(assets\/.*)$/);
       return m ? '/' + m[1] : null;
     };
-    document.querySelectorAll('img[src], link[href], script[src]').forEach(el => {
-      const fixed = toRoot(el.getAttribute('src') || el.getAttribute('href'));
-      if (!fixed) return;
-      if (el.hasAttribute('src')) el.setAttribute('src', fixed);
-      else el.setAttribute('href', fixed);
+    document.querySelectorAll('img[src], link[href]').forEach(el => {
+      const attr = el.hasAttribute('src') ? 'src' : 'href';
+      const fixed = toRoot(el.getAttribute(attr));
+      if (fixed) el.setAttribute(attr, fixed);
     });
-  })();
+  }
+
+  window.fixRelativeAssetRefs = fixRelativeAssetRefs;
+  fixRelativeAssetRefs();
+  document.addEventListener('DOMContentLoaded', fixRelativeAssetRefs);
 })();
