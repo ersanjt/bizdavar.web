@@ -26,22 +26,45 @@
 
   window.BD_prettifyPath = prettifyInternalPath;
 
+  /** Root-absolute URL for any site asset (immune to /pages/foo/ trailing slashes). */
+  window.resolveAssetPath = function (relativeFromRoot) {
+    if (!relativeFromRoot) return '/assets/';
+    if (/^(https?:|data:|\/)/.test(relativeFromRoot)) return relativeFromRoot;
+    return '/' + relativeFromRoot.replace(/^\//, '');
+  };
+
   window.resolvePath = function (relativeFromRoot) {
     if (!relativeFromRoot) return root || './';
     if (/^(https?:|mailto:|tel:|#)/.test(relativeFromRoot)) return relativeFromRoot;
-    const joined = root + relativeFromRoot.replace(/^\//, '');
+    const clean = relativeFromRoot.replace(/^\//, '');
+    if (clean.startsWith('assets/')) return window.resolveAssetPath(clean);
+    const joined = root + clean;
     return prettifyInternalPath(joined);
   };
 
   window.BIZDAVAR_PATHS = {
     depth,
     root,
-    styles: root + 'assets/styles/',
-    scripts: root + 'assets/scripts/',
-    images: root + 'assets/images/',
-    brand: root + 'assets/images/brand/',
-    content: root + 'assets/images/content/',
-    icons: root + 'assets/images/icons/',
-    partners: root + 'assets/images/partners/'
+    styles: '/assets/styles/',
+    scripts: '/assets/scripts/',
+    images: '/assets/images/',
+    brand: '/assets/images/brand/',
+    content: '/assets/images/content/',
+    icons: '/assets/images/icons/',
+    partners: '/assets/images/partners/'
   };
+
+  (function fixRelativeAssetRefs() {
+    const toRoot = (url) => {
+      if (!url || /^(https?:|data:|\/|#|mailto:|tel:)/.test(url)) return null;
+      const m = String(url).match(/^(?:\.\.\/)*(assets\/.*)$/);
+      return m ? '/' + m[1] : null;
+    };
+    document.querySelectorAll('img[src], link[href], script[src]').forEach(el => {
+      const fixed = toRoot(el.getAttribute('src') || el.getAttribute('href'));
+      if (!fixed) return;
+      if (el.hasAttribute('src')) el.setAttribute('src', fixed);
+      else el.setAttribute('href', fixed);
+    });
+  })();
 })();

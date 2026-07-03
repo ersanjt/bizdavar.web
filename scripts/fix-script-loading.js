@@ -36,6 +36,9 @@ function fixFile(file) {
 
   html = html.replace(/\sdefer(?=\s|>)/gi, '');
 
+  html = html.replace(/(src|href)="(?:\.\.\/)+assets\//g, '$1="/assets/');
+  html = html.replace(/(src|href)="assets\//g, '$1="/assets/');
+
   const swapRe = /(<script src="[^"]*\/bootstrap\.js"><\/script>\s*)(<script src="[^"]*\/main\.js"><\/script>)/g;
   html = html.replace(swapRe, '$2$1');
 
