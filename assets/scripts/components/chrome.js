@@ -10,16 +10,26 @@
     absUrl, breadcrumbHref, localizeCrumbs, buildContactPoints, orgAddress
   } = ctx;
 
+  const LANG_OPTIONS = [
+    { id: 'fa', labelKey: 'common.langFa', fallback: 'فارسی', flag: '🇮🇷' },
+    { id: 'tr', labelKey: 'common.langTr', fallback: 'Türkçe', flag: '🇹🇷' },
+    { id: 'en', labelKey: 'common.langEn', fallback: 'English', flag: '🇬🇧' }
+  ];
+
+  function getLangOptions() {
+    return LANG_OPTIONS.map(l => ({
+      id: l.id,
+      label: t(l.labelKey, l.fallback),
+      flag: l.flag
+    }));
+  }
+
   function langSwitcherHtml(extraClass) {
     if (document.body?.dataset?.page === 'article') return '';
     const I = window.BIZDAVAR_I18N;
     if (!I) return '';
     const cur = I.locale;
-    const langs = [
-      { id: 'fa', label: t('common.langFa', 'فارسی') },
-      { id: 'tr', label: t('common.langTr', 'Türkçe') },
-      { id: 'en', label: t('common.langEn', 'English') }
-    ];
+    const langs = getLangOptions();
     const current = langs.find(l => l.id === cur) || langs[0];
     return `<details class="lang-dropdown${extraClass ? ' ' + extraClass : ''}" data-lang-dropdown>
       <summary class="lang-dropdown__toggle" aria-label="${t('common.langLabel', 'زبان')}">
@@ -36,6 +46,27 @@
         `).join('')}
       </div>
     </details>`;
+  }
+
+  function langDrawerMenuHtml() {
+    if (document.body?.dataset?.page === 'article') return '';
+    const I = window.BIZDAVAR_I18N;
+    if (!I) return '';
+    const cur = I.locale;
+    const langs = getLangOptions();
+    return `
+      <div class="mobile-drawer__lang">
+        <p class="mobile-drawer__lang-heading">${t('common.langLabel', 'زبان')}</p>
+        <div class="mobile-drawer__lang-list" role="listbox" aria-label="${t('common.langLabel', 'زبان')}">
+          ${langs.map(l => `
+            <button type="button" class="mobile-drawer__lang-btn${l.id === cur ? ' is-active' : ''}"
+              data-lang="${l.id}" role="option"${l.id === cur ? ' aria-selected="true"' : ''}>
+              <span class="lang-flag" aria-hidden="true">${l.flag}</span>
+              <span>${l.label}</span>
+            </button>
+          `).join('')}
+        </div>
+      </div>`;
   }
 
   function bindLangSwitcher(root) {
@@ -195,7 +226,7 @@
     const navItems = getNavItems();
     const logoAlt = A.logoAlt || C.siteName;
     const headerLogo = A.logo;
-    const footerLogo = A.logo;
+    const footerLogo = A.logo || A.logoOnDark;
     const topBar = document.getElementById('topBar');
     const header = document.getElementById('siteHeader');
     const footer = document.getElementById('siteFooter');
@@ -251,12 +282,14 @@
 
         <div class="mobile-header">
           <a href="${path(R.home)}" class="mobile-header__logo">
-            <img src="${path(headerLogo)}" alt="${logoAlt}" width="110" height="32">
+            <img src="${path(headerLogo)}" alt="${logoAlt}" width="154" height="44" decoding="async" fetchpriority="high">
           </a>
           <div class="mobile-header__actions">
             <a href="${wa}" class="mobile-header__icon-btn mobile-header__icon-btn--wa"
                aria-label="${t('common.whatsapp', 'واتساپ')}"
-               ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''}>${ic('whatsapp', { size: 20, variant: 'white' })}</a>
+               ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''}>
+              <span class="mobile-header__wa-icon" aria-hidden="true">${ic('whatsapp-solid', { size: 22, variant: 'white' })}</span>
+            </a>
             <a href="${path(R.contact)}" class="mobile-header__cta">${t('nav.contact', 'تماس')}</a>
             <button type="button" class="mobile-header__menu" id="mobileMenuBtn" aria-label="${t('common.menu', 'منو')}" aria-expanded="false">
               <span></span><span></span><span></span>
@@ -269,7 +302,7 @@
             <img src="${path(headerLogo)}" alt="${logoAlt}" height="32">
             <button type="button" class="mobile-drawer__close" id="mobileDrawerClose" aria-label="${t('common.closeMenu', 'بستن منو')}">${ic('close', { size: 20 })}</button>
           </div>
-          <div class="mobile-drawer__lang">${langSwitcherHtml('lang-dropdown--drawer')}</div>
+          ${langDrawerMenuHtml()}
           <nav class="mobile-drawer__nav" aria-label="${t('common.mobileNav', 'منوی موبایل')}">
             ${drawerLinks}
           </nav>
@@ -363,10 +396,6 @@
                   ${mailChip}
                   ${channelChips}
                 </div>
-                <div class="footer__domains">
-                  <a href="https://${C.domains.main}" class="footer__domain-badge">${C.domains.main}</a>
-                  <a href="https://${C.domains.alt}" class="footer__domain-badge" target="_blank" rel="noopener noreferrer">${C.domains.alt}</a>
-                </div>
               </div>
             </div>
             <div class="footer__bar">
@@ -390,7 +419,6 @@
               <a href="${C.contact.linkedin}" class="footer__social-btn" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn">in</a>
               <a href="${wa}" class="footer__social-btn footer__social-btn--wa" ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''} aria-label="${t('common.whatsapp')}">${ic('whatsapp', { size: 18 })}</a>
             </div>
-            ${langSwitcherHtml('lang-dropdown--footer lang-dropdown--drawer')}
           </div>
           <div class="mobile-footer-cta">
             <a href="${path(R.contact)}" class="mobile-footer-cta__btn mobile-footer-cta__btn--primary">${ic('send', { size: 18 })} ${t('common.contactForm')}</a>
@@ -437,10 +465,6 @@
               <a href="${path(R.privacy)}">${t('footer.privacy')}</a>
               <a href="${path(R.home)}#faq">${t('footer.faq')}</a>
             </nav>
-            <div class="footer__domains">
-              <a href="https://${C.domains.main}" class="footer__domain-badge">${C.domains.main}</a>
-              <a href="https://${C.domains.alt}" class="footer__domain-badge" target="_blank" rel="noopener noreferrer">${C.domains.alt}</a>
-            </div>
           </div>
         </div>`;
     }

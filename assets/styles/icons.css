@@ -72,10 +72,16 @@
   color: var(--red);
 }
 
-.mobile-header__icon-btn .bd-icon {
+.mobile-header__icon-btn:not(.mobile-header__icon-btn--wa) .bd-icon {
   width: 20px;
   height: 20px;
   color: var(--white);
+}
+
+.mobile-header__icon-btn--wa .bd-icon {
+  width: 22px;
+  height: 22px;
+  color: #fff;
 }
 
 .top-bar__contact .bd-icon,

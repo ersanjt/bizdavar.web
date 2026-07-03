@@ -1816,12 +1816,25 @@ a.tags-cloud__tag:hover {
     padding: 10px 16px;
     background: var(--white);
     box-shadow: 0 2px 16px rgba(0,0,0,0.08);
-    min-height: 56px;
+    min-height: 64px;
+  }
+
+  .mobile-header__logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    min-width: 0;
+    max-width: 58%;
   }
 
   .mobile-header__logo img {
-    height: 32px;
+    height: 44px;
     width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+    transform: scale(1.12);
+    transform-origin: center center;
   }
 
   .mobile-header__actions {
@@ -1834,12 +1847,17 @@ a.tags-cloud__tag:hover {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: #e8f5e9;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     font-size: 18px;
     text-decoration: none;
+    flex-shrink: 0;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .mobile-header__icon-btn:not(.mobile-header__icon-btn--wa) {
+    background: #e8f5e9;
   }
 
   .mobile-header__cta {

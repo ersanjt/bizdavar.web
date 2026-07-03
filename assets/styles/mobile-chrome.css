@@ -19,23 +19,69 @@
     border-bottom: 1px solid rgba(22, 22, 63, 0.07);
   }
 
+  .mobile-header__logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    min-width: 0;
+    max-width: 58%;
+    padding-inline-end: 4px;
+  }
+
   .mobile-header__logo img {
     display: block;
+    height: 44px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+    transform: scale(1.12);
+    transform-origin: center center;
   }
 
   .mobile-header__icon-btn--wa {
-    background: var(--whatsapp);
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    padding: 0;
+    background: linear-gradient(145deg, #2ee06a 0%, var(--whatsapp) 48%, #1aad52 100%);
     color: #fff;
-    box-shadow: 0 2px 8px rgba(37, 211, 102, 0.35);
-    transition: transform 0.2s ease, background 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    box-shadow:
+      0 2px 8px rgba(37, 211, 102, 0.38),
+      inset 0 1px 0 rgba(255, 255, 255, 0.22);
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  }
+
+  .mobile-header__wa-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    line-height: 0;
+  }
+
+  .mobile-header__icon-btn--wa .bd-icon {
+    width: 22px;
+    height: 22px;
+    color: #fff;
+    display: block;
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.12));
   }
 
   .mobile-header__icon-btn--wa:hover {
-    background: var(--whatsapp-hover);
+    filter: brightness(1.05);
+    box-shadow:
+      0 4px 12px rgba(37, 211, 102, 0.42),
+      inset 0 1px 0 rgba(255, 255, 255, 0.28);
   }
 
   .mobile-header__icon-btn--wa:active {
     transform: scale(0.94);
+    filter: brightness(0.96);
   }
 
   .mobile-header__cta {

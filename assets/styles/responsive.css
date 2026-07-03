@@ -521,7 +521,8 @@
   }
 
   .mobile-header__logo img {
-    height: 28px;
+    height: 42px;
+    transform: scale(1.1);
   }
 
   .mobile-header__cta {
@@ -530,9 +531,21 @@
   }
 
   .mobile-header__icon-btn {
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
     font-size: 16px;
+  }
+
+  .mobile-header__icon-btn--wa {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+  }
+
+  .mobile-header__icon-btn--wa .bd-icon {
+    width: 20px;
+    height: 20px;
   }
 
   .mobile-bottom-nav__label {
@@ -572,7 +585,22 @@
   }
 
   .mobile-footer-cta {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .mobile-footer-cta__btn {
+    min-width: 0;
+    padding: 12px 8px;
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .mobile-footer-cta__btn .bd-icon {
+    width: 16px;
+    height: 16px;
+    margin-inline-end: 4px;
+    flex-shrink: 0;
   }
 
   .fast-social {

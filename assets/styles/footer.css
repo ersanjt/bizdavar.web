@@ -39,13 +39,15 @@
 }
 
 .footer__logo-link {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: fit-content;
   line-height: 0;
-  background: #fff;
-  padding: 8px 14px;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  background: #ffffff;
+  padding: 10px 18px;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.22);
 }
 
 .footer__logo-link.footer__logo-img--sm,
@@ -65,7 +67,9 @@
   width: auto;
   max-width: 168px;
   object-fit: contain;
-  object-position: start center;
+  object-position: center center;
+  background: #ffffff;
+  border-radius: 8px;
 }
 
 .footer__logo-img--sm {
