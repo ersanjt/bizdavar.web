@@ -24,11 +24,12 @@ AddType 'text/html; charset=UTF-8' .html
   # CSP — self-hosted fonts; inline scripts for static page boot
   Header set Content-Security-Policy "\
     default-src 'self'; \
-    script-src 'self' 'unsafe-inline'; \
+    script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; \
     style-src 'self' 'unsafe-inline'; \
     font-src 'self' data:; \
     img-src 'self' data: https:; \
-    connect-src 'self' https://ipapi.co https://ipwho.is https://formspree.io https://*.formspree.io; \
+    frame-src 'self' https://www.googletagmanager.com; \
+    connect-src 'self' https://ipapi.co https://ipwho.is https://formspree.io https://*.formspree.io https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://analytics.google.com; \
     frame-ancestors 'self'; \
     base-uri 'self'; \
     form-action 'self' mailto: https://formspree.io https://*.formspree.io; \
@@ -49,6 +50,10 @@ AddType 'text/html; charset=UTF-8' .html
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+
+  # PHP API & admin — do not rewrite to .html
+  RewriteRule ^api/ - [L]
+  RewriteRule ^admin/ - [L]
 
   # www → apex
   RewriteCond %{HTTP_HOST} ^www\.bizdavar\.com [NC]
