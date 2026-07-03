@@ -4,6 +4,7 @@
 (function () {
   const STORAGE_KEY = 'bizdavar_locale';
   const MANUAL_KEY = 'bizdavar_locale_manual';
+  const GEO_CACHE_KEY = 'bizdavar_geo_locale';
   const GEO_MAP = { TR: 'tr', IR: 'fa' };
   const DEFAULT_OTHER = 'en';
   const GEO_TIMEOUT = 1500;
@@ -444,6 +445,10 @@
       if (stored && window.BIZDAVAR_LOCALES[stored] && localStorage.getItem(MANUAL_KEY) === '1') {
         return stored;
       }
+      const geoCached = sessionStorage.getItem(GEO_CACHE_KEY);
+      if (geoCached && window.BIZDAVAR_LOCALES[geoCached]) {
+        return geoCached;
+      }
       const htmlLang = document.documentElement.lang;
       if (htmlLang === 'tr' || htmlLang === 'en') return htmlLang;
       return 'fa';
@@ -459,6 +464,7 @@
       const loc = localeFromCountry(country);
       localStorage.setItem(STORAGE_KEY, loc);
       localStorage.removeItem(MANUAL_KEY);
+      sessionStorage.setItem(GEO_CACHE_KEY, loc);
       if (loc !== currentLang) {
         applyLocaleData(loc);
         document.dispatchEvent(new CustomEvent('bizdavar:locale', { detail: { locale: loc } }));

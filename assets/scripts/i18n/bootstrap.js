@@ -1,57 +1,8 @@
 /**
- * Locale bootstrap — chrome renders immediately; geo updates in background
+ * Locale bootstrap — sync locale immediately; never block chrome or page renders on geo.
  */
 (function () {
-  let localeReady = false;
-  let renderSiteChromeOrig = null;
   let geoStripDone = false;
-
-  const NEVER_WRAP = new Set(['renderSiteChrome', 'setupWhatsappLinks', 'renderBreadcrumbs']);
-
-  const RENDER_FNS = [
-    'renderSiteChrome',
-    'renderTrustBar',
-    'renderCredibilitySection',
-    'renderProcessSection',
-    'renderIndustrialSection',
-    'renderClientsGrid',
-    'renderBlogGrid',
-    'renderPortfolioGrid',
-    'renderBreadcrumbs',
-    'renderRelatedLinks',
-    'renderGeoStrip',
-    'renderCompanyIntelAbout',
-    'fillContactDetails',
-    'setupWhatsappLinks',
-    'initFastPage',
-    'initVegaPage',
-    'initProsensePage',
-    'initTeltonikaPage',
-    'initGamakPage',
-    'initDigiSystemPage',
-    'initTeraokaPage',
-    'initServicesPage',
-    'initPortfolioPage',
-    'injectSeo',
-    'injectPageSeo',
-    'injectBreadcrumbSchema',
-    'injectContactPageSchema',
-    'injectServiceSchema',
-    'injectBlogListSchema',
-    'injectPortfolioSchema',
-    'injectCaseStudySchema',
-    'injectFaqSchema',
-    'injectIntelFaqSchema',
-    'injectArticleSchema',
-    'injectServiceProductSchema',
-    'injectSupplyBrandSchema',
-    'injectJsonLdProductList',
-    'injectProsenseSchema',
-    'injectTeltonikaSchema',
-    'injectGamakSchema',
-    'injectDigiSystemSchema',
-    'injectTeraokaSchema'
-  ];
 
   function syncLocaleNow() {
     const I = window.BIZDAVAR_I18N;
@@ -63,7 +14,12 @@
     I.applyDocumentLocale();
     I.syncConfig();
     I.ready = true;
-    localeReady = true;
+  }
+
+  function snapshotChrome() {
+    if (typeof window.renderSiteChrome === 'function' && !window.__bizdavarChrome) {
+      window.__bizdavarChrome = window.renderSiteChrome;
+    }
   }
 
   function autoRenderGeoStrip() {
@@ -99,8 +55,8 @@
     const header = document.getElementById('siteHeader');
     const footer = document.getElementById('siteFooter');
     const empty = (el) => el && !String(el.innerHTML || '').trim();
-    const render = renderSiteChromeOrig || window.__bizdavarChrome;
-    if ((empty(header) || empty(footer)) && render) {
+    const render = window.__bizdavarChrome || window.renderSiteChrome;
+    if ((empty(header) || empty(footer)) && typeof render === 'function') {
       try {
         render();
       } catch (e) {
@@ -109,95 +65,79 @@
     }
   }
 
-  function runSafe(fn) {
+  function refreshChrome() {
+    const render = window.__bizdavarChrome || window.renderSiteChrome;
+    if (typeof render !== 'function') return;
     try {
-      return fn();
+      render();
+    } catch (e) {
+      console.error('[Bizdavar] chrome refresh failed', e);
+    }
+  }
+
+  function runPageBoot(fn) {
+    syncLocaleNow();
+    snapshotChrome();
+    afterLocale();
+    try {
+      if (typeof fn === 'function') fn();
     } catch (e) {
       console.error('[Bizdavar] page init failed', e);
       ensureSiteChrome();
     }
-    return undefined;
+    afterLocale();
+    ensureSiteChrome();
   }
 
-  function runWhenReady(fn) {
-    if (localeReady) return runSafe(fn);
-    return (window.bizdavarReady || Promise.resolve()).then(() => runSafe(fn)).catch(err => {
-      console.error('[Bizdavar] locale init failed', err);
-      localeReady = true;
-      ensureSiteChrome();
-    });
-  }
-
-  function wrapRenderFns() {
-    if (typeof window.renderSiteChrome === 'function' && !window.__bizdavarChrome) {
-      window.__bizdavarChrome = window.renderSiteChrome;
+  function onLocaleChanged() {
+    geoStripDone = false;
+    syncLocaleNow();
+    refreshChrome();
+    afterLocale();
+    if (typeof window.__bizdavarPageBoot === 'function') {
+      try {
+        window.__bizdavarPageBoot();
+      } catch (e) {
+        console.error('[Bizdavar] page boot on locale failed', e);
+      }
     }
-    RENDER_FNS.forEach(name => {
-      const orig = window[name];
-      if (typeof orig !== 'function' || orig.__i18nWrapped) return;
-      if (name === 'renderSiteChrome') renderSiteChromeOrig = orig;
-      if (NEVER_WRAP.has(name)) return;
-
-      const wrapped = function (...args) {
-        return runWhenReady(() => orig.apply(this, args));
-      };
-
-      wrapped.__i18nWrapped = true;
-      window[name] = wrapped;
-    });
+    afterLocale();
   }
 
+  snapshotChrome();
   syncLocaleNow();
-  wrapRenderFns();
-  window.bizdavarWrapRenderFns = wrapRenderFns;
+  afterLocale();
 
   if (window.BIZDAVAR_I18N) {
     window.bizdavarReady = Promise.resolve(window.BIZDAVAR_I18N.init())
       .then(() => {
-        localeReady = true;
-        wrapRenderFns();
+        syncLocaleNow();
         afterLocale();
         ensureSiteChrome();
         return window.BIZDAVAR_I18N;
       })
       .catch(err => {
         console.error('[Bizdavar] i18n init failed', err);
-        localeReady = true;
         ensureSiteChrome();
         throw err;
       });
 
-    document.addEventListener('bizdavar:locale', () => {
-      afterLocale();
-      if (renderSiteChromeOrig) {
-        try {
-          renderSiteChromeOrig();
-        } catch (e) {
-          console.error('[Bizdavar] locale re-render failed', e);
-        }
-      }
-      afterLocale();
-    });
+    document.addEventListener('bizdavar:locale', onLocaleChanged);
   } else {
-    window.bizdavarReady = Promise.resolve().then(() => {
-      localeReady = true;
-    });
+    window.bizdavarReady = Promise.resolve();
   }
 
-  ensureSiteChrome();
-
   document.addEventListener('DOMContentLoaded', () => {
-    wrapRenderFns();
+    snapshotChrome();
+    syncLocaleNow();
     ensureSiteChrome();
+    afterLocale();
   });
 
   window.bizdavarPageInit = function (fn) {
-    ensureSiteChrome();
-    runWhenReady(() => {
-      afterLocale();
-      if (typeof fn === 'function') fn();
-      afterLocale();
-      ensureSiteChrome();
-    });
+    if (typeof fn === 'function') {
+      window.__bizdavarPageBoot = fn;
+    }
+    runPageBoot(fn);
   };
 })();

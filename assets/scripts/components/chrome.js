@@ -189,6 +189,9 @@
   };
 
   window.renderSiteChrome = function () {
+    if (typeof window.closeMobileDrawer === 'function') {
+      window.closeMobileDrawer();
+    }
     const navItems = getNavItems();
     const logoAlt = A.logoAlt || C.siteName;
     const headerLogo = A.logo;

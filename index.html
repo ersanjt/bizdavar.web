@@ -209,29 +209,32 @@
   <script src="assets/scripts/components/schema.js"></script>
   <script src="assets/scripts/components/grids.js"></script>
   <script src="assets/scripts/main.js"></script>
-  <script src="assets/scripts/i18n/bootstrap.js"></script>
+  <script>
+    window.__bizdavarChrome = window.renderSiteChrome;
+    if (typeof window.__bizdavarChrome === 'function') window.__bizdavarChrome();
+  </script>
+<script src="assets/scripts/i18n/bootstrap.js"></script>
 
   <script>
-    bizdavarPageInit(function () {
+    function bootHomePage() {
       const I = window.BIZDAVAR_I18N;
-      injectPageSeo('home', {
-        canonical: 'https://bizdavar.com/'
-      });
-      renderSiteChrome();
+      const chrome = window.__bizdavarChrome || window.renderSiteChrome;
+      if (typeof chrome === 'function') chrome();
+      setupWhatsappLinks();
+      injectPageSeo('home', { canonical: 'https://bizdavar.com/' });
       renderTrustBar('trustBar');
       renderCredibilitySection('credibilitySection');
       renderProcessSection('processSection');
       renderIndustrialSection('industrialSection');
       renderClientsGrid('homeClientsGrid', 12);
-      setupWhatsappLinks();
       renderBlogGrid('homeBlogGrid', 3);
+      renderGeoStrip('geoStrip');
       if (I) {
         const faqs = I.t('home.faqs', []);
-        if (Array.isArray(faqs)) {
-          injectFaqSchema(faqs);
-        }
+        if (Array.isArray(faqs)) injectFaqSchema(faqs);
       }
-    });
+    }
+    bizdavarPageInit(bootHomePage);
   </script>
 </body>
 </html>

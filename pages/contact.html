@@ -134,7 +134,12 @@
   <script src="../assets/scripts/components/chrome.js"></script>
   <script src="../assets/scripts/components/schema.js"></script>
   <script src="../assets/scripts/components/grids.js"></script>
-  <script src="../assets/scripts/main.js"></script><script src="../assets/scripts/i18n/bootstrap.js"></script>
+  <script src="../assets/scripts/main.js"></script>
+  <script>
+    window.__bizdavarChrome = window.renderSiteChrome;
+    if (typeof window.__bizdavarChrome === 'function') window.__bizdavarChrome();
+  </script>
+<script src="../assets/scripts/i18n/bootstrap.js"></script>
   
   <script>
     bizdavarPageInit(function () {

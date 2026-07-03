@@ -149,9 +149,16 @@
   <script src="../assets/scripts/components/schema.js"></script>
   <script src="../assets/scripts/components/grids.js"></script>
   <script src="../assets/scripts/fast-page.js"></script>
-  <script>window.__bizdavarChrome = window.renderSiteChrome; window.__initFastPage = window.initFastPage;</script>
+
   <script src="../assets/scripts/main.js"></script>
-  <script src="../assets/scripts/i18n/bootstrap.js"></script>
+
+    <script>
+    window.__bizdavarChrome = window.renderSiteChrome;
+    window.__initFastPage = window.initFastPage;
+    if (typeof window.__bizdavarChrome === 'function') window.__bizdavarChrome();
+    if (typeof window.__initFastPage === 'function') window.__initFastPage();
+  </script>
+<script src="../assets/scripts/i18n/bootstrap.js"></script>
   
   <script>
     bizdavarPageInit(function () {

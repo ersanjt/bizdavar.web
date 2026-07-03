@@ -12,6 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+window.addEventListener('pageshow', () => {
+  closeMobileDrawer();
+});
+
 
 
 function openMobileDrawer() {
@@ -115,6 +119,8 @@ function closeMobileDrawer() {
   document.body.style.overflow = '';
 
 }
+
+window.closeMobileDrawer = closeMobileDrawer;
 
 
 
