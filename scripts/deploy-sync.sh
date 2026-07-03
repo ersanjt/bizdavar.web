@@ -59,8 +59,10 @@ curl -sI -L --max-time 20 https://www.bizdavar.com/ | head -10
 
 echo "===== RESTART APACHE / HTTPD ====="
 /scripts/restartsrv_httpd 2>/dev/null || systemctl restart httpd 2>/dev/null || service httpd restart 2>/dev/null || true
+sleep 3
 
 echo "===== PURGE LITESPEED / LOCAL CACHE ====="
+touch "$WEB/index.html" 2>/dev/null || true
 rm -rf "/home/$CPANEL_USER/lscache"/* 2>/dev/null || true
 find "/home/$CPANEL_USER" -maxdepth 4 -type d -name 'lscache' 2>/dev/null | while read -r d; do
   rm -rf "$d"/* 2>/dev/null || true
@@ -70,10 +72,17 @@ if [[ -x /usr/local/lsws/bin/lswsctrl ]]; then
 fi
 
 echo "===== ORIGIN VERIFY (bypass Cloudflare) ====="
-if curl -sL -H "Host: bizdavar.com" http://127.0.0.1/ 2>/dev/null | grep -q 'GTM-NXWQQWF8'; then
-  echo "OK: GTM-NXWQQWF8 visible on origin"
-else
-  echo "WARN: GTM not on origin — check LiteSpeed CacheDisable in .htaccess and restart httpd"
+ORIGIN_OK=0
+for attempt in 1 2 3 4 5; do
+  if curl -sfL -H "Host: bizdavar.com" http://127.0.0.1/ 2>/dev/null | grep -q 'GTM-NXWQQWF8'; then
+    echo "OK: GTM-NXWQQWF8 visible on origin (attempt $attempt)"
+    ORIGIN_OK=1
+    break
+  fi
+  sleep 2
+done
+if [[ "$ORIGIN_OK" -eq 0 ]]; then
+  echo "WARN: GTM not on origin after 5 attempts — run: curl -sL -H 'Host: bizdavar.com' http://127.0.0.1/ | head -15"
 fi
 
 echo "[$(date -Iseconds)] Deploy sync complete → $WEB"
