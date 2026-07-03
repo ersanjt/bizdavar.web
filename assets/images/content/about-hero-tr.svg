@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 341" role="img" aria-label="Bizdavar Group  dijital ve endüstriyel ajans">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 341" role="img" aria-label="Bizdavar Group - dijital ve endustriyel ajans">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#16163f"/>
@@ -30,6 +30,6 @@
   <path d="M200 248 L240 208 L280 228 L330 178 L380 218 L430 188 L480 238" fill="none" stroke="#FFDE00" stroke-width="2.5" opacity="0.55" stroke-linecap="round" stroke-linejoin="round"/>
 
   <text x="330" y="168" text-anchor="middle" fill="#FFDE00" font-family="Segoe UI,Arial,sans-serif" font-size="38" font-weight="700">Bizdavar Group</text>
-  <text x="330" y="210" text-anchor="middle" fill="#ffffff" font-family="Segoe UI,Arial,sans-serif" font-size="21" font-weight="600">Dijital ve endüstriyel ajans</text>
-  <text x="330" y="244" text-anchor="middle" fill="#ffffff" font-family="Segoe UI,Arial,sans-serif" font-size="15" opacity="0.72">11 ülkede uluslararas1 projeler</text>
+  <text x="330" y="210" text-anchor="middle" fill="#ffffff" font-family="Segoe UI,Arial,sans-serif" font-size="21" font-weight="600">Dijital ve end&#252;striyel ajans</text>
+  <text x="330" y="244" text-anchor="middle" fill="#ffffff" font-family="Segoe UI,Arial,sans-serif" font-size="15" opacity="0.72">11 &#252;lkede uluslararas&#305; projeler</text>
 </svg>

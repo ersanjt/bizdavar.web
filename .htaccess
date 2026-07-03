@@ -61,6 +61,11 @@ AddType 'text/html; charset=UTF-8' .html
   # /index.html → /
   RewriteRule ^index\.html$ / [R=301,L,NC]
 
+  # /pages/foo/ → /pages/foo (trailing slash breaks ../assets paths)
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} ^(.+)/$
+  RewriteRule ^ %1 [R=301,L]
+
   # /blog → /pages/blog (legacy URL — external canonical redirect)
   RewriteCond %{THE_REQUEST} \s/blog[\s?] [NC]
   RewriteRule ^blog/?$ /pages/blog [R=301,L]

@@ -323,10 +323,9 @@
     applyAboutHeroImage() {
       const file = this.raw('home.aboutHeroImage') || 'assets/images/content/about-hero.svg';
       const alt = this.t('home.aboutHeroAlt', 'Bizdavar Group');
-      const depth = parseInt(document.body.dataset.depth || '0', 10);
-      const prefix = depth ? '../'.repeat(depth) : '';
-      document.querySelectorAll('img[src*="about-hero"]').forEach(img => {
-        img.src = prefix + file;
+      const src = '/' + String(file).replace(/^\//, '');
+      document.querySelectorAll('[data-about-hero], img[src*="about-hero"]').forEach(img => {
+        img.src = src;
         if (alt) img.alt = alt;
       });
     },
