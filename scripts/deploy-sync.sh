@@ -57,10 +57,23 @@ curl -sI -L --max-time 20 https://bizdavar.com/ | head -10
 echo "---"
 curl -sI -L --max-time 20 https://www.bizdavar.com/ | head -10
 
-echo "===== PURGE LITESPEED CACHE ====="
+echo "===== RESTART APACHE / HTTPD ====="
+/scripts/restartsrv_httpd 2>/dev/null || systemctl restart httpd 2>/dev/null || service httpd restart 2>/dev/null || true
+
+echo "===== PURGE LITESPEED / LOCAL CACHE ====="
 rm -rf "/home/$CPANEL_USER/lscache"/* 2>/dev/null || true
+find "/home/$CPANEL_USER" -maxdepth 4 -type d -name 'lscache' 2>/dev/null | while read -r d; do
+  rm -rf "$d"/* 2>/dev/null || true
+done
 if [[ -x /usr/local/lsws/bin/lswsctrl ]]; then
   /usr/local/lsws/bin/lswsctrl restart 2>/dev/null || true
+fi
+
+echo "===== ORIGIN VERIFY (bypass Cloudflare) ====="
+if curl -sL -H "Host: bizdavar.com" http://127.0.0.1/ 2>/dev/null | grep -q 'GTM-NXWQQWF8'; then
+  echo "OK: GTM-NXWQQWF8 visible on origin"
+else
+  echo "WARN: GTM not on origin — check LiteSpeed CacheDisable in .htaccess and restart httpd"
 fi
 
 echo "[$(date -Iseconds)] Deploy sync complete → $WEB"

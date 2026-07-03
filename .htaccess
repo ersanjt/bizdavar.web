@@ -14,6 +14,16 @@ AddType 'text/html; charset=UTF-8' .html
   Require all denied
 </FilesMatch>
 
+# ── LiteSpeed — never cache HTML (stale page cache blocked GTM/deploy updates)
+<IfModule LiteSpeed>
+  CacheDisable public /
+</IfModule>
+<IfModule mod_headers.c>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
 # ── Security headers (mod_headers) ───────────────────────────────────────
 <IfModule mod_headers.c>
   Header set X-Content-Type-Options "nosniff"
