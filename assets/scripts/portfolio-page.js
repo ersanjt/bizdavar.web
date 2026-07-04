@@ -35,7 +35,7 @@
   function getGroup(category) {
     const c = category || '';
     if (/fintech|payment|broker|finance|holding|فین|پرداخت|مالی|بروکر|هلدینگ|web3|وب۳|انتقال/i.test(c)) return 'fintech';
-    if (/digital|web|design|smm|hosting|event|jewel|store|fashion|aviation|brand|طراحی|هاستینگ|رویداد|جواهر|فروشگاه|هنر|مد|چرم|هواپیمایی|برند/i.test(c)) return 'digital';
+    if (/digital|web|design|smm|hosting|event|jewel|store|fashion|aviation|brand|app|mobile|طراحی|هاستینگ|رویداد|جواهر|فروشگاه|هنر|مد|چرم|هواپیمایی|برند|اپ|موبایل/i.test(c)) return 'digital';
     if (/industrial|pump|petro|motor|equipment|tourism|visa|trade|IoT|دماسنج|سلامت|محصول|صنعت|پمپ|پتروشیمی|الکتروموتور|تجهیزات|گردشگری|ویزا|تجارت/i.test(c)) return 'industrial';
     if (/فین|پرداخت|مالی|بروکر|هلدینگ|وب۳|انتقال/.test(c)) return 'fintech';
     if (/طراحی|SMM|هاستینگ|رویداد|جواهر|فروشگاه|هنر|مد|چرم|هواپیمایی|درگاه|زیرساخت|برند/.test(c)) return 'digital';
@@ -123,10 +123,21 @@
             ${p.note ? `<p class="portfolio-card__note">${p.note}</p>` : ''}
             <div class="portfolio-card__footer">
               <span class="portfolio-card__badge portfolio-card__badge--${role}">${roleLabel}</span>
+              ${p.appStoreUrl ? `
+              <span class="portfolio-card__links">
+                <a href="${url}" class="portfolio-card__link"
+                   ${external ? 'target="_blank" rel="noopener noreferrer"' : ''}>
+                  ${t('common.viewSite', 'مشاهده وبسایت')}${arrow()}
+                </a>
+                <a href="${p.appStoreUrl}" class="portfolio-card__link portfolio-card__link--app"
+                   target="_blank" rel="noopener noreferrer">
+                  ${t('common.viewAppStore', 'App Store')}${arrow()}
+                </a>
+              </span>` : `
               <a href="${url}" class="portfolio-card__link"
                  ${external ? 'target="_blank" rel="noopener noreferrer"' : ''}>
                 ${role === 'case-study' && p.internal ? t('common.viewPage', 'مشاهده صفحه') : external ? t('common.viewSite', 'مشاهده وبسایت') : t('common.viewPage', 'مشاهده صفحه')}${arrow()}
-              </a>
+              </a>`}
             </div>
           </div>
         </article>`;

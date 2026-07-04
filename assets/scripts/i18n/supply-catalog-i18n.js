@@ -16,11 +16,11 @@
 
       heroHeadline: 'Gamak industrial electric motors',
 
-      heroHeadlineSub: 'Three-phase & single-phase · IE2/IE3 · B3/B5/B35 flange — power selection & logistics',
+      heroHeadlineSub: 'Three-phase & single-phase · IE2/IE3/IE4 · 0.06 to 4000 kW — power selection & logistics',
 
-      tagline: 'Industrial electric motors — made in Turkey',
+      tagline: 'Power to Energize Life',
 
-      since: 'Since 1978 · Izmir',
+      since: 'Since 1961 · Izmir',
 
       description: 'Bizdavar Group supplies Gamak electric motors for industrial projects, pumps, HVAC and production lines in Iran and the region. Power, speed, flange and efficiency class selection — with transparent proforma and shipping from Istanbul.',
 
@@ -76,27 +76,31 @@
 
     highlights: [
 
-      { title: 'GM/GMB — standard three-phase motors', desc: 'Most widely used series — B3 foot mount, IE2/IE3, 2 to 4 pole', useCase: 'Pumps, fans, conveyors, mixers', badge: 'Standard' },
+      { title: 'Three-phase asynchronous motors', desc: 'Most widely used Gamak series — aluminium and cast iron, IE2/IE3, 2/4/6 pole', useCase: 'Pumps, fans, conveyors, compressors, mixers', badge: '3-Phase' },
 
-      { title: 'Flange mount B5/B35', desc: 'Vertical mount or inline pumps — aluminium or cast iron flange', useCase: 'Centrifugal pumps, gearbox', badge: 'Flange' },
+      { title: 'Single-phase 220V', desc: 'Capacitor-run motor — workshops, light HVAC and small machinery', useCase: 'Workshop, ventilation, small equipment', badge: '1-Phase' },
 
-      { title: 'Brake motors', desc: 'DC brake — safe stop for hoists, cranes and conveyors', useCase: 'Hoists, light cranes, packaging lines', badge: 'Brake' },
+      { title: 'Ex-proof — ATEX', desc: 'Explosion-proof motors for Zone 1/2 — petrochemical and hazardous areas', useCase: 'Petrochemical, refining, solvent and Ex zones', badge: 'Ex-Proof' },
 
-      { title: 'Single-phase 220V', desc: 'Workshops, light HVAC, small machinery', useCase: 'Workshop, ventilation, small equipment', badge: '1-Phase' }
+      { title: 'IE4 high efficiency', desc: 'Gamak IE4 motors — lower energy consumption with the same performance', useCase: 'New projects and energy efficiency requirements', badge: 'IE4' },
+
+      { title: 'Medium voltage motors', desc: '315–630 frame · 150–4000 kW — heavy industrial loads', useCase: 'Large fans, HV pumps, industrial compressors', badge: 'MV' },
+
+      { title: 'Smoke extraction motors', desc: 'Gamak smoke extraction motors — building safety HVAC', useCase: 'Smoke control, parking, tunnels', badge: 'Smoke' }
 
     ],
 
     categories: [
 
-      { title: 'Three-phase — GM / GMB / GMC', desc: '380V asynchronous three-phase motor — B3 foot mount, 0.09 to 315 kW' },
+      { title: 'Three-phase — Three Phase', desc: '380V asynchronous three-phase motor — frame 56 to 630, 0.06 to 3000 kW' },
 
       { title: 'Single-phase — 220V', desc: 'Capacitor-run single-phase motor — workshop and light HVAC' },
 
-      { title: 'Flange mount — B5 / B14 / B35', desc: 'Vertical mount on pump or gearbox — standard IEC flange' },
+      { title: 'Special duty — Ex / Smoke / Crusher', desc: 'Ex-proof, smoke extraction, crusher and milking — per Gamak datasheet' },
 
-      { title: 'Brake — Brake Motor', desc: 'DC spring-applied brake — safety for hoists and conveyors' },
+      { title: 'Medium voltage — MV', desc: '315–630 frame · 150–4000 kW — for heavy loads and complex applications' },
 
-      { title: 'Special — Inverter / Explosion-proof', desc: 'Inverter-compatible, harsh environment, high ambient — per datasheet' }
+      { title: 'Efficiency — IE4 / Inverter', desc: 'IE4 and inverter-duty motors — energy savings and speed control' }
 
     ],
 
@@ -118,21 +122,29 @@
 
     industries: [
 
+      { name: 'Manufacturing', desc: 'Conveyor, mixer and production line motors' },
+
       { name: 'Water & Wastewater', desc: 'Pump and blower duty motors' },
 
       { name: 'Food & Beverage', desc: 'Washdown and conveyor applications' },
 
-      { name: 'Mining & Cement', desc: 'Heavy-duty conveyor and fan motors' },
+      { name: 'Mining & Cement', desc: 'Crusher and heavy-duty conveyor motors' },
 
-      { name: 'HVAC', desc: 'Fans, chillers and air handling' }
+      { name: 'Oil & Gas', desc: 'Ex-proof motors for hazardous areas' },
+
+      { name: 'Energy', desc: 'Medium voltage for fans and heavy loads' },
+
+      { name: 'Agriculture', desc: 'Milking and irrigation pump motors' },
+
+      { name: 'HVAC & Building', desc: 'Smoke extraction and fan motors' }
 
     ],
 
     academy: {
 
-      title: 'Gamak — over 45 years of motor manufacturing in Izmir',
+      title: 'Gamak — since 1961, the heart of Turkish industry',
 
-      desc: 'Gamak is one of Turkey\'s largest electric motor manufacturers — exporting to 80+ countries. Bizdavar Group bridges your project and Gamak for technical selection, supply and logistics.',
+      desc: 'Gamak produced Turkey\'s first domestic electric motor and is now one of Europe\'s largest manufacturers — with a test laboratory, in-house wire enamelling and dedicated tooling. Bizdavar Group bridges your project and Gamak for technical selection, supply and logistics.',
 
       topics: [
 
@@ -174,7 +186,9 @@
 
       { q: 'Delivery time?', a: 'Typically 2 to 6 weeks depending on power and stock. Exact lead time on the proforma.' },
 
-      { q: 'Do you supply brake motors?', a: 'Yes — Gamak brake motor series for hoists, light cranes and conveyors with safe stopping.' }
+      { q: 'Do you supply Ex-proof and smoke extraction motors?', a: 'Yes — Ex-proof, smoke extraction and crusher series from the official Gamak catalog are available.' },
+
+      { q: 'Do you supply medium voltage (MV) motors?', a: 'Yes — Gamak medium voltage motors from 150 kW to 4000 kW for heavy industrial projects.' }
 
     ],
 
@@ -192,11 +206,11 @@
 
       heroHeadline: 'Gamak endüstriyel elektrik motorları',
 
-      heroHeadlineSub: 'Üç fazlı ve tek fazlı · IE2/IE3 · B3/B5/B35 flanş — güç seçimi ve lojistik',
+      heroHeadlineSub: 'Üç fazlı ve tek fazlı · IE2/IE3/IE4 · 0,06–4000 kW — güç seçimi ve lojistik',
 
-      tagline: 'Endüstriyel elektrik motoru — Türkiye üretimi',
+      tagline: 'Power to Energize Life',
 
-      since: '1978\'den beri · İzmir',
+      since: '1961\'den beri · İzmir',
 
       description: 'Bizdavar Group; endüstriyel projeler, pompalar, HVAC ve üretim hatları için Gamak elektrik motoru tedarik eder. Güç, devir, flanş ve verimlilik sınıfı seçimi — İstanbul\'dan şeffaf proforma ve nakliye ile.',
 
@@ -252,27 +266,31 @@
 
     highlights: [
 
-      { title: 'GM/GMB — standart üç fazlı motorlar', desc: 'En yaygın seri — B3 ayak montaj, IE2/IE3, 2 ila 4 kutuplu', useCase: 'Pompa, fan, konveyör, mikser', badge: 'Standard' },
+      { title: 'Üç fazlı asenkron motorlar', desc: 'En yaygın Gamak serisi — alüminyum ve döküm, IE2/IE3, 2/4/6 kutuplu', useCase: 'Pompa, fan, konveyör, kompresör, mikser', badge: '3-Phase' },
 
-      { title: 'Flanşlı B5/B35', desc: 'Dikey montaj veya inline pompalar — alüminyum veya döküm flanş', useCase: 'Santrifüj pompa, redüktör', badge: 'Flange' },
+      { title: 'Tek fazlı 220V', desc: 'Kapasitörlü motor — atölye, hafif HVAC ve küçük makineler', useCase: 'Atölye, havalandırma, küçük ekipman', badge: '1-Phase' },
 
-      { title: 'Frenli motorlar', desc: 'DC fren — vinç, crane ve konveyörde güvenli duruş', useCase: 'Vinç, hafif crane, paketleme hattı', badge: 'Brake' },
+      { title: 'Ex-proof — ATEX', desc: 'Zone 1/2 patlamaya dayanıklı motor — petrokimya ve tehlikeli ortamlar', useCase: 'Petrokimya, rafineri, solvent ve Ex bölgeleri', badge: 'Ex-Proof' },
 
-      { title: 'Tek fazlı 220V', desc: 'Atölye, hafif HVAC, küçük makineler', useCase: 'Atölye, havalandırma, küçük ekipman', badge: '1-Phase' }
+      { title: 'IE4 yüksek verimlilik', desc: 'Gamak IE4 motorlar — aynı performansta daha düşük enerji tüketimi', useCase: 'Yeni projeler ve enerji verimliliği gereksinimleri', badge: 'IE4' },
+
+      { title: 'Orta gerilim motorları', desc: '315–630 frame · 150–4000 kW — ağır endüstriyel yükler', useCase: 'Büyük fanlar, HV pompalar, endüstriyel kompresörler', badge: 'MV' },
+
+      { title: 'Duman tahliye motorları', desc: 'Gamak duman tahliye motorları — bina güvenliği HVAC', useCase: 'Duman kontrolü, otopark, tünel', badge: 'Smoke' }
 
     ],
 
     categories: [
 
-      { title: 'Üç fazlı — GM / GMB / GMC', desc: '380V asenkron üç fazlı motor — B3 ayak montaj, 0,09 ila 315 kW' },
+      { title: 'Üç fazlı — Three Phase', desc: '380V asenkron üç fazlı motor — frame 56–630, 0,06–3000 kW' },
 
       { title: 'Tek fazlı — 220V', desc: 'Kapasitörlü tek fazlı motor — atölye ve hafif HVAC' },
 
-      { title: 'Flanşlı — B5 / B14 / B35', desc: 'Pompa veya redüktör üzerine dikey montaj — standart IEC flanş' },
+      { title: 'Özel — Ex / Duman / Kırıcı', desc: 'Ex-proof, duman tahliye, kırıcı ve sağım — Gamak datasheet\'e göre' },
 
-      { title: 'Frenli — Brake Motor', desc: 'DC yaylı fren — vinç ve konveyörde güvenlik' },
+      { title: 'Orta gerilim — MV', desc: '315–630 frame · 150–4000 kW — ağır yükler ve karmaşık uygulamalar' },
 
-      { title: 'Özel — Inverter / Explosion-proof', desc: 'İnverter uyumlu, zorlu ortam, yüksek ortam sıcaklığı — datasheet\'e göre' }
+      { title: 'Verimlilik — IE4 / İnverter', desc: 'IE4 ve inverter uyumlu motorlar — enerji tasarrufu ve hız kontrolü' }
 
     ],
 
@@ -294,21 +312,29 @@
 
     industries: [
 
-      { name: 'Water & Wastewater', desc: 'Pompa ve blower hizmet motorları' },
+      { name: 'Üretim endüstrisi', desc: 'Konveyör, mikser ve üretim hattı motorları' },
 
-      { name: 'Food & Beverage', desc: 'Yıkanabilir ve konveyör uygulamaları' },
+      { name: 'Su ve atıksu', desc: 'Pompa ve blower hizmet motorları' },
 
-      { name: 'Mining & Cement', desc: 'Ağır hizmet konveyör ve fan motorları' },
+      { name: 'Gıda ve içecek', desc: 'Yıkanabilir ve konveyör uygulamaları' },
 
-      { name: 'HVAC', desc: 'Fanlar, chiller ve hava işleme' }
+      { name: 'Madencilik ve çimento', desc: 'Kırıcı ve ağır hizmet konveyör motorları' },
+
+      { name: 'Petrol ve gaz', desc: 'Tehlikeli bölgeler için Ex-proof motorlar' },
+
+      { name: 'Enerji', desc: 'Fanlar ve ağır yükler için orta gerilim' },
+
+      { name: 'Tarım', desc: 'Sağım ve sulama pompası motorları' },
+
+      { name: 'HVAC ve bina', desc: 'Duman tahliye ve fan motorları' }
 
     ],
 
     academy: {
 
-      title: 'Gamak — İzmir\'de 45 yılı aşkın motor üretimi',
+      title: 'Gamak — 1961\'den beri Türkiye sanayisinin kalbi',
 
-      desc: 'Gamak, Türkiye\'nin en büyük elektrik motoru üreticilerinden biridir — 80\'den fazla ülkeye ihracat. Bizdavar Group, projeniz ile Gamak arasında teknik seçim, tedarik ve lojistik köprüsüdür.',
+      desc: 'Gamak Türkiye\'nin ilk yerli elektrik motorunu üretti ve bugün Avrupa\'nın en büyük motor üreticilerinden biridir — test laboratuvarı, tel emaye ve özel kalıphane ile. Bizdavar Group projeniz ile Gamak arasında teknik seçim, tedarik ve lojistik köprüsüdür.',
 
       topics: [
 
@@ -350,7 +376,9 @@
 
       { q: 'Teslimat süresi?', a: 'Genellikle güce ve stoka bağlı 2 ila 6 hafta. Kesin lead time proformada.' },
 
-      { q: 'Frenli motor var mı?', a: 'Evet — vinç, hafif crane ve konveyör için güvenli duruş sağlayan Gamak frenli motor serisi.' }
+      { q: 'Ex-proof ve duman tahliye motoru var mı?', a: 'Evet — resmi Gamak kataloğundan Ex-proof, duman tahliye ve kırıcı serileri tedarik edilir.' },
+
+      { q: 'Orta gerilim (MV) motor da tedarik ediliyor mu?', a: 'Evet — ağır endüstriyel projeler için 150 kW ile 4000 kW arası Gamak orta gerilim motorları.' }
 
     ],
 

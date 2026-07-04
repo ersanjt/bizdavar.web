@@ -1,13 +1,16 @@
 /**
  * Prosense — Product catalog (source: prosense.com.tr)
+ * Images: assets/images/prosense/ — fetched via scripts/fetch-prosense-assets.py
  */
+const PROSENSE_IMG = 'assets/images/prosense/';
+
 window.PROSENSE_CATALOG = {
   brand: {
     name: 'Prosense',
     nameFa: 'پروسنس',
     logo: 'assets/images/partners/prosense.svg',
     logoAlt: 'Prosense — gas and flame detectors supplied from Turkey',
-    heroImage: 'assets/images/content/industrial-placeholder.svg',
+    heroImage: PROSENSE_IMG + 'hero-pq-sil2.jpeg',
     heroImageAlt: 'Prosense PQ series SIL2 gas detector with hydrocarbon LEL display',
     heroEyebrow: 'تامین رسمی برای پروژه‌های صنعتی ایران',
     heroHeadline: 'دتکتورهای Prosense',
@@ -66,12 +69,12 @@ window.PROSENSE_CATALOG = {
   ],
 
   iranIndustries: [
-    { name: 'پتروشیمی و پالایش', desc: 'دتکتور SIL2/3 برای H2S، LEL، O2 و هیدروکاربن', image: 'assets/images/content/industrial-placeholder.svg', icon: 'flask' },
-    { name: 'نفت و گاز', desc: 'سیستم‌های ثابت و Open Path برای محیط‌های خطرناک', image: 'assets/images/content/industrial-placeholder.svg', icon: 'barrel' },
-    { name: 'معدن و تونل', desc: 'سری SOMA با گواهی M1 — CH4، CO و O2', image: 'assets/images/content/industrial-placeholder.svg', icon: 'pickaxe' },
-    { name: 'پارکینگ سرپوشیده', desc: 'PPS+ مطابق EN-50545-1 — CO و NO2', image: 'assets/images/content/industrial-placeholder.svg', icon: 'parking' },
-    { name: 'تصفیه آب و فاضلاب', desc: 'H2S، CH4، NH3، SO2 — محیط‌های مرطوب', image: 'assets/images/content/industrial-placeholder.svg', icon: 'droplet' },
-    { name: 'فولاد و صنعت سنگین', desc: 'دتکتور مقاوم برای محیط‌های سخت صنعتی', image: 'assets/images/content/industrial-placeholder.svg', icon: 'factory' }
+    { name: 'پتروشیمی و پالایش', desc: 'دتکتور SIL2/3 برای H2S، LEL، O2 و هیدروکاربن', image: PROSENSE_IMG + 'industry-petrochemical.jpg', icon: 'flask' },
+    { name: 'نفت و گاز', desc: 'سیستم‌های ثابت و Open Path برای محیط‌های خطرناک', image: PROSENSE_IMG + 'industry-oil-gas.webp', icon: 'barrel' },
+    { name: 'معدن و تونل', desc: 'سری SOMA با گواهی M1 — CH4، CO و O2', image: PROSENSE_IMG + 'industry-mining.jpg', icon: 'pickaxe' },
+    { name: 'پارکینگ سرپوشیده', desc: 'PPS+ مطابق EN-50545-1 — CO و NO2', image: PROSENSE_IMG + 'industry-parking.jpg', icon: 'parking' },
+    { name: 'تصفیه آب و فاضلاب', desc: 'H2S، CH4، NH3، SO2 — محیط‌های مرطوب', image: PROSENSE_IMG + 'industry-water.jpeg', icon: 'droplet' },
+    { name: 'فولاد و صنعت سنگین', desc: 'دتکتور مقاوم برای محیط‌های سخت صنعتی', image: PROSENSE_IMG + 'industry-steel.jpg', icon: 'factory' }
   ],
 
   faq: [
@@ -111,7 +114,7 @@ window.PROSENSE_CATALOG = {
       useCaseFa: 'H2S، LEL، O2 — محیط Ex و پروژه‌های SIS',
       badge: 'SIL',
       inquiryName: 'PQ Serisi',
-      image: 'assets/images/content/industrial-placeholder.svg',
+      image: PROSENSE_IMG + 'hero-pq-sil2.jpeg',
       imageAlt: 'Prosense PQ series SIL2 SIL3 fixed gas detector for process safety'
     },
     {
@@ -121,7 +124,7 @@ window.PROSENSE_CATALOG = {
       useCaseFa: 'گازهای سمی و قابل اشتعال در تاسیسات صنعتی',
       badge: 'Process Safety',
       inquiryName: 'SafeVader Serisi',
-      image: 'assets/images/content/industrial-placeholder.svg',
+      image: PROSENSE_IMG + 'category-safevader.jpg',
       imageAlt: 'Prosense SafeVader process safety gas detector'
     },
     {
@@ -131,7 +134,7 @@ window.PROSENSE_CATALOG = {
       useCaseFa: 'کشتی‌سازی، پلتفرم دریایی، بنادر',
       badge: 'Denizcilik',
       inquiryName: 'Marine Gaz Dedektörü',
-      image: 'assets/images/content/industrial-placeholder.svg',
+      image: PROSENSE_IMG + 'hero-marine.jpg',
       imageAlt: 'Prosense marine certified H2S and CH4 gas detection system'
     },
     {
@@ -141,7 +144,7 @@ window.PROSENSE_CATALOG = {
       useCaseFa: 'پالایشگاه، خط لوله، مخازن ذخیره',
       badge: 'MPS',
       inquiryName: 'MPS Hidrokarbon Dedektörü',
-      image: 'assets/images/content/industrial-placeholder.svg',
+      image: PROSENSE_IMG + 'hero-mps-hydrocarbon.jpg',
       imageAlt: 'Prosense MPS hydrocarbon gas detector sensor'
     },
     {
@@ -151,7 +154,7 @@ window.PROSENSE_CATALOG = {
       useCaseFa: 'صنایع شیمیایی، رنگ، پتروشیمی',
       badge: 'VOC',
       inquiryName: 'PQD VOC Dedektörü',
-      image: 'assets/images/content/industrial-placeholder.svg',
+      image: PROSENSE_IMG + 'hero-voc-pqd.jpg',
       imageAlt: 'Prosense PQD VOC volatile organic compound detector'
     },
     {
@@ -161,7 +164,7 @@ window.PROSENSE_CATALOG = {
       useCaseFa: 'نگهداری دوره‌ای دتکتورها — هماهنگی از طریق بیزدوار',
       badge: 'Kalibrasyon',
       inquiryName: 'Kalibrasyon Hizmeti',
-      image: 'assets/images/content/industrial-placeholder.svg',
+      image: PROSENSE_IMG + 'hero-calibration.jpg',
       imageAlt: 'Prosense TÜRKAK accredited gas detector calibration service'
     },
     {
@@ -171,7 +174,7 @@ window.PROSENSE_CATALOG = {
       useCaseFa: 'معادن زغال، تونل مترو، کارگاه‌های زیرزمینی',
       badge: 'Maden',
       inquiryName: 'SOMA Serisi',
-      image: 'assets/images/content/industrial-placeholder.svg',
+      image: PROSENSE_IMG + 'hero-soma-mining.jpg',
       imageAlt: 'Prosense SOMA M1 mining gas detector for tunnels and coal mines'
     },
     {
@@ -181,7 +184,7 @@ window.PROSENSE_CATALOG = {
       useCaseFa: 'پارکینگ‌های سرپوشیده، مراکز تجاری و بیمارستان',
       badge: 'Otopark',
       inquiryName: 'PPS+ Otopark Sistemi',
-      image: 'assets/images/content/industrial-placeholder.svg',
+      image: PROSENSE_IMG + 'hero-parking-pps-plus.webp',
       imageAlt: 'Prosense PPS+ EN-50545-1 parking gas detection system for CO and NO2'
     }
   ],
@@ -192,7 +195,7 @@ window.PROSENSE_CATALOG = {
       title: 'دتکتورهای گاز ثابت',
       titleTr: 'Sabit Gaz Dedektörleri',
       icon: 'sensor',
-      image: 'assets/images/content/industrial-placeholder.svg',
+      image: PROSENSE_IMG + 'category-fixed-gas.jpg',
       desc: 'سنسورهای گاز ثابت برای نصب دائم در تاسیسات صنعتی',
       series: [
         { name: 'PQ Serisi', note: 'SIL2, SIL3 sertifikalı', featured: true },
@@ -218,7 +221,7 @@ window.PROSENSE_CATALOG = {
       title: 'دتکتورهای گاز پرتابل',
       titleTr: 'Portatif Gaz Dedektörleri',
       icon: 'bag',
-      image: 'assets/images/content/industrial-placeholder.svg',
+      image: PROSENSE_IMG + 'category-portable-gas.jpg',
       desc: 'ابزار اندازه‌گیری قابل حمل برای کارکنان و بازرسی میدانی',
       series: [
         { name: 'Gas-Pro', note: 'حرفه‌ای' },
@@ -241,7 +244,7 @@ window.PROSENSE_CATALOG = {
       title: 'دتکتورهای شعله',
       titleTr: 'Alev Dedektörleri',
       icon: 'flame',
-      image: 'assets/images/content/industrial-placeholder.svg',
+      image: PROSENSE_IMG + 'category-flame-detector.png',
       desc: 'شناسایی شعله و آتش در محیط‌های صنعتی و خطرناک',
       series: [
         { name: 'Takex', note: 'Takex' },
@@ -257,7 +260,7 @@ window.PROSENSE_CATALOG = {
       title: 'پنل‌های کنترل',
       titleTr: 'Kontrol Panelleri',
       icon: 'desktop',
-      image: 'assets/images/content/industrial-placeholder.svg',
+      image: PROSENSE_IMG + 'category-control-panel.png',
       desc: 'پنل‌های آنالوگ و دیجیتال برای مدیریت چندین دتکتور',
       series: [
         { name: 'S-DP4 Analog', note: '۴ کانال آنالوگ' },
@@ -279,7 +282,7 @@ window.PROSENSE_CATALOG = {
       title: 'سیستم گاز پارکینگ',
       titleTr: 'Otopark Gaz Algılama',
       icon: 'parking',
-      image: 'assets/images/content/industrial-placeholder.svg',
+      image: PROSENSE_IMG + 'category-parking.jpg',
       desc: 'سیستم‌های تشخیص CO و NO2 در پارکینگ‌های بسته',
       series: [
         { name: 'PPS Otopark Gaz Algılama', note: 'PPS' },
@@ -292,7 +295,7 @@ window.PROSENSE_CATALOG = {
       title: 'نرم‌افزارها',
       titleTr: 'Yazılımlar',
       icon: 'monitor',
-      image: 'assets/images/content/industrial-placeholder.svg',
+      image: PROSENSE_IMG + 'category-software.png',
       desc: 'نرم‌افزار پیکربندی، مانیتورینگ و مدیریت سیستم',
       series: [
         { name: 'S-PVSX', note: 'S-PVSX' },
@@ -310,7 +313,7 @@ window.PROSENSE_CATALOG = {
       title: 'سیلندر کالیبراسیون',
       titleTr: 'Kalibrasyon Test Tüpü',
       icon: 'lab',
-      image: 'assets/images/content/industrial-placeholder.svg',
+      image: PROSENSE_IMG + 'category-calibration.jpg',
       desc: 'گازهای تست و کالیبراسیون Span',
       series: [
         { name: 'Span / Test Gaz Tüpleri', note: 'Span' },
@@ -324,7 +327,7 @@ window.PROSENSE_CATALOG = {
       title: 'سایر تجهیزات',
       titleTr: 'Diğer Ekipmanlar',
       icon: 'wrench',
-      image: 'assets/images/content/industrial-placeholder.svg',
+      image: PROSENSE_IMG + 'category-other-equipment.png',
       desc: 'لوازم جانبی، آژیر، منبع تغذیه و تجهیزات Ex',
       series: [
         { name: 'Gaz Toplama Aparatı', note: 'نمونه‌برداری' },
@@ -337,25 +340,25 @@ window.PROSENSE_CATALOG = {
   ],
 
   industries: [
-    { name: 'نفت و گاز', nameTr: 'Petrol ve Gaz', desc: 'SIL2 sertifikalı سیستم‌های درجه یک', icon: 'barrel', image: 'assets/images/content/industrial-placeholder.svg' },
-    { name: 'ایستگاه گاز', nameTr: 'Gaz Dağıtım İstasyonları', desc: 'گازهای قابل اشتعال و سمی', icon: 'gas-station', image: 'assets/images/content/industrial-placeholder.svg' },
-    { name: 'پارکینگ سرپوشیده', nameTr: 'Kapalı Otoparklar', desc: 'EN 50545-1 — اولین سیستم جهانی', icon: 'parking', image: 'assets/images/content/industrial-placeholder.svg' },
-    { name: 'کشتیرانی', nameTr: 'Denizcilik', desc: 'H2S و CH4 — Marine sertifikalı', icon: 'ship', image: 'assets/images/content/industrial-placeholder.svg' },
-    { name: 'HVAC و Freon', nameTr: 'HVAC - Freon', desc: 'CO2, O2, NH3, Freon', icon: 'snowflake', image: 'assets/images/content/industrial-placeholder.svg' },
-    { name: 'تصفیه آب', nameTr: 'Su Arıtma Tesisleri', desc: 'H2S, CH4, NH3, SO2, O2, CO', icon: 'droplet', image: 'assets/images/content/industrial-placeholder.svg' },
-    { name: 'پتروشیمی', nameTr: 'Petrokimya', desc: 'ایمنی فرآیند', icon: 'flask', image: 'assets/images/content/industrial-placeholder.svg' },
-    { name: 'معدن و تونل', nameTr: 'Maden ve Tüneller', desc: 'SOMA — M1 sertifikalı', icon: 'pickaxe', image: 'assets/images/content/industrial-placeholder.svg' },
-    { name: 'فولاد', nameTr: 'Demir Çelik', desc: 'محیط‌های سنگین صنعتی', icon: 'factory', image: 'assets/images/content/industrial-placeholder.svg' },
-    { name: 'داروسازی', nameTr: 'İlaç Sanayi', desc: 'کنترل گازهای فرآیندی', icon: 'pill', image: 'assets/images/content/industrial-placeholder.svg' },
-    { name: 'غذا و نوشیدنی', nameTr: 'Yemek ve İçecek', desc: 'ایمنی تولید', icon: 'utensils', image: 'assets/images/content/industrial-placeholder.svg' },
-    { name: 'اتاق شارژ باتری', nameTr: 'Akü Dolum Odaları', desc: 'محافظت در برابر هیدروژن', icon: 'battery', image: 'assets/images/content/industrial-placeholder.svg' }
+    { name: 'نفت و گاز', nameTr: 'Petrol ve Gaz', desc: 'SIL2 sertifikalı سیستم‌های درجه یک', icon: 'barrel', image: PROSENSE_IMG + 'industry-oil-gas.webp' },
+    { name: 'ایستگاه گاز', nameTr: 'Gaz Dağıtım İstasyonları', desc: 'گازهای قابل اشتعال و سمی', icon: 'gas-station', image: PROSENSE_IMG + 'industry-gas-distribution.webp' },
+    { name: 'پارکینگ سرپوشیده', nameTr: 'Kapalı Otoparklar', desc: 'EN 50545-1 — اولین سیستم جهانی', icon: 'parking', image: PROSENSE_IMG + 'industry-parking.jpg' },
+    { name: 'کشتیرانی', nameTr: 'Denizcilik', desc: 'H2S و CH4 — Marine sertifikalı', icon: 'ship', image: PROSENSE_IMG + 'industry-marine.jpg' },
+    { name: 'HVAC و Freon', nameTr: 'HVAC - Freon', desc: 'CO2, O2, NH3, Freon', icon: 'snowflake', image: PROSENSE_IMG + 'industry-hvac.jpg' },
+    { name: 'تصفیه آب', nameTr: 'Su Arıtma Tesisleri', desc: 'H2S, CH4, NH3, SO2, O2, CO', icon: 'droplet', image: PROSENSE_IMG + 'industry-water.jpeg' },
+    { name: 'پتروشیمی', nameTr: 'Petrokimya', desc: 'ایمنی فرآیند', icon: 'flask', image: PROSENSE_IMG + 'industry-petrochemical.jpg' },
+    { name: 'معدن و تونل', nameTr: 'Maden ve Tüneller', desc: 'SOMA — M1 sertifikalı', icon: 'pickaxe', image: PROSENSE_IMG + 'industry-mining.jpg' },
+    { name: 'فولاد', nameTr: 'Demir Çelik', desc: 'محیط‌های سنگین صنعتی', icon: 'factory', image: PROSENSE_IMG + 'industry-steel.jpg' },
+    { name: 'داروسازی', nameTr: 'İlaç Sanayi', desc: 'کنترل گازهای فرآیندی', icon: 'pill', image: PROSENSE_IMG + 'industry-pharma.jpg' },
+    { name: 'غذا و نوشیدنی', nameTr: 'Yemek ve İçecek', desc: 'ایمنی تولید', icon: 'utensils', image: PROSENSE_IMG + 'industry-food.jpeg' },
+    { name: 'اتاق شارژ باتری', nameTr: 'Akü Dolum Odaları', desc: 'محافظت در برابر هیدروژن', icon: 'battery', image: PROSENSE_IMG + 'industry-battery.webp' }
   ],
 
   academy: {
     title: 'مشاوره فنی — نه فقط فروش',
     descFa: 'تیم فنی بیزدوار بر اساس استانداردهای Prosense و تجربه پروژه‌های ایرانی، سیستم gaz algılama شما را طراحی و مدل‌سازی می‌کند — از انتخاب گاز تا پنل و آژیر.',
-    image: 'assets/images/content/industrial-placeholder.svg',
-    imageSecondary: 'assets/images/content/industrial-placeholder.svg',
+    image: PROSENSE_IMG + 'academy-factory.webp',
+    imageSecondary: PROSENSE_IMG + 'academy-production.webp',
     url: 'https://www.prosense.com.tr/?lang=tr',
     urlLabel: 'مستندات Prosense',
     topics: ['انتخاب نوع گاز و رنج', 'طراحی سیستم ثابت و پنل', 'گواهینامه SIL/M1/EN', 'کالیبراسیون TÜRKAK', 'سیستم پارکینگ PPS+', 'پشتیبانی پس از نصب']

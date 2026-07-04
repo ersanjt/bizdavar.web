@@ -92,25 +92,41 @@
   }
 
   function getFooterLinkGroups() {
+    const brandLinks = (C.industrialProducts || []).map(p => ({
+      href: siteLink(p.url),
+      label: p.name
+    }));
+    if (brandLinks.length) {
+      brandLinks.push({
+        href: `${pagePath(R.services)}#industrial`,
+        label: t('footer.industrialShort', 'تجهیزات صنعتی')
+      });
+    }
     return {
       services: [
+        { href: pagePath(R.services), label: t('nav.services') },
         { href: `${pagePath(R.services)}#digital-marketing`, label: t('footer.digitalMarketing') },
         { href: pagePath(R.fast), label: t('footer.webFast') },
         { href: `${pagePath(R.services)}#smm`, label: t('footer.smm') },
         { href: `${pagePath(R.services)}#industrial`, label: t('footer.industrial') }
       ],
-      brands: [
+      brands: brandLinks.length ? brandLinks : [
         { href: pagePath(R.vega), label: 'VEGA' },
         { href: pagePath(R.prosense), label: 'Prosense' },
         { href: pagePath(R.teltonika), label: 'Teltonika' },
-        { href: pagePath(R.gamak), label: 'Gamak' }
+        { href: pagePath(R.gamak), label: 'Gamak' },
+        { href: pagePath(R.digiSystem), label: 'Digi System' },
+        { href: pagePath(R.teraoka), label: 'Teraoka' }
       ],
       quick: [
         { href: pagePath(R.about), label: t('nav.about') },
+        { href: pagePath(R.services), label: t('nav.services') },
         { href: pagePath(R.products), label: t('nav.products') },
         { href: pagePath(R.portfolio), label: t('nav.portfolio') },
+        { href: pagePath(R.fast), label: t('nav.webDesign') },
         { href: pagePath(R.blog), label: t('nav.blog') },
         { href: pagePath(R.contact), label: t('footer.contactUs') },
+        { href: pagePath(R.privacy), label: t('footer.privacy') },
         { href: `${pagePath(R.home)}#faq`, label: t('footer.faq') }
       ]
     };
@@ -133,7 +149,7 @@
       { page: 'home', route: R.home, label: t('nav.home', 'خانه'), icon: 'home' },
       { page: 'about', route: R.about, label: t('nav.about', 'درباره ما'), icon: 'info' },
       { page: 'services', route: R.services, label: t('nav.services', 'خدمات'), icon: 'list' },
-      { page: 'products', route: R.products, label: t('nav.products', 'محصولات ما'), icon: 'box' },
+      { page: 'products', route: R.products, label: t('nav.products', 'محصولات ما'), icon: 'box', dropdown: 'products' },
       { page: 'portfolio', route: R.portfolio, label: t('nav.portfolio', 'نمونه‌کارها'), icon: 'briefcase' },
       { page: 'fast', route: R.fast, label: t('nav.webDesign', 'طراحی سایت'), icon: 'globe' },
       { page: 'blog', route: R.blog, label: t('nav.blog', 'وبلاگ'), icon: 'article' },
@@ -141,10 +157,105 @@
     ];
   }
 
+  const SUPPLY_PAGES = new Set(['vega', 'prosense', 'teltonika', 'gamak', 'digi-system', 'teraoka']);
+
+  function getProductNavConfig() {
+    return C.productNav || { overviewRoute: 'products', groups: [] };
+  }
+
+  function getProductPageIds() {
+    const cfg = getProductNavConfig();
+    const ids = new Set(['products']);
+    (cfg.groups || []).forEach(group => {
+      (group.items || []).forEach(item => ids.add(item.page));
+    });
+    return ids;
+  }
+
+  function isProductsActive() {
+    return getProductPageIds().has(currentPage);
+  }
+
+  function productNavLinkHtml(item) {
+    const href = pagePath(R[item.route] || item.route);
+    const active = currentPage === item.page ? ' is-active' : '';
+    const desc = item.descKey ? t(item.descKey, '') : '';
+    const badge = item.badgeKey ? `<span class="nav__product-badge">${t(item.badgeKey, '')}</span>` : '';
+    return `<a href="${href}" class="nav__product-link${active}">
+      <span class="nav__product-name">${item.label}${badge}</span>
+      ${desc ? `<span class="nav__product-desc">${desc}</span>` : ''}
+    </a>`;
+  }
+
+  function renderProductNavDropdown(label) {
+    const cfg = getProductNavConfig();
+    const overviewHref = pagePath(R[cfg.overviewRoute] || cfg.overviewRoute);
+    const active = isProductsActive() ? ' active' : '';
+    const groups = (cfg.groups || []).map(group => `
+      <div class="nav__product-group">
+        <p class="nav__product-group-title">${t(group.labelKey, group.id)}</p>
+        ${(group.items || []).map(productNavLinkHtml).join('')}
+      </div>
+    `).join('');
+    return `<details class="nav__dropdown nav__dropdown--products" data-nav-dropdown>
+      <summary class="nav__link nav__link--dropdown${active}">${label}</summary>
+      <div class="nav__panel nav__panel--products">
+        <a href="${overviewHref}" class="nav__product-overview${currentPage === 'products' ? ' is-active' : ''}">${t('nav.productsCatalog', 'همه محصولات')}</a>
+        ${groups}
+      </div>
+    </details>`;
+  }
+
+  function renderMobileProductNav(label) {
+    const cfg = getProductNavConfig();
+    const overviewHref = pagePath(R[cfg.overviewRoute] || cfg.overviewRoute);
+    const active = isProductsActive() ? ' active' : '';
+    const groups = (cfg.groups || []).map(group => `
+      <div class="mobile-drawer__product-group">
+        <p class="mobile-drawer__product-heading">${t(group.labelKey, group.id)}</p>
+        ${(group.items || []).map(item => {
+          const href = pagePath(R[item.route] || item.route);
+          const itemActive = currentPage === item.page ? ' active' : '';
+          const desc = item.descKey ? t(item.descKey, '') : '';
+          return `<a href="${href}" class="mobile-drawer__product-link${itemActive}">
+            <span>${item.label}</span>
+            ${desc ? `<small>${desc}</small>` : ''}
+          </a>`;
+        }).join('')}
+      </div>
+    `).join('');
+    return `<details class="mobile-drawer__acc"${isProductsActive() ? ' open' : ''}>
+      <summary class="mobile-drawer__link${active}">
+        <span class="mobile-drawer__icon">${ic('box', { size: 22 })}</span>
+        <span>${label}</span>
+      </summary>
+      <div class="mobile-drawer__sub">
+        <a href="${overviewHref}" class="mobile-drawer__product-link${currentPage === 'products' ? ' active' : ''}">${t('nav.productsCatalog', 'همه محصولات')}</a>
+        ${groups}
+      </div>
+    </details>`;
+  }
+
+  function bindNavDropdowns(root) {
+    if (!root) return;
+    root.querySelectorAll('[data-nav-dropdown]').forEach(dropdown => {
+      dropdown.addEventListener('toggle', () => {
+        if (!dropdown.open) return;
+        root.querySelectorAll('[data-nav-dropdown][open]').forEach(other => {
+          if (other !== dropdown) other.open = false;
+        });
+        root.querySelectorAll('[data-lang-dropdown][open]').forEach(other => {
+          other.open = false;
+        });
+      });
+    });
+  }
+
 
 
   function isActive(page) {
     if (page === 'blog' && (currentPage === 'blog' || currentPage === 'article')) return ' active';
+    if (page === 'services' && SUPPLY_PAGES.has(currentPage)) return ' active';
     return currentPage === page ? ' active' : '';
   }
 
@@ -282,19 +393,23 @@
             <span>${ic('clock', { size: 16 })} ${C.contact.workingHours}</span>
           </div>
           <div class="top-bar__social">
-            <a href="${C.contact.instagram}" target="_blank" rel="noopener noreferrer me">Instagram</a>
-            <a href="${C.contact.linkedin}" target="_blank" rel="noopener noreferrer me">LinkedIn</a>
+            <a href="${C.contact.instagram}" target="_blank" rel="noopener noreferrer me" aria-label="${t('footer.instagram', 'Instagram')}">${t('footer.instagram', 'Instagram')}</a>
+            <a href="${C.contact.linkedin}" target="_blank" rel="noopener noreferrer me" aria-label="${t('footer.linkedin', 'LinkedIn')}">${t('footer.linkedin', 'LinkedIn')}</a>
           </div>
         </div>`;
     }
 
     if (header) {
       const navLinks = navItems.map(n =>
-        `<a href="${pagePath(n.route)}" class="nav__link${isActive(n.page)}">${n.label}</a>`
+        n.dropdown === 'products'
+          ? renderProductNavDropdown(n.label)
+          : `<a href="${pagePath(n.route)}" class="nav__link${isActive(n.page)}">${n.label}</a>`
       ).join('');
 
       const drawerLinks = navItems.map(n =>
-        `<a href="${pagePath(n.route)}" class="mobile-drawer__link${isActive(n.page)}">
+        n.dropdown === 'products'
+          ? renderMobileProductNav(n.label)
+          : `<a href="${pagePath(n.route)}" class="mobile-drawer__link${isActive(n.page)}">
           <span class="mobile-drawer__icon">${ic(n.icon, { size: 22 })}</span>
           <span>${n.label}</span>
         </a>`
@@ -350,8 +465,8 @@
               ? `<a href="tel:${C.contact.phone}" class="mobile-drawer__contact-item">${ic('phone', { size: 16 })} ${C.contact.phoneDisplay || C.contact.phone}</a>`
               : `<span class="mobile-drawer__contact-item">${ic('phone', { size: 16 })} ${C.contact.phoneDisplay}</span>`}
             <div class="mobile-drawer__social">
-              <a href="${C.contact.instagram}" target="_blank" rel="noopener noreferrer me">Instagram</a>
-              <a href="${C.contact.linkedin}" target="_blank" rel="noopener noreferrer me">LinkedIn</a>
+              <a href="${C.contact.instagram}" target="_blank" rel="noopener noreferrer me" aria-label="${t('footer.instagram', 'Instagram')}">${t('footer.instagram', 'Instagram')}</a>
+              <a href="${C.contact.linkedin}" target="_blank" rel="noopener noreferrer me" aria-label="${t('footer.linkedin', 'LinkedIn')}">${t('footer.linkedin', 'LinkedIn')}</a>
             </div>
           </div>
           <a href="${wa}" class="btn btn--yellow mobile-drawer__cta"
@@ -466,7 +581,7 @@
               <summary>${t('footer.connectShort')}</summary>
               <ul>
                 <li><a href="mailto:${C.contact.email}">${C.contact.email}</a></li>
-                <li><a href="mailto:${C.contact.emailAlt}">${C.contact.emailAlt}</a></li>
+                ${C.contact.emailAlt ? `<li><a href="mailto:${C.contact.emailAlt}">${C.contact.emailAlt}</a></li>` : ''}
                 ${channels.length
                   ? channels.map(ch => `
                 <li><a href="https://wa.me/${ch.whatsapp}?text=${waMsg}" target="_blank" rel="noopener noreferrer">
@@ -516,5 +631,6 @@
 
     bindLangSwitcher(header);
     bindLangSwitcher(footer);
+    bindNavDropdowns(header);
   };
 })();

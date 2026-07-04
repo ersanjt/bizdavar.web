@@ -13,7 +13,7 @@ const PAGE_MAP = {
   'pages/services.html': { key: 'services', canonical: 'https://bizdavar.com/pages/services.html', ogImage: 'assets/images/content/hero-home.svg' },
   'pages/portfolio.html': { key: 'portfolio', canonical: 'https://bizdavar.com/pages/portfolio.html', ogImage: 'assets/images/content/about-hero.svg' },
   'pages/blog.html': { key: 'blog', canonical: 'https://bizdavar.com/pages/blog.html', type: 'website' },
-  'pages/fast.html': { key: 'fast', canonical: 'https://fast.bizdavar.com/', ogImage: 'assets/images/content/hero-home.svg' },
+  'pages/fast.html': { key: 'fast', canonical: 'https://bizdavar.com/pages/fast', ogImage: 'assets/images/content/hero-home.svg' },
   'pages/privacy.html': { key: 'privacy', canonical: 'https://bizdavar.com/pages/privacy.html', robots: 'index, follow' },
   'pages/vega.html': { key: 'vega', canonical: 'https://bizdavar.com/pages/vega.html', ogImage: 'assets/images/vega/slides/value-process-safety.jpg' },
   'pages/prosense.html': { key: 'prosense', canonical: 'https://bizdavar.com/pages/prosense.html', ogImage: 'assets/images/prosense/slides/pq-sil.jpg' },

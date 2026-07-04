@@ -15,5 +15,5 @@ body[data-page="gamak"] .gamak-hero {
 body[data-page="gamak"] .gamak-hero::before {
   background:
     linear-gradient(105deg, rgba(244, 249, 250, 0.97) 42%, rgba(244, 249, 250, 0.55) 68%, rgba(244, 249, 250, 0.2) 100%),
-    url('../images/gamak/hero/gamak-motor.webp') center right / cover no-repeat;
+    url('../images/gamak/category-three-phase.webp') center right / cover no-repeat;
 }

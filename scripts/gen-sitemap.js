@@ -42,8 +42,7 @@ const PAGES = [
   { path: '/pages/articles/social-media-management', changefreq: 'yearly', priority: 0.7, lastmod: '2025-03-05' },
   { path: '/pages/articles/fast-studio', changefreq: 'yearly', priority: 0.7, lastmod: '2025-05-15' },
   { path: '/pages/articles/industrial-sensors', changefreq: 'yearly', priority: 0.7, lastmod: '2025-03-20' },
-  { path: '/pages/privacy', changefreq: 'yearly', priority: 0.3, lastmod: SITE_UPDATE },
-  { path: 'https://fast.bizdavar.com/', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE, hreflang: false }
+  { path: '/pages/privacy', changefreq: 'yearly', priority: 0.3, lastmod: SITE_UPDATE }
 ];
 
 function locUrl(entry) {

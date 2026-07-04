@@ -63,9 +63,9 @@
 
 .footer__logo-img {
   display: block;
-  height: 40px;
+  height: 44px;
   width: auto;
-  max-width: 168px;
+  max-width: 180px;
   object-fit: contain;
   object-position: center center;
   background: transparent;
@@ -229,8 +229,26 @@
 
 .footer__chip-icon {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
-  opacity: 0.9;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(255, 222, 0, 0.12);
+  color: var(--yellow);
+}
+
+.footer__chip-icon .bd-icon {
+  color: var(--yellow);
+}
+
+.footer__chip--wa .footer__chip-icon {
+  background: rgba(37, 211, 102, 0.15);
+}
+
+.footer__chip--wa .footer__chip-icon .bd-icon {
+  color: var(--whatsapp);
 }
 
 .footer__chip-body {

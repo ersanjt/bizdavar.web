@@ -229,11 +229,23 @@
   background: linear-gradient(90deg, #3949ab, #7986cb);
 }
 
+.portfolio-card--pro .portfolio-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px 14px;
+}
+
 .portfolio-card--pro .portfolio-card__link {
   font-size: var(--text-sm);
   font-weight: 600;
   color: var(--red);
   white-space: nowrap;
+}
+
+.portfolio-card--pro .portfolio-card__link--app {
+  color: var(--navy);
 }
 
 .portfolio-card--pro .portfolio-card__link:hover {

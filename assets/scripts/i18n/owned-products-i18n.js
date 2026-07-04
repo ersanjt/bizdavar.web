@@ -10,23 +10,42 @@
         hero: {
           tag: 'مهندسی و تولید',
           title: 'محصولات بیزدوار',
-          desc: 'دستگاه‌ها و خطوط تولیدی که توسط تیم بیزدوار طراحی، مهندسی و ساخته شده‌اند — از IoT و بهداشت تا بسته‌بندی و تجهیزات پزشکی.'
+          desc: 'دستگاه‌ها، خطوط تولید و نرم‌افزار SaaS که توسط تیم بیزدوار طراحی، مهندسی و ساخته شده‌اند — از WhatsApp CRM و IoT تا بسته‌بندی و تجهیزات پزشکی.'
         },
         intro: {
           title: 'ما چه می‌سازیم؟',
-          body: 'بیزدوار گروپ علاوه بر خدمات دیجیتال و تامین صنعتی، <strong>محصولات سخت‌افزاری اختصاصی</strong> نیز تولید می‌کند. هر محصول با مالکیت فکری تیم بیزدوار، در ایران (تبریز) مهندسی شده و برای بازار داخلی و بین‌المللی قابل عرضه است.',
+          body: 'بیزدوار گروپ علاوه بر خدمات دیجیتال و تامین صنعتی، <strong>محصولات سخت‌افزاری و نرم‌افزار SaaS اختصاصی</strong> نیز تولید می‌کند. هر محصول با مالکیت فکری تیم بیزدوار، در ایران (تبریز) و استانبول مهندسی شده و برای بازار داخلی و بین‌المللی قابل عرضه است.',
           ctaContact: 'استعلام و سفارش',
           ctaPortfolio: 'نمونه‌کارهای دیجیتال'
         },
         filterAll: 'همه',
+        empty: 'محصولی برای نمایش نیست.',
+        catalog: {
+          eyebrow: 'کاتالوگ محصولات',
+          title: 'دستگاه‌های مهندسی‌شده بیزدوار',
+          desc: '۱۱ محصول و خط تولید — از BizSwap و FXGuard تا BizTab و خطوط PPE. فیلتر بر اساس دسته یا مستقیم استعلام بگیرید.'
+        },
         statusLive: 'صفحه محصول',
         statusCatalog: 'استعلام',
         categories: {
+          software: { label: 'نرم‌افزار و SaaS', desc: 'CRM واتساپ و پلتفرم‌های B2B' },
           'iot-health': { label: 'IoT و بهداشت', desc: 'دماسنج، ضدعفونی‌کننده و تجهیزات تماس‌LESS' },
           packaging: { label: 'بسته‌بندی و سیل', desc: 'دستگاه‌های کش‌زن و خطوط بسته‌بندی' },
           medical: { label: 'پزشکی و PPE', desc: 'خطوط تولید ماسک و پد حرارتی' }
         },
         items: {
+          bizswap: {
+            name: 'BizSwap',
+            title: 'پیش‌فروش و سواپ توکن',
+            desc: 'ماژول Web3 — اتصال کیف پول، سواپ stablecoin به توکن، پیش‌فروش on-chain، اسلیپیج و پنل ادمین برای BEP-20 و RWA.',
+            tags: ['DeFi', 'Web3', 'Token Swap']
+          },
+          fxguard: {
+            name: 'FXGuard',
+            title: 'WhatsApp CRM',
+            desc: 'یک شماره، یک پنل، کل تیم — CRM واتساپ با پیام انبوه، پاسخ خودکار ۲۴/۷ و اینباکس تیمی برای ترکیه، امارات، اروپا و ایران.',
+            tags: ['WhatsApp CRM', 'SaaS', 'B2B']
+          },
           biztab: {
             name: 'BizTab',
             title: 'دماسنج دیواری غیرتماسی',
@@ -102,7 +121,7 @@
         hero: {
           tag: 'Mühendislik ve üretim',
           title: 'Bizdavar ürünleri',
-          desc: 'Bizdavar ekibi tarafından tasarlanıp üretilen cihazlar ve hatlar — IoT ve hijyenden ambalaja ve medikal ekipmana.'
+          desc: 'Bizdavar ekibi tarafından tasarlanan cihazlar, hatlar ve SaaS — WhatsApp CRM ve IoT\'tan ambalaja ve medikal ekipmana.'
         },
         intro: {
           title: 'Ne üretiyoruz?',
@@ -111,14 +130,23 @@
           ctaPortfolio: 'Dijital portfolyo'
         },
         filterAll: 'Tümü',
+        empty: 'Gösterilecek ürün yok.',
+        catalog: {
+          eyebrow: 'Ürün kataloğu',
+          title: 'Bizdavar mühendislik ürünleri',
+          desc: '11 ürün ve üretim hattı — BizSwap ve FXGuard\'dan BizTab\'a ve PPE hatlarına. Kategoriye göre filtreleyin veya teklif isteyin.'
+        },
         statusLive: 'Ürün sayfası',
         statusCatalog: 'Teklif iste',
         categories: {
+          software: { label: 'Yazılım ve SaaS', desc: 'WhatsApp CRM ve B2B platformlar' },
           'iot-health': { label: 'IoT ve hijyen', desc: 'Termometre, dezenfektan ve temasız ekipman' },
           packaging: { label: 'Ambalaj ve vakum', desc: 'Vakum makineleri ve ambalaj hatları' },
           medical: { label: 'Medikal ve PPE', desc: 'Maske ve ısı pedi üretim hatları' }
         },
         items: {
+          bizswap: { name: 'BizSwap', title: 'Token ön satış & swap', desc: 'Web3 modülü — cüzdan bağlantısı, stablecoin-token swap, on-chain ön satış, slippage ve admin paneli (BEP-20 / RWA).', tags: ['DeFi', 'Web3', 'Token Swap'] },
+          fxguard: { name: 'FXGuard', title: 'WhatsApp CRM', desc: 'Tek numara, tek panel, tüm ekip — toplu mesaj, 7/24 otomatik yanıt ve ekip gelen kutusu. Türkiye, BAE, Avrupa ve İran.', tags: ['WhatsApp CRM', 'SaaS', 'B2B'] },
           biztab: { name: 'BizTab', title: 'Temasız duvar termometresi', desc: 'Tebriz\'deki ilk temasız duvar termometresi — 0,3°C altı hata, üniversite onayı.', tags: ['IoT', 'Temasız', 'Tebriz'] },
           bizclean: { name: 'BizClean', title: 'Hijyen ve dezenfeksiyon', desc: 'Otomatik el dezenfektan (BizSan V5) — Bizdavar üretimi; RINOTEX 1400 «Imen Sahand Padideh» park birimi; ISNA/IRIB basını.', tags: ['Hijyen', 'Otomatik', 'COVID'] },
           biztouch: { name: 'BizTouch', title: 'Temasız çözümler', desc: 'Giriş, hijyen ve kamusal alanlar için temasız cihazlar — Bizdavar tasarımı.', tags: ['Temasız', 'IoT', 'Giriş'] },
@@ -149,7 +177,7 @@
         hero: {
           tag: 'Engineering & manufacturing',
           title: 'Bizdavar products',
-          desc: 'Devices and production lines designed and built by the Bizdavar team — from IoT and hygiene to packaging and medical equipment.'
+          desc: 'Devices, production lines and SaaS designed and built by the Bizdavar team — from WhatsApp CRM and IoT to packaging and medical equipment.'
         },
         intro: {
           title: 'What we build',
@@ -158,14 +186,23 @@
           ctaPortfolio: 'Digital portfolio'
         },
         filterAll: 'All',
+        empty: 'No products to display.',
+        catalog: {
+          eyebrow: 'Product catalog',
+          title: 'Engineered Bizdavar devices',
+          desc: 'Eleven products and production lines — from BizSwap and FXGuard to BizTab and PPE lines. Filter by category or request a quote.'
+        },
         statusLive: 'Product page',
         statusCatalog: 'Request quote',
         categories: {
+          software: { label: 'Software & SaaS', desc: 'WhatsApp CRM and B2B platforms' },
           'iot-health': { label: 'IoT & hygiene', desc: 'Thermometers, sanitizers and contactless devices' },
           packaging: { label: 'Packaging & sealing', desc: 'Vacuum sealers and packaging lines' },
           medical: { label: 'Medical & PPE', desc: 'Mask and heat pad production lines' }
         },
         items: {
+          bizswap: { name: 'BizSwap', title: 'Token presale & swap', desc: 'Web3 module — wallet connect, stablecoin-to-token swap, on-chain presale, slippage UI and admin panel for BEP-20 / RWA projects.', tags: ['DeFi', 'Web3', 'Token Swap'] },
+          fxguard: { name: 'FXGuard', title: 'WhatsApp CRM', desc: 'One number, one panel, whole team — bulk messaging, 24/7 auto-reply and team inbox for Turkey, UAE, Europe and Iran.', tags: ['WhatsApp CRM', 'SaaS', 'B2B'] },
           biztab: { name: 'BizTab', title: 'Non-contact wall thermometer', desc: 'First non-contact wall thermometer in Tabriz — under 0.3°C error, university validated.', tags: ['IoT', 'Contactless', 'Tabriz'] },
           bizclean: { name: 'BizClean', title: 'Hygiene & disinfection line', desc: 'Automatic hand sanitizer (BizSan V5) — Bizdavar production; RINOTEX 1400 via «Imen Sahand Padideh» park unit; ISNA & IRIB press.', tags: ['Hygiene', 'Automatic', 'COVID'] },
           biztouch: { name: 'BizTouch', title: 'Contactless solutions', desc: 'Contactless devices for entrances, hygiene and public spaces — Bizdavar engineered.', tags: ['Contactless', 'IoT', 'Entrance'] },

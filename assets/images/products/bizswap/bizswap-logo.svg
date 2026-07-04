@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" role="img" aria-label="BizSwap">
+  <rect width="120" height="40" rx="8" fill="#0f172a"/>
+  <text x="12" y="26" font-family="system-ui,sans-serif" font-size="15" font-weight="800" fill="#f59e0b">Biz</text>
+  <text x="44" y="26" font-family="system-ui,sans-serif" font-size="15" font-weight="600" fill="#f8fafc">Swap</text>
+</svg>

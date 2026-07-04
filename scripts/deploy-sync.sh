@@ -99,10 +99,22 @@ else
   echo "WARN: company-intel.js on origin missing exhibitions — check assets/scripts sync"
 fi
 
-if curl -sfL -H "Host: bizdavar.com" "http://127.0.0.1/assets/scripts/components/grids.js" 2>/dev/null | grep -q 'intelExhibitions'; then
-  echo "OK: grids.js includes exhibition renderer"
+if curl -sfL -H "Host: bizdavar.com" "http://127.0.0.1/assets/scripts/components/grids.js" 2>/dev/null | grep -q 'intelVerifiedSources'; then
+  echo "OK: grids.js includes verified sources renderer"
 else
-  echo "WARN: grids.js on origin missing intelExhibitions — check assets/scripts sync"
+  echo "WARN: grids.js on origin missing intelVerifiedSources — check assets/scripts sync"
+fi
+
+if curl -sfL -H "Host: bizdavar.com" "http://127.0.0.1/assets/scripts/components/grids.js" 2>/dev/null | grep -q 'initOwnedProductsPage'; then
+  echo "OK: grids.js includes products catalog renderer"
+else
+  echo "WARN: grids.js on origin missing initOwnedProductsPage — check assets/scripts sync"
+fi
+
+if curl -sfL -H "Host: bizdavar.com" "http://127.0.0.1/assets/scripts/config/owned-products.js" 2>/dev/null | grep -q 'biztab'; then
+  echo "OK: owned-products.js includes product catalog"
+else
+  echo "WARN: owned-products.js missing on origin — check assets/scripts sync"
 fi
 
 echo "[$(date -Iseconds)] Deploy sync complete → $WEB"

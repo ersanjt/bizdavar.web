@@ -425,6 +425,14 @@ body {
   color: var(--text-muted);
 }
 
+.owned-products-empty {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-muted);
+}
+
 .product-filter {
   display: flex;
   flex-wrap: wrap;
@@ -571,6 +579,67 @@ body {
   .achievement-card {
     grid-template-columns: 1fr;
   }
+}
+
+/* ─── Verified sources (about page) ─── */
+.verified-sources-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+}
+
+.verified-sources-group {
+  padding: 1.25rem 1.35rem;
+  background: var(--white);
+  border: 1px solid rgba(29, 29, 27, 0.08);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.verified-sources-group__title {
+  margin: 0 0 1rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 2px solid rgba(227, 25, 31, 0.15);
+  font-size: var(--text-lg);
+}
+
+.verified-sources-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.verified-sources-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(29, 29, 27, 0.06);
+}
+
+.verified-sources-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.verified-sources-item__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.verified-sources-item__date {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--brand-red);
+  font-size: var(--text-xs);
+  font-weight: 700;
+}
+
+.verified-sources-item__note {
+  margin: 0.35rem 0 0;
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  line-height: 1.6;
 }
 
 .industrial-card--red .industrial-card__badge {

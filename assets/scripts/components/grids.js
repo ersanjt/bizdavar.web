@@ -95,13 +95,24 @@
           <p class="portfolio-card__domain" dir="ltr">${p.domain}</p>
           ${p.note ? `<p class="portfolio-card__note">${p.note}</p>` : ''}
 
+          ${p.appStoreUrl ? `
+          <span class="portfolio-card__links">
+            <a href="${url}" class="portfolio-card__link"
+               ${external ? 'target="_blank" rel="noopener noreferrer"' : ''}>
+              ${external ? t('common.viewSite', 'مشاهده وبسایت') : t('common.viewPage', 'مشاهده صفحه')}${linkArrow()}
+            </a>
+            <a href="${p.appStoreUrl}" class="portfolio-card__link portfolio-card__link--app"
+               target="_blank" rel="noopener noreferrer">
+              ${t('common.viewAppStore', 'App Store')}${linkArrow()}
+            </a>
+          </span>` : `
           <a href="${url}" class="portfolio-card__link"
 
              ${external ? 'target="_blank" rel="noopener noreferrer"' : ''}>
 
             ${external ? t('common.viewSite', 'مشاهده وبسایت') : t('common.viewPage', 'مشاهده صفحه')}${linkArrow()}
 
-          </a>
+          </a>`}
 
         </article>`;
 
@@ -503,6 +514,27 @@
         </div>`;
     }
 
+    const srcEl = document.getElementById('intelVerifiedSources');
+    if (srcEl && I.verifiedSources && I.verifiedSources.length) {
+      srcEl.innerHTML = `
+        <div class="verified-sources-grid">
+          ${I.verifiedSources.map(g => `
+            <div class="verified-sources-group">
+              <h3 class="verified-sources-group__title">${g.group}</h3>
+              <ul class="verified-sources-list">
+                ${g.items.map(item => `
+                  <li class="verified-sources-item">
+                    <a href="${item.url}" target="_blank" rel="noopener noreferrer me" class="verified-sources-item__link">${item.label}${linkArrow()}</a>
+                    ${item.date ? `<span class="verified-sources-item__date">${item.date}</span>` : ''}
+                    ${item.note ? `<p class="verified-sources-item__note">${item.note}</p>` : ''}
+                  </li>
+                `).join('')}
+              </ul>
+            </div>
+          `).join('')}
+        </div>`;
+    }
+
     const proofEl = document.getElementById('intelSocialProof');
     if (proofEl) {
       proofEl.innerHTML = `
@@ -718,7 +750,9 @@
     if (opts.featured) items = items.filter(p => p.featured);
     if (opts.category && opts.category !== 'all') items = items.filter(p => p.category === opts.category);
     if (opts.limit) items = items.slice(0, opts.limit);
-    el.innerHTML = items.map(p => ownedProductCardHtml(p)).join('');
+    el.innerHTML = items.length
+      ? items.map(p => ownedProductCardHtml(p)).join('')
+      : `<p class="owned-products-empty">${t('productsPage.empty', 'محصولی برای نمایش نیست.')}</p>`;
     if (typeof window.refreshBizIcons === 'function') window.refreshBizIcons(el);
   };
 
@@ -748,7 +782,7 @@
     if (!gridEl) return;
 
     const I18n = window.BIZDAVAR_I18N;
-    const categories = I18n ? I18n.getOwnedProductCategories() : [];
+    const categories = I18n ? I18n.getOwnedProductCategories() : (window.BIZDAVAR_OWNED_PRODUCTS?.categories || []);
     let active = 'all';
 
     function renderGrid() {
@@ -756,7 +790,7 @@
     }
 
     if (filterEl) {
-      const allLabel = t('productsPage.filterAll', 'All');
+      const allLabel = t('productsPage.filterAll', 'همه');
       filterEl.innerHTML = [
         `<button type="button" class="product-filter__btn is-active" data-cat="all">${allLabel}</button>`,
         ...categories.map(c =>
@@ -764,13 +798,16 @@
         )
       ].join('');
 
-      filterEl.addEventListener('click', (e) => {
-        const btn = e.target.closest('[data-cat]');
-        if (!btn) return;
-        active = btn.getAttribute('data-cat');
-        filterEl.querySelectorAll('.product-filter__btn').forEach(b => b.classList.toggle('is-active', b === btn));
-        renderGrid();
-      });
+      if (!filterEl.dataset.bound) {
+        filterEl.dataset.bound = '1';
+        filterEl.addEventListener('click', (e) => {
+          const btn = e.target.closest('[data-cat]');
+          if (!btn) return;
+          active = btn.getAttribute('data-cat');
+          filterEl.querySelectorAll('.product-filter__btn').forEach(b => b.classList.toggle('is-active', b === btn));
+          renderGrid();
+        });
+      }
     }
 
     renderGrid();

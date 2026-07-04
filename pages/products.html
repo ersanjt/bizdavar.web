@@ -74,8 +74,49 @@
 
     <section class="section section--gray" id="catalog">
       <div class="container">
-        <div class="product-filter" id="productFilters" role="tablist" aria-label="دسته محصولات"></div>
-        <div class="owned-products-grid" id="ownedProductsGrid"></div>
+        <div class="section__header section__header--pro">
+          <span class="section__eyebrow" data-i18n="productsPage.catalog.eyebrow">کاتالوگ محصولات</span>
+          <h2 class="section__title" data-i18n="productsPage.catalog.title">دستگاه‌های مهندسی‌شده بیزدوار</h2>
+          <p class="section__desc" data-i18n="productsPage.catalog.desc">۹ محصول و خط تولید — از BizTab و BizClean تا دستگاه‌های کش‌زن و خطوط PPE. فیلتر بر اساس دسته یا مستقیم استعلام بگیرید.</p>
+        </div>
+        <div class="product-filter" id="productFilters" role="tablist" aria-label="دسته محصولات">
+          <button type="button" class="product-filter__btn is-active" data-cat="all">همه</button>
+          <button type="button" class="product-filter__btn" data-cat="iot-health">IoT و بهداشت</button>
+          <button type="button" class="product-filter__btn" data-cat="packaging">بسته‌بندی و سیل</button>
+          <button type="button" class="product-filter__btn" data-cat="medical">پزشکی و PPE</button>
+        </div>
+        <div class="owned-products-grid" id="ownedProductsGrid">
+          <article class="owned-product-card" data-category="iot-health">
+            <a href="/pages/biztab" class="owned-product-card__media">
+              <img src="/assets/images/products/biztab/biztab-hero.jpg" alt="BizTab" loading="lazy" width="480" height="300">
+            </a>
+            <div class="owned-product-card__body">
+              <span class="owned-product-card__cat">IoT و بهداشت</span>
+              <h3><a href="/pages/biztab">BizTab</a></h3>
+              <p class="owned-product-card__subtitle">دماسنج دیواری غیرتماسی</p>
+              <p class="owned-product-card__desc">اولین دماسنج دیواری غیرتماسی تبریز — دقت کمتر از ۰.۳°C.</p>
+              <footer class="owned-product-card__footer">
+                <span class="owned-product-card__status">صفحه محصول</span>
+                <a href="/pages/biztab" class="service-card__link">بیشتر</a>
+              </footer>
+            </div>
+          </article>
+          <article class="owned-product-card" data-category="iot-health">
+            <a href="/pages/bizsanitizer-v5" class="owned-product-card__media">
+              <img src="/assets/images/products/bizsanitizer/bizsanitizer-hero.svg" alt="BizClean" loading="lazy" width="480" height="300">
+            </a>
+            <div class="owned-product-card__body">
+              <span class="owned-product-card__cat">IoT و بهداشت</span>
+              <h3><a href="/pages/bizsanitizer-v5">BizClean</a></h3>
+              <p class="owned-product-card__subtitle">خط بهداشت و ضدعفونی</p>
+              <p class="owned-product-card__desc">دستگاه ضدعفونی دست BizSan V5 — تولید تیم بیزدوار.</p>
+              <footer class="owned-product-card__footer">
+                <span class="owned-product-card__status">صفحه محصول</span>
+                <a href="/pages/bizsanitizer-v5" class="service-card__link">بیشتر</a>
+              </footer>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -127,10 +168,15 @@
       if (typeof chrome === 'function') chrome();
       setupWhatsappLinks();
       injectPageSeo('products', { canonical: 'https://bizdavar.com/pages/products' });
-      initOwnedProductsPage();
+      if (typeof initOwnedProductsPage === 'function') initOwnedProductsPage();
       renderGeoStrip('geoStrip');
     }
     bizdavarPageInit(bootProductsPage);
+    if (window.bizdavarReady) {
+      window.bizdavarReady.then(function () {
+        if (typeof initOwnedProductsPage === 'function') initOwnedProductsPage();
+      });
+    }
   </script>
 </body>
 </html>

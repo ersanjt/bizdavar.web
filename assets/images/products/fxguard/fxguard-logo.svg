@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" role="img" aria-label="FXGuard">
+  <rect width="120" height="40" rx="8" fill="#0f172a"/>
+  <text x="14" y="27" font-family="system-ui,sans-serif" font-size="22" font-weight="800" fill="#22c55e">fx</text>
+  <text x="44" y="27" font-family="system-ui,sans-serif" font-size="16" font-weight="600" fill="#f8fafc">guard</text>
+</svg>

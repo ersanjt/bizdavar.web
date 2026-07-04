@@ -162,6 +162,26 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/pages/biztejarat?lang=en"/>
   </url>
   <url>
+    <loc>https://bizdavar.com/pages/bizswap</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/bizswap?lang=fa"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/pages/bizswap?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/pages/bizswap?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/pages/bizswap?lang=en"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/pages/fxguard</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/fxguard?lang=fa"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/pages/fxguard?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/pages/fxguard?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/pages/fxguard?lang=en"/>
+  </url>
+  <url>
     <loc>https://bizdavar.com/pages/biztab</loc>
     <lastmod>2020-03-16</lastmod>
     <changefreq>monthly</changefreq>
@@ -250,11 +270,5 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/pages/privacy?lang=tr"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/pages/privacy?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/pages/privacy?lang=en"/>
-  </url>
-  <url>
-    <loc>https://fast.bizdavar.com/</loc>
-    <lastmod>2026-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
   </url>
 </urlset>

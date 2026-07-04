@@ -38,7 +38,7 @@ window.BIZDAVAR_INTEL = {
         badge: 'IR'
       }
     ],
-    domains: ['bizdavar.com', 'bizdavar.ir', 'fast.bizdavar.com'],
+    domains: ['bizdavar.com'],
     languages: ['فارسی', 'انگلیسی', 'ترکی'],
     directories: [
       {
@@ -342,6 +342,9 @@ window.BIZDAVAR_INTEL = {
       sourceUrl: 'https://nasrnews.ir/print/16727/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D9%88-%D8%B3%D8%A7%D8%AE%D8%AA-%D8%A7%D9%88%D9%84%DB%8C%D9%86-%D8%AF%D9%85%D8%A7%D8%B3%D9%86%D8%AC-%D8%AF%DB%8C%D9%88%D8%A7%D8%B1%DB%8C-%D8%BA%DB%8C%D8%B1%D8%AA%D9%85%D8%A7%D8%B3%DB%8C-%D8%AF%D8%B1-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2',
       image: 'assets/images/products/biztab/biztab-hero.jpg',
       slug: 'pages/biztab.html',
+      pressLinks: [
+        { label: 'نصرنیوز', url: 'https://nasrnews.ir/print/16727/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D9%88-%D8%B3%D8%A7%D8%AE%D8%AA-%D8%A7%D9%88%D9%84%DB%8C%D9%86-%D8%AF%D9%85%D8%A7%D8%B3%D9%86%D8%AC-%D8%AF%DB%8C%D9%88%D8%A7%D8%B1%DB%8C-%D8%BA%DB%8C%D8%B1%D8%AA%D9%85%D8%A7%D8%B3%DB%8C-%D8%AF%D8%B1-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2' }
+      ],
       tags: ['IoT', 'تبریز', 'محصول اختصاصی']
     },
     {
@@ -367,6 +370,84 @@ window.BIZDAVAR_INTEL = {
       image: 'assets/images/products/biztab/biztab-press.jpg',
       slug: 'pages/bizsanitizer-v5.html',
       tags: ['بهداشت', 'IoT', 'کرونا', 'دانشگاه تبریز', 'RINOTEX', 'ایمن سهند پدیده', 'دیجی‌کالا']
+    }
+  ],
+
+  /** منابع خارجی قابل راستی‌آزمایی — لینک‌های رسمی کاربر/رسانه */
+  verifiedSources: [
+    {
+      group: 'رسانه و خبر',
+      items: [
+        {
+          label: 'ISNA — دستاوردهای دانشگاه تبریز در مقابله با کرونا',
+          url: 'https://www.isna.ir/news/99022216019/%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D9%BE%DA%98%D9%88%D9%87%D8%B4%DB%8C-%D9%88-%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%D9%87-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7',
+          date: 'اردیبهشت ۱۳۹۹',
+          note: 'BizSan V5 · تجهیزات بهداشتی تیم بیزدوار'
+        },
+        {
+          label: 'SNN — نمایشگاه مرکز رشد دانشگاه تبریز',
+          url: 'https://snn.ir/fa/news/847064/%D9%86%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%A7%D9%87-%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%E2%80%8C%D9%87%D8%A7%DB%8C-%D9%85%D8%B1%DA%A9%D8%B2-%D8%B1%D8%B4%D8%AF-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%D8%B4%DB%8C%D9%88%D8%B9-%D9%88%DB%8C%D8%B1%D9%88%D8%B3-%DA%A9%D8%B1%D9%88%D9%86%D8%A7-%D8%A7%D9%81%D8%AA%D8%AA%D8%A7%D8%AD-%D8%B4%D8%AF',
+          date: 'اردیبهشت ۱۳۹۹',
+          note: '۲۱ محصول دانش‌بنیان — دستگاه‌های ضدعفونی'
+        },
+        {
+          label: 'صدا و سیما (IRIB) — گزارش تصویری نمایشگاه',
+          url: 'https://www.iribnews.ir/fa/news/2714063/%D9%86%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%A7%D9%87-%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7',
+          date: 'اردیبهشت ۱۳۹۹',
+          note: 'ویدیو محلی در صفحه BizSan'
+        },
+        {
+          label: 'نصرنیوز — طراحی اولین دماسنج دیواری غیرتماسی تبریز (BizTab)',
+          url: 'https://nasrnews.ir/print/16727/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D9%88-%D8%B3%D8%A7%D8%AE%D8%AA-%D8%A7%D9%88%D9%84%DB%8C%D9%86-%D8%AF%D9%85%D8%A7%D8%B3%D9%86%D8%AC-%D8%AF%DB%8C%D9%88%D8%A7%D8%B1%DB%8C-%D8%BA%DB%8C%D8%B1%D8%AA%D9%85%D8%A7%D8%B3%DB%8C-%D8%AF%D8%B1-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2',
+          date: 'اسفند ۱۳۹۸',
+          note: 'توسعه توسط تیم بیزدوار'
+        }
+      ]
+    },
+    {
+      group: 'نمایشگاه و پارک علمی',
+      items: [
+        {
+          label: 'RINOTEX — سایت رسمی نمایشگاه',
+          url: 'https://rinotex.ir/',
+          date: 'آبان ۱۴۰۰',
+          note: 'نهمین نمایشگاه نوآوری و فناوری ربع رشیدی'
+        },
+        {
+          label: 'RINOTEX — تاریخچه و معرفی نمایشگاه ۱۴۰۰',
+          url: 'https://rinotex.ir/Home/Introduction',
+          date: '۱۴۰۰',
+          note: 'غرفه ICT · واحدهای پارک علمی'
+        },
+        {
+          label: 'پارک علم و فناوری دانشگاه تبریز',
+          url: 'https://techpark.tabrizu.ac.ir/',
+          note: 'واحد فناور «ایمن سهند پدیده»'
+        }
+      ]
+    },
+    {
+      group: 'فروش و ویدیو',
+      items: [
+        {
+          label: 'دیجی‌کالا — BizSan V5 (dkp-3730222)',
+          url: 'https://www.digikala.com/product/dkp-3730222/%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D8%B6%D8%AF%D8%B9%D9%81%D9%88%D9%86%DB%8C-%D8%AF%D8%B3%D8%AA-%D8%A8%DB%8C%D8%B2%D8%AF%D9%88%D8%A7%D8%B1-%D9%85%D8%AF%D9%84-v5/',
+          note: 'محصول مهندسی‌شده بیزدوار'
+        },
+        {
+          label: 'YouTube — معرفی BizSan V5',
+          url: 'https://www.youtube.com/shorts/GcOtue1Nmlo',
+          note: 'ویدیو کوتاه محصول'
+        }
+      ]
+    },
+    {
+      group: 'پروفایل سازمانی',
+      items: [
+        { label: 'LinkedIn — ارسان جاهد تبریزی', url: 'https://www.linkedin.com/in/ersanjt' },
+        { label: 'Spyur.am — Bizdavar Group (ارمنستان)', url: 'https://www.spyur.am/en/companies/bizdavar/57783/' },
+        { label: 'جویشگر — تکنولوژی پردازان توسعه خاورمیانه', url: 'https://www.jooyeshgar.com/company/det-29884' }
+      ]
     }
   ],
 
@@ -449,7 +530,7 @@ window.BIZDAVAR_INTEL = {
       }
     ],
     trustSignals: [
-      'شفافیت تماس: info@bizdavar.com و webmaster@bizdavar.ir',
+      'شفافیت تماس: info@bizdavar.com',
       'پروفایل بنیان‌گذار قابل راستی‌آزمایی در LinkedIn',
       'نمونه‌کارهای زنده با دامنه‌های مستقل',
       'گواهینامه‌های Google Analytics و تبلیغات',

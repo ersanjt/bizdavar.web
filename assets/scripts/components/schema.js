@@ -223,7 +223,7 @@
     const hq = C.geo?.headquarters || {};
     const ir = C.iranEntity || {};
     const am = C.armeniaEntity || {};
-    const sameAs = [C.contact.linkedin, C.contact.instagram, `https://${C.domains.alt}`, am.spyur, ir.jooyeshgar].filter(Boolean);
+    const sameAs = [C.contact.linkedin, C.contact.instagram, am.spyur, ir.jooyeshgar].filter(Boolean);
     const alternateNames = [C.siteName, 'Bizdavar'];
     if (am.legalName) alternateNames.push(am.legalName);
     if (am.legalNameShort) alternateNames.push(am.legalNameShort);

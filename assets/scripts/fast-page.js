@@ -72,7 +72,7 @@
           <rect x="68" y="150" width="90" height="32" rx="6" fill="#3B82F6"/>
           <rect x="340" y="72" width="92" height="168" rx="14" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
           <circle cx="386" cy="108" r="18" fill="#3B82F6" opacity="0.25"/>
-          <text x="240" y="280" text-anchor="middle" fill="#1e40af" font-size="13" font-family="monospace">fast.bizdavar.com</text>
+          <text x="240" y="280" text-anchor="middle" fill="#1e40af" font-size="13" font-family="monospace">bizdavar.com/fast</text>
         </svg>
       </div>`;
   }

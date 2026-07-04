@@ -127,7 +127,9 @@
     }
     if (page === 'biztejarat') applyListById('biztejaratServices', 'caseStudy.biztejarat.about.services');
     if (page === 'biztab') applyListById('biztabSpecs', 'caseStudy.biztab.about.specs');
-    if (page === 'bizsanitizerV5') applyListById('bizsanitizerSpecs', 'caseStudy.bizsanitizerV5.about.specs');
+    if (page === 'bizsanitizer-v5') applyListById('bizsanitizerSpecs', 'caseStudy.bizsanitizerV5.about.specs');
+    if (page === 'fxguard' && typeof window.initFxguardPage === 'function') window.initFxguardPage();
+    if (page === 'bizswap' && typeof window.initBizswapPage === 'function') window.initBizswapPage();
     if (page === 'bz-diamond') applyListById('bzDiamondServices', 'caseStudy.bzDiamond.about.services');
     if (page === 'article') applyArticlePage();
   };

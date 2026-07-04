@@ -62,7 +62,7 @@
         </div>
       </div>
       <div class="vega-hero__visual">
-        <img src="${path(b.heroImage)}" alt="VEGA process instrumentation" width="520" height="400" loading="eager">
+        <img src="${path(b.heroImage)}" alt="${b.heroImageAlt || 'VEGA process instrumentation'}" width="520" height="400" loading="eager">
       </div>`;
   }
 

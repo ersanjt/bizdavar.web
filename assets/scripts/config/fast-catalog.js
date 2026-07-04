@@ -8,7 +8,7 @@ window.FAST_CATALOG = {
     headline: 'طراحی سایت حرفه‌ای در ۵ روز',
     subtitle: 'همین هفته آنلاین شو — از استارتاپ تا فروشگاه WooCommerce',
     description: 'Fast Web Studio راه‌اندازی سریع وبسایت RTL با فونت Vazirmatn، فرم تماس، واتساپ و پشتیبانی فارسی است. مناسب کسب‌وکارهای ایران، ترکیه و بازار بین‌المللی.',
-    domain: 'fast.bizdavar.com'
+    domain: 'bizdavar.com'
   },
 
   trustSignals: [

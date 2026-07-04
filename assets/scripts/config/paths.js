@@ -58,7 +58,8 @@
 
     const knownPages = new Set([
       'about', 'services', 'portfolio', 'blog', 'contact', 'privacy', 'fast', 'vega',
-      'prosense', 'teltonika', 'gamak', 'digi-system', 'teraoka', 'bz-diamond', 'biztejarat'
+      'prosense', 'teltonika', 'gamak', 'digi-system', 'teraoka', 'bz-diamond', 'biztejarat',
+      'products', 'biztab', 'bizsanitizer-v5', 'fxguard', 'bizswap'
     ]);
     const stem = pathPart.replace(/\.html$/i, '').split('/').pop();
     if (!pathPart.startsWith('pages/') && knownPages.has(stem)) {

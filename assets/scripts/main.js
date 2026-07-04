@@ -288,6 +288,7 @@ window.fillContactDetails = function () {
 
     </div>
 
+    ${C.contact.emailAlt ? `
     <div class="contact-info__item">
 
       <div class="contact-info__icon">${BD_ICON('mail', { size: 22 })}</div>
@@ -301,6 +302,7 @@ window.fillContactDetails = function () {
       </div>
 
     </div>
+    ` : ''}
 
     <div class="contact-info__item">
 
@@ -358,8 +360,6 @@ window.fillContactDetails = function () {
 
         <div class="contact-info__value contact-info__value--domains" dir="ltr">
           <a href="https://${C.domains.main}" target="_blank" rel="noopener noreferrer">${C.domains.main}</a>
-          <span class="contact-info__phone-sep">·</span>
-          <a href="https://${C.domains.fast}" target="_blank" rel="noopener noreferrer">${C.domains.fast}</a>
         </div>
 
       </div>

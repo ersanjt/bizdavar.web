@@ -126,13 +126,18 @@
       const base = window.BIZDAVAR_OWNED_PRODUCTS?.items || [];
       const meta = this.raw('productsPage.items') || {};
       const cats = this.raw('productsPage.categories') || {};
+      const baseCats = Object.fromEntries(
+        (window.BIZDAVAR_OWNED_PRODUCTS?.categories || [])
+          .filter(c => c && c.id && c.label)
+          .map(c => [c.id, { label: c.label }])
+      );
       return base.map(item => {
         const m = meta[item.id] || {};
-        const cat = cats[item.category] || {};
+        const cat = cats[item.category] || baseCats[item.category] || {};
         return {
           ...item,
           ...m,
-          categoryLabel: cat.label || item.category,
+          categoryLabel: cat.label || item.categoryLabel || item.category,
           tags: m.tags || item.tags || []
         };
       });
@@ -143,8 +148,8 @@
       const labels = this.raw('productsPage.categories') || {};
       return cats.map(c => ({
         ...c,
-        label: labels[c.id]?.label || c.id,
-        desc: labels[c.id]?.desc || ''
+        label: labels[c.id]?.label || c.label || c.id,
+        desc: labels[c.id]?.desc || c.desc || ''
       }));
     },
 

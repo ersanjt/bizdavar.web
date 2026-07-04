@@ -10,7 +10,17 @@
   const A = C.assets;
   const path = (p) => window.resolvePath(p);
   const pagePath = (p) => (window.resolvePagePath ? window.resolvePagePath(p) : path(p));
-  const currentPage = document.body.dataset.page || 'home';
+
+  /** Unify data-page variants with URL slugs and route keys */
+  const PAGE_ID_ALIASES = {
+    bizsanitizerV5: 'bizsanitizer-v5',
+    digiSystem: 'digi-system',
+    bzDiamond: 'bz-diamond'
+  };
+  function normalizePageId(id) {
+    return PAGE_ID_ALIASES[id] || id;
+  }
+  const currentPage = normalizePageId(document.body.dataset.page || 'home');
 
   const ic = (name, opts) => (window.BD_ICON ? window.BD_ICON(name, opts) : '');
   const linkArrow = () => (window.BD_LINK_ARROW ? window.BD_LINK_ARROW() : '');
@@ -37,7 +47,8 @@
 
     const knownPages = new Set([
       'about', 'services', 'portfolio', 'blog', 'contact', 'privacy', 'fast', 'vega',
-      'prosense', 'teltonika', 'gamak', 'digi-system', 'teraoka', 'bz-diamond', 'biztejarat'
+      'prosense', 'teltonika', 'gamak', 'digi-system', 'teraoka', 'bz-diamond', 'biztejarat',
+      'products', 'biztab', 'bizsanitizer-v5', 'fxguard', 'bizswap'
     ]);
     const stem = n.replace(/\.html$/, '');
     if (knownPages.has(stem)) return `pages/${stem}.html`;
@@ -143,6 +154,7 @@
     pagePath,
     siteLink,
     currentPage,
+    normalizePageId,
     get wa() {
       return C.contact.whatsapp
         ? `https://wa.me/${C.contact.whatsapp}?text=${encodeURIComponent(C.contact.whatsappMessage)}`
