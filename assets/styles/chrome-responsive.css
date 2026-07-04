@@ -1,0 +1,276 @@
+/**
+ * Bizdavar — Header, top-bar & footer responsive chrome
+ * Mobile layout activates at 1024px (see mobile-chrome.css)
+ */
+
+/* ─── Top bar (desktop) ─── */
+@media (max-width: 1400px) {
+  .top-bar__contact {
+    gap: 14px 18px;
+    font-size: 13px;
+  }
+
+  .top-bar__wa-group {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .top-bar .container {
+    align-items: flex-start;
+    gap: 8px 16px;
+  }
+
+  .top-bar__contact {
+    gap: 10px 16px;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .top-bar__social {
+    flex-shrink: 0;
+    margin-inline-start: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .top-bar {
+    font-size: 12px;
+    padding: 8px 0;
+  }
+
+  .top-bar__contact .bd-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .top-bar__wa span[dir='ltr'] {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 1100px) and (min-width: 1025px) {
+  .top-bar .container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .top-bar__social {
+    margin-inline-start: 0;
+  }
+}
+
+/* ─── Desktop header nav ─── */
+@media (max-width: 1280px) {
+  .header__desktop .container {
+    gap: 12px;
+    padding: 12px 0;
+  }
+
+  .nav {
+    gap: 18px;
+  }
+
+  .nav__link {
+    font-size: 14px;
+  }
+
+  .nav__cta {
+    padding: 10px 16px !important;
+    font-size: 13px !important;
+    white-space: nowrap;
+  }
+
+  .header__logo img {
+    height: 44px;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 1025px) {
+  .nav {
+    gap: 12px;
+  }
+
+  .nav__link {
+    font-size: 13px;
+  }
+
+  .nav--desktop .lang-dropdown__toggle {
+    font-size: 12px;
+    min-height: 36px;
+    padding: 6px 10px;
+  }
+
+  .nav__panel--products {
+    max-width: min(92vw, 520px);
+  }
+}
+
+/* ─── Footer desktop ─── */
+@media (max-width: 1280px) {
+  .footer__main {
+    grid-template-columns: minmax(200px, 1.1fr) repeat(3, minmax(96px, 1fr));
+    gap: 28px 20px;
+  }
+
+  .footer__main > .footer__nav-col:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .footer__contact-chips {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .footer__chip {
+    flex: 1 1 min(240px, 100%);
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer__desktop {
+    padding-top: 44px;
+  }
+
+  .footer__tagline {
+    font-size: 13px;
+    max-width: 280px;
+  }
+
+  .footer__title {
+    font-size: 12px;
+    margin-bottom: 14px;
+  }
+
+  .footer__links a {
+    font-size: 13px;
+  }
+
+  .footer__bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding-bottom: 24px;
+  }
+
+  .footer__legal {
+    width: 100%;
+  }
+}
+
+/* ─── Mobile chrome refinements (≤1024) ─── */
+@media (max-width: 1024px) {
+  .mobile-header__bar {
+    min-height: 52px;
+  }
+
+  .mobile-drawer {
+    width: min(340px, 92vw);
+  }
+
+  .mobile-drawer__contact-item {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+  }
+
+  .mobile-drawer__contact-item--wa {
+    color: var(--navy);
+    font-weight: 600;
+  }
+
+  .mobile-drawer__contact-item--wa:hover {
+    color: var(--whatsapp);
+  }
+
+  .mobile-footer-cta--multi-wa {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mobile-footer-cta--multi-wa .mobile-footer-cta__btn--primary {
+    grid-column: 1 / -1;
+  }
+
+  .mobile-footer-acc a {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 8px;
+  }
+
+  .footer.footer--modern {
+    border-radius: 20px 20px 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-header__logo {
+    max-width: 50%;
+  }
+
+  .mobile-footer-hero__tagline {
+    font-size: 12px;
+  }
+
+  .footer__pill {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mobile-footer-cta--multi-wa {
+    grid-template-columns: 1fr;
+  }
+
+  .mobile-footer-cta--multi-wa .mobile-footer-cta__btn--primary {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-header__bar {
+    padding-inline: 12px;
+  }
+
+  .mobile-header__logo {
+    max-width: 46%;
+  }
+
+  .mobile-footer-hero {
+    padding: 24px 14px 16px;
+  }
+
+  .mobile-footer-accordions {
+    padding-inline: 12px;
+  }
+
+  .mobile-footer-bar {
+    padding-inline: 12px;
+  }
+
+  .mobile-footer-cta {
+    padding-inline: 12px;
+  }
+
+  .mobile-footer-cta__btn {
+    font-size: 12px;
+    padding: 12px 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .mobile-header__actions {
+    gap: 4px;
+  }
+
+  .mobile-bottom-nav__label {
+    font-size: 8px;
+  }
+
+  .mobile-bottom-nav__item {
+    min-height: 48px;
+    padding-inline: 2px;
+  }
+}

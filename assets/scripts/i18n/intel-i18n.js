@@ -171,7 +171,7 @@
         city: 'İstanbul',
         country: 'Türkiye',
         address: 'İstanbul, Türkiye',
-        workingHours: 'Cumartesi–Perşembe — 09:00–18:00',
+        workingHours: '7/24',
         languages: ['Türkçe', 'Farsça', 'English'],
         intro: 'Bizdavar Group’un İstanbul’daki ana ofisi; dijital, fintech ve B2B endüstriyel tedarik projelerinin koordinasyon merkezidir. Türkçe, Farsça ve İngilizce danışmanlık; proforma, uluslararası lojistik ve teknik destek buradan yönetilir.',
         services: [
@@ -457,7 +457,7 @@
         city: 'Istanbul',
         country: 'Turkey',
         address: 'Istanbul, Turkey',
-        workingHours: 'Sat–Thu — 09:00–18:00',
+        workingHours: '24/7',
         languages: ['Persian', 'Turkish', 'English'],
         intro: 'Bizdavar Group’s Istanbul HQ coordinates digital, fintech and B2B industrial supply projects. Persian consulting, proforma quotes, international logistics and technical support are managed here.',
         services: [

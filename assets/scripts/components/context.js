@@ -146,6 +146,16 @@
     });
   }
 
+  function buildWaUrl(num) {
+    if (!num) return siteLink(R.contact);
+    const base = C.contact.whatsappMessage || '';
+    let msg = base;
+    if (typeof location !== 'undefined' && location.href) {
+      msg = `${base}\n${location.href}`;
+    }
+    return `https://wa.me/${num}?text=${encodeURIComponent(msg)}`;
+  }
+
   window.BD_CTX = {
     C,
     R,
@@ -155,10 +165,9 @@
     siteLink,
     currentPage,
     normalizePageId,
+    buildWaUrl,
     get wa() {
-      return C.contact.whatsapp
-        ? `https://wa.me/${C.contact.whatsapp}?text=${encodeURIComponent(C.contact.whatsappMessage)}`
-        : siteLink(R.contact);
+      return C.contact.whatsapp ? buildWaUrl(C.contact.whatsapp) : siteLink(R.contact);
     },
     ic,
     linkArrow,

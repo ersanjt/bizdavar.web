@@ -1,9 +1,9 @@
 /**
  * Bizdavar — Mobile header, drawer, bottom tab bar & footer
- * Loaded via responsive.css @media (max-width: 1100px)
+ * Loaded via responsive.css @media (max-width: 1024px)
  */
 
-@media (max-width: 1100px) {
+@media (max-width: 1024px) {
   .header {
     position: sticky;
     top: 0;
@@ -12,6 +12,8 @@
 
   /* ─── Mobile header ─── */
   .mobile-header {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     padding: 0;
     background: rgba(255, 255, 255, 0.92);
@@ -149,6 +151,11 @@
     box-shadow: 0 4px 20px rgba(22, 22, 63, 0.08);
   }
 
+  .mobile-drawer__contact-item--muted {
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+
   /* ─── Bottom tab bar ─── */
   .mobile-bottom-nav {
     gap: 2px;
@@ -240,7 +247,7 @@
 }
 
 /* LTR drawer */
-@media (max-width: 1100px) {
+@media (max-width: 1024px) {
   html.is-ltr .mobile-drawer {
     right: auto;
     left: 0;

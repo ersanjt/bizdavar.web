@@ -95,13 +95,13 @@ window.BIZDAVAR_CONFIG = {
     phone: '+905010676486',
     phoneDisplay: '+90 501 067 6486 · +98 930 588 0135',
     whatsapp: '905010676486',
-    whatsappMessage: 'سلام، از وبسایت بیزدوار گروپ پیام می‌دهم.',
+    whatsappMessage: 'سلام، از وبسایت bizdavar.com پیام می‌دهم.',
     channels: [
       { id: 'tr', label: 'ترکیه', display: '+90 501 067 6486', tel: '+905010676486', whatsapp: '905010676486' },
       { id: 'ir', label: 'ایران', display: '+98 930 588 0135', tel: '+989305880135', whatsapp: '989305880135' }
     ],
     address: 'استانبول، ترکیه',
-    workingHours: 'شنبه تا پنج‌شنبه — ۹:۰۰ تا ۱۸:۰۰',
+    workingHours: '۷/۲۴ — همیشه در دسترس',
     linkedin: 'https://www.linkedin.com/in/ersanjt',
     instagram: 'https://www.instagram.com/bizdavar'
   },

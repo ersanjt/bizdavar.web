@@ -1,8 +1,9 @@
 /**
  * Bizdavar — Responsive overrides
- * Mobile chrome: ≤1100px | Phone: ≤768px | Small: ≤480px
+ * Mobile chrome: ≤1024px | Phone: ≤768px | Small: ≤480px
  */
 @import url('mobile-chrome.css');
+@import url('chrome-responsive.css');
 
 /* ─── Trust bar & process — tablet ─── */
 @media (max-width: 1024px) {
@@ -37,7 +38,7 @@
 }
 
 /* ─── Tablet landscape & small desktop nav compact ─── */
-@media (max-width: 1200px) and (min-width: 1101px) {
+@media (max-width: 1200px) and (min-width: 1025px) {
   .nav--desktop {
     gap: 16px;
   }
@@ -72,7 +73,7 @@
   }
 }
 
-/* ─── Phone & small tablet extras (chrome at 1100 in style.css) ─── */
+/* ─── Phone & small tablet extras (mobile chrome at 1024px) ─── */
 @media (max-width: 768px) {
   .container {
     width: min(1200px, 94%);

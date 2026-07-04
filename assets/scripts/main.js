@@ -260,7 +260,7 @@ window.fillContactDetails = function () {
 
 
   const channels = C.contact.channels || [];
-  const waUrl = (num) => `https://wa.me/${num}?text=${encodeURIComponent(C.contact.whatsappMessage)}`;
+  const waUrl = (num) => (window.BD_CTX?.buildWaUrl ? window.BD_CTX.buildWaUrl(num) : `https://wa.me/${num}?text=${encodeURIComponent(C.contact.whatsappMessage || '')}`);
   const ir = C.iranEntity;
   const am = C.armeniaEntity;
 
@@ -388,8 +388,7 @@ window.setupWhatsappLinks = function () {
   if (!C) return;
 
   const channels = C.contact.channels || [];
-  const msg = encodeURIComponent(C.contact.whatsappMessage || '');
-  const waUrl = (num) => `https://wa.me/${num}?text=${msg}`;
+  const waUrl = (num) => (window.BD_CTX?.buildWaUrl ? window.BD_CTX.buildWaUrl(num) : `https://wa.me/${num}?text=${encodeURIComponent(C.contact.whatsappMessage || '')}`);
 
   if (!channels.length && !C.contact.whatsapp) {
     document.querySelectorAll('#homeWhatsapp').forEach(el => {

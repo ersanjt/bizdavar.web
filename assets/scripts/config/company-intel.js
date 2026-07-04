@@ -149,7 +149,7 @@ window.BIZDAVAR_INTEL = {
       country: 'ترکیه',
       address: 'استانبول، ترکیه',
       timezone: 'UTC+3 (TRT)',
-      workingHours: 'شنبه تا پنج‌شنبه — ۹:۰۰ تا ۱۸:۰۰',
+      workingHours: '۷/۲۴ — همیشه در دسترس',
       phone: '+90 501 067 6486',
       phoneTel: '+905010676486',
       whatsapp: '905010676486',

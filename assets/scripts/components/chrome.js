@@ -6,7 +6,7 @@
   const ctx = window.BD_CTX;
   if (!ctx) return;
   const {
-    C, R, A, path, pagePath, siteLink, t, ic, linkArrow, wa, currentPage,
+    C, R, A, path, pagePath, siteLink, t, ic, linkArrow, wa, buildWaUrl, currentPage,
     absUrl, breadcrumbHref, localizeCrumbs, buildContactPoints, orgAddress
   } = ctx;
 
@@ -387,9 +387,15 @@
         <div class="container">
           <div class="top-bar__contact">
             <a href="mailto:${C.contact.email}">${ic('mail', { size: 16 })} ${C.contact.email}</a>
-            ${C.contact.phone
-              ? `<a href="tel:${C.contact.phone}">${ic('phone', { size: 16 })} ${C.contact.phoneDisplay || C.contact.phone}</a>`
-              : `<span>${ic('phone', { size: 16 })} ${C.contact.phoneDisplay}</span>`}
+            ${(C.contact.channels || []).length
+              ? `<span class="top-bar__wa-group">${(C.contact.channels || []).map(ch => `
+                  <a href="${buildWaUrl(ch.whatsapp)}" class="top-bar__wa" target="_blank" rel="noopener noreferrer"
+                     aria-label="${t('common.whatsapp', 'WhatsApp')} — ${ch.label} (${ch.display})">
+                    ${ic('whatsapp', { size: 16 })} <span dir="ltr">${ch.display}</span>
+                  </a>`).join('')}</span>`
+              : (C.contact.phone
+                ? `<a href="tel:${C.contact.phone}">${ic('phone', { size: 16 })} ${C.contact.phoneDisplay || C.contact.phone}</a>`
+                : `<span>${ic('phone', { size: 16 })} ${C.contact.phoneDisplay || ''}</span>`)}
             <span>${ic('clock', { size: 16 })} ${C.contact.workingHours}</span>
           </div>
           <div class="top-bar__social">
@@ -463,9 +469,15 @@
           </nav>
           <div class="mobile-drawer__contact">
             <a href="mailto:${C.contact.email}" class="mobile-drawer__contact-item">${ic('mail', { size: 16 })} ${C.contact.email}</a>
-            ${C.contact.phone
-              ? `<a href="tel:${C.contact.phone}" class="mobile-drawer__contact-item">${ic('phone', { size: 16 })} ${C.contact.phoneDisplay || C.contact.phone}</a>`
-              : `<span class="mobile-drawer__contact-item">${ic('phone', { size: 16 })} ${C.contact.phoneDisplay}</span>`}
+            ${(C.contact.channels || []).length
+              ? (C.contact.channels || []).map(ch => `
+            <a href="${buildWaUrl(ch.whatsapp)}" class="mobile-drawer__contact-item mobile-drawer__contact-item--wa" target="_blank" rel="noopener noreferrer">
+              ${ic('whatsapp', { size: 16 })} <span>${ch.label}</span> <span dir="ltr">${ch.display}</span>
+            </a>`).join('')
+              : (C.contact.phone
+                ? `<a href="tel:${C.contact.phone}" class="mobile-drawer__contact-item">${ic('phone', { size: 16 })} ${C.contact.phoneDisplay || C.contact.phone}</a>`
+                : `<span class="mobile-drawer__contact-item">${ic('phone', { size: 16 })} ${C.contact.phoneDisplay}</span>`)}
+            <span class="mobile-drawer__contact-item mobile-drawer__contact-item--muted">${ic('clock', { size: 16 })} ${C.contact.workingHours}</span>
             <div class="mobile-drawer__social">
               <a href="${C.contact.instagram}" target="_blank" rel="noopener noreferrer me" aria-label="${t('footer.instagram', 'Instagram')}">${t('footer.instagram', 'Instagram')}</a>
               <a href="${C.contact.linkedin}" target="_blank" rel="noopener noreferrer me" aria-label="${t('footer.linkedin', 'LinkedIn')}">${t('footer.linkedin', 'LinkedIn')}</a>
@@ -486,14 +498,13 @@
         `<span class="footer__pill${i === 0 ? ' footer__pill--accent' : ''}">${m.value} ${m.label}</span>`
       ).join('');
       const channels = C.contact.channels || [];
-      const waMsg = encodeURIComponent(C.contact.whatsappMessage || '');
       const mailChip = `<a href="mailto:${C.contact.email}" class="footer__chip">
         <span class="footer__chip-icon">${ic('mail', { size: 16 })}</span>
         <span class="footer__chip-ltr">${C.contact.email}</span>
       </a>`;
       const channelChips = channels.length
         ? channels.map(ch => `
-          <a href="https://wa.me/${ch.whatsapp}?text=${waMsg}" class="footer__chip footer__chip--wa" target="_blank" rel="noopener noreferrer">
+          <a href="${buildWaUrl(ch.whatsapp)}" class="footer__chip footer__chip--wa" target="_blank" rel="noopener noreferrer">
             <span class="footer__chip-icon">${ic('whatsapp', { size: 16 })}</span>
             <span class="footer__chip-body">
               <span class="footer__chip-label">${ch.label}</span>
@@ -571,10 +582,14 @@
             </div>
             ${langSwitcherHtml('lang-dropdown--footer')}
           </div>
-          <div class="mobile-footer-cta">
+          <div class="mobile-footer-cta${channels.length >= 2 ? ' mobile-footer-cta--multi-wa' : ''}">
             <a href="${pagePath(R.contact)}" class="mobile-footer-cta__btn mobile-footer-cta__btn--primary">${ic('send', { size: 18 })} ${t('common.contactForm')}</a>
-            <a href="${wa}" class="mobile-footer-cta__btn mobile-footer-cta__btn--wa"
-               ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''}>${ic('whatsapp', { size: 18 })} ${t('common.whatsapp')}</a>
+            ${channels.length >= 2
+              ? channels.map(ch => `
+            <a href="${buildWaUrl(ch.whatsapp)}" class="mobile-footer-cta__btn mobile-footer-cta__btn--wa"
+               target="_blank" rel="noopener noreferrer">${ic('whatsapp', { size: 18 })} ${ch.label}</a>`).join('')
+              : `<a href="${wa}" class="mobile-footer-cta__btn mobile-footer-cta__btn--wa"
+               ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''}>${ic('whatsapp', { size: 18 })} ${t('common.whatsapp')}</a>`}
           </div>
           <div class="mobile-footer-accordions">
             ${mobileFooterAccHtml(t('footer.services'), footerLinks.services)}
@@ -587,7 +602,7 @@
                 ${C.contact.emailAlt ? `<li><a href="mailto:${C.contact.emailAlt}">${C.contact.emailAlt}</a></li>` : ''}
                 ${channels.length
                   ? channels.map(ch => `
-                <li><a href="https://wa.me/${ch.whatsapp}?text=${waMsg}" target="_blank" rel="noopener noreferrer">
+                <li><a href="${buildWaUrl(ch.whatsapp)}" target="_blank" rel="noopener noreferrer">
                   <span class="footer__chip-label">${ch.label}</span>
                   <span dir="ltr">${ch.display}</span>
                 </a></li>`).join('')

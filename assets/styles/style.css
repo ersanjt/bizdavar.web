@@ -74,7 +74,29 @@ ul { list-style: none; }
   gap: 8px;
 }
 
-.top-bar__social {
+.top-bar__wa-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.top-bar__wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
+}
+
+  .top-bar__wa:hover {
+    color: var(--whatsapp);
+  }
+
+  .top-bar__contact a:not(.top-bar__wa):hover {
+    color: var(--brand-red);
+  }
+
+  .top-bar__social {
   display: flex;
   gap: 16px;
 }
@@ -1707,7 +1729,7 @@ ul { list-style: none; }
 .contact-map img { border-radius: var(--radius); }
 
 .top-bar__contact a { color: inherit; }
-.top-bar__contact a:hover { color: var(--brand-red); }
+.top-bar__contact a:not(.top-bar__wa):hover { color: var(--brand-red); }
 
 .about__image img {
   width: 100%;
@@ -1997,7 +2019,7 @@ a.tags-cloud__tag:hover {
 }
 
 /* ========== MOBILE HEADER / FOOTER (tablet + phone) ========== */
-@media (max-width: 1100px) {
+@media (max-width: 1024px) {
   body.has-mobile-chrome {
     padding-bottom: calc(68px + env(safe-area-inset-bottom, 0px));
   }
@@ -2005,100 +2027,6 @@ a.tags-cloud__tag:hover {
   .top-bar--desktop { display: none; }
 
   .header__desktop { display: none; }
-
-  .mobile-header {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    background: transparent;
-    box-shadow: none;
-    min-height: 0;
-  }
-
-  .mobile-header__logo {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-    min-width: 0;
-    max-width: 58%;
-  }
-
-  .mobile-header__logo img {
-    height: 44px;
-    width: auto;
-    max-width: 100%;
-    object-fit: contain;
-    object-position: center;
-    transform: scale(1.12);
-    transform-origin: center center;
-  }
-
-  .mobile-header__actions {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .mobile-header__icon-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    text-decoration: none;
-    flex-shrink: 0;
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  .mobile-header__icon-btn:not(.mobile-header__icon-btn--wa) {
-    background: #e8f5e9;
-  }
-
-  .mobile-header__cta {
-    padding: 8px 14px;
-    background: var(--brand-red);
-    color: var(--white);
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 600;
-  }
-
-  .mobile-header__menu {
-    width: 40px;
-    height: 40px;
-    border: none;
-    background: var(--gray);
-    border-radius: 10px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    padding: 0;
-  }
-
-  .mobile-header__menu-lines {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-  }
-
-  .mobile-header__menu-lines span {
-    display: block;
-    width: 18px;
-    height: 2px;
-    background: var(--white);
-    transition: var(--transition);
-  }
-
-  .mobile-header__cta {
-    display: none;
-  }
 
   /* وقتی منو باز است، header باید بالای overlay باشد تا blur روی drawer نیفتد */
   body.drawer-open .header {

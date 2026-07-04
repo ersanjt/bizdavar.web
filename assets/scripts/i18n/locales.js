@@ -8,9 +8,9 @@ window.BIZDAVAR_LOCALES = {
     localeTag: 'fa_IR',
     siteName: 'بیزدوار گروپ',
     contact: {
-      whatsappMessage: 'سلام، از وبسایت بیزدوار گروپ پیام می‌دهم.',
+      whatsappMessage: 'سلام، از وبسایت bizdavar.com پیام می‌دهم.',
       address: 'استانبول، ترکیه',
-      workingHours: 'شنبه تا پنج‌شنبه — ۹:۰۰ تا ۱۸:۰۰',
+      workingHours: '۷/۲۴ — همیشه در دسترس',
       channelTr: 'ترکیه',
       channelIr: 'ایران'
     },
@@ -355,9 +355,9 @@ window.BIZDAVAR_LOCALES = {
     localeTag: 'tr_TR',
     siteName: 'Bizdavar Group',
     contact: {
-      whatsappMessage: 'Merhaba, Bizdavar Group web sitesinden yazıyorum.',
+      whatsappMessage: 'Merhaba, bizdavar.com web sitesinden yazıyorum.',
       address: 'İstanbul, Türkiye',
-      workingHours: 'Cumartesi–Perşembe — 09:00–18:00',
+      workingHours: '7/24',
       channelTr: 'Türkiye',
       channelIr: 'İran'
     },
@@ -702,9 +702,9 @@ window.BIZDAVAR_LOCALES = {
     localeTag: 'en_US',
     siteName: 'Bizdavar Group',
     contact: {
-      whatsappMessage: 'Hello, I am contacting you from the Bizdavar Group website.',
+      whatsappMessage: 'Hello, I am messaging from bizdavar.com.',
       address: 'Istanbul, Turkey',
-      workingHours: 'Sat–Thu — 9:00 AM–6:00 PM',
+      workingHours: '24/7',
       channelTr: 'Turkey',
       channelIr: 'Iran'
     },

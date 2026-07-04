@@ -345,7 +345,7 @@
       const hub = P.istanbulHub;
       const tabriz = P.tabrizHub;
       const yerevan = P.yerevanHub;
-      const waMsg = encodeURIComponent(C.contact.whatsappMessage || '');
+      const waUrl = (num) => (window.BD_CTX?.buildWaUrl ? window.BD_CTX.buildWaUrl(num) : `https://wa.me/${num}?text=${encodeURIComponent(C.contact.whatsappMessage || '')}`);
       const renderOfficeHub = (hubData, opts) => {
         if (!hubData) return '';
         const badge = opts.badge || L.office || 'دفتر';
@@ -373,7 +373,7 @@
             ${hubData.email ? `<div class="presence-istanbul-hub__meta-item"><span class="presence-istanbul-hub__label">${L.email || 'ایمیل'}</span><a href="mailto:${hubData.email}" dir="ltr">${hubData.email}</a></div>` : ''}
           </div>
           <div class="presence-istanbul-hub__actions">
-            ${hubData.whatsapp ? `<a href="https://wa.me/${hubData.whatsapp}?text=${waMsg}" class="btn btn--yellow" target="_blank" rel="noopener noreferrer">${waLabel}</a>` : ''}
+            ${hubData.whatsapp ? `<a href="${waUrl(hubData.whatsapp)}" class="btn btn--yellow" target="_blank" rel="noopener noreferrer">${waLabel}</a>` : ''}
             ${hubData.profileUrl ? `<a href="${hubData.profileUrl}" class="btn btn--outline" target="_blank" rel="noopener noreferrer">${hubData.profileLabel || (L.b2bProfile || 'پروفایل B2B')}</a>` : ''}
             <a href="${path(R.contact)}" class="btn btn--primary">${L.contactForm || 'فرم تماس'}</a>
           </div>
