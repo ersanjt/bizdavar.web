@@ -42,40 +42,6 @@ body {
   margin-top: auto;
 }
 
-/* ─── Homepage SEO site links (sitelinks signal) ─── */
-.seo-site-links {
-  padding: var(--space-8) 0 var(--space-10);
-  border-top: 1px solid rgba(22, 22, 63, 0.08);
-  background: var(--gray-50, #f8f9fc);
-}
-
-.seo-site-links__label {
-  margin: 0 0 var(--space-4);
-  font-size: var(--text-sm);
-  font-weight: 700;
-  color: var(--navy);
-}
-
-.seo-site-links__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem 1.25rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.seo-site-links__list a {
-  font-size: var(--text-sm);
-  color: var(--text-muted, #5a5a7a);
-  text-decoration: none;
-}
-
-.seo-site-links__list a:hover {
-  color: var(--navy);
-  text-decoration: underline;
-}
-
 /* ─── BizTab product page ─── */
 .biztab-gallery__thumbs {
   display: grid;
