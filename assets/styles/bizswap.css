@@ -32,8 +32,15 @@
 }
 
 .bizswap-cap__icon {
-  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
   margin-bottom: 10px;
+  border-radius: var(--radius);
+  background: var(--gray-100);
+  font-size: 0;
 }
 
 .bizswap-cap h3 {

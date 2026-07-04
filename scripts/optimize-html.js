@@ -120,12 +120,12 @@ function optimizeHtml(html) {
 
   out = out.replace(
     /<button class="back-to-top" id="backToTop" aria-label="([^"]*)">\?<\/button>/g,
-    '<button class="back-to-top" id="backToTop" aria-label="$1" data-i18n-aria="common.backToTop">↑</button>'
+    '<button class="back-to-top" id="backToTop" aria-label="$1" data-i18n-aria="common.backToTop"></button>'
   );
 
   out = out.replace(/(<button class="back-to-top" id="backToTop" aria-label="[^"]*")>↑<\/button>/g, (m, open) => {
-    if (m.includes('data-i18n-aria')) return m;
-    return `${open} data-i18n-aria="common.backToTop">↑</button>`;
+    if (m.includes('data-i18n-aria')) return `${open}></button>`;
+    return `${open} data-i18n-aria="common.backToTop"></button>`;
   });
 
   out = out.replace(/href="([^"]+)"/g, (full, href) => {

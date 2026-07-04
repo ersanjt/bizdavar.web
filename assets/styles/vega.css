@@ -296,12 +296,15 @@ body[data-page="vega"] .section__desc {
 }
 
 .vega-product-card__features li::before {
-  content: '✓';
+  content: '';
   position: absolute;
   inset-inline-end: 0;
   top: 5px;
-  color: #c9a800;
-  font-weight: 700;
+  width: 1em;
+  height: 1em;
+  background-color: #c9a800;
+  mask: var(--bd-icon-check) no-repeat center / contain;
+  -webkit-mask: var(--bd-icon-check) no-repeat center / contain;
 }
 
 .vega-product-card__tags {
@@ -806,8 +809,15 @@ body[data-page="vega"] .section__desc {
 }
 
 .vega-digital-block__list li::before {
-  content: '→ ';
-  color: #ffde00;
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-inline-end: 0.25em;
+  vertical-align: -0.15em;
+  background-color: #ffde00;
+  mask: var(--bd-icon-arrow) no-repeat center / contain;
+  -webkit-mask: var(--bd-icon-arrow) no-repeat center / contain;
 }
 
 .vega-digital-block .btn--yellow {

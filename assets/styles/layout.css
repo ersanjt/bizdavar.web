@@ -1306,10 +1306,15 @@ body {
 }
 
 .intel-trust-list li::before {
-  content: '✓';
-  color: var(--green);
-  font-weight: 700;
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
   margin-left: 8px;
+  vertical-align: -0.15em;
+  background-color: var(--green);
+  mask: var(--bd-icon-check) no-repeat center / contain;
+  -webkit-mask: var(--bd-icon-check) no-repeat center / contain;
 }
 
 .intel-presence-tags { margin-top: var(--space-6); }

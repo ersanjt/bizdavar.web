@@ -133,9 +133,34 @@
 }
 
 .fxguard-card__icon {
-  font-size: 1.75rem;
-  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
   margin-bottom: 12px;
+  border-radius: var(--radius);
+  background: var(--gray-100);
+  font-size: 0;
+  line-height: 1;
+}
+
+.fxguard-step__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 12px;
+  border-radius: var(--radius);
+  background: var(--gray-100);
+  font-size: 0;
+  line-height: 1;
+}
+
+.fxguard-pricing {
+  display: grid;
+  gap: 20px;
 }
 
 .fxguard-card h3 {
@@ -191,16 +216,6 @@
   letter-spacing: 0.08em;
   color: #16a34a;
   margin-bottom: 8px;
-}
-
-.fxguard-step__icon {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.fxguard-pricing {
-  display: grid;
-  gap: 20px;
 }
 
 @media (min-width: 900px) {
@@ -270,11 +285,15 @@
 }
 
 .fxguard-plan li::before {
-  content: '✓';
+  content: '';
   position: absolute;
   inset-inline-start: 0;
-  color: #16a34a;
-  font-weight: 700;
+  top: 0.15em;
+  width: 1em;
+  height: 1em;
+  background-color: #16a34a;
+  mask: var(--bd-icon-check) no-repeat center / contain;
+  -webkit-mask: var(--bd-icon-check) no-repeat center / contain;
 }
 
 .fxguard-faq details {

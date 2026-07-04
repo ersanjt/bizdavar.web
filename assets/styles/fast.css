@@ -315,10 +315,13 @@
 }
 
 .fast-plan-card__features li::before {
-  content: '✓';
-  color: #10b981;
-  font-weight: 700;
+  content: '';
+  width: 1em;
+  height: 1em;
   flex-shrink: 0;
+  background-color: #10b981;
+  mask: var(--bd-icon-check) no-repeat center / contain;
+  -webkit-mask: var(--bd-icon-check) no-repeat center / contain;
 }
 
 .fast-plan-card__foot {

@@ -11,16 +11,16 @@
   } = ctx;
 
   const LANG_OPTIONS = [
-    { id: 'fa', labelKey: 'common.langFa', fallback: 'فارسی', flag: '🇮🇷' },
-    { id: 'tr', labelKey: 'common.langTr', fallback: 'Türkçe', flag: '🇹🇷' },
-    { id: 'en', labelKey: 'common.langEn', fallback: 'English', flag: '🇬🇧' }
+    { id: 'fa', labelKey: 'common.langFa', fallback: 'فارسی', badge: 'FA' },
+    { id: 'tr', labelKey: 'common.langTr', fallback: 'Türkçe', badge: 'TR' },
+    { id: 'en', labelKey: 'common.langEn', fallback: 'English', badge: 'EN' }
   ];
 
   function getLangOptions() {
     return LANG_OPTIONS.map(l => ({
       id: l.id,
       label: t(l.labelKey, l.fallback),
-      flag: l.flag
+      badge: l.badge
     }));
   }
 
@@ -61,7 +61,7 @@
           ${langs.map(l => `
             <button type="button" class="mobile-drawer__lang-btn${l.id === cur ? ' is-active' : ''}"
               data-lang="${l.id}" role="option"${l.id === cur ? ' aria-selected="true"' : ''}>
-              <span class="lang-flag" aria-hidden="true">${l.flag}</span>
+              <span class="bd-lang-badge" aria-hidden="true">${l.badge}</span>
               <span>${l.label}</span>
             </button>
           `).join('')}

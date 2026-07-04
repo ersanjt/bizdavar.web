@@ -21,6 +21,10 @@
     el.innerHTML = items.map(i => `<li>${typeof i === 'string' ? i : esc(i)}</li>`).join('');
   }
 
+  function iconHtml(name, size = 28) {
+    return window.BD_ICON ? window.BD_ICON(name, { size }) : '';
+  }
+
   window.initBizswapPage = function () {
     const cs = raw('caseStudy.bizswap');
     if (!cs) return;
@@ -33,7 +37,7 @@
     if (caps && Array.isArray(cs.capabilities?.items)) {
       caps.innerHTML = cs.capabilities.items.map(item => `
         <article class="bizswap-cap">
-          <div class="bizswap-cap__icon" aria-hidden="true">${esc(item.icon)}</div>
+          <div class="bizswap-cap__icon" aria-hidden="true">${iconHtml(item.icon)}</div>
           <h3>${esc(item.title)}</h3>
           <p>${esc(item.desc)}</p>
         </article>`).join('');

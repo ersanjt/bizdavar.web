@@ -43,13 +43,24 @@
     requestAnimationFrame(frame);
   }
 
+  function iconHtml(name, size = 28) {
+    return window.BD_ICON ? window.BD_ICON(name, { size }) : '';
+  }
+
   window.initFxguardPage = function () {
     const cs = raw('caseStudy.fxguard');
     if (!cs) return;
 
+    const regionsEl = document.getElementById('fxguardRegions');
+    if (regionsEl && Array.isArray(cs.hero?.regionItems)) {
+      regionsEl.innerHTML = window.bdRegionListHtml
+        ? window.bdRegionListHtml(cs.hero.regionItems)
+        : cs.hero.regions || '';
+    }
+
     renderCards('fxguardProblems', cs.problem?.items, item => `
       <article class="fxguard-card">
-        <div class="fxguard-card__icon" aria-hidden="true">${esc(item.icon)}</div>
+        <div class="fxguard-card__icon" aria-hidden="true">${iconHtml(item.icon)}</div>
         <h3>${esc(item.title)}</h3>
         <p>${esc(item.desc)}</p>
       </article>`);
@@ -57,21 +68,21 @@
     renderCards('fxguardSteps', cs.steps?.items, item => `
       <article class="fxguard-step">
         <div class="fxguard-step__num">${esc(item.num)}</div>
-        <div class="fxguard-step__icon" aria-hidden="true">${esc(item.icon)}</div>
+        <div class="fxguard-step__icon" aria-hidden="true">${iconHtml(item.icon)}</div>
         <h3>${esc(item.title)}</h3>
         <p>${esc(item.desc)}</p>
       </article>`);
 
     renderCards('fxguardFeatures', cs.features?.items, item => `
       <article class="fxguard-card">
-        <div class="fxguard-card__icon" aria-hidden="true">${esc(item.icon)}</div>
+        <div class="fxguard-card__icon" aria-hidden="true">${iconHtml(item.icon)}</div>
         <h3>${esc(item.title)}</h3>
         <p>${esc(item.desc)}</p>
       </article>`);
 
     renderCards('fxguardAudiences', cs.audiences?.items, item => `
       <article class="fxguard-card">
-        <div class="fxguard-card__icon" aria-hidden="true">${esc(item.icon)}</div>
+        <div class="fxguard-card__icon" aria-hidden="true">${iconHtml(item.icon)}</div>
         <h3>${esc(item.title)}</h3>
         <p class="fxguard-card__region">${esc(item.region)}</p>
         <p>${esc(item.desc)}</p>

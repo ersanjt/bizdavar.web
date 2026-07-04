@@ -577,12 +577,12 @@
           title: 'کاربر در وبسایت چه می‌کند؟',
           desc: 'همه عملیات داخل رابط وب — بدون نیاز به DEX جدا برای خرید اولیه.',
           items: [
-            { icon: '🔗', title: 'اتصال کیف پول', desc: 'اتصال Trust Wallet و کیف پول‌های سازگار با Web3 — نمایش موجودی مبدأ و مقصد.' },
-            { icon: '💱', title: 'سواپ DEX', desc: 'تبدیل USDT (یا stablecoin) به توکن پروژه با نرخ لحظه‌ای و تأیید در کیف پول.' },
-            { icon: '🎯', title: 'پیش‌فروش', desc: 'خرید در مرحله پیش‌فروش — مستقیم از صفحه فرود پروژه.' },
-            { icon: '📊', title: 'اسلیپیج و حداقل دریافتی', desc: 'نمایش اسلیپیج (مثلاً ۰.۵٪) و حداقل توکن دریافتی قبل از تأیید.' },
-            { icon: '🪙', title: 'انتخاب توکن', desc: 'انتخاب توکن مبدأ و مقصد از لیست پشتیبانی‌شده.' },
-            { icon: '⏳', title: 'وضعیت تراکنش', desc: 'پیام «در حال پردازش…» هنگام ارسال تراکنش و بازخورد موفقیت یا خطا.' }
+            { icon: 'link', title: 'اتصال کیف پول', desc: 'اتصال Trust Wallet و کیف پول‌های سازگار با Web3 — نمایش موجودی مبدأ و مقصد.' },
+            { icon: 'swap', title: 'سواپ DEX', desc: 'تبدیل USDT (یا stablecoin) به توکن پروژه با نرخ لحظه‌ای و تأیید در کیف پول.' },
+            { icon: 'target', title: 'پیش‌فروش', desc: 'خرید در مرحله پیش‌فروش — مستقیم از صفحه فرود پروژه.' },
+            { icon: 'chart-bar', title: 'اسلیپیج و حداقل دریافتی', desc: 'نمایش اسلیپیج (مثلاً ۰.۵٪) و حداقل توکن دریافتی قبل از تأیید.' },
+            { icon: 'coin', title: 'انتخاب توکن', desc: 'انتخاب توکن مبدأ و مقصد از لیست پشتیبانی‌شده.' },
+            { icon: 'hourglass', title: 'وضعیت تراکنش', desc: 'پیام «در حال پردازش…» هنگام ارسال تراکنش و بازخورد موفقیت یا خطا.' }
           ]
         },
         flow: {
@@ -625,7 +625,13 @@
           tag: 'اسکریپت اختصاصی · WhatsApp CRM',
           title: 'CRM واتساپ — اسکریپت اختصاصی برای تیم شما',
           desc: 'اسکریپتی که تیم بیزدوار نوشته — یک شماره، یک پنل، پیام انبوه و پاسخ خودکار. مالکیت کامل، بدون اشتراک ماهانه.',
-          regions: '🇹🇷 ترکیه · 🇦🇪 دبی · 🇪🇺 اروپا · 🇮🇷 ایران',
+          regionItems: [
+            { code: 'TR', label: 'ترکیه' },
+            { code: 'AE', label: 'دبی' },
+            { code: 'EU', label: 'اروپا' },
+            { code: 'IR', label: 'ایران' }
+          ],
+          regions: 'ترکیه · دبی · اروپا · ایران',
           trust: 'کدنویسی ۱۰۰٪ اختصاصی · پشتیبانی بیزدوار',
           ctaPricing: 'مشاهده پلن‌ها',
           ctaContact: 'برنامه‌نویسی تخصصی — تماس بگیرید'
@@ -643,9 +649,9 @@
           title: 'آشناست؟',
           desc: 'هر کسب‌وکار در حال رشد به همین دیوارها می‌خورد — اسکریپت CRM واتساپ ما برای حل آن‌ها نوشته شده.',
           items: [
-            { icon: '📱', title: 'چند گوشی، صفر کنترل', desc: 'سه نفر، سه گوشی، سه شماره. کسی نمی‌داند چه کسی چه جوابی داده — مشتری نادیده گرفته یا دوبار پاسخ می‌گیرد.' },
-            { icon: '⏰', title: 'پاسخ دادن ساعت ۲ بامداد', desc: 'بدون پاسخ خودکار، همیشه باید کسی آنلاین باشد. مشتریان پاسخ فوری می‌خواهند و شما نمی‌توانید بخوابید.' },
-            { icon: '📋', title: 'پیام انبوه خسته‌کننده', desc: 'کپی‌پیست برای ۲۰۰ مخاطب یکی‌یکی. ساعت‌ها کار هر کمپین. خطا زیاد. بدون شخصی‌سازی.' }
+            { icon: 'mobile', title: 'چند گوشی، صفر کنترل', desc: 'سه نفر، سه گوشی، سه شماره. کسی نمی‌داند چه کسی چه جوابی داده — مشتری نادیده گرفته یا دوبار پاسخ می‌گیرد.' },
+            { icon: 'clock', title: 'پاسخ دادن ساعت ۲ بامداد', desc: 'بدون پاسخ خودکار، همیشه باید کسی آنلاین باشد. مشتریان پاسخ فوری می‌خواهند و شما نمی‌توانید بخوابید.' },
+            { icon: 'list', title: 'پیام انبوه خسته‌کننده', desc: 'کپی‌پیست برای ۲۰۰ مخاطب یکی‌یکی. ساعت‌ها کار هر کمپین. خطا زیاد. بدون شخصی‌سازی.' }
           ]
         },
         steps: {
@@ -653,9 +659,9 @@
           title: 'راه‌اندازی در ۳ مرحله',
           desc: 'تیم بیزدوار اسکریپت را نصب، پیکربندی و آموزش می‌دهد.',
           items: [
-            { num: '01', icon: '🔗', title: 'شماره را وصل کنید', desc: 'شماره WhatsApp Business موجود را به پنل اختصاصی وصل کنید. شماره همیشه مال شماست.' },
-            { num: '02', icon: '👥', title: 'تیم را اضافه کنید', desc: 'کارکنان را دعوت کنید، نقش و دسترسی تعیین کنید. همه از یک داشبورد پاسخ می‌دهند.' },
-            { num: '03', icon: '🚀', title: 'رشد و اتوماسیون', desc: 'پاسخ خودکار، کمپین انبوه، ردیابی هر مکالمه — رضایت مشتری را بالا ببرید.' }
+            { num: '01', icon: 'link', title: 'شماره را وصل کنید', desc: 'شماره WhatsApp Business موجود را به پنل اختصاصی وصل کنید. شماره همیشه مال شماست.' },
+            { num: '02', icon: 'users', title: 'تیم را اضافه کنید', desc: 'کارکنان را دعوت کنید، نقش و دسترسی تعیین کنید. همه از یک داشبورد پاسخ می‌دهند.' },
+            { num: '03', icon: 'rocket', title: 'رشد و اتوماسیون', desc: 'پاسخ خودکار، کمپین انبوه، ردیابی هر مکالمه — رضایت مشتری را بالا ببرید.' }
           ],
           cta: 'برنامه‌نویسی تخصصی — تماس بگیرید'
         },
@@ -664,12 +670,12 @@
           title: 'هر آنچه تیم شما نیاز دارد',
           desc: 'نه فقط چت — CRM کامل ساخته‌شده دور واتساپ با کد اختصاصی.',
           items: [
-            { icon: '📥', title: 'اینباکس تیمی یکپارچه', desc: 'همه مکالمات یکجا. تخصیص چت، یادداشت، وضعیت — با هم.' },
-            { icon: '📤', title: 'پیام انبوه', desc: 'ارسال شخصی‌سازی‌شده به هزاران مخاطب با تأخیر هوشمند و زمان‌بندی.' },
-            { icon: '🤖', title: 'پاسخ خودکار ۲۴/۷', desc: 'قوانین بعد از ساعت کاری، کلمات کلیدی، خوش‌آمد — هیچ مشتری منتظر نماند.' },
-            { icon: '📊', title: 'آنالیتیکس و گزارش', desc: 'زمان پاسخ، حجم مکالمه، عملکرد تیم — در داشبورد تمیز.' },
-            { icon: '👥', title: 'دسترسی نقش‌محور', desc: 'مدیر، اپراتور، ناظر — هر کس فقط آنچه لازم دارد ببیند.' },
-            { icon: '🔌', title: 'یکپارچه‌سازی API', desc: 'اتصال به CRM، فروشگاه یا رزرواسیون موجود از طریق REST API.' }
+            { icon: 'inbox', title: 'اینباکس تیمی یکپارچه', desc: 'همه مکالمات یکجا. تخصیص چت، یادداشت، وضعیت — با هم.' },
+            { icon: 'send', title: 'پیام انبوه', desc: 'ارسال شخصی‌سازی‌شده به هزاران مخاطب با تأخیر هوشمند و زمان‌بندی.' },
+            { icon: 'robot', title: 'پاسخ خودکار ۲۴/۷', desc: 'قوانین بعد از ساعت کاری، کلمات کلیدی، خوش‌آمد — هیچ مشتری منتظر نماند.' },
+            { icon: 'chart-bar', title: 'آنالیتیکس و گزارش', desc: 'زمان پاسخ، حجم مکالمه، عملکرد تیم — در داشبورد تمیز.' },
+            { icon: 'users', title: 'دسترسی نقش‌محور', desc: 'مدیر، اپراتور، ناظر — هر کس فقط آنچه لازم دارد ببیند.' },
+            { icon: 'plug', title: 'یکپارچه‌سازی API', desc: 'اتصال به CRM، فروشگاه یا رزرواسیون موجود از طریق REST API.' }
           ]
         },
         audiences: {
@@ -677,10 +683,10 @@
           title: 'ساخته‌شده برای کسب‌وکارهایی مثل شما',
           desc: 'از رستوران‌های استانبول تا کلینیک‌های دبی — هر تیمی که با مشتری در واتساپ صحبت می‌کند.',
           items: [
-            { icon: '🏥', title: 'کلینیک و سلامت', region: 'ترکیه · امارات · اروپا', desc: 'نوبت‌دهی، یادآوری، پیگیری — همه از یک پنل.', tag: 'اتوماسیون نوبت' },
-            { icon: '🛍️', title: 'فروشگاه آنلاین', region: 'همه مناطق', desc: 'وضعیت سفارش، بازیابی سبد، پاسخ به ۵۰۰+ پیام روزانه با تیم ۳ نفره.', tag: 'کمپین انبوه' },
-            { icon: '🏠', title: 'املاک', region: 'دبی · استانبول', desc: 'معرفی ملک، بازدید، پیگیری لید — تاریخچه کامل هر مشتری.', tag: 'ردیابی لید' },
-            { icon: '🍽️', title: 'رستوران و غذا', region: 'ترکیه · اروپا', desc: 'رزرو، سفارش بیرون‌بر، منوی روز — پیام‌های روتین خودکار.', tag: 'رزرو خودکار' }
+            { icon: 'health', title: 'کلینیک و سلامت', region: 'ترکیه · امارات · اروپا', desc: 'نوبت‌دهی، یادآوری، پیگیری — همه از یک پنل.', tag: 'اتوماسیون نوبت' },
+            { icon: 'bag', title: 'فروشگاه آنلاین', region: 'همه مناطق', desc: 'وضعیت سفارش، بازیابی سبد، پاسخ به ۵۰۰+ پیام روزانه با تیم ۳ نفره.', tag: 'کمپین انبوه' },
+            { icon: 'home', title: 'املاک', region: 'دبی · استانبول', desc: 'معرفی ملک، بازدید، پیگیری لید — تاریخچه کامل هر مشتری.', tag: 'ردیابی لید' },
+            { icon: 'utensils', title: 'رستوران و غذا', region: 'ترکیه · اروپا', desc: 'رزرو، سفارش بیرون‌بر، منوی روز — پیام‌های روتین خودکار.', tag: 'رزرو خودکار' }
           ]
         },
         pricing: {
@@ -853,7 +859,7 @@
           ctaContact: 'Benzer modül siparişi',
           ctaPortfolio: 'Diğer portfolyo'
         },
-        capabilities: { eyebrow: 'Sitede neler yapılır', title: 'Kullanıcı sitede ne yapar?', desc: 'Tüm işlemler web arayüzünde — harici DEX\'e gerek kalmadan ön satış.', items: [{ icon: '🔗', title: 'Connect Wallet', desc: 'Trust Wallet ve uyumlu Web3 cüzdanlar — From/To bakiye.' }, { icon: '💱', title: 'DEX Swap', desc: 'USDT\'den proje token\'ına anlık kur ile swap.' }, { icon: '🎯', title: 'Presale', desc: 'Ön satış aşamasında doğrudan landing\'den satın alma.' }, { icon: '📊', title: 'Slippage', desc: 'Slippage ve minimum alınacak miktar gösterimi.' }, { icon: '🪙', title: 'Token seçici', desc: 'Kaynak ve hedef token listesinden seçim.' }, { icon: '⏳', title: 'İşlem durumu', desc: 'Processing mesajı ve başarı/hata geri bildirimi.' }] },
+        capabilities: { eyebrow: 'Sitede neler yapılır', title: 'Kullanıcı sitede ne yapar?', desc: 'Tüm işlemler web arayüzünde — harici DEX\'e gerek kalmadan ön satış.', items: [{ icon: 'link', title: 'Connect Wallet', desc: 'Trust Wallet ve uyumlu Web3 cüzdanlar — From/To bakiye.' }, { icon: 'swap', title: 'DEX Swap', desc: 'USDT\'den proje token\'ına anlık kur ile swap.' }, { icon: 'target', title: 'Presale', desc: 'Ön satış aşamasında doğrudan landing\'den satın alma.' }, { icon: 'chart-bar', title: 'Slippage', desc: 'Slippage ve minimum alınacak miktar gösterimi.' }, { icon: 'coin', title: 'Token seçici', desc: 'Kaynak ve hedef token listesinden seçim.' }, { icon: 'hourglass', title: 'İşlem durumu', desc: 'Processing mesajı ve başarı/hata geri bildirimi.' }] },
         flow: { eyebrow: 'Akış', title: 'Cüzdandan token\'a', steps: [{ title: 'Cüzdan bağla', desc: 'Connect Wallet ve BEP-20 ağ onayı.' }, { title: 'Tutar seç', desc: 'USDT veya bakiye yüzdesi — kur hesaplanır.' }, { title: 'On-chain onay', desc: 'İşlem cüzdanda imzalanır.' }, { title: 'Token al', desc: 'Blok onayı sonrası swap tamamlanır.' }] },
         admin: { title: 'Admin & akıllı sözleşme', desc: 'onlyOwner fonksiyonları — admin UI ile entegre.', items: ['Change Rate (onlyOwner)', 'Claim Tokens (onlyOwner)', 'Site-admin kur senkronizasyonu', 'Sabit sözleşme adresi — explorer şeffaflığı'] },
         useCases: ['RWA tokenları (altın, gümüş)', 'ICO / IDO / Presale', 'BEP-20 landing + whitepaper', 'Harici DEX öncesi site içi swap'],
@@ -862,12 +868,18 @@
         geoText: 'DeFi ve Web3 modül geliştirme — Bizdavar Group fintech hizmetlerinin parçası.'
       },
       fxguard: {
-        hero: { tag: 'Özel script · WhatsApp CRM', title: 'WhatsApp CRM — Ekibiniz için özel script', desc: 'Bizdavar ekibinin yazdığı script — tek numara, tek panel, toplu mesaj ve otomatik yanıt. Tam sahiplik, aylık abonelik yok.', regions: '🇹🇷 Türkiye · 🇦🇪 Dubai · 🇪🇺 Avrupa · 🇮🇷 İran', trust: '%100 özel kod · Bizdavar desteği', ctaPricing: 'Planları gör', ctaContact: 'Özel yazılım — iletişime geçin' },
+        hero: { tag: 'Özel script · WhatsApp CRM', title: 'WhatsApp CRM — Ekibiniz için özel script', desc: 'Bizdavar ekibinin yazdığı script — tek numara, tek panel, toplu mesaj ve otomatik yanıt. Tam sahiplik, aylık abonelik yok.', regionItems: [
+            { code: 'TR', label: 'Türkiye' },
+            { code: 'AE', label: 'Dubai' },
+            { code: 'EU', label: 'Avrupa' },
+            { code: 'IR', label: 'İran' }
+          ],
+          regions: 'Türkiye · Dubai · Avrupa · İran', trust: '%100 özel kod · Bizdavar desteği', ctaPricing: 'Planları gör', ctaContact: 'Özel yazılım — iletişime geçin' },
         stats: { businesses: 'Script planı', regions: 'Hedef pazar', regionsVal: 'TR · AE · EU · IR', uptime: 'Özel kod', setup: 'Tahmini teslim', setupSuffix: ' gün' },
-        problem: { eyebrow: 'Sorun', title: 'Tanıdık mı?', desc: 'Büyüyen her işletme bu duvarlarla karşılaşır — WhatsApp CRM scriptimiz bunları çözmek için yazıldı.', items: [{ icon: '📱', title: 'Birden fazla telefon, sıfır kontrol', desc: 'Üç personel, üç telefon. Kim ne cevapladı bilinmiyor.' }, { icon: '⏰', title: 'Gece 2\'de cevap', desc: 'Otomatik yanıt yoksa biri her zaman nöbette.' }, { icon: '📋', title: 'Toplu mesaj yorucu', desc: '200 kişiye tek tek kopyala-yapıştır. Saatler sürer.' }] },
-        steps: { eyebrow: 'Nasıl çalışır', title: '3 adımda hazır', desc: 'Bizdavar ekibi scripti kurar, yapılandırır ve eğitir.', items: [{ num: '01', icon: '🔗', title: 'Numaranızı bağlayın', desc: 'Mevcut WhatsApp Business numaranızı özel panele bağlayın.' }, { num: '02', icon: '👥', title: 'Ekibinizi ekleyin', desc: 'Personeli davet edin, roller atayın.' }, { num: '03', icon: '🚀', title: 'Büyüyün ve otomatikleştirin', desc: 'Otomatik yanıt, toplu kampanyalar, her konuşmayı takip edin.' }], cta: 'Özel yazılım — iletişime geçin' },
-        features: { eyebrow: 'Özellikler', title: 'Ekibinizin ihtiyacı olan her şey', desc: 'Sadece sohbet değil — WhatsApp etrafında tam CRM, özel kod.', items: [{ icon: '📥', title: 'Birleşik ekip gelen kutusu', desc: 'Tüm konuşmalar tek yerde.' }, { icon: '📤', title: 'Toplu mesaj', desc: 'Binlerce kişiye kişiselleştirilmiş mesaj.' }, { icon: '🤖', title: '7/24 otomatik yanıt', desc: 'Mesai dışı, anahtar kelime, karşılama kuralları.' }, { icon: '📊', title: 'Analitik ve raporlar', desc: 'Yanıt süresi, hacim, ekip performansı.' }, { icon: '👥', title: 'Rol tabanlı erişim', desc: 'Yönetici, operatör, gözlemci.' }, { icon: '🔌', title: 'API entegrasyonu', desc: 'Mevcut CRM veya e-ticaret sisteminize REST API.' }] },
-        audiences: { eyebrow: 'Kimler için', title: 'Sizin gibi işletmeler için', desc: 'WhatsApp\'ta müşteriyle konuşan her ekip.', items: [{ icon: '🏥', title: 'Klinik ve sağlık', region: 'Türkiye · BAE · Avrupa', desc: 'Randevu, hatırlatma, takip.', tag: 'Randevu otomasyonu' }, { icon: '🛍️', title: 'E-ticaret', region: 'Tüm bölgeler', desc: 'Sipariş güncellemeleri, sepet kurtarma.', tag: 'Toplu kampanya' }, { icon: '🏠', title: 'Emlak', region: 'Dubai · İstanbul', desc: 'İlan paylaşımı, lead takibi.', tag: 'Lead takibi' }, { icon: '🍽️', title: 'Restoran', region: 'Türkiye · Avrupa', desc: 'Rezervasyon, paket servis.', tag: 'Otomatik rezervasyon' }] },
+        problem: { eyebrow: 'Sorun', title: 'Tanıdık mı?', desc: 'Büyüyen her işletme bu duvarlarla karşılaşır — WhatsApp CRM scriptimiz bunları çözmek için yazıldı.', items: [{ icon: 'mobile', title: 'Birden fazla telefon, sıfır kontrol', desc: 'Üç personel, üç telefon. Kim ne cevapladı bilinmiyor.' }, { icon: 'clock', title: 'Gece 2\'de cevap', desc: 'Otomatik yanıt yoksa biri her zaman nöbette.' }, { icon: 'list', title: 'Toplu mesaj yorucu', desc: '200 kişiye tek tek kopyala-yapıştır. Saatler sürer.' }] },
+        steps: { eyebrow: 'Nasıl çalışır', title: '3 adımda hazır', desc: 'Bizdavar ekibi scripti kurar, yapılandırır ve eğitir.', items: [{ num: '01', icon: 'link', title: 'Numaranızı bağlayın', desc: 'Mevcut WhatsApp Business numaranızı özel panele bağlayın.' }, { num: '02', icon: 'users', title: 'Ekibinizi ekleyin', desc: 'Personeli davet edin, roller atayın.' }, { num: '03', icon: 'rocket', title: 'Büyüyün ve otomatikleştirin', desc: 'Otomatik yanıt, toplu kampanyalar, her konuşmayı takip edin.' }], cta: 'Özel yazılım — iletişime geçin' },
+        features: { eyebrow: 'Özellikler', title: 'Ekibinizin ihtiyacı olan her şey', desc: 'Sadece sohbet değil — WhatsApp etrafında tam CRM, özel kod.', items: [{ icon: 'inbox', title: 'Birleşik ekip gelen kutusu', desc: 'Tüm konuşmalar tek yerde.' }, { icon: 'send', title: 'Toplu mesaj', desc: 'Binlerce kişiye kişiselleştirilmiş mesaj.' }, { icon: 'robot', title: '7/24 otomatik yanıt', desc: 'Mesai dışı, anahtar kelime, karşılama kuralları.' }, { icon: 'chart-bar', title: 'Analitik ve raporlar', desc: 'Yanıt süresi, hacim, ekip performansı.' }, { icon: 'users', title: 'Rol tabanlı erişim', desc: 'Yönetici, operatör, gözlemci.' }, { icon: 'plug', title: 'API entegrasyonu', desc: 'Mevcut CRM veya e-ticaret sisteminize REST API.' }] },
+        audiences: { eyebrow: 'Kimler için', title: 'Sizin gibi işletmeler için', desc: 'WhatsApp\'ta müşteriyle konuşan her ekip.', items: [{ icon: 'health', title: 'Klinik ve sağlık', region: 'Türkiye · BAE · Avrupa', desc: 'Randevu, hatırlatma, takip.', tag: 'Randevu otomasyonu' }, { icon: 'bag', title: 'E-ticaret', region: 'Tüm bölgeler', desc: 'Sipariş güncellemeleri, sepet kurtarma.', tag: 'Toplu kampanya' }, { icon: 'home', title: 'Emlak', region: 'Dubai · İstanbul', desc: 'İlan paylaşımı, lead takibi.', tag: 'Lead takibi' }, { icon: 'utensils', title: 'Restoran', region: 'Türkiye · Avrupa', desc: 'Rezervasyon, paket servis.', tag: 'Otomatik rezervasyon' }] },
         pricing: { eyebrow: 'Fiyat', title: 'WhatsApp CRM script planları', desc: 'Tek seferlik ödeme — script ve panelin tam sahipliği.', note: 'Tek seferlik ödeme — kurulum, yapılandırma ve ilk eğitim dahil.', plans: [{ id: 'basic', name: 'Temel', price: '$500', period: '', desc: 'Küçük ekipler için WhatsApp CRM script.', features: ['1 WhatsApp numarası', 'Ekip paneli', 'Ortak gelen kutusu', 'Temel otomatik yanıt', 'Kurulum'], cta: 'Özel yazılım — iletişime geçin', href: '/pages/contact?product=whatsapp-crm-basic' }, { id: 'pro', name: 'Profesyonel', price: '$800', period: '', badge: 'En popüler', desc: 'Toplu mesajlı büyüyen işletmeler için.', features: ['Temel plandaki her şey', 'Toplu mesaj', 'Gelişmiş otomatik yanıt', 'Analitik', '4 dil UI'], cta: 'Özel yazılım — iletişime geçin', href: '/pages/contact?product=whatsapp-crm-pro', featured: true }, { id: 'enterprise', name: 'Kurumsal', price: '$1,200', period: '', desc: 'Çoklu numara, API ve özel entegrasyon.', features: ['Profesyonel plandaki her şey', 'Özel API', 'Çoklu numara', 'CRM entegrasyonu', 'Öncelikli destek'], cta: 'Özel yazılım — iletişime geçin', href: '/pages/contact?product=whatsapp-crm-enterprise' }] },
         faq: { eyebrow: 'SSS', title: 'Sık sorulan sorular', items: [{ q: 'WhatsApp CRM script ne kadar?', a: 'Üç plan: $500, $800 ve $1,200 — tek seferlik ödeme, aylık abonelik yok.' }, { q: 'Birden fazla personel aynı numarayı kullanabilir mi?', a: 'Evet — sınırsız personel, tek panel ve tek numara.' }, { q: 'Toplu mesaj var mı?', a: 'Evet — Profesyonel ($800) ve Kurumsal ($1,200) planlarda.' }, { q: 'Özel script mi yoksa SaaS mı?', a: 'Bizdavar ekibinin özel kodu — tam sahiplik, üçüncü taraf platforma bağımlılık yok.' }, { q: 'Türkçe destek var mı?', a: 'Evet — TR, AR, FA ve EN UI ve destek.' }] },
         about: { title: 'Bizdavar tarafından özel geliştirme', body: 'Bu <strong>WhatsApp CRM scripti</strong>, <strong>Bizdavar ekibi</strong> tarafından özel kodla yazılmıştır — ekip paneli, web uygulaması ve API sizin kontrolünüzde.', ctaContact: 'Özel yazılım — iletişime geçin', ctaPortfolio: 'Örnek işler' },
@@ -978,7 +990,7 @@
           ctaContact: 'Order a similar module',
           ctaPortfolio: 'Other portfolio work'
         },
-        capabilities: { eyebrow: 'On-site features', title: 'What users do on the website', desc: 'All actions inside the web UI — no external DEX required for initial purchase.', items: [{ icon: '🔗', title: 'Connect Wallet', desc: 'Trust Wallet and compatible Web3 wallets — From/To balances.' }, { icon: '💱', title: 'DEX Swap', desc: 'Convert USDT to project token at live rate with wallet confirmation.' }, { icon: '🎯', title: 'Presale', desc: 'Buy during presale directly from the project landing page.' }, { icon: '📊', title: 'Slippage', desc: 'Slippage and minimum received shown before confirm.' }, { icon: '🪙', title: 'Token selector', desc: 'Pick source and destination tokens from supported list.' }, { icon: '⏳', title: 'Transaction status', desc: 'Processing message and success/error feedback.' }] },
+        capabilities: { eyebrow: 'On-site features', title: 'What users do on the website', desc: 'All actions inside the web UI — no external DEX required for initial purchase.', items: [{ icon: 'link', title: 'Connect Wallet', desc: 'Trust Wallet and compatible Web3 wallets — From/To balances.' }, { icon: 'swap', title: 'DEX Swap', desc: 'Convert USDT to project token at live rate with wallet confirmation.' }, { icon: 'target', title: 'Presale', desc: 'Buy during presale directly from the project landing page.' }, { icon: 'chart-bar', title: 'Slippage', desc: 'Slippage and minimum received shown before confirm.' }, { icon: 'coin', title: 'Token selector', desc: 'Pick source and destination tokens from supported list.' }, { icon: 'hourglass', title: 'Transaction status', desc: 'Processing message and success/error feedback.' }] },
         flow: { eyebrow: 'User flow', title: 'From wallet connect to tokens', steps: [{ title: 'Connect wallet', desc: 'User clicks Connect Wallet and confirms BEP-20 network.' }, { title: 'Enter amount', desc: 'USDT amount or balance percentage — rate and output calculated.' }, { title: 'On-chain confirm', desc: 'Transaction signed in wallet and broadcast.' }, { title: 'Receive tokens', desc: 'After block confirmation, swap completes and To balance updates.' }] },
         admin: { title: 'Admin panel & smart contract', desc: 'onlyOwner functions integrated with project admin UI.', items: ['Change Rate (onlyOwner)', 'Claim Tokens (onlyOwner)', 'On-site rate sync with Admin Panel', 'Fixed contract address — explorer transparency'] },
         useCases: ['RWA tokens (gold, silver, real assets)', 'ICO / IDO / staged presale', 'BEP-20 projects with landing & whitepaper', 'On-site swap before external DEX listing'],
@@ -987,12 +999,18 @@
         geoText: 'DeFi and Web3 module development — part of Bizdavar Group fintech and web services.'
       },
       fxguard: {
-        hero: { tag: 'Custom script · WhatsApp CRM', title: 'WhatsApp CRM — Custom script for your team', desc: 'Script written by the Bizdavar team — one number, one panel, bulk messaging and auto-reply. Full ownership, no monthly subscription.', regions: '🇹🇷 Turkey · 🇦🇪 Dubai · 🇪🇺 Europe · 🇮🇷 Iran', trust: '100% custom code · Bizdavar support', ctaPricing: 'See plans', ctaContact: 'Custom development — contact us' },
+        hero: { tag: 'Custom script · WhatsApp CRM', title: 'WhatsApp CRM — Custom script for your team', desc: 'Script written by the Bizdavar team — one number, one panel, bulk messaging and auto-reply. Full ownership, no monthly subscription.', regionItems: [
+            { code: 'TR', label: 'Turkey' },
+            { code: 'AE', label: 'Dubai' },
+            { code: 'EU', label: 'Europe' },
+            { code: 'IR', label: 'Iran' }
+          ],
+          regions: 'Turkey · Dubai · Europe · Iran', trust: '100% custom code · Bizdavar support', ctaPricing: 'See plans', ctaContact: 'Custom development — contact us' },
         stats: { businesses: 'Script plans', regions: 'Target markets', regionsVal: 'TR · AE · EU · IR', uptime: 'Custom code', setup: 'Est. delivery', setupSuffix: ' days' },
-        problem: { eyebrow: 'The problem', title: 'Sound familiar?', desc: 'Every growing business hits these walls — our WhatsApp CRM script was built to solve them.', items: [{ icon: '📱', title: 'Multiple phones, zero control', desc: 'Three staff, three phones. Nobody knows who replied.' }, { icon: '⏰', title: 'Replying at 2am', desc: 'Without auto-replies someone is always on call.' }, { icon: '📋', title: 'Bulk messaging is exhausting', desc: 'Copy-pasting to 200 contacts one by one. Hours per campaign.' }] },
-        steps: { eyebrow: 'How it works', title: 'Up & running in 3 steps', desc: 'The Bizdavar team installs, configures and trains your team.', items: [{ num: '01', icon: '🔗', title: 'Connect your number', desc: 'Link your existing WhatsApp Business number to the custom panel.' }, { num: '02', icon: '👥', title: 'Add your team', desc: 'Invite staff, assign roles. Everyone replies from one dashboard.' }, { num: '03', icon: '🚀', title: 'Grow & automate', desc: 'Auto-replies, bulk campaigns, track every conversation.' }], cta: 'Custom development — contact us' },
-        features: { eyebrow: 'Features', title: 'Everything your team needs', desc: 'Not just chat — a full CRM built around WhatsApp with custom code.', items: [{ icon: '📥', title: 'Unified team inbox', desc: 'All conversations in one place.' }, { icon: '📤', title: 'Bulk messaging', desc: 'Personalized messages to thousands.' }, { icon: '🤖', title: 'Auto-response 24/7', desc: 'After-hours rules, keywords, greetings.' }, { icon: '📊', title: 'Analytics & reports', desc: 'Response times, volume, team performance.' }, { icon: '👥', title: 'Role-based access', desc: 'Manager, agent, viewer.' }, { icon: '🔌', title: 'API integration', desc: 'Connect to your CRM or e-commerce via REST API.' }] },
-        audiences: { eyebrow: 'Who it\'s for', title: 'Built for businesses like yours', desc: 'Any team that talks to customers on WhatsApp.', items: [{ icon: '🏥', title: 'Clinics & healthcare', region: 'Turkey · UAE · Europe', desc: 'Appointments, reminders, follow-ups.', tag: 'Booking automation' }, { icon: '🛍️', title: 'E-commerce', region: 'All regions', desc: 'Order updates, cart recovery.', tag: 'Bulk campaigns' }, { icon: '🏠', title: 'Real estate', region: 'Dubai · Istanbul', desc: 'Listings, lead follow-up.', tag: 'Lead tracking' }, { icon: '🍽️', title: 'Restaurants', region: 'Turkey · Europe', desc: 'Reservations, catering.', tag: 'Auto-reservation' }] },
+        problem: { eyebrow: 'The problem', title: 'Sound familiar?', desc: 'Every growing business hits these walls — our WhatsApp CRM script was built to solve them.', items: [{ icon: 'mobile', title: 'Multiple phones, zero control', desc: 'Three staff, three phones. Nobody knows who replied.' }, { icon: 'clock', title: 'Replying at 2am', desc: 'Without auto-replies someone is always on call.' }, { icon: 'list', title: 'Bulk messaging is exhausting', desc: 'Copy-pasting to 200 contacts one by one. Hours per campaign.' }] },
+        steps: { eyebrow: 'How it works', title: 'Up & running in 3 steps', desc: 'The Bizdavar team installs, configures and trains your team.', items: [{ num: '01', icon: 'link', title: 'Connect your number', desc: 'Link your existing WhatsApp Business number to the custom panel.' }, { num: '02', icon: 'users', title: 'Add your team', desc: 'Invite staff, assign roles. Everyone replies from one dashboard.' }, { num: '03', icon: 'rocket', title: 'Grow & automate', desc: 'Auto-replies, bulk campaigns, track every conversation.' }], cta: 'Custom development — contact us' },
+        features: { eyebrow: 'Features', title: 'Everything your team needs', desc: 'Not just chat — a full CRM built around WhatsApp with custom code.', items: [{ icon: 'inbox', title: 'Unified team inbox', desc: 'All conversations in one place.' }, { icon: 'send', title: 'Bulk messaging', desc: 'Personalized messages to thousands.' }, { icon: 'robot', title: 'Auto-response 24/7', desc: 'After-hours rules, keywords, greetings.' }, { icon: 'chart-bar', title: 'Analytics & reports', desc: 'Response times, volume, team performance.' }, { icon: 'users', title: 'Role-based access', desc: 'Manager, agent, viewer.' }, { icon: 'plug', title: 'API integration', desc: 'Connect to your CRM or e-commerce via REST API.' }] },
+        audiences: { eyebrow: 'Who it\'s for', title: 'Built for businesses like yours', desc: 'Any team that talks to customers on WhatsApp.', items: [{ icon: 'health', title: 'Clinics & healthcare', region: 'Turkey · UAE · Europe', desc: 'Appointments, reminders, follow-ups.', tag: 'Booking automation' }, { icon: 'bag', title: 'E-commerce', region: 'All regions', desc: 'Order updates, cart recovery.', tag: 'Bulk campaigns' }, { icon: 'home', title: 'Real estate', region: 'Dubai · Istanbul', desc: 'Listings, lead follow-up.', tag: 'Lead tracking' }, { icon: 'utensils', title: 'Restaurants', region: 'Turkey · Europe', desc: 'Reservations, catering.', tag: 'Auto-reservation' }] },
         pricing: { eyebrow: 'Pricing', title: 'WhatsApp CRM script plans', desc: 'One-time payment — full ownership of script and panel.', note: 'One-time payment — includes setup, configuration and initial training.', plans: [{ id: 'basic', name: 'Basic', price: '$500', period: '', desc: 'WhatsApp CRM script for small teams.', features: ['1 WhatsApp number', 'Team panel', 'Shared inbox', 'Basic auto-reply', 'Setup & onboarding'], cta: 'Custom development — contact us', href: '/pages/contact?product=whatsapp-crm-basic' }, { id: 'pro', name: 'Professional', price: '$800', period: '', badge: 'Most popular', desc: 'For growing businesses with bulk messaging.', features: ['Everything in Basic', 'Bulk messaging', 'Advanced auto-reply', 'Analytics', '4-language UI'], cta: 'Custom development — contact us', href: '/pages/contact?product=whatsapp-crm-pro', featured: true }, { id: 'enterprise', name: 'Enterprise', price: '$1,200', period: '', desc: 'Multiple numbers, API and custom integrations.', features: ['Everything in Pro', 'Custom API', 'Multiple numbers', 'CRM integration', 'Priority support'], cta: 'Custom development — contact us', href: '/pages/contact?product=whatsapp-crm-enterprise' }] },
         faq: { eyebrow: 'FAQ', title: 'Common questions', items: [{ q: 'How much does the WhatsApp CRM script cost?', a: 'Three plans: $500, $800 and $1,200 — one-time payment, no monthly subscription.' }, { q: 'Can multiple staff use one number?', a: 'Yes — unlimited staff on one panel and one WhatsApp Business number.' }, { q: 'Does it support bulk messaging?', a: 'Yes — on Professional ($800) and Enterprise ($1,200) plans.' }, { q: 'Is it custom script or SaaS?', a: 'Custom code by the Bizdavar team — full ownership, no third-party platform dependency.' }, { q: 'Does it support Farsi and Turkish?', a: 'Yes — EN, AR, TR and FA UI and support.' }] },
         about: { title: 'Custom development by Bizdavar', body: 'This <strong>WhatsApp CRM script</strong> is custom-built by the <strong>Bizdavar team</strong> — team panel, web app and API under your control.', ctaContact: 'Custom development — contact us', ctaPortfolio: 'Case studies' },

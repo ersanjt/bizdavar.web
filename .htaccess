@@ -85,6 +85,11 @@ AddType 'text/html; charset=UTF-8' .html
   RewriteCond %{THE_REQUEST} \s/blog[\s?] [NC]
   RewriteRule ^blog/?$ /pages/blog [R=301,L]
 
+  # Legacy typo: fguard → fxguard (old HTML referenced fguard/*.webp)
+  RewriteRule ^pages/fguard/?$ /pages/fxguard [R=301,L]
+  RewriteRule ^assets/images/products/fguard/fguard-hero\.webp$ /assets/images/products/fxguard/fxguard-hero.svg [R=301,L]
+  RewriteRule ^assets/images/products/fguard/(.*)$ /assets/images/products/fxguard/$1 [R=301,L]
+
   # Internal serve /blog and /pages/blog without .html
   RewriteRule ^blog/?$ pages/blog.html [L]
   RewriteRule ^pages/blog/?$ pages/blog.html [L]

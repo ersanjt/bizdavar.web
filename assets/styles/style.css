@@ -696,17 +696,12 @@ ul { list-style: none; }
 }
 
 .about__feature::before {
-  content: '✓';
-  color: var(--yellow);
-  background: var(--navy);
+  content: '';
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
   flex-shrink: 0;
+  background: var(--navy) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M5 12l4 4 10-10' stroke='%23FFDE00' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 12px 12px no-repeat;
 }
 
 /* Fast Web Promo */
@@ -811,9 +806,13 @@ ul { list-style: none; }
 }
 
 .pricing-card__features li::before {
-  content: '✓';
-  color: #10B981;
-  font-weight: 700;
+  content: '';
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  background-color: #10B981;
+  mask: var(--bd-icon-check) no-repeat center / contain;
+  -webkit-mask: var(--bd-icon-check) no-repeat center / contain;
 }
 
 .pricing-card__footer {
@@ -1575,11 +1574,14 @@ ul { list-style: none; }
 }
 
 .check-list li::before {
-  content: '✓';
+  content: '';
   position: absolute;
   right: 0;
-  color: #10B981;
-  font-weight: 700;
+  width: 1em;
+  height: 1em;
+  background-color: #10B981;
+  mask: var(--bd-icon-check) no-repeat center / contain;
+  -webkit-mask: var(--bd-icon-check) no-repeat center / contain;
 }
 
 .product-tags {

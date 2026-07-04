@@ -164,7 +164,9 @@
   }
 
   function cellValue(val) {
-    if (val === true) return '<span class="fast-compare-yes">✓</span>';
+    if (val === true) return window.BD_ICON
+      ? `<span class="fast-compare-yes" aria-hidden="true">${window.BD_ICON('check', { size: 16 })}</span>`
+      : '<span class="fast-compare-yes" aria-hidden="true"></span>';
     if (val === '—' || val === false) return '<span class="fast-compare-no">—</span>';
     return val;
   }

@@ -5,8 +5,7 @@
 (function () {
   const S = 'stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" fill="none"';
   const A = 'fill="var(--yellow,#FFDE00)" stroke="none"';
-  const WA = 'fill="currentColor" stroke="none"';
-  const WA_PATH = 'M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z';
+  const R = 'fill="var(--red,#E62833)" stroke="none"';
 
   const ICONS = {
     home: `<path ${S} d="M4 10.5L12 4l8 6.5V19a1.5 1.5 0 01-1.5 1.5H15v-6H9v6H5.5A1.5 1.5 0 014 19v-8.5z"/><circle cx="12" cy="10" r="1.5" ${A}/>`,
@@ -16,8 +15,9 @@
     globe: `<circle cx="12" cy="12" r="9" ${S}/><path ${S} d="M3 12h18M12 3c2.5 2.8 4 6 4 9s-1.5 6.2-4 9c-2.5-2.8-4-6-4-9s1.5-6.2 4-9z"/><circle cx="12" cy="12" r="1.5" ${A}/>`,
     article: `<path ${S} d="M6 4h12v16H6z"/><path ${S} d="M9 8h6M9 12h6M9 16h4"/><rect x="8" y="7" width="2" height="2" rx="0.5" ${A}/>`,
     phone: `<path ${S} d="M6.5 4h3l1.5 4-2 1.5a11 11 0 005 5L14 13l4 1.5v3a1.5 1.5 0 01-1.5 1.5A13 13 0 014 6A1.5 1.5 0 015.5 4.5z"/><circle cx="17" cy="7" r="1.5" ${A}/>`,
-    whatsapp: `<path ${WA} d="${WA_PATH}"/>`,
-    'whatsapp-solid': `<path ${WA} d="${WA_PATH}"/>`,
+    whatsapp: `<path ${S} d="M6 5h12a2 2 0 012 2v8l-3-2H6a2 2 0 01-2-2V7a2 2 0 012-2z"/><path ${S} d="M9 10h6M9 13h4"/><circle cx="17" cy="7" r="1.5" ${A}/>`,
+    'whatsapp-solid': `<path ${S} d="M6 5h12a2 2 0 012 2v8l-3-2H6a2 2 0 01-2-2V7a2 2 0 012-2z"/><path ${S} d="M9 10h6M9 13h4"/><circle cx="17" cy="7" r="1.5" ${A}/>`,
+    'chat-wa': `<path ${S} d="M6 5h12a2 2 0 012 2v8l-3-2H6a2 2 0 01-2-2V7a2 2 0 012-2z"/><path ${S} d="M9 10h6M9 13h4"/><circle cx="17" cy="7" r="1.5" ${A}/>`,
     mail: `<rect x="3" y="6" width="18" height="13" rx="2" ${S}/><path ${S} d="M3 8l9 6 9-6"/><circle cx="18" cy="8" r="1.5" ${A}/>`,
     clock: `<circle cx="12" cy="12" r="9" ${S}/><path ${S} d="M12 7v5l3 2"/><circle cx="12" cy="12" r="1" ${A}/>`,
     pin: `<path ${S} d="M12 21s7-4.5 7-11a7 7 0 10-14 0c0 6.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5" ${S}/><circle cx="12" cy="10" r="1" ${A}/>`,
@@ -36,7 +36,7 @@
     gear: `<circle cx="12" cy="12" r="3" ${S}/><path ${S} d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/><circle cx="12" cy="12" r="1" ${A}/>`,
     target: `<circle cx="12" cy="12" r="9" ${S}/><circle cx="12" cy="12" r="5" ${S}/><circle cx="12" cy="12" r="1.5" ${A}/>`,
     handshake: `<path ${S} d="M7 12l2 2 4-4 2 2 4-4"/><path ${S} d="M4 14l3 3M17 7l3 3"/><circle cx="12" cy="12" r="1.5" ${A}/>`,
-    palette: `<path ${S} d="M12 3a9 9 0 109 9c0-1.5-1.2-2-2.5-2-.8 0-1.5.5-1.5 1.5 0 1-.8 1.5-1.8 1.5A4.5 4.5 0 017 9.5 4.5 4.5 0 0112 3z"/><circle cx="8.5" cy="9" r="1" ${A}/><circle cx="11" cy="7" r="1" fill="#E62833" stroke="none"/><circle cx="14" cy="8" r="1" fill="#3B82F6" stroke="none"/>`,
+    palette: `<path ${S} d="M12 3a9 9 0 109 9c0-1.5-1.2-2-2.5-2-.8 0-1.5.5-1.5 1.5 0 1-.8 1.5-1.8 1.5A4.5 4.5 0 017 9.5 4.5 4.5 0 0112 3z"/><circle cx="8.5" cy="9" r="1" ${A}/><circle cx="11" cy="7" r="1" ${R}/><circle cx="14" cy="8" r="1" ${A}/>`,
     coin: `<circle cx="12" cy="12" r="9" ${S}/><path ${S} d="M12 7v10M9 9.5h4a2 2 0 010 4H9"/><circle cx="12" cy="12" r="1.5" ${A}/>`,
     toolbox: `<path ${S} d="M3 10h18v9a2 2 0 01-2 2H5a2 2 0 01-2-2v-9z"/><path ${S} d="M8 10V7a2 2 0 012-2h4a2 2 0 012 2v3"/><rect x="10" y="13" width="4" height="3" rx="0.5" ${A}/>`,
     'level-sensor': `<path ${S} d="M12 3v4M8 7h8"/><path ${S} d="M6 11c0 3.3 2.7 6 6 6s6-2.7 6-6"/><path ${S} d="M4 11h2M18 11h2M6 15h1M17 15h1"/><circle cx="12" cy="11" r="1.5" ${A}/>`,
@@ -65,17 +65,49 @@
     block: `<rect x="5" y="5" width="14" height="14" rx="1" ${S}/><path ${S} d="M5 12h14M12 5v14"/><circle cx="12" cy="12" r="1.5" ${A}/>`,
     snowflake: `<path ${S} d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/><circle cx="12" cy="12" r="1.5" ${A}/>`,
     battery: `<rect x="4" y="7" width="16" height="10" rx="2" ${S}/><path ${S} d="M22 11v2"/><rect x="7" y="10" width="8" height="4" rx="1" ${A}/>`,
-    'gas-station': `<path ${S} d="M6 20V6a2 2 0 012-2h6a2 2 0 012 2v14"/><path ${S} d="M16 10h2l2 3v7h-4z"/><path ${S} d="M10 10h2v4h-2z"/><circle cx="10" cy="14" r="1" ${A}/>`
+    'gas-station': `<path ${S} d="M6 20V6a2 2 0 012-2h6a2 2 0 012 2v14"/><path ${S} d="M16 10h2l2 3v7h-4z"/><path ${S} d="M10 10h2v4h-2z"/><circle cx="10" cy="14" r="1" ${A}/>`,
+    shield: `<path ${S} d="M12 3l8 3v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-3z"/><circle cx="12" cy="11" r="1.5" ${A}/>`,
+    box: `<path ${S} d="M4 8l8-4 8 4v8l-8 4-8-4V8z"/><path ${S} d="M12 4v16M4 8l8 4 8-4"/><circle cx="12" cy="12" r="1.5" ${A}/>`,
+    link: `<path ${S} d="M10 14a4 4 0 010-5.7l1.4-1.4a4 4 0 015.7 5.7l-1.8 1.8"/><path ${S} d="M14 10a4 4 0 010 5.7l-1.4 1.4a4 4 0 01-5.7-5.7l1.8-1.8"/><circle cx="12" cy="12" r="1.5" ${A}/>`,
+    users: `<circle cx="9" cy="9" r="3" ${S}/><circle cx="17" cy="10" r="2.5" ${S}/><path ${S} d="M4 19c0-3 2.2-5 5-5M14 19c0-2.5 1.8-4.5 4-4.5"/><circle cx="9" cy="9" r="1" ${A}/>`,
+    rocket: `<path ${S} d="M12 15l-2 6 2-1 2 1-2-6"/><path ${S} d="M8 16l-3-1 1-3M16 16l3-1-1-3"/><path ${S} d="M12 3c2 2 3 5 3 8a3 3 0 01-6 0c0-3 1-6 3-8z"/><circle cx="12" cy="9" r="1.5" ${A}/>`,
+    inbox: `<path ${S} d="M4 6h16v12H4z"/><path ${S} d="M4 10h5l2 3h6l2-3h5"/><circle cx="12" cy="13" r="1.5" ${A}/>`,
+    robot: `<rect x="6" y="8" width="12" height="10" rx="2" ${S}/><path ${S} d="M12 4v4M9 12h2M13 12h2M9 16h6"/><circle cx="12" cy="6" r="1" ${A}/>`,
+    plug: `<path ${S} d="M8 7V3M16 7V3M8 11h8v4a4 4 0 01-8 0v-4z"/><path ${S} d="M12 15v6"/><circle cx="12" cy="9" r="1" ${A}/>`,
+    health: `<path ${S} d="M12 21s-7-4-7-10a4 4 0 017-2 4 4 0 017 2c0 6-7 10-7 10z"/><path ${S} d="M12 10v6M9 13h6"/><circle cx="12" cy="8" r="1" ${A}/>`,
+    swap: `<path ${S} d="M7 16l-3-3 3-3M17 8l3 3-3 3"/><path ${S} d="M4 13h7M20 11h-7"/><circle cx="12" cy="12" r="1.5" ${A}/>`,
+    hourglass: `<path ${S} d="M8 3h8v4l-4 5 4 5v4H8v-4l4-5-4-5V3z"/><circle cx="12" cy="12" r="1.5" ${A}/>`,
+    check: `<path ${S} d="M5 12l4 4 10-10"/><circle cx="7" cy="12" r="1" ${A}/>`
+  };
+
+  function resolveIconName(name) {
+    if (name === 'whatsapp' || name === 'whatsapp-solid') return 'chat-wa';
+    return name;
+  }
+
+  window.bdRenderIcon = function (name, opts = {}) {
+    return window.BD_ICON(name, opts);
+  };
+
+  window.bdRegionListHtml = function (items) {
+    if (!Array.isArray(items) || !items.length) return '';
+    return items.map((item, i) => {
+      const code = String(item.code || '').replace(/[<>&"]/g, '');
+      const label = String(item.label || '').replace(/[<>&"]/g, '');
+      const sep = i < items.length - 1 ? '<span class="bd-region-sep" aria-hidden="true"></span>' : '';
+      return `<span class="bd-region-item"><span class="bd-region-badge">${code}</span><span class="bd-region-label">${label}</span></span>${sep}`;
+    }).join('');
   };
 
   window.BD_ICON = function (name, opts = {}) {
-    const svg = ICONS[name];
+    const resolved = resolveIconName(name);
+    const svg = ICONS[resolved];
     if (!svg) return '';
     const size = opts.size || 24;
     const parts = ['bd-icon'];
     if (opts.class) parts.push(opts.class);
     if (opts.variant) parts.push(`bd-icon--${opts.variant}`);
-    if (name === 'whatsapp' || name === 'whatsapp-solid') parts.push('bd-icon--wa');
+    if (resolved === 'chat-wa' || name === 'whatsapp' || name === 'whatsapp-solid') parts.push('bd-icon--wa');
     const aria = opts.label
       ? ` role="img" aria-label="${opts.label}"`
       : ' aria-hidden="true" focusable="false"';
