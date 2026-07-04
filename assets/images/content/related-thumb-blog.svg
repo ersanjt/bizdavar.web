@@ -1,7 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 72" width="120" height="72" aria-hidden="true">
-  <rect width="120" height="72" rx="10" fill="#fef3c7"/>
-  <rect x="16" y="18" width="88" height="10" rx="5" fill="#16163f" opacity="0.85"/>
-  <rect x="16" y="36" width="72" height="6" rx="3" fill="#94a3b8"/>
-  <rect x="16" y="48" width="56" height="6" rx="3" fill="#cbd5e1"/>
-  <rect x="16" y="58" width="40" height="6" rx="3" fill="#E62833" opacity="0.7"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 144" width="240" height="144" aria-hidden="true">
+  <defs>
+    <linearGradient id="blogBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fff7ed"/>
+    </linearGradient>
+    <linearGradient id="blogCover" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16163f"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="144" rx="14" fill="url(#blogBg)"/>
+  <rect x="22" y="16" width="196" height="112" rx="12" fill="#fff" stroke="#fde68a" stroke-width="1.5"/>
+  <rect x="30" y="24" width="180" height="46" rx="8" fill="url(#blogCover)"/>
+  <rect x="42" y="36" width="48" height="6" rx="3" fill="#FFDE00" opacity="0.9"/>
+  <rect x="42" y="48" width="72" height="4" rx="2" fill="#fff" opacity="0.35"/>
+  <circle cx="196" cy="36" r="10" fill="#FFDE00" opacity="0.85"/>
+  <rect x="30" y="78" width="120" height="8" rx="4" fill="#16163f" opacity="0.82"/>
+  <rect x="30" y="92" width="156" height="5" rx="2.5" fill="#94a3b8"/>
+  <rect x="30" y="102" width="132" height="5" rx="2.5" fill="#cbd5e1"/>
+  <rect x="30" y="112" width="96" height="5" rx="2.5" fill="#e2e8f0"/>
+  <rect x="30" y="118" width="44" height="14" rx="7" fill="#E62833" opacity="0.85"/>
+  <rect x="164" y="112" width="46" height="14" rx="7" fill="#fff7ed" stroke="#fbbf24" stroke-width="1"/>
+  <rect x="172" y="118" width="30" height="3" rx="1.5" fill="#f59e0b" opacity="0.65"/>
+  <rect x="188" y="78" width="22" height="22" rx="6" fill="#fef3c7" stroke="#fde68a" stroke-width="1"/>
+  <path d="M194 84v12M188 90h12" stroke="#E62833" stroke-width="2" stroke-linecap="round"/>
 </svg>

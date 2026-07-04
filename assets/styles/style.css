@@ -1862,11 +1862,12 @@ a.about__feature:hover {
 
 .related-links__thumb {
   width: 100%;
+  aspect-ratio: 5 / 3;
   height: auto;
-  max-height: 72px;
   object-fit: cover;
   border-radius: calc(var(--radius) - 2px);
-  margin-bottom: 4px;
+  margin-bottom: 8px;
+  box-shadow: 0 4px 14px rgba(22, 22, 63, 0.08);
 }
 
 .related-links__card:hover { transform: translateY(-3px); }

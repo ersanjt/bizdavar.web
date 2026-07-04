@@ -339,7 +339,7 @@
               const desc = l.descKey ? t(l.descKey, l.desc) : l.desc;
 
               const thumb = l.thumb
-                ? `<img src="${path(l.thumb)}" alt="" class="related-links__thumb" width="120" height="72" loading="lazy">`
+                ? `<img src="${path(l.thumb)}" alt="" class="related-links__thumb" width="240" height="144" loading="lazy" decoding="async">`
                 : '';
 
               return `

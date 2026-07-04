@@ -8,6 +8,8 @@
     "audit:site": "node scripts/site-audit.js",
     "audit:images": "node scripts/verify-config-images.js",
     "sitemap": "node scripts/gen-sitemap.js",
+    "seo-head": "node scripts/gen-seo-head.js",
+    "seo": "node scripts/gen-seo-head.js && node scripts/gen-sitemap.js && node scripts/gen-robots.js",
     "robots": "node scripts/gen-robots.js",
     "optimize": "node scripts/optimize-html.js",
     "brand:icons": "python scripts/generate-brand-icons.py",

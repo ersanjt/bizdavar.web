@@ -9,7 +9,7 @@ const OUT = path.join(__dirname, '..', 'robots.txt');
 const BASE = 'https://bizdavar.com';
 
 const content = `# Bizdavar Group — ${BASE}
-# Multilingual site (fa / tr / en) — canonical URLs are extensionless
+# Multilingual site — fa (root), tr (/tr/), en (/en/) — 81 indexed URLs in sitemap
 
 User-agent: *
 Allow: /

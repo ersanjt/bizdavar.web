@@ -479,6 +479,9 @@
       if (document.body?.dataset?.page === 'article') {
         return 'fa';
       }
+      if (window.BIZDAVAR_LOCALE_URL) {
+        return window.BIZDAVAR_LOCALE_URL.currentLocale();
+      }
       const params = new URLSearchParams(window.location.search);
       if (params.get('lang') && window.BIZDAVAR_LOCALES[params.get('lang')]) {
         localStorage.setItem(STORAGE_KEY, params.get('lang'));
@@ -506,9 +509,20 @@
 
       const country = await detectCountryCode();
       const loc = localeFromCountry(country);
+      sessionStorage.setItem(GEO_CACHE_KEY, loc);
+
+      const pathLocale = window.BIZDAVAR_LOCALE_URL?.currentLocale?.() || 'fa';
+      if (pathLocale === 'fa' && loc !== 'fa' && window.BIZDAVAR_LOCALE_URL) {
+        const target = window.BIZDAVAR_LOCALE_URL.toLocalePath(
+          loc,
+          window.BIZDAVAR_LOCALE_URL.currentPagePath()
+        );
+        window.location.replace(target + window.location.hash);
+        return loc;
+      }
+
       localStorage.setItem(STORAGE_KEY, loc);
       localStorage.removeItem(MANUAL_KEY);
-      sessionStorage.setItem(GEO_CACHE_KEY, loc);
       if (loc !== currentLang) {
         applyLocaleData(loc);
         document.dispatchEvent(new CustomEvent('bizdavar:locale', { detail: { locale: loc } }));
@@ -521,7 +535,21 @@
       if (!window.BIZDAVAR_LOCALES[lang]) return;
       localStorage.setItem(STORAGE_KEY, lang);
       localStorage.setItem(MANUAL_KEY, '1');
-      window.location.reload();
+      if (window.BIZDAVAR_LOCALE_URL) {
+        const target = window.BIZDAVAR_LOCALE_URL.toLocalePath(
+          lang,
+          window.BIZDAVAR_LOCALE_URL.currentPagePath()
+        );
+        if (window.location.pathname !== target.split('#')[0]) {
+          window.location.href = target + window.location.hash;
+          return;
+        }
+      } else {
+        window.location.reload();
+        return;
+      }
+      applyLocaleData(lang);
+      document.dispatchEvent(new CustomEvent('bizdavar:locale', { detail: { locale: lang } }));
     },
 
     async init() {
@@ -535,14 +563,16 @@
   window.BIZDAVAR_I18N = I18n;
 
   (function preloadLocale() {
+    const pathLocale = window.BIZDAVAR_LOCALE_URL?.currentLocale?.();
     const params = new URLSearchParams(window.location.search);
     const qLang = params.get('lang');
     const stored = localStorage.getItem(STORAGE_KEY);
     const manual = localStorage.getItem(MANUAL_KEY) === '1';
     const articlePage = document.body?.dataset?.page === 'article';
     const pre = articlePage ? 'fa'
-      : (qLang && window.BIZDAVAR_LOCALES[qLang]) ? qLang
-      : (manual && stored && window.BIZDAVAR_LOCALES[stored]) ? stored : null;
+      : pathLocale || null
+      || ((qLang && window.BIZDAVAR_LOCALES[qLang]) ? qLang
+      : (manual && stored && window.BIZDAVAR_LOCALES[stored]) ? stored : null);
     if (pre) applyLocaleData(pre);
   })();
 })();

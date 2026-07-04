@@ -1,18 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" width="480" height="320" role="img" aria-hidden="true">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" width="480" height="320" aria-hidden="true">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="webBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#1e3a5f"/>
       <stop offset="55%" stop-color="#2563eb"/>
       <stop offset="100%" stop-color="#3b82f6"/>
     </linearGradient>
-    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="screenFill" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#f8fafc"/>
       <stop offset="100%" stop-color="#e2e8f0"/>
     </linearGradient>
   </defs>
-  <rect width="480" height="320" rx="20" fill="url(#bg)"/>
+  <rect width="480" height="320" rx="20" fill="url(#webBg)"/>
+  <rect x="150" y="22" width="180" height="20" rx="10" fill="#fff" opacity="0.18"/>
+  <rect x="168" y="29" width="144" height="6" rx="3" fill="#fff" opacity="0.88"/>
   <rect x="48" y="36" width="384" height="248" rx="14" fill="#0f172a" opacity="0.25"/>
-  <rect x="56" y="44" width="368" height="232" rx="12" fill="url(#screen)" stroke="#fff" stroke-opacity="0.35" stroke-width="2"/>
+  <rect x="56" y="44" width="368" height="232" rx="12" fill="url(#screenFill)" stroke="#fff" stroke-opacity="0.35" stroke-width="2"/>
   <rect x="56" y="44" width="368" height="36" rx="12" fill="#16163f"/>
   <rect x="56" y="56" width="368" height="24" fill="#16163f"/>
   <circle cx="78" cy="62" r="5" fill="#E62833"/>
@@ -29,6 +31,8 @@
   <rect x="276" y="128" width="88" height="8" rx="4" fill="#2563eb" opacity="0.2"/>
   <rect x="276" y="144" width="96" height="8" rx="4" fill="#2563eb" opacity="0.2"/>
   <rect x="276" y="168" width="72" height="20" rx="6" fill="#FFDE00"/>
-  <text x="240" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#fff" font-weight="800">Fast Web Studio</text>
-  <text x="240" y="292" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#fff" opacity="0.9">Responsive · WooCommerce · 5-day delivery</text>
+  <rect x="96" y="286" width="288" height="6" rx="3" fill="#fff" opacity="0.35"/>
+  <rect x="132" y="298" width="72" height="6" rx="3" fill="#FFDE00" opacity="0.85"/>
+  <rect x="216" y="298" width="56" height="6" rx="3" fill="#fff" opacity="0.55"/>
+  <rect x="288" y="298" width="60" height="6" rx="3" fill="#fff" opacity="0.55"/>
 </svg>

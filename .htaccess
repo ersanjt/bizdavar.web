@@ -45,8 +45,9 @@ AddType 'text/html; charset=UTF-8' .html
     form-action 'self' mailto: https://formspree.io https://*.formspree.io; \
     upgrade-insecure-requests"
 
-  # Cache static assets in browser
+  # Cache static assets in browser (no CSP on images/fonts — breaks SVG <text> in <img>)
   <FilesMatch "\.(css|js|png|jpe?g|webp|svg|gif|ico|woff2?)$">
+    Header unset Content-Security-Policy
     Header set Cache-Control "public, max-age=604800, immutable"
   </FilesMatch>
 </IfModule>
@@ -80,6 +81,14 @@ AddType 'text/html; charset=UTF-8' .html
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_URI} ^(.+)/$
   RewriteRule ^ %1 [R=301,L]
+
+  # /fa/ prefix → root (Persian is default, no /fa/ in URLs)
+  RewriteRule ^fa/?(.*)$ /$1 [R=301,L]
+
+  # Locale-prefixed URLs (tr/en) — serve same HTML; locale resolved from path
+  RewriteRule ^(tr|en)/?$ index.html [L]
+  RewriteRule ^(tr|en)/blog/?$ pages/blog.html [L]
+  RewriteRule ^(tr|en)/pages/(.+?)/?$ pages/$2.html [L]
 
   # /blog → /pages/blog (legacy URL — external canonical redirect)
   RewriteCond %{THE_REQUEST} \s/blog[\s?] [NC]

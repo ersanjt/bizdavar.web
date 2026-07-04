@@ -2,6 +2,8 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <script src="/assets/scripts/i18n/locale-url.js"></script>
+  <script src="/assets/scripts/i18n/seo-head.js"></script>
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -22,54 +24,65 @@
   <link rel="icon" href="/assets/images/brand/favicon.png" type="image/png" sizes="32x32">
   <link rel="icon" href="/assets/images/brand/favicon-16.png" type="image/png" sizes="16x16">
   <link rel="apple-touch-icon" href="/assets/images/brand/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/styles/site.css">
   <meta name="theme-color" content="#0f172a">
-  <link rel="stylesheet" href="/assets/styles/fonts.css">
-  <link rel="stylesheet" href="/assets/styles/typography.css">
-  <link rel="stylesheet" href="/assets/styles/icons.css">
-  <link rel="stylesheet" href="/assets/styles/tokens.css">
-  <link rel="stylesheet" href="/assets/styles/style.css">
-  <link rel="stylesheet" href="/assets/styles/layout.css">
-  <link rel="stylesheet" href="/assets/styles/i18n.css">
-  <link rel="stylesheet" href="/assets/styles/footer.css">
-  <link rel="stylesheet" href="/assets/styles/responsive.css">
-  <link rel="stylesheet" href="/assets/styles/premium.css">
-  <link rel="stylesheet" href="/assets/styles/bizswap.css">
+<link rel="stylesheet" href="/assets/styles/bizswap.css">
   <meta name="description" content="BizSwap — ماژول DeFi برای اتصال کیف پول، سواپ on-chain، پیش‌فروش توکن، اسلیپیج و پنل ادمین BEP-20. توسعه‌یافته توسط تیم بیزدوار.">
 </head>
 <body data-page="bizswap" data-depth="1">
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXWQQWF8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <a href="#main-content" class="skip-link" data-i18n="common.skipLink">رفتن به محتوای اصلی</a>
-  <div class="top-bar" id="topBar"></div>
-  <header class="header" id="siteHeader"></header>
-  <nav class="breadcrumbs-wrap" id="breadcrumbs" data-i18n-aria="common.breadcrumbAria" aria-label="مسیر صفحه"></nav>
-  <div class="overlay" id="overlay"></div>
+    <script src="/assets/scripts/components/page-shell.js"></script>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXWQQWF8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<main id="main-content" class="site-main">
 
-  <main id="main-content" class="site-main">
+    <section class="bizswap-hero">
+      <div class="container bizswap-hero__grid">
+        <div class="bizswap-hero__content">
+          <img src="/assets/images/products/bizswap/bizswap-logo.svg" alt="BizSwap" class="bizswap-hero__logo" width="120" height="40" loading="eager">
+          <span class="section__tag" data-i18n="caseStudy.bizswap.hero.tag">محصول Web3 · DeFi</span>
+          <h1 data-i18n="caseStudy.bizswap.hero.title">BizSwap — پیش‌فروش و سواپ توکن</h1>
+          <p data-i18n="caseStudy.bizswap.hero.desc">ماژول front-end و اسکریپت on-chain برای پیش‌فروش، سواپ مستقیم در وبسایت و اتصال کیف پول — برای پروژه‌های RWA و توکن دارایی‌محور.</p>
+          <p class="bizswap-hero__chains" data-i18n="caseStudy.bizswap.hero.chains">BNB Chain · BEP-20 · RWA · Presale</p>
+          <div class="bizswap-hero__actions">
+            <a href="/pages/contact?product=bizswap" class="btn btn--primary" data-i18n="caseStudy.bizswap.hero.ctaContact">سفارش ماژول مشابه</a>
+            <a href="/pages/portfolio" class="btn btn--outline" data-i18n="caseStudy.bizswap.hero.ctaPortfolio">سایر نمونه‌کارها</a>
+          </div>
+          <p class="bizswap-hero__trust" data-i18n="caseStudy.bizswap.hero.trust">توسعه Web3 · کد اختصاصی · پشتیبانی بیزدوار</p>
+        </div>
+        <div class="bizswap-hero__media">
+          <img src="/assets/images/products/bizswap/bizswap-hero.svg" alt="" data-i18n-alt="caseStudy.bizswap.about.imageAlt" loading="eager" width="640" height="360" alt="رابط سواپ توکن BizSwap — ماژول Web3 توسعه‌یافته توسط بیزدوار">
+        </div>
+      </div>
+    </section>
 
-    <section class="page-hero page-hero--pro page-hero--bizswap">
-      <div class="container">
-        <img src="/assets/images/products/bizswap/bizswap-logo.svg" alt="BizSwap" width="120" height="40" style="margin-bottom:16px">
-        <span class="section__tag" data-i18n="caseStudy.bizswap.hero.tag">محصول Web3 · DeFi</span>
-        <h1 data-i18n="caseStudy.bizswap.hero.title">BizSwap — پیش‌فروش و سواپ توکن</h1>
-        <p data-i18n="caseStudy.bizswap.hero.desc">ماژول front-end و اسکریپت on-chain برای پیش‌فروش، سواپ مستقیم در وبسایت و اتصال کیف پول — برای پروژه‌های RWA و توکن دارایی‌محور.</p>
+    <section class="bizswap-stats" aria-label="BizSwap module stats">
+      <div class="container bizswap-stats__grid">
+        <div>
+          <div class="bizswap-stats__value" data-i18n="caseStudy.bizswap.stats.capabilities">۶</div>
+          <div class="bizswap-stats__label" data-i18n="caseStudy.bizswap.stats.capabilitiesLabel">قابلیت UI</div>
+        </div>
+        <div>
+          <div class="bizswap-stats__value" data-i18n="caseStudy.bizswap.stats.flow">۴</div>
+          <div class="bizswap-stats__label" data-i18n="caseStudy.bizswap.stats.flowLabel">مرحله swap</div>
+        </div>
+        <div>
+          <div class="bizswap-stats__value" data-i18n="caseStudy.bizswap.stats.chain">BEP-20</div>
+          <div class="bizswap-stats__label" data-i18n="caseStudy.bizswap.stats.chainLabel">شبکه پشتیبانی</div>
+        </div>
+        <div>
+          <div class="bizswap-stats__value" data-i18n="caseStudy.bizswap.stats.module">Web3</div>
+          <div class="bizswap-stats__label" data-i18n="caseStudy.bizswap.stats.moduleLabel">نوع ماژول</div>
+        </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container about-grid">
-        <div class="about__image bizswap-hero-media">
-          <img src="/assets/images/products/bizswap/bizswap-hero.svg" alt="" data-i18n-alt="caseStudy.bizswap.about.imageAlt" loading="eager" width="640" height="360" alt="رابط سواپ توکن BizSwap — ماژول Web3 توسعه‌یافته توسط بیزدوار">
-        </div>
-        <div class="about__content prose">
+      <div class="container bizswap-about">
+        <div class="prose bizswap-about__prose">
           <h2 data-i18n="caseStudy.bizswap.about.title">درباره ماژول</h2>
-          <p data-i18n-html="caseStudy.bizswap.about.body"><strong>BizSwap</strong> ماژول پیش‌فروش و سواپ توکن است که توسط <strong>تیم بیزدوار</strong> طراحی و پیاده‌سازی شده — کاربر بدون خروج از وبسایت پروژه، stablecoin را به توکن تبدیل می‌کند.</pstrong> ????? ???????? ? ???? ???? ??? ?? ???? <strong>??? ???????</strong> ???? ????????? Web3 ? RWA ?????????? ??? � ???? ??????? ?? ????? ????? ???? ???? ?????.</p>
+          <p data-i18n-html="caseStudy.bizswap.about.body"><strong>BizSwap</strong> ماژول پیش‌فروش و سواپ توکن است که توسط <strong>تیم بیزدوار</strong> طراحی و پیاده‌سازی شده — کاربر بدون خروج از وبسایت پروژه، stablecoin را به توکن تبدیل می‌کند.</pstrong> ماژول پیش‌فروش و سواپ توکن است که توسط <strong>تیم بیزدوار</strong> طراحی و پیاده‌سازی شده — کاربر بدون خروج از وبسایت پروژه، stablecoin را به توکن تبدیل می‌کند.</pstrong> ماژول پیش‌فروش و سواپ توکن است که توسط <strong>تیم بیزدوار</strong> طراحی و پیاده‌سازی شده — کاربر بدون خروج از وبسایت پروژه، stablecoin را به توکن تبدیل می‌کند.</p>
           <p data-i18n="caseStudy.bizswap.about.body2">شامل UI اتصال کیف پول (Web3)، ویجت سواپ با انتخاب توکن، دکمه‌های درصد سریع، محاسبه اسلیپیج و حداقل دریافتی، نمایش وضعیت تراکنش on-chain و یکپارچگی با اسمارت‌کنترکت BEP-20.</p>
           <h3 data-i18n="caseStudy.bizswap.about.specsTitle">قابلیت‌های فنی</h3>
-          <ul id="bizswapSpecs"></ul>
-          <div class="article__cta">
-            <a href="/pages/contact" class="btn btn--primary" data-i18n="caseStudy.bizswap.about.ctaContact">سفارش ماژول مشابه</a>
-            <a href="/pages/portfolio" class="btn btn--outline" data-i18n="caseStudy.bizswap.about.ctaPortfolio">سایر نمونه‌کارها</a>
-          </div>
+          <ul class="check-list" id="bizswapSpecs"></ul>
         </div>
       </div>
     </section>
@@ -108,9 +121,9 @@
     <section class="section">
       <div class="container">
         <div class="section__header">
-          <h2 class="section__title" data-i18n="caseStudy.bizswap.useCases.title">????? ???? ?? ???????????</h2>
+          <h2 class="section__title" data-i18n="caseStudy.bizswap.useCasesTitle">مناسب برای چه پروژه‌هایی؟</h2>
         </div>
-        <ul class="check-list" id="bizswapUseCases"></ul>
+        <ul class="check-list check-list--cols" id="bizswapUseCases"></ul>
       </div>
     </section>
 
@@ -132,42 +145,14 @@
         <div class="section__header">
           <h2 class="section__title" data-i18n="caseStudy.bizswap.related.title">محصولات و خدمات مرتبط</h2>
         </div>
-        <div class="features-grid">
-          <a href="/pages/fxguard" class="feature-item feature-item--link"><span class="feature-item__icon" data-bd-icon="globe" data-bd-size="26"></span><h3>CRM ??????</h3><p>??????? WhatsApp CRM</p></a>
-          <a href="/pages/fast" class="feature-item feature-item--link"><span class="feature-item__icon" data-bd-icon="globe" data-bd-size="26"></span><h3>Fast Studio</h3><p>????? ??</p></a>
-          <a href="/pages/portfolio" class="feature-item feature-item--link"><span class="feature-item__icon" data-bd-icon="briefcase" data-bd-size="26"></span><h3>???????????</h3><p>?????? ? Web3</p></a>
-          <a href="/pages/services" class="feature-item feature-item--link"><span class="feature-item__icon" data-bd-icon="list" data-bd-size="26"></span><h3>?????</h3><p>????? ?? ? ??</p></a>
-        </div>
+        <div class="features-grid" id="bizswapRelated"></div>
       </div>
     </section>
 
     <div id="geoStrip"></div>
   </main>
 
-  <footer class="footer" id="siteFooter"></footer>
-  <button class="back-to-top" id="backToTop" aria-label="?????? ?? ????" data-i18n-aria="common.backToTop" aria-label="بازگشت به بالا"></button>
-
-  <script src="/assets/scripts/config/paths.js"></script>
-  <script src="/assets/scripts/config/site-config.js"></script>
-  <script src="/assets/scripts/i18n/locales.js"></script>
-  <script src="/assets/scripts/i18n/locales-pages.js"></script>
-  <script src="/assets/scripts/i18n/locale-seo.js"></script>
-  <script src="/assets/scripts/i18n/i18n.js"></script>
-  <script src="/assets/scripts/i18n/page-i18n.js"></script>
-  <script src="/assets/scripts/components/biz-icons.js"></script>
-  <script src="/assets/scripts/components/context.js"></script>
-  <script src="/assets/scripts/components/chrome.js"></script>
-  <script src="/assets/scripts/components/schema.js"></script>
-  <script src="/assets/scripts/components/grids.js"></script>
-  <script src="/assets/scripts/main.js"></script>
-  <script src="/assets/scripts/premium.js"></script>
-  <script src="/assets/scripts/nav-flow.js"></script>
-  <script src="/assets/scripts/bizswap-page.js"></script>
-  <script>
-    window.__bizdavarChrome = window.renderSiteChrome;
-    if (typeof window.__bizdavarChrome === 'function') window.__bizdavarChrome();
-  </script>
-  <script src="/assets/scripts/i18n/bootstrap.js"></script>
+  <script src="/assets/scripts/site-loader.js" data-before-main="bizswap-page.js"></script>
   <script>
     bizdavarPageInit(function () {
       const crumbs = [
@@ -176,12 +161,11 @@
         { name: 'BizSwap', url: 'bizswap' }
       ];
       injectPageSeo('bizswap', { canonical: 'https://bizdavar.com/pages/bizswap' });
-      renderSiteChrome();
-      renderBreadcrumbs(crumbs);
+renderBreadcrumbs(crumbs);
       injectBreadcrumbSchema(crumbs);
       renderGeoStrip('geoStrip', {
         textKey: 'caseStudy.bizswap.geoText',
-        text: '????? ????? DeFi ? Web3 � ???? ?? ????? ?????? ? ????? ?? ??????? ????.'
+        text: 'توسعه ماژول DeFi و Web3 — بخشی از خدمات فین‌تک و طراحی وب بیزدوار گروپ.'
       });
       if (typeof initBizswapPage === 'function') initBizswapPage();
     });

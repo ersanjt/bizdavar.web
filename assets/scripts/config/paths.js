@@ -71,7 +71,11 @@
     pathPart = pathPart.replace(/\.html$/i, '');
     if (pathPart === 'index') return hash ? '/' + hash : '/';
 
-    return '/' + pathPart + hash;
+    const base = '/' + pathPart + hash;
+    const locale = window.BIZDAVAR_LOCALE_URL?.currentLocale?.() || 'fa';
+    return window.BIZDAVAR_LOCALE_URL
+      ? window.BIZDAVAR_LOCALE_URL.toLocalePath(locale, base)
+      : base;
   };
 
   function fixInternalPageRefs() {

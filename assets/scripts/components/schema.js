@@ -56,24 +56,32 @@
 
   function injectHreflang(canonicalUrl) {
     document.querySelectorAll('link[data-bd-hreflang]').forEach(el => el.remove());
-    const raw = canonicalUrl || C.baseUrl;
-    let base;
-    try {
-      const url = new URL(raw.startsWith('http') ? raw : `${C.baseUrl.replace(/\/$/, '')}/${String(raw).replace(/^\//, '')}`);
-      base = url.origin + url.pathname;
-    } catch (_) {
-      base = C.baseUrl.replace(/\/$/, '');
+    const LU = window.BIZDAVAR_LOCALE_URL;
+    let alts;
+    if (LU) {
+      const pagePath = LU.currentPagePath();
+      alts = LU.hreflangUrls(pagePath);
+    } else {
+      let base;
+      try {
+        const raw = canonicalUrl || C.baseUrl;
+        const url = new URL(raw.startsWith('http') ? raw : `${C.baseUrl.replace(/\/$/, '')}/${String(raw).replace(/^\//, '')}`);
+        base = url.origin + url.pathname;
+      } catch (_) {
+        base = C.baseUrl.replace(/\/$/, '');
+      }
+      alts = {
+        fa: `${base}?lang=fa`,
+        tr: `${base}?lang=tr`,
+        en: `${base}?lang=en`,
+        'x-default': base
+      };
     }
-    [
-      ['fa', 'fa'],
-      ['tr', 'tr'],
-      ['en', 'en'],
-      ['x-default', 'en']
-    ].forEach(([hreflang, langParam]) => {
+    Object.entries(alts).forEach(([hreflang, href]) => {
       const link = document.createElement('link');
       link.rel = 'alternate';
       link.hreflang = hreflang;
-      link.href = `${base}?lang=${langParam}`;
+      link.href = href;
       link.setAttribute('data-bd-hreflang', '1');
       document.head.appendChild(link);
     });
@@ -353,11 +361,17 @@
     const title = t(titleKey, null);
     const description = t(descKey, null);
     const keywords = t(kwKey, null);
+    const LU = window.BIZDAVAR_LOCALE_URL;
+    const locale = LU?.currentLocale?.() || window.BIZDAVAR_I18N?.locale || 'fa';
+    const canonical = o.canonical && LU
+      ? LU.localizeCanonical(o.canonical, locale)
+      : (o.canonical || (LU ? LU.toAbsolute(locale, LU.currentPagePath()) : C.baseUrl));
     return window.injectSeo({
       ...o,
       title: title && title !== titleKey ? title : (o.title || C.seo.defaultTitle),
       description: description && description !== descKey ? description : (o.description || C.seo.defaultDescription),
-      keywords: keywords && keywords !== kwKey ? keywords : (o.keywords || C.seo.keywords)
+      keywords: keywords && keywords !== kwKey ? keywords : (o.keywords || C.seo.keywords),
+      canonical
     });
   };
 
