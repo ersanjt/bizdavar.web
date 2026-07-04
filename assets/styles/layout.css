@@ -175,6 +175,28 @@ body {
   line-height: 1.75;
 }
 
+.exhibition-card__media {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0 0 1rem;
+}
+
+.exhibition-card__video video,
+.exhibition-card__figure img {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(29, 29, 27, 0.08);
+  background: #000;
+}
+
+.exhibition-card__video-label {
+  margin: 0.35rem 0 0;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
 .exhibition-card__meta {
   display: grid;
   gap: 0.5rem;

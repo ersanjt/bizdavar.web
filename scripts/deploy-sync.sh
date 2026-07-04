@@ -43,6 +43,14 @@ rsync -av --delete \
   --exclude api/config.php \
   "$REPO/" "$WEB/"
 
+echo "===== FORCE SYNC assets/scripts (JS bundles) ====="
+rsync -av "$REPO/assets/scripts/" "$WEB/assets/scripts/"
+
+echo "===== TOUCH HTML + JS (cache bust on origin) ====="
+find "$WEB/assets/scripts" -type f -name '*.js' -exec touch {} + 2>/dev/null || true
+find "$WEB/pages" -type f -name '*.html' -exec touch {} + 2>/dev/null || true
+touch "$WEB/index.html" 2>/dev/null || true
+
 mkdir -p "$WEB/.well-known/acme-challenge" "$WEB/.well-known/pki-validation"
 
 chown -R "$CPANEL_USER:$CPANEL_USER" "$WEB"
@@ -83,6 +91,18 @@ for attempt in 1 2 3 4 5; do
 done
 if [[ "$ORIGIN_OK" -eq 0 ]]; then
   echo "WARN: GTM not on origin after 5 attempts — run: curl -sL -H 'Host: bizdavar.com' http://127.0.0.1/ | head -15"
+fi
+
+if curl -sfL -H "Host: bizdavar.com" "http://127.0.0.1/assets/scripts/config/company-intel.js" 2>/dev/null | grep -q 'exhibitions:'; then
+  echo "OK: company-intel.js includes exhibitions block"
+else
+  echo "WARN: company-intel.js on origin missing exhibitions — check assets/scripts sync"
+fi
+
+if curl -sfL -H "Host: bizdavar.com" "http://127.0.0.1/assets/scripts/components/grids.js" 2>/dev/null | grep -q 'intelExhibitions'; then
+  echo "OK: grids.js includes exhibition renderer"
+else
+  echo "WARN: grids.js on origin missing intelExhibitions — check assets/scripts sync"
 fi
 
 echo "[$(date -Iseconds)] Deploy sync complete → $WEB"

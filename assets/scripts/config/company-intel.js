@@ -262,6 +262,31 @@ window.BIZDAVAR_INTEL = {
   /** نمایشگاه‌ها و رویدادهای فناوری */
   exhibitions: [
     {
+      id: 'tabriz-growth-center-1399',
+      year: '۱۳۹۹',
+      yearIso: '2020',
+      dateDisplay: 'اردیبهشت ۱۳۹۹',
+      title: 'نمایشگاه دستاوردهای مرکز رشد دانشگاه تبریز — مقابله با کرونا',
+      titleEn: 'University of Tabriz growth center exhibition — COVID-19',
+      entity: 'تیم بیزدوار',
+      brand: 'BizTab · BizSan V5',
+      desc: 'معرفی دستگاه‌های مهندسی‌شده تیم بیزدوار — از جمله دماسنج BizTab و ضدعفونی‌کننده BizSan V5 — با حضور استاندار آذربایجان شرقی. پوشش ISNA، SNN و گزارش تصویری صدا و سیما.',
+      city: 'تبریز',
+      country: 'ایران',
+      source: 'صدا و سیما',
+      sourceUrl: 'https://www.iribnews.ir/fa/news/2714063/%D9%86%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%A7%D9%87-%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7',
+      sourceLabel: 'گزارش صدا و سیما',
+      image: 'assets/images/products/biztab/biztab-press.jpg',
+      video: 'assets/videos/products/bizsanitizer/exhibition-irib-2020.mp4',
+      videoPoster: 'assets/images/products/biztab/biztab-press.jpg',
+      videoLabel: 'ویدیو — گزارش تصویری نمایشگاه',
+      relatedPress: [
+        { label: 'ISNA', url: 'https://www.isna.ir/news/99022216019/%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D9%BE%DA%98%D9%88%D9%87%D8%B4%DB%8C-%D9%88-%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%D9%87-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7' },
+        { label: 'SNN', url: 'https://snn.ir/fa/news/847064/%D9%86%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%A7%D9%87-%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%E2%80%8C%D9%87%D8%A7%DB%8C-%D9%85%D8%B1%DA%A9%D8%B2-%D8%B1%D8%B4%D8%AF-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%D8%B4%DB%8C%D9%88%D8%B9-%D9%88%DB%8C%D8%B1%D9%88%D8%B3-%DA%A9%D8%B1%D9%88%D9%86%D8%A7-%D8%A7%D9%81%D8%AA%D8%AA%D8%A7%D8%AD-%D8%B4%D8%AF' }
+      ],
+      tags: ['دانشگاه تبریز', 'کرونا', 'ISNA', 'صدا و سیما']
+    },
+    {
       id: 'rinotex-1400',
       year: '۱۴۰۰',
       yearIso: '2021',
@@ -280,6 +305,7 @@ window.BIZDAVAR_INTEL = {
       sourceUrl: 'https://rinotex.ir/',
       sourceHistoryUrl: 'https://rinotex.ir/Home/Introduction',
       sourceLabel: 'سایت رسمی رینوتکس',
+      image: 'assets/images/products/biztab/biztab-installed.jpg',
       parkUnit: {
         name: 'ایمن سهند پدیده',
         nameEn: 'Imen Sahand Padideh',
@@ -338,7 +364,7 @@ window.BIZDAVAR_INTEL = {
       pressLabel: 'صدا و سیما',
       videoUrl: 'https://www.youtube.com/shorts/GcOtue1Nmlo',
       videoLabel: 'یوتیوب',
-      image: 'assets/images/products/bizsanitizer/bizsanitizer-hero.svg',
+      image: 'assets/images/products/biztab/biztab-press.jpg',
       slug: 'pages/bizsanitizer-v5.html',
       tags: ['بهداشت', 'IoT', 'کرونا', 'دانشگاه تبریز', 'RINOTEX', 'ایمن سهند پدیده', 'دیجی‌کالا']
     }

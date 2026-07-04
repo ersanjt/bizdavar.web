@@ -10,6 +10,23 @@
     absUrl, breadcrumbHref, localizeCrumbs, buildContactPoints, orgAddress
   } = ctx;
 
+  function exhibitionMediaHtml(e) {
+    if (!e || (!e.video && !e.image)) return '';
+    const poster = e.videoPoster ? path(e.videoPoster) : (e.image ? path(e.image) : '');
+    const videoBlock = e.video ? `
+      <div class="exhibition-card__video">
+        <video controls preload="metadata" playsinline${poster ? ` poster="${poster}"` : ''} title="${e.videoLabel || e.title || ''}">
+          <source src="${path(e.video)}" type="video/mp4">
+        </video>
+        ${e.videoLabel ? `<p class="exhibition-card__video-label">${e.videoLabel}</p>` : ''}
+      </div>` : '';
+    const imageBlock = e.image && !e.video ? `
+      <figure class="exhibition-card__figure">
+        <img src="${path(e.image)}" alt="${e.title || ''}" loading="lazy" width="720" height="405">
+      </figure>` : '';
+    return `<div class="exhibition-card__media">${videoBlock}${imageBlock}</div>`;
+  }
+
   window.renderBlogGrid = function (containerId, limit) {
 
     const el = document.getElementById(containerId);
@@ -423,6 +440,7 @@
               <h3 class="exhibition-card__title">${e.title}</h3>
               <p class="exhibition-card__entity"><strong>${e.entity}</strong>${e.brand ? ` · ${e.brand}` : ''}</p>
               <p class="exhibition-card__desc">${e.desc}</p>
+              ${exhibitionMediaHtml(e)}
               <dl class="exhibition-card__meta">
                 ${e.section ? `<div><dt>${t('exhibitions.section', 'بخش')}</dt><dd>${e.section}</dd></div>` : ''}
                 ${e.zone ? `<div><dt>${t('exhibitions.zone', 'زون')}</dt><dd>${e.zone}</dd></div>` : ''}
