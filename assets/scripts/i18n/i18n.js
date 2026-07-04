@@ -306,36 +306,50 @@
       document.documentElement.classList.toggle('is-ltr-locale', d.dir === 'ltr');
     },
 
+    resolveString(key) {
+      let val = this.t(key);
+      if (val && val !== key) return val;
+      const faVal = getByPath(window.BIZDAVAR_LOCALES?.fa, key);
+      if (typeof faVal === 'string' && faVal) return faVal;
+      return null;
+    },
+
     applyDataI18n() {
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        const val = this.t(key);
-        if (val && val !== key) el.textContent = val;
+        const val = this.resolveString(key);
+        if (val) el.textContent = val;
       });
       document.querySelectorAll('[data-i18n-html]').forEach(el => {
         const key = el.getAttribute('data-i18n-html');
-        const val = this.t(key);
-        if (val && val !== key) el.innerHTML = val;
+        const val = this.resolveString(key);
+        if (val) el.innerHTML = val;
       });
       document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
         const key = el.getAttribute('data-i18n-placeholder');
-        const val = this.t(key);
+        const val = this.resolveString(key);
         if (val) el.placeholder = val;
       });
       document.querySelectorAll('[data-i18n-aria]').forEach(el => {
         const key = el.getAttribute('data-i18n-aria');
-        const val = this.t(key);
+        const val = this.resolveString(key);
         if (val) el.setAttribute('aria-label', val);
       });
       document.querySelectorAll('[data-i18n-alt]').forEach(el => {
         const key = el.getAttribute('data-i18n-alt');
-        const val = this.t(key);
-        if (val && val !== key) el.alt = val;
+        const val = this.resolveString(key);
+        if (val) el.alt = val;
       });
       const skip = document.querySelector('.skip-link');
-      if (skip) skip.textContent = this.t('common.skipLink');
+      if (skip) {
+        const val = this.resolveString('common.skipLink');
+        if (val) skip.textContent = val;
+      }
       const btt = document.getElementById('backToTop');
-      if (btt) btt.setAttribute('aria-label', this.t('common.backToTop'));
+      if (btt) {
+        const val = this.resolveString('common.backToTop');
+        if (val) btt.setAttribute('aria-label', val);
+      }
     },
 
     applyHomeFaqs() {
