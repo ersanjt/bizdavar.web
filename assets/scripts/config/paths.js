@@ -42,6 +42,52 @@
     return prettifyInternalPath(joined);
   };
 
+  /** Root-absolute internal page URL — same on every page depth (/pages/contact) */
+  window.resolvePagePath = function (href) {
+    if (!href) return '/';
+    if (/^(https?:|mailto:|tel:)/.test(href)) return href;
+    if (href.startsWith('#')) return href;
+
+    const hashIdx = href.indexOf('#');
+    const hash = hashIdx >= 0 ? href.slice(hashIdx) : '';
+    let pathPart = (hashIdx >= 0 ? href.slice(0, hashIdx) : href).replace(/^\//, '');
+
+    if (pathPart === '' || pathPart === 'index.html' || pathPart === 'index' || pathPart === './') {
+      return hash ? '/' + hash : '/';
+    }
+
+    const knownPages = new Set([
+      'about', 'services', 'portfolio', 'blog', 'contact', 'privacy', 'fast', 'vega',
+      'prosense', 'teltonika', 'gamak', 'digi-system', 'teraoka', 'bz-diamond', 'biztejarat'
+    ]);
+    const stem = pathPart.replace(/\.html$/i, '').split('/').pop();
+    if (!pathPart.startsWith('pages/') && knownPages.has(stem)) {
+      pathPart = `pages/${pathPart}`;
+    } else if (pathPart.startsWith('articles/')) {
+      pathPart = `pages/${pathPart}`;
+    }
+
+    pathPart = pathPart.replace(/\.html$/i, '');
+    if (pathPart === 'index') return hash ? '/' + hash : '/';
+
+    return '/' + pathPart + hash;
+  };
+
+  function fixInternalPageRefs() {
+    document.querySelectorAll('a[href]').forEach(el => {
+      const href = el.getAttribute('href');
+      if (!href || /^(https?:|mailto:|tel:|#|\/)/.test(href)) return;
+      if (/^(pages\/|\.\.\/|articles\/)/.test(href) || href === 'index.html' || href === './') {
+        el.setAttribute('href', window.resolvePagePath(href));
+        return;
+      }
+      const stem = href.replace(/[#?].*$/, '').replace(/\.html$/, '');
+      if (/^[a-z0-9-]+$/i.test(stem)) {
+        el.setAttribute('href', window.resolvePagePath(href));
+      }
+    });
+  }
+
   window.BIZDAVAR_PATHS = {
     depth,
     root,
@@ -69,5 +115,9 @@
 
   window.fixRelativeAssetRefs = fixRelativeAssetRefs;
   fixRelativeAssetRefs();
-  document.addEventListener('DOMContentLoaded', fixRelativeAssetRefs);
+  fixInternalPageRefs();
+  document.addEventListener('DOMContentLoaded', () => {
+    fixRelativeAssetRefs();
+    fixInternalPageRefs();
+  });
 })();

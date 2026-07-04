@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-label="/3*¯'G 6/9AHFÌ /3* (Ì2/H'1 E/D V5">
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f3f4f6"/>
+      <stop offset="100%" stop-color="#e5e7eb"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="480" fill="url(#wall)"/>
+  <rect x="0" y="360" width="720" height="120" fill="#d1d5db" opacity="0.35"/>
+  <rect x="250" y="70" width="220" height="290" rx="18" fill="url(#body)" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="270" y="95" width="180" height="70" rx="10" fill="#1d1d1b"/>
+  <text x="360" y="142" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">BizSan</text>
+  <circle cx="360" cy="210" r="34" fill="#111827" opacity="0.08"/>
+  <circle cx="360" cy="210" r="22" fill="#1d1d1b"/>
+  <circle cx="360" cy="210" r="10" fill="#374151"/>
+  <rect x="338" y="255" width="44" height="18" rx="9" fill="#e3191f"/>
+  <path d="M360 273 L360 305" stroke="#64748b" stroke-width="8" stroke-linecap="round"/>
+  <ellipse cx="360" cy="318" rx="16" ry="8" fill="#94a3b8"/>
+  <text x="360" y="395" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#64748b">3F3H1 'D*1'3HFÌ© · ~'44 .H/©'1</text>
+  <text x="360" y="420" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#e3191f">(Ì2/H'1 · E/D V5</text>
+</svg>

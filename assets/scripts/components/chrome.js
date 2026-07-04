@@ -6,7 +6,7 @@
   const ctx = window.BD_CTX;
   if (!ctx) return;
   const {
-    C, R, A, path, siteLink, t, ic, linkArrow, wa, currentPage,
+    C, R, A, path, pagePath, siteLink, t, ic, linkArrow, wa, currentPage,
     absUrl, breadcrumbHref, localizeCrumbs, buildContactPoints, orgAddress
   } = ctx;
 
@@ -91,11 +91,49 @@
     });
   }
 
+  function getFooterLinkGroups() {
+    return {
+      services: [
+        { href: `${pagePath(R.services)}#digital-marketing`, label: t('footer.digitalMarketing') },
+        { href: pagePath(R.fast), label: t('footer.webFast') },
+        { href: `${pagePath(R.services)}#smm`, label: t('footer.smm') },
+        { href: `${pagePath(R.services)}#industrial`, label: t('footer.industrial') }
+      ],
+      brands: [
+        { href: pagePath(R.vega), label: 'VEGA' },
+        { href: pagePath(R.prosense), label: 'Prosense' },
+        { href: pagePath(R.teltonika), label: 'Teltonika' },
+        { href: pagePath(R.gamak), label: 'Gamak' }
+      ],
+      quick: [
+        { href: pagePath(R.about), label: t('nav.about') },
+        { href: pagePath(R.products), label: t('nav.products') },
+        { href: pagePath(R.portfolio), label: t('nav.portfolio') },
+        { href: pagePath(R.blog), label: t('nav.blog') },
+        { href: pagePath(R.contact), label: t('footer.contactUs') },
+        { href: `${pagePath(R.home)}#faq`, label: t('footer.faq') }
+      ]
+    };
+  }
+
+  function footerLinksHtml(items) {
+    return items.map(item => `<li><a href="${item.href}">${item.label}</a></li>`).join('');
+  }
+
+  function mobileFooterAccHtml(title, items) {
+    return `
+            <details class="mobile-footer-acc">
+              <summary>${title}</summary>
+              <ul>${footerLinksHtml(items)}</ul>
+            </details>`;
+  }
+
   function getNavItems() {
     return [
       { page: 'home', route: R.home, label: t('nav.home', 'خانه'), icon: 'home' },
       { page: 'about', route: R.about, label: t('nav.about', 'درباره ما'), icon: 'info' },
       { page: 'services', route: R.services, label: t('nav.services', 'خدمات'), icon: 'list' },
+      { page: 'products', route: R.products, label: t('nav.products', 'محصولات ما'), icon: 'box' },
       { page: 'portfolio', route: R.portfolio, label: t('nav.portfolio', 'نمونه‌کارها'), icon: 'briefcase' },
       { page: 'fast', route: R.fast, label: t('nav.webDesign', 'طراحی سایت'), icon: 'globe' },
       { page: 'blog', route: R.blog, label: t('nav.blog', 'وبلاگ'), icon: 'article' },
@@ -159,7 +197,7 @@
 
       <nav class="service-nav" aria-label="${t('common.servicesNav', 'فهرست خدمات')}">
 
-        ${C.services.map(s => `<a href="${path(s.slug)}">${s.title}</a>`).join('')}
+        ${C.services.map(s => `<a href="${pagePath(s.slug)}">${s.title}</a>`).join('')}
 
       </nav>`;
 
@@ -226,7 +264,7 @@
     const navItems = getNavItems();
     const logoAlt = A.logoAlt || C.siteName;
     const headerLogo = A.logo;
-    const footerLogo = A.logo || A.logoOnDark;
+    const footerLogo = A.logoOnDark || A.logo;
     const topBar = document.getElementById('topBar');
     const header = document.getElementById('siteHeader');
     const footer = document.getElementById('siteFooter');
@@ -252,11 +290,11 @@
 
     if (header) {
       const navLinks = navItems.map(n =>
-        `<a href="${path(n.route)}" class="nav__link${isActive(n.page)}">${n.label}</a>`
+        `<a href="${pagePath(n.route)}" class="nav__link${isActive(n.page)}">${n.label}</a>`
       ).join('');
 
       const drawerLinks = navItems.map(n =>
-        `<a href="${path(n.route)}" class="mobile-drawer__link${isActive(n.page)}">
+        `<a href="${pagePath(n.route)}" class="mobile-drawer__link${isActive(n.page)}">
           <span class="mobile-drawer__icon">${ic(n.icon, { size: 22 })}</span>
           <span>${n.label}</span>
         </a>`
@@ -265,8 +303,8 @@
       header.innerHTML = `
         <div class="header__desktop">
           <div class="container">
-            <a href="${path(R.home)}" class="header__logo" aria-label="${C.siteName} — ${t('common.homeAria', 'صفحه اصلی')}">
-              <img src="${path(headerLogo)}" alt="${logoAlt}" width="140" height="40">
+            <a href="${pagePath(R.home)}" class="header__logo" aria-label="${C.siteName} — ${t('common.homeAria', 'صفحه اصلی')}">
+              <img src="${path(headerLogo)}" alt="${logoAlt}" width="120" height="50">
             </a>
             <nav class="nav nav--desktop" id="nav" aria-label="${t('common.mainNav', 'منوی اصلی')}">
               ${navLinks}
@@ -281,8 +319,8 @@
         </div>
 
         <div class="mobile-header">
-          <a href="${path(R.home)}" class="mobile-header__logo">
-            <img src="${path(headerLogo)}" alt="${logoAlt}" width="154" height="44" decoding="async" fetchpriority="high">
+          <a href="${pagePath(R.home)}" class="mobile-header__logo">
+            <img src="${path(headerLogo)}" alt="${logoAlt}" width="132" height="55" decoding="async" fetchpriority="high">
           </a>
           <div class="mobile-header__actions">
             <a href="${wa}" class="mobile-header__icon-btn mobile-header__icon-btn--wa"
@@ -290,7 +328,7 @@
                ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''}>
               <span class="mobile-header__wa-icon" aria-hidden="true">${ic('whatsapp-solid', { size: 22, variant: 'white' })}</span>
             </a>
-            <a href="${path(R.contact)}" class="mobile-header__cta">${t('nav.contact', 'تماس')}</a>
+            <a href="${pagePath(R.contact)}" class="mobile-header__cta">${t('nav.contact', 'تماس')}</a>
             <button type="button" class="mobile-header__menu" id="mobileMenuBtn" aria-label="${t('common.menu', 'منو')}" aria-expanded="false">
               <span></span><span></span><span></span>
             </button>
@@ -352,14 +390,16 @@
             </a>`
           : '');
 
+      const footerLinks = getFooterLinkGroups();
+
       footer.innerHTML = `
         <div class="footer__glow" aria-hidden="true"></div>
         <div class="footer__desktop">
           <div class="container">
             <div class="footer__main">
               <div class="footer__brand-col">
-                <a href="${path(R.home)}" class="footer__logo-link">
-                  <img src="${path(footerLogo)}" alt="${logoAlt}" class="footer__logo-img" width="140" height="40">
+                <a href="${pagePath(R.home)}" class="footer__logo-link">
+                  <img src="${path(footerLogo)}" alt="${logoAlt}" class="footer__logo-img" width="120" height="50">
                 </a>
                 <p class="footer__tagline">${t('footer.tagline')}</p>
                 <div class="footer__trust">${trustPills}<span class="footer__pill">${t('footer.hq', 'Istanbul HQ')}</span></div>
@@ -373,22 +413,15 @@
               </div>
               <nav class="footer__nav-col" aria-label="${t('footer.services')}">
                 <h4 class="footer__title">${t('footer.services', 'خدمات')}</h4>
-                <ul class="footer__links">
-                  <li><a href="${path(R.services)}#digital-marketing">${t('footer.digitalMarketing')}</a></li>
-                  <li><a href="${path(R.fast)}">${t('footer.webFast')}</a></li>
-                  <li><a href="${path(R.services)}#smm">${t('footer.smm')}</a></li>
-                  <li><a href="${path(R.services)}#industrial">${t('footer.industrial')}</a></li>
-                </ul>
+                <ul class="footer__links">${footerLinksHtml(footerLinks.services)}</ul>
+              </nav>
+              <nav class="footer__nav-col" aria-label="${t('footer.brands', 'برندها و تامین‌کنندگان')}">
+                <h4 class="footer__title">${t('footer.brands', 'برندها')}</h4>
+                <ul class="footer__links">${footerLinksHtml(footerLinks.brands)}</ul>
               </nav>
               <nav class="footer__nav-col" aria-label="${t('footer.quickLinks')}">
                 <h4 class="footer__title">${t('footer.quickLinks', 'دسترسی سریع')}</h4>
-                <ul class="footer__links">
-                  <li><a href="${path(R.about)}">${t('nav.about')}</a></li>
-                  <li><a href="${path(R.portfolio)}">${t('nav.portfolio')}</a></li>
-                  <li><a href="${path(R.blog)}">${t('nav.blog')}</a></li>
-                  <li><a href="${path(R.contact)}">${t('footer.contactUs')}</a></li>
-                  <li><a href="${path(R.home)}#faq">${t('footer.faq')}</a></li>
-                </ul>
+                <ul class="footer__links">${footerLinksHtml(footerLinks.quick)}</ul>
               </nav>
               <div class="footer__nav-col">
                 <h4 class="footer__title">${t('footer.connect', 'ارتباط با ما')}</h4>
@@ -401,9 +434,9 @@
             <div class="footer__bar">
               <p class="footer__copy">© ${year} ${C.siteNameEn} — ${t('common.rights', 'تمامی حقوق محفوظ است')}</p>
               <nav class="footer__legal" aria-label="${t('footer.legal', 'Legal')}">
-                <a href="${path(R.privacy)}">${t('footer.privacy')}</a>
-                <a href="${path(R.home)}#faq">${t('footer.faq')}</a>
-                <a href="${path(R.contact)}">${t('footer.contactUs')}</a>
+                <a href="${pagePath(R.privacy)}">${t('footer.privacy')}</a>
+                <a href="${pagePath(R.home)}#faq">${t('footer.faq')}</a>
+                <a href="${pagePath(R.contact)}">${t('footer.contactUs')}</a>
               </nav>
             </div>
           </div>
@@ -411,7 +444,7 @@
 
         <div class="footer__mobile">
           <div class="mobile-footer-hero">
-            <a href="${path(R.home)}" class="footer__logo-link"><img src="${path(footerLogo)}" alt="${logoAlt}" class="footer__logo-img footer__logo-img--sm"></a>
+            <a href="${pagePath(R.home)}" class="footer__logo-link"><img src="${path(footerLogo)}" alt="${logoAlt}" class="footer__logo-img footer__logo-img--sm"></a>
             <p>${t('footer.tagline')}</p>
             <div class="footer__trust">${trustPills}</div>
             <div class="footer__social">
@@ -421,29 +454,14 @@
             </div>
           </div>
           <div class="mobile-footer-cta">
-            <a href="${path(R.contact)}" class="mobile-footer-cta__btn mobile-footer-cta__btn--primary">${ic('send', { size: 18 })} ${t('common.contactForm')}</a>
+            <a href="${pagePath(R.contact)}" class="mobile-footer-cta__btn mobile-footer-cta__btn--primary">${ic('send', { size: 18 })} ${t('common.contactForm')}</a>
             <a href="${wa}" class="mobile-footer-cta__btn mobile-footer-cta__btn--wa"
                ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''}>${ic('whatsapp', { size: 18 })} ${t('common.whatsapp')}</a>
           </div>
           <div class="mobile-footer-accordions">
-            <details class="mobile-footer-acc">
-              <summary>${t('footer.services')}</summary>
-              <ul>
-                <li><a href="${path(R.services)}#digital-marketing">${t('footer.digitalMarketing')}</a></li>
-                <li><a href="${path(R.fast)}">${t('footer.webDesign')}</a></li>
-                <li><a href="${path(R.services)}#smm">${t('footer.smm')}</a></li>
-                <li><a href="${path(R.services)}#industrial">${t('footer.industrialShort')}</a></li>
-              </ul>
-            </details>
-            <details class="mobile-footer-acc">
-              <summary>${t('footer.quickLinks')}</summary>
-              <ul>
-                <li><a href="${path(R.about)}">${t('nav.about')}</a></li>
-                <li><a href="${path(R.portfolio)}">${t('nav.portfolio')}</a></li>
-                <li><a href="${path(R.blog)}">${t('nav.blog')}</a></li>
-                <li><a href="${path(R.contact)}">${t('footer.contactUs')}</a></li>
-              </ul>
-            </details>
+            ${mobileFooterAccHtml(t('footer.services'), footerLinks.services)}
+            ${mobileFooterAccHtml(t('footer.brands', 'برندها'), footerLinks.brands)}
+            ${mobileFooterAccHtml(t('footer.quickLinks'), footerLinks.quick)}
             <details class="mobile-footer-acc">
               <summary>${t('footer.connectShort')}</summary>
               <ul>
@@ -462,8 +480,8 @@
           <div class="mobile-footer-bar">
             <p>© ${year} ${C.siteNameEn}</p>
             <nav class="footer__legal">
-              <a href="${path(R.privacy)}">${t('footer.privacy')}</a>
-              <a href="${path(R.home)}#faq">${t('footer.faq')}</a>
+              <a href="${pagePath(R.privacy)}">${t('footer.privacy')}</a>
+              <a href="${pagePath(R.home)}#faq">${t('footer.faq')}</a>
             </nav>
           </div>
         </div>`;
@@ -486,7 +504,7 @@
     ];
 
     bottomNav.innerHTML = bottomItems.map(item => `
-      <a href="${path(item.route)}" class="mobile-bottom-nav__item${isActive(item.page) ? ' active' : ''}">
+      <a href="${pagePath(item.route)}" class="mobile-bottom-nav__item${isActive(item.page) ? ' active' : ''}">
         <span class="mobile-bottom-nav__icon">${ic(item.icon, { size: 22 })}</span>
         <span class="mobile-bottom-nav__label">${item.label}</span>
       </a>

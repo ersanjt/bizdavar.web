@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /api/
+
+# Block config
+<Files "config.php">
+  Require all denied
+</Files>
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]

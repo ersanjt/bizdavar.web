@@ -193,106 +193,157 @@
 
     injectHreflang(meta.canonical || C.baseUrl);
     injectOgLocaleAlternates();
-
-    const ld = {
-
-      '@context': 'https://schema.org',
-
-      '@type': 'Organization',
-
-      name: C.siteNameEn,
-
-      alternateName: C.siteName,
-
-      url: C.baseUrl,
-
-      logo: `${C.baseUrl}/${A.logo}`,
-
-      email: C.contact.email,
-
-      foundingDate: '2013',
-
-      founder: {
-
-        '@type': 'Person',
-
-        name: 'Ersan Jahed Tabrizi',
-
-        jobTitle: 'Founder',
-
-        url: C.contact.linkedin,
-
-        sameAs: C.contact.linkedin
-
-      },
-
-      areaServed: ['TR', 'AM', 'IR', 'AE', 'DE', 'US', 'GB', 'LB', 'IQ', 'GE', 'IT'],
-
-      knowsAbout: ['Digital Marketing', 'Web Design', 'Industrial Equipment', 'Fintech', 'SEO'],
-
-      address: orgAddress(),
-
-      sameAs: [C.contact.linkedin, C.contact.instagram, `https://${C.domains.alt}`],
-
-      contactPoint: buildContactPoints()
-
-    };
-
-
-
-    let script = document.getElementById('jsonld-org');
-
-    if (!script) {
-
-      script = document.createElement('script');
-
-      script.id = 'jsonld-org';
-
-      script.type = 'application/ld+json';
-
-      document.head.appendChild(script);
-
-    }
-
-    script.textContent = JSON.stringify(ld);
-
-
-
-    const webLd = {
-
-      '@context': 'https://schema.org',
-
-      '@type': 'WebSite',
-
-      name: C.siteName,
-
-      alternateName: C.siteNameEn,
-
-      url: C.baseUrl,
-
-      inLanguage: C.language,
-
-      publisher: { '@type': 'Organization', name: C.siteNameEn }
-
-    };
-
-    let webScript = document.getElementById('jsonld-website');
-
-    if (!webScript) {
-
-      webScript = document.createElement('script');
-
-      webScript.id = 'jsonld-website';
-
-      webScript.type = 'application/ld+json';
-
-      document.head.appendChild(webScript);
-
-    }
-
-    webScript.textContent = JSON.stringify(webLd);
-
+    injectSiteGraph();
   };
+
+  function logoAbsUrl() {
+    const logo = A.logo || A.logoOnDark;
+    if (!logo) return `${C.baseUrl}/assets/images/brand/bizdavar-logo.svg`;
+    return logo.startsWith('http') ? logo : `${C.baseUrl}/${logo.replace(/^\//, '')}`;
+  }
+
+  function siteNavEntries() {
+    return [
+      { name: t('nav.services', 'خدمات'), url: absUrl(R.services) },
+      { name: t('nav.contact', 'تماس با ما'), url: absUrl(R.contact) },
+      { name: t('nav.about', 'درباره ما'), url: absUrl(R.about) },
+      { name: t('nav.portfolio', 'نمونه‌کارها'), url: absUrl(R.portfolio) },
+      { name: t('nav.webDesign', 'طراحی سایت'), url: absUrl(R.fast) },
+      { name: t('footer.digitalMarketing', 'بازاریابی دیجیتال'), url: absUrl(R.services) + '#digital-marketing' },
+      { name: t('footer.industrial', 'تامین تجهیزات صنعتی'), url: absUrl(R.services) + '#industrial' },
+      { name: 'VEGA', url: absUrl(R.vega) },
+      { name: 'Prosense', url: absUrl(R.prosense) },
+      { name: t('nav.blog', 'وبلاگ'), url: absUrl(R.blog) }
+    ];
+  }
+
+  function buildSiteGraph() {
+    const orgId = `${C.baseUrl}/#organization`;
+    const webId = `${C.baseUrl}/#website`;
+    const hq = C.geo?.headquarters || {};
+    const ir = C.iranEntity || {};
+    const am = C.armeniaEntity || {};
+    const sameAs = [C.contact.linkedin, C.contact.instagram, `https://${C.domains.alt}`, am.spyur, ir.jooyeshgar].filter(Boolean);
+    const alternateNames = [C.siteName, 'Bizdavar'];
+    if (am.legalName) alternateNames.push(am.legalName);
+    if (am.legalNameShort) alternateNames.push(am.legalNameShort);
+    if (ir.legalNameFa) alternateNames.push(ir.legalNameFa);
+    if (ir.brandFa) alternateNames.push(ir.brandFa);
+    if (ir.legalNameEn) alternateNames.push(ir.legalNameEn);
+    const graph = [
+        {
+          '@type': ['Organization', 'ProfessionalService'],
+          '@id': orgId,
+          name: C.siteNameEn,
+          alternateName: alternateNames,
+          url: `${C.baseUrl}/`,
+          logo: { '@type': 'ImageObject', url: logoAbsUrl() },
+          image: logoAbsUrl(),
+          email: C.contact.email,
+          telephone: C.contact.phone,
+          foundingDate: '2013',
+          founder: {
+            '@type': 'Person',
+            name: 'Ersan Jahed Tabrizi',
+            jobTitle: 'Founder',
+            url: C.contact.linkedin,
+            sameAs: C.contact.linkedin
+          },
+          areaServed: ['TR', 'AM', 'IR', 'AE', 'DE', 'US', 'GB', 'LB', 'IQ', 'GE', 'IT'],
+          knowsAbout: ['Digital Marketing', 'Web Design', 'Industrial Equipment', 'Fintech', 'SEO'],
+          address: orgAddress(),
+          sameAs,
+          contactPoint: buildContactPoints()
+        },
+        {
+          '@type': 'WebSite',
+          '@id': webId,
+          url: `${C.baseUrl}/`,
+          name: C.siteName,
+          alternateName: C.siteNameEn,
+          inLanguage: ['fa-IR', 'tr-TR', 'en-US'],
+          publisher: { '@id': orgId },
+          about: { '@id': orgId }
+        },
+        {
+          '@type': 'ItemList',
+          '@id': `${C.baseUrl}/#sitenavigation`,
+          name: t('footer.quickLinks', 'دسترسی سریع'),
+          itemListElement: siteNavEntries().map((entry, i) => ({
+            '@type': 'ListItem',
+            position: i + 1,
+            item: {
+              '@type': 'WebPage',
+              '@id': entry.url,
+              name: entry.name,
+              url: entry.url
+            }
+          }))
+        },
+        {
+          '@type': 'LocalBusiness',
+          '@id': `${C.baseUrl}/#localbusiness`,
+          name: C.siteNameEn,
+          alternateName: C.siteName,
+          url: `${C.baseUrl}/`,
+          telephone: C.contact.phone,
+          email: C.contact.email,
+          image: logoAbsUrl(),
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: hq.city || 'Istanbul',
+            addressCountry: hq.countryCode || 'TR'
+          },
+          parentOrganization: { '@id': orgId },
+          areaServed: ['TR', 'IR', 'AM', 'AE', 'DE']
+        }
+    ];
+    if (ir.legalNameFa) {
+      const irChannel = (C.contact.channels || []).find(ch => ch.id === 'ir');
+      graph.push({
+        '@type': 'LocalBusiness',
+        '@id': `${C.baseUrl}/#localbusiness-iran`,
+        name: ir.legalNameFa,
+        alternateName: [ir.brandFa, ir.brandEn, 'Bizdavar'].filter(Boolean),
+        url: `${C.baseUrl}/`,
+        telephone: irChannel ? irChannel.tel : undefined,
+        email: C.contact.email,
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: ir.streetAddress,
+          addressLocality: ir.city,
+          addressRegion: ir.province,
+          addressCountry: ir.countryCode || 'IR'
+        },
+        parentOrganization: { '@id': orgId },
+        sameAs: ir.jooyeshgar ? [ir.jooyeshgar] : undefined
+      });
+    }
+    if (am.legalName) {
+      const amChannel = (C.contact.channels || []).find(ch => ch.id === 'am');
+      graph.push({
+        '@type': 'LocalBusiness',
+        '@id': `${C.baseUrl}/#localbusiness-armenia`,
+        name: am.legalName,
+        alternateName: [am.brandFa, am.brandEn, am.legalNameShort].filter(Boolean),
+        url: `${C.baseUrl}/`,
+        telephone: amChannel ? amChannel.tel : am.phoneTel,
+        email: C.contact.email,
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: am.city || 'Yerevan',
+          addressCountry: am.countryCode || 'AM'
+        },
+        parentOrganization: { '@id': orgId },
+        sameAs: am.spyur ? [am.spyur] : undefined
+      });
+    }
+    return { '@context': 'https://schema.org', '@graph': graph };
+  }
+
+  function injectSiteGraph() {
+    injectJsonLd('jsonld-graph-static', buildSiteGraph());
+  }
 
 
 
@@ -324,7 +375,7 @@
 
       name: t('contactPage.schemaName', 'تماس با ما — ') + C.siteName,
 
-      url: C.baseUrl + '/pages/contact.html',
+      url: absUrl(R.contact),
 
       description: t('contactPage.schemaDesc', 'فرم تماس و راه‌های ارتباطی با بیزدوار گروپ'),
 
@@ -502,7 +553,7 @@
           name: C.siteNameEn,
           areaServed: ['IR', 'TR']
         },
-        url: data.url ? absUrl(data.url) : absUrl(R.contact)
+        url: data.url && String(data.url).startsWith('http') ? data.url : absUrl(data.url || R.contact)
       }
     };
     injectJsonLd('jsonld-supply-' + (data.id || data.name), ld);

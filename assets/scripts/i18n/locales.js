@@ -79,6 +79,7 @@ window.BIZDAVAR_LOCALES = {
       home: 'خانه',
       about: 'درباره ما',
       services: 'خدمات',
+      products: 'محصولات ما',
       portfolio: 'نمونه‌کارها',
       portfolioShort: 'نمونه‌کار',
       webDesign: 'طراحی سایت',
@@ -90,6 +91,7 @@ window.BIZDAVAR_LOCALES = {
       tagline: 'ارائه‌دهنده خدمات دیجیتال، طراحی وب، بازاریابی آنلاین و تامین تجهیزات صنعتی.',
       services: 'خدمات',
       quickLinks: 'دسترسی سریع',
+      brands: 'برندها',
       connect: 'ارتباط با ما',
       contactUs: 'تماس با ما',
       faq: 'سوالات متداول',
@@ -112,6 +114,17 @@ window.BIZDAVAR_LOCALES = {
       webDesign: 'طراحی و توسعه وب',
       smm: 'مدیریت SMM',
       industrial: 'تامین تجهیزات صنعتی'
+    },
+    exhibitions: {
+      section: 'بخش',
+      zone: 'زون',
+      booth: 'غرفه',
+      location: 'مکان',
+      history: 'تاریخچه نمایشگاه',
+      parkUnit: 'واحد فناور پارک علمی',
+      product: 'محصول',
+      relatedPress: 'منابع مرتبط',
+      viewProduct: 'مشاهده محصول'
     },
     trustMetrics: [
       { value: '+۱۰۰', label: 'پروژه دیجیتال' },
@@ -394,6 +407,7 @@ window.BIZDAVAR_LOCALES = {
       home: 'Ana Sayfa',
       about: 'Hakkımızda',
       services: 'Hizmetler',
+      products: 'Ürünlerimiz',
       portfolio: 'Portfolyo',
       portfolioShort: 'Projeler',
       webDesign: 'Web Tasarım',
@@ -405,6 +419,7 @@ window.BIZDAVAR_LOCALES = {
       tagline: 'Dijital hizmetler, web tasarım, online pazarlama ve endüstriyel ekipman tedariki.',
       services: 'Hizmetler',
       quickLinks: 'Hızlı erişim',
+      brands: 'Markalar',
       connect: 'Bize ulaşın',
       contactUs: 'İletişim',
       faq: 'SSS',
@@ -427,6 +442,17 @@ window.BIZDAVAR_LOCALES = {
       webDesign: 'Web tasarım ve geliştirme',
       smm: 'SMM yönetimi',
       industrial: 'Endüstriyel ekipman tedariki'
+    },
+    exhibitions: {
+      section: 'Bölüm',
+      zone: 'Zon',
+      booth: 'Stant',
+      location: 'Konum',
+      history: 'Fuar geçmişi',
+      parkUnit: 'Teknoloji parkı birimi',
+      product: 'Ürün',
+      relatedPress: 'İlgili kaynaklar',
+      viewProduct: 'Ürünü gör'
     },
     trustMetrics: [
       { value: '+100', label: 'Dijital proje' },
@@ -709,6 +735,7 @@ window.BIZDAVAR_LOCALES = {
       home: 'Home',
       about: 'About',
       services: 'Services',
+      products: 'Our products',
       portfolio: 'Portfolio',
       portfolioShort: 'Work',
       webDesign: 'Web Design',
@@ -720,6 +747,7 @@ window.BIZDAVAR_LOCALES = {
       tagline: 'Digital services, web design, online marketing, and industrial equipment supply.',
       services: 'Services',
       quickLinks: 'Quick links',
+      brands: 'Brands',
       connect: 'Connect',
       contactUs: 'Contact us',
       faq: 'FAQ',
@@ -742,6 +770,17 @@ window.BIZDAVAR_LOCALES = {
       webDesign: 'Web design & development',
       smm: 'SMM management',
       industrial: 'Industrial equipment supply'
+    },
+    exhibitions: {
+      section: 'Section',
+      zone: 'Zone',
+      booth: 'Booth',
+      location: 'Location',
+      history: 'Exhibition history',
+      parkUnit: 'Science park tech unit',
+      product: 'Product',
+      relatedPress: 'Related sources',
+      viewProduct: 'View product'
     },
     trustMetrics: [
       { value: '+100', label: 'Digital projects' },

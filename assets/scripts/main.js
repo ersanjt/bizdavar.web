@@ -255,6 +255,8 @@ window.fillContactDetails = function () {
 
   const channels = C.contact.channels || [];
   const waUrl = (num) => `https://wa.me/${num}?text=${encodeURIComponent(C.contact.whatsappMessage)}`;
+  const ir = C.iranEntity;
+  const am = C.armeniaEntity;
 
   const phoneHtml = channels.length
     ? channels.map(ch => `
@@ -322,7 +324,11 @@ window.fillContactDetails = function () {
 
         <div class="contact-info__label">${t('contactPage.location', 'موقعیت')}</div>
 
-        <div class="contact-info__value">${C.contact.address}</div>
+        <div class="contact-info__value">
+          <div><strong>${t('contactPage.hqLabel', 'دفتر اصلی')}:</strong> ${C.contact.address}</div>
+          ${am ? `<div class="contact-info__subaddr"><strong>${t('contactPage.armeniaOffice', 'ارمنستان — ایروان')}:</strong> ${am.addressFa || am.address}<br><span class="contact-info__entity">${am.legalName} (${am.companyType || 'LLC'})</span>${am.spyur ? ` · <a href="${am.spyur}" target="_blank" rel="noopener noreferrer">Spyur.am</a>` : ''}</div>` : ''}
+          ${ir ? `<div class="contact-info__subaddr"><strong>${t('contactPage.iranOffice', 'ایران — تبریز')}:</strong> ${ir.address}<br><span class="contact-info__entity">${ir.legalNameFa}</span>${ir.jooyeshgar ? ` · <a href="${ir.jooyeshgar}" target="_blank" rel="noopener noreferrer">${t('contactPage.jooyeshgar', 'جویشگر')}</a>` : ''}</div>` : ''}
+        </div>
 
       </div>
 
@@ -400,11 +406,14 @@ window.setupWhatsappLinks = function () {
 
   const tr = channels.find(c => c.id === 'tr') || channels[0];
   const ir = channels.find(c => c.id === 'ir') || channels[1];
+  const am = channels.find(c => c.id === 'am');
 
   const btnTr = document.getElementById('whatsappBtnTr');
   const btnIr = document.getElementById('whatsappBtnIr');
+  const btnAm = document.getElementById('whatsappBtnAm');
   if (btnTr && tr) btnTr.href = waUrl(tr.whatsapp);
   if (btnIr && ir) btnIr.href = waUrl(ir.whatsapp);
+  if (btnAm && am) btnAm.href = waUrl(am.whatsapp);
 
   const legacyBtn = document.getElementById('whatsappBtn');
   if (legacyBtn && primary) legacyBtn.href = primaryUrl;
@@ -516,6 +525,48 @@ function initContactForm() {
 
     const formspree = C?.formspree;
     const useFormspree = formspree?.enabled && formspree?.formId;
+    const bizhub = C?.bizhub;
+    const useBizhub = bizhub?.enabled;
+
+    if (useBizhub) {
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = cp('formSending', 'در حال ارسال…');
+      }
+      showFeedback('formSending', 'در حال ارسال…', 'sending');
+
+      try {
+        const apiBase = (bizhub.apiBase || '/api').replace(/\/$/, '');
+        const res = await fetch(`${apiBase}/public/leads`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({
+            firstName: data.firstName,
+            lastName: data.lastName,
+            email: data.email,
+            phone: data.phone || '',
+            service: form.service.value,
+            message: data.message,
+            locale: window.BIZDAVAR_I18N?.locale || 'fa',
+            pageUrl: window.location.href,
+            source: 'contact-form'
+          })
+        });
+        const json = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(json.error || 'submit failed');
+
+        showFeedback('formSuccess', 'پیام شما ثبت شد. به‌زودی با شما تماس می‌گیریم.', null);
+        form.reset();
+      } catch {
+        showFeedback('formError', 'ارسال ناموفق بود. لطفاً دوباره تلاش کنید یا مستقیماً به info@bizdavar.com ایمیل بزنید.', 'error');
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = submitLabel || cp('submit', 'ارسال درخواست');
+        }
+      }
+      return;
+    }
 
     if (useFormspree) {
       if (submitBtn) {

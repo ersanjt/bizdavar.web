@@ -126,6 +126,8 @@
       window[supplyInits[page]]();
     }
     if (page === 'biztejarat') applyListById('biztejaratServices', 'caseStudy.biztejarat.about.services');
+    if (page === 'biztab') applyListById('biztabSpecs', 'caseStudy.biztab.about.specs');
+    if (page === 'bizsanitizerV5') applyListById('bizsanitizerSpecs', 'caseStudy.bizsanitizerV5.about.specs');
     if (page === 'bz-diamond') applyListById('bzDiamondServices', 'caseStudy.bzDiamond.about.services');
     if (page === 'article') applyArticlePage();
   };

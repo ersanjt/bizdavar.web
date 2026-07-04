@@ -7,6 +7,12 @@ window.BIZDAVAR_INTEL = {
   identity: {
     legalName: 'Bizdavar Group',
     legalNameFa: 'بیزدوار گروپ',
+    iranLegalNameFa: 'تکنولوژی پردازان توسعه خاورمیانه',
+    iranLegalNameEn: 'Middle East Development Technology Processors',
+    iranBrandFa: 'آژانس دیجیتال مارکتینگ بیزدوار',
+    armeniaLegalName: 'Bizdavar Group',
+    armeniaLegalType: 'LLC',
+    armeniaBrandFa: 'بیزدوار گروپ',
     founded: 2013,
     foundedDisplay: '۱۳۹۲ / ۲۰۱۳',
     registeredSince: 2015,
@@ -19,11 +25,33 @@ window.BIZDAVAR_INTEL = {
         role: 'دفتر اصلی · مرکز عملیات بین‌المللی',
         badge: 'HQ'
       },
-      { city: 'ایروان', country: 'ارمنستان', role: 'ثبت شرکت و پروژه‌های منطقه‌ای' },
-      { city: 'تبریز', country: 'ایران', role: 'پروژه‌های صنعتی و دیجیتال' }
+      {
+        city: 'ایروان',
+        country: 'ارمنستان',
+        role: 'ثبت شرکت · Bizdavar Group LLC — سئو و دیجیتال مارکتینگ',
+        badge: 'AM'
+      },
+      {
+        city: 'تبریز',
+        country: 'ایران',
+        role: 'شخصیت حقوقی · تکنولوژی پردازان توسعه خاورمیانه',
+        badge: 'IR'
+      }
     ],
     domains: ['bizdavar.com', 'bizdavar.ir', 'fast.bizdavar.com'],
-    languages: ['فارسی', 'انگلیسی', 'ترکی']
+    languages: ['فارسی', 'انگلیسی', 'ترکی'],
+    directories: [
+      {
+        label: 'Spyur.am — پروفایل ارمنستان',
+        url: 'https://www.spyur.am/en/companies/bizdavar/57783/',
+        note: 'Bizdavar Group LLC · ایروان · سئو و تبلیغات وب'
+      },
+      {
+        label: 'جویشگر — پروفایل B2B',
+        url: 'https://www.jooyeshgar.com/company/det-29884',
+        note: 'تکنولوژی پردازان توسعه خاورمیانه · آذربایجان شرقی'
+      }
+    ]
   },
 
   /** رهبری و تیم */
@@ -78,7 +106,7 @@ window.BIZDAVAR_INTEL = {
     {
       id: 'industrial',
       title: 'صنعت و B2B',
-      items: ['تامین VEGA و Prosense', 'پمپ و موتور صنعتی', 'ابزار دقیق', 'اتوماسیون', 'تدارکات بین‌المللی']
+      items: ['تامین VEGA و Prosense', 'BizTab — دماسنج IoT', 'پمپ و موتور صنعتی', 'ابزار دقیق', 'اتوماسیون', 'تدارکات بین‌المللی']
     },
     {
       id: 'infrastructure',
@@ -93,6 +121,9 @@ window.BIZDAVAR_INTEL = {
     { name: 'Netinode', type: 'دامنه، هاست و سرور', note: 'ثبت دامنه، هاست، WordPress Hosting، ایمیل تجاری، DNS و سرور' },
     { name: 'BZ Diamond', type: 'نمونه‌کار طراحی وب', note: 'فروشگاه WooCommerce، ایمیل و سئو — پروژه مشتری' },
     { name: 'Biztejarat', type: 'نمونه‌کار SMM', note: 'صفحه اینستاگرام محصولات صنعتی — مدیریت محتوا' },
+    { name: 'BizTab', type: 'محصول IoT / سلامت', note: 'دماسنج دیواری غیرتماسی — اولین نمونه تبریز، توسعه تیم بیزدوار' },
+
+    { name: 'BizSan V5', type: 'محصول بهداشت', note: 'دستگاه ضدعفونی دست اتوماتیک — سنسور التراسونیک، عرضه دیجی‌کالا' },
     { name: 'BZBroker', type: 'صرافی P2P', note: 'پلتفرم کریپتو' },
     { name: 'FXGuard', type: 'CRM واتساپ', note: 'اتوماسیون فروش' },
     { name: 'Bear Event', type: 'رویداد', note: 'بلیت و رویداد آنلاین' },
@@ -135,6 +166,60 @@ window.BIZDAVAR_INTEL = {
       ],
       note: 'برای استعلام صنعتی یا دیجیتال — واتساپ یا تماس مستقیم با خط ترکیه.'
     },
+    yerevanHub: {
+      title: 'ثبت شرکت — ایروان',
+      subtitle: 'Bizdavar Group LLC',
+      brand: 'بیزدوار گروپ — SEO & Digital Marketing',
+      city: 'ایروان',
+      country: 'ارمنستان',
+      address: 'Yerevan, Armenia',
+      contactName: 'ارسان جاهد تبریزی',
+      phone: '+374 55 517 957',
+      phoneTel: '+37455517957',
+      whatsapp: '37455517957',
+      email: 'info@bizdavar.com',
+      languages: ['English', 'فارسی', 'Русский'],
+      intro: 'شرکت ثبت‌شده در ارمنستان — فعال در بهینه‌سازی موتورهای جستجو (SEO)، تبلیغات وب، دیجیتال مارکتینگ و طراحی سایت. پروفایل Bizdavar در دایرکتوری Spyur.am قابل راستی‌آزمایی است.',
+      services: [
+        'SEO و بهینه‌سازی موتورهای جستجو',
+        'تبلیغات و پروموشن وبسایت',
+        'دیجیتال مارکتینگ و مدیریت کمپین',
+        'طراحی و توسعه وبسایت',
+        'برندینگ و تولید محتوا',
+        'پروژه‌های B2B منطقه‌ای'
+      ],
+      profileUrl: 'https://www.spyur.am/en/companies/bizdavar/57783/',
+      profileLabel: 'Spyur.am',
+      note: 'دایرکتوری کسب‌وکار ارمنستان — شناسه ۵۷۷۸۳'
+    },
+    tabrizHub: {
+      title: 'دفتر ایران — تبریز',
+      subtitle: 'تکنولوژی پردازان توسعه خاورمیانه',
+      brand: 'آژانس دیجیتال مارکتینگ بیزدوار',
+      city: 'تبریز',
+      province: 'آذربایجان شرقی',
+      country: 'ایران',
+      address: 'تبریز، خیابان رودکی، کوی جانفشان، ۱۲ متری اول، پلاک ۶',
+      contactName: 'ارسان جاهد تبریزی',
+      phone: '+98 930 588 0135',
+      phoneTel: '+989305880135',
+      whatsapp: '989305880135',
+      email: 'info@bizdavar.com',
+      languages: ['فارسی', 'English'],
+      intro: 'شخصیت حقوقی ثبت‌شده در ایران — فعال در دیجیتال مارکتینگ، طراحی وب، تولید محتوا، سئو و پروژه‌های صنعتی B2B. برند تجاری «بیزدوار» تحت این شرکت در بازار ایران فعالیت می‌کند.',
+      services: [
+        'بهینه‌سازی موتورهای جستجو (SEO)',
+        'مدیریت شبکه‌های اجتماعی و SMM',
+        'طراحی و برنامه‌نویسی وبسایت',
+        'تولید محتوای متنی، ویدیو و عکس',
+        'آنالیز وبسایت و شبکه‌های اجتماعی',
+        'تامین و پروژه‌های صنعتی B2B'
+      ],
+      profileUrl: 'https://www.jooyeshgar.com/company/det-29884',
+      profileLabel: 'پروفایل جویشگر',
+      note: 'پروفایل B2B قابل راستی‌آزمایی در جویشگر — استان آذربایجان شرقی.',
+      exhibitionsNote: 'حضور در نهمین نمایشگاه RINOTEX (ربع رشیدی) — آبان ۱۴۰۰ · غرفه ۱۲ متری · زون ICT'
+    },
     regions: [
       {
         id: 'mena',
@@ -147,7 +232,7 @@ window.BIZDAVAR_INTEL = {
             focus: 'دفتر اصلی · فین‌تک · وب · تامین صنعتی',
             detail: 'مرکز عملیات بین‌المللی — مشاوره فارسی/ترکی/انگلیسی'
           },
-          { name: 'ایران', hub: true, city: 'تبریز', focus: 'صنعت · دیجیتال' },
+          { name: 'ایران', hub: true, city: 'تبریز', focus: 'شخصیت حقوقی · دیجیتال و صنعت', detail: 'تکنولوژی پردازان توسعه خاورمیانه — آذربایجان شرقی' },
           { name: 'امارات', focus: 'تجارت و فین‌تک' },
           { name: 'عراق', focus: 'B2B صنعتی' },
           { name: 'لبنان', focus: 'پروژه‌های منطقه‌ای' }
@@ -157,7 +242,7 @@ window.BIZDAVAR_INTEL = {
         id: 'europe',
         title: 'اروپا و قفقاز',
         countries: [
-          { name: 'ارمنستان', hub: true, city: 'ایروان', focus: 'ثبت شرکت · پروژه منطقه‌ای' },
+          { name: 'ارمنستان', hub: true, city: 'ایروان', focus: 'ثبت شرکت · SEO و دیجیتال', detail: 'Bizdavar Group LLC — پروفایل Spyur.am' },
           { name: 'گرجستان', focus: 'تجارت بین‌الملل' },
           { name: 'آلمان', focus: 'تامین تجهیزات' },
           { name: 'انگلستان', focus: 'فین‌تک و مشاوره' },
@@ -174,6 +259,91 @@ window.BIZDAVAR_INTEL = {
     ]
   },
 
+  /** نمایشگاه‌ها و رویدادهای فناوری */
+  exhibitions: [
+    {
+      id: 'rinotex-1400',
+      year: '۱۴۰۰',
+      yearIso: '2021',
+      dateDisplay: 'آبان ۱۴۰۰',
+      title: 'نهمین نمایشگاه نوآوری و فناوری ربع رشیدی — RINOTEX 1400',
+      titleEn: '9th Rab\'e Rashidi Innovation & Technology Exhibition — RINOTEX 1400',
+      entity: 'تکنولوژی پردازان توسعه خاورمیانه',
+      brand: 'آژانس دیجیتال مارکتینگ بیزدوار',
+      desc: 'حضور هم‌زمان: (۱) غرفه ۱۲ متری «تکنولوژی پردازان توسعه خاورمیانه» (بیزدوار) در بخش توسعه و تجاری‌سازی فناوری — زون ICT؛ (۲) واحد فناور «ایمن سهند پدیده» از پارک علم و فناوری دانشگاه تبریز در فهرست واحدهای مستقر پارک — معرفی محصول دانش‌بنیان «طراحی و ساخت دستگاه هوشمند ضدعفونی دست».',
+      section: 'توسعه و تجاری‌سازی فناوری',
+      zone: 'نوآوری و فناوری‌های اطلاعات و ارتباطات (ICT)',
+      booth: '۱۲ متر مربع',
+      city: 'تبریز',
+      country: 'ایران',
+      source: 'RINOTEX',
+      sourceUrl: 'https://rinotex.ir/',
+      sourceHistoryUrl: 'https://rinotex.ir/Home/Introduction',
+      sourceLabel: 'سایت رسمی رینوتکس',
+      parkUnit: {
+        name: 'ایمن سهند پدیده',
+        nameEn: 'Imen Sahand Padideh',
+        host: 'پارک علم و فناوری دانشگاه تبریز',
+        hostUrl: 'https://techpark.tabrizu.ac.ir/',
+        product: 'طراحی و ساخت دستگاه هوشمند ضدعفونی دست',
+        productSlug: 'pages/bizsanitizer-v5.html',
+        period: 'دی ۱۳۹۸ — شهریور ۱۴۰۱',
+        periodEn: 'Dey 1398 — Shahrivar 1401',
+        note: 'سرمایه‌گذاری شخصی بنیان‌گذار — طراحی و تولید توسط تیم بیزدوار'
+      },
+      relatedPress: [
+        { label: 'RINOTEX — نهمین نمایشگاه ۱۴۰۰', url: 'https://rinotex.ir/Home/Introduction' },
+        { label: 'پارک علم و فناوری دانشگاه تبریز', url: 'https://techpark.tabrizu.ac.ir/' },
+        { label: 'ISNA — نمایشگاه مرکز رشد ۱۳۹۹', url: 'https://www.isna.ir/news/99022216019/%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D9%BE%DA%98%D9%88%D9%87%D8%B4%DB%8C-%D9%88-%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%D9%87-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7' },
+        { label: 'SNN — نمایشگاه ۱۳۹۹', url: 'https://snn.ir/fa/news/847064/%D9%86%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%A7%D9%87-%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%E2%80%8C%D9%87%D8%A7%DB%8C-%D9%85%D8%B1%DA%A9%D8%B2-%D8%B1%D8%B4%D8%AF-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%D8%B4%DB%8C%D9%88%D8%B9-%D9%88%DB%8C%D8%B1%D9%88%D8%B3-%DA%A9%D8%B1%D9%88%D9%86%D8%A7-%D8%A7%D9%81%D8%AA%D8%AA%D8%A7%D8%AD-%D8%B4%D8%AF' },
+        { label: 'صدا و سیما — نمایشگاه ۱۳۹۹', url: 'https://www.iribnews.ir/fa/news/2714063/%D9%86%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%A7%D9%87-%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7' },
+        { label: 'دیجی‌کالا — BizSan V5', url: 'https://www.digikala.com/product/dkp-3730222/%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D8%B6%D8%AF%D8%B9%D9%81%D9%88%D9%86%DB%8C-%D8%AF%D8%B3%D8%AA-%D8%A8%DB%8C%D8%B2%D8%AF%D9%88%D8%A7%D8%B1-%D9%85%D8%AF%D9%84-v5/' }
+      ],
+      tags: ['RINOTEX', 'تبریز', 'ICT', 'پارک علم و فناوری', 'ایمن سهند پدیده', 'دانش‌بنیان']
+    }
+  ],
+
+  /** دستاوردها و محصولات اختصاصی */
+  achievements: [
+    {
+      id: 'biztab',
+      year: '۱۳۹۸',
+      yearIso: '2020',
+      title: 'BizTab — اولین دماسنج دیواری غیرتماسی تبریز',
+      titleEn: 'BizTab — First non-contact wall thermometer in Tabriz',
+      desc: 'دماسنج دیواری غیرتماسی با خطای کمتر از ۰.۳ درجه — تأیید اساتید دانشگاه تبریز. توسعه و مالکیت انحصاری تیم بیزدوار.',
+      source: 'آژانس خبری تحلیلی نصر',
+      sourceUrl: 'https://nasrnews.ir/print/16727/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D9%88-%D8%B3%D8%A7%D8%AE%D8%AA-%D8%A7%D9%88%D9%84%DB%8C%D9%86-%D8%AF%D9%85%D8%A7%D8%B3%D9%86%D8%AC-%D8%AF%DB%8C%D9%88%D8%A7%D8%B1%DB%8C-%D8%BA%DB%8C%D8%B1%D8%AA%D9%85%D8%A7%D8%B3%DB%8C-%D8%AF%D8%B1-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2',
+      image: 'assets/images/products/biztab/biztab-hero.jpg',
+      slug: 'pages/biztab.html',
+      tags: ['IoT', 'تبریز', 'محصول اختصاصی']
+    },
+    {
+      id: 'bizsanitizer-v5',
+      year: '۱۳۹۹',
+      yearIso: '2020',
+      title: 'BizSan V5 — دستگاه ضدعفونی دست اتوماتیک',
+      titleEn: 'BizSan V5 — Automatic hand sanitizer dispenser',
+      desc: 'دستگاه ضدعفونی دست — طراحی و تولید تیم بیزدوار (دی ۱۳۹۸ — شهریور ۱۴۰۱)، نمایشگاه مرکز رشد ۱۳۹۹ (ISNA، SNN، صدا و سیما)، RINOTEX ۱۴۰۰ از طریق واحد فناور پارک علمی «ایمن سهند پدیده»، عرضه در دیجی‌کالا.',
+      source: 'دیجی‌کالا',
+      sourceUrl: 'https://www.digikala.com/product/dkp-3730222/%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D8%B6%D8%AF%D8%B9%D9%81%D9%88%D9%86%DB%8C-%D8%AF%D8%B3%D8%AA-%D8%A8%DB%8C%D8%B2%D8%AF%D9%88%D8%A7%D8%B1-%D9%85%D8%AF%D9%84-v5/',
+      pressLinks: [
+        { label: 'RINOTEX 1400', url: 'https://rinotex.ir/Home/Introduction' },
+        { label: 'پارک علم و فناوری تبریز', url: 'https://techpark.tabrizu.ac.ir/' },
+        { label: 'صدا و سیما', url: 'https://www.iribnews.ir/fa/news/2714063/%D9%86%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%A7%D9%87-%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7' },
+        { label: 'ISNA', url: 'https://www.isna.ir/news/99022216019/%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D9%BE%DA%98%D9%88%D9%87%D8%B4%DB%8C-%D9%88-%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%D9%87-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7' },
+        { label: 'SNN', url: 'https://snn.ir/fa/news/847064/%D9%86%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%A7%D9%87-%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%E2%80%8C%D9%87%D8%A7%DB%8C-%D9%85%D8%B1%DA%A9%D8%B2-%D8%B1%D8%B4%D8%AF-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%D8%B4%DB%8C%D9%88%D8%B9-%D9%88%DB%8C%D8%B1%D9%88%D8%B3-%DA%A9%D8%B1%D9%88%D9%86%D8%A7-%D8%A7%D9%81%D8%AA%D8%AA%D8%A7%D8%AD-%D8%B4%D8%AF' }
+      ],
+      pressUrl: 'https://www.iribnews.ir/fa/news/2714063/%D9%86%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%A7%D9%87-%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7',
+      pressLabel: 'صدا و سیما',
+      videoUrl: 'https://www.youtube.com/shorts/GcOtue1Nmlo',
+      videoLabel: 'یوتیوب',
+      image: 'assets/images/products/bizsanitizer/bizsanitizer-hero.svg',
+      slug: 'pages/bizsanitizer-v5.html',
+      tags: ['بهداشت', 'IoT', 'کرونا', 'دانشگاه تبریز', 'RINOTEX', 'ایمن سهند پدیده', 'دیجی‌کالا']
+    }
+  ],
+
   /** گواهینامه‌ها و مهارت‌های تأییدشده */
   credentials: [
     { name: 'Google Analytics Certification', issuer: 'Google Skillshop', year: '2026' },
@@ -186,9 +356,47 @@ window.BIZDAVAR_INTEL = {
   socialProof: {
     sources: [
       { type: 'linkedin', label: 'پروفایل حرفه‌ای بنیان‌گذار', url: 'https://www.linkedin.com/in/ersanjt' },
+      { type: 'spyur', label: 'پروفایل Spyur.am — ارمنستان', url: 'https://www.spyur.am/en/companies/bizdavar/57783/' },
+      { type: 'jooyeshgar', label: 'پروفایل B2B جویشگر — ایران', url: 'https://www.jooyeshgar.com/company/det-29884' },
       { type: 'portfolio', label: 'نمونه‌کارهای منتشرشده', url: 'pages/portfolio.html' }
     ],
     highlights: [
+      {
+        category: 'نمایشگاه و فناوری',
+        text: 'واحد فناور «ایمن سهند پدیده» (پارک علم و فناوری دانشگاه تبریز) — معرفی «دستگاه هوشمند ضدعفونی دست» در فهرست واحدهای RINOTEX 1400؛ طراحی و تولید توسط تیم بیزدوار (دی ۱۳۹۸ — شهریور ۱۴۰۱).',
+        source: 'RINOTEX — ربع رشیدی',
+        year: '۱۴۰۰'
+      },
+      {
+        category: 'نمایشگاه و فناوری',
+        text: 'حضور «تکنولوژی پردازان توسعه خاورمیانه» (بیزدوار) در نهمین RINOTEX ۱۴۰۰ — غرفه ۱۲ متری در زون ICT، بخش تجاری‌سازی فناوری.',
+        source: 'RINOTEX — ربع رشیدی',
+        year: '۱۴۰۰'
+      },
+      {
+        category: 'محصول و نوآوری',
+        text: 'گزارش تصویری صدا و سیما از نمایشگاه دستاوردهای دانشگاه تبریز — معرفی دستگاه‌های تولیدشده تیم بیزدوار با حضور استاندار.',
+        source: 'خبرگزاری صدا و سیما',
+        year: '۱۳۹۹'
+      },
+      {
+        category: 'محصول و نوآوری',
+        text: 'BizSan V5 — دستگاه ضدعفونی دست در نمایشگاه مرکز رشد دانشگاه تبریز (مقابله با کرونا) با حضور استاندار آذربایجان شرقی.',
+        source: 'خبرگزاری دانشجو (SNN)',
+        year: '۱۳۹۹'
+      },
+      {
+        category: 'محصول و نوآوری',
+        text: 'دستاوردهای پژوهشی و فناورانه دانشگاه تبریز — تصاویر ISNA از دستگاه‌های تولیدشده تیم بیزدوار و حضور بنیان‌گذار در نمایشگاه.',
+        source: 'خبرگزاری ISNA',
+        year: '۱۳۹۹'
+      },
+      {
+        category: 'محصول و نوآوری',
+        text: 'طراحی و توسعه BizTab — اولین دماسنج دیواری غیرتماسی تبریز با دقت کمتر از ۰.۳ درجه و تأیید دانشگاه تبریز.',
+        source: 'گزارش آژانس خبری تحلیلی نصر',
+        year: '۱۳۹۸'
+      },
       {
         category: 'بازاریابی دیجیتال',
         text: 'با اجرای استراتژی‌های نوین بازاریابی دیجیتال، نرخ تبدیل مشتریان به‌طور محسوسی افزایش یافته است.',
@@ -219,12 +427,19 @@ window.BIZDAVAR_INTEL = {
       'پروفایل بنیان‌گذار قابل راستی‌آزمایی در LinkedIn',
       'نمونه‌کارهای زنده با دامنه‌های مستقل',
       'گواهینامه‌های Google Analytics و تبلیغات',
+      'حضور در نهمین RINOTEX ۱۴۰۰ — تکنولوژی پردازان و واحد فناور ایمن سهند پدیده (پارک علم و فناوری تبریز)',
+      'پروفایل B2B در جویشگر — تکنولوژی پردازان توسعه خاورمیانه',
+      'پروفایل Spyur.am — Bizdavar Group LLC در ایروان',
       'حضور فعال در اینستاگرام و لینکدین'
     ]
   },
 
   /** سوالات متداول E-E-A-T */
   faqIntel: [
+    { q: 'نام رسمی شرکت در ایران چیست؟', a: 'شخصیت حقوقی در ایران «تکنولوژی پردازان توسعه خاورمیانه» است — برند تجاری «آژانس دیجیتال مارکتینگ بیزدوار» (Bizdavar). دفتر تبریز، استان آذربایجان شرقی. پروفایل B2B در جویشگر قابل مشاهده است.' },
+    { q: 'آیا بیزدوار در نمایشگاه‌های فناوری حضور داشته؟', a: 'بله — «تکنولوژی پردازان توسعه خاورمیانه» (Bizdavar) در نهمین RINOTEX آبان ۱۴۰۰ با غرفه ۱۲ متری در زون ICT حضور داشت. هم‌زمان واحد فناور «ایمن سهند پدیده» از پارک علم و فناوری دانشگاه تبریز در فهرست واحدهای مستقر، محصول «دستگاه هوشمند ضدعفونی دست» را معرفی کرد — طراحی و تولید توسط تیم بیزدوار (دی ۱۳۹۸ — شهریور ۱۴۰۱). جزئیات در rinotex.ir و بخش نمایشگاه‌ها.' },
+    { q: 'رابطه بیزدوار با «ایمن سهند پدیده» چیست؟', a: '«ایمن سهند پدیده» واحد فناور مستقر در پارک علم و فناوری دانشگاه تبریز بود. از دی ۱۳۹۸ تا شهریور ۱۴۰۱ بنیان‌گذار بیزدوار سرمایه‌گذاری شخصی داشت و تمام طراحی و تولید دستگاه‌های ضدعفونی (از جمله BizSan V5) توسط تیم بیزدوار انجام شد. این دو شخصیت حقوقی جدا هستند؛ مهندسی و تولید متعلق به تیم بیزدوار است و در RINOTEX 1400 از طریق واحد پارکی معرفی شد.' },
+    { q: 'ثبت شرکت در ارمنستان چگونه است؟', a: 'Bizdavar Group به‌صورت LLC در ایروان، ارمنستان ثبت شده — فعال در SEO، تبلیغات وب و دیجیتال مارکتینگ. پروفایل در دایرکتوری Spyur.am (شناسه ۵۷۷۸۳) منتشر شده است.' },
     { q: 'بیزدوار گروپ از چه سالی فعالیت می‌کند؟', a: 'بیزدوار از سال ۲۰۱۳ (۱۳۹۲) توسط ارسان جاهد تبریزی راه‌اندازی شده و خدمات دیجیتال، وب و صنعتی را تحت یک برند یکپارچه ارائه می‌دهد.' },
     { q: 'بیزدوار در چه کشورهایی پروژه اجرا کرده؟', a: 'پروژه‌ها در ۱۱ کشور شامل ترکیه، امارات، آلمان، آمریکا، انگلستان، ارمنستان، لبنان، ایران، عراق، گرجستان و ایتالیا انجام شده است.' },
     { q: 'تفاوت بیزدوار با آژانس‌های دیجیتال چیست؟', a: 'ترکیب آژانس دیجیتال کامل (سئو، تبلیغات، SMM) با توسعه فنی (وردپرس، فین‌تک، AI) و تامین تجهیزات صنعتی B2B — یک تیم برای رشد و زیرساخت.' },

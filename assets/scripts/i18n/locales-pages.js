@@ -202,7 +202,7 @@
 
   const page = {
     fa: {
-      aboutPage: { hero: { tag: 'درباره بیزدوار', title: 'شریک رشد کسب‌وکار در دیجیتال و صنعت', desc: 'از سال ۱۳۹۲ — ۱۰۰+ پروژه در ۱۱ کشور · بازاریابی، وب، فین‌تک و تامین صنعتی' }, whatIs: { title: 'بیزدوار گروپ چیست؟', p1: 'بیزدوار گروپ (Bizdavar Group) آژانس دیجیتال و تامین‌کننده B2B است که از سال ۲۰۱۳ توسط <strong>ارسان جاهد تبریزی</strong> راه‌اندازی شده. خدمات ما شامل <a href="services#digital-marketing">بازاریابی دیجیتال</a>، <a href="fast">طراحی وب</a>، پلتفرم‌های فین‌تک، مدیریت SMM و <a href="services#industrial">تامین تجهیزات صنعتی</a> است.', p2: 'بیش از ۱۰۰ پروژه وب و پلتفرم سفارشی در ۱۱ کشور — از ZedPay و Netinode تا Bear Event و تامین VEGA. زیرساخت دیجیتال، دامنه، هاست، SSL و پشتیبانی فنی نیز تحت مدیریت ما است. <a href="portfolio">مشاهده نمونه‌کارها</a>' }, features: ['بازاریابی دیجیتال', 'طراحی وب حرفه‌ای', 'تامین تجهیزات', 'مدیریت زیرساخت'], sections: { identityEyebrow: 'شناسنامه سازمانی', identityTitle: 'بیزدوار گروپ در یک نگاه', leadershipEyebrow: 'رهبری', leadershipTitle: 'بنیان‌گذار و تیم', activitiesEyebrow: 'دسته‌بندی فعالیت', activitiesTitle: 'حوزه‌های تخصصی', ecosystemEyebrow: 'اکوسیستم', ecosystemTitle: 'برندها و پروژه‌های مرتبط', ecosystemDesc: 'نمونه‌ای از اکوسیستم دیجیتال و صنعتی که بیزدوار در توسعه یا مدیریت آن نقش داشته', presenceEyebrow: 'حضور جهانی', presenceTitle: 'کشورهای فعال', presenceDesc: 'شبکه بین‌المللی پروژه‌ها — از استانبول و ایروان تا اروپا و آمریکا', credentialsEyebrow: 'گواهینامه‌ها', credentialsTitle: 'مهارت‌های تأییدشده', proofEyebrow: 'اعتبار حرفه‌ای', proofTitle: 'بازخورد و شاخص‌های اعتماد', proofDesc: 'بر اساس منابع عمومی قابل راستی‌آزمایی — بدون نظر ساختگی', faqEyebrow: 'سوالات متداول', faqTitle: 'پرسش‌های رایج درباره بیزدوار' }, values: { title: 'ارزش‌های ما', items: [{ title: 'تمرکز بر نتیجه', desc: 'افزایش فروش، تبدیل و رشد برند — نه فقط اجرا.' }, { title: 'همکاری شفاف', desc: 'گزارش‌دهی منظم و ارتباط مستقیم با تیم.' }, { title: 'بازار جهانی', desc: 'پروژه در ایران، ترکیه و بازارهای بین‌المللی.' }, { title: 'سرعت اجرا', desc: 'Fast Web Studio — تحویل سایت در ۵ روز.' }] }, cta: { title: 'آماده همکاری با بیزدوار هستید؟', desc: 'مشاوره اولیه رایگان — از طریق <a href="contact" class="link-yellow">فرم تماس</a> یا واتساپ.', btn: 'تماس با ما' } },
+      aboutPage: { hero: { tag: 'درباره بیزدوار', title: 'شریک رشد کسب‌وکار در دیجیتال و صنعت', desc: 'از سال ۱۳۹۲ — ۱۰۰+ پروژه در ۱۱ کشور · بازاریابی، وب، فین‌تک و تامین صنعتی' }, whatIs: { title: 'بیزدوار گروپ چیست؟', p1: 'بیزدوار گروپ (Bizdavar Group) آژانس دیجیتال و تامین‌کننده B2B است که از سال ۲۰۱۳ توسط <strong>ارسان جاهد تبریزی</strong> راه‌اندازی شده. خدمات ما شامل <a href="services#digital-marketing">بازاریابی دیجیتال</a>، <a href="fast">طراحی وب</a>، پلتفرم‌های فین‌تک، مدیریت SMM و <a href="services#industrial">تامین تجهیزات صنعتی</a> است.', p2: 'بیش از ۱۰۰ پروژه وب و پلتفرم سفارشی در ۱۱ کشور — از ZedPay و Netinode تا Bear Event و تامین VEGA. زیرساخت دیجیتال، دامنه، هاست، SSL و پشتیبانی فنی نیز تحت مدیریت ما است. <a href="portfolio">مشاهده نمونه‌کارها</a>' }, features: ['بازاریابی دیجیتال', 'طراحی وب حرفه‌ای', 'تامین تجهیزات', 'مدیریت زیرساخت'], sections: { identityEyebrow: 'شناسنامه سازمانی', identityTitle: 'بیزدوار گروپ در یک نگاه', leadershipEyebrow: 'رهبری', leadershipTitle: 'بنیان‌گذار و تیم', activitiesEyebrow: 'دسته‌بندی فعالیت', activitiesTitle: 'حوزه‌های تخصصی', ecosystemEyebrow: 'اکوسیستم', ecosystemTitle: 'برندها و پروژه‌های مرتبط', ecosystemDesc: 'نمونه‌ای از اکوسیستم دیجیتال و صنعتی که بیزدوار در توسعه یا مدیریت آن نقش داشته', presenceEyebrow: 'حضور جهانی', presenceTitle: 'کشورهای فعال', presenceDesc: 'شبکه بین‌المللی پروژه‌ها — از استانبول و ایروان تا اروپا و آمریکا', achievementsEyebrow: 'دستاوردها', achievementsTitle: 'محصولات و نوآوری‌های بیزدوار', achievementsDesc: 'علاوه بر خدمات دیجیتال و تامین صنعتی، تیم بیزدوار محصولات اختصاصی نیز طراحی و توسعه داده است', credentialsEyebrow: 'گواهینامه‌ها', credentialsTitle: 'مهارت‌های تأییدشده', proofEyebrow: 'اعتبار حرفه‌ای', proofTitle: 'بازخورد و شاخص‌های اعتماد', proofDesc: 'بر اساس منابع عمومی قابل راستی‌آزمایی — بدون نظر ساختگی', faqEyebrow: 'سوالات متداول', faqTitle: 'پرسش‌های رایج درباره بیزدوار' }, values: { title: 'ارزش‌های ما', items: [{ title: 'تمرکز بر نتیجه', desc: 'افزایش فروش، تبدیل و رشد برند — نه فقط اجرا.' }, { title: 'همکاری شفاف', desc: 'گزارش‌دهی منظم و ارتباط مستقیم با تیم.' }, { title: 'بازار جهانی', desc: 'پروژه در ایران، ترکیه و بازارهای بین‌المللی.' }, { title: 'سرعت اجرا', desc: 'Fast Web Studio — تحویل سایت در ۵ روز.' }] }, cta: { title: 'آماده همکاری با بیزدوار هستید؟', desc: 'مشاوره اولیه رایگان — از طریق <a href="contact" class="link-yellow">فرم تماس</a> یا واتساپ.', btn: 'تماس با ما' } },
       servicesPage: { hero: { tag: 'خدمات ما', title: 'راهکارهای جامع برای رشد کسب‌وکار', desc: 'از استراتژی دیجیتال تا تامین تجهیزات صنعتی — <a href="about">بیزدوار گروپ</a> در چهار محور اصلی همراه شماست.' }, overview: { eyebrow: 'نمای کلی', title: 'چهار محور خدمات بیزدوار', desc: 'برای مشاهده جزئیات هر خدمت، روی کارت کلیک کنید یا از منوی بالا استفاده کنید.' }, navAria: 'فهرست خدمات', viewDetails: 'مشاهده جزئیات', stats: [{ value: '۴', label: 'محور خدمات' }, { value: '۱۰۰+', label: 'پروژه' }, { value: '۱۱', label: 'کشور فعال' }, { value: '۱۳+', label: 'سال تجربه' }], cards: serviceBlocks.fa.map(({ title, body, ...rest }) => ({ title, desc: rest.subtitle || body })), blocks: serviceBlocks.fa, panels: servicesPanels.fa, relatedLinks: servicesRelatedLinks.fa, process: { eyebrow: 'فرآیند همکاری', title: 'چگونه با ما کار می‌کنید؟', desc: 'مسیر همکاری ساده، شفاف و قابل پیگیری است.', steps: [{ title: 'مشاوره', desc: 'شناخت نیاز و اهداف کسب‌وکار' }, { title: 'طراحی راهکار', desc: 'پیشنهاد فنی و برآورد زمان‌بندی' }, { title: 'اجرا', desc: 'پیاده‌سازی، تامین یا راه‌اندازی کمپین' }, { title: 'پشتیبانی', desc: 'گزارش‌دهی، بهینه‌سازی و همراهی مستمر' }] }, cta: { title: 'نیاز به راهکار اختصاصی دارید؟', desc: 'مشاوره رایگان — نمونه پروژه‌ها در <a href="portfolio">نمونه‌کارهای بیزدوار</a>', btn: 'مشاوره رایگان', btnSecondary: 'مشاهده نمونه‌کارها' } },
       portfolioPage: { hero: { tag: 'نمونه‌کارها', title: 'پروژه‌ها و برندهایی که با ما رشد کرده‌اند', desc: 'اکوسیستم برندهای بیزدوار، نمونه‌کارهای طراحی وب و SMM، و مشتریانی که خدمات دیجیتال دریافت کرده‌اند — <a href="about">درباره بیزدوار</a>.' }, areas: { eyebrow: 'حوزه‌ها', title: 'دامنه فعالیت پروژه‌ها' }, archived: { eyebrow: 'پروژه‌های گذشته', title: 'همکاری‌های قبلی و ناتمام', desc: 'پروژه‌هایی که دیگر لینک زنده ندارند یا به‌صورت ناتمام متوقف شده‌اند — از جمله سایت‌هایی که سرورشان تمدید نشده یا مارکت‌پلیس‌هایی که تکمیل نشده‌اند. فقط به‌صورت خلاصه ذکر می‌شوند.' }, tags: ['فین‌تک و پرداخت', 'رویداد و بلیت', 'هلدینگ و سرمایه‌گذاری', 'هاستینگ و زیرساخت', 'طراحی وب و فروشگاه', 'مدیریت SMM', 'تامین صنعتی', 'سنسور VEGA', 'دتکتور Prosense', 'هواپیمایی', 'بروکر و مالی'], cta: { title: 'پروژه بعدی می‌تواند برند شما باشد', desc: 'از <a href="fast" class="link-yellow">طراحی وب</a> تا مدیریت DNS و SSL — بیزدوار همراه شماست.', btnPrimary: 'شروع پروژه جدید', btnSecondary: 'مشاهده خدمات' }, filters: [{ id: 'all', label: 'همه' }, { id: 'case-study', label: 'نمونه‌کارها' }, { id: 'client', label: 'مشتریان' }, { id: 'ecosystem', label: 'اکوسیستم' }, { id: 'fintech', label: 'فین‌تک' }, { id: 'digital', label: 'دیجیتال' }, { id: 'industrial', label: 'صنعتی' }, { id: 'other', label: 'سایر' }], roleLabels: { ecosystem: 'اکوسیستم', 'case-study': 'نمونه‌کار', client: 'مشتری', website: 'وبسایت', page: 'صفحه بیزدوار' }, statsLabels: ['پروژه و برند', 'نمونه‌کار', 'مشتری', 'اکوسیستم'], filterAria: 'فیلتر نمونه‌کارها', countText: '{count} مورد نمایش داده می‌شود', relatedLinks: portfolioRelatedLinks.fa },
       blogPage: { hero: { tag: 'وبلاگ', title: 'مطالب تخصصی دیجیتال و صنعت', desc: 'راهنماها و نکات کاربردی از تیم بیزدوار گروپ.' }, cta: { title: 'نیاز به مشاوره تخصصی دارید؟', desc: 'موضوع مطلب شما را در <a href="contact">فرم تماس</a> بنویسید — پاسخگوییم.', btn: 'درخواست مشاوره' }, geoText: 'مقالات تخصصی برای کسب‌وکارهای ایران و ترکیه — بازاریابی دیجیتال، طراحی وب و تامین تجهیزات صنعتی.' },
@@ -271,7 +271,7 @@
       }, officialNote: 'اطلاعات فنی محصولات بر اساس <a href="https://www.teltonika-gps.com/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Teltonika Telematics</a> است. برای استعلام — <a href="contact">با بیزدوار تماس بگیرید</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'آماده استعلام قیمت Teltonika هستید؟', desc: 'مدل ردیاب یا نوع ناوگان را بفرستید — FMB920 · FMC650 · FTC305 · DualCam', btnForm: 'فرم استعلام', btnServices: 'خدمات صنعتی' }, sticky: { label: 'استعلام Teltonika' }, geoText: 'تامین اصل ردیاب Teltonika به ایران — Fleet Telematics، مشاوره فارسی و تحویل برای ناوگان و IoT.' }
     },
     tr: {
-      aboutPage: { hero: { tag: 'Bizdavar Hakkında', title: 'Dijital ve endüstride büyüme ortağınız', desc: '2013’ten beri — 11 ülkede 100+ proje · pazarlama, web, fintech ve endüstriyel tedarik' }, whatIs: { title: 'Bizdavar Group nedir?', p1: 'Bizdavar Group, 2013 yılında <strong>Ersan Jahed Tabrizi</strong> tarafından kurulan bir dijital ajans ve B2B tedarik grubudur. Hizmetlerimiz <a href="services#digital-marketing">dijital pazarlama</a>, <a href="fast">web tasarım</a>, fintech platformları, SMM yönetimi ve <a href="services#industrial">endüstriyel ekipman tedarikini</a> kapsar.', p2: '11 ülkede 100+ web ve özel platform projesi — ZedPay, Netinode, Bear Event ve VEGA tedariki dahil. Dijital altyapı, domain, hosting, SSL ve teknik destek de ekibimiz tarafından yönetilir. <a href="portfolio">Portfolyoyu görüntüle</a>' }, features: ['Dijital pazarlama', 'Profesyonel web tasarım', 'Ekipman tedariki', 'Altyapı yönetimi'], sections: { identityEyebrow: 'Kurumsal kimlik', identityTitle: 'Bizdavar Group’a kısa bakış', leadershipEyebrow: 'Liderlik', leadershipTitle: 'Kurucu ve ekip', activitiesEyebrow: 'Faaliyet alanları', activitiesTitle: 'Uzmanlık alanları', ecosystemEyebrow: 'Ekosistem', ecosystemTitle: 'İlgili marka ve projeler', ecosystemDesc: 'Bizdavar’ın geliştirdiği veya yönettiği dijital ve endüstriyel ekosistemden örnekler', presenceEyebrow: 'Küresel varlık', presenceTitle: 'Aktif ülkeler', presenceDesc: 'İstanbul ve Erivan’dan Avrupa ve Amerika’ya uzanan proje ağı', credentialsEyebrow: 'Sertifikalar', credentialsTitle: 'Doğrulanmış yetkinlikler', proofEyebrow: 'Profesyonel güven', proofTitle: 'Güven göstergeleri', proofDesc: 'Doğrulanabilir kamu kaynaklarına dayalıdır — sahte yorum yoktur', faqEyebrow: 'SSS', faqTitle: 'Bizdavar hakkında sık sorulanlar' }, values: { title: 'Değerlerimiz', items: [{ title: 'Sonuç odaklılık', desc: 'Sadece uygulama değil, satış, dönüşüm ve marka büyümesi.' }, { title: 'Şeffaf iş birliği', desc: 'Düzenli raporlama ve ekiple doğrudan iletişim.' }, { title: 'Küresel pazar', desc: 'İran, Türkiye ve uluslararası pazarlarda projeler.' }, { title: 'Hızlı uygulama', desc: 'Fast Web Studio — 5 günde web sitesi teslimi.' }] }, cta: { title: 'Bizdavar ile çalışmaya hazır mısınız?', desc: 'İlk danışmanlık ücretsiz — <a href="contact" class="link-yellow">iletişim formu</a> veya WhatsApp üzerinden.', btn: 'Bize ulaşın' } },
+      aboutPage: { hero: { tag: 'Bizdavar Hakkında', title: 'Dijital ve endüstride büyüme ortağınız', desc: '2013’ten beri — 11 ülkede 100+ proje · pazarlama, web, fintech ve endüstriyel tedarik' }, whatIs: { title: 'Bizdavar Group nedir?', p1: 'Bizdavar Group, 2013 yılında <strong>Ersan Jahed Tabrizi</strong> tarafından kurulan bir dijital ajans ve B2B tedarik grubudur. Hizmetlerimiz <a href="services#digital-marketing">dijital pazarlama</a>, <a href="fast">web tasarım</a>, fintech platformları, SMM yönetimi ve <a href="services#industrial">endüstriyel ekipman tedarikini</a> kapsar.', p2: '11 ülkede 100+ web ve özel platform projesi — ZedPay, Netinode, Bear Event ve VEGA tedariki dahil. Dijital altyapı, domain, hosting, SSL ve teknik destek de ekibimiz tarafından yönetilir. <a href="portfolio">Portfolyoyu görüntüle</a>' }, features: ['Dijital pazarlama', 'Profesyonel web tasarım', 'Ekipman tedariki', 'Altyapı yönetimi'], sections: { identityEyebrow: 'Kurumsal kimlik', identityTitle: 'Bizdavar Group’a kısa bakış', leadershipEyebrow: 'Liderlik', leadershipTitle: 'Kurucu ve ekip', activitiesEyebrow: 'Faaliyet alanları', activitiesTitle: 'Uzmanlık alanları', ecosystemEyebrow: 'Ekosistem', ecosystemTitle: 'İlgili marka ve projeler', ecosystemDesc: 'Bizdavar’ın geliştirdiği veya yönettiği dijital ve endüstriyel ekosistemden örnekler', presenceEyebrow: 'Küresel varlık', presenceTitle: 'Aktif ülkeler', presenceDesc: 'İstanbul ve Erivan’dan Avrupa ve Amerika’ya uzanan proje ağı', achievementsEyebrow: 'Başarılar', achievementsTitle: 'Bizdavar ürün ve inovasyonları', achievementsDesc: 'Dijital hizmetler ve endüstriyel tedarikin yanı sıra Bizdavar ekibi özel ürünler de tasarladı', credentialsEyebrow: 'Sertifikalar', credentialsTitle: 'Doğrulanmış yetkinlikler', proofEyebrow: 'Profesyonel güven', proofTitle: 'Güven göstergeleri', proofDesc: 'Doğrulanabilir kamu kaynaklarına dayalıdır — sahte yorum yoktur', faqEyebrow: 'SSS', faqTitle: 'Bizdavar hakkında sık sorulanlar' }, values: { title: 'Değerlerimiz', items: [{ title: 'Sonuç odaklılık', desc: 'Sadece uygulama değil, satış, dönüşüm ve marka büyümesi.' }, { title: 'Şeffaf iş birliği', desc: 'Düzenli raporlama ve ekiple doğrudan iletişim.' }, { title: 'Küresel pazar', desc: 'İran, Türkiye ve uluslararası pazarlarda projeler.' }, { title: 'Hızlı uygulama', desc: 'Fast Web Studio — 5 günde web sitesi teslimi.' }] }, cta: { title: 'Bizdavar ile çalışmaya hazır mısınız?', desc: 'İlk danışmanlık ücretsiz — <a href="contact" class="link-yellow">iletişim formu</a> veya WhatsApp üzerinden.', btn: 'Bize ulaşın' } },
       servicesPage: { hero: { tag: 'Hizmetlerimiz', title: 'İş büyümesi için kapsamlı çözümler', desc: 'Dijital stratejiden endüstriyel tedarike — <a href="about">Bizdavar Group</a> dört ana alanda yanınızda.' }, overview: { eyebrow: 'Genel bakış', title: 'Bizdavar’ın dört hizmet alanı', desc: 'Detayları görmek için karta tıklayın veya üst menüyü kullanın.' }, navAria: 'Hizmet listesi', viewDetails: 'Detayları gör', stats: [{ value: '4', label: 'Hizmet alanı' }, { value: '100+', label: 'Proje' }, { value: '11', label: 'Aktif ülke' }, { value: '13+', label: 'Yıl deneyim' }], cards: serviceBlocks.tr.map(({ title, body, ...rest }) => ({ title, desc: rest.subtitle || body })), blocks: serviceBlocks.tr, panels: servicesPanels.tr, relatedLinks: servicesRelatedLinks.tr, process: { eyebrow: 'İş birliği süreci', title: 'Nasıl çalışıyoruz?', desc: 'Sade, şeffaf ve takip edilebilir bir süreç.', steps: [{ title: 'Danışmanlık', desc: 'İhtiyaçları ve iş hedeflerini anlama' }, { title: 'Çözüm tasarımı', desc: 'Teknik öneri ve zaman planı' }, { title: 'Uygulama', desc: 'Kampanya, kurulum veya tedarik teslimi' }, { title: 'Destek', desc: 'Raporlama, optimizasyon ve sürekli destek' }] }, cta: { title: 'Özel bir çözüme mi ihtiyacınız var?', desc: 'Ücretsiz danışmanlık — proje örnekleri için <a href="portfolio">Bizdavar portfolyosu</a>', btn: 'Ücretsiz danışmanlık', btnSecondary: 'Portfolyoyu gör' } },
       portfolioPage: { hero: { tag: 'Portfolyo', title: 'Birlikte büyüttüğümüz proje ve markalar', desc: 'Bizdavar ekosistemi, web tasarım ve SMM örnekleri, dijital hizmet alan müşteriler — <a href="about">Bizdavar hakkında</a>.' }, areas: { eyebrow: 'Alanlar', title: 'Proje faaliyet alanları' }, archived: { eyebrow: 'Geçmiş projeler', title: 'Önceki ve tamamlanmamış işler', desc: 'Canlı bağlantısı olmayan veya yarım kalan projeler — sunucusu yenilenmeyen siteler veya tamamlanmamış marketplace projeleri dahil. Yalnızca kısaca anılır.' }, tags: ['Fintech ve ödeme', 'Etkinlik ve bilet', 'Holding ve yatırım', 'Hosting ve altyapı', 'Web tasarım ve mağaza', 'SMM yönetimi', 'Endüstriyel tedarik', 'VEGA sensör', 'Prosense dedektör', 'Havacılık', 'Broker ve finans'], cta: { title: 'Sıradaki proje markanız olabilir', desc: '<a href="fast" class="link-yellow">Web tasarımdan</a> DNS ve SSL yönetimine kadar Bizdavar yanınızda.', btnPrimary: 'Yeni proje başlat', btnSecondary: 'Hizmetleri gör' }, filters: [{ id: 'all', label: 'Tümü' }, { id: 'case-study', label: 'Örnek işler' }, { id: 'client', label: 'Müşteriler' }, { id: 'ecosystem', label: 'Ekosistem' }, { id: 'fintech', label: 'Fintech' }, { id: 'digital', label: 'Dijital' }, { id: 'industrial', label: 'Endüstriyel' }, { id: 'other', label: 'Diğer' }], roleLabels: { ecosystem: 'Ekosistem', 'case-study': 'Örnek iş', client: 'Müşteri', website: 'Web sitesi', page: 'Bizdavar sayfası' }, statsLabels: ['Proje ve marka', 'Örnek iş', 'Müşteri', 'Ekosistem'], filterAria: 'Portfolyo filtreleri', countText: '{count} öğe gösteriliyor', relatedLinks: portfolioRelatedLinks.tr },
       blogPage: { hero: { tag: 'Blog', title: 'Dijital ve endüstri içgörüleri', desc: 'Bizdavar Group ekibinden pratik rehberler ve ipuçları.' }, cta: { title: 'Uzman danışmanlığa mı ihtiyacınız var?', desc: 'Konunuzu <a href="contact">iletişim formuna</a> yazın — yanıtlarız.', btn: 'Danışmanlık iste' }, geoText: 'İran ve Türkiye’deki işletmeler için dijital pazarlama, web tasarım ve endüstriyel tedarik yazıları.' },
@@ -340,7 +340,7 @@
       }, officialNote: 'Teknik bilgiler <a href="https://www.teltonika-gps.com/" target="_blank" rel="noopener noreferrer">resmi Teltonika Telematics</a> sitesine dayanır. Teklif için — <a href="contact">Bizdavar</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'Teltonika fiyat teklifine hazır mısınız?', desc: 'Tracker modeli veya filo türünü gönderin — FMB920 · FMC650 · FTC305', btnForm: 'Teklif formu', btnServices: 'Endüstriyel hizmetler' }, sticky: { label: 'Teltonika teklifi' }, geoText: 'İran’a orijinal Teltonika GPS tedariki — Fleet Telematics, danışmanlık ve lojistik.' }
     },
     en: {
-      aboutPage: { hero: { tag: 'About Bizdavar', title: 'Your growth partner in digital and industry', desc: 'Since 2013 — 100+ projects in 11 countries · marketing, web, fintech and industrial supply' }, whatIs: { title: 'What is Bizdavar Group?', p1: 'Bizdavar Group is a digital agency and B2B supply group founded in 2013 by <strong>Ersan Jahed Tabrizi</strong>. Our services include <a href="services#digital-marketing">digital marketing</a>, <a href="fast">web design</a>, fintech platforms, SMM management and <a href="services#industrial">industrial equipment supply</a>.', p2: '100+ custom web and platform projects across 11 countries — from ZedPay and Netinode to Bear Event and VEGA supply. Digital infrastructure, domains, hosting, SSL and technical support are also managed by our team. <a href="portfolio">View portfolio</a>' }, features: ['Digital marketing', 'Professional web design', 'Equipment supply', 'Infrastructure management'], sections: { identityEyebrow: 'Company profile', identityTitle: 'Bizdavar Group at a glance', leadershipEyebrow: 'Leadership', leadershipTitle: 'Founder and team', activitiesEyebrow: 'Activity areas', activitiesTitle: 'Areas of expertise', ecosystemEyebrow: 'Ecosystem', ecosystemTitle: 'Related brands and projects', ecosystemDesc: 'Examples from the digital and industrial ecosystem Bizdavar has developed or managed', presenceEyebrow: 'Global presence', presenceTitle: 'Active countries', presenceDesc: 'International project network from Istanbul and Yerevan to Europe and the US', credentialsEyebrow: 'Certifications', credentialsTitle: 'Verified skills', proofEyebrow: 'Professional credibility', proofTitle: 'Trust indicators', proofDesc: 'Based on verifiable public sources — no fabricated testimonials', faqEyebrow: 'FAQ', faqTitle: 'Common questions about Bizdavar' }, values: { title: 'Our values', items: [{ title: 'Outcome focus', desc: 'Sales, conversion and brand growth — not just execution.' }, { title: 'Transparent collaboration', desc: 'Regular reporting and direct communication with the team.' }, { title: 'Global market', desc: 'Projects in Iran, Turkey and international markets.' }, { title: 'Fast execution', desc: 'Fast Web Studio — website delivery in 5 days.' }] }, cta: { title: 'Ready to work with Bizdavar?', desc: 'Initial consultation is free — through the <a href="contact" class="link-yellow">contact form</a> or WhatsApp.', btn: 'Contact us' } },
+      aboutPage: { hero: { tag: 'About Bizdavar', title: 'Your growth partner in digital and industry', desc: 'Since 2013 — 100+ projects in 11 countries · marketing, web, fintech and industrial supply' }, whatIs: { title: 'What is Bizdavar Group?', p1: 'Bizdavar Group is a digital agency and B2B supply group founded in 2013 by <strong>Ersan Jahed Tabrizi</strong>. Our services include <a href="services#digital-marketing">digital marketing</a>, <a href="fast">web design</a>, fintech platforms, SMM management and <a href="services#industrial">industrial equipment supply</a>.', p2: '100+ custom web and platform projects across 11 countries — from ZedPay and Netinode to Bear Event and VEGA supply. Digital infrastructure, domains, hosting, SSL and technical support are also managed by our team. <a href="portfolio">View portfolio</a>' }, features: ['Digital marketing', 'Professional web design', 'Equipment supply', 'Infrastructure management'], sections: { identityEyebrow: 'Company profile', identityTitle: 'Bizdavar Group at a glance', leadershipEyebrow: 'Leadership', leadershipTitle: 'Founder and team', activitiesEyebrow: 'Activity areas', activitiesTitle: 'Areas of expertise', ecosystemEyebrow: 'Ecosystem', ecosystemTitle: 'Related brands and projects', ecosystemDesc: 'Examples from the digital and industrial ecosystem Bizdavar has developed or managed', presenceEyebrow: 'Global presence', presenceTitle: 'Active countries', presenceDesc: 'International project network from Istanbul and Yerevan to Europe and the US', achievementsEyebrow: 'Achievements', achievementsTitle: 'Bizdavar products & innovation', achievementsDesc: 'Beyond digital services and industrial supply, the Bizdavar team has also designed owned products', credentialsEyebrow: 'Certifications', credentialsTitle: 'Verified skills', proofEyebrow: 'Professional credibility', proofTitle: 'Trust indicators', proofDesc: 'Based on verifiable public sources — no fabricated testimonials', faqEyebrow: 'FAQ', faqTitle: 'Common questions about Bizdavar' }, values: { title: 'Our values', items: [{ title: 'Outcome focus', desc: 'Sales, conversion and brand growth — not just execution.' }, { title: 'Transparent collaboration', desc: 'Regular reporting and direct communication with the team.' }, { title: 'Global market', desc: 'Projects in Iran, Turkey and international markets.' }, { title: 'Fast execution', desc: 'Fast Web Studio — website delivery in 5 days.' }] }, cta: { title: 'Ready to work with Bizdavar?', desc: 'Initial consultation is free — through the <a href="contact" class="link-yellow">contact form</a> or WhatsApp.', btn: 'Contact us' } },
       servicesPage: { hero: { tag: 'Our services', title: 'Comprehensive solutions for business growth', desc: 'From digital strategy to industrial supply — <a href="about">Bizdavar Group</a> supports you across four core areas.' }, overview: { eyebrow: 'Overview', title: 'Four Bizdavar service areas', desc: 'Click a card or use the top menu to view service details.' }, navAria: 'Services list', viewDetails: 'View details', stats: [{ value: '4', label: 'Service areas' }, { value: '100+', label: 'Projects' }, { value: '11', label: 'Active countries' }, { value: '13+', label: 'Years experience' }], cards: serviceBlocks.en.map(({ title, body, ...rest }) => ({ title, desc: rest.subtitle || body })), blocks: serviceBlocks.en, panels: servicesPanels.en, relatedLinks: servicesRelatedLinks.en, process: { eyebrow: 'Collaboration process', title: 'How do we work with you?', desc: 'A simple, transparent and trackable workflow.', steps: [{ title: 'Consulting', desc: 'Understanding your needs and goals' }, { title: 'Solution design', desc: 'Technical proposal and timeline estimate' }, { title: 'Execution', desc: 'Campaign, implementation or supply delivery' }, { title: 'Support', desc: 'Reporting, optimization and ongoing support' }] }, cta: { title: 'Need a custom solution?', desc: 'Free consultation — see project examples in the <a href="portfolio">Bizdavar portfolio</a>', btn: 'Free consultation', btnSecondary: 'View portfolio' } },
       portfolioPage: { hero: { tag: 'Portfolio', title: 'Projects and brands we have helped grow', desc: 'Bizdavar ecosystem brands, web design and SMM case studies, and clients who received digital services — <a href="about">about Bizdavar</a>.' }, areas: { eyebrow: 'Areas', title: 'Project activity areas' }, archived: { eyebrow: 'Past projects', title: 'Previous and incomplete work', desc: 'Projects without a live link or left unfinished — including sites whose hosting expired and marketplaces that were never completed. Listed briefly only.' }, tags: ['Fintech and payments', 'Events and tickets', 'Holding and investment', 'Hosting and infrastructure', 'Web design and stores', 'SMM management', 'Industrial supply', 'VEGA sensors', 'Prosense detectors', 'Aviation', 'Brokerage and finance'], cta: { title: 'Your brand could be the next project', desc: 'From <a href="fast" class="link-yellow">web design</a> to DNS and SSL management, Bizdavar is with you.', btnPrimary: 'Start a new project', btnSecondary: 'View services' }, filters: [{ id: 'all', label: 'All' }, { id: 'case-study', label: 'Case studies' }, { id: 'client', label: 'Clients' }, { id: 'ecosystem', label: 'Ecosystem' }, { id: 'fintech', label: 'Fintech' }, { id: 'digital', label: 'Digital' }, { id: 'industrial', label: 'Industrial' }, { id: 'other', label: 'Other' }], roleLabels: { ecosystem: 'Ecosystem', 'case-study': 'Case study', client: 'Client', website: 'Website', page: 'Bizdavar page' }, statsLabels: ['Projects & brands', 'Case studies', 'Clients', 'Ecosystem'], filterAria: 'Portfolio filters', countText: '{count} items shown', relatedLinks: portfolioRelatedLinks.en },
       blogPage: { hero: { tag: 'Blog', title: 'Digital and industrial insights', desc: 'Practical guides and tips from the Bizdavar Group team.' }, cta: { title: 'Need expert consulting?', desc: 'Write your topic in the <a href="contact">contact form</a> — we will respond.', btn: 'Request consulting' }, geoText: 'Specialized articles for businesses in Iran and Turkey — digital marketing, web design and industrial supply.' },
@@ -449,6 +449,96 @@
         products: { title: 'محصولات معرفی‌شده در صفحه', desc: 'نمونه حوزه‌هایی که در محتوای بیزتجارت پوشش داده می‌شود — تامین فنی از طریق <a href="services#industrial">بیزدوار گروپ</a>' },
         geoText: 'مدیریت محتوای B2B برای بازار ایران — معرفی تجهیزات صنعتی VEGA، Prosense و Gamak با زبان فارسی و انگلیسی.'
       },
+      biztab: {
+        hero: { tag: 'محصول اختصاصی · IoT', title: 'BizTab — دماسنج دیواری غیرتماسی', desc: 'اولین دماسنج دیواری غیرتماسی طراحی‌شده در تبریز — توسعه‌یافته توسط تیم بیزدوار با دقت اندازه‌گیری کمتر از ۰.۳ درجه' },
+        about: {
+          title: 'درباره محصول',
+          imageAlt: 'BizTab — دماسنج دیواری غیرتماسی طراحی‌شده توسط تیم بیزدوار',
+          body: '<strong>BizTab</strong> دماسنج دیواری غیرتماسی است که توسط <strong>تیم بیزدوار</strong> طراحی و توسعه یافته. این محصول به‌عنوان <strong>اولین دماسنج دیواری غیرتماسی در تبریز</strong> معرفی شده و تمامی حقوق مالکیت و تولید انحصاری متعلق به تیم بیزدوار است.',
+          body2: 'دماسنج توسط اساتید دانشگاه تبریز تأیید شده و برای نصب دیواری در ورودی ساختمان‌ها، مراکز درمانی و فضاهای پرتردد طراحی شده است — بدون تماس فیزیکی و با نمایشگر دیجیتال دما.',
+          specsTitle: 'ویژگی‌های فنی',
+          specs: ['اندازه‌گیری غیرتماسی (infrared)', 'خطای اندازه‌گیری کمتر از ۰.۳ درجه سانتی‌گراد', 'نمایشگر دیجیتال LED', 'نصب دیواری — مناسب ورودی و سالن', 'تأیید علمی اساتید دانشگاه تبریز', 'تولید انحصاری تیم بیزدوار'],
+          ctaContact: 'استعلام و تماس',
+          ctaPress: 'گزارش خبری نصرنیوز'
+        },
+        press: {
+          eyebrow: 'رسانه و دستاورد',
+          title: 'پوشش خبری و اعتبار علمی',
+          desc: 'معرفی BizTab در آژانس خبری تحلیلی نصر — اسفند ۱۳۹۸',
+          quote: '«این دماسنج توسط افراد تیم بیزدوار توسعه یافته است و تمامی حقوق و مالکیت و تولید انحصاری به عهده این تیم می‌باشد.»',
+          source: 'آژانس خبری تحلیلی نصر'
+        },
+        related: { title: 'محصولات و خدمات مرتبط' },
+        geoText: 'طراحی و توسعه محصول IoT در تبریز — بخشی از اکوسیستم نوآوری و صنعتی بیزدوار گروپ.'
+      },
+
+      bizsanitizerV5: {
+        hero: { tag: 'محصول اختصاصی · بهداشت', title: 'دستگاه ضدعفونی دست بیزدوار — مدل V5', desc: 'دستگاه اتوماتیک با سنسور التراسونیک — ساخته‌شده در دوران شیوع جهانی کرونا، طراحی و مهندسی‌شده توسط تیم بیزدوار' },
+        about: {
+          title: 'درباره محصول',
+          imageAlt: 'دستگاه ضدعفونی دست بیزدوار مدل V5',
+          body: '<strong>دستگاه ضدعفونی دست بیزدوار مدل V5</strong> محصول مهندسی‌شده توسط <strong>تیم بیزدوار</strong> است — برای ورودی ساختمان‌ها، ادارات، فروشگاه‌ها و مراکز درمانی.',
+          body2: 'این محصول در دوران شیوع کرونا توسعه یافت؛ از دی ۱۳۹۸ تا شهریور ۱۴۰۱ با سرمایه‌گذاری شخصی بنیان‌گذار و تولید توسط تیم بیزدوار ساخته شد. در نمایشگاه مرکز رشد ۱۳۹۹ (ISNA، SNN، صدا و سیما) و RINOTEX 1400 از طریق واحد فناور «ایمن سهند پدیده» (پارک علم و فناوری دانشگاه تبریز) معرفی شد؛ امروز در دیجی‌کالا نیز موجود است.',
+          specsTitle: 'ویژگی‌ها',
+          specs: ['عملکرد اتوماتیک با سنسور التراسونیک', 'پاشش خودکار مایع ضدعفونی بدون تماس دست', 'زاویه ۹۰ درجه سنسور و نازل برای پوشش بهتر', 'مناسب نصب دیواری در ورودی و فضاهای پرتردد', 'طراحی و مهندسی توسط تیم بیزدوار', 'قابل سفارش از دیجی‌کالا'],
+          ctaDigikala: 'مشاهده در دیجی‌کالا',
+          ctaVideo: 'ویدیو در یوتیوب',
+          ctaPress: 'گزارش خبری SNN',
+          ctaPressIsna: 'گزارش ISNA',
+          ctaPressIrib: 'گزارش صدا و سیما',
+          ctaContact: 'استعلام عمده / تماس'
+        },
+        video: {
+          eyebrow: 'زمانه و رسانه',
+          title: 'تولید در دوران شیوع جهانی کرونا',
+          desc: 'BizSan V5 در زمانی طراحی و ساخته شد که بیماری کرونا در سراسر جهان در حال گسترش بود — پاسخ مهندسی تیم بیزدوار به نیاز بهداشت بدون تماس.',
+          quote: 'محصولی که در اوج بحران بهداشت جهانی ساخته شد — ضدعفونی خودکار دست بدون تماس، برای کاهش زنجیره انتقال ویروس در فضاهای پرتردد.',
+          source: 'یوتیوب — Bizdavar'
+        },
+        press: {
+          eyebrow: 'رسانه و نمایشگاه',
+          title: 'نمایشگاه مرکز رشد دانشگاه تبریز — مقابله با کرونا',
+          desc: 'دستگاه‌های مهندسی‌شده توسط تیم بیزدوار — از جمله BizSan V5 — در نمایشگاه دستاوردهای مرکز رشد دانشگاه تبریز با حضور استاندار آذربایجان شرقی عرضه شد. گزارش تصویری صدا و سیما و تصاویر ISNA و SNN مربوط به همین محصولات و حضور ارسان جاهد تبریزی در مراسم است.',
+          videoTitle: 'گزارش تصویری خبرگزاری صدا و سیما',
+          videoDesc: 'پوشش رسانه‌ای نمایشگاه — معرفی دستگاه‌های تولیدشده تیم بیزدوار با حضور استاندار آذربایجان شرقی در مرکز رشد دانشگاه تبریز.',
+          quoteIrib: 'نمایشگاهی از دستاوردهای مرکز رشد و نوآوری دانشگاه تبریز در مقابله با شیوع ویروس کرونا گشایش یافت — گزارش تصویری با حضور استاندار و معرفی محصولات دانش‌بنیان.',
+          sourceIrib: 'خبرگزاری صدا و سیما (IRIB News)',
+          ctaIrib: 'گزارش صدا و سیما',
+          quoteIsna: 'گزارش ISNA از دستاوردهای پژوهشی و فناورانه دانشگاه تبریز در مقابله با کرونا — معرفی محصولات دانش‌بنیان شامل دستگاه‌های ضدعفونی و تجهیزات بهداشتی ساخته‌شده در مرکز رشد.',
+          sourceIsna: 'خبرگزاری ISNA',
+          ctaIsna: 'گزارش ISNA',
+          quoteSnn: 'در این نمایشگاه ۲۱ محصول دانش‌بنیان از ۱۰ شرکت از جمله دستگاه‌های ضدعفونی‌کننده معرفی شد — استاندار از آمادگی برای تامین مواد اولیه و تولید انبوه خبر داد.',
+          sourceSnn: 'خبرگزاری دانشجو (SNN)',
+          ctaSnn: 'گزارش SNN',
+          mediaNote: 'ویدیو و تصاویر منتشرشده در صدا و سیما، ISNA و SNN مربوط به دستگاه‌های تولیدشده توسط تیم بیزدوار است — بنیان‌گذار در مراسم نمایشگاه حضور داشته است.'
+        },
+        heritage: {
+          eyebrow: 'پارک علمی و RINOTEX',
+          title: 'ایمن سهند پدیده — واحد فناور پارک علم و فناوری تبریز',
+          desc: 'شرکت «ایمن سهند پدیده» از واحدهای فناور مستقر در پارک علم و فناوری دانشگاه تبریز بود. در نهمین RINOTEX (آبان ۱۴۰۰) این واحد در فهرست واحدهای پارک، محصول دانش‌بنیان «طراحی و ساخت دستگاه هوشمند ضدعفونی دست» را ارائه داد. از دی ۱۳۹۸ تا شهریور ۱۴۰۱ سرمایه‌گذاری شخصی بنیان‌گذار بود و تمام طراحی و تولید توسط تیم بیزدوار انجام شد.',
+          period1399: {
+            period: 'اردیبهشت ۱۳۹۹',
+            text: 'نمایشگاه دستاوردهای مرکز رشد دانشگاه تبریز — پوشش ISNA، SNN و صدا و سیما از دستگاه‌های تولیدشده تیم بیزدوار.'
+          },
+          period1400: {
+            period: 'آبان ۱۴۰۰',
+            text: 'RINOTEX 1400 — معرفی محصول از طریق واحد فناور «ایمن سهند پدیده»؛ هم‌زمان غرفه ۱۲ متری «تکنولوژی پردازان توسعه خاورمیانه» (بیزدوار) در زون ICT.'
+          },
+          note: 'منابع عمومی با نام «ایمن سهند پدیده» محدود است؛ محصول، تولید و حضور در نمایشگاه‌ها از طریق گزارش‌های ISNA، SNN، صدا و سیما، RINOTEX و پارک علم و فناوری تبریز قابل راستی‌آزمایی است.',
+          linkRinotex: 'RINOTEX 1400',
+          linkTechpark: 'پارک علم و فناوری تبریز',
+          linkExhibitions: 'نمایشگاه‌ها در درباره ما'
+        },
+        store: {
+          eyebrow: 'فروش آنلاین',
+          title: 'خرید از دیجی‌کالا',
+          desc: 'محصول V5 با شناسه کالای dkp-3730222 در دیجی‌کالا ثبت شده',
+          quote: 'دستگاه ضدعفونی دست اتوماتیک بیزدوار — با سنسور التراسونیک و پاشش خودکار مایع ضدعفونی.',
+          source: 'دیجی‌کالا'
+        },
+        related: { title: 'محصولات مرتبط بیزدوار' },
+        geoText: 'محصول بهداشتی مهندسی‌شده در ایران — طراحی تیم بیزدوار و عرضه از طریق دیجی‌کالا.'
+      },
       bzDiamond: {
         hero: { tag: 'نمونه‌کار طراحی وب', title: 'BZ Diamond — طراحی وبسایت و فروشگاه آنلاین', desc: 'پروژه مشتری در حوزه جواهرات و الماس — طراحی، توسعه و پشتیبانی دیجیتال توسط بیزدوار گروپ' },
         about: { title: 'درباره پروژه', body: '<strong>BZ Diamond</strong> یکی از مشتریان بیزدوار گروپ است — برند تخصصی فروش الماس و جواهرات آنلاین. ما وبسایت، فروشگاه WooCommerce، زیرساخت ایمیل و پشتیبانی فنی این پروژه را طراحی و اجرا کرده‌ایم. این صفحه <strong>نمونه‌کار طراحی وب</strong> است، نه بخش کسب‌وکار صنعتی بیزدوار.', servicesTitle: 'خدمات اجراشده توسط بیزدوار', services: ['طراحی و توسعه وبسایت شرکتی و فروشگاهی', 'پیاده‌سازی WooCommerce — فروش آنلاین الماس و جواهرات', 'مدیریت و پیکربندی ایمیل سازمانی (دامنه و صندوق‌های پستی)', 'سئو، ساختار محتوا و بهینه‌سازی صفحات محصول', 'رابط کاربری RTL و چندزبانه (فارسی / انگلیسی)', 'پشتیبانی فنی، به‌روزرسانی و نگهداری سایت'], clientTitle: 'حوزه فعالیت مشتری', clientBody: 'BZ Diamond در حوزه الماس GIA، lab-grown و آموزش انتخاب جواهرات فعالیت می‌کند. جزئیات محصولات و قیمت‌ها در وبسایت رسمی مشتری منتشر می‌شود.', ctaSite: 'مشاهده وبسایت BZ Diamond', ctaOrder: 'سفارش طراحی سایت مشابه', ctaPortfolio: 'سایر نمونه‌کارها' },
@@ -462,6 +552,83 @@
         products: { title: 'Sayfada tanıtılan ürünler', desc: 'Biztejarat içeriğinde kapsanan alan örnekleri — teknik tedarik <a href="services#industrial">Bizdavar Group</a> üzerinden' },
         geoText: 'İran pazarı için B2B içerik yönetimi — VEGA, Prosense ve Gamak endüstriyel ekipmanlarının Farsça ve İngilizce tanıtımı.'
       },
+      biztab: {
+        hero: { tag: 'Özel ürün · IoT', title: 'BizTab — Temasız duvar termometresi', desc: 'Tebriz\'de tasarlanan ilk temasız duvar termometresi — Bizdavar ekibi tarafından geliştirildi, 0,3°C altı hata payı' },
+        about: {
+          title: 'Ürün hakkında',
+          imageAlt: 'BizTab — Bizdavar ekibi tarafından tasarlanan temasız duvar termometresi',
+          body: '<strong>BizTab</strong>, <strong>Bizdavar ekibi</strong> tarafından tasarlanıp geliştirilen temasız duvar termometresidir. <strong>Tebriz\'deki ilk temasız duvar termometresi</strong> olarak tanıtılmıştır; tüm fikri mülkiyet ve münhasır üretim hakları Bizdavar ekibine aittir.',
+          body2: 'Termometre Tebriz Üniversitesi akademisyenleri tarafından onaylanmıştır; girişler, sağlık tesisleri ve yoğun alanlar için duvara monte, temasız ölçüm ve dijital ekran sunar.',
+          specsTitle: 'Teknik özellikler',
+          specs: ['Temasız ölçüm (kızılötesi)', '0,3°C altı hata payı', 'Dijital LED ekran', 'Duvar montajı — giriş ve salonlar için', 'Tebriz Üniversitesi akademik onayı', 'Bizdavar ekibi münhasır üretimi'],
+          ctaContact: 'Teklif ve iletişim',
+          ctaPress: 'Nasr News haberi'
+        },
+        press: { eyebrow: 'Medya ve başarı', title: 'Basın ve bilimsel onay', desc: 'BizTab tanıtımı — Nasr News Ajansı, Mart 2020', quote: '«Bu termometre Bizdavar ekibi tarafından geliştirilmiştir; tüm haklar ve münhasır üretim bu ekibe aittir.»', source: 'Nasr News Ajansı' },
+        related: { title: 'İlgili ürün ve hizmetler' },
+        geoText: 'Tebriz\'de IoT ürün tasarımı — Bizdavar Group inovasyon ve endüstriyel ekosisteminin parçası.'
+      },
+      bizsanitizerV5: {
+        hero: { tag: 'Özel ürün · Hijyen', title: 'Bizdavar el dezenfektan cihazı — V5', desc: 'Ultrasonik sensörlü otomatik cihaz — küresel COVID-19 salgını döneminde üretildi, Bizdavar ekibi tarafından tasarlandı' },
+        about: {
+          title: 'Ürün hakkında',
+          imageAlt: 'Bizdavar el dezenfektan cihazı V5',
+          body: '<strong>Bizdavar el dezenfektan cihazı V5</strong>, <strong>Bizdavar ekibi</strong> tarafından mühendislik yapılmış bir üründür — bina girişleri, ofisler, mağazalar ve sağlık tesisleri için.',
+          body2: 'Bu ürün, koronavirüsün dünya genelinde yayıldığı dönemde geliştirildi; Aralık 2019 — Eylül 2022 arasında kurucunun kişisel yatırımı ve Bizdavar ekibinin üretimiyle yapıldı. 1399 büyüme merkezi sergisinde (ISNA, SNN, IRIB) ve RINOTEX 1400\'de «Imen Sahand Padideh» teknoloji parkı birimi aracılığıyla tanıtıldı; bugün Digikala\'da satışta.',
+          specsTitle: 'Özellikler',
+          specs: ['Ultrasonik sensörle otomatik çalışma', 'Temasız el dezenfektanı otomatik püskürtme', 'Daha iyi kapsama için 90° sensör ve nozul açısı', 'Giriş ve yoğun alanlar için duvar montajına uygun', 'Bizdavar ekibi tarafından tasarım ve mühendislik', 'Digikala\'dan sipariş edilebilir'],
+          ctaDigikala: 'Digikala\'da görüntüle',
+          ctaVideo: 'YouTube\'da izle',
+          ctaPress: 'SNN haberi',
+          ctaPressIsna: 'ISNA haberi',
+          ctaPressIrib: 'IRIB haberi',
+          ctaContact: 'Toptan teklif / iletişim'
+        },
+        video: {
+          eyebrow: 'Dönem ve medya',
+          title: 'Küresel COVID-19 salgını döneminde üretim',
+          desc: 'BizSan V5, koronavirüsün dünya genelinde yayıldığı dönemde tasarlanıp üretildi — temasız hijyen ihtiyacına Bizdavar ekibinin mühendislik yanıtı.',
+          quote: 'Küresel sağlık krizinin zirvesinde geliştirilen ürün — yoğun alanlarda virüs yayılımını azaltmak için temasız otomatik el dezenfeksiyonu.',
+          source: 'YouTube — Bizdavar'
+        },
+        press: {
+          eyebrow: 'Medya ve sergi',
+          title: 'Tebriz Üniversitesi büyüme merkezi — COVID-19 sergisi',
+          desc: 'Bizdavar ekibi tarafından mühendislik yapılan cihazlar — BizSan V5 dahil — Doğu Azerbaycan valisinin katılımıyla sergilendi. IRIB video raporu ile ISNA ve SNN görselleri bu ürünleri ve kurucunun katılımını gösterir.',
+          videoTitle: 'IRIB Haber Ajansı video raporu',
+          videoDesc: 'Sergi medya kapsamı — Tebriz Üniversitesi büyüme merkezinde valinin katılımıyla Bizdavar cihazlarının tanıtımı.',
+          quoteIrib: 'Tebriz Üniversitesi büyüme merkezinin COVID-19\'a karşı başarıları sergisi açıldı — valinin katılımıyla bilgi temelli ürünlerin video raporu.',
+          sourceIrib: 'IRIB Haber Ajansı (İran Radyo Televizyonu)',
+          ctaIrib: 'IRIB haberi',
+          quoteIsna: 'ISNA — Tebriz Üniversitesi\'nin COVID-19\'a karşı araştırma ve teknoloji başarıları; dezenfektan cihazları dahil bilgi temelli ürünler.',
+          sourceIsna: 'ISNA Haber Ajansı',
+          ctaIsna: 'ISNA haberi',
+          quoteSnn: 'Sergide 10 şirketten 21 bilgi temelli ürün; vali kitlesel üretim desteği sözü verdi.',
+          sourceSnn: 'SNN (İran Öğrenci Haber Ajansı)',
+          ctaSnn: 'SNN haberi',
+          mediaNote: 'IRIB, ISNA ve SNN\'de yayınlanan video ve görseller Bizdavar ekibinin ürettiği cihazlara aittir — kurucu sergide yer almıştır.'
+        },
+        heritage: {
+          eyebrow: 'Teknoloji parkı ve RINOTEX',
+          title: 'Imen Sahand Padideh — Tebriz Üniversitesi teknoloji parkı birimi',
+          desc: '«Imen Sahand Padideh», Tebriz Üniversitesi Bilim ve Teknoloji Parkı\'nda yerleşik bir teknoloji birimiydi. 9. RINOTEX\'te (Kasım 2021) park birimleri listesinde «akıllı el dezenfektan cihazı tasarım ve üretimi» bilgi temelli ürününü sundu. Aralık 2019 — Eylül 2022 arasında kurucunun kişisel yatırımı vardı; tüm tasarım ve üretim Bizdavar ekibi tarafından yapıldı.',
+          period1399: { period: 'Ordibehesht 1399', text: 'Tebriz Üniversitesi büyüme merkezi sergisi — ISNA, SNN ve IRIB kapsamı.' },
+          period1400: { period: 'Aban 1400', text: 'RINOTEX 1400 — «Imen Sahand Padideh» birimi aracılığıyla ürün tanıtımı; aynı dönemde Bizdavar (ICT zonu, 12 m² stant).' },
+          note: '«Imen Sahand Padideh» adıyla sınırlı kamu kaynağı vardır; ürün ve üretim ISNA, SNN, IRIB, RINOTEX ve teknoloji parkı bağlantılarıyla doğrulanabilir.',
+          linkRinotex: 'RINOTEX 1400',
+          linkTechpark: 'Tebriz Üniversitesi teknoloji parkı',
+          linkExhibitions: 'Hakkımızda — sergiler'
+        },
+        store: {
+          eyebrow: 'Online satış',
+          title: 'Digikala\'dan satın al',
+          desc: 'V5 ürünü Digikala\'da dkp-3730222 ürün koduyla listelenmiştir',
+          quote: 'Bizdavar otomatik el dezenfektan cihazı — ultrasonik sensör ve otomatik dezenfektan püskürtme.',
+          source: 'Digikala'
+        },
+        related: { title: 'İlgili Bizdavar ürünleri' },
+        geoText: 'İran\'da mühendislik hijyen ürünü — Bizdavar ekibi tasarımı, Digikala üzerinden satış.'
+      },
       bzDiamond: {
         hero: { tag: 'Web tasarım örneği', title: 'BZ Diamond — Web sitesi ve online mağaza tasarımı', desc: 'Mücevher ve pırlanta alanında müşteri projesi — tasarım, geliştirme ve dijital destek Bizdavar Group tarafından' },
         about: { title: 'Proje hakkında', body: '<strong>BZ Diamond</strong>, Bizdavar Group müşterilerinden biridir — online pırlanta ve mücevher satışına odaklanan bir marka. Web sitesi, WooCommerce mağazası, e-posta altyapısı ve teknik desteği Bizdavar tarafından tasarlanıp uygulanmıştır. Bu sayfa bir <strong>web tasarım örneğidir</strong>, Bizdavar’ın endüstriyel iş birimi değildir.', servicesTitle: 'Bizdavar tarafından yapılan hizmetler', services: ['Kurumsal ve e-ticaret web sitesi tasarımı ve geliştirme', 'WooCommerce uygulaması — online pırlanta ve mücevher satışı', 'Kurumsal e-posta yönetimi ve yapılandırması (alan adı ve posta kutuları)', 'SEO, içerik yapısı ve ürün sayfası optimizasyonu', 'RTL ve çok dilli arayüz (Farsça / İngilizce)', 'Teknik destek, güncelleme ve site bakımı'], clientTitle: 'Müşteri faaliyet alanı', clientBody: 'BZ Diamond, GIA ve lab-grown elmas ile mücevher seçimi eğitimi alanında faaliyet gösterir. Ürün ve fiyat detayları müşterinin resmi web sitesinde yayınlanır.', ctaSite: 'BZ Diamond web sitesini gör', ctaOrder: 'Benzer site tasarımı sipariş et', ctaPortfolio: 'Diğer örnek işler' },
@@ -474,6 +641,83 @@
         about: { title: 'About the project', imageAlt: 'Biztejarat Instagram industrial product content — Bizdavar SMM case study', body: '<strong>Biztejarat</strong> is an industrial products Instagram page launched and managed by Bizdavar Group. This is an <strong>SMM management and B2B content</strong> case study, not a separate Bizdavar business unit.', body2: 'The page introduces and documents electronic equipment, instrumentation, sensors and industrial parts (including VEGA, Prosense and related brands).', servicesTitle: 'Services delivered', services: ['Instagram profile setup and optimization', 'Persian/English content for industrial products', 'Post and story graphic design', 'Publishing calendar and engagement management', 'Linking to catalogs and quote requests'], ctaInstagram: 'Biztejarat Instagram page', ctaSmm: 'SMM management services' },
         products: { title: 'Products featured on the page', desc: 'Examples of areas covered in Biztejarat content — technical supply via <a href="services#industrial">Bizdavar Group</a>' },
         geoText: 'B2B content management for the Iranian market — introducing VEGA, Prosense and Gamak industrial equipment in Persian and English.'
+      },
+      biztab: {
+        hero: { tag: 'Owned product · IoT', title: 'BizTab — Non-contact wall thermometer', desc: 'First non-contact wall thermometer designed in Tabriz — developed by the Bizdavar team with measurement error under 0.3°C' },
+        about: {
+          title: 'About the product',
+          imageAlt: 'BizTab — non-contact wall thermometer designed by the Bizdavar team',
+          body: '<strong>BizTab</strong> is a non-contact wall thermometer designed and developed by the <strong>Bizdavar team</strong>. Introduced as the <strong>first non-contact wall thermometer in Tabriz</strong>, all intellectual property and exclusive production rights belong to the Bizdavar team.',
+          body2: 'Approved by University of Tabriz professors, it is designed for wall mounting at building entrances, healthcare facilities and high-traffic areas — contactless measurement with a digital temperature display.',
+          specsTitle: 'Technical features',
+          specs: ['Non-contact measurement (infrared)', 'Measurement error under 0.3°C', 'Digital LED display', 'Wall mounting — entrances and lobbies', 'University of Tabriz academic approval', 'Exclusive production by Bizdavar team'],
+          ctaContact: 'Inquiry & contact',
+          ctaPress: 'Nasr News report'
+        },
+        press: { eyebrow: 'Media & achievement', title: 'Press coverage and academic validation', desc: 'BizTab featured by Nasr News Agency — March 2020', quote: '"This thermometer was developed by the Bizdavar team; all rights and exclusive production belong to this team."', source: 'Nasr News Agency' },
+        related: { title: 'Related products & services' },
+        geoText: 'IoT product design in Tabriz — part of Bizdavar Group innovation and industrial ecosystem.'
+      },
+      bizsanitizerV5: {
+        hero: { tag: 'Owned product · Hygiene', title: 'Bizdavar hand sanitizer device — V5', desc: 'Automatic device with ultrasonic sensor — built during the global COVID-19 pandemic, engineered by the Bizdavar team' },
+        about: {
+          title: 'About the product',
+          imageAlt: 'Bizdavar hand sanitizer device V5',
+          body: '<strong>Bizdavar hand sanitizer device V5</strong> is an engineered product by the <strong>Bizdavar team</strong> — for building entrances, offices, stores and healthcare facilities.',
+          body2: 'Developed during the COVID-19 pandemic; from Dey 1398 to Shahrivar 1401 it was personally funded by the founder and manufactured by the Bizdavar team. Showcased at the 1399 growth center exhibition (ISNA, SNN, IRIB) and at RINOTEX 1400 via the «Imen Sahand Padideh» science park unit; now available on Digikala.',
+          specsTitle: 'Features',
+          specs: ['Automatic operation with ultrasonic sensor', 'Contact-free automatic sanitizer spray', '90° sensor and nozzle angle for better coverage', 'Wall-mountable for entrances and high-traffic areas', 'Designed and engineered by the Bizdavar team', 'Available to order on Digikala'],
+          ctaDigikala: 'View on Digikala',
+          ctaVideo: 'Watch on YouTube',
+          ctaPress: 'SNN report',
+          ctaPressIsna: 'ISNA report',
+          ctaPressIrib: 'IRIB report',
+          ctaContact: 'Bulk inquiry / contact'
+        },
+        video: {
+          eyebrow: 'Context & media',
+          title: 'Built during the global COVID-19 pandemic',
+          desc: 'BizSan V5 was designed and manufactured when coronavirus was spreading worldwide — the Bizdavar team\'s engineering response to the need for contact-free hygiene.',
+          quote: 'A product created at the height of the global health crisis — automatic contact-free hand sanitizing to help reduce virus transmission in high-traffic spaces.',
+          source: 'YouTube — Bizdavar'
+        },
+        press: {
+          eyebrow: 'Media & exhibition',
+          title: 'University of Tabriz growth center — COVID-19 exhibition',
+          desc: 'Devices engineered by the Bizdavar team — including BizSan V5 — were showcased with the East Azerbaijan governor present. The IRIB video report and ISNA/SNN photos show these products and founder Ersan Jahed Tabrizi at the event.',
+          videoTitle: 'IRIB News Agency video report',
+          videoDesc: 'Exhibition media coverage — Bizdavar devices presented with the governor at the University of Tabriz growth center.',
+          quoteIrib: 'An exhibition of the University of Tabriz growth center achievements against COVID-19 opened — video report with the governor presenting knowledge-based products.',
+          sourceIrib: 'IRIB News Agency (Islamic Republic of Iran Broadcasting)',
+          ctaIrib: 'IRIB report',
+          quoteIsna: 'ISNA report on Tabriz University research and technology achievements against COVID-19 — knowledge-based products including disinfection devices.',
+          sourceIsna: 'ISNA News Agency',
+          ctaIsna: 'ISNA report',
+          quoteSnn: '21 knowledge-based products from 10 companies were presented — the governor pledged support for mass production.',
+          sourceSnn: 'SNN (Student News Network)',
+          ctaSnn: 'SNN report',
+          mediaNote: 'Video and images published by IRIB, ISNA and SNN show devices manufactured by the Bizdavar team — the founder attended the exhibition.'
+        },
+        heritage: {
+          eyebrow: 'Science park & RINOTEX',
+          title: 'Imen Sahand Padideh — University of Tabriz science park unit',
+          desc: '«Imen Sahand Padideh» was a technology unit based at the University of Tabriz Science & Technology Park. At the 9th RINOTEX (Aban 1400) it appeared on the park units list presenting the knowledge-based product «design and manufacture of a smart hand disinfection device». From Dey 1398 to Shahrivar 1401 the founder provided personal investment; all design and production was done by the Bizdavar team.',
+          period1399: { period: 'Ordibehesht 1399', text: 'University growth center exhibition — covered by ISNA, SNN and IRIB.' },
+          period1400: { period: 'Aban 1400', text: 'RINOTEX 1400 — product presented via «Imen Sahand Padideh»; simultaneous 12 m² Bizdavar booth in the ICT zone.' },
+          note: 'Public sources naming «Imen Sahand Padideh» are limited; product and production are verifiable through ISNA, SNN, IRIB, RINOTEX and the Tabriz science park.',
+          linkRinotex: 'RINOTEX 1400',
+          linkTechpark: 'Tabriz University science park',
+          linkExhibitions: 'Exhibitions on About'
+        },
+        store: {
+          eyebrow: 'Online retail',
+          title: 'Buy on Digikala',
+          desc: 'V5 product listed on Digikala with product ID dkp-3730222',
+          quote: 'Bizdavar automatic hand sanitizer device — with ultrasonic sensor and automatic sanitizer spray.',
+          source: 'Digikala'
+        },
+        related: { title: 'Related Bizdavar products' },
+        geoText: 'Engineered hygiene product in Iran — Bizdavar team design, sold via Digikala.'
       },
       bzDiamond: {
         hero: { tag: 'Web design case study', title: 'BZ Diamond — Website and online store design', desc: 'Client project in jewelry and diamonds — design, development and digital support by Bizdavar Group' },

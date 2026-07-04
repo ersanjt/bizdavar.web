@@ -21,6 +21,15 @@ function fileExists(fromFile, href) {
   if (!href || /^(https?:|mailto:|tel:|#|javascript:)/.test(href)) return true;
   const clean = href.replace(/[#?].*$/, '');
   if (!clean || clean === '.') return true;
+
+  /* Root-absolute paths (/assets/...) — canonical on live site */
+  if (clean.startsWith('/')) {
+    const rootPath = path.join(ROOT, clean.replace(/^\//, '').replace(/\//g, path.sep));
+    if (fs.existsSync(rootPath)) return true;
+    if (fs.existsSync(rootPath + '.html')) return true;
+    return false;
+  }
+
   const dir = path.dirname(fromFile);
   let resolved = path.normalize(path.join(dir, clean));
   if (fs.existsSync(resolved) && fs.statSync(resolved).isDirectory()) {
@@ -53,6 +62,10 @@ for (const file of htmlFiles) {
   }
   if (/\sdefer(?=\s|>)/.test(body)) {
     issues.push({ level: 'warn', file: rel, msg: 'Body scripts still use defer' });
+  }
+
+  if (html.includes('mobile-chrome.css') && html.includes('responsive.css')) {
+    issues.push({ level: 'warn', file: rel, msg: 'Duplicate mobile-chrome.css (already imported by responsive.css)' });
   }
 
   const hrefRe = /href="([^"]+)"/g;

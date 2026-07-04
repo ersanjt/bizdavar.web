@@ -9,6 +9,7 @@
   const R = C.routes;
   const A = C.assets;
   const path = (p) => window.resolvePath(p);
+  const pagePath = (p) => (window.resolvePagePath ? window.resolvePagePath(p) : path(p));
   const currentPage = document.body.dataset.page || 'home';
 
   const ic = (name, opts) => (window.BD_ICON ? window.BD_ICON(name, opts) : '');
@@ -53,34 +54,15 @@
     return link.replace(/\.html(?=[#?]|$)/, '').replace(/index\.html$/, '') || './';
   }
 
-  /** Browser-relative link from any page depth */
+  /** Root-absolute internal link — consistent from any page depth */
   function siteLink(url) {
     if (!url || url.startsWith('http') || url.startsWith('mailto:') || url.startsWith('tel:') || url.startsWith('#')) {
       return url;
     }
+    if (url.startsWith('/')) return url;
     const { pathPart, hash } = splitUrl(url);
     const siteRoot = toSiteRootPath(pathPart);
-    const depth = pageDepth();
-    let out;
-
-    if (siteRoot === '') {
-      if (depth === 0) out = `./${hash}`;
-      else out = `${'../'.repeat(depth)}${hash}`;
-    } else if (depth === 0) {
-      out = `${siteRoot}${hash}`;
-    } else if (depth === 1) {
-      if (siteRoot.startsWith('pages/articles/')) out = `articles/${siteRoot.slice(15)}${hash}`;
-      else if (siteRoot.startsWith('pages/')) out = `${siteRoot.slice(6)}${hash}`;
-      else out = `${siteRoot}${hash}`;
-    } else if (depth === 2) {
-      if (siteRoot.startsWith('pages/articles/')) out = `${siteRoot.slice(15)}${hash}`;
-      else if (siteRoot.startsWith('pages/')) out = `../${siteRoot.slice(6)}${hash}`;
-      else out = `${siteRoot}${hash}`;
-    } else {
-      out = `${'../'.repeat(depth)}${siteRoot}${hash}`;
-    }
-
-    return prettyPath(out);
+    return pagePath((siteRoot || 'index.html') + hash);
   }
 
   function absUrl(urlPath) {
@@ -135,7 +117,10 @@
   }
 
   function breadcrumbHref(url) {
-    return siteLink(url);
+    if (!url || /^(https?:|mailto:|tel:|#)/.test(url)) return url || '/';
+    const { pathPart, hash } = splitUrl(url);
+    const siteRoot = toSiteRootPath(pathPart);
+    return pagePath((siteRoot || 'index.html') + hash);
   }
 
   function localizeCrumbs(items) {
@@ -155,6 +140,7 @@
     R,
     A,
     path,
+    pagePath,
     siteLink,
     currentPage,
     get wa() {

@@ -21,6 +21,11 @@
         seoDescription: 'خدمات بیزدوار گروپ: بازاریابی دیجیتال، طراحی سایت Fast Studio، مدیریت SMM و تامین تجهیزات صنعتی VEGA و Prosense.',
         seoKeywords: 'خدمات دیجیتال, طراحی سایت, SMM, VEGA, Prosense, بیزدوار'
       },
+      products: {
+        seoTitle: 'محصولات بیزدوار | BizTab، BizClean، دستگاه کش‌زن و خط تولید',
+        seoDescription: 'محصولات مهندسی‌شده بیزدوار — BizTab، BizClean، BizTouch، BizRoll، دستگاه کش‌زن و خط تولید ماسک و پد حرارتی. طراحی و تولید در تبریز.',
+        seoKeywords: 'BizTab, BizClean, BizTouch, BizRoll, دستگاه کش زن, خط تولید ماسک, بیزدوار'
+      },
       portfolio: {
         seoTitle: 'نمونه‌کارها | پروژه‌های بیزدوار گروپ — ZedPay، BZ Diamond و...',
         seoDescription: 'نمونه‌کارهای بیزدوار: ZedPay، BZ Diamond، Marvelous Holding، NIK Aesthetic، Karen Leather و برندهای دیگر — اکوسیستم، مشتریان و پروژه‌های دیجیتال.',
@@ -86,6 +91,16 @@
         seoDescription: 'نمونه‌کار مدیریت اینستاگرام بیزتجارت: محتوای محصولات صنعتی، ابزار دقیق و SMM توسط بیزدوار گروپ.',
         seoKeywords: 'بیزتجارت, Biztejarat, اینستاگرام صنعتی, SMM, مدیریت شبکه اجتماعی, بیزدوار'
       },
+      biztab: {
+        seoTitle: 'BizTab | دماسنج دیواری غیرتماسی — محصول بیزدوار',
+        seoDescription: 'BizTab — اولین دماسنج دیواری غیرتماسی تبریز. طراحی تیم بیزدوار، دقت کمتر از ۰.۳ درجه، تأیید دانشگاه تبریز.',
+        seoKeywords: 'BizTab, دماسنج غیرتماسی, IoT, بیزدوار, تبریز, محصول اختصاصی'
+      },
+      bizsanitizerV5: {
+        seoTitle: 'دستگاه ضدعفونی دست بیزدوار V5 | محصول مهندسی‌شده',
+        seoDescription: 'دستگاه ضدعفونی دست بیزدوار V5 — ساخته‌شده در دوران کرونا، نمایشگاه مرکز رشد دانشگاه تبریز، سنسور التراسونیک. طراحی تیم بیزدوار، موجود در دیجی‌کالا.',
+        seoKeywords: 'BizSan V5, ضدعفونی دست, بیزدوار, کرونا, دیجی‌کالا, محصول اختصاصی'
+      },
       articleDigitalMarketing: {
         seoTitle: 'چگونه بازاریابی دیجیتال فروش را افزایش می‌دهد؟ | بیزدوار',
         seoDescription: 'راهکارهای عملی بازاریابی دیجیتال برای افزایش فروش: CRO، کمپین تبلیغاتی، سئو و اتوماسیون. راهنمای بیزدوار گروپ.',
@@ -132,6 +147,11 @@
         seoTitle: 'Hizmetler | Dijital pazarlama, web tasarım ve endüstriyel tedarik',
         seoDescription: 'Bizdavar Group hizmetleri: dijital pazarlama, Fast Web Studio web tasarım, SMM yönetimi ve VEGA/Prosense endüstriyel ekipman tedariki.',
         seoKeywords: 'dijital hizmetler, web tasarım, SMM, VEGA, Prosense, Bizdavar'
+      },
+      products: {
+        seoTitle: 'Bizdavar ürünleri | BizTab, BizClean, vakum makinesi ve üretim hatları',
+        seoDescription: 'Bizdavar mühendislik ürünleri — BizTab, BizClean, BizTouch, BizRoll, vakum/kapama makineleri ve maske/ısı pedi üretim hatları. Tebriz merkezli tasarım ve üretim.',
+        seoKeywords: 'BizTab, BizClean, BizTouch, BizRoll, vakum makinesi, Bizdavar'
       },
       portfolio: {
         seoTitle: 'Portfolyo | Bizdavar Group projeleri — ZedPay, BZ Diamond...',
@@ -198,6 +218,16 @@
         seoDescription: 'Biztejarat Instagram yönetimi vaka çalışması: endüstriyel ürün içeriği, enstrümantasyon ve SMM — Bizdavar Group.',
         seoKeywords: 'Biztejarat, endüstriyel SMM, Instagram, Bizdavar'
       },
+      biztab: {
+        seoTitle: 'BizTab | Temasız duvar termometresi — Bizdavar ürünü',
+        seoDescription: 'BizTab — Tebriz\'de tasarlanan ilk temasız duvar termometresi. Bizdavar ekibi, 0,3°C altı hata payı, Tebriz Üniversitesi onayı.',
+        seoKeywords: 'BizTab, temasız termometre, IoT, Bizdavar, Tebriz'
+      },
+      bizsanitizerV5: {
+        seoTitle: 'Bizdavar el dezenfektan V5 | Mühendislik ürünü',
+        seoDescription: 'Bizdavar el dezenfektan cihazı V5 — ultrasonik sensör, otomatik püskürtme. Bizdavar ekibi tasarımı, Digikala\'da satışta.',
+        seoKeywords: 'BizSan V5, el dezenfektan, Bizdavar, Digikala'
+      },
       articleDigitalMarketing: {
         seoTitle: 'Dijital pazarlama satışları nasıl artırır? | Bizdavar',
         seoDescription: 'Satış artışı için pratik dijital pazarlama: CRO, reklam kampanyaları, SEO ve otomasyon. Bizdavar Group rehberi.',
@@ -244,6 +274,11 @@
         seoTitle: 'Services | Digital marketing, web design & industrial supply',
         seoDescription: 'Bizdavar Group services: digital marketing, Fast Web Studio web design, SMM management, and VEGA/Prosense industrial equipment supply.',
         seoKeywords: 'digital services, web design, SMM, VEGA, Prosense, Bizdavar'
+      },
+      products: {
+        seoTitle: 'Bizdavar products | BizTab, BizClean, sealers & production lines',
+        seoDescription: 'Engineered Bizdavar products — BizTab, BizClean, BizTouch, BizRoll, vacuum sealers and mask/heat pad production lines. Designed and built in Tabriz, Iran.',
+        seoKeywords: 'BizTab, BizClean, BizTouch, BizRoll, vacuum sealer, Bizdavar products'
       },
       portfolio: {
         seoTitle: 'Portfolio | Bizdavar Group projects — ZedPay, BZ Diamond & more',
@@ -309,6 +344,16 @@
         seoTitle: 'Biztejarat case study | Industrial Instagram SMM — Bizdavar',
         seoDescription: 'Biztejarat Instagram management case study: industrial product content, instrumentation and SMM by Bizdavar Group.',
         seoKeywords: 'Biztejarat, industrial SMM, Instagram, Bizdavar'
+      },
+      biztab: {
+        seoTitle: 'BizTab | Non-contact wall thermometer — Bizdavar product',
+        seoDescription: 'BizTab — first non-contact wall thermometer designed in Tabriz by the Bizdavar team. Error under 0.3°C, approved by University of Tabriz.',
+        seoKeywords: 'BizTab, non-contact thermometer, IoT, Bizdavar, Tabriz'
+      },
+      bizsanitizerV5: {
+        seoTitle: 'Bizdavar hand sanitizer V5 | Engineered product',
+        seoDescription: 'Bizdavar hand sanitizer device V5 — ultrasonic sensor, automatic spray. Engineered by Bizdavar team, available on Digikala.',
+        seoKeywords: 'BizSan V5, hand sanitizer, Bizdavar, Digikala'
       },
       articleDigitalMarketing: {
         seoTitle: 'How does digital marketing increase sales? | Bizdavar',

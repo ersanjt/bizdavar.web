@@ -42,6 +42,558 @@ body {
   margin-top: auto;
 }
 
+/* ─── Homepage SEO site links (sitelinks signal) ─── */
+.seo-site-links {
+  padding: var(--space-8) 0 var(--space-10);
+  border-top: 1px solid rgba(22, 22, 63, 0.08);
+  background: var(--gray-50, #f8f9fc);
+}
+
+.seo-site-links__label {
+  margin: 0 0 var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.seo-site-links__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.seo-site-links__list a {
+  font-size: var(--text-sm);
+  color: var(--text-muted, #5a5a7a);
+  text-decoration: none;
+}
+
+.seo-site-links__list a:hover {
+  color: var(--navy);
+  text-decoration: underline;
+}
+
+/* ─── BizTab product page ─── */
+.biztab-gallery__thumbs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.65rem;
+  margin-top: 0.75rem;
+}
+
+.biztab-gallery__thumbs img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(29, 29, 27, 0.08);
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+
+.biztab-press-card {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.biztab-press-card img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(29, 29, 27, 0.08);
+  box-shadow: var(--shadow-sm);
+}
+
+.biztab-press-card blockquote {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  border-right: 4px solid var(--brand-red);
+  background: rgba(227, 25, 31, 0.05);
+  border-radius: var(--radius);
+}
+
+.biztab-press-card blockquote p {
+  margin: 0 0 0.75rem;
+  font-size: var(--text-lg);
+  line-height: 1.8;
+}
+
+.biztab-press-card footer {
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+
+.press-sources-grid {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .press-sources-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.press-sources-grid .biztab-press-card {
+  max-width: none;
+  margin: 0;
+}
+
+.press-media-note {
+  max-width: 820px;
+  margin: 1.5rem auto 0;
+  padding: 1rem 1.25rem;
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  color: var(--text-muted);
+  text-align: center;
+  border-top: 1px solid rgba(29, 29, 27, 0.08);
+}
+
+.exhibitions-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.exhibition-card {
+  padding: 1.35rem 1.5rem;
+  background: var(--white);
+  border: 1px solid rgba(29, 29, 27, 0.08);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.exhibition-card__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.exhibition-card__year {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--brand-red);
+}
+
+.exhibition-card__source {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.exhibition-card__title {
+  margin: 0 0 0.5rem;
+  font-size: var(--text-xl);
+  line-height: 1.4;
+}
+
+.exhibition-card__entity {
+  margin: 0 0 0.75rem;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.exhibition-card__desc {
+  margin: 0 0 1rem;
+  line-height: 1.75;
+}
+
+.exhibition-card__meta {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0 0 1rem;
+  font-size: var(--text-sm);
+}
+
+.exhibition-card__meta div {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  gap: 0.5rem;
+}
+
+.exhibition-card__meta dt {
+  margin: 0;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.exhibition-card__meta dd {
+  margin: 0;
+}
+
+.exhibition-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.exhibition-card__tag {
+  font-size: var(--text-xs);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-sm);
+  background: rgba(227, 25, 31, 0.06);
+  color: var(--brand-red);
+}
+
+.exhibition-card__footer {
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(29, 29, 27, 0.06);
+  font-size: var(--text-sm);
+}
+
+.exhibition-card__park,
+.exhibition-card__press {
+  margin-top: 1rem;
+  padding: 1rem 1.1rem;
+  background: rgba(29, 29, 27, 0.03);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(29, 29, 27, 0.06);
+}
+
+.exhibition-card__park-title,
+.exhibition-card__press-title {
+  margin: 0 0 0.5rem;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.exhibition-card__park-name,
+.exhibition-card__park-product,
+.exhibition-card__park-note {
+  margin: 0 0 0.35rem;
+  font-size: var(--text-sm);
+  line-height: 1.55;
+}
+
+.exhibition-card__park-note {
+  color: var(--text-muted);
+}
+
+.exhibition-card__press-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+}
+
+.exhibition-card__press-list li {
+  margin: 0;
+}
+
+.heritage-timeline {
+  display: grid;
+  gap: 1rem;
+}
+
+.heritage-timeline__item {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(29, 29, 27, 0.08);
+}
+
+.heritage-timeline__item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.heritage-timeline__period {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--brand-red);
+}
+
+.heritage-timeline__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-top: 0.75rem;
+  font-size: var(--text-sm);
+}
+
+.presence-istanbul-hub__note--event {
+  margin-top: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed rgba(29, 29, 27, 0.12);
+}
+
+.owned-products-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+}
+
+.owned-product-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid rgba(29, 29, 27, 0.08);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  height: 100%;
+}
+
+.owned-product-card__media {
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #f5f5f4;
+}
+
+.owned-product-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.owned-product-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.35rem;
+  padding: 1.15rem 1.25rem 1.25rem;
+}
+
+.owned-product-card__cat {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--brand-red);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.owned-product-card h3 {
+  margin: 0;
+  font-size: var(--text-lg);
+}
+
+.owned-product-card h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.owned-product-card h3 a:hover {
+  color: var(--brand-red);
+}
+
+.owned-product-card__subtitle {
+  margin: 0;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.owned-product-card__desc {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.65;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.owned-product-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.owned-product-card__tag {
+  font-size: var(--text-xs);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-sm);
+  background: rgba(29, 29, 27, 0.06);
+}
+
+.owned-product-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(29, 29, 27, 0.06);
+}
+
+.owned-product-card__status {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.product-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.product-filter__btn {
+  padding: 0.45rem 1rem;
+  border: 1px solid rgba(29, 29, 27, 0.12);
+  border-radius: 999px;
+  background: var(--white);
+  font: inherit;
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+
+.product-filter__btn:hover,
+.product-filter__btn.is-active {
+  border-color: var(--brand-red);
+  background: rgba(227, 25, 31, 0.06);
+  color: var(--brand-red);
+}
+
+.video-embed {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  aspect-ratio: 9 / 16;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(29, 29, 27, 0.08);
+  box-shadow: var(--shadow-sm);
+  background: #000;
+}
+
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-embed--landscape {
+  max-width: 720px;
+  aspect-ratio: 16 / 9;
+}
+
+.video-embed video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+}
+
+.press-featured-video {
+  max-width: 820px;
+  margin: 0 auto 2rem;
+}
+
+.press-video-title {
+  margin: 0 0 0.5rem;
+  font-size: var(--text-xl);
+  text-align: center;
+}
+
+.press-video-desc {
+  margin: 0 0 1.25rem;
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* ─── Achievements (about page) ─── */
+.achievements-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.achievement-card {
+  display: grid;
+  grid-template-columns: minmax(220px, 360px) 1fr;
+  gap: 1.5rem;
+  padding: 1.25rem;
+  background: var(--white);
+  border: 1px solid rgba(29, 29, 27, 0.08);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.achievement-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 180px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.achievement-card__year {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-full);
+  background: rgba(227, 25, 31, 0.1);
+  color: var(--brand-red);
+  font-size: var(--text-xs);
+  font-weight: 700;
+}
+
+.achievement-card__body h3 {
+  margin: 0 0 0.65rem;
+  font-size: var(--text-xl);
+}
+
+.achievement-card__body p {
+  margin: 0 0 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+.achievement-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.85rem;
+}
+
+.achievement-card__tag {
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+  background: var(--gray-100);
+  font-size: var(--text-xs);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .achievement-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+.industrial-card--red .industrial-card__badge {
+  background: rgba(227, 25, 31, 0.12);
+  color: var(--brand-red);
+}
+
+.industrial-card--red:hover {
+  border-color: rgba(227, 25, 31, 0.35);
+}
+
 /* ─── Trust metrics bar ─── */
 .trust-bar {
   position: relative;
@@ -404,6 +956,53 @@ body {
 .intel-hq-list__item--hq {
   border: 1px solid rgba(255, 222, 0, 0.45);
   background: linear-gradient(135deg, rgba(22, 22, 63, 0.04) 0%, rgba(255, 222, 0, 0.1) 100%);
+}
+.intel-hq-list__item--ir {
+  border: 1px solid rgba(227, 25, 31, 0.2);
+  background: linear-gradient(135deg, rgba(227, 25, 31, 0.04) 0%, rgba(29, 29, 27, 0.03) 100%);
+}
+.intel-hq-list__item--am {
+  border: 1px solid rgba(242, 100, 25, 0.22);
+  background: linear-gradient(135deg, rgba(242, 100, 25, 0.05) 0%, rgba(29, 29, 27, 0.03) 100%);
+}
+.intel-legal-brand {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+.intel-legal-note {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+.intel-legal-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.presence-istanbul-hub--iran {
+  margin-top: 1.5rem;
+  border-color: rgba(227, 25, 31, 0.12);
+}
+.presence-istanbul-hub--armenia {
+  margin-top: 1.5rem;
+  border-color: rgba(242, 100, 25, 0.14);
+}
+.presence-istanbul-hub__brand {
+  margin: 0.35rem 0 0;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+.contact-info__subaddr {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed rgba(29, 29, 27, 0.12);
+}
+.contact-info__entity {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
 }
 .intel-hq-list__badge {
   display: inline-block;

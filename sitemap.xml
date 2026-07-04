@@ -42,6 +42,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/pages/about?lang=en"/>
   </url>
   <url>
+    <loc>https://bizdavar.com/pages/products</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/products?lang=fa"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/pages/products?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/pages/products?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/pages/products?lang=en"/>
+  </url>
+  <url>
     <loc>https://bizdavar.com/pages/portfolio</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -150,6 +160,26 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/pages/biztejarat?lang=tr"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/pages/biztejarat?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/pages/biztejarat?lang=en"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/pages/biztab</loc>
+    <lastmod>2020-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/biztab?lang=fa"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/pages/biztab?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/pages/biztab?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/pages/biztab?lang=en"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/pages/bizsanitizer-v5</loc>
+    <lastmod>2021-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/bizsanitizer-v5?lang=fa"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/pages/bizsanitizer-v5?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/pages/bizsanitizer-v5?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/pages/bizsanitizer-v5?lang=en"/>
   </url>
   <url>
     <loc>https://bizdavar.com/pages/articles/about-bizdavar-group</loc>

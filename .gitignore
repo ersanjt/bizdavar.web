@@ -6,3 +6,8 @@ desktop.ini
 .env.*
 node_modules/
 .cursor/
+bizdavar-public_html.zip
+
+api/config.php
+storage/*.sqlite
+storage/logs/

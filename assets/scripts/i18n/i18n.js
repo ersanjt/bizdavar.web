@@ -122,6 +122,32 @@
       return base.map(p => ({ ...p, ...(map[p.name] || {}) }));
     },
 
+    getOwnedProducts() {
+      const base = window.BIZDAVAR_OWNED_PRODUCTS?.items || [];
+      const meta = this.raw('productsPage.items') || {};
+      const cats = this.raw('productsPage.categories') || {};
+      return base.map(item => {
+        const m = meta[item.id] || {};
+        const cat = cats[item.category] || {};
+        return {
+          ...item,
+          ...m,
+          categoryLabel: cat.label || item.category,
+          tags: m.tags || item.tags || []
+        };
+      });
+    },
+
+    getOwnedProductCategories() {
+      const cats = window.BIZDAVAR_OWNED_PRODUCTS?.categories || [];
+      const labels = this.raw('productsPage.categories') || {};
+      return cats.map(c => ({
+        ...c,
+        label: labels[c.id]?.label || c.id,
+        desc: labels[c.id]?.desc || ''
+      }));
+    },
+
     mergeLocalizedList(key, base) {
       const localized = this.raw(key);
       if (!Array.isArray(localized)) return base || [];

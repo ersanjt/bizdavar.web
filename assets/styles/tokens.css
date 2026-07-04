@@ -4,12 +4,14 @@
  */
 :root {
   /* Brand */
+  --brand-black: #1d1d1b;
+  --brand-red: #e3191f;
   --yellow: #FFDE00;
   --yellow-dark: #e6c800;
-  --navy: #16163f;
-  --navy-light: #2a2a6a;
-  --navy-deep: #0f0f2a;
-  --red: #E62833;
+  --navy: #1d1d1b;
+  --navy-light: #2a2a2a;
+  --navy-deep: #1d1d1b;
+  --red: #e3191f;
   --dark: #1F2937;
   --gray: #F4F4F4;
   --gray-100: #f9fafb;
@@ -72,11 +74,21 @@
   --shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.12);
   --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.14);
-  --shadow-navy: 0 12px 40px rgba(22, 22, 63, 0.25);
+  --shadow-navy: 0 12px 40px rgba(29, 29, 27, 0.25);
 
   /* Motion */
   --transition: 0.3s ease;
   --transition-fast: 0.15s ease;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Premium surfaces */
+  --glass-bg: rgba(255, 255, 255, 0.88);
+  --glass-border: rgba(29, 29, 27, 0.08);
+  --gradient-hero: linear-gradient(155deg, var(--brand-black) 0%, #2a2a2a 45%, #3d3d3d 100%);
+  --gradient-brand: linear-gradient(135deg, var(--yellow) 0%, #fff5a8 50%, var(--yellow) 100%);
+  --shadow-glow-yellow: 0 8px 32px rgba(255, 222, 0, 0.22);
+  --shadow-glow-navy: 0 16px 48px rgba(29, 29, 27, 0.18);
 
   /* Layout */
   --container-max: 1200px;

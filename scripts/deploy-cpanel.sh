@@ -17,9 +17,24 @@ git fetch origin "$BRANCH"
 git checkout "$BRANCH"
 git reset --hard "origin/$BRANCH"
 
-mkdir -p "$WEB_ROOT/assets" "$WEB_ROOT/pages"
-cp -f index.html robots.txt sitemap.xml "$WEB_ROOT/"
-cp -a assets/. "$WEB_ROOT/assets/"
-cp -a pages/. "$WEB_ROOT/pages/"
+mkdir -p "$WEB_ROOT/assets" "$WEB_ROOT/pages" "$WEB_ROOT/.well-known/acme-challenge"
 
-echo "[$(date -Iseconds)] Deployed $BRANCH to $WEB_ROOT"
+if command -v rsync >/dev/null 2>&1; then
+  rsync -av --delete \
+    --exclude .git/ \
+    --exclude .cpanel.yml \
+    --exclude .gitignore \
+    --exclude .well-known/ \
+    --exclude docs/ \
+    --exclude scripts/ \
+    --exclude README.md \
+    --exclude '*.zip' \
+    "$REPO_DIR/" "$WEB_ROOT/"
+  mkdir -p "$WEB_ROOT/.well-known/acme-challenge" "$WEB_ROOT/.well-known/pki-validation"
+else
+  /bin/cp -f index.html robots.txt sitemap.xml .htaccess "$WEB_ROOT/"
+  /bin/cp -a assets/. "$WEB_ROOT/assets/"
+  /bin/cp -a pages/. "$WEB_ROOT/pages/"
+fi
+
+echo "[$(date -Iseconds)] Deployed $BRANCH ($(git rev-parse --short HEAD)) to $WEB_ROOT"

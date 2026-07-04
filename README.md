@@ -1,120 +1,41 @@
-# بیزدوار گروپ — وبسایت استاتیک (بازسازی از بکاپ)
+# Bizdavar Group — Website
 
+Multilingual static site (fa / tr / en) for [bizdavar.com](https://bizdavar.com).
 
+## Stack
 
-وبسایت فارسی RTL بازسازی‌شده از بکاپ‌های `well-known.zip` و `fast.zip`.
+- HTML pages + vanilla JS/CSS (no bundler)
+- i18n via `data-i18n` + locale JS bundles
+- Apache/cPanel + `.htaccess` clean URLs
+- **BizHub** — optional PHP CRM/CMS (`/admin/`, `/api/`)
 
-
-
-## صفحات
-
-
-
-| صفحه | مسیر | توضیح |
-
-|------|------|-------|
-
-| خانه | `index.html` | همه بخش‌های سایت اصلی |
-
-| خدمات | `services.html` | ۴ محور خدمات |
-
-| نمونه‌کارها | `portfolio.html` | ۱۶ پروژه از control panel |
-
-| Fast Studio | `fast.html` | پلن‌های $99 / $199 / $299 |
-
-| تماس | `contact.html` | فرم تماس + اطلاعات ارتباطی |
-
-
-
-## پیش‌نمایش محلی
-
-
+## Quick start
 
 ```bash
-
-npx serve . -l 3456
-
+npm run serve      # http://localhost:3456
+npm run audit      # verify before deploy (must pass)
 ```
 
+## Structure
 
+See [docs/STRUCTURE.md](docs/STRUCTURE.md) for folders, script order, and path rules.
 
-سپس: http://localhost:3456
+| Doc | Purpose |
+|-----|---------|
+| [STRUCTURE.md](docs/STRUCTURE.md) | Architecture & conventions |
+| [DEPLOY-CPANEL.md](docs/DEPLOY-CPANEL.md) | Server deploy |
+| [BIZHUB.md](docs/BIZHUB.md) | CRM/CMS setup |
+| [SITE-AUDIT.md](docs/SITE-AUDIT.md) | Last audit output |
 
+## Deploy (WHM)
 
-
-## تنظیمات تماس (مهم)
-
-
-
-فایل `js/site-config.js`:
-
-
-
-```js
-
-contact: {
-
-  phone: '',           // مثال: '+905xxxxxxxxx'
-
-  whatsapp: '',        // مثال: '905xxxxxxxxx' (بدون +)
-
-  phoneDisplay: 'تماس از طریق واتساپ',
-
-}
-
+```bash
+cd /home/bizdavar/repositories/bizdavar.web
+bash scripts/deploy-sync.sh
 ```
 
+## Pages
 
+22 HTML pages: home, services, portfolio, contact, brand catalogs (VEGA, Fast, …), blog articles.
 
-پس از وارد کردن شماره واتساپ، دکمه‌های واتساپ در همه صفحات فعال می‌شوند.
-
-
-
-## سئو
-
-
-
-- `robots.txt` و `sitemap.xml`
-
-- متا تگ‌های Open Graph و Twitter
-
-- JSON-LD: Organization، WebSite، FAQ (خانه)، ContactPage (تماس)
-
-- Canonical URL برای هر صفحه
-
-
-
-## تصاویر (از بکاپ استخراج شده)
-
-
-
-- `header-logo-1.png` / `bizdavar-logo.png`
-
-- `about-us-1320x682.jpg`
-
-- `Image-Contact-1-768x387.jpg`
-
-- `global-network-...-300x300.jpg`
-
-- `favicon.png`
-
-
-
-## استقرار
-
-
-
-فایل‌های پوشه `bizdavar-web` را روی هاست `bizdavar.com` آپلود کنید.
-
-برای `fast.bizdavar.com` می‌توانید `fast.html` را به `index.html` کپی کنید.
-
-
-
-## فرم تماس
-
-
-
-فعلاً با `mailto:info@bizdavar.com` کار می‌کند. برای production:
-
-Formspree، PHP یا API backend توصیه می‌شود.
-
+All asset paths use `/assets/...` (root-absolute). Page links are extensionless (`pages/contact`).

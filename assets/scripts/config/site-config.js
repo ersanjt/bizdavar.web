@@ -23,6 +23,9 @@ window.BIZDAVAR_CONFIG = {
     teltonika: 'pages/teltonika.html',
     bzDiamond: 'pages/bz-diamond.html',
     biztejarat: 'pages/biztejarat.html',
+    biztab: 'pages/biztab.html',
+    bizsanitizerV5: 'pages/bizsanitizer-v5.html',
+    products: 'pages/products.html',
     gamak: 'pages/gamak.html',
     digiSystem: 'pages/digi-system.html',
     teraoka: 'pages/teraoka.html',
@@ -41,9 +44,9 @@ window.BIZDAVAR_CONFIG = {
     faviconSvg: 'assets/images/brand/favicon.svg',
     appleTouchIcon: 'assets/images/brand/apple-touch-icon.png',
     /** Light backgrounds — header, drawer (Bizda black + var red) */
-    logo: 'assets/images/brand/bizdavar-logo.png',
+    logo: 'assets/images/brand/bizdavar-logo.svg',
     /** Dark backgrounds — footer (white Bizda + red var) */
-    logoOnDark: 'assets/images/brand/bizdavar-logo-footer.svg',
+    logoOnDark: 'assets/images/brand/bizdavar-logo-on-dark.svg',
     logoAlt: 'Bizdavar — official logo',
     ogImage: 'assets/images/content/about-hero.svg',
     heroImage: 'assets/images/content/hero-home.svg',
@@ -56,21 +59,71 @@ window.BIZDAVAR_CONFIG = {
     enabled: false
   },
 
+  /** BizHub — internal CRM + CMS (PHP API on /api) */
+  bizhub: {
+    enabled: false,
+    apiBase: '/api'
+  },
+
   contact: {
     email: 'info@bizdavar.com',
     emailAlt: 'webmaster@bizdavar.ir',
     phone: '+905010676486',
-    phoneDisplay: '+90 501 067 6486 · +98 930 588 0135',
+    phoneDisplay: '+90 501 067 6486 · +98 930 588 0135 · +374 55 517 957',
     whatsapp: '905010676486',
     whatsappMessage: 'سلام، از وبسایت بیزدوار گروپ پیام می‌دهم.',
     channels: [
       { id: 'tr', label: 'ترکیه', display: '+90 501 067 6486', tel: '+905010676486', whatsapp: '905010676486' },
-      { id: 'ir', label: 'ایران', display: '+98 930 588 0135', tel: '+989305880135', whatsapp: '989305880135' }
+      { id: 'ir', label: 'ایران', display: '+98 930 588 0135', tel: '+989305880135', whatsapp: '989305880135' },
+      { id: 'am', label: 'ارمنستان', display: '+374 55 517 957', tel: '+37455517957', whatsapp: '37455517957' }
     ],
     address: 'استانبول، ترکیه',
     workingHours: 'شنبه تا پنج‌شنبه — ۹:۰۰ تا ۱۸:۰۰',
     linkedin: 'https://www.linkedin.com/in/ersanjt',
     instagram: 'https://www.instagram.com/bizdavar'
+  },
+
+  /** شخصیت حقوقی ثبت‌شده در ایران — منبع: پروفایل جویشگر */
+  iranEntity: {
+    legalNameFa: 'تکنولوژی پردازان توسعه خاورمیانه',
+    legalNameEn: 'Middle East Development Technology Processors',
+    brandFa: 'آژانس دیجیتال مارکتینگ بیزدوار',
+    brandEn: 'Bizdavar Digital Marketing Agency',
+    contactName: 'ارسان جاهد تبریزی',
+    city: 'تبریز',
+    province: 'آذربایجان شرقی',
+    country: 'ایران',
+    countryCode: 'IR',
+    address: 'تبریز، خیابان رودکی، کوی جانفشان، ۱۲ متری اول، پلاک ۶',
+    streetAddress: 'خیابان رودکی، کوی جانفشان، ۱۲ متری اول، پلاک ۶',
+    activities: ['تولیدکننده', 'بازرگانی', 'توزیع و عمده‌فروشی', 'خدمات', 'فروشگاه'],
+    employeeRange: '۱–۱۰ نفر',
+    category: 'کامپیوتر و ابزار دیجیتال · وب',
+    jooyeshgar: 'https://www.jooyeshgar.com/company/det-29884'
+  },
+
+  /** ثبت شرکت در ارمنستان — منبع: پروفایل Spyur.am */
+  armeniaEntity: {
+    legalName: 'Bizdavar Group',
+    legalNameShort: 'Bizdavar',
+    companyType: 'Limited Liability Company (LLC)',
+    brandFa: 'بیزدوار گروپ',
+    brandEn: 'Bizdavar Group',
+    contactName: 'Ersan Jahed Tabrizi',
+    contactNameFa: 'ارسان جاهد تبریزی',
+    city: 'Yerevan',
+    cityFa: 'ایروان',
+    country: 'Armenia',
+    countryFa: 'ارمنستان',
+    countryCode: 'AM',
+    address: 'Yerevan, Armenia',
+    addressFa: 'ایروان، ارمنستان',
+    category: 'SEO · website promotion · digital marketing',
+    categoryFa: 'سئو · تبلیغات وب · دیجیتال مارکتینگ',
+    founded: 2015,
+    spyur: 'https://www.spyur.am/en/companies/bizdavar/57783/',
+    phoneDisplay: '+374 55 517 957',
+    phoneTel: '+37455517957'
   },
 
   domains: {
@@ -85,7 +138,7 @@ window.BIZDAVAR_CONFIG = {
     hubs: [
       { city: 'استانبول', country: 'ترکیه', code: 'TR', role: 'دفتر اصلی · فین‌تک و عملیات بین‌المللی' },
       { city: 'تبریز', country: 'ایران', code: 'IR', role: 'بازار ایران · پروژه‌های صنعتی و دیجیتال' },
-      { city: 'ایروان', country: 'ارمنستان', code: 'AM', role: 'عملیات منطقه‌ای' }
+      { city: 'ایروان', country: 'ارمنستان', code: 'AM', role: 'ثبت شرکت · Bizdavar Group LLC' },
     ],
     markets: ['ایران', 'ترکیه', 'امارات', 'آلمان', 'ارمنستان', 'عراق', 'گرجستان', 'لبنان', 'ایتالیا', 'انگلستان', 'آمریکا']
   },
@@ -93,10 +146,10 @@ window.BIZDAVAR_CONFIG = {
   seo: {
     defaultTitle: 'بیزدوار گروپ | خدمات دیجیتال، طراحی سایت و تامین تجهیزات صنعتی',
     defaultDescription: 'بیزدوار گروپ — آژانس دیجیتال با ۱۲+ سال تجربه و ۱۰۰+ پروژه در ۱۱ کشور. بازاریابی دیجیتال، طراحی وب، فین‌تک، SMM و تامین تجهیزات صنعتی VEGA و Prosense.',
-    keywords: 'بیزدوار, Bizdavar Group, ارسان جاهد تبریزی, بازاریابی دیجیتال, طراحی سایت, SMM, فین‌تک, VEGA, Prosense, Fast Web Studio, آژانس دیجیتال استانبول',
+    keywords: 'بیزدوار, Bizdavar Group, BizTab, BizSan, ضدعفونی دست, بازاریابی دیجیتال, طراحی سایت, VEGA, Prosense, Fast Web Studio, آژانس دیجیتال استانبول',
     twitterCard: 'summary_large_image',
     author: 'Bizdavar Group',
-    themeColor: '#16163f'
+    themeColor: '#1d1d1b'
   },
 
   fast: {
@@ -172,6 +225,22 @@ window.BIZDAVAR_CONFIG = {
       category: 'درباره شرکت',
       date: '2025-06-01',
       relatedService: 'pages/about.html'
+    },
+    {
+      slug: 'pages/biztab.html',
+      title: 'BizTab — اولین دماسنج دیواری غیرتماسی تبریز',
+      excerpt: 'محصول اختصاصی تیم بیزدوار — دقت کمتر از ۰.۳ درجه، تأیید دانشگاه تبریز.',
+      category: 'محصول اختصاصی',
+      date: '2020-03-16',
+      relatedService: 'pages/biztab.html'
+    },
+    {
+      slug: 'pages/bizsanitizer-v5.html',
+      title: 'دستگاه ضدعفونی دست بیزدوار V5',
+      excerpt: 'سنسور التراسونیک و پاشش خودکار — مهندسی‌شده توسط تیم بیزدوار.',
+      category: 'محصول اختصاصی',
+      date: '2021-06-01',
+      relatedService: 'pages/bizsanitizer-v5.html'
     }
   ],
 
@@ -292,6 +361,8 @@ window.BIZDAVAR_CONFIG = {
     { name: 'Bear Event', domain: 'bearevent.co', category: 'رویداد و بلیت', role: 'ecosystem', internal: false },
     { name: 'Netinode', domain: 'netinode.net', url: 'https://netinode.net/', category: 'دامنه، هاست و سرور', role: 'case-study', internal: false, logo: 'assets/images/partners/netinohost.png', note: 'نمونه‌کار و سرویس زیرساخت بیزدوار — فروش دامنه، هاست، WordPress Hosting، ایمیل تجاری، DNS و سرور' },
     { name: 'Fast Web Studio', domain: 'fast.bizdavar.com', category: 'طراحی سایت', role: 'case-study', internal: true, slug: 'pages/fast.html', logo: 'assets/images/content/hero-home.svg', note: 'محصول اختصاصی بیزدوار — طراحی سایت ۵ روزه' },
+    { name: 'BizTab', domain: 'nasrnews.ir', url: 'https://nasrnews.ir/print/16727/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D9%88-%D8%B3%D8%A7%D8%AE%D8%AA-%D8%A7%D9%88%D9%84%DB%8C%D9%86-%D8%AF%D9%85%D8%A7%D8%B3%D9%86%D8%AC-%D8%AF%DB%8C%D9%88%D8%A7%D8%B1%DB%8C-%D8%BA%DB%8C%D8%B1%D8%AA%D9%85%D8%A7%D8%B3%DB%8C-%D8%AF%D8%B1-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2', category: 'محصول اختصاصی / IoT و سلامت', role: 'case-study', internal: true, slug: 'pages/biztab.html', logo: 'assets/images/products/biztab/biztab-logo.svg', note: 'محصول اختصاصی — اولین دماسنج دیواری غیرتماسی تبریز، توسعه تیم بیزدوار' },
+    { name: 'BizSan V5', domain: 'digikala.com', url: 'https://www.digikala.com/product/dkp-3730222/', category: 'محصول اختصاصی / بهداشت', role: 'case-study', internal: true, slug: 'pages/bizsanitizer-v5.html', logo: 'assets/images/products/bizsanitizer/bizsanitizer-logo.svg', note: 'محصول اختصاصی — دستگاه ضدعفونی دست V5، توسعه در دوران کرونا' },
     { name: 'FXGuard', domain: 'fxguard.io', category: 'طراحی وب / CRM و وب‌اپ', role: 'case-study', internal: false, note: 'نمونه‌کار — طراحی وبسایت، وب‌اپلیکیشن و CRM اختصاصی با کدنویسی اختصاصی' },
     { name: 'FXGuard Exchange', domain: 'exchange.fxguard.io', category: 'طراحی وب / صرافی و فین‌تک', role: 'case-study', internal: false, note: 'نمونه‌کار — طراحی وبسایت صرافی با قابلیت عضویت و ترید ارز' },
     { name: 'FXGuard Accounting', domain: 'accounting.fxguard.io', category: 'نرم‌افزار حسابداری / فینانس', role: 'case-study', internal: false, note: 'نمونه‌کار — سیستم حسابداری حرفه‌ای با برنامه‌نویسی اختصاصی، مناسب کسب‌وکارهای فینانس و صرافی' },

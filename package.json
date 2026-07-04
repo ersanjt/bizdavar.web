@@ -1,0 +1,19 @@
+{
+  "name": "bizdavar-web",
+  "private": true,
+  "description": "Bizdavar Group — static multilingual corporate site",
+  "scripts": {
+    "audit": "node scripts/verify-all.js",
+    "audit:assets": "node scripts/audit-assets.js",
+    "audit:site": "node scripts/site-audit.js",
+    "audit:images": "node scripts/verify-config-images.js",
+    "sitemap": "node scripts/gen-sitemap.js",
+    "robots": "node scripts/gen-robots.js",
+    "optimize": "node scripts/optimize-html.js",
+    "brand:icons": "python scripts/generate-brand-icons.py",
+    "serve": "npx --yes serve . -l 3456"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

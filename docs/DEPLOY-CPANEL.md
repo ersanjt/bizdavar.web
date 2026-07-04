@@ -100,56 +100,75 @@ Create → سپس **Update from Remote** (اولین pull)
 
 ---
 
-## روش ۲ — فقط از ترمینال WHM (بدون UI)
+## روش ۲ — WHM Terminal به‌عنوان root (پیشنهادی)
+
+> کاربر `bizdavar` روی این سرور **Shell access** ندارد؛ deploy با **root** انجام می‌شود.
 
 ```bash
-# 1) سوئیچ به کاربر cPanel (از WHM Terminal)
-su - CPANEL_USERNAME
+cd /home/bizdavar/repositories/bizdavar.web
+git pull origin main   # یا بعد از push محلی
+bash scripts/deploy-sync.sh
+```
 
-# 2) کلون (اگر از قبل نیست)
+اسکریپت `scripts/deploy-sync.sh`:
+1. `git fetch` + `reset --hard origin/main`
+2. **Backup** از `public_html` در `/root/bizdavar-public_html-before-sync-*.tar.gz`
+3. **rsync** با `--delete` (فایل‌های اضافی در public_html حذف می‌شوند)
+4. حفظ `.well-known` برای SSL
+5. `chown` و chmod
+6. تست `curl` روی bizdavar.com
+
+### یک‌خطی (بدون اسکریپت)
+
+```bash
+REPO=/home/bizdavar/repositories/bizdavar.web
+WEB=/home/bizdavar/public_html
+TS=$(date +%F-%H%M)
+
+git config --global --add safe.directory "$REPO"
+cd "$REPO" && git fetch origin && git reset --hard origin/main
+
+tar -czf "/root/bizdavar-public_html-before-sync-$TS.tar.gz" -C /home/bizdavar public_html
+
+rsync -av --delete \
+  --exclude .git/ --exclude .cpanel.yml --exclude .gitignore \
+  --exclude .well-known/ --exclude docs/ --exclude scripts/ \
+  --exclude README.md --exclude '*.zip' \
+  "$REPO/" "$WEB/"
+
+mkdir -p "$WEB/.well-known/acme-challenge" "$WEB/.well-known/pki-validation"
+chown -R bizdavar:bizdavar "$WEB"
+find "$WEB" -type d -exec chmod 755 {} \;
+find "$WEB" -type f -exec chmod 644 {} \;
+```
+
+### ZIP به‌جای Git (بدون rsync)
+
+1. فایل `bizdavar-public_html.zip` را در cPanel File Manager آپلود کنید
+2. داخل `public_html` Extract کنید (مستقیم `index.html` و `assets/` در ریشه باشند)
+3. `.htaccess` حتماً extract شده باشد
+
+---
+
+## روش ۳ — ترمینال cPanel (اگر Shell فعال شد)
+
+```bash
 mkdir -p ~/repositories
 cd ~/repositories
 git clone git@github.com:ersanjt/bizdavar.web.git
 cd bizdavar.web
-git checkout main
-
-# 3) دیپلوی دستی (مشابه .cpanel.yml)
-DEPLOYPATH=~/public_html
-cp -f index.html robots.txt sitemap.xml "$DEPLOYPATH/"
-cp -a assets "$DEPLOYPATH/"
-cp -a pages "$DEPLOYPATH/"
-
-echo "Deploy OK: $(date)"
+bash scripts/deploy-cpanel.sh
 ```
 
-### اسکریپت دیپلوی + cron (اگر webhook ندارید)
+### cron (اختیاری)
 
 ```bash
-cat > ~/bin/deploy-bizdavar.sh << 'SCRIPT'
-#!/bin/bash
-set -e
-REPO=~/repositories/bizdavar.web
-WEB=~/public_html
-cd "$REPO"
-git fetch origin main
-git reset --hard origin/main
-cp -f index.html robots.txt sitemap.xml "$WEB/"
-cp -a assets "$WEB/"
-cp -a pages "$WEB/"
-echo "[$(date)] bizdavar deployed"
-SCRIPT
-chmod +x ~/bin/deploy-bizdavar.sh
-```
-
-هر ۵ دقیقه (اختیاری):
-
-```bash
-crontab -e
-# اضافه کنید:
-*/5 * * * * ~/bin/deploy-bizdavar.sh >> ~/logs/deploy-bizdavar.log 2>&1
+*/30 * * * * bash ~/repositories/bizdavar.web/scripts/deploy-cpanel.sh >> ~/logs/deploy-bizdavar.log 2>&1
 ```
 
 ---
+
+## روش قدیمی — cp دستی (fallback)
 
 ## زیردامنه fast.bizdavar.com (اختیاری)
 

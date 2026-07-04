@@ -36,7 +36,7 @@
     const c = category || '';
     if (/fintech|payment|broker|finance|holding|فین|پرداخت|مالی|بروکر|هلدینگ|web3|وب۳|انتقال/i.test(c)) return 'fintech';
     if (/digital|web|design|smm|hosting|event|jewel|store|fashion|aviation|brand|طراحی|هاستینگ|رویداد|جواهر|فروشگاه|هنر|مد|چرم|هواپیمایی|برند/i.test(c)) return 'digital';
-    if (/industrial|pump|petro|motor|equipment|tourism|visa|trade|صنعت|پمپ|پتروشیمی|الکتروموتور|تجهیزات|گردشگری|ویزا|تجارت/i.test(c)) return 'industrial';
+    if (/industrial|pump|petro|motor|equipment|tourism|visa|trade|IoT|دماسنج|سلامت|محصول|صنعت|پمپ|پتروشیمی|الکتروموتور|تجهیزات|گردشگری|ویزا|تجارت/i.test(c)) return 'industrial';
     if (/فین|پرداخت|مالی|بروکر|هلدینگ|وب۳|انتقال/.test(c)) return 'fintech';
     if (/طراحی|SMM|هاستینگ|رویداد|جواهر|فروشگاه|هنر|مد|چرم|هواپیمایی|درگاه|زیرساخت|برند/.test(c)) return 'digital';
     if (/صنعت|پمپ|پتروشیمی|الکتروموتور|تجهیزات|گردشگری|ویزا|تجارت|پتروشیمی/.test(c)) return 'industrial';
