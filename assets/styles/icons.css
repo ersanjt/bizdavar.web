@@ -79,9 +79,19 @@
 }
 
 .mobile-header__icon-btn--wa .bd-icon {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   color: #fff;
+  display: block;
+}
+
+/* WhatsApp — crisp brand mark at all sizes */
+.contact-info__icon--wa .bd-icon,
+.footer__chip--wa .footer__chip-icon .bd-icon,
+.footer__social-btn--wa .bd-icon,
+.mobile-header__icon-btn--wa .bd-icon {
+  display: block;
+  flex-shrink: 0;
 }
 
 .top-bar__contact .bd-icon,

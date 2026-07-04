@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 209" width="500" height="209" role="img" aria-label="Bizdavar">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 209" width="500" height="209" role="img" aria-label="Bizdavar">
   <title>Bizdavar</title>
-  <image href="bizdavar-logo.png" width="500" height="209" preserveAspectRatio="xMidYMid meet"/>
+  <image href="/assets/images/brand/bizdavar-logo.png" xlink:href="/assets/images/brand/bizdavar-logo.png" width="500" height="209" preserveAspectRatio="xMidYMid meet"/>
 </svg>

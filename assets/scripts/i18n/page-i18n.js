@@ -96,6 +96,12 @@
     if (page === 'about') {
       applyAboutFeatures();
       applyAboutValues();
+      if (typeof window.initAboutPage === 'function') window.initAboutPage();
+      if (typeof window.renderCompanyIntelAbout === 'function') window.renderCompanyIntelAbout();
+      const related = raw('aboutPage.relatedLinks');
+      if (Array.isArray(related) && typeof window.renderRelatedLinks === 'function') {
+        window.renderRelatedLinks(related);
+      }
     }
     if (page === 'services') {
       applyServiceBlocks();
@@ -108,6 +114,9 @@
       applyPortfolioTags();
       if (typeof window.initPortfolioPage === 'function') window.initPortfolioPage();
       if (typeof window.renderPortfolioRelatedLinks === 'function') window.renderPortfolioRelatedLinks();
+    }
+    if (page === 'products' && typeof window.initOwnedProductsPage === 'function') {
+      window.initOwnedProductsPage();
     }
     if (page === 'fast') {
       if (typeof window.initFastPage === 'function') window.initFastPage();

@@ -120,12 +120,12 @@ window.BIZDAVAR_INTEL = {
     { name: 'ZedPay', type: 'فین‌تک / پرداخت', note: 'مدیریت IT و توسعه پلتفرم' },
     { name: 'Netinode', type: 'دامنه، هاست و سرور', note: 'ثبت دامنه، هاست، WordPress Hosting، ایمیل تجاری، DNS و سرور' },
     { name: 'BZ Diamond', type: 'نمونه‌کار طراحی وب', note: 'فروشگاه WooCommerce، ایمیل و سئو — پروژه مشتری' },
-    { name: 'Biztejarat', type: 'نمونه‌کار SMM', note: 'صفحه اینستاگرام محصولات صنعتی — مدیریت محتوا' },
+    { name: 'Biztejarat', type: 'نمونه‌کار SMM (گذشته)', note: 'صفحه اینستاگرام محصولات صنعتی — پروژه غیرفعال، اینستاگرام بسته شده' },
     { name: 'BizTab', type: 'محصول IoT / سلامت', note: 'دماسنج دیواری غیرتماسی — اولین نمونه تبریز، توسعه تیم بیزدوار' },
 
-    { name: 'BizSan V5', type: 'محصول بهداشت', note: 'دستگاه ضدعفونی دست اتوماتیک — سنسور التراسونیک، عرضه دیجی‌کالا' },
+    { name: 'BizClean V5', type: 'محصول بهداشت', note: 'دستگاه ضدعفونی دست اتوماتیک — سنسور التراسونیک، عرضه دیجی‌کالا' },
     { name: 'BZBroker', type: 'صرافی P2P', note: 'پلتفرم کریپتو' },
-    { name: 'FXGuard', type: 'CRM واتساپ', note: 'اتوماسیون فروش' },
+    { name: 'CRM واتساپ', type: 'CRM واتساپ', note: 'اسکریپت اختصاصی — اتوماسیون فروش' },
     { name: 'Bear Event', type: 'رویداد', note: 'بلیت و رویداد آنلاین' },
     { name: 'Gamak', type: 'الکتروموتور', note: 'تامین موتور صنعتی ترکیه' },
     { name: 'Arian Pumps', type: 'نمونه‌کار طراحی وب', note: 'طراحی وب شرکتی B2B — مشتری خدمات دیجیتال' },
@@ -174,9 +174,6 @@ window.BIZDAVAR_INTEL = {
       country: 'ارمنستان',
       address: 'Yerevan, Armenia',
       contactName: 'ارسان جاهد تبریزی',
-      phone: '+374 55 517 957',
-      phoneTel: '+37455517957',
-      whatsapp: '37455517957',
       email: 'info@bizdavar.com',
       languages: ['English', 'فارسی', 'Русский'],
       intro: 'شرکت ثبت‌شده در ارمنستان — فعال در بهینه‌سازی موتورهای جستجو (SEO)، تبلیغات وب، دیجیتال مارکتینگ و طراحی سایت. پروفایل Bizdavar در دایرکتوری Spyur.am قابل راستی‌آزمایی است.',
@@ -269,14 +266,14 @@ window.BIZDAVAR_INTEL = {
       title: 'نمایشگاه دستاوردهای مرکز رشد دانشگاه تبریز — مقابله با کرونا',
       titleEn: 'University of Tabriz growth center exhibition — COVID-19',
       entity: 'تیم بیزدوار',
-      brand: 'BizTab · BizSan V5',
-      desc: 'معرفی دستگاه‌های مهندسی‌شده تیم بیزدوار — از جمله دماسنج BizTab و ضدعفونی‌کننده BizSan V5 — با حضور استاندار آذربایجان شرقی. پوشش ISNA، SNN و گزارش تصویری صدا و سیما.',
+      brand: 'BizTab · BizClean V5',
+      desc: 'معرفی دستگاه‌های مهندسی‌شده تیم بیزدوار — از جمله دماسنج BizTab و ضدعفونی‌کننده BizClean V5 — با حضور استاندار آذربایجان شرقی. پوشش ISNA، SNN و گزارش تصویری صدا و سیما.',
       city: 'تبریز',
       country: 'ایران',
       source: 'صدا و سیما',
       sourceUrl: 'https://www.iribnews.ir/fa/news/2714063/%D9%86%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%A7%D9%87-%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7',
       sourceLabel: 'گزارش صدا و سیما',
-      image: 'assets/images/products/biztab/biztab-press.jpg',
+      image: 'assets/images/products/biztab/biztab-nasrnews-press.png',
       video: 'assets/videos/products/bizsanitizer/exhibition-irib-2020.mp4',
       videoPoster: 'assets/images/products/biztab/biztab-press.jpg',
       videoLabel: 'ویدیو — گزارش تصویری نمایشگاه',
@@ -305,7 +302,7 @@ window.BIZDAVAR_INTEL = {
       sourceUrl: 'https://rinotex.ir/',
       sourceHistoryUrl: 'https://rinotex.ir/Home/Introduction',
       sourceLabel: 'سایت رسمی رینوتکس',
-      image: 'assets/images/products/biztab/biztab-installed.jpg',
+      image: 'assets/images/products/biztab/biztab-nasrnews-press.png',
       parkUnit: {
         name: 'ایمن سهند پدیده',
         nameEn: 'Imen Sahand Padideh',
@@ -323,7 +320,7 @@ window.BIZDAVAR_INTEL = {
         { label: 'ISNA — نمایشگاه مرکز رشد ۱۳۹۹', url: 'https://www.isna.ir/news/99022216019/%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D9%BE%DA%98%D9%88%D9%87%D8%B4%DB%8C-%D9%88-%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%D9%87-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7' },
         { label: 'SNN — نمایشگاه ۱۳۹۹', url: 'https://snn.ir/fa/news/847064/%D9%86%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%A7%D9%87-%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%E2%80%8C%D9%87%D8%A7%DB%8C-%D9%85%D8%B1%DA%A9%D8%B2-%D8%B1%D8%B4%D8%AF-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%D8%B4%DB%8C%D9%88%D8%B9-%D9%88%DB%8C%D8%B1%D9%88%D8%B3-%DA%A9%D8%B1%D9%88%D9%86%D8%A7-%D8%A7%D9%81%D8%AA%D8%AA%D8%A7%D8%AD-%D8%B4%D8%AF' },
         { label: 'صدا و سیما — نمایشگاه ۱۳۹۹', url: 'https://www.iribnews.ir/fa/news/2714063/%D9%86%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%A7%D9%87-%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7' },
-        { label: 'دیجی‌کالا — BizSan V5', url: 'https://www.digikala.com/product/dkp-3730222/%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D8%B6%D8%AF%D8%B9%D9%81%D9%88%D9%86%DB%8C-%D8%AF%D8%B3%D8%AA-%D8%A8%DB%8C%D8%B2%D8%AF%D9%88%D8%A7%D8%B1-%D9%85%D8%AF%D9%84-v5/' }
+        { label: 'دیجی‌کالا — BizClean V5', url: 'https://www.digikala.com/product/dkp-3730222/%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D8%B6%D8%AF%D8%B9%D9%81%D9%88%D9%86%DB%8C-%D8%AF%D8%B3%D8%AA-%D8%A8%DB%8C%D8%B2%D8%AF%D9%88%D8%A7%D8%B1-%D9%85%D8%AF%D9%84-v5/' }
       ],
       tags: ['RINOTEX', 'تبریز', 'ICT', 'پارک علم و فناوری', 'ایمن سهند پدیده', 'دانش‌بنیان']
     }
@@ -340,7 +337,7 @@ window.BIZDAVAR_INTEL = {
       desc: 'دماسنج دیواری غیرتماسی با خطای کمتر از ۰.۳ درجه — تأیید اساتید دانشگاه تبریز. توسعه و مالکیت انحصاری تیم بیزدوار.',
       source: 'آژانس خبری تحلیلی نصر',
       sourceUrl: 'https://nasrnews.ir/print/16727/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D9%88-%D8%B3%D8%A7%D8%AE%D8%AA-%D8%A7%D9%88%D9%84%DB%8C%D9%86-%D8%AF%D9%85%D8%A7%D8%B3%D9%86%D8%AC-%D8%AF%DB%8C%D9%88%D8%A7%D8%B1%DB%8C-%D8%BA%DB%8C%D8%B1%D8%AA%D9%85%D8%A7%D8%B3%DB%8C-%D8%AF%D8%B1-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2',
-      image: 'assets/images/products/biztab/biztab-hero.jpg',
+      image: 'assets/images/products/biztab/biztab-nasrnews-press.png',
       slug: 'pages/biztab.html',
       pressLinks: [
         { label: 'نصرنیوز', url: 'https://nasrnews.ir/print/16727/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D9%88-%D8%B3%D8%A7%D8%AE%D8%AA-%D8%A7%D9%88%D9%84%DB%8C%D9%86-%D8%AF%D9%85%D8%A7%D8%B3%D9%86%D8%AC-%D8%AF%DB%8C%D9%88%D8%A7%D8%B1%DB%8C-%D8%BA%DB%8C%D8%B1%D8%AA%D9%85%D8%A7%D8%B3%DB%8C-%D8%AF%D8%B1-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2' }
@@ -351,8 +348,8 @@ window.BIZDAVAR_INTEL = {
       id: 'bizsanitizer-v5',
       year: '۱۳۹۹',
       yearIso: '2020',
-      title: 'BizSan V5 — دستگاه ضدعفونی دست اتوماتیک',
-      titleEn: 'BizSan V5 — Automatic hand sanitizer dispenser',
+      title: 'BizClean V5 — دستگاه ضدعفونی دست اتوماتیک',
+      titleEn: 'BizClean V5 — Automatic hand sanitizer dispenser',
       desc: 'دستگاه ضدعفونی دست — طراحی و تولید تیم بیزدوار (دی ۱۳۹۸ — شهریور ۱۴۰۱)، نمایشگاه مرکز رشد ۱۳۹۹ (ISNA، SNN، صدا و سیما)، RINOTEX ۱۴۰۰ از طریق واحد فناور پارک علمی «ایمن سهند پدیده»، عرضه در دیجی‌کالا.',
       source: 'دیجی‌کالا',
       sourceUrl: 'https://www.digikala.com/product/dkp-3730222/%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D8%B6%D8%AF%D8%B9%D9%81%D9%88%D9%86%DB%8C-%D8%AF%D8%B3%D8%AA-%D8%A8%DB%8C%D8%B2%D8%AF%D9%88%D8%A7%D8%B1-%D9%85%D8%AF%D9%84-v5/',
@@ -366,8 +363,8 @@ window.BIZDAVAR_INTEL = {
       pressUrl: 'https://www.iribnews.ir/fa/news/2714063/%D9%86%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%A7%D9%87-%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7',
       pressLabel: 'صدا و سیما',
       videoUrl: 'https://www.youtube.com/shorts/GcOtue1Nmlo',
-      videoLabel: 'یوتیوب',
-      image: 'assets/images/products/biztab/biztab-press.jpg',
+      videoLabel: 'YouTube — V1',
+      image: 'assets/images/products/biztab/biztab-nasrnews-press.png',
       slug: 'pages/bizsanitizer-v5.html',
       tags: ['بهداشت', 'IoT', 'کرونا', 'دانشگاه تبریز', 'RINOTEX', 'ایمن سهند پدیده', 'دیجی‌کالا']
     }
@@ -382,7 +379,7 @@ window.BIZDAVAR_INTEL = {
           label: 'ISNA — دستاوردهای دانشگاه تبریز در مقابله با کرونا',
           url: 'https://www.isna.ir/news/99022216019/%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D9%BE%DA%98%D9%88%D9%87%D8%B4%DB%8C-%D9%88-%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%D9%87-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7',
           date: 'اردیبهشت ۱۳۹۹',
-          note: 'BizSan V5 · تجهیزات بهداشتی تیم بیزدوار'
+          note: 'BizClean V5 · تجهیزات بهداشتی تیم بیزدوار'
         },
         {
           label: 'SNN — نمایشگاه مرکز رشد دانشگاه تبریز',
@@ -394,7 +391,7 @@ window.BIZDAVAR_INTEL = {
           label: 'صدا و سیما (IRIB) — گزارش تصویری نمایشگاه',
           url: 'https://www.iribnews.ir/fa/news/2714063/%D9%86%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%A7%D9%87-%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7',
           date: 'اردیبهشت ۱۳۹۹',
-          note: 'ویدیو محلی در صفحه BizSan'
+          note: 'ویدیو محلی در صفحه BizClean'
         },
         {
           label: 'نصرنیوز — طراحی اولین دماسنج دیواری غیرتماسی تبریز (BizTab)',
@@ -430,14 +427,14 @@ window.BIZDAVAR_INTEL = {
       group: 'فروش و ویدیو',
       items: [
         {
-          label: 'دیجی‌کالا — BizSan V5 (dkp-3730222)',
+          label: 'دیجی‌کالا — BizClean V5 (dkp-3730222)',
           url: 'https://www.digikala.com/product/dkp-3730222/%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D8%B6%D8%AF%D8%B9%D9%81%D9%88%D9%86%DB%8C-%D8%AF%D8%B3%D8%AA-%D8%A8%DB%8C%D8%B2%D8%AF%D9%88%D8%A7%D8%B1-%D9%85%D8%AF%D9%84-v5/',
           note: 'محصول مهندسی‌شده بیزدوار'
         },
         {
-          label: 'YouTube — معرفی BizSan V5',
+          label: 'YouTube — نمونه اولیه BizClean V1',
           url: 'https://www.youtube.com/shorts/GcOtue1Nmlo',
-          note: 'ویدیو کوتاه محصول'
+          note: 'ویدیو کوتاه — مدل اولیه V1 (نسخهٔ تجاری V5 در دیجی‌کالا)'
         }
       ]
     },
@@ -488,7 +485,7 @@ window.BIZDAVAR_INTEL = {
       },
       {
         category: 'محصول و نوآوری',
-        text: 'BizSan V5 — دستگاه ضدعفونی دست در نمایشگاه مرکز رشد دانشگاه تبریز (مقابله با کرونا) با حضور استاندار آذربایجان شرقی.',
+        text: 'BizClean V5 — دستگاه ضدعفونی دست در نمایشگاه مرکز رشد دانشگاه تبریز (مقابله با کرونا) با حضور استاندار آذربایجان شرقی.',
         source: 'خبرگزاری دانشجو (SNN)',
         year: '۱۳۹۹'
       },
@@ -545,7 +542,7 @@ window.BIZDAVAR_INTEL = {
   faqIntel: [
     { q: 'نام رسمی شرکت در ایران چیست؟', a: 'شخصیت حقوقی در ایران «تکنولوژی پردازان توسعه خاورمیانه» است — برند تجاری «آژانس دیجیتال مارکتینگ بیزدوار» (Bizdavar). دفتر تبریز، استان آذربایجان شرقی. پروفایل B2B در جویشگر قابل مشاهده است.' },
     { q: 'آیا بیزدوار در نمایشگاه‌های فناوری حضور داشته؟', a: 'بله — «تکنولوژی پردازان توسعه خاورمیانه» (Bizdavar) در نهمین RINOTEX آبان ۱۴۰۰ با غرفه ۱۲ متری در زون ICT حضور داشت. هم‌زمان واحد فناور «ایمن سهند پدیده» از پارک علم و فناوری دانشگاه تبریز در فهرست واحدهای مستقر، محصول «دستگاه هوشمند ضدعفونی دست» را معرفی کرد — طراحی و تولید توسط تیم بیزدوار (دی ۱۳۹۸ — شهریور ۱۴۰۱). جزئیات در rinotex.ir و بخش نمایشگاه‌ها.' },
-    { q: 'رابطه بیزدوار با «ایمن سهند پدیده» چیست؟', a: '«ایمن سهند پدیده» واحد فناور مستقر در پارک علم و فناوری دانشگاه تبریز بود. از دی ۱۳۹۸ تا شهریور ۱۴۰۱ بنیان‌گذار بیزدوار سرمایه‌گذاری شخصی داشت و تمام طراحی و تولید دستگاه‌های ضدعفونی (از جمله BizSan V5) توسط تیم بیزدوار انجام شد. این دو شخصیت حقوقی جدا هستند؛ مهندسی و تولید متعلق به تیم بیزدوار است و در RINOTEX 1400 از طریق واحد پارکی معرفی شد.' },
+    { q: 'رابطه بیزدوار با «ایمن سهند پدیده» چیست؟', a: '«ایمن سهند پدیده» واحد فناور مستقر در پارک علم و فناوری دانشگاه تبریز بود. از دی ۱۳۹۸ تا شهریور ۱۴۰۱ بنیان‌گذار بیزدوار سرمایه‌گذاری شخصی داشت و تمام طراحی و تولید دستگاه‌های ضدعفونی (از جمله BizClean V5) توسط تیم بیزدوار انجام شد. این دو شخصیت حقوقی جدا هستند؛ مهندسی و تولید متعلق به تیم بیزدوار است و در RINOTEX 1400 از طریق واحد پارکی معرفی شد.' },
     { q: 'ثبت شرکت در ارمنستان چگونه است؟', a: 'Bizdavar Group به‌صورت LLC در ایروان، ارمنستان ثبت شده — فعال در SEO، تبلیغات وب و دیجیتال مارکتینگ. پروفایل در دایرکتوری Spyur.am (شناسه ۵۷۷۸۳) منتشر شده است.' },
     { q: 'بیزدوار گروپ از چه سالی فعالیت می‌کند؟', a: 'بیزدوار از سال ۲۰۱۳ (۱۳۹۲) توسط ارسان جاهد تبریزی راه‌اندازی شده و خدمات دیجیتال، وب و صنعتی را تحت یک برند یکپارچه ارائه می‌دهد.' },
     { q: 'بیزدوار در چه کشورهایی پروژه اجرا کرده؟', a: 'پروژه‌ها در ۱۱ کشور شامل ترکیه، امارات، آلمان، آمریکا، انگلستان، ارمنستان، لبنان، ایران، عراق، گرجستان و ایتالیا انجام شده است.' },

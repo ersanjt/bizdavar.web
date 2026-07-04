@@ -38,6 +38,12 @@ html.premium-ui ::selection {
   transform: scale(1.03);
 }
 
+@media (max-width: 1100px) {
+  .mobile-header__logo:hover img {
+    transform: none;
+  }
+}
+
 .nav__link {
   transition: color 0.2s ease, transform 0.2s ease;
 }
@@ -74,7 +80,7 @@ html.premium-ui ::selection {
 }
 
 .mobile-bottom-nav__item.active {
-  color: var(--navy, #16163f);
+  color: var(--red, #d63635);
 }
 
 /* ─── Smooth page navigation ─── */

@@ -105,12 +105,12 @@
       eyebrow: 'Bizdavar Group özel ürünü',
       headline: '5 günde profesyonel web sitesi',
       subtitle: 'Bu hafta yayına geç — startup\'tan WooCommerce mağazasına',
-      description: 'Fast Web Studio; Vazirmatn font, iletişim formu, WhatsApp ve çok dilli destekle hızlı RTL web sitesi kurar — İran, Türkiye ve uluslararası pazarlar için.'
+      description: 'Fast Web Studio; Vazirmatn font, iletişim formu, WhatsApp ve çok dilli destekle hızlı RTL web sitesi kurar — Türkiye, İran ve uluslararası pazarlar için.'
     },
     trustSignals: [
       { label: '5 günde teslim', desc: 'Günlük planlı şeffaf süreç' },
       { label: '$99\'dan', desc: 'Başlangıç indirimli temel plan' },
-      { label: 'RTL + çok dilli', desc: 'Farsça, İngilizce ve Türkçe' },
+      { label: 'RTL + çok dilli', desc: 'Türkçe, Farsça ve İngilizce' },
       { label: 'WhatsApp desteği', desc: 'Doğrudan danışmanlık ve takip' }
     ],
     plans: [
@@ -190,7 +190,7 @@
       { q: 'Hosting ve domain fiyata dahil mi?', a: `Tasarım ve kurulum ayrıdır. Domain ve yıllık hosting için ${ni('Netinode')} (domain arama, web hosting, WordPress hosting ve SSL) kullanabilir veya rehberlik alabilirsiniz.` },
       { q: 'Siteyi sonra genişletebilir miyim?', a: 'Evet. Temel ile başlayıp Mağaza veya Pro\'ya yükseltebilirsiniz. Bizdavar aynı projeyi sürdürür.' },
       { q: 'Ödeme nasıl yapılır?', a: 'Genelde %50 peşin, %50 teslimden önce — havale, kart veya uluslararası yöntemler. Detaylar WhatsApp\'ta netleşir.' },
-      { q: 'İran dışındaki işletmelerle çalışıyor musunuz?', a: 'Evet — İran, Türkiye, BAE ve Avrupa\'da siteler kuruldu. Farsça, İngilizce ve Türkçe danışmanlık.' },
+      { q: 'İran dışındaki işletmelerle çalışıyor musunuz?', a: 'Evet — Türkiye, İran, BAE ve Avrupa\'da siteler kuruldu. Türkçe, Farsça ve İngilizce danışmanlık.' },
       { q: 'Fast ile özel proje arasındaki fark nedir?', a: 'Fast sabit fiyatlı hızlı lansman içindir. Büyük projeler (uygulama, B2B portal) <a href="services#web-design">web tasarım hizmetlerimiz</a> üzerinden yürür.' }
     ]
   };

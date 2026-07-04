@@ -322,6 +322,43 @@ html[dir='ltr'] .feature-item {
   align-self: center;
 }
 
+/* Compact language switcher in mobile header */
+.lang-dropdown--header-mobile {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.lang-dropdown--header-mobile .lang-dropdown__toggle {
+  min-height: 40px;
+  padding: 0 10px;
+  gap: 4px;
+  border-radius: 12px;
+  border: 1px solid rgba(22, 22, 63, 0.1);
+  background: rgba(244, 245, 248, 0.9);
+  font-size: 12px;
+}
+
+.lang-dropdown--header-mobile .lang-dropdown__chev {
+  display: none;
+}
+
+.lang-dropdown--header-mobile .lang-dropdown__panel {
+  inset-inline-end: 0;
+  min-width: 132px;
+}
+
+@media (max-width: 380px) {
+  .lang-dropdown--header-mobile .lang-dropdown__label {
+    display: none;
+  }
+
+  .lang-dropdown--header-mobile .lang-dropdown__toggle {
+    width: 40px;
+    padding: 0;
+    justify-content: center;
+  }
+}
+
 /* Mobile drawer — language list with flags */
 .mobile-drawer__lang {
   padding: 0 0 12px;

@@ -48,6 +48,7 @@ rsync -av "$REPO/assets/scripts/" "$WEB/assets/scripts/"
 
 echo "===== TOUCH HTML + JS (cache bust on origin) ====="
 find "$WEB/assets/scripts" -type f -name '*.js' -exec touch {} + 2>/dev/null || true
+find "$WEB/assets/images/products" -type f \( -name '*.jpg' -o -name '*.svg' -o -name '*.webp' -o -name '*.png' \) -exec touch {} + 2>/dev/null || true
 find "$WEB/pages" -type f -name '*.html' -exec touch {} + 2>/dev/null || true
 touch "$WEB/index.html" 2>/dev/null || true
 
@@ -75,9 +76,17 @@ rm -rf "/home/$CPANEL_USER/lscache"/* 2>/dev/null || true
 find "/home/$CPANEL_USER" -maxdepth 4 -type d -name 'lscache' 2>/dev/null | while read -r d; do
   rm -rf "$d"/* 2>/dev/null || true
 done
+for ls_cache in \
+  /usr/local/lsws/cachedata \
+  /tmp/lshttpd/swap \
+  /tmp/lshttpd/cache; do
+  rm -rf "$ls_cache"/* 2>/dev/null || true
+done
+/scripts/restartsrv_lsws 2>/dev/null || true
 if [[ -x /usr/local/lsws/bin/lswsctrl ]]; then
   /usr/local/lsws/bin/lswsctrl restart 2>/dev/null || true
 fi
+sleep 2
 
 echo "===== ORIGIN VERIFY (bypass Cloudflare) ====="
 ORIGIN_OK=0
@@ -93,16 +102,26 @@ if [[ "$ORIGIN_OK" -eq 0 ]]; then
   echo "WARN: GTM not on origin after 5 attempts — run: curl -sL -H 'Host: bizdavar.com' http://127.0.0.1/ | head -15"
 fi
 
-if curl -sfL -H "Host: bizdavar.com" "http://127.0.0.1/assets/scripts/config/company-intel.js" 2>/dev/null | grep -q 'exhibitions:'; then
-  echo "OK: company-intel.js includes exhibitions block"
-else
-  echo "WARN: company-intel.js on origin missing exhibitions — check assets/scripts sync"
+ORIGIN_CURL=(curl -sfL -H "Host: bizdavar.com" -H "Cache-Control: no-cache" -H "Pragma: no-cache")
+DISK_INTEL="$WEB/assets/scripts/config/company-intel.js"
+ORIGIN_INTEL_BYTES=$("${ORIGIN_CURL[@]}" "http://127.0.0.1/assets/scripts/config/company-intel.js?v=$TS" 2>/dev/null | wc -c | tr -d ' ')
+DISK_INTEL_BYTES=$(wc -c < "$DISK_INTEL" 2>/dev/null | tr -d ' ')
+echo "company-intel.js bytes — disk: ${DISK_INTEL_BYTES:-?} origin: ${ORIGIN_INTEL_BYTES:-0}"
+
+if [[ -n "${DISK_INTEL_BYTES:-}" && "${ORIGIN_INTEL_BYTES:-0}" != "$DISK_INTEL_BYTES" ]]; then
+  echo "WARN: origin serving stale company-intel.js (purge LiteSpeed + Cloudflare)"
 fi
 
-if curl -sfL -H "Host: bizdavar.com" "http://127.0.0.1/assets/scripts/components/grids.js" 2>/dev/null | grep -q 'intelVerifiedSources'; then
+if "${ORIGIN_CURL[@]}" "http://127.0.0.1/assets/scripts/config/company-intel.js?v=$TS" 2>/dev/null | grep -q 'exhibitions:'; then
+  echo "OK: company-intel.js includes exhibitions block"
+else
+  echo "WARN: company-intel.js on origin missing exhibitions — purge LiteSpeed/Cloudflare cache"
+fi
+
+if "${ORIGIN_CURL[@]}" "http://127.0.0.1/assets/scripts/components/grids.js?v=$TS" 2>/dev/null | grep -q 'intelVerifiedSources'; then
   echo "OK: grids.js includes verified sources renderer"
 else
-  echo "WARN: grids.js on origin missing intelVerifiedSources — check assets/scripts sync"
+  echo "WARN: grids.js on origin missing intelVerifiedSources — purge LiteSpeed/Cloudflare cache"
 fi
 
 if curl -sfL -H "Host: bizdavar.com" "http://127.0.0.1/assets/scripts/components/grids.js" 2>/dev/null | grep -q 'initOwnedProductsPage'; then

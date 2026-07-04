@@ -154,15 +154,15 @@
 }
 
 .footer__social-btn--wa {
-  background: rgba(37, 211, 102, 0.12);
-  border-color: rgba(37, 211, 102, 0.45);
-  color: #4ade80;
+  background: var(--whatsapp);
+  border-color: var(--whatsapp);
+  color: #fff;
 }
 
 .footer__social-btn--wa:hover {
-  background: rgba(37, 211, 102, 0.22);
-  border-color: rgba(37, 211, 102, 0.65);
-  color: #86efac;
+  background: var(--whatsapp-hover);
+  border-color: var(--whatsapp-hover);
+  color: #fff;
 }
 
 .footer__nav-col {
@@ -244,11 +244,11 @@
 }
 
 .footer__chip--wa .footer__chip-icon {
-  background: rgba(37, 211, 102, 0.15);
+  background: var(--whatsapp);
 }
 
 .footer__chip--wa .footer__chip-icon .bd-icon {
-  color: var(--whatsapp);
+  color: #fff;
 }
 
 .footer__chip-body {
@@ -428,13 +428,19 @@
 }
 
 .mobile-footer-hero {
-  padding: 28px 20px 24px;
+  padding: 28px 20px 20px;
   text-align: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, transparent 100%);
 }
 
-.mobile-footer-hero .footer__logo-img {
-  margin: 0;
+.mobile-footer-hero__tagline {
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0 0 14px;
+  max-width: 320px;
+  margin-inline: auto;
 }
 
 .mobile-footer-hero p {
@@ -453,11 +459,20 @@
   justify-content: center;
 }
 
+.mobile-footer-hero .footer__logo-img {
+  margin: 0;
+}
+
+.footer__social--mobile {
+  gap: 10px;
+}
+
 .mobile-footer-cta {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-  padding: 16px 16px 8px;
+  padding: 16px 16px 12px;
+  background: rgba(0, 0, 0, 0.12);
 }
 
 .mobile-footer-cta__btn {
@@ -538,11 +553,18 @@
 }
 
 .mobile-footer-bar {
-  padding: 20px 16px 24px;
+  padding: 18px 16px 8px;
   text-align: center;
   font-size: 12px;
   color: rgba(255, 255, 255, 0.45);
   border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.mobile-footer-bar__copy {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .mobile-footer-bar .footer__legal {

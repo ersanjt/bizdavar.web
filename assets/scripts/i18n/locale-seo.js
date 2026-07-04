@@ -22,9 +22,9 @@
         seoKeywords: 'خدمات دیجیتال, طراحی سایت, SMM, VEGA, Prosense, بیزدوار'
       },
       products: {
-        seoTitle: 'محصولات بیزدوار | BizSwap، FXGuard، BizTab و خطوط تولید',
-        seoDescription: 'محصولات بیزدوار — BizSwap DeFi، FXGuard WhatsApp CRM، BizTab، BizClean و خطوط تولید. سخت‌افزار و SaaS مهندسی‌شده توسط تیم بیزدوار.',
-        seoKeywords: 'BizSwap, FXGuard, WhatsApp CRM, BizTab, BizClean, بیزدوار'
+        seoTitle: 'محصولات بیزدوار | CRM واتساپ، BizSwap، BizTab و خطوط تولید',
+        seoDescription: 'محصولات بیزدوار — اسکریپت CRM واتساپ، BizSwap DeFi، BizTab، BizClean و خطوط تولید. سخت‌افزار و SaaS مهندسی‌شده توسط تیم بیزدوار.',
+        seoKeywords: 'CRM واتساپ, اسکریپت WhatsApp, BizSwap, BizTab, BizClean, بیزدوار'
       },
       portfolio: {
         seoTitle: 'نمونه‌کارها | پروژه‌های بیزدوار گروپ — ZedPay، BZ Diamond و...',
@@ -87,9 +87,9 @@
         seoKeywords: 'نمونه کار طراحی سایت, BZ Diamond, WooCommerce, طراحی وب, بیزدوار'
       },
       biztejarat: {
-        seoTitle: 'نمونه‌کار بیزتجارت | صفحه محصولات صنعتی اینستاگرام — بیزدوار',
-        seoDescription: 'نمونه‌کار مدیریت اینستاگرام بیزتجارت: محتوای محصولات صنعتی، ابزار دقیق و SMM توسط بیزدوار گروپ.',
-        seoKeywords: 'بیزتجارت, Biztejarat, اینستاگرام صنعتی, SMM, مدیریت شبکه اجتماعی, بیزدوار'
+        seoTitle: 'نمونه‌کار گذشته بیزتجارت | SMM محصولات صنعتی — بیزدوار',
+        seoDescription: 'نمونه‌کار گذشته مدیریت اینستاگرام بیزتجارت — پروژه SMM B2B برای محصولات صنعتی که اکنون غیرفعال است. اجراشده توسط بیزدوار گروپ.',
+        seoKeywords: 'بیزتجارت, Biztejarat, نمونه کار SMM, محتوای B2B, بیزدوار'
       },
       biztab: {
         seoTitle: 'BizTab | دماسنج دیواری غیرتماسی — محصول بیزدوار',
@@ -97,14 +97,14 @@
         seoKeywords: 'BizTab, دماسنج غیرتماسی, IoT, بیزدوار, تبریز, محصول اختصاصی'
       },
       bizsanitizerV5: {
-        seoTitle: 'دستگاه ضدعفونی دست بیزدوار V5 | محصول مهندسی‌شده',
-        seoDescription: 'دستگاه ضدعفونی دست بیزدوار V5 — ساخته‌شده در دوران کرونا، نمایشگاه مرکز رشد دانشگاه تبریز، سنسور التراسونیک. طراحی تیم بیزدوار، موجود در دیجی‌کالا.',
-        seoKeywords: 'BizSan V5, ضدعفونی دست, بیزدوار, کرونا, دیجی‌کالا, محصول اختصاصی'
+        seoTitle: 'BizClean V5 | دستگاه ضدعفونی دست بیزدوار — محصول مهندسی‌شده',
+        seoDescription: 'BizClean V5 — دستگاه ضدعفونی دست اتوماتیک بیزدوار با سنسور التراسونیک. ساخته‌شده در دوران کرونا، نمایشگاه مرکز رشد دانشگاه تبریز. موجود در دیجی‌کالا.',
+        seoKeywords: 'BizClean V5, BizClean, ضدعفونی دست, بیزدوار, کرونا, دیجی‌کالا, محصول اختصاصی'
       },
       fxguard: {
-        seoTitle: 'FXGuard | WhatsApp CRM — محصول SaaS بیزدوار',
-        seoDescription: 'FXGuard — CRM واتساپ با یک شماره و پنل تیمی، پیام انبوه، پاسخ خودکار ۲۴/۷ و پشتیبانی فارسی/ترکی/عربی. توسعه‌یافته توسط تیم بیزدوار.',
-        seoKeywords: 'FXGuard, WhatsApp CRM, CRM واتساپ, SaaS, بیزدوار, fxguard.io'
+        seoTitle: 'اسکریپت CRM واتساپ | برنامه‌نویسی اختصاصی — بیزدوار',
+        seoDescription: 'اسکریپت CRM واتساپ با برنامه‌نویسی اختصاصی — پلن $500، $800 و $1,200. پنل تیمی، پیام انبوه و پاسخ خودکار. توسعه‌یافته توسط تیم بیزدوار.',
+        seoKeywords: 'CRM واتساپ, اسکریپت WhatsApp, برنامه‌نویسی اختصاصی, بیزدوار, WhatsApp CRM'
       },
       bizswap: {
         seoTitle: 'BizSwap | پیش‌فروش و سواپ توکن Web3 — محصول بیزدوار',
@@ -159,9 +159,9 @@
         seoKeywords: 'dijital hizmetler, web tasarım, SMM, VEGA, Prosense, Bizdavar'
       },
       products: {
-        seoTitle: 'Bizdavar ürünleri | FXGuard, BizTab, BizClean ve üretim hatları',
-        seoDescription: 'Bizdavar ürünleri — FXGuard WhatsApp CRM, BizTab, BizClean, BizRoll, vakum makineleri ve PPE hatları. Donanım ve SaaS — Bizdavar ekibi.',
-        seoKeywords: 'FXGuard, WhatsApp CRM, BizTab, BizClean, BizRoll, Bizdavar'
+        seoTitle: 'Bizdavar ürünleri | WhatsApp CRM, BizTab, BizClean ve üretim hatları',
+        seoDescription: 'Bizdavar ürünleri — özel WhatsApp CRM scripti, BizTab, BizClean, BizRoll, vakum makineleri ve PPE hatları. Donanım ve SaaS — Bizdavar ekibi.',
+        seoKeywords: 'WhatsApp CRM, BizTab, BizClean, BizRoll, Bizdavar ürünleri'
       },
       portfolio: {
         seoTitle: 'Portfolyo | Bizdavar Group projeleri — ZedPay, BZ Diamond...',
@@ -190,7 +190,7 @@
       },
       vega: {
         seoTitle: 'VEGA sensör tedariki | VEGAPULS, VEGABAR, VEGAPOINT — Bizdavar',
-        seoDescription: 'Endüstriyel projeler için orijinal VEGA sensör tedariki. Türkçe/Farsça teknik danışmanlık, şeffaf proforma ve İran’a lojistik — Bizdavar Group.',
+        seoDescription: 'Endüstriyel projeler için orijinal VEGA sensör tedariki. İstanbul merkezli Türkçe teknik danışmanlık, şeffaf proforma ve uluslararası lojistik — Bizdavar Group.',
         seoKeywords: 'VEGA sensör, VEGAPULS, VEGABAR, endüstriyel tedarik, Bizdavar'
       },
       prosense: {
@@ -205,7 +205,7 @@
       },
       gamak: {
         seoTitle: 'Gamak elektrik motoru tedariki | IE2/IE3 — Bizdavar Group',
-        seoDescription: 'Türkiye Gamak endüstriyel elektrik motoru tedariki. GM/GMB, IE2/IE3, B3/B5 flanş — Farsça teknik danışmanlık, proforma ve lojistik — Bizdavar Group.',
+        seoDescription: 'Türkiye Gamak endüstriyel elektrik motoru tedariki. GM/GMB, IE2/IE3, B3/B5 flanş — Türkçe teknik danışmanlık, proforma ve lojistik — Bizdavar Group.',
         seoKeywords: 'Gamak, elektrik motoru, IE2 IE3, endüstriyel motor, Bizdavar'
       },
       digiSystem: {
@@ -215,7 +215,7 @@
       },
       teraoka: {
         seoTitle: 'Teraoka Seiko tedariki | Terazi ve POS — Bizdavar Group',
-        seoDescription: 'Teraoka Seiko terazi, etiketleme ve POS tedariki — Farsça danışmanlık, proforma ve uluslararası lojistik — Bizdavar Group.',
+        seoDescription: 'Teraoka Seiko terazi, etiketleme ve POS tedariki — Türkçe danışmanlık, proforma ve uluslararası lojistik — Bizdavar Group.',
         seoKeywords: 'Teraoka, terazi, POS, etiketleme, Bizdavar'
       },
       bzDiamond: {
@@ -224,9 +224,9 @@
         seoKeywords: 'BZ Diamond, WooCommerce, web tasarım, Bizdavar, vaka çalışması'
       },
       biztejarat: {
-        seoTitle: 'Biztejarat vaka çalışması | Endüstriyel Instagram SMM — Bizdavar',
-        seoDescription: 'Biztejarat Instagram yönetimi vaka çalışması: endüstriyel ürün içeriği, enstrümantasyon ve SMM — Bizdavar Group.',
-        seoKeywords: 'Biztejarat, endüstriyel SMM, Instagram, Bizdavar'
+        seoTitle: 'Biztejarat geçmiş örneği | Endüstriyel SMM — Bizdavar',
+        seoDescription: 'Biztejarat geçmiş Instagram SMM örneği: endüstriyel ürün içeriği — proje artık aktif değil. Bizdavar Group tarafından yürütüldü.',
+        seoKeywords: 'Biztejarat, endüstriyel SMM, B2B içerik, Bizdavar'
       },
       biztab: {
         seoTitle: 'BizTab | Temasız duvar termometresi — Bizdavar ürünü',
@@ -234,14 +234,14 @@
         seoKeywords: 'BizTab, temasız termometre, IoT, Bizdavar, Tebriz'
       },
       bizsanitizerV5: {
-        seoTitle: 'Bizdavar el dezenfektan V5 | Mühendislik ürünü',
-        seoDescription: 'Bizdavar el dezenfektan cihazı V5 — ultrasonik sensör, otomatik püskürtme. Bizdavar ekibi tasarımı, Digikala\'da satışta.',
-        seoKeywords: 'BizSan V5, el dezenfektan, Bizdavar, Digikala'
+        seoTitle: 'BizClean V5 | Otomatik el dezenfektanı — Bizdavar',
+        seoDescription: 'BizClean V5 — ultrasonik sensörlü otomatik el dezenfektanı. Bizdavar ekibi tasarımı, COVID dönemi üretimi, Digikala\'da satışta.',
+        seoKeywords: 'BizClean V5, BizClean, el dezenfektan, Bizdavar, Digikala'
       },
       fxguard: {
-        seoTitle: 'FXGuard | WhatsApp CRM — Bizdavar SaaS ürünü',
-        seoDescription: 'FXGuard — tek numara, ekip paneli, toplu mesaj ve 7/24 otomatik yanıt. Türkiye, BAE, Avrupa ve İran için WhatsApp CRM. Bizdavar tarafından geliştirildi.',
-        seoKeywords: 'FXGuard, WhatsApp CRM, SaaS, Bizdavar, fxguard.io'
+        seoTitle: 'WhatsApp CRM Script | Özel yazılım — Bizdavar',
+        seoDescription: 'Özel WhatsApp CRM scripti — $500, $800 ve $1,200 planları. Ekip paneli, toplu mesaj ve otomatik yanıt. Bizdavar tarafından geliştirildi.',
+        seoKeywords: 'WhatsApp CRM, özel script, Bizdavar, CRM script, WhatsApp otomasyon'
       },
       bizswap: {
         seoTitle: 'BizSwap | Token ön satış & swap Web3 — Bizdavar ürünü',
@@ -296,9 +296,9 @@
         seoKeywords: 'digital services, web design, SMM, VEGA, Prosense, Bizdavar'
       },
       products: {
-        seoTitle: 'Bizdavar products | FXGuard, BizTab, BizClean & production lines',
-        seoDescription: 'Bizdavar products — FXGuard WhatsApp CRM, BizTab, BizClean, BizRoll, vacuum sealers and PPE lines. Hardware and SaaS engineered by the Bizdavar team.',
-        seoKeywords: 'FXGuard, WhatsApp CRM, BizTab, BizClean, BizRoll, Bizdavar products'
+        seoTitle: 'Bizdavar products | WhatsApp CRM, BizSwap, BizTab & production lines',
+        seoDescription: 'Bizdavar products — custom WhatsApp CRM script, BizSwap DeFi, BizTab, BizClean, BizRoll, vacuum sealers and PPE lines. Hardware and SaaS engineered by the Bizdavar team.',
+        seoKeywords: 'WhatsApp CRM, custom CRM script, BizSwap, BizTab, BizClean, BizRoll, Bizdavar products'
       },
       portfolio: {
         seoTitle: 'Portfolio | Bizdavar Group projects — ZedPay, BZ Diamond & more',
@@ -342,7 +342,7 @@
       },
       gamak: {
         seoTitle: 'Gamak electric motor supply | IE2/IE3 — Bizdavar Group',
-        seoDescription: 'Genuine Gamak industrial electric motors from Turkey. GM/GMB, IE2/IE3, B3/B5 flange — Persian technical consulting, proforma and logistics — Bizdavar Group.',
+        seoDescription: 'Genuine Gamak industrial electric motors from Turkey. GM/GMB, IE2/IE3, B3/B5 flange — English, Persian and Turkish technical consulting, proforma and logistics — Bizdavar Group.',
         seoKeywords: 'Gamak, electric motor, IE2 IE3, industrial motor, Bizdavar'
       },
       digiSystem: {
@@ -352,7 +352,7 @@
       },
       teraoka: {
         seoTitle: 'Teraoka Seiko supply | Scales & POS — Bizdavar Group',
-        seoDescription: 'Teraoka Seiko scales, labeling and POS supply — Persian consulting, proforma and international logistics — Bizdavar Group.',
+        seoDescription: 'Teraoka Seiko scales, labeling and POS supply — multilingual consulting, proforma and international logistics — Bizdavar Group.',
         seoKeywords: 'Teraoka, scales, POS, labeling, Bizdavar'
       },
       bzDiamond: {
@@ -361,9 +361,9 @@
         seoKeywords: 'BZ Diamond, WooCommerce, web design, Bizdavar, case study'
       },
       biztejarat: {
-        seoTitle: 'Biztejarat case study | Industrial Instagram SMM — Bizdavar',
-        seoDescription: 'Biztejarat Instagram management case study: industrial product content, instrumentation and SMM by Bizdavar Group.',
-        seoKeywords: 'Biztejarat, industrial SMM, Instagram, Bizdavar'
+        seoTitle: 'Biztejarat past case study | Industrial SMM — Bizdavar',
+        seoDescription: 'Past Biztejarat Instagram SMM case study: industrial product content — project is no longer active. Delivered by Bizdavar Group.',
+        seoKeywords: 'Biztejarat, industrial SMM, B2B content, Bizdavar'
       },
       biztab: {
         seoTitle: 'BizTab | Non-contact wall thermometer — Bizdavar product',
@@ -371,14 +371,14 @@
         seoKeywords: 'BizTab, non-contact thermometer, IoT, Bizdavar, Tabriz'
       },
       bizsanitizerV5: {
-        seoTitle: 'Bizdavar hand sanitizer V5 | Engineered product',
-        seoDescription: 'Bizdavar hand sanitizer device V5 — ultrasonic sensor, automatic spray. Engineered by Bizdavar team, available on Digikala.',
-        seoKeywords: 'BizSan V5, hand sanitizer, Bizdavar, Digikala'
+        seoTitle: 'BizClean V5 | Automatic hand sanitizer — Bizdavar',
+        seoDescription: 'BizClean V5 automatic hand sanitizer — ultrasonic sensor, contact-free spray. Engineered by the Bizdavar team during COVID-19, available on Digikala.',
+        seoKeywords: 'BizClean V5, BizClean, hand sanitizer, Bizdavar, Digikala'
       },
       fxguard: {
-        seoTitle: 'FXGuard | WhatsApp CRM — Bizdavar SaaS product',
-        seoDescription: 'FXGuard — one number, team panel, bulk messaging and 24/7 auto-reply. WhatsApp CRM for Turkey, UAE, Europe and Iran. Built by Bizdavar.',
-        seoKeywords: 'FXGuard, WhatsApp CRM, SaaS, Bizdavar, fxguard.io'
+        seoTitle: 'WhatsApp CRM Script | Custom development — Bizdavar',
+        seoDescription: 'Custom WhatsApp CRM script — $500, $800 and $1,200 plans. Team panel, bulk messaging and auto-reply. Built by the Bizdavar team.',
+        seoKeywords: 'WhatsApp CRM, custom script, Bizdavar, CRM script, WhatsApp automation'
       },
       bizswap: {
         seoTitle: 'BizSwap | Token presale & swap Web3 — Bizdavar product',
@@ -434,7 +434,7 @@
     },
     tr: {
       title: '5. Dil ve bölge algılama',
-      body: 'Uygun dili göstermek için (Farsça, Türkçe, İngilizce) IP adresiniz yaklaşık ülke tespiti amacıyla <strong>ipapi.co</strong> veya <strong>ipwho.is</strong> servislerine anonim olarak gönderilebilir. Dil tercihi tarayıcı <code>localStorage</code> içinde (<code>bizdavar_locale</code>) saklanır. Dil menüsünden veya <code>?lang=fa</code>, <code>?lang=tr</code>, <code>?lang=en</code> parametreleriyle istediğiniz zaman değiştirebilirsiniz.'
+      body: 'Uygun dili göstermek için (Türkçe, Farsça, İngilizce) IP adresiniz yaklaşık ülke tespiti amacıyla <strong>ipapi.co</strong> veya <strong>ipwho.is</strong> servislerine anonim olarak gönderilebilir. Dil tercihi tarayıcı <code>localStorage</code> içinde (<code>bizdavar_locale</code>) saklanır. Dil menüsünden veya <code>?lang=fa</code>, <code>?lang=tr</code>, <code>?lang=en</code> parametreleriyle istediğiniz zaman değiştirebilirsiniz.'
     },
     en: {
       title: '5. Language and region detection',

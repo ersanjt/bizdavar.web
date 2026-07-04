@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -46,7 +46,7 @@
   <a href="#main-content" class="skip-link" data-i18n="common.skipLink">رفتن به محتوای اصلی</a>
   <div class="top-bar" id="topBar"></div>
   <header class="header" id="siteHeader"></header>
-  <nav class="breadcrumbs-wrap" id="breadcrumbs" aria-label="مسیر صفحه"></nav>
+  <nav class="breadcrumbs-wrap" id="breadcrumbs" data-i18n-aria="common.breadcrumbAria" aria-label="مسیر صفحه"></nav>
   <div class="overlay" id="overlay"></div>
 
   <main id="main-content" class="site-main">
@@ -227,7 +227,7 @@
             textKey: 'prosensePage.geoText',
             text: 'تامین اصل دتکتور Prosense به ایران — گواهی SIL/M1/EN، مشاوره فارسی و تحویل برای پروژه‌های نفت، گاز و صنعت.'
           });
-          renderRelatedLinks([{"title":"محصولات VEGA","url":"vega","desc":"سنسور سطح و فشار"},{"title":"Teltonika GPS","url":"teltonika","desc":"Fleet Telematics"},{"title":"خدمات صنعتی","url":"services#industrial","desc":"مشاوره B2B"},{"title":"تماس","url":"contact","desc":"استعلام قیمت"}]);
+          renderRelatedLinks([{"title":"محصولات VEGA","url":"vega","desc":"سنسور سطح و فشار","titleKey":"prosensePage.related.0.title","descKey":"prosensePage.related.0.desc"},{"title":"Teltonika GPS","url":"teltonika","desc":"Fleet Telematics","titleKey":"prosensePage.related.1.title","descKey":"prosensePage.related.1.desc"},{"title":"خدمات صنعتی","url":"services#industrial","desc":"مشاوره B2B","titleKey":"prosensePage.related.2.title","descKey":"prosensePage.related.2.desc"},{"title":"تماس","url":"contact","desc":"استعلام قیمت","titleKey":"prosensePage.related.3.title","descKey":"prosensePage.related.3.desc"}]);
             setupWhatsappLinks();
     });
   </script>

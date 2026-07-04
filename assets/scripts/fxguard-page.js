@@ -1,9 +1,16 @@
 /**
- * FXGuard product page — dynamic sections + stat counters
+ * WhatsApp CRM script page — dynamic sections + stat counters
  */
 (function () {
   function raw(key) {
     return window.BIZDAVAR_I18N ? window.BIZDAVAR_I18N.raw(key) : undefined;
+  }
+
+  function contactHref(query) {
+    const base = window.resolvePagePath
+      ? window.resolvePagePath('pages/contact.html')
+      : '/pages/contact';
+    return query ? `${base}?${query}` : base;
   }
 
   function esc(s) {
@@ -73,15 +80,19 @@
 
     const pricingEl = document.getElementById('fxguardPricing');
     if (pricingEl && Array.isArray(cs.pricing?.plans)) {
-      pricingEl.innerHTML = cs.pricing.plans.map(plan => `
+      pricingEl.innerHTML = cs.pricing.plans.map(plan => {
+        const href = plan.href || contactHref('product=whatsapp-crm');
+        const external = /^https?:/.test(href);
+        return `
         <article class="fxguard-plan${plan.featured ? ' fxguard-plan--featured' : ''}">
           ${plan.badge ? `<span class="fxguard-plan__badge">${esc(plan.badge)}</span>` : ''}
           <h3>${esc(plan.name)}</h3>
           <p class="fxguard-plan__price">${esc(plan.price)}<span class="fxguard-plan__period">${esc(plan.period || '')}</span></p>
           <p>${esc(plan.desc)}</p>
           <ul>${(plan.features || []).map(f => `<li>${esc(f)}</li>`).join('')}</ul>
-          <a href="${esc(plan.href || 'https://fxguard.io')}" class="btn ${plan.featured ? 'btn--green' : 'btn--outline'}" target="_blank" rel="noopener noreferrer">${esc(plan.cta)}</a>
-        </article>`).join('');
+          <a href="${esc(href)}" class="btn ${plan.featured ? 'btn--green' : 'btn--outline'}"${external ? ' target="_blank" rel="noopener noreferrer"' : ''}>${esc(plan.cta)}</a>
+        </article>`;
+      }).join('');
     }
 
     const faqEl = document.getElementById('fxguardFaq');
@@ -94,14 +105,15 @@
     }
 
     const statMap = [
-      { id: 'fxStatBusinesses', value: 200, suffix: '+' },
+      { id: 'fxStatBusinesses', value: 3, suffix: '' },
       { id: 'fxStatRegions', value: 4, suffix: '' },
-      { id: 'fxStatUptime', value: 99.9, suffix: '%' },
-      { id: 'fxStatSetup', value: 10, suffix: ' min' }
+      { id: 'fxStatUptime', value: 100, suffix: '%' },
+      { id: 'fxStatSetup', value: 10, suffix: '' }
     ];
+    const setupSuffix = cs.stats?.setupSuffix || '';
     statMap.forEach(({ id, value, suffix }) => {
       const el = document.getElementById(id);
-      if (el) animateStat(el, value, suffix);
+      if (el) animateStat(el, value, id === 'fxStatSetup' ? setupSuffix : suffix);
     });
 
     const regionsVal = document.getElementById('fxStatRegionsLabel');

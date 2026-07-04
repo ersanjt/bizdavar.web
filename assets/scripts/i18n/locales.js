@@ -84,8 +84,8 @@ window.BIZDAVAR_LOCALES = {
       productsCatalog: 'همه محصولات',
       productsHardware: 'سخت‌افزار',
       productsSoftware: 'نرم‌افزار و SaaS',
-      productFxguardDesc: 'WhatsApp CRM',
-      productFxguardBadge: 'Live',
+      productFxguardDesc: 'اسکریپت WhatsApp CRM',
+      productFxguardBadge: 'اختصاصی',
       productBizswapDesc: 'پیش‌فروش و سواپ توکن',
       productBiztabDesc: 'دماسنج IoT',
       productBizcleanDesc: 'ضدعفونی دست',
@@ -186,7 +186,7 @@ window.BIZDAVAR_LOCALES = {
         { category: 'بازاریابی دیجیتال', text: 'با اجرای استراتژی‌های نوین بازاریابی دیجیتال، نرخ تبدیل مشتریان به‌طور محسوسی افزایش یافته است.', source: 'پست حرفه‌ای بنیان‌گذار در LinkedIn', year: '2024' },
         { category: 'تجربه اجرایی', text: 'بیش از ۱۰۰ پروژه وب و پلتفرم سفارشی در ۱۱ کشور — از استارتاپ تا برندهای فین‌تک و صنعتی.', source: 'پروفایل LinkedIn — Ersan J. Tabrizi', year: '2025' },
         { category: 'فین‌تک', text: 'توسعه و راه‌اندازی پلتفرم‌های پرداخت، داشبورد مدیریتی و یکپارچه‌سازی امنیت Cloudflare برای اکوسیستم ZedPay.', source: 'سوابق حرفه‌ای تأییدشده', year: '2023–2025' },
-        { category: 'صنعت', text: 'مدیریت تامین تجهیزات صنعتی — از پمپ آتش‌نشانی معادن گل‌گهر تا تجهیزات ابزار دقیق بین‌المللی.', source: 'سوابق Sanatm و Europe Gayrimenkul', year: '2015–2024' }
+        { category: 'صنعت', text: 'مدیریت تامین تجهیزات صنعتی — از پمپ آتش‌نشانی معادن گل‌گهر تا تجهیزات ابزار دقیق بین‌المللی.', source: 'سوابق صنعت محرک (Sanatm) و Europe Gayrimenkul', year: '2015–2024' }
       ]
     },
     geo: {
@@ -302,6 +302,10 @@ window.BIZDAVAR_LOCALES = {
       location: 'موقعیت',
       hours: 'ساعات کاری',
       domains: 'دامنه‌ها',
+      hqLabel: 'دفتر اصلی',
+      armeniaOffice: 'ارمنستان — ایروان',
+      iranOffice: 'ایران — تبریز',
+      jooyeshgar: 'جوینده‌گر',
       quickContact: 'تماس سریع',
       optDm: 'بازاریابی دیجیتال',
       optWeb: 'طراحی و توسعه وب',
@@ -330,7 +334,13 @@ window.BIZDAVAR_LOCALES = {
       digiSystem: { crumb: 'Digi System' },
       teraoka: { crumb: 'Teraoka Seiko' },
       bzDiamond: { crumb: 'BZ Diamond' },
-      biztejarat: { crumb: 'بیزتجارت' }
+      biztejarat: { crumb: 'بیزتجارت' },
+      products: { crumb: 'محصولات بیزدوار' },
+      fxguard: { crumb: 'CRM واتساپ' },
+      bizswap: { crumb: 'BizSwap' },
+      biztab: { crumb: 'BizTab' },
+      bizsanitizerV5: { crumb: 'BizClean' },
+      article: { crumb: 'مقاله' }
     },
     fast: {
       planBasic: 'سلام، می‌خوام پلن پایه Fast Web Studio سفارش بدم',
@@ -421,8 +431,8 @@ window.BIZDAVAR_LOCALES = {
       productsCatalog: 'Tüm ürünler',
       productsHardware: 'Donanım',
       productsSoftware: 'Yazılım ve SaaS',
-      productFxguardDesc: 'WhatsApp CRM',
-      productFxguardBadge: 'Live',
+      productFxguardDesc: 'Özel WhatsApp CRM script',
+      productFxguardBadge: 'Özel',
       productBizswapDesc: 'Token ön satış & swap',
       productBiztabDesc: 'IoT termometre',
       productBizcleanDesc: 'El dezenfektanı',
@@ -523,7 +533,7 @@ window.BIZDAVAR_LOCALES = {
         { category: 'Dijital pazarlama', text: 'Modern dijital pazarlama stratejileriyle müşteri dönüşüm oranı belirgin şekilde arttı.', source: 'Kurucunun LinkedIn paylaşımı', year: '2024' },
         { category: 'Uygulama deneyimi', text: '11 ülkede 100+ özel web ve platform projesi — girişimlerden fintech ve sanayi markalarına kadar.', source: 'LinkedIn profili — Ersan J. Tabrizi', year: '2025' },
         { category: 'Fintech', text: 'ZedPay ekosistemi için ödeme platformları, yönetim paneli ve Cloudflare güvenlik entegrasyonu geliştirildi.', source: 'Doğrulanmış profesyonel kayıtlar', year: '2023–2025' },
-        { category: 'Sanayi', text: 'Endüstriyel ekipman tedarik yönetimi — Gol-Gohar madenlerinin yangın pompalarından uluslararası enstrümantasyon ekipmanlarına.', source: 'Sanatm ve Europe Gayrimenkul kayıtları', year: '2015–2024' }
+        { category: 'Sanayi', text: 'Endüstriyel ekipman tedarik yönetimi — Gol-Gohar madenlerinin yangın pompalarından uluslararası enstrümantasyon ekipmanlarına.', source: 'Sanati ve Europe Gayrimenkul kayıtları', year: '2015–2024' }
       ]
     },
     geo: {
@@ -639,6 +649,10 @@ window.BIZDAVAR_LOCALES = {
       location: 'Konum',
       hours: 'Çalışma saatleri',
       domains: 'Domainler',
+      hqLabel: 'Ana ofis',
+      armeniaOffice: 'Ermenistan — Erivan',
+      iranOffice: 'İran — Tebriz',
+      jooyeshgar: 'Jooyeshgar',
       quickContact: 'Hızlı iletişim',
       optDm: 'Dijital pazarlama',
       optWeb: 'Web tasarım ve geliştirme',
@@ -667,7 +681,13 @@ window.BIZDAVAR_LOCALES = {
       digiSystem: { crumb: 'Digi System' },
       teraoka: { crumb: 'Teraoka Seiko' },
       bzDiamond: { crumb: 'BZ Diamond' },
-      biztejarat: { crumb: 'Biztejarat' }
+      biztejarat: { crumb: 'Biztejarat' },
+      products: { crumb: 'Bizdavar ürünleri' },
+      fxguard: { crumb: 'WhatsApp CRM' },
+      bizswap: { crumb: 'BizSwap' },
+      biztab: { crumb: 'BizTab' },
+      bizsanitizerV5: { crumb: 'BizClean' },
+      article: { crumb: 'Makale' }
     },
     fast: {
       planBasic: 'Merhaba, Fast Web Studio temel plan sipariş etmek istiyorum',
@@ -758,8 +778,8 @@ window.BIZDAVAR_LOCALES = {
       productsCatalog: 'All products',
       productsHardware: 'Hardware',
       productsSoftware: 'Software & SaaS',
-      productFxguardDesc: 'WhatsApp CRM',
-      productFxguardBadge: 'Live',
+      productFxguardDesc: 'Custom WhatsApp CRM script',
+      productFxguardBadge: 'Custom',
       productBizswapDesc: 'Token presale & swap',
       productBiztabDesc: 'IoT thermometer',
       productBizcleanDesc: 'Hand sanitizer',
@@ -860,7 +880,7 @@ window.BIZDAVAR_LOCALES = {
         { category: 'Digital marketing', text: 'With modern digital marketing strategies, customer conversion rates increased significantly.', source: 'Founder\'s LinkedIn post', year: '2024' },
         { category: 'Delivery experience', text: '100+ custom web and platform projects across 11 countries — from startups to fintech and industrial brands.', source: 'LinkedIn profile — Ersan J. Tabrizi', year: '2025' },
         { category: 'Fintech', text: 'Built and launched payment platforms, management dashboards, and Cloudflare security integration for the ZedPay ecosystem.', source: 'Verified professional record', year: '2023–2025' },
-        { category: 'Industry', text: 'Managed industrial equipment supply — from fire pumps for Gol-Gohar mines to international instrumentation equipment.', source: 'Sanatm & Europe Gayrimenkul records', year: '2015–2024' }
+        { category: 'Industry', text: 'Managed industrial equipment supply — from fire pumps for Gol-Gohar mines to international instrumentation equipment.', source: 'Sanat Moharek (Sanatm) & Europe Gayrimenkul records', year: '2015–2024' }
       ]
     },
     geo: {
@@ -976,6 +996,10 @@ window.BIZDAVAR_LOCALES = {
       location: 'Location',
       hours: 'Business hours',
       domains: 'Domains',
+      hqLabel: 'Head office',
+      armeniaOffice: 'Armenia — Yerevan',
+      iranOffice: 'Iran — Tabriz',
+      jooyeshgar: 'Jooyeshgar',
       quickContact: 'Quick contact',
       optDm: 'Digital marketing',
       optWeb: 'Web design & development',
@@ -1004,7 +1028,13 @@ window.BIZDAVAR_LOCALES = {
       digiSystem: { crumb: 'Digi System' },
       teraoka: { crumb: 'Teraoka Seiko' },
       bzDiamond: { crumb: 'BZ Diamond' },
-      biztejarat: { crumb: 'Biztejarat' }
+      biztejarat: { crumb: 'Biztejarat' },
+      products: { crumb: 'Bizdavar products' },
+      fxguard: { crumb: 'WhatsApp CRM' },
+      bizswap: { crumb: 'BizSwap' },
+      biztab: { crumb: 'BizTab' },
+      bizsanitizerV5: { crumb: 'BizClean' },
+      article: { crumb: 'Article' }
     },
     fast: {
       planBasic: 'Hello, I would like to order the Fast Web Studio basic plan',

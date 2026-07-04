@@ -1,0 +1,7 @@
+# Deployed JS must not be served from LiteSpeed / browser immutable cache after rsync.
+<IfModule LiteSpeed>
+  CacheDisable public /
+</IfModule>
+<IfModule mod_headers.c>
+  Header set Cache-Control "public, max-age=3600, must-revalidate"
+</IfModule>

@@ -23,13 +23,13 @@
         catalog: {
           eyebrow: 'کاتالوگ محصولات',
           title: 'دستگاه‌های مهندسی‌شده بیزدوار',
-          desc: '۱۱ محصول و خط تولید — از BizSwap و FXGuard تا BizTab و خطوط PPE. فیلتر بر اساس دسته یا مستقیم استعلام بگیرید.'
+          desc: '۱۱ محصول و خط تولید — از BizSwap و CRM واتساپ تا BizTab و خطوط PPE. فیلتر بر اساس دسته یا مستقیم استعلام بگیرید.'
         },
         statusLive: 'صفحه محصول',
         statusCatalog: 'استعلام',
         categories: {
           software: { label: 'نرم‌افزار و SaaS', desc: 'CRM واتساپ و پلتفرم‌های B2B' },
-          'iot-health': { label: 'IoT و بهداشت', desc: 'دماسنج، ضدعفونی‌کننده و تجهیزات تماس‌LESS' },
+          'iot-health': { label: 'IoT و بهداشت', desc: 'دماسنج، ضدعفونی‌کننده و تجهیزات بدون تماس' },
           packaging: { label: 'بسته‌بندی و سیل', desc: 'دستگاه‌های کش‌زن و خطوط بسته‌بندی' },
           medical: { label: 'پزشکی و PPE', desc: 'خطوط تولید ماسک و پد حرارتی' }
         },
@@ -41,10 +41,10 @@
             tags: ['DeFi', 'Web3', 'Token Swap']
           },
           fxguard: {
-            name: 'FXGuard',
-            title: 'WhatsApp CRM',
-            desc: 'یک شماره، یک پنل، کل تیم — CRM واتساپ با پیام انبوه، پاسخ خودکار ۲۴/۷ و اینباکس تیمی برای ترکیه، امارات، اروپا و ایران.',
-            tags: ['WhatsApp CRM', 'SaaS', 'B2B']
+            name: 'CRM واتساپ',
+            title: 'اسکریپت WhatsApp CRM',
+            desc: 'اسکریپت اختصاصی CRM واتساپ — یک شماره، یک پنل، پیام انبوه و پاسخ خودکار. پلن $500، $800 و $1,200.',
+            tags: ['WhatsApp CRM', 'اسکریپت اختصاصی', 'B2B']
           },
           biztab: {
             name: 'BizTab',
@@ -55,14 +55,14 @@
           bizclean: {
             name: 'BizClean',
             title: 'خط بهداشت و ضدعفونی',
-            desc: 'دستگاه ضدعفونی دست اتوماتیک (BizSan V5) — تولید تیم بیزدوار، RINOTEX 1400 از طریق واحد پارکی «ایمن سهند پدیده»، پوشش ISNA و صدا و سیما.',
+            desc: 'دستگاه ضدعفونی دست اتوماتیک BizClean V5 — تولید تیم بیزدوار، RINOTEX 1400 از طریق واحد پارکی «ایمن سهند پدیده»، پوشش ISNA و صدا و سیما.',
             tags: ['بهداشت', 'اتوماتیک', 'کرونا']
           },
           biztouch: {
             name: 'BizTouch',
-            title: 'راهکارهای تماس‌LESS',
+            title: 'راهکارهای بدون تماس',
             desc: 'دستگاه‌ها و رابط‌های بدون تماس برای ورودی، بهداشت و فضاهای عمومی — طراحی اختصاصی تیم بیزدوار.',
-            tags: ['تماس‌LESS', 'IoT', 'ورودی']
+            tags: ['بدون تماس', 'IoT', 'ورودی']
           },
           bizroll: {
             name: 'BizRoll',
@@ -125,7 +125,7 @@
         },
         intro: {
           title: 'Ne üretiyoruz?',
-          body: 'Bizdavar Group, dijital hizmetler ve endüstriyel tedarikin yanı sıra <strong>özel donanım ürünleri</strong> de geliştirir. Her ürün Bizdavar ekibinin fikri mülkiyetiyle İran (Tebriz) merkezli mühendislik edilmiştir.',
+          body: 'Bizdavar Group, dijital hizmetler ve endüstriyel tedarikin yanı sıra <strong>özel donanım ve SaaS ürünleri</strong> de geliştirir. Her ürün Bizdavar ekibinin fikri mülkiyetiyle İstanbul ve Tebriz\'de mühendislik edilmiştir.',
           ctaContact: 'Teklif ve sipariş',
           ctaPortfolio: 'Dijital portfolyo'
         },
@@ -134,7 +134,7 @@
         catalog: {
           eyebrow: 'Ürün kataloğu',
           title: 'Bizdavar mühendislik ürünleri',
-          desc: '11 ürün ve üretim hattı — BizSwap ve FXGuard\'dan BizTab\'a ve PPE hatlarına. Kategoriye göre filtreleyin veya teklif isteyin.'
+          desc: '11 ürün ve üretim hattı — BizSwap ve WhatsApp CRM\'den BizTab\'a ve PPE hatlarına. Kategoriye göre filtreleyin veya teklif isteyin.'
         },
         statusLive: 'Ürün sayfası',
         statusCatalog: 'Teklif iste',
@@ -146,9 +146,9 @@
         },
         items: {
           bizswap: { name: 'BizSwap', title: 'Token ön satış & swap', desc: 'Web3 modülü — cüzdan bağlantısı, stablecoin-token swap, on-chain ön satış, slippage ve admin paneli (BEP-20 / RWA).', tags: ['DeFi', 'Web3', 'Token Swap'] },
-          fxguard: { name: 'FXGuard', title: 'WhatsApp CRM', desc: 'Tek numara, tek panel, tüm ekip — toplu mesaj, 7/24 otomatik yanıt ve ekip gelen kutusu. Türkiye, BAE, Avrupa ve İran.', tags: ['WhatsApp CRM', 'SaaS', 'B2B'] },
+          fxguard: { name: 'WhatsApp CRM', title: 'Özel WhatsApp CRM script', desc: 'Özel WhatsApp CRM scripti — tek numara, tek panel, toplu mesaj ve otomatik yanıt. $500, $800 ve $1,200 planları.', tags: ['WhatsApp CRM', 'Özel script', 'B2B'] },
           biztab: { name: 'BizTab', title: 'Temasız duvar termometresi', desc: 'Tebriz\'deki ilk temasız duvar termometresi — 0,3°C altı hata, üniversite onayı.', tags: ['IoT', 'Temasız', 'Tebriz'] },
-          bizclean: { name: 'BizClean', title: 'Hijyen ve dezenfeksiyon', desc: 'Otomatik el dezenfektan (BizSan V5) — Bizdavar üretimi; RINOTEX 1400 «Imen Sahand Padideh» park birimi; ISNA/IRIB basını.', tags: ['Hijyen', 'Otomatik', 'COVID'] },
+          bizclean: { name: 'BizClean', title: 'Hijyen ve dezenfeksiyon', desc: 'Otomatik el dezenfektan (BizClean V5) — Bizdavar üretimi; RINOTEX 1400 «Imen Sahand Padideh» park birimi; ISNA/IRIB basını.', tags: ['Hijyen', 'Otomatik', 'COVID'] },
           biztouch: { name: 'BizTouch', title: 'Temasız çözümler', desc: 'Giriş, hijyen ve kamusal alanlar için temasız cihazlar — Bizdavar tasarımı.', tags: ['Temasız', 'IoT', 'Giriş'] },
           bizroll: { name: 'BizRoll', title: 'Rulo ve ambalaj sistemleri', desc: 'Endüstriyel rulo ve ambalaj makineleri.', tags: ['Ambalaj', 'Rulo', 'Endüstriyel'] },
           'sealer-home': { name: 'Ev tipi vakum makinesi', title: 'Ev vakumu', desc: 'Ev ve küçük atölyeler için vakum/kapama makinesi.', tags: ['Vakum', 'Ev', 'Kapama'] },
@@ -190,7 +190,7 @@
         catalog: {
           eyebrow: 'Product catalog',
           title: 'Engineered Bizdavar devices',
-          desc: 'Eleven products and production lines — from BizSwap and FXGuard to BizTab and PPE lines. Filter by category or request a quote.'
+          desc: 'Eleven products and production lines — from BizSwap and WhatsApp CRM to BizTab and PPE lines. Filter by category or request a quote.'
         },
         statusLive: 'Product page',
         statusCatalog: 'Request quote',
@@ -202,9 +202,9 @@
         },
         items: {
           bizswap: { name: 'BizSwap', title: 'Token presale & swap', desc: 'Web3 module — wallet connect, stablecoin-to-token swap, on-chain presale, slippage UI and admin panel for BEP-20 / RWA projects.', tags: ['DeFi', 'Web3', 'Token Swap'] },
-          fxguard: { name: 'FXGuard', title: 'WhatsApp CRM', desc: 'One number, one panel, whole team — bulk messaging, 24/7 auto-reply and team inbox for Turkey, UAE, Europe and Iran.', tags: ['WhatsApp CRM', 'SaaS', 'B2B'] },
+          fxguard: { name: 'WhatsApp CRM', title: 'Custom WhatsApp CRM script', desc: 'Custom WhatsApp CRM script — one number, one panel, bulk messaging and auto-reply. $500, $800 and $1,200 plans.', tags: ['WhatsApp CRM', 'Custom script', 'B2B'] },
           biztab: { name: 'BizTab', title: 'Non-contact wall thermometer', desc: 'First non-contact wall thermometer in Tabriz — under 0.3°C error, university validated.', tags: ['IoT', 'Contactless', 'Tabriz'] },
-          bizclean: { name: 'BizClean', title: 'Hygiene & disinfection line', desc: 'Automatic hand sanitizer (BizSan V5) — Bizdavar production; RINOTEX 1400 via «Imen Sahand Padideh» park unit; ISNA & IRIB press.', tags: ['Hygiene', 'Automatic', 'COVID'] },
+          bizclean: { name: 'BizClean', title: 'Hygiene & disinfection line', desc: 'Automatic hand sanitizer (BizClean V5) — Bizdavar production; RINOTEX 1400 via «Imen Sahand Padideh» park unit; ISNA & IRIB press.', tags: ['Hygiene', 'Automatic', 'COVID'] },
           biztouch: { name: 'BizTouch', title: 'Contactless solutions', desc: 'Contactless devices for entrances, hygiene and public spaces — Bizdavar engineered.', tags: ['Contactless', 'IoT', 'Entrance'] },
           bizroll: { name: 'BizRoll', title: 'Roll & packaging systems', desc: 'Engineered roll and packaging machinery for industrial production.', tags: ['Packaging', 'Roll', 'Industrial'] },
           'sealer-home': { name: 'Home vacuum sealer', title: 'Domestic sealing', desc: 'Vacuum sealer designed for home use and small workshops.', tags: ['Vacuum', 'Home', 'Sealing'] },

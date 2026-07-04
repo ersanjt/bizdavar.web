@@ -50,7 +50,10 @@ function openMobileDrawer() {
 
   }
 
-  if (bottomMenu) bottomMenu.classList.add('active');
+  if (bottomMenu) {
+    bottomMenu.classList.add('active');
+    bottomMenu.setAttribute('aria-expanded', 'true');
+  }
 
   if (desktopToggle) {
 
@@ -102,7 +105,10 @@ function closeMobileDrawer() {
 
   }
 
-  if (bottomMenu) bottomMenu.classList.remove('active');
+  if (bottomMenu) {
+    bottomMenu.classList.remove('active');
+    bottomMenu.setAttribute('aria-expanded', 'false');
+  }
 
   if (desktopToggle) {
 
@@ -406,14 +412,11 @@ window.setupWhatsappLinks = function () {
 
   const tr = channels.find(c => c.id === 'tr') || channels[0];
   const ir = channels.find(c => c.id === 'ir') || channels[1];
-  const am = channels.find(c => c.id === 'am');
 
   const btnTr = document.getElementById('whatsappBtnTr');
   const btnIr = document.getElementById('whatsappBtnIr');
-  const btnAm = document.getElementById('whatsappBtnAm');
   if (btnTr && tr) btnTr.href = waUrl(tr.whatsapp);
   if (btnIr && ir) btnIr.href = waUrl(ir.whatsapp);
-  if (btnAm && am) btnAm.href = waUrl(am.whatsapp);
 
   const legacyBtn = document.getElementById('whatsappBtn');
   if (legacyBtn && primary) legacyBtn.href = primaryUrl;

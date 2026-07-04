@@ -27,6 +27,11 @@
     return `${base}?service=fast-studio&plan=${encodeURIComponent(planId)}&message=${encodeURIComponent(msg)}`;
   }
 
+  function customDevUrl() {
+    const base = path(R.contact || 'pages/contact.html');
+    return `${base}?service=custom-dev`;
+  }
+
   function whatsappHref(planId) {
     if (window.getWhatsappUrl) return window.getWhatsappUrl(planMessage(planId));
     return contactUrl(planId);
@@ -59,6 +64,7 @@
         <div class="fast-hero__actions">
           <a href="#fast-plans" class="btn btn--blue">${ui('viewPlans', 'مشاهده پلن‌ها')}</a>
           <a href="${whatsappHref('pro')}" class="btn btn--yellow fast-wa-cta" data-plan="pro">${ui('consultWa', 'مشاوره در واتساپ')}</a>
+          <a href="${customDevUrl()}" class="btn btn--outline">${ui('btnDevConsult', 'برنامه‌نویسی تخصصی و مشاوره — تماس بگیرید')}</a>
         </div>
       </div>
       <div class="fast-hero__visual" aria-hidden="true">
@@ -289,6 +295,22 @@
     script.textContent = JSON.stringify(ld);
   }
 
+  function renderDevCta() {
+    const el = document.getElementById('fastDevCta');
+    if (!el) return;
+    const title = t('fastPage.devCta.title', 'نیاز به برنامه‌نویسی تخصصی دارید؟');
+    const desc = t('fastPage.devCta.desc', 'فراتر از پلن‌های Fast — پروژه سفارشی، CRM، فروشگاه پیشرفته و مشاوره فنی.');
+    const btn = t('fastPage.devCta.btn', ui('btnDevConsult', 'برنامه‌نویسی تخصصی و مشاوره — تماس بگیرید'));
+    el.innerHTML = `
+      <div class="fast-dev-cta">
+        <div class="fast-dev-cta__text">
+          <h2>${title}</h2>
+          <p>${desc}</p>
+        </div>
+        <a href="${customDevUrl()}" class="btn btn--primary">${btn}</a>
+      </div>`;
+  }
+
   window.initFastPage = function () {
     F = (window.BIZDAVAR_I18N && window.BIZDAVAR_I18N.getFastCatalog) ? window.BIZDAVAR_I18N.getFastCatalog() : window.FAST_CATALOG;
     renderHero();
@@ -296,6 +318,7 @@
     renderHostingBar();
     renderNav();
     renderPlans();
+    renderDevCta();
     renderCompare();
     renderTimeline();
     renderWhy();

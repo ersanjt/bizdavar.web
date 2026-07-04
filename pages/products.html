@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -42,7 +42,7 @@
   <a href="#main-content" class="skip-link" data-i18n="common.skipLink">رفتن به محتوای اصلی</a>
   <div class="top-bar" id="topBar"></div>
   <header class="header" id="siteHeader"></header>
-  <nav class="breadcrumbs-wrap" id="breadcrumbs" aria-label="مسیر صفحه"></nav>
+  <nav class="breadcrumbs-wrap" id="breadcrumbs" data-i18n-aria="common.breadcrumbAria" aria-label="مسیر صفحه"></nav>
   <div class="overlay" id="overlay"></div>
 
   <main id="main-content" class="site-main">
@@ -103,13 +103,13 @@
           </article>
           <article class="owned-product-card" data-category="iot-health">
             <a href="/pages/bizsanitizer-v5" class="owned-product-card__media">
-              <img src="/assets/images/products/bizsanitizer/bizsanitizer-hero.svg" alt="BizClean" loading="lazy" width="480" height="300">
+              <img src="/assets/images/products/bizsanitizer/bizclean-v5.png" alt="BizClean V5" loading="lazy" width="480" height="640">
             </a>
             <div class="owned-product-card__body">
               <span class="owned-product-card__cat">IoT و بهداشت</span>
               <h3><a href="/pages/bizsanitizer-v5">BizClean</a></h3>
               <p class="owned-product-card__subtitle">خط بهداشت و ضدعفونی</p>
-              <p class="owned-product-card__desc">دستگاه ضدعفونی دست BizSan V5 — تولید تیم بیزدوار.</p>
+              <p class="owned-product-card__desc">دستگاه ضدعفونی دست BizClean V5 — تولید تیم بیزدوار.</p>
               <footer class="owned-product-card__footer">
                 <span class="owned-product-card__status">صفحه محصول</span>
                 <a href="/pages/bizsanitizer-v5" class="service-card__link">بیشتر</a>
@@ -168,6 +168,10 @@
       if (typeof chrome === 'function') chrome();
       setupWhatsappLinks();
       injectPageSeo('products', { canonical: 'https://bizdavar.com/pages/products' });
+      renderBreadcrumbs([
+        { page: 'home', url: '' },
+        { page: 'products', url: 'pages/products' }
+      ]);
       if (typeof initOwnedProductsPage === 'function') initOwnedProductsPage();
       renderGeoStrip('geoStrip');
     }

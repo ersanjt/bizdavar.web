@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -46,7 +46,7 @@
   <a href="#main-content" class="skip-link" data-i18n="common.skipLink">رفتن به محتوای اصلی</a>
   <div class="top-bar" id="topBar"></div>
   <header class="header" id="siteHeader"></header>
-  <nav class="breadcrumbs-wrap" id="breadcrumbs" aria-label="مسیر صفحه"></nav>
+  <nav class="breadcrumbs-wrap" id="breadcrumbs" data-i18n-aria="common.breadcrumbAria" aria-label="مسیر صفحه"></nav>
   <div class="overlay" id="overlay"></div>
 
   <main id="main-content" class="site-main">
@@ -236,7 +236,7 @@
             textKey: 'vegaPage.geoText',
             text: 'تامین اصل سنسور VEGA به ایران — مشاوره فنی فارسی از استانبول، پیش‌فاکتور شفاف و لجستیک تا پروژه‌های صنعتی ایران.'
           });
-          renderRelatedLinks([{"title":"محصولات Prosense","url":"prosense","desc":"دتکتور گاز و شعله"},{"title":"خدمات صنعتی","url":"services#industrial","desc":"مشاوره و تامین"},{"title":"تماس و استعلام","url":"contact","desc":"مشاوره رایگان"}]);
+          renderRelatedLinks([{"title":"محصولات Prosense","url":"prosense","desc":"دتکتور گاز و شعله","titleKey":"vegaPage.related.0.title","descKey":"vegaPage.related.0.desc"},{"title":"خدمات صنعتی","url":"services#industrial","desc":"مشاوره و تامین","titleKey":"vegaPage.related.1.title","descKey":"vegaPage.related.1.desc"},{"title":"تماس و استعلام","url":"contact","desc":"مشاوره رایگان","titleKey":"vegaPage.related.2.title","descKey":"vegaPage.related.2.desc"}]);
           injectJsonLdProductList();
             setupWhatsappLinks();
     });

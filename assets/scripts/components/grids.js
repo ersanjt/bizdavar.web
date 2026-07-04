@@ -266,8 +266,9 @@
   };
 
   window.renderCompanyIntelAbout = function () {
-    const I = window.BIZDAVAR_INTEL;
+    const I = window.getIntelLocalized ? window.getIntelLocalized() : window.BIZDAVAR_INTEL;
     if (!I) return;
+    const L = I._labels || {};
     const f = I.leadership.founder;
 
     const identityEl = document.getElementById('intelIdentity');
@@ -279,18 +280,18 @@
       identityEl.innerHTML = `
         <div class="intel-identity-grid">
           <dl class="intel-dl">
-            <div><dt>برند بین‌المللی</dt><dd>${I.identity.legalNameFa} (${I.identity.legalName})</dd></div>
-            <div><dt>ثبت ارمنستان</dt><dd><strong>${I.identity.armeniaLegalName}</strong> (${I.identity.armeniaLegalType})<br><span class="intel-legal-brand">${I.identity.armeniaBrandFa}</span></dd></div>
-            <div><dt>شخصیت حقوقی ایران</dt><dd><strong>${I.identity.iranLegalNameFa}</strong><br><span class="intel-legal-brand">برند: ${I.identity.iranBrandFa}</span></dd></div>
-            <div><dt>تأسیس</dt><dd>${I.identity.foundedDisplay}</dd></div>
-            <div><dt>دامنه‌ها</dt><dd dir="ltr">${I.identity.domains.join(' · ')}</dd></div>
-            <div><dt>زبان‌های خدمت</dt><dd>${I.identity.languages.join('، ')}</dd></div>
-            ${dirs ? `<div><dt>پروفایل B2B</dt><dd class="intel-legal-links">${dirs}</dd></div>` : ''}
+            <div><dt>${L.intlBrand || 'برند بین‌المللی'}</dt><dd>${I.identity.legalNameFa} (${I.identity.legalName})</dd></div>
+            <div><dt>${L.armeniaReg || 'ثبت ارمنستان'}</dt><dd><strong>${I.identity.armeniaLegalName}</strong> (${I.identity.armeniaLegalType})<br><span class="intel-legal-brand">${I.identity.armeniaBrandFa}</span></dd></div>
+            <div><dt>${L.iranLegal || 'شخصیت حقوقی ایران'}</dt><dd><strong>${I.identity.iranLegalNameFa}</strong><br><span class="intel-legal-brand">${L.brandPrefix || 'برند'}: ${I.identity.iranBrandFa}</span></dd></div>
+            <div><dt>${L.founded || 'تأسیس'}</dt><dd>${I.identity.foundedDisplay}</dd></div>
+            <div><dt>${L.domains || 'دامنه‌ها'}</dt><dd dir="ltr">${I.identity.domains.join(' · ')}</dd></div>
+            <div><dt>${L.serviceLangs || 'زبان‌های خدمت'}</dt><dd>${(I.identity.languages || []).join(' · ')}</dd></div>
+            ${dirs ? `<div><dt>${L.b2bProfile || 'پروفایل B2B'}</dt><dd class="intel-legal-links">${dirs}</dd></div>` : ''}
           </dl>
           <ul class="intel-hq-list">
             ${I.identity.headquarters.map(h => `
               <li class="${h.badge === 'HQ' ? 'intel-hq-list__item--hq' : h.badge === 'IR' ? 'intel-hq-list__item--ir' : h.badge === 'AM' ? 'intel-hq-list__item--am' : ''}">
-                <strong>${h.city}، ${h.country}${h.badge ? ` <span class="intel-hq-list__badge">${h.badge}</span>` : ''}</strong>
+                <strong>${h.city}, ${h.country}${h.badge ? ` <span class="intel-hq-list__badge">${h.badge}</span>` : ''}</strong>
                 <span>${h.role}</span>
               </li>
             `).join('')}
@@ -303,15 +304,15 @@
       leaderEl.innerHTML = `
         <article class="intel-leader-card">
           <div class="intel-leader-card__head">
-            <h3>${f.nameFa}</h3>
-            <p>${f.titleFa} · ${f.experienceYears} سال · ${f.projectsCount} پروژه</p>
-            <a href="${f.linkedin}" class="service-card__link" target="_blank" rel="noopener noreferrer me">پروفایل LinkedIn${linkArrow()}</a>
+            <h3>${f.nameFa || f.name}</h3>
+            <p>${f.titleFa || f.title} · ${f.experienceYears} ${L.years || 'سال'} · ${f.projectsCount} ${L.projects || 'پروژه'}</p>
+            <a href="${f.linkedin}" class="service-card__link" target="_blank" rel="noopener noreferrer me">${L.linkedinProfile || 'پروفایل LinkedIn'}${linkArrow()}</a>
           </div>
-          <p>${f.bioFa}</p>
+          <p>${f.bioFa || f.bio || ''}</p>
           <div class="intel-tags">
             ${f.expertise.map(e => `<span class="intel-tag">${e}</span>`).join('')}
           </div>
-          <h4>تحصیلات</h4>
+          <h4>${L.education || 'تحصیلات'}</h4>
           <ul class="intel-list">${f.education.map(e => `<li>${e}</li>`).join('')}</ul>
         </article>`;
     }
@@ -347,15 +348,15 @@
       const waMsg = encodeURIComponent(C.contact.whatsappMessage || '');
       const renderOfficeHub = (hubData, opts) => {
         if (!hubData) return '';
-        const badge = opts.badge || 'دفتر';
-        const waLabel = opts.waLabel || 'واتساپ';
+        const badge = opts.badge || L.office || 'دفتر';
+        const waLabel = opts.waLabel || L.whatsapp || 'واتساپ';
         return `
         <article class="presence-istanbul-hub${opts.modifier ? ' ' + opts.modifier : ''}">
           <div class="presence-istanbul-hub__head">
             <div>
               <span class="presence-istanbul-hub__eyebrow">${hubData.subtitle || ''}</span>
               <h3 class="presence-istanbul-hub__title">${hubData.title}</h3>
-              <p class="presence-istanbul-hub__location">${hubData.city}${hubData.province ? '، ' + hubData.province : ''}، ${hubData.country}${hubData.timezone ? ' · ' + hubData.timezone : ''}</p>
+              <p class="presence-istanbul-hub__location">${hubData.city}${hubData.province ? ', ' + hubData.province : ''}, ${hubData.country}${hubData.timezone ? ' · ' + hubData.timezone : ''}</p>
               ${hubData.brand ? `<p class="presence-istanbul-hub__brand">${hubData.brand}</p>` : ''}
             </div>
             <span class="presence-country__badge presence-istanbul-hub__badge">${badge}</span>
@@ -365,30 +366,30 @@
             ${(hubData.services || []).map(s => `<li>${s}</li>`).join('')}
           </ul>
           <div class="presence-istanbul-hub__meta">
-            ${hubData.address ? `<div class="presence-istanbul-hub__meta-item"><span class="presence-istanbul-hub__label">آدرس</span><span>${hubData.address}</span></div>` : ''}
-            ${hubData.workingHours ? `<div class="presence-istanbul-hub__meta-item"><span class="presence-istanbul-hub__label">ساعات کاری</span><span>${hubData.workingHours}</span></div>` : ''}
-            ${hubData.languages ? `<div class="presence-istanbul-hub__meta-item"><span class="presence-istanbul-hub__label">زبان‌ها</span><span>${hubData.languages.join(' · ')}</span></div>` : ''}
-            ${hubData.phone ? `<div class="presence-istanbul-hub__meta-item"><span class="presence-istanbul-hub__label">تماس</span><a href="tel:${hubData.phoneTel || hubData.phone}" dir="ltr">${hubData.phone}</a></div>` : ''}
-            ${hubData.email ? `<div class="presence-istanbul-hub__meta-item"><span class="presence-istanbul-hub__label">ایمیل</span><a href="mailto:${hubData.email}" dir="ltr">${hubData.email}</a></div>` : ''}
+            ${hubData.address ? `<div class="presence-istanbul-hub__meta-item"><span class="presence-istanbul-hub__label">${L.address || 'آدرس'}</span><span>${hubData.address}</span></div>` : ''}
+            ${hubData.workingHours ? `<div class="presence-istanbul-hub__meta-item"><span class="presence-istanbul-hub__label">${L.workingHours || 'ساعات کاری'}</span><span>${hubData.workingHours}</span></div>` : ''}
+            ${hubData.languages ? `<div class="presence-istanbul-hub__meta-item"><span class="presence-istanbul-hub__label">${L.languages || 'زبان‌ها'}</span><span>${hubData.languages.join(' · ')}</span></div>` : ''}
+            ${hubData.phone ? `<div class="presence-istanbul-hub__meta-item"><span class="presence-istanbul-hub__label">${L.contact || 'تماس'}</span><a href="tel:${hubData.phoneTel || hubData.phone}" dir="ltr">${hubData.phone}</a></div>` : ''}
+            ${hubData.email ? `<div class="presence-istanbul-hub__meta-item"><span class="presence-istanbul-hub__label">${L.email || 'ایمیل'}</span><a href="mailto:${hubData.email}" dir="ltr">${hubData.email}</a></div>` : ''}
           </div>
           <div class="presence-istanbul-hub__actions">
             ${hubData.whatsapp ? `<a href="https://wa.me/${hubData.whatsapp}?text=${waMsg}" class="btn btn--yellow" target="_blank" rel="noopener noreferrer">${waLabel}</a>` : ''}
-            ${hubData.profileUrl ? `<a href="${hubData.profileUrl}" class="btn btn--outline" target="_blank" rel="noopener noreferrer">${hubData.profileLabel || 'پروفایل B2B'}</a>` : ''}
-            <a href="${path(R.contact)}" class="btn btn--primary">فرم تماس</a>
+            ${hubData.profileUrl ? `<a href="${hubData.profileUrl}" class="btn btn--outline" target="_blank" rel="noopener noreferrer">${hubData.profileLabel || (L.b2bProfile || 'پروفایل B2B')}</a>` : ''}
+            <a href="${path(R.contact)}" class="btn btn--primary">${L.contactForm || 'فرم تماس'}</a>
           </div>
           ${hubData.note ? `<p class="presence-istanbul-hub__note">${hubData.note}</p>` : ''}
           ${hubData.exhibitionsNote ? `<p class="presence-istanbul-hub__note presence-istanbul-hub__note--event">${hubData.exhibitionsNote}</p>` : ''}
         </article>`;
       };
-      const hubHtml = renderOfficeHub(hub, { badge: 'دفتر اصلی', waLabel: 'واتساپ استانبول' });
-      const yerevanHtml = renderOfficeHub(yerevan, { badge: 'ارمنستان', waLabel: 'واتساپ ارمنستان', modifier: 'presence-istanbul-hub--armenia' });
-      const tabrizHtml = renderOfficeHub(tabriz, { badge: 'ایران', waLabel: 'واتساپ ایران', modifier: 'presence-istanbul-hub--iran' });
+      const hubHtml = renderOfficeHub(hub, { badge: L.mainOffice || 'دفتر اصلی', waLabel: L.whatsappIstanbul || 'واتساپ استانبول' });
+      const yerevanHtml = renderOfficeHub(yerevan, { badge: L.armenia || 'ارمنستان', modifier: 'presence-istanbul-hub--armenia' });
+      const tabrizHtml = renderOfficeHub(tabriz, { badge: L.iran || 'ایران', waLabel: L.whatsappIran || 'واتساپ ایران', modifier: 'presence-istanbul-hub--iran' });
 
       presenceEl.innerHTML = `
         <div class="presence-showcase">
           <div class="presence-showcase__hero">
             <div class="presence-showcase__map">
-              <img src="${path(P.mapImage || 'assets/images/content/presence-map.svg')}" alt="نقشه حضور جهانی بیزدوار — دفتر اصلی استانبول" width="480" height="300" loading="lazy">
+              <img src="${path(P.mapImage || 'assets/images/content/presence-map.svg')}" alt="${L.mapAlt || 'نقشه حضور جهانی بیزدوار'}" width="480" height="300" loading="lazy">
             </div>
             <div class="presence-showcase__intro">
               <p class="presence-showcase__desc">${P.summaryFa}</p>
@@ -414,7 +415,7 @@
                     <article class="presence-country${c.hub ? ' presence-country--hub' : ''}">
                       <div class="presence-country__head">
                         <strong>${c.name}</strong>
-                        ${c.hub ? '<span class="presence-country__badge">هاب</span>' : ''}
+                        ${c.hub ? `<span class="presence-country__badge">${L.hubBadge || 'هاب'}</span>` : ''}
                       </div>
                       ${c.city ? `<span class="presence-country__city">${c.city}</span>` : ''}
                       <p class="presence-country__focus">${c.focus}</p>
@@ -715,17 +716,35 @@
     return `${path('pages/contact.html')}?product=${encodeURIComponent(p.id)}`;
   }
 
+  function ownedProductImageSrc(p) {
+    const rel = (p.image || p.logo || 'assets/images/products/product-default.svg').replace(/^\//, '');
+    const abs = window.resolveAssetPath
+      ? window.resolveAssetPath(rel)
+      : path(rel);
+    const bust = (window.BIZDAVAR_OWNED_PRODUCTS && window.BIZDAVAR_OWNED_PRODUCTS.imgVersion) || '3';
+    return `${abs}${abs.includes('?') ? '&' : '?'}v=${bust}`;
+  }
+
+  function ownedProductImageFallback(p) {
+    if (p.logo && p.logo !== p.image) {
+      return ownedProductImageSrc({ ...p, image: p.logo });
+    }
+    return ownedProductImageSrc({ image: 'assets/images/products/product-default.svg' });
+  }
+
   function ownedProductCardHtml(p) {
     const href = ownedProductHref(p);
-    const external = false;
     const statusKey = p.status === 'live' ? 'productsPage.statusLive' : 'productsPage.statusCatalog';
     const statusLabel = t(statusKey, p.status === 'live' ? 'Product page' : 'Quote');
     const tags = (p.tags || []).map(tag => `<span class="owned-product-card__tag">${tag}</span>`).join('');
-    const img = p.image ? path(p.image) : path('assets/images/products/product-default.svg');
+    const img = ownedProductImageSrc(p);
+    const fallback = ownedProductImageFallback(p);
+    const isPhoto = /\.(jpe?g|webp|png)$/i.test(p.image || '');
     return `
       <article class="owned-product-card" data-category="${p.category}" id="product-${p.id}">
-        <a href="${href}" class="owned-product-card__media">
-          <img src="${img}" alt="${p.name || p.id}" loading="lazy" width="480" height="300">
+        <a href="${href}" class="owned-product-card__media${isPhoto ? '' : ' owned-product-card__media--art'}">
+          <img src="${img}" alt="${p.name || p.id}" loading="lazy" decoding="async" width="480" height="300"
+            onerror="if(this.dataset.fbk!=='1'){this.dataset.fbk='1';this.src='${fallback}';}else{this.closest('.owned-product-card__media').classList.add('owned-product-card__media--empty');}">
         </a>
         <div class="owned-product-card__body">
           <span class="owned-product-card__cat">${p.categoryLabel || ''}</span>

@@ -434,19 +434,21 @@
         </div>
 
         <div class="mobile-header">
-          <a href="${pagePath(R.home)}" class="mobile-header__logo">
-            <img src="${path(headerLogo)}" alt="${logoAlt}" width="132" height="55" decoding="async" fetchpriority="high">
-          </a>
-          <div class="mobile-header__actions">
-            <a href="${wa}" class="mobile-header__icon-btn mobile-header__icon-btn--wa"
-               aria-label="${t('common.whatsapp', 'واتساپ')}"
-               ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''}>
-              <span class="mobile-header__wa-icon" aria-hidden="true">${ic('whatsapp-solid', { size: 22, variant: 'white' })}</span>
+          <div class="mobile-header__bar">
+            <a href="${pagePath(R.home)}" class="mobile-header__logo" aria-label="${C.siteName} — ${t('common.homeAria', 'صفحه اصلی')}">
+              <img src="${path(headerLogo)}" alt="${logoAlt}" width="132" height="55" decoding="async" fetchpriority="high">
             </a>
-            <a href="${pagePath(R.contact)}" class="mobile-header__cta">${t('nav.contact', 'تماس')}</a>
-            <button type="button" class="mobile-header__menu" id="mobileMenuBtn" aria-label="${t('common.menu', 'منو')}" aria-expanded="false">
-              <span></span><span></span><span></span>
-            </button>
+            <div class="mobile-header__actions">
+              ${langSwitcherHtml('lang-dropdown--header-mobile')}
+              <a href="${wa}" class="mobile-header__icon-btn mobile-header__icon-btn--wa"
+                 aria-label="${t('common.whatsapp', 'واتساپ')}"
+                 ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''}>
+                <span class="mobile-header__wa-icon" aria-hidden="true">${ic('whatsapp', { size: 20, variant: 'white' })}</span>
+              </a>
+              <button type="button" class="mobile-header__menu" id="mobileMenuBtn" aria-label="${t('common.menu', 'منو')}" aria-expanded="false">
+                <span class="mobile-header__menu-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -560,13 +562,14 @@
         <div class="footer__mobile">
           <div class="mobile-footer-hero">
             <a href="${pagePath(R.home)}" class="footer__logo-link"><img src="${path(footerLogo)}" alt="${logoAlt}" class="footer__logo-img footer__logo-img--sm"></a>
-            <p>${t('footer.tagline')}</p>
-            <div class="footer__trust">${trustPills}</div>
-            <div class="footer__social">
+            <p class="mobile-footer-hero__tagline">${t('footer.tagline')}</p>
+            <div class="footer__trust">${trustPills}<span class="footer__pill">${t('footer.hq', 'HQ: Istanbul')}</span></div>
+            <div class="footer__social footer__social--mobile">
               <a href="${C.contact.instagram}" class="footer__social-btn" target="_blank" rel="noopener noreferrer me" aria-label="Instagram">IG</a>
               <a href="${C.contact.linkedin}" class="footer__social-btn" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn">in</a>
               <a href="${wa}" class="footer__social-btn footer__social-btn--wa" ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''} aria-label="${t('common.whatsapp')}">${ic('whatsapp', { size: 18 })}</a>
             </div>
+            ${langSwitcherHtml('lang-dropdown--footer')}
           </div>
           <div class="mobile-footer-cta">
             <a href="${pagePath(R.contact)}" class="mobile-footer-cta__btn mobile-footer-cta__btn--primary">${ic('send', { size: 18 })} ${t('common.contactForm')}</a>
@@ -578,7 +581,7 @@
             ${mobileFooterAccHtml(t('footer.brands', 'برندها'), footerLinks.brands)}
             ${mobileFooterAccHtml(t('footer.quickLinks'), footerLinks.quick)}
             <details class="mobile-footer-acc">
-              <summary>${t('footer.connectShort')}</summary>
+              <summary>${t('footer.connectShort', t('footer.connect'))}</summary>
               <ul>
                 <li><a href="mailto:${C.contact.email}">${C.contact.email}</a></li>
                 ${C.contact.emailAlt ? `<li><a href="mailto:${C.contact.emailAlt}">${C.contact.emailAlt}</a></li>` : ''}
@@ -593,10 +596,11 @@
             </details>
           </div>
           <div class="mobile-footer-bar">
-            <p>© ${year} ${C.siteNameEn}</p>
-            <nav class="footer__legal">
+            <p class="mobile-footer-bar__copy">© ${year} ${C.siteNameEn} — ${t('common.rights', 'All rights reserved')}</p>
+            <nav class="footer__legal" aria-label="${t('footer.legal', 'Legal')}">
               <a href="${pagePath(R.privacy)}">${t('footer.privacy')}</a>
               <a href="${pagePath(R.home)}#faq">${t('footer.faq')}</a>
+              <a href="${pagePath(R.contact)}">${t('footer.contactUs')}</a>
             </nav>
           </div>
         </div>`;
@@ -624,7 +628,7 @@
         <span class="mobile-bottom-nav__label">${item.label}</span>
       </a>
     `).join('') + `
-      <button type="button" class="mobile-bottom-nav__item" id="mobileBottomMenu" aria-label="${t('common.openDrawer', 'باز کردن منو')}">
+      <button type="button" class="mobile-bottom-nav__item mobile-bottom-nav__item--menu" id="mobileBottomMenu" aria-label="${t('common.openDrawer', 'باز کردن منو')}" aria-expanded="false">
         <span class="mobile-bottom-nav__icon">${ic('menu', { size: 22 })}</span>
         <span class="mobile-bottom-nav__label">${t('common.menu')}</span>
       </button>`;

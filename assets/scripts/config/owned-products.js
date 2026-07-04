@@ -3,6 +3,7 @@
  * Default copy (fa) lives here; owned-products-i18n.js overrides per locale.
  */
 window.BIZDAVAR_OWNED_PRODUCTS = {
+  imgVersion: '4',
   categories: [
     { id: 'software', label: 'نرم‌افزار و SaaS', icon: 'globe' },
     { id: 'iot-health', label: 'IoT و بهداشت', icon: 'shield' },
@@ -28,14 +29,13 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       id: 'fxguard',
       category: 'software',
       categoryLabel: 'نرم‌افزار و SaaS',
-      name: 'FXGuard',
-      title: 'WhatsApp CRM',
-      desc: 'یک شماره، یک پنل، کل تیم — CRM واتساپ با پیام انبوه، پاسخ خودکار ۲۴/۷ و اینباکس تیمی. ترکیه، امارات، اروپا و ایران.',
-      tags: ['WhatsApp CRM', 'SaaS', 'B2B'],
+      name: 'CRM واتساپ',
+      title: 'اسکریپت WhatsApp CRM',
+      desc: 'اسکریپت اختصاصی CRM واتساپ — یک شماره، یک پنل، پیام انبوه و پاسخ خودکار. پلن $500، $800 و $1,200.',
+      tags: ['WhatsApp CRM', 'اسکریپت اختصاصی', 'B2B'],
       image: 'assets/images/products/fxguard/fxguard-hero.svg',
       logo: 'assets/images/products/fxguard/fxguard-logo.svg',
       page: 'pages/fxguard.html',
-      externalUrl: 'https://fxguard.io',
       featured: true,
       status: 'live'
     },
@@ -48,7 +48,7 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       desc: 'اولین دماسنج دیواری غیرتماسی تبریز — دقت کمتر از ۰.۳°C، تأیید دانشگاه تبریز.',
       tags: ['IoT', 'غیرتماسی', 'تبریز'],
       image: 'assets/images/products/biztab/biztab-hero.jpg',
-      logo: 'assets/images/products/biztab/biztab-logo.svg',
+      logo: 'assets/images/products/biztab/biztab-hero.jpg',
       page: 'pages/biztab.html',
       featured: true,
       status: 'live'
@@ -59,10 +59,10 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       categoryLabel: 'IoT و بهداشت',
       name: 'BizClean',
       title: 'خط بهداشت و ضدعفونی',
-      desc: 'دستگاه ضدعفونی دست اتوماتیک (BizSan V5) — تولید تیم بیزدوار؛ RINOTEX 1400، ISNA و صدا و سیما.',
+      desc: 'دستگاه ضدعفونی دست اتوماتیک BizClean V5 — تولید تیم بیزدوار؛ RINOTEX 1400، ISNA و صدا و سیما.',
       tags: ['بهداشت', 'اتوماتیک', 'کرونا'],
-      image: 'assets/images/products/bizsanitizer/bizsanitizer-hero.svg',
-      logo: 'assets/images/products/bizsanitizer/bizsanitizer-logo.svg',
+      image: 'assets/images/products/bizsanitizer/bizclean-v5.png',
+      logo: 'assets/images/products/bizsanitizer/bizclean-v5.png',
       page: 'pages/bizsanitizer-v5.html',
       featured: true,
       status: 'live'

@@ -198,7 +198,7 @@
 
   function logoAbsUrl() {
     const logo = A.logo || A.logoOnDark;
-    if (!logo) return `${C.baseUrl}/assets/images/brand/bizdavar-logo.svg`;
+    if (!logo) return `${C.baseUrl}/assets/images/brand/bizdavar-logo.png`;
     return logo.startsWith('http') ? logo : `${C.baseUrl}/${logo.replace(/^\//, '')}`;
   }
 
@@ -320,14 +320,12 @@
       });
     }
     if (am.legalName) {
-      const amChannel = (C.contact.channels || []).find(ch => ch.id === 'am');
       graph.push({
         '@type': 'LocalBusiness',
         '@id': `${C.baseUrl}/#localbusiness-armenia`,
         name: am.legalName,
         alternateName: [am.brandFa, am.brandEn, am.legalNameShort].filter(Boolean),
         url: `${C.baseUrl}/`,
-        telephone: amChannel ? amChannel.tel : am.phoneTel,
         email: C.contact.email,
         address: {
           '@type': 'PostalAddress',
