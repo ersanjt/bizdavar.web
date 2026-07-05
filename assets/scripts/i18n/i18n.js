@@ -71,6 +71,21 @@
     I18n.ready = true;
   }
 
+  function localizeInternalLinks(root) {
+    const scope = root || document;
+    const siteLink = window.BD_CTX?.siteLink;
+    const pagePath = window.resolvePagePath;
+    if (!siteLink && !pagePath) return;
+    scope.querySelectorAll('a[href]').forEach(a => {
+      const href = a.getAttribute('href');
+      if (!href || /^(https?:|mailto:|tel:|#|javascript:)/i.test(href)) return;
+      const localized = siteLink ? siteLink(href) : pagePath(href);
+      if (localized) a.setAttribute('href', localized);
+    });
+  }
+
+  window.localizeInternalLinks = localizeInternalLinks;
+
   const I18n = {
     locale: 'en',
     dict: window.BIZDAVAR_LOCALES?.en || null,
@@ -323,7 +338,10 @@
       document.querySelectorAll('[data-i18n-html]').forEach(el => {
         const key = el.getAttribute('data-i18n-html');
         const val = this.resolveString(key);
-        if (val) el.innerHTML = val;
+        if (val) {
+          el.innerHTML = val;
+          localizeInternalLinks(el);
+        }
       });
       document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
         const key = el.getAttribute('data-i18n-placeholder');
@@ -443,8 +461,12 @@
 
       const waTr = document.getElementById('whatsappBtnTr');
       const waIr = document.getElementById('whatsappBtnIr');
-      if (waTr && p.waTr) waTr.textContent = p.waTr;
-      if (waIr && p.waIr) waIr.textContent = p.waIr;
+      const waBtnHtml = (label) => {
+        const icon = window.BD_ICON ? window.BD_ICON('whatsapp', { size: 18, variant: 'white' }) : '';
+        return icon ? `${icon}<span>${label}</span>` : label;
+      };
+      if (waTr && p.waTr) waTr.innerHTML = waBtnHtml(p.waTr);
+      if (waIr && p.waIr) waIr.innerHTML = waBtnHtml(p.waIr);
 
       const mapH = document.querySelector('.contact-map__text h2');
       const mapP = document.querySelector('.contact-map__text p');

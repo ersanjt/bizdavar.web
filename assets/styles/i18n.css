@@ -318,8 +318,22 @@ html[dir='ltr'] .feature-item {
 }
 
 .nav--desktop .lang-dropdown {
-  margin-inline-start: 6px;
+  margin-inline-start: 0;
   align-self: center;
+  flex-shrink: 0;
+}
+
+.header__actions .lang-dropdown__toggle {
+  min-height: 38px;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+.header__actions .nav__cta {
+  padding: 10px 18px;
+  font-size: 13px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 /* Compact language switcher in mobile header */

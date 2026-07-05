@@ -549,7 +549,21 @@
         hero: {
           tag: 'محصول Web3 · DeFi',
           title: 'BizSwap — پیش‌فروش و سواپ توکن',
-          desc: 'ماژول front-end و اسکریپت on-chain برای پیش‌فروش، سواپ مستقیم در وبسایت و اتصال کیف پول — برای پروژه‌های RWA و توکن دارایی‌محور.'
+          desc: 'ماژول front-end و اسکریپت on-chain برای پیش‌فروش، سواپ مستقیم در وبسایت و اتصال کیف پول — برای پروژه‌های RWA و توکن دارایی‌محور.',
+          chains: 'BNB Chain · BEP-20 · RWA · Presale',
+          trust: 'توسعه Web3 · کد اختصاصی · پشتیبانی بیزدوار',
+          ctaContact: 'سفارش ماژول مشابه',
+          ctaPortfolio: 'سایر نمونه‌کارها'
+        },
+        stats: {
+          capabilities: '۶',
+          capabilitiesLabel: 'قابلیت UI',
+          flow: '۴',
+          flowLabel: 'مرحله swap',
+          chain: 'BEP-20',
+          chainLabel: 'شبکه پشتیبانی',
+          module: 'Web3',
+          moduleLabel: 'نوع ماژول'
         },
         about: {
           title: 'درباره ماژول',
@@ -605,6 +619,7 @@
             'اتصال به آدرس قرارداد ثابت — شفافیت در explorer'
           ]
         },
+        useCasesTitle: 'مناسب برای چه پروژه‌هایی؟',
         useCases: [
           'توکن‌های پشتوانه‌دار (RWA) — طلا، نقره، دارایی واقعی',
           'ICO / IDO / Presale مرحله‌ای',
@@ -616,7 +631,15 @@
           desc: 'تیم بیزدوار ماژول BizSwap را برای پروژه Web3 شما سفارشی‌سازی می‌کند.',
           btn: 'درخواست مشاوره Web3'
         },
-        related: { title: 'محصولات و خدمات مرتبط' },
+        related: {
+          title: 'محصولات و خدمات مرتبط',
+          items: [
+            { href: '/pages/fxguard', icon: 'chat-wa', title: 'CRM واتساپ', desc: 'اسکریپت WhatsApp CRM' },
+            { href: '/pages/fast', icon: 'bolt', title: 'Fast Studio', desc: 'طراحی وب' },
+            { href: '/pages/portfolio', icon: 'briefcase', title: 'نمونه‌کارها', desc: 'فین‌تک و Web3' },
+            { href: '/pages/services', icon: 'list', title: 'خدمات', desc: 'طراحی وب و فین‌تک' }
+          ]
+        },
         geoText: 'توسعه ماژول DeFi و Web3 — بخشی از خدمات فین‌تک و طراحی وب بیزدوار گروپ.'
       },
 
@@ -848,7 +871,25 @@
         geoText: 'İran\'da mühendislik hijyen ürünü — Bizdavar ekibi tasarımı, Digikala üzerinden satış.'
       },
       bizswap: {
-        hero: { tag: 'Web3 ürün · DeFi', title: 'BizSwap — Token ön satış & swap', desc: 'Ön satış, sitede doğrudan swap ve cüzdan bağlantısı için front-end ve on-chain modül — RWA ve varlık destekli token projeleri için.' },
+        hero: {
+          tag: 'Web3 ürün · DeFi',
+          title: 'BizSwap — Token ön satış & swap',
+          desc: 'Ön satış, sitede doğrudan swap ve cüzdan bağlantısı için front-end ve on-chain modül — RWA ve varlık destekli token projeleri için.',
+          chains: 'BNB Chain · BEP-20 · RWA · Presale',
+          trust: 'Web3 geliştirme · Özel kod · Bizdavar desteği',
+          ctaContact: 'Benzer modül siparişi',
+          ctaPortfolio: 'Diğer portfolyo'
+        },
+        stats: {
+          capabilities: '6',
+          capabilitiesLabel: 'UI özelliği',
+          flow: '4',
+          flowLabel: 'Swap adımı',
+          chain: 'BEP-20',
+          chainLabel: 'Desteklenen ağ',
+          module: 'Web3',
+          moduleLabel: 'Modül türü'
+        },
         about: {
           title: 'Modül hakkında',
           imageAlt: 'BizSwap token swap arayüzü — Bizdavar Web3 modülü',
@@ -862,9 +903,18 @@
         capabilities: { eyebrow: 'Sitede neler yapılır', title: 'Kullanıcı sitede ne yapar?', desc: 'Tüm işlemler web arayüzünde — harici DEX\'e gerek kalmadan ön satış.', items: [{ icon: 'link', title: 'Connect Wallet', desc: 'Trust Wallet ve uyumlu Web3 cüzdanlar — From/To bakiye.' }, { icon: 'swap', title: 'DEX Swap', desc: 'USDT\'den proje token\'ına anlık kur ile swap.' }, { icon: 'target', title: 'Presale', desc: 'Ön satış aşamasında doğrudan landing\'den satın alma.' }, { icon: 'chart-bar', title: 'Slippage', desc: 'Slippage ve minimum alınacak miktar gösterimi.' }, { icon: 'coin', title: 'Token seçici', desc: 'Kaynak ve hedef token listesinden seçim.' }, { icon: 'hourglass', title: 'İşlem durumu', desc: 'Processing mesajı ve başarı/hata geri bildirimi.' }] },
         flow: { eyebrow: 'Akış', title: 'Cüzdandan token\'a', steps: [{ title: 'Cüzdan bağla', desc: 'Connect Wallet ve BEP-20 ağ onayı.' }, { title: 'Tutar seç', desc: 'USDT veya bakiye yüzdesi — kur hesaplanır.' }, { title: 'On-chain onay', desc: 'İşlem cüzdanda imzalanır.' }, { title: 'Token al', desc: 'Blok onayı sonrası swap tamamlanır.' }] },
         admin: { title: 'Admin & akıllı sözleşme', desc: 'onlyOwner fonksiyonları — admin UI ile entegre.', items: ['Change Rate (onlyOwner)', 'Claim Tokens (onlyOwner)', 'Site-admin kur senkronizasyonu', 'Sabit sözleşme adresi — explorer şeffaflığı'] },
+        useCasesTitle: 'Hangi projeler için uygun?',
         useCases: ['RWA tokenları (altın, gümüş)', 'ICO / IDO / Presale', 'BEP-20 landing + whitepaper', 'Harici DEX öncesi site içi swap'],
         cta: { title: 'Token ön satış veya swap mı istiyorsunuz?', desc: 'Bizdavar ekibi BizSwap\'ı projenize uyarlar.', btn: 'Web3 danışmanlığı iste' },
-        related: { title: 'İlgili ürün ve hizmetler' },
+        related: {
+          title: 'İlgili ürün ve hizmetler',
+          items: [
+            { href: '/pages/fxguard', icon: 'chat-wa', title: 'WhatsApp CRM', desc: 'WhatsApp CRM scripti' },
+            { href: '/pages/fast', icon: 'bolt', title: 'Fast Studio', desc: 'Web tasarım' },
+            { href: '/pages/portfolio', icon: 'briefcase', title: 'Portfolyo', desc: 'Fintech ve Web3' },
+            { href: '/pages/services', icon: 'list', title: 'Hizmetler', desc: 'Web ve fintech' }
+          ]
+        },
         geoText: 'DeFi ve Web3 modül geliştirme — Bizdavar Group fintech hizmetlerinin parçası.'
       },
       fxguard: {
@@ -979,7 +1029,25 @@
         geoText: 'Engineered hygiene product in Iran — Bizdavar team design, sold via Digikala.'
       },
       bizswap: {
-        hero: { tag: 'Web3 product · DeFi', title: 'BizSwap — Token presale & swap', desc: 'Front-end and on-chain module for presale, on-site swap and wallet connect — built for RWA and asset-backed token projects.' },
+        hero: {
+          tag: 'Web3 product · DeFi',
+          title: 'BizSwap — Token presale & swap',
+          desc: 'Front-end and on-chain module for presale, on-site swap and wallet connect — built for RWA and asset-backed token projects.',
+          chains: 'BNB Chain · BEP-20 · RWA · Presale',
+          trust: 'Web3 development · Custom code · Bizdavar support',
+          ctaContact: 'Order a similar module',
+          ctaPortfolio: 'Other portfolio work'
+        },
+        stats: {
+          capabilities: '6',
+          capabilitiesLabel: 'UI features',
+          flow: '4',
+          flowLabel: 'Swap steps',
+          chain: 'BEP-20',
+          chainLabel: 'Supported network',
+          module: 'Web3',
+          moduleLabel: 'Module type'
+        },
         about: {
           title: 'About the module',
           imageAlt: 'BizSwap token swap UI — Web3 module by Bizdavar',
@@ -993,9 +1061,18 @@
         capabilities: { eyebrow: 'On-site features', title: 'What users do on the website', desc: 'All actions inside the web UI — no external DEX required for initial purchase.', items: [{ icon: 'link', title: 'Connect Wallet', desc: 'Trust Wallet and compatible Web3 wallets — From/To balances.' }, { icon: 'swap', title: 'DEX Swap', desc: 'Convert USDT to project token at live rate with wallet confirmation.' }, { icon: 'target', title: 'Presale', desc: 'Buy during presale directly from the project landing page.' }, { icon: 'chart-bar', title: 'Slippage', desc: 'Slippage and minimum received shown before confirm.' }, { icon: 'coin', title: 'Token selector', desc: 'Pick source and destination tokens from supported list.' }, { icon: 'hourglass', title: 'Transaction status', desc: 'Processing message and success/error feedback.' }] },
         flow: { eyebrow: 'User flow', title: 'From wallet connect to tokens', steps: [{ title: 'Connect wallet', desc: 'User clicks Connect Wallet and confirms BEP-20 network.' }, { title: 'Enter amount', desc: 'USDT amount or balance percentage — rate and output calculated.' }, { title: 'On-chain confirm', desc: 'Transaction signed in wallet and broadcast.' }, { title: 'Receive tokens', desc: 'After block confirmation, swap completes and To balance updates.' }] },
         admin: { title: 'Admin panel & smart contract', desc: 'onlyOwner functions integrated with project admin UI.', items: ['Change Rate (onlyOwner)', 'Claim Tokens (onlyOwner)', 'On-site rate sync with Admin Panel', 'Fixed contract address — explorer transparency'] },
+        useCasesTitle: 'Which projects is it for?',
         useCases: ['RWA tokens (gold, silver, real assets)', 'ICO / IDO / staged presale', 'BEP-20 projects with landing & whitepaper', 'On-site swap before external DEX listing'],
         cta: { title: 'Need presale or token swap?', desc: 'The Bizdavar team customizes BizSwap for your Web3 project.', btn: 'Request Web3 consulting' },
-        related: { title: 'Related products & services' },
+        related: {
+          title: 'Related products & services',
+          items: [
+            { href: '/pages/fxguard', icon: 'chat-wa', title: 'WhatsApp CRM', desc: 'WhatsApp CRM script' },
+            { href: '/pages/fast', icon: 'bolt', title: 'Fast Studio', desc: 'Web design' },
+            { href: '/pages/portfolio', icon: 'briefcase', title: 'Portfolio', desc: 'Fintech & Web3' },
+            { href: '/pages/services', icon: 'list', title: 'Services', desc: 'Web & fintech' }
+          ]
+        },
         geoText: 'DeFi and Web3 module development — part of Bizdavar Group fintech and web services.'
       },
       fxguard: {

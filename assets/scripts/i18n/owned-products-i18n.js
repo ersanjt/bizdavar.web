@@ -233,8 +233,13 @@
   Object.keys(catalog).forEach(lang => {
     const L = window.BIZDAVAR_LOCALES[lang];
     if (!L) return;
-    Object.assign(L, catalog[lang]);
+    const { home: homePatch, productsPage, ...rest } = catalog[lang];
+    Object.assign(L, rest);
+    if (homePatch) {
+      if (L.home && typeof L.home === 'object') Object.assign(L.home, homePatch);
+      else L.home = homePatch;
+    }
     if (!L.pages) L.pages = {};
-    L.pages.products = catalog[lang].productsPage;
+    L.pages.products = productsPage;
   });
 })();

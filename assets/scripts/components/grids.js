@@ -270,6 +270,13 @@
     if (!I) return;
     const L = I._labels || {};
     const f = I.leadership.founder;
+    const lang = window.BIZDAVAR_I18N?.locale || 'fa';
+    const iranLegal = lang === 'fa'
+      ? I.identity.iranLegalNameFa
+      : (I.identity.iranLegalNameEn || I.identity.iranLegalNameFa);
+    const iranBrand = lang === 'fa'
+      ? I.identity.iranBrandFa
+      : (I.identity.iranBrandEn || I.identity.iranBrandFa || I.identity.iranBrandFa);
 
     const identityEl = document.getElementById('intelIdentity');
     if (identityEl) {
@@ -282,7 +289,7 @@
           <dl class="intel-dl">
             <div><dt>${L.intlBrand || 'برند بین‌المللی'}</dt><dd>${I.identity.legalNameFa} (${I.identity.legalName})</dd></div>
             <div><dt>${L.armeniaReg || 'ثبت ارمنستان'}</dt><dd><strong>${I.identity.armeniaLegalName}</strong> (${I.identity.armeniaLegalType})<br><span class="intel-legal-brand">${I.identity.armeniaBrandFa}</span></dd></div>
-            <div><dt>${L.iranLegal || 'شخصیت حقوقی ایران'}</dt><dd><strong>${I.identity.iranLegalNameFa}</strong><br><span class="intel-legal-brand">${L.brandPrefix || 'برند'}: ${I.identity.iranBrandFa}</span></dd></div>
+            <div><dt>${L.iranLegal || 'شخصیت حقوقی ایران'}</dt><dd><strong>${iranLegal}</strong><br><span class="intel-legal-brand">${L.brandPrefix || 'برند'}: ${iranBrand}</span></dd></div>
             <div><dt>${L.founded || 'تأسیس'}</dt><dd>${I.identity.foundedDisplay}</dd></div>
             <div><dt>${L.domains || 'دامنه‌ها'}</dt><dd dir="ltr">${I.identity.domains.join(' · ')}</dd></div>
             <div><dt>${L.serviceLangs || 'زبان‌های خدمت'}</dt><dd>${(I.identity.languages || []).join(' · ')}</dd></div>
@@ -392,7 +399,7 @@
               <img src="${path(P.mapImage || 'assets/images/content/presence-map.svg')}" alt="${L.mapAlt || 'نقشه حضور جهانی بیزدوار'}" width="480" height="300" loading="lazy">
             </div>
             <div class="presence-showcase__intro">
-              <p class="presence-showcase__desc">${P.summaryFa}</p>
+              <p class="presence-showcase__desc">${P.summary || P.summaryFa || ''}</p>
               <div class="presence-stats">
                 ${(P.stats || []).map(s => `
                   <div class="presence-stat">
@@ -555,10 +562,11 @@
 
     const faqEl = document.getElementById('intelFaq');
     if (faqEl) {
+      const dir = window.BIZDAVAR_I18N?.dict?.dir || document.documentElement.dir || 'rtl';
       faqEl.innerHTML = I.faqIntel.map(item => `
-        <details class="faq-item">
-          <summary>${item.q}</summary>
-          <p>${item.a}</p>
+        <details class="faq-item" dir="${dir}">
+          <summary dir="${dir}">${item.q}</summary>
+          <p dir="${dir}">${item.a}</p>
         </details>
       `).join('');
     }

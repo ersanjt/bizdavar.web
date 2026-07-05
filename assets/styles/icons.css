@@ -110,6 +110,7 @@
 }
 
 .bd-icon--white { color: var(--white); }
+.bd-icon--brand { color: var(--whatsapp); }
 .bd-icon--muted { color: var(--text-muted); }
 .bd-icon--accent { color: var(--red); }
 .bd-icon--yellow { color: var(--yellow-dark); }
@@ -180,16 +181,35 @@
 }
 
 /* WhatsApp — crisp brand mark at all sizes */
-.contact-info__icon--wa .bd-icon,
-.footer__chip--wa .footer__chip-icon .bd-icon,
-.footer__social-btn--wa .bd-icon,
-.mobile-header__icon-btn--wa .bd-icon {
+.bd-icon--wa {
   display: block;
   flex-shrink: 0;
 }
+.bd-icon--wa path {
+  fill: currentColor;
+  stroke: none;
+}
 
-.top-bar__contact .bd-icon,
-.mobile-drawer__contact-item .bd-icon {
+.top-bar__wa .bd-icon,
+.mobile-drawer__contact-item--wa .bd-icon {
+  width: 16px;
+  height: 16px;
+  margin-inline-end: 6px;
+  vertical-align: -3px;
+  color: var(--whatsapp);
+}
+
+.contact-info__icon--wa .bd-icon,
+.footer__chip--wa .footer__chip-icon .bd-icon,
+.footer__social-btn--wa .bd-icon,
+.mobile-header__icon-btn--wa .bd-icon,
+.mobile-footer-cta__btn--wa .bd-icon {
+  color: #fff;
+}
+
+.top-bar__contact a:not(.top-bar__wa) .bd-icon,
+.top-bar__contact > span .bd-icon,
+.mobile-drawer__contact-item:not(.mobile-drawer__contact-item--wa) .bd-icon {
   width: 16px;
   height: 16px;
   margin-inline-end: 6px;

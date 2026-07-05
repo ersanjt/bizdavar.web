@@ -312,7 +312,7 @@ window.fillContactDetails = function () {
 
     <div class="contact-info__item">
 
-      <div class="contact-info__icon contact-info__icon--wa">${BD_ICON('whatsapp', { size: 22 })}</div>
+      <div class="contact-info__icon contact-info__icon--wa">${BD_ICON('whatsapp', { size: 22, variant: 'white' })}</div>
 
       <div>
 
@@ -384,6 +384,10 @@ window.setupWhatsappLinks = function () {
 
   const C = window.BIZDAVAR_CONFIG;
   const t = (k, fb) => (window.BIZDAVAR_I18N ? window.BIZDAVAR_I18N.t(k, fb) : (fb ?? k));
+  const waBtnHtml = (label) => {
+    const icon = window.BD_ICON ? window.BD_ICON('whatsapp', { size: 18, variant: 'white' }) : '';
+    return icon ? `${icon}<span>${label}</span>` : label;
+  };
 
   if (!C) return;
 
@@ -403,7 +407,7 @@ window.setupWhatsappLinks = function () {
   document.querySelectorAll('#homeWhatsapp').forEach(el => {
     if (el) {
       el.href = primaryUrl;
-      el.textContent = t('common.whatsapp', 'واتساپ');
+      el.innerHTML = waBtnHtml(t('common.whatsapp', 'واتساپ'));
       el.target = '_blank';
       el.rel = 'noopener noreferrer';
     }
@@ -414,8 +418,20 @@ window.setupWhatsappLinks = function () {
 
   const btnTr = document.getElementById('whatsappBtnTr');
   const btnIr = document.getElementById('whatsappBtnIr');
-  if (btnTr && tr) btnTr.href = waUrl(tr.whatsapp);
-  if (btnIr && ir) btnIr.href = waUrl(ir.whatsapp);
+  if (btnTr && tr) {
+    btnTr.href = waUrl(tr.whatsapp);
+    if (!btnTr.querySelector('.bd-icon')) {
+      const label = btnTr.textContent.trim();
+      if (label) btnTr.innerHTML = waBtnHtml(label);
+    }
+  }
+  if (btnIr && ir) {
+    btnIr.href = waUrl(ir.whatsapp);
+    if (!btnIr.querySelector('.bd-icon')) {
+      const label = btnIr.textContent.trim();
+      if (label) btnIr.innerHTML = waBtnHtml(label);
+    }
+  }
 
   const legacyBtn = document.getElementById('whatsappBtn');
   if (legacyBtn && primary) legacyBtn.href = primaryUrl;

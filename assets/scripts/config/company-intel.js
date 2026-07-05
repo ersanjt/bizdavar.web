@@ -364,7 +364,7 @@ window.BIZDAVAR_INTEL = {
       pressLabel: 'صدا و سیما',
       videoUrl: 'https://www.youtube.com/shorts/GcOtue1Nmlo',
       videoLabel: 'YouTube — V1',
-      image: 'assets/images/products/biztab/biztab-nasrnews-press.png',
+      image: 'assets/images/products/bizsanitizer/bizclean-v5.png',
       slug: 'pages/bizsanitizer-v5.html',
       tags: ['بهداشت', 'IoT', 'کرونا', 'دانشگاه تبریز', 'RINOTEX', 'ایمن سهند پدیده', 'دیجی‌کالا']
     }

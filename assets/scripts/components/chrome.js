@@ -198,7 +198,10 @@
       </div>
     `).join('');
     return `<details class="nav__dropdown nav__dropdown--products" data-nav-dropdown>
-      <summary class="nav__link nav__link--dropdown${active}">${label}</summary>
+      <summary class="nav__link nav__link--dropdown${active}">
+        <span class="nav__link-label">${label}</span>
+        <span class="nav__chev" aria-hidden="true"></span>
+      </summary>
       <div class="nav__panel nav__panel--products">
         <a href="${overviewHref}" class="nav__product-overview${currentPage === 'products' ? ' is-active' : ''}">${t('nav.productsCatalog', 'همه محصولات')}</a>
         ${groups}
@@ -402,8 +405,8 @@
             <span>${ic('clock', { size: 16 })} ${C.contact.workingHours}</span>
           </div>
           <div class="top-bar__social">
-            <a href="${C.contact.instagram}" target="_blank" rel="noopener noreferrer me" aria-label="${t('footer.instagram', 'Instagram')}">${t('footer.instagram', 'Instagram')}</a>
-            <a href="${C.contact.linkedin}" target="_blank" rel="noopener noreferrer me" aria-label="${t('footer.linkedin', 'LinkedIn')}">${t('footer.linkedin', 'LinkedIn')}</a>
+            <a href="${C.contact.instagram}" class="top-bar__social-btn" target="_blank" rel="noopener noreferrer me" aria-label="${t('footer.instagram', 'Instagram')}">${ic('instagram', { size: 15 })}</a>
+            <a href="${C.contact.linkedin}" class="top-bar__social-btn" target="_blank" rel="noopener noreferrer me" aria-label="${t('footer.linkedin', 'LinkedIn')}">${ic('linkedin', { size: 15 })}</a>
           </div>
         </div>`;
     }
@@ -426,16 +429,18 @@
 
       header.innerHTML = `
         <div class="header__desktop">
-          <div class="container">
+          <div class="container header__desktop-inner">
             <a href="${pagePath(R.home)}" class="header__logo" aria-label="${C.siteName} — ${t('common.homeAria', 'صفحه اصلی')}">
               <img src="${path(headerLogo)}" alt="${logoAlt}" width="120" height="50">
             </a>
-            <nav class="nav nav--desktop" id="nav" aria-label="${t('common.mainNav', 'منوی اصلی')}">
+            <nav class="nav nav--desktop nav--primary" id="nav" aria-label="${t('common.mainNav', 'منوی اصلی')}">
               ${navLinks}
+            </nav>
+            <div class="header__actions">
               ${langSwitcherHtml()}
               <a href="${wa}" class="btn btn--primary nav__cta"
                  ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''}>${t('common.freeConsult', 'مشاوره رایگان')}</a>
-            </nav>
+            </div>
             <button class="menu-toggle" id="menuToggle" aria-label="${t('common.openMenu', 'باز و بسته کردن منو')}" aria-expanded="false">
               <span></span><span></span><span></span>
             </button>
@@ -536,8 +541,8 @@
                 <div class="footer__trust">${trustPills}<span class="footer__pill">${t('footer.hq', 'Istanbul HQ')}</span></div>
                 <p class="footer__social-label">${t('footer.followUs', 'Follow us')}</p>
                 <div class="footer__social">
-                  <a href="${C.contact.instagram}" class="footer__social-btn" target="_blank" rel="noopener noreferrer me" aria-label="Instagram">IG</a>
-                  <a href="${C.contact.linkedin}" class="footer__social-btn" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn">in</a>
+                  <a href="${C.contact.instagram}" class="footer__social-btn" target="_blank" rel="noopener noreferrer me" aria-label="Instagram">${ic('instagram', { size: 18 })}</a>
+                  <a href="${C.contact.linkedin}" class="footer__social-btn" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn">${ic('linkedin', { size: 18 })}</a>
                   <a href="${wa}" class="footer__social-btn footer__social-btn--wa" ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''} aria-label="${t('common.whatsapp')}">${ic('whatsapp', { size: 18 })}</a>
                 </div>
                 ${langSwitcherHtml('lang-dropdown--footer')}
@@ -579,8 +584,8 @@
             <p class="mobile-footer-hero__tagline">${t('footer.tagline')}</p>
             <div class="footer__trust">${trustPills}<span class="footer__pill">${t('footer.hq', 'HQ: Istanbul')}</span></div>
             <div class="footer__social footer__social--mobile">
-              <a href="${C.contact.instagram}" class="footer__social-btn" target="_blank" rel="noopener noreferrer me" aria-label="Instagram">IG</a>
-              <a href="${C.contact.linkedin}" class="footer__social-btn" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn">in</a>
+              <a href="${C.contact.instagram}" class="footer__social-btn" target="_blank" rel="noopener noreferrer me" aria-label="Instagram">${ic('instagram', { size: 18 })}</a>
+              <a href="${C.contact.linkedin}" class="footer__social-btn" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn">${ic('linkedin', { size: 18 })}</a>
               <a href="${wa}" class="footer__social-btn footer__social-btn--wa" ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''} aria-label="${t('common.whatsapp')}">${ic('whatsapp', { size: 18 })}</a>
             </div>
             ${langSwitcherHtml('lang-dropdown--footer')}

@@ -50,8 +50,11 @@ body[data-page="prosense"] .section__desc {
 
 .prosense-hero__logo {
   display: block;
-  width: min(220px, 75%);
+  width: min(220px, 78%);
   height: auto;
+  max-height: 56px;
+  object-fit: contain;
+  object-position: start center;
   margin-bottom: 20px;
 }
 

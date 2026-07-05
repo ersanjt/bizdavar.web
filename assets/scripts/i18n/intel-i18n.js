@@ -160,6 +160,7 @@
       { name: 'Karen Leather', type: 'İhracat', note: 'B2B deri pazarlama' }
     ],
     presence: {
+      summary: '11 ülkede tamamlanan projeler — ana ofis İstanbul; İran, Türkiye ve MENA projeleri buradan koordine edilir.',
       summaryFa: '11 ülkede tamamlanan projeler — ana ofis İstanbul; İran, Türkiye ve MENA projeleri buradan koordine edilir.',
       stats: [
         { value: '11', label: 'Aktif ülke' },
@@ -202,6 +203,7 @@
       },
       tabrizHub: {
         title: 'İran ofisi — Tebriz',
+        subtitle: 'Middle East Development Technology Processors',
         brand: 'Bizdavar Digital Marketing Agency',
         city: 'Tebriz',
         province: 'Doğu Azerbaycan',
@@ -446,6 +448,7 @@
       { name: 'Karen Leather', type: 'Export', note: 'B2B leather marketing' }
     ],
     presence: {
+      summary: 'Projects delivered in 11 countries — HQ in Istanbul; Iran, Turkey and MENA projects coordinated from this hub.',
       summaryFa: 'Projects delivered in 11 countries — HQ in Istanbul; Iran, Turkey and MENA projects coordinated from this hub.',
       stats: [
         { value: '11', label: 'Active countries' },
@@ -488,6 +491,7 @@
       },
       tabrizHub: {
         title: 'Iran office — Tabriz',
+        subtitle: 'Middle East Development Technology Processors',
         brand: 'Bizdavar Digital Marketing Agency',
         city: 'Tabriz',
         province: 'East Azerbaijan',

@@ -52,5 +52,16 @@
           <p>${esc(step.desc)}</p>
         </div>`).join('');
     }
+
+    const related = document.getElementById('bizswapRelated');
+    if (related && Array.isArray(cs.related?.items)) {
+      related.innerHTML = cs.related.items.map(item => `
+        <a href="${esc(item.href)}" class="feature-item feature-item--link">
+          <span class="feature-item__icon" data-bd-icon="${esc(item.icon)}" data-bd-size="26"></span>
+          <h3>${esc(item.title)}</h3>
+          <p>${esc(item.desc)}</p>
+        </a>`).join('');
+      if (typeof window.initDataIcons === 'function') window.initDataIcons(related);
+    }
   };
 })();

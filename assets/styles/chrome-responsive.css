@@ -61,24 +61,39 @@
 }
 
 /* ─── Desktop header nav ─── */
-@media (max-width: 1280px) {
-  .header__desktop .container {
-    gap: 12px;
-    padding: 12px 0;
+@media (max-width: 1360px) {
+  .nav--desktop.nav--primary {
+    gap: clamp(6px, 0.75vw, 16px);
   }
 
-  .nav {
-    gap: 18px;
+  .header__desktop-inner {
+    gap: 14px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .header__desktop-inner {
+    gap: 12px;
+    padding: 10px 0;
+  }
+
+  .nav--desktop.nav--primary {
+    gap: 10px;
   }
 
   .nav__link {
-    font-size: 14px;
+    font-size: 13px;
   }
 
-  .nav__cta {
-    padding: 10px 16px !important;
-    font-size: 13px !important;
-    white-space: nowrap;
+  .header__actions .nav__cta {
+    padding: 9px 14px !important;
+    font-size: 12px !important;
+  }
+
+  .header__actions .lang-dropdown__toggle {
+    min-height: 36px;
+    padding: 5px 10px;
+    font-size: 12px;
   }
 
   .header__logo img {
@@ -87,18 +102,27 @@
 }
 
 @media (max-width: 1200px) and (min-width: 1025px) {
-  .nav {
-    gap: 12px;
+  .nav--desktop.nav--primary {
+    gap: 8px;
   }
 
   .nav__link {
-    font-size: 13px;
+    font-size: 12.5px;
   }
 
-  .nav--desktop .lang-dropdown__toggle {
-    font-size: 12px;
-    min-height: 36px;
-    padding: 6px 10px;
+  .header__actions {
+    gap: 8px;
+  }
+
+  .header__actions .lang-dropdown__toggle {
+    font-size: 11px;
+    min-height: 34px;
+    padding: 5px 8px;
+  }
+
+  .header__actions .nav__cta {
+    padding: 8px 12px !important;
+    font-size: 11.5px !important;
   }
 
   .nav__panel--products {

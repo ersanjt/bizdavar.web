@@ -1,9 +1,124 @@
 /* BizSwap — DeFi presale & token swap module */
-.bizswap-hero-media img {
+.bizswap-hero {
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 45%, #fde68a 100%);
+  padding: clamp(48px, 8vw, 88px) 0 clamp(40px, 6vw, 64px);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  color: var(--text);
+}
+
+.bizswap-hero h1 {
+  color: var(--text);
+}
+
+.bizswap-hero p {
+  color: var(--text-muted);
+}
+
+.bizswap-hero__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .bizswap-hero__grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 48px;
+  }
+}
+
+.bizswap-hero__logo {
+  height: 40px;
+  width: auto;
+  margin-bottom: 16px;
+}
+
+.bizswap-hero__chains {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 12px 0 0;
+}
+
+.bizswap-hero__trust {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-top: 16px;
+}
+
+.bizswap-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.bizswap-hero__actions .btn--primary {
+  background: #d97706;
+  border-color: #d97706;
+}
+
+.bizswap-hero__actions .btn--primary:hover {
+  background: #b45309;
+  border-color: #b45309;
+}
+
+.bizswap-hero__media img {
   width: 100%;
   height: auto;
   border-radius: var(--radius-lg);
   box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+}
+
+.bizswap-stats {
+  background: #0f172a;
+  color: #f8fafc;
+  padding: 28px 0;
+}
+
+.bizswap-stats__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .bizswap-stats__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.bizswap-stats__value {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 800;
+  color: #fbbf24;
+  line-height: 1.1;
+}
+
+.bizswap-stats__label {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-top: 6px;
+}
+
+.bizswap-about {
+  max-width: 820px;
+}
+
+.bizswap-about__prose h2 {
+  margin-top: 0;
+}
+
+.check-list--cols {
+  display: grid;
+  gap: 4px 32px;
+}
+
+@media (min-width: 640px) {
+  .check-list--cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .bizswap-cap-grid {
@@ -39,7 +154,8 @@
   height: 48px;
   margin-bottom: 10px;
   border-radius: var(--radius);
-  background: var(--gray-100);
+  background: #fffbeb;
+  color: #d97706;
   font-size: 0;
 }
 
@@ -71,6 +187,17 @@
   border-radius: var(--radius-lg);
   background: var(--white);
   border: 1px solid var(--gray-100);
+}
+
+.bizswap-flow__step h3 {
+  font-size: 0.95rem;
+  margin: 0 0 8px;
+}
+
+.bizswap-flow__step p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
 }
 
 .bizswap-flow__num {
@@ -114,11 +241,12 @@
 }
 
 .bizswap-admin li::before {
-  content: '⚙';
+  content: '';
   position: absolute;
   inset-inline-start: 0;
-}
-
-.page-hero--bizswap {
-  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 50%, #fde68a 100%);
+  top: 0.35em;
+  width: 0.55em;
+  height: 0.55em;
+  border-radius: 2px;
+  background: #fbbf24;
 }
