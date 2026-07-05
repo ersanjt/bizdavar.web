@@ -9,5 +9,7 @@
 @import url('layout.css');
 @import url('i18n.css');
 @import url('footer.css');
+@import url('mobile-chrome.css');
+@import url('chrome-responsive.css');
 @import url('responsive.css');
 @import url('premium.css');

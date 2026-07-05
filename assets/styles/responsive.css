@@ -1,9 +1,8 @@
 /**
  * Bizdavar — Responsive overrides
- * Mobile chrome: ≤1024px | Phone: ≤768px | Small: ≤480px
+ * Mobile chrome: ≤1024px (mobile-chrome.css imported from site.css)
+ * Phone: ≤768px | Small: ≤480px
  */
-@import url('mobile-chrome.css');
-@import url('chrome-responsive.css');
 
 /* ─── Trust bar & process — tablet ─── */
 @media (max-width: 1024px) {

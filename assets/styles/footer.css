@@ -422,7 +422,6 @@
 
 /* ─── Mobile footer ─── */
 .footer__mobile {
-  display: none;
   position: relative;
   z-index: 1;
 }

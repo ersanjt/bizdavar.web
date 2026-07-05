@@ -135,12 +135,14 @@ ul { list-style: none; }
   min-width: 0;
 }
 
-/* Mobile header — hidden on desktop */
-.mobile-header,
-.mobile-drawer,
-.mobile-bottom-nav,
-.footer__mobile {
-  display: none;
+/* Mobile chrome — hidden on desktop only (never rely on a later override on phone) */
+@media (min-width: 1025px) {
+  .mobile-header,
+  .mobile-drawer,
+  .mobile-bottom-nav,
+  .footer__mobile {
+    display: none;
+  }
 }
 
 .header__logo img {
@@ -2028,6 +2030,12 @@ a.tags-cloud__tag:hover {
   .top-bar--desktop { display: none; }
 
   .header__desktop { display: none; }
+
+  .mobile-header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 
   /* وقتی منو باز است، header باید بالای overlay باشد تا blur روی drawer نیفتد */
   body.drawer-open .header {
