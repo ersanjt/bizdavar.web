@@ -96,6 +96,23 @@ fi
 sleep 2
 
 echo "===== ORIGIN VERIFY (bypass Cloudflare) ====="
+# Never follow redirects on localhost — http→https would reach Cloudflare and lie about origin
+origin_http_code() {
+  local path="$1"
+  local code=""
+  code=$(curl -sk -o /dev/null -w '%{http_code}' --max-redirs 0 \
+    -H "Host: bizdavar.com" -H "Cache-Control: no-cache" \
+    "https://127.0.0.1${path}" 2>/dev/null) || code=""
+  if [[ "$code" == "200" ]]; then
+    echo "$code"
+    return
+  fi
+  code=$(curl -sf -o /dev/null -w '%{http_code}' --max-redirs 0 \
+    -H "Host: bizdavar.com" -H "X-Forwarded-Proto: https" -H "Cache-Control: no-cache" \
+    "http://127.0.0.1${path}" 2>/dev/null) || code="0"
+  echo "$code"
+}
+
 ORIGIN_CURL=(curl -sfL -H "Host: bizdavar.com" -H "Cache-Control: no-cache" -H "Pragma: no-cache")
 ORIGIN_OK=0
 for attempt in 1 2 3 4 5; do
@@ -111,13 +128,28 @@ if [[ "$ORIGIN_OK" -eq 0 ]]; then
 fi
 
 for locale_path in /tr /en; do
-  code=$("${ORIGIN_CURL[@]}" -o /dev/null -w '%{http_code}' "http://127.0.0.1${locale_path}" 2>/dev/null || echo 0)
+  code=$(origin_http_code "$locale_path")
   if [[ "$code" == "200" ]]; then
-    echo "OK: origin ${locale_path} → HTTP 200"
+    echo "OK: origin ${locale_path} → HTTP 200 (no redirect follow)"
   else
-    echo "WARN: origin ${locale_path} → HTTP ${code} (check .htaccess and rm -rf public_html/tr public_html/en)"
+    echo "WARN: origin ${locale_path} → HTTP ${code} (check .htaccess; rm -rf public_html/tr public_html/en)"
   fi
 done
+
+echo "===== CLOUDFLARE vs ORIGIN (/tr) ====="
+ORIGIN_TR=$(origin_http_code /tr)
+PUB_TR=$(curl -sI -o /dev/null -w '%{http_code}' --max-redirs 0 --max-time 20 https://bizdavar.com/tr 2>/dev/null || echo 0)
+PUB_TR_LOC=$(curl -sI --max-redirs 0 --max-time 20 https://bizdavar.com/tr 2>/dev/null | awk 'tolower($1)=="location:"{print $2}' | tr -d '\r')
+if [[ "$ORIGIN_TR" == "200" && "$PUB_TR" != "200" ]]; then
+  echo "ACTION REQUIRED: Apache serves /tr (HTTP 200) but Cloudflare returns HTTP ${PUB_TR}"
+  [[ -n "$PUB_TR_LOC" ]] && echo "  Cloudflare Location: ${PUB_TR_LOC}"
+  echo "  Fix: Cloudflare Dashboard → Rules → Redirect Rules (or legacy Page Rules)"
+  echo "       Remove any rule that redirects /tr to / — then Purge Everything"
+elif [[ "$ORIGIN_TR" == "200" && "$PUB_TR" == "200" ]]; then
+  echo "OK: /tr live on origin and public (Cloudflare)"
+else
+  echo "WARN: origin /tr=${ORIGIN_TR} public /tr=${PUB_TR}"
+fi
 
 DISK_INTEL="$WEB/assets/scripts/config/company-intel.js"
 ORIGIN_INTEL_BYTES=$("${ORIGIN_CURL[@]}" "http://127.0.0.1/assets/scripts/config/company-intel.js?v=$TS" 2>/dev/null | wc -c | tr -d ' ')
