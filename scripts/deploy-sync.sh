@@ -29,6 +29,9 @@ tar -czf "$BACKUP_DIR/bizdavar-public_html-before-sync-$TS.tar.gz" \
   -C "/home/$CPANEL_USER" public_html
 echo "Backup: $BACKUP_DIR/bizdavar-public_html-before-sync-$TS.tar.gz"
 
+echo "===== REMOVE STALE LOCALE DIRS (shadow virtual /tr /en routes) ====="
+rm -rf "$WEB/tr" "$WEB/en" "$WEB/fa" 2>/dev/null || true
+
 echo "===== RSYNC REPO → PUBLIC_HTML ====="
 rsync -av --delete \
   --exclude .git/ \
@@ -61,10 +64,14 @@ find "$WEB" -type f -exec chmod 644 {} \;
 # Fix git metadata if pull was run as root
 chown "$CPANEL_USER:$CPANEL_USER" "$REPO/.git/index" "$REPO/.git/ORIG_HEAD" 2>/dev/null || true
 
-echo "===== TEST ====="
+echo "===== TEST (public) ====="
 curl -sI -L --max-time 20 https://bizdavar.com/ | head -10
 echo "---"
 curl -sI -L --max-time 20 https://www.bizdavar.com/ | head -10
+echo "---"
+curl -sI --max-time 20 https://bizdavar.com/tr | grep -E 'HTTP|Location' || true
+echo "---"
+curl -sI --max-time 20 https://bizdavar.com/en | grep -E 'HTTP|Location' || true
 
 echo "===== RESTART APACHE / HTTPD ====="
 /scripts/restartsrv_httpd 2>/dev/null || systemctl restart httpd 2>/dev/null || service httpd restart 2>/dev/null || true
@@ -89,6 +96,7 @@ fi
 sleep 2
 
 echo "===== ORIGIN VERIFY (bypass Cloudflare) ====="
+ORIGIN_CURL=(curl -sfL -H "Host: bizdavar.com" -H "Cache-Control: no-cache" -H "Pragma: no-cache")
 ORIGIN_OK=0
 for attempt in 1 2 3 4 5; do
   if curl -sfL -H "Host: bizdavar.com" http://127.0.0.1/ 2>/dev/null | grep -q 'GTM-NXWQQWF8'; then
@@ -102,7 +110,15 @@ if [[ "$ORIGIN_OK" -eq 0 ]]; then
   echo "WARN: GTM not on origin after 5 attempts — run: curl -sL -H 'Host: bizdavar.com' http://127.0.0.1/ | head -15"
 fi
 
-ORIGIN_CURL=(curl -sfL -H "Host: bizdavar.com" -H "Cache-Control: no-cache" -H "Pragma: no-cache")
+for locale_path in /tr /en; do
+  code=$("${ORIGIN_CURL[@]}" -o /dev/null -w '%{http_code}' "http://127.0.0.1${locale_path}" 2>/dev/null || echo 0)
+  if [[ "$code" == "200" ]]; then
+    echo "OK: origin ${locale_path} → HTTP 200"
+  else
+    echo "WARN: origin ${locale_path} → HTTP ${code} (check .htaccess and rm -rf public_html/tr public_html/en)"
+  fi
+done
+
 DISK_INTEL="$WEB/assets/scripts/config/company-intel.js"
 ORIGIN_INTEL_BYTES=$("${ORIGIN_CURL[@]}" "http://127.0.0.1/assets/scripts/config/company-intel.js?v=$TS" 2>/dev/null | wc -c | tr -d ' ')
 DISK_INTEL_BYTES=$(wc -c < "$DISK_INTEL" 2>/dev/null | tr -d ' ')

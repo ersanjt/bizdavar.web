@@ -81,13 +81,16 @@ AddType 'text/html; charset=UTF-8' .html
   # /fa/ prefix → root (Persian is default, no /fa/ in URLs)
   RewriteRule ^fa/?(.*)$ /$1 [R=301,L]
 
+  # Locale home — REQUEST_URI match avoids stale physical /tr or /en dirs on disk
+  RewriteCond %{REQUEST_URI} ^/(tr|en)/?$ [NC]
+  RewriteRule ^ /index.html [L]
+
   # Locale-prefixed URLs — BEFORE trailing-slash strip and generic .html rewrite
-  RewriteRule ^(tr|en)/?$ index.html [L]
   RewriteRule ^(tr|en)/blog/?$ pages/blog.html [L]
   RewriteRule ^(tr|en)/pages/(.+?)/?$ pages/$2.html [L]
 
   # /pages/foo/ → /pages/foo (skip /tr/ and /en/ locale homes)
-  RewriteCond %{REQUEST_URI} !^/(tr|en)/?$
+  RewriteCond %{REQUEST_URI} !^/(tr|en)/?$ [NC]
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_URI} ^(.+)/$
   RewriteRule ^ %1 [R=301,L]
