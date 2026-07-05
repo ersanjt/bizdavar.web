@@ -369,6 +369,9 @@
   };
 
   window.renderSiteChrome = function () {
+    if (typeof window.ensureBizdavarPageShell === 'function') {
+      window.ensureBizdavarPageShell();
+    }
     if (typeof window.closeMobileDrawer === 'function') {
       window.closeMobileDrawer();
     }

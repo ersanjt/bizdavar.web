@@ -52,6 +52,12 @@
     }
   }
 
-  ensurePageShell();
   window.ensureBizdavarPageShell = ensurePageShell;
+
+  /* Script tag is before #main-content — first call is often too early */
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', ensurePageShell);
+  } else {
+    ensurePageShell();
+  }
 })();

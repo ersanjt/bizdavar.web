@@ -52,11 +52,19 @@
   }
 
   function ensureSiteChrome() {
+    if (typeof window.ensureBizdavarPageShell === 'function') {
+      try {
+        window.ensureBizdavarPageShell();
+      } catch (e) {
+        console.error('[Bizdavar] ensurePageShell failed', e);
+      }
+    }
     const header = document.getElementById('siteHeader');
     const footer = document.getElementById('siteFooter');
     const empty = (el) => el && !String(el.innerHTML || '').trim();
+    const needsRender = !header || !footer || empty(header) || empty(footer);
     const render = window.__bizdavarChrome || window.renderSiteChrome;
-    if ((empty(header) || empty(footer)) && typeof render === 'function') {
+    if (needsRender && typeof render === 'function') {
       try {
         render();
       } catch (e) {
@@ -66,6 +74,13 @@
   }
 
   function refreshChrome() {
+    if (typeof window.ensureBizdavarPageShell === 'function') {
+      try {
+        window.ensureBizdavarPageShell();
+      } catch (e) {
+        console.error('[Bizdavar] ensurePageShell failed', e);
+      }
+    }
     const render = window.__bizdavarChrome || window.renderSiteChrome;
     if (typeof render !== 'function') return;
     try {
