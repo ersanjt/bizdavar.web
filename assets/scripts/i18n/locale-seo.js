@@ -86,6 +86,26 @@
         seoDescription: 'نمونه‌کار طراحی وب BZ Diamond: فروشگاه WooCommerce، مدیریت ایمیل، سئو و پشتیبانی فنی — پروژه مشتری بیزدوار گروپ.',
         seoKeywords: 'نمونه کار طراحی سایت, BZ Diamond, WooCommerce, طراحی وب, بیزدوار'
       },
+      supplifyTrade: {
+        seoTitle: 'نمونه‌کار Supplify Trade | طراحی وب تجارت بین‌المللی — بیزدوار',
+        seoDescription: 'نمونه‌کار طراحی وب Supplify Trade FZ-LLC — شرکت sourcing و تجارت B2B با لایسنس RAKEZ امارات. طراحی سایت شرکتی، سئو و پشتیبانی — بیزدوار گروپ.',
+        seoKeywords: 'Supplify Trade, نمونه کار طراحی سایت, تجارت بین‌المللی, RAKEZ, بیزدوار'
+      },
+      kayaOne: {
+        seoTitle: 'نمونه‌کار Kaya One AG | طراحی وب تجارت سوئیسی — بیزدوار',
+        seoDescription: 'نمونه‌کار طراحی وب Kaya One AG — شرکت تجارت و راهکارهای صنعتی سوئیس (Brunnen، UID CHE-351.641.458). طراحی سایت شرکتی، سئو و پشتیبانی — بیزدوار گروپ.',
+        seoKeywords: 'Kaya One AG, نمونه کار طراحی سایت, تجارت سوئیس, بیزدوار'
+      },
+      smmTurk: {
+        seoTitle: 'نمونه‌کار SMM Turk | طراحی پنل SMM — بیزدوار گروپ',
+        seoDescription: 'نمونه‌کار طراحی وب و پنل SMM Turk — پلتفرم خدمات شبکه‌های اجتماعی در ترکیه با برنامه نمایندگی و پرداخت کریپتو. طراحی UI، سئو و پشتیبانی — بیزدوار گروپ.',
+        seoKeywords: 'SMM Turk, پنل SMM, نمونه کار طراحی سایت, دیجیتال مارکتینگ, بیزدوار'
+      },
+      fxguardExchange: {
+        seoTitle: 'نمونه‌کار FXGuard Exchange | تبادل تومان و لیر — بیزدوار',
+        seoDescription: 'نمونه‌کار طراحی پلتفرم FXGuard Exchange — تبادل تخصصی تومان و لیر (IRR ↔ TRY) با نرخ زنده، KYC، سفارش شناسه‌دار و پیگیری مرحله‌ای. توسعه بیزدوار گروپ.',
+        seoKeywords: 'FXGuard Exchange, تبادل تومان لیر, فین‌تک, نرخ ارز, بیزدوار'
+      },
       biztejarat: {
         seoTitle: 'نمونه‌کار گذشته بیزتجارت | SMM محصولات صنعتی — بیزدوار',
         seoDescription: 'نمونه‌کار گذشته مدیریت اینستاگرام بیزتجارت — پروژه SMM B2B برای محصولات صنعتی که اکنون غیرفعال است. اجراشده توسط بیزدوار گروپ.',
@@ -223,6 +243,26 @@
         seoDescription: 'BZ Diamond web tasarım vaka çalışması: WooCommerce mağaza, e-posta yönetimi, SEO ve teknik destek — Bizdavar Group müşteri projesi.',
         seoKeywords: 'BZ Diamond, WooCommerce, web tasarım, Bizdavar, vaka çalışması'
       },
+      supplifyTrade: {
+        seoTitle: 'Supplify Trade vaka çalışması | Uluslararası ticaret web tasarımı — Bizdavar',
+        seoDescription: 'Supplify Trade FZ-LLC web tasarım örneği — RAKEZ lisanslı B2B sourcing ve ticaret şirketi (BAE). Kurumsal site, SEO ve destek — Bizdavar Group.',
+        seoKeywords: 'Supplify Trade, web tasarım, uluslararası ticaret, RAKEZ, Bizdavar'
+      },
+      kayaOne: {
+        seoTitle: 'Kaya One AG vaka çalışması | İsviçre ticaret web tasarımı — Bizdavar',
+        seoDescription: 'Kaya One AG web tasarım örneği — İsviçre kayıtlı ticaret ve endüstriyel çözümler şirketi (Brunnen). Kurumsal site, SEO ve destek — Bizdavar Group.',
+        seoKeywords: 'Kaya One AG, web tasarım, İsviçre ticaret, Bizdavar'
+      },
+      smmTurk: {
+        seoTitle: 'SMM Turk vaka çalışması | SMM panel web tasarımı — Bizdavar',
+        seoDescription: 'SMM Turk web ve panel tasarım örneği — Türkiye SMM paneli, bayi programı ve kripto ödeme. UI, SEO ve destek — Bizdavar Group.',
+        seoKeywords: 'SMM Turk, SMM paneli, web tasarım, dijital pazarlama, Bizdavar'
+      },
+      fxguardExchange: {
+        seoTitle: 'FXGuard Exchange vaka çalışması | Toman–Lira değişim platformu — Bizdavar',
+        seoDescription: 'FXGuard Exchange tasarım örneği — IRR ↔ TRY döviz değişimi, canlı kur, KYC ve sipariş takibi. Bizdavar Group tarafından geliştirildi.',
+        seoKeywords: 'FXGuard Exchange, Toman Lira, fintech, döviz kuru, Bizdavar'
+      },
       biztejarat: {
         seoTitle: 'Biztejarat geçmiş örneği | Endüstriyel SMM — Bizdavar',
         seoDescription: 'Biztejarat geçmiş Instagram SMM örneği: endüstriyel ürün içeriği — proje artık aktif değil. Bizdavar Group tarafından yürütüldü.',
@@ -359,6 +399,26 @@
         seoTitle: 'BZ Diamond case study | Web design & WooCommerce — Bizdavar',
         seoDescription: 'BZ Diamond web design case study: WooCommerce store, email management, SEO and technical support — Bizdavar Group client project.',
         seoKeywords: 'BZ Diamond, WooCommerce, web design, Bizdavar, case study'
+      },
+      supplifyTrade: {
+        seoTitle: 'Supplify Trade case study | International trade web design — Bizdavar',
+        seoDescription: 'Supplify Trade FZ-LLC web design case study — RAKEZ-licensed B2B sourcing and trading company in the UAE. Corporate site, SEO and support — Bizdavar Group.',
+        seoKeywords: 'Supplify Trade, web design, international trade, RAKEZ, Bizdavar'
+      },
+      kayaOne: {
+        seoTitle: 'Kaya One AG case study | Swiss trade web design — Bizdavar',
+        seoDescription: 'Kaya One AG web design case study — Swiss-registered trading and industrial solutions company in Brunnen. Corporate site, SEO and support — Bizdavar Group.',
+        seoKeywords: 'Kaya One AG, web design, Swiss trade, Bizdavar'
+      },
+      smmTurk: {
+        seoTitle: 'SMM Turk case study | SMM panel web design — Bizdavar',
+        seoDescription: 'SMM Turk web and panel design case study — social media services panel in Turkey with reseller program and crypto payments. UI, SEO and support — Bizdavar Group.',
+        seoKeywords: 'SMM Turk, SMM panel, web design, digital marketing, Bizdavar'
+      },
+      fxguardExchange: {
+        seoTitle: 'FXGuard Exchange case study | Toman–Lira exchange platform — Bizdavar',
+        seoDescription: 'FXGuard Exchange design case study — specialized IRR ↔ TRY remittance with live rates, KYC, tracked orders. Built by Bizdavar Group.',
+        seoKeywords: 'FXGuard Exchange, Toman Lira, fintech, exchange rates, Bizdavar'
       },
       biztejarat: {
         seoTitle: 'Biztejarat past case study | Industrial SMM — Bizdavar',

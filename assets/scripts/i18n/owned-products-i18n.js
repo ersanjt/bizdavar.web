@@ -240,6 +240,7 @@
       else L.home = homePatch;
     }
     if (!L.pages) L.pages = {};
+    L.productsPage = productsPage;
     L.pages.products = productsPage;
   });
 })();

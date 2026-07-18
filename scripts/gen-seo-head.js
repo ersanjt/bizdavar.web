@@ -12,6 +12,23 @@ global.window = global;
 require(path.join(ROOT, 'assets/scripts/i18n/locales.js'));
 require(path.join(ROOT, 'assets/scripts/i18n/locale-seo.js'));
 
+const BASE = 'https://bizdavar.com';
+const DEFAULT_OG = 'assets/images/content/about-hero.svg';
+
+/** Per-page Open Graph images (relative to site root) */
+const PAGE_OG = {
+  home: 'assets/images/content/hero-home.svg',
+  about: 'assets/images/content/about-hero.svg',
+  contact: 'assets/images/content/contact-banner.svg',
+  fast: 'assets/images/content/hero-home.svg',
+  articleDigitalMarketing: 'assets/images/content/hero-home.svg',
+  articleWhatIsDm: 'assets/images/content/hero-home.svg',
+  articleSmm: 'assets/images/content/hero-home.svg',
+  articleFastStudio: 'assets/images/content/hero-home.svg',
+  articleIndustrialSensors: 'assets/images/content/hero-home.svg',
+  articleAboutBizdavar: 'assets/images/content/about-hero.svg'
+};
+
 const PAGE_ROUTES = {
   home: '/',
   about: '/pages/about',
@@ -29,6 +46,10 @@ const PAGE_ROUTES = {
   digiSystem: '/pages/digi-system',
   teraoka: '/pages/teraoka',
   bzDiamond: '/pages/bz-diamond',
+  supplifyTrade: '/pages/supplify-trade',
+  kayaOne: '/pages/kaya-one',
+  smmTurk: '/pages/smm-turk',
+  fxguardExchange: '/pages/fxguard-exchange',
   biztejarat: '/pages/biztejarat',
   biztab: '/pages/biztab',
   bizsanitizerV5: '/pages/bizsanitizer-v5',
@@ -49,14 +70,27 @@ for (const [key, route] of Object.entries(PAGE_ROUTES)) {
   for (const lang of ['fa', 'tr', 'en']) {
     const page = global.BIZDAVAR_LOCALES[lang]?.pages?.[key];
     if (!page) continue;
+    const ogRel = PAGE_OG[key] || DEFAULT_OG;
     manifest[route][lang] = {
       title: page.seoTitle || '',
-      description: page.seoDescription || ''
+      description: page.seoDescription || '',
+      keywords: page.seoKeywords || '',
+      ogImage: BASE + '/' + ogRel.replace(/^\//, ''),
+      type: route.indexOf('/articles/') >= 0 ? 'article' : 'website'
     };
   }
 }
 
+const siteMeta = {
+  base: BASE,
+  siteName: 'Bizdavar Group',
+  defaultOgImage: BASE + '/' + DEFAULT_OG.replace(/^\//, ''),
+  twitterCard: 'summary_large_image',
+  robots: 'index, follow, max-image-preview:large'
+};
+
 const body = '/** Auto-generated — run: node scripts/gen-seo-head.js */\n'
+  + 'window.BIZDAVAR_SEO_SITE=' + JSON.stringify(siteMeta, null, 0) + ';\n'
   + 'window.BIZDAVAR_SEO_HEAD=' + JSON.stringify(manifest, null, 0) + ';\n';
 
 fs.writeFileSync(OUT, body, 'utf8');

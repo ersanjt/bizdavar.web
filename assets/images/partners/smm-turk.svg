@@ -1,5 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 52" role="img" aria-label="SMM Turk">
-  <rect width="200" height="52" rx="6" fill="#f4f5f8"/>
-  <text x="100" y="24" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#16163f">SMM</text>
-  <text x="100" y="40" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#c41e3a">Turk</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 56" role="img" aria-label="SMM Turk">
+  <rect x="2" y="8" width="40" height="40" rx="8" fill="#E11D2E"/>
+  <text x="22" y="36" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#fff">S</text>
+  <text x="52" y="28" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#111827">SMM TURK</text>
+  <text x="52" y="44" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="600" fill="#E11D2E" letter-spacing="1.5">SMM PANEL</text>
 </svg>

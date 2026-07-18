@@ -1588,6 +1588,17 @@ body {
   margin-bottom: var(--space-3);
 }
 
+.presence-istanbul-hub__actions .btn--outline {
+  border-color: rgba(255, 255, 255, 0.55);
+  color: var(--white);
+}
+
+.presence-istanbul-hub__actions .btn--outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--yellow);
+  color: var(--yellow);
+}
+
 .presence-istanbul-hub__note {
   margin: 0;
   font-size: var(--text-sm);

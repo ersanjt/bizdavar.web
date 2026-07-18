@@ -32,7 +32,7 @@
     var knownPages = {
       about: 1, services: 1, portfolio: 1, blog: 1, contact: 1, privacy: 1, fast: 1,
       vega: 1, prosense: 1, teltonika: 1, gamak: 1, 'digi-system': 1, teraoka: 1,
-      'bz-diamond': 1, biztejarat: 1, products: 1, biztab: 1, 'bizsanitizer-v5': 1,
+      'bz-diamond': 1, 'supplify-trade': 1, 'kaya-one': 1, 'smm-turk': 1, 'fxguard-exchange': 1, biztejarat: 1, products: 1, biztab: 1, 'bizsanitizer-v5': 1,
       fxguard: 1, bizswap: 1
     };
 
@@ -89,6 +89,16 @@
     return splitPath(window.location.pathname).locale;
   }
 
+  function isPrefixedLocale() {
+    return !!PREFIXED[splitPath(window.location.pathname).locale];
+  }
+
+  /** Skip geo redirects — crawlers must see the exact URL from sitemap/hreflang */
+  function isSearchBot() {
+    var ua = String(navigator.userAgent || '').toLowerCase();
+    return /googlebot|google-inspectiontool|storebot-google|bingbot|slurp|duckduckbot|baiduspider|yandexbot|applebot|petalbot|facebot|facebookexternalhit|twitterbot|linkedinbot|semrushbot|ahrefsbot|mj12bot|dotbot|rogerbot/i.test(ua);
+  }
+
   function localizeCanonical(url, locale) {
     try {
       var u = new URL(url, BASE);
@@ -110,6 +120,8 @@
     hreflangUrls: hreflangUrls,
     currentPagePath: currentPagePath,
     currentLocale: currentLocale,
+    isPrefixedLocale: isPrefixedLocale,
+    isSearchBot: isSearchBot,
     localizeCanonical: localizeCanonical
   };
 })();

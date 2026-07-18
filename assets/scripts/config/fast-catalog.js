@@ -103,6 +103,10 @@ window.FAST_CATALOG = {
 
   showcases: [
     { name: 'BZ Diamond', category: 'فروشگاه جواهرات', slug: 'pages/bz-diamond', internal: true },
+    { name: 'Supplify Trade', category: 'تجارت بین‌المللی B2B', slug: 'pages/supplify-trade', internal: true },
+    { name: 'Kaya One AG', category: 'تجارت سوئیسی B2B', slug: 'pages/kaya-one', internal: true },
+    { name: 'SMM Turk', category: 'پنل SMM', slug: 'pages/smm-turk', internal: true },
+    { name: 'FXGuard Exchange', category: 'فین‌تک / تبادل ارز', slug: 'pages/fxguard-exchange', internal: true },
     { name: 'Karen Leather', category: 'چرم و مد', domain: 'karenleather.com', internal: false },
     { name: 'Marvelous Holding', category: 'هلدینگ', domain: 'marvelousholding.com', internal: false },
     { name: 'NIK Aesthetic', category: 'کلینیک زیبایی', domain: 'nikaesthetic.com', internal: false },

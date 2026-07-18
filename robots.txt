@@ -1,12 +1,17 @@
 # Bizdavar Group — https://bizdavar.com
-# Multilingual site (fa / tr / en) — canonical URLs are extensionless
+# Multilingual site — fa (root), tr (/tr/), en (/en/) — 81 URLs in sitemap.xml
 
 User-agent: *
 Allow: /
 
-# Static assets — not standalone pages
+# SEO/i18n boot scripts (needed for Google to see per-locale title, canonical, hreflang)
+Allow: /assets/scripts/i18n/
+
+# Other JS/CSS bundles — not indexable pages
 Disallow: /assets/scripts/
 Disallow: /assets/styles/
+
+# Non-public areas
 Disallow: /admin/
 Disallow: /api/
 

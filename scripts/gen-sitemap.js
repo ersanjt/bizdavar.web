@@ -8,7 +8,7 @@ const path = require('path');
 
 const BASE = 'https://bizdavar.com';
 const OUT = path.join(__dirname, '..', 'sitemap.xml');
-const SITE_UPDATE = '2026-07-04';
+const SITE_UPDATE = '2026-07-06';
 
 const LOCALES = [
   { code: 'fa', prefix: '' },
@@ -40,6 +40,10 @@ const PAGES = [
   { path: '/pages/digi-system', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/teraoka', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/bz-diamond', changefreq: 'monthly', priority: 0.75, lastmod: SITE_UPDATE },
+  { path: '/pages/supplify-trade', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
+  { path: '/pages/kaya-one', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
+  { path: '/pages/smm-turk', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
+  { path: '/pages/fxguard-exchange', changefreq: 'monthly', priority: 0.85, lastmod: SITE_UPDATE },
   { path: '/pages/biztejarat', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/biztab', changefreq: 'monthly', priority: 0.85, lastmod: '2020-03-16' },
   { path: '/pages/bizsanitizer-v5', changefreq: 'monthly', priority: 0.85, lastmod: '2021-06-01' },

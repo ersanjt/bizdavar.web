@@ -7,7 +7,15 @@
   const GEO_CACHE_KEY = 'bizdavar_geo_locale';
   const GEO_MAP = { TR: 'tr', IR: 'fa' };
   const DEFAULT_OTHER = 'en';
-  const GEO_TIMEOUT = 1500;
+  const GEO_TIMEOUT = 2500;
+
+  function localeHintFromNavigator() {
+    const nav = String(navigator.language || navigator.userLanguage || '').toLowerCase();
+    if (nav.startsWith('tr')) return 'tr';
+    if (nav.startsWith('fa')) return 'fa';
+    if (nav.startsWith('en')) return 'en';
+    return null;
+  }
 
   function fetchAbortSignal(ms) {
     if (typeof AbortSignal !== 'undefined' && typeof AbortSignal.timeout === 'function') {
@@ -139,8 +147,9 @@
 
     getOwnedProducts() {
       const base = window.BIZDAVAR_OWNED_PRODUCTS?.items || [];
-      const meta = this.raw('productsPage.items') || {};
-      const cats = this.raw('productsPage.categories') || {};
+      const page = this.raw('productsPage') || this.raw('pages.products') || {};
+      const meta = page.items || {};
+      const cats = page.categories || {};
       const baseCats = Object.fromEntries(
         (window.BIZDAVAR_OWNED_PRODUCTS?.categories || [])
           .filter(c => c && c.id && c.label)
@@ -160,7 +169,8 @@
 
     getOwnedProductCategories() {
       const cats = window.BIZDAVAR_OWNED_PRODUCTS?.categories || [];
-      const labels = this.raw('productsPage.categories') || {};
+      const page = this.raw('productsPage') || this.raw('pages.products') || {};
+      const labels = page.categories || {};
       return cats.map(c => ({
         ...c,
         label: labels[c.id]?.label || c.label || c.id,
@@ -498,11 +508,15 @@
     },
 
     resolveLocaleSync() {
+      const LU = window.BIZDAVAR_LOCALE_URL;
+      if (LU) {
+        const pathLocale = LU.currentLocale();
+        if (pathLocale !== LU.DEFAULT) {
+          return pathLocale;
+        }
+      }
       if (document.body?.dataset?.page === 'article') {
         return 'fa';
-      }
-      if (window.BIZDAVAR_LOCALE_URL) {
-        return window.BIZDAVAR_LOCALE_URL.currentLocale();
       }
       const params = new URLSearchParams(window.location.search);
       if (params.get('lang') && window.BIZDAVAR_LOCALES[params.get('lang')]) {
@@ -510,21 +524,35 @@
         localStorage.setItem(MANUAL_KEY, '1');
         return params.get('lang');
       }
+      const manual = localStorage.getItem(MANUAL_KEY) === '1';
       const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored && window.BIZDAVAR_LOCALES[stored] && localStorage.getItem(MANUAL_KEY) === '1') {
+      if (manual && stored && window.BIZDAVAR_LOCALES[stored]) {
         return stored;
       }
       const geoCached = sessionStorage.getItem(GEO_CACHE_KEY);
+      if (LU) {
+        const pathLocale = LU.currentLocale();
+        if (geoCached && window.BIZDAVAR_LOCALES[geoCached]) {
+          return geoCached;
+        }
+        const hinted = localeHintFromNavigator();
+        if (hinted && window.BIZDAVAR_LOCALES[hinted]) {
+          return hinted;
+        }
+        return pathLocale;
+      }
       if (geoCached && window.BIZDAVAR_LOCALES[geoCached]) {
         return geoCached;
       }
       const htmlLang = document.documentElement.lang;
       if (htmlLang === 'tr' || htmlLang === 'en') return htmlLang;
-      return 'fa';
+      return localeHintFromNavigator() || 'fa';
     },
 
     async applyGeoLocale(currentLang) {
-      if (document.body?.dataset?.page === 'article') return currentLang;
+      const LU = window.BIZDAVAR_LOCALE_URL;
+      if (LU?.isSearchBot?.()) return currentLang;
+      if (LU?.isPrefixedLocale?.()) return currentLang;
       if (localStorage.getItem(MANUAL_KEY) === '1') return currentLang;
       const params = new URLSearchParams(window.location.search);
       if (params.get('lang') && window.BIZDAVAR_LOCALES[params.get('lang')]) return currentLang;
@@ -533,14 +561,15 @@
       const loc = localeFromCountry(country);
       sessionStorage.setItem(GEO_CACHE_KEY, loc);
 
-      const pathLocale = window.BIZDAVAR_LOCALE_URL?.currentLocale?.() || 'fa';
-      if (pathLocale === 'fa' && loc !== 'fa' && window.BIZDAVAR_LOCALE_URL) {
-        const target = window.BIZDAVAR_LOCALE_URL.toLocalePath(
-          loc,
-          window.BIZDAVAR_LOCALE_URL.currentPagePath()
-        );
-        window.location.replace(target + window.location.hash);
-        return loc;
+      const pathLocale = LU?.currentLocale?.() || 'fa';
+
+      if (LU && loc !== pathLocale) {
+        const target = LU.toLocalePath(loc, LU.currentPagePath());
+        const destPath = target.split('#')[0];
+        if (window.location.pathname !== destPath) {
+          window.location.replace(target + window.location.hash);
+          return loc;
+        }
       }
 
       localStorage.setItem(STORAGE_KEY, loc);
@@ -553,7 +582,6 @@
     },
 
     setLocale(lang) {
-      if (document.body?.dataset?.page === 'article') return;
       if (!window.BIZDAVAR_LOCALES[lang]) return;
       localStorage.setItem(STORAGE_KEY, lang);
       localStorage.setItem(MANUAL_KEY, '1');
@@ -585,13 +613,15 @@
   window.BIZDAVAR_I18N = I18n;
 
   (function preloadLocale() {
-    const pathLocale = window.BIZDAVAR_LOCALE_URL?.currentLocale?.();
+    const LU = window.BIZDAVAR_LOCALE_URL;
+    const pathLocale = LU?.currentLocale?.();
     const params = new URLSearchParams(window.location.search);
     const qLang = params.get('lang');
     const stored = localStorage.getItem(STORAGE_KEY);
     const manual = localStorage.getItem(MANUAL_KEY) === '1';
     const articlePage = document.body?.dataset?.page === 'article';
-    const pre = articlePage ? 'fa'
+    const pre = (LU && pathLocale && pathLocale !== LU.DEFAULT) ? pathLocale
+      : articlePage ? 'fa'
       : pathLocale || null
       || ((qLang && window.BIZDAVAR_LOCALES[qLang]) ? qLang
       : (manual && stored && window.BIZDAVAR_LOCALES[stored]) ? stored : null);

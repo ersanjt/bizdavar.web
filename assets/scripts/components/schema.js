@@ -201,8 +201,41 @@
 
     injectHreflang(meta.canonical || C.baseUrl);
     injectOgLocaleAlternates();
+    injectWebPageSchema(meta);
     injectSiteGraph();
   };
+
+  function schemaLangTag() {
+    const lang = window.BIZDAVAR_I18N?.locale
+      || document.documentElement.getAttribute('lang')
+      || 'fa';
+    const map = { fa: 'fa-IR', tr: 'tr-TR', en: 'en-US' };
+    return map[lang] || 'fa-IR';
+  }
+
+  function injectWebPageSchema(meta) {
+    const url = meta.canonical || C.baseUrl;
+    const pageType = meta.type === 'article' ? 'Article' : 'WebPage';
+    const ld = {
+      '@context': 'https://schema.org',
+      '@type': pageType,
+      '@id': `${url}#webpage`,
+      url,
+      name: meta.title,
+      description: meta.description,
+      inLanguage: schemaLangTag(),
+      isPartOf: { '@id': `${C.baseUrl}/#website` }
+    };
+    if (pageType === 'Article') {
+      ld.headline = meta.title;
+      ld.publisher = {
+        '@type': 'Organization',
+        name: C.siteNameEn,
+        logo: { '@type': 'ImageObject', url: logoAbsUrl() }
+      };
+    }
+    injectJsonLd('jsonld-webpage', ld);
+  }
 
   function logoAbsUrl() {
     const logo = A.logo || A.logoOnDark;
@@ -609,39 +642,33 @@
   };
 
   window.injectArticleSchema = function (article) {
+    const LU = window.BIZDAVAR_LOCALE_URL;
+    const locale = LU?.currentLocale?.() || window.BIZDAVAR_I18N?.locale || 'fa';
+    const pageUrl = LU
+      ? LU.toAbsolute(locale, article.slug)
+      : absUrl(article.slug);
 
     const ld = {
-
       '@context': 'https://schema.org',
-
       '@type': 'Article',
-
+      '@id': `${pageUrl}#article`,
+      url: pageUrl,
       headline: article.title,
-
       description: article.description,
-
       datePublished: article.date,
-
+      inLanguage: schemaLangTag(),
       author: { '@type': 'Organization', name: C.siteNameEn },
-
       publisher: {
-
         '@type': 'Organization',
-
         name: C.siteNameEn,
-
-        logo: { '@type': 'ImageObject', url: `${C.baseUrl}/${A.logo}` }
-
+        logo: { '@type': 'ImageObject', url: logoAbsUrl() }
       },
-
-      mainEntityOfPage: absUrl(article.slug),
-
-      image: article.image ? absUrl(article.image) : `${C.baseUrl}/${A.ogImage}`
-
+      mainEntityOfPage: pageUrl,
+      image: article.image ? absUrl(article.image) : logoAbsUrl(),
+      isPartOf: { '@id': `${C.baseUrl}/#website` }
     };
 
     injectJsonLd('jsonld-article', ld);
-
   };
 
   function injectJsonLd(id, data) {

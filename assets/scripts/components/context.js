@@ -15,7 +15,11 @@
   const PAGE_ID_ALIASES = {
     bizsanitizerV5: 'bizsanitizer-v5',
     digiSystem: 'digi-system',
-    bzDiamond: 'bz-diamond'
+    bzDiamond: 'bz-diamond',
+    supplifyTrade: 'supplify-trade',
+    kayaOne: 'kaya-one',
+    smmTurk: 'smm-turk',
+    fxguardExchange: 'fxguard-exchange'
   };
   function normalizePageId(id) {
     return PAGE_ID_ALIASES[id] || id;
@@ -47,7 +51,7 @@
 
     const knownPages = new Set([
       'about', 'services', 'portfolio', 'blog', 'contact', 'privacy', 'fast', 'vega',
-      'prosense', 'teltonika', 'gamak', 'digi-system', 'teraoka', 'bz-diamond', 'biztejarat',
+      'prosense', 'teltonika', 'gamak', 'digi-system', 'teraoka', 'bz-diamond', 'supplify-trade', 'kaya-one', 'smm-turk', 'fxguard-exchange', 'biztejarat',
       'products', 'biztab', 'bizsanitizer-v5', 'fxguard', 'bizswap'
     ]);
     const stem = n.replace(/\.html$/, '');
