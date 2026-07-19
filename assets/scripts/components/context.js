@@ -92,16 +92,33 @@
     return `${C.baseUrl}/${clean}${hash}`;
   }
 
+  function getWhatsappChannels() {
+    const channels = [...(C.contact.channels || [])];
+    const locale = window.BIZDAVAR_I18N?.locale || 'fa';
+    const preferId = locale === 'tr' ? 'tr' : 'ir';
+    channels.sort((a, b) => {
+      if (a.id === preferId) return -1;
+      if (b.id === preferId) return 1;
+      return 0;
+    });
+    return channels;
+  }
+
+  function getPrimaryWhatsapp() {
+    const preferred = getWhatsappChannels()[0];
+    return preferred?.whatsapp || C.contact.whatsapp || '';
+  }
+
   function buildContactPoints() {
-    const channels = C.contact.channels || [];
+    const channels = getWhatsappChannels();
     const langs = ['Persian', 'English', 'Turkish'];
     if (channels.length) {
       return channels.map(ch => ({
         '@type': 'ContactPoint',
-        contactType: 'customer service',
+        contactType: ch.id === 'ir' ? 'customer service' : 'sales',
         telephone: ch.tel,
-        areaServed: ch.id === 'ir' ? 'IR' : 'TR',
-        availableLanguage: langs,
+        areaServed: ch.id === 'ir' ? ['IR', 'Worldwide'] : 'TR',
+        availableLanguage: ch.id === 'ir' ? ['Persian', 'English'] : langs,
         contactOption: 'https://schema.org/WhatsApp'
       }));
     }
@@ -170,8 +187,11 @@
     currentPage,
     normalizePageId,
     buildWaUrl,
+    getWhatsappChannels,
+    getPrimaryWhatsapp,
     get wa() {
-      return C.contact.whatsapp ? buildWaUrl(C.contact.whatsapp) : siteLink(R.contact);
+      const num = getPrimaryWhatsapp();
+      return num ? buildWaUrl(num) : siteLink(R.contact);
     },
     ic,
     linkArrow,

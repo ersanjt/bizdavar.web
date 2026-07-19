@@ -13,20 +13,20 @@ require(path.join(ROOT, 'assets/scripts/i18n/locales.js'));
 require(path.join(ROOT, 'assets/scripts/i18n/locale-seo.js'));
 
 const BASE = 'https://bizdavar.com';
-const DEFAULT_OG = 'assets/images/content/about-hero.svg';
+const DEFAULT_OG = 'assets/images/brand/bizdavar-logo-square.png';
 
 /** Per-page Open Graph images (relative to site root) */
 const PAGE_OG = {
-  home: 'assets/images/content/hero-home.svg',
-  about: 'assets/images/content/about-hero.svg',
-  contact: 'assets/images/content/contact-banner.svg',
-  fast: 'assets/images/content/hero-home.svg',
-  articleDigitalMarketing: 'assets/images/content/hero-home.svg',
-  articleWhatIsDm: 'assets/images/content/hero-home.svg',
-  articleSmm: 'assets/images/content/hero-home.svg',
-  articleFastStudio: 'assets/images/content/hero-home.svg',
-  articleIndustrialSensors: 'assets/images/content/hero-home.svg',
-  articleAboutBizdavar: 'assets/images/content/about-hero.svg'
+  home: 'assets/images/brand/bizdavar-logo-square.png',
+  about: 'assets/images/brand/bizdavar-logo-square.png',
+  contact: 'assets/images/brand/bizdavar-logo-square.png',
+  fast: 'assets/images/brand/bizdavar-logo-square.png',
+  articleDigitalMarketing: 'assets/images/brand/bizdavar-logo-square.png',
+  articleWhatIsDm: 'assets/images/brand/bizdavar-logo-square.png',
+  articleSmm: 'assets/images/brand/bizdavar-logo-square.png',
+  articleFastStudio: 'assets/images/brand/bizdavar-logo-square.png',
+  articleIndustrialSensors: 'assets/images/brand/bizdavar-logo-square.png',
+  articleAboutBizdavar: 'assets/images/brand/bizdavar-logo-square.png'
 };
 
 const PAGE_ROUTES = {

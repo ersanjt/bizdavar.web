@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 48" role="img" aria-label="Marvi Society">
+  <rect width="210" height="48" rx="8" fill="#1e1b4b"/>
+  <text x="14" y="30" font-family="system-ui,sans-serif" font-size="16" font-weight="700" fill="#c4b5fd">Marvi</text>
+  <text x="66" y="30" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#f8fafc">Society</text>
+  
+  <rect x="156" y="14" width="42" height="20" rx="4" fill="#7c3aed"/>
+  <text x="177" y="28" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#fff">iOS</text>
+</svg>

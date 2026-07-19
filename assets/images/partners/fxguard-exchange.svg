@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" role="img" aria-label="FXGuard Exchange">
+  <rect width="160" height="48" rx="8" fill="#0f172a"/>
+  <text x="12" y="30" font-family="system-ui,sans-serif" font-size="18" font-weight="800" fill="#22c55e">fx</text>
+  <text x="38" y="30" font-family="system-ui,sans-serif" font-size="14" font-weight="600" fill="#f8fafc">guard</text>
+  <rect x="100" y="14" width="48" height="20" rx="4" fill="#1d4ed8"/>
+  <text x="124" y="28" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#fff">EX</text>
+</svg>

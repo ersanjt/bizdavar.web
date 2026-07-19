@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 48" role="img" aria-label="FXGuard Accounting">
+  <rect width="250" height="48" rx="8" fill="#0f172a"/>
+  <text x="14" y="30" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="#22c55e">fx</text>
+  <text x="40" y="30" font-family="system-ui,sans-serif" font-size="14" font-weight="600" fill="#f8fafc">guard</text>
+  
+  <rect x="196" y="14" width="42" height="20" rx="4" fill="#0ea5e9"/>
+  <text x="217" y="28" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#fff">ACC</text>
+</svg>

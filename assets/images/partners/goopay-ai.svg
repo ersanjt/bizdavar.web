@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 48" role="img" aria-label="GooPay AI">
+  <rect width="180" height="48" rx="8" fill="#052e16"/>
+  <text x="14" y="30" font-family="system-ui,sans-serif" font-size="17" font-weight="700" fill="#4ade80">Goo</text>
+  <text x="52" y="30" font-family="system-ui,sans-serif" font-size="17" font-weight="700" fill="#f8fafc">Pay</text>
+  <text x="92" y="30" font-family="system-ui,sans-serif" font-size="14" font-weight="600" fill="#86efac"> AI</text>
+  
+  
+</svg>

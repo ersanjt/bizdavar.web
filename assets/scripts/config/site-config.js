@@ -96,13 +96,14 @@ window.BIZDAVAR_CONFIG = {
 
   contact: {
     email: 'info@bizdavar.com',
-    phone: '+905010676486',
-    phoneDisplay: '+90 501 067 6486 · +98 930 588 0135',
-    whatsapp: '905010676486',
+    /** Primary line = Persian WhatsApp (worldwide Farsi-speaking leads) */
+    phone: '+989305880135',
+    phoneDisplay: '+98 930 588 0135 · +90 501 067 6486',
+    whatsapp: '989305880135',
     whatsappMessage: 'سلام، از وبسایت bizdavar.com پیام می‌دهم.',
     channels: [
-      { id: 'tr', label: 'ترکیه', display: '+90 501 067 6486', tel: '+905010676486', whatsapp: '905010676486' },
-      { id: 'ir', label: 'ایران', display: '+98 930 588 0135', tel: '+989305880135', whatsapp: '989305880135' }
+      { id: 'ir', label: 'واتساپ فارسی', display: '+98 930 588 0135', tel: '+989305880135', whatsapp: '989305880135', primary: true },
+      { id: 'tr', label: 'ترکیه', display: '+90 501 067 6486', tel: '+905010676486', whatsapp: '905010676486' }
     ],
     address: 'استانبول، ترکیه',
     workingHours: '۷/۲۴ — همیشه در دسترس',
@@ -281,7 +282,7 @@ window.BIZDAVAR_CONFIG = {
     { name: 'Supplify Trade', url: 'pages/supplify-trade.html', logo: 'assets/images/partners/supplify-trade.svg', role: 'case-study' },
     { name: 'Kaya One AG', url: 'pages/kaya-one.html', logo: 'assets/images/partners/kaya-one.svg', role: 'case-study' },
     { name: 'SMM Turk', url: 'pages/smm-turk.html', logo: 'assets/images/partners/smm-turk.svg', role: 'case-study' },
-    { name: 'FXGuard Exchange', url: 'pages/fxguard-exchange.html', logo: 'assets/images/products/fxguard/fxguard-logo.svg', role: 'case-study' },
+    { name: 'FXGuard Exchange', url: 'pages/fxguard-exchange.html', logo: 'assets/images/partners/fxguard-exchange.svg', role: 'case-study' },
     { name: 'Biztejarat', url: 'pages/biztejarat.html', logo: 'assets/images/partners/biztejarat.svg', role: 'case-study' },
     { name: 'Marvelous Holding', url: 'https://marvelousholding.com', logo: 'assets/images/partners/marvelous-holding.png', role: 'client' },
     { name: 'Grafik Travel', url: 'http://grafiktravel.com/', logo: 'assets/images/partners/grafik-travel.png', role: 'client' },
@@ -375,8 +376,8 @@ window.BIZDAVAR_CONFIG = {
 
   portfolio: [
     { name: 'ZedPay', domain: 'zed-pay.com', category: 'فین‌تک / توسعه وب‌اپ', role: 'case-study', internal: false, logo: 'assets/images/partners/zedpay.png', note: 'نمونه‌کار — مدیریت تیم برنامه‌نویسی و توسعه، طراحی وب‌اپلیکیشن، مدیریت شبکه و امنیت، مدیریت ایمیل و ایجاد زیرساخت‌های اولیه' },
-    { name: 'ZedGate IO', domain: 'zedgate.io', category: 'زیرساخت فین‌تک', role: 'ecosystem', internal: false, archived: true, note: 'پروژه غیرفعال' },
-    { name: 'ZedGP', domain: 'zedgp.com', category: 'خدمات مالی', role: 'ecosystem', internal: false, archived: true, note: 'پروژه غیرفعال' },
+    { name: 'ZedGate IO', domain: 'zedgate.io', category: 'زیرساخت فین‌تک', role: 'ecosystem', internal: false, archived: true, logo: 'assets/images/partners/zedgate-io.png', note: 'پروژه غیرفعال' },
+    { name: 'ZedGP', domain: 'zedgp.com', category: 'خدمات مالی', role: 'ecosystem', internal: false, archived: true, logo: 'assets/images/partners/zedgp.png', note: 'پروژه غیرفعال' },
     { name: 'ZedX DMCC', domain: 'zedxdmcc.com', category: 'طراحی وب / زیرساخت', role: 'case-study', internal: false, logo: 'assets/images/partners/zedxdmcc.png', note: 'نمونه‌کار — طراحی وبسایت و زیرساخت' },
     { name: 'BZ Diamond', domain: 'bzdiamond.com', category: 'طراحی وب / فروشگاه', role: 'case-study', internal: true, slug: 'pages/bz-diamond.html', logo: 'assets/images/partners/zeddiamond.png', note: 'نمونه‌کار — WooCommerce و مدیریت ایمیل' },
     { name: 'Supplify Trade', domain: 'supplifytrade.com', url: 'https://supplifytrade.com/', category: 'طراحی وب / تجارت بین‌المللی B2B', role: 'case-study', internal: true, slug: 'pages/supplify-trade.html', logo: 'assets/images/partners/supplify-trade.svg', note: 'نمونه‌کار — وبسایت شرکتی تجارت و sourcing با لایسنس RAKEZ امارات' },
@@ -384,23 +385,23 @@ window.BIZDAVAR_CONFIG = {
     { name: 'Zed Diamond', domain: 'zeddiamond.com', category: 'طراحی وب / فروشگاه جواهرات', role: 'case-study', internal: false, logo: 'assets/images/partners/zeddiamond.png', note: 'نمونه‌کار — طراحی وبسایت فروشگاهی و تولید محتوا' },
     { name: 'BZ Broker', domain: 'bzbroker.com', category: 'طراحی وب / بروکر', role: 'case-study', internal: false, logo: 'assets/images/partners/bz-broker.png', note: 'نمونه‌کار — طراحی وبسایت و تولید محتوا' },
     { name: 'BZ Payment', domain: 'bz-payment.com', category: 'پرداخت', role: 'ecosystem', internal: false, logo: 'assets/images/partners/bz-payment.png' },
-    { name: 'BlueNil Air', domain: 'bluenil-air.com', category: 'هواپیمایی', role: 'client', internal: false, archived: true, note: 'پروژه گذشته — وبسایت به‌دلیل عدم تمدید سرور در دسترس نیست' },
-    { name: 'Bridged3', domain: 'bridged3.com', category: 'مارکت‌پلیس B2B / فروشگاه', role: 'case-study', internal: false, archived: true, note: 'نمونه‌کار ناتمام — هدف پروژه ایجاد فروشگاه B2B و مارکت‌پلیس عمده‌فروشی (مدل علی‌بابا) بود' },
-    { name: 'iBan2iBan', domain: 'iban2iban.com', category: 'زیرساخت ایمیل / SMTP', role: 'case-study', internal: false, note: 'نمونه‌کار — راه‌اندازی سیستم مدیریت SMTP' },
-    { name: 'Bear Event', domain: 'bearevent.co', category: 'رویداد و بلیت', role: 'ecosystem', internal: false },
+    { name: 'BlueNil Air', domain: 'bluenil-air.com', category: 'هواپیمایی', role: 'client', internal: false, archived: true, logo: 'assets/images/partners/bluenil-air.png', note: 'پروژه گذشته — وبسایت به‌دلیل عدم تمدید سرور در دسترس نیست' },
+    { name: 'Bridged3', domain: 'bridged3.com', category: 'مارکت‌پلیس B2B / فروشگاه', role: 'case-study', internal: false, archived: true, logo: 'assets/images/partners/bridged3.png', note: 'نمونه‌کار ناتمام — هدف پروژه ایجاد فروشگاه B2B و مارکت‌پلیس عمده‌فروشی (مدل علی‌بابا) بود' },
+    { name: 'iBan2iBan', domain: 'iban2iban.com', category: 'زیرساخت ایمیل / SMTP', role: 'case-study', internal: false, logo: 'assets/images/partners/iban2iban.png', note: 'نمونه‌کار — راه‌اندازی سیستم مدیریت SMTP' },
+    { name: 'Bear Event', domain: 'bearevent.co', category: 'رویداد و بلیت', role: 'ecosystem', internal: false, logo: 'assets/images/partners/bear-event.png' },
     { name: 'Netinode', domain: 'netinode.net', url: 'https://netinode.net/', category: 'دامنه، هاست و سرور', role: 'case-study', internal: false, logo: 'assets/images/partners/netinohost.png', note: 'نمونه‌کار و سرویس زیرساخت بیزدوار — فروش دامنه، هاست، WordPress Hosting، ایمیل تجاری، DNS و سرور' },
-    { name: 'Fast Web Studio', domain: 'bizdavar.com', category: 'طراحی سایت', role: 'case-study', internal: true, slug: 'pages/fast.html', logo: 'assets/images/content/hero-home.svg', note: 'محصول اختصاصی بیزدوار — طراحی سایت ۵ روزه' },
+    { name: 'Fast Web Studio', domain: 'bizdavar.com', category: 'طراحی سایت', role: 'case-study', internal: true, slug: 'pages/fast.html', logo: 'assets/images/partners/fast-studio.png', note: 'محصول اختصاصی بیزدوار — طراحی سایت ۵ روزه' },
     { name: 'BizTab', domain: 'nasrnews.ir', url: 'https://nasrnews.ir/print/16727/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D9%88-%D8%B3%D8%A7%D8%AE%D8%AA-%D8%A7%D9%88%D9%84%DB%8C%D9%86-%D8%AF%D9%85%D8%A7%D8%B3%D9%86%D8%AC-%D8%AF%DB%8C%D9%88%D8%A7%D8%B1%DB%8C-%D8%BA%DB%8C%D8%B1%D8%AA%D9%85%D8%A7%D8%B3%DB%8C-%D8%AF%D8%B1-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2', category: 'محصول اختصاصی / IoT و سلامت', role: 'case-study', internal: true, slug: 'pages/biztab.html', logo: 'assets/images/products/biztab/biztab-hero.jpg', note: 'محصول اختصاصی — اولین دماسنج دیواری غیرتماسی تبریز، توسعه تیم بیزدوار' },
     { name: 'BizClean V5', domain: 'digikala.com', url: 'https://www.digikala.com/product/dkp-3730222/', category: 'محصول اختصاصی / بهداشت', role: 'case-study', internal: true, slug: 'pages/bizsanitizer-v5.html', logo: 'assets/images/products/bizsanitizer/bizclean-v5.png', note: 'محصول اختصاصی — دستگاه ضدعفونی دست V5، توسعه در دوران کرونا' },
     { name: 'FXGuard', domain: 'bizdavar.com', category: 'اسکریپت CRM واتساپ', role: 'case-study', internal: true, slug: 'pages/fxguard.html', logo: 'assets/images/products/fxguard/fxguard-logo.svg', note: 'اسکریپت اختصاصی CRM واتساپ — پنل تیمی، پیام انبوه و پاسخ خودکار ۲۴/۷؛ پلن $500، $800 و $1,200' },
     { name: 'BizSwap', domain: 'Web3 · DeFi Module', category: 'Web3 / پیش‌فروش و سواپ توکن', role: 'case-study', internal: true, slug: 'pages/bizswap.html', logo: 'assets/images/products/bizswap/bizswap-logo.svg', note: 'نمونه‌کار — ماژول پیش‌فروش و سواپ on-chain (BEP-20)، اتصال کیف پول و UI DeFi؛ توسعه تیم بیزدوار' },
-    { name: 'FXGuard Exchange', domain: 'exchange.fxguard.io', url: 'https://exchange.fxguard.io/', category: 'طراحی وب / صرافی و فین‌تک', role: 'case-study', internal: true, slug: 'pages/fxguard-exchange.html', logo: 'assets/images/products/fxguard/fxguard-logo.svg', note: 'نمونه‌کار — پلتفرم تبادل تومان و لیر با نرخ زنده، KYC و پیگیری سفارش' },
-    { name: 'FXGuard Accounting', domain: 'accounting.fxguard.io', category: 'نرم‌افزار حسابداری / فینانس', role: 'case-study', internal: false, note: 'نمونه‌کار — سیستم حسابداری حرفه‌ای با برنامه‌نویسی اختصاصی، مناسب کسب‌وکارهای فینانس و صرافی' },
-    { name: 'Marvispace', domain: 'marvispace.com', url: 'https://marvispace.com', category: 'طراحی وب / فروشگاه اختصاصی', role: 'case-study', internal: false, note: 'نمونه‌کار — فروشگاه آنلاین اختصاصی با داشبورد ادمین، مدیریت محصول و محتوا' },
-    { name: 'Marvi Society', domain: 'marvisociety.com', url: 'https://marvisociety.com', appStoreUrl: 'https://apps.apple.com/us/app/marvi-society/id6783450762', category: 'توسعه اپ موبایل / lifestyle و creator', role: 'case-study', internal: false, note: 'نمونه‌کار — طراحی، برنامه‌نویسی و راه‌اندازی صفر تا صد اپ iOS؛ کلاب دعوت‌محور همکاری creator و مکان تأییدشده در استانبول — کشف مکان، check-in، ارسال مدرک بازدید، پروفایل TR/EN؛ منتشر در App Store' },
-    { name: 'GooPay AI', domain: 'goopay.ai', category: 'هوش مصنوعی / نرم‌افزار اختصاصی', role: 'case-study', internal: false, note: 'نمونه‌کار — طراحی و برنامه‌نویسی اختصاصی سیستم‌های هوش مصنوعی' },
+    { name: 'FXGuard Exchange', domain: 'exchange.fxguard.io', url: 'https://exchange.fxguard.io/', category: 'طراحی وب / صرافی و فین‌تک', role: 'case-study', internal: true, slug: 'pages/fxguard-exchange.html', logo: 'assets/images/partners/fxguard-exchange.svg', note: 'نمونه‌کار — پلتفرم تبادل تومان و لیر با نرخ زنده، KYC و پیگیری سفارش' },
+    { name: 'FXGuard Accounting', domain: 'accounting.fxguard.io', category: 'نرم‌افزار حسابداری / فینانس', role: 'case-study', internal: false, logo: 'assets/images/partners/fxguard-accounting.svg', note: 'نمونه‌کار — سیستم حسابداری حرفه‌ای با برنامه‌نویسی اختصاصی، مناسب کسب‌وکارهای فینانس و صرافی' },
+    { name: 'Marvispace', domain: 'marvispace.com', url: 'https://marvispace.com', category: 'طراحی وب / فروشگاه اختصاصی', role: 'case-study', internal: false, logo: 'assets/images/partners/marvispace.svg', note: 'نمونه‌کار — فروشگاه آنلاین اختصاصی با داشبورد ادمین، مدیریت محصول و محتوا' },
+    { name: 'Marvi Society', domain: 'marvisociety.com', url: 'https://marvisociety.com', appStoreUrl: 'https://apps.apple.com/us/app/marvi-society/id6783450762', category: 'توسعه اپ موبایل / lifestyle و creator', role: 'case-study', internal: false, logo: 'assets/images/partners/marvi-society.svg', note: 'نمونه‌کار — طراحی، برنامه‌نویسی و راه‌اندازی صفر تا صد اپ iOS؛ کلاب دعوت‌محور همکاری creator و مکان تأییدشده در استانبول — کشف مکان، check-in، ارسال مدرک بازدید، پروفایل TR/EN؛ منتشر در App Store' },
+    { name: 'GooPay AI', domain: 'goopay.ai', category: 'هوش مصنوعی / نرم‌افزار اختصاصی', role: 'case-study', internal: false, logo: 'assets/images/partners/goopay-ai.svg', note: 'نمونه‌کار — طراحی و برنامه‌نویسی اختصاصی سیستم‌های هوش مصنوعی' },
     { name: 'Grafik Travel', domain: 'grafiktravel.com', url: 'http://grafiktravel.com/', category: 'طراحی وب / گردشگری و MICE', role: 'case-study', internal: false, logo: 'assets/images/partners/grafik-travel.png', note: 'نمونه‌کار — طراحی وبسایت تخصصی برای مجموعه گردشگری و خدمات سازمانی' },
-    { name: 'Biztejarat', domain: 'instagram.com/biztejarat', category: 'مدیریت SMM / اینستاگرام', role: 'case-study', internal: true, slug: 'pages/biztejarat.html', archived: true, note: 'پروژه گذشته — این کسب‌وکار فعلاً غیرفعال شده است' },
+    { name: 'Biztejarat', domain: 'instagram.com/biztejarat', category: 'مدیریت SMM / اینستاگرام', role: 'case-study', internal: true, slug: 'pages/biztejarat.html', archived: true, logo: 'assets/images/partners/biztejarat.svg', note: 'پروژه گذشته — این کسب‌وکار فعلاً غیرفعال شده است' },
     { name: 'Arian Pumps', domain: 'arianpumps.com', category: 'طراحی وب / B2B', role: 'case-study', internal: false, logo: 'assets/images/partners/arian-pumps.png', note: 'نمونه‌کار — طراحی وب و خدمات دیجیتال' },
     { name: 'Marvelous Holding', domain: 'marvelousholding.com', url: 'https://marvelousholding.com', category: 'طراحی وب / هلدینگ و سرمایه‌گذاری', role: 'case-study', internal: false, logo: 'assets/images/partners/marvelous-holding.png', note: 'نمونه‌کار — وبسایت هلدینگ، سرمایه‌گذاری و معرفی زیرمجموعه‌ها' },
     { name: 'SMM Turk', domain: 'smm-turk.com', url: 'https://smm-turk.com/', category: 'طراحی وب / پنل SMM', role: 'case-study', internal: true, slug: 'pages/smm-turk.html', logo: 'assets/images/partners/smm-turk.svg', note: 'نمونه‌کار — طراحی وبسایت و پنل SMM با برنامه نمایندگی و پرداخت کریپتو' },
@@ -418,12 +419,12 @@ window.BIZDAVAR_CONFIG = {
     { name: 'Havana', domain: 'havana.com', category: 'مشاوره تبلیغات / پشتیبانی وب', role: 'case-study', internal: false, logo: 'assets/images/partners/havana.png', note: 'نمونه‌کار — مشاوره تبلیغاتی، پشتیبانی وب، امنیت شبکه و تولید محتوا' },
     { name: 'Sanat Moharek', domain: 'sanatm.com', category: 'طراحی وب / بازاریابی صنعتی', role: 'case-study', internal: false, logo: 'assets/images/partners/sanat-moharek.png', note: 'نمونه‌کار — طراحی وب، بازاریابی، مدیریت شبکه‌های اجتماعی و مشاوره تبلیغاتی' },
     { name: 'هتل شایان تبریز', domain: 'hotel-shayan.com', url: 'https://hotel-shayan.com', category: 'طراحی وب / هتلداری و گردشگری', role: 'case-study', internal: false, logo: 'assets/images/partners/hotel-shayan.png', note: 'نمونه‌کار — وبسایت هتل ۴ ستاره تبریز؛ رزرو، معرفی اتاق‌ها و خدمات اقامتی' },
-    { name: 'Ajansin', domain: 'ajansin.com', url: 'https://ajansin.com', category: 'طراحی وب / آژانس دیجیتال', role: 'case-study', internal: false, note: 'نمونه‌کار — وبسایت آژانس دیجیتال استانبول با Next.js و React؛ طراحی وب، UI/UX، فروشگاه آنلاین و سئو' },
+    { name: 'Ajansin', domain: 'ajansin.com', url: 'https://ajansin.com', category: 'طراحی وب / آژانس دیجیتال', role: 'case-study', internal: false, logo: 'assets/images/partners/ajansin.svg', note: 'نمونه‌کار — وبسایت آژانس دیجیتال استانبول با Next.js و React؛ طراحی وب، UI/UX، فروشگاه آنلاین و سئو' },
     { name: 'Bizdavar Group', domain: 'bizdavar.com', url: 'https://bizdavar.com', category: 'طراحی وب / آژانس دیجیتال', role: 'case-study', internal: false, logo: 'assets/images/brand/bizdavar-logo.png', note: 'وبسایت شرکتی چندزبانه (fa/tr/en) — خدمات دیجیتال، تامین صنعتی، محصولات، نمونه‌کارها و Fast Studio' },
-    { name: 'Ersan Jahed Tabrizi', domain: 'ersanjahedtabrizi.ir', url: 'https://ersanjahedtabrizi.ir', category: 'طراحی وب / رزومه و معرفی شخصی', role: 'case-study', internal: false, note: 'نمونه‌کار — رزومه و معرفی شخصی بنیان‌گذار؛ timeline حرفه‌ای، مهارت‌ها، نمونه لوگو و دانلود CV' },
-    { name: 'Europe Gayrimenkul', domain: 'europegayrimenkul.com', url: 'https://europegayrimenkul.com', category: 'طراحی وب / املاک و سرمایه‌گذاری', role: 'case-study', internal: false, note: 'نمونه‌کار — املاک استانبول؛ فروش، اجاره روزانه/ماهانه، اقامت (oturum)، سند tapu و مشاوره چندزبانه (TR/EN/AR/FA)' },
-    { name: 'Erst Investment', domain: 'erstinvestment.com', url: 'https://erstinvestment.com', category: 'طراحی وب / سرمایه‌گذاری', role: 'case-study', internal: false, note: 'نمونه‌کار — وبسایت شرکت سرمایه‌گذاری (راه‌اندازی و پیکربندی hosting/DNS)' },
-    { name: 'Mandella Chocolate', domain: 'mandellachocolate.com', url: 'https://mandellachocolate.com', category: 'طراحی وب / کافه و رستوران', role: 'case-study', internal: false, note: 'نمونه‌کار — کافه قهوه و شکلات در ارزروم؛ منوی QR، گالری و معرفی مکان' },
+    { name: 'Ersan Jahed Tabrizi', domain: 'ersanjahedtabrizi.ir', url: 'https://ersanjahedtabrizi.ir', category: 'طراحی وب / رزومه و معرفی شخصی', role: 'case-study', internal: false, logo: 'assets/images/partners/ersan-jahed-tabrizi.svg', note: 'نمونه‌کار — رزومه و معرفی شخصی بنیان‌گذار؛ timeline حرفه‌ای، مهارت‌ها، نمونه لوگو و دانلود CV' },
+    { name: 'Europe Gayrimenkul', domain: 'europegayrimenkul.com', url: 'https://europegayrimenkul.com', category: 'طراحی وب / املاک و سرمایه‌گذاری', role: 'case-study', internal: false, logo: 'assets/images/partners/europe-gayrimenkul.svg', note: 'نمونه‌کار — املاک استانبول؛ فروش، اجاره روزانه/ماهانه، اقامت (oturum)، سند tapu و مشاوره چندزبانه (TR/EN/AR/FA)' },
+    { name: 'Erst Investment', domain: 'erstinvestment.com', url: 'https://erstinvestment.com', category: 'طراحی وب / سرمایه‌گذاری', role: 'case-study', internal: false, logo: 'assets/images/partners/erst-investment.svg', note: 'نمونه‌کار — وبسایت شرکت سرمایه‌گذاری (راه‌اندازی و پیکربندی hosting/DNS)' },
+    { name: 'Mandella Chocolate', domain: 'mandellachocolate.com', url: 'https://mandellachocolate.com', category: 'طراحی وب / کافه و رستوران', role: 'case-study', internal: false, logo: 'assets/images/partners/mandella-chocolate.svg', note: 'نمونه‌کار — کافه قهوه و شکلات در ارزروم؛ منوی QR، گالری و معرفی مکان' },
     { name: 'Netino Host', domain: 'netinohost.com', url: 'https://netinohost.com', category: 'طراحی وب / هاستینگ', role: 'case-study', internal: false, logo: 'assets/images/partners/netinohost.png', note: 'نمونه‌کار — پلتفرم فروش هاست، VPS، ایمیل و دامنه فارسی؛ WHMCS و بازار ایران' },
     { name: 'پتروشیمی تبریز', domain: 'tpco.ir', category: 'تامین تجهیزات صنعتی / پتروشیمی', role: 'case-study', internal: false, logo: 'assets/images/partners/petrotabriz.png', note: 'نمونه‌کار — تامین تجهیزات صنعتی' }
   ]
@@ -431,9 +432,17 @@ window.BIZDAVAR_CONFIG = {
 
 window.getWhatsappUrl = function (message) {
   const C = window.BIZDAVAR_CONFIG;
-  if (!C || !C.contact.whatsapp) return window.resolvePath(C.routes.contact);
+  const num = window.BD_CTX?.getPrimaryWhatsapp?.() || C?.contact?.whatsapp;
+  if (!C || !num) return window.resolvePath(C.routes.contact);
+  if (window.BD_CTX?.buildWaUrl) {
+    const url = window.BD_CTX.buildWaUrl(num);
+    if (message) {
+      return `https://wa.me/${num}?text=${encodeURIComponent(message)}`;
+    }
+    return url;
+  }
   const text = message || C.contact.whatsappMessage;
-  return `https://wa.me/${C.contact.whatsapp}?text=${encodeURIComponent(text)}`;
+  return `https://wa.me/${num}?text=${encodeURIComponent(text)}`;
 };
 
 window.getProjectUrl = function (project) {

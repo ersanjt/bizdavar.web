@@ -12,7 +12,7 @@ window.BIZDAVAR_LOCALES = {
       address: 'استانبول، ترکیه',
       workingHours: '۷/۲۴ — همیشه در دسترس',
       channelTr: 'ترکیه',
-      channelIr: 'ایران'
+      channelIr: 'واتساپ فارسی'
     },
     seo: {
       defaultTitle: 'بیزدوار گروپ | خدمات دیجیتال، طراحی سایت و تامین تجهیزات صنعتی',
@@ -284,7 +284,7 @@ window.BIZDAVAR_LOCALES = {
       formSuccessMailto: 'پیام شما آماده ارسال است. اگر پنجره ایمیل باز نشد، مستقیماً به info@bizdavar.com بنویسید.',
       formError: 'ارسال ناموفق بود. لطفاً دوباره تلاش کنید یا مستقیماً به info@bizdavar.com ایمیل بزنید.',
       waTr: 'واتساپ ترکیه',
-      waIr: 'واتساپ ایران',
+      waIr: 'واتساپ فارسی',
       mapTitle: 'همکاری بین‌المللی',
       mapDesc: 'بیزدوار گروپ با تمرکز بر پروژه‌های دیجیتال و صنعتی، به کسب‌وکارها در ایران، ترکیه و بازارهای بین‌المللی خدمات ارائه می‌دهد.',
       schemaName: 'تماس با ما — ',
@@ -363,7 +363,7 @@ window.BIZDAVAR_LOCALES = {
       address: 'İstanbul, Türkiye',
       workingHours: '7/24',
       channelTr: 'Türkiye',
-      channelIr: 'İran'
+      channelIr: 'WhatsApp Farsça'
     },
     seo: {
       defaultTitle: 'Bizdavar Group | Dijital hizmetler, web tasarım ve endüstriyel tedarik',
@@ -635,7 +635,7 @@ window.BIZDAVAR_LOCALES = {
       formSuccessMailto: 'Mesajınız gönderilmeye hazır. E-posta penceresi açılmazsa info@bizdavar.com adresine yazın.',
       formError: 'Gönderim başarısız. Lütfen tekrar deneyin veya doğrudan info@bizdavar.com adresine yazın.',
       waTr: 'WhatsApp Türkiye',
-      waIr: 'WhatsApp İran',
+      waIr: 'WhatsApp Farsça',
       mapTitle: 'Uluslararası iş birliği',
       mapDesc: 'Bizdavar Group dijital ve endüstriyel projelerle İran, Türkiye ve uluslararası pazarlara hizmet verir.',
       schemaName: 'İletişim — ',
@@ -714,7 +714,7 @@ window.BIZDAVAR_LOCALES = {
       address: 'Istanbul, Turkey',
       workingHours: '24/7',
       channelTr: 'Turkey',
-      channelIr: 'Iran'
+      channelIr: 'Persian WhatsApp'
     },
     seo: {
       defaultTitle: 'Bizdavar Group | Digital services, web design & industrial supply',
@@ -986,7 +986,7 @@ window.BIZDAVAR_LOCALES = {
       formSuccessMailto: 'Your message is ready to send. If the email window does not open, write to info@bizdavar.com directly.',
       formError: 'Sending failed. Please try again or email info@bizdavar.com directly.',
       waTr: 'WhatsApp Turkey',
-      waIr: 'WhatsApp Iran',
+      waIr: 'WhatsApp Persian',
       mapTitle: 'International collaboration',
       mapDesc: 'Bizdavar Group serves businesses in Iran, Turkey, and international markets with digital and industrial projects.',
       schemaName: 'Contact — ',

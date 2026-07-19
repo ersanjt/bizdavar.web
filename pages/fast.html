@@ -30,6 +30,21 @@
   <link rel="stylesheet" href="/assets/styles/site.css">
 <link rel="stylesheet" href="/assets/styles/fast.css">
   <meta name="description" content="Fast Web Studio بیزدوار — طراحی سایت در ۵ روز. پلن پایه $99، فروشگاهی $199، حرفه‌ای $299. RTL، واتساپ فارسی، WooCommerce و سئو پایه.">
+  <!-- bd-static-seo -->
+  <meta property="og:title" content="Fast Web Studio | طراحی سایت حرفه‌ای در ۵ روز — بیزدوار">
+  <meta property="og:description" content="Fast Web Studio بیزدوار — طراحی سایت در ۵ روز. پلن پایه $99، فروشگاهی $199، حرفه‌ای $299. RTL، واتساپ فارسی، WooCommerce و سئو پایه.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bizdavar.com/pages/fast">
+  <meta property="og:image" content="https://bizdavar.com/assets/images/brand/bizdavar-logo-square.png">
+  <meta property="og:image:alt" content="Fast Web Studio | طراحی سایت حرفه‌ای در ۵ روز — بیزدوار">
+  <meta property="og:locale" content="fa_IR">
+  <meta property="og:site_name" content="Bizdavar Group">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fast Web Studio | طراحی سایت حرفه‌ای در ۵ روز — بیزدوار">
+  <meta name="twitter:description" content="Fast Web Studio بیزدوار — طراحی سایت در ۵ روز. پلن پایه $99، فروشگاهی $199، حرفه‌ای $299. RTL، واتساپ فارسی، WooCommerce و سئو پایه.">
+  <meta name="twitter:image" content="https://bizdavar.com/assets/images/brand/bizdavar-logo-square.png">
+  <link rel="canonical" href="https://bizdavar.com/pages/fast">
+  <!-- /bd-static-seo -->
 </head>
 <body data-page="fast" data-depth="1">
   <!-- Google Tag Manager (noscript) -->
@@ -54,7 +69,7 @@
         <div class="section__header section__header--pro">
           <span class="section__eyebrow" data-i18n="fastPage.sections.plans.eyebrow">پلن‌های قیمت</span>
           <h2 class="section__title" data-i18n="fastPage.sections.plans.title">پلن مناسب کسب‌وکار خود را انتخاب کنید</h2>
-          <p class="section__desc" data-i18n-html="fastPage.sections.plans.desc">قیمت ثابت، بدون هزینه پنهان — سفارش از واتساپ یا <a href="contact">فرم تماس</a>.</pa>.</pa>.</pa>.</p>
+          <p class="section__desc" data-i18n-html="fastPage.sections.plans.desc">قیمت ثابت، بدون هزینه پنهان — سفارش از واتساپ یا <a href="/pages/contact">فرم تماس</a>.</p>
         </div>
         <div class="fast-plans-grid" id="fastPlansGrid"></div>
         <div class="fast-dev-cta-wrap" id="fastDevCta"></div>
@@ -88,7 +103,7 @@
         <div class="section__header section__header--pro">
           <span class="section__eyebrow" data-i18n="fastPage.sections.why.eyebrow">چرا Fast؟</span>
           <h2 class="section__title" data-i18n="fastPage.sections.why.title">چرا Fast Web Studio؟</h2>
-          <p class="section__desc" data-i18n-html="fastPage.sections.why.desc">محصولی از <a href="about">بیزدوار گروپ</a> — نه آژانس عمومی با وعده‌های مبهم.</pa> — نه آژانس عمومی با وعده‌های مبهم.</pa> — نه آژانس عمومی با وعده‌های مبهم.</pa> � ?? ????? ????? ?? ???????? ????.</p>
+          <p class="section__desc" data-i18n-html="fastPage.sections.why.desc">محصولی از <a href="/pages/about">بیزدوار گروپ</a> — نه آژانس عمومی با وعده‌های مبهم.</p>
         </div>
         <div class="fast-why-grid" id="fastWhyGrid"></div>
       </div>
@@ -99,7 +114,7 @@
         <div class="section__header section__header--pro">
           <span class="section__eyebrow" data-i18n="fastPage.sections.showcase.eyebrow">نمونه‌کارها</span>
           <h2 class="section__title" data-i18n="fastPage.sections.showcase.title">سایت‌هایی که با بیزدوار ساخته شده‌اند</h2>
-          <p class="section__desc" data-i18n-html="fastPage.sections.showcase.desc">نمونه پروژه‌های طراحی وب — <a href="portfolio">مشاهده همه نمونه‌کارها</a></pa></pa></pa></p>
+          <p class="section__desc" data-i18n-html="fastPage.sections.showcase.desc">نمونه پروژه‌های طراحی وب — <a href="/pages/portfolio">مشاهده همه نمونه‌کارها</a></p>
         </div>
         <div class="fast-showcase-grid" id="fastShowcaseGrid"></div>
       </div>
@@ -139,13 +154,15 @@
     </div>
 
   </main>
-<button class="back-to-top" id="backToTop" aria-label="?????? ?? ????">&uarr;</button>
+<button class="back-to-top" id="backToTop" aria-label="بازگشت به بالا">&uarr;</button>
 
   
   <script src="/assets/scripts/site-loader.js" data-after-seo="i18n/fast-catalog-i18n.js" data-after-page-i18n="config/fast-catalog.js" data-before-main="fast-page.js"></script>
   
   <script>
     bizdavarPageInit(function () {
+      const renderChrome = window.__bizdavarChrome || window.renderSiteChrome;
+      if (typeof renderChrome === 'function') renderChrome();
 
       const crumbs = [
         { page: 'home', url: 'index' },
@@ -162,7 +179,7 @@
       if (typeof initFast === 'function') initFast();
       renderGeoStrip('geoStrip', {
         textKey: 'fastPage.geoText',
-        text: '????? ???? ???? ??????????? ?????? ????? ? ???????? ?????????? � ????? ? ????? ?????? ????? ? ???????? ?? ?? ??????????.'
+        text: 'طراحی سایت برای کسب‌وکارهای ایران، ترکیه و بازارهای بین‌المللی — تحویل ۵ روزه، واتساپ فارسی و پشتیبانی پس از راه‌اندازی.'
       });
       if (window.injectFastProductSchema) window.injectFastProductSchema();
       if (window.renderFastRelatedLinks) window.renderFastRelatedLinks();

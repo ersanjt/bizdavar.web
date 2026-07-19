@@ -169,44 +169,64 @@ const articles = [
 
 function shell(a) {
   const crumbs = [
-    `{ page: 'home', url: '../../index' }`,
-    `{ page: 'blog', url: '../blog' }`,
+    `{ page: 'home', url: 'index' }`,
+    `{ page: 'blog', url: 'blog' }`,
     `{ name: '${a.title.replace(/'/g, "\\'")}', url: '${a.slug}' }`
   ];
-  const related = a.related.map(r =>
-    `{ title: '${r.title.replace(/'/g, "\\'")}', url: '${r.url}', desc: '${r.desc.replace(/'/g, "\\'")}' }`
-  ).join(',\n            ');
+  const related = a.related.map(r => {
+    const url = r.url.replace(/^\.\.\//, '').replace(/^\.\.\/\.\.\//, '');
+    return `{ title: '${r.title.replace(/'/g, "\\'")}', url: '${url}', desc: '${r.desc.replace(/'/g, "\\'")}' }`;
+  }).join(',\n            ');
+  const body = a.body
+    .replace(/href="\.\.\/([^"]+)"/g, 'href="/pages/$1"')
+    .replace(/href="\/pages\/about"/g, 'href="/pages/about"')
+    .replace(/href="\/pages\/fast"/g, 'href="/pages/fast"')
+    .replace(/href="\/pages\/services/g, 'href="/pages/services')
+    .replace(/href="\/pages\/portfolio"/g, 'href="/pages/portfolio"')
+    .replace(/href="\/pages\/contact"/g, 'href="/pages/contact"')
+    .replace(/href="\/pages\/vega"/g, 'href="/pages/vega"')
+    .replace(/href="\/pages\/prosense"/g, 'href="/pages/prosense"');
+
   return `<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <script src="../../assets/scripts/i18n/locale-preload.js"></script>
+  <script src="/assets/scripts/i18n/locale-url.js"></script>
+  <script src="/assets/scripts/i18n/seo-head.js"></script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NXWQQWF8');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4GFEY12SLH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4GFEY12SLH');
+  </script>
+  <script src="/assets/scripts/i18n/locale-preload.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="view-transition" content="same-origin">
   <title>${a.title} | بیزدوار</title>
-  <link rel="icon" href="../../assets/images/brand/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="../../assets/images/brand/favicon.png" type="image/png" sizes="32x32">
-  <link rel="icon" href="../../assets/images/brand/favicon-16.png" type="image/png" sizes="16x16">
-  <link rel="apple-touch-icon" href="../../assets/images/brand/apple-touch-icon.png">
-  <link rel="stylesheet" href="../../assets/styles/fonts.css">
-  <link rel="stylesheet" href="../../assets/styles/typography.css">
-  <link rel="stylesheet" href="../../assets/styles/icons.css">
-  <link rel="stylesheet" href="../../assets/styles/tokens.css">
-  <link rel="stylesheet" href="../../assets/styles/style.css">
-  <link rel="stylesheet" href="../../assets/styles/layout.css">
-  <link rel="stylesheet" href="../../assets/styles/i18n.css">
-  <link rel="stylesheet" href="../../assets/styles/footer.css">
-  <link rel="stylesheet" href="../../assets/styles/responsive.css">
-  <link rel="stylesheet" href="../../assets/styles/mobile-chrome.css">
+  <link rel="icon" href="/assets/images/brand/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/images/brand/favicon.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/assets/images/brand/favicon-16.png" type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" href="/assets/images/brand/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/styles/site.css">
+  <meta name="description" content="${a.title}">
+  <meta name="robots" content="index, follow, max-image-preview:large">
 </head>
 <body data-page="article" data-depth="2" data-article="${a.slug}">
-
-  <a href="#main-content" class="skip-link" data-i18n="common.skipLink">رفتن به محتوای اصلی</a>
-  <div class="top-bar" id="topBar"></div>
-  <header class="header" id="siteHeader"></header>
-  <nav class="breadcrumbs-wrap" id="breadcrumbs" aria-label="مسیر صفحه"></nav>
-  <div class="overlay" id="overlay"></div>
-
-  <main id="main-content" class="site-main">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXWQQWF8"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <script src="/assets/scripts/components/page-shell.js"></script>
+<main id="main-content" class="site-main">
   <article class="section">
     <div class="container prose article">
       <header class="article__header">
@@ -214,12 +234,12 @@ function shell(a) {
         <h1>${a.title}</h1>
         <p class="detail-meta article__meta">${a.meta}</p>
       </header>
-      <img src="../../${a.og}" alt="${a.imgAlt}" class="article__img" loading="lazy" width="768" height="400">
-      ${a.body}
+      <img src="/${a.og}" alt="${a.imgAlt}" class="article__img" loading="lazy" width="768" height="400">
+      ${body}
       <div class="article__cta">
         <p>برای مشاوره تخصصی با بیزدوار تماس بگیرید.</p>
-        <a href="../contact" class="btn btn--primary">مشاوره رایگان</a>
-        <a href="../services" class="btn btn--yellow">مشاهده خدمات</a>
+        <a href="/pages/contact" class="btn btn--primary">مشاوره رایگان</a>
+        <a href="/pages/services" class="btn btn--yellow">مشاهده خدمات</a>
       </div>
     </div>
   </article>
@@ -227,23 +247,7 @@ function shell(a) {
   <div id="relatedLinks"></div>
   </main>
 
-  <footer class="footer" id="siteFooter"></footer>
-  <button class="back-to-top" id="backToTop" aria-label="بازگشت به بالا" data-i18n-aria="common.backToTop">↑</button>
-
-  <script src="../../assets/scripts/config/paths.js"></script>
-  <script src="../../assets/scripts/config/site-config.js"></script>
-  <script src="../../assets/scripts/i18n/locales.js"></script>
-  <script src="../../assets/scripts/i18n/locales-pages.js"></script>
-  <script src="../../assets/scripts/i18n/locale-seo.js"></script>
-  <script src="../../assets/scripts/i18n/i18n.js"></script>
-  <script src="../../assets/scripts/i18n/page-i18n.js"></script>
-  <script src="../../assets/scripts/components/biz-icons.js"></script>
-  <script src="../../assets/scripts/components/context.js"></script>
-  <script src="../../assets/scripts/components/chrome.js"></script>
-  <script src="../../assets/scripts/components/schema.js"></script>
-  <script src="../../assets/scripts/components/grids.js"></script>
-  <script src="../../assets/scripts/i18n/bootstrap.js"></script>
-  <script src="../../assets/scripts/main.js"></script>
+  <script src="/assets/scripts/site-loader.js"></script>
   <script>
     bizdavarPageInit(function () {
       const crumbs = [
@@ -261,7 +265,6 @@ function shell(a) {
         slug: 'pages/articles/${a.slug}',
         image: '${a.og}'
       });
-      renderSiteChrome();
       renderBreadcrumbs(crumbs);
       injectBreadcrumbSchema(crumbs);
       renderRelatedLinks([

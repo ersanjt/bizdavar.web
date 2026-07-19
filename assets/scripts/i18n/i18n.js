@@ -494,8 +494,17 @@
         C.contact.whatsappMessage = this.t('contact.whatsappMessage');
         C.contact.workingHours = this.t('contact.workingHours');
         C.contact.address = this.t('contact.address');
-        if (C.contact.channels?.[0]) C.contact.channels[0].label = this.t('contact.channelTr');
-        if (C.contact.channels?.[1]) C.contact.channels[1].label = this.t('contact.channelIr');
+        const channels = C.contact.channels || [];
+        const ir = channels.find(c => c.id === 'ir');
+        const tr = channels.find(c => c.id === 'tr');
+        if (ir) ir.label = this.t('contact.channelIr');
+        if (tr) tr.label = this.t('contact.channelTr');
+        // Persian-first by default; Turkish locale keeps TR as primary CTA target
+        const prefer = this.locale === 'tr' ? tr : ir;
+        if (prefer?.whatsapp) {
+          C.contact.whatsapp = prefer.whatsapp;
+          if (prefer.tel) C.contact.phone = prefer.tel;
+        }
       }
       if (C.seo) {
         C.seo.defaultTitle = this.t('seo.defaultTitle');

@@ -393,8 +393,8 @@
         <div class="container">
           <div class="top-bar__contact">
             <a href="mailto:${C.contact.email}">${ic('mail', { size: 16 })} ${C.contact.email}</a>
-            ${(C.contact.channels || []).length
-              ? `<span class="top-bar__wa-group">${(C.contact.channels || []).map(ch => `
+            ${(window.BD_CTX?.getWhatsappChannels?.() || C.contact.channels || []).length
+              ? `<span class="top-bar__wa-group">${(window.BD_CTX?.getWhatsappChannels?.() || C.contact.channels || []).map(ch => `
                   <a href="${buildWaUrl(ch.whatsapp)}" class="top-bar__wa" target="_blank" rel="noopener noreferrer"
                      aria-label="${t('common.whatsapp', 'WhatsApp')} — ${ch.label} (${ch.display})">
                     ${ic('whatsapp', { size: 16 })} <span dir="ltr">${ch.display}</span>
@@ -477,8 +477,8 @@
           </nav>
           <div class="mobile-drawer__contact">
             <a href="mailto:${C.contact.email}" class="mobile-drawer__contact-item">${ic('mail', { size: 16 })} ${C.contact.email}</a>
-            ${(C.contact.channels || []).length
-              ? (C.contact.channels || []).map(ch => `
+            ${(window.BD_CTX?.getWhatsappChannels?.() || C.contact.channels || []).length
+              ? (window.BD_CTX?.getWhatsappChannels?.() || C.contact.channels || []).map(ch => `
             <a href="${buildWaUrl(ch.whatsapp)}" class="mobile-drawer__contact-item mobile-drawer__contact-item--wa" target="_blank" rel="noopener noreferrer">
               ${ic('whatsapp', { size: 16 })} <span>${ch.label}</span> <span dir="ltr">${ch.display}</span>
             </a>`).join('')
@@ -505,7 +505,7 @@
       const trustPills = metrics.slice(0, 3).map((m, i) =>
         `<span class="footer__pill${i === 0 ? ' footer__pill--accent' : ''}">${m.value} ${m.label}</span>`
       ).join('');
-      const channels = C.contact.channels || [];
+      const channels = window.BD_CTX?.getWhatsappChannels?.() || C.contact.channels || [];
       const mailChip = `<a href="mailto:${C.contact.email}" class="footer__chip">
         <span class="footer__chip-icon">${ic('mail', { size: 16 })}</span>
         <span class="footer__chip-ltr">${C.contact.email}</span>

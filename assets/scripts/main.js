@@ -259,7 +259,7 @@ window.fillContactDetails = function () {
 
 
 
-  const channels = C.contact.channels || [];
+  const channels = window.BD_CTX?.getWhatsappChannels?.() || C.contact.channels || [];
   const waUrl = (num) => (window.BD_CTX?.buildWaUrl ? window.BD_CTX.buildWaUrl(num) : `https://wa.me/${num}?text=${encodeURIComponent(C.contact.whatsappMessage || '')}`);
   const ir = C.iranEntity;
   const am = C.armeniaEntity;
@@ -391,7 +391,7 @@ window.setupWhatsappLinks = function () {
 
   if (!C) return;
 
-  const channels = C.contact.channels || [];
+  const channels = window.BD_CTX?.getWhatsappChannels?.() || C.contact.channels || [];
   const waUrl = (num) => (window.BD_CTX?.buildWaUrl ? window.BD_CTX.buildWaUrl(num) : `https://wa.me/${num}?text=${encodeURIComponent(C.contact.whatsappMessage || '')}`);
 
   if (!channels.length && !C.contact.whatsapp) {
@@ -401,8 +401,8 @@ window.setupWhatsappLinks = function () {
     return;
   }
 
-  const primary = channels[0] || { whatsapp: C.contact.whatsapp };
-  const primaryUrl = waUrl(primary.whatsapp);
+  const primaryNum = window.BD_CTX?.getPrimaryWhatsapp?.() || channels[0]?.whatsapp || C.contact.whatsapp;
+  const primaryUrl = waUrl(primaryNum);
 
   document.querySelectorAll('#homeWhatsapp').forEach(el => {
     if (el) {
@@ -434,7 +434,7 @@ window.setupWhatsappLinks = function () {
   }
 
   const legacyBtn = document.getElementById('whatsappBtn');
-  if (legacyBtn && primary) legacyBtn.href = primaryUrl;
+  if (legacyBtn && primaryNum) legacyBtn.href = primaryUrl;
 
 };
 

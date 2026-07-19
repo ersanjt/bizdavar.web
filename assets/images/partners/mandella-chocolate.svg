@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 48" role="img" aria-label="Mandella Chocolate">
+  <rect width="240" height="48" rx="8" fill="#3f1d0f"/>
+  <text x="14" y="30" font-family="system-ui,sans-serif" font-size="16" font-weight="700" fill="#f5d0a9">Mandella</text>
+  <text x="92" y="30" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#fde68a"> Chocolate</text>
+  
+  
+</svg>

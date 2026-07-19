@@ -30,6 +30,21 @@
   <link rel="stylesheet" href="/assets/styles/site.css">
 <link rel="stylesheet" href="/assets/styles/portfolio.css">
   <meta name="description" content="نمونه‌کارهای بیزدوار: ZedPay، BZ Diamond، Marvelous Holding، NIK Aesthetic، Karen Leather و برندهای دیگر — اکوسیستم، مشتریان و پروژه‌های دیجیتال.">
+  <!-- bd-static-seo -->
+  <meta property="og:title" content="نمونه‌کارها | پروژه‌های بیزدوار گروپ — ZedPay، BZ Diamond و...">
+  <meta property="og:description" content="نمونه‌کارهای بیزدوار: ZedPay، BZ Diamond، Marvelous Holding، NIK Aesthetic، Karen Leather و برندهای دیگر — اکوسیستم، مشتریان و پروژه‌های دیجیتال.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bizdavar.com/pages/portfolio">
+  <meta property="og:image" content="https://bizdavar.com/assets/images/brand/bizdavar-logo-square.png">
+  <meta property="og:image:alt" content="نمونه‌کارها | پروژه‌های بیزدوار گروپ — ZedPay، BZ Diamond و...">
+  <meta property="og:locale" content="fa_IR">
+  <meta property="og:site_name" content="Bizdavar Group">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="نمونه‌کارها | پروژه‌های بیزدوار گروپ — ZedPay، BZ Diamond و...">
+  <meta name="twitter:description" content="نمونه‌کارهای بیزدوار: ZedPay، BZ Diamond، Marvelous Holding، NIK Aesthetic، Karen Leather و برندهای دیگر — اکوسیستم، مشتریان و پروژه‌های دیجیتال.">
+  <meta name="twitter:image" content="https://bizdavar.com/assets/images/brand/bizdavar-logo-square.png">
+  <link rel="canonical" href="https://bizdavar.com/pages/portfolio">
+  <!-- /bd-static-seo -->
 </head>
 <body data-page="portfolio" data-depth="1">
   <!-- Google Tag Manager (noscript) -->
@@ -43,7 +58,7 @@
       <div class="container">
         <span class="section__tag" data-i18n="portfolioPage.hero.tag">نمونه‌کارها</span>
         <h1 data-i18n="portfolioPage.hero.title">پروژه‌ها و برندهایی که با ما رشد کرده‌اند</h1>
-        <p data-i18n-html="portfolioPage.hero.desc">اکوسیستم برندهای بیزدوار، نمونه‌کارهای طراحی وب و SMM، و مشتریانی که خدمات دیجیتال دریافت کرده‌اند — <a href="about">درباره بیزدوار</a>.</pa>.</pa>.</pa>.</p>
+        <p data-i18n-html="portfolioPage.hero.desc">اکوسیستم برندهای بیزدوار، نمونه‌کارهای طراحی وب و SMM، و مشتریانی که خدمات دیجیتال دریافت کرده‌اند — <a href="/pages/about">درباره بیزدوار</a>.</p>
         <div class="portfolio-hero-stats" id="portfolioHeroStats"></div>
       </div>
     </section>
@@ -67,6 +82,9 @@
         </div>
         <div class="tags-cloud portfolio-tags">
           <a href="/pages/fxguard-exchange" class="tags-cloud__tag">فین‌تک و پرداخت</a>
+          <span class="tags-cloud__tag">حسابداری و فینانس</span>
+          <span class="tags-cloud__tag">هوش مصنوعی</span>
+          <span class="tags-cloud__tag">اپ موبایل iOS</span>
           <span class="tags-cloud__tag">رویداد و بلیت</span>
           <span class="tags-cloud__tag">هلدینگ و سرمایه‌گذاری</span>
           <a href="https://netinode.net/" class="tags-cloud__tag" target="_blank" rel="noopener noreferrer">هاستینگ و زیرساخت</a>
@@ -105,6 +123,8 @@
 
   <script>
     bizdavarPageInit(function () {
+      const renderChrome = window.__bizdavarChrome || window.renderSiteChrome;
+      if (typeof renderChrome === 'function') renderChrome();
 
       const crumbs = [
         { page: 'home', url: 'index' },
