@@ -627,13 +627,22 @@ function initContactForm() {
       return;
     }
 
-    const subjectEnc = encodeURIComponent(subject);
-    const body = encodeURIComponent(bodyText);
+    const locale = window.BIZDAVAR_I18N?.locale || document.documentElement.lang || 'fa';
+    const channels = window.BD_CTX?.getWhatsappChannels?.() || C.contact.channels || [];
+    const preferTr = locale === 'tr';
+    const channel = channels.find(c => (preferTr ? c.id === 'tr' : c.primary || c.id === 'ir'))
+      || channels[0];
+    const waNum = channel?.whatsapp || C.contact.whatsapp;
+    const waHref = window.BD_CTX?.buildWaUrl
+      ? window.BD_CTX.buildWaUrl(waNum, bodyText)
+      : `https://wa.me/${waNum}?text=${encodeURIComponent(bodyText)}`;
 
-    window.location.href = `mailto:${C.contact.email}?subject=${subjectEnc}&body=${body}`;
-
-    showFeedback('formSuccessMailto', 'پیام شما آماده ارسال است. اگر پنجره ایمیل باز نشد، مستقیماً به info@bizdavar.com بنویسید.', null);
-
+    window.open(waHref, '_blank', 'noopener,noreferrer');
+    showFeedback(
+      'formSuccessWhatsapp',
+      'پیام شما برای واتساپ آماده شد. اگر پنجره باز نشد، از دکمه‌های واتساپ همین صفحه استفاده کنید.',
+      null
+    );
     form.reset();
 
   });

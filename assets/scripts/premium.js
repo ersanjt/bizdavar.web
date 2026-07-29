@@ -15,12 +15,13 @@
 
   function parseStatValue(text) {
     const raw = String(text || '').trim();
-    const prefix = raw.match(/^[^\d]*/)?.[0] || '';
-    const suffix = raw.match(/[^\d]*$/)?.[0] || '';
-    const num = parseFloat(raw.replace(/[^\d.]/g, ''));
+    const latin = raw.replace(/[۰-۹]/g, d => '۰۱۲۳۴۵۶۷۸۹'.indexOf(d));
+    const prefix = latin.match(/^[^\d]*/)?.[0] || '';
+    const suffix = latin.match(/[^\d]*$/)?.[0] || '';
+    const num = parseFloat(latin.replace(/[^\d.]/g, ''));
     if (Number.isNaN(num)) return null;
-    const isPersian = /[۰-۹]/.test(raw);
-    return { num, prefix, suffix, isPersian, raw };
+    const preferPersian = (window.BIZDAVAR_I18N?.locale || document.documentElement.lang || 'fa') === 'fa';
+    return { num, prefix, suffix, isPersian: preferPersian, raw: latin };
   }
 
   function formatStat(val, parsed) {
@@ -37,7 +38,11 @@
     if (!parsed || parsed.num <= 0) return;
 
     el.dataset.counted = '1';
-    if (REDUCED) return;
+    el.dataset.statRaw = parsed.raw;
+    if (REDUCED) {
+      el.textContent = formatStat(parsed.num, parsed);
+      return;
+    }
 
     const duration = 1200;
     const start = performance.now();
@@ -48,7 +53,7 @@
       const eased = 1 - Math.pow(1 - t, 3);
       el.textContent = formatStat(target * eased, parsed);
       if (t < 1) requestAnimationFrame(tick);
-      else el.textContent = parsed.raw;
+      else el.textContent = formatStat(target, parsed);
     }
 
     requestAnimationFrame(tick);
@@ -56,6 +61,7 @@
 
   function initCounters() {
     document.querySelectorAll('.stat__number, .trust-bar__value').forEach(el => {
+      if (el.dataset.statRaw) el.textContent = el.dataset.statRaw;
       if (parseStatValue(el.textContent)) {
         animateCounter(el);
       }

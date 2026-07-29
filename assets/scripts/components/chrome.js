@@ -179,10 +179,11 @@
   function productNavLinkHtml(item) {
     const href = pagePath(R[item.route] || item.route);
     const active = currentPage === item.page ? ' is-active' : '';
+    const label = item.labelKey ? t(item.labelKey, item.label || '') : (item.label || '');
     const desc = item.descKey ? t(item.descKey, '') : '';
     const badge = item.badgeKey ? `<span class="nav__product-badge">${t(item.badgeKey, '')}</span>` : '';
     return `<a href="${href}" class="nav__product-link${active}">
-      <span class="nav__product-name">${item.label}${badge}</span>
+      <span class="nav__product-name">${label}${badge}</span>
       ${desc ? `<span class="nav__product-desc">${desc}</span>` : ''}
     </a>`;
   }
@@ -219,9 +220,10 @@
         ${(group.items || []).map(item => {
           const href = pagePath(R[item.route] || item.route);
           const itemActive = currentPage === item.page ? ' active' : '';
+          const label = item.labelKey ? t(item.labelKey, item.label || '') : (item.label || '');
           const desc = item.descKey ? t(item.descKey, '') : '';
           return `<a href="${href}" class="mobile-drawer__product-link${itemActive}">
-            <span>${item.label}</span>
+            <span>${label}</span>
             ${desc ? `<small>${desc}</small>` : ''}
           </a>`;
         }).join('')}

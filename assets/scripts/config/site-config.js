@@ -53,16 +53,16 @@ window.BIZDAVAR_CONFIG = {
         id: 'software',
         labelKey: 'nav.productsSoftware',
         items: [
-          { route: 'fxguard', page: 'fxguard', label: 'CRM واتساپ', descKey: 'nav.productFxguardDesc', badgeKey: 'nav.productFxguardBadge' },
-          { route: 'bizswap', page: 'bizswap', label: 'BizSwap', descKey: 'nav.productBizswapDesc' }
+          { route: 'fxguard', page: 'fxguard', labelKey: 'nav.productFxguard', label: 'WhatsApp CRM', descKey: 'nav.productFxguardDesc', badgeKey: 'nav.productFxguardBadge' },
+          { route: 'bizswap', page: 'bizswap', labelKey: 'nav.productBizswap', label: 'BizSwap', descKey: 'nav.productBizswapDesc' }
         ]
       },
       {
         id: 'hardware',
         labelKey: 'nav.productsHardware',
         items: [
-          { route: 'biztab', page: 'biztab', label: 'BizTab', descKey: 'nav.productBiztabDesc' },
-          { route: 'bizsanitizerV5', page: 'bizsanitizer-v5', label: 'BizClean', descKey: 'nav.productBizcleanDesc' }
+          { route: 'biztab', page: 'biztab', labelKey: 'nav.productBiztab', label: 'BizTab', descKey: 'nav.productBiztabDesc' },
+          { route: 'bizsanitizerV5', page: 'bizsanitizer-v5', labelKey: 'nav.productBizclean', label: 'BizClean', descKey: 'nav.productBizcleanDesc' }
         ]
       }
     ]

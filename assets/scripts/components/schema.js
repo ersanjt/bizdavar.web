@@ -185,21 +185,20 @@
 
 
 
-    let canonical = document.querySelector('link[rel="canonical"]');
+    const canonicalHref = meta.canonical || C.baseUrl;
+    const existingCanons = [...document.querySelectorAll('link[rel="canonical"]')];
+    let canonical = existingCanons[0];
 
     if (!canonical) {
-
       canonical = document.createElement('link');
-
       canonical.rel = 'canonical';
-
       document.head.appendChild(canonical);
-
     }
 
-    canonical.href = meta.canonical || C.baseUrl;
+    existingCanons.slice(1).forEach(el => el.remove());
+    canonical.href = canonicalHref;
 
-    injectHreflang(meta.canonical || C.baseUrl);
+    injectHreflang(canonicalHref);
     injectOgLocaleAlternates();
     injectWebPageSchema(meta);
     injectSiteGraph();

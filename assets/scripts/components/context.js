@@ -167,12 +167,17 @@
     });
   }
 
-  function buildWaUrl(num) {
+  function buildWaUrl(num, text) {
     if (!num) return siteLink(R.contact);
-    const base = C.contact.whatsappMessage || '';
-    let msg = base;
-    if (typeof location !== 'undefined' && location.href) {
-      msg = `${base}\n${location.href}`;
+    let msg;
+    if (typeof text === 'string' && text.trim()) {
+      msg = text;
+    } else {
+      const base = C.contact.whatsappMessage || '';
+      msg = base;
+      if (typeof location !== 'undefined' && location.href) {
+        msg = `${base}\n${location.href}`;
+      }
     }
     return `https://wa.me/${num}?text=${encodeURIComponent(msg)}`;
   }

@@ -67,6 +67,11 @@ function stripSeoBlock(html) {
   return html.replace(/\n?\s*<!-- bd-static-seo -->[\s\S]*?<!-- \/bd-static-seo -->\n?/g, '\n');
 }
 
+/** Keep a single canonical — remove any leftover before baking the block. */
+function stripCanonicalLinks(html) {
+  return html.replace(/\n?\s*<link\s+rel=["']canonical["'][^>]*>\s*/gi, '\n');
+}
+
 function upsertTitle(html, title) {
   if (!title) return html;
   if (/<title>[^<]*<\/title>/i.test(html)) {
@@ -137,6 +142,7 @@ for (const [rel, route] of Object.entries(FILE_TO_ROUTE)) {
   }
 
   html = stripSeoBlock(html);
+  html = stripCanonicalLinks(html);
   html = upsertTitle(html, meta.title);
   html = upsertDescription(html, meta.description);
 

@@ -21,11 +21,17 @@ const PAGE_OG = {
   about: 'assets/images/brand/bizdavar-logo-square.png',
   contact: 'assets/images/brand/bizdavar-logo-square.png',
   fast: 'assets/images/brand/bizdavar-logo-square.png',
+  vega: 'assets/images/vega/slides/value-process-safety.jpg',
+  prosense: 'assets/images/prosense/slides/pq-sil.jpg',
+  fxguard: 'assets/images/products/fxguard/fxguard-hero.svg',
+  bizswap: 'assets/images/products/bizswap/bizswap-hero.svg',
+  biztab: 'assets/images/products/biztab/biztab-hero.jpg',
+  bizsanitizerV5: 'assets/images/products/bizsanitizer/bizclean-v5.png',
   articleDigitalMarketing: 'assets/images/brand/bizdavar-logo-square.png',
   articleWhatIsDm: 'assets/images/brand/bizdavar-logo-square.png',
   articleSmm: 'assets/images/brand/bizdavar-logo-square.png',
   articleFastStudio: 'assets/images/brand/bizdavar-logo-square.png',
-  articleIndustrialSensors: 'assets/images/brand/bizdavar-logo-square.png',
+  articleIndustrialSensors: 'assets/images/vega/slides/value-process-safety.jpg',
   articleAboutBizdavar: 'assets/images/brand/bizdavar-logo-square.png'
 };
 
