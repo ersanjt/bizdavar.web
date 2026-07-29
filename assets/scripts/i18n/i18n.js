@@ -461,12 +461,13 @@
         if (priv && p.privacyLink) {
           const link = priv.querySelector('a');
           if (link) link.textContent = p.privacyLink;
-          priv.innerHTML = `${p.privacyBefore || p.privacy || ''} <a href="privacy" target="_blank" rel="noopener">${p.privacyLink}</a>${p.privacyAfter || p.privacyAgree || ''}`;
+          priv.innerHTML = `${p.privacyBefore || p.privacy || ''} <a href="/pages/privacy" target="_blank" rel="noopener">${p.privacyLink}</a>${p.privacyAfter || p.privacyAgree || ''}`;
         }
         const note = document.getElementById('privacy-note');
         if (note && p.formNote) note.textContent = p.formNote;
         const success = document.getElementById('formSuccess');
-        if (success && success.hidden && p.formSuccessMailto) success.textContent = p.formSuccessMailto;
+        if (success && success.hidden && p.formSuccessWhatsapp) success.textContent = p.formSuccessWhatsapp;
+        else if (success && success.hidden && p.formSuccessMailto) success.textContent = p.formSuccessMailto;
       }
 
       const waTr = document.getElementById('whatsappBtnTr');

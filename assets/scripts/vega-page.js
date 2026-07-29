@@ -330,12 +330,20 @@
     const V = catalog();
     if (!C || !V.featuredProducts) return;
 
+    const locale = window.BIZDAVAR_I18N?.locale || 'fa';
+    const listName = locale === 'tr'
+      ? 'VEGA sensör tedariki — Bizdavar Group'
+      : locale === 'en'
+        ? 'VEGA sensor supply — Bizdavar Group'
+        : 'تامین سنسورهای VEGA — بیزدوار گروپ';
+
     const ld = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: 'تامین سنسورهای VEGA — بیزدوار گروپ',
+      name: listName,
       description: V.brand.description || V.brand.descriptionFa,
       numberOfItems: V.featuredProducts.length,
+      areaServed: ['IR', 'TR', 'AM', 'AE', 'DE'],
       itemListElement: V.featuredProducts.map((p, i) => ({
         '@type': 'ListItem',
         position: i + 1,
@@ -346,10 +354,12 @@
           image: `${C.baseUrl}/${p.image}`,
           brand: { '@type': 'Brand', name: 'VEGA' },
           category: p.series,
+          areaServed: ['IR', 'TR'],
           offers: {
             '@type': 'Offer',
             availability: 'https://schema.org/PreOrder',
-            seller: { '@type': 'Organization', name: C.siteName }
+            seller: { '@type': 'Organization', name: C.siteName },
+            areaServed: ['IR', 'TR']
           }
         }
       }))

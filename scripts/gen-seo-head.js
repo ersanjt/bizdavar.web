@@ -34,7 +34,10 @@ const PAGE_OG = {
   articleIndustrialSensors: 'assets/images/vega/slides/value-process-safety.jpg',
   articleAboutBizdavar: 'assets/images/brand/bizdavar-logo-square.png',
   articleVegaSupplyIran: 'assets/images/vega/slides/value-process-safety.jpg',
-  articleMultilingualWeb: 'assets/images/brand/bizdavar-logo-square.png'
+  articleMultilingualWeb: 'assets/images/brand/bizdavar-logo-square.png',
+  bzDiamond: 'assets/images/partners/bzdiamond.webp',
+  kayaOne: 'assets/images/partners/kaya-one.svg',
+  smmTurk: 'assets/images/partners/smm-turk.svg'
 };
 
 const PAGE_ROUTES = {

@@ -36,6 +36,6 @@ bash scripts/deploy-sync.sh
 
 ## Pages
 
-22 HTML pages: home, services, portfolio, contact, brand catalogs (VEGA, Fast, …), blog articles.
+33 public HTML pages (fa default + `/tr` / `/en`): home, services, portfolio, contact, owned products, brand catalogs (VEGA, Prosense, …), case studies, and blog articles.
 
 All asset paths use `/assets/...` (root-absolute). Page links are extensionless (`pages/contact`).

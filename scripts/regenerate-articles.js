@@ -167,7 +167,15 @@ const articles = [
   }
 ];
 
+function escAttr(s) {
+  return String(s || '')
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;');
+}
+
 function shell(a) {
+  const desc = a.description || a.title;
   const crumbs = [
     `{ page: 'home', url: 'index' }`,
     `{ page: 'blog', url: 'blog' }`,
@@ -200,14 +208,6 @@ function shell(a) {
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-NXWQQWF8');</script>
   <!-- End Google Tag Manager -->
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4GFEY12SLH"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-4GFEY12SLH');
-  </script>
   <script src="/assets/scripts/i18n/locale-preload.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="view-transition" content="same-origin">
@@ -217,7 +217,7 @@ function shell(a) {
   <link rel="icon" href="/assets/images/brand/favicon-16.png" type="image/png" sizes="16x16">
   <link rel="apple-touch-icon" href="/assets/images/brand/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/styles/site.css">
-  <meta name="description" content="${a.title}">
+  <meta name="description" content="${escAttr(desc)}">
   <meta name="robots" content="index, follow, max-image-preview:large">
 </head>
 <body data-page="article" data-depth="2" data-article="${a.slug}">
@@ -260,7 +260,7 @@ function shell(a) {
       });
       injectArticleSchema({
         title: '${a.title.replace(/'/g, "\\'")}',
-        description: '${a.title.replace(/'/g, "\\'")}',
+        description: '${desc.replace(/'/g, "\\'")}',
         date: '${a.schemaDate}',
         slug: 'pages/articles/${a.slug}',
         image: '${a.og}'
