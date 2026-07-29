@@ -50,6 +50,8 @@ const PAGES = [
   { path: '/pages/fxguard', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/bizswap', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/articles/about-bizdavar-group', changefreq: 'monthly', priority: 0.85, lastmod: '2025-06-01' },
+  { path: '/pages/articles/vega-supply-iran', changefreq: 'monthly', priority: 0.85, lastmod: '2026-07-29' },
+  { path: '/pages/articles/multilingual-web-iran-turkey', changefreq: 'monthly', priority: 0.85, lastmod: '2026-07-29' },
   { path: '/pages/articles/what-is-digital-marketing', changefreq: 'yearly', priority: 0.7, lastmod: '2025-02-10' },
   { path: '/pages/articles/digital-marketing', changefreq: 'yearly', priority: 0.7, lastmod: '2025-04-01' },
   { path: '/pages/articles/social-media-management', changefreq: 'yearly', priority: 0.7, lastmod: '2025-03-05' },

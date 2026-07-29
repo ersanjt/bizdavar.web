@@ -32,7 +32,9 @@ const PAGE_OG = {
   articleSmm: 'assets/images/brand/bizdavar-logo-square.png',
   articleFastStudio: 'assets/images/brand/bizdavar-logo-square.png',
   articleIndustrialSensors: 'assets/images/vega/slides/value-process-safety.jpg',
-  articleAboutBizdavar: 'assets/images/brand/bizdavar-logo-square.png'
+  articleAboutBizdavar: 'assets/images/brand/bizdavar-logo-square.png',
+  articleVegaSupplyIran: 'assets/images/vega/slides/value-process-safety.jpg',
+  articleMultilingualWeb: 'assets/images/brand/bizdavar-logo-square.png'
 };
 
 const PAGE_ROUTES = {
@@ -66,7 +68,9 @@ const PAGE_ROUTES = {
   articleSmm: '/pages/articles/social-media-management',
   articleFastStudio: '/pages/articles/fast-studio',
   articleIndustrialSensors: '/pages/articles/industrial-sensors',
-  articleAboutBizdavar: '/pages/articles/about-bizdavar-group'
+  articleAboutBizdavar: '/pages/articles/about-bizdavar-group',
+  articleVegaSupplyIran: '/pages/articles/vega-supply-iran',
+  articleMultilingualWeb: '/pages/articles/multilingual-web-iran-turkey'
 };
 
 const manifest = {};

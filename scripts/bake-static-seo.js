@@ -53,7 +53,9 @@ const FILE_TO_ROUTE = {
   'pages/articles/social-media-management.html': '/pages/articles/social-media-management',
   'pages/articles/fast-studio.html': '/pages/articles/fast-studio',
   'pages/articles/industrial-sensors.html': '/pages/articles/industrial-sensors',
-  'pages/articles/about-bizdavar-group.html': '/pages/articles/about-bizdavar-group'
+  'pages/articles/about-bizdavar-group.html': '/pages/articles/about-bizdavar-group',
+  'pages/articles/vega-supply-iran.html': '/pages/articles/vega-supply-iran',
+  'pages/articles/multilingual-web-iran-turkey.html': '/pages/articles/multilingual-web-iran-turkey'
 };
 
 function escAttr(s) {

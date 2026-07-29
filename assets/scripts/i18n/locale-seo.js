@@ -160,6 +160,16 @@
         seoTitle: 'بیزدوار گروپ چیست؟ — تاریخچه، تیم، ۱۱ کشور | راهنمای کامل',
         seoDescription: 'شناسنامه بیزدوار گروپ: بنیان‌گذار ارسان جاهد تبریزی، ۱۰۰+ پروژه، فین‌تک، طراحی وب و تامین VEGA/Prosense در ۱۱ کشور.',
         seoKeywords: 'بیزدوار گروپ, Bizdavar Group, تاریخچه, ارسان جاهد تبریزی'
+      },
+      articleVegaSupplyIran: {
+        seoTitle: 'تامین سنسور VEGA در ایران از استانبول | بیزدوار',
+        seoDescription: 'چگونه سنسور VEGA اصل را برای پروژه‌های ایران تامین کنیم؟ مشاوره فارسی، پیش‌فاکتور و لجستیک از دفتر بیزدوار در استانبول.',
+        seoKeywords: 'خرید VEGA ایران, تامین سنسور VEGA, VEGAPULS, بیزدوار استانبول'
+      },
+      articleMultilingualWeb: {
+        seoTitle: 'وبسایت چندزبانه برای ایران و ترکیه | بیزدوار',
+        seoDescription: 'سایت فارسی–ترکی–انگلیسی با hreflang، اعتماد محلی و تحویل سریع — راهنمای بیزدوار برای کسب‌وکارهای دو بازاری.',
+        seoKeywords: 'طراحی سایت چندزبانه, طراحی سایت استانبول, hreflang, بیزدوار'
       }
     },
     tr: {
@@ -317,6 +327,16 @@
         seoTitle: 'Bizdavar Group nedir? — Tarihçe, ekip, 11 ülke | Tam rehber',
         seoDescription: 'Bizdavar Group profili: kurucu Ersan Jahed Tabrizi, 100+ proje, fintech, web tasarım ve VEGA/Prosense tedariki 11 ülkede.',
         seoKeywords: 'Bizdavar Group, tarihçe, Ersan Jahed Tabrizi'
+      },
+      articleVegaSupplyIran: {
+        seoTitle: 'İran’da VEGA sensör tedariki — İstanbul | Bizdavar',
+        seoDescription: 'Orijinal VEGA sensörleri İran projeleri için nasıl tedarik edilir? Farsça danışmanlık, proforma ve lojistik — Bizdavar İstanbul.',
+        seoKeywords: 'VEGA İran, VEGA tedarik, VEGAPULS, Bizdavar İstanbul'
+      },
+      articleMultilingualWeb: {
+        seoTitle: 'İran ve Türkiye için çok dilli web sitesi | Bizdavar',
+        seoDescription: 'fa/tr/en site, hreflang ve yerel güven sinyalleri — çift pazar işletmeler için Bizdavar rehberi.',
+        seoKeywords: 'çok dilli web, İstanbul web tasarım, hreflang, Bizdavar'
       }
     },
     en: {
@@ -474,6 +494,16 @@
         seoTitle: 'What is Bizdavar Group? — History, team, 11 countries | Full guide',
         seoDescription: 'Bizdavar Group profile: founder Ersan Jahed Tabrizi, 100+ projects, fintech, web design and VEGA/Prosense supply across 11 countries.',
         seoKeywords: 'Bizdavar Group, history, Ersan Jahed Tabrizi'
+      },
+      articleVegaSupplyIran: {
+        seoTitle: 'VEGA sensor supply to Iran from Istanbul | Bizdavar',
+        seoDescription: 'How to source original VEGA sensors for Iran projects — Persian consulting, proforma and logistics from Bizdavar’s Istanbul office.',
+        seoKeywords: 'buy VEGA Iran, VEGA supply, VEGAPULS, Bizdavar Istanbul'
+      },
+      articleMultilingualWeb: {
+        seoTitle: 'Multilingual websites for Iran and Turkey | Bizdavar',
+        seoDescription: 'fa/tr/en sites with hreflang and local trust — Bizdavar guide for dual-market businesses.',
+        seoKeywords: 'multilingual website, Istanbul web design, hreflang, Bizdavar'
       }
     }
   };

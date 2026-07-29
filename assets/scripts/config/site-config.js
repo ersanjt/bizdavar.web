@@ -203,6 +203,22 @@ window.BIZDAVAR_CONFIG = {
 
   blogPosts: [
     {
+      slug: 'pages/articles/vega-supply-iran.html',
+      title: 'تامین سنسور VEGA در ایران — از استانبول تا پروژه صنعتی',
+      excerpt: 'مسیر مشاوره فارسی، پیش‌فاکتور و لجستیک اصل VEGA برای پروژه‌های ایران.',
+      category: 'تجهیزات صنعتی',
+      date: '2026-07-29',
+      relatedService: 'pages/vega.html'
+    },
+    {
+      slug: 'pages/articles/multilingual-web-iran-turkey.html',
+      title: 'وبسایت چندزبانه برای بازار ایران و ترکیه',
+      excerpt: 'hreflang، اعتماد محلی و تحویل سریع برای کسب‌وکارهای دو بازاری.',
+      category: 'طراحی وب',
+      date: '2026-07-29',
+      relatedService: 'pages/fast.html'
+    },
+    {
       slug: 'pages/articles/what-is-digital-marketing.html',
       title: 'دیجیتال مارکتینگ چیست؟ — راهنمای کامل برای کسب‌وکارها',
       excerpt: 'تعریف بازاریابی دیجیتال، کانال‌ها و نقش آن در رشد فروش آنلاین.',
@@ -269,10 +285,10 @@ window.BIZDAVAR_CONFIG = {
   ],
 
   trustMetrics: [
-    { value: '+۱۰۰', label: 'پروژه دیجیتال' },
-    { value: '۱۱', label: 'کشور فعال' },
-    { value: '۱۲+', label: 'سال تجربه' },
-    { value: '۳۵', label: 'پروژه و برند' }
+    { value: '+100', label: 'پروژه دیجیتال' },
+    { value: '11', label: 'کشور فعال' },
+    { value: '12+', label: 'سال تجربه' },
+    { value: '35', label: 'پروژه و برند' }
   ],
 
   featuredPartners: [
