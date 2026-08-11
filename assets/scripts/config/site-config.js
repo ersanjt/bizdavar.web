@@ -228,8 +228,9 @@ window.BIZDAVAR_CONFIG = {
     province: 'آذربایجان شرقی',
     country: 'ایران',
     countryCode: 'IR',
-    address: 'تبریز، خیابان رودکی، کوی جانفشان، ۱۲ متری اول، پلاک ۶',
-    streetAddress: 'خیابان رودکی، کوی جانفشان، ۱۲ متری اول، پلاک ۶',
+    /** Public display — city only (no street-level address) */
+    address: 'تبریز',
+    streetAddress: '',
     activities: ['تولیدکننده', 'بازرگانی', 'توزیع و عمده‌فروشی', 'خدمات', 'فروشگاه'],
     employeeRange: '۱–۱۰ نفر',
     category: 'کامپیوتر و ابزار دیجیتال · وب',

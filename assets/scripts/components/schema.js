@@ -350,7 +350,7 @@
         email: C.contact.email,
         address: {
           '@type': 'PostalAddress',
-          streetAddress: ir.streetAddress,
+          ...(ir.streetAddress ? { streetAddress: ir.streetAddress } : {}),
           addressLocality: ir.city,
           addressRegion: ir.province,
           addressCountry: ir.countryCode || 'IR'

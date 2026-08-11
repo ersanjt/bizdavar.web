@@ -196,7 +196,7 @@ window.BIZDAVAR_INTEL = {
       city: 'تبریز',
       province: 'آذربایجان شرقی',
       country: 'ایران',
-      address: 'تبریز، خیابان رودکی، کوی جانفشان، ۱۲ متری اول، پلاک ۶',
+      address: 'تبریز',
       contactName: 'ارسان جاهد تبریزی',
       phone: '+98 930 588 0135',
       phoneTel: '+989305880135',
