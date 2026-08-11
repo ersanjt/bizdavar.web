@@ -49,6 +49,13 @@ window.BIZDAVAR_CONFIG = {
   /** Owned products — nav dropdown under «محصولات ما» */
   productNav: {
     overviewRoute: 'products',
+    featured: {
+      route: 'biztab',
+      page: 'biztab',
+      labelKey: 'nav.productBiztab',
+      descKey: 'nav.productBiztabDesc',
+      image: 'assets/images/products/biztab/biztab-hero.jpg'
+    },
     groups: [
       {
         id: 'software',
@@ -65,8 +72,22 @@ window.BIZDAVAR_CONFIG = {
           { route: 'biztab', page: 'biztab', labelKey: 'nav.productBiztab', label: 'BizTab', descKey: 'nav.productBiztabDesc' },
           { route: 'bizsanitizerV5', page: 'bizsanitizer-v5', labelKey: 'nav.productBizclean', label: 'BizClean', descKey: 'nav.productBizcleanDesc' }
         ]
+      },
+      {
+        id: 'lines',
+        labelKey: 'nav.productsLines',
+        items: [
+          { route: 'products', page: 'products', hash: 'catalog', cat: 'packaging', labelKey: 'nav.productPackaging', descKey: 'nav.productPackagingDesc' },
+          { route: 'products', page: 'products', hash: 'catalog', cat: 'medical', labelKey: 'nav.productMedical', descKey: 'nav.productMedicalDesc' }
+        ]
       }
-    ]
+    ],
+    supply: {
+      route: 'services',
+      hash: 'industrial',
+      labelKey: 'nav.productsSupplyLink',
+      descKey: 'nav.productsSupplyDesc'
+    }
   },
 
   assets: {

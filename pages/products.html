@@ -20,6 +20,7 @@
   <link rel="icon" href="/assets/images/brand/favicon-16.png" type="image/png" sizes="16x16">
   <link rel="apple-touch-icon" href="/assets/images/brand/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/styles/site.css">
+  <link rel="stylesheet" href="/assets/styles/products.css">
   <meta name="theme-color" content="#1d1d1b">
 <meta name="description" content="محصولات بیزدوار — اسکریپت CRM واتساپ، BizSwap DeFi، BizTab، BizClean و خطوط تولید. سخت‌افزار و SaaS مهندسی‌شده توسط تیم بیزدوار.">
   <!-- bd-static-seo -->
@@ -38,92 +39,112 @@
   <link rel="canonical" href="https://bizdavar.com/pages/products">
   <!-- /bd-static-seo -->
 </head>
-<body data-page="products" data-depth="1">
+<body data-page="products" data-depth="1" class="products-page">
     <script src="/assets/scripts/components/page-shell.js"></script>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXWQQWF8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main id="main-content" class="site-main">
 
     <section class="page-hero page-hero--pro">
       <div class="container">
-        <span class="section__tag" data-i18n="productsPage.hero.tag">مهندسی و تولید</span>
+        <span class="section__tag" data-i18n="productsPage.hero.tag">مهندسی و تولید بیزدوار</span>
         <h1 data-i18n="productsPage.hero.title">محصولات بیزدوار</h1>
-        <p data-i18n="productsPage.hero.desc">دستگاه‌ها و خطوط تولیدی که توسط تیم بیزدوار طراحی، مهندسی و ساخته شده‌اند — از IoT و بهداشت تا بسته‌بندی و تجهیزات پزشکی.</p>
+        <p data-i18n="productsPage.hero.desc">سخت‌افزار، خطوط تولید و SaaS اختصاصی — طراحی و ساخت تیم بیزدوار از تبریز تا استانبول.</p>
+        <div class="products-hero__actions">
+          <a href="#catalog" class="btn btn--primary" data-i18n="productsPage.hero.ctaCatalog">مشاهده کاتالوگ</a>
+          <a href="/pages/contact?product=inquiry" class="btn btn--outline" data-i18n="productsPage.hero.ctaContact">استعلام محصول</a>
+        </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="products-pillars-section" aria-labelledby="productsPillarsTitle">
+      <div class="container">
+        <div class="section__header section__header--pro">
+          <span class="section__eyebrow" data-i18n="productsPage.pillars.eyebrow">چهار محور محصول</span>
+          <h2 class="section__title" id="productsPillarsTitle" data-i18n="productsPage.pillars.title">از نرم‌افزار تا خط تولید</h2>
+          <p class="section__desc" data-i18n="productsPage.pillars.desc">محصولات مالکیتی بیزدوار در چهار دسته — برای پرش سریع، دسته را انتخاب کنید.</p>
+        </div>
+        <div class="products-pillars" id="productPillars"></div>
+      </div>
+    </section>
+
+    <section class="section products-intro">
       <div class="container about-grid">
         <div class="about__content prose">
           <h2 data-i18n="productsPage.intro.title">ما چه می‌سازیم؟</h2>
-          <p data-i18n-html="productsPage.intro.body">بیزدوار گروپ علاوه بر خدمات دیجیتال، محصولات سخت‌افزاری اختصاصی نیز تولید می‌کند.</p>
+          <p data-i18n-html="productsPage.intro.body">بیزدوار گروپ علاوه بر خدمات دیجیتال و تامین صنعتی، <strong>محصولات سخت‌افزاری و نرم‌افزار SaaS اختصاصی</strong> نیز تولید می‌کند.</p>
+          <div class="products-intro__stats" aria-label="آمار محصولات">
+            <div class="products-intro__stat">
+              <strong data-i18n="productsPage.intro.statProducts">۱۱+</strong>
+              <span data-i18n="productsPage.intro.statProductsLabel">محصول و خط</span>
+            </div>
+            <div class="products-intro__stat">
+              <strong data-i18n="productsPage.intro.statCats">۴</strong>
+              <span data-i18n="productsPage.intro.statCatsLabel">دسته اصلی</span>
+            </div>
+            <div class="products-intro__stat">
+              <strong data-i18n="productsPage.intro.statOrigin">تبریز</strong>
+              <span data-i18n="productsPage.intro.statOriginLabel">مهندسی و IP</span>
+            </div>
+          </div>
           <div class="article__cta">
             <a href="/pages/contact" class="btn btn--primary" data-i18n="productsPage.intro.ctaContact">استعلام و سفارش</a>
             <a href="/pages/portfolio" class="btn btn--outline" data-i18n="productsPage.intro.ctaPortfolio">نمونه‌کارهای دیجیتال</a>
-            <a href="/pages/about#achievements" class="btn btn--outline" data-i18n="aboutPage.sections.achievementsTitle">محصولات و نوآوری‌های بیزدوار</a>
           </div>
         </div>
         <div class="about__image">
-          <img src="/assets/images/products/biztab/biztab-hero.jpg" alt="محصولات مهندسی‌شده بیزدوار" loading="lazy" width="660" height="400">
+          <img src="/assets/images/products/biztab/biztab-hero.jpg" alt="BizTab — محصول مهندسی‌شده بیزدوار" loading="lazy" width="660" height="400">
         </div>
       </div>
     </section>
 
-    <section class="section section--gray" id="catalog">
+    <section class="products-live" id="live" aria-labelledby="productsLiveTitle">
       <div class="container">
         <div class="section__header section__header--pro">
-          <span class="section__eyebrow" data-i18n="productsPage.catalog.eyebrow">کاتالوگ محصولات</span>
-          <h2 class="section__title" data-i18n="productsPage.catalog.title">دستگاه‌های مهندسی‌شده بیزدوار</h2>
-          <p class="section__desc" data-i18n="productsPage.catalog.desc">۹ محصول و خط تولید — از BizTab و BizClean تا دستگاه‌های کش‌زن و خطوط PPE. فیلتر بر اساس دسته یا مستقیم استعلام بگیرید.</p>
+          <span class="section__eyebrow" data-i18n="productsPage.featured.eyebrow">محصولات زنده</span>
+          <h2 class="section__title" id="productsLiveTitle" data-i18n="productsPage.featured.title">صفحات محصول آماده سفارش</h2>
+          <p class="section__desc" data-i18n="productsPage.featured.desc">CRM واتساپ، BizSwap، BizTab و BizClean — با صفحه اختصاصی و مسیر استعلام شفاف.</p>
         </div>
-        <div class="product-filter" id="productFilters" role="tablist" aria-label="دسته محصولات">
-          <button type="button" class="product-filter__btn is-active" data-cat="all">همه</button>
-          <button type="button" class="product-filter__btn" data-cat="iot-health">IoT و بهداشت</button>
-          <button type="button" class="product-filter__btn" data-cat="packaging">بسته‌بندی و سیل</button>
-          <button type="button" class="product-filter__btn" data-cat="medical">پزشکی و PPE</button>
+        <div class="owned-products-grid" id="ownedProductsLive"></div>
+      </div>
+    </section>
+
+    <section class="section products-catalog" id="catalog">
+      <div class="container">
+        <div class="section__header section__header--pro">
+          <span class="section__eyebrow" data-i18n="productsPage.catalog.eyebrow">کاتالوگ کامل</span>
+          <h2 class="section__title" data-i18n="productsPage.catalog.title">همه محصولات مهندسی‌شده بیزدوار</h2>
+          <p class="section__desc" data-i18n="productsPage.catalog.desc">۱۱ محصول و خط تولید — فیلتر بر اساس دسته یا مستقیم استعلام بگیرید.</p>
         </div>
-        <div class="owned-products-grid" id="ownedProductsGrid">
-          <article class="owned-product-card" data-category="iot-health">
-            <a href="/pages/biztab" class="owned-product-card__media">
-              <img src="/assets/images/products/biztab/biztab-hero.jpg" alt="BizTab" loading="lazy" width="480" height="300">
-            </a>
-            <div class="owned-product-card__body">
-              <span class="owned-product-card__cat">IoT و بهداشت</span>
-              <h3><a href="/pages/biztab">BizTab</a></h3>
-              <p class="owned-product-card__subtitle">دماسنج دیواری غیرتماسی</p>
-              <p class="owned-product-card__desc">اولین دماسنج دیواری غیرتماسی تبریز — دقت کمتر از ۰.۳°C.</p>
-              <footer class="owned-product-card__footer">
-                <span class="owned-product-card__status">صفحه محصول</span>
-                <a href="/pages/biztab" class="service-card__link">بیشتر</a>
-              </footer>
-            </div>
-          </article>
-          <article class="owned-product-card" data-category="iot-health">
-            <a href="/pages/bizsanitizer-v5" class="owned-product-card__media">
-              <img src="/assets/images/products/bizsanitizer/bizclean-v5.png" alt="BizClean V5" loading="lazy" width="480" height="640">
-            </a>
-            <div class="owned-product-card__body">
-              <span class="owned-product-card__cat">IoT و بهداشت</span>
-              <h3><a href="/pages/bizsanitizer-v5">BizClean</a></h3>
-              <p class="owned-product-card__subtitle">خط بهداشت و ضدعفونی</p>
-              <p class="owned-product-card__desc">دستگاه ضدعفونی دست BizClean V5 — تولید تیم بیزدوار.</p>
-              <footer class="owned-product-card__footer">
-                <span class="owned-product-card__status">صفحه محصول</span>
-                <a href="/pages/bizsanitizer-v5" class="service-card__link">بیشتر</a>
-              </footer>
-            </div>
-          </article>
+        <div class="product-filter" id="productFilters" role="tablist" aria-label="دسته محصولات"></div>
+        <div class="owned-products-grid" id="ownedProductsGrid"></div>
+      </div>
+    </section>
+
+    <section class="products-supply" aria-labelledby="productsSupplyTitle">
+      <div class="container products-supply__row">
+        <div>
+          <span class="section__eyebrow" data-i18n="productsPage.supply.eyebrow">تامین برند</span>
+          <h2 class="section__title" id="productsSupplyTitle" data-i18n="productsPage.supply.title">برندهای صنعتی جداگانه تامین می‌شوند</h2>
+          <p class="section__desc" data-i18n="productsPage.supply.desc">VEGA، Prosense، Liqui Moly و سایر برندها در بخش تامین تجهیزات هستند — نه در کاتالوگ محصولات مالکیتی.</p>
+        </div>
+        <div class="products-supply__brands">
+          <a href="/pages/vega">VEGA</a>
+          <a href="/pages/prosense">Prosense</a>
+          <a href="/pages/liqui-moly">Liqui Moly</a>
+          <a href="/pages/teltonika">Teltonika</a>
+          <a href="/pages/services#industrial" data-i18n="productsPage.supply.cta">تامین صنعتی</a>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section products-cta">
       <div class="container">
         <div class="cta-card">
-          <h2 data-i18n="ownedProducts.contact">استعلام محصول</h2>
-          <p data-i18n="productsPage.hero.desc">برای سفارش، سفارشی‌سازی یا نمایندگی — با تیم فنی بیزدوار تماس بگیرید.</p>
+          <h2 data-i18n="productsPage.cta.title">آماده استعلام محصول هستید؟</h2>
+          <p data-i18n="productsPage.cta.desc">برای سفارش، سفارشی‌سازی یا نمایندگی — با تیم فنی بیزدوار در واتساپ یا فرم تماس پیام بدهید.</p>
           <div class="cta-card__actions">
             <a href="/pages/contact" class="btn btn--primary" data-i18n="productsPage.intro.ctaContact">استعلام و سفارش</a>
-            <a href="/pages/about" class="btn btn--outline" data-i18n="nav.about">درباره ما</a>
+            <a href="https://wa.me/989305880135" class="btn btn--green" data-i18n="common.whatsapp">واتساپ فارسی</a>
           </div>
         </div>
       </div>

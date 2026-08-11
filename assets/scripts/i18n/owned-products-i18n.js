@@ -7,23 +7,52 @@
   const catalog = {
     fa: {
       productsPage: {
+        crumb: 'محصولات بیزدوار',
         hero: {
-          tag: 'مهندسی و تولید',
+          tag: 'مهندسی و تولید بیزدوار',
           title: 'محصولات بیزدوار',
-          desc: 'دستگاه‌ها، خطوط تولید و نرم‌افزار SaaS که توسط تیم بیزدوار طراحی، مهندسی و ساخته شده‌اند — از WhatsApp CRM و IoT تا بسته‌بندی و تجهیزات پزشکی.'
+          desc: 'سخت‌افزار، خطوط تولید و SaaS اختصاصی — طراحی و ساخت تیم بیزدوار از تبریز تا استانبول.',
+          ctaCatalog: 'مشاهده کاتالوگ',
+          ctaContact: 'استعلام محصول'
+        },
+        pillars: {
+          eyebrow: 'چهار محور محصول',
+          title: 'از نرم‌افزار تا خط تولید',
+          desc: 'محصولات مالکیتی بیزدوار در چهار دسته — برای پرش سریع، دسته را انتخاب کنید.'
         },
         intro: {
           title: 'ما چه می‌سازیم؟',
-          body: 'بیزدوار گروپ علاوه بر خدمات دیجیتال و تامین صنعتی، <strong>محصولات سخت‌افزاری و نرم‌افزار SaaS اختصاصی</strong> نیز تولید می‌کند. هر محصول با مالکیت فکری تیم بیزدوار، در ایران (تبریز) و استانبول مهندسی شده و برای بازار داخلی و بین‌المللی قابل عرضه است.',
+          body: 'بیزدوار گروپ علاوه بر خدمات دیجیتال و تامین صنعتی، <strong>محصولات سخت‌افزاری و نرم‌افزار SaaS اختصاصی</strong> نیز تولید می‌کند. مالکیت فکری با تیم بیزدوار است؛ مهندسی در تبریز و استانبول، قابل عرضه برای بازار داخلی و بین‌المللی.',
           ctaContact: 'استعلام و سفارش',
-          ctaPortfolio: 'نمونه‌کارهای دیجیتال'
+          ctaPortfolio: 'نمونه‌کارهای دیجیتال',
+          statProducts: '۱۱+',
+          statProductsLabel: 'محصول و خط',
+          statCats: '۴',
+          statCatsLabel: 'دسته اصلی',
+          statOrigin: 'تبریز',
+          statOriginLabel: 'مهندسی و IP'
+        },
+        featured: {
+          eyebrow: 'محصولات زنده',
+          title: 'صفحات محصول آماده سفارش',
+          desc: 'CRM واتساپ، BizSwap، BizTab و BizClean — با صفحه اختصاصی و مسیر استعلام شفاف.'
         },
         filterAll: 'همه',
         empty: 'محصولی برای نمایش نیست.',
         catalog: {
-          eyebrow: 'کاتالوگ محصولات',
-          title: 'دستگاه‌های مهندسی‌شده بیزدوار',
-          desc: '۱۱ محصول و خط تولید — از BizSwap و CRM واتساپ تا BizTab و خطوط PPE. فیلتر بر اساس دسته یا مستقیم استعلام بگیرید.'
+          eyebrow: 'کاتالوگ کامل',
+          title: 'همه محصولات مهندسی‌شده بیزدوار',
+          desc: '۱۱ محصول و خط تولید — فیلتر بر اساس دسته یا مستقیم استعلام بگیرید.'
+        },
+        supply: {
+          eyebrow: 'تامین برند',
+          title: 'برندهای صنعتی جداگانه تامین می‌شوند',
+          desc: 'VEGA، Prosense، Liqui Moly و سایر برندها در بخش تامین تجهیزات هستند — نه در کاتالوگ محصولات مالکیتی.',
+          cta: 'تامین صنعتی'
+        },
+        cta: {
+          title: 'آماده استعلام محصول هستید؟',
+          desc: 'برای سفارش، سفارشی‌سازی یا نمایندگی — با تیم فنی بیزدوار در واتساپ یا فرم تماس پیام بدهید.'
         },
         statusLive: 'صفحه محصول',
         statusCatalog: 'استعلام',
@@ -118,23 +147,52 @@
     },
     tr: {
       productsPage: {
+        crumb: 'Bizdavar ürünleri',
         hero: {
-          tag: 'Mühendislik ve üretim',
+          tag: 'Bizdavar mühendislik ve üretim',
           title: 'Bizdavar ürünleri',
-          desc: 'Bizdavar ekibi tarafından tasarlanan cihazlar, hatlar ve SaaS — WhatsApp CRM ve IoT\'tan ambalaja ve medikal ekipmana.'
+          desc: 'Özel donanım, üretim hatları ve SaaS — Bizdavar ekibi tarafından Tebriz ve İstanbul\'da tasarlandı.',
+          ctaCatalog: 'Kataloğu gör',
+          ctaContact: 'Ürün teklifi'
+        },
+        pillars: {
+          eyebrow: 'Dört ürün ekseni',
+          title: 'Yazılımdan üretim hattına',
+          desc: 'Bizdavar\'ın kendi ürünleri dört kategoride — hızlı geçiş için kategoriyi seçin.'
         },
         intro: {
           title: 'Ne üretiyoruz?',
-          body: 'Bizdavar Group, dijital hizmetler ve endüstriyel tedarikin yanı sıra <strong>özel donanım ve SaaS ürünleri</strong> de geliştirir. Her ürün Bizdavar ekibinin fikri mülkiyetiyle İstanbul ve Tebriz\'de mühendislik edilmiştir.',
+          body: 'Bizdavar Group, dijital hizmetler ve endüstriyel tedarikin yanı sıra <strong>özel donanım ve SaaS ürünleri</strong> de geliştirir. Fikri mülkiyet Bizdavar ekibine aittir; mühendislik Tebriz ve İstanbul\'da yapılır.',
           ctaContact: 'Teklif ve sipariş',
-          ctaPortfolio: 'Dijital portfolyo'
+          ctaPortfolio: 'Dijital portfolyo',
+          statProducts: '11+',
+          statProductsLabel: 'ürün ve hat',
+          statCats: '4',
+          statCatsLabel: 'ana kategori',
+          statOrigin: 'Tebriz',
+          statOriginLabel: 'mühendislik ve IP'
+        },
+        featured: {
+          eyebrow: 'Canlı ürünler',
+          title: 'Siparişe hazır ürün sayfaları',
+          desc: 'WhatsApp CRM, BizSwap, BizTab ve BizClean — özel sayfa ve net teklif yolu.'
         },
         filterAll: 'Tümü',
         empty: 'Gösterilecek ürün yok.',
         catalog: {
-          eyebrow: 'Ürün kataloğu',
-          title: 'Bizdavar mühendislik ürünleri',
-          desc: '11 ürün ve üretim hattı — BizSwap ve WhatsApp CRM\'den BizTab\'a ve PPE hatlarına. Kategoriye göre filtreleyin veya teklif isteyin.'
+          eyebrow: 'Tam katalog',
+          title: 'Tüm Bizdavar mühendislik ürünleri',
+          desc: '11 ürün ve üretim hattı — kategoriye göre filtreleyin veya teklif isteyin.'
+        },
+        supply: {
+          eyebrow: 'Marka tedariki',
+          title: 'Endüstriyel markalar ayrı tedarik edilir',
+          desc: 'VEGA, Prosense, Liqui Moly ve diğer markalar endüstriyel tedarik bölümündedir — sahip olunan ürün kataloğunda değil.',
+          cta: 'Endüstriyel tedarik'
+        },
+        cta: {
+          title: 'Ürün teklifi almak ister misiniz?',
+          desc: 'Sipariş, özelleştirme veya bayilik için Bizdavar teknik ekibine WhatsApp veya iletişim formuyla yazın.'
         },
         statusLive: 'Ürün sayfası',
         statusCatalog: 'Teklif iste',
@@ -174,23 +232,52 @@
     },
     en: {
       productsPage: {
+        crumb: 'Bizdavar products',
         hero: {
-          tag: 'Engineering & manufacturing',
+          tag: 'Bizdavar engineering & manufacturing',
           title: 'Bizdavar products',
-          desc: 'Devices, production lines and SaaS designed and built by the Bizdavar team — from WhatsApp CRM and IoT to packaging and medical equipment.'
+          desc: 'Proprietary hardware, production lines and SaaS — designed and built by the Bizdavar team from Tabriz to Istanbul.',
+          ctaCatalog: 'Browse catalog',
+          ctaContact: 'Product inquiry'
+        },
+        pillars: {
+          eyebrow: 'Four product pillars',
+          title: 'From software to production lines',
+          desc: 'Bizdavar-owned products across four categories — pick a pillar to jump ahead.'
         },
         intro: {
           title: 'What we build',
-          body: 'Beyond digital services and industrial supply, Bizdavar Group develops <strong>proprietary hardware products</strong>. Each product is engineered in Iran (Tabriz) with IP owned by the Bizdavar team — available for domestic and international markets.',
+          body: 'Beyond digital services and industrial supply, Bizdavar Group develops <strong>proprietary hardware and SaaS</strong>. IP stays with the Bizdavar team; engineering in Tabriz and Istanbul — for domestic and international markets.',
           ctaContact: 'Quote & order',
-          ctaPortfolio: 'Digital portfolio'
+          ctaPortfolio: 'Digital portfolio',
+          statProducts: '11+',
+          statProductsLabel: 'products & lines',
+          statCats: '4',
+          statCatsLabel: 'main categories',
+          statOrigin: 'Tabriz',
+          statOriginLabel: 'engineering & IP'
+        },
+        featured: {
+          eyebrow: 'Live products',
+          title: 'Ready product pages',
+          desc: 'WhatsApp CRM, BizSwap, BizTab and BizClean — dedicated pages with a clear inquiry path.'
         },
         filterAll: 'All',
         empty: 'No products to display.',
         catalog: {
-          eyebrow: 'Product catalog',
-          title: 'Engineered Bizdavar devices',
-          desc: 'Eleven products and production lines — from BizSwap and WhatsApp CRM to BizTab and PPE lines. Filter by category or request a quote.'
+          eyebrow: 'Full catalog',
+          title: 'All engineered Bizdavar products',
+          desc: 'Eleven products and production lines — filter by category or request a quote.'
+        },
+        supply: {
+          eyebrow: 'Brand supply',
+          title: 'Industrial brands are supplied separately',
+          desc: 'VEGA, Prosense, Liqui Moly and other brands live under industrial supply — not in the owned-products catalog.',
+          cta: 'Industrial supply'
+        },
+        cta: {
+          title: 'Ready to inquire about a product?',
+          desc: 'For orders, customization or distribution — message the Bizdavar technical team on WhatsApp or the contact form.'
         },
         statusLive: 'Product page',
         statusCatalog: 'Request quote',
@@ -241,6 +328,10 @@
     }
     if (!L.pages) L.pages = {};
     L.productsPage = productsPage;
-    L.pages.products = productsPage;
+    // Preserve crumb used by breadcrumbs (do not wipe pages.products.crumb)
+    const prevCrumb = L.pages.products && L.pages.products.crumb;
+    L.pages.products = Object.assign({}, productsPage, {
+      crumb: productsPage.crumb || prevCrumb || (productsPage.hero && productsPage.hero.title) || ''
+    });
   });
 })();

@@ -52,9 +52,9 @@
         seoKeywords: 'تماس بیزدوار, مشاوره رایگان, Bizdavar contact, طراحی سایت, VEGA'
       },
       vega: {
-        seoTitle: 'خرید سنسور VEGA | VEGAPULS، VEGABAR، VEGAPOINT — بیزدوار',
-        seoDescription: 'تامین اصل سنسور VEGA برای مهندسان فارسی‌زبان — مشاوره فنی، کد سفارش دقیق، پیش‌فاکتور شفاف و لجستیک بین‌المللی. VEGAPULS، VEGABAR، VEGAPOINT.',
-        seoKeywords: 'خرید VEGA, سنسور سطح VEGA, VEGAPULS, VEGABAR, VEGAPOINT, تامین VEGA, بیزدوار, واتساپ فارسی'
+        seoTitle: 'خرید سنسور VEGA | VEGAPULS 6X، VEGABAR 39، VEGAPOINT — بیزدوار',
+        seoDescription: 'تامین اصل VEGA با قیمت شفاف: VEGAPULS 6X، VEGABAR 39، VEGAVIB S61، VEGAPOINT 11/21/31. مشاوره فنی فارسی، کد سفارش دقیق و لجستیک بین‌المللی — بیزدوار گروپ.',
+        seoKeywords: 'خرید VEGA, VEGAPULS 6X, VEGABAR 39, VEGAVIB S61, VEGAPOINT 11, VEGAPOINT 21, VEGAPOINT 31, سنسور سطح, ترانسمیتر فشار, بیزدوار'
       },
       prosense: {
         seoTitle: 'خرید دتکتور Prosense | PQ, SafeVader, PPS+ — بیزدوار',
@@ -224,9 +224,9 @@
         seoKeywords: 'Bizdavar iletişim, ücretsiz danışmanlık, web tasarım, VEGA'
       },
       vega: {
-        seoTitle: 'VEGA sensör tedariki | VEGAPULS, VEGABAR, VEGAPOINT — Bizdavar',
-        seoDescription: 'Endüstriyel projeler için orijinal VEGA sensör tedariki. İstanbul merkezli Türkçe teknik danışmanlık, şeffaf proforma ve uluslararası lojistik — Bizdavar Group.',
-        seoKeywords: 'VEGA sensör, VEGAPULS, VEGABAR, endüstriyel tedarik, Bizdavar'
+        seoTitle: 'VEGA sensör tedariki | VEGAPULS 6X, VEGABAR 39, VEGAPOINT — Bizdavar',
+        seoDescription: 'Orijinal VEGA tedariki ve şeffaf fiyat: VEGAPULS 6X, VEGABAR 39, VEGAVIB S61, VEGAPOINT 11/21/31. İstanbul merkezli Türkçe teknik danışmanlık, proforma ve uluslararası lojistik — Bizdavar Group.',
+        seoKeywords: 'VEGA sensör, VEGAPULS 6X, VEGABAR 39, VEGAVIB S61, VEGAPOINT 11, VEGAPOINT 21, VEGAPOINT 31, seviye sensörü, basınç transmitter, Bizdavar'
       },
       prosense: {
         seoTitle: 'Prosense dedektör tedariki | PQ, SafeVader, PPS+ — Bizdavar',
@@ -396,9 +396,9 @@
         seoKeywords: 'Bizdavar contact, free consultation, web design, VEGA'
       },
       vega: {
-        seoTitle: 'VEGA sensor supply | VEGAPULS, VEGABAR, VEGAPOINT — Bizdavar',
-        seoDescription: 'Genuine VEGA sensors for industrial projects. Persian/Turkish technical consulting, transparent proforma and logistics to Iran — Bizdavar Group.',
-        seoKeywords: 'VEGA sensor, VEGAPULS, VEGABAR, industrial supply, Bizdavar'
+        seoTitle: 'VEGA sensor supply | VEGAPULS 6X, VEGABAR 39, VEGAPOINT — Bizdavar',
+        seoDescription: 'Genuine VEGA supply with clear EUR pricing: VEGAPULS 6X, VEGABAR 39, VEGAVIB S61, VEGAPOINT 11/21/31. Technical consulting, exact order codes and international logistics — Bizdavar Group.',
+        seoKeywords: 'VEGA sensor, VEGAPULS 6X, VEGABAR 39, VEGAVIB S61, VEGAPOINT 11, VEGAPOINT 21, VEGAPOINT 31, level sensor, pressure transmitter, Bizdavar'
       },
       prosense: {
         seoTitle: 'Prosense detector supply | PQ, SafeVader, PPS+ — Bizdavar',

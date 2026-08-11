@@ -244,6 +244,7 @@
       vegaPage: { sections: {
         trust: { eyebrow: 'چرا از بیزدوار بخرید؟', title: 'تامین مطمئن VEGA برای واحد فنی و خرید شما', desc: 'ما فقط کاتالوگ نشان نمی‌دهیم — همراه شما از انتخاب مدل تا تحویل در ایران هستیم.' },
         buy: { eyebrow: 'مسیر خرید', title: 'از استعلام تا تحویل — ۵ مرحله شفاف', desc: 'بدون پیچیدگی — هر مرحله را می‌دانید و در هر قدم در ارتباط هستید.' },
+        quote: { eyebrow: 'راهنمای استعلام', title: 'استعلام دقیق‌تر = پیشنهاد سریع‌تر', desc: 'چک‌لیست زیر را در واتساپ یا فرم تماس بفرستید — حتی اگر فقط بخشی را بدانید.' },
         products: { eyebrow: 'کاتالوگ محصولات', title: 'محصولات پرتقاضا برای پروژه‌های ایرانی', desc: 'برای استعلام قیمت هر محصول — دکمه «درخواست استعلام» را بزنید. مشاوره فنی رایگان است.' },
         iran: { eyebrow: 'کاربرد در ایران', title: 'VEGA در صنایع رایج ایران', desc: 'اگر صنعت شما در لیست نیست — شرایط فرآیند را بفرستید، مدل مناسب را پیشنهاد می‌دهیم.' },
         value: { eyebrow: 'مزیت‌های برند', title: 'چرا VEGA انتخاب مهندسان است؟', desc: 'بیش از ۶۵ سال نوآوری آلمان — هر سال بیش از ۵۰۰ هزار سنسور VEGA در جهان نصب می‌شود.' },
@@ -314,6 +315,7 @@
       vegaPage: { sections: {
         trust: { eyebrow: 'Neden Bizdavar’dan alın?', title: 'Teknik ve satınalma biriminiz için güvenilir VEGA tedariki', desc: 'Sadece katalog göstermiyoruz — model seçiminden teslimata kadar yanınızdayız.' },
         buy: { eyebrow: 'Satınalma yolu', title: 'Tekliften teslimata — 5 net adım', desc: 'Karmaşa yok — her adımı bilir ve her aşamada iletişimde olursunuz.' },
+        quote: { eyebrow: 'Teklif rehberi', title: 'Daha net talep = daha hızlı öneri', desc: 'Aşağıdaki kontrol listesini WhatsApp veya forma gönderin — kısmi bilgi de yeter.' },
         products: { eyebrow: 'Ürün kataloğu', title: 'Endüstriyel projelerde en çok talep edilen ürünler', desc: 'Her ürün için teklif almak üzere “Teklif iste” düğmesini kullanın. Teknik danışmanlık ücretsizdir.' },
         iran: { eyebrow: 'Bölgesel uygulama', title: 'VEGA yaygın endüstrilerde', desc: 'Sektörünüz listede yoksa — proses koşullarını gönderin, uygun modeli önerelim.' },
         value: { eyebrow: 'Marka avantajları', title: 'Neden mühendisler VEGA’yı seçiyor?', desc: '65 yılı aşkın Alman inovasyonu — her yıl dünyada 500 binden fazla VEGA sensörü kuruluyor.' },
@@ -384,6 +386,7 @@
       vegaPage: { sections: {
         trust: { eyebrow: 'Why buy from Bizdavar?', title: 'Reliable VEGA supply for your technical and procurement teams', desc: 'We do more than show a catalog — we are with you from model selection to delivery.' },
         buy: { eyebrow: 'Purchase path', title: 'From quote to delivery — 5 clear steps', desc: 'No complexity — you know every step and stay in touch throughout.' },
+        quote: { eyebrow: 'Quote guide', title: 'Clearer inquiry = faster recommendation', desc: 'Send the checklist below on WhatsApp or the contact form — even partial details help.' },
         products: { eyebrow: 'Product catalog', title: 'High-demand products for regional projects', desc: 'Use the “Request quote” button for each product. Technical consulting is free.' },
         iran: { eyebrow: 'Regional application', title: 'VEGA across common industries', desc: 'If your industry isn’t listed — send your process conditions and we’ll suggest the right model.' },
         value: { eyebrow: 'Brand advantages', title: 'Why engineers choose VEGA', desc: 'Over 65 years of German innovation — more than 500,000 VEGA sensors installed worldwide each year.' },

@@ -177,15 +177,40 @@
     return getProductPageIds().has(currentPage);
   }
 
+  function productNavHref(item) {
+    let href = pagePath(R[item.route] || item.route);
+    if (item.cat) href += (href.includes('?') ? '&' : '?') + 'cat=' + encodeURIComponent(item.cat);
+    if (item.hash) href += '#' + item.hash;
+    return href;
+  }
+
   function productNavLinkHtml(item) {
-    const href = pagePath(R[item.route] || item.route);
-    const active = currentPage === item.page ? ' is-active' : '';
+    const href = productNavHref(item);
+    const active = currentPage === item.page && !item.cat ? ' is-active' : '';
     const label = item.labelKey ? t(item.labelKey, item.label || '') : (item.label || '');
     const desc = item.descKey ? t(item.descKey, '') : '';
     const badge = item.badgeKey ? `<span class="nav__product-badge">${t(item.badgeKey, '')}</span>` : '';
     return `<a href="${href}" class="nav__product-link${active}">
       <span class="nav__product-name">${label}${badge}</span>
       ${desc ? `<span class="nav__product-desc">${desc}</span>` : ''}
+    </a>`;
+  }
+
+  function productNavFeaturedHtml(featured) {
+    if (!featured) return '';
+    const href = productNavHref(featured);
+    const label = featured.labelKey ? t(featured.labelKey, featured.label || '') : (featured.label || '');
+    const desc = featured.descKey ? t(featured.descKey, '') : '';
+    const img = featured.image
+      ? (window.resolveAssetPath ? window.resolveAssetPath(featured.image) : ('/' + featured.image.replace(/^\//, '')))
+      : '';
+    return `<a href="${href}" class="nav__product-featured${currentPage === featured.page ? ' is-active' : ''}">
+      ${img ? `<span class="nav__product-featured__media"><img src="${img}" alt="" loading="lazy" width="160" height="100"></span>` : ''}
+      <span class="nav__product-featured__body">
+        <span class="nav__product-featured__kicker">${t('nav.productsMegaHint', '')}</span>
+        <span class="nav__product-featured__name">${label}</span>
+        ${desc ? `<span class="nav__product-featured__desc">${desc}</span>` : ''}
+      </span>
     </a>`;
   }
 
@@ -199,14 +224,26 @@
         ${(group.items || []).map(productNavLinkHtml).join('')}
       </div>
     `).join('');
+    const supply = cfg.supply
+      ? `<a href="${productNavHref(cfg.supply)}" class="nav__product-supply">
+          <span class="nav__product-supply__label">${t(cfg.supply.labelKey, '')}</span>
+          <span class="nav__product-supply__desc">${t(cfg.supply.descKey, '')}</span>
+        </a>`
+      : '';
     return `<details class="nav__dropdown nav__dropdown--products" data-nav-dropdown>
       <summary class="nav__link nav__link--dropdown${active}">
         <span class="nav__link-label">${label}</span>
         <span class="nav__chev" aria-hidden="true"></span>
       </summary>
       <div class="nav__panel nav__panel--products">
-        <a href="${overviewHref}" class="nav__product-overview${currentPage === 'products' ? ' is-active' : ''}">${t('nav.productsCatalog', 'همه محصولات')}</a>
-        ${groups}
+        <div class="nav__product-mega">
+          <div class="nav__product-mega__aside">
+            ${productNavFeaturedHtml(cfg.featured)}
+            <a href="${overviewHref}" class="nav__product-overview${currentPage === 'products' ? ' is-active' : ''}">${t('nav.productsCatalog', 'همه محصولات')}</a>
+          </div>
+          <div class="nav__product-mega__groups">${groups}</div>
+        </div>
+        ${supply}
       </div>
     </details>`;
   }
@@ -219,17 +256,23 @@
       <div class="mobile-drawer__product-group">
         <p class="mobile-drawer__product-heading">${t(group.labelKey, group.id)}</p>
         ${(group.items || []).map(item => {
-          const href = pagePath(R[item.route] || item.route);
-          const itemActive = currentPage === item.page ? ' active' : '';
-          const label = item.labelKey ? t(item.labelKey, item.label || '') : (item.label || '');
+          const href = productNavHref(item);
+          const itemActive = currentPage === item.page && !item.cat ? ' active' : '';
+          const itemLabel = item.labelKey ? t(item.labelKey, item.label || '') : (item.label || '');
           const desc = item.descKey ? t(item.descKey, '') : '';
           return `<a href="${href}" class="mobile-drawer__product-link${itemActive}">
-            <span>${label}</span>
+            <span>${itemLabel}</span>
             ${desc ? `<small>${desc}</small>` : ''}
           </a>`;
         }).join('')}
       </div>
     `).join('');
+    const supply = cfg.supply
+      ? `<a href="${productNavHref(cfg.supply)}" class="mobile-drawer__product-link">
+          <span>${t(cfg.supply.labelKey, '')}</span>
+          <small>${t(cfg.supply.descKey, '')}</small>
+        </a>`
+      : '';
     return `<details class="mobile-drawer__acc"${isProductsActive() ? ' open' : ''}>
       <summary class="mobile-drawer__link${active}">
         <span class="mobile-drawer__icon">${ic('box', { size: 22 })}</span>
@@ -238,6 +281,7 @@
       <div class="mobile-drawer__sub">
         <a href="${overviewHref}" class="mobile-drawer__product-link${currentPage === 'products' ? ' active' : ''}">${t('nav.productsCatalog', 'همه محصولات')}</a>
         ${groups}
+        ${supply}
       </div>
     </details>`;
   }

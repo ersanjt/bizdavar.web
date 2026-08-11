@@ -775,6 +775,7 @@
     const I18n = window.BIZDAVAR_I18N;
     let items = I18n ? I18n.getOwnedProducts() : (window.BIZDAVAR_OWNED_PRODUCTS?.items || []);
     if (opts.featured) items = items.filter(p => p.featured);
+    if (opts.status) items = items.filter(p => p.status === opts.status);
     if (opts.category && opts.category !== 'all') items = items.filter(p => p.category === opts.category);
     if (opts.limit) items = items.slice(0, opts.limit);
     el.innerHTML = items.length
@@ -810,7 +811,36 @@
 
     const I18n = window.BIZDAVAR_I18N;
     const categories = I18n ? I18n.getOwnedProductCategories() : (window.BIZDAVAR_OWNED_PRODUCTS?.categories || []);
-    let active = 'all';
+    const params = new URLSearchParams(window.location.search);
+    const catFromQuery = params.get('cat');
+    let active = categories.some(c => c.id === catFromQuery) ? catFromQuery : 'all';
+
+    const pillarsEl = document.getElementById('productPillars');
+    if (pillarsEl) {
+      const allItems = I18n ? I18n.getOwnedProducts() : (window.BIZDAVAR_OWNED_PRODUCTS?.items || []);
+      pillarsEl.innerHTML = categories.map(c => {
+        const count = allItems.filter(p => p.category === c.id).length;
+        return `<a href="#catalog" class="products-pillar" data-cat="${c.id}">
+          <span class="products-pillar__count">${count}</span>
+          <span class="products-pillar__label">${c.label}</span>
+          ${c.desc ? `<span class="products-pillar__desc">${c.desc}</span>` : ''}
+        </a>`;
+      }).join('');
+    }
+
+    function setActive(cat, scroll) {
+      active = cat || 'all';
+      if (filterEl) {
+        filterEl.querySelectorAll('.product-filter__btn').forEach(b => {
+          b.classList.toggle('is-active', b.getAttribute('data-cat') === active);
+        });
+      }
+      renderOwnedProductsGrid('ownedProductsGrid', { category: active });
+      if (scroll) {
+        const target = document.getElementById('catalog');
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
 
     function renderGrid() {
       renderOwnedProductsGrid('ownedProductsGrid', { category: active });
@@ -830,14 +860,27 @@
         filterEl.addEventListener('click', (e) => {
           const btn = e.target.closest('[data-cat]');
           if (!btn) return;
-          active = btn.getAttribute('data-cat');
-          filterEl.querySelectorAll('.product-filter__btn').forEach(b => b.classList.toggle('is-active', b === btn));
-          renderGrid();
+          setActive(btn.getAttribute('data-cat'), false);
         });
       }
     }
 
-    renderGrid();
+    if (pillarsEl && !pillarsEl.dataset.bound) {
+      pillarsEl.dataset.bound = '1';
+      pillarsEl.addEventListener('click', (e) => {
+        const link = e.target.closest('[data-cat]');
+        if (!link) return;
+        e.preventDefault();
+        setActive(link.getAttribute('data-cat'), true);
+      });
+    }
+
+    const liveGrid = document.getElementById('ownedProductsLive');
+    if (liveGrid) {
+      renderOwnedProductsGrid('ownedProductsLive', { status: 'live' });
+    }
+
+    setActive(active, false);
   };
 
 })();

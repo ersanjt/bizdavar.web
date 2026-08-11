@@ -21,7 +21,7 @@ const PAGE_OG = {
   about: 'assets/images/brand/bizdavar-logo-square.png',
   contact: 'assets/images/brand/bizdavar-logo-square.png',
   fast: 'assets/images/brand/bizdavar-logo-square.png',
-  vega: 'assets/images/vega/slides/value-process-safety.jpg',
+  vega: 'assets/images/vega/hero-vegapuls-6x.png',
   prosense: 'assets/images/prosense/slides/pq-sil.jpg',
   liquiMoly: 'assets/images/liqui-moly/octane-plus.jpg',
   fxguard: 'assets/images/products/fxguard/fxguard-hero.svg',

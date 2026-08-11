@@ -224,24 +224,67 @@ window.VEGA_CATALOG = {
       officialRef: 'https://www.vega.com/tr-tr/urunler/urun-kataloglari/basinc/proses-basinci-olcumu/vegabar-39'
     },
     {
-      id: 'vegapoint',
-      name: 'VEGAPOINT',
-      series: 'Basic — Level Switch',
+      id: 'vegapoint-11',
+      name: 'VEGAPOINT 11',
+      series: 'Capacitive — Ultra Compact',
       category: 'point',
-      image: VEGA_IMG + 'product-vegapoint.png',
-      imageAlt: 'VEGAPOINT compact level switch with 360 degree display',
-      badge: 'سوئیچ',
-      summaryFa: 'سوئیچ نقطه‌سطح — جلوگیری از سرریز یا خشک‌شدن پمپ؛ ایمنی فرآیند با سیگنال قطعی.',
-      useCaseFa: 'مخازن ذخیره، سیلو، جداکننده — هشدار پر شدن یا خالی شدن مخزن.',
+      image: VEGA_IMG + 'product-vegapoint-11.png',
+      imageAlt: 'VEGAPOINT 11 ultra-compact capacitive limit switch',
+      badge: 'موجود',
+      priceEur: 210,
+      summaryFa: 'سوئیچ حد خازنی فوق‌فشرده و اقتصادی — تشخیص مایعات آب‌پایه بدون نیاز به تنظیم.',
+      useCaseFa: 'غذایی، نوشیدنی و دارویی با آداپتور بهداشتی — نصب کوچک از رزوه ½ اینچ و خروجی ترانزیستور/IO-Link.',
       features: [
-        'تشخیص نقطه‌سطح (Point Level)',
-        'جلوگیری از پر شدن یا خشک شدن مخزن',
-        'نمایشگر وضعیت ۳۶۰°',
-        'سیگنال سوئیچینگ پایدار',
-        'نصب سریع و نگهداری کم'
+        'دمای فرآیند −۲۰ تا ۱۰۰ درجه سانتی‌گراد',
+        'فشار فرآیند −۱ تا ۶۴ بار',
+        'بدون نیاز به تنظیم در محل',
+        'خروجی ترانزیستور PNP · IO-Link',
+        'اتصال بهداشتی اختیاری G1"'
       ],
-      applications: ['مخازن ذخیره', 'سیلو', 'جداکننده', 'فرآیندهای پیوسته'],
-      officialRef: 'https://www.vega.com/en-ae/products/product-catalog/switching/capacitive/vegapoint'
+      applications: ['غذایی و نوشیدنی', 'دارویی', 'آب', 'مخازن کوچک'],
+      officialRef: 'https://www.vega.com/tr-tr/urunler/urun-kataloglari/seviye-salteri/kapasitif/vegapoint-11'
+    },
+    {
+      id: 'vegapoint-21',
+      name: 'VEGAPOINT 21',
+      series: 'Capacitive — Compact Liquid',
+      category: 'point',
+      image: VEGA_IMG + 'product-vegapoint-21.png',
+      imageAlt: 'VEGAPOINT 21 compact capacitive limit switch with 360 degree status display',
+      badge: 'موجود',
+      priceEur: 250,
+      summaryFa: 'سوئیچ حد خازنی فشرده برای مایعات آب‌پایه — نمایشگر وضعیت رنگی ۳۶۰ درجه و IO-Link.',
+      useCaseFa: 'فرآیند بهداشتی غذایی و دارویی — اتصال یونیورسال G1 برای آداپتور، Bluetooth و تاییدیه‌های Ex.',
+      features: [
+        'دمای فرآیند −۴۰ تا ۱۱۵ درجه سانتی‌گراد',
+        'فشار فرآیند −۱ تا ۶۴ بار · DK > ۱٫۵',
+        'نمایشگر وضعیت رنگی ۳۶۰ درجه قابل تنظیم',
+        'خروجی ترانزیستور NPN/PNP · IO-Link',
+        'Bluetooth و تاییدیه‌های بهداشتی / Ex'
+      ],
+      applications: ['غذایی و نوشیدنی', 'دارویی', 'مخازن فرآیند', 'کف و سطح حد'],
+      officialRef: 'https://www.vega.com/tr-tr/urunler/urun-kataloglari/seviye-salteri/kapasitif/vegapoint-21'
+    },
+    {
+      id: 'vegapoint-31',
+      name: 'VEGAPOINT 31',
+      series: 'Capacitive — Compact Solids',
+      category: 'point',
+      image: VEGA_IMG + 'product-vegapoint-31.png',
+      imageAlt: 'VEGAPOINT 31 compact capacitive limit switch for light bulk solids',
+      badge: 'موجود',
+      priceEur: 250,
+      summaryFa: 'سوئیچ حد خازنی فشرده برای مواد فله سبک — نمایشگر ۳۶۰ درجه، IO-Link و نصب بدون تنظیم.',
+      useCaseFa: 'سیلو و مخزن پودر/گرانول سبک در صنایع غذایی و دارویی — همان پلتفرم فشرده VEGAPOINT با بهینه‌سازی جامدات.',
+      features: [
+        'دمای فرآیند −۴۰ تا ۱۱۵ درجه سانتی‌گراد',
+        'فشار فرآیند −۱ تا ۶۴ بار',
+        'بهینه برای مواد فله سبک',
+        'نمایشگر وضعیت رنگی ۳۶۰ درجه',
+        'خروجی ترانزیستور NPN/PNP · IO-Link · Bluetooth'
+      ],
+      applications: ['غذایی', 'دارویی', 'سیلو پودر', 'مواد فله سبک'],
+      officialRef: 'https://www.vega.com/tr-tr/urunler/urun-kataloglari/seviye-salteri/kapasitif/vegapoint-31'
     },
     {
       id: 'vegavib-s61',

@@ -126,7 +126,8 @@
   }
 
   .nav__panel--products {
-    max-width: min(92vw, 520px);
+    max-width: min(96vw, 720px);
+    width: min(96vw, 720px);
   }
 }
 

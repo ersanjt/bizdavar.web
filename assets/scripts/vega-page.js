@@ -148,6 +148,7 @@
     const V = catalog();
     const el = document.getElementById('vegaCatNav');
     if (!el) return;
+    el.setAttribute('aria-label', t('navAria', 'دسته‌بندی محصولات VEGA'));
     const links = [
       { id: 'trust', label: t('navTrust', 'چرا بیزدوار'), icon: 'target' },
       { id: 'buy', label: t('navBuy', 'مسیر خرید'), icon: 'list' },
