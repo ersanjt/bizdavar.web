@@ -47,6 +47,7 @@ const FILE_TO_ROUTE = {
   'pages/biztab.html': '/pages/biztab',
   'pages/bizsanitizer-v5.html': '/pages/bizsanitizer-v5',
   'pages/fxguard.html': '/pages/fxguard',
+  'pages/fxguard-accounting.html': '/pages/fxguard-accounting',
   'pages/bizswap.html': '/pages/bizswap',
   'pages/articles/digital-marketing.html': '/pages/articles/digital-marketing',
   'pages/articles/what-is-digital-marketing.html': '/pages/articles/what-is-digital-marketing',

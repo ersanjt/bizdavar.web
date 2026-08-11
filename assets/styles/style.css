@@ -280,7 +280,8 @@ ul { list-style: none; }
   opacity: 1;
 }
 
-.nav__dropdown--products[open] .nav__chev {
+.nav__dropdown--products[open] .nav__chev,
+.nav__dropdown--services[open] .nav__chev {
   transform: rotate(-135deg) translateY(0.06em);
 }
 
@@ -289,8 +290,9 @@ ul { list-style: none; }
   width: 0;
 }
 
-/* Products nav dropdown (site-wide — was incorrectly scoped to fxguard.css) */
-.nav__dropdown--products {
+/* Products / Services mega-menu dropdown */
+.nav__dropdown--products,
+.nav__dropdown--services {
   position: relative;
   align-self: center;
 }
@@ -309,7 +311,8 @@ ul { list-style: none; }
   display: none;
 }
 
-.nav__panel--products {
+.nav__panel--products,
+.nav__panel--services {
   position: absolute;
   top: calc(100% + 8px);
   inset-inline-start: 0;
@@ -322,6 +325,10 @@ ul { list-style: none; }
   padding: 0;
   z-index: 200;
   overflow: hidden;
+}
+
+.nav__panel--services {
+  width: min(780px, calc(100vw - 32px));
 }
 
 .nav__product-mega {

@@ -122,7 +122,7 @@
               <p data-i18n="servicesPage.blocks.2.subtitle">Android · iOS · سامانه سازمانی</p>
             </div>
           </div>
-          <p data-i18n-html="servicesPage.blocks.2.body">طراحی و توسعه اپلیکیشن اندروید و iOS، سامانه سازمانی و پنل B2B برای کسب‌وکارهای ایرانی در تبریز و استانبول.</p>
+          <p data-i18n-html="servicesPage.blocks.2.body">طراحی و توسعه اپلیکیشن اندروید و iOS، سامانه سازمانی، پنل B2B و راهکارهای نرم‌افزاری سفارشی — از تحلیل نیاز تا انتشار، یکپارچه‌سازی و پشتیبانی.</p>
           <div class="service-block__tags"></div>
           <ul class="check-list"></ul>
           <a href="/pages/contact?service=software-apps" class="btn btn--primary" data-service-cta data-i18n="servicesPage.blocks.2.cta">درخواست پروژه نرم‌افزاری</a>
@@ -150,62 +150,105 @@
       </div>
     </section>
 
-    <section class="section section--gray service-block service-block--slate service-block--reverse" id="server-ops" data-service-block="3">
+    <section class="section section--gray service-block service-block--slate service-block--reverse" id="server-ops" data-service-block="3" aria-labelledby="svc-server-title">
       <div class="container service-block__inner">
         <div class="service-block__content">
           <div class="service-block__head">
             <span class="service-block__num">04</span>
             <div>
-              <h2 data-i18n="servicesPage.blocks.3.title">مدیریت سرور و زیرساخت</h2>
-              <p data-i18n="servicesPage.blocks.3.subtitle">Server · VPS · Monitoring · Security</p>
+              <h2 id="svc-server-title" data-i18n="servicesPage.blocks.3.title">مدیریت سرور و زیرساخت</h2>
+              <p data-i18n="servicesPage.blocks.3.subtitle">Server · VPS · Linux · Security · Ops</p>
             </div>
           </div>
-          <p data-i18n-html="servicesPage.blocks.3.body">راه‌اندازی، امن‌سازی و مدیریت سرور — VPS، بکاپ، مانیتورینگ و پشتیبانی پایدار.</p>
+          <p data-i18n-html="servicesPage.blocks.3.body">راه‌اندازی، سخت‌سازی و مدیریت عملیاتی سرور — از VPS و لینوکس تا وب‌سرور، دیتابیس، DNS، CDN، بکاپ، مانیتورینگ و واکنش به حادثه.</p>
           <div class="service-block__tags"></div>
+          <h3 class="field-tech-list-title" data-i18n="servicesPage.serverOps.servicesTitle">چه خدماتی در زیرساخت پوشش می‌دهیم؟</h3>
           <ul class="check-list"></ul>
+          <div class="server-ops-stack" id="serverOpsStack" aria-label="stack"></div>
           <a href="/pages/contact?service=server-ops" class="btn btn--primary" data-service-cta data-i18n="servicesPage.blocks.3.cta">مشاوره مدیریت سرور</a>
         </div>
         <div class="service-block__visual service-block__visual--panel">
-          <div class="service-panel-grid">
+          <div class="service-panel-grid service-panel-grid--ops" id="serverOpsPanel">
             <div class="service-panel-card">
               <strong>VPS</strong>
-              <span>راه‌اندازی و پیکربندی</span>
+              <span>راه‌اندازی و سخت‌سازی</span>
             </div>
             <div class="service-panel-card">
               <strong>Security</strong>
-              <span>فایروال و SSL</span>
+              <span>SSL، فایروال و دسترسی</span>
             </div>
             <div class="service-panel-card">
               <strong>Backup</strong>
-              <span>بکاپ زمان‌بندی‌شده</span>
+              <span>بکاپ و تست بازیابی</span>
             </div>
             <div class="service-panel-card">
               <strong>Monitor</strong>
-              <span>پایداری و uptime</span>
+              <span>uptime و هشدار</span>
+            </div>
+            <div class="service-panel-card">
+              <strong>DNS / CDN</strong>
+              <span>دامنه و Cloudflare</span>
+            </div>
+            <div class="service-panel-card">
+              <strong>Migrate</strong>
+              <span>انتقال بدون قطعی</span>
             </div>
           </div>
         </div>
       </div>
+      <div class="container field-tech-faq-section">
+        <div id="serverOpsFaq"></div>
+      </div>
     </section>
 
-    <section class="section service-block service-block--red" id="smm" data-service-block="4">
+    <section class="section service-block service-block--red" id="smm" data-service-block="4" aria-labelledby="svc-smm-title">
       <div class="container service-block__inner">
         <div class="service-block__content">
           <div class="service-block__head">
             <span class="service-block__num">05</span>
             <div>
-              <h2 data-i18n="servicesPage.blocks.4.title">مدیریت شبکه‌های اجتماعی (SMM)</h2>
-              <p data-i18n="servicesPage.blocks.4.subtitle">Social Media · محتوا و تبلیغات</p>
+              <h2 id="svc-smm-title" data-i18n="servicesPage.blocks.4.title">مدیریت شبکه‌های اجتماعی (SMM)</h2>
+              <p data-i18n="servicesPage.blocks.4.subtitle">Social Media · محتوا · تبلیغات · رشد</p>
             </div>
           </div>
-          <p data-i18n-html="servicesPage.blocks.4.body">تولید محتوا، مدیریت صفحات و تبلیغات هدفمند در اینستاگرام و لینکدین.</p>
+          <p data-i18n-html="servicesPage.blocks.4.body">مدیریت حرفه‌ای حضور برند در شبکه‌های اجتماعی — تولید محتوا، طراحی بصری، تقویم انتشار، تعامل با مخاطب و تبلیغات هدفمند در اینستاگرام و لینکدین، با گزارش رشد ماهانه.</p>
           <div class="service-block__tags"></div>
+          <h3 class="field-tech-list-title" data-i18n="servicesPage.smm.servicesTitle">در مدیریت شبکه‌های اجتماعی چه می‌کنیم؟</h3>
           <ul class="check-list"></ul>
+          <div class="smm-deliverables" id="smmDeliverables"></div>
           <a href="/pages/contact?service=smm" class="btn btn--primary" data-service-cta data-i18n="servicesPage.blocks.4.cta">شروع همکاری SMM</a>
         </div>
-        <div class="service-block__visual service-block__visual--image">
-          <img src="/assets/images/content/services-smm-mockup.svg" alt="مدیریت شبکه‌های اجتماعی — SMM" data-i18n-alt="servicesPage.panels.smmImgAlt" loading="lazy" width="480" height="320">
+        <div class="service-block__visual service-block__visual--panel">
+          <div class="service-panel-grid service-panel-grid--ops" id="smmPanel">
+            <div class="service-panel-card">
+              <strong>Instagram</strong>
+              <span>پست، استوری، ریلز و تبلیغات</span>
+            </div>
+            <div class="service-panel-card">
+              <strong>LinkedIn</strong>
+              <span>محتوای B2B و برندینگ حرفه‌ای</span>
+            </div>
+            <div class="service-panel-card">
+              <strong>Content</strong>
+              <span>تقویم، کپی و هویت بصری</span>
+            </div>
+            <div class="service-panel-card">
+              <strong>Paid Ads</strong>
+              <span>کمپین هدفمند و بهینه‌سازی</span>
+            </div>
+            <div class="service-panel-card">
+              <strong>Community</strong>
+              <span>تعامل و پاسخ‌گویی</span>
+            </div>
+            <div class="service-panel-card">
+              <strong>Analytics</strong>
+              <span>گزارش رشد و عملکرد</span>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="container field-tech-faq-section">
+        <div id="smmFaq"></div>
       </div>
     </section>
 

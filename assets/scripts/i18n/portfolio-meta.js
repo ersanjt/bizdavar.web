@@ -21,7 +21,7 @@
     'Fast Web Studio': { category: 'Web design', note: 'Bizdavar product — 5-day website delivery' },
     'BizTab': { category: 'Owned product / IoT & health tech', note: 'First non-contact wall thermometer in Tabriz — developed by Bizdavar team, error under 0.3°C, approved by University of Tabriz' },
     'BizClean V5': { category: 'Owned product / hygiene tech', note: 'Automatic hand sanitizer V5 — COVID-era product, Tabriz University growth center exhibition (SNN), sold on Digikala' },
-    'FXGuard': { category: 'Custom WhatsApp CRM script', note: 'Custom script — team panel, bulk messaging and 24/7 auto-replies; one-time $500, $800 and $1,200 plans' },
+    'FXGuard': { category: 'WhatsApp CRM', note: 'FXGuard suite — shared inbox, tickets, branches, 2FA; Cloud from $49/mo, License or Managed · fxguard.io' },
     'BizSwap': { category: 'Web3 / presale and token swap', note: 'Case study — on-chain presale and swap module (BEP-20), wallet connect and DeFi UI; Bizdavar team' },
     'FXGuard Exchange': { category: 'Web design / exchange and fintech', note: 'Case study — Toman–Lira exchange platform with live rates, KYC and order tracking' },
     'FXGuard Accounting': { category: 'Accounting software / finance', note: 'Case study — professional accounting system for finance and exchange businesses' },

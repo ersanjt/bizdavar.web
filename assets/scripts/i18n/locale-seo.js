@@ -22,9 +22,9 @@
         seoKeywords: 'خدمات بیزدوار, طراحی وب اپلیکیشن, اپلیکیشن اندروید, اپلیکیشن iOS, مدیریت سرور, نصب دوربین مدار بسته تبریز, نصب دوربین مدار بسته استانبول, نورمخفی, سیم‌کشی ساختمان, آرشام جاهد تبریزی'
       },
       products: {
-        seoTitle: 'محصولات بیزدوار | CRM واتساپ، BizSwap، BizTab و خطوط تولید',
-        seoDescription: 'محصولات بیزدوار — اسکریپت CRM واتساپ، BizSwap DeFi، BizTab، BizClean و خطوط تولید. سخت‌افزار و SaaS مهندسی‌شده توسط تیم بیزدوار.',
-        seoKeywords: 'CRM واتساپ, اسکریپت WhatsApp, BizSwap, BizTab, BizClean, بیزدوار'
+        seoTitle: 'محصولات بیزدوار | WhatsApp CRM، Accounting، BizSwap و خطوط تولید',
+        seoDescription: 'محصولات بیزدوار — سوئیت FXGuard (WhatsApp CRM و Accounting)، BizSwap، BizTab، BizClean و خطوط تولید. سخت‌افزار و SaaS تیم بیزدوار.',
+        seoKeywords: 'WhatsApp CRM, FXGuard Accounting, BizSwap, BizTab, BizClean, بیزدوار'
       },
       portfolio: {
         seoTitle: 'نمونه‌کارها | پروژه‌های بیزدوار گروپ — ZedPay، BZ Diamond و...',
@@ -127,9 +127,14 @@
         seoKeywords: 'BizClean V5, BizClean, ضدعفونی دست, بیزدوار, کرونا, دیجی‌کالا, محصول اختصاصی'
       },
       fxguard: {
-        seoTitle: 'اسکریپت CRM واتساپ | برنامه‌نویسی اختصاصی — بیزدوار',
-        seoDescription: 'اسکریپت CRM واتساپ با برنامه‌نویسی اختصاصی — پلن $500، $800 و $1,200. پنل تیمی، پیام انبوه و پاسخ خودکار. توسعه‌یافته توسط تیم بیزدوار.',
-        seoKeywords: 'CRM واتساپ, اسکریپت WhatsApp, برنامه‌نویسی اختصاصی, بیزدوار, WhatsApp CRM'
+        seoTitle: 'FXGuard WhatsApp CRM | از $49/ماه · دمو رایگان — بیزدوار',
+        seoDescription: 'FXGuard WhatsApp CRM — اینباکس تیمی، مشتریان، تیکت، شعب و ۲FA. Cloud از $49/ماه، لایسنس یا Managed. دمو رایگان app.fxguard.io. محصول اکوسیستم بیزدوار.',
+        seoKeywords: 'FXGuard, WhatsApp CRM, CRM واتساپ, اینباکس تیمی, بیزدوار, fxguard.io'
+      },
+      fxguardAccounting: {
+        seoTitle: 'FXGuard Accounting | سامانه حسابداری — بیزدوار',
+        seoDescription: 'FXGuard Accounting — سامانه حسابداری برای تیم‌های مالی، صرافی و SME. بخشی از سوئیت FXGuard، توسعه بیزدوار گروپ.',
+        seoKeywords: 'FXGuard Accounting, حسابداری, نرم‌افزار حسابداری, بیزدوار, fxguard.io'
       },
       bizswap: {
         seoTitle: 'BizSwap | پیش‌فروش و سواپ توکن Web3 — محصول بیزدوار',
@@ -299,9 +304,14 @@
         seoKeywords: 'BizClean V5, BizClean, el dezenfektan, Bizdavar, Digikala'
       },
       fxguard: {
-        seoTitle: 'WhatsApp CRM Script | Özel yazılım — Bizdavar',
-        seoDescription: 'Özel WhatsApp CRM scripti — $500, $800 ve $1,200 planları. Ekip paneli, toplu mesaj ve otomatik yanıt. Bizdavar tarafından geliştirildi.',
-        seoKeywords: 'WhatsApp CRM, özel script, Bizdavar, CRM script, WhatsApp otomasyon'
+        seoTitle: 'FXGuard WhatsApp CRM | $49/ay’dan · ücretsiz demo — Bizdavar',
+        seoDescription: 'FXGuard WhatsApp CRM — ortak inbox, müşteriler, ticket, şubeler ve 2FA. Cloud $49/ay’dan, lisans veya Managed. Ücretsiz demo app.fxguard.io.',
+        seoKeywords: 'FXGuard, WhatsApp CRM, ortak inbox, Bizdavar, fxguard.io'
+      },
+      fxguardAccounting: {
+        seoTitle: 'FXGuard Accounting | Muhasebe sistemi — Bizdavar',
+        seoDescription: 'FXGuard Accounting — finans, döviz ve KOBİ ekipleri için muhasebe. FXGuard suite parçası, Bizdavar Group.',
+        seoKeywords: 'FXGuard Accounting, muhasebe yazılımı, Bizdavar, fxguard.io'
       },
       bizswap: {
         seoTitle: 'BizSwap | Token ön satış & swap Web3 — Bizdavar ürünü',
@@ -471,9 +481,14 @@
         seoKeywords: 'BizClean V5, BizClean, hand sanitizer, Bizdavar, Digikala'
       },
       fxguard: {
-        seoTitle: 'WhatsApp CRM Script | Custom development — Bizdavar',
-        seoDescription: 'Custom WhatsApp CRM script — $500, $800 and $1,200 plans. Team panel, bulk messaging and auto-reply. Built by the Bizdavar team.',
-        seoKeywords: 'WhatsApp CRM, custom script, Bizdavar, CRM script, WhatsApp automation'
+        seoTitle: 'FXGuard WhatsApp CRM | From $49/mo · Free demo — Bizdavar',
+        seoDescription: 'FXGuard WhatsApp CRM — shared inbox, customers, tickets, branches and 2FA. Cloud from $49/mo, License or Managed. Free demo at app.fxguard.io.',
+        seoKeywords: 'FXGuard, WhatsApp CRM, shared inbox, Bizdavar, fxguard.io'
+      },
+      fxguardAccounting: {
+        seoTitle: 'FXGuard Accounting | Finance accounting — Bizdavar',
+        seoDescription: 'FXGuard Accounting — accounting for finance, exchange and SME teams. Part of the FXGuard suite by Bizdavar Group.',
+        seoKeywords: 'FXGuard Accounting, accounting software, Bizdavar, fxguard.io'
       },
       bizswap: {
         seoTitle: 'BizSwap | Token presale & swap Web3 — Bizdavar product',

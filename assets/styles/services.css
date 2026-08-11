@@ -127,6 +127,49 @@
   color: var(--text-muted);
 }
 
+.service-panel-grid--ops {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.service-panel-grid--ops .service-panel-card {
+  padding: 16px 14px;
+  min-height: 84px;
+}
+
+.server-ops-stack {
+  margin: 4px 0 18px;
+}
+
+.server-ops-stack__title {
+  margin: 0 0 10px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.server-ops-stack__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.server-ops-stack__item {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-200);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.service-block--slate .server-ops-stack__item {
+  background: #fff;
+}
+
 .field-tech-list-title {
   margin: 8px 0 10px;
   font-size: 1rem;
@@ -575,8 +618,20 @@
 
 .service-block--red .service-block__visual--panel {
   background: linear-gradient(145deg, #7f1d1d 0%, #dc2626 50%, #f97316 100%);
-  flex-direction: column;
-  gap: 16px;
+}
+
+.service-block--red .service-panel-card {
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.service-block--red .smm-deliverables .server-ops-stack__item,
+.service-block--red .server-ops-stack__item {
+  background: #fff;
+  border-color: rgba(220, 38, 38, 0.18);
+}
+
+.smm-deliverables {
+  margin: 4px 0 18px;
 }
 
 .service-block__visual--panel h3 {

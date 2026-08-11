@@ -30,6 +30,7 @@ window.BIZDAVAR_CONFIG = {
     biztab: 'pages/biztab.html',
     bizsanitizerV5: 'pages/bizsanitizer-v5.html',
     fxguard: 'pages/fxguard.html',
+    fxguardAccounting: 'pages/fxguard-accounting.html',
     bizswap: 'pages/bizswap.html',
     products: 'pages/products.html',
     gamak: 'pages/gamak.html',
@@ -70,6 +71,7 @@ window.BIZDAVAR_CONFIG = {
             labelKey: 'nav.productsSoftware',
             items: [
               { route: 'fxguard', page: 'fxguard', labelKey: 'nav.productFxguard', label: 'WhatsApp CRM', descKey: 'nav.productFxguardDesc', badgeKey: 'nav.productFxguardBadge' },
+              { route: 'fxguardAccounting', page: 'fxguard-accounting', labelKey: 'nav.productFxguardAccounting', label: 'Accounting', descKey: 'nav.productFxguardAccountingDesc', badgeKey: 'nav.productFxguardAccountingBadge' },
               { route: 'bizswap', page: 'bizswap', labelKey: 'nav.productBizswap', label: 'BizSwap', descKey: 'nav.productBizswapDesc' }
             ]
           },
@@ -145,6 +147,71 @@ window.BIZDAVAR_CONFIG = {
       { route: 'products', page: 'products', labelKey: 'nav.productsCatalog' },
       { route: 'products', hash: 'supply', labelKey: 'nav.productsSupplyLink' },
       { route: 'contact', page: 'contact', labelKey: 'nav.productsQuote' }
+    ]
+  },
+
+  /**
+   * Services mega-menu — Digital/software pillars · Field technical services
+   */
+  serviceNav: {
+    overviewRoute: 'services',
+    defaultTab: 'digital',
+    featured: {
+      route: 'services',
+      hash: 'field-tech',
+      page: 'services',
+      labelKey: 'nav.serviceField',
+      descKey: 'nav.serviceFieldFeaturedDesc',
+      kickerKey: 'nav.servicesMegaHint'
+    },
+    tabs: [
+      {
+        id: 'digital',
+        labelKey: 'nav.tabServicesDigital',
+        groups: [
+          {
+            id: 'growth',
+            labelKey: 'nav.servicesGroupGrowth',
+            items: [
+              { route: 'services', hash: 'digital-marketing', page: 'services', labelKey: 'nav.serviceDigital', descKey: 'nav.serviceDigitalDesc' },
+              { route: 'services', hash: 'smm', page: 'services', labelKey: 'nav.serviceSmm', descKey: 'nav.serviceSmmDesc' }
+            ]
+          },
+          {
+            id: 'build',
+            labelKey: 'nav.servicesGroupBuild',
+            items: [
+              { route: 'services', hash: 'web-design', page: 'services', labelKey: 'nav.serviceWeb', descKey: 'nav.serviceWebDesc' },
+              { route: 'services', hash: 'software-apps', page: 'services', labelKey: 'nav.serviceApps', descKey: 'nav.serviceAppsDesc' },
+              { route: 'services', hash: 'server-ops', page: 'services', labelKey: 'nav.serviceServer', descKey: 'nav.serviceServerDesc' }
+            ]
+          }
+        ]
+      },
+      {
+        id: 'field',
+        labelKey: 'nav.tabServicesField',
+        cta: {
+          route: 'contact',
+          page: 'contact',
+          labelKey: 'nav.servicesConsult',
+          descKey: 'nav.servicesConsultDesc'
+        },
+        groups: [
+          {
+            id: 'field',
+            labelKey: 'nav.servicesGroupField',
+            items: [
+              { route: 'services', hash: 'field-tech', page: 'services', labelKey: 'nav.serviceField', descKey: 'nav.serviceFieldDesc', badgeKey: 'nav.serviceFieldBadge' }
+            ]
+          }
+        ]
+      }
+    ],
+    footer: [
+      { route: 'services', page: 'services', labelKey: 'nav.servicesAll' },
+      { route: 'fast', page: 'fast', labelKey: 'nav.webDesign' },
+      { route: 'contact', page: 'contact', labelKey: 'nav.servicesConsult' }
     ]
   },
 
@@ -530,10 +597,10 @@ window.BIZDAVAR_CONFIG = {
     { name: 'Fast Web Studio', domain: 'bizdavar.com', category: 'طراحی سایت', role: 'case-study', internal: true, slug: 'pages/fast.html', logo: 'assets/images/partners/fast-studio.png', note: 'محصول اختصاصی بیزدوار — طراحی سایت ۵ روزه' },
     { name: 'BizTab', domain: 'nasrnews.ir', url: 'https://nasrnews.ir/print/16727/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D9%88-%D8%B3%D8%A7%D8%AE%D8%AA-%D8%A7%D9%88%D9%84%DB%8C%D9%86-%D8%AF%D9%85%D8%A7%D8%B3%D9%86%D8%AC-%D8%AF%DB%8C%D9%88%D8%A7%D8%B1%DB%8C-%D8%BA%DB%8C%D8%B1%D8%AA%D9%85%D8%A7%D8%B3%DB%8C-%D8%AF%D8%B1-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2', category: 'محصول اختصاصی / IoT و سلامت', role: 'case-study', internal: true, slug: 'pages/biztab.html', logo: 'assets/images/products/biztab/biztab-hero.jpg', note: 'محصول اختصاصی — اولین دماسنج دیواری غیرتماسی تبریز، توسعه تیم بیزدوار' },
     { name: 'BizClean V5', domain: 'digikala.com', url: 'https://www.digikala.com/product/dkp-3730222/', category: 'محصول اختصاصی / بهداشت', role: 'case-study', internal: true, slug: 'pages/bizsanitizer-v5.html', logo: 'assets/images/products/bizsanitizer/bizclean-v5.png', note: 'محصول اختصاصی — دستگاه ضدعفونی دست V5، توسعه در دوران کرونا' },
-    { name: 'FXGuard', domain: 'bizdavar.com', category: 'اسکریپت CRM واتساپ', role: 'case-study', internal: true, slug: 'pages/fxguard.html', logo: 'assets/images/products/fxguard/fxguard-logo.svg', note: 'اسکریپت اختصاصی CRM واتساپ — پنل تیمی، پیام انبوه و پاسخ خودکار ۲۴/۷؛ پلن $500، $800 و $1,200' },
+    { name: 'FXGuard', domain: 'fxguard.io', url: 'https://fxguard.io/', category: 'WhatsApp CRM', role: 'case-study', internal: true, slug: 'pages/fxguard.html', logo: 'assets/images/products/fxguard/fxguard-logo.svg', note: 'FXGuard WhatsApp CRM — اینباکس تیمی، تیکت، شعب و ۲FA؛ Cloud از $49/ماه، لایسنس یا Managed — فروش در fxguard.io' },
     { name: 'BizSwap', domain: 'Web3 · DeFi Module', category: 'Web3 / پیش‌فروش و سواپ توکن', role: 'case-study', internal: true, slug: 'pages/bizswap.html', logo: 'assets/images/products/bizswap/bizswap-logo.svg', note: 'نمونه‌کار — ماژول پیش‌فروش و سواپ on-chain (BEP-20)، اتصال کیف پول و UI DeFi؛ توسعه تیم بیزدوار' },
     { name: 'FXGuard Exchange', domain: 'exchange.fxguard.io', url: 'https://exchange.fxguard.io/', category: 'طراحی وب / صرافی و فین‌تک', role: 'case-study', internal: true, slug: 'pages/fxguard-exchange.html', logo: 'assets/images/partners/fxguard-exchange.svg', note: 'نمونه‌کار — پلتفرم تبادل تومان و لیر با نرخ زنده، KYC و پیگیری سفارش' },
-    { name: 'FXGuard Accounting', domain: 'accounting.fxguard.io', category: 'نرم‌افزار حسابداری / فینانس', role: 'case-study', internal: false, logo: 'assets/images/partners/fxguard-accounting.svg', note: 'نمونه‌کار — سیستم حسابداری حرفه‌ای با برنامه‌نویسی اختصاصی، مناسب کسب‌وکارهای فینانس و صرافی' },
+    { name: 'FXGuard Accounting', domain: 'accounting.fxguard.io', url: 'https://accounting.fxguard.io/', category: 'نرم‌افزار حسابداری / فینانس', role: 'case-study', internal: true, slug: 'pages/fxguard-accounting.html', logo: 'assets/images/partners/fxguard-accounting.svg', note: 'محصول FXGuard — سامانه حسابداری برای تیم‌های مالی، صرافی و SME؛ بخشی از سوئیت fxguard.io' },
     { name: 'Marvispace', domain: 'marvispace.com', url: 'https://marvispace.com', category: 'طراحی وب / فروشگاه اختصاصی', role: 'case-study', internal: false, logo: 'assets/images/partners/marvispace.svg', note: 'نمونه‌کار — فروشگاه آنلاین اختصاصی با داشبورد ادمین، مدیریت محصول و محتوا' },
     { name: 'Marvi Society', domain: 'marvisociety.com', url: 'https://marvisociety.com', appStoreUrl: 'https://apps.apple.com/us/app/marvi-society/id6783450762', category: 'توسعه اپ موبایل / lifestyle و creator', role: 'case-study', internal: false, logo: 'assets/images/partners/marvi-society.svg', note: 'نمونه‌کار — طراحی، برنامه‌نویسی و راه‌اندازی صفر تا صد اپ iOS؛ کلاب دعوت‌محور همکاری creator و مکان تأییدشده در استانبول — کشف مکان، check-in، ارسال مدرک بازدید، پروفایل TR/EN؛ منتشر در App Store' },
     { name: 'GooPay AI', domain: 'goopay.ai', category: 'هوش مصنوعی / نرم‌افزار اختصاصی', role: 'case-study', internal: false, logo: 'assets/images/partners/goopay-ai.svg', note: 'نمونه‌کار — طراحی و برنامه‌نویسی اختصاصی سیستم‌های هوش مصنوعی' },

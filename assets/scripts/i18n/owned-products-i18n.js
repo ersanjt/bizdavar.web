@@ -37,7 +37,7 @@
         featured: {
           eyebrow: 'محصولات زنده',
           title: 'صفحات محصول آماده سفارش',
-          desc: 'CRM واتساپ، BizSwap، BizTab و BizClean — با صفحه اختصاصی و مسیر استعلام شفاف.'
+          desc: 'WhatsApp CRM، Accounting، BizSwap، BizTab و BizClean — با صفحه اختصاصی و مسیر استعلام شفاف.'
         },
         filterAll: 'همه',
         empty: 'محصولی برای نمایش نیست.',
@@ -55,17 +55,35 @@
         },
         explore: {
           eyebrow: 'دسترسی سریع',
-          title: 'محصولات مالکیتی و برندهای تامین',
-          desc: 'مستقیم به صفحه اختصاصی هر محصول یا برند بروید.',
+          title: 'مسیر مستقیم به محصولات و برندها',
+          desc: 'نرم‌افزار مالکیتی، سخت‌افزار بیزدوار و برندهای صنعتی تامین — یک کلیک تا صفحه اختصاصی.',
+          ownedKicker: 'Owned · Software & Hardware',
           ownedTitle: 'محصولات مالکیتی',
+          ownedDesc: 'سوئیت FXGuard، BizSwap و دستگاه‌های مهندسی‌شده تیم بیزدوار.',
+          supplyKicker: 'Supply · Industrial Brands',
           supplyTitle: 'برندهای تامین',
+          supplyDesc: 'کاتالوگ جداگانه، مشاوره فنی و پیش‌فاکتور شفاف برای پروژه‌های صنعتی.',
           servicesTitle: 'خدمات و نمونه‌کار',
-          catalogLink: 'کاتالوگ کامل',
+          catalogLink: 'کاتالوگ کامل محصولات',
           linkServices: 'خدمات بیزدوار',
-          linkIndustrial: 'همه برندها',
+          linkIndustrial: 'مشاهده همه برندهای تامین',
           linkFast: 'Fast Web Studio',
           linkPortfolio: 'نمونه‌کارها',
-          linkContact: 'تماس و استعلام'
+          linkContact: 'تماس و استعلام',
+          links: {
+            fxguard: 'اینباکس تیمی · از $49/ماه',
+            accounting: 'سامانه حسابداری · FXGuard',
+            bizswap: 'پیش‌فروش و سواپ توکن',
+            biztab: 'دماسنج IoT غیرتماسی',
+            bizclean: 'ضدعفونی دست اتوماتیک',
+            vega: 'سنسور سطح و فشار',
+            prosense: 'دتکتور گاز و شعله',
+            teltonika: 'Fleet Telematics / GPS',
+            liqui: 'روغن و افزودنی خودرو',
+            gamak: 'الکتروموتور صنعتی',
+            digi: 'ترازو و POS',
+            teraoka: 'ترازو و برچسب‌زن'
+          }
         },
         geoText: 'محصولات مالکیتی و تامین برندهای صنعتی — مشاوره فنی فارسی از استانبول و تبریز.',
         related: [
@@ -81,7 +99,7 @@
         statusLive: 'صفحه محصول',
         statusCatalog: 'استعلام',
         categories: {
-          software: { label: 'نرم‌افزار و SaaS', desc: 'CRM واتساپ و پلتفرم‌های B2B' },
+          software: { label: 'نرم‌افزار و SaaS', desc: 'WhatsApp CRM و Accounting از سوئیت FXGuard، به‌همراه BizSwap' },
           'iot-health': { label: 'IoT و بهداشت', desc: 'دماسنج، ضدعفونی‌کننده و تجهیزات بدون تماس' },
           packaging: { label: 'بسته‌بندی و سیل', desc: 'دستگاه‌های کش‌زن و خطوط بسته‌بندی' },
           medical: { label: 'پزشکی و PPE', desc: 'خطوط تولید ماسک و پد حرارتی' }
@@ -94,10 +112,16 @@
             tags: ['DeFi', 'Web3', 'Token Swap']
           },
           fxguard: {
-            name: 'CRM واتساپ',
-            title: 'اسکریپت WhatsApp CRM',
-            desc: 'اسکریپت اختصاصی CRM واتساپ — یک شماره، یک پنل، پیام انبوه و پاسخ خودکار. پلن $500، $800 و $1,200.',
-            tags: ['WhatsApp CRM', 'اسکریپت اختصاصی', 'B2B']
+            name: 'WhatsApp CRM',
+            title: 'FXGuard WhatsApp CRM',
+            desc: 'اینباکس تیمی واتساپ، مشتریان، تیکت، شعب و ۲FA — Cloud از $49/ماه، لایسنس یا Managed. دمو رایگان در app.fxguard.io.',
+            tags: ['FXGuard', 'WhatsApp CRM', 'از $49/mo']
+          },
+          'fxguard-accounting': {
+            name: 'Accounting',
+            title: 'FXGuard Accounting',
+            desc: 'سامانه حسابداری برای تیم‌های مالی، صرافی و SME — بخشی از سوئیت محصولات FXGuard.',
+            tags: ['FXGuard', 'Accounting', 'Finance']
           },
           biztab: {
             name: 'BizTab',
@@ -201,7 +225,7 @@
         featured: {
           eyebrow: 'Canlı ürünler',
           title: 'Siparişe hazır ürün sayfaları',
-          desc: 'WhatsApp CRM, BizSwap, BizTab ve BizClean — özel sayfa ve net teklif yolu.'
+          desc: 'WhatsApp CRM, Accounting, BizSwap, BizTab ve BizClean — özel sayfa ve net teklif yolu.'
         },
         filterAll: 'Tümü',
         empty: 'Gösterilecek ürün yok.',
@@ -219,17 +243,35 @@
         },
         explore: {
           eyebrow: 'Hızlı erişim',
-          title: 'Sahip olunan ürünler ve tedarik markaları',
-          desc: 'Her ürün veya marka sayfasına doğrudan gidin.',
+          title: 'Ürün ve marka sayfalarına doğrudan gidin',
+          desc: 'Sahip olunan yazılım/donanım ve endüstriyel tedarik markaları — tek tıkla özel sayfa.',
+          ownedKicker: 'Owned · Software & Hardware',
           ownedTitle: 'Sahip olunan ürünler',
+          ownedDesc: 'FXGuard suite, BizSwap ve Bizdavar mühendislik cihazları.',
+          supplyKicker: 'Supply · Industrial Brands',
           supplyTitle: 'Tedarik markaları',
+          supplyDesc: 'Ayrı katalog, teknik danışmanlık ve şeffaf proforma.',
           servicesTitle: 'Hizmetler ve portfolyo',
-          catalogLink: 'Tam katalog',
+          catalogLink: 'Tam ürün kataloğu',
           linkServices: 'Bizdavar hizmetleri',
-          linkIndustrial: 'Tüm markalar',
+          linkIndustrial: 'Tüm tedarik markalarını gör',
           linkFast: 'Fast Web Studio',
           linkPortfolio: 'Portfolyo',
-          linkContact: 'İletişim ve teklif'
+          linkContact: 'İletişim ve teklif',
+          links: {
+            fxguard: 'Ortak inbox · $49/ay’dan',
+            accounting: 'Muhasebe sistemi · FXGuard',
+            bizswap: 'Token ön satış & swap',
+            biztab: 'Temassız IoT termometre',
+            bizclean: 'Otomatik el dezenfektanı',
+            vega: 'Seviye ve basınç sensörü',
+            prosense: 'Gaz ve alev dedektörü',
+            teltonika: 'Fleet Telematics / GPS',
+            liqui: 'Yağ ve katkı',
+            gamak: 'Endüstriyel elektrik motoru',
+            digi: 'Terazi ve POS',
+            teraoka: 'Terazi ve etiketleyici'
+          }
         },
         geoText: 'Sahip olunan ürünler ve endüstriyel marka tedariki — İstanbul ve Tebriz’den teknik danışmanlık.',
         related: [
@@ -245,14 +287,15 @@
         statusLive: 'Ürün sayfası',
         statusCatalog: 'Teklif iste',
         categories: {
-          software: { label: 'Yazılım ve SaaS', desc: 'WhatsApp CRM ve B2B platformlar' },
+          software: { label: 'Yazılım ve SaaS', desc: 'FXGuard WhatsApp CRM ve Accounting, ayrıca BizSwap' },
           'iot-health': { label: 'IoT ve hijyen', desc: 'Termometre, dezenfektan ve temasız ekipman' },
           packaging: { label: 'Ambalaj ve vakum', desc: 'Vakum makineleri ve ambalaj hatları' },
           medical: { label: 'Medikal ve PPE', desc: 'Maske ve ısı pedi üretim hatları' }
         },
         items: {
           bizswap: { name: 'BizSwap', title: 'Token ön satış & swap', desc: 'Web3 modülü — cüzdan bağlantısı, stablecoin-token swap, on-chain ön satış, slippage ve admin paneli (BEP-20 / RWA).', tags: ['DeFi', 'Web3', 'Token Swap'] },
-          fxguard: { name: 'WhatsApp CRM', title: 'Özel WhatsApp CRM script', desc: 'Özel WhatsApp CRM scripti — tek numara, tek panel, toplu mesaj ve otomatik yanıt. $500, $800 ve $1,200 planları.', tags: ['WhatsApp CRM', 'Özel script', 'B2B'] },
+          fxguard: { name: 'WhatsApp CRM', title: 'FXGuard WhatsApp CRM', desc: 'Ortak WhatsApp inbox, müşteriler, ticket, şubeler ve 2FA — Cloud $49/ay’dan, lisans veya Managed. Ücretsiz demo: app.fxguard.io.', tags: ['FXGuard', 'WhatsApp CRM', 'From $49/mo'] },
+          'fxguard-accounting': { name: 'Accounting', title: 'FXGuard Accounting', desc: 'Finans, döviz ve KOBİ ekipleri için muhasebe sistemi — FXGuard ürün ailesinin parçası.', tags: ['FXGuard', 'Accounting', 'Finance'] },
           biztab: { name: 'BizTab', title: 'Temasız duvar termometresi', desc: 'Tebriz\'deki ilk temasız duvar termometresi — 0,3°C altı hata, üniversite onayı.', tags: ['IoT', 'Temasız', 'Tebriz'] },
           bizclean: { name: 'BizClean', title: 'Hijyen ve dezenfeksiyon', desc: 'Otomatik el dezenfektan (BizClean V5) — Bizdavar üretimi; RINOTEX 1400 «Imen Sahand Padideh» park birimi; ISNA/IRIB basını.', tags: ['Hijyen', 'Otomatik', 'COVID'] },
           biztouch: { name: 'BizTouch', title: 'Temasız çözümler', desc: 'Giriş, hijyen ve kamusal alanlar için temasız cihazlar — Bizdavar tasarımı.', tags: ['Temasız', 'IoT', 'Giriş'] },
@@ -310,7 +353,7 @@
         featured: {
           eyebrow: 'Live products',
           title: 'Ready product pages',
-          desc: 'WhatsApp CRM, BizSwap, BizTab and BizClean — dedicated pages with a clear inquiry path.'
+          desc: 'WhatsApp CRM, Accounting, BizSwap, BizTab and BizClean — dedicated pages with a clear inquiry path.'
         },
         filterAll: 'All',
         empty: 'No products to display.',
@@ -328,17 +371,35 @@
         },
         explore: {
           eyebrow: 'Quick access',
-          title: 'Owned products and supply brands',
-          desc: 'Jump straight to each product or brand page.',
+          title: 'Jump straight to products and brands',
+          desc: 'Owned software and hardware plus industrial supply brands — one click to each dedicated page.',
+          ownedKicker: 'Owned · Software & Hardware',
           ownedTitle: 'Owned products',
+          ownedDesc: 'FXGuard suite, BizSwap and Bizdavar-engineered devices.',
+          supplyKicker: 'Supply · Industrial Brands',
           supplyTitle: 'Supply brands',
+          supplyDesc: 'Separate catalogs, technical consulting and transparent proformas.',
           servicesTitle: 'Services & portfolio',
-          catalogLink: 'Full catalog',
+          catalogLink: 'Full product catalog',
           linkServices: 'Bizdavar services',
-          linkIndustrial: 'All brands',
+          linkIndustrial: 'View all supply brands',
           linkFast: 'Fast Web Studio',
           linkPortfolio: 'Portfolio',
-          linkContact: 'Contact & inquiry'
+          linkContact: 'Contact & inquiry',
+          links: {
+            fxguard: 'Shared inbox · from $49/mo',
+            accounting: 'Accounting system · FXGuard',
+            bizswap: 'Token presale & swap',
+            biztab: 'Non-contact IoT thermometer',
+            bizclean: 'Automatic hand sanitizer',
+            vega: 'Level and pressure sensors',
+            prosense: 'Gas and flame detectors',
+            teltonika: 'Fleet Telematics / GPS',
+            liqui: 'Oils and additives',
+            gamak: 'Industrial electric motors',
+            digi: 'Scales and POS',
+            teraoka: 'Scales and labelers'
+          }
         },
         geoText: 'Owned products and industrial brand supply — technical consulting from Istanbul and Tabriz.',
         related: [
@@ -354,14 +415,15 @@
         statusLive: 'Product page',
         statusCatalog: 'Request quote',
         categories: {
-          software: { label: 'Software & SaaS', desc: 'WhatsApp CRM and B2B platforms' },
+          software: { label: 'Software & SaaS', desc: 'FXGuard WhatsApp CRM and Accounting, plus BizSwap' },
           'iot-health': { label: 'IoT & hygiene', desc: 'Thermometers, sanitizers and contactless devices' },
           packaging: { label: 'Packaging & sealing', desc: 'Vacuum sealers and packaging lines' },
           medical: { label: 'Medical & PPE', desc: 'Mask and heat pad production lines' }
         },
         items: {
           bizswap: { name: 'BizSwap', title: 'Token presale & swap', desc: 'Web3 module — wallet connect, stablecoin-to-token swap, on-chain presale, slippage UI and admin panel for BEP-20 / RWA projects.', tags: ['DeFi', 'Web3', 'Token Swap'] },
-          fxguard: { name: 'WhatsApp CRM', title: 'Custom WhatsApp CRM script', desc: 'Custom WhatsApp CRM script — one number, one panel, bulk messaging and auto-reply. $500, $800 and $1,200 plans.', tags: ['WhatsApp CRM', 'Custom script', 'B2B'] },
+          fxguard: { name: 'WhatsApp CRM', title: 'FXGuard WhatsApp CRM', desc: 'Shared WhatsApp inbox, customers, tickets, branches and 2FA — Cloud from $49/mo, License or Managed. Free demo at app.fxguard.io.', tags: ['FXGuard', 'WhatsApp CRM', 'From $49/mo'] },
+          'fxguard-accounting': { name: 'Accounting', title: 'FXGuard Accounting', desc: 'Accounting system for finance, exchange and SME teams — part of the FXGuard product suite.', tags: ['FXGuard', 'Accounting', 'Finance'] },
           biztab: { name: 'BizTab', title: 'Non-contact wall thermometer', desc: 'First non-contact wall thermometer in Tabriz — under 0.3°C error, university validated.', tags: ['IoT', 'Contactless', 'Tabriz'] },
           bizclean: { name: 'BizClean', title: 'Hygiene & disinfection line', desc: 'Automatic hand sanitizer (BizClean V5) — Bizdavar production; RINOTEX 1400 via «Imen Sahand Padideh» park unit; ISNA & IRIB press.', tags: ['Hygiene', 'Automatic', 'COVID'] },
           biztouch: { name: 'BizTouch', title: 'Contactless solutions', desc: 'Contactless devices for entrances, hygiene and public spaces — Bizdavar engineered.', tags: ['Contactless', 'IoT', 'Entrance'] },

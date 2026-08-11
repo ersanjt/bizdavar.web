@@ -35,6 +35,27 @@
   function applyServiceBlocks() {
     const blocks = raw('servicesPage.blocks');
     if (!Array.isArray(blocks)) return;
+    // Prefer data-service-block indices (services page has 6 pillars)
+    const keyed = document.querySelectorAll('[data-service-block]');
+    if (keyed.length) {
+      keyed.forEach(section => {
+        const idx = Number(section.getAttribute('data-service-block'));
+        const b = blocks[idx];
+        if (!b) return;
+        const tags = section.querySelector('.service-block__tags');
+        if (tags && Array.isArray(b.tags)) {
+          tags.innerHTML = b.tags.map(tag => `<span class="service-block__tag">${tag}</span>`).join('');
+        }
+        const checks = section.querySelector('.check-list');
+        if (checks && Array.isArray(b.checks)) {
+          checks.innerHTML = b.checks.map(c => `<li>${c}</li>`).join('');
+        }
+        const cta = section.querySelector('[data-service-cta]');
+        if (cta && b.cta) cta.textContent = b.cta;
+      });
+      return;
+    }
+    // Legacy fallback (older pages)
     const ids = ['digital-marketing', 'web-design', 'smm', 'industrial'];
     ids.forEach((id, i) => {
       const b = blocks[i];

@@ -28,25 +28,43 @@
       {
         title: 'اپلیکیشن موبایل و سامانه',
         subtitle: 'Android · iOS · سامانه سازمانی',
-        body: 'طراحی و توسعه <strong>اپلیکیشن اندروید و iOS</strong>، سامانه سازمانی، پنل B2B و راهکارهای اختصاصی برای کسب‌وکارهای ایرانی در <strong>تبریز</strong> و <strong>استانبول</strong>.',
+        body: 'طراحی و توسعه <strong>اپلیکیشن اندروید و iOS</strong>، سامانه سازمانی، پنل B2B و راهکارهای نرم‌افزاری سفارشی — از تحلیل نیاز تا انتشار، یکپارچه‌سازی و پشتیبانی.',
         tags: ['Android', 'iOS', 'سامانه', 'API'],
         checks: ['اپلیکیشن اندروید و iOS', 'سامانه و پنل سازمانی', 'اتصال به API و درگاه پرداخت', 'UI/UX فارسی و چندزبانه', 'پشتیبانی و به‌روزرسانی'],
         cta: 'درخواست پروژه نرم‌افزاری'
       },
       {
         title: 'مدیریت سرور و زیرساخت',
-        subtitle: 'Server · VPS · Monitoring · Security',
-        body: 'راه‌اندازی، امن‌سازی و <strong>مدیریت سرور</strong> — VPS، وب‌سرور، بکاپ، مانیتورینگ و پشتیبانی پایدار برای سایت و سامانه شما.',
-        tags: ['VPS', 'بکاپ', 'امنیت', 'مانیتورینگ'],
-        checks: ['راه‌اندازی و پیکربندی سرور', 'امنیت، فایروال و SSL', 'بکاپ زمان‌بندی‌شده', 'مانیتورینگ uptime', 'مهاجرت و بهینه‌سازی'],
+        subtitle: 'Server · VPS · Linux · Security · Ops',
+        body: 'راه‌اندازی، سخت‌سازی و <strong>مدیریت عملیاتی سرور</strong> — از VPS و لینوکس تا وب‌سرور، دیتابیس، DNS، CDN، بکاپ، مانیتورینگ و واکنش به حادثه. زیرساخت پایدار برای سایت، وب‌اپ و سامانه‌های سازمانی شما؛ در صورت نیاز با اکوسیستم <a href="https://netinode.net/" target="_blank" rel="noopener noreferrer">Netinode</a>.',
+        tags: ['VPS', 'Linux', 'Nginx', 'SSL', 'Backup', 'Monitoring', 'Cloudflare', 'Docker'],
+        checks: [
+          'راه‌اندازی و سخت‌سازی VPS / سرور اختصاصی',
+          'پیکربندی Nginx یا Apache، PHP، Node و دیتابیس',
+          'SSL، فایروال، محدودسازی دسترسی و سخت‌گیری SSH',
+          'بکاپ زمان‌بندی‌شده با تست بازیابی',
+          'مانیتورینگ uptime، منابع و هشدار سریع',
+          'مدیریت DNS، دامنه و CDN (Cloudflare)',
+          'مهاجرت کنترل‌شده از هاست یا سرور فعلی',
+          'بهینه‌سازی عملکرد و پشتیبانی عملیاتی مستمر'
+        ],
         cta: 'مشاوره مدیریت سرور'
       },
       {
         title: 'مدیریت شبکه‌های اجتماعی (SMM)',
-        subtitle: 'Social Media · محتوا و تبلیغات',
-        body: 'تولید محتوا، مدیریت صفحات و تبلیغات هدفمند در <a href="https://www.instagram.com/bizdavar" target="_blank" rel="noopener noreferrer me">اینستاگرام</a> و <a href="https://www.linkedin.com/in/ersanjt" target="_blank" rel="noopener noreferrer me">لینکدین</a>.',
-        tags: ['تقویم محتوا', 'Paid Social', 'گرافیک'],
-        checks: ['تقویم محتوایی ماهانه', 'طراحی گرافیک و ویدیو', 'مدیریت تبلیغات Paid Social', 'گزارش رشد و تعامل'],
+        subtitle: 'Social Media · محتوا · تبلیغات · رشد',
+        body: 'مدیریت حرفه‌ای حضور برند در شبکه‌های اجتماعی — تولید محتوا، طراحی بصری، تقویم انتشار، تعامل با مخاطب و <strong>تبلیغات هدفمند (Paid Social)</strong> در <a href="https://www.instagram.com/bizdavar" target="_blank" rel="noopener noreferrer me">اینستاگرام</a> و <a href="https://www.linkedin.com/in/ersanjt" target="_blank" rel="noopener noreferrer me">لینکدین</a>، با گزارش رشد ماهانه.',
+        tags: ['تقویم محتوا', 'کپی‌رایتینگ', 'گرافیک', 'ریلز / ویدیو', 'Paid Social', 'گزارش رشد'],
+        checks: [
+          'استراتژی محتوا و هویت بصری صفحه',
+          'تقویم محتوایی ماهانه (پست، استوری، ریلز)',
+          'تولید کپی، گرافیک و ویدیو کوتاه',
+          'مدیریت صفحه، پاسخ‌گویی و تعامل',
+          'کمپین تبلیغاتی هدفمند (Paid Social)',
+          'تحلیل رقبا و بهینه‌سازی محتوا',
+          'گزارش رشد، پوشش و نرخ تعامل',
+          'هماهنگی با کمپین‌های بازاریابی دیجیتال'
+        ],
         cta: 'شروع همکاری SMM'
       },
       {
@@ -84,25 +102,43 @@
       {
         title: 'Mobil uygulama ve sistem',
         subtitle: 'Android · iOS · Kurumsal sistem',
-        body: '<strong>Android / iOS</strong> uygulaması, kurumsal sistem ve B2B paneller — <strong>Tebriz</strong> ve <strong>İstanbul</strong> odaklı.',
+        body: '<strong>Android / iOS</strong> uygulaması, kurumsal sistem, B2B paneller ve özel yazılım çözümleri — ihtiyaç analizinden yayına, entegrasyona ve desteğe kadar.',
         tags: ['Android', 'iOS', 'Sistem', 'API'],
         checks: ['Android ve iOS uygulama', 'Kurumsal sistem / panel', 'API ve ödeme entegrasyonu', 'Çok dilli UI', 'Destek ve güncelleme'],
         cta: 'Yazılım projesi iste'
       },
       {
-        title: 'Sunucu yönetimi',
-        subtitle: 'Server · VPS · Monitoring · Security',
-        body: 'Sunucu kurulum, güvenlik ve <strong>yönetim</strong> — VPS, yedekleme, monitoring ve sürdürülebilir destek.',
-        tags: ['VPS', 'Yedek', 'Güvenlik', 'Monitoring'],
-        checks: ['Kurulum ve yapılandırma', 'Güvenlik, firewall, SSL', 'Zamanlanmış yedek', 'Uptime monitoring', 'Migrasyon ve optimizasyon'],
+        title: 'Sunucu ve altyapı yönetimi',
+        subtitle: 'Server · VPS · Linux · Security · Ops',
+        body: 'Kurulum, sertleştirme ve <strong>operasyonel sunucu yönetimi</strong> — VPS, Linux, web sunucusu, veritabanı, DNS, CDN, yedekleme, monitoring ve olay müdahalesi. Site, web app ve kurumsal sistemler için kararlı altyapı; ihtiyaç halinde <a href="https://netinode.net/" target="_blank" rel="noopener noreferrer">Netinode</a> ekosistemi ile.',
+        tags: ['VPS', 'Linux', 'Nginx', 'SSL', 'Backup', 'Monitoring', 'Cloudflare', 'Docker'],
+        checks: [
+          'VPS / dedicated sunucu kurulum ve hardening',
+          'Nginx veya Apache, PHP, Node ve veritabanı yapılandırması',
+          'SSL, firewall, erişim kısıtlama ve SSH sertleştirme',
+          'Zamanlanmış yedek + geri yükleme testi',
+          'Uptime, kaynak izleme ve hızlı uyarı',
+          'DNS, domain ve CDN (Cloudflare) yönetimi',
+          'Mevcut host / sunucudan kontrollü migrasyon',
+          'Performans optimizasyonu ve sürekli operasyon desteği'
+        ],
         cta: 'Sunucu danışmanlığı'
       },
       {
         title: 'SMM yönetimi',
-        subtitle: 'Social Media · İçerik ve reklam',
-        body: 'İçerik, sayfa yönetimi ve hedefli reklam — Instagram ve LinkedIn.',
-        tags: ['İçerik', 'Paid Social', 'Tasarım'],
-        checks: ['Aylık içerik takvimi', 'Grafik ve video', 'Paid Social', 'Büyüme raporu'],
+        subtitle: 'Social Media · İçerik · Reklam · Büyüme',
+        body: 'Markanın sosyal medya varlığını profesyonel yönetiyoruz — içerik, görsel tasarım, yayın takvimi, etkileşim ve <strong>hedefli reklam (Paid Social)</strong>; Instagram ve LinkedIn’de aylık büyüme raporu ile.',
+        tags: ['İçerik takvimi', 'Copywriting', 'Grafik', 'Reels / Video', 'Paid Social', 'Büyüme raporu'],
+        checks: [
+          'İçerik stratejisi ve görsel kimlik',
+          'Aylık içerik takvimi (post, story, reels)',
+          'Copy, grafik ve kısa video üretimi',
+          'Sayfa yönetimi, yanıt ve etkileşim',
+          'Hedefli reklam kampanyaları (Paid Social)',
+          'Rakip analizi ve içerik optimizasyonu',
+          'Büyüme, erişim ve etkileşim raporu',
+          'Dijital pazarlama kampanyaları ile uyum'
+        ],
         cta: 'SMM iş birliği'
       },
       {
@@ -140,26 +176,44 @@
       {
         title: 'Mobile apps & systems',
         subtitle: 'Android · iOS · Business systems',
-        body: 'Android and iOS apps, business systems and B2B panels — focused on <strong>Tabriz</strong> and <strong>Istanbul</strong> markets.',
+        body: 'Design and build <strong>Android and iOS</strong> apps, enterprise systems, B2B panels and custom software — from requirements through release, integration and support.',
         tags: ['Android', 'iOS', 'Systems', 'API'],
         checks: ['Android and iOS apps', 'Business systems and panels', 'API and payment integrations', 'Multilingual UI', 'Support and updates'],
         cta: 'Request a software project'
       },
       {
-        title: 'Server management',
-        subtitle: 'Server · VPS · Monitoring · Security',
-        body: 'Server setup, hardening and ongoing <strong>management</strong> — VPS, backups, monitoring and reliable ops support.',
-        tags: ['VPS', 'Backup', 'Security', 'Monitoring'],
-        checks: ['Setup and configuration', 'Security, firewall, SSL', 'Scheduled backups', 'Uptime monitoring', 'Migration and tuning'],
+        title: 'Server & infrastructure management',
+        subtitle: 'Server · VPS · Linux · Security · Ops',
+        body: 'Provisioning, hardening and ongoing <strong>server operations</strong> — VPS, Linux, web stack, databases, DNS, CDN, backups, monitoring and incident response. Stable infrastructure for sites, web apps and business systems; with <a href="https://netinode.net/" target="_blank" rel="noopener noreferrer">Netinode</a> when needed.',
+        tags: ['VPS', 'Linux', 'Nginx', 'SSL', 'Backup', 'Monitoring', 'Cloudflare', 'Docker'],
+        checks: [
+          'VPS / dedicated setup and hardening',
+          'Nginx or Apache, PHP, Node and database configuration',
+          'SSL, firewall, access control and SSH hardening',
+          'Scheduled backups with restore testing',
+          'Uptime and resource monitoring with alerts',
+          'DNS, domain and CDN (Cloudflare) management',
+          'Controlled migration from your current host or server',
+          'Performance tuning and ongoing ops support'
+        ],
         cta: 'Server consulting'
       },
       {
         title: 'SMM management',
-        subtitle: 'Content, ads and growth',
-        body: 'Content calendars, page management and paid social on Instagram and LinkedIn.',
-        tags: ['Content', 'Paid Social', 'Design'],
-        checks: ['Monthly content calendar', 'Graphics and video', 'Paid Social campaigns', 'Growth reporting'],
-        cta: 'Start SMM cooperation'
+        subtitle: 'Social Media · Content · Ads · Growth',
+        body: 'Professional social presence — content production, visual design, publishing calendar, community engagement and <strong>Paid Social</strong> on Instagram and LinkedIn, with monthly growth reporting.',
+        tags: ['Content calendar', 'Copywriting', 'Design', 'Reels / Video', 'Paid Social', 'Growth report'],
+        checks: [
+          'Content strategy and visual identity',
+          'Monthly calendar (posts, stories, reels)',
+          'Copy, graphics and short-form video',
+          'Page management, replies and engagement',
+          'Targeted Paid Social campaigns',
+          'Competitor analysis and content optimization',
+          'Reach, growth and engagement reporting',
+          'Alignment with digital marketing campaigns'
+        ],
+        cta: 'Start SMM collaboration'
       },
       {
         title: 'Technical & building services',
@@ -183,26 +237,248 @@
       { title: 'بازاریابی دیجیتال', desc: 'استراتژی، کمپین، سئو و CRO برای رشد فروش آنلاین.' },
       { title: 'وب و وب‌اپلیکیشن', desc: 'سایت، فروشگاه و وب‌اپ اختصاصی — Fast Studio یا سفارشی.' },
       { title: 'اپ و سامانه', desc: 'اندروید، iOS و سامانه‌های سازمانی.' },
-      { title: 'مدیریت سرور', desc: 'راه‌اندازی، امنیت، بکاپ و مانیتورینگ.' },
-      { title: 'مدیریت SMM', desc: 'محتوا، تبلیغات و رشد شبکه‌های اجتماعی.' },
+      { title: 'مدیریت سرور', desc: 'VPS، امنیت، بکاپ، مانیتورینگ، DNS و مهاجرت.' },
+      { title: 'مدیریت SMM', desc: 'محتوا، گرافیک، ریلز، تبلیغات و گزارش رشد.' },
       { title: 'خدمات فنی', desc: 'دوربین مدار بسته، سیم‌کشی و نورمخفی — تبریز و استانبول.' }
     ],
     tr: [
       { title: 'Dijital pazarlama', desc: 'Strateji, kampanya, SEO ve CRO.' },
       { title: 'Web ve web app', desc: 'Site, mağaza ve özel web uygulaması.' },
       { title: 'Uygulama ve sistem', desc: 'Android, iOS ve kurumsal sistemler.' },
-      { title: 'Sunucu yönetimi', desc: 'Kurulum, güvenlik, yedek ve monitoring.' },
-      { title: 'SMM yönetimi', desc: 'İçerik, reklam ve büyüme.' },
+      { title: 'Sunucu yönetimi', desc: 'VPS, güvenlik, yedek, monitoring, DNS ve migrasyon.' },
+      { title: 'SMM yönetimi', desc: 'İçerik, grafik, reels, reklam ve büyüme raporu.' },
       { title: 'Teknik hizmetler', desc: 'CCTV, tesisat ve gizli aydınlatma — Tebriz & İstanbul.' }
     ],
     en: [
       { title: 'Digital marketing', desc: 'Strategy, campaigns, SEO and CRO.' },
       { title: 'Web & web apps', desc: 'Sites, stores and custom web applications.' },
       { title: 'Apps & systems', desc: 'Android, iOS and business systems.' },
-      { title: 'Server management', desc: 'Setup, security, backups and monitoring.' },
-      { title: 'SMM management', desc: 'Content, ads and social growth.' },
+      { title: 'Server management', desc: 'VPS, security, backups, monitoring, DNS and migration.' },
+      { title: 'SMM management', desc: 'Content, design, reels, ads and growth reporting.' },
       { title: 'Technical services', desc: 'CCTV, wiring and cove lighting — Tabriz & Istanbul.' }
     ]
+  };
+
+  const smm = {
+    fa: {
+      servicesTitle: 'در مدیریت شبکه‌های اجتماعی چه می‌کنیم؟',
+      platformsTitle: 'پلتفرم‌ها',
+      platforms: [
+        { title: 'Instagram', desc: 'پست، استوری، ریلز و تبلیغات' },
+        { title: 'LinkedIn', desc: 'محتوای B2B و برندینگ حرفه‌ای' },
+        { title: 'Content', desc: 'تقویم، کپی و هویت بصری' },
+        { title: 'Paid Ads', desc: 'کمپین هدفمند و بهینه‌سازی' },
+        { title: 'Community', desc: 'تعامل و پاسخ‌گویی' },
+        { title: 'Analytics', desc: 'گزارش رشد و عملکرد' }
+      ],
+      packagesTitle: 'خروجی‌های ماهانه',
+      packages: [
+        'تقویم محتوا و موضوعات',
+        'پست و استوری طراحی‌شده',
+        'ریلز / ویدیو کوتاه',
+        'گزارش ماهانه رشد'
+      ],
+      faqTitle: 'سوالات پرتکرار SMM',
+      faqEyebrow: 'شبکه‌های اجتماعی',
+      faq: [
+        {
+          q: 'مدیریت SMM شامل چه کارهایی است؟',
+          a: 'استراتژی محتوا، تقویم انتشار، تولید کپی و گرافیک، ریلز/ویدیو کوتاه، مدیریت صفحه و تعامل، تبلیغات هدفمند و گزارش رشد ماهانه.'
+        },
+        {
+          q: 'روی کدام پلتفرم‌ها کار می‌کنید؟',
+          a: 'تمرکز اصلی روی اینستاگرام و لینکدین است؛ در صورت نیاز، گسترش به سایر شبکه‌ها هم قابل برنامه‌ریزی است.'
+        },
+        {
+          q: 'تبلیغات پولی (Paid Social) هم انجام می‌دهید؟',
+          a: 'بله. طراحی، اجرا و بهینه‌سازی کمپین‌های تبلیغاتی هدفمند همراه با رصد بودجه و گزارش عملکرد ارائه می‌شود.'
+        },
+        {
+          q: 'چطور پیشرفت را می‌بینم؟',
+          a: 'هر ماه گزارش پوشش، رشد دنبال‌کننده، نرخ تعامل و نتایج کمپین‌ها در اختیارتان قرار می‌گیرد تا مسیر شفاف باشد.'
+        }
+      ]
+    },
+    tr: {
+      servicesTitle: 'SMM’de neler yapıyoruz?',
+      platformsTitle: 'Platformlar',
+      platforms: [
+        { title: 'Instagram', desc: 'Post, story, reels ve reklam' },
+        { title: 'LinkedIn', desc: 'B2B içerik ve kurumsal marka' },
+        { title: 'Content', desc: 'Takvim, copy ve görsel kimlik' },
+        { title: 'Paid Ads', desc: 'Hedefli kampanya ve optimizasyon' },
+        { title: 'Community', desc: 'Etkileşim ve yanıt yönetimi' },
+        { title: 'Analytics', desc: 'Büyüme ve performans raporu' }
+      ],
+      packagesTitle: 'Aylık çıktılar',
+      packages: [
+        'İçerik takvimi ve konular',
+        'Tasarlanmış post ve story',
+        'Reels / kısa video',
+        'Aylık büyüme raporu'
+      ],
+      faqTitle: 'SMM SSS',
+      faqEyebrow: 'Sosyal medya',
+      faq: [
+        {
+          q: 'SMM yönetimi neleri kapsar?',
+          a: 'İçerik stratejisi, yayın takvimi, copy/grafik, reels, sayfa yönetimi, hedefli reklam ve aylık büyüme raporu.'
+        },
+        {
+          q: 'Hangi platformlarda çalışıyorsunuz?',
+          a: 'Ana odak Instagram ve LinkedIn; ihtiyaç halinde diğer ağlar da planlanabilir.'
+        },
+        {
+          q: 'Paid Social da yapıyor musunuz?',
+          a: 'Evet. Hedefli reklam kampanyalarının tasarımı, yönetimi ve bütçe/performans raporlaması sunulur.'
+        },
+        {
+          q: 'İlerlemeyi nasıl görürüm?',
+          a: 'Her ay erişim, takipçi büyümesi, etkileşim ve kampanya sonuçlarını içeren rapor paylaşılır.'
+        }
+      ]
+    },
+    en: {
+      servicesTitle: 'What we deliver in SMM',
+      platformsTitle: 'Platforms',
+      platforms: [
+        { title: 'Instagram', desc: 'Posts, stories, reels and ads' },
+        { title: 'LinkedIn', desc: 'B2B content and brand presence' },
+        { title: 'Content', desc: 'Calendar, copy and visual identity' },
+        { title: 'Paid Ads', desc: 'Targeted campaigns and optimization' },
+        { title: 'Community', desc: 'Engagement and reply handling' },
+        { title: 'Analytics', desc: 'Growth and performance reports' }
+      ],
+      packagesTitle: 'Monthly deliverables',
+      packages: [
+        'Content calendar and themes',
+        'Designed posts and stories',
+        'Reels / short video',
+        'Monthly growth report'
+      ],
+      faqTitle: 'SMM FAQ',
+      faqEyebrow: 'Social media',
+      faq: [
+        {
+          q: 'What does SMM management include?',
+          a: 'Content strategy, publishing calendar, copy and design, reels, page management, Paid Social and monthly growth reporting.'
+        },
+        {
+          q: 'Which platforms do you cover?',
+          a: 'Primary focus is Instagram and LinkedIn; other networks can be planned when needed.'
+        },
+        {
+          q: 'Do you run Paid Social?',
+          a: 'Yes. We design, manage and optimize targeted ad campaigns with budget tracking and performance reports.'
+        },
+        {
+          q: 'How do I track progress?',
+          a: 'Each month you receive a report covering reach, follower growth, engagement and campaign results.'
+        }
+      ]
+    }
+  };
+
+  const serverOps = {
+    fa: {
+      servicesTitle: 'چه خدماتی در زیرساخت پوشش می‌دهیم؟',
+      stackTitle: 'استک و ابزارهای رایج',
+      stack: ['Ubuntu', 'Debian', 'Nginx', 'MySQL / MariaDB', 'Redis', 'Cloudflare', 'Docker', 'Git'],
+      panels: [
+        { title: 'VPS', desc: 'راه‌اندازی و سخت‌سازی' },
+        { title: 'Security', desc: 'SSL، فایروال و دسترسی' },
+        { title: 'Backup', desc: 'بکاپ و تست بازیابی' },
+        { title: 'Monitor', desc: 'uptime و هشدار' },
+        { title: 'DNS / CDN', desc: 'دامنه و Cloudflare' },
+        { title: 'Migrate', desc: 'انتقال بدون قطعی' }
+      ],
+      faqTitle: 'سوالات پرتکرار مدیریت سرور',
+      faqEyebrow: 'زیرساخت و Ops',
+      faq: [
+        {
+          q: 'مدیریت سرور شامل چه مواردی است؟',
+          a: 'راه‌اندازی و سخت‌سازی VPS، پیکربندی وب‌سرور و دیتابیس، SSL و فایروال، بکاپ زمان‌بندی‌شده، مانیتورینگ، مدیریت DNS/CDN، مهاجرت و پشتیبانی عملیاتی مستمر.'
+        },
+        {
+          q: 'بکاپ و بازیابی چگونه انجام می‌شود؟',
+          a: 'بکاپ‌های زمان‌بندی‌شده از فایل‌ها و دیتابیس تعریف می‌شود و در بازه‌های مشخص تست بازیابی انجام می‌گیرد تا در زمان حادثه، بازگردانی قابل اتکا باشد.'
+        },
+        {
+          q: 'از هاست یا سرور فعلی می‌توانید مهاجرت کنید؟',
+          a: 'بله. مهاجرت کنترل‌شده با چک‌لیست DNS، SSL، دیتابیس و تست نهایی انجام می‌شود تا قطعی سرویس به حداقل برسد.'
+        },
+        {
+          q: 'آیا پشتیبانی بعد از راه‌اندازی هم دارید؟',
+          a: 'بله. علاوه بر راه‌اندازی اولیه، پایش، بهینه‌سازی عملکرد، به‌روزرسانی امنیتی و واکنش به حوادث در قالب پشتیبانی عملیاتی ارائه می‌شود.'
+        }
+      ]
+    },
+    tr: {
+      servicesTitle: 'Altyapıda neleri kapsıyoruz?',
+      stackTitle: 'Yaygın stack ve araçlar',
+      stack: ['Ubuntu', 'Debian', 'Nginx', 'MySQL / MariaDB', 'Redis', 'Cloudflare', 'Docker', 'Git'],
+      panels: [
+        { title: 'VPS', desc: 'Kurulum ve hardening' },
+        { title: 'Security', desc: 'SSL, firewall, erişim' },
+        { title: 'Backup', desc: 'Yedek ve geri yükleme' },
+        { title: 'Monitor', desc: 'Uptime ve uyarı' },
+        { title: 'DNS / CDN', desc: 'Domain ve Cloudflare' },
+        { title: 'Migrate', desc: 'Kontrollü geçiş' }
+      ],
+      faqTitle: 'Sunucu yönetimi SSS',
+      faqEyebrow: 'Altyapı ve Ops',
+      faq: [
+        {
+          q: 'Sunucu yönetimi neleri kapsar?',
+          a: 'VPS kurulum/hardening, web sunucusu ve veritabanı, SSL/firewall, zamanlanmış yedek, monitoring, DNS/CDN, migrasyon ve sürekli operasyon desteği.'
+        },
+        {
+          q: 'Yedekleme ve geri yükleme nasıl işler?',
+          a: 'Dosya ve veritabanı için zamanlanmış yedekler alınır; belirli aralıklarla restore testi yapılır.'
+        },
+        {
+          q: 'Mevcut hosttan geçiş yapabilir misiniz?',
+          a: 'Evet. DNS, SSL, veritabanı ve final test checklist’i ile kontrollü migrasyon yapılır.'
+        },
+        {
+          q: 'Kurulum sonrası destek var mı?',
+          a: 'Evet. İzleme, performans iyileştirme, güvenlik güncellemeleri ve olay müdahalesi operasyon desteği kapsamında sunulur.'
+        }
+      ]
+    },
+    en: {
+      servicesTitle: 'What does infrastructure cover?',
+      stackTitle: 'Common stack & tools',
+      stack: ['Ubuntu', 'Debian', 'Nginx', 'MySQL / MariaDB', 'Redis', 'Cloudflare', 'Docker', 'Git'],
+      panels: [
+        { title: 'VPS', desc: 'Setup and hardening' },
+        { title: 'Security', desc: 'SSL, firewall, access' },
+        { title: 'Backup', desc: 'Backups and restore tests' },
+        { title: 'Monitor', desc: 'Uptime and alerts' },
+        { title: 'DNS / CDN', desc: 'Domain and Cloudflare' },
+        { title: 'Migrate', desc: 'Controlled cutover' }
+      ],
+      faqTitle: 'Server management FAQ',
+      faqEyebrow: 'Infrastructure & Ops',
+      faq: [
+        {
+          q: 'What does server management include?',
+          a: 'VPS provisioning and hardening, web stack and databases, SSL and firewalls, scheduled backups, monitoring, DNS/CDN, migrations and ongoing ops support.'
+        },
+        {
+          q: 'How do backups and restores work?',
+          a: 'Scheduled file and database backups are configured, with periodic restore tests so recovery is reliable when incidents happen.'
+        },
+        {
+          q: 'Can you migrate from our current host?',
+          a: 'Yes. Controlled migrations follow a DNS, SSL, database and final-test checklist to keep downtime minimal.'
+        },
+        {
+          q: 'Do you support us after go-live?',
+          a: 'Yes. Monitoring, performance tuning, security updates and incident response are part of ongoing operations support.'
+        }
+      ]
+    }
   };
 
   const fieldTech = {
@@ -462,6 +738,8 @@
       cards: cards[lang],
       blocks: blocks[lang],
       panels: Object.assign({}, (L.servicesPage && L.servicesPage.panels) || {}, panels[lang]),
+      serverOps: serverOps[lang],
+      smm: smm[lang],
       fieldTech: fieldTech[lang],
       fieldWhatsapp: fieldWa
     });

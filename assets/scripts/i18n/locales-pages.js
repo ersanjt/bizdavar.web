@@ -679,7 +679,7 @@
         related: {
           title: 'محصولات و خدمات مرتبط',
           items: [
-            { href: '/pages/fxguard', icon: 'chat-wa', title: 'CRM واتساپ', desc: 'اسکریپت WhatsApp CRM' },
+            { href: '/pages/fxguard', icon: 'chat-wa', title: 'WhatsApp CRM', desc: 'FXGuard · از $49/ماه' },
             { href: '/pages/fast', icon: 'bolt', title: 'Fast Studio', desc: 'طراحی وب' },
             { href: '/pages/portfolio', icon: 'briefcase', title: 'نمونه‌کارها', desc: 'فین‌تک و Web3' },
             { href: '/pages/services', icon: 'list', title: 'خدمات', desc: 'طراحی وب و فین‌تک' }
@@ -690,9 +690,9 @@
 
       fxguard: {
         hero: {
-          tag: 'اسکریپت اختصاصی · WhatsApp CRM',
-          title: 'CRM واتساپ — اسکریپت اختصاصی برای تیم شما',
-          desc: 'اسکریپتی که تیم بیزدوار نوشته — یک شماره، یک پنل، پیام انبوه و پاسخ خودکار. مالکیت کامل، بدون اشتراک ماهانه.',
+          tag: 'FXGuard · WhatsApp CRM',
+          title: 'واتساپ را به ماشین فروش تیم خود تبدیل کنید',
+          desc: 'یک شماره، کل تیم، کنترل کامل — اینباکس مشترک، مشتریان، تیکت، تسک، شعب و ۲FA. محصول سوئیت FXGuard؛ Cloud از $49/ماه، لایسنس یک‌باره یا Managed Dedicated.',
           regionItems: [
             { code: 'TR', label: 'ترکیه' },
             { code: 'AE', label: 'دبی' },
@@ -700,128 +700,180 @@
             { code: 'IR', label: 'ایران' }
           ],
           regions: 'ترکیه · دبی · اروپا · ایران',
-          trust: 'کدنویسی ۱۰۰٪ اختصاصی · پشتیبانی بیزدوار',
-          ctaPricing: 'مشاهده پلن‌ها',
-          ctaContact: 'برنامه‌نویسی تخصصی — تماس بگیرید'
+          trust: 'دموی رایگان زنده · از $49/ماه · فروش در fxguard.io',
+          ctaDemo: 'دموی رایگان',
+          ctaPricing: 'قیمت و خرید',
+          ctaContact: 'خرید / استعلام در واتساپ',
+          ctaStore: 'fxguard.io'
         },
         stats: {
-          businesses: 'پلن اسکریپت',
-          regions: 'بازار هدف',
-          regionsVal: 'TR · AE · EU · IR',
-          uptime: 'کد اختصاصی',
-          setup: 'تحویل تقریبی',
-          setupSuffix: ' روز'
+          businesses: 'ماژول+',
+          regions: 'نقش کاربری',
+          regionsVal: 'Owner → Agent',
+          uptime: 'هدف آپ‌تایم',
+          setup: 'زبان پشتیبانی',
+          setupSuffix: ''
         },
         problem: {
           eyebrow: 'مشکل',
           title: 'آشناست؟',
-          desc: 'هر کسب‌وکار در حال رشد به همین دیوارها می‌خورد — اسکریپت CRM واتساپ ما برای حل آن‌ها نوشته شده.',
+          desc: 'تیم‌های در حال رشد سریع از واتساپ شخصی جلوتر می‌افتند — پیام گم می‌شود و مسئولیت‌پذیری از بین می‌رود.',
           items: [
-            { icon: 'mobile', title: 'چند گوشی، صفر کنترل', desc: 'سه نفر، سه گوشی، سه شماره. کسی نمی‌داند چه کسی چه جوابی داده — مشتری نادیده گرفته یا دوبار پاسخ می‌گیرد.' },
-            { icon: 'clock', title: 'پاسخ دادن ساعت ۲ بامداد', desc: 'بدون پاسخ خودکار، همیشه باید کسی آنلاین باشد. مشتریان پاسخ فوری می‌خواهند و شما نمی‌توانید بخوابید.' },
-            { icon: 'list', title: 'پیام انبوه خسته‌کننده', desc: 'کپی‌پیست برای ۲۰۰ مخاطب یکی‌یکی. ساعت‌ها کار هر کمپین. خطا زیاد. بدون شخصی‌سازی.' }
+            { icon: 'mobile', title: 'چند گوشی، یک شماره', desc: 'اشتراک لاگین یا گوشی شخصی — پیام‌ها گم می‌شود و تصویر کامل از مکالمه وجود ندارد.' },
+            { icon: 'list', title: 'بدون تاریخچه مشتری', desc: 'هر چت از صفر شروع می‌شود؛ تگ، یادداشت و زمینه مشترک بین اپراتورها نیست.' },
+            { icon: 'clock', title: 'بدون پاسخ‌گویی', desc: 'نه تیکت، نه تسک، نه رکورد از اینکه چه کسی چه چیزی را کی بسته است.' },
+            { icon: 'shield', title: 'امنیت مبهم', desc: 'دستگاه مشترک، بدون ۲FA و بدون جداسازی نقش بین شعب و سطوح دسترسی.' }
           ]
         },
         steps: {
-          eyebrow: 'نحوه کار',
-          title: 'راه‌اندازی در ۳ مرحله',
-          desc: 'تیم بیزدوار اسکریپت را نصب، پیکربندی و آموزش می‌دهد.',
+          eyebrow: 'خرید در ۳ گام',
+          title: 'دمو رایگان، انتخاب پکیج، خرید امروز',
+          desc: 'چرخه فروش طولانی نیست — اول محصول واقعی را ببینید، بعد مدل استقرار را انتخاب کنید.',
           items: [
-            { num: '01', icon: 'link', title: 'شماره را وصل کنید', desc: 'شماره WhatsApp Business موجود را به پنل اختصاصی وصل کنید. شماره همیشه مال شماست.' },
-            { num: '02', icon: 'users', title: 'تیم را اضافه کنید', desc: 'کارکنان را دعوت کنید، نقش و دسترسی تعیین کنید. همه از یک داشبورد پاسخ می‌دهند.' },
-            { num: '03', icon: 'rocket', title: 'رشد و اتوماسیون', desc: 'پاسخ خودکار، کمپین انبوه، ردیابی هر مکالمه — رضایت مشتری را بالا ببرید.' }
+            { num: '01', icon: 'bolt', title: 'دموی زنده را امتحان کنید', desc: 'app.fxguard.io — کاربر demo / رمز 123456. محصول واقعی است، نه ماکاپ.' },
+            { num: '02', icon: 'target', title: 'پکیج را انتخاب کنید', desc: 'Hosted Cloud برای سرعت، Self-hosted License برای مالکیت، یا Managed Dedicated برای استقرار کامل.' },
+            { num: '03', icon: 'whatsapp', title: 'خرید یا استعلام', desc: 'از طریق واتساپ فروش یا فرم در fxguard.io — معمولاً در روز کاری کمتر از ۲۴ ساعت پاسخ می‌گیرید.' }
           ],
-          cta: 'برنامه‌نویسی تخصصی — تماس بگیرید'
+          cta: 'باز کردن دموی زنده'
         },
         features: {
-          eyebrow: 'امکانات',
-          title: 'هر آنچه تیم شما نیاز دارد',
-          desc: 'نه فقط چت — CRM کامل ساخته‌شده دور واتساپ با کد اختصاصی.',
+          eyebrow: 'ماژول‌ها',
+          title: 'همه‌چیز در یک پنل',
+          desc: 'ماژول‌های واقعی برای تیم‌های صرافی، مالی، فروش و پشتیبانی.',
           items: [
-            { icon: 'inbox', title: 'اینباکس تیمی یکپارچه', desc: 'همه مکالمات یکجا. تخصیص چت، یادداشت، وضعیت — با هم.' },
-            { icon: 'send', title: 'پیام انبوه', desc: 'ارسال شخصی‌سازی‌شده به هزاران مخاطب با تأخیر هوشمند و زمان‌بندی.' },
-            { icon: 'robot', title: 'پاسخ خودکار ۲۴/۷', desc: 'قوانین بعد از ساعت کاری، کلمات کلیدی، خوش‌آمد — هیچ مشتری منتظر نماند.' },
-            { icon: 'chart-bar', title: 'آنالیتیکس و گزارش', desc: 'زمان پاسخ، حجم مکالمه، عملکرد تیم — در داشبورد تمیز.' },
-            { icon: 'users', title: 'دسترسی نقش‌محور', desc: 'مدیر، اپراتور، ناظر — هر کس فقط آنچه لازم دارد ببیند.' },
-            { icon: 'plug', title: 'یکپارچه‌سازی API', desc: 'اتصال به CRM، فروشگاه یا رزرواسیون موجود از طریق REST API.' }
+            { icon: 'inbox', title: 'اینباکس یکپارچه واتساپ', desc: 'یک شماره، اینباکس مشترک؛ فیلتر خوانده‌نشده/باز/اختصاص‌یافته و مسیریابی به اپراتور درست.' },
+            { icon: 'users', title: 'مشتریان و CRM', desc: 'پروفایل، تگ و تاریخچه مکالمه — دیگر از صفر شروع نمی‌کنید.' },
+            { icon: 'list', title: 'تیکت پشتیبانی', desc: 'درخواست‌ها از باز تا بسته‌شدن با مالکیت و وضعیت شفاف.' },
+            { icon: 'bolt', title: 'تسک و گردش کار', desc: 'تخصیص تسک و پیگیری فرایند تا انتها.' },
+            { icon: 'shield', title: 'نقش، شعبه و ۲FA', desc: 'Owner تا Agent، شعب و دپارتمان، Google Authenticator و لاگ فعالیت.' },
+            { icon: 'chart-line', title: 'ابزار FX و نرخ', desc: 'تنظیم نرخ، نمودار ارز و ابزارهای سرویس صرافی برای تیم‌های مالی.' }
           ]
         },
         audiences: {
           eyebrow: 'برای چه کسانی',
-          title: 'ساخته‌شده برای کسب‌وکارهایی مثل شما',
-          desc: 'از رستوران‌های استانبول تا کلینیک‌های دبی — هر تیمی که با مشتری در واتساپ صحبت می‌کند.',
+          title: 'ساخته‌شده برای صرافی، فایننس و پشتیبانی',
+          desc: 'تیم‌هایی که به پاسخ‌گویی واقعی نیاز دارند — نه فقط چت.',
           items: [
-            { icon: 'health', title: 'کلینیک و سلامت', region: 'ترکیه · امارات · اروپا', desc: 'نوبت‌دهی، یادآوری، پیگیری — همه از یک پنل.', tag: 'اتوماسیون نوبت' },
-            { icon: 'bag', title: 'فروشگاه آنلاین', region: 'همه مناطق', desc: 'وضعیت سفارش، بازیابی سبد، پاسخ به ۵۰۰+ پیام روزانه با تیم ۳ نفره.', tag: 'کمپین انبوه' },
-            { icon: 'home', title: 'املاک', region: 'دبی · استانبول', desc: 'معرفی ملک، بازدید، پیگیری لید — تاریخچه کامل هر مشتری.', tag: 'ردیابی لید' },
-            { icon: 'utensils', title: 'رستوران و غذا', region: 'ترکیه · اروپا', desc: 'رزرو، سفارش بیرون‌بر، منوی روز — پیام‌های روتین خودکار.', tag: 'رزرو خودکار' }
+            { icon: 'chart-line', title: 'صرافی و FX', region: 'ترکیه · امارات · اروپا · ایران', desc: 'چند شعبه، نرخ و سرویس تبادل در کنار اینباکس تیمی.', tag: 'Multi-branch' },
+            { icon: 'briefcase', title: 'فروش و پشتیبانی B2B', region: 'همه مناطق', desc: 'تاریخچه مشتری، تیکت و تسک برای بستن معامله با زمینه کامل.', tag: 'Sales ops' },
+            { icon: 'building', title: 'هلدینگ و چند شعبه', region: 'ترکیه · دبی', desc: 'نقش، شعبه و نظارت مالک روی فعالیت کارکنان.', tag: 'Roles & branches' },
+            { icon: 'health', title: 'خدمات و کلینیک', region: 'ترکیه · اروپا', desc: 'پیگیری درخواست، یادآوری و پاسخ‌گویی بدون گم‌شدن پیام.', tag: 'Support desk' }
           ]
         },
         pricing: {
-          eyebrow: 'قیمت',
-          title: 'پلن‌های اسکریپت CRM واتساپ',
-          desc: 'قیمت یک‌بار پرداخت — مالکیت کامل اسکریپت و پنل.',
-          note: 'قیمت یک‌بار پرداخت — شامل نصب، راه‌اندازی و آموزش اولیه.',
+          eyebrow: 'پکیج‌ها',
+          title: 'سه مدل اجرا — همان هسته محصول',
+          desc: 'تفاوت در این است که چه کسی میزبانی و عملیات را انجام می‌دهد. همه پکیج‌ها ماژول‌های اصلی را دارند.',
+          note: 'دمو رایگان است. قبل از پرداخت با فروش صحبت کنید — Cloud از $49/ماه یا $490/سال.',
           plans: [
             {
-              id: 'basic',
-              name: 'پایه',
-              price: '$500',
-              period: '',
-              desc: 'اسکریپت CRM واتساپ برای تیم کوچک.',
-              features: ['۱ شماره واتساپ', 'پنل تیمی', 'اینباکس مشترک', 'پاسخ خودکار پایه', 'نصب و راه‌اندازی'],
-              cta: 'برنامه‌نویسی تخصصی — تماس بگیرید',
-              href: '/pages/contact?product=whatsapp-crm-basic'
-            },
-            {
-              id: 'pro',
-              name: 'حرفه‌ای',
-              price: '$800',
-              period: '',
-              badge: 'پرفروش‌ترین',
-              desc: 'برای کسب‌وکار در حال رشد با پیام انبوه.',
-              features: ['همه امکانات پایه', 'پیام انبوه', 'پاسخ خودکار پیشرفته', 'آنالیتیکس', '۴ زبان رابط'],
-              cta: 'برنامه‌نویسی تخصصی — تماس بگیرید',
-              href: '/pages/contact?product=whatsapp-crm-pro',
+              id: 'cloud',
+              name: 'Hosted Cloud',
+              price: '$49',
+              period: '/ماه',
+              badge: 'محبوب‌ترین',
+              desc: 'ما FXGuard را برای شما روی زیرساخت خودمان اجرا می‌کنیم. ثبت‌نام، ورود، شروع کار.',
+              features: [
+                'آماده در چند دقیقه، بدون سرور',
+                'به‌روزرسانی و پچ امنیتی خودکار',
+                'بکاپ روزانه و مانیتورینگ',
+                'نقش‌محور و ۲FA',
+                'یا $490 در سال (۲ ماه صرفه‌جویی)'
+              ],
+              cta: 'خرید Cloud در fxguard.io',
+              href: 'https://fxguard.io/',
               featured: true
             },
             {
-              id: 'enterprise',
-              name: 'سازمانی',
-              price: '$1,200',
-              period: '',
-              desc: 'چند شماره، API و یکپارچه‌سازی سفارشی.',
-              features: ['همه امکانات حرفه‌ای', 'API اختصاصی', 'چند شماره', 'یکپارچه‌سازی CRM', 'پشتیبانی اولویت‌دار'],
-              cta: 'برنامه‌نویسی تخصصی — تماس بگیرید',
-              href: '/pages/contact?product=whatsapp-crm-enterprise'
+              id: 'license',
+              name: 'Self-hosted License',
+              price: 'یک‌باره',
+              period: ' · استعلام',
+              desc: 'سیستم کامل را بخرید و روی سرور خودتان اجرا کنید — داده نزد شما می‌ماند.',
+              features: [
+                'خرید یک‌باره، مال شما',
+                'پکیج نصب و مستندات',
+                'داده روی زیرساخت شما',
+                'قرارداد اختیاری آپدیت و پشتیبانی',
+                'آنبوردینگ اولیه'
+              ],
+              cta: 'استعلام لایسنس',
+              href: 'https://fxguard.io/'
+            },
+            {
+              id: 'managed',
+              name: 'Managed Dedicated',
+              price: 'سفارشی',
+              period: ' · استعلام',
+              desc: 'نصب، میزبانی و عملیات اختصاصی توسط تیم ما — با SLA و حساب‌مدیر.',
+              features: [
+                'اینستنس اختصاصی',
+                'نگهداری، مانیتورینگ و بکاپ',
+                'SLA و زمان پاسخ سفارشی',
+                'حساب‌مدیر اختصاصی',
+                'آموزش کارکنان'
+              ],
+              cta: 'استعلام Managed',
+              href: 'https://fxguard.io/'
             }
           ]
         },
         faq: {
           eyebrow: 'سوالات',
-          title: 'پرسش‌های متداول',
+          title: 'پرسش‌های پرتکرار',
           items: [
-            { q: 'قیمت اسکریپت CRM واتساپ چقدر است؟', a: 'سه پلن $500، $800 و $1,200 — یک‌بار پرداخت، بدون اشتراک ماهانه.' },
-            { q: 'چند نفر می‌توانند از یک شماره استفاده کنند؟', a: 'نامحدود — همه از یک پنل و یک شماره WhatsApp Business کار می‌کنند.' },
-            { q: 'پیام انبوه پشتیبانی می‌شود؟', a: 'بله — در پلن حرفه‌ای ($800) و سازمانی ($1,200) با شخصی‌سازی و زمان‌بندی.' },
-            { q: 'اسکریپت اختصاصی است یا SaaS؟', a: 'کد اختصاصی تیم بیزدوار — مالکیت و کنترل کامل برای شما، بدون وابستگی به پلتفرم ثالث.' },
-            { q: 'از فارسی پشتیبانی می‌کند؟', a: 'بله — UI و پشتیبانی به فارسی، ترکی، عربی و انگلیسی.' }
+            { q: 'تفاوت Cloud، لایسنس و Managed چیست؟', a: 'Cloud: ما میزبانی می‌کنیم (ماهانه/سالانه). لایسنس: سیستم را یک‌بار می‌خرید و روی سرور خودتان اجرا می‌کنید. Managed: اینستنس اختصاصی را ما نصب و اداره می‌کنیم. هر سه همان ماژول‌های اصلی را دارند.' },
+            { q: 'قبل از خرید می‌توانم امتحان کنم؟', a: 'بله. دموی زنده در app.fxguard.io (کاربر demo / رمز 123456) محصول واقعی است — عمومی است و تغییرات ذخیره نمی‌شود.' },
+            { q: 'شروع قیمت چقدر است؟', a: 'Hosted Cloud از $49 در ماه یا $490 در سال. لایسنس و Managed با استعلام قیمت سفارشی.' },
+            { q: 'چند شعبه و نقش پشتیبانی می‌شود؟', a: 'شعب و دپارتمان داخلی است؛ نقش‌ها از Owner تا Agent با ۲FA و لاگ فعالیت.' },
+            { q: 'رابطه با بیزدوار چیست؟', a: 'FXGuard محصول سوئیت دیجیتال تیم بیزدوار است؛ فروش و دمو از طریق fxguard.io انجام می‌شود و در کاتالوگ محصولات بیزدوار هم معرفی می‌گردد.' }
           ]
         },
         about: {
-          title: 'توسعه اختصاصی توسط بیزدوار',
-          body: 'این <strong>اسکریپت CRM واتساپ</strong> با برنامه‌نویسی اختصاصی توسط <strong>تیم بیزدوار</strong> نوشته شده — پنل تیمی، وب‌اپ و API تحت کنترل شما.',
-          ctaContact: 'برنامه‌نویسی تخصصی — تماس بگیرید',
-          ctaPortfolio: 'نمونه‌کارها'
+          title: 'محصول FXGuard — توسعه اکوسیستم بیزدوار',
+          body: '<strong>FXGuard WhatsApp CRM</strong> اینباکس تیمی، CRM مشتری، تیکت، تسک، شعب و ابزار FX را در یک پنل امن جمع می‌کند. فروشگاه محصول: <a href="https://fxguard.io/" target="_blank" rel="noopener noreferrer">fxguard.io</a> · دمو: <a href="https://app.fxguard.io/" target="_blank" rel="noopener noreferrer">app.fxguard.io</a>.',
+          ctaContact: 'رفتن به fxguard.io',
+          ctaPortfolio: 'Accounting و محصولات مرتبط'
         },
         cta: {
-          title: 'اسکریپت اختصاصی می‌خواهید؟',
-          desc: 'پلن $500، $800 یا $1,200 — تماس بگیرید تا پروژه شما را بررسی کنیم.',
-          btnStart: 'برنامه‌نویسی تخصصی — تماس بگیرید',
-          btnPricing: 'مشاهده پلن‌ها'
+          title: 'آماده خرید FXGuard هستید؟',
+          desc: 'اول دموی رایگان را ببینید؛ بعد Cloud از $49/ماه، لایسنس یا Managed را انتخاب کنید.',
+          btnStart: 'دموی رایگان',
+          btnPricing: 'مشاهده پکیج‌ها',
+          btnStore: 'fxguard.io'
         },
         related: { title: 'محصولات و خدمات مرتبط' },
-        geoText: 'اسکریپت CRM واتساپ برای بازارهای ترکیه، امارات، اروپا و ایران — توسعه اختصاصی توسط بیزدوار گروپ.'
+        geoText: 'FXGuard WhatsApp CRM — ترکیه، امارات، اروپا و ایران · سوئیت fxguard.io · توسعه اکوسیستم بیزدوار.'
+      },
+
+      fxguardAccounting: {
+        hero: {
+          tag: 'FXGuard · Accounting',
+          title: 'Accounting — سامانه حسابداری برای تیم‌های مالی و صرافی',
+          desc: 'محصول حسابداری سوئیت <strong>FXGuard</strong> برای جریان‌های مالی، صرافی و کسب‌وکارهای SME — توسعه تیم بیزدوار، قابل ارائه کنار WhatsApp CRM.',
+          ctaStore: 'مشاهده سوئیت FXGuard',
+          ctaContact: 'درخواست مشاوره / دمو',
+          trust: 'محصول مالکیتی اکوسیستم بیزدوار · fxguard.io'
+        },
+        features: {
+          eyebrow: 'قابلیت‌ها',
+          title: 'چه چیزی پوشش می‌دهد؟',
+          desc: 'طراحی‌شده برای تیم‌هایی که کنار عملیات صرافی و پشتیبانی، به حسابداری متمرکز نیاز دارند.',
+          items: [
+            { title: 'جریان‌های مالی', desc: 'ثبت و پیگیری عملیات مالی تیم‌های صرافی و SME.' },
+            { title: 'دسترسی نقش‌محور', desc: 'کنترل دسترسی کارکنان بخش حسابداری با نقش‌های مشخص.' },
+            { title: 'هماهنگ با CRM واتساپ', desc: 'در کنار WhatsApp CRM سوئیت FXGuard برای تیم فروش و پشتیبانی.' },
+            { title: 'استقرار اختصاصی', desc: 'نصب و سفارشی‌سازی برای هلدینگ‌ها و کسب‌وکارهای مالی.' }
+          ]
+        },
+        cta: {
+          title: 'Accounting و WhatsApp CRM — هر دو از FXGuard',
+          desc: 'برای دمو، استقرار یا استعلام، از <a href="https://fxguard.io/" target="_blank" rel="noopener noreferrer">fxguard.io</a> یا فرم تماس بیزدوار استفاده کنید.',
+          crm: 'WhatsApp CRM',
+          contact: 'تماس با بیزدوار',
+          store: 'fxguard.io'
+        },
+        geoText: 'FXGuard Accounting — سامانه حسابداری سوئیت FXGuard، توسعه بیزدوار گروپ.'
       },
 
       bzDiamond: {
@@ -974,7 +1026,7 @@
         related: {
           title: 'İlgili ürün ve hizmetler',
           items: [
-            { href: '/pages/fxguard', icon: 'chat-wa', title: 'WhatsApp CRM', desc: 'WhatsApp CRM scripti' },
+            { href: '/pages/fxguard', icon: 'chat-wa', title: 'WhatsApp CRM', desc: 'FXGuard · $49/ay’dan' },
             { href: '/pages/fast', icon: 'bolt', title: 'Fast Studio', desc: 'Web tasarım' },
             { href: '/pages/portfolio', icon: 'briefcase', title: 'Portfolyo', desc: 'Fintech ve Web3' },
             { href: '/pages/services', icon: 'list', title: 'Hizmetler', desc: 'Web ve fintech' }
@@ -983,24 +1035,136 @@
         geoText: 'DeFi ve Web3 modül geliştirme — Bizdavar Group fintech hizmetlerinin parçası.'
       },
       fxguard: {
-        hero: { tag: 'Özel script · WhatsApp CRM', title: 'WhatsApp CRM — Ekibiniz için özel script', desc: 'Bizdavar ekibinin yazdığı script — tek numara, tek panel, toplu mesaj ve otomatik yanıt. Tam sahiplik, aylık abonelik yok.', regionItems: [
+        hero: {
+          tag: 'FXGuard · WhatsApp CRM',
+          title: 'WhatsApp’ı satış makinenize çevirin',
+          desc: 'Tek numara, tüm ekip, tam kontrol — ortak gelen kutusu, müşteriler, ticket, görev, şubeler ve 2FA. FXGuard suite; Cloud $49/ay’dan, tek seferlik lisans veya Managed Dedicated.',
+          regionItems: [
             { code: 'TR', label: 'Türkiye' },
             { code: 'AE', label: 'Dubai' },
             { code: 'EU', label: 'Avrupa' },
             { code: 'IR', label: 'İran' }
           ],
-          regions: 'Türkiye · Dubai · Avrupa · İran', trust: '%100 özel kod · Bizdavar desteği', ctaPricing: 'Planları gör', ctaContact: 'Özel yazılım — iletişime geçin' },
-        stats: { businesses: 'Script planı', regions: 'Hedef pazar', regionsVal: 'TR · AE · EU · IR', uptime: 'Özel kod', setup: 'Tahmini teslim', setupSuffix: ' gün' },
-        problem: { eyebrow: 'Sorun', title: 'Tanıdık mı?', desc: 'Büyüyen her işletme bu duvarlarla karşılaşır — WhatsApp CRM scriptimiz bunları çözmek için yazıldı.', items: [{ icon: 'mobile', title: 'Birden fazla telefon, sıfır kontrol', desc: 'Üç personel, üç telefon. Kim ne cevapladı bilinmiyor.' }, { icon: 'clock', title: 'Gece 2\'de cevap', desc: 'Otomatik yanıt yoksa biri her zaman nöbette.' }, { icon: 'list', title: 'Toplu mesaj yorucu', desc: '200 kişiye tek tek kopyala-yapıştır. Saatler sürer.' }] },
-        steps: { eyebrow: 'Nasıl çalışır', title: '3 adımda hazır', desc: 'Bizdavar ekibi scripti kurar, yapılandırır ve eğitir.', items: [{ num: '01', icon: 'link', title: 'Numaranızı bağlayın', desc: 'Mevcut WhatsApp Business numaranızı özel panele bağlayın.' }, { num: '02', icon: 'users', title: 'Ekibinizi ekleyin', desc: 'Personeli davet edin, roller atayın.' }, { num: '03', icon: 'rocket', title: 'Büyüyün ve otomatikleştirin', desc: 'Otomatik yanıt, toplu kampanyalar, her konuşmayı takip edin.' }], cta: 'Özel yazılım — iletişime geçin' },
-        features: { eyebrow: 'Özellikler', title: 'Ekibinizin ihtiyacı olan her şey', desc: 'Sadece sohbet değil — WhatsApp etrafında tam CRM, özel kod.', items: [{ icon: 'inbox', title: 'Birleşik ekip gelen kutusu', desc: 'Tüm konuşmalar tek yerde.' }, { icon: 'send', title: 'Toplu mesaj', desc: 'Binlerce kişiye kişiselleştirilmiş mesaj.' }, { icon: 'robot', title: '7/24 otomatik yanıt', desc: 'Mesai dışı, anahtar kelime, karşılama kuralları.' }, { icon: 'chart-bar', title: 'Analitik ve raporlar', desc: 'Yanıt süresi, hacim, ekip performansı.' }, { icon: 'users', title: 'Rol tabanlı erişim', desc: 'Yönetici, operatör, gözlemci.' }, { icon: 'plug', title: 'API entegrasyonu', desc: 'Mevcut CRM veya e-ticaret sisteminize REST API.' }] },
-        audiences: { eyebrow: 'Kimler için', title: 'Sizin gibi işletmeler için', desc: 'WhatsApp\'ta müşteriyle konuşan her ekip.', items: [{ icon: 'health', title: 'Klinik ve sağlık', region: 'Türkiye · BAE · Avrupa', desc: 'Randevu, hatırlatma, takip.', tag: 'Randevu otomasyonu' }, { icon: 'bag', title: 'E-ticaret', region: 'Tüm bölgeler', desc: 'Sipariş güncellemeleri, sepet kurtarma.', tag: 'Toplu kampanya' }, { icon: 'home', title: 'Emlak', region: 'Dubai · İstanbul', desc: 'İlan paylaşımı, lead takibi.', tag: 'Lead takibi' }, { icon: 'utensils', title: 'Restoran', region: 'Türkiye · Avrupa', desc: 'Rezervasyon, paket servis.', tag: 'Otomatik rezervasyon' }] },
-        pricing: { eyebrow: 'Fiyat', title: 'WhatsApp CRM script planları', desc: 'Tek seferlik ödeme — script ve panelin tam sahipliği.', note: 'Tek seferlik ödeme — kurulum, yapılandırma ve ilk eğitim dahil.', plans: [{ id: 'basic', name: 'Temel', price: '$500', period: '', desc: 'Küçük ekipler için WhatsApp CRM script.', features: ['1 WhatsApp numarası', 'Ekip paneli', 'Ortak gelen kutusu', 'Temel otomatik yanıt', 'Kurulum'], cta: 'Özel yazılım — iletişime geçin', href: '/pages/contact?product=whatsapp-crm-basic' }, { id: 'pro', name: 'Profesyonel', price: '$800', period: '', badge: 'En popüler', desc: 'Toplu mesajlı büyüyen işletmeler için.', features: ['Temel plandaki her şey', 'Toplu mesaj', 'Gelişmiş otomatik yanıt', 'Analitik', '4 dil UI'], cta: 'Özel yazılım — iletişime geçin', href: '/pages/contact?product=whatsapp-crm-pro', featured: true }, { id: 'enterprise', name: 'Kurumsal', price: '$1,200', period: '', desc: 'Çoklu numara, API ve özel entegrasyon.', features: ['Profesyonel plandaki her şey', 'Özel API', 'Çoklu numara', 'CRM entegrasyonu', 'Öncelikli destek'], cta: 'Özel yazılım — iletişime geçin', href: '/pages/contact?product=whatsapp-crm-enterprise' }] },
-        faq: { eyebrow: 'SSS', title: 'Sık sorulan sorular', items: [{ q: 'WhatsApp CRM script ne kadar?', a: 'Üç plan: $500, $800 ve $1,200 — tek seferlik ödeme, aylık abonelik yok.' }, { q: 'Birden fazla personel aynı numarayı kullanabilir mi?', a: 'Evet — sınırsız personel, tek panel ve tek numara.' }, { q: 'Toplu mesaj var mı?', a: 'Evet — Profesyonel ($800) ve Kurumsal ($1,200) planlarda.' }, { q: 'Özel script mi yoksa SaaS mı?', a: 'Bizdavar ekibinin özel kodu — tam sahiplik, üçüncü taraf platforma bağımlılık yok.' }, { q: 'Türkçe destek var mı?', a: 'Evet — TR, AR, FA ve EN UI ve destek.' }] },
-        about: { title: 'Bizdavar tarafından özel geliştirme', body: 'Bu <strong>WhatsApp CRM scripti</strong>, <strong>Bizdavar ekibi</strong> tarafından özel kodla yazılmıştır — ekip paneli, web uygulaması ve API sizin kontrolünüzde.', ctaContact: 'Özel yazılım — iletişime geçin', ctaPortfolio: 'Örnek işler' },
-        cta: { title: 'Özel script mi istiyorsunuz?', desc: '$500, $800 veya $1,200 planları — projenizi konuşalım.', btnStart: 'Özel yazılım — iletişime geçin', btnPricing: 'Planları gör' },
+          regions: 'Türkiye · Dubai · Avrupa · İran',
+          trust: 'Ücretsiz canlı demo · $49/ay’dan · fxguard.io',
+          ctaDemo: 'Ücretsiz demo',
+          ctaPricing: 'Fiyat & satın al',
+          ctaContact: 'WhatsApp ile satın al',
+          ctaStore: 'fxguard.io'
+        },
+        stats: { businesses: 'Modül+', regions: 'Kullanıcı rolü', regionsVal: 'Owner → Agent', uptime: 'Uptime hedefi', setup: 'Destek dili', setupSuffix: '' },
+        problem: {
+          eyebrow: 'Sorun',
+          title: 'Tanıdık mı?',
+          desc: 'Büyüyen ekipler kişisel WhatsApp’ı aşar — mesaj kaybolur, hesap verebilirlik biter.',
+          items: [
+            { icon: 'mobile', title: 'Birden fazla telefon, tek numara', desc: 'Paylaşılan giriş veya kişisel telefonlar — mesajlar kaybolur.' },
+            { icon: 'list', title: 'Müşteri geçmişi yok', desc: 'Her sohbet sıfırdan; etiket ve ortak bağlam yok.' },
+            { icon: 'clock', title: 'Hesap verebilirlik yok', desc: 'Ticket/task yok; kim neyi kapattı bilinmiyor.' },
+            { icon: 'shield', title: 'Belirsiz güvenlik', desc: '2FA yok, şube/rol ayrımı yok.' }
+          ]
+        },
+        steps: {
+          eyebrow: '3 adımda satın al',
+          title: 'Demo, paket, satın alma',
+          desc: 'Önce gerçek ürünü görün, sonra kurulum modelini seçin.',
+          items: [
+            { num: '01', icon: 'bolt', title: 'Canlı demoyu deneyin', desc: 'app.fxguard.io — demo / 123456. Gerçek ürün.' },
+            { num: '02', icon: 'target', title: 'Paketi seçin', desc: 'Cloud, Self-hosted License veya Managed Dedicated.' },
+            { num: '03', icon: 'whatsapp', title: 'Satın alın / teklif alın', desc: 'WhatsApp veya fxguard.io formu — iş gününde genelde 24 saat içinde yanıt.' }
+          ],
+          cta: 'Canlı demoyu aç'
+        },
+        features: {
+          eyebrow: 'Modüller',
+          title: 'Hepsi tek panelde',
+          desc: 'Exchange, finans, satış ve destek ekipleri için gerçek modüller.',
+          items: [
+            { icon: 'inbox', title: 'Birleşik WhatsApp gelen kutusu', desc: 'Tek numara, ortak inbox, yönlendirme.' },
+            { icon: 'users', title: 'Müşteriler & CRM', desc: 'Profil, etiket, konuşma geçmişi.' },
+            { icon: 'list', title: 'Destek ticket’ları', desc: 'Açıktan çözüme net sahiplik.' },
+            { icon: 'bolt', title: 'Görev & iş akışı', desc: 'Atama ve uçtan uca takip.' },
+            { icon: 'shield', title: 'Rol, şube & 2FA', desc: 'Owner→Agent, şubeler, Authenticator, audit log.' },
+            { icon: 'chart-line', title: 'FX araçları', desc: 'Kur, grafik ve exchange servis araçları.' }
+          ]
+        },
+        audiences: {
+          eyebrow: 'Kimler için',
+          title: 'Exchange, finans ve destek için',
+          desc: 'Sadece sohbet değil — gerçek hesap verebilirlik isteyen ekipler.',
+          items: [
+            { icon: 'chart-line', title: 'Exchange & FX', region: 'Türkiye · BAE · Avrupa · İran', desc: 'Çok şubeli operasyon + ekip inbox.', tag: 'Multi-branch' },
+            { icon: 'briefcase', title: 'B2B satış & destek', region: 'Tüm bölgeler', desc: 'Geçmiş, ticket ve görevlerle kapanış.', tag: 'Sales ops' },
+            { icon: 'building', title: 'Holding / çok şube', region: 'Türkiye · Dubai', desc: 'Rol ve şube denetimi.', tag: 'Roles' },
+            { icon: 'health', title: 'Hizmet & klinik', region: 'Türkiye · Avrupa', desc: 'Talep takibi, kayıp mesaj yok.', tag: 'Support' }
+          ]
+        },
+        pricing: {
+          eyebrow: 'Paketler',
+          title: 'Üç çalışma modeli — aynı çekirdek',
+          desc: 'Fark kim barındırır ve işletir. Tüm paketlerde aynı ana modüller.',
+          note: 'Demo ücretsiz. Cloud $49/ay veya $490/yıl.',
+          plans: [
+            { id: 'cloud', name: 'Hosted Cloud', price: '$49', period: '/ay', badge: 'En popüler', desc: 'FXGuard’ı bizim altyapımızda çalıştırırız.', features: ['Dakikalar içinde canlı', 'Otomatik güncelleme', 'Günlük yedek', 'Rol & 2FA', '$490/yıl (2 ay tasarruf)'], cta: 'Cloud satın al', href: 'https://fxguard.io/', featured: true },
+            { id: 'license', name: 'Self-hosted License', price: 'Tek sefer', period: ' · teklif', desc: 'Tam sistemi alın, kendi sunucunuzda çalıştırın.', features: ['Tek seferlik sahiplik', 'Kurulum paketi', 'Veri sizde', 'Opsiyonel güncelleme sözleşmesi', 'Onboarding'], cta: 'Lisans teklifi', href: 'https://fxguard.io/' },
+            { id: 'managed', name: 'Managed Dedicated', price: 'Özel', period: ' · teklif', desc: 'Biz kurar, barındırır ve işletiriz — SLA ile.', features: ['Dedicated instance', 'Bakım & monitoring', 'Özel SLA', 'Hesap yöneticisi', 'Eğitim'], cta: 'Managed teklifi', href: 'https://fxguard.io/' }
+          ]
+        },
+        faq: {
+          eyebrow: 'SSS',
+          title: 'Sık sorulanlar',
+          items: [
+            { q: 'Cloud, lisans ve Managed farkı?', a: 'Cloud: biz barındırırız. Lisans: siz kendi sunucunuzda çalıştırırsınız. Managed: dedicated instance’ı biz işletiriz. Üçünde de aynı çekirdek modüller.' },
+            { q: 'Satın almadan deneyebilir miyim?', a: 'Evet — app.fxguard.io (demo / 123456) gerçek üründür.' },
+            { q: 'Fiyat ne kadar başlar?', a: 'Cloud $49/ay veya $490/yıl. Lisans ve Managed teklifle.' },
+            { q: 'Çok şube destekleniyor mu?', a: 'Evet — şube, departman, Owner→Agent roller, 2FA ve audit log.' },
+            { q: 'Bizdavar ile ilişkisi?', a: 'FXGuard, Bizdavar ekosistem ürünüdür; satış fxguard.io üzerinden, Bizdavar katalogunda da yer alır.' }
+          ]
+        },
+        about: {
+          title: 'FXGuard — Bizdavar ekosistem ürünü',
+          body: '<strong>FXGuard WhatsApp CRM</strong> ekip inbox, müşteri CRM, ticket, görev, şube ve FX araçlarını tek panelde birleştirir. Mağaza: <a href="https://fxguard.io/" target="_blank" rel="noopener noreferrer">fxguard.io</a> · Demo: <a href="https://app.fxguard.io/" target="_blank" rel="noopener noreferrer">app.fxguard.io</a>.',
+          ctaContact: 'fxguard.io’ya git',
+          ctaPortfolio: 'Accounting ve ilgili ürünler'
+        },
+        cta: {
+          title: 'FXGuard satın almaya hazır mısınız?',
+          desc: 'Önce ücretsiz demoyu görün; sonra Cloud $49/ay, lisans veya Managed seçin.',
+          btnStart: 'Ücretsiz demo',
+          btnPricing: 'Paketleri gör',
+          btnStore: 'fxguard.io'
+        },
         related: { title: 'İlgili ürün ve hizmetler' },
-        geoText: 'Türkiye, BAE, Avrupa ve İran için WhatsApp CRM scripti — Bizdavar Group özel geliştirme.'
+        geoText: 'FXGuard WhatsApp CRM — Türkiye, BAE, Avrupa, İran · fxguard.io · Bizdavar ekosistemi.'
+      },
+      fxguardAccounting: {
+        hero: {
+          tag: 'FXGuard · Accounting',
+          title: 'Accounting — finans ve döviz ekipleri için muhasebe',
+          desc: '<strong>FXGuard</strong> suite muhasebe ürünü — finans, exchange ve KOBİ ekipleri için; WhatsApp CRM ile birlikte sunulur.',
+          ctaStore: 'FXGuard suite’i gör',
+          ctaContact: 'Danışmanlık / demo iste',
+          trust: 'Bizdavar ekosistem ürünü · fxguard.io'
+        },
+        features: {
+          eyebrow: 'Özellikler',
+          title: 'Neleri kapsıyor?',
+          desc: 'Döviz ve destek operasyonlarının yanında merkezi muhasebe ihtiyacı olan ekipler için.',
+          items: [
+            { title: 'Finans akışları', desc: 'Exchange ve KOBİ ekiplerinin mali işlem takibi.' },
+            { title: 'Rol tabanlı erişim', desc: 'Muhasebe personeli için net roller ve yetkiler.' },
+            { title: 'WhatsApp CRM ile uyum', desc: 'FXGuard suite içinde satış/destek CRM’si ile yan yana.' },
+            { title: 'Özel kurulum', desc: 'Holding ve finans işletmeleri için kurulum ve özelleştirme.' }
+          ]
+        },
+        cta: {
+          title: 'Accounting ve WhatsApp CRM — ikisi de FXGuard',
+          desc: 'Demo veya teklif için <a href="https://fxguard.io/" target="_blank" rel="noopener noreferrer">fxguard.io</a> veya Bizdavar iletişim formu.',
+          crm: 'WhatsApp CRM',
+          contact: 'Bizdavar ile iletişim',
+          store: 'fxguard.io'
+        },
+        geoText: 'FXGuard Accounting — FXGuard suite muhasebe ürünü, Bizdavar Group geliştirmesi.'
       },
       bzDiamond: {
         hero: { tag: 'Web tasarım örneği', title: 'BZ Diamond — Web sitesi ve online mağaza tasarımı', desc: 'Mücevher ve pırlanta alanında müşteri projesi — tasarım, geliştirme ve dijital destek Bizdavar Group tarafından' },
@@ -1152,7 +1316,7 @@
         related: {
           title: 'Related products & services',
           items: [
-            { href: '/pages/fxguard', icon: 'chat-wa', title: 'WhatsApp CRM', desc: 'WhatsApp CRM script' },
+            { href: '/pages/fxguard', icon: 'chat-wa', title: 'WhatsApp CRM', desc: 'FXGuard · from $49/mo' },
             { href: '/pages/fast', icon: 'bolt', title: 'Fast Studio', desc: 'Web design' },
             { href: '/pages/portfolio', icon: 'briefcase', title: 'Portfolio', desc: 'Fintech & Web3' },
             { href: '/pages/services', icon: 'list', title: 'Services', desc: 'Web & fintech' }
@@ -1161,24 +1325,136 @@
         geoText: 'DeFi and Web3 module development — part of Bizdavar Group fintech and web services.'
       },
       fxguard: {
-        hero: { tag: 'Custom script · WhatsApp CRM', title: 'WhatsApp CRM — Custom script for your team', desc: 'Script written by the Bizdavar team — one number, one panel, bulk messaging and auto-reply. Full ownership, no monthly subscription.', regionItems: [
+        hero: {
+          tag: 'FXGuard · WhatsApp CRM',
+          title: 'Turn WhatsApp into your team’s sales machine',
+          desc: 'One number. Every team. Total control — shared inbox, customers, tickets, tasks, branches and 2FA. FXGuard suite; Cloud from $49/mo, one-time License, or Managed Dedicated.',
+          regionItems: [
             { code: 'TR', label: 'Turkey' },
             { code: 'AE', label: 'Dubai' },
             { code: 'EU', label: 'Europe' },
             { code: 'IR', label: 'Iran' }
           ],
-          regions: 'Turkey · Dubai · Europe · Iran', trust: '100% custom code · Bizdavar support', ctaPricing: 'See plans', ctaContact: 'Custom development — contact us' },
-        stats: { businesses: 'Script plans', regions: 'Target markets', regionsVal: 'TR · AE · EU · IR', uptime: 'Custom code', setup: 'Est. delivery', setupSuffix: ' days' },
-        problem: { eyebrow: 'The problem', title: 'Sound familiar?', desc: 'Every growing business hits these walls — our WhatsApp CRM script was built to solve them.', items: [{ icon: 'mobile', title: 'Multiple phones, zero control', desc: 'Three staff, three phones. Nobody knows who replied.' }, { icon: 'clock', title: 'Replying at 2am', desc: 'Without auto-replies someone is always on call.' }, { icon: 'list', title: 'Bulk messaging is exhausting', desc: 'Copy-pasting to 200 contacts one by one. Hours per campaign.' }] },
-        steps: { eyebrow: 'How it works', title: 'Up & running in 3 steps', desc: 'The Bizdavar team installs, configures and trains your team.', items: [{ num: '01', icon: 'link', title: 'Connect your number', desc: 'Link your existing WhatsApp Business number to the custom panel.' }, { num: '02', icon: 'users', title: 'Add your team', desc: 'Invite staff, assign roles. Everyone replies from one dashboard.' }, { num: '03', icon: 'rocket', title: 'Grow & automate', desc: 'Auto-replies, bulk campaigns, track every conversation.' }], cta: 'Custom development — contact us' },
-        features: { eyebrow: 'Features', title: 'Everything your team needs', desc: 'Not just chat — a full CRM built around WhatsApp with custom code.', items: [{ icon: 'inbox', title: 'Unified team inbox', desc: 'All conversations in one place.' }, { icon: 'send', title: 'Bulk messaging', desc: 'Personalized messages to thousands.' }, { icon: 'robot', title: 'Auto-response 24/7', desc: 'After-hours rules, keywords, greetings.' }, { icon: 'chart-bar', title: 'Analytics & reports', desc: 'Response times, volume, team performance.' }, { icon: 'users', title: 'Role-based access', desc: 'Manager, agent, viewer.' }, { icon: 'plug', title: 'API integration', desc: 'Connect to your CRM or e-commerce via REST API.' }] },
-        audiences: { eyebrow: 'Who it\'s for', title: 'Built for businesses like yours', desc: 'Any team that talks to customers on WhatsApp.', items: [{ icon: 'health', title: 'Clinics & healthcare', region: 'Turkey · UAE · Europe', desc: 'Appointments, reminders, follow-ups.', tag: 'Booking automation' }, { icon: 'bag', title: 'E-commerce', region: 'All regions', desc: 'Order updates, cart recovery.', tag: 'Bulk campaigns' }, { icon: 'home', title: 'Real estate', region: 'Dubai · Istanbul', desc: 'Listings, lead follow-up.', tag: 'Lead tracking' }, { icon: 'utensils', title: 'Restaurants', region: 'Turkey · Europe', desc: 'Reservations, catering.', tag: 'Auto-reservation' }] },
-        pricing: { eyebrow: 'Pricing', title: 'WhatsApp CRM script plans', desc: 'One-time payment — full ownership of script and panel.', note: 'One-time payment — includes setup, configuration and initial training.', plans: [{ id: 'basic', name: 'Basic', price: '$500', period: '', desc: 'WhatsApp CRM script for small teams.', features: ['1 WhatsApp number', 'Team panel', 'Shared inbox', 'Basic auto-reply', 'Setup & onboarding'], cta: 'Custom development — contact us', href: '/pages/contact?product=whatsapp-crm-basic' }, { id: 'pro', name: 'Professional', price: '$800', period: '', badge: 'Most popular', desc: 'For growing businesses with bulk messaging.', features: ['Everything in Basic', 'Bulk messaging', 'Advanced auto-reply', 'Analytics', '4-language UI'], cta: 'Custom development — contact us', href: '/pages/contact?product=whatsapp-crm-pro', featured: true }, { id: 'enterprise', name: 'Enterprise', price: '$1,200', period: '', desc: 'Multiple numbers, API and custom integrations.', features: ['Everything in Pro', 'Custom API', 'Multiple numbers', 'CRM integration', 'Priority support'], cta: 'Custom development — contact us', href: '/pages/contact?product=whatsapp-crm-enterprise' }] },
-        faq: { eyebrow: 'FAQ', title: 'Common questions', items: [{ q: 'How much does the WhatsApp CRM script cost?', a: 'Three plans: $500, $800 and $1,200 — one-time payment, no monthly subscription.' }, { q: 'Can multiple staff use one number?', a: 'Yes — unlimited staff on one panel and one WhatsApp Business number.' }, { q: 'Does it support bulk messaging?', a: 'Yes — on Professional ($800) and Enterprise ($1,200) plans.' }, { q: 'Is it custom script or SaaS?', a: 'Custom code by the Bizdavar team — full ownership, no third-party platform dependency.' }, { q: 'Does it support Farsi and Turkish?', a: 'Yes — EN, AR, TR and FA UI and support.' }] },
-        about: { title: 'Custom development by Bizdavar', body: 'This <strong>WhatsApp CRM script</strong> is custom-built by the <strong>Bizdavar team</strong> — team panel, web app and API under your control.', ctaContact: 'Custom development — contact us', ctaPortfolio: 'Case studies' },
-        cta: { title: 'Need a custom script?', desc: '$500, $800 or $1,200 plans — contact us to discuss your project.', btnStart: 'Custom development — contact us', btnPricing: 'See plans' },
+          regions: 'Turkey · Dubai · Europe · Iran',
+          trust: 'Free live demo · From $49/mo · fxguard.io',
+          ctaDemo: 'Open free demo',
+          ctaPricing: 'See prices & buy',
+          ctaContact: 'Buy on WhatsApp',
+          ctaStore: 'fxguard.io'
+        },
+        stats: { businesses: 'Modules+', regions: 'User roles', regionsVal: 'Owner → Agent', uptime: 'Uptime target', setup: 'Support languages', setupSuffix: '' },
+        problem: {
+          eyebrow: 'The problem',
+          title: 'Sound familiar?',
+          desc: 'Fast-growing teams outgrow personal WhatsApp — messages get lost and accountability disappears.',
+          items: [
+            { icon: 'mobile', title: 'Multiple phones, one number', desc: 'Shared logins or personal phones — chats slip away.' },
+            { icon: 'list', title: 'No customer history', desc: 'Every chat starts from zero — no tags or shared context.' },
+            { icon: 'clock', title: 'No accountability', desc: 'No tickets or tasks recording who closed what.' },
+            { icon: 'shield', title: 'Unclear security', desc: 'No 2FA, no role separation across branches.' }
+          ]
+        },
+        steps: {
+          eyebrow: 'Buy in 3 steps',
+          title: 'Demo free, pick a package, purchase today',
+          desc: 'No long sales cycle — evaluate the real product first.',
+          items: [
+            { num: '01', icon: 'bolt', title: 'Try the live demo', desc: 'app.fxguard.io — demo / 123456. Real product, not a mockup.' },
+            { num: '02', icon: 'target', title: 'Pick your package', desc: 'Hosted Cloud, Self-hosted License, or Managed Dedicated.' },
+            { num: '03', icon: 'whatsapp', title: 'Purchase or request a quote', desc: 'WhatsApp sales or the form on fxguard.io — usually within 24 hours on business days.' }
+          ],
+          cta: 'Open live demo'
+        },
+        features: {
+          eyebrow: 'Modules',
+          title: 'Everything in one panel',
+          desc: 'Real modules for exchange, finance, sales and support teams.',
+          items: [
+            { icon: 'inbox', title: 'Unified WhatsApp inbox', desc: 'One number, shared inbox, smart routing.' },
+            { icon: 'users', title: 'Customers & CRM', desc: 'Profiles, tags and conversation history.' },
+            { icon: 'list', title: 'Support tickets', desc: 'Clear ownership from open to resolved.' },
+            { icon: 'bolt', title: 'Tasks & workflows', desc: 'Assign and track end-to-end.' },
+            { icon: 'shield', title: 'Roles, branches & 2FA', desc: 'Owner→Agent, branches, Authenticator, audit logs.' },
+            { icon: 'chart-line', title: 'FX tools', desc: 'Rates, charts and exchange service tools.' }
+          ]
+        },
+        audiences: {
+          eyebrow: 'Who it’s for',
+          title: 'Built for exchange, finance and support',
+          desc: 'Teams that need real accountability — not just chat.',
+          items: [
+            { icon: 'chart-line', title: 'Exchange & FX', region: 'Turkey · UAE · Europe · Iran', desc: 'Multi-branch ops plus a team inbox.', tag: 'Multi-branch' },
+            { icon: 'briefcase', title: 'B2B sales & support', region: 'All regions', desc: 'Close with full history, tickets and tasks.', tag: 'Sales ops' },
+            { icon: 'building', title: 'Holdings / multi-site', region: 'Turkey · Dubai', desc: 'Role and branch oversight for owners.', tag: 'Roles' },
+            { icon: 'health', title: 'Services & clinics', region: 'Turkey · Europe', desc: 'Request tracking without lost messages.', tag: 'Support' }
+          ]
+        },
+        pricing: {
+          eyebrow: 'Packages',
+          title: 'Three ways to run FXGuard — same core',
+          desc: 'The difference is who hosts and operates it. Every package includes the same core modules.',
+          note: 'Demo is free. Cloud from $49/mo or $490/year.',
+          plans: [
+            { id: 'cloud', name: 'Hosted Cloud', price: '$49', period: '/mo', badge: 'Most popular', desc: 'We run FXGuard for you on our infrastructure.', features: ['Live in minutes', 'Automatic updates', 'Daily backups', 'Roles & 2FA', '$490/year (save 2 months)'], cta: 'Buy Cloud on fxguard.io', href: 'https://fxguard.io/', featured: true },
+            { id: 'license', name: 'Self-hosted License', price: 'One-time', period: ' · quote', desc: 'Buy the full system and run it on your servers.', features: ['One-time ownership', 'Install package & docs', 'Your data stays with you', 'Optional update contract', 'Onboarding'], cta: 'Get license quote', href: 'https://fxguard.io/' },
+            { id: 'managed', name: 'Managed Dedicated', price: 'Custom', period: ' · quote', desc: 'We install, host and operate a dedicated instance — with SLA.', features: ['Dedicated instance', 'Maintenance & monitoring', 'Custom SLA', 'Account manager', 'Staff training'], cta: 'Get Managed quote', href: 'https://fxguard.io/' }
+          ]
+        },
+        faq: {
+          eyebrow: 'FAQ',
+          title: 'Common questions',
+          items: [
+            { q: 'Cloud vs License vs Managed?', a: 'Cloud: we host it. License: you run it on your servers. Managed: we operate a dedicated instance. All three share the same core modules.' },
+            { q: 'Can I try before buying?', a: 'Yes — app.fxguard.io (demo / 123456) is the real product.' },
+            { q: 'What does pricing start at?', a: 'Hosted Cloud from $49/mo or $490/year. License and Managed are custom quotes.' },
+            { q: 'Multi-branch support?', a: 'Yes — branches, departments, Owner→Agent roles, 2FA and audit logs.' },
+            { q: 'How does Bizdavar relate?', a: 'FXGuard is a Bizdavar ecosystem product; sales run through fxguard.io and it is listed in the Bizdavar product catalog.' }
+          ]
+        },
+        about: {
+          title: 'FXGuard — Bizdavar ecosystem product',
+          body: '<strong>FXGuard WhatsApp CRM</strong> unifies team inbox, customer CRM, tickets, tasks, branches and FX tools in one secure panel. Store: <a href="https://fxguard.io/" target="_blank" rel="noopener noreferrer">fxguard.io</a> · Demo: <a href="https://app.fxguard.io/" target="_blank" rel="noopener noreferrer">app.fxguard.io</a>.',
+          ctaContact: 'Go to fxguard.io',
+          ctaPortfolio: 'Accounting & related products'
+        },
+        cta: {
+          title: 'Ready to buy FXGuard?',
+          desc: 'Try the free demo first; then choose Cloud from $49/mo, License, or Managed.',
+          btnStart: 'Free demo',
+          btnPricing: 'View packages',
+          btnStore: 'fxguard.io'
+        },
         related: { title: 'Related products & services' },
-        geoText: 'WhatsApp CRM script for Turkey, UAE, Europe and Iran — custom development by Bizdavar Group.'
+        geoText: 'FXGuard WhatsApp CRM — Turkey, UAE, Europe, Iran · fxguard.io · Bizdavar ecosystem.'
+      },
+      fxguardAccounting: {
+        hero: {
+          tag: 'FXGuard · Accounting',
+          title: 'Accounting — finance system for FX and SME teams',
+          desc: 'The <strong>FXGuard</strong> suite accounting product for finance workflows, exchange ops and SMEs — built by Bizdavar, offered alongside WhatsApp CRM.',
+          ctaStore: 'View FXGuard suite',
+          ctaContact: 'Request consult / demo',
+          trust: 'Bizdavar ecosystem product · fxguard.io'
+        },
+        features: {
+          eyebrow: 'Capabilities',
+          title: 'What does it cover?',
+          desc: 'Built for teams that need focused accounting beside exchange and support operations.',
+          items: [
+            { title: 'Finance workflows', desc: 'Record and track financial operations for exchange and SME teams.' },
+            { title: 'Role-based access', desc: 'Clear roles and permissions for accounting staff.' },
+            { title: 'Paired with WhatsApp CRM', desc: 'Sits beside FXGuard WhatsApp CRM for sales and support.' },
+            { title: 'Dedicated deployment', desc: 'Install and customize for holdings and finance businesses.' }
+          ]
+        },
+        cta: {
+          title: 'Accounting and WhatsApp CRM — both from FXGuard',
+          desc: 'For demo or quotes, use <a href="https://fxguard.io/" target="_blank" rel="noopener noreferrer">fxguard.io</a> or the Bizdavar contact form.',
+          crm: 'WhatsApp CRM',
+          contact: 'Contact Bizdavar',
+          store: 'fxguard.io'
+        },
+        geoText: 'FXGuard Accounting — accounting product in the FXGuard suite, built by Bizdavar Group.'
       },
       bzDiamond: {
         hero: { tag: 'Web design case study', title: 'BZ Diamond — Website and online store design', desc: 'Client project in jewelry and diamonds — design, development and digital support by Bizdavar Group' },

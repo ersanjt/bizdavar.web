@@ -116,18 +116,24 @@
     }
 
     const statMap = [
-      { id: 'fxStatBusinesses', value: 3, suffix: '' },
-      { id: 'fxStatRegions', value: 4, suffix: '' },
-      { id: 'fxStatUptime', value: 100, suffix: '%' },
-      { id: 'fxStatSetup', value: 10, suffix: '' }
+      { id: 'fxStatBusinesses', value: 12, suffix: '+' },
+      { id: 'fxStatRegions', value: 5, suffix: '' },
+      { id: 'fxStatUptime', value: 99.9, suffix: '%' },
+      { id: 'fxStatSetup', value: 5, suffix: '' }
     ];
     const setupSuffix = cs.stats?.setupSuffix || '';
     statMap.forEach(({ id, value, suffix }) => {
       const el = document.getElementById(id);
-      if (el) animateStat(el, value, id === 'fxStatSetup' ? setupSuffix : suffix);
+      if (el) animateStat(el, value, id === 'fxStatSetup' ? (setupSuffix || suffix) : suffix);
     });
 
     const regionsVal = document.getElementById('fxStatRegionsLabel');
     if (regionsVal && cs.stats?.regionsVal) regionsVal.textContent = cs.stats.regionsVal;
+
+    const problemGrid = document.getElementById('fxguardProblems');
+    if (problemGrid && (cs.problem?.items || []).length > 3) {
+      problemGrid.classList.remove('fxguard-card-grid--3');
+      problemGrid.classList.add('fxguard-card-grid--4');
+    }
   };
 })();

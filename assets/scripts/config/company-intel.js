@@ -125,7 +125,8 @@ window.BIZDAVAR_INTEL = {
 
     { name: 'BizClean V5', type: 'محصول بهداشت', note: 'دستگاه ضدعفونی دست اتوماتیک — سنسور التراسونیک، عرضه دیجی‌کالا' },
     { name: 'BZBroker', type: 'صرافی P2P', note: 'پلتفرم کریپتو' },
-    { name: 'CRM واتساپ', type: 'CRM واتساپ', note: 'اسکریپت اختصاصی — اتوماسیون فروش' },
+    { name: 'WhatsApp CRM', type: 'FXGuard · WhatsApp CRM', note: 'اینباکس تیمی واتساپ — سوئیت fxguard.io' },
+    { name: 'Accounting', type: 'FXGuard · Accounting', note: 'سامانه حسابداری مالی و صرافی — سوئیت fxguard.io' },
     { name: 'Bear Event', type: 'رویداد', note: 'بلیت و رویداد آنلاین' },
     { name: 'Gamak', type: 'الکتروموتور', note: 'تامین موتور صنعتی ترکیه' },
     { name: 'Arian Pumps', type: 'نمونه‌کار طراحی وب', note: 'طراحی وب شرکتی B2B — مشتری خدمات دیجیتال' },

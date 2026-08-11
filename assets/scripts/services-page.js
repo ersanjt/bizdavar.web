@@ -44,7 +44,7 @@
       id: 'server-ops',
       num: '04',
       title: 'مدیریت سرور',
-      desc: 'راه‌اندازی، امنیت، بکاپ و مانیتورینگ.',
+      desc: 'راه‌اندازی، امنیت، بکاپ، مانیتورینگ و مهاجرت.',
       icon: 'monitor',
       accent: 'slate',
       href: '#server-ops'
@@ -53,7 +53,7 @@
       id: 'smm',
       num: '05',
       title: 'مدیریت SMM',
-      desc: 'محتوا، تبلیغات و رشد شبکه‌های اجتماعی.',
+      desc: 'محتوا، گرافیک، ریلز، تبلیغات و گزارش رشد.',
       icon: 'palette',
       accent: 'red',
       href: '#smm'
@@ -179,6 +179,162 @@
     });
   }
 
+  function renderSmmPanel() {
+    const el = document.getElementById('smmPanel');
+    if (!el) return;
+    const panels = rawList('servicesPage.smm.platforms', [
+      { title: 'Instagram', desc: 'پست، استوری، ریلز و تبلیغات' },
+      { title: 'LinkedIn', desc: 'محتوای B2B و برندینگ حرفه‌ای' },
+      { title: 'Content', desc: 'تقویم، کپی و هویت بصری' },
+      { title: 'Paid Ads', desc: 'کمپین هدفمند و بهینه‌سازی' },
+      { title: 'Community', desc: 'تعامل و پاسخ‌گویی' },
+      { title: 'Analytics', desc: 'گزارش رشد و عملکرد' }
+    ]);
+    el.innerHTML = panels.map(p => `
+      <div class="service-panel-card">
+        <strong>${p.title}</strong>
+        <span>${p.desc}</span>
+      </div>
+    `).join('');
+  }
+
+  function renderSmmDeliverables() {
+    const el = document.getElementById('smmDeliverables');
+    if (!el) return;
+    const title = t('servicesPage.smm.packagesTitle', 'خروجی‌های ماهانه');
+    const items = rawList('servicesPage.smm.packages', [
+      'تقویم محتوا و موضوعات',
+      'پست و استوری طراحی‌شده',
+      'ریلز / ویدیو کوتاه',
+      'گزارش ماهانه رشد'
+    ]);
+    el.innerHTML = `
+      <p class="server-ops-stack__title">${title}</p>
+      <div class="server-ops-stack__list">
+        ${items.map(item => `<span class="server-ops-stack__item">${item}</span>`).join('')}
+      </div>
+    `;
+    el.classList.add('server-ops-stack', 'smm-deliverables');
+  }
+
+  function renderSmmFaq() {
+    const el = document.getElementById('smmFaq');
+    if (!el) return;
+    const faq = rawList('servicesPage.smm.faq', []);
+    if (!faq.length) {
+      el.hidden = true;
+      return;
+    }
+    el.hidden = false;
+    el.innerHTML = `
+      <div class="field-tech-faq-wrap">
+        <div class="field-tech-faq__head">
+          <span class="field-tech-faq__eyebrow">${t('servicesPage.smm.faqEyebrow', 'شبکه‌های اجتماعی')}</span>
+          <h3 class="field-tech-faq__title">${t('servicesPage.smm.faqTitle', 'سوالات پرتکرار SMM')}</h3>
+        </div>
+        <div class="field-tech-faq" role="list">
+          ${faq.map((item, i) => `
+            <details class="field-tech-faq__item"${i === 0 ? ' open' : ''} role="listitem">
+              <summary>
+                <span class="field-tech-faq__q">${item.q}</span>
+                <span class="field-tech-faq__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="field-tech-faq__body"><p>${item.a}</p></div>
+            </details>
+          `).join('')}
+        </div>
+      </div>`;
+
+    const ld = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faq.map(item => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: { '@type': 'Answer', text: item.a }
+      }))
+    };
+    if (typeof window.injectJsonLd === 'function') {
+      window.injectJsonLd('jsonld-smm-faq', ld);
+    }
+  }
+
+  function renderServerOpsPanel() {
+    const el = document.getElementById('serverOpsPanel');
+    if (!el) return;
+    const panels = rawList('servicesPage.serverOps.panels', [
+      { title: 'VPS', desc: 'راه‌اندازی و سخت‌سازی' },
+      { title: 'Security', desc: 'SSL، فایروال و دسترسی' },
+      { title: 'Backup', desc: 'بکاپ و تست بازیابی' },
+      { title: 'Monitor', desc: 'uptime و هشدار' },
+      { title: 'DNS / CDN', desc: 'دامنه و Cloudflare' },
+      { title: 'Migrate', desc: 'انتقال بدون قطعی' }
+    ]);
+    el.innerHTML = panels.map(p => `
+      <div class="service-panel-card">
+        <strong>${p.title}</strong>
+        <span>${p.desc}</span>
+      </div>
+    `).join('');
+  }
+
+  function renderServerOpsStack() {
+    const el = document.getElementById('serverOpsStack');
+    if (!el) return;
+    const title = t('servicesPage.serverOps.stackTitle', 'استک و ابزارهای رایج');
+    const stack = rawList('servicesPage.serverOps.stack', [
+      'Ubuntu', 'Debian', 'Nginx', 'MySQL / MariaDB', 'Redis', 'Cloudflare', 'Docker', 'Git'
+    ]);
+    el.innerHTML = `
+      <p class="server-ops-stack__title">${title}</p>
+      <div class="server-ops-stack__list">
+        ${stack.map(item => `<span class="server-ops-stack__item">${item}</span>`).join('')}
+      </div>
+    `;
+  }
+
+  function renderServerOpsFaq() {
+    const el = document.getElementById('serverOpsFaq');
+    if (!el) return;
+    const faq = rawList('servicesPage.serverOps.faq', []);
+    if (!faq.length) {
+      el.hidden = true;
+      return;
+    }
+    el.hidden = false;
+    el.innerHTML = `
+      <div class="field-tech-faq-wrap">
+        <div class="field-tech-faq__head">
+          <span class="field-tech-faq__eyebrow">${t('servicesPage.serverOps.faqEyebrow', 'زیرساخت و Ops')}</span>
+          <h3 class="field-tech-faq__title">${t('servicesPage.serverOps.faqTitle', 'سوالات پرتکرار مدیریت سرور')}</h3>
+        </div>
+        <div class="field-tech-faq" role="list">
+          ${faq.map((item, i) => `
+            <details class="field-tech-faq__item"${i === 0 ? ' open' : ''} role="listitem">
+              <summary>
+                <span class="field-tech-faq__q">${item.q}</span>
+                <span class="field-tech-faq__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="field-tech-faq__body"><p>${item.a}</p></div>
+            </details>
+          `).join('')}
+        </div>
+      </div>`;
+
+    const ld = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faq.map(item => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: { '@type': 'Answer', text: item.a }
+      }))
+    };
+    if (typeof window.injectJsonLd === 'function') {
+      window.injectJsonLd('jsonld-server-ops-faq', ld);
+    }
+  }
+
   function wireFieldTechCtas() {
     const wa = fieldWaUrl();
     const ft = fieldTechCfg();
@@ -302,6 +458,12 @@
     renderOverview();
     renderProcess();
     applyBlockLists();
+    renderServerOpsPanel();
+    renderServerOpsStack();
+    renderServerOpsFaq();
+    renderSmmPanel();
+    renderSmmDeliverables();
+    renderSmmFaq();
     renderFieldTechLead();
     renderFieldFaq();
     wireFieldTechCtas();

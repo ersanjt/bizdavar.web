@@ -49,6 +49,7 @@ const PAGES = [
   { path: '/pages/biztab', changefreq: 'monthly', priority: 0.85, lastmod: '2020-03-16' },
   { path: '/pages/bizsanitizer-v5', changefreq: 'monthly', priority: 0.85, lastmod: '2021-06-01' },
   { path: '/pages/fxguard', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
+  { path: '/pages/fxguard-accounting', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/bizswap', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/articles/about-bizdavar-group', changefreq: 'monthly', priority: 0.85, lastmod: '2025-06-01' },
   { path: '/pages/articles/vega-supply-iran', changefreq: 'monthly', priority: 0.85, lastmod: '2026-07-29' },

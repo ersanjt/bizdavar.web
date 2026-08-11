@@ -151,7 +151,7 @@
     return [
       { page: 'home', route: R.home, label: t('nav.home', 'خانه'), icon: 'home' },
       { page: 'about', route: R.about, label: t('nav.about', 'درباره ما'), icon: 'info' },
-      { page: 'services', route: R.services, label: t('nav.services', 'خدمات'), icon: 'list' },
+      { page: 'services', route: R.services, label: t('nav.services', 'خدمات'), icon: 'list', dropdown: 'services' },
       { page: 'products', route: R.products, label: t('nav.products', 'محصولات ما'), icon: 'box', dropdown: 'products' },
       { page: 'portfolio', route: R.portfolio, label: t('nav.portfolio', 'نمونه‌کارها'), icon: 'briefcase' },
       { page: 'fast', route: R.fast, label: t('nav.webDesign', 'طراحی سایت'), icon: 'globe' },
@@ -209,19 +209,27 @@
 
   function productNavHref(item) {
     if (!item) return '#';
+    if (item.url) return item.url;
     let href = pagePath(R[item.route] || item.route);
     if (item.cat) href += (href.includes('?') ? '&' : '?') + 'cat=' + encodeURIComponent(item.cat);
     if (item.hash) href += '#' + item.hash;
     return href;
   }
 
+  function productNavLinkAttrs(item, href) {
+    const external = !!(item && (item.external || /^https?:\/\//i.test(href || '')));
+    return external ? ' target="_blank" rel="noopener noreferrer"' : '';
+  }
+
   function productNavLinkHtml(item) {
     const href = productNavHref(item);
-    const active = currentPage === item.page && !item.cat ? ' is-active' : '';
+    const active = item.hash
+      ? (currentPage === item.page && location.hash === '#' + item.hash)
+      : (currentPage === item.page && !item.cat);
     const label = item.labelKey ? t(item.labelKey, item.label || '') : (item.label || '');
     const desc = item.descKey ? t(item.descKey, '') : '';
     const badge = item.badgeKey ? `<span class="nav__product-badge">${t(item.badgeKey, '')}</span>` : '';
-    return `<a href="${href}" class="nav__product-link${active}">
+    return `<a href="${href}" class="nav__product-link${active ? ' is-active' : ''}"${productNavLinkAttrs(item, href)}>
       <span class="nav__product-name">${label}${badge}</span>
       ${desc ? `<span class="nav__product-desc">${desc}</span>` : ''}
     </a>`;
@@ -232,13 +240,17 @@
     const href = productNavHref(featured);
     const label = featured.labelKey ? t(featured.labelKey, featured.label || '') : (featured.label || '');
     const desc = featured.descKey ? t(featured.descKey, '') : '';
+    const kicker = featured.kickerKey ? t(featured.kickerKey, '') : t('nav.productsMegaHint', '');
     const img = featured.image
       ? (window.resolveAssetPath ? window.resolveAssetPath(featured.image) : ('/' + featured.image.replace(/^\//, '')))
       : '';
-    return `<a href="${href}" class="nav__product-featured${currentPage === featured.page ? ' is-active' : ''}">
+    const active = featured.hash
+      ? (currentPage === featured.page && location.hash === '#' + featured.hash)
+      : (currentPage === featured.page);
+    return `<a href="${href}" class="nav__product-featured${active ? ' is-active' : ''}">
       ${img ? `<span class="nav__product-featured__media"><img src="${img}" alt="" loading="lazy" width="160" height="100"></span>` : ''}
       <span class="nav__product-featured__body">
-        <span class="nav__product-featured__kicker">${t('nav.productsMegaHint', '')}</span>
+        <span class="nav__product-featured__kicker">${kicker}</span>
         <span class="nav__product-featured__name">${label}</span>
         ${desc ? `<span class="nav__product-featured__desc">${desc}</span>` : ''}
       </span>
@@ -279,6 +291,122 @@
         return `<a href="${href}" class="nav__product-footer__link${primary}${active}">${label}</a>`;
       }).join('')}
     </div>`;
+  }
+
+  function getServiceNavConfig() {
+    return C.serviceNav || { overviewRoute: 'services', tabs: [], footer: [] };
+  }
+
+  function isServicesActive() {
+    return currentPage === 'services';
+  }
+
+  function resolveServiceTabId(cfg) {
+    const tabs = cfg.tabs || [];
+    if (!tabs.length) return cfg.defaultTab || 'digital';
+    const hash = (location.hash || '').replace(/^#/, '');
+    if (hash) {
+      for (const tab of tabs) {
+        for (const group of tab.groups || []) {
+          for (const item of group.items || []) {
+            if (item.hash === hash) return tab.id;
+          }
+        }
+      }
+      if (hash === 'field-tech') return 'field';
+    }
+    return cfg.defaultTab || tabs[0].id;
+  }
+
+  function renderServiceNavDropdown(label) {
+    const cfg = getServiceNavConfig();
+    const overviewHref = pagePath(R[cfg.overviewRoute] || cfg.overviewRoute);
+    const active = isServicesActive() ? ' active' : '';
+    const activeTab = resolveServiceTabId(cfg);
+    const tabs = cfg.tabs || [];
+    const tabList = tabs.length
+      ? `<div class="nav__product-tabs" role="tablist" aria-label="${t('nav.services', label)}">
+          ${tabs.map(tab => {
+            const on = tab.id === activeTab;
+            return `<button type="button" class="nav__product-tab${on ? ' is-active' : ''}" role="tab" data-product-tab="${tab.id}" aria-selected="${on ? 'true' : 'false'}">${t(tab.labelKey, tab.id)}</button>`;
+          }).join('')}
+        </div>`
+      : '';
+    const panels = tabs.map(tab => productNavTabPanelHtml(tab, tab.id === activeTab)).join('');
+    return `<details class="nav__dropdown nav__dropdown--services" data-nav-dropdown>
+      <summary class="nav__link nav__link--dropdown${active}">
+        <span class="nav__link-label">${label}</span>
+        <span class="nav__chev" aria-hidden="true"></span>
+      </summary>
+      <div class="nav__panel nav__panel--services" data-product-mega>
+        <div class="nav__product-mega">
+          <div class="nav__product-mega__aside">
+            ${productNavFeaturedHtml(cfg.featured)}
+            <a href="${overviewHref}" class="nav__product-overview${currentPage === 'services' && !location.hash ? ' is-active' : ''}">${t('nav.servicesAll', 'همه خدمات')}</a>
+          </div>
+          <div class="nav__product-mega__main">
+            ${tabList}
+            <div class="nav__product-panels">${panels}</div>
+          </div>
+        </div>
+        ${productNavFooterHtml(cfg.footer)}
+      </div>
+    </details>`;
+  }
+
+  function renderMobileServiceNav(label) {
+    const cfg = getServiceNavConfig();
+    const overviewHref = pagePath(R[cfg.overviewRoute] || cfg.overviewRoute);
+    const active = isServicesActive() ? ' active' : '';
+    const activeTab = resolveServiceTabId(cfg);
+    const tabs = (cfg.tabs || []).map(tab => {
+      const groups = (tab.groups || []).map(group => `
+        <div class="mobile-drawer__product-group">
+          <p class="mobile-drawer__product-heading">${t(group.labelKey, group.id)}</p>
+          ${(group.items || []).map(item => {
+            const href = productNavHref(item);
+            const itemActive = item.hash
+              ? (currentPage === item.page && location.hash === '#' + item.hash)
+              : (currentPage === item.page);
+            const itemLabel = item.labelKey ? t(item.labelKey, item.label || '') : (item.label || '');
+            const desc = item.descKey ? t(item.descKey, '') : '';
+            return `<a href="${href}" class="mobile-drawer__product-link${itemActive ? ' active' : ''}">
+              <span>${itemLabel}</span>
+              ${desc ? `<small>${desc}</small>` : ''}
+            </a>`;
+          }).join('')}
+        </div>
+      `).join('');
+      const cta = tab.cta
+        ? `<a href="${productNavHref(tab.cta)}" class="mobile-drawer__product-link">
+            <span>${t(tab.cta.labelKey, '')}</span>
+            ${tab.cta.descKey ? `<small>${t(tab.cta.descKey, '')}</small>` : ''}
+          </a>`
+        : '';
+      return `<details class="mobile-drawer__product-tab"${tab.id === activeTab ? ' open' : ''}>
+        <summary>${t(tab.labelKey, tab.id)}</summary>
+        <div class="mobile-drawer__product-tab-body">
+          ${groups}
+          ${cta}
+        </div>
+      </details>`;
+    }).join('');
+    const footer = (cfg.footer || []).map(item => {
+      const href = productNavHref(item);
+      const itemLabel = item.labelKey ? t(item.labelKey, item.label || '') : (item.label || '');
+      return `<a href="${href}" class="mobile-drawer__product-link">${itemLabel}</a>`;
+    }).join('');
+    return `<details class="mobile-drawer__acc"${isServicesActive() ? ' open' : ''}>
+      <summary class="mobile-drawer__link${active}">
+        <span class="mobile-drawer__icon">${ic('list', { size: 22 })}</span>
+        <span>${label}</span>
+      </summary>
+      <div class="mobile-drawer__sub">
+        <a href="${overviewHref}" class="mobile-drawer__product-link${currentPage === 'services' && !location.hash ? ' active' : ''}">${t('nav.servicesAll', 'همه خدمات')}</a>
+        ${tabs}
+        ${footer ? `<div class="mobile-drawer__product-footer">${footer}</div>` : ''}
+      </div>
+    </details>`;
   }
 
   function renderProductNavDropdown(label) {
@@ -331,7 +459,7 @@
             const itemActive = currentPage === item.page && !item.cat ? ' active' : '';
             const itemLabel = item.labelKey ? t(item.labelKey, item.label || '') : (item.label || '');
             const desc = item.descKey ? t(item.descKey, '') : '';
-            return `<a href="${href}" class="mobile-drawer__product-link${itemActive}">
+            return `<a href="${href}" class="mobile-drawer__product-link${itemActive}"${productNavLinkAttrs(item, href)}>
               <span>${itemLabel}</span>
               ${desc ? `<small>${desc}</small>` : ''}
             </a>`;
@@ -568,20 +696,20 @@
     }
 
     if (header) {
-      const navLinks = navItems.map(n =>
-        n.dropdown === 'products'
-          ? renderProductNavDropdown(n.label)
-          : `<a href="${pagePath(n.route)}" class="nav__link${isActive(n.page)}">${n.label}</a>`
-      ).join('');
+      const navLinks = navItems.map(n => {
+        if (n.dropdown === 'products') return renderProductNavDropdown(n.label);
+        if (n.dropdown === 'services') return renderServiceNavDropdown(n.label);
+        return `<a href="${pagePath(n.route)}" class="nav__link${isActive(n.page)}">${n.label}</a>`;
+      }).join('');
 
-      const drawerLinks = navItems.map(n =>
-        n.dropdown === 'products'
-          ? renderMobileProductNav(n.label)
-          : `<a href="${pagePath(n.route)}" class="mobile-drawer__link${isActive(n.page)}">
+      const drawerLinks = navItems.map(n => {
+        if (n.dropdown === 'products') return renderMobileProductNav(n.label);
+        if (n.dropdown === 'services') return renderMobileServiceNav(n.label);
+        return `<a href="${pagePath(n.route)}" class="mobile-drawer__link${isActive(n.page)}">
           <span class="mobile-drawer__icon">${ic(n.icon, { size: 22 })}</span>
           <span>${n.label}</span>
-        </a>`
-      ).join('');
+        </a>`;
+      }).join('');
 
       header.innerHTML = `
         <div class="header__desktop">
