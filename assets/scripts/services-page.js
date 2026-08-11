@@ -224,17 +224,25 @@
       return;
     }
     el.hidden = false;
+    const phoneRe = /(\+98[\s-]?\d{3}[\s-]?\d{3}[\s-]?\d{4})/g;
     el.innerHTML = `
-      <div class="section__header section__header--pro">
-        <h3 class="section__title" style="font-size:1.35rem">${t('servicesPage.fieldTech.faqTitle', 'سوالات پرتکرار خدمات فنی')}</h3>
-      </div>
-      <div class="field-tech-faq">
-        ${faq.map((item, i) => `
-          <details class="field-tech-faq__item"${i === 0 ? ' open' : ''}>
-            <summary>${item.q}</summary>
-            <p>${item.a}</p>
-          </details>
-        `).join('')}
+      <div class="field-tech-faq-wrap">
+        <div class="field-tech-faq__head">
+          <span class="field-tech-faq__eyebrow">${t('servicesPage.fieldTech.eyebrow', 'خدمات فنی میدانی')}</span>
+          <h3 class="field-tech-faq__title">${t('servicesPage.fieldTech.faqTitle', 'سوالات پرتکرار خدمات فنی')}</h3>
+        </div>
+        <div class="field-tech-faq" role="list">
+          ${faq.map((item, i) => {
+            const answer = String(item.a || '').replace(phoneRe, '<span dir="ltr" class="field-tech-faq__phone">$1</span>');
+            return `<details class="field-tech-faq__item"${i === 0 ? ' open' : ''} role="listitem">
+              <summary>
+                <span class="field-tech-faq__q">${item.q}</span>
+                <span class="field-tech-faq__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="field-tech-faq__body"><p>${answer}</p></div>
+            </details>`;
+          }).join('')}
+        </div>
       </div>`;
 
     const ld = {
