@@ -211,7 +211,7 @@
             ${ic('phone', { size: 18 })} ${t('servicesPage.fieldTech.callCta', 'تماس تلفنی')}
           </a>
         </div>
-        <p class="field-tech-lead__hint dir-ltr">${t('servicesPage.fieldTech.waHint', ft.phoneDisplay || '+98 936 411 5151')}</p>
+        <p class="field-tech-lead__hint" dir="ltr">&#8235;${t('servicesPage.fieldTech.waHint', ft.phoneDisplay || '+98 936 411 5151')}&#8236;</p>
       </article>`;
   }
 
