@@ -38,10 +38,12 @@
     const el = document.getElementById('vegaHeroContent');
     if (!el) return;
     const b = catalog().brand;
+    const V = catalog();
+    const msg = (V.inquiryTemplate || '').replace('{product}', 'VEGA');
     const stats = b.heroStats || [
       { valueKey: 'founded', label: 'تجربه برند' },
       { valueKey: 'origin', label: 'تولید آلمان' },
-      { value: '12+', label: 'تجربه بیزدوار' }
+      { value: '۱۲+', label: 'سال همراهی بیزدوار' }
     ];
 
     el.innerHTML = `
@@ -57,12 +59,54 @@
           ${stats.map(s => `<div class="vega-hero__stat"><strong>${statValue(b, s)}</strong><span>${s.label}</span></div>`).join('')}
         </div>
         <div class="hero__actions mt-24">
+          <a href="${whatsappUrl(msg)}" class="btn btn--green" target="_blank" rel="noopener noreferrer">${ic('whatsapp', { size: 18, variant: 'white' })} ${t('whatsappInquiry', 'استعلام در واتساپ')}</a>
           <a href="${inquiryUrl('VEGA')}" class="btn btn--yellow">${t('inquiryCta', 'استعلام قیمت و تامین')}</a>
-          <a href="#vega-trust" class="btn btn--primary">${t('whyBuyCta', 'چرا از بیزدوار بخرید؟')}</a>
+          <a href="#vega-quote" class="btn btn--primary">${t('quoteGuideCta', 'راهنمای استعلام')}</a>
         </div>
       </div>
       <div class="vega-hero__visual">
-        <img src="${path(b.heroImage)}" alt="${b.heroImageAlt || 'VEGA process instrumentation'}" width="520" height="400" loading="eager">
+        <img src="${path(b.heroImage)}" alt="${b.heroImageAlt || 'VEGA process instrumentation'}" width="610" height="1010" loading="eager" decoding="async">
+      </div>`;
+  }
+
+  function renderQuickSeries() {
+    const V = catalog();
+    const el = document.getElementById('vegaQuickSeries');
+    if (!el || !V.quickSeries?.length) return;
+    el.innerHTML = `
+      <div class="container">
+        <div class="vega-quick-series" role="list">
+          ${V.quickSeries.map(s => `
+            <a href="#vega-product-${s.id}" class="vega-quick-series__item" role="listitem">
+              <strong>${s.name}</strong>
+              <span class="vega-quick-series__tag">${s.tag}</span>
+              <span class="vega-quick-series__hint">${s.hint}</span>
+            </a>
+          `).join('')}
+        </div>
+      </div>`;
+  }
+
+  function renderQuoteChecklist() {
+    const V = catalog();
+    const el = document.getElementById('vegaQuoteChecklist');
+    const q = V.quoteChecklist;
+    if (!el || !q) return;
+    const msg = (V.inquiryTemplate || '').replace('{product}', 'VEGA');
+    el.innerHTML = `
+      <div class="vega-quote-box">
+        <div class="vega-quote-box__content">
+          <h3>${q.title}</h3>
+          <p>${q.desc}</p>
+          <ul class="vega-quote-box__list">
+            ${q.items.map(item => `<li>${item}</li>`).join('')}
+          </ul>
+          ${q.tip ? `<p class="vega-quote-box__tip">${q.tip}</p>` : ''}
+        </div>
+        <div class="vega-quote-box__actions">
+          <a href="${whatsappUrl(msg)}" class="btn btn--green" target="_blank" rel="noopener noreferrer">${ic('whatsapp', { size: 18, variant: 'white' })} ${t('whatsappInquiry', 'ارسال در واتساپ')}</a>
+          <a href="${inquiryUrl('VEGA')}" class="btn btn--yellow">${t('inquiryCta', 'فرم استعلام')}</a>
+        </div>
       </div>`;
   }
 
@@ -88,6 +132,7 @@
     const map = {
       trust: 'vega-trust',
       buy: 'vega-buy',
+      quote: 'vega-quote',
       iran: 'vega-iran',
       faq: 'vega-faq',
       level: 'vega-cat-level',
@@ -106,6 +151,7 @@
     const links = [
       { id: 'trust', label: t('navTrust', 'چرا بیزدوار'), icon: 'target' },
       { id: 'buy', label: t('navBuy', 'مسیر خرید'), icon: 'list' },
+      { id: 'quote', label: t('navQuote', 'راهنمای استعلام'), icon: 'document' },
       ...V.categories.map(c => ({ id: c.id, label: c.title, icon: c.icon })),
       { id: 'iran', label: t('navIran', 'صنایع ایران'), icon: 'factory' },
       { id: 'faq', label: t('navFaq', 'سوالات'), icon: 'info' }
@@ -155,6 +201,7 @@
           <span class="vega-product-card__badge">${p.badge}</span>
           <div class="vega-product-card__series">${p.series}</div>
           <h2 class="vega-product-card__name">${p.name}</h2>
+          ${p.priceEur != null ? `<p class="vega-product-card__price" dir="ltr"><span class="vega-product-card__price-value">€${Number(p.priceEur).toLocaleString('en-US')}</span><span class="vega-product-card__price-note">${t('priceSellLabel', 'قیمت فروش')}</span></p>` : ''}
           <p class="vega-product-card__summary">${p.summary || p.summaryFa}</p>
           ${(p.useCase || p.useCaseFa) ? `<p class="vega-product-card__usecase"><strong>${t('useCaseLabel', 'کاربرد:')}</strong> ${p.useCase || p.useCaseFa}</p>` : ''}
           <ul class="vega-product-card__features">
@@ -164,6 +211,7 @@
             ${p.applications.map(a => `<span class="vega-product-card__tag">${a}</span>`).join('')}
           </div>
           <div class="vega-product-card__actions">
+            <a href="${whatsappUrl((V.inquiryTemplate || '').replace('{product}', p.name))}" class="btn btn--green vega-btn-wa" target="_blank" rel="noopener noreferrer">${ic('whatsapp', { size: 16, variant: 'white' })} ${t('whatsappShort', 'واتساپ')}</a>
             <a href="${inquiryUrl(p.name)}" class="btn btn--yellow vega-btn-inquiry">${t('requestInquiry', 'درخواست استعلام')}</a>
             <a href="${p.officialRef}" class="vega-product-card__link" target="_blank" rel="noopener noreferrer">${t('officialCatalog', 'کاتالوگ رسمی')}${arrow()}</a>
           </div>
@@ -177,7 +225,7 @@
     const el = document.getElementById('vegaIranGrid');
     if (!el || !V.iranIndustries) return;
     el.innerHTML = V.iranIndustries.map(ind => `
-      <div class="vega-iran-card">
+      <a href="${inquiryUrl(ind.name)}" class="vega-iran-card vega-iran-card--link">
         <div class="vega-iran-card__media">
           <img src="${path(ind.image)}" alt="${ind.name}" width="320" height="180" loading="lazy">
         </div>
@@ -185,8 +233,10 @@
           <span class="vega-iran-card__icon">${ic(ind.icon, { size: 20 })}</span>
           <h3>${ind.name}</h3>
           <p>${ind.desc}</p>
+          ${ind.models ? `<span class="vega-iran-card__models">${ind.models}</span>` : ''}
+          <span class="vega-iran-card__cta">${t('requestInquiry', 'درخواست استعلام')}${arrow()}</span>
         </div>
-      </div>
+      </a>
     `).join('');
   }
 
@@ -282,16 +332,20 @@
   function setupCtas() {
     const V = catalog();
     const msg = (V.inquiryTemplate || '').replace('{product}', 'VEGA');
-    const wa = document.getElementById('vegaCtaWhatsapp');
-    if (wa) {
-      wa.href = whatsappUrl(msg);
+    const waHref = whatsappUrl(msg);
+
+    document.querySelectorAll('#vegaCtaWhatsapp, #vegaStickyWa').forEach(wa => {
+      if (!wa) return;
+      wa.href = waHref;
+      wa.target = '_blank';
+      wa.rel = 'noopener noreferrer';
       wa.addEventListener('click', e => {
         if (!window.BIZDAVAR_CONFIG?.contact?.whatsapp) {
           e.preventDefault();
           window.location.href = inquiryUrl('VEGA');
         }
       });
-    }
+    });
 
     const sticky = document.getElementById('vegaStickyCta');
     if (sticky) {
@@ -311,9 +365,11 @@
   window.initVegaPage = function () {
     renderHero();
     renderTrustBar();
+    renderQuickSeries();
     renderCatNav();
     renderWhyBuy();
     renderPurchaseSteps();
+    renderQuoteChecklist();
     renderProducts();
     renderIranIndustries();
     renderValueProps();
@@ -357,7 +413,8 @@
           areaServed: ['IR', 'TR'],
           offers: {
             '@type': 'Offer',
-            availability: 'https://schema.org/PreOrder',
+            availability: p.priceEur != null ? 'https://schema.org/InStock' : 'https://schema.org/PreOrder',
+            ...(p.priceEur != null ? { price: String(p.priceEur), priceCurrency: 'EUR' } : {}),
             seller: { '@type': 'Organization', name: C.siteName },
             areaServed: ['IR', 'TR']
           }

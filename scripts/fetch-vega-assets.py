@@ -23,9 +23,12 @@ ASSETS = {
     'value-partnership.jpg': '/-/media/images/slides/homepage/slide-image-partnership_1920x1000px-v01.jpg',
     # Featured products
     'product-vegapuls-6x.png': '/-/media/images/landingpages/vegapuls-6x/keyvisual-web-produktdetailseite.png',
+    'product-vegapuls-6x-photo.png': '/-/media/images/products/sensors/f-ps6x-vegapuls-6x-allround-radar-level-sensor-v01.png',
     'product-vegapuls.png': '/-/media/images/landingpages/all-landingpage-teaser-vegapuls-c-11.png',
     'product-vegabar.png': '/-/media/images/landingpages/all-landingpage-teaser-vegabar.png',
+    'product-vegabar-39.png': '/-/media/images/products/sensors/devices2020/f-vegabar-38-du.png?mw=800&mh=800',
     'product-vegapoint.png': '/-/media/images/landingpages/all-landingpage-teaser-vegapoint.png',
+    'product-vegavib-s61.png': '/-/media/images/products/vega-line/f-vibs61-exx1xx.png?mw=800&mh=800',
     'product-vegapuls-photo.png': '/-/media/images/products/sensors/f-ps6x-vegapuls-6x-radar-level-sensor-for-the-chemical-industry.png',
     'product-vegabar-photo.png': '/-/media/images/products/sensors/devices2020/f-vegabar-1x-duxm.png',
     'product-vegapoint-photo.png': '/-/media/images/products/sensors/devices2020/o-vegapoint-11-ab.png',

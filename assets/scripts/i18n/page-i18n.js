@@ -129,6 +129,7 @@
       teraoka: 'initTeraokaPage',
       teltonika: 'initTeltonikaPage',
       prosense: 'initProsensePage',
+      'liqui-moly': 'initLiquiMolyPage',
       vega: 'initVegaPage'
     };
     if (supplyInits[page] && typeof window[supplyInits[page]] === 'function') {

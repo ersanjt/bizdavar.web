@@ -68,6 +68,8 @@ window.createSupplyBrandPage = function (cfg) {
 
       buy: `${prefix}-buy`,
 
+      quote: `${prefix}-quote`,
+
       highlights: `${prefix}-highlights`,
 
       catalog: `${prefix}-catalog`,
@@ -98,6 +100,10 @@ window.createSupplyBrandPage = function (cfg) {
 
     const stats = b.heroStats || [];
 
+    const msg = t('inquiryTemplate', catalog().inquiryTemplate || 'استعلام {product}').replace('{product}', brandName);
+
+    const hasQuote = !!catalog().quoteChecklist && !!document.getElementById(`${prefix}-quote`);
+
 
 
     el.innerHTML = `
@@ -126,9 +132,15 @@ window.createSupplyBrandPage = function (cfg) {
 
         <div class="hero__actions mt-24">
 
+          <a href="${whatsappUrl(msg)}" class="btn btn--green" target="_blank" rel="noopener noreferrer">${ic('whatsapp', { size: 18, variant: 'white' })} ${t('whatsappInquiry', 'استعلام در واتساپ')}</a>
+
           <a href="${inquiryUrl(brandName)}" class="btn btn--yellow">${t('inquiryCta', 'استعلام قیمت و تامین')}</a>
 
-          <a href="#${prefix}-trust" class="btn btn--primary">${t('whyBuyCta', 'چرا از بیزدوار بخرید؟')}</a>
+          ${hasQuote
+
+            ? `<a href="#${prefix}-quote" class="btn btn--primary">${t('quoteGuideCta', 'راهنمای استعلام')}</a>`
+
+            : `<a href="#${prefix}-trust" class="btn btn--primary">${t('whyBuyCta', 'چرا از بیزدوار بخرید؟')}</a>`}
 
         </div>
 
@@ -136,7 +148,91 @@ window.createSupplyBrandPage = function (cfg) {
 
       <div class="${prefix}-hero__visual">
 
-        <img src="${path(b.heroImage)}" alt="${b.heroImageAlt || brandName}" width="480" height="320" loading="eager">
+        <img src="${path(b.heroImage)}" alt="${b.heroImageAlt || brandName}" width="480" height="320" loading="eager" decoding="async" fetchpriority="high">
+
+      </div>`;
+
+  }
+
+
+
+  function renderQuickSeries() {
+
+    const el = document.getElementById(elId('QuickSeries'));
+
+    const items = catalog().quickSeries;
+
+    if (!el || !items?.length) return;
+
+    el.innerHTML = `
+
+      <div class="container">
+
+        <div class="${prefix}-quick-series" role="list">
+
+          ${items.map(s => {
+
+            const href = s.href || (s.anchor === 'cat' ? `#${prefix}-cat-${s.id}` : `#${prefix}-hl-${s.id}`);
+
+            return `
+
+            <a href="${href}" class="${prefix}-quick-series__item" role="listitem">
+
+              <strong>${s.name}</strong>
+
+              <span class="${prefix}-quick-series__tag">${s.tag}</span>
+
+              <span class="${prefix}-quick-series__hint">${s.hint}</span>
+
+            </a>`;
+
+          }).join('')}
+
+        </div>
+
+      </div>`;
+
+  }
+
+
+
+  function renderQuoteChecklist() {
+
+    const el = document.getElementById(elId('QuoteChecklist'));
+
+    const q = catalog().quoteChecklist;
+
+    if (!el || !q) return;
+
+    const msg = t('inquiryTemplate', catalog().inquiryTemplate || 'استعلام {product}').replace('{product}', brandName);
+
+    el.innerHTML = `
+
+      <div class="${prefix}-quote-box">
+
+        <div class="${prefix}-quote-box__content">
+
+          <h3>${q.title}</h3>
+
+          <p>${q.desc}</p>
+
+          <ul class="${prefix}-quote-box__list">
+
+            ${(q.items || []).map(item => `<li>${item}</li>`).join('')}
+
+          </ul>
+
+          ${q.tip ? `<p class="${prefix}-quote-box__tip">${q.tip}</p>` : ''}
+
+        </div>
+
+        <div class="${prefix}-quote-box__actions">
+
+          <a href="${whatsappUrl(msg)}" class="btn btn--green" target="_blank" rel="noopener noreferrer">${ic('whatsapp', { size: 18, variant: 'white' })} ${t('whatsappInquiry', 'ارسال در واتساپ')}</a>
+
+          <a href="${inquiryUrl(brandName)}" class="btn btn--yellow">${t('inquiryCta', 'فرم استعلام')}</a>
+
+        </div>
 
       </div>`;
 
@@ -232,11 +328,11 @@ window.createSupplyBrandPage = function (cfg) {
 
       return `
 
-        <article class="${prefix}-highlight-card">
+        <article class="${prefix}-highlight-card"${h.id ? ` id="${prefix}-hl-${h.id}"` : ''}>
 
           <div class="${prefix}-highlight-card__media">
 
-            <img src="${path(h.image)}" alt="${h.imageAlt || h.titleTr || h.title}" width="280" height="160" loading="lazy">
+            <img src="${path(h.image)}" alt="${h.imageAlt || h.titleTr || h.title}" width="280" height="160" loading="lazy" decoding="async">
 
           </div>
 
@@ -252,7 +348,15 @@ window.createSupplyBrandPage = function (cfg) {
 
             ${h.useCase ? `<p class="${prefix}-highlight-card__usecase"><strong>${t('useCaseLabel', 'کاربرد:')}</strong> ${h.useCase}</p>` : ''}
 
-            <a href="${inquiryUrl(name)}" class="btn btn--yellow ${prefix}-btn-inquiry">${t('requestInquiry', 'درخواست استعلام')}</a>
+            ${h.priceUsd != null ? `<div class="${prefix}-price"><strong>$${Number(h.priceUsd).toFixed(2)}</strong><span>${t('approxPrice', 'تقریبی')}</span></div>` : ''}
+
+            <div class="${prefix}-highlight-card__actions">
+
+              <a href="${whatsappUrl((catalog().inquiryTemplate || '').replace('{product}', name))}" class="btn btn--green ${prefix}-btn-wa" target="_blank" rel="noopener noreferrer">${ic('whatsapp', { size: 16, variant: 'white' })} ${t('whatsappShort', 'واتساپ')}</a>
+
+              <a href="${inquiryUrl(name)}" class="btn btn--yellow ${prefix}-btn-inquiry">${t('requestInquiry', 'درخواست استعلام')}</a>
+
+            </div>
 
           </div>
 
@@ -275,6 +379,8 @@ window.createSupplyBrandPage = function (cfg) {
       { id: 'trust', label: t('navTrust', 'چرا بیزدوار'), icon: 'target' },
 
       { id: 'buy', label: t('navBuy', 'مسیر خرید'), icon: 'list' },
+
+      ...(catalog().quoteChecklist ? [{ id: 'quote', label: t('navQuote', 'راهنمای استعلام'), icon: 'document' }] : []),
 
       { id: 'highlights', label: t('navHighlights', 'محصولات شاخص'), icon: 'sensor' },
 
@@ -310,7 +416,7 @@ window.createSupplyBrandPage = function (cfg) {
 
           <div class="${prefix}-category-block__visual">
 
-            <img src="${path(cat.image)}" alt="${cat.imageAlt || cat.titleTr}" width="200" height="120" loading="lazy">
+            <img src="${path(cat.image)}" alt="${cat.imageAlt || cat.titleTr}" width="200" height="120" loading="lazy" decoding="async">
 
           </div>
 
@@ -338,15 +444,17 @@ window.createSupplyBrandPage = function (cfg) {
 
           ${cat.series.map(s => `
 
-            <div class="${prefix}-series-card${s.featured ? ` ${prefix}-series-card--featured` : ''}">
+            <a href="${inquiryUrl(s.name)}" class="${prefix}-series-card${s.featured ? ` ${prefix}-series-card--featured` : ''} ${prefix}-series-card--link">
 
               <strong>${s.name}</strong>
 
               <span>${s.note}</span>
 
-              ${s.featured ? `<a href="${inquiryUrl(s.name)}" class="${prefix}-series-card__link">${t('inquirySeries', 'استعلام')}${arrow()}</a>` : ''}
+              ${s.priceUsd != null ? `<span class="${prefix}-series-card__price">$${Number(s.priceUsd).toFixed(2)}</span>` : ''}
 
-            </div>
+              <span class="${prefix}-series-card__link">${t('inquirySeries', 'استعلام')}${arrow()}</span>
+
+            </a>
 
           `).join('')}
 
@@ -368,7 +476,7 @@ window.createSupplyBrandPage = function (cfg) {
 
     el.innerHTML = catalog().iranIndustries.map(ind => `
 
-      <div class="${prefix}-iran-card">
+      <a href="${inquiryUrl(ind.name)}" class="${prefix}-iran-card ${prefix}-iran-card--link">
 
         <div class="${prefix}-iran-card__media">
 
@@ -384,9 +492,13 @@ window.createSupplyBrandPage = function (cfg) {
 
           <p>${ind.desc}</p>
 
+          ${ind.models ? `<span class="${prefix}-iran-card__models">${ind.models}</span>` : ''}
+
+          <span class="${prefix}-iran-card__cta">${t('requestInquiry', 'درخواست استعلام')}${arrow()}</span>
+
         </div>
 
-      </div>
+      </a>
 
     `).join('');
 
@@ -402,11 +514,11 @@ window.createSupplyBrandPage = function (cfg) {
 
     el.innerHTML = catalog().industries.map(i => `
 
-      <div class="${prefix}-industry-card">
+      <a href="${inquiryUrl(i.name)}" class="${prefix}-industry-card ${prefix}-industry-card--link">
 
         <div class="${prefix}-industry-card__media">
 
-          <img src="${path(i.image)}" alt="${i.imageAlt || i.nameTr || i.name}" width="200" height="120" loading="lazy">
+          <img src="${path(i.image)}" alt="${i.imageAlt || i.nameTr || i.name}" width="200" height="120" loading="lazy" decoding="async">
 
         </div>
 
@@ -418,7 +530,7 @@ window.createSupplyBrandPage = function (cfg) {
 
         <p>${i.desc}</p>
 
-      </div>
+      </a>
 
     `).join('');
 
@@ -502,11 +614,21 @@ window.createSupplyBrandPage = function (cfg) {
 
     const msg = t('inquiryTemplate', catalog().inquiryTemplate || 'استعلام {product}').replace('{product}', brandName);
 
-    const wa = document.getElementById(elId('CtaWhatsapp'));
+    const waHref = whatsappUrl(msg);
 
-    if (wa) {
+    const formHref = inquiryUrl(brandName);
 
-      wa.href = whatsappUrl(msg);
+
+
+    document.querySelectorAll(`#${elId('CtaWhatsapp')}, #${elId('StickyWa')}`).forEach(wa => {
+
+      if (!wa) return;
+
+      wa.href = waHref;
+
+      wa.target = '_blank';
+
+      wa.rel = 'noopener noreferrer';
 
       wa.addEventListener('click', e => {
 
@@ -514,13 +636,23 @@ window.createSupplyBrandPage = function (cfg) {
 
           e.preventDefault();
 
-          window.location.href = inquiryUrl(brandName);
+          window.location.href = formHref;
 
         }
 
       });
 
-    }
+    });
+
+
+
+    document.querySelectorAll(`#${elId('CtaForm')}, #${elId('StickyCta')} a.btn--yellow`).forEach(form => {
+
+      if (form) form.href = formHref;
+
+    });
+
+
 
     const sticky = document.getElementById(elId('StickyCta'));
 
@@ -558,11 +690,15 @@ window.createSupplyBrandPage = function (cfg) {
 
     renderTrustBar();
 
+    renderQuickSeries();
+
     renderCatNav();
 
     renderWhyBuy();
 
     renderPurchaseSteps();
+
+    renderQuoteChecklist();
 
     renderHighlights();
 
@@ -590,6 +726,8 @@ window.createSupplyBrandPage = function (cfg) {
 
     if (!C || !catalog().categories) return;
 
+    const baseUrl = (C.siteUrl || 'https://bizdavar.com').replace(/\/$/, '');
+
     const items = catalog().categories.flatMap(cat =>
 
       cat.series.map(s => ({
@@ -602,7 +740,9 @@ window.createSupplyBrandPage = function (cfg) {
 
         brand: { '@type': 'Brand', name: brandName },
 
-        category: cat.titleTr,
+        category: cat.titleTr || cat.title,
+
+        image: cat.image ? `${baseUrl}/${String(cat.image).replace(/^\//, '')}` : undefined,
 
         offers: {
 

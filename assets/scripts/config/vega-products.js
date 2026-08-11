@@ -10,30 +10,52 @@ window.VEGA_CATALOG = {
     nameFa: 'وگا',
     logo: 'assets/images/vega/vega-logo.svg',
     heroImage: VEGA_IMG + 'hero-vegapuls-6x.png',
-    heroImageAlt: 'VEGAPULS 6X radar level sensor — THE 6X process instrumentation',
+    heroImageAlt: 'سنسور راداری سطح VEGAPULS 6X — ابزار دقیق فرآیند VEGA',
     heroClaim: 'HOME OF VALUES',
-    heroEyebrow: 'تامین رسمی برای پروژه‌های صنعتی ایران',
-    heroHeadline: 'سنسورهای VEGA — تامین اصل با مشاوره فنی فارسی',
-    heroHeadlineSub: 'برای واحد فنی، خرید و پیمانکاران صنعتی — انتخاب مدل درست، کد سفارش دقیق و تحویل مطمئن.',
+    heroEyebrow: 'تامین اصل VEGA برای مهندسان و خریداران فارسی‌زبان',
+    heroHeadline: 'سنسور سطح و فشار VEGA — مشاوره فنی فارسی، کد سفارش دقیق',
+    heroHeadlineSub: 'از ایران تا ترکیه و پروژه‌های بین‌المللی — انتخاب مدل درست، پیش‌فاکتور شفاف و تحویل مطمئن برای واحد فنی و خرید.',
     tagline: 'Level and pressure instrumentation for the process industry',
     taglineFa: 'ابزار دقیق سطح و فشار — ساخت آلمان',
     founded: 'بیش از ۶۵ سال تجربه',
     presence: 'حضور در بیش از ۸۰ کشور',
     origin: 'شیلتاخ، جنگل سیاه — آلمان',
     officialUrl: 'https://www.vega.com/en-ae',
-    descriptionFa: 'بیزدوار گروپ تامین‌کننده سنسورهای سطح و فشار VEGA برای پروژه‌های ایرانی است. محصول اصل از کانال رسمی، مشاوره فنی به فارسی، پیش‌فاکتور شفاف و هماهنگی لجستیک بین‌المللی تا تحویل.',
+    descriptionFa: 'بیزدوار گروپ تامین‌کننده سنسورهای سطح و فشار VEGA برای پروژه‌های صنعتی فارسی‌زبان در ایران و خارج است. محصول اصل از کانال رسمی، مشاوره فنی به فارسی، پیش‌فاکتور شفاف و هماهنگی لجستیک تا تحویل.',
     heroStats: [
       { valueKey: 'founded', label: 'تجربه برند' },
       { valueKey: 'origin', label: 'تولید آلمان' },
-      { value: '12+', label: 'تجربه بیزدوار' }
+      { value: '۱۲+', label: 'سال همراهی بیزدوار' }
     ]
   },
 
   trustSignals: [
     { icon: 'target', label: 'محصول اصل', desc: 'تامین از کانال‌های رسمی VEGA — نه کپی و نه بازاری' },
     { icon: 'mail', label: 'مشاوره فارسی', desc: 'پاسخ واحد فنی به فارسی — انتخاب مدل بر اساس شرایط واقعی شما' },
-    { icon: 'globe', label: 'لجستیک بین‌المللی', desc: 'هماهنگی خرید، حمل و گمرک از استانبول تا ایران' },
+    { icon: 'globe', label: 'لجستیک بین‌المللی', desc: 'هماهنگی خرید و حمل از اروپا/ترکیه تا پروژه شما' },
     { icon: 'wrench', label: 'پشتیبانی پروژه', desc: 'کمک در کد سفارش، دیتاشیت و هماهنگی با واحد اتوماسیون' }
+  ],
+
+  quoteChecklist: {
+    title: 'برای استعلام سریع چه بفرستید؟',
+    desc: 'هرچه مشخص‌تر بنویسید، مدل و قیمت دقیق‌تر پیشنهاد می‌شود — حتی اگر فقط بخشی را بدانید کافی است.',
+    items: [
+      'نوع اندازه‌گیری: سطح / نقطه‌سطح / فشار',
+      'محیط فرآیند: مایع، گاز، پودر یا مواد فله',
+      'دما و فشار تقریبی کار',
+      'ارتفاع یا حجم مخزن / قطر لوله',
+      'نوع اتصال: فلنج یا رزوه (سایز تقریبی)',
+      'خروجی مورد نیاز: ۴–۲۰mA، رله، HART و…',
+      'تعداد مورد نیاز و زمان تحویل مطلوب'
+    ],
+    tip: 'اگر مدل یا Order Code را دارید، همان را بفرستید — سریع‌تر پیش‌فاکتور می‌گیرید.'
+  },
+
+  quickSeries: [
+    { id: 'vegapuls-6x', name: 'VEGAPULS 6X', tag: 'رادار پرچمدار', hint: 'مخازن بلند و فرآیند حساس' },
+    { id: 'vegapuls', name: 'VEGAPULS', tag: 'رادار فشرده', hint: 'جایگزین اولتراسونیک' },
+    { id: 'vegabar-39', name: 'VEGABAR 39', tag: 'فشار · €510', hint: 'ترانسمیتر با نمایشگر ۳۶۰°' },
+    { id: 'vegavib-s61', name: 'VEGAVIB S61', tag: 'فله · €540', hint: 'سوئیچ لرزشی سیلو' }
   ],
 
   whyBuyFromUs: [
@@ -68,12 +90,12 @@ window.VEGA_CATALOG = {
   ],
 
   iranIndustries: [
-    { name: 'پالایش و پتروشیمی', desc: 'سنسور سطح و فشار برای مخازن، برج‌ها و خطوط لوله', image: VEGA_IMG + 'iran-refining.jpg', icon: 'factory' },
-    { name: 'آب و فاضلاب', desc: 'اندازه‌گیری سطح در تصفیه‌خانه و ایستگاه پمپاژ', image: VEGA_IMG + 'iran-water.jpg', icon: 'droplet' },
-    { name: 'صنایع غذایی و دارویی', desc: 'سطح‌سنجی بهداشتی بدون تماس — مناسب CIP/SIP', image: VEGA_IMG + 'iran-food-pharma.jpg', icon: 'utensils' },
-    { name: 'سیمان و معدن', desc: 'سوئیچ و سطح‌سنجی در سیلو و فرآیند مواد فله', image: VEGA_IMG + 'iran-cement-mining.jpg', icon: 'block' },
-    { name: 'نفت و گاز', desc: 'ابزار دقیق برای مخازن، جداکننده و فرآیندهای دریایی', image: VEGA_IMG + 'iran-oil-gas.jpg', icon: 'barrel' },
-    { name: 'نیروگاه و انرژی', desc: 'کنترل سطح و فشار در بویلر، مخازن سوخت و HRSG', image: VEGA_IMG + 'iran-energy.jpg', icon: 'bolt' }
+    { name: 'پالایش و پتروشیمی', desc: 'سطح و فشار مخازن، برج‌ها و خطوط — معمولاً VEGAPULS 6X و VEGABAR', image: VEGA_IMG + 'iran-refining.jpg', icon: 'factory', models: 'VEGAPULS 6X · VEGABAR' },
+    { name: 'آب و فاضلاب', desc: 'تصفیه و ایستگاه پمپاژ — رادار فشرده و سوئیچ نقطه‌سطح', image: VEGA_IMG + 'iran-water.jpg', icon: 'droplet', models: 'VEGAPULS · VEGAPOINT' },
+    { name: 'صنایع غذایی و دارویی', desc: 'سطح‌سنجی بهداشتی بدون تماس — مناسب CIP/SIP', image: VEGA_IMG + 'iran-food-pharma.jpg', icon: 'utensils', models: 'VEGAPULS · VEGAPOINT' },
+    { name: 'سیمان و معدن', desc: 'سیلو و مواد فله — رادار و سوئیچ لرزشی مقاوم در گردوغبار', image: VEGA_IMG + 'iran-cement-mining.jpg', icon: 'block', models: 'VEGAPULS 6X · VEGAVIB S61' },
+    { name: 'نفت و گاز', desc: 'مخازن، جداکننده و خطوط — دقت و ایمنی فرآیند', image: VEGA_IMG + 'iran-oil-gas.jpg', icon: 'barrel', models: 'VEGAPULS 6X · VEGABAR' },
+    { name: 'نیروگاه و انرژی', desc: 'بویلر، سوخت و HRSG — کنترل سطح و فشار بحرانی', image: VEGA_IMG + 'iran-energy.jpg', icon: 'bolt', models: 'VEGABAR · VEGAPULS' }
   ],
 
   faq: [
@@ -82,12 +104,16 @@ window.VEGA_CATALOG = {
       a: 'فقط محصول اصل VEGA از کانال‌های رسمی تامین می‌شود. هر سفارش با کد سفارش (Order Code) مشخص است و دیتاشیت و مشخصات فنی اصلی ارائه می‌شود.'
     },
     {
-      q: 'زمان تحویل به ایران چقدر است؟',
-      a: 'بسته به مدل و موجودی انبار اروپا، معمولاً ۴ تا ۸ هفته. زمان دقیق در پیش‌فاکتور اعلام می‌شود. برای پروژه‌های فوری، موجودی جایگزین پیشنهاد می‌شود.'
+      q: 'زمان تحویل چقدر است؟',
+      a: 'بسته به مدل و موجودی انبار اروپا، معمولاً ۴ تا ۸ هفته. زمان دقیق در پیش‌فاکتور اعلام می‌شود. برای پروژه‌های فوری، موجودی جایگزین یا مدل نزدیک پیشنهاد می‌شود.'
     },
     {
       q: 'اگر مدل دقیق را نمی‌دانم چه کنم؟',
-      a: 'کافی است شرایط فرآیند را بگویید: نوع مایع یا مواد، دما، فشار، سایز مخزن، نوع اتصال (فلنج/رزوه) و خروجی مورد نیاز (۴-۲۰mA، رله و...). واحد فنی ما مدل مناسب را پیشنهاد می‌دهد.'
+      a: 'شرایط فرآیند را بگویید: نوع مایع یا مواد، دما، فشار، سایز مخزن، نوع اتصال (فلنج/رزوه) و خروجی مورد نیاز (۴-۲۰mA، رله و…). واحد فنی ما مدل مناسب را پیشنهاد می‌دهد — حتی از واتساپ فارسی.'
+    },
+    {
+      q: 'برای پروژه‌های خارج از ایران هم تامین می‌کنید؟',
+      a: 'بله — مخاطبان فارسی‌زبان در ترکیه، امارات و سایر کشورها هم می‌توانند استعلام بگیرند. لجستیک و پیش‌فاکتور بر اساس مقصد پروژه تنظیم می‌شود.'
     },
     {
       q: 'گارانتی و خدمات پس از فروش چگونه است؟',
@@ -100,6 +126,10 @@ window.VEGA_CATALOG = {
     {
       q: 'پرداخت چگونه انجام می‌شود؟',
       a: 'پیش‌پرداخت برای ثبت سفارش و تسویه قبل از ارسال — جزئیات در پیش‌فاکتور. روش‌های پرداخت بین‌المللی با هماهنگی واحد مالی بیزدوار.'
+    },
+    {
+      q: 'تفاوت VEGAPULS و VEGAPULS 6X چیست؟',
+      a: 'سری 6X پرچمدار راداری ۸۰ گیگاهرتز برای مخازن بلند و فرآیندهای سخت است. VEGAPULS فشرده گزینه اقتصادی‌تر برای مخازن متوسط و ارتقای سیستم‌های اولتراسونیک است. بر اساس ارتفاع، دما و حساسیت فرآیند، یکی را پیشنهاد می‌دهیم.'
     }
   ],
 
@@ -117,20 +147,20 @@ window.VEGA_CATALOG = {
       name: 'VEGAPULS 6X',
       series: 'Pro — THE 6X®',
       category: 'level',
-      image: VEGA_IMG + 'product-vegapuls-6x.png',
-      imageAlt: 'VEGAPULS 6X radar level sensor with 360 degree status display',
+      image: VEGA_IMG + 'product-vegapuls-6x-photo.webp',
+      imageAlt: 'VEGAPULS 6X all-round radar level sensor for liquids and bulk solids',
       badge: 'پرچمدار',
-      summaryFa: 'پرچمدار راداری سطح — برای مخازن بلند، دما/فشار بالا و فرآیندهای حساس. پرفروش‌ترین انتخاب برای پتروشیمی و پالایشگاه.',
-      useCaseFa: 'مخازن ذخیره، برج تقطیر، سیلو مواد فله — جایی که دقت و پایداری سیگنال حیاتی است.',
+      summaryFa: 'رادار همه‌کاره سطح — اندازه‌گیری پیوسته مایع و مواد فله در تمام شرایط فرآیند؛ جانشین سری VEGAPULS 60.',
+      useCaseFa: 'مخازن ذخیره، برج تقطیر، سیلو مواد فله، فرآیند شیمیایی و غذایی — یک سنسور برای تقریباً هر کاربرد سطح.',
       features: [
-        'فناوری رادار ۸۰ گیگاهرتز — THE 6X®',
-        'اندازه‌گیری سطح بدون تماس با محیط',
-        'ایمنی حداکثری فرآیند (Process Safety)',
-        'مناسب مخازن بالا، دما و فشار بالا',
-        'نمایشگر وضعیت ۳۶۰ درجه'
+        'برد اندازه‌گیری تا ۱۲۰ متر',
+        'دمای فرآیند −۱۹۶ تا ۴۵۰ درجه سانتی‌گراد',
+        'فشار فرآیند −۱ تا ۱۶۰ بار · دقت ±۱ mm',
+        'فرکانس ۶ / ۲۶ / ۸۰ گیگاهرتز — زاویه پرتو ≥ ۳°',
+        'خروجی ۴…۲۰ mA/HART · SIL2 · Bluetooth'
       ],
-      applications: ['پتروشیمی', 'غذایی', 'دارویی', 'آب و فاضلاب'],
-      officialRef: 'https://www.vega.com/en-ae/products/product-catalog/level/radar/vegapuls-6x'
+      applications: ['پتروشیمی', 'غذایی و دارویی', 'مواد فله', 'آب و فاضلاب'],
+      officialRef: 'https://www.vega.com/tr-tr/urunler/urun-kataloglari/seviye/radar/vegapuls-6x'
     },
     {
       id: 'vegapuls',
@@ -173,6 +203,27 @@ window.VEGA_CATALOG = {
       officialRef: 'https://www.vega.com/en-ae/products/product-catalog/pressure/process-pressure/vegabar'
     },
     {
+      id: 'vegabar-39',
+      name: 'VEGABAR 39',
+      series: 'Process Pressure — Metal Cell',
+      category: 'pressure',
+      image: VEGA_IMG + 'product-vegabar-39.png',
+      imageAlt: 'VEGABAR 39 pressure sensor with switching function and 360 degree status display',
+      badge: 'موجود',
+      priceEur: 510,
+      summaryFa: 'ترانسمیتر فشار با سلول اندازه‌گیری فلزی و تابع سوئیچینگ — برای گاز، بخار و مایع تا ۱۳۰ درجه سانتی‌گراد.',
+      useCaseFa: 'خطوط فرآیند، مخازن تحت فشار، کاربردهای بهداشتی با آداپتور — کنترل فشار و سوئیچ در یک دستگاه.',
+      features: [
+        'محدوده اندازه‌گیری −۱ تا ۱۰۰۰ بار',
+        'دمای فرآیند −۴۰ تا ۱۳۰ درجه سانتی‌گراد',
+        'دقت ۰٫۳٪ — سلول فلزی کاملاً جوش‌خورده',
+        'خروجی ۴…۲۰ mA · PNP/NPN · IO-Link',
+        'نمایشگر متنی و وضعیت رنگی ۳۶۰ درجه'
+      ],
+      applications: ['غذایی و دارویی', 'پتروشیمی', 'خطوط لوله', 'آب و فاضلاب'],
+      officialRef: 'https://www.vega.com/tr-tr/urunler/urun-kataloglari/basinc/proses-basinci-olcumu/vegabar-39'
+    },
+    {
       id: 'vegapoint',
       name: 'VEGAPOINT',
       series: 'Basic — Level Switch',
@@ -191,6 +242,27 @@ window.VEGA_CATALOG = {
       ],
       applications: ['مخازن ذخیره', 'سیلو', 'جداکننده', 'فرآیندهای پیوسته'],
       officialRef: 'https://www.vega.com/en-ae/products/product-catalog/switching/capacitive/vegapoint'
+    },
+    {
+      id: 'vegavib-s61',
+      name: 'VEGAVIB S61',
+      series: 'Vibrating — Bulk Solids',
+      category: 'point',
+      image: VEGA_IMG + 'product-vegavib-s61.webp',
+      imageAlt: 'VEGAVIB S61 vibrating level switch for granulated bulk solids',
+      badge: 'موجود',
+      priceEur: 540,
+      summaryFa: 'سوئیچ سطح لرزشی برای مواد فله دانه‌ای و گرانول — تشخیص مطمئن حداقل یا حداکثر سطح در سیلو و مخزن.',
+      useCaseFa: 'پودر آزاد، گرانول و مواد درشت‌دانه با چگالی حداقل ۱۰۰ g/l — جایگزین مناسب پروب چنگالی در مواد گیرکننده.',
+      features: [
+        'دمای فرآیند −۵۰ تا ۱۵۰ درجه سانتی‌گراد',
+        'فشار فرآیند −۱ تا ۱۶ بار',
+        'میله لرزشی بدون لبه — جلوگیری از گیر کردن مواد',
+        'خروجی رله DPDT یا ترانزیستور NPN/PNP',
+        'طول‌های پیش‌ساخته ۱۵۰، ۵۰۰، ۱۰۰۰ و ۱۵۰۰ میلی‌متر'
+      ],
+      applications: ['سیمان و معدن', 'غذایی', 'سیلو مواد فله', 'مواد شیمیایی'],
+      officialRef: 'https://www.vega.com/tr-tr/urunler/urun-kataloglari/seviye-salteri/titresim/vegavib-s61'
     }
   ],
 
@@ -277,5 +349,5 @@ window.VEGA_CATALOG = {
     { title: 'قطعات یدکی', desc: 'تامین لوازم جانبی، فلنج، نمایشگر و قطعات مصرفی VEGA' }
   ],
 
-  inquiryTemplate: 'سلام، درخواست استعلام قیمت و تامین {product} از VEGA دارم.\n\nشرایط کاربرد:\nتعداد مورد نیاز:\n'
+  inquiryTemplate: 'سلام، درخواست استعلام قیمت و تامین {product} از VEGA دارم.\n\nنوع اندازه‌گیری:\nمحیط فرآیند:\nدما/فشار تقریبی:\nسایز مخزن یا لوله:\nاتصال (فلنج/رزوه):\nخروجی سیگنال:\nتعداد:\nمقصد تحویل:\n'
 };

@@ -223,7 +223,8 @@
         TERAOKA_CATALOG: 'teraokaCatalog',
         TELTONIKA_CATALOG: 'teltonikaCatalog',
         VEGA_CATALOG: 'vegaCatalog',
-        PROSENSE_CATALOG: 'prosenseCatalog'
+        PROSENSE_CATALOG: 'prosenseCatalog',
+        LIQUI_MOLY_CATALOG: 'liquiMolyCatalog'
       };
       const i18nKey = keyMap[catalogKey];
       const base = window[catalogKey] || {};
@@ -252,7 +253,9 @@
             ? academyOverlay.topics
             : (academyBase.topics || [])
         },
-        inquiryTemplate: this.t(`${i18nKey}.inquiryTemplate`, base.inquiryTemplate)
+        inquiryTemplate: this.t(`${i18nKey}.inquiryTemplate`, base.inquiryTemplate),
+        quoteChecklist: this.raw(`${i18nKey}.quoteChecklist`) || base.quoteChecklist,
+        quickSeries: this.mergeLocalizedList(`${i18nKey}.quickSeries`, base.quickSeries || [])
       });
 
       if (catalogKey === 'VEGA_CATALOG') {
@@ -281,7 +284,9 @@
             ...ds,
             ...dsLoc,
             desc: dsLoc.desc || ds.desc || ds.descFa
-          }
+          },
+          quoteChecklist: this.raw(`${i18nKey}.quoteChecklist`) || base.quoteChecklist,
+          quickSeries: this.mergeLocalizedList(`${i18nKey}.quickSeries`, base.quickSeries || [])
         };
       }
 

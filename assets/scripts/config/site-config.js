@@ -35,6 +35,7 @@ window.BIZDAVAR_CONFIG = {
     gamak: 'pages/gamak.html',
     digiSystem: 'pages/digi-system.html',
     teraoka: 'pages/teraoka.html',
+    liquiMoly: 'pages/liqui-moly.html',
     articles: {
       digitalMarketing: 'pages/articles/digital-marketing.html',
       whatIsDigitalMarketing: 'pages/articles/what-is-digital-marketing.html',
@@ -380,6 +381,18 @@ window.BIZDAVAR_CONFIG = {
       accent: 'blue',
       tags: ['Scales', 'Labeling', 'POS'],
       cta: 'مشاهده برند'
+    },
+    {
+      name: 'Liqui Moly',
+      title: 'روغن و افزودنی خودرو',
+      desc: 'روغن موتور، Octane Plus، افزودنی دیزل و مراقبت خودرو — قیمت دلاری شفاف از ترکیه',
+      logo: 'assets/images/partners/liqui-moly.svg',
+      url: 'pages/liqui-moly',
+      internal: true,
+      badge: 'آلمان',
+      accent: 'navy',
+      tags: ['Octane Plus', 'Top Tec', '5W-30'],
+      cta: 'کاتالوگ و قیمت'
     }
   ],
 

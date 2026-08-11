@@ -35,6 +35,7 @@ const PAGES = [
   { path: '/pages/fast', changefreq: 'monthly', priority: 0.85, lastmod: SITE_UPDATE },
   { path: '/pages/vega', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
   { path: '/pages/prosense', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
+  { path: '/pages/liqui-moly', changefreq: 'weekly', priority: 0.9, lastmod: SITE_UPDATE },
   { path: '/pages/teltonika', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
   { path: '/pages/gamak', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/digi-system', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },

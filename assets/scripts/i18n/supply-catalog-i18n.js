@@ -1520,11 +1520,11 @@
 
     brand: {
 
-      heroEyebrow: 'Official Prosense supply for industrial projects in Iran and the region',
+      heroEyebrow: 'Genuine Prosense supply for Persian-speaking engineers worldwide',
 
       heroHeadline: 'Prosense gas & flame detectors',
 
-      heroHeadlineSub: 'Gas, flame and process safety — genuine supply with technical consulting and delivery',
+      heroHeadlineSub: 'Gas, flame and process safety — Farsi technical consulting, transparent proforma and international logistics',
 
       tagline: 'Gas and flame detectors — made in Turkey',
 
@@ -1532,7 +1532,7 @@
 
       origin: 'Kartal, Istanbul — Turkey',
 
-      description: 'Bizdavar Group supplies Prosense gas and flame detectors for petrochemical, refinery, mining and process safety projects in Iran and the region. Genuine products with SIL/M1/EN certification, gas and model selection consulting, transparent proforma and international logistics to delivery.',
+      description: 'Bizdavar Group supplies Prosense gas and flame detectors with SIL/M1/EN certification. Model selection consulting in Farsi (WhatsApp), transparent proforma and shipping coordination for projects in Iran and for Persian-speaking buyers abroad.',
 
       heroStats: [
 
@@ -1540,7 +1540,7 @@
 
         { label: 'Safety certification' },
 
-        { label: 'Bizdavar experience' }
+        { label: 'Years of supply experience' }
 
       ]
 
@@ -1550,9 +1550,9 @@
 
       { label: 'Genuine Prosense product', desc: 'Sourced directly from Prosense Turkey — valid certificate and serial number' },
 
-      { label: 'Technical consulting', desc: 'Gas type, measurement range and model selection — based on your real operating conditions' },
+      { label: 'Farsi consulting', desc: 'Gas type, range and model selection — via Farsi WhatsApp from anywhere' },
 
-      { label: 'International logistics', desc: 'Purchase, shipping and customs coordination from Istanbul to project delivery' },
+      { label: 'International logistics', desc: 'Purchase, shipping and customs from Istanbul to your project destination' },
 
       { label: 'Certification & calibration', desc: 'SIL2/3 · M1 Mining · EN-50545-1 · TÜRKAK accredited calibration' }
 
@@ -1562,17 +1562,17 @@
 
       { title: 'Correct gas and model selection', desc: '1,000+ detectable gases — if you do not know gas type or range, describe the environment. We recommend PQ, SafeVader, SOMA or PPS+ as appropriate.' },
 
-      { title: 'Built for regional industrial projects', desc: 'Supply experience for petrochemical, refinery, mining, enclosed parking, water treatment and power plants. SIL and M1 certificates for process safety projects.' },
+      { title: 'Built for real industrial projects', desc: 'Supply experience for petrochemical, refinery, mining, enclosed parking, water treatment and power plants. SIL and M1 certificates for process safety.' },
 
       { title: 'Transparent proforma and scheduling', desc: 'Before payment you receive price, approximate delivery time and complete technical specifications — suitable for procurement and engineering teams.' },
 
-      { title: 'Single point of contact for the entire system', desc: 'Detector + panel + horn + software — all from one team. No direct correspondence with the manufacturer abroad required.' }
+      { title: 'Single Farsi-speaking point of contact', desc: 'Detector + panel + horn + software — all from one team. No direct correspondence with the manufacturer required.' }
 
     ],
 
     purchaseSteps: [
 
-      { num: '1', title: 'Inquiry', desc: 'Contact form or WhatsApp — gas type, install environment (Ex/normal), quantity and preferred series' },
+      { num: '1', title: 'Inquiry', desc: 'Farsi WhatsApp or contact form — gas type, install environment (Ex/normal), quantity and preferred series' },
 
       { num: '2', title: 'Technical consulting', desc: 'Series and model recommendation — PQ/SafeVader/SOMA/PPS+ and S-DPX panel if required' },
 
@@ -1580,7 +1580,45 @@
 
       { num: '4', title: 'Supply & shipping', desc: 'Order from Prosense, industrial packaging and international logistics coordination' },
 
-      { num: '5', title: 'Delivery & support', desc: 'Delivery to project site — datasheet, installation guide, calibration and technical support' }
+      { num: '5', title: 'Delivery & support', desc: 'Delivery to destination — datasheet, installation guide, calibration and Farsi technical support' }
+
+    ],
+
+    quoteChecklist: {
+
+      title: 'Send these details for a precise quote',
+
+      desc: 'Even partial information is fine — send what you know on WhatsApp and we will recommend a model.',
+
+      items: [
+
+        'Hazardous gas type (H2S, CH4, CO, LEL, O2, NH3, …)',
+
+        'Install environment: Ex Zone 1/2 or safe area · ambient temperature',
+
+        'Required signal output: 4–20 mA · relay · HART · Modbus',
+
+        'Number of measuring points and whether a control panel is needed',
+
+        'Required certification: SIL2/3 · M1 mining · EN-50545-1 parking',
+
+        'Delivery city / country and approximate project timing'
+
+      ],
+
+      tip: 'If you do not know the exact model, just send gas + environment — our technical team will propose one.'
+
+    },
+
+    quickSeries: [
+
+      { name: 'PQ Series', tag: 'SIL2/3', hint: 'Process safety · H2S / LEL / O2' },
+
+      { name: 'SafeVader', tag: 'Process Safety', hint: 'Toxic and flammable gases' },
+
+      { name: 'SOMA M1', tag: 'Mining', hint: 'Tunnels and underground mines' },
+
+      { name: 'PPS+', tag: 'EN-50545-1', hint: 'Enclosed parking CO / NO2' }
 
     ],
 
@@ -1712,9 +1750,11 @@
 
       { q: 'Is the Prosense product genuine?', a: 'Yes — only genuine Prosense products from Turkey are supplied. Each order includes technical specifications, serial numbers and relevant certificates (SIL, M1, EN and others).' },
 
-      { q: 'How do I select gas type and model?', a: 'Send hazardous gas type (H2S, CH4, CO, LEL, etc.), install environment (Ex Zone 1/2), measurement range and signal output (4–20 mA, relay, HART). Our technical team recommends the suitable model.' },
+      { q: 'How do I select gas type and model?', a: 'Send hazardous gas type (H2S, CH4, CO, LEL, etc.), install environment (Ex Zone 1/2), measurement range and signal output (4–20 mA, relay, HART) on Farsi WhatsApp. Our technical team recommends the suitable model.' },
 
-      { q: 'What is the delivery time?', a: 'Typically 3 to 6 weeks depending on model and stock. Exact lead time is stated on the proforma. For urgent projects, available alternatives are proposed.' },
+      { q: 'Can I inquire from outside Iran?', a: 'Yes — Farsi consulting and WhatsApp are available for Persian-speaking engineers and buyers worldwide. Delivery destination and shipping terms are set on the proforma.' },
+
+      { q: 'What is the delivery time?', a: 'Typically 3 to 6 weeks depending on model, stock and destination. Exact lead time is stated on the proforma. For urgent projects, available alternatives are proposed.' },
 
       { q: 'Do I need SIL certification for my project?', a: 'For process safety (SIS) projects, the PQ series with SIL2/3 certification is suitable. Describe your project type so we recommend the correct model and certification level.' },
 
@@ -1724,7 +1764,7 @@
 
     ],
 
-    inquiryTemplate: 'Hello, I would like a quote for {product} from Prosense.\n\nGas type / install environment:\nQuantity required:\n'
+    inquiryTemplate: 'Hello, I would like a quote for {product} from Prosense.\n\nGas type / install environment:\nSignal output:\nQuantity required:\nDelivery city / country:\n'
 
   };
 
@@ -1734,11 +1774,11 @@
 
     brand: {
 
-      heroEyebrow: 'İran ve bölge endüstriyel projeleri için resmi Prosense tedariki',
+      heroEyebrow: 'Dünya genelinde Farsça konuşan mühendisler için orijinal Prosense tedariki',
 
       heroHeadline: 'Prosense gaz ve alev dedektörleri',
 
-      heroHeadlineSub: 'Gaz, alev ve proses güvenliği — orijinal tedarik, teknik danışmanlık ve teslimat',
+      heroHeadlineSub: 'Gaz, alev ve proses güvenliği — Farsça teknik danışmanlık, şeffaf proforma ve uluslararası lojistik',
 
       tagline: 'Gaz ve alev dedektörleri — Türkiye üretimi',
 
@@ -1746,7 +1786,7 @@
 
       origin: 'Kartal, İstanbul — Türkiye',
 
-      description: 'Bizdavar Group; petrokimya, rafineri, madencilik ve proses güvenliği projeleri için Prosense gaz ve alev dedektörü tedarik eder. SIL/M1/EN sertifikalı orijinal ürün, gaz ve model seçim danışmanlığı, şeffaf proforma ve uluslararası lojistik ile teslimat.',
+      description: 'Bizdavar Group; SIL/M1/EN sertifikalı Prosense gaz ve alev dedektörü tedarik eder. Farsça (WhatsApp) model seçim danışmanlığı, şeffaf proforma ve İran ile yurt dışındaki Farsça konuşan alıcılar için lojistik koordinasyonu.',
 
       heroStats: [
 
@@ -1754,7 +1794,7 @@
 
         { label: 'Güvenlik sertifikası' },
 
-        { label: 'Bizdavar deneyimi' }
+        { label: 'Tedarik deneyimi' }
 
       ]
 
@@ -1764,9 +1804,9 @@
 
       { label: 'Orijinal Prosense ürünü', desc: 'Doğrudan Prosense Türkiye\'den tedarik — geçerli sertifika ve seri numarası' },
 
-      { label: 'Teknik danışmanlık', desc: 'Gaz tipi, ölçüm aralığı ve model seçimi — gerçek işletme koşullarınıza göre' },
+      { label: 'Farsça danışmanlık', desc: 'Gaz tipi, aralık ve model seçimi — her yerden Farsça WhatsApp ile' },
 
-      { label: 'Uluslararası lojistik', desc: 'İstanbul\'dan proje teslimatına satın alma, nakliye ve gümrük koordinasyonu' },
+      { label: 'Uluslararası lojistik', desc: 'İstanbul\'dan proje destinasyonuna satın alma, nakliye ve gümrük' },
 
       { label: 'Sertifikasyon ve kalibrasyon', desc: 'SIL2/3 · M1 Maden · EN-50545-1 · TÜRKAK akredite kalibrasyon' }
 
@@ -1776,17 +1816,17 @@
 
       { title: 'Doğru gaz ve model seçimi', desc: '1000\'den fazla algılanabilir gaz — gaz tipi veya aralığı bilmiyorsanız ortamı anlatın. PQ, SafeVader, SOMA veya PPS+ öneririz.' },
 
-      { title: 'Bölgesel endüstriyel projelere uygun', desc: 'Petrokimya, rafineri, madencilik, kapalı otopark, su arıtma ve santral tedarik deneyimi. Proses güvenliği projeleri için SIL ve M1 sertifikaları.' },
+      { title: 'Gerçek endüstriyel projelere uygun', desc: 'Petrokimya, rafineri, madencilik, kapalı otopark, su arıtma ve santral tedarik deneyimi. Proses güvenliği için SIL ve M1 sertifikaları.' },
 
       { title: 'Şeffaf proforma ve zamanlama', desc: 'Ödeme öncesi fiyat, tahmini teslim süresi ve eksiksiz teknik özellikler — satın alma ve mühendislik ekipleri için uygun.' },
 
-      { title: 'Tüm sistem için tek iletişim noktası', desc: 'Dedektör + panel + siren + yazılım — tek ekipten. Üretici ile doğrudan yazışma gerekmez.' }
+      { title: 'Tek Farsça iletişim noktası', desc: 'Dedektör + panel + siren + yazılım — tek ekipten. Üretici ile doğrudan yazışma gerekmez.' }
 
     ],
 
     purchaseSteps: [
 
-      { num: '1', title: 'Talep', desc: 'Form veya WhatsApp — gaz tipi, montaj ortamı (Ex/normal), adet ve tercih edilen seri' },
+      { num: '1', title: 'Talep', desc: 'Farsça WhatsApp veya form — gaz tipi, montaj ortamı (Ex/normal), adet ve tercih edilen seri' },
 
       { num: '2', title: 'Teknik danışmanlık', desc: 'Seri ve model önerisi — PQ/SafeVader/SOMA/PPS+ ve gerekirse S-DPX panel' },
 
@@ -1794,7 +1834,45 @@
 
       { num: '4', title: 'Tedarik ve nakliye', desc: 'Prosense siparişi, endüstriyel paketleme ve uluslararası lojistik koordinasyonu' },
 
-      { num: '5', title: 'Teslimat ve destek', desc: 'Proje sahasına teslim — datasheet, montaj rehberi, kalibrasyon ve teknik destek' }
+      { num: '5', title: 'Teslimat ve destek', desc: 'Destinasyona teslim — datasheet, montaj rehberi, kalibrasyon ve Farsça teknik destek' }
+
+    ],
+
+    quoteChecklist: {
+
+      title: 'Net teklif için şu bilgileri gönderin',
+
+      desc: 'Kısmi bilgi de yeter — bildiklerinizi WhatsApp\'tan gönderin, uygun modeli önerelim.',
+
+      items: [
+
+        'Tehlikeli gaz tipi (H2S, CH4, CO, LEL, O2, NH3, …)',
+
+        'Montaj ortamı: Ex Zone 1/2 veya normal · ortam sıcaklığı',
+
+        'Gerekli sinyal çıkışı: 4–20 mA · röle · HART · Modbus',
+
+        'Ölçüm noktası sayısı ve kontrol paneli ihtiyacı',
+
+        'Gerekli sertifika: SIL2/3 · M1 maden · EN-50545-1 otopark',
+
+        'Teslimat şehri / ülkesi ve yaklaşık proje zamanı'
+
+      ],
+
+      tip: 'Tam modeli bilmiyorsanız gaz + ortam yeterli — teknik ekibimiz önerir.'
+
+    },
+
+    quickSeries: [
+
+      { name: 'PQ Serisi', tag: 'SIL2/3', hint: 'Proses güvenliği · H2S / LEL / O2' },
+
+      { name: 'SafeVader', tag: 'Process Safety', hint: 'Zehirli ve yanıcı gazlar' },
+
+      { name: 'SOMA M1', tag: 'Maden', hint: 'Tünel ve yeraltı madenleri' },
+
+      { name: 'PPS+', tag: 'EN-50545-1', hint: 'Kapalı otopark CO / NO2' }
 
     ],
 
@@ -1926,9 +2004,11 @@
 
       { q: 'Prosense ürünü orijinal mi?', a: 'Evet — yalnızca Türkiye\'den orijinal Prosense ürünleri tedarik edilir. Her siparişte teknik özellikler, seri numaraları ve ilgili sertifikalar (SIL, M1, EN vb.) sunulur.' },
 
-      { q: 'Gaz tipi ve modeli nasıl seçilir?', a: 'Tehlikeli gaz tipini (H2S, CH4, CO, LEL vb.), montaj ortamını (Ex Zone 1/2), ölçüm aralığını ve sinyal çıkışını (4–20 mA, röle, HART) gönderin. Teknik ekibimiz uygun modeli önerir.' },
+      { q: 'Gaz tipi ve modeli nasıl seçilir?', a: 'Tehlikeli gaz tipini (H2S, CH4, CO, LEL vb.), montaj ortamını (Ex Zone 1/2), ölçüm aralığını ve sinyal çıkışını (4–20 mA, röle, HART) Farsça WhatsApp\'tan gönderin. Teknik ekibimiz uygun modeli önerir.' },
 
-      { q: 'Teslimat süresi ne kadar?', a: 'Genellikle modele ve stoka bağlı 3 ila 6 hafta. Kesin lead time proformada belirtilir. Acil projeler için mevcut alternatifler önerilir.' },
+      { q: 'İran dışından da talep edebilir miyim?', a: 'Evet — dünya genelinde Farsça konuşan mühendis ve alıcılar için Farsça danışmanlık ve WhatsApp aktiftir. Teslimat destinasyonu ve nakliye koşulları proformada belirtilir.' },
+
+      { q: 'Teslimat süresi ne kadar?', a: 'Genellikle modele, stoka ve destinasyona bağlı 3 ila 6 hafta. Kesin lead time proformada belirtilir. Acil projeler için mevcut alternatifler önerilir.' },
 
       { q: 'Projem için SIL sertifikası gerekli mi?', a: 'Proses güvenliği (SIS) projeleri için SIL2/3 sertifikalı PQ serisi uygundur. Proje tipinizi belirtin; doğru model ve sertifikasyon seviyesini öneririz.' },
 
@@ -1938,7 +2018,7 @@
 
     ],
 
-    inquiryTemplate: 'Merhaba, Prosense {product} için fiyat teklifi istiyorum.\n\nGaz tipi / montaj ortamı:\nGerekli adet:\n'
+    inquiryTemplate: 'Merhaba, Prosense {product} için fiyat teklifi istiyorum.\n\nGaz tipi / montaj ortamı:\nSinyal çıkışı:\nGerekli adet:\nTeslimat şehri / ülkesi:\n'
 
   };
 
@@ -2056,13 +2136,17 @@
 
     featuredProducts: [
 
-      { summary: 'Flagship radar level sensor — for tall tanks, high temperature/pressure and critical processes. Top choice for petrochemical and refinery.', useCase: 'Storage tanks, distillation columns, bulk material silos — where accuracy and signal stability are critical.', badge: 'Flagship', features: ['80 GHz radar — THE 6X®', 'Non-contact level measurement', 'Maximum process safety (Process Safety)', 'High tanks, high temperature and pressure', '360° status display'], applications: ['Petrochemical', 'Food', 'Pharmaceutical', 'Water & wastewater'] },
+      { summary: 'All-round radar for continuous level of liquids and bulk solids — combines the best of the former VEGAPULS 60 series in one device.', useCase: 'Storage tanks, distillation columns, bulk silos, chemical and food process — one sensor for almost any level application.', badge: 'Flagship', features: ['Measuring range up to 120 m', 'Process temperature −196 to 450 °C', 'Process pressure −1 to 160 bar · accuracy ±1 mm', '6 / 26 / 80 GHz — beam angle ≥ 3°', '4…20 mA/HART · SIL2 · Bluetooth'], applications: ['Petrochemical', 'Food & pharma', 'Bulk solids', 'Water & wastewater'] },
 
       { summary: 'Compact and economical radar — reliable ultrasonic alternative; suitable for upgrading legacy systems.', useCase: 'Small and medium tanks, water, chemicals — simple installation and low maintenance.', badge: 'Compact', features: ['Compact design for easy installation', 'Radar — higher accuracy than ultrasonic', 'Resistant to steam, foam and turbulence', 'Simple parameter setup', 'Low cost of ownership'], applications: ['Water', 'Chemicals', 'Food', 'Refinery'] },
 
       { summary: 'Compact pressure switch and transmitter — pressure control for pipelines and pressurised vessels.', useCase: 'Pipeline, pressurised tank, pump — where critical pressure must be controlled.', badge: 'Pressure', features: ['Absolute and relative pressure measurement', '360° status display', 'Reliable switching output', 'Compact industrial build', 'Easy on-site adjustment'], applications: ['Pipelines', 'Pressurised vessels', 'Petrochemical', 'Energy'] },
 
-      { summary: 'Point level switch — prevents overflow or dry-run; process safety with definitive switching signal.', useCase: 'Storage tanks, silos, separators — alert for full or empty vessel.', badge: 'Switch', features: ['Point level detection', 'Prevents overflow or dry-run', '360° status display', 'Stable switching signal', 'Quick install and low maintenance'], applications: ['Storage tanks', 'Silos', 'Separators', 'Continuous processes'] }
+      { summary: 'Pressure transmitter with metallic measuring cell and switching function — for gases, vapours and liquids up to 130 °C.', useCase: 'Process lines, pressurised vessels, hygienic applications with adapters — pressure control and switching in one device.', badge: 'In stock', features: ['Measuring range −1 to 1000 bar', 'Process temperature −40 to 130 °C', '0.3% accuracy — fully welded metal cell', '4…20 mA · PNP/NPN · IO-Link', 'Text display and coloured 360° status light'], applications: ['Food & pharma', 'Petrochemical', 'Pipelines', 'Water & wastewater'] },
+
+      { summary: 'Point level switch — prevents overflow or dry-run; process safety with definitive switching signal.', useCase: 'Storage tanks, silos, separators — alert for full or empty vessel.', badge: 'Switch', features: ['Point level detection', 'Prevents overflow or dry-run', '360° status display', 'Stable switching signal', 'Quick install and low maintenance'], applications: ['Storage tanks', 'Silos', 'Separators', 'Continuous processes'] },
+
+      { summary: 'Vibrating level switch for granulated and coarse bulk solids — reliable min/max point detection in silos and vessels.', useCase: 'Free-flowing powders, granulates and coarse solids from 100 g/l — avoids jamming where fork probes retain material.', badge: 'In stock', features: ['Process temperature −50 to 150 °C', 'Process pressure −1 to 16 bar', 'Smooth vibrating rod — resists buildup', 'Relay DPDT or transistor NPN/PNP', 'Preset lengths 150, 500, 1000 and 1500 mm'], applications: ['Cement & mining', 'Food', 'Bulk silos', 'Chemicals'] }
 
     ],
 
@@ -2152,7 +2236,29 @@
 
     ],
 
-    inquiryTemplate: 'Hello, I would like a quote for {product} from VEGA.\n\nApplication conditions:\nQuantity required:\n'
+    quoteChecklist: {
+      title: 'What to send for a fast quote?',
+      desc: 'The more detail you share, the faster we can recommend the right model and price — partial info is fine.',
+      items: [
+        'Measurement type: level / point level / pressure',
+        'Process medium: liquid, gas, powder or bulk solids',
+        'Approx. temperature and pressure',
+        'Tank height/volume or pipe diameter',
+        'Connection type: flange or thread (approx. size)',
+        'Required output: 4–20 mA, relay, HART, etc.',
+        'Quantity and preferred delivery window'
+      ],
+      tip: 'If you already have a model or order code, send that — we quote faster.'
+    },
+
+    quickSeries: [
+      { name: 'VEGAPULS 6X', tag: 'Flagship radar', hint: 'Tall tanks & critical process' },
+      { name: 'VEGAPULS', tag: 'Compact radar', hint: 'Ultrasonic upgrade' },
+      { name: 'VEGABAR 39', tag: 'Pressure · €510', hint: 'Transmitter with 360° display' },
+      { name: 'VEGAVIB S61', tag: 'Solids · €540', hint: 'Vibrating silo switch' }
+    ],
+
+    inquiryTemplate: 'Hello, I would like a quote for {product} from VEGA.\n\nMeasurement type:\nProcess medium:\nApprox. temp/pressure:\nTank or pipe size:\nConnection (flange/thread):\nSignal output:\nQuantity:\nDelivery destination:\n'
 
   };
 
@@ -2270,13 +2376,17 @@
 
     featuredProducts: [
 
-      { summary: 'Amiral gemisi radar seviye sensörü — yüksek tanklar, yüksek sıcaklık/basınç ve kritik prosesler için. Petrokimya ve rafineri için en çok tercih edilen.', useCase: 'Depolama tankları, distilasyon kolonları, dökme malzeme siloları — doğruluk ve sinyal kararlılığının kritik olduğu yerler.', badge: 'Amiral Gemisi', features: ['80 GHz radar — THE 6X®', 'Temasız seviye ölçümü', 'Maksimum proses güvenliği', 'Yüksek tank, sıcaklık ve basınç', '360° durum ekranı'], applications: ['Petrokimya', 'Gıda', 'İlaç', 'Su ve atıksu'] },
+      { summary: 'Sıvı ve dökme katılar için sürekli seviye ölçümünde evrensel radar — eski VEGAPULS 60 serisinin en iyilerini tek cihazda birleştirir.', useCase: 'Depolama tankları, distilasyon kolonları, dökme silolar, kimya ve gıda prosesi — neredeyse her seviye uygulaması için tek sensör.', badge: 'Amiral Gemisi', features: ['Ölçüm aralığı 120 m’ye kadar', 'Proses sıcaklığı −196 … 450 °C', 'Proses basıncı −1 … 160 bar · doğruluk ±1 mm', '6 / 26 / 80 GHz — ışın açısı ≥ 3°', '4…20 mA/HART · SIL2 · Bluetooth'], applications: ['Petrokimya', 'Gıda ve ilaç', 'Dökme malzeme', 'Su ve atıksu'] },
 
       { summary: 'Kompakt ve ekonomik radar — güvenilir ultrasonik alternatifi; eski sistemlerin yükseltilmesi için uygun.', useCase: 'Küçük ve orta tanklar, su, kimyasallar — kolay montaj ve düşük bakım.', badge: 'Kompakt', features: ['Kolay montaj için kompakt tasarım', 'Radar — ultrasonikten daha yüksek doğruluk', 'Buhar, köpük ve türbülansa dayanıklı', 'Basit parametre ayarı', 'Düşük sahip olma maliyeti'], applications: ['Su', 'Kimyasallar', 'Gıda', 'Rafineri'] },
 
       { summary: 'Kompakt basınç anahtarı ve transmitter — boru hatları ve basınçlı kaplar için basınç kontrolü.', useCase: 'Boru hattı, basınçlı tank, pompa — kritik basıncın kontrol edilmesi gereken yerler.', badge: 'Basınç', features: ['Mutlak ve göreli basınç ölçümü', '360° durum ekranı', 'Güvenilir anahtarlama çıkışı', 'Kompakt endüstriyel yapı', 'Sahada kolay ayar'], applications: ['Boru hatları', 'Basınçlı kaplar', 'Petrokimya', 'Enerji'] },
 
-      { summary: 'Nokta seviye anahtarı — taşmayı ve kuru çalışmayı önler; kesin anahtarlama sinyali ile proses güvenliği.', useCase: 'Depolama tankları, silolar, ayırıcılar — dolu veya boş tank uyarısı.', badge: 'Anahtar', features: ['Nokta seviye algılama', 'Taşma veya kuru çalışmayı önler', '360° durum ekranı', 'Kararlı anahtarlama sinyali', 'Hızlı montaj ve düşük bakım'], applications: ['Depolama tankları', 'Silolar', 'Ayırıcılar', 'Sürekli prosesler'] }
+      { summary: 'Metal ölçüm hücreli ve anahtarlama fonksiyonlu basınç transmitteri — gaz, buhar ve sıvılar için 130 °C’ye kadar.', useCase: 'Proses hatları, basınçlı kaplar, hijyenik adaptörlü uygulamalar — basınç kontrolü ve anahtarlama tek cihazda.', badge: 'Stokta', features: ['Ölçüm aralığı −1 … 1000 bar', 'Proses sıcaklığı −40 … 130 °C', '%0,3 doğruluk — tamamen kaynaklı metal hücre', '4…20 mA · PNP/NPN · IO-Link', 'Metin göstergesi ve renkli 360° durum göstergesi'], applications: ['Gıda ve ilaç', 'Petrokimya', 'Boru hatları', 'Su ve atıksu'] },
+
+      { summary: 'Nokta seviye anahtarı — taşmayı ve kuru çalışmayı önler; kesin anahtarlama sinyali ile proses güvenliği.', useCase: 'Depolama tankları, silolar, ayırıcılar — dolu veya boş tank uyarısı.', badge: 'Anahtar', features: ['Nokta seviye algılama', 'Taşma veya kuru çalışmayı önler', '360° durum ekranı', 'Kararlı anahtarlama sinyali', 'Hızlı montaj ve düşük bakım'], applications: ['Depolama tankları', 'Silolar', 'Ayırıcılar', 'Sürekli prosesler'] },
+
+      { summary: 'Granül ve kaba dökme malzemeler için titreşimli seviye şalteri — silo ve kaplarda güvenilir min/max algılama.', useCase: 'Serbest akan toz, granül ve kaba katılar (min. 100 g/l) — çatal probların malzeme tuttuğu yerlerde sıkışmayı önler.', badge: 'Stokta', features: ['Proses sıcaklığı −50 … 150 °C', 'Proses basıncı −1 … 16 bar', 'Kenarsız titreşim çubuğu — birikmeyi önler', 'Röle DPDT veya transistör NPN/PNP', 'Hazır uzunluklar 150, 500, 1000 ve 1500 mm'], applications: ['Çimento ve madencilik', 'Gıda', 'Dökme malzeme siloları', 'Kimyasallar'] }
 
     ],
 
@@ -2366,7 +2476,29 @@
 
     ],
 
-    inquiryTemplate: 'Merhaba, VEGA {product} için fiyat teklifi istiyorum.\n\nUygulama koşulları:\nGerekli adet:\n'
+    quoteChecklist: {
+      title: 'Hızlı teklif için ne göndermelisiniz?',
+      desc: 'Ne kadar net yazarsanız model ve fiyat önerisi o kadar hızlı olur — kısmi bilgi de yeterlidir.',
+      items: [
+        'Ölçüm tipi: seviye / nokta seviye / basınç',
+        'Proses ortamı: sıvı, gaz, toz veya dökme malzeme',
+        'Yaklaşık sıcaklık ve basınç',
+        'Tank yüksekliği/hacmi veya boru çapı',
+        'Bağlantı tipi: flanş veya diş (yaklaşık ölçü)',
+        'İstenen çıkış: 4–20 mA, röle, HART vb.',
+        'Adet ve istenen teslim süresi'
+      ],
+      tip: 'Model veya order code’unuz varsa onu gönderin — daha hızlı teklif alırız.'
+    },
+
+    quickSeries: [
+      { name: 'VEGAPULS 6X', tag: 'Bayrak radar', hint: 'Yüksek tank ve kritik proses' },
+      { name: 'VEGAPULS', tag: 'Kompakt radar', hint: 'Ultrasonik yükseltme' },
+      { name: 'VEGABAR 39', tag: 'Basınç · €510', hint: '360° göstergeli transmitter' },
+      { name: 'VEGAVIB S61', tag: 'Dökme · €540', hint: 'Titreşimli silo şalteri' }
+    ],
+
+    inquiryTemplate: 'Merhaba, VEGA {product} için fiyat teklifi istiyorum.\n\nÖlçüm tipi:\nProses ortamı:\nYaklaşık sıcaklık/basınç:\nTank veya boru ölçüsü:\nBağlantı (flanş/diş):\nSinyal çıkışı:\nAdet:\nTeslimat destinasyonu:\n'
 
   };
 

@@ -34,8 +34,8 @@ body[data-page="prosense"] .section__desc {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(105deg, rgba(244, 249, 250, 0.97) 42%, rgba(244, 249, 250, 0.55) 68%, rgba(244, 249, 250, 0.2) 100%),
-    url('../images/prosense/slides/mps-hydrocarbon.jpg') center right / cover no-repeat;
+    radial-gradient(ellipse 70% 60% at 85% 40%, rgba(5, 141, 155, 0.14), transparent 55%),
+    linear-gradient(135deg, #f4f9fa 0%, #e8f4f6 48%, #dceef1 100%);
   pointer-events: none;
 }
 
@@ -145,8 +145,17 @@ body[data-page="prosense"] .section__desc {
   border-radius: var(--radius-lg);
   box-shadow: 0 12px 40px rgba(5, 141, 155, 0.2);
   width: 100%;
-  object-fit: cover;
-  max-height: 360px;
+  height: auto;
+  max-height: 480px;
+  object-fit: contain;
+  object-position: center;
+  background: linear-gradient(180deg, #f0fafb 0%, #e4f4f6 100%);
+}
+
+@media (max-width: 640px) {
+  .prosense-hero__visual img {
+    max-height: 420px;
+  }
 }
 
 .prosense-hero .btn--primary {
@@ -234,7 +243,30 @@ body[data-page="prosense"] .section__desc {
 }
 
 .prosense-highlight-card .prosense-btn-inquiry {
+  margin-top: 0;
+}
+
+.prosense-highlight-card {
+  scroll-margin-top: 96px;
+}
+
+.prosense-highlight-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   margin-top: auto;
+}
+
+.prosense-highlight-card__actions .btn {
+  flex: 1 1 auto;
+  justify-content: center;
+  padding: 10px 12px;
+  font-size: var(--text-sm);
+}
+
+.prosense-btn-wa {
+  padding: 10px 12px;
+  font-size: var(--text-sm);
 }
 
 .prosense-cat-nav {
@@ -363,6 +395,17 @@ body[data-page="prosense"] .section__desc {
   box-shadow: var(--shadow-sm);
 }
 
+.prosense-series-card--link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+
+.prosense-series-card--link .prosense-series-card__link {
+  pointer-events: none;
+}
+
 .prosense-series-card strong {
   display: block;
   font-family: var(--font-display);
@@ -397,6 +440,12 @@ body[data-page="prosense"] .section__desc {
   border-color: #058d9b;
   box-shadow: var(--shadow-sm);
   transform: translateY(-2px);
+}
+
+.prosense-industry-card--link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .prosense-industry-card__media {
@@ -630,10 +679,6 @@ body[data-page="prosense"] .section__desc {
   font-weight: var(--fw-bold);
 }
 
-.prosense-highlight-card .prosense-btn-inquiry {
-  margin-top: 4px;
-}
-
 /* Iran industries */
 .prosense-iran-grid {
   display: grid;
@@ -813,14 +858,185 @@ body[data-page="prosense"] .section__desc {
   transform: translateY(0);
 }
 
-.prosense-sticky-cta span {
+.prosense-sticky-cta__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.prosense-sticky-cta__text strong {
+  font-size: var(--text-sm);
   font-weight: 600;
+}
+
+.prosense-sticky-cta__text span {
+  font-size: 11px;
+  opacity: 0.75;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.prosense-sticky-cta__actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.prosense-sticky-cta__actions .btn {
+  padding: 10px 14px;
   font-size: var(--text-sm);
 }
 
 .prosense-btn-inquiry {
   padding: 10px 18px;
   font-size: var(--text-sm);
+}
+
+/* Quick series strip */
+.prosense-quick-series-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+  padding: 14px 0;
+}
+
+.prosense-quick-series {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.prosense-quick-series__item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-200);
+  background: #fafafa;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.prosense-quick-series__item:hover {
+  border-color: #058d9b;
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
+}
+
+.prosense-quick-series__item strong {
+  font-size: var(--text-sm);
+  color: #1a2b4a;
+}
+
+.prosense-quick-series__tag {
+  font-size: 11px;
+  font-weight: 700;
+  color: #046d78;
+  background: #e8f7f8;
+  padding: 2px 8px;
+  border-radius: 999px;
+  width: fit-content;
+}
+
+.prosense-quick-series__hint {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+/* Quote checklist */
+.prosense-quote-box {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 24px;
+  align-items: center;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.prosense-quote-box__content h3 {
+  margin: 0 0 8px;
+  font-size: var(--text-xl);
+}
+
+.prosense-quote-box__content > p {
+  margin: 0 0 16px;
+  color: var(--text-muted);
+}
+
+.prosense-quote-box__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.prosense-quote-box__list li {
+  position: relative;
+  padding-inline-start: 22px;
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+
+.prosense-quote-box__list li::before {
+  content: '';
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0.45em;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #058d9b;
+  border: 2px solid #1a2b4a;
+}
+
+.prosense-quote-box__tip {
+  margin: 16px 0 0;
+  padding: 12px 14px;
+  background: #e8f7f8;
+  border-radius: var(--radius);
+  font-size: var(--text-sm);
+  color: #046d78;
+}
+
+.prosense-quote-box__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.prosense-iran-card--link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.prosense-iran-card__models {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #1a2b4a;
+  background: #e8f7f8;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.prosense-iran-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 12px;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: #058d9b;
 }
 
 @media (max-width: 1024px) {
@@ -843,7 +1059,10 @@ body[data-page="prosense"] .section__desc {
   .prosense-iran-grid { grid-template-columns: 1fr; }
   .prosense-supply-grid { grid-template-columns: 1fr; }
   .prosense-trust-bar__inner { grid-template-columns: 1fr; }
-  body[data-page="prosense"] .footer { padding-bottom: 64px; }
+  .prosense-quote-box { grid-template-columns: 1fr; }
+  .prosense-sticky-cta__text span { display: none; }
+  .prosense-quick-series { grid-template-columns: 1fr 1fr; }
+  body[data-page="prosense"] .footer { padding-bottom: 72px; }
 }
 
 @media (max-width: 480px) {

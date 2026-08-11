@@ -15,6 +15,7 @@
   const PAGE_ID_ALIASES = {
     bizsanitizerV5: 'bizsanitizer-v5',
     digiSystem: 'digi-system',
+    liquiMoly: 'liqui-moly',
     bzDiamond: 'bz-diamond',
     supplifyTrade: 'supplify-trade',
     kayaOne: 'kaya-one',
@@ -51,7 +52,7 @@
 
     const knownPages = new Set([
       'about', 'services', 'portfolio', 'blog', 'contact', 'privacy', 'fast', 'vega',
-      'prosense', 'teltonika', 'gamak', 'digi-system', 'teraoka', 'bz-diamond', 'supplify-trade', 'kaya-one', 'smm-turk', 'fxguard-exchange', 'biztejarat',
+      'prosense', 'teltonika', 'gamak', 'digi-system', 'teraoka', 'liqui-moly', 'bz-diamond', 'supplify-trade', 'kaya-one', 'smm-turk', 'fxguard-exchange', 'biztejarat',
       'products', 'biztab', 'bizsanitizer-v5', 'fxguard', 'bizswap'
     ]);
     const stem = n.replace(/\.html$/, '');

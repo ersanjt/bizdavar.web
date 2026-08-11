@@ -52,14 +52,19 @@
         seoKeywords: 'تماس بیزدوار, مشاوره رایگان, Bizdavar contact, طراحی سایت, VEGA'
       },
       vega: {
-        seoTitle: 'خرید سنسور VEGA در ایران | VEGAPULS، VEGABAR، VEGAPOINT — بیزدوار',
-        seoDescription: 'تامین اصل سنسورهای VEGA برای پروژه‌های صنعتی ایران. مشاوره فنی فارسی، کد سفارش دقیق، پیش‌فاکتور شفاف و لجستیک تا ایران — بیزدوار گروپ.',
-        seoKeywords: 'خرید VEGA ایران, سنسور سطح VEGA, VEGAPULS, VEGABAR, VEGAPOINT, تامین VEGA, بیزدوار'
+        seoTitle: 'خرید سنسور VEGA | VEGAPULS، VEGABAR، VEGAPOINT — بیزدوار',
+        seoDescription: 'تامین اصل سنسور VEGA برای مهندسان فارسی‌زبان — مشاوره فنی، کد سفارش دقیق، پیش‌فاکتور شفاف و لجستیک بین‌المللی. VEGAPULS، VEGABAR، VEGAPOINT.',
+        seoKeywords: 'خرید VEGA, سنسور سطح VEGA, VEGAPULS, VEGABAR, VEGAPOINT, تامین VEGA, بیزدوار, واتساپ فارسی'
       },
       prosense: {
-        seoTitle: 'خرید دتکتور Prosense در ایران | PQ, SafeVader, PPS+ — بیزدوار',
-        seoDescription: 'تامین اصل دتکتور گاز و شعله Prosense برای پروژه‌های صنعتی ایران. مشاوره فنی فارسی، گواهی SIL/M1/EN، پیش‌فاکتور شفاف و لجستیک تا ایران — بیزدوار گروپ.',
-        seoKeywords: 'خرید Prosense ایران, دتکتور گاز, PQ Serisi, SafeVader, PPS+, بیزدوار'
+        seoTitle: 'خرید دتکتور Prosense | PQ, SafeVader, PPS+ — بیزدوار',
+        seoDescription: 'تامین اصل دتکتور گاز و شعله Prosense — مشاوره فنی فارسی در واتساپ، گواهی SIL/M1/EN، پیش‌فاکتور شفاف و لجستیک بین‌المللی برای مهندسان فارسی‌زبان.',
+        seoKeywords: 'خرید Prosense, دتکتور گاز, PQ Serisi, SafeVader, PPS+, بیزدوار, واتساپ فارسی'
+      },
+      liquiMoly: {
+        seoTitle: 'خرید Liqui Moly | روغن موتور و افزودنی — قیمت دلاری | بیزدوار',
+        seoDescription: 'تامین اصل Liqui Moly از ترکیه — روغن موتور، Octane Plus، افزودنی دیزل و مراقبت خودرو. قیمت دلاری شفاف (۱ دلار = ۴۷ لیر) و مشاوره فارسی.',
+        seoKeywords: 'Liqui Moly, Octane Plus, روغن موتور, افزودنی بنزین, بیزدوار'
       },
       teltonika: {
         seoTitle: 'خرید ردیاب Teltonika در ایران | FMB920، FMC650، Fleet Telematics — بیزدوار',
@@ -228,6 +233,11 @@
         seoDescription: 'Endüstriyel projeler için orijinal Prosense gaz ve alev dedektörü tedariki. SIL/M1/EN sertifikaları, teknik danışmanlık ve lojistik — Bizdavar Group.',
         seoKeywords: 'Prosense, gaz dedektörü, PQ, SafeVader, Bizdavar'
       },
+      liquiMoly: {
+        seoTitle: 'Liqui Moly tedariki | Motor yağı ve katkı — dolar fiyat | Bizdavar',
+        seoDescription: 'Türkiye üzerinden orijinal Liqui Moly tedariki — motor yağı, Octane Plus, dizel katkı ve oto bakım. Şeffaf dolar fiyat (1 USD = 47 TRY) ve Farsça danışmanlık.',
+        seoKeywords: 'Liqui Moly, Octane Plus, motor yağı, Bizdavar'
+      },
       teltonika: {
         seoTitle: 'Teltonika GPS tedariki | FMB920, FMC650, Fleet Telematics — Bizdavar',
         seoDescription: 'Orijinal Teltonika GPS ve Fleet Telematics tedariki. FMB920, CAN/OBD, DualCam, EYE Mesh — teknik danışmanlık ve lojistik — Bizdavar Group.',
@@ -394,6 +404,11 @@
         seoTitle: 'Prosense detector supply | PQ, SafeVader, PPS+ — Bizdavar',
         seoDescription: 'Genuine Prosense gas and flame detectors for industrial projects. SIL/M1/EN certifications, technical consulting and logistics — Bizdavar Group.',
         seoKeywords: 'Prosense, gas detector, PQ, SafeVader, Bizdavar'
+      },
+      liquiMoly: {
+        seoTitle: 'Liqui Moly supply | Motor oil & additives — USD prices | Bizdavar',
+        seoDescription: 'Genuine Liqui Moly from Turkey — engine oil, Octane Plus, diesel additives and car care. Transparent USD pricing (1 USD = 47 TRY) and Farsi consulting.',
+        seoKeywords: 'Liqui Moly, Octane Plus, engine oil, Bizdavar'
       },
       teltonika: {
         seoTitle: 'Teltonika GPS tracker supply | FMB920, FMC650, Fleet Telematics — Bizdavar',
