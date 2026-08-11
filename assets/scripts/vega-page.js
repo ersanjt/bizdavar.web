@@ -196,26 +196,26 @@
     el.innerHTML = V.featuredProducts.map(p => `
       <article class="vega-product-card" id="vega-product-${p.id}">
         <div class="vega-product-card__media">
-          <img src="${path(p.image)}" alt="${p.imageAlt || `${p.name} — VEGA`}" width="200" height="200" loading="lazy">
+          <img src="${path(p.image)}" alt="${p.imageAlt || `${p.name} — VEGA`}" width="320" height="240" loading="lazy">
         </div>
         <div class="vega-product-card__body">
-          <span class="vega-product-card__badge">${p.badge}</span>
-          <div class="vega-product-card__series">${p.series}</div>
+          <div class="vega-product-card__meta">
+            ${p.badge ? `<span class="vega-product-card__badge">${p.badge}</span>` : ''}
+            ${p.series ? `<span class="vega-product-card__series">${p.series}</span>` : ''}
+          </div>
           <h2 class="vega-product-card__name">${p.name}</h2>
           ${p.priceEur != null ? `<p class="vega-product-card__price" dir="ltr"><span class="vega-product-card__price-value">€${Number(p.priceEur).toLocaleString('en-US')}</span><span class="vega-product-card__price-note">${t('priceSellLabel', 'قیمت فروش')}</span></p>` : ''}
           <p class="vega-product-card__summary">${p.summary || p.summaryFa}</p>
           ${(p.useCase || p.useCaseFa) ? `<p class="vega-product-card__usecase"><strong>${t('useCaseLabel', 'کاربرد:')}</strong> ${p.useCase || p.useCaseFa}</p>` : ''}
           <ul class="vega-product-card__features">
-            ${p.features.map(f => `<li>${f}</li>`).join('')}
+            ${(p.features || []).slice(0, 4).map(f => `<li>${f}</li>`).join('')}
           </ul>
-          <div class="vega-product-card__tags">
-            ${p.applications.map(a => `<span class="vega-product-card__tag">${a}</span>`).join('')}
-          </div>
+          ${(p.applications || []).length ? `<div class="vega-product-card__tags">${p.applications.slice(0, 3).map(a => `<span class="vega-product-card__tag">${a}</span>`).join('')}</div>` : ''}
           <div class="vega-product-card__actions">
             <a href="${whatsappUrl((V.inquiryTemplate || '').replace('{product}', p.name))}" class="btn btn--green vega-btn-wa" target="_blank" rel="noopener noreferrer">${ic('whatsapp', { size: 16, variant: 'white' })} ${t('whatsappShort', 'واتساپ')}</a>
             <a href="${inquiryUrl(p.name)}" class="btn btn--yellow vega-btn-inquiry">${t('requestInquiry', 'درخواست استعلام')}</a>
-            <a href="${p.officialRef}" class="vega-product-card__link" target="_blank" rel="noopener noreferrer">${t('officialCatalog', 'کاتالوگ رسمی')}${arrow()}</a>
           </div>
+          <a href="${p.officialRef}" class="vega-product-card__link" target="_blank" rel="noopener noreferrer">${t('officialCatalog', 'کاتالوگ رسمی')}${arrow()}</a>
         </div>
       </article>
     `).join('');

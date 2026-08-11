@@ -157,7 +157,7 @@
       <div class="hero__actions hero__actions--center">
         <a href="contact?service=industrial" class="btn btn--primary" id="teraokaCtaForm" data-i18n="teraokaPage.cta.btnForm">فرم استعلام</a>
         <a href="#" class="btn btn--green" id="teraokaCtaWhatsapp" data-i18n="common.whatsapp">واتساپ</a>
-        <a href="/pages/services#industrial" class="btn btn--yellow" data-i18n="teraokaPage.cta.btnServices">خدمات صنعتی</a>
+        <a href="/pages/products#supply" class="btn btn--yellow" data-i18n="teraokaPage.cta.btnServices">کاتالوگ محصولات</a>
       </div>
     </div>
   </section>
@@ -183,12 +183,12 @@
       });
 renderBreadcrumbs([
         { page: 'home', url: 'index' },
-        { page: 'services', url: 'services#industrial' },
+        { page: 'products', url: 'products#supply' },
         { page: 'teraoka', url: 'teraoka' }
       ]);
       injectBreadcrumbSchema([
         { page: 'home', url: 'index' },
-        { page: 'services', url: 'pages/services#industrial' },
+        { page: 'products', url: 'pages/products#supply' },
         { page: 'teraoka', url: 'pages/teraoka' }
       ]);
       initTeraokaPage();
@@ -197,7 +197,7 @@ renderBreadcrumbs([
         textKey: 'teraokaPage.geoText',
         text: 'تامین Teraoka Seiko به ایران — مشاوره فارسی، پیش‌فاکتور و لجستیک بین‌المللی توسط بیزدوار گروپ.'
       });
-      renderRelatedLinks([{"title":"Digi System","url":"digi-system","desc":"ترازو و POS ترکیه","titleKey":"teraokaPage.related.0.title","descKey":"teraokaPage.related.0.desc"},{"title":"خدمات صنعتی","url":"services#industrial","desc":"تامین retail B2B","titleKey":"teraokaPage.related.1.title","descKey":"teraokaPage.related.1.desc"},{"title":"تماس","url":"contact","desc":"استعلام قیمت","titleKey":"teraokaPage.related.2.title","descKey":"teraokaPage.related.2.desc"}]);
+      renderRelatedLinks([{"title":"Digi System","url":"digi-system","desc":"ترازو و POS ترکیه","titleKey":"teraokaPage.related.0.title","descKey":"teraokaPage.related.0.desc"},{"title":"کاتالوگ محصولات","url":"products#supply","desc":"تامین retail B2B","titleKey":"teraokaPage.related.1.title","descKey":"teraokaPage.related.1.desc"},{"title":"تماس","url":"contact","desc":"استعلام قیمت","titleKey":"teraokaPage.related.2.title","descKey":"teraokaPage.related.2.desc"}]);
       setupWhatsappLinks();
     });
   </script>

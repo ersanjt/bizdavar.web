@@ -11,11 +11,12 @@
   const acad = `${base}/academy/teltonika-factory.jpg`;
   const ind = `${base}/industries`;
 
-  const series = (names, note, featuredNames) =>
+  const series = (names, note, featuredNames, priceMap) =>
     names.map(name => ({
       name,
       note: note || 'GPS / IoT Telematics',
-      featured: featuredNames ? featuredNames.includes(name) : false
+      featured: featuredNames ? featuredNames.includes(name) : false,
+      ...(priceMap && priceMap[name] != null ? { priceUsd: priceMap[name] } : {})
     }));
 
   window.TELTONIKA_CATALOG = {
@@ -24,11 +25,11 @@
       nameFa: 'تلتونیکا',
       logo,
       heroImage: hero,
-      heroImageAlt: 'Teltonika Fleet Telematics — GPS trackers and fleet management',
+      heroImageAlt: 'Teltonika Fleet Telematics — ردیاب GPS و مدیریت ناوگان',
       heroEyebrow: 'تامین رسمی برای ناوگان و پروژه‌های IoT ایران',
       heroHeadline: 'ردیاب‌های Teltonika Telematics',
       heroHeadlineSub: 'Fleet Telematics، GPS، CAN/OBD، ویدئو و سنسور BLE — تامین اصل با مشاوره فنی فارسی',
-      tagline: 'GPS Trackers & Fleet Telematics',
+      tagline: 'ردیاب GPS و تله‌متیک ناوگان — ساخت لیتوانی',
       taglineFa: 'ردیاب GPS و تله‌متیک ناوگان — ساخت لیتوانی',
       since: 'از سال ۱۹۹۸ · ۲۷+ سال',
       origin: 'ونیا، لیتوانی — ۲۶ کشور با دفتر محلی',
@@ -95,7 +96,7 @@
       },
       {
         q: 'کدام سری برای ناوگان معمولی کافی است؟',
-        a: 'برای ردیابی پایه FMB920 (Basic) پرفروش‌ترین مدل است. برای CAN، tachograph یا IP67 — سری Advanced یا Professional (FMC650، FMB225) مناسب‌تر است.'
+        a: 'برای ردیابی پایه FMB920 (Basic) پرفروش‌ترین مدل است — قیمت پایه از ۲۹ دلار. برای CAN، tachograph یا IP67 — سری Advanced یا Professional (FMC650، FMB225) مناسب‌تر است.'
       },
       {
         q: 'Fleet Telematics Platform (FTC/FTM) چیست؟',
@@ -121,12 +122,13 @@
       {
         title: 'FMB920 — پرفروش‌ترین ردیاب 2G',
         titleTr: 'FMB920 Basic Tracker',
-        desc: 'بیش از ۳ میلیون واحد فروش — ردیابی پایه، ضد سرقت و Green Driving',
+        desc: 'بیش از ۳ میلیون واحد فروش — ردیابی پایه، ضد سرقت و Green Driving. قیمت پایه از ۲۹ دلار.',
         useCaseFa: 'ناوگان سبک، ضد سرقت، ردیابی پایه',
-        badge: 'Bestseller',
+        badge: 'پرفروش',
         inquiryName: 'FMB920',
         image: `${p}/fmb920.png`,
-        imageAlt: 'Teltonika FMB920 Basic GPS tracker',
+        imageAlt: 'Teltonika FMB920 — ردیاب GPS پایه',
+        priceUsd: 29,
         featured: true
       },
       {
@@ -134,10 +136,10 @@
         titleTr: 'Fleet Telematics Platform',
         desc: 'پلتفرم نسل جدید مدیریت ناوگان Teltonika — استاندارد صنعت',
         useCaseFa: 'ناوگان بزرگ، لجستیک، عملیات بین‌المللی',
-        badge: 'Fleet',
+        badge: 'ناوگان',
         inquiryName: 'FTC305',
         image: `${p}/ftc305.png`,
-        imageAlt: 'Teltonika FTC305 Fleet Telematics Platform',
+        imageAlt: 'Teltonika FTC305 — پلتفرم Fleet Telematics',
         featured: true
       },
       {
@@ -145,10 +147,10 @@
         titleTr: 'FMC650 Professional',
         desc: 'تachograph، CAN bus و تجهیزات جانبی — برای کاربرد حرفه‌ای',
         useCaseFa: 'کامیون، اتوبوس، ماشین‌آلات سنگین',
-        badge: 'Professional',
+        badge: 'حرفه‌ای',
         inquiryName: 'FMC650',
         image: `${p}/fmc650.png`,
-        imageAlt: 'Teltonika FMC650 Professional CAN GPS tracker',
+        imageAlt: 'Teltonika FMC650 — ردیاب حرفه‌ای CAN',
         featured: true
       },
       {
@@ -211,11 +213,12 @@
         icon: 'globe',
         image: `${cat}/basic.png`,
         imageAlt: 'Teltonika Basic GPS trackers — FMB920 series',
-        desc: 'ردیابی ساده و مقرون‌به‌صرفه — FMB920 پرفروش‌ترین مدل جهان',
+        desc: 'ردیابی ساده و مقرون‌به‌صرفه — FMB920 پرفروش‌ترین مدل جهان، قیمت پایه از ۲۹ دلار',
         series: series(
           ['FMB900', 'FMB910', 'FMB920', 'FMC920', 'FMM920', 'FMB930', 'FMB965', 'FTC920', 'FTC921', 'FTC924', 'FTC927', 'FTC961', 'FTC965'],
           'Basic / Fleet Telematics',
-          ['FMB920', 'FMC920', 'FTC920']
+          ['FMB920', 'FMC920', 'FTC920'],
+          { FMB920: 29 }
         )
       },
       {

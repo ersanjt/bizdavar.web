@@ -46,9 +46,13 @@ window.BIZDAVAR_CONFIG = {
     }
   },
 
-  /** Owned products — nav dropdown under «محصولات ما» */
+  /**
+   * Products mega-menu — tabs mirror site IA:
+   * Owned (software/hardware) · Catalog lines · Industrial brand supply
+   */
   productNav: {
     overviewRoute: 'products',
+    defaultTab: 'owned',
     featured: {
       route: 'biztab',
       page: 'biztab',
@@ -56,38 +60,92 @@ window.BIZDAVAR_CONFIG = {
       descKey: 'nav.productBiztabDesc',
       image: 'assets/images/products/biztab/biztab-hero.jpg'
     },
-    groups: [
+    tabs: [
       {
-        id: 'software',
-        labelKey: 'nav.productsSoftware',
-        items: [
-          { route: 'fxguard', page: 'fxguard', labelKey: 'nav.productFxguard', label: 'WhatsApp CRM', descKey: 'nav.productFxguardDesc', badgeKey: 'nav.productFxguardBadge' },
-          { route: 'bizswap', page: 'bizswap', labelKey: 'nav.productBizswap', label: 'BizSwap', descKey: 'nav.productBizswapDesc' }
-        ]
-      },
-      {
-        id: 'hardware',
-        labelKey: 'nav.productsHardware',
-        items: [
-          { route: 'biztab', page: 'biztab', labelKey: 'nav.productBiztab', label: 'BizTab', descKey: 'nav.productBiztabDesc' },
-          { route: 'bizsanitizerV5', page: 'bizsanitizer-v5', labelKey: 'nav.productBizclean', label: 'BizClean', descKey: 'nav.productBizcleanDesc' }
+        id: 'owned',
+        labelKey: 'nav.tabOwned',
+        groups: [
+          {
+            id: 'software',
+            labelKey: 'nav.productsSoftware',
+            items: [
+              { route: 'fxguard', page: 'fxguard', labelKey: 'nav.productFxguard', label: 'WhatsApp CRM', descKey: 'nav.productFxguardDesc', badgeKey: 'nav.productFxguardBadge' },
+              { route: 'bizswap', page: 'bizswap', labelKey: 'nav.productBizswap', label: 'BizSwap', descKey: 'nav.productBizswapDesc' }
+            ]
+          },
+          {
+            id: 'hardware',
+            labelKey: 'nav.productsHardware',
+            items: [
+              { route: 'biztab', page: 'biztab', labelKey: 'nav.productBiztab', label: 'BizTab', descKey: 'nav.productBiztabDesc' },
+              { route: 'bizsanitizerV5', page: 'bizsanitizer-v5', labelKey: 'nav.productBizclean', label: 'BizClean', descKey: 'nav.productBizcleanDesc' }
+            ]
+          }
         ]
       },
       {
         id: 'lines',
-        labelKey: 'nav.productsLines',
-        items: [
-          { route: 'products', page: 'products', hash: 'catalog', cat: 'packaging', labelKey: 'nav.productPackaging', descKey: 'nav.productPackagingDesc' },
-          { route: 'products', page: 'products', hash: 'catalog', cat: 'medical', labelKey: 'nav.productMedical', descKey: 'nav.productMedicalDesc' }
+        labelKey: 'nav.tabLines',
+        groups: [
+          {
+            id: 'catalog',
+            labelKey: 'nav.productsLines',
+            items: [
+              { route: 'products', page: 'products', hash: 'catalog', cat: 'packaging', labelKey: 'nav.productPackaging', descKey: 'nav.productPackagingDesc' },
+              { route: 'products', page: 'products', hash: 'catalog', cat: 'medical', labelKey: 'nav.productMedical', descKey: 'nav.productMedicalDesc' }
+            ]
+          }
+        ]
+      },
+      {
+        id: 'brands',
+        labelKey: 'nav.tabBrands',
+        cta: {
+          route: 'products',
+          hash: 'supply',
+          labelKey: 'nav.productsSupplyLink',
+          descKey: 'nav.productsSupplyDesc'
+        },
+        groups: [
+          {
+            id: 'sensing',
+            labelKey: 'nav.brandGroupSensing',
+            items: [
+              { route: 'vega', page: 'vega', label: 'VEGA', descKey: 'nav.brandVegaDesc' },
+              { route: 'prosense', page: 'prosense', label: 'Prosense', descKey: 'nav.brandProsenseDesc' }
+            ]
+          },
+          {
+            id: 'telematics',
+            labelKey: 'nav.brandGroupTelematics',
+            items: [
+              { route: 'teltonika', page: 'teltonika', label: 'Teltonika', descKey: 'nav.brandTeltonikaDesc', badgeKey: 'nav.brandTeltonikaBadge' }
+            ]
+          },
+          {
+            id: 'power',
+            labelKey: 'nav.brandGroupPower',
+            items: [
+              { route: 'gamak', page: 'gamak', label: 'Gamak', descKey: 'nav.brandGamakDesc' },
+              { route: 'liquiMoly', page: 'liqui-moly', label: 'Liqui Moly', descKey: 'nav.brandLiquiDesc' }
+            ]
+          },
+          {
+            id: 'retail',
+            labelKey: 'nav.brandGroupRetail',
+            items: [
+              { route: 'digiSystem', page: 'digi-system', label: 'Digi System', descKey: 'nav.brandDigiDesc' },
+              { route: 'teraoka', page: 'teraoka', label: 'Teraoka', descKey: 'nav.brandTeraokaDesc' }
+            ]
+          }
         ]
       }
     ],
-    supply: {
-      route: 'services',
-      hash: 'industrial',
-      labelKey: 'nav.productsSupplyLink',
-      descKey: 'nav.productsSupplyDesc'
-    }
+    footer: [
+      { route: 'products', page: 'products', labelKey: 'nav.productsCatalog' },
+      { route: 'products', hash: 'supply', labelKey: 'nav.productsSupplyLink' },
+      { route: 'contact', page: 'contact', labelKey: 'nav.productsQuote' }
+    ]
   },
 
   assets: {
@@ -120,17 +178,43 @@ window.BIZDAVAR_CONFIG = {
     email: 'info@bizdavar.com',
     /** Primary line = Persian WhatsApp (worldwide Farsi-speaking leads) */
     phone: '+989305880135',
-    phoneDisplay: '+98 930 588 0135 · +90 501 067 6486',
+    phoneDisplay: '+98 930 588 0135 · +90 501 067 6486 · +98 936 411 5151',
     whatsapp: '989305880135',
     whatsappMessage: 'سلام، از وبسایت bizdavar.com پیام می‌دهم.',
     channels: [
       { id: 'ir', label: 'واتساپ فارسی', display: '+98 930 588 0135', tel: '+989305880135', whatsapp: '989305880135', primary: true },
-      { id: 'tr', label: 'ترکیه', display: '+90 501 067 6486', tel: '+905010676486', whatsapp: '905010676486' }
+      { id: 'tr', label: 'ترکیه', display: '+90 501 067 6486', tel: '+905010676486', whatsapp: '905010676486' },
+      {
+        id: 'field',
+        label: 'خدمات فنی · آرشام',
+        display: '+98 936 411 5151',
+        tel: '+989364115151',
+        whatsapp: '989364115151',
+        scope: 'field-tech',
+        whatsappMessage: 'سلام مهندس آرشام، برای خدمات فنی (دوربین مدار بسته / سیم‌کشی / نورمخفی) از وبسایت bizdavar.com پیام می‌دهم.'
+      }
     ],
     address: 'استانبول، ترکیه',
     workingHours: '۷/۲۴ — همیشه در دسترس',
     linkedin: 'https://www.linkedin.com/in/ersanjt',
     instagram: 'https://www.instagram.com/bizdavar'
+  },
+
+  /** مسئول فنی خدمات میدانی — دوربین، سیم‌کشی، نورمخفی */
+  fieldTech: {
+    id: 'field-tech',
+    lead: {
+      nameFa: 'مهندس آرشام جاهد تبریزی',
+      nameEn: 'Eng. Arsham Jahed Tabrizi',
+      roleFa: 'مسئول فنی و اجرایی خدمات ساختمانی و امنیتی',
+      roleEn: 'Technical lead — CCTV, wiring & lighting'
+    },
+    whatsapp: '989364115151',
+    phoneDisplay: '+98 936 411 5151',
+    tel: '+989364115151',
+    cities: ['تبریز', 'استانبول'],
+    citiesEn: ['Tabriz', 'Istanbul'],
+    whatsappMessage: 'سلام مهندس آرشام، برای خدمات فنی (دوربین مدار بسته / سیم‌کشی / نورمخفی) از وبسایت bizdavar.com پیام می‌دهم.'
   },
 
   /** شخصیت حقوقی ثبت‌شده در ایران — منبع: پروفایل جویشگر */
@@ -218,9 +302,11 @@ window.BIZDAVAR_CONFIG = {
 
   services: [
     { id: 'digital-marketing', title: 'بازاریابی دیجیتال', slug: 'pages/services.html#digital-marketing' },
-    { id: 'web-design', title: 'طراحی و توسعه وب', slug: 'pages/fast.html' },
+    { id: 'web-design', title: 'طراحی وب و وب‌اپلیکیشن', slug: 'pages/services.html#web-design' },
+    { id: 'software-apps', title: 'اپلیکیشن و سامانه', slug: 'pages/services.html#software-apps' },
+    { id: 'server-ops', title: 'مدیریت سرور', slug: 'pages/services.html#server-ops' },
     { id: 'smm', title: 'مدیریت SMM', slug: 'pages/services.html#smm' },
-    { id: 'industrial', title: 'تامین تجهیزات صنعتی', slug: 'pages/services.html#industrial' }
+    { id: 'field-tech', title: 'خدمات فنی و ساختمانی', slug: 'pages/services.html#field-tech' }
   ],
 
   blogPosts: [
@@ -278,7 +364,7 @@ window.BIZDAVAR_CONFIG = {
       excerpt: 'نکات مهم در تامین تجهیزات VEGA و ابزار دقیق.',
       category: 'تجهیزات صنعتی',
       date: '2025-03-20',
-      relatedService: 'pages/services.html#industrial'
+      relatedService: 'pages/products.html#supply'
     },
     {
       slug: 'pages/articles/about-bizdavar-group.html',

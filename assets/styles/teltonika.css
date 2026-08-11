@@ -1,5 +1,5 @@
 /**
- * teltonika brand accent overrides
+ * Teltonika brand page — accent + featured product card polish
  */
 body[data-page="teltonika"] {
   --brand-accent: #0054A6;
@@ -16,4 +16,167 @@ body[data-page="teltonika"] .teltonika-hero::before {
   background:
     linear-gradient(105deg, rgba(244, 249, 250, 0.97) 42%, rgba(244, 249, 250, 0.55) 68%, rgba(244, 249, 250, 0.2) 100%),
     url('../images/teltonika/hero/fleet-telematics.webp') center right / cover no-repeat;
+}
+
+/* Featured product cards */
+body[data-page="teltonika"] .teltonika-highlights {
+  gap: 22px;
+}
+
+body[data-page="teltonika"] .teltonika-highlight-card {
+  border: 1px solid #e6ebf2;
+  border-radius: 16px;
+  box-shadow: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+body[data-page="teltonika"] .teltonika-highlight-card:hover {
+  border-color: #c9d5e6;
+  box-shadow: 0 14px 32px rgba(0, 61, 122, 0.08);
+  transform: translateY(-3px);
+}
+
+body[data-page="teltonika"] .teltonika-highlight-card__media {
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(180deg, #f4f7fb 0%, #e8eef6 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+
+body[data-page="teltonika"] .teltonika-highlight-card__media img {
+  width: auto;
+  max-width: 78%;
+  max-height: 160px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(15, 23, 42, 0.12));
+}
+
+body[data-page="teltonika"] .teltonika-highlight-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 18px 18px 16px;
+  border-top: 1px solid #eef2f7;
+}
+
+body[data-page="teltonika"] .teltonika-highlight-card__badge {
+  display: inline-flex;
+  align-self: flex-start;
+  background: #1a2b4a;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+body[data-page="teltonika"] .teltonika-highlight-card__tr {
+  margin: 0 0 4px;
+  font-size: 11px;
+  color: #7b8798;
+}
+
+body[data-page="teltonika"] .teltonika-highlight-card h3 {
+  font-size: clamp(1rem, 1.4vw, 1.125rem);
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: #122033;
+  margin: 0 0 8px;
+}
+
+body[data-page="teltonika"] .teltonika-price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 0 0 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eef2f7;
+}
+
+body[data-page="teltonika"] .teltonika-price strong {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0054A6;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+body[data-page="teltonika"] .teltonika-price span {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+body[data-page="teltonika"] .teltonika-highlight-card__desc {
+  font-size: 0.875rem;
+  color: #5b6575;
+  line-height: 1.55;
+  margin: 0 0 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+body[data-page="teltonika"] .teltonika-highlight-card__usecase {
+  background: transparent;
+  border: none;
+  border-inline-start: 3px solid #0054A6;
+  border-radius: 0;
+  padding-inline-start: 12px;
+  margin: 0 0 16px;
+  font-size: 0.8125rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+body[data-page="teltonika"] .teltonika-highlight-card__usecase strong {
+  color: #122033;
+  font-weight: 700;
+}
+
+body[data-page="teltonika"] .teltonika-highlight-card__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 4px;
+}
+
+body[data-page="teltonika"] .teltonika-highlight-card__actions .btn {
+  width: 100%;
+  justify-content: center;
+  padding: 10px 8px;
+  font-size: 0.8125rem;
+}
+
+body[data-page="teltonika"] .teltonika-series-card__price {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0054A6;
+}
+
+@media (max-width: 768px) {
+  body[data-page="teltonika"] .teltonika-highlight-card__actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body[data-page="teltonika"] .teltonika-highlight-card {
+    transition: none;
+  }
+
+  body[data-page="teltonika"] .teltonika-highlight-card:hover {
+    transform: none;
+  }
 }

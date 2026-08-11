@@ -1110,15 +1110,19 @@
 
       since: 'Since 1998 · 27+ years',
 
+      origin: 'Vilnius, Lithuania — local offices in 26 countries',
+
+      heroImageAlt: 'Teltonika Fleet Telematics — GPS trackers and fleet management',
+
       description: 'Bizdavar Group supplies Teltonika Telematics trackers, sensors and fleet solutions for logistics, corporate fleets, assets and IoT projects in Iran and the region. Genuine hardware, TCT/FOTA configuration guidance, model selection consulting and international logistics from Istanbul.',
 
       heroStats: [
 
-        { label: 'Tracker models' },
+        { value: '71+', label: 'Tracker models' },
 
-        { label: 'IoT devices deployed' },
+        { value: '35M+', label: 'IoT devices deployed' },
 
-        { label: 'Years of Bizdavar experience' }
+        { value: '12+', label: 'Years of Bizdavar experience' }
 
       ]
 
@@ -1164,7 +1168,7 @@
 
     highlights: [
 
-      { title: 'FMB920 — bestselling 2G tracker', desc: 'Over 3 million units sold — basic tracking, anti-theft and green driving', useCase: 'Light fleet, anti-theft, basic GPS tracking', badge: 'Bestseller' },
+      { title: 'FMB920 — bestselling 2G tracker', desc: 'Over 3 million units sold — basic tracking, anti-theft and green driving. Base price from $29.', useCase: 'Light fleet, anti-theft, basic GPS tracking', badge: 'Bestseller' },
 
       { title: 'FTC305 / FTM305 — Fleet Telematics', desc: 'Teltonika\'s next-generation fleet management platform — industry standard', useCase: 'Large fleets, logistics, international operations', badge: 'Fleet' },
 
@@ -1184,7 +1188,7 @@
 
     categories: [
 
-      { title: 'Basic — entry-level trackers', desc: 'Simple, cost-effective tracking — FMB920 is the world\'s bestselling model' },
+      { title: 'Basic — entry-level trackers', desc: 'Simple, cost-effective tracking — FMB920 is the world\'s bestselling model, base price from $29' },
 
       { title: 'Fast & Easy — quick install', desc: 'Install in minutes — no special tools required' },
 
@@ -1288,7 +1292,7 @@
 
       { q: 'Is the Teltonika product genuine?', a: 'Yes — only genuine Teltonika Telematics products with valid IMEI and official documentation are supplied. Order code is listed on the proforma.' },
 
-      { q: 'Which series is enough for a standard fleet?', a: 'For basic tracking, FMB920 (Basic) is the bestselling model. For CAN, tachograph or IP67 — Advanced or Professional series (FMC650, FMB225) are more suitable.' },
+      { q: 'Which series is enough for a standard fleet?', a: 'For basic tracking, FMB920 (Basic) is the bestselling model — base price from $29. For CAN, tachograph or IP67 — Advanced or Professional series (FMC650, FMB225) are more suitable.' },
 
       { q: 'What is Fleet Telematics Platform (FTC/FTM)?', a: 'Teltonika\'s next-generation fleet management platform — including FTC305, FTM305, FTC164 and FTM164. For large fleet projects with advanced capabilities.' },
 
@@ -1320,15 +1324,19 @@
 
       since: '1998\'den beri · 27+ yıl',
 
+      origin: 'Vilnius, Litvanya — 26 ülkede yerel ofis',
+
+      heroImageAlt: 'Teltonika Fleet Telematics — GPS tracker ve filo yönetimi',
+
       description: 'Bizdavar Group; lojistik, kurumsal filo, varlık ve IoT projeleri için Teltonika Telematics tracker, sensör ve filo çözümleri tedarik eder. Orijinal donanım, TCT/FOTA yapılandırma rehberliği, model seçim danışmanlığı ve İstanbul\'dan uluslararası lojistik.',
 
       heroStats: [
 
-        { label: 'Tracker modeli' },
+        { value: '71+', label: 'Tracker modeli' },
 
-        { label: 'Dağıtılmış IoT cihazı' },
+        { value: '35M+', label: 'Dağıtılmış IoT cihazı' },
 
-        { label: 'Bizdavar deneyimi' }
+        { value: '12+', label: 'Bizdavar deneyimi' }
 
       ]
 
@@ -1374,11 +1382,11 @@
 
     highlights: [
 
-      { title: 'FMB920 — en çok satan 2G tracker', desc: '3 milyondan fazla satış — temel takip, hırsızlık önleme ve green driving', useCase: 'Hafif filo, hırsızlık önleme, temel GPS takibi', badge: 'Bestseller' },
+      { title: 'FMB920 — en çok satan 2G tracker', desc: '3 milyondan fazla satış — temel takip, hırsızlık önleme ve green driving. Başlangıç fiyatı 29$.', useCase: 'Hafif filo, hırsızlık önleme, temel GPS takibi', badge: 'Çok satan' },
 
-      { title: 'FTC305 / FTM305 — Fleet Telematics', desc: 'Teltonika\'nın yeni nesil filo yönetim platformu — endüstri standardı', useCase: 'Büyük filo, lojistik, uluslararası operasyonlar', badge: 'Fleet' },
+      { title: 'FTC305 / FTM305 — Fleet Telematics', desc: 'Teltonika\'nın yeni nesil filo yönetim platformu — endüstri standardı', useCase: 'Büyük filo, lojistik, uluslararası operasyonlar', badge: 'Filo' },
 
-      { title: 'FMC650 — Professional CAN', desc: 'Takograf, CAN bus ve çevre birimleri — profesyonel uygulamalar için', useCase: 'Kamyon, otobüs, ağır makineler', badge: 'Professional' },
+      { title: 'FMC650 — Professional CAN', desc: 'Takograf, CAN bus ve çevre birimleri — profesyonel uygulamalar için', useCase: 'Kamyon, otobüs, ağır makineler', badge: 'Profesyonel' },
 
       { title: 'EYE Beacon Mesh / Sensor Mesh', desc: 'Wirepas Mesh ile indoor takip — karmaşık ortamlarda geniş kapsama', useCase: 'Depo, fabrika, alet ve varlık takibi', badge: 'BLE Mesh' },
 
@@ -1394,7 +1402,7 @@
 
     categories: [
 
-      { title: 'Basic — giriş seviyesi tracker\'lar', desc: 'Basit ve ekonomik takip — FMB920 dünyanın en çok satan modeli' },
+      { title: 'Basic — giriş seviyesi tracker\'lar', desc: 'Basit ve ekonomik takip — FMB920 dünyanın en çok satan modeli, başlangıç fiyatı 29$' },
 
       { title: 'Fast & Easy — hızlı kurulum', desc: 'Dakikalar içinde kurulum — özel alet gerekmez' },
 
@@ -1498,7 +1506,7 @@
 
       { q: 'Teltonika ürünü orijinal mi?', a: 'Evet — yalnızca geçerli IMEI ve resmi belgeli orijinal Teltonika Telematics ürünleri tedarik edilir. Order code proformada belirtilir.' },
 
-      { q: 'Standart filo için hangi seri yeterli?', a: 'Temel takip için FMB920 (Basic) en çok satan modeldir. CAN, takograf veya IP67 için — Advanced veya Professional serisi (FMC650, FMB225) daha uygundur.' },
+      { q: 'Standart filo için hangi seri yeterli?', a: 'Temel takip için FMB920 (Basic) en çok satan modeldir — başlangıç fiyatı 29$. CAN, takograf veya IP67 için — Advanced veya Professional serisi (FMC650, FMB225) daha uygundur.' },
 
       { q: 'Fleet Telematics Platform (FTC/FTM) nedir?', a: 'Teltonika\'nın yeni nesil filo yönetim platformu — FTC305, FTM305, FTC164 ve FTM164 dahil. Gelişmiş özellikli büyük filo projeleri için.' },
 

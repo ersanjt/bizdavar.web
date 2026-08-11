@@ -11,8 +11,10 @@
         hero: {
           tag: 'مهندسی و تولید بیزدوار',
           title: 'محصولات بیزدوار',
-          desc: 'سخت‌افزار، خطوط تولید و SaaS اختصاصی — طراحی و ساخت تیم بیزدوار از تبریز تا استانبول.',
-          ctaCatalog: 'مشاهده کاتالوگ',
+          desc: 'سخت‌افزار، خطوط تولید، SaaS اختصاصی و برندهای صنعتی تامین‌شده — از تبریز تا استانبول.',
+          ctaLive: 'محصولات زنده',
+          ctaCatalog: 'کاتالوگ کامل',
+          ctaSupply: 'برندهای تامین',
           ctaContact: 'استعلام محصول'
         },
         pillars: {
@@ -46,10 +48,32 @@
         },
         supply: {
           eyebrow: 'تامین برند',
-          title: 'برندهای صنعتی جداگانه تامین می‌شوند',
-          desc: 'VEGA، Prosense، Liqui Moly و سایر برندها در بخش تامین تجهیزات هستند — نه در کاتالوگ محصولات مالکیتی.',
-          cta: 'تامین صنعتی'
+          title: 'برندهای صنعتی که تامین می‌کنیم',
+          desc: 'VEGA، Prosense، Liqui Moly، Teltonika، Gamak، Digi System و Teraoka — کاتالوگ جداگانه با مشاوره فنی و پیش‌فاکتور شفاف.',
+          cta: 'کاتالوگ محصولات مالکیتی',
+          ctaContact: 'استعلام تامین برند'
         },
+        explore: {
+          eyebrow: 'دسترسی سریع',
+          title: 'محصولات مالکیتی و برندهای تامین',
+          desc: 'مستقیم به صفحه اختصاصی هر محصول یا برند بروید.',
+          ownedTitle: 'محصولات مالکیتی',
+          supplyTitle: 'برندهای تامین',
+          servicesTitle: 'خدمات و نمونه‌کار',
+          catalogLink: 'کاتالوگ کامل',
+          linkServices: 'خدمات بیزدوار',
+          linkIndustrial: 'همه برندها',
+          linkFast: 'Fast Web Studio',
+          linkPortfolio: 'نمونه‌کارها',
+          linkContact: 'تماس و استعلام'
+        },
+        geoText: 'محصولات مالکیتی و تامین برندهای صنعتی — مشاوره فنی فارسی از استانبول و تبریز.',
+        related: [
+          { title: 'تامین VEGA', desc: 'سنسور سطح و فشار' },
+          { title: 'تامین Prosense', desc: 'دتکتور گاز و شعله' },
+          { title: 'Teltonika GPS', desc: 'Fleet Telematics از $29' },
+          { title: 'تماس و استعلام', desc: 'مشاوره رایگان' }
+        ],
         cta: {
           title: 'آماده استعلام محصول هستید؟',
           desc: 'برای سفارش، سفارشی‌سازی یا نمایندگی — با تیم فنی بیزدوار در واتساپ یا فرم تماس پیام بدهید.'
@@ -152,7 +176,9 @@
           tag: 'Bizdavar mühendislik ve üretim',
           title: 'Bizdavar ürünleri',
           desc: 'Özel donanım, üretim hatları ve SaaS — Bizdavar ekibi tarafından Tebriz ve İstanbul\'da tasarlandı.',
-          ctaCatalog: 'Kataloğu gör',
+          ctaLive: 'Canlı ürünler',
+          ctaCatalog: 'Tam katalog',
+          ctaSupply: 'Tedarik markaları',
           ctaContact: 'Ürün teklifi'
         },
         pillars: {
@@ -186,10 +212,32 @@
         },
         supply: {
           eyebrow: 'Marka tedariki',
-          title: 'Endüstriyel markalar ayrı tedarik edilir',
-          desc: 'VEGA, Prosense, Liqui Moly ve diğer markalar endüstriyel tedarik bölümündedir — sahip olunan ürün kataloğunda değil.',
-          cta: 'Endüstriyel tedarik'
+          title: 'Tedarik ettiğimiz endüstriyel markalar',
+          desc: 'VEGA, Prosense, Liqui Moly, Teltonika, Gamak, Digi System ve Teraoka — ayrı katalog, teknik danışmanlık ve şeffaf proforma.',
+          cta: 'Sahip olunan ürün kataloğu',
+          ctaContact: 'Marka tedarik teklifi'
         },
+        explore: {
+          eyebrow: 'Hızlı erişim',
+          title: 'Sahip olunan ürünler ve tedarik markaları',
+          desc: 'Her ürün veya marka sayfasına doğrudan gidin.',
+          ownedTitle: 'Sahip olunan ürünler',
+          supplyTitle: 'Tedarik markaları',
+          servicesTitle: 'Hizmetler ve portfolyo',
+          catalogLink: 'Tam katalog',
+          linkServices: 'Bizdavar hizmetleri',
+          linkIndustrial: 'Tüm markalar',
+          linkFast: 'Fast Web Studio',
+          linkPortfolio: 'Portfolyo',
+          linkContact: 'İletişim ve teklif'
+        },
+        geoText: 'Sahip olunan ürünler ve endüstriyel marka tedariki — İstanbul ve Tebriz’den teknik danışmanlık.',
+        related: [
+          { title: 'VEGA tedariki', desc: 'Seviye ve basınç sensörleri' },
+          { title: 'Prosense tedariki', desc: 'Gaz ve alev dedektörü' },
+          { title: 'Teltonika GPS', desc: 'Fleet Telematics 29$’dan' },
+          { title: 'İletişim', desc: 'Ücretsiz danışmanlık' }
+        ],
         cta: {
           title: 'Ürün teklifi almak ister misiniz?',
           desc: 'Sipariş, özelleştirme veya bayilik için Bizdavar teknik ekibine WhatsApp veya iletişim formuyla yazın.'
@@ -237,7 +285,9 @@
           tag: 'Bizdavar engineering & manufacturing',
           title: 'Bizdavar products',
           desc: 'Proprietary hardware, production lines and SaaS — designed and built by the Bizdavar team from Tabriz to Istanbul.',
-          ctaCatalog: 'Browse catalog',
+          ctaLive: 'Live products',
+          ctaCatalog: 'Full catalog',
+          ctaSupply: 'Supply brands',
           ctaContact: 'Product inquiry'
         },
         pillars: {
@@ -271,10 +321,32 @@
         },
         supply: {
           eyebrow: 'Brand supply',
-          title: 'Industrial brands are supplied separately',
-          desc: 'VEGA, Prosense, Liqui Moly and other brands live under industrial supply — not in the owned-products catalog.',
-          cta: 'Industrial supply'
+          title: 'Industrial brands we supply',
+          desc: 'VEGA, Prosense, Liqui Moly, Teltonika, Gamak, Digi System and Teraoka — separate catalogs with technical consulting and transparent proformas.',
+          cta: 'Owned products catalog',
+          ctaContact: 'Brand supply inquiry'
         },
+        explore: {
+          eyebrow: 'Quick access',
+          title: 'Owned products and supply brands',
+          desc: 'Jump straight to each product or brand page.',
+          ownedTitle: 'Owned products',
+          supplyTitle: 'Supply brands',
+          servicesTitle: 'Services & portfolio',
+          catalogLink: 'Full catalog',
+          linkServices: 'Bizdavar services',
+          linkIndustrial: 'All brands',
+          linkFast: 'Fast Web Studio',
+          linkPortfolio: 'Portfolio',
+          linkContact: 'Contact & inquiry'
+        },
+        geoText: 'Owned products and industrial brand supply — technical consulting from Istanbul and Tabriz.',
+        related: [
+          { title: 'VEGA supply', desc: 'Level and pressure sensors' },
+          { title: 'Prosense supply', desc: 'Gas and flame detectors' },
+          { title: 'Teltonika GPS', desc: 'Fleet telematics from $29' },
+          { title: 'Contact', desc: 'Free consultation' }
+        ],
         cta: {
           title: 'Ready to inquire about a product?',
           desc: 'For orders, customization or distribution — message the Bizdavar technical team on WhatsApp or the contact form.'

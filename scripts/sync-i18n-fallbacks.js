@@ -52,19 +52,19 @@ const brandNavAria = {
 const brandRelated = {
   vega: [
     { title: 'محصولات Prosense', url: 'prosense', desc: 'دتکتور گاز و شعله' },
-    { title: 'خدمات صنعتی', url: 'services#industrial', desc: 'مشاوره و تامین' },
+    { title: 'خدمات صنعتی', url: 'products#supply', desc: 'مشاوره و تامین' },
     { title: 'تماس و استعلام', url: 'contact', desc: 'مشاوره رایگان' }
   ],
   prosense: [
     { title: 'محصولات VEGA', url: 'vega', desc: 'سنسور سطح و فشار' },
     { title: 'Teltonika GPS', url: 'teltonika', desc: 'Fleet Telematics' },
-    { title: 'خدمات صنعتی', url: 'services#industrial', desc: 'مشاوره B2B' },
+    { title: 'خدمات صنعتی', url: 'products#supply', desc: 'مشاوره B2B' },
     { title: 'تماس', url: 'contact', desc: 'استعلام قیمت' }
   ],
   teltonika: [
     { title: 'محصولات VEGA', url: 'vega', desc: 'سنسور سطح و فشار' },
     { title: 'محصولات Prosense', url: 'prosense', desc: 'دتکتور گاز و شعله' },
-    { title: 'خدمات صنعتی', url: 'services#industrial', desc: 'مشاوره و تامین' },
+    { title: 'خدمات صنعتی', url: 'products#supply', desc: 'مشاوره و تامین' },
     { title: 'تماس', url: 'contact', desc: 'استعلام قیمت' }
   ]
 };
@@ -323,7 +323,7 @@ function syncRelatedLinks(html, links) {
 function syncBrandRelatedFromLocale(html, pageKey, pageData) {
   const related = pageData?.related;
   if (!Array.isArray(related)) return syncRelatedLinks(html, brandRelated[pageKey.replace(/Page$/, '').replace('digiSystem', 'digi-system')]);
-  const urls = ['teraoka', 'digi-system', 'services#industrial', 'contact', 'vega', 'prosense', 'gamak'];
+  const urls = ['teraoka', 'digi-system', 'products#supply', 'contact', 'vega', 'prosense', 'gamak'];
   let ui = 0;
   const links = related.map((r, i) => ({
     titleKey: `${pageKey}.related.${i}.title`,

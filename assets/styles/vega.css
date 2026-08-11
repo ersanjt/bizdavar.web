@@ -217,190 +217,231 @@ body[data-page="vega"] .section__desc {
 .vega-products-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+  gap: 28px;
 }
 
 .vega-product-card {
-  background: var(--white);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--gray-200);
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #e8e8e4;
   overflow: hidden;
-  display: grid;
-  grid-template-columns: minmax(200px, 240px) 1fr;
-  align-items: stretch;
-  box-shadow: var(--shadow-sm);
-  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  box-shadow: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .vega-product-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: #ffde00;
+  transform: translateY(-3px);
+  border-color: #d6d6d0;
+  box-shadow: 0 14px 36px rgba(26, 26, 26, 0.08);
 }
 
 .vega-product-card__media {
-  background: linear-gradient(160deg, #fffef5 0%, #fff9db 100%);
+  background:
+    linear-gradient(180deg, #f6f6f3 0%, #efefe9 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px;
-  border-inline-start: 1px solid var(--gray-200);
+  padding: 28px 24px;
+  min-height: 220px;
+  aspect-ratio: 4 / 3;
+  border-bottom: 1px solid #ecece7;
 }
 
 .vega-product-card__media img {
-  width: 100%;
-  max-width: 180px;
+  width: auto;
+  max-width: min(220px, 72%);
+  max-height: 180px;
   height: auto;
   object-fit: contain;
+  filter: drop-shadow(0 8px 18px rgba(26, 26, 26, 0.08));
 }
 
 .vega-product-card__body {
-  padding: 24px 28px;
+  padding: 22px 22px 20px;
   display: flex;
   flex-direction: column;
+  flex: 1;
   min-width: 0;
+  gap: 0;
+}
+
+.vega-product-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 10px;
+  margin-bottom: 10px;
 }
 
 .vega-product-card__badge {
-  display: inline-block;
-  background: #fff3b0;
-  color: #7a6200;
+  display: inline-flex;
+  align-items: center;
+  background: #1a1a1a;
+  color: #ffde00;
   font-family: var(--font-display);
-  font-size: var(--text-xs);
+  font-size: 11px;
   font-weight: var(--fw-bold);
   letter-spacing: 0.04em;
-  padding: 4px 10px;
-  border-radius: var(--radius-full);
-  margin-bottom: 8px;
+  padding: 4px 9px;
+  border-radius: 6px;
+  line-height: 1.2;
 }
 
 .vega-product-card__series {
-  font-size: var(--text-xs);
+  font-size: 12px;
   font-weight: var(--fw-semibold);
-  color: var(--text-muted);
-  margin-bottom: 6px;
-  letter-spacing: 0.02em;
+  color: #6b7280;
+  letter-spacing: 0.01em;
 }
 
 .vega-product-card__name {
   font-family: var(--font-display);
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-size: clamp(1.25rem, 1.8vw, 1.45rem);
   font-weight: var(--fw-extrabold);
   color: #1a1a1a;
-  margin-bottom: 10px;
-  letter-spacing: -0.02em;
-  line-height: 1.25;
+  margin: 0 0 8px;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
 }
 
 .vega-product-card__price {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 8px 12px;
+  gap: 6px 10px;
   margin: 0 0 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0ec;
 }
 
 .vega-product-card__price-value {
   font-family: var(--font-display);
-  font-size: clamp(1.375rem, 2.2vw, 1.75rem);
+  font-size: clamp(1.5rem, 2vw, 1.75rem);
   font-weight: var(--fw-black);
   color: #1a1a1a;
   letter-spacing: -0.03em;
+  line-height: 1;
 }
 
 .vega-product-card__price-note {
-  font-size: var(--text-xs);
-  font-weight: 700;
-  color: #7a6200;
-  background: #fff3b0;
-  padding: 3px 8px;
-  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  background: none;
+  padding: 0;
+  border-radius: 0;
 }
 
 .vega-product-card__summary {
-  font-size: var(--text-sm);
-  color: #374151;
-  line-height: 1.7;
-  margin-bottom: 14px;
+  font-size: 0.9375rem;
+  color: #4b5563;
+  line-height: 1.65;
+  margin: 0 0 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .vega-product-card__features {
   list-style: none;
-  margin-bottom: 14px;
+  margin: 0 0 14px;
+  padding: 0;
+  display: grid;
+  gap: 6px;
 }
 
 .vega-product-card__features li {
-  font-size: var(--text-sm);
-  padding: 5px 0;
-  padding-inline-end: 20px;
+  font-size: 0.875rem;
+  padding: 0;
+  padding-inline-start: 14px;
   position: relative;
-  color: var(--dark);
-  line-height: 1.65;
+  color: #374151;
+  line-height: 1.5;
 }
 
 .vega-product-card__features li::before {
   content: '';
   position: absolute;
-  inset-inline-end: 0;
-  top: 5px;
-  width: 1em;
-  height: 1em;
-  background-color: #c9a800;
-  mask: var(--bd-icon-check) no-repeat center / contain;
-  -webkit-mask: var(--bd-icon-check) no-repeat center / contain;
+  inset-inline-start: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ffde00;
+  box-shadow: 0 0 0 1px #1a1a1a;
+  mask: none;
+  -webkit-mask: none;
 }
 
 .vega-product-card__tags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-bottom: 14px;
+  margin: 0 0 16px;
 }
 
 .vega-product-card__tag {
-  font-family: var(--font-display);
-  font-size: var(--text-xs);
-  font-weight: var(--fw-semibold);
-  background: var(--gray);
-  padding: 4px 10px;
-  border-radius: var(--radius-full);
-  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 600;
+  background: #f3f4f6;
+  padding: 4px 9px;
+  border-radius: 999px;
+  color: #4b5563;
 }
 
 .vega-product-card__usecase {
-  font-size: var(--text-sm);
-  color: var(--dark);
-  background: #fffef5;
-  border-inline-end: 3px solid #ffde00;
-  padding: 10px 12px;
-  border-radius: var(--radius);
-  margin-bottom: 14px;
-  line-height: 1.65;
+  font-size: 0.875rem;
+  color: #374151;
+  background: transparent;
+  border: none;
+  border-inline-start: 3px solid #ffde00;
+  padding-inline-start: 12px;
+  margin: 0 0 14px;
+  line-height: 1.55;
+  border-radius: 0;
 }
 
 .vega-product-card__usecase strong {
   font-family: var(--font-display);
   font-weight: var(--fw-bold);
+  color: #1a1a1a;
 }
 
 .vega-product-card__actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
   margin-top: auto;
-  padding-top: 12px;
+  padding-top: 4px;
+}
+
+.vega-product-card__actions .btn {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  padding: 11px 12px;
+  font-size: 0.875rem;
 }
 
 .vega-btn-wa {
-  padding: 10px 14px;
-  font-size: var(--text-sm);
+  padding: 11px 12px;
+  font-size: 0.875rem;
 }
 
 .vega-product-card__link {
-  font-size: var(--text-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 12px;
+  font-size: 0.8125rem;
   font-weight: 600;
-  color: #7a6200;
+  color: #6b7280;
+  text-decoration: none;
 }
 
 .vega-product-card__link:hover {
@@ -1090,7 +1131,6 @@ body[data-page="vega"] .section__desc {
 @media (max-width: 1024px) {
   .vega-hero .container { grid-template-columns: 1fr; }
   .vega-hero__visual { order: -1; }
-  .vega-products-grid { grid-template-columns: 1fr; }
   .vega-value-grid { grid-template-columns: repeat(2, 1fr); }
   .vega-digital-block { grid-template-columns: 1fr; }
   .vega-digital-block__visual { order: -1; }
@@ -1104,13 +1144,13 @@ body[data-page="vega"] .section__desc {
 }
 
 @media (max-width: 768px) {
-  .vega-product-card { grid-template-columns: 1fr; }
+  .vega-products-grid { grid-template-columns: 1fr; }
   .vega-product-card__media {
-    border-inline-start: none;
-    border-bottom: 1px solid var(--gray-200);
-    min-height: 200px;
+    min-height: 180px;
+    padding: 20px 16px;
   }
-  .vega-product-card__body { padding: 20px 18px; }
+  .vega-product-card__body { padding: 18px 16px 16px; }
+  .vega-product-card__actions { grid-template-columns: 1fr; }
   .vega-value-grid { grid-template-columns: 1fr; }
   .vega-principles-grid { grid-template-columns: 1fr; }
   .vega-cat-nav { overflow-x: auto; flex-wrap: nowrap; justify-content: flex-start; }

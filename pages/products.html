@@ -48,10 +48,11 @@
       <div class="container">
         <span class="section__tag" data-i18n="productsPage.hero.tag">مهندسی و تولید بیزدوار</span>
         <h1 data-i18n="productsPage.hero.title">محصولات بیزدوار</h1>
-        <p data-i18n="productsPage.hero.desc">سخت‌افزار، خطوط تولید و SaaS اختصاصی — طراحی و ساخت تیم بیزدوار از تبریز تا استانبول.</p>
+        <p data-i18n="productsPage.hero.desc">محصولات مالکیتی بیزدوار و برندهای صنعتی تامین‌شده — SaaS، سخت‌افزار، خطوط تولید و کاتالوگ VEGA تا Teltonika.</p>
         <div class="products-hero__actions">
-          <a href="#catalog" class="btn btn--primary" data-i18n="productsPage.hero.ctaCatalog">مشاهده کاتالوگ</a>
-          <a href="/pages/contact?product=inquiry" class="btn btn--outline" data-i18n="productsPage.hero.ctaContact">استعلام محصول</a>
+          <a href="#live" class="btn btn--primary" data-i18n="productsPage.hero.ctaLive">محصولات زنده</a>
+          <a href="#catalog" class="btn btn--outline" data-i18n="productsPage.hero.ctaCatalog">کاتالوگ کامل</a>
+          <a href="#supply" class="btn btn--outline" data-i18n="productsPage.hero.ctaSupply">برندهای تامین</a>
         </div>
       </div>
     </section>
@@ -120,19 +121,52 @@
       </div>
     </section>
 
-    <section class="products-supply" aria-labelledby="productsSupplyTitle">
-      <div class="container products-supply__row">
-        <div>
-          <span class="section__eyebrow" data-i18n="productsPage.supply.eyebrow">تامین برند</span>
-          <h2 class="section__title" id="productsSupplyTitle" data-i18n="productsPage.supply.title">برندهای صنعتی جداگانه تامین می‌شوند</h2>
-          <p class="section__desc" data-i18n="productsPage.supply.desc">VEGA، Prosense، Liqui Moly و سایر برندها در بخش تامین تجهیزات هستند — نه در کاتالوگ محصولات مالکیتی.</p>
+    <section class="products-explore" aria-labelledby="productsExploreTitle">
+      <div class="container">
+        <div class="section__header section__header--pro">
+          <span class="section__eyebrow" data-i18n="productsPage.explore.eyebrow">دسترسی سریع</span>
+          <h2 class="section__title" id="productsExploreTitle" data-i18n="productsPage.explore.title">محصولات مالکیتی و برندهای تامین</h2>
+          <p class="section__desc" data-i18n="productsPage.explore.desc">مستقیم به صفحه اختصاصی هر محصول یا برند بروید.</p>
         </div>
-        <div class="products-supply__brands">
-          <a href="/pages/vega">VEGA</a>
-          <a href="/pages/prosense">Prosense</a>
-          <a href="/pages/liqui-moly">Liqui Moly</a>
-          <a href="/pages/teltonika">Teltonika</a>
-          <a href="/pages/services#industrial" data-i18n="productsPage.supply.cta">تامین صنعتی</a>
+        <div class="products-explore__groups">
+          <div class="products-explore__group">
+            <h3 data-i18n="productsPage.explore.ownedTitle">محصولات مالکیتی</h3>
+            <div class="products-explore__links">
+              <a href="/pages/fxguard">WhatsApp CRM</a>
+              <a href="/pages/bizswap">BizSwap</a>
+              <a href="/pages/biztab">BizTab</a>
+              <a href="/pages/bizsanitizer-v5">BizClean V5</a>
+              <a href="#catalog" data-i18n="productsPage.explore.catalogLink">کاتالوگ کامل</a>
+            </div>
+          </div>
+          <div class="products-explore__group">
+            <h3 data-i18n="productsPage.explore.supplyTitle">برندهای تامین</h3>
+            <div class="products-explore__links">
+              <a href="/pages/vega">VEGA</a>
+              <a href="/pages/prosense">Prosense</a>
+              <a href="/pages/liqui-moly">Liqui Moly</a>
+              <a href="/pages/teltonika">Teltonika</a>
+              <a href="/pages/gamak">Gamak</a>
+              <a href="/pages/digi-system">Digi System</a>
+              <a href="/pages/teraoka">Teraoka</a>
+              <a href="#supply" data-i18n="productsPage.explore.linkIndustrial">همه برندها</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="products-supply" id="supply" aria-labelledby="productsSupplyTitle">
+      <div class="container">
+        <div class="section__header section__header--pro">
+          <span class="section__eyebrow" data-i18n="productsPage.supply.eyebrow">تامین برند</span>
+          <h2 class="section__title" id="productsSupplyTitle" data-i18n="productsPage.supply.title">برندهای صنعتی که تامین می‌کنیم</h2>
+          <p class="section__desc" data-i18n="productsPage.supply.desc">VEGA، Prosense، Liqui Moly، Teltonika، Gamak، Digi System و Teraoka — کاتالوگ جداگانه با مشاوره فنی و پیش‌فاکتور شفاف.</p>
+        </div>
+        <div class="industrial-grid" id="productsSupplyGrid"></div>
+        <div class="products-supply__footer">
+          <a href="#catalog" class="btn btn--outline" data-i18n="productsPage.supply.cta">کاتالوگ محصولات مالکیتی</a>
+          <a href="/pages/contact?service=industrial" class="btn btn--yellow" data-i18n="productsPage.supply.ctaContact">استعلام تامین برند</a>
         </div>
       </div>
     </section>
@@ -151,6 +185,8 @@
     </section>
 
     <div id="geoStrip"></div>
+    <div id="relatedLinks"></div>
+
   </main>
 
   <script src="/assets/scripts/site-loader.js" data-after-config="config/owned-products.js" data-after-locales="i18n/owned-products-i18n.js" data-after-page-i18n="config/company-intel.js"></script>
@@ -165,7 +201,16 @@
         { page: 'products', url: 'pages/products' }
       ]);
       if (typeof initOwnedProductsPage === 'function') initOwnedProductsPage();
-      renderGeoStrip('geoStrip');
+      renderGeoStrip('geoStrip', {
+        textKey: 'productsPage.geoText',
+        text: 'محصولات مالکیتی و تامین برندهای صنعتی — مشاوره فنی فارسی از استانبول و تبریز.'
+      });
+      renderRelatedLinks([
+        { title: 'تامین VEGA', url: 'vega', desc: 'سنسور سطح و فشار', titleKey: 'productsPage.related.0.title', descKey: 'productsPage.related.0.desc' },
+        { title: 'تامین Prosense', url: 'prosense', desc: 'دتکتور گاز و شعله', titleKey: 'productsPage.related.1.title', descKey: 'productsPage.related.1.desc' },
+        { title: 'Teltonika GPS', url: 'teltonika', desc: 'Fleet Telematics از $29', titleKey: 'productsPage.related.2.title', descKey: 'productsPage.related.2.desc' },
+        { title: 'تماس و استعلام', url: 'contact', desc: 'مشاوره رایگان', titleKey: 'productsPage.related.3.title', descKey: 'productsPage.related.3.desc' }
+      ]);
     }
     bizdavarPageInit(bootProductsPage);
     if (window.bizdavarReady) {

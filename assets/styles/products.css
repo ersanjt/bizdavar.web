@@ -235,39 +235,68 @@
 }
 
 .products-supply {
-  padding-block: clamp(2rem, 4vw, 3rem);
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+  background:
+    linear-gradient(180deg, #f7f7f5 0%, #fff 70%);
   border-top: 1px solid rgba(29, 29, 27, 0.06);
 }
 
-.products-supply__row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 1.25rem 2rem;
+.products-supply .industrial-grid {
+  margin-top: 0.5rem;
 }
 
-.products-supply__brands {
+.products-supply__footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+  justify-content: center;
+}
+
+.products-explore {
+  padding-block: clamp(2rem, 4vw, 3.25rem);
+  border-top: 1px solid rgba(29, 29, 27, 0.06);
+}
+
+.products-explore__groups {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem 1.75rem;
+  margin-top: 1.5rem;
+}
+
+.products-explore__group h3 {
+  margin: 0 0 0.85rem;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+}
+
+.products-explore__links {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
 
-.products-supply__brands a {
+.products-explore__links a {
   display: inline-flex;
   align-items: center;
-  padding: 0.45rem 0.85rem;
-  font-size: 0.85rem;
+  padding: 0.5rem 0.85rem;
+  font-size: 0.84rem;
   font-weight: 600;
   text-decoration: none;
   color: var(--navy);
-  border-bottom: 1px solid rgba(29, 29, 27, 0.2);
-  transition: color 0.2s ease, border-color 0.2s ease;
+  background: #f5f5f4;
+  border: 1px solid rgba(29, 29, 27, 0.08);
+  border-radius: 999px;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
-.products-supply__brands a:hover {
+.products-explore__links a:hover {
+  background: #fff;
+  border-color: var(--red);
   color: var(--red);
-  border-bottom-color: var(--red);
 }
 
 .products-cta {
@@ -287,6 +316,10 @@
   .products-pillars {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .products-explore__groups {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 640px) {
@@ -301,6 +334,15 @@
   .products-page .product-filter {
     border-radius: var(--radius-lg);
     width: 100%;
+  }
+
+  .products-supply__footer {
+    flex-direction: column;
+  }
+
+  .products-supply__footer .btn {
+    width: 100%;
+    justify-content: center;
   }
 }
 

@@ -1,14 +1,16 @@
 /**
- * Services page — overview, nav, stats
+ * Services page — overview, nav, stats, field-tech lead + FAQ
  */
 (function () {
   const path = (r) => window.resolvePath(r);
   const ic = (name, opts) => (window.BD_ICON ? window.BD_ICON(name, opts) : '');
   const t = (key, fb) => (window.BIZDAVAR_I18N ? window.BIZDAVAR_I18N.t(key, fb) : (fb ?? key));
+  const raw = (key) => (window.BIZDAVAR_I18N ? window.BIZDAVAR_I18N.raw(key) : undefined);
   const rawList = (key, fb) => {
-    const v = window.BIZDAVAR_I18N ? window.BIZDAVAR_I18N.raw(key) : undefined;
+    const v = raw(key);
     return Array.isArray(v) ? v : fb;
   };
+  const C = () => window.BIZDAVAR_CONFIG || {};
 
   const SERVICES = [
     {
@@ -23,39 +25,74 @@
     {
       id: 'web-design',
       num: '02',
-      title: 'طراحی و توسعه وب',
-      desc: 'سایت شرکتی، فروشگاهی و لندینگ — Fast Web Studio.',
+      title: 'وب و وب‌اپلیکیشن',
+      desc: 'سایت، فروشگاه و وب‌اپ اختصاصی.',
       icon: 'globe',
       accent: 'blue',
       href: '#web-design'
     },
     {
-      id: 'smm',
+      id: 'software-apps',
       num: '03',
-      title: 'مدیریت SMM',
-      desc: 'تولید محتوا، تبلیغات و مدیریت شبکه‌های اجتماعی.',
+      title: 'اپ و سامانه',
+      desc: 'اندروید، iOS و سامانه‌های سازمانی.',
       icon: 'mobile',
+      accent: 'navy',
+      href: '#software-apps'
+    },
+    {
+      id: 'server-ops',
+      num: '04',
+      title: 'مدیریت سرور',
+      desc: 'راه‌اندازی، امنیت، بکاپ و مانیتورینگ.',
+      icon: 'monitor',
+      accent: 'slate',
+      href: '#server-ops'
+    },
+    {
+      id: 'smm',
+      num: '05',
+      title: 'مدیریت SMM',
+      desc: 'محتوا، تبلیغات و رشد شبکه‌های اجتماعی.',
+      icon: 'palette',
       accent: 'red',
       href: '#smm'
     },
     {
-      id: 'industrial',
-      num: '04',
-      title: 'تامین تجهیزات صنعتی',
-      desc: 'VEGA، Prosense، Gamak — مشاوره و لجستیک.',
-      icon: 'gear',
+      id: 'field-tech',
+      num: '06',
+      title: 'خدمات فنی',
+      desc: 'دوربین مدار بسته، سیم‌کشی و نورمخفی.',
+      icon: 'wrench',
       accent: 'green',
-      href: '#industrial'
+      href: '#field-tech'
     }
   ];
+
+  function fieldTechCfg() {
+    return C().fieldTech || {};
+  }
+
+  function fieldWaUrl() {
+    const ft = fieldTechCfg();
+    const num = ft.whatsapp || '989364115151';
+    const msg = ft.whatsappMessage || t('servicesPage.fieldTech.waDefault', 'سلام مهندس آرشام، برای خدمات فنی از bizdavar.com پیام می‌دهم.');
+    if (window.BD_CTX?.buildWaUrl) return window.BD_CTX.buildWaUrl(num, msg);
+    return `https://wa.me/${num}?text=${encodeURIComponent(msg)}`;
+  }
+
+  function redirectLegacyIndustrialHash() {
+    if (location.hash !== '#industrial') return;
+    location.replace(path('pages/products') + '#supply');
+  }
 
   function renderStats() {
     const el = document.getElementById('servicesHeroStats');
     if (!el) return;
     const stats = rawList('servicesPage.stats', [
-      { value: '۴', label: 'محور خدمات' },
+      { value: '۶', label: 'محور خدمات' },
       { value: '۱۰۰+', label: 'پروژه' },
-      { value: '۱۱', label: 'کشور فعال' },
+      { value: '۲', label: 'شهر فنی' },
       { value: '۱۳+', label: 'سال تجربه' }
     ]);
     el.innerHTML = stats.map(s => `
@@ -64,6 +101,12 @@
         <span>${s.label}</span>
       </div>
     `).join('');
+  }
+
+  function getServices() {
+    const localized = window.BIZDAVAR_I18N?.getServicesPageCards?.();
+    if (!Array.isArray(localized)) return SERVICES;
+    return SERVICES.map((service, i) => ({ ...service, ...(localized[i] || {}) }));
   }
 
   function renderNav() {
@@ -101,10 +144,10 @@
     const el = document.getElementById('servicesProcess');
     if (!el) return;
     const steps = rawList('servicesPage.process.steps', [
-      { title: 'مشاوره', desc: 'شناخت نیاز و اهداف کسب‌وکار' },
-      { title: 'طراحی راهکار', desc: 'پیشنهاد فنی و برآورد زمان‌بندی' },
-      { title: 'اجرا', desc: 'پیاده‌سازی، تامین یا راه‌اندازی کمپین' },
-      { title: 'پشتیبانی', desc: 'گزارش‌دهی، بهینه‌سازی و همراهی مستمر' }
+      { title: 'مشاوره', desc: 'شناخت نیاز دیجیتال یا بازدید فنی میدانی' },
+      { title: 'طراحی راهکار', desc: 'پیشنهاد فنی، برآورد و زمان‌بندی' },
+      { title: 'اجرا', desc: 'پیاده‌سازی نرم‌افزار یا نصب خدمات فنی' },
+      { title: 'پشتیبانی', desc: 'گزارش، بهینه‌سازی و همراهی مستمر' }
     ]);
     el.innerHTML = steps.map((s, i) => `
       <div class="services-process__step">
@@ -116,27 +159,156 @@
     `).join('');
   }
 
+  function applyBlockLists() {
+    const blocks = raw('servicesPage.blocks');
+    if (!Array.isArray(blocks)) return;
+    document.querySelectorAll('[data-service-block]').forEach(section => {
+      const idx = Number(section.getAttribute('data-service-block'));
+      const block = blocks[idx];
+      if (!block) return;
+      const tags = section.querySelector('.service-block__tags');
+      if (tags && Array.isArray(block.tags)) {
+        tags.innerHTML = block.tags.map(tag => `<span class="service-block__tag">${tag}</span>`).join('');
+      }
+      const list = section.querySelector('.check-list');
+      if (list && Array.isArray(block.checks)) {
+        list.innerHTML = block.checks.map(item => `<li>${item}</li>`).join('');
+      }
+      const cta = section.querySelector('[data-service-cta]');
+      if (cta && block.cta) cta.textContent = block.cta;
+    });
+  }
+
+  function wireFieldTechCtas() {
+    const wa = fieldWaUrl();
+    const ft = fieldTechCfg();
+    document.querySelectorAll('[data-field-wa]').forEach(el => {
+      el.setAttribute('href', wa);
+      el.setAttribute('target', '_blank');
+      el.setAttribute('rel', 'noopener noreferrer');
+    });
+    document.querySelectorAll('[data-field-tel]').forEach(el => {
+      el.setAttribute('href', `tel:${ft.tel || '+989364115151'}`);
+    });
+  }
+
+  function renderFieldTechLead() {
+    const el = document.getElementById('fieldTechLead');
+    if (!el) return;
+    const ft = fieldTechCfg();
+    const wa = fieldWaUrl();
+    el.innerHTML = `
+      <article class="field-tech-lead">
+        <div class="field-tech-lead__badge">${ic('wrench', { size: 22 })} ${t('servicesPage.fieldTech.leadLabel', 'مسئول فنی')}</div>
+        <h3 class="field-tech-lead__name">${t('servicesPage.fieldTech.leadName', ft.lead?.nameFa || 'مهندس آرشام جاهد تبریزی')}</h3>
+        <p class="field-tech-lead__role">${t('servicesPage.fieldTech.leadRole', ft.lead?.roleFa || '')}</p>
+        <p class="field-tech-lead__cities"><span>${t('servicesPage.fieldTech.citiesLabel', 'شهرهای هدف')}</span> ${t('servicesPage.fieldTech.cities', (ft.cities || []).join(' · '))}</p>
+        <div class="field-tech-lead__actions">
+          <a class="btn btn--green" data-field-wa href="${wa}" target="_blank" rel="noopener noreferrer">
+            ${ic('whatsapp', { size: 18, variant: 'white' })} ${t('servicesPage.fieldTech.waCta', 'واتساپ خدمات فنی')}
+          </a>
+          <a class="btn btn--outline" data-field-tel href="tel:${ft.tel || '+989364115151'}">
+            ${ic('phone', { size: 18 })} ${t('servicesPage.fieldTech.callCta', 'تماس تلفنی')}
+          </a>
+        </div>
+        <p class="field-tech-lead__hint dir-ltr">${t('servicesPage.fieldTech.waHint', ft.phoneDisplay || '+98 936 411 5151')}</p>
+      </article>`;
+  }
+
+  function renderFieldFaq() {
+    const el = document.getElementById('fieldTechFaq');
+    if (!el) return;
+    const faq = rawList('servicesPage.fieldTech.faq', []);
+    if (!faq.length) {
+      el.hidden = true;
+      return;
+    }
+    el.hidden = false;
+    el.innerHTML = `
+      <div class="section__header section__header--pro">
+        <h3 class="section__title" style="font-size:1.35rem">${t('servicesPage.fieldTech.faqTitle', 'سوالات پرتکرار خدمات فنی')}</h3>
+      </div>
+      <div class="field-tech-faq">
+        ${faq.map((item, i) => `
+          <details class="field-tech-faq__item"${i === 0 ? ' open' : ''}>
+            <summary>${item.q}</summary>
+            <p>${item.a}</p>
+          </details>
+        `).join('')}
+      </div>`;
+
+    const ld = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faq.map(item => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: { '@type': 'Answer', text: item.a }
+      }))
+    };
+    if (typeof window.injectJsonLd === 'function') {
+      window.injectJsonLd('jsonld-field-tech-faq', ld);
+    } else {
+      let node = document.getElementById('jsonld-field-tech-faq');
+      if (!node) {
+        node = document.createElement('script');
+        node.type = 'application/ld+json';
+        node.id = 'jsonld-field-tech-faq';
+        document.head.appendChild(node);
+      }
+      node.textContent = JSON.stringify(ld);
+    }
+  }
+
+  function injectFieldTechPersonSchema() {
+    const ft = fieldTechCfg();
+    if (!ft.lead) return;
+    const lang = window.BIZDAVAR_I18N?.getLang?.() || 'fa';
+    const name = lang === 'fa' ? (ft.lead.nameFa || ft.lead.nameEn) : (ft.lead.nameEn || ft.lead.nameFa);
+    const job = lang === 'fa' ? (ft.lead.roleFa || ft.lead.roleEn) : (ft.lead.roleEn || ft.lead.roleFa);
+    const ld = {
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name,
+      jobTitle: job,
+      worksFor: {
+        '@type': 'Organization',
+        name: C().siteNameEn || 'Bizdavar Group',
+        url: C().baseUrl || 'https://bizdavar.com'
+      },
+      telephone: ft.tel || '+989364115151',
+      areaServed: [
+        { '@type': 'City', name: 'Tabriz' },
+        { '@type': 'City', name: 'Istanbul' }
+      ]
+    };
+    if (typeof window.injectJsonLd === 'function') {
+      window.injectJsonLd('jsonld-field-tech-person', ld);
+    }
+  }
+
   window.initServicesPage = function () {
+    redirectLegacyIndustrialHash();
     renderStats();
     renderNav();
     renderOverview();
     renderProcess();
+    applyBlockLists();
+    renderFieldTechLead();
+    renderFieldFaq();
+    wireFieldTechCtas();
+    injectFieldTechPersonSchema();
   };
 
   window.renderServicesRelatedLinks = function () {
     const links = rawList('servicesPage.relatedLinks', [
-      { title: 'Fast Web Studio', url: 'fast', desc: 'طراحی سایت از $99', thumb: 'assets/images/content/related-thumb-fast.svg' },
-      { title: 'نمونه‌کارها', url: 'portfolio', desc: '۳۵ پروژه و برند', thumb: 'assets/images/content/related-thumb-portfolio.svg' },
-      { title: 'وبلاگ تخصصی', url: 'blog', desc: 'راهنما و مقالات', thumb: 'assets/images/content/related-thumb-blog.svg' }
+      { title: 'Fast Web Studio', url: 'fast', desc: 'طراحی سایت از $99' },
+      { title: 'محصولات بیزدوار', url: 'products', desc: 'SaaS و برندهای تامین' },
+      { title: 'نمونه‌کارها', url: 'portfolio', desc: '۳۵ پروژه و برند' },
+      { title: 'تماس', url: 'contact', desc: 'فرم و واتساپ' }
     ]);
     if (typeof window.renderRelatedLinks === 'function') {
       window.renderRelatedLinks(links);
     }
   };
-
-  function getServices() {
-    const localized = window.BIZDAVAR_I18N?.getServicesPageCards?.();
-    if (!Array.isArray(localized)) return SERVICES;
-    return SERVICES.map((service, i) => ({ ...service, ...(localized[i] || {}) }));
-  }
 })();

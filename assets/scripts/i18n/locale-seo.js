@@ -17,9 +17,9 @@
         seoKeywords: 'بیزدوار گروپ, Bizdavar Group, ارسان جاهد تبریزی, آژانس دیجیتال, تاریخچه بیزدوار'
       },
       services: {
-        seoTitle: 'خدمات بیزدوار | بازاریابی دیجیتال، طراحی وب و تامین تجهیزات',
-        seoDescription: 'خدمات بیزدوار گروپ: بازاریابی دیجیتال، طراحی سایت Fast Studio، مدیریت SMM و تامین تجهیزات صنعتی VEGA و Prosense.',
-        seoKeywords: 'خدمات دیجیتال, طراحی سایت, SMM, VEGA, Prosense, بیزدوار'
+        seoTitle: 'خدمات بیزدوار | وب‌اپ، اپلیکیشن، سرور و خدمات فنی تبریز و استانبول',
+        seoDescription: 'خدمات بیزدوار در تبریز و استانبول: بازاریابی دیجیتال، طراحی وب و وب‌اپلیکیشن، اپلیکیشن اندروید و iOS، سامانه، مدیریت سرور، SMM، نصب دوربین مدار بسته، سیم‌کشی و نورمخفی — مسئول فنی مهندس آرشام جاهد تبریزی.',
+        seoKeywords: 'خدمات بیزدوار, طراحی وب اپلیکیشن, اپلیکیشن اندروید, اپلیکیشن iOS, مدیریت سرور, نصب دوربین مدار بسته تبریز, نصب دوربین مدار بسته استانبول, نورمخفی, سیم‌کشی ساختمان, آرشام جاهد تبریزی'
       },
       products: {
         seoTitle: 'محصولات بیزدوار | CRM واتساپ، BizSwap، BizTab و خطوط تولید',
@@ -67,9 +67,9 @@
         seoKeywords: 'Liqui Moly, Octane Plus, روغن موتور, افزودنی بنزین, بیزدوار'
       },
       teltonika: {
-        seoTitle: 'خرید ردیاب Teltonika در ایران | FMB920، FMC650، Fleet Telematics — بیزدوار',
-        seoDescription: 'تامین اصل ردیاب GPS و Fleet Telematics Teltonika برای ناوگان ایران. FMB920، CAN/OBD، DualCam، EYE Mesh — مشاوره فارسی و لجستیک — بیزدوار گروپ.',
-        seoKeywords: 'Teltonika ایران, ردیاب GPS, FMB920, Fleet Telematics, FMC650, بیزدوار'
+        seoTitle: 'خرید ردیاب Teltonika | FMB920 از ۲۹ دلار — بیزدوار',
+        seoDescription: 'تامین اصل ردیاب GPS و Fleet Telematics Teltonika. FMB920 با قیمت پایه از ۲۹ دلار، FMC650، DualCam، EYE Mesh — مشاوره فارسی و لجستیک — بیزدوار گروپ.',
+        seoKeywords: 'Teltonika ایران, ردیاب GPS, FMB920, قیمت FMB920, Fleet Telematics, FMC650, بیزدوار'
       },
       gamak: {
         seoTitle: 'خرید الکتروموتور Gamak در ایران | IE2/IE3 — بیزدوار گروپ',
@@ -189,9 +189,9 @@
         seoKeywords: 'Bizdavar Group, Ersan Jahed Tabrizi, dijital ajans, hakkımızda'
       },
       services: {
-        seoTitle: 'Hizmetler | Dijital pazarlama, web tasarım ve endüstriyel tedarik',
-        seoDescription: 'Bizdavar Group hizmetleri: dijital pazarlama, Fast Web Studio web tasarım, SMM yönetimi ve VEGA/Prosense endüstriyel ekipman tedariki.',
-        seoKeywords: 'dijital hizmetler, web tasarım, SMM, VEGA, Prosense, Bizdavar'
+        seoTitle: 'Hizmetler | Web app, mobil, sunucu ve teknik hizmetler',
+        seoDescription: 'Bizdavar: dijital pazarlama, web/web app, Android-iOS, sistem, sunucu yönetimi, SMM ve CCTV/tesisat/gizli aydınlatma — Tebriz ve İstanbul. Teknik sorumlu: Müh. Arsham Jahed Tabrizi.',
+        seoKeywords: 'Bizdavar hizmetler, web uygulaması, Android uygulama, iOS, sunucu yönetimi, CCTV Tebriz, CCTV İstanbul, gizli aydınlatma'
       },
       products: {
         seoTitle: 'Bizdavar ürünleri | WhatsApp CRM, BizTab, BizClean ve üretim hatları',
@@ -239,9 +239,9 @@
         seoKeywords: 'Liqui Moly, Octane Plus, motor yağı, Bizdavar'
       },
       teltonika: {
-        seoTitle: 'Teltonika GPS tedariki | FMB920, FMC650, Fleet Telematics — Bizdavar',
-        seoDescription: 'Orijinal Teltonika GPS ve Fleet Telematics tedariki. FMB920, CAN/OBD, DualCam, EYE Mesh — teknik danışmanlık ve lojistik — Bizdavar Group.',
-        seoKeywords: 'Teltonika, GPS tracker, FMB920, fleet telematics, Bizdavar'
+        seoTitle: 'Teltonika GPS tedariki | FMB920 29$’dan — Bizdavar',
+        seoDescription: 'Orijinal Teltonika GPS ve Fleet Telematics tedariki. FMB920 başlangıç fiyatı 29$, FMC650, DualCam, EYE Mesh — teknik danışmanlık ve lojistik — Bizdavar Group.',
+        seoKeywords: 'Teltonika, GPS tracker, FMB920 fiyat, fleet telematics, Bizdavar'
       },
       gamak: {
         seoTitle: 'Gamak elektrik motoru tedariki | IE2/IE3 — Bizdavar Group',
@@ -361,9 +361,9 @@
         seoKeywords: 'Bizdavar Group, Ersan Jahed Tabrizi, digital agency, about'
       },
       services: {
-        seoTitle: 'Services | Digital marketing, web design & industrial supply',
-        seoDescription: 'Bizdavar Group services: digital marketing, Fast Web Studio web design, SMM management, and VEGA/Prosense industrial equipment supply.',
-        seoKeywords: 'digital services, web design, SMM, VEGA, Prosense, Bizdavar'
+        seoTitle: 'Services | Web apps, mobile, servers & technical installs',
+        seoDescription: 'Bizdavar: digital marketing, web/web apps, Android & iOS, systems, server management, SMM, plus CCTV, wiring and cove lighting in Tabriz and Istanbul. Technical lead: Eng. Arsham Jahed Tabrizi.',
+        seoKeywords: 'Bizdavar services, web application, Android app, iOS app, server management, CCTV Tabriz, CCTV Istanbul, cove lighting'
       },
       products: {
         seoTitle: 'Bizdavar products | WhatsApp CRM, BizSwap, BizTab & production lines',
@@ -411,9 +411,9 @@
         seoKeywords: 'Liqui Moly, Octane Plus, engine oil, Bizdavar'
       },
       teltonika: {
-        seoTitle: 'Teltonika GPS tracker supply | FMB920, FMC650, Fleet Telematics — Bizdavar',
-        seoDescription: 'Genuine Teltonika GPS and Fleet Telematics for fleet projects. FMB920, CAN/OBD, DualCam, EYE Mesh — consulting and logistics — Bizdavar Group.',
-        seoKeywords: 'Teltonika, GPS tracker, FMB920, fleet telematics, Bizdavar'
+        seoTitle: 'Teltonika GPS tracker supply | FMB920 from $29 — Bizdavar',
+        seoDescription: 'Genuine Teltonika GPS and Fleet Telematics. FMB920 base price from $29, FMC650, DualCam, EYE Mesh — consulting and logistics — Bizdavar Group.',
+        seoKeywords: 'Teltonika, GPS tracker, FMB920 price, fleet telematics, Bizdavar'
       },
       gamak: {
         seoTitle: 'Gamak electric motor supply | IE2/IE3 — Bizdavar Group',

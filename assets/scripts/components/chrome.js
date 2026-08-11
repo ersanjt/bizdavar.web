@@ -98,7 +98,7 @@
     }));
     if (brandLinks.length) {
       brandLinks.push({
-        href: `${pagePath(R.services)}#industrial`,
+        href: `${pagePath(R.products)}#supply`,
         label: t('footer.industrialShort', 'تجهیزات صنعتی')
       });
     }
@@ -107,8 +107,10 @@
         { href: pagePath(R.services), label: t('nav.services') },
         { href: `${pagePath(R.services)}#digital-marketing`, label: t('footer.digitalMarketing') },
         { href: pagePath(R.fast), label: t('footer.webFast') },
+        { href: `${pagePath(R.services)}#software-apps`, label: t('footer.softwareApps', 'اپ و سامانه') },
+        { href: `${pagePath(R.services)}#server-ops`, label: t('footer.serverOps', 'مدیریت سرور') },
         { href: `${pagePath(R.services)}#smm`, label: t('footer.smm') },
-        { href: `${pagePath(R.services)}#industrial`, label: t('footer.industrial') }
+        { href: `${pagePath(R.services)}#field-tech`, label: t('footer.fieldTech', 'خدمات فنی') }
       ],
       brands: brandLinks.length ? brandLinks : [
         { href: pagePath(R.vega), label: 'VEGA' },
@@ -161,15 +163,26 @@
   const SUPPLY_PAGES = new Set(['vega', 'prosense', 'teltonika', 'gamak', 'digi-system', 'teraoka', 'liqui-moly']);
 
   function getProductNavConfig() {
-    return C.productNav || { overviewRoute: 'products', groups: [] };
+    return C.productNav || { overviewRoute: 'products', tabs: [], footer: [] };
+  }
+
+  function walkProductNavItems(visitor) {
+    const cfg = getProductNavConfig();
+    if (cfg.featured) visitor(cfg.featured);
+    (cfg.tabs || []).forEach(tab => {
+      (tab.groups || []).forEach(group => {
+        (group.items || []).forEach(visitor);
+      });
+    });
+    (cfg.footer || []).forEach(visitor);
   }
 
   function getProductPageIds() {
-    const cfg = getProductNavConfig();
     const ids = new Set(['products']);
-    (cfg.groups || []).forEach(group => {
-      (group.items || []).forEach(item => ids.add(item.page));
+    walkProductNavItems(item => {
+      if (item.page) ids.add(item.page);
     });
+    SUPPLY_PAGES.forEach(p => ids.add(p));
     return ids;
   }
 
@@ -177,7 +190,25 @@
     return getProductPageIds().has(currentPage);
   }
 
+  function resolveProductTabId(cfg) {
+    const tabs = cfg.tabs || [];
+    if (!tabs.length) return cfg.defaultTab || 'owned';
+    for (const tab of tabs) {
+      for (const group of tab.groups || []) {
+        for (const item of group.items || []) {
+          if (item.page && item.page === currentPage && !item.cat) return tab.id;
+        }
+      }
+    }
+    if (SUPPLY_PAGES.has(currentPage)) {
+      const brands = tabs.find(t => t.id === 'brands');
+      if (brands) return 'brands';
+    }
+    return cfg.defaultTab || tabs[0].id;
+  }
+
   function productNavHref(item) {
+    if (!item) return '#';
     let href = pagePath(R[item.route] || item.route);
     if (item.cat) href += (href.includes('?') ? '&' : '?') + 'cat=' + encodeURIComponent(item.cat);
     if (item.hash) href += '#' + item.hash;
@@ -214,36 +245,74 @@
     </a>`;
   }
 
-  function renderProductNavDropdown(label) {
-    const cfg = getProductNavConfig();
-    const overviewHref = pagePath(R[cfg.overviewRoute] || cfg.overviewRoute);
-    const active = isProductsActive() ? ' active' : '';
-    const groups = (cfg.groups || []).map(group => `
+  function productNavGroupsHtml(groups, dense) {
+    const gridClass = dense ? 'nav__product-mega__groups nav__product-mega__groups--dense' : 'nav__product-mega__groups';
+    return `<div class="${gridClass}">${(groups || []).map(group => `
       <div class="nav__product-group">
         <p class="nav__product-group-title">${t(group.labelKey, group.id)}</p>
         ${(group.items || []).map(productNavLinkHtml).join('')}
       </div>
-    `).join('');
-    const supply = cfg.supply
-      ? `<a href="${productNavHref(cfg.supply)}" class="nav__product-supply">
-          <span class="nav__product-supply__label">${t(cfg.supply.labelKey, '')}</span>
-          <span class="nav__product-supply__desc">${t(cfg.supply.descKey, '')}</span>
+    `).join('')}</div>`;
+  }
+
+  function productNavTabPanelHtml(tab, isActive) {
+    const cta = tab.cta
+      ? `<a href="${productNavHref(tab.cta)}" class="nav__product-tab-cta">
+          <span class="nav__product-tab-cta__label">${t(tab.cta.labelKey, '')}</span>
+          ${tab.cta.descKey ? `<span class="nav__product-tab-cta__desc">${t(tab.cta.descKey, '')}</span>` : ''}
         </a>`
       : '';
+    return `<div class="nav__product-panel${isActive ? ' is-active' : ''}" data-product-panel="${tab.id}" role="tabpanel"${isActive ? '' : ' hidden'}>
+      ${productNavGroupsHtml(tab.groups, tab.id === 'brands')}
+      ${cta}
+    </div>`;
+  }
+
+  function productNavFooterHtml(footer) {
+    if (!footer || !footer.length) return '';
+    return `<div class="nav__product-footer">
+      ${footer.map((item, i) => {
+        const href = productNavHref(item);
+        const label = item.labelKey ? t(item.labelKey, item.label || '') : (item.label || '');
+        const active = item.page && currentPage === item.page && !item.hash ? ' is-active' : '';
+        const primary = i === footer.length - 1 ? ' nav__product-footer__link--primary' : '';
+        return `<a href="${href}" class="nav__product-footer__link${primary}${active}">${label}</a>`;
+      }).join('')}
+    </div>`;
+  }
+
+  function renderProductNavDropdown(label) {
+    const cfg = getProductNavConfig();
+    const overviewHref = pagePath(R[cfg.overviewRoute] || cfg.overviewRoute);
+    const active = isProductsActive() ? ' active' : '';
+    const activeTab = resolveProductTabId(cfg);
+    const tabs = cfg.tabs || [];
+    const tabList = tabs.length
+      ? `<div class="nav__product-tabs" role="tablist" aria-label="${t('nav.products', label)}">
+          ${tabs.map(tab => {
+            const on = tab.id === activeTab;
+            return `<button type="button" class="nav__product-tab${on ? ' is-active' : ''}" role="tab" data-product-tab="${tab.id}" aria-selected="${on ? 'true' : 'false'}">${t(tab.labelKey, tab.id)}</button>`;
+          }).join('')}
+        </div>`
+      : '';
+    const panels = tabs.map(tab => productNavTabPanelHtml(tab, tab.id === activeTab)).join('');
     return `<details class="nav__dropdown nav__dropdown--products" data-nav-dropdown>
       <summary class="nav__link nav__link--dropdown${active}">
         <span class="nav__link-label">${label}</span>
         <span class="nav__chev" aria-hidden="true"></span>
       </summary>
-      <div class="nav__panel nav__panel--products">
+      <div class="nav__panel nav__panel--products" data-product-mega>
         <div class="nav__product-mega">
           <div class="nav__product-mega__aside">
             ${productNavFeaturedHtml(cfg.featured)}
             <a href="${overviewHref}" class="nav__product-overview${currentPage === 'products' ? ' is-active' : ''}">${t('nav.productsCatalog', 'همه محصولات')}</a>
           </div>
-          <div class="nav__product-mega__groups">${groups}</div>
+          <div class="nav__product-mega__main">
+            ${tabList}
+            <div class="nav__product-panels">${panels}</div>
+          </div>
         </div>
-        ${supply}
+        ${productNavFooterHtml(cfg.footer)}
       </div>
     </details>`;
   }
@@ -252,27 +321,42 @@
     const cfg = getProductNavConfig();
     const overviewHref = pagePath(R[cfg.overviewRoute] || cfg.overviewRoute);
     const active = isProductsActive() ? ' active' : '';
-    const groups = (cfg.groups || []).map(group => `
-      <div class="mobile-drawer__product-group">
-        <p class="mobile-drawer__product-heading">${t(group.labelKey, group.id)}</p>
-        ${(group.items || []).map(item => {
-          const href = productNavHref(item);
-          const itemActive = currentPage === item.page && !item.cat ? ' active' : '';
-          const itemLabel = item.labelKey ? t(item.labelKey, item.label || '') : (item.label || '');
-          const desc = item.descKey ? t(item.descKey, '') : '';
-          return `<a href="${href}" class="mobile-drawer__product-link${itemActive}">
-            <span>${itemLabel}</span>
-            ${desc ? `<small>${desc}</small>` : ''}
-          </a>`;
-        }).join('')}
-      </div>
-    `).join('');
-    const supply = cfg.supply
-      ? `<a href="${productNavHref(cfg.supply)}" class="mobile-drawer__product-link">
-          <span>${t(cfg.supply.labelKey, '')}</span>
-          <small>${t(cfg.supply.descKey, '')}</small>
-        </a>`
-      : '';
+    const activeTab = resolveProductTabId(cfg);
+    const tabs = (cfg.tabs || []).map(tab => {
+      const groups = (tab.groups || []).map(group => `
+        <div class="mobile-drawer__product-group">
+          <p class="mobile-drawer__product-heading">${t(group.labelKey, group.id)}</p>
+          ${(group.items || []).map(item => {
+            const href = productNavHref(item);
+            const itemActive = currentPage === item.page && !item.cat ? ' active' : '';
+            const itemLabel = item.labelKey ? t(item.labelKey, item.label || '') : (item.label || '');
+            const desc = item.descKey ? t(item.descKey, '') : '';
+            return `<a href="${href}" class="mobile-drawer__product-link${itemActive}">
+              <span>${itemLabel}</span>
+              ${desc ? `<small>${desc}</small>` : ''}
+            </a>`;
+          }).join('')}
+        </div>
+      `).join('');
+      const cta = tab.cta
+        ? `<a href="${productNavHref(tab.cta)}" class="mobile-drawer__product-link">
+            <span>${t(tab.cta.labelKey, '')}</span>
+            ${tab.cta.descKey ? `<small>${t(tab.cta.descKey, '')}</small>` : ''}
+          </a>`
+        : '';
+      return `<details class="mobile-drawer__product-tab"${tab.id === activeTab ? ' open' : ''}>
+        <summary>${t(tab.labelKey, tab.id)}</summary>
+        <div class="mobile-drawer__product-tab-body">
+          ${groups}
+          ${cta}
+        </div>
+      </details>`;
+    }).join('');
+    const footer = (cfg.footer || []).map(item => {
+      const href = productNavHref(item);
+      const itemLabel = item.labelKey ? t(item.labelKey, item.label || '') : (item.label || '');
+      return `<a href="${href}" class="mobile-drawer__product-link">${itemLabel}</a>`;
+    }).join('');
     return `<details class="mobile-drawer__acc"${isProductsActive() ? ' open' : ''}>
       <summary class="mobile-drawer__link${active}">
         <span class="mobile-drawer__icon">${ic('box', { size: 22 })}</span>
@@ -280,10 +364,35 @@
       </summary>
       <div class="mobile-drawer__sub">
         <a href="${overviewHref}" class="mobile-drawer__product-link${currentPage === 'products' ? ' active' : ''}">${t('nav.productsCatalog', 'همه محصولات')}</a>
-        ${groups}
-        ${supply}
+        ${tabs}
+        ${footer ? `<div class="mobile-drawer__product-footer">${footer}</div>` : ''}
       </div>
     </details>`;
+  }
+
+  function bindProductMegaTabs(root) {
+    if (!root) return;
+    root.querySelectorAll('[data-product-mega]').forEach(mega => {
+      const tabs = mega.querySelectorAll('[data-product-tab]');
+      const panels = mega.querySelectorAll('[data-product-panel]');
+      tabs.forEach(btn => {
+        btn.addEventListener('click', e => {
+          e.preventDefault();
+          e.stopPropagation();
+          const id = btn.getAttribute('data-product-tab');
+          tabs.forEach(tab => {
+            const on = tab === btn;
+            tab.classList.toggle('is-active', on);
+            tab.setAttribute('aria-selected', on ? 'true' : 'false');
+          });
+          panels.forEach(panel => {
+            const on = panel.getAttribute('data-product-panel') === id;
+            panel.hidden = !on;
+            panel.classList.toggle('is-active', on);
+          });
+        });
+      });
+    });
   }
 
   function bindNavDropdowns(root) {
@@ -299,13 +408,13 @@
         });
       });
     });
+    bindProductMegaTabs(root);
   }
 
 
 
   function isActive(page) {
     if (page === 'blog' && (currentPage === 'blog' || currentPage === 'article')) return ' active';
-    if (page === 'services' && SUPPLY_PAGES.has(currentPage)) return ' active';
     return currentPage === page ? ' active' : '';
   }
 

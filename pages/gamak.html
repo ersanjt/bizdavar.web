@@ -157,7 +157,7 @@
       <div class="hero__actions hero__actions--center">
         <a href="contact?service=industrial" class="btn btn--primary" id="gamakCtaForm" data-i18n="gamakPage.cta.btnForm">فرم استعلام</a>
         <a href="#" class="btn btn--green" id="gamakCtaWhatsapp" data-i18n="common.whatsapp">واتساپ</a>
-        <a href="/pages/services#industrial" class="btn btn--yellow" data-i18n="gamakPage.cta.btnServices">خدمات صنعتی</a>
+        <a href="/pages/products#supply" class="btn btn--yellow" data-i18n="gamakPage.cta.btnServices">کاتالوگ محصولات</a>
       </div>
     </div>
   </section>
@@ -183,12 +183,12 @@
       });
 renderBreadcrumbs([
         { page: 'home', url: 'index' },
-        { page: 'services', url: 'services#industrial' },
+        { page: 'products', url: 'products#supply' },
         { page: 'gamak', url: 'gamak' }
       ]);
       injectBreadcrumbSchema([
         { page: 'home', url: 'index' },
-        { page: 'services', url: 'pages/services#industrial' },
+        { page: 'products', url: 'pages/products#supply' },
         { page: 'gamak', url: 'pages/gamak' }
       ]);
       initGamakPage();
@@ -197,7 +197,7 @@ renderBreadcrumbs([
         textKey: 'gamakPage.geoText',
         text: 'تامین Gamak از ترکیه به ایران — مشاوره فنی فارسی، پیش‌فاکتور و لجستیک توسط بیزدوار گروپ.'
       });
-      renderRelatedLinks([{"title":"محصولات VEGA","url":"vega","desc":"سنسور سطح و فشار","titleKey":"gamakPage.related.0.title","descKey":"gamakPage.related.0.desc"},{"title":"محصولات Prosense","url":"prosense","desc":"دتکتور گاز و شعله","titleKey":"gamakPage.related.1.title","descKey":"gamakPage.related.1.desc"},{"title":"خدمات صنعتی","url":"services#industrial","desc":"مشاوره تامین B2B","titleKey":"gamakPage.related.2.title","descKey":"gamakPage.related.2.desc"},{"title":"تماس و استعلام","url":"contact","desc":"مشاوره رایگان","titleKey":"gamakPage.related.3.title","descKey":"gamakPage.related.3.desc"}]);
+      renderRelatedLinks([{"title":"محصولات VEGA","url":"vega","desc":"سنسور سطح و فشار","titleKey":"gamakPage.related.0.title","descKey":"gamakPage.related.0.desc"},{"title":"محصولات Prosense","url":"prosense","desc":"دتکتور گاز و شعله","titleKey":"gamakPage.related.1.title","descKey":"gamakPage.related.1.desc"},{"title":"کاتالوگ محصولات","url":"products#supply","desc":"مشاوره تامین B2B","titleKey":"gamakPage.related.2.title","descKey":"gamakPage.related.2.desc"},{"title":"تماس و استعلام","url":"contact","desc":"مشاوره رایگان","titleKey":"gamakPage.related.3.title","descKey":"gamakPage.related.3.desc"}]);
       setupWhatsappLinks();
     });
   </script>

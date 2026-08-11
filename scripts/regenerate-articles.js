@@ -130,10 +130,10 @@ const articles = [
       <h2>۲. گواهی و ایمنی</h2>
       <p>برای محیط‌های Ex و SIL باید مدل و مستندات فنی دقیق درخواست شود.</p>
       <h2>۳. مسیر تامین</h2>
-      <p>استعلام → پیش‌فاکتور → سفارش → لجستیک — جزئیات در <a href="../services#industrial">خدمات صنعتی</a>.</p>`,
+      <p>استعلام → پیش‌فاکتور → سفارش → لجستیک — جزئیات در <a href="../products#supply">خدمات صنعتی</a>.</p>`,
     related: [
       { title: 'کاتالوگ VEGA', url: '../vega', desc: 'سنسور و ابزار دقیق' },
-      { title: 'خدمات صنعتی', url: '../services#industrial', desc: 'مشاوره B2B' },
+      { title: 'خدمات صنعتی', url: '../products#supply', desc: 'مشاوره B2B' },
       { title: 'تماس', url: '../contact', desc: 'استعلام قیمت' }
     ]
   },

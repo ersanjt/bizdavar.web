@@ -148,7 +148,7 @@ function brandHtml(b) {
       <div class="hero__actions hero__actions--center">
         <a href="contact.html?service=industrial" class="btn btn--primary" id="${P}CtaForm" data-i18n="${PK}.cta.btnForm">فرم استعلام</a>
         <a href="#" class="btn btn--green" id="${P}CtaWhatsapp" data-i18n="common.whatsapp">واتساپ</a>
-        <a href="services.html#industrial" class="btn btn--yellow" data-i18n="${PK}.cta.btnServices">خدمات صنعتی</a>
+        <a href="products.html#supply" class="btn btn--yellow" data-i18n="${PK}.cta.btnServices">کاتالوگ محصولات</a>
       </div>
     </div>
   </section>
@@ -194,12 +194,12 @@ function brandHtml(b) {
       renderSiteChrome();
       renderBreadcrumbs([
         { page: 'home', url: 'index' },
-        { page: 'services', url: 'services#industrial' },
+        { page: 'products', url: 'products#supply' },
         { page: '${b.brandCrumb}', url: '${b.file.replace('.html','')}' }
       ]);
       injectBreadcrumbSchema([
         { page: 'home', url: 'index' },
-        { page: 'services', url: 'pages/services#industrial' },
+        { page: 'products', url: 'pages/products#supply' },
         { page: '${b.brandCrumb}', url: 'pages/${b.file.replace('.html','')}' }
       ]);
       ${b.init}();
@@ -252,7 +252,7 @@ const brands = [
     relatedLinks: [
       { titleKey: 'gamakPage.related.0.title', title: 'محصولات VEGA', url: 'vega.html', descKey: 'gamakPage.related.0.desc', desc: 'سنسور سطح و فشار' },
       { titleKey: 'gamakPage.related.1.title', title: 'محصولات Prosense', url: 'prosense.html', descKey: 'gamakPage.related.1.desc', desc: 'دتکتور گاز و شعله' },
-      { titleKey: 'gamakPage.related.2.title', title: 'خدمات صنعتی', url: 'services.html#industrial', descKey: 'gamakPage.related.2.desc', desc: 'مشاوره تامین B2B' },
+      { titleKey: 'gamakPage.related.2.title', title: 'کاتالوگ محصولات', url: 'products.html#supply', descKey: 'gamakPage.related.2.desc', desc: 'مشاوره تامین B2B' },
       { titleKey: 'gamakPage.related.3.title', title: 'تماس و استعلام', url: 'contact.html', descKey: 'gamakPage.related.3.desc', desc: 'مشاوره رایگان' }
     ]
   },
@@ -290,7 +290,7 @@ const brands = [
     geoText: 'تامین Digi System از ترکیه به ایران — مشاوره فارسی، پیش‌فاکتور و لجستیک توسط بیزدوار گروپ.',
     relatedLinks: [
       { titleKey: 'digiSystemPage.related.0.title', title: 'Teraoka Seiko', url: 'teraoka.html', descKey: 'digiSystemPage.related.0.desc', desc: 'ترازو و POS ژاپن' },
-      { titleKey: 'digiSystemPage.related.1.title', title: 'خدمات صنعتی', url: 'services.html#industrial', descKey: 'digiSystemPage.related.1.desc', desc: 'تامین retail B2B' },
+      { titleKey: 'digiSystemPage.related.1.title', title: 'کاتالوگ محصولات', url: 'products.html#supply', descKey: 'digiSystemPage.related.1.desc', desc: 'تامین retail B2B' },
       { titleKey: 'digiSystemPage.related.2.title', title: 'تماس', url: 'contact.html', descKey: 'digiSystemPage.related.2.desc', desc: 'استعلام قیمت' }
     ]
   },
@@ -328,7 +328,7 @@ const brands = [
     geoText: 'تامین Teraoka Seiko به ایران — مشاوره فارسی، پیش‌فاکتور و لجستیک بین‌المللی توسط بیزدوار گروپ.',
     relatedLinks: [
       { titleKey: 'teraokaPage.related.0.title', title: 'Digi System', url: 'digi-system.html', descKey: 'teraokaPage.related.0.desc', desc: 'ترازو و POS ترکیه' },
-      { titleKey: 'teraokaPage.related.1.title', title: 'خدمات صنعتی', url: 'services.html#industrial', descKey: 'teraokaPage.related.1.desc', desc: 'تامین retail B2B' },
+      { titleKey: 'teraokaPage.related.1.title', title: 'کاتالوگ محصولات', url: 'products.html#supply', descKey: 'teraokaPage.related.1.desc', desc: 'تامین retail B2B' },
       { titleKey: 'teraokaPage.related.2.title', title: 'تماس', url: 'contact.html', descKey: 'teraokaPage.related.2.desc', desc: 'استعلام قیمت' }
     ]
   }

@@ -367,11 +367,11 @@ window.createSupplyBrandPage = function (cfg) {
 
             <h3>${title}</h3>
 
-            <p>${h.desc || ''}</p>
+            ${h.priceUsd != null ? `<div class="${prefix}-price" dir="ltr"><strong>$${Number(h.priceUsd).toFixed(2)}</strong><span>${t('approxPrice', 'تقریبی')}</span></div>` : ''}
 
-            ${h.useCase ? `<p class="${prefix}-highlight-card__usecase"><strong>${t('useCaseLabel', 'کاربرد:')}</strong> ${h.useCase}</p>` : ''}
+            <p class="${prefix}-highlight-card__desc">${h.desc || ''}</p>
 
-            ${h.priceUsd != null ? `<div class="${prefix}-price"><strong>$${Number(h.priceUsd).toFixed(2)}</strong><span>${t('approxPrice', 'تقریبی')}</span></div>` : ''}
+            ${(h.useCase || h.useCaseFa) ? `<p class="${prefix}-highlight-card__usecase"><strong>${t('useCaseLabel', 'کاربرد:')}</strong> ${h.useCase || h.useCaseFa}</p>` : ''}
 
             <div class="${prefix}-highlight-card__actions">
 
@@ -396,6 +396,8 @@ window.createSupplyBrandPage = function (cfg) {
     const el = document.getElementById(elId('CatNav'));
 
     if (!el) return;
+
+    el.setAttribute('aria-label', t('navAria', `${brandName} product categories`));
 
     const links = [
 
@@ -823,15 +825,22 @@ window.createSupplyBrandPage = function (cfg) {
 
     );
 
+    const locale = window.BIZDAVAR_I18N?.locale || 'fa';
+    const listName = schemaListName && typeof schemaListName === 'object'
+      ? (schemaListName[locale] || schemaListName.fa || schemaListName.en || brandName)
+      : (schemaListName || brandName);
+
     const ld = {
 
       '@context': 'https://schema.org',
 
       '@type': 'ItemList',
 
-      name: schemaListName,
+      name: listName,
 
       description: catalog().brand.description || catalog().brand.descriptionFa,
+
+      inLanguage: locale === 'tr' ? 'tr-TR' : locale === 'en' ? 'en' : 'fa-IR',
 
       numberOfItems: items.length,
 

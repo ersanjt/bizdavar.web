@@ -250,7 +250,7 @@
       { name: t('nav.portfolio', 'نمونه‌کارها'), url: absUrl(R.portfolio) },
       { name: t('nav.webDesign', 'طراحی سایت'), url: absUrl(R.fast) },
       { name: t('footer.digitalMarketing', 'بازاریابی دیجیتال'), url: absUrl(R.services) + '#digital-marketing' },
-      { name: t('footer.industrial', 'تامین تجهیزات صنعتی'), url: absUrl(R.services) + '#industrial' },
+      { name: t('nav.productsSupplyLink', 'تامین برندهای صنعتی'), url: absUrl(R.products) + '#supply' },
       { name: 'VEGA', url: absUrl(R.vega) },
       { name: 'Prosense', url: absUrl(R.prosense) },
       { name: t('nav.blog', 'وبلاگ'), url: absUrl(R.blog) }

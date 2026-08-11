@@ -658,7 +658,7 @@
 
               <a href="${path(R.contact)}" class="btn btn--yellow">${t('industrial.ctaBtn')}</a>
 
-              <a href="${path(R.services)}#industrial" class="btn btn--outline">${t('industrial.ctaLink')}</a>
+              <a href="${path(R.products)}#supply" class="btn btn--outline">${t('industrial.ctaLink')}</a>
 
             </div>
 
@@ -878,6 +878,35 @@
     const liveGrid = document.getElementById('ownedProductsLive');
     if (liveGrid) {
       renderOwnedProductsGrid('ownedProductsLive', { status: 'live' });
+    }
+
+    const supplyGrid = document.getElementById('productsSupplyGrid');
+    if (supplyGrid) {
+      const brands = window.BIZDAVAR_I18N
+        ? window.BIZDAVAR_I18N.getIndustrialProducts()
+        : (C.industrialProducts || []);
+      const accentClass = (a) => (a ? ` industrial-card--${a}` : '');
+      supplyGrid.innerHTML = brands.map(p => {
+        const href = p.internal ? path(p.url) : p.url;
+        const external = !p.internal && p.url && String(p.url).startsWith('http');
+        const tags = (p.tags || []).map(tag => `<span class="industrial-card__tag">${tag}</span>`).join('');
+        return `
+          <a href="${href}" class="industrial-card industrial-card--link${accentClass(p.accent)}"
+             ${external ? 'target="_blank" rel="noopener noreferrer"' : ''}>
+            <div class="industrial-card__head">
+              <div class="industrial-card__logo">
+                ${p.logo
+                  ? `<img src="${path(p.logo)}" alt="${p.name}" loading="lazy" width="140" height="48">`
+                  : `<span class="industrial-card__logo-text">${p.name}</span>`}
+              </div>
+              ${p.badge ? `<span class="industrial-card__badge">${p.badge}</span>` : ''}
+            </div>
+            <h3 class="industrial-card__title">${p.title}</h3>
+            <p class="industrial-card__desc">${p.desc}</p>
+            ${tags ? `<div class="industrial-card__tags">${tags}</div>` : ''}
+            <span class="industrial-card__cta">${p.cta || t('common.learnMore', 'بیشتر بدانید')}${linkArrow()}</span>
+          </a>`;
+      }).join('');
     }
 
     setActive(active, false);

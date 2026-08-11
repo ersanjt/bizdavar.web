@@ -163,7 +163,7 @@
       <div class="hero__actions hero__actions--center">
         <a href="/pages/contact?service=industrial" class="btn btn--primary" id="liquiCtaForm" data-i18n="liquiMolyPage.cta.btnForm">فرم استعلام</a>
         <a href="https://wa.me/989305880135" class="btn btn--green" id="liquiCtaWhatsapp" data-i18n="common.whatsapp">واتساپ فارسی</a>
-        <a href="/pages/services#industrial" class="btn btn--yellow" data-i18n="liquiMolyPage.cta.btnServices">خدمات صنعتی</a>
+        <a href="/pages/products#supply" class="btn btn--yellow" data-i18n="liquiMolyPage.cta.btnServices">کاتالوگ محصولات</a>
       </div>
     </div>
   </section>
@@ -194,12 +194,12 @@
       });
       renderBreadcrumbs([
         { page: 'home', url: 'index' },
-        { page: 'services', url: 'services#industrial' },
+        { page: 'products', url: 'products#supply' },
         { page: 'liquiMoly', url: 'liqui-moly' }
       ]);
       injectBreadcrumbSchema([
         { page: 'home', url: 'index' },
-        { page: 'services', url: 'pages/services#industrial' },
+        { page: 'products', url: 'pages/products#supply' },
         { page: 'liquiMoly', url: 'pages/liqui-moly' }
       ]);
       initLiquiMolyPage();
@@ -211,7 +211,7 @@
       renderRelatedLinks([
         { title: 'محصولات VEGA', url: 'vega', desc: 'سنسور سطح و فشار', titleKey: 'liquiMolyPage.related.0.title', descKey: 'liquiMolyPage.related.0.desc' },
         { title: 'محصولات Prosense', url: 'prosense', desc: 'دتکتور گاز و شعله', titleKey: 'liquiMolyPage.related.1.title', descKey: 'liquiMolyPage.related.1.desc' },
-        { title: 'خدمات صنعتی', url: 'services#industrial', desc: 'مشاوره تامین B2B', titleKey: 'liquiMolyPage.related.2.title', descKey: 'liquiMolyPage.related.2.desc' },
+        { title: 'کاتالوگ محصولات', url: 'products#supply', desc: 'مشاوره تامین B2B', titleKey: 'liquiMolyPage.related.2.title', descKey: 'liquiMolyPage.related.2.desc' },
         { title: 'تماس', url: 'contact', desc: 'استعلام قیمت', titleKey: 'liquiMolyPage.related.3.title', descKey: 'liquiMolyPage.related.3.desc' }
       ]);
       setupWhatsappLinks();
