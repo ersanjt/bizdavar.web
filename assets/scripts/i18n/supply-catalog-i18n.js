@@ -2038,13 +2038,21 @@
 
       description: 'Bizdavar Group supplies VEGA level and pressure sensors for projects in Iran and the region. Genuine products from official channels, technical consulting, transparent proforma and international logistics to delivery.',
 
+      founded: '65+ years of experience',
+
+      presence: 'Present in 80+ countries',
+
+      origin: 'Schiltach, Black Forest — Germany',
+
+      heroImageAlt: 'VEGAPULS 6X radar level sensor — VEGA THE 6X process instrumentation',
+
       heroStats: [
 
-        { label: 'Brand experience' },
+        { valueKey: 'founded', label: 'Brand experience' },
 
-        { label: 'Made in Germany' },
+        { valueKey: 'origin', label: 'Made in Germany' },
 
-        { label: 'Bizdavar experience' }
+        { value: '12+', label: 'Bizdavar partnership' }
 
       ]
 
@@ -2112,11 +2120,15 @@
 
       { q: 'What if I do not know the exact model?', a: 'Describe process conditions: medium, temperature, pressure, tank size, connection type (flange/thread) and required output (4–20 mA, relay, etc.). Our technical team recommends the suitable model.' },
 
+      { q: 'Do you also supply projects outside Iran?', a: 'Yes — Persian-speaking buyers in Turkey, the UAE and other countries can request a quote. Logistics and proforma are set to the project destination.' },
+
       { q: 'How does warranty and after-sales service work?', a: 'Manufacturer VEGA warranty applies to genuine products. In case of technical defect, replacement or service centre coordination is handled through Bizdavar.' },
 
       { q: 'Can you supply spare parts and accessories?', a: 'Yes — flanges, mounting nuts, displays, cables and VEGA spare parts are available. Send part code or request lookup by device serial number.' },
 
-      { q: 'How is payment handled?', a: 'Advance payment to register order and settlement before shipment — details on proforma. International payment methods coordinated with Bizdavar finance.' }
+      { q: 'How is payment handled?', a: 'Advance payment to register order and settlement before shipment — details on proforma. International payment methods coordinated with Bizdavar finance.' },
+
+      { q: 'What is the difference between VEGAPULS and VEGAPULS 6X?', a: 'The 6X series is the flagship 80 GHz radar for tall tanks and demanding processes. Compact VEGAPULS is a more economical option for medium tanks and ultrasonic upgrades. We recommend based on height, temperature and process sensitivity.' }
 
     ],
 
@@ -2282,13 +2294,21 @@
 
       description: 'Bizdavar Group; İran ve bölgedeki projeler için VEGA seviye ve basınç sensörü tedarik eder. Resmi kanallardan orijinal ürün, teknik danışmanlık, şeffaf proforma ve uluslararası lojistik ile teslimat.',
 
+      founded: '65+ yıl deneyim',
+
+      presence: '80’den fazla ülkede varlık',
+
+      origin: 'Schiltach, Kara Orman — Almanya',
+
+      heroImageAlt: 'VEGAPULS 6X radar seviye sensörü — VEGA THE 6X proses enstrümantasyonu',
+
       heroStats: [
 
-        { label: 'Marka deneyimi' },
+        { valueKey: 'founded', label: 'Marka deneyimi' },
 
-        { label: 'Almanya üretimi' },
+        { valueKey: 'origin', label: 'Almanya üretimi' },
 
-        { label: 'Bizdavar deneyimi' }
+        { value: '12+', label: 'Bizdavar ortaklığı' }
 
       ]
 
@@ -2356,11 +2376,15 @@
 
       { q: 'Tam modeli bilmiyorsam ne yapmalıyım?', a: 'Proses koşullarını belirtin: ortam, sıcaklık, basınç, tank boyutu, bağlantı tipi (flanş/dişli) ve gerekli çıkış (4–20 mA, röle vb.). Teknik ekibimiz uygun modeli önerir.' },
 
+      { q: 'İran dışındaki projeler için de tedarik yapıyor musunuz?', a: 'Evet — Türkiye, BAE ve diğer ülkelerdeki Farsça konuşan alıcılar da teklif alabilir. Lojistik ve proforma proje destinasyonuna göre ayarlanır.' },
+
       { q: 'Garanti ve satış sonrası hizmet nasıl işler?', a: 'Orijinal ürünlerde VEGA üretici garantisi geçerlidir. Teknik arıza durumunda değişim veya servis merkezi koordinasyonu Bizdavar üzerinden yapılır.' },
 
       { q: 'Yedek parça ve aksesuar tedarik ediliyor mu?', a: 'Evet — flanş, montaj somunu, ekran, kablo ve VEGA yedek parçaları mevcuttur. Parça kodunu gönderin veya seri numarasından sorgulayın.' },
 
-      { q: 'Ödeme nasıl yapılır?', a: 'Sipariş kaydı için avans, sevkiyat öncesi kapanış — detaylar proformada. Uluslararası ödeme yöntemleri Bizdavar finans ile koordine edilir.' }
+      { q: 'Ödeme nasıl yapılır?', a: 'Sipariş kaydı için avans, sevkiyat öncesi kapanış — detaylar proformada. Uluslararası ödeme yöntemleri Bizdavar finans ile koordine edilir.' },
+
+      { q: 'VEGAPULS ile VEGAPULS 6X farkı nedir?', a: '6X serisi yüksek tanklar ve zorlu prosesler için amiral 80 GHz radardır. Kompakt VEGAPULS orta tanklar ve ultrasonik yükseltmeler için daha ekonomik seçenektir. Yükseklik, sıcaklık ve proses hassasiyetine göre öneririz.' }
 
     ],
 
@@ -2510,7 +2534,131 @@
 
   };
 
+  const liquiEn = {
+    brand: {
+      heroEyebrow: 'Genuine Liqui Moly supply from Turkey for Farsi speakers',
+      heroHeadline: 'Liqui Moly oils & additives',
+      heroHeadlineSub: 'Engine oil, fuel additives, antifreeze and car care — transparent USD pricing + Farsi consulting',
+      tagline: 'Made in Germany',
+      since: 'German brand · Turkey distribution',
+      description: 'Bizdavar Group supplies genuine Liqui Moly products: engine oils, petrol and diesel additives, antifreeze, gearbox fluids and car care. Prices are converted from the Turkey list at 1 USD = 47 TRY — inquire and order via Farsi WhatsApp.',
+      heroStats: [
+        { label: 'Products in catalog' },
+        { label: 'Display FX rate' },
+        { label: 'Made in Germany' }
+      ]
+    },
+    trustSignals: [
+      { label: 'Genuine product', desc: 'Sourced via Liqui Moly Turkey distribution — product codes and specs' },
+      { label: 'Transparent USD pricing', desc: 'Converted from TRY at the stated rate — proforma before payment' },
+      { label: 'Farsi consulting', desc: 'Oil grade, viscosity and additive selection — Farsi WhatsApp' },
+      { label: 'International logistics', desc: 'Purchase coordination and shipping from Turkey to your destination' }
+    ],
+    whyBuyFromUs: [
+      { title: 'Right oil and additive', desc: 'Not sure about 5W-30 vs 5W-40 or Octane Plus? Tell us the vehicle model and fuel type.' },
+      { title: 'Comparable pricing', desc: 'Approximate USD on every product. Final amount confirmed on the daily-stock proforma.' },
+      { title: 'Retail or bulk', desc: 'Personal use, workshop or fleet — one Farsi-speaking contact.' },
+      { title: 'German global brand', desc: 'Liqui Moly is known for engine oils, fuel additives and car care — Made in Germany.' }
+    ],
+    purchaseSteps: [
+      { num: '1', title: 'Pick a product', desc: 'Browse the catalog below or send the name/SKU on WhatsApp' },
+      { num: '2', title: 'Confirm price', desc: 'We check display USD vs daily stock and issue a proforma' },
+      { num: '3', title: 'Proforma', desc: 'Amount, quantity, lead time and payment terms — clear' },
+      { num: '4', title: 'Supply & shipping', desc: 'Order from Turkey and international logistics' },
+      { num: '5', title: 'Delivery', desc: 'Delivery to destination — Farsi support after purchase' }
+    ],
+    quoteChecklist: {
+      title: 'Send these for a precise quote',
+      desc: 'Even the product name or SKU is enough — or tell us the vehicle model.',
+      items: [
+        'Product name or Liqui Moly code (e.g. Octane Plus / 5W-30 Top Tec)',
+        'Quantity needed (single / carton / bulk)',
+        'Vehicle type and fuel (petrol / diesel / motorcycle)',
+        'Delivery city or country'
+      ],
+      tip: 'Page prices are approximate (TRY ÷ 47). Final amount is stated on the proforma.'
+    },
+    quickSeries: [
+      { name: 'Engine oils', tag: '5W / 0W', hint: 'Top Tec · Molygen · Special Tec' },
+      { name: 'Petrol additives', tag: 'Octane', hint: 'Octane Plus · Speed Tec' },
+      { name: 'Diesel additives', tag: 'DPF', hint: 'Diesel system · DPF' },
+      { name: 'Car care', tag: 'Care', hint: 'Cleaners · polish' }
+    ],
+    highlights: [
+      { title: 'Octane Plus fuel additive', desc: 'German petrol additive — higher octane and smoother combustion', useCase: 'Petrol vehicles · add to tank', badge: 'Bestseller' },
+      { title: 'Top Tec 4410 — 5W-30 · 1L', desc: 'Fully synthetic engine oil — modern European cars', useCase: 'Engine oil · petrol / light diesel', badge: 'Oil' },
+      { title: 'Top Tec 4200 — 5W-30 · 1L', desc: 'Fully synthetic Longlife oil — VW/MB specs', useCase: 'Engine oil · service intervals', badge: 'Oil' },
+      { title: 'Top Tec 4400 — 5W-30 · 1L', desc: 'Fully synthetic — engines with particulate filters', useCase: 'Engine oil · Low SAPS', badge: 'Oil' },
+      { title: 'Molygen Motor Protect', desc: 'Engine protection additive — less friction and wear', useCase: 'Oil additive', badge: 'Additive' },
+      { title: 'Oil viscosity stabilizer', desc: 'Viscosity retention additive — suitable for high-mileage engines', useCase: 'Oil additive · 1L', badge: 'Additive' },
+      { title: 'Molygen New Generation — 15W-50', desc: 'Molybdenum technology oil — high-temp protection', useCase: 'Engine oil · tough conditions', badge: 'Oil' },
+      { title: '10W-40 4T Street — motorcycle', desc: '4-stroke motorcycle oil — wet clutch and shared gearbox', useCase: 'Motorcycle · 4L', badge: 'Motorcycle' }
+    ],
+    inquiryTemplate: 'Hello, I would like a quote for Liqui Moly {product}.\n\nQuantity:\nVehicle / use:\nDelivery city:\n'
+  };
 
+  const liquiTr = {
+    brand: {
+      heroEyebrow: 'Türkiye üzerinden orijinal Liqui Moly tedariki',
+      heroHeadline: 'Liqui Moly yağ ve katkılar',
+      heroHeadlineSub: 'Motor yağı, yakıt katkısı, antifriz ve oto bakım — şeffaf dolar fiyat + Farsça danışmanlık',
+      tagline: 'Made in Germany',
+      since: 'Alman marka · Türkiye dağıtımı',
+      description: 'Bizdavar Group orijinal Liqui Moly ürünleri tedarik eder: motor yağları, benzin ve dizel katkıları, antifriz, şanzıman ve oto bakım. Fiyatlar Türkiye listesinden 1 USD = 47 TRY ile dolara çevrilir — Farsça WhatsApp ile teklif ve sipariş.',
+      heroStats: [
+        { label: 'Katalogdaki ürün' },
+        { label: 'Gösterim kuru' },
+        { label: 'Almanya üretimi' }
+      ]
+    },
+    trustSignals: [
+      { label: 'Orijinal ürün', desc: 'Liqui Moly Türkiye dağıtım kanalı — ürün kodu ve teknik özellik' },
+      { label: 'Şeffaf dolar fiyat', desc: 'TRY’den belirtilen kurla — ödeme öncesi proforma' },
+      { label: 'Farsça danışmanlık', desc: 'Yağ sınıfı, viskozite ve katkı seçimi — Farsça WhatsApp' },
+      { label: 'Uluslararası lojistik', desc: 'Türkiye’den satın alma ve teslimat koordinasyonu' }
+    ],
+    whyBuyFromUs: [
+      { title: 'Doğru yağ ve katkı', desc: '5W-30 mü 5W-40 mü, Octane Plus uygun mu bilmiyorsanız — araç modeli ve yakıt tipini söyleyin.' },
+      { title: 'Karşılaştırılabilir fiyat', desc: 'Her üründe yaklaşık USD. Nihai tutar günlük stokla proformada onaylanır.' },
+      { title: 'Perakende veya toptan', desc: 'Bireysel, servis veya filo — tek Farsça iletişim noktası.' },
+      { title: 'Küresel Alman marka', desc: 'Liqui Moly motor yağı, yakıt katkısı ve oto bakımda bilinen bir markadır — Almanya üretimi.' }
+    ],
+    purchaseSteps: [
+      { num: '1', title: 'Ürün seçimi', desc: 'Aşağıdaki katalogdan seçin veya WhatsApp’tan ad/SKU gönderin' },
+      { num: '2', title: 'Fiyat onayı', desc: 'Gösterim USD’sini günlük stokla kontrol edip proforma veririz' },
+      { num: '3', title: 'Proforma', desc: 'Tutar, adet, termin ve ödeme koşulları — net' },
+      { num: '4', title: 'Tedarik ve sevkiyat', desc: 'Türkiye siparişi ve uluslararası lojistik' },
+      { num: '5', title: 'Teslimat', desc: 'Varış noktasına teslim — satış sonrası Farsça destek' }
+    ],
+    quoteChecklist: {
+      title: 'Net teklif için bunları gönderin',
+      desc: 'Ürün adı veya SKU bile yeter — ya da araç modelini söyleyin.',
+      items: [
+        'Ürün adı veya Liqui Moly kodu (ör. Octane Plus / 5W-30 Top Tec)',
+        'İstenen adet (tek / koli / toptan)',
+        'Araç tipi ve yakıt (benzin / dizel / motosiklet)',
+        'Teslimat şehri veya ülkesi'
+      ],
+      tip: 'Sayfa fiyatları yaklaşıktır (TRY ÷ 47). Nihai tutar proformada belirtilir.'
+    },
+    quickSeries: [
+      { name: 'Motor yağları', tag: '5W / 0W', hint: 'Top Tec · Molygen · Special Tec' },
+      { name: 'Benzin katkıları', tag: 'Octane', hint: 'Octane Plus · Speed Tec' },
+      { name: 'Dizel katkıları', tag: 'DPF', hint: 'Dizel sistemi · DPF' },
+      { name: 'Oto bakım', tag: 'Care', hint: 'Temizleyici · cila' }
+    ],
+    highlights: [
+      { title: 'Octane Plus', desc: 'Alman benzin katkısı — oktanın yükselmesi ve daha yumuşak yanma', useCase: 'Benzinli araçlar · depoya ekleyin', badge: 'Çok satan' },
+      { title: 'Top Tec 4410 — 5W-30 · 1L', desc: 'Tam sentetik motor yağı — modern Avrupa araçları', useCase: 'Motor yağı · benzin / hafif dizel', badge: 'Yağ' },
+      { title: 'Top Tec 4200 — 5W-30 · 1L', desc: 'Tam sentetik Longlife yağ — VW/MB standartları', useCase: 'Motor yağı · periyodik servis', badge: 'Yağ' },
+      { title: 'Top Tec 4400 — 5W-30 · 1L', desc: 'Tam sentetik — partikül filtreli motorlar', useCase: 'Motor yağı · Low SAPS', badge: 'Yağ' },
+      { title: 'Molygen Motor Protect', desc: 'Motor koruma katkısı — sürtünme ve aşınma azaltır', useCase: 'Yağ katkısı', badge: 'Katkı' },
+      { title: 'Viskozite koruyucu', desc: 'Viskozite koruma katkısı — yüksek kilometreli motorlar', useCase: 'Yağ katkısı · 1L', badge: 'Katkı' },
+      { title: 'Molygen New Generation — 15W-50', desc: 'Molibden teknolojili yağ — yüksek sıcaklık koruması', useCase: 'Motor yağı · zor koşullar', badge: 'Yağ' },
+      { title: '10W-40 4T Street — motosiklet', desc: '4 zamanlı motosiklet yağı — ıslak debriyaj ve ortak şanzıman', useCase: 'Motosiklet · 4L', badge: 'Motosiklet' }
+    ],
+    inquiryTemplate: 'Merhaba, Liqui Moly {product} için fiyat teklifi istiyorum.\n\nAdet:\nAraç / kullanım:\nTeslimat şehri:\n'
+  };
 
   if (window.BIZDAVAR_LOCALES) {
 
@@ -2528,6 +2676,8 @@
 
       window.BIZDAVAR_LOCALES.en.vegaCatalog = vegaEn;
 
+      window.BIZDAVAR_LOCALES.en.liquiMolyCatalog = liquiEn;
+
     }
 
     if (window.BIZDAVAR_LOCALES.tr) {
@@ -2543,6 +2693,8 @@
       window.BIZDAVAR_LOCALES.tr.prosenseCatalog = prosenseTr;
 
       window.BIZDAVAR_LOCALES.tr.vegaCatalog = vegaTr;
+
+      window.BIZDAVAR_LOCALES.tr.liquiMolyCatalog = liquiTr;
 
     }
 

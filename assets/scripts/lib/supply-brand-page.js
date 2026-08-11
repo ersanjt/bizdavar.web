@@ -36,6 +36,27 @@ window.createSupplyBrandPage = function (cfg) {
   const locale = () => (window.BIZDAVAR_I18N?.locale || 'fa');
   const isFa = () => locale() === 'fa';
 
+  function mediaSrc(src, fallback) {
+    const primary = path(src || fallback || '');
+    const fb = path(fallback || catalog().brand?.logo || 'assets/images/brand/bizdavar-logo-square.png');
+    return { primary, fallback: fb };
+  }
+
+  function imgTag(src, alt, attrs) {
+    const a = attrs || {};
+    const { primary, fallback } = mediaSrc(src, a.fallback);
+    const w = a.width || 280;
+    const h = a.height || 160;
+    const cls = a.className ? ` class="${a.className}"` : '';
+    return `<img src="${primary}" alt="${alt || ''}" width="${w}" height="${h}" loading="lazy" decoding="async"${cls} onerror="if(this.dataset.fbk!=='1'){this.dataset.fbk='1';this.src='${fallback}';}else{this.classList.add('is-broken');}">`;
+  }
+
+  function localizedTitle(item) {
+    const lang = locale();
+    if (lang === 'tr') return item.titleTr || item.titleEn || item.title || item.name || '';
+    if (lang === 'en') return item.titleEn || item.titleTr || item.title || item.name || '';
+    return item.title || item.titleTr || item.name || '';
+  }
 
 
   function inquiryUrl(productName) {
@@ -324,7 +345,9 @@ window.createSupplyBrandPage = function (cfg) {
 
     el.innerHTML = catalog().highlights.map(h => {
 
-      const name = h.inquiryName || h.title;
+      const name = h.inquiryName || localizedTitle(h);
+      const title = localizedTitle(h);
+      const sideLabel = locale() === 'fa' ? (h.titleTr || '') : (locale() === 'en' || locale() === 'tr' ? (h.title || '') : '');
 
       return `
 
@@ -332,19 +355,19 @@ window.createSupplyBrandPage = function (cfg) {
 
           <div class="${prefix}-highlight-card__media">
 
-            <img src="${path(h.image)}" alt="${h.imageAlt || h.titleTr || h.title}" width="280" height="160" loading="lazy" decoding="async">
+            ${imgTag(h.image, h.imageAlt || title, { width: 280, height: 280 })}
 
           </div>
 
           <div class="${prefix}-highlight-card__body">
 
-            <span class="${prefix}-highlight-card__badge">${h.badge}</span>
+            <span class="${prefix}-highlight-card__badge">${h.badge || ''}</span>
 
-            <small class="${prefix}-highlight-card__tr" dir="ltr">${isFa() ? (h.titleTr || '') : ''}</small>
+            ${sideLabel && sideLabel !== title ? `<small class="${prefix}-highlight-card__tr" dir="ltr">${sideLabel}</small>` : ''}
 
-            <h3>${h.title}</h3>
+            <h3>${title}</h3>
 
-            <p>${h.desc}</p>
+            <p>${h.desc || ''}</p>
 
             ${h.useCase ? `<p class="${prefix}-highlight-card__usecase"><strong>${t('useCaseLabel', 'کاربرد:')}</strong> ${h.useCase}</p>` : ''}
 
@@ -416,7 +439,7 @@ window.createSupplyBrandPage = function (cfg) {
 
           <div class="${prefix}-category-block__visual">
 
-            <img src="${path(cat.image)}" alt="${cat.imageAlt || cat.titleTr}" width="200" height="120" loading="lazy" decoding="async">
+            ${imgTag(cat.image, cat.imageAlt || cat.titleTr || cat.title, { width: 200, height: 120 })}
 
           </div>
 
@@ -444,15 +467,21 @@ window.createSupplyBrandPage = function (cfg) {
 
           ${cat.series.map(s => `
 
-            <a href="${inquiryUrl(s.name)}" class="${prefix}-series-card${s.featured ? ` ${prefix}-series-card--featured` : ''} ${prefix}-series-card--link">
+            <a href="${inquiryUrl(s.name)}" class="${prefix}-series-card${s.featured ? ` ${prefix}-series-card--featured` : ''} ${prefix}-series-card--link" data-search="${(s.name + ' ' + (s.note || '') + ' ' + (s.sku || '')).replace(/"/g, '')}">
 
-              <strong>${s.name}</strong>
+              ${s.image ? `<span class="${prefix}-series-card__media">${imgTag(s.image, s.name, { width: 120, height: 120, className: `${prefix}-series-card__img` })}</span>` : ''}
 
-              <span>${s.note}</span>
+              <span class="${prefix}-series-card__body">
 
-              ${s.priceUsd != null ? `<span class="${prefix}-series-card__price">$${Number(s.priceUsd).toFixed(2)}</span>` : ''}
+                <strong>${s.name}</strong>
 
-              <span class="${prefix}-series-card__link">${t('inquirySeries', 'استعلام')}${arrow()}</span>
+                <span>${s.note || ''}</span>
+
+                ${s.priceUsd != null ? `<span class="${prefix}-series-card__price">$${Number(s.priceUsd).toFixed(2)}</span>` : ''}
+
+                <span class="${prefix}-series-card__link">${t('inquirySeries', 'استعلام')}${arrow()}</span>
+
+              </span>
 
             </a>
 
@@ -684,6 +713,30 @@ window.createSupplyBrandPage = function (cfg) {
 
 
 
+  function setupCatalogSearch() {
+    const input = document.getElementById(elId('CatalogSearch'));
+    const root = document.getElementById(elId('Categories'));
+    const empty = document.getElementById(elId('CatalogEmpty'));
+    if (!input || !root) return;
+    input.setAttribute('placeholder', t('catalogSearch', 'جستجو در کاتالوگ…'));
+    const run = () => {
+      const q = (input.value || '').trim().toLowerCase();
+      let visible = 0;
+      root.querySelectorAll(`.${prefix}-series-card`).forEach(card => {
+        const hay = (card.getAttribute('data-search') || card.textContent || '').toLowerCase();
+        const show = !q || hay.includes(q);
+        card.hidden = !show;
+        if (show) visible += 1;
+      });
+      root.querySelectorAll(`.${prefix}-category-block`).forEach(block => {
+        const any = [...block.querySelectorAll(`.${prefix}-series-card`)].some(c => !c.hidden);
+        block.hidden = q ? !any : false;
+      });
+      if (empty) empty.hidden = !(q && visible === 0);
+    };
+    input.addEventListener('input', run);
+  }
+
   window[cfg.initFn] = function () {
 
     renderHero();
@@ -703,6 +756,8 @@ window.createSupplyBrandPage = function (cfg) {
     renderHighlights();
 
     renderCategories();
+
+    setupCatalogSearch();
 
     renderIranIndustries();
 
@@ -728,6 +783,12 @@ window.createSupplyBrandPage = function (cfg) {
 
     const baseUrl = (C.siteUrl || 'https://bizdavar.com').replace(/\/$/, '');
 
+    const absImg = (src) => {
+      if (!src) return undefined;
+      if (/^https?:\/\//i.test(src)) return src;
+      return `${baseUrl}/${String(src).replace(/^\//, '')}`;
+    };
+
     const items = catalog().categories.flatMap(cat =>
 
       cat.series.map(s => ({
@@ -738,17 +799,21 @@ window.createSupplyBrandPage = function (cfg) {
 
         description: s.note,
 
+        sku: s.sku || undefined,
+
         brand: { '@type': 'Brand', name: brandName },
 
         category: cat.titleTr || cat.title,
 
-        image: cat.image ? `${baseUrl}/${String(cat.image).replace(/^\//, '')}` : undefined,
+        image: absImg(s.image || cat.image),
 
         offers: {
 
           '@type': 'Offer',
 
-          availability: 'https://schema.org/PreOrder',
+          availability: s.priceUsd != null ? 'https://schema.org/InStock' : 'https://schema.org/PreOrder',
+
+          ...(s.priceUsd != null ? { price: String(s.priceUsd), priceCurrency: 'USD' } : {}),
 
           seller: { '@type': 'Organization', name: C.siteName }
 

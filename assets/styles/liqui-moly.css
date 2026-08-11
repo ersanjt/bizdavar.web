@@ -161,7 +161,212 @@ body[data-page="liqui-moly"] .liqui-hero::before {
 }
 .liqui-why-grid { grid-template-columns: repeat(2, 1fr); }
 .liqui-steps { grid-template-columns: repeat(5, 1fr); }
-.liqui-highlights { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.liqui-highlights {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+
+.liqui-highlight-card {
+  height: 100%;
+  min-height: 0;
+}
+
+.liqui-highlight-card__media {
+  aspect-ratio: 1;
+  background: linear-gradient(180deg, #fff 0%, #eef2f9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.liqui-highlight-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 12px;
+}
+
+.liqui-highlight-card__media img.is-broken {
+  opacity: 0.35;
+  object-fit: contain;
+}
+
+.liqui-highlight-card__body {
+  gap: 6px;
+}
+
+.liqui-highlight-card__tr {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+.liqui-highlight-card h3 {
+  font-size: 0.98rem;
+  line-height: 1.35;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.7em;
+}
+
+.liqui-highlight-card__body > p {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 3.6em;
+}
+
+.liqui-highlight-card__usecase {
+  font-size: 0.78rem !important;
+  min-height: 0 !important;
+  -webkit-line-clamp: 2 !important;
+}
+
+.liqui-highlight-card__actions {
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.liqui-highlight-card__actions .btn {
+  flex: 1 1 auto;
+  justify-content: center;
+  min-height: 42px;
+  font-size: 0.82rem;
+}
+
+.liqui-series-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  min-height: 100%;
+}
+
+.liqui-series-card__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1.2;
+  background: #f3f5fa;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.liqui-series-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 8px;
+}
+
+.liqui-series-card__img.is-broken {
+  opacity: 0.3;
+}
+
+.liqui-series-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.liqui-series-card__body strong {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 3.9em;
+}
+
+.liqui-series-grid {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  align-items: stretch;
+}
+
+.liqui-catalog-toolbar {
+  margin-bottom: 1.25rem;
+}
+
+.liqui-catalog-search {
+  display: block;
+  max-width: 420px;
+}
+
+.liqui-catalog-search input {
+  width: 100%;
+  min-height: 46px;
+  padding: 0.7rem 1rem;
+  border: 1px solid #d0d8ea;
+  border-radius: 999px;
+  background: #fff;
+  font: inherit;
+  color: inherit;
+}
+
+.liqui-catalog-search input:focus {
+  outline: 2px solid rgba(0, 51, 153, 0.25);
+  border-color: var(--brand-accent);
+}
+
+.liqui-catalog-empty {
+  margin: 0 0 1rem;
+  padding: 0.85rem 1rem;
+  background: #fff8f8;
+  border: 1px solid #f5c2c7;
+  border-radius: var(--radius);
+  color: #8a1020;
+  font-size: var(--text-sm);
+}
+
+.liqui-cat-nav {
+  top: var(--header-offset, 64px);
+  backdrop-filter: blur(8px);
+  background: rgba(238, 242, 249, 0.94);
+}
+
+.liqui-page .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 1100px) {
+  .liqui-highlights {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .liqui-highlights {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .liqui-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .liqui-catalog-search {
+    max-width: none;
+  }
+}
 .liqui-iran-grid, .liqui-supply-grid { grid-template-columns: repeat(3, 1fr); }
 .liqui-industries-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
 

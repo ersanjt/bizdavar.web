@@ -394,11 +394,15 @@
         ? 'VEGA sensor supply — Bizdavar Group'
         : 'تامین سنسورهای VEGA — بیزدوار گروپ';
 
+    const inLanguage = locale === 'tr' ? 'tr-TR' : locale === 'en' ? 'en' : 'fa-IR';
+    const sellerName = locale === 'tr' || locale === 'en' ? 'Bizdavar Group' : (C.siteName || 'بیزدوار گروپ');
+
     const ld = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       name: listName,
       description: V.brand.description || V.brand.descriptionFa,
+      inLanguage,
       numberOfItems: V.featuredProducts.length,
       areaServed: ['IR', 'TR', 'AM', 'AE', 'DE'],
       itemListElement: V.featuredProducts.map((p, i) => ({
@@ -411,12 +415,13 @@
           image: `${C.baseUrl}/${p.image}`,
           brand: { '@type': 'Brand', name: 'VEGA' },
           category: p.series,
+          inLanguage,
           areaServed: ['IR', 'TR'],
           offers: {
             '@type': 'Offer',
             availability: p.priceEur != null ? 'https://schema.org/InStock' : 'https://schema.org/PreOrder',
             ...(p.priceEur != null ? { price: String(p.priceEur), priceCurrency: 'EUR' } : {}),
-            seller: { '@type': 'Organization', name: C.siteName },
+            seller: { '@type': 'Organization', name: sellerName },
             areaServed: ['IR', 'TR']
           }
         }
