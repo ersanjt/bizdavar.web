@@ -37,6 +37,7 @@ window.BIZDAVAR_CONFIG = {
     digiSystem: 'pages/digi-system.html',
     teraoka: 'pages/teraoka.html',
     liquiMoly: 'pages/liqui-moly.html',
+    fieldTech: 'pages/field-tech.html',
     articles: {
       digitalMarketing: 'pages/articles/digital-marketing.html',
       whatIsDigitalMarketing: 'pages/articles/what-is-digital-marketing.html',
@@ -157,9 +158,8 @@ window.BIZDAVAR_CONFIG = {
     overviewRoute: 'services',
     defaultTab: 'digital',
     featured: {
-      route: 'services',
-      hash: 'field-tech',
-      page: 'services',
+      route: 'fieldTech',
+      page: 'field-tech',
       labelKey: 'nav.serviceField',
       descKey: 'nav.serviceFieldFeaturedDesc',
       kickerKey: 'nav.servicesMegaHint'
@@ -202,7 +202,7 @@ window.BIZDAVAR_CONFIG = {
             id: 'field',
             labelKey: 'nav.servicesGroupField',
             items: [
-              { route: 'services', hash: 'field-tech', page: 'services', labelKey: 'nav.serviceField', descKey: 'nav.serviceFieldDesc', badgeKey: 'nav.serviceFieldBadge' }
+              { route: 'fieldTech', page: 'field-tech', labelKey: 'nav.serviceField', descKey: 'nav.serviceFieldDesc', badgeKey: 'nav.serviceFieldBadge' }
             ]
           }
         ]
@@ -374,7 +374,7 @@ window.BIZDAVAR_CONFIG = {
     { id: 'software-apps', title: 'اپلیکیشن و سامانه', slug: 'pages/services.html#software-apps' },
     { id: 'server-ops', title: 'مدیریت سرور', slug: 'pages/services.html#server-ops' },
     { id: 'smm', title: 'مدیریت SMM', slug: 'pages/services.html#smm' },
-    { id: 'field-tech', title: 'خدمات فنی و ساختمانی', slug: 'pages/services.html#field-tech' }
+    { id: 'field-tech', title: 'خدمات فنی و ساختمانی', slug: 'pages/field-tech.html' }
   ],
 
   blogPosts: [

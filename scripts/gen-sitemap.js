@@ -37,6 +37,7 @@ const PAGES = [
   { path: '/pages/portfolio', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/blog', changefreq: 'weekly', priority: 0.75, lastmod: SITE_UPDATE },
   { path: '/pages/fast', changefreq: 'monthly', priority: 0.85, lastmod: SITE_UPDATE },
+  { path: '/pages/field-tech', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
   { path: '/pages/vega', changefreq: 'monthly', priority: 0.9, lastmod: '2026-08-12' },
   { path: '/pages/prosense', changefreq: 'monthly', priority: 0.9, lastmod: '2026-08-12' },
   { path: '/pages/liqui-moly', changefreq: 'weekly', priority: 0.9, lastmod: '2026-08-12' },

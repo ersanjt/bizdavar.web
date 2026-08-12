@@ -50,6 +50,12 @@
       seoDescription: 'Услуги Bizdavar в Стамбуле и Тебризе: маркетинг, web/web app, Android и iOS, серверы, SMM, CCTV, проводка и скрытое освещение.',
       seoKeywords: 'услуги Bizdavar, цифровой маркетинг, веб-дизайн, SMM, CCTV Стамбул'
     },
+    fieldTech: {
+      crumb: 'Технические услуги',
+      seoTitle: 'Технические услуги | CCTV, проводка и скрытое освещение — Тебриз и Стамбул',
+      seoDescription: 'Установка CCTV, проводка и скрытое освещение в Тебризе и Стамбуле — осмотр, план, монтаж и гарантия. WhatsApp техслужбы: +98 936 411 5151.',
+      seoKeywords: 'CCTV Тебриз, CCTV Стамбул, проводка, скрытое освещение, Bizdavar'
+    },
     products: {
       crumb: 'Продукты',
       seoTitle: 'Продукты Bizdavar | FXGuard CRM, Fast Web Studio и промышленные поставки',
@@ -91,6 +97,156 @@
       seoTitle: 'Fast Web Studio | сайт за 5 дней — Bizdavar',
       seoDescription: 'Bizdavar Fast Web Studio — сайт за 5 дней. Базовый $99, магазин $199, pro $299. RTL, WhatsApp, WooCommerce и базовое SEO.',
       seoKeywords: 'Fast Web Studio, веб-дизайн, WooCommerce, Bizdavar'
+    },
+    blog: {
+      crumb: 'Блог',
+      seoTitle: 'Блог Bizdavar | маркетинг, веб-дизайн и промышленные поставки',
+      seoDescription: 'Статьи Bizdavar: цифровой маркетинг, Fast Web Studio, датчики VEGA, промышленные поставки и рост бизнеса для рынков Ирана и Турции.',
+      seoKeywords: 'блог Bizdavar, цифровой маркетинг, веб-дизайн, VEGA, промышленные поставки'
+    },
+    privacy: {
+      crumb: 'Конфиденциальность',
+      seoTitle: 'Политика конфиденциальности | Bizdavar Group',
+      seoDescription: 'Политика конфиденциальности сайта Bizdavar Group — данные формы контакта, язык и определение региона.',
+      seoKeywords: 'политика конфиденциальности, privacy, Bizdavar'
+    },
+    teltonika: {
+      crumb: 'Teltonika',
+      seoTitle: 'Купить GPS-трекер Teltonika | FMB920 от $29 — Bizdavar',
+      seoDescription: 'Поставка оригинальных GPS и Fleet Telematics Teltonika. FMB920 от $29, FMC650, DualCam, EYE Mesh — консультация и логистика — Bizdavar Group.',
+      seoKeywords: 'Teltonika, GPS трекер, FMB920 цена, fleet telematics, Bizdavar'
+    },
+    gamak: {
+      crumb: 'Gamak',
+      seoTitle: 'Купить электродвигатель Gamak | IE2/IE3 — Bizdavar Group',
+      seoDescription: 'Оригинальные промышленные электродвигатели Gamak из Турции. GM/GMB, IE2/IE3, фланец B3/B5 — техконсультация, проформа и логистика — Bizdavar Group.',
+      seoKeywords: 'Gamak, электродвигатель, IE2 IE3, промышленный мотор, Bizdavar'
+    },
+    digiSystem: {
+      crumb: 'Digi System',
+      seoTitle: 'Купить Digi System | торговые весы и POS | Bizdavar',
+      seoDescription: 'Поставка весов и POS Digi System — SM-6000, W-5600SRX, LX-5600 и AW-5600. Подбор модели, прозрачная проформа и логистика — Bizdavar Group.',
+      seoKeywords: 'Digi System, DIGI, SM-6000, POS, торговые весы, Bizdavar'
+    },
+    teraoka: {
+      crumb: 'Teraoka',
+      seoTitle: 'Купить Teraoka Seiko | весы и POS — Bizdavar Group',
+      seoDescription: 'Поставка весов, этикетирования и POS Teraoka Seiko — многоязычная консультация, проформа и международная логистика — Bizdavar Group.',
+      seoKeywords: 'Teraoka, весы, POS, этикетирование, Bizdavar'
+    },
+    bzDiamond: {
+      crumb: 'BZ Diamond',
+      seoTitle: 'Кейс дизайна магазина WooCommerce | веб и SEO — Bizdavar',
+      seoDescription: 'Кейс интернет-магазина: WooCommerce, корпоративная почта, SEO и техподдержка — услуги веб-дизайна Bizdavar Group.',
+      seoKeywords: 'WooCommerce магазин, кейс веб-дизайна, SEO, Bizdavar'
+    },
+    supplifyTrade: {
+      crumb: 'Supplify Trade',
+      seoTitle: 'Кейс B2B сайта международной торговли | SEO — Bizdavar',
+      seoDescription: 'Кейс корпоративного B2B сайта: sourcing и международная торговля, структура контента, SEO и техподдержка — Bizdavar Group.',
+      seoKeywords: 'B2B веб-дизайн, международная торговля, кейс сайта, SEO, Bizdavar'
+    },
+    kayaOne: {
+      crumb: 'Kaya One',
+      seoTitle: 'Кейс сайта промышленной торговли | корпоративный сайт — Bizdavar',
+      seoDescription: 'Кейс корпоративного сайта для торговли и промышленных решений: структура контента, SEO и техподдержка — Bizdavar Group.',
+      seoKeywords: 'корпоративный веб-дизайн, промышленная торговля, кейс сайта, Bizdavar'
+    },
+    smmTurk: {
+      crumb: 'SMM Turk',
+      seoTitle: 'Кейс панели SMM | UI и SEO — Bizdavar',
+      seoDescription: 'Кейс панели и веб-дизайна SMM: интерфейс, страницы конверсии, SEO и техподдержка — Bizdavar Group.',
+      seoKeywords: 'дизайн панели SMM, кейс веб-дизайна, цифровой маркетинг, Bizdavar'
+    },
+    fxguardExchange: {
+      crumb: 'FXGuard Exchange',
+      seoTitle: 'Кейс FXGuard Exchange | платформа обмена томан–лира — Bizdavar',
+      seoDescription: 'Кейс дизайна FXGuard Exchange — обмен IRR ↔ TRY, живые курсы, KYC и отслеживание заказов. Разработано Bizdavar Group.',
+      seoKeywords: 'FXGuard Exchange, томан лира, финтех, курсы валют, Bizdavar'
+    },
+    biztejarat: {
+      crumb: 'BizTejarat',
+      seoTitle: 'Кейс промышленного SMM | B2B-контент — Bizdavar',
+      seoDescription: 'Прошлый кейс Instagram SMM: промышленный B2B-контент — проект больше не активен. Выполнено Bizdavar Group.',
+      seoKeywords: 'промышленный SMM, B2B контент, Instagram, Bizdavar'
+    },
+    biztab: {
+      crumb: 'BizTab',
+      seoTitle: 'BizTab | бесконтактный настенный термометр — продукт Bizdavar',
+      seoDescription: 'BizTab — первый бесконтактный настенный термометр, разработанный в Тебризе командой Bizdavar. Погрешность менее 0,3°C, одобрен Университетом Тебриза.',
+      seoKeywords: 'BizTab, бесконтактный термометр, IoT, Bizdavar, Тебриз'
+    },
+    bizsanitizerV5: {
+      crumb: 'BizClean V5',
+      seoTitle: 'BizClean V5 | автоматический санитайзер рук — Bizdavar',
+      seoDescription: 'BizClean V5 — автоматический санитайзер рук с ультразвуковым датчиком. Разработан командой Bizdavar в период COVID-19, доступен на Digikala.',
+      seoKeywords: 'BizClean V5, санитайзер рук, Bizdavar, Digikala'
+    },
+    fxguard: {
+      crumb: 'FXGuard',
+      seoTitle: 'FXGuard WhatsApp CRM | от $49/мес · бесплатное демо — Bizdavar',
+      seoDescription: 'FXGuard WhatsApp CRM — общий inbox, клиенты, тикеты, филиалы и 2FA. Cloud от $49/мес, лицензия или Managed. Бесплатное демо app.fxguard.io.',
+      seoKeywords: 'FXGuard, WhatsApp CRM, общий inbox, Bizdavar, fxguard.io'
+    },
+    fxguardAccounting: {
+      crumb: 'FXGuard Accounting',
+      seoTitle: 'FXGuard Accounting | бухгалтерия — Bizdavar',
+      seoDescription: 'FXGuard Accounting — бухгалтерия для финансов, обменников и SME. Часть suite FXGuard от Bizdavar Group.',
+      seoKeywords: 'FXGuard Accounting, бухгалтерское ПО, Bizdavar, fxguard.io'
+    },
+    bizswap: {
+      crumb: 'BizSwap',
+      seoTitle: 'BizSwap | пресейл и своп токенов Web3 — продукт Bizdavar',
+      seoDescription: 'BizSwap — подключение кошелька, on-chain swap, пресейл токена, slippage и админ-панель BEP-20. Разработано командой Bizdavar.',
+      seoKeywords: 'BizSwap, DeFi, Web3, token swap, presale, BEP-20, Bizdavar'
+    },
+    articleDigitalMarketing: {
+      crumb: 'Цифровой маркетинг',
+      seoTitle: 'Как цифровой маркетинг увеличивает продажи? | Bizdavar',
+      seoDescription: 'Практический цифровой маркетинг для роста продаж: CRO, рекламные кампании, SEO и автоматизация. Руководство Bizdavar Group.',
+      seoKeywords: 'цифровой маркетинг, рост продаж, CRO, SEO, Bizdavar'
+    },
+    articleWhatIsDm: {
+      crumb: 'Что такое цифровой маркетинг',
+      seoTitle: 'Что такое цифровой маркетинг? | Полное руководство — Bizdavar',
+      seoDescription: 'Определение цифрового маркетинга, каналы (SEO, реклама, SMM) и роль в росте бизнеса. Руководство Bizdavar Group.',
+      seoKeywords: 'что такое цифровой маркетинг, SEO, SMM, Bizdavar'
+    },
+    articleSmm: {
+      crumb: 'SMM',
+      seoTitle: 'Управление соцсетями (SMM) | Bizdavar',
+      seoDescription: 'Стратегия SMM: контент, календарь публикаций, дизайн и таргетированная реклама. Руководство Bizdavar Group.',
+      seoKeywords: 'SMM, управление соцсетями, Instagram, LinkedIn, Bizdavar'
+    },
+    articleFastStudio: {
+      crumb: 'Fast Studio',
+      seoTitle: 'Запуск сайта за 5 дней — гайд Fast Studio | Bizdavar',
+      seoDescription: 'Полный гайд Fast Web Studio: тарифы $99–$299, сдача за 5 дней, WooCommerce и базовое SEO.',
+      seoKeywords: 'Fast Web Studio, сайт за 5 дней, WooCommerce, Bizdavar'
+    },
+    articleIndustrialSensors: {
+      crumb: 'Датчики VEGA',
+      seoTitle: 'Выбор промышленных датчиков VEGA — гайд поставки | Bizdavar',
+      seoDescription: 'Гайд по датчикам VEGA, насосам P-Series и SafeVader. Техконсультация и международная поставка — Bizdavar Group.',
+      seoKeywords: 'датчик VEGA, промышленное оборудование, Bizdavar'
+    },
+    articleAboutBizdavar: {
+      crumb: 'О Bizdavar Group',
+      seoTitle: 'Что такое Bizdavar Group? — история, команда, 11 стран | Полный гайд',
+      seoDescription: 'Профиль Bizdavar Group: основатель Ersan Jahed Tabrizi, 100+ проектов, финтех, веб-дизайн и поставки VEGA/Prosense в 11 странах.',
+      seoKeywords: 'Bizdavar Group, история, Ersan Jahed Tabrizi'
+    },
+    articleVegaSupplyIran: {
+      crumb: 'Поставка VEGA в Иран',
+      seoTitle: 'Поставка датчиков VEGA в Иран из Стамбула | Bizdavar',
+      seoDescription: 'Как закупить оригинальные датчики VEGA для проектов в Иране — консультация, проформа и логистика из офиса Bizdavar в Стамбуле.',
+      seoKeywords: 'купить VEGA Иран, поставка VEGA, VEGAPULS, Bizdavar Стамбул'
+    },
+    articleMultilingualWeb: {
+      crumb: 'Многоязычный сайт',
+      seoTitle: 'Многоязычные сайты для Ирана и Турции | Bizdavar',
+      seoDescription: 'Сайты fa/tr/en с hreflang и локальным доверием — гайд Bizdavar для бизнеса на двух рынках.',
+      seoKeywords: 'многоязычный сайт, веб-дизайн Стамбул, hreflang, Bizdavar'
     }
   };
 
@@ -112,6 +268,12 @@
       seoTitle: 'الخدمات | تسويق رقمي وتصميم مواقع وSMM وتركيبات فنية',
       seoDescription: 'خدمات Bizdavar في إسطنبول وتبريز: تسويق رقمي، ويب/web app، Android وiOS، خوادم، SMM، كاميرات، تمديدات وإضاءة مخفية.',
       seoKeywords: 'خدمات Bizdavar, تسويق رقمي, تصميم مواقع, SMM, كاميرات إسطنبول'
+    },
+    fieldTech: {
+      crumb: 'خدمات فنية',
+      seoTitle: 'خدمات فنية | كاميرات وتمديدات وإضاءة مخفية — تبريز وإسطنبول',
+      seoDescription: 'تركيب كاميرات مراقبة وتمديدات وإضاءة مخفية في تبريز وإسطنبول — معاينة وخطة وتركيب مع ضمان. واتساب فني: +98 936 411 5151.',
+      seoKeywords: 'كاميرات تبريز, كاميرات إسطنبول, تمديدات, إضاءة مخفية, Bizdavar'
     },
     products: {
       crumb: 'المنتجات',
@@ -154,6 +316,156 @@
       seoTitle: 'Fast Web Studio | موقع احترافي خلال ٥ أيام — Bizdavar',
       seoDescription: 'Bizdavar Fast Web Studio — موقع خلال ٥ أيام. أساسي $99، متجر $199، احترافي $299. RTL وواتساب وWooCommerce وSEO أساسي.',
       seoKeywords: 'Fast Web Studio, تصميم مواقع, WooCommerce, Bizdavar'
+    },
+    blog: {
+      crumb: 'المدونة',
+      seoTitle: 'مدونة Bizdavar | تسويق وتصميم مواقع وتوريد صناعي',
+      seoDescription: 'مقالات Bizdavar: تسويق رقمي، Fast Web Studio، حساسات VEGA، توريد صناعي ونمو الأعمال لأسواق إيران وتركيا.',
+      seoKeywords: 'مدونة Bizdavar, تسويق رقمي, تصميم مواقع, VEGA, توريد صناعي'
+    },
+    privacy: {
+      crumb: 'الخصوصية',
+      seoTitle: 'سياسة الخصوصية | Bizdavar Group',
+      seoDescription: 'سياسة خصوصية موقع Bizdavar Group — بيانات نموذج الاتصال واللغة واكتشاف المنطقة.',
+      seoKeywords: 'سياسة الخصوصية, privacy, Bizdavar'
+    },
+    teltonika: {
+      crumb: 'Teltonika',
+      seoTitle: 'شراء جهاز تتبع Teltonika | FMB920 من ٢٩$ — Bizdavar',
+      seoDescription: 'توريد GPS وFleet Telematics من Teltonika الأصلية. FMB920 من ٢٩$، FMC650، DualCam، EYE Mesh — استشارة ولوجستيات — Bizdavar Group.',
+      seoKeywords: 'Teltonika, جهاز تتبع GPS, سعر FMB920, fleet telematics, Bizdavar'
+    },
+    gamak: {
+      crumb: 'Gamak',
+      seoTitle: 'شراء موتور كهربائي Gamak | IE2/IE3 — Bizdavar Group',
+      seoDescription: 'موتورات Gamak الصناعية الأصلية من تركيا. GM/GMB، IE2/IE3، شفة B3/B5 — استشارة فنية وفاتورة مبدئية ولوجستيات — Bizdavar Group.',
+      seoKeywords: 'Gamak, موتور كهربائي, IE2 IE3, موتور صناعي, Bizdavar'
+    },
+    digiSystem: {
+      crumb: 'Digi System',
+      seoTitle: 'شراء Digi System | موازين وPOS للتجزئة | Bizdavar',
+      seoDescription: 'توريد موازين وPOS من Digi System — SM-6000، W-5600SRX، LX-5600 وAW-5600. اختيار الموديل وفاتورة شفافة ولوجستيات — Bizdavar Group.',
+      seoKeywords: 'Digi System, DIGI, SM-6000, POS, موازين تجزئة, Bizdavar'
+    },
+    teraoka: {
+      crumb: 'Teraoka',
+      seoTitle: 'شراء Teraoka Seiko | موازين وPOS — Bizdavar Group',
+      seoDescription: 'توريد موازين وتوسيم وPOS من Teraoka Seiko — استشارة متعددة اللغات وفاتورة مبدئية ولوجستيات دولية — Bizdavar Group.',
+      seoKeywords: 'Teraoka, موازين, POS, توسيم, Bizdavar'
+    },
+    bzDiamond: {
+      crumb: 'BZ Diamond',
+      seoTitle: 'نموذج تصميم متجر WooCommerce | ويب وSEO — Bizdavar',
+      seoDescription: 'نموذج متجر إلكتروني: WooCommerce، بريد مؤسسي، SEO ودعم فني — خدمات تصميم الويب من Bizdavar Group.',
+      seoKeywords: 'متجر WooCommerce, نموذج تصميم مواقع, SEO, Bizdavar'
+    },
+    supplifyTrade: {
+      crumb: 'Supplify Trade',
+      seoTitle: 'نموذج موقع B2B للتجارة الدولية | SEO — Bizdavar',
+      seoDescription: 'نموذج موقع B2B مؤسسي: sourcing وتجارة دولية، هيكل محتوى، SEO ودعم فني — Bizdavar Group.',
+      seoKeywords: 'تصميم ويب B2B, تجارة دولية, نموذج موقع, SEO, Bizdavar'
+    },
+    kayaOne: {
+      crumb: 'Kaya One',
+      seoTitle: 'نموذج موقع تجارة صناعية | موقع مؤسسي — Bizdavar',
+      seoDescription: 'نموذج موقع مؤسسي للتجارة والحلول الصناعية: هيكل محتوى، SEO ودعم فني — Bizdavar Group.',
+      seoKeywords: 'تصميم ويب مؤسسي, تجارة صناعية, نموذج موقع, Bizdavar'
+    },
+    smmTurk: {
+      crumb: 'SMM Turk',
+      seoTitle: 'نموذج لوحة SMM | واجهة وSEO — Bizdavar',
+      seoDescription: 'نموذج لوحة وتصميم ويب لخدمات SMM: واجهة، صفحات تحويل، SEO ودعم فني — Bizdavar Group.',
+      seoKeywords: 'تصميم لوحة SMM, نموذج تصميم مواقع, تسويق رقمي, Bizdavar'
+    },
+    fxguardExchange: {
+      crumb: 'FXGuard Exchange',
+      seoTitle: 'نموذج FXGuard Exchange | منصة صرف تومان–ليرة — Bizdavar',
+      seoDescription: 'نموذج تصميم FXGuard Exchange — صرف IRR ↔ TRY بأسعار حية وKYC وتتبع الطلبات. تطوير Bizdavar Group.',
+      seoKeywords: 'FXGuard Exchange, تومان ليرة, fintech, أسعار صرف, Bizdavar'
+    },
+    biztejarat: {
+      crumb: 'BizTejarat',
+      seoTitle: 'نموذج SMM صناعي | محتوى B2B — Bizdavar',
+      seoDescription: 'نموذج سابق لإدارة Instagram: محتوى منتجات صناعية B2B — المشروع لم يعد نشطاً. نفذته Bizdavar Group.',
+      seoKeywords: 'SMM صناعي, محتوى B2B, إدارة Instagram, Bizdavar'
+    },
+    biztab: {
+      crumb: 'BizTab',
+      seoTitle: 'BizTab | مقياس حرارة جداري بلا تلامس — منتج Bizdavar',
+      seoDescription: 'BizTab — أول مقياس حرارة جداري بلا تلامس صُمم في تبريز بواسطة فريق Bizdavar. خطأ أقل من ٠٫٣°م، معتمد من جامعة تبريز.',
+      seoKeywords: 'BizTab, مقياس حرارة بلا تلامس, IoT, Bizdavar, تبريز'
+    },
+    bizsanitizerV5: {
+      crumb: 'BizClean V5',
+      seoTitle: 'BizClean V5 | معقم يدين آلي — Bizdavar',
+      seoDescription: 'BizClean V5 — معقم يدين آلي بمستشعر فوق صوتي. صممه فريق Bizdavar خلال COVID-19، متوفر على Digikala.',
+      seoKeywords: 'BizClean V5, معقم يدين, Bizdavar, Digikala'
+    },
+    fxguard: {
+      crumb: 'FXGuard',
+      seoTitle: 'FXGuard WhatsApp CRM | من ٤٩$/شهر · عرض تجريبي مجاني — Bizdavar',
+      seoDescription: 'FXGuard WhatsApp CRM — صندوق وارد مشترك، عملاء، تذاكر، فروع و2FA. Cloud من ٤٩$/شهر أو ترخيص أو Managed. عرض تجريبي مجاني app.fxguard.io.',
+      seoKeywords: 'FXGuard, WhatsApp CRM, صندوق وارد مشترك, Bizdavar, fxguard.io'
+    },
+    fxguardAccounting: {
+      crumb: 'FXGuard Accounting',
+      seoTitle: 'FXGuard Accounting | نظام محاسبة — Bizdavar',
+      seoDescription: 'FXGuard Accounting — محاسبة لفرق المالية والصرافة والشركات الصغيرة. جزء من suite FXGuard من Bizdavar Group.',
+      seoKeywords: 'FXGuard Accounting, برنامج محاسبة, Bizdavar, fxguard.io'
+    },
+    bizswap: {
+      crumb: 'BizSwap',
+      seoTitle: 'BizSwap | بيع مسبق ومبادلة توكن Web3 — منتج Bizdavar',
+      seoDescription: 'BizSwap — ربط محفظة، مبادلة on-chain، بيع مسبق للتوكن، slippage ولوحة إدارة BEP-20. تطوير فريق Bizdavar.',
+      seoKeywords: 'BizSwap, DeFi, Web3, token swap, presale, BEP-20, Bizdavar'
+    },
+    articleDigitalMarketing: {
+      crumb: 'التسويق الرقمي',
+      seoTitle: 'كيف يزيد التسويق الرقمي المبيعات؟ | Bizdavar',
+      seoDescription: 'تسويق رقمي عملي لنمو المبيعات: CRO، حملات إعلانية، SEO وأتمتة. دليل Bizdavar Group.',
+      seoKeywords: 'تسويق رقمي, نمو المبيعات, CRO, SEO, Bizdavar'
+    },
+    articleWhatIsDm: {
+      crumb: 'ما هو التسويق الرقمي',
+      seoTitle: 'ما هو التسويق الرقمي؟ | دليل كامل — Bizdavar',
+      seoDescription: 'تعريف التسويق الرقمي والقنوات (SEO، إعلانات، SMM) وأهميته لنمو الأعمال. دليل Bizdavar Group.',
+      seoKeywords: 'ما هو التسويق الرقمي, SEO, SMM, Bizdavar'
+    },
+    articleSmm: {
+      crumb: 'SMM',
+      seoTitle: 'إدارة وسائل التواصل (SMM) | Bizdavar',
+      seoDescription: 'استراتيجية SMM: إنشاء محتوى، تقويم نشر، تصميم وإعلانات مستهدفة. دليل Bizdavar Group.',
+      seoKeywords: 'SMM, إدارة وسائل التواصل, Instagram, LinkedIn, Bizdavar'
+    },
+    articleFastStudio: {
+      crumb: 'Fast Studio',
+      seoTitle: 'إطلاق موقع خلال ٥ أيام — دليل Fast Studio | Bizdavar',
+      seoDescription: 'دليل Fast Web Studio الكامل: خطط ٩٩$–٢٩٩$، تسليم خلال ٥ أيام، WooCommerce وSEO أساسي.',
+      seoKeywords: 'Fast Web Studio, موقع خلال ٥ أيام, WooCommerce, Bizdavar'
+    },
+    articleIndustrialSensors: {
+      crumb: 'حساسات VEGA',
+      seoTitle: 'اختيار حساسات VEGA الصناعية — دليل التوريد | Bizdavar',
+      seoDescription: 'دليل حساسات VEGA ومضخات P-Series وSafeVader. استشارة فنية وتوريد دولي — Bizdavar Group.',
+      seoKeywords: 'حساس VEGA, معدات صناعية, Bizdavar'
+    },
+    articleAboutBizdavar: {
+      crumb: 'عن Bizdavar Group',
+      seoTitle: 'ما هي Bizdavar Group؟ — التاريخ والفريق و١١ دولة | دليل كامل',
+      seoDescription: 'ملف Bizdavar Group: المؤسس Ersan Jahed Tabrizi، أكثر من ١٠٠ مشروع، fintech وتصميم ويب وتوريد VEGA/Prosense في ١١ دولة.',
+      seoKeywords: 'Bizdavar Group, التاريخ, Ersan Jahed Tabrizi'
+    },
+    articleVegaSupplyIran: {
+      crumb: 'توريد VEGA لإيران',
+      seoTitle: 'توريد حساسات VEGA إلى إيران من إسطنبول | Bizdavar',
+      seoDescription: 'كيف تشتري حساسات VEGA الأصلية لمشاريع إيران — استشارة وفاتورة مبدئية ولوجستيات من مكتب Bizdavar في إسطنبول.',
+      seoKeywords: 'شراء VEGA إيران, توريد VEGA, VEGAPULS, Bizdavar إسطنبول'
+    },
+    articleMultilingualWeb: {
+      crumb: 'موقع متعدد اللغات',
+      seoTitle: 'مواقع متعددة اللغات لإيران وتركيا | Bizdavar',
+      seoDescription: 'مواقع fa/tr/en مع hreflang وثقة محلية — دليل Bizdavar للأعمال ذات السوقين.',
+      seoKeywords: 'موقع متعدد اللغات, تصميم مواقع إسطنبول, hreflang, Bizdavar'
     }
   };
 

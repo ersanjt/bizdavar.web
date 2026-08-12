@@ -21,6 +21,11 @@
         seoDescription: 'خدمات بیزدوار در استانبول و تبریز: بازاریابی دیجیتال، طراحی وب و وب‌اپ، اپ اندروید/iOS، مدیریت سرور، SMM، CCTV، سیم‌کشی و نورمخفی — هماهنگی واتساپ تخصصی.',
         seoKeywords: 'خدمات بیزدوار, بازاریابی دیجیتال, طراحی وب, SMM, مدیریت سرور, CCTV استانبول, خدمات فنی تبریز'
       },
+      fieldTech: {
+        seoTitle: 'خدمات فنی بیزدوار | CCTV، سیم‌کشی و نورمخفی — تبریز و استانبول',
+        seoDescription: 'نصب دوربین مدار بسته، سیم‌کشی ساختمان و نورمخفی در تبریز و استانبول — بازدید فنی، پیشنهاد طرح، اجرا و گارانتی توسط تیم فنی بیزدوار. هماهنگی واتساپ +98 936 411 5151.',
+        seoKeywords: 'نصب دوربین مدار بسته تبریز, CCTV استانبول, سیم‌کشی ساختمان, نورمخفی, خدمات فنی بیزدوار'
+      },
       products: {
         seoTitle: 'محصولات بیزدوار | FXGuard CRM، Fast Web Studio و تامین صنعتی',
         seoDescription: 'محصولات بیزدوار: FXGuard WhatsApp CRM و Accounting، Fast Web Studio، BizSwap، به‌همراه تامین برندهای صنعتی VEGA، Prosense و Liqui Moly.',
@@ -198,6 +203,11 @@
         seoDescription: 'Bizdavar hizmetleri — İstanbul ve Tebriz: dijital pazarlama, web/web app, Android-iOS, sunucu, SMM, CCTV, tesisat ve gizli aydınlatma. Teknik WhatsApp ile koordinasyon.',
         seoKeywords: 'Bizdavar hizmetler, dijital pazarlama, web tasarım, SMM, CCTV İstanbul, teknik hizmet'
       },
+      fieldTech: {
+        seoTitle: 'Teknik hizmetler | CCTV, tesisat ve gizli aydınlatma — Tebriz & İstanbul',
+        seoDescription: 'Tebriz ve İstanbul’da CCTV, bina tesisatı ve gizli aydınlatma — keşif, plan, kurulum ve garanti. Bizdavar teknik WhatsApp: +98 936 411 5151.',
+        seoKeywords: 'CCTV Tebriz, CCTV İstanbul, bina tesisatı, gizli aydınlatma, Bizdavar teknik'
+      },
       products: {
         seoTitle: 'Bizdavar ürünleri | FXGuard CRM, Fast Web Studio ve endüstriyel tedarik',
         seoDescription: 'Bizdavar ürünleri: FXGuard WhatsApp CRM ve Accounting, Fast Web Studio, BizSwap; ayrıca VEGA, Prosense ve Liqui Moly endüstriyel tedarik.',
@@ -374,6 +384,11 @@
         seoTitle: 'Services | Digital marketing, web design, SMM & technical installs',
         seoDescription: 'Bizdavar services in Istanbul and Tabriz: digital marketing, web/web apps, Android & iOS, servers, SMM, CCTV, wiring and cove lighting — via dedicated technical WhatsApp.',
         seoKeywords: 'Bizdavar services, digital marketing, web design, SMM, CCTV Istanbul, technical installs'
+      },
+      fieldTech: {
+        seoTitle: 'Technical services | CCTV, wiring & cove lighting — Tabriz & Istanbul',
+        seoDescription: 'CCTV, building wiring and cove lighting in Tabriz and Istanbul — survey, plan, install and warranty by Bizdavar. Technical WhatsApp: +98 936 411 5151.',
+        seoKeywords: 'CCTV Tabriz, CCTV Istanbul, building wiring, cove lighting, Bizdavar technical'
       },
       products: {
         seoTitle: 'Bizdavar products | FXGuard CRM, Fast Web Studio & industrial supply',

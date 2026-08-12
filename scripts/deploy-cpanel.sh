@@ -35,6 +35,11 @@ else
   /bin/cp -f index.html robots.txt sitemap.xml .htaccess "$WEB_ROOT/"
   /bin/cp -a assets/. "$WEB_ROOT/assets/"
   /bin/cp -a pages/. "$WEB_ROOT/pages/"
+  for loc in tr en ru ar; do
+    if [[ -d "$REPO_DIR/$loc" ]]; then
+      /bin/cp -a "$REPO_DIR/$loc" "$WEB_ROOT/"
+    fi
+  done
 fi
 
 echo "[$(date -Iseconds)] Deployed $BRANCH ($(git rev-parse --short HEAD)) to $WEB_ROOT"

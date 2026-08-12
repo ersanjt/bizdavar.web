@@ -65,7 +65,7 @@
       desc: 'دوربین مدار بسته، سیم‌کشی و نورمخفی.',
       icon: 'wrench',
       accent: 'green',
-      href: '#field-tech'
+      href: path('pages/field-tech')
     }
   ];
 
@@ -141,7 +141,7 @@
       title: t('servicesPage.paths.field.title', 'دوربین، سیم‌کشی و نورمخفی'),
       desc: t('servicesPage.paths.field.desc', 'نصب و اجرای میدانی در تبریز و استانبول — هماهنگی مستقیم از واتساپ خدمات فنی.'),
       cta: t('servicesPage.paths.field.cta', 'رفتن به خدمات فنی'),
-      href: '#field-tech'
+      href: path('pages/field-tech')
     };
     el.innerHTML = `
       <a class="services-path services-path--digital services-reveal" href="${digital.href}">

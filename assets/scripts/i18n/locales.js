@@ -400,6 +400,7 @@ window.BIZDAVAR_LOCALES = {
     pages: {
       about: { crumb: 'درباره ما' },
       services: { crumb: 'خدمات' },
+      fieldTech: { crumb: 'خدمات فنی' },
       portfolio: { crumb: 'نمونه‌کارها' },
       blog: { crumb: 'وبلاگ' },
       contact: {
@@ -835,6 +836,7 @@ window.BIZDAVAR_LOCALES = {
     pages: {
       about: { crumb: 'Hakkımızda' },
       services: { crumb: 'Hizmetler' },
+      fieldTech: { crumb: 'Teknik hizmetler' },
       portfolio: { crumb: 'Portfolyo' },
       blog: { crumb: 'Blog' },
       contact: {
@@ -1270,6 +1272,7 @@ window.BIZDAVAR_LOCALES = {
     pages: {
       about: { crumb: 'About' },
       services: { crumb: 'Services' },
+      fieldTech: { crumb: 'Technical services' },
       portfolio: { crumb: 'Portfolio' },
       blog: { crumb: 'Blog' },
       contact: {

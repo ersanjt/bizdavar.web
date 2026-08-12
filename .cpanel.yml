@@ -8,6 +8,7 @@ deployment:
     - /bin/cp -f index.html robots.txt sitemap.xml .htaccess $DEPLOYPATH/
     - /bin/cp -a assets $DEPLOYPATH/
     - /bin/cp -a pages $DEPLOYPATH/
+    - /bin/cp -a tr en ru ar $DEPLOYPATH/
     - /bin/cp -a api $DEPLOYPATH/
     - /bin/cp -a admin $DEPLOYPATH/
     - /bin/mkdir -p $DEPLOYPATH/storage

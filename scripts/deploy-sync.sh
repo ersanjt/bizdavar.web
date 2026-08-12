@@ -29,8 +29,8 @@ tar -czf "$BACKUP_DIR/bizdavar-public_html-before-sync-$TS.tar.gz" \
   -C "/home/$CPANEL_USER" public_html
 echo "Backup: $BACKUP_DIR/bizdavar-public_html-before-sync-$TS.tar.gz"
 
-echo "===== REMOVE STALE LOCALE DIRS (shadow virtual /tr /en routes) ====="
-rm -rf "$WEB/tr" "$WEB/en" "$WEB/fa" 2>/dev/null || true
+echo "===== REMOVE STALE /fa PREFIX ONLY (Persian is root) ====="
+rm -rf "$WEB/fa" 2>/dev/null || true
 
 echo "===== RSYNC REPO → PUBLIC_HTML ====="
 rsync -av --delete \
@@ -127,12 +127,12 @@ if [[ "$ORIGIN_OK" -eq 0 ]]; then
   echo "WARN: GTM not on origin after 5 attempts — run: curl -sL -H 'Host: bizdavar.com' http://127.0.0.1/ | head -15"
 fi
 
-for locale_path in /tr /en; do
+for locale_path in /tr /en /ru /ar; do
   code=$(origin_http_code "$locale_path")
   if [[ "$code" == "200" ]]; then
     echo "OK: origin ${locale_path} → HTTP 200 (no redirect follow)"
   else
-    echo "WARN: origin ${locale_path} → HTTP ${code} (check .htaccess; rm -rf public_html/tr public_html/en)"
+    echo "WARN: origin ${locale_path} → HTTP ${code} (ensure baked ${locale_path#/}/index.html is deployed)"
   fi
 done
 

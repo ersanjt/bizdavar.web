@@ -113,7 +113,7 @@
         { href: `${pagePath(R.services)}#software-apps`, label: t('footer.softwareApps', 'اپ و سامانه') },
         { href: `${pagePath(R.services)}#server-ops`, label: t('footer.serverOps', 'مدیریت سرور') },
         { href: `${pagePath(R.services)}#smm`, label: t('footer.smm') },
-        { href: `${pagePath(R.services)}#field-tech`, label: t('footer.fieldTech', 'خدمات فنی') }
+        { href: pagePath(R.fieldTech || 'pages/field-tech.html'), label: t('footer.fieldTech', 'خدمات فنی') }
       ],
       brands: brandLinks.length ? brandLinks : [
         { href: pagePath(R.vega), label: 'VEGA' },
@@ -301,7 +301,7 @@
   }
 
   function isServicesActive() {
-    return currentPage === 'services';
+    return currentPage === 'services' || currentPage === 'field-tech';
   }
 
   function resolveServiceTabId(cfg) {

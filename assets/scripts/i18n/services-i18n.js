@@ -1078,9 +1078,9 @@
         btnSecondary: 'مشاهده نمونه‌کارها'
       },
       relatedLinks: [
+        { title: 'خدمات فنی', url: 'field-tech', desc: 'CCTV، سیم‌کشی، نورمخفی' },
         { title: 'Fast Web Studio', url: 'fast', desc: 'طراحی سایت از $99' },
         { title: 'محصولات بیزدوار', url: 'products', desc: 'SaaS و برندهای تامین' },
-        { title: 'نمونه‌کارها', url: 'portfolio', desc: '۳۵ پروژه و برند' },
         { title: 'تماس', url: 'contact', desc: 'فرم و واتساپ' }
       ],
       geoText: 'خدمات دیجیتال و فنی بیزدوار — تمرکز اجرایی تبریز و استانبول؛ واتساپ تخصصی خدمات فنی.'
@@ -1138,9 +1138,9 @@
         btnSecondary: 'Portfolyoyu gör'
       },
       relatedLinks: [
+        { title: 'Teknik hizmetler', url: 'field-tech', desc: 'CCTV, tesisat, aydınlatma' },
         { title: 'Fast Web Studio', url: 'fast', desc: '$99’dan web tasarım' },
         { title: 'Bizdavar ürünleri', url: 'products', desc: 'SaaS ve tedarik markaları' },
-        { title: 'Portfolyo', url: 'portfolio', desc: '35 proje' },
         { title: 'İletişim', url: 'contact', desc: 'Form ve WhatsApp' }
       ]
     },
@@ -1197,9 +1197,9 @@
         btnSecondary: 'View portfolio'
       },
       relatedLinks: [
+        { title: 'Technical services', url: 'field-tech', desc: 'CCTV, wiring, cove lighting' },
         { title: 'Fast Web Studio', url: 'fast', desc: 'Websites from $99' },
         { title: 'Bizdavar products', url: 'products', desc: 'SaaS and supply brands' },
-        { title: 'Portfolio', url: 'portfolio', desc: '35 projects' },
         { title: 'Contact', url: 'contact', desc: 'Form and WhatsApp' }
       ]
     }

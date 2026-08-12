@@ -54,6 +54,7 @@ const PAGE_ROUTES = {
   portfolio: '/pages/portfolio',
   blog: '/pages/blog',
   fast: '/pages/fast',
+  fieldTech: '/pages/field-tech',
   privacy: '/pages/privacy',
   contact: '/pages/contact',
   vega: '/pages/vega',
