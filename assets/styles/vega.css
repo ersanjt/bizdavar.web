@@ -472,6 +472,10 @@ body[data-page="vega"] .section__desc {
   color: #ffde00;
 }
 
+.vega-trust-item__icon .bd-icon {
+  color: #ffde00;
+}
+
 .vega-trust-item strong {
   display: block;
   font-size: var(--text-sm);

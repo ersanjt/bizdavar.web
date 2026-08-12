@@ -1168,7 +1168,7 @@
 
     highlights: [
 
-      { title: 'FMB920 — bestselling 2G tracker', desc: 'Over 3 million units sold — basic tracking, anti-theft and green driving. Base price from $29.', useCase: 'Light fleet, anti-theft, basic GPS tracking', badge: 'Bestseller' },
+      { title: 'FMB920 — bestselling 2G tracker', desc: 'Over 3 million units sold — basic tracking, anti-theft and green driving', useCase: 'Light fleet, anti-theft, basic GPS tracking', badge: 'Bestseller' },
 
       { title: 'FTC305 / FTM305 — Fleet Telematics', desc: 'Teltonika\'s next-generation fleet management platform — industry standard', useCase: 'Large fleets, logistics, international operations', badge: 'Fleet' },
 
@@ -1382,7 +1382,7 @@
 
     highlights: [
 
-      { title: 'FMB920 — en çok satan 2G tracker', desc: '3 milyondan fazla satış — temel takip, hırsızlık önleme ve green driving. Başlangıç fiyatı 29$.', useCase: 'Hafif filo, hırsızlık önleme, temel GPS takibi', badge: 'Çok satan' },
+      { title: 'FMB920 — en çok satan 2G tracker', desc: '3 milyondan fazla satış — temel takip, hırsızlık önleme ve green driving', useCase: 'Hafif filo, hırsızlık önleme, temel GPS takibi', badge: 'Çok satan' },
 
       { title: 'FTC305 / FTM305 — Fleet Telematics', desc: 'Teltonika\'nın yeni nesil filo yönetim platformu — endüstri standardı', useCase: 'Büyük filo, lojistik, uluslararası operasyonlar', badge: 'Filo' },
 
@@ -2549,16 +2549,16 @@
       heroHeadlineSub: 'Engine oil, fuel additives, antifreeze and car care — transparent USD pricing + Farsi consulting',
       tagline: 'Made in Germany',
       since: 'German brand · Turkey distribution',
-      description: 'Bizdavar Group supplies genuine Liqui Moly products: engine oils, petrol and diesel additives, antifreeze, gearbox fluids and car care. Prices are converted from the Turkey list at 1 USD = 47 TRY — inquire and order via Farsi WhatsApp.',
+      description: 'Bizdavar Group supplies genuine Liqui Moly products: engine oils, petrol and diesel additives, antifreeze, gearbox fluids and car care. Prices are shown in USD — inquire and order via Farsi WhatsApp.',
       heroStats: [
         { label: 'Products in catalog' },
-        { label: 'Display FX rate' },
+        { label: 'USD pricing' },
         { label: 'Made in Germany' }
       ]
     },
     trustSignals: [
       { label: 'Genuine product', desc: 'Sourced via Liqui Moly Turkey distribution — product codes and specs' },
-      { label: 'Transparent USD pricing', desc: 'Converted from TRY at the stated rate — proforma before payment' },
+      { label: 'Transparent USD pricing', desc: 'Display USD pricing — proforma before payment' },
       { label: 'Farsi consulting', desc: 'Oil grade, viscosity and additive selection — Farsi WhatsApp' },
       { label: 'International logistics', desc: 'Purchase coordination and shipping from Turkey to your destination' }
     ],
@@ -2584,7 +2584,7 @@
         'Vehicle type and fuel (petrol / diesel / motorcycle)',
         'Delivery city or country'
       ],
-      tip: 'Page prices are approximate (TRY ÷ 47). Final amount is stated on the proforma.'
+      tip: 'Page prices are approximate. Final amount is stated on the proforma.'
     },
     quickSeries: [
       { name: 'Engine oils', tag: '5W / 0W', hint: 'Top Tec · Molygen · Special Tec' },
@@ -2602,6 +2602,12 @@
       { title: 'Molygen New Generation — 15W-50', desc: 'Molybdenum technology oil — high-temp protection', useCase: 'Engine oil · tough conditions', badge: 'Oil' },
       { title: '10W-40 4T Street — motorcycle', desc: '4-stroke motorcycle oil — wet clutch and shared gearbox', useCase: 'Motorcycle · 4L', badge: 'Motorcycle' }
     ],
+    iranIndustries: [
+      { name: 'Workshops & car service', desc: 'Engine oils, fuel additives and car care for periodic service — carton or bulk orders with USD proforma.' },
+      { name: 'Fleets & taxis', desc: 'Petrol/diesel oils and additives for taxi, delivery and corporate fleets — ongoing supply and bulk quotes.' },
+      { name: 'Motorcycles', desc: '4T oils and motorbike care for street and off-road — wet clutch and shared gearbox ready.' },
+      { name: 'Personal use', desc: 'Octane Plus, antifreeze, cleaners and car care — Farsi WhatsApp help choosing the right product.' }
+    ],
     inquiryTemplate: 'Hello, I would like a quote for Liqui Moly {product}.\n\nQuantity:\nVehicle / use:\nDelivery city:\n'
   };
 
@@ -2612,16 +2618,16 @@
       heroHeadlineSub: 'Motor yağı, yakıt katkısı, antifriz ve oto bakım — şeffaf dolar fiyat + Farsça danışmanlık',
       tagline: 'Made in Germany',
       since: 'Alman marka · Türkiye dağıtımı',
-      description: 'Bizdavar Group orijinal Liqui Moly ürünleri tedarik eder: motor yağları, benzin ve dizel katkıları, antifriz, şanzıman ve oto bakım. Fiyatlar Türkiye listesinden 1 USD = 47 TRY ile dolara çevrilir — Farsça WhatsApp ile teklif ve sipariş.',
+      description: 'Bizdavar Group orijinal Liqui Moly ürünleri tedarik eder: motor yağları, benzin ve dizel katkıları, antifriz, şanzıman ve oto bakım. Fiyatlar USD olarak gösterilir — Farsça WhatsApp ile teklif ve sipariş.',
       heroStats: [
         { label: 'Katalogdaki ürün' },
-        { label: 'Gösterim kuru' },
+        { label: 'Dolar fiyat' },
         { label: 'Almanya üretimi' }
       ]
     },
     trustSignals: [
       { label: 'Orijinal ürün', desc: 'Liqui Moly Türkiye dağıtım kanalı — ürün kodu ve teknik özellik' },
-      { label: 'Şeffaf dolar fiyat', desc: 'TRY’den belirtilen kurla — ödeme öncesi proforma' },
+      { label: 'Şeffaf dolar fiyat', desc: 'Gösterim USD fiyat — ödeme öncesi proforma' },
       { label: 'Farsça danışmanlık', desc: 'Yağ sınıfı, viskozite ve katkı seçimi — Farsça WhatsApp' },
       { label: 'Uluslararası lojistik', desc: 'Türkiye’den satın alma ve teslimat koordinasyonu' }
     ],
@@ -2647,7 +2653,7 @@
         'Araç tipi ve yakıt (benzin / dizel / motosiklet)',
         'Teslimat şehri veya ülkesi'
       ],
-      tip: 'Sayfa fiyatları yaklaşıktır (TRY ÷ 47). Nihai tutar proformada belirtilir.'
+      tip: 'Sayfa fiyatları yaklaşıktır. Nihai tutar proformada belirtilir.'
     },
     quickSeries: [
       { name: 'Motor yağları', tag: '5W / 0W', hint: 'Top Tec · Molygen · Special Tec' },
@@ -2664,6 +2670,12 @@
       { title: 'Viskozite koruyucu', desc: 'Viskozite koruma katkısı — yüksek kilometreli motorlar', useCase: 'Yağ katkısı · 1L', badge: 'Katkı' },
       { title: 'Molygen New Generation — 15W-50', desc: 'Molibden teknolojili yağ — yüksek sıcaklık koruması', useCase: 'Motor yağı · zor koşullar', badge: 'Yağ' },
       { title: '10W-40 4T Street — motosiklet', desc: '4 zamanlı motosiklet yağı — ıslak debriyaj ve ortak şanzıman', useCase: 'Motosiklet · 4L', badge: 'Motosiklet' }
+    ],
+    iranIndustries: [
+      { name: 'Servis ve oto bakım', desc: 'Periyodik servis için motor yağı, yakıt katkısı ve car care — koli veya toptan USD proforma.' },
+      { name: 'Filo ve taksi', desc: 'Taksi, dağıtım ve kurumsal filolar için benzin/dizel yağ ve katkı — sürekli tedarik ve toptan teklif.' },
+      { name: 'Motosiklet', desc: 'Şehir ve off-road için 4T yağ ve bakım — ıslak debriyaj ve ortak şanzıman.' },
+      { name: 'Bireysel kullanım', desc: 'Octane Plus, antifriz, temizleyiciler ve car care — doğru ürün için Farsça WhatsApp desteği.' }
     ],
     inquiryTemplate: 'Merhaba, Liqui Moly {product} için fiyat teklifi istiyorum.\n\nAdet:\nAraç / kullanım:\nTeslimat şehri:\n'
   };

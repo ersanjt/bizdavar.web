@@ -24,6 +24,9 @@ body[data-page="teltonika"] .teltonika-highlights {
 }
 
 body[data-page="teltonika"] .teltonika-highlight-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   border: 1px solid #e6ebf2;
   border-radius: 16px;
   box-shadow: none;
@@ -96,12 +99,18 @@ body[data-page="teltonika"] .teltonika-price {
   align-items: baseline;
   gap: 8px;
   margin: 0 0 10px;
-  padding-bottom: 10px;
+  padding: 8px 0 10px;
   border-bottom: 1px solid #eef2f7;
 }
 
+body[data-page="teltonika"] .teltonika-price__label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #6b7280;
+}
+
 body[data-page="teltonika"] .teltonika-price strong {
-  font-size: 1.4rem;
+  font-size: 1.45rem;
   font-weight: 800;
   color: #0054A6;
   letter-spacing: -0.03em;
@@ -118,20 +127,28 @@ body[data-page="teltonika"] .teltonika-highlight-card__desc {
   font-size: 0.875rem;
   color: #5b6575;
   line-height: 1.55;
-  margin: 0 0 12px;
+  margin: 0;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
+body[data-page="teltonika"] .teltonika-highlight-card__foot {
+  margin-top: auto;
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 body[data-page="teltonika"] .teltonika-highlight-card__usecase {
-  background: transparent;
+  background: #f3f7fc;
   border: none;
   border-inline-start: 3px solid #0054A6;
-  border-radius: 0;
-  padding-inline-start: 12px;
-  margin: 0 0 16px;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin: 0;
   font-size: 0.8125rem;
   color: #374151;
   line-height: 1.5;
@@ -146,8 +163,8 @@ body[data-page="teltonika"] .teltonika-highlight-card__actions {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
-  margin-top: auto;
-  padding-top: 4px;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 body[data-page="teltonika"] .teltonika-highlight-card__actions .btn {

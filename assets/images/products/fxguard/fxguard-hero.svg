@@ -1,12 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-hidden="true">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="FXGuard WhatsApp CRM">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="fxgBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#ecfdf5"/>
+      <stop offset="55%" stop-color="#f0fdf4"/>
       <stop offset="100%" stop-color="#e0e7ff"/>
     </linearGradient>
   </defs>
-  <rect width="640" height="360" rx="20" fill="url(#bg)"/>
-  <rect x="40" y="36" width="360" height="288" rx="16" fill="#fff" stroke="#cbd5e1"/>
+  <rect width="640" height="360" rx="20" fill="url(#fxgBg)"/>
+  <rect x="40" y="36" width="360" height="288" rx="16" fill="#ffffff" stroke="#cbd5e1"/>
   <rect x="56" y="56" width="120" height="16" rx="8" fill="#0f172a"/>
   <rect x="56" y="88" width="200" height="10" rx="5" fill="#94a3b8"/>
   <rect x="56" y="120" width="328" height="56" rx="12" fill="#f1f5f9"/>
@@ -18,6 +19,7 @@
   <rect x="56" y="264" width="328" height="44" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
   <circle cx="420" cy="180" r="88" fill="#22c55e" opacity="0.12"/>
   <rect x="432" y="120" width="168" height="120" rx="20" fill="#0f172a"/>
-  <text x="452" y="188" font-family="system-ui,sans-serif" font-size="42" fill="#22c55e">=¬</text>
-  <text x="452" y="218" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#f8fafc">Team Inbox</text>
+  <circle cx="516" cy="168" r="28" fill="#22c55e"/>
+  <path d="M505 168h22M516 157v22" stroke="#0f172a" stroke-width="4" stroke-linecap="round"/>
+  <rect x="456" y="210" width="120" height="10" rx="5" fill="#94a3b8"/>
 </svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none" role="img" aria-label="F'H�'F H *'�3�">
+  <defs>
+    <linearGradient id="fl-bg" x1="0" y1="0" x2="640" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#062456"/>
+      <stop offset="1" stop-color="#0d3d82"/>
+    </linearGradient>
+    <linearGradient id="fl-road" x1="0" y1="230" x2="0" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#121826"/>
+      <stop offset="1" stop-color="#0b1018"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#fl-bg)"/>
+  <circle cx="90" cy="70" r="48" fill="#ffde00" opacity=".14"/>
+  <path d="M0 168c80-40 160-40 240 0s160 40 240 0 120-28 160-8v40H0z" fill="#143f7a" opacity=".45"/>
+  <rect y="230" width="640" height="130" fill="url(#fl-road)"/>
+  <path d="M0 230h640" stroke="#e30613" stroke-width="4"/>
+  <path stroke="#ffde00" stroke-width="4" stroke-dasharray="28 18" d="M20 300h600" opacity=".85"/>
+  <!-- van -->
+  <g transform="translate(70 168)">
+    <path d="M20 86h210l18-46c6-14 18-22 34-22h58v68h40v36H20V86z" fill="#e8eef8"/>
+    <path d="M248 40h50v46h-66l16-46z" fill="#9eb4d8"/>
+    <rect x="40" y="52" width="70" height="28" rx="4" fill="#6f8fbf"/>
+    <rect x="124" y="52" width="70" height="28" rx="4" fill="#6f8fbf"/>
+    <rect x="36" y="24" width="56" height="10" rx="2" fill="#003399"/>
+    <circle cx="70" cy="126" r="22" fill="#1a1a2e"/>
+    <circle cx="70" cy="126" r="10" fill="#c9d7ef"/>
+    <circle cx="230" cy="126" r="22" fill="#1a1a2e"/>
+    <circle cx="230" cy="126" r="10" fill="#c9d7ef"/>
+  </g>
+  <!-- taxi -->
+  <g transform="translate(360 188)">
+    <path d="M18 70h168c4-22 22-40 46-46l36-8v54h28v28H18V70z" fill="#ffde00"/>
+    <path d="M78 28h62c18 2 32 14 38 30H70c6-14 18-26 32-30z" fill="#1a1a2e" opacity=".2"/>
+    <rect x="88" y="34" width="52" height="20" rx="3" fill="#6f8fbf"/>
+    <rect x="96" y="8" width="36" height="14" rx="2" fill="#003399"/>
+    <circle cx="58" cy="102" r="18" fill="#1a1a2e"/>
+    <circle cx="58" cy="102" r="8" fill="#e8eef8"/>
+    <circle cx="176" cy="102" r="18" fill="#1a1a2e"/>
+    <circle cx="176" cy="102" r="8" fill="#e8eef8"/>
+  </g>
+  <text x="40" y="50" fill="#ffde00" font-family="Segoe UI,Tahoma,sans-serif" font-size="15" font-weight="700" letter-spacing="1">FLEET</text>
+</svg>

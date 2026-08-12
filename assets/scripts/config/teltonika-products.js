@@ -122,13 +122,14 @@
       {
         title: 'FMB920 — پرفروش‌ترین ردیاب 2G',
         titleTr: 'FMB920 Basic Tracker',
-        desc: 'بیش از ۳ میلیون واحد فروش — ردیابی پایه، ضد سرقت و Green Driving. قیمت پایه از ۲۹ دلار.',
+        desc: 'بیش از ۳ میلیون واحد فروش — ردیابی پایه، ضد سرقت و Green Driving',
         useCaseFa: 'ناوگان سبک، ضد سرقت، ردیابی پایه',
         badge: 'پرفروش',
         inquiryName: 'FMB920',
         image: `${p}/fmb920.png`,
         imageAlt: 'Teltonika FMB920 — ردیاب GPS پایه',
         priceUsd: 29,
+        priceFrom: true,
         featured: true
       },
       {

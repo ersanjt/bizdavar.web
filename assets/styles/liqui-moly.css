@@ -84,15 +84,37 @@ body[data-page="liqui-moly"] .liqui-hero::before {
   box-shadow: 0 12px 40px rgba(0, 51, 153, 0.12);
 }
 
-.liqui-trust-bar { background: #003399; color: #fff; padding: 20px 0; }
+.liqui-trust-bar { background: #003399; color: #fff; padding: 22px 0; }
 .liqui-trust-bar__inner {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  gap: 18px;
 }
-.liqui-trust-item { text-align: center; }
-.liqui-trust-item strong { display: block; font-size: var(--text-sm); margin-bottom: 4px; }
-.liqui-trust-item span { font-size: var(--text-xs); opacity: 0.85; }
+.liqui-trust-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  text-align: start;
+}
+.liqui-trust-item__icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffde00;
+}
+.liqui-trust-item__icon .bd-icon {
+  color: #ffde00;
+  width: 24px;
+  height: 24px;
+}
+.liqui-trust-item strong { display: block; font-size: var(--text-sm); margin-bottom: 4px; color: #fff; }
+.liqui-trust-item span { font-size: var(--text-xs); opacity: 0.88; line-height: 1.45; color: rgba(255, 255, 255, 0.9); }
 
 .liqui-quick-series-wrap {
   background: #fff;
@@ -145,15 +167,30 @@ body[data-page="liqui-moly"] .liqui-hero::before {
   z-index: var(--z-dropdown);
 }
 .liqui-cat-nav__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   padding: 8px 14px;
   background: #fff;
   border: 1px solid #d0d8ea;
   border-radius: 999px;
   font-size: var(--text-sm);
+  font-weight: 600;
   text-decoration: none;
   color: #1a1a2e;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
 }
-.liqui-cat-nav__item:hover { border-color: var(--brand-accent); color: var(--brand-accent); }
+.liqui-cat-nav__item .bd-icon {
+  color: var(--brand-accent);
+  width: 18px;
+  height: 18px;
+}
+.liqui-cat-nav__item:hover,
+.liqui-cat-nav__item.active {
+  border-color: var(--brand-accent);
+  color: var(--brand-accent);
+  background: #eef3ff;
+}
 
 .liqui-why-grid, .liqui-steps, .liqui-highlights, .liqui-iran-grid, .liqui-supply-grid, .liqui-industries-grid {
   display: grid;
@@ -171,30 +208,48 @@ body[data-page="liqui-moly"] .liqui-hero::before {
 .liqui-highlight-card {
   height: 100%;
   min-height: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
 }
 
 .liqui-highlight-card__media {
-  aspect-ratio: 1;
+  position: relative;
+  flex: 0 0 auto;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
   background: linear-gradient(180deg, #fff 0%, #eef2f9 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
 }
 
 .liqui-highlight-card__media img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
-  padding: 12px;
+  object-position: center;
+  padding: 16px;
+  box-sizing: border-box;
 }
 
 .liqui-highlight-card__media img.is-broken {
-  opacity: 0.35;
-  object-fit: contain;
+  opacity: 0.4;
+  padding: 28%;
 }
 
 .liqui-highlight-card__body {
   gap: 6px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border-top: 3px solid var(--lm-red);
 }
 
 .liqui-highlight-card__tr {
@@ -230,11 +285,23 @@ body[data-page="liqui-moly"] .liqui-hero::before {
   font-size: 0.78rem !important;
   min-height: 0 !important;
   -webkit-line-clamp: 2 !important;
+  margin: 0;
+}
+
+.liqui-highlight-card__foot {
+  margin-top: auto;
+  padding-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .liqui-highlight-card__actions {
-  margin-top: auto;
-  padding-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .liqui-highlight-card__actions .btn {
@@ -250,27 +317,46 @@ body[data-page="liqui-moly"] .liqui-hero::before {
   gap: 10px;
   height: 100%;
   min-height: 100%;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.liqui-series-card:hover {
+  border-color: var(--brand-accent);
+  box-shadow: var(--shadow-sm);
 }
 
 .liqui-series-card__media {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 1.2;
-  background: #f3f5fa;
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(180deg, #fff 0%, #f3f5fa 100%);
   border-radius: var(--radius-sm);
   overflow: hidden;
+  border: 1px solid rgba(15, 23, 42, 0.06);
 }
 
 .liqui-series-card__img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
-  padding: 8px;
+  object-position: center;
+  padding: 12px;
+  box-sizing: border-box;
 }
 
 .liqui-series-card__img.is-broken {
-  opacity: 0.3;
+  opacity: 0.35;
+  padding: 28%;
 }
 
 .liqui-series-card__body {
@@ -278,6 +364,7 @@ body[data-page="liqui-moly"] .liqui-hero::before {
   flex-direction: column;
   gap: 4px;
   flex: 1;
+  min-height: 0;
 }
 
 .liqui-series-card__body strong {
@@ -286,10 +373,15 @@ body[data-page="liqui-moly"] .liqui-hero::before {
   -webkit-box-orient: vertical;
   overflow: hidden;
   min-height: 3.9em;
+  font-size: var(--text-sm);
+  line-height: 1.3;
+  margin: 0;
 }
 
 .liqui-series-grid {
+  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
   align-items: stretch;
 }
 
@@ -368,13 +460,205 @@ body[data-page="liqui-moly"] .liqui-hero::before {
   }
 }
 .liqui-iran-grid, .liqui-supply-grid { grid-template-columns: repeat(3, 1fr); }
+.liqui-iran-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
 .liqui-industries-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
 
-.liqui-why-card, .liqui-step, .liqui-highlight-card, .liqui-supply-card, .liqui-industry-card, .liqui-iran-card {
+.liqui-iran {
+  position: relative;
+  background:
+    radial-gradient(ellipse 50% 40% at 100% 0%, rgba(227, 6, 19, 0.06), transparent 55%),
+    radial-gradient(ellipse 45% 35% at 0% 100%, rgba(0, 51, 153, 0.07), transparent 50%),
+    linear-gradient(180deg, #f7f9fc 0%, #eef3fa 100%);
+  overflow: hidden;
+}
+
+.liqui-iran::before {
+  content: '';
+  position: absolute;
+  inset-inline-end: -40px;
+  top: 40px;
+  width: 180px;
+  height: 8px;
+  background: linear-gradient(90deg, #000 0 33%, #e30613 33% 66%, #ffde00 66%);
+  opacity: 0.35;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.liqui-why-card, .liqui-step, .liqui-supply-card, .liqui-industry-card {
   background: #fff;
   border: 1px solid var(--gray-200);
   border-radius: var(--radius-lg);
   padding: 18px;
+}
+
+.liqui-iran-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #d7e0ef;
+  border-radius: 18px;
+  overflow: hidden;
+  padding: 0;
+  box-shadow: 0 10px 28px rgba(10, 31, 77, 0.06);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  animation: liquiIranIn 0.55s ease both;
+  animation-delay: calc(var(--iran-i, 0) * 70ms);
+}
+
+.liqui-iran-card:hover {
+  transform: translateY(-6px);
+  border-color: #003399;
+  box-shadow: 0 18px 40px rgba(0, 51, 153, 0.14);
+}
+
+.liqui-iran-card__media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #0a1f4d;
+}
+
+.liqui-iran-card__media::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: 28%;
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.18));
+  pointer-events: none;
+}
+
+.liqui-iran-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.liqui-iran-card:hover .liqui-iran-card__media img {
+  transform: scale(1.04);
+}
+
+.liqui-iran-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px 20px 22px;
+  flex: 1;
+}
+
+.liqui-iran-card__body h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #0a1f4d;
+  line-height: 1.35;
+}
+
+.liqui-iran-card__body p {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: 1.7;
+  flex: 1;
+}
+
+.liqui-why-card__icon,
+.liqui-iran-card__icon,
+.liqui-industry-card__icon,
+.liqui-supply-card__icon,
+.liqui-category-block__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  background: #eef3ff;
+  color: var(--brand-accent);
+}
+
+.liqui-iran-card__icon {
+  margin-bottom: 4px;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(145deg, #eef3ff, #dce6f8);
+  border: 1px solid #c9d7ef;
+}
+
+.liqui-iran-card--tone-1 .liqui-iran-card__icon { color: #003399; }
+.liqui-iran-card--tone-2 .liqui-iran-card__icon { color: #b00510; background: linear-gradient(145deg, #ffe8ea, #ffd4d7); border-color: #f3b4b8; }
+.liqui-iran-card--tone-3 .liqui-iran-card__icon { color: #8a7400; background: linear-gradient(145deg, #fff8d6, #ffe9a8); border-color: #f0d97a; }
+.liqui-iran-card--tone-4 .liqui-iran-card__icon { color: #003399; }
+
+.liqui-why-card__icon .bd-icon,
+.liqui-iran-card__icon .bd-icon,
+.liqui-industry-card__icon .bd-icon,
+.liqui-supply-card__icon .bd-icon,
+.liqui-category-block__icon .bd-icon {
+  color: inherit;
+  width: 24px;
+  height: 24px;
+}
+
+.liqui-iran-card--link { text-decoration: none; color: inherit; }
+.liqui-industry-card--link { text-decoration: none; color: inherit; }
+
+.liqui-iran-card__models {
+  display: inline-flex;
+  align-self: flex-start;
+  margin-top: 4px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: #f0f4fb;
+  border: 1px solid #d5deee;
+  color: #003399;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.liqui-iran-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  font-size: var(--text-sm);
+  font-weight: 800;
+  color: var(--brand-accent);
+}
+
+.liqui-iran-card:hover .liqui-iran-card__cta {
+  color: var(--lm-red);
+}
+
+.liqui-iran__note {
+  margin: 28px auto 0;
+  max-width: 46rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  line-height: 1.7;
+}
+
+@keyframes liquiIranIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .liqui-iran-card,
+  .liqui-iran-card__media img {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 .liqui-step__num {
   display: inline-flex;
@@ -383,12 +667,7 @@ body[data-page="liqui-moly"] .liqui-hero::before {
   background: var(--brand-accent); color: #fff;
   border-radius: 50%; font-weight: 800; margin-bottom: 10px;
 }
-.liqui-highlight-card { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
-.liqui-highlight-card__media { aspect-ratio: 1; background: #f3f5fa; }
-.liqui-highlight-card__media img { width: 100%; height: 100%; object-fit: contain; }
-.liqui-highlight-card__body { padding: 16px; display: flex; flex-direction: column; flex: 1; border-top: 3px solid var(--lm-red); }
 .liqui-highlight-card__badge { color: var(--lm-red); font-weight: 800; font-size: var(--text-xs); }
-.liqui-highlight-card__actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
 .liqui-price {
   display: flex; align-items: baseline; gap: 8px;
   margin: 8px 0 12px;
@@ -436,51 +715,34 @@ body[data-page="liqui-moly"] .liqui-hero::before {
 .liqui-category-block__visual img {
   width: 100%; border-radius: var(--radius); object-fit: contain; max-height: 120px; background: #f3f5fa;
 }
-.liqui-series-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 12px;
-}
-.liqui-series-card {
-  background: #fff;
-  border: 1px solid var(--gray-200);
-  border-radius: var(--radius);
-  padding: 14px;
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-.liqui-series-card:hover { border-color: var(--brand-accent); box-shadow: var(--shadow-sm); }
 .liqui-series-card--featured { border-color: #f5a3a8; background: #fff8f8; }
-.liqui-series-card strong { display: block; font-size: var(--text-sm); margin-bottom: 6px; line-height: 1.4; }
-.liqui-series-card > span { display: block; font-size: var(--text-xs); color: var(--text-muted); }
+.liqui-series-card__body > span:not(.liqui-series-card__price):not(.liqui-series-card__link) {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
 .liqui-series-card__price {
-  display: inline-block !important;
-  margin-top: 8px;
-  font-size: 1.05rem !important;
-  font-weight: 800 !important;
-  color: var(--brand-accent) !important;
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--brand-accent);
 }
-.liqui-series-card__link { display: block; margin-top: 8px; font-size: 12px; font-weight: 700; color: var(--lm-red); }
-
-.liqui-iran-card--link, .liqui-industry-card--link { text-decoration: none; color: inherit; }
-.liqui-iran-card__models {
-  display: inline-block; margin-top: 8px; font-size: 11px; font-weight: 700;
-  background: #eef2f9; padding: 4px 8px; border-radius: 6px;
+.liqui-series-card__link {
+  display: block;
+  margin-top: auto;
+  padding-top: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--lm-red);
 }
-.liqui-iran-card__cta { display: inline-block; margin-top: 10px; font-size: var(--text-sm); font-weight: 700; color: var(--brand-accent); }
 
 .liqui-faq__item { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius); margin-bottom: 8px; }
 .liqui-faq__item summary { padding: 14px 18px; cursor: pointer; font-weight: 700; }
 .liqui-faq__item p { padding: 0 18px 14px; margin: 0; color: var(--text-muted); font-size: var(--text-sm); }
 
 .liqui-rate-note {
-  display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
-  background: #eef2f9; border: 1px solid #d0d8ea; border-radius: var(--radius);
-  padding: 12px 16px; margin-bottom: 20px; font-size: var(--text-sm);
+  display: none !important;
 }
-.liqui-rate-note strong { color: var(--brand-accent); }
 
 .liqui-sticky-cta {
   position: fixed; bottom: 0; left: 0; right: 0; z-index: var(--z-dropdown);

@@ -63,7 +63,7 @@
       },
       liquiMoly: {
         seoTitle: 'خرید Liqui Moly | روغن موتور و افزودنی — قیمت دلاری | بیزدوار',
-        seoDescription: 'تامین اصل Liqui Moly از ترکیه — روغن موتور، Octane Plus، افزودنی دیزل و مراقبت خودرو. قیمت دلاری شفاف (۱ دلار = ۴۷ لیر) و مشاوره فارسی.',
+        seoDescription: 'تامین اصل Liqui Moly از ترکیه — روغن موتور، Octane Plus، افزودنی دیزل و مراقبت خودرو. قیمت دلاری شفاف و مشاوره فارسی.',
         seoKeywords: 'Liqui Moly, Octane Plus, روغن موتور, افزودنی بنزین, بیزدوار'
       },
       teltonika: {
@@ -240,7 +240,7 @@
       },
       liquiMoly: {
         seoTitle: 'Liqui Moly tedariki | Motor yağı ve katkı — dolar fiyat | Bizdavar',
-        seoDescription: 'Türkiye üzerinden orijinal Liqui Moly tedariki — motor yağı, Octane Plus, dizel katkı ve oto bakım. Şeffaf dolar fiyat (1 USD = 47 TRY) ve Farsça danışmanlık.',
+        seoDescription: 'Türkiye üzerinden orijinal Liqui Moly tedariki — motor yağı, Octane Plus, dizel katkı ve oto bakım. Şeffaf dolar fiyat ve Farsça danışmanlık.',
         seoKeywords: 'Liqui Moly, Octane Plus, motor yağı, Bizdavar'
       },
       teltonika: {
@@ -417,7 +417,7 @@
       },
       liquiMoly: {
         seoTitle: 'Liqui Moly supply | Motor oil & additives — USD prices | Bizdavar',
-        seoDescription: 'Genuine Liqui Moly from Turkey — engine oil, Octane Plus, diesel additives and car care. Transparent USD pricing (1 USD = 47 TRY) and Farsi consulting.',
+        seoDescription: 'Genuine Liqui Moly from Turkey — engine oil, Octane Plus, diesel additives and car care. Transparent USD pricing and Farsi consulting.',
         seoKeywords: 'Liqui Moly, Octane Plus, engine oil, Bizdavar'
       },
       teltonika: {

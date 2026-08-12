@@ -12,17 +12,31 @@
       {
         title: 'بازاریابی دیجیتال',
         subtitle: 'Digital Marketing · استراتژی و اجرای کمپین',
-        body: 'در بیزدوار گروپ، با اجرای استراتژی‌های نوین بازاریابی دیجیتال، نرخ تبدیل مشتریان را افزایش می‌دهیم. مطلب مرتبط: <a href="articles/digital-marketing">چگونه دیجیتال مارکتینگ فروش را افزایش می‌دهد؟</a>',
-        tags: ['Google Ads', 'سئو', 'CRO', 'اتوماسیون'],
-        checks: ['تحلیل رقبا و بازار هدف', 'کمپین‌های Google و شبکه‌های اجتماعی', 'بهینه‌سازی نرخ تبدیل (CRO)', 'اتوماسیون بازاریابی و ایمیل', 'گزارش‌دهی و تحلیل عملکرد'],
+        body: 'استراتژی، اجرا و بهینه‌سازی <strong>بازاریابی دیجیتال</strong> برای رشد فروش آنلاین — از تحلیل بازار و سئو تا <strong>Google Ads</strong>، کمپین‌های اجتماعی، CRO و اتوماسیون. مسیر جذب تا تبدیل را شفاف و قابل اندازه‌گیری می‌کنیم. مطلب مرتبط: <a href="articles/digital-marketing">چگونه دیجیتال مارکتینگ فروش را افزایش می‌دهد؟</a>',
+        tags: ['Google Ads', 'سئو', 'CRO', 'اتوماسیون', 'Analytics', 'Funnel'],
+        checks: [
+          'تحلیل رقبا، بازار هدف و قیف فروش',
+          'کمپین‌های Google Ads و شبکه‌های اجتماعی',
+          'سئو فنی/محتوایی و ساختار صفحات تبدیل',
+          'بهینه‌سازی نرخ تبدیل (CRO) روی لندینگ و فرم',
+          'اتوماسیون بازاریابی، ایمیل و nurture',
+          'گزارش KPI ماهانه و پیشنهاد بهبود مستمر'
+        ],
         cta: 'درخواست مشاوره'
       },
       {
         title: 'طراحی وب و وب‌اپلیکیشن',
         subtitle: 'Website · Web App · Fast Web Studio',
-        body: 'طراحی سایت شرکتی، فروشگاه، لندینگ و <strong>وب‌اپلیکیشن</strong> اختصاصی — با تحویل سریع از طریق <a href="fast">Fast Web Studio</a> یا پروژه سفارشی.',
-        tags: ['وب‌سایت', 'وب‌اپ', 'WooCommerce', 'RTL'],
-        checks: ['سایت شرکتی و فروشگاهی', 'وب‌اپلیکیشن و پنل مدیریت', 'ریسپانسیو با فونت فارسی', 'سئو پایه و بهینه‌سازی سرعت', 'اتصال واتساپ و فرم تماس'],
+        body: 'طراحی و توسعه <strong>سایت شرکتی</strong>، <strong>فروشگاه</strong>، لندینگ کمپین و <strong>وب‌اپلیکیشن</strong> اختصاصی — با UI فارسی/RTL، سئو پایه و اتصال فرم و واتساپ. برای تحویل سریع از <a href="fast">Fast Web Studio</a> استفاده کنید؛ پروژه‌های سفارشی هم از تحلیل تا لانچ پوشش داده می‌شود. نمونه: <a href="https://arianpumps.com" target="_blank" rel="noopener noreferrer">Arian Pumps</a>.',
+        tags: ['وب‌سایت', 'وب‌اپ', 'WooCommerce', 'Landing', 'RTL', 'SEO'],
+        checks: [
+          'سایت شرکتی، فروشگاهی و لندینگ کمپین',
+          'وب‌اپلیکیشن و پنل مدیریت اختصاصی',
+          'UI ریسپانسیو با فونت و جهت فارسی (RTL)',
+          'سئو پایه، ساختار محتوا و بهینه‌سازی سرعت',
+          'اتصال واتساپ، فرم تماس و درگاه در صورت نیاز',
+          'آموزش مدیریت محتوا و پشتیبانی پس از لانچ'
+        ],
         cta: 'مشاهده پلن‌های Fast Studio'
       },
       {
@@ -86,17 +100,31 @@
       {
         title: 'Dijital pazarlama',
         subtitle: 'Digital Marketing · Strateji ve kampanya',
-        body: 'Bizdavar Group modern dijital pazarlama ile dönüşümü artırır. İlgili yazı: <a href="articles/digital-marketing">Dijital pazarlama satışları nasıl artırır?</a>',
-        tags: ['Google Ads', 'SEO', 'CRO', 'Otomasyon'],
-        checks: ['Rakip analizi', 'Google ve sosyal kampanyalar', 'CRO', 'Pazarlama otomasyonu', 'Performans raporu'],
+        body: 'Online satış büyümesi için <strong>dijital pazarlama</strong> stratejisi, uygulama ve optimizasyon — pazar analizi, SEO, <strong>Google Ads</strong>, sosyal kampanyalar, CRO ve otomasyon. Edinmeden dönüşüme ölçülebilir yol. İlgili yazı: <a href="articles/digital-marketing">Dijital pazarlama satışları nasıl artırır?</a>',
+        tags: ['Google Ads', 'SEO', 'CRO', 'Otomasyon', 'Analytics', 'Funnel'],
+        checks: [
+          'Rakip, hedef kitle ve satış hunisi analizi',
+          'Google Ads ve sosyal medya kampanyaları',
+          'Teknik/içerik SEO ve dönüşüm sayfaları',
+          'Landing ve formlarda CRO',
+          'Pazarlama otomasyonu, e-posta ve nurture',
+          'Aylık KPI raporu ve iyileştirme önerileri'
+        ],
         cta: 'Danışmanlık iste'
       },
       {
         title: 'Web ve web uygulaması',
         subtitle: 'Website · Web App · Fast Web Studio',
-        body: 'Kurumsal site, e-ticaret, landing ve özel <strong>web uygulaması</strong> — hızlı teslim için <a href="fast">Fast Web Studio</a>.',
-        tags: ['Website', 'Web App', 'WooCommerce', 'RTL'],
-        checks: ['Kurumsal ve mağaza sitesi', 'Web uygulaması ve admin panel', 'Responsive UI', 'Temel SEO ve hız', 'WhatsApp ve form bağlantısı'],
+        body: '<strong>Kurumsal site</strong>, <strong>e-ticaret</strong>, kampanya landing ve özel <strong>web uygulaması</strong> — Farsça/RTL UI, temel SEO ve form/WhatsApp bağlantısı ile. Hızlı teslim için <a href="fast">Fast Web Studio</a>; özel projeler analizden yayına. Örnek: <a href="https://arianpumps.com" target="_blank" rel="noopener noreferrer">Arian Pumps</a>.',
+        tags: ['Website', 'Web App', 'WooCommerce', 'Landing', 'RTL', 'SEO'],
+        checks: [
+          'Kurumsal, mağaza ve kampanya landing siteleri',
+          'Web uygulaması ve özel admin paneli',
+          'Responsive UI — Farsça/RTL tipografi',
+          'Temel SEO, içerik yapısı ve hız optimizasyonu',
+          'WhatsApp, iletişim formu ve gerekirse ödeme entegrasyonu',
+          'İçerik yönetimi eğitimi ve lansman sonrası destek'
+        ],
         cta: 'Fast Studio planları'
       },
       {
@@ -160,17 +188,31 @@
       {
         title: 'Digital marketing',
         subtitle: 'Strategy and campaign delivery',
-        body: 'Bizdavar Group increases conversion through modern digital marketing. Related: <a href="articles/digital-marketing">How digital marketing increases sales</a>.',
-        tags: ['Google Ads', 'SEO', 'CRO', 'Automation'],
-        checks: ['Competitor analysis', 'Google and social campaigns', 'CRO', 'Marketing automation', 'Performance reporting'],
+        body: 'Strategy, execution and optimization for <strong>digital marketing</strong> that grows online sales — market analysis, SEO, <strong>Google Ads</strong>, social campaigns, CRO and automation. A measurable path from acquisition to conversion. Related: <a href="articles/digital-marketing">How digital marketing increases sales</a>.',
+        tags: ['Google Ads', 'SEO', 'CRO', 'Automation', 'Analytics', 'Funnel'],
+        checks: [
+          'Competitor, audience and funnel analysis',
+          'Google Ads and social media campaigns',
+          'Technical/content SEO and conversion pages',
+          'CRO on landings and forms',
+          'Marketing automation, email and nurture',
+          'Monthly KPI reporting and continuous improvement'
+        ],
         cta: 'Request consulting'
       },
       {
         title: 'Web design & web apps',
         subtitle: 'Website · Web App · Fast Web Studio',
-        body: 'Corporate sites, stores, landings and custom <strong>web applications</strong> — fast delivery via <a href="fast">Fast Web Studio</a> or bespoke builds.',
-        tags: ['Website', 'Web App', 'WooCommerce', 'RTL'],
-        checks: ['Corporate and store websites', 'Web apps and admin panels', 'Responsive Persian/RTL UI', 'Basic SEO and speed', 'WhatsApp and contact forms'],
+        body: 'Corporate sites, stores, campaign landings and custom <strong>web applications</strong> — Persian/RTL UI, foundational SEO, forms and WhatsApp. Fast delivery via <a href="fast">Fast Web Studio</a>, or bespoke builds from discovery to launch. Example: <a href="https://arianpumps.com" target="_blank" rel="noopener noreferrer">Arian Pumps</a>.',
+        tags: ['Website', 'Web App', 'WooCommerce', 'Landing', 'RTL', 'SEO'],
+        checks: [
+          'Corporate, store and campaign landing sites',
+          'Web apps and custom admin panels',
+          'Responsive UI with Persian/RTL typography',
+          'Foundational SEO, content structure and speed',
+          'WhatsApp, contact forms and payment when needed',
+          'CMS training and post-launch support'
+        ],
         cta: 'View Fast Studio plans'
       },
       {
@@ -257,6 +299,252 @@
       { title: 'SMM management', desc: 'Content, design, reels, ads and growth reporting.' },
       { title: 'Technical services', desc: 'CCTV, wiring and cove lighting — Tabriz & Istanbul.' }
     ]
+  };
+
+  const digitalMarketing = {
+    fa: {
+      servicesTitle: 'در بازاریابی دیجیتال چه می‌کنیم؟',
+      processNote: 'از تحلیل بازار تا کمپین، CRO و گزارش ماهانه — مسیر رشد قابل اندازه‌گیری.',
+      ctaArticle: 'مقاله دیجیتال مارکتینگ',
+      packagesTitle: 'خروجی‌های همکاری',
+      packages: [
+        'نقشه کانال و قیف فروش',
+        'راه‌اندازی و بهینه‌سازی کمپین',
+        'آزمایش CRO روی صفحات کلیدی',
+        'گزارش KPI ماهانه'
+      ],
+      panels: [
+        { title: 'Ads', desc: 'Google و شبکه‌های اجتماعی' },
+        { title: 'SEO', desc: 'سئو و محتوای هدفمند' },
+        { title: 'CRO', desc: 'بهینه‌سازی نرخ تبدیل' },
+        { title: 'Email', desc: 'اتوماسیون و ایمیل' },
+        { title: 'Analytics', desc: 'گزارش و KPI' },
+        { title: 'Funnel', desc: 'مسیر جذب تا خرید' }
+      ],
+      faqEyebrow: 'دیجیتال مارکتینگ',
+      faqTitle: 'سوالات پرتکرار بازاریابی دیجیتال',
+      faq: [
+        {
+          q: 'بازاریابی دیجیتال بیزدوار چه کانال‌هایی را پوشش می‌دهد؟',
+          a: 'Google Ads، سئو، کمپین‌های شبکه‌های اجتماعی، CRO روی لندینگ و فرم، اتوماسیون ایمیل و گزارش عملکرد — بسته به هدف فروش شما ترکیب می‌شود.'
+        },
+        {
+          q: 'از کجا شروع می‌کنید؟',
+          a: 'با تحلیل بازار، رقبا و قیف فعلی شروع می‌کنیم؛ بعد کانال‌ها و بودجه را اولویت‌بندی و کمپین یا بهینه‌سازی را اجرا می‌کنیم.'
+        },
+        {
+          q: 'نتیجه را چطور می‌سنجید؟',
+          a: 'با KPIهای شفاف مثل هزینه جذب، نرخ تبدیل، کیفیت لید و درآمد نسبت به هزینه تبلیغ — در گزارش ماهانه.'
+        },
+        {
+          q: 'با SMM یا طراحی وب هم هماهنگ می‌شود؟',
+          a: 'بله. کمپین‌ها با محتوای شبکه‌های اجتماعی و صفحات وب/لندینگ هم‌راستا می‌شوند تا پیام و تبدیل یکدست باشد.'
+        }
+      ]
+    },
+    tr: {
+      servicesTitle: 'Dijital pazarda neler yapıyoruz?',
+      processNote: 'Pazar analizinden kampanyaya, CRO ve aylık rapora — ölçülebilir büyüme yolu.',
+      ctaArticle: 'Dijital pazarlama yazısı',
+      packagesTitle: 'İş birliği çıktıları',
+      packages: [
+        'Kanal ve huni haritası',
+        'Kampanya kurulum ve optimizasyon',
+        'Kritik sayfalarda CRO testleri',
+        'Aylık KPI raporu'
+      ],
+      panels: [
+        { title: 'Ads', desc: 'Google ve sosyal ağlar' },
+        { title: 'SEO', desc: 'SEO ve odaklı içerik' },
+        { title: 'CRO', desc: 'Dönüşüm optimizasyonu' },
+        { title: 'Email', desc: 'Otomasyon ve e-posta' },
+        { title: 'Analytics', desc: 'Rapor ve KPI' },
+        { title: 'Funnel', desc: 'Edinimden satışa yol' }
+      ],
+      faqEyebrow: 'Dijital pazarlama',
+      faqTitle: 'Dijital pazarlama SSS',
+      faq: [
+        {
+          q: 'Hangi kanalları kapsıyorsunuz?',
+          a: 'Google Ads, SEO, sosyal kampanyalar, landing/form CRO, e-posta otomasyonu ve performans raporu — satış hedefine göre birleştirilir.'
+        },
+        {
+          q: 'Nasıl başlıyorsunuz?',
+          a: 'Pazar, rakip ve mevcut huni analiziyle; ardından kanal/bütçe önceliği ve kampanya veya optimizasyon.'
+        },
+        {
+          q: 'Sonucu nasıl ölçüyorsunuz?',
+          a: 'CAC, dönüşüm oranı, lead kalitesi ve reklam maliyetine göre gelir gibi KPI’larla — aylık raporda.'
+        },
+        {
+          q: 'SMM veya web tasarımla uyumlu mu?',
+          a: 'Evet. Kampanyalar sosyal içerik ve web/landing sayfalarıyla aynı mesaj ve dönüşüm hedefinde hizalanır.'
+        }
+      ]
+    },
+    en: {
+      servicesTitle: 'What we do in digital marketing',
+      processNote: 'From market analysis to campaigns, CRO and monthly reporting — a measurable growth path.',
+      ctaArticle: 'Digital marketing article',
+      packagesTitle: 'Engagement outputs',
+      packages: [
+        'Channel and funnel map',
+        'Campaign setup and optimization',
+        'CRO tests on key pages',
+        'Monthly KPI report'
+      ],
+      panels: [
+        { title: 'Ads', desc: 'Google and social networks' },
+        { title: 'SEO', desc: 'SEO and targeted content' },
+        { title: 'CRO', desc: 'Conversion rate optimization' },
+        { title: 'Email', desc: 'Automation and email' },
+        { title: 'Analytics', desc: 'Reporting and KPIs' },
+        { title: 'Funnel', desc: 'Acquisition to purchase' }
+      ],
+      faqEyebrow: 'Digital marketing',
+      faqTitle: 'Digital marketing FAQ',
+      faq: [
+        {
+          q: 'Which channels does Bizdavar cover?',
+          a: 'Google Ads, SEO, social campaigns, landing/form CRO, email automation and performance reporting — combined around your sales goal.'
+        },
+        {
+          q: 'How do you start?',
+          a: 'With market, competitor and current funnel analysis; then we prioritize channels and budget and run campaigns or optimizations.'
+        },
+        {
+          q: 'How do you measure results?',
+          a: 'With clear KPIs such as acquisition cost, conversion rate, lead quality and revenue vs ad spend — in a monthly report.'
+        },
+        {
+          q: 'Does it align with SMM or web design?',
+          a: 'Yes. Campaigns stay aligned with social content and web/landing pages so message and conversion stay consistent.'
+        }
+      ]
+    }
+  };
+
+  const webDesign = {
+    fa: {
+      servicesTitle: 'چه می‌سازیم؟',
+      processNote: 'از لندینگ سریع تا وب‌اپ سفارشی — UI فارسی/RTL، سئو پایه و اتصال فرم و واتساپ.',
+      ctaCustom: 'پروژه سفارشی وب',
+      packagesTitle: 'خروجی‌های تحویل',
+      packages: [
+        'طراحی UI/UX و هویت صفحه',
+        'پیاده‌سازی ریسپانسیو RTL',
+        'سئو پایه و سرعت',
+        'آموزش و پشتیبانی لانچ'
+      ],
+      panels: [
+        { title: 'Corporate', desc: 'سایت شرکتی' },
+        { title: 'Store', desc: 'فروشگاه ووکامرس' },
+        { title: 'Web App', desc: 'پنل و سامانه وب' },
+        { title: 'Landing', desc: 'لندینگ کمپین' },
+        { title: 'RTL / FA', desc: 'فونت و UI فارسی' },
+        { title: 'Fast', desc: 'تحویل از $99' }
+      ],
+      faqEyebrow: 'طراحی وب',
+      faqTitle: 'سوالات پرتکرار طراحی وب',
+      faq: [
+        {
+          q: 'تفاوت Fast Web Studio با پروژه سفارشی چیست؟',
+          a: 'Fast Studio برای سایت شرکتی/لندینگ با پلن‌های آماده و تحویل سریع است (از حدود $99). پروژه سفارشی برای وب‌اپ، پنل، فروشگاه پیچیده یا نیازمندی‌های خاص از تحلیل تا لانچ تعریف می‌شود.'
+        },
+        {
+          q: 'سایت فارسی و RTL هم طراحی می‌کنید؟',
+          a: 'بله. رابط کاربری راست‌به‌چپ، فونت فارسی و ساختار محتوا برای مخاطب فارسی‌زبان بخش استاندارد پروژه‌های وب بیزدوار است.'
+        },
+        {
+          q: 'فروشگاه ووکامرس و درگاه پرداخت هم دارید؟',
+          a: 'بله. فروشگاه WooCommerce، کاتالوگ محصول، سبد خرید و اتصال درگاه در پروژه‌های فروشگاهی پوشش داده می‌شود.'
+        },
+        {
+          q: 'بعد از لانچ چه پشتیبانی می‌دهید؟',
+          a: 'آموزش مدیریت محتوا، رفع باگ اولیه و در صورت قرارداد، نگهداری، به‌روزرسانی و بهبود سئو/سرعت ادامه پیدا می‌کند.'
+        }
+      ]
+    },
+    tr: {
+      servicesTitle: 'Ne inşa ediyoruz?',
+      processNote: 'Hızlı landing’den özel web app’e — Farsça/RTL UI, temel SEO, form ve WhatsApp.',
+      ctaCustom: 'Özel web projesi',
+      packagesTitle: 'Teslim çıktıları',
+      packages: [
+        'UI/UX ve sayfa kimliği',
+        'Responsive RTL geliştirme',
+        'Temel SEO ve hız',
+        'Eğitim ve lansman desteği'
+      ],
+      panels: [
+        { title: 'Corporate', desc: 'Kurumsal site' },
+        { title: 'Store', desc: 'WooCommerce mağaza' },
+        { title: 'Web App', desc: 'Panel ve web sistemi' },
+        { title: 'Landing', desc: 'Kampanya landing' },
+        { title: 'RTL / FA', desc: 'Farsça UI' },
+        { title: 'Fast', desc: '$99’dan teslim' }
+      ],
+      faqEyebrow: 'Web tasarım',
+      faqTitle: 'Web tasarım SSS',
+      faq: [
+        {
+          q: 'Fast Web Studio ile özel proje farkı nedir?',
+          a: 'Fast Studio hazır planlarla hızlı kurumsal/landing teslimidir (yaklaşık $99’dan). Özel proje web app, panel veya karmaşık mağaza ihtiyaçları içindir.'
+        },
+        {
+          q: 'Farsça / RTL site yapıyor musunuz?',
+          a: 'Evet. Sağdan sola arayüz, Farsça tipografi ve içerik yapısı standart kapsamımızdadır.'
+        },
+        {
+          q: 'WooCommerce ve ödeme entegrasyonu var mı?',
+          a: 'Evet. Ürün kataloğu, sepet ve ödeme geçidi e-ticaret projelerinde sunulur.'
+        },
+        {
+          q: 'Lansman sonrası destek nedir?',
+          a: 'İçerik yönetimi eğitimi, ilk hata düzeltmeleri ve sözleşmeye göre bakım / SEO-hız iyileştirmesi devam eder.'
+        }
+      ]
+    },
+    en: {
+      servicesTitle: 'What we build',
+      processNote: 'From fast landings to custom web apps — Persian/RTL UI, foundational SEO, forms and WhatsApp.',
+      ctaCustom: 'Custom web project',
+      packagesTitle: 'Delivery outputs',
+      packages: [
+        'UI/UX and page identity',
+        'Responsive RTL implementation',
+        'Foundational SEO and speed',
+        'Training and launch support'
+      ],
+      panels: [
+        { title: 'Corporate', desc: 'Company websites' },
+        { title: 'Store', desc: 'WooCommerce stores' },
+        { title: 'Web App', desc: 'Panels & web systems' },
+        { title: 'Landing', desc: 'Campaign landings' },
+        { title: 'RTL / FA', desc: 'Persian UI' },
+        { title: 'Fast', desc: 'From $99 delivery' }
+      ],
+      faqEyebrow: 'Web design',
+      faqTitle: 'Web design FAQ',
+      faq: [
+        {
+          q: 'What’s the difference between Fast Web Studio and a custom project?',
+          a: 'Fast Studio is packaged, fast corporate/landing delivery (from about $99). Custom projects cover web apps, panels or complex stores from discovery to launch.'
+        },
+        {
+          q: 'Do you build Persian / RTL sites?',
+          a: 'Yes. Right-to-left UI, Persian typography and content structure are standard in Bizdavar web projects.'
+        },
+        {
+          q: 'Do you offer WooCommerce and payment gateways?',
+          a: 'Yes. Product catalogs, carts and payment integrations are included in store projects.'
+        },
+        {
+          q: 'What support do you provide after launch?',
+          a: 'CMS training, early bug fixes and, under agreement, ongoing maintenance plus SEO/speed improvements.'
+        }
+      ]
+    }
   };
 
   const smm = {
@@ -491,11 +779,21 @@
       leadRole: 'مسئول فنی و اجرایی خدمات ساختمانی و امنیتی',
       citiesLabel: 'شهرهای هدف',
       cities: 'تبریز · استانبول',
+      phoneLabel: 'شماره مستقیم',
       waCta: 'واتساپ خدمات فنی',
       callCta: 'تماس تلفنی',
       waHint: '+98 936 411 5151',
       servicesTitle: 'چه خدماتی ارائه می‌دهیم؟',
+      processNote: 'بازدید فنی، پیشنهاد طرح و زمان‌بندی اجرا — هماهنگی مستقیم با مسئول فنی.',
       faqTitle: 'سوالات پرتکرار خدمات فنی',
+      panel: [
+        { title: 'CCTV', desc: 'دوربین مدار بسته' },
+        { title: 'Wiring', desc: 'سیم‌کشی ساختمان' },
+        { title: 'Lighting', desc: 'نورمخفی داخلی' },
+        { title: 'Survey', desc: 'بازدید و طرح اجرا' },
+        { title: 'Cities', desc: 'تبریز و استانبول' },
+        { title: 'Support', desc: 'گارانتی پس از نصب' }
+      ],
       faq: [
         {
           q: 'نصب دوربین مدار بسته در تبریز و استانبول انجام می‌دهید؟',
@@ -520,11 +818,21 @@
       leadRole: 'Teknik ve uygulama sorumlusu — CCTV, tesisat, aydınlatma',
       citiesLabel: 'Hedef şehirler',
       cities: 'Tebriz · İstanbul',
+      phoneLabel: 'Direkt numara',
       waCta: 'Teknik WhatsApp',
       callCta: 'Telefon',
       waHint: '+98 936 411 5151',
       servicesTitle: 'Hangi hizmetleri veriyoruz?',
+      processNote: 'Teknik keşif, uygulama planı ve kurulum takvimi — doğrudan teknik sorumluya yazın.',
       faqTitle: 'Teknik hizmet SSS',
+      panel: [
+        { title: 'CCTV', desc: 'Güvenlik kamerası' },
+        { title: 'Wiring', desc: 'Bina tesisatı' },
+        { title: 'Lighting', desc: 'Gizli aydınlatma' },
+        { title: 'Survey', desc: 'Keşif ve plan' },
+        { title: 'Cities', desc: 'Tebriz ve İstanbul' },
+        { title: 'Support', desc: 'Kurulum sonrası destek' }
+      ],
       faq: [
         {
           q: 'Tebriz ve İstanbul’da kamera kurulumu var mı?',
@@ -549,11 +857,21 @@
       leadRole: 'Technical lead — CCTV, building wiring and cove lighting',
       citiesLabel: 'Focus cities',
       cities: 'Tabriz · Istanbul',
+      phoneLabel: 'Direct line',
       waCta: 'Technical WhatsApp',
       callCta: 'Call',
       waHint: '+98 936 411 5151',
       servicesTitle: 'What we deliver',
+      processNote: 'Site survey, execution plan and install schedule — coordinate directly with the technical lead.',
       faqTitle: 'Technical services FAQ',
+      panel: [
+        { title: 'CCTV', desc: 'Security cameras' },
+        { title: 'Wiring', desc: 'Building wiring' },
+        { title: 'Lighting', desc: 'Cove lighting' },
+        { title: 'Survey', desc: 'Visit & plan' },
+        { title: 'Cities', desc: 'Tabriz & Istanbul' },
+        { title: 'Support', desc: 'After-install support' }
+      ],
       faq: [
         {
           q: 'Do you install CCTV in Tabriz and Istanbul?',
@@ -738,8 +1056,10 @@
       cards: cards[lang],
       blocks: blocks[lang],
       panels: Object.assign({}, (L.servicesPage && L.servicesPage.panels) || {}, panels[lang]),
+      digitalMarketing: digitalMarketing[lang],
       serverOps: serverOps[lang],
       smm: smm[lang],
+      webDesign: webDesign[lang],
       fieldTech: fieldTech[lang],
       fieldWhatsapp: fieldWa
     });

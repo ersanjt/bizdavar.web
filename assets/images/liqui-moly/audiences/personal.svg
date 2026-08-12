@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none" role="img" aria-label="E51A 4.5�">
+  <defs>
+    <linearGradient id="ps-bg" x1="0" y1="0" x2="640" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e9eef8"/>
+      <stop offset=".5" stop-color="#d5e0f2"/>
+      <stop offset="1" stop-color="#c4d2ea"/>
+    </linearGradient>
+    <linearGradient id="ps-car" x1="120" y1="140" x2="480" y2="260" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#003399"/>
+      <stop offset="1" stop-color="#001f66"/>
+    </linearGradient>
+    <linearGradient id="ps-bottle" x1="500" y1="100" x2="560" y2="260" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e7edf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#ps-bg)"/>
+  <circle cx="70" cy="60" r="70" fill="#e30613" opacity=".1"/>
+  <circle cx="560" cy="40" r="90" fill="#003399" opacity=".1"/>
+  <path d="M0 270h640v90H0z" fill="#9eb0cf" opacity=".35"/>
+  <path d="M0 270h640" stroke="#ffde00" stroke-width="4"/>
+  <!-- sedan -->
+  <g transform="translate(48 150)">
+    <path d="M40 110c12-42 48-70 96-78h120c54 6 96 40 112 78H40z" fill="url(#ps-car)"/>
+    <path d="M96 48c28-18 70-24 112-18 40 6 76 28 92 58H118c-8-18-14-28-22-40z" fill="#6f8fbf"/>
+    <path d="M128 52h58l12 36H140l-12-36z" fill="#b8c9e6" opacity=".9"/>
+    <path d="M204 48h70l-8 40h-74l12-40z" fill="#b8c9e6" opacity=".9"/>
+    <rect x="56" y="96" width="36" height="10" rx="2" fill="#ffde00"/>
+    <circle cx="110" cy="118" r="24" fill="#1a1a2e"/>
+    <circle cx="110" cy="118" r="10" fill="#c9d7ef"/>
+    <circle cx="310" cy="118" r="24" fill="#1a1a2e"/>
+    <circle cx="310" cy="118" r="10" fill="#c9d7ef"/>
+  </g>
+  <!-- octane bottle -->
+  <g transform="translate(470 88)">
+    <rect x="28" y="18" width="44" height="16" rx="4" fill="#003399"/>
+    <path d="M18 34h64l10 140c0 12-8 22-20 22H28c-12 0-20-10-20-22l10-140z" fill="url(#ps-bottle)"/>
+    <rect x="34" y="70" width="36" height="52" rx="5" fill="#003399"/>
+    <rect x="40" y="78" width="24" height="8" rx="2" fill="#ffde00"/>
+    <rect x="42" y="92" width="20" height="20" rx="2" fill="#e30613"/>
+    <circle cx="52" cy="54" r="8" fill="#e30613" opacity=".85"/>
+  </g>
+  <text x="40" y="50" fill="#003399" font-family="Segoe UI,Tahoma,sans-serif" font-size="15" font-weight="700" letter-spacing="1">PERSONAL</text>
+</svg>

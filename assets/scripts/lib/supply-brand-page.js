@@ -275,7 +275,7 @@ window.createSupplyBrandPage = function (cfg) {
 
           <div class="${prefix}-trust-item">
 
-            <span class="${prefix}-trust-item__icon">${ic(item.icon, { size: 22 })}</span>
+            <span class="${prefix}-trust-item__icon">${ic(item.icon, { size: 24 })}</span>
 
             <div><strong>${item.label}</strong><span>${item.desc}</span></div>
 
@@ -367,17 +367,21 @@ window.createSupplyBrandPage = function (cfg) {
 
             <h3>${title}</h3>
 
-            ${h.priceUsd != null ? `<div class="${prefix}-price" dir="ltr"><strong>$${Number(h.priceUsd).toFixed(2)}</strong><span>${t('approxPrice', 'تقریبی')}</span></div>` : ''}
+            ${h.priceUsd != null ? `<div class="${prefix}-price"><span class="${prefix}-price__label">${h.priceFrom ? t('priceFrom', 'شروع از') : t('approxPrice', 'تقریبی')}</span><strong dir="ltr">$${Number(h.priceUsd) % 1 ? Number(h.priceUsd).toFixed(2) : Number(h.priceUsd)}</strong></div>` : ''}
 
             <p class="${prefix}-highlight-card__desc">${h.desc || ''}</p>
 
-            ${(h.useCase || h.useCaseFa) ? `<p class="${prefix}-highlight-card__usecase"><strong>${t('useCaseLabel', 'کاربرد:')}</strong> ${h.useCase || h.useCaseFa}</p>` : ''}
+            <div class="${prefix}-highlight-card__foot">
 
-            <div class="${prefix}-highlight-card__actions">
+              ${(h.useCase || h.useCaseFa) ? `<p class="${prefix}-highlight-card__usecase"><strong>${t('useCaseLabel', 'کاربرد:')}</strong> ${h.useCase || h.useCaseFa}</p>` : ''}
 
-              <a href="${whatsappUrl((catalog().inquiryTemplate || '').replace('{product}', name))}" class="btn btn--green ${prefix}-btn-wa" target="_blank" rel="noopener noreferrer">${ic('whatsapp', { size: 16, variant: 'white' })} ${t('whatsappShort', 'واتساپ')}</a>
+              <div class="${prefix}-highlight-card__actions">
 
-              <a href="${inquiryUrl(name)}" class="btn btn--yellow ${prefix}-btn-inquiry">${t('requestInquiry', 'درخواست استعلام')}</a>
+                <a href="${whatsappUrl((catalog().inquiryTemplate || '').replace('{product}', name))}" class="btn btn--green ${prefix}-btn-wa" target="_blank" rel="noopener noreferrer">${ic('whatsapp', { size: 16, variant: 'white' })} ${t('whatsappShort', 'واتساپ')}</a>
+
+                <a href="${inquiryUrl(name)}" class="btn btn--yellow ${prefix}-btn-inquiry">${t('requestInquiry', 'درخواست استعلام')}</a>
+
+              </div>
 
             </div>
 
@@ -467,11 +471,15 @@ window.createSupplyBrandPage = function (cfg) {
 
         <div class="${prefix}-series-grid">
 
-          ${cat.series.map(s => `
+          ${cat.series.map(s => {
+            const imgSrc = s.image && !/^https?:/i.test(s.image)
+              ? s.image
+              : (cat.image && !/^https?:/i.test(cat.image) ? cat.image : (catalog().brand?.logo || ''));
+            return `
 
             <a href="${inquiryUrl(s.name)}" class="${prefix}-series-card${s.featured ? ` ${prefix}-series-card--featured` : ''} ${prefix}-series-card--link" data-search="${(s.name + ' ' + (s.note || '') + ' ' + (s.sku || '')).replace(/"/g, '')}">
 
-              ${s.image ? `<span class="${prefix}-series-card__media">${imgTag(s.image, s.name, { width: 120, height: 120, className: `${prefix}-series-card__img` })}</span>` : ''}
+              <span class="${prefix}-series-card__media">${imgTag(imgSrc, s.name, { width: 200, height: 200, className: `${prefix}-series-card__img`, fallback: cat.image || catalog().brand?.logo })}</span>
 
               <span class="${prefix}-series-card__body">
 
@@ -485,9 +493,8 @@ window.createSupplyBrandPage = function (cfg) {
 
               </span>
 
-            </a>
-
-          `).join('')}
+            </a>`;
+          }).join('')}
 
         </div>
 
@@ -505,13 +512,13 @@ window.createSupplyBrandPage = function (cfg) {
 
     if (!el || !catalog().iranIndustries) return;
 
-    el.innerHTML = catalog().iranIndustries.map(ind => `
+    el.innerHTML = catalog().iranIndustries.map((ind, idx) => `
 
-      <a href="${inquiryUrl(ind.name)}" class="${prefix}-iran-card ${prefix}-iran-card--link">
+      <a href="${inquiryUrl(ind.name)}" class="${prefix}-iran-card ${prefix}-iran-card--link ${prefix}-iran-card--tone-${(idx % 4) + 1}" style="--iran-i:${idx}">
 
         <div class="${prefix}-iran-card__media">
 
-          <img src="${path(ind.image)}" alt="${ind.imageAlt || ind.name}" width="320" height="180" loading="lazy">
+          <img src="${path(ind.image)}" alt="${ind.imageAlt || ind.name}" width="640" height="360" loading="lazy" decoding="async">
 
         </div>
 

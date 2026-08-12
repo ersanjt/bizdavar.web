@@ -183,7 +183,15 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
+  margin-top: 0;
+}
+
+.teltonika-highlight-card__foot, .gamak-highlight-card__foot, .digi-highlight-card__foot, .teraoka-highlight-card__foot {
   margin-top: auto;
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .teltonika-highlight-card__actions .btn, .gamak-highlight-card__actions .btn, .digi-highlight-card__actions .btn, .teraoka-highlight-card__actions .btn {
@@ -590,7 +598,7 @@
   border-right: 3px solid var(--brand-accent);
   padding: 10px 12px;
   border-radius: var(--radius);
-  margin-bottom: 14px;
+  margin: 0;
   line-height: var(--leading-relaxed);
 }
 

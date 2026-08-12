@@ -1,12 +1,12 @@
 /**
  * Liqui Moly — catalog with USD prices
- * Source: liquimolyturkey.com / shop.egemot.com.tr | rate 1 USD = 47 TRY | 2026-08-11T09:58:10Z
+ * Source: liquimolyturkey.com / shop.egemot.com.tr | 2026-08-11T09:58:10Z
  * Products: 351
  */
 (function () {
   const LM = "assets/images/liqui-moly/";
   const logo = 'assets/images/partners/liqui-moly.svg';
-  const rate = { tryPerUsd: 47, label: '۱ دلار = ۴۷ لیر' };
+  const rate = { tryPerUsd: 47, label: 'قیمت دلاری' };
 
   window.LIQUI_MOLY_CATALOG = {
     rate,
@@ -25,21 +25,21 @@
       since: 'برند آلمانی · توزیع ترکیه',
       origin: 'آلمان — تامین از ترکیه',
       officialUrl: 'https://www.liquimolyturkey.com/',
-      descriptionFa: 'بیزدوار گروپ تامین‌کننده محصولات اصل Liqui Moly است: روغن موتور، افزودنی بنزین و دیزل، ضدیخ، گیربکس و محصولات مراقبت خودرو. قیمت‌ها بر اساس لیست ترکیه با نرخ ۱ دلار = ۴۷ لیر به دلار نمایش داده می‌شود — استعلام و سفارش از واتساپ فارسی.',
+      descriptionFa: 'بیزدوار گروپ تامین‌کننده محصولات اصل Liqui Moly است: روغن موتور، افزودنی بنزین و دیزل، ضدیخ، گیربکس و محصولات مراقبت خودرو. قیمت‌ها به دلار نمایش داده می‌شوند — استعلام و سفارش از واتساپ فارسی.',
       heroStats: [
         { value: '351+', label: 'محصول در کاتالوگ' },
-        { value: '۱$=۴۷₺', label: 'نرخ تبدیل نمایشی' },
+        { value: 'USD', label: 'قیمت دلاری' },
         { value: 'DE', label: 'ساخت آلمان' }
       ]
     },
     trustSignals: [
-      { icon: 'target', label: 'محصول اصل', desc: 'تامین از کانال توزیع Liqui Moly ترکیه — کد محصول و مشخصات فنی' },
-      { icon: 'globe', label: 'قیمت دلاری شفاف', desc: 'تبدیل از لیر ترکیه با نرخ اعلام‌شده — پیش‌فاکتور قبل از پرداخت' },
-      { icon: 'mail', label: 'مشاوره فارسی', desc: 'انتخاب روغن، ویسکوزیته و افزودنی مناسب خودرو — واتساپ فارسی' },
-      { icon: 'factory', label: 'لجستیک بین‌المللی', desc: 'هماهنگی خرید و حمل از ترکیه تا مقصد پروژه شما' }
+      { icon: 'shield', label: 'محصول اصل', desc: 'تامین از کانال توزیع Liqui Moly ترکیه — کد محصول و مشخصات فنی' },
+      { icon: 'coin', label: 'قیمت دلاری شفاف', desc: 'قیمت نمایشی دلاری — پیش‌فاکتور قبل از پرداخت' },
+      { icon: 'phone', label: 'مشاوره فارسی', desc: 'انتخاب روغن، ویسکوزیته و افزودنی مناسب خودرو — واتساپ فارسی' },
+      { icon: 'ship', label: 'لجستیک بین‌المللی', desc: 'هماهنگی خرید و حمل از ترکیه تا مقصد پروژه شما' }
     ],
     whyBuyFromUs: [
-      { icon: 'target', title: 'انتخاب درست روغن و افزودنی', desc: 'اگر نمی‌دانید 5W-30 یا 5W-40، یا Octane Plus مناسب است — مدل خودرو و نوع سوخت را بگویید.' },
+      { icon: 'droplet', title: 'انتخاب درست روغن و افزودنی', desc: 'اگر نمی‌دانید 5W-30 یا 5W-40، یا Octane Plus مناسب است — مدل خودرو و نوع سوخت را بگویید.' },
       { icon: 'document', title: 'قیمت قابل مقایسه', desc: 'قیمت تقریبی دلاری روی هر محصول نمایش داده می‌شود. مبلغ نهایی در پیش‌فاکتور با موجودی روز تایید می‌شود.' },
       { icon: 'handshake', title: 'سفارش تکی یا عمده', desc: 'برای مصرف شخصی، تعمیرگاه یا خرید سازمانی — یک نقطه تماس فارسی.' },
       { icon: 'factory', title: 'برند جهانی آلمان', desc: 'Liqui Moly در روغن موتور، افزودنی سوخت و مراقبت خودرو شناخته‌شده است — ساخت آلمان.' }
@@ -59,8 +59,7 @@
         'تعداد مورد نیاز (تکی / کارتن / عمده)',
         'نوع خودرو و سوخت (بنزین / دیزل / موتورسیکلت)',
         'شهر یا کشور تحویل'
-      ],
-      tip: 'قیمت‌های صفحه تقریبی‌اند (لیر ÷ ۴۷). مبلغ نهایی در پیش‌فاکتور اعلام می‌شود.'
+      ]
     },
     quickSeries: [
       { id: 'engine-oil', name: 'روغن موتور', tag: '5W / 0W', hint: 'Top Tec · Molygen · Special Tec', anchor: 'cat' },
@@ -181,7 +180,7 @@
             "titleTr": "Motor Yağları",
             "icon": "droplet",
             "image": "assets/images/liqui-moly/product-1505.jpg",
-            "desc": "160 محصول — قیمت به دلار (نرخ ۱ دلار = ۴۷ لیر)",
+            "desc": "160 محصول — قیمت به دلار",
             "series": [
                   {
                         "name": "2T Street Race تمام‌سنتتیک روغن موتور 1 لیتر (1505)",
@@ -1631,7 +1630,7 @@
             "titleTr": "Benzin Katkıları",
             "icon": "gas-station",
             "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-hibrit-yakit-katkisi-hybrit-additive-250-ml-1001-7586.jpg",
-            "desc": "19 محصول — قیمت به دلار (نرخ ۱ دلار = ۴۷ لیر)",
+            "desc": "19 محصول — قیمت به دلار",
             "series": [
                   {
                         "name": "LIQUI MOLY Hibrit افزودنی سوخت (Hybrit Additive) 250 ml (1001)",
@@ -1812,7 +1811,7 @@
             "titleTr": "Dizel Katkıları",
             "icon": "gas-station",
             "image": "https://www.liquimolyturkey.com/content/images/thumbs/0000905_dpfgpf-temizleyici-400ml-21942_550.jpeg",
-            "desc": "24 محصول — قیمت به دلار (نرخ ۱ دلار = ۴۷ لیر)",
+            "desc": "24 محصول — قیمت به دلار",
             "series": [
                   {
                         "name": "DPF/GPF پاک‌کننده 400ml (21942)",
@@ -2038,7 +2037,7 @@
             "titleTr": "Yağ Katkıları",
             "icon": "flask",
             "image": "https://www.liquimolyturkey.com/admin/resimler/atf-otomatik-sanziman-katkisi-250-ml-5135-1002.jpg",
-            "desc": "8 محصول — قیمت به دلار (نرخ ۱ دلار = ۴۷ لیر)",
+            "desc": "8 محصول — قیمت به دلار",
             "series": [
                   {
                         "name": "LIQUI MOLY ATF Otomatik Şanzıman افزودنیsı 250 ml (5135)",
@@ -2120,7 +2119,7 @@
             "titleTr": "Şanzıman / Hidrolik",
             "icon": "cog",
             "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-atf-iii-direksiyon-hidroligi-1043-8782.jpg",
-            "desc": "22 محصول — قیمت به دلار (نرخ ۱ دلار = ۴۷ لیر)",
+            "desc": "22 محصول — قیمت به دلار",
             "series": [
                   {
                         "name": "LIQUI MOLY ATF III Direksiyon Hidroliği / Otomatik روغن گیربکس(1043)",
@@ -2328,7 +2327,7 @@
             "titleTr": "Antifriz",
             "icon": "snowflake",
             "image": "assets/images/liqui-moly/product-500.jpg",
-            "desc": "14 محصول — قیمت به دلار (نرخ ۱ دلار = ۴۷ لیر)",
+            "desc": "14 محصول — قیمت به دلار",
             "series": [
                   {
                         "name": "LIQUI MOLY Cam Buz ve Buğu Çözücü اسپری 500 ml (6902)",
@@ -2464,7 +2463,7 @@
             "titleTr": "Car Care",
             "icon": "sparkles",
             "image": "assets/images/liqui-moly/product-500.jpg",
-            "desc": "60 محصول — قیمت به دلار (نرخ ۱ دلار = ۴۷ لیر)",
+            "desc": "60 محصول — قیمت به دلار",
             "series": [
                   {
                         "name": "LIQUI MOLY Araç İçi پاک‌کنندهsi 500 ml (1547)",
@@ -3014,7 +3013,7 @@
             "titleTr": "Motosiklet",
             "icon": "bike",
             "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-motosiklet-benzin-katkisi-yakit-sistemi-temizleyici-80-ml-7824-6220.jpg",
-            "desc": "9 محصول — قیمت به دلار (نرخ ۱ دلار = ۴۷ لیر)",
+            "desc": "9 محصول — قیمت به دلار",
             "series": [
                   {
                         "name": "LIQUI MOLY 4 Zamanlı موتورسیکلت بنزین افزودنیsı -Yakıt سیستمi پاک‌کننده 80 ml (7824)",
@@ -3105,7 +3104,7 @@
             "titleTr": "Marine",
             "icon": "ship",
             "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marin-gresi-250-g-25042-2945.jpg",
-            "desc": "3 محصول — قیمت به دلار (نرخ ۱ دلار = ۴۷ لیر)",
+            "desc": "3 محصول — قیمت به دلار",
             "series": [
                   {
                         "name": "LIQUI MOLY Marin گریس 250 g (25042)",
@@ -3142,7 +3141,7 @@
             "titleTr": "Servis",
             "icon": "wrench",
             "image": "https://www.liquimolyturkey.com/admin/resimler/cam-kesme-teli-50-mt-6218-4978.jpg",
-            "desc": "11 محصول — قیمت به دلار (نرخ ۱ دلار = ۴۷ لیر)",
+            "desc": "11 محصول — قیمت به دلار",
             "series": [
                   {
                         "name": "LIQUI MOLY Cam Kesme Teli 50 mt. (6218)",
@@ -3251,7 +3250,7 @@
             "titleTr": "Diğer",
             "icon": "box",
             "image": "https://www.liquimolyturkey.com/admin/resimler/aku-gresi-300-ml-3141-1004.jpg",
-            "desc": "21 محصول — قیمت به دلار (نرخ ۱ دلار = ۴۷ لیر)",
+            "desc": "21 محصول — قیمت به دلار",
             "series": [
                   {
                         "name": "LIQUI MOLY Akü Gres اسپری 300 ml (3141)",
@@ -7660,13 +7659,41 @@
       }
 ],
     iranIndustries: [
-      { name: 'تعمیرگاه و سرویس خودرو', desc: 'روغن، افزودنی سوخت و محصولات مراقبت', image: LM + 'octane-plus.jpg', icon: 'wrench', models: 'Top Tec · Octane Plus' },
-      { name: 'ناوگان و تاکسی', desc: 'روغن موتور و افزودنی دیزل/بنزین عمده', image: LM + 'octane-plus.jpg', icon: 'truck', models: '5W-30 · Diesel Additive' },
-      { name: 'موتورسیکلت', desc: 'روغن 4T و محصولات نگهداری', image: LM + 'octane-plus.jpg', icon: 'bike', models: '4T · Motorbike' },
-      { name: 'مصرف‌کننده شخصی', desc: 'اکتان پلاس، ضدیخ و car care', image: LM + 'octane-plus.jpg', icon: 'user', models: 'Octane Plus · Antifreeze' }
+      {
+        name: 'تعمیرگاه و سرویس خودرو',
+        desc: 'تامین روغن موتور، افزودنی سوخت و محصولات مراقبت برای سرویس دوره‌ای — سفارش کارتنی یا عمده با پیش‌فاکتور دلاری.',
+        image: LM + 'audiences/workshop.svg',
+        imageAlt: 'تعمیرگاه خودرو — تامین Liqui Moly',
+        icon: 'wrench',
+        models: 'Top Tec · Octane Plus · Cera Tec'
+      },
+      {
+        name: 'ناوگان و تاکسی',
+        desc: 'روغن و افزودنی بنزین/دیزل برای ناوگان تاکسی، پخش و سازمانی — مصرف مداوم، استعلام عمده و زمان‌بندی تامین.',
+        image: LM + 'audiences/fleet.svg',
+        imageAlt: 'ناوگان و تاکسی — تامین Liqui Moly',
+        icon: 'ship',
+        models: '5W-30 · Diesel Additive · Top Tec'
+      },
+      {
+        name: 'موتورسیکلت',
+        desc: 'روغن 4T، محصولات مراقبت و نگهداری موتورسیکلت شهری و آفرود — مناسب کلاچ خیس و گیربکس مشترک.',
+        image: LM + 'audiences/motorcycle.svg',
+        imageAlt: 'موتورسیکلت — Liqui Moly Motorbike',
+        icon: 'bolt',
+        models: '4T Street · Motorbike · 10W-40'
+      },
+      {
+        name: 'مصرف‌کننده شخصی',
+        desc: 'اکتان پلاس، ضدیخ، تمیزکننده‌ها و car care برای استفاده شخصی — مشاوره انتخاب محصول از واتساپ فارسی.',
+        image: LM + 'audiences/personal.svg',
+        imageAlt: 'مصرف شخصی — Octane Plus و مراقبت خودرو',
+        icon: 'users',
+        models: 'Octane Plus · Antifreeze · Car Care'
+      }
     ],
     faq: [
-      { q: 'قیمت‌ها به دلار است یا لیر؟', a: 'قیمت نمایشی به دلار است و از قیمت لیر ترکیه با نرخ ۱ دلار = ۴۷ لیر محاسبه شده. مبلغ نهایی سفارش در پیش‌فاکتور تایید می‌شود.' },
+      { q: 'قیمت‌ها به دلار است یا لیر؟', a: 'قیمت نمایشی به دلار است. مبلغ نهایی سفارش در پیش‌فاکتور تایید می‌شود.' },
       { q: 'محصول اصل Liqui Moly است؟', a: 'بله — تامین از کانال توزیع ترکیه. کد محصول (SKU) روی هر آیتم مشخص است.' },
       { q: 'Octane Plus چیست؟', a: 'افزودنی بنزین ساخت آلمان برای افزایش عدد اکتان و بهبود قدرت موتور. طبق دستورالعمل روی قوطی به باک اضافه می‌شود.' },
       { q: 'آیا برای خارج از ایران هم ارسال می‌کنید؟', a: 'بله — مشاوره واتساپ فارسی برای فارسی‌زبانان در سراسر جهان فعال است. مقصد تحویل در پیش‌فاکتور مشخص می‌شود.' },
@@ -7684,4 +7711,45 @@
     ],
     officialUrl: 'https://www.liquimolyturkey.com/'
   };
+
+  /* Prefer local product images; never hotlink remote CDN (often broken). */
+  (function fixLiquiImages(C) {
+    const LOCAL = {
+      '500': 'assets/images/liqui-moly/product-500.jpg',
+      '1243': 'assets/images/liqui-moly/product-1243.png',
+      '1502': 'assets/images/liqui-moly/product-1502.jpg',
+      '1505': 'assets/images/liqui-moly/product-1505.jpg',
+      '2539': 'assets/images/liqui-moly/product-2539.jpg',
+      '2592': 'assets/images/liqui-moly/product-2592.jpg',
+      '4200': 'assets/images/liqui-moly/product-4200.jpg',
+      '4400': 'assets/images/liqui-moly/product-4400.jpg',
+      '4410': 'assets/images/liqui-moly/product-4410.jpg',
+      '4500': 'assets/images/liqui-moly/product-4500.jpg',
+      '5196': 'assets/images/liqui-moly/product-5196.jpg',
+      '5197': 'assets/images/liqui-moly/product-5197.jpg',
+      '6200': 'assets/images/liqui-moly/product-6200.jpg',
+      '6400': 'assets/images/liqui-moly/product-6400.jpg',
+      '6610': 'assets/images/liqui-moly/product-6610.jpg',
+      '8351': 'assets/images/liqui-moly/product-8351.jpg',
+      '8998': 'assets/images/liqui-moly/product-8998.jpg',
+      '9504': 'assets/images/liqui-moly/product-9504.webp',
+      '20753': 'assets/images/liqui-moly/product-20753.png',
+      '21280': 'assets/images/liqui-moly/product-21280.jpg',
+      '21863': 'assets/images/liqui-moly/product-21863.webp',
+      '25019': 'assets/images/liqui-moly/product-25019.jpg',
+      '30511': 'assets/images/liqui-moly/product-30511.jpg'
+    };
+    const logo = 'assets/images/partners/liqui-moly.svg';
+    (C.categories || []).forEach(function (cat) {
+      const catImg = cat.image && !/^https?:/i.test(cat.image) ? cat.image : logo;
+      (cat.series || []).forEach(function (s) {
+        const sku = String(s.sku || '');
+        if (LOCAL[sku]) {
+          s.image = LOCAL[sku];
+          return;
+        }
+        if (!s.image || /^https?:/i.test(s.image)) s.image = catImg;
+      });
+    });
+  })(window.LIQUI_MOLY_CATALOG);
 })();

@@ -147,7 +147,7 @@ window.VEGA_CATALOG = {
       name: 'VEGAPULS 6X',
       series: 'Pro — THE 6X®',
       category: 'level',
-      image: VEGA_IMG + 'product-vegapuls-6x-photo.webp',
+      image: VEGA_IMG + 'product-vegapuls-6x-photo.png',
       imageAlt: 'VEGAPULS 6X all-round radar level sensor for liquids and bulk solids',
       badge: 'پرچمدار',
       summaryFa: 'رادار همه‌کاره سطح — اندازه‌گیری پیوسته مایع و مواد فله در تمام شرایط فرآیند؛ جانشین سری VEGAPULS 60.',

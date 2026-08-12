@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none" role="img" aria-label="EH*H13̩D*">
+  <defs>
+    <linearGradient id="mc-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#101828"/>
+      <stop offset="1" stop-color="#1c2f55"/>
+    </linearGradient>
+    <linearGradient id="mc-red" x1="280" y1="90" x2="420" y2="260" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff3b45"/>
+      <stop offset="1" stop-color="#b00510"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#mc-bg)"/>
+  <circle cx="520" cy="80" r="110" fill="#003399" opacity=".35"/>
+  <circle cx="100" cy="260" r="80" fill="#e30613" opacity=".12"/>
+  <path d="M0 286h640" stroke="#ffde00" stroke-width="3" opacity=".7"/>
+  <path d="M40 300c80-18 140-18 220 0s160 18 240 0 100-14 140-4" stroke="#3a4f78" stroke-width="10" stroke-linecap="round"/>
+  <!-- bike -->
+  <g transform="translate(120 110)">
+    <circle cx="90" cy="170" r="54" stroke="#e8eef8" stroke-width="10"/>
+    <circle cx="90" cy="170" r="18" fill="#9eb4d8"/>
+    <circle cx="320" cy="170" r="54" stroke="#e8eef8" stroke-width="10"/>
+    <circle cx="320" cy="170" r="18" fill="#9eb4d8"/>
+    <path d="M90 170l70-70 90 18 50 52" stroke="#c9d7ef" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M160 100l46-34h48" stroke="#c9d7ef" stroke-width="10" stroke-linecap="round"/>
+    <path d="M210 118c30-8 70-4 96 28" fill="url(#mc-red)"/>
+    <path d="M206 112c38-18 92-14 120 20l-34 28c-18-22-52-30-86-18l0-30z" fill="url(#mc-red)"/>
+    <rect x="248" y="96" width="54" height="22" rx="6" fill="#003399"/>
+    <rect x="256" y="102" width="24" height="8" rx="2" fill="#ffde00"/>
+    <circle cx="168" cy="92" r="16" fill="#e8eef8"/>
+    <path d="M320 170l-42-62" stroke="#9eb4d8" stroke-width="8" stroke-linecap="round"/>
+    <path d="M278 108h56" stroke="#e8eef8" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <text x="40" y="50" fill="#ffde00" font-family="Segoe UI,Tahoma,sans-serif" font-size="15" font-weight="700" letter-spacing="1">MOTORCYCLE</text>
+</svg>

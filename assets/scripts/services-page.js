@@ -179,6 +179,164 @@
     });
   }
 
+  function renderDmPanel() {
+    const el = document.getElementById('dmPanel');
+    if (!el) return;
+    const panels = rawList('servicesPage.digitalMarketing.panels', [
+      { title: 'Ads', desc: 'Google و شبکه‌های اجتماعی' },
+      { title: 'SEO', desc: 'سئو و محتوای هدفمند' },
+      { title: 'CRO', desc: 'بهینه‌سازی نرخ تبدیل' },
+      { title: 'Email', desc: 'اتوماسیون و ایمیل' },
+      { title: 'Analytics', desc: 'گزارش و KPI' },
+      { title: 'Funnel', desc: 'مسیر جذب تا خرید' }
+    ]);
+    el.innerHTML = panels.map(p => `
+      <div class="service-panel-card">
+        <strong>${p.title}</strong>
+        <span>${p.desc}</span>
+      </div>
+    `).join('');
+  }
+
+  function renderDmDeliverables() {
+    const el = document.getElementById('dmDeliverables');
+    if (!el) return;
+    const title = t('servicesPage.digitalMarketing.packagesTitle', 'خروجی‌های همکاری');
+    const items = rawList('servicesPage.digitalMarketing.packages', [
+      'نقشه کانال و قیف فروش',
+      'راه‌اندازی و بهینه‌سازی کمپین',
+      'آزمایش CRO روی صفحات کلیدی',
+      'گزارش KPI ماهانه'
+    ]);
+    el.innerHTML = `
+      <p class="server-ops-stack__title">${title}</p>
+      <div class="server-ops-stack__list">
+        ${items.map(item => `<span class="server-ops-stack__item">${item}</span>`).join('')}
+      </div>
+    `;
+  }
+
+  function renderDmFaq() {
+    const el = document.getElementById('dmFaq');
+    if (!el) return;
+    const faq = rawList('servicesPage.digitalMarketing.faq', []);
+    if (!faq.length) {
+      el.hidden = true;
+      return;
+    }
+    el.hidden = false;
+    el.innerHTML = `
+      <div class="field-tech-faq-wrap">
+        <div class="field-tech-faq__head">
+          <span class="field-tech-faq__eyebrow field-tech-faq__eyebrow--yellow">${t('servicesPage.digitalMarketing.faqEyebrow', 'دیجیتال مارکتینگ')}</span>
+          <h3 class="field-tech-faq__title">${t('servicesPage.digitalMarketing.faqTitle', 'سوالات پرتکرار بازاریابی دیجیتال')}</h3>
+        </div>
+        <div class="field-tech-faq" role="list">
+          ${faq.map((item, i) => `
+            <details class="field-tech-faq__item field-tech-faq__item--yellow"${i === 0 ? ' open' : ''} role="listitem">
+              <summary>
+                <span class="field-tech-faq__q">${item.q}</span>
+                <span class="field-tech-faq__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="field-tech-faq__body"><p>${item.a}</p></div>
+            </details>
+          `).join('')}
+        </div>
+      </div>`;
+
+    const ld = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faq.map(item => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: { '@type': 'Answer', text: item.a }
+      }))
+    };
+    if (typeof window.injectJsonLd === 'function') {
+      window.injectJsonLd('jsonld-dm-faq', ld);
+    }
+  }
+
+  function renderWebDesignPanel() {
+    const el = document.getElementById('webDesignPanel');
+    if (!el) return;
+    const panels = rawList('servicesPage.webDesign.panels', [
+      { title: 'Corporate', desc: 'سایت شرکتی' },
+      { title: 'Store', desc: 'فروشگاه ووکامرس' },
+      { title: 'Web App', desc: 'پنل و سامانه وب' },
+      { title: 'Landing', desc: 'لندینگ کمپین' },
+      { title: 'RTL / FA', desc: 'فونت و UI فارسی' },
+      { title: 'Fast', desc: 'تحویل از $99' }
+    ]);
+    el.innerHTML = panels.map(p => `
+      <div class="service-panel-card">
+        <strong>${p.title}</strong>
+        <span>${p.desc}</span>
+      </div>
+    `).join('');
+  }
+
+  function renderWebDesignDeliverables() {
+    const el = document.getElementById('webDesignDeliverables');
+    if (!el) return;
+    const title = t('servicesPage.webDesign.packagesTitle', 'خروجی‌های تحویل');
+    const items = rawList('servicesPage.webDesign.packages', [
+      'طراحی UI/UX و هویت صفحه',
+      'پیاده‌سازی ریسپانسیو RTL',
+      'سئو پایه و سرعت',
+      'آموزش و پشتیبانی لانچ'
+    ]);
+    el.innerHTML = `
+      <p class="server-ops-stack__title">${title}</p>
+      <div class="server-ops-stack__list">
+        ${items.map(item => `<span class="server-ops-stack__item">${item}</span>`).join('')}
+      </div>
+    `;
+  }
+
+  function renderWebDesignFaq() {
+    const el = document.getElementById('webDesignFaq');
+    if (!el) return;
+    const faq = rawList('servicesPage.webDesign.faq', []);
+    if (!faq.length) {
+      el.hidden = true;
+      return;
+    }
+    el.hidden = false;
+    el.innerHTML = `
+      <div class="field-tech-faq-wrap">
+        <div class="field-tech-faq__head">
+          <span class="field-tech-faq__eyebrow field-tech-faq__eyebrow--blue">${t('servicesPage.webDesign.faqEyebrow', 'طراحی وب')}</span>
+          <h3 class="field-tech-faq__title">${t('servicesPage.webDesign.faqTitle', 'سوالات پرتکرار طراحی وب')}</h3>
+        </div>
+        <div class="field-tech-faq" role="list">
+          ${faq.map((item, i) => `
+            <details class="field-tech-faq__item field-tech-faq__item--blue"${i === 0 ? ' open' : ''} role="listitem">
+              <summary>
+                <span class="field-tech-faq__q">${item.q}</span>
+                <span class="field-tech-faq__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="field-tech-faq__body"><p>${item.a}</p></div>
+            </details>
+          `).join('')}
+        </div>
+      </div>`;
+
+    const ld = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faq.map(item => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: { '@type': 'Answer', text: item.a }
+      }))
+    };
+    if (typeof window.injectJsonLd === 'function') {
+      window.injectJsonLd('jsonld-web-design-faq', ld);
+    }
+  }
+
   function renderSmmPanel() {
     const el = document.getElementById('smmPanel');
     if (!el) return;
@@ -353,22 +511,46 @@
     if (!el) return;
     const ft = fieldTechCfg();
     const wa = fieldWaUrl();
+    const tel = ft.tel || '+989364115151';
+    const phone = t('servicesPage.fieldTech.waHint', ft.phoneDisplay || '+98 936 411 5151');
+    const cities = t('servicesPage.fieldTech.cities', (ft.cities || []).join(' · '));
     el.innerHTML = `
       <article class="field-tech-lead">
-        <div class="field-tech-lead__badge">${ic('wrench', { size: 22 })} ${t('servicesPage.fieldTech.leadLabel', 'مسئول فنی')}</div>
-        <h3 class="field-tech-lead__name">${t('servicesPage.fieldTech.leadName', ft.lead?.nameFa || 'مهندس آرشام جاهد تبریزی')}</h3>
-        <p class="field-tech-lead__role">${t('servicesPage.fieldTech.leadRole', ft.lead?.roleFa || '')}</p>
-        <p class="field-tech-lead__cities"><span>${t('servicesPage.fieldTech.citiesLabel', 'شهرهای هدف')}</span> ${t('servicesPage.fieldTech.cities', (ft.cities || []).join(' · '))}</p>
+        <div class="field-tech-lead__top">
+          <div class="field-tech-lead__badge">${ic('wrench', { size: 18 })} ${t('servicesPage.fieldTech.leadLabel', 'مسئول فنی')}</div>
+          <h3 class="field-tech-lead__name">${t('servicesPage.fieldTech.leadName', ft.lead?.nameFa || 'مهندس آرشام جاهد تبریزی')}</h3>
+          <p class="field-tech-lead__role">${t('servicesPage.fieldTech.leadRole', ft.lead?.roleFa || '')}</p>
+          <div class="field-tech-lead__meta">
+            <span class="field-tech-lead__chip">${t('servicesPage.fieldTech.citiesLabel', 'شهرهای هدف')}: ${cities}</span>
+          </div>
+        </div>
+        <a class="field-tech-lead__phone" href="tel:${tel}" dir="ltr" data-field-tel>
+          <span class="field-tech-lead__phone-label">${t('servicesPage.fieldTech.phoneLabel', 'شماره مستقیم')}</span>
+          <span class="field-tech-lead__phone-num">${phone}</span>
+        </a>
         <div class="field-tech-lead__actions">
-          <a class="btn btn--green" data-field-wa href="${wa}" target="_blank" rel="noopener noreferrer">
-            ${ic('whatsapp', { size: 18, variant: 'white' })} ${t('servicesPage.fieldTech.waCta', 'واتساپ خدمات فنی')}
+          <a class="btn btn--green field-tech-lead__btn" data-field-wa href="${wa}" target="_blank" rel="noopener noreferrer">
+            ${ic('whatsapp', { size: 18, variant: 'white' })}
+            <span>${t('servicesPage.fieldTech.waCta', 'واتساپ خدمات فنی')}</span>
           </a>
-          <a class="btn btn--outline" data-field-tel href="tel:${ft.tel || '+989364115151'}">
-            ${ic('phone', { size: 18 })} ${t('servicesPage.fieldTech.callCta', 'تماس تلفنی')}
+          <a class="btn btn--outline field-tech-lead__btn" data-field-tel href="tel:${tel}">
+            ${ic('phone', { size: 18 })}
+            <span>${t('servicesPage.fieldTech.callCta', 'تماس تلفنی')}</span>
           </a>
         </div>
-        <p class="field-tech-lead__hint" dir="ltr">&#8235;${t('servicesPage.fieldTech.waHint', ft.phoneDisplay || '+98 936 411 5151')}&#8236;</p>
       </article>`;
+  }
+
+  function renderFieldTechPanel() {
+    const el = document.getElementById('fieldTechPanel');
+    if (!el) return;
+    const items = rawList('servicesPage.fieldTech.panel', null);
+    if (!Array.isArray(items) || !items.length) return;
+    el.innerHTML = items.map(item => `
+      <div class="service-panel-card">
+        <strong>${item.title || ''}</strong>
+        <span>${item.desc || ''}</span>
+      </div>`).join('');
   }
 
   function renderFieldFaq() {
@@ -458,12 +640,19 @@
     renderOverview();
     renderProcess();
     applyBlockLists();
+    renderDmPanel();
+    renderDmDeliverables();
+    renderDmFaq();
+    renderWebDesignPanel();
+    renderWebDesignDeliverables();
+    renderWebDesignFaq();
     renderServerOpsPanel();
     renderServerOpsStack();
     renderServerOpsFaq();
     renderSmmPanel();
     renderSmmDeliverables();
     renderSmmFaq();
+    renderFieldTechPanel();
     renderFieldTechLead();
     renderFieldFaq();
     wireFieldTechCtas();

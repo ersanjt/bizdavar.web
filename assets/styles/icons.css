@@ -226,7 +226,8 @@
 
 /* VEGA / Prosense */
 .vega-cat-nav__item .bd-icon,
-.prosense-cat-nav__item .bd-icon {
+.prosense-cat-nav__item .bd-icon,
+.liqui-cat-nav__item .bd-icon {
   width: 18px;
   height: 18px;
   vertical-align: -3px;
@@ -239,6 +240,16 @@
 .prosense-category-block__icon .bd-icon {
   width: 36px;
   height: 36px;
+}
+
+.vega-trust-item__icon .bd-icon,
+.prosense-trust-item__icon .bd-icon,
+.gamak-trust-item__icon .bd-icon,
+.teltonika-trust-item__icon .bd-icon,
+.digi-trust-item__icon .bd-icon,
+.teraoka-trust-item__icon .bd-icon,
+.liqui-trust-item__icon .bd-icon {
+  color: inherit;
 }
 
 .vega-industry-item > span,

@@ -15,6 +15,7 @@
     info: `<circle cx="12" cy="12" r="9" ${S}/><path ${S} d="M12 11v5"/><circle cx="12" cy="8" r="1" ${A}/>`,
     list: `<path ${S} d="M5 7h14M5 12h14M5 17h14"/><circle cx="3" cy="7" r="1" ${A}/><circle cx="3" cy="12" r="1" ${A}/><circle cx="3" cy="17" r="1" ${A}/>`,
     briefcase: `<rect x="3" y="8" width="18" height="12" rx="2" ${S}/><path ${S} d="M9 8V6a3 3 0 013-3h0a3 3 0 013 3v2"/><path ${S} d="M3 13h18"/><rect x="10" y="12" width="4" height="2" rx="0.5" ${A}/>`,
+    building: `<path ${S} d="M4 20h16M6 20V6h8v14M14 10h4v10"/><path ${S} d="M8 9h2M8 13h2M8 17h2"/><circle cx="16" cy="14" r="1" ${A}/>`,
     globe: `<circle cx="12" cy="12" r="9" ${S}/><path ${S} d="M3 12h18M12 3c2.5 2.8 4 6 4 9s-1.5 6.2-4 9c-2.5-2.8-4-6-4-9s1.5-6.2 4-9z"/><circle cx="12" cy="12" r="1.5" ${A}/>`,
     article: `<path ${S} d="M6 4h12v16H6z"/><path ${S} d="M9 8h6M9 12h6M9 16h4"/><rect x="8" y="7" width="2" height="2" rx="0.5" ${A}/>`,
     phone: `<path ${S} d="M6.5 4h3l1.5 4-2 1.5a11 11 0 005 5L14 13l4 1.5v3a1.5 1.5 0 01-1.5 1.5A13 13 0 014 6A1.5 1.5 0 015.5 4.5z"/><circle cx="17" cy="7" r="1.5" ${A}/>`,
