@@ -84,7 +84,7 @@
       {
         title: 'خدمات فنی و ساختمانی',
         subtitle: 'دوربین مدار بسته · سیم‌کشی · نورمخفی',
-        body: 'نصب و راه‌اندازی <strong>دوربین مدار بسته</strong>، <strong>سیم‌کشی ساختمان</strong> و <strong>نورمخفی</strong> واحدهای مسکونی و تجاری در <strong>تبریز</strong> و <strong>استانبول</strong> — با هماهنگی <strong>مسئول فنی</strong>.',
+        body: 'نصب و راه‌اندازی <strong>دوربین مدار بسته</strong>، <strong>سیم‌کشی ساختمان</strong> و <strong>نورمخفی</strong> واحدهای مسکونی و تجاری در <strong>تبریز</strong> و <strong>استانبول</strong> — توسط <strong>تیم فنی بیزدوار</strong>.',
         tags: ['CCTV', 'سیم‌کشی', 'نورمخفی', 'تبریز', 'استانبول'],
         checks: [
           'نصب دوربین مدار بسته منزل و محل کار — تبریز و استانبول',
@@ -172,7 +172,7 @@
       {
         title: 'Teknik ve bina hizmetleri',
         subtitle: 'CCTV · Tesisat · Gizli aydınlatma',
-        body: '<strong>Güvenlik kamerası</strong>, <strong>bina tesisatı</strong> ve <strong>gizli aydınlatma</strong> — <strong>Tebriz</strong> ve <strong>İstanbul</strong>. Teknik sorumlu ile koordinasyon.',
+        body: '<strong>Güvenlik kamerası</strong>, <strong>bina tesisatı</strong> ve <strong>gizli aydınlatma</strong> — <strong>Tebriz</strong> ve <strong>İstanbul</strong>. Bizdavar teknik ekibi tarafından uygulanır.',
         tags: ['CCTV', 'Tesisat', 'Aydınlatma', 'Tebriz', 'İstanbul'],
         checks: [
           'CCTV kurulum — konut ve işyeri',
@@ -260,7 +260,7 @@
       {
         title: 'Technical & building services',
         subtitle: 'CCTV · Wiring · Cove lighting',
-        body: '<strong>CCTV installation</strong>, <strong>building wiring</strong> and <strong>cove lighting</strong> for homes and commercial units in <strong>Tabriz</strong> and <strong>Istanbul</strong> — coordinated with the <strong>technical lead</strong>.',
+        body: '<strong>CCTV installation</strong>, <strong>building wiring</strong> and <strong>cove lighting</strong> for homes and commercial units in <strong>Tabriz</strong> and <strong>Istanbul</strong> — by the <strong>Bizdavar technical team</strong>.',
         tags: ['CCTV', 'Wiring', 'Lighting', 'Tabriz', 'Istanbul'],
         checks: [
           'CCTV for homes and workplaces',
@@ -547,9 +547,134 @@
     }
   };
 
+  const softwareApps = {
+    fa: {
+      servicesTitle: 'چه می‌سازیم؟',
+      processNote: 'از تحلیل نیاز تا انتشار استور و پشتیبانی — اپ موبایل، سامانه و یکپارچه‌سازی API.',
+      ctaPortfolio: 'نمونه‌کار نرم‌افزاری',
+      packagesTitle: 'خروجی‌های پروژه',
+      packages: [
+        'تحلیل نیاز و نقشه محصول',
+        'UI/UX و معماری فنی',
+        'توسعه اندروید / iOS یا سامانه',
+        'انتشار، آموزش و پشتیبانی'
+      ],
+      panels: [
+        { title: 'Android', desc: 'اپلیکیشن اندروید' },
+        { title: 'iOS', desc: 'اپلیکیشن آیفون' },
+        { title: 'سامانه', desc: 'پنل و سیستم سازمانی' },
+        { title: 'API', desc: 'یکپارچه‌سازی و درگاه' },
+        { title: 'B2B', desc: 'پنل و گردش‌کار سازمانی' },
+        { title: 'Support', desc: 'انتشار و به‌روزرسانی' }
+      ],
+      faqEyebrow: 'اپ و سامانه',
+      faqTitle: 'سوالات پرتکرار اپلیکیشن و سامانه',
+      faq: [
+        {
+          q: 'چه نوع نرم‌افزاری می‌سازید؟',
+          a: 'اپلیکیشن اندروید و iOS، سامانه‌های سازمانی، پنل B2B و نرم‌افزار سفارشی — متناسب با نیاز کسب‌وکار شما.'
+        },
+        {
+          q: 'فرآیند پروژه چگونه است؟',
+          a: 'از تحلیل نیاز و طراحی UI/UX شروع می‌کنیم، سپس توسعه، تست، انتشار استور (در صورت نیاز) و پشتیبانی ادامه می‌یابد.'
+        },
+        {
+          q: 'یکپارچه‌سازی با سیستم‌های موجود دارید؟',
+          a: 'بله. اتصال API، درگاه پرداخت، CRM و سرویس‌های ثالث در محدوده پروژه قابل برنامه‌ریزی است.'
+        },
+        {
+          q: 'پس از لانچ چه پشتیبانی می‌دهید؟',
+          a: 'رفع باگ اولیه، به‌روزرسانی نسخه‌ها و در صورت قرارداد، نگهداری مستمر و توسعه قابلیت‌های جدید.'
+        }
+      ]
+    },
+    tr: {
+      servicesTitle: 'Ne geliştiriyoruz?',
+      processNote: 'İhtiyaç analizinden mağaza yayını ve desteğe — mobil uygulama, sistem ve API entegrasyonu.',
+      ctaPortfolio: 'Yazılım portfolyosu',
+      packagesTitle: 'Proje çıktıları',
+      packages: [
+        'İhtiyaç analizi ve ürün haritası',
+        'UI/UX ve teknik mimari',
+        'Android / iOS veya sistem geliştirme',
+        'Yayın, eğitim ve destek'
+      ],
+      panels: [
+        { title: 'Android', desc: 'Android uygulaması' },
+        { title: 'iOS', desc: 'iPhone uygulaması' },
+        { title: 'Sistem', desc: 'Kurumsal panel ve sistem' },
+        { title: 'API', desc: 'Entegrasyon ve ödeme' },
+        { title: 'B2B', desc: 'Kurumsal iş akışı' },
+        { title: 'Support', desc: 'Yayın ve güncelleme' }
+      ],
+      faqEyebrow: 'Uygulama ve sistem',
+      faqTitle: 'Uygulama ve sistem SSS',
+      faq: [
+        {
+          q: 'Ne tür yazılımlar geliştiriyorsunuz?',
+          a: 'Android ve iOS uygulamaları, kurumsal sistemler, B2B paneller ve özel yazılım — işletme ihtiyacınıza göre.'
+        },
+        {
+          q: 'Proje süreci nasıl ilerler?',
+          a: 'İhtiyaç analizi ve UI/UX ile başlar; ardından geliştirme, test, mağaza yayını (gerekirse) ve destek gelir.'
+        },
+        {
+          q: 'Mevcut sistemlerle entegrasyon var mı?',
+          a: 'Evet. API, ödeme, CRM ve üçüncü taraf servis bağlantıları proje kapsamında planlanabilir.'
+        },
+        {
+          q: 'Lansman sonrası destek nedir?',
+          a: 'İlk hata düzeltmeleri, sürüm güncellemeleri ve sözleşmeye göre sürekli bakım / yeni özellikler.'
+        }
+      ]
+    },
+    en: {
+      servicesTitle: 'What we build',
+      processNote: 'From requirements to store release and support — mobile apps, systems and API integration.',
+      ctaPortfolio: 'Software portfolio',
+      packagesTitle: 'Project outputs',
+      packages: [
+        'Requirements and product map',
+        'UI/UX and technical architecture',
+        'Android / iOS or system development',
+        'Release, training and support'
+      ],
+      panels: [
+        { title: 'Android', desc: 'Android apps' },
+        { title: 'iOS', desc: 'iPhone apps' },
+        { title: 'Systems', desc: 'Business panels & systems' },
+        { title: 'API', desc: 'Integrations & payments' },
+        { title: 'B2B', desc: 'Enterprise workflows' },
+        { title: 'Support', desc: 'Release and updates' }
+      ],
+      faqEyebrow: 'Apps & systems',
+      faqTitle: 'Apps & systems FAQ',
+      faq: [
+        {
+          q: 'What software do you build?',
+          a: 'Android and iOS apps, enterprise systems, B2B panels and custom software — shaped around your business needs.'
+        },
+        {
+          q: 'How does a project run?',
+          a: 'We start with requirements and UI/UX, then build, test, store release when needed, and ongoing support.'
+        },
+        {
+          q: 'Can you integrate with existing systems?',
+          a: 'Yes. APIs, payment gateways, CRM and third-party services can be scoped into the project.'
+        },
+        {
+          q: 'What support do you provide after launch?',
+          a: 'Early bug fixes, version updates and, under agreement, ongoing maintenance and new features.'
+        }
+      ]
+    }
+  };
+
   const smm = {
     fa: {
       servicesTitle: 'در مدیریت شبکه‌های اجتماعی چه می‌کنیم؟',
+      processNote: 'تقویم محتوا، طراحی، تعامل و Paid Social — با گزارش رشد ماهانه.',
+      ctaMarketing: 'هم‌راستا با دیجیتال مارکتینگ',
       platformsTitle: 'پلتفرم‌ها',
       platforms: [
         { title: 'Instagram', desc: 'پست، استوری، ریلز و تبلیغات' },
@@ -589,6 +714,8 @@
     },
     tr: {
       servicesTitle: 'SMM’de neler yapıyoruz?',
+      processNote: 'İçerik takvimi, tasarım, etkileşim ve Paid Social — aylık büyüme raporuyla.',
+      ctaMarketing: 'Dijital pazarlamayla hizalı',
       platformsTitle: 'Platformlar',
       platforms: [
         { title: 'Instagram', desc: 'Post, story, reels ve reklam' },
@@ -628,6 +755,8 @@
     },
     en: {
       servicesTitle: 'What we deliver in SMM',
+      processNote: 'Content calendar, design, engagement and Paid Social — with monthly growth reporting.',
+      ctaMarketing: 'Align with digital marketing',
       platformsTitle: 'Platforms',
       platforms: [
         { title: 'Instagram', desc: 'Posts, stories, reels and ads' },
@@ -670,6 +799,8 @@
   const serverOps = {
     fa: {
       servicesTitle: 'چه خدماتی در زیرساخت پوشش می‌دهیم؟',
+      processNote: 'از سخت‌سازی اولیه تا مانیتورینگ و واکنش به حادثه — زیرساخت پایدار برای سایت و سامانه.',
+      ctaHost: 'Netinode',
       stackTitle: 'استک و ابزارهای رایج',
       stack: ['Ubuntu', 'Debian', 'Nginx', 'MySQL / MariaDB', 'Redis', 'Cloudflare', 'Docker', 'Git'],
       panels: [
@@ -703,6 +834,8 @@
     },
     tr: {
       servicesTitle: 'Altyapıda neleri kapsıyoruz?',
+      processNote: 'İlk hardening’den monitoring ve olay müdahalesine — site ve sistem için kararlı altyapı.',
+      ctaHost: 'Netinode',
       stackTitle: 'Yaygın stack ve araçlar',
       stack: ['Ubuntu', 'Debian', 'Nginx', 'MySQL / MariaDB', 'Redis', 'Cloudflare', 'Docker', 'Git'],
       panels: [
@@ -736,6 +869,8 @@
     },
     en: {
       servicesTitle: 'What does infrastructure cover?',
+      processNote: 'From initial hardening to monitoring and incident response — stable infrastructure for sites and systems.',
+      ctaHost: 'Netinode',
       stackTitle: 'Common stack & tools',
       stack: ['Ubuntu', 'Debian', 'Nginx', 'MySQL / MariaDB', 'Redis', 'Cloudflare', 'Docker', 'Git'],
       panels: [
@@ -774,9 +909,9 @@
       eyebrow: 'خدمات فنی میدانی',
       title: 'دوربین مدار بسته، سیم‌کشی و نورمخفی',
       desc: 'اجرای تخصصی در تبریز و استانبول — بازدید، پیشنهاد طرح و نصب.',
-      leadLabel: 'مسئول فنی',
-      leadName: 'مسئول فنی',
-      leadRole: 'مسئول فنی و اجرایی خدمات ساختمانی و امنیتی',
+      leadLabel: 'هماهنگی خدمات فنی',
+      leadName: 'تیم فنی بیزدوار',
+      leadRole: 'نصب دوربین مدار بسته، سیم‌کشی ساختمان و نورمخفی',
       citiesLabel: 'شهرهای هدف',
       cities: 'تبریز · استانبول',
       phoneLabel: 'شماره مستقیم',
@@ -784,27 +919,27 @@
       callCta: 'تماس تلفنی',
       waHint: '+98 936 411 5151',
       servicesTitle: 'چه خدماتی ارائه می‌دهیم؟',
-      processNote: 'بازدید فنی، پیشنهاد طرح و زمان‌بندی اجرا — هماهنگی مستقیم با مسئول فنی.',
+      processNote: 'بازدید فنی، پیشنهاد طرح و زمان‌بندی اجرا — هماهنگی مستقیم از واتساپ خدمات فنی.',
       faqTitle: 'سوالات پرتکرار خدمات فنی',
       panel: [
-        { title: 'CCTV', desc: 'دوربین مدار بسته' },
-        { title: 'Wiring', desc: 'سیم‌کشی ساختمان' },
-        { title: 'Lighting', desc: 'نورمخفی داخلی' },
-        { title: 'Survey', desc: 'بازدید و طرح اجرا' },
-        { title: 'Cities', desc: 'تبریز و استانبول' },
-        { title: 'Support', desc: 'گارانتی پس از نصب' }
+        { id: 'cctv', icon: 'monitor', title: 'دوربین مدار بسته', desc: 'نصب CCTV منزل و محل کار' },
+        { id: 'wiring', icon: 'bolt', title: 'سیم‌کشی ساختمان', desc: 'واحد مسکونی و تجاری' },
+        { id: 'lighting', icon: 'flame', title: 'نورمخفی', desc: 'طراحی و اجرای داخلی' },
+        { id: 'survey', icon: 'document', title: 'بازدید فنی', desc: 'طرح و زمان‌بندی اجرا' },
+        { id: 'cities', icon: 'pin', title: 'تبریز و استانبول', desc: 'پوشش اجرایی دو شهر' },
+        { id: 'support', icon: 'shield', title: 'گارانتی اجرا', desc: 'پشتیبانی پس از نصب' }
       ],
       faq: [
         {
           q: 'نصب دوربین مدار بسته در تبریز و استانبول انجام می‌دهید؟',
-          a: 'بله. نصب و راه‌اندازی دوربین مدار بسته برای واحدهای مسکونی و تجاری در تبریز و استانبول توسط تیم فنی بیزدوار و با هماهنگی مسئول فنی انجام می‌شود.'
+          a: 'بله. نصب و راه‌اندازی دوربین مدار بسته برای واحدهای مسکونی و تجاری در تبریز و استانبول توسط تیم فنی بیزدوار انجام می‌شود.'
         },
         {
           q: 'نورمخفی داخل واحد مسکونی یا تجاری هم کار می‌کنید؟',
           a: 'بله. طراحی و اجرای نورمخفی داخل واحدهای مسکونی و فضاهای تجاری، همراه با سیم‌کشی استاندارد ساختمانی ارائه می‌شود.'
         },
         {
-          q: 'چطور با مسئول فنی هماهنگ کنم؟',
+          q: 'چطور برای خدمات فنی هماهنگ کنم؟',
           a: 'مستقیم در واتساپ با شماره +98 936 411 5151 پیام بدهید یا از دکمه «واتساپ خدمات فنی» در همین صفحه استفاده کنید.'
         }
       ]
@@ -813,9 +948,9 @@
       eyebrow: 'Saha teknik hizmetleri',
       title: 'CCTV, tesisat ve gizli aydınlatma',
       desc: 'Tebriz ve İstanbul’da keşif, plan ve kurulum.',
-      leadLabel: 'Teknik sorumlu',
-      leadName: 'Teknik sorumlu',
-      leadRole: 'Teknik ve uygulama sorumlusu — CCTV, tesisat, aydınlatma',
+      leadLabel: 'Teknik hizmet koordinasyonu',
+      leadName: 'Bizdavar teknik ekibi',
+      leadRole: 'CCTV, bina tesisatı ve gizli aydınlatma kurulumu',
       citiesLabel: 'Hedef şehirler',
       cities: 'Tebriz · İstanbul',
       phoneLabel: 'Direkt numara',
@@ -823,27 +958,27 @@
       callCta: 'Telefon',
       waHint: '+98 936 411 5151',
       servicesTitle: 'Hangi hizmetleri veriyoruz?',
-      processNote: 'Teknik keşif, uygulama planı ve kurulum takvimi — doğrudan teknik sorumluya yazın.',
+      processNote: 'Teknik keşif, uygulama planı ve kurulum takvimi — Teknik WhatsApp’tan yazın.',
       faqTitle: 'Teknik hizmet SSS',
       panel: [
-        { title: 'CCTV', desc: 'Güvenlik kamerası' },
-        { title: 'Wiring', desc: 'Bina tesisatı' },
-        { title: 'Lighting', desc: 'Gizli aydınlatma' },
-        { title: 'Survey', desc: 'Keşif ve plan' },
-        { title: 'Cities', desc: 'Tebriz ve İstanbul' },
-        { title: 'Support', desc: 'Kurulum sonrası destek' }
+        { id: 'cctv', icon: 'monitor', title: 'Güvenlik kamerası', desc: 'Konut ve işyeri CCTV' },
+        { id: 'wiring', icon: 'bolt', title: 'Bina tesisatı', desc: 'Konut ve ticari birimler' },
+        { id: 'lighting', icon: 'flame', title: 'Gizli aydınlatma', desc: 'İç mekân uygulama' },
+        { id: 'survey', icon: 'document', title: 'Teknik keşif', desc: 'Plan ve kurulum takvimi' },
+        { id: 'cities', icon: 'pin', title: 'Tebriz ve İstanbul', desc: 'İki şehirde uygulama' },
+        { id: 'support', icon: 'shield', title: 'Kurulum garantisi', desc: 'Kurulum sonrası destek' }
       ],
       faq: [
         {
           q: 'Tebriz ve İstanbul’da kamera kurulumu var mı?',
-          a: 'Evet. Konut ve ticari birimlerde CCTV kurulumu Bizdavar teknik ekibi ve teknik sorumlu koordinasyonunda yapılır.'
+          a: 'Evet. Konut ve ticari birimlerde CCTV kurulumu Bizdavar teknik ekibi tarafından yapılır.'
         },
         {
           q: 'Gizli aydınlatma da yapıyor musunuz?',
           a: 'Evet. Konut ve ticari alanlarda gizli aydınlatma ile standart bina tesisatı birlikte planlanır.'
         },
         {
-          q: 'Teknik sorumluya nasıl ulaşırım?',
+          q: 'Teknik hizmet için nasıl ulaşırım?',
           a: '+98 936 411 5151 WhatsApp hattından veya bu sayfadaki Teknik WhatsApp düğmesinden yazabilirsiniz.'
         }
       ]
@@ -852,9 +987,9 @@
       eyebrow: 'On-site technical services',
       title: 'CCTV, wiring and cove lighting',
       desc: 'Survey, plan and install in Tabriz and Istanbul.',
-      leadLabel: 'Technical lead',
-      leadName: 'Technical lead',
-      leadRole: 'Technical lead — CCTV, building wiring and cove lighting',
+      leadLabel: 'Technical coordination',
+      leadName: 'Bizdavar technical team',
+      leadRole: 'CCTV, building wiring and cove lighting installation',
       citiesLabel: 'Focus cities',
       cities: 'Tabriz · Istanbul',
       phoneLabel: 'Direct line',
@@ -862,27 +997,27 @@
       callCta: 'Call',
       waHint: '+98 936 411 5151',
       servicesTitle: 'What we deliver',
-      processNote: 'Site survey, execution plan and install schedule — coordinate directly with the technical lead.',
+      processNote: 'Site survey, execution plan and install schedule — message via Technical WhatsApp.',
       faqTitle: 'Technical services FAQ',
       panel: [
-        { title: 'CCTV', desc: 'Security cameras' },
-        { title: 'Wiring', desc: 'Building wiring' },
-        { title: 'Lighting', desc: 'Cove lighting' },
-        { title: 'Survey', desc: 'Visit & plan' },
-        { title: 'Cities', desc: 'Tabriz & Istanbul' },
-        { title: 'Support', desc: 'After-install support' }
+        { id: 'cctv', icon: 'monitor', title: 'CCTV', desc: 'Home and workplace cameras' },
+        { id: 'wiring', icon: 'bolt', title: 'Building wiring', desc: 'Residential and commercial' },
+        { id: 'lighting', icon: 'flame', title: 'Cove lighting', desc: 'Indoor design and install' },
+        { id: 'survey', icon: 'document', title: 'Site survey', desc: 'Plan and schedule' },
+        { id: 'cities', icon: 'pin', title: 'Tabriz & Istanbul', desc: 'On-site coverage' },
+        { id: 'support', icon: 'shield', title: 'Install warranty', desc: 'After-install support' }
       ],
       faq: [
         {
           q: 'Do you install CCTV in Tabriz and Istanbul?',
-          a: 'Yes. Residential and commercial CCTV installs are handled by the Bizdavar technical team with the technical lead.'
+          a: 'Yes. Residential and commercial CCTV install is handled by the Bizdavar technical team in Tabriz and Istanbul.'
         },
         {
-          q: 'Do you offer cove lighting indoors?',
-          a: 'Yes. Cove lighting for homes and commercial spaces, with standard building wiring, is part of this service line.'
+          q: 'Do you also do cove lighting indoors?',
+          a: 'Yes. Cove lighting for homes and commercial spaces is planned together with standard building wiring.'
         },
         {
-          q: 'How do I reach the technical lead?',
+          q: 'How do I coordinate technical services?',
           a: 'Message +98 936 411 5151 on WhatsApp or use the Technical WhatsApp button on this page.'
         }
       ]
@@ -894,12 +1029,28 @@
       hero: {
         tag: 'خدمات ما',
         title: 'خدمات دیجیتال و فنی بیزدوار',
-        desc: 'بازاریابی، وب‌اپ، اپلیکیشن، سامانه، سرور و SMM — به‌همراه خدمات فنی دوربین، سیم‌کشی و نورمخفی در <strong>تبریز</strong> و <strong>استانبول</strong>. محصولات در <a href="products">صفحه محصولات</a> هستند.'
+        desc: 'بازاریابی، وب‌اپ، اپلیکیشن، سامانه، سرور و SMM — به‌همراه خدمات فنی دوربین، سیم‌کشی و نورمخفی در <strong>تبریز</strong> و <strong>استانبول</strong>. محصولات در <a href="products">صفحه محصولات</a> هستند.',
+        ctaPrimary: 'مشاوره دیجیتال',
+        ctaField: 'واتساپ خدمات فنی'
+      },
+      paths: {
+        digital: {
+          eyebrow: 'مسیر دیجیتال',
+          title: 'بازاریابی، وب، اپ، سرور و SMM',
+          desc: 'از استراتژی رشد تا تحویل نرم‌افزار و زیرساخت — یک تیم برای مسیر آنلاین کسب‌وکار.',
+          cta: 'شروع از بازاریابی دیجیتال'
+        },
+        field: {
+          eyebrow: 'مسیر فنی',
+          title: 'دوربین، سیم‌کشی و نورمخفی',
+          desc: 'نصب و اجرای میدانی در تبریز و استانبول — هماهنگی مستقیم از واتساپ خدمات فنی.',
+          cta: 'رفتن به خدمات فنی'
+        }
       },
       overview: {
         eyebrow: 'نمای کلی',
         title: 'شش محور خدمات بیزدوار',
-        desc: 'دیجیتال و نرم‌افزار در بالا — خدمات فنی ساختمانی با مسئول مشخص در پایین.'
+        desc: 'دیجیتال و نرم‌افزار در بالا — خدمات فنی ساختمانی با هماهنگی واتساپ تخصصی در پایین.'
       },
       navAria: 'فهرست خدمات',
       viewDetails: 'مشاهده جزئیات',
@@ -932,18 +1083,34 @@
         { title: 'نمونه‌کارها', url: 'portfolio', desc: '۳۵ پروژه و برند' },
         { title: 'تماس', url: 'contact', desc: 'فرم و واتساپ' }
       ],
-      geoText: 'خدمات دیجیتال و فنی بیزدوار — تمرکز اجرایی تبریز و استانبول؛ واتساپ تخصصی خدمات فنی با مسئول فنی.'
+      geoText: 'خدمات دیجیتال و فنی بیزدوار — تمرکز اجرایی تبریز و استانبول؛ واتساپ تخصصی خدمات فنی.'
     },
     tr: {
       hero: {
         tag: 'Hizmetlerimiz',
         title: 'Bizdavar dijital ve teknik hizmetleri',
-        desc: 'Pazarlama, web app, mobil, sistem, sunucu ve SMM — ayrıca CCTV, tesisat ve gizli aydınlatma (<strong>Tebriz</strong> & <strong>İstanbul</strong>). Ürünler <a href="products">ürünler sayfasında</a>.'
+        desc: 'Pazarlama, web app, mobil, sistem, sunucu ve SMM — ayrıca CCTV, tesisat ve gizli aydınlatma (<strong>Tebriz</strong> & <strong>İstanbul</strong>). Ürünler <a href="products">ürünler sayfasında</a>.',
+        ctaPrimary: 'Dijital danışmanlık',
+        ctaField: 'Teknik WhatsApp'
+      },
+      paths: {
+        digital: {
+          eyebrow: 'Dijital yol',
+          title: 'Pazarlama, web, uygulama, sunucu ve SMM',
+          desc: 'Büyüme stratejisinden yazılım ve altyapı teslimine — online iş yolunuz için tek ekip.',
+          cta: 'Dijital pazarlamadan başla'
+        },
+        field: {
+          eyebrow: 'Teknik yol',
+          title: 'CCTV, tesisat ve gizli aydınlatma',
+          desc: 'Tebriz ve İstanbul’da saha kurulumu — doğrudan teknik WhatsApp ile koordinasyon.',
+          cta: 'Teknik hizmetlere git'
+        }
       },
       overview: {
         eyebrow: 'Genel bakış',
         title: 'Altı Bizdavar hizmet alanı',
-        desc: 'Dijital ve yazılım üstte — saha teknik hizmetleri aşağıda, net sorumlu ile.'
+        desc: 'Dijital ve yazılım üstte — saha teknik hizmetleri aşağıda, özel teknik WhatsApp ile.'
       },
       navAria: 'Hizmet listesi',
       viewDetails: 'Detayları gör',
@@ -981,12 +1148,28 @@
       hero: {
         tag: 'Our services',
         title: 'Bizdavar digital & technical services',
-        desc: 'Marketing, web apps, mobile, systems, servers and SMM — plus CCTV, wiring and cove lighting in <strong>Tabriz</strong> and <strong>Istanbul</strong>. Products live on the <a href="products">products page</a>.'
+        desc: 'Marketing, web apps, mobile, systems, servers and SMM — plus CCTV, wiring and cove lighting in <strong>Tabriz</strong> and <strong>Istanbul</strong>. Products live on the <a href="products">products page</a>.',
+        ctaPrimary: 'Digital consulting',
+        ctaField: 'Technical WhatsApp'
+      },
+      paths: {
+        digital: {
+          eyebrow: 'Digital path',
+          title: 'Marketing, web, apps, servers & SMM',
+          desc: 'From growth strategy to software and infrastructure delivery — one team for your online stack.',
+          cta: 'Start with digital marketing'
+        },
+        field: {
+          eyebrow: 'Field path',
+          title: 'CCTV, wiring & cove lighting',
+          desc: 'On-site installs in Tabriz and Istanbul — coordinate directly via technical WhatsApp.',
+          cta: 'Go to technical services'
+        }
       },
       overview: {
         eyebrow: 'Overview',
         title: 'Six Bizdavar service areas',
-        desc: 'Digital and software up top — on-site technical services below with a named lead.'
+        desc: 'Digital and software up top — on-site technical services below via dedicated technical WhatsApp.'
       },
       navAria: 'Services list',
       viewDetails: 'View details',
@@ -1057,6 +1240,7 @@
       blocks: blocks[lang],
       panels: Object.assign({}, (L.servicesPage && L.servicesPage.panels) || {}, panels[lang]),
       digitalMarketing: digitalMarketing[lang],
+      softwareApps: softwareApps[lang],
       serverOps: serverOps[lang],
       smm: smm[lang],
       webDesign: webDesign[lang],

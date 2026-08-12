@@ -34,6 +34,7 @@ const FILE_TO_ROUTE = {
   'pages/contact.html': '/pages/contact',
   'pages/vega.html': '/pages/vega',
   'pages/prosense.html': '/pages/prosense',
+  'pages/liqui-moly.html': '/pages/liqui-moly',
   'pages/teltonika.html': '/pages/teltonika',
   'pages/gamak.html': '/pages/gamak',
   'pages/digi-system.html': '/pages/digi-system',

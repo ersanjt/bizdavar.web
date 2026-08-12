@@ -40,7 +40,8 @@
     'i18n/locales.js'
   ], afterLocales, [
     'i18n/locales-pages.js',
-    'i18n/locale-seo.js'
+    'i18n/locale-seo.js',
+    'i18n/locales-ru-ar.js'
   ], afterSeo, [
     'i18n/i18n.js',
     'i18n/page-i18n.js'

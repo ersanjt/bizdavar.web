@@ -13,7 +13,9 @@
   const LANG_OPTIONS = [
     { id: 'fa', labelKey: 'common.langFa', fallback: 'فارسی', badge: 'FA' },
     { id: 'tr', labelKey: 'common.langTr', fallback: 'Türkçe', badge: 'TR' },
-    { id: 'en', labelKey: 'common.langEn', fallback: 'English', badge: 'EN' }
+    { id: 'en', labelKey: 'common.langEn', fallback: 'English', badge: 'EN' },
+    { id: 'ru', labelKey: 'common.langRu', fallback: 'Русский', badge: 'RU' },
+    { id: 'ar', labelKey: 'common.langAr', fallback: 'العربية', badge: 'AR' }
   ];
 
   function getLangOptions() {
@@ -106,6 +108,7 @@
       services: [
         { href: pagePath(R.services), label: t('nav.services') },
         { href: `${pagePath(R.services)}#digital-marketing`, label: t('footer.digitalMarketing') },
+        { href: `${pagePath(R.services)}#web-design`, label: t('footer.webDesign', 'طراحی وب') },
         { href: pagePath(R.fast), label: t('footer.webFast') },
         { href: `${pagePath(R.services)}#software-apps`, label: t('footer.softwareApps', 'اپ و سامانه') },
         { href: `${pagePath(R.services)}#server-ops`, label: t('footer.serverOps', 'مدیریت سرور') },
@@ -248,7 +251,7 @@
       ? (currentPage === featured.page && location.hash === '#' + featured.hash)
       : (currentPage === featured.page);
     return `<a href="${href}" class="nav__product-featured${active ? ' is-active' : ''}">
-      ${img ? `<span class="nav__product-featured__media"><img src="${img}" alt="" loading="lazy" width="160" height="100"></span>` : ''}
+      ${img ? `<span class="nav__product-featured__media"><img src="${img}" alt="${label}" loading="lazy" width="160" height="100"></span>` : ''}
       <span class="nav__product-featured__body">
         <span class="nav__product-featured__kicker">${kicker}</span>
         <span class="nav__product-featured__name">${label}</span>
@@ -626,7 +629,7 @@
               const desc = l.descKey ? t(l.descKey, l.desc) : l.desc;
 
               const thumb = l.thumb
-                ? `<img src="${path(l.thumb)}" alt="" class="related-links__thumb" width="240" height="144" loading="lazy" decoding="async">`
+                ? `<img src="${path(l.thumb)}" alt="${title}" class="related-links__thumb" width="240" height="144" loading="lazy" decoding="async">`
                 : '';
 
               return `

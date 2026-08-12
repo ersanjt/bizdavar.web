@@ -74,6 +74,8 @@
         fa: `${base}?lang=fa`,
         tr: `${base}?lang=tr`,
         en: `${base}?lang=en`,
+        ru: `${base}?lang=ru`,
+        ar: `${base}?lang=ar`,
         'x-default': base
       };
     }
@@ -91,14 +93,14 @@
     const lang = window.BIZDAVAR_I18N?.locale
       || document.documentElement.getAttribute('lang')
       || 'fa';
-    const map = { fa: 'fa_IR', tr: 'tr_TR', en: 'en_US' };
+    const map = { fa: 'fa_IR', tr: 'tr_TR', en: 'en_US', ru: 'ru_RU', ar: 'ar_AE' };
     return map[lang] || C.locale || 'fa_IR';
   }
 
   function injectOgLocaleAlternates() {
     document.querySelectorAll('meta[property="og:locale:alternate"]').forEach(el => el.remove());
     const current = activeOgLocale();
-    const alternates = ['fa_IR', 'tr_TR', 'en_US'].filter(tag => tag !== current);
+    const alternates = ['fa_IR', 'tr_TR', 'en_US', 'ru_RU', 'ar_AE'].filter(tag => tag !== current);
     alternates.forEach(tag => {
       let el = document.querySelector(`meta[property="og:locale:alternate"][content="${tag}"]`);
       if (!el) {
@@ -245,15 +247,16 @@
   function siteNavEntries() {
     return [
       { name: t('nav.services', 'خدمات'), url: absUrl(R.services) },
-      { name: t('nav.contact', 'تماس با ما'), url: absUrl(R.contact) },
-      { name: t('nav.about', 'درباره ما'), url: absUrl(R.about) },
-      { name: t('nav.portfolio', 'نمونه‌کارها'), url: absUrl(R.portfolio) },
+      { name: t('nav.products', 'محصولات'), url: absUrl(R.products) },
       { name: t('nav.webDesign', 'طراحی سایت'), url: absUrl(R.fast) },
-      { name: t('footer.digitalMarketing', 'بازاریابی دیجیتال'), url: absUrl(R.services) + '#digital-marketing' },
+      { name: t('common.freeConsult', 'مشاوره رایگان'), url: absUrl(R.contact) },
       { name: t('nav.productsSupplyLink', 'تامین برندهای صنعتی'), url: absUrl(R.products) + '#supply' },
       { name: 'VEGA', url: absUrl(R.vega) },
       { name: 'Prosense', url: absUrl(R.prosense) },
-      { name: t('nav.blog', 'وبلاگ'), url: absUrl(R.blog) }
+      { name: 'Liqui Moly', url: absUrl(R.liquiMoly) },
+      { name: 'FXGuard', url: absUrl(R.fxguard) },
+      { name: t('nav.blog', 'وبلاگ'), url: absUrl(R.blog) },
+      { name: t('nav.about', 'درباره ما'), url: absUrl(R.about) }
     ];
   }
 
@@ -290,7 +293,19 @@
             sameAs: C.contact.linkedin
           },
           areaServed: ['TR', 'AM', 'IR', 'AE', 'DE', 'US', 'GB', 'LB', 'IQ', 'GE', 'IT'],
-          knowsAbout: ['Digital Marketing', 'Web Design', 'Industrial Equipment', 'Fintech', 'SEO'],
+          knowsAbout: [
+            'Digital Marketing',
+            'Web Design',
+            'Fast Web Studio',
+            'WhatsApp CRM',
+            'FXGuard',
+            'Industrial Equipment Supply',
+            'VEGA Sensors',
+            'Prosense Detectors',
+            'Liqui Moly',
+            'SEO',
+            'SMM'
+          ],
           address: orgAddress(),
           sameAs,
           contactPoint: buildContactPoints()
@@ -299,9 +314,10 @@
           '@type': 'WebSite',
           '@id': webId,
           url: `${C.baseUrl}/`,
-          name: C.siteName,
-          alternateName: C.siteNameEn,
-          inLanguage: ['fa-IR', 'tr-TR', 'en-US'],
+          name: C.siteNameEn,
+          alternateName: alternateNames,
+          description: t('seo.defaultDescription', ''),
+          inLanguage: ['fa-IR', 'tr-TR', 'en-US', 'ru-RU', 'ar-AE'],
           publisher: { '@id': orgId },
           about: { '@id': orgId }
         },

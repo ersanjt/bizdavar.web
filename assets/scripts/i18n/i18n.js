@@ -1,11 +1,18 @@
 /**
- * Bizdavar i18n — geo IP → fa (IR) | tr (TR) | en (other)
+ * Bizdavar i18n — geo IP → fa (IR) | tr (TR) | ru (RU+) | ar (MENA) | en (other)
  */
 (function () {
   const STORAGE_KEY = 'bizdavar_locale';
   const MANUAL_KEY = 'bizdavar_locale_manual';
   const GEO_CACHE_KEY = 'bizdavar_geo_locale';
-  const GEO_MAP = { TR: 'tr', IR: 'fa' };
+  const GEO_MAP = {
+    TR: 'tr',
+    IR: 'fa',
+    RU: 'ru', BY: 'ru', KZ: 'ru', KG: 'ru', AM: 'ru', AZ: 'ru',
+    AE: 'ar', SA: 'ar', QA: 'ar', KW: 'ar', BH: 'ar', OM: 'ar',
+    EG: 'ar', IQ: 'ar', JO: 'ar', LB: 'ar', SY: 'ar', YE: 'ar',
+    LY: 'ar', MA: 'ar', DZ: 'ar', TN: 'ar', PS: 'ar', SD: 'ar'
+  };
   const DEFAULT_OTHER = 'en';
   const GEO_TIMEOUT = 2500;
 
@@ -13,6 +20,8 @@
     const nav = String(navigator.language || navigator.userLanguage || '').toLowerCase();
     if (nav.startsWith('tr')) return 'tr';
     if (nav.startsWith('fa')) return 'fa';
+    if (nav.startsWith('ru')) return 'ru';
+    if (nav.startsWith('ar')) return 'ar';
     if (nav.startsWith('en')) return 'en';
     return null;
   }
@@ -449,7 +458,10 @@
           'digital-marketing': p.optDm,
           'web-design': p.optWeb,
           'fast-studio': p.optFast,
+          'software-apps': p.optApps,
+          'server-ops': p.optServer,
           smm: p.optSmm,
+          'field-tech': p.optField,
           industrial: p.optIndustrial,
           consulting: p.optConsult,
           other: p.optOther
@@ -560,7 +572,7 @@
         return geoCached;
       }
       const htmlLang = document.documentElement.lang;
-      if (htmlLang === 'tr' || htmlLang === 'en') return htmlLang;
+      if (htmlLang === 'tr' || htmlLang === 'en' || htmlLang === 'ru' || htmlLang === 'ar') return htmlLang;
       return localeHintFromNavigator() || 'fa';
     },
 

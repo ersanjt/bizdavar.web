@@ -1,11 +1,12 @@
 /**
- * Locale URL helpers — fa at root, tr/en under /tr/ and /en/
- * Primary: fa (Persian) · Secondary: tr · Third: en
+ * Locale URL helpers — fa at root; tr/en/ru/ar under /tr/ /en/ /ru/ /ar/
+ * Primary: fa (Persian) · Secondary: tr · Then: en, ru, ar
  */
 (function () {
   var BASE = 'https://bizdavar.com';
   var DEFAULT = 'fa';
-  var PREFIXED = { tr: true, en: true };
+  var PREFIXED = { tr: true, en: true, ru: true, ar: true };
+  var LOCALES = ['fa', 'tr', 'en', 'ru', 'ar'];
 
   function splitPath(pathname) {
     var p = pathname || '/';
@@ -33,7 +34,7 @@
       about: 1, services: 1, portfolio: 1, blog: 1, contact: 1, privacy: 1, fast: 1,
       vega: 1, prosense: 1, teltonika: 1, gamak: 1, 'digi-system': 1, teraoka: 1, 'liqui-moly': 1,
       'bz-diamond': 1, 'supplify-trade': 1, 'kaya-one': 1, 'smm-turk': 1, 'fxguard-exchange': 1, biztejarat: 1, products: 1, biztab: 1, 'bizsanitizer-v5': 1,
-      fxguard: 1, bizswap: 1
+      fxguard: 1, 'fxguard-accounting': 1, bizswap: 1
     };
 
     if (part.indexOf('pages/') === 0) {
@@ -77,6 +78,8 @@
       fa: toAbsolute('fa', pagePath),
       tr: toAbsolute('tr', pagePath),
       en: toAbsolute('en', pagePath),
+      ru: toAbsolute('ru', pagePath),
+      ar: toAbsolute('ar', pagePath),
       'x-default': toAbsolute('fa', pagePath)
     };
   }
@@ -112,7 +115,7 @@
   window.BIZDAVAR_LOCALE_URL = {
     BASE: BASE,
     DEFAULT: DEFAULT,
-    LOCALES: ['fa', 'tr', 'en'],
+    LOCALES: LOCALES,
     splitPath: splitPath,
     normalizePagePath: normalizePagePath,
     toLocalePath: toLocalePath,

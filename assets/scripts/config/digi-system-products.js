@@ -31,9 +31,9 @@
     brand: {
       name: 'Digi System',
       logo,
-      logoAlt: 'Digi System (DIGI) — retail POS and weighing scales supplied from Turkey',
+      logoAlt: 'لوگوی Digi System — ترازو و POS فروشگاهی DIGI',
       heroImage: hero,
-      heroImageAlt: 'Digi System retail scales and checkout systems in a supermarket',
+      heroImageAlt: 'ترازوی PC فروشگاهی Digi SM-6000 با صفحه لمسی و چاپ لیبل — بیزدوار گروپ',
       heroEyebrow: 'تامین تجهیزات خرده‌فروشی Digi System (DIGI) از ترکیه',
       heroHeadline: 'ترازو و POS Digi System',
       heroHeadlineSub: 'SM-6000 · W-5600SRX · LX-5600 · AW-5600 — تامین سریع از ترکیه برای retail و food service',
@@ -79,7 +79,7 @@
         badge: 'SM-6000',
         inquiryName: 'Digi SM-6000',
         image: sm6000,
-        imageAlt: 'Digi System SM-6000 PC-based retail scale with touchscreen and label printer'
+        imageAlt: 'ترازوی PC فروشگاهی Digi SM-6000 با صفحه لمسی و چاپ لیبل'
       },
       {
         title: 'W-5600SRX — POS فروشگاهی',
@@ -89,7 +89,7 @@
         badge: 'POS',
         inquiryName: 'Digi W-5600SRX',
         image: pos,
-        imageAlt: 'Digi System W-5600SRX retail POS checkout terminal'
+        imageAlt: 'صندوق فروشگاهی Digi W-5600SRX برای سوپرمارکت و هایپر'
       },
       {
         title: 'LX-5600 — پرینتر لیبل',
@@ -99,7 +99,7 @@
         badge: 'Label',
         inquiryName: 'Digi LX-5600',
         image: label,
-        imageAlt: 'Digi System LX-5600 retail label printer for GS1 barcodes'
+        imageAlt: 'پرینتر لیبل Digi LX-5600 برای بارکد GS1 و قیمت‌گذاری'
       },
       {
         title: 'DS-782 — ترازوی counter',
@@ -109,7 +109,7 @@
         badge: 'DS-782',
         inquiryName: 'Digi DS-782',
         image: ds782,
-        imageAlt: 'Digi System DS-782 face-to-face service counter scale for deli'
+        imageAlt: 'ترازوی کانتر Digi DS-782 برای قصابی و فروشگاه پروتئین'
       }
     ],
 
@@ -120,7 +120,7 @@
         titleTr: 'Retail PC Scales',
         icon: 'globe',
         image: sm6000,
-        imageAlt: 'Digi System SM-6000 and SM-5300 PC retail weighing scales',
+        imageAlt: 'ترازوهای Digi SM-6000 و SM-5300 برای خرده‌فروشی و فروش وزن‌محور',
         desc: 'SM-6000، SM-5300 و AW-5600 — ترازوی PC، checkout AI و legal metrology',
         series: series(
           ['SM-6000', 'SM-5300', 'AW-5600AT II', 'DS-782', 'SM-6000 AI SSP'],
@@ -134,7 +134,7 @@
         titleTr: 'POS Systems',
         icon: 'monitor',
         image: pos,
-        imageAlt: 'Digi System W-5600SRX and WebSpeezaSL supermarket POS systems',
+        imageAlt: 'سیستم‌های POS Digi W-5600SRX و WebSpeezaSL برای هایپرمارکت',
         desc: 'W-5600SRX، WebSpeezaSL و HappySelf G3 — hypermarket POS و self-checkout',
         series: series(
           ['W-5600SRX', 'WebSpeezaSL-T/K', 'HappySelf G3', 'DPS-5600II', 'EFT integration'],
@@ -148,7 +148,7 @@
         titleTr: 'Peripherals',
         icon: 'wrench',
         image: webspeeza,
-        imageAlt: 'Digi System WebSpeezaSL POS with integrated peripherals and scanner',
+        imageAlt: 'تجهیزات جانبی Digi — اسکنر بارکد، پرینتر و نمایشگر مشتری',
         desc: 'اسکنر بارکد، پرینتر رسید، کشوی پول، customer display — یکپارچه با POS',
         series: series(
           ['1D/2D barcode scanner', 'Receipt printer', 'Cash drawer', 'Customer pole display', 'LX-5600 label printer'],
@@ -162,7 +162,7 @@
         titleTr: 'Retail Software',
         icon: 'monitor',
         image: checkout,
-        imageAlt: 'Digi System AW-5600 AI checkout with retail management software',
+        imageAlt: 'نرم‌افزار مدیریت فروشگاهی Digi و سیستم AW-5600 AI checkout',
         desc: 'مدیریت PLU، گزارش فروش، DIGIweb و اتصال ERP',
         series: series(['DIGIweb', 'Store management SW', 'Scale management', 'ERP integration', 'Cloud reporting'], 'Software / DIGIweb', ['DIGIweb'])
       },
@@ -172,35 +172,35 @@
         titleTr: 'HORECA POS',
         icon: 'globe',
         image: delious,
-        imageAlt: 'Digi System Delious WIZ restaurant POS terminal',
+        imageAlt: 'صندوق رستورانی Digi Delious WIZ برای کافه و catering',
         desc: 'Delious WIZ و ترازوی kitchen — رستوران، کافه و catering',
         series: series(['Delious WIZ', 'Delious WIZ PLUS', 'Kitchen scale', 'Portion control', 'Ticket printer'], 'HORECA / Restaurant', ['Delious WIZ'])
       }
     ],
 
     iranIndustries: [
-      { name: 'سوپرمارکت و هایپر', desc: 'SM-6000 + W-5600SRX + LX-5600 یکپارچه', image: indSuper, imageAlt: 'Digi System scales and POS for Iranian hypermarkets', icon: 'briefcase' },
-      { name: 'قصابی و پروتئین', desc: 'DS-782 service counter + label printer', image: ds782, imageAlt: 'Digi DS-782 butcher counter scale for fresh food in Iran', icon: 'globe' },
-      { name: 'نانوایی و شیرینی', desc: 'SM-5300 price computing و LX-5600', image: sm5300, imageAlt: 'Digi SM-5300 bakery and confectionery scale', icon: 'globe' },
-      { name: 'franchise و زنجیره', desc: 'POS یکسان W-5600SRX در شعب متعدد', image: pos, imageAlt: 'Digi W-5600SRX franchise retail POS rollout', icon: 'briefcase' },
-      { name: 'میوه و تره‌بار', desc: 'SM-6000 SSP self-service و AW-5600', image: checkout, imageAlt: 'Digi AW-5600 AI checkout for fresh produce', icon: 'globe' },
-      { name: 'B2B خرده‌فروشی', desc: 'پکیج scale + POS + label برای فروشگاه عمده', image: happyself, imageAlt: 'Digi HappySelf G3 self-checkout for B2B retail', icon: 'factory' }
+      { name: 'سوپرمارکت و هایپر', desc: 'SM-6000 + W-5600SRX + LX-5600 یکپارچه', image: indSuper, imageAlt: 'تجهیزات Digi System برای سوپرمارکت و هایپرمارکت در ایران', icon: 'briefcase' },
+      { name: 'قصابی و پروتئین', desc: 'DS-782 service counter + label printer', image: ds782, imageAlt: 'ترازوی Digi DS-782 برای قصابی و فروشگاه پروتئین', icon: 'globe' },
+      { name: 'نانوایی و شیرینی', desc: 'SM-5300 price computing و LX-5600', image: sm5300, imageAlt: 'ترازوی Digi SM-5300 برای نانوایی و شیرینی‌فروشی', icon: 'globe' },
+      { name: 'franchise و زنجیره', desc: 'POS یکسان W-5600SRX در شعب متعدد', image: pos, imageAlt: 'استقرار POS Digi W-5600SRX در زنجیره فروشگاهی', icon: 'briefcase' },
+      { name: 'میوه و تره‌بار', desc: 'SM-6000 SSP self-service و AW-5600', image: checkout, imageAlt: 'سیستم checkout Digi AW-5600 برای میوه و تره‌بار', icon: 'globe' },
+      { name: 'B2B خرده‌فروشی', desc: 'پکیج scale + POS + label برای فروشگاه عمده', image: happyself, imageAlt: 'سلف‌چک‌اوت Digi HappySelf G3 برای خرده‌فروشی B2B', icon: 'factory' }
     ],
 
     industries: [
-      { name: 'Supermarket & Hypermarket', nameTr: 'Supermarket', desc: 'SM-6000, AW-5600 and W-5600SRX POS', image: indSuper, imageAlt: 'Digi supermarket retail solutions', icon: 'briefcase' },
-      { name: 'Butcher & Deli', nameTr: 'Butcher & Deli', desc: 'DS-782 service scales and LX-5600 labels', image: indFood, imageAlt: 'Digi food service and deli equipment', icon: 'globe' },
-      { name: 'HORECA', nameTr: 'HORECA', desc: 'Delious WIZ restaurant POS and kitchen scales', image: indHospitality, imageAlt: 'Digi hospitality POS and weighing', icon: 'globe' },
-      { name: 'Franchise Retail', nameTr: 'Franchise', desc: 'Standardized W-5600SRX rollout across branches', image: pos, imageAlt: 'Digi franchise retail POS equipment', icon: 'briefcase' }
+      { name: 'Supermarket & Hypermarket', nameTr: 'Supermarket', desc: 'SM-6000, AW-5600 and W-5600SRX POS', image: indSuper, imageAlt: 'راه‌حل Digi برای سوپرمارکت و هایپرمارکت', icon: 'briefcase' },
+      { name: 'Butcher & Deli', nameTr: 'Butcher & Deli', desc: 'DS-782 service scales and LX-5600 labels', image: indFood, imageAlt: 'تجهیزات Digi برای قصابی و deli', icon: 'globe' },
+      { name: 'HORECA', nameTr: 'HORECA', desc: 'Delious WIZ restaurant POS and kitchen scales', image: indHospitality, imageAlt: 'POS و ترازوی Digi برای رستوران و هتل', icon: 'globe' },
+      { name: 'Franchise Retail', nameTr: 'Franchise', desc: 'Standardized W-5600SRX rollout across branches', image: pos, imageAlt: 'POS استاندارد Digi برای فروشگاه‌های franchise', icon: 'briefcase' }
     ],
 
     academy: {
       title: 'Digi System — ۵۰+ سال نوآوری retail در ترکیه و جهان',
-      descFa: 'Digi System (DIGI) از پیشروان ترازو، POS و label printer در ترkiye و منطقه است. بیزدوار گروپ برای پروژه‌های retail ایران انتخاب مدل (SM-6000، W-5600SRX، LX-5600)، تامین و لجستیک را یکجا انجام می‌دهد.',
+      descFa: 'Digi System (DIGI) از پیشروان ترازو، POS و label printer در ترکیه و منطقه است. بیزدوار گروپ برای پروژه‌های retail ایران انتخاب مدل (SM-6000، W-5600SRX، LX-5600)، تامین و لجستیک را یکجا انجام می‌دهد.',
       image: sm6000,
-      imageAlt: 'Digi System SM-6000 retail scale — official supply by Bizdavar Group',
+      imageAlt: 'ترازوی Digi SM-6000 — تامین اصل توسط بیزدوار گروپ',
       imageSecondary: logo,
-      imageSecondaryAlt: 'Digi System corporate logo',
+      imageSecondaryAlt: 'لوگوی رسمی Digi System',
       topics: [
         'SM-6000 vs SM-5300 — انتخاب ترازوی PC',
         'W-5600SRX POS — یکپارچگی با scale و EFT',

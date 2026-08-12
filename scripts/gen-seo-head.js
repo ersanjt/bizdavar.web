@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Generate seo-head.js — compact fa/tr/en title+description per page path for locale-preload.
+ * Generate seo-head.js — compact fa/tr/en/ru/ar title+description per page path for locale-preload.
  */
 const fs = require('fs');
 const path = require('path');
@@ -10,10 +10,13 @@ const OUT = path.join(ROOT, 'assets/scripts/i18n/seo-head.js');
 
 global.window = global;
 require(path.join(ROOT, 'assets/scripts/i18n/locales.js'));
+require(path.join(ROOT, 'assets/scripts/i18n/locales-pages.js'));
 require(path.join(ROOT, 'assets/scripts/i18n/locale-seo.js'));
+require(path.join(ROOT, 'assets/scripts/i18n/locales-ru-ar.js'));
 
 const BASE = 'https://bizdavar.com';
 const DEFAULT_OG = 'assets/images/brand/bizdavar-logo-square.png';
+const LANGS = ['fa', 'tr', 'en', 'ru', 'ar'];
 
 /** Per-page Open Graph images (relative to site root) */
 const PAGE_OG = {
@@ -28,6 +31,8 @@ const PAGE_OG = {
   bizswap: 'assets/images/products/bizswap/bizswap-hero.svg',
   biztab: 'assets/images/products/biztab/biztab-hero.jpg',
   bizsanitizerV5: 'assets/images/products/bizsanitizer/bizclean-v5.png',
+  digiSystem: 'assets/images/digi-system/hero/digi-retail-hero.webp',
+  fxguardAccounting: 'assets/images/products/fxguard/fxguard-hero.svg',
   articleDigitalMarketing: 'assets/images/brand/bizdavar-logo-square.png',
   articleWhatIsDm: 'assets/images/brand/bizdavar-logo-square.png',
   articleSmm: 'assets/images/brand/bizdavar-logo-square.png',
@@ -67,6 +72,7 @@ const PAGE_ROUTES = {
   biztab: '/pages/biztab',
   bizsanitizerV5: '/pages/bizsanitizer-v5',
   fxguard: '/pages/fxguard',
+  fxguardAccounting: '/pages/fxguard-accounting',
   bizswap: '/pages/bizswap',
   articleDigitalMarketing: '/pages/articles/digital-marketing',
   articleWhatIsDm: '/pages/articles/what-is-digital-marketing',
@@ -82,7 +88,7 @@ const manifest = {};
 
 for (const [key, route] of Object.entries(PAGE_ROUTES)) {
   manifest[route] = {};
-  for (const lang of ['fa', 'tr', 'en']) {
+  for (const lang of LANGS) {
     const page = global.BIZDAVAR_LOCALES[lang]?.pages?.[key];
     if (!page) continue;
     const ogRel = PAGE_OG[key] || DEFAULT_OG;

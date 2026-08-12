@@ -1,31 +1,35 @@
 #!/usr/bin/env node
 /**
- * Generate sitemap.xml — separate crawlable URLs per locale (fa/tr/en) + hreflang
- * Primary: fa at root · tr/en under /tr/ and /en/
+ * Generate sitemap.xml — separate crawlable URLs per locale (fa/tr/en/ru/ar) + hreflang
+ * Primary: fa at root · others under /tr/ /en/ /ru/ /ar/
  */
 const fs = require('fs');
 const path = require('path');
 
 const BASE = 'https://bizdavar.com';
 const OUT = path.join(__dirname, '..', 'sitemap.xml');
-const SITE_UPDATE = '2026-07-06';
+const SITE_UPDATE = '2026-08-12';
 
 const LOCALES = [
   { code: 'fa', prefix: '' },
   { code: 'tr', prefix: '/tr' },
-  { code: 'en', prefix: '/en' }
+  { code: 'en', prefix: '/en' },
+  { code: 'ru', prefix: '/ru' },
+  { code: 'ar', prefix: '/ar' }
 ];
 
 const HREFLANG = [
   ['fa', 'fa'],
   ['tr', 'tr'],
   ['en', 'en'],
+  ['ru', 'ru'],
+  ['ar', 'ar'],
   ['x-default', 'fa']
 ];
 
 /** @type {{ path: string, changefreq: string, priority: number, lastmod?: string }[]} */
 const PAGES = [
-  { path: '/', changefreq: 'weekly', priority: 1.0, lastmod: SITE_UPDATE },
+  { path: '/', changefreq: 'weekly', priority: 1.0, lastmod: '2026-08-12' },
   { path: '/pages/services', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
   { path: '/pages/contact', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
   { path: '/pages/about', changefreq: 'monthly', priority: 0.85, lastmod: SITE_UPDATE },
@@ -33,9 +37,9 @@ const PAGES = [
   { path: '/pages/portfolio', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/blog', changefreq: 'weekly', priority: 0.75, lastmod: SITE_UPDATE },
   { path: '/pages/fast', changefreq: 'monthly', priority: 0.85, lastmod: SITE_UPDATE },
-  { path: '/pages/vega', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
-  { path: '/pages/prosense', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
-  { path: '/pages/liqui-moly', changefreq: 'weekly', priority: 0.9, lastmod: SITE_UPDATE },
+  { path: '/pages/vega', changefreq: 'monthly', priority: 0.9, lastmod: '2026-08-12' },
+  { path: '/pages/prosense', changefreq: 'monthly', priority: 0.9, lastmod: '2026-08-12' },
+  { path: '/pages/liqui-moly', changefreq: 'weekly', priority: 0.9, lastmod: '2026-08-12' },
   { path: '/pages/teltonika', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
   { path: '/pages/gamak', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/digi-system', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },

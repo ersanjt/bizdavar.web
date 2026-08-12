@@ -7,34 +7,34 @@
   const seoByLang = {
     fa: {
       home: {
-        seoTitle: 'بیزدوار گروپ | خدمات دیجیتال، طراحی سایت و تامین تجهیزات صنعتی',
-        seoDescription: 'بیزدوار گروپ — آژانس دیجیتال با ۱۲+ سال تجربه و ۱۰۰+ پروژه در ۱۱ کشور. بازاریابی دیجیتال، طراحی وب، فین‌تک، SMM و تامین VEGA و Prosense.',
-        seoKeywords: 'بیزدوار, Bizdavar Group, طراحی سایت, VEGA, Prosense, Fast Web Studio'
+        seoTitle: 'بیزدوار گروپ | طراحی سایت، بازاریابی دیجیتال و تامین صنعتی',
+        seoDescription: 'از استانبول: طراحی سایت با Fast Web Studio، بازاریابی دیجیتال و SMM، محصول FXGuard WhatsApp CRM، و تامین VEGA، Prosense و Liqui Moly. مشاوره رایگان.',
+        seoKeywords: 'بیزدوار, Bizdavar Group, طراحی سایت, بازاریابی دیجیتال, FXGuard, VEGA, Prosense, Liqui Moly, Fast Web Studio'
       },
       about: {
-        seoTitle: 'درباره ما | بیزدوار گروپ — آژانس دیجیتال و صنعتی',
-        seoDescription: 'بیزدوار گروپ از ۲۰۱۳ — بنیان‌گذار ارسان جاهد تبریزی. ۱۰۰+ پروژه در ۱۱ کشور: بازاریابی دیجیتال، فین‌تک، طراحی وب و تامین VEGA/Prosense.',
-        seoKeywords: 'بیزدوار گروپ, Bizdavar Group, ارسان جاهد تبریزی, آژانس دیجیتال, تاریخچه بیزدوار'
+        seoTitle: 'درباره بیزدوار | خدمات دیجیتال و تامین صنعتی از ۲۰۱۳',
+        seoDescription: 'بیزدوار گروپ از ۲۰۱۳ در استانبول — طراحی وب، بازاریابی دیجیتال، محصولات FXGuard و تامین تجهیزات صنعتی VEGA، Prosense و Liqui Moly در ۱۱ کشور.',
+        seoKeywords: 'درباره بیزدوار, Bizdavar Group, آژانس دیجیتال استانبول, تامین صنعتی'
       },
       services: {
-        seoTitle: 'خدمات بیزدوار | وب‌اپ، اپلیکیشن، سرور و خدمات فنی تبریز و استانبول',
-        seoDescription: 'خدمات بیزدوار در تبریز و استانبول: بازاریابی دیجیتال، طراحی وب و وب‌اپلیکیشن، اپلیکیشن اندروید و iOS، سامانه، مدیریت سرور، SMM، نصب دوربین مدار بسته، سیم‌کشی و نورمخفی — با هماهنگی مسئول فنی.',
-        seoKeywords: 'خدمات بیزدوار, طراحی وب اپلیکیشن, اپلیکیشن اندروید, اپلیکیشن iOS, مدیریت سرور, نصب دوربین مدار بسته تبریز, نصب دوربین مدار بسته استانبول, نورمخفی, سیم‌کشی ساختمان, مسئول فنی'
+        seoTitle: 'خدمات بیزدوار | بازاریابی دیجیتال، طراحی وب، SMM و خدمات فنی',
+        seoDescription: 'خدمات بیزدوار در استانبول و تبریز: بازاریابی دیجیتال، طراحی وب و وب‌اپ، اپ اندروید/iOS، مدیریت سرور، SMM، CCTV، سیم‌کشی و نورمخفی — هماهنگی واتساپ تخصصی.',
+        seoKeywords: 'خدمات بیزدوار, بازاریابی دیجیتال, طراحی وب, SMM, مدیریت سرور, CCTV استانبول, خدمات فنی تبریز'
       },
       products: {
-        seoTitle: 'محصولات بیزدوار | WhatsApp CRM، Accounting، BizSwap و خطوط تولید',
-        seoDescription: 'محصولات بیزدوار — سوئیت FXGuard (WhatsApp CRM و Accounting)، BizSwap، BizTab، BizClean و خطوط تولید. سخت‌افزار و SaaS تیم بیزدوار.',
-        seoKeywords: 'WhatsApp CRM, FXGuard Accounting, BizSwap, BizTab, BizClean, بیزدوار'
+        seoTitle: 'محصولات بیزدوار | FXGuard CRM، Fast Web Studio و تامین صنعتی',
+        seoDescription: 'محصولات بیزدوار: FXGuard WhatsApp CRM و Accounting، Fast Web Studio، BizSwap، به‌همراه تامین برندهای صنعتی VEGA، Prosense و Liqui Moly.',
+        seoKeywords: 'محصولات بیزدوار, FXGuard, WhatsApp CRM, Fast Web Studio, VEGA, Prosense, Liqui Moly'
       },
       portfolio: {
-        seoTitle: 'نمونه‌کارها | پروژه‌های بیزدوار گروپ — ZedPay، BZ Diamond و...',
-        seoDescription: 'نمونه‌کارهای بیزدوار: ZedPay، BZ Diamond، Marvelous Holding، NIK Aesthetic، Karen Leather و برندهای دیگر — اکوسیستم، مشتریان و پروژه‌های دیجیتال.',
-        seoKeywords: 'نمونه کار, ZedPay, BZ Diamond, بیزدوار, پورتفولیو'
+        seoTitle: 'نمونه‌کارها | طراحی وب، محصولات دیجیتال و تامین صنعتی — بیزدوار',
+        seoDescription: 'نمونه‌کارهای بیزدوار گروپ: طراحی وب، بازاریابی دیجیتال، SMM، محصولات FXGuard و Fast Web Studio، و تامین VEGA، Prosense و Liqui Moly.',
+        seoKeywords: 'نمونه کار بیزدوار, طراحی وب, بازاریابی دیجیتال, FXGuard, Fast Web Studio, VEGA, تامین صنعتی'
       },
       blog: {
-        seoTitle: 'وبلاگ بیزدوار | بازاریابی دیجیتال، طراحی وب و تجهیزات صنعتی',
-        seoDescription: 'مقالات تخصصی بیزدوار گروپ: بازاریابی دیجیتال، Fast Web Studio، سنسورهای صنعتی VEGA و راهکارهای رشد کسب‌وکار.',
-        seoKeywords: 'وبلاگ بیزدوار, بازاریابی دیجیتال, طراحی سایت, VEGA, سنسور صنعتی'
+        seoTitle: 'وبلاگ بیزدوار | راهنمای بازاریابی، طراحی وب و تامین صنعتی',
+        seoDescription: 'مقالات کاربردی بیزدوار: بازاریابی دیجیتال، Fast Web Studio، سنسور VEGA، تامین صنعتی و رشد کسب‌وکار در ایران و ترکیه.',
+        seoKeywords: 'وبلاگ بیزدوار, بازاریابی دیجیتال, طراحی سایت, VEGA, تامین صنعتی'
       },
       fast: {
         seoTitle: 'Fast Web Studio | طراحی سایت حرفه‌ای در ۵ روز — بیزدوار',
@@ -47,9 +47,9 @@
         seoKeywords: 'حریم خصوصی, privacy, بیزدوار'
       },
       contact: {
-        seoTitle: 'تماس با ما | بیزدوار گروپ — مشاوره رایگان',
-        seoDescription: 'با بیزدوار گروپ تماس بگیرید: بازاریابی دیجیتال، طراحی سایت، SMM و تامین تجهیزات صنعتی VEGA و Prosense. فرم تماس، واتساپ و ایمیل.',
-        seoKeywords: 'تماس بیزدوار, مشاوره رایگان, Bizdavar contact, طراحی سایت, VEGA'
+        seoTitle: 'تماس با بیزدوار | مشاوره رایگان خدمات و تامین صنعتی',
+        seoDescription: 'مشاوره رایگان بیزدوار: طراحی سایت، بازاریابی دیجیتال، FXGuard و تامین VEGA، Prosense و Liqui Moly. فرم تماس، واتساپ و ایمیل — استانبول.',
+        seoKeywords: 'تماس بیزدوار, مشاوره رایگان, طراحی سایت, VEGA, Liqui Moly, FXGuard'
       },
       vega: {
         seoTitle: 'خرید سنسور VEGA | VEGAPULS 6X، VEGABAR 39، VEGAPOINT — بیزدوار',
@@ -77,9 +77,9 @@
         seoKeywords: 'Gamak ایران, الکتروموتور صنعتی, IE2 IE3, موتور سه فاز, بیزدوار'
       },
       digiSystem: {
-        seoTitle: 'خرید Digi System | ترازو و POS — بیزدوار گروپ',
-        seoDescription: 'تامین ترازو، POS و صندوق فروشگاهی Digi System برای retail ایران. مشاوره انتخاب مدل، پیش‌فاکتور شفاف و لجستیک از ترکیه — بیزدوار گروپ.',
-        seoKeywords: 'Digi System ایران, ترازو فروشگاهی, POS, retail, بیزدوار'
+        seoTitle: 'خرید Digi System | ترازو و POS فروشگاهی | بیزدوار',
+        seoDescription: 'تامین ترازو و POS Digi System — SM-6000، W-5600SRX، LX-5600 و AW-5600 برای سوپرمارکت و خرده‌فروشی. مشاوره فارسی و پیش‌فاکتور شفاف — بیزدوار گروپ.',
+        seoKeywords: 'Digi System, DIGI, SM-6000, W-5600SRX, ترازو فروشگاهی, POS, بیزدوار'
       },
       teraoka: {
         seoTitle: 'خرید Teraoka Seiko | ترازو و POS — بیزدوار گروپ',
@@ -87,24 +87,24 @@
         seoKeywords: 'Teraoka ایران, ترازو Teraoka, POS ژاپن, labeling, بیزدوار'
       },
       bzDiamond: {
-        seoTitle: 'نمونه‌کار BZ Diamond | طراحی وب و WooCommerce — بیزدوار گروپ',
-        seoDescription: 'نمونه‌کار طراحی وب BZ Diamond: فروشگاه WooCommerce، مدیریت ایمیل، سئو و پشتیبانی فنی — پروژه مشتری بیزدوار گروپ.',
-        seoKeywords: 'نمونه کار طراحی سایت, BZ Diamond, WooCommerce, طراحی وب, بیزدوار'
+        seoTitle: 'نمونه طراحی فروشگاه WooCommerce | وب و سئو — بیزدوار گروپ',
+        seoDescription: 'نمونه طراحی فروشگاه آنلاین با WooCommerce: فروشگاه چندزبانه، ایمیل سازمانی، سئو و پشتیبانی فنی — خدمات طراحی وب بیزدوار گروپ.',
+        seoKeywords: 'نمونه طراحی فروشگاه, WooCommerce, طراحی وب, سئو, بیزدوار'
       },
       supplifyTrade: {
-        seoTitle: 'نمونه‌کار Supplify Trade | طراحی وب تجارت بین‌المللی — بیزدوار',
-        seoDescription: 'نمونه‌کار طراحی وب Supplify Trade FZ-LLC — شرکت sourcing و تجارت B2B با لایسنس RAKEZ امارات. طراحی سایت شرکتی، سئو و پشتیبانی — بیزدوار گروپ.',
-        seoKeywords: 'Supplify Trade, نمونه کار طراحی سایت, تجارت بین‌المللی, RAKEZ, بیزدوار'
+        seoTitle: 'نمونه طراحی وب B2B تجارت بین‌المللی | سئو و پشتیبانی — بیزدوار',
+        seoDescription: 'نمونه طراحی سایت شرکتی B2B برای تجارت و sourcing بین‌المللی: ساختار محتوا، سئو و پشتیبانی فنی — خدمات طراحی وب بیزدوار گروپ.',
+        seoKeywords: 'طراحی وب B2B, تجارت بین‌المللی, نمونه طراحی سایت, سئو, بیزدوار'
       },
       kayaOne: {
-        seoTitle: 'نمونه‌کار Kaya One AG | طراحی وب تجارت سوئیسی — بیزدوار',
-        seoDescription: 'نمونه‌کار طراحی وب Kaya One AG — شرکت تجارت و راهکارهای صنعتی سوئیس (Brunnen، UID CHE-351.641.458). طراحی سایت شرکتی، سئو و پشتیبانی — بیزدوار گروپ.',
-        seoKeywords: 'Kaya One AG, نمونه کار طراحی سایت, تجارت سوئیس, بیزدوار'
+        seoTitle: 'نمونه طراحی وب تجارت صنعتی | سایت شرکتی — بیزدوار',
+        seoDescription: 'نمونه طراحی سایت شرکتی برای تجارت و راهکارهای صنعتی: ساختار محتوا، سئو و پشتیبانی فنی — خدمات طراحی وب بیزدوار گروپ.',
+        seoKeywords: 'طراحی وب شرکتی, تجارت صنعتی, نمونه طراحی سایت, بیزدوار'
       },
       smmTurk: {
-        seoTitle: 'نمونه‌کار SMM Turk | طراحی پنل SMM — بیزدوار گروپ',
-        seoDescription: 'نمونه‌کار طراحی وب و پنل SMM Turk — پلتفرم خدمات شبکه‌های اجتماعی در ترکیه با برنامه نمایندگی و پرداخت کریپتو. طراحی UI، سئو و پشتیبانی — بیزدوار گروپ.',
-        seoKeywords: 'SMM Turk, پنل SMM, نمونه کار طراحی سایت, دیجیتال مارکتینگ, بیزدوار'
+        seoTitle: 'نمونه طراحی پنل SMM | UI و سئو — بیزدوار گروپ',
+        seoDescription: 'نمونه طراحی وب و پنل خدمات شبکه‌های اجتماعی: UI، صفحات تبدیل، سئو و پشتیبانی — خدمات طراحی وب بیزدوار گروپ.',
+        seoKeywords: 'طراحی پنل SMM, نمونه طراحی سایت, دیجیتال مارکتینگ, بیزدوار'
       },
       fxguardExchange: {
         seoTitle: 'نمونه‌کار FXGuard Exchange | تبادل تومان و لیر — بیزدوار',
@@ -112,9 +112,9 @@
         seoKeywords: 'FXGuard Exchange, تبادل تومان لیر, فین‌تک, نرخ ارز, بیزدوار'
       },
       biztejarat: {
-        seoTitle: 'نمونه‌کار گذشته بیزتجارت | SMM محصولات صنعتی — بیزدوار',
-        seoDescription: 'نمونه‌کار گذشته مدیریت اینستاگرام بیزتجارت — پروژه SMM B2B برای محصولات صنعتی که اکنون غیرفعال است. اجراشده توسط بیزدوار گروپ.',
-        seoKeywords: 'بیزتجارت, Biztejarat, نمونه کار SMM, محتوای B2B, بیزدوار'
+        seoTitle: 'نمونه مدیریت SMM صنعتی | محتوای B2B — بیزدوار',
+        seoDescription: 'نمونه گذشته مدیریت اینستاگرام برای محصولات صنعتی B2B — پروژه SMM که اکنون غیرفعال است. اجراشده توسط بیزدوار گروپ.',
+        seoKeywords: 'نمونه کار SMM, محتوای B2B صنعتی, مدیریت اینستاگرام, بیزدوار'
       },
       biztab: {
         seoTitle: 'BizTab | دماسنج دیواری غیرتماسی — محصول بیزدوار',
@@ -184,34 +184,34 @@
     },
     tr: {
       home: {
-        seoTitle: 'Bizdavar Group | Dijital hizmetler, web tasarım ve endüstriyel tedarik',
-        seoDescription: 'Bizdavar Group — 12+ yıl deneyim, 100+ proje, 11 ülkede dijital ajans. Dijital pazarlama, web tasarım, SMM ve VEGA/Prosense tedariki. İstanbul merkezli.',
-        seoKeywords: 'Bizdavar, web tasarım İstanbul, dijital pazarlama, VEGA, Prosense, Fast Web Studio'
+        seoTitle: 'Bizdavar Group | Web tasarım, dijital pazarlama ve endüstriyel tedarik',
+        seoDescription: 'İstanbul merkezli Bizdavar: Fast Web Studio ile web tasarım, dijital pazarlama ve SMM, FXGuard WhatsApp CRM, VEGA, Prosense ve Liqui Moly tedariki. Ücretsiz danışmanlık.',
+        seoKeywords: 'Bizdavar, web tasarım İstanbul, dijital pazarlama, FXGuard, VEGA, Prosense, Liqui Moly, Fast Web Studio'
       },
       about: {
-        seoTitle: 'Hakkımızda | Bizdavar Group — Dijital ve endüstriyel ajans',
-        seoDescription: 'Bizdavar Group 2013’ten beri — kurucu Ersan Jahed Tabrizi. 11 ülkede 100+ proje: dijital pazarlama, fintech, web tasarım ve VEGA/Prosense tedariki.',
-        seoKeywords: 'Bizdavar Group, Ersan Jahed Tabrizi, dijital ajans, hakkımızda'
+        seoTitle: 'Hakkımızda | Bizdavar — dijital hizmetler ve endüstriyel tedarik',
+        seoDescription: 'Bizdavar Group 2013’ten beri İstanbul’da: web tasarım, dijital pazarlama, FXGuard ürünleri ve VEGA, Prosense, Liqui Moly tedariki — 11 ülkede hizmet.',
+        seoKeywords: 'Bizdavar hakkımızda, dijital ajans İstanbul, endüstriyel tedarik'
       },
       services: {
-        seoTitle: 'Hizmetler | Web app, mobil, sunucu ve teknik hizmetler',
-        seoDescription: 'Bizdavar: dijital pazarlama, web/web app, Android-iOS, sistem, sunucu yönetimi, SMM ve CCTV/tesisat/gizli aydınlatma — Tebriz ve İstanbul. Teknik sorumlu ile koordinasyon.',
-        seoKeywords: 'Bizdavar hizmetler, web uygulaması, Android uygulama, iOS, sunucu yönetimi, CCTV Tebriz, CCTV İstanbul, gizli aydınlatma'
+        seoTitle: 'Hizmetler | Dijital pazarlama, web tasarım, SMM ve teknik kurulum',
+        seoDescription: 'Bizdavar hizmetleri — İstanbul ve Tebriz: dijital pazarlama, web/web app, Android-iOS, sunucu, SMM, CCTV, tesisat ve gizli aydınlatma. Teknik WhatsApp ile koordinasyon.',
+        seoKeywords: 'Bizdavar hizmetler, dijital pazarlama, web tasarım, SMM, CCTV İstanbul, teknik hizmet'
       },
       products: {
-        seoTitle: 'Bizdavar ürünleri | WhatsApp CRM, BizTab, BizClean ve üretim hatları',
-        seoDescription: 'Bizdavar ürünleri — özel WhatsApp CRM scripti, BizTab, BizClean, BizRoll, vakum makineleri ve PPE hatları. Donanım ve SaaS — Bizdavar ekibi.',
-        seoKeywords: 'WhatsApp CRM, BizTab, BizClean, BizRoll, Bizdavar ürünleri'
+        seoTitle: 'Bizdavar ürünleri | FXGuard CRM, Fast Web Studio ve endüstriyel tedarik',
+        seoDescription: 'Bizdavar ürünleri: FXGuard WhatsApp CRM ve Accounting, Fast Web Studio, BizSwap; ayrıca VEGA, Prosense ve Liqui Moly endüstriyel tedarik.',
+        seoKeywords: 'Bizdavar ürünleri, FXGuard, WhatsApp CRM, Fast Web Studio, VEGA, Prosense, Liqui Moly'
       },
       portfolio: {
-        seoTitle: 'Portfolyo | Bizdavar Group projeleri — ZedPay, BZ Diamond...',
-        seoDescription: 'Bizdavar portfolyosu: ZedPay, BZ Diamond, Marvelous Holding, NIK Aesthetic, Karen Leather ve daha fazlası — ekosistem, müşteriler ve dijital projeler.',
-        seoKeywords: 'portfolyo, ZedPay, BZ Diamond, Bizdavar, web tasarım'
+        seoTitle: 'Portfolyo | Web tasarım, dijital ürünler ve endüstriyel tedarik — Bizdavar',
+        seoDescription: 'Bizdavar Group portfolyosu: web tasarım, dijital pazarlama, SMM, FXGuard ve Fast Web Studio ürünleri, VEGA, Prosense ve Liqui Moly tedariki.',
+        seoKeywords: 'Bizdavar portfolyo, web tasarım, dijital pazarlama, FXGuard, Fast Web Studio, VEGA, endüstriyel tedarik'
       },
       blog: {
-        seoTitle: 'Blog | Dijital pazarlama, web tasarım ve endüstriyel tedarik',
-        seoDescription: 'Bizdavar Group uzman yazıları: dijital pazarlama, Fast Web Studio, VEGA endüstriyel sensörler ve iş büyütme rehberleri.',
-        seoKeywords: 'Bizdavar blog, dijital pazarlama, web tasarım, VEGA'
+        seoTitle: 'Blog | Dijital pazarlama, web tasarım ve endüstriyel tedarik rehberleri',
+        seoDescription: 'Bizdavar uzman yazıları: dijital pazarlama, Fast Web Studio, VEGA sensörleri, endüstriyel tedarik ve iş büyütme — Türkiye ve İran odaklı.',
+        seoKeywords: 'Bizdavar blog, dijital pazarlama, web tasarım, VEGA, endüstriyel tedarik'
       },
       fast: {
         seoTitle: 'Fast Web Studio | 5 günde profesyonel web sitesi — Bizdavar',
@@ -224,9 +224,9 @@
         seoKeywords: 'gizlilik politikası, privacy, Bizdavar'
       },
       contact: {
-        seoTitle: 'İletişim | Bizdavar Group — Ücretsiz danışmanlık',
-        seoDescription: 'Bizdavar Group ile iletişime geçin: dijital pazarlama, web tasarım, SMM ve VEGA/Prosense endüstriyel tedarik. İletişim formu, WhatsApp ve e-posta.',
-        seoKeywords: 'Bizdavar iletişim, ücretsiz danışmanlık, web tasarım, VEGA'
+        seoTitle: 'İletişim | Ücretsiz danışmanlık — hizmet ve endüstriyel tedarik',
+        seoDescription: 'Bizdavar ile ücretsiz danışmanlık: web tasarım, dijital pazarlama, FXGuard ve VEGA, Prosense, Liqui Moly tedariki. Form, WhatsApp ve e-posta — İstanbul.',
+        seoKeywords: 'Bizdavar iletişim, ücretsiz danışmanlık, web tasarım, VEGA, Liqui Moly, FXGuard'
       },
       vega: {
         seoTitle: 'VEGA sensör tedariki | VEGAPULS 6X, VEGABAR 39, VEGAPOINT — Bizdavar',
@@ -254,9 +254,9 @@
         seoKeywords: 'Gamak, elektrik motoru, IE2 IE3, endüstriyel motor, Bizdavar'
       },
       digiSystem: {
-        seoTitle: 'Digi System tedariki | Terazi ve POS — Bizdavar Group',
-        seoDescription: 'Digi System terazi, POS ve kasa tedariki — perakende projeleri için model seçimi, şeffaf proforma ve Türkiye lojistiği — Bizdavar Group.',
-        seoKeywords: 'Digi System, POS, terazi, perakende, Bizdavar'
+        seoTitle: 'Digi System tedariki | Terazi ve POS | Bizdavar',
+        seoDescription: 'Digi System terazi ve POS tedariki — SM-6000, W-5600SRX, LX-5600 ve AW-5600. Model seçimi, şeffaf proforma ve lojistik — Bizdavar Group.',
+        seoKeywords: 'Digi System, DIGI, SM-6000, POS, terazi, Bizdavar'
       },
       teraoka: {
         seoTitle: 'Teraoka Seiko tedariki | Terazi ve POS — Bizdavar Group',
@@ -264,24 +264,24 @@
         seoKeywords: 'Teraoka, terazi, POS, etiketleme, Bizdavar'
       },
       bzDiamond: {
-        seoTitle: 'BZ Diamond vaka çalışması | Web tasarım ve WooCommerce — Bizdavar',
-        seoDescription: 'BZ Diamond web tasarım vaka çalışması: WooCommerce mağaza, e-posta yönetimi, SEO ve teknik destek — Bizdavar Group müşteri projesi.',
-        seoKeywords: 'BZ Diamond, WooCommerce, web tasarım, Bizdavar, vaka çalışması'
+        seoTitle: 'WooCommerce mağaza tasarım örneği | Web ve SEO — Bizdavar',
+        seoDescription: 'Online mağaza tasarım örneği: WooCommerce, kurumsal e-posta, SEO ve teknik destek — Bizdavar Group web tasarım hizmetleri.',
+        seoKeywords: 'WooCommerce mağaza, web tasarım örneği, SEO, Bizdavar'
       },
       supplifyTrade: {
-        seoTitle: 'Supplify Trade vaka çalışması | Uluslararası ticaret web tasarımı — Bizdavar',
-        seoDescription: 'Supplify Trade FZ-LLC web tasarım örneği — RAKEZ lisanslı B2B sourcing ve ticaret şirketi (BAE). Kurumsal site, SEO ve destek — Bizdavar Group.',
-        seoKeywords: 'Supplify Trade, web tasarım, uluslararası ticaret, RAKEZ, Bizdavar'
+        seoTitle: 'B2B uluslararası ticaret web tasarım örneği | SEO — Bizdavar',
+        seoDescription: 'Kurumsal B2B web tasarım örneği: sourcing ve uluslararası ticaret sitesi, içerik yapısı, SEO ve teknik destek — Bizdavar Group.',
+        seoKeywords: 'B2B web tasarım, uluslararası ticaret, web tasarım örneği, SEO, Bizdavar'
       },
       kayaOne: {
-        seoTitle: 'Kaya One AG vaka çalışması | İsviçre ticaret web tasarımı — Bizdavar',
-        seoDescription: 'Kaya One AG web tasarım örneği — İsviçre kayıtlı ticaret ve endüstriyel çözümler şirketi (Brunnen). Kurumsal site, SEO ve destek — Bizdavar Group.',
-        seoKeywords: 'Kaya One AG, web tasarım, İsviçre ticaret, Bizdavar'
+        seoTitle: 'Endüstriyel ticaret web tasarım örneği | Kurumsal site — Bizdavar',
+        seoDescription: 'Kurumsal web tasarım örneği: ticaret ve endüstriyel çözümler sitesi, içerik yapısı, SEO ve teknik destek — Bizdavar Group.',
+        seoKeywords: 'kurumsal web tasarım, endüstriyel ticaret, web tasarım örneği, Bizdavar'
       },
       smmTurk: {
-        seoTitle: 'SMM Turk vaka çalışması | SMM panel web tasarımı — Bizdavar',
-        seoDescription: 'SMM Turk web ve panel tasarım örneği — Türkiye SMM paneli, bayi programı ve kripto ödeme. UI, SEO ve destek — Bizdavar Group.',
-        seoKeywords: 'SMM Turk, SMM paneli, web tasarım, dijital pazarlama, Bizdavar'
+        seoTitle: 'SMM panel web tasarım örneği | UI ve SEO — Bizdavar',
+        seoDescription: 'SMM panel ve web tasarım örneği: kullanıcı arayüzü, dönüşüm sayfaları, SEO ve teknik destek — Bizdavar Group.',
+        seoKeywords: 'SMM paneli tasarım, web tasarım örneği, dijital pazarlama, Bizdavar'
       },
       fxguardExchange: {
         seoTitle: 'FXGuard Exchange vaka çalışması | Toman–Lira değişim platformu — Bizdavar',
@@ -289,9 +289,9 @@
         seoKeywords: 'FXGuard Exchange, Toman Lira, fintech, döviz kuru, Bizdavar'
       },
       biztejarat: {
-        seoTitle: 'Biztejarat geçmiş örneği | Endüstriyel SMM — Bizdavar',
-        seoDescription: 'Biztejarat geçmiş Instagram SMM örneği: endüstriyel ürün içeriği — proje artık aktif değil. Bizdavar Group tarafından yürütüldü.',
-        seoKeywords: 'Biztejarat, endüstriyel SMM, B2B içerik, Bizdavar'
+        seoTitle: 'Endüstriyel SMM örneği | B2B içerik yönetimi — Bizdavar',
+        seoDescription: 'Geçmiş Instagram SMM örneği: endüstriyel ürün içeriği B2B — proje artık aktif değil. Bizdavar Group tarafından yürütüldü.',
+        seoKeywords: 'endüstriyel SMM, B2B içerik, Instagram yönetimi, Bizdavar'
       },
       biztab: {
         seoTitle: 'BizTab | Temasız duvar termometresi — Bizdavar ürünü',
@@ -361,34 +361,34 @@
     },
     en: {
       home: {
-        seoTitle: 'Bizdavar Group | Digital services, web design & industrial supply',
-        seoDescription: 'Bizdavar Group — 12+ years, 100+ projects across 11 countries. Digital marketing, web design, SMM, and VEGA/Prosense supply. Istanbul HQ.',
-        seoKeywords: 'Bizdavar, web design Istanbul, digital marketing, VEGA, Prosense, Fast Web Studio'
+        seoTitle: 'Bizdavar Group | Web design, digital marketing & industrial supply',
+        seoDescription: 'From Istanbul: Fast Web Studio websites, digital marketing & SMM, FXGuard WhatsApp CRM, plus VEGA, Prosense and Liqui Moly supply. Free consultation.',
+        seoKeywords: 'Bizdavar, web design Istanbul, digital marketing, FXGuard, VEGA, Prosense, Liqui Moly, Fast Web Studio'
       },
       about: {
-        seoTitle: 'About us | Bizdavar Group — Digital & industrial agency',
-        seoDescription: 'Bizdavar Group since 2013 — founder Ersan Jahed Tabrizi. 100+ projects in 11 countries: digital marketing, fintech, web design, and VEGA/Prosense supply.',
-        seoKeywords: 'Bizdavar Group, Ersan Jahed Tabrizi, digital agency, about'
+        seoTitle: 'About Bizdavar | Digital services & industrial supply since 2013',
+        seoDescription: 'Bizdavar Group since 2013 in Istanbul — web design, digital marketing, FXGuard products, and VEGA, Prosense & Liqui Moly supply across 11 countries.',
+        seoKeywords: 'about Bizdavar, digital agency Istanbul, industrial supply'
       },
       services: {
-        seoTitle: 'Services | Web apps, mobile, servers & technical installs',
-        seoDescription: 'Bizdavar: digital marketing, web/web apps, Android & iOS, systems, server management, SMM, plus CCTV, wiring and cove lighting in Tabriz and Istanbul — coordinated with the technical lead.',
-        seoKeywords: 'Bizdavar services, web application, Android app, iOS app, server management, CCTV Tabriz, CCTV Istanbul, cove lighting'
+        seoTitle: 'Services | Digital marketing, web design, SMM & technical installs',
+        seoDescription: 'Bizdavar services in Istanbul and Tabriz: digital marketing, web/web apps, Android & iOS, servers, SMM, CCTV, wiring and cove lighting — via dedicated technical WhatsApp.',
+        seoKeywords: 'Bizdavar services, digital marketing, web design, SMM, CCTV Istanbul, technical installs'
       },
       products: {
-        seoTitle: 'Bizdavar products | WhatsApp CRM, BizSwap, BizTab & production lines',
-        seoDescription: 'Bizdavar products — custom WhatsApp CRM script, BizSwap DeFi, BizTab, BizClean, BizRoll, vacuum sealers and PPE lines. Hardware and SaaS engineered by the Bizdavar team.',
-        seoKeywords: 'WhatsApp CRM, custom CRM script, BizSwap, BizTab, BizClean, BizRoll, Bizdavar products'
+        seoTitle: 'Bizdavar products | FXGuard CRM, Fast Web Studio & industrial supply',
+        seoDescription: 'Bizdavar products: FXGuard WhatsApp CRM & Accounting, Fast Web Studio, BizSwap — plus industrial supply of VEGA, Prosense and Liqui Moly.',
+        seoKeywords: 'Bizdavar products, FXGuard, WhatsApp CRM, Fast Web Studio, VEGA, Prosense, Liqui Moly'
       },
       portfolio: {
-        seoTitle: 'Portfolio | Bizdavar Group projects — ZedPay, BZ Diamond & more',
-        seoDescription: 'Bizdavar portfolio: ZedPay, BZ Diamond, Marvelous Holding, NIK Aesthetic, Karen Leather and more — ecosystem, clients and digital projects.',
-        seoKeywords: 'portfolio, ZedPay, BZ Diamond, Bizdavar, web design'
+        seoTitle: 'Portfolio | Web design, digital products & industrial supply — Bizdavar',
+        seoDescription: 'Bizdavar Group portfolio: web design, digital marketing, SMM, FXGuard and Fast Web Studio products, plus VEGA, Prosense and Liqui Moly supply.',
+        seoKeywords: 'Bizdavar portfolio, web design, digital marketing, FXGuard, Fast Web Studio, VEGA, industrial supply'
       },
       blog: {
-        seoTitle: 'Blog | Digital marketing, web design & industrial supply',
-        seoDescription: 'Bizdavar Group expert articles: digital marketing, Fast Web Studio, VEGA industrial sensors, and business growth guides.',
-        seoKeywords: 'Bizdavar blog, digital marketing, web design, VEGA'
+        seoTitle: 'Blog | Digital marketing, web design & industrial supply guides',
+        seoDescription: 'Bizdavar expert articles: digital marketing, Fast Web Studio, VEGA sensors, industrial supply and growth playbooks for Iran and Turkey markets.',
+        seoKeywords: 'Bizdavar blog, digital marketing, web design, VEGA, industrial supply'
       },
       fast: {
         seoTitle: 'Fast Web Studio | Professional website in 5 days — Bizdavar',
@@ -401,9 +401,9 @@
         seoKeywords: 'privacy policy, Bizdavar, GDPR'
       },
       contact: {
-        seoTitle: 'Contact us | Bizdavar Group — Free consultation',
-        seoDescription: 'Contact Bizdavar Group: digital marketing, web design, SMM, and VEGA/Prosense industrial supply. Contact form, WhatsApp, and email.',
-        seoKeywords: 'Bizdavar contact, free consultation, web design, VEGA'
+        seoTitle: 'Contact Bizdavar | Free consultation — services & industrial supply',
+        seoDescription: 'Free Bizdavar consultation: web design, digital marketing, FXGuard, and VEGA, Prosense & Liqui Moly supply. Form, WhatsApp and email — Istanbul.',
+        seoKeywords: 'Bizdavar contact, free consultation, web design, VEGA, Liqui Moly, FXGuard'
       },
       vega: {
         seoTitle: 'VEGA sensor supply | VEGAPULS 6X, VEGABAR 39, VEGAPOINT — Bizdavar',
@@ -417,7 +417,7 @@
       },
       liquiMoly: {
         seoTitle: 'Liqui Moly supply | Motor oil & fuel additives | Bizdavar',
-        seoDescription: 'Bizdavar Group supplies genuine Liqui Moly: engine oil, Octane Plus, diesel additives, antifreeze and car care. Transparent USD pricing and Farsi consulting.',
+        seoDescription: 'Bizdavar Group supplies genuine Liqui Moly: engine oil, Octane Plus, diesel additives, antifreeze and car care. Transparent USD pricing and multilingual consulting.',
         seoKeywords: 'Liqui Moly, Octane Plus, engine oil, Bizdavar'
       },
       teltonika: {
@@ -431,9 +431,9 @@
         seoKeywords: 'Gamak, electric motor, IE2 IE3, industrial motor, Bizdavar'
       },
       digiSystem: {
-        seoTitle: 'Digi System supply | Scales & POS — Bizdavar Group',
-        seoDescription: 'Digi System retail scales, POS and checkout supply — model selection, transparent proforma and logistics from Turkey — Bizdavar Group.',
-        seoKeywords: 'Digi System, POS, retail scales, Bizdavar'
+        seoTitle: 'Digi System supply | Retail scales & POS | Bizdavar',
+        seoDescription: 'Digi System retail scales and POS — SM-6000, W-5600SRX, LX-5600 and AW-5600. Model selection, transparent proforma and logistics — Bizdavar Group.',
+        seoKeywords: 'Digi System, DIGI, SM-6000, POS, retail scales, Bizdavar'
       },
       teraoka: {
         seoTitle: 'Teraoka Seiko supply | Scales & POS — Bizdavar Group',
@@ -441,24 +441,24 @@
         seoKeywords: 'Teraoka, scales, POS, labeling, Bizdavar'
       },
       bzDiamond: {
-        seoTitle: 'BZ Diamond case study | Web design & WooCommerce — Bizdavar',
-        seoDescription: 'BZ Diamond web design case study: WooCommerce store, email management, SEO and technical support — Bizdavar Group client project.',
-        seoKeywords: 'BZ Diamond, WooCommerce, web design, Bizdavar, case study'
+        seoTitle: 'WooCommerce store design case study | Web & SEO — Bizdavar',
+        seoDescription: 'Online store design case study: WooCommerce, corporate email, SEO and technical support — Bizdavar Group web design services.',
+        seoKeywords: 'WooCommerce store, web design case study, SEO, Bizdavar'
       },
       supplifyTrade: {
-        seoTitle: 'Supplify Trade case study | International trade web design — Bizdavar',
-        seoDescription: 'Supplify Trade FZ-LLC web design case study — RAKEZ-licensed B2B sourcing and trading company in the UAE. Corporate site, SEO and support — Bizdavar Group.',
-        seoKeywords: 'Supplify Trade, web design, international trade, RAKEZ, Bizdavar'
+        seoTitle: 'B2B international trade web design case study | SEO — Bizdavar',
+        seoDescription: 'Corporate B2B web design case study: sourcing and international trade site, content structure, SEO and technical support — Bizdavar Group.',
+        seoKeywords: 'B2B web design, international trade, web design case study, SEO, Bizdavar'
       },
       kayaOne: {
-        seoTitle: 'Kaya One AG case study | Swiss trade web design — Bizdavar',
-        seoDescription: 'Kaya One AG web design case study — Swiss-registered trading and industrial solutions company in Brunnen. Corporate site, SEO and support — Bizdavar Group.',
-        seoKeywords: 'Kaya One AG, web design, Swiss trade, Bizdavar'
+        seoTitle: 'Industrial trade web design case study | Corporate site — Bizdavar',
+        seoDescription: 'Corporate web design case study: trading and industrial solutions site, content structure, SEO and technical support — Bizdavar Group.',
+        seoKeywords: 'corporate web design, industrial trade, web design case study, Bizdavar'
       },
       smmTurk: {
-        seoTitle: 'SMM Turk case study | SMM panel web design — Bizdavar',
-        seoDescription: 'SMM Turk web and panel design case study — social media services panel in Turkey with reseller program and crypto payments. UI, SEO and support — Bizdavar Group.',
-        seoKeywords: 'SMM Turk, SMM panel, web design, digital marketing, Bizdavar'
+        seoTitle: 'SMM panel web design case study | UI & SEO — Bizdavar',
+        seoDescription: 'SMM panel and web design case study: UI, conversion pages, SEO and technical support — Bizdavar Group.',
+        seoKeywords: 'SMM panel design, web design case study, digital marketing, Bizdavar'
       },
       fxguardExchange: {
         seoTitle: 'FXGuard Exchange case study | Toman–Lira exchange platform — Bizdavar',
@@ -466,9 +466,9 @@
         seoKeywords: 'FXGuard Exchange, Toman Lira, fintech, exchange rates, Bizdavar'
       },
       biztejarat: {
-        seoTitle: 'Biztejarat past case study | Industrial SMM — Bizdavar',
-        seoDescription: 'Past Biztejarat Instagram SMM case study: industrial product content — project is no longer active. Delivered by Bizdavar Group.',
-        seoKeywords: 'Biztejarat, industrial SMM, B2B content, Bizdavar'
+        seoTitle: 'Industrial SMM case study | B2B content management — Bizdavar',
+        seoDescription: 'Past Instagram SMM case study: industrial B2B product content — project is no longer active. Delivered by Bizdavar Group.',
+        seoKeywords: 'industrial SMM, B2B content, Instagram management, Bizdavar'
       },
       biztab: {
         seoTitle: 'BizTab | Non-contact wall thermometer — Bizdavar product',
@@ -550,30 +550,40 @@
   const privacyGeo = {
     fa: {
       title: '۵. زبان و تشخیص منطقه',
-      body: 'برای نمایش زبان مناسب (فارسی، ترکی، انگلیسی)، ممکن است آدرس IP شما به‌صورت ناشناس به <strong>ipapi.co</strong> یا <strong>ipwho.is</strong> ارسال شود تا کشور تقریبی تشخیص داده شود. ترجیح زبان در حافظه مرورگر (<code>localStorage</code> — کلید <code>bizdavar_locale</code>) ذخیره می‌شود. می‌توانید هر زمان از منوی زبان یا با پارامتر <code>?lang=fa</code>، <code>?lang=tr</code> یا <code>?lang=en</code> زبان را خودتان انتخاب کنید.'
+      body: 'برای نمایش زبان مناسب (فارسی، ترکی، انگلیسی، روسی، عربی)، ممکن است آدرس IP شما به‌صورت ناشناس به <strong>ipapi.co</strong> یا <strong>ipwho.is</strong> ارسال شود تا کشور تقریبی تشخیص داده شود. ترجیح زبان در حافظه مرورگر (<code>localStorage</code> — کلید <code>bizdavar_locale</code>) ذخیره می‌شود. می‌توانید هر زمان از منوی زبان یا با پارامتر <code>?lang=fa</code>، <code>?lang=tr</code>، <code>?lang=en</code>، <code>?lang=ru</code> یا <code>?lang=ar</code> زبان را خودتان انتخاب کنید.'
     },
     tr: {
       title: '5. Dil ve bölge algılama',
-      body: 'Uygun dili göstermek için (Türkçe, Farsça, İngilizce) IP adresiniz yaklaşık ülke tespiti amacıyla <strong>ipapi.co</strong> veya <strong>ipwho.is</strong> servislerine anonim olarak gönderilebilir. Dil tercihi tarayıcı <code>localStorage</code> içinde (<code>bizdavar_locale</code>) saklanır. Dil menüsünden veya <code>?lang=fa</code>, <code>?lang=tr</code>, <code>?lang=en</code> parametreleriyle istediğiniz zaman değiştirebilirsiniz.'
+      body: 'Uygun dili göstermek için (Türkçe, Farsça, İngilizce, Rusça, Arapça) IP adresiniz yaklaşık ülke tespiti amacıyla <strong>ipapi.co</strong> veya <strong>ipwho.is</strong> servislerine anonim olarak gönderilebilir. Dil tercihi tarayıcı <code>localStorage</code> içinde (<code>bizdavar_locale</code>) saklanır. Dil menüsünden veya <code>?lang=fa</code>, <code>?lang=tr</code>, <code>?lang=en</code>, <code>?lang=ru</code>, <code>?lang=ar</code> parametreleriyle istediğiniz zaman değiştirebilirsiniz.'
     },
     en: {
       title: '5. Language and region detection',
-      body: 'To show the appropriate language (Persian, Turkish, English), your IP address may be sent anonymously to <strong>ipapi.co</strong> or <strong>ipwho.is</strong> for approximate country detection. Your language preference is stored in browser <code>localStorage</code> (<code>bizdavar_locale</code>). You can change it anytime via the language menu or <code>?lang=fa</code>, <code>?lang=tr</code>, or <code>?lang=en</code> URL parameters.'
+      body: 'To show the right language (Persian, Turkish, English, Russian, Arabic), your IP may be sent anonymously to <strong>ipapi.co</strong> or <strong>ipwho.is</strong> for approximate country detection. Language preference is stored in browser <code>localStorage</code> (<code>bizdavar_locale</code>). You can change it anytime from the language menu or with <code>?lang=fa</code>, <code>?lang=tr</code>, <code>?lang=en</code>, <code>?lang=ru</code>, or <code>?lang=ar</code>.'
+    },
+    ru: {
+      title: '5. Язык и определение региона',
+      body: 'Чтобы показать подходящий язык (персидский, турецкий, английский, русский, арабский), ваш IP может анонимно отправляться в <strong>ipapi.co</strong> или <strong>ipwho.is</strong> для приблизительного определения страны. Предпочтение языка хранится в <code>localStorage</code> (<code>bizdavar_locale</code>). Вы можете сменить язык в меню или параметрами <code>?lang=fa</code>, <code>?lang=tr</code>, <code>?lang=en</code>, <code>?lang=ru</code>, <code>?lang=ar</code>.'
+    },
+    ar: {
+      title: '٥. اللغة واكتشاف المنطقة',
+      body: 'لعرض اللغة المناسبة (الفارسية، التركية، الإنجليزية، الروسية، العربية) قد يُرسل عنوان IP الخاص بك بشكل مجهول إلى <strong>ipapi.co</strong> أو <strong>ipwho.is</strong> لتحديد البلد تقريباً. يُحفظ تفضيل اللغة في <code>localStorage</code> (<code>bizdavar_locale</code>). يمكنك تغييره من قائمة اللغة أو بـ <code>?lang=fa</code> و<code>?lang=tr</code> و<code>?lang=en</code> و<code>?lang=ru</code> و<code>?lang=ar</code>.'
     }
   };
 
   const contactTitle = {
     fa: '۶. ارتباط با ما',
     tr: '6. Bize ulaşın',
-    en: '6. Contact us'
+    en: '6. Contact us',
+    ru: '6. Связаться с нами',
+    ar: '٦. تواصل معنا'
   };
 
-  ['fa', 'tr', 'en'].forEach(lang => {
+  ['fa', 'tr', 'en', 'ru', 'ar'].forEach(lang => {
     const pp = window.BIZDAVAR_LOCALES[lang]?.privacyPage;
     if (!pp?.sections || pp.sections.length < 5) return;
     const contact = pp.sections.pop();
-    pp.sections.push(privacyGeo[lang]);
-    contact.title = contactTitle[lang];
+    if (privacyGeo[lang]) pp.sections.push(privacyGeo[lang]);
+    contact.title = contactTitle[lang] || contact.title;
     pp.sections.push(contact);
   });
 })();

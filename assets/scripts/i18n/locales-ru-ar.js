@@ -1,0 +1,1031 @@
+/**
+ * Russian + Arabic locales — clone English base, then overlay home/nav/SEO/Liqui Moly.
+ * Loaded after locale-seo.js (see site-loader.js).
+ */
+(function () {
+  if (!window.BIZDAVAR_LOCALES || !window.BIZDAVAR_LOCALES.en) return;
+
+  function clone(obj) {
+    return JSON.parse(JSON.stringify(obj));
+  }
+
+  function deepMerge(target, src) {
+    if (!src || typeof src !== 'object') return target;
+    Object.keys(src).forEach(function (key) {
+      var val = src[key];
+      if (val && typeof val === 'object' && !Array.isArray(val)) {
+        if (!target[key] || typeof target[key] !== 'object') target[key] = {};
+        deepMerge(target[key], val);
+      } else {
+        target[key] = val;
+      }
+    });
+    return target;
+  }
+
+  var commonLang = {
+    langFa: 'فارسی',
+    langTr: 'Türkçe',
+    langEn: 'English',
+    langRu: 'Русский',
+    langAr: 'العربية'
+  };
+
+  var pageSeoRu = {
+    home: {
+      crumb: 'Главная',
+      seoTitle: 'Bizdavar Group | веб-дизайн, цифровой маркетинг и промышленные поставки',
+      seoDescription: 'Из Стамбула: сайты Fast Web Studio, цифровой маркетинг и SMM, FXGuard WhatsApp CRM, поставки VEGA, Prosense и Liqui Moly. Бесплатная консультация.',
+      seoKeywords: 'Bizdavar, веб-дизайн Стамбул, цифровой маркетинг, FXGuard, VEGA, Prosense, Liqui Moly, Fast Web Studio'
+    },
+    about: {
+      crumb: 'О нас',
+      seoTitle: 'О Bizdavar | цифровые услуги и промышленные поставки с 2013',
+      seoDescription: 'Bizdavar Group с 2013 в Стамбуле — веб-дизайн, цифровой маркетинг, продукты FXGuard и поставки VEGA, Prosense и Liqui Moly в 11 странах.',
+      seoKeywords: 'о Bizdavar, цифровое агентство Стамбул, промышленные поставки'
+    },
+    services: {
+      crumb: 'Услуги',
+      seoTitle: 'Услуги | цифровой маркетинг, веб-дизайн, SMM и техобслуживание',
+      seoDescription: 'Услуги Bizdavar в Стамбуле и Тебризе: маркетинг, web/web app, Android и iOS, серверы, SMM, CCTV, проводка и скрытое освещение.',
+      seoKeywords: 'услуги Bizdavar, цифровой маркетинг, веб-дизайн, SMM, CCTV Стамбул'
+    },
+    products: {
+      crumb: 'Продукты',
+      seoTitle: 'Продукты Bizdavar | FXGuard CRM, Fast Web Studio и промышленные поставки',
+      seoDescription: 'Продукты Bizdavar: FXGuard WhatsApp CRM и Accounting, Fast Web Studio, BizSwap — плюс поставки VEGA, Prosense и Liqui Moly.',
+      seoKeywords: 'продукты Bizdavar, FXGuard, WhatsApp CRM, Fast Web Studio, VEGA, Prosense, Liqui Moly'
+    },
+    contact: {
+      crumb: 'Контакты',
+      seoTitle: 'Контакты | бесплатная консультация — услуги и промышленные поставки',
+      seoDescription: 'Бесплатная консультация Bizdavar: веб-дизайн, маркетинг, FXGuard и поставки VEGA, Prosense и Liqui Moly. Форма, WhatsApp и email — Стамбул.',
+      seoKeywords: 'контакты Bizdavar, бесплатная консультация, веб-дизайн, VEGA, Liqui Moly, FXGuard'
+    },
+    liquiMoly: {
+      crumb: 'Продукция Liqui Moly',
+      seoTitle: 'Купить Liqui Moly | моторные масла и присадки | Bizdavar',
+      seoDescription: 'Bizdavar Group поставляет оригинальную Liqui Moly: моторные масла, Octane Plus, дизельные присадки, антифриз и автохимию. Прозрачные цены в USD и многоязычная консультация.',
+      seoKeywords: 'Liqui Moly купить, моторное масло Liqui Moly, Octane Plus, Top Tec, Molygen, присадка в бензин, антифриз, Bizdavar'
+    },
+    vega: {
+      crumb: 'Продукция VEGA',
+      seoTitle: 'Купить датчик VEGA | VEGAPULS 6X, VEGABAR 39, VEGAPOINT — Bizdavar',
+      seoDescription: 'Поставка оригинальных датчиков VEGA: VEGAPULS 6X, VEGABAR 39, VEGAVIB S61, VEGAPOINT 11/21/31. Техконсультация, точный order code, прозрачная проформа и международная логистика — Bizdavar Group.',
+      seoKeywords: 'купить VEGA, датчик уровня VEGA, VEGAPULS 6X, VEGABAR 39, VEGAVIB S61, VEGAPOINT 11, VEGAPOINT 21, VEGAPOINT 31, датчик давления, Bizdavar'
+    },
+    prosense: {
+      crumb: 'Продукция Prosense',
+      seoTitle: 'Купить детектор Prosense | PQ, SafeVader, PPS+ — Bizdavar',
+      seoDescription: 'Поставка оригинальных газовых и пламенных детекторов Prosense: PQ, SafeVader, SOMA, PPS+. Сертификаты SIL/M1/EN, техконсультация, прозрачная проформа и международная логистика — Bizdavar Group.',
+      seoKeywords: 'купить Prosense, газовый детектор, детектор пламени, PQ Series, SafeVader, SOMA M1, PPS+, SIL2, EN-50545-1, Bizdavar'
+    },
+    portfolio: {
+      crumb: 'Портфолио',
+      seoTitle: 'Портфолио | веб-дизайн, цифровые продукты и промышленные поставки — Bizdavar',
+      seoDescription: 'Портфолио Bizdavar Group: веб-дизайн, цифровой маркетинг, SMM, продукты FXGuard и Fast Web Studio, поставки VEGA, Prosense и Liqui Moly.',
+      seoKeywords: 'портфолио Bizdavar, веб-дизайн, цифровой маркетинг, FXGuard, Fast Web Studio, VEGA'
+    },
+    fast: {
+      crumb: 'Fast Web Studio',
+      seoTitle: 'Fast Web Studio | сайт за 5 дней — Bizdavar',
+      seoDescription: 'Bizdavar Fast Web Studio — сайт за 5 дней. Базовый $99, магазин $199, pro $299. RTL, WhatsApp, WooCommerce и базовое SEO.',
+      seoKeywords: 'Fast Web Studio, веб-дизайн, WooCommerce, Bizdavar'
+    }
+  };
+
+  var pageSeoAr = {
+    home: {
+      crumb: 'الرئيسية',
+      seoTitle: 'Bizdavar Group | تصميم مواقع وتسويق رقمي وتوريد صناعي',
+      seoDescription: 'من إسطنبول: مواقع Fast Web Studio، تسويق رقمي وSMM، FXGuard WhatsApp CRM، وتوريد VEGA وProsense وLiqui Moly. استشارة مجانية.',
+      seoKeywords: 'Bizdavar, تصميم مواقع إسطنبول, تسويق رقمي, FXGuard, VEGA, Prosense, Liqui Moly, Fast Web Studio'
+    },
+    about: {
+      crumb: 'من نحن',
+      seoTitle: 'عن Bizdavar | خدمات رقمية وتوريد صناعي منذ ٢٠١٣',
+      seoDescription: 'Bizdavar Group منذ ٢٠١٣ في إسطنبول — تصميم مواقع، تسويق رقمي، منتجات FXGuard وتوريد VEGA وProsense وLiqui Moly في ١١ دولة.',
+      seoKeywords: 'عن Bizdavar, وكالة رقمية إسطنبول, توريد صناعي'
+    },
+    services: {
+      crumb: 'الخدمات',
+      seoTitle: 'الخدمات | تسويق رقمي وتصميم مواقع وSMM وتركيبات فنية',
+      seoDescription: 'خدمات Bizdavar في إسطنبول وتبريز: تسويق رقمي، ويب/web app، Android وiOS، خوادم، SMM، كاميرات، تمديدات وإضاءة مخفية.',
+      seoKeywords: 'خدمات Bizdavar, تسويق رقمي, تصميم مواقع, SMM, كاميرات إسطنبول'
+    },
+    products: {
+      crumb: 'المنتجات',
+      seoTitle: 'منتجات Bizdavar | FXGuard CRM وFast Web Studio وتوريد صناعي',
+      seoDescription: 'منتجات Bizdavar: FXGuard WhatsApp CRM وAccounting، Fast Web Studio، BizSwap — مع توريد VEGA وProsense وLiqui Moly.',
+      seoKeywords: 'منتجات Bizdavar, FXGuard, WhatsApp CRM, Fast Web Studio, VEGA, Prosense, Liqui Moly'
+    },
+    contact: {
+      crumb: 'اتصل بنا',
+      seoTitle: 'اتصل بنا | استشارة مجانية — خدمات وتوريد صناعي',
+      seoDescription: 'استشارة مجانية من Bizdavar: تصميم مواقع، تسويق رقمي، FXGuard وتوريد VEGA وProsense وLiqui Moly. نموذج وواتساب وبريد — إسطنبول.',
+      seoKeywords: 'اتصال Bizdavar, استشارة مجانية, تصميم مواقع, VEGA, Liqui Moly, FXGuard'
+    },
+    liquiMoly: {
+      crumb: 'منتجات Liqui Moly',
+      seoTitle: 'شراء Liqui Moly | زيوت المحرك وإضافات الوقود | Bizdavar',
+      seoDescription: 'مجموعة Bizdavar تورّد منتجات Liqui Moly الأصلية: زيوت المحرك، Octane Plus، إضافات الديزل، مضاد التجمد والعناية بالسيارة. أسعار شفافة بالدولار واستشارة متعددة اللغات.',
+      seoKeywords: 'شراء Liqui Moly, زيت محرك Liqui Moly, Octane Plus, Top Tec, Molygen, إضافات بنزين, مضاد تجمد, بيزدوار, Bizdavar'
+    },
+    vega: {
+      crumb: 'منتجات VEGA',
+      seoTitle: 'شراء حساس VEGA | VEGAPULS 6X، VEGABAR 39، VEGAPOINT — Bizdavar',
+      seoDescription: 'توريد حساسات VEGA الأصلية: VEGAPULS 6X، VEGABAR 39، VEGAVIB S61، VEGAPOINT 11/21/31. استشارة فنية، رمز طلب دقيق، فاتورة مبدئية شفافة ولوجستيات دولية — مجموعة Bizdavar.',
+      seoKeywords: 'شراء VEGA, حساس مستوى VEGA, VEGAPULS 6X, VEGABAR 39, VEGAVIB S61, VEGAPOINT 11, VEGAPOINT 21, VEGAPOINT 31, مرسل ضغط, بيزدوار, Bizdavar'
+    },
+    prosense: {
+      crumb: 'منتجات Prosense',
+      seoTitle: 'شراء كاشف Prosense | PQ، SafeVader، PPS+ — Bizdavar',
+      seoDescription: 'توريد كواشف غاز ولهب Prosense الأصلية: PQ، SafeVader، SOMA، PPS+. شهادات SIL/M1/EN، استشارة فنية، فاتورة مبدئية شفافة ولوجستيات دولية — مجموعة Bizdavar.',
+      seoKeywords: 'شراء Prosense, كاشف غاز, كاشف لهب, PQ Series, SafeVader, SOMA M1, PPS+, SIL2, EN-50545-1, بيزدوار, Bizdavar'
+    },
+    portfolio: {
+      crumb: 'الأعمال',
+      seoTitle: 'الأعمال | تصميم مواقع ومنتجات رقمية وتوريد صناعي — Bizdavar',
+      seoDescription: 'أعمال Bizdavar Group: تصميم مواقع، تسويق رقمي، SMM، منتجات FXGuard وFast Web Studio، وتوريد VEGA وProsense وLiqui Moly.',
+      seoKeywords: 'أعمال Bizdavar, تصميم مواقع, تسويق رقمي, FXGuard, Fast Web Studio, VEGA'
+    },
+    fast: {
+      crumb: 'Fast Web Studio',
+      seoTitle: 'Fast Web Studio | موقع احترافي خلال ٥ أيام — Bizdavar',
+      seoDescription: 'Bizdavar Fast Web Studio — موقع خلال ٥ أيام. أساسي $99، متجر $199، احترافي $299. RTL وواتساب وWooCommerce وSEO أساسي.',
+      seoKeywords: 'Fast Web Studio, تصميم مواقع, WooCommerce, Bizdavar'
+    }
+  };
+
+  var homeRu = {
+    heroBadge: 'Bizdavar Group — цифровое агентство',
+    heroTitle: 'Развивайте бизнес с',
+    heroTitleSpan: 'умными цифровыми',
+    heroTitleEnd: 'решениями',
+    heroDesc: 'Сайты Fast Web Studio, цифровой маркетинг, FXGuard и поставки VEGA, Prosense и Liqui Moly — из Стамбула.',
+    viewServices: 'Смотреть услуги',
+    heroCard: 'Цифровой маркетинг · Веб-дизайн · Промышленность',
+    statProjects: 'Цифровых проектов',
+    statCountries: 'Активных стран',
+    statYears: 'Лет опыта',
+    featFast: 'Быстрая поставка',
+    featFastDesc: 'Fast Web Studio — сайт за 5 дней',
+    featGlobal: 'Глобальный охват',
+    featGlobalDesc: 'Проекты в Иране, Турции и мире',
+    featIndustrial: 'Промышленная экспертиза',
+    featIndustrialDesc: 'VEGA, Prosense, Liqui Moly и КИП',
+    featResults: 'Измеримый результат',
+    featResultsDesc: 'Рост конверсии и бренда',
+    svcEyebrow: 'Экспертные услуги',
+    svcTitle: 'Комплексные решения Bizdavar Group',
+    svcDesc: 'Шесть направлений — цифровые, софт и технический монтаж (Тебриз и Стамбул)',
+    svcDmDesc: 'Стратегия, рекламные кампании, SEO и CRO для роста онлайн-продаж.',
+    svcWebDesc: 'Корпоративные сайты, магазины и лендинги — быстрая сдача через Fast Web Studio.',
+    svcSmmDesc: 'Контент, ведение страниц и таргетированная реклама в соцсетях.',
+    svcAppsDesc: 'Android, iOS, веб-приложения и корпоративные системы.',
+    svcServerDesc: 'Настройка, безопасность, бэкапы, мониторинг и миграция серверов.',
+    svcFieldDesc: 'CCTV, проводка и скрытое освещение — Тебриз и Стамбул.',
+    svcIndDesc: 'Датчики VEGA, детекторы Prosense, Liqui Moly, насосы и техконсультации.',
+    svcPlans: 'Тарифы и цены',
+    fastTitle: 'Профессиональный сайт за 5 дней!',
+    fastDesc: 'Запуститесь на этой неделе — Fast Web Studio',
+    fastBtn: 'Смотреть тарифы',
+    aboutTag: 'О нас',
+    aboutTitle: 'Bizdavar Group — партнёр роста вашего бизнеса',
+    aboutP1: 'Команда цифровых услуг, веб-дизайна, онлайн-маркетинга и промышленных поставок. Интегрированные решения — от финтеха и событий до индустрии и хостинга.',
+    aboutP2: 'Цифровая инфраструктура, домены, SSL и безопасность — тоже наши услуги. Международный хостинг и домены через <a href="https://netinode.net/" class="service-card__link" target="_blank" rel="noopener noreferrer">Netinode</a>.',
+    aboutHeroImage: 'assets/images/content/about-hero-en.svg',
+    aboutHeroAlt: 'Bizdavar Group — цифровое и промышленное агентство',
+    aboutMore: 'Подробнее о Bizdavar',
+    aboutInfra: 'Управление инфраструктурой',
+    clientsTitle: 'Услуги и продукты на практике',
+    clientsDesc: 'Веб-дизайн, продукты FXGuard и Fast Web Studio, промышленные поставки',
+    clientsAll: 'Смотреть всё портфолио',
+    blogTitle: 'Последние статьи',
+    blogAll: 'Все материалы блога',
+    faqTitle: 'Частые вопросы',
+    ctaTitle: 'Готовы начать?',
+    ctaDesc: 'Свяжитесь с командой Bizdavar — отвечаем в рабочие часы',
+    ctaForm: 'Форма связи',
+    faqs: [
+      { q: 'С какого года работает Bizdavar Group?', a: 'С 2013 года, основатель — Эрсан Джахед Табризи. Более 100 проектов в 11 странах.' },
+      { q: 'Какие услуги предоставляет Bizdavar?', a: 'Шесть направлений: цифровой маркетинг, веб и web app, мобильные приложения и системы, серверы, SMM и технический монтаж (CCTV, проводка, освещение). Продукты и промышленные бренды — на странице продуктов.' },
+      { q: 'Сколько занимает разработка сайта?', a: 'С Fast Web Studio — от 5 рабочих дней, тарифы от $99 до $299.' },
+      { q: 'Как проверить надёжность Bizdavar?', a: 'LinkedIn основателя, портфолио, сертификаты Google и info@bizdavar.com.' },
+      { q: 'Какие промышленные бренды вы поставляете?', a: 'VEGA, Prosense, Liqui Moly, Gamak, Digi System, Teraoka и другие глобальные бренды.' }
+    ]
+  };
+
+  var homeAr = {
+    heroBadge: 'Bizdavar Group — وكالة تسويق رقمي',
+    heroTitle: 'نمِّ عملك مع',
+    heroTitleSpan: 'حلول رقمية',
+    heroTitleEnd: 'ذكية',
+    heroDesc: 'مواقع Fast Web Studio وتسويق رقمي وFXGuard وتوريد VEGA وProsense وLiqui Moly — من إسطنبول.',
+    viewServices: 'عرض الخدمات',
+    heroCard: 'تسويق رقمي · تصميم ويب · صناعي',
+    statProjects: 'مشاريع رقمية',
+    statCountries: 'دول نشطة',
+    statYears: 'سنوات خبرة',
+    featFast: 'تسليم سريع',
+    featFastDesc: 'Fast Web Studio — موقع خلال ٥ أيام',
+    featGlobal: 'انتشار عالمي',
+    featGlobalDesc: 'مشاريع إيران وتركيا والعالم',
+    featIndustrial: 'خبرة صناعية',
+    featIndustrialDesc: 'VEGA وProsense وLiqui Moly وأدوات دقيقة',
+    featResults: 'نتائج قابلة للقياس',
+    featResultsDesc: 'نمو التحويل والعلامة',
+    svcEyebrow: 'خدمات متخصصة',
+    svcTitle: 'حلول شاملة من Bizdavar Group',
+    svcDesc: 'ستة محاور — رقمي وبرمجي وتركيبات فنية (تبريز وإسطنبول)',
+    svcDmDesc: 'استراتيجية وحملات وإعلانات وSEO وتحسين التحويل لنمو المبيعات.',
+    svcWebDesc: 'مواقع شركات ومتاجر ولاندينغ — تسليم سريع عبر Fast Web Studio.',
+    svcSmmDesc: 'إنتاج محتوى وإدارة صفحات وإعلانات مستهدفة على الشبكات.',
+    svcAppsDesc: 'Android وiOS وتطبيقات ويب وأنظمة مؤسسية.',
+    svcServerDesc: 'إعداد وأمان ونسخ احتياطي ومراقبة وترحيل خوادم.',
+    svcFieldDesc: 'كاميرات وتمديدات وإضاءة مخفية — تبريز وإسطنبول.',
+    svcIndDesc: 'حساسات VEGA وكواشف Prosense وLiqui Moly ومضخات واستشارة فنية.',
+    svcPlans: 'الباقات والأسعار',
+    fastTitle: 'موقع احترافي خلال ٥ أيام!',
+    fastDesc: 'انطلق هذا الأسبوع — Fast Web Studio',
+    fastBtn: 'عرض الباقات',
+    aboutTag: 'من نحن',
+    aboutTitle: 'Bizdavar Group — شريك نمو أعمالك',
+    aboutP1: 'فريق خدمات رقمية وتصميم مواقع وتسويق عبر الإنترنت وتوريد صناعي. حلول متكاملة من الفنتك والفعاليات إلى الصناعة والاستضافة.',
+    aboutP2: 'البنية الرقمية والنطاقات وSSL والأمان جزء من خدماتنا أيضاً — استضافة ونطاقات دولية عبر <a href="https://netinode.net/" class="service-card__link" target="_blank" rel="noopener noreferrer">Netinode</a>.',
+    aboutHeroImage: 'assets/images/content/about-hero.svg',
+    aboutHeroAlt: 'Bizdavar Group — وكالة رقمية وصناعية',
+    aboutMore: 'المزيد عن Bizdavar',
+    aboutInfra: 'إدارة البنية',
+    clientsTitle: 'الخدمات والمنتجات عملياً',
+    clientsDesc: 'تصميم مواقع ومنتجات FXGuard وFast Web Studio وتوريد العلامات الصناعية',
+    clientsAll: 'عرض كل الأعمال',
+    blogTitle: 'أحدث المقالات',
+    blogAll: 'كل مقالات المدونة',
+    faqTitle: 'الأسئلة الشائعة',
+    ctaTitle: 'جاهز للبدء؟',
+    ctaDesc: 'تواصل مع فريق Bizdavar — نرد خلال ساعات العمل',
+    ctaForm: 'نموذج الاتصال',
+    faqs: [
+      { q: 'منذ متى تعمل مجموعة Bizdavar؟', a: 'منذ ٢٠١٣، أسسها إرسان جاهد تبريزي — أكثر من ١٠٠ مشروع في ١١ دولة.' },
+      { q: 'ما الخدمات التي تقدمها Bizdavar؟', a: 'ستة محاور: تسويق رقمي، ويب وweb app، تطبيقات وأنظمة، خوادم، SMM وتركيبات فنية (كاميرات وتمديدات وإضاءة). المنتجات والعلامات الصناعية في صفحة المنتجات.' },
+      { q: 'كم يستغرق تصميم الموقع؟', a: 'مع Fast Web Studio التسليم من ٥ أيام عمل، باقات من $99 إلى $299.' },
+      { q: 'كيف أتحقق من موثوقية Bizdavar؟', a: 'LinkedIn المؤسس، الأعمال، شهادات Google وinfo@bizdavar.com.' },
+      { q: 'ما العلامات الصناعية التي تورّدونها؟', a: 'VEGA وProsense وLiqui Moly وGamak وDigi System وTeraoka وعلامات عالمية أخرى.' }
+    ]
+  };
+
+  var homeSectionsRu = {
+    trustMetrics: [
+      { value: '+100', label: 'Цифровых проектов' },
+      { value: '11', label: 'Активных стран' },
+      { value: '12+', label: 'Лет опыта' },
+      { value: '35', label: 'Проектов и брендов' }
+    ],
+    processSteps: [
+      { num: '01', title: 'Анализ и консультация', desc: 'Цели бизнеса, аудитория и цифровые приоритеты — бесплатная первичная консультация.' },
+      { num: '02', title: 'Проектирование решения', desc: 'Стратегия, выбор платформы и план исполнения под бюджет и сроки.' },
+      { num: '03', title: 'Реализация и сдача', desc: 'Профессиональная реализация — от кампаний до сайтов и промышленных поставок.' },
+      { num: '04', title: 'Поддержка и рост', desc: 'Непрерывная оптимизация, прозрачная отчётность и долгосрочное партнёрство.' }
+    ],
+    process: {
+      eyebrow: 'Как мы работаем',
+      title: 'Профессиональный процесс сотрудничества',
+      desc: 'От первой консультации до сдачи и поддержки — понятный и отслеживаемый путь'
+    },
+    credibility: {
+      eyebrow: 'Доверие и опыт',
+      title: 'Почему Bizdavar Group?',
+      desc: 'Проверенные данные из профессионального профиля, портфолио и истории поставок',
+      projects: 'Веб- и платформенные проекты',
+      countries: 'Страны',
+      years: 'Лет опыта',
+      founded: 'Основана',
+      foundedDisplay: '2013',
+      sources: 'Источники',
+      founderLinkedin: 'LinkedIn основателя',
+      portfolio: 'Портфолио',
+      fullAbout: 'Полная страница о нас'
+    },
+    geo: {
+      summary: 'Услуги из Стамбула для Ирана, Турции и 11 стран — многоязычная поддержка, WhatsApp и международная доставка.',
+      hubs: [
+        { city: 'Стамбул', country: 'Турция', role: 'Главный офис · финтех и международные операции' },
+        { city: 'Тебриз', country: 'Иран', role: 'Рынок Ирана · промышленные и цифровые проекты' },
+        { city: 'Ереван', country: 'Армения', role: 'Региональные операции' }
+      ]
+    },
+    industrial: {
+      eyebrow: 'Промышленное оборудование',
+      title: 'Поставки надёжных брендов и оборудования',
+      desc: 'Датчики, детекторы, моторы и насосы — технический подбор, прайс и международная логистика для B2B',
+      ctaTitle: 'Нужна консультация по поставкам?',
+      ctaDesc: 'Подбор модели, международная закупка, перевозка и таможня — команда Bizdavar',
+      ctaBtn: 'Запросить цену',
+      ctaLink: 'Промышленные услуги',
+      products: [
+        { name: 'VEGA', title: 'Датчики и КИП', desc: 'Уровень, давление, расход — нефть, нефтехимия и вода', badge: 'Германия', tags: ['VEGAPULS', 'VEGABAR', 'VEGAPOINT'], cta: 'Смотреть каталог' },
+        { name: 'Prosense', title: 'Газовые и пламенные детекторы', desc: 'Стационарные и портативные системы с сертификацией SIL2/3', badge: 'Турция', tags: ['PQ+', 'SafeVader', 'PPS'], cta: 'Линейки продуктов' },
+        { name: 'Teltonika', title: 'GPS и Fleet Telematics', desc: 'Трекеры флота, CAN/OBD, BLE, видео и IoT — FMB920 · FMC650 · FTC305', badge: 'Литва', tags: ['FMB920', 'FTC305', 'DualCam'], cta: 'Каталог Teltonika' },
+        { name: 'Gamak', title: 'Промышленные электродвигатели', desc: 'Трёхфазные и однофазные моторы — поставка и техподдержка', badge: 'Турция', tags: ['IE2/IE3', 'Фланец', 'Под проект'], cta: 'О Gamak' },
+        { name: 'Digi System', title: 'Ритейл и POS', desc: 'Поставка Digi — весы, кассы, POS и торговое оборудование', badge: 'Турция', tags: ['POS', 'Retail', 'Scales'], cta: 'Смотреть продукты' },
+        { name: 'Teraoka', title: 'Весы и магазинное оборудование', desc: 'Полная линейка Teraoka Seiko — весы, этикетирование, POS', badge: 'Япония', tags: ['Scales', 'Labeling', 'POS'], cta: 'Смотреть бренд' },
+        { name: 'Liqui Moly', title: 'Масла и присадки', desc: 'Моторные масла, Octane Plus, дизельные присадки и автохимия — цены в USD', badge: 'Германия', tags: ['Octane Plus', 'Top Tec', '5W-30'], cta: 'Каталог и цены' }
+      ]
+    }
+  };
+
+  var homeSectionsAr = {
+    trustMetrics: [
+      { value: '+١٠٠', label: 'مشاريع رقمية' },
+      { value: '١١', label: 'دول نشطة' },
+      { value: '١٢+', label: 'سنوات خبرة' },
+      { value: '٣٥', label: 'مشاريع وعلامات' }
+    ],
+    processSteps: [
+      { num: '٠١', title: 'تحليل واستشارة', desc: 'أهداف العمل والجمهور وأولويات رقمية — استشارة أولية مجانية.' },
+      { num: '٠٢', title: 'تصميم الحل', desc: 'استراتيجية واختيار المنصة وخطة تنفيذ وفق الميزانية والجدول.' },
+      { num: '٠٣', title: 'تنفيذ وتسليم', desc: 'تنفيذ احترافي — من الحملات إلى المواقع والتوريد الصناعي.' },
+      { num: '٠٤', title: 'دعم ونمو', desc: 'تحسين مستمر وتقارير شفافة وشراكة طويلة الأمد.' }
+    ],
+    process: {
+      eyebrow: 'طريقة عملنا',
+      title: 'مسار تعاون احترافي',
+      desc: 'من الاستشارة الأولى إلى التسليم والدعم — مسار واضح وقابل للمتابعة'
+    },
+    credibility: {
+      eyebrow: 'الثقة والخبرة',
+      title: 'لماذا Bizdavar Group؟',
+      desc: 'بيانات موثقة من الملف المهني والأعمال وسجل التنفيذ',
+      projects: 'مشاريع ويب ومنصات',
+      countries: 'دول',
+      years: 'سنوات خبرة',
+      founded: 'تأسست',
+      foundedDisplay: '٢٠١٣',
+      sources: 'المصادر',
+      founderLinkedin: 'LinkedIn المؤسس',
+      portfolio: 'الأعمال',
+      fullAbout: 'صفحة من نحن كاملة'
+    },
+    geo: {
+      summary: 'خدمات من إسطنبول إلى إيران وتركيا و١١ دولة — دعم متعدد اللغات وواتساب وتسليم دولي.',
+      hubs: [
+        { city: 'إسطنبول', country: 'تركيا', role: 'المقر الرئيسي · فنتك وعمليات دولية' },
+        { city: 'تبريز', country: 'إيران', role: 'سوق إيران · مشاريع صناعية ورقمية' },
+        { city: 'يريفان', country: 'أرمينيا', role: 'عمليات إقليمية' }
+      ]
+    },
+    industrial: {
+      eyebrow: 'معدات صناعية',
+      title: 'توريد علامات ومعدات موثوقة',
+      desc: 'حساسات وكواشف ومحركات ومضخات — اختيار فني وعروض أسعار ولوجستيات دولية لـ B2B',
+      ctaTitle: 'تحتاج استشارة توريد؟',
+      ctaDesc: 'اختيار الموديل والشراء الدولي والشحن والجمارك — فريق Bizdavar الفني',
+      ctaBtn: 'طلب عرض سعر',
+      ctaLink: 'خدمات صناعية',
+      products: [
+        { name: 'VEGA', title: 'حساسات وأدوات دقيقة', desc: 'مستوى وضغط وتدفق — نفط وبتروكيماويات ومياه', badge: 'ألمانيا', tags: ['VEGAPULS', 'VEGABAR', 'VEGAPOINT'], cta: 'عرض الكتالوج' },
+        { name: 'Prosense', title: 'كواشف غاز ولهب', desc: 'أنظمة ثابتة ومحمولة بشهادة SIL2/3', badge: 'تركيا', tags: ['PQ+', 'SafeVader', 'PPS'], cta: 'سلاسل المنتجات' },
+        { name: 'Teltonika', title: 'GPS وFleet Telematics', desc: 'متتبعات أساطيل وCAN/OBD وBLE وفيديو وIoT — FMB920 · FMC650 · FTC305', badge: 'ليتوانيا', tags: ['FMB920', 'FTC305', 'DualCam'], cta: 'كتالوج Teltonika' },
+        { name: 'Gamak', title: 'محركات كهربائية صناعية', desc: 'محركات ثلاثية وأحادية الطور — توريد ودعم فني', badge: 'تركيا', tags: ['IE2/IE3', 'فلانش', 'حسب المشروع'], cta: 'معلومات Gamak' },
+        { name: 'Digi System', title: 'معدات تجزئة وPOS', desc: 'توريد Digi — موازين وصناديق وأنظمة POS', badge: 'تركيا', tags: ['POS', 'Retail', 'Scales'], cta: 'عرض المنتجات' },
+        { name: 'Teraoka', title: 'موازين ومعدات متاجر', desc: 'توريد Teraoka Seiko الكامل — موازين وملصقات وPOS', badge: 'اليابان', tags: ['Scales', 'Labeling', 'POS'], cta: 'عرض العلامة' },
+        { name: 'Liqui Moly', title: 'زيوت وإضافات', desc: 'زيوت محرك وOctane Plus وإضافات ديزل وعناية — أسعار بالدولار', badge: 'ألمانيا', tags: ['Octane Plus', 'Top Tec', '5W-30'], cta: 'الكتالوج والأسعار' }
+      ]
+    }
+  };
+
+  var liquiPage = {
+    ru: {
+      sections: {
+        trust: {
+          eyebrow: 'Почему Bizdavar?',
+          title: 'Надёжные поставки Liqui Moly с прозрачными ценами в USD',
+          desc: 'От подбора масла и присадок до проформы и доставки — многоязычная поддержка.'
+        },
+        buy: {
+          eyebrow: 'Путь покупки',
+          title: 'От выбора продукта до доставки — 5 шагов',
+          desc: 'Отображаемые цены в USD; итоговая сумма подтверждается в проформе.'
+        },
+        quote: {
+          eyebrow: 'Как запросить цену',
+          title: 'Чем точнее запрос — тем быстрее предложение',
+          desc: 'Отправьте название продукта, SKU или модель автомобиля в WhatsApp.'
+        },
+        highlights: {
+          eyebrow: 'Хиты продаж',
+          title: 'От Octane Plus до моторных масел',
+          desc: 'Ориентировочная цена в USD на каждой карточке — WhatsApp или форма запроса.'
+        },
+        catalog: {
+          eyebrow: 'Полный каталог',
+          title: 'Продукция Liqui Moly с ценами в USD',
+          desc: 'Оригинальный каталог Liqui Moly — моторные масла, топливные присадки, антифриз и автохимия'
+        },
+        iran: {
+          eyebrow: 'Применение',
+          title: 'Для кого Liqui Moly?',
+          desc: 'От СТО и автопарков до мотоциклов и личного использования — запрос и подлинные поставки под любую задачу.',
+          note: 'Нет в списке? Пришлите модель авто, тип топлива и количество — подберём точное решение.'
+        },
+        supply: {
+          eyebrow: 'Поставки Bizdavar',
+          title: 'Услуги поставки Liqui Moly',
+          desc: 'Ваш партнёр по поставкам — не просто прайс-лист'
+        },
+        faq: {
+          eyebrow: 'FAQ',
+          title: 'Частые вопросы покупателей',
+          desc: 'Не нашли ответ? Напишите нам в WhatsApp.'
+        }
+      },
+      rateNote: { strong: '', body: '' },
+      officialNote: 'Технические данные основаны на <a href="https://www.liqui-moly.com/" target="_blank" rel="noopener noreferrer">официальном сайте Liqui Moly</a>. Для заказа — <a href="contact">связаться с Bizdavar</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>',
+      cta: {
+        title: 'Готовы заказать Liqui Moly?',
+        desc: 'Пришлите название продукта или SKU — Octane Plus · Top Tec · Molygen · дизельные присадки',
+        btnForm: 'Форма запроса',
+        btnServices: 'Каталог продуктов'
+      },
+      sticky: { label: 'Запрос Liqui Moly', hint: 'Цены в USD · многоязычная консультация' },
+      geoText: 'Оригинальные поставки Liqui Moly — прозрачные цены в USD, консультация и международная логистика масел, присадок и автохимии.',
+      related: [
+        { title: 'Продукция VEGA', desc: 'Промышленные датчики уровня и давления' },
+        { title: 'Продукция Prosense', desc: 'Газовые и пламенные детекторы' },
+        { title: 'Каталог продуктов', desc: 'B2B бренды поставок' },
+        { title: 'Контакты', desc: 'Запрос цены Liqui Moly' }
+      ]
+    },
+    ar: {
+      sections: {
+        trust: {
+          eyebrow: 'لماذا Bizdavar؟',
+          title: 'توريد موثوق لـ Liqui Moly بأسعار دولار شفافة',
+          desc: 'من اختيار الزيت والإضافات إلى الفاتورة المبدئية والتسليم — دعم متعدد اللغات.'
+        },
+        buy: {
+          eyebrow: 'مسار الشراء',
+          title: 'من اختيار المنتج إلى التسليم — ٥ خطوات',
+          desc: 'الأسعار المعروضة بالدولار؛ المبلغ النهائي يُعتمد في الفاتورة المبدئية.'
+        },
+        quote: {
+          eyebrow: 'دليل الاستعلام',
+          title: 'طلب أوضح = عرض أسرع',
+          desc: 'أرسل اسم المنتج أو رمز SKU أو موديل السيارة عبر واتساب.'
+        },
+        highlights: {
+          eyebrow: 'الأكثر طلباً',
+          title: 'من Octane Plus إلى زيوت المحرك',
+          desc: 'سعر تقريبي بالدولار على كل بطاقة — واتساب أو نموذج الاستعلام.'
+        },
+        catalog: {
+          eyebrow: 'الكتالوج الكامل',
+          title: 'منتجات Liqui Moly بأسعار بالدولار',
+          desc: 'كتالوج Liqui Moly الأصلي — زيوت المحرك، إضافات الوقود، مضاد التجمد والعناية بالسيارة'
+        },
+        iran: {
+          eyebrow: 'الاستخدامات',
+          title: 'لمن Liqui Moly؟',
+          desc: 'من الورش والأساطيل إلى الدراجات والاستخدام الشخصي — استعلام وتوريد أصلي لكل استخدام.',
+          note: 'غير مدرج؟ أرسل موديل السيارة ونوع الوقود والكمية لنقترح الحل المناسب.'
+        },
+        supply: {
+          eyebrow: 'توريد Bizdavar',
+          title: 'خدمات توريد Liqui Moly',
+          desc: 'شريك التوريد — وليس مجرد قائمة أسعار'
+        },
+        faq: {
+          eyebrow: 'الأسئلة الشائعة',
+          title: 'أسئلة المشترين الشائعة',
+          desc: 'لم تجد إجابتك؟ راسلنا على واتساب.'
+        }
+      },
+      rateNote: { strong: '', body: '' },
+      officialNote: 'المعلومات الفنية مستندة إلى <a href="https://www.liqui-moly.com/" target="_blank" rel="noopener noreferrer">الموقع الرسمي لـ Liqui Moly</a>. للطلب — <a href="contact">تواصل مع Bizdavar</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>',
+      cta: {
+        title: 'هل أنت مستعد لطلب Liqui Moly؟',
+        desc: 'أرسل اسم المنتج أو رمز SKU — Octane Plus · Top Tec · Molygen · إضافات الديزل',
+        btnForm: 'نموذج الاستعلام',
+        btnServices: 'كتالوج المنتجات'
+      },
+      sticky: { label: 'استعلام Liqui Moly', hint: 'أسعار بالدولار · استشارة متعددة اللغات' },
+      geoText: 'توريد أصلي لـ Liqui Moly — أسعار دولار شفافة واستشارة ولوجستيات دولية للزيوت والإضافات والعناية بالسيارة.',
+      related: [
+        { title: 'منتجات VEGA', desc: 'حساسات مستوى وضغط صناعية' },
+        { title: 'منتجات Prosense', desc: 'كواشف غاز ولهب' },
+        { title: 'كتالوج المنتجات', desc: 'علامات التوريد B2B' },
+        { title: 'اتصل بنا', desc: 'استعلام سعر Liqui Moly' }
+      ]
+    }
+  };
+
+  var vegaPage = {
+    ru: {
+      sections: {
+        trust: {
+          eyebrow: 'Почему Bizdavar?',
+          title: 'Надёжные поставки VEGA для технических и закупочных команд',
+          desc: 'Мы не просто показываем каталог — сопровождаем от выбора модели до доставки.'
+        },
+        buy: {
+          eyebrow: 'Путь покупки',
+          title: 'От запроса до доставки — 5 понятных шагов',
+          desc: 'Без сложностей — вы знаете каждый этап и остаётесь на связи.'
+        },
+        quote: {
+          eyebrow: 'Гид по запросу',
+          title: 'Чем точнее запрос — тем быстрее рекомендация',
+          desc: 'Отправьте чек-лист ниже в WhatsApp или через форму — даже частичных данных достаточно.'
+        },
+        products: {
+          eyebrow: 'Каталог продуктов',
+          title: 'Востребованные продукты для региональных проектов',
+          desc: 'Для запроса цены нажмите «Запросить цену» у каждого продукта. Техконсультация бесплатна.'
+        },
+        iran: {
+          eyebrow: 'Региональное применение',
+          title: 'VEGA в типовых отраслях',
+          desc: 'Если вашей отрасли нет в списке — пришлите условия процесса, подберём подходящую модель.'
+        },
+        value: {
+          eyebrow: 'Преимущества бренда',
+          title: 'Почему инженеры выбирают VEGA',
+          desc: 'Более 65 лет немецких инноваций — каждый год в мире устанавливают свыше 500 000 датчиков VEGA.'
+        },
+        principles: {
+          eyebrow: 'Принципы измерения',
+          title: 'Методы измерения VEGA',
+          desc: 'Выбор правильного принципа измерения — рекомендуем лучший вариант под ваши условия.'
+        },
+        industries: {
+          eyebrow: 'Глобальные отрасли',
+          title: 'Решения VEGA для разных отраслей',
+          desc: '15+ отраслей — от химии до энергетики и экологии'
+        },
+        supply: {
+          eyebrow: 'Поставки Bizdavar',
+          title: 'Услуги поставки VEGA от Bizdavar Group',
+          desc: 'Ваш партнёр по поставкам — не просто поставщик'
+        },
+        faq: {
+          eyebrow: 'FAQ',
+          title: 'Частые вопросы покупателей',
+          desc: 'Не нашли ответ? Свяжитесь с нами напрямую.'
+        }
+      },
+      officialNote: 'Технические данные основаны на <a href="https://www.vega.com/en-ae" target="_blank" rel="noopener noreferrer">официальном сайте VEGA</a>. Для цены, order code и поставки — <a href="contact">свяжитесь с Bizdavar</a>.',
+      cta: {
+        title: 'Готовы запросить цену VEGA?',
+        desc: 'Пришлите название продукта или условия процесса — бесплатная техконсультация и прозрачная проформа',
+        btnForm: 'Форма запроса',
+        btnServices: 'Каталог продуктов'
+      },
+      sticky: { label: 'Запрос VEGA', hint: 'Многоязычная консультация · быстрый ответ' },
+      geoText: 'Оригинальные поставки датчиков VEGA — техконсультация из Стамбула, прозрачная проформа и логистика до промышленных проектов.',
+      related: [
+        { title: 'Продукция Prosense', desc: 'Газовые и пламенные детекторы' },
+        { title: 'Каталог продуктов', desc: 'Бренды поставок' },
+        { title: 'Контакты и запрос', desc: 'Бесплатная консультация' }
+      ]
+    },
+    ar: {
+      sections: {
+        trust: {
+          eyebrow: 'لماذا Bizdavar؟',
+          title: 'توريد موثوق لـ VEGA لفرقك الفنية والمشتريات',
+          desc: 'نحن لا نعرض كتالوجاً فحسب — نرافقك من اختيار الموديل حتى التسليم.'
+        },
+        buy: {
+          eyebrow: 'مسار الشراء',
+          title: 'من الاستعلام إلى التسليم — 5 خطوات واضحة',
+          desc: 'بدون تعقيد — تعرف كل خطوة وتبقى على تواصل طوال العملية.'
+        },
+        quote: {
+          eyebrow: 'دليل الاستعلام',
+          title: 'استعلام أوضح = توصية أسرع',
+          desc: 'أرسل قائمة التحقق أدناه عبر واتساب أو نموذج الاتصال — حتى التفاصيل الجزئية تساعد.'
+        },
+        products: {
+          eyebrow: 'كتالوج المنتجات',
+          title: 'المنتجات الأكثر طلباً للمشاريع الإقليمية',
+          desc: 'استخدم زر «طلب عرض سعر» لكل منتج. الاستشارة الفنية مجانية.'
+        },
+        iran: {
+          eyebrow: 'التطبيق الإقليمي',
+          title: 'VEGA عبر الصناعات الشائعة',
+          desc: 'إذا لم يكن قطاعك مدرجاً — أرسل ظروف العملية وسنقترح الموديل المناسب.'
+        },
+        value: {
+          eyebrow: 'مزايا العلامة',
+          title: 'لماذا يختار المهندسون VEGA؟',
+          desc: 'أكثر من 65 عاماً من الابتكار الألماني — يُركَّب أكثر من 500,000 حساس VEGA حول العالم كل عام.'
+        },
+        principles: {
+          eyebrow: 'مبادئ القياس',
+          title: 'طرق القياس لدى VEGA',
+          desc: 'اختيار مبدأ القياس الصحيح — نوصي بالأفضل وفق ظروفك.'
+        },
+        industries: {
+          eyebrow: 'صناعات عالمية',
+          title: 'حلول VEGA لمختلف الصناعات',
+          desc: 'أكثر من 15 صناعة — من الكيماويات إلى الطاقة والبيئة'
+        },
+        supply: {
+          eyebrow: 'توريد Bizdavar',
+          title: 'خدمات توريد VEGA من مجموعة Bizdavar',
+          desc: 'شريك التوريد — وليس مجرد بائع'
+        },
+        faq: {
+          eyebrow: 'الأسئلة الشائعة',
+          title: 'أسئلة المشترين الشائعة',
+          desc: 'لم تجد إجابتك؟ تواصل معنا مباشرة.'
+        }
+      },
+      officialNote: 'المعلومات الفنية مستندة إلى <a href="https://www.vega.com/en-ae" target="_blank" rel="noopener noreferrer">الموقع الرسمي لـ VEGA</a>. للتسعير ورمز الطلب والتوريد — <a href="contact">تواصل مع Bizdavar</a>.',
+      cta: {
+        title: 'هل أنت مستعد لطلب عرض سعر VEGA؟',
+        desc: 'أرسل اسم المنتج أو ظروف العملية — استشارة فنية مجانية وفاتورة مبدئية شفافة',
+        btnForm: 'نموذج الاستعلام',
+        btnServices: 'كتالوج المنتجات'
+      },
+      sticky: { label: 'استعلام VEGA', hint: 'استشارة متعددة اللغات · رد سريع' },
+      geoText: 'توريد أصلي لحساسات VEGA — استشارة فنية من إسطنبول، فاتورة مبدئية شفافة ولوجستيات إلى المشاريع الصناعية.',
+      related: [
+        { title: 'منتجات Prosense', desc: 'كواشف غاز ولهب' },
+        { title: 'كتالوج المنتجات', desc: 'علامات التوريد' },
+        { title: 'اتصل واستعلم', desc: 'استشارة مجانية' }
+      ]
+    }
+  };
+
+  var prosensePage = {
+    ru: {
+      sections: {
+        trust: {
+          eyebrow: 'Почему Bizdavar?',
+          title: 'Надёжные поставки Prosense для технических и закупочных команд',
+          desc: 'Мы не просто показываем каталог — сопровождаем от выбора газа и модели до доставки.'
+        },
+        buy: {
+          eyebrow: 'Путь покупки',
+          title: 'От запроса до доставки — 5 понятных шагов',
+          desc: 'Без сложностей — вы знаете каждый этап и остаётесь на связи.'
+        },
+        quote: {
+          eyebrow: 'Гид по запросу',
+          title: 'Чем точнее запрос — тем быстрее рекомендация',
+          desc: 'Отправьте чек-лист ниже в WhatsApp или через форму — даже частичных данных достаточно.'
+        },
+        highlights: {
+          eyebrow: 'Хиты продаж',
+          title: 'Ключевые серии Prosense',
+          desc: 'SIL · M1 · EN-50545-1 · MPS — WhatsApp или форма запроса для каждого продукта.'
+        },
+        catalog: {
+          eyebrow: 'Полный каталог',
+          title: 'Все серии продукции Prosense',
+          desc: '8 категорий — более 60 серий — стационарные, портативные, пламя, панели, паркинг, ПО и калибровка'
+        },
+        iran: {
+          eyebrow: 'Отраслевое применение',
+          title: 'Prosense в типовых отраслях',
+          desc: 'Если вашей отрасли нет в списке — пришлите тип газа и условия монтажа, подберём подходящую модель.'
+        },
+        industries: {
+          eyebrow: 'Глобальные отрасли',
+          title: 'Применение в разных отраслях',
+          desc: 'Индивидуальное решение газового детектирования для каждого промышленного сектора'
+        },
+        supply: {
+          eyebrow: 'Поставки Bizdavar',
+          title: 'Услуги поставки Prosense',
+          desc: 'Ваш партнёр по поставкам — не просто поставщик'
+        },
+        faq: {
+          eyebrow: 'FAQ',
+          title: 'Частые вопросы покупателей',
+          desc: 'Не нашли ответ? Напишите нам в WhatsApp.'
+        }
+      },
+      officialNote: 'Технические данные основаны на <a href="https://www.prosense.com.tr/?lang=tr" target="_blank" rel="noopener noreferrer">официальном сайте Prosense</a>. Для цены и поставки — <a href="contact">свяжитесь с Bizdavar</a> · <a href="vega">продукция VEGA</a>',
+      cta: {
+        title: 'Готовы запросить цену Prosense?',
+        desc: 'Пришлите тип газа или серию модели — PQ · SafeVader · SOMA · PPS+ · панель S-DPX',
+        btnForm: 'Форма запроса',
+        btnServices: 'Каталог продуктов'
+      },
+      sticky: { label: 'Запрос Prosense', hint: 'Многоязычная техконсультация · быстрый ответ' },
+      geoText: 'Оригинальные поставки детекторов Prosense — сертификаты SIL/M1/EN, консультация в WhatsApp и логистика для нефтегазовых и промышленных проектов.',
+      related: [
+        { title: 'Продукция VEGA', desc: 'Датчики уровня и давления' },
+        { title: 'Teltonika GPS', desc: 'Fleet Telematics' },
+        { title: 'Промышленные услуги', desc: 'B2B-консультации' },
+        { title: 'Контакты', desc: 'Запрос цены' }
+      ]
+    },
+    ar: {
+      sections: {
+        trust: {
+          eyebrow: 'لماذا Bizdavar؟',
+          title: 'توريد موثوق لـ Prosense لفرقك الفنية والمشتريات',
+          desc: 'نحن لا نعرض كتالوجاً فحسب — نرافقك من اختيار الغاز والموديل حتى التسليم.'
+        },
+        buy: {
+          eyebrow: 'مسار الشراء',
+          title: 'من الاستعلام إلى التسليم — 5 خطوات واضحة',
+          desc: 'بدون تعقيد — تعرف كل خطوة وتبقى على تواصل طوال العملية.'
+        },
+        quote: {
+          eyebrow: 'دليل الاستعلام',
+          title: 'استعلام أوضح = توصية أسرع',
+          desc: 'أرسل قائمة التحقق أدناه عبر واتساب أو نموذج الاتصال — حتى التفاصيل الجزئية تساعد.'
+        },
+        highlights: {
+          eyebrow: 'الأكثر طلباً',
+          title: 'سلاسل Prosense المميزة',
+          desc: 'SIL · M1 · EN-50545-1 · MPS — واتساب أو نموذج استعلام لكل منتج.'
+        },
+        catalog: {
+          eyebrow: 'الكتالوج الكامل',
+          title: 'جميع سلاسل منتجات Prosense',
+          desc: '8 فئات — أكثر من 60 سلسلة — ثابت ومحمول ولهب ولوحات ومواقف وبرمجيات ومعايرة'
+        },
+        iran: {
+          eyebrow: 'تطبيقات صناعية',
+          title: 'Prosense عبر الصناعات الشائعة',
+          desc: 'إذا لم يكن قطاعك مدرجاً — أرسل نوع الغاز وبيئة التركيب وسنقترح الموديل المناسب.'
+        },
+        industries: {
+          eyebrow: 'صناعات عالمية',
+          title: 'التطبيق عبر الصناعات',
+          desc: 'حل كشف غاز مخصص لكل قطاع صناعي'
+        },
+        supply: {
+          eyebrow: 'توريد Bizdavar',
+          title: 'خدمات توريد Prosense',
+          desc: 'شريك التوريد — وليس مجرد بائع'
+        },
+        faq: {
+          eyebrow: 'الأسئلة الشائعة',
+          title: 'أسئلة المشترين الشائعة',
+          desc: 'لم تجد إجابتك؟ راسلنا على واتساب.'
+        }
+      },
+      officialNote: 'المعلومات الفنية مستندة إلى <a href="https://www.prosense.com.tr/?lang=tr" target="_blank" rel="noopener noreferrer">الموقع الرسمي لـ Prosense</a>. للتسعير والتوريد — <a href="contact">تواصل مع Bizdavar</a> · <a href="vega">منتجات VEGA</a>',
+      cta: {
+        title: 'هل أنت مستعد لطلب عرض سعر Prosense؟',
+        desc: 'أرسل نوع الغاز أو سلسلة الموديل — PQ · SafeVader · SOMA · PPS+ · لوحة S-DPX',
+        btnForm: 'نموذج الاستعلام',
+        btnServices: 'كتالوج المنتجات'
+      },
+      sticky: { label: 'استعلام Prosense', hint: 'استشارة فنية متعددة اللغات · رد سريع' },
+      geoText: 'توريد أصلي لكواشف Prosense — شهادات SIL/M1/EN واستشارة واتساب ولوجستيات لمشاريع النفط والغاز والصناعة.',
+      related: [
+        { title: 'منتجات VEGA', desc: 'حساسات مستوى وضغط' },
+        { title: 'Teltonika GPS', desc: 'Fleet Telematics' },
+        { title: 'خدمات صناعية', desc: 'استشارات B2B' },
+        { title: 'اتصل بنا', desc: 'استعلام سعر' }
+      ]
+    }
+  };
+
+  var supplyBrandRu = {
+    inquiryCta: 'Запрос цены и поставки',
+    whyBuyCta: 'Почему Bizdavar?',
+    quoteGuideCta: 'Чек-лист запроса',
+    whatsappInquiry: 'Запрос в WhatsApp',
+    whatsappShort: 'WhatsApp',
+    requestInquiry: 'Запросить цену',
+    inquiryCategory: 'Запрос по этой категории',
+    inquirySeries: 'Запрос',
+    useCaseLabel: 'Применение:',
+    approxPrice: 'примерно',
+    priceFrom: 'от',
+    catalogSearch: 'Поиск в каталоге…',
+    catalogSearchEmpty: 'По этому запросу ничего не найдено.',
+    priceSellLabel: 'Цена продажи',
+    techConsultCta: 'Запросить техконсультацию',
+    navTrust: 'Почему Bizdavar',
+    navBuy: 'Путь покупки',
+    navQuote: 'Гид по запросу',
+    navHighlights: 'Избранные продукты',
+    navIran: 'Применение',
+    navFaq: 'FAQ',
+    navAria: 'Категории продуктов поставок',
+    inquiryTemplate: 'Запрос: {product}',
+    officialCatalog: 'Официальный каталог',
+    orderCodeCta: 'Запрос кода заказа'
+  };
+
+  var supplyBrandAr = {
+    inquiryCta: 'طلب السعر والتوريد',
+    whyBuyCta: 'لماذا Bizdavar؟',
+    quoteGuideCta: 'قائمة الاستعلام',
+    whatsappInquiry: 'استعلام عبر واتساب',
+    whatsappShort: 'واتساب',
+    requestInquiry: 'طلب عرض سعر',
+    inquiryCategory: 'استعلام هذه الفئة',
+    inquirySeries: 'استعلام',
+    useCaseLabel: 'الاستخدام:',
+    approxPrice: 'تقريباً',
+    priceFrom: 'من',
+    catalogSearch: 'البحث في الكتالوج…',
+    catalogSearchEmpty: 'لا توجد منتجات مطابقة.',
+    priceSellLabel: 'سعر البيع',
+    techConsultCta: 'طلب استشارة فنية',
+    navTrust: 'لماذا Bizdavar',
+    navBuy: 'مسار الشراء',
+    navQuote: 'دليل الاستعلام',
+    navHighlights: 'منتجات مميزة',
+    navIran: 'الاستخدامات',
+    navFaq: 'الأسئلة',
+    navAria: 'فئات منتجات التوريد',
+    inquiryTemplate: 'استعلام: {product}',
+    officialCatalog: 'الكتالوج الرسمي',
+    orderCodeCta: 'طلب رمز الطلب'
+  };
+
+  /* ─── Russian ─── */
+  var ru = clone(window.BIZDAVAR_LOCALES.en);
+  ru.lang = 'ru';
+  ru.dir = 'ltr';
+  ru.localeTag = 'ru_RU';
+  ru.siteName = 'Bizdavar Group';
+  deepMerge(ru.common, Object.assign({}, commonLang, {
+    langLabel: 'Язык',
+    breadcrumbAria: 'Навигация',
+    inquiry: 'Запросить цену',
+    contactForm: 'Форма связи',
+    rights: 'Все права защищены',
+    skipLink: 'Перейти к основному содержимому',
+    freeConsult: 'Бесплатная консультация',
+    contact: 'Контакты',
+    menu: 'Меню',
+    whatsapp: 'WhatsApp',
+    homeAria: 'Главная',
+    mainNav: 'Главное меню',
+    relatedPages: 'Связанные страницы',
+    learnMore: 'Подробнее',
+    readMore: 'Читать далее',
+    viewAll: 'Смотреть всё',
+    backToTop: 'Наверх',
+    details: 'Подробности',
+    view: 'Смотреть'
+  }));
+  deepMerge(ru.nav, {
+    home: 'Главная',
+    about: 'О нас',
+    services: 'Услуги',
+    products: 'Продукты',
+    portfolio: 'Портфолио',
+    blog: 'Блог',
+    contact: 'Контакты',
+    webDesign: 'Веб-дизайн',
+    servicesAll: 'Все услуги',
+    productsCatalog: 'Весь каталог'
+  });
+  deepMerge(ru.footer, {
+    tagline: 'Цифровые услуги, веб-дизайн, онлайн-маркетинг и промышленные поставки.',
+    services: 'Услуги',
+    quickLinks: 'Быстрые ссылки',
+    brands: 'Бренды',
+    connect: 'Связь',
+    contactUs: 'Связаться',
+    faq: 'FAQ',
+    privacy: 'Конфиденциальность',
+    digitalMarketing: 'Цифровой маркетинг',
+    webFast: 'Веб — Fast Studio',
+    smm: 'SMM',
+    industrial: 'Промышленные поставки',
+    webDesign: 'Веб-дизайн',
+    softwareApps: 'Приложения и системы',
+    serverOps: 'Управление серверами',
+    fieldTech: 'Технические услуги',
+    industrialShort: 'Промышленность'
+  });
+  deepMerge(ru.services, {
+    digitalMarketing: 'Цифровой маркетинг',
+    webDesign: 'Веб-дизайн и web app',
+    smm: 'SMM',
+    softwareApps: 'Приложения и системы',
+    serverOps: 'Управление серверами',
+    fieldTech: 'Технические услуги',
+    industrial: 'Промышленные поставки'
+  });
+  deepMerge(ru.supplyBrand, supplyBrandRu);
+  deepMerge(ru.home, homeRu);
+  deepMerge(ru, homeSectionsRu);
+  if (!ru.pages) ru.pages = {};
+  deepMerge(ru.pages, pageSeoRu);
+  ru.liquiMolyPage = liquiPage.ru;
+  ru.vegaPage = vegaPage.ru;
+  ru.prosensePage = prosensePage.ru;
+  if (ru.contact) {
+    ru.contact.whatsappMessage = 'Здравствуйте, пишу с сайта bizdavar.com.';
+    ru.contact.channelIr = 'WhatsApp';
+    ru.contact.channelTr = 'Турция';
+    ru.contact.address = 'Стамбул, Турция';
+    ru.contact.workingHours = '24/7 — всегда на связи';
+  }
+  if (ru.geo) {
+    ru.geo.summary = 'Услуги из Стамбула для Ирана, Турции и 11 стран — многоязычная поддержка, WhatsApp и международная доставка.';
+  }
+  if (ru.seo) {
+    ru.seo.defaultTitle = pageSeoRu.home.seoTitle;
+    ru.seo.defaultDescription = pageSeoRu.home.seoDescription;
+  }
+
+  /* ─── Arabic (RTL) ─── */
+  var ar = clone(window.BIZDAVAR_LOCALES.en);
+  ar.lang = 'ar';
+  ar.dir = 'rtl';
+  ar.localeTag = 'ar_AE';
+  ar.siteName = 'Bizdavar Group';
+  deepMerge(ar.common, Object.assign({}, commonLang, {
+    langLabel: 'اللغة',
+    breadcrumbAria: 'مسار الصفحة',
+    inquiry: 'طلب عرض سعر',
+    contactForm: 'نموذج الاتصال',
+    rights: 'جميع الحقوق محفوظة',
+    skipLink: 'الانتقال إلى المحتوى الرئيسي',
+    freeConsult: 'استشارة مجانية',
+    contact: 'اتصل بنا',
+    menu: 'القائمة',
+    whatsapp: 'واتساب',
+    homeAria: 'الصفحة الرئيسية',
+    mainNav: 'القائمة الرئيسية',
+    relatedPages: 'صفحات ذات صلة',
+    learnMore: 'اعرف المزيد',
+    readMore: 'اقرأ المزيد',
+    viewAll: 'عرض الكل',
+    backToTop: 'العودة للأعلى',
+    details: 'التفاصيل',
+    view: 'عرض'
+  }));
+  deepMerge(ar.nav, {
+    home: 'الرئيسية',
+    about: 'من نحن',
+    services: 'الخدمات',
+    products: 'المنتجات',
+    portfolio: 'الأعمال',
+    blog: 'المدونة',
+    contact: 'اتصل بنا',
+    webDesign: 'تصميم المواقع',
+    servicesAll: 'كل الخدمات',
+    productsCatalog: 'كل المنتجات'
+  });
+  deepMerge(ar.footer, {
+    tagline: 'خدمات رقمية وتصميم مواقع وتسويق عبر الإنترنت وتوريد معدات صناعية.',
+    services: 'الخدمات',
+    quickLinks: 'روابط سريعة',
+    brands: 'العلامات',
+    connect: 'تواصل',
+    contactUs: 'اتصل بنا',
+    faq: 'الأسئلة',
+    privacy: 'الخصوصية',
+    digitalMarketing: 'التسويق الرقمي',
+    webFast: 'تصميم ويب — Fast Studio',
+    smm: 'إدارة SMM',
+    industrial: 'توريد صناعي',
+    webDesign: 'تصميم الويب',
+    softwareApps: 'تطبيقات وأنظمة',
+    serverOps: 'إدارة الخوادم',
+    fieldTech: 'خدمات فنية',
+    industrialShort: 'صناعي'
+  });
+  deepMerge(ar.services, {
+    digitalMarketing: 'التسويق الرقمي',
+    webDesign: 'تصميم ويب وweb app',
+    smm: 'إدارة SMM',
+    softwareApps: 'تطبيقات وأنظمة',
+    serverOps: 'إدارة الخوادم',
+    fieldTech: 'خدمات فنية',
+    industrial: 'توريد صناعي'
+  });
+  deepMerge(ar.supplyBrand, supplyBrandAr);
+  deepMerge(ar.home, homeAr);
+  deepMerge(ar, homeSectionsAr);
+  if (!ar.pages) ar.pages = {};
+  deepMerge(ar.pages, pageSeoAr);
+  ar.liquiMolyPage = liquiPage.ar;
+  ar.vegaPage = vegaPage.ar;
+  ar.prosensePage = prosensePage.ar;
+  if (ar.contact) {
+    ar.contact.whatsappMessage = 'مرحباً، أراسل من موقع bizdavar.com.';
+    ar.contact.channelIr = 'واتساب';
+    ar.contact.channelTr = 'تركيا';
+    ar.contact.address = 'إسطنبول، تركيا';
+    ar.contact.workingHours = 'على مدار الساعة';
+  }
+  if (ar.geo) {
+    ar.geo.summary = 'خدمات من إسطنبول إلى إيران وتركيا و١١ دولة — دعم متعدد اللغات وواتساب وتسليم دولي.';
+  }
+  if (ar.seo) {
+    ar.seo.defaultTitle = pageSeoAr.home.seoTitle;
+    ar.seo.defaultDescription = pageSeoAr.home.seoDescription;
+  }
+
+  window.BIZDAVAR_LOCALES.ru = ru;
+  window.BIZDAVAR_LOCALES.ar = ar;
+})();

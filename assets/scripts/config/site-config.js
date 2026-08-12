@@ -253,7 +253,7 @@ window.BIZDAVAR_CONFIG = {
       { id: 'tr', label: 'ترکیه', display: '+90 501 067 6486', tel: '+905010676486', whatsapp: '905010676486' },
       {
         id: 'field',
-        label: 'مسئول فنی',
+        label: 'خدمات فنی',
         display: '+98 936 411 5151',
         tel: '+989364115151',
         whatsapp: '989364115151',
@@ -267,14 +267,14 @@ window.BIZDAVAR_CONFIG = {
     instagram: 'https://www.instagram.com/bizdavar'
   },
 
-  /** مسئول فنی خدمات میدانی — دوربین، سیم‌کشی، نورمخفی */
+  /** خدمات فنی میدانی — دوربین، سیم‌کشی، نورمخفی */
   fieldTech: {
     id: 'field-tech',
     lead: {
-      nameFa: 'مسئول فنی',
-      nameEn: 'Technical lead',
-      roleFa: 'مسئول فنی و اجرایی خدمات ساختمانی و امنیتی',
-      roleEn: 'Technical lead — CCTV, wiring & lighting'
+      nameFa: 'تیم فنی بیزدوار',
+      nameEn: 'Bizdavar technical team',
+      roleFa: 'نصب دوربین مدار بسته، سیم‌کشی ساختمان و نورمخفی',
+      roleEn: 'CCTV, building wiring & cove lighting'
     },
     whatsapp: '989364115151',
     phoneDisplay: '+98 936 411 5151',

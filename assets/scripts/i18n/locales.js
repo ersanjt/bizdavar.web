@@ -15,9 +15,9 @@ window.BIZDAVAR_LOCALES = {
       channelIr: 'واتساپ فارسی'
     },
     seo: {
-      defaultTitle: 'بیزدوار گروپ | خدمات دیجیتال، طراحی سایت و تامین تجهیزات صنعتی',
-      defaultDescription: 'بیزدوار گروپ — آژانس دیجیتال با ۱۲+ سال تجربه و ۱۰۰+ پروژه در ۱۱ کشور. بازاریابی دیجیتال، طراحی وب، فین‌تک، SMM و تامین VEGA و Prosense.',
-      keywords: 'بیزدوار, Bizdavar Group, طراحی سایت, VEGA, Prosense, Fast Web Studio',
+      defaultTitle: 'بیزدوار گروپ | طراحی سایت، بازاریابی دیجیتال و تامین صنعتی',
+      defaultDescription: 'از استانبول: طراحی سایت با Fast Web Studio، بازاریابی دیجیتال و SMM، محصول FXGuard WhatsApp CRM، و تامین VEGA، Prosense و Liqui Moly. مشاوره رایگان.',
+      keywords: 'بیزدوار, Bizdavar Group, طراحی سایت, بازاریابی دیجیتال, FXGuard, VEGA, Prosense, Liqui Moly, Fast Web Studio',
       schemaServices: 'خدمات بیزدوار گروپ',
       schemaBlog: 'وبلاگ بیزدوار گروپ',
       schemaPortfolio: 'نمونه‌کارهای بیزدوار گروپ'
@@ -56,6 +56,8 @@ window.BIZDAVAR_LOCALES = {
       langFa: 'فارسی',
       langTr: 'Türkçe',
       langEn: 'English',
+      langRu: 'Русский',
+      langAr: 'العربية',
       langLabel: 'زبان',
       breadcrumbAria: 'مسیر صفحه'
     },
@@ -111,7 +113,7 @@ window.BIZDAVAR_LOCALES = {
       serviceSmmDesc: 'محتوا، ریلز و Paid Social',
       serviceField: 'خدمات فنی و ساختمانی',
       serviceFieldDesc: 'دوربین، سیم‌کشی و نورمخفی',
-      serviceFieldFeaturedDesc: 'تبریز و استانبول — مسئول فنی',
+      serviceFieldFeaturedDesc: 'تبریز و استانبول — تیم فنی',
       serviceFieldBadge: 'میدانی',
       products: 'محصولات ما',
       productsCatalog: 'همه محصولات',
@@ -231,7 +233,8 @@ window.BIZDAVAR_LOCALES = {
         { name: 'Teltonika', title: 'GPS و Fleet Telematics', desc: 'ردیاب ناوگان، CAN/OBD، BLE، ویدئو و راهکارهای IoT — FMB920 · FMC650 · FTC305', badge: 'لیتوانی', tags: ['FMB920', 'FTC305', 'DualCam'], cta: 'کاتالوگ Teltonika' },
         { name: 'Gamak', title: 'الکتروموتور صنعتی', desc: 'موتورهای الکتریکی سه‌فاز و تک‌فاز — تامین، مشاوره انتخاب و پشتیبانی فنی', badge: 'ترکیه', tags: ['IE2/IE3', 'فلنج‌دار', 'پروژه‌ای'], cta: 'اطلاعات Gamak' },
         { name: 'Digi System', title: 'تجهیزات خرده‌فروشی و POS', desc: 'تامین محصولات Digi — ترازو، صندوق فروشگاهی، سیستم‌های POS و تجهیزات خرده‌فروشی', badge: 'ترکیه', tags: ['POS', 'Retail', 'Scales'], cta: 'مشاهده محصولات' },
-        { name: 'Teraoka', title: 'ترازو و تجهیزات فروشگاهی', desc: 'تامین کامل محصولات Teraoka Seiko — ترازو، برچسب‌زن، POS و تجهیزات فروشگاهی و صنعتی', badge: 'ژاپن', tags: ['Scales', 'Labeling', 'POS'], cta: 'مشاهده برند' }
+        { name: 'Teraoka', title: 'ترازو و تجهیزات فروشگاهی', desc: 'تامین کامل محصولات Teraoka Seiko — ترازو، برچسب‌زن، POS و تجهیزات فروشگاهی و صنعتی', badge: 'ژاپن', tags: ['Scales', 'Labeling', 'POS'], cta: 'مشاهده برند' },
+        { name: 'Liqui Moly', title: 'روغن و افزودنی خودرو', desc: 'روغن موتور، Octane Plus، افزودنی دیزل و مراقبت خودرو — قیمت دلاری شفاف', badge: 'آلمان', tags: ['Octane Plus', 'Top Tec', '5W-30'], cta: 'کاتالوگ و قیمت' }
       ]
     },
     process: {
@@ -255,7 +258,7 @@ window.BIZDAVAR_LOCALES = {
       highlights: [
         { category: 'بازاریابی دیجیتال', text: 'با اجرای استراتژی‌های نوین بازاریابی دیجیتال، نرخ تبدیل مشتریان به‌طور محسوسی افزایش یافته است.', source: 'پست حرفه‌ای بنیان‌گذار در LinkedIn', year: '2024' },
         { category: 'تجربه اجرایی', text: 'بیش از ۱۰۰ پروژه وب و پلتفرم سفارشی در ۱۱ کشور — از استارتاپ تا برندهای فین‌تک و صنعتی.', source: 'پروفایل LinkedIn — Ersan J. Tabrizi', year: '2025' },
-        { category: 'فین‌تک', text: 'توسعه و راه‌اندازی پلتفرم‌های پرداخت، داشبورد مدیریتی و یکپارچه‌سازی امنیت Cloudflare برای اکوسیستم ZedPay.', source: 'سوابق حرفه‌ای تأییدشده', year: '2023–2025' },
+        { category: 'فین‌تک', text: 'توسعه و راه‌اندازی پلتفرم‌های پرداخت، داشبورد مدیریتی و یکپارچه‌سازی امنیت Cloudflare برای پروژه‌های فین‌تک.', source: 'سوابق حرفه‌ای تأییدشده', year: '2023–2025' },
         { category: 'صنعت', text: 'مدیریت تامین تجهیزات صنعتی — از پمپ آتش‌نشانی معادن گل‌گهر تا تجهیزات ابزار دقیق بین‌المللی.', source: 'سوابق صنعت محرک (Sanatm) و Europe Gayrimenkul', year: '2015–2024' }
       ]
     },
@@ -272,7 +275,7 @@ window.BIZDAVAR_LOCALES = {
       heroTitle: 'توسعه کسب‌وکار شما با',
       heroTitleSpan: 'راهکارهای دیجیتال',
       heroTitleEnd: 'هوشمند',
-      heroDesc: 'طراحی سایت، بازاریابی دیجیتال و تامین صنعتی — از استانبول تا ایران و بازار جهانی.',
+      heroDesc: 'طراحی سایت با Fast Web Studio، بازاریابی دیجیتال، FXGuard و تامین VEGA، Prosense و Liqui Moly — از استانبول.',
       viewServices: 'مشاهده خدمات',
       heroCard: 'دیجیتال مارکتینگ · طراحی وب · تجهیزات صنعتی',
       statProjects: 'پروژه دیجیتال',
@@ -283,7 +286,7 @@ window.BIZDAVAR_LOCALES = {
       featGlobal: 'بازار جهانی',
       featGlobalDesc: 'پروژه‌های ایران، ترکیه و بین‌الملل',
       featIndustrial: 'تخصص صنعتی',
-      featIndustrialDesc: 'تامین VEGA، پمپ و ابزار دقیق',
+      featIndustrialDesc: 'تامین VEGA، Prosense و Liqui Moly',
       featResults: 'نتایج ملموس',
       featResultsDesc: 'افزایش نرخ تبدیل و رشد برند',
       svcEyebrow: 'خدمات تخصصی',
@@ -293,8 +296,9 @@ window.BIZDAVAR_LOCALES = {
       svcWebDesc: 'سایت شرکتی، فروشگاهی و لندینگ — تحویل سریع با Fast Web Studio.',
       svcSmmDesc: 'تولید محتوا، مدیریت صفحات و تبلیغات هدفمند در شبکه‌های اجتماعی.',
       svcAppsDesc: 'اپلیکیشن اندروید و iOS، وب‌اپ و سامانه‌های سازمانی.',
+      svcServerDesc: 'راه‌اندازی، امنیت، بکاپ، مانیتورینگ و مهاجرت سرور.',
       svcFieldDesc: 'دوربین مدار بسته، سیم‌کشی و نورمخفی — تبریز و استانبول.',
-      svcIndDesc: 'سنسور VEGA، پمپ‌های صنعتی، ابزار دقیق و مشاوره فنی تخصصی.',
+      svcIndDesc: 'سنسور VEGA، دتکتور Prosense، Liqui Moly و مشاوره فنی تامین.',
       svcPlans: 'پلن‌ها و قیمت',
       fastTitle: 'طراحی سایت حرفه‌ای در ۵ روز!',
       fastDesc: 'سایتت رو راه بنداز و همین هفته درآمدتو شروع کن — Fast Web Studio',
@@ -307,8 +311,8 @@ window.BIZDAVAR_LOCALES = {
       aboutHeroAlt: 'بیزدوار گروپ — آژانس دیجیتال و صنعتی',
       aboutMore: 'بیشتر درباره بیزدوار',
       aboutInfra: 'مدیریت زیرساخت',
-      clientsTitle: 'نمونه‌کارها و پروژه‌ها',
-      clientsDesc: 'اکوسیستم بیزدوار، مشتریان طراحی وب و برندهای تحت مدیریت زیرساخت',
+      clientsTitle: 'خدمات و محصولات در عمل',
+      clientsDesc: 'طراحی وب، محصولات FXGuard و Fast Web Studio، و تامین برندهای صنعتی',
       clientsAll: 'مشاهده همه نمونه‌کارها',
       blogTitle: 'آخرین مطالب',
       blogAll: 'مشاهده همه مطالب وبلاگ',
@@ -318,16 +322,17 @@ window.BIZDAVAR_LOCALES = {
       ctaForm: 'فرم تماس با ما',
       faqs: [
         { q: 'بیزدوار گروپ از چه سالی فعالیت می‌کند؟', a: 'از سال ۲۰۱۳ (۱۳۹۲) توسط ارسان جاهد تبریزی — بیش از ۱۰۰ پروژه در ۱۱ کشور.' },
-        { q: 'بیزدوار چه خدماتی ارائه می‌دهد؟', a: 'بازاریابی دیجیتال، طراحی وب، فین‌تک، مدیریت SMM، هاستینگ و تامین تجهیزات صنعتی VEGA و Prosense.' },
+        { q: 'بیزدوار چه خدماتی ارائه می‌دهد؟', a: 'شش محور: بازاریابی دیجیتال، طراحی وب و وب‌اپ، اپ و سامانه، مدیریت سرور، SMM و خدمات فنی (دوربین، سیم‌کشی، نورمخفی). محصولات و تامین برندهای صنعتی در صفحه محصولات.' },
         { q: 'طراحی سایت چقدر زمان می‌برد؟', a: 'با Fast Web Studio، تحویل از ۵ روز کاری با پلن‌های $99 تا $299.' },
         { q: 'چگونه اعتبار بیزدوار را بررسی کنم؟', a: 'پروفایل LinkedIn بنیان‌گذار، نمونه‌کارها، گواهینامه‌های Google و تماس از info@bizdavar.com.' },
-        { q: 'تجهیزات صنعتی از چه برندهایی تامین می‌شود؟', a: 'VEGA، Prosense، Gamak، Digi System، Teraoka و سایر برندهای معتبر جهانی.' }
+        { q: 'تجهیزات صنعتی از چه برندهایی تامین می‌شود؟', a: 'VEGA، Prosense، Liqui Moly، Gamak، Digi System، Teraoka و سایر برندهای معتبر جهانی.' }
       ]
     },
     contactPage: {
       connectTitle: 'راه‌های ارتباطی',
       websites: 'وبسایت‌ها',
       title: 'تماس با ما',
+      mapImgAlt: 'همکاری بین‌المللی — بیزدوار گروپ',
       heroTitle: 'آماده پاسخگویی و مشاوره رایگان هستیم',
       heroDesc: 'فرم زیر را پر کنید یا از راه‌های مستقیم با تیم بیزدوار در ارتباط باشید.',
       formTitle: 'فرم درخواست تماس',
@@ -384,7 +389,10 @@ window.BIZDAVAR_LOCALES = {
       optDm: 'بازاریابی دیجیتال',
       optWeb: 'طراحی و توسعه وب',
       optFast: 'Fast Web Studio — طراحی سایت',
+      optApps: 'اپلیکیشن و سامانه',
+      optServer: 'مدیریت سرور و زیرساخت',
       optSmm: 'مدیریت شبکه‌های اجتماعی (SMM)',
+      optField: 'خدمات فنی (دوربین، سیم‌کشی، نورمخفی)',
       optIndustrial: 'تامین تجهیزات صنعتی',
       optConsult: 'مشاوره کسب‌وکار',
       optOther: 'سایر'
@@ -442,9 +450,9 @@ window.BIZDAVAR_LOCALES = {
       channelIr: 'WhatsApp Farsça'
     },
     seo: {
-      defaultTitle: 'Bizdavar Group | Dijital hizmetler, web tasarım ve endüstriyel tedarik',
-      defaultDescription: 'Bizdavar Group — 12+ yıl deneyim, 100+ proje, 11 ülkede dijital ajans. Dijital pazarlama, web tasarım, SMM ve VEGA/Prosense tedariki. İstanbul merkezli.',
-      keywords: 'Bizdavar, web tasarım İstanbul, dijital pazarlama, VEGA, Prosense, Fast Web Studio',
+      defaultTitle: 'Bizdavar Group | Web tasarım, dijital pazarlama ve endüstriyel tedarik',
+      defaultDescription: 'İstanbul merkezli Bizdavar: Fast Web Studio ile web tasarım, dijital pazarlama ve SMM, FXGuard WhatsApp CRM, VEGA, Prosense ve Liqui Moly tedariki. Ücretsiz danışmanlık.',
+      keywords: 'Bizdavar, web tasarım İstanbul, dijital pazarlama, FXGuard, VEGA, Prosense, Liqui Moly, Fast Web Studio',
       schemaServices: 'Bizdavar Group hizmetleri',
       schemaBlog: 'Bizdavar Group blog',
       schemaPortfolio: 'Bizdavar Group portfolyo'
@@ -483,6 +491,8 @@ window.BIZDAVAR_LOCALES = {
       langFa: 'فارسی',
       langTr: 'Türkçe',
       langEn: 'English',
+      langRu: 'Русский',
+      langAr: 'العربية',
       langLabel: 'Dil',
       breadcrumbAria: 'Sayfa yolu'
     },
@@ -538,7 +548,7 @@ window.BIZDAVAR_LOCALES = {
       serviceSmmDesc: 'İçerik, reels ve Paid Social',
       serviceField: 'Teknik ve bina hizmetleri',
       serviceFieldDesc: 'CCTV, tesisat ve gizli aydınlatma',
-      serviceFieldFeaturedDesc: 'Tebriz ve İstanbul — Teknik sorumlu',
+      serviceFieldFeaturedDesc: 'Tebriz ve İstanbul — Teknik ekip',
       serviceFieldBadge: 'Saha',
       products: 'Ürünlerimiz',
       productsCatalog: 'Tüm ürünler',
@@ -658,7 +668,8 @@ window.BIZDAVAR_LOCALES = {
         { name: 'Teltonika', title: 'GPS ve Fleet Telematics', desc: 'Filo takip, CAN/OBD, BLE, video ve IoT çözümleri — FMB920 · FMC650 · FTC305', badge: 'Litvanya', tags: ['FMB920', 'FTC305', 'DualCam'], cta: 'Teltonika katalog' },
         { name: 'Gamak', title: 'Endüstriyel elektrik motoru', desc: 'Üç fazlı ve tek fazlı motorlar — tedarik ve teknik destek', badge: 'Türkiye', tags: ['IE2/IE3', 'Flanşlı', 'Projeye özel'], cta: 'Gamak bilgisi' },
         { name: 'Digi System', title: 'Perakende ve POS ekipmanları', desc: 'Digi ürün tedariki — terazi, kasa, POS ve perakende sistemleri', badge: 'Türkiye', tags: ['POS', 'Retail', 'Scales'], cta: 'Ürünleri gör' },
-        { name: 'Teraoka', title: 'Terazi ve mağaza ekipmanları', desc: 'Teraoka Seiko ürünlerinin tam tedariki — terazi, etiketleme, POS', badge: 'Japonya', tags: ['Scales', 'Labeling', 'POS'], cta: 'Markayı gör' }
+        { name: 'Teraoka', title: 'Terazi ve mağaza ekipmanları', desc: 'Teraoka Seiko ürünlerinin tam tedariki — terazi, etiketleme, POS', badge: 'Japonya', tags: ['Scales', 'Labeling', 'POS'], cta: 'Markayı gör' },
+        { name: 'Liqui Moly', title: 'Motor yağı ve katkı', desc: 'Motor yağı, Octane Plus, dizel katkı ve oto bakım — şeffaf dolar fiyat', badge: 'Almanya', tags: ['Octane Plus', 'Top Tec', '5W-30'], cta: 'Katalog ve fiyat' }
       ]
     },
     process: {
@@ -682,7 +693,7 @@ window.BIZDAVAR_LOCALES = {
       highlights: [
         { category: 'Dijital pazarlama', text: 'Modern dijital pazarlama stratejileriyle müşteri dönüşüm oranı belirgin şekilde arttı.', source: 'Kurucunun LinkedIn paylaşımı', year: '2024' },
         { category: 'Uygulama deneyimi', text: '11 ülkede 100+ özel web ve platform projesi — girişimlerden fintech ve sanayi markalarına kadar.', source: 'LinkedIn profili — Ersan J. Tabrizi', year: '2025' },
-        { category: 'Fintech', text: 'ZedPay ekosistemi için ödeme platformları, yönetim paneli ve Cloudflare güvenlik entegrasyonu geliştirildi.', source: 'Doğrulanmış profesyonel kayıtlar', year: '2023–2025' },
+        { category: 'Fintech', text: 'Ödeme platformları, yönetim paneli ve Cloudflare güvenlik entegrasyonu — fintech projeleri için geliştirildi.', source: 'Doğrulanmış profesyonel kayıtlar', year: '2023–2025' },
         { category: 'Sanayi', text: 'Endüstriyel ekipman tedarik yönetimi — Gol-Gohar madenlerinin yangın pompalarından uluslararası enstrümantasyon ekipmanlarına.', source: 'Sanati ve Europe Gayrimenkul kayıtları', year: '2015–2024' }
       ]
     },
@@ -699,7 +710,7 @@ window.BIZDAVAR_LOCALES = {
       heroTitle: 'İşinizi',
       heroTitleSpan: 'akıllı dijital çözümlerle',
       heroTitleEnd: 'büyütün',
-      heroDesc: 'Web tasarım, dijital pazarlama ve endüstriyel tedarik — İstanbul\'dan İran ve küresel pazarlara.',
+      heroDesc: 'Fast Web Studio ile web tasarım, dijital pazarlama, FXGuard ve VEGA, Prosense, Liqui Moly tedariki — İstanbul merkezli.',
       viewServices: 'Hizmetleri gör',
       heroCard: 'Dijital pazarlama · Web tasarım · Endüstriyel',
       statProjects: 'Dijital proje',
@@ -710,7 +721,7 @@ window.BIZDAVAR_LOCALES = {
       featGlobal: 'Küresel pazar',
       featGlobalDesc: 'İran, Türkiye ve uluslararası projeler',
       featIndustrial: 'Endüstriyel uzmanlık',
-      featIndustrialDesc: 'VEGA, pompa ve ölçüm cihazları',
+      featIndustrialDesc: 'VEGA, Prosense ve Liqui Moly tedariki',
       featResults: 'Somut sonuçlar',
       featResultsDesc: 'Dönüşüm oranı ve marka büyümesi',
       svcEyebrow: 'Uzman hizmetler',
@@ -720,8 +731,9 @@ window.BIZDAVAR_LOCALES = {
       svcWebDesc: 'Kurumsal site, e-ticaret ve landing — Fast Web Studio ile hızlı teslimat.',
       svcSmmDesc: 'İçerik üretimi, sayfa yönetimi ve hedefli sosyal medya reklamları.',
       svcAppsDesc: 'Android, iOS, web app ve kurumsal sistemler.',
+      svcServerDesc: 'Kurulum, güvenlik, yedek, monitoring ve sunucu migrasyonu.',
       svcFieldDesc: 'CCTV, tesisat ve gizli aydınlatma — Tebriz ve İstanbul.',
-      svcIndDesc: 'VEGA sensör, endüstriyel pompa, ölçüm cihazları ve teknik danışmanlık.',
+      svcIndDesc: 'VEGA sensör, Prosense dedektör, Liqui Moly ve teknik tedarik danışmanlığı.',
       svcPlans: 'Planlar ve fiyat',
       fastTitle: '5 günde profesyonel web sitesi!',
       fastDesc: 'Bu hafta online olun — Fast Web Studio',
@@ -734,8 +746,8 @@ window.BIZDAVAR_LOCALES = {
       aboutHeroAlt: 'Bizdavar Group — dijital ve endüstriyel ajans',
       aboutMore: 'Bizdavar hakkında daha fazla',
       aboutInfra: 'Altyapı yönetimi',
-      clientsTitle: 'Portfolyo ve projeler',
-      clientsDesc: 'Bizdavar ekosistemi, web müşterileri ve altyapı markaları',
+      clientsTitle: 'Hizmetler ve ürünler uygulamada',
+      clientsDesc: 'Web tasarım, FXGuard ve Fast Web Studio ürünleri, endüstriyel marka tedariki',
       clientsAll: 'Tüm portfolyoyu gör',
       blogTitle: 'Son yazılar',
       blogAll: 'Tüm blog yazıları',
@@ -745,16 +757,17 @@ window.BIZDAVAR_LOCALES = {
       ctaForm: 'İletişim formu',
       faqs: [
         { q: 'Bizdavar Group ne zamandan beri faaliyet gösteriyor?', a: '2013\'ten beri Ersan Jahed Tabrizi tarafından — 11 ülkede 100+ proje.' },
-        { q: 'Bizdavar hangi hizmetleri sunuyor?', a: 'Dijital pazarlama, web tasarım, fintech, SMM, hosting ve VEGA/Prosense endüstriyel tedarik.' },
+        { q: 'Bizdavar hangi hizmetleri sunuyor?', a: 'Altı alan: dijital pazarlama, web/web app, uygulama ve sistem, sunucu yönetimi, SMM ve teknik hizmetler (CCTV, tesisat, aydınlatma). Ürünler ve endüstriyel markalar ürünler sayfasında.' },
         { q: 'Web sitesi ne kadar sürede hazır olur?', a: 'Fast Web Studio ile $99–$299 planlarda 5 iş gününden itibaren teslimat.' },
         { q: 'Bizdavar\'ın güvenilirliğini nasıl doğrularım?', a: 'Kurucunun LinkedIn profili, portfolyo, Google sertifikaları ve info@bizdavar.com.' },
-        { q: 'Hangi endüstriyel markalar tedarik ediliyor?', a: 'VEGA, Prosense, Gamak, Digi System, Teraoka ve diğer güvenilir global markalar.' }
+        { q: 'Hangi endüstriyel markalar tedarik ediliyor?', a: 'VEGA, Prosense, Liqui Moly, Gamak, Digi System, Teraoka ve diğer güvenilir global markalar.' }
       ]
     },
     contactPage: {
       connectTitle: 'İletişim kanalları',
       websites: 'Web siteleri',
       title: 'İletişim',
+      mapImgAlt: 'Uluslararası iş birliği — Bizdavar Group',
       heroTitle: 'Ücretsiz danışmanlık ve yanıt için hazırız',
       heroDesc: 'Formu doldurun veya Bizdavar ekibiyle doğrudan iletişime geçin.',
       formTitle: 'İletişim talep formu',
@@ -811,7 +824,10 @@ window.BIZDAVAR_LOCALES = {
       optDm: 'Dijital pazarlama',
       optWeb: 'Web tasarım ve geliştirme',
       optFast: 'Fast Web Studio — web tasarım',
+      optApps: 'Uygulama ve sistem',
+      optServer: 'Sunucu ve altyapı yönetimi',
       optSmm: 'Sosyal medya yönetimi (SMM)',
+      optField: 'Teknik hizmetler (CCTV, tesisat, aydınlatma)',
       optIndustrial: 'Endüstriyel ekipman tedariki',
       optConsult: 'İş danışmanlığı',
       optOther: 'Diğer'
@@ -869,9 +885,9 @@ window.BIZDAVAR_LOCALES = {
       channelIr: 'Persian WhatsApp'
     },
     seo: {
-      defaultTitle: 'Bizdavar Group | Digital services, web design & industrial supply',
-      defaultDescription: 'Bizdavar Group — 12+ years, 100+ projects across 11 countries. Digital marketing, web design, SMM, and VEGA/Prosense supply. Istanbul HQ.',
-      keywords: 'Bizdavar, web design Istanbul, digital marketing, VEGA, Prosense, Fast Web Studio',
+      defaultTitle: 'Bizdavar Group | Web design, digital marketing & industrial supply',
+      defaultDescription: 'From Istanbul: Fast Web Studio websites, digital marketing & SMM, FXGuard WhatsApp CRM, plus VEGA, Prosense and Liqui Moly supply. Free consultation.',
+      keywords: 'Bizdavar, web design Istanbul, digital marketing, FXGuard, VEGA, Prosense, Liqui Moly, Fast Web Studio',
       schemaServices: 'Bizdavar Group services',
       schemaBlog: 'Bizdavar Group blog',
       schemaPortfolio: 'Bizdavar Group portfolio'
@@ -910,6 +926,8 @@ window.BIZDAVAR_LOCALES = {
       langFa: 'فارسی',
       langTr: 'Türkçe',
       langEn: 'English',
+      langRu: 'Русский',
+      langAr: 'العربية',
       langLabel: 'Language',
       breadcrumbAria: 'Breadcrumb'
     },
@@ -965,7 +983,7 @@ window.BIZDAVAR_LOCALES = {
       serviceSmmDesc: 'Content, reels and Paid Social',
       serviceField: 'Technical & building services',
       serviceFieldDesc: 'CCTV, wiring and cove lighting',
-      serviceFieldFeaturedDesc: 'Tabriz and Istanbul — Technical lead',
+      serviceFieldFeaturedDesc: 'Tabriz and Istanbul — Technical team',
       serviceFieldBadge: 'Field',
       products: 'Our products',
       productsCatalog: 'All products',
@@ -1085,7 +1103,8 @@ window.BIZDAVAR_LOCALES = {
         { name: 'Teltonika', title: 'GPS & Fleet Telematics', desc: 'Fleet trackers, CAN/OBD, BLE, video and IoT solutions — FMB920 · FMC650 · FTC305', badge: 'Lithuania', tags: ['FMB920', 'FTC305', 'DualCam'], cta: 'Teltonika catalog' },
         { name: 'Gamak', title: 'Industrial electric motors', desc: 'Three-phase and single-phase motors — supply and technical support', badge: 'Turkey', tags: ['IE2/IE3', 'Flange mount', 'Project-based'], cta: 'Gamak info' },
         { name: 'Digi System', title: 'Retail & POS equipment', desc: 'Digi product supply — scales, checkout systems, POS and retail equipment', badge: 'Turkey', tags: ['POS', 'Retail', 'Scales'], cta: 'View products' },
-        { name: 'Teraoka', title: 'Scales & store equipment', desc: 'Full Teraoka Seiko supply — scales, labeling, POS and retail/industrial equipment', badge: 'Japan', tags: ['Scales', 'Labeling', 'POS'], cta: 'View brand' }
+        { name: 'Teraoka', title: 'Scales & store equipment', desc: 'Full Teraoka Seiko supply — scales, labeling, POS and retail/industrial equipment', badge: 'Japan', tags: ['Scales', 'Labeling', 'POS'], cta: 'View brand' },
+        { name: 'Liqui Moly', title: 'Oils & fuel additives', desc: 'Engine oils, Octane Plus, diesel additives and car care — transparent USD pricing', badge: 'Germany', tags: ['Octane Plus', 'Top Tec', '5W-30'], cta: 'Catalog & pricing' }
       ]
     },
     process: {
@@ -1109,7 +1128,7 @@ window.BIZDAVAR_LOCALES = {
       highlights: [
         { category: 'Digital marketing', text: 'With modern digital marketing strategies, customer conversion rates increased significantly.', source: 'Founder\'s LinkedIn post', year: '2024' },
         { category: 'Delivery experience', text: '100+ custom web and platform projects across 11 countries — from startups to fintech and industrial brands.', source: 'LinkedIn profile — Ersan J. Tabrizi', year: '2025' },
-        { category: 'Fintech', text: 'Built and launched payment platforms, management dashboards, and Cloudflare security integration for the ZedPay ecosystem.', source: 'Verified professional record', year: '2023–2025' },
+        { category: 'Fintech', text: 'Built and launched payment platforms, management dashboards, and Cloudflare security integration for fintech projects.', source: 'Verified professional record', year: '2023–2025' },
         { category: 'Industry', text: 'Managed industrial equipment supply — from fire pumps for Gol-Gohar mines to international instrumentation equipment.', source: 'Sanat Moharek (Sanatm) & Europe Gayrimenkul records', year: '2015–2024' }
       ]
     },
@@ -1126,7 +1145,7 @@ window.BIZDAVAR_LOCALES = {
       heroTitle: 'Grow your business with',
       heroTitleSpan: 'smart digital',
       heroTitleEnd: 'solutions',
-      heroDesc: 'Web design, digital marketing, and industrial supply — from Istanbul to Iran and global markets.',
+      heroDesc: 'Fast Web Studio websites, digital marketing, FXGuard, and VEGA, Prosense & Liqui Moly supply — from Istanbul.',
       viewServices: 'View services',
       heroCard: 'Digital marketing · Web design · Industrial',
       statProjects: 'Digital projects',
@@ -1137,7 +1156,7 @@ window.BIZDAVAR_LOCALES = {
       featGlobal: 'Global reach',
       featGlobalDesc: 'Iran, Turkey & international projects',
       featIndustrial: 'Industrial expertise',
-      featIndustrialDesc: 'VEGA, pumps & instrumentation',
+      featIndustrialDesc: 'VEGA, Prosense & Liqui Moly supply',
       featResults: 'Measurable results',
       featResultsDesc: 'Higher conversion & brand growth',
       svcEyebrow: 'Expert services',
@@ -1147,8 +1166,9 @@ window.BIZDAVAR_LOCALES = {
       svcWebDesc: 'Corporate sites, e-commerce, and landing pages — fast delivery with Fast Web Studio.',
       svcSmmDesc: 'Content creation, page management, and targeted social ads.',
       svcAppsDesc: 'Android, iOS, web apps and business systems.',
+      svcServerDesc: 'Setup, security, backups, monitoring and server migration.',
       svcFieldDesc: 'CCTV, wiring and cove lighting — Tabriz and Istanbul.',
-      svcIndDesc: 'VEGA sensors, industrial pumps, instrumentation, and technical consulting.',
+      svcIndDesc: 'VEGA sensors, Prosense detectors, Liqui Moly and supply consulting.',
       svcPlans: 'Plans & pricing',
       fastTitle: 'Professional website in 5 days!',
       fastDesc: 'Go live this week — Fast Web Studio',
@@ -1161,8 +1181,8 @@ window.BIZDAVAR_LOCALES = {
       aboutHeroAlt: 'Bizdavar Group — digital and industrial agency',
       aboutMore: 'More about Bizdavar',
       aboutInfra: 'Infrastructure management',
-      clientsTitle: 'Portfolio & projects',
-      clientsDesc: 'Bizdavar ecosystem, web clients, and infrastructure brands',
+      clientsTitle: 'Services & products in action',
+      clientsDesc: 'Web design, FXGuard and Fast Web Studio products, and industrial brand supply',
       clientsAll: 'View full portfolio',
       blogTitle: 'Latest articles',
       blogAll: 'View all blog posts',
@@ -1172,16 +1192,17 @@ window.BIZDAVAR_LOCALES = {
       ctaForm: 'Contact form',
       faqs: [
         { q: 'Since when has Bizdavar Group been active?', a: 'Since 2013, founded by Ersan Jahed Tabrizi — 100+ projects across 11 countries.' },
-        { q: 'What services does Bizdavar offer?', a: 'Digital marketing, web design, fintech, SMM, hosting, and VEGA/Prosense industrial supply.' },
+        { q: 'What services does Bizdavar offer?', a: 'Six areas: digital marketing, web & web apps, mobile apps & systems, server management, SMM, and technical installs (CCTV, wiring, cove lighting). Products and industrial brands are on the products page.' },
         { q: 'How long does website design take?', a: 'With Fast Web Studio, delivery from 5 business days on plans from $99 to $299.' },
         { q: 'How can I verify Bizdavar\'s credibility?', a: 'Founder LinkedIn, portfolio, Google certifications, and info@bizdavar.com.' },
-        { q: 'Which industrial brands do you supply?', a: 'VEGA, Prosense, Gamak, Digi System, Teraoka, and other trusted global brands.' }
+        { q: 'Which industrial brands do you supply?', a: 'VEGA, Prosense, Liqui Moly, Gamak, Digi System, Teraoka, and other trusted global brands.' }
       ]
     },
     contactPage: {
       connectTitle: 'Contact channels',
       websites: 'Websites',
       title: 'Contact us',
+      mapImgAlt: 'International collaboration — Bizdavar Group',
       heroTitle: 'We are ready to help with free consultation',
       heroDesc: 'Fill out the form below or reach the Bizdavar team directly.',
       formTitle: 'Contact request form',
@@ -1238,7 +1259,10 @@ window.BIZDAVAR_LOCALES = {
       optDm: 'Digital marketing',
       optWeb: 'Web design & development',
       optFast: 'Fast Web Studio — web design',
+      optApps: 'Apps & systems',
+      optServer: 'Server & infrastructure',
       optSmm: 'Social media management (SMM)',
+      optField: 'Technical services (CCTV, wiring, lighting)',
       optIndustrial: 'Industrial equipment supply',
       optConsult: 'Business consulting',
       optOther: 'Other'

@@ -22,7 +22,7 @@
       </div>` : '';
     const imageBlock = e.image && !e.video ? `
       <figure class="exhibition-card__figure">
-        <img src="${path(e.image)}" alt="${e.title || ''}" loading="lazy" width="720" height="405">
+        <img src="${path(e.image)}" alt="${e.title || 'Bizdavar exhibition'}" loading="lazy" width="720" height="405">
       </figure>` : '';
     return `<div class="exhibition-card__media">${videoBlock}${imageBlock}</div>`;
   }
@@ -260,7 +260,7 @@
               </article>
             `).join('')}
           </div>
-          <p class="intel-note text-center mt-24">${t('credibility.sources')}: <a href="${f.linkedin}" target="_blank" rel="noopener noreferrer me">${t('credibility.founderLinkedin')}</a> · <a href="${path(R.portfolio)}">${t('credibility.portfolio')}</a> · <a href="${path(R.about)}">${t('credibility.fullAbout')}</a></p>
+          <p class="intel-note text-center mt-24">${t('credibility.sources')}: <a href="${f.linkedin}" target="_blank" rel="noopener noreferrer me">${t('credibility.founderLinkedin')}</a> · <a href="${siteLink(R.portfolio)}">${t('credibility.portfolio')}</a> · <a href="${siteLink(R.about)}">${t('credibility.fullAbout')}</a></p>
         </div>
       </section>`;
   };
@@ -382,7 +382,7 @@
           <div class="presence-istanbul-hub__actions">
             ${hubData.whatsapp ? `<a href="${waUrl(hubData.whatsapp)}" class="btn btn--yellow" target="_blank" rel="noopener noreferrer">${waLabel}</a>` : ''}
             ${hubData.profileUrl ? `<a href="${hubData.profileUrl}" class="btn btn--outline" target="_blank" rel="noopener noreferrer">${hubData.profileLabel || (L.b2bProfile || 'پروفایل B2B')}</a>` : ''}
-            <a href="${path(R.contact)}" class="btn btn--primary">${L.contactForm || 'فرم تماس'}</a>
+            <a href="${siteLink(R.contact)}" class="btn btn--primary">${L.contactForm || 'فرم تماس'}</a>
           </div>
           ${hubData.note ? `<p class="presence-istanbul-hub__note">${hubData.note}</p>` : ''}
           ${hubData.exhibitionsNote ? `<p class="presence-istanbul-hub__note presence-istanbul-hub__note--event">${hubData.exhibitionsNote}</p>` : ''}
@@ -584,7 +584,7 @@
 
     const cards = products.map(p => {
 
-      const href = p.internal ? path(p.url) : p.url;
+      const href = p.internal ? siteLink(p.url) : p.url;
 
       const external = !p.internal && p.url.startsWith('http');
 
@@ -656,9 +656,9 @@
 
             <div class="industrial-cta-bar__actions">
 
-              <a href="${path(R.contact)}" class="btn btn--yellow">${t('industrial.ctaBtn')}</a>
+              <a href="${siteLink(R.contact)}" class="btn btn--yellow">${t('industrial.ctaBtn')}</a>
 
-              <a href="${path(R.products)}#supply" class="btn btn--outline">${t('industrial.ctaLink')}</a>
+              <a href="${siteLink(R.products)}#supply" class="btn btn--outline">${t('industrial.ctaLink')}</a>
 
             </div>
 
@@ -887,7 +887,7 @@
         : (C.industrialProducts || []);
       const accentClass = (a) => (a ? ` industrial-card--${a}` : '');
       supplyGrid.innerHTML = brands.map(p => {
-        const href = p.internal ? path(p.url) : p.url;
+        const href = p.internal ? siteLink(p.url) : p.url;
         const external = !p.internal && p.url && String(p.url).startsWith('http');
         const tags = (p.tags || []).map(tag => `<span class="industrial-card__tag">${tag}</span>`).join('');
         return `

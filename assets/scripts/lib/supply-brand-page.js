@@ -59,13 +59,15 @@ window.createSupplyBrandPage = function (cfg) {
     const w = a.width || 280;
     const h = a.height || 160;
     const cls = a.className ? ` class="${a.className}"` : '';
-    return `<img src="${primary}" alt="${alt || ''}" width="${w}" height="${h}" loading="lazy" decoding="async"${cls} onerror="if(this.dataset.fbk!=='1'){this.dataset.fbk='1';this.src='${fallback}';}else{this.classList.add('is-broken');}">`;
+    return `<img src="${primary}" alt="${alt || 'Bizdavar'}" width="${w}" height="${h}" loading="lazy" decoding="async"${cls} onerror="if(this.dataset.fbk!=='1'){this.dataset.fbk='1';this.src='${fallback}';}else{this.classList.add('is-broken');}">`;
   }
 
   function localizedTitle(item) {
     const lang = locale();
     if (lang === 'tr') return item.titleTr || item.titleEn || item.title || item.name || '';
-    if (lang === 'en') return item.titleEn || item.titleTr || item.title || item.name || '';
+    if (lang === 'en' || lang === 'ru' || lang === 'ar') {
+      return item.titleEn || item.titleTr || item.title || item.name || '';
+    }
     return item.title || item.titleTr || item.name || '';
   }
 
@@ -855,7 +857,7 @@ window.createSupplyBrandPage = function (cfg) {
 
       description: catalog().brand.description || catalog().brand.descriptionFa,
 
-      inLanguage: locale === 'tr' ? 'tr-TR' : locale === 'en' ? 'en' : 'fa-IR',
+      inLanguage: locale === 'tr' ? 'tr-TR' : locale === 'en' ? 'en-US' : locale === 'ru' ? 'ru-RU' : locale === 'ar' ? 'ar-AE' : 'fa-IR',
 
       numberOfItems: items.length,
 

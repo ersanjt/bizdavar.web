@@ -52,14 +52,23 @@
     const hash = hashIdx >= 0 ? href.slice(hashIdx) : '';
     let pathPart = (hashIdx >= 0 ? href.slice(0, hashIdx) : href).replace(/^\//, '');
 
+    // Strip existing locale prefix so we never double-prefix (/ru/pages/x → pages/x)
+    const locMatch = pathPart.match(/^(tr|en|ru|ar)(?:\/(.*))?$/);
+    if (locMatch) {
+      pathPart = locMatch[2] || '';
+    }
+
     if (pathPart === '' || pathPart === 'index.html' || pathPart === 'index' || pathPart === './') {
-      return hash ? '/' + hash : '/';
+      const localeHome = window.BIZDAVAR_LOCALE_URL?.currentLocale?.() || 'fa';
+      return window.BIZDAVAR_LOCALE_URL
+        ? window.BIZDAVAR_LOCALE_URL.toLocalePath(localeHome, '/') + (hash ? hash.replace(/^#/, '#') : '')
+        : (hash ? '/' + hash : '/');
     }
 
     const knownPages = new Set([
       'about', 'services', 'portfolio', 'blog', 'contact', 'privacy', 'fast', 'vega',
       'prosense', 'teltonika', 'gamak', 'digi-system', 'teraoka', 'liqui-moly', 'bz-diamond', 'supplify-trade', 'kaya-one', 'smm-turk', 'fxguard-exchange', 'biztejarat',
-      'products', 'biztab', 'bizsanitizer-v5', 'fxguard', 'bizswap'
+      'products', 'biztab', 'bizsanitizer-v5', 'fxguard', 'fxguard-accounting', 'bizswap'
     ]);
     const stem = pathPart.replace(/\.html$/i, '').split('/').pop();
     if (!pathPart.startsWith('pages/') && knownPages.has(stem)) {
@@ -69,7 +78,12 @@
     }
 
     pathPart = pathPart.replace(/\.html$/i, '');
-    if (pathPart === 'index') return hash ? '/' + hash : '/';
+    if (pathPart === 'index') {
+      const localeHome = window.BIZDAVAR_LOCALE_URL?.currentLocale?.() || 'fa';
+      return window.BIZDAVAR_LOCALE_URL
+        ? window.BIZDAVAR_LOCALE_URL.toLocalePath(localeHome, '/') + hash
+        : (hash ? '/' + hash : '/');
+    }
 
     const base = '/' + pathPart + hash;
     const locale = window.BIZDAVAR_LOCALE_URL?.currentLocale?.() || 'fa';
@@ -81,7 +95,15 @@
   function fixInternalPageRefs() {
     document.querySelectorAll('a[href]').forEach(el => {
       const href = el.getAttribute('href');
-      if (!href || /^(https?:|mailto:|tel:|#|\/)/.test(href)) return;
+      if (!href || /^(https?:|mailto:|tel:|#)/.test(href)) return;
+      // Absolute site pages (/pages/contact) — apply locale prefix
+      if (href.startsWith('/')) {
+        if (/^\/assets\//.test(href)) return;
+        if (/^\/(pages\/|tr\/|en\/|ru\/|ar\/|$)/.test(href) || href === '/') {
+          el.setAttribute('href', window.resolvePagePath(href));
+        }
+        return;
+      }
       if (/^(pages\/|\.\.\/|articles\/)/.test(href) || href === 'index.html' || href === './') {
         el.setAttribute('href', window.resolvePagePath(href));
         return;

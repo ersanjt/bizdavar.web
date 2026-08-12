@@ -113,22 +113,56 @@
     const el = document.getElementById('serviceNav');
     if (!el) return;
     el.innerHTML = `
-      <nav class="services-nav" aria-label="${t('servicesPage.navAria', 'فهرست خدمات')}">
-        ${getServices().map(s => `
-          <a href="${s.href}" class="services-nav__item services-nav__item--${s.accent}">
-            <span class="services-nav__num">${s.num}</span>
-            ${ic(s.icon, { size: 18 })}
-            ${s.title}
-          </a>
-        `).join('')}
-      </nav>`;
+      <div class="container">
+        <nav class="services-nav" aria-label="${t('servicesPage.navAria', 'فهرست خدمات')}">
+          ${getServices().map(s => `
+            <a href="${s.href}" class="services-nav__item services-nav__item--${s.accent}">
+              <span class="services-nav__num">${s.num}</span>
+              ${ic(s.icon, { size: 18 })}
+              ${s.title}
+            </a>
+          `).join('')}
+        </nav>
+      </div>`;
+  }
+
+  function renderPaths() {
+    const el = document.getElementById('servicesPaths');
+    if (!el) return;
+    const digital = {
+      eyebrow: t('servicesPage.paths.digital.eyebrow', 'مسیر دیجیتال'),
+      title: t('servicesPage.paths.digital.title', 'بازاریابی، وب، اپ، سرور و SMM'),
+      desc: t('servicesPage.paths.digital.desc', 'از استراتژی رشد تا تحویل نرم‌افزار و زیرساخت — یک تیم برای مسیر آنلاین کسب‌وکار.'),
+      cta: t('servicesPage.paths.digital.cta', 'شروع از بازاریابی دیجیتال'),
+      href: '#digital-marketing'
+    };
+    const field = {
+      eyebrow: t('servicesPage.paths.field.eyebrow', 'مسیر فنی'),
+      title: t('servicesPage.paths.field.title', 'دوربین، سیم‌کشی و نورمخفی'),
+      desc: t('servicesPage.paths.field.desc', 'نصب و اجرای میدانی در تبریز و استانبول — هماهنگی مستقیم از واتساپ خدمات فنی.'),
+      cta: t('servicesPage.paths.field.cta', 'رفتن به خدمات فنی'),
+      href: '#field-tech'
+    };
+    el.innerHTML = `
+      <a class="services-path services-path--digital services-reveal" href="${digital.href}">
+        <span class="services-path__eyebrow">${digital.eyebrow}</span>
+        <h3 class="services-path__title">${digital.title}</h3>
+        <p class="services-path__desc">${digital.desc}</p>
+        <span class="services-path__cta">${digital.cta}</span>
+      </a>
+      <a class="services-path services-path--field services-reveal" href="${field.href}">
+        <span class="services-path__eyebrow">${field.eyebrow}</span>
+        <h3 class="services-path__title">${field.title}</h3>
+        <p class="services-path__desc">${field.desc}</p>
+        <span class="services-path__cta">${field.cta}</span>
+      </a>`;
   }
 
   function renderOverview() {
     const el = document.getElementById('servicesOverview');
     if (!el) return;
     el.innerHTML = getServices().map(s => `
-      <a href="${s.href}" class="services-overview-card services-overview-card--${s.accent}">
+      <a href="${s.href}" class="services-overview-card services-overview-card--${s.accent} services-reveal">
         <span class="services-overview-card__num">${s.num}</span>
         <span class="services-overview-card__icon">${ic(s.icon, { size: 26 })}</span>
         <h3>${s.title}</h3>
@@ -150,13 +184,85 @@
       { title: 'پشتیبانی', desc: 'گزارش، بهینه‌سازی و همراهی مستمر' }
     ]);
     el.innerHTML = steps.map((s, i) => `
-      <div class="services-process__step">
+      <div class="services-process__step services-reveal">
         <span class="services-process__icon">${ic(PROCESS_ICONS[i] || 'target', { size: 28 })}</span>
         <span class="services-process__num">${i + 1}</span>
         <h4>${s.title}</h4>
         <p>${s.desc}</p>
       </div>
     `).join('');
+  }
+
+  let navSpyReady = false;
+
+  function initNavSpy() {
+    if (navSpyReady) return;
+    navSpyReady = true;
+    const nav = document.querySelector('.services-nav');
+    if (!nav) return;
+    const links = [...nav.querySelectorAll('.services-nav__item')];
+    const sections = links
+      .map(a => document.querySelector(a.getAttribute('href')))
+      .filter(Boolean);
+    if (!sections.length) return;
+
+    const setActive = (id) => {
+      links.forEach(a => {
+        a.classList.toggle('is-active', a.getAttribute('href') === `#${id}`);
+      });
+    };
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) setActive(entry.target.id);
+      });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+
+    sections.forEach(section => observer.observe(section));
+
+    links.forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.replaceState(null, '', a.getAttribute('href'));
+        setActive(target.id);
+      });
+    });
+
+    document.querySelectorAll('.services-path[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.replaceState(null, '', a.getAttribute('href'));
+        setActive(target.id);
+      });
+    });
+
+    if (location.hash) {
+      const id = location.hash.slice(1);
+      if (id) setActive(id);
+    }
+  }
+
+  function initReveals() {
+    const nodes = [...document.querySelectorAll('.services-reveal')];
+    if (!nodes.length) return;
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      nodes.forEach(n => n.classList.add('is-in'));
+      return;
+    }
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-in');
+        obs.unobserve(entry.target);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+    nodes.forEach(n => obs.observe(n));
   }
 
   function applyBlockLists() {
@@ -337,6 +443,84 @@
     }
   }
 
+  function renderAppsPanel() {
+    const el = document.getElementById('appsPanel');
+    if (!el) return;
+    const panels = rawList('servicesPage.softwareApps.panels', [
+      { title: 'Android', desc: 'اپلیکیشن اندروید' },
+      { title: 'iOS', desc: 'اپلیکیشن آیفون' },
+      { title: 'سامانه', desc: 'پنل و سیستم سازمانی' },
+      { title: 'API', desc: 'یکپارچه‌سازی و درگاه' },
+      { title: 'B2B', desc: 'پنل و گردش‌کار سازمانی' },
+      { title: 'Support', desc: 'انتشار و به‌روزرسانی' }
+    ]);
+    el.innerHTML = panels.map(p => `
+      <div class="service-panel-card">
+        <strong>${p.title}</strong>
+        <span>${p.desc}</span>
+      </div>
+    `).join('');
+  }
+
+  function renderAppsDeliverables() {
+    const el = document.getElementById('appsDeliverables');
+    if (!el) return;
+    const title = t('servicesPage.softwareApps.packagesTitle', 'خروجی‌های پروژه');
+    const items = rawList('servicesPage.softwareApps.packages', [
+      'تحلیل نیاز و نقشه محصول',
+      'UI/UX و معماری فنی',
+      'توسعه اندروید / iOS یا سامانه',
+      'انتشار، آموزش و پشتیبانی'
+    ]);
+    el.innerHTML = `
+      <p class="server-ops-stack__title">${title}</p>
+      <div class="server-ops-stack__list">
+        ${items.map(item => `<span class="server-ops-stack__item">${item}</span>`).join('')}
+      </div>`;
+  }
+
+  function renderAppsFaq() {
+    const el = document.getElementById('appsFaq');
+    if (!el) return;
+    const faq = rawList('servicesPage.softwareApps.faq', []);
+    if (!faq.length) {
+      el.hidden = true;
+      return;
+    }
+    el.hidden = false;
+    el.innerHTML = `
+      <div class="field-tech-faq-wrap">
+        <div class="field-tech-faq__head">
+          <span class="field-tech-faq__eyebrow field-tech-faq__eyebrow--navy">${t('servicesPage.softwareApps.faqEyebrow', 'اپ و سامانه')}</span>
+          <h3 class="field-tech-faq__title">${t('servicesPage.softwareApps.faqTitle', 'سوالات پرتکرار اپلیکیشن و سامانه')}</h3>
+        </div>
+        <div class="field-tech-faq" role="list">
+          ${faq.map((item, i) => `
+            <details class="field-tech-faq__item field-tech-faq__item--navy"${i === 0 ? ' open' : ''} role="listitem">
+              <summary>
+                <span class="field-tech-faq__q">${item.q}</span>
+                <span class="field-tech-faq__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="field-tech-faq__body"><p>${item.a}</p></div>
+            </details>
+          `).join('')}
+        </div>
+      </div>`;
+
+    const ld = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faq.map(item => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: { '@type': 'Answer', text: item.a }
+      }))
+    };
+    if (typeof window.injectJsonLd === 'function') {
+      window.injectJsonLd('jsonld-apps-faq', ld);
+    }
+  }
+
   function renderSmmPanel() {
     const el = document.getElementById('smmPanel');
     if (!el) return;
@@ -387,12 +571,12 @@
     el.innerHTML = `
       <div class="field-tech-faq-wrap">
         <div class="field-tech-faq__head">
-          <span class="field-tech-faq__eyebrow">${t('servicesPage.smm.faqEyebrow', 'شبکه‌های اجتماعی')}</span>
+          <span class="field-tech-faq__eyebrow field-tech-faq__eyebrow--red">${t('servicesPage.smm.faqEyebrow', 'شبکه‌های اجتماعی')}</span>
           <h3 class="field-tech-faq__title">${t('servicesPage.smm.faqTitle', 'سوالات پرتکرار SMM')}</h3>
         </div>
         <div class="field-tech-faq" role="list">
           ${faq.map((item, i) => `
-            <details class="field-tech-faq__item"${i === 0 ? ' open' : ''} role="listitem">
+            <details class="field-tech-faq__item field-tech-faq__item--red"${i === 0 ? ' open' : ''} role="listitem">
               <summary>
                 <span class="field-tech-faq__q">${item.q}</span>
                 <span class="field-tech-faq__icon" aria-hidden="true"></span>
@@ -463,12 +647,12 @@
     el.innerHTML = `
       <div class="field-tech-faq-wrap">
         <div class="field-tech-faq__head">
-          <span class="field-tech-faq__eyebrow">${t('servicesPage.serverOps.faqEyebrow', 'زیرساخت و Ops')}</span>
+          <span class="field-tech-faq__eyebrow field-tech-faq__eyebrow--slate">${t('servicesPage.serverOps.faqEyebrow', 'زیرساخت و Ops')}</span>
           <h3 class="field-tech-faq__title">${t('servicesPage.serverOps.faqTitle', 'سوالات پرتکرار مدیریت سرور')}</h3>
         </div>
         <div class="field-tech-faq" role="list">
           ${faq.map((item, i) => `
-            <details class="field-tech-faq__item"${i === 0 ? ' open' : ''} role="listitem">
+            <details class="field-tech-faq__item field-tech-faq__item--slate"${i === 0 ? ' open' : ''} role="listitem">
               <summary>
                 <span class="field-tech-faq__q">${item.q}</span>
                 <span class="field-tech-faq__icon" aria-hidden="true"></span>
@@ -515,18 +699,21 @@
     const phone = t('servicesPage.fieldTech.waHint', ft.phoneDisplay || '+98 936 411 5151');
     const cities = t('servicesPage.fieldTech.cities', (ft.cities || []).join(' · '));
     el.innerHTML = `
-      <article class="field-tech-lead">
+      <article class="field-tech-lead" aria-label="${t('servicesPage.fieldTech.leadLabel', 'هماهنگی خدمات فنی')}">
         <div class="field-tech-lead__top">
-          <div class="field-tech-lead__badge">${ic('wrench', { size: 18 })} ${t('servicesPage.fieldTech.leadLabel', 'مسئول فنی')}</div>
-          <h3 class="field-tech-lead__name">${t('servicesPage.fieldTech.leadName', ft.lead?.nameFa || 'مسئول فنی')}</h3>
-          <p class="field-tech-lead__role">${t('servicesPage.fieldTech.leadRole', ft.lead?.roleFa || '')}</p>
+          <div class="field-tech-lead__badge">${ic('wrench', { size: 18 })} ${t('servicesPage.fieldTech.leadLabel', 'هماهنگی خدمات فنی')}</div>
+          <h3 class="field-tech-lead__name">${t('servicesPage.fieldTech.leadName', 'تیم فنی بیزدوار')}</h3>
+          <p class="field-tech-lead__role">${t('servicesPage.fieldTech.leadRole', 'نصب دوربین مدار بسته، سیم‌کشی و نورمخفی')}</p>
           <div class="field-tech-lead__meta">
-            <span class="field-tech-lead__chip">${t('servicesPage.fieldTech.citiesLabel', 'شهرهای هدف')}: ${cities}</span>
+            <span class="field-tech-lead__chip">${ic('pin', { size: 14 })} ${cities}</span>
           </div>
         </div>
         <a class="field-tech-lead__phone" href="tel:${tel}" dir="ltr" data-field-tel>
-          <span class="field-tech-lead__phone-label">${t('servicesPage.fieldTech.phoneLabel', 'شماره مستقیم')}</span>
-          <span class="field-tech-lead__phone-num">${phone}</span>
+          <span class="field-tech-lead__phone-icon" aria-hidden="true">${ic('phone', { size: 20 })}</span>
+          <span class="field-tech-lead__phone-text">
+            <span class="field-tech-lead__phone-label">${t('servicesPage.fieldTech.phoneLabel', 'شماره مستقیم')}</span>
+            <span class="field-tech-lead__phone-num">${phone}</span>
+          </span>
         </a>
         <div class="field-tech-lead__actions">
           <a class="btn btn--green field-tech-lead__btn" data-field-wa href="${wa}" target="_blank" rel="noopener noreferrer">
@@ -546,11 +733,24 @@
     if (!el) return;
     const items = rawList('servicesPage.fieldTech.panel', null);
     if (!Array.isArray(items) || !items.length) return;
-    el.innerHTML = items.map(item => `
-      <div class="service-panel-card">
+    const iconMap = {
+      cctv: 'monitor',
+      wiring: 'bolt',
+      lighting: 'flame',
+      survey: 'document',
+      cities: 'pin',
+      support: 'shield'
+    };
+    el.innerHTML = items.map(item => {
+      const key = String(item.id || item.title || '').toLowerCase();
+      const icon = item.icon || iconMap[key] || 'check';
+      return `
+      <div class="service-panel-card service-panel-card--field">
+        <span class="service-panel-card__icon" aria-hidden="true">${ic(icon, { size: 22 })}</span>
         <strong>${item.title || ''}</strong>
         <span>${item.desc || ''}</span>
-      </div>`).join('');
+      </div>`;
+    }).join('');
   }
 
   function renderFieldFaq() {
@@ -608,28 +808,19 @@
 
   function injectFieldTechPersonSchema() {
     const ft = fieldTechCfg();
-    if (!ft.lead) return;
-    const lang = window.BIZDAVAR_I18N?.getLang?.() || 'fa';
-    const name = lang === 'fa' ? (ft.lead.nameFa || ft.lead.nameEn) : (ft.lead.nameEn || ft.lead.nameFa);
-    const job = lang === 'fa' ? (ft.lead.roleFa || ft.lead.roleEn) : (ft.lead.roleEn || ft.lead.roleFa);
     const ld = {
       '@context': 'https://schema.org',
-      '@type': 'Person',
-      name,
-      jobTitle: job,
-      worksFor: {
-        '@type': 'Organization',
-        name: C().siteNameEn || 'Bizdavar Group',
-        url: C().baseUrl || 'https://bizdavar.com'
-      },
+      '@type': 'ContactPoint',
+      contactType: 'technical support',
       telephone: ft.tel || '+989364115151',
+      availableLanguage: ['fa', 'tr', 'en', 'ru', 'ar'],
       areaServed: [
         { '@type': 'City', name: 'Tabriz' },
         { '@type': 'City', name: 'Istanbul' }
       ]
     };
     if (typeof window.injectJsonLd === 'function') {
-      window.injectJsonLd('jsonld-field-tech-person', ld);
+      window.injectJsonLd('jsonld-field-tech-contact', ld);
     }
   }
 
@@ -637,6 +828,7 @@
     redirectLegacyIndustrialHash();
     renderStats();
     renderNav();
+    renderPaths();
     renderOverview();
     renderProcess();
     applyBlockLists();
@@ -646,6 +838,9 @@
     renderWebDesignPanel();
     renderWebDesignDeliverables();
     renderWebDesignFaq();
+    renderAppsPanel();
+    renderAppsDeliverables();
+    renderAppsFaq();
     renderServerOpsPanel();
     renderServerOpsStack();
     renderServerOpsFaq();
@@ -657,6 +852,11 @@
     renderFieldFaq();
     wireFieldTechCtas();
     injectFieldTechPersonSchema();
+    document.querySelectorAll('.service-block, .services-cta').forEach(el => {
+      el.classList.add('services-reveal');
+    });
+    initNavSpy();
+    initReveals();
   };
 
   window.renderServicesRelatedLinks = function () {

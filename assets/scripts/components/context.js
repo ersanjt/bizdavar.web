@@ -70,12 +70,18 @@
     return link.replace(/\.html(?=[#?]|$)/, '').replace(/index\.html$/, '') || './';
   }
 
-  /** Root-absolute internal link — consistent from any page depth */
+  /** Root-absolute internal link — locale-aware (/en/pages/contact, /ru/, …) */
   function siteLink(url) {
     if (!url || url.startsWith('http') || url.startsWith('mailto:') || url.startsWith('tel:') || url.startsWith('#')) {
       return url;
     }
-    if (url.startsWith('/')) return url;
+    if (url.startsWith('/')) {
+      // Assets stay absolute; page URLs get locale prefix via resolvePagePath
+      if (/^\/assets\//.test(url) || /\.(css|js|png|jpe?g|webp|svg|gif|woff2?|ico|json|xml|pdf)(\?|#|$)/i.test(url)) {
+        return url;
+      }
+      return pagePath(url);
+    }
     const { pathPart, hash } = splitUrl(url);
     const siteRoot = toSiteRootPath(pathPart);
     return pagePath((siteRoot || 'index.html') + hash);
