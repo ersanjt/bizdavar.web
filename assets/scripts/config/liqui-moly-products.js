@@ -7716,18 +7716,15 @@
   (function scrubFxCopy(C) {
     if (!C) return;
     if (C.rate) C.rate.label = '';
-    if (C.quoteChecklist && C.quoteChecklist.tip) {
-      const tip = String(C.quoteChecklist.tip);
-      if (/۴۷|47|لیر\s*÷|TRY\s*÷|نرخ\s*۱|1\s*USD\s*=\s*47/i.test(tip)) {
-        delete C.quoteChecklist.tip;
-      }
+    const fxRe = /۴۷|47|لیر\s*÷|TRY\s*÷|نرخ\s*۱|USD\s*=\s*47/i;
+    if (C.quoteChecklist && C.quoteChecklist.tip && fxRe.test(String(C.quoteChecklist.tip))) {
+      delete C.quoteChecklist.tip;
     }
     (C.categories || []).forEach((cat) => {
       if (!cat || !cat.desc) return;
       cat.desc = String(cat.desc)
         .replace(/\s*[—-]\s*قیمت به دلار(?:\s*\([^)]*\))?/g, '')
-        .replace(/\s*\(نرخ[^)]*\)/g, '')
-        .replace(/\s*\(1\s*USD\s*=\s*47[^)]*\)/gi, '')
+        .replace(/\s*\([^)]*(?:نرخ|USD\s*=)[^)]*\)/gi, '')
         .trim();
     });
     (C.faq || []).forEach((item) => {
@@ -7735,11 +7732,8 @@
       if (item.q && /لیر|TRY|۴۷|47/.test(item.q)) {
         item.q = 'قیمت‌ها چگونه اعلام می‌شود؟';
       }
-      if (item.a) {
-        item.a = String(item.a)
-          .replace(/و از قیمت لیر ترکیه با نرخ ۱ دلار = ۴۷ لیر محاسبه شده\.?\s*/g, '')
-          .replace(/\s*با نرخ ۱ دلار = ۴۷ لیر/g, '')
-          .replace(/\s*at 1 USD = 47 TRY/gi, '');
+      if (item.a && fxRe.test(String(item.a))) {
+        item.a = 'قیمت نمایشی دلاری است. مبلغ نهایی سفارش در پیش‌فاکتور تایید می‌شود.';
       }
     });
   })(window.LIQUI_MOLY_CATALOG);
