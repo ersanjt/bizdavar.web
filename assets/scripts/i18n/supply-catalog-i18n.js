@@ -2583,8 +2583,7 @@
         'Quantity needed (single / carton / bulk)',
         'Vehicle type and fuel (petrol / diesel / motorcycle)',
         'Delivery city or country'
-      ],
-      tip: 'Page prices are approximate. Final amount is stated on the proforma.'
+      ]
     },
     quickSeries: [
       { name: 'Engine oils', tag: '5W / 0W', hint: 'Top Tec · Molygen · Special Tec' },
@@ -2652,8 +2651,7 @@
         'İstenen adet (tek / koli / toptan)',
         'Araç tipi ve yakıt (benzin / dizel / motosiklet)',
         'Teslimat şehri veya ülkesi'
-      ],
-      tip: 'Sayfa fiyatları yaklaşıktır. Nihai tutar proformada belirtilir.'
+      ]
     },
     quickSeries: [
       { name: 'Motor yağları', tag: '5W / 0W', hint: 'Top Tec · Molygen · Special Tec' },

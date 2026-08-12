@@ -243,7 +243,7 @@ window.createSupplyBrandPage = function (cfg) {
 
           </ul>
 
-          ${q.tip ? `<p class="${prefix}-quote-box__tip">${q.tip}</p>` : ''}
+          ${q.tip && !/۴۷|47|لیر\s*÷|TRY\s*÷|نرخ\s*۱|1\s*USD\s*=\s*47/i.test(String(q.tip)) ? `<p class="${prefix}-quote-box__tip">${q.tip}</p>` : ''}
 
         </div>
 
@@ -459,7 +459,7 @@ window.createSupplyBrandPage = function (cfg) {
 
               <small>${isFa() ? cat.titleTr : ''}</small>
 
-              <p>${cat.desc}</p>
+              <p>${String(cat.desc || '').replace(/\s*[—-]\s*قیمت به دلار(?:\s*\([^)]*\))?/g, '').replace(/\s*\(نرخ[^)]*\)/g, '').replace(/\s*\(1\s*USD\s*=\s*47[^)]*\)/gi, '').trim()}</p>
 
               <a href="${inquiryUrl(cat.title)}" class="btn btn--yellow ${prefix}-btn-inquiry">${t('inquiryCategory', 'استعلام این دسته')}</a>
 

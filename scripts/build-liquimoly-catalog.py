@@ -198,7 +198,7 @@ def main():
                 "titleTr": meta["titleTr"],
                 "icon": meta["icon"],
                 "image": (items[0]["image"] if items else None) or (IMG + "octane-plus.jpg"),
-                "desc": f"{len(items)} محصول — قیمت به دلار",
+                "desc": f"{len(items)} محصول",
                 "series": series,
             }
         )
@@ -215,7 +215,7 @@ def main():
     lines.append("(function () {")
     lines.append(f"  const LM = {js_str(IMG)};")
     lines.append("  const logo = 'assets/images/partners/liqui-moly.svg';")
-    lines.append("  const rate = { tryPerUsd: 47, label: 'قیمت دلاری' };")
+    lines.append("  const rate = { tryPerUsd: 47, label: '' };")
     lines.append("")
     lines.append("  window.LIQUI_MOLY_CATALOG = {")
     lines.append("    rate,")
@@ -268,8 +268,7 @@ def main():
     lines.append("        'تعداد مورد نیاز (تکی / کارتن / عمده)',")
     lines.append("        'نوع خودرو و سوخت (بنزین / دیزل / موتورسیکلت)',")
     lines.append("        'شهر یا کشور تحویل'")
-    lines.append("      ],")
-    lines.append("      tip: 'قیمت‌های صفحه تقریبی‌اند. مبلغ نهایی در پیش‌فاکتور اعلام می‌شود.'")
+    lines.append("      ]")
     lines.append("    },")
     lines.append("    quickSeries: [")
     lines.append("      { id: 'engine-oil', name: 'روغن موتور', tag: '5W / 0W', hint: 'Top Tec · Molygen · Special Tec', anchor: 'cat' },")
@@ -287,7 +286,7 @@ def main():
     lines.append("      { name: 'مصرف‌کننده شخصی', desc: 'اکتان پلاس، ضدیخ، تمیزکننده‌ها و car care برای استفاده شخصی — مشاوره انتخاب محصول از واتساپ فارسی.', image: LM + 'audiences/personal.svg', imageAlt: 'مصرف شخصی — Octane Plus و مراقبت خودرو', icon: 'users', models: 'Octane Plus · Antifreeze · Car Care' }")
     lines.append("    ],")
     lines.append("    faq: [")
-    lines.append("      { q: 'قیمت‌ها به دلار است یا لیر؟', a: 'قیمت نمایشی به دلار است. مبلغ نهایی سفارش در پیش‌فاکتور تایید می‌شود.' },")
+    lines.append("      { q: 'قیمت‌ها چگونه اعلام می‌شود؟', a: 'قیمت نمایشی دلاری است. مبلغ نهایی سفارش در پیش‌فاکتور تایید می‌شود.' },")
     lines.append("      { q: 'محصول اصل Liqui Moly است؟', a: 'بله — تامین از کانال توزیع ترکیه. کد محصول (SKU) روی هر آیتم مشخص است.' },")
     lines.append("      { q: 'Octane Plus چیست؟', a: 'افزودنی بنزین ساخت آلمان برای افزایش عدد اکتان و بهبود قدرت موتور. طبق دستورالعمل روی قوطی به باک اضافه می‌شود.' },")
     lines.append("      { q: 'آیا برای خارج از ایران هم ارسال می‌کنید؟', a: 'بله — مشاوره واتساپ فارسی برای فارسی‌زبانان در سراسر جهان فعال است. مقصد تحویل در پیش‌فاکتور مشخص می‌شود.' },")
