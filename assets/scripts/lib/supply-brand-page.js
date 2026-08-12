@@ -355,7 +355,7 @@ window.createSupplyBrandPage = function (cfg) {
 
           <div class="${prefix}-highlight-card__media">
 
-            ${imgTag(h.image, h.imageAlt || title, { width: 280, height: 280 })}
+            ${imgTag(h.image, h.imageAlt || title, { width: 280, height: 280, fallback: catalog().brand?.heroImage || catalog().brand?.logo })}
 
           </div>
 

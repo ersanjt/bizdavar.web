@@ -7740,6 +7740,7 @@
 
   /* Prefer local product images; never hotlink remote CDN (often broken). */
   (function fixLiquiImages(C) {
+    const PLACEHOLDER = 'assets/images/liqui-moly/octane-plus.jpg';
     const LOCAL = {
       '500': 'assets/images/liqui-moly/product-500.jpg',
       '1243': 'assets/images/liqui-moly/product-1243.png',
@@ -7765,17 +7766,39 @@
       '25019': 'assets/images/liqui-moly/product-25019.jpg',
       '30511': 'assets/images/liqui-moly/product-30511.jpg'
     };
-    const logo = 'assets/images/partners/liqui-moly.svg';
+    const CAT_LOCAL = {
+      'engine-oil': 'assets/images/liqui-moly/product-1505.jpg',
+      'fuel-petrol': 'assets/images/liqui-moly/octane-plus.jpg',
+      'fuel-diesel': 'assets/images/liqui-moly/product-21280.jpg',
+      'oil-additive': 'assets/images/liqui-moly/product-5196.jpg',
+      'gear-hydraulic': 'assets/images/liqui-moly/product-4500.jpg',
+      'coolant': 'assets/images/liqui-moly/product-6200.jpg',
+      'car-care': 'assets/images/liqui-moly/product-500.jpg',
+      'motorcycle': 'assets/images/liqui-moly/product-1243.png',
+      'marine': 'assets/images/liqui-moly/product-1502.jpg',
+      'service': 'assets/images/liqui-moly/product-8351.jpg',
+      'other': 'assets/images/liqui-moly/octane-plus.jpg'
+    };
+    function localOrPlaceholder(src, sku, catId) {
+      if (sku && LOCAL[sku]) return LOCAL[sku];
+      if (src && !/^https?:/i.test(src)) return src;
+      if (catId && CAT_LOCAL[catId]) return CAT_LOCAL[catId];
+      return PLACEHOLDER;
+    }
+    (C.highlights || []).forEach(function (h) {
+      if (!h) return;
+      if (!h.image || /^https?:/i.test(h.image)) h.image = PLACEHOLDER;
+    });
     (C.categories || []).forEach(function (cat) {
-      const catImg = cat.image && !/^https?:/i.test(cat.image) ? cat.image : logo;
+      const catId = cat.id || '';
+      cat.image = localOrPlaceholder(cat.image, null, catId);
       (cat.series || []).forEach(function (s) {
-        const sku = String(s.sku || '');
-        if (LOCAL[sku]) {
-          s.image = LOCAL[sku];
-          return;
-        }
-        if (!s.image || /^https?:/i.test(s.image)) s.image = catImg;
+        s.image = localOrPlaceholder(s.image, String(s.sku || ''), catId);
       });
+    });
+    (C.products || []).forEach(function (p) {
+      if (!p) return;
+      p.image = localOrPlaceholder(p.image, String(p.sku || p.id || ''), null);
     });
   })(window.LIQUI_MOLY_CATALOG);
 })();

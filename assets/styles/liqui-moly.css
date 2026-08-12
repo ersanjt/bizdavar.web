@@ -245,21 +245,23 @@ body[data-page="liqui-moly"] .liqui-hero::before {
 
 .liqui-highlight-card__body {
   gap: 6px;
-  padding: 16px;
+  padding: 14px 14px 16px;
   display: flex;
   flex-direction: column;
   flex: 1;
   border-top: 3px solid var(--lm-red);
+  min-height: 0;
 }
 
 .liqui-highlight-card__tr {
   font-size: 0.72rem;
   color: var(--text-muted);
   line-height: 1.3;
+  min-height: 1.1em;
 }
 
 .liqui-highlight-card h3 {
-  font-size: 0.98rem;
+  font-size: 0.95rem;
   line-height: 1.35;
   margin: 0;
   display: -webkit-box;
@@ -267,6 +269,25 @@ body[data-page="liqui-moly"] .liqui-hero::before {
   -webkit-box-orient: vertical;
   overflow: hidden;
   min-height: 2.7em;
+}
+
+.liqui-highlight-card .liqui-price {
+  min-height: 1.7rem;
+  margin: 2px 0 4px;
+}
+
+.liqui-highlight-card__desc,
+.liqui-highlight-card__body > p.liqui-highlight-card__desc {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 3.6em;
+  flex: 0 0 auto;
 }
 
 .liqui-highlight-card__body > p {
@@ -283,32 +304,36 @@ body[data-page="liqui-moly"] .liqui-hero::before {
 
 .liqui-highlight-card__usecase {
   font-size: 0.78rem !important;
-  min-height: 0 !important;
+  min-height: 2.5em !important;
   -webkit-line-clamp: 2 !important;
   margin: 0;
 }
 
 .liqui-highlight-card__foot {
   margin-top: auto;
-  padding-top: 8px;
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  flex: 0 0 auto;
 }
 
 .liqui-highlight-card__actions {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 8px;
   margin-top: 0;
   padding-top: 0;
 }
 
 .liqui-highlight-card__actions .btn {
-  flex: 1 1 auto;
+  width: 100%;
+  min-width: 0;
   justify-content: center;
-  min-height: 42px;
-  font-size: 0.82rem;
+  min-height: 40px;
+  padding: 8px 6px;
+  font-size: 0.75rem;
+  white-space: nowrap;
 }
 
 .liqui-series-card {
@@ -376,6 +401,23 @@ body[data-page="liqui-moly"] .liqui-hero::before {
   font-size: var(--text-sm);
   line-height: 1.3;
   margin: 0;
+}
+
+.liqui-series-card__price {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--brand-accent);
+}
+
+.liqui-series-card__link {
+  display: block;
+  margin-top: auto;
+  padding-top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--lm-red);
 }
 
 .liqui-series-grid {
@@ -717,21 +759,6 @@ body[data-page="liqui-moly"] .liqui-hero::before {
 .liqui-series-card__body > span:not(.liqui-series-card__price):not(.liqui-series-card__link) {
   font-size: var(--text-xs);
   color: var(--text-muted);
-}
-.liqui-series-card__price {
-  display: inline-block;
-  margin-top: 6px;
-  font-size: 1.05rem;
-  font-weight: 800;
-  color: var(--brand-accent);
-}
-.liqui-series-card__link {
-  display: block;
-  margin-top: auto;
-  padding-top: 8px;
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--lm-red);
 }
 
 .liqui-faq__item { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius); margin-bottom: 8px; }
