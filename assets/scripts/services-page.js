@@ -76,7 +76,7 @@
   function fieldWaUrl() {
     const ft = fieldTechCfg();
     const num = ft.whatsapp || '989364115151';
-    const msg = ft.whatsappMessage || t('servicesPage.fieldTech.waDefault', 'سلام مهندس آرشام، برای خدمات فنی از bizdavar.com پیام می‌دهم.');
+    const msg = ft.whatsappMessage || t('servicesPage.fieldTech.waDefault', 'سلام، برای خدمات فنی از bizdavar.com پیام می‌دهم.');
     if (window.BD_CTX?.buildWaUrl) return window.BD_CTX.buildWaUrl(num, msg);
     return `https://wa.me/${num}?text=${encodeURIComponent(msg)}`;
   }
@@ -518,7 +518,7 @@
       <article class="field-tech-lead">
         <div class="field-tech-lead__top">
           <div class="field-tech-lead__badge">${ic('wrench', { size: 18 })} ${t('servicesPage.fieldTech.leadLabel', 'مسئول فنی')}</div>
-          <h3 class="field-tech-lead__name">${t('servicesPage.fieldTech.leadName', ft.lead?.nameFa || 'مهندس آرشام جاهد تبریزی')}</h3>
+          <h3 class="field-tech-lead__name">${t('servicesPage.fieldTech.leadName', ft.lead?.nameFa || 'مسئول فنی')}</h3>
           <p class="field-tech-lead__role">${t('servicesPage.fieldTech.leadRole', ft.lead?.roleFa || '')}</p>
           <div class="field-tech-lead__meta">
             <span class="field-tech-lead__chip">${t('servicesPage.fieldTech.citiesLabel', 'شهرهای هدف')}: ${cities}</span>

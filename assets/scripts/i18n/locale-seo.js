@@ -18,8 +18,8 @@
       },
       services: {
         seoTitle: 'خدمات بیزدوار | وب‌اپ، اپلیکیشن، سرور و خدمات فنی تبریز و استانبول',
-        seoDescription: 'خدمات بیزدوار در تبریز و استانبول: بازاریابی دیجیتال، طراحی وب و وب‌اپلیکیشن، اپلیکیشن اندروید و iOS، سامانه، مدیریت سرور، SMM، نصب دوربین مدار بسته، سیم‌کشی و نورمخفی — مسئول فنی مهندس آرشام جاهد تبریزی.',
-        seoKeywords: 'خدمات بیزدوار, طراحی وب اپلیکیشن, اپلیکیشن اندروید, اپلیکیشن iOS, مدیریت سرور, نصب دوربین مدار بسته تبریز, نصب دوربین مدار بسته استانبول, نورمخفی, سیم‌کشی ساختمان, آرشام جاهد تبریزی'
+        seoDescription: 'خدمات بیزدوار در تبریز و استانبول: بازاریابی دیجیتال، طراحی وب و وب‌اپلیکیشن، اپلیکیشن اندروید و iOS، سامانه، مدیریت سرور، SMM، نصب دوربین مدار بسته، سیم‌کشی و نورمخفی — با هماهنگی مسئول فنی.',
+        seoKeywords: 'خدمات بیزدوار, طراحی وب اپلیکیشن, اپلیکیشن اندروید, اپلیکیشن iOS, مدیریت سرور, نصب دوربین مدار بسته تبریز, نصب دوربین مدار بسته استانبول, نورمخفی, سیم‌کشی ساختمان, مسئول فنی'
       },
       products: {
         seoTitle: 'محصولات بیزدوار | WhatsApp CRM، Accounting، BizSwap و خطوط تولید',
@@ -195,7 +195,7 @@
       },
       services: {
         seoTitle: 'Hizmetler | Web app, mobil, sunucu ve teknik hizmetler',
-        seoDescription: 'Bizdavar: dijital pazarlama, web/web app, Android-iOS, sistem, sunucu yönetimi, SMM ve CCTV/tesisat/gizli aydınlatma — Tebriz ve İstanbul. Teknik sorumlu: Müh. Arsham Jahed Tabrizi.',
+        seoDescription: 'Bizdavar: dijital pazarlama, web/web app, Android-iOS, sistem, sunucu yönetimi, SMM ve CCTV/tesisat/gizli aydınlatma — Tebriz ve İstanbul. Teknik sorumlu ile koordinasyon.',
         seoKeywords: 'Bizdavar hizmetler, web uygulaması, Android uygulama, iOS, sunucu yönetimi, CCTV Tebriz, CCTV İstanbul, gizli aydınlatma'
       },
       products: {
@@ -372,7 +372,7 @@
       },
       services: {
         seoTitle: 'Services | Web apps, mobile, servers & technical installs',
-        seoDescription: 'Bizdavar: digital marketing, web/web apps, Android & iOS, systems, server management, SMM, plus CCTV, wiring and cove lighting in Tabriz and Istanbul. Technical lead: Eng. Arsham Jahed Tabrizi.',
+        seoDescription: 'Bizdavar: digital marketing, web/web apps, Android & iOS, systems, server management, SMM, plus CCTV, wiring and cove lighting in Tabriz and Istanbul — coordinated with the technical lead.',
         seoKeywords: 'Bizdavar services, web application, Android app, iOS app, server management, CCTV Tabriz, CCTV Istanbul, cove lighting'
       },
       products: {

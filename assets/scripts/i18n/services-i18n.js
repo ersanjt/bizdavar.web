@@ -84,7 +84,7 @@
       {
         title: 'خدمات فنی و ساختمانی',
         subtitle: 'دوربین مدار بسته · سیم‌کشی · نورمخفی',
-        body: 'نصب و راه‌اندازی <strong>دوربین مدار بسته</strong>، <strong>سیم‌کشی ساختمان</strong> و <strong>نورمخفی</strong> واحدهای مسکونی و تجاری در <strong>تبریز</strong> و <strong>استانبول</strong> — زیر نظر <strong>مهندس آرشام جاهد تبریزی</strong>.',
+        body: 'نصب و راه‌اندازی <strong>دوربین مدار بسته</strong>، <strong>سیم‌کشی ساختمان</strong> و <strong>نورمخفی</strong> واحدهای مسکونی و تجاری در <strong>تبریز</strong> و <strong>استانبول</strong> — با هماهنگی <strong>مسئول فنی</strong>.',
         tags: ['CCTV', 'سیم‌کشی', 'نورمخفی', 'تبریز', 'استانبول'],
         checks: [
           'نصب دوربین مدار بسته منزل و محل کار — تبریز و استانبول',
@@ -172,7 +172,7 @@
       {
         title: 'Teknik ve bina hizmetleri',
         subtitle: 'CCTV · Tesisat · Gizli aydınlatma',
-        body: '<strong>Güvenlik kamerası</strong>, <strong>bina tesisatı</strong> ve <strong>gizli aydınlatma</strong> — <strong>Tebriz</strong> ve <strong>İstanbul</strong>. Teknik sorumlu: <strong>Müh. Arsham Jahed Tabrizi</strong>.',
+        body: '<strong>Güvenlik kamerası</strong>, <strong>bina tesisatı</strong> ve <strong>gizli aydınlatma</strong> — <strong>Tebriz</strong> ve <strong>İstanbul</strong>. Teknik sorumlu ile koordinasyon.',
         tags: ['CCTV', 'Tesisat', 'Aydınlatma', 'Tebriz', 'İstanbul'],
         checks: [
           'CCTV kurulum — konut ve işyeri',
@@ -260,7 +260,7 @@
       {
         title: 'Technical & building services',
         subtitle: 'CCTV · Wiring · Cove lighting',
-        body: '<strong>CCTV installation</strong>, <strong>building wiring</strong> and <strong>cove lighting</strong> for homes and commercial units in <strong>Tabriz</strong> and <strong>Istanbul</strong> — led by <strong>Eng. Arsham Jahed Tabrizi</strong>.',
+        body: '<strong>CCTV installation</strong>, <strong>building wiring</strong> and <strong>cove lighting</strong> for homes and commercial units in <strong>Tabriz</strong> and <strong>Istanbul</strong> — coordinated with the <strong>technical lead</strong>.',
         tags: ['CCTV', 'Wiring', 'Lighting', 'Tabriz', 'Istanbul'],
         checks: [
           'CCTV for homes and workplaces',
@@ -775,7 +775,7 @@
       title: 'دوربین مدار بسته، سیم‌کشی و نورمخفی',
       desc: 'اجرای تخصصی در تبریز و استانبول — بازدید، پیشنهاد طرح و نصب.',
       leadLabel: 'مسئول فنی',
-      leadName: 'مهندس آرشام جاهد تبریزی',
+      leadName: 'مسئول فنی',
       leadRole: 'مسئول فنی و اجرایی خدمات ساختمانی و امنیتی',
       citiesLabel: 'شهرهای هدف',
       cities: 'تبریز · استانبول',
@@ -797,7 +797,7 @@
       faq: [
         {
           q: 'نصب دوربین مدار بسته در تبریز و استانبول انجام می‌دهید؟',
-          a: 'بله. نصب و راه‌اندازی دوربین مدار بسته برای واحدهای مسکونی و تجاری در تبریز و استانبول توسط تیم فنی بیزدوار و زیر نظر مهندس آرشام جاهد تبریزی انجام می‌شود.'
+          a: 'بله. نصب و راه‌اندازی دوربین مدار بسته برای واحدهای مسکونی و تجاری در تبریز و استانبول توسط تیم فنی بیزدوار و با هماهنگی مسئول فنی انجام می‌شود.'
         },
         {
           q: 'نورمخفی داخل واحد مسکونی یا تجاری هم کار می‌کنید؟',
@@ -814,7 +814,7 @@
       title: 'CCTV, tesisat ve gizli aydınlatma',
       desc: 'Tebriz ve İstanbul’da keşif, plan ve kurulum.',
       leadLabel: 'Teknik sorumlu',
-      leadName: 'Müh. Arsham Jahed Tabrizi',
+      leadName: 'Teknik sorumlu',
       leadRole: 'Teknik ve uygulama sorumlusu — CCTV, tesisat, aydınlatma',
       citiesLabel: 'Hedef şehirler',
       cities: 'Tebriz · İstanbul',
@@ -836,7 +836,7 @@
       faq: [
         {
           q: 'Tebriz ve İstanbul’da kamera kurulumu var mı?',
-          a: 'Evet. Konut ve ticari birimlerde CCTV kurulumu Bizdavar teknik ekibi ve Müh. Arsham Jahed Tabrizi yönetiminde yapılır.'
+          a: 'Evet. Konut ve ticari birimlerde CCTV kurulumu Bizdavar teknik ekibi ve teknik sorumlu koordinasyonunda yapılır.'
         },
         {
           q: 'Gizli aydınlatma da yapıyor musunuz?',
@@ -853,7 +853,7 @@
       title: 'CCTV, wiring and cove lighting',
       desc: 'Survey, plan and install in Tabriz and Istanbul.',
       leadLabel: 'Technical lead',
-      leadName: 'Eng. Arsham Jahed Tabrizi',
+      leadName: 'Technical lead',
       leadRole: 'Technical lead — CCTV, building wiring and cove lighting',
       citiesLabel: 'Focus cities',
       cities: 'Tabriz · Istanbul',
@@ -875,7 +875,7 @@
       faq: [
         {
           q: 'Do you install CCTV in Tabriz and Istanbul?',
-          a: 'Yes. Residential and commercial CCTV installs are handled by the Bizdavar technical team under Eng. Arsham Jahed Tabrizi.'
+          a: 'Yes. Residential and commercial CCTV installs are handled by the Bizdavar technical team with the technical lead.'
         },
         {
           q: 'Do you offer cove lighting indoors?',
@@ -932,7 +932,7 @@
         { title: 'نمونه‌کارها', url: 'portfolio', desc: '۳۵ پروژه و برند' },
         { title: 'تماس', url: 'contact', desc: 'فرم و واتساپ' }
       ],
-      geoText: 'خدمات دیجیتال و فنی بیزدوار — تمرکز اجرایی تبریز و استانبول؛ واتساپ تخصصی خدمات فنی با مهندس آرشام جاهد تبریزی.'
+      geoText: 'خدمات دیجیتال و فنی بیزدوار — تمرکز اجرایی تبریز و استانبول؛ واتساپ تخصصی خدمات فنی با مسئول فنی.'
     },
     tr: {
       hero: {

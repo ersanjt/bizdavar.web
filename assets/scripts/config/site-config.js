@@ -253,12 +253,12 @@ window.BIZDAVAR_CONFIG = {
       { id: 'tr', label: 'ترکیه', display: '+90 501 067 6486', tel: '+905010676486', whatsapp: '905010676486' },
       {
         id: 'field',
-        label: 'خدمات فنی · آرشام',
+        label: 'مسئول فنی',
         display: '+98 936 411 5151',
         tel: '+989364115151',
         whatsapp: '989364115151',
         scope: 'field-tech',
-        whatsappMessage: 'سلام مهندس آرشام، برای خدمات فنی (دوربین مدار بسته / سیم‌کشی / نورمخفی) از وبسایت bizdavar.com پیام می‌دهم.'
+        whatsappMessage: 'سلام، برای خدمات فنی (دوربین مدار بسته / سیم‌کشی / نورمخفی) از وبسایت bizdavar.com پیام می‌دهم.'
       }
     ],
     address: 'استانبول، ترکیه',
@@ -271,8 +271,8 @@ window.BIZDAVAR_CONFIG = {
   fieldTech: {
     id: 'field-tech',
     lead: {
-      nameFa: 'مهندس آرشام جاهد تبریزی',
-      nameEn: 'Eng. Arsham Jahed Tabrizi',
+      nameFa: 'مسئول فنی',
+      nameEn: 'Technical lead',
       roleFa: 'مسئول فنی و اجرایی خدمات ساختمانی و امنیتی',
       roleEn: 'Technical lead — CCTV, wiring & lighting'
     },
@@ -281,7 +281,7 @@ window.BIZDAVAR_CONFIG = {
     tel: '+989364115151',
     cities: ['تبریز', 'استانبول'],
     citiesEn: ['Tabriz', 'Istanbul'],
-    whatsappMessage: 'سلام مهندس آرشام، برای خدمات فنی (دوربین مدار بسته / سیم‌کشی / نورمخفی) از وبسایت bizdavar.com پیام می‌دهم.'
+    whatsappMessage: 'سلام، برای خدمات فنی (دوربین مدار بسته / سیم‌کشی / نورمخفی) از وبسایت bizdavar.com پیام می‌دهم.'
   },
 
   /** شخصیت حقوقی ثبت‌شده در ایران — منبع: پروفایل جویشگر */
