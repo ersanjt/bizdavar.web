@@ -34,12 +34,12 @@ AddType 'text/html; charset=UTF-8' .html
   # CSP — self-hosted fonts; inline scripts for static page boot
   Header set Content-Security-Policy "\
     default-src 'self'; \
-    script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; \
+    script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://static.cloudflareinsights.com; \
     style-src 'self' 'unsafe-inline'; \
     font-src 'self' data:; \
     img-src 'self' data: https:; \
     frame-src 'self' https://www.googletagmanager.com; \
-    connect-src 'self' https://ipapi.co https://ipwho.is https://formspree.io https://*.formspree.io https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://analytics.google.com; \
+    connect-src 'self' https://ipapi.co https://ipwho.is https://formspree.io https://*.formspree.io https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://analytics.google.com https://cloudflareinsights.com https://*.cloudflareinsights.com; \
     frame-ancestors 'self'; \
     base-uri 'self'; \
     form-action 'self' mailto: https://formspree.io https://*.formspree.io; \

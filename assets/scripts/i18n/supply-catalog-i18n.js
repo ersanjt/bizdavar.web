@@ -2544,11 +2544,11 @@
 
   const liquiEn = {
     brand: {
-      heroEyebrow: 'Genuine Liqui Moly supply from Turkey for Farsi speakers',
+      heroEyebrow: 'Genuine Liqui Moly supply for Farsi speakers',
       heroHeadline: 'Liqui Moly oils & additives',
       heroHeadlineSub: 'Engine oil, fuel additives, antifreeze and car care — transparent USD pricing + Farsi consulting',
       tagline: 'Made in Germany',
-      since: 'German brand · Turkey distribution',
+      since: 'German brand · genuine products',
       description: 'Bizdavar Group supplies genuine Liqui Moly products: engine oils, petrol and diesel additives, antifreeze, gearbox fluids and car care. Prices are shown in USD — inquire and order via Farsi WhatsApp.',
       heroStats: [
         { label: 'Products in catalog' },
@@ -2557,10 +2557,10 @@
       ]
     },
     trustSignals: [
-      { label: 'Genuine product', desc: 'Sourced via Liqui Moly Turkey distribution — product codes and specs' },
+      { label: 'Genuine product', desc: 'Genuine Liqui Moly with product codes and technical specs' },
       { label: 'Transparent USD pricing', desc: 'Display USD pricing — proforma before payment' },
       { label: 'Farsi consulting', desc: 'Oil grade, viscosity and additive selection — Farsi WhatsApp' },
-      { label: 'International logistics', desc: 'Purchase coordination and shipping from Turkey to your destination' }
+      { label: 'International logistics', desc: 'Supply coordination and shipping to your destination' }
     ],
     whyBuyFromUs: [
       { title: 'Right oil and additive', desc: 'Not sure about 5W-30 vs 5W-40 or Octane Plus? Tell us the vehicle model and fuel type.' },
@@ -2572,7 +2572,7 @@
       { num: '1', title: 'Pick a product', desc: 'Browse the catalog below or send the name/SKU on WhatsApp' },
       { num: '2', title: 'Confirm price', desc: 'We check display USD vs daily stock and issue a proforma' },
       { num: '3', title: 'Proforma', desc: 'Amount, quantity, lead time and payment terms — clear' },
-      { num: '4', title: 'Supply & shipping', desc: 'Order from Turkey and international logistics' },
+      { num: '4', title: 'Supply & shipping', desc: 'Genuine product supply and international logistics' },
       { num: '5', title: 'Delivery', desc: 'Delivery to destination — Farsi support after purchase' }
     ],
     quoteChecklist: {
@@ -2612,11 +2612,11 @@
 
   const liquiTr = {
     brand: {
-      heroEyebrow: 'Türkiye üzerinden orijinal Liqui Moly tedariki',
+      heroEyebrow: 'Farsça konuşanlar için orijinal Liqui Moly tedariki',
       heroHeadline: 'Liqui Moly yağ ve katkılar',
       heroHeadlineSub: 'Motor yağı, yakıt katkısı, antifriz ve oto bakım — şeffaf dolar fiyat + Farsça danışmanlık',
       tagline: 'Made in Germany',
-      since: 'Alman marka · Türkiye dağıtımı',
+      since: 'Alman marka · orijinal ürün',
       description: 'Bizdavar Group orijinal Liqui Moly ürünleri tedarik eder: motor yağları, benzin ve dizel katkıları, antifriz, şanzıman ve oto bakım. Fiyatlar USD olarak gösterilir — Farsça WhatsApp ile teklif ve sipariş.',
       heroStats: [
         { label: 'Katalogdaki ürün' },
@@ -2625,10 +2625,10 @@
       ]
     },
     trustSignals: [
-      { label: 'Orijinal ürün', desc: 'Liqui Moly Türkiye dağıtım kanalı — ürün kodu ve teknik özellik' },
+      { label: 'Orijinal ürün', desc: 'Orijinal Liqui Moly — ürün kodu ve teknik özellik' },
       { label: 'Şeffaf dolar fiyat', desc: 'Gösterim USD fiyat — ödeme öncesi proforma' },
       { label: 'Farsça danışmanlık', desc: 'Yağ sınıfı, viskozite ve katkı seçimi — Farsça WhatsApp' },
-      { label: 'Uluslararası lojistik', desc: 'Türkiye’den satın alma ve teslimat koordinasyonu' }
+      { label: 'Uluslararası lojistik', desc: 'Tedarik ve sevkiyat koordinasyonu' }
     ],
     whyBuyFromUs: [
       { title: 'Doğru yağ ve katkı', desc: '5W-30 mü 5W-40 mü, Octane Plus uygun mu bilmiyorsanız — araç modeli ve yakıt tipini söyleyin.' },
@@ -2640,7 +2640,7 @@
       { num: '1', title: 'Ürün seçimi', desc: 'Aşağıdaki katalogdan seçin veya WhatsApp’tan ad/SKU gönderin' },
       { num: '2', title: 'Fiyat onayı', desc: 'Gösterim USD’sini günlük stokla kontrol edip proforma veririz' },
       { num: '3', title: 'Proforma', desc: 'Tutar, adet, termin ve ödeme koşulları — net' },
-      { num: '4', title: 'Tedarik ve sevkiyat', desc: 'Türkiye siparişi ve uluslararası lojistik' },
+      { num: '4', title: 'Tedarik ve sevkiyat', desc: 'Orijinal ürün tedariki ve uluslararası lojistik' },
       { num: '5', title: 'Teslimat', desc: 'Varış noktasına teslim — satış sonrası Farsça destek' }
     ],
     quoteChecklist: {

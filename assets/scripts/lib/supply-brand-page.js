@@ -36,9 +36,20 @@ window.createSupplyBrandPage = function (cfg) {
   const locale = () => (window.BIZDAVAR_I18N?.locale || 'fa');
   const isFa = () => locale() === 'fa';
 
+  function isRemoteMedia(u) {
+    return !u || /^https?:/i.test(u) || /liquimolyturkey\.com|shop\.egemot\.com\.tr/i.test(u);
+  }
+
+  function localMedia(src, fallback) {
+    const logo = catalog().brand?.logo || 'assets/images/brand/bizdavar-logo-square.png';
+    if (!isRemoteMedia(src)) return src;
+    if (!isRemoteMedia(fallback)) return fallback;
+    return logo;
+  }
+
   function mediaSrc(src, fallback) {
-    const primary = path(src || fallback || '');
-    const fb = path(fallback || catalog().brand?.logo || 'assets/images/brand/bizdavar-logo-square.png');
+    const primary = path(localMedia(src, fallback));
+    const fb = path(localMedia(fallback, catalog().brand?.logo || 'assets/images/brand/bizdavar-logo-square.png'));
     return { primary, fallback: fb };
   }
 
@@ -445,7 +456,7 @@ window.createSupplyBrandPage = function (cfg) {
 
           <div class="${prefix}-category-block__visual">
 
-            ${imgTag(cat.image, cat.imageAlt || cat.titleTr || cat.title, { width: 200, height: 120 })}
+            ${imgTag(cat.image, cat.imageAlt || cat.title || cat.titleTr || cat.titleEn, { width: 200, height: 120 })}
 
           </div>
 
@@ -472,14 +483,11 @@ window.createSupplyBrandPage = function (cfg) {
         <div class="${prefix}-series-grid">
 
           ${cat.series.map(s => {
-            const imgSrc = s.image && !/^https?:/i.test(s.image)
-              ? s.image
-              : (cat.image && !/^https?:/i.test(cat.image) ? cat.image : (catalog().brand?.logo || ''));
             return `
 
             <a href="${inquiryUrl(s.name)}" class="${prefix}-series-card${s.featured ? ` ${prefix}-series-card--featured` : ''} ${prefix}-series-card--link" data-search="${(s.name + ' ' + (s.note || '') + ' ' + (s.sku || '')).replace(/"/g, '')}">
 
-              <span class="${prefix}-series-card__media">${imgTag(imgSrc, s.name, { width: 200, height: 200, className: `${prefix}-series-card__img`, fallback: cat.image || catalog().brand?.logo })}</span>
+              <span class="${prefix}-series-card__media">${imgTag(s.image, s.imageAlt || `${s.name} — ${brandName}`, { width: 200, height: 200, className: `${prefix}-series-card__img`, fallback: cat.image || catalog().brand?.logo })}</span>
 
               <span class="${prefix}-series-card__body">
 
@@ -793,9 +801,9 @@ window.createSupplyBrandPage = function (cfg) {
     const baseUrl = (C.siteUrl || 'https://bizdavar.com').replace(/\/$/, '');
 
     const absImg = (src) => {
-      if (!src) return undefined;
-      if (/^https?:\/\//i.test(src)) return src;
-      return `${baseUrl}/${String(src).replace(/^\//, '')}`;
+      const safe = localMedia(src);
+      if (!safe || /^https?:\/\//i.test(safe)) return undefined;
+      return `${baseUrl}/${String(safe).replace(/^\//, '')}`;
     };
 
     const items = catalog().categories.flatMap(cat =>

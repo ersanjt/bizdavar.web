@@ -560,7 +560,7 @@ window.BIZDAVAR_CONFIG = {
     {
       name: 'Liqui Moly',
       title: 'روغن و افزودنی خودرو',
-      desc: 'روغن موتور، Octane Plus، افزودنی دیزل و مراقبت خودرو — قیمت دلاری شفاف از ترکیه',
+      desc: 'روغن موتور، Octane Plus، افزودنی دیزل و مراقبت خودرو — قیمت دلاری شفاف',
       logo: 'assets/images/partners/liqui-moly.svg',
       url: 'pages/liqui-moly',
       internal: true,

@@ -62,9 +62,9 @@
         seoKeywords: 'خرید Prosense, دتکتور گاز, PQ Serisi, SafeVader, PPS+, بیزدوار, واتساپ فارسی'
       },
       liquiMoly: {
-        seoTitle: 'خرید Liqui Moly | روغن موتور و افزودنی — قیمت دلاری | بیزدوار',
-        seoDescription: 'تامین اصل Liqui Moly از ترکیه — روغن موتور، Octane Plus، افزودنی دیزل و مراقبت خودرو. قیمت دلاری شفاف و مشاوره فارسی.',
-        seoKeywords: 'Liqui Moly, Octane Plus, روغن موتور, افزودنی بنزین, بیزدوار'
+        seoTitle: 'خرید Liqui Moly | روغن موتور و افزودنی خودرو | بیزدوار',
+        seoDescription: 'بیزدوار گروپ تامین‌کننده محصولات اصل Liqui Moly: روغن موتور، Octane Plus، افزودنی دیزل، ضدیخ و مراقبت خودرو. قیمت دلاری شفاف و مشاوره فارسی.',
+        seoKeywords: 'Liqui Moly, Octane Plus, Top Tec, Molygen, روغن موتور, افزودنی بنزین, بیزدوار'
       },
       teltonika: {
         seoTitle: 'خرید ردیاب Teltonika | FMB920 از ۲۹ دلار — بیزدوار',
@@ -239,8 +239,8 @@
         seoKeywords: 'Prosense, gaz dedektörü, PQ, SafeVader, Bizdavar'
       },
       liquiMoly: {
-        seoTitle: 'Liqui Moly tedariki | Motor yağı ve katkı — dolar fiyat | Bizdavar',
-        seoDescription: 'Türkiye üzerinden orijinal Liqui Moly tedariki — motor yağı, Octane Plus, dizel katkı ve oto bakım. Şeffaf dolar fiyat ve Farsça danışmanlık.',
+        seoTitle: 'Liqui Moly tedariki | Motor yağı ve katkı ürünleri | Bizdavar',
+        seoDescription: 'Bizdavar Group orijinal Liqui Moly tedarik eder: motor yağı, Octane Plus, dizel katkı, antifriz ve oto bakım. Şeffaf dolar fiyat ve Farsça danışmanlık.',
         seoKeywords: 'Liqui Moly, Octane Plus, motor yağı, Bizdavar'
       },
       teltonika: {
@@ -416,8 +416,8 @@
         seoKeywords: 'Prosense, gas detector, PQ, SafeVader, Bizdavar'
       },
       liquiMoly: {
-        seoTitle: 'Liqui Moly supply | Motor oil & additives — USD prices | Bizdavar',
-        seoDescription: 'Genuine Liqui Moly from Turkey — engine oil, Octane Plus, diesel additives and car care. Transparent USD pricing and Farsi consulting.',
+        seoTitle: 'Liqui Moly supply | Motor oil & fuel additives | Bizdavar',
+        seoDescription: 'Bizdavar Group supplies genuine Liqui Moly: engine oil, Octane Plus, diesel additives, antifreeze and car care. Transparent USD pricing and Farsi consulting.',
         seoKeywords: 'Liqui Moly, Octane Plus, engine oil, Bizdavar'
       },
       teltonika: {
