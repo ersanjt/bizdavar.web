@@ -282,7 +282,7 @@
         buy: { eyebrow: 'مسیر خرید', title: 'از انتخاب محصول تا تحویل — ۵ مرحله', desc: 'قیمت نمایشی دلاری است؛ مبلغ نهایی در پیش‌فاکتور تایید می‌شود.' },
         quote: { eyebrow: 'راهنمای استعلام', title: 'استعلام دقیق‌تر = پیشنهاد سریع‌تر', desc: 'نام محصول، کد SKU یا مدل خودرو را در واتساپ فارسی بفرستید.' },
         highlights: { eyebrow: 'محصولات پرتقاضا', title: 'از Octane Plus تا روغن موتور', desc: 'قیمت تقریبی دلاری روی هر کارت — برای سفارش واتساپ یا فرم استعلام.' },
-        catalog: { eyebrow: 'کاتالوگ کامل', title: 'محصولات Liqui Moly با قیمت دلاری', desc: 'منبع قیمت: توزیع‌کننده ترکیه — Liqui Moly Türkiye' },
+        catalog: { eyebrow: 'کاتالوگ کامل', title: 'محصولات Liqui Moly با قیمت دلاری', desc: 'کاتالوگ اصل Liqui Moly — تامین از کانال توزیع ترکیه' },
         iran: { eyebrow: 'کاربرد', title: 'Liqui Moly برای چه کسانی؟', desc: 'از تعمیرگاه و ناوگان تا موتورسیکلت و مصرف شخصی — برای هر کاربرد، مسیر استعلام فارسی و تامین اصل آماده است.', note: 'کاربردتان در لیست نیست؟ مدل خودرو، نوع سوخت و تعداد را بفرستید تا پیشنهاد دقیق بگیریم.' },
         supply: { eyebrow: 'تامین از بیزدوار', title: 'خدمات تامین Liqui Moly', desc: 'شریک تامین شما — نه فقط لیست قیمت' },
         faq: { eyebrow: 'سوالات متداول', title: 'پرسش‌های رایج خریداران', desc: 'پاسخ را پیدا نکردید؟ در واتساپ فارسی پیام بدهید.' }
@@ -363,7 +363,7 @@
         buy: { eyebrow: 'Satınalma yolu', title: 'Ürün seçiminden teslimata — 5 adım', desc: 'Gösterilen fiyat dolardır; nihai tutar proformada onaylanır.' },
         quote: { eyebrow: 'Teklif rehberi', title: 'Daha net talep = daha hızlı öneri', desc: 'Ürün adı, SKU veya araç modelini WhatsApp’tan gönderin.' },
         highlights: { eyebrow: 'En çok talep edilenler', title: 'Octane Plus’tan motor yağına', desc: 'Her kartta yaklaşık dolar fiyatı — WhatsApp veya teklif formu.' },
-        catalog: { eyebrow: 'Tam katalog', title: 'Dolar fiyatlı Liqui Moly ürünleri', desc: 'Fiyat kaynağı: Türkiye dağıtıcısı — Liqui Moly Türkiye' },
+        catalog: { eyebrow: 'Tam katalog', title: 'Dolar fiyatlı Liqui Moly ürünleri', desc: 'Orijinal Liqui Moly kataloğu — Türkiye dağıtım kanalından tedarik' },
         iran: { eyebrow: 'Uygulama', title: 'Liqui Moly kimler için?', desc: 'Servisten filoya, motosikletten bireysel kullanıma — her kullanım için Farsça teklif ve orijinal tedarik.', note: 'Listenizde yok mu? Araç modeli, yakıt tipi ve adedi gönderin — net öneri verelim.' },
         supply: { eyebrow: 'Bizdavar tedariki', title: 'Liqui Moly tedarik hizmetleri', desc: 'Tedarik ortağınız — sadece fiyat listesi değil' },
         faq: { eyebrow: 'SSS', title: 'Alıcıların sık sorduğu sorular', desc: 'Cevabı bulamadınız mı? WhatsApp’tan yazın.' }
@@ -444,7 +444,7 @@
         buy: { eyebrow: 'Purchase path', title: 'From product pick to delivery — 5 steps', desc: 'Displayed prices are in USD; the final amount is confirmed on the proforma.' },
         quote: { eyebrow: 'Quote guide', title: 'Clearer request = faster proposal', desc: 'Send product name, SKU or vehicle model on WhatsApp.' },
         highlights: { eyebrow: 'High-demand products', title: 'From Octane Plus to engine oils', desc: 'Approximate USD price on every card — WhatsApp or quote form.' },
-        catalog: { eyebrow: 'Full catalog', title: 'Liqui Moly products with USD prices', desc: 'Price source: Turkey distributor — Liqui Moly Türkiye' },
+        catalog: { eyebrow: 'Full catalog', title: 'Liqui Moly products with USD prices', desc: 'Genuine Liqui Moly catalog — supply via Turkey distribution channel' },
         iran: { eyebrow: 'Use cases', title: 'Who is Liqui Moly for?', desc: 'From workshops and fleets to motorcycles and personal use — Farsi inquiry and genuine supply for every use case.', note: 'Not listed? Send vehicle model, fuel type and quantity for a precise recommendation.' },
         supply: { eyebrow: 'Supply by Bizdavar', title: 'Liqui Moly supply services', desc: 'Your supply partner — not just a price list' },
         faq: { eyebrow: 'FAQ', title: 'Common buyer questions', desc: 'Didn’t find your answer? Message us on WhatsApp.' }
