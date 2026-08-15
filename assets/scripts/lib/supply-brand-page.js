@@ -23,6 +23,7 @@ window.createSupplyBrandPage = function (cfg) {
 
 
   const path = (r) => window.resolvePath(r);
+  const pagePath = (r) => (window.resolvePagePath || path)(r);
 
   const R = window.BIZDAVAR_CONFIG?.routes || {};
 
@@ -74,7 +75,7 @@ window.createSupplyBrandPage = function (cfg) {
 
   function inquiryUrl(productName) {
 
-    const base = path(R.contact || 'pages/contact.html');
+    const base = pagePath(R.contact || 'pages/contact.html');
 
     const tpl = t('inquiryTemplate', catalog().inquiryTemplate || 'استعلام {product}').replace('{product}', productName);
 

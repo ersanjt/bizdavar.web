@@ -90,13 +90,15 @@ AddType 'text/html; charset=UTF-8' .html
   RewriteCond %{REQUEST_URI} ^/(tr|en|ru|ar)/?$ [NC]
   RewriteRule ^ /index.html [L]
 
-  # Locale-prefixed URLs — serve baked copies first, then fall back to shared HTML
-  RewriteCond %{DOCUMENT_ROOT}/%1/pages/blog.html -f
+  # Locale-prefixed URLs — baked copy first, then shared pages/*.html
+  # Use $1/$2 (next RewriteRule captures). %1 is empty in this block and was
+  # matching the FA file, then rewriting to a missing /en/pages/*.html (404).
+  RewriteCond %{DOCUMENT_ROOT}/$1/pages/blog.html -f
   RewriteRule ^(tr|en|ru|ar)/blog/?$ $1/pages/blog.html [L]
   RewriteCond %{DOCUMENT_ROOT}/pages/blog.html -f
   RewriteRule ^(tr|en|ru|ar)/blog/?$ pages/blog.html [L]
 
-  RewriteCond %{DOCUMENT_ROOT}/%1/pages/$2.html -f
+  RewriteCond %{DOCUMENT_ROOT}/$1/pages/$2.html -f
   RewriteRule ^(tr|en|ru|ar)/pages/(.+?)/?$ $1/pages/$2.html [L]
   RewriteRule ^(tr|en|ru|ar)/pages/(.+?)/?$ pages/$2.html [L]
 
