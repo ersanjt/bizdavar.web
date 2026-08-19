@@ -34,9 +34,9 @@
   var pageSeoRu = {
     home: {
       crumb: 'Главная',
-      seoTitle: 'Bizdavar Group | веб-дизайн, цифровой маркетинг и промышленные поставки',
-      seoDescription: 'Из Стамбула: сайты Fast Web Studio, цифровой маркетинг и SMM, FXGuard WhatsApp CRM, поставки VEGA, Prosense и Liqui Moly. Бесплатная консультация.',
-      seoKeywords: 'Bizdavar, веб-дизайн Стамбул, цифровой маркетинг, FXGuard, VEGA, Prosense, Liqui Moly, Fast Web Studio'
+      seoTitle: 'Веб-дизайн и поставка VEGA из Стамбула | Бесплатная консультация',
+      seoDescription: 'Сайт за 5 дней, цифровой маркетинг и оригинальные VEGA / Prosense из Стамбула. Расчёт цены и бесплатная консультация в WhatsApp — Bizdavar.',
+      seoKeywords: 'веб-дизайн Стамбул, купить VEGA, Prosense, цифровой маркетинг, Fast Web Studio, Bizdavar'
     },
     about: {
       crumb: 'О нас',
@@ -46,9 +46,9 @@
     },
     services: {
       crumb: 'Услуги',
-      seoTitle: 'Услуги | цифровой маркетинг, веб-дизайн, SMM и техобслуживание',
-      seoDescription: 'Услуги Bizdavar в Стамбуле и Тебризе: маркетинг, web/web app, Android и iOS, серверы, SMM, CCTV, проводка и скрытое освещение.',
-      seoKeywords: 'услуги Bizdavar, цифровой маркетинг, веб-дизайн, SMM, CCTV Стамбул'
+      seoTitle: 'Веб-дизайн и маркетинг в Стамбуле | Bizdavar',
+      seoDescription: 'Стамбул и Тебриз: сайт за 5 дней, SEO, SMM, приложения, серверы и монтаж. Бесплатная консультация — запросите расчёт в WhatsApp.',
+      seoKeywords: 'веб-дизайн Стамбул, цифровой маркетинг, SEO, SMM, Bizdavar'
     },
     fieldTech: {
       crumb: 'Технические услуги',
@@ -58,15 +58,15 @@
     },
     products: {
       crumb: 'Продукты',
-      seoTitle: 'Продукты Bizdavar | FXGuard CRM, Fast Web Studio и промышленные поставки',
-      seoDescription: 'Продукты Bizdavar: FXGuard WhatsApp CRM и Accounting, Fast Web Studio, BizSwap — плюс поставки VEGA, Prosense и Liqui Moly.',
-      seoKeywords: 'продукты Bizdavar, FXGuard, WhatsApp CRM, Fast Web Studio, VEGA, Prosense, Liqui Moly'
+      seoTitle: 'Купить VEGA, Prosense и FXGuard | продукты Bizdavar',
+      seoDescription: 'Каталог Bizdavar: датчики VEGA, детекторы Prosense, Liqui Moly, Teltonika и FXGuard WhatsApp CRM. Прозрачная цена и расчёт в WhatsApp.',
+      seoKeywords: 'купить VEGA, Prosense, FXGuard, Fast Web Studio, Liqui Moly, Bizdavar'
     },
     contact: {
       crumb: 'Контакты',
-      seoTitle: 'Контакты | бесплатная консультация — услуги и промышленные поставки',
-      seoDescription: 'Бесплатная консультация Bizdavar: веб-дизайн, маркетинг, FXGuard и поставки VEGA, Prosense и Liqui Moly. Форма, WhatsApp и email — Стамбул.',
-      seoKeywords: 'контакты Bizdavar, бесплатная консультация, веб-дизайн, VEGA, Liqui Moly, FXGuard'
+      seoTitle: 'Бесплатная консультация и расчёт | WhatsApp Bizdavar',
+      seoDescription: 'Запрос VEGA, Prosense или сайта — форма или WhatsApp. Ответ в рабочие часы из Стамбула и Тебриза.',
+      seoKeywords: 'бесплатная консультация, расчёт VEGA, WhatsApp Bizdavar, контакты Bizdavar'
     },
     liquiMoly: {
       crumb: 'Продукция Liqui Moly',
@@ -76,15 +76,15 @@
     },
     vega: {
       crumb: 'Продукция VEGA',
-      seoTitle: 'Купить датчик VEGA | VEGAPULS 6X, VEGABAR 39, VEGAPOINT — Bizdavar',
-      seoDescription: 'Поставка оригинальных датчиков VEGA: VEGAPULS 6X, VEGABAR 39, VEGAVIB S61, VEGAPOINT 11/21/31. Техконсультация, точный order code, прозрачная проформа и международная логистика — Bizdavar Group.',
-      seoKeywords: 'купить VEGA, датчик уровня VEGA, VEGAPULS 6X, VEGABAR 39, VEGAVIB S61, VEGAPOINT 11, VEGAPOINT 21, VEGAPOINT 31, датчик давления, Bizdavar'
+      seoTitle: 'Купить датчики VEGA | VEGAPULS — расчёт из Стамбула',
+      seoDescription: 'VEGAPULS 6X, VEGABAR 39 и VEGAPOINT оригинал из Стамбула до проекта в Иране. Точный order code, прозрачная проформа и консультация в WhatsApp.',
+      seoKeywords: 'купить VEGA, VEGAPULS 6X, VEGABAR 39, VEGAPOINT, датчик уровня, Bizdavar'
     },
     prosense: {
       crumb: 'Продукция Prosense',
-      seoTitle: 'Купить детектор Prosense | PQ, SafeVader, PPS+ — Bizdavar',
-      seoDescription: 'Поставка оригинальных газовых и пламенных детекторов Prosense: PQ, SafeVader, SOMA, PPS+. Сертификаты SIL/M1/EN, техконсультация, прозрачная проформа и международная логистика — Bizdavar Group.',
-      seoKeywords: 'купить Prosense, газовый детектор, детектор пламени, PQ Series, SafeVader, SOMA M1, PPS+, SIL2, EN-50545-1, Bizdavar'
+      seoTitle: 'Купить газовые детекторы Prosense | PQ и SafeVader',
+      seoDescription: 'Оригинальные газовые и пламенные детекторы Prosense с сертификатами SIL. Запрос PQ, SafeVader и PPS+ в WhatsApp — прозрачная проформа от Bizdavar.',
+      seoKeywords: 'купить Prosense, газовый детектор, PQ Series, SafeVader, PPS+, Bizdavar'
     },
     portfolio: {
       crumb: 'Портфолио',
@@ -94,9 +94,9 @@
     },
     fast: {
       crumb: 'Fast Web Studio',
-      seoTitle: 'Fast Web Studio | сайт за 5 дней — Bizdavar',
-      seoDescription: 'Bizdavar Fast Web Studio — сайт за 5 дней. Базовый $99, магазин $199, pro $299. RTL, WhatsApp, WooCommerce и базовое SEO.',
-      seoKeywords: 'Fast Web Studio, веб-дизайн, WooCommerce, Bizdavar'
+      seoTitle: 'Сайт за 5 дней от $99 | Fast Web Studio',
+      seoDescription: 'Корпоративный, магазин и лендинг за 5 рабочих дней. Тарифы $99 / $199 / $299 — RTL, WhatsApp и базовое SEO. Заказ у Bizdavar.',
+      seoKeywords: 'сайт за 5 дней, дешёвый веб-дизайн, Fast Web Studio, WooCommerce, Bizdavar'
     },
     blog: {
       crumb: 'Блог',
@@ -253,9 +253,9 @@
   var pageSeoAr = {
     home: {
       crumb: 'الرئيسية',
-      seoTitle: 'Bizdavar Group | تصميم مواقع وتسويق رقمي وتوريد صناعي',
-      seoDescription: 'من إسطنبول: مواقع Fast Web Studio، تسويق رقمي وSMM، FXGuard WhatsApp CRM، وتوريد VEGA وProsense وLiqui Moly. استشارة مجانية.',
-      seoKeywords: 'Bizdavar, تصميم مواقع إسطنبول, تسويق رقمي, FXGuard, VEGA, Prosense, Liqui Moly, Fast Web Studio'
+      seoTitle: 'تصميم مواقع وشراء VEGA من إسطنبول | استشارة مجانية',
+      seoDescription: 'موقع خلال ٥ أيام، تسويق رقمي وتوريد VEGA وProsense الأصلي من إسطنبول. عرض سعر واستشارة مجانية عبر واتساب — Bizdavar.',
+      seoKeywords: 'تصميم مواقع إسطنبول, شراء VEGA, Prosense, تسويق رقمي, Fast Web Studio, Bizdavar'
     },
     about: {
       crumb: 'من نحن',
@@ -265,9 +265,9 @@
     },
     services: {
       crumb: 'الخدمات',
-      seoTitle: 'الخدمات | تسويق رقمي وتصميم مواقع وSMM وتركيبات فنية',
-      seoDescription: 'خدمات Bizdavar في إسطنبول وتبريز: تسويق رقمي، ويب/web app، Android وiOS، خوادم، SMM، كاميرات، تمديدات وإضاءة مخفية.',
-      seoKeywords: 'خدمات Bizdavar, تسويق رقمي, تصميم مواقع, SMM, كاميرات إسطنبول'
+      seoTitle: 'تصميم مواقع وتسويق رقمي إسطنبول | Bizdavar',
+      seoDescription: 'إسطنبول وتبريز: موقع خلال ٥ أيام، SEO وSMM وتطبيقات وخوادم وتركيبات فنية. استشارة مجانية — اطلب عرض سعر عبر واتساب.',
+      seoKeywords: 'تصميم مواقع إسطنبول, تسويق رقمي, SEO, SMM, Bizdavar'
     },
     fieldTech: {
       crumb: 'خدمات فنية',
@@ -277,15 +277,15 @@
     },
     products: {
       crumb: 'المنتجات',
-      seoTitle: 'منتجات Bizdavar | FXGuard CRM وFast Web Studio وتوريد صناعي',
-      seoDescription: 'منتجات Bizdavar: FXGuard WhatsApp CRM وAccounting، Fast Web Studio، BizSwap — مع توريد VEGA وProsense وLiqui Moly.',
-      seoKeywords: 'منتجات Bizdavar, FXGuard, WhatsApp CRM, Fast Web Studio, VEGA, Prosense, Liqui Moly'
+      seoTitle: 'شراء VEGA وProsense وFXGuard | منتجات Bizdavar',
+      seoDescription: 'كتالوج Bizdavar: حساسات VEGA وكواشف Prosense وLiqui Moly وTeltonika وFXGuard WhatsApp CRM. سعر واضح وعرض واتساب.',
+      seoKeywords: 'شراء VEGA, Prosense, FXGuard, Fast Web Studio, Liqui Moly, Bizdavar'
     },
     contact: {
       crumb: 'اتصل بنا',
-      seoTitle: 'اتصل بنا | استشارة مجانية — خدمات وتوريد صناعي',
-      seoDescription: 'استشارة مجانية من Bizdavar: تصميم مواقع، تسويق رقمي، FXGuard وتوريد VEGA وProsense وLiqui Moly. نموذج وواتساب وبريد — إسطنبول.',
-      seoKeywords: 'اتصال Bizdavar, استشارة مجانية, تصميم مواقع, VEGA, Liqui Moly, FXGuard'
+      seoTitle: 'استشارة مجانية وعرض سعر | واتساب Bizdavar',
+      seoDescription: 'استعلام VEGA أو Prosense أو تصميم موقع — نموذج أو واتساب. الرد خلال ساعات العمل من إسطنبول وتبريز.',
+      seoKeywords: 'استشارة مجانية, عرض سعر VEGA, واتساب Bizdavar, اتصال Bizdavar'
     },
     liquiMoly: {
       crumb: 'منتجات Liqui Moly',
@@ -295,15 +295,15 @@
     },
     vega: {
       crumb: 'منتجات VEGA',
-      seoTitle: 'شراء حساس VEGA | VEGAPULS 6X، VEGABAR 39، VEGAPOINT — Bizdavar',
-      seoDescription: 'توريد حساسات VEGA الأصلية: VEGAPULS 6X، VEGABAR 39، VEGAVIB S61، VEGAPOINT 11/21/31. استشارة فنية، رمز طلب دقيق، فاتورة مبدئية شفافة ولوجستيات دولية — مجموعة Bizdavar.',
-      seoKeywords: 'شراء VEGA, حساس مستوى VEGA, VEGAPULS 6X, VEGABAR 39, VEGAVIB S61, VEGAPOINT 11, VEGAPOINT 21, VEGAPOINT 31, مرسل ضغط, بيزدوار, Bizdavar'
+      seoTitle: 'شراء حساسات VEGA | عرض VEGAPULS من إسطنبول',
+      seoDescription: 'VEGAPULS 6X وVEGABAR 39 وVEGAPOINT أصلية من إسطنبول إلى مشروعك في إيران. رمز طلب دقيق وفاتورة مبدئية واستشارة عبر واتساب.',
+      seoKeywords: 'شراء VEGA, VEGAPULS 6X, VEGABAR 39, VEGAPOINT, حساس مستوى, Bizdavar'
     },
     prosense: {
       crumb: 'منتجات Prosense',
-      seoTitle: 'شراء كاشف Prosense | PQ، SafeVader، PPS+ — Bizdavar',
-      seoDescription: 'توريد كواشف غاز ولهب Prosense الأصلية: PQ، SafeVader، SOMA، PPS+. شهادات SIL/M1/EN، استشارة فنية، فاتورة مبدئية شفافة ولوجستيات دولية — مجموعة Bizdavar.',
-      seoKeywords: 'شراء Prosense, كاشف غاز, كاشف لهب, PQ Series, SafeVader, SOMA M1, PPS+, SIL2, EN-50545-1, بيزدوار, Bizdavar'
+      seoTitle: 'شراء كواشف غاز Prosense | PQ وSafeVader',
+      seoDescription: 'كواشف غاز ولهب Prosense الأصلية بشهادات SIL. استعلام PQ وSafeVader وPPS+ عبر واتساب — فاتورة مبدئية شفافة من Bizdavar.',
+      seoKeywords: 'شراء Prosense, كاشف غاز, PQ Series, SafeVader, PPS+, Bizdavar'
     },
     portfolio: {
       crumb: 'الأعمال',
@@ -313,9 +313,9 @@
     },
     fast: {
       crumb: 'Fast Web Studio',
-      seoTitle: 'Fast Web Studio | موقع احترافي خلال ٥ أيام — Bizdavar',
-      seoDescription: 'Bizdavar Fast Web Studio — موقع خلال ٥ أيام. أساسي $99، متجر $199، احترافي $299. RTL وواتساب وWooCommerce وSEO أساسي.',
-      seoKeywords: 'Fast Web Studio, تصميم مواقع, WooCommerce, Bizdavar'
+      seoTitle: 'موقع خلال ٥ أيام من ٩٩ دولار | Fast Web Studio',
+      seoDescription: 'موقع شركات ومتجر ولاندينغ خلال ٥ أيام عمل. باقات $99 / $199 / $299 — RTL وواتساب وSEO أساسي. اطلب من Bizdavar.',
+      seoKeywords: 'تصميم مواقع ٥ أيام, تصميم مواقع رخيص, Fast Web Studio, WooCommerce, Bizdavar'
     },
     blog: {
       crumb: 'المدونة',
@@ -470,11 +470,16 @@
   };
 
   var homeRu = {
-    heroBadge: 'Bizdavar Group — цифровое агентство',
-    heroTitle: 'Развивайте бизнес с',
-    heroTitleSpan: 'умными цифровыми',
-    heroTitleEnd: 'решениями',
-    heroDesc: 'Сайты Fast Web Studio, цифровой маркетинг, FXGuard и поставки VEGA, Prosense и Liqui Moly — из Стамбула.',
+    heroBadge: 'Bizdavar — веб-дизайн и промышленные поставки из Стамбула',
+    heroTitle: 'Веб-дизайн и поставка',
+    heroTitleSpan: 'VEGA из Стамбула',
+    heroTitleEnd: 'с бесплатной консультацией',
+    heroDesc: 'Сайт за 5 дней, цифровой маркетинг и оригинальные VEGA, Prosense и Liqui Moly. Расчёт в WhatsApp.',
+    intentNavLabel: 'Популярные страницы',
+    intentVega: 'Купить VEGA',
+    intentProsense: 'Детектор Prosense',
+    intentFast: 'Сайт за 5 дней',
+    intentQuote: 'Бесплатный расчёт',
     viewServices: 'Смотреть услуги',
     heroCard: 'Цифровой маркетинг · Веб-дизайн · Промышленность',
     statProjects: 'Цифровых проектов',
@@ -516,24 +521,29 @@
     blogTitle: 'Последние статьи',
     blogAll: 'Все материалы блога',
     faqTitle: 'Частые вопросы',
-    ctaTitle: 'Готовы начать?',
-    ctaDesc: 'Свяжитесь с командой Bizdavar — отвечаем в рабочие часы',
-    ctaForm: 'Форма связи',
+    ctaTitle: 'Нужен расчёт VEGA или новый сайт?',
+    ctaDesc: 'Напишите в WhatsApp — бесплатная консультация из Стамбула и Тебриза',
+    ctaForm: 'Запросить расчёт',
     faqs: [
-      { q: 'С какого года работает Bizdavar Group?', a: 'С 2013 года, основатель — Эрсан Джахед Табризи. Более 100 проектов в 11 странах.' },
-      { q: 'Какие услуги предоставляет Bizdavar?', a: 'Шесть направлений: цифровой маркетинг, веб и web app, мобильные приложения и системы, серверы, SMM и технический монтаж (CCTV, проводка, освещение). Продукты и промышленные бренды — на странице продуктов.' },
-      { q: 'Сколько занимает разработка сайта?', a: 'С Fast Web Studio — от 5 рабочих дней, тарифы от $99 до $299.' },
-      { q: 'Как проверить надёжность Bizdavar?', a: 'LinkedIn основателя, портфолио, сертификаты Google и info@bizdavar.com.' },
-      { q: 'Какие промышленные бренды вы поставляете?', a: 'VEGA, Prosense, Liqui Moly, Gamak, Digi System, Teraoka и другие глобальные бренды.' }
+      { q: 'Как купить оригинальные датчики VEGA для проекта в Иране?', a: 'Выберите модель на странице VEGA или пришлите данные резервуара/процесса в WhatsApp. Bizdavar выдаёт точный order code, проформу и логистику из Стамбула.' },
+      { q: 'Сколько стоит сайт Fast Web Studio?', a: 'Базовый $99, магазин $199, pro $299 — сдача от 5 рабочих дней, RTL и базовое SEO.' },
+      { q: 'Где взять газовые детекторы Prosense?', a: 'Оригинальные PQ, SafeVader и PPS+ с сертификатами SIL. Расчёт в WhatsApp на фарси или турецком.' },
+      { q: 'Как начинается бесплатная консультация?', a: 'Заполните форму или напишите в WhatsApp. Отвечаем из Стамбула и Тебриза в рабочие часы.' },
+      { q: 'Где работает Bizdavar?', a: 'Штаб-квартира в Стамбуле, координация по Ирану в Тебризе, проекты в 11 странах — цифровые услуги и промышленные поставки.' }
     ]
   };
 
   var homeAr = {
-    heroBadge: 'Bizdavar Group — وكالة تسويق رقمي',
-    heroTitle: 'نمِّ عملك مع',
-    heroTitleSpan: 'حلول رقمية',
-    heroTitleEnd: 'ذكية',
-    heroDesc: 'مواقع Fast Web Studio وتسويق رقمي وFXGuard وتوريد VEGA وProsense وLiqui Moly — من إسطنبول.',
+    heroBadge: 'Bizdavar — تصميم مواقع وتوريد صناعي من إسطنبول',
+    heroTitle: 'تصميم مواقع وتوريد',
+    heroTitleSpan: 'VEGA من إسطنبول',
+    heroTitleEnd: 'مع استشارة مجانية',
+    heroDesc: 'موقع خلال ٥ أيام وتسويق رقمي وتوريد VEGA وProsense وLiqui Moly الأصلي. عرض السعر عبر واتساب.',
+    intentNavLabel: 'صفحات مطلوبة',
+    intentVega: 'شراء VEGA',
+    intentProsense: 'كاشف Prosense',
+    intentFast: 'موقع خلال ٥ أيام',
+    intentQuote: 'عرض سعر مجاني',
     viewServices: 'عرض الخدمات',
     heroCard: 'تسويق رقمي · تصميم ويب · صناعي',
     statProjects: 'مشاريع رقمية',
@@ -575,15 +585,15 @@
     blogTitle: 'أحدث المقالات',
     blogAll: 'كل مقالات المدونة',
     faqTitle: 'الأسئلة الشائعة',
-    ctaTitle: 'جاهز للبدء؟',
-    ctaDesc: 'تواصل مع فريق Bizdavar — نرد خلال ساعات العمل',
-    ctaForm: 'نموذج الاتصال',
+    ctaTitle: 'تحتاج عرض سعر VEGA أو موقعاً جديداً؟',
+    ctaDesc: 'راسل واتساب — استشارة مجانية من إسطنبول وتبريز',
+    ctaForm: 'طلب عرض سعر',
     faqs: [
-      { q: 'منذ متى تعمل مجموعة Bizdavar؟', a: 'منذ ٢٠١٣، أسسها إرسان جاهد تبريزي — أكثر من ١٠٠ مشروع في ١١ دولة.' },
-      { q: 'ما الخدمات التي تقدمها Bizdavar؟', a: 'ستة محاور: تسويق رقمي، ويب وweb app، تطبيقات وأنظمة، خوادم، SMM وتركيبات فنية (كاميرات وتمديدات وإضاءة). المنتجات والعلامات الصناعية في صفحة المنتجات.' },
-      { q: 'كم يستغرق تصميم الموقع؟', a: 'مع Fast Web Studio التسليم من ٥ أيام عمل، باقات من $99 إلى $299.' },
-      { q: 'كيف أتحقق من موثوقية Bizdavar؟', a: 'LinkedIn المؤسس، الأعمال، شهادات Google وinfo@bizdavar.com.' },
-      { q: 'ما العلامات الصناعية التي تورّدونها؟', a: 'VEGA وProsense وLiqui Moly وGamak وDigi System وTeraoka وعلامات عالمية أخرى.' }
+      { q: 'كيف أشتري حساسات VEGA الأصلية لمشروع في إيران؟', a: 'اختر الموديل من صفحة VEGA أو أرسل بيانات الخزان/العملية عبر واتساب. Bizdavar يصدر رمز الطلب والفاتورة المبدئية واللوجستيات من إسطنبول.' },
+      { q: 'كم يكلف موقع Fast Web Studio؟', a: 'أساسي $99 ومتجر $199 واحترافي $299 — التسليم من ٥ أيام عمل مع RTL وSEO أساسي.' },
+      { q: 'من أين أحصل على كواشف غاز Prosense؟', a: 'PQ وSafeVader وPPS+ أصلية بشهادات SIL. عرض السعر عبر واتساب بالفارسية أو التركية.' },
+      { q: 'كيف تبدأ الاستشارة المجانية؟', a: 'املأ النموذج أو راسل واتساب. نرد من إسطنبول وتبريز خلال ساعات العمل.' },
+      { q: 'أين تعمل Bizdavar؟', a: 'المقر في إسطنبول وتنسيق إيران في تبريز ومشاريع في ١١ دولة — خدمات رقمية وتوريد صناعي.' }
     ]
   };
 

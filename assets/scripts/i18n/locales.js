@@ -271,11 +271,16 @@ window.BIZDAVAR_LOCALES = {
       ]
     },
     home: {
-      heroBadge: 'Bizdavar Group — آژانس دیجیتال مارکتینگ',
-      heroTitle: 'توسعه کسب‌وکار شما با',
-      heroTitleSpan: 'راهکارهای دیجیتال',
-      heroTitleEnd: 'هوشمند',
-      heroDesc: 'طراحی سایت با Fast Web Studio، بازاریابی دیجیتال، FXGuard و تامین VEGA، Prosense و Liqui Moly — از استانبول.',
+      heroBadge: 'بیزدوار — طراحی سایت و تامین صنعتی از استانبول',
+      heroTitle: 'طراحی سایت و تامین',
+      heroTitleSpan: 'VEGA از استانبول',
+      heroTitleEnd: 'با مشاوره رایگان',
+      heroDesc: 'سایت در ۵ روز، بازاریابی دیجیتال و تامین اصل VEGA، Prosense و Liqui Moly. استعلام قیمت در واتساپ.',
+      intentNavLabel: 'صفحات پرتقاضا',
+      intentVega: 'خرید VEGA',
+      intentProsense: 'دتکتور Prosense',
+      intentFast: 'سایت در ۵ روز',
+      intentQuote: 'استعلام رایگان',
       viewServices: 'مشاهده خدمات',
       heroCard: 'دیجیتال مارکتینگ · طراحی وب · تجهیزات صنعتی',
       statProjects: 'پروژه دیجیتال',
@@ -317,15 +322,15 @@ window.BIZDAVAR_LOCALES = {
       blogTitle: 'آخرین مطالب',
       blogAll: 'مشاهده همه مطالب وبلاگ',
       faqTitle: 'سوالات متداول',
-      ctaTitle: 'آماده شروع همکاری هستید؟',
-      ctaDesc: 'با تیم بیزدوار تماس بگیرید — پاسخگویی در ساعات کاری',
-      ctaForm: 'فرم تماس با ما',
+      ctaTitle: 'استعلام قیمت VEGA یا طراحی سایت؟',
+      ctaDesc: 'واتساپ بزنید — مشاوره رایگان در ساعات کاری از استانبول و تبریز',
+      ctaForm: 'فرم استعلام',
       faqs: [
-        { q: 'بیزدوار گروپ از چه سالی فعالیت می‌کند؟', a: 'از سال ۲۰۱۳ (۱۳۹۲) توسط ارسان جاهد تبریزی — بیش از ۱۰۰ پروژه در ۱۱ کشور.' },
-        { q: 'بیزدوار چه خدماتی ارائه می‌دهد؟', a: 'شش محور: بازاریابی دیجیتال، طراحی وب و وب‌اپ، اپ و سامانه، مدیریت سرور، SMM و خدمات فنی (دوربین، سیم‌کشی، نورمخفی). محصولات و تامین برندهای صنعتی در صفحه محصولات.' },
-        { q: 'طراحی سایت چقدر زمان می‌برد؟', a: 'با Fast Web Studio، تحویل از ۵ روز کاری با پلن‌های $99 تا $299.' },
-        { q: 'چگونه اعتبار بیزدوار را بررسی کنم؟', a: 'پروفایل LinkedIn بنیان‌گذار، نمونه‌کارها، گواهینامه‌های Google و تماس از info@bizdavar.com.' },
-        { q: 'تجهیزات صنعتی از چه برندهایی تامین می‌شود؟', a: 'VEGA، Prosense، Liqui Moly، Gamak، Digi System، Teraoka و سایر برندهای معتبر جهانی.' }
+        { q: 'چطور سنسور VEGA اصل برای ایران بخرم؟', a: 'از صفحه VEGA مدل را انتخاب کنید یا در واتساپ شرایط مخزن را بفرستید. بیزدوار از استانبول کد سفارش دقیق، پیش‌فاکتور و لجستیک تا ایران را انجام می‌دهد.' },
+        { q: 'قیمت طراحی سایت با Fast Web Studio چقدر است؟', a: 'پلن پایه ۹۹ دلار، فروشگاهی ۱۹۹ دلار و حرفه‌ای ۲۹۹ دلار — تحویل از ۵ روز کاری با RTL و سئو پایه.' },
+        { q: 'دتکتور گاز Prosense را از کجا تامین می‌کنید؟', a: 'دتکتور PQ، SafeVader و PPS+ اصل با گواهی SIL. استعلام و پیش‌فاکتور از واتساپ فارسی بیزدوار.' },
+        { q: 'مشاوره رایگان چطور شروع می‌شود؟', a: 'فرم تماس را پر کنید یا به واتساپ فارسی/ترکی پیام دهید. پاسخ در ساعات کاری از استانبول و تبریز است.' },
+        { q: 'بیزدوار در کدام شهرها خدمات می‌دهد؟', a: 'دفتر اصلی استانبول، هماهنگی ایران در تبریز، و پروژه‌ها در ۱۱ کشور — دیجیتال و تامین صنعتی.' }
       ]
     },
     contactPage: {
@@ -707,11 +712,16 @@ window.BIZDAVAR_LOCALES = {
       ]
     },
     home: {
-      heroBadge: 'Bizdavar Group — Dijital pazarlama ajansı',
-      heroTitle: 'İşinizi',
-      heroTitleSpan: 'akıllı dijital çözümlerle',
-      heroTitleEnd: 'büyütün',
-      heroDesc: 'Fast Web Studio ile web tasarım, dijital pazarlama, FXGuard ve VEGA, Prosense, Liqui Moly tedariki — İstanbul merkezli.',
+      heroBadge: 'Bizdavar — İstanbul’dan web tasarım ve endüstriyel tedarik',
+      heroTitle: 'Web tasarım ve',
+      heroTitleSpan: 'VEGA tedariki',
+      heroTitleEnd: 'ücretsiz danışmanlık',
+      heroDesc: '5 günde site, dijital pazarlama ve orijinal VEGA, Prosense, Liqui Moly. Fiyat teklifi için WhatsApp.',
+      intentNavLabel: 'Sık aranan sayfalar',
+      intentVega: 'VEGA satın al',
+      intentProsense: 'Prosense dedektör',
+      intentFast: '5 günde site',
+      intentQuote: 'Ücretsiz teklif',
       viewServices: 'Hizmetleri gör',
       heroCard: 'Dijital pazarlama · Web tasarım · Endüstriyel',
       statProjects: 'Dijital proje',
@@ -753,15 +763,15 @@ window.BIZDAVAR_LOCALES = {
       blogTitle: 'Son yazılar',
       blogAll: 'Tüm blog yazıları',
       faqTitle: 'Sık sorulan sorular',
-      ctaTitle: 'İş birliğine hazır mısınız?',
-      ctaDesc: 'Bizdavar ekibiyle iletişime geçin — mesai saatlerinde yanıt',
-      ctaForm: 'İletişim formu',
+      ctaTitle: 'VEGA fiyatı veya web sitesi mi lazım?',
+      ctaDesc: 'WhatsApp yazın — İstanbul ve Tebriz’den ücretsiz danışmanlık',
+      ctaForm: 'Teklif formu',
       faqs: [
-        { q: 'Bizdavar Group ne zamandan beri faaliyet gösteriyor?', a: '2013\'ten beri Ersan Jahed Tabrizi tarafından — 11 ülkede 100+ proje.' },
-        { q: 'Bizdavar hangi hizmetleri sunuyor?', a: 'Altı alan: dijital pazarlama, web/web app, uygulama ve sistem, sunucu yönetimi, SMM ve teknik hizmetler (CCTV, tesisat, aydınlatma). Ürünler ve endüstriyel markalar ürünler sayfasında.' },
-        { q: 'Web sitesi ne kadar sürede hazır olur?', a: 'Fast Web Studio ile $99–$299 planlarda 5 iş gününden itibaren teslimat.' },
-        { q: 'Bizdavar\'ın güvenilirliğini nasıl doğrularım?', a: 'Kurucunun LinkedIn profili, portfolyo, Google sertifikaları ve info@bizdavar.com.' },
-        { q: 'Hangi endüstriyel markalar tedarik ediliyor?', a: 'VEGA, Prosense, Liqui Moly, Gamak, Digi System, Teraoka ve diğer güvenilir global markalar.' }
+        { q: 'İran projesi için orijinal VEGA nasıl alınır?', a: 'VEGA sayfasından model seçin veya WhatsApp’tan tank/proses bilgisini gönderin. Bizdavar İstanbul’dan order code, proforma ve lojistik sağlar.' },
+        { q: 'Fast Web Studio web sitesi ne kadara mal olur?', a: 'Temel 99$, mağaza 199$, pro 299$ — 5 iş gününden itibaren teslimat, RTL ve temel SEO dahil.' },
+        { q: 'Prosense gaz dedektörünü nereden tedarik ediyorsunuz?', a: 'Orijinal PQ, SafeVader ve PPS+ — SIL sertifikalı. Farsça veya Türkçe WhatsApp ile teklif.' },
+        { q: 'Ücretsiz danışmanlık nasıl başlar?', a: 'Formu doldurun veya WhatsApp yazın. Mesai saatlerinde İstanbul ve Tebriz’den yanıt.' },
+        { q: 'Bizdavar hangi şehirlerde hizmet veriyor?', a: 'Merkez ofis İstanbul, İran koordinasyonu Tebriz, projeler 11 ülkede — dijital ve endüstriyel tedarik.' }
       ]
     },
     contactPage: {
@@ -1143,11 +1153,16 @@ window.BIZDAVAR_LOCALES = {
       ]
     },
     home: {
-      heroBadge: 'Bizdavar Group — Digital marketing agency',
-      heroTitle: 'Grow your business with',
-      heroTitleSpan: 'smart digital',
-      heroTitleEnd: 'solutions',
-      heroDesc: 'Fast Web Studio websites, digital marketing, FXGuard, and VEGA, Prosense & Liqui Moly supply — from Istanbul.',
+      heroBadge: 'Bizdavar — web design and industrial supply from Istanbul',
+      heroTitle: 'Web design and',
+      heroTitleSpan: 'VEGA supply',
+      heroTitleEnd: 'with free consult',
+      heroDesc: 'A website in 5 days, digital marketing, and genuine VEGA, Prosense and Liqui Moly. WhatsApp for a quote.',
+      intentNavLabel: 'Popular pages',
+      intentVega: 'Buy VEGA',
+      intentProsense: 'Prosense detectors',
+      intentFast: 'Site in 5 days',
+      intentQuote: 'Free quote',
       viewServices: 'View services',
       heroCard: 'Digital marketing · Web design · Industrial',
       statProjects: 'Digital projects',
@@ -1189,15 +1204,15 @@ window.BIZDAVAR_LOCALES = {
       blogTitle: 'Latest articles',
       blogAll: 'View all blog posts',
       faqTitle: 'Frequently asked questions',
-      ctaTitle: 'Ready to start?',
-      ctaDesc: 'Contact the Bizdavar team — we respond during business hours',
-      ctaForm: 'Contact form',
+      ctaTitle: 'Need a VEGA quote or a new website?',
+      ctaDesc: 'Message WhatsApp — free consult from Istanbul and Tabriz',
+      ctaForm: 'Request a quote',
       faqs: [
-        { q: 'Since when has Bizdavar Group been active?', a: 'Since 2013, founded by Ersan Jahed Tabrizi — 100+ projects across 11 countries.' },
-        { q: 'What services does Bizdavar offer?', a: 'Six areas: digital marketing, web & web apps, mobile apps & systems, server management, SMM, and technical installs (CCTV, wiring, cove lighting). Products and industrial brands are on the products page.' },
-        { q: 'How long does website design take?', a: 'With Fast Web Studio, delivery from 5 business days on plans from $99 to $299.' },
-        { q: 'How can I verify Bizdavar\'s credibility?', a: 'Founder LinkedIn, portfolio, Google certifications, and info@bizdavar.com.' },
-        { q: 'Which industrial brands do you supply?', a: 'VEGA, Prosense, Liqui Moly, Gamak, Digi System, Teraoka, and other trusted global brands.' }
+        { q: 'How do I buy genuine VEGA sensors for an Iran project?', a: 'Pick a model on the VEGA page or send tank/process details on WhatsApp. Bizdavar issues the exact order code, proforma and logistics from Istanbul.' },
+        { q: 'How much does a Fast Web Studio website cost?', a: 'Basic $99, store $199, pro $299 — delivery from 5 business days with RTL and basic SEO.' },
+        { q: 'Where can I source Prosense gas detectors?', a: 'Genuine PQ, SafeVader and PPS+ with SIL certificates. Quote via Persian or Turkish WhatsApp.' },
+        { q: 'How does the free consultation start?', a: 'Fill the contact form or message WhatsApp. We reply from Istanbul and Tabriz during business hours.' },
+        { q: 'Where does Bizdavar operate?', a: 'HQ in Istanbul, Iran coordination in Tabriz, and projects in 11 countries — digital services and industrial supply.' }
       ]
     },
     contactPage: {

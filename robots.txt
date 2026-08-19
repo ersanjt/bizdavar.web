@@ -1,17 +1,10 @@
 # Bizdavar Group — https://bizdavar.com
-# Multilingual site — fa (root), tr (/tr/), en (/en/) — 81 URLs in sitemap.xml
+# Public locale URLs: fa (root), tr/en/ru/ar — see sitemap.xml
 
 User-agent: *
 Allow: /
 
-# SEO/i18n boot scripts (needed for Google to see per-locale title, canonical, hreflang)
-Allow: /assets/scripts/i18n/
-
-# Other JS/CSS bundles — not indexable pages
-Disallow: /assets/scripts/
-Disallow: /assets/styles/
-
-# Non-public areas
+# Private surfaces
 Disallow: /admin/
 Disallow: /api/
 

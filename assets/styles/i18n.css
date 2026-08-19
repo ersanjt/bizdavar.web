@@ -206,6 +206,10 @@ html[dir='ltr'] .hero__actions {
   justify-content: flex-start;
 }
 
+html[dir='ltr'] .hero__intent {
+  justify-content: flex-start;
+}
+
 html[dir='ltr'] .feature-item {
   text-align: left;
 }

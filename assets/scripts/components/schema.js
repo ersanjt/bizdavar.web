@@ -260,6 +260,31 @@
     ];
   }
 
+  function offerCatalog() {
+    return {
+      '@type': 'OfferCatalog',
+      name: t('home.svcTitle', 'Bizdavar Group offers'),
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: { '@type': 'Product', name: 'VEGA', url: absUrl(R.vega) }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: { '@type': 'Product', name: 'Prosense', url: absUrl(R.prosense) }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: { '@type': 'Service', name: t('nav.webDesign', 'Fast Web Studio'), url: absUrl(R.fast) }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: { '@type': 'Service', name: t('common.freeConsult', 'Consultation'), url: absUrl(R.contact) }
+        }
+      ]
+    };
+  }
+
   function buildSiteGraph() {
     const orgId = `${C.baseUrl}/#organization`;
     const webId = `${C.baseUrl}/#website`;
@@ -308,7 +333,8 @@
           ],
           address: orgAddress(),
           sameAs,
-          contactPoint: buildContactPoints()
+          contactPoint: buildContactPoints(),
+          hasOfferCatalog: offerCatalog()
         },
         {
           '@type': 'WebSite',
@@ -319,7 +345,13 @@
           description: t('seo.defaultDescription', ''),
           inLanguage: ['fa-IR', 'tr-TR', 'en-US', 'ru-RU', 'ar-AE'],
           publisher: { '@id': orgId },
-          about: { '@id': orgId }
+          about: { '@id': orgId },
+          hasPart: siteNavEntries().map((entry) => ({
+            '@type': 'WebPage',
+            '@id': entry.url,
+            name: entry.name,
+            url: entry.url
+          }))
         },
         {
           '@type': 'ItemList',

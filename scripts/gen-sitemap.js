@@ -8,7 +8,7 @@ const path = require('path');
 
 const BASE = 'https://bizdavar.com';
 const OUT = path.join(__dirname, '..', 'sitemap.xml');
-const SITE_UPDATE = '2026-08-12';
+const SITE_UPDATE = '2026-08-19';
 
 const LOCALES = [
   { code: 'fa', prefix: '' },
@@ -29,7 +29,7 @@ const HREFLANG = [
 
 /** @type {{ path: string, changefreq: string, priority: number, lastmod?: string }[]} */
 const PAGES = [
-  { path: '/', changefreq: 'weekly', priority: 1.0, lastmod: '2026-08-12' },
+  { path: '/', changefreq: 'weekly', priority: 1.0, lastmod: '2026-08-19' },
   { path: '/pages/services', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
   { path: '/pages/contact', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
   { path: '/pages/about', changefreq: 'monthly', priority: 0.85, lastmod: SITE_UPDATE },
@@ -38,8 +38,8 @@ const PAGES = [
   { path: '/pages/blog', changefreq: 'weekly', priority: 0.75, lastmod: SITE_UPDATE },
   { path: '/pages/fast', changefreq: 'monthly', priority: 0.85, lastmod: SITE_UPDATE },
   { path: '/pages/field-tech', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
-  { path: '/pages/vega', changefreq: 'monthly', priority: 0.9, lastmod: '2026-08-12' },
-  { path: '/pages/prosense', changefreq: 'monthly', priority: 0.9, lastmod: '2026-08-12' },
+  { path: '/pages/vega', changefreq: 'monthly', priority: 0.9, lastmod: '2026-08-19' },
+  { path: '/pages/prosense', changefreq: 'monthly', priority: 0.9, lastmod: '2026-08-19' },
   { path: '/pages/liqui-moly', changefreq: 'weekly', priority: 0.9, lastmod: '2026-08-12' },
   { path: '/pages/teltonika', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
   { path: '/pages/gamak', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },

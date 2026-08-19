@@ -892,6 +892,25 @@ ul { list-style: none; }
   flex-wrap: wrap;
 }
 
+.hero__intent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.hero__intent a {
+  color: var(--yellow);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.hero__intent a:hover,
+.hero__intent a:focus-visible {
+  border-bottom-color: currentColor;
+}
+
 .hero__visual {
   display: flex;
   justify-content: center;

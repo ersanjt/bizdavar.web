@@ -50,7 +50,8 @@
     'components/context.js',
     'components/chrome.js',
     'components/schema.js',
-    'components/grids.js'
+    'components/grids.js',
+    'components/lead-track.js'
   ], beforeMain, [
     'main.js',
     'premium.js',

@@ -573,6 +573,9 @@ function initContactForm() {
         const json = await res.json().catch(() => ({}));
         if (!res.ok) throw new Error(json.error || 'submit failed');
 
+        if (typeof window.BD_trackLead === 'function') {
+          window.BD_trackLead('contact_form', { transport: 'bizhub', service: form.service.value });
+        }
         showFeedback('formSuccess', 'پیام شما ثبت شد. به‌زودی با شما تماس می‌گیریم.', null);
         form.reset();
       } catch {
@@ -614,6 +617,9 @@ function initContactForm() {
 
         if (!res.ok) throw new Error('formspree');
 
+        if (typeof window.BD_trackLead === 'function') {
+          window.BD_trackLead('contact_form', { transport: 'formspree', service: form.service.value });
+        }
         showFeedback('formSuccess', 'پیام شما با موفقیت ارسال شد. به‌زودی با شما تماس می‌گیریم.', null);
         form.reset();
       } catch {
@@ -638,6 +644,9 @@ function initContactForm() {
       : `https://wa.me/${waNum}?text=${encodeURIComponent(bodyText)}`;
 
     window.open(waHref, '_blank', 'noopener,noreferrer');
+    if (typeof window.BD_trackLead === 'function') {
+      window.BD_trackLead('whatsapp_form', { service: form.service.value });
+    }
     showFeedback(
       'formSuccessWhatsapp',
       'پیام شما برای واتساپ آماده شد. اگر پنجره باز نشد، از دکمه‌های واتساپ همین صفحه استفاده کنید.',

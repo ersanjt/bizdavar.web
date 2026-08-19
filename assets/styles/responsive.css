@@ -131,6 +131,12 @@
     font-size: 13px;
   }
 
+  .hero__intent {
+    margin-top: 12px;
+    gap: 6px 14px;
+    font-size: 13px;
+  }
+
   .hero__visual {
     margin-top: 4px;
   }
