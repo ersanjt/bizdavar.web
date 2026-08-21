@@ -177,6 +177,7 @@ html[dir="rtl"] .product-subnav {
 }
 
 .offer-map__lead {
+  display: block;
   margin: 0 0 0.7rem;
   font-size: var(--text-sm);
   font-weight: 800;
@@ -193,6 +194,7 @@ html[dir="rtl"] .product-subnav {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
+  min-width: 0;
   padding: 0.85rem 1rem;
   border: 1px solid var(--gray-200, rgba(0, 0, 0, 0.1));
   border-radius: var(--radius, 12px);
@@ -221,6 +223,40 @@ html[dir="rtl"] .product-subnav {
   font-size: var(--text-sm);
   color: var(--text-muted, #5c5c5c);
   line-height: 1.5;
+}
+
+.hero .offer-map--hero,
+.offer-map.offer-map--hero {
+  grid-column: 1 / -1;
+  margin-top: 1.75rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.offer-map--hero .offer-map__lead {
+  color: #fff;
+}
+
+.offer-map--hero .offer-map__card {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.16);
+  color: #fff;
+}
+
+.offer-map--hero .offer-map__card:hover,
+.offer-map--hero .offer-map__card:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--yellow, #ffde00);
+}
+
+.offer-map--hero .offer-map__icon,
+.offer-map--hero .offer-map__card strong {
+  color: var(--yellow, #ffde00);
+}
+
+.offer-map--hero .offer-map__card > span:last-child {
+  color: rgba(255, 255, 255, 0.78);
 }
 
 @media (max-width: 767px) {

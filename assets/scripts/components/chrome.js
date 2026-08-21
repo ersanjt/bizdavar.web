@@ -953,6 +953,7 @@
   function renderOfferMap() {
     let host = document.getElementById('offerMap');
     if (!host) {
+      if (currentPage === 'home') return;
       host = document.createElement('div');
       host.id = 'offerMap';
       const crumbs = document.getElementById('breadcrumbs');
@@ -964,11 +965,11 @@
     const servicesHref = pagePath(R.services);
     const productsHref = pagePath(R.products);
     const supplyHref = (productsHref.indexOf('#') === -1 ? productsHref : productsHref.split('#')[0]) + '#supply';
-    host.className = 'offer-map' + (currentPage === 'home' ? ' offer-map--home' : '');
+    const inHero = !!host.closest('.hero');
+    host.className = 'offer-map' + (inHero || currentPage === 'home' ? ' offer-map--hero' : '');
     host.setAttribute('role', 'navigation');
     host.setAttribute('aria-label', t('common.offerMap.aria', 'سه محور بیزدوار'));
-    host.innerHTML = `
-      <div class="container">
+    const cards = `
         <p class="offer-map__lead">${t('common.offerMap.lead', 'بیزدوار سه کار می‌کند')}</p>
         <div class="offer-map__grid">
           <a href="${servicesHref}" class="offer-map__card${currentPage === 'services' ? ' is-active' : ''}">
@@ -986,7 +987,7 @@
             <strong>${t('common.offerMap.supplyTitle', 'تامین صنعتی')}</strong>
             <span>${t('common.offerMap.supplyDesc', 'VEGA، Prosense، Gamak، Liqui Moly — استعلام قیمت')}</span>
           </a>
-        </div>
-      </div>`;
+        </div>`;
+    host.innerHTML = inHero ? cards : `<div class="container">${cards}</div>`;
   }
 })();
