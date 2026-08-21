@@ -1020,6 +1020,8 @@ ul { list-style: none; }
 .service-card:nth-child(2) { border-top-color: var(--red); }
 .service-card:nth-child(3) { border-top-color: #3B82F6; }
 .service-card:nth-child(4) { border-top-color: #10B981; }
+.service-card:nth-child(5) { border-top-color: #6366F1; }
+.service-card:nth-child(6) { border-top-color: #F59E0B; }
 
 .service-card__icon {
   width: 56px;
