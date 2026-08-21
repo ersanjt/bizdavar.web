@@ -60,7 +60,17 @@ window.BIZDAVAR_LOCALES = {
       langRu: 'Русский',
       langAr: 'العربية',
       langLabel: 'زبان',
-      breadcrumbAria: 'مسیر صفحه'
+      breadcrumbAria: 'مسیر صفحه',
+      offerMap: {
+        aria: 'سه محور بیزدوار',
+        lead: 'بیزدوار سه کار می‌کند',
+        servicesTitle: 'خدمات',
+        servicesDesc: 'سایت ۵روزه، بازاریابی، SMM، اپ، سرور و خدمات فنی',
+        productsTitle: 'محصولات',
+        productsDesc: 'FXGuard، BizTab، BizPet، BizSeat — ساخت تیم بیزدوار',
+        supplyTitle: 'تامین صنعتی',
+        supplyDesc: 'VEGA، Prosense، Gamak، Liqui Moly — استعلام قیمت'
+      }
     },
     supplyBrand: {
       inquiryCta: 'استعلام قیمت و تامین',
@@ -510,7 +520,17 @@ window.BIZDAVAR_LOCALES = {
       langRu: 'Русский',
       langAr: 'العربية',
       langLabel: 'Dil',
-      breadcrumbAria: 'Sayfa yolu'
+      breadcrumbAria: 'Sayfa yolu',
+      offerMap: {
+        aria: 'Bizdavar’ın üç ekseni',
+        lead: 'Bizdavar üç iş yapar',
+        servicesTitle: 'Hizmetler',
+        servicesDesc: '5 günde site, pazarlama, SMM, uygulama, sunucu ve saha işleri',
+        productsTitle: 'Ürünler',
+        productsDesc: 'FXGuard, BizTab, BizPet, BizSeat — kendi üretimimiz',
+        supplyTitle: 'Endüstriyel tedarik',
+        supplyDesc: 'VEGA, Prosense, Gamak, Liqui Moly — fiyat teklifi'
+      }
     },
     supplyBrand: {
       inquiryCta: 'Fiyat teklifi ve tedarik',
@@ -960,7 +980,17 @@ window.BIZDAVAR_LOCALES = {
       langRu: 'Русский',
       langAr: 'العربية',
       langLabel: 'Language',
-      breadcrumbAria: 'Breadcrumb'
+      breadcrumbAria: 'Breadcrumb',
+      offerMap: {
+        aria: 'Bizdavar’s three lines',
+        lead: 'Bizdavar does three things',
+        servicesTitle: 'Services',
+        servicesDesc: '5-day websites, marketing, SMM, apps, servers and field work',
+        productsTitle: 'Products',
+        productsDesc: 'FXGuard, BizTab, BizPet, BizSeat — built by our team',
+        supplyTitle: 'Industrial supply',
+        supplyDesc: 'VEGA, Prosense, Gamak, Liqui Moly — request a quote'
+      }
     },
     supplyBrand: {
       inquiryCta: 'Request quote & supply',

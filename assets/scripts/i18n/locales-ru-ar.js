@@ -1237,7 +1237,17 @@
     viewAll: 'Смотреть всё',
     backToTop: 'Наверх',
     details: 'Подробности',
-    view: 'Смотреть'
+    view: 'Смотреть',
+    offerMap: {
+      aria: 'Три направления Bizdavar',
+      lead: 'Bizdavar делает три вещи',
+      servicesTitle: 'Услуги',
+      servicesDesc: 'Сайт за 5 дней, маркетинг, SMM, приложения, серверы и полевые работы',
+      productsTitle: 'Продукты',
+      productsDesc: 'FXGuard, BizTab, BizPet, BizSeat — наша разработка',
+      supplyTitle: 'Промпоставки',
+      supplyDesc: 'VEGA, Prosense, Gamak, Liqui Moly — запрос цены'
+    }
   }));
   deepMerge(ru.nav, {
     home: 'Главная',
@@ -1333,7 +1343,17 @@
     viewAll: 'عرض الكل',
     backToTop: 'العودة للأعلى',
     details: 'التفاصيل',
-    view: 'عرض'
+    view: 'عرض',
+    offerMap: {
+      aria: 'محاور بيزدوار الثلاثة',
+      lead: 'بيزدوار يعمل في ثلاثة مجالات',
+      servicesTitle: 'خدمات',
+      servicesDesc: 'موقع خلال ٥ أيام، تسويق، SMM، تطبيقات، خوادم وأعمال ميدانية',
+      productsTitle: 'منتجات',
+      productsDesc: 'FXGuard وBizTab وBizPet وBizSeat — من صنع فريقنا',
+      supplyTitle: 'توريد صناعي',
+      supplyDesc: 'VEGA وProsense وGamak وLiqui Moly — طلب سعر'
+    }
   }));
   deepMerge(ar.nav, {
     home: 'الرئيسية',

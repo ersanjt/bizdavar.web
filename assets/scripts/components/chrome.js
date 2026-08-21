@@ -947,5 +947,46 @@
     bindLangSwitcher(header);
     bindLangSwitcher(footer);
     bindNavDropdowns(header);
+    renderOfferMap();
   };
+
+  function renderOfferMap() {
+    let host = document.getElementById('offerMap');
+    if (!host) {
+      host = document.createElement('div');
+      host.id = 'offerMap';
+      const crumbs = document.getElementById('breadcrumbs');
+      const main = document.getElementById('main-content');
+      if (crumbs && crumbs.parentNode) crumbs.parentNode.insertBefore(host, crumbs.nextSibling);
+      else if (main && main.parentNode) main.parentNode.insertBefore(host, main);
+      else return;
+    }
+    const servicesHref = pagePath(R.services);
+    const productsHref = pagePath(R.products);
+    const supplyHref = (productsHref.indexOf('#') === -1 ? productsHref : productsHref.split('#')[0]) + '#supply';
+    host.className = 'offer-map' + (currentPage === 'home' ? ' offer-map--home' : '');
+    host.setAttribute('role', 'navigation');
+    host.setAttribute('aria-label', t('common.offerMap.aria', 'سه محور بیزدوار'));
+    host.innerHTML = `
+      <div class="container">
+        <p class="offer-map__lead">${t('common.offerMap.lead', 'بیزدوار سه کار می‌کند')}</p>
+        <div class="offer-map__grid">
+          <a href="${servicesHref}" class="offer-map__card${currentPage === 'services' ? ' is-active' : ''}">
+            <span class="offer-map__icon">${ic('list', { size: 22 })}</span>
+            <strong>${t('common.offerMap.servicesTitle', 'خدمات')}</strong>
+            <span>${t('common.offerMap.servicesDesc', 'سایت ۵روزه، بازاریابی، SMM، اپ، سرور و خدمات فنی')}</span>
+          </a>
+          <a href="${productsHref}" class="offer-map__card${currentPage === 'products' ? ' is-active' : ''}">
+            <span class="offer-map__icon">${ic('box', { size: 22 })}</span>
+            <strong>${t('common.offerMap.productsTitle', 'محصولات')}</strong>
+            <span>${t('common.offerMap.productsDesc', 'FXGuard، BizTab، BizPet، BizSeat — ساخت تیم بیزدوار')}</span>
+          </a>
+          <a href="${supplyHref}" class="offer-map__card">
+            <span class="offer-map__icon">${ic('wrench', { size: 22 })}</span>
+            <strong>${t('common.offerMap.supplyTitle', 'تامین صنعتی')}</strong>
+            <span>${t('common.offerMap.supplyDesc', 'VEGA، Prosense، Gamak، Liqui Moly — استعلام قیمت')}</span>
+          </a>
+        </div>
+      </div>`;
+  }
 })();

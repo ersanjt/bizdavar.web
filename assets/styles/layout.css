@@ -170,6 +170,65 @@ html[dir="rtl"] .product-subnav {
   flex-direction: row;
 }
 
+.offer-map {
+  border-bottom: 1px solid var(--gray-200, rgba(0, 0, 0, 0.08));
+  background: var(--white, #fff);
+  padding: 0.85rem 0 1.1rem;
+}
+
+.offer-map__lead {
+  margin: 0 0 0.7rem;
+  font-size: var(--text-sm);
+  font-weight: 800;
+  color: var(--navy, #16163f);
+}
+
+.offer-map__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.offer-map__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--gray-200, rgba(0, 0, 0, 0.1));
+  border-radius: var(--radius, 12px);
+  text-decoration: none;
+  color: inherit;
+  background: var(--gray-100, #f6f6f7);
+}
+
+.offer-map__card:hover,
+.offer-map__card:focus-visible,
+.offer-map__card.is-active {
+  border-color: var(--navy, #16163f);
+  background: #fff;
+}
+
+.offer-map__icon {
+  color: var(--navy, #16163f);
+}
+
+.offer-map__card strong {
+  color: var(--navy, #16163f);
+  font-size: var(--text-base);
+}
+
+.offer-map__card > span:last-child {
+  font-size: var(--text-sm);
+  color: var(--text-muted, #5c5c5c);
+  line-height: 1.5;
+}
+
+@media (max-width: 767px) {
+  .offer-map__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .photo-gallery-toolbar {
   display: flex;
   flex-wrap: wrap;
