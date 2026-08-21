@@ -311,6 +311,13 @@
         title: 'BizSeat — araç koltuğu bel desteği',
         desc: '1399’da Tebriz Üniversitesi teknoloji parkında icat, tasarım ve üretim — Teknoloji Pardazan Tosee Khavarmianeh ve Imen Sahand Padideh iş birliği. Digikala (dkp-7694589).',
         tags: ['Otomotiv', 'Ergonomi', 'Tebriz', 'Teknoloji parkı', 'Imen Sahand Padideh', 'Digikala']
+      },
+      {
+        id: 'bizpet',
+        year: '2020',
+        title: 'BizPet — ısı pedi',
+        desc: 'Padideh ısı pedi (BizPet / Pet Biz) — Tebriz Üniversitesi teknoloji kuluçkasında tasarım ve üretim, Teknoloji Pardazan Tosee Khavarmianeh ve Imen Sahand Padideh iş birliği. 5–12 V, ev ve araçta taşınabilir.',
+        tags: ['Isı pedi', 'Tebriz', 'Kuluçka merkezi', 'Imen Sahand Padideh']
       }
     ],
     verifiedSources: [
@@ -606,6 +613,13 @@
         title: 'BizSeat — car seat backrest',
         desc: 'Invented, designed and built in 1399 at the University of Tabriz science park — with Technology Pardazan Tosee Khavarmianeh and Imen Sahand Padideh. Sold on Digikala (dkp-7694589).',
         tags: ['Automotive', 'Ergonomics', 'Tabriz', 'Science park', 'Imen Sahand Padideh', 'Digikala']
+      },
+      {
+        id: 'bizpet',
+        year: '2020',
+        title: 'BizPet — heating pad',
+        desc: 'Padideh heating pad (BizPet / Pet Biz) — designed and produced at the University of Tabriz Technology Incubator with Technology Pardazan Tosee Khavarmianeh and Imen Sahand Padideh. 5–12 V, portable for home and car.',
+        tags: ['Heating pad', 'Tabriz', 'Incubator', 'Imen Sahand Padideh']
       }
     ],
     verifiedSources: [

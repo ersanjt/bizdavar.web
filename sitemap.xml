@@ -242,6 +242,66 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/pages/about"/>
   </url>
   <url>
+    <loc>https://bizdavar.com/pages/gallery</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/gallery"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/gallery"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/gallery"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/gallery"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/gallery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/pages/gallery"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/tr/pages/gallery</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/gallery"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/gallery"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/gallery"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/gallery"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/gallery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/pages/gallery"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/en/pages/gallery</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/gallery"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/gallery"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/gallery"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/gallery"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/gallery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/pages/gallery"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/ru/pages/gallery</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/gallery"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/gallery"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/gallery"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/gallery"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/gallery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/pages/gallery"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/ar/pages/gallery</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/gallery"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/gallery"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/gallery"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/gallery"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/gallery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/pages/gallery"/>
+  </url>
+  <url>
     <loc>https://bizdavar.com/pages/products</loc>
     <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -1500,6 +1560,66 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/bizseat"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/bizseat"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/pages/bizseat"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/pages/bizpet</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/bizpet"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/bizpet"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/bizpet"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/bizpet"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/bizpet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/pages/bizpet"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/tr/pages/bizpet</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/bizpet"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/bizpet"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/bizpet"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/bizpet"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/bizpet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/pages/bizpet"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/en/pages/bizpet</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/bizpet"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/bizpet"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/bizpet"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/bizpet"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/bizpet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/pages/bizpet"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/ru/pages/bizpet</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/bizpet"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/bizpet"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/bizpet"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/bizpet"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/bizpet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/pages/bizpet"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/ar/pages/bizpet</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/bizpet"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/bizpet"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/bizpet"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/bizpet"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/bizpet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/pages/bizpet"/>
   </url>
   <url>
     <loc>https://bizdavar.com/pages/fxguard</loc>

@@ -16,6 +16,11 @@
         seoDescription: 'بیزدوار گروپ از ۲۰۱۳ در استانبول — طراحی وب، بازاریابی دیجیتال، محصولات FXGuard و تامین تجهیزات صنعتی VEGA، Prosense و Liqui Moly در ۱۱ کشور.',
         seoKeywords: 'درباره بیزدوار, Bizdavar Group, آژانس دیجیتال استانبول, تامین صنعتی'
       },
+      gallery: {
+        seoTitle: 'گالری تصاویر بیزدوار | نمایشگاه، تولید و تحقیق',
+        seoDescription: 'تصاویر واقعی بیزدوار: غرفه ایمن سهند پدیده، مرکز رشد دانشگاه تبریز، خط تولید و تحقیق پد حرارتی BizPet.',
+        seoKeywords: 'گالری بیزدوار, نمایشگاه ایمن سهند پدیده, مرکز رشد دانشگاه تبریز, BizPet'
+      },
       services: {
         seoTitle: 'طراحی سایت و بازاریابی دیجیتال استانبول | بیزدوار',
         seoDescription: 'خدمات بیزدوار در استانبول و تبریز: طراحی سایت ۵روزه، سئو، SMM، اپ، سرور و خدمات فنی. مشاوره رایگان در واتساپ — همین امروز استعلام بگیرید.',
@@ -136,6 +141,11 @@
         seoDescription: 'BizSeat — پشتی صندلی خودرو اختراع، طراحی و ساخت ۱۳۹۹ در پارک علم و فناوری دانشگاه تبریز. همکاری تکنولوژی پردازان توسعه خاورمیانه و ایمن سهند پدیده. موجود در دیجی‌کالا.',
         seoKeywords: 'BizSeat, پشتی صندلی خودرو, بیزدوار, پارک علم و فناوری تبریز, دیجی‌کالا, محصول اختصاصی'
       },
+      bizpet: {
+        seoTitle: 'BizPet | پد حرارتی بیز پت — محصول مرکز رشد تبریز',
+        seoDescription: 'BizPet (بیز پت / پت بیز) — پد حرارتی پدیده. طراحی و تولید در مرکز رشد فناوری دانشگاه تبریز با همکاری ایمن سهند پدیده. ولتاژ ۵ تا ۱۲ ولت، قابل حمل در خانه و خودرو.',
+        seoKeywords: 'BizPet, بیز پت, پت بیز, پد حرارتی پدیده, مرکز رشد دانشگاه تبریز, ایمن سهند پدیده, بیزدوار'
+      },
       fxguard: {
         seoTitle: 'FXGuard WhatsApp CRM | از $49/ماه · دمو رایگان — بیزدوار',
         seoDescription: 'FXGuard WhatsApp CRM — اینباکس تیمی، مشتریان، تیکت، شعب و ۲FA. Cloud از $49/ماه، لایسنس یا Managed. دمو رایگان app.fxguard.io. محصول اکوسیستم بیزدوار.',
@@ -202,6 +212,11 @@
         seoTitle: 'Hakkımızda | Bizdavar — dijital hizmetler ve endüstriyel tedarik',
         seoDescription: 'Bizdavar Group 2013’ten beri İstanbul’da: web tasarım, dijital pazarlama, FXGuard ürünleri ve VEGA, Prosense, Liqui Moly tedariki — 11 ülkede hizmet.',
         seoKeywords: 'Bizdavar hakkımızda, dijital ajans İstanbul, endüstriyel tedarik'
+      },
+      gallery: {
+        seoTitle: 'Bizdavar fotoğraf galerisi | fuar, üretim ve Ar-Ge',
+        seoDescription: 'Bizdavar’ın gerçek görselleri: Imen Sahand Padideh standı, Tebriz Üniversitesi kuluçka merkezi, üretim hattı ve BizPet ısı pedi Ar-Ge.',
+        seoKeywords: 'Bizdavar galeri, Imen Sahand Padideh fuar, Tebriz kuluçka, BizPet'
       },
       services: {
         seoTitle: 'İstanbul web tasarım ve dijital pazarlama | Bizdavar',
@@ -323,6 +338,11 @@
         seoDescription: 'BizSeat — 1399’da Tebriz Üniversitesi teknoloji parkında icat, tasarım ve üretim. Teknoloji Pardazan Tosee Khavarmianeh ve Imen Sahand Padideh iş birliği. Digikala’da satışta.',
         seoKeywords: 'BizSeat, araç koltuğu bel desteği, Bizdavar, Tebriz, Digikala'
       },
+      bizpet: {
+        seoTitle: 'BizPet | Isı pedi — Tebriz kuluçka merkezi ürünü',
+        seoDescription: 'BizPet (Biz Pet / Pet Biz) — Padideh ısı pedi. Tebriz Üniversitesi teknoloji kuluçkasında tasarım ve üretim, Imen Sahand Padideh iş birliği. 5–12 V, ev ve araçta taşınabilir.',
+        seoKeywords: 'BizPet, ısı pedi, Padideh, Tebriz Üniversitesi, Imen Sahand Padideh, Bizdavar'
+      },
       fxguard: {
         seoTitle: 'FXGuard WhatsApp CRM | $49/ay’dan · ücretsiz demo — Bizdavar',
         seoDescription: 'FXGuard WhatsApp CRM — ortak inbox, müşteriler, ticket, şubeler ve 2FA. Cloud $49/ay’dan, lisans veya Managed. Ücretsiz demo app.fxguard.io.',
@@ -389,6 +409,11 @@
         seoTitle: 'About Bizdavar | Digital services & industrial supply since 2013',
         seoDescription: 'Bizdavar Group since 2013 in Istanbul — web design, digital marketing, FXGuard products, and VEGA, Prosense & Liqui Moly supply across 11 countries.',
         seoKeywords: 'about Bizdavar, digital agency Istanbul, industrial supply'
+      },
+      gallery: {
+        seoTitle: 'Bizdavar photo gallery | exhibitions, production and R&D',
+        seoDescription: 'Real Bizdavar photos: Imen Sahand Padideh booth, University of Tabriz incubator, production line and BizPet heating-pad R&D.',
+        seoKeywords: 'Bizdavar gallery, Imen Sahand Padideh exhibition, Tabriz incubator, BizPet'
       },
       services: {
         seoTitle: 'Istanbul web design & digital marketing | Bizdavar',
@@ -509,6 +534,11 @@
         seoTitle: 'BizSeat | Car seat backrest — Bizdavar product',
         seoDescription: 'BizSeat — car seat backrest invented, designed and built in 1399 at the University of Tabriz Science and Technology Park, with Technology Pardazan Tosee Khavarmianeh and Imen Sahand Padideh. Sold on Digikala.',
         seoKeywords: 'BizSeat, car seat backrest, Bizdavar, Tabriz, Digikala'
+      },
+      bizpet: {
+        seoTitle: 'BizPet | Heating pad — Tabriz incubator product',
+        seoDescription: 'BizPet (Biz Pet / Pet Biz) — Padideh heating pad. Designed and produced at the University of Tabriz Technology Incubator with Imen Sahand Padideh. 5–12 V, portable for home and car.',
+        seoKeywords: 'BizPet, heating pad, Padideh, University of Tabriz, Imen Sahand Padideh, Bizdavar'
       },
       fxguard: {
         seoTitle: 'FXGuard WhatsApp CRM | From $49/mo · Free demo — Bizdavar',

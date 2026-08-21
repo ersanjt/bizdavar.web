@@ -126,6 +126,7 @@
       ],
       quick: [
         { href: pagePath(R.about), label: t('nav.about') },
+        { href: pagePath(R.gallery || 'pages/gallery.html'), label: t('nav.gallery', 'گالری تصاویر') },
         { href: pagePath(R.services), label: t('nav.services') },
         { href: pagePath(R.products), label: t('nav.products') },
         { href: pagePath(R.portfolio), label: t('nav.portfolio') },

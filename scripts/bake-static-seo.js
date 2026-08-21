@@ -139,6 +139,7 @@ const LOCALES = [
 const FILE_TO_ROUTE = {
   'index.html': '/',
   'pages/about.html': '/pages/about',
+  'pages/gallery.html': '/pages/gallery',
   'pages/services.html': '/pages/services',
   'pages/products.html': '/pages/products',
   'pages/portfolio.html': '/pages/portfolio',
@@ -163,6 +164,7 @@ const FILE_TO_ROUTE = {
   'pages/biztab.html': '/pages/biztab',
   'pages/bizsanitizer-v5.html': '/pages/bizsanitizer-v5',
   'pages/bizseat.html': '/pages/bizseat',
+  'pages/bizpet.html': '/pages/bizpet',
   'pages/fxguard.html': '/pages/fxguard',
   'pages/fxguard-accounting.html': '/pages/fxguard-accounting',
   'pages/bizswap.html': '/pages/bizswap',

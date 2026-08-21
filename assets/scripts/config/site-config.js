@@ -12,6 +12,7 @@ window.BIZDAVAR_CONFIG = {
   routes: {
     home: 'index.html',
     about: 'pages/about.html',
+    gallery: 'pages/gallery.html',
     services: 'pages/services.html',
     portfolio: 'pages/portfolio.html',
     fast: 'pages/fast.html',
@@ -30,6 +31,7 @@ window.BIZDAVAR_CONFIG = {
     biztab: 'pages/biztab.html',
     bizsanitizerV5: 'pages/bizsanitizer-v5.html',
     bizseat: 'pages/bizseat.html',
+    bizpet: 'pages/bizpet.html',
     fxguard: 'pages/fxguard.html',
     fxguardAccounting: 'pages/fxguard-accounting.html',
     bizswap: 'pages/bizswap.html',
@@ -83,7 +85,8 @@ window.BIZDAVAR_CONFIG = {
             items: [
               { route: 'biztab', page: 'biztab', labelKey: 'nav.productBiztab', label: 'BizTab', descKey: 'nav.productBiztabDesc' },
               { route: 'bizsanitizerV5', page: 'bizsanitizer-v5', labelKey: 'nav.productBizclean', label: 'BizClean', descKey: 'nav.productBizcleanDesc' },
-              { route: 'bizseat', page: 'bizseat', labelKey: 'nav.productBizseat', label: 'BizSeat', descKey: 'nav.productBizseatDesc' }
+              { route: 'bizseat', page: 'bizseat', labelKey: 'nav.productBizseat', label: 'BizSeat', descKey: 'nav.productBizseatDesc' },
+              { route: 'bizpet', page: 'bizpet', labelKey: 'nav.productBizpet', label: 'BizPet', descKey: 'nav.productBizpetDesc' }
             ]
           }
         ]
@@ -468,6 +471,14 @@ window.BIZDAVAR_CONFIG = {
       category: 'محصول اختصاصی',
       date: '2020-09-01',
       relatedService: 'pages/bizseat.html'
+    },
+    {
+      slug: 'pages/bizpet.html',
+      title: 'BizPet — پد حرارتی بیز پت',
+      excerpt: 'طراحی و تولید در مرکز رشد فناوری دانشگاه تبریز با همکاری ایمن سهند پدیده.',
+      category: 'محصول اختصاصی',
+      date: '2020-09-01',
+      relatedService: 'pages/bizpet.html'
     }
   ],
 
@@ -609,6 +620,7 @@ window.BIZDAVAR_CONFIG = {
     { name: 'BizTab', domain: 'nasrnews.ir', url: 'https://nasrnews.ir/print/16727/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D9%88-%D8%B3%D8%A7%D8%AE%D8%AA-%D8%A7%D9%88%D9%84%DB%8C%D9%86-%D8%AF%D9%85%D8%A7%D8%B3%D9%86%D8%AC-%D8%AF%DB%8C%D9%88%D8%A7%D8%B1%DB%8C-%D8%BA%DB%8C%D8%B1%D8%AA%D9%85%D8%A7%D8%B3%DB%8C-%D8%AF%D8%B1-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2', category: 'محصول اختصاصی / IoT و سلامت', role: 'case-study', internal: true, slug: 'pages/biztab.html', logo: 'assets/images/products/biztab/biztab-hero.jpg', note: 'محصول اختصاصی — اولین دماسنج دیواری غیرتماسی تبریز، توسعه تیم بیزدوار' },
     { name: 'BizClean V5', domain: 'digikala.com', url: 'https://www.digikala.com/product/dkp-3730222/', category: 'محصول اختصاصی / بهداشت', role: 'case-study', internal: true, slug: 'pages/bizsanitizer-v5.html', logo: 'assets/images/products/bizsanitizer/bizclean-v5.png', note: 'محصول اختصاصی — دستگاه ضدعفونی دست V5، توسعه در دوران کرونا' },
     { name: 'BizSeat', domain: 'digikala.com', url: 'https://www.digikala.com/product/dkp-7694589/', category: 'محصول اختصاصی / خودرو', role: 'case-study', internal: true, slug: 'pages/bizseat.html', logo: 'assets/images/products/bizseat/bizseat-hero.svg', note: 'محصول اختصاصی — پشتی صندلی خودرو، اختراع و ساخت ۱۳۹۹ در پارک علم و فناوری تبریز' },
+    { name: 'BizPet', domain: 'bizdavar.com', category: 'محصول اختصاصی / پد حرارتی', role: 'case-study', internal: true, slug: 'pages/bizpet.html', logo: 'assets/images/products/bizpet/bizpet-grey.jpg', note: 'محصول اختصاصی — پد حرارتی پدیده (بیز پت)، طراحی و تولید در مرکز رشد فناوری دانشگاه تبریز' },
     { name: 'FXGuard', domain: 'fxguard.io', url: 'https://fxguard.io/', category: 'WhatsApp CRM', role: 'case-study', internal: true, slug: 'pages/fxguard.html', logo: 'assets/images/products/fxguard/fxguard-logo.svg', note: 'FXGuard WhatsApp CRM — اینباکس تیمی، تیکت، شعب و ۲FA؛ Cloud از $49/ماه، لایسنس یا Managed — فروش در fxguard.io' },
     { name: 'BizSwap', domain: 'Web3 · DeFi Module', category: 'Web3 / پیش‌فروش و سواپ توکن', role: 'case-study', internal: true, slug: 'pages/bizswap.html', logo: 'assets/images/products/bizswap/bizswap-logo.svg', note: 'نمونه‌کار — ماژول پیش‌فروش و سواپ on-chain (BEP-20)، اتصال کیف پول و UI DeFi؛ توسعه تیم بیزدوار' },
     { name: 'FXGuard Exchange', domain: 'exchange.fxguard.io', url: 'https://exchange.fxguard.io/', category: 'طراحی وب / صرافی و فین‌تک', role: 'case-study', internal: true, slug: 'pages/fxguard-exchange.html', logo: 'assets/images/partners/fxguard-exchange.svg', note: 'نمونه‌کار — پلتفرم تبادل تومان و لیر با نرخ زنده، KYC و پیگیری سفارش' },

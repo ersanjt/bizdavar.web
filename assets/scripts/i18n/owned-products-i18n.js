@@ -37,14 +37,14 @@
         featured: {
           eyebrow: 'محصولات زنده',
           title: 'صفحات محصول آماده سفارش',
-          desc: 'WhatsApp CRM، Accounting، BizSwap، BizTab، BizClean و BizSeat — با صفحه اختصاصی و مسیر استعلام شفاف.'
+          desc: 'WhatsApp CRM، Accounting، BizSwap، BizTab، BizClean، BizSeat و BizPet — با صفحه اختصاصی و مسیر استعلام شفاف.'
         },
         filterAll: 'همه',
         empty: 'محصولی برای نمایش نیست.',
         catalog: {
           eyebrow: 'کاتالوگ کامل',
           title: 'همه محصولات مهندسی‌شده بیزدوار',
-          desc: '۱۲ محصول و خط تولید — فیلتر بر اساس دسته یا مستقیم استعلام بگیرید.'
+          desc: '۱۳ محصول و خط تولید — فیلتر بر اساس دسته یا مستقیم استعلام بگیرید.'
         },
         supply: {
           eyebrow: 'تامین برند',
@@ -77,6 +77,7 @@
             biztab: 'دماسنج IoT غیرتماسی',
             bizclean: 'ضدعفونی دست اتوماتیک',
             bizseat: 'پشتی صندلی خودرو',
+            bizpet: 'پد حرارتی بیز پت',
             vega: 'سنسور سطح و فشار',
             prosense: 'دتکتور گاز و شعله',
             teltonika: 'Fleet Telematics / GPS',
@@ -104,7 +105,7 @@
           'iot-health': { label: 'IoT و بهداشت', desc: 'دماسنج، ضدعفونی‌کننده و تجهیزات بدون تماس' },
           automotive: { label: 'خودرو و راحتی', desc: 'پشتی صندلی خودرو و تجهیزات ارگونومی سرنشین' },
           packaging: { label: 'بسته‌بندی و سیل', desc: 'دستگاه‌های کش‌زن و خطوط بسته‌بندی' },
-          medical: { label: 'پزشکی و PPE', desc: 'خطوط تولید ماسک و پد حرارتی' }
+          medical: { label: 'پزشکی و PPE', desc: 'پد حرارتی BizPet و خطوط تولید ماسک' }
         },
         items: {
           bizswap: {
@@ -142,6 +143,12 @@
             title: 'پشتی صندلی خودرو',
             desc: 'اختراع، طراحی و ساخت ۱۳۹۹ در پارک علم و فناوری دانشگاه تبریز — همکاری بیزدوار با تکنولوژی پردازان توسعه خاورمیانه و ایمن سهند پدیده.',
             tags: ['خودرو', 'ارگونومی', '۱۳۹۹']
+          },
+          bizpet: {
+            name: 'BizPet',
+            title: 'پد حرارتی بیز پت',
+            desc: 'پد حرارتی پدیده (بیز پت / پت بیز) — طراحی و تولید در مرکز رشد فناوری دانشگاه تبریز با همکاری ایمن سهند پدیده. ۵ تا ۱۲ ولت، قابل حمل در خانه و خودرو.',
+            tags: ['پد حرارتی', 'تبریز', '۱۳۹۹']
           },
           biztouch: {
             name: 'BizTouch',
@@ -233,14 +240,14 @@
         featured: {
           eyebrow: 'Canlı ürünler',
           title: 'Siparişe hazır ürün sayfaları',
-          desc: 'WhatsApp CRM, Accounting, BizSwap, BizTab, BizClean ve BizSeat — özel sayfa ve net teklif yolu.'
+          desc: 'WhatsApp CRM, Accounting, BizSwap, BizTab, BizClean, BizSeat ve BizPet — özel sayfa ve net teklif yolu.'
         },
         filterAll: 'Tümü',
         empty: 'Gösterilecek ürün yok.',
         catalog: {
           eyebrow: 'Tam katalog',
           title: 'Tüm Bizdavar mühendislik ürünleri',
-          desc: '12 ürün ve üretim hattı — kategoriye göre filtreleyin veya teklif isteyin.'
+          desc: '13 ürün ve üretim hattı — kategoriye göre filtreleyin veya teklif isteyin.'
         },
         supply: {
           eyebrow: 'Marka tedariki',
@@ -273,6 +280,7 @@
             biztab: 'Temassız IoT termometre',
             bizclean: 'Otomatik el dezenfektanı',
             bizseat: 'Araç koltuğu bel desteği',
+            bizpet: 'BizPet ısı pedi',
             vega: 'Seviye ve basınç sensörü',
             prosense: 'Gaz ve alev dedektörü',
             teltonika: 'Fleet Telematics / GPS',
@@ -300,7 +308,7 @@
           'iot-health': { label: 'IoT ve hijyen', desc: 'Termometre, dezenfektan ve temasız ekipman' },
           automotive: { label: 'Otomotiv ve konfor', desc: 'Araç koltuğu bel desteği ve yolcu ergonomisi' },
           packaging: { label: 'Ambalaj ve vakum', desc: 'Vakum makineleri ve ambalaj hatları' },
-          medical: { label: 'Medikal ve PPE', desc: 'Maske ve ısı pedi üretim hatları' }
+          medical: { label: 'Medikal ve PPE', desc: 'BizPet ısı pedi ve maske üretim hatları' }
         },
         items: {
           bizswap: { name: 'BizSwap', title: 'Token ön satış & swap', desc: 'Web3 modülü — cüzdan bağlantısı, stablecoin-token swap, on-chain ön satış, slippage ve admin paneli (BEP-20 / RWA).', tags: ['DeFi', 'Web3', 'Token Swap'] },
@@ -309,6 +317,7 @@
           biztab: { name: 'BizTab', title: 'Temasız duvar termometresi', desc: 'Tebriz\'deki ilk temasız duvar termometresi — 0,3°C altı hata, üniversite onayı.', tags: ['IoT', 'Temasız', 'Tebriz'] },
           bizclean: { name: 'BizClean', title: 'Hijyen ve dezenfeksiyon', desc: 'Otomatik el dezenfektan (BizClean V5) — Bizdavar üretimi; RINOTEX 1400 «Imen Sahand Padideh» park birimi; ISNA/IRIB basını.', tags: ['Hijyen', 'Otomatik', 'COVID'] },
           bizseat: { name: 'BizSeat', title: 'Araç koltuğu bel desteği', desc: '1399’da Tebriz Üniversitesi teknoloji parkında icat, tasarım ve üretim — Teknoloji Pardazan Tosee Khavarmianeh ve Imen Sahand Padideh iş birliği.', tags: ['Otomotiv', 'Ergonomi', '1399'] },
+          bizpet: { name: 'BizPet', title: 'BizPet ısı pedi', desc: 'Padideh ısı pedi (BizPet / Pet Biz) — Tebriz Üniversitesi teknoloji kuluçkasında tasarım ve üretim, Imen Sahand Padideh iş birliği. 5–12 V, ev ve araçta taşınabilir.', tags: ['Isı pedi', 'Tebriz', '1399'] },
           biztouch: { name: 'BizTouch', title: 'Temasız çözümler', desc: 'Giriş, hijyen ve kamusal alanlar için temasız cihazlar — Bizdavar tasarımı.', tags: ['Temasız', 'IoT', 'Giriş'] },
           bizroll: { name: 'BizRoll', title: 'Rulo ve ambalaj sistemleri', desc: 'Endüstriyel rulo ve ambalaj makineleri.', tags: ['Ambalaj', 'Rulo', 'Endüstriyel'] },
           'sealer-home': { name: 'Ev tipi vakum makinesi', title: 'Ev vakumu', desc: 'Ev ve küçük atölyeler için vakum/kapama makinesi.', tags: ['Vakum', 'Ev', 'Kapama'] },
@@ -364,14 +373,14 @@
         featured: {
           eyebrow: 'Live products',
           title: 'Ready product pages',
-          desc: 'WhatsApp CRM, Accounting, BizSwap, BizTab, BizClean and BizSeat — dedicated pages with a clear inquiry path.'
+          desc: 'WhatsApp CRM, Accounting, BizSwap, BizTab, BizClean, BizSeat and BizPet — dedicated pages with a clear inquiry path.'
         },
         filterAll: 'All',
         empty: 'No products to display.',
         catalog: {
           eyebrow: 'Full catalog',
           title: 'All engineered Bizdavar products',
-          desc: 'Twelve products and production lines — filter by category or request a quote.'
+          desc: 'Thirteen products and production lines — filter by category or request a quote.'
         },
         supply: {
           eyebrow: 'Brand supply',
@@ -404,6 +413,7 @@
             biztab: 'Non-contact IoT thermometer',
             bizclean: 'Automatic hand sanitizer',
             bizseat: 'Car seat backrest',
+            bizpet: 'BizPet heating pad',
             vega: 'Level and pressure sensors',
             prosense: 'Gas and flame detectors',
             teltonika: 'Fleet Telematics / GPS',
@@ -431,7 +441,7 @@
           'iot-health': { label: 'IoT & hygiene', desc: 'Thermometers, sanitizers and contactless devices' },
           automotive: { label: 'Automotive & comfort', desc: 'Car seat backrests and occupant ergonomics' },
           packaging: { label: 'Packaging & sealing', desc: 'Vacuum sealers and packaging lines' },
-          medical: { label: 'Medical & PPE', desc: 'Mask and heat pad production lines' }
+          medical: { label: 'Medical & PPE', desc: 'BizPet heating pad and mask production lines' }
         },
         items: {
           bizswap: { name: 'BizSwap', title: 'Token presale & swap', desc: 'Web3 module — wallet connect, stablecoin-to-token swap, on-chain presale, slippage UI and admin panel for BEP-20 / RWA projects.', tags: ['DeFi', 'Web3', 'Token Swap'] },
@@ -440,6 +450,7 @@
           biztab: { name: 'BizTab', title: 'Non-contact wall thermometer', desc: 'First non-contact wall thermometer in Tabriz — under 0.3°C error, university validated.', tags: ['IoT', 'Contactless', 'Tabriz'] },
           bizclean: { name: 'BizClean', title: 'Hygiene & disinfection line', desc: 'Automatic hand sanitizer (BizClean V5) — Bizdavar production; RINOTEX 1400 via «Imen Sahand Padideh» park unit; ISNA & IRIB press.', tags: ['Hygiene', 'Automatic', 'COVID'] },
           bizseat: { name: 'BizSeat', title: 'Car seat backrest', desc: 'Invented, designed and built in 1399 at the University of Tabriz science park — with Technology Pardazan Tosee Khavarmianeh and Imen Sahand Padideh.', tags: ['Automotive', 'Ergonomics', '1399'] },
+          bizpet: { name: 'BizPet', title: 'BizPet heating pad', desc: 'Padideh heating pad (BizPet / Pet Biz) — designed and produced at the University of Tabriz Technology Incubator with Imen Sahand Padideh. 5–12 V, portable for home and car.', tags: ['Heating pad', 'Tabriz', '1399'] },
           biztouch: { name: 'BizTouch', title: 'Contactless solutions', desc: 'Contactless devices for entrances, hygiene and public spaces — Bizdavar engineered.', tags: ['Contactless', 'IoT', 'Entrance'] },
           bizroll: { name: 'BizRoll', title: 'Roll & packaging systems', desc: 'Engineered roll and packaging machinery for industrial production.', tags: ['Packaging', 'Roll', 'Industrial'] },
           'sealer-home': { name: 'Home vacuum sealer', title: 'Domestic sealing', desc: 'Vacuum sealer designed for home use and small workshops.', tags: ['Vacuum', 'Home', 'Sealing'] },

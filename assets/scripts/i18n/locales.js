@@ -92,6 +92,7 @@ window.BIZDAVAR_LOCALES = {
     nav: {
       home: 'خانه',
       about: 'درباره ما',
+      gallery: 'گالری تصاویر',
       services: 'خدمات',
       servicesAll: 'همه خدمات',
       servicesMegaHint: 'خدمات میدانی بیزدوار',
@@ -154,6 +155,8 @@ window.BIZDAVAR_LOCALES = {
       productBizcleanDesc: 'ضدعفونی دست اتوماتیک',
       productBizseat: 'BizSeat',
       productBizseatDesc: 'پشتی صندلی خودرو',
+      productBizpet: 'BizPet',
+      productBizpetDesc: 'پد حرارتی بیز پت',
       productPackaging: 'بسته‌بندی و سیل',
       productPackagingDesc: 'کش‌زن و خطوط بسته‌بندی',
       productMedical: 'پزشکی و PPE',
@@ -407,6 +410,7 @@ window.BIZDAVAR_LOCALES = {
     },
     pages: {
       about: { crumb: 'درباره ما' },
+      gallery: { crumb: 'گالری تصاویر' },
       services: { crumb: 'خدمات' },
       fieldTech: { crumb: 'خدمات فنی' },
       portfolio: { crumb: 'نمونه‌کارها' },
@@ -438,6 +442,7 @@ window.BIZDAVAR_LOCALES = {
       biztab: { crumb: 'BizTab' },
       bizsanitizerV5: { crumb: 'BizClean' },
       bizseat: { crumb: 'BizSeat' },
+      bizpet: { crumb: 'BizPet' },
       article: { crumb: 'مقاله' }
     },
     fast: {
@@ -537,6 +542,7 @@ window.BIZDAVAR_LOCALES = {
     nav: {
       home: 'Ana Sayfa',
       about: 'Hakkımızda',
+      gallery: 'Galeri',
       services: 'Hizmetler',
       servicesAll: 'Tüm hizmetler',
       servicesMegaHint: 'Bizdavar saha hizmetleri',
@@ -599,6 +605,8 @@ window.BIZDAVAR_LOCALES = {
       productBizcleanDesc: 'Otomatik el dezenfektanı',
       productBizseat: 'BizSeat',
       productBizseatDesc: 'Araç koltuğu bel desteği',
+      productBizpet: 'BizPet',
+      productBizpetDesc: 'BizPet ısı pedi',
       productPackaging: 'Ambalaj ve vakum',
       productPackagingDesc: 'Vakum ve ambalaj hatları',
       productMedical: 'Medikal ve PPE',
@@ -852,6 +860,7 @@ window.BIZDAVAR_LOCALES = {
     },
     pages: {
       about: { crumb: 'Hakkımızda' },
+      gallery: { crumb: 'Galeri' },
       services: { crumb: 'Hizmetler' },
       fieldTech: { crumb: 'Teknik hizmetler' },
       portfolio: { crumb: 'Portfolyo' },
@@ -883,6 +892,7 @@ window.BIZDAVAR_LOCALES = {
       biztab: { crumb: 'BizTab' },
       bizsanitizerV5: { crumb: 'BizClean' },
       bizseat: { crumb: 'BizSeat' },
+      bizpet: { crumb: 'BizPet' },
       article: { crumb: 'Makale' }
     },
     fast: {
@@ -982,6 +992,7 @@ window.BIZDAVAR_LOCALES = {
     nav: {
       home: 'Home',
       about: 'About',
+      gallery: 'Gallery',
       services: 'Services',
       servicesAll: 'All services',
       servicesMegaHint: 'Bizdavar field services',
@@ -1044,6 +1055,8 @@ window.BIZDAVAR_LOCALES = {
       productBizcleanDesc: 'Automatic hand sanitizer',
       productBizseat: 'BizSeat',
       productBizseatDesc: 'Car seat backrest',
+      productBizpet: 'BizPet',
+      productBizpetDesc: 'BizPet heating pad',
       productPackaging: 'Packaging & sealing',
       productPackagingDesc: 'Sealers and packaging lines',
       productMedical: 'Medical & PPE',
@@ -1297,6 +1310,7 @@ window.BIZDAVAR_LOCALES = {
     },
     pages: {
       about: { crumb: 'About' },
+      gallery: { crumb: 'Gallery' },
       services: { crumb: 'Services' },
       fieldTech: { crumb: 'Technical services' },
       portfolio: { crumb: 'Portfolio' },
@@ -1328,6 +1342,7 @@ window.BIZDAVAR_LOCALES = {
       biztab: { crumb: 'BizTab' },
       bizsanitizerV5: { crumb: 'BizClean' },
       bizseat: { crumb: 'BizSeat' },
+      bizpet: { crumb: 'BizPet' },
       article: { crumb: 'Article' }
     },
     fast: {

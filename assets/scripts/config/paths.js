@@ -68,7 +68,7 @@
     const knownPages = new Set([
       'about', 'services', 'portfolio', 'blog', 'contact', 'privacy', 'fast', 'vega',
       'prosense', 'teltonika', 'gamak', 'digi-system', 'teraoka', 'liqui-moly', 'bz-diamond', 'supplify-trade', 'kaya-one', 'smm-turk', 'fxguard-exchange', 'biztejarat',
-      'products', 'biztab', 'bizsanitizer-v5', 'bizseat', 'fxguard', 'fxguard-accounting', 'bizswap'
+      'products', 'biztab', 'bizsanitizer-v5', 'bizseat', 'bizpet', 'gallery', 'fxguard', 'fxguard-accounting', 'bizswap'
     ]);
     const stem = pathPart.replace(/\.html$/i, '').split('/').pop();
     if (!pathPart.startsWith('pages/') && knownPages.has(stem)) {

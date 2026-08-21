@@ -3,7 +3,7 @@
  * Default copy (fa) lives here; owned-products-i18n.js overrides per locale.
  */
 window.BIZDAVAR_OWNED_PRODUCTS = {
-  imgVersion: '5',
+  imgVersion: '6',
   categories: [
     { id: 'software', label: 'نرم‌افزار و SaaS', icon: 'globe' },
     { id: 'iot-health', label: 'IoT و بهداشت', icon: 'shield' },
@@ -97,6 +97,20 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       status: 'live'
     },
     {
+      id: 'bizpet',
+      category: 'medical',
+      categoryLabel: 'پزشکی و PPE',
+      name: 'BizPet',
+      title: 'پد حرارتی بیز پت',
+      desc: 'پد حرارتی پدیده (بیز پت / پت بیز) — طراحی و تولید در مرکز رشد فناوری دانشگاه تبریز با همکاری ایمن سهند پدیده. ۵ تا ۱۲ ولت، قابل حمل در خانه و خودرو.',
+      tags: ['پد حرارتی', 'تبریز', '۱۳۹۹'],
+      image: 'assets/images/products/bizpet/bizpet-grey.jpg',
+      logo: 'assets/images/products/bizpet/bizpet-grey.jpg',
+      page: 'pages/bizpet.html',
+      featured: true,
+      status: 'live'
+    },
+    {
       id: 'biztouch',
       category: 'iot-health',
       categoryLabel: 'IoT و بهداشت',
@@ -172,7 +186,7 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       title: 'ماشین پد گرمایی',
       desc: 'دستگاه تولید پد حرارتی (heat pad) — مصارف درمانی و گرمایشی.',
       tags: ['پد حرارتی', 'پزشکی', 'تولید'],
-      image: 'assets/images/products/product-default.svg',
+      image: 'assets/images/products/bizpet/bizpet-production.jpg',
       status: 'catalog'
     }
   ]

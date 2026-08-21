@@ -644,6 +644,119 @@
         geoText: 'محصول خودرو اختراع‌شده در پارک علم و فناوری دانشگاه تبریز — طراحی تیم بیزدوار و عرضه در دیجی‌کالا.'
       },
 
+      bizpet: {
+        hero: {
+          tag: 'محصول اختصاصی · پد حرارتی',
+          title: 'BizPet — پد حرارتی بیز پت',
+          desc: 'طراحی و تولید در مرکز رشد فناوری دانشگاه تبریز — محصول مالکیتی تیم بیزدوار با نام‌های بیز پت و پت بیز'
+        },
+        about: {
+          title: 'درباره محصول',
+          imageAlt: 'BizPet — پد حرارتی خاکستری طراحی‌شده توسط تیم بیزدوار',
+          body: '<strong>BizPet</strong> (بیز پت / پت بیز) پد حرارتی پدیده است — ابزاری برای گرمایش در فصل سرد و تسکین درد موضعی که در <strong>مرکز رشد فناوری دانشگاه تبریز</strong> طراحی و تولید شد.',
+          body2: 'توسعه با همکاری <strong>تکنولوژی پردازان توسعه خاورمیانه</strong> و واحد فناور <strong>ایمن سهند پدیده</strong> انجام شد. محصول قابل حمل است و در خانه یا خودرو استفاده می‌شود.',
+          specsTitle: 'ویژگی‌ها',
+          specs: [
+            'پد حرارتی پدیده — BizPet / بیز پت / پت بیز',
+            'گرمایش فصل سرد و تسکین درد موضعی',
+            'قابل حمل — استفاده در خانه و خودرو',
+            'ولتاژ کاری ۵ تا ۱۲ ولت (حداکثر ۱ آمپر)',
+            'قابل شستشو پس از خارج کردن المان حرارتی',
+            'طراحی و تولید در مرکز رشد فناوری دانشگاه تبریز',
+            'همکاری ایمن سهند پدیده و تکنولوژی پردازان توسعه خاورمیانه'
+          ],
+          ctaContact: 'استعلام عمده / تماس',
+          ctaCatalog: 'کاتالوگ محصولات'
+        },
+        gallery: {
+          tanAlt: 'BizPet — پد حرارتی کرم با کانکتور برق',
+          elementAlt: 'BizPet — المان حرارتی با نقاط اتصال',
+          posterAlt: 'برگه معرفی پد حرارتی پدیده'
+        },
+        rd: {
+          eyebrow: 'تحقیق و توسعه',
+          title: 'آزمایش المان حرارتی در آزمایشگاه',
+          desc: 'تصاویر تست حرارتی المان، نمونه اولیه و مونتاژ — بخشی از مسیر مهندسی پد حرارتی در مرکز رشد دانشگاه تبریز.',
+          tempHighAlt: 'آزمایش حرارتی المان با دماسنج مادون قرمز',
+          tempHighCaption: 'آزمایش حرارتی المان در آزمایشگاه',
+          tempAlt: 'اندازه‌گیری دمای سطح در تست تحقیق و توسعه',
+          tempCaption: 'اندازه‌گیری دمای سطح در تست R&D',
+          elementAlt: 'المان حرارتی مستطیلی با نقاط اتصال',
+          elementCaption: 'المان حرارتی با نقاط اتصال',
+          protoAlt: 'نمونه اولیه پد حرارتی روی بلوک عایق',
+          protoCaption: 'نمونه اولیه و مونتاژ آزمایشی'
+        },
+        military: {
+          eyebrow: 'تحقیق و توسعه',
+          title: 'پد حرارتی در پوشش لباس نظامی',
+          desc: 'نمونه اولیه جلیقه تاکتیکی با المان حرارتی یکپارچه و واحد کنترل — مسیر R&D برای به‌کارگیری پد حرارتی در پوشش لباس نظامی.',
+          vestAlt: 'نمونه جلیقه نظامی با پد حرارتی روی مانکن',
+          vestCaption: 'نمونه جلیقه تاکتیکی با واحد کنترل حرارتی',
+          liningAlt: 'نمای داخلی جلیقه و سیم‌کشی پد حرارتی',
+          liningCaption: 'نمای داخلی پوشش — المان حرارتی دوخته‌شده',
+          outdoorAlt: 'جلیقه نظامی حرارتی روی مانکن در فضای باز',
+          outdoorCaption: 'نمایش نمونه اولیه در فضای باز'
+        },
+        dryer: {
+          eyebrow: 'تحقیق و توسعه',
+          title: 'پد حرارتی در سبد میوه‌خشک‌کن',
+          desc: 'نمونه طراحی سبد چوبی میوه‌خشک‌کن با توری حرارتی شش‌ضلعی و سیم تغذیه — مسیر R&D برای به‌کارگیری پد حرارتی در سبدهای خشک‌کن میوه.',
+          imageAlt: 'نمونه سبد میوه‌خشک‌کن با توری حرارتی',
+          caption: 'رندر سه‌بعدی سبد خشک‌کن با المان حرارتی مشبک.'
+        },
+        pets: {
+          eyebrow: 'جا خواب حیوانات خانگی',
+          title: 'پد حرارتی مادون قرمز مخصوص حیوانات خانگی',
+          desc: 'همین پد حرارتی برای جا خواب سگ و گربه هم مناسب است — گرم نگه‌داشتن در فصل سرد، با ولتاژ ایمن و روکش قابل شستشو.',
+          imageAlt: 'BizPet — پد حرارتی مادون قرمز برای جا خواب حیوانات خانگی',
+          specs: [
+            'مناسب جا خواب حیوانات خانگی',
+            'نانومواد کربنی · مادون قرمز دور · بازده ۹۵ تا ۹۹ درصد',
+            'ولتاژ ایمن ۵ تا ۱۲ ولت · مصرف ۵ تا ۸ وات',
+            'روکش نرم، جداشدنی و قابل شستشو',
+            'کنترل دما در محدوده دمای بدن حیوان',
+            'کاربرد درمانی: اسپاسم عضلانی و آرتروز — مناسب حیوانات مسن یا باردار'
+          ]
+        },
+        expo: {
+          eyebrow: 'نمایشگاه',
+          title: 'غرفه ایمن سهند پدیده',
+          desc: 'نمایش پدهای حرارتی در نمایشگاه — با تأکید بر مصرف بسیار پایین و سازگاری با محیط زیست.',
+          imageAlt: 'غرفه نمایشگاهی ایمن سهند پدیده با پدهای حرارتی',
+          caption: 'غرفه شرکت ایمن سهند پدیده — معرفی پد حرارتی با مصرف پایین.'
+        },
+        origin: {
+          eyebrow: 'مرکز رشد تبریز · ۱۳۹۹',
+          title: 'از طراحی تا تولید در مرکز رشد فناوری',
+          desc: 'BizPet یکی از محصولات سخت‌افزاری تیم بیزدوار است — پد حرارتی پدیده، با دو شریک فناور محلی در اکوسیستم نوآوری دانشگاه تبریز.',
+          parkTitle: 'مرکز رشد فناوری',
+          parkDesc: 'دانشگاه تبریز — بستر طراحی و تولید پد حرارتی پدیده.',
+          partner1Title: 'تکنولوژی پردازان توسعه خاورمیانه',
+          partner1Desc: 'شریک همکاری در توسعه و تجاری‌سازی محصول.',
+          partner2Title: 'ایمن سهند پدیده',
+          partner2Desc: 'واحد فناور پارک علمی تبریز — همکار طراحی و ساخت پد حرارتی پدیده.',
+          specTitle: '۵ تا ۱۲ ولت · حداکثر ۱ آمپر',
+          specDesc: 'قابل حمل برای خانه و خودرو — قابل شستشو پس از خارج کردن المان حرارتی.'
+        },
+        production: {
+          eyebrow: 'خط تولید',
+          title: 'مونتاژ و تست پد حرارتی',
+          desc: 'ایستگاه مونتاژ و کنترل کیفیت — پدهای پارچه‌ای، واحد تغذیه و بسته‌بندی محصول.',
+          imageAlt: 'خط تولید پد حرارتی BizPet — مونتاژ و تست روی میز کار',
+          caption: 'مونتاژ و تست پدهای حرارتی در کارگاه تولید.'
+        },
+        related: {
+          title: 'محصولات و خدمات مرتبط',
+          bizseat: 'پشتی صندلی خودرو',
+          biztab: 'دماسنج دیواری غیرتماسی',
+          catalog: 'کاتالوگ محصولات',
+          catalogDesc: 'سخت‌افزار و خطوط تولید بیزدوار',
+          about: 'درباره بیزدوار',
+          aboutDesc: 'پارک علمی، نمایشگاه‌ها و دستاوردها'
+        },
+        geoText: 'پد حرارتی طراحی‌شده در مرکز رشد فناوری دانشگاه تبریز — محصول بیز پت تیم بیزدوار.'
+      },
+
       bizswap: {
         hero: {
           tag: 'محصول Web3 · DeFi',
@@ -1088,6 +1201,118 @@
         },
         geoText: 'Tebriz Üniversitesi Bilim ve Teknoloji Parkı’nda icat edilen otomotiv ürünü — Bizdavar tasarımı, Digikala satışı.'
       },
+      bizpet: {
+        hero: {
+          tag: 'Özel ürün · Isı pedi',
+          title: 'BizPet — Bizdavar ısı pedi',
+          desc: 'Tebriz Üniversitesi teknoloji kuluçkasında tasarım ve üretim — BizPet / Pet Biz adlarıyla Bizdavar’ın sahip olduğu ürün'
+        },
+        about: {
+          title: 'Ürün hakkında',
+          imageAlt: 'BizPet — Bizdavar ekibinin tasarladığı gri ısı pedi',
+          body: '<strong>BizPet</strong> (Biz Pet / Pet Biz), Padideh ısı pedidir — soğuk mevsimde ısınma ve bölgesel ağrı rahatlaması için <strong>Tebriz Üniversitesi Teknoloji Kuluçka Merkezi</strong>’nde tasarlanıp üretildi.',
+          body2: 'Geliştirme, <strong>Teknoloji Pardazan Tosee Khavarmianeh</strong> ve teknoloji birimi <strong>Imen Sahand Padideh</strong> ile iş birliğinde yapıldı. Ürün taşınabilir; evde veya araçta kullanılır.',
+          specsTitle: 'Özellikler',
+          specs: [
+            'Padideh ısı pedi — BizPet / Biz Pet / Pet Biz',
+            'Soğuk mevsim ısınması ve bölgesel ağrı rahatlaması',
+            'Taşınabilir — ev ve araç kullanımı',
+            'Çalışma voltajı 5–12 V (maks. 1 A)',
+            'Isıtma elemanı çıkarıldıktan sonra yıkanabilir',
+            'Tebriz Üniversitesi Teknoloji Kuluçka Merkezi’nde tasarım ve üretim',
+            'Imen Sahand Padideh ve Teknoloji Pardazan Tosee Khavarmianeh iş birliği'
+          ],
+          ctaContact: 'Toptan teklif / iletişim',
+          ctaCatalog: 'Ürün kataloğu'
+        },
+        gallery: {
+          tanAlt: 'BizPet — krem ısı pedi, güç konnektörüyle',
+          elementAlt: 'BizPet — temas noktalı ısıtma elemanı',
+          posterAlt: 'Padideh ısı pedi tanıtım afişi'
+        },
+        rd: {
+          eyebrow: 'Ar-Ge',
+          title: 'Laboratuvarda ısıtma elemanı testleri',
+          desc: 'Termal test, prototip ve montaj fotoğrafları — Tebriz Üniversitesi kuluçkasındaki mühendislik süreci.',
+          tempHighAlt: 'Kızılötesi termometreyle ısıtma elemanı testi',
+          tempHighCaption: 'Laboratuvarda ısıtma elemanı testi',
+          tempAlt: 'Ar-Ge testinde yüzey sıcaklığı ölçümü',
+          tempCaption: 'Ar-Ge testinde yüzey sıcaklığı',
+          elementAlt: 'Köşe temaslı dikdörtgen ısıtma elemanı',
+          elementCaption: 'Temas noktalı ısıtma elemanı',
+          protoAlt: 'Yalıtım bloğu üzerinde ısı pedi prototipi',
+          protoCaption: 'Prototip ve deneysel montaj'
+        },
+        military: {
+          eyebrow: 'Ar-Ge',
+          title: 'Askeri giyside ısı pedi',
+          desc: 'Entegre ısıtma elemanı ve kontrol ünitesi olan taktik yelek prototipi — ısı pedinin askeri giysi katmanlarına uygulanması için Ar-Ge.',
+          vestAlt: 'Isı pedli askeri yelek prototipi, manken üzerinde',
+          vestCaption: 'Kontrol ünitesli taktik yelek prototipi',
+          liningAlt: 'Yelek iç astarı ve ısı pedi kablolaması',
+          liningCaption: 'İç astar — dikilmiş ısıtma elemanı',
+          outdoorAlt: 'Açık havada manken üzerinde ısıtmalı askeri yelek',
+          outdoorCaption: 'Prototipin açık hava gösterimi'
+        },
+        dryer: {
+          eyebrow: 'Ar-Ge',
+          title: 'Meyve kurutma sepetinde ısı pedi',
+          desc: 'Altıgen ısıtma filesi ve besleme kablosu olan ahşap meyve kurutma sepeti tasarımı — ısı pedinin kurutma sepetlerine uygulanması için Ar-Ge.',
+          imageAlt: 'Isıtma filesi olan meyve kurutma sepeti prototipi',
+          caption: 'Kurutma sepetinin 3D görseli — gözenekli ısıtma elemanı.'
+        },
+        pets: {
+          eyebrow: 'Evcil hayvan yatağı',
+          title: 'Evcil hayvanlar için kızılötesi ısı pedi',
+          desc: 'Aynı ısı pedi köpek ve kedi yatakları için de uygundur — soğuk mevsimde güvenli voltaj ve yıkanabilir kılıfla ısıtma.',
+          imageAlt: 'BizPet — evcil hayvan yatağı için kızılötesi ısı pedi',
+          specs: [
+            'Evcil hayvan yatakları için uygun',
+            'Karbon nanomalzeme · uzak kızılötesi · %95–99 verim',
+            'Güvenli 5–12 V · 5–8 W tüketim',
+            'Yumuşak, çıkarılabilir ve yıkanabilir kılıf',
+            'Sıcaklık hayvan vücut sıcaklığı aralığında kontrol edilir',
+            'Tedavi: kas spazmı ve artrit — yaşlı veya gebe hayvanlar için'
+          ]
+        },
+        expo: {
+          eyebrow: 'Fuar',
+          title: 'Imen Sahand Padideh standı',
+          desc: 'Fuar standında ısı pedleri — çok düşük tüketim ve çevre uyumu vurgusuyla.',
+          imageAlt: 'Imen Sahand Padideh fuar standı, ısı pedleriyle',
+          caption: 'Imen Sahand Padideh standı — düşük tüketimli ısı pedi tanıtımı.'
+        },
+        origin: {
+          eyebrow: 'Tebriz kuluçka merkezi · 1399',
+          title: 'Tasarımdan üretime — teknoloji kuluçkası',
+          desc: 'BizPet, Bizdavar ekibinin donanım ürünlerinden biridir — Padideh ısı pedi, iki yerel teknoloji ortağıyla.',
+          parkTitle: 'Teknoloji Kuluçka Merkezi',
+          parkDesc: 'Tebriz Üniversitesi — Padideh ısı pedinin tasarım ve üretim yeri.',
+          partner1Title: 'Teknoloji Pardazan Tosee Khavarmianeh',
+          partner1Desc: 'Geliştirme ve ticarileştirme ortağı.',
+          partner2Title: 'Imen Sahand Padideh',
+          partner2Desc: 'Tebriz teknoloji parkı birimi — Padideh ısı pedi tasarım ve üretim ortağı.',
+          specTitle: '5–12 V · maks. 1 A',
+          specDesc: 'Ev ve araç için taşınabilir — ısıtma elemanı çıkarıldıktan sonra yıkanabilir.'
+        },
+        production: {
+          eyebrow: 'Üretim hattı',
+          title: 'Isı pedi montaj ve test',
+          desc: 'Montaj ve kalite kontrol istasyonu — kumaş pedler, güç ünitesi ve ürün paketleme.',
+          imageAlt: 'BizPet ısı pedi üretim hattı — tezgâhta montaj ve test',
+          caption: 'Atölyede ısı pedlerinin montaj ve testi.'
+        },
+        related: {
+          title: 'İlgili ürün ve hizmetler',
+          bizseat: 'Araç koltuğu bel desteği',
+          biztab: 'Temasız duvar termometresi',
+          catalog: 'Ürün kataloğu',
+          catalogDesc: 'Bizdavar donanımı ve üretim hatları',
+          about: 'Bizdavar hakkında',
+          aboutDesc: 'Teknoloji parkı, fuarlar ve başarılar'
+        },
+        geoText: 'Tebriz Üniversitesi teknoloji kuluçkasında tasarlanan ısı pedi — Bizdavar’ın BizPet ürünü.'
+      },
       bizswap: {
         hero: {
           tag: 'Web3 ürün · DeFi',
@@ -1425,6 +1650,118 @@
         },
         geoText: 'Automotive product invented at the University of Tabriz Science and Technology Park — Bizdavar design, sold on Digikala.'
       },
+      bizpet: {
+        hero: {
+          tag: 'Owned product · Heating pad',
+          title: 'BizPet — Bizdavar heating pad',
+          desc: 'Designed and produced at the University of Tabriz Technology Incubator — a Bizdavar-owned product also known as Biz Pet / Pet Biz'
+        },
+        about: {
+          title: 'About the product',
+          imageAlt: 'BizPet — grey heating pad designed by the Bizdavar team',
+          body: '<strong>BizPet</strong> (Biz Pet / Pet Biz) is the Padideh heating pad — for warming in cold seasons and localized pain relief, designed and produced at the <strong>University of Tabriz Technology Incubator</strong>.',
+          body2: 'It was developed with <strong>Technology Pardazan Tosee Khavarmianeh</strong> and the technology unit <strong>Imen Sahand Padideh</strong>. The pad is portable for home or car use.',
+          specsTitle: 'Features',
+          specs: [
+            'Padideh heating pad — BizPet / Biz Pet / Pet Biz',
+            'Cold-season warming and localized pain relief',
+            'Portable — home and car use',
+            'Operating voltage 5–12 V (max 1 A)',
+            'Washable after removing the heating element',
+            'Designed and produced at the University of Tabriz Technology Incubator',
+            'Collaboration with Imen Sahand Padideh and Technology Pardazan Tosee Khavarmianeh'
+          ],
+          ctaContact: 'Bulk inquiry / contact',
+          ctaCatalog: 'Product catalog'
+        },
+        gallery: {
+          tanAlt: 'BizPet — tan heating pad with power connector',
+          elementAlt: 'BizPet — heating element with contact points',
+          posterAlt: 'Padideh heating pad product poster'
+        },
+        rd: {
+          eyebrow: 'Research & development',
+          title: 'Heating-element tests in the lab',
+          desc: 'Thermal tests, prototype and assembly photos — part of the engineering path at the Tabriz University incubator.',
+          tempHighAlt: 'Infrared thermometer test of the heating element',
+          tempHighCaption: 'Lab thermal test of the heating element',
+          tempAlt: 'Surface temperature measurement during R&D',
+          tempCaption: 'Surface temperature during R&D testing',
+          elementAlt: 'Rectangular heating element with corner contacts',
+          elementCaption: 'Heating element with contact points',
+          protoAlt: 'Heating-pad prototype on an insulation block',
+          protoCaption: 'Prototype and experimental assembly'
+        },
+        military: {
+          eyebrow: 'Research & development',
+          title: 'Heating pads in military clothing',
+          desc: 'A tactical-vest prototype with an integrated heating element and control unit — R&D for applying the heating pad inside military clothing layers.',
+          vestAlt: 'Military vest prototype with heating pad on a mannequin',
+          vestCaption: 'Tactical vest prototype with thermal control unit',
+          liningAlt: 'Vest interior lining and heating-pad wiring',
+          liningCaption: 'Interior lining — stitched-in heating element',
+          outdoorAlt: 'Heated military vest on a mannequin outdoors',
+          outdoorCaption: 'Outdoor display of the prototype'
+        },
+        dryer: {
+          eyebrow: 'Research & development',
+          title: 'Heating pads in fruit-dryer baskets',
+          desc: 'A wooden fruit-dryer basket design with a hexagonal heating mesh and a power lead — R&D for applying the heating pad inside dryer trays.',
+          imageAlt: 'Fruit-dryer basket prototype with heating mesh',
+          caption: '3D render of a dryer basket with a mesh heating element.'
+        },
+        pets: {
+          eyebrow: 'Pet beds',
+          title: 'Infrared heating pad for pets',
+          desc: 'The same heating pad also works well in dog and cat beds — safe low-voltage warmth in cold seasons, with a washable cover.',
+          imageAlt: 'BizPet — infrared heating pad for pet beds',
+          specs: [
+            'Suitable for pet beds',
+            'Carbon nanomaterials · far infrared · 95–99% efficiency',
+            'Safe 5–12 V · 5–8 W consumption',
+            'Soft, removable, washable cover',
+            'Temperature control in the pet’s body-temperature range',
+            'Therapeutic use: muscle spasms and arthritis — for older or pregnant animals'
+          ]
+        },
+        expo: {
+          eyebrow: 'Exhibition',
+          title: 'Imen Sahand Padideh booth',
+          desc: 'Heating pads on display — with emphasis on very low consumption and environmental compatibility.',
+          imageAlt: 'Imen Sahand Padideh exhibition booth with heating pads',
+          caption: 'Imen Sahand Padideh booth — introducing a low-consumption heating pad.'
+        },
+        origin: {
+          eyebrow: 'Tabriz incubator · 1399',
+          title: 'From design to production at the incubator',
+          desc: 'BizPet is one of the hardware products from the Bizdavar team — the Padideh heating pad, with two local technology partners.',
+          parkTitle: 'Technology Incubator',
+          parkDesc: 'University of Tabriz — where the Padideh heating pad was designed and produced.',
+          partner1Title: 'Technology Pardazan Tosee Khavarmianeh',
+          partner1Desc: 'Development and commercialization partner.',
+          partner2Title: 'Imen Sahand Padideh',
+          partner2Desc: 'Tabriz science-park technology unit — design and manufacturing partner for the Padideh heating pad.',
+          specTitle: '5–12 V · max 1 A',
+          specDesc: 'Portable for home and car — washable after removing the heating element.'
+        },
+        production: {
+          eyebrow: 'Production line',
+          title: 'Heating-pad assembly and testing',
+          desc: 'Assembly and quality-control station — fabric pads, power units and product packaging.',
+          imageAlt: 'BizPet heating-pad production line — assembly and testing at the workbench',
+          caption: 'Assembling and testing heating pads in the workshop.'
+        },
+        related: {
+          title: 'Related products and services',
+          bizseat: 'Car seat backrest',
+          biztab: 'Non-contact wall thermometer',
+          catalog: 'Product catalog',
+          catalogDesc: 'Bizdavar hardware and production lines',
+          about: 'About Bizdavar',
+          aboutDesc: 'Science park, exhibitions and achievements'
+        },
+        geoText: 'Heating pad designed at the University of Tabriz Technology Incubator — Bizdavar’s BizPet product.'
+      },
       bizswap: {
         hero: {
           tag: 'Web3 product · DeFi',
@@ -1662,6 +1999,168 @@
     }, {});
   }
 
+  const galleryPage = {
+    fa: {
+      hero: {
+        tag: 'گالری بیزدوار',
+        title: 'تصاویر تولید، تحقیق و نمایشگاه',
+        desc: 'خط تولید، آزمایشگاه، محصولات و حضور در نمایشگاه‌ها — از مرکز رشد دانشگاه تبریز تا غرفه ایمن سهند پدیده.'
+      },
+      filters: { all: 'همه', exhibition: 'نمایشگاه', rd: 'تحقیق و توسعه', production: 'خط تولید', products: 'محصولات' },
+      filterAria: 'فیلتر گالری',
+      countText: '{count} تصویر',
+      empty: 'در این دسته هنوز تصویری نیست.',
+      close: 'بستن',
+      related: 'مشاهده صفحه مرتبط',
+      relatedTitle: 'صفحات مرتبط',
+      relatedAbout: 'پارک علمی، نمایشگاه‌ها و دستاوردها',
+      relatedBizpet: 'پد حرارتی بیز پت',
+      relatedProducts: 'سخت‌افزار و خطوط تولید',
+      relatedContact: 'مشاوره و استعلام',
+      relatedGamak: 'تامین الکتروموتور صنعتی از ترکیه',
+      geoText: 'تصاویر واقعی از نمایشگاه، تولید و تحقیق تیم بیزدوار در تبریز و استانبول.',
+      ctaFromAbout: 'گالری تصاویر نمایشگاه و تولید',
+      items: {
+        'expo-imen-booth': { caption: 'غرفه ایمن سهند پدیده — پدهای حرارتی روی میز نمایشگاه', alt: 'غرفه نمایشگاهی ایمن سهند پدیده با پدهای حرارتی سیاه روی میز' },
+        'expo-team-bizdavar': { caption: 'تیم بیزدوار در غرفه نمایشگاه — بنر Bizdavar', alt: 'سه نفر در غرفه نمایشگاه با بنر بیزدوار و ایمن سهند پدیده' },
+        'expo-team-imen': { caption: 'نمایندگان ایمن سهند پدیده در نمایشگاه', alt: 'سه نفر در غرفه ایمن سهند پدیده با پرچم ایران' },
+        'expo-tabrizu': { caption: 'مرکز رشد و نوآوری دانشگاه تبریز', alt: 'غرفه مرکز رشد و نوآوری دانشگاه تبریز' },
+        'bizpet-expo': { caption: 'نمایش پد حرارتی پدیده در غرفه نمایشگاه', alt: 'غرفه نمایشگاهی با پدهای حرارتی پدیده' },
+        'bizpet-production': { caption: 'مونتاژ و تولید پد حرارتی', alt: 'خط تولید پد حرارتی بیز پت' },
+        'bizpet-rd-high': { caption: 'آزمایش حرارتی در آزمایشگاه', alt: 'آزمایش دمای پد حرارتی در آزمایشگاه' },
+        'bizpet-rd-temp': { caption: 'اندازه‌گیری دما روی نمونه آزمایشگاهی', alt: 'اندازه‌گیری دمای پد حرارتی' },
+        'bizpet-prototype': { caption: 'نمونه اولیه پد حرارتی', alt: 'نمونه اولیه پد حرارتی بیز پت' },
+        'bizpet-element': { caption: 'المان حرارتی داخل پد', alt: 'المان حرارتی پد پدیده' },
+        'bizpet-military-vest': { caption: 'تحقیق پوشش حرارتی برای لباس', alt: 'جلیقه با لایه حرارتی در مرحله تحقیق' },
+        'bizpet-military-lining': { caption: 'لایه حرارتی دوخته‌شده در پوشش', alt: 'لایه حرارتی داخل پوشش' },
+        'bizpet-military-outdoor': { caption: 'آزمایش میدانی پوشش حرارتی', alt: 'آزمایش پوشش حرارتی در فضای باز' },
+        'bizpet-dryer': { caption: 'طرح تحقیق خشک‌کن میوه با المان حرارتی', alt: 'طرح سه‌بعدی سبد خشک‌کن میوه' },
+        'bizpet-grey': { caption: 'BizPet — پد حرارتی خاکستری', alt: 'پد حرارتی بیز پت خاکستری' },
+        'bizpet-tan': { caption: 'BizPet — پد حرارتی کرم', alt: 'پد حرارتی بیز پت کرم' },
+        'bizpet-pets': { caption: 'برگه معرفی کاربرد پد برای حیوانات خانگی', alt: 'پوستر BizPet برای جای خواب حیوانات' },
+        'motor-housings': { caption: 'پوسته‌های الکتروموتور در مرحله مونتاژ', alt: 'چند پوسته الکتروموتور روی کف کارگاه' },
+        'motor-stator-pair': { caption: 'سیم‌پیچی مسی داخل پوسته موتور', alt: 'دو استاتور الکتروموتور با سیم‌پیچی مسی' },
+        'motor-stator-wind': { caption: 'سیم‌پیچی استاتور الکتروموتور', alt: 'استاتور با کلاف مسی در حال سیم‌پیچی' },
+        'motor-stators-bench': { caption: 'استاتورها روی میز مونتاژ', alt: 'چند استاتور الکتروموتور روی میز کار' },
+        'motor-stators-leads': { caption: 'استاتور با سیم‌های خروجی آماده اتصال', alt: 'استاتورهای پیچیده با سیم قرمز و زرد' },
+        'motor-shaft': { caption: 'شفت ماشین‌کاری‌شده موتور', alt: 'شفت فلزی الکتروموتور روی کف کارگاه' },
+        'motor-rotor': { caption: 'روتور و یاتاقان روی پوسته موتور', alt: 'روتور الکتروموتور با یاتاقان روی پوسته' },
+        'motor-parts': { caption: 'قطعات ریخته‌گری و جعبه ترمینال', alt: 'قطعات الکتروموتور روی پالت چوبی' },
+        'motor-machining': { caption: 'ماشین‌کاری پوسته الکتروموتور', alt: 'سوراخ‌کاری پوسته موتور روی گیره ماشین' },
+        'motor-molds': { caption: 'قالب ریخته‌گری پوسته موتور', alt: 'قالب‌های ریخته‌گری پوسته الکتروموتور' },
+        'motor-finished-row': { caption: 'الکتروموتورهای مونتاژشده', alt: 'ردیف موتورهای صنعتی مونتاژشده' },
+        'motor-vibrator-orange': { caption: 'موتور ویبره صنعتی', alt: 'موتور ویبره صنعتی نارنجی روی میز کار' },
+        'motor-vibrator-weights': { caption: 'وزنه‌های خارج از مرکز موتور ویبره', alt: 'موتور ویبره نارنجی با وزنه روی شفت' }
+      }
+    },
+    tr: {
+      hero: {
+        tag: 'Bizdavar galerisi',
+        title: 'Üretim, Ar-Ge ve fuar görselleri',
+        desc: 'Üretim hattı, laboratuvar, ürünler ve fuar standları — Tebriz Üniversitesi kuluçka merkezinden Imen Sahand Padideh standına.'
+      },
+      filters: { all: 'Tümü', exhibition: 'Fuar', rd: 'Ar-Ge', production: 'Üretim', products: 'Ürünler' },
+      filterAria: 'Galeri filtresi',
+      countText: '{count} görsel',
+      empty: 'Bu kategoride henüz görsel yok.',
+      close: 'Kapat',
+      related: 'İlgili sayfayı gör',
+      relatedTitle: 'İlgili sayfalar',
+      relatedAbout: 'Teknopark, fuarlar ve başarılar',
+      relatedBizpet: 'BizPet ısı pedi',
+      relatedProducts: 'Donanım ve üretim hatları',
+      relatedContact: 'Danışmanlık ve teklif',
+      relatedGamak: 'Türkiye’den endüstriyel motor tedariki',
+      geoText: 'Bizdavar ekibinin Tebriz ve İstanbul’daki fuar, üretim ve Ar-Ge fotoğrafları.',
+      ctaFromAbout: 'Fuar ve üretim galerisi',
+      items: {
+        'expo-imen-booth': { caption: 'Imen Sahand Padideh standı — ısı pedleri masada', alt: 'Fuar standında siyah ısı pedleri' },
+        'expo-team-bizdavar': { caption: 'Bizdavar ekibi fuar standında', alt: 'Bizdavar ve Imen Sahand Padideh standında üç kişi' },
+        'expo-team-imen': { caption: 'Imen Sahand Padideh temsilcileri fuarda', alt: 'Imen Sahand Padideh standında üç kişi ve İran bayrağı' },
+        'expo-tabrizu': { caption: 'Tebriz Üniversitesi kuluçka ve inovasyon merkezi', alt: 'Tebriz Üniversitesi kuluçka merkezi standı' },
+        'bizpet-expo': { caption: 'Padideh ısı pedinin fuarda sergilenmesi', alt: 'Fuar standında Padideh ısı pedleri' },
+        'bizpet-production': { caption: 'Isı pedi montajı', alt: 'BizPet ısı pedi üretim hattı' },
+        'bizpet-rd-high': { caption: 'Laboratuvarda ısıl test', alt: 'Laboratuvarda ısı pedi sıcaklık testi' },
+        'bizpet-rd-temp': { caption: 'Numune üzerinde sıcaklık ölçümü', alt: 'Isı pedi sıcaklık ölçümü' },
+        'bizpet-prototype': { caption: 'Isı pedi prototipi', alt: 'BizPet ısı pedi prototipi' },
+        'bizpet-element': { caption: 'Ped içindeki ısıtıcı eleman', alt: 'Padideh ısıtıcı eleman' },
+        'bizpet-military-vest': { caption: 'Giysi için ısıtmalı astar araştırması', alt: 'Isıtmalı astarlı yelek prototipi' },
+        'bizpet-military-lining': { caption: 'Giysiye dikilmiş ısıtmalı katman', alt: 'Giysi içinde ısıtmalı astar' },
+        'bizpet-military-outdoor': { caption: 'Isıtmalı giysinin saha testi', alt: 'Açık alanda ısıtmalı giysi testi' },
+        'bizpet-dryer': { caption: 'Meyve kurutucu araştırma tasarımı', alt: 'Meyve kurutucu sepetinin 3B görseli' },
+        'bizpet-grey': { caption: 'BizPet — gri ısı pedi', alt: 'Gri BizPet ısı pedi' },
+        'bizpet-tan': { caption: 'BizPet — bej ısı pedi', alt: 'Bej BizPet ısı pedi' },
+        'bizpet-pets': { caption: 'Evcil hayvan yatağı uygulaması', alt: 'BizPet evcil hayvan afişi' },
+        'motor-housings': { caption: 'Montaj aşamasındaki motor gövdeleri', alt: 'Atölye zemininde elektrik motoru gövdeleri' },
+        'motor-stator-pair': { caption: 'Motor gövdesinde bakır sargı', alt: 'Bakır sargılı iki motor statoru' },
+        'motor-stator-wind': { caption: 'Elektrik motoru stator sargısı', alt: 'Bakır bobinlerle sarılan stator' },
+        'motor-stators-bench': { caption: 'Montaj tezgâhındaki statorlar', alt: 'İş tezgâhında elektrik motoru statorları' },
+        'motor-stators-leads': { caption: 'Bağlantı kablolu statorlar', alt: 'Kırmızı ve sarı kablolu sarılmış statorlar' },
+        'motor-shaft': { caption: 'İşlenmiş motor mili', alt: 'Atölye zemininde elektrik motoru mili' },
+        'motor-rotor': { caption: 'Rotor ve rulman, motor gövdesinde', alt: 'Rulmanlı rotor motor gövdesinin üzerinde' },
+        'motor-parts': { caption: 'Döküm parçalar ve klemens kutusu', alt: 'Ahşap palet üzerinde motor parçaları' },
+        'motor-machining': { caption: 'Motor gövdesinin talaşlı imalatı', alt: 'Mengenede delinen motor gövdesi' },
+        'motor-molds': { caption: 'Motor gövdesi döküm kalıpları', alt: 'Elektrik motoru gövde kalıpları' },
+        'motor-finished-row': { caption: 'Montajı tamamlanmış elektrik motorları', alt: 'Sıralanmış endüstriyel motorlar' },
+        'motor-vibrator-orange': { caption: 'Endüstriyel vibratör motoru', alt: 'Tezgâhta turuncu vibratör motoru' },
+        'motor-vibrator-weights': { caption: 'Vibratör motorunun eksantrik ağırlıkları', alt: 'Şaftında ağırlık bulunan turuncu vibratör' }
+      }
+    },
+    en: {
+      hero: {
+        tag: 'Bizdavar gallery',
+        title: 'Production, R&D and exhibition photos',
+        desc: 'Factory floor, lab work, products and trade-show booths — from the University of Tabriz incubator to the Imen Sahand Padideh stand.'
+      },
+      filters: { all: 'All', exhibition: 'Exhibitions', rd: 'R&D', production: 'Production', products: 'Products' },
+      filterAria: 'Gallery filter',
+      countText: '{count} photos',
+      empty: 'No photos in this category yet.',
+      close: 'Close',
+      related: 'Open related page',
+      relatedTitle: 'Related pages',
+      relatedAbout: 'Science park, exhibitions and milestones',
+      relatedBizpet: 'BizPet heating pad',
+      relatedProducts: 'Hardware and production lines',
+      relatedContact: 'Consulting and quotes',
+      relatedGamak: 'Industrial motor supply from Turkey',
+      geoText: 'Real photos of Bizdavar exhibitions, production and R&D in Tabriz and Istanbul.',
+      ctaFromAbout: 'Exhibition and production gallery',
+      items: {
+        'expo-imen-booth': { caption: 'Imen Sahand Padideh booth — heating pads on display', alt: 'Exhibition booth with black heating pads on the table' },
+        'expo-team-bizdavar': { caption: 'Bizdavar team at the exhibition booth', alt: 'Three people at the Bizdavar and Imen Sahand Padideh booth' },
+        'expo-team-imen': { caption: 'Imen Sahand Padideh representatives at the show', alt: 'Three people at the Imen Sahand Padideh booth with the Iranian flag' },
+        'expo-tabrizu': { caption: 'University of Tabriz Incubation and Innovation Center', alt: 'University of Tabriz incubation center booth' },
+        'bizpet-expo': { caption: 'Padideh heating pads at the exhibition', alt: 'Exhibition booth showing Padideh heating pads' },
+        'bizpet-production': { caption: 'Heating-pad assembly', alt: 'BizPet heating pad production' },
+        'bizpet-rd-high': { caption: 'Thermal testing in the lab', alt: 'Heating pad temperature test in the laboratory' },
+        'bizpet-rd-temp': { caption: 'Temperature reading on a lab sample', alt: 'Heating pad temperature measurement' },
+        'bizpet-prototype': { caption: 'Heating pad prototype', alt: 'BizPet heating pad prototype' },
+        'bizpet-element': { caption: 'Heating element inside the pad', alt: 'Padideh heating element' },
+        'bizpet-military-vest': { caption: 'Heated-clothing research vest', alt: 'Vest with a heating lining in R&D' },
+        'bizpet-military-lining': { caption: 'Heating layer sewn into a garment', alt: 'Heating lining inside a garment' },
+        'bizpet-military-outdoor': { caption: 'Outdoor test of heated clothing', alt: 'Heated clothing field test' },
+        'bizpet-dryer': { caption: 'Fruit-dryer research concept', alt: '3D render of a fruit-dryer basket' },
+        'bizpet-grey': { caption: 'BizPet — grey heating pad', alt: 'Grey BizPet heating pad' },
+        'bizpet-tan': { caption: 'BizPet — tan heating pad', alt: 'Tan BizPet heating pad' },
+        'bizpet-pets': { caption: 'Pet-bed application flyer', alt: 'BizPet pet-bed poster' },
+        'motor-housings': { caption: 'Electric motor housings in assembly', alt: 'Electric motor housings on the workshop floor' },
+        'motor-stator-pair': { caption: 'Copper windings inside the motor housing', alt: 'Two motor stators with copper windings' },
+        'motor-stator-wind': { caption: 'Stator winding for an electric motor', alt: 'Stator with copper coils during winding' },
+        'motor-stators-bench': { caption: 'Stators on the assembly bench', alt: 'Electric motor stators on a workbench' },
+        'motor-stators-leads': { caption: 'Wound stators with connection leads', alt: 'Stators with red and yellow lead wires' },
+        'motor-shaft': { caption: 'Machined motor shaft', alt: 'Electric motor shaft on the workshop floor' },
+        'motor-rotor': { caption: 'Rotor and bearing on a motor housing', alt: 'Motor rotor with a bearing on the housing' },
+        'motor-parts': { caption: 'Cast parts and a terminal box', alt: 'Electric motor parts on a wooden pallet' },
+        'motor-machining': { caption: 'Machining a motor housing', alt: 'Drilling a motor housing in a machine vise' },
+        'motor-molds': { caption: 'Casting molds for motor housings', alt: 'Molds for electric motor housings' },
+        'motor-finished-row': { caption: 'Assembled electric motors', alt: 'Rows of assembled industrial motors' },
+        'motor-vibrator-orange': { caption: 'Industrial vibrator motor', alt: 'Orange industrial vibrator motor on a bench' },
+        'motor-vibrator-weights': { caption: 'Eccentric weights on a vibrator motor', alt: 'Orange vibrator motor with shaft weights' }
+      }
+    }
+  };
+
   ['fa', 'tr', 'en'].forEach(lang => {
     if (!window.BIZDAVAR_LOCALES || !window.BIZDAVAR_LOCALES[lang]) return;
     if (page[lang].fastPage) {
@@ -1671,6 +2170,7 @@
       page[lang].fastPage.schema = fastSchema[lang];
     }
     Object.assign(window.BIZDAVAR_LOCALES[lang], page[lang], {
+      galleryPage: galleryPage[lang],
       blogPosts: asBlogRows(blogPosts[lang]),
       caseStudy: caseStudy[lang],
       articles: asArticles(lang)

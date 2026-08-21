@@ -385,6 +385,22 @@ window.BIZDAVAR_INTEL = {
       image: 'assets/images/products/bizseat/bizseat-hero.svg',
       slug: 'pages/bizseat.html',
       tags: ['خودرو', 'ارگونومی', 'تبریز', 'پارک علم و فناوری', 'ایمن سهند پدیده', 'دیجی‌کالا']
+    },
+    {
+      id: 'bizpet',
+      year: '۱۳۹۹',
+      yearIso: '2020',
+      title: 'BizPet — پد حرارتی بیز پت',
+      titleEn: 'BizPet — Padideh heating pad',
+      desc: 'طراحی و تولید پد حرارتی پدیده (بیز پت / پت بیز) در مرکز رشد فناوری دانشگاه تبریز — همکاری مجموعه بیزدوار با تکنولوژی پردازان توسعه خاورمیانه و ایمن سهند پدیده. ولتاژ ۵ تا ۱۲ ولت، قابل حمل در خانه و خودرو.',
+      source: 'مرکز رشد فناوری دانشگاه تبریز',
+      sourceUrl: 'https://techpark.tabrizu.ac.ir/',
+      pressLinks: [
+        { label: 'پارک علم و فناوری تبریز', url: 'https://techpark.tabrizu.ac.ir/' }
+      ],
+      image: 'assets/images/products/bizpet/bizpet-grey.jpg',
+      slug: 'pages/bizpet.html',
+      tags: ['پد حرارتی', 'تبریز', 'مرکز رشد', 'ایمن سهند پدیده']
     }
   ],
 
