@@ -37,7 +37,7 @@
         featured: {
           eyebrow: 'محصولات زنده',
           title: 'صفحات محصول آماده سفارش',
-          desc: 'WhatsApp CRM، Accounting، BizSwap، BizTab، BizClean، BizSeat و BizPet — با صفحه اختصاصی و مسیر استعلام شفاف.'
+          desc: 'WhatsApp CRM، Accounting، BizSwap، BizTab، BizClean و BizPet — با صفحه اختصاصی و مسیر استعلام شفاف.'
         },
         filterAll: 'همه',
         empty: 'محصولی برای نمایش نیست.',
@@ -147,8 +147,8 @@
           bizpet: {
             name: 'BizPet',
             title: 'پد حرارتی بیز پت',
-            desc: 'پد حرارتی پدیده (بیز پت / پت بیز) — طراحی و تولید در مرکز رشد فناوری دانشگاه تبریز با همکاری ایمن سهند پدیده. ۵ تا ۱۲ ولت، قابل حمل در خانه و خودرو.',
-            tags: ['پد حرارتی', 'تبریز', '۱۳۹۹']
+            desc: 'محصول اصلی ۱۳۹۹ — پد حرارتی پدیده برای خانه، خودرو (پشتی صندلی) و جا خواب حیوانات. مرکز رشد دانشگاه تبریز، ایمن سهند پدیده. ۵ تا ۱۲ ولت.',
+            tags: ['پد حرارتی', 'خودرو', 'تبریز', '۱۳۹۹']
           },
           biztouch: {
             name: 'BizTouch',
@@ -240,7 +240,7 @@
         featured: {
           eyebrow: 'Canlı ürünler',
           title: 'Siparişe hazır ürün sayfaları',
-          desc: 'WhatsApp CRM, Accounting, BizSwap, BizTab, BizClean, BizSeat ve BizPet — özel sayfa ve net teklif yolu.'
+          desc: 'WhatsApp CRM, Accounting, BizSwap, BizTab, BizClean ve BizPet — özel sayfa ve net teklif yolu.'
         },
         filterAll: 'Tümü',
         empty: 'Gösterilecek ürün yok.',
@@ -317,7 +317,7 @@
           biztab: { name: 'BizTab', title: 'Temasız duvar termometresi', desc: 'Tebriz\'deki ilk temasız duvar termometresi — 0,3°C altı hata, üniversite onayı.', tags: ['IoT', 'Temasız', 'Tebriz'] },
           bizclean: { name: 'BizClean', title: 'Hijyen ve dezenfeksiyon', desc: 'Otomatik el dezenfektan (BizClean V5) — Bizdavar üretimi; RINOTEX 1400 «Imen Sahand Padideh» park birimi; ISNA/IRIB basını.', tags: ['Hijyen', 'Otomatik', 'COVID'] },
           bizseat: { name: 'BizSeat', title: 'Araç koltuğu bel desteği', desc: '1399’da Tebriz Üniversitesi teknoloji parkında icat, tasarım ve üretim — Teknoloji Pardazan Tosee Khavarmianeh ve Imen Sahand Padideh iş birliği.', tags: ['Otomotiv', 'Ergonomi', '1399'] },
-          bizpet: { name: 'BizPet', title: 'BizPet ısı pedi', desc: 'Padideh ısı pedi (BizPet / Pet Biz) — Tebriz Üniversitesi teknoloji kuluçkasında tasarım ve üretim, Imen Sahand Padideh iş birliği. 5–12 V, ev ve araçta taşınabilir.', tags: ['Isı pedi', 'Tebriz', '1399'] },
+          bizpet: { name: 'BizPet', title: 'BizPet ısı pedi', desc: 'Asıl 1399 ürünü — ev, araç koltuğu ve evcil hayvan yatağı için Padideh ısı pedi. Digikala’daki koltuk desteği aynı üründür.', tags: ['Isı pedi', 'Otomotiv', 'Tebriz', '1399'] },
           biztouch: { name: 'BizTouch', title: 'Temasız çözümler', desc: 'Giriş, hijyen ve kamusal alanlar için temasız cihazlar — Bizdavar tasarımı.', tags: ['Temasız', 'IoT', 'Giriş'] },
           bizroll: { name: 'BizRoll', title: 'Rulo ve ambalaj sistemleri', desc: 'Endüstriyel rulo ve ambalaj makineleri.', tags: ['Ambalaj', 'Rulo', 'Endüstriyel'] },
           'sealer-home': { name: 'Ev tipi vakum makinesi', title: 'Ev vakumu', desc: 'Ev ve küçük atölyeler için vakum/kapama makinesi.', tags: ['Vakum', 'Ev', 'Kapama'] },
@@ -373,7 +373,7 @@
         featured: {
           eyebrow: 'Live products',
           title: 'Ready product pages',
-          desc: 'WhatsApp CRM, Accounting, BizSwap, BizTab, BizClean, BizSeat and BizPet — dedicated pages with a clear inquiry path.'
+          desc: 'WhatsApp CRM, Accounting, BizSwap, BizTab, BizClean and BizPet — dedicated pages with a clear inquiry path.'
         },
         filterAll: 'All',
         empty: 'No products to display.',
@@ -450,7 +450,7 @@
           biztab: { name: 'BizTab', title: 'Non-contact wall thermometer', desc: 'First non-contact wall thermometer in Tabriz — under 0.3°C error, university validated.', tags: ['IoT', 'Contactless', 'Tabriz'] },
           bizclean: { name: 'BizClean', title: 'Hygiene & disinfection line', desc: 'Automatic hand sanitizer (BizClean V5) — Bizdavar production; RINOTEX 1400 via «Imen Sahand Padideh» park unit; ISNA & IRIB press.', tags: ['Hygiene', 'Automatic', 'COVID'] },
           bizseat: { name: 'BizSeat', title: 'Car seat backrest', desc: 'Invented, designed and built in 1399 at the University of Tabriz science park — with Technology Pardazan Tosee Khavarmianeh and Imen Sahand Padideh.', tags: ['Automotive', 'Ergonomics', '1399'] },
-          bizpet: { name: 'BizPet', title: 'BizPet heating pad', desc: 'Padideh heating pad (BizPet / Pet Biz) — designed and produced at the University of Tabriz Technology Incubator with Imen Sahand Padideh. 5–12 V, portable for home and car.', tags: ['Heating pad', 'Tabriz', '1399'] },
+          bizpet: { name: 'BizPet', title: 'BizPet heating pad', desc: 'The 1399 flagship Padideh heating pad for home, car seat and pet beds. The Digikala car-backrest listing is the same product.', tags: ['Heating pad', 'Automotive', 'Tabriz', '1399'] },
           biztouch: { name: 'BizTouch', title: 'Contactless solutions', desc: 'Contactless devices for entrances, hygiene and public spaces — Bizdavar engineered.', tags: ['Contactless', 'IoT', 'Entrance'] },
           bizroll: { name: 'BizRoll', title: 'Roll & packaging systems', desc: 'Engineered roll and packaging machinery for industrial production.', tags: ['Packaging', 'Roll', 'Industrial'] },
           'sealer-home': { name: 'Home vacuum sealer', title: 'Domestic sealing', desc: 'Vacuum sealer designed for home use and small workshops.', tags: ['Vacuum', 'Home', 'Sealing'] },

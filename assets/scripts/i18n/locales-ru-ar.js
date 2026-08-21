@@ -190,14 +190,14 @@
     },
     bizseat: {
       crumb: 'BizSeat',
-      seoTitle: 'BizSeat | автомобильная поясничная опора — продукт Bizdavar',
-      seoDescription: 'BizSeat — поясничная опора для автокресла, изобретена, спроектирована и произведена в 1399 в технопарке Университета Тебриза. Сотрудничество с Technology Pardazan Tosee Khavarmianeh и Imen Sahand Padideh. Продаётся на Digikala.',
-      seoKeywords: 'BizSeat, поясничная опора, Bizdavar, Тебриз, Digikala'
+      seoTitle: 'BizSeat — это BizPet | нагревательный мат',
+      seoDescription: 'BizSeat не отдельный продукт: это торговое имя того же нагревательного мата BizPet 1399. Основная страница — BizPet.',
+      seoKeywords: 'BizSeat, BizPet, нагревательный мат, Bizdavar, Digikala'
     },
     bizpet: {
       crumb: 'BizPet',
-      seoTitle: 'BizPet | нагревательный мат — инкубатор Тебриза',
-      seoDescription: 'BizPet (Biz Pet / Pet Biz) — нагревательный мат Padideh. Разработан и произведён в технологическом инкубаторе Университета Тебриза совместно с Imen Sahand Padideh. 5–12 В, для дома и автомобиля.',
+      seoTitle: 'BizPet | нагревательный мат — основной продукт 1399',
+      seoDescription: 'BizPet — основной нагревательный мат Padideh для дома, автокресла и лежанки животных. Карточка Digikala — тот же товар.',
       seoKeywords: 'BizPet, нагревательный мат, Padideh, Университет Тебриза, Imen Sahand Padideh, Bizdavar'
     },
     fxguard: {
@@ -427,9 +427,9 @@
     },
     bizseat: {
       crumb: 'BizSeat',
-      seoTitle: 'BizSeat | مسند ظهر مقعد السيارة — منتج Bizdavar',
-      seoDescription: 'BizSeat — مسند ظهر مقعد سيارة اختُرع وصُمم وصُنع عام ١٣٩٩ في حديقة العلوم والتكنولوجيا بجامعة تبريز. تعاون مع تكنولوجيا پردازان توسعه خاورمیانه وإيمن سهند پدیده. متوفر على ديجي‌كالا.',
-      seoKeywords: 'BizSeat, مسند ظهر سيارة, Bizdavar, تبريز, ديجي‌كالا'
+      seoTitle: 'BizSeat هو BizPet | وسادة التدفئة',
+      seoDescription: 'BizSeat ليس خطاً منفصلاً — إنه اسم بيع وسادة التدفئة BizPet لعام ١٣٩٩. الصفحة الرئيسية BizPet.',
+      seoKeywords: 'BizSeat, BizPet, وسادة تدفئة, Bizdavar, ديجي‌كالا'
     },
     bizpet: {
       crumb: 'BizPet',
@@ -1244,7 +1244,7 @@
       servicesTitle: 'Услуги',
       servicesDesc: 'Сайт за 5 дней, маркетинг, SMM, приложения, серверы и полевые работы',
       productsTitle: 'Продукты',
-      productsDesc: 'FXGuard, BizTab, BizPet, BizSeat — наша разработка',
+      productsDesc: 'FXGuard, BizTab, BizPet — наша разработка',
       supplyTitle: 'Промпоставки',
       supplyDesc: 'VEGA, Prosense, Gamak, Liqui Moly — запрос цены'
     }
@@ -1350,7 +1350,7 @@
       servicesTitle: 'خدمات',
       servicesDesc: 'موقع خلال ٥ أيام، تسويق، SMM، تطبيقات، خوادم وأعمال ميدانية',
       productsTitle: 'منتجات',
-      productsDesc: 'FXGuard وBizTab وBizPet وBizSeat — من صنع فريقنا',
+      productsDesc: 'FXGuard وBizTab وBizPet — من صنع فريقنا',
       supplyTitle: 'توريد صناعي',
       supplyDesc: 'VEGA وProsense وGamak وLiqui Moly — طلب سعر'
     }

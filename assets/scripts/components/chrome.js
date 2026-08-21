@@ -979,7 +979,7 @@
           <a href="${productsHref}" class="offer-map__card${currentPage === 'products' ? ' is-active' : ''}">
             <span class="offer-map__icon">${ic('box', { size: 22 })}</span>
             <strong>${t('common.offerMap.productsTitle', 'محصولات')}</strong>
-            <span>${t('common.offerMap.productsDesc', 'FXGuard، BizTab، BizPet، BizSeat — ساخت تیم بیزدوار')}</span>
+            <span>${t('common.offerMap.productsDesc', 'FXGuard، BizTab، BizPet — ساخت تیم بیزدوار')}</span>
           </a>
           <a href="${supplyHref}" class="offer-map__card">
             <span class="offer-map__icon">${ic('wrench', { size: 22 })}</span>

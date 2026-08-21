@@ -67,7 +67,7 @@ window.BIZDAVAR_LOCALES = {
         servicesTitle: 'خدمات',
         servicesDesc: 'سایت ۵روزه، بازاریابی، SMM، اپ، سرور و خدمات فنی',
         productsTitle: 'محصولات',
-        productsDesc: 'FXGuard، BizTab، BizPet، BizSeat — ساخت تیم بیزدوار',
+        productsDesc: 'FXGuard، BizTab، BizPet — ساخت تیم بیزدوار',
         supplyTitle: 'تامین صنعتی',
         supplyDesc: 'VEGA، Prosense، Gamak، Liqui Moly — استعلام قیمت'
       }
@@ -527,7 +527,7 @@ window.BIZDAVAR_LOCALES = {
         servicesTitle: 'Hizmetler',
         servicesDesc: '5 günde site, pazarlama, SMM, uygulama, sunucu ve saha işleri',
         productsTitle: 'Ürünler',
-        productsDesc: 'FXGuard, BizTab, BizPet, BizSeat — kendi üretimimiz',
+        productsDesc: 'FXGuard, BizTab, BizPet — kendi üretimimiz',
         supplyTitle: 'Endüstriyel tedarik',
         supplyDesc: 'VEGA, Prosense, Gamak, Liqui Moly — fiyat teklifi'
       }
@@ -987,7 +987,7 @@ window.BIZDAVAR_LOCALES = {
         servicesTitle: 'Services',
         servicesDesc: '5-day websites, marketing, SMM, apps, servers and field work',
         productsTitle: 'Products',
-        productsDesc: 'FXGuard, BizTab, BizPet, BizSeat — built by our team',
+        productsDesc: 'FXGuard, BizTab, BizPet — built by our team',
         supplyTitle: 'Industrial supply',
         supplyDesc: 'VEGA, Prosense, Gamak, Liqui Moly — request a quote'
       }

@@ -137,13 +137,13 @@
         seoKeywords: 'BizClean V5, BizClean, ضدعفونی دست, بیزدوار, کرونا, دیجی‌کالا, محصول اختصاصی'
       },
       bizseat: {
-        seoTitle: 'BizSeat | پشتی صندلی خودرو بیزدوار — محصول ۱۳۹۹ تبریز',
-        seoDescription: 'BizSeat — پشتی صندلی خودرو اختراع، طراحی و ساخت ۱۳۹۹ در پارک علم و فناوری دانشگاه تبریز. همکاری تکنولوژی پردازان توسعه خاورمیانه و ایمن سهند پدیده. موجود در دیجی‌کالا.',
-        seoKeywords: 'BizSeat, پشتی صندلی خودرو, بیزدوار, پارک علم و فناوری تبریز, دیجی‌کالا, محصول اختصاصی'
+        seoTitle: 'BizSeat همان BizPet است | پد حرارتی و پشتی خودرو',
+        seoDescription: 'BizSeat نام فروشگاهی جدا نیست — همان پد حرارتی BizPet محصول ۱۳۹۹ مرکز رشد دانشگاه تبریز است. صفحه اصلی محصول BizPet.',
+        seoKeywords: 'BizSeat, BizPet, پد حرارتی, پشتی صندلی خودرو, بیزدوار, دیجی‌کالا'
       },
       bizpet: {
-        seoTitle: 'BizPet | پد حرارتی بیز پت — محصول مرکز رشد تبریز',
-        seoDescription: 'BizPet (بیز پت / پت بیز) — پد حرارتی پدیده. طراحی و تولید در مرکز رشد فناوری دانشگاه تبریز با همکاری ایمن سهند پدیده. ولتاژ ۵ تا ۱۲ ولت، قابل حمل در خانه و خودرو.',
+        seoTitle: 'BizPet | پد حرارتی بیز پت — محصول اصلی ۱۳۹۹ تبریز',
+        seoDescription: 'BizPet محصول اصلی پد حرارتی پدیده برای خانه، خودرو و جا خواب حیوانات. طراحی در مرکز رشد دانشگاه تبریز با ایمن سهند پدیده. ۵ تا ۱۲ ولت. پشتی خودرو همان این محصول است.',
         seoKeywords: 'BizPet, بیز پت, پت بیز, پد حرارتی پدیده, مرکز رشد دانشگاه تبریز, ایمن سهند پدیده, بیزدوار'
       },
       fxguard: {
@@ -334,13 +334,13 @@
         seoKeywords: 'BizClean V5, BizClean, el dezenfektan, Bizdavar, Digikala'
       },
       bizseat: {
-        seoTitle: 'BizSeat | Araç koltuğu bel desteği — Bizdavar ürünü',
-        seoDescription: 'BizSeat — 1399’da Tebriz Üniversitesi teknoloji parkında icat, tasarım ve üretim. Teknoloji Pardazan Tosee Khavarmianeh ve Imen Sahand Padideh iş birliği. Digikala’da satışta.',
-        seoKeywords: 'BizSeat, araç koltuğu bel desteği, Bizdavar, Tebriz, Digikala'
+        seoTitle: 'BizSeat, BizPet ile aynı üründür | ısı pedi',
+        seoDescription: 'BizSeat ayrı bir hat değil — 1399 Tebriz ısı pedi BizPet’in araç koltuğu satış adıdır. Ana sayfa BizPet.',
+        seoKeywords: 'BizSeat, BizPet, ısı pedi, araç koltuğu, Bizdavar, Digikala'
       },
       bizpet: {
-        seoTitle: 'BizPet | Isı pedi — Tebriz kuluçka merkezi ürünü',
-        seoDescription: 'BizPet (Biz Pet / Pet Biz) — Padideh ısı pedi. Tebriz Üniversitesi teknoloji kuluçkasında tasarım ve üretim, Imen Sahand Padideh iş birliği. 5–12 V, ev ve araçta taşınabilir.',
+        seoTitle: 'BizPet | Isı pedi — asıl 1399 Tebriz ürünü',
+        seoDescription: 'BizPet, ev, araç koltuğu ve evcil hayvan yatağı için asıl Padideh ısı pedidir. Digikala koltuk desteği aynı üründür.',
         seoKeywords: 'BizPet, ısı pedi, Padideh, Tebriz Üniversitesi, Imen Sahand Padideh, Bizdavar'
       },
       fxguard: {
@@ -531,13 +531,13 @@
         seoKeywords: 'BizClean V5, BizClean, hand sanitizer, Bizdavar, Digikala'
       },
       bizseat: {
-        seoTitle: 'BizSeat | Car seat backrest — Bizdavar product',
-        seoDescription: 'BizSeat — car seat backrest invented, designed and built in 1399 at the University of Tabriz Science and Technology Park, with Technology Pardazan Tosee Khavarmianeh and Imen Sahand Padideh. Sold on Digikala.',
-        seoKeywords: 'BizSeat, car seat backrest, Bizdavar, Tabriz, Digikala'
+        seoTitle: 'BizSeat is BizPet | heating pad, not a second line',
+        seoDescription: 'BizSeat is the car-seat listing name for the same 1399 BizPet heating pad. The main product page is BizPet.',
+        seoKeywords: 'BizSeat, BizPet, heating pad, car seat, Bizdavar, Digikala'
       },
       bizpet: {
-        seoTitle: 'BizPet | Heating pad — Tabriz incubator product',
-        seoDescription: 'BizPet (Biz Pet / Pet Biz) — Padideh heating pad. Designed and produced at the University of Tabriz Technology Incubator with Imen Sahand Padideh. 5–12 V, portable for home and car.',
+        seoTitle: 'BizPet | Heating pad — the 1399 Tabriz product',
+        seoDescription: 'BizPet is the flagship Padideh heating pad for home, car seat and pet beds. The Digikala car-backrest listing is the same product.',
         seoKeywords: 'BizPet, heating pad, Padideh, University of Tabriz, Imen Sahand Padideh, Bizdavar'
       },
       fxguard: {

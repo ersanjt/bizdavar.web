@@ -370,37 +370,21 @@ window.BIZDAVAR_INTEL = {
       tags: ['بهداشت', 'IoT', 'کرونا', 'دانشگاه تبریز', 'RINOTEX', 'ایمن سهند پدیده', 'دیجی‌کالا']
     },
     {
-      id: 'bizseat',
-      year: '۱۳۹۹',
-      yearIso: '2020',
-      title: 'BizSeat — پشتی صندلی خودرو بیزدوار',
-      titleEn: 'BizSeat — Car seat backrest',
-      desc: 'اختراع، طراحی و ساخت ۱۳۹۹ در پارک علم و فناوری دانشگاه تبریز — همکاری مجموعه بیزدوار با تکنولوژی پردازان توسعه خاورمیانه و ایمن سهند پدیده. عرضه در دیجی‌کالا (dkp-7694589).',
-      source: 'دیجی‌کالا',
-      sourceUrl: 'https://www.digikala.com/product/dkp-7694589/%D9%BE%D8%B4%D8%AA%DB%8C-%D8%B5%D9%86%D8%AF%D9%84%DB%8C-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%85%D8%AF%D9%84-bizdavar/',
-      pressLinks: [
-        { label: 'پارک علم و فناوری تبریز', url: 'https://techpark.tabrizu.ac.ir/' },
-        { label: 'دیجی‌کالا — BizSeat', url: 'https://www.digikala.com/product/dkp-7694589/%D9%BE%D8%B4%D8%AA%DB%8C-%D8%B5%D9%86%D8%AF%D9%84%DB%8C-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%85%D8%AF%D9%84-bizdavar/' }
-      ],
-      image: 'assets/images/products/bizseat/bizseat-hero.svg',
-      slug: 'pages/bizseat.html',
-      tags: ['خودرو', 'ارگونومی', 'تبریز', 'پارک علم و فناوری', 'ایمن سهند پدیده', 'دیجی‌کالا']
-    },
-    {
       id: 'bizpet',
       year: '۱۳۹۹',
       yearIso: '2020',
       title: 'BizPet — پد حرارتی بیز پت',
       titleEn: 'BizPet — Padideh heating pad',
-      desc: 'طراحی و تولید پد حرارتی پدیده (بیز پت / پت بیز) در مرکز رشد فناوری دانشگاه تبریز — همکاری مجموعه بیزدوار با تکنولوژی پردازان توسعه خاورمیانه و ایمن سهند پدیده. ولتاژ ۵ تا ۱۲ ولت، قابل حمل در خانه و خودرو.',
+      desc: 'محصول اصلی ۱۳۹۹: پد حرارتی پدیده (بیز پت / پت بیز) — طراحی و تولید در مرکز رشد فناوری دانشگاه تبریز با تکنولوژی پردازان توسعه خاورمیانه و ایمن سهند پدیده. همین پد برای خانه، خودرو (پشتی صندلی) و جا خواب حیوانات است؛ عرضه فروشگاهی در دیجی‌کالا (dkp-7694589).',
       source: 'مرکز رشد فناوری دانشگاه تبریز',
       sourceUrl: 'https://techpark.tabrizu.ac.ir/',
       pressLinks: [
-        { label: 'پارک علم و فناوری تبریز', url: 'https://techpark.tabrizu.ac.ir/' }
+        { label: 'پارک علم و فناوری تبریز', url: 'https://techpark.tabrizu.ac.ir/' },
+        { label: 'دیجی‌کالا — پد / پشتی خودرو بیزدوار', url: 'https://www.digikala.com/product/dkp-7694589/%D9%BE%D8%B4%D8%AA%DB%8C-%D8%B5%D9%86%D8%AF%D9%84%DB%8C-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%85%D8%AF%D9%84-bizdavar/' }
       ],
       image: 'assets/images/products/bizpet/bizpet-grey.jpg',
       slug: 'pages/bizpet.html',
-      tags: ['پد حرارتی', 'تبریز', 'مرکز رشد', 'ایمن سهند پدیده']
+      tags: ['پد حرارتی', 'خودرو', 'تبریز', 'مرکز رشد', 'ایمن سهند پدیده', 'دیجی‌کالا']
     }
   ],
 
@@ -466,9 +450,9 @@ window.BIZDAVAR_INTEL = {
           note: 'محصول مهندسی‌شده بیزدوار'
         },
         {
-          label: 'دیجی‌کالا — BizSeat پشتی صندلی خودرو (dkp-7694589)',
+          label: 'دیجی‌کالا — BizPet / پشتی خودرو بیزدوار (dkp-7694589)',
           url: 'https://www.digikala.com/product/dkp-7694589/%D9%BE%D8%B4%D8%AA%DB%8C-%D8%B5%D9%86%D8%AF%D9%84%DB%8C-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%85%D8%AF%D9%84-bizdavar/',
-          note: 'اختراع و ساخت ۱۳۹۹ در پارک علم و فناوری تبریز'
+          note: 'همان پد حرارتی BizPet — عرضه فروشگاهی ۱۳۹۹'
         },
         {
           label: 'YouTube — نمونه اولیه BizClean V1',

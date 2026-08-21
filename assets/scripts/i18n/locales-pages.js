@@ -598,31 +598,31 @@
 
       bizseat: {
         hero: {
-          tag: 'محصول اختصاصی · خودرو',
-          title: 'BizSeat — پشتی صندلی خودرو بیزدوار',
-          desc: 'اختراع، طراحی و ساخت ۱۳۹۹ در پارک علم و فناوری دانشگاه تبریز — محصول مالکیتی تیم بیزدوار'
+          tag: 'همان محصول · BizPet',
+          title: 'BizSeat همان پد حرارتی BizPet است',
+          desc: 'نام فروشگاهی پشتی خودرو — محصول اصلی پد حرارتی بیز پت است، نه یک خط جدا'
         },
         about: {
-          title: 'درباره محصول',
-          imageAlt: 'BizSeat — پشتی صندلی خودرو طراحی‌شده توسط تیم بیزدوار',
-          body: '<strong>BizSeat</strong> پشتی صندلی خودرو مدل بیزدوار است — محصولی که در سال <strong>۱۳۹۹</strong> در <strong>پارک علم و فناوری دانشگاه تبریز</strong> اختراع، طراحی و ساخته شد.',
-          body2: 'توسعه این محصول با همکاری <strong>تکنولوژی پردازان توسعه خاورمیانه</strong> و واحد فناور <strong>ایمن سهند پدیده</strong> انجام شد. مالکیت فکری و طراحی با مجموعه بیزدوار است و امروز در دیجی‌کالا عرضه می‌شود.',
+          title: 'یک محصول، دو نام فروش',
+          imageAlt: 'BizSeat — همان پد حرارتی BizPet در قالب پشتی صندلی خودرو',
+          body: '<strong>BizSeat</strong> محصول جداگانه‌ای نیست. همان <strong>پد حرارتی BizPet</strong> (بیز پت / پت بیز) است که در سال <strong>۱۳۹۹</strong> در <strong>مرکز رشد و پارک علم و فناوری دانشگاه تبریز</strong> طراحی و ساخته شد و به‌صورت پشتی صندلی خودرو هم عرضه شد.',
+          body2: 'توسعه با همکاری <strong>تکنولوژی پردازان توسعه خاورمیانه</strong> و واحد فناور <strong>ایمن سهند پدیده</strong> بود. صفحهٔ اصلی محصول <a href="/pages/bizpet">BizPet</a> است؛ لینک دیجی‌کالا همان کالا را نشان می‌دهد.',
           specsTitle: 'ویژگی‌ها',
           specs: [
-            'پشتی صندلی خودرو با طراحی ارگونومیک',
-            'اختراع، طراحی و ساخت ۱۳۹۹',
-            'پارک علم و فناوری دانشگاه تبریز',
-            'همکاری تکنولوژی پردازان توسعه خاورمیانه',
-            'همکاری واحد فناور ایمن سهند پدیده',
-            'قابل سفارش از دیجی‌کالا'
+            'محصول اصلی: پد حرارتی BizPet',
+            'کاربرد خودرو: پشتی صندلی با همان پد',
+            'طراحی و ساخت ۱۳۹۹ در تبریز',
+            'همکاری ایمن سهند پدیده و تکنولوژی پردازان توسعه خاورمیانه',
+            'عرضه فروشگاهی در دیجی‌کالا (dkp-7694589)'
           ],
           ctaDigikala: 'مشاهده در دیجی‌کالا',
+          ctaBizpet: 'صفحه اصلی BizPet',
           ctaContact: 'استعلام عمده / تماس'
         },
         origin: {
           eyebrow: 'پارک علمی تبریز · ۱۳۹۹',
           title: 'از اختراع تا تولید در پارک علم و فناوری',
-          desc: 'BizSeat یکی از محصولات سخت‌افزاری اختراع‌شده تیم بیزدوار است — مسیر طراحی تا ساخت در اکوسیستم نوآوری دانشگاه تبریز، با دو شریک فناور محلی.',
+          desc: 'BizSeat نام فروشگاهی همان پد حرارتی BizPet است — یک مسیر طراحی در اکوسیستم نوآوری دانشگاه تبریز.',
           parkTitle: 'پارک علم و فناوری',
           parkDesc: 'دانشگاه تبریز — بستر اختراع، طراحی و ساخت محصول در ۱۳۹۹.',
           partner1Title: 'تکنولوژی پردازان توسعه خاورمیانه',
@@ -648,7 +648,7 @@
         hero: {
           tag: 'محصول اختصاصی · پد حرارتی',
           title: 'BizPet — پد حرارتی بیز پت',
-          desc: 'طراحی و تولید در مرکز رشد فناوری دانشگاه تبریز — محصول مالکیتی تیم بیزدوار با نام‌های بیز پت و پت بیز'
+          desc: 'محصول اصلی ۱۳۹۹ — پد حرارتی پدیده برای خانه، خودرو و جا خواب حیوانات؛ بیز پت / پت بیز'
         },
         nav: {
           about: 'درباره محصول',
@@ -661,13 +661,14 @@
         about: {
           title: 'درباره محصول',
           imageAlt: 'BizPet — پد حرارتی خاکستری طراحی‌شده توسط تیم بیزدوار',
-          body: '<strong>BizPet</strong> (بیز پت / پت بیز) پد حرارتی پدیده است — ابزاری برای گرمایش در فصل سرد و تسکین درد موضعی که در <strong>مرکز رشد فناوری دانشگاه تبریز</strong> طراحی و تولید شد.',
-          body2: 'توسعه با همکاری <strong>تکنولوژی پردازان توسعه خاورمیانه</strong> و واحد فناور <strong>ایمن سهند پدیده</strong> انجام شد. محصول قابل حمل است و در خانه یا خودرو استفاده می‌شود.',
+          body: '<strong>BizPet</strong> (بیز پت / پت بیز) محصول اصلی پد حرارتی پدیده است — برای گرمایش در فصل سرد و تسکین درد موضعی که در <strong>مرکز رشد فناوری دانشگاه تبریز</strong> طراحی و تولید شد. پشتی صندلی خودرو با نام فروشگاهی BizSeat همان این پد است، نه محصول دوم.',
+          body2: 'توسعه با همکاری <strong>تکنولوژی پردازان توسعه خاورمیانه</strong> و واحد فناور <strong>ایمن سهند پدیده</strong> انجام شد. قابل حمل در خانه و خودرو؛ عرضه فروشگاهی در دیجی‌کالا (dkp-7694589).',
           specsTitle: 'ویژگی‌ها',
           specs: [
-            'پد حرارتی پدیده — BizPet / بیز پت / پت بیز',
+            'پد حرارتی پدیده — محصول اصلی BizPet / بیز پت / پت بیز',
+            'همان کالا به‌صورت پشتی صندلی خودرو (نام فروشگاهی BizSeat)',
             'گرمایش فصل سرد و تسکین درد موضعی',
-            'قابل حمل — استفاده در خانه و خودرو',
+            'قابل حمل — خانه، خودرو و جا خواب حیوانات',
             'ولتاژ کاری ۵ تا ۱۲ ولت (حداکثر ۱ آمپر)',
             'قابل شستشو پس از خارج کردن المان حرارتی',
             'طراحی و تولید در مرکز رشد فناوری دانشگاه تبریز',
@@ -1164,15 +1165,15 @@
       },
       bizseat: {
         hero: {
-          tag: 'Özel ürün · Otomotiv',
-          title: 'BizSeat — Bizdavar araç koltuğu bel desteği',
-          desc: '1399’da Tebriz Üniversitesi Bilim ve Teknoloji Parkı’nda icat, tasarım ve üretim — Bizdavar ekibinin sahip olduğu ürün'
+          tag: 'Aynı ürün · BizPet',
+          title: 'BizSeat, BizPet ısı pedidir',
+          desc: 'Araç koltuğu satış adı — asıl ürün ayrı bir hat değil, 1399 Padideh ısı pedi BizPet’tir'
         },
         about: {
-          title: 'Ürün hakkında',
-          imageAlt: 'BizSeat — Bizdavar ekibi tarafından tasarlanan araç koltuğu bel desteği',
-          body: '<strong>BizSeat</strong>, Bizdavar model araç koltuğu bel desteğidir — <strong>1399</strong> yılında <strong>Tebriz Üniversitesi Bilim ve Teknoloji Parkı</strong>’nda icat edilip tasarlandı ve üretildi.',
-          body2: 'Geliştirme, <strong>Teknoloji Pardazan Tosee Khavarmianeh</strong> ve teknoloji birimi <strong>Imen Sahand Padideh</strong> ile iş birliğinde yapıldı. Fikri mülkiyet Bizdavar’a aittir; ürün bugün Digikala’da satılmaktadır.',
+          title: 'Bir ürün, iki satış adı',
+          imageAlt: 'BizSeat — araç koltuğunda aynı BizPet ısı pedi',
+          body: '<strong>BizSeat</strong> ayrı bir ürün değildir. Aynı <strong>BizPet ısı pedidir</strong> — <strong>1399</strong>’da <strong>Tebriz Üniversitesi teknoloji kuluçkasında</strong> tasarlandı ve araç koltuğu bel desteği olarak da satıldı.',
+          body2: 'Geliştirme <strong>Teknoloji Pardazan Tosee Khavarmianeh</strong> ve <strong>Imen Sahand Padideh</strong> ile yapıldı. Ana sayfa <a href="/pages/bizpet">BizPet</a>’tir; Digikala aynı SKU’dur.',
           specsTitle: 'Özellikler',
           specs: [
             'Ergonomik araç koltuğu bel desteği',
@@ -1183,6 +1184,7 @@
             'Digikala’dan sipariş edilebilir'
           ],
           ctaDigikala: 'Digikala’da görüntüle',
+          ctaBizpet: 'Ana sayfa: BizPet',
           ctaContact: 'Toptan teklif / iletişim'
         },
         origin: {
@@ -1621,25 +1623,25 @@
       },
       bizseat: {
         hero: {
-          tag: 'Owned product · Automotive',
-          title: 'BizSeat — Bizdavar car seat backrest',
-          desc: 'Invented, designed and built in 1399 (2020–2021) at the University of Tabriz Science and Technology Park — a Bizdavar-owned product'
+          tag: 'Same product · BizPet',
+          title: 'BizSeat is the BizPet heating pad',
+          desc: 'A shop listing name — not a second line. The 1399 product is BizPet'
         },
         about: {
-          title: 'About the product',
-          imageAlt: 'BizSeat — car seat backrest designed by the Bizdavar team',
-          body: '<strong>BizSeat</strong> is the Bizdavar-model car seat backrest — invented, designed and manufactured in <strong>1399</strong> at the <strong>University of Tabriz Science and Technology Park</strong>.',
-          body2: 'It was developed with <strong>Technology Pardazan Tosee Khavarmianeh</strong> and the technology unit <strong>Imen Sahand Padideh</strong>. Intellectual property belongs to Bizdavar; the product is sold on Digikala.',
+          title: 'One product, two shop names',
+          imageAlt: 'BizSeat — the same BizPet heating pad as a car-seat support',
+          body: '<strong>BizSeat</strong> is not a separate product. It is the same <strong>BizPet heating pad</strong>, designed in <strong>1399</strong> at the <strong>University of Tabriz Technology Incubator</strong> and also sold as a car-seat backrest.',
+          body2: 'Developed with <strong>Technology Pardazan Tosee Khavarmianeh</strong> and <strong>Imen Sahand Padideh</strong>. The main page is <a href="/pages/bizpet">BizPet</a>; Digikala is the same SKU.',
           specsTitle: 'Features',
           specs: [
-            'Ergonomic car seat backrest',
-            'Invented, designed and built in 1399 (2020–2021)',
-            'University of Tabriz Science and Technology Park',
-            'Collaboration with Technology Pardazan Tosee Khavarmianeh',
-            'Collaboration with Imen Sahand Padideh',
-            'Available to order on Digikala'
+            'Main product: BizPet heating pad',
+            'Car-seat listing name: BizSeat',
+            'Designed and built in 1399 in Tabriz',
+            'Imen Sahand Padideh and Technology Pardazan Tosee Khavarmianeh',
+            'Sold on Digikala (dkp-7694589)'
           ],
           ctaDigikala: 'View on Digikala',
+          ctaBizpet: 'Main page: BizPet',
           ctaContact: 'Bulk inquiry / contact'
         },
         origin: {

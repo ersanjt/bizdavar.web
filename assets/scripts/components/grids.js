@@ -774,6 +774,7 @@
     const opts = options || {};
     const I18n = window.BIZDAVAR_I18N;
     let items = I18n ? I18n.getOwnedProducts() : (window.BIZDAVAR_OWNED_PRODUCTS?.items || []);
+    items = items.filter(p => !p.hidden);
     if (opts.featured) items = items.filter(p => p.featured);
     if (opts.status) items = items.filter(p => p.status === opts.status);
     if (opts.category && opts.category !== 'all') items = items.filter(p => p.category === opts.category);
@@ -815,10 +816,11 @@
     const catFromQuery = params.get('cat');
     let active = categories.some(c => c.id === catFromQuery) ? catFromQuery : 'all';
 
+    const allItems = (I18n ? I18n.getOwnedProducts() : (window.BIZDAVAR_OWNED_PRODUCTS?.items || [])).filter(p => !p.hidden);
+    const visibleCats = categories.filter(c => allItems.some(p => p.category === c.id));
     const pillarsEl = document.getElementById('productPillars');
     if (pillarsEl) {
-      const allItems = I18n ? I18n.getOwnedProducts() : (window.BIZDAVAR_OWNED_PRODUCTS?.items || []);
-      pillarsEl.innerHTML = categories.map(c => {
+      pillarsEl.innerHTML = visibleCats.map(c => {
         const count = allItems.filter(p => p.category === c.id).length;
         return `<a href="#catalog" class="products-pillar" data-cat="${c.id}">
           <span class="products-pillar__count">${count}</span>
@@ -850,7 +852,7 @@
       const allLabel = t('productsPage.filterAll', 'همه');
       filterEl.innerHTML = [
         `<button type="button" class="product-filter__btn is-active" data-cat="all">${allLabel}</button>`,
-        ...categories.map(c =>
+        ...visibleCats.map(c =>
           `<button type="button" class="product-filter__btn" data-cat="${c.id}">${c.label}</button>`
         )
       ].join('');
