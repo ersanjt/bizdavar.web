@@ -30,6 +30,17 @@
     const el = document.getElementById('aboutHeroStats');
     if (!el) return;
     const stats = rawList('aboutPage.stats', DEFAULT_STATS);
+    const existing = el.querySelectorAll('.about-stat');
+    if (existing.length) {
+      existing.forEach((node, i) => {
+        if (!stats[i]) return;
+        const strong = node.querySelector('strong');
+        const span = node.querySelector('span');
+        if (strong && stats[i].value) strong.textContent = stats[i].value;
+        if (span && stats[i].label) span.textContent = stats[i].label;
+      });
+      return;
+    }
     el.innerHTML = stats.map(s => `
       <div class="about-stat">
         <strong>${s.value}</strong>
@@ -42,6 +53,14 @@
     const el = document.getElementById('aboutNav');
     if (!el) return;
     const items = rawList('aboutPage.nav', DEFAULT_NAV);
+    const nav = el.querySelector('.about-nav');
+    if (nav) {
+      nav.querySelectorAll('.about-nav__item').forEach((a, i) => {
+        if (items[i]?.label) a.textContent = items[i].label;
+        if (items[i]?.href) a.setAttribute('href', items[i].href);
+      });
+      return;
+    }
     el.innerHTML = `
       <nav class="about-nav" aria-label="${t('aboutPage.navAria', 'فهرست بخش‌های صفحه')}">
         ${items.map(item => `

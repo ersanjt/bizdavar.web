@@ -28,7 +28,7 @@
     if (!a || !a.href) return false;
     if (a.hasAttribute('download')) return false;
     if (a.target === '_blank') return false;
-    if (a.classList.contains('photo-gallery-card__open') || a.closest('.photo-gallery-filters')) return false;
+    if (a.classList.contains('photo-gallery-card__open') || a.closest('.photo-gallery-filters') || a.closest('.about-nav')) return false;
     const raw = a.getAttribute('href');
     if (!raw || raw.startsWith('#')) return false;
     const url = parseUrl(raw);

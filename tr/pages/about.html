@@ -21,7 +21,9 @@
   <link rel="apple-touch-icon" href="/assets/images/brand/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/styles/site.css">
 <link rel="stylesheet" href="/assets/styles/about.css">
+  <meta name="theme-color" content="#1d1d1b">
   <meta name="description" content="Bizdavar Group 2013’ten beri İstanbul’da: web tasarım, dijital pazarlama, FXGuard ürünleri ve VEGA, Prosense, Liqui Moly tedariki — 11 ülkede hizmet.">
+
   <!-- bd-static-seo -->
   <meta property="og:title" content="Hakkımızda | Bizdavar — dijital hizmetler ve endüstriyel tedarik">
   <meta property="og:description" content="Bizdavar Group 2013’ten beri İstanbul’da: web tasarım, dijital pazarlama, FXGuard ürünleri ve VEGA, Prosense, Liqui Moly tedariki — 11 ülkede hizmet.">
@@ -54,6 +56,11 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <script src="/assets/scripts/components/page-shell.js"></script>
+  <a href="#main-content" class="skip-link" data-i18n="common.skipLink">Ana içeriğe geç</a>
+  <div class="top-bar" id="topBar"></div>
+  <header class="header" id="siteHeader"></header>
+  <nav class="breadcrumbs-wrap" id="breadcrumbs" data-i18n-aria="common.breadcrumbAria" aria-label="Sayfa yolu"></nav>
+  <div class="overlay" id="overlay"></div>
 <main id="main-content" class="site-main">
 
     <section class="page-hero page-hero--pro">
@@ -61,7 +68,12 @@
         <span class="section__tag" data-i18n="aboutPage.hero.tag">Bizdavar Hakkında</span>
         <h1 data-i18n="aboutPage.hero.title">Dijital ve endüstride büyüme ortağınız</h1>
         <p data-i18n="aboutPage.hero.desc">2013’ten beri — 11 ülkede 100+ proje · pazarlama, web, fintech ve endüstriyel tedarik</p>
-        <div class="about-hero-stats" id="aboutHeroStats"></div>
+        <div class="about-hero-stats" id="aboutHeroStats">
+          <div class="about-stat"><strong>۱۳+</strong><span>سال تجربه</span></div>
+          <div class="about-stat"><strong>۱۰۰+</strong><span>پروژه</span></div>
+          <div class="about-stat"><strong>۱۱</strong><span>کشور</span></div>
+          <div class="about-stat"><strong>۴</strong><span>محور خدمات</span></div>
+        </div>
       </div>
     </section>
 
@@ -72,20 +84,31 @@
         </div>
         <div class="about__content">
           <h2 data-i18n="aboutPage.whatIs.title">Bizdavar Group nedir?</h2>
-          <p data-i18n-html="aboutPage.whatIs.p1">Bizdavar Group, 2013 yılında <strong>Ersan Jahed Tabrizi</strong> tarafından kurulan bir dijital ajans ve B2B tedarik grubudur. Dijital hizmetlerimiz <a href="services#digital-marketing">dijital pazarlama</a>, <a href="fast">web tasarım</a>, fintech platformları ve SMM yönetimini kapsar. Sahip olunan ürünler ve <a href="products#supply">endüstriyel markalar</a> ürünler sayfasındadır.</p>
-          <p data-i18n-html="aboutPage.whatIs.p2">11 ülkede 100+ web ve özel platform projesi — web tasarım, özel platformlar, VEGA tedariki ve dijital ürünler dahil. Dijital altyapı, domain, hosting, SSL ve teknik destek de ekibimiz tarafından yönetilir. <a href="portfolio">Portfolyoyu görüntüle</a></p>
+          <p data-i18n-html="aboutPage.whatIs.p1">Bizdavar Group, 2013 yılında <strong>Ersan Jahed Tabrizi</strong> tarafından kurulan bir dijital ajans ve B2B tedarik grubudur. Dijital hizmetlerimiz <a href="/pages/services#digital-marketing">dijital pazarlama</a>, <a href="/pages/fast">web tasarım</a>, fintech platformları ve SMM yönetimini kapsar. Sahip olunan ürünler ve <a href="/pages/products#supply">endüstriyel markalar</a> ürünler sayfasındadır.</p>
+          <p data-i18n-html="aboutPage.whatIs.p2">11 ülkede 100+ web ve özel platform projesi — web tasarım, özel platformlar, VEGA tedariki ve dijital ürünler dahil. Dijital altyapı, domain, hosting, SSL ve teknik destek de ekibimiz tarafından yönetilir. <a href="/pages/portfolio">Portfolyoyu görüntüle</a></p>
           <div class="about__features">
-            <div class="about__feature">بازاریابی دیجیتال</div>
-            <div class="about__feature">طراحی وب حرفه‌ای</div>
-            <div class="about__feature">تامین تجهیزات</div>
-            <div class="about__feature">مدیریت زیرساخت</div>
+            <a href="/pages/services#digital-marketing" class="about__feature">بازاریابی دیجیتال</a>
+            <a href="/pages/fast" class="about__feature">طراحی وب حرفه‌ای</a>
+            <a href="/pages/products#supply" class="about__feature">تامین تجهیزات</a>
+            <a href="/pages/services" class="about__feature">مدیریت زیرساخت</a>
           </div>
         </div>
       </div>
     </section>
 
     <div class="about-nav-wrap">
-      <div class="container" id="aboutNav"></div>
+      <div class="container" id="aboutNav">
+        <nav class="about-nav" data-i18n-aria="aboutPage.navAria" aria-label="Sayfa bölümleri">
+          <a href="#profile" class="about-nav__item">شناسنامه</a>
+          <a href="#activities" class="about-nav__item">تخصص‌ها</a>
+          <a href="#ecosystem" class="about-nav__item">اکوسیستم</a>
+          <a href="#presence" class="about-nav__item">حضور جهانی</a>
+          <a href="#highlights" class="about-nav__item">دستاوردها</a>
+          <a href="#sources" class="about-nav__item">منابع</a>
+          <a href="#trust" class="about-nav__item">اعتبار</a>
+          <a href="#faq" class="about-nav__item">سوالات</a>
+        </nav>
+      </div>
     </div>
 
     <section class="about-block about-block--soft about-block--profile" id="profile">
@@ -223,14 +246,16 @@
     <section class="section">
       <div class="container cta-banner cta-banner--dark">
         <h2 data-i18n="aboutPage.cta.title">Bizdavar ile çalışmaya hazır mısınız?</h2>
-        <p data-i18n-html="aboutPage.cta.desc">İlk danışmanlık ücretsiz — <a href="contact" class="link-yellow">iletişim formu</a> veya WhatsApp üzerinden.</p>
-        <a href="contact" class="btn btn--yellow" data-i18n="aboutPage.cta.btn">Bize ulaşın</a>
+        <p data-i18n-html="aboutPage.cta.desc">İlk danışmanlık ücretsiz — <a href="/pages/contact" class="link-yellow">iletişim formu</a> veya WhatsApp üzerinden.</p>
+        <a href="/pages/contact" class="btn btn--yellow" data-i18n="aboutPage.cta.btn">Bize ulaşın</a>
       </div>
     </section>
 
     <div id="geoStrip"></div>
     <div id="relatedLinks"></div>
   </main>
+  <footer class="footer" id="siteFooter"></footer>
+  <button class="back-to-top" id="backToTop" data-i18n-aria="common.backToTop" aria-label="Yukarı dön"></button>
 
   <script src="/assets/scripts/site-loader.js" data-after-page-i18n="config/company-intel.js,i18n/intel-i18n.js" data-before-main="about-page.js"></script>
   <script>
@@ -245,6 +270,8 @@
         { page: 'about', url: 'about' }
       ],
       init: function () {
+        if (typeof window.ensureBizdavarPageShell === 'function') window.ensureBizdavarPageShell();
+        if (typeof window.renderSiteChrome === 'function') window.renderSiteChrome();
         renderCompanyIntelAbout();
         injectIntelFaqSchema();
         const related = window.BIZDAVAR_I18N?.raw('aboutPage.relatedLinks') || [
