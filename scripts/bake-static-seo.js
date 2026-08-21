@@ -5,11 +5,13 @@
  *
  * - Root HTML (fa): title + meta for Persian
  * - Locale trees: tr/ en/ ru/ ar/ — copies of each page with that locale's SEO
+ *   AND visible data-i18n body text (hero, FAQs, CTAs) so /tr/ is not Persian HTML
  *
  * Run after: node scripts/gen-seo-head.js
  */
 const fs = require('fs');
 const path = require('path');
+const vm = require('vm');
 
 const ROOT = path.join(__dirname, '..');
 
@@ -20,6 +22,107 @@ const HEAD = global.BIZDAVAR_SEO_HEAD || {};
 const SITE = global.BIZDAVAR_SEO_SITE || {};
 const BASE = SITE.base || 'https://bizdavar.com';
 const DEFAULT_OG = SITE.defaultOgImage || `${BASE}/assets/images/content/about-hero.svg`;
+
+function loadLocales() {
+  const ctx = vm.createContext({ window: {}, console });
+  const files = [
+    'assets/scripts/i18n/locales.js',
+    'assets/scripts/i18n/owned-products-i18n.js',
+    'assets/scripts/i18n/locales-pages.js',
+    'assets/scripts/i18n/locale-seo.js',
+    'assets/scripts/i18n/locales-ru-ar.js'
+  ];
+  for (const rel of files) {
+    vm.runInContext(fs.readFileSync(path.join(ROOT, rel), 'utf8'), ctx);
+  }
+  return ctx.window.BIZDAVAR_LOCALES || {};
+}
+
+function getNested(obj, keyPath) {
+  return keyPath.split('.').reduce((o, k) => (o && o[k] !== undefined ? o[k] : undefined), obj);
+}
+
+function attrEscape(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+}
+
+function bakeI18nBody(html, dict) {
+  if (!dict) return html;
+
+  html = html.replace(
+    /<(\w+)([^>]*)\sdata-i18n-html="([^"]+)"([^>]*)>([\s\S]*?)<\/\1>/g,
+    (m, tag, pre, key, post) => {
+      const val = getNested(dict, key);
+      if (typeof val !== 'string' || !val) return m;
+      return `<${tag}${pre} data-i18n-html="${key}"${post}>${val}</${tag}>`;
+    }
+  );
+
+  html = html.replace(
+    /<(\w+)([^>]*)\sdata-i18n="([^"]+)"([^>]*)>([\s\S]*?)<\/\1>/g,
+    (m, tag, pre, key, post) => {
+      if (pre.includes('data-i18n-html') || post.includes('data-i18n-html')) return m;
+      const val = getNested(dict, key);
+      if (typeof val !== 'string' || !val) return m;
+      return `<${tag}${pre} data-i18n="${key}"${post}>${val}</${tag}>`;
+    }
+  );
+
+  html = html.replace(
+    /<(\w+)([^>]*?)\sdata-i18n-aria="([^"]+)"([^>]*)>/g,
+    (m, tag, pre, key, post) => {
+      const val = getNested(dict, key);
+      if (typeof val !== 'string' || !val) return m;
+      const cleanedPre = pre.replace(/\saria-label="[^"]*"/g, '');
+      const cleanedPost = post.replace(/\saria-label="[^"]*"/g, '');
+      return `<${tag}${cleanedPre} data-i18n-aria="${key}"${cleanedPost} aria-label="${attrEscape(val)}">`;
+    }
+  );
+
+  html = html.replace(
+    /data-i18n-alt="([^"]+)"([^>]*)\salt="([^"]*)"/g,
+    (m, key, mid) => {
+      const val = getNested(dict, key);
+      if (typeof val !== 'string' || !val) return m;
+      return `data-i18n-alt="${key}"${mid}alt="${attrEscape(val)}"`;
+    }
+  );
+
+  html = html.replace(
+    /alt="([^"]*)"([^>]*)\sdata-i18n-alt="([^"]+)"/g,
+    (m, alt, mid, key) => {
+      const val = getNested(dict, key);
+      if (typeof val !== 'string' || !val) return m;
+      return `alt="${attrEscape(val)}"${mid} data-i18n-alt="${key}"`;
+    }
+  );
+
+  html = html.replace(
+    /data-i18n-placeholder="([^"]+)"([^>]*)/g,
+    (m, key, rest) => {
+      const val = getNested(dict, key);
+      if (typeof val !== 'string' || !val) return m;
+      const cleaned = rest.replace(/\splaceholder="[^"]*"/, '');
+      return `data-i18n-placeholder="${key}"${cleaned} placeholder="${attrEscape(val)}"`;
+    }
+  );
+
+  const faqs = getNested(dict, 'home.faqs');
+  if (Array.isArray(faqs) && faqs.length && html.includes('id="homeFaqGrid"')) {
+    const inner = faqs.map((item) => `        <details class="faq-item">
+          <summary>${item.q}</summary>
+          <p>${item.a}</p>
+        </details>`).join('\n');
+    html = html.replace(
+      /<div class="faq-grid" id="homeFaqGrid">[\s\S]*?<\/div>(?=\s*<\/div>\s*<\/section>)/,
+      `<div class="faq-grid" id="homeFaqGrid">\n${inner}\n      </div>`
+    );
+  }
+
+  return html;
+}
+
+const LOCALES_DICT = loadLocales();
 
 /** Prefer raster OG images — WhatsApp often skips SVG. */
 const RASTER_OG = `${BASE}/assets/images/brand/bizdavar-logo-square.png`;
@@ -59,6 +162,7 @@ const FILE_TO_ROUTE = {
   'pages/biztejarat.html': '/pages/biztejarat',
   'pages/biztab.html': '/pages/biztab',
   'pages/bizsanitizer-v5.html': '/pages/bizsanitizer-v5',
+  'pages/bizseat.html': '/pages/bizseat',
   'pages/fxguard.html': '/pages/fxguard',
   'pages/fxguard-accounting.html': '/pages/fxguard-accounting',
   'pages/bizswap.html': '/pages/bizswap',
@@ -246,7 +350,8 @@ for (const [rel, route] of Object.entries(FILE_TO_ROUTE)) {
     const outRel = localeOutRel(locale.code, rel);
     const outFile = path.join(ROOT, outRel);
     ensureDir(outFile);
-    const localeHtml = applySeo(sourceHtml, route, meta, locale);
+    const withCopy = bakeI18nBody(sourceHtml, LOCALES_DICT[locale.code]);
+    const localeHtml = applySeo(withCopy, route, meta, locale);
     fs.writeFileSync(outFile, localeHtml, 'utf8');
     localeFiles++;
   }

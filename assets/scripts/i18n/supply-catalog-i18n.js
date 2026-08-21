@@ -1790,11 +1790,11 @@
 
     brand: {
 
-      heroEyebrow: 'Dünya genelinde Farsça konuşan mühendisler için orijinal Prosense tedariki',
+      heroEyebrow: 'Türkiye ve uluslararası projeler için orijinal Prosense tedariki',
 
       heroHeadline: 'Prosense gaz ve alev dedektörleri',
 
-      heroHeadlineSub: 'Gaz, alev ve proses güvenliği — Farsça teknik danışmanlık, şeffaf proforma ve uluslararası lojistik',
+      heroHeadlineSub: 'Gaz, alev ve proses güvenliği — Türkçe teknik danışmanlık, şeffaf proforma ve uluslararası lojistik',
 
       tagline: 'Gaz ve alev dedektörleri — Türkiye üretimi',
 
@@ -1802,7 +1802,7 @@
 
       origin: 'Kartal, İstanbul — Türkiye',
 
-      description: 'Bizdavar Group; SIL/M1/EN sertifikalı Prosense gaz ve alev dedektörü tedarik eder. Farsça (WhatsApp) model seçim danışmanlığı, şeffaf proforma ve İran ile yurt dışındaki Farsça konuşan alıcılar için lojistik koordinasyonu.',
+      description: 'Bizdavar Group; SIL/M1/EN sertifikalı Prosense gaz ve alev dedektörü tedarik eder. Türkçe model seçim danışmanlığı, şeffaf proforma ve uluslararası lojistik koordinasyonu.',
 
       heroStats: [
 
@@ -1820,7 +1820,7 @@
 
       { label: 'Orijinal Prosense ürünü', desc: 'Doğrudan Prosense Türkiye\'den tedarik — geçerli sertifika ve seri numarası' },
 
-      { label: 'Farsça danışmanlık', desc: 'Gaz tipi, aralık ve model seçimi — her yerden Farsça WhatsApp ile' },
+      { label: 'Türkçe danışmanlık', desc: 'Gaz tipi, aralık ve model seçimi — her yerden Türkçe WhatsApp ile' },
 
       { label: 'Uluslararası lojistik', desc: 'İstanbul\'dan proje destinasyonuna satın alma, nakliye ve gümrük' },
 
@@ -1842,7 +1842,7 @@
 
     purchaseSteps: [
 
-      { num: '1', title: 'Talep', desc: 'Farsça WhatsApp veya form — gaz tipi, montaj ortamı (Ex/normal), adet ve tercih edilen seri' },
+      { num: '1', title: 'Talep', desc: 'Türkçe WhatsApp veya form — gaz tipi, montaj ortamı (Ex/normal), adet ve tercih edilen seri' },
 
       { num: '2', title: 'Teknik danışmanlık', desc: 'Seri ve model önerisi — PQ/SafeVader/SOMA/PPS+ ve gerekirse S-DPX panel' },
 

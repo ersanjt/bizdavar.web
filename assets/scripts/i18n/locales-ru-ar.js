@@ -182,6 +182,12 @@
       seoDescription: 'BizClean V5 — автоматический санитайзер рук с ультразвуковым датчиком. Разработан командой Bizdavar в период COVID-19, доступен на Digikala.',
       seoKeywords: 'BizClean V5, санитайзер рук, Bizdavar, Digikala'
     },
+    bizseat: {
+      crumb: 'BizSeat',
+      seoTitle: 'BizSeat | автомобильная поясничная опора — продукт Bizdavar',
+      seoDescription: 'BizSeat — поясничная опора для автокресла, изобретена, спроектирована и произведена в 1399 в технопарке Университета Тебриза. Сотрудничество с Technology Pardazan Tosee Khavarmianeh и Imen Sahand Padideh. Продаётся на Digikala.',
+      seoKeywords: 'BizSeat, поясничная опора, Bizdavar, Тебриз, Digikala'
+    },
     fxguard: {
       crumb: 'FXGuard',
       seoTitle: 'FXGuard WhatsApp CRM | от $49/мес · бесплатное демо — Bizdavar',
@@ -401,6 +407,12 @@
       seoDescription: 'BizClean V5 — معقم يدين آلي بمستشعر فوق صوتي. صممه فريق Bizdavar خلال COVID-19، متوفر على Digikala.',
       seoKeywords: 'BizClean V5, معقم يدين, Bizdavar, Digikala'
     },
+    bizseat: {
+      crumb: 'BizSeat',
+      seoTitle: 'BizSeat | مسند ظهر مقعد السيارة — منتج Bizdavar',
+      seoDescription: 'BizSeat — مسند ظهر مقعد سيارة اختُرع وصُمم وصُنع عام ١٣٩٩ في حديقة العلوم والتكنولوجيا بجامعة تبريز. تعاون مع تكنولوجيا پردازان توسعه خاورمیانه وإيمن سهند پدیده. متوفر على ديجي‌كالا.',
+      seoKeywords: 'BizSeat, مسند ظهر سيارة, Bizdavar, تبريز, ديجي‌كالا'
+    },
     fxguard: {
       crumb: 'FXGuard',
       seoTitle: 'FXGuard WhatsApp CRM | من ٤٩$/شهر · عرض تجريبي مجاني — Bizdavar',
@@ -515,6 +527,10 @@
     aboutHeroAlt: 'Bizdavar Group — цифровое и промышленное агентство',
     aboutMore: 'Подробнее о Bizdavar',
     aboutInfra: 'Управление инфраструктурой',
+    ownedEyebrow: 'Продукты Bizdavar',
+    ownedTitle: 'Что мы производим',
+    ownedDesc: 'Помимо цифровых услуг команда Bizdavar разрабатывает собственные устройства и линии — от BizTab до упаковки и PPE.',
+    ownedCta: 'Все продукты',
     clientsTitle: 'Услуги и продукты на практике',
     clientsDesc: 'Веб-дизайн, продукты FXGuard и Fast Web Studio, промышленные поставки',
     clientsAll: 'Смотреть всё портфолио',
@@ -579,6 +595,10 @@
     aboutHeroAlt: 'Bizdavar Group — وكالة رقمية وصناعية',
     aboutMore: 'المزيد عن Bizdavar',
     aboutInfra: 'إدارة البنية',
+    ownedEyebrow: 'منتجات Bizdavar',
+    ownedTitle: 'ما نصنعه',
+    ownedDesc: 'إلى جانب الخدمات الرقمية يصمم فريق Bizdavar أجهزة وخطوط إنتاج خاصة — من BizTab إلى التعبئة ومعدات PPE.',
+    ownedCta: 'عرض كل المنتجات',
     clientsTitle: 'الخدمات والمنتجات عملياً',
     clientsDesc: 'تصميم مواقع ومنتجات FXGuard وFast Web Studio وتوريد العلامات الصناعية',
     clientsAll: 'عرض كل الأعمال',
@@ -1205,7 +1225,9 @@
     contact: 'Контакты',
     webDesign: 'Веб-дизайн',
     servicesAll: 'Все услуги',
-    productsCatalog: 'Весь каталог'
+    productsCatalog: 'Весь каталог',
+    productBizseat: 'BizSeat',
+    productBizseatDesc: 'Поясничная опора для автокресла'
   });
   deepMerge(ru.footer, {
     tagline: 'Цифровые услуги, веб-дизайн, онлайн-маркетинг и промышленные поставки.',
@@ -1247,6 +1269,7 @@
     ru.contact.whatsappMessage = 'Здравствуйте, пишу с сайта bizdavar.com.';
     ru.contact.channelIr = 'WhatsApp';
     ru.contact.channelTr = 'Турция';
+    ru.contact.channelField = 'Технические услуги';
     ru.contact.address = 'Стамбул, Турция';
     ru.contact.workingHours = '24/7 — всегда на связи';
   }
@@ -1295,7 +1318,9 @@
     contact: 'اتصل بنا',
     webDesign: 'تصميم المواقع',
     servicesAll: 'كل الخدمات',
-    productsCatalog: 'كل المنتجات'
+    productsCatalog: 'كل المنتجات',
+    productBizseat: 'BizSeat',
+    productBizseatDesc: 'مسند ظهر مقعد السيارة'
   });
   deepMerge(ar.footer, {
     tagline: 'خدمات رقمية وتصميم مواقع وتسويق عبر الإنترنت وتوريد معدات صناعية.',
@@ -1337,6 +1362,7 @@
     ar.contact.whatsappMessage = 'مرحباً، أراسل من موقع bizdavar.com.';
     ar.contact.channelIr = 'واتساب';
     ar.contact.channelTr = 'تركيا';
+    ar.contact.channelField = 'خدمات فنية';
     ar.contact.address = 'إسطنبول، تركيا';
     ar.contact.workingHours = 'على مدار الساعة';
   }
@@ -1347,6 +1373,127 @@
     ar.seo.defaultTitle = pageSeoAr.home.seoTitle;
     ar.seo.defaultDescription = pageSeoAr.home.seoDescription;
   }
+
+  if (ru.fastPage) {
+    ru.fastPage.hostingNote = {
+      title: 'Домен, хостинг и сервер',
+      text: 'Купите домен, хостинг, WordPress, почту и серверы в магазине <strong>Netinode</strong> — инфраструктура экосистемы Bizdavar.',
+      cta: 'Купить домен и хостинг',
+      ctaShop: 'Купить домен и хостинг',
+      ctaSite: 'Сайт Netinode'
+    };
+  }
+  if (ar.fastPage) {
+    ar.fastPage.hostingNote = {
+      title: 'النطاق والاستضافة والخادم',
+      text: 'اشترِ النطاق والاستضافة وWordPress والبريد والخوادم من متجر <strong>Netinode</strong> — بنية منظومة بيزدوار.',
+      cta: 'شراء نطاق واستضافة',
+      ctaShop: 'شراء نطاق واستضافة',
+      ctaSite: 'موقع Netinode'
+    };
+  }
+
+  if (!ru.caseStudy) ru.caseStudy = {};
+  deepMerge(ru.caseStudy, {
+    bizseat: {
+      hero: {
+        tag: 'Собственный продукт · Авто',
+        title: 'BizSeat — поясничная опора Bizdavar',
+        desc: 'Изобретено, спроектировано и произведено в 1399 в технопарке Университета Тебриза — продукт команды Bizdavar'
+      },
+      about: {
+        title: 'О продукте',
+        imageAlt: 'BizSeat — поясничная опора для автокресла от команды Bizdavar',
+        body: '<strong>BizSeat</strong> — поясничная опора модели Bizdavar: изобретена, спроектирована и изготовлена в <strong>1399</strong> в <strong>технопарке Университета Тебриза</strong>.',
+        body2: 'Разработка велась совместно с <strong>Technology Pardazan Tosee Khavarmianeh</strong> и технологическим подразделением <strong>Imen Sahand Padideh</strong>. Интеллектуальная собственность принадлежит Bizdavar; продукт продаётся на Digikala.',
+        specsTitle: 'Особенности',
+        specs: [
+          'Эргономичная поясничная опора для автокресла',
+          'Изобретение, дизайн и производство — 1399 (2020–2021)',
+          'Технопарк Университета Тебриза',
+          'Сотрудничество с Technology Pardazan Tosee Khavarmianeh',
+          'Сотрудничество с Imen Sahand Padideh',
+          'Заказ на Digikala'
+        ],
+        ctaDigikala: 'Смотреть на Digikala',
+        ctaContact: 'Оптовый запрос / контакт'
+      },
+      origin: {
+        eyebrow: 'Технопарк Тебриза · 1399',
+        title: 'От изобретения до производства в технопарке',
+        desc: 'BizSeat — один из аппаратных продуктов, изобретённых командой Bizdavar, с двумя местными технологическими партнёрами.',
+        parkTitle: 'Научно-технологический парк',
+        parkDesc: 'Университет Тебриза — место изобретения, проектирования и производства в 1399.',
+        partner1Title: 'Technology Pardazan Tosee Khavarmianeh',
+        partner1Desc: 'Партнёр по разработке и коммерциализации.',
+        partner2Title: 'Imen Sahand Padideh',
+        partner2Desc: 'Технологическое подразделение парка — партнёр по проектированию и производству.',
+        storeTitle: 'Продажа на Digikala',
+        storeDesc: 'Код товара dkp-7694589 — поясничная опора, модель bizdavar.'
+      },
+      related: {
+        title: 'Смежные продукты и услуги',
+        bizclean: 'Автоматический санитайзер',
+        biztab: 'Бесконтактный настенный термометр',
+        catalog: 'Каталог продуктов',
+        catalogDesc: 'Оборудование и линии Bizdavar',
+        about: 'О Bizdavar',
+        aboutDesc: 'Технопарк, выставки и достижения'
+      },
+      geoText: 'Автомобильный продукт, изобретённый в технопарке Университета Тебриза — дизайн Bizdavar, продажа на Digikala.'
+    }
+  });
+
+  if (!ar.caseStudy) ar.caseStudy = {};
+  deepMerge(ar.caseStudy, {
+    bizseat: {
+      hero: {
+        tag: 'منتج ملكية · سيارات',
+        title: 'BizSeat — مسند ظهر مقعد السيارة من بيزدوار',
+        desc: 'اختُرع وصُمم وصُنع عام ١٣٩٩ في حديقة العلوم والتكنولوجيا بجامعة تبريز — منتج فريق Bizdavar'
+      },
+      about: {
+        title: 'عن المنتج',
+        imageAlt: 'BizSeat — مسند ظهر مقعد سيارة صممه فريق Bizdavar',
+        body: '<strong>BizSeat</strong> مسند ظهر مقعد سيارة موديل بيزدوار — اختُرع وصُمم وصُنع عام <strong>١٣٩٩</strong> في <strong>حديقة العلوم والتكنولوجيا بجامعة تبريز</strong>.',
+        body2: 'طُوّر بالتعاون مع <strong>تكنولوجي پردازان توسعه خاورمیانه</strong> والوحدة التكنولوجية <strong>ایمن سهند پدیده</strong>. الملكية الفكرية لبيزدوار والمنتج متوفر على ديجي‌كالا.',
+        specsTitle: 'الميزات',
+        specs: [
+          'مسند ظهر مريح لمقعد السيارة',
+          'اختراع وتصميم وتصنيع عام ١٣٩٩',
+          'حديقة العلوم والتكنولوجيا بجامعة تبريز',
+          'تعاون مع تكنولوجي پردازان توسعه خاورمیانه',
+          'تعاون مع ایمن سهند پدیده',
+          'يمكن طلبه من ديجي‌كالا'
+        ],
+        ctaDigikala: 'عرض في ديجي‌كالا',
+        ctaContact: 'استعلام جملة / اتصال'
+      },
+      origin: {
+        eyebrow: 'حديقة تبريز العلمية · ١٣٩٩',
+        title: 'من الاختراع إلى الإنتاج في حديقة العلوم',
+        desc: 'BizSeat أحد منتجات العتاد التي اخترعها فريق بيزدوار — مع شريكين تكنولوجيين محليين.',
+        parkTitle: 'حديقة العلوم والتكنولوجيا',
+        parkDesc: 'جامعة تبريز — مكان الاختراع والتصميم والتصنيع عام ١٣٩٩.',
+        partner1Title: 'تكنولوجي پردازان توسعه خاورمیانه',
+        partner1Desc: 'شريك التطوير والتسويق.',
+        partner2Title: 'ایمن سهند پدیده',
+        partner2Desc: 'وحدة تكنولوجية في حديقة تبريز — شريك التصميم والتصنيع.',
+        storeTitle: 'البيع على ديجي‌كالا',
+        storeDesc: 'رمز المنتج dkp-7694589 — مسند ظهر موديل bizdavar.'
+      },
+      related: {
+        title: 'منتجات وخدمات ذات صلة',
+        bizclean: 'معقم يدين آلي',
+        biztab: 'مقياس حرارة جداري بلا تلامس',
+        catalog: 'كتالوج المنتجات',
+        catalogDesc: 'عتاد وخطوط إنتاج بيزدوار',
+        about: 'عن بيزدوار',
+        aboutDesc: 'الحديقة العلمية والمعارض والإنجازات'
+      },
+      geoText: 'منتج سيارات اختُرع في حديقة العلوم بجامعة تبريز — تصميم بيزدوار وبيع على ديجي‌كالا.'
+    }
+  });
 
   window.BIZDAVAR_LOCALES.ru = ru;
   window.BIZDAVAR_LOCALES.ar = ar;

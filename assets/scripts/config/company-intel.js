@@ -368,6 +368,23 @@ window.BIZDAVAR_INTEL = {
       image: 'assets/images/products/bizsanitizer/bizclean-v5.png',
       slug: 'pages/bizsanitizer-v5.html',
       tags: ['بهداشت', 'IoT', 'کرونا', 'دانشگاه تبریز', 'RINOTEX', 'ایمن سهند پدیده', 'دیجی‌کالا']
+    },
+    {
+      id: 'bizseat',
+      year: '۱۳۹۹',
+      yearIso: '2020',
+      title: 'BizSeat — پشتی صندلی خودرو بیزدوار',
+      titleEn: 'BizSeat — Car seat backrest',
+      desc: 'اختراع، طراحی و ساخت ۱۳۹۹ در پارک علم و فناوری دانشگاه تبریز — همکاری مجموعه بیزدوار با تکنولوژی پردازان توسعه خاورمیانه و ایمن سهند پدیده. عرضه در دیجی‌کالا (dkp-7694589).',
+      source: 'دیجی‌کالا',
+      sourceUrl: 'https://www.digikala.com/product/dkp-7694589/%D9%BE%D8%B4%D8%AA%DB%8C-%D8%B5%D9%86%D8%AF%D9%84%DB%8C-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%85%D8%AF%D9%84-bizdavar/',
+      pressLinks: [
+        { label: 'پارک علم و فناوری تبریز', url: 'https://techpark.tabrizu.ac.ir/' },
+        { label: 'دیجی‌کالا — BizSeat', url: 'https://www.digikala.com/product/dkp-7694589/%D9%BE%D8%B4%D8%AA%DB%8C-%D8%B5%D9%86%D8%AF%D9%84%DB%8C-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%85%D8%AF%D9%84-bizdavar/' }
+      ],
+      image: 'assets/images/products/bizseat/bizseat-hero.svg',
+      slug: 'pages/bizseat.html',
+      tags: ['خودرو', 'ارگونومی', 'تبریز', 'پارک علم و فناوری', 'ایمن سهند پدیده', 'دیجی‌کالا']
     }
   ],
 
@@ -431,6 +448,11 @@ window.BIZDAVAR_INTEL = {
           label: 'دیجی‌کالا — BizClean V5 (dkp-3730222)',
           url: 'https://www.digikala.com/product/dkp-3730222/%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D8%B6%D8%AF%D8%B9%D9%81%D9%88%D9%86%DB%8C-%D8%AF%D8%B3%D8%AA-%D8%A8%DB%8C%D8%B2%D8%AF%D9%88%D8%A7%D8%B1-%D9%85%D8%AF%D9%84-v5/',
           note: 'محصول مهندسی‌شده بیزدوار'
+        },
+        {
+          label: 'دیجی‌کالا — BizSeat پشتی صندلی خودرو (dkp-7694589)',
+          url: 'https://www.digikala.com/product/dkp-7694589/%D9%BE%D8%B4%D8%AA%DB%8C-%D8%B5%D9%86%D8%AF%D9%84%DB%8C-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%85%D8%AF%D9%84-bizdavar/',
+          note: 'اختراع و ساخت ۱۳۹۹ در پارک علم و فناوری تبریز'
         },
         {
           label: 'YouTube — نمونه اولیه BizClean V1',

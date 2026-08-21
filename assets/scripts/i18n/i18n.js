@@ -86,6 +86,15 @@
     I18n.applyDocumentLocale();
     if (window.BIZDAVAR_CONFIG) I18n.syncConfig();
     I18n.ready = true;
+    if (document.body) {
+      I18n.applyDataI18n();
+      I18n.applyHomeFaqs();
+      I18n.applyAboutHeroImage();
+      I18n.applyContactPage();
+      if (typeof window.applyPageI18n === 'function') {
+        window.applyPageI18n();
+      }
+    }
   }
 
   function localizeInternalLinks(root) {
@@ -304,6 +313,22 @@
 
     normalizeSupplyCatalog(cat) {
       if (!cat || typeof cat !== 'object') return cat;
+      const lang = this.locale || 'fa';
+      const pick = (item, field) => {
+        if (!item) return undefined;
+        const order = {
+          fa: [`${field}Fa`, field],
+          tr: [`${field}Tr`, `${field}En`, field],
+          en: [`${field}En`, `${field}Tr`, field],
+          ru: [`${field}Ru`, `${field}En`, field],
+          ar: [`${field}Ar`, `${field}En`, field]
+        }[lang] || [field];
+        for (let i = 0; i < order.length; i++) {
+          const v = item[order[i]];
+          if (v != null && v !== '') return v;
+        }
+        return item[field];
+      };
       const b = cat.brand || {};
       const a = cat.academy;
       return {
@@ -315,7 +340,15 @@
         },
         highlights: (cat.highlights || []).map(h => ({
           ...h,
-          useCase: h.useCase || h.useCaseFa
+          useCase: pick(h, 'useCase') || h.useCase || h.useCaseFa
+        })),
+        categories: (cat.categories || []).map(c => ({
+          ...c,
+          series: (c.series || []).map(s => ({
+            ...s,
+            name: pick(s, 'name') || s.name,
+            note: pick(s, 'note') || s.note
+          }))
         })),
         academy: a ? { ...a, desc: a.desc || a.descFa } : a,
         featuredProducts: (cat.featuredProducts || []).map(p => ({
@@ -515,8 +548,10 @@
         const channels = C.contact.channels || [];
         const ir = channels.find(c => c.id === 'ir');
         const tr = channels.find(c => c.id === 'tr');
+        const field = channels.find(c => c.id === 'field');
         if (ir) ir.label = this.t('contact.channelIr');
         if (tr) tr.label = this.t('contact.channelTr');
+        if (field) field.label = this.t('contact.channelField', this.t('footer.fieldTech', 'خدمات فنی'));
         // Persian-first by default; Turkish locale keeps TR as primary CTA target
         const prefer = this.locale === 'tr' ? tr : ir;
         if (prefer?.whatsapp) {

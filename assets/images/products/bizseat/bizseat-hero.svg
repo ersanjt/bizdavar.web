@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="bizseatTitle">
+  <title id="bizseatTitle">BizSeat - car seat backrest</title>
+  <defs>
+    <linearGradient id="seatBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d1d1b"/>
+      <stop offset="100%" stop-color="#2a2a26"/>
+    </linearGradient>
+    <linearGradient id="pad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5c518"/>
+      <stop offset="100%" stop-color="#d4a017"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" rx="20" fill="url(#seatBg)"/>
+  <rect x="198" y="48" width="244" height="304" rx="28" fill="#111110"/>
+  <path d="M220 86c0-14 18-26 54-26h92c36 0 54 12 54 26v168c0 38-28 62-100 62s-100-24-100-62V86z" fill="#2f2f2b"/>
+  <path d="M248 118c8-28 36-44 72-44s64 16 72 44c6 22-8 40-32 52-18 10-40 10-58 0-28-14-48-32-54-52z" fill="url(#pad)"/>
+  <rect x="268" y="292" width="104" height="14" rx="7" fill="#f5c518"/>
+  <text x="320" y="372" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="#f5c518">BizSeat</text>
+</svg>

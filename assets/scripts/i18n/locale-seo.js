@@ -131,6 +131,11 @@
         seoDescription: 'BizClean V5 — دستگاه ضدعفونی دست اتوماتیک بیزدوار با سنسور التراسونیک. ساخته‌شده در دوران کرونا، نمایشگاه مرکز رشد دانشگاه تبریز. موجود در دیجی‌کالا.',
         seoKeywords: 'BizClean V5, BizClean, ضدعفونی دست, بیزدوار, کرونا, دیجی‌کالا, محصول اختصاصی'
       },
+      bizseat: {
+        seoTitle: 'BizSeat | پشتی صندلی خودرو بیزدوار — محصول ۱۳۹۹ تبریز',
+        seoDescription: 'BizSeat — پشتی صندلی خودرو اختراع، طراحی و ساخت ۱۳۹۹ در پارک علم و فناوری دانشگاه تبریز. همکاری تکنولوژی پردازان توسعه خاورمیانه و ایمن سهند پدیده. موجود در دیجی‌کالا.',
+        seoKeywords: 'BizSeat, پشتی صندلی خودرو, بیزدوار, پارک علم و فناوری تبریز, دیجی‌کالا, محصول اختصاصی'
+      },
       fxguard: {
         seoTitle: 'FXGuard WhatsApp CRM | از $49/ماه · دمو رایگان — بیزدوار',
         seoDescription: 'FXGuard WhatsApp CRM — اینباکس تیمی، مشتریان، تیکت، شعب و ۲FA. Cloud از $49/ماه، لایسنس یا Managed. دمو رایگان app.fxguard.io. محصول اکوسیستم بیزدوار.',
@@ -313,6 +318,11 @@
         seoDescription: 'BizClean V5 — ultrasonik sensörlü otomatik el dezenfektanı. Bizdavar ekibi tasarımı, COVID dönemi üretimi, Digikala\'da satışta.',
         seoKeywords: 'BizClean V5, BizClean, el dezenfektan, Bizdavar, Digikala'
       },
+      bizseat: {
+        seoTitle: 'BizSeat | Araç koltuğu bel desteği — Bizdavar ürünü',
+        seoDescription: 'BizSeat — 1399’da Tebriz Üniversitesi teknoloji parkında icat, tasarım ve üretim. Teknoloji Pardazan Tosee Khavarmianeh ve Imen Sahand Padideh iş birliği. Digikala’da satışta.',
+        seoKeywords: 'BizSeat, araç koltuğu bel desteği, Bizdavar, Tebriz, Digikala'
+      },
       fxguard: {
         seoTitle: 'FXGuard WhatsApp CRM | $49/ay’dan · ücretsiz demo — Bizdavar',
         seoDescription: 'FXGuard WhatsApp CRM — ortak inbox, müşteriler, ticket, şubeler ve 2FA. Cloud $49/ay’dan, lisans veya Managed. Ücretsiz demo app.fxguard.io.',
@@ -494,6 +504,11 @@
         seoTitle: 'BizClean V5 | Automatic hand sanitizer — Bizdavar',
         seoDescription: 'BizClean V5 automatic hand sanitizer — ultrasonic sensor, contact-free spray. Engineered by the Bizdavar team during COVID-19, available on Digikala.',
         seoKeywords: 'BizClean V5, BizClean, hand sanitizer, Bizdavar, Digikala'
+      },
+      bizseat: {
+        seoTitle: 'BizSeat | Car seat backrest — Bizdavar product',
+        seoDescription: 'BizSeat — car seat backrest invented, designed and built in 1399 at the University of Tabriz Science and Technology Park, with Technology Pardazan Tosee Khavarmianeh and Imen Sahand Padideh. Sold on Digikala.',
+        seoKeywords: 'BizSeat, car seat backrest, Bizdavar, Tabriz, Digikala'
       },
       fxguard: {
         seoTitle: 'FXGuard WhatsApp CRM | From $49/mo · Free demo — Bizdavar',

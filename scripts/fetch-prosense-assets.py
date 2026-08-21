@@ -31,6 +31,9 @@ ASSETS = {
     'category-software.png': 'uploads/147--856-sil2-slider.png',
     'category-calibration.jpg': 'uploads/684--tup1.jpg',
     'category-other-equipment.png': 'uploads/5--resim1-3-.png',
+    'accessory-ps120.jpg': 'uploads/338--guc-kaynagi.jpg',
+    'accessory-ex-beacon.jpg': 'uploads/480--bexbg05.jpg',
+    'accessory-ex-smoke.png': 'uploads/629--orbis-orb-op-52028-apo-exproof-optik-duman-dedektoru.png',
     'category-safevader.jpg': 'uploads/741-239-259-445-prosense1[1][1].jpg',
     # Industries (sector gallery)
     'industry-oil-gas.webp': 'uploads/404--874-7-min.webp',

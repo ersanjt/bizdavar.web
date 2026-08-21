@@ -12,7 +12,8 @@ window.BIZDAVAR_LOCALES = {
       address: 'استانبول، ترکیه',
       workingHours: '۷/۲۴ — همیشه در دسترس',
       channelTr: 'ترکیه',
-      channelIr: 'واتساپ فارسی'
+      channelIr: 'واتساپ فارسی',
+      channelField: 'خدمات فنی'
     },
     seo: {
       defaultTitle: 'بیزدوار گروپ | طراحی سایت، بازاریابی دیجیتال و تامین صنعتی',
@@ -151,6 +152,8 @@ window.BIZDAVAR_LOCALES = {
       productBiztabDesc: 'دماسنج IoT غیرتماسی',
       productBizclean: 'BizClean',
       productBizcleanDesc: 'ضدعفونی دست اتوماتیک',
+      productBizseat: 'BizSeat',
+      productBizseatDesc: 'پشتی صندلی خودرو',
       productPackaging: 'بسته‌بندی و سیل',
       productPackagingDesc: 'کش‌زن و خطوط بسته‌بندی',
       productMedical: 'پزشکی و PPE',
@@ -434,6 +437,7 @@ window.BIZDAVAR_LOCALES = {
       bizswap: { crumb: 'BizSwap' },
       biztab: { crumb: 'BizTab' },
       bizsanitizerV5: { crumb: 'BizClean' },
+      bizseat: { crumb: 'BizSeat' },
       article: { crumb: 'مقاله' }
     },
     fast: {
@@ -453,7 +457,8 @@ window.BIZDAVAR_LOCALES = {
       address: 'İstanbul, Türkiye',
       workingHours: '7/24',
       channelTr: 'Türkiye',
-      channelIr: 'WhatsApp Farsça'
+      channelIr: 'WhatsApp Farsça',
+      channelField: 'Teknik hizmetler'
     },
     seo: {
       defaultTitle: 'Bizdavar Group | Web tasarım, dijital pazarlama ve endüstriyel tedarik',
@@ -592,6 +597,8 @@ window.BIZDAVAR_LOCALES = {
       productBiztabDesc: 'Temasız IoT termometre',
       productBizclean: 'BizClean',
       productBizcleanDesc: 'Otomatik el dezenfektanı',
+      productBizseat: 'BizSeat',
+      productBizseatDesc: 'Araç koltuğu bel desteği',
       productPackaging: 'Ambalaj ve vakum',
       productPackagingDesc: 'Vakum ve ambalaj hatları',
       productMedical: 'Medikal ve PPE',
@@ -875,6 +882,7 @@ window.BIZDAVAR_LOCALES = {
       bizswap: { crumb: 'BizSwap' },
       biztab: { crumb: 'BizTab' },
       bizsanitizerV5: { crumb: 'BizClean' },
+      bizseat: { crumb: 'BizSeat' },
       article: { crumb: 'Makale' }
     },
     fast: {
@@ -894,7 +902,8 @@ window.BIZDAVAR_LOCALES = {
       address: 'Istanbul, Turkey',
       workingHours: '24/7',
       channelTr: 'Turkey',
-      channelIr: 'Persian WhatsApp'
+      channelIr: 'Persian WhatsApp',
+      channelField: 'Technical services'
     },
     seo: {
       defaultTitle: 'Bizdavar Group | Web design, digital marketing & industrial supply',
@@ -1033,6 +1042,8 @@ window.BIZDAVAR_LOCALES = {
       productBiztabDesc: 'Contactless IoT thermometer',
       productBizclean: 'BizClean',
       productBizcleanDesc: 'Automatic hand sanitizer',
+      productBizseat: 'BizSeat',
+      productBizseatDesc: 'Car seat backrest',
       productPackaging: 'Packaging & sealing',
       productPackagingDesc: 'Sealers and packaging lines',
       productMedical: 'Medical & PPE',
@@ -1316,6 +1327,7 @@ window.BIZDAVAR_LOCALES = {
       bizswap: { crumb: 'BizSwap' },
       biztab: { crumb: 'BizTab' },
       bizsanitizerV5: { crumb: 'BizClean' },
+      bizseat: { crumb: 'BizSeat' },
       article: { crumb: 'Article' }
     },
     fast: {

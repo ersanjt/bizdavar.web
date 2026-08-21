@@ -3,7 +3,9 @@
  */
 (function () {
   const N = 'https://netinode.net/';
+  const S = 'https://shop.netinode.net/';
   const ni = (label) => `<a href="${N}" target="_blank" rel="noopener noreferrer">${label}</a>`;
+  const shop = (label) => `<a href="${S}" target="_blank" rel="noopener noreferrer">${label}</a>`;
 
   const en = {
     brand: {
@@ -28,7 +30,7 @@
           'Professional contact form',
           'Direct WhatsApp button',
           'Instagram / LinkedIn links',
-          `SSL & starter hosting — ${ni('Buy domain & hosting (Netinode)')}`,
+          `SSL & starter hosting — ${shop('Buy domain & hosting (Netinode)')}`,
           'Video tutorial for site management'
         ]
       },
@@ -92,7 +94,7 @@
     ],
     faq: [
       { q: 'Do you really deliver in 5 days?', a: 'Yes — for Basic and Store plans when content is ready. Pro plans with more pages may take 5–7 days. We confirm the exact timeline on WhatsApp before starting.' },
-      { q: 'Is hosting and domain included in the price?', a: `Design and setup are separate. You can buy domain and hosting yearly from ${ni('Netinode')} (domain search, web hosting, WordPress hosting and SSL) or we guide you through setup.` },
+      { q: 'Is hosting and domain included in the price?', a: `Design and setup are separate. Buy domain, hosting and servers from the ${shop('Netinode shop')}; see ${ni('netinode.net')} for the full catalog — or we guide you through setup.` },
       { q: 'Can I expand the site later?', a: 'Yes. Start with Basic and upgrade to Store or Pro. Bizdavar continues on the same project.' },
       { q: 'How does payment work?', a: 'Usually 50% upfront and 50% before final delivery — bank transfer, card or international methods. Details are agreed on WhatsApp.' },
       { q: 'Do you work with businesses outside Iran?', a: 'Yes — Fast Web Studio has launched sites in Iran, Turkey, UAE and Europe. Consulting in Persian, English and Turkish.' },
@@ -123,7 +125,7 @@
           'Profesyonel iletişim formu',
           'Doğrudan WhatsApp düğmesi',
           'Instagram / LinkedIn bağlantıları',
-          `SSL ve başlangıç hosting — ${ni('Domain ve hosting satın al (Netinode)')}`,
+          `SSL ve başlangıç hosting — ${shop('Domain ve hosting satın al (Netinode)')}`,
           'Site yönetimi video eğitimi'
         ]
       },
@@ -187,7 +189,7 @@
     ],
     faq: [
       { q: 'Gerçekten 5 günde teslim ediyor musunuz?', a: 'Evet — içerik hazırsa Temel ve Mağaza planları için. Pro planlar 5–7 gün sürebilir. Başlamadan önce WhatsApp\'ta net süre onaylanır.' },
-      { q: 'Hosting ve domain fiyata dahil mi?', a: `Tasarım ve kurulum ayrıdır. Domain ve yıllık hosting için ${ni('Netinode')} (domain arama, web hosting, WordPress hosting ve SSL) kullanabilir veya rehberlik alabilirsiniz.` },
+      { q: 'Hosting ve domain fiyata dahil mi?', a: `Tasarım ve kurulum ayrıdır. Domain, hosting ve sunucuyu ${shop('Netinode mağazasından')} alın; katalog için ${ni('netinode.net')} — veya kurulumda size rehberlik ederiz.` },
       { q: 'Siteyi sonra genişletebilir miyim?', a: 'Evet. Temel ile başlayıp Mağaza veya Pro\'ya yükseltebilirsiniz. Bizdavar aynı projeyi sürdürür.' },
       { q: 'Ödeme nasıl yapılır?', a: 'Genelde %50 peşin, %50 teslimden önce — havale, kart veya uluslararası yöntemler. Detaylar WhatsApp\'ta netleşir.' },
       { q: 'İran dışındaki işletmelerle çalışıyor musunuz?', a: 'Evet — Türkiye, İran, BAE ve Avrupa\'da siteler kuruldu. Türkçe, Farsça ve İngilizce danışmanlık.' },

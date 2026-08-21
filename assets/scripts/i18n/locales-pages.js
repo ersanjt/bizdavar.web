@@ -154,19 +154,25 @@
 
   const fastHostingNote = {
     fa: {
-      title: 'دامنه، هاست و SSL',
-      text: 'برای جستجوی دامنه، هاست وب، WordPress و ایمیل — از زیرساخت <strong>Netinode</strong> (اکوسیستم بیزدوار) استفاده کنید.',
-      cta: 'Netinode — خرید دامنه و هاست'
+      title: 'دامنه، هاست و سرور',
+      text: 'ثبت دامنه، هاست، WordPress، ایمیل و سرور را از فروشگاه <strong>Netinode</strong> بخرید — زیرساخت اکوسیستم بیزدوار.',
+      cta: 'خرید دامنه و هاست',
+      ctaShop: 'خرید دامنه و هاست',
+      ctaSite: 'سایت Netinode'
     },
     tr: {
-      title: 'Domain, hosting ve SSL',
-      text: 'Domain arama, web hosting, WordPress ve e-posta için <strong>Netinode</strong> altyapısını (Bizdavar ekosistemi) kullanın.',
-      cta: 'Netinode — domain ve hosting'
+      title: 'Domain, hosting ve sunucu',
+      text: 'Domain, hosting, WordPress, e-posta ve sunucuyu <strong>Netinode</strong> mağazasından alın — Bizdavar ekosistemi.',
+      cta: 'Domain ve hosting satın al',
+      ctaShop: 'Domain ve hosting satın al',
+      ctaSite: 'Netinode sitesi'
     },
     en: {
-      title: 'Domain, hosting & SSL',
-      text: 'Search domains, web hosting, WordPress and business email on <strong>Netinode</strong> — trusted infrastructure in the Bizdavar ecosystem.',
-      cta: 'Netinode — domains & hosting'
+      title: 'Domain, hosting & server',
+      text: 'Buy domain, hosting, WordPress, email and servers from the <strong>Netinode</strong> shop — Bizdavar ecosystem infrastructure.',
+      cta: 'Buy domain & hosting',
+      ctaShop: 'Buy domain & hosting',
+      ctaSite: 'Netinode website'
     }
   };
 
@@ -347,7 +353,7 @@
         industries: { eyebrow: 'Küresel endüstriler', title: 'Farklı endüstrilerde uygulama', desc: 'Her endüstriyel bölüm için özel gaz algılama çözümü' },
         supply: { eyebrow: 'Bizdavar tedariki', title: 'Prosense tedarik hizmetleri', desc: 'Tedarik ortağınız — sadece satıcı değil' },
         faq: { eyebrow: 'SSS', title: 'Alıcıların sık sorduğu sorular', desc: 'Cevabı bulamadınız mı? Farsça WhatsApp’tan yazın.' }
-      }, officialNote: 'Ürünlerin teknik bilgileri <a href="https://www.prosense.com.tr/?lang=tr" target="_blank" rel="noopener noreferrer">resmi Prosense web sitesine</a> dayanır. Fiyat teklifi ve tedarik için — <a href="contact">Bizdavar ile iletişime geçin</a> · <a href="vega">VEGA ürünleri</a>', cta: { title: 'Prosense fiyat teklifine hazır mısınız?', desc: 'Gaz türünü veya model serisini gönderin — PQ · SafeVader · SOMA · PPS+ · S-DPX paneli', btnForm: 'Teklif formu', btnServices: 'Ürün kataloğu' }, sticky: { label: 'Prosense teklifi', hint: 'Farsça teknik danışmanlık · hızlı yanıt' }, geoText: 'Orijinal Prosense dedektör tedariki — SIL/M1/EN sertifikaları, Farsça WhatsApp danışmanlığı ve petrol, gaz ve endüstri projeleri için lojistik.', related: [{ title: 'VEGA ürünleri', desc: 'Seviye ve basınç sensörleri' }, { title: 'Teltonika GPS', desc: 'Fleet Telematics' }, { title: 'Endüstriyel hizmetler', desc: 'B2B danışmanlık' }, { title: 'İletişim', desc: 'Fiyat teklifi' }] },
+      }, officialNote: 'Ürünlerin teknik bilgileri <a href="https://www.prosense.com.tr/?lang=tr" target="_blank" rel="noopener noreferrer">resmi Prosense web sitesine</a> dayanır. Fiyat teklifi ve tedarik için — <a href="contact">Bizdavar ile iletişime geçin</a> · <a href="vega">VEGA ürünleri</a>', cta: { title: 'Prosense fiyat teklifine hazır mısınız?', desc: 'Gaz türünü veya model serisini gönderin — PQ · SafeVader · SOMA · PPS+ · S-DPX paneli', btnForm: 'Teklif formu', btnServices: 'Ürün kataloğu' }, sticky: { label: 'Prosense teklifi', hint: 'Türkçe teknik danışmanlık · hızlı yanıt' }, geoText: 'Orijinal Prosense dedektör tedariki — SIL/M1/EN sertifikaları, Farsça WhatsApp danışmanlığı ve petrol, gaz ve endüstri projeleri için lojistik.', related: [{ title: 'VEGA ürünleri', desc: 'Seviye ve basınç sensörleri' }, { title: 'Teltonika GPS', desc: 'Fleet Telematics' }, { title: 'Endüstriyel hizmetler', desc: 'B2B danışmanlık' }, { title: 'İletişim', desc: 'Fiyat teklifi' }] },
       teltonikaPage: { sections: {
         trust: { eyebrow: 'Neden Bizdavar’dan alın?', title: 'Teknik ve satınalma biriminiz için güvenilir Teltonika tedariki', desc: 'Sadece katalog göstermiyoruz — model seçiminden teslimata kadar yanınızdayız.' },
         buy: { eyebrow: 'Satınalma yolu', title: 'Tekliften teslimata — 5 net adım', desc: 'Karmaşa yok — her adımı bilir ve her aşamada iletişimde olursunuz.' },
@@ -588,6 +594,54 @@
         },
         related: { title: 'محصولات مرتبط بیزدوار' },
         geoText: 'محصول بهداشتی مهندسی‌شده در ایران — طراحی تیم بیزدوار و عرضه از طریق دیجی‌کالا.'
+      },
+
+      bizseat: {
+        hero: {
+          tag: 'محصول اختصاصی · خودرو',
+          title: 'BizSeat — پشتی صندلی خودرو بیزدوار',
+          desc: 'اختراع، طراحی و ساخت ۱۳۹۹ در پارک علم و فناوری دانشگاه تبریز — محصول مالکیتی تیم بیزدوار'
+        },
+        about: {
+          title: 'درباره محصول',
+          imageAlt: 'BizSeat — پشتی صندلی خودرو طراحی‌شده توسط تیم بیزدوار',
+          body: '<strong>BizSeat</strong> پشتی صندلی خودرو مدل بیزدوار است — محصولی که در سال <strong>۱۳۹۹</strong> در <strong>پارک علم و فناوری دانشگاه تبریز</strong> اختراع، طراحی و ساخته شد.',
+          body2: 'توسعه این محصول با همکاری <strong>تکنولوژی پردازان توسعه خاورمیانه</strong> و واحد فناور <strong>ایمن سهند پدیده</strong> انجام شد. مالکیت فکری و طراحی با مجموعه بیزدوار است و امروز در دیجی‌کالا عرضه می‌شود.',
+          specsTitle: 'ویژگی‌ها',
+          specs: [
+            'پشتی صندلی خودرو با طراحی ارگونومیک',
+            'اختراع، طراحی و ساخت ۱۳۹۹',
+            'پارک علم و فناوری دانشگاه تبریز',
+            'همکاری تکنولوژی پردازان توسعه خاورمیانه',
+            'همکاری واحد فناور ایمن سهند پدیده',
+            'قابل سفارش از دیجی‌کالا'
+          ],
+          ctaDigikala: 'مشاهده در دیجی‌کالا',
+          ctaContact: 'استعلام عمده / تماس'
+        },
+        origin: {
+          eyebrow: 'پارک علمی تبریز · ۱۳۹۹',
+          title: 'از اختراع تا تولید در پارک علم و فناوری',
+          desc: 'BizSeat یکی از محصولات سخت‌افزاری اختراع‌شده تیم بیزدوار است — مسیر طراحی تا ساخت در اکوسیستم نوآوری دانشگاه تبریز، با دو شریک فناور محلی.',
+          parkTitle: 'پارک علم و فناوری',
+          parkDesc: 'دانشگاه تبریز — بستر اختراع، طراحی و ساخت محصول در ۱۳۹۹.',
+          partner1Title: 'تکنولوژی پردازان توسعه خاورمیانه',
+          partner1Desc: 'شریک همکاری در توسعه و تجاری‌سازی محصول.',
+          partner2Title: 'ایمن سهند پدیده',
+          partner2Desc: 'واحد فناور پارک علمی تبریز — همکار طراحی و ساخت.',
+          storeTitle: 'عرضه در دیجی‌کالا',
+          storeDesc: 'شناسه کالا dkp-7694589 — پشتی صندلی خودرو مدل bizdavar.'
+        },
+        related: {
+          title: 'محصولات و خدمات مرتبط',
+          bizclean: 'دستگاه ضدعفونی دست',
+          biztab: 'دماسنج دیواری غیرتماسی',
+          catalog: 'کاتالوگ محصولات',
+          catalogDesc: 'سخت‌افزار و خطوط تولید بیزدوار',
+          about: 'درباره بیزدوار',
+          aboutDesc: 'پارک علمی، نمایشگاه‌ها و دستاوردها'
+        },
+        geoText: 'محصول خودرو اختراع‌شده در پارک علم و فناوری دانشگاه تبریز — طراحی تیم بیزدوار و عرضه در دیجی‌کالا.'
       },
 
       bizswap: {
@@ -987,6 +1041,53 @@
         related: { title: 'İlgili Bizdavar ürünleri' },
         geoText: 'İran\'da mühendislik hijyen ürünü — Bizdavar ekibi tasarımı, Digikala üzerinden satış.'
       },
+      bizseat: {
+        hero: {
+          tag: 'Özel ürün · Otomotiv',
+          title: 'BizSeat — Bizdavar araç koltuğu bel desteği',
+          desc: '1399’da Tebriz Üniversitesi Bilim ve Teknoloji Parkı’nda icat, tasarım ve üretim — Bizdavar ekibinin sahip olduğu ürün'
+        },
+        about: {
+          title: 'Ürün hakkında',
+          imageAlt: 'BizSeat — Bizdavar ekibi tarafından tasarlanan araç koltuğu bel desteği',
+          body: '<strong>BizSeat</strong>, Bizdavar model araç koltuğu bel desteğidir — <strong>1399</strong> yılında <strong>Tebriz Üniversitesi Bilim ve Teknoloji Parkı</strong>’nda icat edilip tasarlandı ve üretildi.',
+          body2: 'Geliştirme, <strong>Teknoloji Pardazan Tosee Khavarmianeh</strong> ve teknoloji birimi <strong>Imen Sahand Padideh</strong> ile iş birliğinde yapıldı. Fikri mülkiyet Bizdavar’a aittir; ürün bugün Digikala’da satılmaktadır.',
+          specsTitle: 'Özellikler',
+          specs: [
+            'Ergonomik araç koltuğu bel desteği',
+            '1399 icat, tasarım ve üretim',
+            'Tebriz Üniversitesi Bilim ve Teknoloji Parkı',
+            'Teknoloji Pardazan Tosee Khavarmianeh iş birliği',
+            'Imen Sahand Padideh teknoloji birimi iş birliği',
+            'Digikala’dan sipariş edilebilir'
+          ],
+          ctaDigikala: 'Digikala’da görüntüle',
+          ctaContact: 'Toptan teklif / iletişim'
+        },
+        origin: {
+          eyebrow: 'Tebriz teknoloji parkı · 1399',
+          title: 'İcattan üretime — bilim ve teknoloji parkı',
+          desc: 'BizSeat, Bizdavar ekibinin icat ettiği donanım ürünlerinden biridir — Tebriz Üniversitesi inovasyon ekosisteminde, iki yerel teknoloji ortağıyla tasarım ve üretim.',
+          parkTitle: 'Bilim ve Teknoloji Parkı',
+          parkDesc: 'Tebriz Üniversitesi — 1399’da icat, tasarım ve üretim ortamı.',
+          partner1Title: 'Teknoloji Pardazan Tosee Khavarmianeh',
+          partner1Desc: 'Geliştirme ve ticarileştirme ortağı.',
+          partner2Title: 'Imen Sahand Padideh',
+          partner2Desc: 'Tebriz teknoloji parkı birimi — tasarım ve üretim ortağı.',
+          storeTitle: 'Digikala’da satış',
+          storeDesc: 'Ürün kodu dkp-7694589 — araç koltuğu bel desteği, model bizdavar.'
+        },
+        related: {
+          title: 'İlgili ürün ve hizmetler',
+          bizclean: 'Otomatik el dezenfektanı',
+          biztab: 'Temasız duvar termometresi',
+          catalog: 'Ürün kataloğu',
+          catalogDesc: 'Bizdavar donanımı ve üretim hatları',
+          about: 'Bizdavar hakkında',
+          aboutDesc: 'Teknoloji parkı, fuarlar ve başarılar'
+        },
+        geoText: 'Tebriz Üniversitesi Bilim ve Teknoloji Parkı’nda icat edilen otomotiv ürünü — Bizdavar tasarımı, Digikala satışı.'
+      },
       bizswap: {
         hero: {
           tag: 'Web3 ürün · DeFi',
@@ -1276,6 +1377,53 @@
         },
         related: { title: 'Related Bizdavar products' },
         geoText: 'Engineered hygiene product in Iran — Bizdavar team design, sold via Digikala.'
+      },
+      bizseat: {
+        hero: {
+          tag: 'Owned product · Automotive',
+          title: 'BizSeat — Bizdavar car seat backrest',
+          desc: 'Invented, designed and built in 1399 (2020–2021) at the University of Tabriz Science and Technology Park — a Bizdavar-owned product'
+        },
+        about: {
+          title: 'About the product',
+          imageAlt: 'BizSeat — car seat backrest designed by the Bizdavar team',
+          body: '<strong>BizSeat</strong> is the Bizdavar-model car seat backrest — invented, designed and manufactured in <strong>1399</strong> at the <strong>University of Tabriz Science and Technology Park</strong>.',
+          body2: 'It was developed with <strong>Technology Pardazan Tosee Khavarmianeh</strong> and the technology unit <strong>Imen Sahand Padideh</strong>. Intellectual property belongs to Bizdavar; the product is sold on Digikala.',
+          specsTitle: 'Features',
+          specs: [
+            'Ergonomic car seat backrest',
+            'Invented, designed and built in 1399 (2020–2021)',
+            'University of Tabriz Science and Technology Park',
+            'Collaboration with Technology Pardazan Tosee Khavarmianeh',
+            'Collaboration with Imen Sahand Padideh',
+            'Available to order on Digikala'
+          ],
+          ctaDigikala: 'View on Digikala',
+          ctaContact: 'Bulk inquiry / contact'
+        },
+        origin: {
+          eyebrow: 'Tabriz science park · 1399',
+          title: 'From invention to production at the science park',
+          desc: 'BizSeat is one of the hardware products invented by the Bizdavar team — designed and built in the University of Tabriz innovation ecosystem with two local technology partners.',
+          parkTitle: 'Science and Technology Park',
+          parkDesc: 'University of Tabriz — where the product was invented, designed and built in 1399.',
+          partner1Title: 'Technology Pardazan Tosee Khavarmianeh',
+          partner1Desc: 'Development and commercialization partner.',
+          partner2Title: 'Imen Sahand Padideh',
+          partner2Desc: 'Tabriz science-park technology unit — design and manufacturing partner.',
+          storeTitle: 'Sold on Digikala',
+          storeDesc: 'Product ID dkp-7694589 — car seat backrest, model bizdavar.'
+        },
+        related: {
+          title: 'Related products and services',
+          bizclean: 'Automatic hand sanitizer',
+          biztab: 'Non-contact wall thermometer',
+          catalog: 'Product catalog',
+          catalogDesc: 'Bizdavar hardware and production lines',
+          about: 'About Bizdavar',
+          aboutDesc: 'Science park, exhibitions and achievements'
+        },
+        geoText: 'Automotive product invented at the University of Tabriz Science and Technology Park — Bizdavar design, sold on Digikala.'
       },
       bizswap: {
         hero: {

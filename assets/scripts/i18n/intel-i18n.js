@@ -304,6 +304,13 @@
         desc: 'Bizdavar ekibi tarafından tasarlanıp üretildi (2019–2022), 2020 büyüme merkezi fuarı (ISNA, SNN, IRIB), RINOTEX 1400 teknopark birimi, Digikala satışı.',
         pressLabel: 'IRIB',
         tags: ['Hijyen', 'IoT', 'COVID-19', 'Tebriz Üniversitesi', 'RINOTEX', 'Imen Sahand Padideh', 'Digikala']
+      },
+      {
+        id: 'bizseat',
+        year: '2020',
+        title: 'BizSeat — araç koltuğu bel desteği',
+        desc: '1399’da Tebriz Üniversitesi teknoloji parkında icat, tasarım ve üretim — Teknoloji Pardazan Tosee Khavarmianeh ve Imen Sahand Padideh iş birliği. Digikala (dkp-7694589).',
+        tags: ['Otomotiv', 'Ergonomi', 'Tebriz', 'Teknoloji parkı', 'Imen Sahand Padideh', 'Digikala']
       }
     ],
     verifiedSources: [
@@ -592,6 +599,13 @@
         desc: 'Designed and built by Bizdavar (2019–2022), 2020 growth-centre exhibition (ISNA, SNN, IRIB), RINOTEX 1400 via tech-park unit, sold on Digikala.',
         pressLabel: 'IRIB',
         tags: ['Hygiene', 'IoT', 'COVID-19', 'Tabriz University', 'RINOTEX', 'Imen Sahand Padideh', 'Digikala']
+      },
+      {
+        id: 'bizseat',
+        year: '2020',
+        title: 'BizSeat — car seat backrest',
+        desc: 'Invented, designed and built in 1399 at the University of Tabriz science park — with Technology Pardazan Tosee Khavarmianeh and Imen Sahand Padideh. Sold on Digikala (dkp-7694589).',
+        tags: ['Automotive', 'Ergonomics', 'Tabriz', 'Science park', 'Imen Sahand Padideh', 'Digikala']
       }
     ],
     verifiedSources: [

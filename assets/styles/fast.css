@@ -150,6 +150,13 @@
   max-width: 640px;
 }
 
+.fast-hosting-bar__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
 .fast-hosting-bar__cta {
   flex-shrink: 0;
   font-size: 13px;

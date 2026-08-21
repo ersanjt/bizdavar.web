@@ -117,6 +117,12 @@ AddType 'text/html; charset=UTF-8' .html
   RewriteRule ^assets/images/products/fguard/fguard-hero\.webp$ /assets/images/products/fxguard/fxguard-hero.svg [R=301,L]
   RewriteRule ^assets/images/products/fguard/(.*)$ /assets/images/products/fxguard/$1 [R=301,L]
 
+  # Legacy WordPress / GSC URLs that still get clicks (404 in Search Console)
+  RewriteRule ^about-us/?$ /pages/about [R=301,L]
+  RewriteRule ^radar-6x/?$ /pages/vega [R=301,L]
+  RewriteRule ^prosense-gas-detectors/?$ /pages/prosense [R=301,L]
+  RewriteRule ^webstruct/?$ / [R=301,L]
+
   # Internal serve /blog and /pages/blog without .html
   RewriteRule ^blog/?$ pages/blog.html [L]
   RewriteRule ^pages/blog/?$ pages/blog.html [L]

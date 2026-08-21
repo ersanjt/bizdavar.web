@@ -17,6 +17,10 @@
     return (C.partners && C.partners.netinode && C.partners.netinode.url) || 'https://netinode.net/';
   }
 
+  function netinodeShopUrl() {
+    return (C.partners && C.partners.netinode && C.partners.netinode.shopUrl) || 'https://shop.netinode.net/';
+  }
+
   function planMessage(planId) {
     return (C.fast && C.fast.planMessages && C.fast.planMessages[planId]) || `سلام، می‌خوام پلن ${planId} Fast Web Studio سفارش بدم`;
   }
@@ -105,14 +109,20 @@
     if (!el) return;
     const note = window.BIZDAVAR_I18N?.raw('fastPage.hostingNote');
     if (!note) return;
-    const url = netinodeUrl();
+    const siteUrl = netinodeUrl();
+    const shopUrl = netinodeShopUrl();
+    const ctaShop = note.ctaShop || note.cta || 'Netinode';
+    const ctaSite = note.ctaSite || 'Netinode';
     el.innerHTML = `
       <div class="container fast-hosting-bar__inner">
         <div class="fast-hosting-bar__text">
           <strong>${note.title}</strong>
           <p>${note.text}</p>
         </div>
-        <a href="${url}" class="btn btn--yellow fast-hosting-bar__cta" target="_blank" rel="noopener noreferrer">${note.cta}</a>
+        <div class="fast-hosting-bar__actions">
+          <a href="${shopUrl}" class="btn btn--yellow fast-hosting-bar__cta" target="_blank" rel="noopener noreferrer">${ctaShop}</a>
+          <a href="${siteUrl}" class="btn btn--outline fast-hosting-bar__cta" target="_blank" rel="noopener noreferrer">${ctaSite}</a>
+        </div>
       </div>`;
   }
 

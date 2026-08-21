@@ -3,6 +3,8 @@
  * Images: assets/images/prosense/ — fetched via scripts/fetch-prosense-assets.py
  */
 const PROSENSE_IMG = 'assets/images/prosense/';
+const pn = (fa, tr, en) => ({ note: fa, noteFa: fa, noteTr: tr, noteEn: en });
+const pnm = (fa, tr, en) => ({ name: fa, nameFa: fa, nameTr: tr, nameEn: en });
 
 window.PROSENSE_CATALOG = {
   brand: {
@@ -227,22 +229,22 @@ window.PROSENSE_CATALOG = {
       image: PROSENSE_IMG + 'category-fixed-gas.webp',
       desc: 'سنسورهای گاز ثابت برای نصب دائم در تاسیسات صنعتی',
       series: [
-        { name: 'PQ Serisi', note: 'SIL2, SIL3 sertifikalı', featured: true },
-        { name: 'PX Serisi', note: 'عملکرد پیشرفته' },
-        { name: 'P Serisi', note: 'سری استاندارد' },
-        { name: 'PE Serisi', note: 'نسخه PE' },
-        { name: 'SOMA Serisi', note: 'M1 Sertifikalı — Maden', featured: true },
-        { name: 'SafeVader Serisi', note: 'ایمنی فرآیند', featured: true },
-        { name: 'PE-Kayo Serisi', note: 'سری Kayo' },
-        { name: 'PC3 Serisi', note: 'فشرده' },
-        { name: 'BTN Serisi', note: 'BTN' },
-        { name: 'PPS Serisi', note: 'Otopark gaz algılama' },
-        { name: 'PPS+ Serisi', note: 'EN-50545-1 Sertifikalı', featured: true },
-        { name: 'PPSR Serisi', note: 'Otopark — PPSR' },
-        { name: 'Open Path', note: 'مسیر باز — شناسایی از راه دور' },
-        { name: 'Smart 3G', note: 'ارتباط هوشمند 3G' },
-        { name: 'Xgard', note: 'Xgard' },
-        { name: 'IRmax', note: 'فناوری IR' }
+        { name: 'PQ Serisi', ...pn('گواهی SIL2 / SIL3', 'SIL2 / SIL3 sertifikalı', 'SIL2 / SIL3 certified'), featured: true },
+        { name: 'PX Serisi', ...pn('عملکرد پیشرفته', 'Gelişmiş performans', 'Advanced performance') },
+        { name: 'P Serisi', ...pn('سری استاندارد', 'Standart seri', 'Standard series') },
+        { name: 'PE Serisi', ...pn('سری PE', 'PE serisi', 'PE series') },
+        { name: 'SOMA Serisi', ...pn('گواهی M1 — معدن و تونل', 'M1 sertifikalı — maden', 'M1 certified — mining'), featured: true },
+        { name: 'SafeVader Serisi', ...pn('ایمنی فرآیند', 'Proses güvenliği', 'Process safety'), featured: true },
+        { name: 'PE-Kayo Serisi', ...pn('سری Kayo', 'Kayo serisi', 'Kayo series') },
+        { name: 'PC3 Serisi', ...pn('فشرده', 'Kompakt', 'Compact') },
+        { name: 'BTN Serisi', ...pn('سری BTN', 'BTN serisi', 'BTN series') },
+        { name: 'PPS Serisi', ...pn('تشخیص گاز پارکینگ', 'Otopark gaz algılama', 'Parking gas detection') },
+        { name: 'PPS+ Serisi', ...pn('گواهی EN-50545-1', 'EN-50545-1 sertifikalı', 'EN-50545-1 certified'), featured: true },
+        { name: 'PPSR Serisi', ...pn('پارکینگ PPSR', 'Otopark — PPSR', 'Parking — PPSR') },
+        { name: 'Open Path', ...pn('مسیر باز — شناسایی از راه دور', 'Açık yol — uzaktan algılama', 'Open path — long-range detection') },
+        { name: 'Smart 3G', ...pn('ارتباط هوشمند 3G', 'Akıllı 3G bağlantı', 'Smart 3G connectivity') },
+        { name: 'Xgard', ...pn('دتکتور Xgard', 'Xgard dedektör', 'Xgard detector') },
+        { name: 'IRmax', ...pn('فناوری مادون قرمز', 'IR teknolojisi', 'Infrared technology') }
       ]
     },
     {
@@ -253,19 +255,19 @@ window.PROSENSE_CATALOG = {
       image: PROSENSE_IMG + 'category-portable-gas.webp',
       desc: 'ابزار اندازه‌گیری قابل حمل برای کارکنان و بازرسی میدانی',
       series: [
-        { name: 'Gas-Pro', note: 'حرفه‌ای' },
-        { name: 'Tank-Pro', note: 'مخازن و تانک' },
-        { name: 'T4', note: 'چهار گاز' },
-        { name: 'Tetra 3', note: 'Tetra 3' },
-        { name: 'Gasman', note: 'Gasman' },
-        { name: 'Triple Plus+', note: 'سه‌گانه+' },
-        { name: 'Detective+', note: 'Detective+' },
-        { name: 'Detective Wireless', note: 'بی‌سیم' },
-        { name: 'Ventis Pro', note: 'Ventis Pro' },
-        { name: 'MX6 iBrid', note: 'iBrid' },
-        { name: 'Ventis MX4', note: 'MX4' },
-        { name: 'Tango TX1', note: 'Tango TX1' },
-        { name: 'GasBadge Pro', note: 'GasBadge Pro' }
+        { name: 'Gas-Pro', ...pn('دتکتور پرتابل حرفه‌ای', 'Profesyonel portatif', 'Professional portable') },
+        { name: 'Tank-Pro', ...pn('مخازن و تانک', 'Tank ve kaplar', 'Tanks and vessels') },
+        { name: 'T4', ...pn('چهار گاز', 'Dört gaz', 'Four-gas') },
+        { name: 'Tetra 3', ...pn('Tetra 3', 'Tetra 3', 'Tetra 3') },
+        { name: 'Gasman', ...pn('تک‌گاز شخصی', 'Kişisel tek gaz', 'Personal single-gas') },
+        { name: 'Triple Plus+', ...pn('چندگاز+', 'Çoklu gaz+', 'Multi-gas+') },
+        { name: 'Detective+', ...pn('Detective+', 'Detective+', 'Detective+') },
+        { name: 'Detective Wireless', ...pn('بی‌سیم', 'Kablosuz', 'Wireless') },
+        { name: 'Ventis Pro', ...pn('Ventis Pro', 'Ventis Pro', 'Ventis Pro') },
+        { name: 'MX6 iBrid', ...pn('iBrid', 'iBrid', 'iBrid') },
+        { name: 'Ventis MX4', ...pn('MX4', 'MX4', 'MX4') },
+        { name: 'Tango TX1', ...pn('Tango TX1', 'Tango TX1', 'Tango TX1') },
+        { name: 'GasBadge Pro', ...pn('GasBadge Pro', 'GasBadge Pro', 'GasBadge Pro') }
       ]
     },
     {
@@ -276,12 +278,12 @@ window.PROSENSE_CATALOG = {
       image: PROSENSE_IMG + 'category-flame-detector.webp',
       desc: 'شناسایی شعله و آتش در محیط‌های صنعتی و خطرناک',
       series: [
-        { name: 'Takex', note: 'Takex' },
-        { name: 'Rezontech', note: 'Rezontech' },
-        { name: 'Viking', note: 'Viking' },
-        { name: 'Spectrex', note: 'Spectrex' },
-        { name: 'Det-Tronics', note: 'Det-Tronics' },
-        { name: 'Siemens', note: 'Siemens' }
+        { name: 'Takex', ...pn('دتکتور شعله Takex', 'Takex alev dedektörü', 'Takex flame detector') },
+        { name: 'Rezontech', ...pn('دتکتور شعله Rezontech', 'Rezontech alev dedektörü', 'Rezontech flame detector') },
+        { name: 'Viking', ...pn('دتکتور شعله Viking', 'Viking alev dedektörü', 'Viking flame detector') },
+        { name: 'Spectrex', ...pn('دتکتور شعله Spectrex', 'Spectrex alev dedektörü', 'Spectrex flame detector') },
+        { name: 'Det-Tronics', ...pn('دتکتور شعله Det-Tronics', 'Det-Tronics alev dedektörü', 'Det-Tronics flame detector') },
+        { name: 'Siemens', ...pn('دتکتور شعله Siemens', 'Siemens alev dedektörü', 'Siemens flame detector') }
       ]
     },
     {
@@ -292,18 +294,18 @@ window.PROSENSE_CATALOG = {
       image: PROSENSE_IMG + 'category-control-panel.webp',
       desc: 'پنل‌های آنالوگ و دیجیتال برای مدیریت چندین دتکتور',
       series: [
-        { name: 'S-DP4 Analog', note: '۴ کانال آنالوگ' },
-        { name: 'S-DP8 Analog', note: '۸ کانال آنالوگ' },
-        { name: 'S-DP32 Dijital', note: '۳۲ کانال دیجیتال' },
-        { name: 'S-DPX004 Analog', note: 'DPX ۴ آنالوگ' },
-        { name: 'S-DPX008 Analog', note: 'DPX ۸ آنالوگ' },
-        { name: 'S-DPX032 Dijital & Analog', note: '۳۲ ترکیبی' },
-        { name: 'S-DPX064 Dijital & Analog', note: '۶۴ ترکیبی' },
-        { name: 'S-DPX128 Dijital & Analog', note: '۱۲۸ ترکیبی' },
-        { name: 'MULTISCAN++', note: 'MULTISCAN++' },
-        { name: 'PL4+', note: 'PL4+' },
-        { name: 'PPS-Manager', note: 'مدیریت PPS' },
-        { name: 'PPS+-Manager', note: 'مدیریت PPS+' }
+        { name: 'S-DP4 Analog', ...pn('۴ کانال آنالوگ', '4 kanal analog', '4-channel analog') },
+        { name: 'S-DP8 Analog', ...pn('۸ کانال آنالوگ', '8 kanal analog', '8-channel analog') },
+        { name: 'S-DP32 Dijital', ...pn('۳۲ کانال دیجیتال', '32 kanal dijital', '32-channel digital') },
+        { name: 'S-DPX004 Analog', ...pn('DPX ۴ آنالوگ', 'DPX 4 analog', 'DPX 4 analog') },
+        { name: 'S-DPX008 Analog', ...pn('DPX ۸ آنالوگ', 'DPX 8 analog', 'DPX 8 analog') },
+        { name: 'S-DPX032 Dijital & Analog', ...pn('۳۲ ترکیبی', '32 karma', '32 hybrid') },
+        { name: 'S-DPX064 Dijital & Analog', ...pn('۶۴ ترکیبی', '64 karma', '64 hybrid') },
+        { name: 'S-DPX128 Dijital & Analog', ...pn('۱۲۸ ترکیبی', '128 karma', '128 hybrid') },
+        { name: 'MULTISCAN++', ...pn('MULTISCAN++', 'MULTISCAN++', 'MULTISCAN++') },
+        { name: 'PL4+', ...pn('PL4+', 'PL4+', 'PL4+') },
+        { name: 'PPS-Manager', ...pn('نرم‌افزار مدیریت PPS', 'PPS yönetim yazılımı', 'PPS manager software') },
+        { name: 'PPS+-Manager', ...pn('نرم‌افزار مدیریت PPS+', 'PPS+ yönetim yazılımı', 'PPS+ manager software') }
       ]
     },
     {
@@ -314,9 +316,9 @@ window.PROSENSE_CATALOG = {
       image: PROSENSE_IMG + 'category-parking.webp',
       desc: 'سیستم‌های تشخیص CO و NO2 در پارکینگ‌های بسته',
       series: [
-        { name: 'PPS Otopark Gaz Algılama', note: 'PPS' },
-        { name: 'PPS+ Otopark Gaz Algılama', note: 'EN-50545-1', featured: true },
-        { name: 'PPSR Otopark Gaz Algılama', note: 'PPSR' }
+        { ...pnm('سیستم گاز پارکینگ PPS', 'PPS Otopark Gaz Algılama', 'PPS parking gas detection'), ...pn('سری PPS', 'PPS serisi', 'PPS series') },
+        { ...pnm('سیستم گاز پارکینگ PPS+', 'PPS+ Otopark Gaz Algılama', 'PPS+ parking gas detection'), ...pn('گواهی EN-50545-1', 'EN-50545-1', 'EN-50545-1'), featured: true },
+        { ...pnm('سیستم گاز پارکینگ PPSR', 'PPSR Otopark Gaz Algılama', 'PPSR parking gas detection'), ...pn('سری PPSR', 'PPSR serisi', 'PPSR series') }
       ]
     },
     {
@@ -327,14 +329,14 @@ window.PROSENSE_CATALOG = {
       image: PROSENSE_IMG + 'category-software.webp',
       desc: 'نرم‌افزار پیکربندی، مانیتورینگ و مدیریت سیستم',
       series: [
-        { name: 'S-PVSX', note: 'S-PVSX' },
-        { name: 'S-MCX004', note: 'MCX ۴' },
-        { name: 'S-MCX008', note: 'MCX ۸' },
-        { name: 'S-MCX032', note: 'MCX ۳۲' },
-        { name: 'S-MCX064', note: 'MCX ۶۴' },
-        { name: 'S-MCX128', note: 'MCX ۱۲۸' },
-        { name: 'S-MCX', note: 'S-MCX' },
-        { name: 'S-SETX', note: 'S-SETX' }
+        { name: 'S-PVSX', ...pn('ثبت داده و مانیتورینگ', 'Veri kaydı ve izleme', 'Data logging & monitoring') },
+        { name: 'S-MCX004', ...pn('MCX ۴ کانال', 'MCX 4 kanal', 'MCX 4-channel') },
+        { name: 'S-MCX008', ...pn('MCX ۸ کانال', 'MCX 8 kanal', 'MCX 8-channel') },
+        { name: 'S-MCX032', ...pn('MCX ۳۲ کانال', 'MCX 32 kanal', 'MCX 32-channel') },
+        { name: 'S-MCX064', ...pn('MCX ۶۴ کانال', 'MCX 64 kanal', 'MCX 64-channel') },
+        { name: 'S-MCX128', ...pn('MCX ۱۲۸ کانال', 'MCX 128 kanal', 'MCX 128-channel') },
+        { name: 'S-MCX', ...pn('نرم‌افزار S-MCX', 'S-MCX yazılımı', 'S-MCX software') },
+        { name: 'S-SETX', ...pn('برنامه‌ریزی پنل', 'Panel programlama', 'Panel programming') }
       ]
     },
     {
@@ -345,10 +347,10 @@ window.PROSENSE_CATALOG = {
       image: PROSENSE_IMG + 'category-calibration.webp',
       desc: 'گازهای تست و کالیبراسیون Span',
       series: [
-        { name: 'Span / Test Gaz Tüpleri', note: 'Span' },
-        { name: 'Karışım Gaz Tüpleri', note: 'Karışım' },
-        { name: 'Sıfırlama Tüpleri', note: 'Sıfır' },
-        { name: 'Kalibrasyon Gaz Regülatörü', note: 'Regülatör' }
+        { ...pnm('سیلندر گاز Span / Test', 'Span / Test Gaz Tüpleri', 'Span / test gas cylinders'), ...pn('گاز Span و تست', 'Span ve test gazı', 'Span and test gas') },
+        { ...pnm('سیلندر گاز مخلوط', 'Karışım Gaz Tüpleri', 'Mixed gas cylinders'), ...pn('مخلوط کالیبراسیون', 'Kalibrasyon karışımı', 'Calibration mixture') },
+        { ...pnm('سیلندر صفر (Zero)', 'Sıfırlama Tüpleri', 'Zero gas cylinders'), ...pn('گاز صفر', 'Sıfır gaz', 'Zero gas') },
+        { ...pnm('رگولاتور گاز کالیبراسیون', 'Kalibrasyon Gaz Regülatörü', 'Calibration gas regulator'), ...pn('رگولاتور', 'Regülatör', 'Regulator') }
       ]
     },
     {
@@ -359,11 +361,44 @@ window.PROSENSE_CATALOG = {
       image: PROSENSE_IMG + 'category-other-equipment.webp',
       desc: 'لوازم جانبی، آژیر، منبع تغذیه و تجهیزات Ex',
       series: [
-        { name: 'Gaz Toplama Aparatı', note: 'نمونه‌برداری' },
-        { name: 'Ex Yangın Ekipmanları', note: 'Ex' },
-        { name: 'Siren ve Flaşörler', note: 'هشدار' },
-        { name: 'PG-PS120 24V Güç Kaynağı', note: '24V' },
-        { name: 'EOL (End of Life)', note: 'EOL' }
+        {
+          id: 'p-gta',
+          sku: 'P-GTA',
+          ...pnm('مخروط جمع‌آوری گاز P-GTA', 'Gaz Toplama Aparatı (P-GTA)', 'P-GTA Gas Collection Cone'),
+          nameRu: 'Газосборный конус P-GTA',
+          nameAr: 'مخروط تجميع الغاز P-GTA',
+          ...pn('قیف فولادی ۵۰cm برای گازهای سبک — سازگار با PQ و P', '50 cm çelik koni, hafif gazlar — PQ ve P serisi', '50 cm steel cone for light gases — fits PQ & P series'),
+          image: PROSENSE_IMG + 'category-other-equipment.webp',
+          imageAlt: 'Prosense P-GTA gas collection cone with PQ detector'
+        },
+        {
+          id: 'ex-fire',
+          ...pnm('تجهیزات اعلام حریق Ex', 'Ex Yangın Ekipmanları', 'Ex-proof fire equipment'),
+          nameRu: 'Взрывозащищённое пожарное оборудование',
+          nameAr: 'معدات إنذار حريق ضد الانفجار',
+          ...pn('دتکتور دود و اعلام حریق ضد انفجار', 'Ex-proof duman ve yangın dedektörleri', 'Ex-proof smoke and fire detectors'),
+          image: PROSENSE_IMG + 'accessory-ex-smoke.png',
+          imageAlt: 'Orbis intrinsically safe Ex optical smoke detector'
+        },
+        {
+          id: 'siren-beacon',
+          ...pnm('آژیر و فلاشر', 'Siren ve Flaşörler', 'Sounders and beacons'),
+          nameRu: 'Сирены и проблесковые маяки',
+          nameAr: 'صفارات وأضواء تحذير',
+          ...pn('آژیر و چراغ اعلام Ex-proof و معمولی', 'Ex-proof ve standart sesli/ışıklı ikaz', 'Ex-proof and standard sounder/beacon alarms'),
+          image: PROSENSE_IMG + 'accessory-ex-beacon.jpg',
+          imageAlt: 'Ex-proof red beacon sounder for gas alarm'
+        },
+        {
+          id: 'pg-ps120',
+          sku: 'PG-PS120',
+          ...pnm('منبع تغذیه PG-PS120 24V', 'PG-PS120 24V Güç Kaynağı', 'PG-PS120 24V Power Supply'),
+          nameRu: 'Блок питания PG-PS120 24V',
+          nameAr: 'مزود طاقة PG-PS120 24V',
+          ...pn('منبع تغذیه ۲۴V مطابق EN 54-4 برای پنل و آژیر', 'EN 54-4 uyumlu 24V güç kaynağı', 'EN 54-4 24V PSU for panels and alarms'),
+          image: PROSENSE_IMG + 'accessory-ps120.jpg',
+          imageAlt: 'Prosense PG-PS120 EN 54-4 24V power supply unit'
+        }
       ]
     }
   ],

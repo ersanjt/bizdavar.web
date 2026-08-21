@@ -3,10 +3,11 @@
  * Default copy (fa) lives here; owned-products-i18n.js overrides per locale.
  */
 window.BIZDAVAR_OWNED_PRODUCTS = {
-  imgVersion: '4',
+  imgVersion: '5',
   categories: [
     { id: 'software', label: 'نرم‌افزار و SaaS', icon: 'globe' },
     { id: 'iot-health', label: 'IoT و بهداشت', icon: 'shield' },
+    { id: 'automotive', label: 'خودرو و راحتی', icon: 'car' },
     { id: 'packaging', label: 'بسته‌بندی و سیل', icon: 'box' },
     { id: 'medical', label: 'پزشکی و PPE', icon: 'heart' }
   ],
@@ -78,6 +79,20 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       image: 'assets/images/products/bizsanitizer/bizclean-v5.png',
       logo: 'assets/images/products/bizsanitizer/bizclean-v5.png',
       page: 'pages/bizsanitizer-v5.html',
+      featured: true,
+      status: 'live'
+    },
+    {
+      id: 'bizseat',
+      category: 'automotive',
+      categoryLabel: 'خودرو و راحتی',
+      name: 'BizSeat',
+      title: 'پشتی صندلی خودرو',
+      desc: 'اختراع، طراحی و ساخت ۱۳۹۹ در پارک علم و فناوری دانشگاه تبریز — همکاری بیزدوار با تکنولوژی پردازان توسعه خاورمیانه و ایمن سهند پدیده.',
+      tags: ['خودرو', 'ارگونومی', '۱۳۹۹'],
+      image: 'assets/images/products/bizseat/bizseat-hero.svg',
+      logo: 'assets/images/products/bizseat/bizseat-hero.svg',
+      page: 'pages/bizseat.html',
       featured: true,
       status: 'live'
     },
