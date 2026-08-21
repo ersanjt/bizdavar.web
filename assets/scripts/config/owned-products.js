@@ -4,6 +4,7 @@
  */
 window.BIZDAVAR_OWNED_PRODUCTS = {
   imgVersion: '6',
+  homeOrder: ['bizpet', 'biztab', 'fxguard', 'bizswap'],
   categories: [
     { id: 'software', label: 'نرم‌افزار و SaaS', icon: 'globe' },
     { id: 'iot-health', label: 'IoT و بهداشت', icon: 'shield' },
@@ -33,7 +34,7 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       name: 'WhatsApp CRM',
       title: 'FXGuard WhatsApp CRM',
       desc: 'اینباکس تیمی واتساپ، مشتریان، تیکت، شعب و ۲FA — Cloud از $49/ماه، لایسنس یا Managed. دمو رایگان در app.fxguard.io.',
-      tags: ['FXGuard', 'WhatsApp CRM', 'از $49/mo'],
+      tags: ['FXGuard', 'WhatsApp CRM', 'از ۴۹ دلار'],
       image: 'assets/images/products/fxguard/fxguard-hero.svg',
       logo: 'assets/images/products/fxguard/fxguard-logo.svg',
       page: 'pages/fxguard.html',

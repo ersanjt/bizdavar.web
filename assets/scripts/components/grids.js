@@ -744,7 +744,10 @@
     const href = ownedProductHref(p);
     const statusKey = p.status === 'live' ? 'productsPage.statusLive' : 'productsPage.statusCatalog';
     const statusLabel = t(statusKey, p.status === 'live' ? 'Product page' : 'Quote');
-    const tags = (p.tags || []).map(tag => `<span class="owned-product-card__tag">${tag}</span>`).join('');
+    const tags = (p.tags || []).map(tag => {
+      const ltr = /[$+]|\d+\s*\/\s*[a-z]/i.test(tag);
+      return `<span class="owned-product-card__tag"${ltr ? ' dir="ltr"' : ''}>${tag}</span>`;
+    }).join('');
     const img = ownedProductImageSrc(p);
     const fallback = ownedProductImageFallback(p);
     const isPhoto = /\.(jpe?g|webp|png)$/i.test(p.image || '');
@@ -761,8 +764,7 @@
           <p class="owned-product-card__desc">${p.desc || ''}</p>
           ${tags ? `<div class="owned-product-card__tags">${tags}</div>` : ''}
           <footer class="owned-product-card__footer">
-            <span class="owned-product-card__status">${statusLabel}</span>
-            <a href="${href}" class="service-card__link">${p.status === 'live' ? t('common.learnMore', 'بیشتر') : t('ownedProducts.contact', 'استعلام')}${linkArrow()}</a>
+            <a href="${href}" class="service-card__link">${p.status === 'live' ? t('productsPage.statusLive', statusLabel) : t('ownedProducts.contact', 'استعلام')}${linkArrow()}</a>
           </footer>
         </div>
       </article>`;
@@ -778,6 +780,10 @@
     if (opts.featured) items = items.filter(p => p.featured);
     if (opts.status) items = items.filter(p => p.status === opts.status);
     if (opts.category && opts.category !== 'all') items = items.filter(p => p.category === opts.category);
+    if (opts.homeOrder) {
+      const order = window.BIZDAVAR_OWNED_PRODUCTS?.homeOrder || [];
+      items = order.map(id => items.find(p => p.id === id)).filter(Boolean);
+    }
     if (opts.limit) items = items.slice(0, opts.limit);
     el.innerHTML = items.length
       ? items.map(p => ownedProductCardHtml(p)).join('')
@@ -802,7 +808,7 @@
           </p>
         </div>
       </section>`;
-    renderOwnedProductsGrid('ownedProductsHomeGrid', { featured: true, limit: 4 });
+    renderOwnedProductsGrid('ownedProductsHomeGrid', { featured: true, homeOrder: true, limit: 4 });
   };
 
   window.initOwnedProductsPage = function () {

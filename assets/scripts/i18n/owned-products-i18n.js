@@ -118,7 +118,7 @@
             name: 'WhatsApp CRM',
             title: 'FXGuard WhatsApp CRM',
             desc: 'اینباکس تیمی واتساپ، مشتریان، تیکت، شعب و ۲FA — Cloud از $49/ماه، لایسنس یا Managed. دمو رایگان در app.fxguard.io.',
-            tags: ['FXGuard', 'WhatsApp CRM', 'از $49/mo']
+            tags: ['FXGuard', 'WhatsApp CRM', 'از ۴۹ دلار']
           },
           'fxguard-accounting': {
             name: 'Accounting',
@@ -204,7 +204,7 @@
       home: {
         ownedEyebrow: 'محصولات بیزدوار',
         ownedTitle: 'آنچه می‌سازیم',
-        ownedDesc: 'علاوه بر خدمات دیجیتال، تیم بیزدوار دستگاه و خط تولید اختصاصی نیز مهندسی می‌کند — از BizTab تا خطوط بسته‌بندی و PPE.',
+        ownedDesc: 'علاوه بر خدمات دیجیتال، تیم بیزدوار دستگاه و نرم‌افزار اختصاصی هم می‌سازد — از پد حرارتی BizPet و دماسنج BizTab تا FXGuard و BizSwap.',
         ownedCta: 'مشاهده همه محصولات'
       }
     },
@@ -337,7 +337,7 @@
       home: {
         ownedEyebrow: 'Bizdavar ürünleri',
         ownedTitle: 'Ne üretiyoruz',
-        ownedDesc: 'Dijital hizmetlerin yanı sıra Bizdavar ekibi özel makine ve üretim hatları mühendislik eder — BizTab\'dan ambalaj ve PPE hatlarına.',
+        ownedDesc: 'Dijital hizmetlerin yanı sıra Bizdavar kendi cihaz ve yazılımını da üretir — BizPet ısı pedi, BizTab, FXGuard ve BizSwap.',
         ownedCta: 'Tüm ürünleri gör'
       }
     },
@@ -470,7 +470,7 @@
       home: {
         ownedEyebrow: 'Bizdavar products',
         ownedTitle: 'What we manufacture',
-        ownedDesc: 'Alongside digital services, the Bizdavar team engineers proprietary machines and production lines — from BizTab to packaging and PPE equipment.',
+        ownedDesc: 'Alongside digital services, Bizdavar builds its own hardware and software — BizPet heating pad, BizTab, FXGuard and BizSwap.',
         ownedCta: 'View all products'
       }
     }
