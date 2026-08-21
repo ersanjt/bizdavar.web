@@ -1377,6 +1377,12 @@ html[dir="rtl"] .product-subnav {
   box-shadow: var(--shadow-sm);
 }
 
+.intel-stat strong,
+.trust-bar__value {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
 .intel-stat strong {
   display: block;
   font-size: var(--text-3xl);
@@ -1391,7 +1397,7 @@ html[dir="rtl"] .product-subnav {
 
 .intel-proof-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--space-5);
 }
 
@@ -1401,6 +1407,17 @@ html[dir="rtl"] .product-subnav {
   padding: var(--space-6);
   border: 1px solid var(--gray-200);
   border-top: 3px solid var(--yellow);
+}
+
+.intel-proof-card:nth-child(1) { border-top-color: var(--red); }
+.intel-proof-card:nth-child(2) { border-top-color: #3B82F6; }
+.intel-proof-card:nth-child(3) { border-top-color: #10B981; }
+.intel-proof-card:nth-child(4) { border-top-color: var(--yellow); }
+
+@media (max-width: 767px) {
+  .intel-proof-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .intel-proof-card__cat {

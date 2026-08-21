@@ -209,7 +209,7 @@
 
               <li class="trust-bar__item">
 
-                <strong class="trust-bar__value">${m.value}</strong>
+                <strong class="trust-bar__value" dir="ltr">${m.value}</strong>
 
                 <span class="trust-bar__label">${m.label}</span>
 
@@ -246,10 +246,10 @@
             <p class="section__desc">${t('credibility.desc')}</p>
           </div>
           <div class="intel-stats">
-            <div class="intel-stat"><strong>${f.projectsCount}</strong><span>${t('credibility.projects')}</span></div>
-            <div class="intel-stat"><strong>${f.countriesCount}</strong><span>${t('credibility.countries')}</span></div>
-            <div class="intel-stat"><strong>${f.experienceYears}</strong><span>${t('credibility.years')}</span></div>
-            <div class="intel-stat"><strong>${foundedDisplay}</strong><span>${t('credibility.founded')}</span></div>
+            <div class="intel-stat"><strong dir="ltr">${f.projectsCount}</strong><span>${t('credibility.projects')}</span></div>
+            <div class="intel-stat"><strong dir="ltr">${f.countriesCount}</strong><span>${t('credibility.countries')}</span></div>
+            <div class="intel-stat"><strong dir="ltr">${f.experienceYears}</strong><span>${t('credibility.years')}</span></div>
+            <div class="intel-stat"><strong dir="ltr">${foundedDisplay}</strong><span>${t('credibility.founded')}</span></div>
           </div>
           <div class="intel-proof-grid">
             ${localizedHighlights.map(h => `
