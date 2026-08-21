@@ -121,7 +121,11 @@
 
   snapshotChrome();
   syncLocaleNow();
-  afterLocale();
+  try {
+    afterLocale();
+  } catch (e) {
+    console.error('[Bizdavar] afterLocale failed', e);
+  }
 
   if (window.BIZDAVAR_I18N) {
     window.bizdavarReady = Promise.resolve(window.BIZDAVAR_I18N.init())

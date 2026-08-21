@@ -28,6 +28,7 @@
     if (!a || !a.href) return false;
     if (a.hasAttribute('download')) return false;
     if (a.target === '_blank') return false;
+    if (a.classList.contains('photo-gallery-card__open') || a.closest('.photo-gallery-filters')) return false;
     const raw = a.getAttribute('href');
     if (!raw || raw.startsWith('#')) return false;
     const url = parseUrl(raw);
@@ -110,6 +111,7 @@
   function handleLinkClick(e) {
     const a = e.target.closest('a[href]');
     if (!a || !isInternalLink(a) || isModifiedClick(e)) return;
+    if (a.closest('[data-gallery-cat], .photo-gallery-filters')) return;
 
     const url = parseUrl(a.getAttribute('href'));
     if (!url) return;

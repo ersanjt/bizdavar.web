@@ -132,6 +132,44 @@ body {
   object-fit: contain;
 }
 
+.product-subnav-wrap {
+  position: sticky;
+  top: var(--header-height, 64px);
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid rgba(29, 29, 27, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.product-subnav {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.35rem;
+  overflow-x: auto;
+  padding: 0.65rem 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.product-subnav a {
+  flex: 0 0 auto;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  color: inherit;
+  text-decoration: none;
+  font-size: var(--text-sm);
+  border: 1px solid transparent;
+}
+
+.product-subnav a:hover,
+.product-subnav a:focus-visible {
+  border-color: rgba(29, 29, 27, 0.16);
+  background: rgba(29, 29, 27, 0.04);
+}
+
+html[dir="rtl"] .product-subnav {
+  flex-direction: row;
+}
+
 .photo-gallery-toolbar {
   display: flex;
   flex-wrap: wrap;
@@ -148,6 +186,9 @@ body {
 }
 
 .photo-gallery-filter {
+  display: inline-flex;
+  align-items: center;
+  appearance: none;
   border: 1px solid var(--border, rgba(0, 0, 0, 0.12));
   background: var(--surface, #fff);
   color: inherit;
@@ -155,7 +196,14 @@ body {
   padding: 0.4rem 0.95rem;
   font: inherit;
   font-size: var(--text-sm);
+  line-height: 1.3;
+  text-decoration: none;
   cursor: pointer;
+}
+
+.photo-gallery-filter:hover,
+.photo-gallery-filter:focus-visible {
+  border-color: rgba(29, 29, 27, 0.28);
 }
 
 .photo-gallery-filter.is-active {
@@ -187,6 +235,10 @@ body {
   overflow: hidden;
   background: var(--surface, #fff);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.photo-gallery-card.is-hidden {
+  display: none;
 }
 
 .photo-gallery-card__open {

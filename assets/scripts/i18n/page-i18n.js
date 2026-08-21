@@ -160,6 +160,10 @@
     if (page === 'biztab') applyListById('biztabSpecs', 'caseStudy.biztab.about.specs');
     if (page === 'bizsanitizer-v5') applyListById('bizsanitizerSpecs', 'caseStudy.bizsanitizerV5.about.specs');
     if (page === 'bizseat') applyListById('bizseatSpecs', 'caseStudy.bizseat.about.specs');
+    if (page === 'bizpet') {
+      applyListById('bizpetSpecs', 'caseStudy.bizpet.about.specs');
+      applyListById('bizpetPetSpecs', 'caseStudy.bizpet.pets.specs');
+    }
     if (page === 'gallery' && typeof window.initGalleryPage === 'function') window.initGalleryPage();
     if (page === 'fxguard' && typeof window.initFxguardPage === 'function') window.initFxguardPage();
     if (page === 'bizswap' && typeof window.initBizswapPage === 'function') window.initBizswapPage();

@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="/assets/styles/site.css">
   <meta name="theme-color" content="#1d1d1b">
 <meta name="description" content="BizPet (Biz Pet / Pet Biz) — нагревательный мат Padideh. Разработан и произведён в технологическом инкубаторе Университета Тебриза совместно с Imen Sahand Padideh. 5–12 В, для дома и автомобиля.">
+
   <!-- bd-static-seo -->
   <meta property="og:title" content="BizPet | нагревательный мат — инкубатор Тебриза">
   <meta property="og:description" content="BizPet (Biz Pet / Pet Biz) — нагревательный мат Padideh. Разработан и произведён в технологическом инкубаторе Университета Тебриза совместно с Imen Sahand Padideh. 5–12 В, для дома и автомобиля.">
@@ -54,6 +55,11 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <script src="/assets/scripts/components/page-shell.js"></script>
+  <a href="#main-content" class="skip-link" data-i18n="common.skipLink">Перейти к основному содержимому</a>
+  <div class="top-bar" id="topBar"></div>
+  <header class="header" id="siteHeader"></header>
+  <nav class="breadcrumbs-wrap" id="breadcrumbs" data-i18n-aria="common.breadcrumbAria" aria-label="Навигация"></nav>
+  <div class="overlay" id="overlay"></div>
 <main id="main-content" class="site-main">
 
   <section class="page-hero page-hero--pro">
@@ -64,7 +70,20 @@
     </div>
   </section>
 
-  <section class="section">
+  <div class="product-subnav-wrap">
+    <div class="container">
+      <nav class="product-subnav" aria-label="بخش‌های صفحه">
+        <a href="#bizpet-about" data-i18n="caseStudy.bizpet.nav.about">О продукте</a>
+        <a href="#bizpet-rd" data-i18n="caseStudy.bizpet.nav.rd">НИОКР</a>
+        <a href="#bizpet-pets" data-i18n="caseStudy.bizpet.nav.pets">Лежанки для животных</a>
+        <a href="#bizpet-origin" data-i18n="caseStudy.bizpet.nav.origin">Инкубатор</a>
+        <a href="/pages/gallery" data-i18n="caseStudy.bizpet.nav.gallery">Фотогалерея</a>
+        <a href="/pages/contact" data-i18n="caseStudy.bizpet.nav.contact">Контакты</a>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section" id="bizpet-about">
     <div class="container about-grid">
       <div class="about__image biztab-gallery product-gallery">
         <img src="/assets/images/products/bizpet/bizpet-grey.jpg" alt="BizPet — серый нагревательный мат команды Bizdavar" data-i18n-alt="caseStudy.bizpet.about.imageAlt" loading="eager" width="640" height="800">
@@ -98,7 +117,7 @@
     </div>
   </section>
 
-  <section class="section section--gray">
+  <section class="section section--gray" id="bizpet-rd">
     <div class="container">
       <div class="section__header section__header--pro">
         <span class="section__eyebrow" data-i18n="caseStudy.bizpet.rd.eyebrow">НИОКР</span>
@@ -111,60 +130,25 @@
           <figcaption data-i18n="caseStudy.bizpet.rd.tempHighCaption">Лабораторный термический тест элемента</figcaption>
         </figure>
         <figure>
-          <img src="/assets/images/products/bizpet/bizpet-rd-temp.jpg" alt="Измерение температуры поверхности в НИОКР" data-i18n-alt="caseStudy.bizpet.rd.tempAlt" width="640" height="480" loading="lazy">
-          <figcaption data-i18n="caseStudy.bizpet.rd.tempCaption">Температура поверхности в тестах НИОКР</figcaption>
-        </figure>
-        <figure>
-          <img src="/assets/images/products/bizpet/bizpet-element.jpg" alt="Прямоугольный нагревательный элемент с контактами" data-i18n-alt="caseStudy.bizpet.rd.elementAlt" width="640" height="480" loading="lazy">
-          <figcaption data-i18n="caseStudy.bizpet.rd.elementCaption">Нагревательный элемент с точками контакта</figcaption>
-        </figure>
-        <figure>
           <img src="/assets/images/products/bizpet/bizpet-prototype.jpg" alt="Прототип нагревательного мата на изоляционном блоке" data-i18n-alt="caseStudy.bizpet.rd.protoAlt" width="640" height="480" loading="lazy">
           <figcaption data-i18n="caseStudy.bizpet.rd.protoCaption">Прототип и экспериментальная сборка</figcaption>
         </figure>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section__header section__header--pro">
-        <span class="section__eyebrow" data-i18n="caseStudy.bizpet.military.eyebrow">НИОКР</span>
-        <h2 class="section__title" data-i18n="caseStudy.bizpet.military.title">Нагревательные маты в военной одежде</h2>
-        <p class="section__desc" data-i18n="caseStudy.bizpet.military.desc">Прототип тактического жилета со встроенным нагревательным элементом и блоком управления — НИОКР по применению мата в слоях военной одежды.</p>
-      </div>
-      <div class="product-photo-grid product-photo-grid--portrait">
         <figure>
           <img src="/assets/images/products/bizpet/bizpet-military-vest.jpg" alt="Прототип военного жилета с нагревательным матом на манекене" data-i18n-alt="caseStudy.bizpet.military.vestAlt" width="640" height="800" loading="lazy">
           <figcaption data-i18n="caseStudy.bizpet.military.vestCaption">Прототип тактического жилета с блоком управления</figcaption>
         </figure>
         <figure>
-          <img src="/assets/images/products/bizpet/bizpet-military-lining.jpg" alt="Внутренняя подкладка жилета и проводка нагревательного мата" data-i18n-alt="caseStudy.bizpet.military.liningAlt" width="640" height="800" loading="lazy">
-          <figcaption data-i18n="caseStudy.bizpet.military.liningCaption">Подкладка — вшитый нагревательный элемент</figcaption>
-        </figure>
-        <figure>
-          <img src="/assets/images/products/bizpet/bizpet-military-outdoor.jpg" alt="Нагревательный военный жилет на манекене на улице" data-i18n-alt="caseStudy.bizpet.military.outdoorAlt" width="640" height="800" loading="lazy">
-          <figcaption data-i18n="caseStudy.bizpet.military.outdoorCaption">Показ прототипа на открытом воздухе</figcaption>
+          <img src="/assets/images/products/bizpet/bizpet-production.jpg" alt="Производственная линия BizPet — сборка и тест на рабочем столе" data-i18n-alt="caseStudy.bizpet.production.imageAlt" width="640" height="480" loading="lazy">
+          <figcaption data-i18n="caseStudy.bizpet.production.caption">Сборка и тестирование нагревательных матов в мастерской.</figcaption>
         </figure>
       </div>
+      <p class="article__cta">
+        <a href="/pages/gallery#rd" class="btn btn--outline" data-i18n="galleryPage.ctaFromAbout">Галерея выставок и производства</a>
+      </p>
     </div>
   </section>
 
-  <section class="section section--gray">
-    <div class="container">
-      <div class="section__header section__header--pro">
-        <span class="section__eyebrow" data-i18n="caseStudy.bizpet.dryer.eyebrow">НИОКР</span>
-        <h2 class="section__title" data-i18n="caseStudy.bizpet.dryer.title">Нагревательные маты в корзинах фруктовой сушилки</h2>
-        <p class="section__desc" data-i18n="caseStudy.bizpet.dryer.desc">Деревянная корзина фруктовой сушилки с шестиугольной нагревательной сеткой и кабелем питания — НИОКР по применению мата в лотках сушилки.</p>
-      </div>
-      <div class="biztab-press-card">
-        <img src="/assets/images/products/bizpet/bizpet-dryer-basket.jpg" alt="Прототип корзины фруктовой сушилки с нагревательной сеткой" data-i18n-alt="caseStudy.bizpet.dryer.imageAlt" width="1200" height="800" loading="lazy">
-        <p data-i18n="caseStudy.bizpet.dryer.caption">3D-рендер корзины сушилки с сетчатым нагревательным элементом.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
+  <section class="section" id="bizpet-pets">
     <div class="container about-grid">
       <div class="about__image">
         <img src="/assets/images/products/bizpet/bizpet-pets-poster.jpg" alt="BizPet — инфракрасный нагревательный мат для лежанок животных" data-i18n-alt="caseStudy.bizpet.pets.imageAlt" width="720" height="960" loading="lazy">
@@ -185,22 +169,7 @@
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="section__header section__header--pro">
-        <span class="section__eyebrow" data-i18n="caseStudy.bizpet.expo.eyebrow">Выставка</span>
-        <h2 class="section__title" data-i18n="caseStudy.bizpet.expo.title">Стенд Imen Sahand Padideh</h2>
-        <p class="section__desc" data-i18n="caseStudy.bizpet.expo.desc">Нагревательные маты на выставке — акцент на очень низком потреблении и экологической совместимости.</p>
-      </div>
-      <div class="biztab-press-card">
-        <img src="/assets/images/products/bizpet/bizpet-exhibition.jpg" alt="Выставочный стенд Imen Sahand Padideh с нагревательными матами" data-i18n-alt="caseStudy.bizpet.expo.imageAlt" width="1200" height="800" loading="lazy">
-        <p data-i18n="caseStudy.bizpet.expo.caption">Стенд Imen Sahand Padideh — представление мата с низким потреблением.</p>
-        <p><a href="/pages/gallery#exhibition" class="btn btn--outline" data-i18n="galleryPage.ctaFromAbout">Галерея выставок и производства</a></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
+  <section class="section section--gray" id="bizpet-origin">
     <div class="container">
       <div class="section__header section__header--pro">
         <span class="section__eyebrow" data-i18n="caseStudy.bizpet.origin.eyebrow">Инкубатор Тебриза · 1399</span>
@@ -232,20 +201,6 @@
     </div>
   </section>
 
-  <section class="section section--gray">
-    <div class="container">
-      <div class="section__header section__header--pro">
-        <span class="section__eyebrow" data-i18n="caseStudy.bizpet.production.eyebrow">Производственная линия</span>
-        <h2 class="section__title" data-i18n="caseStudy.bizpet.production.title">Сборка и тестирование нагревательных матов</h2>
-        <p class="section__desc" data-i18n="caseStudy.bizpet.production.desc">Станция сборки и контроля качества — тканевые маты, блоки питания и упаковка.</p>
-      </div>
-      <div class="biztab-press-card">
-        <img src="/assets/images/products/bizpet/bizpet-production.jpg" alt="Производственная линия BizPet — сборка и тест на рабочем столе" data-i18n-alt="caseStudy.bizpet.production.imageAlt" width="1200" height="800" loading="lazy">
-        <p data-i18n="caseStudy.bizpet.production.caption">Сборка и тестирование нагревательных матов в мастерской.</p>
-      </div>
-    </div>
-  </section>
-
   <section class="section">
     <div class="container">
       <div class="section__header">
@@ -254,8 +209,10 @@
       <div class="features-grid">
         <a href="/pages/bizseat" class="feature-item feature-item--link"><span class="feature-item__icon" data-bd-icon="car" data-bd-size="26"></span><h3>BizSeat</h3><p data-i18n="caseStudy.bizpet.related.bizseat">Поясничная опора для автокресла</p></a>
         <a href="/pages/biztab" class="feature-item feature-item--link"><span class="feature-item__icon" data-bd-icon="sensor" data-bd-size="26"></span><h3>BizTab</h3><p data-i18n="caseStudy.bizpet.related.biztab">Бесконтактный настенный термометр</p></a>
+        <a href="/pages/gallery" class="feature-item feature-item--link"><span class="feature-item__icon" data-bd-icon="article" data-bd-size="26"></span><h3 data-i18n="nav.gallery">Галерея</h3><p data-i18n="galleryPage.ctaFromAbout">Галерея выставок и производства</p></a>
         <a href="/pages/products" class="feature-item feature-item--link"><span class="feature-item__icon" data-bd-icon="box" data-bd-size="26"></span><h3 data-i18n="caseStudy.bizpet.related.catalog">Каталог продуктов</h3><p data-i18n="caseStudy.bizpet.related.catalogDesc">Оборудование и линии Bizdavar</p></a>
         <a href="/pages/about" class="feature-item feature-item--link"><span class="feature-item__icon" data-bd-icon="globe" data-bd-size="26"></span><h3 data-i18n="caseStudy.bizpet.related.about">О Bizdavar</h3><p data-i18n="caseStudy.bizpet.related.aboutDesc">Технопарк, выставки и достижения</p></a>
+        <a href="/pages/contact" class="feature-item feature-item--link"><span class="feature-item__icon" data-bd-icon="phone" data-bd-size="26"></span><h3 data-i18n="nav.contact">Контакты</h3><p data-i18n="caseStudy.bizpet.about.ctaContact">Оптовый запрос / контакт</p></a>
       </div>
     </div>
   </section>
@@ -263,6 +220,8 @@
   <div id="geoStrip"></div>
   <div id="relatedLinks"></div>
   </main>
+  <footer class="footer" id="siteFooter"></footer>
+  <button class="back-to-top" id="backToTop" data-i18n-aria="common.backToTop" aria-label="Наверх"></button>
 
   <script src="/assets/scripts/site-loader.js"></script>
   <script>
@@ -286,6 +245,8 @@
         brand: 'BizPet',
         image: 'assets/images/products/bizpet/bizpet-grey.jpg'
       });
+      if (typeof window.ensureBizdavarPageShell === 'function') window.ensureBizdavarPageShell();
+      if (typeof window.renderSiteChrome === 'function') window.renderSiteChrome();
     });
   </script>
 </body>

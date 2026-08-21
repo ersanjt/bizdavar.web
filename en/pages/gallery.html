@@ -55,6 +55,11 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <script src="/assets/scripts/components/page-shell.js"></script>
+  <a href="#main-content" class="skip-link" data-i18n="common.skipLink">Skip to main content</a>
+  <div class="top-bar" id="topBar"></div>
+  <header class="header" id="siteHeader"></header>
+  <nav class="breadcrumbs-wrap" id="breadcrumbs" data-i18n-aria="common.breadcrumbAria" aria-label="Breadcrumb"></nav>
+  <div class="overlay" id="overlay"></div>
 <main id="main-content" class="site-main">
 
   <section class="page-hero page-hero--pro">
@@ -68,10 +73,197 @@
   <section class="section">
     <div class="container">
       <div class="photo-gallery-toolbar">
-        <div class="photo-gallery-filters" id="galleryFilters" role="toolbar"></div>
-        <p class="photo-gallery-count" id="galleryCount"></p>
+        <nav class="photo-gallery-filters" id="galleryFilters" role="navigation" data-i18n-aria="galleryPage.filterAria" aria-label="Gallery filter">
+          <a href="/pages/gallery" class="photo-gallery-filter is-active" data-gallery-cat="all" data-i18n="galleryPage.filters.all">All</a>
+          <a href="/pages/gallery#exhibition" class="photo-gallery-filter" data-gallery-cat="exhibition" data-i18n="galleryPage.filters.exhibition">Exhibitions</a>
+          <a href="/pages/gallery#rd" class="photo-gallery-filter" data-gallery-cat="rd" data-i18n="galleryPage.filters.rd">R&D</a>
+          <a href="/pages/gallery#production" class="photo-gallery-filter" data-gallery-cat="production" data-i18n="galleryPage.filters.production">Production</a>
+          <a href="/pages/gallery#products" class="photo-gallery-filter" data-gallery-cat="products" data-i18n="galleryPage.filters.products">Products</a>
+        </nav>
+        <p class="photo-gallery-count" id="galleryCount">۳۰ تصویر</p>
       </div>
-      <div class="photo-gallery-grid" id="galleryGrid"></div>
+      <div class="photo-gallery-grid" id="galleryGrid">
+        <figure class="photo-gallery-card photo-gallery-card--portrait" data-gallery-id="expo-imen-booth" data-gallery-cat="exhibition" data-gallery-href="/pages/bizpet">
+          <a href="/assets/images/gallery/expo-imen-booth.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/gallery/expo-imen-booth.jpg" alt="غرفه نمایشگاهی ایمن سهند پدیده با پدهای حرارتی سیاه روی میز" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.expo-imen-booth.caption">Imen Sahand Padideh booth — heating pads on display</figcaption>
+        </figure>
+        <figure class="photo-gallery-card photo-gallery-card--portrait" data-gallery-id="expo-team-bizdavar" data-gallery-cat="exhibition" data-gallery-href="/pages/about">
+          <a href="/assets/images/gallery/expo-team-bizdavar.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/gallery/expo-team-bizdavar.jpg" alt="سه نفر در غرفه نمایشگاه با بنر بیزدوار و ایمن سهند پدیده" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.expo-team-bizdavar.caption">Bizdavar team at the exhibition booth</figcaption>
+        </figure>
+        <figure class="photo-gallery-card photo-gallery-card--portrait" data-gallery-id="expo-team-imen" data-gallery-cat="exhibition" data-gallery-href="/pages/about">
+          <a href="/assets/images/gallery/expo-team-imen.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/gallery/expo-team-imen.jpg" alt="سه نفر در غرفه ایمن سهند پدیده با پرچم ایران" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.expo-team-imen.caption">Imen Sahand Padideh representatives at the show</figcaption>
+        </figure>
+        <figure class="photo-gallery-card" data-gallery-id="expo-tabrizu" data-gallery-cat="exhibition" data-gallery-href="/pages/about">
+          <a href="/assets/images/gallery/expo-tabrizu-incubator.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/gallery/expo-tabrizu-incubator.jpg" alt="غرفه مرکز رشد و نوآوری دانشگاه تبریز" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.expo-tabrizu.caption">University of Tabriz Incubation and Innovation Center</figcaption>
+        </figure>
+        <figure class="photo-gallery-card" data-gallery-id="bizpet-expo" data-gallery-cat="exhibition" data-gallery-href="/pages/bizpet">
+          <a href="/assets/images/products/bizpet/bizpet-exhibition.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/products/bizpet/bizpet-exhibition.jpg" alt="غرفه نمایشگاهی با پدهای حرارتی پدیده" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.bizpet-expo.caption">Padideh heating pads at the exhibition</figcaption>
+        </figure>
+        <figure class="photo-gallery-card" data-gallery-id="motor-housings" data-gallery-cat="production" data-gallery-href="/pages/products">
+          <a href="/assets/images/gallery/motor-housings.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/gallery/motor-housings.jpg" alt="چند پوسته الکتروموتور روی کف کارگاه" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.motor-housings.caption">Electric motor housings in assembly</figcaption>
+        </figure>
+        <figure class="photo-gallery-card" data-gallery-id="motor-stator-pair" data-gallery-cat="production" data-gallery-href="/pages/products">
+          <a href="/assets/images/gallery/motor-stator-pair.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/gallery/motor-stator-pair.jpg" alt="دو استاتور الکتروموتور با سیم‌پیچی مسی" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.motor-stator-pair.caption">Copper windings inside the motor housing</figcaption>
+        </figure>
+        <figure class="photo-gallery-card" data-gallery-id="motor-stator-wind" data-gallery-cat="production" data-gallery-href="/pages/products">
+          <a href="/assets/images/gallery/motor-stator-wind.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/gallery/motor-stator-wind.jpg" alt="استاتور با کلاف مسی در حال سیم‌پیچی" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.motor-stator-wind.caption">Stator winding for an electric motor</figcaption>
+        </figure>
+        <figure class="photo-gallery-card" data-gallery-id="motor-stators-bench" data-gallery-cat="production" data-gallery-href="/pages/products">
+          <a href="/assets/images/gallery/motor-stators-bench.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/gallery/motor-stators-bench.jpg" alt="چند استاتور الکتروموتور روی میز کار" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.motor-stators-bench.caption">Stators on the assembly bench</figcaption>
+        </figure>
+        <figure class="photo-gallery-card" data-gallery-id="motor-stators-leads" data-gallery-cat="production" data-gallery-href="/pages/products">
+          <a href="/assets/images/gallery/motor-stators-leads.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/gallery/motor-stators-leads.jpg" alt="استاتورهای پیچیده با سیم قرمز و زرد" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.motor-stators-leads.caption">Wound stators with connection leads</figcaption>
+        </figure>
+        <figure class="photo-gallery-card" data-gallery-id="motor-shaft" data-gallery-cat="production" data-gallery-href="/pages/products">
+          <a href="/assets/images/gallery/motor-shaft.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/gallery/motor-shaft.jpg" alt="شفت فلزی الکتروموتور روی کف کارگاه" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.motor-shaft.caption">Machined motor shaft</figcaption>
+        </figure>
+        <figure class="photo-gallery-card" data-gallery-id="motor-rotor" data-gallery-cat="production" data-gallery-href="/pages/products">
+          <a href="/assets/images/gallery/motor-rotor.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/gallery/motor-rotor.jpg" alt="روتور الکتروموتور با یاتاقان روی پوسته" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.motor-rotor.caption">Rotor and bearing on a motor housing</figcaption>
+        </figure>
+        <figure class="photo-gallery-card" data-gallery-id="motor-parts" data-gallery-cat="production" data-gallery-href="/pages/products">
+          <a href="/assets/images/gallery/motor-parts.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/gallery/motor-parts.jpg" alt="قطعات الکتروموتور روی پالت چوبی" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.motor-parts.caption">Cast parts and a terminal box</figcaption>
+        </figure>
+        <figure class="photo-gallery-card" data-gallery-id="motor-machining" data-gallery-cat="production" data-gallery-href="/pages/products">
+          <a href="/assets/images/gallery/motor-machining.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/gallery/motor-machining.jpg" alt="سوراخ‌کاری پوسته موتور روی گیره ماشین" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.motor-machining.caption">Machining a motor housing</figcaption>
+        </figure>
+        <figure class="photo-gallery-card" data-gallery-id="motor-molds" data-gallery-cat="production" data-gallery-href="/pages/products">
+          <a href="/assets/images/gallery/motor-molds.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/gallery/motor-molds.jpg" alt="قالب‌های ریخته‌گری پوسته الکتروموتور" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.motor-molds.caption">Casting molds for motor housings</figcaption>
+        </figure>
+        <figure class="photo-gallery-card" data-gallery-id="motor-finished-row" data-gallery-cat="production" data-gallery-href="/pages/products">
+          <a href="/assets/images/gallery/motor-finished-row.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/gallery/motor-finished-row.jpg" alt="ردیف موتورهای صنعتی مونتاژشده" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.motor-finished-row.caption">Assembled electric motors</figcaption>
+        </figure>
+        <figure class="photo-gallery-card" data-gallery-id="motor-vibrator-orange" data-gallery-cat="production" data-gallery-href="/pages/products">
+          <a href="/assets/images/gallery/motor-vibrator-orange.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/gallery/motor-vibrator-orange.jpg" alt="موتور ویبره صنعتی نارنجی روی میز کار" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.motor-vibrator-orange.caption">Industrial vibrator motor</figcaption>
+        </figure>
+        <figure class="photo-gallery-card" data-gallery-id="motor-vibrator-weights" data-gallery-cat="production" data-gallery-href="/pages/products">
+          <a href="/assets/images/gallery/motor-vibrator-weights.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/gallery/motor-vibrator-weights.jpg" alt="موتور ویبره نارنجی با وزنه روی شفت" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.motor-vibrator-weights.caption">Eccentric weights on a vibrator motor</figcaption>
+        </figure>
+        <figure class="photo-gallery-card" data-gallery-id="bizpet-production" data-gallery-cat="production" data-gallery-href="/pages/bizpet">
+          <a href="/assets/images/products/bizpet/bizpet-production.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/products/bizpet/bizpet-production.jpg" alt="خط تولید پد حرارتی بیز پت" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.bizpet-production.caption">Heating-pad assembly</figcaption>
+        </figure>
+        <figure class="photo-gallery-card" data-gallery-id="bizpet-rd-high" data-gallery-cat="rd" data-gallery-href="/pages/bizpet">
+          <a href="/assets/images/products/bizpet/bizpet-rd-temp-high.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/products/bizpet/bizpet-rd-temp-high.jpg" alt="آزمایش دمای پد حرارتی در آزمایشگاه" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.bizpet-rd-high.caption">Thermal testing in the lab</figcaption>
+        </figure>
+        <figure class="photo-gallery-card" data-gallery-id="bizpet-rd-temp" data-gallery-cat="rd" data-gallery-href="/pages/bizpet">
+          <a href="/assets/images/products/bizpet/bizpet-rd-temp.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/products/bizpet/bizpet-rd-temp.jpg" alt="اندازه‌گیری دمای پد حرارتی" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.bizpet-rd-temp.caption">Temperature reading on a lab sample</figcaption>
+        </figure>
+        <figure class="photo-gallery-card" data-gallery-id="bizpet-prototype" data-gallery-cat="rd" data-gallery-href="/pages/bizpet">
+          <a href="/assets/images/products/bizpet/bizpet-prototype.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/products/bizpet/bizpet-prototype.jpg" alt="نمونه اولیه پد حرارتی بیز پت" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.bizpet-prototype.caption">Heating pad prototype</figcaption>
+        </figure>
+        <figure class="photo-gallery-card" data-gallery-id="bizpet-element" data-gallery-cat="rd" data-gallery-href="/pages/bizpet">
+          <a href="/assets/images/products/bizpet/bizpet-element.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/products/bizpet/bizpet-element.jpg" alt="المان حرارتی پد پدیده" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.bizpet-element.caption">Heating element inside the pad</figcaption>
+        </figure>
+        <figure class="photo-gallery-card" data-gallery-id="bizpet-military-vest" data-gallery-cat="rd" data-gallery-href="/pages/bizpet">
+          <a href="/assets/images/products/bizpet/bizpet-military-vest.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/products/bizpet/bizpet-military-vest.jpg" alt="جلیقه با لایه حرارتی در مرحله تحقیق" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.bizpet-military-vest.caption">Heated-clothing research vest</figcaption>
+        </figure>
+        <figure class="photo-gallery-card" data-gallery-id="bizpet-military-lining" data-gallery-cat="rd" data-gallery-href="/pages/bizpet">
+          <a href="/assets/images/products/bizpet/bizpet-military-lining.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/products/bizpet/bizpet-military-lining.jpg" alt="لایه حرارتی داخل پوشش" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.bizpet-military-lining.caption">Heating layer sewn into a garment</figcaption>
+        </figure>
+        <figure class="photo-gallery-card" data-gallery-id="bizpet-military-outdoor" data-gallery-cat="rd" data-gallery-href="/pages/bizpet">
+          <a href="/assets/images/products/bizpet/bizpet-military-outdoor.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/products/bizpet/bizpet-military-outdoor.jpg" alt="آزمایش پوشش حرارتی در فضای باز" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.bizpet-military-outdoor.caption">Outdoor test of heated clothing</figcaption>
+        </figure>
+        <figure class="photo-gallery-card" data-gallery-id="bizpet-dryer" data-gallery-cat="rd" data-gallery-href="/pages/bizpet">
+          <a href="/assets/images/products/bizpet/bizpet-dryer-basket.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/products/bizpet/bizpet-dryer-basket.jpg" alt="طرح سه‌بعدی سبد خشک‌کن میوه" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.bizpet-dryer.caption">Fruit-dryer research concept</figcaption>
+        </figure>
+        <figure class="photo-gallery-card" data-gallery-id="bizpet-grey" data-gallery-cat="products" data-gallery-href="/pages/bizpet">
+          <a href="/assets/images/products/bizpet/bizpet-grey.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/products/bizpet/bizpet-grey.jpg" alt="پد حرارتی بیز پت خاکستری" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.bizpet-grey.caption">BizPet — grey heating pad</figcaption>
+        </figure>
+        <figure class="photo-gallery-card" data-gallery-id="bizpet-tan" data-gallery-cat="products" data-gallery-href="/pages/bizpet">
+          <a href="/assets/images/products/bizpet/bizpet-tan.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/products/bizpet/bizpet-tan.jpg" alt="پد حرارتی بیز پت کرم" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.bizpet-tan.caption">BizPet — tan heating pad</figcaption>
+        </figure>
+        <figure class="photo-gallery-card" data-gallery-id="bizpet-pets" data-gallery-cat="products" data-gallery-href="/pages/bizpet">
+          <a href="/assets/images/products/bizpet/bizpet-pets-poster.jpg" class="photo-gallery-card__open">
+            <img src="/assets/images/products/bizpet/bizpet-pets-poster.jpg" alt="پوستر BizPet برای جای خواب حیوانات" width="800" height="600" loading="lazy">
+          </a>
+          <figcaption data-i18n="galleryPage.items.bizpet-pets.caption">Pet-bed application flyer</figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
@@ -93,6 +285,8 @@
   <div id="geoStrip"></div>
   <div id="relatedLinks"></div>
   </main>
+  <footer class="footer" id="siteFooter"></footer>
+  <button class="back-to-top" id="backToTop" data-i18n-aria="common.backToTop" aria-label="Back to top"></button>
 
   <dialog class="photo-gallery-lightbox" id="galleryLightbox">
     <figure>
@@ -104,10 +298,11 @@
   </dialog>
 
   <script src="/assets/scripts/site-loader.js"
-    data-after-config="config/photo-gallery.js"
-    data-extra="gallery-page.js"></script>
+    data-before-main="config/photo-gallery.js,gallery-page.js"></script>
   <script>
     bizdavarPageInit(function () {
+      if (typeof window.ensureBizdavarPageShell === 'function') window.ensureBizdavarPageShell();
+      if (typeof window.renderSiteChrome === 'function') window.renderSiteChrome();
       if (typeof window.initGalleryPage === 'function') window.initGalleryPage();
       const crumbs = [
         { page: 'home', url: 'index' },

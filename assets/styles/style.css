@@ -963,7 +963,8 @@ ul { list-style: none; }
   padding: var(--space-section) 0;
 }
 
-.section--gray { background: var(--gray); }
+.section--gray,
+.section--alt { background: var(--gray); }
 
 .section--yellow { background: var(--yellow); }
 

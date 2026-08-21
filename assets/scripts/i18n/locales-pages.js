@@ -650,6 +650,14 @@
           title: 'BizPet — پد حرارتی بیز پت',
           desc: 'طراحی و تولید در مرکز رشد فناوری دانشگاه تبریز — محصول مالکیتی تیم بیزدوار با نام‌های بیز پت و پت بیز'
         },
+        nav: {
+          about: 'درباره محصول',
+          rd: 'تحقیق و توسعه',
+          pets: 'جا خواب حیوانات',
+          origin: 'مرکز رشد',
+          gallery: 'گالری تصاویر',
+          contact: 'تماس'
+        },
         about: {
           title: 'درباره محصول',
           imageAlt: 'BizPet — پد حرارتی خاکستری طراحی‌شده توسط تیم بیزدوار',
@@ -1207,6 +1215,14 @@
           title: 'BizPet — Bizdavar ısı pedi',
           desc: 'Tebriz Üniversitesi teknoloji kuluçkasında tasarım ve üretim — BizPet / Pet Biz adlarıyla Bizdavar’ın sahip olduğu ürün'
         },
+        nav: {
+          about: 'Ürün hakkında',
+          rd: 'Ar-Ge',
+          pets: 'Evcil hayvan yatağı',
+          origin: 'Kuluçka merkezi',
+          gallery: 'Fotoğraf galerisi',
+          contact: 'İletişim'
+        },
         about: {
           title: 'Ürün hakkında',
           imageAlt: 'BizPet — Bizdavar ekibinin tasarladığı gri ısı pedi',
@@ -1655,6 +1671,14 @@
           tag: 'Owned product · Heating pad',
           title: 'BizPet — Bizdavar heating pad',
           desc: 'Designed and produced at the University of Tabriz Technology Incubator — a Bizdavar-owned product also known as Biz Pet / Pet Biz'
+        },
+        nav: {
+          about: 'About the product',
+          rd: 'R&D',
+          pets: 'Pet beds',
+          origin: 'Incubator',
+          gallery: 'Photo gallery',
+          contact: 'Contact'
         },
         about: {
           title: 'About the product',
