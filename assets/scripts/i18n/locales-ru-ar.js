@@ -106,9 +106,9 @@
     },
     blog: {
       crumb: 'Блог',
-      seoTitle: 'Блог Bizdavar | маркетинг, веб-дизайн и промышленные поставки',
-      seoDescription: 'Статьи Bizdavar: цифровой маркетинг, Fast Web Studio, датчики VEGA, промышленные поставки и рост бизнеса для рынков Ирана и Турции.',
-      seoKeywords: 'блог Bizdavar, цифровой маркетинг, веб-дизайн, VEGA, промышленные поставки'
+      seoTitle: 'Блог Bizdavar | маркетинг, SEO и поставка VEGA',
+      seoDescription: 'Статьи: цифровой маркетинг, SEO, многоязычные сайты, Fast Studio и оригинальные датчики VEGA для Ирана и Турции.',
+      seoKeywords: 'блог Bizdavar, цифровой маркетинг, SEO, многоязычный сайт, VEGA Иран, Fast Web Studio, SMM'
     },
     privacy: {
       crumb: 'Конфиденциальность',
@@ -343,9 +343,9 @@
     },
     blog: {
       crumb: 'المدونة',
-      seoTitle: 'مدونة Bizdavar | تسويق وتصميم مواقع وتوريد صناعي',
-      seoDescription: 'مقالات Bizdavar: تسويق رقمي، Fast Web Studio، حساسات VEGA، توريد صناعي ونمو الأعمال لأسواق إيران وتركيا.',
-      seoKeywords: 'مدونة Bizdavar, تسويق رقمي, تصميم مواقع, VEGA, توريد صناعي'
+      seoTitle: 'مدونة Bizdavar | تسويق رقمي وSEO وتوريد VEGA',
+      seoDescription: 'مقالات متخصصة: تسويق رقمي، SEO، مواقع متعددة اللغات، Fast Studio وحساسات VEGA الأصلية لإيران وتركيا.',
+      seoKeywords: 'مدونة Bizdavar, تسويق رقمي, SEO, موقع متعدد اللغات, VEGA إيران, Fast Web Studio, SMM'
     },
     privacy: {
       crumb: 'الخصوصية',
@@ -506,11 +506,11 @@
   };
 
   var homeRu = {
-    heroBadge: 'Bizdavar — веб-дизайн и промышленные поставки из Стамбула',
-    heroTitle: 'Веб-дизайн и поставка',
-    heroTitleSpan: 'VEGA из Стамбула',
-    heroTitleEnd: 'с бесплатной консультацией',
-    heroDesc: 'Сайт за 5 дней, цифровой маркетинг и оригинальные VEGA, Prosense и Liqui Moly. Расчёт в WhatsApp.',
+    heroBadge: 'Bizdavar Group — Стамбул',
+    heroTitle: 'Bizdavar делает три отдельные вещи',
+    heroTitleSpan: '',
+    heroTitleEnd: '',
+    heroDesc: 'Цифровые услуги, свои продукты или промышленные поставки. Сначала выберите путь — бесплатная консультация.',
     intentNavLabel: 'Популярные страницы',
     intentVega: 'Купить VEGA',
     intentProsense: 'Детектор Prosense',
@@ -574,11 +574,11 @@
   };
 
   var homeAr = {
-    heroBadge: 'Bizdavar — تصميم مواقع وتوريد صناعي من إسطنبول',
-    heroTitle: 'تصميم مواقع وتوريد',
-    heroTitleSpan: 'VEGA من إسطنبول',
-    heroTitleEnd: 'مع استشارة مجانية',
-    heroDesc: 'موقع خلال ٥ أيام وتسويق رقمي وتوريد VEGA وProsense وLiqui Moly الأصلي. عرض السعر عبر واتساب.',
+    heroBadge: 'Bizdavar Group — إسطنبول',
+    heroTitle: 'بيزدوار يعمل في ثلاثة مجالات منفصلة',
+    heroTitleSpan: '',
+    heroTitleEnd: '',
+    heroDesc: 'خدمات رقمية، منتجاتنا، أو توريد صناعي. اختر مسارك أولاً — استشارة مجانية.',
     intentNavLabel: 'صفحات مطلوبة',
     intentVega: 'شراء VEGA',
     intentProsense: 'كاشف Prosense',
@@ -1239,14 +1239,20 @@
     details: 'Подробности',
     view: 'Смотреть',
     offerMap: {
-      aria: 'Три направления Bizdavar',
-      lead: 'Bizdavar делает три вещи',
+      aria: 'Три пути Bizdavar',
+      lead: 'Выберите один путь',
+      servicesNum: '01',
       servicesTitle: 'Услуги',
       servicesDesc: 'Сайт за 5 дней, маркетинг, SMM, приложения, серверы и полевые работы',
+      servicesGo: 'К услугам',
+      productsNum: '02',
       productsTitle: 'Продукты',
-      productsDesc: 'FXGuard, BizTab, BizPet — наша разработка',
+      productsDesc: 'BizPet, BizTab и FXGuard — наша разработка',
+      productsGo: 'К продуктам',
+      supplyNum: '03',
       supplyTitle: 'Промпоставки',
-      supplyDesc: 'VEGA, Prosense, Gamak, Liqui Moly — запрос цены'
+      supplyDesc: 'VEGA, Prosense, Gamak и Liqui Moly — запрос цены',
+      supplyGo: 'К поставкам'
     }
   }));
   deepMerge(ru.nav, {
@@ -1299,6 +1305,95 @@
   deepMerge(ru, homeSectionsRu);
   if (!ru.pages) ru.pages = {};
   deepMerge(ru.pages, pageSeoRu);
+  if (!ru.blogPage) ru.blogPage = {};
+  deepMerge(ru.blogPage, {
+    hero: {
+      tag: 'Экспертный блог',
+      title: 'Цифровой маркетинг, SEO и промышленные поставки',
+      desc: 'Практические гайды Bizdavar: рост онлайн-продаж, многоязычные сайты и оригинальные датчики VEGA для Ирана и Турции.',
+      ctaArticles: 'Смотреть статьи',
+      ctaTopics: 'Темы',
+      ctaConsult: 'Бесплатная консультация'
+    },
+    intro: {
+      title: 'Практика с живых проектов',
+      body: 'Блог Bizdavar — сжатый опыт <a href="/pages/services">цифровых услуг</a>, <a href="/pages/fast">Fast Studio</a> и <a href="/pages/products#supply">промпоставок</a>. Маркетинг, SEO, SMM, многоязычный сайт и закупка VEGA — как исполнение, не слоган.',
+      statPosts: '11',
+      statPostsLabel: 'Гайды',
+      statLangs: '5',
+      statLangsLabel: 'Языки',
+      statTopics: '5',
+      statTopicsLabel: 'Тематические кластеры'
+    },
+    topics: {
+      eyebrow: 'Кластеры',
+      title: 'От SEO до датчиков VEGA',
+      desc: 'Выберите по задаче — каждый кластер ведёт на услугу или продукт.',
+      digital: { label: 'Цифровой маркетинг', desc: 'SEO, CRO и SMM' },
+      web: { label: 'Веб-дизайн', desc: 'Многоязычный сайт и Fast Studio' },
+      industrial: { label: 'Промпоставки', desc: 'VEGA и КИП' },
+      products: { label: 'Продукты Bizdavar', desc: 'BizPet, BizTab и BizClean' },
+      company: { label: 'О компании', desc: 'История и направления' }
+    },
+    catalog: {
+      eyebrow: 'Каталог статей',
+      title: 'Все гайды одним взглядом',
+      desc: 'Фильтр по теме или сразу откройте статью — ссылки есть в HTML для поисковиков.',
+      filterAll: 'Все',
+      empty: 'В этой теме статей нет.',
+      filterAria: 'Фильтр тем блога',
+      countText: '{count} материалов'
+    },
+    clusters: {
+      eyebrow: 'Следующий шаг',
+      title: 'От статьи к запросу',
+      desc: 'Если гайда мало — запустите ту же тему как проект с Bizdavar.',
+      digitalTitle: 'Маркетинг и SEO',
+      digitalDesc: 'Кампании, SEO и SMM для Ирана и Турции.',
+      webTitle: 'Веб-дизайн',
+      webDesc: 'Корпоративный и магазин за 5 дней — RTL и базовое SEO.',
+      industrialTitle: 'Купить VEGA',
+      industrialDesc: 'Order code, проформа и логистика из Стамбула.'
+    },
+    faq: {
+      eyebrow: 'FAQ',
+      title: 'Перед чтением',
+      desc: 'Короткие ответы на частые запросы о блоге Bizdavar.',
+      items: [
+        { q: 'О чём блог Bizdavar?', a: 'Гайды по цифровому маркетингу, SEO, многоязычным сайтам, Fast Web Studio, поставке датчиков VEGA и продуктам BizPet и BizTab.' },
+        { q: 'На скольких языках публикуются статьи?', a: 'Хаб блога и основные статьи индексируются на фарси, турецком, английском, русском и арабском — отдельные hreflang URL.' },
+        { q: 'Как найти статью по услуге?', a: 'Используйте фильтр тем или перейдите из кластеров маркетинга, веба и поставок на страницы услуг.' },
+        { q: 'Что делать после гайда по VEGA?', a: 'Отправьте модель или данные резервуара в WhatsApp или форму — проформа выдаётся из Стамбула.' },
+        { q: 'Есть ли продукты Bizdavar в блоге?', a: 'Да. BizTab, BizClean V5 и нагревательный мат BizPet открываются из этого каталога.' }
+      ]
+    },
+    cta: {
+      title: 'Нужна экспертная консультация?',
+      desc: 'Напишите тему в <a href="/pages/contact">форме контакта</a> — или в WhatsApp.',
+      btn: 'Запросить консультацию',
+      btnWa: 'WhatsApp'
+    },
+    geoText: 'Статьи для бизнеса Ирана и Турции — цифровой маркетинг, SEO, многоязычный веб и поставки VEGA из Стамбула.',
+    related: [
+      { title: 'Цифровые услуги', desc: 'SEO, SMM и кампании', titleKey: 'blogPage.related.0.title', descKey: 'blogPage.related.0.desc' },
+      { title: 'Fast Web Studio', desc: 'Сайт за 5 дней от $99', titleKey: 'blogPage.related.1.title', descKey: 'blogPage.related.1.desc' },
+      { title: 'Каталог VEGA', desc: 'Датчики уровня и давления', titleKey: 'blogPage.related.2.title', descKey: 'blogPage.related.2.desc' },
+      { title: 'Контакты', desc: 'Бесплатная консультация', titleKey: 'blogPage.related.3.title', descKey: 'blogPage.related.3.desc' }
+    ]
+  });
+  ru.blogPosts = [
+    { title: 'Поставка датчиков VEGA в Иран — из Стамбула на объект', excerpt: 'Консультация, проформа и логистика оригинального VEGA для проектов в Иране.', category: 'Промоборудование' },
+    { title: 'Многоязычный сайт для рынков Ирана и Турции', excerpt: 'hreflang, локальное доверие и быстрая сдача для бизнеса на двух рынках.', category: 'Веб-дизайн' },
+    { title: 'Что такое цифровой маркетинг? Гайд для бизнеса', excerpt: 'Определение, каналы и роль в росте онлайн-продаж.', category: 'Цифровой маркетинг' },
+    { title: 'Как цифровой маркетинг увеличивает продажи?', excerpt: 'Практические способы превратить посетителя в клиента.', category: 'Цифровой маркетинг' },
+    { title: 'Управление соцсетями — SMM-стратегия для брендов', excerpt: 'Контент, календарь публикаций и таргет в Instagram и LinkedIn.', category: 'SMM' },
+    { title: 'Сайт за 5 дней — гайд Fast Studio', excerpt: 'Тарифы Fast Web Studio для стартапов.', category: 'Веб-дизайн' },
+    { title: 'Как выбрать промышленный датчик — VEGA и КИП', excerpt: 'Ключевые моменты поставки VEGA и измерительного оборудования.', category: 'Промоборудование' },
+    { title: 'Что такое Bizdavar Group? История, команда, направления', excerpt: 'Профиль: основатель, 11 стран, 100+ проектов и экосистема брендов.', category: 'О компании' },
+    { title: 'BizTab — первый бесконтактный настенный термометр Тебриза', excerpt: 'Продукт Bizdavar — погрешность менее 0,3°C, одобрение Университета Тебриза.', category: 'Свой продукт' },
+    { title: 'Санитайзер рук Bizdavar V5', excerpt: 'Ультразвуковой датчик и автораспыление — инженерия Bizdavar.', category: 'Свой продукт' },
+    { title: 'BizPet — нагревательный мат BizPet', excerpt: 'Проектирование и производство в инкубаторе Университета Тебриза с Imen Sahand Padideh.', category: 'Свой продукт' }
+  ];
   ru.liquiMolyPage = liquiPage.ru;
   ru.vegaPage = vegaPage.ru;
   ru.prosensePage = prosensePage.ru;
@@ -1345,14 +1440,20 @@
     details: 'التفاصيل',
     view: 'عرض',
     offerMap: {
-      aria: 'محاور بيزدوار الثلاثة',
-      lead: 'بيزدوار يعمل في ثلاثة مجالات',
+      aria: 'مسارات بيزدوار الثلاثة',
+      lead: 'اختر مساراً واحداً',
+      servicesNum: '٠١',
       servicesTitle: 'خدمات',
       servicesDesc: 'موقع خلال ٥ أيام، تسويق، SMM، تطبيقات، خوادم وأعمال ميدانية',
+      servicesGo: 'إلى الخدمات',
+      productsNum: '٠٢',
       productsTitle: 'منتجات',
-      productsDesc: 'FXGuard وBizTab وBizPet — من صنع فريقنا',
+      productsDesc: 'BizPet وBizTab وFXGuard — من صنع فريقنا',
+      productsGo: 'إلى المنتجات',
+      supplyNum: '٠٣',
       supplyTitle: 'توريد صناعي',
-      supplyDesc: 'VEGA وProsense وGamak وLiqui Moly — طلب سعر'
+      supplyDesc: 'VEGA وProsense وGamak وLiqui Moly — طلب سعر',
+      supplyGo: 'إلى التوريد'
     }
   }));
   deepMerge(ar.nav, {
@@ -1405,6 +1506,95 @@
   deepMerge(ar, homeSectionsAr);
   if (!ar.pages) ar.pages = {};
   deepMerge(ar.pages, pageSeoAr);
+  if (!ar.blogPage) ar.blogPage = {};
+  deepMerge(ar.blogPage, {
+    hero: {
+      tag: 'مدونة متخصصة',
+      title: 'تسويق رقمي وSEO وتوريد صناعي',
+      desc: 'أدلة عملية من Bizdavar: نمو المبيعات، مواقع متعددة اللغات وحساسات VEGA الأصلية لإيران وتركيا.',
+      ctaArticles: 'عرض المقالات',
+      ctaTopics: 'المواضيع',
+      ctaConsult: 'استشارة مجانية'
+    },
+    intro: {
+      title: 'معرفة من مشاريع حقيقية',
+      body: 'مدونة Bizdavar تلخّص <a href="/pages/services">الخدمات الرقمية</a> و<a href="/pages/fast">تصميم Fast Studio</a> و<a href="/pages/products#supply">التوريد الصناعي</a>. اقرأ التسويق وSEO وSMM والموقع متعدد اللغات ومسار شراء VEGA كتنفيذ لا شعارات.',
+      statPosts: '١١',
+      statPostsLabel: 'مقال ودليل',
+      statLangs: '٥',
+      statLangsLabel: 'لغات النشر',
+      statTopics: '٥',
+      statTopicsLabel: 'عناقيد موضوعية'
+    },
+    topics: {
+      eyebrow: 'العناقيد',
+      title: 'من SEO إلى حساسات VEGA',
+      desc: 'اختر حسب الحاجة — كل عنقود يربط بصفحة الخدمة أو المنتج.',
+      digital: { label: 'تسويق رقمي', desc: 'SEO وCRO وSMM' },
+      web: { label: 'تصميم مواقع', desc: 'موقع متعدد اللغات وFast Studio' },
+      industrial: { label: 'توريد صناعي', desc: 'VEGA وأجهزة القياس' },
+      products: { label: 'منتجات Bizdavar', desc: 'BizPet وBizTab وBizClean' },
+      company: { label: 'عن الشركة', desc: 'التاريخ ومجالات النشاط' }
+    },
+    catalog: {
+      eyebrow: 'كتالوج المقالات',
+      title: 'كل الأدلة في نظرة',
+      desc: 'صفِّ حسب الموضوع أو افتح المقال — الروابط موجودة في HTML لمحركات البحث.',
+      filterAll: 'الكل',
+      empty: 'لا مقالات في هذا الموضوع.',
+      filterAria: 'فلتر مواضيع المدونة',
+      countText: '{count} مادة'
+    },
+    clusters: {
+      eyebrow: 'الخطوة التالية',
+      title: 'من المقال إلى عرض السعر',
+      desc: 'إن لم يكفِ الدليل، نفّذ نفس الموضوع كمشروع مع Bizdavar.',
+      digitalTitle: 'تسويق وSEO',
+      digitalDesc: 'حملات وSEO وSMM لإيران وتركيا.',
+      webTitle: 'تصميم مواقع',
+      webDesc: 'موقع شركات ومتجر خلال ٥ أيام — RTL وSEO أساسي.',
+      industrialTitle: 'شراء VEGA',
+      industrialDesc: 'رمز الطلب وفاتورة مبدئية ولوجستيات من إسطنبول.'
+    },
+    faq: {
+      eyebrow: 'أسئلة شائعة',
+      title: 'قبل القراءة',
+      desc: 'إجابات قصيرة لعمليات البحث الشائعة عن مدونة Bizdavar.',
+      items: [
+        { q: 'عن ماذا تتحدث مدونة Bizdavar؟', a: 'أدلة تسويق رقمي وSEO ومواقع متعددة اللغات وFast Web Studio وتوريد حساسات VEGA ومنتجات مثل BizPet وBizTab.' },
+        { q: 'بكم لغة تُنشر المقالات؟', a: 'مركز المدونة والمقالات الأساسية مفهرسة بالفارسية والتركية والإنجليزية والروسية والعربية مع عناوين hreflang منفصلة.' },
+        { q: 'كيف أجد مقالاً مرتبطاً بخدمة؟', a: 'استخدم فلتر الموضوع أو انتقل من عناقيد التسويق وتصميم الويب والتوريد إلى صفحات الخدمات.' },
+        { q: 'ماذا أفعل بعد دليل VEGA؟', a: 'أرسل الموديل أو بيانات الخزان عبر واتساب أو النموذج — الفاتورة المبدئية تصدر من إسطنبول.' },
+        { q: 'هل منتجات Bizdavar موجودة هنا؟', a: 'نعم. BizTab وBizClean V5 ووسادة BizPet الحرارية لها صفحات من هذا الكتالوج.' }
+      ]
+    },
+    cta: {
+      title: 'تحتاج استشارة متخصصة؟',
+      desc: 'اكتب موضوعك في <a href="/pages/contact">نموذج الاتصال</a> — أو راسلنا على واتساب.',
+      btn: 'طلب استشارة',
+      btnWa: 'واتساب'
+    },
+    geoText: 'مقالات متخصصة لأعمال إيران وتركيا — تسويق رقمي وSEO وتصميم مواقع متعدد اللغات وتوريد VEGA من إسطنبول.',
+    related: [
+      { title: 'خدمات رقمية', desc: 'SEO وSMM وحملات', titleKey: 'blogPage.related.0.title', descKey: 'blogPage.related.0.desc' },
+      { title: 'Fast Web Studio', desc: 'موقع خلال ٥ أيام من ٩٩$', titleKey: 'blogPage.related.1.title', descKey: 'blogPage.related.1.desc' },
+      { title: 'كتالوج VEGA', desc: 'حساسات مستوى وضغط', titleKey: 'blogPage.related.2.title', descKey: 'blogPage.related.2.desc' },
+      { title: 'اتصال', desc: 'استشارة مجانية', titleKey: 'blogPage.related.3.title', descKey: 'blogPage.related.3.desc' }
+    ]
+  });
+  ar.blogPosts = [
+    { title: 'توريد حساسات VEGA إلى إيران — من إسطنبول إلى الموقع', excerpt: 'استشارة وفاتورة مبدئية ولوجستيات VEGA الأصلية لمشاريع إيران.', category: 'معدات صناعية' },
+    { title: 'موقع متعدد اللغات لأسواق إيران وتركيا', excerpt: 'hreflang وثقة محلية وتسليم سريع للأعمال ذات السوقين.', category: 'تصميم ويب' },
+    { title: 'ما هو التسويق الرقمي؟ دليل للأعمال', excerpt: 'التعريف والقنوات ودوره في نمو المبيعات الإلكترونية.', category: 'تسويق رقمي' },
+    { title: 'كيف يزيد التسويق الرقمي المبيعات؟', excerpt: 'طرق عملية لتحويل الزائر إلى عميل.', category: 'تسويق رقمي' },
+    { title: 'إدارة التواصل الاجتماعي — استراتيجية SMM للعلامات', excerpt: 'محتوى وتقويم نشر وإعلانات مستهدفة على Instagram وLinkedIn.', category: 'SMM' },
+    { title: 'إطلاق موقع خلال ٥ أيام — دليل Fast Studio', excerpt: 'باقات Fast Web Studio للشركات الناشئة.', category: 'تصميم ويب' },
+    { title: 'اختيار الحساس الصناعي المناسب — VEGA والقياس', excerpt: 'نقاط مهمة في توريد VEGA وأجهزة القياس.', category: 'معدات صناعية' },
+    { title: 'ما هي Bizdavar Group؟ التاريخ والفريق والأنشطة', excerpt: 'الملف: المؤسس، ١١ دولة، أكثر من ١٠٠ مشروع ونظام العلامات.', category: 'عن الشركة' },
+    { title: 'BizTab — أول مقياس حرارة جداري بلا تلامس في تبريز', excerpt: 'منتج Bizdavar — خطأ أقل من ٠٫٣°م واعتماد جامعة تبريز.', category: 'منتج خاص' },
+    { title: 'معقم اليدين Bizdavar V5', excerpt: 'مستشعر فوق صوتي ورش تلقائي — هندسة Bizdavar.', category: 'منتج خاص' },
+    { title: 'BizPet — وسادة التدفئة BizPet', excerpt: 'تصميم وإنتاج في حاضنة جامعة تبريز مع ایمن سهند پدیده.', category: 'منتج خاص' }
+  ];
   ar.liquiMolyPage = liquiPage.ar;
   ar.vegaPage = vegaPage.ar;
   ar.prosensePage = prosensePage.ar;
@@ -1432,6 +1622,20 @@
       ctaShop: 'Купить домен и хостинг',
       ctaSite: 'Сайт Netinode'
     };
+    ru.fastPage.ui = Object.assign({}, ru.fastPage.ui, {
+      navFor: 'Для кого',
+      liveBadge: 'Онлайн за 5 дней',
+      fromPrice: 'от $99',
+      mockUrl: 'yourbrand.com',
+      saveOff: '{n}% скидка на запуск'
+    });
+    ru.fastPage.sections = Object.assign({}, ru.fastPage.sections, {
+      for: {
+        eyebrow: 'Для кого',
+        title: 'Кому подходит Fast Web Studio?',
+        desc: 'От одностраничного стартапа до магазина и многоязычного бренда — выберите план под задачу.'
+      }
+    });
   }
   if (ar.fastPage) {
     ar.fastPage.hostingNote = {
@@ -1441,6 +1645,20 @@
       ctaShop: 'شراء نطاق واستضافة',
       ctaSite: 'موقع Netinode'
     };
+    ar.fastPage.ui = Object.assign({}, ar.fastPage.ui, {
+      navFor: 'لمن',
+      liveBadge: 'أونلاين خلال 5 أيام',
+      fromPrice: 'من $99',
+      mockUrl: 'yourbrand.com',
+      saveOff: 'خصم إطلاق {n}٪'
+    });
+    ar.fastPage.sections = Object.assign({}, ar.fastPage.sections, {
+      for: {
+        eyebrow: 'الجمهور',
+        title: 'لمن يناسب Fast Web Studio؟',
+        desc: 'من شركة ناشئة بصفحة واحدة إلى متجر وعلامة متعددة اللغات — اختر الخطة المناسبة.'
+      }
+    });
   }
 
   if (!ru.caseStudy) ru.caseStudy = {};

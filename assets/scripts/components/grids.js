@@ -27,34 +27,184 @@
     return `<div class="exhibition-card__media">${videoBlock}${imageBlock}</div>`;
   }
 
-  window.renderBlogGrid = function (containerId, limit) {
+  function formatBlogDate(iso) {
+    if (!iso) return '';
+    try {
+      const locale = window.BIZDAVAR_I18N?.locale || document.documentElement.lang || 'fa';
+      const tags = { fa: 'fa-IR', tr: 'tr-TR', en: 'en-GB', ru: 'ru-RU', ar: 'ar-AE' };
+      return new Intl.DateTimeFormat(tags[locale] || locale, {
+        year: 'numeric', month: 'short', day: 'numeric'
+      }).format(new Date(iso + 'T00:00:00'));
+    } catch (e) {
+      return iso;
+    }
+  }
 
-    const el = document.getElementById(containerId);
+  function blogPostHref(p) {
+    return path(p.slug);
+  }
 
-    if (!el || !C.blogPosts) return;
+  function blogCardHtml(p, opts) {
+    const rich = !!(opts && opts.rich);
+    const href = blogPostHref(p);
+    const img = p.image
+      ? `<a href="${href}" class="blog-item__media" tabindex="-1">
+          <img src="${path(p.image)}" alt="${p.title}" loading="lazy" decoding="async" width="640" height="360">
+        </a>`
+      : '';
+    const dateHtml = p.date
+      ? `<time class="blog-item__date" datetime="${p.date}">${formatBlogDate(p.date)}</time>`
+      : '';
+    return `
+      <article class="blog-item${rich ? ' blog-item--card' : ''}" data-cat="${p.catId || ''}">
+        ${rich ? img : ''}
+        <div class="blog-item__body">
+          <div class="blog-item__meta">
+            <span class="blog-item__cat">${p.category}</span>
+            ${dateHtml}
+          </div>
+          <h3><a href="${href}">${p.title}</a></h3>
+          <p>${p.excerpt}</p>
+          <a href="${href}" class="service-card__link">${t('common.readMore', 'ادامه مطلب')}${linkArrow()}</a>
+        </div>
+      </article>`;
+  }
 
-    const sourcePosts = window.BIZDAVAR_I18N?.getBlogPosts
+  window.getBlogPostsList = function () {
+    return window.BIZDAVAR_I18N?.getBlogPosts
       ? window.BIZDAVAR_I18N.getBlogPosts()
-      : C.blogPosts;
-    const posts = limit ? sourcePosts.slice(0, limit) : sourcePosts;
-
-    el.innerHTML = posts.map(p => `
-
-      <article class="blog-item">
-
-        <span class="blog-item__cat">${p.category}</span>
-
-        <h3><a href="${path(p.slug)}">${p.title}</a></h3>
-
-        <p>${p.excerpt}</p>
-
-        <a href="${path(p.slug)}" class="service-card__link">${t('common.readMore', 'ادامه مطلب')}${linkArrow()}</a>
-
-      </article>
-
-    `).join('');
-
+      : (C.blogPosts || []);
   };
+
+  window.renderBlogGrid = function (containerId, limit) {
+    const el = document.getElementById(containerId);
+    if (!el || !C.blogPosts) return;
+    const sourcePosts = window.getBlogPostsList();
+    const posts = limit ? sourcePosts.slice(0, limit) : sourcePosts;
+    const rich = !limit;
+    el.innerHTML = posts.map(p => blogCardHtml(p, { rich })).join('');
+  };
+
+  window.initBlogPage = function () {
+    const filterEl = document.getElementById('blogFilters');
+    const gridEl = document.getElementById('blogGrid');
+    const pillarsEl = document.getElementById('blogPillars');
+    const countEl = document.getElementById('blogCount');
+    if (!gridEl) return;
+
+    const posts = window.getBlogPostsList();
+    const cats = [
+      { id: 'digital', key: 'blogPage.topics.digital' },
+      { id: 'web', key: 'blogPage.topics.web' },
+      { id: 'industrial', key: 'blogPage.topics.industrial' },
+      { id: 'products', key: 'blogPage.topics.products' },
+      { id: 'company', key: 'blogPage.topics.company' }
+    ];
+    const params = new URLSearchParams(window.location.search);
+    const catFromQuery = params.get('topic');
+    let active = cats.some(c => c.id === catFromQuery) ? catFromQuery : 'all';
+
+    function catLabel(id) {
+      const row = cats.find(c => c.id === id);
+      return row ? t(row.key + '.label', id) : id;
+    }
+
+    function catDesc(id) {
+      const row = cats.find(c => c.id === id);
+      return row ? t(row.key + '.desc', '') : '';
+    }
+
+    function visiblePosts() {
+      return active === 'all' ? posts : posts.filter(p => p.catId === active);
+    }
+
+    function renderCount() {
+      if (!countEl) return;
+      const tpl = t('blogPage.catalog.countText', '{count}');
+      countEl.textContent = tpl.replace('{count}', String(visiblePosts().length));
+    }
+
+    function renderGrid() {
+      const list = visiblePosts();
+      gridEl.innerHTML = list.length
+        ? list.map(p => blogCardHtml(p, { rich: true })).join('')
+        : `<p class="blog-empty">${t('blogPage.catalog.empty', 'مقاله‌ای در این دسته نیست.')}</p>`;
+      renderCount();
+    }
+
+    function setActive(cat, scroll) {
+      active = cat || 'all';
+      if (filterEl) {
+        filterEl.querySelectorAll('[data-cat]').forEach(b => {
+          b.classList.toggle('is-active', b.getAttribute('data-cat') === active);
+        });
+      }
+      if (pillarsEl) {
+        pillarsEl.querySelectorAll('[data-cat]').forEach(b => {
+          b.classList.toggle('is-active', b.getAttribute('data-cat') === active);
+        });
+      }
+      renderGrid();
+      if (scroll) {
+        const target = document.getElementById('catalog');
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    if (pillarsEl) {
+      pillarsEl.innerHTML = cats.map(c => {
+        const count = posts.filter(p => p.catId === c.id).length;
+        return `<a href="#catalog" class="blog-pillar" data-cat="${c.id}">
+          <span class="blog-pillar__count">${count}</span>
+          <span class="blog-pillar__label">${catLabel(c.id)}</span>
+          <span class="blog-pillar__desc">${catDesc(c.id)}</span>
+        </a>`;
+      }).join('');
+      if (!pillarsEl.dataset.bound) {
+        pillarsEl.dataset.bound = '1';
+        pillarsEl.addEventListener('click', (e) => {
+          const link = e.target.closest('[data-cat]');
+          if (!link) return;
+          e.preventDefault();
+          setActive(link.getAttribute('data-cat'), true);
+        });
+      }
+    }
+
+    if (filterEl) {
+      const allLabel = t('blogPage.catalog.filterAll', 'همه');
+      filterEl.innerHTML = [
+        `<button type="button" class="product-filter__btn is-active" data-cat="all">${allLabel}</button>`,
+        ...cats.map(c =>
+          `<button type="button" class="product-filter__btn" data-cat="${c.id}">${catLabel(c.id)}</button>`
+        )
+      ].join('');
+      if (!filterEl.dataset.bound) {
+        filterEl.dataset.bound = '1';
+        filterEl.addEventListener('click', (e) => {
+          const btn = e.target.closest('[data-cat]');
+          if (!btn) return;
+          setActive(btn.getAttribute('data-cat'), false);
+        });
+      }
+    }
+
+    const faqEl = document.getElementById('blogFaqGrid');
+    const faqItems = window.BIZDAVAR_I18N?.raw('blogPage.faq.items');
+    if (faqEl && Array.isArray(faqItems) && faqItems.length) {
+      const dir = window.BIZDAVAR_I18N?.dict?.dir || document.documentElement.dir || 'rtl';
+      faqEl.innerHTML = faqItems.map(item => `
+        <details class="faq-item" dir="${dir}">
+          <summary dir="${dir}">${item.q}</summary>
+          <p dir="${dir}">${item.a}</p>
+        </details>`).join('');
+      if (typeof window.injectFaqSchema === 'function') window.injectFaqSchema(faqItems);
+    }
+
+    setActive(active, false);
+  };
+
+
 
 
 
@@ -776,7 +926,7 @@
     const opts = options || {};
     const I18n = window.BIZDAVAR_I18N;
     let items = I18n ? I18n.getOwnedProducts() : (window.BIZDAVAR_OWNED_PRODUCTS?.items || []);
-    items = items.filter(p => !p.hidden);
+    items = items.filter(p => p && p.id !== 'bizseat' && !p.hidden);
     if (opts.featured) items = items.filter(p => p.featured);
     if (opts.status) items = items.filter(p => p.status === opts.status);
     if (opts.category && opts.category !== 'all') items = items.filter(p => p.category === opts.category);
@@ -822,7 +972,7 @@
     const catFromQuery = params.get('cat');
     let active = categories.some(c => c.id === catFromQuery) ? catFromQuery : 'all';
 
-    const allItems = (I18n ? I18n.getOwnedProducts() : (window.BIZDAVAR_OWNED_PRODUCTS?.items || [])).filter(p => !p.hidden);
+    const allItems = (I18n ? I18n.getOwnedProducts() : (window.BIZDAVAR_OWNED_PRODUCTS?.items || [])).filter(p => p && p.id !== 'bizseat' && !p.hidden);
     const visibleCats = categories.filter(c => allItems.some(p => p.category === c.id));
     const pillarsEl = document.getElementById('productPillars');
     if (pillarsEl) {

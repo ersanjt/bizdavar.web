@@ -42,9 +42,9 @@
         seoKeywords: 'نمونه کار بیزدوار, طراحی وب, بازاریابی دیجیتال, FXGuard, Fast Web Studio, VEGA, تامین صنعتی'
       },
       blog: {
-        seoTitle: 'وبلاگ بیزدوار | راهنمای بازاریابی، طراحی وب و تامین صنعتی',
-        seoDescription: 'مقالات کاربردی بیزدوار: بازاریابی دیجیتال، Fast Web Studio، سنسور VEGA، تامین صنعتی و رشد کسب‌وکار در ایران و ترکیه.',
-        seoKeywords: 'وبلاگ بیزدوار, بازاریابی دیجیتال, طراحی سایت, VEGA, تامین صنعتی'
+        seoTitle: 'وبلاگ بیزدوار | بازاریابی دیجیتال، سئو و تامین VEGA',
+        seoDescription: 'مقالات تخصصی بیزدوار: دیجیتال مارکتینگ، سئو، طراحی سایت چندزبانه، Fast Studio و خرید سنسور VEGA برای ایران و ترکیه.',
+        seoKeywords: 'وبلاگ بیزدوار, مقالات بازاریابی دیجیتال, سئو, طراحی سایت چندزبانه, تامین VEGA ایران, Fast Web Studio, مدیریت SMM'
       },
       fast: {
         seoTitle: 'طراحی سایت در ۵ روز از ۹۹ دلار | Fast Web Studio',
@@ -239,9 +239,9 @@
         seoKeywords: 'Bizdavar portfolyo, web tasarım, dijital pazarlama, FXGuard, Fast Web Studio, VEGA, endüstriyel tedarik'
       },
       blog: {
-        seoTitle: 'Blog | Dijital pazarlama, web tasarım ve endüstriyel tedarik rehberleri',
-        seoDescription: 'Bizdavar uzman yazıları: dijital pazarlama, Fast Web Studio, VEGA sensörleri, endüstriyel tedarik ve iş büyütme — Türkiye ve İran odaklı.',
-        seoKeywords: 'Bizdavar blog, dijital pazarlama, web tasarım, VEGA, endüstriyel tedarik'
+        seoTitle: 'Bizdavar blog | dijital pazarlama, SEO ve VEGA tedariki',
+        seoDescription: 'Uzman yazılar: dijital pazarlama, SEO, çok dilli web, Fast Studio ve İran/Türkiye için orijinal VEGA sensör tedariki.',
+        seoKeywords: 'Bizdavar blog, dijital pazarlama, SEO, çok dilli web, VEGA İran, Fast Web Studio, SMM'
       },
       fast: {
         seoTitle: '5 günde web sitesi $99’dan | Fast Web Studio',
@@ -436,9 +436,9 @@
         seoKeywords: 'Bizdavar portfolio, web design, digital marketing, FXGuard, Fast Web Studio, VEGA, industrial supply'
       },
       blog: {
-        seoTitle: 'Blog | Digital marketing, web design & industrial supply guides',
-        seoDescription: 'Bizdavar expert articles: digital marketing, Fast Web Studio, VEGA sensors, industrial supply and growth playbooks for Iran and Turkey markets.',
-        seoKeywords: 'Bizdavar blog, digital marketing, web design, VEGA, industrial supply'
+        seoTitle: 'Bizdavar blog | digital marketing, SEO & VEGA supply',
+        seoDescription: 'Expert guides: digital marketing, SEO, multilingual websites, Fast Studio and genuine VEGA sensor supply for Iran and Turkey.',
+        seoKeywords: 'Bizdavar blog, digital marketing, SEO, multilingual website, VEGA Iran, Fast Web Studio, SMM'
       },
       fast: {
         seoTitle: 'Website in 5 days from $99 | Fast Web Studio',

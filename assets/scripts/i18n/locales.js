@@ -62,14 +62,20 @@ window.BIZDAVAR_LOCALES = {
       langLabel: 'زبان',
       breadcrumbAria: 'مسیر صفحه',
       offerMap: {
-        aria: 'سه محور بیزدوار',
-        lead: 'بیزدوار سه کار می‌کند',
+        aria: 'سه مسیر بیزدوار',
+        lead: 'یک مسیر را انتخاب کنید',
+        servicesNum: '۰۱',
         servicesTitle: 'خدمات',
         servicesDesc: 'سایت ۵روزه، بازاریابی، SMM، اپ، سرور و خدمات فنی',
+        servicesGo: 'ورود به خدمات',
+        productsNum: '۰۲',
         productsTitle: 'محصولات',
-        productsDesc: 'FXGuard، BizTab، BizPet — ساخت تیم بیزدوار',
+        productsDesc: 'BizPet، BizTab و FXGuard — ساخت تیم بیزدوار',
+        productsGo: 'ورود به محصولات',
+        supplyNum: '۰۳',
         supplyTitle: 'تامین صنعتی',
-        supplyDesc: 'VEGA، Prosense، Gamak، Liqui Moly — استعلام قیمت'
+        supplyDesc: 'VEGA، Prosense، Gamak و Liqui Moly — استعلام قیمت',
+        supplyGo: 'ورود به تامین'
       }
     },
     supplyBrand: {
@@ -287,11 +293,11 @@ window.BIZDAVAR_LOCALES = {
       ]
     },
     home: {
-      heroBadge: 'بیزدوار — طراحی سایت و تامین صنعتی از استانبول',
-      heroTitle: 'طراحی سایت و تامین',
-      heroTitleSpan: 'VEGA از استانبول',
-      heroTitleEnd: 'با مشاوره رایگان',
-      heroDesc: 'سایت در ۵ روز، بازاریابی دیجیتال و تامین اصل VEGA، Prosense و Liqui Moly. استعلام قیمت در واتساپ.',
+      heroBadge: 'بیزدوار گروپ — از استانبول',
+      heroTitle: 'بیزدوار سه کار جدا می‌کند',
+      heroTitleSpan: '',
+      heroTitleEnd: '',
+      heroDesc: 'خدمات دیجیتال، محصولات خودمان، یا تامین صنعتی. از همان اول مسیرتان را انتخاب کنید — مشاوره رایگان.',
       intentNavLabel: 'صفحات پرتقاضا',
       intentVega: 'خرید VEGA',
       intentProsense: 'دتکتور Prosense',
@@ -522,14 +528,20 @@ window.BIZDAVAR_LOCALES = {
       langLabel: 'Dil',
       breadcrumbAria: 'Sayfa yolu',
       offerMap: {
-        aria: 'Bizdavar’ın üç ekseni',
-        lead: 'Bizdavar üç iş yapar',
+        aria: 'Bizdavar’ın üç yolu',
+        lead: 'Bir yol seçin',
+        servicesNum: '01',
         servicesTitle: 'Hizmetler',
         servicesDesc: '5 günde site, pazarlama, SMM, uygulama, sunucu ve saha işleri',
+        servicesGo: 'Hizmetlere git',
+        productsNum: '02',
         productsTitle: 'Ürünler',
-        productsDesc: 'FXGuard, BizTab, BizPet — kendi üretimimiz',
+        productsDesc: 'BizPet, BizTab ve FXGuard — kendi üretimimiz',
+        productsGo: 'Ürünlere git',
+        supplyNum: '03',
         supplyTitle: 'Endüstriyel tedarik',
-        supplyDesc: 'VEGA, Prosense, Gamak, Liqui Moly — fiyat teklifi'
+        supplyDesc: 'VEGA, Prosense, Gamak ve Liqui Moly — fiyat teklifi',
+        supplyGo: 'Tedarike git'
       }
     },
     supplyBrand: {
@@ -747,11 +759,11 @@ window.BIZDAVAR_LOCALES = {
       ]
     },
     home: {
-      heroBadge: 'Bizdavar — İstanbul’dan web tasarım ve endüstriyel tedarik',
-      heroTitle: 'Web tasarım ve',
-      heroTitleSpan: 'VEGA tedariki',
-      heroTitleEnd: 'ücretsiz danışmanlık',
-      heroDesc: '5 günde site, dijital pazarlama ve orijinal VEGA, Prosense, Liqui Moly. Fiyat teklifi için WhatsApp.',
+      heroBadge: 'Bizdavar Group — İstanbul',
+      heroTitle: 'Bizdavar üç ayrı iş yapar',
+      heroTitleSpan: '',
+      heroTitleEnd: '',
+      heroDesc: 'Dijital hizmetler, kendi ürünlerimiz veya endüstriyel tedarik. Önce yolunuzu seçin — ücretsiz danışmanlık.',
       intentNavLabel: 'Sık aranan sayfalar',
       intentVega: 'VEGA satın al',
       intentProsense: 'Prosense dedektör',
@@ -982,14 +994,20 @@ window.BIZDAVAR_LOCALES = {
       langLabel: 'Language',
       breadcrumbAria: 'Breadcrumb',
       offerMap: {
-        aria: 'Bizdavar’s three lines',
-        lead: 'Bizdavar does three things',
+        aria: 'Bizdavar’s three paths',
+        lead: 'Pick one path',
+        servicesNum: '01',
         servicesTitle: 'Services',
         servicesDesc: '5-day websites, marketing, SMM, apps, servers and field work',
+        servicesGo: 'Go to services',
+        productsNum: '02',
         productsTitle: 'Products',
-        productsDesc: 'FXGuard, BizTab, BizPet — built by our team',
+        productsDesc: 'BizPet, BizTab and FXGuard — built by our team',
+        productsGo: 'Go to products',
+        supplyNum: '03',
         supplyTitle: 'Industrial supply',
-        supplyDesc: 'VEGA, Prosense, Gamak, Liqui Moly — request a quote'
+        supplyDesc: 'VEGA, Prosense, Gamak and Liqui Moly — request a quote',
+        supplyGo: 'Go to supply'
       }
     },
     supplyBrand: {
@@ -1207,11 +1225,11 @@ window.BIZDAVAR_LOCALES = {
       ]
     },
     home: {
-      heroBadge: 'Bizdavar — web design and industrial supply from Istanbul',
-      heroTitle: 'Web design and',
-      heroTitleSpan: 'VEGA supply',
-      heroTitleEnd: 'with free consult',
-      heroDesc: 'A website in 5 days, digital marketing, and genuine VEGA, Prosense and Liqui Moly. WhatsApp for a quote.',
+      heroBadge: 'Bizdavar Group — Istanbul',
+      heroTitle: 'Bizdavar does three separate things',
+      heroTitleSpan: '',
+      heroTitleEnd: '',
+      heroDesc: 'Digital services, products we build, or industrial supply. Pick your path first — free consult.',
       intentNavLabel: 'Popular pages',
       intentVega: 'Buy VEGA',
       intentProsense: 'Prosense detectors',

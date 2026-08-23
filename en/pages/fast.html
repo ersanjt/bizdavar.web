@@ -20,7 +20,8 @@
   <link rel="icon" href="/assets/images/brand/favicon-16.png" type="image/png" sizes="16x16">
   <link rel="apple-touch-icon" href="/assets/images/brand/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/styles/site.css">
-<link rel="stylesheet" href="/assets/styles/fast.css">
+  <meta name="theme-color" content="#1d1d1b">
+  <link rel="stylesheet" href="/assets/styles/fast.css">
   <meta name="description" content="Corporate, store and landing pages in 5 business days. $99 / $199 / $299 — RTL, WhatsApp and basic SEO. Order from Bizdavar.">
   <!-- bd-static-seo -->
   <meta property="og:title" content="Website in 5 days from $99 | Fast Web Studio">
@@ -64,7 +65,22 @@
 
     <div class="fast-hosting-bar" id="fastHostingBar"></div>
 
-    <nav class="fast-nav" id="fastNav"></nav>
+    <div class="fast-nav-wrap">
+      <div class="container">
+        <nav class="fast-nav" id="fastNav"></nav>
+      </div>
+    </div>
+
+    <section class="section section--gray" id="fast-for">
+      <div class="container">
+        <div class="section__header section__header--pro">
+          <span class="section__eyebrow" data-i18n="fastPage.sections.for.eyebrow">Who it’s for</span>
+          <h2 class="section__title" data-i18n="fastPage.sections.for.title">Who is Fast Web Studio for?</h2>
+          <p class="section__desc" data-i18n="fastPage.sections.for.desc">From a one-page startup to a store or multilingual brand — pick the plan that matches.</p>
+        </div>
+        <div class="fast-for-grid" id="fastForGrid"></div>
+      </div>
+    </section>
 
     <section class="section" id="fast-plans">
       <div class="container">
@@ -96,11 +112,11 @@
           <h2 class="section__title" data-i18n="fastPage.sections.timeline.title">5 days to go live — step by step</h2>
           <p class="section__desc" data-i18n="fastPage.sections.timeline.desc">Each day has a clear goal and progress is reported on WhatsApp.</p>
         </div>
-        <div class="fast-steps" id="fastTimeline"></div>
+        <ol class="fast-path" id="fastTimeline"></ol>
       </div>
     </section>
 
-    <section class="section section--gray">
+    <section class="section section--gray" id="fast-why">
       <div class="container">
         <div class="section__header section__header--pro">
           <span class="section__eyebrow" data-i18n="fastPage.sections.why.eyebrow">Why Fast?</span>

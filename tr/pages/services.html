@@ -51,12 +51,17 @@
   <link rel="alternate" hreflang="x-default" href="https://bizdavar.com/pages/services">
   <!-- /bd-static-seo -->
 </head>
-<body data-page="services" data-depth="1">
+<body data-page="services" data-depth="1" class="services-page">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXWQQWF8"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <script src="/assets/scripts/components/page-shell.js"></script>
+  <a href="#main-content" class="skip-link" data-i18n="common.skipLink">Ana içeriğe geç</a>
+  <div class="top-bar" id="topBar"></div>
+  <header class="header" id="siteHeader"></header>
+  <nav class="breadcrumbs-wrap" id="breadcrumbs" data-i18n-aria="common.breadcrumbAria" aria-label="Sayfa yolu"></nav>
+  <div class="overlay" id="overlay"></div>
 <main id="main-content" class="site-main">
 
     <section class="page-hero page-hero--pro services-hero">
@@ -71,6 +76,10 @@
         <div class="services-hero-stats" id="servicesHeroStats"></div>
       </div>
     </section>
+
+    <div class="container">
+      <div id="offerMap" class="offer-map offer-map--about offer-map--paths" role="navigation" data-i18n-aria="common.offerMap.aria" aria-label="Bizdavar’ın üç yolu"></div>
+    </div>
 
     <div id="serviceNav"></div>
 
@@ -417,29 +426,34 @@
     <div id="relatedLinks"></div>
 
   </main>
+  <footer class="footer" id="siteFooter"></footer>
+  <button class="back-to-top" id="backToTop" data-i18n-aria="common.backToTop" aria-label="Yukarı dön"></button>
 
   <script src="/assets/scripts/site-loader.js" data-after-page-i18n="i18n/services-i18n.js" data-before-main="services-page.js"></script>
-
   <script>
-    bizdavarPageInit(function () {
-      const crumbs = [
-        { page: 'home', url: 'index' },
-        { page: 'services', url: 'pages/services' }
-      ];
-      setupWhatsappLinks();
-      injectPageSeo('services', {
+    if (typeof bizdavarBootPage === 'function') bizdavarBootPage({
+      seo: 'services',
+      seoOptions: {
         canonical: 'https://bizdavar.com/pages/services',
         ogImage: 'assets/images/content/hero-home.svg'
-      });
-      renderBreadcrumbs(crumbs);
-      injectBreadcrumbSchema(crumbs);
-      initServicesPage();
-      injectServiceSchema();
-      renderGeoStrip('geoStrip', {
-        textKey: 'servicesPage.geoText',
-        text: 'خدمات دیجیتال و فنی بیزدوار — تمرکز اجرایی تبریز و استانبول، مشاوره فارسی و واتساپ تخصصی خدمات فنی.'
-      });
-      if (window.renderServicesRelatedLinks) window.renderServicesRelatedLinks();
+      },
+      crumbs: [
+        { page: 'home', url: 'index' },
+        { page: 'services', url: 'services' }
+      ],
+      init: function () {
+        if (typeof window.ensureBizdavarPageShell === 'function') window.ensureBizdavarPageShell();
+        if (typeof window.renderSiteChrome === 'function') window.renderSiteChrome();
+        if (typeof window.initServicesPage === 'function') window.initServicesPage();
+        if (typeof window.injectServiceSchema === 'function') window.injectServiceSchema();
+        if (typeof window.renderGeoStrip === 'function') {
+          window.renderGeoStrip('geoStrip', {
+            textKey: 'servicesPage.geoText',
+            text: 'خدمات دیجیتال و فنی بیزدوار — تمرکز اجرایی تبریز و استانبول، مشاوره فارسی و واتساپ تخصصی خدمات فنی.'
+          });
+        }
+        if (typeof window.renderServicesRelatedLinks === 'function') window.renderServicesRelatedLinks();
+      }
     });
   </script>
 </body>

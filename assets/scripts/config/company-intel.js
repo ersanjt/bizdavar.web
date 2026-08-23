@@ -89,29 +89,19 @@ window.BIZDAVAR_INTEL = {
   /** حوزه‌های فعالیت (دسته‌بندی خدمات) */
   activityAreas: [
     {
-      id: 'digital-growth',
-      title: 'رشد دیجیتال',
-      items: ['بازاریابی دیجیتال', 'سئو و Google Ads', 'مدیریت SMM', 'قیف تبدیل', 'تحلیل GA4']
+      id: 'services',
+      title: 'خدمات',
+      items: ['بازاریابی دیجیتال، سئو و SMM', 'طراحی سایت ۵روزه و وب‌اپ', 'سامانه و فین‌تک سفارشی', 'سرور، دامنه و SSL', 'خدمات فنی تبریز و استانبول']
     },
     {
-      id: 'web-platforms',
-      title: 'پلتفرم‌های وب',
-      items: ['طراحی سایت شرکتی', 'فروشگاه WooCommerce', 'Fast Web Studio', 'وردپرس پیشرفته', 'توسعه سفارشی']
+      id: 'products',
+      title: 'محصولات خودمان',
+      items: ['BizPet — پد حرارتی ۱۳۹۹ (همان پشتی خودرو)', 'BizTab — دماسنج غیرتماسی', 'BizClean V5 — ضدعفونی دست', 'FXGuard — WhatsApp CRM و Accounting', 'BizSwap — پیش‌فروش توکن']
     },
     {
-      id: 'fintech',
-      title: 'فین‌تک و پرداخت',
-      items: ['پلتفرم‌های پرداخت', 'داشبورد مالی', 'امنیت Cloudflare', 'ربات تلگرام', 'برندینگ مالی']
-    },
-    {
-      id: 'industrial',
-      title: 'صنعت و B2B',
-      items: ['تامین VEGA و Prosense', 'BizTab — دماسنج IoT', 'پمپ و موتور صنعتی', 'ابزار دقیق', 'اتوماسیون', 'تدارکات بین‌المللی']
-    },
-    {
-      id: 'infrastructure',
-      title: 'زیرساخت',
-      items: ['Netinode برای دامنه، هاست و سرور', 'مدیریت دامنه و DNS', 'SSL و امنیت', 'پشتیبانی فنی']
+      id: 'supply',
+      title: 'تامین صنعتی',
+      items: ['VEGA — سنسور سطح و فشار', 'Prosense — دتکتور گاز و شعله', 'Gamak — الکتروموتور', 'Liqui Moly — روغن و افزودنی', 'Teltonika — ردیاب ناوگان']
     }
   ],
 
@@ -121,8 +111,8 @@ window.BIZDAVAR_INTEL = {
     { name: 'Netinode', type: 'دامنه، هاست و سرور', note: 'ثبت دامنه، هاست، WordPress Hosting، ایمیل تجاری، DNS و سرور' },
     { name: 'BZ Diamond', type: 'نمونه‌کار طراحی وب', note: 'فروشگاه WooCommerce، ایمیل و سئو — پروژه مشتری' },
     { name: 'Biztejarat', type: 'نمونه‌کار SMM (گذشته)', note: 'صفحه اینستاگرام محصولات صنعتی — پروژه غیرفعال، اینستاگرام بسته شده' },
+    { name: 'BizPet', type: 'محصول پد حرارتی', note: 'پد حرارتی پدیده ۱۳۹۹ — خانه و خودرو؛ نام فروشگاهی BizSeat همان این کالاست' },
     { name: 'BizTab', type: 'محصول IoT / سلامت', note: 'دماسنج دیواری غیرتماسی — اولین نمونه تبریز، توسعه تیم بیزدوار' },
-
     { name: 'BizClean V5', type: 'محصول بهداشت', note: 'دستگاه ضدعفونی دست اتوماتیک — سنسور التراسونیک، عرضه دیجی‌کالا' },
     { name: 'BZBroker', type: 'صرافی P2P', note: 'پلتفرم کریپتو' },
     { name: 'WhatsApp CRM', type: 'FXGuard · WhatsApp CRM', note: 'اینباکس تیمی واتساپ — سوئیت fxguard.io' },

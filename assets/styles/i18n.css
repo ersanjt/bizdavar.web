@@ -206,6 +206,10 @@ html[dir='ltr'] .hero__actions {
   justify-content: flex-start;
 }
 
+html[dir='ltr'] .landing-hero--paths .hero__actions {
+  justify-content: center;
+}
+
 html[dir='ltr'] .service-card--pro::before {
   right: auto;
   left: var(--space-6);
@@ -213,6 +217,11 @@ html[dir='ltr'] .service-card--pro::before {
 
 html[dir='ltr'] .hero__intent {
   justify-content: flex-start;
+}
+
+html[dir='ltr'] .offer-map__card {
+  align-items: flex-start;
+  text-align: left;
 }
 
 html[dir='ltr'] .service-card--pro::before {

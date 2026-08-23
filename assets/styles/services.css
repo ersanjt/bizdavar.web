@@ -17,6 +17,13 @@
   margin-top: 26px;
 }
 
+.services-page .offer-map--about {
+  margin: 1.5rem 0 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
 .services-stat {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.18);

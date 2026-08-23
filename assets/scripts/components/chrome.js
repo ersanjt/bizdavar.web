@@ -953,7 +953,7 @@
   function renderOfferMap() {
     let host = document.getElementById('offerMap');
     if (!host) {
-      if (currentPage === 'home') return;
+      if (currentPage === 'home' || currentPage === 'about' || currentPage === 'services') return;
       host = document.createElement('div');
       host.id = 'offerMap';
       const crumbs = document.getElementById('breadcrumbs');
@@ -966,28 +966,32 @@
     const productsHref = pagePath(R.products);
     const supplyHref = (productsHref.indexOf('#') === -1 ? productsHref : productsHref.split('#')[0]) + '#supply';
     const inHero = !!host.closest('.hero');
-    host.className = 'offer-map' + (inHero || currentPage === 'home' ? ' offer-map--hero' : '');
+    host.className = 'offer-map offer-map--paths' + (inHero || currentPage === 'home' ? ' offer-map--hero' : '') + (host.classList.contains('offer-map--about') || !!host.closest('.about-intro') ? ' offer-map--about' : '');
     host.setAttribute('role', 'navigation');
-    host.setAttribute('aria-label', t('common.offerMap.aria', 'سه محور بیزدوار'));
+    host.setAttribute('aria-label', t('common.offerMap.aria', 'سه مسیر بیزدوار'));
     const cards = `
-        <p class="offer-map__lead">${t('common.offerMap.lead', 'بیزدوار سه کار می‌کند')}</p>
+        <p class="offer-map__lead">${t('common.offerMap.lead', 'یک مسیر را انتخاب کنید')}</p>
         <div class="offer-map__grid">
           <a href="${servicesHref}" class="offer-map__card${currentPage === 'services' ? ' is-active' : ''}">
-            <span class="offer-map__icon">${ic('list', { size: 22 })}</span>
-            <strong>${t('common.offerMap.servicesTitle', 'خدمات')}</strong>
-            <span>${t('common.offerMap.servicesDesc', 'سایت ۵روزه، بازاریابی، SMM، اپ، سرور و خدمات فنی')}</span>
+            <span class="offer-map__num">${t('common.offerMap.servicesNum', '۰۱')}</span>
+            <p class="offer-map__title">${t('common.offerMap.servicesTitle', 'خدمات')}</p>
+            <p class="offer-map__desc">${t('common.offerMap.servicesDesc', 'سایت ۵روزه، بازاریابی، SMM، اپ، سرور و خدمات فنی')}</p>
+            <span class="offer-map__go">${t('common.offerMap.servicesGo', 'ورود به خدمات')}</span>
           </a>
           <a href="${productsHref}" class="offer-map__card${currentPage === 'products' ? ' is-active' : ''}">
-            <span class="offer-map__icon">${ic('box', { size: 22 })}</span>
-            <strong>${t('common.offerMap.productsTitle', 'محصولات')}</strong>
-            <span>${t('common.offerMap.productsDesc', 'FXGuard، BizTab، BizPet — ساخت تیم بیزدوار')}</span>
+            <span class="offer-map__num">${t('common.offerMap.productsNum', '۰۲')}</span>
+            <p class="offer-map__title">${t('common.offerMap.productsTitle', 'محصولات')}</p>
+            <p class="offer-map__desc">${t('common.offerMap.productsDesc', 'BizPet، BizTab و FXGuard — ساخت تیم بیزدوار')}</p>
+            <span class="offer-map__go">${t('common.offerMap.productsGo', 'ورود به محصولات')}</span>
           </a>
           <a href="${supplyHref}" class="offer-map__card">
-            <span class="offer-map__icon">${ic('wrench', { size: 22 })}</span>
-            <strong>${t('common.offerMap.supplyTitle', 'تامین صنعتی')}</strong>
-            <span>${t('common.offerMap.supplyDesc', 'VEGA، Prosense، Gamak، Liqui Moly — استعلام قیمت')}</span>
+            <span class="offer-map__num">${t('common.offerMap.supplyNum', '۰۳')}</span>
+            <p class="offer-map__title">${t('common.offerMap.supplyTitle', 'تامین صنعتی')}</p>
+            <p class="offer-map__desc">${t('common.offerMap.supplyDesc', 'VEGA، Prosense، Gamak و Liqui Moly — استعلام قیمت')}</p>
+            <span class="offer-map__go">${t('common.offerMap.supplyGo', 'ورود به تامین')}</span>
           </a>
         </div>`;
-    host.innerHTML = inHero ? cards : `<div class="container">${cards}</div>`;
+    const alreadyInContainer = inHero || !!host.closest('.container');
+    host.innerHTML = alreadyInContainer ? cards : `<div class="container">${cards}</div>`;
   }
 })();

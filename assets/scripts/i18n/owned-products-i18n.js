@@ -18,9 +18,9 @@
           ctaContact: 'استعلام محصول'
         },
         pillars: {
-          eyebrow: 'پنج محور محصول',
+          eyebrow: 'چهار محور محصول',
           title: 'از نرم‌افزار تا خط تولید',
-          desc: 'محصولات مالکیتی بیزدوار در پنج دسته — برای پرش سریع، دسته را انتخاب کنید.'
+          desc: 'محصولات مالکیتی بیزدوار در چهار دسته — برای پرش سریع، دسته را انتخاب کنید.'
         },
         intro: {
           title: 'ما چه می‌سازیم؟',
@@ -29,7 +29,7 @@
           ctaPortfolio: 'نمونه‌کارهای دیجیتال',
           statProducts: '۱۲+',
           statProductsLabel: 'محصول و خط',
-          statCats: '۵',
+          statCats: '۴',
           statCatsLabel: 'دسته اصلی',
           statOrigin: 'تبریز',
           statOriginLabel: 'مهندسی و IP'
@@ -76,8 +76,7 @@
             bizswap: 'پیش‌فروش و سواپ توکن',
             biztab: 'دماسنج IoT غیرتماسی',
             bizclean: 'ضدعفونی دست اتوماتیک',
-            bizseat: 'پشتی صندلی خودرو',
-            bizpet: 'پد حرارتی بیز پت',
+            bizpet: 'پد حرارتی — خانه و خودرو',
             vega: 'سنسور سطح و فشار',
             prosense: 'دتکتور گاز و شعله',
             teltonika: 'Fleet Telematics / GPS',
@@ -103,9 +102,8 @@
         categories: {
           software: { label: 'نرم‌افزار و SaaS', desc: 'WhatsApp CRM و Accounting از سوئیت FXGuard، به‌همراه BizSwap' },
           'iot-health': { label: 'IoT و بهداشت', desc: 'دماسنج، ضدعفونی‌کننده و تجهیزات بدون تماس' },
-          automotive: { label: 'خودرو و راحتی', desc: 'پشتی صندلی خودرو و تجهیزات ارگونومی سرنشین' },
           packaging: { label: 'بسته‌بندی و سیل', desc: 'دستگاه‌های کش‌زن و خطوط بسته‌بندی' },
-          medical: { label: 'پزشکی و PPE', desc: 'پد حرارتی BizPet و خطوط تولید ماسک' }
+          medical: { label: 'پزشکی و PPE', desc: 'پد حرارتی BizPet (خانه و خودرو) و خطوط تولید ماسک' }
         },
         items: {
           bizswap: {
@@ -138,16 +136,10 @@
             desc: 'دستگاه ضدعفونی دست اتوماتیک BizClean V5 — تولید تیم بیزدوار، RINOTEX 1400 از طریق واحد پارکی «ایمن سهند پدیده»، پوشش ISNA و صدا و سیما.',
             tags: ['بهداشت', 'اتوماتیک', 'کرونا']
           },
-          bizseat: {
-            name: 'BizSeat',
-            title: 'پشتی صندلی خودرو',
-            desc: 'اختراع، طراحی و ساخت ۱۳۹۹ در پارک علم و فناوری دانشگاه تبریز — همکاری بیزدوار با تکنولوژی پردازان توسعه خاورمیانه و ایمن سهند پدیده.',
-            tags: ['خودرو', 'ارگونومی', '۱۳۹۹']
-          },
           bizpet: {
             name: 'BizPet',
             title: 'پد حرارتی بیز پت',
-            desc: 'محصول اصلی ۱۳۹۹ — پد حرارتی پدیده برای خانه، خودرو (پشتی صندلی) و جا خواب حیوانات. مرکز رشد دانشگاه تبریز، ایمن سهند پدیده. ۵ تا ۱۲ ولت.',
+            desc: 'محصول اصلی ۱۳۹۹ — پد حرارتی پدیده برای خانه، خودرو و جا خواب حیوانات. پشتی صندلی با نام BizSeat همان این کالاست. مرکز رشد دانشگاه تبریز، ایمن سهند پدیده. ۵ تا ۱۲ ولت.',
             tags: ['پد حرارتی', 'خودرو', 'تبریز', '۱۳۹۹']
           },
           biztouch: {
@@ -221,9 +213,9 @@
           ctaContact: 'Ürün teklifi'
         },
         pillars: {
-          eyebrow: 'Beş ürün ekseni',
+          eyebrow: 'Dört ürün ekseni',
           title: 'Yazılımdan üretim hattına',
-          desc: 'Bizdavar\'ın kendi ürünleri beş kategoride — hızlı geçiş için kategoriyi seçin.'
+          desc: 'Bizdavar\'ın kendi ürünleri dört kategoride — hızlı geçiş için kategoriyi seçin.'
         },
         intro: {
           title: 'Ne üretiyoruz?',
@@ -232,7 +224,7 @@
           ctaPortfolio: 'Dijital portfolyo',
           statProducts: '12+',
           statProductsLabel: 'ürün ve hat',
-          statCats: '5',
+          statCats: '4',
           statCatsLabel: 'ana kategori',
           statOrigin: 'Tebriz',
           statOriginLabel: 'mühendislik ve IP'
@@ -279,8 +271,7 @@
             bizswap: 'Token ön satış & swap',
             biztab: 'Temassız IoT termometre',
             bizclean: 'Otomatik el dezenfektanı',
-            bizseat: 'Araç koltuğu bel desteği',
-            bizpet: 'BizPet ısı pedi',
+            bizpet: 'Isı pedi — ev ve araç',
             vega: 'Seviye ve basınç sensörü',
             prosense: 'Gaz ve alev dedektörü',
             teltonika: 'Fleet Telematics / GPS',
@@ -306,9 +297,8 @@
         categories: {
           software: { label: 'Yazılım ve SaaS', desc: 'FXGuard WhatsApp CRM ve Accounting, ayrıca BizSwap' },
           'iot-health': { label: 'IoT ve hijyen', desc: 'Termometre, dezenfektan ve temasız ekipman' },
-          automotive: { label: 'Otomotiv ve konfor', desc: 'Araç koltuğu bel desteği ve yolcu ergonomisi' },
           packaging: { label: 'Ambalaj ve vakum', desc: 'Vakum makineleri ve ambalaj hatları' },
-          medical: { label: 'Medikal ve PPE', desc: 'BizPet ısı pedi ve maske üretim hatları' }
+          medical: { label: 'Medikal ve PPE', desc: 'BizPet ısı pedi (ev ve araç) ve maske üretim hatları' }
         },
         items: {
           bizswap: { name: 'BizSwap', title: 'Token ön satış & swap', desc: 'Web3 modülü — cüzdan bağlantısı, stablecoin-token swap, on-chain ön satış, slippage ve admin paneli (BEP-20 / RWA).', tags: ['DeFi', 'Web3', 'Token Swap'] },
@@ -316,8 +306,7 @@
           'fxguard-accounting': { name: 'Accounting', title: 'FXGuard Accounting', desc: 'Finans, döviz ve KOBİ ekipleri için muhasebe sistemi — FXGuard ürün ailesinin parçası.', tags: ['FXGuard', 'Accounting', 'Finance'] },
           biztab: { name: 'BizTab', title: 'Temasız duvar termometresi', desc: 'Tebriz\'deki ilk temasız duvar termometresi — 0,3°C altı hata, üniversite onayı.', tags: ['IoT', 'Temasız', 'Tebriz'] },
           bizclean: { name: 'BizClean', title: 'Hijyen ve dezenfeksiyon', desc: 'Otomatik el dezenfektan (BizClean V5) — Bizdavar üretimi; RINOTEX 1400 «Imen Sahand Padideh» park birimi; ISNA/IRIB basını.', tags: ['Hijyen', 'Otomatik', 'COVID'] },
-          bizseat: { name: 'BizSeat', title: 'Araç koltuğu bel desteği', desc: '1399’da Tebriz Üniversitesi teknoloji parkında icat, tasarım ve üretim — Teknoloji Pardazan Tosee Khavarmianeh ve Imen Sahand Padideh iş birliği.', tags: ['Otomotiv', 'Ergonomi', '1399'] },
-          bizpet: { name: 'BizPet', title: 'BizPet ısı pedi', desc: 'Asıl 1399 ürünü — ev, araç koltuğu ve evcil hayvan yatağı için Padideh ısı pedi. Digikala’daki koltuk desteği aynı üründür.', tags: ['Isı pedi', 'Otomotiv', 'Tebriz', '1399'] },
+          bizpet: { name: 'BizPet', title: 'BizPet ısı pedi', desc: 'Asıl 1399 ürünü — ev, araç ve evcil hayvan yatağı için Padideh ısı pedi. BizSeat satış adı aynı üründür, ikinci hat değil.', tags: ['Isı pedi', 'Otomotiv', 'Tebriz', '1399'] },
           biztouch: { name: 'BizTouch', title: 'Temasız çözümler', desc: 'Giriş, hijyen ve kamusal alanlar için temasız cihazlar — Bizdavar tasarımı.', tags: ['Temasız', 'IoT', 'Giriş'] },
           bizroll: { name: 'BizRoll', title: 'Rulo ve ambalaj sistemleri', desc: 'Endüstriyel rulo ve ambalaj makineleri.', tags: ['Ambalaj', 'Rulo', 'Endüstriyel'] },
           'sealer-home': { name: 'Ev tipi vakum makinesi', title: 'Ev vakumu', desc: 'Ev ve küçük atölyeler için vakum/kapama makinesi.', tags: ['Vakum', 'Ev', 'Kapama'] },
@@ -354,9 +343,9 @@
           ctaContact: 'Product inquiry'
         },
         pillars: {
-          eyebrow: 'Five product pillars',
+          eyebrow: 'Four product pillars',
           title: 'From software to production lines',
-          desc: 'Bizdavar-owned products across five categories — pick a pillar to jump ahead.'
+          desc: 'Bizdavar-owned products across four categories — pick a pillar to jump ahead.'
         },
         intro: {
           title: 'What we build',
@@ -365,7 +354,7 @@
           ctaPortfolio: 'Digital portfolio',
           statProducts: '12+',
           statProductsLabel: 'products & lines',
-          statCats: '5',
+          statCats: '4',
           statCatsLabel: 'main categories',
           statOrigin: 'Tabriz',
           statOriginLabel: 'engineering & IP'
@@ -412,8 +401,7 @@
             bizswap: 'Token presale & swap',
             biztab: 'Non-contact IoT thermometer',
             bizclean: 'Automatic hand sanitizer',
-            bizseat: 'Car seat backrest',
-            bizpet: 'BizPet heating pad',
+            bizpet: 'Heating pad — home and car',
             vega: 'Level and pressure sensors',
             prosense: 'Gas and flame detectors',
             teltonika: 'Fleet Telematics / GPS',
@@ -439,9 +427,8 @@
         categories: {
           software: { label: 'Software & SaaS', desc: 'FXGuard WhatsApp CRM and Accounting, plus BizSwap' },
           'iot-health': { label: 'IoT & hygiene', desc: 'Thermometers, sanitizers and contactless devices' },
-          automotive: { label: 'Automotive & comfort', desc: 'Car seat backrests and occupant ergonomics' },
           packaging: { label: 'Packaging & sealing', desc: 'Vacuum sealers and packaging lines' },
-          medical: { label: 'Medical & PPE', desc: 'BizPet heating pad and mask production lines' }
+          medical: { label: 'Medical & PPE', desc: 'BizPet heating pad (home and car) and mask production lines' }
         },
         items: {
           bizswap: { name: 'BizSwap', title: 'Token presale & swap', desc: 'Web3 module — wallet connect, stablecoin-to-token swap, on-chain presale, slippage UI and admin panel for BEP-20 / RWA projects.', tags: ['DeFi', 'Web3', 'Token Swap'] },
@@ -449,8 +436,7 @@
           'fxguard-accounting': { name: 'Accounting', title: 'FXGuard Accounting', desc: 'Accounting system for finance, exchange and SME teams — part of the FXGuard product suite.', tags: ['FXGuard', 'Accounting', 'Finance'] },
           biztab: { name: 'BizTab', title: 'Non-contact wall thermometer', desc: 'First non-contact wall thermometer in Tabriz — under 0.3°C error, university validated.', tags: ['IoT', 'Contactless', 'Tabriz'] },
           bizclean: { name: 'BizClean', title: 'Hygiene & disinfection line', desc: 'Automatic hand sanitizer (BizClean V5) — Bizdavar production; RINOTEX 1400 via «Imen Sahand Padideh» park unit; ISNA & IRIB press.', tags: ['Hygiene', 'Automatic', 'COVID'] },
-          bizseat: { name: 'BizSeat', title: 'Car seat backrest', desc: 'Invented, designed and built in 1399 at the University of Tabriz science park — with Technology Pardazan Tosee Khavarmianeh and Imen Sahand Padideh.', tags: ['Automotive', 'Ergonomics', '1399'] },
-          bizpet: { name: 'BizPet', title: 'BizPet heating pad', desc: 'The 1399 flagship Padideh heating pad for home, car seat and pet beds. The Digikala car-backrest listing is the same product.', tags: ['Heating pad', 'Automotive', 'Tabriz', '1399'] },
+          bizpet: { name: 'BizPet', title: 'BizPet heating pad', desc: 'The 1399 flagship Padideh heating pad for home, car and pet beds. BizSeat is the shop name for the same product, not a second line.', tags: ['Heating pad', 'Automotive', 'Tabriz', '1399'] },
           biztouch: { name: 'BizTouch', title: 'Contactless solutions', desc: 'Contactless devices for entrances, hygiene and public spaces — Bizdavar engineered.', tags: ['Contactless', 'IoT', 'Entrance'] },
           bizroll: { name: 'BizRoll', title: 'Roll & packaging systems', desc: 'Engineered roll and packaging machinery for industrial production.', tags: ['Packaging', 'Roll', 'Industrial'] },
           'sealer-home': { name: 'Home vacuum sealer', title: 'Domestic sealing', desc: 'Vacuum sealer designed for home use and small workshops.', tags: ['Vacuum', 'Home', 'Sealing'] },

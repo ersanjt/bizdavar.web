@@ -9,10 +9,10 @@
   };
 
   const DEFAULT_STATS = [
-    { value: '۱۳+', label: 'سال تجربه' },
-    { value: '۱۰۰+', label: 'پروژه' },
+    { value: '+۱۳', label: 'سال تجربه' },
+    { value: '+۱۰۰', label: 'پروژه' },
     { value: '۱۱', label: 'کشور' },
-    { value: '۴', label: 'محور خدمات' }
+    { value: '۳', label: 'مسیر کار' }
   ];
 
   const DEFAULT_NAV = [
@@ -43,7 +43,7 @@
     }
     el.innerHTML = stats.map(s => `
       <div class="about-stat">
-        <strong>${s.value}</strong>
+        <strong dir="ltr">${s.value}</strong>
         <span>${s.label}</span>
       </div>
     `).join('');

@@ -173,12 +173,15 @@
           .filter(c => c && c.id && c.label)
           .map(c => [c.id, { label: c.label }])
       );
-      return base.map(item => {
+      return base
+        .filter(item => item && item.id !== 'bizseat' && !item.hidden)
+        .map(item => {
         const m = meta[item.id] || {};
         const cat = cats[item.category] || baseCats[item.category] || {};
         return {
           ...item,
           ...m,
+          hidden: false,
           categoryLabel: cat.label || item.categoryLabel || item.category,
           tags: m.tags || item.tags || []
         };
@@ -228,6 +231,7 @@
         plans: this.mergeLocalizedList('fastCatalog.plans', base.plans || []),
         compareRows: this.mergeLocalizedList('fastCatalog.compareRows', base.compareRows || []),
         timeline: this.mergeLocalizedList('fastCatalog.timeline', base.timeline || []),
+        audiences: this.mergeLocalizedList('fastCatalog.audiences', base.audiences || []),
         whyChoose: this.mergeLocalizedList('fastCatalog.whyChoose', base.whyChoose || []),
         showcases: this.mergeLocalizedList('fastCatalog.showcases', base.showcases || []),
         faq: this.mergeLocalizedList('fastCatalog.faq', base.faq || [])

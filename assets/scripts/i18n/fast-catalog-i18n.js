@@ -78,6 +78,12 @@
       { num: '4', title: 'Day 4 — Store setup', desc: 'For store plans: products, gateway and purchase testing.' },
       { num: '5', title: 'Day 5 — Launch', desc: 'Management training, domain transfer and go-live.' }
     ],
+    audiences: [
+      { title: 'Startups and new businesses', desc: 'A one-page intro, contact form and WhatsApp — go live this week.' },
+      { title: 'Stores and product brands', desc: 'WooCommerce, starter products and a ready checkout path.' },
+      { title: 'Clinics, offices and local services', desc: 'A trust-building mobile-first site with map and direct call.' },
+      { title: 'Export and multilingual brands', desc: 'Persian RTL plus English/Turkish for Iran, Turkey and beyond.' }
+    ],
     whyChoose: [
       { title: 'Real speed', desc: 'No vague promises — daily progress reports on WhatsApp.' },
       { title: 'Modern RTL design', desc: 'Vazirmatn font, mobile-first and accessibility standards.' },
@@ -86,6 +92,10 @@
     ],
     showcases: [
       { category: 'Jewelry store' },
+      { category: 'International B2B trade' },
+      { category: 'Swiss B2B trade' },
+      { category: 'SMM panel' },
+      { category: 'Fintech / FX' },
       { category: 'Leather & fashion' },
       { category: 'Holding' },
       { category: 'Aesthetic clinic' },
@@ -173,6 +183,12 @@
       { num: '4', title: '4. gün — Mağaza', desc: 'Mağaza planlarında: ürünler, ödeme geçidi ve test alışverişi.' },
       { num: '5', title: '5. gün — Yayın', desc: 'Yönetim eğitimi, domain transferi ve yayına alma.' }
     ],
+    audiences: [
+      { title: 'Startup ve yeni işletmeler', desc: 'Tek sayfalık tanıtım, form ve WhatsApp — bu hafta yayına geçin.' },
+      { title: 'Mağaza ve ürün markaları', desc: 'WooCommerce, ilk ürünler ve hazır ödeme yolu.' },
+      { title: 'Klinik, ofis ve yerel hizmet', desc: 'Mobil öncelikli, harita ve doğrudan arama ile güven sitesi.' },
+      { title: 'İhracat ve çok dilli markalar', desc: 'Farsça RTL + İngilizce/Türkçe — Türkiye, İran ve uluslararası.' }
+    ],
     whyChoose: [
       { title: 'Gerçek hız', desc: 'Belirsiz vaat yok — WhatsApp\'ta günlük ilerleme raporu.' },
       { title: 'Modern RTL tasarım', desc: 'Vazirmatn font, mobil öncelikli ve erişilebilirlik.' },
@@ -181,6 +197,10 @@
     ],
     showcases: [
       { category: 'Mücevher mağazası' },
+      { category: 'Uluslararası B2B ticaret' },
+      { category: 'İsviçre B2B ticaret' },
+      { category: 'SMM paneli' },
+      { category: 'Fintech / döviz' },
       { category: 'Deri ve moda' },
       { category: 'Holding' },
       { category: 'Estetik klinik' },
@@ -200,5 +220,49 @@
   if (window.BIZDAVAR_LOCALES) {
     if (window.BIZDAVAR_LOCALES.en) window.BIZDAVAR_LOCALES.en.fastCatalog = en;
     if (window.BIZDAVAR_LOCALES.tr) window.BIZDAVAR_LOCALES.tr.fastCatalog = tr;
+    if (window.BIZDAVAR_LOCALES.ru) {
+      window.BIZDAVAR_LOCALES.ru.fastCatalog = Object.assign({}, window.BIZDAVAR_LOCALES.ru.fastCatalog, {
+        audiences: [
+          { title: 'Стартапы и новые компании', desc: 'Одна страница, форма и WhatsApp — запуск на этой неделе.' },
+          { title: 'Магазины и продуктовые бренды', desc: 'WooCommerce, стартовые товары и готовый путь оплаты.' },
+          { title: 'Клиники, офисы и локальные услуги', desc: 'Мобильный сайт доверия с картой и прямым звонком.' },
+          { title: 'Экспорт и мультиязычные бренды', desc: 'Персидский RTL плюс английский/турецкий — Иран, Турция и дальше.' }
+        ],
+        showcases: [
+          { category: 'Ювелирный магазин' },
+          { category: 'Международная B2B-торговля' },
+          { category: 'Швейцарская B2B-торговля' },
+          { category: 'SMM-панель' },
+          { category: 'Финтех / FX' },
+          { category: 'Кожа и мода' },
+          { category: 'Холдинг' },
+          { category: 'Клиника эстетики' },
+          { category: 'Коммерческий бренд' },
+          { category: 'Промышленный B2B' }
+        ]
+      });
+    }
+    if (window.BIZDAVAR_LOCALES.ar) {
+      window.BIZDAVAR_LOCALES.ar.fastCatalog = Object.assign({}, window.BIZDAVAR_LOCALES.ar.fastCatalog, {
+        audiences: [
+          { title: 'شركات ناشئة وأعمال جديدة', desc: 'صفحة تعريف ونموذج واتساب — انشر موقعك هذا الأسبوع.' },
+          { title: 'متاجر وعلامات المنتجات', desc: 'WooCommerce ومنتجات أولية ومسار شراء جاهز.' },
+          { title: 'عيادات ومكاتب وخدمات محلية', desc: 'موقع موثوق للجوال مع خريطة وزر اتصال مباشر.' },
+          { title: 'تصدير وعلامات متعددة اللغات', desc: 'عربية/فارسية RTL مع الإنجليزية والتركية لإيران وتركيا والأسواق الدولية.' }
+        ],
+        showcases: [
+          { category: 'متجر مجوهرات' },
+          { category: 'تجارة B2B دولية' },
+          { category: 'تجارة سويسرية B2B' },
+          { category: 'لوحة SMM' },
+          { category: 'فينتك / صرف' },
+          { category: 'جلد وأزياء' },
+          { category: 'قابضة' },
+          { category: 'عيادة تجميل' },
+          { category: 'علامة تجارية' },
+          { category: 'B2B صناعي' }
+        ]
+      });
+    }
   }
 })();

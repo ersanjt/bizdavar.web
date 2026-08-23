@@ -569,21 +569,71 @@
   };
 
   window.injectBlogListSchema = function () {
-    if (!C.blogPosts) return;
+    const posts = (typeof window.getBlogPostsList === 'function'
+      ? window.getBlogPostsList()
+      : C.blogPosts) || [];
+    if (!posts.length) return;
+    const blogUrl = absUrl(R.blog);
+    const desc = t('pages.blog.seoDescription', t('blogPage.hero.desc', ''));
+    const lang = window.BIZDAVAR_I18N?.locale || 'fa';
+    const inLanguage = ({ fa: 'fa-IR', tr: 'tr-TR', en: 'en-US', ru: 'ru-RU', ar: 'ar-AE' })[lang] || lang;
+    const toAbs = (rel) => {
+      if (!rel) return undefined;
+      if (/^https?:\/\//i.test(rel)) return rel;
+      return `${C.baseUrl}/${String(rel).replace(/^\//, '')}`;
+    };
     const ld = {
       '@context': 'https://schema.org',
-      '@type': 'Blog',
-      name: t('seo.schemaBlog', 'وبلاگ بیزدوار گروپ'),
-      url: absUrl(R.blog),
-      inLanguage: C.locale,
-      publisher: { '@type': 'Organization', name: C.siteNameEn, url: C.baseUrl },
-      blogPost: C.blogPosts.map(p => ({
-        '@type': 'BlogPosting',
-        headline: p.title,
-        description: p.excerpt,
-        datePublished: p.date,
-        url: absUrl(p.slug)
-      }))
+      '@graph': [
+        {
+          '@type': 'CollectionPage',
+          '@id': blogUrl + '#webpage',
+          url: blogUrl,
+          name: t('pages.blog.seoTitle', t('seo.schemaBlog', 'وبلاگ بیزدوار گروپ')),
+          description: desc,
+          inLanguage,
+          isPartOf: { '@type': 'WebSite', name: C.siteNameEn, url: C.baseUrl },
+          about: { '@id': blogUrl + '#blog' },
+          mainEntity: { '@id': blogUrl + '#itemlist' }
+        },
+        {
+          '@type': 'Blog',
+          '@id': blogUrl + '#blog',
+          name: t('seo.schemaBlog', 'وبلاگ بیزدوار گروپ'),
+          url: blogUrl,
+          description: desc,
+          inLanguage,
+          publisher: {
+            '@type': 'Organization',
+            name: C.siteNameEn,
+            url: C.baseUrl,
+            logo: { '@type': 'ImageObject', url: `${C.baseUrl}/assets/images/brand/bizdavar-logo-square.png` }
+          },
+          blogPost: posts.map(p => ({
+            '@type': 'BlogPosting',
+            headline: p.title,
+            description: p.excerpt,
+            datePublished: p.date,
+            inLanguage,
+            image: toAbs(p.image),
+            url: absUrl(p.slug),
+            author: { '@type': 'Organization', name: C.siteNameEn }
+          }))
+        },
+        {
+          '@type': 'ItemList',
+          '@id': blogUrl + '#itemlist',
+          name: t('seo.schemaBlog', 'وبلاگ بیزدوار گروپ'),
+          numberOfItems: posts.length,
+          itemListOrder: 'https://schema.org/ItemListUnordered',
+          itemListElement: posts.map((p, i) => ({
+            '@type': 'ListItem',
+            position: i + 1,
+            url: absUrl(p.slug),
+            name: p.title
+          }))
+        }
+      ]
     };
     injectJsonLd('jsonld-blog', ld);
   };

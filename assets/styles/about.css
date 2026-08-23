@@ -28,6 +28,7 @@
   font-weight: 800;
   color: var(--yellow);
   line-height: 1.2;
+  unicode-bidi: isolate;
 }
 
 .about-stat span {
@@ -101,23 +102,15 @@
   display: block;
 }
 
-.about-intro .about__features {
-  gap: 12px;
+.about-intro .offer-map--about {
+  margin-top: 2rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
 }
 
-.about-intro .about__feature {
-  padding: 12px 14px;
-  background: var(--gray-100);
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--gray-200);
-  color: inherit;
-  text-decoration: none;
-}
-
-.about-intro a.about__feature:hover,
-.about-intro a.about__feature:focus-visible {
-  border-color: var(--navy);
-  background: var(--white);
+.about-intro .offer-map--about .offer-map__lead {
+  color: var(--navy, #16163f);
 }
 
 .about-block {

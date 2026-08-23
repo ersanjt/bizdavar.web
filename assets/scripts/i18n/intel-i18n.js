@@ -139,17 +139,16 @@
       }
     },
     activityAreas: [
-      { id: 'digital-growth', title: 'Dijital büyüme', items: ['Dijital pazarlama', 'SEO ve Google Ads', 'SMM yönetimi', 'Dönüşüm hunisi', 'GA4 analitiği'] },
-      { id: 'web-platforms', title: 'Web platformları', items: ['Kurumsal web sitesi', 'WooCommerce mağaza', 'Fast Web Studio', 'İleri WordPress', 'Özel geliştirme'] },
-      { id: 'fintech', title: 'Fintech ve ödeme', items: ['Ödeme platformları', 'Finansal panolar', 'Cloudflare güvenliği', 'Telegram botları', 'Finans markalaşması'] },
-      { id: 'industrial', title: 'Endüstri ve B2B', items: ['VEGA ve Prosense tedariki', 'BizTab — IoT termometre', 'Endüstriyel pompa ve motor', 'Proses enstrümantasyonu', 'Otomasyon', 'Uluslararası tedarik'] },
-      { id: 'infrastructure', title: 'Altyapı', items: ['Netinode domain, hosting ve sunucu', 'DNS yönetimi', 'SSL ve güvenlik', 'Teknik destek'] }
+      { id: 'services', title: 'Hizmetler', items: ['Dijital pazarlama, SEO ve SMM', '5 günde site ve web uygulama', 'Özel sistem ve fintech', 'Sunucu, domain ve SSL', 'Tebriz ve İstanbul saha işleri'] },
+      { id: 'products', title: 'Kendi ürünlerimiz', items: ['BizPet — 1399 ısı pedi (araç koltuğu aynı ürün)', 'BizTab — temasız termometre', 'BizClean V5 — el dezenfektanı', 'FXGuard — WhatsApp CRM ve Accounting', 'BizSwap — token ön satış'] },
+      { id: 'supply', title: 'Endüstriyel tedarik', items: ['VEGA — seviye ve basınç', 'Prosense — gaz ve alev', 'Gamak — elektrik motoru', 'Liqui Moly — yağ ve katkı', 'Teltonika — filo takibi'] }
     ],
     ecosystem: [
       { name: 'ZedPay', type: 'Fintech / ödeme', note: 'IT yönetimi ve platform geliştirme' },
       { name: 'Netinode', type: 'Domain, hosting, sunucu', note: 'Domain, hosting, WordPress hosting, kurumsal e-posta, DNS' },
       { name: 'BZ Diamond', type: 'Web tasarım referansı', note: 'WooCommerce mağaza, e-posta ve SEO — müşteri projesi' },
       { name: 'Biztejarat', type: 'SMM referansı', note: 'Endüstriyel ürün Instagram sayfası — içerik yönetimi' },
+      { name: 'BizPet', type: 'Isı pedi', note: '1399 Padideh ısı pedi — ev ve araç; BizSeat satış adı aynı üründür' },
       { name: 'BizTab', type: 'IoT / sağlık ürünü', note: 'Temassız duvar termometresi — Tebriz’de ilk örnek, Bizdavar ekibi' },
       { name: 'BizClean V5', type: 'Hijyen ürünü', note: 'Otomatik el dezenfektanı — ultrasonik sensör, Digikala’da satış' },
       { name: 'BZBroker', type: 'P2P borsa', note: 'Kripto platformu' },
@@ -431,13 +430,11 @@
     },
     activityAreas: TR.activityAreas.map((a, i) => ({
       ...a,
-      title: ['Digital growth', 'Web platforms', 'Fintech & payments', 'Industry & B2B', 'Infrastructure'][i],
+      title: ['Services', 'Products we build', 'Industrial supply'][i],
       items: [
-        ['Digital marketing', 'SEO & Google Ads', 'SMM management', 'Conversion funnel', 'GA4 analytics'],
-        ['Corporate websites', 'WooCommerce stores', 'Fast Web Studio', 'Advanced WordPress', 'Custom development'],
-        ['Payment platforms', 'Financial dashboards', 'Cloudflare security', 'Telegram bots', 'Financial branding'],
-        ['VEGA & Prosense supply', 'BizTab — IoT thermometer', 'Industrial pumps & motors', 'Process instrumentation', 'Automation', 'International procurement'],
-        ['Netinode domains, hosting & servers', 'DNS management', 'SSL & security', 'Technical support']
+        ['Digital marketing, SEO and SMM', '5-day websites and web apps', 'Custom systems and fintech', 'Servers, domains and SSL', 'Field work in Tabriz and Istanbul'],
+        ['BizPet — 1399 heating pad (car seat is the same product)', 'BizTab — non-contact thermometer', 'BizClean V5 — hand sanitizer', 'FXGuard — WhatsApp CRM and Accounting', 'BizSwap — token presale'],
+        ['VEGA — level and pressure', 'Prosense — gas and flame', 'Gamak — electric motors', 'Liqui Moly — oils and additives', 'Teltonika — fleet tracking']
       ][i]
     })),
     ecosystem: [
@@ -445,6 +442,7 @@
       { name: 'Netinode', type: 'Domains, hosting & servers', note: 'Domains, hosting, WordPress hosting, business email, DNS' },
       { name: 'BZ Diamond', type: 'Web design case study', note: 'WooCommerce store, email and SEO — client project' },
       { name: 'Biztejarat', type: 'SMM case study', note: 'Industrial product Instagram — content management' },
+      { name: 'BizPet', type: 'Heating pad', note: '1399 Padideh heating pad — home and car; BizSeat is the same product' },
       { name: 'BizTab', type: 'IoT / health product', note: 'Non-contact wall thermometer — first in Tabriz, Bizdavar team' },
       { name: 'BizClean V5', type: 'Hygiene product', note: 'Automatic hand sanitizer — ultrasonic sensor, sold on Digikala' },
       { name: 'BZBroker', type: 'P2P exchange', note: 'Crypto platform' },

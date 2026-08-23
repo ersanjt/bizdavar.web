@@ -26,6 +26,7 @@ window.FAST_CATALOG = {
       oldPrice: 199,
       price: 99,
       accent: 'green',
+      visual: 'landing',
       featured: false,
       features: [
         'سایت تک‌صفحه‌ای شرکتی',
@@ -44,6 +45,7 @@ window.FAST_CATALOG = {
       oldPrice: 399,
       price: 199,
       accent: 'orange',
+      visual: 'store',
       featured: false,
       features: [
         'همه امکانات پلن پایه',
@@ -62,6 +64,7 @@ window.FAST_CATALOG = {
       oldPrice: 599,
       price: 299,
       accent: 'blue',
+      visual: 'pro',
       featured: true,
       ribbon: 'محبوب‌ترین',
       features: [
@@ -94,6 +97,13 @@ window.FAST_CATALOG = {
     { num: '۵', title: 'روز پنجم — تحویل', desc: 'آموزش مدیریت، انتقال دامنه و راه‌اندازی نهایی آنلاین.' }
   ],
 
+  audiences: [
+    { icon: 'rocket', title: 'استارتاپ و کسب‌وکار تازه‌کار', desc: 'یک صفحه معرفی، فرم تماس و واتساپ — همین هفته آنلاین شوید.' },
+    { icon: 'bag', title: 'فروشگاه و برند محصول', desc: 'WooCommerce، چند محصول اولیه و مسیر خرید آماده تحویل.' },
+    { icon: 'building', title: 'کلینیک، دفتر و خدمات محلی', desc: 'سایت اعتمادساز با موبایل‌فرست، نقشه و دکمه تماس مستقیم.' },
+    { icon: 'globe', title: 'صادرات و برند چندزبانه', desc: 'RTL فارسی + انگلیسی/ترکی برای بازار ایران، ترکیه و بین‌الملل.' }
+  ],
+
   whyChoose: [
     { icon: 'bolt', title: 'سرعت واقعی', desc: 'نه وعده مبهم — هر روز گزارش پیشرفت در واتساپ.' },
     { icon: 'palette', title: 'طراحی مدرن RTL', desc: 'فونت Vazirmatn، موبایل‌فرست و استاندارد دسترسی.' },
@@ -103,10 +113,10 @@ window.FAST_CATALOG = {
 
   showcases: [
     { name: 'BZ Diamond', category: 'فروشگاه جواهرات', slug: 'pages/bz-diamond', internal: true },
-    { name: 'Supplify Trade', category: 'تجارت بین‌المللی B2B', slug: 'pages/supplify-trade', internal: true },
-    { name: 'Kaya One AG', category: 'تجارت سوئیسی B2B', slug: 'pages/kaya-one', internal: true },
-    { name: 'SMM Turk', category: 'پنل SMM', slug: 'pages/smm-turk', internal: true },
-    { name: 'FXGuard Exchange', category: 'فین‌تک / تبادل ارز', slug: 'pages/fxguard-exchange', internal: true },
+    { name: 'Supplify Trade', category: 'تجارت بین‌المللی B2B', slug: 'pages/supplify-trade', internal: true, logo: 'assets/images/partners/supplify-trade.svg' },
+    { name: 'Kaya One AG', category: 'تجارت سوئیسی B2B', slug: 'pages/kaya-one', internal: true, logo: 'assets/images/partners/kaya-one.svg' },
+    { name: 'SMM Turk', category: 'پنل SMM', slug: 'pages/smm-turk', internal: true, logo: 'assets/images/partners/smm-turk.svg' },
+    { name: 'FXGuard Exchange', category: 'فین‌تک / تبادل ارز', slug: 'pages/fxguard-exchange', internal: true, logo: 'assets/images/partners/fxguard-exchange.svg' },
     { name: 'Karen Leather', category: 'چرم و مد', domain: 'karenleather.com', internal: false },
     { name: 'Marvelous Holding', category: 'هلدینگ', domain: 'marvelousholding.com', internal: false },
     { name: 'NIK Aesthetic', category: 'کلینیک زیبایی', domain: 'nikaesthetic.com', internal: false },

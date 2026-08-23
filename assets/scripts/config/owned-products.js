@@ -8,7 +8,6 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
   categories: [
     { id: 'software', label: 'نرم‌افزار و SaaS', icon: 'globe' },
     { id: 'iot-health', label: 'IoT و بهداشت', icon: 'shield' },
-    { id: 'automotive', label: 'خودرو و راحتی', icon: 'car' },
     { id: 'packaging', label: 'بسته‌بندی و سیل', icon: 'box' },
     { id: 'medical', label: 'پزشکی و PPE', icon: 'heart' }
   ],
@@ -84,27 +83,12 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       status: 'live'
     },
     {
-      id: 'bizseat',
-      category: 'automotive',
-      categoryLabel: 'خودرو و راحتی',
-      name: 'BizSeat',
-      title: 'نام فروشگاهی همان BizPet',
-      desc: 'BizSeat نام جدا نیست — همان پد حرارتی BizPet است که به‌صورت پشتی صندلی خودرو هم عرضه شد.',
-      tags: ['همان BizPet'],
-      image: 'assets/images/products/bizseat/bizseat-hero.svg',
-      logo: 'assets/images/products/bizseat/bizseat-hero.svg',
-      page: 'pages/bizpet.html',
-      featured: false,
-      hidden: true,
-      status: 'live'
-    },
-    {
       id: 'bizpet',
       category: 'medical',
       categoryLabel: 'پزشکی و PPE',
       name: 'BizPet',
       title: 'پد حرارتی بیز پت',
-      desc: 'محصول اصلی ۱۳۹۹ — پد حرارتی پدیده برای خانه، خودرو (پشتی صندلی) و جا خواب حیوانات. مرکز رشد دانشگاه تبریز، ایمن سهند پدیده. ۵ تا ۱۲ ولت.',
+      desc: 'محصول اصلی ۱۳۹۹ — پد حرارتی پدیده برای خانه، خودرو و جا خواب حیوانات. نام فروشگاهی پشتی صندلی (BizSeat) همان این کالاست، نه محصول دوم. مرکز رشد دانشگاه تبریز، ایمن سهند پدیده. ۵ تا ۱۲ ولت.',
       tags: ['پد حرارتی', 'خودرو', 'تبریز', '۱۳۹۹'],
       image: 'assets/images/products/bizpet/bizpet-grey.jpg',
       logo: 'assets/images/products/bizpet/bizpet-grey.jpg',

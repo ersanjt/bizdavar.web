@@ -388,7 +388,9 @@ window.BIZDAVAR_CONFIG = {
       title: 'تامین سنسور VEGA در ایران — از استانبول تا پروژه صنعتی',
       excerpt: 'مسیر مشاوره فارسی، پیش‌فاکتور و لجستیک اصل VEGA برای پروژه‌های ایران.',
       category: 'تجهیزات صنعتی',
+      catId: 'industrial',
       date: '2026-07-29',
+      image: 'assets/images/vega/slides/value-process-safety.jpg',
       relatedService: 'pages/vega.html'
     },
     {
@@ -396,7 +398,9 @@ window.BIZDAVAR_CONFIG = {
       title: 'وبسایت چندزبانه برای بازار ایران و ترکیه',
       excerpt: 'hreflang، اعتماد محلی و تحویل سریع برای کسب‌وکارهای دو بازاری.',
       category: 'طراحی وب',
+      catId: 'web',
       date: '2026-07-29',
+      image: 'assets/images/content/services-web-mockup.svg',
       relatedService: 'pages/fast.html'
     },
     {
@@ -404,7 +408,9 @@ window.BIZDAVAR_CONFIG = {
       title: 'دیجیتال مارکتینگ چیست؟ — راهنمای کامل برای کسب‌وکارها',
       excerpt: 'تعریف بازاریابی دیجیتال، کانال‌ها و نقش آن در رشد فروش آنلاین.',
       category: 'بازاریابی دیجیتال',
+      catId: 'digital',
       date: '2025-02-10',
+      image: 'assets/images/content/network-map.svg',
       relatedService: 'pages/services.html#digital-marketing'
     },
     {
@@ -412,7 +418,9 @@ window.BIZDAVAR_CONFIG = {
       title: 'چگونه بازاریابی دیجیتال فروش را افزایش می‌دهد؟',
       excerpt: 'راهکارهای عملی برای تبدیل بازدیدکننده به مشتری.',
       category: 'بازاریابی دیجیتال',
+      catId: 'digital',
       date: '2025-04-01',
+      image: 'assets/images/content/services-dm-visual.svg',
       relatedService: 'pages/services.html#digital-marketing'
     },
     {
@@ -420,7 +428,9 @@ window.BIZDAVAR_CONFIG = {
       title: 'مدیریت شبکه‌های اجتماعی — استراتژی SMM برای برندها',
       excerpt: 'تولید محتوا، تقویم انتشار و تبلیغات هدفمند در اینستاگرام و لینکدین.',
       category: 'مدیریت SMM',
+      catId: 'digital',
       date: '2025-03-05',
+      image: 'assets/images/content/services-smm-mockup.svg',
       relatedService: 'pages/services.html#smm'
     },
     {
@@ -428,7 +438,9 @@ window.BIZDAVAR_CONFIG = {
       title: 'راه‌اندازی سایت در ۵ روز — راهنمای کامل Fast Studio',
       excerpt: 'معرفی پلن‌های Fast Web Studio برای استارتاپ‌ها.',
       category: 'طراحی وب',
+      catId: 'web',
       date: '2025-05-15',
+      image: 'assets/images/content/related-thumb-fast.svg',
       relatedService: 'pages/fast.html'
     },
     {
@@ -436,7 +448,9 @@ window.BIZDAVAR_CONFIG = {
       title: 'انتخاب سنسور صنعتی مناسب — راهنمای VEGA و ابزار دقیق',
       excerpt: 'نکات مهم در تامین تجهیزات VEGA و ابزار دقیق.',
       category: 'تجهیزات صنعتی',
+      catId: 'industrial',
       date: '2025-03-20',
+      image: 'assets/images/vega/hero-vegapuls-6x.png',
       relatedService: 'pages/products.html#supply'
     },
     {
@@ -444,7 +458,9 @@ window.BIZDAVAR_CONFIG = {
       title: 'بیزدوار گروپ چیست؟ — تاریخچه، تیم و حوزه‌های فعالیت',
       excerpt: 'شناسنامه کامل بیزدوار: بنیان‌گذار، ۱۱ کشور، ۱۰۰+ پروژه و اکوسیستم برندها.',
       category: 'درباره شرکت',
+      catId: 'company',
       date: '2025-06-01',
+      image: 'assets/images/content/about-hero.svg',
       relatedService: 'pages/about.html'
     },
     {
@@ -452,7 +468,9 @@ window.BIZDAVAR_CONFIG = {
       title: 'BizTab — اولین دماسنج دیواری غیرتماسی تبریز',
       excerpt: 'محصول اختصاصی تیم بیزدوار — دقت کمتر از ۰.۳ درجه، تأیید دانشگاه تبریز.',
       category: 'محصول اختصاصی',
+      catId: 'products',
       date: '2020-03-16',
+      image: 'assets/images/products/biztab/biztab-hero.jpg',
       relatedService: 'pages/biztab.html'
     },
     {
@@ -460,23 +478,19 @@ window.BIZDAVAR_CONFIG = {
       title: 'دستگاه ضدعفونی دست بیزدوار V5',
       excerpt: 'سنسور التراسونیک و پاشش خودکار — مهندسی‌شده توسط تیم بیزدوار.',
       category: 'محصول اختصاصی',
+      catId: 'products',
       date: '2021-06-01',
+      image: 'assets/images/products/bizsanitizer/bizclean-v5.png',
       relatedService: 'pages/bizsanitizer-v5.html'
-    },
-    {
-      slug: 'pages/bizseat.html',
-      title: 'BizSeat همان پد حرارتی BizPet است',
-      excerpt: 'نام فروشگاهی پشتی خودرو — محصول اصلی پد حرارتی بیز پت ۱۳۹۹.',
-      category: 'محصول اختصاصی',
-      date: '2020-09-01',
-      relatedService: 'pages/bizpet.html'
     },
     {
       slug: 'pages/bizpet.html',
       title: 'BizPet — پد حرارتی بیز پت',
       excerpt: 'طراحی و تولید در مرکز رشد فناوری دانشگاه تبریز با همکاری ایمن سهند پدیده.',
       category: 'محصول اختصاصی',
+      catId: 'products',
       date: '2020-09-01',
+      image: 'assets/images/products/bizpet/bizpet-grey.jpg',
       relatedService: 'pages/bizpet.html'
     }
   ],
