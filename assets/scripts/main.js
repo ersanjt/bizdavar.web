@@ -395,7 +395,7 @@ window.setupWhatsappLinks = function () {
   const waUrl = (num) => (window.BD_CTX?.buildWaUrl ? window.BD_CTX.buildWaUrl(num) : `https://wa.me/${num}?text=${encodeURIComponent(C.contact.whatsappMessage || '')}`);
 
   if (!channels.length && !C.contact.whatsapp) {
-    document.querySelectorAll('#homeWhatsapp').forEach(el => {
+    document.querySelectorAll('#homeWhatsapp, #homeWhatsappHero').forEach(el => {
       if (el) el.textContent = t('contactPage.quickContact', 'تماس سریع');
     });
     return;
@@ -404,7 +404,7 @@ window.setupWhatsappLinks = function () {
   const primaryNum = window.BD_CTX?.getPrimaryWhatsapp?.() || channels[0]?.whatsapp || C.contact.whatsapp;
   const primaryUrl = waUrl(primaryNum);
 
-  document.querySelectorAll('#homeWhatsapp').forEach(el => {
+  document.querySelectorAll('#homeWhatsapp, #homeWhatsappHero').forEach(el => {
     if (el) {
       el.href = primaryUrl;
       el.innerHTML = waBtnHtml(t('common.whatsapp', 'واتساپ'));
@@ -652,7 +652,6 @@ function initContactForm() {
       'پیام شما برای واتساپ آماده شد. اگر پنجره باز نشد، از دکمه‌های واتساپ همین صفحه استفاده کنید.',
       null
     );
-    form.reset();
 
   });
 

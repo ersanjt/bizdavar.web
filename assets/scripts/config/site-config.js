@@ -500,6 +500,66 @@ window.BIZDAVAR_CONFIG = {
       date: '2020-09-01',
       image: 'assets/images/products/bizpet/bizpet-grey.jpg',
       relatedService: 'pages/bizpet.html'
+    },
+    {
+      slug: 'pages/articles/marvi-society-ios-app.html',
+      title: 'توسعه اپ iOS — نمونه‌کار Marvi Society و انتشار App Store',
+      excerpt: 'از UI/UX تا Swift و App Store — کلاب creator دعوت‌محور در استانبول.',
+      category: 'طراحی اپ',
+      catId: 'web',
+      date: '2026-08-01',
+      image: 'assets/images/content/marvi-society/screen-discover.jpg',
+      relatedService: 'pages/marvi-society.html'
+    },
+    {
+      slug: 'pages/articles/prosense-gas-detection.html',
+      title: 'تامین دتکتور گاز Prosense — از انتخاب مدل تا نصب',
+      excerpt: 'راهنمای دتکتور گاز و شعله برای نفت، پتروشیمی و HVAC — استعلام B2B.',
+      category: 'تجهیزات صنعتی',
+      catId: 'industrial',
+      date: '2026-06-15',
+      image: 'assets/images/prosense/slides/pq-sil.jpg',
+      relatedService: 'pages/prosense.html'
+    },
+    {
+      slug: 'pages/articles/liqui-moly-supply-iran.html',
+      title: 'تامین Liqui Moly آلمان — روغن و افزودنی اصل',
+      excerpt: 'مسیر استعلام روغن موتور و افزودنی برای ناوگان و کارگاه — B2B بیزدوار.',
+      category: 'تجهیزات صنعتی',
+      catId: 'industrial',
+      date: '2026-06-01',
+      image: 'assets/images/liqui-moly/octane-plus.jpg',
+      relatedService: 'pages/liqui-moly.html'
+    },
+    {
+      slug: 'pages/articles/field-tech-services.html',
+      title: 'خدمات فنی میدانی بیزدوار — تبریز و استانبول',
+      excerpt: 'دوربین، سیم‌کشی و نورمخفی — هماهنگی واتساپ و اجرای میدانی.',
+      category: 'خدمات فنی',
+      catId: 'company',
+      date: '2026-05-10',
+      image: 'assets/images/content/field-tech-hero.svg',
+      relatedService: 'pages/field-tech.html'
+    },
+    {
+      slug: 'pages/articles/local-seo-iran.html',
+      title: 'سئو محلی برای کسب‌وکار ایران — Google Maps',
+      excerpt: 'Google Business Profile، NAP یکسان و صفحات محلی — مسیر عملی رشد.',
+      category: 'بازاریابی دیجیتال',
+      catId: 'digital',
+      date: '2026-04-20',
+      image: 'assets/images/content/network-map.svg',
+      relatedService: 'pages/services.html#digital-marketing'
+    },
+    {
+      slug: 'pages/fxguard-exchange.html',
+      title: 'FXGuard Exchange — پلتفرم صرافی و OTC',
+      excerpt: 'نمونه‌کار فین‌تک: KYC، کیف پول، OTC و پنل ادمین — توسعه بیزدوار.',
+      category: 'فین‌تک',
+      catId: 'web',
+      date: '2024-11-01',
+      image: 'assets/images/products/fxguard/fxguard-hero.svg',
+      relatedService: 'pages/fxguard-exchange.html'
     }
   ],
 

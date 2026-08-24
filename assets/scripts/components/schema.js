@@ -501,6 +501,8 @@
 
     if (!items || !items.length) return;
 
+    const strip = (s) => String(s || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+
     const ld = {
 
       '@context': 'https://schema.org',
@@ -511,9 +513,9 @@
 
         '@type': 'Question',
 
-        name: item.q,
+        name: strip(item.q || item.q),
 
-        acceptedAnswer: { '@type': 'Answer', text: item.a }
+        acceptedAnswer: { '@type': 'Answer', text: strip(item.a || item.a) }
 
       }))
 

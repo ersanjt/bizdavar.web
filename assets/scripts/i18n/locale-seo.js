@@ -7,9 +7,9 @@
   const seoByLang = {
     fa: {
       home: {
-        seoTitle: 'طراحی سایت و خرید VEGA از استانبول | مشاوره رایگان',
-        seoDescription: 'طراحی سایت ۵روزه، بازاریابی دیجیتال و تامین اصل VEGA و Prosense از استانبول. استعلام قیمت و مشاوره رایگان در واتساپ — بیزدوار گروپ.',
-        seoKeywords: 'طراحی سایت استانبول, خرید VEGA, خرید Prosense, بازاریابی دیجیتال, Fast Web Studio, بیزدوار'
+        seoTitle: 'بیزدوار گروپ | خدمات دیجیتال و تامین صنعتی از استانبول',
+        seoDescription: 'خدمات دیجیتال، محصولات خودمان و تامین صنعتی VEGA، Prosense و Liqui Moly از استانبول. مسیر را انتخاب کنید — مشاوره رایگان در واتساپ.',
+        seoKeywords: 'بیزدوار گروپ, خدمات دیجیتال استانبول, تامین صنعتی, VEGA, Prosense, Fast Web Studio'
       },
       about: {
         seoTitle: 'درباره بیزدوار | خدمات دیجیتال و تامین صنعتی از ۲۰۱۳',
@@ -182,9 +182,9 @@
         seoKeywords: 'مدیریت شبکه اجتماعی, SMM, اینستاگرام, لینکدین, بیزدوار'
       },
       articleFastStudio: {
-        seoTitle: 'طراحی سایت در ۵ روز | قیمت ۹۹ تا ۲۹۹ دلار',
-        seoDescription: 'پلن‌های Fast Web Studio: پایه $99، فروشگاهی $199، حرفه‌ای $299. تحویل ۵روزه، RTL و سئو پایه — سفارش از بیزدوار.',
-        seoKeywords: 'طراحی سایت ۵ روز, قیمت طراحی سایت, Fast Web Studio, WooCommerce, بیزدوار'
+        seoTitle: 'راهنمای پلن‌های Fast Web Studio | ۹۹ تا ۲۹۹ دلار',
+        seoDescription: 'مقایسه پلن‌های Fast Web Studio: پایه $99، فروشگاهی $199، حرفه‌ای $299. راهنمای تحویل ۵روزه، RTL و سئو پایه — سفارش از صفحه Fast.',
+        seoKeywords: 'راهنمای Fast Web Studio, پلن طراحی سایت, WooCommerce, بیزدوار'
       },
       articleIndustrialSensors: {
         seoTitle: 'کدام سنسور VEGA بخرم؟ | راهنمای انتخاب',
@@ -205,13 +205,38 @@
         seoTitle: 'وبسایت چندزبانه برای ایران و ترکیه | بیزدوار',
         seoDescription: 'سایت فارسی–ترکی–انگلیسی با hreflang، اعتماد محلی و تحویل سریع — راهنمای بیزدوار برای کسب‌وکارهای دو بازاری.',
         seoKeywords: 'طراحی سایت چندزبانه, طراحی سایت استانبول, hreflang, بیزدوار'
+      },
+      articleMarviSociety: {
+        seoTitle: 'توسعه اپ iOS — Marvi Society | بیزدوار',
+        seoDescription: 'نمونه‌کار اپ iOS: UI/UX، Swift و انتشار App Store — کلاب creator در استانبول.',
+        seoKeywords: 'توسعه اپ iOS, Marvi Society, App Store, بیزدوار'
+      },
+      articleProsenseGas: {
+        seoTitle: 'تامین دتکتور گاز Prosense | راهنمای B2B — بیزدوار',
+        seoDescription: 'انتخاب مدل Prosense، SIL و Ex — پیش‌فاکتور و تامین B2B برای پروژه صنعتی.',
+        seoKeywords: 'Prosense, دتکتور گاز, SIL, تامین صنعتی, بیزدوار'
+      },
+      articleFieldTech: {
+        seoTitle: 'خدمات فنی میدانی — تبریز و استانبول | بیزدوار',
+        seoDescription: 'دوربین مداربسته، سیم‌کشی و نورمخفی — هماهنگی واتساپ و اجرای میدانی.',
+        seoKeywords: 'خدمات فنی تبریز, دوربین, نورمخفی, بیزدوار'
+      },
+      articleLocalSeo: {
+        seoTitle: 'سئو محلی ایران — Google Maps | بیزدوار',
+        seoDescription: 'Google Business Profile، NAP و صفحات محلی — راهنمای عملی سئو محلی.',
+        seoKeywords: 'سئو محلی, Google Maps, NAP, بیزدوار'
+      },
+      articleLiquiMolySupply: {
+        seoTitle: 'تامین Liqui Moly — روغن و افزودنی اصل | بیزدوار',
+        seoDescription: 'استعلام روغن موتور و افزودنی Liqui Moly برای ناوگان و کارگاه — B2B.',
+        seoKeywords: 'Liqui Moly, روغن موتور, تامین, بیزدوار'
       }
     },
     tr: {
       home: {
-        seoTitle: 'İstanbul’dan web tasarım ve VEGA tedariki | Ücretsiz danışmanlık',
-        seoDescription: '5 günde web sitesi, dijital pazarlama ve orijinal VEGA / Prosense tedariki. Fiyat teklifi ve ücretsiz danışmanlık — WhatsApp’tan yazın.',
-        seoKeywords: 'İstanbul web tasarım, VEGA tedarik, Prosense, dijital pazarlama, Fast Web Studio, Bizdavar'
+        seoTitle: 'Bizdavar Group | Dijital hizmet ve endüstriyel tedarik — İstanbul',
+        seoDescription: 'Dijital hizmetler, kendi ürünlerimiz ve VEGA / Prosense / Liqui Moly tedariki — İstanbul. Yolunuzu seçin, WhatsApp’tan ücretsiz danışın.',
+        seoKeywords: 'Bizdavar Group, İstanbul dijital hizmet, endüstriyel tedarik, VEGA, Prosense, Fast Web Studio'
       },
       about: {
         seoTitle: 'Hakkımızda | Bizdavar — dijital hizmetler ve endüstriyel tedarik',
@@ -407,13 +432,38 @@
         seoTitle: 'İran ve Türkiye için çok dilli web sitesi | Bizdavar',
         seoDescription: 'fa/tr/en site, hreflang ve yerel güven sinyalleri — çift pazar işletmeler için Bizdavar rehberi.',
         seoKeywords: 'çok dilli web, İstanbul web tasarım, hreflang, Bizdavar'
+      },
+      articleMarviSociety: {
+        seoTitle: 'iOS uygulama — Marvi Society vaka çalışması | Bizdavar',
+        seoDescription: 'UI/UX, Swift ve App Store yayını — İstanbul creator kulübü.',
+        seoKeywords: 'iOS uygulama, Marvi Society, App Store, Bizdavar'
+      },
+      articleProsenseGas: {
+        seoTitle: 'Prosense gaz dedektörü tedariki | Bizdavar',
+        seoDescription: 'Model seçimi, SIL ve Ex — B2B proforma.',
+        seoKeywords: 'Prosense, gaz dedektörü, SIL, Bizdavar'
+      },
+      articleFieldTech: {
+        seoTitle: 'Saha teknik hizmetleri — Tebriz ve İstanbul | Bizdavar',
+        seoDescription: 'CCTV, kablolama ve gizli aydınlatma.',
+        seoKeywords: 'saha hizmeti, CCTV, Bizdavar'
+      },
+      articleLocalSeo: {
+        seoTitle: 'Yerel SEO — Google Maps | Bizdavar',
+        seoDescription: 'Google Business Profile ve NAP rehberi.',
+        seoKeywords: 'yerel SEO, Google Maps, Bizdavar'
+      },
+      articleLiquiMolySupply: {
+        seoTitle: 'Liqui Moly tedariki | Bizdavar',
+        seoDescription: 'Orijinal motor yağı ve katkı maddeleri — B2B.',
+        seoKeywords: 'Liqui Moly, motor yağı, Bizdavar'
       }
     },
     en: {
       home: {
-        seoTitle: 'Web design & VEGA supply from Istanbul | Free consult',
-        seoDescription: '5-day websites, digital marketing, and genuine VEGA / Prosense supply from Istanbul. WhatsApp quote and free consultation — Bizdavar Group.',
-        seoKeywords: 'Istanbul web design, buy VEGA, Prosense, digital marketing, Fast Web Studio, Bizdavar'
+        seoTitle: 'Bizdavar Group | Digital services and industrial supply from Istanbul',
+        seoDescription: 'Digital services, products we build, and genuine VEGA / Prosense / Liqui Moly supply from Istanbul. Pick your path — free WhatsApp consult.',
+        seoKeywords: 'Bizdavar Group, Istanbul digital services, industrial supply, VEGA, Prosense, Fast Web Studio'
       },
       about: {
         seoTitle: 'About Bizdavar | Digital services & industrial supply since 2013',
@@ -609,6 +659,31 @@
         seoTitle: 'Multilingual websites for Iran and Turkey | Bizdavar',
         seoDescription: 'fa/tr/en sites with hreflang and local trust — Bizdavar guide for dual-market businesses.',
         seoKeywords: 'multilingual website, Istanbul web design, hreflang, Bizdavar'
+      },
+      articleMarviSociety: {
+        seoTitle: 'iOS app development — Marvi Society case study | Bizdavar',
+        seoDescription: 'UI/UX, Swift and App Store release — Istanbul creator club.',
+        seoKeywords: 'iOS app, Marvi Society, App Store, Bizdavar'
+      },
+      articleProsenseGas: {
+        seoTitle: 'Prosense gas detector supply | Bizdavar',
+        seoDescription: 'Model selection, SIL and Ex — B2B proforma.',
+        seoKeywords: 'Prosense, gas detector, SIL, Bizdavar'
+      },
+      articleFieldTech: {
+        seoTitle: 'Field tech services — Tabriz and Istanbul | Bizdavar',
+        seoDescription: 'CCTV, wiring and cove lighting on-site.',
+        seoKeywords: 'field tech, CCTV, Bizdavar'
+      },
+      articleLocalSeo: {
+        seoTitle: 'Local SEO for Iran — Google Maps | Bizdavar',
+        seoDescription: 'Google Business Profile and NAP guide.',
+        seoKeywords: 'local SEO, Google Maps, Bizdavar'
+      },
+      articleLiquiMolySupply: {
+        seoTitle: 'Liqui Moly supply | Bizdavar',
+        seoDescription: 'Genuine engine oils and additives — B2B.',
+        seoKeywords: 'Liqui Moly, engine oil, Bizdavar'
       }
     }
   };

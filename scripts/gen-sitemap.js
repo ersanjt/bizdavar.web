@@ -68,6 +68,11 @@ const PAGES = [
   { path: '/pages/articles/social-media-management', changefreq: 'monthly', priority: 0.75, lastmod: '2026-08-24' },
   { path: '/pages/articles/fast-studio', changefreq: 'monthly', priority: 0.75, lastmod: '2026-08-24' },
   { path: '/pages/articles/industrial-sensors', changefreq: 'monthly', priority: 0.75, lastmod: '2026-08-24' },
+  { path: '/pages/articles/marvi-society-ios-app', changefreq: 'monthly', priority: 0.85, lastmod: '2026-08-24' },
+  { path: '/pages/articles/prosense-gas-detection', changefreq: 'monthly', priority: 0.85, lastmod: '2026-08-24' },
+  { path: '/pages/articles/field-tech-services', changefreq: 'monthly', priority: 0.8, lastmod: '2026-08-24' },
+  { path: '/pages/articles/local-seo-iran', changefreq: 'monthly', priority: 0.75, lastmod: '2026-08-24' },
+  { path: '/pages/articles/liqui-moly-supply-iran', changefreq: 'monthly', priority: 0.85, lastmod: '2026-08-24' },
   { path: '/pages/privacy', changefreq: 'yearly', priority: 0.3, lastmod: SITE_UPDATE }
 ];
 

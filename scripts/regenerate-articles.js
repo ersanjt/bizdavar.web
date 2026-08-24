@@ -34,6 +34,10 @@ function relatedJs(a) {
 
 function secondaryLabel(a) {
   if (a.slug === 'vega-supply-iran' || a.slug === 'industrial-sensors') return 'کاتالوگ VEGA';
+  if (a.slug === 'prosense-gas-detection') return 'کاتالوگ Prosense';
+  if (a.slug === 'liqui-moly-supply-iran') return 'Liqui Moly';
+  if (a.slug === 'marvi-society-ios-app') return 'نمونه‌کار Marvi';
+  if (a.slug === 'field-tech-services') return 'خدمات فنی';
   if (a.slug === 'fast-studio' || a.slug === 'multilingual-web-iran-turkey') return 'Fast Web Studio';
   return CTA.fa.secondary;
 }

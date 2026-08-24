@@ -187,6 +187,9 @@
         msg = `${base}\n${location.href}`;
       }
     }
+    const page = (typeof document !== 'undefined' && document.body && document.body.dataset.page) || 'site';
+    const lang = (typeof document !== 'undefined' && document.documentElement.lang) || '';
+    msg = `${msg}\n[${page}][${lang}]`;
     return `https://wa.me/${num}?text=${encodeURIComponent(msg)}`;
   }
 

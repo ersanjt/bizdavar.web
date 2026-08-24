@@ -44,6 +44,11 @@ const PAGE_OG = {
   articleAboutBizdavar: 'assets/images/gallery/expo-imen-booth.jpg',
   articleVegaSupplyIran: 'assets/images/vega/slides/value-process-safety.jpg',
   articleMultilingualWeb: 'assets/images/content/services-web-mockup.svg',
+  articleMarviSociety: 'assets/images/content/marvi-society/screen-discover.jpg',
+  articleProsenseGas: 'assets/images/prosense/slides/pq-sil.jpg',
+  articleFieldTech: 'assets/images/content/field-tech-hero.svg',
+  articleLocalSeo: 'assets/images/content/network-map.svg',
+  articleLiquiMolySupply: 'assets/images/liqui-moly/octane-plus.jpg',
   bzDiamond: 'assets/images/partners/bzdiamond.webp',
   kayaOne: 'assets/images/partners/kaya-one.svg',
   smmTurk: 'assets/images/partners/smm-turk.svg',
@@ -90,7 +95,12 @@ const PAGE_ROUTES = {
   articleIndustrialSensors: '/pages/articles/industrial-sensors',
   articleAboutBizdavar: '/pages/articles/about-bizdavar-group',
   articleVegaSupplyIran: '/pages/articles/vega-supply-iran',
-  articleMultilingualWeb: '/pages/articles/multilingual-web-iran-turkey'
+  articleMultilingualWeb: '/pages/articles/multilingual-web-iran-turkey',
+  articleMarviSociety: '/pages/articles/marvi-society-ios-app',
+  articleProsenseGas: '/pages/articles/prosense-gas-detection',
+  articleFieldTech: '/pages/articles/field-tech-services',
+  articleLocalSeo: '/pages/articles/local-seo-iran',
+  articleLiquiMolySupply: '/pages/articles/liqui-moly-supply-iran'
 };
 
 const manifest = {};

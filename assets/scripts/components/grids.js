@@ -55,6 +55,9 @@
     const dateHtml = p.date
       ? `<time class="blog-item__date" datetime="${p.date}">${formatBlogDate(p.date)}</time>`
       : '';
+    const serviceLink = p.relatedService
+      ? `<a href="${path(p.relatedService)}" class="blog-item__service-link">${t('blogPage.catalog.relatedService', 'خدمت مرتبط')}${linkArrow()}</a>`
+      : '';
     return `
       <article class="blog-item${rich ? ' blog-item--card' : ''}" data-cat="${p.catId || ''}">
         ${rich ? img : ''}
@@ -65,7 +68,10 @@
           </div>
           <h3><a href="${href}">${p.title}</a></h3>
           <p>${p.excerpt}</p>
-          <a href="${href}" class="service-card__link">${t('common.readMore', 'ادامه مطلب')}${linkArrow()}</a>
+          <div class="blog-item__links">
+            <a href="${href}" class="service-card__link">${t('common.readMore', 'ادامه مطلب')}${linkArrow()}</a>
+            ${serviceLink}
+          </div>
         </div>
       </article>`;
   }
@@ -90,9 +96,13 @@
     const gridEl = document.getElementById('blogGrid');
     const pillarsEl = document.getElementById('blogPillars');
     const countEl = document.getElementById('blogCount');
+    const featuredEl = document.getElementById('blogFeatured');
+    const linkHubEl = document.getElementById('blogLinkHub');
     if (!gridEl) return;
 
-    const posts = window.getBlogPostsList();
+    const posts = window.getBlogPostsList().slice().sort((a, b) =>
+      (b.date || '').localeCompare(a.date || '')
+    );
     const cats = [
       { id: 'digital', key: 'blogPage.topics.digital' },
       { id: 'web', key: 'blogPage.topics.web' },
@@ -199,6 +209,20 @@
           <p dir="${dir}">${item.a}</p>
         </details>`).join('');
       if (typeof window.injectFaqSchema === 'function') window.injectFaqSchema(faqItems);
+    }
+
+    if (featuredEl && posts.length) {
+      const featured = posts.slice(0, 2);
+      featuredEl.innerHTML = featured.map(p => blogCardHtml(p, { rich: true })).join('');
+    }
+
+    const hubItems = window.BIZDAVAR_I18N?.raw('blogPage.linkHub.items');
+    if (linkHubEl && Array.isArray(hubItems) && hubItems.length) {
+      linkHubEl.innerHTML = hubItems.map(item => `
+        <a href="${path(item.url)}" class="blog-link-hub__item">
+          <strong>${item.title}</strong>
+          <span>${item.desc || ''}</span>
+        </a>`).join('');
     }
 
     setActive(active, false);

@@ -231,8 +231,8 @@
         },
         intro: {
           title: 'دانش عملی از پروژه‌های واقعی',
-          body: 'وبلاگ بیزدوار خلاصهٔ تجربهٔ <a href="/pages/services">خدمات دیجیتال</a>، <a href="/pages/fast">طراحی سایت Fast Studio</a> و <a href="/pages/products#supply">تامین صنعتی</a> است. اینجا دیجیتال مارکتینگ، سئو، SMM، وبسایت چندزبانه و مسیر خرید VEGA را بدون شعار — با مسیر اجرا — می‌خوانید.',
-          statPosts: '۱۱',
+          body: 'وبلاگ بیزدوار خلاصهٔ تجربهٔ <a href="/pages/services">خدمات دیجیتال</a>، <a href="/pages/fast">Fast Studio</a>، <a href="/pages/field-tech">خدمات فنی</a> و <a href="/pages/products#supply">تامین صنعتی</a> (VEGA، Prosense، Liqui Moly) است. هر مقاله به صفحهٔ خدمت، محصول یا <a href="/pages/portfolio">نمونه‌کار</a> لینک می‌شود.',
+          statPosts: '۱۳',
           statPostsLabel: 'مقاله و راهنما',
           statLangs: '۵',
           statLangsLabel: 'زبان انتشار',
@@ -256,7 +256,30 @@
           filterAll: 'همه',
           empty: 'مقاله‌ای در این دسته نیست.',
           filterAria: 'فیلتر موضوع مقالات',
-          countText: '{count} مطلب'
+          countText: '{count} مطلب',
+          relatedService: 'خدمت مرتبط'
+        },
+        featured: {
+          eyebrow: 'پیشنهاد ویراستار',
+          title: 'جدیدترین راهنماها',
+          desc: 'آخرین مقالات با لینک مستقیم به خدمت یا استعلام.'
+        },
+        linkHub: {
+          eyebrow: 'مسیرهای سریع',
+          title: 'از وبلاگ به صفحات کلیدی',
+          desc: 'لینک‌های داخلی برای پیدا کردن خدمت، کاتالوگ یا تماس — بدون جستجو در منو.',
+          items: [
+            { title: 'خدمات دیجیتال', url: '/pages/services', desc: 'سئو، SMM و کمپین' },
+            { title: 'Fast Web Studio', url: '/pages/fast', desc: 'سایت در ۵ روز' },
+            { title: 'کاتالوگ VEGA', url: '/pages/vega', desc: 'سنسور سطح و فشار' },
+            { title: 'Prosense', url: '/pages/prosense', desc: 'دتکتور گاز' },
+            { title: 'Liqui Moly', url: '/pages/liqui-moly', desc: 'روغن و افزودنی' },
+            { title: 'خدمات فنی', url: '/pages/field-tech', desc: 'تبریز و استانبول' },
+            { title: 'نمونه‌کارها', url: '/pages/portfolio', desc: 'Marvi، FXGuard و…' },
+            { title: 'Marvi Society', url: '/pages/marvi-society', desc: 'اپ iOS' },
+            { title: 'محصولات', url: '/pages/products', desc: 'BizTab و BizPet' },
+            { title: 'تماس', url: '/pages/contact', desc: 'مشاوره رایگان' }
+          ]
         },
         clusters: {
           eyebrow: 'ادامه مسیر',
@@ -267,7 +290,13 @@
           webTitle: 'طراحی سایت',
           webDesc: 'سایت شرکتی و فروشگاهی در ۵ روز — RTL و سئو پایه.',
           industrialTitle: 'خرید VEGA',
-          industrialDesc: 'کد سفارش، پیش‌فاکتور و لجستیک تا محل پروژه.'
+          industrialDesc: 'کد سفارش، پیش‌فاکتور و لجستیک تا محل پروژه.',
+          prosenseTitle: 'دتکتور Prosense',
+          prosenseDesc: 'گاز، شعله و SIL — پیش‌فاکتور B2B.',
+          portfolioTitle: 'نمونه‌کارها',
+          portfolioDesc: 'Marvi Society، FXGuard و پروژه‌های دیجیتال.',
+          appsTitle: 'اپ iOS',
+          appsDesc: 'طراحی، Swift و انتشار App Store.'
         },
         faq: {
           eyebrow: 'سوالات متداول',
@@ -387,7 +416,7 @@
         intro: {
           title: 'Gerçek projelerden pratik bilgi',
           body: 'Bizdavar blog, <a href="/pages/services">dijital hizmetler</a>, <a href="/pages/fast">Fast Studio web tasarım</a> ve <a href="/pages/products#supply">endüstriyel tedarik</a> deneyimini özetler. Dijital pazarlama, SEO, SMM, çok dilli site ve VEGA satın alma yolunu slogan değil — uygulama ile okuyun.',
-          statPosts: '11',
+          statPosts: '13',
           statPostsLabel: 'Makale ve rehber',
           statLangs: '5',
           statLangsLabel: 'Yayın dili',
@@ -411,7 +440,30 @@
           filterAll: 'Tümü',
           empty: 'Bu kategoride yazı yok.',
           filterAria: 'Yazı konusu filtresi',
-          countText: '{count} yazı'
+          countText: '{count} yazı',
+          relatedService: 'İlgili hizmet'
+        },
+        featured: {
+          eyebrow: 'Editör seçimi',
+          title: 'En yeni rehberler',
+          desc: 'Hizmet veya teklif sayfasına doğrudan bağlantılı son yazılar.'
+        },
+        linkHub: {
+          eyebrow: 'Hızlı yollar',
+          title: 'Blogdan ana sayfalara',
+          desc: 'Hizmet, katalog veya iletişim — menüde aramadan.',
+          items: [
+            { title: 'Dijital hizmetler', url: '/pages/services', desc: 'SEO, SMM ve kampanya' },
+            { title: 'Fast Web Studio', url: '/pages/fast', desc: '5 günde site' },
+            { title: 'VEGA kataloğu', url: '/pages/vega', desc: 'Seviye sensörü' },
+            { title: 'Prosense', url: '/pages/prosense', desc: 'Gaz dedektörü' },
+            { title: 'Liqui Moly', url: '/pages/liqui-moly', desc: 'Yağ ve katkı' },
+            { title: 'Saha hizmetleri', url: '/pages/field-tech', desc: 'Tebriz ve İstanbul' },
+            { title: 'Portföy', url: '/pages/portfolio', desc: 'Marvi, FXGuard…' },
+            { title: 'Marvi Society', url: '/pages/marvi-society', desc: 'iOS uygulama' },
+            { title: 'Ürünler', url: '/pages/products', desc: 'BizTab ve BizPet' },
+            { title: 'İletişim', url: '/pages/contact', desc: 'Ücretsiz danışmanlık' }
+          ]
         },
         clusters: {
           eyebrow: 'Sonraki adım',
@@ -422,7 +474,13 @@
           webTitle: 'Web tasarım',
           webDesc: 'Kurumsal ve mağaza sitesi 5 günde — RTL ve temel SEO.',
           industrialTitle: 'VEGA satın al',
-          industrialDesc: 'Sipariş kodu, proforma ve sahaya lojistik.'
+          industrialDesc: 'Sipariş kodu, proforma ve sahaya lojistik.',
+          prosenseTitle: 'Prosense dedektör',
+          prosenseDesc: 'Gaz, alev ve SIL — B2B proforma.',
+          portfolioTitle: 'Portföy',
+          portfolioDesc: 'Marvi Society, FXGuard ve dijital projeler.',
+          appsTitle: 'iOS uygulama',
+          appsDesc: 'Tasarım, Swift ve App Store.'
         },
         faq: {
           eyebrow: 'SSS',
@@ -542,7 +600,7 @@
         intro: {
           title: 'Field notes from live projects',
           body: 'The Bizdavar blog distils <a href="/pages/services">digital services</a>, <a href="/pages/fast">Fast Studio web design</a> and <a href="/pages/products#supply">industrial supply</a>. Read digital marketing, SEO, SMM, multilingual sites and the VEGA buying path as execution — not slogans.',
-          statPosts: '11',
+          statPosts: '13',
           statPostsLabel: 'Guides',
           statLangs: '5',
           statLangsLabel: 'Languages',
@@ -566,7 +624,30 @@
           filterAll: 'All',
           empty: 'No articles in this topic.',
           filterAria: 'Article topic filter',
-          countText: '{count} posts'
+          countText: '{count} posts',
+          relatedService: 'Related service'
+        },
+        featured: {
+          eyebrow: 'Editor picks',
+          title: 'Latest guides',
+          desc: 'Recent articles with direct links to services or quotes.'
+        },
+        linkHub: {
+          eyebrow: 'Quick paths',
+          title: 'From blog to key pages',
+          desc: 'Internal links to services, catalogs and contact — no menu hunting.',
+          items: [
+            { title: 'Digital services', url: '/pages/services', desc: 'SEO, SMM and campaigns' },
+            { title: 'Fast Web Studio', url: '/pages/fast', desc: 'Site in 5 days' },
+            { title: 'VEGA catalog', url: '/pages/vega', desc: 'Level sensors' },
+            { title: 'Prosense', url: '/pages/prosense', desc: 'Gas detectors' },
+            { title: 'Liqui Moly', url: '/pages/liqui-moly', desc: 'Oils and additives' },
+            { title: 'Field tech', url: '/pages/field-tech', desc: 'Tabriz and Istanbul' },
+            { title: 'Portfolio', url: '/pages/portfolio', desc: 'Marvi, FXGuard…' },
+            { title: 'Marvi Society', url: '/pages/marvi-society', desc: 'iOS app' },
+            { title: 'Products', url: '/pages/products', desc: 'BizTab and BizPet' },
+            { title: 'Contact', url: '/pages/contact', desc: 'Free consultation' }
+          ]
         },
         clusters: {
           eyebrow: 'Next step',
@@ -577,7 +658,13 @@
           webTitle: 'Web design',
           webDesc: 'Corporate and store sites in 5 days — RTL and basic SEO.',
           industrialTitle: 'Buy VEGA',
-          industrialDesc: 'Order code, proforma and logistics to site.'
+          industrialDesc: 'Order code, proforma and logistics to site.',
+          prosenseTitle: 'Prosense detectors',
+          prosenseDesc: 'Gas, flame and SIL — B2B proforma.',
+          portfolioTitle: 'Portfolio',
+          portfolioDesc: 'Marvi Society, FXGuard and digital work.',
+          appsTitle: 'iOS apps',
+          appsDesc: 'Design, Swift and App Store release.'
         },
         faq: {
           eyebrow: 'FAQ',
@@ -695,7 +782,13 @@
       ['بیزدوار گروپ چیست؟ — تاریخچه، تیم و حوزه‌های فعالیت', 'شناسنامه کامل بیزدوار: بنیان‌گذار، ۱۱ کشور، ۱۰۰+ پروژه و اکوسیستم برندها.', 'درباره شرکت'],
       ['BizTab — اولین دماسنج دیواری غیرتماسی تبریز', 'محصول اختصاصی تیم بیزدوار — دقت کمتر از ۰.۳ درجه، تأیید دانشگاه تبریز.', 'محصول اختصاصی'],
       ['دستگاه ضدعفونی دست بیزدوار V5', 'سنسور التراسونیک و پاشش خودکار — مهندسی‌شده توسط تیم بیزدوار.', 'محصول اختصاصی'],
-      ['BizPet — پد حرارتی بیز پت', 'طراحی و تولید در مرکز رشد فناوری دانشگاه تبریز با همکاری ایمن سهند پدیده.', 'محصول اختصاصی']
+      ['BizPet — پد حرارتی بیز پت', 'طراحی و تولید در مرکز رشد فناوری دانشگاه تبریز با همکاری ایمن سهند پدیده.', 'محصول اختصاصی'],
+      ['توسعه اپ iOS — نمونه‌کار Marvi Society و انتشار App Store', 'از UI/UX تا Swift و App Store — کلاب creator دعوت‌محور در استانبول.', 'طراحی اپ'],
+      ['تامین دتکتور گاز Prosense — از انتخاب مدل تا نصب', 'راهنمای دتکتور گاز و شعله برای نفت، پتروشیمی و HVAC — استعلام B2B.', 'تجهیزات صنعتی'],
+      ['تامین Liqui Moly آلمان — روغن و افزودنی اصل', 'مسیر استعلام روغن موتور و افزودنی برای ناوگان و کارگاه — B2B بیزدوار.', 'تجهیزات صنعتی'],
+      ['خدمات فنی میدانی بیزدوار — تبریز و استانبول', 'دوربین، سیم‌کشی و نورمخفی — هماهنگی واتساپ و اجرای میدانی.', 'خدمات فنی'],
+      ['سئو محلی برای کسب‌وکار ایران — Google Maps', 'Google Business Profile، NAP یکسان و صفحات محلی — مسیر عملی رشد.', 'بازاریابی دیجیتال'],
+      ['FXGuard Exchange — پلتفرم صرافی و OTC', 'نمونه‌کار فین‌تک: KYC، کیف پول، OTC و پنل ادمین — توسعه بیزدوار.', 'فین‌تک']
     ],
     tr: [
       ['İran’da VEGA sensör tedariki — sorgudan sahaya', 'Farsça danışmanlık, proforma ve orijinal VEGA lojistiği.', 'Endüstriyel ekipman'],
@@ -708,7 +801,13 @@
       ['Bizdavar Group nedir? Tarihçe, ekip ve faaliyet alanları', 'Bizdavar profili: kurucu, 11 ülke, 100+ proje ve marka ekosistemi.', 'Şirket hakkında'],
       ['BizTab — Tebriz’in ilk temasız duvar termometresi', 'Bizdavar ürünü — 0,3°C altı hata, Tebriz Üniversitesi onayı.', 'Özgün ürün'],
       ['Bizdavar V5 el dezenfektan cihazı', 'Ultrasonik sensör ve otomatik püskürtme — Bizdavar mühendisliği.', 'Özgün ürün'],
-      ['BizPet — BizPet ısı pedi', 'Tebriz Üniversitesi teknoloji kuluçkasında Imen Sahand Padideh ile tasarım ve üretim.', 'Özgün ürün']
+      ['BizPet — BizPet ısı pedi', 'Tebriz Üniversitesi teknoloji kuluçkasında Imen Sahand Padideh ile tasarım ve üretim.', 'Özgün ürün'],
+      ['iOS uygulama — Marvi Society vaka çalışması', 'UI/UX’ten Swift ve App Store’a — İstanbul creator kulübü.', 'Uygulama tasarımı'],
+      ['Prosense gaz dedektörü tedariki', 'Gaz/alev dedektörü seçimi ve B2B teklif — petrol ve HVAC.', 'Endüstriyel ekipman'],
+      ['Liqui Moly tedariki — orijinal yağ ve katkı', 'Filo ve atölye için motor yağı ve katkı maddeleri — B2B Bizdavar.', 'Endüstriyel ekipman'],
+      ['Bizdavar saha teknik hizmetleri — Tebriz ve İstanbul', 'CCTV, kablolama ve gizli aydınlatma — WhatsApp koordinasyonu.', 'Saha hizmetleri'],
+      ['Yerel SEO — İran işletmeleri için Google Maps', 'Google Business Profile, NAP ve yerel sayfalar.', 'Dijital pazarlama'],
+      ['FXGuard Exchange — borsa ve OTC platformu', 'Fintech vaka: KYC, cüzdan, OTC ve admin paneli.', 'Fintech']
     ],
     en: [
       ['VEGA sensor supply to Iran — from inquiry to site', 'Persian consulting, proforma invoice, and original VEGA logistics.', 'Industrial equipment'],
@@ -721,7 +820,13 @@
       ['What is Bizdavar Group? History, team and activities', 'Bizdavar profile: founder, 11 countries, 100+ projects and brand ecosystem.', 'About company'],
       ['BizTab — first non-contact wall thermometer from Tabriz', 'Bizdavar product — error under 0.3°C, University of Tabriz approval.', 'Owned product'],
       ['Bizdavar V5 hand sanitizer', 'Ultrasonic sensor and automatic spray — engineered by Bizdavar.', 'Owned product'],
-      ['BizPet — BizPet heating pad', 'Designed and built at the University of Tabriz incubator with Imen Sahand Padideh.', 'Owned product']
+      ['BizPet — BizPet heating pad', 'Designed and built at the University of Tabriz incubator with Imen Sahand Padideh.', 'Owned product'],
+      ['iOS app development — Marvi Society case study', 'From UI/UX to Swift and App Store — invite-only creator club in Istanbul.', 'App development'],
+      ['Prosense gas detector supply', 'Gas and flame detector selection and B2B quotes for oil and HVAC.', 'Industrial equipment'],
+      ['Liqui Moly supply — genuine oils and additives', 'Engine oil and additives for fleets and workshops — Bizdavar B2B.', 'Industrial equipment'],
+      ['Bizdavar field tech — Tabriz and Istanbul', 'CCTV, wiring and cove lighting — WhatsApp coordination.', 'Field services'],
+      ['Local SEO for Iran — Google Maps', 'Google Business Profile, consistent NAP and local landing pages.', 'Digital marketing'],
+      ['FXGuard Exchange — exchange and OTC platform', 'Fintech case study: KYC, wallet, OTC and admin panel.', 'Fintech']
     ]
   };
 

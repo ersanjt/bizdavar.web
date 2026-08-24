@@ -34,9 +34,9 @@
   var pageSeoRu = {
     home: {
       crumb: 'Главная',
-      seoTitle: 'Веб-дизайн и поставка VEGA из Стамбула | Бесплатная консультация',
-      seoDescription: 'Сайт за 5 дней, цифровой маркетинг и оригинальные VEGA / Prosense из Стамбула. Расчёт цены и бесплатная консультация в WhatsApp — Bizdavar.',
-      seoKeywords: 'веб-дизайн Стамбул, купить VEGA, Prosense, цифровой маркетинг, Fast Web Studio, Bizdavar'
+      seoTitle: 'Bizdavar Group | цифровые услуги и промышленные поставки — Стамбул',
+      seoDescription: 'Цифровые услуги, собственные продукты и поставки VEGA / Prosense / Liqui Moly из Стамбула. Выберите путь — бесплатная консультация в WhatsApp.',
+      seoKeywords: 'Bizdavar Group, цифровые услуги Стамбул, промышленные поставки, VEGA, Prosense, Fast Web Studio'
     },
     about: {
       crumb: 'О нас',
@@ -277,9 +277,9 @@
   var pageSeoAr = {
     home: {
       crumb: 'الرئيسية',
-      seoTitle: 'تصميم مواقع وشراء VEGA من إسطنبول | استشارة مجانية',
-      seoDescription: 'موقع خلال ٥ أيام، تسويق رقمي وتوريد VEGA وProsense الأصلي من إسطنبول. عرض سعر واستشارة مجانية عبر واتساب — Bizdavar.',
-      seoKeywords: 'تصميم مواقع إسطنبول, شراء VEGA, Prosense, تسويق رقمي, Fast Web Studio, Bizdavar'
+      seoTitle: 'Bizdavar Group | خدمات رقمية وتوريد صناعي من إسطنبول',
+      seoDescription: 'خدمات رقمية ومنتجاتنا وتوريد VEGA وProsense وLiqui Moly من إسطنبول. اختر مسارك — استشارة مجانية عبر واتساب.',
+      seoKeywords: 'Bizdavar Group, خدمات رقمية إسطنبول, توريد صناعي, VEGA, Prosense, Fast Web Studio'
     },
     about: {
       crumb: 'من نحن',
@@ -586,10 +586,10 @@
     ctaDesc: 'Напишите в WhatsApp — бесплатная консультация из Стамбула и Тебриза',
     ctaForm: 'Запросить расчёт',
     faqs: [
-      { q: 'Как купить оригинальные датчики VEGA для проекта в Иране?', a: 'Выберите модель на странице VEGA или пришлите данные резервуара/процесса в WhatsApp. Bizdavar выдаёт точный order code, проформу и логистику из Стамбула.' },
-      { q: 'Сколько стоит сайт Fast Web Studio?', a: 'Базовый $99, магазин $199, pro $299 — сдача от 5 рабочих дней, RTL и базовое SEO.' },
-      { q: 'Где взять газовые детекторы Prosense?', a: 'Оригинальные PQ, SafeVader и PPS+ с сертификатами SIL. Расчёт в WhatsApp на фарси или турецком.' },
-      { q: 'Как начинается бесплатная консультация?', a: 'Заполните форму или напишите в WhatsApp. Отвечаем из Стамбула и Тебриза в рабочие часы.' },
+      { q: 'Как купить оригинальные датчики VEGA для проекта в Иране?', a: 'Выберите модель на <a href="/ru/pages/vega">странице VEGA</a> или пришлите данные резервуара в WhatsApp. Bizdavar выдаёт order code, проформу и логистику из Стамбула.' },
+      { q: 'Сколько стоит сайт Fast Web Studio?', a: 'Базовый $99, магазин $199, pro $299 — детали на <a href="/ru/pages/fast">Fast Web Studio</a>. Сдача от 5 рабочих дней, RTL и базовое SEO.' },
+      { q: 'Где взять газовые детекторы Prosense?', a: 'Оригинальные PQ, SafeVader и PPS+ с сертификатами SIL. Каталог: <a href="/ru/pages/prosense">Prosense</a>. Расчёт в WhatsApp на фарси или турецком.' },
+      { q: 'Как начинается бесплатная консультация?', a: 'Оставьте WhatsApp в <a href="/ru/pages/contact">форме</a> или напишите напрямую. Отвечаем из Стамбула и Тебриза в рабочие часы.' },
       { q: 'Где работает Bizdavar?', a: 'Штаб-квартира в Стамбуле, координация по Ирану в Тебризе, проекты в 11 странах — цифровые услуги и промышленные поставки.' }
     ]
   };
@@ -663,10 +663,10 @@
     ctaDesc: 'راسل واتساب — استشارة مجانية من إسطنبول وتبريز',
     ctaForm: 'طلب عرض سعر',
     faqs: [
-      { q: 'كيف أشتري حساسات VEGA الأصلية لمشروع في إيران؟', a: 'اختر الموديل من صفحة VEGA أو أرسل بيانات الخزان/العملية عبر واتساب. Bizdavar يصدر رمز الطلب والفاتورة المبدئية واللوجستيات من إسطنبول.' },
-      { q: 'كم يكلف موقع Fast Web Studio؟', a: 'أساسي $99 ومتجر $199 واحترافي $299 — التسليم من ٥ أيام عمل مع RTL وSEO أساسي.' },
-      { q: 'من أين أحصل على كواشف غاز Prosense؟', a: 'PQ وSafeVader وPPS+ أصلية بشهادات SIL. عرض السعر عبر واتساب بالفارسية أو التركية.' },
-      { q: 'كيف تبدأ الاستشارة المجانية؟', a: 'املأ النموذج أو راسل واتساب. نرد من إسطنبول وتبريز خلال ساعات العمل.' },
+      { q: 'كيف أشتري حساسات VEGA الأصلية لمشروع في إيران؟', a: 'اختر الموديل من <a href="/ar/pages/vega">صفحة VEGA</a> أو أرسل بيانات الخزان عبر واتساب. Bizdavar يصدر رمز الطلب والفاتورة المبدئية واللوجستيات من إسطنبول.' },
+      { q: 'كم يكلف موقع Fast Web Studio؟', a: 'أساسي $99 ومتجر $199 واحترافي $299 — التفاصيل في <a href="/ar/pages/fast">Fast Web Studio</a>. التسليم من ٥ أيام عمل مع RTL وSEO أساسي.' },
+      { q: 'من أين أحصل على كواشف غاز Prosense؟', a: 'PQ وSafeVader وPPS+ أصلية بشهادات SIL. الكتالوج: <a href="/ar/pages/prosense">Prosense</a>. عرض السعر عبر واتساب بالفارسية أو التركية.' },
+      { q: 'كيف تبدأ الاستشارة المجانية؟', a: 'اترك رقم واتساب في <a href="/ar/pages/contact">نموذج الاتصال</a> أو راسلنا مباشرة. نرد من إسطنبول وتبريز خلال ساعات العمل.' },
       { q: 'أين تعمل Bizdavar؟', a: 'المقر في إسطنبول وتنسيق إيران في تبريز ومشاريع في ١١ دولة — خدمات رقمية وتوريد صناعي.' }
     ]
   };
@@ -1348,7 +1348,7 @@
     intro: {
       title: 'Практика с живых проектов',
       body: 'Блог Bizdavar — сжатый опыт <a href="/pages/services">цифровых услуг</a>, <a href="/pages/fast">Fast Studio</a> и <a href="/pages/products#supply">промпоставок</a>. Маркетинг, SEO, SMM, многоязычный сайт и закупка VEGA — как исполнение, не слоган.',
-      statPosts: '11',
+      statPosts: '13',
       statPostsLabel: 'Гайды',
       statLangs: '5',
       statLangsLabel: 'Языки',
@@ -1422,7 +1422,13 @@
     { title: 'Что такое Bizdavar Group? История, команда, направления', excerpt: 'Профиль: основатель, 11 стран, 100+ проектов и экосистема брендов.', category: 'О компании' },
     { title: 'BizTab — первый бесконтактный настенный термометр Тебриза', excerpt: 'Продукт Bizdavar — погрешность менее 0,3°C, одобрение Университета Тебриза.', category: 'Свой продукт' },
     { title: 'Санитайзер рук Bizdavar V5', excerpt: 'Ультразвуковой датчик и автораспыление — инженерия Bizdavar.', category: 'Свой продукт' },
-    { title: 'BizPet — нагревательный мат BizPet', excerpt: 'Проектирование и производство в инкубаторе Университета Тебриза с Imen Sahand Padideh.', category: 'Свой продукт' }
+    { title: 'BizPet — нагревательный мат BizPet', excerpt: 'Проектирование и производство в инкубаторе Университета Тебриза с Imen Sahand Padideh.', category: 'Свой продукт' },
+    { title: 'Разработка iOS — кейс Marvi Society', excerpt: 'UI/UX, Swift и App Store — клуб creator в Стамбуле.', category: 'Разработка приложений' },
+    { title: 'Поставка газовых датчиков Prosense', excerpt: 'Выбор модели и B2B-запрос для нефти и HVAC.', category: 'Промоборудование' },
+    { title: 'Поставка Liqui Moly — масла и присадки', excerpt: 'Моторные масла для автопарка и мастерских — B2B Bizdavar.', category: 'Промоборудование' },
+    { title: 'Выездные услуги Bizdavar — Тебриз и Стамбул', excerpt: 'CCTV, проводка и скрытая подсветка — WhatsApp.', category: 'Выездные услуги' },
+    { title: 'Локальное SEO — Google Maps для Ирана', excerpt: 'Google Business Profile, NAP и локальные страницы.', category: 'Цифровой маркетинг' },
+    { title: 'FXGuard Exchange — биржа и OTC', excerpt: 'Fintech: KYC, кошелёк, OTC и админ-панель.', category: 'Fintech' }
   ];
   ru.liquiMolyPage = liquiPage.ru;
   ru.vegaPage = vegaPage.ru;
@@ -1435,6 +1441,55 @@
     ru.contact.address = 'Стамбул, Турция';
     ru.contact.workingHours = '24/7 — всегда на связи';
   }
+  ru.contactPage = Object.assign({}, ru.contactPage || {}, {
+    connectTitle: 'Каналы связи',
+    websites: 'Сайты',
+    title: 'Контакты',
+    mapImgAlt: 'Международное сотрудничество — Bizdavar Group',
+    heroTitle: 'Расчёт VEGA, Prosense или нового сайта',
+    heroDesc: 'WhatsApp — самый быстрый путь. Достаточно номера WhatsApp — email по желанию.',
+    formTitle: 'Форма заявки',
+    formDesc: 'Имя и WhatsApp обязательны. Email по желанию.',
+    subtitle: 'Заполните форму или напишите в WhatsApp — ответ в рабочие часы',
+    firstName: 'Имя',
+    lastName: 'Фамилия',
+    placeholderFirstName: 'Ваше имя',
+    placeholderLastName: 'Ваша фамилия',
+    name: 'Имя и фамилия',
+    email: 'Эл. почта',
+    phone: 'Телефон / WhatsApp',
+    service: 'Тип услуги',
+    servicePlaceholder: 'Выберите...',
+    message: 'Ваше сообщение',
+    messagePlaceholder: 'Кратко опишите задачу...',
+    privacy: 'Я согласен с',
+    privacyBefore: 'Я согласен с',
+    privacyLink: 'политикой конфиденциальности',
+    privacyAfter: '.',
+    privacyAgree: '.',
+    submit: 'Продолжить в WhatsApp',
+    formNote: 'Данные используются только для ответа на ваш запрос.',
+    formSending: 'Отправка…',
+    formSuccess: 'Сообщение отправлено. Мы свяжемся с вами в ближайшее время.',
+    formSuccessMailto: 'Сообщение готово к отправке. Если окно почты не открылось, напишите на info@bizdavar.com.',
+    formSuccessWhatsapp: 'Сообщение готово для WhatsApp. Если окно не открылось, используйте кнопки WhatsApp на этой странице.',
+    geoText: 'Консультации из Стамбула, Тебриза и Еревана — персидский и турецкий WhatsApp.',
+    formError: 'Отправка не удалась. Повторите попытку или напишите на info@bizdavar.com.',
+    waTr: 'WhatsApp Турция',
+    waIr: 'WhatsApp (фарси)',
+    mapTitle: 'Международное сотрудничество',
+    mapDesc: 'Bizdavar Group работает с цифровыми и промышленными проектами в Иране, Турции и на международных рынках.',
+    optDm: 'Цифровой маркетинг',
+    optWeb: 'Веб-дизайн и разработка',
+    optFast: 'Fast Web Studio — сайт',
+    optApps: 'Приложения и системы',
+    optServer: 'Серверы и инфраструктура',
+    optSmm: 'SMM',
+    optField: 'Технические услуги (камеры, проводка, скрытый свет)',
+    optIndustrial: 'Поставка промышленного оборудования',
+    optConsult: 'Бизнес-консалтинг',
+    optOther: 'Другое'
+  });
   if (ru.geo) {
     ru.geo.summary = 'Услуги из Стамбула для Ирана, Турции и 11 стран — многоязычная поддержка, WhatsApp и международная доставка.';
   }
@@ -1549,7 +1604,7 @@
     intro: {
       title: 'معرفة من مشاريع حقيقية',
       body: 'مدونة Bizdavar تلخّص <a href="/pages/services">الخدمات الرقمية</a> و<a href="/pages/fast">تصميم Fast Studio</a> و<a href="/pages/products#supply">التوريد الصناعي</a>. اقرأ التسويق وSEO وSMM والموقع متعدد اللغات ومسار شراء VEGA كتنفيذ لا شعارات.',
-      statPosts: '١١',
+      statPosts: '١٣',
       statPostsLabel: 'مقال ودليل',
       statLangs: '٥',
       statLangsLabel: 'لغات النشر',
@@ -1623,7 +1678,13 @@
     { title: 'ما هي Bizdavar Group؟ التاريخ والفريق والأنشطة', excerpt: 'الملف: المؤسس، ١١ دولة، أكثر من ١٠٠ مشروع ونظام العلامات.', category: 'عن الشركة' },
     { title: 'BizTab — أول مقياس حرارة جداري بلا تلامس في تبريز', excerpt: 'منتج Bizdavar — خطأ أقل من ٠٫٣°م واعتماد جامعة تبريز.', category: 'منتج خاص' },
     { title: 'معقم اليدين Bizdavar V5', excerpt: 'مستشعر فوق صوتي ورش تلقائي — هندسة Bizdavar.', category: 'منتج خاص' },
-    { title: 'BizPet — وسادة التدفئة BizPet', excerpt: 'تصميم وإنتاج في حاضنة جامعة تبريز مع ایمن سهند پدیده.', category: 'منتج خاص' }
+    { title: 'BizPet — وسادة التدفئة BizPet', excerpt: 'تصميم وإنتاج في حاضنة جامعة تبريز مع ایمن سهند پدیده.', category: 'منتج خاص' },
+    { title: 'تطوير iOS — دراسة Marvi Society', excerpt: 'UI/UX وSwift وApp Store — نادٍ للمبدعين في إسطنبول.', category: 'تطوير تطبيقات' },
+    { title: 'توريد كاشف غاز Prosense', excerpt: 'اختيار الطراز وعرض B2B للنفط وHVAC.', category: 'معدات صناعية' },
+    { title: 'توريد Liqui Moly — زيوت وإضافات أصلية', excerpt: 'زيت محرك للأساطيل والورش — B2B بيزدوار.', category: 'معدات صناعية' },
+    { title: 'خدمات ميدانية — تبريز وإسطنبول', excerpt: 'كاميرات وتوصيلات وإضاءة مخفية — واتساب.', category: 'خدمات ميدانية' },
+    { title: 'SEO محلي — Google Maps لإيران', excerpt: 'Google Business Profile وNAP وصفحات محلية.', category: 'تسويق رقمي' },
+    { title: 'FXGuard Exchange — منصة صرف وOTC', excerpt: 'فintech: KYC ومحفظة وOTC ولوحة إدارة.', category: 'Fintech' }
   ];
   ar.liquiMolyPage = liquiPage.ar;
   ar.vegaPage = vegaPage.ar;
@@ -1636,6 +1697,55 @@
     ar.contact.address = 'إسطنبول، تركيا';
     ar.contact.workingHours = 'على مدار الساعة';
   }
+  ar.contactPage = Object.assign({}, ar.contactPage || {}, {
+    connectTitle: 'قنوات التواصل',
+    websites: 'المواقع',
+    title: 'اتصل بنا',
+    mapImgAlt: 'تعاون دولي — Bizdavar Group',
+    heroTitle: 'عرض سعر VEGA أو Prosense أو موقع جديد',
+    heroDesc: 'واتساب أسرع طريق. رقم واتساب يكفي — البريد اختياري.',
+    formTitle: 'نموذج طلب التواصل',
+    formDesc: 'الاسم وواتساب إلزاميان. البريد اختياري.',
+    subtitle: 'املأ النموذج أو راسلنا على واتساب — الرد خلال ساعات العمل',
+    firstName: 'الاسم',
+    lastName: 'اسم العائلة',
+    placeholderFirstName: 'اسمك',
+    placeholderLastName: 'اسم العائلة',
+    name: 'الاسم الكامل',
+    email: 'البريد الإلكتروني',
+    phone: 'الهاتف / واتساب',
+    service: 'نوع الخدمة',
+    servicePlaceholder: 'اختر...',
+    message: 'رسالتك',
+    messagePlaceholder: 'صف احتياجك باختصار...',
+    privacy: 'أوافق على',
+    privacyBefore: 'أوافق على',
+    privacyLink: 'سياسة الخصوصية',
+    privacyAfter: '.',
+    privacyAgree: '.',
+    submit: 'المتابعة على واتساب',
+    formNote: 'تُستخدم بياناتك فقط للرد على طلبك.',
+    formSending: 'جارٍ الإرسال…',
+    formSuccess: 'تم إرسال رسالتك. سنتواصل معك قريباً.',
+    formSuccessMailto: 'الرسالة جاهزة للإرسال. إذا لم تفتح نافذة البريد، اكتب إلى info@bizdavar.com.',
+    formSuccessWhatsapp: 'الرسالة جاهزة لواتساب. إذا لم تفتح النافذة، استخدم أزرار واتساب في هذه الصفحة.',
+    geoText: 'استشارة من إسطنبول وتبريز ويريفان — واتساب بالفارسية والتركية.',
+    formError: 'فشل الإرسال. أعد المحاولة أو راسل info@bizdavar.com مباشرة.',
+    waTr: 'واتساب تركيا',
+    waIr: 'واتساب الفارسية',
+    mapTitle: 'تعاون دولي',
+    mapDesc: 'تقدم Bizdavar Group خدمات رقمية وصناعية في إيران وتركيا والأسواق الدولية.',
+    optDm: 'التسويق الرقمي',
+    optWeb: 'تصميم وتطوير الويب',
+    optFast: 'Fast Web Studio — تصميم موقع',
+    optApps: 'تطبيقات وأنظمة',
+    optServer: 'إدارة الخوادم والبنية',
+    optSmm: 'إدارة الشبكات الاجتماعية',
+    optField: 'خدمات فنية (كاميرات، تمديدات، إضاءة مخفية)',
+    optIndustrial: 'توريد معدات صناعية',
+    optConsult: 'استشارة أعمال',
+    optOther: 'أخرى'
+  });
   if (ar.geo) {
     ar.geo.summary = 'خدمات من إسطنبول إلى إيران وتركيا و١١ دولة — دعم متعدد اللغات وواتساب وتسليم دولي.';
   }

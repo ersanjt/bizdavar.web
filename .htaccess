@@ -4,6 +4,7 @@
 # ── General ────────────────────────────────────────────────────────────────
 Options -Indexes
 DirectoryIndex index.html
+ErrorDocument 404 /404.html
 
 # Fix Persian/UTF-8 display (e.g. brand pages served as ????)
 AddDefaultCharset UTF-8
@@ -28,6 +29,7 @@ AddType 'text/html; charset=UTF-8' .html
 <IfModule mod_headers.c>
   Header set X-Content-Type-Options "nosniff"
   Header set X-Frame-Options "SAMEORIGIN"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
   Header set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=()"
 

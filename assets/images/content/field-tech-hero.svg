@@ -1,27 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" role="img" aria-labelledby="ftTitle ftDesc">
-  <title id="ftTitle">Field technical services in Tabriz and Istanbul</title>
-  <desc id="ftDesc">CCTV, wiring and hidden lighting by the Bizdavar field team</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" width="960" height="640" aria-hidden="true" focusable="false">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0f172a"/>
-      <stop offset="55%" stop-color="#134e4a"/>
-      <stop offset="100%" stop-color="#042f2e"/>
-    </linearGradient>
-    <linearGradient id="glow" x1="0.5" y1="0" x2="0.5" y2="1">
-      <stop offset="0%" stop-color="#34d399" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#34d399" stop-opacity="0"/>
+    <linearGradient id="ftBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f766e"/>
+      <stop offset="50%" stop-color="#115e59"/>
+      <stop offset="100%" stop-color="#134e4a"/>
     </linearGradient>
   </defs>
-  <rect width="960" height="640" fill="url(#bg)"/>
-  <circle cx="720" cy="160" r="180" fill="url(#glow)"/>
-  <rect x="120" y="120" width="420" height="280" rx="28" fill="#0b1220" stroke="#34d399" stroke-opacity="0.35" stroke-width="3"/>
-  <rect x="160" y="168" width="340" height="160" rx="12" fill="#111827"/>
-  <circle cx="330" cy="248" r="36" fill="none" stroke="#6ee7b7" stroke-width="8"/>
-  <circle cx="330" cy="248" r="14" fill="#facc15"/>
-  <path d="M180 400h300" stroke="#34d399" stroke-opacity="0.45" stroke-width="4" stroke-linecap="round"/>
-  <rect x="580" y="220" width="220" height="280" rx="24" fill="#111827" stroke="#facc15" stroke-opacity="0.4" stroke-width="3"/>
-  <path d="M620 300h140M620 360h110M620 420h90" stroke="#94a3b8" stroke-width="10" stroke-linecap="round"/>
-  <circle cx="690" cy="250" r="18" fill="#34d399"/>
-  <path d="M140 520c80-40 160-40 240 0s160 40 240 0 160-40 240 0" fill="none" stroke="#facc15" stroke-opacity="0.55" stroke-width="6" stroke-linecap="round"/>
-  <text x="140" y="580" fill="#e2e8f0" font-family="Tahoma, Arial, sans-serif" font-size="28" font-weight="700">Tabriz · Istanbul</text>
+  <rect width="960" height="640" rx="28" fill="url(#ftBg)"/>
+  <circle cx="760" cy="120" r="160" fill="#34d399" fill-opacity="0.28"/>
+  <rect x="80" y="100" width="460" height="320" rx="28" fill="#ecfdf5" fill-opacity="0.12" stroke="#a7f3d0" stroke-width="3"/>
+  <circle cx="310" cy="250" r="58" fill="none" stroke="#6ee7b7" stroke-width="10"/>
+  <circle cx="310" cy="250" r="22" fill="#facc15"/>
+  <rect x="120" y="360" width="280" height="12" rx="6" fill="#a7f3d0" fill-opacity="0.7"/>
+  <rect x="580" y="180" width="260" height="300" rx="24" fill="#ecfdf5" fill-opacity="0.12" stroke="#fde68a" stroke-width="3"/>
+  <path d="M630 280h160M630 340h130M630 400h100" stroke="#f8fafc" stroke-width="12" stroke-linecap="round" stroke-opacity="0.85"/>
+  <circle cx="710" cy="220" r="22" fill="#34d399"/>
+  <rect x="80" y="480" width="800" height="96" rx="20" fill="#042f2e" fill-opacity="0.45"/>
+  <rect x="120" y="516" width="160" height="16" rx="8" fill="#ecfdf5"/>
+  <rect x="300" y="516" width="120" height="16" rx="8" fill="#facc15" fill-opacity="0.85"/>
+  <rect x="440" y="516" width="140" height="16" rx="8" fill="#6ee7b7" fill-opacity="0.85"/>
 </svg>

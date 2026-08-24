@@ -436,12 +436,15 @@
       const faqs = this.raw('home.faqs');
       if (!el || !Array.isArray(faqs)) return;
       const dir = this.dict?.dir || 'rtl';
-      el.innerHTML = faqs.map(item => `
+      el.innerHTML = faqs.map(item => {
+        const q = item.q || item.q || '';
+        const a = item.a || item.a || '';
+        return `
         <details class="faq-item" dir="${dir}">
-          <summary dir="${dir}">${item.q}</summary>
-          <p dir="${dir}">${item.a}</p>
-        </details>
-      `).join('');
+          <summary dir="${dir}">${q}</summary>
+          <p dir="${dir}">${a}</p>
+        </details>`;
+      }).join('');
     },
 
     applyAboutHeroImage() {
@@ -513,9 +516,10 @@
         if (submit) submit.textContent = p.submit;
         const priv = form.querySelector('label input#privacy')?.parentElement;
         if (priv && p.privacyLink) {
-          const link = priv.querySelector('a');
-          if (link) link.textContent = p.privacyLink;
-          priv.innerHTML = `${p.privacyBefore || p.privacy || ''} <a href="/pages/privacy" target="_blank" rel="noopener">${p.privacyLink}</a>${p.privacyAfter || p.privacyAgree || ''}`;
+          const LU = window.BIZDAVAR_LOCALE_URL;
+          const loc = LU && LU.currentLocale ? LU.currentLocale() : 'fa';
+          const privacyHref = LU && LU.toLocalePath ? LU.toLocalePath(loc, '/pages/privacy') : '/pages/privacy';
+          priv.innerHTML = `${p.privacyBefore || p.privacy || ''} <a href="${privacyHref}" target="_blank" rel="noopener">${p.privacyLink}</a>${p.privacyAfter || p.privacyAgree || ''}`;
         }
         const note = document.getElementById('privacy-note');
         if (note && p.formNote) note.textContent = p.formNote;

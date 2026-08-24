@@ -21,6 +21,7 @@
   <link rel="apple-touch-icon" href="/assets/images/brand/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/styles/site.css">
 <meta name="description" content="Запрос VEGA, Prosense или сайта — форма или WhatsApp. Ответ в рабочие часы из Стамбула и Тебриза.">
+
   <!-- bd-static-seo -->
   <meta property="og:title" content="Бесплатная консультация и расчёт | WhatsApp Bizdavar">
   <meta property="og:description" content="Запрос VEGA, Prosense или сайта — форма или WhatsApp. Ответ в рабочие часы из Стамбула и Тебриза.">
@@ -57,9 +58,9 @@
 
 <section class="page-hero page-hero--pro">
     <div class="container">
-      <span class="section__tag" data-i18n="contactPage.title">Contact us</span>
-      <h1 data-i18n="contactPage.heroTitle">We are ready to help with free consultation</h1>
-      <p data-i18n="contactPage.heroDesc">Fill out the form below or reach the Bizdavar team directly.</p>
+      <span class="section__tag" data-i18n="contactPage.title">Контакты</span>
+      <h1 data-i18n="contactPage.heroTitle">Расчёт VEGA, Prosense или нового сайта</h1>
+      <p data-i18n="contactPage.heroDesc">WhatsApp — самый быстрый путь. Достаточно номера WhatsApp — email по желанию.</p>
     </div>
   </section>
 
@@ -68,51 +69,51 @@
       <div class="contact-grid">
         <div class="contact-info" id="contactDetails"></div>
 
-        <form class="contact-form" id="contactForm" novalidate>
-          <h2 class="form-title" data-i18n="contactPage.formTitle">Contact request form</h2>
-          <p class="form-desc" data-i18n="contactPage.formDesc">Fields marked with * are required.</p>
+        <form class="contact-form" id="contactForm" novalidate method="post" action="#">
+          <h2 class="form-title" data-i18n="contactPage.formTitle">Форма заявки</h2>
+          <p class="form-desc" data-i18n="contactPage.formDesc">Имя и WhatsApp обязательны. Email по желанию.</p>
 
           <div class="form-row">
             <div class="form-group">
-              <label for="firstName">نام <span class="req">*</span></label>
-              <input type="text" id="firstName" name="firstName" required autocomplete="given-name" placeholder="نام شما">
+              <label for="firstName"><span data-i18n="contactPage.firstName">Имя</span> <span class="req">*</span></label>
+              <input type="text" id="firstName" name="firstName" required autocomplete="given-name" placeholder="نام شما" data-i18n-placeholder="contactPage.placeholderFirstName" placeholder="Ваше имя">
             </div>
             <div class="form-group">
-              <label for="lastName">نام خانوادگی <span class="req">*</span></label>
-              <input type="text" id="lastName" name="lastName" required autocomplete="family-name" placeholder="نام خانوادگی">
+              <label for="lastName"><span data-i18n="contactPage.lastName">Фамилия</span> <span class="req">*</span></label>
+              <input type="text" id="lastName" name="lastName" required autocomplete="family-name" placeholder="نام خانوادگی" data-i18n-placeholder="contactPage.placeholderLastName" placeholder="Ваша фамилия">
             </div>
           </div>
 
           <div class="form-group">
-            <label for="email">ایمیل <span class="req">*</span></label>
-            <input type="email" id="email" name="email" required autocomplete="email" placeholder="email@example.com">
+            <label for="email"><span data-i18n="contactPage.email">Эл. почта</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="email@example.com">
           </div>
 
           <div class="form-group">
-            <label for="phone">شماره تماس / واتساپ </label>
-            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+98 930 ..." dir="ltr">
+            <label for="phone"><span data-i18n="contactPage.phone">Телефон / WhatsApp</span> <span class="req">*</span></label>
+            <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="+98 930 ..." dir="ltr">
           </div>
 
           <div class="form-group">
-            <label for="service">نوع خدمات <span class="req">*</span></label>
+            <label for="service"><span data-i18n="contactPage.service">Тип услуги</span> <span class="req">*</span></label>
             <select id="service" name="service" required>
-              <option value="">انتخاب کنید...</option>
-              <option value="digital-marketing">بازاریابی دیجیتال</option>
-              <option value="web-design">طراحی و توسعه وب</option>
-              <option value="fast-studio">Fast Web Studio — طراحی سایت</option>
-              <option value="software-apps">اپلیکیشن و سامانه</option>
-              <option value="server-ops">مدیریت سرور و زیرساخت</option>
-              <option value="smm">مدیریت شبکه‌های اجتماعی (SMM)</option>
-              <option value="field-tech">خدمات فنی (دوربین، سیم‌کشی، نورمخفی)</option>
-              <option value="industrial">تامین تجهیزات صنعتی</option>
-              <option value="consulting">مشاوره کسب‌وکار</option>
-              <option value="other">سایر</option>
+              <option value="" data-i18n="contactPage.servicePlaceholder">Выберите...</option>
+              <option value="digital-marketing" data-i18n="contactPage.optDm">Цифровой маркетинг</option>
+              <option value="web-design" data-i18n="contactPage.optWeb">Веб-дизайн и разработка</option>
+              <option value="fast-studio" data-i18n="contactPage.optFast">Fast Web Studio — сайт</option>
+              <option value="software-apps" data-i18n="contactPage.optApps">Приложения и системы</option>
+              <option value="server-ops" data-i18n="contactPage.optServer">Серверы и инфраструктура</option>
+              <option value="smm" data-i18n="contactPage.optSmm">SMM</option>
+              <option value="field-tech" data-i18n="contactPage.optField">Технические услуги (камеры, проводка, скрытый свет)</option>
+              <option value="industrial" data-i18n="contactPage.optIndustrial">Поставка промышленного оборудования</option>
+              <option value="consulting" data-i18n="contactPage.optConsult">Бизнес-консалтинг</option>
+              <option value="other" data-i18n="contactPage.optOther">Другое</option>
             </select>
           </div>
 
           <div class="form-group">
-            <label for="message">پیام شما <span class="req">*</span></label>
-            <textarea id="message" name="message" required rows="5" placeholder="نیاز خود را به‌طور خلاصه توضیح دهید..."></textarea>
+            <label for="message"><span data-i18n="contactPage.message">Ваше сообщение</span> <span class="req">*</span></label>
+            <textarea id="message" name="message" required rows="5" placeholder="نیاز خود را به‌طور خلاصه توضیح دهید..." data-i18n-placeholder="contactPage.messagePlaceholder" placeholder="Кратко опишите задачу..."></textarea>
           </div>
 
           <div class="form-group form-group--checkbox">
@@ -120,11 +121,11 @@
           </div>
 
           <div class="form-actions">
-            <button type="submit" class="btn btn--form">ارسال درخواست</button>
-            <a href="https://wa.me/989305880135" class="btn btn--whatsapp" id="whatsappBtnIr" target="_blank" rel="noopener noreferrer">واتساپ فارسی</a>
-            <a href="https://wa.me/905010676486" class="btn btn--whatsapp" id="whatsappBtnTr" target="_blank" rel="noopener noreferrer">واتساپ ترکیه</a>
+            <button type="submit" class="btn btn--form" data-i18n="contactPage.submit">Продолжить в WhatsApp</button>
+            <a href="https://wa.me/989305880135" class="btn btn--whatsapp" id="whatsappBtnIr" target="_blank" rel="noopener noreferrer" data-i18n="contactPage.waIr">WhatsApp (фарси)</a>
+            <a href="https://wa.me/905010676486" class="btn btn--whatsapp" id="whatsappBtnTr" target="_blank" rel="noopener noreferrer" data-i18n="contactPage.waTr">WhatsApp Турция</a>
           </div>
-          <p class="form-note" id="privacy-note">اطلاعات شما فقط برای پاسخ به درخواست تماس استفاده می‌شود.</p>
+          <p class="form-note" id="privacy-note" data-i18n="contactPage.formNote">Данные используются только для ответа на ваш запрос.</p>
           <p class="form-success" id="formSuccess" hidden>پیام شما آماده ارسال است. اگر پنجره ایمیل باز نشد، مستقیماً به info@bizdavar.com بنویسید.</p>
         </form>
       </div>
@@ -133,10 +134,10 @@
 
   <section class="section section--gray">
     <div class="container contact-map">
-      <img src="/assets/images/content/contact-banner.svg" alt="International collaboration — Bizdavar Group" data-i18n-alt="contactPage.mapImgAlt" loading="lazy" width="768" height="387">
+      <img src="/assets/images/content/contact-banner.svg" alt="Международное сотрудничество — Bizdavar Group" data-i18n-alt="contactPage.mapImgAlt" loading="lazy" width="768" height="387">
       <div class="contact-map__text">
-        <h2 data-i18n="contactPage.mapTitle">International collaboration</h2>
-        <p data-i18n="contactPage.mapDesc">Bizdavar Group serves businesses in Iran, Turkey, and international markets with digital and industrial projects.</p>
+        <h2 data-i18n="contactPage.mapTitle">Международное сотрудничество</h2>
+        <p data-i18n="contactPage.mapDesc">Bizdavar Group работает с цифровыми и промышленными проектами в Иране, Турции и на международных рынках.</p>
       </div>
     </div>
   </section>

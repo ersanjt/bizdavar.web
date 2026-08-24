@@ -21,6 +21,7 @@
   <link rel="apple-touch-icon" href="/assets/images/brand/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/styles/site.css">
 <meta name="description" content="VEGA, Prosense veya web tasarım teklifi — form veya Türkçe/Farsça WhatsApp. İstanbul ve Tebriz’den mesai saatlerinde yanıt.">
+
   <!-- bd-static-seo -->
   <meta property="og:title" content="Ücretsiz danışmanlık ve fiyat teklifi | Bizdavar WhatsApp">
   <meta property="og:description" content="VEGA, Prosense veya web tasarım teklifi — form veya Türkçe/Farsça WhatsApp. İstanbul ve Tebriz’den mesai saatlerinde yanıt.">
@@ -58,8 +59,8 @@
 <section class="page-hero page-hero--pro">
     <div class="container">
       <span class="section__tag" data-i18n="contactPage.title">İletişim</span>
-      <h1 data-i18n="contactPage.heroTitle">Ücretsiz danışmanlık ve yanıt için hazırız</h1>
-      <p data-i18n="contactPage.heroDesc">Formu doldurun veya Bizdavar ekibiyle doğrudan iletişime geçin.</p>
+      <h1 data-i18n="contactPage.heroTitle">VEGA, Prosense veya web sitesi teklifi</h1>
+      <p data-i18n="contactPage.heroDesc">WhatsApp en hızlı yoldur. WhatsApp numarası yeterli — e-posta isteğe bağlı.</p>
     </div>
   </section>
 
@@ -68,51 +69,51 @@
       <div class="contact-grid">
         <div class="contact-info" id="contactDetails"></div>
 
-        <form class="contact-form" id="contactForm" novalidate>
+        <form class="contact-form" id="contactForm" novalidate method="post" action="#">
           <h2 class="form-title" data-i18n="contactPage.formTitle">İletişim talep formu</h2>
-          <p class="form-desc" data-i18n="contactPage.formDesc">Yıldızlı alanlar zorunludur.</p>
+          <p class="form-desc" data-i18n="contactPage.formDesc">Ad ve WhatsApp zorunlu. E-posta isteğe bağlı.</p>
 
           <div class="form-row">
             <div class="form-group">
-              <label for="firstName">نام <span class="req">*</span></label>
-              <input type="text" id="firstName" name="firstName" required autocomplete="given-name" placeholder="نام شما">
+              <label for="firstName"><span data-i18n="contactPage.firstName">Ad</span> <span class="req">*</span></label>
+              <input type="text" id="firstName" name="firstName" required autocomplete="given-name" placeholder="نام شما" data-i18n-placeholder="contactPage.placeholderFirstName" placeholder="Adınız">
             </div>
             <div class="form-group">
-              <label for="lastName">نام خانوادگی <span class="req">*</span></label>
-              <input type="text" id="lastName" name="lastName" required autocomplete="family-name" placeholder="نام خانوادگی">
+              <label for="lastName"><span data-i18n="contactPage.lastName">Soyad</span> <span class="req">*</span></label>
+              <input type="text" id="lastName" name="lastName" required autocomplete="family-name" placeholder="نام خانوادگی" data-i18n-placeholder="contactPage.placeholderLastName" placeholder="Soyadınız">
             </div>
           </div>
 
           <div class="form-group">
-            <label for="email">ایمیل <span class="req">*</span></label>
-            <input type="email" id="email" name="email" required autocomplete="email" placeholder="email@example.com">
+            <label for="email"><span data-i18n="contactPage.email">E-posta</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="email@example.com">
           </div>
 
           <div class="form-group">
-            <label for="phone">شماره تماس / واتساپ </label>
-            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+98 930 ..." dir="ltr">
+            <label for="phone"><span data-i18n="contactPage.phone">Telefon / WhatsApp</span> <span class="req">*</span></label>
+            <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="+98 930 ..." dir="ltr">
           </div>
 
           <div class="form-group">
-            <label for="service">نوع خدمات <span class="req">*</span></label>
+            <label for="service"><span data-i18n="contactPage.service">Hizmet türü</span> <span class="req">*</span></label>
             <select id="service" name="service" required>
-              <option value="">انتخاب کنید...</option>
-              <option value="digital-marketing">بازاریابی دیجیتال</option>
-              <option value="web-design">طراحی و توسعه وب</option>
-              <option value="fast-studio">Fast Web Studio — طراحی سایت</option>
-              <option value="software-apps">اپلیکیشن و سامانه</option>
-              <option value="server-ops">مدیریت سرور و زیرساخت</option>
-              <option value="smm">مدیریت شبکه‌های اجتماعی (SMM)</option>
-              <option value="field-tech">خدمات فنی (دوربین، سیم‌کشی، نورمخفی)</option>
-              <option value="industrial">تامین تجهیزات صنعتی</option>
-              <option value="consulting">مشاوره کسب‌وکار</option>
-              <option value="other">سایر</option>
+              <option value="" data-i18n="contactPage.servicePlaceholder">Seçin...</option>
+              <option value="digital-marketing" data-i18n="contactPage.optDm">Dijital pazarlama</option>
+              <option value="web-design" data-i18n="contactPage.optWeb">Web tasarım ve geliştirme</option>
+              <option value="fast-studio" data-i18n="contactPage.optFast">Fast Web Studio — web tasarım</option>
+              <option value="software-apps" data-i18n="contactPage.optApps">Uygulama ve sistem</option>
+              <option value="server-ops" data-i18n="contactPage.optServer">Sunucu ve altyapı yönetimi</option>
+              <option value="smm" data-i18n="contactPage.optSmm">Sosyal medya yönetimi (SMM)</option>
+              <option value="field-tech" data-i18n="contactPage.optField">Teknik hizmetler (CCTV, tesisat, aydınlatma)</option>
+              <option value="industrial" data-i18n="contactPage.optIndustrial">Endüstriyel ekipman tedariki</option>
+              <option value="consulting" data-i18n="contactPage.optConsult">İş danışmanlığı</option>
+              <option value="other" data-i18n="contactPage.optOther">Diğer</option>
             </select>
           </div>
 
           <div class="form-group">
-            <label for="message">پیام شما <span class="req">*</span></label>
-            <textarea id="message" name="message" required rows="5" placeholder="نیاز خود را به‌طور خلاصه توضیح دهید..."></textarea>
+            <label for="message"><span data-i18n="contactPage.message">Mesajınız</span> <span class="req">*</span></label>
+            <textarea id="message" name="message" required rows="5" placeholder="نیاز خود را به‌طور خلاصه توضیح دهید..." data-i18n-placeholder="contactPage.messagePlaceholder" placeholder="İhtiyacınızı kısaca anlatın..."></textarea>
           </div>
 
           <div class="form-group form-group--checkbox">
@@ -120,11 +121,11 @@
           </div>
 
           <div class="form-actions">
-            <button type="submit" class="btn btn--form">ارسال درخواست</button>
-            <a href="https://wa.me/989305880135" class="btn btn--whatsapp" id="whatsappBtnIr" target="_blank" rel="noopener noreferrer">واتساپ فارسی</a>
-            <a href="https://wa.me/905010676486" class="btn btn--whatsapp" id="whatsappBtnTr" target="_blank" rel="noopener noreferrer">واتساپ ترکیه</a>
+            <button type="submit" class="btn btn--form" data-i18n="contactPage.submit">WhatsApp ile devam</button>
+            <a href="https://wa.me/989305880135" class="btn btn--whatsapp" id="whatsappBtnIr" target="_blank" rel="noopener noreferrer" data-i18n="contactPage.waIr">WhatsApp Farsça</a>
+            <a href="https://wa.me/905010676486" class="btn btn--whatsapp" id="whatsappBtnTr" target="_blank" rel="noopener noreferrer" data-i18n="contactPage.waTr">WhatsApp Türkiye</a>
           </div>
-          <p class="form-note" id="privacy-note">اطلاعات شما فقط برای پاسخ به درخواست تماس استفاده می‌شود.</p>
+          <p class="form-note" id="privacy-note" data-i18n="contactPage.formNote">Bilgileriniz yalnızca talebinize yanıt vermek için kullanılır.</p>
           <p class="form-success" id="formSuccess" hidden>پیام شما آماده ارسال است. اگر پنجره ایمیل باز نشد، مستقیماً به info@bizdavar.com بنویسید.</p>
         </form>
       </div>

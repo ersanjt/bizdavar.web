@@ -183,7 +183,9 @@
     });
 
     const img = document.getElementById('ftHeroImg');
-    if (img && p.hero?.imgAlt) img.setAttribute('alt', p.hero.imgAlt);
+    if (img && p.hero?.imgAlt) {
+      img.setAttribute('aria-label', p.hero.imgAlt);
+    }
 
     const phone = document.getElementById('ftPhoneLabel');
     const display = t('servicesPage.fieldTech.waHint', fieldCfg().phoneDisplay || '+98 936 411 5151');
