@@ -371,6 +371,13 @@ window.BIZDAVAR_CONFIG = {
       shopUrl: 'https://shop.netinode.net/',
       taglineFa: 'دامنه، هاست، WordPress و SSL',
       taglineEn: 'Domains, hosting, WordPress & SSL'
+    },
+    netinohost: {
+      name: 'Netino Host',
+      url: 'https://netinohost.com/',
+      shopUrl: 'https://netinohost.com/',
+      taglineFa: 'هاست، VPS، دامنه و ایمیل فارسی',
+      taglineEn: 'Persian web hosting, VPS, domains & email'
     }
   },
 

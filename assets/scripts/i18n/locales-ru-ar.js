@@ -1647,10 +1647,11 @@
   if (ru.fastPage) {
     ru.fastPage.hostingNote = {
       title: 'Домен, хостинг и сервер',
-      text: 'Купите домен, хостинг, WordPress, почту и серверы в магазине <strong>Netinode</strong> — инфраструктура экосистемы Bizdavar.',
+      text: 'Хостинг отделён от дизайна. Для Ирана — <strong>Netino Host</strong> (netinohost.com); международно — магазин <strong>Netinode</strong>. Платформы вроде netinohost.com тоже могут заказать Fast или индивидуальный дизайн.',
       cta: 'Купить домен и хостинг',
-      ctaShop: 'Купить домен и хостинг',
-      ctaSite: 'Сайт Netinode'
+      ctaShop: 'Магазин Netinode',
+      ctaSite: 'Сайт Netinode',
+      ctaNetinohost: 'Netino Host — Иран'
     };
     ru.fastPage.ui = Object.assign({}, ru.fastPage.ui, {
       navFor: 'Для кого',
@@ -1670,10 +1671,11 @@
   if (ar.fastPage) {
     ar.fastPage.hostingNote = {
       title: 'النطاق والاستضافة والخادم',
-      text: 'اشترِ النطاق والاستضافة وWordPress والبريد والخوادم من متجر <strong>Netinode</strong> — بنية منظومة بيزدوار.',
+      text: 'الاستضافة منفصلة عن التصميم. لإيران <strong>Netino Host</strong> (netinohost.com)؛ دولياً متجر <strong>Netinode</strong>. منصات مثل netinohost.com يمكنها أيضاً طلب Fast أو تصميم مخصص.',
       cta: 'شراء نطاق واستضافة',
-      ctaShop: 'شراء نطاق واستضافة',
-      ctaSite: 'موقع Netinode'
+      ctaShop: 'متجر Netinode',
+      ctaSite: 'موقع Netinode',
+      ctaNetinohost: 'Netino Host — إيران'
     };
     ar.fastPage.ui = Object.assign({}, ar.fastPage.ui, {
       navFor: 'لمن',

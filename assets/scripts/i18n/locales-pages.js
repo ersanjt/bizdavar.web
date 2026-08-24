@@ -155,24 +155,27 @@
   const fastHostingNote = {
     fa: {
       title: 'دامنه، هاست و سرور',
-      text: 'ثبت دامنه، هاست، WordPress، ایمیل و سرور را از فروشگاه <strong>Netinode</strong> بخرید — زیرساخت اکوسیستم بیزدوار.',
+      text: 'هاست و دامنه جدا از طراحی است. برای ایران <strong>Netino Host</strong> (netinohost.com) و برای بین‌الملل فروشگاه <strong>Netinode</strong> — هر دو زیرساخت اکوسیستم بیزدوار. پلتفرم‌هایی مثل netinohost.com هم می‌توانند از Fast یا طراحی اختصاصی استفاده کنند.',
       cta: 'خرید دامنه و هاست',
-      ctaShop: 'خرید دامنه و هاست',
-      ctaSite: 'سایت Netinode'
+      ctaShop: 'فروشگاه Netinode',
+      ctaSite: 'سایت Netinode',
+      ctaNetinohost: 'Netino Host — ایران'
     },
     tr: {
       title: 'Domain, hosting ve sunucu',
-      text: 'Domain, hosting, WordPress, e-posta ve sunucuyu <strong>Netinode</strong> mağazasından alın — Bizdavar ekosistemi.',
+      text: 'Hosting tasarımdan ayrıdır. İran için <strong>Netino Host</strong> (netinohost.com), uluslararası için <strong>Netinode</strong> mağazası — Bizdavar ekosistemi. netinohost.com gibi platformlar da Fast veya özel tasarım alabilir.',
       cta: 'Domain ve hosting satın al',
-      ctaShop: 'Domain ve hosting satın al',
-      ctaSite: 'Netinode sitesi'
+      ctaShop: 'Netinode mağazası',
+      ctaSite: 'Netinode sitesi',
+      ctaNetinohost: 'Netino Host — İran'
     },
     en: {
       title: 'Domain, hosting & server',
-      text: 'Buy domain, hosting, WordPress, email and servers from the <strong>Netinode</strong> shop — Bizdavar ecosystem infrastructure.',
+      text: 'Hosting is separate from design. For Iran use <strong>Netino Host</strong> (netinohost.com); internationally use the <strong>Netinode</strong> shop — both Bizdavar ecosystem. Platforms like netinohost.com can also order Fast Web Studio or custom web design.',
       cta: 'Buy domain & hosting',
-      ctaShop: 'Buy domain & hosting',
-      ctaSite: 'Netinode website'
+      ctaShop: 'Netinode shop',
+      ctaSite: 'Netinode website',
+      ctaNetinohost: 'Netino Host — Iran'
     }
   };
 

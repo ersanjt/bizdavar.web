@@ -34,7 +34,7 @@ window.FAST_CATALOG = {
         'فرم تماس حرفه‌ای',
         'دکمه واتساپ مستقیم',
         'اتصال اینستاگرام / لینکدین',
-        'SSL و هاست اولیه — <a href="https://shop.netinode.net/" target="_blank" rel="noopener noreferrer">خرید دامنه و هاست (Netinode)</a>',
+        'SSL و هاست اولیه — <a href="https://netinohost.com/" target="_blank" rel="noopener noreferrer">Netino Host</a> (ایران) یا <a href="https://shop.netinode.net/" target="_blank" rel="noopener noreferrer">Netinode</a> (بین‌الملل)',
         'آموزش ویدیویی مدیریت'
       ]
     },
@@ -101,7 +101,8 @@ window.FAST_CATALOG = {
     { icon: 'rocket', title: 'استارتاپ و کسب‌وکار تازه‌کار', desc: 'یک صفحه معرفی، فرم تماس و واتساپ — همین هفته آنلاین شوید.' },
     { icon: 'bag', title: 'فروشگاه و برند محصول', desc: 'WooCommerce، چند محصول اولیه و مسیر خرید آماده تحویل.' },
     { icon: 'building', title: 'کلینیک، دفتر و خدمات محلی', desc: 'سایت اعتمادساز با موبایل‌فرست، نقشه و دکمه تماس مستقیم.' },
-    { icon: 'globe', title: 'صادرات و برند چندزبانه', desc: 'RTL فارسی + انگلیسی/ترکی برای بازار ایران، ترکیه و بین‌الملل.' }
+    { icon: 'globe', title: 'صادرات و برند چندزبانه', desc: 'RTL فارسی + انگلیسی/ترکی برای بازار ایران، ترکیه و بین‌الملل.' },
+    { icon: 'monitor', title: 'هاستینگ، SaaS و پلتفرم', desc: 'فروش هاست، VPS یا پنل — مثل netinohost.com؛ با Fast یا طراحی اختصاصی بیزدوار.' }
   ],
 
   whyChoose: [
@@ -117,6 +118,7 @@ window.FAST_CATALOG = {
     { name: 'Kaya One AG', category: 'تجارت سوئیسی B2B', slug: 'pages/kaya-one', internal: true, logo: 'assets/images/partners/kaya-one.svg' },
     { name: 'SMM Turk', category: 'پنل SMM', slug: 'pages/smm-turk', internal: true, logo: 'assets/images/partners/smm-turk.svg' },
     { name: 'FXGuard Exchange', category: 'فین‌تک / تبادل ارز', slug: 'pages/fxguard-exchange', internal: true, logo: 'assets/images/partners/fxguard-exchange.svg' },
+    { name: 'Netino Host', category: 'هاستینگ و میزبانی ابری', domain: 'netinohost.com', internal: false, logo: 'assets/images/partners/netinohost.png' },
     { name: 'Karen Leather', category: 'چرم و مد', domain: 'karenleather.com', internal: false, logo: 'assets/images/partners/karen-leather.png' },
     { name: 'Marvelous Holding', category: 'هلدینگ', domain: 'marvelousholding.com', internal: false, logo: 'assets/images/partners/marvelous-holding.png' },
     { name: 'NIK Aesthetic', category: 'کلینیک زیبایی', domain: 'nikaesthetic.com', internal: false, logo: 'assets/images/partners/nikaesthetic.png' },
@@ -126,7 +128,7 @@ window.FAST_CATALOG = {
 
   faq: [
     { q: 'واقعاً در ۵ روز تحویل می‌دهید؟', a: 'بله — برای پلن پایه و فروشگاهی با محتوای آماده مشتری. پلن حرفه‌ای با صفحات بیشتر ممکن است ۵ تا ۷ روز طول بکشد. قبل از شروع، زمان دقیق را در واتساپ تأیید می‌کنیم.' },
-    { q: 'هاست و دامنه شامل قیمت است؟', a: 'هزینه طراحی و راه‌اندازی جداست. دامنه، هاست و سرور را از <a href="https://shop.netinode.net/" target="_blank" rel="noopener noreferrer">فروشگاه Netinode</a> بخرید؛ معرفی خدمات در <a href="https://netinode.net/" target="_blank" rel="noopener noreferrer">netinode.net</a>. در صورت نیاز راهنمایی می‌کنیم.' },
+    { q: 'هاست و دامنه شامل قیمت است؟', a: 'هزینه طراحی و راه‌اندازی جداست. برای بازار ایران از <a href="https://netinohost.com/" target="_blank" rel="noopener noreferrer">Netino Host</a> و برای بین‌الملل از <a href="https://shop.netinode.net/" target="_blank" rel="noopener noreferrer">فروشگاه Netinode</a> (معرفی: <a href="https://netinode.net/" target="_blank" rel="noopener noreferrer">netinode.net</a>) خرید کنید. در صورت نیاز راهنمایی می‌کنیم.' },
     { q: 'آیا می‌توانم بعداً سایت را گسترش دهم؟', a: 'بله. می‌توانید از پلن پایه شروع کنید و بعد به فروشگاهی یا حرفه‌ای ارتقا دهید. بیزدوار همان پروژه را ادامه می‌دهد.' },
     { q: 'پرداخت چگونه است؟', a: 'معمولاً ۵۰٪ پیش‌پرداخت و ۵۰٪ قبل از تحویل نهایی — از طریق حواله، کارت یا روش‌های بین‌المللی. جزئیات در واتساپ هماهنگ می‌شود.' },
     { q: 'برای کسب‌وکار خارج از ایران هم کار می‌کنید؟', a: 'بله — Fast Web Studio برای ایران، ترکیه، امارات و اروپا اجرا شده. مشاوره فارسی، انگلیسی و ترکی داریم.' },

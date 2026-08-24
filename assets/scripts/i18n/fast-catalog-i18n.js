@@ -4,8 +4,10 @@
 (function () {
   const N = 'https://netinode.net/';
   const S = 'https://shop.netinode.net/';
+  const H = 'https://netinohost.com/';
   const ni = (label) => `<a href="${N}" target="_blank" rel="noopener noreferrer">${label}</a>`;
   const shop = (label) => `<a href="${S}" target="_blank" rel="noopener noreferrer">${label}</a>`;
+  const nh = (label) => `<a href="${H}" target="_blank" rel="noopener noreferrer">${label}</a>`;
 
   const en = {
     brand: {
@@ -30,7 +32,7 @@
           'Professional contact form',
           'Direct WhatsApp button',
           'Instagram / LinkedIn links',
-          `SSL & starter hosting — ${shop('Buy domain & hosting (Netinode)')}`,
+          `SSL & starter hosting — ${nh('Netino Host')} (Iran) or ${shop('Netinode')}`,
           'Video tutorial for site management'
         ]
       },
@@ -82,7 +84,8 @@
       { title: 'Startups and new businesses', desc: 'A one-page intro, contact form and WhatsApp — go live this week.' },
       { title: 'Stores and product brands', desc: 'WooCommerce, starter products and a ready checkout path.' },
       { title: 'Clinics, offices and local services', desc: 'A trust-building mobile-first site with map and direct call.' },
-      { title: 'Export and multilingual brands', desc: 'Persian RTL plus English/Turkish for Iran, Turkey and beyond.' }
+      { title: 'Export and multilingual brands', desc: 'Persian RTL plus English/Turkish for Iran, Turkey and beyond.' },
+      { title: 'Hosting, SaaS and platforms', desc: 'Web hosting, VPS or panels — like netinohost.com; via Fast or custom Bizdavar design.' }
     ],
     whyChoose: [
       { title: 'Real speed', desc: 'No vague promises — daily progress reports on WhatsApp.' },
@@ -96,6 +99,7 @@
       { category: 'Swiss B2B trade' },
       { category: 'SMM panel' },
       { category: 'Fintech / FX' },
+      { category: 'Cloud hosting platform' },
       { category: 'Leather & fashion' },
       { category: 'Holding' },
       { category: 'Aesthetic clinic' },
@@ -104,7 +108,7 @@
     ],
     faq: [
       { q: 'Do you really deliver in 5 days?', a: 'Yes — for Basic and Store plans when content is ready. Pro plans with more pages may take 5–7 days. We confirm the exact timeline on WhatsApp before starting.' },
-      { q: 'Is hosting and domain included in the price?', a: `Design and setup are separate. Buy domain, hosting and servers from the ${shop('Netinode shop')}; see ${ni('netinode.net')} for the full catalog — or we guide you through setup.` },
+      { q: 'Is hosting and domain included in the price?', a: `Design and setup are separate. For Iran use ${nh('Netino Host')}; internationally buy from the ${shop('Netinode shop')} — see ${ni('netinode.net')} for the full catalog. Platforms like netinohost.com can also order Fast or custom design.` },
       { q: 'Can I expand the site later?', a: 'Yes. Start with Basic and upgrade to Store or Pro. Bizdavar continues on the same project.' },
       { q: 'How does payment work?', a: 'Usually 50% upfront and 50% before final delivery — bank transfer, card or international methods. Details are agreed on WhatsApp.' },
       { q: 'Do you work with businesses outside Iran?', a: 'Yes — Fast Web Studio has launched sites in Iran, Turkey, UAE and Europe. Consulting in Persian, English and Turkish.' },
@@ -135,7 +139,7 @@
           'Profesyonel iletişim formu',
           'Doğrudan WhatsApp düğmesi',
           'Instagram / LinkedIn bağlantıları',
-          `SSL ve başlangıç hosting — ${shop('Domain ve hosting satın al (Netinode)')}`,
+          `SSL ve başlangıç hosting — ${nh('Netino Host')} (İran) veya ${shop('Netinode')}`,
           'Site yönetimi video eğitimi'
         ]
       },
@@ -187,7 +191,8 @@
       { title: 'Startup ve yeni işletmeler', desc: 'Tek sayfalık tanıtım, form ve WhatsApp — bu hafta yayına geçin.' },
       { title: 'Mağaza ve ürün markaları', desc: 'WooCommerce, ilk ürünler ve hazır ödeme yolu.' },
       { title: 'Klinik, ofis ve yerel hizmet', desc: 'Mobil öncelikli, harita ve doğrudan arama ile güven sitesi.' },
-      { title: 'İhracat ve çok dilli markalar', desc: 'Farsça RTL + İngilizce/Türkçe — Türkiye, İran ve uluslararası.' }
+      { title: 'İhracat ve çok dilli markalar', desc: 'Farsça RTL + İngilizce/Türkçe — Türkiye, İran ve uluslararası.' },
+      { title: 'Hosting, SaaS ve platformlar', desc: 'Web hosting, VPS veya panel — netinohost.com gibi; Fast veya özel Bizdavar tasarımı.' }
     ],
     whyChoose: [
       { title: 'Gerçek hız', desc: 'Belirsiz vaat yok — WhatsApp\'ta günlük ilerleme raporu.' },
@@ -201,6 +206,7 @@
       { category: 'İsviçre B2B ticaret' },
       { category: 'SMM paneli' },
       { category: 'Fintech / döviz' },
+      { category: 'Bulut hosting platformu' },
       { category: 'Deri ve moda' },
       { category: 'Holding' },
       { category: 'Estetik klinik' },
@@ -209,7 +215,7 @@
     ],
     faq: [
       { q: 'Gerçekten 5 günde teslim ediyor musunuz?', a: 'Evet — içerik hazırsa Temel ve Mağaza planları için. Pro planlar 5–7 gün sürebilir. Başlamadan önce WhatsApp\'ta net süre onaylanır.' },
-      { q: 'Hosting ve domain fiyata dahil mi?', a: `Tasarım ve kurulum ayrıdır. Domain, hosting ve sunucuyu ${shop('Netinode mağazasından')} alın; katalog için ${ni('netinode.net')} — veya kurulumda size rehberlik ederiz.` },
+      { q: 'Hosting ve domain fiyata dahil mi?', a: `Tasarım ve kurulum ayrıdır. İran için ${nh('Netino Host')}; uluslararası için ${shop('Netinode mağazası')} — katalog: ${ni('netinode.net')}. netinohost.com gibi platformlar da Fast veya özel tasarım sipariş edebilir.` },
       { q: 'Siteyi sonra genişletebilir miyim?', a: 'Evet. Temel ile başlayıp Mağaza veya Pro\'ya yükseltebilirsiniz. Bizdavar aynı projeyi sürdürür.' },
       { q: 'Ödeme nasıl yapılır?', a: 'Genelde %50 peşin, %50 teslimden önce — havale, kart veya uluslararası yöntemler. Detaylar WhatsApp\'ta netleşir.' },
       { q: 'İran dışındaki işletmelerle çalışıyor musunuz?', a: 'Evet — Türkiye, İran, BAE ve Avrupa\'da siteler kuruldu. Türkçe, Farsça ve İngilizce danışmanlık.' },
@@ -226,7 +232,8 @@
           { title: 'Стартапы и новые компании', desc: 'Одна страница, форма и WhatsApp — запуск на этой неделе.' },
           { title: 'Магазины и продуктовые бренды', desc: 'WooCommerce, стартовые товары и готовый путь оплаты.' },
           { title: 'Клиники, офисы и локальные услуги', desc: 'Мобильный сайт доверия с картой и прямым звонком.' },
-          { title: 'Экспорт и мультиязычные бренды', desc: 'Персидский RTL плюс английский/турецкий — Иран, Турция и дальше.' }
+          { title: 'Экспорт и мультиязычные бренды', desc: 'Персидский RTL плюс английский/турецкий — Иран, Турция и дальше.' },
+          { title: 'Хостинг, SaaS и платформы', desc: 'Хостинг, VPS или панели — как netinohost.com; Fast или индивидуальный дизайн Bizdavar.' }
         ],
         showcases: [
           { category: 'Ювелирный магазин' },
@@ -234,6 +241,7 @@
           { category: 'Швейцарская B2B-торговля' },
           { category: 'SMM-панель' },
           { category: 'Финтех / FX' },
+          { category: 'Облачный хостинг' },
           { category: 'Кожа и мода' },
           { category: 'Холдинг' },
           { category: 'Клиника эстетики' },
@@ -248,7 +256,8 @@
           { title: 'شركات ناشئة وأعمال جديدة', desc: 'صفحة تعريف ونموذج واتساب — انشر موقعك هذا الأسبوع.' },
           { title: 'متاجر وعلامات المنتجات', desc: 'WooCommerce ومنتجات أولية ومسار شراء جاهز.' },
           { title: 'عيادات ومكاتب وخدمات محلية', desc: 'موقع موثوق للجوال مع خريطة وزر اتصال مباشر.' },
-          { title: 'تصدير وعلامات متعددة اللغات', desc: 'عربية/فارسية RTL مع الإنجليزية والتركية لإيران وتركيا والأسواق الدولية.' }
+          { title: 'تصدير وعلامات متعددة اللغات', desc: 'عربية/فارسية RTL مع الإنجليزية والتركية لإيران وتركيا والأسواق الدولية.' },
+          { title: 'استضافة وSaaS ومنصات', desc: 'استضافة أو VPS أو لوحات — مثل netinohost.com؛ Fast أو تصميم مخصص من Bizdavar.' }
         ],
         showcases: [
           { category: 'متجر مجوهرات' },
@@ -256,6 +265,7 @@
           { category: 'تجارة سويسرية B2B' },
           { category: 'لوحة SMM' },
           { category: 'فينتك / صرف' },
+          { category: 'استضافة سحابية' },
           { category: 'جلد وأزياء' },
           { category: 'قابضة' },
           { category: 'عيادة تجميل' },
