@@ -970,25 +970,25 @@
     host.setAttribute('role', 'navigation');
     host.setAttribute('aria-label', t('common.offerMap.aria', 'سه مسیر بیزدوار'));
     const cards = `
-        <p class="offer-map__lead">${t('common.offerMap.lead', 'یک مسیر را انتخاب کنید')}</p>
+        <p class="offer-map__lead">${t('common.offerMap.lead', 'به چه چیزی نیاز دارید؟')}</p>
         <div class="offer-map__grid">
           <a href="${servicesHref}" class="offer-map__card${currentPage === 'services' ? ' is-active' : ''}">
             <span class="offer-map__num">${t('common.offerMap.servicesNum', '۰۱')}</span>
             <p class="offer-map__title">${t('common.offerMap.servicesTitle', 'خدمات')}</p>
-            <p class="offer-map__desc">${t('common.offerMap.servicesDesc', 'سایت ۵روزه، بازاریابی، SMM، اپ، سرور و خدمات فنی')}</p>
+            <p class="offer-map__desc">${t('common.offerMap.servicesDesc', 'سایت ۵روزه، بازاریابی دیجیتال، SMM، اپ، سرور و خدمات فنی')}</p>
             <span class="offer-map__go">${t('common.offerMap.servicesGo', 'ورود به خدمات')}</span>
           </a>
           <a href="${productsHref}" class="offer-map__card${currentPage === 'products' ? ' is-active' : ''}">
             <span class="offer-map__num">${t('common.offerMap.productsNum', '۰۲')}</span>
-            <p class="offer-map__title">${t('common.offerMap.productsTitle', 'محصولات')}</p>
-            <p class="offer-map__desc">${t('common.offerMap.productsDesc', 'BizPet، BizTab و FXGuard — ساخت تیم بیزدوار')}</p>
+            <p class="offer-map__title">${t('common.offerMap.productsTitle', 'محصولات بیزدوار')}</p>
+            <p class="offer-map__desc">${t('common.offerMap.productsDesc', 'محصولات دیجیتال و فیزیکی خودمان — BizPet، BizTab و FXGuard')}</p>
             <span class="offer-map__go">${t('common.offerMap.productsGo', 'ورود به محصولات')}</span>
           </a>
           <a href="${supplyHref}" class="offer-map__card">
             <span class="offer-map__num">${t('common.offerMap.supplyNum', '۰۳')}</span>
             <p class="offer-map__title">${t('common.offerMap.supplyTitle', 'تامین صنعتی')}</p>
-            <p class="offer-map__desc">${t('common.offerMap.supplyDesc', 'VEGA، Prosense، Gamak و Liqui Moly — استعلام قیمت')}</p>
-            <span class="offer-map__go">${t('common.offerMap.supplyGo', 'ورود به تامین')}</span>
+            <p class="offer-map__desc">${t('common.offerMap.supplyDesc', 'قطعات صنعتی و ابزار دقیق: دتکتور Prosense، سنسور VEGA و سایر برندها — برای استعلام قیمت با ما در ارتباط باشید')}</p>
+            <span class="offer-map__go">${t('common.offerMap.supplyGo', 'استعلام قیمت')}</span>
           </a>
         </div>`;
     const alreadyInContainer = inHero || !!host.closest('.container');

@@ -932,14 +932,17 @@ html[dir="rtl"] .fast-path::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
+  height: 48px;
   margin-bottom: 4px;
 }
 
 .fast-showcase-card__logo img {
-  max-height: 32px;
+  max-height: 44px;
   max-width: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
+  border-radius: 8px;
 }
 
 .fast-showcase-card__mark {

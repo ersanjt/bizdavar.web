@@ -36,17 +36,18 @@ const PAGE_OG = {
   gallery: 'assets/images/gallery/expo-imen-booth.jpg',
   digiSystem: 'assets/images/digi-system/hero/digi-retail-hero.webp',
   fxguardAccounting: 'assets/images/products/fxguard/fxguard-hero.svg',
-  articleDigitalMarketing: 'assets/images/brand/bizdavar-logo-square.png',
-  articleWhatIsDm: 'assets/images/brand/bizdavar-logo-square.png',
-  articleSmm: 'assets/images/brand/bizdavar-logo-square.png',
-  articleFastStudio: 'assets/images/brand/bizdavar-logo-square.png',
-  articleIndustrialSensors: 'assets/images/vega/slides/value-process-safety.jpg',
-  articleAboutBizdavar: 'assets/images/brand/bizdavar-logo-square.png',
+  articleWhatIsDm: 'assets/images/content/network-map.svg',
+  articleDigitalMarketing: 'assets/images/content/services-dm-visual.svg',
+  articleSmm: 'assets/images/content/services-smm-mockup.svg',
+  articleFastStudio: 'assets/images/content/related-thumb-fast.svg',
+  articleIndustrialSensors: 'assets/images/vega/blog-industrial-sensors.jpg',
+  articleAboutBizdavar: 'assets/images/gallery/expo-imen-booth.jpg',
   articleVegaSupplyIran: 'assets/images/vega/slides/value-process-safety.jpg',
-  articleMultilingualWeb: 'assets/images/brand/bizdavar-logo-square.png',
+  articleMultilingualWeb: 'assets/images/content/services-web-mockup.svg',
   bzDiamond: 'assets/images/partners/bzdiamond.webp',
   kayaOne: 'assets/images/partners/kaya-one.svg',
-  smmTurk: 'assets/images/partners/smm-turk.svg'
+  smmTurk: 'assets/images/partners/smm-turk.svg',
+  marviSociety: 'assets/images/partners/marvi-society.png'
 };
 
 const PAGE_ROUTES = {
@@ -71,6 +72,7 @@ const PAGE_ROUTES = {
   supplifyTrade: '/pages/supplify-trade',
   kayaOne: '/pages/kaya-one',
   smmTurk: '/pages/smm-turk',
+  marviSociety: '/pages/marvi-society',
   fxguardExchange: '/pages/fxguard-exchange',
   biztejarat: '/pages/biztejarat',
   biztab: '/pages/biztab',

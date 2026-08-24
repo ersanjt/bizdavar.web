@@ -112,16 +112,16 @@ window.FAST_CATALOG = {
   ],
 
   showcases: [
-    { name: 'BZ Diamond', category: 'فروشگاه جواهرات', slug: 'pages/bz-diamond', internal: true },
+    { name: 'BZ Diamond', category: 'فروشگاه جواهرات', slug: 'pages/bz-diamond', internal: true, logo: 'assets/images/partners/zeddiamond.png' },
     { name: 'Supplify Trade', category: 'تجارت بین‌المللی B2B', slug: 'pages/supplify-trade', internal: true, logo: 'assets/images/partners/supplify-trade.svg' },
     { name: 'Kaya One AG', category: 'تجارت سوئیسی B2B', slug: 'pages/kaya-one', internal: true, logo: 'assets/images/partners/kaya-one.svg' },
     { name: 'SMM Turk', category: 'پنل SMM', slug: 'pages/smm-turk', internal: true, logo: 'assets/images/partners/smm-turk.svg' },
     { name: 'FXGuard Exchange', category: 'فین‌تک / تبادل ارز', slug: 'pages/fxguard-exchange', internal: true, logo: 'assets/images/partners/fxguard-exchange.svg' },
-    { name: 'Karen Leather', category: 'چرم و مد', domain: 'karenleather.com', internal: false },
-    { name: 'Marvelous Holding', category: 'هلدینگ', domain: 'marvelousholding.com', internal: false },
-    { name: 'NIK Aesthetic', category: 'کلینیک زیبایی', domain: 'nikaesthetic.com', internal: false },
-    { name: 'Paparosi', category: 'برند تجاری', domain: 'paparosi.co', internal: false },
-    { name: 'Arian Pumps', category: 'B2B صنعتی', domain: 'arianpumps.com', internal: false }
+    { name: 'Karen Leather', category: 'چرم و مد', domain: 'karenleather.com', internal: false, logo: 'assets/images/partners/karen-leather.png' },
+    { name: 'Marvelous Holding', category: 'هلدینگ', domain: 'marvelousholding.com', internal: false, logo: 'assets/images/partners/marvelous-holding.png' },
+    { name: 'NIK Aesthetic', category: 'کلینیک زیبایی', domain: 'nikaesthetic.com', internal: false, logo: 'assets/images/partners/nikaesthetic.png' },
+    { name: 'Paparosi', category: 'برند تجاری', domain: 'paparosi.co', internal: false, logo: 'assets/images/partners/paparosi.png' },
+    { name: 'Arian Pumps', category: 'B2B صنعتی', domain: 'arianpumps.com', internal: false, logo: 'assets/images/partners/arian-pumps.png' }
   ],
 
   faq: [

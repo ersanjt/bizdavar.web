@@ -26,6 +26,7 @@ window.BIZDAVAR_CONFIG = {
     supplifyTrade: 'pages/supplify-trade.html',
     kayaOne: 'pages/kaya-one.html',
     smmTurk: 'pages/smm-turk.html',
+    marviSociety: 'pages/marvi-society.html',
     fxguardExchange: 'pages/fxguard-exchange.html',
     biztejarat: 'pages/biztejarat.html',
     biztab: 'pages/biztab.html',
@@ -385,7 +386,7 @@ window.BIZDAVAR_CONFIG = {
   blogPosts: [
     {
       slug: 'pages/articles/vega-supply-iran.html',
-      title: 'تامین سنسور VEGA در ایران — از استانبول تا پروژه صنعتی',
+      title: 'تامین سنسور VEGA در ایران — از استعلام تا پروژه صنعتی',
       excerpt: 'مسیر مشاوره فارسی، پیش‌فاکتور و لجستیک اصل VEGA برای پروژه‌های ایران.',
       category: 'تجهیزات صنعتی',
       catId: 'industrial',
@@ -450,7 +451,7 @@ window.BIZDAVAR_CONFIG = {
       category: 'تجهیزات صنعتی',
       catId: 'industrial',
       date: '2025-03-20',
-      image: 'assets/images/vega/hero-vegapuls-6x.png',
+      image: 'assets/images/vega/blog-industrial-sensors.jpg',
       relatedService: 'pages/products.html#supply'
     },
     {
@@ -509,6 +510,7 @@ window.BIZDAVAR_CONFIG = {
     { name: 'Supplify Trade', url: 'pages/supplify-trade.html', logo: 'assets/images/partners/supplify-trade.svg', role: 'case-study' },
     { name: 'Kaya One AG', url: 'pages/kaya-one.html', logo: 'assets/images/partners/kaya-one.svg', role: 'case-study' },
     { name: 'SMM Turk', url: 'pages/smm-turk.html', logo: 'assets/images/partners/smm-turk.svg', role: 'case-study' },
+    { name: 'Marvi Society', url: 'pages/marvi-society.html', logo: 'assets/images/partners/marvi-society.png', role: 'case-study' },
     { name: 'FXGuard Exchange', url: 'pages/fxguard-exchange.html', logo: 'assets/images/partners/fxguard-exchange.svg', role: 'case-study' },
     { name: 'Biztejarat', url: 'pages/biztejarat.html', logo: 'assets/images/partners/biztejarat.svg', role: 'case-study' },
     { name: 'Marvelous Holding', url: 'https://marvelousholding.com', logo: 'assets/images/partners/marvelous-holding.png', role: 'client' },
@@ -638,7 +640,7 @@ window.BIZDAVAR_CONFIG = {
     { name: 'FXGuard Exchange', domain: 'exchange.fxguard.io', url: 'https://exchange.fxguard.io/', category: 'طراحی وب / صرافی و فین‌تک', role: 'case-study', internal: true, slug: 'pages/fxguard-exchange.html', logo: 'assets/images/partners/fxguard-exchange.svg', note: 'نمونه‌کار — پلتفرم تبادل تومان و لیر با نرخ زنده، KYC و پیگیری سفارش' },
     { name: 'FXGuard Accounting', domain: 'accounting.fxguard.io', url: 'https://accounting.fxguard.io/', category: 'نرم‌افزار حسابداری / فینانس', role: 'case-study', internal: true, slug: 'pages/fxguard-accounting.html', logo: 'assets/images/partners/fxguard-accounting.svg', note: 'محصول FXGuard — سامانه حسابداری برای تیم‌های مالی، صرافی و SME؛ بخشی از سوئیت fxguard.io' },
     { name: 'Marvispace', domain: 'marvispace.com', url: 'https://marvispace.com', category: 'طراحی وب / فروشگاه اختصاصی', role: 'case-study', internal: false, logo: 'assets/images/partners/marvispace.svg', note: 'نمونه‌کار — فروشگاه آنلاین اختصاصی با داشبورد ادمین، مدیریت محصول و محتوا' },
-    { name: 'Marvi Society', domain: 'marvisociety.com', url: 'https://marvisociety.com', appStoreUrl: 'https://apps.apple.com/us/app/marvi-society/id6783450762', category: 'توسعه اپ موبایل / lifestyle و creator', role: 'case-study', internal: false, logo: 'assets/images/partners/marvi-society.svg', note: 'نمونه‌کار — طراحی، برنامه‌نویسی و راه‌اندازی صفر تا صد اپ iOS؛ کلاب دعوت‌محور همکاری creator و مکان تأییدشده در استانبول — کشف مکان، check-in، ارسال مدرک بازدید، پروفایل TR/EN؛ منتشر در App Store' },
+    { name: 'Marvi Society', domain: 'marvisociety.com', url: 'https://marvisociety.com', appStoreUrl: 'https://apps.apple.com/us/app/marvi-society/id6783450762', category: 'توسعه اپ موبایل / lifestyle و creator', role: 'case-study', internal: true, slug: 'pages/marvi-society.html', logo: 'assets/images/partners/marvi-society.png', note: 'نمونه‌کار — طراحی، برنامه‌نویسی و راه‌اندازی صفر تا صد اپ iOS؛ کلاب دعوت‌محور همکاری creator و مکان تأییدشده در استانبول — کشف مکان، check-in، ارسال مدرک بازدید، پروفایل TR/EN؛ منتشر در App Store' },
     { name: 'GooPay AI', domain: 'goopay.ai', category: 'هوش مصنوعی / نرم‌افزار اختصاصی', role: 'case-study', internal: false, logo: 'assets/images/partners/goopay-ai.svg', note: 'نمونه‌کار — طراحی و برنامه‌نویسی اختصاصی سیستم‌های هوش مصنوعی' },
     { name: 'Grafik Travel', domain: 'grafiktravel.com', url: 'http://grafiktravel.com/', category: 'طراحی وب / گردشگری و MICE', role: 'case-study', internal: false, logo: 'assets/images/partners/grafik-travel.png', note: 'نمونه‌کار — طراحی وبسایت تخصصی برای مجموعه گردشگری و خدمات سازمانی' },
     { name: 'Biztejarat', domain: 'instagram.com/biztejarat', category: 'مدیریت SMM / اینستاگرام', role: 'case-study', internal: true, slug: 'pages/biztejarat.html', archived: true, logo: 'assets/images/partners/biztejarat.svg', note: 'پروژه گذشته — این کسب‌وکار فعلاً غیرفعال شده است' },

@@ -41,7 +41,8 @@
   ], afterLocales, [
     'i18n/locales-pages.js',
     'i18n/locale-seo.js',
-    'i18n/locales-ru-ar.js'
+    'i18n/locales-ru-ar.js',
+    'i18n/articles-bodies.js'
   ], afterSeo, [
     'i18n/i18n.js',
     'i18n/page-i18n.js'

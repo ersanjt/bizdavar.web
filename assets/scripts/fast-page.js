@@ -46,6 +46,13 @@
     return `https://${item.domain}`;
   }
 
+  function showcaseLogo(item) {
+    if (item.logo) return item.logo;
+    const list = C.portfolio || [];
+    const match = list.find((p) => p.name === item.name);
+    return match && match.logo ? match.logo : '';
+  }
+
   function initials(name) {
     return String(name || '')
       .split(/\s+/)
@@ -330,8 +337,9 @@
     el.innerHTML = F.showcases.map((s) => {
       const url = showcaseUrl(s);
       const ext = !s.internal;
-      const logo = s.logo
-        ? `<span class="fast-showcase-card__logo"><img src="${path(s.logo)}" alt="" width="120" height="40" loading="lazy"></span>`
+      const logoSrc = showcaseLogo(s);
+      const logo = logoSrc
+        ? `<span class="fast-showcase-card__logo"><img src="${path(logoSrc)}" alt="${s.name}" width="140" height="44" loading="lazy"></span>`
         : `<span class="fast-showcase-card__logo"><span class="fast-showcase-card__mark">${initials(s.name)}</span></span>`;
       return `
         <a href="${url}" class="fast-showcase-card"${ext ? ' target="_blank" rel="noopener noreferrer"' : ''}>

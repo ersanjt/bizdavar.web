@@ -207,7 +207,13 @@ html[dir='ltr'] .hero__actions {
 }
 
 html[dir='ltr'] .landing-hero--paths .hero__actions {
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+@media (max-width: 900px) {
+  html[dir='ltr'] .landing-hero--paths .hero__actions {
+    justify-content: center;
+  }
 }
 
 html[dir='ltr'] .service-card--pro::before {

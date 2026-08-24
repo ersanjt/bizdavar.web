@@ -8,7 +8,7 @@ const path = require('path');
 
 const BASE = 'https://bizdavar.com';
 const OUT = path.join(__dirname, '..', 'sitemap.xml');
-const SITE_UPDATE = '2026-08-19';
+const SITE_UPDATE = '2026-08-24';
 
 const LOCALES = [
   { code: 'fa', prefix: '' },
@@ -36,7 +36,7 @@ const PAGES = [
   { path: '/pages/gallery', changefreq: 'monthly', priority: 0.8, lastmod: '2026-08-21' },
   { path: '/pages/products', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
   { path: '/pages/portfolio', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
-  { path: '/pages/blog', changefreq: 'weekly', priority: 0.75, lastmod: SITE_UPDATE },
+  { path: '/pages/blog', changefreq: 'weekly', priority: 0.75, lastmod: '2026-08-24' },
   { path: '/pages/fast', changefreq: 'monthly', priority: 0.85, lastmod: SITE_UPDATE },
   { path: '/pages/field-tech', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
   { path: '/pages/vega', changefreq: 'monthly', priority: 0.9, lastmod: '2026-08-19' },
@@ -50,6 +50,7 @@ const PAGES = [
   { path: '/pages/supplify-trade', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/kaya-one', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/smm-turk', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
+  { path: '/pages/marvi-society', changefreq: 'monthly', priority: 0.8, lastmod: '2026-08-24' },
   { path: '/pages/fxguard-exchange', changefreq: 'monthly', priority: 0.85, lastmod: SITE_UPDATE },
   { path: '/pages/biztejarat', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/biztab', changefreq: 'monthly', priority: 0.85, lastmod: '2020-03-16' },
@@ -59,14 +60,14 @@ const PAGES = [
   { path: '/pages/fxguard', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/fxguard-accounting', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/bizswap', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
-  { path: '/pages/articles/about-bizdavar-group', changefreq: 'monthly', priority: 0.85, lastmod: '2025-06-01' },
-  { path: '/pages/articles/vega-supply-iran', changefreq: 'monthly', priority: 0.85, lastmod: '2026-07-29' },
-  { path: '/pages/articles/multilingual-web-iran-turkey', changefreq: 'monthly', priority: 0.85, lastmod: '2026-07-29' },
-  { path: '/pages/articles/what-is-digital-marketing', changefreq: 'yearly', priority: 0.7, lastmod: '2025-02-10' },
-  { path: '/pages/articles/digital-marketing', changefreq: 'yearly', priority: 0.7, lastmod: '2025-04-01' },
-  { path: '/pages/articles/social-media-management', changefreq: 'yearly', priority: 0.7, lastmod: '2025-03-05' },
-  { path: '/pages/articles/fast-studio', changefreq: 'yearly', priority: 0.7, lastmod: '2025-05-15' },
-  { path: '/pages/articles/industrial-sensors', changefreq: 'yearly', priority: 0.7, lastmod: '2025-03-20' },
+  { path: '/pages/articles/about-bizdavar-group', changefreq: 'monthly', priority: 0.85, lastmod: '2026-08-24' },
+  { path: '/pages/articles/vega-supply-iran', changefreq: 'monthly', priority: 0.85, lastmod: '2026-08-24' },
+  { path: '/pages/articles/multilingual-web-iran-turkey', changefreq: 'monthly', priority: 0.85, lastmod: '2026-08-24' },
+  { path: '/pages/articles/what-is-digital-marketing', changefreq: 'monthly', priority: 0.75, lastmod: '2026-08-24' },
+  { path: '/pages/articles/digital-marketing', changefreq: 'monthly', priority: 0.75, lastmod: '2026-08-24' },
+  { path: '/pages/articles/social-media-management', changefreq: 'monthly', priority: 0.75, lastmod: '2026-08-24' },
+  { path: '/pages/articles/fast-studio', changefreq: 'monthly', priority: 0.75, lastmod: '2026-08-24' },
+  { path: '/pages/articles/industrial-sensors', changefreq: 'monthly', priority: 0.75, lastmod: '2026-08-24' },
   { path: '/pages/privacy', changefreq: 'yearly', priority: 0.3, lastmod: SITE_UPDATE }
 ];
 

@@ -18,6 +18,11 @@ const ROOT = path.join(__dirname, '..');
 global.window = global;
 require(path.join(ROOT, 'assets/scripts/i18n/seo-head.js'));
 
+const { ARTICLES, innerHtml, jsonLd, CTA, ctaLinks } = require('./article-library');
+const ARTICLE_BY_REL = Object.fromEntries(
+  ARTICLES.map((a) => [`pages/articles/${a.file}`, a])
+);
+
 const HEAD = global.BIZDAVAR_SEO_HEAD || {};
 const SITE = global.BIZDAVAR_SEO_SITE || {};
 const BASE = SITE.base || 'https://bizdavar.com';
@@ -159,6 +164,7 @@ const FILE_TO_ROUTE = {
   'pages/supplify-trade.html': '/pages/supplify-trade',
   'pages/kaya-one.html': '/pages/kaya-one',
   'pages/smm-turk.html': '/pages/smm-turk',
+  'pages/marvi-society.html': '/pages/marvi-society',
   'pages/fxguard-exchange.html': '/pages/fxguard-exchange',
   'pages/biztejarat.html': '/pages/biztejarat',
   'pages/biztab.html': '/pages/biztab',
@@ -284,6 +290,37 @@ ${hreflangLinks(route)}
 `;
 }
 
+function bakeArticleLocale(html, rel, lang) {
+  const a = ARTICLE_BY_REL[rel.replace(/\\/g, '/')];
+  if (!a) return html;
+  const loc = ['fa', 'tr', 'en', 'ru', 'ar'].includes(lang) ? lang : 'en';
+  const inner = innerHtml(a, loc);
+  html = html.replace(
+    /<!-- bd-article-inner -->[\s\S]*?<!-- \/bd-article-inner -->/,
+    `<!-- bd-article-inner -->\n${inner}\n      <!-- /bd-article-inner -->`
+  );
+  const title = a.title[loc] || a.title.en;
+  const cat = a.category[loc] || a.category.en;
+  const cta = CTA[loc] || CTA.en;
+  const links = ctaLinks(a);
+  html = html.replace(/(<span class="blog-item__cat">)[\s\S]*?(<\/span>)/, `$1${cat}$2`);
+  html = html.replace(/(<h1>)[\s\S]*?(<\/h1>)/, `$1${title}$2`);
+  html = html.replace(
+    /(<div class="article__cta">\s*<p>)[\s\S]*?(<\/p>)/,
+    `$1${cta.text}$2`
+  );
+  html = html.replace(
+    new RegExp(`href="${links.primary.replace(/[?]/g, '\\?')}" class="btn btn--primary">[\\s\\S]*?<\\/a>`),
+    `href="${links.primary}" class="btn btn--primary">${cta.primary}</a>`
+  );
+  const ld = JSON.stringify(jsonLd(a, loc));
+  html = html.replace(
+    /<script type="application\/ld\+json" id="jsonld-article-static">[\s\S]*?<\/script>/,
+    `<script type="application/ld+json" id="jsonld-article-static">${ld}</script>`
+  );
+  return html;
+}
+
 function applySeo(html, route, meta, locale) {
   let out = stripSeoBlock(html);
   out = stripCanonicalLinks(out);
@@ -336,7 +373,8 @@ for (const [rel, route] of Object.entries(FILE_TO_ROUTE)) {
   }
 
   // Bake Persian into the canonical source files
-  const faHtml = applySeo(sourceHtml, route, faMeta, faLocale);
+  const faSource = bakeArticleLocale(sourceHtml, rel, 'fa');
+  const faHtml = applySeo(faSource, route, faMeta, faLocale);
   fs.writeFileSync(file, faHtml, 'utf8');
   updated++;
   console.log('baked fa', rel);
@@ -352,7 +390,11 @@ for (const [rel, route] of Object.entries(FILE_TO_ROUTE)) {
     const outRel = localeOutRel(locale.code, rel);
     const outFile = path.join(ROOT, outRel);
     ensureDir(outFile);
-    const withCopy = bakeI18nBody(sourceHtml, LOCALES_DICT[locale.code]);
+    const withCopy = bakeArticleLocale(
+      bakeI18nBody(sourceHtml, LOCALES_DICT[locale.code]),
+      rel,
+      locale.code
+    );
     const localeHtml = applySeo(withCopy, route, meta, locale);
     fs.writeFileSync(outFile, localeHtml, 'utf8');
     localeFiles++;

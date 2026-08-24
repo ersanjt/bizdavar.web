@@ -20,6 +20,7 @@
     supplifyTrade: 'supplify-trade',
     kayaOne: 'kaya-one',
     smmTurk: 'smm-turk',
+    marviSociety: 'marvi-society',
     fxguardExchange: 'fxguard-exchange'
   };
   function normalizePageId(id) {
@@ -52,7 +53,7 @@
 
     const knownPages = new Set([
       'about', 'services', 'portfolio', 'blog', 'contact', 'privacy', 'fast', 'vega',
-      'prosense', 'teltonika', 'gamak', 'digi-system', 'teraoka', 'liqui-moly', 'bz-diamond', 'supplify-trade', 'kaya-one', 'smm-turk', 'fxguard-exchange', 'biztejarat',
+      'prosense', 'teltonika', 'gamak', 'digi-system', 'teraoka', 'liqui-moly', 'bz-diamond', 'supplify-trade', 'kaya-one', 'smm-turk', 'marvi-society', 'fxguard-exchange', 'biztejarat',
       'products', 'biztab', 'bizsanitizer-v5', 'bizseat', 'bizpet', 'gallery', 'fxguard', 'bizswap'
     ]);
     const stem = n.replace(/\.html$/, '');

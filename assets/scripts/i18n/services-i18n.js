@@ -42,9 +42,9 @@
       {
         title: 'اپلیکیشن موبایل و سامانه',
         subtitle: 'Android · iOS · سامانه سازمانی',
-        body: 'طراحی و توسعه <strong>اپلیکیشن اندروید و iOS</strong>، سامانه سازمانی، پنل B2B و راهکارهای نرم‌افزاری سفارشی — از تحلیل نیاز تا انتشار، یکپارچه‌سازی و پشتیبانی.',
+        body: 'طراحی و توسعه <strong>اپلیکیشن اندروید و iOS</strong>، سامانه سازمانی، پنل B2B و راهکارهای نرم‌افزاری سفارشی — از تحلیل نیاز تا انتشار، یکپارچه‌سازی و پشتیبانی. نمونه: <a href="marvi-society">Marvi Society</a> در App Store.',
         tags: ['Android', 'iOS', 'سامانه', 'API'],
-        checks: ['اپلیکیشن اندروید و iOS', 'سامانه و پنل سازمانی', 'اتصال به API و درگاه پرداخت', 'UI/UX فارسی و چندزبانه', 'پشتیبانی و به‌روزرسانی'],
+        checks: ['اپلیکیشن اندروید و iOS', 'سامانه و پنل سازمانی', 'اتصال به API و درگاه پرداخت', 'UI/UX فارسی و چندزبانه', 'پشتیبانی و به‌روزرسانی', '<a href="marvi-society">Marvi Society</a> — نمونه‌کار اپ iOS'],
         cta: 'درخواست پروژه نرم‌افزاری'
       },
       {
@@ -130,9 +130,9 @@
       {
         title: 'Mobil uygulama ve sistem',
         subtitle: 'Android · iOS · Kurumsal sistem',
-        body: '<strong>Android / iOS</strong> uygulaması, kurumsal sistem, B2B paneller ve özel yazılım çözümleri — ihtiyaç analizinden yayına, entegrasyona ve desteğe kadar.',
+        body: '<strong>Android / iOS</strong> uygulaması, kurumsal sistem, B2B paneller ve özel yazılım çözümleri — ihtiyaç analizinden yayına, entegrasyona ve desteğe kadar. Örnek: App Store’daki <a href="marvi-society">Marvi Society</a>.',
         tags: ['Android', 'iOS', 'Sistem', 'API'],
-        checks: ['Android ve iOS uygulama', 'Kurumsal sistem / panel', 'API ve ödeme entegrasyonu', 'Çok dilli UI', 'Destek ve güncelleme'],
+        checks: ['Android ve iOS uygulama', 'Kurumsal sistem / panel', 'API ve ödeme entegrasyonu', 'Çok dilli UI', 'Destek ve güncelleme', '<a href="marvi-society">Marvi Society</a> — iOS uygulama örneği'],
         cta: 'Yazılım projesi iste'
       },
       {
@@ -218,9 +218,9 @@
       {
         title: 'Mobile apps & systems',
         subtitle: 'Android · iOS · Business systems',
-        body: 'Design and build <strong>Android and iOS</strong> apps, enterprise systems, B2B panels and custom software — from requirements through release, integration and support.',
+        body: 'Design and build <strong>Android and iOS</strong> apps, enterprise systems, B2B panels and custom software — from requirements through release, integration and support. Example: <a href="marvi-society">Marvi Society</a> on the App Store.',
         tags: ['Android', 'iOS', 'Systems', 'API'],
-        checks: ['Android and iOS apps', 'Business systems and panels', 'API and payment integrations', 'Multilingual UI', 'Support and updates'],
+        checks: ['Android and iOS apps', 'Business systems and panels', 'API and payment integrations', 'Multilingual UI', 'Support and updates', '<a href="marvi-society">Marvi Society</a> — iOS app case study'],
         cta: 'Request a software project'
       },
       {

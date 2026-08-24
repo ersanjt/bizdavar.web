@@ -225,7 +225,7 @@
       const external = !p.internal;
 
       const logoHtml = p.logo
-        ? `<div class="portfolio-card__logo"><img src="${path(p.logo)}" alt="${p.name}" loading="lazy" width="160" height="52"></div>`
+        ? `<div class="portfolio-card__logo${p.appStoreUrl ? ' portfolio-card__logo--app' : ''}"><img src="${path(p.logo)}" alt="${p.name}" loading="lazy" width="160" height="52"></div>`
         : `<div class="portfolio-card__logo portfolio-card__logo--text"><span>${p.name}</span></div>`;
 
       return `

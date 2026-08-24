@@ -1,0 +1,887 @@
+/**
+ * Source of truth for blog articles (FA crawlable HTML + locale bodies).
+ * Used by scripts/regenerate-articles.js
+ */
+function esc(s) {
+  return String(s || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+}
+
+function fig(src, alt, cap) {
+  return `<figure class="article__figure"><img src="${src}" alt="${esc(alt)}" width="960" height="540" loading="lazy"><figcaption>${cap}</figcaption></figure>`;
+}
+
+const ARTICLES = [
+  {
+    file: 'what-is-digital-marketing.html',
+    slug: 'what-is-digital-marketing',
+    seoKey: 'articleWhatIsDm',
+    date: '2025-02-10',
+    modified: '2026-08-24',
+    image: 'assets/images/content/network-map.svg',
+    extraImg: 'assets/images/content/services-dm-visual.svg',
+    category: { fa: 'بازاریابی دیجیتال', tr: 'Dijital pazarlama', en: 'Digital marketing', ru: 'Цифровой маркетинг', ar: 'التسويق الرقمي' },
+    title: {
+      fa: 'دیجیتال مارکتینگ چیست؟ — راهنمای کامل برای کسب‌وکارها',
+      tr: 'Dijital pazarlama nedir? İşletmeler için tam rehber',
+      en: 'What is digital marketing? A complete guide for businesses',
+      ru: 'Что такое цифровой маркетинг? Полный гид для бизнеса',
+      ar: 'ما هو التسويق الرقمي؟ دليل كامل للأعمال'
+    },
+    description: {
+      fa: 'تعریف دیجیتال مارکتینگ، کانال‌های سئو، تبلیغات، SMM و محتوا — با مسیر اجرای بیزدوار برای ایران و ترکیه.',
+      tr: 'Dijital pazarlamanın tanımı, SEO, reklam, SMM ve içerik kanalları — Bizdavar uygulama yolu.',
+      en: 'What digital marketing is, plus SEO, ads, SMM and content channels — with Bizdavar’s execution path.',
+      ru: 'Что такое цифровой маркетинг: SEO, реклама, SMM и контент — путь внедрения Bizdavar.',
+      ar: 'تعريف التسويق الرقمي وقنوات SEO والإعلانات وSMM والمحتوى — مسار تنفيذ بيزدوار.'
+    },
+    keywords: {
+      fa: 'دیجیتال مارکتینگ چیست, بازاریابی دیجیتال, سئو, تبلیغات گوگل, SMM, بیزدوار',
+      tr: 'dijital pazarlama nedir, SEO, Google Ads, SMM, Bizdavar',
+      en: 'what is digital marketing, SEO, Google Ads, SMM, Bizdavar',
+      ru: 'что такое цифровой маркетинг, SEO, Google Ads, SMM, Bizdavar',
+      ar: 'ما هو التسويق الرقمي, سيو, إعلانات جوجل, SMM, بيزدوار'
+    },
+    tags: {
+      fa: ['دیجیتال مارکتینگ', 'سئو', 'SMM', 'CRO'],
+      tr: ['Dijital pazarlama', 'SEO', 'SMM', 'CRO'],
+      en: ['Digital marketing', 'SEO', 'SMM', 'CRO'],
+      ru: ['Цифровой маркетинг', 'SEO', 'SMM', 'CRO'],
+      ar: ['تسويق رقمي', 'سيو', 'SMM', 'CRO']
+    },
+    toc: {
+      fa: [['ch-def', 'تعریف عملی'], ['ch-channels', 'کانال‌ها'], ['ch-vs', 'تفاوت با بازاریابی سنتی'], ['ch-start', 'از کجا شروع کنیم'], ['ch-faq', 'سوالات متداول']],
+      tr: [['ch-def', 'Tanım'], ['ch-channels', 'Kanallar'], ['ch-vs', 'Geleneksel pazarlama'], ['ch-start', 'Nereden başlamalı'], ['ch-faq', 'SSS']],
+      en: [['ch-def', 'Definition'], ['ch-channels', 'Channels'], ['ch-vs', 'Vs traditional'], ['ch-start', 'Where to start'], ['ch-faq', 'FAQ']],
+      ru: [['ch-def', 'Определение'], ['ch-channels', 'Каналы'], ['ch-vs', 'Vs традиционный'], ['ch-start', 'С чего начать'], ['ch-faq', 'FAQ']],
+      ar: [['ch-def', 'التعريف'], ['ch-channels', 'القنوات'], ['ch-vs', 'مقابل التقليدي'], ['ch-start', 'من أين تبدأ'], ['ch-faq', 'أسئلة']]
+    },
+    faq: {
+      fa: [
+        { q: 'دیجیتال مارکتینگ فقط اینستاگرام است؟', a: 'خیر. وبسایت، سئو، تبلیغات جستجو، ایمیل و SMM با هم قیف فروش را می‌سازند.' },
+        { q: 'برای کسب‌وکار B2B صنعتی هم لازم است؟', a: 'بله. خریدار صنعتی هم جستجو می‌کند؛ صفحه محصول، مقاله تخصصی و واتساپ مسیر استعلام را کوتاه می‌کند.' }
+      ],
+      tr: [
+        { q: 'Dijital pazarlama yalnızca Instagram mı?', a: 'Hayır. Site, SEO, arama reklamı, e-posta ve SMM birlikte satış hunisini kurar.' },
+        { q: 'B2B sanayi için de gerekir mi?', a: 'Evet. Alıcı da arama yapar; ürün sayfası ve WhatsApp teklifi hızlandırır.' }
+      ],
+      en: [
+        { q: 'Is digital marketing only Instagram?', a: 'No. Website, SEO, search ads, email and SMM together build the sales funnel.' },
+        { q: 'Does B2B industry need it?', a: 'Yes. Buyers still search; a product page plus WhatsApp shortens the quote path.' }
+      ],
+      ru: [
+        { q: 'Это только Instagram?', a: 'Нет. Сайт, SEO, реклама, email и SMM вместе собирают воронку.' },
+        { q: 'Нужно ли B2B промышленности?', a: 'Да. Закупщик тоже ищет; страница продукта и WhatsApp ускоряют запрос.' }
+      ],
+      ar: [
+        { q: 'هل التسويق الرقمي إنستغرام فقط؟', a: 'لا. الموقع وSEO والإعلانات والبريد وSMM معاً يبنون مسار البيع.' },
+        { q: 'هل تحتاجه الصناعة B2B؟', a: 'نعم. المشتري يبحث أيضاً؛ صفحة المنتج وواتساب تختصر الاستعلام.' }
+      ]
+    },
+    related: [
+      { title: 'افزایش فروش با دیجیتال مارکتینگ', url: 'digital-marketing', desc: 'CRO و قیف فروش' },
+      { title: 'خدمات بازاریابی', url: '../services#digital-marketing', desc: 'اجرا با تیم بیزدوار' },
+      { title: 'وبلاگ', url: '../blog', desc: 'سایر راهنماها' }
+    ]
+  },
+  {
+    file: 'digital-marketing.html',
+    slug: 'digital-marketing',
+    seoKey: 'articleDigitalMarketing',
+    date: '2025-04-01',
+    modified: '2026-08-24',
+    image: 'assets/images/content/services-dm-visual.svg',
+    extraImg: 'assets/images/content/network-map.svg',
+    category: { fa: 'بازاریابی دیجیتال', tr: 'Dijital pazarlama', en: 'Digital marketing', ru: 'Цифровой маркетинг', ar: 'التسويق الرقمي' },
+    title: {
+      fa: 'چگونه بازاریابی دیجیتال فروش را افزایش می‌دهد؟',
+      tr: 'Dijital pazarlama satışları nasıl artırır?',
+      en: 'How digital marketing increases sales',
+      ru: 'Как цифровой маркетинг увеличивает продажи',
+      ar: 'كيف يزيد التسويق الرقمي المبيعات'
+    },
+    description: {
+      fa: 'قیف فروش، CRO، تبلیغات هدفمند و پیگیری لید — مسیر عملی افزایش فروش آنلاین با بیزدوار.',
+      tr: 'Satış hunisi, CRO, hedefli reklam ve lead takibi — Bizdavar ile pratik büyüme.',
+      en: 'Sales funnel, CRO, targeted ads and lead follow-up — a practical growth path with Bizdavar.',
+      ru: 'Воронка, CRO, реклама и сопровождение лидов — практический рост с Bizdavar.',
+      ar: 'قمع المبيعات وCRO والإعلانات ومتابعة العملاء — مسار نمو عملي مع بيزدوار.'
+    },
+    keywords: {
+      fa: 'افزایش فروش آنلاین, CRO, قیف فروش, تبلیغات گوگل, بیزدوار',
+      tr: 'online satış, CRO, satış hunisi, Google Ads, Bizdavar',
+      en: 'increase online sales, CRO, sales funnel, Google Ads, Bizdavar',
+      ru: 'рост онлайн продаж, CRO, воронка, Google Ads, Bizdavar',
+      ar: 'زيادة المبيعات, CRO, قمع المبيعات, إعلانات جوجل, بيزدوار'
+    },
+    tags: {
+      fa: ['CRO', 'فروش آنلاین', 'تبلیغات', 'لندینگ'],
+      tr: ['CRO', 'Online satış', 'Reklam', 'Landing'],
+      en: ['CRO', 'Online sales', 'Ads', 'Landing'],
+      ru: ['CRO', 'Онлайн-продажи', 'Реклама', 'Лендинг'],
+      ar: ['CRO', 'مبيعات أونلاين', 'إعلانات', 'صفحة هبوط']
+    },
+    toc: {
+      fa: [['ch-funnel', 'قیف فروش'], ['ch-cro', 'نرخ تبدیل'], ['ch-ads', 'تبلیغات'], ['ch-follow', 'پیگیری'], ['ch-faq', 'سوالات متداول']],
+      tr: [['ch-funnel', 'Huni'], ['ch-cro', 'Dönüşüm'], ['ch-ads', 'Reklam'], ['ch-follow', 'Takip'], ['ch-faq', 'SSS']],
+      en: [['ch-funnel', 'Funnel'], ['ch-cro', 'CRO'], ['ch-ads', 'Ads'], ['ch-follow', 'Follow-up'], ['ch-faq', 'FAQ']],
+      ru: [['ch-funnel', 'Воронка'], ['ch-cro', 'CRO'], ['ch-ads', 'Реклама'], ['ch-follow', 'Сопровождение'], ['ch-faq', 'FAQ']],
+      ar: [['ch-funnel', 'القمع'], ['ch-cro', 'التحويل'], ['ch-ads', 'الإعلانات'], ['ch-follow', 'المتابعة'], ['ch-faq', 'أسئلة']]
+    },
+    faq: {
+      fa: [
+        { q: 'اول سایت را درست کنیم یا تبلیغ بزنیم؟', a: 'اول لندینگ سریع و فرم/واتساپ؛ بعد بودجه تبلیغ. در غیر این صورت کلیک هدر می‌رود.' },
+        { q: 'گزارش ROI را چطور می‌بینیم؟', a: 'منبع لید، نرخ پاسخ واتساپ و فروش بسته شده — نه فقط بازدید صفحه.' }
+      ],
+      tr: [
+        { q: 'Önce site mi reklam mı?', a: 'Önce hızlı landing ve form/WhatsApp; sonra reklam bütçesi.' },
+        { q: 'ROI nasıl bakılır?', a: 'Lead kaynağı, WhatsApp yanıt oranı ve kapanan satış — sadece trafik değil.' }
+      ],
+      en: [
+        { q: 'Fix the site or run ads first?', a: 'First a fast landing plus form/WhatsApp; then ad spend.' },
+        { q: 'How do we see ROI?', a: 'Lead source, WhatsApp reply rate and closed sales — not traffic alone.' }
+      ],
+      ru: [
+        { q: 'Сначала сайт или реклама?', a: 'Сначала быстрый лендинг и WhatsApp; потом бюджет.' },
+        { q: 'Как считать ROI?', a: 'Источник лида, ответ в WhatsApp и закрытые сделки.' }
+      ],
+      ar: [
+        { q: 'الموقع أولاً أم الإعلان؟', a: 'أولاً صفحة سريعة وواتساب؛ ثم ميزانية الإعلان.' },
+        { q: 'كيف نرى العائد؟', a: 'مصدر العميل ونسبة الرد والمبيعات المغلقة — لا الزيارات وحدها.' }
+      ]
+    },
+    related: [
+      { title: 'خدمات دیجیتال مارکتینگ', url: '../services#digital-marketing', desc: 'کمپین و CRO' },
+      { title: 'Fast Web Studio', url: '../fast', desc: 'لندینگ فروش' },
+      { title: 'وبلاگ', url: '../blog', desc: 'راهنماهای بیشتر' }
+    ]
+  },
+  {
+    file: 'social-media-management.html',
+    slug: 'social-media-management',
+    seoKey: 'articleSmm',
+    date: '2025-03-05',
+    modified: '2026-08-24',
+    image: 'assets/images/content/services-smm-mockup.svg',
+    extraImg: 'assets/images/content/network-map.svg',
+    category: { fa: 'مدیریت SMM', tr: 'SMM yönetimi', en: 'SMM', ru: 'SMM', ar: 'إدارة SMM' },
+    title: {
+      fa: 'مدیریت شبکه‌های اجتماعی — استراتژی SMM برای برندها',
+      tr: 'Sosyal medya yönetimi — markalar için SMM stratejisi',
+      en: 'Social media management — SMM strategy for brands',
+      ru: 'Управление соцсетями — SMM-стратегия для брендов',
+      ar: 'إدارة التواصل الاجتماعي — استراتيجية SMM للعلامات'
+    },
+    description: {
+      fa: 'تقویم محتوا، هویت بصری، ریلز و تبلیغات هدفمند اینستاگرام و لینکدین برای برند B2B و B2C — تجربه بیزدوار.',
+      tr: 'İçerik takvimi, görsel kimlik, Reels ve Instagram/LinkedIn reklamı — Bizdavar SMM.',
+      en: 'Content calendar, visual identity, Reels and Instagram/LinkedIn ads — Bizdavar SMM.',
+      ru: 'Контент-план, визуал, Reels и реклама Instagram/LinkedIn — SMM Bizdavar.',
+      ar: 'تقويم المحتوى والهوية البصرية وReels وإعلانات إنستغرام ولينكدإن — SMM بيزدوار.'
+    },
+    keywords: {
+      fa: 'مدیریت شبکه اجتماعی, SMM, اینستاگرام B2B, لینکدین, بیزدوار',
+      tr: 'sosyal medya yönetimi, SMM, Instagram B2B, LinkedIn, Bizdavar',
+      en: 'social media management, SMM, B2B Instagram, LinkedIn, Bizdavar',
+      ru: 'SMM, Instagram B2B, LinkedIn, Bizdavar',
+      ar: 'إدارة سوشيال ميديا, SMM, إنستغرام B2B, لينكدإن, بيزدوار'
+    },
+    tags: {
+      fa: ['SMM', 'اینستاگرام', 'لینکدین', 'محتوای B2B'],
+      tr: ['SMM', 'Instagram', 'LinkedIn', 'B2B içerik'],
+      en: ['SMM', 'Instagram', 'LinkedIn', 'B2B content'],
+      ru: ['SMM', 'Instagram', 'LinkedIn', 'B2B-контент'],
+      ar: ['SMM', 'إنستغرام', 'لينكدإن', 'محتوى B2B']
+    },
+    toc: {
+      fa: [['ch-plan', 'استراتژی محتوا'], ['ch-design', 'طراحی'], ['ch-ads', 'تبلیغات'], ['ch-faq', 'سوالات متداول']],
+      tr: [['ch-plan', 'İçerik stratejisi'], ['ch-design', 'Tasarım'], ['ch-ads', 'Reklam'], ['ch-faq', 'SSS']],
+      en: [['ch-plan', 'Content strategy'], ['ch-design', 'Design'], ['ch-ads', 'Ads'], ['ch-faq', 'FAQ']],
+      ru: [['ch-plan', 'Контент'], ['ch-design', 'Дизайн'], ['ch-ads', 'Реклама'], ['ch-faq', 'FAQ']],
+      ar: [['ch-plan', 'استراتيجية المحتوى'], ['ch-design', 'التصميم'], ['ch-ads', 'الإعلانات'], ['ch-faq', 'أسئلة']]
+    },
+    faq: {
+      fa: [
+        { q: 'چند پست در هفته کافی است؟', a: 'ثبات مهم‌تر از تعداد است؛ برای B2B معمولاً ۳ تا ۵ انتشار هدفمند بهتر از روزانهٔ بی‌برنامه است.' },
+        { q: 'نمونه کار SMM بیزدوار کجاست؟', a: 'پروژه آرشیو <a href="/pages/biztejarat">بیزتجارت</a> مدل محتوای صنعتی را نشان می‌دهد.' }
+      ],
+      tr: [
+        { q: 'Haftada kaç gönderi?', a: 'Süreklilik sayıdan önemli; B2B’de 3–5 hedefli yayın plansız günlük paylaşımı yener.' },
+        { q: 'SMM örneği nerede?', a: '<a href="/pages/biztejarat">Biztejarat</a> arşivi endüstriyel içerik modelini gösterir.' }
+      ],
+      en: [
+        { q: 'How many posts per week?', a: 'Consistency beats volume; for B2B, 3–5 targeted posts beat unplanned daily posting.' },
+        { q: 'Where is an SMM sample?', a: 'The archived <a href="/pages/biztejarat">Biztejarat</a> project shows industrial content.' }
+      ],
+      ru: [
+        { q: 'Сколько постов в неделю?', a: 'Стабильность важнее числа; для B2B 3–5 целевых публикаций лучше хаоса.' },
+        { q: 'Где пример SMM?', a: 'Архив <a href="/pages/biztejarat">Biztejarat</a> показывает промышленный контент.' }
+      ],
+      ar: [
+        { q: 'كم منشوراً أسبوعياً؟', a: 'الثبات أهم من العدد؛ في B2B يكفي ٣–٥ نشرات موجّهة.' },
+        { q: 'أين نموذج SMM؟', a: 'مشروع <a href="/pages/biztejarat">Biztejarat</a> المؤرشف يعرض محتوى صناعياً.' }
+      ]
+    },
+    related: [
+      { title: 'خدمات SMM', url: '../services#smm', desc: 'تولید محتوا و تبلیغات' },
+      { title: 'نمونه‌کار بیزتجارت', url: '../biztejarat', desc: 'اینستاگرام B2B' },
+      { title: 'وبلاگ', url: '../blog', desc: 'مقالات مرتبط' }
+    ]
+  },
+  {
+    file: 'fast-studio.html',
+    slug: 'fast-studio',
+    seoKey: 'articleFastStudio',
+    date: '2025-05-15',
+    modified: '2026-08-24',
+    image: 'assets/images/content/related-thumb-fast.svg',
+    extraImg: 'assets/images/content/services-web-mockup.svg',
+    category: { fa: 'طراحی وب', tr: 'Web tasarım', en: 'Web design', ru: 'Веб-дизайн', ar: 'تصميم ويب' },
+    title: {
+      fa: 'راه‌اندازی سایت در ۵ روز — راهنمای کامل Fast Studio',
+      tr: '5 günde site — Fast Studio rehberi',
+      en: 'Launch a website in 5 days — Fast Studio guide',
+      ru: 'Сайт за 5 дней — гид Fast Studio',
+      ar: 'إطلاق موقع خلال ٥ أيام — دليل Fast Studio'
+    },
+    description: {
+      fa: 'پلن‌های Fast Web Studio از ۹۹ تا ۲۹۹ دلار: سایت شرکتی، فروشگاهی و حرفه‌ای در ۵ روز کاری با RTL و سئو پایه.',
+      tr: 'Fast Web Studio $99–$299: kurumsal, mağaza ve profesyonel site — 5 iş günü, RTL ve temel SEO.',
+      en: 'Fast Web Studio $99–$299: company, shop and pro sites in 5 working days with RTL and baseline SEO.',
+      ru: 'Fast Web Studio $99–$299: корпоратив, магазин и pro за 5 рабочих дней — RTL и базовое SEO.',
+      ar: 'Fast Web Studio من ٩٩ إلى ٢٩٩$: موقع شركة أو متجر خلال ٥ أيام عمل مع RTL وSEO أساسي.'
+    },
+    keywords: {
+      fa: 'طراحی سایت ۵ روز, Fast Web Studio, قیمت طراحی سایت, ووکامرس, بیزدوار',
+      tr: '5 günde web sitesi, Fast Web Studio, WooCommerce, Bizdavar',
+      en: 'website in 5 days, Fast Web Studio, WooCommerce, Bizdavar',
+      ru: 'сайт за 5 дней, Fast Web Studio, WooCommerce, Bizdavar',
+      ar: 'موقع خلال ٥ أيام, Fast Web Studio, ووكومرس, بيزدوار'
+    },
+    tags: {
+      fa: ['Fast Studio', 'RTL', 'ووکامرس', 'سئو پایه'],
+      tr: ['Fast Studio', 'RTL', 'WooCommerce', 'SEO'],
+      en: ['Fast Studio', 'RTL', 'WooCommerce', 'SEO'],
+      ru: ['Fast Studio', 'RTL', 'WooCommerce', 'SEO'],
+      ar: ['Fast Studio', 'RTL', 'ووكومرس', 'سيو']
+    },
+    toc: {
+      fa: [['ch-base', 'پلن پایه'], ['ch-shop', 'فروشگاهی'], ['ch-pro', 'حرفه‌ای'], ['ch-after', 'بعد از تحویل'], ['ch-faq', 'سوالات متداول']],
+      tr: [['ch-base', 'Temel plan'], ['ch-shop', 'Mağaza'], ['ch-pro', 'Pro'], ['ch-after', 'Teslim sonrası'], ['ch-faq', 'SSS']],
+      en: [['ch-base', 'Basic'], ['ch-shop', 'Shop'], ['ch-pro', 'Pro'], ['ch-after', 'After delivery'], ['ch-faq', 'FAQ']],
+      ru: [['ch-base', 'Базовый'], ['ch-shop', 'Магазин'], ['ch-pro', 'Pro'], ['ch-after', 'После сдачи'], ['ch-faq', 'FAQ']],
+      ar: [['ch-base', 'الأساسي'], ['ch-shop', 'المتجر'], ['ch-pro', 'الاحترافي'], ['ch-after', 'بعد التسليم'], ['ch-faq', 'أسئلة']]
+    },
+    faq: {
+      fa: [
+        { q: '۵ روز شامل محتوا هم می‌شود؟', a: 'ساختار، قالب RTL و صفحات توافق‌شده؛ متن و عکس را شما یا تیم محتوا می‌دهد تا زمان‌بندی قفل بماند.' },
+        { q: 'سئو کامل در پلن ۹۹ هست؟', a: 'سئو پایه (عنوان، توضیحات، سرعت، موبایل). سئو محتوا و لینک‌سازی جداگانه در <a href="/pages/services#digital-marketing">خدمات بازاریابی</a> است.' }
+      ],
+      tr: [
+        { q: '5 güne içerik dahil mi?', a: 'Yapı, RTL şablon ve kararlaştırılan sayfalar; metin/görseli siz veya içerik ekibi verir.' },
+        { q: '$99’da tam SEO var mı?', a: 'Temel SEO. İçerik ve backlink <a href="/pages/services#digital-marketing">pazarlama hizmetinde</a>.' }
+      ],
+      en: [
+        { q: 'Does 5 days include copy?', a: 'Structure, RTL theme and agreed pages; you (or content team) supply text and photos.' },
+        { q: 'Is full SEO in the $99 plan?', a: 'Baseline SEO only. Content SEO sits in <a href="/pages/services#digital-marketing">marketing services</a>.' }
+      ],
+      ru: [
+        { q: 'Тексты входят в 5 дней?', a: 'Каркас, RTL и согласованные страницы; тексты и фото даёте вы.' },
+        { q: 'Полное SEO в $99?', a: 'Только база. Контент-SEO — в <a href="/pages/services#digital-marketing">маркетинге</a>.' }
+      ],
+      ar: [
+        { q: 'هل النصوص ضمن ٥ أيام؟', a: 'الهيكل وقالب RTL والصفحات المتفق عليها؛ النصوص والصور منكم.' },
+        { q: 'هل الـSEO الكامل في خطة ٩٩$؟', a: 'أساسي فقط. سيو المحتوى ضمن <a href="/pages/services#digital-marketing">خدمات التسويق</a>.' }
+      ]
+    },
+    related: [
+      { title: 'Fast Web Studio', url: '../fast', desc: 'پلن‌ها و قیمت' },
+      { title: 'خدمات طراحی وب', url: '../services#web-design', desc: 'پروژه سفارشی' },
+      { title: 'تماس', url: '../contact', desc: 'شروع پروژه' }
+    ]
+  },
+  {
+    file: 'industrial-sensors.html',
+    slug: 'industrial-sensors',
+    seoKey: 'articleIndustrialSensors',
+    date: '2025-03-20',
+    modified: '2026-08-24',
+    image: 'assets/images/vega/blog-industrial-sensors.jpg',
+    extraImg: 'assets/images/vega/product-vegapoint-21.png',
+    category: { fa: 'تجهیزات صنعتی', tr: 'Endüstriyel ekipman', en: 'Industrial equipment', ru: 'Промоборудование', ar: 'معدات صناعية' },
+    title: {
+      fa: 'انتخاب سنسور صنعتی مناسب — راهنمای VEGA و ابزار دقیق',
+      tr: 'Doğru endüstriyel sensör — VEGA ve enstrümantasyon',
+      en: 'Choosing the right industrial sensor — VEGA and instrumentation',
+      ru: 'Как выбрать промышленный датчик — VEGA и КИП',
+      ar: 'اختيار الحساس الصناعي المناسب — VEGA والقياس'
+    },
+    description: {
+      fa: 'مقایسه VEGAPULS، VEGABAR و VEGAPOINT برای سطح، فشار و نقطه سطح. گواهی Ex/SIL و مسیر استعلام با بیزدوار.',
+      tr: 'VEGAPULS, VEGABAR ve VEGAPOINT karşılaştırması. Ex/SIL ve Bizdavar teklif yolu.',
+      en: 'Compare VEGAPULS, VEGABAR and VEGAPOINT for level, pressure and switching. Ex/SIL and Bizdavar quoting.',
+      ru: 'Сравнение VEGAPULS, VEGABAR и VEGAPOINT. Ex/SIL и запрос через Bizdavar.',
+      ar: 'مقارنة VEGAPULS وVEGABAR وVEGAPOINT للمستوى والضغط ونقطة المستوى. Ex/SIL واستعلام بيزدوار.'
+    },
+    keywords: {
+      fa: 'انتخاب سنسور VEGA, VEGAPULS, VEGABAR, VEGAPOINT, ابزار دقیق, بیزدوار',
+      tr: 'VEGA sensör seçimi, VEGAPULS, VEGABAR, VEGAPOINT, Bizdavar',
+      en: 'choose VEGA sensor, VEGAPULS, VEGABAR, VEGAPOINT, Bizdavar',
+      ru: 'выбор датчика VEGA, VEGAPULS, VEGABAR, VEGAPOINT, Bizdavar',
+      ar: 'اختيار حساس VEGA, VEGAPULS, VEGABAR, VEGAPOINT, بيزدوار'
+    },
+    tags: {
+      fa: ['VEGA', 'ابزار دقیق', 'سطح', 'فشار'],
+      tr: ['VEGA', 'Enstrümantasyon', 'Seviye', 'Basınç'],
+      en: ['VEGA', 'Instrumentation', 'Level', 'Pressure'],
+      ru: ['VEGA', 'КИП', 'Уровень', 'Давление'],
+      ar: ['VEGA', 'قياس', 'مستوى', 'ضغط']
+    },
+    toc: {
+      fa: [['ch-type', 'نوع اندازه‌گیری'], ['ch-safety', 'گواهی و ایمنی'], ['ch-supply', 'مسیر تامین'], ['ch-faq', 'سوالات متداول']],
+      tr: [['ch-type', 'Ölçüm tipi'], ['ch-safety', 'Sertifika'], ['ch-supply', 'Tedarik'], ['ch-faq', 'SSS']],
+      en: [['ch-type', 'Measurement type'], ['ch-safety', 'Certificates'], ['ch-supply', 'Supply path'], ['ch-faq', 'FAQ']],
+      ru: [['ch-type', 'Тип измерения'], ['ch-safety', 'Сертификаты'], ['ch-supply', 'Поставка'], ['ch-faq', 'FAQ']],
+      ar: [['ch-type', 'نوع القياس'], ['ch-safety', 'الشهادات'], ['ch-supply', 'مسار التوريد'], ['ch-faq', 'أسئلة']]
+    },
+    faq: {
+      fa: [
+        { q: 'رادار برای همه مخزن‌ها مناسب است؟', a: 'اغلب بله؛ کف متحرک، فوم و بخار را در استعلام بنویسید تا مدل VEGAPULS درست انتخاب شود.' },
+        { q: 'اطلاعات فنی را از کجا بگیرم؟', a: 'کاتالوگ رسمی <a href="https://www.vega.com/en-ae" rel="noopener noreferrer" target="_blank">VEGA</a> و صفحه <a href="/pages/vega">تامین VEGA بیزدوار</a>.' }
+      ],
+      tr: [
+        { q: 'Radar her tank için uygun mu?', a: 'Çoğunlukla evet; köpük ve buharı teklifte yazın ki VEGAPULS doğru seçilsin.' },
+        { q: 'Teknik bilgi nerede?', a: 'Resmi <a href="https://www.vega.com/en-ae" rel="noopener noreferrer" target="_blank">VEGA</a> ve <a href="/pages/vega">Bizdavar VEGA</a>.' }
+      ],
+      en: [
+        { q: 'Is radar right for every tank?', a: 'Often yes; mention foam, vapour and agitation so the VEGAPULS model is correct.' },
+        { q: 'Where is technical data?', a: 'Official <a href="https://www.vega.com/en-ae" rel="noopener noreferrer" target="_blank">VEGA</a> and <a href="/pages/vega">Bizdavar VEGA supply</a>.' }
+      ],
+      ru: [
+        { q: 'Радар для любого резервуара?', a: 'Часто да; укажите пену и пар, чтобы выбрать VEGAPULS.' },
+        { q: 'Где техданные?', a: 'Официальный <a href="https://www.vega.com/en-ae" rel="noopener noreferrer" target="_blank">VEGA</a> и <a href="/pages/vega">поставка Bizdavar</a>.' }
+      ],
+      ar: [
+        { q: 'هل الرادار لكل الخزانات؟', a: 'غالباً نعم؛ اذكر الرغوة والبخار لاختيار VEGAPULS الصحيح.' },
+        { q: 'أين البيانات الفنية؟', a: '<a href="https://www.vega.com/en-ae" rel="noopener noreferrer" target="_blank">VEGA الرسمي</a> و<a href="/pages/vega">توريد بيزدوار</a>.' }
+      ]
+    },
+    related: [
+      { title: 'کاتالوگ VEGA', url: '../vega', desc: 'سنسور و ابزار دقیق' },
+      { title: 'خدمات صنعتی', url: '../products#supply', desc: 'مشاوره B2B' },
+      { title: 'تماس', url: '../contact', desc: 'استعلام قیمت' }
+    ]
+  },
+  {
+    file: 'about-bizdavar-group.html',
+    slug: 'about-bizdavar-group',
+    seoKey: 'articleAboutBizdavar',
+    date: '2025-06-01',
+    modified: '2026-08-24',
+    image: 'assets/images/content/about-hero.svg',
+    extraImg: 'assets/images/gallery/expo-team-imen.jpg',
+    category: { fa: 'درباره شرکت', tr: 'Şirket hakkında', en: 'About the company', ru: 'О компании', ar: 'عن الشركة' },
+    title: {
+      fa: 'بیزدوار گروپ چیست؟ — تاریخچه، تیم و حوزه‌های فعالیت',
+      tr: 'Bizdavar Group nedir? Tarihçe, ekip ve faaliyetler',
+      en: 'What is Bizdavar Group? History, team and activities',
+      ru: 'Что такое Bizdavar Group? История, команда, направления',
+      ar: 'ما هي Bizdavar Group؟ التاريخ والفريق والأنشطة'
+    },
+    description: {
+      fa: 'شناسنامه بیزدوار: بنیان‌گذار ارسان جاهد تبریزی، خدمات دیجیتال، محصولات اختصاصی و تامین صنعتی در ۱۱ کشور.',
+      tr: 'Bizdavar kimliği: kurucu Ersan Jahed Tabrizi, dijital hizmetler, özgün ürünler ve endüstriyel tedarik — 11 ülke.',
+      en: 'Bizdavar profile: founder Ersan Jahed Tabrizi, digital services, owned products and industrial supply across 11 countries.',
+      ru: 'Профиль Bizdavar: основатель Ersan Jahed Tabrizi, цифровые услуги, свои продукты и промпоставки в 11 странах.',
+      ar: 'ملف بيزدوار: المؤسس Ersan Jahed Tabrizi، خدمات رقمية ومنتجات خاصة وتوريد صناعي في ١١ دولة.'
+    },
+    keywords: {
+      fa: 'بیزدوار گروپ, Bizdavar Group, ارسان جاهد تبریزی, تامین صنعتی, بیزدوار',
+      tr: 'Bizdavar Group, Ersan Jahed Tabrizi, endüstriyel tedarik',
+      en: 'Bizdavar Group, Ersan Jahed Tabrizi, industrial supply',
+      ru: 'Bizdavar Group, Ersan Jahed Tabrizi, промышленные поставки',
+      ar: 'Bizdavar Group, Ersan Jahed Tabrizi, توريد صناعي'
+    },
+    tags: {
+      fa: ['بیزدوار', 'درباره ما', '۱۱ کشور', 'B2B'],
+      tr: ['Bizdavar', 'Hakkımızda', '11 ülke', 'B2B'],
+      en: ['Bizdavar', 'About', '11 countries', 'B2B'],
+      ru: ['Bizdavar', 'О нас', '11 стран', 'B2B'],
+      ar: ['بيزدوار', 'من نحن', '١١ دولة', 'B2B']
+    },
+    toc: {
+      fa: [['ch-who', 'چه کسی'], ['ch-work', 'چه کار می‌کنیم'], ['ch-why', 'چرا بیزدوار'], ['ch-faq', 'سوالات متداول']],
+      tr: [['ch-who', 'Kim'], ['ch-work', 'Ne yapıyoruz'], ['ch-why', 'Neden'], ['ch-faq', 'SSS']],
+      en: [['ch-who', 'Who'], ['ch-work', 'What we do'], ['ch-why', 'Why us'], ['ch-faq', 'FAQ']],
+      ru: [['ch-who', 'Кто'], ['ch-work', 'Что делаем'], ['ch-why', 'Почему'], ['ch-faq', 'FAQ']],
+      ar: [['ch-who', 'من نحن'], ['ch-work', 'ماذا نفعل'], ['ch-why', 'لماذا'], ['ch-faq', 'أسئلة']]
+    },
+    faq: {
+      fa: [
+        { q: 'دفتر بیزدوار کجاست؟', a: 'حضور عملیاتی در چند شهر از جمله استانبول و تبریز؛ برای پروژه از <a href="/pages/contact">فرم تماس</a> یا واتساپ هماهنگ کنید.' },
+        { q: 'محصولات خودتان چیست؟', a: 'از جمله <a href="/pages/bizpet">BizPet</a>، <a href="/pages/biztab">BizTab</a> و اکوسیستم FXGuard.' }
+      ],
+      tr: [
+        { q: 'Ofis nerede?', a: 'İstanbul ve Tebriz dahil operasyonel varlık; proje için <a href="/pages/contact">iletişim formu</a>.' },
+        { q: 'Kendi ürünleriniz?', a: '<a href="/pages/bizpet">BizPet</a>, <a href="/pages/biztab">BizTab</a> ve FXGuard ekosistemi.' }
+      ],
+      en: [
+        { q: 'Where is the office?', a: 'Operations include Istanbul and Tabriz; coordinate via the <a href="/pages/contact">contact form</a> or WhatsApp.' },
+        { q: 'Owned products?', a: '<a href="/pages/bizpet">BizPet</a>, <a href="/pages/biztab">BizTab</a> and the FXGuard ecosystem.' }
+      ],
+      ru: [
+        { q: 'Где офис?', a: 'Операции включая Стамбул и Тебриз; пишите в <a href="/pages/contact">форму</a>.' },
+        { q: 'Свои продукты?', a: '<a href="/pages/bizpet">BizPet</a>, <a href="/pages/biztab">BizTab</a> и экосистема FXGuard.' }
+      ],
+      ar: [
+        { q: 'أين المكتب؟', a: 'عمليات تشمل إسطنبول وتبريز؛ نسّق عبر <a href="/pages/contact">نموذج الاتصال</a>.' },
+        { q: 'منتجاتكم؟', a: '<a href="/pages/bizpet">BizPet</a> و<a href="/pages/biztab">BizTab</a> ومنظومة FXGuard.' }
+      ]
+    },
+    related: [
+      { title: 'درباره ما', url: '../about', desc: 'تیم و تاریخچه' },
+      { title: 'خدمات', url: '../services', desc: 'چهار محور اصلی' },
+      { title: 'تماس', url: '../contact', desc: 'مشاوره رایگان' }
+    ]
+  },
+  {
+    file: 'vega-supply-iran.html',
+    slug: 'vega-supply-iran',
+    seoKey: 'articleVegaSupplyIran',
+    date: '2026-07-29',
+    modified: '2026-08-24',
+    image: 'assets/images/vega/slides/value-process-safety.jpg',
+    extraImg: 'assets/images/vega/blog-industrial-sensors.jpg',
+    category: { fa: 'تجهیزات صنعتی', tr: 'Endüstriyel ekipman', en: 'Industrial equipment', ru: 'Промоборудование', ar: 'معدات صناعية' },
+    title: {
+      fa: 'تامین سنسور VEGA در ایران — از استعلام تا پروژه صنعتی',
+      tr: 'İran’da VEGA sensör tedariki — sorgudan sahaya',
+      en: 'VEGA sensor supply to Iran — from inquiry to site',
+      ru: 'Поставка датчиков VEGA в Иран — от запроса до объекта',
+      ar: 'توريد حساسات VEGA إلى إيران — من الاستعلام إلى الموقع'
+    },
+    description: {
+      fa: 'مسیر استعلام تا تحویل VEGA اصل برای پروژه ایران: کد سفارش، پیش‌فاکتور و لجستیک تا محل نصب — بدون ابهام بازار خاکستری.',
+      tr: 'İran projesi için orijinal VEGA: sipariş kodu, proforma ve sahaya lojistik — gri pazar yok.',
+      en: 'Original VEGA for Iran projects: order code, proforma and logistics to site — not the grey market.',
+      ru: 'Оригинальный VEGA для проектов в Иране: код заказа, проформа и логистика на объект.',
+      ar: 'VEGA أصلي لمشاريع إيران: رمز الطلب وفاتورة مبدئية ولوجستيات حتى الموقع.'
+    },
+    keywords: {
+      fa: 'تامین VEGA ایران, خرید سنسور VEGA, پیش‌فاکتور VEGA, بیزدوار',
+      tr: 'VEGA İran tedarik, VEGA satın al, proforma, Bizdavar',
+      en: 'VEGA supply Iran, buy VEGA sensor, proforma, Bizdavar',
+      ru: 'поставка VEGA Иран, купить VEGA, проформа, Bizdavar',
+      ar: 'توريد VEGA إيران, شراء حساس VEGA, فاتورة مبدئية, بيزدوار'
+    },
+    tags: {
+      fa: ['VEGA', 'استعلام قیمت', 'لجستیک', 'ایران'],
+      tr: ['VEGA', 'Teklif', 'Lojistik', 'İran'],
+      en: ['VEGA', 'Quote', 'Logistics', 'Iran'],
+      ru: ['VEGA', 'Запрос', 'Логистика', 'Иран'],
+      ar: ['VEGA', 'عرض سعر', 'لوجستيات', 'إيران']
+    },
+    toc: {
+      fa: [['ch-why', 'کانال رسمی'], ['ch-steps', 'از استعلام تا تحویل'], ['ch-brands', 'برندهای مکمل'], ['ch-faq', 'سوالات متداول']],
+      tr: [['ch-why', 'Resmi kanal'], ['ch-steps', 'Adımlar'], ['ch-brands', 'Tamamlayıcı markalar'], ['ch-faq', 'SSS']],
+      en: [['ch-why', 'Official channel'], ['ch-steps', 'Steps'], ['ch-brands', 'Companion brands'], ['ch-faq', 'FAQ']],
+      ru: [['ch-why', 'Официальный канал'], ['ch-steps', 'Шаги'], ['ch-brands', 'Другие бренды'], ['ch-faq', 'FAQ']],
+      ar: [['ch-why', 'القناة الرسمية'], ['ch-steps', 'الخطوات'], ['ch-brands', 'علامات مكمّلة'], ['ch-faq', 'أسئلة']]
+    },
+    faq: {
+      fa: [
+        { q: 'کد سفارش را خودتان صادر می‌کنید؟', a: 'بله. مدل و شرایط فرآیند را می‌فرستید؛ کد سفارش و پیش‌فاکتور شفاف صادر می‌شود.' },
+        { q: 'مبدأ کالا را در مقاله می‌نویسید؟', a: 'خیر. مسیر تامین رسمی و اصل بودن کالا مهم است؛ جزئیات لجستیک در استعلام محرمانه هماهنگ می‌شود.' }
+      ],
+      tr: [
+        { q: 'Sipariş kodunu siz mi kesiyorsunuz?', a: 'Evet. Model ve prosesi gönderin; sipariş kodu ve şeffaf proforma çıkar.' },
+        { q: 'Menşei yazıda var mı?', a: 'Hayır. Resmi kanal ve orijinallik esas; lojistik teklifte gizlilikle netleşir.' }
+      ],
+      en: [
+        { q: 'Do you issue the order code?', a: 'Yes. Send the model and process data; we issue the order code and a clear proforma.' },
+        { q: 'Do you publish the origin country?', a: 'No. Official channel and authenticity matter; logistics details stay in the private quote.' }
+      ],
+      ru: [
+        { q: 'Вы даёте order code?', a: 'Да. Пришлите модель и процесс — код и прозрачная проформа.' },
+        { q: 'Страна происхождения в статье?', a: 'Нет. Важен официальный канал; логистика — в конфиденциальном запросе.' }
+      ],
+      ar: [
+        { q: 'هل تصدرون رمز الطلب؟', a: 'نعم. أرسلوا الموديل وبيانات العملية؛ يصدر الرمز وفاتورة مبدئية واضحة.' },
+        { q: 'هل تذكرون بلد المنشأ؟', a: 'لا. القناة الرسمية والأصالة هما الأساس؛ تفاصيل الشحن في الاستعلام الخاص.' }
+      ]
+    },
+    related: [
+      { title: 'راهنمای انتخاب سنسور', url: 'industrial-sensors', desc: 'نکات فنی' },
+      { title: 'کاتالوگ VEGA', url: '../vega', desc: 'سنسور سطح و فشار' },
+      { title: 'تماس', url: '../contact', desc: 'استعلام قیمت' }
+    ]
+  },
+  {
+    file: 'multilingual-web-iran-turkey.html',
+    slug: 'multilingual-web-iran-turkey',
+    seoKey: 'articleMultilingualWeb',
+    date: '2026-07-29',
+    modified: '2026-08-24',
+    image: 'assets/images/content/services-web-mockup.svg',
+    extraImg: 'assets/images/content/related-thumb-fast.svg',
+    category: { fa: 'طراحی وب', tr: 'Web tasarım', en: 'Web design', ru: 'Веб-дизайн', ar: 'تصميم ويب' },
+    title: {
+      fa: 'وبسایت چندزبانه برای بازار ایران و ترکیه',
+      tr: 'İran ve Türkiye pazarı için çok dilli web sitesi',
+      en: 'Multilingual websites for Iran and Turkey markets',
+      ru: 'Многоязычный сайт для рынков Ирана и Турции',
+      ar: 'موقع متعدد اللغات لأسواق إيران وتركيا'
+    },
+    description: {
+      fa: 'hreflang، نسخه RTL فارسی، اعتماد محلی و تحویل سریع برای کسب‌وکارهای دو بازاری ایران و ترکیه.',
+      tr: 'hreflang, Farsça RTL, yerel güven ve hızlı teslimat — İran/Türkiye çift pazar.',
+      en: 'hreflang, Persian RTL, local trust and fast delivery for dual Iran/Turkey markets.',
+      ru: 'hreflang, RTL фарси, локальное доверие и быстрая сдача для рынков Ирана и Турции.',
+      ar: 'hreflang وRTL فارسي وثقة محلية وتسليم سريع لسوقي إيران وتركيا.'
+    },
+    keywords: {
+      fa: 'سایت چندزبانه, hreflang, طراحی سایت فارسی ترکی, بیزدوار',
+      tr: 'çok dilli site, hreflang, Farsça Türkçe web, Bizdavar',
+      en: 'multilingual website, hreflang, Persian Turkish web, Bizdavar',
+      ru: 'многоязычный сайт, hreflang, фарси турецкий, Bizdavar',
+      ar: 'موقع متعدد اللغات, hreflang, فارسي تركي, بيزدوار'
+    },
+    tags: {
+      fa: ['hreflang', 'RTL', 'ایران', 'ترکیه'],
+      tr: ['hreflang', 'RTL', 'İran', 'Türkiye'],
+      en: ['hreflang', 'RTL', 'Iran', 'Turkey'],
+      ru: ['hreflang', 'RTL', 'Иран', 'Турция'],
+      ar: ['hreflang', 'RTL', 'إيران', 'تركيا']
+    },
+    toc: {
+      fa: [['ch-why', 'چرا دو زبان'], ['ch-tech', 'hreflang و ایندکس'], ['ch-trust', 'اعتماد محلی'], ['ch-faq', 'سوالات متداول']],
+      tr: [['ch-why', 'Neden iki dil'], ['ch-tech', 'hreflang'], ['ch-trust', 'Yerel güven'], ['ch-faq', 'SSS']],
+      en: [['ch-why', 'Why two languages'], ['ch-tech', 'hreflang'], ['ch-trust', 'Local trust'], ['ch-faq', 'FAQ']],
+      ru: [['ch-why', 'Зачем два языка'], ['ch-tech', 'hreflang'], ['ch-trust', 'Доверие'], ['ch-faq', 'FAQ']],
+      ar: [['ch-why', 'لماذا لغتان'], ['ch-tech', 'hreflang'], ['ch-trust', 'الثقة المحلية'], ['ch-faq', 'أسئلة']]
+    },
+    faq: {
+      fa: [
+        { q: 'گوگل نسخه فارسی و انگلیسی را قاطی می‌کند؟', a: 'اگر hreflang و canonical درست باشد خیر. راهنمای رسمی: <a href="https://developers.google.com/search/docs/specialty/international/localized-versions" rel="noopener noreferrer" target="_blank">Localized versions</a>.' },
+        { q: 'Fast Studio چندزبانه می‌دهد؟', a: 'بله؛ ساختار fa/tr/en در <a href="/pages/fast">Fast Web Studio</a> قابل توافق است.' }
+      ],
+      tr: [
+        { q: 'Google dilleri karıştırır mı?', a: 'Doğru hreflang ve canonical ile hayır. Resmi rehber: <a href="https://developers.google.com/search/docs/specialty/international/localized-versions" rel="noopener noreferrer" target="_blank">Localized versions</a>.' },
+        { q: 'Fast Studio çok dilli mi?', a: 'Evet; fa/tr/en yapı <a href="/pages/fast">Fast Web Studio</a>’da kararlaştırılır.' }
+      ],
+      en: [
+        { q: 'Will Google mix language versions?', a: 'Not if hreflang and canonical are correct. See <a href="https://developers.google.com/search/docs/specialty/international/localized-versions" rel="noopener noreferrer" target="_blank">Localized versions</a>.' },
+        { q: 'Does Fast Studio ship multilingual?', a: 'Yes; fa/tr/en structure can be scoped in <a href="/pages/fast">Fast Web Studio</a>.' }
+      ],
+      ru: [
+        { q: 'Google смешает языки?', a: 'Нет при правильном hreflang. См. <a href="https://developers.google.com/search/docs/specialty/international/localized-versions" rel="noopener noreferrer" target="_blank">Localized versions</a>.' },
+        { q: 'Fast Studio многоязычный?', a: 'Да; структура fa/tr/en в <a href="/pages/fast">Fast Web Studio</a>.' }
+      ],
+      ar: [
+        { q: 'هل يخلط جوجل اللغات؟', a: 'لا إذا كان hreflang والكانونيكال صحيحين. راجع <a href="https://developers.google.com/search/docs/specialty/international/localized-versions" rel="noopener noreferrer" target="_blank">Localized versions</a>.' },
+        { q: 'هل Fast Studio متعدد اللغات؟', a: 'نعم؛ هيكل fa/tr/en يُحدد في <a href="/pages/fast">Fast Web Studio</a>.' }
+      ]
+    },
+    related: [
+      { title: 'Fast Web Studio', url: '../fast', desc: 'تحویل ۵روزه' },
+      { title: 'خدمات طراحی وب', url: '../services#web-design', desc: 'پروژه سفارشی' },
+      { title: 'وبلاگ', url: '../blog', desc: 'سایر مقالات' }
+    ]
+  }
+];
+
+function bodiesFor(a) {
+  const B = {};
+  B.fa = faBody(a);
+  B.en = enBody(a);
+  B.tr = trBody(a);
+  B.ru = ruBody(a);
+  B.ar = arBody(a);
+  return B;
+}
+
+function faBody(a) {
+  const map = {
+    'what-is-digital-marketing': `
+<p>دیجیتال مارکتینگ یعنی رساندن پیام درست به مخاطب درست در کانال آنلاین — وبسایت، جستجو، شبکه اجتماعی، تبلیغات و ایمیل — تا آگاهی، اعتماد و در نهایت فروش ساخته شود. در <a href="/pages/about">بیزدوار گروپ</a> این کار را جدا از «پست گذاشتن» می‌بینیم: قیف، سنجش و اتصال به <a href="/pages/services#digital-marketing">خدمات بازاریابی دیجیتال</a>.</p>
+${fig('/' + a.image, 'نقشه کانال‌های دیجیتال مارکتینگ برای کسب‌وکار B2B', 'کانال‌ها باید به یک تماس یا استعلام ختم شوند — نه فقط بازدید.')}
+<h2 id="ch-def">تعریف عملی</h2>
+<p>تعریف دانشگاهی کافی نیست. تعریف عملی ما این است: هر فعالیت قابل اندازه‌گیری که هزینه جذب مشتری را کم و نرخ تبدیل را زیاد کند. اگر کمپین بازدید می‌آورد اما واتساپ ساکت است، مارکتینگ کامل نیست.</p>
+<h2 id="ch-channels">کانال‌های اصلی</h2>
+<ul>
+<li><strong>سئو و محتوا:</strong> مقاله و صفحه خدمت برای کوئری‌هایی مثل «دیجیتال مارکتینگ چیست» — همین وبلاگ بخشی از همان مسیر است.</li>
+<li><strong>تبلیغات جستجو:</strong> بودجه کنترل‌شده روی کوئری با نیت خرید.</li>
+<li><strong>SMM:</strong> حضور منظم در اینستاگرام و لینکدین؛ جزئیات در <a href="/pages/articles/social-media-management">راهنمای SMM</a>.</li>
+<li><strong>وبسایت:</strong> اگر لندینگ کند یا بدون RTL باشد، بقیه کانال‌ها هدر می‌رود — <a href="/pages/fast">Fast Web Studio</a> برای شروع ۵روزه.</li>
+</ul>
+<h2 id="ch-vs">تفاوت با بازاریابی سنتی</h2>
+<p>در دیجیتال می‌توان CTR، CPA و نرخ پاسخ را هفتگی دید و بودجه را جابه‌جا کرد. راهنمای پایه گوگل برای شروع فنی: <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" rel="noopener noreferrer" target="_blank">SEO Starter Guide</a>.</p>
+<h2 id="ch-start">از کجا شروع کنیم؟</h2>
+<ol>
+<li>یک صفحه خدمت شفاف با فراخوان واتساپ/فرم.</li>
+<li>دو یا سه مقاله خوشه‌ای که به همان صفحه لینک بدهند.</li>
+<li>بودجه آزمایشی تبلیغ فقط بعد از اندازه‌گیری تبدیل.</li>
+</ol>
+<p>ادامه عملی را در <a href="/pages/articles/digital-marketing">چگونه بازاریابی دیجیتال فروش را افزایش می‌دهد</a> بخوانید یا از <a href="/pages/contact">فرم تماس</a> مشاوره بگیرید.</p>`,
+    'digital-marketing': `
+<p>بازدید به‌تنهایی فروش نیست. افزایش فروش یعنی رساندن فرد مناسب به پیشنهاد واضح و بستن مسیر تماس. بیزدوار این مسیر را با داده و تست روی <a href="/pages/services#digital-marketing">کمپین و CRO</a> جلو می‌برد.</p>
+${fig('/' + a.image, 'نمودار قیف فروش دیجیتال از آگاهی تا خرید', 'هر مرحله قیف باید CTA مخصوص خود را داشته باشد.')}
+<h2 id="ch-funnel">قیف فروش شفاف</h2>
+<p>آگاهی (مقاله و سئو)، بررسی (صفحه خدمت و نمونه‌کار)، تصمیم (پیش‌فاکتور یا دمو)، خرید (واتساپ و قرارداد). اگر مقاله به <a href="/pages/blog">وبلاگ</a> ختم شود و دکمه استعلام نباشد، قیف قطع است.</p>
+<h2 id="ch-cro">بهینه‌سازی نرخ تبدیل</h2>
+<ul>
+<li>سرعت و موبایل — به‌خصوص RTL فارسی.</li>
+<li>فرم کوتاه + واتساپ در هدر.</li>
+<li>اعتماد: <a href="/pages/portfolio">نمونه‌کار</a> و مسیر شفاف قیمت.</li>
+</ul>
+<p>لندینگ ضعیف را قبل از تبلیغ با <a href="/pages/fast">Fast Web Studio</a> عوض کنید.</p>
+<h2 id="ch-ads">تبلیغات هدفمند</h2>
+<p>گوگل و Paid Social فقط وقتی معنا دارند که صفحه فرود همان وعده تبلیغ را بدهد. بودجه را هفتگی بر اساس هزینه هر لید واقعی تنظیم کنید نه فقط کلیک.</p>
+<h2 id="ch-follow">اتوماسیون و پیگیری</h2>
+<p>لید بدون پاسخ در ۲۴ ساعت می‌میرد. CRM ساده، یادآوری و ریتارگتینگ هزینه جذب را پایین می‌آورد. شروع از <a href="/pages/contact">تماس بیزدوار</a>.</p>`,
+    'social-media-management': `
+<p>SMM برنامه‌ریزی محتوا، طراحی، انتشار و تحلیل است — نه فقط «ادمین بودن». برای برند صنعتی، لحن فنی و اثبات پروژه مهم‌تر از ترند صرف است. نمونه آرشیو: <a href="/pages/biztejarat">بیزتجارت</a>.</p>
+${fig('/' + a.image, 'نمونه مدیریت شبکه‌های اجتماعی و تقویم محتوا', 'تقویم انتشار باید به صفحه خدمت یا استعلام وصل شود.')}
+<h2 id="ch-plan">استراتژی محتوا</h2>
+<p>ستون‌ها را ثابت کنید: آموزش، محصول، اجتماعی‌اثبات، استخدام/فرهنگ. برای B2B لینکدین و واتساپ اغلب از اینستاگرامِ صرف جلوترند. اتصال به <a href="/pages/services#smm">خدمات SMM بیزدوار</a>.</p>
+<h2 id="ch-design">طراحی و ویدئو</h2>
+<p>هویت رنگ، قالب پست و زیرنویس فارسی/ترکی یکدست. ریلز بدون زیرنویس در موبایل دیده نمی‌شود.</p>
+<h2 id="ch-ads">تبلیغات Paid Social</h2>
+<p>هدف را روی لید بگذارید نه فقط بازدید. لندینگ باید همان محصول تبلیغ‌شده باشد — در غیر این صورت فرمول SMM به فروش نمی‌رسد. مشاوره: <a href="/pages/contact">فرم تماس</a>.</p>`,
+    'fast-studio': `
+<p><a href="/pages/fast">Fast Web Studio</a> محصول بیزدوار برای تحویل سایت شرکتی یا فروشگاهی در ۵ روز کاری است — پلن‌های ۹۹، ۱۹۹ و ۲۹۹ دلار با RTL و سئو پایه.</p>
+${fig('/' + a.image, 'Fast Web Studio — طراحی سایت شرکتی در پنج روز', 'تحویل سریع وقتی معنا دارد که ساختار URL و فرم تماس از روز اول درست باشد.')}
+<h2 id="ch-base">پلن پایه ($99)</h2>
+<p>معرفی شرکت، تماس، واتساپ و موبایل‌فرست. مناسب استارتاپ و برندی که باید سریع آنلاین شود.</p>
+<h2 id="ch-shop">پلن فروشگاهی ($199)</h2>
+<p>ووکامرس، محصول و درگاه. موجودی و عکس را از قبل آماده کنید تا ۵ روز قفل بماند.</p>
+<h2 id="ch-pro">پلن حرفه‌ای ($299)</h2>
+<p>صفحات بیشتر، سئو پایه قوی‌تر و آمادگی اتصال به کمپین <a href="/pages/services#digital-marketing">بازاریابی</a>.</p>
+<h2 id="ch-after">بعد از تحویل</h2>
+<p>آموزش پنل، پشتیبانی و مسیر ارتقا به پروژه سفارشی در <a href="/pages/services#web-design">طراحی وب</a>. سفارش از <a href="/pages/contact">تماس</a>.</p>`,
+    'industrial-sensors': `
+<p>انتخاب سنسور سطح، فشار یا نقطه سطح برای نفت، پتروشیمی، آب و غذا کار کاتالوگ‌خوانی تنها نیست: رسانه، دما، اتصال فرآیند و گواهی ایمنی باید یک مدل را مشخص کنند. بیزدوار <a href="/pages/vega">تامین VEGA</a> و در گاز/شعله <a href="/pages/prosense">Prosense</a> را با پیش‌فاکتور شفاف انجام می‌دهد.</p>
+${fig('/' + a.image, 'سنسور سطح رادار VEGA با بدنه زرد در استودیو محصول', 'بدنه و اتصال فرآیند را کامل ببینید — کراپ نزدیک برای انتخاب مدل کافی نیست.')}
+<h2 id="ch-type">نوع اندازه‌گیری</h2>
+<ul>
+<li><strong>رادار (VEGAPULS):</strong> سطح بدون تماس؛ مناسب مخزن و مایع/جامد با شرایط سخت.</li>
+<li><strong>فشار (VEGABAR):</strong> فشار فرآیند و گاه سطح هیدرواستاتیک.</li>
+<li><strong>سوئیچ (VEGAPOINT):</strong> نقطه سطح جمع‌وجور برای آلارم و کنترل.</li>
+</ul>
+${fig('/' + a.extraImg, 'نصب سنسور نقطه سطح VEGA روی مخزن استیل بهداشتی', 'نصب واقعی روی مخزن — کابل، کلمپ و نشانگر وضعیت را در یک قاب می‌بینید.')}
+<p>مشخصات فنی را فقط با کاتالوگ سازنده مقایسه کنید؛ منبع رسمی: <a href="https://www.vega.com/en-ae" rel="noopener noreferrer" target="_blank">vega.com</a>.</p>
+<h2 id="ch-safety">گواهی و ایمنی</h2>
+<p>محیط Ex، SIL و بهداشت غذا را در اولین پیام استعلام بنویسید. بدون این‌ها کد سفارش دقیق صادر نمی‌شود.</p>
+<h2 id="ch-supply">مسیر تامین</h2>
+<p>شرح فرآیند → پیشنهاد مدل → پیش‌فاکتور → سفارش و حمل. جزئیات در <a href="/pages/products#supply">خدمات صنعتی</a> و مقاله <a href="/pages/articles/vega-supply-iran">تامین VEGA برای ایران</a>. استعلام: <a href="/pages/contact">تماس</a>.</p>`,
+    'about-bizdavar-group': `
+<p>بیزدوار گروپ از سال ۲۰۱۳ با بنیان‌گذاری <strong>ارسان جاهد تبریزی</strong> کار می‌کند — بیش از ۱۰۰ پروژه در ۱۱ کشور. ترکیب خدمات دیجیتال و تامین صنعتی B2B یک نقطه تماس برای کارفرما می‌سازد.</p>
+${fig('/' + a.image, 'نمای معرفی بیزدوار گروپ — آژانس دیجیتال و تامین صنعتی', 'سه مسیر کار: خدمات، محصولات خودمان، تامین صنعتی.')}
+<h2 id="ch-who">چه کسی هستیم</h2>
+<p>شناسنامه کامل در صفحه <a href="/pages/about">درباره ما</a> است. این مقاله همان روایت را برای جستجوی «بیزدوار گروپ چیست» خلاصه می‌کند.</p>
+<h2 id="ch-work">حوزه‌های فعالیت</h2>
+<ul>
+<li><a href="/pages/services">خدمات دیجیتال</a> و SMM</li>
+<li><a href="/pages/fast">Fast Web Studio</a> و طراحی وب</li>
+<li>محصولات اختصاصی مثل <a href="/pages/bizpet">BizPet</a> و <a href="/pages/biztab">BizTab</a></li>
+<li>تامین <a href="/pages/vega">VEGA</a>، Prosense، Teltonika و برندهای خرده‌فروشی</li>
+</ul>
+${fig('/' + a.extraImg, 'تیم بیزدوار در غرفه نمایشگاه با بنر Bizdavar', 'حضور نمایشگاهی و شبکه B2B — بخشی از اعتبار قابل راستی‌آزمایی.')}
+<h2 id="ch-why">چرا بیزدوار</h2>
+<p>یک تیم هم زبان فارسی پروژه ایران را می‌فهمد و هم مسیر تامین و وب چندزبانه را برای ترکیه و بین‌الملل می‌سازد. <a href="/pages/portfolio">نمونه‌کارها</a> · <a href="/pages/contact">تماس</a></p>`,
+    'vega-supply-iran': `
+<p>پروژه‌های نفت، پتروشیمی، آب و صنایع غذایی در ایران به سنسور سطح و فشار قابل‌اعتماد نیاز دارند. بیزدوار تامین اصل <a href="/pages/vega">محصولات VEGA</a> را با مشاوره فارسی، کد سفارش دقیق و لجستیک تا محل پروژه پوشش می‌دهد — نه خرید مبهم از بازار خاکستری.</p>
+${fig('/' + a.image, 'سنسورهای سطح و سوئیچ VEGA در محیط صنعتی تمیز', 'ابزار دقیق باید در شرایط فرآیند دیده شود نه فقط در کراپ تبلیغاتی.')}
+<h2 id="ch-why">چرا کانال تامین رسمی؟</h2>
+<p>کالای اصل، پیش‌فاکتور شفاف و هماهنگی گمرک/حمل. مبدأ دقیق در مقاله عمومی نمی‌آید؛ در استعلام خصوصی مشخص می‌شود. همزمان تیم فنی برای هماهنگی پروژه کنار شماست.</p>
+<h2 id="ch-steps">از استعلام تا تحویل</h2>
+<ol>
+<li>شرح فرآیند، مخزن و شرایط Ex/SIL</li>
+<li>پیشنهاد مدل (VEGAPULS، VEGABAR، VEGAPOINT) و کد سفارش</li>
+<li>پیش‌فاکتور و بازه تحویل</li>
+<li>سفارش، حمل و پشتیبانی نصب</li>
+</ol>
+${fig('/' + a.extraImg, 'نمای کامل سنسور VEGA برای استعلام فنی', 'برای استعلام، عکس پلاک و شرایط مخزن را همراه مدل بفرستید.')}
+<p>انتخاب مدل: <a href="/pages/articles/industrial-sensors">راهنمای سنسور صنعتی</a>. داده سازنده: <a href="https://www.vega.com/en-ae" rel="noopener noreferrer" target="_blank">VEGA official</a>.</p>
+<h2 id="ch-brands">برندهای مکمل</h2>
+<p>گاز و شعله <a href="/pages/prosense">Prosense</a>، ناوگان <a href="/pages/teltonika">Teltonika</a>، الکتروموتور <a href="/pages/gamak">Gamak</a> — یک نقطه تماس B2B. شروع: <a href="/pages/contact?product=VEGA">استعلام VEGA</a>.</p>`,
+    'multilingual-web-iran-turkey': `
+<p>کسب‌وکاری که هم مشتری فارسی دارد هم ترکی، با یک سایت تک‌زبانه یا ترجمه ماشینی بدون hreflang در گوگل جریمه یا قاطی‌شدن نسخه می‌گیرد. بیزدوار همین الگو را در پروژه‌ها و در <a href="/pages/fast">Fast Web Studio</a> پیاده می‌کند.</p>
+${fig('/' + a.image, 'طراحی وبسایت شرکتی چندزبانه روی دسکتاپ', 'نسخه زبان باید URL جدا، hreflang و محتوای واقعی داشته باشد.')}
+<h2 id="ch-why">چرا دو زبان (یا بیشتر)</h2>
+<p>اعتماد محلی: شماره واتساپ، جهت RTL، و قیمت/واحد پولی جدا. صفحه خدمت فارسی نباید کپی ترکی با فونت اشتباه باشد.</p>
+<h2 id="ch-tech">hreflang و ایندکس گوگل</h2>
+<p>هر زبان URL جدا، canonical همان زبان، و تگ‌های hreflang متقابل. مرجع: <a href="https://developers.google.com/search/docs/specialty/international/localized-versions" rel="noopener noreferrer" target="_blank">Google localized versions</a>. خود بیزدوار روی <a href="/pages/blog">وبلاگ</a> همین مدل fa/tr/en/ru/ar را دارد.</p>
+<h2 id="ch-trust">اعتماد محلی</h2>
+<ul>
+<li>نمونه کار منطقه‌ای در <a href="/pages/portfolio">پورتفولیو</a></li>
+<li>تماس دو زبانه از <a href="/pages/contact">صفحه تماس</a></li>
+<li>محتوای خوشه‌ای مثل همین مقاله به‌جای یک صفحه «همه زبان‌ها در یک URL»</li>
+</ul>
+<p>سفارش سایت دو بازاری: <a href="/pages/services#web-design">طراحی وب</a>.</p>`
+  };
+  return map[a.slug];
+}
+
+function enBody(a) {
+  const map = {
+    'what-is-digital-marketing': `<p>Digital marketing is reaching the right audience online — site, search, social, ads and email — to build awareness, trust and sales. At <a href="/pages/about">Bizdavar Group</a> it is not “posting”; it is funnel, measurement and <a href="/pages/services#digital-marketing">digital marketing services</a>.</p>${fig('/' + a.image, 'Map of digital marketing channels for a B2B company', 'Every channel should end in a call or quote — not vanity traffic.')}<h2 id="ch-def">A working definition</h2><p>If a campaign brings visits but WhatsApp stays quiet, marketing is incomplete. We measure cost per lead and conversion, not likes.</p><h2 id="ch-channels">Main channels</h2><ul><li><strong>SEO and content</strong> — including this blog cluster.</li><li><strong>Search ads</strong> — controlled spend on buyer-intent queries.</li><li><strong>SMM</strong> — see the <a href="/pages/articles/social-media-management">SMM guide</a>.</li><li><strong>Website</strong> — start fast with <a href="/pages/fast">Fast Web Studio</a>.</li></ul><h2 id="ch-vs">Vs traditional</h2><p>You can move budget weekly. Technical primer: <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" rel="noopener noreferrer" target="_blank">SEO Starter Guide</a>.</p><h2 id="ch-start">Where to start</h2><ol><li>One clear service page with WhatsApp/form.</li><li>Two or three cluster articles linking to it.</li><li>Test ads only after conversion tracking.</li></ol><p>Next: <a href="/pages/articles/digital-marketing">how digital marketing increases sales</a> or <a href="/pages/contact">contact</a>.</p>`,
+    'digital-marketing': `<p>Traffic is not sales. Growth means the right person, a clear offer and a closed contact path — via <a href="/pages/services#digital-marketing">campaigns and CRO</a>.</p>${fig('/' + a.image, 'Digital sales funnel from awareness to purchase', 'Each funnel stage needs its own CTA.')}<h2 id="ch-funnel">Clear funnel</h2><p>Awareness, evaluation, decision, purchase. If an article has no quote button, the funnel breaks. See the <a href="/pages/blog">blog hub</a>.</p><h2 id="ch-cro">CRO</h2><ul><li>Speed and mobile, including Persian RTL.</li><li>Short form plus header WhatsApp.</li><li>Trust via <a href="/pages/portfolio">portfolio</a>.</li></ul><p>Fix weak landings with <a href="/pages/fast">Fast Web Studio</a> before ads.</p><h2 id="ch-ads">Targeted ads</h2><p>The landing must match the ad promise. Optimise cost per real lead, not clicks.</p><h2 id="ch-follow">Follow-up</h2><p>Leads die in 24 hours without a reply. Start at <a href="/pages/contact">Bizdavar contact</a>.</p>`,
+    'social-media-management': `<p>SMM is planning, design, publishing and analytics. Industrial brands need technical proof, not only trends. Archive sample: <a href="/pages/biztejarat">Biztejarat</a>.</p>${fig('/' + a.image, 'Social media management mockup and content calendar', 'The calendar should link to a service page or quote.')}<h2 id="ch-plan">Content strategy</h2><p>Fix pillars: education, product, social proof. LinkedIn and WhatsApp often outperform Instagram-only for B2B. <a href="/pages/services#smm">Bizdavar SMM</a>.</p><h2 id="ch-design">Design and video</h2><p>Consistent templates; Reels need captions on mute.</p><h2 id="ch-ads">Paid social</h2><p>Optimise for leads. Landing must match the product. <a href="/pages/contact">Contact</a>.</p>`,
+    'fast-studio': `<p><a href="/pages/fast">Fast Web Studio</a> delivers a company or shop site in 5 working days — $99 / $199 / $299 with RTL and baseline SEO.</p>${fig('/' + a.image, 'Fast Web Studio company website delivered in five days', 'Fast delivery only works if URLs and the contact form are correct from day one.')}<h2 id="ch-base">Basic ($99)</h2><p>Company intro, contact, WhatsApp, mobile-first.</p><h2 id="ch-shop">Shop ($199)</h2><p>WooCommerce and checkout. Prepare photos before the clock starts.</p><h2 id="ch-pro">Pro ($299)</h2><p>More pages and readiness for <a href="/pages/services#digital-marketing">marketing</a>.</p><h2 id="ch-after">After delivery</h2><p>Panel training and upgrade path via <a href="/pages/services#web-design">web design</a>. Order: <a href="/pages/contact">contact</a>.</p>`,
+    'industrial-sensors': `<p>Picking level, pressure or point-level sensors is not brochure shopping: media, temperature, process connection and certificates decide the model. Bizdavar supplies <a href="/pages/vega">VEGA</a> and, for gas/flame, <a href="/pages/prosense">Prosense</a> with a clear proforma.</p>${fig('/' + a.image, 'VEGA radar level sensor yellow housing studio photo', 'See the full body and process connection — a tight crop is not enough to choose a model.')}<h2 id="ch-type">Measurement type</h2><ul><li><strong>Radar (VEGAPULS)</strong> — non-contact level.</li><li><strong>Pressure (VEGABAR)</strong> — process pressure / hydrostatic level.</li><li><strong>Switch (VEGAPOINT)</strong> — compact point level.</li></ul>${fig('/' + a.extraImg, 'VEGA point-level sensors mounted on a hygienic stainless tank', 'Real install: cable, clamp and status ring in one frame.')}<p>Official data: <a href="https://www.vega.com/en-ae" rel="noopener noreferrer" target="_blank">vega.com</a>.</p><h2 id="ch-safety">Certificates</h2><p>State Ex, SIL and food hygiene in the first message or the order code will be wrong.</p><h2 id="ch-supply">Supply path</h2><p>Process → model → proforma → shipment. See <a href="/pages/products#supply">industrial supply</a> and <a href="/pages/articles/vega-supply-iran">VEGA for Iran projects</a>. Quote: <a href="/pages/contact">contact</a>.</p>`,
+    'about-bizdavar-group': `<p>Bizdavar Group has worked since 2013, founded by <strong>Ersan Jahed Tabrizi</strong> — 100+ projects in 11 countries. Digital services plus industrial B2B supply in one contact.</p>${fig('/' + a.image, 'Bizdavar Group introduction — digital agency and industrial supply', 'Three paths: services, owned products, industrial supply.')}<h2 id="ch-who">Who we are</h2><p>Full identity: <a href="/pages/about">About</a>.</p><h2 id="ch-work">What we do</h2><ul><li><a href="/pages/services">Digital services</a></li><li><a href="/pages/fast">Fast Web Studio</a></li><li>Owned products such as <a href="/pages/bizpet">BizPet</a> and <a href="/pages/biztab">BizTab</a></li><li>Supply of <a href="/pages/vega">VEGA</a> and other industrial brands</li></ul>${fig('/' + a.extraImg, 'Bizdavar team at an exhibition booth with Bizdavar banner', 'Exhibitions and a verifiable B2B network.')}<h2 id="ch-why">Why Bizdavar</h2><p>Persian-speaking delivery for Iran projects and multilingual web/supply for regional work. <a href="/pages/portfolio">Portfolio</a> · <a href="/pages/contact">Contact</a></p>`,
+    'vega-supply-iran': `<p>Oil, petrochemical, water and food projects in Iran need reliable level and pressure sensors. Bizdavar supplies genuine <a href="/pages/vega">VEGA products</a> with Persian consulting, exact order codes and logistics to site — not the grey market.</p>${fig('/' + a.image, 'VEGA level and switching sensors in a clean industrial hall', 'Instrumentation should be shown in process context, not only a cropped ad.')}<h2 id="ch-why">Official channel</h2><p>Genuine goods, a clear proforma and customs/freight coordination. We do not publish the origin country on this page; that stays in the private quote.</p><h2 id="ch-steps">From inquiry to delivery</h2><ol><li>Process, tank, Ex/SIL</li><li>Model (VEGAPULS, VEGABAR, VEGAPOINT) and order code</li><li>Proforma and lead time</li><li>Order, freight, install support</li></ol>${fig('/' + a.extraImg, 'Full VEGA sensor view for a technical quote', 'Send nameplate photos and tank conditions with the model.')}<p>Selection guide: <a href="/pages/articles/industrial-sensors">industrial sensors</a>. OEM: <a href="https://www.vega.com/en-ae" rel="noopener noreferrer" target="_blank">VEGA official</a>.</p><h2 id="ch-brands">Companion brands</h2><p><a href="/pages/prosense">Prosense</a>, <a href="/pages/teltonika">Teltonika</a>, <a href="/pages/gamak">Gamak</a>. Start: <a href="/pages/contact?product=VEGA">VEGA quote</a>.</p>`,
+    'multilingual-web-iran-turkey': `<p>A business serving Persian and Turkish customers fails with one language or machine translation without hreflang. Bizdavar ships this pattern in projects and <a href="/pages/fast">Fast Web Studio</a>.</p>${fig('/' + a.image, 'Multilingual corporate website design on a desktop screen', 'Each language needs its own URL, hreflang and real copy.')}<h2 id="ch-why">Why two languages</h2><p>Local trust: WhatsApp numbers, RTL, separate currency. Persian service pages must not be broken Turkish clones.</p><h2 id="ch-tech">hreflang and indexing</h2><p>Separate URLs, per-locale canonicals, reciprocal hreflang. See <a href="https://developers.google.com/search/docs/specialty/international/localized-versions" rel="noopener noreferrer" target="_blank">Google localized versions</a>. This site’s <a href="/pages/blog">blog</a> uses fa/tr/en/ru/ar.</p><h2 id="ch-trust">Local trust</h2><ul><li><a href="/pages/portfolio">Portfolio</a></li><li><a href="/pages/contact">Bilingual contact</a></li><li>Cluster articles instead of one URL for all languages</li></ul><p>Order: <a href="/pages/services#web-design">web design</a>.</p>`
+  };
+  return map[a.slug];
+}
+
+function trBody(a) {
+  const en = enBody(a);
+  const map = {
+    'what-is-digital-marketing': en.replace('Digital marketing is reaching', 'Dijital pazarlama, doğru kitleye çevrimiçi ulaşmaktır').replace('At <a href="/pages/about">Bizdavar Group</a>', '<a href="/pages/about">Bizdavar Group</a> bünyesinde'),
+    'digital-marketing': `<p>Trafik satış değildir. Büyüme doğru kişi, net teklif ve kapalı iletişim yoludur — <a href="/pages/services#digital-marketing">kampanya ve CRO</a>.</p>${fig('/' + a.image, 'Farkındalıktan satın almaya dijital satış hunisi', 'Hununun her adımının kendi CTA’sı olmalı.')}<h2 id="ch-funnel">Net huni</h2><p>Makalede teklif butonu yoksa huni kopar. <a href="/pages/blog">Blog</a>.</p><h2 id="ch-cro">CRO</h2><ul><li>Hız ve mobil, Farsça RTL.</li><li>Kısa form + WhatsApp.</li><li><a href="/pages/portfolio">Portföy</a> ile güven.</li></ul><p>Zayıf landing’i reklamdan önce <a href="/pages/fast">Fast Web Studio</a> ile düzeltin.</p><h2 id="ch-ads">Hedefli reklam</h2><p>Landing, reklam vaadiyle aynı olmalı. Gerçek lead maliyetine bakın.</p><h2 id="ch-follow">Takip</h2><p>24 saatte yanıtsız lead ölür. <a href="/pages/contact">İletişim</a>.</p>`,
+    'social-media-management': `<p>SMM plan, tasarım, yayın ve analitiktir. Endüstriyel marka kanıt ister. Örnek: <a href="/pages/biztejarat">Biztejarat</a>.</p>${fig('/' + a.image, 'Sosyal medya yönetimi ve içerik takvimi', 'Takvim hizmet sayfasına veya teklife bağlanmalı.')}<h2 id="ch-plan">İçerik stratejisi</h2><p>Eğitim, ürün, kanıt. B2B’de LinkedIn ve WhatsApp sık öndedir. <a href="/pages/services#smm">SMM hizmeti</a>.</p><h2 id="ch-design">Tasarım</h2><p>Şablon tutarlılığı; Reels’e altyazı.</p><h2 id="ch-ads">Paid social</h2><p>Lead’e optimize edin. <a href="/pages/contact">İletişim</a>.</p>`,
+    'fast-studio': `<p><a href="/pages/fast">Fast Web Studio</a> 5 iş gününde kurumsal veya mağaza sitesi teslim eder — $99 / $199 / $299, RTL ve temel SEO.</p>${fig('/' + a.image, 'Fast Web Studio — beş günde kurumsal site', 'URL ve iletişim formu ilk günden doğru olmalı.')}<h2 id="ch-base">Temel ($99)</h2><p>Tanıtım, iletişim, WhatsApp.</p><h2 id="ch-shop">Mağaza ($199)</h2><p>WooCommerce. Fotoğrafları önceden hazırlayın.</p><h2 id="ch-pro">Pro ($299)</h2><p>Daha fazla sayfa ve <a href="/pages/services#digital-marketing">pazarlama</a> hazırlığı.</p><h2 id="ch-after">Teslim sonrası</h2><p><a href="/pages/services#web-design">Web tasarım</a> ile yükseltme. <a href="/pages/contact">Sipariş</a>.</p>`,
+    'industrial-sensors': `<p>Seviye, basınç veya nokta seviye seçimi katalog yapraklamak değildir. Bizdavar <a href="/pages/vega">VEGA</a> ve gaz/alev için <a href="/pages/prosense">Prosense</a> tedarik eder.</p>${fig('/' + a.image, 'VEGA radar seviye sensörü sarı gövde stüdyo fotoğrafı', 'Gövde ve proses bağlantısının tamamı görünmeli.')}<h2 id="ch-type">Ölçüm tipi</h2><ul><li><strong>Radar (VEGAPULS)</strong></li><li><strong>Basınç (VEGABAR)</strong></li><li><strong>Şalter (VEGAPOINT)</strong></li></ul>${fig('/' + a.extraImg, 'Hijyenik çelik tankta VEGA nokta seviye montajı', 'Kablo, kelepçe ve durum halkası tek karede.')}<p>Resmi veri: <a href="https://www.vega.com/en-ae" rel="noopener noreferrer" target="_blank">vega.com</a>.</p><h2 id="ch-safety">Sertifika</h2><p>Ex, SIL ve gıda hijyenini ilk mesajda yazın.</p><h2 id="ch-supply">Tedarik</h2><p><a href="/pages/products#supply">Endüstriyel tedarik</a> · <a href="/pages/articles/vega-supply-iran">İran için VEGA</a> · <a href="/pages/contact">İletişim</a>.</p>`,
+    'about-bizdavar-group': `<p>Bizdavar Group 2013’ten beri — kurucu <strong>Ersan Jahed Tabrizi</strong>, 11 ülkede 100+ proje.</p>${fig('/' + a.image, 'Bizdavar Group tanıtımı — dijital ajans ve endüstriyel tedarik', 'Üç yol: hizmet, kendi ürün, tedarik.')}<h2 id="ch-who">Kimiz</h2><p><a href="/pages/about">Hakkımızda</a>.</p><h2 id="ch-work">Ne yapıyoruz</h2><ul><li><a href="/pages/services">Dijital hizmetler</a></li><li><a href="/pages/fast">Fast Web Studio</a></li><li><a href="/pages/bizpet">BizPet</a> ve <a href="/pages/biztab">BizTab</a></li><li><a href="/pages/vega">VEGA</a> tedariki</li></ul>${fig('/' + a.extraImg, 'Bizdavar ekibi fuar standında', 'Doğrulanabilir B2B ağ.')}<h2 id="ch-why">Neden</h2><p><a href="/pages/portfolio">Portföy</a> · <a href="/pages/contact">İletişim</a></p>`,
+    'vega-supply-iran': `<p>İran’daki proses projeleri güvenilir VEGA seviye/basınç ister. Bizdavar orijinal <a href="/pages/vega">VEGA</a> tedarik eder — gri pazar değil.</p>${fig('/' + a.image, 'Temiz endüstriyel salonda VEGA seviye ve şalter sensörleri', 'Cihaz proses bağlamında görülmeli.')}<h2 id="ch-why">Resmi kanal</h2><p>Orijinal mal, şeffaf proforma. Menşei bu sayfada yazılmaz; özel teklifte netleşir.</p><h2 id="ch-steps">Adımlar</h2><ol><li>Proses, tank, Ex/SIL</li><li>Model ve sipariş kodu</li><li>Proforma</li><li>Sevkiyat ve montaj desteği</li></ol>${fig('/' + a.extraImg, 'Teknik teklif için tam VEGA sensör görünümü', 'Etiket fotoğrafı ve tank şartlarını gönderin.')}<p><a href="/pages/articles/industrial-sensors">Seçim rehberi</a> · <a href="https://www.vega.com/en-ae" rel="noopener noreferrer" target="_blank">VEGA</a> · <a href="/pages/contact?product=VEGA">Teklif</a>.</p><h2 id="ch-brands">Tamamlayıcı</h2><p><a href="/pages/prosense">Prosense</a>, <a href="/pages/teltonika">Teltonika</a>, <a href="/pages/gamak">Gamak</a>.</p>`,
+    'multilingual-web-iran-turkey': `<p>Farsça ve Türkçe müşteriye tek dilli veya hreflang’sız çeviri yetmez. Bizdavar bunu <a href="/pages/fast">Fast Web Studio</a>’da kurar.</p>${fig('/' + a.image, 'Masaüstünde çok dilli kurumsal web sitesi', 'Her dilin ayrı URL ve gerçek metni olmalı.')}<h2 id="ch-why">Neden iki dil</h2><p>WhatsApp, RTL, para birimi. Bozuk klon sayfalar güven kırar.</p><h2 id="ch-tech">hreflang</h2><p>Ayrı URL, kanonik, karşılıklı hreflang. <a href="https://developers.google.com/search/docs/specialty/international/localized-versions" rel="noopener noreferrer" target="_blank">Google localized versions</a>. <a href="/pages/blog">Blog</a> fa/tr/en/ru/ar kullanır.</p><h2 id="ch-trust">Yerel güven</h2><ul><li><a href="/pages/portfolio">Portföy</a></li><li><a href="/pages/contact">İletişim</a></li></ul><p><a href="/pages/services#web-design">Web tasarım</a>.</p>`
+  };
+  return map[a.slug] || en;
+}
+
+function ruBody(a) {
+  return enBody(a)
+    .replace(/Digital marketing is reaching the right audience online/g, 'Цифровой маркетинг — доступ к нужной аудитории онлайн')
+    .replace(/Traffic is not sales/g, 'Трафик — это не продажи')
+    .replace(/SMM is planning/g, 'SMM — это план')
+    .replace(/delivers a company or shop site in 5 working days/g, 'сдаёт корпоративный или магазинный сайт за 5 рабочих дней')
+    .replace(/Picking level, pressure or point-level sensors/g, 'Выбор датчиков уровня, давления или предельного уровня')
+    .replace(/Bizdavar Group has worked since 2013/g, 'Bizdavar Group работает с 2013 года')
+    .replace(/Oil, petrochemical, water and food projects in Iran/g, 'Нефть, нефтехимия, вода и пищевые проекты в Иране')
+    .replace(/A business serving Persian and Turkish customers/g, 'Бизнес с персидскими и турецкими клиентами');
+}
+
+function arBody(a) {
+  return enBody(a)
+    .replace(/Digital marketing is reaching the right audience online/g, 'التسويق الرقمي هو الوصول للجمهور المناسب عبر الإنترنت')
+    .replace(/Traffic is not sales/g, 'الزيارات ليست مبيعات')
+    .replace(/SMM is planning/g, 'SMM هو التخطيط')
+    .replace(/delivers a company or shop site in 5 working days/g, 'يسلّم موقع شركة أو متجر خلال ٥ أيام عمل')
+    .replace(/Picking level, pressure or point-level sensors/g, 'اختيار حساسات المستوى أو الضغط أو نقطة المستوى')
+    .replace(/Bizdavar Group has worked since 2013/g, 'تعمل Bizdavar Group منذ ٢٠١٣')
+    .replace(/Oil, petrochemical, water and food projects in Iran/g, 'مشاريع النفط والبتروكيماويات والمياه والغذاء في إيران')
+    .replace(/A business serving Persian and Turkish customers/g, 'الأعمال التي تخدم عملاء فارسية وتركية');
+}
+
+ARTICLES.forEach((a) => {
+  a.body = bodiesFor(a);
+});
+
+const UI = {
+  fa: { toc: 'در این مقاله', faq: 'سوالات متداول', tags: 'برچسب‌ها', sources: 'منابع و لینک‌های معتبر' },
+  tr: { toc: 'Bu yazıda', faq: 'SSS', tags: 'Etiketler', sources: 'Kaynaklar ve resmi bağlantılar' },
+  en: { toc: 'In this article', faq: 'FAQ', tags: 'Tags', sources: 'Sources and official links' },
+  ru: { toc: 'В этой статье', faq: 'FAQ', tags: 'Теги', sources: 'Источники и официальные ссылки' },
+  ar: { toc: 'في هذا المقال', faq: 'أسئلة شائعة', tags: 'وسوم', sources: 'مصادر وروابط رسمية' }
+};
+
+function innerHtml(a, lang) {
+  const loc = UI[lang] ? lang : 'en';
+  const u = UI[loc];
+  const body = (a.body && a.body[loc]) || (a.body && a.body.en) || '';
+  const tags = (a.tags[loc] || a.tags.en || []).map((t) => `<li>${t}</li>`).join('');
+  const toc = (a.toc[loc] || a.toc.en || []).map(([id, lab]) => `<li><a href="#${id}">${lab}</a></li>`).join('');
+  const faq = (a.faq[loc] || a.faq.en || [])
+    .map((item) => `<details class="article-faq__item"><summary>${item.q}</summary><div class="article-faq__a">${item.a}</div></details>`)
+    .join('');
+  return `<nav class="article-toc" aria-label="${esc(u.toc)}"><p class="article-toc__title">${u.toc}</p><ol>${toc}</ol></nav>
+<ul class="article-tags" aria-label="${esc(u.tags)}">${tags}</ul>
+<div class="article-prose">${body}</div>
+<section class="article-faq" id="ch-faq" aria-labelledby="faqHeading">
+  <h2 id="faqHeading">${u.faq}</h2>
+  ${faq}
+</section>
+<section class="article-sources" aria-labelledby="sourcesHeading">
+  <h2 id="sourcesHeading">${u.sources}</h2>
+  <ul>
+    <li><a href="https://www.vega.com/en-ae" rel="noopener noreferrer" target="_blank">VEGA — official product information</a></li>
+    <li><a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" rel="noopener noreferrer" target="_blank">Google SEO Starter Guide</a></li>
+    <li><a href="https://developers.google.com/search/docs/specialty/international/localized-versions" rel="noopener noreferrer" target="_blank">Google: localized versions (hreflang)</a></li>
+  </ul>
+</section>`;
+}
+
+function stripHtml(s) {
+  return String(s || '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+}
+
+const LANG_TAG = { fa: 'fa-IR', tr: 'tr-TR', en: 'en-US', ru: 'ru-RU', ar: 'ar-AE' };
+const BASE = 'https://bizdavar.com';
+
+function pageUrl(a, lang) {
+  const prefix = lang === 'fa' ? '' : '/' + lang;
+  return `${BASE}${prefix}/pages/articles/${a.slug}`;
+}
+
+function jsonLd(a, lang) {
+  const loc = LANG_TAG[lang] ? lang : 'en';
+  const url = pageUrl(a, loc);
+  const faq = a.faq[loc] || a.faq.en || [];
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BlogPosting',
+        '@id': url + '#article',
+        headline: a.title[loc] || a.title.en,
+        description: a.description[loc] || a.description.en,
+        datePublished: a.date,
+        dateModified: a.modified || a.date,
+        inLanguage: LANG_TAG[loc],
+        image: BASE + '/' + a.image,
+        keywords: a.keywords[loc] || a.keywords.en,
+        author: { '@type': 'Organization', name: 'Bizdavar Group', url: BASE },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Bizdavar Group',
+          logo: { '@type': 'ImageObject', url: BASE + '/assets/images/brand/bizdavar-logo-square.png' }
+        },
+        mainEntityOfPage: url,
+        url,
+        isPartOf: { '@id': BASE + '/#website' }
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': url + '#faq',
+        inLanguage: LANG_TAG[loc],
+        mainEntity: faq.map((item) => ({
+          '@type': 'Question',
+          name: item.q,
+          acceptedAnswer: { '@type': 'Answer', text: stripHtml(item.a) }
+        }))
+      }
+    ]
+  };
+}
+
+const CTA = {
+  fa: { text: 'برای مشاوره تخصصی با بیزدوار تماس بگیرید.', primary: 'مشاوره رایگان', secondary: 'مشاهده خدمات' },
+  tr: { text: 'Uzman danışmanlık için Bizdavar ile iletişime geçin.', primary: 'Ücretsiz danışmanlık', secondary: 'Hizmetleri gör' },
+  en: { text: 'Contact Bizdavar for expert consulting.', primary: 'Free consultation', secondary: 'View services' },
+  ru: { text: 'Свяжитесь с Bizdavar для экспертной консультации.', primary: 'Бесплатная консультация', secondary: 'Услуги' },
+  ar: { text: 'تواصل مع بيزدوار للاستشارة المتخصصة.', primary: 'استشارة مجانية', secondary: 'عرض الخدمات' }
+};
+
+function ctaLinks(a) {
+  if (a.slug === 'vega-supply-iran' || a.slug === 'industrial-sensors') {
+    return { primary: '/pages/contact?product=VEGA', secondary: '/pages/vega' };
+  }
+  if (a.slug === 'fast-studio' || a.slug === 'multilingual-web-iran-turkey') {
+    return { primary: '/pages/contact', secondary: '/pages/fast' };
+  }
+  return { primary: '/pages/contact', secondary: '/pages/services' };
+}
+
+module.exports = { ARTICLES, esc, fig, innerHtml, UI, jsonLd, CTA, ctaLinks, pageUrl, stripHtml };

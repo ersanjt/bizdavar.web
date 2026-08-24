@@ -56,16 +56,6 @@ svg({
 });
 
 svg({
-  file: 'marvi-society.svg',
-  label: 'Marvi Society',
-  w: 210,
-  bg: '#1e1b4b',
-  parts: [{ t: 'Marvi', fill: '#c4b5fd', size: 16, advance: 52 }, { t: 'Society', fill: '#f8fafc', size: 15, advance: 70 }],
-  badge: 'iOS',
-  badgeBg: '#7c3aed',
-});
-
-svg({
   file: 'goopay-ai.svg',
   label: 'GooPay AI',
   w: 180,

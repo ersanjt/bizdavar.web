@@ -753,6 +753,8 @@
       headline: article.title,
       description: article.description,
       datePublished: article.date,
+      dateModified: article.dateModified || article.date,
+      keywords: article.keywords || undefined,
       inLanguage: schemaLangTag(),
       author: { '@type': 'Organization', name: C.siteNameEn },
       publisher: {

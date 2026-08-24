@@ -1312,6 +1312,56 @@ ul { list-style: none; }
   object-fit: contain;
 }
 
+.portfolio-card__logo--app img {
+  max-height: 56px;
+  max-width: 56px;
+  border-radius: 13px;
+}
+
+.case-app-icon {
+  display: block;
+  width: 88px;
+  height: 88px;
+  margin: 16px 0;
+  border-radius: 22%;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.18);
+}
+
+.case-app-shots {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 28px 0 8px;
+}
+
+.case-app-shots figure {
+  margin: 0;
+}
+
+.case-app-shots img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.16);
+  background: #111;
+}
+
+.case-app-shots figcaption {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .case-app-shots {
+    grid-template-columns: 1fr;
+    max-width: 280px;
+    margin-inline: auto;
+  }
+}
+
 .portfolio-card__logo--text span {
   font-size: 15px;
   font-weight: 700;
@@ -2322,7 +2372,93 @@ a.about__feature:hover {
 .article__img {
   border-radius: var(--radius);
   margin: 24px auto;
-  max-width: 320px;
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+}
+
+.article__inner {
+  margin-top: 1.5rem;
+}
+
+.article-toc {
+  margin: 1.25rem 0 1.75rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid rgba(29, 29, 27, 0.08);
+  border-radius: var(--radius);
+  background: #fafafa;
+}
+
+.article-toc__title {
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.article-toc ol {
+  margin: 0;
+  padding-inline-start: 1.2rem;
+}
+
+.article-toc a {
+  color: var(--navy);
+}
+
+.article-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+}
+
+.article-tags li {
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(29, 29, 27, 0.06);
+  font-size: 0.82rem;
+}
+
+.article-prose .article__figure,
+.article__figure {
+  margin: 1.5rem 0;
+}
+
+.article-prose .article__figure img,
+.article__figure img {
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+  border-radius: var(--radius);
+  display: block;
+}
+
+.article-prose figcaption,
+.article__figure figcaption {
+  margin-top: 0.45rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.article-faq,
+.article-sources {
+  margin-top: 2rem;
+}
+
+.article-faq__item {
+  border-bottom: 1px solid rgba(29, 29, 27, 0.08);
+  padding: 0.65rem 0;
+}
+
+.article-faq__item summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.article-faq__a {
+  margin-top: 0.45rem;
+  color: var(--text-muted);
 }
 
 .article__cta {

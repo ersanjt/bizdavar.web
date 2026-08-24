@@ -116,6 +116,11 @@
         seoDescription: 'نمونه طراحی وب و پنل خدمات شبکه‌های اجتماعی: UI، صفحات تبدیل، سئو و پشتیبانی — خدمات طراحی وب بیزدوار گروپ.',
         seoKeywords: 'طراحی پنل SMM, نمونه طراحی سایت, دیجیتال مارکتینگ, بیزدوار'
       },
+      marviSociety: {
+        seoTitle: 'نمونه‌کار اپ iOS | Marvi Society — بیزدوار گروپ',
+        seoDescription: 'نمونه‌کار توسعه اپلیکیشن iOS: Marvi Society — کلاب دعوت‌محور creator و مکان در استانبول. طراحی، برنامه‌نویسی و انتشار در App Store توسط بیزدوار.',
+        seoKeywords: 'توسعه اپ iOS, نمونه‌کار اپلیکیشن, Marvi Society, App Store, بیزدوار'
+      },
       fxguardExchange: {
         seoTitle: 'نمونه‌کار FXGuard Exchange | تبادل تومان و لیر — بیزدوار',
         seoDescription: 'نمونه‌کار طراحی پلتفرم FXGuard Exchange — تبادل تخصصی تومان و لیر (IRR ↔ TRY) با نرخ زنده، KYC، سفارش شناسه‌دار و پیگیری مرحله‌ای. توسعه بیزدوار گروپ.',
@@ -183,7 +188,7 @@
       },
       articleIndustrialSensors: {
         seoTitle: 'کدام سنسور VEGA بخرم؟ | راهنمای انتخاب',
-        seoDescription: 'مقایسه VEGAPULS، VEGABAR و VEGAPOINT برای مخزن، فشار و نقطه سطح. مشاوره فنی و تامین از استانبول تا ایران.',
+        seoDescription: 'مقایسه VEGAPULS، VEGABAR و VEGAPOINT برای مخزن، فشار و نقطه سطح. مشاوره فنی و تامین اصل برای پروژه ایران.',
         seoKeywords: 'انتخاب سنسور VEGA, VEGAPULS, ابزار دقیق, تامین صنعتی, بیزدوار'
       },
       articleAboutBizdavar: {
@@ -192,9 +197,9 @@
         seoKeywords: 'بیزدوار گروپ, Bizdavar Group, تاریخچه, ارسان جاهد تبریزی'
       },
       articleVegaSupplyIran: {
-        seoTitle: 'خرید VEGA برای پروژه ایران از استانبول | راهنما',
-        seoDescription: 'مسیر استعلام تا تحویل سنسور VEGA اصل برای ایران: کد سفارش، پیش‌فاکتور ارزی و لجستیک از دفتر بیزدوار در استانبول.',
-        seoKeywords: 'خرید VEGA ایران, تامین VEGA استانبول, VEGAPULS, بیزدوار'
+        seoTitle: 'تامین VEGA اصل برای پروژه ایران | راهنمای استعلام',
+        seoDescription: 'مسیر استعلام تا تحویل سنسور VEGA اصل برای پروژه ایران: کد سفارش، پیش‌فاکتور و لجستیک تا محل نصب — مشاوره فارسی با بیزدوار.',
+        seoKeywords: 'خرید VEGA ایران, تامین VEGA, VEGAPULS, بیزدوار'
       },
       articleMultilingualWeb: {
         seoTitle: 'وبسایت چندزبانه برای ایران و ترکیه | بیزدوار',
@@ -313,6 +318,11 @@
         seoDescription: 'SMM panel ve web tasarım örneği: kullanıcı arayüzü, dönüşüm sayfaları, SEO ve teknik destek — Bizdavar Group.',
         seoKeywords: 'SMM paneli tasarım, web tasarım örneği, dijital pazarlama, Bizdavar'
       },
+      marviSociety: {
+        seoTitle: 'iOS uygulama örneği | Marvi Society — Bizdavar',
+        seoDescription: 'iOS uygulama geliştirme örneği: Marvi Society — İstanbul’da creator ve mekanları buluşturan davetli kulüp. Tasarım, geliştirme ve App Store yayını — Bizdavar.',
+        seoKeywords: 'iOS uygulama, App Store, Marvi Society, mobil geliştirme, Bizdavar'
+      },
       fxguardExchange: {
         seoTitle: 'FXGuard Exchange vaka çalışması | Toman–Lira değişim platformu — Bizdavar',
         seoDescription: 'FXGuard Exchange tasarım örneği — IRR ↔ TRY döviz değişimi, canlı kur, KYC ve sipariş takibi. Bizdavar Group tarafından geliştirildi.',
@@ -389,9 +399,9 @@
         seoKeywords: 'Bizdavar Group, tarihçe, Ersan Jahed Tabrizi'
       },
       articleVegaSupplyIran: {
-        seoTitle: 'İran’da VEGA sensör tedariki — İstanbul | Bizdavar',
-        seoDescription: 'Orijinal VEGA sensörleri İran projeleri için nasıl tedarik edilir? Farsça danışmanlık, proforma ve lojistik — Bizdavar İstanbul.',
-        seoKeywords: 'VEGA İran, VEGA tedarik, VEGAPULS, Bizdavar İstanbul'
+        seoTitle: 'İran projeleri için orijinal VEGA tedariki | Bizdavar',
+        seoDescription: 'Orijinal VEGA sensörleri İran projeleri için nasıl tedarik edilir? Danışmanlık, proforma ve lojistik — Bizdavar Group.',
+        seoKeywords: 'VEGA İran, VEGA tedarik, VEGAPULS, Bizdavar'
       },
       articleMultilingualWeb: {
         seoTitle: 'İran ve Türkiye için çok dilli web sitesi | Bizdavar',
@@ -510,6 +520,11 @@
         seoDescription: 'SMM panel and web design case study: UI, conversion pages, SEO and technical support — Bizdavar Group.',
         seoKeywords: 'SMM panel design, web design case study, digital marketing, Bizdavar'
       },
+      marviSociety: {
+        seoTitle: 'iOS app case study | Marvi Society — Bizdavar',
+        seoDescription: 'iOS app case study: Marvi Society — invite-only club linking creators with Istanbul venues. Design, development and App Store launch by Bizdavar.',
+        seoKeywords: 'iOS app, App Store, Marvi Society, mobile development, Bizdavar'
+      },
       fxguardExchange: {
         seoTitle: 'FXGuard Exchange case study | Toman–Lira exchange platform — Bizdavar',
         seoDescription: 'FXGuard Exchange design case study — specialized IRR ↔ TRY remittance with live rates, KYC, tracked orders. Built by Bizdavar Group.',
@@ -586,9 +601,9 @@
         seoKeywords: 'Bizdavar Group, history, Ersan Jahed Tabrizi'
       },
       articleVegaSupplyIran: {
-        seoTitle: 'VEGA sensor supply to Iran from Istanbul | Bizdavar',
-        seoDescription: 'How to source original VEGA sensors for Iran projects — Persian consulting, proforma and logistics from Bizdavar’s Istanbul office.',
-        seoKeywords: 'buy VEGA Iran, VEGA supply, VEGAPULS, Bizdavar Istanbul'
+        seoTitle: 'Original VEGA supply for Iran projects | Bizdavar',
+        seoDescription: 'How to source original VEGA sensors for Iran projects — consulting, order codes, proforma and logistics to site. Bizdavar Group.',
+        seoKeywords: 'buy VEGA Iran, VEGA supply, VEGAPULS, Bizdavar'
       },
       articleMultilingualWeb: {
         seoTitle: 'Multilingual websites for Iran and Turkey | Bizdavar',

@@ -164,6 +164,12 @@
       seoDescription: 'Кейс панели и веб-дизайна SMM: интерфейс, страницы конверсии, SEO и техподдержка — Bizdavar Group.',
       seoKeywords: 'дизайн панели SMM, кейс веб-дизайна, цифровой маркетинг, Bizdavar'
     },
+    marviSociety: {
+      crumb: 'Marvi Society',
+      seoTitle: 'Кейс iOS-приложения | Marvi Society — Bizdavar',
+      seoDescription: 'Кейс разработки iOS: Marvi Society — закрытый клуб, связывающий креаторов с площадками Стамбула. Дизайн, разработка и публикация в App Store — Bizdavar.',
+      seoKeywords: 'iOS приложение, App Store, Marvi Society, мобильная разработка, Bizdavar'
+    },
     fxguardExchange: {
       crumb: 'FXGuard Exchange',
       seoTitle: 'Кейс FXGuard Exchange | платформа обмена томан–лира — Bizdavar',
@@ -256,9 +262,9 @@
     },
     articleVegaSupplyIran: {
       crumb: 'Поставка VEGA в Иран',
-      seoTitle: 'Поставка датчиков VEGA в Иран из Стамбула | Bizdavar',
-      seoDescription: 'Как закупить оригинальные датчики VEGA для проектов в Иране — консультация, проформа и логистика из офиса Bizdavar в Стамбуле.',
-      seoKeywords: 'купить VEGA Иран, поставка VEGA, VEGAPULS, Bizdavar Стамбул'
+      seoTitle: 'Оригинальная поставка VEGA для проектов в Иране | Bizdavar',
+      seoDescription: 'Как закупить оригинальные датчики VEGA для проектов в Иране — консультация, код заказа, проформа и логистика до объекта. Bizdavar Group.',
+      seoKeywords: 'купить VEGA Иран, поставка VEGA, VEGAPULS, Bizdavar'
     },
     articleMultilingualWeb: {
       crumb: 'Многоязычный сайт',
@@ -401,6 +407,12 @@
       seoDescription: 'نموذج لوحة وتصميم ويب لخدمات SMM: واجهة، صفحات تحويل، SEO ودعم فني — Bizdavar Group.',
       seoKeywords: 'تصميم لوحة SMM, نموذج تصميم مواقع, تسويق رقمي, Bizdavar'
     },
+    marviSociety: {
+      crumb: 'Marvi Society',
+      seoTitle: 'نموذج تطبيق iOS | Marvi Society — Bizdavar',
+      seoDescription: 'نموذج تطوير تطبيق iOS: Marvi Society — نادٍ بدعوة يربط صنّاع المحتوى بأماكن إسطنبول. تصميم وتطوير ونشر على App Store — Bizdavar.',
+      seoKeywords: 'تطبيق iOS, App Store, Marvi Society, تطوير موبايل, Bizdavar'
+    },
     fxguardExchange: {
       crumb: 'FXGuard Exchange',
       seoTitle: 'نموذج FXGuard Exchange | منصة صرف تومان–ليرة — Bizdavar',
@@ -493,9 +505,9 @@
     },
     articleVegaSupplyIran: {
       crumb: 'توريد VEGA لإيران',
-      seoTitle: 'توريد حساسات VEGA إلى إيران من إسطنبول | Bizdavar',
-      seoDescription: 'كيف تشتري حساسات VEGA الأصلية لمشاريع إيران — استشارة وفاتورة مبدئية ولوجستيات من مكتب Bizdavar في إسطنبول.',
-      seoKeywords: 'شراء VEGA إيران, توريد VEGA, VEGAPULS, Bizdavar إسطنبول'
+      seoTitle: 'توريد VEGA الأصلي لمشاريع إيران | Bizdavar',
+      seoDescription: 'كيف تشتري حساسات VEGA الأصلية لمشاريع إيران — استشارة ورمز طلب وفاتورة مبدئية ولوجستيات حتى موقع التركيب. Bizdavar Group.',
+      seoKeywords: 'شراء VEGA إيران, توريد VEGA, VEGAPULS, Bizdavar'
     },
     articleMultilingualWeb: {
       crumb: 'موقع متعدد اللغات',
@@ -517,6 +529,15 @@
     intentFast: 'Сайт за 5 дней',
     intentQuote: 'Бесплатный расчёт',
     viewServices: 'Смотреть услуги',
+    hero3dHint: 'Наведите на категории — гид смотрит на них · клик для входа',
+    hero3dPanelKicker: 'Исследуйте Bizdavar',
+    hero3dExplore: 'Перейти в раздел',
+    hero3dClose: 'Закрыть',
+    hero3dChipsAria: 'Категории 3D-шоурума',
+    gatewayServicesTag: 'Цифровые и технические услуги',
+    gatewayProductsTag: 'Свои продукты и промпоставки',
+    gatewayServicesSubsAria: 'Подкатегории услуг',
+    gatewayProductsSubsAria: 'Подкатегории продуктов',
     heroCard: 'Цифровой маркетинг · Веб-дизайн · Промышленность',
     statProjects: 'Цифровых проектов',
     statCountries: 'Активных стран',
@@ -585,6 +606,15 @@
     intentFast: 'موقع خلال ٥ أيام',
     intentQuote: 'عرض سعر مجاني',
     viewServices: 'عرض الخدمات',
+    hero3dHint: 'مرّر فوق الفئات — المرشد ينظر إليها · انقر للدخول',
+    hero3dPanelKicker: 'استكشف Bizdavar',
+    hero3dExplore: 'الدخول إلى هذا القسم',
+    hero3dClose: 'إغلاق',
+    hero3dChipsAria: 'فئات صالة العرض ثلاثية الأبعاد',
+    gatewayServicesTag: 'خدمات رقمية وتقنية',
+    gatewayProductsTag: 'منتجاتنا والتوريد الصناعي',
+    gatewayServicesSubsAria: 'فئات فرعية للخدمات',
+    gatewayProductsSubsAria: 'فئات فرعية للمنتجات',
     heroCard: 'تسويق رقمي · تصميم ويب · صناعي',
     statProjects: 'مشاريع رقمية',
     statCountries: 'دول نشطة',
@@ -1240,19 +1270,19 @@
     view: 'Смотреть',
     offerMap: {
       aria: 'Три пути Bizdavar',
-      lead: 'Выберите один путь',
+      lead: 'Что вам нужно?',
       servicesNum: '01',
       servicesTitle: 'Услуги',
-      servicesDesc: 'Сайт за 5 дней, маркетинг, SMM, приложения, серверы и полевые работы',
+      servicesDesc: 'Сайт за 5 дней, цифровой маркетинг, SMM, приложения, серверы и технические работы',
       servicesGo: 'К услугам',
       productsNum: '02',
-      productsTitle: 'Продукты',
-      productsDesc: 'BizPet, BizTab и FXGuard — наша разработка',
+      productsTitle: 'Продукты Bizdavar',
+      productsDesc: 'Наши цифровые и физические продукты — BizPet, BizTab и FXGuard',
       productsGo: 'К продуктам',
       supplyNum: '03',
       supplyTitle: 'Промпоставки',
-      supplyDesc: 'VEGA, Prosense, Gamak и Liqui Moly — запрос цены',
-      supplyGo: 'К поставкам'
+      supplyDesc: 'Промдетали и КИП: детекторы Prosense, датчики VEGA и другие бренды — напишите нам за ценой',
+      supplyGo: 'Запросить цену'
     }
   }));
   deepMerge(ru.nav, {
@@ -1363,7 +1393,7 @@
         { q: 'О чём блог Bizdavar?', a: 'Гайды по цифровому маркетингу, SEO, многоязычным сайтам, Fast Web Studio, поставке датчиков VEGA и продуктам BizPet и BizTab.' },
         { q: 'На скольких языках публикуются статьи?', a: 'Хаб блога и основные статьи индексируются на фарси, турецком, английском, русском и арабском — отдельные hreflang URL.' },
         { q: 'Как найти статью по услуге?', a: 'Используйте фильтр тем или перейдите из кластеров маркетинга, веба и поставок на страницы услуг.' },
-        { q: 'Что делать после гайда по VEGA?', a: 'Отправьте модель или данные резервуара в WhatsApp или форму — проформа выдаётся из Стамбула.' },
+        { q: 'Что делать после гайда по VEGA?', a: 'Отправьте модель или данные резервуара в WhatsApp или форму — проформа и код заказа выдаются Bizdavar.' },
         { q: 'Есть ли продукты Bizdavar в блоге?', a: 'Да. BizTab, BizClean V5 и нагревательный мат BizPet открываются из этого каталога.' }
       ]
     },
@@ -1373,7 +1403,7 @@
       btn: 'Запросить консультацию',
       btnWa: 'WhatsApp'
     },
-    geoText: 'Статьи для бизнеса Ирана и Турции — цифровой маркетинг, SEO, многоязычный веб и поставки VEGA из Стамбула.',
+    geoText: 'Статьи для бизнеса Ирана и Турции — цифровой маркетинг, SEO, многоязычный веб и поставки VEGA.',
     related: [
       { title: 'Цифровые услуги', desc: 'SEO, SMM и кампании', titleKey: 'blogPage.related.0.title', descKey: 'blogPage.related.0.desc' },
       { title: 'Fast Web Studio', desc: 'Сайт за 5 дней от $99', titleKey: 'blogPage.related.1.title', descKey: 'blogPage.related.1.desc' },
@@ -1382,7 +1412,7 @@
     ]
   });
   ru.blogPosts = [
-    { title: 'Поставка датчиков VEGA в Иран — из Стамбула на объект', excerpt: 'Консультация, проформа и логистика оригинального VEGA для проектов в Иране.', category: 'Промоборудование' },
+    { title: 'Поставка датчиков VEGA в Иран — от запроса до объекта', excerpt: 'Консультация, проформа и логистика оригинального VEGA для проектов в Иране.', category: 'Промоборудование' },
     { title: 'Многоязычный сайт для рынков Ирана и Турции', excerpt: 'hreflang, локальное доверие и быстрая сдача для бизнеса на двух рынках.', category: 'Веб-дизайн' },
     { title: 'Что такое цифровой маркетинг? Гайд для бизнеса', excerpt: 'Определение, каналы и роль в росте онлайн-продаж.', category: 'Цифровой маркетинг' },
     { title: 'Как цифровой маркетинг увеличивает продажи?', excerpt: 'Практические способы превратить посетителя в клиента.', category: 'Цифровой маркетинг' },
@@ -1441,19 +1471,19 @@
     view: 'عرض',
     offerMap: {
       aria: 'مسارات بيزدوار الثلاثة',
-      lead: 'اختر مساراً واحداً',
+      lead: 'ماذا تحتاج؟',
       servicesNum: '٠١',
       servicesTitle: 'خدمات',
-      servicesDesc: 'موقع خلال ٥ أيام، تسويق، SMM، تطبيقات، خوادم وأعمال ميدانية',
+      servicesDesc: 'موقع خلال ٥ أيام، تسويق رقمي، SMM، تطبيقات، خوادم وخدمات فنية',
       servicesGo: 'إلى الخدمات',
       productsNum: '٠٢',
-      productsTitle: 'منتجات',
-      productsDesc: 'BizPet وBizTab وFXGuard — من صنع فريقنا',
+      productsTitle: 'منتجات بيزدوار',
+      productsDesc: 'منتجاتنا الرقمية والمادية — BizPet وBizTab وFXGuard',
       productsGo: 'إلى المنتجات',
       supplyNum: '٠٣',
       supplyTitle: 'توريد صناعي',
-      supplyDesc: 'VEGA وProsense وGamak وLiqui Moly — طلب سعر',
-      supplyGo: 'إلى التوريد'
+      supplyDesc: 'قطع صناعية وأجهزة قياس: كواشف Prosense وحساسات VEGA وعلامات أخرى — تواصل معنا لعرض السعر',
+      supplyGo: 'طلب عرض سعر'
     }
   }));
   deepMerge(ar.nav, {
@@ -1564,7 +1594,7 @@
         { q: 'عن ماذا تتحدث مدونة Bizdavar؟', a: 'أدلة تسويق رقمي وSEO ومواقع متعددة اللغات وFast Web Studio وتوريد حساسات VEGA ومنتجات مثل BizPet وBizTab.' },
         { q: 'بكم لغة تُنشر المقالات؟', a: 'مركز المدونة والمقالات الأساسية مفهرسة بالفارسية والتركية والإنجليزية والروسية والعربية مع عناوين hreflang منفصلة.' },
         { q: 'كيف أجد مقالاً مرتبطاً بخدمة؟', a: 'استخدم فلتر الموضوع أو انتقل من عناقيد التسويق وتصميم الويب والتوريد إلى صفحات الخدمات.' },
-        { q: 'ماذا أفعل بعد دليل VEGA؟', a: 'أرسل الموديل أو بيانات الخزان عبر واتساب أو النموذج — الفاتورة المبدئية تصدر من إسطنبول.' },
+        { q: 'ماذا أفعل بعد دليل VEGA؟', a: 'أرسل الموديل أو بيانات الخزان عبر واتساب أو النموذج — الفاتورة المبدئية ورمز الطلب يصدران من Bizdavar.' },
         { q: 'هل منتجات Bizdavar موجودة هنا؟', a: 'نعم. BizTab وBizClean V5 ووسادة BizPet الحرارية لها صفحات من هذا الكتالوج.' }
       ]
     },
@@ -1574,7 +1604,7 @@
       btn: 'طلب استشارة',
       btnWa: 'واتساب'
     },
-    geoText: 'مقالات متخصصة لأعمال إيران وتركيا — تسويق رقمي وSEO وتصميم مواقع متعدد اللغات وتوريد VEGA من إسطنبول.',
+    geoText: 'مقالات متخصصة لأعمال إيران وتركيا — تسويق رقمي وSEO وتصميم مواقع متعدد اللغات وتوريد VEGA.',
     related: [
       { title: 'خدمات رقمية', desc: 'SEO وSMM وحملات', titleKey: 'blogPage.related.0.title', descKey: 'blogPage.related.0.desc' },
       { title: 'Fast Web Studio', desc: 'موقع خلال ٥ أيام من ٩٩$', titleKey: 'blogPage.related.1.title', descKey: 'blogPage.related.1.desc' },
@@ -1583,7 +1613,7 @@
     ]
   });
   ar.blogPosts = [
-    { title: 'توريد حساسات VEGA إلى إيران — من إسطنبول إلى الموقع', excerpt: 'استشارة وفاتورة مبدئية ولوجستيات VEGA الأصلية لمشاريع إيران.', category: 'معدات صناعية' },
+    { title: 'توريد حساسات VEGA إلى إيران — من الاستعلام إلى الموقع', excerpt: 'استشارة وفاتورة مبدئية ولوجستيات VEGA الأصلية لمشاريع إيران.', category: 'معدات صناعية' },
     { title: 'موقع متعدد اللغات لأسواق إيران وتركيا', excerpt: 'hreflang وثقة محلية وتسليم سريع للأعمال ذات السوقين.', category: 'تصميم ويب' },
     { title: 'ما هو التسويق الرقمي؟ دليل للأعمال', excerpt: 'التعريف والقنوات ودوره في نمو المبيعات الإلكترونية.', category: 'تسويق رقمي' },
     { title: 'كيف يزيد التسويق الرقمي المبيعات؟', excerpt: 'طرق عملية لتحويل الزائر إلى عميل.', category: 'تسويق رقمي' },
@@ -1771,6 +1801,12 @@
     }
   });
   deepMerge(ru.caseStudy, {
+    marviSociety: {
+      hero: { tag: 'Кейс iOS-приложения', title: 'Marvi Society — закрытый iOS-клуб для Стамбула', desc: 'Дизайн и разработка iOS с нуля — связь верифицированных креаторов с площадками Стамбула; в App Store' },
+      about: { title: 'О проекте', body: '<strong>Marvi Society</strong> — мобильный кейс Bizdavar Group: закрытое iOS-приложение, которое соединяет верифицированных креаторов с одобренными площадками Стамбула. Поиск событий и мест, заявки на коллаборации, check-in, подтверждение визита, управление площадками и профили TR/EN. Эта страница — <strong>кейс iOS-приложения</strong>.', servicesTitle: 'Услуги Bizdavar', services: ['Продуктовый дизайн и UI/UX iOS', 'Архитектура и разработка мобильного приложения', 'Потоки поиска, приглашений, check-in и подтверждения визита', 'Управление площадками, кампаниями и уведомлениями', 'Публикация в App Store и поддержка после релиза'], clientTitle: 'Сфера продукта', clientBody: 'Marvi Society — закрытый lifestyle-клуб в Стамбуле: креаторы, рестораны, ночная жизнь, wellness и beauty. Детали — на сайте и в App Store.', challengeTitle: 'Задача', challenge: 'Закрытое приложение для связи креаторов и площадок в Стамбуле — поиск событий, приглашения, check-in и подтверждение визита, готовое к App Store.', resultsTitle: 'Результаты', result1: 'iOS-приложение опубликовано в App Store', result2: 'Полный поток поиска, коллабораций и управления площадками', result3: 'Тёмная визуальная идентичность и опыт TR/EN', ctaAppStore: 'Открыть в App Store', ctaSite: 'Сайт Marvi Society', ctaOrder: 'Заказать похожее приложение', ctaPortfolio: 'Другие кейсы' },
+      shots: { discover: 'Поиск событий', events: 'События и приглашения', profile: 'Профиль креатора' },
+      geoText: 'Кейс разработки iOS для Стамбула и международных рынков — от дизайна до публикации в App Store, Bizdavar Group.'
+    },
     bizseat: {
       hero: {
         tag: 'Собственный продукт · Авто',
@@ -1942,6 +1978,12 @@
 
   if (!ar.caseStudy) ar.caseStudy = {};
   deepMerge(ar.caseStudy, {
+    marviSociety: {
+      hero: { tag: 'نموذج تطبيق iOS', title: 'Marvi Society — تطبيق iOS لنادٍ بدعوة في إسطنبول', desc: 'تصميم وتطوير iOS من الصفر — ربط صنّاع المحتوى المعتمدين بأماكن إسطنبول؛ منشور على App Store' },
+      about: { title: 'عن المشروع', body: '<strong>Marvi Society</strong> نموذج تطوير موبايل من Bizdavar Group — تطبيق iOS بدعوة يربط صنّاع المحتوى المعتمدين بأماكن إسطنبول المعتمدة. اكتشاف الفعاليات والأماكن، طلب التعاون، check-in، إثبات الزيارة، إدارة المكان وملفات TR/EN. هذه الصفحة <strong>نموذج تطبيق iOS</strong>.', servicesTitle: 'خدمات Bizdavar', services: ['تصميم المنتج وواجهة iOS', 'هندسة وتطوير تطبيق الموبايل', 'مسارات الاكتشاف والدعوة وcheck-in وإثبات الزيارة', 'إدارة الأماكن والحملات والإشعارات', 'النشر على App Store والدعم بعد الإطلاق'], clientTitle: 'مجال المنتج', clientBody: 'Marvi Society نادٍ lifestyle بدعوة في إسطنبول — يربط صنّاع المحتوى بالمطاعم والحياة الليلية والعافية والجمال. التفاصيل على الموقع وصفحة App Store.', challengeTitle: 'تحدي المشروع', challenge: 'تطبيق بدعوة لربط صنّاع المحتوى والأماكن في إسطنبول — مع اكتشاف الفعاليات وإدارة الدعوات وcheck-in وإثبات الزيارة، جاهز لـ App Store.', resultsTitle: 'النتائج', result1: 'تطبيق iOS منشور على App Store', result2: 'مسار كامل للاكتشاف والتعاون وإدارة الأماكن', result3: 'هوية بصرية داكنة وتجربة TR/EN', ctaAppStore: 'عرض في App Store', ctaSite: 'موقع Marvi Society', ctaOrder: 'اطلب تطبيقاً مشابهاً', ctaPortfolio: 'نماذج أخرى' },
+      shots: { discover: 'اكتشاف الفعاليات', events: 'الفعاليات والدعوات', profile: 'ملف الصانع' },
+      geoText: 'نموذج تطوير تطبيق iOS لإسطنبول والأسواق الدولية — من التصميم إلى النشر على App Store بواسطة Bizdavar Group.'
+    },
     bizseat: {
       hero: {
         tag: 'منتج ملكية · سيارات',
