@@ -126,6 +126,7 @@
     document.documentElement.classList.add('premium-ui');
     requestAnimationFrame(function () {
       document.documentElement.classList.add('is-page-entered');
+      document.dispatchEvent(new CustomEvent('bizdavar:page-entered'));
     });
     initHeaderScroll();
     initReveal();

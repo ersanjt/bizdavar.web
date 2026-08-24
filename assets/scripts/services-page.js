@@ -248,21 +248,60 @@
     }
   }
 
+  let servicesRevealObserver = null;
+  let servicesRevealFallbackTimer = 0;
+
+  function revealServicesNode(el) {
+    if (!el || el.classList.contains('is-in')) return;
+    el.classList.add('is-in');
+    if (servicesRevealObserver) servicesRevealObserver.unobserve(el);
+  }
+
+  function flushHiddenServicesReveals() {
+    document.querySelectorAll('.services-reveal:not(.is-in)').forEach(revealServicesNode);
+  }
+
   function initReveals() {
     const nodes = [...document.querySelectorAll('.services-reveal')];
     if (!nodes.length) return;
+
+    if (servicesRevealObserver) {
+      servicesRevealObserver.disconnect();
+      servicesRevealObserver = null;
+    }
+    if (servicesRevealFallbackTimer) {
+      clearTimeout(servicesRevealFallbackTimer);
+      servicesRevealFallbackTimer = 0;
+    }
+
     if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      nodes.forEach(n => n.classList.add('is-in'));
+      nodes.forEach(revealServicesNode);
       return;
     }
+
     const obs = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-in');
-        obs.unobserve(entry.target);
+        revealServicesNode(entry.target);
       });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
-    nodes.forEach(n => obs.observe(n));
+    }, { rootMargin: '0px 0px -5% 0px', threshold: 0.05 });
+    servicesRevealObserver = obs;
+
+    const viewportH = window.innerHeight || document.documentElement.clientHeight || 0;
+    nodes.forEach(n => {
+      obs.observe(n);
+      const rect = n.getBoundingClientRect();
+      if (rect.height > 0 && rect.bottom > 0 && rect.top < viewportH * 0.92) {
+        revealServicesNode(n);
+      }
+    });
+
+    servicesRevealFallbackTimer = window.setTimeout(flushHiddenServicesReveals, 1500);
+  }
+
+  function scheduleServicesReveals() {
+    initReveals();
+    requestAnimationFrame(initReveals);
   }
 
   function applyBlockLists() {
@@ -856,8 +895,19 @@
       el.classList.add('services-reveal');
     });
     initNavSpy();
-    initReveals();
+    scheduleServicesReveals();
   };
+
+  document.addEventListener('bizdavar:locale', () => {
+    if (document.body.dataset.page !== 'services') return;
+    scheduleServicesReveals();
+  });
+
+  document.addEventListener('bizdavar:page-entered', scheduleServicesReveals);
+
+  if (document.documentElement.classList.contains('is-page-entered')) {
+    scheduleServicesReveals();
+  }
 
   window.renderServicesRelatedLinks = function () {
     const links = rawList('servicesPage.relatedLinks', [

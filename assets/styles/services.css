@@ -265,7 +265,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .services-reveal {
+  .services-reveal,
+  html.premium-ui.is-page-entered .services-reveal:not(.is-in) {
     opacity: 1;
     transform: none;
     transition: none;
