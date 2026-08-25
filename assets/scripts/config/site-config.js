@@ -229,9 +229,9 @@ window.BIZDAVAR_CONFIG = {
     /** Same wordmark inverted for dark backgrounds (footer) */
     logoOnDark: 'assets/images/brand/bizdavar-logo-light.png',
     logoAlt: 'Bizdavar — official logo',
-    ogImage: 'assets/images/content/about-hero.svg',
+    ogImage: 'assets/images/content/about-hero.jpg',
     heroImage: 'assets/images/content/hero-home.svg',
-    aboutImage: 'assets/images/content/about-hero.svg'
+    aboutImage: 'assets/images/content/about-hero.jpg'
   },
 
   /** Formspree — set formId from formspree.io and enabled: true to use server submit */
@@ -468,7 +468,7 @@ window.BIZDAVAR_CONFIG = {
       category: 'درباره شرکت',
       catId: 'company',
       date: '2025-06-01',
-      image: 'assets/images/content/about-hero.svg',
+      image: 'assets/images/content/about-hero.jpg',
       relatedService: 'pages/about.html'
     },
     {

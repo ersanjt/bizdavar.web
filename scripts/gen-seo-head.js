@@ -21,11 +21,11 @@ const LANGS = ['fa', 'tr', 'en', 'ru', 'ar'];
 /** Per-page Open Graph images (relative to site root) */
 const PAGE_OG = {
   home: 'assets/images/brand/bizdavar-logo-square.png',
-  about: 'assets/images/brand/bizdavar-logo-square.png',
+  about: 'assets/images/content/about-hero.jpg',
   contact: 'assets/images/brand/bizdavar-logo-square.png',
   fast: 'assets/images/brand/bizdavar-logo-square.png',
   vega: 'assets/images/vega/hero-vegapuls-6x.png',
-  prosense: 'assets/images/prosense/slides/pq-sil.jpg',
+  prosense: 'assets/images/prosense/hero-pq-sil2.webp',
   liquiMoly: 'assets/images/liqui-moly/octane-plus.jpg',
   fxguard: 'assets/images/products/fxguard/fxguard-hero.svg',
   bizswap: 'assets/images/products/bizswap/bizswap-hero.svg',
@@ -41,7 +41,7 @@ const PAGE_OG = {
   articleSmm: 'assets/images/content/services-smm-mockup.svg',
   articleFastStudio: 'assets/images/content/related-thumb-fast.svg',
   articleIndustrialSensors: 'assets/images/vega/blog-industrial-sensors.jpg',
-  articleAboutBizdavar: 'assets/images/gallery/expo-imen-booth.jpg',
+  articleAboutBizdavar: 'assets/images/content/about-hero.jpg',
   articleVegaSupplyIran: 'assets/images/vega/slides/value-process-safety.jpg',
   articleMultilingualWeb: 'assets/images/content/services-web-mockup.svg',
   articleMarviSociety: 'assets/images/content/marvi-society/screen-discover.jpg',

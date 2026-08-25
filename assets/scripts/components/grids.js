@@ -531,17 +531,19 @@
         if (!hubData) return '';
         const badge = opts.badge || L.office || 'دفتر';
         const waLabel = opts.waLabel || L.whatsapp || 'واتساپ';
+        const openAttr = opts.open ? ' open' : '';
         return `
-        <article class="presence-istanbul-hub${opts.modifier ? ' ' + opts.modifier : ''}">
-          <div class="presence-istanbul-hub__head">
-            <div>
+        <details class="presence-istanbul-hub${opts.modifier ? ' ' + opts.modifier : ''}"${openAttr}>
+          <summary class="presence-istanbul-hub__head">
+            <div class="presence-istanbul-hub__summary">
               <span class="presence-istanbul-hub__eyebrow">${hubData.subtitle || ''}</span>
               <h3 class="presence-istanbul-hub__title">${hubData.title}</h3>
               <p class="presence-istanbul-hub__location">${hubData.city}${hubData.province ? ', ' + hubData.province : ''}, ${hubData.country}${hubData.timezone ? ' · ' + hubData.timezone : ''}</p>
               ${hubData.brand ? `<p class="presence-istanbul-hub__brand">${hubData.brand}</p>` : ''}
             </div>
             <span class="presence-country__badge presence-istanbul-hub__badge">${badge}</span>
-          </div>
+          </summary>
+          <div class="presence-istanbul-hub__body">
           <p class="presence-istanbul-hub__intro">${hubData.intro}</p>
           <ul class="presence-istanbul-hub__services">
             ${(hubData.services || []).map(s => `<li>${s}</li>`).join('')}
@@ -560,11 +562,12 @@
           </div>
           ${hubData.note ? `<p class="presence-istanbul-hub__note">${hubData.note}</p>` : ''}
           ${hubData.exhibitionsNote ? `<p class="presence-istanbul-hub__note presence-istanbul-hub__note--event">${hubData.exhibitionsNote}</p>` : ''}
-        </article>`;
+          </div>
+        </details>`;
       };
-      const hubHtml = renderOfficeHub(hub, { badge: L.mainOffice || 'دفتر اصلی', waLabel: L.whatsappIstanbul || 'واتساپ استانبول' });
-      const yerevanHtml = renderOfficeHub(yerevan, { badge: L.armenia || 'ارمنستان', modifier: 'presence-istanbul-hub--armenia' });
-      const tabrizHtml = renderOfficeHub(tabriz, { badge: L.iran || 'ایران', waLabel: L.whatsappIran || 'واتساپ ایران', modifier: 'presence-istanbul-hub--iran' });
+      const hubHtml = renderOfficeHub(hub, { badge: L.mainOffice || 'دفتر اصلی', waLabel: L.whatsappIstanbul || 'واتساپ استانبول', open: true });
+      const yerevanHtml = renderOfficeHub(yerevan, { badge: L.armenia || 'ارمنستان', modifier: 'presence-istanbul-hub--armenia', open: false });
+      const tabrizHtml = renderOfficeHub(tabriz, { badge: L.iran || 'ایران', waLabel: L.whatsappIran || 'واتساپ ایران', modifier: 'presence-istanbul-hub--iran', open: false });
 
       presenceEl.innerHTML = `
         <div class="presence-showcase">
@@ -608,6 +611,16 @@
             `).join('')}
           </div>
         </div>`;
+      const officeMq = window.matchMedia('(min-width: 900px)');
+      const offices = presenceEl.querySelectorAll('.presence-istanbul-hub');
+      const syncOffices = () => {
+        offices.forEach((el, i) => {
+          el.open = officeMq.matches || i === 0;
+        });
+      };
+      syncOffices();
+      if (officeMq.addEventListener) officeMq.addEventListener('change', syncOffices);
+      else officeMq.addListener(syncOffices);
     }
 
     const credEl = document.getElementById('intelCredentials');

@@ -377,7 +377,7 @@ const ARTICLES = [
     seoKey: 'articleAboutBizdavar',
     date: '2025-06-01',
     modified: '2026-08-24',
-    image: 'assets/images/content/about-hero.svg',
+    image: 'assets/images/content/about-hero.jpg',
     extraImg: 'assets/images/gallery/expo-team-imen.jpg',
     category: { fa: 'درباره شرکت', tr: 'Şirket hakkında', en: 'About the company', ru: 'О компании', ar: 'عن الشركة' },
     title: {

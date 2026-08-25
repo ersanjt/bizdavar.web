@@ -85,7 +85,11 @@
 
     const setActive = (id) => {
       links.forEach(a => {
-        a.classList.toggle('is-active', a.getAttribute('href') === `#${id}`);
+        const on = a.getAttribute('href') === `#${id}`;
+        a.classList.toggle('is-active', on);
+        if (on) {
+          a.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' });
+        }
       });
     };
 

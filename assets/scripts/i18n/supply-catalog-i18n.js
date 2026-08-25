@@ -1548,15 +1548,17 @@
 
       origin: 'Kartal, Istanbul — Turkey',
 
+      officialUrl: 'https://www.prosense.com.tr/?lang=en',
+
       description: 'Bizdavar Group supplies Prosense gas and flame detectors with SIL/M1/EN certification. Model selection consulting in Farsi (WhatsApp), transparent proforma and shipping coordination for projects in Iran and for Persian-speaking buyers abroad.',
 
       heroStats: [
 
-        { label: 'Detectable gases' },
+        { value: '1000+', label: 'Detectable gases' },
 
-        { label: 'Safety certification' },
+        { value: 'SIL2/3', label: 'Safety certification' },
 
-        { label: 'Years of supply experience' }
+        { value: '12+', label: 'Years of supply experience' }
 
       ]
 
@@ -1630,7 +1632,7 @@
 
       { name: 'PQ Series', tag: 'SIL2/3', hint: 'Process safety · H2S / LEL / O2' },
 
-      { name: 'SafeVader', tag: 'Process Safety', hint: 'Toxic and flammable gases' },
+      { name: 'SafeVader', tag: 'Safe Area', hint: 'Labs, HVAC, hydrogen rooms' },
 
       { name: 'SOMA M1', tag: 'Mining', hint: 'Tunnels and underground mines' },
 
@@ -1642,7 +1644,7 @@
 
       { title: 'PQ Series — SIL2 / SIL3', desc: 'Best-selling fixed detector — SIL certificate for petrochemical and refinery process safety', useCase: 'H2S, LEL, O2 — Ex environment and SIS projects', badge: 'SIL' },
 
-      { title: 'SafeVader Series', desc: 'Process safety detector — common choice for HSE and automation units', useCase: 'Toxic and flammable gases in industrial facilities', badge: 'Process Safety' },
+      { title: 'SafeVader Series', desc: 'Indoor / safe-area detector — LCD, 4–20 mA + RS485 Modbus and onboard relays. For labs, hospitals, HVAC, refrigerant and hydrogen rooms — not an Ex/SIL process detector.', useCase: 'Non-Ex indoor areas · laboratories, HVAC, hospitals, battery rooms', badge: 'Safe Area' },
 
       { title: 'Marine & Offshore', desc: 'Marine certification — H2S and CH4 systems for vessels and offshore platforms', useCase: 'Shipbuilding, offshore platforms, ports', badge: 'Marine' },
 
@@ -1650,7 +1652,7 @@
 
       { title: 'PQD VOC', desc: 'VOC detector — reduced risk from volatile organic compounds', useCase: 'Chemical, paint and petrochemical industries', badge: 'VOC' },
 
-      { title: 'TÜRKAK — Calibration', desc: 'Calibration per TS EN ISO/IEC 17025 — AB-0260-K accredited laboratory', useCase: 'Periodic detector maintenance — coordinated through Bizdavar', badge: 'Calibration' },
+      { title: 'TÜRKAK — Calibration', desc: 'Calibration per TS EN ISO/IEC 17025 — AB-2060-K accredited laboratory', useCase: 'Periodic detector maintenance — coordinated through Bizdavar', badge: 'Calibration' },
 
       { title: 'SOMA Series — M1', desc: 'Mining detector — M1 certificate for mines and tunnels', useCase: 'Coal mines, metro tunnels, underground workshops', badge: 'Mining' },
 
@@ -1660,7 +1662,7 @@
 
     categories: [
 
-      { title: 'Fixed gas detectors', desc: 'Fixed gas sensors for permanent installation in industrial facilities' },
+      { title: 'Fixed gas detectors', desc: 'Official Prosense range — combustible, toxic, asphyxiant and VOC fixed detectors from SIL2/ATEX heavy industry to indoor safe-area' },
 
       { title: 'Portable gas detectors', desc: 'Portable measuring instruments for personnel and field inspection' },
 
@@ -1774,6 +1776,8 @@
 
       { q: 'Do I need SIL certification for my project?', a: 'For process safety (SIS) projects, the PQ series with SIL2/3 certification is suitable. Describe your project type so we recommend the correct model and certification level.' },
 
+      { q: 'Is SafeVader a SIL or explosion-proof detector?', a: 'No. SafeVader is for indoor safe areas (labs, hospitals, HVAC, refrigerant and hydrogen rooms) with LCD, 4–20 mA, Modbus and onboard relays. Use the PQ series for Ex Zone 1/2 and SIS/SIL projects.' },
+
       { q: 'Can you supply calibration cylinders and test gas?', a: 'Yes — Prosense Span/Test cylinders, mixed gas and calibration regulators are available. TÜRKAK calibration services in Turkey can also be coordinated.' },
 
       { q: 'Do you supply control panels and software?', a: 'Yes — S-DP4 to S-DPX128 panels, S-MCX software and complete PPS+ parking systems can be supplied as an integrated package.' }
@@ -1801,6 +1805,8 @@
       since: '2006\'dan beri',
 
       origin: 'Kartal, İstanbul — Türkiye',
+
+      officialUrl: 'https://www.prosense.com.tr/?lang=tr',
 
       description: 'Bizdavar Group; SIL/M1/EN sertifikalı Prosense gaz ve alev dedektörü tedarik eder. Türkçe model seçim danışmanlığı, şeffaf proforma ve uluslararası lojistik koordinasyonu.',
 
@@ -1884,7 +1890,7 @@
 
       { name: 'PQ Serisi', tag: 'SIL2/3', hint: 'Proses güvenliği · H2S / LEL / O2' },
 
-      { name: 'SafeVader', tag: 'Process Safety', hint: 'Zehirli ve yanıcı gazlar' },
+      { name: 'SafeVader', tag: 'Emniyetli Alan', hint: 'Laboratuvar, HVAC, hidrojen odaları' },
 
       { name: 'SOMA M1', tag: 'Maden', hint: 'Tünel ve yeraltı madenleri' },
 
@@ -1896,7 +1902,7 @@
 
       { title: 'PQ Serisi — SIL2 / SIL3', desc: 'En çok satan sabit dedektör — petrokimya ve rafineri proses güvenliği için SIL sertifikası', useCase: 'H2S, LEL, O2 — Ex ortam ve SIS projeleri', badge: 'SIL' },
 
-      { title: 'SafeVader Serisi', desc: 'Proses güvenliği dedektörü — HSE ve otomasyon birimlerinde yaygın tercih', useCase: 'Endüstriyel tesislerde zehirli ve yanıcı gazlar', badge: 'Process Safety' },
+      { title: 'SafeVader Serisi', desc: 'İç mekân / emniyetli alan dedektörü — LCD, 4–20 mA + RS485 Modbus ve röle. Laboratuvar, hastane, HVAC, soğutucu gaz ve hidrojen odaları — Ex/SIL proses dedektörü değildir.', useCase: 'Ex olmayan iç mekân · laboratuvar, HVAC, hastane, akü odası', badge: 'Emniyetli Alan' },
 
       { title: 'Denizcilik ve Offshore', desc: 'Denizcilik sertifikası — gemi ve offshore için H2S ve CH4 sistemleri', useCase: 'Gemi inşa, offshore platformlar, limanlar', badge: 'Denizcilik' },
 
@@ -1904,7 +1910,7 @@
 
       { title: 'PQD VOC', desc: 'VOC dedektörü — uçucu organik bileşik riskini azaltır', useCase: 'Kimya, boya ve petrokimya endüstrileri', badge: 'VOC' },
 
-      { title: 'TÜRKAK — Kalibrasyon', desc: 'TS EN ISO/IEC 17025\'e uygun kalibrasyon — AB-0260-K akredite laboratuvar', useCase: 'Periyodik dedektör bakımı — Bizdavar üzerinden koordinasyon', badge: 'Kalibrasyon' },
+      { title: 'TÜRKAK — Kalibrasyon', desc: 'TS EN ISO/IEC 17025\'e uygun kalibrasyon — AB-2060-K akredite laboratuvar', useCase: 'Periyodik dedektör bakımı — Bizdavar üzerinden koordinasyon', badge: 'Kalibrasyon' },
 
       { title: 'SOMA Serisi — M1', desc: 'Maden dedektörü — maden ve tüneller için M1 sertifikası', useCase: 'Kömür madenleri, metro tünelleri, yeraltı atölyeleri', badge: 'Maden' },
 
@@ -1914,7 +1920,7 @@
 
     categories: [
 
-      { title: 'Sabit gaz dedektörleri', desc: 'Endüstriyel tesislerde kalıcı montaj için sabit gaz sensörleri' },
+      { title: 'Sabit gaz dedektörleri', desc: 'Resmi Prosense sabit gaz ailesi — yanıcı, toksik, asfiksi ve VOC; SIL2/ATEX ağır sanayiden emniyetli alan iç mekâna' },
 
       { title: 'Portatif gaz dedektörleri', desc: 'Personel ve saha denetimi için taşınabilir ölçüm cihazları' },
 
@@ -2028,6 +2034,8 @@
 
       { q: 'Projem için SIL sertifikası gerekli mi?', a: 'Proses güvenliği (SIS) projeleri için SIL2/3 sertifikalı PQ serisi uygundur. Proje tipinizi belirtin; doğru model ve sertifikasyon seviyesini öneririz.' },
 
+      { q: 'SafeVader SIL veya Ex-proof dedektör mü?', a: 'Hayır. SafeVader iç mekân emniyetli alan içindir (laboratuvar, hastane, HVAC, soğutucu gaz ve hidrojen odaları) — LCD, 4–20 mA, Modbus ve röle. Ex Zone 1/2 ve SIS/SIL için PQ serisini kullanın.' },
+
       { q: 'Kalibrasyon tüpü ve test gazı tedarik ediliyor mu?', a: 'Evet — Prosense Span/Test tüpleri, karışım gazı ve kalibrasyon regülatörleri mevcuttur. Türkiye\'de TÜRKAK kalibrasyon hizmetleri de koordine edilebilir.' },
 
       { q: 'Kontrol paneli ve yazılım da var mı?', a: 'Evet — S-DP4\'ten S-DPX128\'e paneller, S-MCX yazılımı ve eksiksiz PPS+ otopark sistemleri entegre paket olarak tedarik edilebilir.' }
@@ -2046,6 +2054,7 @@
       tagline: 'Газовые и пламенные детекторы — производство Турция',
       since: 'С 2006 года',
       origin: 'Картал, Стамбул — Турция',
+      officialUrl: 'https://www.prosense.com.tr/?lang=en',
       description: 'Bizdavar Group поставляет газовые и пламенные детекторы Prosense с сертификацией SIL/M1/EN. Консультация по выбору модели в WhatsApp, прозрачная проформа и координация доставки для проектов в регионе.',
       heroStats: [
         { label: 'Обнаруживаемых газов' },
@@ -2087,22 +2096,22 @@
     },
     quickSeries: [
       { name: 'PQ Series', tag: 'SIL2/3', hint: 'Процессная безопасность · H2S / LEL / O2' },
-      { name: 'SafeVader', tag: 'Process Safety', hint: 'Токсичные и горючие газы' },
+      { name: 'SafeVader', tag: 'Safe Area', hint: 'Лаборатории, HVAC, водородные помещения' },
       { name: 'SOMA M1', tag: 'Mining', hint: 'Туннели и подземные рудники' },
       { name: 'PPS+', tag: 'EN-50545-1', hint: 'Закрытый паркинг CO / NO2' }
     ],
     highlights: [
       { title: 'PQ Series — SIL2 / SIL3', desc: 'Бестселлер среди стационарных детекторов — SIL для нефтехимии и НПЗ', useCase: 'H2S, LEL, O2 — Ex-среда и проекты SIS', badge: 'SIL' },
-      { title: 'SafeVader Series', desc: 'Детектор процессной безопасности — частый выбор HSE и АСУ ТП', useCase: 'Токсичные и горючие газы на промплощадках', badge: 'Process Safety' },
+      { title: 'SafeVader Series', desc: 'Детектор для безопасной зоны / помещений — LCD, 4–20 мА + RS485 Modbus и реле. Лаборатории, больницы, HVAC, хладагенты и водородные комнаты — это не Ex/SIL процессный детектор.', useCase: 'Не-Ex внутри помещений · лаборатории, HVAC, больницы, зарядные', badge: 'Safe Area' },
       { title: 'Marine & Offshore', desc: 'Морская сертификация — системы H2S и CH4 для судов и оффшора', useCase: 'Судостроение, оффшорные платформы, порты', badge: 'Marine' },
       { title: 'MPS™ Hydrocarbon', desc: 'Датчик MPS — высокая точность детектирования углеводородов', useCase: 'НПЗ, трубопроводы, резервуары', badge: 'MPS' },
       { title: 'PQD VOC', desc: 'Детектор VOC — снижение рисков ЛОС', useCase: 'Химия, ЛКМ и нефтехимия', badge: 'VOC' },
-      { title: 'TÜRKAK — калибровка', desc: 'Калибровка по TS EN ISO/IEC 17025 — лаборатория AB-0260-K', useCase: 'Периодическое ТО детекторов — через Bizdavar', badge: 'Calibration' },
+      { title: 'TÜRKAK — калибровка', desc: 'Калибровка по TS EN ISO/IEC 17025 — лаборатория AB-2060-K', useCase: 'Периодическое ТО детекторов — через Bizdavar', badge: 'Calibration' },
       { title: 'SOMA Series — M1', desc: 'Горный детектор — сертификат M1 для шахт и туннелей', useCase: 'Угольные шахты, метро, подземные объекты', badge: 'Mining' },
       { title: 'PPS+ Parking — EN 50545-1', desc: 'Паркинговая система по EN-50545-1 — детекция CO и NO2', useCase: 'Закрытые паркинги, ТЦ и больницы', badge: 'Parking' }
     ],
     categories: [
-      { title: 'Стационарные газовые детекторы', desc: 'Стационарные датчики газа для постоянной установки' },
+      { title: 'Стационарные газовые детекторы', desc: 'Официальная линейка Prosense — горючие, токсичные, удушающие и VOC; от SIL2/ATEX до безопасной зоны внутри помещений' },
       { title: 'Портативные газовые детекторы', desc: 'Переносные приборы для персонала и полевого контроля' },
       { title: 'Детекторы пламени', desc: 'Обнаружение пламени и пожара в промышленных средах' },
       { title: 'Панели управления', desc: 'Аналоговые и цифровые панели для нескольких детекторов' },
@@ -2159,6 +2168,7 @@
       { q: 'Можно запросить из-за рубежа?', a: 'Да — консультация и WhatsApp доступны инженерам и покупателям по всему миру. Пункт доставки и условия перевозки указываются в проформе.' },
       { q: 'Какой срок поставки?', a: 'Обычно 3–6 недель в зависимости от модели, склада и пункта назначения. Точный срок — в проформе. Для срочных проектов предлагаем доступные альтернативы.' },
       { q: 'Нужна ли сертификация SIL?', a: 'Для проектов процессной безопасности (SIS) подходит серия PQ с SIL2/3. Опишите тип проекта — подберём модель и уровень сертификации.' },
+      { q: 'SafeVader — это SIL или Ex-детектор?', a: 'Нет. SafeVader для безопасных помещений (лаборатории, больницы, HVAC, хладагенты и водородные комнаты) — LCD, 4–20 мА, Modbus и реле. Для Zone 1/2 и SIS/SIL используйте серию PQ.' },
       { q: 'Можно заказать калибровочные баллоны и test gas?', a: 'Да — баллоны Prosense Span/Test, смешанные газы и регуляторы. Также координируем калибровку TÜRKAK в Турции.' },
       { q: 'Поставляете панели и ПО?', a: 'Да — панели S-DP4–S-DPX128, ПО S-MCX и полные системы PPS+ для паркингов — как интегрированный пакет.' }
     ],
@@ -2173,6 +2183,7 @@
       tagline: 'كواشف غاز ولهب — صنع في تركيا',
       since: 'منذ 2006',
       origin: 'كارتال، إسطنبول — تركيا',
+      officialUrl: 'https://www.prosense.com.tr/?lang=en',
       description: 'مجموعة Bizdavar تورّد كواشف غاز ولهب Prosense بشهادات SIL/M1/EN. استشارة اختيار الموديل عبر واتساب، فاتورة مبدئية شفافة وتنسيق الشحن لمشاريع المنطقة.',
       heroStats: [
         { label: 'غازات قابلة للكشف' },
@@ -2214,22 +2225,22 @@
     },
     quickSeries: [
       { name: 'PQ Series', tag: 'SIL2/3', hint: 'سلامة العملية · H2S / LEL / O2' },
-      { name: 'SafeVader', tag: 'Process Safety', hint: 'غازات سامة وقابلة للاشتعال' },
+      { name: 'SafeVader', tag: 'منطقة آمنة', hint: 'مختبرات وHVAC وغرف هيدروجين' },
       { name: 'SOMA M1', tag: 'Mining', hint: 'أنفاق ومناجم تحت الأرض' },
       { name: 'PPS+', tag: 'EN-50545-1', hint: 'مواقف مغلقة CO / NO2' }
     ],
     highlights: [
       { title: 'PQ Series — SIL2 / SIL3', desc: 'الأكثر مبيعاً بين الكواشف الثابتة — شهادة SIL للبتروكيماويات والمصافي', useCase: 'H2S، LEL، O2 — بيئة Ex ومشاريع SIS', badge: 'SIL' },
-      { title: 'SafeVader Series', desc: 'كاشف سلامة العملية — اختيار شائع لوحدات HSE والأتمتة', useCase: 'غازات سامة وقابلة للاشتعال في المنشآت الصناعية', badge: 'Process Safety' },
+      { title: 'SafeVader Series', desc: 'كاشف للمنطقة الآمنة الداخلية — LCD ومخرج 4–20 mA وModbus وريليه. للمختبرات والمستشفيات وHVAC وغازات التبريد وغرف الهيدروجين — ليس كاشف Ex/SIL للعملية.', useCase: 'مناطق داخلية غير Ex · مختبرات وHVAC ومستشفيات وشحن بطاريات', badge: 'منطقة آمنة' },
       { title: 'Marine & Offshore', desc: 'شهادة بحرية — أنظمة H2S وCH4 للسفن والمنصات', useCase: 'بناء سفن ومنصات بحرية وموانئ', badge: 'Marine' },
       { title: 'MPS™ Hydrocarbon', desc: 'حساس MPS — دقة عالية في كشف الهيدروكربونات', useCase: 'مصفاة وأنابيب وخزانات', badge: 'MPS' },
       { title: 'PQD VOC', desc: 'كاشف VOC — تقليل مخاطر المركبات العضوية المتطايرة', useCase: 'صناعات كيميائية ودهانات وبتروكيماويات', badge: 'VOC' },
-      { title: 'TÜRKAK — معايرة', desc: 'معايرة وفق TS EN ISO/IEC 17025 — مختبر معتمد AB-0260-K', useCase: 'صيانة دورية للكواشف — عبر Bizdavar', badge: 'Calibration' },
+      { title: 'TÜRKAK — معايرة', desc: 'معايرة وفق TS EN ISO/IEC 17025 — مختبر معتمد AB-2060-K', useCase: 'صيانة دورية للكواشف — عبر Bizdavar', badge: 'Calibration' },
       { title: 'SOMA Series — M1', desc: 'كاشف تعدين — شهادة M1 للمناجم والأنفاق', useCase: 'مناجم فحم ومترو وورش تحت الأرض', badge: 'Mining' },
       { title: 'PPS+ Parking — EN 50545-1', desc: 'نظام مواقف وفق EN-50545-1 — كشف CO وNO2', useCase: 'مواقف مغلقة ومراكز تجارية ومستشفيات', badge: 'Parking' }
     ],
     categories: [
-      { title: 'كواشف غاز ثابتة', desc: 'حساسات غاز ثابتة للتركيب الدائم في المنشآت' },
+      { title: 'كواشف غاز ثابتة', desc: 'مجموعة Prosense الرسمية — كواشف ثابتة للغازات القابلة للاشتعال والسامة والخانقة وVOC من SIL2/ATEX إلى المنطقة الآمنة الداخلية' },
       { title: 'كواشف غاز محمولة', desc: 'أجهزة قياس محمولة للأفراد والمعاينة الميدانية' },
       { title: 'كواشف لهب', desc: 'كشف اللهب والحريق في البيئات الصناعية والخطرة' },
       { title: 'لوحات تحكم', desc: 'لوحات تماثلية ورقمية لإدارة عدة كواشف' },
@@ -2286,6 +2297,7 @@
       { q: 'هل يمكن الاستعلام من خارج إيران؟', a: 'نعم — الاستشارة وواتساب متاحان للمهندسين والمشترين حول العالم. وجهة التسليم وشروط الشحن تُضبط في الفاتورة المبدئية.' },
       { q: 'ما مدة التسليم؟', a: 'عادة 3 إلى 6 أسابيع حسب الموديل والمخزون والوجهة. المدة الدقيقة تُذكر في الفاتورة. للمشاريع العاجلة نقترح بدائل متاحة.' },
       { q: 'هل أحتاج شهادة SIL لمشروعي؟', a: 'لمشاريع سلامة العملية (SIS) تناسب سلسلة PQ بشهادة SIL2/3. صف نوع مشروعك لنوصي بالموديل ومستوى الشهادة الصحيح.' },
+      { q: 'هل SafeVader كاشف SIL أو مقاوم للانفجار؟', a: 'لا. SafeVader للمناطق الآمنة الداخلية (مختبرات ومستشفيات وHVAC وغازات تبريد وغرف هيدروجين) مع LCD و4–20 mA وModbus وريليه. لمناطق Ex Zone 1/2 ومشاريع SIS استخدم سلسلة PQ.' },
       { q: 'هل يمكن توريد أسطوانات معايرة وغاز اختبار؟', a: 'نعم — أسطوانات Prosense Span/Test وغاز مختلط ومنظمات معايرة متاحة. ويمكن تنسيق خدمات معايرة TÜRKAK في تركيا.' },
       { q: 'هل تورّدون لوحات تحكم وبرمجيات؟', a: 'نعم — لوحات S-DP4 إلى S-DPX128 وبرمجيات S-MCX وأنظمة PPS+ كاملة للمواقف كحزمة متكاملة.' }
     ],

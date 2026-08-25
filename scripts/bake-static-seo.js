@@ -26,7 +26,7 @@ const ARTICLE_BY_REL = Object.fromEntries(
 const HEAD = global.BIZDAVAR_SEO_HEAD || {};
 const SITE = global.BIZDAVAR_SEO_SITE || {};
 const BASE = SITE.base || 'https://bizdavar.com';
-const DEFAULT_OG = SITE.defaultOgImage || `${BASE}/assets/images/content/about-hero.svg`;
+const DEFAULT_OG = SITE.defaultOgImage || `${BASE}/assets/images/content/about-hero.jpg`;
 
 function loadLocales() {
   const ctx = vm.createContext({ window: {}, console });

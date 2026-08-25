@@ -177,7 +177,7 @@
   var site = window.BIZDAVAR_SEO_SITE || {
     base: 'https://bizdavar.com',
     siteName: 'Bizdavar Group',
-    defaultOgImage: 'https://bizdavar.com/assets/images/content/about-hero.svg',
+    defaultOgImage: 'https://bizdavar.com/assets/images/content/about-hero.jpg',
     twitterCard: 'summary_large_image',
     robots: 'index, follow, max-image-preview:large'
   };

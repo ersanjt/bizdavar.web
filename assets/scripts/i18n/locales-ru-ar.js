@@ -568,7 +568,7 @@
     aboutTitle: 'Bizdavar Group — партнёр роста вашего бизнеса',
     aboutP1: 'Цифровые услуги, сайты и промпоставки из Стамбула — плюс свои продукты: нагревательный мат BizPet и FXGuard. От финтеха до промышленности.',
     aboutP2: 'Цифровая инфраструктура, домены, SSL и безопасность — тоже наши услуги. Международный хостинг и домены через <a href="https://netinode.net/" class="service-card__link" target="_blank" rel="noopener noreferrer">Netinode</a>.',
-    aboutHeroImage: 'assets/images/content/about-hero-en.svg',
+    aboutHeroImage: 'assets/images/content/about-hero.jpg',
     aboutHeroAlt: 'Bizdavar Group — цифровое и промышленное агентство',
     aboutMore: 'Подробнее о Bizdavar',
     aboutInfra: 'Управление инфраструктурой',
@@ -645,7 +645,7 @@
     aboutTitle: 'Bizdavar Group — شريك نمو أعمالك',
     aboutP1: 'خدمات رقمية ومواقع وتوريد صناعي من إسطنبول — ومنتجاتنا مثل وسادة BizPet وFXGuard. من الفنتك إلى الصناعة.',
     aboutP2: 'البنية الرقمية والنطاقات وSSL والأمان جزء من خدماتنا أيضاً — استضافة ونطاقات دولية عبر <a href="https://netinode.net/" class="service-card__link" target="_blank" rel="noopener noreferrer">Netinode</a>.',
-    aboutHeroImage: 'assets/images/content/about-hero.svg',
+    aboutHeroImage: 'assets/images/content/about-hero.jpg',
     aboutHeroAlt: 'Bizdavar Group — وكالة رقمية وصناعية',
     aboutMore: 'المزيد عن Bizdavar',
     aboutInfra: 'إدارة البنية',
@@ -1104,7 +1104,7 @@
           desc: 'Не нашли ответ? Напишите нам в WhatsApp.'
         }
       },
-      officialNote: 'Технические данные основаны на <a href="https://www.prosense.com.tr/?lang=tr" target="_blank" rel="noopener noreferrer">официальном сайте Prosense</a>. Для цены и поставки — <a href="contact">свяжитесь с Bizdavar</a> · <a href="vega">продукция VEGA</a>',
+      officialNote: 'Технические данные основаны на <a href="https://www.prosense.com.tr/?lang=en" target="_blank" rel="noopener noreferrer">официальном сайте Prosense</a>. Для цены и поставки — <a href="contact">свяжитесь с Bizdavar</a> · <a href="vega">продукция VEGA</a>',
       cta: {
         title: 'Готовы запросить цену Prosense?',
         desc: 'Пришлите тип газа или серию модели — PQ · SafeVader · SOMA · PPS+ · панель S-DPX',
@@ -1168,7 +1168,7 @@
           desc: 'لم تجد إجابتك؟ راسلنا على واتساب.'
         }
       },
-      officialNote: 'المعلومات الفنية مستندة إلى <a href="https://www.prosense.com.tr/?lang=tr" target="_blank" rel="noopener noreferrer">الموقع الرسمي لـ Prosense</a>. للتسعير والتوريد — <a href="contact">تواصل مع Bizdavar</a> · <a href="vega">منتجات VEGA</a>',
+      officialNote: 'المعلومات الفنية مستندة إلى <a href="https://www.prosense.com.tr/?lang=en" target="_blank" rel="noopener noreferrer">الموقع الرسمي لـ Prosense</a>. للتسعير والتوريد — <a href="contact">تواصل مع Bizdavar</a> · <a href="vega">منتجات VEGA</a>',
       cta: {
         title: 'هل أنت مستعد لطلب عرض سعر Prosense؟',
         desc: 'أرسل نوع الغاز أو سلسلة الموديل — PQ · SafeVader · SOMA · PPS+ · لوحة S-DPX',

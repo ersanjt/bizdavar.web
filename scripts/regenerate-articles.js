@@ -32,14 +32,27 @@ function relatedJs(a) {
     .join(',\n            ');
 }
 
-function secondaryLabel(a) {
-  if (a.slug === 'vega-supply-iran' || a.slug === 'industrial-sensors') return 'کاتالوگ VEGA';
-  if (a.slug === 'prosense-gas-detection') return 'کاتالوگ Prosense';
-  if (a.slug === 'liqui-moly-supply-iran') return 'Liqui Moly';
-  if (a.slug === 'marvi-society-ios-app') return 'نمونه‌کار Marvi';
-  if (a.slug === 'field-tech-services') return 'خدمات فنی';
-  if (a.slug === 'fast-studio' || a.slug === 'multilingual-web-iran-turkey') return 'Fast Web Studio';
-  return CTA.fa.secondary;
+function secondaryLabel(a, lang) {
+  const loc = lang || 'fa';
+  if (a.slug === 'vega-supply-iran' || a.slug === 'industrial-sensors') {
+    return { fa: 'کاتالوگ VEGA', tr: 'VEGA kataloğu', en: 'VEGA catalogue', ru: 'Каталог VEGA', ar: 'كتالوج VEGA' }[loc];
+  }
+  if (a.slug === 'prosense-gas-detection') {
+    return { fa: 'کاتالوگ Prosense', tr: 'Prosense kataloğu', en: 'Prosense catalogue', ru: 'Каталог Prosense', ar: 'كتالوج Prosense' }[loc];
+  }
+  if (a.slug === 'liqui-moly-supply-iran') {
+    return { fa: 'Liqui Moly', tr: 'Liqui Moly', en: 'Liqui Moly', ru: 'Liqui Moly', ar: 'Liqui Moly' }[loc];
+  }
+  if (a.slug === 'marvi-society-ios-app') {
+    return { fa: 'نمونه‌کار Marvi', tr: 'Marvi vaka', en: 'Marvi case', ru: 'Кейс Marvi', ar: 'دراسة Marvi' }[loc];
+  }
+  if (a.slug === 'field-tech-services') {
+    return { fa: 'خدمات فنی', tr: 'Saha hizmetleri', en: 'Field services', ru: 'Выездные услуги', ar: 'خدمات ميدانية' }[loc];
+  }
+  if (a.slug === 'fast-studio' || a.slug === 'multilingual-web-iran-turkey') {
+    return 'Fast Web Studio';
+  }
+  return CTA[loc]?.secondary || CTA.fa.secondary;
 }
 
 function jsStr(s) {

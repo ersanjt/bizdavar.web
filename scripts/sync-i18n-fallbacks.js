@@ -265,7 +265,7 @@ function syncAboutExtras(html, about) {
   }
 
   html = html.replace(
-    /(<img[^>]*about-hero\.svg[^>]*)alt="[^"]*"/,
+    /(<img[^>]*about-hero\.jpg[^>]*)alt="[^"]*"/,
     (m, open) => {
       const alt = 'بیزدوار گروپ — آژانس دیجیتال و تامین صنعتی';
       changed = true;

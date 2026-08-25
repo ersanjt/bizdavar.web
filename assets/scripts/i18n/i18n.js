@@ -255,10 +255,15 @@
       const brandOverlay = this.raw(`${i18nKey}.brand`) || {};
       const academyBase = base.academy || {};
       const academyOverlay = this.raw(`${i18nKey}.academy`) || {};
+      const brandBase = base.brand || {};
 
       let result = this.normalizeSupplyCatalog({
         ...base,
-        brand: { ...(base.brand || {}), ...brandOverlay },
+        brand: {
+          ...brandBase,
+          ...brandOverlay,
+          heroStats: this.mergeLocalizedList(`${i18nKey}.brand.heroStats`, brandBase.heroStats || [])
+        },
         trustSignals: this.mergeLocalizedList(`${i18nKey}.trustSignals`, base.trustSignals || []),
         whyBuyFromUs: this.mergeLocalizedList(`${i18nKey}.whyBuyFromUs`, base.whyBuyFromUs || []),
         purchaseSteps: this.mergeLocalizedList(`${i18nKey}.purchaseSteps`, base.purchaseSteps || []),
@@ -348,11 +353,32 @@
         })),
         categories: (cat.categories || []).map(c => ({
           ...c,
-          series: (c.series || []).map(s => ({
-            ...s,
-            name: pick(s, 'name') || s.name,
-            note: pick(s, 'note') || s.note
-          }))
+          imageAlt: lang === 'fa'
+            ? (c.imageAltFa || c.imageAlt)
+            : lang === 'tr'
+              ? (c.imageAltTr || c.imageAlt)
+              : (c.imageAltEn || c.imageAlt),
+          series: (c.series || []).map(s => {
+            const featOrder = {
+              fa: s.featuresFa,
+              tr: s.featuresTr,
+              en: s.featuresEn,
+              ru: s.featuresRu || s.featuresEn,
+              ar: s.featuresAr || s.featuresEn
+            };
+            const features = featOrder[lang];
+            return {
+              ...s,
+              name: pick(s, 'name') || s.name,
+              note: pick(s, 'note') || s.note,
+              imageAlt: lang === 'fa'
+                ? (s.imageAltFa || s.imageAlt)
+                : lang === 'tr'
+                  ? (s.imageAltTr || s.imageAlt)
+                  : (s.imageAltEn || s.imageAlt),
+              features: Array.isArray(features) && features.length ? features : (s.features || [])
+            };
+          })
         })),
         academy: a ? { ...a, desc: a.desc || a.descFa } : a,
         featuredProducts: (cat.featuredProducts || []).map(p => ({
@@ -448,7 +474,7 @@
     },
 
     applyAboutHeroImage() {
-      const file = this.raw('home.aboutHeroImage') || 'assets/images/content/about-hero.svg';
+      const file = this.raw('home.aboutHeroImage') || 'assets/images/content/about-hero.jpg';
       const alt = this.t('home.aboutHeroAlt', 'Bizdavar Group');
       const src = '/' + String(file).replace(/^\//, '');
       document.querySelectorAll('[data-about-hero], img[src*="about-hero"]').forEach(img => {

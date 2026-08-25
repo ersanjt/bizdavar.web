@@ -45,12 +45,27 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
+.about-nav-wrap .container {
+  position: relative;
+}
+
+.about-nav-wrap .container::after {
+  content: '';
+  position: absolute;
+  inset-block: 0;
+  inset-inline-end: 0;
+  width: 36px;
+  pointer-events: none;
+  background: linear-gradient(to inline-start, var(--white), transparent);
+}
+
 .about-nav {
   display: flex;
   flex-wrap: nowrap;
   gap: 8px;
   overflow-x: auto;
-  padding: 14px 0;
+  padding-block: 14px;
+  padding-inline: 0 28px;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
 }
@@ -247,6 +262,54 @@
   margin-inline: auto;
 }
 
+@media (max-width: 1024px) {
+  .about-page {
+    --header-height: 56px;
+    overflow-x: clip;
+  }
+
+  .about-intro .about-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .about-intro .offer-map__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-intro .about__content {
+    order: 1;
+  }
+
+  .about-intro .about__image {
+    order: 2;
+  }
+
+  .about-intro .about__image img {
+    max-height: 280px;
+    object-fit: cover;
+  }
+
+  .about-block {
+    padding-block: clamp(32px, 5vw, 56px);
+    scroll-margin-top: calc(var(--header-height) + 52px);
+  }
+
+  .intel-leader-card {
+    padding: var(--space-5);
+  }
+
+  .about-page .page-hero--pro {
+    padding-block: 32px 12px;
+  }
+
+  .about-page .page-hero h1 {
+    font-size: clamp(1.4rem, 6.5vw, 2rem);
+    line-height: 1.35;
+  }
+}
+
 @media (max-width: 991px) {
   .about-block--profile .about-profile-grid,
   .about-trust-grid,
@@ -264,6 +327,7 @@
 @media (max-width: 767px) {
   .about-nav {
     padding-block: 12px;
+    padding-inline-end: 28px;
   }
 
   .about-nav__item {
@@ -274,10 +338,19 @@
   .about-hero-stats {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
 
   .about-stat {
     min-width: 0;
     padding: 12px 14px;
+  }
+
+  .about-intro .offer-map__card {
+    min-height: 0;
+  }
+
+  .about-block .intel-identity-grid {
+    padding: var(--space-4);
   }
 }
