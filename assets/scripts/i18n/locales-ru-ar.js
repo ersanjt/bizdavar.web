@@ -233,8 +233,8 @@
     articleWhatIsDm: {
       crumb: 'Что такое цифровой маркетинг',
       seoTitle: 'Что такое цифровой маркетинг? | Полное руководство — Bizdavar',
-      seoDescription: 'Определение цифрового маркетинга, каналы (SEO, реклама, SMM) и роль в росте бизнеса. Руководство Bizdavar Group.',
-      seoKeywords: 'что такое цифровой маркетинг, SEO, SMM, Bizdavar'
+      seoDescription: 'Что такое цифровой маркетинг: SEO, Google Ads, SMM, контент и измерение лидов — путь Bizdavar для Ирана и Турции.',
+      seoKeywords: 'что такое цифровой маркетинг, SEO, Google Ads, SMM, CRO, Bizdavar'
     },
     articleSmm: {
       crumb: 'SMM',
@@ -476,8 +476,8 @@
     articleWhatIsDm: {
       crumb: 'ما هو التسويق الرقمي',
       seoTitle: 'ما هو التسويق الرقمي؟ | دليل كامل — Bizdavar',
-      seoDescription: 'تعريف التسويق الرقمي والقنوات (SEO، إعلانات، SMM) وأهميته لنمو الأعمال. دليل Bizdavar Group.',
-      seoKeywords: 'ما هو التسويق الرقمي, SEO, SMM, Bizdavar'
+      seoDescription: 'ما هو التسويق الرقمي: سيو وإعلانات جوجل وSMM والمحتوى وقياس العملاء — مسار بيزدوار لإيران وتركيا.',
+      seoKeywords: 'ما هو التسويق الرقمي, سيو, إعلانات جوجل, SMM, CRO, بيزدوار'
     },
     articleSmm: {
       crumb: 'SMM',
@@ -1416,7 +1416,7 @@
   ru.blogPosts = [
     { title: 'Поставка датчиков VEGA в Иран — от запроса до объекта', excerpt: 'Консультация, проформа и логистика оригинального VEGA для проектов в Иране.', category: 'Промоборудование' },
     { title: 'Многоязычный сайт для рынков Ирана и Турции', excerpt: 'hreflang, локальное доверие и быстрая сдача для бизнеса на двух рынках.', category: 'Веб-дизайн' },
-    { title: 'Что такое цифровой маркетинг? Гайд для бизнеса', excerpt: 'Определение, каналы и роль в росте онлайн-продаж.', category: 'Цифровой маркетинг' },
+    { title: 'Что такое цифровой маркетинг? Полный гид для бизнеса', excerpt: 'SEO, Google Ads, SMM и измерение лидов — практический путь для Ирана и Турции.', category: 'Цифровой маркетинг' },
     { title: 'Как цифровой маркетинг увеличивает продажи?', excerpt: 'Практические способы превратить посетителя в клиента.', category: 'Цифровой маркетинг' },
     { title: 'Управление соцсетями — SMM-стратегия для брендов', excerpt: 'Контент, календарь публикаций и таргет в Instagram и LinkedIn.', category: 'SMM' },
     { title: 'Сайт за 5 дней — гайд Fast Studio', excerpt: 'Тарифы Fast Web Studio для стартапов.', category: 'Веб-дизайн' },
@@ -1672,7 +1672,7 @@
   ar.blogPosts = [
     { title: 'توريد حساسات VEGA إلى إيران — من الاستعلام إلى الموقع', excerpt: 'استشارة وفاتورة مبدئية ولوجستيات VEGA الأصلية لمشاريع إيران.', category: 'معدات صناعية' },
     { title: 'موقع متعدد اللغات لأسواق إيران وتركيا', excerpt: 'hreflang وثقة محلية وتسليم سريع للأعمال ذات السوقين.', category: 'تصميم ويب' },
-    { title: 'ما هو التسويق الرقمي؟ دليل للأعمال', excerpt: 'التعريف والقنوات ودوره في نمو المبيعات الإلكترونية.', category: 'تسويق رقمي' },
+    { title: 'ما هو التسويق الرقمي؟ دليل كامل للأعمال', excerpt: 'سيو وإعلانات جوجل وSMM وقياس العملاء — مسار عملي لإيران وتركيا.', category: 'تسويق رقمي' },
     { title: 'كيف يزيد التسويق الرقمي المبيعات؟', excerpt: 'طرق عملية لتحويل الزائر إلى عميل.', category: 'تسويق رقمي' },
     { title: 'إدارة التواصل الاجتماعي — استراتيجية SMM للعلامات', excerpt: 'محتوى وتقويم نشر وإعلانات مستهدفة على Instagram وLinkedIn.', category: 'SMM' },
     { title: 'إطلاق موقع خلال ٥ أيام — دليل Fast Studio', excerpt: 'باقات Fast Web Studio للشركات الناشئة.', category: 'تصميم ويب' },
@@ -2265,6 +2265,41 @@
       },
       geoText: 'وسادة تدفئة صُممت في حاضنة التكنولوجيا بجامعة تبريز — منتج بیز پت لفريق بيزدوار.'
     }
+  });
+
+  var articleSlugs = [
+    'vega-supply-iran',
+    'multilingual-web-iran-turkey',
+    'what-is-digital-marketing',
+    'digital-marketing',
+    'social-media-management',
+    'fast-studio',
+    'industrial-sensors',
+    'about-bizdavar-group'
+  ];
+  function articlesFromPosts(posts, author, cta) {
+    var acc = {};
+    articleSlugs.forEach(function (slug, i) {
+      var row = posts[i];
+      if (!row) return;
+      acc[slug] = {
+        category: row.category,
+        title: row.title,
+        dateDisplay: author + ' · <time>2025</time>',
+        cta: cta
+      };
+    });
+    return acc;
+  }
+  ru.articles = articlesFromPosts(ru.blogPosts, 'Bizdavar Group', {
+    text: 'Свяжитесь с Bizdavar для экспертной консультации.',
+    btnPrimary: 'Бесплатная консультация',
+    btnSecondary: 'Услуги'
+  });
+  ar.articles = articlesFromPosts(ar.blogPosts, 'بيزدوار', {
+    text: 'تواصل مع بيزدوار للاستشارة المتخصصة.',
+    btnPrimary: 'استشارة مجانية',
+    btnSecondary: 'عرض الخدمات'
   });
 
   window.BIZDAVAR_LOCALES.ru = ru;

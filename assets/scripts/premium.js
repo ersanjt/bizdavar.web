@@ -9,8 +9,8 @@
     const header = document.querySelector('.header');
     if (!header) return;
     const sync = () => header.classList.toggle('is-scrolled', window.scrollY > 20);
-    sync();
     window.addEventListener('scroll', sync, { passive: true });
+    if (window.scrollY > 20) sync();
   }
 
   function parseStatValue(text) {

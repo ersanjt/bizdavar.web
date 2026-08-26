@@ -774,7 +774,7 @@
     fa: [
       ['تامین سنسور VEGA در ایران — از استعلام تا پروژه صنعتی', 'مسیر مشاوره فارسی، پیش‌فاکتور و لجستیک اصل VEGA برای پروژه‌های ایران.', 'تجهیزات صنعتی'],
       ['وبسایت چندزبانه برای بازار ایران و ترکیه', 'hreflang، اعتماد محلی و تحویل سریع برای کسب‌وکارهای دو بازاری.', 'طراحی وب'],
-      ['دیجیتال مارکتینگ چیست؟ — راهنمای کامل برای کسب‌وکارها', 'تعریف بازاریابی دیجیتال، کانال‌ها و نقش آن در رشد فروش آنلاین.', 'بازاریابی دیجیتال'],
+      ['دیجیتال مارکتینگ چیست؟ — راهنمای کامل برای کسب‌وکارها', 'سئو، گوگل ادز، SMM و سنجش لید — مسیر عملی برای ایران و ترکیه.', 'بازاریابی دیجیتال'],
       ['چگونه بازاریابی دیجیتال فروش را افزایش می‌دهد؟', 'راهکارهای عملی برای تبدیل بازدیدکننده به مشتری.', 'بازاریابی دیجیتال'],
       ['مدیریت شبکه‌های اجتماعی — استراتژی SMM برای برندها', 'تولید محتوا، تقویم انتشار و تبلیغات هدفمند در اینستاگرام و لینکدین.', 'مدیریت SMM'],
       ['راه‌اندازی سایت در ۵ روز — راهنمای کامل Fast Studio', 'معرفی پلن‌های Fast Web Studio برای استارتاپ‌ها.', 'طراحی وب'],
@@ -793,7 +793,7 @@
     tr: [
       ['İran’da VEGA sensör tedariki — sorgudan sahaya', 'Farsça danışmanlık, proforma ve orijinal VEGA lojistiği.', 'Endüstriyel ekipman'],
       ['İran ve Türkiye pazarı için çok dilli web sitesi', 'hreflang, yerel güven ve hızlı teslimat.', 'Web tasarım'],
-      ['Dijital pazarlama nedir? İşletmeler için rehber', 'Dijital pazarlamanın tanımı, kanalları ve online satış büyümesindeki rolü.', 'Dijital pazarlama'],
+      ['Dijital pazarlama nedir? İşletmeler için tam rehber', 'SEO, Google Ads, SMM ve lead ölçümü — İran ve Türkiye için pratik yol.', 'Dijital pazarlama'],
       ['Dijital pazarlama satışları nasıl artırır?', 'Ziyaretçileri müşteriye dönüştürmek için pratik yöntemler.', 'Dijital pazarlama'],
       ['Sosyal medya yönetimi — Markalar için SMM stratejisi', 'Instagram ve LinkedIn için içerik üretimi, yayın takvimi ve hedefli reklamlar.', 'SMM yönetimi'],
       ['5 günde web sitesi — Fast Studio rehberi', 'Startuplar için Fast Web Studio planlarının tanıtımı.', 'Web tasarım'],
@@ -812,7 +812,7 @@
     en: [
       ['VEGA sensor supply to Iran — from inquiry to site', 'Persian consulting, proforma invoice, and original VEGA logistics.', 'Industrial equipment'],
       ['Multilingual websites for Iran and Turkey markets', 'hreflang, local trust signals, and fast delivery for dual-market businesses.', 'Web design'],
-      ['What is digital marketing? A complete guide for businesses', 'Definition, channels, and the role of digital marketing in online sales growth.', 'Digital marketing'],
+      ['What is digital marketing? A complete guide for businesses', 'SEO, Google Ads, SMM and lead measurement — a practical path for Iran and Turkey.', 'Digital marketing'],
       ['How does digital marketing increase sales?', 'Practical methods for turning visitors into customers.', 'Digital marketing'],
       ['Social media management — SMM strategy for brands', 'Content production, publishing calendars, and targeted ads for Instagram and LinkedIn.', 'SMM management'],
       ['Launch a website in 5 days — Fast Studio guide', 'Introducing Fast Web Studio plans for startups.', 'Web design'],
@@ -2366,17 +2366,29 @@
   const articleCta = {
     fa: { text: 'برای مشاوره تخصصی با بیزدوار تماس بگیرید.', btnPrimary: 'مشاوره رایگان', btnSecondary: 'مشاهده خدمات' },
     tr: { text: 'Uzman danışmanlık için Bizdavar ile iletişime geçin.', btnPrimary: 'Ücretsiz danışmanlık', btnSecondary: 'Hizmetleri gör' },
-    en: { text: 'Contact Bizdavar for expert consulting.', btnPrimary: 'Free consultation', btnSecondary: 'View services' }
+    en: { text: 'Contact Bizdavar for expert consulting.', btnPrimary: 'Free consultation', btnSecondary: 'View services' },
+    ru: { text: 'Свяжитесь с Bizdavar для экспертной консультации.', btnPrimary: 'Бесплатная консультация', btnSecondary: 'Услуги' },
+    ar: { text: 'تواصل مع بيزدوار للاستشارة المتخصصة.', btnPrimary: 'استشارة مجانية', btnSecondary: 'عرض الخدمات' }
+  };
+
+  const articleAuthor = {
+    fa: 'بیزدوار گروپ',
+    tr: 'Bizdavar Group',
+    en: 'Bizdavar Group',
+    ru: 'Bizdavar Group',
+    ar: 'بيزدوار'
   };
 
   function asArticles(lang) {
+    const author = articleAuthor[lang] || articleAuthor.en;
     return articleSlugs.reduce((acc, slug, i) => {
-      const row = blogPosts[lang][i] || blogPosts[lang][1];
+      const row = blogPosts[lang] && blogPosts[lang][i];
+      if (!row) return acc;
       acc[slug] = {
         category: row[2],
         title: row[0],
-        dateDisplay: lang === 'fa' ? 'بیزدوار گروپ · <time>۱۴۰۴</time>' : lang === 'tr' ? 'Bizdavar Group · <time>2025</time>' : 'Bizdavar Group · <time>2025</time>',
-        cta: articleCta[lang]
+        dateDisplay: `${author} · <time>2025</time>`,
+        cta: articleCta[lang] || articleCta.en
       };
       return acc;
     }, {});

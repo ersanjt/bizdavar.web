@@ -10,7 +10,10 @@ const {
   innerHtml,
   jsonLd,
   CTA,
-  ctaLinks
+  ctaLinks,
+  relatedItems,
+  AUTHOR_LINE,
+  secondaryLabel
 } = require('./article-library');
 
 const ROOT = path.join(__dirname, '..');
@@ -23,40 +26,17 @@ function relatedUrl(u) {
     .replace(/^\/pages\//, '');
 }
 
-function relatedJs(a) {
-  return a.related
-    .map((r) => {
-      const url = relatedUrl(r.url);
-      return `{ title: '${r.title.replace(/'/g, "\\'")}', url: '${url}', desc: '${(r.desc || '').replace(/'/g, "\\'")}' }`;
-    })
-    .join(',\n            ');
-}
-
-function secondaryLabel(a, lang) {
-  const loc = lang || 'fa';
-  if (a.slug === 'vega-supply-iran' || a.slug === 'industrial-sensors') {
-    return { fa: 'کاتالوگ VEGA', tr: 'VEGA kataloğu', en: 'VEGA catalogue', ru: 'Каталог VEGA', ar: 'كتالوج VEGA' }[loc];
-  }
-  if (a.slug === 'prosense-gas-detection') {
-    return { fa: 'کاتالوگ Prosense', tr: 'Prosense kataloğu', en: 'Prosense catalogue', ru: 'Каталог Prosense', ar: 'كتالوج Prosense' }[loc];
-  }
-  if (a.slug === 'liqui-moly-supply-iran') {
-    return { fa: 'Liqui Moly', tr: 'Liqui Moly', en: 'Liqui Moly', ru: 'Liqui Moly', ar: 'Liqui Moly' }[loc];
-  }
-  if (a.slug === 'marvi-society-ios-app') {
-    return { fa: 'نمونه‌کار Marvi', tr: 'Marvi vaka', en: 'Marvi case', ru: 'Кейс Marvi', ar: 'دراسة Marvi' }[loc];
-  }
-  if (a.slug === 'field-tech-services') {
-    return { fa: 'خدمات فنی', tr: 'Saha hizmetleri', en: 'Field services', ru: 'Выездные услуги', ar: 'خدمات ميدانية' }[loc];
-  }
-  if (a.slug === 'fast-studio' || a.slug === 'multilingual-web-iran-turkey') {
-    return 'Fast Web Studio';
-  }
-  return CTA[loc]?.secondary || CTA.fa.secondary;
-}
-
 function jsStr(s) {
   return String(s || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+}
+
+function relatedJs(a, lang) {
+  return relatedItems(a, lang || 'fa')
+    .map((r) => {
+      const url = relatedUrl(r.url);
+      return `{ title: '${jsStr(r.title)}', url: '${url}', desc: '${jsStr(r.desc)}' }`;
+    })
+    .join(',\n            ');
 }
 
 function shell(a) {
@@ -68,30 +48,40 @@ function shell(a) {
   const links = ctaLinks(a);
   const inner = innerHtml(a, 'fa');
   const ld = JSON.stringify(jsonLd(a, 'fa'));
-  const related = relatedJs(a);
+  const related = relatedJs(a, 'fa');
 
   return `<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <link rel="stylesheet" href="/assets/styles/site.css?v=20260826d">
+  <link rel="preload" href="/assets/fonts/vazirmatn/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/estedad/Estedad-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Google Tag Manager -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+    function bizdavarLoadGtm() {
+      if (window.__bizdavarGtm) return;
+      window.__bizdavarGtm = 1;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-NXWQQWF8';
+      document.head.appendChild(s);
+    }
+    window.addEventListener('load', function () { setTimeout(bizdavarLoadGtm, 1); });
+  </script>
+  <!-- End Google Tag Manager -->
   <script src="/assets/scripts/i18n/locale-url.js"></script>
   <script src="/assets/scripts/i18n/seo-head.js"></script>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-NXWQQWF8');</script>
-  <!-- End Google Tag Manager -->
-<script src="/assets/scripts/i18n/locale-preload.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <script src="/assets/scripts/i18n/locale-preload.js"></script>
   <meta name="view-transition" content="same-origin">
   <title>${esc(title)} | بیزدوار</title>
   <link rel="icon" href="/assets/images/brand/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/assets/images/brand/favicon.png" type="image/png" sizes="32x32">
   <link rel="icon" href="/assets/images/brand/favicon-16.png" type="image/png" sizes="16x16">
   <link rel="apple-touch-icon" href="/assets/images/brand/apple-touch-icon.png">
-  <link rel="stylesheet" href="/assets/styles/site.css">
   <meta name="description" content="${esc(desc)}">
   <meta name="keywords" content="${esc(keywords)}">
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -105,14 +95,14 @@ function shell(a) {
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXWQQWF8"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <script src="/assets/scripts/components/page-shell.js"></script>
+  <script src="/assets/scripts/components/page-shell.js" defer></script>
 <main id="main-content" class="site-main">
   <article class="section">
     <div class="container prose article">
       <header class="article__header">
         <span class="blog-item__cat">${esc(cat)}</span>
         <h1>${esc(title)}</h1>
-        <p class="detail-meta article__meta">بیزدوار گروپ · <time datetime="${a.date}">${a.date}</time></p>
+        <p class="detail-meta article__meta">${esc(AUTHOR_LINE.fa)} · <time datetime="${a.date}">${a.date}</time></p>
       </header>
       <div class="article__inner" id="articleInner">
       <!-- bd-article-inner -->
@@ -122,7 +112,7 @@ ${inner}
       <div class="article__cta">
         <p>${esc(cta.text)}</p>
         <a href="${links.primary}" class="btn btn--primary">${esc(cta.primary)}</a>
-        <a href="${links.secondary}" class="btn btn--yellow">${esc(secondaryLabel(a))}</a>
+        <a href="${links.secondary}" class="btn btn--yellow">${esc(secondaryLabel(a, 'fa'))}</a>
       </div>
     </div>
   </article>

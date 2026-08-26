@@ -173,8 +173,8 @@
       },
       articleWhatIsDm: {
         seoTitle: 'دیجیتال مارکتینگ چیست؟ | راهنمای کامل — بیزدوار',
-        seoDescription: 'تعریف دیجیتال مارکتینگ، کانال‌ها (سئو، تبلیغات، SMM) و اهمیت آن برای رشد کسب‌وکار. راهنمای بیزدوار گروپ.',
-        seoKeywords: 'دیجیتال مارکتینگ چیست, بازاریابی دیجیتال, سئو, بیزدوار'
+        seoDescription: 'دیجیتال مارکتینگ چیست: سئو، گوگل ادز، SMM، محتوا و سنجش لید — مسیر عملی بیزدوار برای کسب‌وکار ایران و ترکیه.',
+        seoKeywords: 'دیجیتال مارکتینگ چیست, بازاریابی دیجیتال, سئو, تبلیغات گوگل, SMM, CRO, بیزدوار'
       },
       articleSmm: {
         seoTitle: 'مدیریت شبکه‌های اجتماعی (SMM) | بیزدوار',
@@ -400,8 +400,8 @@
       },
       articleWhatIsDm: {
         seoTitle: 'Dijital pazarlama nedir? | Tam rehber — Bizdavar',
-        seoDescription: 'Dijital pazarlama tanımı, kanallar (SEO, reklam, SMM) ve iş büyümesindeki rolü. Bizdavar Group rehberi.',
-        seoKeywords: 'dijital pazarlama nedir, SEO, SMM, Bizdavar'
+        seoDescription: 'Dijital pazarlama nedir: SEO, Google Ads, SMM, içerik ve lead ölçümü — İran ve Türkiye için Bizdavar uygulama yolu.',
+        seoKeywords: 'dijital pazarlama nedir, SEO, Google Ads, SMM, CRO, Bizdavar'
       },
       articleSmm: {
         seoTitle: 'Sosyal medya yönetimi (SMM) | Bizdavar',
@@ -627,8 +627,8 @@
       },
       articleWhatIsDm: {
         seoTitle: 'What is digital marketing? | Complete guide — Bizdavar',
-        seoDescription: 'Definition of digital marketing, channels (SEO, ads, SMM) and why it matters for business growth. Bizdavar Group guide.',
-        seoKeywords: 'what is digital marketing, SEO, SMM, Bizdavar'
+        seoDescription: 'What digital marketing is: SEO, Google Ads, SMM, content and lead measurement — Bizdavar’s path for Iran and Turkey.',
+        seoKeywords: 'what is digital marketing, SEO, Google Ads, SMM, CRO, Bizdavar'
       },
       articleSmm: {
         seoTitle: 'Social media management (SMM) | Bizdavar',

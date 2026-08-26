@@ -10,11 +10,19 @@ const GTM_ID = 'GTM-NXWQQWF8';
 const GA4_ID = 'G-4GFEY12SLH';
 
 const GTM_HEAD = `  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','${GTM_ID}');</script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+    function bizdavarLoadGtm() {
+      if (window.__bizdavarGtm) return;
+      window.__bizdavarGtm = 1;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtm.js?id=${GTM_ID}';
+      document.head.appendChild(s);
+    }
+    window.addEventListener('load', function () { setTimeout(bizdavarLoadGtm, 1); });
+  </script>
   <!-- End Google Tag Manager -->`;
 
 const GA4_HEAD = `  <!-- Google tag (gtag.js) -->

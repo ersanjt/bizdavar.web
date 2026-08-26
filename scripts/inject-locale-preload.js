@@ -28,10 +28,18 @@ function inject(file) {
   let changed = false;
 
   if (!html.includes('locale-url.js')) {
-    html = html.replace(
-      /(<meta charset="UTF-8">)/i,
-      '$1\n  <script src="/assets/scripts/i18n/locale-url.js"></script>'
-    );
+    const afterCss = html.match(/<link rel="stylesheet" href="\/assets\/styles\/site\.css[^"]*">/);
+    if (afterCss) {
+      html = html.replace(
+        afterCss[0],
+        afterCss[0] + '\n  <script src="/assets/scripts/i18n/locale-url.js"></script>'
+      );
+    } else {
+      html = html.replace(
+        /(<meta charset="UTF-8">)/i,
+        '$1\n  <script src="/assets/scripts/i18n/locale-url.js"></script>'
+      );
+    }
     changed = true;
   }
 

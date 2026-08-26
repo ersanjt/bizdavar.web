@@ -1057,6 +1057,10 @@ ul { list-style: none; }
 }
 
 .service-card__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.35rem 0;
   color: var(--red-text, #b01016);
   font-weight: 600;
   font-size: 14px;
@@ -2279,6 +2283,13 @@ a.about__feature:hover {
   border-radius: 12px;
   margin-bottom: 10px;
   color: var(--text-muted);
+}
+
+.blog-item__service-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.35rem 0;
 }
 
 /* Related links */

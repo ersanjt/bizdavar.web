@@ -668,8 +668,8 @@
     }
     const navItems = getNavItems();
     const logoAlt = A.logoAlt || C.siteName;
-    const headerLogo = A.logo;
-    const footerLogo = A.logoOnDark || A.logo;
+    const headerLogo = 'assets/images/brand/bizdavar-logo-264.webp';
+    const footerLogo = 'assets/images/brand/bizdavar-logo-light-240.webp';
     const topBar = document.getElementById('topBar');
     const header = document.getElementById('siteHeader');
     const footer = document.getElementById('siteFooter');
@@ -738,7 +738,7 @@
         <div class="mobile-header">
           <div class="mobile-header__bar">
             <a href="${pagePath(R.home)}" class="mobile-header__logo" aria-label="${C.siteName} — ${t('common.homeAria', 'صفحه اصلی')}">
-              <img src="${path(headerLogo)}" alt="${logoAlt}" width="132" height="55" decoding="async" fetchpriority="high">
+              <img src="${path(headerLogo)}" alt="${logoAlt}" width="132" height="55" decoding="async">
             </a>
             <div class="mobile-header__actions">
               ${langSwitcherHtml('lang-dropdown--header-mobile')}
@@ -868,7 +868,7 @@
 
         <div class="footer__mobile">
           <div class="mobile-footer-hero">
-            <a href="${pagePath(R.home)}" class="footer__logo-link"><img src="${path(footerLogo)}" alt="${logoAlt}" class="footer__logo-img footer__logo-img--sm"></a>
+            <a href="${pagePath(R.home)}" class="footer__logo-link"><img src="${path(footerLogo)}" alt="${logoAlt}" class="footer__logo-img footer__logo-img--sm" width="86" height="36"></a>
             <p class="mobile-footer-hero__tagline">${t('footer.tagline')}</p>
             <div class="footer__trust">${trustPills}<span class="footer__pill">${t('footer.hq', 'HQ: Istanbul')}</span></div>
             <div class="footer__social footer__social--mobile">

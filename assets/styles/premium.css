@@ -427,6 +427,9 @@ html.premium-ui.is-page-entered .breadcrumbs-wrap {
 }
 
 .service-card__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   font-weight: 700;
   transition: gap 0.2s ease, color 0.2s ease;
 }

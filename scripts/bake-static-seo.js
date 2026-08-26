@@ -18,7 +18,7 @@ const ROOT = path.join(__dirname, '..');
 global.window = global;
 require(path.join(ROOT, 'assets/scripts/i18n/seo-head.js'));
 
-const { ARTICLES, innerHtml, jsonLd, CTA, ctaLinks } = require('./article-library');
+const { ARTICLES, innerHtml, jsonLd, CTA, ctaLinks, relatedItems, AUTHOR_LINE, secondaryLabel } = require('./article-library');
 const ARTICLE_BY_REL = Object.fromEntries(
   ARTICLES.map((a) => [`pages/articles/${a.file}`, a])
 );
@@ -434,6 +434,22 @@ ${hreflangLinks(route)}
 `;
 }
 
+function jsStr(s) {
+  return String(s || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+}
+
+function relatedUrl(u) {
+  return String(u || '')
+    .replace(/^\.\.\//, '')
+    .replace(/^\/pages\//, '');
+}
+
+function relatedJs(a, lang) {
+  return relatedItems(a, lang)
+    .map((r) => `{ title: '${jsStr(r.title)}', url: '${relatedUrl(r.url)}', desc: '${jsStr(r.desc)}' }`)
+    .join(',\n            ');
+}
+
 function bakeArticleLocale(html, rel, lang) {
   const a = ARTICLE_BY_REL[rel.replace(/\\/g, '/')];
   if (!a) return html;
@@ -444,11 +460,22 @@ function bakeArticleLocale(html, rel, lang) {
     `<!-- bd-article-inner -->\n${inner}\n      <!-- /bd-article-inner -->`
   );
   const title = a.title[loc] || a.title.en;
+  const desc = a.description[loc] || a.description.en;
+  const keywords = a.keywords[loc] || a.keywords.en;
   const cat = a.category[loc] || a.category.en;
   const cta = CTA[loc] || CTA.en;
   const links = ctaLinks(a);
+  const author = AUTHOR_LINE[loc] || AUTHOR_LINE.en;
   html = html.replace(/(<span class="blog-item__cat">)[\s\S]*?(<\/span>)/, `$1${cat}$2`);
   html = html.replace(/(<h1>)[\s\S]*?(<\/h1>)/, `$1${title}$2`);
+  html = html.replace(
+    /(<p class="detail-meta article__meta">)[\s\S]*?(<time)/,
+    `$1${author} · $2`
+  );
+  html = html.replace(
+    /<meta name="keywords" content="[^"]*">/,
+    `<meta name="keywords" content="${escAttr(keywords)}">`
+  );
   html = html.replace(
     /(<div class="article__cta">\s*<p>)[\s\S]*?(<\/p>)/,
     `$1${cta.text}$2`
@@ -456,6 +483,32 @@ function bakeArticleLocale(html, rel, lang) {
   html = html.replace(
     new RegExp(`href="${links.primary.replace(/[?]/g, '\\?')}" class="btn btn--primary">[\\s\\S]*?<\\/a>`),
     `href="${links.primary}" class="btn btn--primary">${cta.primary}</a>`
+  );
+  html = html.replace(
+    /(<a href="[^"]+" class="btn btn--yellow">)[\s\S]*?(<\/a>)/,
+    `$1${secondaryLabel(a, loc)}$2`
+  );
+  html = html.replace(
+    new RegExp(`\\{ name: '[^']*', url: '${a.slug}' \\}`),
+    `{ name: '${jsStr(title)}', url: '${a.slug}' }`
+  );
+  html = html.replace(
+    /injectArticleSchema\(\{[\s\S]*?\}\);/,
+    `injectArticleSchema({
+        title: '${jsStr(title)}',
+        description: '${jsStr(desc)}',
+        date: '${a.date}',
+        dateModified: '${a.modified || a.date}',
+        slug: 'pages/articles/${a.slug}',
+        image: '${a.image}',
+        keywords: '${jsStr(keywords)}'
+      });`
+  );
+  html = html.replace(
+    /renderRelatedLinks\(\[[\s\S]*?\]\);/,
+    `renderRelatedLinks([
+            ${relatedJs(a, loc)}
+          ]);`
   );
   const ld = JSON.stringify(jsonLd(a, loc));
   html = html.replace(

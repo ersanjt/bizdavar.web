@@ -50,7 +50,7 @@ AddType 'text/html; charset=UTF-8' .html
   # Cache static assets in browser (no CSP on images/fonts — breaks SVG <text> in <img>)
   <FilesMatch "\.(css|js)$">
     Header unset Content-Security-Policy
-    Header set Cache-Control "public, max-age=604800, immutable"
+    Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
   <FilesMatch "\.(png|jpe?g|webp|svg|gif|ico|woff2?)$">
     Header unset Content-Security-Policy
@@ -149,8 +149,8 @@ AddType 'text/html; charset=UTF-8' .html
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresByType text/html "access plus 1 hour"
-  ExpiresByType text/css "access plus 7 days"
-  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
   ExpiresByType image/png "access plus 30 days"
   ExpiresByType image/jpeg "access plus 30 days"
   ExpiresByType image/webp "access plus 30 days"

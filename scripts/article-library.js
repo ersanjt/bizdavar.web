@@ -16,7 +16,7 @@ const ARTICLES = [
     slug: 'what-is-digital-marketing',
     seoKey: 'articleWhatIsDm',
     date: '2025-02-10',
-    modified: '2026-08-24',
+    modified: '2026-08-26',
     image: 'assets/images/content/network-map.svg',
     extraImg: 'assets/images/content/services-dm-visual.svg',
     category: { fa: 'بازاریابی دیجیتال', tr: 'Dijital pazarlama', en: 'Digital marketing', ru: 'Цифровой маркетинг', ar: 'التسويق الرقمي' },
@@ -28,59 +28,154 @@ const ARTICLES = [
       ar: 'ما هو التسويق الرقمي؟ دليل كامل للأعمال'
     },
     description: {
-      fa: 'تعریف دیجیتال مارکتینگ، کانال‌های سئو، تبلیغات، SMM و محتوا — با مسیر اجرای بیزدوار برای ایران و ترکیه.',
-      tr: 'Dijital pazarlamanın tanımı, SEO, reklam, SMM ve içerik kanalları — Bizdavar uygulama yolu.',
-      en: 'What digital marketing is, plus SEO, ads, SMM and content channels — with Bizdavar’s execution path.',
-      ru: 'Что такое цифровой маркетинг: SEO, реклама, SMM и контент — путь внедрения Bizdavar.',
-      ar: 'تعريف التسويق الرقمي وقنوات SEO والإعلانات وSMM والمحتوى — مسار تنفيذ بيزدوار.'
+      fa: 'دیجیتال مارکتینگ چیست: سئو، گوگل ادز، SMM، محتوا و سنجش لید — مسیر عملی بیزدوار برای ایران و ترکیه.',
+      tr: 'Dijital pazarlama nedir: SEO, Google Ads, SMM, içerik ve lead ölçümü — İran ve Türkiye için Bizdavar yolu.',
+      en: 'What digital marketing is: SEO, Google Ads, SMM, content and lead measurement — Bizdavar’s path for Iran and Turkey.',
+      ru: 'Что такое цифровой маркетинг: SEO, Google Ads, SMM, контент и измерение лидов — путь Bizdavar для Ирана и Турции.',
+      ar: 'ما هو التسويق الرقمي: سيو وإعلانات جوجل وSMM والمحتوى وقياس العملاء — مسار بيزدوار لإيران وتركيا.'
     },
     keywords: {
-      fa: 'دیجیتال مارکتینگ چیست, بازاریابی دیجیتال, سئو, تبلیغات گوگل, SMM, بیزدوار',
-      tr: 'dijital pazarlama nedir, SEO, Google Ads, SMM, Bizdavar',
-      en: 'what is digital marketing, SEO, Google Ads, SMM, Bizdavar',
-      ru: 'что такое цифровой маркетинг, SEO, Google Ads, SMM, Bizdavar',
-      ar: 'ما هو التسويق الرقمي, سيو, إعلانات جوجل, SMM, بيزدوار'
+      fa: 'دیجیتال مارکتینگ چیست, بازاریابی دیجیتال, سئو, تبلیغات گوگل, SMM, CRO, بیزدوار',
+      tr: 'dijital pazarlama nedir, SEO, Google Ads, SMM, CRO, Bizdavar',
+      en: 'what is digital marketing, SEO, Google Ads, SMM, CRO, Bizdavar',
+      ru: 'что такое цифровой маркетинг, SEO, Google Ads, SMM, CRO, Bizdavar',
+      ar: 'ما هو التسويق الرقمي, سيو, إعلانات جوجل, SMM, CRO, بيزدوار'
     },
     tags: {
-      fa: ['دیجیتال مارکتینگ', 'سئو', 'SMM', 'CRO'],
-      tr: ['Dijital pazarlama', 'SEO', 'SMM', 'CRO'],
-      en: ['Digital marketing', 'SEO', 'SMM', 'CRO'],
-      ru: ['Цифровой маркетинг', 'SEO', 'SMM', 'CRO'],
-      ar: ['تسويق رقمي', 'سيو', 'SMM', 'CRO']
+      fa: ['دیجیتال مارکتینگ', 'سئو', 'SMM', 'CRO', 'گوگل ادز'],
+      tr: ['Dijital pazarlama', 'SEO', 'SMM', 'CRO', 'Google Ads'],
+      en: ['Digital marketing', 'SEO', 'SMM', 'CRO', 'Google Ads'],
+      ru: ['Цифровой маркетинг', 'SEO', 'SMM', 'CRO', 'Google Ads'],
+      ar: ['تسويق رقمي', 'سيو', 'SMM', 'CRO', 'إعلانات جوجل']
     },
     toc: {
-      fa: [['ch-def', 'تعریف عملی'], ['ch-channels', 'کانال‌ها'], ['ch-vs', 'تفاوت با بازاریابی سنتی'], ['ch-start', 'از کجا شروع کنیم'], ['ch-faq', 'سوالات متداول']],
-      tr: [['ch-def', 'Tanım'], ['ch-channels', 'Kanallar'], ['ch-vs', 'Geleneksel pazarlama'], ['ch-start', 'Nereden başlamalı'], ['ch-faq', 'SSS']],
-      en: [['ch-def', 'Definition'], ['ch-channels', 'Channels'], ['ch-vs', 'Vs traditional'], ['ch-start', 'Where to start'], ['ch-faq', 'FAQ']],
-      ru: [['ch-def', 'Определение'], ['ch-channels', 'Каналы'], ['ch-vs', 'Vs традиционный'], ['ch-start', 'С чего начать'], ['ch-faq', 'FAQ']],
-      ar: [['ch-def', 'التعريف'], ['ch-channels', 'القنوات'], ['ch-vs', 'مقابل التقليدي'], ['ch-start', 'من أين تبدأ'], ['ch-faq', 'أسئلة']]
+      fa: [['ch-def', 'تعریف عملی'], ['ch-channels', 'کانال‌ها'], ['ch-measure', 'سنجش و قیف'], ['ch-vs', 'تفاوت با بازاریابی سنتی'], ['ch-region', 'ایران و ترکیه'], ['ch-start', 'از کجا شروع کنیم'], ['ch-faq', 'سوالات متداول']],
+      tr: [['ch-def', 'Pratik tanım'], ['ch-channels', 'Kanallar'], ['ch-measure', 'Ölçüm ve huni'], ['ch-vs', 'Geleneksel pazarlama'], ['ch-region', 'İran ve Türkiye'], ['ch-start', 'Nereden başlamalı'], ['ch-faq', 'SSS']],
+      en: [['ch-def', 'Working definition'], ['ch-channels', 'Channels'], ['ch-measure', 'Measurement and funnel'], ['ch-vs', 'Vs traditional'], ['ch-region', 'Iran and Turkey'], ['ch-start', 'Where to start'], ['ch-faq', 'FAQ']],
+      ru: [['ch-def', 'Рабочее определение'], ['ch-channels', 'Каналы'], ['ch-measure', 'Измерение и воронка'], ['ch-vs', 'Vs традиционный'], ['ch-region', 'Иран и Турция'], ['ch-start', 'С чего начать'], ['ch-faq', 'FAQ']],
+      ar: [['ch-def', 'تعريف عملي'], ['ch-channels', 'القنوات'], ['ch-measure', 'القياس والقمع'], ['ch-vs', 'مقابل التقليدي'], ['ch-region', 'إيران وتركيا'], ['ch-start', 'من أين تبدأ'], ['ch-faq', 'أسئلة شائعة']]
     },
     faq: {
       fa: [
-        { q: 'دیجیتال مارکتینگ فقط اینستاگرام است؟', a: 'خیر. وبسایت، سئو، تبلیغات جستجو، ایمیل و SMM با هم قیف فروش را می‌سازند.' },
-        { q: 'برای کسب‌وکار B2B صنعتی هم لازم است؟', a: 'بله. خریدار صنعتی هم جستجو می‌کند؛ صفحه محصول، مقاله تخصصی و واتساپ مسیر استعلام را کوتاه می‌کند.' }
+        { q: 'دیجیتال مارکتینگ فقط اینستاگرام است؟', a: 'خیر. وبسایت، سئو، تبلیغات جستجو، ایمیل و SMM با هم قیف فروش را می‌سازند. اینستاگرام یک کانال است، نه کل استراتژی.' },
+        { q: 'برای کسب‌وکار B2B صنعتی هم لازم است؟', a: 'بله. خریدار صنعتی هم جستجو می‌کند؛ صفحه محصول، مقاله تخصصی و واتساپ مسیر استعلام را کوتاه می‌کند.' },
+        { q: 'اول سئو کنیم یا تبلیغ بزنیم؟', a: 'اول صفحه خدمت سریع با فرم/واتساپ و اندازه‌گیری تبدیل؛ بعد بودجه آزمایشی تبلیغ. سئو موازی جلو می‌رود اما تبلیغ روی لندینگ ضعیف پول را می‌سوزاند.' },
+        { q: 'با بودجه کم از کجا شروع کنیم؟', a: 'یک لندینگ شفاف، دو مقاله خوشه‌ای، و واتساپ در هدر. بعد از ثبت لید واقعی، بودجه گوگل ادز را هفته‌ای تنظیم کنید.' },
+        { q: 'نتیجه را کی می‌بینیم؟', a: 'تبلیغات جستجو در روزهای اول لید می‌آورد اگر صفحه فرود درست باشد. سئو معمولاً هفته‌ها تا چند ماه. معیار باید هزینه هر لید و پاسخ واتساپ باشد، نه لایک.' }
       ],
       tr: [
-        { q: 'Dijital pazarlama yalnızca Instagram mı?', a: 'Hayır. Site, SEO, arama reklamı, e-posta ve SMM birlikte satış hunisini kurar.' },
-        { q: 'B2B sanayi için de gerekir mi?', a: 'Evet. Alıcı da arama yapar; ürün sayfası ve WhatsApp teklifi hızlandırır.' }
+        { q: 'Dijital pazarlama yalnızca Instagram mı?', a: 'Hayır. Site, SEO, arama reklamı, e-posta ve SMM birlikte satış hunisini kurar. Instagram bir kanaldır, tüm strateji değil.' },
+        { q: 'B2B sanayi için de gerekir mi?', a: 'Evet. Alıcı da arama yapar; ürün sayfası, uzman makale ve WhatsApp teklif yolunu kısaltır.' },
+        { q: 'Önce SEO mu reklam mı?', a: 'Önce hızlı hizmet sayfası, form/WhatsApp ve dönüşüm ölçümü; sonra deneme reklam bütçesi. Zayıf landing’de reklam para yakar.' },
+        { q: 'Küçük bütçeyle nereden başlamalı?', a: 'Net bir landing, iki küme makalesi ve başlıkta WhatsApp. Gerçek lead gelince Google Ads’i haftalık ayarlayın.' },
+        { q: 'Sonuç ne zaman görünür?', a: 'Arama reklamı, landing doğruysa ilk günlerde lead getirir. SEO haftalar veya aylar sürer. Ölçüt lead maliyeti ve WhatsApp yanıtıdır, beğeni değil.' }
       ],
       en: [
-        { q: 'Is digital marketing only Instagram?', a: 'No. Website, SEO, search ads, email and SMM together build the sales funnel.' },
-        { q: 'Does B2B industry need it?', a: 'Yes. Buyers still search; a product page plus WhatsApp shortens the quote path.' }
+        { q: 'Is digital marketing only Instagram?', a: 'No. Website, SEO, search ads, email and SMM together build the sales funnel. Instagram is one channel, not the whole strategy.' },
+        { q: 'Does B2B industry need it?', a: 'Yes. Industrial buyers still search; a product page, expert article and WhatsApp shorten the quote path.' },
+        { q: 'SEO first or ads first?', a: 'First a fast service page with form/WhatsApp and conversion tracking; then a test ad budget. Ads on a weak landing burn money. SEO runs in parallel.' },
+        { q: 'Where do we start on a small budget?', a: 'One clear landing, two cluster articles, WhatsApp in the header. After real leads arrive, tune Google Ads weekly.' },
+        { q: 'When do we see results?', a: 'Search ads can bring leads in days if the landing is right. SEO usually takes weeks to months. Measure cost per lead and WhatsApp reply rate, not likes.' }
       ],
       ru: [
-        { q: 'Это только Instagram?', a: 'Нет. Сайт, SEO, реклама, email и SMM вместе собирают воронку.' },
-        { q: 'Нужно ли B2B промышленности?', a: 'Да. Закупщик тоже ищет; страница продукта и WhatsApp ускоряют запрос.' }
+        { q: 'Это только Instagram?', a: 'Нет. Сайт, SEO, поисковая реклама, email и SMM вместе собирают воронку. Instagram — один канал, не вся стратегия.' },
+        { q: 'Нужно ли B2B промышленности?', a: 'Да. Закупщик тоже ищет; страница продукта, экспертная статья и WhatsApp ускоряют запрос.' },
+        { q: 'Сначала SEO или реклама?', a: 'Сначала быстрая страница услуги с формой/WhatsApp и учётом конверсий; потом тестовый бюджет. Реклама на слабом лендинге сжигает деньги.' },
+        { q: 'С чего начать при малом бюджете?', a: 'Один понятный лендинг, две кластерные статьи и WhatsApp в шапке. Когда появятся реальные лиды — настраивайте Google Ads еженедельно.' },
+        { q: 'Когда будут результаты?', a: 'Поисковая реклама даёт лиды за дни, если лендинг верный. SEO — недели или месяцы. Смотрите стоимость лида и ответ в WhatsApp, не лайки.' }
       ],
       ar: [
-        { q: 'هل التسويق الرقمي إنستغرام فقط؟', a: 'لا. الموقع وSEO والإعلانات والبريد وSMM معاً يبنون مسار البيع.' },
-        { q: 'هل تحتاجه الصناعة B2B؟', a: 'نعم. المشتري يبحث أيضاً؛ صفحة المنتج وواتساب تختصر الاستعلام.' }
+        { q: 'هل التسويق الرقمي إنستغرام فقط؟', a: 'لا. الموقع وSEO وإعلانات البحث والبريد وSMM معاً يبنون مسار البيع. إنستغرام قناة واحدة وليست الاستراتيجية كلها.' },
+        { q: 'هل تحتاجه الصناعة B2B؟', a: 'نعم. المشتري الصناعي يبحث أيضاً؛ صفحة المنتج ومقالة متخصصة وواتساب تختصر مسار الاستعلام.' },
+        { q: 'السيو أولاً أم الإعلانات؟', a: 'أولاً صفحة خدمة سريعة مع نموذج/واتساب وقياس التحويل؛ ثم ميزانية إعلان تجريبية. الإعلان على صفحة ضعيفة يحرق المال.' },
+        { q: 'من أين نبدأ بميزانية صغيرة؟', a: 'صفحة هبوط واضحة، مقالتان عنقودية، وواتساب في الترويسة. بعد وصول عملاء حقيقيين اضبطوا إعلانات جوجل أسبوعياً.' },
+        { q: 'متى تظهر النتائج؟', a: 'إعلانات البحث تجلب عملاء خلال أيام إذا كانت الصفحة صحيحة. السيو يحتاج أسابيع أو أشهراً. المعيار تكلفة العميل ونسبة الرد على واتساب لا الإعجابات.' }
       ]
     },
+    sources: [
+      {
+        href: 'https://developers.google.com/search/docs/fundamentals/seo-starter-guide',
+        label: {
+          fa: 'راهنمای شروع سئو گوگل',
+          tr: 'Google SEO Başlangıç Rehberi',
+          en: 'Google SEO Starter Guide',
+          ru: 'Google SEO Starter Guide',
+          ar: 'دليل Google للبدء في السيو'
+        }
+      },
+      {
+        href: 'https://support.google.com/google-ads/answer/6243030',
+        label: {
+          fa: 'گوگل ادز چگونه کار می‌کند',
+          tr: 'Google Ads nasıl çalışır',
+          en: 'How Google Ads works',
+          ru: 'Как работает Google Ads',
+          ar: 'كيف تعمل إعلانات Google'
+        }
+      },
+      {
+        href: 'https://developers.google.com/search/docs/specialty/international/localized-versions',
+        label: {
+          fa: 'نسخه‌های زبانی و hreflang (گوگل)',
+          tr: 'Yerelleştirilmiş sürümler ve hreflang (Google)',
+          en: 'Google: localized versions (hreflang)',
+          ru: 'Google: локализованные версии (hreflang)',
+          ar: 'إصدارات محلية وhreflang (جوجل)'
+        }
+      }
+    ],
     related: [
-      { title: 'افزایش فروش با دیجیتال مارکتینگ', url: 'digital-marketing', desc: 'CRO و قیف فروش' },
-      { title: 'خدمات بازاریابی', url: '../services#digital-marketing', desc: 'اجرا با تیم بیزدوار' },
-      { title: 'استعلام', url: '../contact?service=digital-marketing', desc: 'شروع کمپین' }
+      {
+        url: 'digital-marketing',
+        title: {
+          fa: 'افزایش فروش با دیجیتال مارکتینگ',
+          tr: 'Dijital pazarlama satışları nasıl artırır',
+          en: 'How digital marketing increases sales',
+          ru: 'Как маркетинг увеличивает продажи',
+          ar: 'كيف يزيد التسويق الرقمي المبيعات'
+        },
+        desc: {
+          fa: 'CRO و قیف فروش',
+          tr: 'CRO ve satış hunisi',
+          en: 'CRO and the sales funnel',
+          ru: 'CRO и воронка продаж',
+          ar: 'CRO وقمع المبيعات'
+        }
+      },
+      {
+        url: '../services#digital-marketing',
+        title: {
+          fa: 'خدمات بازاریابی دیجیتال',
+          tr: 'Dijital pazarlama hizmetleri',
+          en: 'Digital marketing services',
+          ru: 'Услуги цифрового маркетинга',
+          ar: 'خدمات التسويق الرقمي'
+        },
+        desc: {
+          fa: 'اجرا با تیم بیزدوار',
+          tr: 'Bizdavar ile uygulama',
+          en: 'Execution with the Bizdavar team',
+          ru: 'Внедрение с командой Bizdavar',
+          ar: 'التنفيذ مع فريق بيزدوار'
+        }
+      },
+      {
+        url: '../contact?service=digital-marketing',
+        title: {
+          fa: 'استعلام کمپین',
+          tr: 'Kampanya talebi',
+          en: 'Campaign inquiry',
+          ru: 'Запрос кампании',
+          ar: 'استعلام الحملة'
+        },
+        desc: {
+          fa: 'شروع مشاوره رایگان',
+          tr: 'Ücretsiz danışmanlık',
+          en: 'Start a free consultation',
+          ru: 'Бесплатная консультация',
+          ar: 'ابدأ استشارة مجانية'
+        }
+      }
     ]
   },
   {
@@ -963,25 +1058,33 @@ function faBody(a) {
   const map = {
     'what-is-digital-marketing': `
 <p>دیجیتال مارکتینگ یعنی رساندن پیام درست به مخاطب درست در کانال آنلاین — وبسایت، جستجو، شبکه اجتماعی، تبلیغات و ایمیل — تا آگاهی، اعتماد و در نهایت فروش ساخته شود. در <a href="/pages/about">بیزدوار گروپ</a> این کار را جدا از «پست گذاشتن» می‌بینیم: قیف، سنجش و اتصال به <a href="/pages/services#digital-marketing">خدمات بازاریابی دیجیتال</a>.</p>
-${fig('/' + a.image, 'نقشه کانال‌های دیجیتال مارکتینگ برای کسب‌وکار B2B', 'کانال‌ها باید به یک تماس یا استعلام ختم شوند — نه فقط بازدید.')}
+${fig('/' + a.image, 'نقشه کانال‌های دیجیتال مارکتینگ برای کسب‌وکار B2B', 'هر کانال باید به تماس، واتساپ یا استعلام ختم شود — نه فقط بازدید.')}
 <h2 id="ch-def">تعریف عملی</h2>
-<p>تعریف دانشگاهی کافی نیست. تعریف عملی ما این است: هر فعالیت قابل اندازه‌گیری که هزینه جذب مشتری را کم و نرخ تبدیل را زیاد کند. اگر کمپین بازدید می‌آورد اما واتساپ ساکت است، مارکتینگ کامل نیست.</p>
+<p>تعریف دانشگاهی کافی نیست. تعریف عملی ما این است: هر فعالیت قابل اندازه‌گیری که هزینه جذب مشتری را کم و نرخ تبدیل را زیاد کند. اگر کمپین بازدید می‌آورد اما واتساپ ساکت است، مارکتینگ کامل نیست. لایک، ایمپرشن و حتی ترافیک بدون لید، گزارش تزئینی است.</p>
+<p>برای کسب‌وکار B2B — از تامین صنعتی تا خدمات فنی — خریدار معمولاً از جستجو شروع می‌کند، صفحه محصول یا مقاله را می‌خواند، بعد در واتساپ استعلام می‌فرستد. دیجیتال مارکتینگ یعنی همین مسیر را کوتاه، شفاف و قابل‌پیگیری کردن.</p>
 <h2 id="ch-channels">کانال‌های اصلی</h2>
 <ul>
-<li><strong>سئو و محتوا:</strong> مقاله و صفحه خدمت برای کوئری‌هایی مثل «دیجیتال مارکتینگ چیست» — همین وبلاگ بخشی از همان مسیر است.</li>
-<li><strong>تبلیغات جستجو:</strong> بودجه کنترل‌شده روی کوئری با نیت خرید.</li>
-<li><strong>SMM:</strong> حضور منظم در اینستاگرام و لینکدین؛ جزئیات در <a href="/pages/articles/social-media-management">راهنمای SMM</a>.</li>
-<li><strong>وبسایت:</strong> اگر لندینگ کند یا بدون RTL باشد، بقیه کانال‌ها هدر می‌رود — <a href="/pages/fast">Fast Web Studio</a> برای شروع ۵روزه.</li>
+<li><strong>سئو و محتوا:</strong> مقاله و صفحه خدمت برای کوئری‌هایی مثل «دیجیتال مارکتینگ چیست» — همین وبلاگ بخشی از همان مسیر است. سئو محلی را در <a href="/pages/articles/local-seo-iran">راهنمای سئو محلی</a> ببینید.</li>
+<li><strong>تبلیغات جستجو:</strong> بودجه کنترل‌شده روی کوئری با نیت خرید. تا وقتی تبدیل اندازه‌گیری نشود، بودجه را بالا نبرید.</li>
+<li><strong>SMM:</strong> حضور منظم در اینستاگرام و لینکدین با لینک به صفحه خدمت؛ جزئیات در <a href="/pages/articles/social-media-management">راهنمای SMM</a>.</li>
+<li><strong>وبسایت:</strong> اگر لندینگ کند، مبهم یا بدون RTL باشد، بقیه کانال‌ها هدر می‌رود — <a href="/pages/fast">Fast Web Studio</a> برای شروع ۵روزه.</li>
+<li><strong>ایمیل و پیگیری:</strong> لید بدون پاسخ در ۲۴ ساعت می‌میرد. یادآوری ساده از واتساپ یا CRM هزینه جذب را پایین می‌آورد.</li>
 </ul>
+${fig('/' + a.extraImg, 'نمای کانال‌های بازاریابی دیجیتال و اتصال به صفحه خدمت', 'محتوا، تبلیغ و شبکه اجتماعی باید به یک وعده واحد روی لندینگ برسند.')}
+<h2 id="ch-measure">سنجش و قیف فروش</h2>
+<p>آگاهی (مقاله و سئو)، بررسی (صفحه خدمت و <a href="/pages/portfolio">نمونه‌کار</a>)، تصمیم (پیش‌فاکتور یا دمو)، خرید (واتساپ و قرارداد). معیارهای مفید: هزینه هر لید، نرخ پاسخ واتساپ، و فروش بسته‌شده — نه CTR به‌تنهایی. ادامه عملی در <a href="/pages/articles/digital-marketing">چگونه بازاریابی دیجیتال فروش را افزایش می‌دهد</a>.</p>
 <h2 id="ch-vs">تفاوت با بازاریابی سنتی</h2>
-<p>در دیجیتال می‌توان CTR، CPA و نرخ پاسخ را هفتگی دید و بودجه را جابه‌جا کرد. راهنمای پایه گوگل برای شروع فنی: <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" rel="noopener noreferrer" target="_blank">SEO Starter Guide</a>.</p>
+<p>در دیجیتال می‌توان CTR، CPA و نرخ پاسخ را هفتگی دید و بودجه را جابه‌جا کرد. بیلبورد و کاتالوگ چاپی این حلقه بازخورد را ندارند. راهنمای پایه گوگل برای شروع فنی: <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" rel="noopener noreferrer" target="_blank">SEO Starter Guide</a>.</p>
+<h2 id="ch-region">ایران و ترکیه: واتساپ، RTL و چندزبانگی</h2>
+<p>در این دو بازار تماس واقعی اغلب در واتساپ بسته می‌شود؛ فرم انگلیسی بدون شماره محلی اعتماد نمی‌سازد. صفحه فارسی باید RTL درست داشته باشد و نسخه ترکی URL و hreflang جدا. الگوی فنی در <a href="/pages/articles/multilingual-web-iran-turkey">وبسایت چندزبانه ایران و ترکیه</a> آمده است.</p>
 <h2 id="ch-start">از کجا شروع کنیم؟</h2>
 <ol>
-<li>یک صفحه خدمت شفاف با فراخوان واتساپ/فرم.</li>
+<li>یک صفحه خدمت شفاف با فراخوان واتساپ/فرم و سرعت قابل‌قبول روی موبایل.</li>
 <li>دو یا سه مقاله خوشه‌ای که به همان صفحه لینک بدهند.</li>
-<li>بودجه آزمایشی تبلیغ فقط بعد از اندازه‌گیری تبدیل.</li>
+<li>ردیابی تبدیل (کلیک واتساپ یا ارسال فرم) قبل از بودجه تبلیغ.</li>
+<li>بودجه آزمایشی گوگل ادز فقط روی کوئری با نیت خرید؛ هفته‌ای بر اساس هزینه هر لید تنظیم کنید.</li>
 </ol>
-<p>ادامه عملی را در <a href="/pages/articles/digital-marketing">چگونه بازاریابی دیجیتال فروش را افزایش می‌دهد</a> بخوانید یا از <a href="/pages/contact">فرم تماس</a> مشاوره بگیرید.</p>`,
+<p>برای اجرای کمپین از <a href="/pages/contact?service=digital-marketing">فرم تماس</a> مشاوره بگیرید یا <a href="/pages/services#digital-marketing">خدمات بازاریابی</a> را ببینید.</p>`,
     'digital-marketing': `
 <p>بازدید به‌تنهایی فروش نیست. افزایش فروش یعنی رساندن فرد مناسب به پیشنهاد واضح و بستن مسیر تماس. بیزدوار این مسیر را با داده و تست روی <a href="/pages/services#digital-marketing">کمپین و CRO</a> جلو می‌برد.</p>
 ${fig('/' + a.image, 'نمودار قیف فروش دیجیتال از آگاهی تا خرید', 'هر مرحله قیف باید CTA مخصوص خود را داشته باشد.')}
@@ -1157,7 +1260,35 @@ ${fig('/' + a.image, 'Liqui Moly Octane Plus — افزودنی اصل', 'SKU و
 
 function enBody(a) {
   const map = {
-    'what-is-digital-marketing': `<p>Digital marketing is reaching the right audience online — site, search, social, ads and email — to build awareness, trust and sales. At <a href="/pages/about">Bizdavar Group</a> it is not “posting”; it is funnel, measurement and <a href="/pages/services#digital-marketing">digital marketing services</a>.</p>${fig('/' + a.image, 'Map of digital marketing channels for a B2B company', 'Every channel should end in a call or quote — not vanity traffic.')}<h2 id="ch-def">A working definition</h2><p>If a campaign brings visits but WhatsApp stays quiet, marketing is incomplete. We measure cost per lead and conversion, not likes.</p><h2 id="ch-channels">Main channels</h2><ul><li><strong>SEO and content</strong> — including this blog cluster.</li><li><strong>Search ads</strong> — controlled spend on buyer-intent queries.</li><li><strong>SMM</strong> — see the <a href="/pages/articles/social-media-management">SMM guide</a>.</li><li><strong>Website</strong> — start fast with <a href="/pages/fast">Fast Web Studio</a>.</li></ul><h2 id="ch-vs">Vs traditional</h2><p>You can move budget weekly. Technical primer: <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" rel="noopener noreferrer" target="_blank">SEO Starter Guide</a>.</p><h2 id="ch-start">Where to start</h2><ol><li>One clear service page with WhatsApp/form.</li><li>Two or three cluster articles linking to it.</li><li>Test ads only after conversion tracking.</li></ol><p>Next: <a href="/pages/articles/digital-marketing">how digital marketing increases sales</a> or <a href="/pages/contact">contact</a>.</p>`,
+    'what-is-digital-marketing': `
+<p>Digital marketing is reaching the right audience online — site, search, social, ads and email — to build awareness, trust and sales. At <a href="/pages/about">Bizdavar Group</a> it is not “posting”; it is funnel, measurement and <a href="/pages/services#digital-marketing">digital marketing services</a>.</p>
+${fig('/' + a.image, 'Map of digital marketing channels for a B2B company', 'Every channel should end in a call, WhatsApp or quote — not vanity traffic.')}
+<h2 id="ch-def">A working definition</h2>
+<p>A textbook definition is not enough. Ours is practical: any measurable activity that lowers customer-acquisition cost and raises conversion. If a campaign brings visits but WhatsApp stays quiet, marketing is incomplete. Likes, impressions and even traffic without leads are decorative reports.</p>
+<p>For B2B — from industrial supply to field services — the buyer usually starts with search, reads a product page or article, then sends a WhatsApp inquiry. Digital marketing is making that path short, clear and trackable.</p>
+<h2 id="ch-channels">Main channels</h2>
+<ul>
+<li><strong>SEO and content:</strong> service pages and articles for queries such as “what is digital marketing” — this blog is part of that path. See also <a href="/pages/articles/local-seo-iran">local SEO</a>.</li>
+<li><strong>Search ads:</strong> controlled spend on buyer-intent queries. Do not scale budget until conversion is measured.</li>
+<li><strong>SMM:</strong> a regular Instagram and LinkedIn presence that links to a service page; details in the <a href="/pages/articles/social-media-management">SMM guide</a>.</li>
+<li><strong>Website:</strong> a slow, vague or broken-RTL landing wastes every other channel — start in five days with <a href="/pages/fast">Fast Web Studio</a>.</li>
+<li><strong>Email and follow-up:</strong> a lead that is not answered within 24 hours dies. A simple WhatsApp or CRM reminder lowers acquisition cost.</li>
+</ul>
+${fig('/' + a.extraImg, 'Digital marketing channels connected to a service landing page', 'Content, ads and social should land on one promise on the same page.')}
+<h2 id="ch-measure">Measurement and the sales funnel</h2>
+<p>Awareness (articles and SEO), evaluation (service page and <a href="/pages/portfolio">portfolio</a>), decision (proforma or demo), purchase (WhatsApp and contract). Useful metrics: cost per lead, WhatsApp reply rate and closed sales — not CTR alone. Next: <a href="/pages/articles/digital-marketing">how digital marketing increases sales</a>.</p>
+<h2 id="ch-vs">Vs traditional marketing</h2>
+<p>Online you can see CTR, CPA and reply rate weekly and move budget. Billboards and printed catalogues do not give that loop. Technical primer: <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" rel="noopener noreferrer" target="_blank">Google SEO Starter Guide</a>.</p>
+<h2 id="ch-region">Iran and Turkey: WhatsApp, RTL and languages</h2>
+<p>In these markets the real conversation often closes on WhatsApp; an English-only form with no local number does not build trust. A Persian page needs correct RTL, and the Turkish version needs its own URL and hreflang. The technical pattern is in <a href="/pages/articles/multilingual-web-iran-turkey">multilingual web for Iran and Turkey</a>.</p>
+<h2 id="ch-start">Where to start</h2>
+<ol>
+<li>One clear service page with WhatsApp/form and acceptable mobile speed.</li>
+<li>Two or three cluster articles that link back to it.</li>
+<li>Conversion tracking (WhatsApp click or form submit) before any ad budget.</li>
+<li>A test Google Ads budget only on buyer-intent queries; tune weekly by cost per lead.</li>
+</ol>
+<p>To run a campaign, use the <a href="/pages/contact?service=digital-marketing">contact form</a> or see <a href="/pages/services#digital-marketing">marketing services</a>.</p>`,
     'digital-marketing': `<p>Traffic is not sales. Growth means the right person, a clear offer and a closed contact path — via <a href="/pages/services#digital-marketing">campaigns and CRO</a>.</p>${fig('/' + a.image, 'Digital sales funnel from awareness to purchase', 'Each funnel stage needs its own CTA.')}<h2 id="ch-funnel">Clear funnel</h2><p>Awareness, evaluation, decision, purchase. If an article has no quote button, the funnel breaks. See the <a href="/pages/blog">blog hub</a>.</p><h2 id="ch-cro">CRO</h2><ul><li>Speed and mobile, including Persian RTL.</li><li>Short form plus header WhatsApp.</li><li>Trust via <a href="/pages/portfolio">portfolio</a>.</li></ul><p>Fix weak landings with <a href="/pages/fast">Fast Web Studio</a> before ads.</p><h2 id="ch-ads">Targeted ads</h2><p>The landing must match the ad promise. Optimise cost per real lead, not clicks.</p><h2 id="ch-follow">Follow-up</h2><p>Leads die in 24 hours without a reply. Start at <a href="/pages/contact">Bizdavar contact</a>.</p>`,
     'social-media-management': `<p>SMM is planning, design, publishing and analytics. Industrial brands need technical proof, not only trends. Archive sample: <a href="/pages/biztejarat">Biztejarat</a>.</p>${fig('/' + a.image, 'Social media management mockup and content calendar', 'The calendar should link to a service page or quote.')}<h2 id="ch-plan">Content strategy</h2><p>Fix pillars: education, product, social proof. LinkedIn and WhatsApp often outperform Instagram-only for B2B. <a href="/pages/services#smm">Bizdavar SMM</a>.</p><h2 id="ch-design">Design and video</h2><p>Consistent templates; Reels need captions on mute.</p><h2 id="ch-ads">Paid social</h2><p>Optimise for leads. Landing must match the product. <a href="/pages/contact">Contact</a>.</p>`,
     'fast-studio': `<p><a href="/pages/fast">Fast Web Studio</a> delivers a company or shop site in 5 working days — $99 / $199 / $299 with RTL and baseline SEO.</p>${fig('/' + a.image, 'Fast Web Studio company website delivered in five days', 'Fast delivery only works if URLs and the contact form are correct from day one.')}<h2 id="ch-base">Basic ($99)</h2><p>Company intro, contact, WhatsApp, mobile-first.</p><h2 id="ch-shop">Shop ($199)</h2><p>WooCommerce and checkout. Prepare photos before the clock starts.</p><h2 id="ch-pro">Pro ($299)</h2><p>More pages and readiness for <a href="/pages/services#digital-marketing">marketing</a>.</p><h2 id="ch-after">After delivery</h2><p>Panel training and upgrade path via <a href="/pages/services#web-design">web design</a>. Order: <a href="/pages/contact">contact</a>.</p>`,
@@ -1177,7 +1308,35 @@ function enBody(a) {
 function trBody(a) {
   const en = enBody(a);
   const map = {
-    'what-is-digital-marketing': en.replace('Digital marketing is reaching', 'Dijital pazarlama, doğru kitleye çevrimiçi ulaşmaktır').replace('At <a href="/pages/about">Bizdavar Group</a>', '<a href="/pages/about">Bizdavar Group</a> bünyesinde'),
+    'what-is-digital-marketing': `
+<p>Dijital pazarlama, doğru kitleye çevrimiçi ulaşmaktır — site, arama, sosyal, reklam ve e-posta — farkındalık, güven ve satış kurmak için. <a href="/pages/about">Bizdavar Group</a> bünyesinde bu “post atmak” değildir; huni, ölçüm ve <a href="/pages/services#digital-marketing">dijital pazarlama hizmetleridir</a>.</p>
+${fig('/' + a.image, 'B2B şirket için dijital pazarlama kanalları haritası', 'Her kanal arama, WhatsApp veya teklifle bitmeli — süs trafiğiyle değil.')}
+<h2 id="ch-def">Pratik tanım</h2>
+<p>Akademik tanım yetmez. Bizim tanımımız ölçülebilir: müşteri edinme maliyetini düşüren ve dönüşümü yükselten her faaliyet. Kampanya ziyaret getiriyor ama WhatsApp sessizse pazarlama eksiktir. Beğeni, gösterim ve leadsiz trafik süs rapordur.</p>
+<p>B2B’de — endüstriyel tedarikten saha hizmetine — alıcı genelde aramayla başlar, ürün sayfası veya makale okur, sonra WhatsApp’tan sorar. Dijital pazarlama bu yolu kısa, net ve izlenebilir kılmaktır.</p>
+<h2 id="ch-channels">Ana kanallar</h2>
+<ul>
+<li><strong>SEO ve içerik:</strong> «dijital pazarlama nedir» gibi sorgular için hizmet sayfası ve makale — bu blog o yolun parçası. Ayrıca <a href="/pages/articles/local-seo-iran">yerel SEO</a>.</li>
+<li><strong>Arama reklamı:</strong> satın alma niyetli sorgulara kontrollü bütçe. Dönüşüm ölçülmeden bütçeyi büyütmeyin.</li>
+<li><strong>SMM:</strong> hizmet sayfasına bağlanan düzenli Instagram ve LinkedIn; ayrıntı <a href="/pages/articles/social-media-management">SMM rehberinde</a>.</li>
+<li><strong>Web sitesi:</strong> yavaş, belirsiz veya bozuk RTL landing diğer kanalları boşa harcar — <a href="/pages/fast">Fast Web Studio</a> ile 5 günde başlayın.</li>
+<li><strong>E-posta ve takip:</strong> 24 saatte yanıtsız lead ölür. Basit WhatsApp veya CRM hatırlatması maliyeti düşürür.</li>
+</ul>
+${fig('/' + a.extraImg, 'Hizmet sayfasına bağlanan dijital pazarlama kanalları', 'İçerik, reklam ve sosyal aynı vaatle aynı landing’e inmeli.')}
+<h2 id="ch-measure">Ölçüm ve satış hunisi</h2>
+<p>Farkındalık (makale ve SEO), değerlendirme (hizmet sayfası ve <a href="/pages/portfolio">portföy</a>), karar (proforma veya demo), satın alma (WhatsApp ve sözleşme). Yararlı metrikler: lead maliyeti, WhatsApp yanıt oranı ve kapanan satış — tek başına CTR değil. Devamı: <a href="/pages/articles/digital-marketing">dijital pazarlama satışları nasıl artırır</a>.</p>
+<h2 id="ch-vs">Geleneksel pazarlamadan farkı</h2>
+<p>Dijitalde CTR, CPA ve yanıt oranını haftalık görüp bütçeyi kaydırabilirsiniz. Billboard ve basılı katalog bu döngüyü vermez. Teknik başlangıç: <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" rel="noopener noreferrer" target="_blank">Google SEO Starter Guide</a>.</p>
+<h2 id="ch-region">İran ve Türkiye: WhatsApp, RTL ve diller</h2>
+<p>Bu pazarlarda asıl konuşma çoğu zaman WhatsApp’ta kapanır; yerel numarasız İngilizce form güven kurmaz. Farsça sayfa doğru RTL ister; Türkçe sürüm ayrı URL ve hreflang ister. Teknik model: <a href="/pages/articles/multilingual-web-iran-turkey">İran ve Türkiye için çok dilli web</a>.</p>
+<h2 id="ch-start">Nereden başlamalı</h2>
+<ol>
+<li>WhatsApp/formlu, mobilde yeterince hızlı net bir hizmet sayfası.</li>
+<li>Aynı sayfaya bağlanan iki veya üç küme makalesi.</li>
+<li>Reklam bütçesinden önce dönüşüm takibi (WhatsApp tıklaması veya form).</li>
+<li>Yalnızca satın alma niyetli sorgularda deneme Google Ads; lead maliyetine göre haftalık ayar.</li>
+</ol>
+<p>Kampanya için <a href="/pages/contact?service=digital-marketing">iletişim formu</a> veya <a href="/pages/services#digital-marketing">pazarlama hizmetleri</a>.</p>`,
     'digital-marketing': `<p>Trafik satış değildir. Büyüme doğru kişi, net teklif ve kapalı iletişim yoludur — <a href="/pages/services#digital-marketing">kampanya ve CRO</a>.</p>${fig('/' + a.image, 'Farkındalıktan satın almaya dijital satış hunisi', 'Hununun her adımının kendi CTA’sı olmalı.')}<h2 id="ch-funnel">Net huni</h2><p>Makalede teklif butonu yoksa huni kopar. <a href="/pages/blog">Blog</a>.</p><h2 id="ch-cro">CRO</h2><ul><li>Hız ve mobil, Farsça RTL.</li><li>Kısa form + WhatsApp.</li><li><a href="/pages/portfolio">Portföy</a> ile güven.</li></ul><p>Zayıf landing’i reklamdan önce <a href="/pages/fast">Fast Web Studio</a> ile düzeltin.</p><h2 id="ch-ads">Hedefli reklam</h2><p>Landing, reklam vaadiyle aynı olmalı. Gerçek lead maliyetine bakın.</p><h2 id="ch-follow">Takip</h2><p>24 saatte yanıtsız lead ölür. <a href="/pages/contact">İletişim</a>.</p>`,
     'social-media-management': `<p>SMM plan, tasarım, yayın ve analitiktir. Endüstriyel marka kanıt ister. Örnek: <a href="/pages/biztejarat">Biztejarat</a>.</p>${fig('/' + a.image, 'Sosyal medya yönetimi ve içerik takvimi', 'Takvim hizmet sayfasına veya teklife bağlanmalı.')}<h2 id="ch-plan">İçerik stratejisi</h2><p>Eğitim, ürün, kanıt. B2B’de LinkedIn ve WhatsApp sık öndedir. <a href="/pages/services#smm">SMM hizmeti</a>.</p><h2 id="ch-design">Tasarım</h2><p>Şablon tutarlılığı; Reels’e altyazı.</p><h2 id="ch-ads">Paid social</h2><p>Lead’e optimize edin. <a href="/pages/contact">İletişim</a>.</p>`,
     'fast-studio': `<p><a href="/pages/fast">Fast Web Studio</a> 5 iş gününde kurumsal veya mağaza sitesi teslim eder — $99 / $199 / $299, RTL ve temel SEO.</p>${fig('/' + a.image, 'Fast Web Studio — beş günde kurumsal site', 'URL ve iletişim formu ilk günden doğru olmalı.')}<h2 id="ch-base">Temel ($99)</h2><p>Tanıtım, iletişim, WhatsApp.</p><h2 id="ch-shop">Mağaza ($199)</h2><p>WooCommerce. Fotoğrafları önceden hazırlayın.</p><h2 id="ch-pro">Pro ($299)</h2><p>Daha fazla sayfa ve <a href="/pages/services#digital-marketing">pazarlama</a> hazırlığı.</p><h2 id="ch-after">Teslim sonrası</h2><p><a href="/pages/services#web-design">Web tasarım</a> ile yükseltme. <a href="/pages/contact">Sipariş</a>.</p>`,
@@ -1195,6 +1354,38 @@ function trBody(a) {
 }
 
 function ruBody(a) {
+  const map = {
+    'what-is-digital-marketing': `
+<p>Цифровой маркетинг — это выход к нужной аудитории онлайн: сайт, поиск, соцсети, реклама и email — чтобы строить узнаваемость, доверие и продажи. В <a href="/pages/about">Bizdavar Group</a> это не «постинг», а воронка, измерение и <a href="/pages/services#digital-marketing">услуги цифрового маркетинга</a>.</p>
+${fig('/' + a.image, 'Карта каналов цифрового маркетинга для B2B-компании', 'Каждый канал должен заканчиваться звонком, WhatsApp или запросом — не пустым трафиком.')}
+<h2 id="ch-def">Рабочее определение</h2>
+<p>Учебникового определения мало. Наше практическое: любая измеримая активность, которая снижает стоимость привлечения и повышает конверсию. Если кампания даёт визиты, а WhatsApp молчит, маркетинг неполный. Лайки, показы и трафик без лидов — декоративный отчёт.</p>
+<p>В B2B — от промышленной поставки до выездных услуг — закупщик обычно начинает с поиска, читает страницу продукта или статью, затем пишет в WhatsApp. Цифровой маркетинг — сделать этот путь коротким, понятным и отслеживаемым.</p>
+<h2 id="ch-channels">Основные каналы</h2>
+<ul>
+<li><strong>SEO и контент:</strong> страницы услуг и статьи под запросы вроде «что такое цифровой маркетинг» — этот блог часть того пути. См. также <a href="/pages/articles/local-seo-iran">локальное SEO</a>.</li>
+<li><strong>Поисковая реклама:</strong> контролируемый бюджет на запросы с намерением купить. Не масштабируйте, пока не измерена конверсия.</li>
+<li><strong>SMM:</strong> регулярное присутствие в Instagram и LinkedIn со ссылкой на страницу услуги; подробности в <a href="/pages/articles/social-media-management">гайде SMM</a>.</li>
+<li><strong>Сайт:</strong> медленный, размытый или сломанный RTL-лендинг сжигает остальные каналы — старт за пять дней с <a href="/pages/fast">Fast Web Studio</a>.</li>
+<li><strong>Email и сопровождение:</strong> лид без ответа за 24 часа умирает. Простое напоминание в WhatsApp или CRM снижает стоимость привлечения.</li>
+</ul>
+${fig('/' + a.extraImg, 'Каналы цифрового маркетинга, связанные со страницей услуги', 'Контент, реклама и соцсети должны вести к одному обещанию на одном лендинге.')}
+<h2 id="ch-measure">Измерение и воронка продаж</h2>
+<p>Узнаваемость (статьи и SEO), оценка (страница услуги и <a href="/pages/portfolio">портфолио</a>), решение (проформа или демо), покупка (WhatsApp и договор). Полезные метрики: стоимость лида, доля ответов в WhatsApp и закрытые сделки — не CTR в одиночку. Далее: <a href="/pages/articles/digital-marketing">как маркетинг увеличивает продажи</a>.</p>
+<h2 id="ch-vs">Отличие от традиционного маркетинга</h2>
+<p>Онлайн вы еженедельно видите CTR, CPA и ответы и двигаете бюджет. Билборды и печатные каталоги этого цикла не дают. Технический старт: <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" rel="noopener noreferrer" target="_blank">Google SEO Starter Guide</a>.</p>
+<h2 id="ch-region">Иран и Турция: WhatsApp, RTL и языки</h2>
+<p>На этих рынках реальный разговор часто закрывается в WhatsApp; английская форма без местного номера не строит доверие. Персидской странице нужен корректный RTL, турецкой — отдельный URL и hreflang. Техническая схема: <a href="/pages/articles/multilingual-web-iran-turkey">многоязычный сайт для Ирана и Турции</a>.</p>
+<h2 id="ch-start">С чего начать</h2>
+<ol>
+<li>Одна понятная страница услуги с WhatsApp/формой и приемлемой скоростью на мобильном.</li>
+<li>Две-три кластерные статьи со ссылкой на неё.</li>
+<li>Учёт конверсий (клик WhatsApp или отправка формы) до рекламного бюджета.</li>
+<li>Тестовый бюджет Google Ads только на запросы с намерением купить; еженедельно по стоимости лида.</li>
+</ol>
+<p>Для кампании — <a href="/pages/contact?service=digital-marketing">форма контакта</a> или <a href="/pages/services#digital-marketing">услуги маркетинга</a>.</p>`
+  };
+  if (map[a.slug]) return map[a.slug];
   return enBody(a)
     .replace(/Digital marketing is reaching the right audience online/g, 'Цифровой маркетинг — доступ к нужной аудитории онлайн')
     .replace(/Traffic is not sales/g, 'Трафик — это не продажи')
@@ -1207,6 +1398,38 @@ function ruBody(a) {
 }
 
 function arBody(a) {
+  const map = {
+    'what-is-digital-marketing': `
+<p>التسويق الرقمي هو الوصول إلى الجمهور المناسب عبر الإنترنت — الموقع والبحث والشبكات الاجتماعية والإعلانات والبريد — لبناء الوعي والثقة ثم المبيعات. في <a href="/pages/about">بيزدوار گروپ</a> هذا ليس «نشر منشورات»؛ بل قمع وقياس و<a href="/pages/services#digital-marketing">خدمات تسويق رقمي</a>.</p>
+${fig('/' + a.image, 'خريطة قنوات التسويق الرقمي لشركة B2B', 'يجب أن تنتهي كل قناة بمكالمة أو واتساب أو استعلام — لا بزيارات فارغة.')}
+<h2 id="ch-def">تعريف عملي</h2>
+<p>التعريف الأكاديمي لا يكفي. تعريفنا عملي: أي نشاط قابل للقياس يخفض تكلفة جذب العميل ويرفع التحويل. إذا جلبت الحملة زيارات وبقي واتساب صامتاً فالتسويق ناقص. الإعجابات والظهور وحتى الزيارات بلا عملاء تقارير تجميلية.</p>
+<p>في B2B — من التوريد الصناعي إلى الخدمات الميدانية — يبدأ المشتري عادة بالبحث، يقرأ صفحة منتج أو مقالة، ثم يرسل استعلاماً عبر واتساب. التسويق الرقمي هو جعل هذا المسار قصيراً وواضحاً وقابلاً للتتبع.</p>
+<h2 id="ch-channels">القنوات الرئيسية</h2>
+<ul>
+<li><strong>السيو والمحتوى:</strong> صفحات خدمة ومقالات لاستعلامات مثل «ما هو التسويق الرقمي» — هذه المدونة جزء من ذلك المسار. انظر أيضاً <a href="/pages/articles/local-seo-iran">السيو المحلي</a>.</li>
+<li><strong>إعلانات البحث:</strong> ميزانية مضبوطة على استعلامات بنية الشراء. لا توسّعوا الميزانية قبل قياس التحويل.</li>
+<li><strong>SMM:</strong> حضور منتظم في إنستغرام ولينكدإن مع رابط لصفحة الخدمة؛ التفاصيل في <a href="/pages/articles/social-media-management">دليل SMM</a>.</li>
+<li><strong>الموقع:</strong> صفحة هبوط بطيئة أو غامضة أو بلا RTL صحيح تهدر بقية القنوات — ابدأوا خلال خمسة أيام مع <a href="/pages/fast">Fast Web Studio</a>.</li>
+<li><strong>البريد والمتابعة:</strong> العميل بلا رد خلال ٢٤ ساعة يضيع. تذكير بسيط عبر واتساب أو CRM يخفض تكلفة الجذب.</li>
+</ul>
+${fig('/' + a.extraImg, 'قنوات التسويق الرقمي المتصلة بصفحة الخدمة', 'يجب أن يصل المحتوى والإعلان والشبكات إلى وعد واحد على الصفحة نفسها.')}
+<h2 id="ch-measure">القياس وقمع المبيعات</h2>
+<p>الوعي (المقالات والسيو)، التقييم (صفحة الخدمة و<a href="/pages/portfolio">معرض الأعمال</a>)، القرار (عرض سعر أو عرض تجريبي)، الشراء (واتساب وعقد). مؤشرات مفيدة: تكلفة العميل ونسبة الرد على واتساب والمبيعات المغلقة — لا CTR وحده. التالي: <a href="/pages/articles/digital-marketing">كيف يزيد التسويق الرقمي المبيعات</a>.</p>
+<h2 id="ch-vs">الفرق عن التسويق التقليدي</h2>
+<p>رقمياً يمكن رؤية CTR وCPA ونسبة الرد أسبوعياً ونقل الميزانية. اللوحات والإعلانات المطبوعة لا تعطي هذه الحلقة. مقدمة تقنية: <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" rel="noopener noreferrer" target="_blank">دليل Google للسيو</a>.</p>
+<h2 id="ch-region">إيران وتركيا: واتساب وRTL واللغات</h2>
+<p>في هذين السوقين تُغلق المحادثة الحقيقية غالباً على واتساب؛ نموذج إنجليزي بلا رقم محلي لا يبني ثقة. الصفحة الفارسية تحتاج RTL صحيح، والنسخة التركية تحتاج عنوان URL وhreflang منفصلين. النموذج التقني في <a href="/pages/articles/multilingual-web-iran-turkey">موقع متعدد اللغات لإيران وتركيا</a>.</p>
+<h2 id="ch-start">من أين تبدأ</h2>
+<ol>
+<li>صفحة خدمة واضحة مع واتساب/نموذج وسرعة مقبولة على الجوال.</li>
+<li>مقالتان أو ثلاث عنقودية ترتبط بها.</li>
+<li>تتبع التحويل (نقرة واتساب أو إرسال النموذج) قبل ميزانية الإعلان.</li>
+<li>ميزانية تجريبية لإعلانات جوجل فقط على استعلامات بنية الشراء؛ ضبط أسبوعي حسب تكلفة العميل.</li>
+</ol>
+<p>لتشغيل حملة استخدموا <a href="/pages/contact?service=digital-marketing">نموذج الاتصال</a> أو راجعوا <a href="/pages/services#digital-marketing">خدمات التسويق</a>.</p>`
+  };
+  if (map[a.slug]) return map[a.slug];
   return enBody(a)
     .replace(/Digital marketing is reaching the right audience online/g, 'التسويق الرقمي هو الوصول للجمهور المناسب عبر الإنترنت')
     .replace(/Traffic is not sales/g, 'الزيارات ليست مبيعات')
@@ -1230,6 +1453,52 @@ const UI = {
   ar: { toc: 'في هذا المقال', faq: 'أسئلة شائعة', tags: 'وسوم', sources: 'مصادر وروابط رسمية' }
 };
 
+function pickLoc(obj, lang) {
+  if (obj == null) return '';
+  if (typeof obj === 'string') return obj;
+  return obj[lang] || obj.en || obj.fa || '';
+}
+
+function relatedItems(a, lang) {
+  const loc = UI[lang] ? lang : 'en';
+  return (a.related || []).map((r) => ({
+    title: pickLoc(r.title, loc),
+    url: r.url,
+    desc: pickLoc(r.desc, loc)
+  }));
+}
+
+const AUTHOR_LINE = {
+  fa: 'بیزدوار گروپ',
+  tr: 'Bizdavar Group',
+  en: 'Bizdavar Group',
+  ru: 'Bizdavar Group',
+  ar: 'بيزدوار'
+};
+
+const DEFAULT_SOURCES = [
+  {
+    href: 'https://www.vega.com/en-ae',
+    label: 'VEGA — official product information'
+  },
+  {
+    href: 'https://developers.google.com/search/docs/fundamentals/seo-starter-guide',
+    label: 'Google SEO Starter Guide'
+  },
+  {
+    href: 'https://developers.google.com/search/docs/specialty/international/localized-versions',
+    label: 'Google: localized versions (hreflang)'
+  }
+];
+
+function sourceItems(a, lang) {
+  const loc = UI[lang] ? lang : 'en';
+  return (a.sources || DEFAULT_SOURCES).map((s) => ({
+    href: s.href,
+    label: pickLoc(s.label, loc) || s.href
+  }));
+}
+
 function innerHtml(a, lang) {
   const loc = UI[lang] ? lang : 'en';
   const u = UI[loc];
@@ -1239,6 +1508,9 @@ function innerHtml(a, lang) {
   const faq = (a.faq[loc] || a.faq.en || [])
     .map((item) => `<details class="article-faq__item"><summary>${item.q}</summary><div class="article-faq__a">${item.a}</div></details>`)
     .join('');
+  const sources = sourceItems(a, loc)
+    .map((s) => `<li><a href="${s.href}" rel="noopener noreferrer" target="_blank">${s.label}</a></li>`)
+    .join('\n    ');
   return `<nav class="article-toc" aria-label="${esc(u.toc)}"><p class="article-toc__title">${u.toc}</p><ol>${toc}</ol></nav>
 <ul class="article-tags" aria-label="${esc(u.tags)}">${tags}</ul>
 <div class="article-prose">${body}</div>
@@ -1249,9 +1521,7 @@ function innerHtml(a, lang) {
 <section class="article-sources" aria-labelledby="sourcesHeading">
   <h2 id="sourcesHeading">${u.sources}</h2>
   <ul>
-    <li><a href="https://www.vega.com/en-ae" rel="noopener noreferrer" target="_blank">VEGA — official product information</a></li>
-    <li><a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" rel="noopener noreferrer" target="_blank">Google SEO Starter Guide</a></li>
-    <li><a href="https://developers.google.com/search/docs/specialty/international/localized-versions" rel="noopener noreferrer" target="_blank">Google: localized versions (hreflang)</a></li>
+    ${sources}
   </ul>
 </section>`;
 }
@@ -1345,4 +1615,43 @@ function ctaLinks(a) {
   return { primary: '/pages/contact', secondary: '/pages/services' };
 }
 
-module.exports = { ARTICLES, esc, fig, innerHtml, UI, jsonLd, CTA, ctaLinks, pageUrl, stripHtml };
+function secondaryLabel(a, lang) {
+  const loc = lang || 'fa';
+  if (a.slug === 'vega-supply-iran' || a.slug === 'industrial-sensors') {
+    return { fa: 'کاتالوگ VEGA', tr: 'VEGA kataloğu', en: 'VEGA catalogue', ru: 'Каталог VEGA', ar: 'كتالوج VEGA' }[loc];
+  }
+  if (a.slug === 'prosense-gas-detection') {
+    return { fa: 'کاتالوگ Prosense', tr: 'Prosense kataloğu', en: 'Prosense catalogue', ru: 'Каталог Prosense', ar: 'كتالوج Prosense' }[loc];
+  }
+  if (a.slug === 'liqui-moly-supply-iran') {
+    return { fa: 'Liqui Moly', tr: 'Liqui Moly', en: 'Liqui Moly', ru: 'Liqui Moly', ar: 'Liqui Moly' }[loc];
+  }
+  if (a.slug === 'marvi-society-ios-app') {
+    return { fa: 'نمونه‌کار Marvi', tr: 'Marvi vaka', en: 'Marvi case', ru: 'Кейс Marvi', ar: 'دراسة Marvi' }[loc];
+  }
+  if (a.slug === 'field-tech-services') {
+    return { fa: 'خدمات فنی', tr: 'Saha hizmetleri', en: 'Field services', ru: 'Выездные услуги', ar: 'خدمات ميدانية' }[loc];
+  }
+  if (a.slug === 'fast-studio' || a.slug === 'multilingual-web-iran-turkey') {
+    return 'Fast Web Studio';
+  }
+  return CTA[loc]?.secondary || CTA.fa.secondary;
+}
+
+module.exports = {
+  ARTICLES,
+  esc,
+  fig,
+  innerHtml,
+  UI,
+  jsonLd,
+  CTA,
+  ctaLinks,
+  pageUrl,
+  stripHtml,
+  pickLoc,
+  relatedItems,
+  sourceItems,
+  AUTHOR_LINE,
+  secondaryLabel
+};
