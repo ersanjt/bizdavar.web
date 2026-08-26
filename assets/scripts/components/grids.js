@@ -69,7 +69,7 @@
           <h3><a href="${href}">${p.title}</a></h3>
           <p>${p.excerpt}</p>
           <div class="blog-item__links">
-            <a href="${href}" class="service-card__link">${t('common.readMore', 'ادامه مطلب')}${linkArrow()}</a>
+            <a href="${href}" class="service-card__link">${t('common.readMore', 'ادامه مطلب')}: ${p.title}${linkArrow()}</a>
             ${serviceLink}
           </div>
         </div>

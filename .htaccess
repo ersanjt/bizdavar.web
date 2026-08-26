@@ -48,9 +48,13 @@ AddType 'text/html; charset=UTF-8' .html
     upgrade-insecure-requests"
 
   # Cache static assets in browser (no CSP on images/fonts — breaks SVG <text> in <img>)
-  <FilesMatch "\.(css|js|png|jpe?g|webp|svg|gif|ico|woff2?)$">
+  <FilesMatch "\.(css|js)$">
     Header unset Content-Security-Policy
     Header set Cache-Control "public, max-age=604800, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(png|jpe?g|webp|svg|gif|ico|woff2?)$">
+    Header unset Content-Security-Policy
+    Header set Cache-Control "public, max-age=2592000, immutable"
   </FilesMatch>
 </IfModule>
 

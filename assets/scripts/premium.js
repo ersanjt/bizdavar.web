@@ -124,13 +124,13 @@
 
   function boot() {
     document.documentElement.classList.add('premium-ui');
+    initHeaderScroll();
+    initReveal();
+    initCounters();
     requestAnimationFrame(function () {
       document.documentElement.classList.add('is-page-entered');
       document.dispatchEvent(new CustomEvent('bizdavar:page-entered'));
     });
-    initHeaderScroll();
-    initReveal();
-    initCounters();
   }
 
   if (document.readyState === 'loading') {

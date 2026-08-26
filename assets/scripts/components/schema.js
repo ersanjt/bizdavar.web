@@ -267,11 +267,11 @@
       itemListElement: [
         {
           '@type': 'Offer',
-          itemOffered: { '@type': 'Product', name: 'VEGA', url: absUrl(R.vega) }
+          itemOffered: { '@type': 'Service', name: 'VEGA industrial sensor supply', url: absUrl(R.vega) }
         },
         {
           '@type': 'Offer',
-          itemOffered: { '@type': 'Product', name: 'Prosense', url: absUrl(R.prosense) }
+          itemOffered: { '@type': 'Service', name: 'Prosense gas detector supply', url: absUrl(R.prosense) }
         },
         {
           '@type': 'Offer',
@@ -687,19 +687,25 @@
       description: data.description,
       brand: { '@type': 'Brand', name: data.brand || data.name },
       category: data.category,
-      areaServed: data.areaServed || ['IR', 'TR'],
-      offers: {
+      image: data.image ? absUrl(data.image) : undefined,
+      url: data.url && String(data.url).startsWith('http') ? data.url : absUrl(data.url || R.contact),
+      areaServed: data.areaServed || ['IR', 'TR']
+    };
+    const price = data.price != null ? data.price : data.priceUsd;
+    if (price != null && price !== '' && !Number.isNaN(Number(price))) {
+      ld.offers = {
         '@type': 'Offer',
-        availability: 'https://schema.org/PreOrder',
-        priceCurrency: 'USD',
+        price: String(price),
+        priceCurrency: data.priceCurrency || 'USD',
+        availability: 'https://schema.org/InStock',
         seller: {
           '@type': 'Organization',
           name: C.siteNameEn,
           areaServed: ['IR', 'TR']
         },
-        url: data.url && String(data.url).startsWith('http') ? data.url : absUrl(data.url || R.contact)
-      }
-    };
+        url: ld.url
+      };
+    }
     injectJsonLd('jsonld-supply-' + (data.id || data.name), ld);
   };
 
@@ -721,6 +727,15 @@
 
   window.injectServiceProductSchema = function (data) {
     if (!data) return;
+    const offers = (data.offers || [])
+      .filter(o => o && o.price != null && o.price !== '' && !Number.isNaN(Number(o.price)))
+      .map(o => ({
+        '@type': 'Offer',
+        name: o.name,
+        price: String(o.price),
+        priceCurrency: o.currency || 'USD',
+        url: o.url ? absUrl(o.url) : absUrl(R.contact)
+      }));
     const ld = {
       '@context': 'https://schema.org',
       '@type': 'Service',
@@ -728,15 +743,9 @@
       description: data.description,
       provider: { '@type': 'Organization', name: C.siteNameEn, url: C.baseUrl },
       areaServed: data.areaServed || ['IR', 'TR', 'AM', 'AE', 'DE'],
-      offers: (data.offers || []).map(o => ({
-        '@type': 'Offer',
-        name: o.name,
-        price: o.price,
-        priceCurrency: o.currency || 'USD',
-        url: o.url ? absUrl(o.url) : absUrl(R.contact)
-      })),
       url: data.url ? absUrl(data.url) : C.baseUrl
     };
+    if (offers.length) ld.offers = offers;
     injectJsonLd('jsonld-service-product', ld);
   };
 

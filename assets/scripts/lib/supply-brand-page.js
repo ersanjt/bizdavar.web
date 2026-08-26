@@ -875,7 +875,8 @@ window.createSupplyBrandPage = function (cfg) {
 
     const items = catalog().categories.flatMap(cat =>
 
-      cat.series.map(s => ({
+      cat.series.map(s => {
+        const product = {
 
         '@type': 'Product',
 
@@ -896,21 +897,20 @@ window.createSupplyBrandPage = function (cfg) {
           return uniq.length > 1 ? uniq : uniq[0];
         })(),
 
-        url: officialSeriesUrl(s) || undefined,
+        url: officialSeriesUrl(s) || undefined
 
-        offers: {
-
-          '@type': 'Offer',
-
-          availability: s.priceUsd != null ? 'https://schema.org/InStock' : 'https://schema.org/PreOrder',
-
-          ...(s.priceUsd != null ? { price: String(s.priceUsd), priceCurrency: 'USD' } : {}),
-
-          seller: { '@type': 'Organization', name: C.siteName }
-
+        };
+        if (s.priceUsd != null && s.priceUsd !== '' && !Number.isNaN(Number(s.priceUsd))) {
+          product.offers = {
+            '@type': 'Offer',
+            price: String(s.priceUsd),
+            priceCurrency: 'USD',
+            availability: 'https://schema.org/InStock',
+            seller: { '@type': 'Organization', name: C.siteName }
+          };
         }
-
-      }))
+        return product;
+      })
 
     );
 

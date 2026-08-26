@@ -38,6 +38,8 @@ function openMobileDrawer() {
 
     drawer.setAttribute('aria-hidden', 'false');
 
+    drawer.removeAttribute('inert');
+
   }
 
   if (overlay) overlay.classList.add('active');
@@ -92,6 +94,8 @@ function closeMobileDrawer() {
     drawer.classList.remove('open');
 
     drawer.setAttribute('aria-hidden', 'true');
+
+    drawer.setAttribute('inert', '');
 
   }
 

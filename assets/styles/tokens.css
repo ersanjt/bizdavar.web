@@ -12,6 +12,7 @@
   --navy-light: #2a2a2a;
   --navy-deep: #1d1d1b;
   --red: #e3191f;
+  --red-text: #b01016;
   --dark: #1F2937;
   --gray: #F4F4F4;
   --gray-100: #f9fafb;
@@ -22,6 +23,8 @@
   --green: #10B981;
   --whatsapp: #25D366;
   --whatsapp-hover: #1ebe5d;
+  --whatsapp-btn: #0f7a45;
+  --whatsapp-btn-hover: #0c6639;
   --blue: #3B82F6;
 
   /* Spacing (4px base) */

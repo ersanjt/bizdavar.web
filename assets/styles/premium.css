@@ -85,7 +85,7 @@ html.premium-ui ::selection {
 
 /* ─── Smooth page navigation ─── */
 @view-transition {
-  navigation: auto;
+  navigation: none;
 }
 
 ::view-transition-old(root) {
@@ -432,7 +432,7 @@ html.premium-ui.is-page-entered .breadcrumbs-wrap {
 }
 
 .service-card__link:hover {
-  color: var(--red);
+  color: var(--navy);
 }
 
 .section__header--pro .section__eyebrow {

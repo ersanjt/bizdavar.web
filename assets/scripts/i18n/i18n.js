@@ -477,8 +477,17 @@
       const file = this.raw('home.aboutHeroImage') || 'assets/images/content/about-hero.jpg';
       const alt = this.t('home.aboutHeroAlt', 'Bizdavar Group');
       const src = '/' + String(file).replace(/^\//, '');
+      const compact = '/assets/images/content/about-hero-800.webp';
       document.querySelectorAll('[data-about-hero], img[src*="about-hero"]').forEach(img => {
-        img.src = src;
+        const isDefault = /about-hero\.jpg$/i.test(src);
+        img.src = isDefault ? compact : src;
+        if (isDefault) {
+          img.srcset = compact + ' 800w, ' + src + ' 1320w';
+          img.sizes = '(min-width: 1025px) 570px, 92vw';
+        } else {
+          img.removeAttribute('srcset');
+          img.removeAttribute('sizes');
+        }
         if (alt) img.alt = alt;
       });
     },

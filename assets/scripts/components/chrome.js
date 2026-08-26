@@ -754,9 +754,9 @@
           </div>
         </div>
 
-        <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+        <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true" inert>
           <div class="mobile-drawer__head">
-            <img src="${path(headerLogo)}" alt="${logoAlt}" height="32">
+            <img src="${path(headerLogo)}" alt="${logoAlt}" width="77" height="32">
             <button type="button" class="mobile-drawer__close" id="mobileDrawerClose" aria-label="${t('common.closeMenu', 'بستن منو')}">${ic('close', { size: 20 })}</button>
           </div>
           ${langDrawerMenuHtml()}

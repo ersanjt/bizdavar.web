@@ -199,6 +199,15 @@ ul { list-style: none; }
 .header__logo img {
   height: 50px;
   width: auto;
+  aspect-ratio: 500 / 209;
+  object-fit: contain;
+}
+
+.mobile-drawer__head img {
+  width: 77px;
+  height: 32px;
+  aspect-ratio: 500 / 209;
+  object-fit: contain;
 }
 
 .nav {
@@ -773,9 +782,9 @@ ul { list-style: none; }
 }
 
 .btn--whatsapp {
-  background: var(--whatsapp);
+  background: var(--whatsapp-btn, #0f7a45);
   color: var(--white);
-  box-shadow: 0 2px 10px rgba(37, 211, 102, 0.28);
+  box-shadow: 0 2px 10px rgba(15, 122, 69, 0.28);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -787,7 +796,7 @@ ul { list-style: none; }
 }
 
 .btn--whatsapp:hover {
-  background: var(--whatsapp-hover);
+  background: var(--whatsapp-btn-hover);
 }
 
 .btn--orange {
@@ -1048,7 +1057,7 @@ ul { list-style: none; }
 }
 
 .service-card__link {
-  color: var(--red);
+  color: var(--red-text, #b01016);
   font-weight: 600;
   font-size: 14px;
 }
@@ -1417,7 +1426,7 @@ ul { list-style: none; }
 }
 
 .contact-info__icon--wa {
-  background: var(--whatsapp);
+  background: var(--whatsapp-btn);
   color: var(--white);
 }
 
@@ -2775,9 +2784,9 @@ a.tags-cloud__tag:hover {
   }
 
   .mobile-footer-cta__btn--wa {
-    background: var(--whatsapp);
+    background: var(--whatsapp-btn, #0f7a45);
     color: var(--white);
-    box-shadow: 0 2px 10px rgba(37, 211, 102, 0.25);
+    box-shadow: 0 2px 10px rgba(15, 122, 69, 0.28);
   }
 
   .mobile-footer-accordions {
