@@ -37,7 +37,7 @@ window.PROSENSE_CATALOG = {
   trustSignals: [
     { icon: 'target', label: 'محصول اصل', desc: 'تامین مستقیم از Prosense ترکیه — با گواهینامه و سریال معتبر' },
     { icon: 'mail', label: 'مشاوره فارسی', desc: 'انتخاب نوع گاز، رنج و مدل — در واتساپ فارسی، از هر کجای دنیا' },
-    { icon: 'globe', label: 'لجستیک بین‌المللی', desc: 'خرید، حمل و گمرک از استانبول تا مقصد پروژه شما' },
+    { icon: 'globe', label: 'لجستیک بین‌المللی', desc: 'خرید، حمل و گمرک تا مقصد پروژه شما' },
     { icon: 'lab', label: 'گواهینامه و کالیبراسیون', desc: 'SIL2/3 · M1 Maden · EN-50545-1 · TÜRKAK' }
   ],
 

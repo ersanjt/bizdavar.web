@@ -826,7 +826,7 @@
                   <img src="${path(footerLogo)}" alt="${logoAlt}" class="footer__logo-img" width="120" height="50">
                 </a>
                 <p class="footer__tagline">${t('footer.tagline')}</p>
-                <div class="footer__trust">${trustPills}<span class="footer__pill">${t('footer.hq', 'Istanbul HQ')}</span></div>
+                <div class="footer__trust">${trustPills}<span class="footer__pill">${t('footer.hq', 'Multilingual support')}</span></div>
                 <p class="footer__social-label">${t('footer.followUs', 'Follow us')}</p>
                 <div class="footer__social">
                   <a href="${C.contact.instagram}" class="footer__social-btn" target="_blank" rel="noopener noreferrer me" aria-label="Instagram">${ic('instagram', { size: 18 })}</a>
@@ -870,7 +870,7 @@
           <div class="mobile-footer-hero">
             <a href="${pagePath(R.home)}" class="footer__logo-link"><img src="${path(footerLogo)}" alt="${logoAlt}" class="footer__logo-img footer__logo-img--sm" width="86" height="36"></a>
             <p class="mobile-footer-hero__tagline">${t('footer.tagline')}</p>
-            <div class="footer__trust">${trustPills}<span class="footer__pill">${t('footer.hq', 'HQ: Istanbul')}</span></div>
+            <div class="footer__trust">${trustPills}<span class="footer__pill">${t('footer.hq', 'Multilingual support')}</span></div>
             <div class="footer__social footer__social--mobile">
               <a href="${C.contact.instagram}" class="footer__social-btn" target="_blank" rel="noopener noreferrer me" aria-label="Instagram">${ic('instagram', { size: 18 })}</a>
               <a href="${C.contact.linkedin}" class="footer__social-btn" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn">${ic('linkedin', { size: 18 })}</a>

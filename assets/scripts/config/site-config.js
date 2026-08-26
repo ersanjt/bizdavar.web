@@ -26,6 +26,7 @@ window.BIZDAVAR_CONFIG = {
     supplifyTrade: 'pages/supplify-trade.html',
     kayaOne: 'pages/kaya-one.html',
     smmTurk: 'pages/smm-turk.html',
+    marvispace: 'pages/marvispace.html',
     marviSociety: 'pages/marvi-society.html',
     fxguardExchange: 'pages/fxguard-exchange.html',
     biztejarat: 'pages/biztejarat.html',
@@ -255,7 +256,7 @@ window.BIZDAVAR_CONFIG = {
     whatsappMessage: 'سلام، از وبسایت bizdavar.com پیام می‌دهم.',
     channels: [
       { id: 'ir', label: 'واتساپ فارسی', display: '+98 930 588 0135', tel: '+989305880135', whatsapp: '989305880135', primary: true },
-      { id: 'tr', label: 'ترکیه', display: '+90 501 067 6486', tel: '+905010676486', whatsapp: '905010676486' },
+      { id: 'tr', label: 'واتساپ فروش', display: '+90 501 067 6486', tel: '+905010676486', whatsapp: '905010676486' },
       {
         id: 'field',
         label: 'خدمات فنی',
@@ -266,7 +267,7 @@ window.BIZDAVAR_CONFIG = {
         whatsappMessage: 'سلام، برای خدمات فنی (دوربین مدار بسته / سیم‌کشی / نورمخفی) از وبسایت bizdavar.com پیام می‌دهم.'
       }
     ],
-    address: 'استانبول، ترکیه',
+    address: 'تبریز',
     workingHours: '۷/۲۴ — همیشه در دسترس',
     linkedin: 'https://www.linkedin.com/in/ersanjt',
     instagram: 'https://www.instagram.com/bizdavar'
@@ -284,8 +285,8 @@ window.BIZDAVAR_CONFIG = {
     whatsapp: '989364115151',
     phoneDisplay: '+98 936 411 5151',
     tel: '+989364115151',
-    cities: ['تبریز', 'استانبول'],
-    citiesEn: ['Tabriz', 'Istanbul'],
+    cities: ['تبریز'],
+    citiesEn: ['Tabriz'],
     whatsappMessage: 'سلام، برای خدمات فنی (دوربین مدار بسته / سیم‌کشی / نورمخفی) از وبسایت bizdavar.com پیام می‌دهم.'
   },
 
@@ -336,10 +337,9 @@ window.BIZDAVAR_CONFIG = {
   },
 
   geo: {
-    headquarters: { city: 'استانبول', country: 'ترکیه', countryCode: 'TR' },
-    summaryFa: 'خدمات از استانبول به ایران، ترکیه و ۱۱ کشور — مشاوره فارسی، واتساپ و تحویل بین‌المللی.',
+    headquarters: { city: 'تبریز', country: 'ایران', countryCode: 'IR' },
+    summaryFa: 'خدمات دیجیتال و تامین صنعتی در ۱۱ کشور — مشاوره فارسی، واتساپ و تحویل بین‌المللی.',
     hubs: [
-      { city: 'استانبول', country: 'ترکیه', code: 'TR', role: 'دفتر اصلی · فین‌تک و عملیات بین‌المللی' },
       { city: 'تبریز', country: 'ایران', code: 'IR', role: 'بازار ایران · پروژه‌های صنعتی و دیجیتال' },
       { city: 'ایروان', country: 'ارمنستان', code: 'AM', role: 'ثبت شرکت · Bizdavar Group LLC' },
     ],
@@ -349,7 +349,7 @@ window.BIZDAVAR_CONFIG = {
   seo: {
     defaultTitle: 'بیزدوار گروپ | خدمات دیجیتال، طراحی سایت و تامین تجهیزات صنعتی',
     defaultDescription: 'بیزدوار گروپ — آژانس دیجیتال با ۱۲+ سال تجربه و ۱۰۰+ پروژه در ۱۱ کشور. بازاریابی دیجیتال، طراحی وب، فین‌تک، SMM و تامین تجهیزات صنعتی VEGA و Prosense.',
-    keywords: 'بیزدوار, Bizdavar Group, BizTab, BizClean, ضدعفونی دست, بازاریابی دیجیتال, طراحی سایت, VEGA, Prosense, Fast Web Studio, آژانس دیجیتال استانبول',
+    keywords: 'بیزدوار, Bizdavar Group, BizTab, BizClean, ضدعفونی دست, بازاریابی دیجیتال, طراحی سایت, VEGA, Prosense, Fast Web Studio',
     twitterCard: 'summary_large_image',
     author: 'Bizdavar Group',
     themeColor: '#1d1d1b'
@@ -533,7 +533,7 @@ window.BIZDAVAR_CONFIG = {
     },
     {
       slug: 'pages/articles/field-tech-services.html',
-      title: 'خدمات فنی میدانی بیزدوار — تبریز و استانبول',
+      title: 'خدمات فنی میدانی بیزدوار — تبریز',
       excerpt: 'دوربین، سیم‌کشی و نورمخفی — هماهنگی واتساپ و اجرای میدانی.',
       category: 'خدمات فنی',
       catId: 'company',
@@ -574,6 +574,7 @@ window.BIZDAVAR_CONFIG = {
     { name: 'ZedPay', url: 'https://zed-pay.com', logo: 'assets/images/partners/zedpay.png', role: 'ecosystem' },
     { name: 'Netinode', url: 'https://netinode.net/', logo: 'assets/images/partners/netinohost.png', role: 'ecosystem' },
     { name: 'BZ Diamond', url: 'pages/bz-diamond.html', logo: 'assets/images/partners/zeddiamond.png', role: 'case-study' },
+    { name: 'Marvispace', url: 'pages/marvispace.html', logo: 'assets/images/partners/marvispace.svg', role: 'case-study' },
     { name: 'Supplify Trade', url: 'pages/supplify-trade.html', logo: 'assets/images/partners/supplify-trade.svg', role: 'case-study' },
     { name: 'Kaya One AG', url: 'pages/kaya-one.html', logo: 'assets/images/partners/kaya-one.svg', role: 'case-study' },
     { name: 'SMM Turk', url: 'pages/smm-turk.html', logo: 'assets/images/partners/smm-turk.svg', role: 'case-study' },
@@ -706,7 +707,7 @@ window.BIZDAVAR_CONFIG = {
     { name: 'BizSwap', domain: 'Web3 · DeFi Module', category: 'Web3 / پیش‌فروش و سواپ توکن', role: 'case-study', internal: true, slug: 'pages/bizswap.html', logo: 'assets/images/products/bizswap/bizswap-logo.svg', note: 'نمونه‌کار — ماژول پیش‌فروش و سواپ on-chain (BEP-20)، اتصال کیف پول و UI DeFi؛ توسعه تیم بیزدوار' },
     { name: 'FXGuard Exchange', domain: 'exchange.fxguard.io', url: 'https://exchange.fxguard.io/', category: 'طراحی وب / صرافی و فین‌تک', role: 'case-study', internal: true, slug: 'pages/fxguard-exchange.html', logo: 'assets/images/partners/fxguard-exchange.svg', note: 'نمونه‌کار — پلتفرم تبادل تومان و لیر با نرخ زنده، KYC و پیگیری سفارش' },
     { name: 'FXGuard Accounting', domain: 'accounting.fxguard.io', url: 'https://accounting.fxguard.io/', category: 'نرم‌افزار حسابداری / فینانس', role: 'case-study', internal: true, slug: 'pages/fxguard-accounting.html', logo: 'assets/images/partners/fxguard-accounting.svg', note: 'محصول FXGuard — سامانه حسابداری برای تیم‌های مالی، صرافی و SME؛ بخشی از سوئیت fxguard.io' },
-    { name: 'Marvispace', domain: 'marvispace.com', url: 'https://marvispace.com', category: 'طراحی وب / فروشگاه اختصاصی', role: 'case-study', internal: false, logo: 'assets/images/partners/marvispace.svg', note: 'نمونه‌کار — فروشگاه آنلاین اختصاصی با داشبورد ادمین، مدیریت محصول و محتوا' },
+    { name: 'Marvispace', domain: 'marvispace.com', url: 'https://marvispace.com/', category: 'طراحی وب / فروشگاه محصولات چرمی', role: 'case-study', internal: true, slug: 'pages/marvispace.html', logo: 'assets/images/partners/marvispace.svg', note: 'نمونه‌کار برنامه‌نویسی و توسعه فروشگاه آنلاین اختصاصی برای محصولات چرمی — کاتالوگ، سبد خرید و پنل مدیریت' },
     { name: 'Marvi Society', domain: 'marvisociety.com', url: 'https://marvisociety.com', appStoreUrl: 'https://apps.apple.com/us/app/marvi-society/id6783450762', category: 'توسعه اپ موبایل / lifestyle و creator', role: 'case-study', internal: true, slug: 'pages/marvi-society.html', logo: 'assets/images/partners/marvi-society.png', note: 'نمونه‌کار — طراحی، برنامه‌نویسی و راه‌اندازی صفر تا صد اپ iOS؛ کلاب دعوت‌محور همکاری creator و مکان تأییدشده در استانبول — کشف مکان، check-in، ارسال مدرک بازدید، پروفایل TR/EN؛ منتشر در App Store' },
     { name: 'GooPay AI', domain: 'goopay.ai', category: 'هوش مصنوعی / نرم‌افزار اختصاصی', role: 'case-study', internal: false, logo: 'assets/images/partners/goopay-ai.svg', note: 'نمونه‌کار — طراحی و برنامه‌نویسی اختصاصی سیستم‌های هوش مصنوعی' },
     { name: 'Grafik Travel', domain: 'grafiktravel.com', url: 'http://grafiktravel.com/', category: 'طراحی وب / گردشگری و MICE', role: 'case-study', internal: false, logo: 'assets/images/partners/grafik-travel.png', note: 'نمونه‌کار — طراحی وبسایت تخصصی برای مجموعه گردشگری و خدمات سازمانی' },

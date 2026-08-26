@@ -1,5 +1,5 @@
 /**
- * WhatsApp CRM script page — dynamic sections + stat counters
+ * FXGuard product page — dynamic sections + stat counters
  */
 (function () {
   function raw(key) {
@@ -15,11 +15,11 @@
     return key.split('.').reduce((acc, part) => (acc == null ? undefined : acc[part]), dict);
   }
 
-  function contactHref(query) {
-    const base = window.resolvePagePath
-      ? window.resolvePagePath('pages/contact.html')
-      : '/pages/contact';
-    return query ? `${base}?${query}` : base;
+  function pageHref(href) {
+    if (!href) return '#';
+    if (/^https?:/i.test(href) || href.startsWith('mailto:') || href.startsWith('#')) return href;
+    const cleaned = String(href).replace(/^\//, '').replace(/\.html$/i, '');
+    return window.resolvePagePath ? window.resolvePagePath(cleaned) : href;
   }
 
   function esc(s) {
@@ -67,11 +67,16 @@
     }
   }
 
+  function extAttrs(href, external) {
+    const isExt = external || /^https?:/i.test(href || '');
+    return isExt ? ' target="_blank" rel="noopener noreferrer"' : '';
+  }
+
   function setStatFallbacks(cs) {
     const map = [
       { id: 'fxStatBusinesses', value: '12+' },
       { id: 'fxStatRegions', value: '5' },
-      { id: 'fxStatUptime', value: '99.9%' },
+      { id: 'fxStatUptime', value: '7' },
       { id: 'fxStatSetup', value: '5' }
     ];
     map.forEach(({ id, value }) => {
@@ -100,9 +105,58 @@
         regionsEl.removeAttribute('data-i18n');
       }
 
+      renderCards('fxguardSuite', cs.suite?.items, item => {
+        const href = pageHref(item.href);
+        return `
+        <article class="fxguard-suite-card">
+          ${item.badge ? `<span class="fxguard-card__tag">${esc(item.badge)}</span>` : ''}
+          <div class="fxguard-card__icon" aria-hidden="true">${iconHtml(item.icon)}</div>
+          <h3>${esc(item.title)}</h3>
+          <p>${esc(item.desc)}</p>
+          ${item.audience ? `<p class="fxguard-card__region">${esc(item.audience)}</p>` : ''}
+          <a href="${esc(href)}" class="fxguard-suite-card__link"${extAttrs(href, item.external)}>${esc(item.cta || '')}</a>
+        </article>`;
+      });
+
+      renderCards('fxguardWhy', cs.why?.items, item => `
+        <article class="fxguard-card">
+          <div class="fxguard-card__icon" aria-hidden="true">${iconHtml(item.icon)}</div>
+          <h3>${esc(item.title)}</h3>
+          <p>${esc(item.desc)}</p>
+        </article>`);
+
+      renderCards('fxguardOutcomes', cs.outcomes?.items, item => `
+        <article class="fxguard-step">
+          <div class="fxguard-step__num">${esc(item.num)}</div>
+          <div class="fxguard-step__icon" aria-hidden="true">${iconHtml(item.icon)}</div>
+          <h3>${esc(item.title)}</h3>
+          <p>${esc(item.desc)}</p>
+        </article>`);
+
       renderCards('fxguardProblems', cs.problem?.items, item => `
         <article class="fxguard-card">
           <div class="fxguard-card__icon" aria-hidden="true">${iconHtml(item.icon)}</div>
+          <h3>${esc(item.title)}</h3>
+          <p>${esc(item.desc)}</p>
+        </article>`);
+
+      renderCards('fxguardChannel', cs.channel?.items, item => `
+        <article class="fxguard-card">
+          <div class="fxguard-card__icon" aria-hidden="true">${iconHtml(item.icon)}</div>
+          <h3>${esc(item.title)}</h3>
+          <p>${esc(item.desc)}</p>
+        </article>`);
+
+      renderCards('fxguardStories', cs.stories?.items, item => `
+        <article class="fxguard-card">
+          <p class="fxguard-card__region">${esc(item.place)}</p>
+          <h3>${esc(item.title)}</h3>
+          <p>${esc(item.desc)}</p>
+        </article>`);
+
+      renderCards('fxguardDemoSteps', cs.demo?.items, item => `
+        <article class="fxguard-step">
+          <div class="fxguard-step__num">${esc(item.num)}</div>
           <h3>${esc(item.title)}</h3>
           <p>${esc(item.desc)}</p>
         </article>`);
@@ -122,6 +176,12 @@
           <p>${esc(item.desc)}</p>
         </article>`);
 
+      renderCards('fxguardModules', cs.modules?.groups, group => `
+        <article class="fxguard-module-group">
+          <h3>${esc(group.title)}</h3>
+          <ul>${(group.items || []).map(f => `<li>${esc(f)}</li>`).join('')}</ul>
+        </article>`);
+
       renderCards('fxguardAudiences', cs.audiences?.items, item => `
         <article class="fxguard-card">
           <div class="fxguard-card__icon" aria-hidden="true">${iconHtml(item.icon)}</div>
@@ -134,8 +194,7 @@
       const pricingEl = document.getElementById('fxguardPricing');
       if (pricingEl && Array.isArray(cs.pricing?.plans)) {
         pricingEl.innerHTML = cs.pricing.plans.map(plan => {
-          const href = plan.href || contactHref('product=whatsapp-crm');
-          const external = /^https?:/.test(href);
+          const href = pageHref(plan.href);
           return `
           <article class="fxguard-plan${plan.featured ? ' fxguard-plan--featured' : ''}">
             ${plan.badge ? `<span class="fxguard-plan__badge">${esc(plan.badge)}</span>` : ''}
@@ -143,7 +202,7 @@
             <p class="fxguard-plan__price">${esc(plan.price)}<span class="fxguard-plan__period">${esc(plan.period || '')}</span></p>
             <p>${esc(plan.desc)}</p>
             <ul>${(plan.features || []).map(f => `<li>${esc(f)}</li>`).join('')}</ul>
-            <a href="${esc(href)}" class="btn ${plan.featured ? 'btn--green' : 'btn--outline'}"${external ? ' target="_blank" rel="noopener noreferrer"' : ''}>${esc(plan.cta)}</a>
+            <a href="${esc(href)}" class="btn ${plan.featured ? 'btn--green' : 'btn--outline'}"${extAttrs(href)}>${esc(plan.cta)}</a>
           </article>`;
         }).join('');
       }
@@ -157,10 +216,20 @@
           </details>`).join('');
       }
 
+      renderCards('fxguardRelated', cs.related?.items, item => {
+        const href = pageHref(item.href);
+        return `
+        <a href="${esc(href)}" class="feature-item feature-item--link"${extAttrs(href, item.external)}>
+          <span class="feature-item__icon">${iconHtml(item.icon, 26)}</span>
+          <h3>${esc(item.title)}</h3>
+          <p>${esc(item.desc)}</p>
+        </a>`;
+      });
+
       const statMap = [
         { id: 'fxStatBusinesses', value: 12, suffix: '+' },
         { id: 'fxStatRegions', value: 5, suffix: '' },
-        { id: 'fxStatUptime', value: 99.9, suffix: '%' },
+        { id: 'fxStatUptime', value: 7, suffix: '' },
         { id: 'fxStatSetup', value: 5, suffix: '' }
       ];
       const setupSuffix = cs.stats?.setupSuffix || '';
@@ -176,6 +245,12 @@
       if (problemGrid && (cs.problem?.items || []).length > 3) {
         problemGrid.classList.remove('fxguard-card-grid--3');
         problemGrid.classList.add('fxguard-card-grid--4');
+      }
+
+      const featureGrid = document.getElementById('fxguardFeatures');
+      if (featureGrid && (cs.features?.items || []).length > 6) {
+        featureGrid.classList.remove('fxguard-card-grid--3');
+        featureGrid.classList.add('fxguard-card-grid--4');
       }
     } catch (err) {
       console.error('[Bizdavar] initFxguardPage failed', err);

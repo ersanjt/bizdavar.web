@@ -20,6 +20,7 @@
     supplifyTrade: 'supplify-trade',
     kayaOne: 'kaya-one',
     smmTurk: 'smm-turk',
+    marvispace: 'marvispace',
     marviSociety: 'marvi-society',
     fxguardExchange: 'fxguard-exchange'
   };
@@ -53,7 +54,7 @@
 
     const knownPages = new Set([
       'about', 'services', 'portfolio', 'blog', 'contact', 'privacy', 'fast', 'vega',
-      'prosense', 'teltonika', 'gamak', 'digi-system', 'teraoka', 'liqui-moly', 'bz-diamond', 'supplify-trade', 'kaya-one', 'smm-turk', 'marvi-society', 'fxguard-exchange', 'biztejarat',
+      'prosense', 'teltonika', 'gamak', 'digi-system', 'teraoka', 'liqui-moly', 'bz-diamond', 'supplify-trade', 'kaya-one', 'smm-turk', 'marvispace', 'marvi-society', 'fxguard-exchange', 'biztejarat',
       'products', 'biztab', 'bizsanitizer-v5', 'bizseat', 'bizpet', 'gallery', 'fxguard', 'bizswap'
     ]);
     const stem = n.replace(/\.html$/, '');
@@ -151,8 +152,8 @@
     const hq = C.geo?.headquarters;
     return {
       '@type': 'PostalAddress',
-      addressLocality: hq?.city || 'Istanbul',
-      addressCountry: hq?.countryCode || 'TR'
+      addressLocality: hq?.city || 'Tabriz',
+      addressCountry: hq?.countryCode || 'IR'
     };
   }
 

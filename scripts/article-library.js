@@ -512,15 +512,15 @@ const ARTICLES = [
     },
     faq: {
       fa: [
-        { q: 'دفتر بیزدوار کجاست؟', a: 'حضور عملیاتی در چند شهر از جمله استانبول و تبریز؛ برای پروژه از <a href="/pages/contact">فرم تماس</a> یا واتساپ هماهنگ کنید.' },
+        { q: 'دفتر بیزدوار کجاست؟', a: 'هماهنگی پروژه‌ها از تبریز و با پشتیبانی چندزبانه؛ برای پروژه از <a href="/pages/contact">فرم تماس</a> یا واتساپ هماهنگ کنید.' },
         { q: 'محصولات خودتان چیست؟', a: 'از جمله <a href="/pages/bizpet">BizPet</a>، <a href="/pages/biztab">BizTab</a> و اکوسیستم FXGuard.' }
       ],
       tr: [
-        { q: 'Ofis nerede?', a: 'İstanbul ve Tebriz dahil operasyonel varlık; proje için <a href="/pages/contact">iletişim formu</a>.' },
+        { q: 'Ofis nerede?', a: 'Proje koordinasyonu Tebriz ve çok dilli destek; <a href="/pages/contact">iletişim formu</a>.' },
         { q: 'Kendi ürünleriniz?', a: '<a href="/pages/bizpet">BizPet</a>, <a href="/pages/biztab">BizTab</a> ve FXGuard ekosistemi.' }
       ],
       en: [
-        { q: 'Where is the office?', a: 'Operations include Istanbul and Tabriz; coordinate via the <a href="/pages/contact">contact form</a> or WhatsApp.' },
+        { q: 'Where is the office?', a: 'Project coordination from Tabriz with multilingual support; contact via the <a href="/pages/contact">contact form</a> or WhatsApp.' },
         { q: 'Owned products?', a: '<a href="/pages/bizpet">BizPet</a>, <a href="/pages/biztab">BizTab</a> and the FXGuard ecosystem.' }
       ],
       ru: [
@@ -699,9 +699,9 @@ const ARTICLES = [
       ar: 'تطوير تطبيق iOS — دراسة Marvi Society وApp Store'
     },
     description: {
-      fa: 'از ایده کلاب دعوت‌محور تا انتشار در App Store: طراحی UI، Swift، رویداد و پروفایل creator — نمونه‌کار بیزدوار در استانبول.',
+      fa: 'از ایده کلاب دعوت‌محور تا انتشار در App Store: طراحی UI، Swift، رویداد و پروفایل creator — نمونه‌کار بیزدوار.',
       tr: 'Davetli kulüp fikrinden App Store’a: UI, Swift, etkinlik ve creator profili — Bizdavar vaka çalışması.',
-      en: 'From invite-only club idea to App Store: UI design, Swift, events and creator profiles — Bizdavar case study in Istanbul.',
+      en: 'From invite-only club idea to App Store: UI design, Swift, events and creator profiles — Bizdavar case study.',
       ru: 'От идеи закрытого клуба до App Store: UI, Swift, события — кейс Bizdavar в Стамбуле.',
       ar: 'من فكرة نادٍ بالدعوة إلى App Store: تصميم UI وSwift وأحداث — دراسة بيزدوار في إسطنبول.'
     },
@@ -836,23 +836,23 @@ const ARTICLES = [
     extraImg: 'assets/images/content/services-web-mockup.svg',
     category: { fa: 'خدمات فنی', tr: 'Saha hizmetleri', en: 'Field services', ru: 'Выездные услуги', ar: 'خدمات ميدانية' },
     title: {
-      fa: 'خدمات فنی میدانی بیزدوار — تبریز و استانبول',
-      tr: 'Bizdavar saha teknik hizmetleri — Tebriz ve İstanbul',
-      en: 'Bizdavar field tech services — Tabriz and Istanbul',
-      ru: 'Выездные технические услуги Bizdavar — Тебриз и Стамбул',
-      ar: 'الخدمات الفنية الميدانية لبيزدوار — تبريز وإسطنبول'
+      fa: 'خدمات فنی میدانی بیزدوار — تبریز',
+      tr: 'Bizdavar saha teknik hizmetleri — Tebriz',
+      en: 'Bizdavar field tech services — Tabriz',
+      ru: 'Выездные технические услуги Bizdavar — Тебриз',
+      ar: 'الخدمات الفنية الميدانية لبيزدوار — تبريز'
     },
     description: {
-      fa: 'دوربین مداربسته، سیم‌کشی، نورمخفی و نصب تجهیزات در تبریز و استانبول — هماهنگی واتساپ و اجرای میدانی تیم بیزدوار.',
-      tr: 'CCTV, kablolama, gizli aydınlatma ve saha montajı — Tebriz ve İstanbul WhatsApp koordinasyonu.',
-      en: 'CCTV, wiring, cove lighting and on-site installs in Tabriz and Istanbul — WhatsApp coordination by Bizdavar.',
-      ru: 'CCTV, проводка, скрытая подсветка и монтаж в Тебризе и Стамбуле — WhatsApp Bizdavar.',
-      ar: 'كاميرات وتوصيلات وإضاءة مخفية وتركيب ميداني في تبريز وإسطنبول — تنسيق واتساب.'
+      fa: 'دوربین مداربسته، سیم‌کشی، نورمخفی و نصب تجهیزات در تبریز — هماهنگی واتساپ و اجرای میدانی تیم بیزدوار.',
+      tr: 'CCTV, kablolama, gizli aydınlatma ve saha montajı — Tebriz WhatsApp koordinasyonu.',
+      en: 'CCTV, wiring, cove lighting and on-site installs in Tabriz — WhatsApp coordination by Bizdavar.',
+      ru: 'CCTV, проводка, скрытая подсветка и монтаж в Тебризе — WhatsApp Bizdavar.',
+      ar: 'كاميرات وتوصيلات وإضاءة مخفية وتركيب ميداني في تبريز — تنسيق واتساب.'
     },
     keywords: {
       fa: 'خدمات فنی تبریز, دوربین مداربسته, نورمخفی, بیزدوار',
       tr: 'saha hizmeti, CCTV, gizli aydınlatma, Bizdavar',
-      en: 'field tech, CCTV, cove lighting, Bizdavar Tabriz Istanbul',
+      en: 'field tech, CCTV, cove lighting, Bizdavar Tabriz',
       ru: 'выездные услуги, CCTV, Bizdavar',
       ar: 'خدمات ميدانية, كاميرات, بيزدوار'
     },
@@ -1210,7 +1210,7 @@ ${fig('/' + a.extraImg, 'سنسور صنعتی VEGA — مکمل Prosense در �
 <h2 id="ch-quote">مسیر استعلام</h2>
 <p>لیست نقاط + datasheet فرآیند → کد سفارش → پیش‌فاکتور. راهنمای VEGA: <a href="/pages/articles/vega-supply-iran">تامین VEGA ایران</a>. شروع: <a href="/pages/contact?product=Prosense">استعلام Prosense</a>.</p>`,
     'field-tech-services': `
-<p>کنار خدمات دیجیتال، بیزدوار در <strong>تبریز</strong> و <strong>استانبول</strong> اجرای میدانی دوربین، سیم‌کشی و نورمخفی انجام می‌دهد — هماهنگی از <a href="/pages/field-tech">صفحه فیلد تک</a> و واتساپ تخصصی.</p>
+<p>کنار خدمات دیجیتال، بیزدوار در <strong>تبریز</strong> اجرای میدانی دوربین، سیم‌کشی و نورمخفی انجام می‌دهد — هماهنگی از <a href="/pages/field-tech">صفحه فیلد تک</a> و واتساپ تخصصی.</p>
 ${fig('/' + a.image, 'خدمات فنی میدانی — دوربین و نورمخفی', 'بازدید میدانی قبل از برآورد نهایی.')}
 <h2 id="ch-scope">حوزه‌ها</h2>
 <ul>
@@ -1220,7 +1220,7 @@ ${fig('/' + a.image, 'خدمات فنی میدانی — دوربین و نور�
 </ul>
 <p>خدمات آنلاین (وب، SMM) در <a href="/pages/services">صفحه خدمات</a> جدا است.</p>
 <h2 id="ch-cities">شهرها</h2>
-<p><strong>تبریز:</strong> پروژه‌های مسکونی، اداری و صنعتی. <strong>استانبول:</strong> هماهنگی با تیم محلی. تماس دو زبانه از <a href="/pages/contact">فرم تماس</a>.</p>
+<p><strong>تبریز:</strong> پروژه‌های مسکونی، اداری و صنعتی. تماس از <a href="/pages/contact">فرم تماس</a>.</p>
 <h2 id="ch-process">فرآیند</h2>
 <ol>
 <li>عکس/پلان + نیاز در واتساپ</li>
@@ -1298,7 +1298,7 @@ ${fig('/' + a.extraImg, 'Digital marketing channels connected to a service landi
     'multilingual-web-iran-turkey': `<p>A business serving Persian and Turkish customers fails with one language or machine translation without hreflang. Bizdavar ships this pattern in projects and <a href="/pages/fast">Fast Web Studio</a>.</p>${fig('/' + a.image, 'Multilingual corporate website design on a desktop screen', 'Each language needs its own URL, hreflang and real copy.')}<h2 id="ch-why">Why two languages</h2><p>Local trust: WhatsApp numbers, RTL, separate currency. Persian service pages must not be broken Turkish clones.</p><h2 id="ch-tech">hreflang and indexing</h2><p>Separate URLs, per-locale canonicals, reciprocal hreflang. See <a href="https://developers.google.com/search/docs/specialty/international/localized-versions" rel="noopener noreferrer" target="_blank">Google localized versions</a>. This site’s <a href="/pages/blog">blog</a> uses fa/tr/en/ru/ar.</p><h2 id="ch-trust">Local trust</h2><ul><li><a href="/pages/portfolio">Portfolio</a></li><li><a href="/pages/contact">Bilingual contact</a></li><li>Cluster articles instead of one URL for all languages</li></ul><p>Order: <a href="/pages/services#web-design">web design</a>.</p>`,
     'marvi-society-ios-app': `<p><strong>Marvi Society</strong> is an invite-only creator and venue club in Istanbul — native iOS with events, discovery and profiles. <a href="/pages/about">Bizdavar</a> delivered UI/UX, Swift development and <a href="/pages/marvi-society">App Store</a> release.</p>${fig('/' + a.image, 'Marvi Society — event discovery screen on iOS', 'Native design for invite-only onboarding.')}<h2 id="ch-brief">Project brief</h2><p>The brand needed a native app, not a PWA: wireframes → UI kit → Swift → TestFlight → App Store. Screenshots and download link on the <a href="/pages/marvi-society">case study page</a> and <a href="/pages/portfolio">portfolio</a>.</p><h2 id="ch-stack">Stack</h2><ul><li>Swift (UIKit/SwiftUI)</li><li>Events and creator profile APIs</li><li>Push and invite deep links</li></ul>${fig('/' + a.extraImg, 'Marvi Society — events feed and profile', 'Each screen ties to a clear CTA — similar to a sales landing.')}<h2 id="ch-features">Key features</h2><p>Venue discovery, RSVP, creator profiles and invite flow. Similar project: <a href="/pages/services#app-development">app services</a> or <a href="/pages/contact">contact</a>. Related: <a href="/pages/articles/fast-studio">Fast Studio</a> (web) and <a href="/pages/articles/multilingual-web-iran-turkey">multilingual web</a>.</p>`,
     'prosense-gas-detection': `<p>Process safety needs gas and flame detection. <a href="/pages/prosense">Prosense</a> covers PQ lines and SIL for oil, petrochemical and HVAC — Bizdavar B2B quotes alongside <a href="/pages/vega">VEGA</a> on one project.</p>${fig('/' + a.image, 'Prosense gas detector in industrial setting', 'Send Ex/SIL requirements in the first message.')}<h2 id="ch-why">Why Prosense</h2><p>Specialist gas/flame brand with SIL support — complements VEGA level sensors. Catalog: <a href="/pages/prosense">Prosense page</a>.</p><h2 id="ch-models">Model choice</h2><ul><li>Target gas (CH₄, H₂S, CO…)</li><li>Ex zone and SIL</li><li>Head mount vs remote sensor</li></ul>${fig('/' + a.extraImg, 'VEGA industrial sensor — companion to Prosense', 'VEGA level/pressure; Prosense gas — both via <a href="/pages/products#supply">industrial supply</a>.')}<h2 id="ch-quote">Quote path</h2><p>Point list + process data → order code → proforma. VEGA guide: <a href="/pages/articles/vega-supply-iran">VEGA for Iran</a>. Start: <a href="/pages/contact?product=Prosense">Prosense inquiry</a>.</p>`,
-    'field-tech-services': `<p>Beyond digital services, Bizdavar runs on-site CCTV, wiring and cove lighting in <strong>Tabriz</strong> and <strong>Istanbul</strong> — coordinated via the <a href="/pages/field-tech">field tech page</a> and dedicated WhatsApp.</p>${fig('/' + a.image, 'Field tech services — CCTV and lighting', 'Site visit before final quote when needed.')}<h2 id="ch-scope">Scope</h2><ul><li>CCTV and NVR</li><li>Building and equipment wiring</li><li>Cove lighting and LED</li></ul><p>Online services (web, SMM) live on the <a href="/pages/services">services page</a>.</p><h2 id="ch-cities">Cities</h2><p><strong>Tabriz:</strong> residential, office and industrial sites. <strong>Istanbul:</strong> local team coordination. Bilingual contact: <a href="/pages/contact">contact form</a>.</p><h2 id="ch-process">Process</h2><ol><li>Photos/plan + need on WhatsApp</li><li>Site visit if required</li><li>Quote and schedule</li><li>Install and handover</li></ol><p>Related digital article: <a href="/pages/articles/local-seo-iran">local SEO</a> for nearby customers.</p>`,
+    'field-tech-services': `<p>Beyond digital services, Bizdavar runs on-site CCTV, wiring and cove lighting in <strong>Tabriz</strong> — coordinated via the <a href="/pages/field-tech">field tech page</a> and dedicated WhatsApp.</p>${fig('/' + a.image, 'Field tech services — CCTV and lighting', 'Site visit before final quote when needed.')}<h2 id="ch-scope">Scope</h2><ul><li>CCTV and NVR</li><li>Building and equipment wiring</li><li>Cove lighting and LED</li></ul><p>Online services (web, SMM) live on the <a href="/pages/services">services page</a>.</p><h2 id="ch-cities">Cities</h2><p><strong>Tabriz:</strong> residential, office and industrial sites. Contact: <a href="/pages/contact">contact form</a>.</p><h2 id="ch-process">Process</h2><ol><li>Photos/plan + need on WhatsApp</li><li>Site visit if required</li><li>Quote and schedule</li><li>Install and handover</li></ol><p>Related digital article: <a href="/pages/articles/local-seo-iran">local SEO</a> for nearby customers.</p>`,
     'local-seo-iran': `<p>Physical businesses in Iran lose nearby customers without <strong>local search</strong> and Google Maps presence. Bizdavar ties local SEO to <a href="/pages/services#digital-marketing">digital campaigns</a> and <a href="/pages/fast">Fast landing pages</a>.</p>${fig('/' + a.image, 'Digital channels including local search', 'Maps should link to the same WhatsApp as the website.')}<h2 id="ch-gbp">Google Business Profile</h2><p>Accurate name, address, hours and category — real project photos from <a href="/pages/portfolio">portfolio</a>. Primer: <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" rel="noopener noreferrer" target="_blank">Google SEO Starter Guide</a>.</p><h2 id="ch-nap">Consistent NAP</h2><p>Name, address and phone must match across site, Maps and social — or local rankings suffer.</p><h2 id="ch-pages">Pages and internal links</h2><p>Service page plus cluster articles (<a href="/pages/articles/what-is-digital-marketing">digital marketing</a>, <a href="/pages/articles/social-media-management">SMM</a>) linking back to Maps. Multi-city: <a href="/pages/articles/multilingual-web-iran-turkey">multilingual web</a>.</p>${fig('/' + a.extraImg, 'Digital sales funnel — Maps to WhatsApp', 'Every local click should reach form or WhatsApp.')}<p>Start: <a href="/pages/contact">SEO consultation</a>.</p>`,
     'liqui-moly-supply-iran': `<p>Fleets, workshops and plants need <strong>genuine</strong> oils and additives — not grey-market stock. Bizdavar supplies <a href="/pages/liqui-moly">Liqui Moly</a> Germany with B2B proforma, alongside <a href="/pages/gamak">Gamak</a> and <a href="/pages/vega">VEGA</a>.</p>${fig('/' + a.image, 'Liqui Moly Octane Plus additive', 'List SKU and volume in your inquiry.')}<h2 id="ch-lines">Product lines</h2><ul><li>Engine oils (petrol/diesel)</li><li>Gear and hydraulic fluids</li><li>Additives (Octane Plus etc.)</li></ul><p>Full catalog: <a href="/pages/liqui-moly">Liqui Moly page</a> · Other B2B: <a href="/pages/products#supply">supply products</a>.</p><h2 id="ch-use">Use cases</h2><p>Transport fleets, garages, industrial machinery — volume and lead time on a clear proforma.</p><h2 id="ch-quote">Quote</h2><p>SKU list or label photo → proforma → order. Related: <a href="/pages/articles/industrial-sensors">industrial sensors</a>. <a href="/pages/contact?product=Liqui%20Moly">Liqui Moly contact</a>.</p>`
   };
@@ -1346,7 +1346,7 @@ ${fig('/' + a.extraImg, 'Hizmet sayfasına bağlanan dijital pazarlama kanallar�
     'multilingual-web-iran-turkey': `<p>Farsça ve Türkçe müşteriye tek dilli veya hreflang’sız çeviri yetmez. Bizdavar bunu <a href="/pages/fast">Fast Web Studio</a>’da kurar.</p>${fig('/' + a.image, 'Masaüstünde çok dilli kurumsal web sitesi', 'Her dilin ayrı URL ve gerçek metni olmalı.')}<h2 id="ch-why">Neden iki dil</h2><p>WhatsApp, RTL, para birimi. Bozuk klon sayfalar güven kırar.</p><h2 id="ch-tech">hreflang</h2><p>Ayrı URL, kanonik, karşılıklı hreflang. <a href="https://developers.google.com/search/docs/specialty/international/localized-versions" rel="noopener noreferrer" target="_blank">Google localized versions</a>. <a href="/pages/blog">Blog</a> fa/tr/en/ru/ar kullanır.</p><h2 id="ch-trust">Yerel güven</h2><ul><li><a href="/pages/portfolio">Portföy</a></li><li><a href="/pages/contact">İletişim</a></li></ul><p><a href="/pages/services#web-design">Web tasarım</a>.</p>`,
     'marvi-society-ios-app': `<p><strong>Marvi Society</strong> İstanbul’da davetli creator kulübü — native iOS. <a href="/pages/about">Bizdavar</a> UI/UX, Swift ve <a href="/pages/marvi-society">App Store</a> yayını.</p>${fig('/' + a.image, 'Marvi Society — iOS etkinlik keşfi', 'Davetli onboarding için native tasarım.')}<h2 id="ch-brief">Özet</h2><p>Wireframe → UI → Swift → TestFlight → App Store. <a href="/pages/marvi-society">Vaka sayfası</a> · <a href="/pages/portfolio">Portföy</a>.</p><h2 id="ch-stack">Teknoloji</h2><ul><li>Swift</li><li>Etkinlik API</li><li>Push ve deep link</li></ul>${fig('/' + a.extraImg, 'Marvi Society — etkinlik akışı', 'Her ekran net CTA ile biter.')}<h2 id="ch-features">Özellikler</h2><p>Mekan keşfi, RSVP, profil. <a href="/pages/services#app-development">Uygulama hizmetleri</a> · <a href="/pages/contact">İletişim</a>.</p>`,
     'prosense-gas-detection': `<p>Proses güvenliği için <a href="/pages/prosense">Prosense</a> gaz/alev dedektörü — Bizdavar B2B teklif, <a href="/pages/vega">VEGA</a> ile aynı projede.</p>${fig('/' + a.image, 'Prosense gaz dedektörü', 'Ex/SIL ilk mesajda.')}<h2 id="ch-why">Neden Prosense</h2><p><a href="/pages/prosense">Prosense sayfası</a>.</p><h2 id="ch-models">Model</h2><ul><li>Gaz tipi</li><li>Ex ve SIL</li></ul><h2 id="ch-quote">Teklif</h2><p><a href="/pages/articles/vega-supply-iran">VEGA rehberi</a> · <a href="/pages/contact?product=Prosense">Prosense teklif</a>.</p>`,
-    'field-tech-services': `<p>Bizdavar <strong>Tebriz</strong> ve <strong>İstanbul</strong>’da CCTV, kablolama ve gizli aydınlatma — <a href="/pages/field-tech">saha hizmetleri</a>.</p>${fig('/' + a.image, 'Saha teknik hizmetleri', 'Keşif sonrası teklif.')}<h2 id="ch-scope">Kapsam</h2><ul><li>CCTV</li><li>Kablolama</li><li>LED aydınlatma</li></ul><p><a href="/pages/services">Dijital hizmetler</a> ayrı.</p><h2 id="ch-process">Süreç</h2><ol><li>WhatsApp + foto</li><li>Keşif</li><li>Teklif</li><li>Montaj</li></ol><p><a href="/pages/articles/local-seo-iran">Yerel SEO</a>.</p>`,
+    'field-tech-services': `<p>Bizdavar <strong>Tebriz</strong>’de CCTV, kablolama ve gizli aydınlatma — <a href="/pages/field-tech">saha hizmetleri</a>.</p>${fig('/' + a.image, 'Saha teknik hizmetleri', 'Keşif sonrası teklif.')}<h2 id="ch-scope">Kapsam</h2><ul><li>CCTV</li><li>Kablolama</li><li>LED aydınlatma</li></ul><p><a href="/pages/services">Dijital hizmetler</a> ayrı.</p><h2 id="ch-process">Süreç</h2><ol><li>WhatsApp + foto</li><li>Keşif</li><li>Teklif</li><li>Montaj</li></ol><p><a href="/pages/articles/local-seo-iran">Yerel SEO</a>.</p>`,
     'local-seo-iran': `<p>İran’daki fiziksel işletmeler <strong>yerel arama</strong> olmadan müşteri kaybeder. Bizdavar <a href="/pages/services#digital-marketing">dijital pazarlama</a> + <a href="/pages/fast">Fast landing</a>.</p>${fig('/' + a.image, 'Yerel arama kanalları', 'Maps = site WhatsApp.')}<h2 id="ch-gbp">Google Business</h2><p><a href="/pages/portfolio">Portföy</a> fotoğrafları.</p><h2 id="ch-nap">NAP</h2><p>Site, Maps, sosyal aynı bilgi.</p><h2 id="ch-pages">Sayfalar</h2><p><a href="/pages/articles/what-is-digital-marketing">Dijital pazarlama</a> · <a href="/pages/contact">İletişim</a>.</p>`,
     'liqui-moly-supply-iran': `<p>Filo ve atölyeler için orijinal <a href="/pages/liqui-moly">Liqui Moly</a> — Bizdavar B2B proforma.</p>${fig('/' + a.image, 'Liqui Moly Octane Plus', 'SKU listesi gönderin.')}<h2 id="ch-lines">Ürün grupları</h2><ul><li>Motor yağı</li><li>Şanzıman</li><li>Katkılar</li></ul><p><a href="/pages/liqui-moly">Katalog</a> · <a href="/pages/contact?product=Liqui%20Moly">Teklif</a>.</p>`
   };

@@ -217,7 +217,7 @@
 
   const page = {
     fa: {
-      aboutPage: { hero: { tag: 'درباره بیزدوار', title: 'بیزدوار سه کار جدا می‌کند', desc: 'خدمات دیجیتال، محصولات خودمان، یا تامین صنعتی — از سال ۱۳۹۲.' }, whatIs: { title: 'بیزدوار گروپ چیست؟', p1: 'بیزدوار گروپ از سال <strong>۱۳۹۲ / ۲۰۱۳</strong> در استانبول کار می‌کند — بنیان‌گذار: <strong>ارسان جاهد تبریزی</strong>. سه کار جدا: <a href="/pages/services">خدمات دیجیتال</a>، <a href="/pages/products">محصولات خودمان</a> مثل BizPet و FXGuard، و <a href="/pages/products#supply">تامین صنعتی</a> VEGA، Prosense و Liqui Moly.', p2: 'بیش از ۱۰۰ پروژه در ۱۱ کشور. دفتر اصلی استانبول؛ ثبت شرکت در ایروان؛ شخصیت حقوقی ایران در تبریز. نمونه‌کارها در <a href="/pages/portfolio">پورتفولیو</a> است.' }, features: ['خدمات', 'محصولات', 'تامین صنعتی'], stats: [{ value: '+۱۳', label: 'سال تجربه' }, { value: '+۱۰۰', label: 'پروژه' }, { value: '۱۱', label: 'کشور' }, { value: '۳', label: 'مسیر کار' }], navAria: 'فهرست بخش‌های صفحه', nav: [{ href: '#profile', label: 'شناسنامه' }, { href: '#activities', label: 'تخصص‌ها' }, { href: '#ecosystem', label: 'اکوسیستم' }, { href: '#presence', label: 'حضور جهانی' }, { href: '#highlights', label: 'دستاوردها' }, { href: '#sources', label: 'منابع' }, { href: '#trust', label: 'اعتبار' }, { href: '#faq', label: 'سوالات' }], sections: { identityEyebrow: 'شناسنامه سازمانی', identityTitle: 'بیزدوار گروپ در یک نگاه', leadershipEyebrow: 'رهبری', leadershipTitle: 'بنیان‌گذار و تیم', activitiesEyebrow: 'سه مسیر کار', activitiesTitle: 'با کدام کار ما طرفید؟', ecosystemEyebrow: 'اکوسیستم', ecosystemTitle: 'برندها و پروژه‌های مرتبط', ecosystemDesc: 'نمونه‌ای از اکوسیستم دیجیتال و صنعتی که بیزدوار در توسعه یا مدیریت آن نقش داشته', presenceEyebrow: 'حضور جهانی', presenceTitle: 'کشورهای فعال', presenceDesc: 'شبکه بین‌المللی پروژه‌ها — از استانبول و ایروان تا اروپا و آمریکا', exhibitionsEyebrow: 'نمایشگاه و رویداد', exhibitionsTitle: 'حضور در نمایشگاه‌های فناوری', exhibitionsDesc: 'رویدادهای نوآوری و تجاری‌سازی فناوری — از RINOTEX تبریز تا نمایشگاه‌های دانشگاهی', achievementsEyebrow: 'دستاوردها', achievementsTitle: 'محصولات و نوآوری‌های بیزدوار', achievementsDesc: 'علاوه بر خدمات دیجیتال و تامین صنعتی، تیم بیزدوار محصولات اختصاصی نیز طراحی و توسعه داده است', sourcesEyebrow: 'منابع معتبر', sourcesTitle: 'رسانه، نمایشگاه و منابع قابل راستی‌آزمایی', sourcesDesc: 'لینک‌های رسمی که درباره محصولات، نمایشگاه‌ها و سوابق بیزدوار منتشر شده‌اند — مستقل از ادعاهای داخلی سایت.', credentialsEyebrow: 'گواهینامه‌ها', credentialsTitle: 'مهارت‌های تأییدشده', proofEyebrow: 'اعتبار حرفه‌ای', proofTitle: 'بازخورد و شاخص‌های اعتماد', proofDesc: 'بر اساس منابع عمومی قابل راستی‌آزمایی — بدون نظر ساختگی', faqEyebrow: 'سوالات متداول', faqTitle: 'پرسش‌های رایج درباره بیزدوار' }, relatedLinks: [{ title: 'خدمات ما', url: 'services', desc: 'بازاریابی دیجیتال، وب، SMM و صنعت' }, { title: 'نمونه‌کارها', url: 'portfolio', desc: 'ZedPay، BZ Diamond و...' }, { title: 'تماس با ما', url: 'contact', desc: 'مشاوره رایگان' }], values: { title: 'ارزش‌های ما', items: [{ title: 'تمرکز بر نتیجه', desc: 'افزایش فروش، تبدیل و رشد برند — نه فقط اجرا.' }, { title: 'همکاری شفاف', desc: 'گزارش‌دهی منظم و ارتباط مستقیم با تیم.' }, { title: 'بازار جهانی', desc: 'پروژه در ایران، ترکیه و بازارهای بین‌المللی.' }, { title: 'سرعت اجرا', desc: 'Fast Web Studio — تحویل سایت در ۵ روز.' }] }, cta: { title: 'آماده همکاری با بیزدوار هستید؟', desc: 'مشاوره اولیه رایگان — از طریق <a href="/pages/contact" class="link-yellow">فرم تماس</a> یا واتساپ.', btn: 'تماس با ما' } },
+      aboutPage: { hero: { tag: 'درباره بیزدوار', title: 'بیزدوار سه کار جدا می‌کند', desc: 'خدمات دیجیتال، محصولات خودمان، یا تامین صنعتی — از سال ۱۳۹۲.' }, whatIs: { title: 'بیزدوار گروپ چیست؟', p1: 'بیزدوار گروپ از سال <strong>۱۳۹۲ / ۲۰۱۳</strong> کار می‌کند — بنیان‌گذار: <strong>ارسان جاهد تبریزی</strong>. سه کار جدا: <a href="/pages/services">خدمات دیجیتال</a>، <a href="/pages/products">محصولات خودمان</a> مثل BizPet و FXGuard، و <a href="/pages/products#supply">تامین صنعتی</a> VEGA، Prosense و Liqui Moly.', p2: 'بیش از ۱۰۰ پروژه در ۱۱ کشور. ثبت شرکت در ایروان؛ شخصیت حقوقی ایران در تبریز. نمونه‌کارها در <a href="/pages/portfolio">پورتفولیو</a> است.' }, features: ['خدمات', 'محصولات', 'تامین صنعتی'], stats: [{ value: '+۱۳', label: 'سال تجربه' }, { value: '+۱۰۰', label: 'پروژه' }, { value: '۱۱', label: 'کشور' }, { value: '۳', label: 'مسیر کار' }], navAria: 'فهرست بخش‌های صفحه', nav: [{ href: '#profile', label: 'شناسنامه' }, { href: '#activities', label: 'تخصص‌ها' }, { href: '#ecosystem', label: 'اکوسیستم' }, { href: '#presence', label: 'حضور جهانی' }, { href: '#highlights', label: 'دستاوردها' }, { href: '#sources', label: 'منابع' }, { href: '#trust', label: 'اعتبار' }, { href: '#faq', label: 'سوالات' }], sections: { identityEyebrow: 'شناسنامه سازمانی', identityTitle: 'بیزدوار گروپ در یک نگاه', leadershipEyebrow: 'رهبری', leadershipTitle: 'بنیان‌گذار و تیم', activitiesEyebrow: 'سه مسیر کار', activitiesTitle: 'با کدام کار ما طرفید؟', ecosystemEyebrow: 'اکوسیستم', ecosystemTitle: 'برندها و پروژه‌های مرتبط', ecosystemDesc: 'نمونه‌ای از اکوسیستم دیجیتال و صنعتی که بیزدوار در توسعه یا مدیریت آن نقش داشته', presenceEyebrow: 'حضور جهانی', presenceTitle: 'کشورهای فعال', presenceDesc: 'شبکه بین‌المللی پروژه‌ها — از تبریز و ایروان تا اروپا و آمریکا', exhibitionsEyebrow: 'نمایشگاه و رویداد', exhibitionsTitle: 'حضور در نمایشگاه‌های فناوری', exhibitionsDesc: 'رویدادهای نوآوری و تجاری‌سازی فناوری — از RINOTEX تبریز تا نمایشگاه‌های دانشگاهی', achievementsEyebrow: 'دستاوردها', achievementsTitle: 'محصولات و نوآوری‌های بیزدوار', achievementsDesc: 'علاوه بر خدمات دیجیتال و تامین صنعتی، تیم بیزدوار محصولات اختصاصی نیز طراحی و توسعه داده است', sourcesEyebrow: 'منابع معتبر', sourcesTitle: 'رسانه، نمایشگاه و منابع قابل راستی‌آزمایی', sourcesDesc: 'لینک‌های رسمی که درباره محصولات، نمایشگاه‌ها و سوابق بیزدوار منتشر شده‌اند — مستقل از ادعاهای داخلی سایت.', credentialsEyebrow: 'گواهینامه‌ها', credentialsTitle: 'مهارت‌های تأییدشده', proofEyebrow: 'اعتبار حرفه‌ای', proofTitle: 'بازخورد و شاخص‌های اعتماد', proofDesc: 'بر اساس منابع عمومی قابل راستی‌آزمایی — بدون نظر ساختگی', faqEyebrow: 'سوالات متداول', faqTitle: 'پرسش‌های رایج درباره بیزدوار' }, relatedLinks: [{ title: 'خدمات ما', url: 'services', desc: 'بازاریابی دیجیتال، وب، SMM و صنعت' }, { title: 'نمونه‌کارها', url: 'portfolio', desc: 'ZedPay، BZ Diamond و...' }, { title: 'تماس با ما', url: 'contact', desc: 'مشاوره رایگان' }], values: { title: 'ارزش‌های ما', items: [{ title: 'تمرکز بر نتیجه', desc: 'افزایش فروش، تبدیل و رشد برند — نه فقط اجرا.' }, { title: 'همکاری شفاف', desc: 'گزارش‌دهی منظم و ارتباط مستقیم با تیم.' }, { title: 'بازار جهانی', desc: 'پروژه در ایران، ترکیه و بازارهای بین‌المللی.' }, { title: 'سرعت اجرا', desc: 'Fast Web Studio — تحویل سایت در ۵ روز.' }] }, cta: { title: 'آماده همکاری با بیزدوار هستید؟', desc: 'مشاوره اولیه رایگان — از طریق <a href="/pages/contact" class="link-yellow">فرم تماس</a> یا واتساپ.', btn: 'تماس با ما' } },
       servicesPage: { hero: { tag: 'خدمات ما', title: 'خدمات دیجیتال و فنی بیزدوار', desc: 'بازاریابی، وب‌اپ، اپلیکیشن، سامانه، سرور و SMM — به‌همراه خدمات فنی دوربین، سیم‌کشی و نورمخفی. محصولات در <a href="products">صفحه محصولات</a> هستند.' }, overview: { eyebrow: 'نمای کلی', title: 'شش محور خدمات بیزدوار', desc: 'دیجیتال و نرم‌افزار در بالا — خدمات فنی ساختمانی با هماهنگی واتساپ تخصصی در پایین.' }, navAria: 'فهرست خدمات', viewDetails: 'مشاهده جزئیات', stats: [{ value: '۶', label: 'محور خدمات' }, { value: '۱۰۰+', label: 'پروژه' }, { value: '۲', label: 'شهر فنی' }, { value: '۱۳+', label: 'سال تجربه' }], cards: serviceBlocks.fa.map(({ title, body, ...rest }) => ({ title, desc: rest.subtitle || body })), blocks: serviceBlocks.fa, panels: servicesPanels.fa, relatedLinks: servicesRelatedLinks.fa, process: { eyebrow: 'فرآیند همکاری', title: 'چگونه با ما کار می‌کنید؟', desc: 'مسیر همکاری ساده، شفاف و قابل پیگیری است.', steps: [{ title: 'مشاوره', desc: 'شناخت نیاز و اهداف کسب‌وکار' }, { title: 'طراحی راهکار', desc: 'پیشنهاد فنی و برآورد زمان‌بندی' }, { title: 'اجرا', desc: 'پیاده‌سازی یا راه‌اندازی کمپین' }, { title: 'پشتیبانی', desc: 'گزارش‌دهی، بهینه‌سازی و همراهی مستمر' }] }, cta: { title: 'نیاز به راهکار اختصاصی دارید؟', desc: 'مشاوره رایگان — نمونه پروژه‌ها در <a href="portfolio">نمونه‌کارهای بیزدوار</a>', btn: 'مشاوره رایگان', btnSecondary: 'مشاهده نمونه‌کارها' } },
       portfolioPage: { hero: { tag: 'نمونه‌کارها', title: 'خدمات، محصولات و پروژه‌های اجراشده بیزدوار', desc: 'طراحی وب، بازاریابی دیجیتال، SMM، محصولات FXGuard و Fast Web Studio، و تامین صنعتی VEGA / Prosense / Liqui Moly — <a href="about">درباره بیزدوار</a>.' }, areas: { eyebrow: 'حوزه‌ها', title: 'دامنه فعالیت پروژه‌ها' }, archived: { eyebrow: 'پروژه‌های گذشته', title: 'همکاری‌های قبلی و ناتمام', desc: 'پروژه‌هایی که دیگر لینک زنده ندارند یا به‌صورت ناتمام متوقف شده‌اند — از جمله سایت‌هایی که سرورشان تمدید نشده یا مارکت‌پلیس‌هایی که تکمیل نشده‌اند. فقط به‌صورت خلاصه ذکر می‌شوند.' }, tags: ['فین‌تک و پرداخت', 'حسابداری و فینانس', 'هوش مصنوعی', 'اپ موبایل iOS', 'رویداد و بلیت', 'هلدینگ و سرمایه‌گذاری', 'هاستینگ و زیرساخت', 'طراحی وب و فروشگاه', 'تجارت بین‌المللی', 'تجارت سوئیسی', 'پنل SMM', 'مدیریت SMM', 'تامین صنعتی', 'سنسور VEGA', 'دتکتور Prosense', 'هواپیمایی', 'بروکر و مالی'], cta: { title: 'پروژه بعدی می‌تواند برند شما باشد', desc: 'از <a href="fast" class="link-yellow">طراحی وب</a> تا مدیریت DNS و SSL — بیزدوار همراه شماست.', btnPrimary: 'شروع پروژه جدید', btnSecondary: 'مشاهده خدمات' }, filters: [{ id: 'all', label: 'همه' }, { id: 'case-study', label: 'نمونه‌کارها' }, { id: 'client', label: 'مشتریان' }, { id: 'ecosystem', label: 'اکوسیستم' }, { id: 'fintech', label: 'فین‌تک' }, { id: 'digital', label: 'دیجیتال' }, { id: 'industrial', label: 'صنعتی' }, { id: 'other', label: 'سایر' }], roleLabels: { ecosystem: 'اکوسیستم', 'case-study': 'نمونه‌کار', client: 'مشتری', website: 'وبسایت', page: 'صفحه بیزدوار' }, statsLabels: ['پروژه و برند', 'نمونه‌کار', 'مشتری', 'اکوسیستم'], filterAria: 'فیلتر نمونه‌کارها', countText: '{count} مورد نمایش داده می‌شود', relatedLinks: portfolioRelatedLinks.fa },
       blogPage: {
@@ -274,7 +274,7 @@
             { title: 'کاتالوگ VEGA', url: '/pages/vega', desc: 'سنسور سطح و فشار' },
             { title: 'Prosense', url: '/pages/prosense', desc: 'دتکتور گاز' },
             { title: 'Liqui Moly', url: '/pages/liqui-moly', desc: 'روغن و افزودنی' },
-            { title: 'خدمات فنی', url: '/pages/field-tech', desc: 'تبریز و استانبول' },
+            { title: 'خدمات فنی', url: '/pages/field-tech', desc: 'تبریز' },
             { title: 'نمونه‌کارها', url: '/pages/portfolio', desc: 'Marvi، FXGuard و…' },
             { title: 'Marvi Society', url: '/pages/marvi-society', desc: 'اپ iOS' },
             { title: 'محصولات', url: '/pages/products', desc: 'BizTab و BizPet' },
@@ -334,17 +334,17 @@
         industries: { eyebrow: 'صنایع جهانی', title: 'کاربرد در صنایع مختلف', desc: 'الکتروموتور Gamak برای هر بخش صنعتی' },
         supply: { eyebrow: 'تامین از بیزدوار', title: 'خدمات تامین Gamak', desc: 'شریک تامین شما — نه فقط فروشنده' },
         faq: { eyebrow: 'سوالات متداول', title: 'پرسش‌های رایج خریداران ایرانی', desc: 'پاسخ سوال خود را پیدا نکردید؟ مستقیم با ما در تماس باشید.' }
-      }, officialNote: 'اطلاعات فنی بر اساس <a href="https://www.gamak.com/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Gamak</a> است. برای استعلام — <a href="contact">با بیزدوار تماس بگیرید</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'آماده استعلام قیمت Gamak هستید؟', desc: 'توان kW، دور rpm و نوع کاربرد را بفرستید — IE2/IE3/IE4 · Ex-proof · MV', btnForm: 'فرم استعلام', btnServices: 'کاتالوگ محصولات' }, sticky: { label: 'استعلام Gamak' }, geoText: 'تامین Gamak از ترکیه به ایران — مشاوره فنی فارسی، پیش‌فاکتور و لجستیک توسط بیزدوار گروپ.', related: [{ title: 'محصولات VEGA', desc: 'سنسور سطح و فشار' }, { title: 'محصولات Prosense', desc: 'دتکتور گاز و شعله' }, { title: 'کاتالوگ محصولات', desc: 'برندهای تامین B2B' }, { title: 'تماس و استعلام', desc: 'مشاوره رایگان' }] },
+      }, officialNote: 'اطلاعات فنی بر اساس <a href="https://www.gamak.com/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Gamak</a> است. برای استعلام — <a href="contact">با بیزدوار تماس بگیرید</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'آماده استعلام قیمت Gamak هستید؟', desc: 'توان kW، دور rpm و نوع کاربرد را بفرستید — IE2/IE3/IE4 · Ex-proof · MV', btnForm: 'فرم استعلام', btnServices: 'کاتالوگ محصولات' }, sticky: { label: 'استعلام Gamak' }, geoText: 'تامین Gamak به ایران — مشاوره فنی فارسی، پیش‌فاکتور و لجستیک توسط بیزدوار گروپ.', related: [{ title: 'محصولات VEGA', desc: 'سنسور سطح و فشار' }, { title: 'محصولات Prosense', desc: 'دتکتور گاز و شعله' }, { title: 'کاتالوگ محصولات', desc: 'برندهای تامین B2B' }, { title: 'تماس و استعلام', desc: 'مشاوره رایگان' }] },
       digiSystemPage: { sections: {
         trust: { eyebrow: 'چرا از بیزدوار بخرید؟', title: 'تامین مطمئن Digi System برای فروشگاه و واحد خرید شما', desc: 'ترازو، POS و peripheral — از انتخاب مدل تا تحویل در ایران.' },
         buy: { eyebrow: 'مسیر خرید', title: 'از استعلام تا تحویل — ۵ مرحله شفاف', desc: 'بدون پیچیدگی — هر مرحله را می‌دانید و در هر قدم در ارتباط هستید.' },
         highlights: { eyebrow: 'محصولات پرتقاضا', title: 'محصولات پرتقاضا Digi System', desc: 'ترازوی PC · POS یکپارچه · اسکنر و پرینتر — برای استعلام هر محصول دکمه «درخواست استعلام» را بزنید.' },
-        catalog: { eyebrow: 'کاتالوگ کامل', title: 'کاتالوگ کامل Digi System', desc: 'ترازو، POS، تجهیزات جانبی و نرم‌افزار خرده‌فروشی — تامین از ترکیه' },
+        catalog: { eyebrow: 'کاتالوگ کامل', title: 'کاتالوگ کامل Digi System', desc: 'ترازو، POS، تجهیزات جانبی و نرم‌افزار خرده‌فروشی' },
         iran: { eyebrow: 'کاربرد در ایران', title: 'Digi System در بازار خرده‌فروشی ایران', desc: 'نوع فروشگاه و تعداد صندوق را بفرستید — پکیج مناسب پیشنهاد می‌دهیم.' },
         industries: { eyebrow: 'صنایع جهانی', title: 'کاربرد در صنایع مختلف', desc: 'تجهیزات Digi برای انواع فروشگاه و رستوران/هتل (HORECA)' },
         supply: { eyebrow: 'تامین از بیزدوار', title: 'خدمات تامین Digi System', desc: 'شریک تامین شما — نه فقط فروشنده' },
         faq: { eyebrow: 'سوالات متداول', title: 'پرسش‌های رایج خریداران ایرانی', desc: 'پاسخ سوال خود را پیدا نکردید؟ مستقیم با ما در تماس باشید.' }
-      }, officialNote: 'اطلاعات فنی بر اساس <a href="https://www.digisystem.com.tr/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Digi System</a> است. برای استعلام — <a href="contact">با بیزدوار تماس بگیرید</a> · <a href="teraoka">Teraoka</a>', cta: { title: 'آماده استعلام قیمت Digi System هستید؟', desc: 'نوع فروشگاه، تعداد صندوق و نیاز ترازوی قانونی (legal-for-trade) را بفرستید', btnForm: 'فرم استعلام', btnServices: 'کاتالوگ محصولات' }, sticky: { label: 'استعلام Digi System' }, geoText: 'تامین Digi System از ترکیه به ایران — مشاوره فارسی، پیش‌فاکتور و لجستیک توسط بیزدوار گروپ.', related: [{ title: 'Teraoka Seiko', desc: 'ترازو و POS ژاپن' }, { title: 'کاتالوگ محصولات', desc: 'برندهای تامین' }, { title: 'تماس', desc: 'استعلام قیمت' }] },
+      }, officialNote: 'اطلاعات فنی بر اساس <a href="https://www.digisystem.com.tr/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Digi System</a> است. برای استعلام — <a href="contact">با بیزدوار تماس بگیرید</a> · <a href="teraoka">Teraoka</a>', cta: { title: 'آماده استعلام قیمت Digi System هستید؟', desc: 'نوع فروشگاه، تعداد صندوق و نیاز ترازوی قانونی (legal-for-trade) را بفرستید', btnForm: 'فرم استعلام', btnServices: 'کاتالوگ محصولات' }, sticky: { label: 'استعلام Digi System' }, geoText: 'تامین Digi System به ایران — مشاوره فارسی، پیش‌فاکتور و لجستیک توسط بیزدوار گروپ.', related: [{ title: 'Teraoka Seiko', desc: 'ترازو و POS ژاپن' }, { title: 'کاتالوگ محصولات', desc: 'برندهای تامین' }, { title: 'تماس', desc: 'استعلام قیمت' }] },
       teraokaPage: { sections: {
         trust: { eyebrow: 'چرا از بیزدوار بخرید؟', title: 'تامین مطمئن Teraoka Seiko برای فروشگاه و انبار شما', desc: 'ترازو، برچسب‌زن و POS ژاپن — مشاوره مدل و لجستیک بین‌المللی.' },
         buy: { eyebrow: 'مسیر خرید', title: 'از استعلام تا تحویل — ۵ مرحله شفاف', desc: 'بدون پیچیدگی — هر مرحله را می‌دانید و در هر قدم در ارتباط هستید.' },
@@ -367,7 +367,7 @@
         industries: { eyebrow: 'صنایع جهانی', title: 'راهکار VEGA برای صنایع مختلف', desc: '۱۵+ صنعت — از شیمیایی تا انرژی و محیط‌زیست' },
         supply: { eyebrow: 'تامین از بیزدوار', title: 'خدمات تامین VEGA توسط بیزدوار گروپ', desc: 'شریک تامین شما — نه فقط فروشنده' },
         faq: { eyebrow: 'سوالات متداول', title: 'پرسش‌های رایج خریداران ایرانی', desc: 'پاسخ سوال خود را پیدا نکردید؟ مستقیم با ما در تماس باشید.' }
-      }, officialNote: 'اطلاعات فنی محصولات بر اساس <a href="https://www.vega.com/en-ae" target="_blank" rel="noopener noreferrer">وبسایت رسمی VEGA</a> است. برای استعلام قیمت، کد سفارش و تامین — <a href="contact">با بیزدوار تماس بگیرید</a>.', cta: { title: 'آماده استعلام قیمت VEGA هستید؟', desc: 'نام محصول یا شرایط فرآیند را بفرستید — مشاوره فنی رایگان و پیش‌فاکتور شفاف', btnForm: 'فرم استعلام', btnServices: 'کاتالوگ محصولات' }, sticky: { label: 'استعلام VEGA', hint: 'مشاوره فنی فارسی · پاسخ سریع' }, geoText: 'تامین اصل سنسور VEGA به ایران — مشاوره فنی فارسی از استانبول، پیش‌فاکتور شفاف و لجستیک تا پروژه‌های صنعتی ایران.', related: [{ title: 'محصولات Prosense', desc: 'دتکتور گاز و شعله' }, { title: 'کاتالوگ محصولات', desc: 'برندهای تامین' }, { title: 'تماس و استعلام', desc: 'مشاوره رایگان' }] },
+      }, officialNote: 'اطلاعات فنی محصولات بر اساس <a href="https://www.vega.com/en-ae" target="_blank" rel="noopener noreferrer">وبسایت رسمی VEGA</a> است. برای استعلام قیمت، کد سفارش و تامین — <a href="contact">با بیزدوار تماس بگیرید</a>.', cta: { title: 'آماده استعلام قیمت VEGA هستید؟', desc: 'نام محصول یا شرایط فرآیند را بفرستید — مشاوره فنی رایگان و پیش‌فاکتور شفاف', btnForm: 'فرم استعلام', btnServices: 'کاتالوگ محصولات' }, sticky: { label: 'استعلام VEGA', hint: 'مشاوره فنی فارسی · پاسخ سریع' }, geoText: 'تامین اصل سنسور VEGA به ایران — مشاوره فنی فارسی، پیش‌فاکتور شفاف و لجستیک تا پروژه‌های صنعتی ایران.', related: [{ title: 'محصولات Prosense', desc: 'دتکتور گاز و شعله' }, { title: 'کاتالوگ محصولات', desc: 'برندهای تامین' }, { title: 'تماس و استعلام', desc: 'مشاوره رایگان' }] },
       prosensePage: { sections: {
         trust: { eyebrow: 'چرا از بیزدوار بخرید؟', title: 'تامین مطمئن Prosense برای واحد فنی و خرید شما', desc: 'ما فقط کاتالوگ نشان نمی‌دهیم — همراه شما از انتخاب گاز و مدل تا تحویل هستیم.' },
         buy: { eyebrow: 'مسیر خرید', title: 'از استعلام تا تحویل — ۵ مرحله شفاف', desc: 'بدون پیچیدگی — هر مرحله را می‌دانید و در هر قدم در ارتباط هستید.' },
@@ -401,7 +401,7 @@
       }, rateNote: { strong: '', body: '' }, officialNote: 'اطلاعات فنی بر اساس <a href="https://www.liqui-moly.com/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Liqui Moly</a> است. برای سفارش — <a href="contact">تماس با بیزدوار</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'آماده سفارش Liqui Moly هستید؟', desc: 'نام محصول یا کد SKU را بفرستید — Octane Plus · Top Tec · Molygen · افزودنی دیزل', btnForm: 'فرم استعلام', btnServices: 'کاتالوگ محصولات' }, sticky: { label: 'استعلام Liqui Moly', hint: 'قیمت دلاری · مشاوره فارسی' }, geoText: 'تامین اصل Liqui Moly — قیمت دلاری شفاف، مشاوره فارسی و لجستیک برای روغن، افزودنی و مراقبت خودرو.', related: [{ title: 'محصولات VEGA', desc: 'سنسور سطح و فشار صنعتی' }, { title: 'محصولات Prosense', desc: 'دتکتور گاز و شعله' }, { title: 'کاتالوگ محصولات', desc: 'برندهای تامین B2B' }, { title: 'تماس و استعلام', desc: 'استعلام قیمت Liqui Moly' }] }
     },
     tr: {
-      aboutPage: { hero: { tag: 'Bizdavar Hakkında', title: 'Bizdavar üç ayrı iş yapar', desc: 'Dijital hizmetler, kendi ürünlerimiz veya endüstriyel tedarik — 2013’ten beri.' }, whatIs: { title: 'Bizdavar Group nedir?', p1: 'Bizdavar Group <strong>2013</strong>’ten beri İstanbul’da çalışır — kurucu: <strong>Ersan Jahed Tabrizi</strong>. Üç ayrı iş: <a href="/pages/services">dijital hizmetler</a>, <a href="/pages/products">kendi ürünlerimiz</a> (BizPet, FXGuard), ve <a href="/pages/products#supply">endüstriyel tedarik</a> (VEGA, Prosense, Liqui Moly).', p2: '11 ülkede 100+ proje. Ana ofis İstanbul; şirket kaydı Erivan; İran tüzel kişiliği Tebriz. İşler <a href="/pages/portfolio">portfolyoda</a>.' }, features: ['Hizmetler', 'Ürünler', 'Tedarik'], stats: [{ value: '13+', label: 'Yıl deneyim' }, { value: '100+', label: 'Proje' }, { value: '11', label: 'Ülke' }, { value: '3', label: 'İş yolu' }], navAria: 'Sayfa bölümleri', nav: [{ href: '#profile', label: 'Kimlik' }, { href: '#activities', label: 'Uzmanlık' }, { href: '#ecosystem', label: 'Ekosistem' }, { href: '#presence', label: 'Küresel varlık' }, { href: '#highlights', label: 'Başarılar' }, { href: '#sources', label: 'Kaynaklar' }, { href: '#trust', label: 'Güven' }, { href: '#faq', label: 'SSS' }], sections: { identityEyebrow: 'Kurumsal kimlik', identityTitle: 'Bizdavar Group’a kısa bakış', leadershipEyebrow: 'Liderlik', leadershipTitle: 'Kurucu ve ekip', activitiesEyebrow: 'Üç iş yolu', activitiesTitle: 'Hangi işimizle geldiniz?', ecosystemEyebrow: 'Ekosistem', ecosystemTitle: 'İlgili marka ve projeler', ecosystemDesc: 'Bizdavar’ın geliştirdiği veya yönettiği dijital ve endüstriyel ekosistemden örnekler', presenceEyebrow: 'Küresel varlık', presenceTitle: 'Aktif ülkeler', presenceDesc: 'İstanbul ve Erivan’dan Avrupa ve Amerika’ya uzanan proje ağı', exhibitionsEyebrow: 'Fuar ve etkinlik', exhibitionsTitle: 'Teknoloji fuarlarındaki varlık', exhibitionsDesc: 'RINOTEX Tabriz’ten üniversite fuarlarına — inovasyon ve ticarileştirme etkinlikleri', achievementsEyebrow: 'Başarılar', achievementsTitle: 'Bizdavar ürün ve inovasyonları', achievementsDesc: 'Dijital hizmetler ve endüstriyel tedarikin yanı sıra Bizdavar ekibi özel ürünler de tasarladı', sourcesEyebrow: 'Doğrulanmış kaynaklar', sourcesTitle: 'Medya, fuarlar ve doğrulanabilir referanslar', sourcesDesc: 'Ürünler, fuarlar ve Bizdavar geçmişi hakkında yayımlanan resmi bağlantılar — site içi iddialardan bağımsız.', credentialsEyebrow: 'Sertifikalar', credentialsTitle: 'Doğrulanmış yetkinlikler', proofEyebrow: 'Profesyonel güven', proofTitle: 'Güven göstergeleri', proofDesc: 'Doğrulanabilir kamu kaynaklarına dayalıdır — sahte yorum yoktur', faqEyebrow: 'SSS', faqTitle: 'Bizdavar hakkında sık sorulanlar' }, relatedLinks: [{ title: 'Hizmetlerimiz', url: 'services', desc: 'Dijital pazarlama, web, SMM ve endüstri' }, { title: 'Portfolyo', url: 'portfolio', desc: 'ZedPay, BZ Diamond ve daha fazlası' }, { title: 'İletişim', url: 'contact', desc: 'Ücretsiz danışmanlık' }], values: { title: 'Değerlerimiz', items: [{ title: 'Sonuç odaklılık', desc: 'Sadece uygulama değil, satış, dönüşüm ve marka büyümesi.' }, { title: 'Şeffaf iş birliği', desc: 'Düzenli raporlama ve ekiple doğrudan iletişim.' }, { title: 'Küresel pazar', desc: 'İran, Türkiye ve uluslararası pazarlarda projeler.' }, { title: 'Hızlı uygulama', desc: 'Fast Web Studio — 5 günde web sitesi teslimi.' }] }, cta: { title: 'Bizdavar ile çalışmaya hazır mısınız?', desc: 'İlk danışmanlık ücretsiz — <a href="/pages/contact" class="link-yellow">iletişim formu</a> veya WhatsApp üzerinden.', btn: 'Bize ulaşın' } },
+      aboutPage: { hero: { tag: 'Bizdavar Hakkında', title: 'Bizdavar üç ayrı iş yapar', desc: 'Dijital hizmetler, kendi ürünlerimiz veya endüstriyel tedarik — 2013’ten beri.' }, whatIs: { title: 'Bizdavar Group nedir?', p1: 'Bizdavar Group <strong>2013</strong>’ten beri çalışır — kurucu: <strong>Ersan Jahed Tabrizi</strong>. Üç ayrı iş: <a href="/pages/services">dijital hizmetler</a>, <a href="/pages/products">kendi ürünlerimiz</a> (BizPet, FXGuard), ve <a href="/pages/products#supply">endüstriyel tedarik</a> (VEGA, Prosense, Liqui Moly).', p2: '11 ülkede 100+ proje. Şirket kaydı Erivan; İran tüzel kişiliği Tebriz. İşler <a href="/pages/portfolio">portfolyoda</a>.' }, features: ['Hizmetler', 'Ürünler', 'Tedarik'], stats: [{ value: '13+', label: 'Yıl deneyim' }, { value: '100+', label: 'Proje' }, { value: '11', label: 'Ülke' }, { value: '3', label: 'İş yolu' }], navAria: 'Sayfa bölümleri', nav: [{ href: '#profile', label: 'Kimlik' }, { href: '#activities', label: 'Uzmanlık' }, { href: '#ecosystem', label: 'Ekosistem' }, { href: '#presence', label: 'Küresel varlık' }, { href: '#highlights', label: 'Başarılar' }, { href: '#sources', label: 'Kaynaklar' }, { href: '#trust', label: 'Güven' }, { href: '#faq', label: 'SSS' }], sections: { identityEyebrow: 'Kurumsal kimlik', identityTitle: 'Bizdavar Group’a kısa bakış', leadershipEyebrow: 'Liderlik', leadershipTitle: 'Kurucu ve ekip', activitiesEyebrow: 'Üç iş yolu', activitiesTitle: 'Hangi işimizle geldiniz?', ecosystemEyebrow: 'Ekosistem', ecosystemTitle: 'İlgili marka ve projeler', ecosystemDesc: 'Bizdavar’ın geliştirdiği veya yönettiği dijital ve endüstriyel ekosistemden örnekler', presenceEyebrow: 'Küresel varlık', presenceTitle: 'Aktif ülkeler', presenceDesc: 'Tebriz ve Erivan’dan Avrupa ve Amerika’ya uzanan proje ağı', exhibitionsEyebrow: 'Fuar ve etkinlik', exhibitionsTitle: 'Teknoloji fuarlarındaki varlık', exhibitionsDesc: 'RINOTEX Tabriz’ten üniversite fuarlarına — inovasyon ve ticarileştirme etkinlikleri', achievementsEyebrow: 'Başarılar', achievementsTitle: 'Bizdavar ürün ve inovasyonları', achievementsDesc: 'Dijital hizmetler ve endüstriyel tedarikin yanı sıra Bizdavar ekibi özel ürünler de tasarladı', sourcesEyebrow: 'Doğrulanmış kaynaklar', sourcesTitle: 'Medya, fuarlar ve doğrulanabilir referanslar', sourcesDesc: 'Ürünler, fuarlar ve Bizdavar geçmişi hakkında yayımlanan resmi bağlantılar — site içi iddialardan bağımsız.', credentialsEyebrow: 'Sertifikalar', credentialsTitle: 'Doğrulanmış yetkinlikler', proofEyebrow: 'Profesyonel güven', proofTitle: 'Güven göstergeleri', proofDesc: 'Doğrulanabilir kamu kaynaklarına dayalıdır — sahte yorum yoktur', faqEyebrow: 'SSS', faqTitle: 'Bizdavar hakkında sık sorulanlar' }, relatedLinks: [{ title: 'Hizmetlerimiz', url: 'services', desc: 'Dijital pazarlama, web, SMM ve endüstri' }, { title: 'Portfolyo', url: 'portfolio', desc: 'ZedPay, BZ Diamond ve daha fazlası' }, { title: 'İletişim', url: 'contact', desc: 'Ücretsiz danışmanlık' }], values: { title: 'Değerlerimiz', items: [{ title: 'Sonuç odaklılık', desc: 'Sadece uygulama değil, satış, dönüşüm ve marka büyümesi.' }, { title: 'Şeffaf iş birliği', desc: 'Düzenli raporlama ve ekiple doğrudan iletişim.' }, { title: 'Küresel pazar', desc: 'İran, Türkiye ve uluslararası pazarlarda projeler.' }, { title: 'Hızlı uygulama', desc: 'Fast Web Studio — 5 günde web sitesi teslimi.' }] }, cta: { title: 'Bizdavar ile çalışmaya hazır mısınız?', desc: 'İlk danışmanlık ücretsiz — <a href="/pages/contact" class="link-yellow">iletişim formu</a> veya WhatsApp üzerinden.', btn: 'Bize ulaşın' } },
       servicesPage: { hero: { tag: 'Hizmetlerimiz', title: 'Bizdavar dijital ve teknik hizmetleri', desc: 'Pazarlama, web app, mobil, sistem, sunucu ve SMM — ayrıca CCTV, tesisat ve gizli aydınlatma. Ürünler <a href="products">ürünler sayfasında</a>.' }, overview: { eyebrow: 'Genel bakış', title: 'Altı Bizdavar hizmet alanı', desc: 'Dijital ve yazılım üstte — saha teknik hizmetleri aşağıda, özel teknik WhatsApp ile.' }, navAria: 'Hizmet listesi', viewDetails: 'Detayları gör', stats: [{ value: '6', label: 'Hizmet alanı' }, { value: '100+', label: 'Proje' }, { value: '2', label: 'Teknik şehir' }, { value: '13+', label: 'Yıl deneyim' }], cards: serviceBlocks.tr.map(({ title, body, ...rest }) => ({ title, desc: rest.subtitle || body })), blocks: serviceBlocks.tr, panels: servicesPanels.tr, relatedLinks: servicesRelatedLinks.tr, process: { eyebrow: 'İş birliği süreci', title: 'Nasıl çalışıyoruz?', desc: 'Sade, şeffaf ve takip edilebilir bir süreç.', steps: [{ title: 'Danışmanlık', desc: 'İhtiyaçları ve iş hedeflerini anlama' }, { title: 'Çözüm tasarımı', desc: 'Teknik öneri ve zaman planı' }, { title: 'Uygulama', desc: 'Kampanya, kurulum veya tedarik teslimi' }, { title: 'Destek', desc: 'Raporlama, optimizasyon ve sürekli destek' }] }, cta: { title: 'Özel bir çözüme mi ihtiyacınız var?', desc: 'Ücretsiz danışmanlık — proje örnekleri için <a href="portfolio">Bizdavar portfolyosu</a>', btn: 'Ücretsiz danışmanlık', btnSecondary: 'Portfolyoyu gör' } },
       portfolioPage: { hero: { tag: 'Portfolyo', title: 'Bizdavar hizmetleri, ürünleri ve tamamlanan işler', desc: 'Web tasarım, dijital pazarlama, SMM, FXGuard ve Fast Web Studio ürünleri, VEGA / Prosense / Liqui Moly tedariki — <a href="about">Bizdavar hakkında</a>.' }, areas: { eyebrow: 'Alanlar', title: 'Proje faaliyet alanları' }, archived: { eyebrow: 'Geçmiş projeler', title: 'Önceki ve tamamlanmamış işler', desc: 'Canlı bağlantısı olmayan veya yarım kalan projeler — sunucusu yenilenmeyen siteler veya tamamlanmamış marketplace projeleri dahil. Yalnızca kısaca anılır.' }, tags: ['Fintech ve ödeme', 'Muhasebe ve finans', 'Yapay zeka', 'iOS mobil uygulama', 'Etkinlik ve bilet', 'Holding ve yatırım', 'Hosting ve altyapı', 'Web tasarım ve mağaza', 'Uluslararası ticaret', 'İsviçre ticareti', 'SMM paneli', 'SMM yönetimi', 'Endüstriyel tedarik', 'VEGA sensör', 'Prosense dedektör', 'Havacılık', 'Broker ve finans'], cta: { title: 'Sıradaki proje markanız olabilir', desc: '<a href="fast" class="link-yellow">Web tasarımdan</a> DNS ve SSL yönetimine kadar Bizdavar yanınızda.', btnPrimary: 'Yeni proje başlat', btnSecondary: 'Hizmetleri gör' }, filters: [{ id: 'all', label: 'Tümü' }, { id: 'case-study', label: 'Örnek işler' }, { id: 'client', label: 'Müşteriler' }, { id: 'ecosystem', label: 'Ekosistem' }, { id: 'fintech', label: 'Fintech' }, { id: 'digital', label: 'Dijital' }, { id: 'industrial', label: 'Endüstriyel' }, { id: 'other', label: 'Diğer' }], roleLabels: { ecosystem: 'Ekosistem', 'case-study': 'Örnek iş', client: 'Müşteri', website: 'Web sitesi', page: 'Bizdavar sayfası' }, statsLabels: ['Proje ve marka', 'Örnek iş', 'Müşteri', 'Ekosistem'], filterAria: 'Portfolyo filtreleri', countText: '{count} öğe gösteriliyor', relatedLinks: portfolioRelatedLinks.tr },
       blogPage: {
@@ -458,7 +458,7 @@
             { title: 'VEGA kataloğu', url: '/pages/vega', desc: 'Seviye sensörü' },
             { title: 'Prosense', url: '/pages/prosense', desc: 'Gaz dedektörü' },
             { title: 'Liqui Moly', url: '/pages/liqui-moly', desc: 'Yağ ve katkı' },
-            { title: 'Saha hizmetleri', url: '/pages/field-tech', desc: 'Tebriz ve İstanbul' },
+            { title: 'Saha hizmetleri', url: '/pages/field-tech', desc: 'Tebriz' },
             { title: 'Portföy', url: '/pages/portfolio', desc: 'Marvi, FXGuard…' },
             { title: 'Marvi Society', url: '/pages/marvi-society', desc: 'iOS uygulama' },
             { title: 'Ürünler', url: '/pages/products', desc: 'BizTab ve BizPet' },
@@ -518,7 +518,7 @@
         industries: { eyebrow: 'Küresel endüstriler', title: 'Farklı endüstrilerde uygulama', desc: 'Gamak motorları her endüstriyel bölüm için' },
         supply: { eyebrow: 'Bizdavar tedariki', title: 'Gamak tedarik hizmetleri', desc: 'Tedarik ortağınız — sadece satıcı değil' },
         faq: { eyebrow: 'SSS', title: 'Alıcıların sık sorduğu sorular', desc: 'Cevabı bulamadınız mı? Doğrudan bizimle iletişime geçin.' }
-      }, officialNote: 'Teknik bilgiler <a href="https://www.gamak.com/" target="_blank" rel="noopener noreferrer">resmi Gamak web sitesine</a> dayanır. Teklif için — <a href="contact">Bizdavar</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'Gamak fiyat teklifine hazır mısınız?', desc: 'kW, rpm ve uygulama tipini gönderin — IE2/IE3/IE4 · Ex-proof · MV', btnForm: 'Teklif formu', btnServices: 'Ürün kataloğu' }, sticky: { label: 'Gamak teklifi' }, geoText: 'Orijinal Gamak motor tedariki — İstanbul merkezli Türkçe teknik danışmanlık, proforma ve uluslararası lojistik.', related: [{ title: 'VEGA ürünleri', desc: 'Seviye ve basınç sensörleri' }, { title: 'Prosense ürünleri', desc: 'Gaz ve alev dedektörü' }, { title: 'Ürün kataloğu', desc: 'Tedarik markaları' }, { title: 'İletişim', desc: 'Ücretsiz danışmanlık' }] },
+      }, officialNote: 'Teknik bilgiler <a href="https://www.gamak.com/" target="_blank" rel="noopener noreferrer">resmi Gamak web sitesine</a> dayanır. Teklif için — <a href="contact">Bizdavar</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'Gamak fiyat teklifine hazır mısınız?', desc: 'kW, rpm ve uygulama tipini gönderin — IE2/IE3/IE4 · Ex-proof · MV', btnForm: 'Teklif formu', btnServices: 'Ürün kataloğu' }, sticky: { label: 'Gamak teklifi' }, geoText: 'Orijinal Gamak motor tedariki — Türkçe teknik danışmanlık, proforma ve uluslararası lojistik.', related: [{ title: 'VEGA ürünleri', desc: 'Seviye ve basınç sensörleri' }, { title: 'Prosense ürünleri', desc: 'Gaz ve alev dedektörü' }, { title: 'Ürün kataloğu', desc: 'Tedarik markaları' }, { title: 'İletişim', desc: 'Ücretsiz danışmanlık' }] },
       digiSystemPage: { sections: {
         trust: { eyebrow: 'Neden Bizdavar’dan alın?', title: 'Mağaza ve satınalma biriminiz için güvenilir Digi System tedariki', desc: 'Terazi, POS ve çevre birimleri — model seçiminden teslimata.' },
         buy: { eyebrow: 'Satınalma yolu', title: 'Tekliften teslimata — 5 net adım', desc: 'Karmaşa yok — her adımı bilir ve her aşamada iletişimde olursunuz.' },
@@ -551,7 +551,7 @@
         industries: { eyebrow: 'Küresel endüstriler', title: 'Farklı endüstriler için VEGA çözümü', desc: '15+ endüstri — kimyadan enerjiye ve çevreye' },
         supply: { eyebrow: 'Bizdavar tedariki', title: 'Bizdavar Group ile VEGA tedarik hizmetleri', desc: 'Tedarik ortağınız — sadece satıcı değil' },
         faq: { eyebrow: 'SSS', title: 'Alıcıların sık sorduğu sorular', desc: 'Cevabı bulamadınız mı? Doğrudan bizimle iletişime geçin.' }
-      }, officialNote: 'Ürünlerin teknik bilgileri <a href="https://www.vega.com/en-ae" target="_blank" rel="noopener noreferrer">resmi VEGA web sitesine</a> dayanır. Fiyat teklifi, sipariş kodu ve tedarik için — <a href="contact">Bizdavar ile iletişime geçin</a>.', cta: { title: 'VEGA fiyat teklifine hazır mısınız?', desc: 'Ürün adını veya proses koşullarını gönderin — ücretsiz teknik danışmanlık ve şeffaf proforma', btnForm: 'Teklif formu', btnServices: 'Ürün kataloğu' }, sticky: { label: 'VEGA teklifi', hint: 'Türkçe teknik danışmanlık · hızlı yanıt' }, geoText: 'Orijinal VEGA sensör tedariki — İstanbul merkezli Türkçe teknik danışmanlık, şeffaf proforma ve endüstriyel projelere lojistik.', related: [{ title: 'Prosense ürünleri', desc: 'Gaz ve alev dedektörü' }, { title: 'Ürün kataloğu', desc: 'Tedarik markaları' }, { title: 'İletişim ve teklif', desc: 'Ücretsiz danışmanlık' }] },
+      }, officialNote: 'Ürünlerin teknik bilgileri <a href="https://www.vega.com/en-ae" target="_blank" rel="noopener noreferrer">resmi VEGA web sitesine</a> dayanır. Fiyat teklifi, sipariş kodu ve tedarik için — <a href="contact">Bizdavar ile iletişime geçin</a>.', cta: { title: 'VEGA fiyat teklifine hazır mısınız?', desc: 'Ürün adını veya proses koşullarını gönderin — ücretsiz teknik danışmanlık ve şeffaf proforma', btnForm: 'Teklif formu', btnServices: 'Ürün kataloğu' }, sticky: { label: 'VEGA teklifi', hint: 'Türkçe teknik danışmanlık · hızlı yanıt' }, geoText: 'Orijinal VEGA sensör tedariki — Türkçe teknik danışmanlık, şeffaf proforma ve endüstriyel projelere lojistik.', related: [{ title: 'Prosense ürünleri', desc: 'Gaz ve alev dedektörü' }, { title: 'Ürün kataloğu', desc: 'Tedarik markaları' }, { title: 'İletişim ve teklif', desc: 'Ücretsiz danışmanlık' }] },
       prosensePage: { sections: {
         trust: { eyebrow: 'Neden Bizdavar’dan alın?', title: 'Teknik ve satınalma biriminiz için güvenilir Prosense tedariki', desc: 'Sadece katalog göstermiyoruz — gaz ve model seçiminden teslimata kadar yanınızdayız.' },
         buy: { eyebrow: 'Satınalma yolu', title: 'Tekliften teslimata — 5 net adım', desc: 'Karmaşa yok — her adımı bilir ve her aşamada iletişimde olursunuz.' },
@@ -585,7 +585,7 @@
       }, rateNote: { strong: '', body: '' }, officialNote: 'Teknik bilgiler <a href="https://www.liqui-moly.com/" target="_blank" rel="noopener noreferrer">resmi Liqui Moly web sitesine</a> dayanır. Sipariş için — <a href="contact">Bizdavar</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'Liqui Moly siparişine hazır mısınız?', desc: 'Ürün adı veya SKU gönderin — Octane Plus · Top Tec · Molygen', btnForm: 'Teklif formu', btnServices: 'Ürün kataloğu' }, sticky: { label: 'Liqui Moly teklifi', hint: 'Dolar fiyat · Farsça danışmanlık' }, geoText: 'Orijinal Liqui Moly tedariki — şeffaf dolar fiyat, Farsça danışmanlık ve uluslararası lojistik.', related: [{ title: 'VEGA ürünleri', desc: 'Seviye ve basınç sensörleri' }, { title: 'Prosense ürünleri', desc: 'Gaz ve alev dedektörü' }, { title: 'Ürün kataloğu', desc: 'B2B tedarik markaları' }, { title: 'İletişim', desc: 'Liqui Moly fiyat teklifi' }] }
     },
     en: {
-      aboutPage: { hero: { tag: 'About Bizdavar', title: 'Bizdavar does three separate things', desc: 'Digital services, products we build, or industrial supply — since 2013.' }, whatIs: { title: 'What is Bizdavar Group?', p1: 'Bizdavar Group has worked from Istanbul since <strong>2013</strong> — founder: <strong>Ersan Jahed Tabrizi</strong>. Three separate lines: <a href="/pages/services">digital services</a>, <a href="/pages/products">products we build</a> (BizPet, FXGuard), and <a href="/pages/products#supply">industrial supply</a> (VEGA, Prosense, Liqui Moly).', p2: '100+ projects in 11 countries. Head office Istanbul; company registration in Yerevan; Iran legal entity in Tabriz. See the <a href="/pages/portfolio">portfolio</a>.' }, features: ['Services', 'Products', 'Supply'], stats: [{ value: '13+', label: 'Years experience' }, { value: '100+', label: 'Projects' }, { value: '11', label: 'Countries' }, { value: '3', label: 'Work paths' }], navAria: 'Page sections', nav: [{ href: '#profile', label: 'Profile' }, { href: '#activities', label: 'Expertise' }, { href: '#ecosystem', label: 'Ecosystem' }, { href: '#presence', label: 'Global presence' }, { href: '#highlights', label: 'Highlights' }, { href: '#sources', label: 'Sources' }, { href: '#trust', label: 'Trust' }, { href: '#faq', label: 'FAQ' }], sections: { identityEyebrow: 'Company profile', identityTitle: 'Bizdavar Group at a glance', leadershipEyebrow: 'Leadership', leadershipTitle: 'Founder and team', activitiesEyebrow: 'Three work paths', activitiesTitle: 'Which of our lines are you here for?', ecosystemEyebrow: 'Ecosystem', ecosystemTitle: 'Related brands and projects', ecosystemDesc: 'Examples from the digital and industrial ecosystem Bizdavar has developed or managed', presenceEyebrow: 'Global presence', presenceTitle: 'Active countries', presenceDesc: 'International project network from Istanbul and Yerevan to Europe and the US', exhibitionsEyebrow: 'Exhibitions & events', exhibitionsTitle: 'Technology exhibition presence', exhibitionsDesc: 'Innovation and commercialization events — from RINOTEX Tabriz to university fairs', achievementsEyebrow: 'Achievements', achievementsTitle: 'Bizdavar products & innovation', achievementsDesc: 'Beyond digital services and industrial supply, the Bizdavar team has also designed owned products', sourcesEyebrow: 'Verified sources', sourcesTitle: 'Media, exhibitions and verifiable references', sourcesDesc: 'Official links published about products, exhibitions and Bizdavar history — independent of on-site claims.', credentialsEyebrow: 'Certifications', credentialsTitle: 'Verified skills', proofEyebrow: 'Professional credibility', proofTitle: 'Trust indicators', proofDesc: 'Based on verifiable public sources — no fabricated testimonials', faqEyebrow: 'FAQ', faqTitle: 'Common questions about Bizdavar' }, relatedLinks: [{ title: 'Our services', url: 'services', desc: 'Digital marketing, web, SMM and industry' }, { title: 'Portfolio', url: 'portfolio', desc: 'ZedPay, BZ Diamond and more' }, { title: 'Contact us', url: 'contact', desc: 'Free consultation' }], values: { title: 'Our values', items: [{ title: 'Outcome focus', desc: 'Sales, conversion and brand growth — not just execution.' }, { title: 'Transparent collaboration', desc: 'Regular reporting and direct communication with the team.' }, { title: 'Global market', desc: 'Projects in Iran, Turkey and international markets.' }, { title: 'Fast execution', desc: 'Fast Web Studio — website delivery in 5 days.' }] }, cta: { title: 'Ready to work with Bizdavar?', desc: 'Initial consultation is free — through the <a href="/pages/contact" class="link-yellow">contact form</a> or WhatsApp.', btn: 'Contact us' } },
+      aboutPage: { hero: { tag: 'About Bizdavar', title: 'Bizdavar does three separate things', desc: 'Digital services, products we build, or industrial supply — since 2013.' }, whatIs: { title: 'What is Bizdavar Group?', p1: 'Bizdavar Group has worked since <strong>2013</strong> — founder: <strong>Ersan Jahed Tabrizi</strong>. Three separate lines: <a href="/pages/services">digital services</a>, <a href="/pages/products">products we build</a> (BizPet, FXGuard), and <a href="/pages/products#supply">industrial supply</a> (VEGA, Prosense, Liqui Moly).', p2: '100+ projects in 11 countries. Company registration in Yerevan; Iran legal entity in Tabriz. See the <a href="/pages/portfolio">portfolio</a>.' }, features: ['Services', 'Products', 'Supply'], stats: [{ value: '13+', label: 'Years experience' }, { value: '100+', label: 'Projects' }, { value: '11', label: 'Countries' }, { value: '3', label: 'Work paths' }], navAria: 'Page sections', nav: [{ href: '#profile', label: 'Profile' }, { href: '#activities', label: 'Expertise' }, { href: '#ecosystem', label: 'Ecosystem' }, { href: '#presence', label: 'Global presence' }, { href: '#highlights', label: 'Highlights' }, { href: '#sources', label: 'Sources' }, { href: '#trust', label: 'Trust' }, { href: '#faq', label: 'FAQ' }], sections: { identityEyebrow: 'Company profile', identityTitle: 'Bizdavar Group at a glance', leadershipEyebrow: 'Leadership', leadershipTitle: 'Founder and team', activitiesEyebrow: 'Three work paths', activitiesTitle: 'Which of our lines are you here for?', ecosystemEyebrow: 'Ecosystem', ecosystemTitle: 'Related brands and projects', ecosystemDesc: 'Examples from the digital and industrial ecosystem Bizdavar has developed or managed', presenceEyebrow: 'Global presence', presenceTitle: 'Active countries', presenceDesc: 'International project network from Tabriz and Yerevan to Europe and the US', exhibitionsEyebrow: 'Exhibitions & events', exhibitionsTitle: 'Technology exhibition presence', exhibitionsDesc: 'Innovation and commercialization events — from RINOTEX Tabriz to university fairs', achievementsEyebrow: 'Achievements', achievementsTitle: 'Bizdavar products & innovation', achievementsDesc: 'Beyond digital services and industrial supply, the Bizdavar team has also designed owned products', sourcesEyebrow: 'Verified sources', sourcesTitle: 'Media, exhibitions and verifiable references', sourcesDesc: 'Official links published about products, exhibitions and Bizdavar history — independent of on-site claims.', credentialsEyebrow: 'Certifications', credentialsTitle: 'Verified skills', proofEyebrow: 'Professional credibility', proofTitle: 'Trust indicators', proofDesc: 'Based on verifiable public sources — no fabricated testimonials', faqEyebrow: 'FAQ', faqTitle: 'Common questions about Bizdavar' }, relatedLinks: [{ title: 'Our services', url: 'services', desc: 'Digital marketing, web, SMM and industry' }, { title: 'Portfolio', url: 'portfolio', desc: 'ZedPay, BZ Diamond and more' }, { title: 'Contact us', url: 'contact', desc: 'Free consultation' }], values: { title: 'Our values', items: [{ title: 'Outcome focus', desc: 'Sales, conversion and brand growth — not just execution.' }, { title: 'Transparent collaboration', desc: 'Regular reporting and direct communication with the team.' }, { title: 'Global market', desc: 'Projects in Iran, Turkey and international markets.' }, { title: 'Fast execution', desc: 'Fast Web Studio — website delivery in 5 days.' }] }, cta: { title: 'Ready to work with Bizdavar?', desc: 'Initial consultation is free — through the <a href="/pages/contact" class="link-yellow">contact form</a> or WhatsApp.', btn: 'Contact us' } },
       servicesPage: { hero: { tag: 'Our services', title: 'Bizdavar digital & technical services', desc: 'Marketing, web apps, mobile, systems, servers and SMM — plus CCTV, wiring and cove lighting. Products live on the <a href="products">products page</a>.' }, overview: { eyebrow: 'Overview', title: 'Six Bizdavar service areas', desc: 'Digital and software up top — on-site technical services below via dedicated technical WhatsApp.' }, navAria: 'Services list', viewDetails: 'View details', stats: [{ value: '6', label: 'Service areas' }, { value: '100+', label: 'Projects' }, { value: '2', label: 'Field cities' }, { value: '13+', label: 'Years experience' }], cards: serviceBlocks.en.map(({ title, body, ...rest }) => ({ title, desc: rest.subtitle || body })), blocks: serviceBlocks.en, panels: servicesPanels.en, relatedLinks: servicesRelatedLinks.en, process: { eyebrow: 'Collaboration process', title: 'How do we work with you?', desc: 'A simple, transparent and trackable workflow.', steps: [{ title: 'Consulting', desc: 'Understanding your needs and goals' }, { title: 'Solution design', desc: 'Technical proposal and timeline estimate' }, { title: 'Execution', desc: 'Campaign, implementation or supply delivery' }, { title: 'Support', desc: 'Reporting, optimization and ongoing support' }] }, cta: { title: 'Need a custom solution?', desc: 'Free consultation — see project examples in the <a href="portfolio">Bizdavar portfolio</a>', btn: 'Free consultation', btnSecondary: 'View portfolio' } },
       portfolioPage: { hero: { tag: 'Portfolio', title: 'Bizdavar services, products and delivered work', desc: 'Web design, digital marketing, SMM, FXGuard and Fast Web Studio products, plus VEGA / Prosense / Liqui Moly supply — <a href="about">about Bizdavar</a>.' }, areas: { eyebrow: 'Areas', title: 'Project activity areas' }, archived: { eyebrow: 'Past projects', title: 'Previous and incomplete work', desc: 'Projects without a live link or left unfinished — including sites whose hosting expired and marketplaces that were never completed. Listed briefly only.' }, tags: ['Fintech and payments', 'Accounting and finance', 'Artificial intelligence', 'iOS mobile apps', 'Events and tickets', 'Holding and investment', 'Hosting and infrastructure', 'Web design and stores', 'International trade', 'Swiss trade', 'SMM panel', 'SMM management', 'Industrial supply', 'VEGA sensors', 'Prosense detectors', 'Aviation', 'Brokerage and finance'], cta: { title: 'Your brand could be the next project', desc: 'From <a href="fast" class="link-yellow">web design</a> to DNS and SSL management, Bizdavar is with you.', btnPrimary: 'Start a new project', btnSecondary: 'View services' }, filters: [{ id: 'all', label: 'All' }, { id: 'case-study', label: 'Case studies' }, { id: 'client', label: 'Clients' }, { id: 'ecosystem', label: 'Ecosystem' }, { id: 'fintech', label: 'Fintech' }, { id: 'digital', label: 'Digital' }, { id: 'industrial', label: 'Industrial' }, { id: 'other', label: 'Other' }], roleLabels: { ecosystem: 'Ecosystem', 'case-study': 'Case study', client: 'Client', website: 'Website', page: 'Bizdavar page' }, statsLabels: ['Projects & brands', 'Case studies', 'Clients', 'Ecosystem'], filterAria: 'Portfolio filters', countText: '{count} items shown', relatedLinks: portfolioRelatedLinks.en },
       blogPage: {
@@ -642,7 +642,7 @@
             { title: 'VEGA catalog', url: '/pages/vega', desc: 'Level sensors' },
             { title: 'Prosense', url: '/pages/prosense', desc: 'Gas detectors' },
             { title: 'Liqui Moly', url: '/pages/liqui-moly', desc: 'Oils and additives' },
-            { title: 'Field tech', url: '/pages/field-tech', desc: 'Tabriz and Istanbul' },
+            { title: 'Field tech', url: '/pages/field-tech', desc: 'Tabriz' },
             { title: 'Portfolio', url: '/pages/portfolio', desc: 'Marvi, FXGuard…' },
             { title: 'Marvi Society', url: '/pages/marvi-society', desc: 'iOS app' },
             { title: 'Products', url: '/pages/products', desc: 'BizTab and BizPet' },
@@ -735,7 +735,7 @@
         industries: { eyebrow: 'Global industries', title: 'VEGA solutions for various industries', desc: '15+ industries — from chemicals to energy and environment' },
         supply: { eyebrow: 'Supply by Bizdavar', title: 'VEGA supply services by Bizdavar Group', desc: 'Your supply partner — not just a vendor' },
         faq: { eyebrow: 'FAQ', title: 'Common questions from buyers', desc: 'Didn’t find your answer? Contact us directly.' }
-      }, officialNote: 'Product technical information is based on the <a href="https://www.vega.com/en-ae" target="_blank" rel="noopener noreferrer">official VEGA website</a>. For pricing, order codes and supply — <a href="contact">contact Bizdavar</a>.', cta: { title: 'Ready for a VEGA quote?', desc: 'Send the product name or process conditions — free technical consulting and a transparent proforma', btnForm: 'Quote form', btnServices: 'Product catalog' }, sticky: { label: 'VEGA quote', hint: 'Multilingual consulting · fast reply' }, geoText: 'Genuine VEGA sensor supply to Iran — multilingual technical consulting from Istanbul, transparent proforma and logistics to industrial projects.', related: [{ title: 'Prosense products', desc: 'Gas and flame detectors' }, { title: 'Product catalog', desc: 'Supply brands' }, { title: 'Contact and inquiry', desc: 'Free consultation' }] },
+      }, officialNote: 'Product technical information is based on the <a href="https://www.vega.com/en-ae" target="_blank" rel="noopener noreferrer">official VEGA website</a>. For pricing, order codes and supply — <a href="contact">contact Bizdavar</a>.', cta: { title: 'Ready for a VEGA quote?', desc: 'Send the product name or process conditions — free technical consulting and a transparent proforma', btnForm: 'Quote form', btnServices: 'Product catalog' }, sticky: { label: 'VEGA quote', hint: 'Multilingual consulting · fast reply' }, geoText: 'Genuine VEGA sensor supply to Iran — multilingual technical consulting, transparent proforma and logistics to industrial projects.', related: [{ title: 'Prosense products', desc: 'Gas and flame detectors' }, { title: 'Product catalog', desc: 'Supply brands' }, { title: 'Contact and inquiry', desc: 'Free consultation' }] },
       prosensePage: { sections: {
         trust: { eyebrow: 'Why buy from Bizdavar?', title: 'Reliable Prosense supply for your technical and procurement teams', desc: 'We do more than show a catalog — we are with you from gas/model selection to delivery.' },
         buy: { eyebrow: 'Purchase path', title: 'From quote to delivery — 5 clear steps', desc: 'No complexity — you know every step and stay in touch throughout.' },
@@ -786,7 +786,7 @@
       ['توسعه اپ iOS — نمونه‌کار Marvi Society و انتشار App Store', 'از UI/UX تا Swift و App Store — کلاب creator دعوت‌محور در استانبول.', 'طراحی اپ'],
       ['تامین دتکتور گاز Prosense — از انتخاب مدل تا نصب', 'راهنمای دتکتور گاز و شعله برای نفت، پتروشیمی و HVAC — استعلام B2B.', 'تجهیزات صنعتی'],
       ['تامین Liqui Moly آلمان — روغن و افزودنی اصل', 'مسیر استعلام روغن موتور و افزودنی برای ناوگان و کارگاه — B2B بیزدوار.', 'تجهیزات صنعتی'],
-      ['خدمات فنی میدانی بیزدوار — تبریز و استانبول', 'دوربین، سیم‌کشی و نورمخفی — هماهنگی واتساپ و اجرای میدانی.', 'خدمات فنی'],
+      ['خدمات فنی میدانی بیزدوار — تبریز', 'دوربین، سیم‌کشی و نورمخفی — هماهنگی واتساپ و اجرای میدانی.', 'خدمات فنی'],
       ['سئو محلی برای کسب‌وکار ایران — Google Maps', 'Google Business Profile، NAP یکسان و صفحات محلی — مسیر عملی رشد.', 'بازاریابی دیجیتال'],
       ['FXGuard Exchange — پلتفرم صرافی و OTC', 'نمونه‌کار فین‌تک: KYC، کیف پول، OTC و پنل ادمین — توسعه بیزدوار.', 'فین‌تک']
     ],
@@ -805,7 +805,7 @@
       ['iOS uygulama — Marvi Society vaka çalışması', 'UI/UX’ten Swift ve App Store’a — İstanbul creator kulübü.', 'Uygulama tasarımı'],
       ['Prosense gaz dedektörü tedariki', 'Gaz/alev dedektörü seçimi ve B2B teklif — petrol ve HVAC.', 'Endüstriyel ekipman'],
       ['Liqui Moly tedariki — orijinal yağ ve katkı', 'Filo ve atölye için motor yağı ve katkı maddeleri — B2B Bizdavar.', 'Endüstriyel ekipman'],
-      ['Bizdavar saha teknik hizmetleri — Tebriz ve İstanbul', 'CCTV, kablolama ve gizli aydınlatma — WhatsApp koordinasyonu.', 'Saha hizmetleri'],
+      ['Bizdavar saha teknik hizmetleri — Tebriz', 'CCTV, kablolama ve gizli aydınlatma — WhatsApp koordinasyonu.', 'Saha hizmetleri'],
       ['Yerel SEO — İran işletmeleri için Google Maps', 'Google Business Profile, NAP ve yerel sayfalar.', 'Dijital pazarlama'],
       ['FXGuard Exchange — borsa ve OTC platformu', 'Fintech vaka: KYC, cüzdan, OTC ve admin paneli.', 'Fintech']
     ],
@@ -824,7 +824,7 @@
       ['iOS app development — Marvi Society case study', 'From UI/UX to Swift and App Store — invite-only creator club in Istanbul.', 'App development'],
       ['Prosense gas detector supply', 'Gas and flame detector selection and B2B quotes for oil and HVAC.', 'Industrial equipment'],
       ['Liqui Moly supply — genuine oils and additives', 'Engine oil and additives for fleets and workshops — Bizdavar B2B.', 'Industrial equipment'],
-      ['Bizdavar field tech — Tabriz and Istanbul', 'CCTV, wiring and cove lighting — WhatsApp coordination.', 'Field services'],
+      ['Bizdavar field tech — Tabriz', 'CCTV, wiring and cove lighting — WhatsApp coordination.', 'Field services'],
       ['Local SEO for Iran — Google Maps', 'Google Business Profile, consistent NAP and local landing pages.', 'Digital marketing'],
       ['FXGuard Exchange — exchange and OTC platform', 'Fintech case study: KYC, wallet, OTC and admin panel.', 'Fintech']
     ]
@@ -1205,160 +1205,17 @@
 
       fxguard: {
         hero: {
-          tag: 'FXGuard · WhatsApp CRM',
-          title: 'واتساپ را به ماشین فروش تیم خود تبدیل کنید',
-          desc: 'یک شماره، کل تیم، کنترل کامل — اینباکس مشترک، مشتریان، تیکت، تسک، شعب و ۲FA. محصول سوئیت FXGuard؛ Cloud از $49/ماه، لایسنس یک‌باره یا Managed Dedicated.',
-          regionItems: [
-            { code: 'TR', label: 'ترکیه' },
-            { code: 'AE', label: 'دبی' },
-            { code: 'EU', label: 'اروپا' },
-            { code: 'IR', label: 'ایران' }
-          ],
-          regions: 'ترکیه · دبی · اروپا · ایران',
-          trust: 'دموی رایگان زنده · از $49/ماه · فروش در fxguard.io',
-          ctaDemo: 'دموی رایگان',
-          ctaPricing: 'قیمت و خرید',
-          ctaContact: 'خرید / استعلام در واتساپ',
+          tag: 'Exchange · remittance · finance',
+          title: 'Quote the rate on WhatsApp. Keep the customer book.',
+          desc: 'Full copy loads from i18n/fxguard-i18n.js on this page only.',
+          regions: '',
+          trust: 'From $49/mo · guided demo · 7-day money-back',
+          ctaDemo: 'See the panel',
+          ctaPricing: 'Prices',
+          ctaContact: 'Buy on WhatsApp',
           ctaStore: 'fxguard.io'
         },
-        stats: {
-          businesses: 'ماژول+',
-          regions: 'نقش کاربری',
-          regionsVal: 'Owner → Agent',
-          uptime: 'هدف آپ‌تایم',
-          setup: 'زبان پشتیبانی',
-          setupSuffix: ''
-        },
-        problem: {
-          eyebrow: 'مشکل',
-          title: 'آشناست؟',
-          desc: 'تیم‌های در حال رشد سریع از واتساپ شخصی جلوتر می‌افتند — پیام گم می‌شود و مسئولیت‌پذیری از بین می‌رود.',
-          items: [
-            { icon: 'mobile', title: 'چند گوشی، یک شماره', desc: 'اشتراک لاگین یا گوشی شخصی — پیام‌ها گم می‌شود و تصویر کامل از مکالمه وجود ندارد.' },
-            { icon: 'list', title: 'بدون تاریخچه مشتری', desc: 'هر چت از صفر شروع می‌شود؛ تگ، یادداشت و زمینه مشترک بین اپراتورها نیست.' },
-            { icon: 'clock', title: 'بدون پاسخ‌گویی', desc: 'نه تیکت، نه تسک، نه رکورد از اینکه چه کسی چه چیزی را کی بسته است.' },
-            { icon: 'shield', title: 'امنیت مبهم', desc: 'دستگاه مشترک، بدون ۲FA و بدون جداسازی نقش بین شعب و سطوح دسترسی.' }
-          ]
-        },
-        steps: {
-          eyebrow: 'خرید در ۳ گام',
-          title: 'دمو رایگان، انتخاب پکیج، خرید امروز',
-          desc: 'چرخه فروش طولانی نیست — اول محصول واقعی را ببینید، بعد مدل استقرار را انتخاب کنید.',
-          items: [
-            { num: '01', icon: 'bolt', title: 'دموی زنده را امتحان کنید', desc: 'app.fxguard.io — کاربر demo / رمز 123456. محصول واقعی است، نه ماکاپ.' },
-            { num: '02', icon: 'target', title: 'پکیج را انتخاب کنید', desc: 'Hosted Cloud برای سرعت، Self-hosted License برای مالکیت، یا Managed Dedicated برای استقرار کامل.' },
-            { num: '03', icon: 'whatsapp', title: 'خرید یا استعلام', desc: 'از طریق واتساپ فروش یا فرم در fxguard.io — معمولاً در روز کاری کمتر از ۲۴ ساعت پاسخ می‌گیرید.' }
-          ],
-          cta: 'باز کردن دموی زنده'
-        },
-        features: {
-          eyebrow: 'ماژول‌ها',
-          title: 'همه‌چیز در یک پنل',
-          desc: 'ماژول‌های واقعی برای تیم‌های صرافی، مالی، فروش و پشتیبانی.',
-          items: [
-            { icon: 'inbox', title: 'اینباکس یکپارچه واتساپ', desc: 'یک شماره، اینباکس مشترک؛ فیلتر خوانده‌نشده/باز/اختصاص‌یافته و مسیریابی به اپراتور درست.' },
-            { icon: 'users', title: 'مشتریان و CRM', desc: 'پروفایل، تگ و تاریخچه مکالمه — دیگر از صفر شروع نمی‌کنید.' },
-            { icon: 'list', title: 'تیکت پشتیبانی', desc: 'درخواست‌ها از باز تا بسته‌شدن با مالکیت و وضعیت شفاف.' },
-            { icon: 'bolt', title: 'تسک و گردش کار', desc: 'تخصیص تسک و پیگیری فرایند تا انتها.' },
-            { icon: 'shield', title: 'نقش، شعبه و ۲FA', desc: 'Owner تا Agent، شعب و دپارتمان، Google Authenticator و لاگ فعالیت.' },
-            { icon: 'chart-line', title: 'ابزار FX و نرخ', desc: 'تنظیم نرخ، نمودار ارز و ابزارهای سرویس صرافی برای تیم‌های مالی.' }
-          ]
-        },
-        audiences: {
-          eyebrow: 'برای چه کسانی',
-          title: 'ساخته‌شده برای صرافی، فایننس و پشتیبانی',
-          desc: 'تیم‌هایی که به پاسخ‌گویی واقعی نیاز دارند — نه فقط چت.',
-          items: [
-            { icon: 'chart-line', title: 'صرافی و FX', region: 'ترکیه · امارات · اروپا · ایران', desc: 'چند شعبه، نرخ و سرویس تبادل در کنار اینباکس تیمی.', tag: 'Multi-branch' },
-            { icon: 'briefcase', title: 'فروش و پشتیبانی B2B', region: 'همه مناطق', desc: 'تاریخچه مشتری، تیکت و تسک برای بستن معامله با زمینه کامل.', tag: 'Sales ops' },
-            { icon: 'building', title: 'هلدینگ و چند شعبه', region: 'ترکیه · دبی', desc: 'نقش، شعبه و نظارت مالک روی فعالیت کارکنان.', tag: 'Roles & branches' },
-            { icon: 'health', title: 'خدمات و کلینیک', region: 'ترکیه · اروپا', desc: 'پیگیری درخواست، یادآوری و پاسخ‌گویی بدون گم‌شدن پیام.', tag: 'Support desk' }
-          ]
-        },
-        pricing: {
-          eyebrow: 'پکیج‌ها',
-          title: 'سه مدل اجرا — همان هسته محصول',
-          desc: 'تفاوت در این است که چه کسی میزبانی و عملیات را انجام می‌دهد. همه پکیج‌ها ماژول‌های اصلی را دارند.',
-          note: 'دمو رایگان است. قبل از پرداخت با فروش صحبت کنید — Cloud از $49/ماه یا $490/سال.',
-          plans: [
-            {
-              id: 'cloud',
-              name: 'Hosted Cloud',
-              price: '$49',
-              period: '/ماه',
-              badge: 'محبوب‌ترین',
-              desc: 'ما FXGuard را برای شما روی زیرساخت خودمان اجرا می‌کنیم. ثبت‌نام، ورود، شروع کار.',
-              features: [
-                'آماده در چند دقیقه، بدون سرور',
-                'به‌روزرسانی و پچ امنیتی خودکار',
-                'بکاپ روزانه و مانیتورینگ',
-                'نقش‌محور و ۲FA',
-                'یا $490 در سال (۲ ماه صرفه‌جویی)'
-              ],
-              cta: 'خرید Cloud در fxguard.io',
-              href: 'https://fxguard.io/',
-              featured: true
-            },
-            {
-              id: 'license',
-              name: 'Self-hosted License',
-              price: 'یک‌باره',
-              period: ' · استعلام',
-              desc: 'سیستم کامل را بخرید و روی سرور خودتان اجرا کنید — داده نزد شما می‌ماند.',
-              features: [
-                'خرید یک‌باره، مال شما',
-                'پکیج نصب و مستندات',
-                'داده روی زیرساخت شما',
-                'قرارداد اختیاری آپدیت و پشتیبانی',
-                'آنبوردینگ اولیه'
-              ],
-              cta: 'استعلام لایسنس',
-              href: 'https://fxguard.io/'
-            },
-            {
-              id: 'managed',
-              name: 'Managed Dedicated',
-              price: 'سفارشی',
-              period: ' · استعلام',
-              desc: 'نصب، میزبانی و عملیات اختصاصی توسط تیم ما — با SLA و حساب‌مدیر.',
-              features: [
-                'اینستنس اختصاصی',
-                'نگهداری، مانیتورینگ و بکاپ',
-                'SLA و زمان پاسخ سفارشی',
-                'حساب‌مدیر اختصاصی',
-                'آموزش کارکنان'
-              ],
-              cta: 'استعلام Managed',
-              href: 'https://fxguard.io/'
-            }
-          ]
-        },
-        faq: {
-          eyebrow: 'سوالات',
-          title: 'پرسش‌های پرتکرار',
-          items: [
-            { q: 'تفاوت Cloud، لایسنس و Managed چیست؟', a: 'Cloud: ما میزبانی می‌کنیم (ماهانه/سالانه). لایسنس: سیستم را یک‌بار می‌خرید و روی سرور خودتان اجرا می‌کنید. Managed: اینستنس اختصاصی را ما نصب و اداره می‌کنیم. هر سه همان ماژول‌های اصلی را دارند.' },
-            { q: 'قبل از خرید می‌توانم امتحان کنم؟', a: 'بله. دموی زنده در app.fxguard.io (کاربر demo / رمز 123456) محصول واقعی است — عمومی است و تغییرات ذخیره نمی‌شود.' },
-            { q: 'شروع قیمت چقدر است؟', a: 'Hosted Cloud از $49 در ماه یا $490 در سال. لایسنس و Managed با استعلام قیمت سفارشی.' },
-            { q: 'چند شعبه و نقش پشتیبانی می‌شود؟', a: 'شعب و دپارتمان داخلی است؛ نقش‌ها از Owner تا Agent با ۲FA و لاگ فعالیت.' },
-            { q: 'رابطه با بیزدوار چیست؟', a: 'FXGuard محصول سوئیت دیجیتال تیم بیزدوار است؛ فروش و دمو از طریق fxguard.io انجام می‌شود و در کاتالوگ محصولات بیزدوار هم معرفی می‌گردد.' }
-          ]
-        },
-        about: {
-          title: 'محصول FXGuard — توسعه اکوسیستم بیزدوار',
-          body: '<strong>FXGuard WhatsApp CRM</strong> اینباکس تیمی، CRM مشتری، تیکت، تسک، شعب و ابزار FX را در یک پنل امن جمع می‌کند. فروشگاه محصول: <a href="https://fxguard.io/" target="_blank" rel="noopener noreferrer">fxguard.io</a> · دمو: <a href="https://app.fxguard.io/" target="_blank" rel="noopener noreferrer">app.fxguard.io</a>.',
-          ctaContact: 'رفتن به fxguard.io',
-          ctaPortfolio: 'Accounting و محصولات مرتبط'
-        },
-        cta: {
-          title: 'آماده خرید FXGuard هستید؟',
-          desc: 'اول دموی رایگان را ببینید؛ بعد Cloud از $49/ماه، لایسنس یا Managed را انتخاب کنید.',
-          btnStart: 'دموی رایگان',
-          btnPricing: 'مشاهده پکیج‌ها',
-          btnStore: 'fxguard.io'
-        },
-        related: { title: 'محصولات و خدمات مرتبط' },
-        geoText: 'FXGuard WhatsApp CRM — ترکیه، امارات، اروپا و ایران · سوئیت fxguard.io · توسعه اکوسیستم بیزدوار.'
+        geoText: 'FXGuard — WhatsApp panel for exchange, remittance and finance desks · fxguard.io · Bizdavar.'
       },
 
       fxguardAccounting: {
@@ -1391,10 +1248,16 @@
         geoText: 'FXGuard Accounting — سامانه حسابداری سوئیت FXGuard، توسعه بیزدوار گروپ.'
       },
 
+      marvispace: {
+        hero: { tag: 'نمونه‌کار طراحی و توسعه وب', title: 'MarviSpace — فروشگاه آنلاین محصولات چرمی', desc: 'برنامه‌نویسی، توسعه و طراحی وبسایت فروشگاهی اختصاصی برای برند محصولات چرمی — توسط بیزدوار گروپ' },
+        about: { title: 'درباره پروژه', body: '<strong>MarviSpace</strong> نمونه‌کار برنامه‌نویسی و طراحی فروشگاه آنلاین بیزدوار گروپ است — فروشگاه اختصاصی محصولات چرمی با کاتالوگ مینیمال، جریان خرید و پنل مدیریت. این صفحه <strong>نمونه‌کار طراحی و توسعه وب فروشگاهی</strong> است.', servicesTitle: 'خدمات اجراشده توسط بیزدوار', services: ['طراحی UI/UX فروشگاه محصولات چرمی', 'برنامه‌نویسی و توسعه فروشگاه اختصاصی', 'کاتالوگ محصول، سبد خرید و جریان سفارش', 'داشبورد ادمین و مدیریت محتوا', 'بهینه‌سازی موبایل و عملکرد', 'پشتیبانی فنی پس از لانچ'], clientTitle: 'حوزه فعالیت مشتری', clientBody: 'MarviSpace برند فروش آنلاین محصولات چرمی است — کت، پوشاک و اکسسوری چرم. جزئیات محصولات و سفارش در وبسایت رسمی مشتری منتشر می‌شود.', challengeTitle: 'چالش پروژه', challenge: 'برند محصولات چرمی به فروشگاه اختصاصی نیاز داشت — گرید محصول مینیمال، کد SKU، تجربه خرید بین‌المللی و پنل مدیریت محتوا؛ نه قالب آماده.', resultsTitle: 'نتایج و دستاورد', result1: 'فروشگاه زنده marvispace.com با کاتالوگ محصولات چرمی', result2: 'تجربه خرید مینیمال و هویت بصری اختصاصی برند', result3: 'پنل مدیریت محصول و محتوا برای تیم فروش', ctaSite: 'مشاهده وبسایت MarviSpace', ctaOrder: 'سفارش فروشگاه مشابه', ctaPortfolio: 'سایر نمونه‌کارها' },
+        shots: { grid: 'کاتالوگ محصولات چرمی روی marvispace.com' },
+        geoText: 'نمونه‌کار برنامه‌نویسی و طراحی فروشگاه آنلاین محصولات چرمی — بیزدوار گروپ.'
+      },
       bzDiamond: {
         hero: { tag: 'نمونه‌کار طراحی وب', title: 'BZ Diamond — طراحی وبسایت و فروشگاه آنلاین', desc: 'پروژه مشتری در حوزه جواهرات و الماس — طراحی، توسعه و پشتیبانی دیجیتال توسط بیزدوار گروپ' },
         about: { title: 'درباره پروژه', body: '<strong>BZ Diamond</strong> یکی از مشتریان بیزدوار گروپ است — برند تخصصی فروش الماس و جواهرات آنلاین. ما وبسایت، فروشگاه WooCommerce، زیرساخت ایمیل و پشتیبانی فنی این پروژه را طراحی و اجرا کرده‌ایم. این صفحه <strong>نمونه‌کار طراحی وب</strong> است، نه بخش کسب‌وکار صنعتی بیزدوار.', servicesTitle: 'خدمات اجراشده توسط بیزدوار', services: ['طراحی و توسعه وبسایت شرکتی و فروشگاهی', 'پیاده‌سازی WooCommerce — فروش آنلاین الماس و جواهرات', 'مدیریت و پیکربندی ایمیل سازمانی (دامنه و صندوق‌های پستی)', 'سئو، ساختار محتوا و بهینه‌سازی صفحات محصول', 'رابط کاربری RTL و چندزبانه (فارسی / انگلیسی)', 'پشتیبانی فنی، به‌روزرسانی و نگهداری سایت'], clientTitle: 'حوزه فعالیت مشتری', clientBody: 'BZ Diamond در حوزه الماس GIA، lab-grown و آموزش انتخاب جواهرات فعالیت می‌کند. جزئیات محصولات و قیمت‌ها در وبسایت رسمی مشتری منتشر می‌شود.', challengeTitle: 'چالش پروژه', challenge: 'نیاز به فروشگاه آنلاین قابل‌اعتماد برای الماس و جواهرات، با RTL فارسی/انگلیسی، سئوی صفحات محصول و ایمیل سازمانی امن — بدون قطع پشتیبانی پس از لانچ.', resultsTitle: 'نتایج و دستاورد', result1: 'فروشگاه WooCommerce با ساختار کاتالوگ و صفحات تبدیل', result2: 'ایمیل دامنه و نگهداری مداوم پس از تحویل', result3: 'پایه سئو و چندزبانه برای بازار هدف مشتری', ctaSite: 'مشاهده وبسایت BZ Diamond', ctaOrder: 'سفارش طراحی سایت مشابه', ctaPortfolio: 'سایر نمونه‌کارها' },
-        geoText: 'نمونه‌کار طراحی وب برای برندهای ایران و بین‌المللی — WooCommerce، سئو و پشتیبانی از استانبول و تبریز.'
+        geoText: 'نمونه‌کار طراحی وب برای برندهای ایران و بین‌المللی — WooCommerce، سئو و پشتیبانی.'
       },
       supplifyTrade: {
         hero: { tag: 'نمونه‌کار طراحی وب', title: 'Supplify Trade — طراحی وبسایت تجارت بین‌المللی', desc: 'پروژه مشتری B2B در امارات (RAKEZ) — طراحی وبسایت شرکتی، سئو و پشتیبانی دیجیتال توسط بیزدوار گروپ' },
@@ -1725,107 +1588,19 @@
       },
       fxguard: {
         hero: {
-          tag: 'FXGuard · WhatsApp CRM',
-          title: 'WhatsApp’ı satış makinenize çevirin',
-          desc: 'Tek numara, tüm ekip, tam kontrol — ortak gelen kutusu, müşteriler, ticket, görev, şubeler ve 2FA. FXGuard suite; Cloud $49/ay’dan, tek seferlik lisans veya Managed Dedicated.',
-          regionItems: [
-            { code: 'TR', label: 'Türkiye' },
-            { code: 'AE', label: 'Dubai' },
-            { code: 'EU', label: 'Avrupa' },
-            { code: 'IR', label: 'İran' }
-          ],
-          regions: 'Türkiye · Dubai · Avrupa · İran',
-          trust: 'Ücretsiz canlı demo · $49/ay’dan · fxguard.io',
-          ctaDemo: 'Ücretsiz demo',
-          ctaPricing: 'Fiyat & satın al',
-          ctaContact: 'WhatsApp ile satın al',
+          tag: 'Exchange · remittance · finance',
+          title: 'Quote the rate on WhatsApp. Keep the customer book.',
+          desc: 'Full copy loads from i18n/fxguard-i18n.js on this page only.',
+          regions: '',
+          trust: 'From $49/mo · guided demo · 7-day money-back',
+          ctaDemo: 'See the panel',
+          ctaPricing: 'Prices',
+          ctaContact: 'Buy on WhatsApp',
           ctaStore: 'fxguard.io'
         },
-        stats: { businesses: 'Modül+', regions: 'Kullanıcı rolü', regionsVal: 'Owner → Agent', uptime: 'Uptime hedefi', setup: 'Destek dili', setupSuffix: '' },
-        problem: {
-          eyebrow: 'Sorun',
-          title: 'Tanıdık mı?',
-          desc: 'Büyüyen ekipler kişisel WhatsApp’ı aşar — mesaj kaybolur, hesap verebilirlik biter.',
-          items: [
-            { icon: 'mobile', title: 'Birden fazla telefon, tek numara', desc: 'Paylaşılan giriş veya kişisel telefonlar — mesajlar kaybolur.' },
-            { icon: 'list', title: 'Müşteri geçmişi yok', desc: 'Her sohbet sıfırdan; etiket ve ortak bağlam yok.' },
-            { icon: 'clock', title: 'Hesap verebilirlik yok', desc: 'Ticket/task yok; kim neyi kapattı bilinmiyor.' },
-            { icon: 'shield', title: 'Belirsiz güvenlik', desc: '2FA yok, şube/rol ayrımı yok.' }
-          ]
-        },
-        steps: {
-          eyebrow: '3 adımda satın al',
-          title: 'Demo, paket, satın alma',
-          desc: 'Önce gerçek ürünü görün, sonra kurulum modelini seçin.',
-          items: [
-            { num: '01', icon: 'bolt', title: 'Canlı demoyu deneyin', desc: 'app.fxguard.io — demo / 123456. Gerçek ürün.' },
-            { num: '02', icon: 'target', title: 'Paketi seçin', desc: 'Cloud, Self-hosted License veya Managed Dedicated.' },
-            { num: '03', icon: 'whatsapp', title: 'Satın alın / teklif alın', desc: 'WhatsApp veya fxguard.io formu — iş gününde genelde 24 saat içinde yanıt.' }
-          ],
-          cta: 'Canlı demoyu aç'
-        },
-        features: {
-          eyebrow: 'Modüller',
-          title: 'Hepsi tek panelde',
-          desc: 'Exchange, finans, satış ve destek ekipleri için gerçek modüller.',
-          items: [
-            { icon: 'inbox', title: 'Birleşik WhatsApp gelen kutusu', desc: 'Tek numara, ortak inbox, yönlendirme.' },
-            { icon: 'users', title: 'Müşteriler & CRM', desc: 'Profil, etiket, konuşma geçmişi.' },
-            { icon: 'list', title: 'Destek ticket’ları', desc: 'Açıktan çözüme net sahiplik.' },
-            { icon: 'bolt', title: 'Görev & iş akışı', desc: 'Atama ve uçtan uca takip.' },
-            { icon: 'shield', title: 'Rol, şube & 2FA', desc: 'Owner→Agent, şubeler, Authenticator, audit log.' },
-            { icon: 'chart-line', title: 'FX araçları', desc: 'Kur, grafik ve exchange servis araçları.' }
-          ]
-        },
-        audiences: {
-          eyebrow: 'Kimler için',
-          title: 'Exchange, finans ve destek için',
-          desc: 'Sadece sohbet değil — gerçek hesap verebilirlik isteyen ekipler.',
-          items: [
-            { icon: 'chart-line', title: 'Exchange & FX', region: 'Türkiye · BAE · Avrupa · İran', desc: 'Çok şubeli operasyon + ekip inbox.', tag: 'Multi-branch' },
-            { icon: 'briefcase', title: 'B2B satış & destek', region: 'Tüm bölgeler', desc: 'Geçmiş, ticket ve görevlerle kapanış.', tag: 'Sales ops' },
-            { icon: 'building', title: 'Holding / çok şube', region: 'Türkiye · Dubai', desc: 'Rol ve şube denetimi.', tag: 'Roles' },
-            { icon: 'health', title: 'Hizmet & klinik', region: 'Türkiye · Avrupa', desc: 'Talep takibi, kayıp mesaj yok.', tag: 'Support' }
-          ]
-        },
-        pricing: {
-          eyebrow: 'Paketler',
-          title: 'Üç çalışma modeli — aynı çekirdek',
-          desc: 'Fark kim barındırır ve işletir. Tüm paketlerde aynı ana modüller.',
-          note: 'Demo ücretsiz. Cloud $49/ay veya $490/yıl.',
-          plans: [
-            { id: 'cloud', name: 'Hosted Cloud', price: '$49', period: '/ay', badge: 'En popüler', desc: 'FXGuard’ı bizim altyapımızda çalıştırırız.', features: ['Dakikalar içinde canlı', 'Otomatik güncelleme', 'Günlük yedek', 'Rol & 2FA', '$490/yıl (2 ay tasarruf)'], cta: 'Cloud satın al', href: 'https://fxguard.io/', featured: true },
-            { id: 'license', name: 'Self-hosted License', price: 'Tek sefer', period: ' · teklif', desc: 'Tam sistemi alın, kendi sunucunuzda çalıştırın.', features: ['Tek seferlik sahiplik', 'Kurulum paketi', 'Veri sizde', 'Opsiyonel güncelleme sözleşmesi', 'Onboarding'], cta: 'Lisans teklifi', href: 'https://fxguard.io/' },
-            { id: 'managed', name: 'Managed Dedicated', price: 'Özel', period: ' · teklif', desc: 'Biz kurar, barındırır ve işletiriz — SLA ile.', features: ['Dedicated instance', 'Bakım & monitoring', 'Özel SLA', 'Hesap yöneticisi', 'Eğitim'], cta: 'Managed teklifi', href: 'https://fxguard.io/' }
-          ]
-        },
-        faq: {
-          eyebrow: 'SSS',
-          title: 'Sık sorulanlar',
-          items: [
-            { q: 'Cloud, lisans ve Managed farkı?', a: 'Cloud: biz barındırırız. Lisans: siz kendi sunucunuzda çalıştırırsınız. Managed: dedicated instance’ı biz işletiriz. Üçünde de aynı çekirdek modüller.' },
-            { q: 'Satın almadan deneyebilir miyim?', a: 'Evet — app.fxguard.io (demo / 123456) gerçek üründür.' },
-            { q: 'Fiyat ne kadar başlar?', a: 'Cloud $49/ay veya $490/yıl. Lisans ve Managed teklifle.' },
-            { q: 'Çok şube destekleniyor mu?', a: 'Evet — şube, departman, Owner→Agent roller, 2FA ve audit log.' },
-            { q: 'Bizdavar ile ilişkisi?', a: 'FXGuard, Bizdavar ekosistem ürünüdür; satış fxguard.io üzerinden, Bizdavar katalogunda da yer alır.' }
-          ]
-        },
-        about: {
-          title: 'FXGuard — Bizdavar ekosistem ürünü',
-          body: '<strong>FXGuard WhatsApp CRM</strong> ekip inbox, müşteri CRM, ticket, görev, şube ve FX araçlarını tek panelde birleştirir. Mağaza: <a href="https://fxguard.io/" target="_blank" rel="noopener noreferrer">fxguard.io</a> · Demo: <a href="https://app.fxguard.io/" target="_blank" rel="noopener noreferrer">app.fxguard.io</a>.',
-          ctaContact: 'fxguard.io’ya git',
-          ctaPortfolio: 'Accounting ve ilgili ürünler'
-        },
-        cta: {
-          title: 'FXGuard satın almaya hazır mısınız?',
-          desc: 'Önce ücretsiz demoyu görün; sonra Cloud $49/ay, lisans veya Managed seçin.',
-          btnStart: 'Ücretsiz demo',
-          btnPricing: 'Paketleri gör',
-          btnStore: 'fxguard.io'
-        },
-        related: { title: 'İlgili ürün ve hizmetler' },
-        geoText: 'FXGuard WhatsApp CRM — Türkiye, BAE, Avrupa, İran · fxguard.io · Bizdavar ekosistemi.'
+        geoText: 'FXGuard — WhatsApp panel for exchange, remittance and finance desks · fxguard.io · Bizdavar.'
       },
+
       fxguardAccounting: {
         hero: {
           tag: 'FXGuard · Accounting',
@@ -1855,10 +1630,16 @@
         },
         geoText: 'FXGuard Accounting — FXGuard suite muhasebe ürünü, Bizdavar Group geliştirmesi.'
       },
+      marvispace: {
+        hero: { tag: 'Web tasarım ve yazılım örneği', title: 'MarviSpace — deri ürün e-ticaret mağazası', desc: 'Deri ürün markası için özel e-ticaret sitesinin programlama, geliştirme ve tasarımı — Bizdavar Group' },
+        about: { title: 'Proje hakkında', body: '<strong>MarviSpace</strong>, Bizdavar Group’un e-ticaret yazılım ve tasarım örneğidir — minimal katalog, satın alma akışı ve yönetim paneliyle özel bir deri ürün mağazası. Bu sayfa bir <strong>e-ticaret web tasarım ve geliştirme örneğidir</strong>.', servicesTitle: 'Bizdavar tarafından yapılan hizmetler', services: ['Deri ürün mağazası UI/UX tasarımı', 'Özel e-ticaret programlama ve geliştirme', 'Ürün kataloğu, sepet ve sipariş akışı', 'Admin paneli ve içerik yönetimi', 'Mobil ve performans optimizasyonu', 'Lansman sonrası teknik destek'], clientTitle: 'Müşteri faaliyet alanı', clientBody: 'MarviSpace, deri ürünlerin online satış markasıdır — deri ceket, giyim ve aksesuar. Ürün ve sipariş detayları müşterinin resmi web sitesinde yayınlanır.', challengeTitle: 'Proje zorluğu', challenge: 'Deri ürün markası hazır tema değil, özel bir mağaza istiyordu — minimal ürün ızgarası, SKU kodları, uluslararası satın alma deneyimi ve içerik yönetim paneli.', resultsTitle: 'Sonuçlar', result1: 'marvispace.com’da yayında deri ürün kataloğu', result2: 'Minimal satın alma deneyimi ve özel görsel kimlik', result3: 'Satış ekibi için ürün ve içerik yönetim paneli', ctaSite: 'MarviSpace web sitesini gör', ctaOrder: 'Benzer mağaza sipariş et', ctaPortfolio: 'Diğer örnek işler' },
+        shots: { grid: 'Deri ürün kataloğu — marvispace.com' },
+        geoText: 'Deri ürün e-ticaret mağazası yazılım ve tasarım örneği — Bizdavar Group.'
+      },
       bzDiamond: {
         hero: { tag: 'Web tasarım örneği', title: 'BZ Diamond — Web sitesi ve online mağaza tasarımı', desc: 'Mücevher ve pırlanta alanında müşteri projesi — tasarım, geliştirme ve dijital destek Bizdavar Group tarafından' },
         about: { title: 'Proje hakkında', body: '<strong>BZ Diamond</strong>, Bizdavar Group müşterilerinden biridir — online pırlanta ve mücevher satışına odaklanan bir marka. Web sitesi, WooCommerce mağazası, e-posta altyapısı ve teknik desteği Bizdavar tarafından tasarlanıp uygulanmıştır. Bu sayfa bir <strong>web tasarım örneğidir</strong>, Bizdavar’ın endüstriyel iş birimi değildir.', servicesTitle: 'Bizdavar tarafından yapılan hizmetler', services: ['Kurumsal ve e-ticaret web sitesi tasarımı ve geliştirme', 'WooCommerce uygulaması — online pırlanta ve mücevher satışı', 'Kurumsal e-posta yönetimi ve yapılandırması (alan adı ve posta kutuları)', 'SEO, içerik yapısı ve ürün sayfası optimizasyonu', 'RTL ve çok dilli arayüz (Türkçe / Farsça / İngilizce)', 'Teknik destek, güncelleme ve site bakımı'], clientTitle: 'Müşteri faaliyet alanı', clientBody: 'BZ Diamond, GIA ve lab-grown elmas ile mücevher seçimi eğitimi alanında faaliyet gösterir. Ürün ve fiyat detayları müşterinin resmi web sitesinde yayınlanır.', challengeTitle: 'Proje zorluğu', challenge: 'Elmas ve mücevher için güvenilir WooCommerce mağazası, Farsça/İngilizce RTL, ürün SEO’su ve kurumsal e-posta — lansman sonrası destek kesintisi olmadan.', resultsTitle: 'Sonuçlar', result1: 'Katalog ve dönüşüm sayfalarıyla WooCommerce mağazası', result2: 'Alan adlı e-posta ve sürekli bakım', result3: 'Hedef pazar için SEO ve çok dilli temel', ctaSite: 'BZ Diamond web sitesini gör', ctaOrder: 'Benzer site tasarımı sipariş et', ctaPortfolio: 'Diğer örnek işler' },
-        geoText: 'Türkiye ve uluslararası markalar için web tasarım örneği — WooCommerce, SEO ve İstanbul merkezli destek.'
+        geoText: 'Türkiye ve uluslararası markalar için web tasarım örneği — WooCommerce, SEO ve destek.'
       },
       supplifyTrade: {
         hero: { tag: 'Web tasarım örneği', title: 'Supplify Trade — Uluslararası ticaret web sitesi', desc: 'BAE (RAKEZ) merkezli B2B müşteri projesi — kurumsal web tasarımı, SEO ve dijital destek Bizdavar Group tarafından' },
@@ -2188,107 +1969,19 @@
       },
       fxguard: {
         hero: {
-          tag: 'FXGuard · WhatsApp CRM',
-          title: 'Turn WhatsApp into your team’s sales machine',
-          desc: 'One number. Every team. Total control — shared inbox, customers, tickets, tasks, branches and 2FA. FXGuard suite; Cloud from $49/mo, one-time License, or Managed Dedicated.',
-          regionItems: [
-            { code: 'TR', label: 'Turkey' },
-            { code: 'AE', label: 'Dubai' },
-            { code: 'EU', label: 'Europe' },
-            { code: 'IR', label: 'Iran' }
-          ],
-          regions: 'Turkey · Dubai · Europe · Iran',
-          trust: 'Free live demo · From $49/mo · fxguard.io',
-          ctaDemo: 'Open free demo',
-          ctaPricing: 'See prices & buy',
+          tag: 'Exchange · remittance · finance',
+          title: 'Quote the rate on WhatsApp. Keep the customer book.',
+          desc: 'Full copy loads from i18n/fxguard-i18n.js on this page only.',
+          regions: '',
+          trust: 'From $49/mo · guided demo · 7-day money-back',
+          ctaDemo: 'See the panel',
+          ctaPricing: 'Prices',
           ctaContact: 'Buy on WhatsApp',
           ctaStore: 'fxguard.io'
         },
-        stats: { businesses: 'Modules+', regions: 'User roles', regionsVal: 'Owner → Agent', uptime: 'Uptime target', setup: 'Support languages', setupSuffix: '' },
-        problem: {
-          eyebrow: 'The problem',
-          title: 'Sound familiar?',
-          desc: 'Fast-growing teams outgrow personal WhatsApp — messages get lost and accountability disappears.',
-          items: [
-            { icon: 'mobile', title: 'Multiple phones, one number', desc: 'Shared logins or personal phones — chats slip away.' },
-            { icon: 'list', title: 'No customer history', desc: 'Every chat starts from zero — no tags or shared context.' },
-            { icon: 'clock', title: 'No accountability', desc: 'No tickets or tasks recording who closed what.' },
-            { icon: 'shield', title: 'Unclear security', desc: 'No 2FA, no role separation across branches.' }
-          ]
-        },
-        steps: {
-          eyebrow: 'Buy in 3 steps',
-          title: 'Demo free, pick a package, purchase today',
-          desc: 'No long sales cycle — evaluate the real product first.',
-          items: [
-            { num: '01', icon: 'bolt', title: 'Try the live demo', desc: 'app.fxguard.io — demo / 123456. Real product, not a mockup.' },
-            { num: '02', icon: 'target', title: 'Pick your package', desc: 'Hosted Cloud, Self-hosted License, or Managed Dedicated.' },
-            { num: '03', icon: 'whatsapp', title: 'Purchase or request a quote', desc: 'WhatsApp sales or the form on fxguard.io — usually within 24 hours on business days.' }
-          ],
-          cta: 'Open live demo'
-        },
-        features: {
-          eyebrow: 'Modules',
-          title: 'Everything in one panel',
-          desc: 'Real modules for exchange, finance, sales and support teams.',
-          items: [
-            { icon: 'inbox', title: 'Unified WhatsApp inbox', desc: 'One number, shared inbox, smart routing.' },
-            { icon: 'users', title: 'Customers & CRM', desc: 'Profiles, tags and conversation history.' },
-            { icon: 'list', title: 'Support tickets', desc: 'Clear ownership from open to resolved.' },
-            { icon: 'bolt', title: 'Tasks & workflows', desc: 'Assign and track end-to-end.' },
-            { icon: 'shield', title: 'Roles, branches & 2FA', desc: 'Owner→Agent, branches, Authenticator, audit logs.' },
-            { icon: 'chart-line', title: 'FX tools', desc: 'Rates, charts and exchange service tools.' }
-          ]
-        },
-        audiences: {
-          eyebrow: 'Who it’s for',
-          title: 'Built for exchange, finance and support',
-          desc: 'Teams that need real accountability — not just chat.',
-          items: [
-            { icon: 'chart-line', title: 'Exchange & FX', region: 'Turkey · UAE · Europe · Iran', desc: 'Multi-branch ops plus a team inbox.', tag: 'Multi-branch' },
-            { icon: 'briefcase', title: 'B2B sales & support', region: 'All regions', desc: 'Close with full history, tickets and tasks.', tag: 'Sales ops' },
-            { icon: 'building', title: 'Holdings / multi-site', region: 'Turkey · Dubai', desc: 'Role and branch oversight for owners.', tag: 'Roles' },
-            { icon: 'health', title: 'Services & clinics', region: 'Turkey · Europe', desc: 'Request tracking without lost messages.', tag: 'Support' }
-          ]
-        },
-        pricing: {
-          eyebrow: 'Packages',
-          title: 'Three ways to run FXGuard — same core',
-          desc: 'The difference is who hosts and operates it. Every package includes the same core modules.',
-          note: 'Demo is free. Cloud from $49/mo or $490/year.',
-          plans: [
-            { id: 'cloud', name: 'Hosted Cloud', price: '$49', period: '/mo', badge: 'Most popular', desc: 'We run FXGuard for you on our infrastructure.', features: ['Live in minutes', 'Automatic updates', 'Daily backups', 'Roles & 2FA', '$490/year (save 2 months)'], cta: 'Buy Cloud on fxguard.io', href: 'https://fxguard.io/', featured: true },
-            { id: 'license', name: 'Self-hosted License', price: 'One-time', period: ' · quote', desc: 'Buy the full system and run it on your servers.', features: ['One-time ownership', 'Install package & docs', 'Your data stays with you', 'Optional update contract', 'Onboarding'], cta: 'Get license quote', href: 'https://fxguard.io/' },
-            { id: 'managed', name: 'Managed Dedicated', price: 'Custom', period: ' · quote', desc: 'We install, host and operate a dedicated instance — with SLA.', features: ['Dedicated instance', 'Maintenance & monitoring', 'Custom SLA', 'Account manager', 'Staff training'], cta: 'Get Managed quote', href: 'https://fxguard.io/' }
-          ]
-        },
-        faq: {
-          eyebrow: 'FAQ',
-          title: 'Common questions',
-          items: [
-            { q: 'Cloud vs License vs Managed?', a: 'Cloud: we host it. License: you run it on your servers. Managed: we operate a dedicated instance. All three share the same core modules.' },
-            { q: 'Can I try before buying?', a: 'Yes — app.fxguard.io (demo / 123456) is the real product.' },
-            { q: 'What does pricing start at?', a: 'Hosted Cloud from $49/mo or $490/year. License and Managed are custom quotes.' },
-            { q: 'Multi-branch support?', a: 'Yes — branches, departments, Owner→Agent roles, 2FA and audit logs.' },
-            { q: 'How does Bizdavar relate?', a: 'FXGuard is a Bizdavar ecosystem product; sales run through fxguard.io and it is listed in the Bizdavar product catalog.' }
-          ]
-        },
-        about: {
-          title: 'FXGuard — Bizdavar ecosystem product',
-          body: '<strong>FXGuard WhatsApp CRM</strong> unifies team inbox, customer CRM, tickets, tasks, branches and FX tools in one secure panel. Store: <a href="https://fxguard.io/" target="_blank" rel="noopener noreferrer">fxguard.io</a> · Demo: <a href="https://app.fxguard.io/" target="_blank" rel="noopener noreferrer">app.fxguard.io</a>.',
-          ctaContact: 'Go to fxguard.io',
-          ctaPortfolio: 'Accounting & related products'
-        },
-        cta: {
-          title: 'Ready to buy FXGuard?',
-          desc: 'Try the free demo first; then choose Cloud from $49/mo, License, or Managed.',
-          btnStart: 'Free demo',
-          btnPricing: 'View packages',
-          btnStore: 'fxguard.io'
-        },
-        related: { title: 'Related products & services' },
-        geoText: 'FXGuard WhatsApp CRM — Turkey, UAE, Europe, Iran · fxguard.io · Bizdavar ecosystem.'
+        geoText: 'FXGuard — WhatsApp panel for exchange, remittance and finance desks · fxguard.io · Bizdavar.'
       },
+
       fxguardAccounting: {
         hero: {
           tag: 'FXGuard · Accounting',
@@ -2318,10 +2011,16 @@
         },
         geoText: 'FXGuard Accounting — accounting product in the FXGuard suite, built by Bizdavar Group.'
       },
+      marvispace: {
+        hero: { tag: 'Web design & development case study', title: 'MarviSpace — leather goods e-commerce store', desc: 'Custom programming, development and storefront design for a leather products brand — by Bizdavar Group' },
+        about: { title: 'About the project', body: '<strong>MarviSpace</strong> is a Bizdavar Group e-commerce programming and design case study — a custom leather goods store with a minimal catalog, checkout flow and admin dashboard. This page is a <strong>custom e-commerce web design and development case study</strong>.', servicesTitle: 'Services delivered by Bizdavar', services: ['UI/UX design for a leather goods store', 'Custom e-commerce programming and development', 'Product catalog, cart and order flow', 'Admin dashboard and content management', 'Mobile and performance optimization', 'Post-launch technical support'], clientTitle: 'Client field of activity', clientBody: 'MarviSpace is an online leather goods brand — jackets, apparel and accessories. Product and order details are published on the client’s official website.', challengeTitle: 'Project challenge', challenge: 'A leather brand needed a custom store — not a ready-made theme: minimal product grid, SKU codes, an international shopping experience and a content admin panel.', resultsTitle: 'Results', result1: 'Live leather catalog on marvispace.com', result2: 'Minimal shopping experience with a custom visual identity', result3: 'Product and content admin panel for the sales team', ctaSite: 'View the MarviSpace website', ctaOrder: 'Order a similar store', ctaPortfolio: 'Other case studies' },
+        shots: { grid: 'Leather goods catalog on marvispace.com' },
+        geoText: 'Custom programming and e-commerce design case study for a leather goods store — Bizdavar Group.'
+      },
       bzDiamond: {
         hero: { tag: 'Web design case study', title: 'BZ Diamond — Website and online store design', desc: 'Client project in jewelry and diamonds — design, development and digital support by Bizdavar Group' },
         about: { title: 'About the project', body: '<strong>BZ Diamond</strong> is a Bizdavar Group client focused on online diamond and jewelry sales. We designed and implemented the website, WooCommerce store, email infrastructure and technical support. This page is a <strong>web design case study</strong>, not part of Bizdavar’s industrial business.', servicesTitle: 'Services delivered by Bizdavar', services: ['Corporate and e-commerce website design and development', 'WooCommerce implementation — online diamond and jewelry sales', 'Corporate email management and configuration (domain and mailboxes)', 'SEO, content structure and product page optimization', 'RTL and multilingual interface (Persian / English)', 'Technical support, updates and site maintenance'], clientTitle: 'Client field of activity', clientBody: 'BZ Diamond operates in GIA and lab-grown diamonds and jewelry selection education. Product and pricing details are published on the client’s official website.', challengeTitle: 'Project challenge', challenge: 'Need a trustworthy diamond/jewelry store with Persian/English RTL, product SEO, and secure corporate email — with ongoing support after launch.', resultsTitle: 'Results', result1: 'WooCommerce store with catalog and conversion pages', result2: 'Domain email and ongoing maintenance', result3: 'SEO and multilingual foundation for the target market', ctaSite: 'View the BZ Diamond website', ctaOrder: 'Order a similar website', ctaPortfolio: 'Other case studies' },
-        geoText: 'Web design case study for Iranian and international brands — WooCommerce, SEO and support from Istanbul and Tabriz.'
+        geoText: 'Web design case study for Iranian and international brands — WooCommerce, SEO and support.'
       },
       supplifyTrade: {
         hero: { tag: 'Web design case study', title: 'Supplify Trade — International trade website', desc: 'UAE (RAKEZ) B2B client project — corporate web design, SEO and digital support by Bizdavar Group' },
@@ -2412,8 +2111,8 @@
       relatedBizpet: 'پد حرارتی بیز پت',
       relatedProducts: 'سخت‌افزار و خطوط تولید',
       relatedContact: 'مشاوره و استعلام',
-      relatedGamak: 'تامین الکتروموتور صنعتی از ترکیه',
-      geoText: 'تصاویر واقعی از نمایشگاه، تولید و تحقیق تیم بیزدوار در تبریز و استانبول.',
+      relatedGamak: 'تامین الکتروموتور صنعتی',
+      geoText: 'تصاویر واقعی از نمایشگاه، تولید و تحقیق تیم بیزدوار در تبریز.',
       ctaFromAbout: 'گالری تصاویر نمایشگاه و تولید',
       items: {
         'expo-imen-booth': { caption: 'غرفه ایمن سهند پدیده — پدهای حرارتی روی میز نمایشگاه', alt: 'غرفه نمایشگاهی ایمن سهند پدیده با پدهای حرارتی سیاه روی میز' },
@@ -2466,7 +2165,7 @@
       relatedProducts: 'Donanım ve üretim hatları',
       relatedContact: 'Danışmanlık ve teklif',
       relatedGamak: 'Türkiye’den endüstriyel motor tedariki',
-      geoText: 'Bizdavar ekibinin Tebriz ve İstanbul’daki fuar, üretim ve Ar-Ge fotoğrafları.',
+      geoText: 'Bizdavar ekibinin Tebriz’deki fuar, üretim ve Ar-Ge fotoğrafları.',
       ctaFromAbout: 'Fuar ve üretim galerisi',
       items: {
         'expo-imen-booth': { caption: 'Imen Sahand Padideh standı — ısı pedleri masada', alt: 'Fuar standında siyah ısı pedleri' },
@@ -2519,7 +2218,7 @@
       relatedProducts: 'Hardware and production lines',
       relatedContact: 'Consulting and quotes',
       relatedGamak: 'Industrial motor supply from Turkey',
-      geoText: 'Real photos of Bizdavar exhibitions, production and R&D in Tabriz and Istanbul.',
+      geoText: 'Real photos of Bizdavar exhibitions, production and R&D in Tabriz.',
       ctaFromAbout: 'Exhibition and production gallery',
       items: {
         'expo-imen-booth': { caption: 'Imen Sahand Padideh booth — heating pads on display', alt: 'Exhibition booth with black heating pads on the table' },

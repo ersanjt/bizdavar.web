@@ -14,7 +14,7 @@
   if (!el) return;
 
   var BASE = '/assets/scripts/';
-  var ASSET_VER = '20260826d';
+  var ASSET_VER = '20260826h';
 
   function split(name) {
     return (el.getAttribute(name) || '')

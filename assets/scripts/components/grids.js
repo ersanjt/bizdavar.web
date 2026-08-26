@@ -567,7 +567,7 @@
       };
       const hubHtml = renderOfficeHub(hub, { badge: L.mainOffice || 'دفتر اصلی', waLabel: L.whatsappIstanbul || 'واتساپ استانبول', open: true });
       const yerevanHtml = renderOfficeHub(yerevan, { badge: L.armenia || 'ارمنستان', modifier: 'presence-istanbul-hub--armenia', open: false });
-      const tabrizHtml = renderOfficeHub(tabriz, { badge: L.iran || 'ایران', waLabel: L.whatsappIran || 'واتساپ ایران', modifier: 'presence-istanbul-hub--iran', open: false });
+      const tabrizHtml = renderOfficeHub(tabriz, { badge: L.iran || 'ایران', waLabel: L.whatsappIran || 'واتساپ ایران', modifier: 'presence-istanbul-hub--iran', open: true });
 
       presenceEl.innerHTML = `
         <div class="presence-showcase">
@@ -822,6 +822,18 @@
             <p class="section__desc">${t('industrial.desc')}</p>
 
           </div>
+
+          <figure class="industrial-visual">
+            <img src="/assets/images/content/supply-hero-800.webp"
+                 srcset="/assets/images/content/supply-hero-800.webp 800w, /assets/images/content/supply-hero.jpg 1152w"
+                 sizes="(min-width: 1025px) 520px, 92vw"
+                 width="800" height="600" loading="lazy"
+                 alt="${t('industrial.visualAlt', 'Industrial sensors and export crates ready for B2B supply')}">
+            <figcaption>
+              <strong>${t('industrial.visualLead')}</strong>
+              <p>${t('industrial.visualNote')}</p>
+            </figcaption>
+          </figure>
 
           <div class="industrial-grid">${cards}</div>
 

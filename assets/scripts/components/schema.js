@@ -379,8 +379,8 @@
           image: logoAbsUrl(),
           address: {
             '@type': 'PostalAddress',
-            addressLocality: hq.city || 'Istanbul',
-            addressCountry: hq.countryCode || 'TR'
+            addressLocality: hq.city || 'Tabriz',
+            addressCountry: hq.countryCode || 'IR'
           },
           parentOrganization: { '@id': orgId },
           areaServed: ['TR', 'IR', 'AM', 'AE', 'DE']

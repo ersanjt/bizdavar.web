@@ -50,6 +50,7 @@ const PAGE_OG = {
   articleLocalSeo: 'assets/images/content/network-map.svg',
   articleLiquiMolySupply: 'assets/images/liqui-moly/octane-plus.jpg',
   bzDiamond: 'assets/images/partners/bzdiamond.webp',
+  marvispace: 'assets/images/content/marvispace/shop-grid.jpg',
   kayaOne: 'assets/images/partners/kaya-one.svg',
   smmTurk: 'assets/images/partners/smm-turk.svg',
   marviSociety: 'assets/images/partners/marvi-society.png'
@@ -74,6 +75,7 @@ const PAGE_ROUTES = {
   digiSystem: '/pages/digi-system',
   teraoka: '/pages/teraoka',
   bzDiamond: '/pages/bz-diamond',
+  marvispace: '/pages/marvispace',
   supplifyTrade: '/pages/supplify-trade',
   kayaOne: '/pages/kaya-one',
   smmTurk: '/pages/smm-turk',

@@ -1,5 +1,5 @@
 /**
- * Bizdavar — fa / tr (Istanbul) / en
+ * Bizdavar — fa / tr / en
  */
 window.BIZDAVAR_LOCALES = {
   fa: {
@@ -9,15 +9,15 @@ window.BIZDAVAR_LOCALES = {
     siteName: 'بیزدوار گروپ',
     contact: {
       whatsappMessage: 'سلام، از وبسایت bizdavar.com پیام می‌دهم.',
-      address: 'استانبول، ترکیه',
+      address: 'تبریز',
       workingHours: '۷/۲۴ — همیشه در دسترس',
-      channelTr: 'ترکیه',
+      channelTr: 'واتساپ فروش',
       channelIr: 'واتساپ فارسی',
       channelField: 'خدمات فنی'
     },
     seo: {
       defaultTitle: 'بیزدوار گروپ | طراحی سایت، بازاریابی دیجیتال و تامین صنعتی',
-      defaultDescription: 'از استانبول: طراحی سایت با Fast Web Studio، بازاریابی دیجیتال و SMM، محصول FXGuard WhatsApp CRM، و تامین VEGA، Prosense و Liqui Moly. مشاوره رایگان.',
+      defaultDescription: 'طراحی سایت با Fast Web Studio، بازاریابی دیجیتال و SMM، محصول FXGuard WhatsApp CRM، و تامین VEGA، Prosense و Liqui Moly. مشاوره رایگان.',
       keywords: 'بیزدوار, Bizdavar Group, طراحی سایت, بازاریابی دیجیتال, FXGuard, VEGA, Prosense, Liqui Moly, Fast Web Studio',
       schemaServices: 'خدمات بیزدوار گروپ',
       schemaBlog: 'وبلاگ بیزدوار گروپ',
@@ -131,7 +131,7 @@ window.BIZDAVAR_LOCALES = {
       serviceSmmDesc: 'محتوا، ریلز و Paid Social',
       serviceField: 'خدمات فنی و ساختمانی',
       serviceFieldDesc: 'دوربین، سیم‌کشی و نورمخفی',
-      serviceFieldFeaturedDesc: 'تبریز و استانبول — تیم فنی',
+      serviceFieldFeaturedDesc: 'تبریز — تیم فنی',
       serviceFieldBadge: 'میدانی',
       products: 'محصولات ما',
       productsCatalog: 'همه محصولات',
@@ -140,7 +140,7 @@ window.BIZDAVAR_LOCALES = {
       productsLines: 'خطوط تولید',
       productsMegaHint: 'محصولات مالکیتی بیزدوار',
       productsSupplyLink: 'تامین برندهای صنعتی',
-      productsSupplyDesc: 'مشاوره، انتخاب مدل و پروفرما از ترکیه',
+      productsSupplyDesc: 'مشاوره، انتخاب مدل و پیش‌فاکتور',
       productsQuote: 'درخواست استعلام',
       tabOwned: 'محصولات بیزدوار',
       tabLines: 'خطوط و کاتالوگ',
@@ -206,7 +206,7 @@ window.BIZDAVAR_LOCALES = {
       linkedin: 'لینکدین',
       connectShort: 'ارتباط',
       followUs: 'ما را دنبال کنید',
-      hq: 'مرکز: استانبول',
+      hq: 'پشتیبانی چندزبانه',
       legal: 'قوانین و دسترسی'
     },
     services: {
@@ -249,6 +249,9 @@ window.BIZDAVAR_LOCALES = {
       ctaDesc: 'انتخاب مدل، خرید بین‌المللی، حمل و گمرک — پاسخ توسط تیم فنی بیزدوار',
       ctaBtn: 'درخواست استعلام',
       ctaLink: 'خدمات صنعتی',
+      visualAlt: 'سنسور سطح، دتکتور گاز و جعبه صادراتی — تامین صنعتی بیزدوار',
+      visualLead: 'از استعلام تا تحویل روی سایت',
+      visualNote: 'انتخاب مدل، خرید بین‌المللی و لجستیک — VEGA، Prosense، موتور و پمپ برای پروژه B2B.',
       products: [
         { name: 'VEGA', title: 'سنسور و ابزار دقیق', desc: 'اندازه‌گیری سطح، فشار، جریان و سوئیچ — استاندارد صنایع نفت، پتروشیمی و آب', badge: 'آلمان', tags: ['VEGAPULS', 'VEGABAR', 'VEGAPOINT'], cta: 'مشاهده کاتالوگ' },
         { name: 'Prosense', title: 'دتکتور گاز و شعله', desc: 'سیستم‌های ثابت و پرتابل با گواهی SIL2/3 — مناسب معدن، پتروشیمی و پارکینگ', badge: 'ترکیه', tags: ['PQ+', 'SafeVader', 'PPS'], cta: 'سری‌های محصول' },
@@ -285,15 +288,14 @@ window.BIZDAVAR_LOCALES = {
       ]
     },
     geo: {
-      summary: 'خدمات از استانبول به ایران، ترکیه و ۱۱ کشور — مشاوره فارسی، واتساپ و تحویل بین‌المللی.',
+      summary: 'خدمات دیجیتال و تامین صنعتی در ۱۱ کشور — مشاوره فارسی، واتساپ و تحویل بین‌المللی.',
       hubs: [
-        { city: 'استانبول', country: 'ترکیه', role: 'دفتر اصلی · فین‌تک و عملیات بین‌المللی' },
         { city: 'تبریز', country: 'ایران', role: 'بازار ایران · پروژه‌های صنعتی و دیجیتال' },
         { city: 'ایروان', country: 'ارمنستان', role: 'عملیات منطقه‌ای' }
       ]
     },
     home: {
-      heroBadge: 'بیزدوار گروپ — از استانبول',
+      heroBadge: 'بیزدوار گروپ — از ۱۳۹۲',
       heroTitle: 'بیزدوار سه کار جدا می‌کند',
       heroTitleSpan: '',
       heroTitleEnd: '',
@@ -328,13 +330,13 @@ window.BIZDAVAR_LOCALES = {
       featResultsDesc: 'افزایش نرخ تبدیل و رشد برند',
       svcEyebrow: 'خدمات تخصصی',
       svcTitle: 'راهکارهای جامع بیزدوار گروپ',
-      svcDesc: 'شش محور خدمات — دیجیتال، نرم‌افزار و خدمات فنی تبریز و استانبول',
+      svcDesc: 'شش محور خدمات — دیجیتال، نرم‌افزار و خدمات فنی تبریز',
       svcDmDesc: 'استراتژی، کمپین تبلیغاتی، سئو و بهینه‌سازی نرخ تبدیل برای رشد فروش آنلاین.',
       svcWebDesc: 'سایت شرکتی، فروشگاهی و لندینگ — تحویل سریع با Fast Web Studio.',
       svcSmmDesc: 'تولید محتوا، مدیریت صفحات و تبلیغات هدفمند در شبکه‌های اجتماعی.',
       svcAppsDesc: 'اپلیکیشن اندروید و iOS، وب‌اپ و سامانه‌های سازمانی.',
       svcServerDesc: 'راه‌اندازی، امنیت، بکاپ، مانیتورینگ و مهاجرت سرور.',
-      svcFieldDesc: 'دوربین مدار بسته، سیم‌کشی و نورمخفی — تبریز و استانبول.',
+      svcFieldDesc: 'دوربین مدار بسته، سیم‌کشی و نورمخفی — تبریز.',
       svcIndDesc: 'سنسور VEGA، دتکتور Prosense، Liqui Moly و مشاوره فنی تامین.',
       svcPlans: 'پلن‌ها و قیمت',
       fastTitle: 'طراحی سایت حرفه‌ای در ۵ روز!',
@@ -342,10 +344,10 @@ window.BIZDAVAR_LOCALES = {
       fastBtn: 'مشاهده پلن‌ها',
       aboutTag: 'درباره ما',
       aboutTitle: 'بیزدوار گروپ — شریک رشد کسب‌وکار',
-      aboutP1: 'خدمات دیجیتال، طراحی سایت و تامین صنعتی از استانبول — و محصولاتی که خودمان می‌سازیم؛ از پد حرارتی BizPet تا FXGuard. از فین‌تک تا صنعت، راهکار یکپارچه می‌دهیم.',
+      aboutP1: 'خدمات دیجیتال، طراحی سایت و تامین صنعتی — و محصولاتی که خودمان می‌سازیم؛ از پد حرارتی BizPet تا FXGuard. از فین‌تک تا صنعت، راهکار یکپارچه می‌دهیم.',
       aboutP2: 'زیرساخت دیجیتال، مدیریت دامنه، SSL و امنیت نیز بخشی از خدمات ماست — میزبانی و دامنه بین‌المللی از طریق <a href="https://netinode.net/" class="service-card__link" target="_blank" rel="noopener noreferrer">Netinode</a>.',
       aboutHeroImage: 'assets/images/content/about-hero.jpg',
-      aboutHeroAlt: 'بیزدوار گروپ — آژانس دیجیتال و صنعتی',
+      aboutHeroAlt: 'تیم بیزدوار — مشاوره تامین صنعتی و خدمات دیجیتال',
       aboutMore: 'بیشتر درباره بیزدوار',
       aboutInfra: 'مدیریت زیرساخت',
       clientsTitle: 'خدمات و محصولات در عمل',
@@ -355,14 +357,14 @@ window.BIZDAVAR_LOCALES = {
       blogAll: 'مشاهده همه مطالب وبلاگ',
       faqTitle: 'سوالات متداول',
       ctaTitle: 'استعلام قیمت VEGA یا طراحی سایت؟',
-      ctaDesc: 'واتساپ بزنید — مشاوره رایگان در ساعات کاری از استانبول و تبریز',
+      ctaDesc: 'واتساپ بزنید — مشاوره رایگان در ساعات کاری',
       ctaForm: 'فرم استعلام',
       faqs: [
-        { q: 'چطور سنسور VEGA اصل برای ایران بخرم؟', a: 'از <a href="/pages/vega">صفحه VEGA</a> مدل را انتخاب کنید یا در واتساپ شرایط مخزن را بفرستید. بیزدوار از استانبول کد سفارش، پیش‌فاکتور و لجستیک تا ایران را انجام می‌دهد.' },
+        { q: 'چطور سنسور VEGA اصل برای ایران بخرم؟', a: 'از <a href="/pages/vega">صفحه VEGA</a> مدل را انتخاب کنید یا در واتساپ شرایط مخزن را بفرستید. بیزدوار کد سفارش، پیش‌فاکتور و لجستیک تا ایران را انجام می‌دهد.' },
         { q: 'قیمت طراحی سایت با Fast Web Studio چقدر است؟', a: 'پلن پایه ۹۹ دلار، فروشگاهی ۱۹۹ دلار و حرفه‌ای ۲۹۹ دلار — جزئیات در <a href="/pages/fast">Fast Web Studio</a>. تحویل از ۵ روز کاری با RTL و سئو پایه.' },
         { q: 'دتکتور گاز Prosense را از کجا تامین می‌کنید؟', a: 'دتکتور PQ، SafeVader و PPS+ اصل با گواهی SIL. کاتالوگ در <a href="/pages/prosense">صفحه Prosense</a> — استعلام از واتساپ فارسی.' },
-        { q: 'مشاوره رایگان چطور شروع می‌شود؟', a: 'در <a href="/pages/contact">فرم تماس</a> شماره واتساپ را بگذارید یا مستقیم پیام دهید. پاسخ در ساعات کاری از استانبول و تبریز است.' },
-        { q: 'بیزدوار در کدام شهرها خدمات می‌دهد؟', a: 'دفتر اصلی استانبول، هماهنگی ایران در تبریز، و پروژه‌ها در ۱۱ کشور — دیجیتال و تامین صنعتی.' }
+        { q: 'مشاوره رایگان چطور شروع می‌شود؟', a: 'در <a href="/pages/contact">فرم تماس</a> شماره واتساپ را بگذارید یا مستقیم پیام دهید. پاسخ در ساعات کاری است.' },
+        { q: 'بیزدوار در کدام شهرها خدمات می‌دهد؟', a: 'هماهنگی ایران در تبریز، و پروژه‌ها در ۱۱ کشور — دیجیتال و تامین صنعتی.' }
       ]
     },
     contactPage: {
@@ -397,9 +399,9 @@ window.BIZDAVAR_LOCALES = {
       formSuccess: 'پیام شما با موفقیت ارسال شد. به‌زودی با شما تماس می‌گیریم.',
       formSuccessMailto: 'پیام شما آماده ارسال است. اگر پنجره ایمیل باز نشد، مستقیماً به info@bizdavar.com بنویسید.',
       formSuccessWhatsapp: 'پیام شما برای واتساپ آماده شد. اگر پنجره باز نشد، از دکمه‌های واتساپ همین صفحه استفاده کنید.',
-      geoText: 'مشاوره و پشتیبانی از استانبول، تبریز و ایروان — واتساپ فارسی و ترکیه.',
+      geoText: 'مشاوره و پشتیبانی چندزبانه — واتساپ فارسی و فروش.',
       formError: 'ارسال ناموفق بود. لطفاً دوباره تلاش کنید یا مستقیماً به info@bizdavar.com ایمیل بزنید.',
-      waTr: 'واتساپ ترکیه',
+      waTr: 'واتساپ فروش',
       waIr: 'واتساپ فارسی',
       mapTitle: 'همکاری بین‌المللی',
       mapDesc: 'بیزدوار گروپ با تمرکز بر پروژه‌های دیجیتال و صنعتی، به کسب‌وکارها در ایران، ترکیه و بازارهای بین‌المللی خدمات ارائه می‌دهد.',
@@ -459,6 +461,7 @@ window.BIZDAVAR_LOCALES = {
       supplifyTrade: { crumb: 'Supplify Trade' },
       kayaOne: { crumb: 'Kaya One AG' },
       smmTurk: { crumb: 'SMM Turk' },
+      marvispace: { crumb: 'MarviSpace' },
       marviSociety: { crumb: 'Marvi Society' },
       fxguardExchange: { crumb: 'FXGuard Exchange' },
       biztejarat: { crumb: 'بیزتجارت' },
@@ -486,16 +489,16 @@ window.BIZDAVAR_LOCALES = {
     siteName: 'Bizdavar Group',
     contact: {
       whatsappMessage: 'Merhaba, bizdavar.com web sitesinden yazıyorum.',
-      address: 'İstanbul, Türkiye',
+      address: 'Tebriz',
       workingHours: '7/24',
-      channelTr: 'Türkiye',
+      channelTr: 'Satış WhatsApp',
       channelIr: 'WhatsApp Farsça',
       channelField: 'Teknik hizmetler'
     },
     seo: {
       defaultTitle: 'Bizdavar Group | Web tasarım, dijital pazarlama ve endüstriyel tedarik',
-      defaultDescription: 'İstanbul merkezli Bizdavar: Fast Web Studio ile web tasarım, dijital pazarlama ve SMM, FXGuard WhatsApp CRM, VEGA, Prosense ve Liqui Moly tedariki. Ücretsiz danışmanlık.',
-      keywords: 'Bizdavar, web tasarım İstanbul, dijital pazarlama, FXGuard, VEGA, Prosense, Liqui Moly, Fast Web Studio',
+      defaultDescription: 'Fast Web Studio ile web tasarım, dijital pazarlama ve SMM, FXGuard WhatsApp CRM, VEGA, Prosense ve Liqui Moly tedariki. Ücretsiz danışmanlık.',
+      keywords: 'Bizdavar, web tasarım, dijital pazarlama, FXGuard, VEGA, Prosense, Liqui Moly, Fast Web Studio',
       schemaServices: 'Bizdavar Group hizmetleri',
       schemaBlog: 'Bizdavar Group blog',
       schemaPortfolio: 'Bizdavar Group portfolyo'
@@ -608,7 +611,7 @@ window.BIZDAVAR_LOCALES = {
       serviceSmmDesc: 'İçerik, reels ve Paid Social',
       serviceField: 'Teknik ve bina hizmetleri',
       serviceFieldDesc: 'CCTV, tesisat ve gizli aydınlatma',
-      serviceFieldFeaturedDesc: 'Tebriz ve İstanbul — Teknik ekip',
+      serviceFieldFeaturedDesc: 'Tebriz — Teknik ekip',
       serviceFieldBadge: 'Saha',
       products: 'Ürünlerimiz',
       productsCatalog: 'Tüm ürünler',
@@ -617,7 +620,7 @@ window.BIZDAVAR_LOCALES = {
       productsLines: 'Üretim hatları',
       productsMegaHint: 'Bizdavar’ın kendi ürünleri',
       productsSupplyLink: 'Endüstriyel marka tedariki',
-      productsSupplyDesc: 'Danışmanlık, model seçimi ve proforma — Türkiye',
+      productsSupplyDesc: 'Danışmanlık, model seçimi ve proforma',
       productsQuote: 'Teklif iste',
       tabOwned: 'Bizdavar ürünleri',
       tabLines: 'Hatlar ve katalog',
@@ -683,7 +686,7 @@ window.BIZDAVAR_LOCALES = {
       linkedin: 'LinkedIn',
       connectShort: 'İletişim',
       followUs: 'Bizi takip edin',
-      hq: 'Merkez: İstanbul',
+      hq: 'Çok dilli destek',
       legal: 'Yasal ve erişim'
     },
     services: {
@@ -726,6 +729,9 @@ window.BIZDAVAR_LOCALES = {
       ctaDesc: 'Model seçimi, uluslararası satın alma, nakliye ve gümrük — Bizdavar teknik ekibi',
       ctaBtn: 'Teklif iste',
       ctaLink: 'Endüstriyel hizmetler',
+      visualAlt: 'Seviye sensörü, gaz dedektörü ve ihracat kasaları — Bizdavar endüstriyel tedarik',
+      visualLead: 'Sorgudan sahaya teslim',
+      visualNote: 'Model seçimi, uluslararası alım ve lojistik — VEGA, Prosense, motor ve pompa.',
       products: [
         { name: 'VEGA', title: 'Sensör ve ölçüm', desc: 'Seviye, basınç, akış — petrol, petrokimya ve su endüstrileri', badge: 'Almanya', tags: ['VEGAPULS', 'VEGABAR', 'VEGAPOINT'], cta: 'Katalog' },
         { name: 'Prosense', title: 'Gaz ve alev dedektörü', desc: 'SIL2/3 sertifikalı sabit ve taşınabilir sistemler', badge: 'Türkiye', tags: ['PQ+', 'SafeVader', 'PPS'], cta: 'Ürün serileri' },
@@ -762,15 +768,14 @@ window.BIZDAVAR_LOCALES = {
       ]
     },
     geo: {
-      summary: 'İstanbul\'dan İran, Türkiye ve 11 ülkeye hizmet — Türkçe danışmanlık, WhatsApp ve uluslararası teslimat.',
+      summary: 'Dijital hizmet ve endüstriyel tedarik — 11 ülkede Türkçe danışmanlık, WhatsApp ve uluslararası teslimat.',
       hubs: [
-        { city: 'İstanbul', country: 'Türkiye', role: 'Merkez ofis · fintech ve uluslararası operasyon' },
         { city: 'Tebriz', country: 'İran', role: 'İran pazarı · endüstriyel ve dijital projeler' },
         { city: 'Erivan', country: 'Ermenistan', role: 'Bölgesel operasyon' }
       ]
     },
     home: {
-      heroBadge: 'Bizdavar Group — İstanbul',
+      heroBadge: 'Bizdavar Group — 2013’ten beri',
       heroTitle: 'Bizdavar üç ayrı iş yapar',
       heroTitleSpan: '',
       heroTitleEnd: '',
@@ -805,13 +810,13 @@ window.BIZDAVAR_LOCALES = {
       featResultsDesc: 'Dönüşüm oranı ve marka büyümesi',
       svcEyebrow: 'Uzman hizmetler',
       svcTitle: 'Bizdavar Group kapsamlı çözümleri',
-      svcDesc: 'Altı hizmet alanı — dijital, yazılım ve teknik (Tebriz & İstanbul)',
+      svcDesc: 'Altı hizmet alanı — dijital, yazılım ve teknik (Tebriz)',
       svcDmDesc: 'Strateji, reklam kampanyaları, SEO ve online satış büyümesi için CRO.',
       svcWebDesc: 'Kurumsal site, e-ticaret ve landing — Fast Web Studio ile hızlı teslimat.',
       svcSmmDesc: 'İçerik üretimi, sayfa yönetimi ve hedefli sosyal medya reklamları.',
       svcAppsDesc: 'Android, iOS, web app ve kurumsal sistemler.',
       svcServerDesc: 'Kurulum, güvenlik, yedek, monitoring ve sunucu migrasyonu.',
-      svcFieldDesc: 'CCTV, tesisat ve gizli aydınlatma — Tebriz ve İstanbul.',
+      svcFieldDesc: 'CCTV, tesisat ve gizli aydınlatma — Tebriz.',
       svcIndDesc: 'VEGA sensör, Prosense dedektör, Liqui Moly ve teknik tedarik danışmanlığı.',
       svcPlans: 'Planlar ve fiyat',
       fastTitle: '5 günde profesyonel web sitesi!',
@@ -819,10 +824,10 @@ window.BIZDAVAR_LOCALES = {
       fastBtn: 'Planları gör',
       aboutTag: 'Hakkımızda',
       aboutTitle: 'Bizdavar Group — büyüme ortağınız',
-      aboutP1: 'İstanbul’dan dijital hizmet, web tasarım ve endüstriyel tedarik — ayrıca kendi ürünlerimiz: BizPet ısı pedi ve FXGuard. Fintech’ten sanayiye entegre çözüm.',
+      aboutP1: 'Dijital hizmet, web tasarım ve endüstriyel tedarik — ayrıca kendi ürünlerimiz: BizPet ısı pedi ve FXGuard. Fintech’ten sanayiye entegre çözüm.',
       aboutP2: 'Dijital altyapı, domain, SSL ve güvenlik de hizmetlerimiz arasında — uluslararası hosting ve domain için <a href="https://netinode.net/" class="service-card__link" target="_blank" rel="noopener noreferrer">Netinode</a>.',
       aboutHeroImage: 'assets/images/content/about-hero.jpg',
-      aboutHeroAlt: 'Bizdavar Group — dijital ve endüstriyel ajans',
+      aboutHeroAlt: 'Bizdavar ekibi — endüstriyel tedarik ve dijital hizmet danışmanlığı',
       aboutMore: 'Bizdavar hakkında daha fazla',
       aboutInfra: 'Altyapı yönetimi',
       clientsTitle: 'Hizmetler ve ürünler uygulamada',
@@ -832,14 +837,14 @@ window.BIZDAVAR_LOCALES = {
       blogAll: 'Tüm blog yazıları',
       faqTitle: 'Sık sorulan sorular',
       ctaTitle: 'VEGA fiyatı veya web sitesi mi lazım?',
-      ctaDesc: 'WhatsApp yazın — İstanbul ve Tebriz’den ücretsiz danışmanlık',
+      ctaDesc: 'WhatsApp yazın — ücretsiz danışmanlık',
       ctaForm: 'Teklif formu',
       faqs: [
-        { q: 'İran projesi için orijinal VEGA nasıl alınır?', a: '<a href="/tr/pages/vega">VEGA sayfasından</a> model seçin veya WhatsApp’tan tank/proses bilgisini gönderin. Bizdavar İstanbul’dan order code, proforma ve lojistik sağlar.' },
+        { q: 'İran projesi için orijinal VEGA nasıl alınır?', a: '<a href="/tr/pages/vega">VEGA sayfasından</a> model seçin veya WhatsApp’tan tank/proses bilgisini gönderin. Bizdavar order code, proforma ve lojistik sağlar.' },
         { q: 'Fast Web Studio web sitesi ne kadara mal olur?', a: 'Temel 99$, mağaza 199$, pro 299$ — ayrıntılar <a href="/tr/pages/fast">Fast Web Studio</a>’da. 5 iş gününden itibaren teslimat, RTL ve temel SEO dahil.' },
         { q: 'Prosense gaz dedektörünü nereden tedarik ediyorsunuz?', a: 'Orijinal PQ, SafeVader ve PPS+ — SIL sertifikalı. Katalog: <a href="/tr/pages/prosense">Prosense</a>. Farsça veya Türkçe WhatsApp ile teklif.' },
-        { q: 'Ücretsiz danışmanlık nasıl başlar?', a: '<a href="/tr/pages/contact">İletişim formuna</a> WhatsApp numaranızı yazın veya doğrudan mesaj atın. Mesai saatlerinde İstanbul ve Tebriz’den yanıt.' },
-        { q: 'Bizdavar hangi şehirlerde hizmet veriyor?', a: 'Merkez ofis İstanbul, İran koordinasyonu Tebriz, projeler 11 ülkede — dijital ve endüstriyel tedarik.' }
+        { q: 'Ücretsiz danışmanlık nasıl başlar?', a: '<a href="/tr/pages/contact">İletişim formuna</a> WhatsApp numaranızı yazın veya doğrudan mesaj atın. Mesai saatlerinde yanıt.' },
+        { q: 'Bizdavar hangi şehirlerde hizmet veriyor?', a: 'İran koordinasyonu Tebriz, projeler 11 ülkede — dijital ve endüstriyel tedarik.' }
       ]
     },
     contactPage: {
@@ -874,9 +879,9 @@ window.BIZDAVAR_LOCALES = {
       formSuccess: 'Mesajınız başarıyla gönderildi. En kısa sürede sizinle iletişime geçeceğiz.',
       formSuccessMailto: 'Mesajınız gönderilmeye hazır. E-posta penceresi açılmazsa info@bizdavar.com adresine yazın.',
       formSuccessWhatsapp: 'Mesajınız WhatsApp için hazır. Pencere açılmazsa bu sayfadaki WhatsApp düğmelerini kullanın.',
-      geoText: 'İstanbul, Tebriz ve Erivan’dan danışmanlık — Türkçe ve Farsça WhatsApp.',
+      geoText: 'Çok dilli danışmanlık — Türkçe ve Farsça WhatsApp.',
       formError: 'Gönderim başarısız. Lütfen tekrar deneyin veya doğrudan info@bizdavar.com adresine yazın.',
-      waTr: 'WhatsApp Türkiye',
+      waTr: 'Satış WhatsApp',
       waIr: 'WhatsApp Farsça',
       mapTitle: 'Uluslararası iş birliği',
       mapDesc: 'Bizdavar Group dijital ve endüstriyel projelerle İran, Türkiye ve uluslararası pazarlara hizmet verir.',
@@ -936,6 +941,7 @@ window.BIZDAVAR_LOCALES = {
       supplifyTrade: { crumb: 'Supplify Trade' },
       kayaOne: { crumb: 'Kaya One AG' },
       smmTurk: { crumb: 'SMM Turk' },
+      marvispace: { crumb: 'MarviSpace' },
       marviSociety: { crumb: 'Marvi Society' },
       fxguardExchange: { crumb: 'FXGuard Exchange' },
       biztejarat: { crumb: 'Biztejarat' },
@@ -963,16 +969,16 @@ window.BIZDAVAR_LOCALES = {
     siteName: 'Bizdavar Group',
     contact: {
       whatsappMessage: 'Hello, I am messaging from bizdavar.com.',
-      address: 'Istanbul, Turkey',
+      address: 'Tabriz',
       workingHours: '24/7',
-      channelTr: 'Turkey',
+      channelTr: 'Sales WhatsApp',
       channelIr: 'Persian WhatsApp',
       channelField: 'Technical services'
     },
     seo: {
       defaultTitle: 'Bizdavar Group | Web design, digital marketing & industrial supply',
-      defaultDescription: 'From Istanbul: Fast Web Studio websites, digital marketing & SMM, FXGuard WhatsApp CRM, plus VEGA, Prosense and Liqui Moly supply. Free consultation.',
-      keywords: 'Bizdavar, web design Istanbul, digital marketing, FXGuard, VEGA, Prosense, Liqui Moly, Fast Web Studio',
+      defaultDescription: 'Fast Web Studio websites, digital marketing & SMM, FXGuard WhatsApp CRM, plus VEGA, Prosense and Liqui Moly supply. Free consultation.',
+      keywords: 'Bizdavar, web design, digital marketing, FXGuard, VEGA, Prosense, Liqui Moly, Fast Web Studio',
       schemaServices: 'Bizdavar Group services',
       schemaBlog: 'Bizdavar Group blog',
       schemaPortfolio: 'Bizdavar Group portfolio'
@@ -1085,7 +1091,7 @@ window.BIZDAVAR_LOCALES = {
       serviceSmmDesc: 'Content, reels and Paid Social',
       serviceField: 'Technical & building services',
       serviceFieldDesc: 'CCTV, wiring and cove lighting',
-      serviceFieldFeaturedDesc: 'Tabriz and Istanbul — Technical team',
+      serviceFieldFeaturedDesc: 'Tabriz — Technical team',
       serviceFieldBadge: 'Field',
       products: 'Our products',
       productsCatalog: 'All products',
@@ -1094,7 +1100,7 @@ window.BIZDAVAR_LOCALES = {
       productsLines: 'Production lines',
       productsMegaHint: 'Bizdavar-owned products',
       productsSupplyLink: 'Industrial brand supply',
-      productsSupplyDesc: 'Consulting, model selection & proforma from Turkey',
+      productsSupplyDesc: 'Consulting, model selection & proforma',
       productsQuote: 'Request a quote',
       tabOwned: 'Bizdavar products',
       tabLines: 'Lines & catalog',
@@ -1160,7 +1166,7 @@ window.BIZDAVAR_LOCALES = {
       linkedin: 'LinkedIn',
       connectShort: 'Connect',
       followUs: 'Follow us',
-      hq: 'HQ: Istanbul',
+      hq: 'Multilingual support',
       legal: 'Legal & access'
     },
     services: {
@@ -1203,6 +1209,9 @@ window.BIZDAVAR_LOCALES = {
       ctaDesc: 'Model selection, international purchase, shipping, and customs — Bizdavar technical team',
       ctaBtn: 'Request quote',
       ctaLink: 'Industrial services',
+      visualAlt: 'Level sensor, gas detector and export crates — Bizdavar industrial supply',
+      visualLead: 'From inquiry to site delivery',
+      visualNote: 'Model selection, international purchase and logistics — VEGA, Prosense, motors and pumps.',
       products: [
         { name: 'VEGA', title: 'Sensors & instrumentation', desc: 'Level, pressure, flow — oil, petrochemical, and water industries', badge: 'Germany', tags: ['VEGAPULS', 'VEGABAR', 'VEGAPOINT'], cta: 'View catalog' },
         { name: 'Prosense', title: 'Gas & flame detectors', desc: 'SIL2/3 certified fixed and portable systems', badge: 'Turkey', tags: ['PQ+', 'SafeVader', 'PPS'], cta: 'Product lines' },
@@ -1239,15 +1248,14 @@ window.BIZDAVAR_LOCALES = {
       ]
     },
     geo: {
-      summary: 'Services from Istanbul to Iran, Turkey, and 11 countries — multilingual support, WhatsApp, and international delivery.',
+      summary: 'Digital services and industrial supply across 11 countries — multilingual support, WhatsApp, and international delivery.',
       hubs: [
-        { city: 'Istanbul', country: 'Turkey', role: 'HQ · fintech & international operations' },
         { city: 'Tabriz', country: 'Iran', role: 'Iran market · industrial & digital projects' },
         { city: 'Yerevan', country: 'Armenia', role: 'Regional operations' }
       ]
     },
     home: {
-      heroBadge: 'Bizdavar Group — Istanbul',
+      heroBadge: 'Bizdavar Group — since 2013',
       heroTitle: 'Bizdavar does three separate things',
       heroTitleSpan: '',
       heroTitleEnd: '',
@@ -1282,13 +1290,13 @@ window.BIZDAVAR_LOCALES = {
       featResultsDesc: 'Higher conversion & brand growth',
       svcEyebrow: 'Expert services',
       svcTitle: 'Bizdavar Group comprehensive solutions',
-      svcDesc: 'Six service areas — digital, software and technical (Tabriz & Istanbul)',
+      svcDesc: 'Six service areas — digital, software and technical (Tabriz)',
       svcDmDesc: 'Strategy, ad campaigns, SEO, and CRO for online sales growth.',
       svcWebDesc: 'Corporate sites, e-commerce, and landing pages — fast delivery with Fast Web Studio.',
       svcSmmDesc: 'Content creation, page management, and targeted social ads.',
       svcAppsDesc: 'Android, iOS, web apps and business systems.',
       svcServerDesc: 'Setup, security, backups, monitoring and server migration.',
-      svcFieldDesc: 'CCTV, wiring and cove lighting — Tabriz and Istanbul.',
+      svcFieldDesc: 'CCTV, wiring and cove lighting — Tabriz.',
       svcIndDesc: 'VEGA sensors, Prosense detectors, Liqui Moly and supply consulting.',
       svcPlans: 'Plans & pricing',
       fastTitle: 'Professional website in 5 days!',
@@ -1296,10 +1304,10 @@ window.BIZDAVAR_LOCALES = {
       fastBtn: 'View plans',
       aboutTag: 'About us',
       aboutTitle: 'Bizdavar Group — your growth partner',
-      aboutP1: 'Digital services, websites and industrial supply from Istanbul — plus products we build, from the BizPet heating pad to FXGuard. Integrated work from fintech to industry.',
+      aboutP1: 'Digital services, websites and industrial supply — plus products we build, from the BizPet heating pad to FXGuard. Integrated work from fintech to industry.',
       aboutP2: 'Digital infrastructure, domains, SSL, and security are also part of our services — international hosting and domains via <a href="https://netinode.net/" class="service-card__link" target="_blank" rel="noopener noreferrer">Netinode</a>.',
       aboutHeroImage: 'assets/images/content/about-hero.jpg',
-      aboutHeroAlt: 'Bizdavar Group — digital and industrial agency',
+      aboutHeroAlt: 'Bizdavar team — industrial supply and digital consulting',
       aboutMore: 'More about Bizdavar',
       aboutInfra: 'Infrastructure management',
       clientsTitle: 'Services & products in action',
@@ -1309,14 +1317,14 @@ window.BIZDAVAR_LOCALES = {
       blogAll: 'View all blog posts',
       faqTitle: 'Frequently asked questions',
       ctaTitle: 'Need a VEGA quote or a new website?',
-      ctaDesc: 'Message WhatsApp — free consult from Istanbul and Tabriz',
+      ctaDesc: 'Message WhatsApp — free consult during business hours',
       ctaForm: 'Request a quote',
       faqs: [
-        { q: 'How do I buy genuine VEGA sensors for an Iran project?', a: 'Pick a model on the <a href="/en/pages/vega">VEGA page</a> or send tank/process details on WhatsApp. Bizdavar issues the order code, proforma and logistics from Istanbul.' },
+        { q: 'How do I buy genuine VEGA sensors for an Iran project?', a: 'Pick a model on the <a href="/en/pages/vega">VEGA page</a> or send tank/process details on WhatsApp. Bizdavar issues the order code, proforma and logistics.' },
         { q: 'How much does a Fast Web Studio website cost?', a: 'Basic $99, store $199, pro $299 — details on <a href="/en/pages/fast">Fast Web Studio</a>. Delivery from 5 business days with RTL and basic SEO.' },
         { q: 'Where can I source Prosense gas detectors?', a: 'Genuine PQ, SafeVader and PPS+ with SIL certificates. Catalogue: <a href="/en/pages/prosense">Prosense</a>. Quote via Persian or Turkish WhatsApp.' },
-        { q: 'How does the free consultation start?', a: 'Leave your WhatsApp number on the <a href="/en/pages/contact">contact form</a> or message us directly. We reply from Istanbul and Tabriz during business hours.' },
-        { q: 'Where does Bizdavar operate?', a: 'HQ in Istanbul, Iran coordination in Tabriz, and projects in 11 countries — digital services and industrial supply.' }
+        { q: 'How does the free consultation start?', a: 'Leave your WhatsApp number on the <a href="/en/pages/contact">contact form</a> or message us directly. We reply during business hours.' },
+        { q: 'Where does Bizdavar operate?', a: 'Iran coordination in Tabriz, and projects in 11 countries — digital services and industrial supply.' }
       ]
     },
     contactPage: {
@@ -1351,9 +1359,9 @@ window.BIZDAVAR_LOCALES = {
       formSuccess: 'Your message was sent successfully. We will contact you soon.',
       formSuccessMailto: 'Your message is ready to send. If the email window does not open, write to info@bizdavar.com directly.',
       formSuccessWhatsapp: 'Your message is ready for WhatsApp. If the window did not open, use the WhatsApp buttons on this page.',
-      geoText: 'Consulting from Istanbul, Tabriz and Yerevan — Persian and Turkish WhatsApp.',
+      geoText: 'Multilingual consulting — Persian and Turkish WhatsApp.',
       formError: 'Sending failed. Please try again or email info@bizdavar.com directly.',
-      waTr: 'WhatsApp Turkey',
+      waTr: 'Sales WhatsApp',
       waIr: 'WhatsApp Persian',
       mapTitle: 'International collaboration',
       mapDesc: 'Bizdavar Group serves businesses in Iran, Turkey, and international markets with digital and industrial projects.',
@@ -1413,6 +1421,7 @@ window.BIZDAVAR_LOCALES = {
       supplifyTrade: { crumb: 'Supplify Trade' },
       kayaOne: { crumb: 'Kaya One AG' },
       smmTurk: { crumb: 'SMM Turk' },
+      marvispace: { crumb: 'MarviSpace' },
       marviSociety: { crumb: 'Marvi Society' },
       fxguardExchange: { crumb: 'FXGuard Exchange' },
       biztejarat: { crumb: 'Biztejarat' },

@@ -11,7 +11,7 @@
         hero: {
           tag: 'مهندسی و تولید بیزدوار',
           title: 'محصولات بیزدوار',
-          desc: 'سخت‌افزار، خطوط تولید، SaaS اختصاصی و برندهای صنعتی تامین‌شده — از تبریز تا استانبول.',
+          desc: 'سخت‌افزار، خطوط تولید، SaaS اختصاصی و برندهای صنعتی تامین‌شده — از تبریز.',
           ctaLive: 'محصولات زنده',
           ctaCatalog: 'کاتالوگ کامل',
           ctaSupply: 'برندهای تامین',
@@ -24,7 +24,7 @@
         },
         intro: {
           title: 'ما چه می‌سازیم؟',
-          body: 'بیزدوار گروپ علاوه بر خدمات دیجیتال و تامین صنعتی، <strong>محصولات سخت‌افزاری و نرم‌افزار SaaS اختصاصی</strong> نیز تولید می‌کند. مالکیت فکری با تیم بیزدوار است؛ مهندسی در تبریز و استانبول، قابل عرضه برای بازار داخلی و بین‌المللی.',
+          body: 'بیزدوار گروپ علاوه بر خدمات دیجیتال و تامین صنعتی، <strong>محصولات سخت‌افزاری و نرم‌افزار SaaS اختصاصی</strong> نیز تولید می‌کند. مالکیت فکری با تیم بیزدوار است؛ مهندسی در تبریز، قابل عرضه برای بازار داخلی و بین‌المللی.',
           ctaContact: 'استعلام و سفارش',
           ctaPortfolio: 'نمونه‌کارهای دیجیتال',
           statProducts: '۱۲+',
@@ -86,7 +86,7 @@
             teraoka: 'ترازو و برچسب‌زن'
           }
         },
-        geoText: 'محصولات مالکیتی و تامین برندهای صنعتی — مشاوره فنی فارسی از استانبول و تبریز.',
+        geoText: 'محصولات مالکیتی و تامین برندهای صنعتی — مشاوره فنی فارسی.',
         related: [
           { title: 'تامین VEGA', desc: 'سنسور سطح و فشار' },
           { title: 'تامین Prosense', desc: 'دتکتور گاز و شعله' },
@@ -206,7 +206,7 @@
         hero: {
           tag: 'Bizdavar mühendislik ve üretim',
           title: 'Bizdavar ürünleri',
-          desc: 'Özel donanım, üretim hatları ve SaaS — Bizdavar ekibi tarafından Tebriz ve İstanbul\'da tasarlandı.',
+          desc: 'Özel donanım, üretim hatları ve SaaS — Bizdavar ekibi tarafından Tebriz\'da tasarlandı.',
           ctaLive: 'Canlı ürünler',
           ctaCatalog: 'Tam katalog',
           ctaSupply: 'Tedarik markaları',
@@ -219,7 +219,7 @@
         },
         intro: {
           title: 'Ne üretiyoruz?',
-          body: 'Bizdavar Group, dijital hizmetler ve endüstriyel tedarikin yanı sıra <strong>özel donanım ve SaaS ürünleri</strong> de geliştirir. Fikri mülkiyet Bizdavar ekibine aittir; mühendislik Tebriz ve İstanbul\'da yapılır.',
+          body: 'Bizdavar Group, dijital hizmetler ve endüstriyel tedarikin yanı sıra <strong>özel donanım ve SaaS ürünleri</strong> de geliştirir. Fikri mülkiyet Bizdavar ekibine aittir; mühendislik Tebriz\'da yapılır.',
           ctaContact: 'Teklif ve sipariş',
           ctaPortfolio: 'Dijital portfolyo',
           statProducts: '12+',
@@ -281,7 +281,7 @@
             teraoka: 'Terazi ve etiketleyici'
           }
         },
-        geoText: 'Sahip olunan ürünler ve endüstriyel marka tedariki — İstanbul ve Tebriz’den teknik danışmanlık.',
+        geoText: 'Sahip olunan ürünler ve endüstriyel marka tedariki — teknik danışmanlık.',
         related: [
           { title: 'VEGA tedariki', desc: 'Seviye ve basınç sensörleri' },
           { title: 'Prosense tedariki', desc: 'Gaz ve alev dedektörü' },
@@ -336,7 +336,7 @@
         hero: {
           tag: 'Bizdavar engineering & manufacturing',
           title: 'Bizdavar products',
-          desc: 'Proprietary hardware, production lines and SaaS — designed and built by the Bizdavar team from Tabriz to Istanbul.',
+          desc: 'Proprietary hardware, production lines and SaaS — designed and built by the Bizdavar team in Tabriz.',
           ctaLive: 'Live products',
           ctaCatalog: 'Full catalog',
           ctaSupply: 'Supply brands',
@@ -349,7 +349,7 @@
         },
         intro: {
           title: 'What we build',
-          body: 'Beyond digital services and industrial supply, Bizdavar Group develops <strong>proprietary hardware and SaaS</strong>. IP stays with the Bizdavar team; engineering in Tabriz and Istanbul — for domestic and international markets.',
+          body: 'Beyond digital services and industrial supply, Bizdavar Group develops <strong>proprietary hardware and SaaS</strong>. IP stays with the Bizdavar team; engineering in Tabriz — for domestic and international markets.',
           ctaContact: 'Quote & order',
           ctaPortfolio: 'Digital portfolio',
           statProducts: '12+',
@@ -411,7 +411,7 @@
             teraoka: 'Scales and labelers'
           }
         },
-        geoText: 'Owned products and industrial brand supply — technical consulting from Istanbul and Tabriz.',
+        geoText: 'Owned products and industrial brand supply — technical consulting.',
         related: [
           { title: 'VEGA supply', desc: 'Level and pressure sensors' },
           { title: 'Prosense supply', desc: 'Gas and flame detectors' },

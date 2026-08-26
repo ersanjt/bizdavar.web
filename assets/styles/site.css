@@ -2394,6 +2394,58 @@ ul { list-style: none; }
   margin-inline: auto;
 }
 
+.industrial-visual {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: stretch;
+  gap: 0;
+  margin: 0 0 2.25rem;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.industrial-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+
+.industrial-visual figcaption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 1.5rem 1.75rem;
+}
+
+.industrial-visual figcaption strong {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.3;
+}
+
+.industrial-visual figcaption p {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+@media (max-width: 900px) {
+  .industrial-visual {
+    grid-template-columns: 1fr;
+  }
+
+  .industrial-visual figcaption {
+    padding: 1.15rem 1.2rem 1.35rem;
+  }
+}
+
 .industrial-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

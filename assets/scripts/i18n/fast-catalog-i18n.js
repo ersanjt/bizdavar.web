@@ -95,6 +95,7 @@
     ],
     showcases: [
       { category: 'Jewelry store' },
+      { category: 'Leather goods store' },
       { category: 'International B2B trade' },
       { category: 'Swiss B2B trade' },
       { category: 'SMM panel' },
@@ -202,6 +203,7 @@
     ],
     showcases: [
       { category: 'Mücevher mağazası' },
+      { category: 'Deri ürün mağazası' },
       { category: 'Uluslararası B2B ticaret' },
       { category: 'İsviçre B2B ticaret' },
       { category: 'SMM paneli' },
@@ -237,6 +239,7 @@
         ],
         showcases: [
           { category: 'Ювелирный магазин' },
+          { category: 'Магазин кожаных изделий' },
           { category: 'Международная B2B-торговля' },
           { category: 'Швейцарская B2B-торговля' },
           { category: 'SMM-панель' },
@@ -261,6 +264,7 @@
         ],
         showcases: [
           { category: 'متجر مجوهرات' },
+          { category: 'متجر منتجات جلدية' },
           { category: 'تجارة B2B دولية' },
           { category: 'تجارة سويسرية B2B' },
           { category: 'لوحة SMM' },

@@ -173,6 +173,7 @@
     if (page === 'gallery' && typeof window.initGalleryPage === 'function') window.initGalleryPage();
     if (page === 'fxguard' && typeof window.initFxguardPage === 'function') window.initFxguardPage();
     if (page === 'bizswap' && typeof window.initBizswapPage === 'function') window.initBizswapPage();
+    if (page === 'marvispace') applyListById('marvispaceServices', 'caseStudy.marvispace.about.services');
     if (page === 'bz-diamond') applyListById('bzDiamondServices', 'caseStudy.bzDiamond.about.services');
     if (page === 'supplify-trade') applyListById('supplifyTradeServices', 'caseStudy.supplifyTrade.about.services');
     if (page === 'kaya-one') applyListById('kayaOneServices', 'caseStudy.kayaOne.about.services');

@@ -66,7 +66,7 @@ const PAGE_LOADER = {
     afterPageI18n: 'lib/supply-brand-page.js,config/teltonika-products.js',
     beforeMain: 'teltonika-page.js'
   },
-  'pages/fxguard.html': { beforeMain: 'fxguard-page.js' },
+  'pages/fxguard.html': { afterSeo: 'i18n/fxguard-i18n.js', beforeMain: 'fxguard-page.js' },
   'pages/bizswap.html': { beforeMain: 'bizswap-page.js' }
 };
 

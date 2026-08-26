@@ -114,6 +114,7 @@ window.FAST_CATALOG = {
 
   showcases: [
     { name: 'BZ Diamond', category: 'فروشگاه جواهرات', slug: 'pages/bz-diamond', internal: true, logo: 'assets/images/partners/zeddiamond.png' },
+    { name: 'Marvispace', category: 'فروشگاه محصولات چرمی', slug: 'pages/marvispace', internal: true, logo: 'assets/images/partners/marvispace.svg' },
     { name: 'Supplify Trade', category: 'تجارت بین‌المللی B2B', slug: 'pages/supplify-trade', internal: true, logo: 'assets/images/partners/supplify-trade.svg' },
     { name: 'Kaya One AG', category: 'تجارت سوئیسی B2B', slug: 'pages/kaya-one', internal: true, logo: 'assets/images/partners/kaya-one.svg' },
     { name: 'SMM Turk', category: 'پنل SMM', slug: 'pages/smm-turk', internal: true, logo: 'assets/images/partners/smm-turk.svg' },

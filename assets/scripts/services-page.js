@@ -139,7 +139,7 @@
     const field = {
       eyebrow: t('servicesPage.paths.field.eyebrow', 'مسیر فنی'),
       title: t('servicesPage.paths.field.title', 'دوربین، سیم‌کشی و نورمخفی'),
-      desc: t('servicesPage.paths.field.desc', 'نصب و اجرای میدانی در تبریز و استانبول — هماهنگی مستقیم از واتساپ خدمات فنی.'),
+      desc: t('servicesPage.paths.field.desc', 'نصب و اجرای میدانی در تبریز — هماهنگی مستقیم از واتساپ خدمات فنی.'),
       cta: t('servicesPage.paths.field.cta', 'رفتن به خدمات فنی'),
       href: path('pages/field-tech')
     };

@@ -36,6 +36,7 @@ function loadLocales() {
     'assets/scripts/i18n/locales-pages.js',
     'assets/scripts/i18n/locale-seo.js',
     'assets/scripts/i18n/locales-ru-ar.js',
+    'assets/scripts/i18n/fxguard-i18n.js',
     'assets/scripts/i18n/field-tech-i18n.js'
   ];
   for (const rel of files) {
@@ -181,11 +182,11 @@ function bakeFtBody(html, dict) {
 
 const STATIC_HERO = {
   'pages/vega.html': {
-    fa: 'خرید سنسور VEGA اصل از استانبول',
-    tr: 'İstanbul’dan orijinal VEGA sensör satın alın',
-    en: 'Buy genuine VEGA sensors from Istanbul',
-    ru: 'Купить оригинальные датчики VEGA из Стамбула',
-    ar: 'اشترِ حساسات VEGA الأصلية من إسطنبول'
+    fa: 'خرید سنسور VEGA اصل — پیش‌فاکتور و مشاوره فارسی',
+    tr: 'Orijinal VEGA sensör satın alın — proforma ve danışmanlık',
+    en: 'Buy genuine VEGA sensors — proforma and consulting',
+    ru: 'Купить оригинальные датчики VEGA — проформа и консультация',
+    ar: 'اشترِ حساسات VEGA الأصلية — فاتورة مبدئية واستشارة'
   },
   'pages/fast.html': {
     fa: 'طراحی سایت در ۵ روز از ۹۹ دلار',
@@ -224,8 +225,8 @@ function bakeJsonLd(html, locale) {
         telephone: ['+989305880135', '+905010676486'],
         address: {
           '@type': 'PostalAddress',
-          addressLocality: 'Istanbul',
-          addressCountry: 'TR'
+          addressLocality: 'Tabriz',
+          addressCountry: 'IR'
         },
         sameAs: [
           'https://www.linkedin.com/in/ersanjt',
@@ -256,6 +257,28 @@ function bakeJsonLd(html, locale) {
   );
 }
 
+function bakeFxguard(html, dict) {
+  const cs = getNested(dict, 'caseStudy.fxguard');
+  if (!cs) return html;
+
+  const esc = (s) => String(s || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+
+  if (Array.isArray(cs.faq?.items) && html.includes('id="fxguardFaq"')) {
+    const inner = cs.faq.items.map((item) => `          <details>
+            <summary>${esc(item.q)}</summary>
+            <p>${esc(item.a)}</p>
+          </details>`).join('\n');
+    html = html.replace(
+      /<div class="fxguard-faq" id="fxguardFaq">[\s\S]*?<\/div>/,
+      `<div class="fxguard-faq" id="fxguardFaq">\n${inner}\n        </div>`
+    );
+  }
+  return html;
+}
+
 function decorateCopy(html, rel, locale) {
   const dict = LOCALES_DICT[locale.code] || {};
   html = bakeI18nBody(html, dict);
@@ -263,6 +286,9 @@ function decorateCopy(html, rel, locale) {
   html = bakeStaticHero(html, rel, locale.code);
   html = bakeJsonLd(html, locale);
   html = bakeArticleLocale(html, rel, locale.code);
+  if (String(rel).replace(/\\/g, '/') === 'pages/fxguard.html') {
+    html = bakeFxguard(html, dict);
+  }
   return html;
 }
 
@@ -300,6 +326,7 @@ const FILE_TO_ROUTE = {
   'pages/digi-system.html': '/pages/digi-system',
   'pages/teraoka.html': '/pages/teraoka',
   'pages/bz-diamond.html': '/pages/bz-diamond',
+  'pages/marvispace.html': '/pages/marvispace',
   'pages/supplify-trade.html': '/pages/supplify-trade',
   'pages/kaya-one.html': '/pages/kaya-one',
   'pages/smm-turk.html': '/pages/smm-turk',

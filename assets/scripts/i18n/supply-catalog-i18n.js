@@ -22,7 +22,7 @@
 
       since: 'Since 1961 · Izmir',
 
-      description: 'Bizdavar Group supplies Gamak electric motors for industrial projects, pumps, HVAC and production lines in Iran and the region. Power, speed, flange and efficiency class selection — with transparent proforma and shipping from Istanbul.',
+      description: 'Bizdavar Group supplies Gamak electric motors for industrial projects, pumps, HVAC and production lines in Iran and the region. Power, speed, flange and efficiency class selection — with transparent proforma and international shipping.',
 
       heroStats: [
 
@@ -170,7 +170,7 @@
 
       { title: 'Official proforma', desc: 'Price, lead time and shipping terms in one document' },
 
-      { title: 'Turkey → project logistics', desc: 'From Gamak/Istanbul warehouse to project delivery' },
+      { title: 'Project logistics', desc: 'International shipping to project delivery' },
 
       { title: 'Dedicated support', desc: 'info@bizdavar.com and WhatsApp — single point of contact' }
 
@@ -406,7 +406,7 @@
 
       heroImageAlt: 'Digi SM-6000 PC retail scale with touchscreen and label printer — Bizdavar Group',
 
-      description: 'Bizdavar Group supplies Digi System (DIGI) scales, checkout terminals and POS for supermarkets, deli, bakeries and retail chains. Official models (SM-6000, W-5600SRX, LX-5600, AW-5600), technical consulting and logistics from Istanbul.',
+      description: 'Bizdavar Group supplies Digi System (DIGI) scales, checkout terminals and POS for supermarkets, deli, bakeries and retail chains. Official models (SM-6000, W-5600SRX, LX-5600, AW-5600), technical consulting and international logistics.',
 
       heroStats: [
 
@@ -1122,7 +1122,7 @@
 
       heroImageAlt: 'Teltonika Fleet Telematics — GPS trackers and fleet management',
 
-      description: 'Bizdavar Group supplies Teltonika Telematics trackers, sensors and fleet solutions for logistics, corporate fleets, assets and IoT projects in Iran and the region. Genuine hardware, TCT/FOTA configuration guidance, model selection consulting and international logistics from Istanbul.',
+      description: 'Bizdavar Group supplies Teltonika Telematics trackers, sensors and fleet solutions for logistics, corporate fleets, assets and IoT projects in Iran and the region. Genuine hardware, TCT/FOTA configuration guidance, model selection consulting and international international logistics.',
 
       heroStats: [
 
@@ -1152,7 +1152,7 @@
 
       { title: 'Right model and connectivity', desc: '2G/4G/M1, CAN bus, OBD plug-and-play or asset tracking — if you are unsure, tell us vehicle type and required data. We recommend from FMB920 to FMC650 or FTC305.' },
 
-      { title: 'Built for regional fleets', desc: 'Transport, logistics, car rental, mining, agriculture, fuel distribution and corporate fleets — with dedicated support from Istanbul.' },
+      { title: 'Built for regional fleets', desc: 'Transport, logistics, car rental, mining, agriculture, fuel distribution and corporate fleets — with dedicated support .' },
 
       { title: 'Transparent proforma', desc: 'Before payment you receive price, lead time and the official Teltonika order code on a formal proforma.' },
 
@@ -1570,7 +1570,7 @@
 
       { label: 'Farsi consulting', desc: 'Gas type, range and model selection — via Farsi WhatsApp from anywhere' },
 
-      { label: 'International logistics', desc: 'Purchase, shipping and customs from Istanbul to your project destination' },
+      { label: 'International logistics', desc: 'Purchase, shipping and customs  to your project destination' },
 
       { label: 'Certification & calibration', desc: 'SIL2/3 · M1 Mining · EN-50545-1 · TÜRKAK accredited calibration' }
 
@@ -2344,7 +2344,7 @@
 
       { label: 'Technical consulting', desc: 'Engineering support — model selection based on your real process conditions' },
 
-      { label: 'International logistics', desc: 'Purchase, shipping and customs coordination from Istanbul to project delivery' },
+      { label: 'International logistics', desc: 'Purchase, shipping and customs coordination  to project delivery' },
 
       { label: 'Project support', desc: 'Assistance with order code, datasheet and automation team coordination' }
 
