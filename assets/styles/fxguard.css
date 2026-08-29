@@ -27,23 +27,23 @@ body[data-page="fxguard"] .features-grid .feature-item.reveal {
   color: #cbd5e1;
 }
 
-.fxguard-hero__actions .btn--outline {
+.fxguard-hero .fxguard-hero__actions .btn--outline {
   color: #ecfdf5;
   border-color: rgba(74, 222, 128, 0.55);
 }
 
-.fxguard-hero__actions .btn--outline:hover {
+.fxguard-hero .fxguard-hero__actions .btn--outline:hover {
   background: #ecfdf5;
   color: #0b1220;
 }
 
-.fxguard-hero__actions .btn--primary {
+.fxguard-hero .fxguard-hero__actions .btn--primary {
   background: rgba(34, 197, 94, 0.22);
   border-color: #22c55e;
   color: #f8fafc;
 }
 
-.fxguard-hero__actions .btn--primary:hover {
+.fxguard-hero .fxguard-hero__actions .btn--primary:hover {
   background: #22c55e;
   border-color: #22c55e;
   color: #052e16;
@@ -51,6 +51,24 @@ body[data-page="fxguard"] .features-grid .feature-item.reveal {
 
 .fxguard-hero__actions--center {
   justify-content: center;
+}
+
+.fxguard-hero__actions--center .btn--outline {
+  color: #166534;
+  background: #fff;
+  border: 2px solid #16a34a;
+}
+
+.fxguard-hero__actions--center .btn--outline:hover {
+  background: #16a34a;
+  color: #fff;
+}
+
+.fxguard-hero__actions .btn {
+  white-space: normal;
+  text-align: center;
+  line-height: 1.45;
+  max-width: min(100%, 28rem);
 }
 
 .fxguard-hero__caption {
