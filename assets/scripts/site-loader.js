@@ -14,7 +14,13 @@
   if (!el) return;
 
   var BASE = '/assets/scripts/';
-  var ASSET_VER = '20260826h';
+  var ASSET_VER = '20260828a';
+
+  // Inline page boots run before deferred chain scripts; queue until bootstrap.js.
+  window.bizdavarPageInit = window.bizdavarPageInit || function (fn) {
+    if (typeof fn !== 'function') return;
+    (window.__bizdavarBootQ = window.__bizdavarBootQ || []).push(fn);
+  };
 
   function split(name) {
     return (el.getAttribute(name) || '')
@@ -57,6 +63,7 @@
     'i18n/i18n.js',
     'i18n/page-i18n.js'
   ], afterPageI18n, [
+    'components/page-shell.js',
     'components/biz-icons.js',
     'components/context.js',
     'components/chrome.js',
@@ -72,6 +79,6 @@
   ]);
 
   document.write(chain.map(function (p) {
-    return '<script src="' + BASE + p + '?v=' + ASSET_VER + '"><\/script>';
+    return '<script defer src="' + BASE + p + '?v=' + ASSET_VER + '"><\/script>';
   }).join('\n'));
 })();

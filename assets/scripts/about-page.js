@@ -83,20 +83,41 @@
 
     if (!sections.length) return;
 
+    let activeId = '';
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    function centerNavItem(link) {
+      const navBox = nav.getBoundingClientRect();
+      const itemBox = link.getBoundingClientRect();
+      const pad = 8;
+      if (itemBox.left >= navBox.left + pad && itemBox.right <= navBox.right - pad) return;
+      const delta = (itemBox.left + itemBox.right) / 2 - (navBox.left + navBox.right) / 2;
+      nav.scrollBy({
+        left: delta,
+        behavior: reduceMotion.matches ? 'auto' : 'smooth'
+      });
+    }
+
     const setActive = (id) => {
+      if (!id || id === activeId) return;
+      activeId = id;
       links.forEach(a => {
         const on = a.getAttribute('href') === `#${id}`;
         a.classList.toggle('is-active', on);
-        if (on) {
-          a.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' });
-        }
+        if (on) centerNavItem(a);
       });
     };
 
     const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) setActive(entry.target.id);
+      const visible = entries.filter(entry => entry.isIntersecting);
+      if (!visible.length) return;
+      const mid = window.innerHeight * 0.42;
+      visible.sort((a, b) => {
+        const aMid = a.boundingClientRect.top + a.boundingClientRect.height / 2;
+        const bMid = b.boundingClientRect.top + b.boundingClientRect.height / 2;
+        return Math.abs(aMid - mid) - Math.abs(bMid - mid);
       });
+      setActive(visible[0].target.id);
     }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
 
     sections.forEach(section => observer.observe(section));
@@ -106,7 +127,10 @@
         const target = document.querySelector(a.getAttribute('href'));
         if (!target) return;
         e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        target.scrollIntoView({
+          behavior: reduceMotion.matches ? 'auto' : 'smooth',
+          block: 'start'
+        });
         history.replaceState(null, '', a.getAttribute('href'));
         setActive(target.id);
       });

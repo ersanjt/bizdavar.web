@@ -227,9 +227,7 @@ window.BIZDAVAR_INTEL = {
       source: 'صدا و سیما',
       sourceUrl: 'https://www.iribnews.ir/fa/news/2714063/%D9%86%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%A7%D9%87-%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7',
       sourceLabel: 'گزارش صدا و سیما',
-      image: 'assets/images/products/biztab/biztab-nasrnews-press.png',
-      video: 'assets/videos/products/bizsanitizer/exhibition-irib-2020.mp4',
-      videoPoster: 'assets/images/products/biztab/biztab-press.jpg',
+      image: 'assets/images/gallery/expo-tabrizu-incubator.jpg',
       videoLabel: 'ویدیو — گزارش تصویری نمایشگاه',
       relatedPress: [
         { label: 'ISNA', url: 'https://www.isna.ir/news/99022216019/%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D9%BE%DA%98%D9%88%D9%87%D8%B4%DB%8C-%D9%88-%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%D9%87-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7' },
@@ -256,7 +254,7 @@ window.BIZDAVAR_INTEL = {
       sourceUrl: 'https://rinotex.ir/',
       sourceHistoryUrl: 'https://rinotex.ir/Home/Introduction',
       sourceLabel: 'سایت رسمی رینوتکس',
-      image: 'assets/images/products/biztab/biztab-nasrnews-press.png',
+      image: 'assets/images/gallery/expo-team-bizdavar.jpg',
       parkUnit: {
         name: 'ایمن سهند پدیده',
         nameEn: 'Imen Sahand Padideh',
@@ -291,7 +289,7 @@ window.BIZDAVAR_INTEL = {
       desc: 'دماسنج دیواری غیرتماسی با خطای کمتر از ۰.۳ درجه — تأیید اساتید دانشگاه تبریز. توسعه و مالکیت انحصاری تیم بیزدوار.',
       source: 'آژانس خبری تحلیلی نصر',
       sourceUrl: 'https://nasrnews.ir/print/16727/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D9%88-%D8%B3%D8%A7%D8%AE%D8%AA-%D8%A7%D9%88%D9%84%DB%8C%D9%86-%D8%AF%D9%85%D8%A7%D8%B3%D9%86%D8%AC-%D8%AF%DB%8C%D9%88%D8%A7%D8%B1%DB%8C-%D8%BA%DB%8C%D8%B1%D8%AA%D9%85%D8%A7%D8%B3%DB%8C-%D8%AF%D8%B1-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2',
-      image: 'assets/images/products/biztab/biztab-nasrnews-press.png',
+      image: 'assets/images/gallery/expo-tabrizu-incubator.jpg',
       slug: 'pages/biztab.html',
       pressLinks: [
         { label: 'نصرنیوز', url: 'https://nasrnews.ir/print/16727/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D9%88-%D8%B3%D8%A7%D8%AE%D8%AA-%D8%A7%D9%88%D9%84%DB%8C%D9%86-%D8%AF%D9%85%D8%A7%D8%B3%D9%86%D8%AC-%D8%AF%DB%8C%D9%88%D8%A7%D8%B1%DB%8C-%D8%BA%DB%8C%D8%B1%D8%AA%D9%85%D8%A7%D8%B3%DB%8C-%D8%AF%D8%B1-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2' }
@@ -318,7 +316,7 @@ window.BIZDAVAR_INTEL = {
       pressLabel: 'صدا و سیما',
       videoUrl: 'https://www.youtube.com/shorts/GcOtue1Nmlo',
       videoLabel: 'YouTube — V1',
-      image: 'assets/images/products/bizsanitizer/bizclean-v5.png',
+      image: 'assets/images/gallery/expo-imen-booth.jpg',
       slug: 'pages/bizsanitizer-v5.html',
       tags: ['بهداشت', 'IoT', 'کرونا', 'دانشگاه تبریز', 'RINOTEX', 'ایمن سهند پدیده', 'دیجی‌کالا']
     },

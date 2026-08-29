@@ -668,7 +668,7 @@
     }
     const navItems = getNavItems();
     const logoAlt = A.logoAlt || C.siteName;
-    const headerLogo = 'assets/images/brand/bizdavar-logo-264.webp';
+    const headerLogo = 'assets/images/brand/bizdavar-logo-200.webp';
     const footerLogo = 'assets/images/brand/bizdavar-logo-light-240.webp';
     const topBar = document.getElementById('topBar');
     const header = document.getElementById('siteHeader');
@@ -719,7 +719,7 @@
         <div class="header__desktop">
           <div class="container header__desktop-inner">
             <a href="${pagePath(R.home)}" class="header__logo" aria-label="${C.siteName} — ${t('common.homeAria', 'صفحه اصلی')}">
-              <img src="${path(headerLogo)}" alt="${logoAlt}" width="120" height="50">
+              <img src="${path(headerLogo)}" alt="${logoAlt}" width="120" height="50" decoding="async">
             </a>
             <nav class="nav nav--desktop nav--primary" id="nav" aria-label="${t('common.mainNav', 'منوی اصلی')}">
               ${navLinks}
@@ -738,7 +738,7 @@
         <div class="mobile-header">
           <div class="mobile-header__bar">
             <a href="${pagePath(R.home)}" class="mobile-header__logo" aria-label="${C.siteName} — ${t('common.homeAria', 'صفحه اصلی')}">
-              <img src="${path(headerLogo)}" alt="${logoAlt}" width="132" height="55" decoding="async">
+              <img src="${path(headerLogo)}" alt="${logoAlt}" width="100" height="42" decoding="async">
             </a>
             <div class="mobile-header__actions">
               ${langSwitcherHtml('lang-dropdown--header-mobile')}
@@ -951,17 +951,8 @@
   };
 
   function renderOfferMap() {
-    let host = document.getElementById('offerMap');
-    if (!host) {
-      if (currentPage === 'home' || currentPage === 'about' || currentPage === 'services') return;
-      host = document.createElement('div');
-      host.id = 'offerMap';
-      const crumbs = document.getElementById('breadcrumbs');
-      const main = document.getElementById('main-content');
-      if (crumbs && crumbs.parentNode) crumbs.parentNode.insertBefore(host, crumbs.nextSibling);
-      else if (main && main.parentNode) main.parentNode.insertBefore(host, main);
-      else return;
-    }
+    const host = document.getElementById('offerMap');
+    if (!host) return;
     const servicesHref = pagePath(R.services);
     const productsHref = pagePath(R.products);
     const supplyHref = (productsHref.indexOf('#') === -1 ? productsHref : productsHref.split('#')[0]) + '#supply';

@@ -62,8 +62,8 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       title: 'دماسنج دیواری غیرتماسی',
       desc: 'اولین دماسنج دیواری غیرتماسی تبریز — دقت کمتر از ۰.۳°C، تأیید دانشگاه تبریز.',
       tags: ['IoT', 'غیرتماسی', 'تبریز'],
-      image: 'assets/images/products/biztab/biztab-hero.jpg',
-      logo: 'assets/images/products/biztab/biztab-hero.jpg',
+      image: 'assets/images/gallery/expo-tabrizu-incubator.jpg',
+      logo: 'assets/images/products/biztab/biztab-logo.svg',
       page: 'pages/biztab.html',
       featured: true,
       status: 'live'
@@ -76,8 +76,8 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       title: 'خط بهداشت و ضدعفونی',
       desc: 'دستگاه ضدعفونی دست اتوماتیک BizClean V5 — تولید تیم بیزدوار؛ RINOTEX 1400، ISNA و صدا و سیما.',
       tags: ['بهداشت', 'اتوماتیک', 'کرونا'],
-      image: 'assets/images/products/bizsanitizer/bizclean-v5.png',
-      logo: 'assets/images/products/bizsanitizer/bizclean-v5.png',
+      image: 'assets/images/gallery/expo-imen-booth.jpg',
+      logo: 'assets/images/products/bizsanitizer/bizsanitizer-logo.svg',
       page: 'pages/bizsanitizer-v5.html',
       featured: true,
       status: 'live'

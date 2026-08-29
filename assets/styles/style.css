@@ -131,6 +131,21 @@ ul { list-style: none; }
   position: sticky;
   top: 0;
   z-index: 100;
+  min-height: var(--header-height, 72px);
+}
+
+.header-skel {
+  display: flex;
+  align-items: center;
+  min-height: inherit;
+  padding: 12px 0;
+}
+
+.header-skel img {
+  height: 50px;
+  width: auto;
+  aspect-ratio: 500 / 209;
+  object-fit: contain;
 }
 
 .header__desktop {
@@ -2623,6 +2638,18 @@ a.tags-cloud__tag:hover {
 @media (max-width: 1024px) {
   body.has-mobile-chrome {
     padding-bottom: calc(68px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .header {
+    min-height: 56px;
+  }
+
+  .header-skel {
+    padding: 6px 14px;
+  }
+
+  .header-skel img {
+    height: 42px;
   }
 
   .top-bar--desktop { display: none; }

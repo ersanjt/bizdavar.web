@@ -8,7 +8,7 @@
     "audit:site": "node scripts/site-audit.js",
     "audit:images": "node scripts/verify-config-images.js",
     "sitemap": "node scripts/gen-sitemap.js",
-    "seo": "node scripts/gen-seo-head.js && node scripts/bake-static-seo.js && node scripts/gen-sitemap.js && node scripts/gen-robots.js",
+    "seo": "node scripts/gen-seo-head.js && node scripts/bake-static-seo.js && node scripts/hoist-critical-css.js && node scripts/gen-sitemap.js && node scripts/gen-robots.js",
     "seo-head": "node scripts/gen-seo-head.js",
     "bake-seo": "node scripts/bake-static-seo.js",
     "strip-gtag": "node scripts/strip-standalone-gtag.js",

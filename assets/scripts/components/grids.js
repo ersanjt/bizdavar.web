@@ -10,6 +10,18 @@
     absUrl, breadcrumbHref, localizeCrumbs, buildContactPoints, orgAddress
   } = ctx;
 
+  function hideBrokenImg() {
+    return ' onerror="this.style.display=\'none\'"';
+  }
+
+  function displayPair(primary, secondary) {
+    const a = String(primary || '').trim();
+    const b = String(secondary || '').trim();
+    if (!a) return b;
+    if (!b || a === b) return a;
+    return `${a} (${b})`;
+  }
+
   function exhibitionMediaHtml(e) {
     if (!e || (!e.video && !e.image)) return '';
     const poster = e.videoPoster ? path(e.videoPoster) : (e.image ? path(e.image) : '');
@@ -22,7 +34,7 @@
       </div>` : '';
     const imageBlock = e.image && !e.video ? `
       <figure class="exhibition-card__figure">
-        <img src="${path(e.image)}" alt="${e.title || 'Bizdavar exhibition'}" loading="lazy" width="720" height="405">
+        <img src="${path(e.image)}" alt="${e.title || 'Bizdavar exhibition'}" loading="lazy" width="720" height="405"${hideBrokenImg()}>
       </figure>` : '';
     return `<div class="exhibition-card__media">${videoBlock}${imageBlock}</div>`;
   }
@@ -461,8 +473,8 @@
       identityEl.innerHTML = `
         <div class="intel-identity-grid">
           <dl class="intel-dl">
-            <div><dt>${L.intlBrand || 'برند بین‌المللی'}</dt><dd>${I.identity.legalNameFa} (${I.identity.legalName})</dd></div>
-            <div><dt>${L.armeniaReg || 'ثبت ارمنستان'}</dt><dd><strong>${I.identity.armeniaLegalName}</strong> (${I.identity.armeniaLegalType})<br><span class="intel-legal-brand">${I.identity.armeniaBrandFa}</span></dd></div>
+            <div><dt>${L.intlBrand || 'برند بین‌المللی'}</dt><dd>${displayPair(I.identity.legalNameFa, I.identity.legalName)}</dd></div>
+            <div><dt>${L.armeniaReg || 'ثبت ارمنستان'}</dt><dd><strong>${I.identity.armeniaLegalName}</strong> (${I.identity.armeniaLegalType})${I.identity.armeniaBrandFa && I.identity.armeniaBrandFa !== I.identity.armeniaLegalName ? `<br><span class="intel-legal-brand">${I.identity.armeniaBrandFa}</span>` : ''}</dd></div>
             <div><dt>${L.iranLegal || 'شخصیت حقوقی ایران'}</dt><dd><strong>${iranLegal}</strong><br><span class="intel-legal-brand">${L.brandPrefix || 'برند'}: ${iranBrand}</span></dd></div>
             <div><dt>${L.founded || 'تأسیس'}</dt><dd>${I.identity.foundedDisplay}</dd></div>
             <div><dt>${L.domains || 'دامنه‌ها'}</dt><dd dir="ltr">${I.identity.domains.join(' · ')}</dd></div>
@@ -651,7 +663,7 @@
                 ${e.section ? `<div><dt>${t('exhibitions.section', 'بخش')}</dt><dd>${e.section}</dd></div>` : ''}
                 ${e.zone ? `<div><dt>${t('exhibitions.zone', 'زون')}</dt><dd>${e.zone}</dd></div>` : ''}
                 ${e.booth ? `<div><dt>${t('exhibitions.booth', 'غرفه')}</dt><dd>${e.booth}</dd></div>` : ''}
-                ${e.city ? `<div><dt>${t('exhibitions.location', 'مکان')}</dt><dd>${e.city}${e.country ? '، ' + e.country : ''}</dd></div>` : ''}
+                ${e.city ? `<div><dt>${t('exhibitions.location', 'مکان')}</dt><dd>${e.city}${e.country ? (/^(fa|ar)/.test(lang) ? '، ' : ', ') + e.country : ''}</dd></div>` : ''}
               </dl>
               ${(e.tags || []).length ? `<div class="exhibition-card__tags">${e.tags.map(tag => `<span class="exhibition-card__tag">${tag}</span>`).join('')}</div>` : ''}
               ${e.parkUnit ? `
@@ -687,7 +699,7 @@
           ${I.achievements.map(a => `
             <article class="achievement-card">
               <a href="${path(a.slug)}" class="achievement-card__media">
-                <img src="${path(a.image)}" alt="${a.title}" loading="lazy" width="480" height="280">
+                <img src="${path(a.image)}" alt="${a.title}" loading="lazy" width="480" height="280"${hideBrokenImg()}>
               </a>
               <div class="achievement-card__body">
                 <span class="achievement-card__year">${a.year}</span>

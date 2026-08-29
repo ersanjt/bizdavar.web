@@ -93,6 +93,7 @@
   function runPageBoot(fn) {
     syncLocaleNow();
     snapshotChrome();
+    ensureSiteChrome();
     afterLocale();
     try {
       if (typeof fn === 'function') fn();
@@ -159,4 +160,10 @@
     }
     runPageBoot(fn);
   };
+
+  var queued = window.__bizdavarBootQ || [];
+  window.__bizdavarBootQ = [];
+  queued.forEach(function (fn) {
+    window.bizdavarPageInit(fn);
+  });
 })();

@@ -43,6 +43,7 @@
   background: var(--white);
   border-bottom: 1px solid var(--gray-200);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  overflow-anchor: none;
 }
 
 .about-nav-wrap .container {
@@ -265,7 +266,6 @@
 @media (max-width: 1024px) {
   .about-page {
     --header-height: 56px;
-    overflow-x: clip;
   }
 
   .about-intro .about-grid {

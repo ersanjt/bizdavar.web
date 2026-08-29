@@ -65,7 +65,7 @@ window.BIZDAVAR_CONFIG = {
       page: 'biztab',
       labelKey: 'nav.productBiztab',
       descKey: 'nav.productBiztabDesc',
-      image: 'assets/images/products/biztab/biztab-hero.jpg'
+      image: 'assets/images/gallery/expo-tabrizu-incubator.jpg'
     },
     tabs: [
       {
@@ -478,7 +478,7 @@ window.BIZDAVAR_CONFIG = {
       category: 'محصول اختصاصی',
       catId: 'products',
       date: '2020-03-16',
-      image: 'assets/images/products/biztab/biztab-hero.jpg',
+      image: 'assets/images/gallery/expo-tabrizu-incubator.jpg',
       relatedService: 'pages/biztab.html'
     },
     {
@@ -488,7 +488,7 @@ window.BIZDAVAR_CONFIG = {
       category: 'محصول اختصاصی',
       catId: 'products',
       date: '2021-06-01',
-      image: 'assets/images/products/bizsanitizer/bizclean-v5.png',
+      image: 'assets/images/gallery/expo-imen-booth.jpg',
       relatedService: 'pages/bizsanitizer-v5.html'
     },
     {
@@ -700,8 +700,8 @@ window.BIZDAVAR_CONFIG = {
     { name: 'Bear Event', domain: 'bearevent.co', category: 'رویداد و بلیت', role: 'ecosystem', internal: false, logo: 'assets/images/partners/bear-event.png' },
     { name: 'Netinode', domain: 'netinode.net', url: 'https://netinode.net/', category: 'دامنه، هاست و سرور', role: 'case-study', internal: false, logo: 'assets/images/partners/netinohost.png', note: 'نمونه‌کار و سرویس زیرساخت بیزدوار — فروش دامنه، هاست، WordPress Hosting، ایمیل تجاری، DNS و سرور' },
     { name: 'Fast Web Studio', domain: 'bizdavar.com', category: 'طراحی سایت', role: 'case-study', internal: true, slug: 'pages/fast.html', logo: 'assets/images/partners/fast-studio.png', note: 'محصول اختصاصی بیزدوار — طراحی سایت ۵ روزه' },
-    { name: 'BizTab', domain: 'nasrnews.ir', url: 'https://nasrnews.ir/print/16727/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D9%88-%D8%B3%D8%A7%D8%AE%D8%AA-%D8%A7%D9%88%D9%84%DB%8C%D9%86-%D8%AF%D9%85%D8%A7%D8%B3%D9%86%D8%AC-%D8%AF%DB%8C%D9%88%D8%A7%D8%B1%DB%8C-%D8%BA%DB%8C%D8%B1%D8%AA%D9%85%D8%A7%D8%B3%DB%8C-%D8%AF%D8%B1-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2', category: 'محصول اختصاصی / IoT و سلامت', role: 'case-study', internal: true, slug: 'pages/biztab.html', logo: 'assets/images/products/biztab/biztab-hero.jpg', note: 'محصول اختصاصی — اولین دماسنج دیواری غیرتماسی تبریز، توسعه تیم بیزدوار' },
-    { name: 'BizClean V5', domain: 'digikala.com', url: 'https://www.digikala.com/product/dkp-3730222/', category: 'محصول اختصاصی / بهداشت', role: 'case-study', internal: true, slug: 'pages/bizsanitizer-v5.html', logo: 'assets/images/products/bizsanitizer/bizclean-v5.png', note: 'محصول اختصاصی — دستگاه ضدعفونی دست V5، توسعه در دوران کرونا' },
+    { name: 'BizTab', domain: 'nasrnews.ir', url: 'https://nasrnews.ir/print/16727/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D9%88-%D8%B3%D8%A7%D8%AE%D8%AA-%D8%A7%D9%88%D9%84%DB%8C%D9%86-%D8%AF%D9%85%D8%A7%D8%B3%D9%86%D8%AC-%D8%AF%DB%8C%D9%88%D8%A7%D8%B1%DB%8C-%D8%BA%DB%8C%D8%B1%D8%AA%D9%85%D8%A7%D8%B3%DB%8C-%D8%AF%D8%B1-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2', category: 'محصول اختصاصی / IoT و سلامت', role: 'case-study', internal: true, slug: 'pages/biztab.html', logo: 'assets/images/products/biztab/biztab-logo.svg', note: 'محصول اختصاصی — اولین دماسنج دیواری غیرتماسی تبریز، توسعه تیم بیزدوار' },
+    { name: 'BizClean V5', domain: 'digikala.com', url: 'https://www.digikala.com/product/dkp-3730222/', category: 'محصول اختصاصی / بهداشت', role: 'case-study', internal: true, slug: 'pages/bizsanitizer-v5.html', logo: 'assets/images/products/bizsanitizer/bizsanitizer-logo.svg', note: 'محصول اختصاصی — دستگاه ضدعفونی دست V5، توسعه در دوران کرونا' },
     { name: 'BizPet', domain: 'digikala.com', url: 'https://www.digikala.com/product/dkp-7694589/', category: 'محصول اختصاصی / پد حرارتی', role: 'case-study', internal: true, slug: 'pages/bizpet.html', logo: 'assets/images/products/bizpet/bizpet-grey.jpg', note: 'محصول اصلی ۱۳۹۹ — پد حرارتی پدیده؛ همان کالا به‌صورت پشتی خودرو در دیجی‌کالا' },
     { name: 'FXGuard', domain: 'fxguard.io', url: 'https://fxguard.io/', category: 'WhatsApp CRM', role: 'case-study', internal: true, slug: 'pages/fxguard.html', logo: 'assets/images/products/fxguard/fxguard-logo.svg', note: 'FXGuard WhatsApp CRM — اینباکس تیمی، تیکت، شعب و ۲FA؛ Cloud از $49/ماه، لایسنس یا Managed — فروش در fxguard.io' },
     { name: 'BizSwap', domain: 'Web3 · DeFi Module', category: 'Web3 / پیش‌فروش و سواپ توکن', role: 'case-study', internal: true, slug: 'pages/bizswap.html', logo: 'assets/images/products/bizswap/bizswap-logo.svg', note: 'نمونه‌کار — ماژول پیش‌فروش و سواپ on-chain (BEP-20)، اتصال کیف پول و UI DeFi؛ توسعه تیم بیزدوار' },
