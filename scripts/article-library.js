@@ -327,37 +327,37 @@ const ARTICLES = [
     slug: 'fast-studio',
     seoKey: 'articleFastStudio',
     date: '2025-05-15',
-    modified: '2026-08-24',
+    modified: '2026-08-29',
     image: 'assets/images/content/related-thumb-fast.svg',
     extraImg: 'assets/images/content/services-web-mockup.svg',
     category: { fa: 'طراحی وب', tr: 'Web tasarım', en: 'Web design', ru: 'Веб-дизайн', ar: 'تصميم ويب' },
     title: {
-      fa: 'راه‌اندازی سایت در ۵ روز — راهنمای کامل Fast Studio',
-      tr: '5 günde site — Fast Studio rehberi',
-      en: 'Launch a website in 5 days — Fast Studio guide',
-      ru: 'Сайт за 5 дней — гид Fast Studio',
-      ar: 'إطلاق موقع خلال ٥ أيام — دليل Fast Studio'
+      fa: 'راه‌اندازی سایت انگلیسی در ۵ روز — راهنمای Fast Studio برای US/EU',
+      tr: '5 günde İngilizce site — ABD/AB için Fast Studio rehberi',
+      en: 'English website in 5 days — Fast Studio guide for US and EU',
+      ru: 'Английский сайт за 5 дней — гид Fast Studio для США и ЕС',
+      ar: 'موقع إنجليزي خلال ٥ أيام — دليل Fast Studio لأمريكا وأوروبا'
     },
     description: {
-      fa: 'پلن‌های Fast Web Studio از ۹۹ تا ۲۹۹ دلار: سایت شرکتی، فروشگاهی و حرفه‌ای در ۵ روز کاری با RTL و سئو پایه.',
-      tr: 'Fast Web Studio $99–$299: kurumsal, mağaza ve profesyonel site — 5 iş günü, RTL ve temel SEO.',
-      en: 'Fast Web Studio $99–$299: company, shop and pro sites in 5 working days with RTL and baseline SEO.',
-      ru: 'Fast Web Studio $99–$299: корпоратив, магазин и pro за 5 рабочих дней — RTL и базовое SEO.',
-      ar: 'Fast Web Studio من ٩٩ إلى ٢٩٩$: موقع شركة أو متجر خلال ٥ أيام عمل مع RTL وSEO أساسي.'
+      fa: 'پلن‌های Fast Web Studio از ۹۹ دلار / حدود ۹۰ یورو: سایت انگلیسی LTR برای آمریکا و اروپا در ۵ روز کاری — Stripe، Zoom/Meet و فاکتور USD یا EUR.',
+      tr: 'Fast Web Studio $99 / ~€90’dan: ABD ve AB için İngilizce LTR site — 5 iş günü, Stripe, Zoom/Meet, fatura USD veya EUR.',
+      en: 'Fast Web Studio from $99 / ~€90: English LTR sites for US and EU in 5 working days — Stripe, Zoom/Meet, billed in USD or EUR.',
+      ru: 'Fast Web Studio от $99 / ~€90: английский LTR-сайт для США и ЕС за 5 рабочих дней — Stripe, Zoom/Meet, счёт USD или EUR.',
+      ar: 'Fast Web Studio من ٩٩$ / ~€90: مواقع إنجليزية LTR لأمريكا وأوروبا خلال ٥ أيام عمل — Stripe وZoom وفاتورة USD أو EUR.'
     },
     keywords: {
-      fa: 'طراحی سایت ۵ روز, Fast Web Studio, قیمت طراحی سایت, ووکامرس, بیزدوار',
-      tr: '5 günde web sitesi, Fast Web Studio, WooCommerce, Bizdavar',
-      en: 'website in 5 days, Fast Web Studio, WooCommerce, Bizdavar',
-      ru: 'сайт за 5 дней, Fast Web Studio, WooCommerce, Bizdavar',
-      ar: 'موقع خلال ٥ أيام, Fast Web Studio, ووكومرس, بيزدوار'
+      fa: 'طراحی سایت ۵ روز, Fast Web Studio, سایت انگلیسی اروپا, فاکتور یورو, بیزدوار',
+      tr: '5 günde web sitesi, Fast Web Studio, ABD web tasarım, EUR fatura, Bizdavar',
+      en: 'website in 5 days, Fast Web Studio, web design US, EUR invoice, Bizdavar',
+      ru: 'сайт за 5 дней, Fast Web Studio, веб-дизайн США, счёт EUR, Bizdavar',
+      ar: 'موقع خلال ٥ أيام, Fast Web Studio, تصميم مواقع أمريكا, فاتورة يورو, بيزدوار'
     },
     tags: {
-      fa: ['Fast Studio', 'RTL', 'ووکامرس', 'سئو پایه'],
-      tr: ['Fast Studio', 'RTL', 'WooCommerce', 'SEO'],
-      en: ['Fast Studio', 'RTL', 'WooCommerce', 'SEO'],
-      ru: ['Fast Studio', 'RTL', 'WooCommerce', 'SEO'],
-      ar: ['Fast Studio', 'RTL', 'ووكومرس', 'سيو']
+      fa: ['Fast Studio', 'USD/EUR', 'Stripe', 'US/EU'],
+      tr: ['Fast Studio', 'USD/EUR', 'Stripe', 'ABD/AB'],
+      en: ['Fast Studio', 'USD/EUR', 'Stripe', 'US/EU'],
+      ru: ['Fast Studio', 'USD/EUR', 'Stripe', 'США/ЕС'],
+      ar: ['Fast Studio', 'USD/EUR', 'Stripe', 'أمريكا/أوروبا']
     },
     toc: {
       fa: [['ch-base', 'پلن پایه'], ['ch-shop', 'فروشگاهی'], ['ch-pro', 'حرفه‌ای'], ['ch-after', 'بعد از تحویل'], ['ch-faq', 'سوالات متداول']],
@@ -368,30 +368,30 @@ const ARTICLES = [
     },
     faq: {
       fa: [
-        { q: '۵ روز شامل محتوا هم می‌شود؟', a: 'ساختار، قالب RTL و صفحات توافق‌شده؛ متن و عکس را شما یا تیم محتوا می‌دهد تا زمان‌بندی قفل بماند.' },
-        { q: 'سئو کامل در پلن ۹۹ هست؟', a: 'سئو پایه (عنوان، توضیحات، سرعت، موبایل). سئو محتوا و لینک‌سازی جداگانه در <a href="/pages/services#digital-marketing">خدمات بازاریابی</a> است.' }
+        { q: '۵ روز شامل محتوا هم می‌شود؟', a: 'ساختار، قالب انگلیسی LTR و صفحات توافق‌شده؛ متن و عکس را شما می‌دهید تا زمان‌بندی قفل بماند. جزئیات بازار: <a href="/pages/articles/website-design-us-eu">طراحی سایت US/EU</a>.' },
+        { q: 'فاکتور دلار است یا یورو؟', a: 'هر دو. ارز را قبل از شروع مکتوب می‌کنیم. پلن ۹۹ دلار حدود ۹۰ یورو است. سفارش: <a href="/pages/contact?service=web-design">فرم پیشنهاد وب</a>.' }
       ],
       tr: [
-        { q: '5 güne içerik dahil mi?', a: 'Yapı, RTL şablon ve kararlaştırılan sayfalar; metin/görseli siz veya içerik ekibi verir.' },
-        { q: '$99’da tam SEO var mı?', a: 'Temel SEO. İçerik ve backlink <a href="/pages/services#digital-marketing">pazarlama hizmetinde</a>.' }
+        { q: '5 güne içerik dahil mi?', a: 'Yapı, İngilizce LTR şablon ve kararlaştırılan sayfalar; metin/görseli siz verirsiniz. Pazar: <a href="/pages/articles/website-design-us-eu">ABD/AB web tasarım</a>.' },
+        { q: 'Fatura USD mi EUR mu?', a: 'İkisi de. Para birimi kickoff öncesi yazılı. $99 ≈ €90. <a href="/pages/contact?service=web-design">Web teklif formu</a>.' }
       ],
       en: [
-        { q: 'Does 5 days include copy?', a: 'Structure, RTL theme and agreed pages; you (or content team) supply text and photos.' },
-        { q: 'Is full SEO in the $99 plan?', a: 'Baseline SEO only. Content SEO sits in <a href="/pages/services#digital-marketing">marketing services</a>.' }
+        { q: 'Does 5 days include copy?', a: 'Structure, English LTR theme and agreed pages; you supply text and photos. Market path: <a href="/pages/articles/website-design-us-eu">US/EU website design</a>.' },
+        { q: 'USD or EUR invoice?', a: 'Either. We lock currency in writing before kickoff. The $99 plan is about €90. Order: <a href="/pages/contact?service=web-design">website quote form</a>.' }
       ],
       ru: [
-        { q: 'Тексты входят в 5 дней?', a: 'Каркас, RTL и согласованные страницы; тексты и фото даёте вы.' },
-        { q: 'Полное SEO в $99?', a: 'Только база. Контент-SEO — в <a href="/pages/services#digital-marketing">маркетинге</a>.' }
+        { q: 'Тексты входят в 5 дней?', a: 'Каркас, английский LTR и согласованные страницы; тексты и фото даёте вы. Рынок: <a href="/pages/articles/website-design-us-eu">сайт US/EU</a>.' },
+        { q: 'Счёт в USD или EUR?', a: 'Любой. Валюту фиксируем письменно. $99 ≈ €90. <a href="/pages/contact?service=web-design">форма веб-расчёта</a>.' }
       ],
       ar: [
-        { q: 'هل النصوص ضمن ٥ أيام؟', a: 'الهيكل وقالب RTL والصفحات المتفق عليها؛ النصوص والصور منكم.' },
-        { q: 'هل الـSEO الكامل في خطة ٩٩$؟', a: 'أساسي فقط. سيو المحتوى ضمن <a href="/pages/services#digital-marketing">خدمات التسويق</a>.' }
+        { q: 'هل النصوص ضمن ٥ أيام؟', a: 'الهيكل وقالب إنجليزي LTR والصفحات المتفق عليها؛ النصوص منكم. السوق: <a href="/pages/articles/website-design-us-eu">تصميم مواقع US/EU</a>.' },
+        { q: 'فاتورة بالدولار أم اليورو؟', a: 'كلاهما. نثبّت العملة كتابةً. ٩٩$ ≈ €90. <a href="/pages/contact?service=web-design">نموذج عرض الويب</a>.' }
       ]
     },
     related: [
-      { title: 'Fast Web Studio', url: '../fast', desc: 'پلن‌ها و قیمت' },
-      { title: 'خدمات طراحی وب', url: '../services#web-design', desc: 'پروژه سفارشی' },
-      { title: 'تماس', url: '../contact', desc: 'شروع پروژه' }
+      { title: { fa: 'Fast Web Studio', tr: 'Fast Web Studio', en: 'Fast Web Studio', ru: 'Fast Web Studio', ar: 'Fast Web Studio' }, url: '../fast', desc: { fa: 'پلن از $99 / ~€90', tr: 'Planlar $99 / ~€90’dan', en: 'Plans from $99 / ~€90', ru: 'Тарифы от $99 / ~€90', ar: 'باقات من ٩٩$ / ~€90' } },
+      { title: { fa: 'طراحی سایت US/EU', tr: 'ABD/AB web tasarım', en: 'US/EU website design', ru: 'Сайт US/EU', ar: 'تصميم مواقع US/EU' }, url: 'website-design-us-eu', desc: { fa: 'فاکتور دلار یا یورو', tr: 'USD veya EUR fatura', en: 'Invoice in USD or EUR', ru: 'Счёт USD или EUR', ar: 'فاتورة USD أو EUR' } },
+      { title: { fa: 'پیشنهاد وب', tr: 'Web teklifi', en: 'Website quote', ru: 'Расчёт сайта', ar: 'عرض موقع' }, url: '../contact?service=web-design', desc: { fa: 'Zoom / Meet یا فرم', tr: 'Zoom / Meet veya form', en: 'Zoom / Meet or the form', ru: 'Zoom / Meet или форма', ar: 'Zoom أو النموذج' } }
     ]
   },
   {
@@ -1111,16 +1111,16 @@ ${fig('/' + a.image, 'نمونه مدیریت شبکه‌های اجتماعی �
 <h2 id="ch-ads">تبلیغات Paid Social</h2>
 <p>هدف را روی لید بگذارید نه فقط بازدید. لندینگ باید همان محصول تبلیغ‌شده باشد — در غیر این صورت فرمول SMM به فروش نمی‌رسد. مشاوره: <a href="/pages/contact">فرم تماس</a>.</p>`,
     'fast-studio': `
-<p><a href="/pages/fast">Fast Web Studio</a> محصول بیزدوار برای تحویل سایت شرکتی یا فروشگاهی در ۵ روز کاری است — پلن‌های ۹۹، ۱۹۹ و ۲۹۹ دلار با RTL و سئو پایه.</p>
-${fig('/' + a.image, 'Fast Web Studio — طراحی سایت شرکتی در پنج روز', 'تحویل سریع وقتی معنا دارد که ساختار URL و فرم تماس از روز اول درست باشد.')}
-<h2 id="ch-base">پلن پایه ($99)</h2>
-<p>معرفی شرکت، تماس، واتساپ و موبایل‌فرست. مناسب استارتاپ و برندی که باید سریع آنلاین شود.</p>
+<p><a href="/pages/fast">Fast Web Studio</a> سایت انگلیسی LTR برای مشتری <strong>آمریکا و اروپا</strong> را در ۵ روز کاری تحویل می‌دهد — پلن‌های ۹۹ / ۱۹۹ / ۲۹۹ دلار (حدود ۹۰ یورو برای پایه)، فاکتور USD یا EUR، Stripe و جلسه Zoom/Meet. نسخه فارسی/RTL زبان دوم است، نه قالب اصلی. مسیر بازار: <a href="/pages/articles/website-design-us-eu">طراحی سایت US/EU</a>.</p>
+${fig('/' + a.image, 'Fast Web Studio — سایت شرکتی انگلیسی در پنج روز', 'تحویل سریع وقتی معنا دارد که URL، فرم و درگاه از روز اول درست باشد.')}
+<h2 id="ch-base">پلن پایه ($99 / ~€90)</h2>
+<p>یک صفحه شرکتی انگلیسی، فرم تماس، CTA تقویم یا واتساپ، موبایل‌فرست. مناسب استارتاپ و SaaS که باید همین هفته آنلاین شود.</p>
 <h2 id="ch-shop">پلن فروشگاهی ($199)</h2>
-<p>ووکامرس، محصول و درگاه. موجودی و عکس را از قبل آماده کنید تا ۵ روز قفل بماند.</p>
+<p>ووکامرس، چند محصول اولیه و تسویه Stripe/PayPal. عکس و متن را از قبل آماده کنید تا ۵ روز قفل بماند.</p>
 <h2 id="ch-pro">پلن حرفه‌ای ($299)</h2>
-<p>صفحات بیشتر، سئو پایه قوی‌تر و آمادگی اتصال به کمپین <a href="/pages/services#digital-marketing">بازاریابی</a>.</p>
+<p>صفحات بیشتر، سئو پایه قوی‌تر و آمادگی اتصال به <a href="/pages/services#digital-marketing">کمپین Ads</a>.</p>
 <h2 id="ch-after">بعد از تحویل</h2>
-<p>آموزش پنل، پشتیبانی و مسیر ارتقا به پروژه سفارشی در <a href="/pages/services#web-design">طراحی وب</a>. سفارش از <a href="/pages/contact">تماس</a>.</p>`,
+<p>آموزش پنل، پشتیبانی و مسیر ارتقا به پروژه سفارشی در <a href="/pages/services#web-design">طراحی وب</a>. سفارش: <a href="/pages/contact?service=web-design">فرم پیشنهاد وب</a>.</p>`,
     'industrial-sensors': `
 <p>انتخاب سنسور سطح، فشار یا نقطه سطح برای نفت، پتروشیمی، آب و غذا کار کاتالوگ‌خوانی تنها نیست: رسانه، دما، اتصال فرآیند و گواهی ایمنی باید یک مدل را مشخص کنند. بیزدوار <a href="/pages/vega">تامین VEGA</a> و در گاز/شعله <a href="/pages/prosense">Prosense</a> را با پیش‌فاکتور شفاف انجام می‌دهد.</p>
 ${fig('/' + a.image, 'سنسور سطح رادار VEGA با بدنه زرد در استودیو محصول', 'بدنه و اتصال فرآیند را کامل ببینید — کراپ نزدیک برای انتخاب مدل کافی نیست.')}
@@ -1291,7 +1291,7 @@ ${fig('/' + a.extraImg, 'Digital marketing channels connected to a service landi
 <p>To run a campaign, use the <a href="/pages/contact?service=digital-marketing">contact form</a> or see <a href="/pages/services#digital-marketing">marketing services</a>.</p>`,
     'digital-marketing': `<p>Traffic is not sales. Growth means the right person, a clear offer and a closed contact path — via <a href="/pages/services#digital-marketing">campaigns and CRO</a>.</p>${fig('/' + a.image, 'Digital sales funnel from awareness to purchase', 'Each funnel stage needs its own CTA.')}<h2 id="ch-funnel">Clear funnel</h2><p>Awareness, evaluation, decision, purchase. If an article has no quote button, the funnel breaks. See the <a href="/pages/blog">blog hub</a>.</p><h2 id="ch-cro">CRO</h2><ul><li>Speed and mobile, including Persian RTL.</li><li>Short form plus header WhatsApp.</li><li>Trust via <a href="/pages/portfolio">portfolio</a>.</li></ul><p>Fix weak landings with <a href="/pages/fast">Fast Web Studio</a> before ads.</p><h2 id="ch-ads">Targeted ads</h2><p>The landing must match the ad promise. Optimise cost per real lead, not clicks.</p><h2 id="ch-follow">Follow-up</h2><p>Leads die in 24 hours without a reply. Start at <a href="/pages/contact">Bizdavar contact</a>.</p>`,
     'social-media-management': `<p>SMM is planning, design, publishing and analytics. Industrial brands need technical proof, not only trends. Archive sample: <a href="/pages/biztejarat">Biztejarat</a>.</p>${fig('/' + a.image, 'Social media management mockup and content calendar', 'The calendar should link to a service page or quote.')}<h2 id="ch-plan">Content strategy</h2><p>Fix pillars: education, product, social proof. LinkedIn and WhatsApp often outperform Instagram-only for B2B. <a href="/pages/services#smm">Bizdavar SMM</a>.</p><h2 id="ch-design">Design and video</h2><p>Consistent templates; Reels need captions on mute.</p><h2 id="ch-ads">Paid social</h2><p>Optimise for leads. Landing must match the product. <a href="/pages/contact">Contact</a>.</p>`,
-    'fast-studio': `<p><a href="/pages/fast">Fast Web Studio</a> delivers a company or shop site in 5 working days — $99 / $199 / $299 with RTL and baseline SEO.</p>${fig('/' + a.image, 'Fast Web Studio company website delivered in five days', 'Fast delivery only works if URLs and the contact form are correct from day one.')}<h2 id="ch-base">Basic ($99)</h2><p>Company intro, contact, WhatsApp, mobile-first.</p><h2 id="ch-shop">Shop ($199)</h2><p>WooCommerce and checkout. Prepare photos before the clock starts.</p><h2 id="ch-pro">Pro ($299)</h2><p>More pages and readiness for <a href="/pages/services#digital-marketing">marketing</a>.</p><h2 id="ch-after">After delivery</h2><p>Panel training and upgrade path via <a href="/pages/services#web-design">web design</a>. Order: <a href="/pages/contact">contact</a>.</p>`,
+    'fast-studio': `<p><a href="/pages/fast">Fast Web Studio</a> ships an <strong>English LTR</strong> company or shop site for <strong>US and EU</strong> buyers in 5 working days — $99 / $199 / $299 (Basic is about €90), invoiced in USD or EUR, with Stripe and Zoom/Meet. Persian/RTL is a second locale, not the default skin. Market path: <a href="/pages/articles/website-design-us-eu">US/EU website design</a>.</p>${fig('/' + a.image, 'Fast Web Studio English company website in five days', 'Fast delivery only works if URLs, the form and checkout are correct from day one.')}<h2 id="ch-base">Basic ($99 / ~€90)</h2><p>English one-pager, contact form, calendar or WhatsApp CTA, mobile-first — for startups and SaaS that must go live this week.</p><h2 id="ch-shop">Shop ($199)</h2><p>WooCommerce, starter products and Stripe/PayPal checkout. Prepare photos before the clock starts.</p><h2 id="ch-pro">Pro ($299)</h2><p>More pages and readiness for <a href="/pages/services#digital-marketing">ads campaigns</a>.</p><h2 id="ch-after">After delivery</h2><p>Panel training and upgrade path via <a href="/pages/services#web-design">web design</a>. Order: <a href="/pages/contact?service=web-design">website quote form</a>.</p>`,
     'industrial-sensors': `<p>Picking level, pressure or point-level sensors is not brochure shopping: media, temperature, process connection and certificates decide the model. Bizdavar supplies <a href="/pages/vega">VEGA</a> and, for gas/flame, <a href="/pages/prosense">Prosense</a> with a clear proforma.</p>${fig('/' + a.image, 'VEGA radar level sensor yellow housing studio photo', 'See the full body and process connection — a tight crop is not enough to choose a model.')}<h2 id="ch-type">Measurement type</h2><ul><li><strong>Radar (VEGAPULS)</strong> — non-contact level.</li><li><strong>Pressure (VEGABAR)</strong> — process pressure / hydrostatic level.</li><li><strong>Switch (VEGAPOINT)</strong> — compact point level.</li></ul>${fig('/' + a.extraImg, 'VEGA point-level sensors mounted on a hygienic stainless tank', 'Real install: cable, clamp and status ring in one frame.')}<p>Official data: <a href="https://www.vega.com/en-ae" rel="noopener noreferrer" target="_blank">vega.com</a>.</p><h2 id="ch-safety">Certificates</h2><p>State Ex, SIL and food hygiene in the first message or the order code will be wrong.</p><h2 id="ch-supply">Supply path</h2><p>Process → model → proforma → shipment. See <a href="/pages/products#supply">industrial supply</a> and <a href="/pages/articles/vega-supply-iran">VEGA for Iran projects</a>. Quote: <a href="/pages/contact">contact</a>.</p>`,
     'about-bizdavar-group': `<p>Bizdavar Group has worked since 2013, founded by <strong>Ersan Jahed Tabrizi</strong> — 100+ projects in 11 countries. Digital services plus industrial B2B supply in one contact.</p>${fig('/' + a.image, 'Bizdavar Group introduction — digital agency and industrial supply', 'Three paths: services, owned products, industrial supply.')}<h2 id="ch-who">Who we are</h2><p>Full identity: <a href="/pages/about">About</a>.</p><h2 id="ch-work">What we do</h2><ul><li><a href="/pages/services">Digital services</a></li><li><a href="/pages/fast">Fast Web Studio</a></li><li>Owned products such as <a href="/pages/bizpet">BizPet</a> and <a href="/pages/biztab">BizTab</a></li><li>Supply of <a href="/pages/vega">VEGA</a> and other industrial brands</li></ul>${fig('/' + a.extraImg, 'Bizdavar team at an exhibition booth with Bizdavar banner', 'Exhibitions and a verifiable B2B network.')}<h2 id="ch-why">Why Bizdavar</h2><p>Persian-speaking delivery for Iran projects and multilingual web/supply for regional work. <a href="/pages/portfolio">Portfolio</a> · <a href="/pages/contact">Contact</a></p>`,
     'vega-supply-iran': `<p>Oil, petrochemical, water and food projects in Iran need reliable level and pressure sensors. Bizdavar supplies genuine <a href="/pages/vega">VEGA products</a> with Persian consulting, exact order codes and logistics to site — not the grey market.</p>${fig('/' + a.image, 'VEGA level and switching sensors in a clean industrial hall', 'Instrumentation should be shown in process context, not only a cropped ad.')}<h2 id="ch-why">Official channel</h2><p>Genuine goods, a clear proforma and customs/freight coordination. We do not publish the origin country on this page; that stays in the private quote.</p><h2 id="ch-steps">From inquiry to delivery</h2><ol><li>Process, tank, Ex/SIL</li><li>Model (VEGAPULS, VEGABAR, VEGAPOINT) and order code</li><li>Proforma and lead time</li><li>Order, freight, install support</li></ol>${fig('/' + a.extraImg, 'Full VEGA sensor view for a technical quote', 'Send nameplate photos and tank conditions with the model.')}<p>Selection guide: <a href="/pages/articles/industrial-sensors">industrial sensors</a>. OEM: <a href="https://www.vega.com/en-ae" rel="noopener noreferrer" target="_blank">VEGA official</a>.</p><h2 id="ch-brands">Companion brands</h2><p><a href="/pages/prosense">Prosense</a>, <a href="/pages/teltonika">Teltonika</a>, <a href="/pages/gamak">Gamak</a>. Start: <a href="/pages/contact?product=VEGA">VEGA quote</a>.</p>`,
@@ -1339,7 +1339,7 @@ ${fig('/' + a.extraImg, 'Hizmet sayfasına bağlanan dijital pazarlama kanallar�
 <p>Kampanya için <a href="/pages/contact?service=digital-marketing">iletişim formu</a> veya <a href="/pages/services#digital-marketing">pazarlama hizmetleri</a>.</p>`,
     'digital-marketing': `<p>Trafik satış değildir. Büyüme doğru kişi, net teklif ve kapalı iletişim yoludur — <a href="/pages/services#digital-marketing">kampanya ve CRO</a>.</p>${fig('/' + a.image, 'Farkındalıktan satın almaya dijital satış hunisi', 'Hununun her adımının kendi CTA’sı olmalı.')}<h2 id="ch-funnel">Net huni</h2><p>Makalede teklif butonu yoksa huni kopar. <a href="/pages/blog">Blog</a>.</p><h2 id="ch-cro">CRO</h2><ul><li>Hız ve mobil, Farsça RTL.</li><li>Kısa form + WhatsApp.</li><li><a href="/pages/portfolio">Portföy</a> ile güven.</li></ul><p>Zayıf landing’i reklamdan önce <a href="/pages/fast">Fast Web Studio</a> ile düzeltin.</p><h2 id="ch-ads">Hedefli reklam</h2><p>Landing, reklam vaadiyle aynı olmalı. Gerçek lead maliyetine bakın.</p><h2 id="ch-follow">Takip</h2><p>24 saatte yanıtsız lead ölür. <a href="/pages/contact">İletişim</a>.</p>`,
     'social-media-management': `<p>SMM plan, tasarım, yayın ve analitiktir. Endüstriyel marka kanıt ister. Örnek: <a href="/pages/biztejarat">Biztejarat</a>.</p>${fig('/' + a.image, 'Sosyal medya yönetimi ve içerik takvimi', 'Takvim hizmet sayfasına veya teklife bağlanmalı.')}<h2 id="ch-plan">İçerik stratejisi</h2><p>Eğitim, ürün, kanıt. B2B’de LinkedIn ve WhatsApp sık öndedir. <a href="/pages/services#smm">SMM hizmeti</a>.</p><h2 id="ch-design">Tasarım</h2><p>Şablon tutarlılığı; Reels’e altyazı.</p><h2 id="ch-ads">Paid social</h2><p>Lead’e optimize edin. <a href="/pages/contact">İletişim</a>.</p>`,
-    'fast-studio': `<p><a href="/pages/fast">Fast Web Studio</a> 5 iş gününde kurumsal veya mağaza sitesi teslim eder — $99 / $199 / $299, RTL ve temel SEO.</p>${fig('/' + a.image, 'Fast Web Studio — beş günde kurumsal site', 'URL ve iletişim formu ilk günden doğru olmalı.')}<h2 id="ch-base">Temel ($99)</h2><p>Tanıtım, iletişim, WhatsApp.</p><h2 id="ch-shop">Mağaza ($199)</h2><p>WooCommerce. Fotoğrafları önceden hazırlayın.</p><h2 id="ch-pro">Pro ($299)</h2><p>Daha fazla sayfa ve <a href="/pages/services#digital-marketing">pazarlama</a> hazırlığı.</p><h2 id="ch-after">Teslim sonrası</h2><p><a href="/pages/services#web-design">Web tasarım</a> ile yükseltme. <a href="/pages/contact">Sipariş</a>.</p>`,
+    'fast-studio': `<p><a href="/pages/fast">Fast Web Studio</a> <strong>ABD ve AB</strong> alıcıları için 5 iş gününde <strong>İngilizce LTR</strong> kurumsal veya mağaza sitesi teslim eder — $99 / $199 / $299 (Temel ≈ €90), fatura USD veya EUR, Stripe ve Zoom/Meet. Farsça/RTL ikinci dildir, varsayılan cilt değil. Pazar: <a href="/pages/articles/website-design-us-eu">ABD/AB web tasarım</a>.</p>${fig('/' + a.image, 'Fast Web Studio — beş günde İngilizce kurumsal site', 'URL, form ve ödeme ilk günden doğru olmalı.')}<h2 id="ch-base">Temel ($99 / ~€90)</h2><p>İngilizce tek sayfa, form, takvim veya WhatsApp CTA.</p><h2 id="ch-shop">Mağaza ($199)</h2><p>WooCommerce ve Stripe/PayPal. Fotoğrafları önceden hazırlayın.</p><h2 id="ch-pro">Pro ($299)</h2><p>Daha fazla sayfa ve <a href="/pages/services#digital-marketing">Ads kampanyası</a> hazırlığı.</p><h2 id="ch-after">Teslim sonrası</h2><p><a href="/pages/services#web-design">Web tasarım</a> ile yükseltme. <a href="/pages/contact?service=web-design">Web teklif formu</a>.</p>`,
     'industrial-sensors': `<p>Seviye, basınç veya nokta seviye seçimi katalog yapraklamak değildir. Bizdavar <a href="/pages/vega">VEGA</a> ve gaz/alev için <a href="/pages/prosense">Prosense</a> tedarik eder.</p>${fig('/' + a.image, 'VEGA radar seviye sensörü sarı gövde stüdyo fotoğrafı', 'Gövde ve proses bağlantısının tamamı görünmeli.')}<h2 id="ch-type">Ölçüm tipi</h2><ul><li><strong>Radar (VEGAPULS)</strong></li><li><strong>Basınç (VEGABAR)</strong></li><li><strong>Şalter (VEGAPOINT)</strong></li></ul>${fig('/' + a.extraImg, 'Hijyenik çelik tankta VEGA nokta seviye montajı', 'Kablo, kelepçe ve durum halkası tek karede.')}<p>Resmi veri: <a href="https://www.vega.com/en-ae" rel="noopener noreferrer" target="_blank">vega.com</a>.</p><h2 id="ch-safety">Sertifika</h2><p>Ex, SIL ve gıda hijyenini ilk mesajda yazın.</p><h2 id="ch-supply">Tedarik</h2><p><a href="/pages/products#supply">Endüstriyel tedarik</a> · <a href="/pages/articles/vega-supply-iran">İran için VEGA</a> · <a href="/pages/contact">İletişim</a>.</p>`,
     'about-bizdavar-group': `<p>Bizdavar Group 2013’ten beri — kurucu <strong>Ersan Jahed Tabrizi</strong>, 11 ülkede 100+ proje.</p>${fig('/' + a.image, 'Bizdavar Group tanıtımı — dijital ajans ve endüstriyel tedarik', 'Üç yol: hizmet, kendi ürün, tedarik.')}<h2 id="ch-who">Kimiz</h2><p><a href="/pages/about">Hakkımızda</a>.</p><h2 id="ch-work">Ne yapıyoruz</h2><ul><li><a href="/pages/services">Dijital hizmetler</a></li><li><a href="/pages/fast">Fast Web Studio</a></li><li><a href="/pages/bizpet">BizPet</a> ve <a href="/pages/biztab">BizTab</a></li><li><a href="/pages/vega">VEGA</a> tedariki</li></ul>${fig('/' + a.extraImg, 'Bizdavar ekibi fuar standında', 'Doğrulanabilir B2B ağ.')}<h2 id="ch-why">Neden</h2><p><a href="/pages/portfolio">Portföy</a> · <a href="/pages/contact">İletişim</a></p>`,
     'vega-supply-iran': `<p>İran’daki proses projeleri güvenilir VEGA seviye/basınç ister. Bizdavar orijinal <a href="/pages/vega">VEGA</a> tedarik eder — gri pazar değil.</p>${fig('/' + a.image, 'Temiz endüstriyel salonda VEGA seviye ve şalter sensörleri', 'Cihaz proses bağlamında görülmeli.')}<h2 id="ch-why">Resmi kanal</h2><p>Orijinal mal, şeffaf proforma. Menşei bu sayfada yazılmaz; özel teklifte netleşir.</p><h2 id="ch-steps">Adımlar</h2><ol><li>Proses, tank, Ex/SIL</li><li>Model ve sipariş kodu</li><li>Proforma</li><li>Sevkiyat ve montaj desteği</li></ol>${fig('/' + a.extraImg, 'Teknik teklif için tam VEGA sensör görünümü', 'Etiket fotoğrafı ve tank şartlarını gönderin.')}<p><a href="/pages/articles/industrial-sensors">Seçim rehberi</a> · <a href="https://www.vega.com/en-ae" rel="noopener noreferrer" target="_blank">VEGA</a> · <a href="/pages/contact?product=VEGA">Teklif</a>.</p><h2 id="ch-brands">Tamamlayıcı</h2><p><a href="/pages/prosense">Prosense</a>, <a href="/pages/teltonika">Teltonika</a>, <a href="/pages/gamak">Gamak</a>.</p>`,
@@ -1355,6 +1355,7 @@ ${fig('/' + a.extraImg, 'Hizmet sayfasına bağlanan dijital pazarlama kanallar�
 
 function ruBody(a) {
   const map = {
+    'fast-studio': `<p><a href="/pages/fast">Fast Web Studio</a> сдаёт <strong>английский LTR</strong>-сайт для покупателей <strong>США и ЕС</strong> за 5 рабочих дней — $99 / $199 / $299 (базовый ≈ €90), счёт в USD или EUR, Stripe и Zoom/Meet. Персидский/RTL — второй язык, не оболочка по умолчанию. Рынок: <a href="/pages/articles/website-design-us-eu">сайт US/EU</a>.</p>${fig('/' + a.image, 'Fast Web Studio — английский корпоративный сайт за пять дней', 'URL, форма и оплата должны быть верны с первого дня.')}<h2 id="ch-base">Базовый ($99 / ~€90)</h2><p>Английская одностраничка, форма, календарь или WhatsApp CTA.</p><h2 id="ch-shop">Магазин ($199)</h2><p>WooCommerce и Stripe/PayPal. Фото готовьте заранее.</p><h2 id="ch-pro">Pro ($299)</h2><p>Больше страниц и готовность к <a href="/pages/services#digital-marketing">Ads</a>.</p><h2 id="ch-after">После сдачи</h2><p>Апгрейд через <a href="/pages/services#web-design">веб-дизайн</a>. <a href="/pages/contact?service=web-design">Форма расчёта сайта</a>.</p>`,
     'what-is-digital-marketing': `
 <p>Цифровой маркетинг — это выход к нужной аудитории онлайн: сайт, поиск, соцсети, реклама и email — чтобы строить узнаваемость, доверие и продажи. В <a href="/pages/about">Bizdavar Group</a> это не «постинг», а воронка, измерение и <a href="/pages/services#digital-marketing">услуги цифрового маркетинга</a>.</p>
 ${fig('/' + a.image, 'Карта каналов цифрового маркетинга для B2B-компании', 'Каждый канал должен заканчиваться звонком, WhatsApp или запросом — не пустым трафиком.')}
@@ -1399,6 +1400,7 @@ ${fig('/' + a.extraImg, 'Каналы цифрового маркетинга, �
 
 function arBody(a) {
   const map = {
+    'fast-studio': `<p><a href="/pages/fast">Fast Web Studio</a> يسلّم موقعاً <strong>إنجليزياً LTR</strong> لمشترين في <strong>أمريكا وأوروبا</strong> خلال ٥ أيام عمل — ٩٩$ / ١٩٩$ / ٢٩٩$ (الأساسي ≈ €90) بفاتورة USD أو EUR وStripe وZoom/Meet. الفارسية/RTL لغة ثانية وليست القالب الافتراضي. السوق: <a href="/pages/articles/website-design-us-eu">تصميم مواقع US/EU</a>.</p>${fig('/' + a.image, 'Fast Web Studio — موقع شركة إنجليزي خلال خمسة أيام', 'يجب أن يكون الرابط والنموذج والدفع صحيحين من اليوم الأول.')}<h2 id="ch-base">الأساسي ($99 / ~€90)</h2><p>صفحة إنجليزية واحدة ونموذج وتقويم أو واتساب.</p><h2 id="ch-shop">المتجر ($199)</h2><p>WooCommerce وStripe/PayPal. جهّزوا الصور مسبقاً.</p><h2 id="ch-pro">الاحترافي ($299)</h2><p>صفحات أكثر واستعداد لـ<a href="/pages/services#digital-marketing">حملات الإعلانات</a>.</p><h2 id="ch-after">بعد التسليم</h2><p>الترقية عبر <a href="/pages/services#web-design">تصميم الويب</a>. <a href="/pages/contact?service=web-design">نموذج عرض الموقع</a>.</p>`,
     'what-is-digital-marketing': `
 <p>التسويق الرقمي هو الوصول إلى الجمهور المناسب عبر الإنترنت — الموقع والبحث والشبكات الاجتماعية والإعلانات والبريد — لبناء الوعي والثقة ثم المبيعات. في <a href="/pages/about">بيزدوار گروپ</a> هذا ليس «نشر منشورات»؛ بل قمع وقياس و<a href="/pages/services#digital-marketing">خدمات تسويق رقمي</a>.</p>
 ${fig('/' + a.image, 'خريطة قنوات التسويق الرقمي لشركة B2B', 'يجب أن تنتهي كل قناة بمكالمة أو واتساب أو استعلام — لا بزيارات فارغة.')}
@@ -1441,8 +1443,13 @@ ${fig('/' + a.extraImg, 'قنوات التسويق الرقمي المتصلة �
     .replace(/A business serving Persian and Turkish customers/g, 'الأعمال التي تخدم عملاء فارسية وتركية');
 }
 
+const TRADE_ARTICLES = require('./article-library-iran-trade');
+TRADE_ARTICLES.forEach((a) => ARTICLES.push(a));
+const US_EU_WEB_ARTICLES = require('./article-library-us-eu-web');
+ARTICLES.unshift(...US_EU_WEB_ARTICLES);
+
 ARTICLES.forEach((a) => {
-  a.body = bodiesFor(a);
+  if (!a.body) a.body = bodiesFor(a);
 });
 
 const UI = {
@@ -1588,11 +1595,26 @@ const CTA = {
 };
 
 function ctaLinks(a) {
-  if (a.slug === 'vega-supply-iran' || a.slug === 'industrial-sensors') {
+  if (a.slug === 'vega-supply-iran' || a.slug === 'industrial-sensors' || a.slug === 'buy-vegapuls-iran' || a.slug === 'vega-quote-iran') {
     return { primary: '/pages/contact?product=VEGA', secondary: '/pages/vega' };
   }
-  if (a.slug === 'prosense-gas-detection') {
+  if (a.slug === 'prosense-gas-detection' || a.slug === 'buy-prosense-iran') {
     return { primary: '/pages/contact?product=Prosense', secondary: '/pages/prosense' };
+  }
+  if (a.slug === 'industrial-trade-iran') {
+    return { primary: '/pages/contact', secondary: '/pages/products#supply' };
+  }
+  if (a.slug === 'buy-teltonika-iran') {
+    return { primary: '/pages/contact?product=Teltonika', secondary: '/pages/teltonika' };
+  }
+  if (a.slug === 'buy-gamak-iran') {
+    return { primary: '/pages/contact?product=Gamak', secondary: '/pages/gamak' };
+  }
+  if (a.slug === 'buy-digi-system-iran') {
+    return { primary: '/pages/contact?product=Digi%20System', secondary: '/pages/digi-system' };
+  }
+  if (a.slug === 'buy-teraoka-iran') {
+    return { primary: '/pages/contact?product=Teraoka', secondary: '/pages/teraoka' };
   }
   if (a.slug === 'liqui-moly-supply-iran') {
     return { primary: '/pages/contact?product=Liqui%20Moly', secondary: '/pages/liqui-moly' };
@@ -1617,11 +1639,26 @@ function ctaLinks(a) {
 
 function secondaryLabel(a, lang) {
   const loc = lang || 'fa';
-  if (a.slug === 'vega-supply-iran' || a.slug === 'industrial-sensors') {
+  if (a.slug === 'vega-supply-iran' || a.slug === 'industrial-sensors' || a.slug === 'buy-vegapuls-iran' || a.slug === 'vega-quote-iran') {
     return { fa: 'کاتالوگ VEGA', tr: 'VEGA kataloğu', en: 'VEGA catalogue', ru: 'Каталог VEGA', ar: 'كتالوج VEGA' }[loc];
   }
-  if (a.slug === 'prosense-gas-detection') {
+  if (a.slug === 'prosense-gas-detection' || a.slug === 'buy-prosense-iran') {
     return { fa: 'کاتالوگ Prosense', tr: 'Prosense kataloğu', en: 'Prosense catalogue', ru: 'Каталог Prosense', ar: 'كتالوج Prosense' }[loc];
+  }
+  if (a.slug === 'industrial-trade-iran') {
+    return { fa: 'کاتالوگ بازرگانی', tr: 'Tedarik kataloğu', en: 'Trade catalogue', ru: 'Каталог поставок', ar: 'كتالوج التوريد' }[loc];
+  }
+  if (a.slug === 'buy-teltonika-iran') {
+    return { fa: 'کاتالوگ Teltonika', tr: 'Teltonika kataloğu', en: 'Teltonika catalogue', ru: 'Каталог Teltonika', ar: 'كتالوج Teltonika' }[loc];
+  }
+  if (a.slug === 'buy-gamak-iran') {
+    return { fa: 'کاتالوگ Gamak', tr: 'Gamak kataloğu', en: 'Gamak catalogue', ru: 'Каталог Gamak', ar: 'كتالوج Gamak' }[loc];
+  }
+  if (a.slug === 'buy-digi-system-iran') {
+    return { fa: 'کاتالوگ Digi', tr: 'Digi kataloğu', en: 'Digi catalogue', ru: 'Каталог Digi', ar: 'كتالوج Digi' }[loc];
+  }
+  if (a.slug === 'buy-teraoka-iran') {
+    return { fa: 'کاتالوگ Teraoka', tr: 'Teraoka kataloğu', en: 'Teraoka catalogue', ru: 'Каталог Teraoka', ar: 'كتالوج Teraoka' }[loc];
   }
   if (a.slug === 'liqui-moly-supply-iran') {
     return { fa: 'Liqui Moly', tr: 'Liqui Moly', en: 'Liqui Moly', ru: 'Liqui Moly', ar: 'Liqui Moly' }[loc];

@@ -31,7 +31,7 @@
     if (part === '' || part === 'index' || part === 'index.html') return '/' + hash;
 
     var knownPages = {
-      about: 1, services: 1, portfolio: 1, blog: 1, contact: 1, privacy: 1, fast: 1,
+      about: 1, services: 1, portfolio: 1, blog: 1, contact: 1, privacy: 1, fast: 1, 'field-tech': 1,
       vega: 1, prosense: 1, teltonika: 1, gamak: 1, 'digi-system': 1, teraoka: 1, 'liqui-moly': 1,
       'bz-diamond': 1, 'supplify-trade': 1, 'kaya-one': 1, 'smm-turk': 1, marvispace: 1, 'marvi-society': 1, 'fxguard-exchange': 1, biztejarat: 1, products: 1, biztab: 1, 'bizsanitizer-v5': 1, bizseat: 1, bizpet: 1, gallery: 1,
       fxguard: 1, 'fxguard-accounting': 1, bizswap: 1
@@ -54,7 +54,7 @@
     return '/' + part + hash;
   }
 
-  function toLocalePath(locale, pagePath) {
+  function prettyLocalePath(locale, pagePath) {
     var norm = normalizePagePath(pagePath);
     var hashIdx = norm.indexOf('#');
     var hash = hashIdx >= 0 ? norm.slice(hashIdx) : '';
@@ -67,8 +67,32 @@
     return '/' + locale + base + hash;
   }
 
+  /** Local python/static servers have no Apache rewrite — keep .html for in-page nav only. */
+  function maybeDevHtml(rel) {
+    try {
+      if (typeof location === 'undefined') return rel;
+      if (!/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) return rel;
+    } catch (_) {
+      return rel;
+    }
+    var hashIdx = rel.indexOf('#');
+    var hash = hashIdx >= 0 ? rel.slice(hashIdx) : '';
+    var base = hashIdx >= 0 ? rel.slice(0, hashIdx) : rel;
+    var qIdx = base.indexOf('?');
+    var query = qIdx >= 0 ? base.slice(qIdx) : '';
+    base = qIdx >= 0 ? base.slice(0, qIdx) : base;
+    if (!base || base === '/') return '/index.html' + query + hash;
+    if (base.charAt(base.length - 1) === '/') return base + 'index.html' + query + hash;
+    if (/\.[a-z0-9]+$/i.test(base)) return rel;
+    return base + '.html' + query + hash;
+  }
+
+  function toLocalePath(locale, pagePath) {
+    return maybeDevHtml(prettyLocalePath(locale, pagePath));
+  }
+
   function toAbsolute(locale, pagePath) {
-    var rel = toLocalePath(locale, pagePath);
+    var rel = prettyLocalePath(locale, pagePath);
     if (rel === '/') return BASE + '/';
     return BASE + rel;
   }
@@ -99,7 +123,7 @@
   /** Skip geo redirects — crawlers must see the exact URL from sitemap/hreflang */
   function isSearchBot() {
     var ua = String(navigator.userAgent || '').toLowerCase();
-    return /googlebot|google-inspectiontool|storebot-google|bingbot|slurp|duckduckbot|baiduspider|yandexbot|applebot|petalbot|facebot|facebookexternalhit|twitterbot|linkedinbot|semrushbot|ahrefsbot|mj12bot|dotbot|rogerbot/i.test(ua);
+    return /googlebot|google-inspectiontool|storebot-google|bingbot|slurp|duckduckbot|baiduspider|yandexbot|applebot|petalbot|facebot|facebookexternalhit|twitterbot|linkedinbot|semrushbot|ahrefsbot|mj12bot|dotbot|rogerbot|gptbot|chatgpt-user|claudebot|anthropic|perplexitybot|google-extended|bytespider|ccbot|cohere-ai|meta-externalagent|amazonbot|applebot-extended/i.test(ua);
   }
 
   function localizeCanonical(url, locale) {

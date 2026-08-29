@@ -115,6 +115,11 @@
     el.innerHTML = `
       <div class="container">
         <nav class="services-nav" aria-label="${t('servicesPage.navAria', 'فهرست خدمات')}">
+          <a href="#intl-markets" class="services-nav__item services-nav__item--blue">
+            <span class="services-nav__num">$</span>
+            ${ic('globe', { size: 18 })}
+            ${t('servicesPage.intl.nav', 'اروپا و آمریکا')}
+          </a>
           ${getServices().map(s => `
             <a href="${s.href}" class="services-nav__item services-nav__item--${s.accent}">
               <span class="services-nav__num">${s.num}</span>
@@ -170,6 +175,38 @@
         <span class="services-overview-card__cta">${t('servicesPage.viewDetails', 'مشاهده جزئیات')}</span>
       </a>
     `).join('');
+  }
+
+  function pageHref(url) {
+    if (!url) return '/pages/contact';
+    if (/^(https?:|mailto:|#)/.test(url)) return url;
+    return window.resolvePagePath ? window.resolvePagePath(url) : url;
+  }
+
+  function renderIntlMarkets() {
+    const pointsEl = document.getElementById('servicesIntlPoints');
+    const offersEl = document.getElementById('servicesIntlOffers');
+    if (!pointsEl && !offersEl) return;
+    const points = rawList('servicesPage.intl.points', []);
+    const offers = rawList('servicesPage.intl.offers', []);
+    if (pointsEl) {
+      pointsEl.innerHTML = points.map(p => `
+        <article class="services-intl__point services-reveal">
+          <h3>${p.title}</h3>
+          <p>${p.desc}</p>
+        </article>
+      `).join('');
+    }
+    if (offersEl) {
+      offersEl.innerHTML = offers.map(o => `
+        <article class="services-intl__offer services-reveal">
+          <h3>${o.name}</h3>
+          <div class="services-intl__price" dir="ltr">${o.price}</div>
+          <p>${o.desc}</p>
+          <a href="${pageHref(o.href)}" class="btn btn--yellow">${o.cta}</a>
+        </article>
+      `).join('');
+    }
   }
 
   const PROCESS_ICONS = ['phone', 'target', 'bolt', 'chart-line'];
@@ -869,6 +906,7 @@
     renderNav();
     renderPaths();
     renderOverview();
+    renderIntlMarkets();
     renderProcess();
     applyBlockLists();
     renderDmPanel();

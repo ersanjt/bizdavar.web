@@ -66,7 +66,7 @@
     }
 
     const knownPages = new Set([
-      'about', 'services', 'portfolio', 'blog', 'contact', 'privacy', 'fast', 'vega',
+      'about', 'services', 'portfolio', 'blog', 'contact', 'privacy', 'fast', 'field-tech', 'vega',
       'prosense', 'teltonika', 'gamak', 'digi-system', 'teraoka', 'liqui-moly', 'bz-diamond', 'supplify-trade', 'kaya-one', 'smm-turk', 'marvispace', 'marvi-society', 'fxguard-exchange', 'biztejarat',
       'products', 'biztab', 'bizsanitizer-v5', 'bizseat', 'bizpet', 'gallery', 'fxguard', 'fxguard-accounting', 'bizswap'
     ]);

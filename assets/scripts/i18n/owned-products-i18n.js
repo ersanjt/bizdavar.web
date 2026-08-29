@@ -9,12 +9,12 @@
       productsPage: {
         crumb: 'محصولات بیزدوار',
         hero: {
-          tag: 'مهندسی و تولید بیزدوار',
-          title: 'محصولات بیزدوار',
-          desc: 'سخت‌افزار، خطوط تولید، SaaS اختصاصی و برندهای صنعتی تامین‌شده — از تبریز.',
+          tag: 'بازرگانی صنعتی و محصولات بیزدوار',
+          title: 'خرید VEGA، Prosense و محصولات بیزدوار',
+          desc: 'اولویت با خریدار ایران: سنسور VEGA، دتکتور Prosense، Liqui Moly و Teltonika — کنار سخت‌افزار و SaaS خودمان از تبریز.',
           ctaLive: 'محصولات زنده',
           ctaCatalog: 'کاتالوگ کامل',
-          ctaSupply: 'برندهای تامین',
+          ctaSupply: 'کاتالوگ بازرگانی',
           ctaContact: 'استعلام محصول'
         },
         pillars: {
@@ -88,7 +88,7 @@
         },
         geoText: 'محصولات مالکیتی و تامین برندهای صنعتی — مشاوره فنی فارسی.',
         related: [
-          { title: 'تامین VEGA', desc: 'سنسور سطح و فشار' },
+          { title: 'خرید VEGAPULS', desc: 'سنسور سطح ایران' },
           { title: 'تامین Prosense', desc: 'دتکتور گاز و شعله' },
           { title: 'Teltonika GPS', desc: 'Fleet Telematics از $29' },
           { title: 'تماس و استعلام', desc: 'مشاوره رایگان' }
@@ -283,7 +283,7 @@
         },
         geoText: 'Sahip olunan ürünler ve endüstriyel marka tedariki — teknik danışmanlık.',
         related: [
-          { title: 'VEGA tedariki', desc: 'Seviye ve basınç sensörleri' },
+          { title: 'VEGAPULS satın al', desc: 'İran seviye sensörü' },
           { title: 'Prosense tedariki', desc: 'Gaz ve alev dedektörü' },
           { title: 'Teltonika GPS', desc: 'Fleet Telematics 29$’dan' },
           { title: 'İletişim', desc: 'Ücretsiz danışmanlık' }
@@ -413,7 +413,7 @@
         },
         geoText: 'Owned products and industrial brand supply — technical consulting.',
         related: [
-          { title: 'VEGA supply', desc: 'Level and pressure sensors' },
+          { title: 'Buy VEGAPULS', desc: 'Iran level sensor' },
           { title: 'Prosense supply', desc: 'Gas and flame detectors' },
           { title: 'Teltonika GPS', desc: 'Fleet telematics from $29' },
           { title: 'Contact', desc: 'Free consultation' }

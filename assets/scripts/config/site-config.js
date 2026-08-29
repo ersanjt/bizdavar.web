@@ -392,6 +392,106 @@ window.BIZDAVAR_CONFIG = {
 
   blogPosts: [
     {
+      slug: 'pages/articles/website-design-us-eu.html',
+      title: 'طراحی سایت انگلیسی برای اروپا و آمریکا — فاکتور دلار یا یورو',
+      excerpt: 'پلن ۵روزه از ۹۹ دلار، پروژه سفارشی، Stripe و فاکتور USD/EUR برای مشتری آمریکا و اروپا.',
+      category: 'طراحی وب',
+      catId: 'web',
+      date: '2026-08-29',
+      image: 'assets/images/content/services-web-mockup.svg',
+      relatedService: 'pages/services.html#web-design'
+    },
+    {
+      slug: 'pages/articles/digital-marketing-us-eu.html',
+      title: 'بازاریابی دیجیتال برای بازار آمریکا و اروپا — بودجه دلار و یورو',
+      excerpt: 'Google Ads، Meta و LinkedIn برای مخاطب US/EU با فاکتور دلار یا یورو و گزارش GA4.',
+      category: 'بازاریابی دیجیتال',
+      catId: 'digital',
+      date: '2026-08-29',
+      image: 'assets/images/content/services-dm-visual.svg',
+      relatedService: 'pages/services.html#digital-marketing'
+    },
+    {
+      slug: 'pages/articles/buy-vegapuls-iran.html',
+      title: 'خرید VEGAPULS 6X در ایران — قیمت، کد سفارش و استعلام',
+      excerpt: 'چطور سنسور سطح راداری اصل برای مخزن ایران بخرید — پیش‌فاکتور فارسی و واتساپ.',
+      category: 'تجهیزات صنعتی',
+      catId: 'industrial',
+      date: '2026-08-29',
+      image: 'assets/images/vega/product-vegapuls-6x-photo.webp',
+      relatedService: 'pages/vega.html'
+    },
+    {
+      slug: 'pages/articles/vega-quote-iran.html',
+      title: 'استعلام قیمت سنسور VEGA در ایران — چه اطلاعاتی بفرستید',
+      excerpt: 'چک‌لیست خریدار: مخزن، رسانه، Ex/SIL و عکس پلاک برای پیش‌فاکتور دقیق.',
+      category: 'تجهیزات صنعتی',
+      catId: 'industrial',
+      date: '2026-08-29',
+      image: 'assets/images/vega/product-vegabar-39.png',
+      relatedService: 'pages/vega.html'
+    },
+    {
+      slug: 'pages/articles/buy-prosense-iran.html',
+      title: 'خرید دتکتور گاز Prosense در ایران — PQ، SafeVader و SIL',
+      excerpt: 'دتکتور گاز صنعتی اصل برای نفت، پتروشیمی و HVAC — استعلام واتساپ فارسی.',
+      category: 'تجهیزات صنعتی',
+      catId: 'industrial',
+      date: '2026-08-28',
+      image: 'assets/images/prosense/series-pq.webp',
+      relatedService: 'pages/prosense.html'
+    },
+    {
+      slug: 'pages/articles/industrial-trade-iran.html',
+      title: 'بازرگانی تجهیزات صنعتی در ایران — VEGA، Prosense و برندهای اصل',
+      excerpt: 'یک نقطه تماس فارسی برای ابزار دقیق، ایمنی گاز، ردیاب و روغن صنعتی.',
+      category: 'تجهیزات صنعتی',
+      catId: 'industrial',
+      date: '2026-08-27',
+      image: 'assets/images/content/supply-hero.jpg',
+      relatedService: 'pages/products.html#supply'
+    },
+    {
+      slug: 'pages/articles/buy-teltonika-iran.html',
+      title: 'خرید ردیاب Teltonika FMB920 در ایران — از ۲۹ دلار',
+      excerpt: 'ردیاب GPS اصل برای ناوگان ایران — FMB920، FMC650 و DualCam.',
+      category: 'تجهیزات صنعتی',
+      catId: 'industrial',
+      date: '2026-08-26',
+      image: 'assets/images/partners/teltonika.png',
+      relatedService: 'pages/teltonika.html'
+    },
+    {
+      slug: 'pages/articles/buy-gamak-iran.html',
+      title: 'خرید الکتروموتور Gamak در ایران — توان، فلنج و استعلام',
+      excerpt: 'موتور اصل برای پمپ، فن و خط تولید — kW، دور، B3/B5 و پیش‌فاکتور فارسی.',
+      category: 'تجهیزات صنعتی',
+      catId: 'industrial',
+      date: '2026-08-29',
+      image: 'assets/images/gamak/category-three-phase.webp',
+      relatedService: 'pages/gamak.html'
+    },
+    {
+      slug: 'pages/articles/buy-digi-system-iran.html',
+      title: 'خرید ترازو و POS Digi System در ایران — فروشگاه و صندوق',
+      excerpt: 'ترازو و صندوق اصل برای سوپرمارکت ایران — نوع فروشگاه، تعداد صندوق و پیش‌فاکتور فارسی.',
+      category: 'تجهیزات صنعتی',
+      catId: 'industrial',
+      date: '2026-08-29',
+      image: 'assets/images/digi-system/hero/digi-retail-hero.webp',
+      relatedService: 'pages/digi-system.html'
+    },
+    {
+      slug: 'pages/articles/buy-teraoka-iran.html',
+      title: 'خرید ترازو Teraoka در ایران — deli، POS و برچسب‌زن',
+      excerpt: 'ترازو و برچسب‌زن اصل Teraoka Seiko برای فروشگاه و آشپزخانه — پیش‌فاکتور فارسی.',
+      category: 'تجهیزات صنعتی',
+      catId: 'industrial',
+      date: '2026-08-29',
+      image: 'assets/images/teraoka/hero/teraoka-retail-hero.webp',
+      relatedService: 'pages/teraoka.html'
+    },
+    {
       slug: 'pages/articles/vega-supply-iran.html',
       title: 'تامین سنسور VEGA در ایران — از استعلام تا پروژه صنعتی',
       excerpt: 'مسیر مشاوره فارسی، پیش‌فاکتور و لجستیک اصل VEGA برای پروژه‌های ایران.',

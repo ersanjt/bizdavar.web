@@ -53,9 +53,9 @@
     }
 
     const knownPages = new Set([
-      'about', 'services', 'portfolio', 'blog', 'contact', 'privacy', 'fast', 'vega',
+      'about', 'services', 'portfolio', 'blog', 'contact', 'privacy', 'fast', 'field-tech', 'vega',
       'prosense', 'teltonika', 'gamak', 'digi-system', 'teraoka', 'liqui-moly', 'bz-diamond', 'supplify-trade', 'kaya-one', 'smm-turk', 'marvispace', 'marvi-society', 'fxguard-exchange', 'biztejarat',
-      'products', 'biztab', 'bizsanitizer-v5', 'bizseat', 'bizpet', 'gallery', 'fxguard', 'bizswap'
+      'products', 'biztab', 'bizsanitizer-v5', 'bizseat', 'bizpet', 'gallery', 'fxguard', 'fxguard-accounting', 'bizswap'
     ]);
     const stem = n.replace(/\.html$/, '');
     if (knownPages.has(stem)) return `pages/${stem}.html`;
@@ -94,6 +94,12 @@
     if (urlPath.startsWith('http')) return urlPath;
     const { pathPart, hash } = splitUrl(urlPath);
     const siteRoot = toSiteRootPath(pathPart);
+    const LU = window.BIZDAVAR_LOCALE_URL;
+    const locale = LU?.currentLocale?.() || 'fa';
+    const page = siteRoot === '' ? '/' : '/' + siteRoot.replace(/\.html$/i, '');
+    if (LU && typeof LU.toAbsolute === 'function') {
+      return LU.toAbsolute(locale, page + hash);
+    }
     if (siteRoot === '') {
       return `${C.baseUrl}/${hash}`.replace(/\/#/, '#').replace(/\/$/, '') || `${C.baseUrl}/`;
     }

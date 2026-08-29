@@ -7,9 +7,9 @@
   const seoByLang = {
     fa: {
       home: {
-        seoTitle: 'بیزدوار گروپ | خدمات دیجیتال و تامین صنعتی',
-        seoDescription: 'خدمات دیجیتال، محصولات خودمان و تامین صنعتی VEGA، Prosense و Liqui Moly. مسیر را انتخاب کنید — مشاوره رایگان در واتساپ.',
-        seoKeywords: 'بیزدوار گروپ, خدمات دیجیتال, تامین صنعتی, VEGA, Prosense, Fast Web Studio'
+        seoTitle: 'خرید VEGA و Prosense در ایران | بیزدوار گروپ',
+        seoDescription: 'تامین اصل سنسور VEGA، دتکتور گاز Prosense، Liqui Moly و Teltonika برای پروژه‌های ایران. پیش‌فاکتور فارسی و استعلام واتساپ.',
+        seoKeywords: 'خرید VEGA ایران, خرید Prosense, دتکتور گاز, سنسور سطح, VEGAPULS, بازرگانی صنعتی, بیزدوار'
       },
       about: {
         seoTitle: 'درباره بیزدوار | خدمات دیجیتال و تامین صنعتی از ۲۰۱۳',
@@ -22,9 +22,9 @@
         seoKeywords: 'گالری بیزدوار, نمایشگاه ایمن سهند پدیده, مرکز رشد دانشگاه تبریز, BizPet'
       },
       services: {
-        seoTitle: 'طراحی سایت و بازاریابی دیجیتال | بیزدوار',
-        seoDescription: 'خدمات بیزدوار: طراحی سایت ۵روزه، سئو، SMM، اپ، سرور و خدمات فنی تبریز. مشاوره رایگان در واتساپ — همین امروز استعلام بگیرید.',
-        seoKeywords: 'طراحی سایت, بازاریابی دیجیتال, سئو, SMM, خدمات فنی تبریز, بیزدوار'
+        seoTitle: 'طراحی سایت برای اروپا و آمریکا | از ۹۹ دلار — بیزدوار',
+        seoDescription: 'سایت انگلیسی، وب‌اپ و بازاریابی دیجیتال برای مشتری US/EU با فاکتور دلار یا یورو. تحویل ۵روزه از ۹۹ دلار، Stripe، همپوشانی CET/EST. مشاوره رایگان.',
+        seoKeywords: 'طراحی سایت اروپا, طراحی سایت آمریکا, web design USD, طراحی سایت یورو, Fast Web Studio, بازاریابی دیجیتال, بیزدوار'
       },
       fieldTech: {
         seoTitle: 'خدمات فنی بیزدوار | CCTV، سیم‌کشی و نورمخفی — تبریز',
@@ -32,9 +32,9 @@
         seoKeywords: 'نصب دوربین مدار بسته تبریز, CCTV تبریز, سیم‌کشی ساختمان, نورمخفی, خدمات فنی بیزدوار'
       },
       products: {
-        seoTitle: 'خرید VEGA، Prosense و FXGuard | محصولات بیزدوار',
-        seoDescription: 'کاتالوگ بیزدوار: سنسور VEGA، دتکتور Prosense، Liqui Moly، Teltonika و FXGuard WhatsApp CRM. قیمت شفاف و استعلام واتساپ.',
-        seoKeywords: 'خرید VEGA, خرید Prosense, FXGuard, Fast Web Studio, Liqui Moly, محصولات بیزدوار'
+        seoTitle: 'خرید VEGA، Prosense و Liqui Moly در ایران | بیزدوار',
+        seoDescription: 'کاتالوگ بازرگانی بیزدوار: سنسور VEGA، دتکتور Prosense، Liqui Moly، Teltonika و Gamak برای پروژه ایران. پیش‌فاکتور فارسی و واتساپ.',
+        seoKeywords: 'خرید VEGA ایران, خرید Prosense, Liqui Moly, Teltonika, Gamak, بازرگانی صنعتی, بیزدوار'
       },
       portfolio: {
         seoTitle: 'نمونه‌کارها | طراحی وب، محصولات دیجیتال و تامین صنعتی — بیزدوار',
@@ -42,14 +42,14 @@
         seoKeywords: 'نمونه کار بیزدوار, طراحی وب, بازاریابی دیجیتال, FXGuard, Fast Web Studio, VEGA, تامین صنعتی'
       },
       blog: {
-        seoTitle: 'وبلاگ بیزدوار | بازاریابی دیجیتال، سئو و تامین VEGA',
-        seoDescription: 'مقالات تخصصی بیزدوار: دیجیتال مارکتینگ، سئو، طراحی سایت چندزبانه، Fast Studio و خرید سنسور VEGA برای ایران و ترکیه.',
-        seoKeywords: 'وبلاگ بیزدوار, مقالات بازاریابی دیجیتال, سئو, طراحی سایت چندزبانه, تامین VEGA ایران, Fast Web Studio, مدیریت SMM'
+        seoTitle: 'وبلاگ بیزدوار | خرید VEGA، Prosense و راهنمای بازرگانی',
+        seoDescription: 'راهنمای خرید سنسور VEGA، دتکتور گاز Prosense، ردیاب Teltonika و تامین صنعتی برای پروژه‌های ایران — به‌همراه سئو و طراحی سایت.',
+        seoKeywords: 'خرید VEGA ایران, خرید Prosense, دتکتور گاز, سنسور سطح, Teltonika, بازرگانی صنعتی, وبلاگ بیزدوار'
       },
       fast: {
-        seoTitle: 'طراحی سایت در ۵ روز از ۹۹ دلار | Fast Web Studio',
-        seoDescription: 'سایت شرکتی، فروشگاهی و لندینگ در ۵ روز کاری. پلن $99 / $199 / $299 — RTL، واتساپ فارسی و سئو پایه. سفارش آنلاین از بیزدوار.',
-        seoKeywords: 'طراحی سایت ۵ روز, طراحی سایت ارزان, Fast Web Studio, WooCommerce, بیزدوار'
+        seoTitle: 'طراحی سایت انگلیسی در ۵ روز از ۹۹ دلار | Fast Web Studio',
+        seoDescription: 'سایت شرکتی، فروشگاهی و لندینگ برای بازار اروپا و آمریکا در ۵ روز کاری. پلن $99 / $199 / $299 — فاکتور USD یا EUR، Stripe و هاست بین‌المللی.',
+        seoKeywords: 'طراحی سایت ۵ روز, طراحی سایت دلار, Fast Web Studio, سایت انگلیسی اروپا, بیزدوار'
       },
       privacy: {
         seoTitle: 'حریم خصوصی | بیزدوار گروپ',
@@ -57,9 +57,9 @@
         seoKeywords: 'حریم خصوصی, privacy, بیزدوار'
       },
       contact: {
-        seoTitle: 'مشاوره رایگان و استعلام قیمت | واتساپ بیزدوار',
-        seoDescription: 'استعلام VEGA، Prosense یا طراحی سایت — فرم تماس یا واتساپ فارسی/ترکی. پاسخ در ساعات کاری.',
-        seoKeywords: 'مشاوره رایگان, استعلام قیمت VEGA, واتساپ بیزدوار, تماس بیزدوار'
+        seoTitle: 'استعلام قیمت VEGA و Prosense | واتساپ بیزدوار',
+        seoDescription: 'استعلام VEGA، Prosense، Teltonika، Liqui Moly و الکتروموتور Gamak از واتساپ فارسی — پیش‌فاکتور شفاف برای پروژه ایران.',
+        seoKeywords: 'استعلام VEGA, قیمت Prosense, خرید Gamak, واتساپ بیزدوار, تامین صنعتی ایران'
       },
       vega: {
         seoTitle: 'خرید سنسور VEGA در ایران | قیمت و استعلام',
@@ -187,9 +187,9 @@
         seoKeywords: 'مدیریت شبکه اجتماعی, SMM, اینستاگرام, لینکدین, بیزدوار'
       },
       articleFastStudio: {
-        seoTitle: 'راهنمای پلن‌های Fast Web Studio | ۹۹ تا ۲۹۹ دلار',
-        seoDescription: 'مقایسه پلن‌های Fast Web Studio: پایه $99، فروشگاهی $199، حرفه‌ای $299. راهنمای تحویل ۵روزه، RTL و سئو پایه — سفارش از صفحه Fast.',
-        seoKeywords: 'راهنمای Fast Web Studio, پلن طراحی سایت, WooCommerce, بیزدوار'
+        seoTitle: 'راهنمای Fast Web Studio | سایت انگلیسی از ۹۹ دلار / ~€90',
+        seoDescription: 'پلن ۵روزه Fast Studio برای آمریکا و اروپا: $99 / $199 / $299، Stripe، Zoom/Meet و فاکتور USD یا EUR — نه قالب RTL پیش‌فرض.',
+        seoKeywords: 'Fast Web Studio, طراحی سایت انگلیسی, فاکتور یورو, Stripe, بیزدوار'
       },
       articleIndustrialSensors: {
         seoTitle: 'کدام سنسور VEGA بخرم؟ | راهنمای انتخاب',
@@ -235,13 +235,65 @@
         seoTitle: 'تامین Liqui Moly — روغن و افزودنی اصل | بیزدوار',
         seoDescription: 'استعلام روغن موتور و افزودنی Liqui Moly برای ناوگان و کارگاه — B2B.',
         seoKeywords: 'Liqui Moly, روغن موتور, تامین, بیزدوار'
+      },
+      articleBuyVegapulsIran: {
+        seoTitle: 'خرید VEGAPULS 6X در ایران | قیمت و استعلام',
+        seoDescription: 'چطور VEGAPULS 6X اصل برای مخزن و فرآیند ایران بخرید: کد سفارش، پیش‌فاکتور فارسی و لجستیک تا محل نصب — بیزدوار.',
+        seoKeywords: 'خرید VEGAPULS 6X, قیمت سنسور سطح راداری, سنسور سطح VEGA ایران, بیزدوار'
+      },
+      articleVegaQuoteIran: {
+        seoTitle: 'استعلام قیمت سنسور VEGA در ایران | چک‌لیست خرید',
+        seoDescription: 'برای پیش‌فاکتور VEGA چه اطلاعاتی بفرستید: مخزن، رسانه، Ex/SIL، اتصال فرآیند و عکس پلاک — مسیر استعلام فارسی بیزدوار.',
+        seoKeywords: 'استعلام قیمت VEGA, پیش‌فاکتور سنسور سطح, خرید VEGABAR ایران, بیزدوار'
+      },
+      articleBuyProsenseIran: {
+        seoTitle: 'خرید دتکتور گاز Prosense در ایران | PQ و SafeVader',
+        seoDescription: 'خرید دتکتور گاز صنعتی اصل Prosense برای نفت، پتروشیمی و HVAC در ایران — PQ، SafeVader، SIL و پیش‌فاکتور واتساپ.',
+        seoKeywords: 'خرید دتکتور گاز صنعتی, قیمت Prosense ایران, PQ Series, SafeVader, بیزدوار'
+      },
+      articleIndustrialTradeIran: {
+        seoTitle: 'بازرگانی تجهیزات صنعتی در ایران | VEGA و Prosense',
+        seoDescription: 'مسیر بازرگانی اصل برای ابزار دقیق، ایمنی گاز، ردیاب و روغن صنعتی در ایران — یک نقطه تماس فارسی با بیزدوار.',
+        seoKeywords: 'بازرگانی صنعتی ایران, تامین تجهیزات ابزار دقیق, واردات تجهیزات صنعتی, بیزدوار'
+      },
+      articleBuyTeltonikaIran: {
+        seoTitle: 'خرید ردیاب Teltonika FMB920 در ایران | از ۲۹ دلار',
+        seoDescription: 'خرید ردیاب GPS اصل Teltonika برای ناوگان ایران: FMB920 از ۲۹ دلار، FMC650 و DualCam — پیش‌فاکتور فارسی بیزدوار.',
+        seoKeywords: 'خرید Teltonika ایران, قیمت FMB920, ردیاب GPS ناوگان, بیزدوار'
+      },
+      articleBuyGamakIran: {
+        seoTitle: 'خرید الکتروموتور Gamak در ایران | توان و فلنج',
+        seoDescription: 'الکتروموتور اصل Gamak برای پمپ، فن و خط تولید ایران: kW، دور، فلنج B3/B5 و کلاس IE — پیش‌فاکتور فارسی بیزدوار.',
+        seoKeywords: 'خرید الکتروموتور Gamak, موتور گاماک ایران, IE3, فلنج B5, بیزدوار'
+      },
+      articleBuyDigiIran: {
+        seoTitle: 'خرید ترازو Digi System در ایران | POS و صندوق',
+        seoDescription: 'ترازو و صندوق اصل Digi System برای سوپرمارکت ایران: نوع فروشگاه، تعداد صندوق و ترازوی قانونی — پیش‌فاکتور فارسی بیزدوار.',
+        seoKeywords: 'خرید ترازو Digi ایران, POS دیجی سیستم, ترازوی فروشگاهی, بیزدوار'
+      },
+      articleBuyTeraokaIran: {
+        seoTitle: 'خرید ترازو Teraoka در ایران | deli و POS',
+        seoDescription: 'ترازو و برچسب‌زن اصل Teraoka Seiko برای فروشگاه و آشپزخانه ایران — نوع ترازو، ظرفیت و پیش‌فاکتور فارسی بیزدوار.',
+        seoKeywords: 'خرید ترازو Teraoka ایران, تراوکا سیکو, ترازوی دلی, بیزدوار'
+      },
+      articleWebsiteDesignUsEu: {
+        crumb: 'طراحی سایت اروپا و آمریکا',
+        seoTitle: 'طراحی سایت انگلیسی برای اروپا و آمریکا | از ۹۹ دلار',
+        seoDescription: 'سایت انگلیسی برای مشتری US/EU: پلن ۵روزه از ۹۹ دلار، پروژه سفارشی، Stripe، Zoom/Meet و فاکتور دلار یا یورو — بیزدوار.',
+        seoKeywords: 'طراحی سایت اروپا, طراحی سایت آمریکا, web design USD, Fast Web Studio, بیزدوار'
+      },
+      articleDigitalMarketingUsEu: {
+        crumb: 'بازاریابی دیجیتال US/EU',
+        seoTitle: 'بازاریابی دیجیتال آمریکا و اروپا | بودجه دلار و یورو',
+        seoDescription: 'Google Ads، Meta و LinkedIn برای مخاطب US/EU با فاکتور دلار یا یورو، لندینگ انگلیسی و گزارش GA4 — بیزدوار.',
+        seoKeywords: 'گوگل ادز اروپا, تبلیغات آمریکا, LinkedIn Ads, بازاریابی دیجیتال یورو, بیزدوار'
       }
     },
     tr: {
       home: {
-        seoTitle: 'Bizdavar Group | Dijital hizmet ve endüstriyel tedarik',
-        seoDescription: 'Dijital hizmetler, kendi ürünlerimiz ve VEGA / Prosense / Liqui Moly tedariki. Yolunuzu seçin, WhatsApp’tan ücretsiz danışın.',
-        seoKeywords: 'Bizdavar Group, dijital hizmet, endüstriyel tedarik, VEGA, Prosense, Fast Web Studio'
+        seoTitle: 'Bizdavar Group | ABD/AB İngilizce web $99’dan',
+        seoDescription: 'ABD ve AB için İngilizce LTR site ve Google/Meta reklam — fatura USD veya EUR, $99 / ~€90’dan. Zoom/Meet ve Fast Studio. İran tedariki ayrı yol.',
+        seoKeywords: 'web tasarım ABD, web tasarım AB, $99 web sitesi, dijital pazarlama USD, Fast Web Studio, Bizdavar'
       },
       about: {
         seoTitle: 'Hakkımızda | Bizdavar — dijital hizmetler ve endüstriyel tedarik',
@@ -254,9 +306,9 @@
         seoKeywords: 'Bizdavar galeri, Imen Sahand Padideh fuar, Tebriz kuluçka, BizPet'
       },
       services: {
-        seoTitle: 'Web tasarım ve dijital pazarlama | Bizdavar',
-        seoDescription: '5 günde site, SEO, SMM, uygulama, sunucu ve teknik hizmet Tebriz. Ücretsiz danışmanlık — WhatsApp ile teklif alın.',
-        seoKeywords: 'web tasarım, dijital pazarlama, SEO, SMM, Bizdavar'
+        seoTitle: 'Avrupa ve ABD için web tasarım | $99’dan — Bizdavar',
+        seoDescription: 'İngilizce site, web app ve dijital pazarlama — ABD/AB müşteri, fatura USD veya EUR. 5 günde siteden $99, Stripe, CET/EST örtüşmesi. Ücretsiz teklif.',
+        seoKeywords: 'web tasarım Avrupa, web tasarım ABD, USD web tasarım, Fast Web Studio, dijital pazarlama, Bizdavar'
       },
       fieldTech: {
         seoTitle: 'Teknik hizmetler | CCTV, tesisat ve gizli aydınlatma — Tebriz',
@@ -274,14 +326,14 @@
         seoKeywords: 'Bizdavar portfolyo, web tasarım, dijital pazarlama, FXGuard, Fast Web Studio, VEGA, endüstriyel tedarik'
       },
       blog: {
-        seoTitle: 'Bizdavar blog | dijital pazarlama, SEO ve VEGA tedariki',
-        seoDescription: 'Uzman yazılar: dijital pazarlama, SEO, çok dilli web, Fast Studio ve İran/Türkiye için orijinal VEGA sensör tedariki.',
-        seoKeywords: 'Bizdavar blog, dijital pazarlama, SEO, çok dilli web, VEGA İran, Fast Web Studio, SMM'
+        seoTitle: 'Bizdavar blog | ABD/AB web, reklam ve endüstriyel rehber',
+        seoDescription: 'İngilizce siteler USD/EUR fatura, Google/Meta kampanyaları, Fast Studio — artı İran için orijinal VEGA tedariki.',
+        seoKeywords: 'Bizdavar blog, web tasarım ABD, dijital pazarlama AB, Fast Web Studio, VEGA İran'
       },
       fast: {
-        seoTitle: '5 günde web sitesi $99’dan | Fast Web Studio',
-        seoDescription: 'Kurumsal, mağaza ve landing sayfası 5 iş gününde. $99 / $199 / $299 — RTL, WhatsApp ve temel SEO. Bizdavar’dan sipariş.',
-        seoKeywords: '5 günde web sitesi, ucuz web tasarım, Fast Web Studio, WooCommerce, Bizdavar'
+        seoTitle: '5 günde İngilizce web sitesi $99 / ~€90’dan | Fast Web Studio',
+        seoDescription: 'ABD ve AB işletmeleri için kurumsal, mağaza ve landing 5 iş gününde. $99 / $199 / $299 — Stripe, GDPR uyumlu hosting, fatura USD veya EUR.',
+        seoKeywords: '5 günde web sitesi, ABD web tasarım, AB web tasarım, Fast Web Studio, Stripe, Bizdavar'
       },
       privacy: {
         seoTitle: 'Gizlilik Politikası | Bizdavar Group',
@@ -289,9 +341,9 @@
         seoKeywords: 'gizlilik politikası, privacy, Bizdavar'
       },
       contact: {
-        seoTitle: 'Ücretsiz danışmanlık ve fiyat teklifi | Bizdavar WhatsApp',
-        seoDescription: 'VEGA, Prosense veya web tasarım teklifi — form veya Türkçe/Farsça WhatsApp. Mesai saatlerinde yanıt.',
-        seoKeywords: 'ücretsiz danışmanlık, VEGA teklif, Bizdavar WhatsApp, iletişim'
+        seoTitle: 'Web teklifi USD/EUR veya İran tedariki | Bizdavar',
+        seoDescription: 'İngilizce site ve reklam teklifi — Zoom/Meet, fatura USD veya EUR. İran için VEGA, Prosense ve Gamak hâlâ WhatsApp.',
+        seoKeywords: 'web teklifi USD, EUR fatura, web tasarım ABD, VEGA teklif, Bizdavar iletişim'
       },
       vega: {
         seoTitle: 'VEGA sensör satın al | Fiyat ve proforma',
@@ -419,9 +471,9 @@
         seoKeywords: 'SMM, sosyal medya yönetimi, Instagram, LinkedIn, Bizdavar'
       },
       articleFastStudio: {
-        seoTitle: '5 günde site kurulumu — Fast Studio rehberi | Bizdavar',
-        seoDescription: 'Fast Web Studio tam rehber: $99–$299 planlar, 5 günde teslim, WooCommerce ve temel SEO.',
-        seoKeywords: 'Fast Web Studio, 5 günde web sitesi, WooCommerce, Bizdavar'
+        seoTitle: '5 günde İngilizce site — ABD/AB Fast Studio rehberi | Bizdavar',
+        seoDescription: 'Fast Web Studio $99 / ~€90’dan: ABD ve AB için İngilizce LTR, Stripe, Zoom/Meet, fatura USD veya EUR.',
+        seoKeywords: 'Fast Web Studio, 5 günde İngilizce site, ABD web tasarım, EUR fatura, Bizdavar'
       },
       articleIndustrialSensors: {
         seoTitle: 'VEGA endüstriyel sensör seçimi — tedarik rehberi | Bizdavar',
@@ -467,13 +519,65 @@
         seoTitle: 'Liqui Moly tedariki | Bizdavar',
         seoDescription: 'Orijinal motor yağı ve katkı maddeleri — B2B.',
         seoKeywords: 'Liqui Moly, motor yağı, Bizdavar'
+      },
+      articleBuyVegapulsIran: {
+        seoTitle: 'İran’da VEGAPULS 6X satın al | teklif',
+        seoDescription: 'Orijinal VEGAPULS 6X İran projeleri için: sipariş kodu, Farsça proforma ve sahaya lojistik — Bizdavar.',
+        seoKeywords: 'VEGAPULS 6X satın al, radar seviye sensörü, VEGA İran, Bizdavar'
+      },
+      articleVegaQuoteIran: {
+        seoTitle: 'İran’da VEGA fiyat teklifi | kontrol listesi',
+        seoDescription: 'VEGA proforması için tank, ortam, Ex/SIL ve etiket fotoğrafı gönderin — Bizdavar.',
+        seoKeywords: 'VEGA teklif, VEGABAR, Bizdavar'
+      },
+      articleBuyProsenseIran: {
+        seoTitle: 'İran’da Prosense gaz dedektörü | PQ ve SafeVader',
+        seoDescription: 'Orijinal Prosense PQ, SafeVader ve SIL — petrol ve HVAC için B2B teklif.',
+        seoKeywords: 'Prosense satın al, gaz dedektörü, PQ Series, Bizdavar'
+      },
+      articleIndustrialTradeIran: {
+        seoTitle: 'İran’da endüstriyel ticaret | VEGA ve Prosense',
+        seoDescription: 'Ölçüm, gaz güvenliği, GPS ve yağ için orijinal B2B tedarik — Bizdavar.',
+        seoKeywords: 'endüstriyel ticaret İran, VEGA, Prosense, Bizdavar'
+      },
+      articleBuyTeltonikaIran: {
+        seoTitle: 'İran’da Teltonika FMB920 | 29$’dan',
+        seoDescription: 'Orijinal Teltonika GPS: FMB920 29$’dan, FMC650 ve DualCam — Farsça teklif.',
+        seoKeywords: 'Teltonika İran, FMB920 fiyat, filo GPS, Bizdavar'
+      },
+      articleBuyGamakIran: {
+        seoTitle: 'İran’da Gamak motor satın al | kW ve flanş',
+        seoDescription: 'Orijinal Gamak pompa, fan ve hat için: kW, rpm, B3/B5 ve IE — Farsça proforma.',
+        seoKeywords: 'Gamak motor İran, IE3, B5 flanş, Bizdavar'
+      },
+      articleBuyDigiIran: {
+        seoTitle: 'İran’da Digi System terazi | POS ve kasa',
+        seoDescription: 'Orijinal Digi terazi ve POS: mağaza türü, kasa sayısı, onaylı terazi — Farsça proforma.',
+        seoKeywords: 'Digi System İran, POS terazi, Bizdavar'
+      },
+      articleBuyTeraokaIran: {
+        seoTitle: 'İran’da Teraoka terazi | deli ve POS',
+        seoDescription: 'Orijinal Teraoka Seiko: terazi türü, kapasite ve kasa — Farsça proforma.',
+        seoKeywords: 'Teraoka İran, deli terazi, Bizdavar'
+      },
+      articleWebsiteDesignUsEu: {
+        crumb: 'ABD/AB web tasarım',
+        seoTitle: 'Avrupa ve ABD için İngilizce web tasarım | $99’dan',
+        seoDescription: 'ABD/AB müşteri için İngilizce site: 5 günde $99, özel proje, Stripe, Zoom/Meet ve USD veya EUR fatura — Bizdavar.',
+        seoKeywords: 'web tasarım Avrupa, web tasarım ABD, USD web tasarım, Fast Web Studio, Bizdavar'
+      },
+      articleDigitalMarketingUsEu: {
+        crumb: 'ABD/AB dijital pazarlama',
+        seoTitle: 'ABD ve AB için dijital pazarlama | USD ve EUR bütçe',
+        seoDescription: 'Google Ads, Meta ve LinkedIn — ABD/AB kitle, USD/EUR fatura, İngilizce landing ve GA4 — Bizdavar.',
+        seoKeywords: 'Google Ads Avrupa, ABD reklam, LinkedIn Ads, dijital pazarlama EUR, Bizdavar'
       }
     },
     en: {
       home: {
-        seoTitle: 'Bizdavar Group | Digital services and industrial supply',
-        seoDescription: 'Digital services, products we build, and genuine VEGA / Prosense / Liqui Moly supply. Pick your path — free WhatsApp consult.',
-        seoKeywords: 'Bizdavar Group, digital services, industrial supply, VEGA, Prosense, Fast Web Studio'
+        seoTitle: 'English websites for US & EU from $99 | Bizdavar Group',
+        seoDescription: 'English LTR sites and Google/Meta ads for US and EU — billed in USD or EUR, from $99 / ~€90. Zoom/Meet, Stripe, Fast Web Studio. Iran supply is a separate path.',
+        seoKeywords: 'web design US, web design EU, website from $99, digital marketing USD, Fast Web Studio, Bizdavar'
       },
       about: {
         seoTitle: 'About Bizdavar | Digital services & industrial supply since 2013',
@@ -486,9 +590,9 @@
         seoKeywords: 'Bizdavar gallery, Imen Sahand Padideh exhibition, Tabriz incubator, BizPet'
       },
       services: {
-        seoTitle: 'Web design & digital marketing | Bizdavar',
-        seoDescription: '5-day websites, SEO, SMM, apps, servers and field installs in Tabriz. Free consult — get a WhatsApp quote today.',
-        seoKeywords: 'web design, digital marketing, SEO, SMM, Bizdavar'
+        seoTitle: 'Web design for US & EU businesses | from $99 — Bizdavar',
+        seoDescription: 'English websites, web apps and digital marketing for US and EU clients. Invoiced in USD or EUR. 5-day sites from $99 / ~€90, Stripe/PayPal, CET/EST overlap. Free quote.',
+        seoKeywords: 'web design US, web design EU, website from $99, EUR web design, digital marketing, Fast Web Studio, Bizdavar'
       },
       fieldTech: {
         seoTitle: 'Technical services | CCTV, wiring & cove lighting — Tabriz',
@@ -506,14 +610,14 @@
         seoKeywords: 'Bizdavar portfolio, web design, digital marketing, FXGuard, Fast Web Studio, VEGA, industrial supply'
       },
       blog: {
-        seoTitle: 'Bizdavar blog | digital marketing, SEO & VEGA supply',
-        seoDescription: 'Expert guides: digital marketing, SEO, multilingual websites, Fast Studio and genuine VEGA sensor supply for Iran and Turkey.',
-        seoKeywords: 'Bizdavar blog, digital marketing, SEO, multilingual website, VEGA Iran, Fast Web Studio, SMM'
+        seoTitle: 'Bizdavar blog | US/EU web design, ads and industrial guides',
+        seoDescription: 'English websites billed in USD or EUR, Google/Meta/LinkedIn campaigns, Fast Studio — plus genuine VEGA supply for Iran.',
+        seoKeywords: 'Bizdavar blog, web design US, digital marketing EU, Fast Web Studio, VEGA Iran'
       },
       fast: {
-        seoTitle: 'Website in 5 days from $99 | Fast Web Studio',
-        seoDescription: 'Corporate, store and landing pages in 5 business days. $99 / $199 / $299 — RTL, WhatsApp and basic SEO. Order from Bizdavar.',
-        seoKeywords: 'website in 5 days, cheap web design, Fast Web Studio, WooCommerce, Bizdavar'
+        seoTitle: 'English website in 5 days from $99 / ~€90 | Fast Web Studio',
+        seoDescription: 'Corporate, store and landing pages for US and EU businesses in 5 business days. $99 / $199 / $299 — Stripe, GDPR-aware hosting, billed in USD or EUR.',
+        seoKeywords: 'website in 5 days, web design US, web design EU, $99 website, Fast Web Studio, Stripe, Bizdavar'
       },
       privacy: {
         seoTitle: 'Privacy Policy | Bizdavar Group',
@@ -521,9 +625,9 @@
         seoKeywords: 'privacy policy, Bizdavar, GDPR'
       },
       contact: {
-        seoTitle: 'Free quote & consultation | Bizdavar WhatsApp',
-        seoDescription: 'Ask for VEGA, Prosense or a website quote — form or Persian/Turkish WhatsApp. Replies during business hours.',
-        seoKeywords: 'free consultation, VEGA quote, Bizdavar WhatsApp, contact'
+        seoTitle: 'Website quote USD/EUR or Iran industrial supply | Bizdavar',
+        seoDescription: 'English website and ads quote — Zoom/Meet, billed in USD or EUR. VEGA, Prosense and Gamak for Iran still via WhatsApp.',
+        seoKeywords: 'website quote USD, EUR invoice, web design US, VEGA quote, Bizdavar contact'
       },
       vega: {
         seoTitle: 'Buy VEGA sensors | VEGAPULS quote',
@@ -651,9 +755,9 @@
         seoKeywords: 'SMM, social media management, Instagram, LinkedIn, Bizdavar'
       },
       articleFastStudio: {
-        seoTitle: 'Launch a website in 5 days — Fast Studio guide | Bizdavar',
-        seoDescription: 'Complete Fast Web Studio guide: $99–$299 plans, 5-day delivery, WooCommerce and basic SEO.',
-        seoKeywords: 'Fast Web Studio, website in 5 days, WooCommerce, Bizdavar'
+        seoTitle: 'English website in 5 days — Fast Studio for US & EU | Bizdavar',
+        seoDescription: 'Fast Web Studio from $99 / ~€90: English LTR sites, Stripe, Zoom/Meet and invoices in USD or EUR — not an RTL default.',
+        seoKeywords: 'Fast Web Studio, website in 5 days, web design US, EUR invoice, Stripe, Bizdavar'
       },
       articleIndustrialSensors: {
         seoTitle: 'Choosing industrial VEGA sensors — supply guide | Bizdavar',
@@ -699,6 +803,58 @@
         seoTitle: 'Liqui Moly supply | Bizdavar',
         seoDescription: 'Genuine engine oils and additives — B2B.',
         seoKeywords: 'Liqui Moly, engine oil, Bizdavar'
+      },
+      articleBuyVegapulsIran: {
+        seoTitle: 'Buy VEGAPULS 6X in Iran | quote',
+        seoDescription: 'Genuine VEGAPULS 6X for Iran tanks and process: order code, Persian proforma and logistics to site — Bizdavar.',
+        seoKeywords: 'buy VEGAPULS 6X, radar level sensor Iran, VEGA Iran, Bizdavar'
+      },
+      articleVegaQuoteIran: {
+        seoTitle: 'VEGA sensor quote in Iran | buyer checklist',
+        seoDescription: 'What to send for a VEGA proforma: tank, media, Ex/SIL, process connection and nameplate photo — Bizdavar.',
+        seoKeywords: 'VEGA quote Iran, VEGABAR, level sensor proforma, Bizdavar'
+      },
+      articleBuyProsenseIran: {
+        seoTitle: 'Buy Prosense gas detectors in Iran | PQ & SafeVader',
+        seoDescription: 'Genuine Prosense PQ, SafeVader and SIL for oil, petrochemical and HVAC in Iran — WhatsApp quote.',
+        seoKeywords: 'buy Prosense Iran, industrial gas detector, PQ Series, Bizdavar'
+      },
+      articleIndustrialTradeIran: {
+        seoTitle: 'Industrial trade in Iran | VEGA and Prosense',
+        seoDescription: 'Genuine B2B supply of instrumentation, gas safety, GPS and industrial oils for Iran — one Persian contact.',
+        seoKeywords: 'industrial trade Iran, instrumentation supply, VEGA Prosense, Bizdavar'
+      },
+      articleBuyTeltonikaIran: {
+        seoTitle: 'Buy Teltonika FMB920 in Iran | from $29',
+        seoDescription: 'Genuine Teltonika GPS for Iran fleets: FMB920 from $29, FMC650 and DualCam — Persian proforma.',
+        seoKeywords: 'buy Teltonika Iran, FMB920 price, fleet GPS, Bizdavar'
+      },
+      articleBuyGamakIran: {
+        seoTitle: 'Buy Gamak motors in Iran | kW and flange',
+        seoDescription: 'Genuine Gamak for Iran pumps, fans and lines: kW, rpm, B3/B5 and IE class — Persian proforma.',
+        seoKeywords: 'buy Gamak Iran, IE3 motor, B5 flange, Bizdavar'
+      },
+      articleBuyDigiIran: {
+        seoTitle: 'Buy Digi System scales in Iran | POS checkout',
+        seoDescription: 'Genuine Digi scales and POS for Iran stores: store type, checkout count, legal-for-trade — Persian proforma.',
+        seoKeywords: 'buy Digi System Iran, retail scale POS, Bizdavar'
+      },
+      articleBuyTeraokaIran: {
+        seoTitle: 'Buy Teraoka scales in Iran | deli and POS',
+        seoDescription: 'Genuine Teraoka Seiko scales and labelers for Iran stores and kitchens — type, capacity, Persian proforma.',
+        seoKeywords: 'buy Teraoka Iran, deli scale, Bizdavar'
+      },
+      articleWebsiteDesignUsEu: {
+        crumb: 'US & EU web design',
+        seoTitle: 'English website design for US & EU | from $99',
+        seoDescription: 'How US and EU companies order an English site: 5-day plans from $99 / ~€90, custom builds, Stripe, Zoom/Meet and invoices in USD or EUR.',
+        seoKeywords: 'web design US, web design EU, website from $99, EUR web design, Fast Web Studio, Bizdavar'
+      },
+      articleDigitalMarketingUsEu: {
+        crumb: 'US/EU digital marketing',
+        seoTitle: 'Digital marketing for US & EU | USD and EUR budgets',
+        seoDescription: 'Google Ads, Meta and LinkedIn for US/EU audiences — invoiced in USD or EUR, English landings and GA4 reporting.',
+        seoKeywords: 'Google Ads EU, US digital marketing, LinkedIn Ads, Meta Ads USD, Bizdavar'
       }
     }
   };

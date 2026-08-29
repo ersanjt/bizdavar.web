@@ -14,8 +14,8 @@
       { title: 'SMM yönetimi', subtitle: 'Social Media Management · İçerik, reklam ve büyüme', body: 'Sosyal medyada profesyonel görünmek isteyen markalar için içerik takvimi, tasarım, metin, kampanya ve büyüme raporu.', tags: ['Instagram', 'LinkedIn', 'Content', 'Ads'], checks: ['İçerik stratejisi ve yayın takvimi', 'Post ve story tasarımı', 'Türkçe, Farsça ve İngilizce metin yazımı', 'Hedefli reklam ve kampanya', 'Aylık rapor ve iyileştirme önerisi'], cta: 'SMM iş birliğine başla' }
     ],
     en: [
-      { title: 'Digital marketing', subtitle: 'Digital Marketing · Strategy and campaign delivery', body: 'Bizdavar Group increases conversion and online sales through modern digital marketing strategies. Related article: <a href="articles/digital-marketing">How digital marketing increases sales</a>.', tags: ['Google Ads', 'SEO', 'CRO', 'Automation'], checks: ['Competitor and audience analysis', 'Google and social media campaigns', 'Conversion rate optimization (CRO)', 'Marketing automation and email', 'Performance reporting and analysis'], cta: 'Request consulting' },
-      { title: 'Web design and development', subtitle: 'Web Design · Corporate, e-commerce and landing pages', body: 'From corporate sites to WooCommerce stores and landing pages, we build for speed, UX, SEO and conversion. For fast delivery, see <a href="fast">Fast Web Studio</a>.', tags: ['WordPress', 'WooCommerce', 'Landing', 'SEO'], checks: ['Responsive UI/UX design', 'Corporate or e-commerce implementation', 'Contact form, WhatsApp and social links', 'Speed, security and SSL optimization', 'Website management training'], cta: 'View web design plans' },
+      { title: 'Digital marketing', subtitle: 'Digital Marketing · Strategy and campaign delivery', body: 'Bizdavar Group runs English-first campaigns for US and EU buyers — billed in USD or EUR. Related: <a href="articles/digital-marketing-us-eu">digital marketing for US and EU</a>.', tags: ['Google Ads', 'SEO', 'CRO', 'Automation'], checks: ['Competitor and audience analysis', 'Google and social media campaigns', 'Conversion rate optimization (CRO)', 'Marketing automation and email', 'Performance reporting and analysis'], cta: 'Request consulting' },
+      { title: 'Web design and development', subtitle: 'Web Design · Corporate, e-commerce and landing pages', body: 'English sites for US and EU from $99 / ~€90, invoiced in USD or EUR. See <a href="articles/website-design-us-eu">US/EU website design</a> and <a href="fast">Fast Web Studio</a>.', tags: ['WordPress', 'WooCommerce', 'Landing', 'SEO'], checks: ['Responsive UI/UX design', 'Corporate or e-commerce implementation', 'Contact form, WhatsApp and social links', 'Speed, security and SSL optimization', 'Website management training'], cta: 'View web design plans' },
       { title: 'SMM management', subtitle: 'Social Media Management · Content, ads and growth', body: 'Content calendar, post design, captions, campaigns and growth reporting for brands that want a professional social media presence.', tags: ['Instagram', 'LinkedIn', 'Content', 'Ads'], checks: ['Content strategy and publishing calendar', 'Post and story design', 'Persian, Turkish and English copywriting', 'Targeted ads and campaigns', 'Monthly reporting and improvement ideas'], cta: 'Start SMM cooperation' }
     ]
   };
@@ -91,16 +91,19 @@
 
   const fastRelatedLinks = {
     fa: [
+      { title: 'طراحی سایت اروپا و آمریکا', url: 'articles/website-design-us-eu', desc: 'از ۹۹ دلار / فاکتور یورو' },
       { title: 'مقاله Fast Studio', url: 'articles/fast-studio', desc: 'راهنمای سفارش' },
       { title: 'خدمات طراحی وب', url: 'services#web-design', desc: 'جزئیات خدمات' },
       { title: 'نمونه‌کارها', url: 'portfolio', desc: 'پروژه‌های بیزدوار' }
     ],
     tr: [
+      { title: 'ABD/AB web tasarım', url: 'articles/website-design-us-eu', desc: '$99’dan / EUR fatura' },
       { title: 'Fast Studio makalesi', url: 'articles/fast-studio', desc: 'Sipariş rehberi' },
       { title: 'Web tasarım hizmetleri', url: 'services#web-design', desc: 'Hizmet detayları' },
       { title: 'Portfolyo', url: 'portfolio', desc: 'Bizdavar projeleri' }
     ],
     en: [
+      { title: 'US & EU website design', url: 'articles/website-design-us-eu', desc: 'From $99 / EUR invoice' },
       { title: 'Fast Studio article', url: 'articles/fast-studio', desc: 'Ordering guide' },
       { title: 'Web design services', url: 'services#web-design', desc: 'Service details' },
       { title: 'Portfolio', url: 'portfolio', desc: 'Bizdavar projects' }
@@ -109,7 +112,7 @@
 
   const fastSchema = {
     fa: {
-      description: 'طراحی سایت حرفه‌ای در ۵ روز — پلن‌های شفاف، واتساپ فارسی و پشتیبانی پس از راه‌اندازی.',
+      description: 'سایت انگلیسی LTR برای آمریکا و اروپا در ۵ روز — فاکتور USD یا EUR، Stripe، Zoom/Meet؛ فارسی/RTL زبان دوم.',
       offers: [
         { name: 'پلن پایه', price: '99' },
         { name: 'پلن فروشگاهی', price: '199' },
@@ -117,7 +120,7 @@
       ]
     },
     tr: {
-      description: '5 günde profesyonel web sitesi — şeffaf planlar, Türkçe WhatsApp danışmanlığı ve yayın sonrası destek.',
+      description: 'ABD ve AB için 5 günde İngilizce LTR site — fatura USD veya EUR, Stripe, Zoom/Meet. Farsça/RTL ikinci dil.',
       offers: [
         { name: 'Temel plan', price: '99' },
         { name: 'Mağaza planı', price: '199' },
@@ -125,7 +128,7 @@
       ]
     },
     en: {
-      description: 'Professional website design in 5 days — transparent plans, WhatsApp consulting and post-launch support.',
+      description: 'English LTR websites for the US and EU in 5 days — billed in USD or EUR, Stripe, Zoom/Meet. Persian/RTL is a second locale.',
       offers: [
         { name: 'Basic plan', price: '99' },
         { name: 'Store plan', price: '199' },
@@ -195,10 +198,10 @@
       statDays: '5 gün', statDaysLabel: 'Standart teslimat',
       statPrice: '$99', statPriceLabel: 'Başlangıç fiyatı',
       statProjects: '100+', statProjectsLabel: 'Bizdavar projesi',
-      viewPlans: 'Planları gör', consultWa: 'WhatsApp danışmanlık',
+      viewPlans: 'Planları gör', consultWa: 'WhatsApp veya Zoom',
       btnDevConsult: 'Özel yazılım ve danışmanlık — iletişime geçin',
       navPlans: 'Planlar', navCompare: 'Karşılaştır', navTimeline: '5 günlük yol', navShowcase: 'Örnek işler', navFaq: 'SSS',
-      oneTime: 'Tek seferlik ödeme', orderWa: 'WhatsApp sipariş', orContact: 'veya iletişim formu',
+      oneTime: 'Tek seferlik ödeme', orderWa: 'Bu planı sipariş et', orContact: 'veya iletişim formu',
       compareFeature: 'Özellikler', compareBasic: 'Temel', compareStore: 'Mağaza', comparePro: 'Pro',
       viewCase: 'Görüntüle', navAria: 'Fast Web Studio bölümleri'
     },
@@ -206,10 +209,10 @@
       statDays: '5 days', statDaysLabel: 'Standard delivery',
       statPrice: '$99', statPriceLabel: 'Starting price',
       statProjects: '100+', statProjectsLabel: 'Bizdavar projects',
-      viewPlans: 'View plans', consultWa: 'Consult on WhatsApp',
+      viewPlans: 'View plans', consultWa: 'WhatsApp or Zoom',
       btnDevConsult: 'Custom development & consulting — contact us',
       navPlans: 'Plans', navCompare: 'Compare', navTimeline: '5-day path', navShowcase: 'Showcase', navFaq: 'FAQ',
-      oneTime: 'One-time payment', orderWa: 'Order on WhatsApp', orContact: 'or contact form',
+      oneTime: 'One-time payment', orderWa: 'Order this plan', orContact: 'or contact form',
       compareFeature: 'Features', compareBasic: 'Basic', compareStore: 'Store', comparePro: 'Pro',
       viewCase: 'View', navAria: 'Fast Web Studio sections'
     }
@@ -223,16 +226,16 @@
       blogPage: {
         hero: {
           tag: 'وبلاگ تخصصی',
-          title: 'مقالات بازاریابی دیجیتال، سئو و تامین صنعتی',
-          desc: 'راهنماهای کاربردی تیم بیزدوار برای رشد فروش آنلاین، طراحی سایت چندزبانه و خرید سنسور VEGA در ایران و ترکیه.',
+          title: 'راهنمای خرید VEGA، Prosense و بازرگانی صنعتی',
+          desc: 'مقالات فارسی برای خریدار ایران: سنسور سطح، دتکتور گاز، ردیاب Teltonika و مسیر استعلام واتساپ — به‌همراه سئو و طراحی سایت.',
           ctaArticles: 'مشاهده مقالات',
           ctaTopics: 'موضوعات',
           ctaConsult: 'مشاوره رایگان'
         },
         intro: {
           title: 'دانش عملی از پروژه‌های واقعی',
-          body: 'وبلاگ بیزدوار خلاصهٔ تجربهٔ <a href="/pages/services">خدمات دیجیتال</a>، <a href="/pages/fast">Fast Studio</a>، <a href="/pages/field-tech">خدمات فنی</a> و <a href="/pages/products#supply">تامین صنعتی</a> (VEGA، Prosense، Liqui Moly) است. هر مقاله به صفحهٔ خدمت، محصول یا <a href="/pages/portfolio">نمونه‌کار</a> لینک می‌شود.',
-          statPosts: '۱۳',
+          body: 'اولویت وبلاگ بیزدوار <a href="/pages/products#supply">بازرگانی صنعتی ایران</a> است: <a href="/pages/vega">VEGA</a>، <a href="/pages/prosense">Prosense</a>، <a href="/pages/teltonika">Teltonika</a> و <a href="/pages/liqui-moly">Liqui Moly</a>. کنار آن <a href="/pages/services">خدمات دیجیتال</a> و <a href="/pages/fast">Fast Studio</a> هم هست. هر مقاله به کاتالوگ یا واتساپ لینک می‌شود.',
+          statPosts: '۱۸',
           statPostsLabel: 'مقاله و راهنما',
           statLangs: '۵',
           statLangsLabel: 'زبان انتشار',
@@ -245,7 +248,7 @@
           desc: 'مقالات را بر اساس نیاز انتخاب کنید — هر موضوع به صفحهٔ خدمت یا محصول مرتبط لینک می‌شود.',
           digital: { label: 'بازاریابی دیجیتال', desc: 'سئو، CRO و مدیریت SMM' },
           web: { label: 'طراحی وب', desc: 'سایت چندزبانه و Fast Studio' },
-          industrial: { label: 'تامین صنعتی', desc: 'VEGA و ابزار دقیق' },
+          industrial: { label: 'بازرگانی صنعتی', desc: 'خرید VEGA، Prosense و Teltonika' },
           products: { label: 'محصولات بیزدوار', desc: 'BizPet، BizTab و BizClean' },
           company: { label: 'درباره شرکت', desc: 'تاریخچه و حوزه‌های فعالیت' }
         },
@@ -267,18 +270,21 @@
         linkHub: {
           eyebrow: 'مسیرهای سریع',
           title: 'از وبلاگ به صفحات کلیدی',
-          desc: 'لینک‌های داخلی برای پیدا کردن خدمت، کاتالوگ یا تماس — بدون جستجو در منو.',
+          desc: 'لینک‌های داخلی برای پیدا کردن کاتالوگ بازرگانی، راهنمای خرید یا تماس — بدون جستجو در منو.',
           items: [
-            { title: 'خدمات دیجیتال', url: '/pages/services', desc: 'سئو، SMM و کمپین' },
-            { title: 'Fast Web Studio', url: '/pages/fast', desc: 'سایت در ۵ روز' },
+            { title: 'خرید VEGAPULS', url: '/pages/articles/buy-vegapuls-iran', desc: 'سنسور سطح ایران' },
             { title: 'کاتالوگ VEGA', url: '/pages/vega', desc: 'سنسور سطح و فشار' },
-            { title: 'Prosense', url: '/pages/prosense', desc: 'دتکتور گاز' },
+            { title: 'خرید Prosense', url: '/pages/articles/buy-prosense-iran', desc: 'دتکتور گاز' },
+            { title: 'Prosense', url: '/pages/prosense', desc: 'PQ و SafeVader' },
+            { title: 'Teltonika', url: '/pages/teltonika', desc: 'FMB920 از ۲۹ دلار' },
+            { title: 'Gamak', url: '/pages/articles/buy-gamak-iran', desc: 'الکتروموتور صنعتی' },
+            { title: 'Digi', url: '/pages/articles/buy-digi-system-iran', desc: 'ترازو و POS' },
+            { title: 'Teraoka', url: '/pages/articles/buy-teraoka-iran', desc: 'ترازو ژاپن' },
             { title: 'Liqui Moly', url: '/pages/liqui-moly', desc: 'روغن و افزودنی' },
-            { title: 'خدمات فنی', url: '/pages/field-tech', desc: 'تبریز' },
-            { title: 'نمونه‌کارها', url: '/pages/portfolio', desc: 'Marvi، FXGuard و…' },
-            { title: 'Marvi Society', url: '/pages/marvi-society', desc: 'اپ iOS' },
-            { title: 'محصولات', url: '/pages/products', desc: 'BizTab و BizPet' },
-            { title: 'تماس', url: '/pages/contact', desc: 'مشاوره رایگان' }
+            { title: 'بازرگانی صنعتی', url: '/pages/articles/industrial-trade-iran', desc: 'همه برندها' },
+            { title: 'خدمات دیجیتال', url: '/pages/services', desc: 'سئو، SMM و کمپین' },
+            { title: 'محصولات', url: '/pages/products#supply', desc: 'کاتالوگ تامین' },
+            { title: 'تماس', url: '/pages/contact', desc: 'استعلام واتساپ' }
           ]
         },
         clusters: {
@@ -303,7 +309,7 @@
           title: 'قبل از خواندن مقاله',
           desc: 'پاسخ کوتاه برای جستجوهای رایج درباره وبلاگ بیزدوار.',
           items: [
-            { q: 'وبلاگ بیزدوار درباره چیست؟', a: 'راهنماهای بازاریابی دیجیتال، سئو، طراحی سایت چندزبانه، Fast Web Studio، تامین سنسور VEGA و معرفی محصولات اختصاصی مثل BizPet و BizTab.' },
+            { q: 'وبلاگ بیزدوار درباره چیست؟', a: 'اولویت با راهنمای خرید VEGA، Prosense، Teltonika و بازرگانی صنعتی ایران است؛ کنار آن سئو، طراحی سایت و محصولات BizPet و BizTab هم هست.' },
             { q: 'مقالات به چند زبان منتشر می‌شوند؟', a: 'صفحه وبلاگ و مقالات اصلی به فارسی، ترکی، انگلیسی، روسی و عربی با hreflang جداگانه ایندکس می‌شوند.' },
             { q: 'چطور مقاله مرتبط با خدمت پیدا کنم؟', a: 'از فیلتر موضوعی بالا استفاده کنید یا از خوشه‌های بازاریابی، طراحی وب و تامین صنعتی به صفحات خدمت بروید.' },
             { q: 'برای استعلام VEGA بعد از مقاله چه کار کنم؟', a: 'مدل یا مشخصات مخزن را در واتساپ یا فرم تماس بفرستید — پیش‌فاکتور و کد سفارش صادر می‌شود.' },
@@ -318,8 +324,8 @@
         },
         geoText: 'مقالات تخصصی برای کسب‌وکارهای ایران و ترکیه — بازاریابی دیجیتال، سئو، طراحی وب چندزبانه و تامین تجهیزات صنعتی VEGA.',
         related: [
-          { title: 'خدمات دیجیتال', desc: 'سئو، SMM و کمپین', titleKey: 'blogPage.related.0.title', descKey: 'blogPage.related.0.desc' },
-          { title: 'Fast Web Studio', desc: 'سایت در ۵ روز از ۹۹ دلار', titleKey: 'blogPage.related.1.title', descKey: 'blogPage.related.1.desc' },
+          { title: 'طراحی سایت US/EU', desc: 'از ۹۹ دلار / فاکتور یورو', titleKey: 'blogPage.related.0.title', descKey: 'blogPage.related.0.desc' },
+          { title: 'Ads آمریکا و اروپا', desc: 'Google، Meta، LinkedIn', titleKey: 'blogPage.related.1.title', descKey: 'blogPage.related.1.desc' },
           { title: 'کاتالوگ VEGA', desc: 'سنسور سطح و فشار', titleKey: 'blogPage.related.2.title', descKey: 'blogPage.related.2.desc' },
           { title: 'تماس و استعلام', desc: 'مشاوره رایگان', titleKey: 'blogPage.related.3.title', descKey: 'blogPage.related.3.desc' }
         ]
@@ -334,7 +340,7 @@
         industries: { eyebrow: 'صنایع جهانی', title: 'کاربرد در صنایع مختلف', desc: 'الکتروموتور Gamak برای هر بخش صنعتی' },
         supply: { eyebrow: 'تامین از بیزدوار', title: 'خدمات تامین Gamak', desc: 'شریک تامین شما — نه فقط فروشنده' },
         faq: { eyebrow: 'سوالات متداول', title: 'پرسش‌های رایج خریداران ایرانی', desc: 'پاسخ سوال خود را پیدا نکردید؟ مستقیم با ما در تماس باشید.' }
-      }, officialNote: 'اطلاعات فنی بر اساس <a href="https://www.gamak.com/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Gamak</a> است. برای استعلام — <a href="contact">با بیزدوار تماس بگیرید</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'آماده استعلام قیمت Gamak هستید؟', desc: 'توان kW، دور rpm و نوع کاربرد را بفرستید — IE2/IE3/IE4 · Ex-proof · MV', btnForm: 'فرم استعلام', btnServices: 'کاتالوگ محصولات' }, sticky: { label: 'استعلام Gamak' }, geoText: 'تامین Gamak به ایران — مشاوره فنی فارسی، پیش‌فاکتور و لجستیک توسط بیزدوار گروپ.', related: [{ title: 'محصولات VEGA', desc: 'سنسور سطح و فشار' }, { title: 'محصولات Prosense', desc: 'دتکتور گاز و شعله' }, { title: 'کاتالوگ محصولات', desc: 'برندهای تامین B2B' }, { title: 'تماس و استعلام', desc: 'مشاوره رایگان' }] },
+      }, officialNote: 'اطلاعات فنی بر اساس <a href="https://www.gamak.com/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Gamak</a> است. برای استعلام — <a href="contact">با بیزدوار تماس بگیرید</a> · <a href="articles/buy-gamak-iran">راهنمای خرید Gamak</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'آماده استعلام قیمت Gamak هستید؟', desc: 'توان kW، دور rpm و نوع کاربرد را بفرستید — IE2/IE3/IE4 · Ex-proof · MV', btnForm: 'فرم استعلام', btnServices: 'کاتالوگ محصولات' }, sticky: { label: 'استعلام Gamak' }, geoText: 'تامین Gamak به ایران — مشاوره فنی فارسی، پیش‌فاکتور و لجستیک توسط بیزدوار گروپ.', related: [{ title: 'خرید Gamak در ایران', desc: 'توان و فلنج' }, { title: 'محصولات VEGA', desc: 'سنسور سطح و فشار' }, { title: 'کاتالوگ محصولات', desc: 'برندهای تامین B2B' }, { title: 'تماس و استعلام', desc: 'مشاوره رایگان' }] },
       digiSystemPage: { sections: {
         trust: { eyebrow: 'چرا از بیزدوار بخرید؟', title: 'تامین مطمئن Digi System برای فروشگاه و واحد خرید شما', desc: 'ترازو، POS و peripheral — از انتخاب مدل تا تحویل در ایران.' },
         buy: { eyebrow: 'مسیر خرید', title: 'از استعلام تا تحویل — ۵ مرحله شفاف', desc: 'بدون پیچیدگی — هر مرحله را می‌دانید و در هر قدم در ارتباط هستید.' },
@@ -344,7 +350,7 @@
         industries: { eyebrow: 'صنایع جهانی', title: 'کاربرد در صنایع مختلف', desc: 'تجهیزات Digi برای انواع فروشگاه و رستوران/هتل (HORECA)' },
         supply: { eyebrow: 'تامین از بیزدوار', title: 'خدمات تامین Digi System', desc: 'شریک تامین شما — نه فقط فروشنده' },
         faq: { eyebrow: 'سوالات متداول', title: 'پرسش‌های رایج خریداران ایرانی', desc: 'پاسخ سوال خود را پیدا نکردید؟ مستقیم با ما در تماس باشید.' }
-      }, officialNote: 'اطلاعات فنی بر اساس <a href="https://www.digisystem.com.tr/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Digi System</a> است. برای استعلام — <a href="contact">با بیزدوار تماس بگیرید</a> · <a href="teraoka">Teraoka</a>', cta: { title: 'آماده استعلام قیمت Digi System هستید؟', desc: 'نوع فروشگاه، تعداد صندوق و نیاز ترازوی قانونی (legal-for-trade) را بفرستید', btnForm: 'فرم استعلام', btnServices: 'کاتالوگ محصولات' }, sticky: { label: 'استعلام Digi System' }, geoText: 'تامین Digi System به ایران — مشاوره فارسی، پیش‌فاکتور و لجستیک توسط بیزدوار گروپ.', related: [{ title: 'Teraoka Seiko', desc: 'ترازو و POS ژاپن' }, { title: 'کاتالوگ محصولات', desc: 'برندهای تامین' }, { title: 'تماس', desc: 'استعلام قیمت' }] },
+      }, officialNote: 'اطلاعات فنی بر اساس <a href="https://www.digisystem.com.tr/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Digi System</a> است. برای استعلام — <a href="contact">با بیزدوار تماس بگیرید</a> · <a href="articles/buy-digi-system-iran">راهنمای خرید Digi</a> · <a href="teraoka">Teraoka</a>', cta: { title: 'آماده استعلام قیمت Digi System هستید؟', desc: 'نوع فروشگاه، تعداد صندوق و نیاز ترازوی قانونی (legal-for-trade) را بفرستید', btnForm: 'فرم استعلام', btnServices: 'کاتالوگ محصولات' }, sticky: { label: 'استعلام Digi System' }, geoText: 'تامین Digi System به ایران — مشاوره فارسی، پیش‌فاکتور و لجستیک توسط بیزدوار گروپ.', related: [{ title: 'خرید Digi در ایران', desc: 'ترازو و POS' }, { title: 'Teraoka Seiko', desc: 'ترازو و POS ژاپن' }, { title: 'تماس', desc: 'استعلام قیمت' }] },
       teraokaPage: { sections: {
         trust: { eyebrow: 'چرا از بیزدوار بخرید؟', title: 'تامین مطمئن Teraoka Seiko برای فروشگاه و انبار شما', desc: 'ترازو، برچسب‌زن و POS ژاپن — مشاوره مدل و لجستیک بین‌المللی.' },
         buy: { eyebrow: 'مسیر خرید', title: 'از استعلام تا تحویل — ۵ مرحله شفاف', desc: 'بدون پیچیدگی — هر مرحله را می‌دانید و در هر قدم در ارتباط هستید.' },
@@ -354,8 +360,8 @@
         industries: { eyebrow: 'صنایع جهانی', title: 'کاربرد در صنایع مختلف', desc: 'تجهیزات Teraoka برای خرده‌فروشی، HORECA و لجستیک' },
         supply: { eyebrow: 'تامین از بیزدوار', title: 'خدمات تامین Teraoka Seiko', desc: 'شریک تامین شما — نه فقط فروشنده' },
         faq: { eyebrow: 'سوالات متداول', title: 'پرسش‌های رایج خریداران ایرانی', desc: 'پاسخ سوال خود را پیدا نکردید؟ مستقیم با ما در تماس باشید.' }
-      }, officialNote: 'اطلاعات فنی بر اساس <a href="https://www.teraoka.co.jp/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Teraoka Seiko</a> است. برای استعلام — <a href="contact">با بیزدوار تماس بگیرید</a> · <a href="digi-system">Digi System</a>', cta: { title: 'آماده استعلام قیمت Teraoka هستید؟', desc: 'نوع ترازو، ظرفیت و تعداد صندوق را بفرستید — delicatessen · POS · برچسب‌زن', btnForm: 'فرم استعلام', btnServices: 'کاتالوگ محصولات' }, sticky: { label: 'استعلام Teraoka' }, geoText: 'تامین Teraoka Seiko به ایران — مشاوره فارسی، پیش‌فاکتور و لجستیک بین‌المللی توسط بیزدوار گروپ.', related: [{ title: 'Digi System', desc: 'ترازو و POS ترکیه' }, { title: 'کاتالوگ محصولات', desc: 'برندهای تامین' }, { title: 'تماس', desc: 'استعلام قیمت' }] },
-      fastPage: { sections: { for: { eyebrow: 'مخاطب', title: 'Fast برای چه کسب‌وکاری مناسب است؟', desc: 'از استارتاپ تک‌صفحه‌ای تا فروشگاه و برند چندزبانه — پلن را با نیازتان جور کنید.' }, plans: { eyebrow: 'پلن‌های قیمت', title: 'پلن مناسب کسب‌وکار خود را انتخاب کنید', desc: 'قیمت ثابت، بدون هزینه پنهان — سفارش از واتساپ یا <a href="contact">فرم تماس</a>.' }, compare: { eyebrow: 'مقایسه پلن‌ها', title: 'چه چیزی در هر پلن می‌گیرید؟', desc: 'برای انتخاب بین پلن‌ها — این جدول را ببینید یا در واتساپ بپرسید.' }, timeline: { eyebrow: 'مسیر اجرا', title: '۵ روز تا آنلاین شدن — مرحله به مرحله', desc: 'هر روز هدف مشخص دارد و در واتساپ گزارش پیشرفت می‌دهیم.' }, why: { eyebrow: 'چرا Fast؟', title: 'چرا Fast Web Studio؟', desc: 'محصولی از <a href="about">بیزدوار گروپ</a> — نه آژانس عمومی با وعده‌های مبهم.' }, showcase: { eyebrow: 'نمونه‌کارها', title: 'سایت‌هایی که با بیزدوار ساخته شده‌اند', desc: 'نمونه پروژه‌های طراحی وب — <a href="portfolio">مشاهده همه نمونه‌کارها</a>' }, faq: { eyebrow: 'سوالات متداول', title: 'پرسش‌های رایج قبل از سفارش', desc: '' } }, cta: { title: 'آماده راه‌اندازی سایت هستید؟', desc: 'مشاوره رایگان در واتساپ — پلن مناسب را در ۲ دقیقه پیشنهاد می‌دهیم.', btnWa: 'شروع در واتساپ', btnForm: 'فرم تماس', btnCustom: 'پروژه اختصاصی', btnDevConsult: 'برنامه‌نویسی تخصصی و مشاوره — تماس بگیرید' }, devCta: { title: 'نیاز به برنامه‌نویسی تخصصی دارید؟', desc: 'فراتر از پلن‌های Fast — پروژه سفارشی، CRM، فروشگاه پیشرفته و مشاوره فنی.', btn: 'برنامه‌نویسی تخصصی و مشاوره — تماس بگیرید' }, sticky: { label: 'سفارش Fast — از $99' }, geoText: 'طراحی سایت برای کسب‌وکارهای ایران، ترکیه و بازارهای بین‌المللی — تحویل ۵ روزه، واتساپ فارسی و پشتیبانی پس از راه‌اندازی.' },
+      }, officialNote: 'اطلاعات فنی بر اساس <a href="https://www.teraoka.co.jp/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Teraoka Seiko</a> است. برای استعلام — <a href="contact">با بیزدوار تماس بگیرید</a> · <a href="articles/buy-teraoka-iran">راهنمای خرید Teraoka</a> · <a href="digi-system">Digi System</a>', cta: { title: 'آماده استعلام قیمت Teraoka هستید؟', desc: 'نوع ترازو، ظرفیت و تعداد صندوق را بفرستید — delicatessen · POS · برچسب‌زن', btnForm: 'فرم استعلام', btnServices: 'کاتالوگ محصولات' }, sticky: { label: 'استعلام Teraoka' }, geoText: 'تامین Teraoka Seiko به ایران — مشاوره فارسی، پیش‌فاکتور و لجستیک بین‌المللی توسط بیزدوار گروپ.', related: [{ title: 'خرید Teraoka در ایران', desc: 'deli و POS' }, { title: 'Digi System', desc: 'ترازو و POS ترکیه' }, { title: 'تماس', desc: 'استعلام قیمت' }] },
+      fastPage: { sections: { for: { eyebrow: 'مخاطب', title: 'Fast برای چه کسب‌وکاری مناسب است؟', desc: 'استارتاپ و SMB آمریکا و اروپا با سایت انگلیسی LTR — یا فروشگاه Stripe؛ فارسی/RTL زبان دوم است.' }, plans: { eyebrow: 'پلن‌های قیمت', title: 'پلن مناسب کسب‌وکار خود را انتخاب کنید', desc: 'قیمت ثابت دلار یا یورو، بدون هزینه پنهان — سفارش از <a href="contact">فرم تماس</a>، Zoom/Meet یا واتساپ.' }, compare: { eyebrow: 'مقایسه پلن‌ها', title: 'چه چیزی در هر پلن می‌گیرید؟', desc: 'برای انتخاب بین پلن‌ها — این جدول را ببینید یا در Zoom/Meet و واتساپ بپرسید.' }, timeline: { eyebrow: 'مسیر اجرا', title: '۵ روز تا آنلاین شدن — مرحله به مرحله', desc: 'هر روز هدف مشخص دارد — گزارش در Zoom، Meet یا واتساپ.' }, why: { eyebrow: 'چرا Fast؟', title: 'چرا Fast Web Studio؟', desc: 'محصولی از <a href="about">بیزدوار گروپ</a> — نه آژانس عمومی با وعده‌های مبهم.' }, showcase: { eyebrow: 'نمونه‌کارها', title: 'سایت‌هایی که با بیزدوار ساخته شده‌اند', desc: 'نمونه پروژه‌های طراحی وب — <a href="portfolio">مشاهده همه نمونه‌کارها</a>' }, faq: { eyebrow: 'سوالات متداول', title: 'پرسش‌های رایج قبل از سفارش', desc: '' } }, cta: { title: 'آماده راه‌اندازی سایت هستید؟', desc: 'فرم پیشنهاد، Zoom/Meet یا واتساپ — فاکتور USD یا EUR از ۹۹ دلار / حدود ۹۰ یورو.', btnWa: 'شروع در واتساپ', btnForm: 'فرم تماس', btnCustom: 'پروژه اختصاصی', btnDevConsult: 'برنامه‌نویسی تخصصی و مشاوره — تماس بگیرید' }, devCta: { title: 'نیاز به برنامه‌نویسی تخصصی دارید؟', desc: 'فراتر از پلن‌های Fast — پروژه سفارشی، CRM، فروشگاه پیشرفته و مشاوره فنی.', btn: 'برنامه‌نویسی تخصصی و مشاوره — تماس بگیرید' }, sticky: { label: 'سفارش Fast — از $99' }, geoText: 'سایت انگلیسی LTR برای آمریکا و اروپا — تحویل ۵روزه، Stripe، Zoom/Meet و فاکتور USD یا EUR. فارسی/RTL زبان دوم.' },
       vegaPage: { sections: {
         trust: { eyebrow: 'چرا از بیزدوار بخرید؟', title: 'تامین مطمئن VEGA برای واحد فنی و خرید شما', desc: 'ما فقط کاتالوگ نشان نمی‌دهیم — همراه شما از انتخاب مدل تا تحویل در ایران هستیم.' },
         buy: { eyebrow: 'مسیر خرید', title: 'از استعلام تا تحویل — ۵ مرحله شفاف', desc: 'بدون پیچیدگی — هر مرحله را می‌دانید و در هر قدم در ارتباط هستید.' },
@@ -367,7 +373,7 @@
         industries: { eyebrow: 'صنایع جهانی', title: 'راهکار VEGA برای صنایع مختلف', desc: '۱۵+ صنعت — از شیمیایی تا انرژی و محیط‌زیست' },
         supply: { eyebrow: 'تامین از بیزدوار', title: 'خدمات تامین VEGA توسط بیزدوار گروپ', desc: 'شریک تامین شما — نه فقط فروشنده' },
         faq: { eyebrow: 'سوالات متداول', title: 'پرسش‌های رایج خریداران ایرانی', desc: 'پاسخ سوال خود را پیدا نکردید؟ مستقیم با ما در تماس باشید.' }
-      }, officialNote: 'اطلاعات فنی محصولات بر اساس <a href="https://www.vega.com/en-ae" target="_blank" rel="noopener noreferrer">وبسایت رسمی VEGA</a> است. برای استعلام قیمت، کد سفارش و تامین — <a href="contact">با بیزدوار تماس بگیرید</a>.', cta: { title: 'آماده استعلام قیمت VEGA هستید؟', desc: 'نام محصول یا شرایط فرآیند را بفرستید — مشاوره فنی رایگان و پیش‌فاکتور شفاف', btnForm: 'فرم استعلام', btnServices: 'کاتالوگ محصولات' }, sticky: { label: 'استعلام VEGA', hint: 'مشاوره فنی فارسی · پاسخ سریع' }, geoText: 'تامین اصل سنسور VEGA به ایران — مشاوره فنی فارسی، پیش‌فاکتور شفاف و لجستیک تا پروژه‌های صنعتی ایران.', related: [{ title: 'محصولات Prosense', desc: 'دتکتور گاز و شعله' }, { title: 'کاتالوگ محصولات', desc: 'برندهای تامین' }, { title: 'تماس و استعلام', desc: 'مشاوره رایگان' }] },
+      }, officialNote: 'اطلاعات فنی محصولات بر اساس <a href="https://www.vega.com/en-ae" target="_blank" rel="noopener noreferrer">وبسایت رسمی VEGA</a> است. برای استعلام قیمت، کد سفارش و تامین — <a href="contact">با بیزدوار تماس بگیرید</a> · <a href="articles/buy-vegapuls-iran">راهنمای خرید VEGAPULS</a> · <a href="articles/vega-quote-iran">چک‌لیست استعلام</a>.', cta: { title: 'آماده استعلام قیمت VEGA هستید؟', desc: 'نام محصول یا شرایط فرآیند را بفرستید — مشاوره فنی رایگان و پیش‌فاکتور شفاف', btnForm: 'فرم استعلام', btnServices: 'کاتالوگ محصولات' }, sticky: { label: 'استعلام VEGA', hint: 'مشاوره فنی فارسی · پاسخ سریع' }, geoText: 'تامین اصل سنسور VEGA به ایران — مشاوره فنی فارسی، پیش‌فاکتور شفاف و لجستیک تا پروژه‌های صنعتی ایران.', related: [{ title: 'راهنمای خرید VEGAPULS', desc: 'قیمت و کد سفارش' }, { title: 'محصولات Prosense', desc: 'دتکتور گاز و شعله' }, { title: 'کاتالوگ محصولات', desc: 'برندهای تامین' }, { title: 'تماس و استعلام', desc: 'مشاوره رایگان' }] },
       prosensePage: { sections: {
         trust: { eyebrow: 'چرا از بیزدوار بخرید؟', title: 'تامین مطمئن Prosense برای واحد فنی و خرید شما', desc: 'ما فقط کاتالوگ نشان نمی‌دهیم — همراه شما از انتخاب گاز و مدل تا تحویل هستیم.' },
         buy: { eyebrow: 'مسیر خرید', title: 'از استعلام تا تحویل — ۵ مرحله شفاف', desc: 'بدون پیچیدگی — هر مرحله را می‌دانید و در هر قدم در ارتباط هستید.' },
@@ -378,7 +384,7 @@
         industries: { eyebrow: 'صنایع جهانی', title: 'کاربرد در صنایع مختلف', desc: 'راهکار تشخیص گاز سفارشی برای هر بخش صنعتی' },
         supply: { eyebrow: 'تامین از بیزدوار', title: 'خدمات تامین Prosense', desc: 'شریک تامین شما — نه فقط فروشنده' },
         faq: { eyebrow: 'سوالات متداول', title: 'پرسش‌های رایج خریداران', desc: 'پاسخ سوال خود را پیدا نکردید؟ در واتساپ فارسی پیام بدهید.' }
-      }, officialNote: 'اطلاعات فنی محصولات بر اساس <a href="https://www.prosense.com.tr/?lang=en" target="_blank" rel="noopener noreferrer">وبسایت رسمی Prosense</a> است. برای استعلام قیمت و تامین — <a href="contact">با بیزدوار تماس بگیرید</a> · <a href="vega">محصولات VEGA</a>', cta: { title: 'آماده استعلام قیمت Prosense هستید؟', desc: 'نوع گاز یا سری مدل را بفرستید — PQ · SafeVader · SOMA · PPS+ · پنل S-DPX', btnForm: 'فرم استعلام', btnServices: 'کاتالوگ محصولات' }, sticky: { label: 'استعلام Prosense', hint: 'مشاوره فنی فارسی · پاسخ سریع' }, geoText: 'تامین اصل دتکتور Prosense — گواهی SIL/M1/EN، مشاوره فارسی در واتساپ و لجستیک برای پروژه‌های نفت، گاز و صنعت.', related: [{ title: 'محصولات VEGA', desc: 'سنسور سطح و فشار' }, { title: 'Teltonika GPS', desc: 'Fleet Telematics' }, { title: 'کاتالوگ محصولات', desc: 'برندهای تامین' }, { title: 'تماس', desc: 'استعلام قیمت' }] },
+      }, officialNote: 'اطلاعات فنی محصولات بر اساس <a href="https://www.prosense.com.tr/?lang=en" target="_blank" rel="noopener noreferrer">وبسایت رسمی Prosense</a> است. برای استعلام قیمت و تامین — <a href="contact">با بیزدوار تماس بگیرید</a> · <a href="articles/buy-prosense-iran">راهنمای خرید Prosense</a> · <a href="vega">محصولات VEGA</a>', cta: { title: 'آماده استعلام قیمت Prosense هستید؟', desc: 'نوع گاز یا سری مدل را بفرستید — PQ · SafeVader · SOMA · PPS+ · پنل S-DPX', btnForm: 'فرم استعلام', btnServices: 'کاتالوگ محصولات' }, sticky: { label: 'استعلام Prosense', hint: 'مشاوره فنی فارسی · پاسخ سریع' }, geoText: 'تامین اصل دتکتور Prosense — گواهی SIL/M1/EN، مشاوره فارسی در واتساپ و لجستیک برای پروژه‌های نفت، گاز و صنعت.', related: [{ title: 'خرید Prosense در ایران', desc: 'PQ و SafeVader' }, { title: 'محصولات VEGA', desc: 'سنسور سطح و فشار' }, { title: 'کاتالوگ محصولات', desc: 'برندهای تامین' }, { title: 'تماس', desc: 'استعلام قیمت' }] },
       teltonikaPage: { sections: {
         trust: { eyebrow: 'چرا از بیزدوار بخرید؟', title: 'تامین مطمئن Teltonika برای واحد فنی و خرید شما', desc: 'ما فقط کاتالوگ نشان نمی‌دهیم — همراه شما از انتخاب مدل ردیاب تا تحویل در ایران هستیم.' },
         buy: { eyebrow: 'مسیر خرید', title: 'از استعلام تا تحویل — ۵ مرحله شفاف', desc: 'بدون پیچیدگی — هر مرحله را می‌دانید و در هر قدم در ارتباط هستید.' },
@@ -388,7 +394,7 @@
         industries: { eyebrow: 'صنایع جهانی', title: 'کاربرد در صنایع مختلف', desc: 'راهکار Fleet Telematics برای هر بخش صنعتی' },
         supply: { eyebrow: 'تامین از بیزدوار', title: 'خدمات تامین Teltonika', desc: 'شریک تامین شما — نه فقط فروشنده' },
         faq: { eyebrow: 'سوالات متداول', title: 'پرسش‌های رایج خریداران ایرانی', desc: 'پاسخ سوال خود را پیدا نکردید؟ مستقیم با ما در تماس باشید.' }
-      }, officialNote: 'اطلاعات فنی محصولات بر اساس <a href="https://www.teltonika-gps.com/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Teltonika Telematics</a> است. برای استعلام — <a href="contact">با بیزدوار تماس بگیرید</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'آماده استعلام قیمت Teltonika هستید؟', desc: 'مدل ردیاب یا نوع ناوگان را بفرستید — FMB920 · FMC650 · FTC305 · DualCam', btnForm: 'فرم استعلام', btnServices: 'کاتالوگ محصولات' }, sticky: { label: 'استعلام Teltonika' }, geoText: 'تامین اصل ردیاب Teltonika به ایران — Fleet Telematics، مشاوره فارسی و تحویل برای ناوگان و IoT.', related: [{ title: 'محصولات VEGA', desc: 'سنسور سطح و فشار' }, { title: 'محصولات Prosense', desc: 'دتکتور گاز و شعله' }, { title: 'کاتالوگ محصولات', desc: 'برندهای تامین' }, { title: 'تماس', desc: 'استعلام قیمت' }] },
+      }, officialNote: 'اطلاعات فنی محصولات بر اساس <a href="https://www.teltonika-gps.com/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Teltonika Telematics</a> است. برای استعلام — <a href="contact">با بیزدوار تماس بگیرید</a> · <a href="articles/buy-teltonika-iran">راهنمای خرید FMB920</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'آماده استعلام قیمت Teltonika هستید؟', desc: 'مدل ردیاب یا نوع ناوگان را بفرستید — FMB920 · FMC650 · FTC305 · DualCam', btnForm: 'فرم استعلام', btnServices: 'کاتالوگ محصولات' }, sticky: { label: 'استعلام Teltonika' }, geoText: 'تامین اصل ردیاب Teltonika به ایران — Fleet Telematics، مشاوره فارسی و تحویل برای ناوگان و IoT.', related: [{ title: 'خرید FMB920 در ایران', desc: 'ردیاب از ۲۹ دلار' }, { title: 'محصولات VEGA', desc: 'سنسور سطح و فشار' }, { title: 'کاتالوگ محصولات', desc: 'برندهای تامین' }, { title: 'تماس', desc: 'استعلام قیمت' }] },
       liquiMolyPage: { sections: {
         trust: { eyebrow: 'چرا از بیزدوار بخرید؟', title: 'تامین مطمئن Liqui Moly با قیمت دلاری شفاف', desc: 'از انتخاب روغن و افزودنی تا پیش‌فاکتور و تحویل — یک تیم فارسی‌زبان همراه شماست.' },
         buy: { eyebrow: 'مسیر خرید', title: 'از انتخاب محصول تا تحویل — ۵ مرحله', desc: 'قیمت نمایشی دلاری است؛ مبلغ نهایی در پیش‌فاکتور تایید می‌شود.' },
@@ -398,7 +404,7 @@
         iran: { eyebrow: 'کاربرد', title: 'Liqui Moly برای چه کسانی؟', desc: 'از تعمیرگاه و ناوگان تا موتورسیکلت و مصرف شخصی — برای هر کاربرد، مسیر استعلام فارسی و تامین اصل آماده است.', note: 'کاربردتان در لیست نیست؟ مدل خودرو، نوع سوخت و تعداد را بفرستید تا پیشنهاد دقیق بگیریم.' },
         supply: { eyebrow: 'تامین از بیزدوار', title: 'خدمات تامین Liqui Moly', desc: 'شریک تامین شما — نه فقط لیست قیمت' },
         faq: { eyebrow: 'سوالات متداول', title: 'پرسش‌های رایج خریداران', desc: 'پاسخ را پیدا نکردید؟ در واتساپ فارسی پیام بدهید.' }
-      }, rateNote: { strong: '', body: '' }, officialNote: 'اطلاعات فنی بر اساس <a href="https://www.liqui-moly.com/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Liqui Moly</a> است. برای سفارش — <a href="contact">تماس با بیزدوار</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'آماده سفارش Liqui Moly هستید؟', desc: 'نام محصول یا کد SKU را بفرستید — Octane Plus · Top Tec · Molygen · افزودنی دیزل', btnForm: 'فرم استعلام', btnServices: 'کاتالوگ محصولات' }, sticky: { label: 'استعلام Liqui Moly', hint: 'قیمت دلاری · مشاوره فارسی' }, geoText: 'تامین اصل Liqui Moly — قیمت دلاری شفاف، مشاوره فارسی و لجستیک برای روغن، افزودنی و مراقبت خودرو.', related: [{ title: 'محصولات VEGA', desc: 'سنسور سطح و فشار صنعتی' }, { title: 'محصولات Prosense', desc: 'دتکتور گاز و شعله' }, { title: 'کاتالوگ محصولات', desc: 'برندهای تامین B2B' }, { title: 'تماس و استعلام', desc: 'استعلام قیمت Liqui Moly' }] }
+      }, rateNote: { strong: '', body: '' }, officialNote: 'اطلاعات فنی بر اساس <a href="https://www.liqui-moly.com/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Liqui Moly</a> است. برای سفارش — <a href="contact">تماس با بیزدوار</a> · <a href="articles/liqui-moly-supply-iran">راهنمای تامین Liqui Moly</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'آماده سفارش Liqui Moly هستید؟', desc: 'نام محصول یا کد SKU را بفرستید — Octane Plus · Top Tec · Molygen · افزودنی دیزل', btnForm: 'فرم استعلام', btnServices: 'کاتالوگ محصولات' }, sticky: { label: 'استعلام Liqui Moly', hint: 'قیمت دلاری · مشاوره فارسی' }, geoText: 'تامین اصل Liqui Moly — قیمت دلاری شفاف، مشاوره فارسی و لجستیک برای روغن، افزودنی و مراقبت خودرو.', related: [{ title: 'تامین Liqui Moly در ایران', desc: 'روغن و افزودنی اصل' }, { title: 'محصولات VEGA', desc: 'سنسور سطح و فشار صنعتی' }, { title: 'کاتالوگ محصولات', desc: 'برندهای تامین B2B' }, { title: 'تماس و استعلام', desc: 'استعلام قیمت Liqui Moly' }] }
     },
     tr: {
       aboutPage: { hero: { tag: 'Bizdavar Hakkında', title: 'Bizdavar üç ayrı iş yapar', desc: 'Dijital hizmetler, kendi ürünlerimiz veya endüstriyel tedarik — 2013’ten beri.' }, whatIs: { title: 'Bizdavar Group nedir?', p1: 'Bizdavar Group <strong>2013</strong>’ten beri çalışır — kurucu: <strong>Ersan Jahed Tabrizi</strong>. Üç ayrı iş: <a href="/pages/services">dijital hizmetler</a>, <a href="/pages/products">kendi ürünlerimiz</a> (BizPet, FXGuard), ve <a href="/pages/products#supply">endüstriyel tedarik</a> (VEGA, Prosense, Liqui Moly).', p2: '11 ülkede 100+ proje. Şirket kaydı Erivan; İran tüzel kişiliği Tebriz. İşler <a href="/pages/portfolio">portfolyoda</a>.' }, features: ['Hizmetler', 'Ürünler', 'Tedarik'], stats: [{ value: '13+', label: 'Yıl deneyim' }, { value: '100+', label: 'Proje' }, { value: '11', label: 'Ülke' }, { value: '3', label: 'İş yolu' }], navAria: 'Sayfa bölümleri', nav: [{ href: '#profile', label: 'Kimlik' }, { href: '#activities', label: 'Uzmanlık' }, { href: '#ecosystem', label: 'Ekosistem' }, { href: '#presence', label: 'Küresel varlık' }, { href: '#highlights', label: 'Başarılar' }, { href: '#sources', label: 'Kaynaklar' }, { href: '#trust', label: 'Güven' }, { href: '#faq', label: 'SSS' }], sections: { identityEyebrow: 'Kurumsal kimlik', identityTitle: 'Bizdavar Group’a kısa bakış', leadershipEyebrow: 'Liderlik', leadershipTitle: 'Kurucu ve ekip', activitiesEyebrow: 'Üç iş yolu', activitiesTitle: 'Hangi işimizle geldiniz?', ecosystemEyebrow: 'Ekosistem', ecosystemTitle: 'İlgili marka ve projeler', ecosystemDesc: 'Bizdavar’ın geliştirdiği veya yönettiği dijital ve endüstriyel ekosistemden örnekler', presenceEyebrow: 'Küresel varlık', presenceTitle: 'Aktif ülkeler', presenceDesc: 'Tebriz ve Erivan’dan Avrupa ve Amerika’ya uzanan proje ağı', exhibitionsEyebrow: 'Fuar ve etkinlik', exhibitionsTitle: 'Teknoloji fuarlarındaki varlık', exhibitionsDesc: 'RINOTEX Tabriz’ten üniversite fuarlarına — inovasyon ve ticarileştirme etkinlikleri', achievementsEyebrow: 'Başarılar', achievementsTitle: 'Bizdavar ürün ve inovasyonları', achievementsDesc: 'Dijital hizmetler ve endüstriyel tedarikin yanı sıra Bizdavar ekibi özel ürünler de tasarladı', sourcesEyebrow: 'Doğrulanmış kaynaklar', sourcesTitle: 'Medya, fuarlar ve doğrulanabilir referanslar', sourcesDesc: 'Ürünler, fuarlar ve Bizdavar geçmişi hakkında yayımlanan resmi bağlantılar — site içi iddialardan bağımsız.', credentialsEyebrow: 'Sertifikalar', credentialsTitle: 'Doğrulanmış yetkinlikler', proofEyebrow: 'Profesyonel güven', proofTitle: 'Güven göstergeleri', proofDesc: 'Doğrulanabilir kamu kaynaklarına dayalıdır — sahte yorum yoktur', faqEyebrow: 'SSS', faqTitle: 'Bizdavar hakkında sık sorulanlar' }, relatedLinks: [{ title: 'Hizmetlerimiz', url: 'services', desc: 'Dijital pazarlama, web, SMM ve endüstri' }, { title: 'Portfolyo', url: 'portfolio', desc: 'ZedPay, BZ Diamond ve daha fazlası' }, { title: 'İletişim', url: 'contact', desc: 'Ücretsiz danışmanlık' }], values: { title: 'Değerlerimiz', items: [{ title: 'Sonuç odaklılık', desc: 'Sadece uygulama değil, satış, dönüşüm ve marka büyümesi.' }, { title: 'Şeffaf iş birliği', desc: 'Düzenli raporlama ve ekiple doğrudan iletişim.' }, { title: 'Küresel pazar', desc: 'İran, Türkiye ve uluslararası pazarlarda projeler.' }, { title: 'Hızlı uygulama', desc: 'Fast Web Studio — 5 günde web sitesi teslimi.' }] }, cta: { title: 'Bizdavar ile çalışmaya hazır mısınız?', desc: 'İlk danışmanlık ücretsiz — <a href="/pages/contact" class="link-yellow">iletişim formu</a> veya WhatsApp üzerinden.', btn: 'Bize ulaşın' } },
@@ -407,8 +413,8 @@
       blogPage: {
         hero: {
           tag: 'Uzman blog',
-          title: 'Dijital pazarlama, SEO ve endüstriyel tedarik yazıları',
-          desc: 'Bizdavar ekibinden pratik rehberler: online satış, çok dilli web ve İran/Türkiye için VEGA sensör tedariki.',
+          title: 'ABD/AB web tasarım, reklam ve endüstriyel rehberler',
+          desc: 'İngilizce siteler USD veya EUR fatura, Google/Meta/LinkedIn kampanyaları — artı İran için orijinal VEGA tedariki.',
           ctaArticles: 'Yazıları gör',
           ctaTopics: 'Konular',
           ctaConsult: 'Ücretsiz danışmanlık'
@@ -453,16 +459,18 @@
           title: 'Blogdan ana sayfalara',
           desc: 'Hizmet, katalog veya iletişim — menüde aramadan.',
           items: [
-            { title: 'Dijital hizmetler', url: '/pages/services', desc: 'SEO, SMM ve kampanya' },
-            { title: 'Fast Web Studio', url: '/pages/fast', desc: '5 günde site' },
+            { title: 'ABD/AB web tasarım', url: '/pages/articles/website-design-us-eu', desc: '$99’dan / EUR fatura' },
+            { title: 'ABD/AB reklam', url: '/pages/articles/digital-marketing-us-eu', desc: 'Google, Meta, LinkedIn' },
+            { title: 'Fast Studio', url: '/pages/fast', desc: '5 günde İngilizce site' },
+            { title: 'Hizmetler', url: '/pages/services', desc: 'Web, Ads ve uygulama' },
+            { title: 'İletişim / teklif', url: '/pages/contact?service=web-design', desc: 'USD veya EUR fatura' },
+            { title: 'VEGAPULS satın al', url: '/pages/articles/buy-vegapuls-iran', desc: 'İran seviye sensörü' },
             { title: 'VEGA kataloğu', url: '/pages/vega', desc: 'Seviye sensörü' },
-            { title: 'Prosense', url: '/pages/prosense', desc: 'Gaz dedektörü' },
-            { title: 'Liqui Moly', url: '/pages/liqui-moly', desc: 'Yağ ve katkı' },
-            { title: 'Saha hizmetleri', url: '/pages/field-tech', desc: 'Tebriz' },
-            { title: 'Portföy', url: '/pages/portfolio', desc: 'Marvi, FXGuard…' },
-            { title: 'Marvi Society', url: '/pages/marvi-society', desc: 'iOS uygulama' },
-            { title: 'Ürünler', url: '/pages/products', desc: 'BizTab ve BizPet' },
-            { title: 'İletişim', url: '/pages/contact', desc: 'Ücretsiz danışmanlık' }
+            { title: 'Prosense satın al', url: '/pages/articles/buy-prosense-iran', desc: 'Gaz dedektörü' },
+            { title: 'Teltonika', url: '/pages/teltonika', desc: 'FMB920 — 29$’dan' },
+            { title: 'Digi', url: '/pages/articles/buy-digi-system-iran', desc: 'Terazi ve POS' },
+            { title: 'Endüstriyel ticaret', url: '/pages/articles/industrial-trade-iran', desc: 'Tüm markalar' },
+            { title: 'Ürünler', url: '/pages/products#supply', desc: 'Tedarik kataloğu' }
           ]
         },
         clusters: {
@@ -470,9 +478,9 @@
           title: 'Yazıdan hizmete veya teklife',
           desc: 'Rehber yetmezse aynı konuyu Bizdavar ekibiyle projeye çevirin.',
           digitalTitle: 'Pazarlama ve SEO',
-          digitalDesc: 'Kampanya, SEO ve SMM — İran ve Türkiye.',
+          digitalDesc: 'Kampanya, SEO ve SMM — ABD/AB bütçesi USD veya EUR.',
           webTitle: 'Web tasarım',
-          webDesc: 'Kurumsal ve mağaza sitesi 5 günde — RTL ve temel SEO.',
+          webDesc: 'İngilizce LTR site 5 günde — $99 / ~€90’dan, Stripe ve Zoom/Meet.',
           industrialTitle: 'VEGA satın al',
           industrialDesc: 'Sipariş kodu, proforma ve sahaya lojistik.',
           prosenseTitle: 'Prosense dedektör',
@@ -502,8 +510,8 @@
         },
         geoText: 'İran ve Türkiye işletmeleri için yazılar — dijital pazarlama, SEO, çok dilli web ve VEGA endüstriyel tedariki.',
         related: [
-          { title: 'Dijital hizmetler', desc: 'SEO, SMM ve kampanya', titleKey: 'blogPage.related.0.title', descKey: 'blogPage.related.0.desc' },
-          { title: 'Fast Web Studio', desc: '5 günde site, $99’dan', titleKey: 'blogPage.related.1.title', descKey: 'blogPage.related.1.desc' },
+          { title: 'ABD/AB web tasarım', desc: '$99’dan / EUR fatura', titleKey: 'blogPage.related.0.title', descKey: 'blogPage.related.0.desc' },
+          { title: 'ABD/AB reklam', desc: 'Google, Meta, LinkedIn', titleKey: 'blogPage.related.1.title', descKey: 'blogPage.related.1.desc' },
           { title: 'VEGA kataloğu', desc: 'Seviye ve basınç sensörü', titleKey: 'blogPage.related.2.title', descKey: 'blogPage.related.2.desc' },
           { title: 'İletişim', desc: 'Ücretsiz danışmanlık', titleKey: 'blogPage.related.3.title', descKey: 'blogPage.related.3.desc' }
         ]
@@ -518,7 +526,7 @@
         industries: { eyebrow: 'Küresel endüstriler', title: 'Farklı endüstrilerde uygulama', desc: 'Gamak motorları her endüstriyel bölüm için' },
         supply: { eyebrow: 'Bizdavar tedariki', title: 'Gamak tedarik hizmetleri', desc: 'Tedarik ortağınız — sadece satıcı değil' },
         faq: { eyebrow: 'SSS', title: 'Alıcıların sık sorduğu sorular', desc: 'Cevabı bulamadınız mı? Doğrudan bizimle iletişime geçin.' }
-      }, officialNote: 'Teknik bilgiler <a href="https://www.gamak.com/" target="_blank" rel="noopener noreferrer">resmi Gamak web sitesine</a> dayanır. Teklif için — <a href="contact">Bizdavar</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'Gamak fiyat teklifine hazır mısınız?', desc: 'kW, rpm ve uygulama tipini gönderin — IE2/IE3/IE4 · Ex-proof · MV', btnForm: 'Teklif formu', btnServices: 'Ürün kataloğu' }, sticky: { label: 'Gamak teklifi' }, geoText: 'Orijinal Gamak motor tedariki — Türkçe teknik danışmanlık, proforma ve uluslararası lojistik.', related: [{ title: 'VEGA ürünleri', desc: 'Seviye ve basınç sensörleri' }, { title: 'Prosense ürünleri', desc: 'Gaz ve alev dedektörü' }, { title: 'Ürün kataloğu', desc: 'Tedarik markaları' }, { title: 'İletişim', desc: 'Ücretsiz danışmanlık' }] },
+      }, officialNote: 'Teknik bilgiler <a href="https://www.gamak.com/" target="_blank" rel="noopener noreferrer">resmi Gamak web sitesine</a> dayanır. Teklif için — <a href="contact">Bizdavar</a> · <a href="articles/buy-gamak-iran">Gamak satın alma rehberi</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'Gamak fiyat teklifine hazır mısınız?', desc: 'kW, rpm ve uygulama tipini gönderin — IE2/IE3/IE4 · Ex-proof · MV', btnForm: 'Teklif formu', btnServices: 'Ürün kataloğu' }, sticky: { label: 'Gamak teklifi' }, geoText: 'Orijinal Gamak motor tedariki — Türkçe teknik danışmanlık, proforma ve uluslararası lojistik.', related: [{ title: 'İran’da Gamak satın al', desc: 'kW ve flanş' }, { title: 'VEGA ürünleri', desc: 'Seviye ve basınç sensörleri' }, { title: 'Ürün kataloğu', desc: 'Tedarik markaları' }, { title: 'İletişim', desc: 'Ücretsiz danışmanlık' }] },
       digiSystemPage: { sections: {
         trust: { eyebrow: 'Neden Bizdavar’dan alın?', title: 'Mağaza ve satınalma biriminiz için güvenilir Digi System tedariki', desc: 'Terazi, POS ve çevre birimleri — model seçiminden teslimata.' },
         buy: { eyebrow: 'Satınalma yolu', title: 'Tekliften teslimata — 5 net adım', desc: 'Karmaşa yok — her adımı bilir ve her aşamada iletişimde olursunuz.' },
@@ -528,7 +536,7 @@
         industries: { eyebrow: 'Küresel endüstriler', title: 'Farklı sektörlerde uygulama', desc: 'Digi perakende ekipmanları — mağaza ve HORECA' },
         supply: { eyebrow: 'Bizdavar tedariki', title: 'Digi System tedarik hizmetleri', desc: 'Tedarik ortağınız — sadece satıcı değil' },
         faq: { eyebrow: 'SSS', title: 'Alıcıların sık sorduğu sorular', desc: 'Cevabı bulamadınız mı? Doğrudan bizimle iletişime geçin.' }
-      }, officialNote: 'Teknik bilgiler <a href="https://www.digisystem.com.tr/" target="_blank" rel="noopener noreferrer">resmi Digi System</a> sitesine dayanır. Teklif için — <a href="contact">Bizdavar</a> · <a href="teraoka">Teraoka</a>', cta: { title: 'Digi System fiyat teklifine hazır mısınız?', desc: 'Mağaza türü, kasa sayısı ve onaylı terazi ihtiyacını gönderin', btnForm: 'Teklif formu', btnServices: 'Ürün kataloğu' }, sticky: { label: 'Digi System teklifi' }, geoText: 'Digi System terazi ve POS tedariki — Türkiye\'den Türkçe danışmanlık, proforma ve lojistik.', related: [{ title: 'Teraoka Seiko', desc: 'Japon terazi ve POS' }, { title: 'Ürün kataloğu', desc: 'Tedarik markaları' }, { title: 'İletişim', desc: 'Fiyat teklifi' }] },
+      }, officialNote: 'Teknik bilgiler <a href="https://www.digisystem.com.tr/" target="_blank" rel="noopener noreferrer">resmi Digi System</a> sitesine dayanır. Teklif için — <a href="contact">Bizdavar</a> · <a href="articles/buy-digi-system-iran">Digi rehberi</a> · <a href="teraoka">Teraoka</a>', cta: { title: 'Digi System fiyat teklifine hazır mısınız?', desc: 'Mağaza türü, kasa sayısı ve onaylı terazi ihtiyacını gönderin', btnForm: 'Teklif formu', btnServices: 'Ürün kataloğu' }, sticky: { label: 'Digi System teklifi' }, geoText: 'Digi System terazi ve POS tedariki — Türkiye\'den Türkçe danışmanlık, proforma ve lojistik.', related: [{ title: 'İran’da Digi satın al', desc: 'Terazi ve POS' }, { title: 'Teraoka Seiko', desc: 'Japon terazi ve POS' }, { title: 'İletişim', desc: 'Fiyat teklifi' }] },
       teraokaPage: { sections: {
         trust: { eyebrow: 'Neden Bizdavar’dan alın?', title: 'Mağaza ve depo biriminiz için güvenilir Teraoka Seiko tedariki', desc: 'Japon terazi, etiketleme ve POS — model danışmanlığı ve uluslararası lojistik.' },
         buy: { eyebrow: 'Satınalma yolu', title: 'Tekliften teslimata — 5 net adım', desc: 'Karmaşa yok — her adımı bilir ve her aşamada iletişimde olursunuz.' },
@@ -538,8 +546,8 @@
         industries: { eyebrow: 'Küresel endüstriler', title: 'Farklı sektörlerde uygulama', desc: 'Teraoka ekipmanları — perakende, HORECA ve lojistik' },
         supply: { eyebrow: 'Bizdavar tedariki', title: 'Teraoka Seiko tedarik hizmetleri', desc: 'Tedarik ortağınız — sadece satıcı değil' },
         faq: { eyebrow: 'SSS', title: 'Alıcıların sık sorduğu sorular', desc: 'Cevabı bulamadınız mı? Doğrudan bizimle iletişime geçin.' }
-      }, officialNote: 'Teknik bilgiler <a href="https://www.teraoka.co.jp/" target="_blank" rel="noopener noreferrer">resmi Teraoka Seiko</a> sitesine dayanır. Teklif için — <a href="contact">Bizdavar</a> · <a href="digi-system">Digi System</a>', cta: { title: 'Teraoka fiyat teklifine hazır mısınız?', desc: 'Terazi türü, kapasite ve kasa sayısını gönderin — deli · POS · etiketleme', btnForm: 'Teklif formu', btnServices: 'Ürün kataloğu' }, sticky: { label: 'Teraoka teklifi' }, geoText: 'Teraoka Seiko tedariki — Türkçe danışmanlık, proforma ve uluslararası lojistik Bizdavar tarafından.', related: [{ title: 'Digi System', desc: 'Türkiye terazi ve POS' }, { title: 'Ürün kataloğu', desc: 'Tedarik markaları' }, { title: 'İletişim', desc: 'Fiyat teklifi' }] },
-      fastPage: { sections: { for: { eyebrow: 'Kimler için', title: 'Fast hangi işletmeye uygun?', desc: 'Tek sayfalık startup’tan mağazaya ve çok dilli markaya — planı ihtiyacınıza göre seçin.' }, plans: { eyebrow: 'Fiyat planları', title: 'İşletmeniz için doğru planı seçin', desc: 'Sabit fiyat, gizli maliyet yok — WhatsApp veya <a href="contact">iletişim formu</a> ile sipariş.' }, compare: { eyebrow: 'Plan karşılaştırması', title: 'Her planda neler var?', desc: 'Plan seçmek için tabloyu inceleyin veya WhatsApp’tan sorun.' }, timeline: { eyebrow: 'Uygulama yolu', title: '5 günde yayına — adım adım', desc: 'Her gün net hedef ve WhatsApp üzerinden ilerleme raporu.' }, why: { eyebrow: 'Neden Fast?', title: 'Neden Fast Web Studio?', desc: '<a href="about">Bizdavar Group</a> ürünü — belirsiz vaatler veren genel bir ajans değil.' }, showcase: { eyebrow: 'Örnek işler', title: 'Bizdavar ile yapılan web siteleri', desc: 'Web tasarım örnekleri — <a href="portfolio">tüm portfolyoyu gör</a>' }, faq: { eyebrow: 'SSS', title: 'Sipariş öncesi sık sorulanlar', desc: '' } }, cta: { title: 'Web sitenizi başlatmaya hazır mısınız?', desc: 'WhatsApp’ta ücretsiz danışmanlık — uygun planı 2 dakikada önerelim.', btnWa: 'WhatsApp’ta başla', btnForm: 'İletişim formu', btnCustom: 'Özel proje', btnDevConsult: 'Özel yazılım ve danışmanlık — iletişime geçin' }, devCta: { title: 'Özel yazılım geliştirme mi istiyorsunuz?', desc: 'Fast planlarının ötesinde — özel proje, CRM, gelişmiş mağaza ve teknik danışmanlık.', btn: 'Özel yazılım ve danışmanlık — iletişime geçin' }, sticky: { label: 'Fast siparişi — $99\'dan itibaren' }, geoText: 'Türkiye, İran ve uluslararası pazarlardaki işletmeler için web tasarımı — 5 günde teslim, Türkçe WhatsApp danışmanlığı ve lansman sonrası destek.' },
+      }, officialNote: 'Teknik bilgiler <a href="https://www.teraoka.co.jp/" target="_blank" rel="noopener noreferrer">resmi Teraoka Seiko</a> sitesine dayanır. Teklif için — <a href="contact">Bizdavar</a> · <a href="articles/buy-teraoka-iran">Teraoka rehberi</a> · <a href="digi-system">Digi System</a>', cta: { title: 'Teraoka fiyat teklifine hazır mısınız?', desc: 'Terazi türü, kapasite ve kasa sayısını gönderin — deli · POS · etiketleme', btnForm: 'Teklif formu', btnServices: 'Ürün kataloğu' }, sticky: { label: 'Teraoka teklifi' }, geoText: 'Teraoka Seiko tedariki — Türkçe danışmanlık, proforma ve uluslararası lojistik Bizdavar tarafından.', related: [{ title: 'İran’da Teraoka satın al', desc: 'Deli ve POS' }, { title: 'Digi System', desc: 'Türkiye terazi ve POS' }, { title: 'İletişim', desc: 'Fiyat teklifi' }] },
+      fastPage: { sections: { for: { eyebrow: 'Kimler için', title: 'Fast hangi işletmeye uygun?', desc: 'ABD ve AB startup/KOBİ için İngilizce LTR site — veya Stripe mağazası; Farsça/RTL ikinci dildir.' }, plans: { eyebrow: 'Fiyat planları', title: 'İşletmeniz için doğru planı seçin', desc: 'Sabit fiyat USD veya EUR, gizli maliyet yok — <a href="contact">iletişim formu</a>, Zoom/Meet veya WhatsApp.' }, compare: { eyebrow: 'Plan karşılaştırması', title: 'Her planda neler var?', desc: 'Plan seçmek için tabloyu inceleyin veya Zoom/Meet ve WhatsApp’tan sorun.' }, timeline: { eyebrow: 'Uygulama yolu', title: '5 günde yayına — adım adım', desc: 'Her gün net hedef — ilerleme Zoom, Meet veya WhatsApp’ta.' }, why: { eyebrow: 'Neden Fast?', title: 'Neden Fast Web Studio?', desc: '<a href="about">Bizdavar Group</a> ürünü — belirsiz vaatler veren genel bir ajans değil.' }, showcase: { eyebrow: 'Örnek işler', title: 'Bizdavar ile yapılan web siteleri', desc: 'Web tasarım örnekleri — <a href="portfolio">tüm portfolyoyu gör</a>' }, faq: { eyebrow: 'SSS', title: 'Sipariş öncesi sık sorulanlar', desc: '' } }, cta: { title: 'Web sitenizi başlatmaya hazır mısınız?', desc: 'Teklif formu, Zoom/Meet veya WhatsApp — fatura USD veya EUR, $99 / ~€90’dan.', btnWa: 'WhatsApp’ta başla', btnForm: 'İletişim formu', btnCustom: 'Özel proje', btnDevConsult: 'Özel yazılım ve danışmanlık — iletişime geçin' }, devCta: { title: 'Özel yazılım geliştirme mi istiyorsunuz?', desc: 'Fast planlarının ötesinde — özel proje, CRM, gelişmiş mağaza ve teknik danışmanlık.', btn: 'Özel yazılım ve danışmanlık — iletişime geçin' }, sticky: { label: 'Fast siparişi — $99\'dan itibaren' }, geoText: 'ABD ve AB için İngilizce LTR web siteleri — 5 günde teslim, Stripe, Zoom/Meet, fatura USD veya EUR.' },
       vegaPage: { sections: {
         trust: { eyebrow: 'Neden Bizdavar’dan alın?', title: 'Teknik ve satınalma biriminiz için güvenilir VEGA tedariki', desc: 'Sadece katalog göstermiyoruz — model seçiminden teslimata kadar yanınızdayız.' },
         buy: { eyebrow: 'Satınalma yolu', title: 'Tekliften teslimata — 5 net adım', desc: 'Karmaşa yok — her adımı bilir ve her aşamada iletişimde olursunuz.' },
@@ -551,7 +559,7 @@
         industries: { eyebrow: 'Küresel endüstriler', title: 'Farklı endüstriler için VEGA çözümü', desc: '15+ endüstri — kimyadan enerjiye ve çevreye' },
         supply: { eyebrow: 'Bizdavar tedariki', title: 'Bizdavar Group ile VEGA tedarik hizmetleri', desc: 'Tedarik ortağınız — sadece satıcı değil' },
         faq: { eyebrow: 'SSS', title: 'Alıcıların sık sorduğu sorular', desc: 'Cevabı bulamadınız mı? Doğrudan bizimle iletişime geçin.' }
-      }, officialNote: 'Ürünlerin teknik bilgileri <a href="https://www.vega.com/en-ae" target="_blank" rel="noopener noreferrer">resmi VEGA web sitesine</a> dayanır. Fiyat teklifi, sipariş kodu ve tedarik için — <a href="contact">Bizdavar ile iletişime geçin</a>.', cta: { title: 'VEGA fiyat teklifine hazır mısınız?', desc: 'Ürün adını veya proses koşullarını gönderin — ücretsiz teknik danışmanlık ve şeffaf proforma', btnForm: 'Teklif formu', btnServices: 'Ürün kataloğu' }, sticky: { label: 'VEGA teklifi', hint: 'Türkçe teknik danışmanlık · hızlı yanıt' }, geoText: 'Orijinal VEGA sensör tedariki — Türkçe teknik danışmanlık, şeffaf proforma ve endüstriyel projelere lojistik.', related: [{ title: 'Prosense ürünleri', desc: 'Gaz ve alev dedektörü' }, { title: 'Ürün kataloğu', desc: 'Tedarik markaları' }, { title: 'İletişim ve teklif', desc: 'Ücretsiz danışmanlık' }] },
+      }, officialNote: 'Ürünlerin teknik bilgileri <a href="https://www.vega.com/en-ae" target="_blank" rel="noopener noreferrer">resmi VEGA web sitesine</a> dayanır. Fiyat teklifi, sipariş kodu ve tedarik için — <a href="contact">Bizdavar ile iletişime geçin</a> · <a href="articles/buy-vegapuls-iran">VEGAPULS rehberi</a> · <a href="articles/vega-quote-iran">teklif listesi</a>.', cta: { title: 'VEGA fiyat teklifine hazır mısınız?', desc: 'Ürün adını veya proses koşullarını gönderin — ücretsiz teknik danışmanlık ve şeffaf proforma', btnForm: 'Teklif formu', btnServices: 'Ürün kataloğu' }, sticky: { label: 'VEGA teklifi', hint: 'Türkçe teknik danışmanlık · hızlı yanıt' }, geoText: 'Orijinal VEGA sensör tedariki — Türkçe teknik danışmanlık, şeffaf proforma ve endüstriyel projelere lojistik.', related: [{ title: 'VEGAPULS satın alma rehberi', desc: 'Fiyat ve sipariş kodu' }, { title: 'Prosense ürünleri', desc: 'Gaz ve alev dedektörü' }, { title: 'Ürün kataloğu', desc: 'Tedarik markaları' }, { title: 'İletişim ve teklif', desc: 'Ücretsiz danışmanlık' }] },
       prosensePage: { sections: {
         trust: { eyebrow: 'Neden Bizdavar’dan alın?', title: 'Teknik ve satınalma biriminiz için güvenilir Prosense tedariki', desc: 'Sadece katalog göstermiyoruz — gaz ve model seçiminden teslimata kadar yanınızdayız.' },
         buy: { eyebrow: 'Satınalma yolu', title: 'Tekliften teslimata — 5 net adım', desc: 'Karmaşa yok — her adımı bilir ve her aşamada iletişimde olursunuz.' },
@@ -562,7 +570,7 @@
         industries: { eyebrow: 'Küresel endüstriler', title: 'Farklı endüstrilerde uygulama', desc: 'Her endüstriyel bölüm için özel gaz algılama çözümü' },
         supply: { eyebrow: 'Bizdavar tedariki', title: 'Prosense tedarik hizmetleri', desc: 'Tedarik ortağınız — sadece satıcı değil' },
         faq: { eyebrow: 'SSS', title: 'Alıcıların sık sorduğu sorular', desc: 'Cevabı bulamadınız mı? Farsça WhatsApp’tan yazın.' }
-      }, officialNote: 'Ürünlerin teknik bilgileri <a href="https://www.prosense.com.tr/?lang=tr" target="_blank" rel="noopener noreferrer">resmi Prosense web sitesine</a> dayanır. Fiyat teklifi ve tedarik için — <a href="contact">Bizdavar ile iletişime geçin</a> · <a href="vega">VEGA ürünleri</a>', cta: { title: 'Prosense fiyat teklifine hazır mısınız?', desc: 'Gaz türünü veya model serisini gönderin — PQ · SafeVader · SOMA · PPS+ · S-DPX paneli', btnForm: 'Teklif formu', btnServices: 'Ürün kataloğu' }, sticky: { label: 'Prosense teklifi', hint: 'Türkçe teknik danışmanlık · hızlı yanıt' }, geoText: 'Orijinal Prosense dedektör tedariki — SIL/M1/EN sertifikaları, Farsça WhatsApp danışmanlığı ve petrol, gaz ve endüstri projeleri için lojistik.', related: [{ title: 'VEGA ürünleri', desc: 'Seviye ve basınç sensörleri' }, { title: 'Teltonika GPS', desc: 'Fleet Telematics' }, { title: 'Endüstriyel hizmetler', desc: 'B2B danışmanlık' }, { title: 'İletişim', desc: 'Fiyat teklifi' }] },
+      }, officialNote: 'Ürünlerin teknik bilgileri <a href="https://www.prosense.com.tr/?lang=tr" target="_blank" rel="noopener noreferrer">resmi Prosense web sitesine</a> dayanır. Fiyat teklifi ve tedarik için — <a href="contact">Bizdavar ile iletişime geçin</a> · <a href="articles/buy-prosense-iran">Prosense rehberi</a> · <a href="vega">VEGA ürünleri</a>', cta: { title: 'Prosense fiyat teklifine hazır mısınız?', desc: 'Gaz türünü veya model serisini gönderin — PQ · SafeVader · SOMA · PPS+ · S-DPX paneli', btnForm: 'Teklif formu', btnServices: 'Ürün kataloğu' }, sticky: { label: 'Prosense teklifi', hint: 'Türkçe teknik danışmanlık · hızlı yanıt' }, geoText: 'Orijinal Prosense dedektör tedariki — SIL/M1/EN sertifikaları, Farsça WhatsApp danışmanlığı ve petrol, gaz ve endüstri projeleri için lojistik.', related: [{ title: 'VEGA ürünleri', desc: 'Seviye ve basınç sensörleri' }, { title: 'Teltonika GPS', desc: 'Fleet Telematics' }, { title: 'Endüstriyel hizmetler', desc: 'B2B danışmanlık' }, { title: 'İletişim', desc: 'Fiyat teklifi' }] },
       teltonikaPage: { sections: {
         trust: { eyebrow: 'Neden Bizdavar’dan alın?', title: 'Teknik ve satınalma biriminiz için güvenilir Teltonika tedariki', desc: 'Sadece katalog göstermiyoruz — model seçiminden teslimata kadar yanınızdayız.' },
         buy: { eyebrow: 'Satınalma yolu', title: 'Tekliften teslimata — 5 net adım', desc: 'Karmaşa yok — her adımı bilir ve her aşamada iletişimde olursunuz.' },
@@ -572,7 +580,7 @@
         industries: { eyebrow: 'Küresel endüstriler', title: 'Farklı endüstrilerde uygulama', desc: 'Her sektör için Fleet Telematics çözümü' },
         supply: { eyebrow: 'Bizdavar tedariki', title: 'Teltonika tedarik hizmetleri', desc: 'Tedarik ortağınız — sadece satıcı değil' },
         faq: { eyebrow: 'SSS', title: 'Alıcıların sık sorduğu sorular', desc: 'Cevabı bulamadınız mı? Doğrudan bizimle iletişime geçin.' }
-      }, officialNote: 'Teknik bilgiler <a href="https://www.teltonika-gps.com/" target="_blank" rel="noopener noreferrer">resmi Teltonika Telematics</a> sitesine dayanır. Teklif için — <a href="contact">Bizdavar</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'Teltonika fiyat teklifine hazır mısınız?', desc: 'Tracker modeli veya filo türünü gönderin — FMB920 · FMC650 · FTC305', btnForm: 'Teklif formu', btnServices: 'Ürün kataloğu' }, sticky: { label: 'Teltonika teklifi' }, geoText: 'Orijinal Teltonika GPS tedariki — Fleet Telematics, Türkçe danışmanlık ve uluslararası lojistik.', related: [{ title: 'VEGA ürünleri', desc: 'Seviye ve basınç sensörleri' }, { title: 'Prosense ürünleri', desc: 'Gaz ve alev dedektörü' }, { title: 'Ürün kataloğu', desc: 'Tedarik markaları' }, { title: 'İletişim', desc: 'Fiyat teklifi' }] },
+      }, officialNote: 'Teknik bilgiler <a href="https://www.teltonika-gps.com/" target="_blank" rel="noopener noreferrer">resmi Teltonika Telematics</a> sitesine dayanır. Teklif için — <a href="contact">Bizdavar</a> · <a href="articles/buy-teltonika-iran">FMB920 rehberi</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'Teltonika fiyat teklifine hazır mısınız?', desc: 'Tracker modeli veya filo türünü gönderin — FMB920 · FMC650 · FTC305', btnForm: 'Teklif formu', btnServices: 'Ürün kataloğu' }, sticky: { label: 'Teltonika teklifi' }, geoText: 'Orijinal Teltonika GPS tedariki — Fleet Telematics, Türkçe danışmanlık ve uluslararası lojistik.', related: [{ title: 'VEGA ürünleri', desc: 'Seviye ve basınç sensörleri' }, { title: 'Prosense ürünleri', desc: 'Gaz ve alev dedektörü' }, { title: 'Ürün kataloğu', desc: 'Tedarik markaları' }, { title: 'İletişim', desc: 'Fiyat teklifi' }] },
       liquiMolyPage: { sections: {
         trust: { eyebrow: 'Neden Bizdavar’dan alın?', title: 'Şeffaf dolar fiyatıyla güvenilir Liqui Moly tedariki', desc: 'Yağ ve katkı seçiminden proforma ve teslimata — Farsça ve Türkçe destek.' },
         buy: { eyebrow: 'Satınalma yolu', title: 'Ürün seçiminden teslimata — 5 adım', desc: 'Gösterilen fiyat dolardır; nihai tutar proformada onaylanır.' },
@@ -582,7 +590,7 @@
         iran: { eyebrow: 'Uygulama', title: 'Liqui Moly kimler için?', desc: 'Servisten filoya, motosikletten bireysel kullanıma — her kullanım için Farsça teklif ve orijinal tedarik.', note: 'Listenizde yok mu? Araç modeli, yakıt tipi ve adedi gönderin — net öneri verelim.' },
         supply: { eyebrow: 'Bizdavar tedariki', title: 'Liqui Moly tedarik hizmetleri', desc: 'Tedarik ortağınız — sadece fiyat listesi değil' },
         faq: { eyebrow: 'SSS', title: 'Alıcıların sık sorduğu sorular', desc: 'Cevabı bulamadınız mı? WhatsApp’tan yazın.' }
-      }, rateNote: { strong: '', body: '' }, officialNote: 'Teknik bilgiler <a href="https://www.liqui-moly.com/" target="_blank" rel="noopener noreferrer">resmi Liqui Moly web sitesine</a> dayanır. Sipariş için — <a href="contact">Bizdavar</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'Liqui Moly siparişine hazır mısınız?', desc: 'Ürün adı veya SKU gönderin — Octane Plus · Top Tec · Molygen', btnForm: 'Teklif formu', btnServices: 'Ürün kataloğu' }, sticky: { label: 'Liqui Moly teklifi', hint: 'Dolar fiyat · Farsça danışmanlık' }, geoText: 'Orijinal Liqui Moly tedariki — şeffaf dolar fiyat, Farsça danışmanlık ve uluslararası lojistik.', related: [{ title: 'VEGA ürünleri', desc: 'Seviye ve basınç sensörleri' }, { title: 'Prosense ürünleri', desc: 'Gaz ve alev dedektörü' }, { title: 'Ürün kataloğu', desc: 'B2B tedarik markaları' }, { title: 'İletişim', desc: 'Liqui Moly fiyat teklifi' }] }
+      }, rateNote: { strong: '', body: '' }, officialNote: 'Teknik bilgiler <a href="https://www.liqui-moly.com/" target="_blank" rel="noopener noreferrer">resmi Liqui Moly web sitesine</a> dayanır. Sipariş için — <a href="contact">Bizdavar</a> · <a href="articles/liqui-moly-supply-iran">Liqui Moly rehberi</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'Liqui Moly siparişine hazır mısınız?', desc: 'Ürün adı veya SKU gönderin — Octane Plus · Top Tec · Molygen', btnForm: 'Teklif formu', btnServices: 'Ürün kataloğu' }, sticky: { label: 'Liqui Moly teklifi', hint: 'Dolar fiyat · Farsça danışmanlık' }, geoText: 'Orijinal Liqui Moly tedariki — şeffaf dolar fiyat, Farsça danışmanlık ve uluslararası lojistik.', related: [{ title: 'VEGA ürünleri', desc: 'Seviye ve basınç sensörleri' }, { title: 'Prosense ürünleri', desc: 'Gaz ve alev dedektörü' }, { title: 'Ürün kataloğu', desc: 'B2B tedarik markaları' }, { title: 'İletişim', desc: 'Liqui Moly fiyat teklifi' }] }
     },
     en: {
       aboutPage: { hero: { tag: 'About Bizdavar', title: 'Bizdavar does three separate things', desc: 'Digital services, products we build, or industrial supply — since 2013.' }, whatIs: { title: 'What is Bizdavar Group?', p1: 'Bizdavar Group has worked since <strong>2013</strong> — founder: <strong>Ersan Jahed Tabrizi</strong>. Three separate lines: <a href="/pages/services">digital services</a>, <a href="/pages/products">products we build</a> (BizPet, FXGuard), and <a href="/pages/products#supply">industrial supply</a> (VEGA, Prosense, Liqui Moly).', p2: '100+ projects in 11 countries. Company registration in Yerevan; Iran legal entity in Tabriz. See the <a href="/pages/portfolio">portfolio</a>.' }, features: ['Services', 'Products', 'Supply'], stats: [{ value: '13+', label: 'Years experience' }, { value: '100+', label: 'Projects' }, { value: '11', label: 'Countries' }, { value: '3', label: 'Work paths' }], navAria: 'Page sections', nav: [{ href: '#profile', label: 'Profile' }, { href: '#activities', label: 'Expertise' }, { href: '#ecosystem', label: 'Ecosystem' }, { href: '#presence', label: 'Global presence' }, { href: '#highlights', label: 'Highlights' }, { href: '#sources', label: 'Sources' }, { href: '#trust', label: 'Trust' }, { href: '#faq', label: 'FAQ' }], sections: { identityEyebrow: 'Company profile', identityTitle: 'Bizdavar Group at a glance', leadershipEyebrow: 'Leadership', leadershipTitle: 'Founder and team', activitiesEyebrow: 'Three work paths', activitiesTitle: 'Which of our lines are you here for?', ecosystemEyebrow: 'Ecosystem', ecosystemTitle: 'Related brands and projects', ecosystemDesc: 'Examples from the digital and industrial ecosystem Bizdavar has developed or managed', presenceEyebrow: 'Global presence', presenceTitle: 'Active countries', presenceDesc: 'International project network from Tabriz and Yerevan to Europe and the US', exhibitionsEyebrow: 'Exhibitions & events', exhibitionsTitle: 'Technology exhibition presence', exhibitionsDesc: 'Innovation and commercialization events — from RINOTEX Tabriz to university fairs', achievementsEyebrow: 'Achievements', achievementsTitle: 'Bizdavar products & innovation', achievementsDesc: 'Beyond digital services and industrial supply, the Bizdavar team has also designed owned products', sourcesEyebrow: 'Verified sources', sourcesTitle: 'Media, exhibitions and verifiable references', sourcesDesc: 'Official links published about products, exhibitions and Bizdavar history — independent of on-site claims.', credentialsEyebrow: 'Certifications', credentialsTitle: 'Verified skills', proofEyebrow: 'Professional credibility', proofTitle: 'Trust indicators', proofDesc: 'Based on verifiable public sources — no fabricated testimonials', faqEyebrow: 'FAQ', faqTitle: 'Common questions about Bizdavar' }, relatedLinks: [{ title: 'Our services', url: 'services', desc: 'Digital marketing, web, SMM and industry' }, { title: 'Portfolio', url: 'portfolio', desc: 'ZedPay, BZ Diamond and more' }, { title: 'Contact us', url: 'contact', desc: 'Free consultation' }], values: { title: 'Our values', items: [{ title: 'Outcome focus', desc: 'Sales, conversion and brand growth — not just execution.' }, { title: 'Transparent collaboration', desc: 'Regular reporting and direct communication with the team.' }, { title: 'Global market', desc: 'Projects in Iran, Turkey and international markets.' }, { title: 'Fast execution', desc: 'Fast Web Studio — website delivery in 5 days.' }] }, cta: { title: 'Ready to work with Bizdavar?', desc: 'Initial consultation is free — through the <a href="/pages/contact" class="link-yellow">contact form</a> or WhatsApp.', btn: 'Contact us' } },
@@ -591,16 +599,16 @@
       blogPage: {
         hero: {
           tag: 'Expert blog',
-          title: 'Digital marketing, SEO and industrial supply guides',
-          desc: 'Practical playbooks from Bizdavar: online sales growth, multilingual websites and genuine VEGA sensor supply for Iran and Turkey.',
+          title: 'US/EU web design, ads and industrial supply guides',
+          desc: 'English websites billed in USD or EUR, Google/Meta/LinkedIn campaigns, plus genuine VEGA supply for Iran.',
           ctaArticles: 'Browse articles',
           ctaTopics: 'Topics',
           ctaConsult: 'Free consult'
         },
         intro: {
           title: 'Field notes from live projects',
-          body: 'The Bizdavar blog distils <a href="/pages/services">digital services</a>, <a href="/pages/fast">Fast Studio web design</a> and <a href="/pages/products#supply">industrial supply</a>. Read digital marketing, SEO, SMM, multilingual sites and the VEGA buying path as execution — not slogans.',
-          statPosts: '13',
+          body: 'The Bizdavar blog distils <a href="/pages/services">digital services</a>, <a href="/pages/articles/website-design-us-eu">US/EU website design</a>, <a href="/pages/fast">Fast Studio</a> and <a href="/pages/products#supply">industrial supply</a>. Read ads, SEO, SMM and the VEGA buying path as execution — not slogans.',
+          statPosts: '20',
           statPostsLabel: 'Guides',
           statLangs: '5',
           statLangsLabel: 'Languages',
@@ -612,7 +620,7 @@
           title: 'From SEO to VEGA sensors',
           desc: 'Pick by need — each cluster links to the matching service or product page.',
           digital: { label: 'Digital marketing', desc: 'SEO, CRO and SMM' },
-          web: { label: 'Web design', desc: 'Multilingual sites & Fast Studio' },
+          web: { label: 'Web design', desc: 'US/EU English sites & Fast Studio' },
           industrial: { label: 'Industrial supply', desc: 'VEGA and instrumentation' },
           products: { label: 'Bizdavar products', desc: 'BizPet, BizTab and BizClean' },
           company: { label: 'Company', desc: 'History and activity areas' }
@@ -637,16 +645,18 @@
           title: 'From blog to key pages',
           desc: 'Internal links to services, catalogs and contact — no menu hunting.',
           items: [
-            { title: 'Digital services', url: '/pages/services', desc: 'SEO, SMM and campaigns' },
-            { title: 'Fast Web Studio', url: '/pages/fast', desc: 'Site in 5 days' },
+            { title: 'US/EU websites', url: '/pages/articles/website-design-us-eu', desc: 'From $99 / EUR invoice' },
+            { title: 'US/EU ads', url: '/pages/articles/digital-marketing-us-eu', desc: 'Google, Meta, LinkedIn' },
+            { title: 'Fast Studio', url: '/pages/fast', desc: 'English site in 5 days' },
+            { title: 'Services', url: '/pages/services', desc: 'Web, ads and apps' },
+            { title: 'Contact / quote', url: '/pages/contact?service=web-design', desc: 'USD or EUR invoice' },
+            { title: 'Buy VEGAPULS', url: '/pages/articles/buy-vegapuls-iran', desc: 'Iran level sensor' },
             { title: 'VEGA catalog', url: '/pages/vega', desc: 'Level sensors' },
-            { title: 'Prosense', url: '/pages/prosense', desc: 'Gas detectors' },
-            { title: 'Liqui Moly', url: '/pages/liqui-moly', desc: 'Oils and additives' },
-            { title: 'Field tech', url: '/pages/field-tech', desc: 'Tabriz' },
-            { title: 'Portfolio', url: '/pages/portfolio', desc: 'Marvi, FXGuard…' },
-            { title: 'Marvi Society', url: '/pages/marvi-society', desc: 'iOS app' },
-            { title: 'Products', url: '/pages/products', desc: 'BizTab and BizPet' },
-            { title: 'Contact', url: '/pages/contact', desc: 'Free consultation' }
+            { title: 'Buy Prosense', url: '/pages/articles/buy-prosense-iran', desc: 'Gas detectors' },
+            { title: 'Teltonika', url: '/pages/teltonika', desc: 'FMB920 from $29' },
+            { title: 'Digi', url: '/pages/articles/buy-digi-system-iran', desc: 'Scales and POS' },
+            { title: 'Industrial trade', url: '/pages/articles/industrial-trade-iran', desc: 'All brands' },
+            { title: 'Products', url: '/pages/products#supply', desc: 'Supply catalogue' }
           ]
         },
         clusters: {
@@ -654,9 +664,9 @@
           title: 'From a guide to a quote',
           desc: 'If the article is not enough, run the same topic as a project with Bizdavar.',
           digitalTitle: 'Marketing & SEO',
-          digitalDesc: 'Campaigns, SEO and SMM for Iran and Turkey.',
+          digitalDesc: 'Google Ads, Meta and LinkedIn — budgets in USD or EUR.',
           webTitle: 'Web design',
-          webDesc: 'Corporate and store sites in 5 days — RTL and basic SEO.',
+          webDesc: 'English LTR sites in 5 days — from $99 / ~€90, Stripe and Zoom/Meet.',
           industrialTitle: 'Buy VEGA',
           industrialDesc: 'Order code, proforma and logistics to site.',
           prosenseTitle: 'Prosense detectors',
@@ -686,10 +696,10 @@
         },
         geoText: 'Specialized articles for businesses in Iran and Turkey — digital marketing, SEO, multilingual web design and VEGA industrial supply.',
         related: [
-          { title: 'Digital services', desc: 'SEO, SMM and campaigns', titleKey: 'blogPage.related.0.title', descKey: 'blogPage.related.0.desc' },
-          { title: 'Fast Web Studio', desc: 'Website in 5 days from $99', titleKey: 'blogPage.related.1.title', descKey: 'blogPage.related.1.desc' },
+          { title: 'US/EU websites', desc: 'From $99 / EUR invoice', titleKey: 'blogPage.related.0.title', descKey: 'blogPage.related.0.desc' },
+          { title: 'US/EU ads', desc: 'Google, Meta, LinkedIn', titleKey: 'blogPage.related.1.title', descKey: 'blogPage.related.1.desc' },
           { title: 'VEGA catalog', desc: 'Level and pressure sensors', titleKey: 'blogPage.related.2.title', descKey: 'blogPage.related.2.desc' },
-          { title: 'Contact', desc: 'Free consultation', titleKey: 'blogPage.related.3.title', descKey: 'blogPage.related.3.desc' }
+          { title: 'Contact', desc: 'Website quote or WhatsApp', titleKey: 'blogPage.related.3.title', descKey: 'blogPage.related.3.desc' }
         ]
       },
       privacyPage: { hero: { title: 'Privacy Policy', desc: 'How your information is collected and used on the Bizdavar Group website' }, sections: [{ title: '1. Information we collect', body: 'When you submit the <a href="contact">contact form</a>, we receive your name, email, phone number (optional), service type and message. This information is used only to respond to your request.' }, { title: '2. How we use it', items: ['Responding to consulting requests and service proposals', 'Following up on projects under discussion', 'Improving service quality without public disclosure'] }, { title: '3. Sharing with third parties', body: 'Your information is not sold or transferred to third parties without your explicit consent, except where legally required.' }, { title: '4. Cookies and analytics', body: 'This site uses <strong>Google Tag Manager</strong> (GTM-NXWQQWF8) and <strong>Google Analytics 4</strong> (G-4GFEY12SLH) to measure traffic and improve the experience. These tools may set cookies or similar identifiers. Language detection details are in section 5.' }, { title: '5. Language & region detection', body: 'To show the appropriate language (Persian, Turkish, English), your IP address may be sent anonymously to <strong>ipapi.co</strong> or <strong>ipwho.is</strong> to detect your approximate country. Your language preference is stored in browser <code>localStorage</code> (key <code>bizdavar_locale</code>). You can change language anytime from the menu or with <code>?lang=fa</code>, <code>?lang=tr</code> or <code>?lang=en</code>.' }, { title: '6. Contact us', body: 'For privacy questions: <a href="mailto:info@bizdavar.com">info@bizdavar.com</a> or the <a href="contact">contact form</a>.' }], updated: 'Last updated: April 2025' },
@@ -702,7 +712,7 @@
         industries: { eyebrow: 'Global industries', title: 'Application across industries', desc: 'Gamak motors for every industrial sector' },
         supply: { eyebrow: 'Supply by Bizdavar', title: 'Gamak supply services', desc: 'Your supply partner — not just a vendor' },
         faq: { eyebrow: 'FAQ', title: 'Common questions from buyers', desc: 'Didn’t find your answer? Contact us directly.' }
-      }, officialNote: 'Technical information is based on the <a href="https://www.gamak.com/" target="_blank" rel="noopener noreferrer">official Gamak website</a>. For quotes — <a href="contact">contact Bizdavar</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'Ready for a Gamak quote?', desc: 'Send kW, rpm and application type — IE2/IE3/IE4 · Ex-proof · MV', btnForm: 'Quote form', btnServices: 'Product catalog' }, sticky: { label: 'Gamak quote' }, geoText: 'Gamak supply from Turkey to Iran — multilingual technical consulting (English, Persian, Turkish), proforma and logistics by Bizdavar Group.', related: [{ title: 'VEGA products', desc: 'Level and pressure sensors' }, { title: 'Prosense products', desc: 'Gas and flame detectors' }, { title: 'Product catalog', desc: 'Supply brands' }, { title: 'Contact', desc: 'Free consultation' }] },
+      }, officialNote: 'Technical information is based on the <a href="https://www.gamak.com/" target="_blank" rel="noopener noreferrer">official Gamak website</a>. For quotes — <a href="contact">contact Bizdavar</a> · <a href="articles/buy-gamak-iran">Gamak buyer guide</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'Ready for a Gamak quote?', desc: 'Send kW, rpm and application type — IE2/IE3/IE4 · Ex-proof · MV', btnForm: 'Quote form', btnServices: 'Product catalog' }, sticky: { label: 'Gamak quote' }, geoText: 'Gamak supply from Turkey to Iran — multilingual technical consulting (English, Persian, Turkish), proforma and logistics by Bizdavar Group.', related: [{ title: 'Buy Gamak in Iran', desc: 'kW and flange' }, { title: 'VEGA products', desc: 'Level and pressure sensors' }, { title: 'Product catalog', desc: 'Supply brands' }, { title: 'Contact', desc: 'Free consultation' }] },
       digiSystemPage: { sections: {
         trust: { eyebrow: 'Why buy from Bizdavar?', title: 'Reliable Digi System supply for your store and procurement teams', desc: 'Scales, POS and peripherals — from model selection to delivery.' },
         buy: { eyebrow: 'Purchase path', title: 'From quote to delivery — 5 clear steps', desc: 'No complexity — you know every step and stay in touch throughout.' },
@@ -712,7 +722,7 @@
         industries: { eyebrow: 'Global industries', title: 'Application across sectors', desc: 'Digi retail equipment for stores and HORECA' },
         supply: { eyebrow: 'Supply by Bizdavar', title: 'Digi System supply services', desc: 'Your supply partner — not just a vendor' },
         faq: { eyebrow: 'FAQ', title: 'Common questions from buyers', desc: 'Didn’t find your answer? Contact us directly.' }
-      }, officialNote: 'Technical information is based on the <a href="https://www.digisystem.com.tr/" target="_blank" rel="noopener noreferrer">official Digi System website</a>. For quotes — <a href="contact">contact Bizdavar</a> · <a href="teraoka">Teraoka</a>', cta: { title: 'Ready for a Digi System quote?', desc: 'Send store type, checkout count and legal-for-trade scale needs', btnForm: 'Quote form', btnServices: 'Product catalog' }, sticky: { label: 'Digi System quote' }, geoText: 'Digi System supply from Turkey to Iran — multilingual consulting, proforma and logistics by Bizdavar Group.', related: [{ title: 'Teraoka Seiko', desc: 'Japanese scales and POS' }, { title: 'Product catalog', desc: 'Supply brands' }, { title: 'Contact', desc: 'Price inquiry' }] },
+      }, officialNote: 'Technical information is based on the <a href="https://www.digisystem.com.tr/" target="_blank" rel="noopener noreferrer">official Digi System website</a>. For quotes — <a href="contact">contact Bizdavar</a> · <a href="articles/buy-digi-system-iran">Digi buyer guide</a> · <a href="teraoka">Teraoka</a>', cta: { title: 'Ready for a Digi System quote?', desc: 'Send store type, checkout count and legal-for-trade scale needs', btnForm: 'Quote form', btnServices: 'Product catalog' }, sticky: { label: 'Digi System quote' }, geoText: 'Digi System supply from Turkey to Iran — multilingual consulting, proforma and logistics by Bizdavar Group.', related: [{ title: 'Buy Digi in Iran', desc: 'Scales and POS' }, { title: 'Teraoka Seiko', desc: 'Japanese scales and POS' }, { title: 'Contact', desc: 'Price inquiry' }] },
       teraokaPage: { sections: {
         trust: { eyebrow: 'Why buy from Bizdavar?', title: 'Reliable Teraoka Seiko supply for your store and warehouse teams', desc: 'Japanese scales, labeling and POS — model consulting and international logistics.' },
         buy: { eyebrow: 'Purchase path', title: 'From quote to delivery — 5 clear steps', desc: 'No complexity — you know every step and stay in touch throughout.' },
@@ -722,8 +732,8 @@
         industries: { eyebrow: 'Global industries', title: 'Application across sectors', desc: 'Teraoka equipment for retail, HORECA and logistics' },
         supply: { eyebrow: 'Supply by Bizdavar', title: 'Teraoka Seiko supply services', desc: 'Your supply partner — not just a vendor' },
         faq: { eyebrow: 'FAQ', title: 'Common questions from buyers', desc: 'Didn’t find your answer? Contact us directly.' }
-      }, officialNote: 'Technical information is based on the <a href="https://www.teraoka.co.jp/" target="_blank" rel="noopener noreferrer">official Teraoka Seiko website</a>. For quotes — <a href="contact">contact Bizdavar</a> · <a href="digi-system">Digi System</a>', cta: { title: 'Ready for a Teraoka quote?', desc: 'Send scale type, capacity and checkout count — deli · POS · labeling', btnForm: 'Quote form', btnServices: 'Product catalog' }, sticky: { label: 'Teraoka quote' }, geoText: 'Teraoka Seiko supply to Iran — multilingual consulting, proforma and international logistics by Bizdavar Group.', related: [{ title: 'Digi System', desc: 'Turkish scales and POS' }, { title: 'Product catalog', desc: 'Supply brands' }, { title: 'Contact', desc: 'Price inquiry' }] },
-      fastPage: { sections: { for: { eyebrow: 'Who it’s for', title: 'Who is Fast Web Studio for?', desc: 'From a one-page startup to a store or multilingual brand — pick the plan that matches.' }, plans: { eyebrow: 'Pricing plans', title: 'Choose the right plan for your business', desc: 'Fixed pricing, no hidden costs — order through WhatsApp or the <a href="contact">contact form</a>.' }, compare: { eyebrow: 'Plan comparison', title: 'What do you get in each plan?', desc: 'Use this table to choose a plan or ask us on WhatsApp.' }, timeline: { eyebrow: 'Delivery path', title: '5 days to go live — step by step', desc: 'Each day has a clear goal and progress is reported on WhatsApp.' }, why: { eyebrow: 'Why Fast?', title: 'Why Fast Web Studio?', desc: 'A <a href="about">Bizdavar Group</a> product — not a generic agency with vague promises.' }, showcase: { eyebrow: 'Showcase', title: 'Websites built with Bizdavar', desc: 'Web design examples — <a href="portfolio">view the full portfolio</a>' }, faq: { eyebrow: 'FAQ', title: 'Common questions before ordering', desc: '' } }, cta: { title: 'Ready to launch your website?', desc: 'Free WhatsApp consultation — we suggest the right plan in 2 minutes.', btnWa: 'Start on WhatsApp', btnForm: 'Contact form', btnCustom: 'Custom project', btnDevConsult: 'Custom development & consulting — contact us' }, devCta: { title: 'Need custom development?', desc: 'Beyond Fast plans — custom projects, CRM, advanced stores and technical consulting.', btn: 'Custom development & consulting — contact us' }, sticky: { label: 'Order Fast — from $99' }, geoText: 'Web design for businesses in Iran, Turkey and international markets — 5-day delivery, multilingual WhatsApp support and post-launch assistance.' },
+      }, officialNote: 'Technical information is based on the <a href="https://www.teraoka.co.jp/" target="_blank" rel="noopener noreferrer">official Teraoka Seiko website</a>. For quotes — <a href="contact">contact Bizdavar</a> · <a href="articles/buy-teraoka-iran">Teraoka buyer guide</a> · <a href="digi-system">Digi System</a>', cta: { title: 'Ready for a Teraoka quote?', desc: 'Send scale type, capacity and checkout count — deli · POS · labeling', btnForm: 'Quote form', btnServices: 'Product catalog' }, sticky: { label: 'Teraoka quote' }, geoText: 'Teraoka Seiko supply to Iran — multilingual consulting, proforma and international logistics by Bizdavar Group.', related: [{ title: 'Buy Teraoka in Iran', desc: 'Deli and POS' }, { title: 'Digi System', desc: 'Turkish scales and POS' }, { title: 'Contact', desc: 'Price inquiry' }] },
+      fastPage: { sections: { for: { eyebrow: 'Who it’s for', title: 'Who is Fast Web Studio for?', desc: 'US and EU startups and SMBs that need an English LTR site — or a Stripe shop. Persian/RTL is a second locale, not the default.' }, plans: { eyebrow: 'Pricing plans', title: 'Choose the right plan for your business', desc: 'Fixed price in USD or EUR, no hidden costs — order via the <a href="contact">contact form</a>, Zoom/Meet or WhatsApp.' }, compare: { eyebrow: 'Plan comparison', title: 'What do you get in each plan?', desc: 'Use this table to choose a plan or ask on Zoom/Meet or WhatsApp.' }, timeline: { eyebrow: 'Delivery path', title: '5 days to go live — step by step', desc: 'Each day has a clear goal — progress on Zoom, Meet or WhatsApp.' }, why: { eyebrow: 'Why Fast?', title: 'Why Fast Web Studio?', desc: 'A <a href="about">Bizdavar Group</a> product — not a generic agency with vague promises.' }, showcase: { eyebrow: 'Showcase', title: 'Websites built with Bizdavar', desc: 'Web design examples — <a href="portfolio">view the full portfolio</a>' }, faq: { eyebrow: 'FAQ', title: 'Common questions before ordering', desc: '' } }, cta: { title: 'Ready to launch your website?', desc: 'Quote form, Zoom/Meet or WhatsApp — invoice in USD or EUR from $99 / ~€90.', btnWa: 'Start on WhatsApp', btnForm: 'Contact form', btnCustom: 'Custom project', btnDevConsult: 'Custom development & consulting — contact us' }, devCta: { title: 'Need custom development?', desc: 'Beyond Fast plans — custom projects, CRM, advanced stores and technical consulting.', btn: 'Custom development & consulting — contact us' }, sticky: { label: 'Order Fast — from $99' }, geoText: 'English LTR websites for US and EU businesses — 5-day delivery, Stripe, Zoom/Meet and invoices in USD or EUR.' },
       vegaPage: { sections: {
         trust: { eyebrow: 'Why buy from Bizdavar?', title: 'Reliable VEGA supply for your technical and procurement teams', desc: 'We do more than show a catalog — we are with you from model selection to delivery.' },
         buy: { eyebrow: 'Purchase path', title: 'From quote to delivery — 5 clear steps', desc: 'No complexity — you know every step and stay in touch throughout.' },
@@ -735,7 +745,7 @@
         industries: { eyebrow: 'Global industries', title: 'VEGA solutions for various industries', desc: '15+ industries — from chemicals to energy and environment' },
         supply: { eyebrow: 'Supply by Bizdavar', title: 'VEGA supply services by Bizdavar Group', desc: 'Your supply partner — not just a vendor' },
         faq: { eyebrow: 'FAQ', title: 'Common questions from buyers', desc: 'Didn’t find your answer? Contact us directly.' }
-      }, officialNote: 'Product technical information is based on the <a href="https://www.vega.com/en-ae" target="_blank" rel="noopener noreferrer">official VEGA website</a>. For pricing, order codes and supply — <a href="contact">contact Bizdavar</a>.', cta: { title: 'Ready for a VEGA quote?', desc: 'Send the product name or process conditions — free technical consulting and a transparent proforma', btnForm: 'Quote form', btnServices: 'Product catalog' }, sticky: { label: 'VEGA quote', hint: 'Multilingual consulting · fast reply' }, geoText: 'Genuine VEGA sensor supply to Iran — multilingual technical consulting, transparent proforma and logistics to industrial projects.', related: [{ title: 'Prosense products', desc: 'Gas and flame detectors' }, { title: 'Product catalog', desc: 'Supply brands' }, { title: 'Contact and inquiry', desc: 'Free consultation' }] },
+      }, officialNote: 'Product technical information is based on the <a href="https://www.vega.com/en-ae" target="_blank" rel="noopener noreferrer">official VEGA website</a>. For pricing, order codes and supply — <a href="contact">contact Bizdavar</a> · <a href="articles/buy-vegapuls-iran">VEGAPULS buying guide</a> · <a href="articles/vega-quote-iran">quote checklist</a>.', cta: { title: 'Ready for a VEGA quote?', desc: 'Send the product name or process conditions — free technical consulting and a transparent proforma', btnForm: 'Quote form', btnServices: 'Product catalog' }, sticky: { label: 'VEGA quote', hint: 'Multilingual consulting · fast reply' }, geoText: 'Genuine VEGA sensor supply to Iran — multilingual technical consulting, transparent proforma and logistics to industrial projects.', related: [{ title: 'Buy VEGAPULS guide', desc: 'Price and order code' }, { title: 'Prosense products', desc: 'Gas and flame detectors' }, { title: 'Product catalog', desc: 'Supply brands' }, { title: 'Contact and inquiry', desc: 'Free consultation' }] },
       prosensePage: { sections: {
         trust: { eyebrow: 'Why buy from Bizdavar?', title: 'Reliable Prosense supply for your technical and procurement teams', desc: 'We do more than show a catalog — we are with you from gas/model selection to delivery.' },
         buy: { eyebrow: 'Purchase path', title: 'From quote to delivery — 5 clear steps', desc: 'No complexity — you know every step and stay in touch throughout.' },
@@ -746,7 +756,7 @@
         industries: { eyebrow: 'Global industries', title: 'Application across industries', desc: 'Custom gas detection solution for every industrial sector' },
         supply: { eyebrow: 'Supply by Bizdavar', title: 'Prosense supply services', desc: 'Your supply partner — not just a vendor' },
         faq: { eyebrow: 'FAQ', title: 'Common questions from buyers', desc: 'Didn’t find your answer? Message us on Farsi WhatsApp.' }
-      }, officialNote: 'Product technical information is based on the <a href="https://www.prosense.com.tr/?lang=en" target="_blank" rel="noopener noreferrer">official Prosense website</a>. For pricing and supply — <a href="contact">contact Bizdavar</a> · <a href="vega">VEGA products</a>', cta: { title: 'Ready for a Prosense quote?', desc: 'Send the gas type or model series — PQ · SafeVader · SOMA · PPS+ · S-DPX panel', btnForm: 'Quote form', btnServices: 'Product catalog' }, sticky: { label: 'Prosense quote', hint: 'Farsi technical consulting · fast reply' }, geoText: 'Genuine Prosense detector supply — SIL/M1/EN certifications, Farsi WhatsApp consulting and logistics for oil, gas and industrial projects.', related: [{ title: 'VEGA products', desc: 'Level and pressure sensors' }, { title: 'Teltonika GPS', desc: 'Fleet Telematics' }, { title: 'Industrial services', desc: 'B2B consulting' }, { title: 'Contact', desc: 'Price inquiry' }] },
+      }, officialNote: 'Product technical information is based on the <a href="https://www.prosense.com.tr/?lang=en" target="_blank" rel="noopener noreferrer">official Prosense website</a>. For pricing and supply — <a href="contact">contact Bizdavar</a> · <a href="articles/buy-prosense-iran">Prosense buyer guide</a> · <a href="vega">VEGA products</a>', cta: { title: 'Ready for a Prosense quote?', desc: 'Send the gas type or model series — PQ · SafeVader · SOMA · PPS+ · S-DPX panel', btnForm: 'Quote form', btnServices: 'Product catalog' }, sticky: { label: 'Prosense quote', hint: 'Farsi technical consulting · fast reply' }, geoText: 'Genuine Prosense detector supply — SIL/M1/EN certifications, Farsi WhatsApp consulting and logistics for oil, gas and industrial projects.', related: [{ title: 'VEGA products', desc: 'Level and pressure sensors' }, { title: 'Teltonika GPS', desc: 'Fleet Telematics' }, { title: 'Industrial services', desc: 'B2B consulting' }, { title: 'Contact', desc: 'Price inquiry' }] },
       teltonikaPage: { sections: {
         trust: { eyebrow: 'Why buy from Bizdavar?', title: 'Reliable Teltonika supply for your technical and procurement teams', desc: 'We do more than show a catalog — from tracker selection to delivery in Iran.' },
         buy: { eyebrow: 'Purchase path', title: 'From quote to delivery — 5 clear steps', desc: 'No complexity — you know every step and stay in touch throughout.' },
@@ -756,7 +766,7 @@
         industries: { eyebrow: 'Global industries', title: 'Application across industries', desc: 'Fleet Telematics solution for every sector' },
         supply: { eyebrow: 'Supply by Bizdavar', title: 'Teltonika supply services', desc: 'Your supply partner — not just a vendor' },
         faq: { eyebrow: 'FAQ', title: 'Common questions from buyers', desc: 'Didn’t find your answer? Contact us directly.' }
-      }, officialNote: 'Technical information is based on the <a href="https://www.teltonika-gps.com/" target="_blank" rel="noopener noreferrer">official Teltonika Telematics website</a>. For quotes — <a href="contact">contact Bizdavar</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'Ready for a Teltonika quote?', desc: 'Send tracker model or fleet type — FMB920 · FMC650 · FTC305 · DualCam', btnForm: 'Quote form', btnServices: 'Product catalog' }, sticky: { label: 'Teltonika quote' }, geoText: 'Genuine Teltonika GPS supply to Iran — Fleet Telematics, multilingual consulting and logistics.', related: [{ title: 'VEGA products', desc: 'Level and pressure sensors' }, { title: 'Prosense products', desc: 'Gas and flame detectors' }, { title: 'Product catalog', desc: 'Supply brands' }, { title: 'Contact', desc: 'Price inquiry' }] },
+      }, officialNote: 'Technical information is based on the <a href="https://www.teltonika-gps.com/" target="_blank" rel="noopener noreferrer">official Teltonika Telematics website</a>. For quotes — <a href="contact">contact Bizdavar</a> · <a href="articles/buy-teltonika-iran">FMB920 buyer guide</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'Ready for a Teltonika quote?', desc: 'Send tracker model or fleet type — FMB920 · FMC650 · FTC305 · DualCam', btnForm: 'Quote form', btnServices: 'Product catalog' }, sticky: { label: 'Teltonika quote' }, geoText: 'Genuine Teltonika GPS supply to Iran — Fleet Telematics, multilingual consulting and logistics.', related: [{ title: 'VEGA products', desc: 'Level and pressure sensors' }, { title: 'Prosense products', desc: 'Gas and flame detectors' }, { title: 'Product catalog', desc: 'Supply brands' }, { title: 'Contact', desc: 'Price inquiry' }] },
       liquiMolyPage: { sections: {
         trust: { eyebrow: 'Why buy from Bizdavar?', title: 'Reliable Liqui Moly supply with transparent USD pricing', desc: 'From oil and additive selection to proforma and delivery — Farsi-speaking support.' },
         buy: { eyebrow: 'Purchase path', title: 'From product pick to delivery — 5 steps', desc: 'Displayed prices are in USD; the final amount is confirmed on the proforma.' },
@@ -766,12 +776,22 @@
         iran: { eyebrow: 'Use cases', title: 'Who is Liqui Moly for?', desc: 'From workshops and fleets to motorcycles and personal use — Farsi inquiry and genuine supply for every use case.', note: 'Not listed? Send vehicle model, fuel type and quantity for a precise recommendation.' },
         supply: { eyebrow: 'Supply by Bizdavar', title: 'Liqui Moly supply services', desc: 'Your supply partner — not just a price list' },
         faq: { eyebrow: 'FAQ', title: 'Common buyer questions', desc: 'Didn’t find your answer? Message us on WhatsApp.' }
-      }, rateNote: { strong: '', body: '' }, officialNote: 'Technical information is based on the <a href="https://www.liqui-moly.com/" target="_blank" rel="noopener noreferrer">official Liqui Moly website</a>. To order — <a href="contact">contact Bizdavar</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'Ready to order Liqui Moly?', desc: 'Send product name or SKU — Octane Plus · Top Tec · Molygen · diesel additives', btnForm: 'Quote form', btnServices: 'Product catalog' }, sticky: { label: 'Liqui Moly quote', hint: 'USD pricing · Farsi consulting' }, geoText: 'Genuine Liqui Moly supply — transparent USD pricing, Farsi consulting and international logistics for oils, additives and car care.', related: [{ title: 'VEGA products', desc: 'Industrial level and pressure sensors' }, { title: 'Prosense products', desc: 'Gas and flame detectors' }, { title: 'Product catalog', desc: 'B2B supply brands' }, { title: 'Contact', desc: 'Liqui Moly price inquiry' }] }
+      }, rateNote: { strong: '', body: '' }, officialNote: 'Technical information is based on the <a href="https://www.liqui-moly.com/" target="_blank" rel="noopener noreferrer">official Liqui Moly website</a>. To order — <a href="contact">contact Bizdavar</a> · <a href="articles/liqui-moly-supply-iran">Liqui Moly guide</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'Ready to order Liqui Moly?', desc: 'Send product name or SKU — Octane Plus · Top Tec · Molygen · diesel additives', btnForm: 'Quote form', btnServices: 'Product catalog' }, sticky: { label: 'Liqui Moly quote', hint: 'USD pricing · Farsi consulting' }, geoText: 'Genuine Liqui Moly supply — transparent USD pricing, Farsi consulting and international logistics for oils, additives and car care.', related: [{ title: 'VEGA products', desc: 'Industrial level and pressure sensors' }, { title: 'Prosense products', desc: 'Gas and flame detectors' }, { title: 'Product catalog', desc: 'B2B supply brands' }, { title: 'Contact', desc: 'Liqui Moly price inquiry' }] }
     }
   };
 
   const blogPosts = {
     fa: [
+      ['طراحی سایت انگلیسی برای اروپا و آمریکا — فاکتور دلار یا یورو', 'پلن ۵روزه از ۹۹ دلار، Stripe و فاکتور USD/EUR برای مشتری آمریکا و اروپا.', 'طراحی وب'],
+      ['بازاریابی دیجیتال برای بازار آمریکا و اروپا — بودجه دلار و یورو', 'Google Ads، Meta و LinkedIn با فاکتور دلار یا یورو و گزارش GA4.', 'بازاریابی دیجیتال'],
+      ['خرید VEGAPULS 6X در ایران — قیمت، کد سفارش و استعلام', 'چطور سنسور سطح راداری اصل برای مخزن ایران بخرید — پیش‌فاکتور فارسی و واتساپ.', 'تجهیزات صنعتی'],
+      ['استعلام قیمت سنسور VEGA در ایران — چه اطلاعاتی بفرستید', 'چک‌لیست خریدار: مخزن، رسانه، Ex/SIL و عکس پلاک برای پیش‌فاکتور دقیق.', 'تجهیزات صنعتی'],
+      ['خرید دتکتور گاز Prosense در ایران — PQ، SafeVader و SIL', 'دتکتور گاز صنعتی اصل برای نفت، پتروشیمی و HVAC — استعلام واتساپ فارسی.', 'تجهیزات صنعتی'],
+      ['بازرگانی تجهیزات صنعتی در ایران — VEGA، Prosense و برندهای اصل', 'یک نقطه تماس فارسی برای ابزار دقیق، ایمنی گاز، ردیاب و روغن صنعتی.', 'تجهیزات صنعتی'],
+      ['خرید ردیاب Teltonika FMB920 در ایران — از ۲۹ دلار', 'ردیاب GPS اصل برای ناوگان ایران — FMB920، FMC650 و DualCam.', 'تجهیزات صنعتی'],
+      ['خرید الکتروموتور Gamak در ایران — توان، فلنج و استعلام', 'موتور اصل برای پمپ، فن و خط تولید — kW، دور، B3/B5 و پیش‌فاکتور فارسی.', 'تجهیزات صنعتی'],
+      ['خرید ترازو و POS Digi System در ایران — فروشگاه و صندوق', 'ترازو و صندوق اصل برای سوپرمارکت ایران — نوع فروشگاه و پیش‌فاکتور فارسی.', 'تجهیزات صنعتی'],
+      ['خرید ترازو Teraoka در ایران — deli، POS و برچسب‌زن', 'ترازو و برچسب‌زن اصل Teraoka Seiko برای فروشگاه و آشپزخانه.', 'تجهیزات صنعتی'],
       ['تامین سنسور VEGA در ایران — از استعلام تا پروژه صنعتی', 'مسیر مشاوره فارسی، پیش‌فاکتور و لجستیک اصل VEGA برای پروژه‌های ایران.', 'تجهیزات صنعتی'],
       ['وبسایت چندزبانه برای بازار ایران و ترکیه', 'hreflang، اعتماد محلی و تحویل سریع برای کسب‌وکارهای دو بازاری.', 'طراحی وب'],
       ['دیجیتال مارکتینگ چیست؟ — راهنمای کامل برای کسب‌وکارها', 'سئو، گوگل ادز، SMM و سنجش لید — مسیر عملی برای ایران و ترکیه.', 'بازاریابی دیجیتال'],
@@ -791,6 +811,16 @@
       ['FXGuard Exchange — پلتفرم صرافی و OTC', 'نمونه‌کار فین‌تک: KYC، کیف پول، OTC و پنل ادمین — توسعه بیزدوار.', 'فین‌تک']
     ],
     tr: [
+      ['Avrupa ve ABD için İngilizce web tasarım — USD veya EUR fatura', '5 günde $99’dan, Stripe ve ABD/AB müşteri için USD/EUR fatura.', 'Web tasarım'],
+      ['ABD ve AB için dijital pazarlama — USD ve EUR bütçe', 'Google Ads, Meta ve LinkedIn — USD/EUR fatura ve GA4.', 'Dijital pazarlama'],
+      ['İran’da VEGAPULS 6X satın al — fiyat, sipariş kodu, teklif', 'Orijinal radar seviye sensörünü İran tankı için nasıl alırsınız — Farsça proforma.', 'Endüstriyel ekipman'],
+      ['İran’da VEGA fiyat teklifi — ne göndermelisiniz', 'Alıcı kontrol listesi: tank, ortam, Ex/SIL ve etiket fotoğrafı.', 'Endüstriyel ekipman'],
+      ['İran’da Prosense gaz dedektörü — PQ, SafeVader ve SIL', 'Petrol ve HVAC için orijinal gaz dedektörü — WhatsApp teklifi.', 'Endüstriyel ekipman'],
+      ['İran’da endüstriyel ticaret — VEGA, Prosense ve orijinal markalar', 'Ölçüm, gaz güvenliği, GPS ve yağ için tek Farsça iletişim.', 'Endüstriyel ekipman'],
+      ['İran’da Teltonika FMB920 — 29$’dan', 'İran filoları için orijinal GPS — FMB920, FMC650 ve DualCam.', 'Endüstriyel ekipman'],
+      ['İran’da Gamak motor — kW, flanş, teklif', 'Pompa ve hat için orijinal motor — Farsça proforma.', 'Endüstriyel ekipman'],
+      ['İran’da Digi System terazi ve POS — mağaza ve kasa', 'Orijinal terazi ve kasa — mağaza türü ve Farsça proforma.', 'Endüstriyel ekipman'],
+      ['İran’da Teraoka terazi — deli, POS, etiketleme', 'Orijinal Teraoka Seiko — mağaza ve mutfak.', 'Endüstriyel ekipman'],
       ['İran’da VEGA sensör tedariki — sorgudan sahaya', 'Farsça danışmanlık, proforma ve orijinal VEGA lojistiği.', 'Endüstriyel ekipman'],
       ['İran ve Türkiye pazarı için çok dilli web sitesi', 'hreflang, yerel güven ve hızlı teslimat.', 'Web tasarım'],
       ['Dijital pazarlama nedir? İşletmeler için tam rehber', 'SEO, Google Ads, SMM ve lead ölçümü — İran ve Türkiye için pratik yol.', 'Dijital pazarlama'],
@@ -810,6 +840,16 @@
       ['FXGuard Exchange — borsa ve OTC platformu', 'Fintech vaka: KYC, cüzdan, OTC ve admin paneli.', 'Fintech']
     ],
     en: [
+      ['English website design for US and EU businesses — billed in USD or EUR', '5-day plans from $99 / ~€90, Stripe, Zoom/Meet and invoices in dollars or euros.', 'Web design'],
+      ['Digital marketing for US and EU markets — budgets in USD and EUR', 'Google Ads, Meta and LinkedIn with USD/EUR billing and GA4 reporting.', 'Digital marketing'],
+      ['Buy VEGAPULS 6X in Iran — price, order code and quote', 'How to buy a genuine radar level sensor for an Iran tank — Persian proforma.', 'Industrial equipment'],
+      ['VEGA sensor quote in Iran — what to send', 'Buyer checklist: tank, medium, Ex/SIL and nameplate photo for an accurate proforma.', 'Industrial equipment'],
+      ['Buy Prosense gas detectors in Iran — PQ, SafeVader and SIL', 'Genuine industrial gas detectors for oil, petrochem and HVAC — WhatsApp quote.', 'Industrial equipment'],
+      ['Industrial trade in Iran — VEGA, Prosense and genuine brands', 'One Persian contact for instrumentation, gas safety, GPS and industrial oil.', 'Industrial equipment'],
+      ['Buy Teltonika FMB920 in Iran — from $29', 'Genuine GPS trackers for Iran fleets — FMB920, FMC650 and DualCam.', 'Industrial equipment'],
+      ['Buy Gamak motors in Iran — kW, flange, quote', 'Genuine motors for pumps and lines — Persian proforma.', 'Industrial equipment'],
+      ['Buy Digi System scales and POS in Iran — store and checkout', 'Genuine scales and checkout for Iran stores — Persian proforma.', 'Industrial equipment'],
+      ['Buy Teraoka scales in Iran — deli, POS and labeling', 'Genuine Teraoka Seiko for stores and kitchens.', 'Industrial equipment'],
       ['VEGA sensor supply to Iran — from inquiry to site', 'Persian consulting, proforma invoice, and original VEGA logistics.', 'Industrial equipment'],
       ['Multilingual websites for Iran and Turkey markets', 'hreflang, local trust signals, and fast delivery for dual-market businesses.', 'Web design'],
       ['What is digital marketing? A complete guide for businesses', 'SEO, Google Ads, SMM and lead measurement — a practical path for Iran and Turkey.', 'Digital marketing'],
@@ -2052,6 +2092,16 @@
   };
 
   const articleSlugs = [
+    'website-design-us-eu',
+    'digital-marketing-us-eu',
+    'buy-vegapuls-iran',
+    'vega-quote-iran',
+    'buy-prosense-iran',
+    'industrial-trade-iran',
+    'buy-teltonika-iran',
+    'buy-gamak-iran',
+    'buy-digi-system-iran',
+    'buy-teraoka-iran',
     'vega-supply-iran',
     'multilingual-web-iran-turkey',
     'what-is-digital-marketing',

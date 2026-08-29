@@ -10,7 +10,7 @@ const OUT = path.join(__dirname, '..', 'robots.txt');
 const BASE = 'https://bizdavar.com';
 
 const content = `# Bizdavar Group — ${BASE}
-# Public locale URLs: fa (root), tr/en/ru/ar — see sitemap.xml
+# Public locale URLs: fa (root), tr/en/ru/ar — see sitemap.xml and llms.txt
 
 User-agent: *
 Allow: /
@@ -18,6 +18,31 @@ Allow: /
 # Private surfaces
 Disallow: /admin/
 Disallow: /api/
+
+# AI / answer-engine crawlers — same public content as Google
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
 
 Sitemap: ${BASE}/sitemap.xml
 

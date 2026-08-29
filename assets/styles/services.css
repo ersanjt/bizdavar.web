@@ -1396,3 +1396,111 @@
   .service-block__visual--field { padding: 20px 16px; }
   .services-path { min-height: 0; }
 }
+
+/* EU / US markets block */
+.services-intl {
+  padding-block: clamp(40px, 6vw, 72px);
+  background:
+    linear-gradient(165deg, rgba(22, 22, 63, 0.04) 0%, rgba(255, 255, 255, 0) 40%),
+    var(--white);
+}
+
+.services-intl__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 24px);
+  margin-top: 8px;
+}
+
+.services-intl__point {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: 0 8px 28px rgba(22, 22, 63, 0.04);
+}
+
+.services-intl__point h3 {
+  margin: 0 0 8px;
+  font-size: var(--text-lg);
+  color: var(--navy);
+}
+
+.services-intl__point p {
+  margin: 0;
+  color: var(--gray-700);
+  line-height: 1.7;
+}
+
+.services-intl__offers {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 24px);
+  margin-top: var(--space-8);
+}
+
+.services-intl__offer {
+  display: flex;
+  flex-direction: column;
+  background: var(--navy);
+  color: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  min-height: 100%;
+}
+
+.services-intl__offer h3 {
+  margin: 0 0 6px;
+  color: var(--yellow);
+  font-size: var(--text-lg);
+}
+
+.services-intl__price {
+  font-weight: 800;
+  font-size: var(--text-xl);
+  margin-bottom: 10px;
+  unicode-bidi: isolate;
+}
+
+.services-intl__offer p {
+  margin: 0 0 auto;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.7;
+}
+
+.services-intl__offer .btn {
+  margin-top: 18px;
+  align-self: flex-start;
+}
+
+.services-intl__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: var(--space-8);
+}
+
+.services-intl__note {
+  margin-top: 16px;
+  color: var(--gray-600);
+  font-size: var(--text-sm);
+}
+
+@media (max-width: 1024px) {
+  .services-intl__grid,
+  .services-intl__offers {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-intl__grid,
+  .services-intl__offers {
+    grid-template-columns: 1fr;
+  }
+
+  .services-hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -34,9 +34,9 @@
   var pageSeoRu = {
     home: {
       crumb: 'Главная',
-      seoTitle: 'Bizdavar Group | цифровые услуги и промышленные поставки',
-      seoDescription: 'Цифровые услуги, собственные продукты и поставки VEGA / Prosense / Liqui Moly. Выберите путь — бесплатная консультация в WhatsApp.',
-      seoKeywords: 'Bizdavar Group, цифровые услуги, промышленные поставки, VEGA, Prosense, Fast Web Studio'
+      seoTitle: 'Купить VEGA и Prosense в Иране | Bizdavar',
+      seoDescription: 'Оригинальные датчики VEGA, детекторы Prosense, Liqui Moly и Teltonika для проектов в Иране. Проформа и WhatsApp.',
+      seoKeywords: 'купить VEGA Иран, Prosense, датчик уровня, промышленная торговля, Bizdavar'
     },
     about: {
       crumb: 'О нас',
@@ -52,9 +52,9 @@
     },
     services: {
       crumb: 'Услуги',
-      seoTitle: 'Веб-дизайн и маркетинг | Bizdavar',
-      seoDescription: 'Сайт за 5 дней, SEO, SMM, приложения, серверы и монтаж в Тебризе. Бесплатная консультация — запросите расчёт в WhatsApp.',
-      seoKeywords: 'веб-дизайн, цифровой маркетинг, SEO, SMM, Bizdavar'
+      seoTitle: 'Веб-дизайн для США и ЕС | от $99 — Bizdavar',
+      seoDescription: 'Английские сайты, web app и маркетинг для клиентов в США и ЕС. Счёт в USD или EUR. Сайт за 5 дней от $99 / ~€90, Stripe, пересечение CET/EST. Бесплатная оценка.',
+      seoKeywords: 'веб-дизайн США, веб-дизайн ЕС, сайт от $99, EUR web design, Fast Web Studio, Bizdavar'
     },
     fieldTech: {
       crumb: 'Технические услуги',
@@ -70,9 +70,9 @@
     },
     contact: {
       crumb: 'Контакты',
-      seoTitle: 'Бесплатная консультация и расчёт | WhatsApp Bizdavar',
-      seoDescription: 'Запрос VEGA, Prosense или сайта — форма или WhatsApp. Ответ в рабочие часы.',
-      seoKeywords: 'бесплатная консультация, расчёт VEGA, WhatsApp Bizdavar, контакты Bizdavar'
+      seoTitle: 'Запрос VEGA, Prosense и Gamak | WhatsApp',
+      seoDescription: 'VEGA, Prosense, Teltonika, Liqui Moly и двигатели Gamak для проектов в Иране — WhatsApp. Английский сайт — счёт USD/EUR.',
+      seoKeywords: 'запрос VEGA, Prosense, Gamak, Bizdavar WhatsApp'
     },
     liquiMoly: {
       crumb: 'Продукция Liqui Moly',
@@ -100,9 +100,9 @@
     },
     fast: {
       crumb: 'Fast Web Studio',
-      seoTitle: 'Сайт за 5 дней от $99 | Fast Web Studio',
-      seoDescription: 'Корпоративный, магазин и лендинг за 5 рабочих дней. Тарифы $99 / $199 / $299 — RTL, WhatsApp и базовое SEO. Заказ у Bizdavar.',
-      seoKeywords: 'сайт за 5 дней, дешёвый веб-дизайн, Fast Web Studio, WooCommerce, Bizdavar'
+      seoTitle: 'Английский сайт за 5 дней от $99 / ~€90 | Fast Web Studio',
+      seoDescription: 'Корпоративный, магазин и лендинг для бизнеса США и ЕС за 5 рабочих дней. $99 / $199 / $299 — Stripe, хостинг с учётом GDPR, счёт USD или EUR.',
+      seoKeywords: 'сайт за 5 дней, веб-дизайн США, веб-дизайн ЕС, Fast Web Studio, Stripe, Bizdavar'
     },
     blog: {
       crumb: 'Блог',
@@ -250,9 +250,9 @@
     },
     articleFastStudio: {
       crumb: 'Fast Studio',
-      seoTitle: 'Запуск сайта за 5 дней — гайд Fast Studio | Bizdavar',
-      seoDescription: 'Полный гайд Fast Web Studio: тарифы $99–$299, сдача за 5 дней, WooCommerce и базовое SEO.',
-      seoKeywords: 'Fast Web Studio, сайт за 5 дней, WooCommerce, Bizdavar'
+      seoTitle: 'Английский сайт за 5 дней — Fast Studio для США и ЕС | Bizdavar',
+      seoDescription: 'Fast Web Studio от $99 / ~€90: английский LTR, Stripe, Zoom/Meet и счёт в USD или EUR.',
+      seoKeywords: 'Fast Web Studio, сайт за 5 дней, веб-дизайн США, счёт EUR, Bizdavar'
     },
     articleIndustrialSensors: {
       crumb: 'Датчики VEGA',
@@ -272,6 +272,66 @@
       seoDescription: 'Как закупить оригинальные датчики VEGA для проектов в Иране — консультация, код заказа, проформа и логистика до объекта. Bizdavar Group.',
       seoKeywords: 'купить VEGA Иран, поставка VEGA, VEGAPULS, Bizdavar'
     },
+    articleBuyVegapulsIran: {
+      crumb: 'VEGAPULS 6X',
+      seoTitle: 'Купить VEGAPULS 6X в Иране | расчёт',
+      seoDescription: 'Оригинальный VEGAPULS 6X для резервуаров в Иране: код заказа, проформа и логистика — Bizdavar.',
+      seoKeywords: 'купить VEGAPULS 6X, радарный уровнемер, VEGA Иран, Bizdavar'
+    },
+    articleVegaQuoteIran: {
+      crumb: 'Запрос VEGA',
+      seoTitle: 'Запрос цены VEGA в Иране | чек-лист',
+      seoDescription: 'Что прислать для проформы VEGA: резервуар, среда, Ex/SIL и фото шильдика.',
+      seoKeywords: 'запрос VEGA, VEGABAR, проформа, Bizdavar'
+    },
+    articleBuyProsenseIran: {
+      crumb: 'Prosense Иран',
+      seoTitle: 'Купить Prosense в Иране | PQ и SafeVader',
+      seoDescription: 'Оригинальные газовые детекторы Prosense для нефти и HVAC в Иране — SIL и WhatsApp.',
+      seoKeywords: 'купить Prosense, газовый детектор, PQ, Bizdavar'
+    },
+    articleIndustrialTradeIran: {
+      crumb: 'Промторговля',
+      seoTitle: 'Промышленная торговля в Иране | VEGA и Prosense',
+      seoDescription: 'Оригинальные поставки КИП, газовой безопасности, GPS и масел для Ирана.',
+      seoKeywords: 'промторговля Иран, VEGA Prosense, Bizdavar'
+    },
+    articleBuyTeltonikaIran: {
+      crumb: 'Teltonika Иран',
+      seoTitle: 'Купить Teltonika FMB920 в Иране | от $29',
+      seoDescription: 'Оригинальный GPS Teltonika для автопарков Ирана: FMB920 от $29, FMC650 и DualCam.',
+      seoKeywords: 'купить Teltonika Иран, FMB920, GPS, Bizdavar'
+    },
+    articleBuyGamakIran: {
+      crumb: 'Gamak Иран',
+      seoTitle: 'Купить двигатель Gamak в Иране | кВт и фланец',
+      seoDescription: 'Оригинальный Gamak для насосов и линий в Иране: кВт, об/мин, B3/B5 и IE — проформа.',
+      seoKeywords: 'купить Gamak Иран, IE3, фланец B5, Bizdavar'
+    },
+    articleBuyDigiIran: {
+      crumb: 'Digi Иран',
+      seoTitle: 'Купить весы Digi System в Иране | POS',
+      seoDescription: 'Оригинальные весы и POS Digi для магазинов Ирана: тип магазина и число касс.',
+      seoKeywords: 'купить Digi Иран, POS весы, Bizdavar'
+    },
+    articleBuyTeraokaIran: {
+      crumb: 'Teraoka Иран',
+      seoTitle: 'Купить весы Teraoka в Иране | deli и POS',
+      seoDescription: 'Оригинальные весы Teraoka Seiko для магазинов Ирана — тип, грузоподъёмность, проформа.',
+      seoKeywords: 'купить Teraoka Иран, deli весы, Bizdavar'
+    },
+    articleWebsiteDesignUsEu: {
+      crumb: 'Веб-дизайн США и ЕС',
+      seoTitle: 'Английский веб-дизайн для США и ЕС | от $99',
+      seoDescription: 'Как заказать английский сайт: тарифы от $99 / ~€90, Stripe, Zoom/Meet и счёт в USD или EUR — Bizdavar.',
+      seoKeywords: 'веб-дизайн США, веб-дизайн ЕС, сайт от $99, Fast Web Studio, Bizdavar'
+    },
+    articleDigitalMarketingUsEu: {
+      crumb: 'Маркетинг США/ЕС',
+      seoTitle: 'Маркетинг для США и ЕС | бюджет USD и EUR',
+      seoDescription: 'Google Ads, Meta и LinkedIn для аудиторий США/ЕС — счёт в USD или EUR, английский лендинг и GA4.',
+      seoKeywords: 'Google Ads ЕС, маркетинг США, LinkedIn Ads, Bizdavar'
+    },
     articleMultilingualWeb: {
       crumb: 'Многоязычный сайт',
       seoTitle: 'Многоязычные сайты для Ирана и Турции | Bizdavar',
@@ -283,9 +343,9 @@
   var pageSeoAr = {
     home: {
       crumb: 'الرئيسية',
-      seoTitle: 'Bizdavar Group | خدمات رقمية وتوريد صناعي',
-      seoDescription: 'خدمات رقمية ومنتجاتنا وتوريد VEGA وProsense وLiqui Moly. اختر مسارك — استشارة مجانية عبر واتساب.',
-      seoKeywords: 'Bizdavar Group, خدمات رقمية, توريد صناعي, VEGA, Prosense, Fast Web Studio'
+      seoTitle: 'شراء VEGA وProsense في إيران | Bizdavar',
+      seoDescription: 'حساسات VEGA وكواشف Prosense وLiqui Moly وTeltonika لمشاريع إيران. فاتورة مبدئية وواتساب.',
+      seoKeywords: 'شراء VEGA إيران, Prosense, حساس مستوى, تجارة صناعية, بيزدوار'
     },
     about: {
       crumb: 'من نحن',
@@ -301,9 +361,9 @@
     },
     services: {
       crumb: 'الخدمات',
-      seoTitle: 'تصميم مواقع وتسويق رقمي | Bizdavar',
-      seoDescription: 'موقع خلال ٥ أيام، SEO وSMM وتطبيقات وخوادم وتركيبات فنية في تبريز. استشارة مجانية — اطلب عرض سعر عبر واتساب.',
-      seoKeywords: 'تصميم مواقع, تسويق رقمي, SEO, SMM, Bizdavar'
+      seoTitle: 'تصميم مواقع لأمريكا وأوروبا | من ٩٩$ — Bizdavar',
+      seoDescription: 'مواقع إنجليزية وويب آب وتسويق رقمي لعملاء US/EU بفاتورة دولار أو يورو. موقع خلال ٥ أيام من ٩٩$ / ~€90 وStripe وتداخل CET/EST. عرض مجاني.',
+      seoKeywords: 'تصميم مواقع أمريكا, تصميم مواقع أوروبا, موقع من 99 دولار, Fast Web Studio, Bizdavar'
     },
     fieldTech: {
       crumb: 'خدمات فنية',
@@ -319,9 +379,9 @@
     },
     contact: {
       crumb: 'اتصل بنا',
-      seoTitle: 'استشارة مجانية وعرض سعر | واتساب Bizdavar',
-      seoDescription: 'استعلام VEGA أو Prosense أو تصميم موقع — نموذج أو واتساب. الرد خلال ساعات العمل.',
-      seoKeywords: 'استشارة مجانية, عرض سعر VEGA, واتساب Bizdavar, اتصال Bizdavar'
+      seoTitle: 'استعلام VEGA وProsense وGamak | واتساب',
+      seoDescription: 'استعلام VEGA وProsense وTeltonika وLiqui Moly ومحركات Gamak لمشاريع إيران عبر واتساب. المواقع الإنجليزية بفاتورة USD أو EUR.',
+      seoKeywords: 'استعلام VEGA, Prosense, Gamak, واتساب بيزدوار'
     },
     liquiMoly: {
       crumb: 'منتجات Liqui Moly',
@@ -349,9 +409,9 @@
     },
     fast: {
       crumb: 'Fast Web Studio',
-      seoTitle: 'موقع خلال ٥ أيام من ٩٩ دولار | Fast Web Studio',
-      seoDescription: 'موقع شركات ومتجر ولاندينغ خلال ٥ أيام عمل. باقات $99 / $199 / $299 — RTL وواتساب وSEO أساسي. اطلب من Bizdavar.',
-      seoKeywords: 'تصميم مواقع ٥ أيام, تصميم مواقع رخيص, Fast Web Studio, WooCommerce, Bizdavar'
+      seoTitle: 'موقع إنجليزي خلال ٥ أيام من ٩٩$ / ~€90 | Fast Web Studio',
+      seoDescription: 'موقع شركات ومتجر ولاندينغ لأعمال أمريكا وأوروبا خلال ٥ أيام عمل. $99 / $199 / $299 — Stripe واستضافة تراعي GDPR وفاتورة USD أو EUR.',
+      seoKeywords: 'تصميم مواقع ٥ أيام, تصميم مواقع أمريكا, تصميم مواقع أوروبا, Fast Web Studio, Stripe, Bizdavar'
     },
     blog: {
       crumb: 'المدونة',
@@ -499,9 +559,9 @@
     },
     articleFastStudio: {
       crumb: 'Fast Studio',
-      seoTitle: 'إطلاق موقع خلال ٥ أيام — دليل Fast Studio | Bizdavar',
-      seoDescription: 'دليل Fast Web Studio الكامل: خطط ٩٩$–٢٩٩$، تسليم خلال ٥ أيام، WooCommerce وSEO أساسي.',
-      seoKeywords: 'Fast Web Studio, موقع خلال ٥ أيام, WooCommerce, Bizdavar'
+      seoTitle: 'موقع إنجليزي خلال ٥ أيام — Fast Studio لأمريكا وأوروبا | Bizdavar',
+      seoDescription: 'Fast Web Studio من ٩٩$ / ~€90: مواقع إنجليزية LTR وStripe وZoom وفاتورة USD أو EUR.',
+      seoKeywords: 'Fast Web Studio, موقع خلال ٥ أيام, تصميم مواقع أمريكا, فاتورة يورو, بيزدوار'
     },
     articleIndustrialSensors: {
       crumb: 'حساسات VEGA',
@@ -521,6 +581,66 @@
       seoDescription: 'كيف تشتري حساسات VEGA الأصلية لمشاريع إيران — استشارة ورمز طلب وفاتورة مبدئية ولوجستيات حتى موقع التركيب. Bizdavar Group.',
       seoKeywords: 'شراء VEGA إيران, توريد VEGA, VEGAPULS, Bizdavar'
     },
+    articleBuyVegapulsIran: {
+      crumb: 'VEGAPULS 6X',
+      seoTitle: 'شراء VEGAPULS 6X في إيران | عرض سعر',
+      seoDescription: 'VEGAPULS 6X أصلي لخزانات إيران: رمز الطلب وفاتورة مبدئية ولوجستيات — بيزدوار.',
+      seoKeywords: 'شراء VEGAPULS 6X, حساس مستوى راداري, VEGA إيران, بيزدوار'
+    },
+    articleVegaQuoteIran: {
+      crumb: 'استعلام VEGA',
+      seoTitle: 'استعلام سعر VEGA في إيران | قائمة الشراء',
+      seoDescription: 'ماذا ترسلون لفاتورة VEGA: الخزان والوسط وEx/SIL وصورة اللوحة.',
+      seoKeywords: 'استعلام VEGA, VEGABAR, فاتورة مبدئية, بيزدوار'
+    },
+    articleBuyProsenseIran: {
+      crumb: 'Prosense إيران',
+      seoTitle: 'شراء Prosense في إيران | PQ وSafeVader',
+      seoDescription: 'كواشف غاز Prosense الأصلية للنفط وHVAC في إيران — SIL وواتساب.',
+      seoKeywords: 'شراء Prosense, كاشف غاز, PQ, بيزدوار'
+    },
+    articleIndustrialTradeIran: {
+      crumb: 'تجارة صناعية',
+      seoTitle: 'التجارة الصناعية في إيران | VEGA وProsense',
+      seoDescription: 'توريد أصلي لأجهزة القياس وسلامة الغاز وGPS والزيوت لمشاريع إيران.',
+      seoKeywords: 'تجارة صناعية إيران, VEGA Prosense, بيزدوار'
+    },
+    articleBuyTeltonikaIran: {
+      crumb: 'Teltonika إيران',
+      seoTitle: 'شراء Teltonika FMB920 في إيران | من ٢٩$',
+      seoDescription: 'GPS أصلي من Teltonika لأساطيل إيران: FMB920 من ٢٩$ وFMC650 وDualCam.',
+      seoKeywords: 'شراء Teltonika إيران, FMB920, GPS, بيزدوار'
+    },
+    articleBuyGamakIran: {
+      crumb: 'Gamak إيران',
+      seoTitle: 'شراء محرك Gamak في إيران | القدرة والشفة',
+      seoDescription: 'محرك Gamak أصلي للمضخات والخطوط في إيران: كيلوواط ولفة وB3/B5 وفئة IE — فاتورة مبدئية.',
+      seoKeywords: 'شراء Gamak إيران, IE3, شفة B5, بيزدوار'
+    },
+    articleBuyDigiIran: {
+      crumb: 'Digi إيران',
+      seoTitle: 'شراء موازين Digi System في إيران | POS',
+      seoDescription: 'موازين وPOS أصلية من Digi لمتاجر إيران: نوع المتجر وعدد الصناديق.',
+      seoKeywords: 'شراء Digi إيران, ميزان POS, بيزدوار'
+    },
+    articleBuyTeraokaIran: {
+      crumb: 'Teraoka إيران',
+      seoTitle: 'شراء موازين Teraoka في إيران | دلّي وPOS',
+      seoDescription: 'موازين Teraoka Seiko أصلية لمتاجر إيران — النوع والسعة وفاتورة مبدئية.',
+      seoKeywords: 'شراء Teraoka إيران, ميزان دلّي, بيزدوار'
+    },
+    articleWebsiteDesignUsEu: {
+      crumb: 'تصميم ويب أمريكا وأوروبا',
+      seoTitle: 'تصميم مواقع إنجليزية لأمريكا وأوروبا | من ٩٩$',
+      seoDescription: 'كيف تطلب موقعاً إنجليزياً: باقات من ٩٩$ / ~€90 وStripe وZoom وفاتورة USD أو EUR — Bizdavar.',
+      seoKeywords: 'تصميم مواقع أمريكا, تصميم مواقع أوروبا, موقع من 99 دولار, Fast Web Studio, بيزدوار'
+    },
+    articleDigitalMarketingUsEu: {
+      crumb: 'تسويق أمريكا/أوروبا',
+      seoTitle: 'تسويق رقمي لأمريكا وأوروبا | ميزانية دولار ويورو',
+      seoDescription: 'إعلانات Google وMeta وLinkedIn لجمهور US/EU — فاتورة USD أو EUR وصفحات إنجليزية وGA4.',
+      seoKeywords: 'إعلانات جوجل أوروبا, تسويق أمريكا, LinkedIn, بيزدوار'
+    },
     articleMultilingualWeb: {
       crumb: 'موقع متعدد اللغات',
       seoTitle: 'مواقع متعددة اللغات لإيران وتركيا | Bizdavar',
@@ -534,11 +654,17 @@
     heroTitle: 'Bizdavar делает три отдельные вещи',
     heroTitleSpan: '',
     heroTitleEnd: '',
-    heroDesc: 'Цифровые услуги, свои продукты или промышленные поставки. Сначала выберите путь — бесплатная консультация.',
-    intentNavLabel: 'Популярные страницы',
+    heroDesc: 'Цифровые услуги для США и ЕС — английские сайты от $99, счёт в USD или EUR — или поставки в Иран. Сначала выберите путь.',
+    intentNavLabel: 'Сайт, реклама или поставка в Иран',
     intentVega: 'Купить VEGA',
+    intentLiqui: 'Liqui Moly',
+    intentTeltonika: 'Teltonika GPS',
+    intentGamak: 'Двигатель Gamak',
+    intentDigi: 'Весы Digi',
+    intentTeraoka: 'Весы Teraoka',
+    viewSupply: 'Каталог поставок',
     intentProsense: 'Детектор Prosense',
-    intentFast: 'Сайт за 5 дней',
+    intentFast: 'Английский сайт от $99',
     intentQuote: 'Бесплатный расчёт',
     viewServices: 'Смотреть услуги',
     hero3dHint: 'Наведите на категории — гид смотрит на них · клик для входа',
@@ -556,7 +682,7 @@
     statYears: 'Лет опыта',
     featSectionTitle: 'Почему Bizdavar',
     featFast: 'Быстрая поставка',
-    featFastDesc: 'Fast Web Studio — сайт за 5 дней',
+    featFastDesc: 'Английские сайты от $99 / ~€90 за 5 дней',
     featGlobal: 'Глобальный охват',
     featGlobalDesc: 'Проекты в Иране, Турции и мире',
     featIndustrial: 'Промышленная экспертиза',
@@ -595,15 +721,16 @@
     blogTitle: 'Последние статьи',
     blogAll: 'Все материалы блога',
     faqTitle: 'Частые вопросы',
-    ctaTitle: 'Нужен расчёт VEGA или новый сайт?',
+    ctaTitle: 'Нужен расчёт VEGA, Prosense или Gamak?',
     ctaDesc: 'Напишите в WhatsApp — бесплатная консультация',
     ctaForm: 'Запросить расчёт',
     faqs: [
-      { q: 'Как купить оригинальные датчики VEGA для проекта в Иране?', a: 'Выберите модель на <a href="/ru/pages/vega">странице VEGA</a> или пришлите данные резервуара в WhatsApp. Bizdavar выдаёт order code, проформу и логистику.' },
+      { q: 'Как купить оригинальные датчики VEGA для проекта в Иране?', a: 'Выберите модель на <a href="/ru/pages/vega">странице VEGA</a> или пришлите данные резервуара в WhatsApp. Гид: <a href="/ru/pages/articles/buy-vegapuls-iran">VEGAPULS в Иране</a>.' },
+      { q: 'Где взять газовые детекторы Prosense?', a: 'Оригинальные PQ, SafeVader и PPS+ с сертификатами SIL. Каталог: <a href="/ru/pages/prosense">Prosense</a>. Гид: <a href="/ru/pages/articles/buy-prosense-iran">Prosense в Иране</a>.' },
+      { q: 'Как купить двигатель Gamak для Ирана?', a: 'Пришлите кВт, об/мин и фланец B3/B5 в WhatsApp. Каталог: <a href="/ru/pages/gamak">Gamak</a>. Гид: <a href="/ru/pages/articles/buy-gamak-iran">двигатели Gamak в Иране</a>.' },
+      { q: 'Как купить весы Digi или Teraoka для магазина в Иране?', a: 'Пришлите тип магазина и число касс. Гиды: <a href="/ru/pages/articles/buy-digi-system-iran">Digi</a> и <a href="/ru/pages/articles/buy-teraoka-iran">Teraoka</a>.' },
       { q: 'Сколько стоит сайт Fast Web Studio?', a: 'Базовый $99, магазин $199, pro $299 — детали на <a href="/ru/pages/fast">Fast Web Studio</a>. Сдача от 5 рабочих дней, RTL и базовое SEO.' },
-      { q: 'Где взять газовые детекторы Prosense?', a: 'Оригинальные PQ, SafeVader и PPS+ с сертификатами SIL. Каталог: <a href="/ru/pages/prosense">Prosense</a>. Расчёт в WhatsApp на фарси или турецком.' },
-      { q: 'Как начинается бесплатная консультация?', a: 'Оставьте WhatsApp в <a href="/ru/pages/contact">форме</a> или напишите напрямую. Отвечаем в рабочие часы.' },
-      { q: 'Где работает Bizdavar?', a: 'Координация по Ирану в Тебризе, проекты в 11 странах — цифровые услуги и промышленные поставки.' }
+      { q: 'Как начинается бесплатная консультация?', a: 'Оставьте WhatsApp в <a href="/ru/pages/contact">форме</a> или напишите напрямую. Отвечаем в рабочие часы.' }
     ]
   };
 
@@ -612,13 +739,19 @@
     heroTitle: 'بيزدوار يعمل في ثلاثة مجالات منفصلة',
     heroTitleSpan: '',
     heroTitleEnd: '',
-    heroDesc: 'خدمات رقمية، منتجاتنا، أو توريد صناعي. اختر مسارك أولاً — استشارة مجانية.',
-    intentNavLabel: 'صفحات مطلوبة',
+    heroDesc: 'خدمات رقمية لأمريكا وأوروبا — مواقع إنجليزية من ٩٩$ بفاتورة USD أو EUR — أو توريد لإيران. اختر المسار أولاً.',
+    intentNavLabel: 'شراء سريع لمشاريع إيران',
     intentVega: 'شراء VEGA',
     intentProsense: 'كاشف Prosense',
-    intentFast: 'موقع خلال ٥ أيام',
+    intentLiqui: 'Liqui Moly',
+    intentTeltonika: 'Teltonika GPS',
+    intentGamak: 'محرك Gamak',
+    intentDigi: 'ميزان Digi',
+    intentTeraoka: 'ميزان Teraoka',
+    intentFast: 'موقع إنجليزي من ٩٩$',
     intentQuote: 'عرض سعر مجاني',
     viewServices: 'عرض الخدمات',
+    viewSupply: 'كتالوج التوريد',
     hero3dHint: 'مرّر فوق الفئات — المرشد ينظر إليها · انقر للدخول',
     hero3dPanelKicker: 'استكشف Bizdavar',
     hero3dExplore: 'الدخول إلى هذا القسم',
@@ -634,7 +767,7 @@
     statYears: 'سنوات خبرة',
     featSectionTitle: 'لماذا بيزدوار',
     featFast: 'تسليم سريع',
-    featFastDesc: 'Fast Web Studio — موقع خلال ٥ أيام',
+    featFastDesc: 'مواقع إنجليزية من ٩٩$ / ~€90 خلال ٥ أيام',
     featGlobal: 'انتشار عالمي',
     featGlobalDesc: 'مشاريع إيران وتركيا والعالم',
     featIndustrial: 'خبرة صناعية',
@@ -673,15 +806,16 @@
     blogTitle: 'أحدث المقالات',
     blogAll: 'كل مقالات المدونة',
     faqTitle: 'الأسئلة الشائعة',
-    ctaTitle: 'تحتاج عرض سعر VEGA أو موقعاً جديداً؟',
+    ctaTitle: 'تحتاج عرض سعر VEGA أو Prosense أو Gamak؟',
     ctaDesc: 'راسل واتساب — استشارة مجانية',
     ctaForm: 'طلب عرض سعر',
     faqs: [
-      { q: 'كيف أشتري حساسات VEGA الأصلية لمشروع في إيران؟', a: 'اختر الموديل من <a href="/ar/pages/vega">صفحة VEGA</a> أو أرسل بيانات الخزان عبر واتساب. Bizdavar يصدر رمز الطلب والفاتورة المبدئية واللوجستيات.' },
+      { q: 'كيف أشتري حساسات VEGA الأصلية لمشروع في إيران؟', a: 'اختر الموديل من <a href="/ar/pages/vega">صفحة VEGA</a> أو أرسل بيانات الخزان عبر واتساب. الدليل: <a href="/ar/pages/articles/buy-vegapuls-iran">VEGAPULS في إيران</a>.' },
+      { q: 'من أين أحصل على كواشف غاز Prosense؟', a: 'PQ وSafeVader وPPS+ أصلية بشهادات SIL. الكتالوج: <a href="/ar/pages/prosense">Prosense</a>. الدليل: <a href="/ar/pages/articles/buy-prosense-iran">Prosense في إيران</a>.' },
+      { q: 'كيف أشتري محرك Gamak لإيران؟', a: 'أرسل القدرة بالكيلوواط والسرعة وشفة B3/B5 عبر واتساب. الكتالوج: <a href="/ar/pages/gamak">Gamak</a>. الدليل: <a href="/ar/pages/articles/buy-gamak-iran">محركات Gamak في إيران</a>.' },
+      { q: 'كيف أشتري موازين Digi أو Teraoka لمتجر في إيران؟', a: 'أرسلوا نوع المتجر وعدد الصناديق. الدليل: <a href="/ar/pages/articles/buy-digi-system-iran">Digi</a> و<a href="/ar/pages/articles/buy-teraoka-iran">Teraoka</a>.' },
       { q: 'كم يكلف موقع Fast Web Studio؟', a: 'أساسي $99 ومتجر $199 واحترافي $299 — التفاصيل في <a href="/ar/pages/fast">Fast Web Studio</a>. التسليم من ٥ أيام عمل مع RTL وSEO أساسي.' },
-      { q: 'من أين أحصل على كواشف غاز Prosense؟', a: 'PQ وSafeVader وPPS+ أصلية بشهادات SIL. الكتالوج: <a href="/ar/pages/prosense">Prosense</a>. عرض السعر عبر واتساب بالفارسية أو التركية.' },
-      { q: 'كيف تبدأ الاستشارة المجانية؟', a: 'اترك رقم واتساب في <a href="/ar/pages/contact">نموذج الاتصال</a> أو راسلنا مباشرة. نرد خلال ساعات العمل.' },
-      { q: 'أين تعمل Bizdavar؟', a: 'تنسيق إيران في تبريز ومشاريع في ١١ دولة — خدمات رقمية وتوريد صناعي.' }
+      { q: 'كيف تبدأ الاستشارة المجانية؟', a: 'اترك رقم واتساب في <a href="/ar/pages/contact">نموذج الاتصال</a> أو راسلنا مباشرة. نرد خلال ساعات العمل.' }
     ]
   };
 
@@ -1286,6 +1420,12 @@
     backToTop: 'Наверх',
     details: 'Подробности',
     view: 'Смотреть',
+    guideBuyGamak: 'Купить двигатель Gamak',
+    guideBuyGamakDesc: 'кВт и фланец B3/B5',
+    guideBuyDigi: 'Купить весы Digi',
+    guideBuyDigiDesc: 'POS и касса',
+    guideBuyTeraoka: 'Купить весы Teraoka',
+    guideBuyTeraokaDesc: 'Deli, POS и этикетка',
     offerMap: {
       aria: 'Три пути Bizdavar',
       lead: 'Что вам нужно?',
@@ -1314,8 +1454,60 @@
     contact: 'Контакты',
     webDesign: 'Веб-дизайн',
     servicesAll: 'Все услуги',
+    servicesMegaHint: 'Выездные услуги Bizdavar',
+    servicesConsult: 'Консультация по услугам',
+    servicesConsultDesc: 'Форма и WhatsApp',
+    tabServicesDigital: 'Цифра и ПО',
+    tabServicesField: 'Технические услуги',
+    servicesGroupGrowth: 'Рост и маркетинг',
+    servicesGroupBuild: 'Разработка и инфраструктура',
+    servicesGroupField: 'Работы на объекте',
+    serviceDigital: 'Цифровой маркетинг',
+    serviceDigitalDesc: 'Google Ads, Meta, LinkedIn — USD/EUR',
+    serviceWeb: 'Веб и web app',
+    serviceWebDesc: 'Сайты США/ЕС от $99',
+    serviceApps: 'Приложения и системы',
+    serviceAppsDesc: 'Android, iOS — App Store и Stripe',
+    serviceServer: 'Управление серверами',
+    serviceServerDesc: 'VPS, безопасность, бэкап, мониторинг',
+    serviceSmm: 'SMM',
+    serviceSmmDesc: 'Контент, reels и Paid Social',
+    serviceField: 'Технические и строительные работы',
+    serviceFieldDesc: 'Видеонаблюдение, проводка и скрытый свет',
+    serviceFieldFeaturedDesc: 'Тебриз — техническая команда',
+    serviceFieldBadge: 'Выезд',
     productsCatalog: 'Весь каталог',
+    productsHardware: 'IoT-оборудование',
+    productsSoftware: 'ПО и SaaS',
+    productsLines: 'Производственные линии',
+    productsMegaHint: 'Собственные продукты Bizdavar',
+    productsSupplyLink: 'Поставки промышленных брендов',
     productsSupplyDesc: 'Консультация, выбор модели и проформа',
+    productsQuote: 'Запросить цену',
+    tabOwned: 'Продукты Bizdavar',
+    tabLines: 'Линии и каталог',
+    tabBrands: 'Промышленные бренды',
+    brandGroupSensing: 'Датчики и безопасность',
+    brandGroupTelematics: 'Флот и трекинг',
+    brandGroupPower: 'Моторы и авто',
+    brandGroupRetail: 'Ритейл и весы',
+    brandVegaDesc: 'Датчики уровня и давления',
+    brandProsenseDesc: 'Газовые и пламенные детекторы',
+    brandTeltonikaDesc: 'GPS и телематика флота',
+    brandGamakDesc: 'Промышленные электродвигатели',
+    brandLiquiDesc: 'Масла и присадки',
+    brandDigiDesc: 'POS и торговое оборудование',
+    brandTeraokaDesc: 'Весы и маркировка',
+    productFxguard: 'WhatsApp CRM',
+    productFxguardDesc: 'Общий inbox · от $49/мес',
+    productFxguardAccounting: 'Accounting',
+    productFxguardAccountingDesc: 'Финансовый учёт · FXGuard',
+    productBizswap: 'BizSwap',
+    productBizswapDesc: 'Пресейл и своп токена',
+    productBiztab: 'BizTab',
+    productBiztabDesc: 'Бесконтактный IoT-термометр',
+    productBizclean: 'BizClean',
+    productBizcleanDesc: 'Автоматический санитайзер',
     productBizseat: 'BizSeat',
     productBizseatDesc: 'Поясничная опора для автокресла',
     productBizpet: 'BizPet',
@@ -1425,13 +1617,23 @@
     },
     geoText: 'Статьи для бизнеса Ирана и Турции — цифровой маркетинг, SEO, многоязычный веб и поставки VEGA.',
     related: [
-      { title: 'Цифровые услуги', desc: 'SEO, SMM и кампании', titleKey: 'blogPage.related.0.title', descKey: 'blogPage.related.0.desc' },
-      { title: 'Fast Web Studio', desc: 'Сайт за 5 дней от $99', titleKey: 'blogPage.related.1.title', descKey: 'blogPage.related.1.desc' },
+      { title: 'Веб США/ЕС', desc: 'От $99 / счёт EUR', titleKey: 'blogPage.related.0.title', descKey: 'blogPage.related.0.desc' },
+      { title: 'Ads США/ЕС', desc: 'Google, Meta, LinkedIn', titleKey: 'blogPage.related.1.title', descKey: 'blogPage.related.1.desc' },
       { title: 'Каталог VEGA', desc: 'Датчики уровня и давления', titleKey: 'blogPage.related.2.title', descKey: 'blogPage.related.2.desc' },
       { title: 'Контакты', desc: 'Бесплатная консультация', titleKey: 'blogPage.related.3.title', descKey: 'blogPage.related.3.desc' }
     ]
   });
   ru.blogPosts = [
+    { title: 'Английский веб-дизайн для США и ЕС — счёт в USD или EUR', excerpt: 'Тарифы от $99 / ~€90, Stripe, Zoom/Meet и счёт в долларах или евро.', category: 'Веб-дизайн' },
+    { title: 'Цифровой маркетинг для США и ЕС — бюджет в USD и EUR', excerpt: 'Google Ads, Meta и LinkedIn со счётом USD/EUR и отчётом GA4.', category: 'Цифровой маркетинг' },
+    { title: 'Купить VEGAPULS 6X в Иране — цена, код заказа, запрос', excerpt: 'Как купить оригинальный радарный уровнемер для резервуара в Иране — проформа и WhatsApp.', category: 'Промоборудование' },
+    { title: 'Запрос цены VEGA в Иране — что прислать', excerpt: 'Чек-лист закупщика: резервуар, среда, Ex/SIL и фото шильдика.', category: 'Промоборудование' },
+    { title: 'Купить газовый детектор Prosense в Иране — PQ и SIL', excerpt: 'Оригинальные детекторы для нефти и HVAC — запрос в WhatsApp.', category: 'Промоборудование' },
+    { title: 'Промышленная торговля в Иране — VEGA, Prosense и оригинал', excerpt: 'Один контакт на фарси для КИП, газовой безопасности, GPS и масел.', category: 'Промоборудование' },
+    { title: 'Купить Teltonika FMB920 в Иране — от $29', excerpt: 'Оригинальный GPS для автопарков Ирана — FMB920, FMC650 и DualCam.', category: 'Промоборудование' },
+    { title: 'Купить двигатель Gamak в Иране — кВт, фланец, запрос', excerpt: 'Оригинальный мотор для насосов и линий — проформа.', category: 'Промоборудование' },
+    { title: 'Купить весы и POS Digi System в Иране', excerpt: 'Оригинальные весы и касса для магазинов Ирана — проформа.', category: 'Промоборудование' },
+    { title: 'Купить весы Teraoka в Иране — deli, POS, этикетка', excerpt: 'Оригинальные весы Teraoka Seiko для магазина и кухни.', category: 'Промоборудование' },
     { title: 'Поставка датчиков VEGA в Иран — от запроса до объекта', excerpt: 'Консультация, проформа и логистика оригинального VEGA для проектов в Иране.', category: 'Промоборудование' },
     { title: 'Многоязычный сайт для рынков Ирана и Турции', excerpt: 'hreflang, локальное доверие и быстрая сдача для бизнеса на двух рынках.', category: 'Веб-дизайн' },
     { title: 'Что такое цифровой маркетинг? Полный гид для бизнеса', excerpt: 'SEO, Google Ads, SMM и измерение лидов — практический путь для Ирана и Турции.', category: 'Цифровой маркетинг' },
@@ -1466,8 +1668,8 @@
     websites: 'Сайты',
     title: 'Контакты',
     mapImgAlt: 'Международное сотрудничество — Bizdavar Group',
-    heroTitle: 'Расчёт VEGA, Prosense или нового сайта',
-    heroDesc: 'WhatsApp — самый быстрый путь. Достаточно номера WhatsApp — email по желанию.',
+    heroTitle: 'Запрос VEGA, Prosense или Gamak — WhatsApp',
+    heroDesc: 'Для поставок в Иран быстрее WhatsApp — модель, количество и фото шильдика. Английский сайт — счёт в USD или EUR.',
     formTitle: 'Форма заявки',
     formDesc: 'Имя и WhatsApp обязательны. Email по желанию.',
     subtitle: 'Заполните форму или напишите в WhatsApp — ответ в рабочие часы',
@@ -1500,8 +1702,8 @@
     mapTitle: 'Международное сотрудничество',
     mapDesc: 'Bizdavar Group работает с цифровыми и промышленными проектами в Иране, Турции и на международных рынках.',
     optDm: 'Цифровой маркетинг',
-    optWeb: 'Веб-дизайн и разработка',
-    optFast: 'Fast Web Studio — сайт',
+    optWeb: 'Английский сайт (USD / EUR)',
+    optFast: 'Fast Web Studio — от $99',
     optApps: 'Приложения и системы',
     optServer: 'Серверы и инфраструктура',
     optSmm: 'SMM',
@@ -1544,6 +1746,12 @@
     backToTop: 'العودة للأعلى',
     details: 'التفاصيل',
     view: 'عرض',
+    guideBuyGamak: 'شراء محرك Gamak',
+    guideBuyGamakDesc: 'كيلوواط وشفة B3/B5',
+    guideBuyDigi: 'شراء ميزان Digi',
+    guideBuyDigiDesc: 'POS وصندوق المتجر',
+    guideBuyTeraoka: 'شراء ميزان Teraoka',
+    guideBuyTeraokaDesc: 'دلّي وPOS وملصقات',
     offerMap: {
       aria: 'مسارات بيزدوار الثلاثة',
       lead: 'ماذا تحتاج؟',
@@ -1572,8 +1780,60 @@
     contact: 'اتصل بنا',
     webDesign: 'تصميم المواقع',
     servicesAll: 'كل الخدمات',
+    servicesMegaHint: 'الخدمات الميدانية من بيزدوار',
+    servicesConsult: 'استشارة الخدمات',
+    servicesConsultDesc: 'النموذج وواتساب',
+    tabServicesDigital: 'رقمي وبرمجيات',
+    tabServicesField: 'خدمات فنية',
+    servicesGroupGrowth: 'النمو والتسويق',
+    servicesGroupBuild: 'البناء والبنية',
+    servicesGroupField: 'التنفيذ الميداني',
+    serviceDigital: 'التسويق الرقمي',
+    serviceDigitalDesc: 'Google Ads وMeta وLinkedIn — USD/EUR',
+    serviceWeb: 'مواقع وتطبيقات ويب',
+    serviceWebDesc: 'مواقع أمريكا/أوروبا من ٩٩$',
+    serviceApps: 'تطبيقات وأنظمة',
+    serviceAppsDesc: 'أندرويد وiOS ولوحات أعمال',
+    serviceServer: 'إدارة الخوادم',
+    serviceServerDesc: 'VPS وأمان ونسخ احتياطي ومراقبة',
+    serviceSmm: 'إدارة SMM',
+    serviceSmmDesc: 'محتوى وريلز وإعلانات اجتماعية',
+    serviceField: 'خدمات فنية وإنشائية',
+    serviceFieldDesc: 'كاميرات وتمديدات وإضاءة مخفية',
+    serviceFieldFeaturedDesc: 'تبريز — الفريق الفني',
+    serviceFieldBadge: 'ميداني',
     productsCatalog: 'كل المنتجات',
+    productsHardware: 'عتاد IoT',
+    productsSoftware: 'برمجيات وSaaS',
+    productsLines: 'خطوط الإنتاج',
+    productsMegaHint: 'منتجات بيزدوار الخاصة',
+    productsSupplyLink: 'توريد العلامات الصناعية',
     productsSupplyDesc: 'استشارة واختيار الموديل وفاتورة مبدئية',
+    productsQuote: 'طلب عرض سعر',
+    tabOwned: 'منتجات بيزدوار',
+    tabLines: 'خطوط وكتالوج',
+    tabBrands: 'علامات صناعية',
+    brandGroupSensing: 'حساسات وسلامة',
+    brandGroupTelematics: 'تتبع وأساطيل',
+    brandGroupPower: 'محركات وسيارات',
+    brandGroupRetail: 'تجزئة وموازين',
+    brandVegaDesc: 'حساسات مستوى وضغط',
+    brandProsenseDesc: 'كواشف غاز ولهب',
+    brandTeltonikaDesc: 'GPS وتتبع الأسطول',
+    brandGamakDesc: 'محركات كهربائية صناعية',
+    brandLiquiDesc: 'زيوت وإضافات',
+    brandDigiDesc: 'نقاط بيع وتجهيزات متاجر',
+    brandTeraokaDesc: 'موازين ووسم',
+    productFxguard: 'WhatsApp CRM',
+    productFxguardDesc: 'صندوق وارد مشترك · من 49$/شهر',
+    productFxguardAccounting: 'Accounting',
+    productFxguardAccountingDesc: 'نظام محاسبة مالية · FXGuard',
+    productBizswap: 'BizSwap',
+    productBizswapDesc: 'بيع مسبق ومبادلة توكن',
+    productBiztab: 'BizTab',
+    productBiztabDesc: 'ميزان حرارة IoT بدون لمس',
+    productBizclean: 'BizClean',
+    productBizcleanDesc: 'معقم يدين تلقائي',
     productBizseat: 'BizSeat',
     productBizseatDesc: 'مسند ظهر مقعد السيارة',
     productBizpet: 'BizPet',
@@ -1683,13 +1943,23 @@
     },
     geoText: 'مقالات متخصصة لأعمال إيران وتركيا — تسويق رقمي وSEO وتصميم مواقع متعدد اللغات وتوريد VEGA.',
     related: [
-      { title: 'خدمات رقمية', desc: 'SEO وSMM وحملات', titleKey: 'blogPage.related.0.title', descKey: 'blogPage.related.0.desc' },
-      { title: 'Fast Web Studio', desc: 'موقع خلال ٥ أيام من ٩٩$', titleKey: 'blogPage.related.1.title', descKey: 'blogPage.related.1.desc' },
+      { title: 'مواقع أمريكا/أوروبا', desc: 'من ٩٩$ / فاتورة يورو', titleKey: 'blogPage.related.0.title', descKey: 'blogPage.related.0.desc' },
+      { title: 'إعلانات أمريكا/أوروبا', desc: 'Google وMeta وLinkedIn', titleKey: 'blogPage.related.1.title', descKey: 'blogPage.related.1.desc' },
       { title: 'كتالوج VEGA', desc: 'حساسات مستوى وضغط', titleKey: 'blogPage.related.2.title', descKey: 'blogPage.related.2.desc' },
       { title: 'اتصال', desc: 'استشارة مجانية', titleKey: 'blogPage.related.3.title', descKey: 'blogPage.related.3.desc' }
     ]
   });
   ar.blogPosts = [
+    { title: 'تصميم مواقع إنجليزية لأمريكا وأوروبا — فاتورة بالدولار أو اليورو', excerpt: 'باقات من ٩٩$ / ~€90 وStripe وZoom وفاتورة USD أو EUR.', category: 'تصميم ويب' },
+    { title: 'تسويق رقمي لأسواق أمريكا وأوروبا — ميزانية بالدولار واليورو', excerpt: 'إعلانات Google وMeta وLinkedIn بفاتورة USD/EUR وتقرير GA4.', category: 'التسويق الرقمي' },
+    { title: 'شراء VEGAPULS 6X في إيران — السعر ورمز الطلب والاستعلام', excerpt: 'كيف تشتري حساس مستوى راداري أصلي لخزان إيران — فاتورة مبدئية وواتساب.', category: 'معدات صناعية' },
+    { title: 'استعلام سعر VEGA في إيران — ماذا ترسلون', excerpt: 'قائمة المشتري: الخزان والوسط وEx/SIL وصورة اللوحة.', category: 'معدات صناعية' },
+    { title: 'شراء كاشف غاز Prosense في إيران — PQ وSIL', excerpt: 'كواشف أصلية للنفط وHVAC — استعلام واتساب.', category: 'معدات صناعية' },
+    { title: 'التجارة الصناعية في إيران — VEGA وProsense', excerpt: 'نقطة اتصال واحدة لأجهزة القياس وسلامة الغاز وGPS والزيوت.', category: 'معدات صناعية' },
+    { title: 'شراء Teltonika FMB920 في إيران — من ٢٩$', excerpt: 'GPS أصلي لأساطيل إيران — FMB920 وFMC650 وDualCam.', category: 'معدات صناعية' },
+    { title: 'شراء محرك Gamak في إيران — القدرة والشفة', excerpt: 'محرك أصلي للمضخات والخطوط — فاتورة مبدئية.', category: 'معدات صناعية' },
+    { title: 'شراء موازين وPOS من Digi System في إيران', excerpt: 'موازين وصناديق أصلية لمتاجر إيران — فاتورة مبدئية.', category: 'معدات صناعية' },
+    { title: 'شراء موازين Teraoka في إيران — دلّي وPOS', excerpt: 'موازين Teraoka Seiko أصلية للمتجر والمطبخ.', category: 'معدات صناعية' },
     { title: 'توريد حساسات VEGA إلى إيران — من الاستعلام إلى الموقع', excerpt: 'استشارة وفاتورة مبدئية ولوجستيات VEGA الأصلية لمشاريع إيران.', category: 'معدات صناعية' },
     { title: 'موقع متعدد اللغات لأسواق إيران وتركيا', excerpt: 'hreflang وثقة محلية وتسليم سريع للأعمال ذات السوقين.', category: 'تصميم ويب' },
     { title: 'ما هو التسويق الرقمي؟ دليل كامل للأعمال', excerpt: 'سيو وإعلانات جوجل وSMM وقياس العملاء — مسار عملي لإيران وتركيا.', category: 'تسويق رقمي' },
@@ -1724,8 +1994,8 @@
     websites: 'المواقع',
     title: 'اتصل بنا',
     mapImgAlt: 'تعاون دولي — Bizdavar Group',
-    heroTitle: 'عرض سعر VEGA أو Prosense أو موقع جديد',
-    heroDesc: 'واتساب أسرع طريق. رقم واتساب يكفي — البريد اختياري.',
+    heroTitle: 'استعلام VEGA أو Prosense أو Gamak — واتساب',
+    heroDesc: 'لتوريد إيران واتساب أسرع — الموديل والكمية وصورة اللوحة إن وُجدت. المواقع الإنجليزية ما زالت بفاتورة دولار أو يورو.',
     formTitle: 'نموذج طلب التواصل',
     formDesc: 'الاسم وواتساب إلزاميان. البريد اختياري.',
     subtitle: 'املأ النموذج أو راسلنا على واتساب — الرد خلال ساعات العمل',
@@ -1758,8 +2028,8 @@
     mapTitle: 'تعاون دولي',
     mapDesc: 'تقدم Bizdavar Group خدمات رقمية وصناعية في إيران وتركيا والأسواق الدولية.',
     optDm: 'التسويق الرقمي',
-    optWeb: 'تصميم وتطوير الويب',
-    optFast: 'Fast Web Studio — تصميم موقع',
+    optWeb: 'موقع إنجليزي (USD / EUR)',
+    optFast: 'Fast Web Studio — من ٩٩$',
     optApps: 'تطبيقات وأنظمة',
     optServer: 'إدارة الخوادم والبنية',
     optSmm: 'إدارة الشبكات الاجتماعية',
@@ -1790,15 +2060,37 @@
       liveBadge: 'Онлайн за 5 дней',
       fromPrice: 'от $99',
       mockUrl: 'yourbrand.com',
-      saveOff: '{n}% скидка на запуск'
+      saveOff: '{n}% скидка на запуск',
+      consultWa: 'WhatsApp или Zoom',
+      orderWa: 'Заказать этот план'
     });
     ru.fastPage.sections = Object.assign({}, ru.fastPage.sections, {
       for: {
         eyebrow: 'Для кого',
         title: 'Кому подходит Fast Web Studio?',
-        desc: 'От одностраничного стартапа до магазина и многоязычного бренда — выберите план под задачу.'
+        desc: 'Стартапы и SMB США и ЕС: английский LTR-сайт или магазин Stripe. Персидский/RTL — второй язык, не оболочка по умолчанию.'
+      },
+      plans: {
+        eyebrow: 'Тарифы',
+        title: 'Выберите план под задачу',
+        desc: 'Фиксированная цена в USD или EUR — заказ через <a href="contact">форму</a>, Zoom/Meet или WhatsApp.'
+      },
+      compare: {
+        eyebrow: 'Сравнение',
+        title: 'Что входит в каждый план?',
+        desc: 'Таблица ниже — или уточните в Zoom/Meet и WhatsApp.'
+      },
+      timeline: {
+        eyebrow: 'Путь запуска',
+        title: '5 дней до онлайн — по шагам',
+        desc: 'Каждый день цель; отчёт в Zoom, Meet или WhatsApp.'
       }
     });
+    ru.fastPage.cta = Object.assign({}, ru.fastPage.cta, {
+      title: 'Готовы запустить сайт?',
+      desc: 'Форма расчёта, Zoom/Meet или WhatsApp — счёт в USD или EUR от $99 / ~€90.'
+    });
+    ru.fastPage.geoText = 'Английские LTR-сайты для США и ЕС — сдача за 5 дней, Stripe, Zoom/Meet, счёт USD или EUR.';
   }
   if (ar.fastPage) {
     ar.fastPage.hostingNote = {
@@ -1814,15 +2106,37 @@
       liveBadge: 'أونلاين خلال 5 أيام',
       fromPrice: 'من $99',
       mockUrl: 'yourbrand.com',
-      saveOff: 'خصم إطلاق {n}٪'
+      saveOff: 'خصم إطلاق {n}٪',
+      consultWa: 'واتساب أو Zoom',
+      orderWa: 'اطلب هذه الخطة'
     });
     ar.fastPage.sections = Object.assign({}, ar.fastPage.sections, {
       for: {
         eyebrow: 'الجمهور',
         title: 'لمن يناسب Fast Web Studio؟',
-        desc: 'من شركة ناشئة بصفحة واحدة إلى متجر وعلامة متعددة اللغات — اختر الخطة المناسبة.'
+        desc: 'شركات ناشئة وSMB في أمريكا وأوروبا: موقع إنجليزي LTR أو متجر Stripe. الفارسية/RTL لغة ثانية وليست القالب الافتراضي.'
+      },
+      plans: {
+        eyebrow: 'خطط الأسعار',
+        title: 'اختر الخطة المناسبة',
+        desc: 'سعر ثابت بالدولار أو اليورو — الطلب عبر <a href="contact">النموذج</a> أو Zoom/Meet أو واتساب.'
+      },
+      compare: {
+        eyebrow: 'المقارنة',
+        title: 'ماذا تحصل في كل خطة؟',
+        desc: 'راجع الجدول أو اسأل عبر Zoom/Meet وواتساب.'
+      },
+      timeline: {
+        eyebrow: 'مسار التنفيذ',
+        title: '٥ أيام حتى الأونلاين — خطوة بخطوة',
+        desc: 'كل يوم هدف واضح — التقرير على Zoom أو Meet أو واتساب.'
       }
     });
+    ar.fastPage.cta = Object.assign({}, ar.fastPage.cta, {
+      title: 'مستعد لإطلاق موقعك؟',
+      desc: 'نموذج العرض أو Zoom/Meet أو واتساب — فاتورة USD أو EUR من ٩٩$ / ~€90.'
+    });
+    ar.fastPage.geoText = 'مواقع إنجليزية LTR لأعمال أمريكا وأوروبا — تسليم خلال ٥ أيام وStripe وZoom/Meet وفاتورة USD أو EUR.';
   }
 
   if (!ru.caseStudy) ru.caseStudy = {};
@@ -2300,6 +2614,16 @@
   });
 
   var articleSlugs = [
+    'website-design-us-eu',
+    'digital-marketing-us-eu',
+    'buy-vegapuls-iran',
+    'vega-quote-iran',
+    'buy-prosense-iran',
+    'industrial-trade-iran',
+    'buy-teltonika-iran',
+    'buy-gamak-iran',
+    'buy-digi-system-iran',
+    'buy-teraoka-iran',
     'vega-supply-iran',
     'multilingual-web-iran-turkey',
     'what-is-digital-marketing',

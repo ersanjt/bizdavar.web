@@ -37,7 +37,9 @@ function loadLocales() {
     'assets/scripts/i18n/locale-seo.js',
     'assets/scripts/i18n/locales-ru-ar.js',
     'assets/scripts/i18n/fxguard-i18n.js',
-    'assets/scripts/i18n/field-tech-i18n.js'
+    'assets/scripts/i18n/field-tech-i18n.js',
+    'assets/scripts/i18n/services-i18n.js',
+    'assets/scripts/i18n/fast-catalog-i18n.js'
   ];
   for (const rel of files) {
     vm.runInContext(fs.readFileSync(path.join(ROOT, rel), 'utf8'), ctx);
@@ -189,11 +191,11 @@ const STATIC_HERO = {
     ar: 'اشترِ حساسات VEGA الأصلية — فاتورة مبدئية واستشارة'
   },
   'pages/fast.html': {
-    fa: 'طراحی سایت در ۵ روز از ۹۹ دلار',
-    tr: '5 günde web sitesi — 99 dolardan',
-    en: 'A website in 5 days from $99',
-    ru: 'Сайт за 5 дней от $99',
-    ar: 'موقع خلال ٥ أيام من ٩٩ دولاراً'
+    fa: 'سایت انگلیسی برای آمریکا و اروپا در ۵ روز از ۹۹ دلار',
+    tr: 'ABD ve AB için 5 günde İngilizce site — $99 / ~€90’dan',
+    en: 'English websites for US & EU in 5 days from $99',
+    ru: 'Английский сайт для США и ЕС за 5 дней от $99',
+    ar: 'موقع إنجليزي لأمريكا وأوروبا خلال ٥ أيام من ٩٩$'
   }
 };
 
@@ -223,6 +225,9 @@ function bakeJsonLd(html, locale) {
         logo: `${BASE}/assets/images/brand/bizdavar-logo-square.png`,
         email: 'info@bizdavar.com',
         telephone: ['+989305880135', '+905010676486'],
+        availableLanguage: ['fa', 'tr', 'en', 'ru', 'ar'],
+        knowsLanguage: ['fa', 'tr', 'en', 'ru', 'ar'],
+        areaServed: ['TR', 'AM', 'IR', 'AE', 'DE', 'US', 'GB', 'LB', 'IQ', 'GE', 'IT'],
         address: {
           '@type': 'PostalAddress',
           addressLocality: 'Tabriz',
@@ -238,7 +243,7 @@ function bakeJsonLd(html, locale) {
         '@id': `${BASE}/#website`,
         url: `${BASE}/`,
         name: 'Bizdavar Group',
-        inLanguage: locale.htmlLang,
+        inLanguage: ['fa-IR', 'tr-TR', 'en-US', 'ru-RU', 'ar-AE'],
         publisher: { '@id': `${BASE}/#organization` }
       },
       {
@@ -352,7 +357,17 @@ const FILE_TO_ROUTE = {
   'pages/articles/prosense-gas-detection.html': '/pages/articles/prosense-gas-detection',
   'pages/articles/field-tech-services.html': '/pages/articles/field-tech-services',
   'pages/articles/local-seo-iran.html': '/pages/articles/local-seo-iran',
-  'pages/articles/liqui-moly-supply-iran.html': '/pages/articles/liqui-moly-supply-iran'
+  'pages/articles/liqui-moly-supply-iran.html': '/pages/articles/liqui-moly-supply-iran',
+  'pages/articles/buy-vegapuls-iran.html': '/pages/articles/buy-vegapuls-iran',
+  'pages/articles/vega-quote-iran.html': '/pages/articles/vega-quote-iran',
+  'pages/articles/buy-prosense-iran.html': '/pages/articles/buy-prosense-iran',
+  'pages/articles/industrial-trade-iran.html': '/pages/articles/industrial-trade-iran',
+  'pages/articles/buy-teltonika-iran.html': '/pages/articles/buy-teltonika-iran',
+  'pages/articles/buy-gamak-iran.html': '/pages/articles/buy-gamak-iran',
+  'pages/articles/buy-digi-system-iran.html': '/pages/articles/buy-digi-system-iran',
+  'pages/articles/buy-teraoka-iran.html': '/pages/articles/buy-teraoka-iran',
+  'pages/articles/website-design-us-eu.html': '/pages/articles/website-design-us-eu',
+  'pages/articles/digital-marketing-us-eu.html': '/pages/articles/digital-marketing-us-eu'
 };
 
 function escAttr(s) {
@@ -545,6 +560,40 @@ function bakeArticleLocale(html, rel, lang) {
   return html;
 }
 
+function prefixLocaleHrefs(html, localeCode) {
+  if (!localeCode || localeCode === 'fa') return html;
+  const prefix = `/${localeCode}`;
+  return html.replace(/\bhref="(\/[^"]*)"/g, (m, url) => {
+    if (
+      url.startsWith('/assets/') ||
+      url.startsWith('/sitemap') ||
+      url.startsWith('/robots') ||
+      url.startsWith('/llms') ||
+      url.startsWith('/admin') ||
+      url.startsWith('/api/') ||
+      url.startsWith('/go') ||
+      url.startsWith('/404') ||
+      url.startsWith('/tr/') ||
+      url.startsWith('/en/') ||
+      url.startsWith('/ru/') ||
+      url.startsWith('/ar/')
+    ) {
+      return m;
+    }
+    const hashIdx = url.indexOf('#');
+    const qIdx = url.indexOf('?');
+    let cut = url.length;
+    if (hashIdx >= 0) cut = Math.min(cut, hashIdx);
+    if (qIdx >= 0) cut = Math.min(cut, qIdx);
+    const base = url.slice(0, cut) || '/';
+    const rest = url.slice(cut);
+    if (base === '/') {
+      return `href="${prefix}/${rest.replace(/^\//, '')}"`;
+    }
+    return `href="${prefix}${base}${rest}"`;
+  });
+}
+
 function applySeo(html, route, meta, locale) {
   let out = stripSeoBlock(html);
   out = stripCanonicalLinks(out);
@@ -615,7 +664,8 @@ for (const [rel, route] of Object.entries(FILE_TO_ROUTE)) {
     const outFile = path.join(ROOT, outRel);
     ensureDir(outFile);
     const withCopy = decorateCopy(sourceHtml, rel, locale);
-    const localeHtml = applySeo(withCopy, route, meta, locale);
+    let localeHtml = applySeo(withCopy, route, meta, locale);
+    localeHtml = prefixLocaleHrefs(localeHtml, locale.code);
     fs.writeFileSync(outFile, localeHtml, 'utf8');
     localeFiles++;
   }

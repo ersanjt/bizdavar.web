@@ -8,7 +8,7 @@ const path = require('path');
 
 const BASE = 'https://bizdavar.com';
 const OUT = path.join(__dirname, '..', 'sitemap.xml');
-const SITE_UPDATE = '2026-08-24';
+const SITE_UPDATE = '2026-08-29';
 
 const LOCALES = [
   { code: 'fa', prefix: '' },
@@ -29,14 +29,14 @@ const HREFLANG = [
 
 /** @type {{ path: string, changefreq: string, priority: number, lastmod?: string }[]} */
 const PAGES = [
-  { path: '/', changefreq: 'weekly', priority: 1.0, lastmod: '2026-08-19' },
+  { path: '/', changefreq: 'weekly', priority: 1.0, lastmod: '2026-08-29' },
   { path: '/pages/services', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
   { path: '/pages/contact', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
   { path: '/pages/about', changefreq: 'monthly', priority: 0.85, lastmod: SITE_UPDATE },
   { path: '/pages/gallery', changefreq: 'monthly', priority: 0.8, lastmod: '2026-08-21' },
   { path: '/pages/products', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
   { path: '/pages/portfolio', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
-  { path: '/pages/blog', changefreq: 'weekly', priority: 0.75, lastmod: '2026-08-24' },
+  { path: '/pages/blog', changefreq: 'weekly', priority: 0.8, lastmod: '2026-08-29' },
   { path: '/pages/fast', changefreq: 'monthly', priority: 0.85, lastmod: SITE_UPDATE },
   { path: '/pages/field-tech', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
   { path: '/pages/vega', changefreq: 'monthly', priority: 0.9, lastmod: '2026-08-19' },
@@ -62,12 +62,22 @@ const PAGES = [
   { path: '/pages/fxguard-accounting', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/bizswap', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/articles/about-bizdavar-group', changefreq: 'monthly', priority: 0.85, lastmod: '2026-08-24' },
+  { path: '/pages/articles/website-design-us-eu', changefreq: 'weekly', priority: 0.9, lastmod: '2026-08-29' },
+  { path: '/pages/articles/digital-marketing-us-eu', changefreq: 'weekly', priority: 0.9, lastmod: '2026-08-29' },
+  { path: '/pages/articles/buy-vegapuls-iran', changefreq: 'weekly', priority: 0.9, lastmod: '2026-08-29' },
+  { path: '/pages/articles/vega-quote-iran', changefreq: 'weekly', priority: 0.9, lastmod: '2026-08-29' },
+  { path: '/pages/articles/buy-prosense-iran', changefreq: 'weekly', priority: 0.9, lastmod: '2026-08-29' },
+  { path: '/pages/articles/industrial-trade-iran', changefreq: 'weekly', priority: 0.9, lastmod: '2026-08-29' },
+  { path: '/pages/articles/buy-teltonika-iran', changefreq: 'weekly', priority: 0.85, lastmod: '2026-08-29' },
+  { path: '/pages/articles/buy-gamak-iran', changefreq: 'weekly', priority: 0.85, lastmod: '2026-08-29' },
+  { path: '/pages/articles/buy-digi-system-iran', changefreq: 'weekly', priority: 0.85, lastmod: '2026-08-29' },
+  { path: '/pages/articles/buy-teraoka-iran', changefreq: 'weekly', priority: 0.85, lastmod: '2026-08-29' },
   { path: '/pages/articles/vega-supply-iran', changefreq: 'monthly', priority: 0.85, lastmod: '2026-08-24' },
   { path: '/pages/articles/multilingual-web-iran-turkey', changefreq: 'monthly', priority: 0.85, lastmod: '2026-08-24' },
   { path: '/pages/articles/what-is-digital-marketing', changefreq: 'monthly', priority: 0.75, lastmod: '2026-08-26' },
   { path: '/pages/articles/digital-marketing', changefreq: 'monthly', priority: 0.75, lastmod: '2026-08-24' },
   { path: '/pages/articles/social-media-management', changefreq: 'monthly', priority: 0.75, lastmod: '2026-08-24' },
-  { path: '/pages/articles/fast-studio', changefreq: 'monthly', priority: 0.75, lastmod: '2026-08-24' },
+  { path: '/pages/articles/fast-studio', changefreq: 'monthly', priority: 0.85, lastmod: '2026-08-29' },
   { path: '/pages/articles/industrial-sensors', changefreq: 'monthly', priority: 0.75, lastmod: '2026-08-24' },
   { path: '/pages/articles/marvi-society-ios-app', changefreq: 'monthly', priority: 0.85, lastmod: '2026-08-24' },
   { path: '/pages/articles/prosense-gas-detection', changefreq: 'monthly', priority: 0.85, lastmod: '2026-08-24' },
@@ -126,3 +136,39 @@ ${allNodes}
 
 fs.writeFileSync(OUT, xml, 'utf8');
 console.log(`Wrote ${totalUrls} URLs (${PAGES.length} pages × ${LOCALES.length} locales) to sitemap.xml`);
+
+const LANG_LABEL = { fa: 'Persian', tr: 'Turkish', en: 'English', ru: 'Russian', ar: 'Arabic' };
+const llmsLines = [
+  '# Bizdavar Group',
+  '',
+  '> Digital services, owned products, and industrial supply (VEGA, Prosense, Liqui Moly) since 2013.',
+  '> Languages: Persian (default), Turkish, English, Russian, Arabic.',
+  '> Official site: https://bizdavar.com',
+  '',
+  '## Locales',
+  '',
+  '- Persian (x-default): https://bizdavar.com/',
+  '- Turkish: https://bizdavar.com/tr/',
+  '- English: https://bizdavar.com/en/',
+  '- Russian: https://bizdavar.com/ru/',
+  '- Arabic: https://bizdavar.com/ar/',
+  '',
+  '## Index',
+  '',
+  `Sitemap: ${BASE}/sitemap.xml`,
+  `Robots: ${BASE}/robots.txt`,
+  '',
+  '## Pages'
+];
+
+for (const entry of PAGES) {
+  llmsLines.push('');
+  llmsLines.push(`### ${entry.path === '/' ? 'Home' : entry.path}`);
+  for (const locale of LOCALES) {
+    llmsLines.push(`- ${LANG_LABEL[locale.code]}: ${absoluteUrl(entry, locale)}`);
+  }
+}
+
+const llmsOut = path.join(__dirname, '..', 'llms.txt');
+fs.writeFileSync(llmsOut, llmsLines.join('\n') + '\n', 'utf8');
+console.log(`Wrote llms.txt with ${PAGES.length} page groups`);

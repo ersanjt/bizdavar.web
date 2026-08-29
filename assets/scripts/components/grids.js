@@ -625,9 +625,10 @@
         </div>`;
       const officeMq = window.matchMedia('(min-width: 900px)');
       const offices = presenceEl.querySelectorAll('.presence-istanbul-hub');
+      const preferredOffice = [...offices].find((el) => el.classList.contains('presence-istanbul-hub--iran')) || offices[0];
       const syncOffices = () => {
         offices.forEach((el, i) => {
-          el.open = officeMq.matches || i === 0;
+          el.open = officeMq.matches ? el === preferredOffice : i === 0;
         });
       };
       syncOffices();

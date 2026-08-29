@@ -49,6 +49,16 @@ const PAGE_OG = {
   articleFieldTech: 'assets/images/content/field-tech-hero.svg',
   articleLocalSeo: 'assets/images/content/network-map.svg',
   articleLiquiMolySupply: 'assets/images/liqui-moly/octane-plus.jpg',
+  articleBuyVegapulsIran: 'assets/images/vega/product-vegapuls-6x-photo.webp',
+  articleVegaQuoteIran: 'assets/images/vega/product-vegabar-39.png',
+  articleBuyProsenseIran: 'assets/images/prosense/series-pq.webp',
+  articleIndustrialTradeIran: 'assets/images/content/supply-hero.jpg',
+  articleBuyTeltonikaIran: 'assets/images/partners/teltonika.png',
+  articleBuyGamakIran: 'assets/images/gamak/category-three-phase.webp',
+  articleBuyDigiIran: 'assets/images/digi-system/hero/digi-retail-hero.webp',
+  articleBuyTeraokaIran: 'assets/images/teraoka/hero/teraoka-retail-hero.webp',
+  articleWebsiteDesignUsEu: 'assets/images/content/services-web-mockup.svg',
+  articleDigitalMarketingUsEu: 'assets/images/content/services-dm-visual.svg',
   bzDiamond: 'assets/images/partners/bzdiamond.webp',
   marvispace: 'assets/images/content/marvispace/shop-grid.jpg',
   kayaOne: 'assets/images/partners/kaya-one.svg',
@@ -102,7 +112,17 @@ const PAGE_ROUTES = {
   articleProsenseGas: '/pages/articles/prosense-gas-detection',
   articleFieldTech: '/pages/articles/field-tech-services',
   articleLocalSeo: '/pages/articles/local-seo-iran',
-  articleLiquiMolySupply: '/pages/articles/liqui-moly-supply-iran'
+  articleLiquiMolySupply: '/pages/articles/liqui-moly-supply-iran',
+  articleBuyVegapulsIran: '/pages/articles/buy-vegapuls-iran',
+  articleVegaQuoteIran: '/pages/articles/vega-quote-iran',
+  articleBuyProsenseIran: '/pages/articles/buy-prosense-iran',
+  articleIndustrialTradeIran: '/pages/articles/industrial-trade-iran',
+  articleBuyTeltonikaIran: '/pages/articles/buy-teltonika-iran',
+  articleBuyGamakIran: '/pages/articles/buy-gamak-iran',
+  articleBuyDigiIran: '/pages/articles/buy-digi-system-iran',
+  articleBuyTeraokaIran: '/pages/articles/buy-teraoka-iran',
+  articleWebsiteDesignUsEu: '/pages/articles/website-design-us-eu',
+  articleDigitalMarketingUsEu: '/pages/articles/digital-marketing-us-eu'
 };
 
 const manifest = {};

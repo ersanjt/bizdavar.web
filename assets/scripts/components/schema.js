@@ -318,6 +318,8 @@
             sameAs: C.contact.linkedin
           },
           areaServed: ['TR', 'AM', 'IR', 'AE', 'DE', 'US', 'GB', 'LB', 'IQ', 'GE', 'IT'],
+          availableLanguage: ['fa', 'tr', 'en', 'ru', 'ar'],
+          knowsLanguage: ['fa', 'tr', 'en', 'ru', 'ar'],
           knowsAbout: [
             'Digital Marketing',
             'Web Design',

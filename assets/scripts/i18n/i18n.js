@@ -482,8 +482,8 @@
         const isDefault = /about-hero\.jpg$/i.test(src);
         img.src = isDefault ? compact : src;
         if (isDefault) {
-          img.srcset = compact + ' 800w, ' + src + ' 1320w';
-          img.sizes = '(min-width: 1025px) 570px, 92vw';
+          img.srcset = compact + ' 800w';
+          img.sizes = '(min-width: 1025px) 50vw, 92vw';
         } else {
           img.removeAttribute('srcset');
           img.removeAttribute('sizes');
