@@ -525,8 +525,8 @@ window.BIZDAVAR_LOCALES = {
       channelField: 'Teknik hizmetler'
     },
     seo: {
-      defaultTitle: 'Bizdavar Group | Web tasarım, dijital pazarlama ve endüstriyel tedarik',
-      defaultDescription: 'Fast Web Studio ile web tasarım, dijital pazarlama ve SMM, FXGuard WhatsApp CRM, VEGA, Prosense ve Liqui Moly tedariki. Ücretsiz danışmanlık.',
+      defaultTitle: 'Bizdavar Group | ABD/AB İngilizce web $99’dan',
+      defaultDescription: 'ABD ve AB için İngilizce LTR site ve Google/Meta reklam — fatura USD veya EUR, $99 / ~€90’dan. Fast Studio ve Zoom/Meet. İran tedariki ayrı yol.',
       keywords: 'Bizdavar, web tasarım, dijital pazarlama, FXGuard, VEGA, Prosense, Liqui Moly, Fast Web Studio',
       schemaServices: 'Bizdavar Group hizmetleri',
       schemaBlog: 'Bizdavar Group blog',

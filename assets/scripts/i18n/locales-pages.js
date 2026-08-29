@@ -681,7 +681,7 @@
           title: 'Before you read',
           desc: 'Short answers to common searches about the Bizdavar blog.',
           items: [
-            { q: 'What is the Bizdavar blog about?', a: 'Guides on digital marketing, SEO, multilingual websites, Fast Web Studio, VEGA sensor supply, and owned products such as BizPet and BizTab.' },
+            { q: 'What is the Bizdavar blog about?', a: 'Two tracks: English websites and ads for US/EU (USD/EUR invoices), and genuine industrial supply into Iran. Start with <a href="/pages/articles/website-design-us-eu">US/EU web design</a> or a VEGA buying guide.' },
             { q: 'How many languages are the articles in?', a: 'The blog hub and core articles are indexed in Persian, Turkish, English, Russian and Arabic with separate hreflang URLs.' },
             { q: 'How do I find a service-related article?', a: 'Use the topic filter above, or jump from the marketing, web design and industrial clusters to the service pages.' },
             { q: 'What should I do after reading a VEGA guide?', a: 'Send the model or tank data on WhatsApp or the contact form — the proforma and order code are issued by Bizdavar.' },

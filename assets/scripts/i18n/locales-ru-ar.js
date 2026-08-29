@@ -34,9 +34,9 @@
   var pageSeoRu = {
     home: {
       crumb: 'Главная',
-      seoTitle: 'Купить VEGA и Prosense в Иране | Bizdavar',
-      seoDescription: 'Оригинальные датчики VEGA, детекторы Prosense, Liqui Moly и Teltonika для проектов в Иране. Проформа и WhatsApp.',
-      seoKeywords: 'купить VEGA Иран, Prosense, датчик уровня, промышленная торговля, Bizdavar'
+      seoTitle: 'Английские сайты для США и ЕС от $99 | Bizdavar',
+      seoDescription: 'Английский LTR и реклама Google/Meta для США и ЕС — счёт в USD или EUR, от $99 / ~€90. Zoom/Meet и Fast Studio. Поставки в Иран — отдельный путь.',
+      seoKeywords: 'веб-дизайн США, веб-дизайн ЕС, сайт от $99, цифровой маркетинг USD, Fast Web Studio, Bizdavar'
     },
     about: {
       crumb: 'О нас',
@@ -70,9 +70,9 @@
     },
     contact: {
       crumb: 'Контакты',
-      seoTitle: 'Запрос VEGA, Prosense и Gamak | WhatsApp',
-      seoDescription: 'VEGA, Prosense, Teltonika, Liqui Moly и двигатели Gamak для проектов в Иране — WhatsApp. Английский сайт — счёт USD/EUR.',
-      seoKeywords: 'запрос VEGA, Prosense, Gamak, Bizdavar WhatsApp'
+      seoTitle: 'Расчёт сайта USD/EUR или поставка в Иран | Bizdavar',
+      seoDescription: 'Английский сайт и реклама — Zoom/Meet, счёт в USD или EUR. VEGA, Prosense и Gamak для Ирана по-прежнему через WhatsApp.',
+      seoKeywords: 'расчёт сайта USD, счёт EUR, веб-дизайн США, запрос VEGA, Bizdavar'
     },
     liquiMoly: {
       crumb: 'Продукция Liqui Moly',
@@ -106,9 +106,9 @@
     },
     blog: {
       crumb: 'Блог',
-      seoTitle: 'Блог Bizdavar | маркетинг, SEO и поставка VEGA',
-      seoDescription: 'Статьи: цифровой маркетинг, SEO, многоязычные сайты, Fast Studio и оригинальные датчики VEGA для Ирана и Турции.',
-      seoKeywords: 'блог Bizdavar, цифровой маркетинг, SEO, многоязычный сайт, VEGA Иран, Fast Web Studio, SMM'
+      seoTitle: 'Блог Bizdavar | сайты US/EU, реклама и поставки',
+      seoDescription: 'Английские сайты со счётом USD/EUR, кампании Google/Meta, Fast Studio — плюс оригинальная поставка VEGA в Иран.',
+      seoKeywords: 'блог Bizdavar, веб-дизайн США, цифровой маркетинг ЕС, Fast Web Studio, VEGA Иран'
     },
     privacy: {
       crumb: 'Конфиденциальность',
@@ -343,9 +343,9 @@
   var pageSeoAr = {
     home: {
       crumb: 'الرئيسية',
-      seoTitle: 'شراء VEGA وProsense في إيران | Bizdavar',
-      seoDescription: 'حساسات VEGA وكواشف Prosense وLiqui Moly وTeltonika لمشاريع إيران. فاتورة مبدئية وواتساب.',
-      seoKeywords: 'شراء VEGA إيران, Prosense, حساس مستوى, تجارة صناعية, بيزدوار'
+      seoTitle: 'مواقع إنجليزية لأمريكا وأوروبا من ٩٩$ | Bizdavar',
+      seoDescription: 'مواقع إنجليزية LTR وإعلانات Google/Meta لأمريكا وأوروبا — فاتورة USD أو EUR من ٩٩$ / ~€90. Zoom/Meet وFast Studio. توريد إيران مسار منفصل.',
+      seoKeywords: 'تصميم مواقع أمريكا, تصميم مواقع أوروبا, موقع من 99 دولار, تسويق رقمي USD, Fast Web Studio, بيزدوار'
     },
     about: {
       crumb: 'من نحن',
@@ -379,9 +379,9 @@
     },
     contact: {
       crumb: 'اتصل بنا',
-      seoTitle: 'استعلام VEGA وProsense وGamak | واتساب',
-      seoDescription: 'استعلام VEGA وProsense وTeltonika وLiqui Moly ومحركات Gamak لمشاريع إيران عبر واتساب. المواقع الإنجليزية بفاتورة USD أو EUR.',
-      seoKeywords: 'استعلام VEGA, Prosense, Gamak, واتساب بيزدوار'
+      seoTitle: 'عرض موقع USD/EUR أو توريد إيران | Bizdavar',
+      seoDescription: 'عرض موقع وإعلانات إنجليزية — Zoom/Meet وفاتورة USD أو EUR. VEGA وProsense وGamak لإيران ما زالت عبر واتساب.',
+      seoKeywords: 'عرض موقع USD, فاتورة EUR, تصميم مواقع أمريكا, استعلام VEGA, بيزدوار'
     },
     liquiMoly: {
       crumb: 'منتجات Liqui Moly',
@@ -415,9 +415,9 @@
     },
     blog: {
       crumb: 'المدونة',
-      seoTitle: 'مدونة Bizdavar | تسويق رقمي وSEO وتوريد VEGA',
-      seoDescription: 'مقالات متخصصة: تسويق رقمي، SEO، مواقع متعددة اللغات، Fast Studio وحساسات VEGA الأصلية لإيران وتركيا.',
-      seoKeywords: 'مدونة Bizdavar, تسويق رقمي, SEO, موقع متعدد اللغات, VEGA إيران, Fast Web Studio, SMM'
+      seoTitle: 'مدونة Bizdavar | مواقع US/EU وإعلانات وتوريد صناعي',
+      seoDescription: 'مواقع إنجليزية بفاتورة USD/EUR وحملات Google/Meta وFast Studio — مع توريد VEGA الأصلي لإيران.',
+      seoKeywords: 'مدونة Bizdavar, تصميم مواقع أمريكا, تسويق رقمي أوروبا, Fast Web Studio, VEGA إيران'
     },
     privacy: {
       crumb: 'الخصوصية',
@@ -721,16 +721,15 @@
     blogTitle: 'Последние статьи',
     blogAll: 'Все материалы блога',
     faqTitle: 'Частые вопросы',
-    ctaTitle: 'Нужен расчёт VEGA, Prosense или Gamak?',
-    ctaDesc: 'Напишите в WhatsApp — бесплатная консультация',
+    ctaTitle: 'Нужен английский сайт или реклама в USD/EUR?',
+    ctaDesc: 'Форма расчёта или Zoom/Meet — валюту фиксируем письменно. Поставки в Иран — по WhatsApp.',
     ctaForm: 'Запросить расчёт',
     faqs: [
-      { q: 'Как купить оригинальные датчики VEGA для проекта в Иране?', a: 'Выберите модель на <a href="/ru/pages/vega">странице VEGA</a> или пришлите данные резервуара в WhatsApp. Гид: <a href="/ru/pages/articles/buy-vegapuls-iran">VEGAPULS в Иране</a>.' },
-      { q: 'Где взять газовые детекторы Prosense?', a: 'Оригинальные PQ, SafeVader и PPS+ с сертификатами SIL. Каталог: <a href="/ru/pages/prosense">Prosense</a>. Гид: <a href="/ru/pages/articles/buy-prosense-iran">Prosense в Иране</a>.' },
-      { q: 'Как купить двигатель Gamak для Ирана?', a: 'Пришлите кВт, об/мин и фланец B3/B5 в WhatsApp. Каталог: <a href="/ru/pages/gamak">Gamak</a>. Гид: <a href="/ru/pages/articles/buy-gamak-iran">двигатели Gamak в Иране</a>.' },
-      { q: 'Как купить весы Digi или Teraoka для магазина в Иране?', a: 'Пришлите тип магазина и число касс. Гиды: <a href="/ru/pages/articles/buy-digi-system-iran">Digi</a> и <a href="/ru/pages/articles/buy-teraoka-iran">Teraoka</a>.' },
-      { q: 'Сколько стоит сайт Fast Web Studio?', a: 'Базовый $99, магазин $199, pro $299 — детали на <a href="/ru/pages/fast">Fast Web Studio</a>. Сдача от 5 рабочих дней, RTL и базовое SEO.' },
-      { q: 'Как начинается бесплатная консультация?', a: 'Оставьте WhatsApp в <a href="/ru/pages/contact">форме</a> или напишите напрямую. Отвечаем в рабочие часы.' }
+      { q: 'Сколько стоит сайт Fast Web Studio?', a: 'Базовый $99 (~€90), магазин $199, pro $299 — английский LTR для США и ЕС, счёт в USD или EUR. Тарифы: <a href="/ru/pages/fast">Fast Web Studio</a>.' },
+      { q: 'Можно счёт в USD или EUR?', a: 'Да. Валюту выбираете до старта. Веб и реклама — доллар или евро. Путь: <a href="/ru/pages/contact?service=web-design">расчёт сайта</a>.' },
+      { q: 'Делаете Google Ads и Meta для США/ЕС?', a: 'Да — бюджет в USD или EUR, отчёт GA4, перекрытие CET/EST. Гид: <a href="/ru/pages/articles/digital-marketing-us-eu">маркетинг для США и ЕС</a>.' },
+      { q: 'Как начинается консультация?', a: '<a href="/ru/pages/contact">Форма</a> (телефон обязателен) и email для Zoom/Meet. Отвечаем в пересечении CET и EST.' },
+      { q: 'Как запросить VEGA или Prosense для Ирана?', a: 'Этот путь — WhatsApp. Каталог: <a href="/ru/pages/vega">VEGA</a> · <a href="/ru/pages/prosense">Prosense</a>.' }
     ]
   };
 
@@ -740,7 +739,7 @@
     heroTitleSpan: '',
     heroTitleEnd: '',
     heroDesc: 'خدمات رقمية لأمريكا وأوروبا — مواقع إنجليزية من ٩٩$ بفاتورة USD أو EUR — أو توريد لإيران. اختر المسار أولاً.',
-    intentNavLabel: 'شراء سريع لمشاريع إيران',
+    intentNavLabel: 'موقع أو إعلانات أو توريد إيران',
     intentVega: 'شراء VEGA',
     intentProsense: 'كاشف Prosense',
     intentLiqui: 'Liqui Moly',
@@ -806,16 +805,15 @@
     blogTitle: 'أحدث المقالات',
     blogAll: 'كل مقالات المدونة',
     faqTitle: 'الأسئلة الشائعة',
-    ctaTitle: 'تحتاج عرض سعر VEGA أو Prosense أو Gamak؟',
-    ctaDesc: 'راسل واتساب — استشارة مجانية',
+    ctaTitle: 'تحتاج موقعاً إنجليزياً أو إعلانات بفاتورة USD/EUR؟',
+    ctaDesc: 'نموذج العرض أو Zoom/Meet — نثبّت العملة كتابياً. توريد إيران ما زال عبر واتساب.',
     ctaForm: 'طلب عرض سعر',
     faqs: [
-      { q: 'كيف أشتري حساسات VEGA الأصلية لمشروع في إيران؟', a: 'اختر الموديل من <a href="/ar/pages/vega">صفحة VEGA</a> أو أرسل بيانات الخزان عبر واتساب. الدليل: <a href="/ar/pages/articles/buy-vegapuls-iran">VEGAPULS في إيران</a>.' },
-      { q: 'من أين أحصل على كواشف غاز Prosense؟', a: 'PQ وSafeVader وPPS+ أصلية بشهادات SIL. الكتالوج: <a href="/ar/pages/prosense">Prosense</a>. الدليل: <a href="/ar/pages/articles/buy-prosense-iran">Prosense في إيران</a>.' },
-      { q: 'كيف أشتري محرك Gamak لإيران؟', a: 'أرسل القدرة بالكيلوواط والسرعة وشفة B3/B5 عبر واتساب. الكتالوج: <a href="/ar/pages/gamak">Gamak</a>. الدليل: <a href="/ar/pages/articles/buy-gamak-iran">محركات Gamak في إيران</a>.' },
-      { q: 'كيف أشتري موازين Digi أو Teraoka لمتجر في إيران؟', a: 'أرسلوا نوع المتجر وعدد الصناديق. الدليل: <a href="/ar/pages/articles/buy-digi-system-iran">Digi</a> و<a href="/ar/pages/articles/buy-teraoka-iran">Teraoka</a>.' },
-      { q: 'كم يكلف موقع Fast Web Studio؟', a: 'أساسي $99 ومتجر $199 واحترافي $299 — التفاصيل في <a href="/ar/pages/fast">Fast Web Studio</a>. التسليم من ٥ أيام عمل مع RTL وSEO أساسي.' },
-      { q: 'كيف تبدأ الاستشارة المجانية؟', a: 'اترك رقم واتساب في <a href="/ar/pages/contact">نموذج الاتصال</a> أو راسلنا مباشرة. نرد خلال ساعات العمل.' }
+      { q: 'كم يكلف موقع Fast Web Studio؟', a: 'أساسي $99 (~€90) ومتجر $199 واحترافي $299 — إنجليزي LTR لأمريكا وأوروبا بفاتورة USD أو EUR. الباقات: <a href="/ar/pages/fast">Fast Web Studio</a>.' },
+      { q: 'هل تصدرون فاتورة USD أو EUR؟', a: 'نعم. اختاروا العملة قبل الانطلاق. الويب والإعلانات بالدولار أو اليورو. المسار: <a href="/ar/pages/contact?service=web-design">عرض الموقع</a>.' },
+      { q: 'هل تديرون Google Ads وMeta لأمريكا وأوروبا؟', a: 'نعم — ميزانية USD أو EUR وتقارير GA4 وتداخل CET/EST. الدليل: <a href="/ar/pages/articles/digital-marketing-us-eu">التسويق لأمريكا وأوروبا</a>.' },
+      { q: 'كيف تبدأ الاستشارة؟', a: '<a href="/ar/pages/contact">النموذج</a> (الهاتف إلزامي) وبريد لـ Zoom/Meet. نرد في تداخل CET وEST.' },
+      { q: 'كيف أستعلم عن VEGA أو Prosense لإيران؟', a: 'هذا المسار عبر واتساب. الكتالوج: <a href="/ar/pages/vega">VEGA</a> · <a href="/ar/pages/prosense">Prosense</a>.' }
     ]
   };
 
@@ -1668,8 +1666,8 @@
     websites: 'Сайты',
     title: 'Контакты',
     mapImgAlt: 'Международное сотрудничество — Bizdavar Group',
-    heroTitle: 'Запрос VEGA, Prosense или Gamak — WhatsApp',
-    heroDesc: 'Для поставок в Иран быстрее WhatsApp — модель, количество и фото шильдика. Английский сайт — счёт в USD или EUR.',
+    heroTitle: 'Расчёт сайта в USD или EUR — Zoom, Meet или форма',
+    heroDesc: 'Английские сайты и реклама для США и ЕС: форма и Zoom/Meet, счёт в долларах или евро. VEGA/Prosense для Ирана быстрее в WhatsApp — модель, количество и фото шильдика.',
     formTitle: 'Форма заявки',
     formDesc: 'Имя и WhatsApp обязательны. Email по желанию.',
     subtitle: 'Заполните форму или напишите в WhatsApp — ответ в рабочие часы',
@@ -1689,13 +1687,13 @@
     privacyLink: 'политикой конфиденциальности',
     privacyAfter: '.',
     privacyAgree: '.',
-    submit: 'Продолжить в WhatsApp',
+    submit: 'Отправить запрос',
     formNote: 'Данные используются только для ответа на ваш запрос.',
     formSending: 'Отправка…',
     formSuccess: 'Сообщение отправлено. Мы свяжемся с вами в ближайшее время.',
     formSuccessMailto: 'Сообщение готово к отправке. Если окно почты не открылось, напишите на info@bizdavar.com.',
     formSuccessWhatsapp: 'Сообщение готово для WhatsApp. Если окно не открылось, используйте кнопки WhatsApp на этой странице.',
-    geoText: 'Многоязычные консультации — персидский и турецкий WhatsApp.',
+    geoText: 'Перекрытие CET/EST — Zoom/Meet, счёт USD или EUR. Поставки в Иран через WhatsApp.',
     formError: 'Отправка не удалась. Повторите попытку или напишите на info@bizdavar.com.',
     waTr: 'WhatsApp продажи',
     waIr: 'WhatsApp (фарси)',
@@ -1994,8 +1992,8 @@
     websites: 'المواقع',
     title: 'اتصل بنا',
     mapImgAlt: 'تعاون دولي — Bizdavar Group',
-    heroTitle: 'استعلام VEGA أو Prosense أو Gamak — واتساب',
-    heroDesc: 'لتوريد إيران واتساب أسرع — الموديل والكمية وصورة اللوحة إن وُجدت. المواقع الإنجليزية ما زالت بفاتورة دولار أو يورو.',
+    heroTitle: 'عرض موقع USD أو EUR — Zoom أو Meet أو النموذج',
+    heroDesc: 'المواقع والإعلانات الإنجليزية لأمريكا وأوروبا: أرسلوا النموذج ونحدد Zoom أو Meet. الفاتورة بالدولار أو اليورو. VEGA/Prosense لإيران أسرع على واتساب.',
     formTitle: 'نموذج طلب التواصل',
     formDesc: 'الاسم وواتساب إلزاميان. البريد اختياري.',
     subtitle: 'املأ النموذج أو راسلنا على واتساب — الرد خلال ساعات العمل',
@@ -2015,13 +2013,13 @@
     privacyLink: 'سياسة الخصوصية',
     privacyAfter: '.',
     privacyAgree: '.',
-    submit: 'المتابعة على واتساب',
+    submit: 'إرسال طلب العرض',
     formNote: 'تُستخدم بياناتك فقط للرد على طلبك.',
     formSending: 'جارٍ الإرسال…',
     formSuccess: 'تم إرسال رسالتك. سنتواصل معك قريباً.',
     formSuccessMailto: 'الرسالة جاهزة للإرسال. إذا لم تفتح نافذة البريد، اكتب إلى info@bizdavar.com.',
     formSuccessWhatsapp: 'الرسالة جاهزة لواتساب. إذا لم تفتح النافذة، استخدم أزرار واتساب في هذه الصفحة.',
-    geoText: 'استشارة متعددة اللغات — واتساب بالفارسية والتركية.',
+    geoText: 'تداخل CET/EST — Zoom/Meet وفاتورة USD أو EUR. توريد إيران عبر واتساب.',
     formError: 'فشل الإرسال. أعد المحاولة أو راسل info@bizdavar.com مباشرة.',
     waTr: 'واتساب المبيعات',
     waIr: 'واتساب الفارسية',

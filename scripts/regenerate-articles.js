@@ -55,7 +55,7 @@ function shell(a) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <link rel="stylesheet" href="/assets/styles/site.css?v=20260829g">
+  <link rel="stylesheet" href="/assets/styles/site.css?v=20260829h">
   <link rel="preload" href="/assets/fonts/vazirmatn/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/estedad/Estedad-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <!-- Google Tag Manager -->
