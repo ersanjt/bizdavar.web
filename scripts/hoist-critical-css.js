@@ -9,8 +9,8 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const CSS_VER = '20260831d';
-const JS_VER = '20260831d';
+const CSS_VER = '20260831e';
+const JS_VER = '20260831e';
 const GTM_ID = 'GTM-NXWQQWF8';
 const VIEWPORT = '<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">';
 const CSS_HREF = `/assets/styles/site.css?v=${CSS_VER}`;
@@ -109,6 +109,11 @@ function transform(html) {
   out = out.replace(
     /<script src="(\/assets\/scripts\/site-loader\.js)(?:\?v=[^"]*)?"/g,
     `<script src="$1?v=${JS_VER}"`
+  );
+
+  out = out.replace(
+    /<link rel="stylesheet" href="(\/assets\/styles\/(?!site\.css)[^"?]+\.css)(?:\?v=[^"]*)?">/g,
+    `<link rel="stylesheet" href="$1?v=${CSS_VER}">`
   );
 
   const headerSkel = '<header class="header" id="siteHeader"><div class="header-skel"><img src="/assets/images/brand/bizdavar-logo-200.webp" alt="Bizdavar" width="100" height="42" fetchpriority="high" decoding="async"></div></header>';

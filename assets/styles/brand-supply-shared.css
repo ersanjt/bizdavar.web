@@ -324,6 +324,122 @@
   padding: 16px 14px;
   transition: var(--transition);
   position: relative;
+  min-height: 100%;
+}
+
+.teltonika-series-card--product,
+.gamak-series-card--product,
+.digi-series-card--product,
+.teraoka-series-card--product,
+.uwt-series-card--product,
+.teltonika-series-card--link,
+.gamak-series-card--link,
+.digi-series-card--link,
+.teraoka-series-card--link,
+.uwt-series-card--link {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+.teltonika-series-card__media,
+.gamak-series-card__media,
+.digi-series-card__media,
+.teraoka-series-card__media,
+.uwt-series-card__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 4 / 3;
+  background: #f3f6f8;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.teltonika-series-card__img,
+.gamak-series-card__img,
+.digi-series-card__img,
+.teraoka-series-card__img,
+.uwt-series-card__img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 148px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.teltonika-series-card__body,
+.gamak-series-card__body,
+.digi-series-card__body,
+.teraoka-series-card__body,
+.uwt-series-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 14px 14px;
+  flex: 1;
+  min-width: 0;
+}
+
+.teltonika-series-card__name,
+.gamak-series-card__name,
+.digi-series-card__name,
+.teraoka-series-card__name,
+.uwt-series-card__name {
+  font-size: var(--text-sm);
+  margin: 0;
+  color: #1a2b4a;
+  line-height: 1.35;
+}
+
+.teltonika-series-card__note,
+.gamak-series-card__note,
+.digi-series-card__note,
+.teraoka-series-card__note,
+.uwt-series-card__note {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.45;
+}
+
+.teltonika-series-card__features,
+.gamak-series-card__features,
+.digi-series-card__features,
+.teraoka-series-card__features,
+.uwt-series-card__features {
+  margin: 4px 0 0;
+  padding: 0;
+  padding-inline-start: 1.1em;
+  font-size: 12px;
+  color: #4b5563;
+  line-height: 1.45;
+}
+
+.teltonika-series-card__actions,
+.gamak-series-card__actions,
+.digi-series-card__actions,
+.teraoka-series-card__actions,
+.uwt-series-card__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.teltonika-series-card__cta,
+.gamak-series-card__cta,
+.digi-series-card__cta,
+.teraoka-series-card__cta,
+.uwt-series-card__cta {
+  width: 100%;
+  justify-content: center;
 }
 
 .teltonika-series-card--featured, .gamak-series-card--featured, .digi-series-card--featured, .teraoka-series-card--featured, .uwt-series-card--featured {
@@ -822,7 +938,8 @@
   body[data-page="teraoka"] .footer,
   body[data-page="fast"] .footer,
   body[data-page="vega"] .footer,
-  body[data-page="prosense"] .footer { padding-bottom: 64px; }
+  body[data-page="prosense"] .footer,
+  body[data-page="uwt"] .footer { padding-bottom: 64px; }
 }
 
 @media (max-width: 480px) {
