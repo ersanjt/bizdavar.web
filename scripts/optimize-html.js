@@ -10,19 +10,7 @@ const GTM_ID = 'GTM-NXWQQWF8';
 const GA4_ID = 'G-4GFEY12SLH';
 
 const GTM_HEAD = `  <!-- Google Tag Manager -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-    function bizdavarLoadGtm() {
-      if (window.__bizdavarGtm) return;
-      window.__bizdavarGtm = 1;
-      var s = document.createElement('script');
-      s.async = true;
-      s.src = 'https://www.googletagmanager.com/gtm.js?id=${GTM_ID}';
-      document.head.appendChild(s);
-    }
-    window.addEventListener('load', function () { setTimeout(bizdavarLoadGtm, 1); });
-  </script>
+  <script src="/assets/scripts/gtm-boot.js" defer></script>
   <!-- End Google Tag Manager -->`;
 
 const GA4_HEAD = `  <!-- Google tag (gtag.js) -->

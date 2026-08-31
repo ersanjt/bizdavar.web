@@ -62,21 +62,26 @@
       const pagePath = LU.currentPagePath();
       alts = LU.hreflangUrls(pagePath);
     } else {
-      let base;
+      let origin = C.baseUrl.replace(/\/$/, '');
+      let pagePath = '/';
       try {
         const raw = canonicalUrl || C.baseUrl;
         const url = new URL(raw.startsWith('http') ? raw : `${C.baseUrl.replace(/\/$/, '')}/${String(raw).replace(/^\//, '')}`);
-        base = url.origin + url.pathname;
+        origin = url.origin;
+        pagePath = url.pathname.replace(/^\/(tr|en|ru|ar)(?=\/|$)/, '') || '/';
+        if (pagePath.length > 1) pagePath = pagePath.replace(/\/$/, '');
       } catch (_) {
-        base = C.baseUrl.replace(/\/$/, '');
+        origin = C.baseUrl.replace(/\/$/, '');
+        pagePath = '/';
       }
+      const locPath = (code) => origin + (code === 'fa' ? '' : '/' + code) + (pagePath === '/' ? '/' : pagePath);
       alts = {
-        fa: `${base}?lang=fa`,
-        tr: `${base}?lang=tr`,
-        en: `${base}?lang=en`,
-        ru: `${base}?lang=ru`,
-        ar: `${base}?lang=ar`,
-        'x-default': base
+        fa: locPath('fa'),
+        tr: locPath('tr'),
+        en: locPath('en'),
+        ru: locPath('ru'),
+        ar: locPath('ar'),
+        'x-default': locPath('fa')
       };
     }
     Object.entries(alts).forEach(([hreflang, href]) => {

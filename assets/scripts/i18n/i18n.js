@@ -543,19 +543,38 @@
           other: p.optOther
         };
         Object.entries(opts).forEach(([val, label]) => {
-          const o = sel && sel.querySelector(`option[value="${val}"]`);
+          const o = sel && sel.querySelector(`option[value="${window.CSS && CSS.escape ? CSS.escape(val) : val}"]`);
           if (o) o.textContent = label;
         });
         const msg = form.message;
         if (msg) msg.placeholder = p.messagePlaceholder;
         const submit = form.querySelector('button[type="submit"]');
         if (submit) submit.textContent = p.submit;
-        const priv = form.querySelector('label input#privacy')?.parentElement;
+        const priv = form.querySelector('label input#privacy')?.parentElement
+          || form.querySelector('label.form-checkbox');
         if (priv && p.privacyLink) {
           const LU = window.BIZDAVAR_LOCALE_URL;
-          const loc = LU && LU.currentLocale ? LU.currentLocale() : 'fa';
+          const loc = (window.BIZDAVAR_I18N && window.BIZDAVAR_I18N.locale)
+            || (LU && LU.currentLocale ? LU.currentLocale() : 'fa');
           const privacyHref = LU && LU.toLocalePath ? LU.toLocalePath(loc, '/pages/privacy') : '/pages/privacy';
-          priv.innerHTML = `${p.privacyBefore || p.privacy || ''} <a href="${privacyHref}" target="_blank" rel="noopener">${p.privacyLink}</a>${p.privacyAfter || p.privacyAgree || ''}`;
+          const box = priv.querySelector('input#privacy') || document.createElement('input');
+          if (!box.id) {
+            box.type = 'checkbox';
+            box.id = 'privacy';
+            box.name = 'privacy';
+            box.required = true;
+          }
+          const a = document.createElement('a');
+          a.href = privacyHref;
+          a.target = '_blank';
+          a.rel = 'noopener';
+          a.textContent = p.privacyLink;
+          priv.replaceChildren(
+            box,
+            document.createTextNode('\u00a0' + (p.privacyBefore ? p.privacyBefore + ' ' : '')),
+            a,
+            document.createTextNode(p.privacyAfter || p.privacyAgree || '')
+          );
         }
         const note = document.getElementById('privacy-note');
         if (note && p.formNote) note.textContent = p.formNote;

@@ -15,6 +15,11 @@ AddType 'text/html; charset=UTF-8' .html
   Require all denied
 </FilesMatch>
 
+# Never serve SQLite / dump files from the web root
+<FilesMatch "\.(sqlite|sqlite3|db|sql)$">
+  Require all denied
+</FilesMatch>
+
 # ── LiteSpeed — never cache HTML (stale page cache blocked GTM/deploy updates)
 <IfModule LiteSpeed>
   CacheDisable public /
@@ -33,13 +38,14 @@ AddType 'text/html; charset=UTF-8' .html
   Header set Referrer-Policy "strict-origin-when-cross-origin"
   Header set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=()"
 
-  # CSP — self-hosted fonts; inline scripts for static page boot
+  # CSP — GTM via /assets/scripts/gtm-boot.js; inline remains for page boot + img onerror
   Header set Content-Security-Policy "\
     default-src 'self'; \
     script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://static.cloudflareinsights.com; \
     style-src 'self' 'unsafe-inline'; \
     font-src 'self' data:; \
     img-src 'self' data: https:; \
+    object-src 'none'; \
     frame-src 'self' https://www.googletagmanager.com; \
     connect-src 'self' https://ipapi.co https://ipwho.is https://formspree.io https://*.formspree.io https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://analytics.google.com https://cloudflareinsights.com https://*.cloudflareinsights.com; \
     frame-ancestors 'self'; \

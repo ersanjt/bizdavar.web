@@ -134,7 +134,8 @@ for (const [key, route] of Object.entries(PAGE_ROUTES)) {
   for (const lang of LANGS) {
     const page = global.BIZDAVAR_LOCALES[lang]?.pages?.[key];
     if (!page) continue;
-    const ogRel = PAGE_OG[key] || DEFAULT_OG;
+    let ogRel = PAGE_OG[key] || DEFAULT_OG;
+    if (/\.svg$/i.test(ogRel)) ogRel = DEFAULT_OG;
     manifest[route][lang] = {
       title: page.seoTitle || '',
       description: page.seoDescription || '',

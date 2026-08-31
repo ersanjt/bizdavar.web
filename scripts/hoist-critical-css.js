@@ -9,26 +9,14 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const CSS_VER = '20260831c';
-const JS_VER = '20260831c';
+const CSS_VER = '20260831d';
+const JS_VER = '20260831d';
 const GTM_ID = 'GTM-NXWQQWF8';
 const VIEWPORT = '<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">';
 const CSS_HREF = `/assets/styles/site.css?v=${CSS_VER}`;
 
 const GTM_HEAD = `  <!-- Google Tag Manager -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-    function bizdavarLoadGtm() {
-      if (window.__bizdavarGtm) return;
-      window.__bizdavarGtm = 1;
-      var s = document.createElement('script');
-      s.async = true;
-      s.src = 'https://www.googletagmanager.com/gtm.js?id=${GTM_ID}';
-      document.head.appendChild(s);
-    }
-    window.addEventListener('load', function () { setTimeout(bizdavarLoadGtm, 1); });
-  </script>
+  <script src="/assets/scripts/gtm-boot.js?v=${JS_VER}" defer></script>
   <!-- End Google Tag Manager -->`;
 
 function walkHtml(dir, list = []) {
@@ -83,7 +71,15 @@ function transform(html) {
     '\n'
   );
   out = out.replace(
+    /\s*<script src="\/assets\/scripts\/gtm-boot\.js[^"]*"(?:\s+defer)?><\/script>\s*/g,
+    '\n'
+  );
+  out = out.replace(
     /\s*<script>\(function\(w,d,s,l,i\)\{[\s\S]*?GTM-NXWQQWF8[\s\S]*?<\/script>\s*/g,
+    '\n'
+  );
+  out = out.replace(
+    /\s*<script>\s*window\.dataLayer = window\.dataLayer \|\| \[\];[\s\S]*?GTM-NXWQQWF8[\s\S]*?<\/script>\s*/g,
     '\n'
   );
 

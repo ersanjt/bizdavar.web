@@ -444,6 +444,11 @@ window.setupWhatsappLinks = function () {
 
 
 
+function cssAttrEscape(val) {
+  if (window.CSS && typeof CSS.escape === 'function') return CSS.escape(val);
+  return String(val).replace(/["\\]/g, '\\$&');
+}
+
 function prefillContactFromQuery() {
   const form = document.getElementById('contactForm');
   if (!form) return;
@@ -453,7 +458,7 @@ function prefillContactFromQuery() {
 
   if (params.get('service')) {
     const val = params.get('service');
-    const opt = form.service.querySelector(`option[value="${val}"]`);
+    const opt = form.service.querySelector(`option[value="${cssAttrEscape(val)}"]`);
     if (opt) form.service.value = val;
   }
 
@@ -575,7 +580,8 @@ function initContactForm() {
             message: data.message,
             locale: window.BIZDAVAR_I18N?.locale || 'fa',
             pageUrl: window.location.href,
-            source: 'contact-form'
+            source: 'contact-form',
+            website: form.website ? form.website.value : ''
           })
         });
         const json = await res.json().catch(() => ({}));

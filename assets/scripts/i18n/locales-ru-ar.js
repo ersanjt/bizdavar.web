@@ -34,9 +34,9 @@
   var pageSeoRu = {
     home: {
       crumb: 'Главная',
-      seoTitle: 'Английские сайты для США и ЕС от $99 | Bizdavar',
-      seoDescription: 'Английский LTR и реклама Google/Meta для США и ЕС — счёт в USD или EUR, от $99 / ~€90. Zoom/Meet и Fast Studio. Поставки в Иран — отдельный путь.',
-      seoKeywords: 'веб-дизайн США, веб-дизайн ЕС, сайт от $99, цифровой маркетинг USD, Fast Web Studio, Bizdavar'
+      seoTitle: 'Поставки, продукты и английские сайты | Bizdavar',
+      seoDescription: 'Три пути: поставки VEGA и Prosense в Иран, продукты FXGuard и английские сайты для США/ЕС от $99 — счёт USD или EUR. WhatsApp или Zoom.',
+      seoKeywords: 'поставки VEGA, Prosense, английский сайт $99, FXGuard, Fast Web Studio, Bizdavar'
     },
     about: {
       crumb: 'О нас',
@@ -94,7 +94,7 @@
     },
     prosense: {
       crumb: 'Продукция Prosense',
-      seoTitle: 'Купить газовые детекторы Prosense | PQ и SafeVader',
+      seoTitle: 'Каталог газовых детекторов Prosense | PQ и SafeVader',
       seoDescription: 'Оригинальные газовые и пламенные детекторы Prosense с сертификатами SIL. Запрос PQ, SafeVader и PPS+ в WhatsApp — прозрачная проформа от Bizdavar.',
       seoKeywords: 'купить Prosense, газовый детектор, PQ Series, SafeVader, PPS+, Bizdavar'
     },
@@ -278,6 +278,36 @@
       seoDescription: 'Как закупить оригинальные датчики VEGA для проектов в Иране — консультация, код заказа, проформа и логистика до объекта. Bizdavar Group.',
       seoKeywords: 'купить VEGA Иран, поставка VEGA, VEGAPULS, Bizdavar'
     },
+    articleMarviSociety: {
+      crumb: 'Marvi Society',
+      seoTitle: 'Разработка iOS — кейс Marvi Society | Bizdavar',
+      seoDescription: 'Кейс iOS-приложения для клуба креаторов в Стамбуле: UI/UX, Swift и публикация в App Store — Bizdavar Group.',
+      seoKeywords: 'iOS приложение, Marvi Society, App Store, Bizdavar'
+    },
+    articleProsenseGas: {
+      crumb: 'Prosense',
+      seoTitle: 'Поставка газовых детекторов Prosense | Bizdavar',
+      seoDescription: 'Как выбрать модель Prosense с сертификатами SIL и Ex для промышленного проекта — проформа и B2B-поставка от Bizdavar.',
+      seoKeywords: 'Prosense, газовый детектор, SIL, Bizdavar'
+    },
+    articleFieldTech: {
+      crumb: 'Полевые работы',
+      seoTitle: 'Технические услуги на объекте — Тебриз | Bizdavar',
+      seoDescription: 'Монтаж CCTV, проводка и скрытое освещение в Тебризе — координация в WhatsApp и выезд команды Bizdavar.',
+      seoKeywords: 'технические услуги Тебриз, CCTV, Bizdavar'
+    },
+    articleLocalSeo: {
+      crumb: 'Локальное SEO',
+      seoTitle: 'Локальное SEO в Иране — Google Maps | Bizdavar',
+      seoDescription: 'Практическое локальное SEO для Ирана: Google Business Profile, единый NAP и локальные страницы для карт Google.',
+      seoKeywords: 'локальное SEO, Google Maps, NAP, Bizdavar'
+    },
+    articleLiquiMolySupply: {
+      crumb: 'Liqui Moly',
+      seoTitle: 'Поставка Liqui Moly — масла и присадки | Bizdavar',
+      seoDescription: 'Оригинальные моторные масла и присадки Liqui Moly для автопарков и мастерских — цена в USD и B2B-поставка от Bizdavar.',
+      seoKeywords: 'Liqui Moly, моторное масло, поставка, Bizdavar'
+    },
     articleBuyVegapulsIran: {
       crumb: 'VEGAPULS 6X',
       seoTitle: 'Купить VEGAPULS 6X в Иране | расчёт',
@@ -292,7 +322,7 @@
     },
     articleBuyProsenseIran: {
       crumb: 'Prosense Иран',
-      seoTitle: 'Купить Prosense в Иране | PQ и SafeVader',
+      seoTitle: 'Гид по покупке Prosense в Иране | PQ и SafeVader',
       seoDescription: 'Оригинальные газовые детекторы Prosense для нефти и HVAC в Иране — SIL и WhatsApp.',
       seoKeywords: 'купить Prosense, газовый детектор, PQ, Bizdavar'
     },
@@ -349,9 +379,9 @@
   var pageSeoAr = {
     home: {
       crumb: 'الرئيسية',
-      seoTitle: 'مواقع إنجليزية لأمريكا وأوروبا من ٩٩$ | Bizdavar',
-      seoDescription: 'مواقع إنجليزية LTR وإعلانات Google/Meta لأمريكا وأوروبا — فاتورة USD أو EUR من ٩٩$ / ~€90. Zoom/Meet وFast Studio. توريد إيران مسار منفصل.',
-      seoKeywords: 'تصميم مواقع أمريكا, تصميم مواقع أوروبا, موقع من 99 دولار, تسويق رقمي USD, Fast Web Studio, بيزدوار'
+      seoTitle: 'توريد صناعي ومنتجات ومواقع إنجليزية | Bizdavar',
+      seoDescription: 'ثلاثة مسارات: توريد VEGA وProsense لإيران، منتجات FXGuard، ومواقع إنجليزية لأمريكا وأوروبا من ٩٩$ بفاتورة USD أو EUR. واتساب أو Zoom.',
+      seoKeywords: 'توريد VEGA, Prosense, موقع إنجليزي 99 دولار, FXGuard, Fast Web Studio, بيزدوار'
     },
     about: {
       crumb: 'من نحن',
@@ -409,7 +439,7 @@
     },
     prosense: {
       crumb: 'منتجات Prosense',
-      seoTitle: 'شراء كواشف غاز Prosense | PQ وSafeVader',
+      seoTitle: 'كتالوج كواشف غاز Prosense | PQ وSafeVader',
       seoDescription: 'كواشف غاز ولهب Prosense الأصلية بشهادات SIL. استعلام PQ وSafeVader وPPS+ عبر واتساب — فاتورة مبدئية شفافة من Bizdavar.',
       seoKeywords: 'شراء Prosense, كاشف غاز, PQ Series, SafeVader, PPS+, Bizdavar'
     },
@@ -593,6 +623,36 @@
       seoDescription: 'كيف تشتري حساسات VEGA الأصلية لمشاريع إيران — استشارة ورمز طلب وفاتورة مبدئية ولوجستيات حتى موقع التركيب. Bizdavar Group.',
       seoKeywords: 'شراء VEGA إيران, توريد VEGA, VEGAPULS, Bizdavar'
     },
+    articleMarviSociety: {
+      crumb: 'Marvi Society',
+      seoTitle: 'تطوير iOS — دراسة حالة Marvi Society | Bizdavar',
+      seoDescription: 'دراسة حالة تطبيق iOS لنادٍ في إسطنبول: تصميم UI/UX وتطوير Swift ونشر App Store بواسطة Bizdavar Group.',
+      seoKeywords: 'تطبيق iOS, Marvi Society, App Store, بيزدوار'
+    },
+    articleProsenseGas: {
+      crumb: 'Prosense',
+      seoTitle: 'توريد كواشف غاز Prosense | Bizdavar',
+      seoDescription: 'كيفية اختيار طراز Prosense بشهادات SIL وEx للمشروع الصناعي — فاتورة مبدئية وتوريد B2B من بيزدوار.',
+      seoKeywords: 'Prosense, كاشف غاز, SIL, بيزدوار'
+    },
+    articleFieldTech: {
+      crumb: 'خدمات ميدانية',
+      seoTitle: 'خدمات تقنية ميدانية — تبريز | Bizdavar',
+      seoDescription: 'تركيب كاميرات CCTV وتمديدات كهربائية وإضاءة مخفية في تبريز — تنسيق واتساب وتنفيذ ميداني من فريق بيزدوار.',
+      seoKeywords: 'خدمات تقنية تبريز, كاميرات, بيزدوار'
+    },
+    articleLocalSeo: {
+      crumb: 'سيو محلي',
+      seoTitle: 'السيو المحلي في إيران — خرائط Google | Bizdavar',
+      seoDescription: 'دليل عملي للسيو المحلي في إيران: Google Business Profile وNAP موحّد وصفحات محلية للظهور على الخرائط.',
+      seoKeywords: 'سيو محلي, Google Maps, NAP, بيزدوار'
+    },
+    articleLiquiMolySupply: {
+      crumb: 'Liqui Moly',
+      seoTitle: 'توريد Liqui Moly — زيوت وإضافات | Bizdavar',
+      seoDescription: 'زيوت محرك وإضافات Liqui Moly الأصلية للأساطيل والورش — تسعير بالدولار وتوريد B2B من بيزدوار.',
+      seoKeywords: 'Liqui Moly, زيت محرك, توريد, بيزدوار'
+    },
     articleBuyVegapulsIran: {
       crumb: 'VEGAPULS 6X',
       seoTitle: 'شراء VEGAPULS 6X في إيران | عرض سعر',
@@ -607,7 +667,7 @@
     },
     articleBuyProsenseIran: {
       crumb: 'Prosense إيران',
-      seoTitle: 'شراء Prosense في إيران | PQ وSafeVader',
+      seoTitle: 'دليل شراء Prosense في إيران | PQ وSafeVader',
       seoDescription: 'كواشف غاز Prosense الأصلية للنفط وHVAC في إيران — SIL وواتساب.',
       seoKeywords: 'شراء Prosense, كاشف غاز, PQ, بيزدوار'
     },
@@ -1438,6 +1498,8 @@
     guideBuyDigiDesc: 'POS и касса',
     guideBuyTeraoka: 'Купить весы Teraoka',
     guideBuyTeraokaDesc: 'Deli, POS и этикетка',
+    guideSensors: 'Промышленные датчики',
+    guideSensorsDesc: 'Выбор уровня и давления',
     offerMap: {
       aria: 'Три пути Bizdavar',
       lead: 'Что вам нужно?',
@@ -1765,6 +1827,8 @@
     guideBuyDigiDesc: 'POS وصندوق المتجر',
     guideBuyTeraoka: 'شراء ميزان Teraoka',
     guideBuyTeraokaDesc: 'دلّي وPOS وملصقات',
+    guideSensors: 'حساسات صناعية',
+    guideSensorsDesc: 'اختيار المستوى والضغط',
     offerMap: {
       aria: 'مسارات بيزدوار الثلاثة',
       lead: 'ماذا تحتاج؟',

@@ -17,8 +17,8 @@ window.BIZDAVAR_LOCALES = {
     },
     seo: {
       defaultTitle: 'بیزدوار گروپ | خرید VEGA و Prosense در ایران',
-      defaultDescription: 'تامین اصل سنسور VEGA، دتکتور گاز Prosense، Liqui Moly و Teltonika برای پروژه‌های ایران. پیش‌فاکتور فارسی و استعلام واتساپ.',
-      keywords: 'خرید VEGA ایران, خرید Prosense, دتکتور گاز, سنسور سطح, VEGAPULS, بازرگانی صنعتی, بیزدوار',
+      defaultDescription: 'تامین اصل VEGA، Prosense و Liqui Moly برای ایران. مسیر جدا: محصولات FXGuard و سایت انگلیسی US/EU از ۹۹ دلار. استعلام واتساپ.',
+      keywords: 'خرید VEGA ایران, خرید Prosense, دتکتور گاز, سنسور سطح, VEGAPULS, FXGuard, بازرگانی صنعتی, بیزدوار',
       schemaServices: 'خدمات بیزدوار گروپ',
       schemaBlog: 'وبلاگ بیزدوار گروپ',
       schemaPortfolio: 'نمونه‌کارهای بیزدوار گروپ'
@@ -56,6 +56,8 @@ window.BIZDAVAR_LOCALES = {
       guideVegaQuoteDesc: 'چه اطلاعاتی بفرستید',
       guideBuyProsense: 'خرید دتکتور Prosense',
       guideBuyProsenseDesc: 'PQ، SafeVader و SIL',
+      guideSensors: 'سنسورهای صنعتی',
+      guideSensorsDesc: 'انتخاب سطح و فشار',
       guideBuyTeltonika: 'خرید ردیاب Teltonika',
       guideBuyTeltonikaDesc: 'FMB920 از ۲۹ دلار',
       guideBuyGamak: 'خرید الکتروموتور Gamak',
@@ -322,7 +324,7 @@ window.BIZDAVAR_LOCALES = {
       heroTitle: 'خرید VEGA، Prosense و تجهیزات صنعتی در ایران',
       heroTitleSpan: '',
       heroTitleEnd: '',
-      heroDesc: 'تامین اصل سنسور سطح، دتکتور گاز، ردیاب و روغن صنعتی برای پروژه‌های ایران — مشاوره فارسی، پیش‌فاکتور شفاف و واتساپ.',
+      heroDesc: 'تامین اصل VEGA، Prosense و Liqui Moly برای پروژه‌های ایران — و جدا از آن، محصولات FXGuard و سایت انگلیسی از ۹۹ دلار برای اروپا و آمریکا.',
       intentNavLabel: 'خرید سریع برای ایران',
       intentVega: 'خرید VEGA',
       intentProsense: 'دتکتور Prosense',
@@ -528,8 +530,8 @@ window.BIZDAVAR_LOCALES = {
       channelField: 'Teknik hizmetler'
     },
     seo: {
-      defaultTitle: 'Bizdavar Group | ABD/AB İngilizce web $99’dan',
-      defaultDescription: 'ABD ve AB için İngilizce LTR site ve Google/Meta reklam — fatura USD veya EUR, $99 / ~€90’dan. Fast Studio ve Zoom/Meet. İran tedariki ayrı yol.',
+      defaultTitle: 'Endüstriyel tedarik, ürünler ve İngilizce web | Bizdavar',
+      defaultDescription: 'Üç yol: İran için VEGA/Prosense tedariki, FXGuard ürünleri ve ABD/AB İngilizce siteler $99’dan — fatura USD veya EUR.',
       keywords: 'Bizdavar, web tasarım, dijital pazarlama, FXGuard, VEGA, Prosense, Liqui Moly, Fast Web Studio',
       schemaServices: 'Bizdavar Group hizmetleri',
       schemaBlog: 'Bizdavar Group blog',
@@ -568,6 +570,8 @@ window.BIZDAVAR_LOCALES = {
       guideVegaQuoteDesc: 'Ne göndermelisiniz',
       guideBuyProsense: 'Prosense dedektör satın al',
       guideBuyProsenseDesc: 'PQ, SafeVader ve SIL',
+      guideSensors: 'Endüstriyel sensörler',
+      guideSensorsDesc: 'Seviye ve basınç seçimi',
       guideBuyTeltonika: 'Teltonika GPS satın al',
       guideBuyTeltonikaDesc: 'FMB920 — 29$’dan',
       guideBuyGamak: 'Gamak motor satın al',
@@ -1051,8 +1055,8 @@ window.BIZDAVAR_LOCALES = {
       channelField: 'Technical services'
     },
     seo: {
-      defaultTitle: 'Bizdavar Group | English websites for US & EU from $99',
-      defaultDescription: 'English LTR sites and Google/Meta ads for US and EU — billed in USD or EUR, from $99 / ~€90. Fast Web Studio, Zoom/Meet, plus VEGA supply for Iran.',
+      defaultTitle: 'Industrial supply, products and English websites | Bizdavar',
+      defaultDescription: 'Three paths: VEGA and Prosense supply for Iran, FXGuard products, and English US/EU sites from $99 billed in USD or EUR.',
       keywords: 'Bizdavar, web design, digital marketing, FXGuard, VEGA, Prosense, Liqui Moly, Fast Web Studio',
       schemaServices: 'Bizdavar Group services',
       schemaBlog: 'Bizdavar Group blog',
@@ -1091,6 +1095,8 @@ window.BIZDAVAR_LOCALES = {
       guideVegaQuoteDesc: 'What to send',
       guideBuyProsense: 'Buy Prosense detectors',
       guideBuyProsenseDesc: 'PQ, SafeVader and SIL',
+      guideSensors: 'Industrial sensors',
+      guideSensorsDesc: 'Level and pressure selection',
       guideBuyTeltonika: 'Buy Teltonika GPS',
       guideBuyTeltonikaDesc: 'FMB920 from $29',
       guideBuyGamak: 'Buy Gamak motors',

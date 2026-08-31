@@ -59,19 +59,7 @@ function shell(a) {
   <link rel="preload" href="/assets/fonts/vazirmatn/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/estedad/Estedad-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <!-- Google Tag Manager -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-    function bizdavarLoadGtm() {
-      if (window.__bizdavarGtm) return;
-      window.__bizdavarGtm = 1;
-      var s = document.createElement('script');
-      s.async = true;
-      s.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-NXWQQWF8';
-      document.head.appendChild(s);
-    }
-    window.addEventListener('load', function () { setTimeout(bizdavarLoadGtm, 1); });
-  </script>
+  <script src="/assets/scripts/gtm-boot.js" defer></script>
   <!-- End Google Tag Manager -->
   <script src="/assets/scripts/i18n/locale-url.js"></script>
   <script src="/assets/scripts/i18n/seo-head.js"></script>

@@ -284,12 +284,157 @@ function bakeFxguard(html, dict) {
   return html;
 }
 
+function loadCatalogs() {
+  const ctx = vm.createContext({ window: {}, console });
+  const files = [
+    'assets/scripts/config/vega-products.js',
+    'assets/scripts/config/prosense-products.js'
+  ];
+  for (const rel of files) {
+    vm.runInContext(fs.readFileSync(path.join(ROOT, rel), 'utf8'), ctx);
+  }
+  return {
+    vega: ctx.window.VEGA_CATALOG || {},
+    prosense: ctx.window.PROSENSE_CATALOG || {}
+  };
+}
+
+function escHtml(s) {
+  return String(s || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function locField(item, lang, faKey, enKey, trKey) {
+  if (lang === 'tr') return item[trKey] || item[enKey] || item[faKey] || '';
+  if (lang === 'fa') return item[faKey] || item[enKey] || '';
+  return item[enKey] || item[faKey] || '';
+}
+
+function replaceDivInnerById(html, id, inner) {
+  const openRe = new RegExp(`<div\\b[^>]*\\sid=["']${id}["'][^>]*>`, 'i');
+  const m = openRe.exec(html);
+  if (!m) return html;
+  const afterOpen = m.index + m[0].length;
+  let depth = 1;
+  const tagRe = /<\/?div\b[^>]*>/gi;
+  tagRe.lastIndex = afterOpen;
+  let endInner = -1;
+  let t;
+  while ((t = tagRe.exec(html))) {
+    if (t[0].slice(0, 2) === '</') {
+      depth -= 1;
+      if (depth === 0) {
+        endInner = t.index;
+        break;
+      }
+    } else {
+      depth += 1;
+    }
+  }
+  if (endInner < 0) return html;
+  return html.slice(0, afterOpen) + inner + html.slice(endInner);
+}
+
+function catalogListHtml(items) {
+  const lis = items
+    .filter((it) => it && it.name)
+    .map((it) => {
+      const name = escHtml(it.name);
+      const extra = it.extra ? ` — ${escHtml(it.extra)}` : '';
+      return `          <li><strong>${name}</strong>${extra}</li>`;
+    })
+    .join('\n');
+  return `\n        <ul class="catalog-ssr">\n${lis}\n        </ul>\n      `;
+}
+
+function bakeCatalogSsr(html, rel, locale) {
+  const page = String(rel).replace(/\\/g, '/');
+  const lang = locale.code || 'fa';
+
+  if (page === 'pages/vega.html' && CATALOGS.vega) {
+    const V = CATALOGS.vega;
+    const featured = (V.featuredProducts || []).map((p) => ({
+      name: p.name,
+      extra: lang === 'fa' ? (p.summaryFa || p.series || '') : (p.imageAlt || p.series || p.summaryFa || '')
+    }));
+    html = replaceDivInnerById(html, 'vegaProductsGrid', catalogListHtml(featured));
+
+    const industries = (V.iranIndustries || []).map((ind) => ({
+      name: lang === 'fa' ? ind.name : (ind.models || ind.name),
+      extra: lang === 'fa' ? (ind.models || '') : (ind.name || '')
+    }));
+    html = replaceDivInnerById(html, 'vegaIranGrid', catalogListHtml(industries));
+  }
+
+  if (page === 'pages/prosense.html' && CATALOGS.prosense) {
+    const P = CATALOGS.prosense;
+    const highlights = (P.highlights || []).map((h) => ({
+      name: locField(h, lang, 'title', 'titleEn', 'titleTr') || h.inquiryName,
+      extra: h.inquiryName && h.inquiryName !== locField(h, lang, 'title', 'titleEn', 'titleTr')
+        ? h.inquiryName
+        : (h.useCaseFa && lang === 'fa' ? h.useCaseFa : '')
+    }));
+    html = replaceDivInnerById(html, 'prosenseHighlights', catalogListHtml(highlights));
+
+    const series = [];
+    for (const cat of P.categories || []) {
+      const catTitle = locField(cat, lang, 'title', 'titleEn', 'titleTr');
+      for (const s of cat.series || []) {
+        series.push({
+          name: locField(s, lang, 'name', 'nameEn', 'nameTr') || s.inquiryName || s.name,
+          extra: catTitle
+        });
+      }
+    }
+    html = replaceDivInnerById(html, 'prosenseCategories', catalogListHtml(series));
+  }
+
+  return html;
+}
+
+function bakeCatalogJsonLd(html, rel, locale) {
+  const page = String(rel).replace(/\\/g, '/');
+  let names = [];
+  let listName = '';
+  if (page === 'pages/vega.html' && CATALOGS.vega) {
+    names = (CATALOGS.vega.featuredProducts || []).map((p) => p.name).filter(Boolean);
+    listName = locale.code === 'fa' ? 'محصولات VEGA — بیزدوار گروپ' : 'VEGA products — Bizdavar Group';
+  } else if (page === 'pages/prosense.html' && CATALOGS.prosense) {
+    names = (CATALOGS.prosense.highlights || [])
+      .map((h) => h.inquiryName || locField(h, locale.code, 'title', 'titleEn', 'titleTr'))
+      .filter(Boolean);
+    listName = locale.code === 'fa' ? 'دتکتورهای Prosense — بیزدوار گروپ' : 'Prosense detectors — Bizdavar Group';
+  } else {
+    return html;
+  }
+  if (!names.length) return html;
+  const node = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: listName,
+    numberOfItems: names.length,
+    itemListElement: names.map((name, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name
+    }))
+  };
+  const tag = `  <script type="application/ld+json" id="jsonld-catalog-static">${JSON.stringify(node)}</script>\n`;
+  html = html.replace(/\n?\s*<script type="application\/ld\+json" id="jsonld-catalog-static">[\s\S]*?<\/script>\s*/gi, '\n');
+  return html.replace(/<\/head>/i, `${tag}</head>`);
+}
+
 function decorateCopy(html, rel, locale) {
   const dict = LOCALES_DICT[locale.code] || {};
   html = bakeI18nBody(html, dict);
   html = bakeFtBody(html, dict);
   html = bakeStaticHero(html, rel, locale.code);
   html = bakeJsonLd(html, locale);
+  html = bakeCatalogSsr(html, rel, locale);
+  html = bakeCatalogJsonLd(html, rel, locale);
   html = bakeArticleLocale(html, rel, locale.code);
   if (String(rel).replace(/\\/g, '/') === 'pages/fxguard.html') {
     html = bakeFxguard(html, dict);
@@ -298,6 +443,7 @@ function decorateCopy(html, rel, locale) {
 }
 
 const LOCALES_DICT = loadLocales();
+const CATALOGS = loadCatalogs();
 
 /** Prefer raster OG images — WhatsApp often skips SVG. */
 const RASTER_OG = `${BASE}/assets/images/brand/bizdavar-logo-square.png`;
@@ -408,6 +554,39 @@ function upsertDescription(html, desc) {
     );
   }
   return html.replace(/<\/head>/i, `  <meta name="description" content="${escAttr(desc)}">\n</head>`);
+}
+
+function upsertKeywords(html, keywords) {
+  if (!keywords) return html;
+  if (/<meta\s+name=["']keywords["'][^>]*>/i.test(html)) {
+    return html.replace(
+      /<meta\s+name=["']keywords["'][^>]*>/i,
+      `<meta name="keywords" content="${escAttr(keywords)}">`
+    );
+  }
+  return html.replace(/<\/head>/i, `  <meta name="keywords" content="${escAttr(keywords)}">\n</head>`);
+}
+
+function upsertPageJsonLd(html, route, meta, locale) {
+  if (route.indexOf('/articles/') >= 0) return html;
+  if (/id=["']jsonld-graph-static["']/.test(html)) return html;
+  const url = absoluteUrl(locale, route);
+  const node = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: meta.title || '',
+    description: meta.description || '',
+    url,
+    inLanguage: locale.htmlLang,
+    isPartOf: {
+      '@type': 'WebSite',
+      name: SITE.siteName || 'Bizdavar Group',
+      url: locale.prefix ? `${BASE}${locale.prefix}/` : `${BASE}/`
+    }
+  };
+  const tag = `  <script type="application/ld+json" id="jsonld-page-static">${JSON.stringify(node)}</script>\n`;
+  html = html.replace(/\n?\s*<script type="application\/ld\+json" id="jsonld-page-static">[\s\S]*?<\/script>\s*/gi, '\n');
+  return html.replace(/<\/head>/i, `${tag}</head>`);
 }
 
 function setHtmlLangDir(html, lang, dir) {
@@ -602,6 +781,8 @@ function applySeo(html, route, meta, locale) {
   out = setHtmlLangDir(out, locale.htmlLang, locale.dir);
   out = upsertTitle(out, meta.title);
   out = upsertDescription(out, meta.description);
+  out = upsertKeywords(out, meta.keywords);
+  out = upsertPageJsonLd(out, route, meta, locale);
   const block = buildBlock(route, meta, locale);
   if (/<\/head>/i.test(out)) {
     out = out.replace(/<\/head>/i, `${block}</head>`);

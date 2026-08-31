@@ -5,6 +5,8 @@
 - **Admin panel:** `https://bizdavar.com/admin/`
 - **API:** `https://bizdavar.com/api/`
 
+Installer is **CLI-only**. Do not open `install.php` in a browser.
+
 ---
 
 ## Features
@@ -48,18 +50,18 @@ Edit `api/config.php`:
 ],
 'install_key' => 'random-secret-key-here',
 'admin_email' => 'you@bizdavar.com',
-'admin_password' => 'StrongPassword123!',
+'admin_password' => 'CHANGE_ME_STRONG_PASSWORD',
 ```
 
 ### 3) Run installer (once)
 
-Open in browser:
+On the server (SSH / cPanel Terminal):
 
-```
-https://bizdavar.com/api/install.php?key=random-secret-key-here
+```bash
+php api/install.php
 ```
 
-Then **delete** `api/install.php` and remove `install_key` / `admin_password` from config.
+HTTP access to `install.php` is blocked. Then **remove** `install_key` and `admin_password` from `config.php`.
 
 ### 4) Enable contact form → CRM
 
@@ -103,7 +105,7 @@ Use the admin email/password from install.
 - Rate limit on public lead submission (8/hour per IP)
 - Session cookies: HttpOnly, Secure, SameSite=Lax
 - Block `/admin/` and `/api/` in robots.txt
-- Delete `install.php` after setup
+- Installer is CLI-only; Apache denies HTTP access to `install.php` and `storage/`
 
 ---
 

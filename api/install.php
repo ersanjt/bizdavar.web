@@ -3,42 +3,58 @@
 declare(strict_types=1);
 
 /**
- * One-time installer — DELETE after successful setup!
- * Visit: https://bizdavar.com/api/install.php?key=YOUR_INSTALL_KEY
+ * One-time installer — CLI only. HTTP access is denied.
+ *
+ *   php api/install.php
+ *   php api/install.php --key=YOUR_INSTALL_KEY
+ *
+ * Then remove install_key and admin_password from config.php.
  */
+
+if (PHP_SAPI !== 'cli') {
+    http_response_code(403);
+    header('Content-Type: text/plain; charset=utf-8');
+    echo "Installer is CLI-only.\nRun: php api/install.php\n";
+    exit;
+}
 
 require __DIR__ . '/lib/core.php';
 
 $configPath = __DIR__ . '/config.php';
 if (!is_file($configPath)) {
-    http_response_code(503);
-    echo 'Copy config.sample.php to config.php first.';
-    exit;
+    fwrite(STDERR, "Copy config.sample.php to config.php first.\n");
+    exit(1);
 }
 
 $cfg = require $configPath;
-$installKey = $cfg['install_key'] ?? '';
-$provided = $_GET['key'] ?? '';
-
-if ($installKey === '' || !hash_equals($installKey, $provided)) {
-    http_response_code(403);
-    echo 'Forbidden';
-    exit;
+$installKey = (string) ($cfg['install_key'] ?? '');
+$provided = '';
+foreach (array_slice($argv, 1) as $arg) {
+    if (str_starts_with($arg, '--key=')) {
+        $provided = substr($arg, 6);
+    }
 }
 
-header('Content-Type: text/plain; charset=utf-8');
+if ($installKey === '' || $installKey === 'CHANGE_ME_RANDOM_STRING') {
+    fwrite(STDERR, "Set a real install_key in config.php first.\n");
+    exit(1);
+}
+if ($provided !== '' && !hash_equals($installKey, $provided)) {
+    fwrite(STDERR, "Forbidden: invalid install key.\n");
+    exit(1);
+}
 
 try {
     $pdo = Database::connect($cfg);
 } catch (Throwable $e) {
-    echo 'DB error: ' . $e->getMessage();
-    exit;
+    fwrite(STDERR, 'DB error: ' . $e->getMessage() . "\n");
+    exit(1);
 }
 
 $schemaFile = dirname(__DIR__) . '/database/schema.sql';
 if (!is_file($schemaFile)) {
-    echo 'schema.sql not found';
-    exit;
+    fwrite(STDERR, "schema.sql not found\n");
+    exit(1);
 }
 
 $sql = file_get_contents($schemaFile);
@@ -52,9 +68,9 @@ echo "Schema OK\n";
 
 $email = $cfg['admin_email'] ?? 'admin@bizdavar.com';
 $pass = $cfg['admin_password'] ?? '';
-if ($pass === '') {
-    echo "Set admin_password in config.php and re-run install.\n";
-    exit;
+if ($pass === '' || $pass === 'CHANGE_ME_STRONG_PASSWORD') {
+    fwrite(STDERR, "Set a real admin_password in config.php and re-run install.\n");
+    exit(1);
 }
 
 $hash = password_hash($pass, PASSWORD_DEFAULT);
@@ -68,4 +84,5 @@ if ($check->fetch()) {
     echo "Admin created: $email\n";
 }
 
-echo "\nDone. DELETE api/install.php and remove install_key from config.\n";
+echo "\nDone. Remove install_key and admin_password from config.php.\n";
+echo "HTTP access to this file is blocked; keep it off the public tree if you can.\n";

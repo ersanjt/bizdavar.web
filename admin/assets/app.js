@@ -14,6 +14,7 @@
 
   let state = {
     user: null,
+    csrfToken: '',
     view: 'dashboard',
     leads: [],
     posts: [],
@@ -27,13 +28,19 @@
   const app = document.getElementById('app');
 
   async function api(path, opts = {}) {
+    const method = (opts.method || 'GET').toUpperCase();
+    const headers = { 'Content-Type': 'application/json', ...(opts.headers || {}) };
+    if (state.csrfToken && !['GET', 'HEAD', 'OPTIONS'].includes(method)) {
+      headers['X-CSRF-Token'] = state.csrfToken;
+    }
     const res = await fetch(API + path, {
       credentials: 'include',
-      headers: { 'Content-Type': 'application/json', ...(opts.headers || {}) },
+      headers,
       ...opts,
       body: opts.body ? JSON.stringify(opts.body) : undefined
     });
     const data = await res.json().catch(() => ({}));
+    if (data.csrfToken) state.csrfToken = data.csrfToken;
     if (!res.ok) throw new Error(data.error || res.statusText);
     return data;
   }
@@ -89,6 +96,7 @@
           body: { email: fd.get('email'), password: fd.get('password') }
         });
         state.user = r.user;
+        if (r.csrfToken) state.csrfToken = r.csrfToken;
         await loadDashboard();
         renderShell();
       } catch (err) {
@@ -134,6 +142,7 @@
     document.getElementById('logoutBtn').addEventListener('click', async () => {
       await api('/auth/logout', { method: 'POST' });
       state.user = null;
+      state.csrfToken = '';
       renderLogin();
     });
     loadView();
@@ -312,7 +321,7 @@
     document.querySelectorAll('[data-edit-faq]').forEach(b => b.addEventListener('click', e => {
       e.stopPropagation();
       openFaqModal(+b.dataset.editFaq);
-    });
+    }));
   }
 
   async function openLeadModal(id) {
@@ -446,6 +455,7 @@
     try {
       const r = await api('/auth/me');
       state.user = r.user;
+      if (r.csrfToken) state.csrfToken = r.csrfToken;
       await loadDashboard();
       renderShell();
     } catch {

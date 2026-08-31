@@ -42,17 +42,29 @@ function route_match(string $uri, string $pattern): ?array
 
 // ─── Auth ───
 if ($method === 'POST' && $uri === '/auth/login') {
+    $ip = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
+    $sec = $cfg['security'] ?? [];
+    $loginMax = (int) ($sec['login_rate_limit'] ?? 5);
+    $loginWindow = (int) ($sec['login_rate_window'] ?? 900);
+    if (!RateLimit::check($pdo, $ip, 'login', $loginMax, $loginWindow)) {
+        Response::error('Too many login attempts. Try again later.', 429);
+    }
+
     $body = bizhub_json_body();
     $email = trim($body['email'] ?? '');
     $password = $body['password'] ?? '';
     if ($email === '' || $password === '') {
         Response::error('Email and password required', 422);
     }
+    $emailKey = strtolower($email);
+    if (!RateLimit::check($pdo, $emailKey, 'login_email', $loginMax, $loginWindow)) {
+        Response::error('Too many login attempts. Try again later.', 429);
+    }
     $user = Auth::login($pdo, $email, $password);
     if (!$user) {
         Response::error('Invalid credentials', 401);
     }
-    Response::json(['ok' => true, 'user' => $user]);
+    Response::json(['ok' => true, 'user' => $user, 'csrfToken' => Auth::csrfToken()]);
 }
 
 if ($method === 'POST' && $uri === '/auth/logout') {
@@ -65,7 +77,7 @@ if ($method === 'GET' && $uri === '/auth/me') {
     if (!$user) {
         Response::error('Unauthorized', 401);
     }
-    Response::json(['ok' => true, 'user' => $user]);
+    Response::json(['ok' => true, 'user' => $user, 'csrfToken' => Auth::csrfToken()]);
 }
 
 // ─── Public: submit lead (contact form) ───
@@ -77,16 +89,25 @@ if ($method === 'POST' && $uri === '/public/leads') {
     }
 
     $body = bizhub_json_body();
-    $first = trim($body['firstName'] ?? $body['first_name'] ?? '');
-    $last = trim($body['lastName'] ?? $body['last_name'] ?? '');
-    $email = trim($body['email'] ?? '');
-    $service = trim($body['service'] ?? '');
-    $message = trim($body['message'] ?? '');
+    $honeypot = trim((string) ($body['website'] ?? $body['company_url'] ?? ''));
+    if ($honeypot !== '') {
+        Response::json(['ok' => true, 'message' => 'Lead created'], 201);
+    }
 
-    if ($first === '' || $last === '' || $email === '' || $service === '' || $message === '') {
+    $first = bizhub_clip(trim($body['firstName'] ?? $body['first_name'] ?? ''), 80);
+    $last = bizhub_clip(trim($body['lastName'] ?? $body['last_name'] ?? ''), 80);
+    $email = bizhub_clip(trim($body['email'] ?? ''), 190);
+    $phone = bizhub_clip(trim($body['phone'] ?? ''), 40);
+    $service = bizhub_clip(trim($body['service'] ?? ''), 80);
+    $message = bizhub_clip(trim($body['message'] ?? ''), 5000);
+
+    if ($first === '' || $last === '' || $service === '' || $message === '') {
         Response::error('Required fields missing', 422);
     }
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    if ($email === '' && $phone === '') {
+        Response::error('Email or phone required', 422);
+    }
+    if ($email !== '' && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
         Response::error('Invalid email', 422);
     }
 
@@ -96,21 +117,21 @@ if ($method === 'POST' && $uri === '/public/leads') {
         $first,
         $last,
         $email,
-        trim($body['phone'] ?? '') ?: null,
+        $phone !== '' ? $phone : null,
         $service,
         $message,
-        trim($body['source'] ?? 'website'),
-        trim($body['locale'] ?? '') ?: null,
-        trim($body['pageUrl'] ?? $body['page_url'] ?? '') ?: null,
+        bizhub_clip(trim($body['source'] ?? 'website'), 60),
+        bizhub_locale($body['locale'] ?? null),
+        bizhub_clip(trim($body['pageUrl'] ?? $body['page_url'] ?? ''), 500) ?: null,
         $ip,
     ]);
 
-    Response::json(['ok' => true, 'id' => (int)$pdo->lastInsertId(), 'message' => 'Lead created'], 201);
+    Response::json(['ok' => true, 'message' => 'Lead created'], 201);
 }
 
 // ─── Public: published posts ───
 if ($method === 'GET' && $uri === '/public/posts') {
-    $locale = $_GET['locale'] ?? 'fa';
+    $locale = bizhub_locale($_GET['locale'] ?? 'fa') ?? 'fa';
     $limit = min(50, max(1, (int)($_GET['limit'] ?? 20)));
     $stmt = $pdo->prepare("SELECT id, slug, category, title_fa, title_tr, title_en, excerpt_fa, excerpt_tr, excerpt_en, thumb, published_at
       FROM posts WHERE status = 'published' ORDER BY published_at DESC LIMIT $limit");
@@ -133,7 +154,7 @@ if ($method === 'GET' && $uri === '/public/posts') {
 
 // ─── Public: FAQs ───
 if ($method === 'GET' && $uri === '/public/faqs') {
-    $locale = $_GET['locale'] ?? 'fa';
+    $locale = bizhub_locale($_GET['locale'] ?? 'fa') ?? 'fa';
     $stmt = $pdo->query('SELECT * FROM faqs WHERE is_published = 1 ORDER BY sort_order ASC, id ASC');
     $rows = $stmt->fetchAll();
     $out = array_map(function ($r) use ($locale) {
@@ -146,6 +167,7 @@ if ($method === 'GET' && $uri === '/public/faqs') {
 
 // ─── Protected routes below ───
 Auth::requireUser();
+Auth::verifyCsrf();
 
 // ─── Dashboard ───
 if ($method === 'GET' && $uri === '/dashboard/stats') {
@@ -198,13 +220,39 @@ if ($method === 'GET' && ($p = route_match($uri, '/leads/{id}'))) {
 
 if ($method === 'PATCH' && ($p = route_match($uri, '/leads/{id}'))) {
     $body = bizhub_json_body();
-    $allowed = ['status', 'priority', 'assigned_to'];
+    $statusOk = ['new', 'contacted', 'qualified', 'proposal', 'won', 'lost'];
+    $priorityOk = ['low', 'normal', 'high'];
     $sets = [];
     $vals = [];
-    foreach ($allowed as $field) {
-        if (array_key_exists($field, $body)) {
-            $sets[] = "$field = ?";
-            $vals[] = $body[$field];
+    if (array_key_exists('status', $body)) {
+        $status = (string) $body['status'];
+        if (!in_array($status, $statusOk, true)) {
+            Response::error('Invalid status', 422);
+        }
+        $sets[] = 'status = ?';
+        $vals[] = $status;
+    }
+    if (array_key_exists('priority', $body)) {
+        $priority = (string) $body['priority'];
+        if (!in_array($priority, $priorityOk, true)) {
+            Response::error('Invalid priority', 422);
+        }
+        $sets[] = 'priority = ?';
+        $vals[] = $priority;
+    }
+    if (array_key_exists('assigned_to', $body)) {
+        if ($body['assigned_to'] === null || $body['assigned_to'] === '') {
+            $sets[] = 'assigned_to = ?';
+            $vals[] = null;
+        } else {
+            $uid = (int) $body['assigned_to'];
+            $chk = $pdo->prepare('SELECT id FROM users WHERE id = ? AND is_active = 1 LIMIT 1');
+            $chk->execute([$uid]);
+            if (!$chk->fetch()) {
+                Response::error('Invalid assignee', 422);
+            }
+            $sets[] = 'assigned_to = ?';
+            $vals[] = $uid;
         }
     }
     if (!$sets) {
@@ -217,14 +265,14 @@ if ($method === 'PATCH' && ($p = route_match($uri, '/leads/{id}'))) {
 
 if ($method === 'POST' && ($p = route_match($uri, '/leads/{id}/notes'))) {
     $body = bizhub_json_body();
-    $text = trim($body['body'] ?? '');
+    $text = bizhub_clip(trim($body['body'] ?? ''), 8000);
     if ($text === '') {
         Response::error('Note body required', 422);
     }
     $user = Auth::user();
     $pdo->prepare('INSERT INTO lead_notes (lead_id, user_id, body) VALUES (?, ?, ?)')
         ->execute([(int)$p['id'], $user['id'], $text]);
-    Response::json(['ok' => true, 'id' => (int)$pdo->lastInsertId()], 201);
+    Response::json(['ok' => true], 201);
 }
 
 if ($method === 'DELETE' && ($p = route_match($uri, '/leads/{id}'))) {
@@ -253,6 +301,7 @@ if ($method === 'GET' && ($p = route_match($uri, '/posts/{id}'))) {
 }
 
 if ($method === 'POST' && $uri === '/posts') {
+    Auth::requireRole(['admin', 'editor']);
     $body = bizhub_json_body();
     $title = trim($body['title_fa'] ?? '');
     if ($title === '') {
@@ -285,6 +334,7 @@ if ($method === 'POST' && $uri === '/posts') {
 }
 
 if ($method === 'PUT' && ($p = route_match($uri, '/posts/{id}'))) {
+    Auth::requireRole(['admin', 'editor']);
     $body = bizhub_json_body();
     $stmt = $pdo->prepare('SELECT * FROM posts WHERE id = ?');
     $stmt->execute([(int)$p['id']]);
@@ -315,6 +365,7 @@ if ($method === 'PUT' && ($p = route_match($uri, '/posts/{id}'))) {
 }
 
 if ($method === 'DELETE' && ($p = route_match($uri, '/posts/{id}'))) {
+    Auth::requireRole(['admin']);
     $pdo->prepare('DELETE FROM posts WHERE id = ?')->execute([(int)$p['id']]);
     Response::json(['ok' => true]);
 }
@@ -326,6 +377,7 @@ if ($method === 'GET' && $uri === '/faqs') {
 }
 
 if ($method === 'POST' && $uri === '/faqs') {
+    Auth::requireRole(['admin', 'editor']);
     $body = bizhub_json_body();
     if (trim($body['question_fa'] ?? '') === '' || trim($body['answer_fa'] ?? '') === '') {
         Response::error('question_fa and answer_fa required', 422);
@@ -345,6 +397,7 @@ if ($method === 'POST' && $uri === '/faqs') {
 }
 
 if ($method === 'PUT' && ($p = route_match($uri, '/faqs/{id}'))) {
+    Auth::requireRole(['admin', 'editor']);
     $body = bizhub_json_body();
     $pdo->prepare('UPDATE faqs SET question_fa=?, question_tr=?, question_en=?, answer_fa=?, answer_tr=?, answer_en=?, sort_order=?, is_published=? WHERE id=?')
         ->execute([
@@ -362,6 +415,7 @@ if ($method === 'PUT' && ($p = route_match($uri, '/faqs/{id}'))) {
 }
 
 if ($method === 'DELETE' && ($p = route_match($uri, '/faqs/{id}'))) {
+    Auth::requireRole(['admin']);
     $pdo->prepare('DELETE FROM faqs WHERE id = ?')->execute([(int)$p['id']]);
     Response::json(['ok' => true]);
 }
