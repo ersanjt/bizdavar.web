@@ -37,6 +37,34 @@ window.createSupplyBrandPage = function (cfg) {
   const locale = () => (window.BIZDAVAR_I18N?.locale || 'fa');
   const isFa = () => locale() === 'fa';
 
+  function offerPrice(item) {
+    if (!item) return null;
+    if (item.priceEur != null && item.priceEur !== '' && !Number.isNaN(Number(item.priceEur))) {
+      return { amount: Number(item.priceEur), currency: 'EUR', symbol: '€' };
+    }
+    if (item.priceUsd != null && item.priceUsd !== '' && !Number.isNaN(Number(item.priceUsd))) {
+      return { amount: Number(item.priceUsd), currency: 'USD', symbol: '$' };
+    }
+    return null;
+  }
+
+  function formatOfferAmount(p) {
+    const n = p.amount % 1 ? p.amount.toFixed(2) : String(Math.round(p.amount));
+    return p.symbol + Number(n).toLocaleString('en-US');
+  }
+
+  function priceHtml(item, kind) {
+    const p = offerPrice(item);
+    if (!p) return '';
+    const label = item.priceFrom
+      ? t('priceFrom', 'شروع از')
+      : (p.currency === 'EUR' ? t('priceSellLabel', 'قیمت فروش') : t('approxPrice', 'تقریبی'));
+    if (kind === 'div') {
+      return `<div class="${prefix}-price"><span class="${prefix}-price__label">${label}</span><strong dir="ltr">${formatOfferAmount(p)}</strong></div>`;
+    }
+    return `<span class="${prefix}-series-card__price" dir="ltr">${formatOfferAmount(p)}</span>`;
+  }
+
   function isRemoteMedia(u) {
     return !u || /^https?:/i.test(u) || /liquimolyturkey\.com|shop\.egemot\.com\.tr/i.test(u);
   }
@@ -382,7 +410,7 @@ window.createSupplyBrandPage = function (cfg) {
 
             <h3>${title}</h3>
 
-            ${h.priceUsd != null ? `<div class="${prefix}-price"><span class="${prefix}-price__label">${h.priceFrom ? t('priceFrom', 'شروع از') : t('approxPrice', 'تقریبی')}</span><strong dir="ltr">$${Number(h.priceUsd) % 1 ? Number(h.priceUsd).toFixed(2) : Number(h.priceUsd)}</strong></div>` : ''}
+            ${priceHtml(h, 'div')}
 
             <p class="${prefix}-highlight-card__desc">${h.desc || ''}</p>
 
@@ -471,7 +499,7 @@ window.createSupplyBrandPage = function (cfg) {
               <span class="${prefix}-series-card__body">
                 <strong>${s.name}</strong>
                 <span>${s.note || ''}</span>
-                ${s.priceUsd != null ? `<span class="${prefix}-series-card__price">$${Number(s.priceUsd).toFixed(2)}</span>` : ''}
+                ${priceHtml(s)}
                 <span class="${prefix}-series-card__link">${t('inquirySeries', 'استعلام')}${arrow()}</span>
               </span>
             </a>`;
@@ -497,6 +525,7 @@ window.createSupplyBrandPage = function (cfg) {
                 ${s.specs ? `<span class="${prefix}-series-card__badge">${s.specs}</span>` : ''}
                 <h3 class="${prefix}-series-card__name">${s.name}</h3>
                 <p class="${prefix}-series-card__note">${s.note || ''}</p>
+                ${priceHtml(s, 'div')}
                 ${feats ? `<ul class="${prefix}-series-card__features">${feats}</ul>` : ''}
                 <div class="${prefix}-series-card__actions">
                   <a href="${inquiryUrl(qName)}" class="btn btn--yellow ${prefix}-series-card__cta">${t('inquirySeries', 'استعلام')}</a>
@@ -900,11 +929,12 @@ window.createSupplyBrandPage = function (cfg) {
         url: officialSeriesUrl(s) || undefined
 
         };
-        if (s.priceUsd != null && s.priceUsd !== '' && !Number.isNaN(Number(s.priceUsd))) {
+        const offer = offerPrice(s);
+        if (offer) {
           product.offers = {
             '@type': 'Offer',
-            price: String(s.priceUsd),
-            priceCurrency: 'USD',
+            price: String(offer.amount),
+            priceCurrency: offer.currency,
             availability: 'https://schema.org/InStock',
             seller: { '@type': 'Organization', name: C.siteName }
           };

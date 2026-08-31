@@ -241,6 +241,7 @@
     getSupplyCatalog(catalogKey) {
       const keyMap = {
         GAMAK_CATALOG: 'gamakCatalog',
+        UWT_CATALOG: 'uwtCatalog',
         DIGI_SYSTEM_CATALOG: 'digiSystemCatalog',
         TERAOKA_CATALOG: 'teraokaCatalog',
         TELTONIKA_CATALOG: 'teltonikaCatalog',

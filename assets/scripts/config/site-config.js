@@ -39,6 +39,7 @@ window.BIZDAVAR_CONFIG = {
     bizswap: 'pages/bizswap.html',
     products: 'pages/products.html',
     gamak: 'pages/gamak.html',
+    uwt: 'pages/uwt.html',
     digiSystem: 'pages/digi-system.html',
     teraoka: 'pages/teraoka.html',
     liquiMoly: 'pages/liqui-moly.html',
@@ -121,6 +122,7 @@ window.BIZDAVAR_CONFIG = {
             labelKey: 'nav.brandGroupSensing',
             items: [
               { route: 'vega', page: 'vega', label: 'VEGA', descKey: 'nav.brandVegaDesc' },
+              { route: 'uwt', page: 'uwt', label: 'UWT', descKey: 'nav.brandUwtDesc' },
               { route: 'prosense', page: 'prosense', label: 'Prosense', descKey: 'nav.brandProsenseDesc' }
             ]
           },
@@ -701,6 +703,18 @@ window.BIZDAVAR_CONFIG = {
       accent: 'vega',
       tags: ['VEGAPULS', 'VEGABAR', 'VEGAPOINT'],
       cta: 'مشاهده کاتالوگ'
+    },
+    {
+      name: 'UWT',
+      title: 'اندازه‌گیری سطح سیلو و مخزن',
+      desc: 'سوئیچ سطح و رادار برای جامدات فله و مایعات — Rotonivo، Vibranivo، NivoRadar',
+      logo: 'assets/images/partners/uwt.svg',
+      url: 'pages/uwt',
+      internal: true,
+      badge: 'آلمان',
+      accent: 'uwt',
+      tags: ['Rotonivo', 'NivoRadar', 'Vibranivo'],
+      cta: 'کاتالوگ UWT'
     },
     {
       name: 'Prosense',

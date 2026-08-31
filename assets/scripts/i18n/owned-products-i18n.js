@@ -49,7 +49,7 @@
         supply: {
           eyebrow: 'تامین برند',
           title: 'برندهای صنعتی که تامین می‌کنیم',
-          desc: 'VEGA، Prosense، Liqui Moly، Teltonika، Gamak، Digi System و Teraoka — کاتالوگ جداگانه با مشاوره فنی و پیش‌فاکتور شفاف.',
+          desc: 'VEGA، UWT، Prosense، Liqui Moly، Teltonika، Gamak، Digi System و Teraoka — کاتالوگ جداگانه با مشاوره فنی و پیش‌فاکتور شفاف.',
           cta: 'کاتالوگ محصولات مالکیتی',
           ctaContact: 'استعلام تامین برند'
         },
@@ -78,6 +78,7 @@
             bizclean: 'ضدعفونی دست اتوماتیک',
             bizpet: 'پد حرارتی — خانه و خودرو',
             vega: 'سنسور سطح و فشار',
+            uwt: 'سنسور سطح سیلو و مخزن',
             prosense: 'دتکتور گاز و شعله',
             teltonika: 'Fleet Telematics / GPS',
             liqui: 'روغن و افزودنی خودرو',
@@ -244,7 +245,7 @@
         supply: {
           eyebrow: 'Marka tedariki',
           title: 'Tedarik ettiğimiz endüstriyel markalar',
-          desc: 'VEGA, Prosense, Liqui Moly, Teltonika, Gamak, Digi System ve Teraoka — ayrı katalog, teknik danışmanlık ve şeffaf proforma.',
+          desc: 'VEGA, UWT, Prosense, Liqui Moly, Teltonika, Gamak, Digi System ve Teraoka — ayrı katalog, teknik danışmanlık ve şeffaf proforma.',
           cta: 'Sahip olunan ürün kataloğu',
           ctaContact: 'Marka tedarik teklifi'
         },
@@ -273,6 +274,7 @@
             bizclean: 'Otomatik el dezenfektanı',
             bizpet: 'Isı pedi — ev ve araç',
             vega: 'Seviye ve basınç sensörü',
+            uwt: 'Silo ve tank seviye sensörü',
             prosense: 'Gaz ve alev dedektörü',
             teltonika: 'Fleet Telematics / GPS',
             liqui: 'Yağ ve katkı',
@@ -374,7 +376,7 @@
         supply: {
           eyebrow: 'Brand supply',
           title: 'Industrial brands we supply',
-          desc: 'VEGA, Prosense, Liqui Moly, Teltonika, Gamak, Digi System and Teraoka — separate catalogs with technical consulting and transparent proformas.',
+          desc: 'VEGA, UWT, Prosense, Liqui Moly, Teltonika, Gamak, Digi System and Teraoka — separate catalogs with technical consulting and transparent proformas.',
           cta: 'Owned products catalog',
           ctaContact: 'Brand supply inquiry'
         },
@@ -403,6 +405,7 @@
             bizclean: 'Automatic hand sanitizer',
             bizpet: 'Heating pad — home and car',
             vega: 'Level and pressure sensors',
+            uwt: 'Silo and tank level sensors',
             prosense: 'Gas and flame detectors',
             teltonika: 'Fleet Telematics / GPS',
             liqui: 'Oils and additives',

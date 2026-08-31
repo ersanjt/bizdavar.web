@@ -51,6 +51,11 @@ const PAGE_LOADER = {
     afterPageI18n: 'lib/supply-brand-page.js,config/gamak-products.js',
     beforeMain: 'gamak-page.js'
   },
+  'pages/uwt.html': {
+    afterSeo: 'i18n/supply-catalog-i18n.js',
+    afterPageI18n: 'lib/supply-brand-page.js,config/uwt-products.js',
+    beforeMain: 'uwt-page.js'
+  },
   'pages/digi-system.html': {
     afterSeo: 'i18n/supply-catalog-i18n.js',
     afterPageI18n: 'lib/supply-brand-page.js,config/digi-system-products.js',

@@ -473,7 +473,7 @@ function prefillContactFromQuery() {
       ? window.BIZDAVAR_I18N.t('contactPage.productInquiry', '')
       : '') || 'درخواست استعلام قیمت و تامین {product}.\n\nشرایط کاربرد:\nتعداد مورد نیاز:\n';
     form.message.value = tpl.replace('{product}', product);
-    if (!params.get('service') && /vega|prosense|teltonika|liqui|gamak|digi|teraoka/i.test(product)) {
+    if (!params.get('service') && /vega|prosense|teltonika|liqui|gamak|uwt|digi|teraoka/i.test(product)) {
       const industrial = form.service.querySelector('option[value="industrial"]');
       if (industrial) form.service.value = 'industrial';
     }

@@ -252,6 +252,7 @@
       { name: t('common.freeConsult', 'مشاوره رایگان'), url: absUrl(R.contact) },
       { name: t('nav.productsSupplyLink', 'تامین برندهای صنعتی'), url: absUrl(R.products) + '#supply' },
       { name: 'VEGA', url: absUrl(R.vega) },
+      { name: 'UWT', url: absUrl(R.uwt) },
       { name: 'Prosense', url: absUrl(R.prosense) },
       { name: 'Liqui Moly', url: absUrl(R.liquiMoly) },
       { name: 'FXGuard', url: absUrl(R.fxguard) },
@@ -268,6 +269,10 @@
         {
           '@type': 'Offer',
           itemOffered: { '@type': 'Service', name: 'VEGA industrial sensor supply', url: absUrl(R.vega) }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: { '@type': 'Service', name: 'UWT level sensor supply', url: absUrl(R.uwt) }
         },
         {
           '@type': 'Offer',

@@ -44,6 +44,7 @@ const PAGES = [
   { path: '/pages/liqui-moly', changefreq: 'weekly', priority: 0.9, lastmod: '2026-08-12' },
   { path: '/pages/teltonika', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
   { path: '/pages/gamak', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
+  { path: '/pages/uwt', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/digi-system', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/teraoka', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/bz-diamond', changefreq: 'monthly', priority: 0.75, lastmod: SITE_UPDATE },

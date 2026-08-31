@@ -152,6 +152,7 @@
     }
     const supplyInits = {
       gamak: 'initGamakPage',
+      uwt: 'initUwtPage',
       'digi-system': 'initDigiSystemPage',
       teraoka: 'initTeraokaPage',
       teltonika: 'initTeltonikaPage',

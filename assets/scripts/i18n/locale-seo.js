@@ -63,8 +63,13 @@
       },
       vega: {
         seoTitle: 'خرید سنسور VEGA در ایران | قیمت و استعلام',
-        seoDescription: 'VEGAPULS 6X، VEGABAR 39 و VEGAPOINT اصل تا پروژه ایران. کد سفارش دقیق، پیش‌فاکتور شفاف و مشاوره فارسی در واتساپ.',
-        seoKeywords: 'خرید VEGA ایران, قیمت VEGAPULS 6X, VEGABAR 39, VEGAPOINT, سنسور سطح, بیزدوار'
+        seoDescription: 'VEGAPULS 6X، VEGAPULS C 11، VEGABAR 39 و VEGAPOINT اصل تا پروژه ایران. کد سفارش دقیق، پیش‌فاکتور شفاف و مشاوره فارسی در واتساپ.',
+        seoKeywords: 'خرید VEGA ایران, قیمت VEGAPULS 6X, VEGAPULS C 11, VEGAPULS C 23, VEGAPULS 11, VEGAPULS 21, VEGAPULS 31, VEGABAR 39, VEGASWING 51, VEGAPOINT, سنسور سطح, بیزدوار'
+      },
+      uwt: {
+        seoTitle: 'خرید سنسور سطح UWT در ایران | Rotonivo و NivoRadar — بیزدوار گروپ',
+        seoDescription: 'تامین اصل سنسور سطح UWT آلمان برای سیلو و مخزن در ایران. Rotonivo، Vibranivo، NivoRadar و NivoGuide — مشاوره فارسی، پیش‌فاکتور و لجستیک — بیزدوار گروپ.',
+        seoKeywords: 'خرید UWT ایران, Rotonivo, NivoRadar, Vibranivo, سنسور سطح سیلو, بیزدوار'
       },
       prosense: {
         seoTitle: 'خرید دتکتور گاز Prosense در ایران | PQ و SafeVader',
@@ -347,8 +352,13 @@
       },
       vega: {
         seoTitle: 'VEGA sensör satın al | Fiyat ve proforma',
-        seoDescription: 'Orijinal VEGAPULS 6X, VEGABAR 39 ve VEGAPOINT. Türkçe teknik danışmanlık, net order code ve uluslararası lojistik — Bizdavar.',
-        seoKeywords: 'VEGA satın al, VEGAPULS 6X fiyat, VEGABAR 39, VEGAPOINT, seviye sensörü, Bizdavar'
+        seoDescription: 'Orijinal VEGAPULS 6X, VEGAPULS C 11, VEGABAR 39 ve VEGAPOINT. Türkçe teknik danışmanlık, net order code ve uluslararası lojistik — Bizdavar.',
+        seoKeywords: 'VEGA satın al, VEGAPULS 6X fiyat, VEGAPULS C 11, VEGAPULS C 23, VEGAPULS 11, VEGAPULS 21, VEGAPULS 31, VEGABAR 39, VEGASWING 51, VEGAPOINT, seviye sensörü, Bizdavar'
+      },
+      uwt: {
+        seoTitle: 'UWT seviye sensörü tedariki | Rotonivo ve NivoRadar — Bizdavar',
+        seoDescription: 'Almanya UWT orijinal seviye sensörleri — silo ve tank. Rotonivo, Vibranivo, NivoRadar ve NivoGuide — danışmanlık, proforma ve lojistik — Bizdavar Group.',
+        seoKeywords: 'UWT, Rotonivo, NivoRadar, Vibranivo, silo seviye sensörü, Bizdavar'
       },
       prosense: {
         seoTitle: 'Prosense gaz dedektörü satın al | PQ ve SafeVader',
@@ -631,8 +641,13 @@
       },
       vega: {
         seoTitle: 'Buy VEGA sensors | VEGAPULS quote',
-        seoDescription: 'Genuine VEGAPULS 6X, VEGABAR 39 and VEGAPOINT. Exact order codes, clear proforma and logistics to Iran and beyond — Bizdavar.',
-        seoKeywords: 'buy VEGA, VEGAPULS 6X price, VEGABAR 39, VEGAPOINT, level sensor, Bizdavar'
+        seoDescription: 'Genuine VEGAPULS 6X, VEGAPULS C 11, VEGABAR 39 and VEGAPOINT. Exact order codes, clear proforma and logistics to Iran and beyond — Bizdavar.',
+        seoKeywords: 'buy VEGA, VEGAPULS 6X price, VEGAPULS C 11, VEGAPULS C 23, VEGAPULS 11, VEGAPULS 21, VEGAPULS 31, VEGABAR 39, VEGASWING 51, VEGAPOINT, level sensor, Bizdavar'
+      },
+      uwt: {
+        seoTitle: 'Buy UWT level sensors | Rotonivo and NivoRadar — Bizdavar',
+        seoDescription: 'Genuine UWT Germany level sensors for silos and tanks. Rotonivo, Vibranivo, NivoRadar and NivoGuide — consulting, proforma and logistics — Bizdavar Group.',
+        seoKeywords: 'UWT, Rotonivo, NivoRadar, Vibranivo, silo level sensor, Bizdavar'
       },
       prosense: {
         seoTitle: 'Buy Prosense gas detectors | PQ and SafeVader',

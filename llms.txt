@@ -125,6 +125,13 @@ Robots: https://bizdavar.com/robots.txt
 - Russian: https://bizdavar.com/ru/pages/gamak
 - Arabic: https://bizdavar.com/ar/pages/gamak
 
+### /pages/uwt
+- Persian: https://bizdavar.com/pages/uwt
+- Turkish: https://bizdavar.com/tr/pages/uwt
+- English: https://bizdavar.com/en/pages/uwt
+- Russian: https://bizdavar.com/ru/pages/uwt
+- Arabic: https://bizdavar.com/ar/pages/uwt
+
 ### /pages/digi-system
 - Persian: https://bizdavar.com/pages/digi-system
 - Turkish: https://bizdavar.com/tr/pages/digi-system

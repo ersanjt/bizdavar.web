@@ -83,8 +83,14 @@
     vega: {
       crumb: 'Продукция VEGA',
       seoTitle: 'Купить датчики VEGA | VEGAPULS — расчёт',
-      seoDescription: 'VEGAPULS 6X, VEGABAR 39 и VEGAPOINT оригинал до проекта в Иране. Точный order code, прозрачная проформа и консультация в WhatsApp.',
-      seoKeywords: 'купить VEGA, VEGAPULS 6X, VEGABAR 39, VEGAPOINT, датчик уровня, Bizdavar'
+      seoDescription: 'VEGAPULS 6X, VEGAPULS C 11, VEGABAR 39 и VEGAPOINT оригинал до проекта в Иране. Точный order code, прозрачная проформа и консультация в WhatsApp.',
+      seoKeywords: 'купить VEGA, VEGAPULS 6X, VEGAPULS C 11, VEGAPULS C 23, VEGAPULS 11, VEGAPULS 21, VEGAPULS 31, VEGABAR 39, VEGASWING 51, VEGAPOINT, датчик уровня, Bizdavar'
+    },
+    uwt: {
+      crumb: 'Продукция UWT',
+      seoTitle: 'Купить датчики уровня UWT | Rotonivo и NivoRadar — Bizdavar',
+      seoDescription: 'Оригинальные уровнемеры UWT Германия для силосов и резервуаров. Rotonivo, Vibranivo, NivoRadar и NivoGuide — консультация, проформа и логистика — Bizdavar Group.',
+      seoKeywords: 'UWT, Rotonivo, NivoRadar, Vibranivo, датчик уровня силоса, Bizdavar'
     },
     prosense: {
       crumb: 'Продукция Prosense',
@@ -392,8 +398,14 @@
     vega: {
       crumb: 'منتجات VEGA',
       seoTitle: 'شراء حساسات VEGA | عرض VEGAPULS',
-      seoDescription: 'VEGAPULS 6X وVEGABAR 39 وVEGAPOINT أصلية إلى مشروعك في إيران. رمز طلب دقيق وفاتورة مبدئية واستشارة عبر واتساب.',
-      seoKeywords: 'شراء VEGA, VEGAPULS 6X, VEGABAR 39, VEGAPOINT, حساس مستوى, Bizdavar'
+      seoDescription: 'VEGAPULS 6X وVEGAPULS C 11 وVEGABAR 39 وVEGAPOINT أصلية إلى مشروعك في إيران. رمز طلب دقيق وفاتورة مبدئية واستشارة عبر واتساب.',
+      seoKeywords: 'شراء VEGA, VEGAPULS 6X, VEGAPULS C 11, VEGAPULS C 23, VEGAPULS 11, VEGAPULS 21, VEGAPULS 31, VEGABAR 39, VEGASWING 51, VEGAPOINT, حساس مستوى, Bizdavar'
+    },
+    uwt: {
+      crumb: 'منتجات UWT',
+      seoTitle: 'شراء حساسات مستوى UWT | Rotonivo وNivoRadar — Bizdavar',
+      seoDescription: 'حساسات مستوى UWT الألمانية الأصلية للصوامع والخزانات. Rotonivo وVibranivo وNivoRadar وNivoGuide — استشارة وفاتورة مبدئية ولوجستيات — Bizdavar Group.',
+      seoKeywords: 'UWT, Rotonivo, NivoRadar, Vibranivo, حساس مستوى صومعة, Bizdavar'
     },
     prosense: {
       crumb: 'منتجات Prosense',
@@ -869,6 +881,7 @@
       visualNote: 'Подбор модели, международная закупка и логистика — VEGA, Prosense, моторы и насосы.',
       products: [
         { name: 'VEGA', title: 'Датчики и КИП', desc: 'Уровень, давление, расход — нефть, нефтехимия и вода', badge: 'Германия', tags: ['VEGAPULS', 'VEGABAR', 'VEGAPOINT'], cta: 'Смотреть каталог' },
+        { name: 'UWT', title: 'Уровень силоса и резервуара', desc: 'Сигнализаторы и радар для сыпучих и жидкостей — Rotonivo, Vibranivo, NivoRadar', badge: 'Германия', tags: ['Rotonivo', 'NivoRadar', 'Vibranivo'], cta: 'Каталог UWT' },
         { name: 'Prosense', title: 'Газовые и пламенные детекторы', desc: 'Стационарные и портативные системы с сертификацией SIL2/3', badge: 'Турция', tags: ['PQ+', 'SafeVader', 'PPS'], cta: 'Линейки продуктов' },
         { name: 'Teltonika', title: 'GPS и Fleet Telematics', desc: 'Трекеры флота, CAN/OBD, BLE, видео и IoT — FMB920 · FMC650 · FTC305', badge: 'Литва', tags: ['FMB920', 'FTC305', 'DualCam'], cta: 'Каталог Teltonika' },
         { name: 'Gamak', title: 'Промышленные электродвигатели', desc: 'Трёхфазные и однофазные моторы — поставка и техподдержка', badge: 'Турция', tags: ['IE2/IE3', 'Фланец', 'Под проект'], cta: 'О Gamak' },
@@ -931,6 +944,7 @@
       visualNote: 'اختيار الموديل والشراء الدولي واللوجستيات — VEGA وProsense ومحركات ومضخات.',
       products: [
         { name: 'VEGA', title: 'حساسات وأدوات دقيقة', desc: 'مستوى وضغط وتدفق — نفط وبتروكيماويات ومياه', badge: 'ألمانيا', tags: ['VEGAPULS', 'VEGABAR', 'VEGAPOINT'], cta: 'عرض الكتالوج' },
+        { name: 'UWT', title: 'قياس مستوى الصوامع والخزانات', desc: 'مفاتيح مستوى ورادار للمواد الصلبة والسوائل — Rotonivo وVibranivo وNivoRadar', badge: 'ألمانيا', tags: ['Rotonivo', 'NivoRadar', 'Vibranivo'], cta: 'كتالوج UWT' },
         { name: 'Prosense', title: 'كواشف غاز ولهب', desc: 'أنظمة ثابتة ومحمولة بشهادة SIL2/3', badge: 'تركيا', tags: ['PQ+', 'SafeVader', 'PPS'], cta: 'سلاسل المنتجات' },
         { name: 'Teltonika', title: 'GPS وFleet Telematics', desc: 'متتبعات أساطيل وCAN/OBD وBLE وفيديو وIoT — FMB920 · FMC650 · FTC305', badge: 'ليتوانيا', tags: ['FMB920', 'FTC305', 'DualCam'], cta: 'كتالوج Teltonika' },
         { name: 'Gamak', title: 'محركات كهربائية صناعية', desc: 'محركات ثلاثية وأحادية الطور — توريد ودعم فني', badge: 'تركيا', tags: ['IE2/IE3', 'فلانش', 'حسب المشروع'], cta: 'معلومات Gamak' },
@@ -1490,6 +1504,7 @@
     brandGroupPower: 'Моторы и авто',
     brandGroupRetail: 'Ритейл и весы',
     brandVegaDesc: 'Датчики уровня и давления',
+    brandUwtDesc: 'Датчики уровня силоса и резервуара',
     brandProsenseDesc: 'Газовые и пламенные детекторы',
     brandTeltonikaDesc: 'GPS и телематика флота',
     brandGamakDesc: 'Промышленные электродвигатели',
@@ -1816,6 +1831,7 @@
     brandGroupPower: 'محركات وسيارات',
     brandGroupRetail: 'تجزئة وموازين',
     brandVegaDesc: 'حساسات مستوى وضغط',
+    brandUwtDesc: 'حساسات مستوى الصوامع والخزانات',
     brandProsenseDesc: 'كواشف غاز ولهب',
     brandTeltonikaDesc: 'GPS وتتبع الأسطول',
     brandGamakDesc: 'محركات كهربائية صناعية',

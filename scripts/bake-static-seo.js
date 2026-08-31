@@ -328,6 +328,7 @@ const FILE_TO_ROUTE = {
   'pages/liqui-moly.html': '/pages/liqui-moly',
   'pages/teltonika.html': '/pages/teltonika',
   'pages/gamak.html': '/pages/gamak',
+  'pages/uwt.html': '/pages/uwt',
   'pages/digi-system.html': '/pages/digi-system',
   'pages/teraoka.html': '/pages/teraoka',
   'pages/bz-diamond.html': '/pages/bz-diamond',

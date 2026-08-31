@@ -53,7 +53,7 @@ window.VEGA_CATALOG = {
 
   quickSeries: [
     { id: 'vegapuls-6x', name: 'VEGAPULS 6X', tag: 'رادار پرچمدار', hint: 'مخازن بلند و فرآیند حساس' },
-    { id: 'vegapuls', name: 'VEGAPULS', tag: 'رادار فشرده', hint: 'جایگزین اولتراسونیک' },
+    { id: 'vegapuls-c-11', name: 'VEGAPULS C 11', tag: 'رادار کابل · €580', hint: 'آب و فاضلاب تا ۱۰ متر' },
     { id: 'vegabar-39', name: 'VEGABAR 39', tag: 'فشار · €510', hint: 'ترانسمیتر با نمایشگر ۳۶۰°' },
     { id: 'vegavib-s61', name: 'VEGAVIB S61', tag: 'فله · €540', hint: 'سوئیچ لرزشی سیلو' }
   ],
@@ -91,7 +91,7 @@ window.VEGA_CATALOG = {
 
   iranIndustries: [
     { name: 'پالایش و پتروشیمی', desc: 'سطح و فشار مخازن، برج‌ها و خطوط — معمولاً VEGAPULS 6X و VEGABAR', image: VEGA_IMG + 'iran-refining.jpg', icon: 'factory', models: 'VEGAPULS 6X · VEGABAR' },
-    { name: 'آب و فاضلاب', desc: 'تصفیه و ایستگاه پمپاژ — رادار فشرده و سوئیچ نقطه‌سطح', image: VEGA_IMG + 'iran-water.jpg', icon: 'droplet', models: 'VEGAPULS · VEGAPOINT' },
+    { name: 'آب و فاضلاب', desc: 'تصفیه و ایستگاه پمپاژ — رادار فشرده کابلی و سوئیچ نقطه‌سطح', image: VEGA_IMG + 'iran-water.jpg', icon: 'droplet', models: 'VEGAPULS C 11 · C 23 · VEGAPOINT' },
     { name: 'صنایع غذایی و دارویی', desc: 'سطح‌سنجی بهداشتی بدون تماس — مناسب CIP/SIP', image: VEGA_IMG + 'iran-food-pharma.jpg', icon: 'utensils', models: 'VEGAPULS · VEGAPOINT' },
     { name: 'سیمان و معدن', desc: 'سیلو و مواد فله — رادار و سوئیچ لرزشی مقاوم در گردوغبار', image: VEGA_IMG + 'iran-cement-mining.jpg', icon: 'block', models: 'VEGAPULS 6X · VEGAVIB S61' },
     { name: 'نفت و گاز', desc: 'مخازن، جداکننده و خطوط — دقت و ایمنی فرآیند', image: VEGA_IMG + 'iran-oil-gas.jpg', icon: 'barrel', models: 'VEGAPULS 6X · VEGABAR' },
@@ -306,6 +306,132 @@ window.VEGA_CATALOG = {
       ],
       applications: ['سیمان و معدن', 'غذایی', 'سیلو مواد فله', 'مواد شیمیایی'],
       officialRef: 'https://www.vega.com/tr-tr/urunler/urun-kataloglari/seviye-salteri/titresim/vegavib-s61'
+    },
+    {
+      id: 'vegapuls-c-11',
+      name: 'VEGAPULS C 11',
+      series: 'Basic — Compact Cable Radar',
+      category: 'level',
+      image: VEGA_IMG + 'product-vegapuls-c-11.png',
+      imageAlt: 'VEGAPULS C 11 compact radar level sensor with axial cable outlet',
+      badge: 'موجود',
+      priceEur: 580,
+      summaryFa: 'رادار فشرده سطح بدون تماس — اندازه‌گیری پیوسته مایعات در کاربردهای ساده با حفاظت بالا IP66/IP68.',
+      useCaseFa: 'تصفیه آب، ایستگاه پمپاژ، حوضچه سرریز باران و پایش سطح؛ در مواد فله برای سیلوهای کوچک و مخازن باز.',
+      features: [
+        'برد اندازه‌گیری تا ۱۰ متر · دقت ±۵ mm',
+        'دمای فرآیند −۴۰ تا ۶۰ درجه سانتی‌گراد',
+        'فشار فرآیند −۱ تا ۳ بار · خروجی ۴…۲۰ mA',
+        'رادار ۸۰ گیگاهرتز بدون تماس — بدون نگهداری',
+        'حفاظت IP66 / IP68 (۳ بار) · Type 6P · کابل PVC محوری'
+      ],
+      applications: ['آب و فاضلاب', 'ایستگاه پمپاژ', 'سیلو کوچک', 'غذایی'],
+      officialRef: 'https://www.vega.com/tr-tr/urunler/urun-kataloglari/seviye/radar/vegapuls-c-11'
+    },
+    {
+      id: 'vegapuls-c-23',
+      name: 'VEGAPULS C 23',
+      series: 'Basic — Cable Radar 30 m',
+      category: 'level',
+      image: VEGA_IMG + 'product-vegapuls-c-23.png',
+      imageAlt: 'VEGAPULS C 23 compact radar level sensor with axial cable outlet',
+      badge: 'موجود',
+      priceEur: 1350,
+      summaryFa: 'رادار فشرده سطح بدون تماس تا ۳۰ متر — اندازه‌گیری پیوسته مایع و مواد فله با حفاظت بالا IP66/IP68 و خروجی ۴…۲۰ mA/HART.',
+      useCaseFa: 'تصفیه آب، ایستگاه پمپاژ، حوضچه سرریز، جریان کانال باز و پایش سطح؛ سیلوهای متوسط، مخازن قطعه‌بندی‌شده و توده‌های باز.',
+      features: [
+        'برد اندازه‌گیری تا ۳۰ متر · دقت ±۲ mm · زاویه پرتو ۴°',
+        'دمای فرآیند −۴۰ تا ۸۰ درجه سانتی‌گراد',
+        'فشار فرآیند −۱ تا ۳ بار · خروجی ۴…۲۰ mA/HART',
+        'رادار ۸۰ گیگاهرتز بدون تماس — کابل محوری (۵ متر در این کد)',
+        'حفاظت IP66 / IP68 · Type 6P · رزوه G1 · PVDF'
+      ],
+      applications: ['آب و فاضلاب', 'ایستگاه پمپاژ', 'سیلو متوسط', 'پتروشیمی'],
+      officialRef: 'https://www.vega.com/tr-tr/urunler/urun-kataloglari/seviye/radar/vegapuls-c-23'
+    },
+    {
+      id: 'vegapuls-11',
+      name: 'VEGAPULS 11',
+      series: 'Basic — Compact Radar Housing',
+      category: 'level',
+      image: VEGA_IMG + 'product-vegapuls-11.png',
+      imageAlt: 'VEGAPULS 11 compact radar level sensor with plastic housing',
+      badge: 'موجود',
+      priceEur: 850,
+      summaryFa: 'رادار فشرده سطح بدون تماس با بدنه پلاستیکی — اندازه‌گیری پیوسته مایع و مواد فله تا ۱۰ متر، خروجی ۴…۲۰ mA و IP66/IP67.',
+      useCaseFa: 'تصفیه آب، مخازن اسید و قلیا، اندازه‌گیری از بیرون دیواره مخزن پلاستیکی؛ سیلوهای کوچک و مخازن باز.',
+      features: [
+        'برد اندازه‌گیری تا ۱۰ متر · دقت ±۵ mm · زاویه پرتو ۸°',
+        'دمای فرآیند −۴۰ تا ۶۰ درجه سانتی‌گراد',
+        'فشار فرآیند −۱ تا ۳ بار · خروجی ۴…۲۰ mA',
+        'رادار ۸۰ گیگاهرتز بدون تماس · تنظیم بلوتوث',
+        'حفاظت IP66 / IP67 · Type 4X · رزوه G1½ · PVDF'
+      ],
+      applications: ['آب و فاضلاب', 'مخازن شیمیایی', 'مخزن پلاستیکی', 'سیلو کوچک'],
+      officialRef: 'https://www.vega.com/tr-tr/urunler/urun-kataloglari/seviye/radar/vegapuls-11'
+    },
+    {
+      id: 'vegapuls-21',
+      name: 'VEGAPULS 21',
+      series: 'Basic — Compact Radar Housing',
+      category: 'level',
+      image: VEGA_IMG + 'product-vegapuls-21.png',
+      imageAlt: 'VEGAPULS 21 compact radar level sensor with plastic housing',
+      badge: 'موجود',
+      priceEur: 1150,
+      summaryFa: 'رادار فشرده سطح بدون تماس تا ۲۰ متر — بدنه پلاستیکی IP66/IP67، دقت ±۲ mm و خروجی ۴…۲۰ mA/HART؛ تایید Ex اختیاری.',
+      useCaseFa: 'تصفیه آب، مخازن اسید و قلیا، اندازه‌گیری از بیرون دیواره مخزن پلاستیکی و IBC؛ سیلوهای کوچک و متوسط.',
+      features: [
+        'برد اندازه‌گیری تا ۲۰ متر · دقت ±۲ mm · زاویه پرتو ۸°',
+        'دمای فرآیند −۴۰ تا ۸۰ درجه سانتی‌گراد',
+        'فشار فرآیند −۱ تا ۳ بار · خروجی ۴…۲۰ mA/HART',
+        'رادار ۸۰ گیگاهرتز بدون تماس · بلوتوث و HART',
+        'حفاظت IP66 / IP67 · Type 4X · رزوه G1½ · PVDF'
+      ],
+      applications: ['آب و فاضلاب', 'مخازن شیمیایی', 'مخزن پلاستیکی', 'سیلو متوسط'],
+      officialRef: 'https://www.vega.com/tr-tr/urunler/urun-kataloglari/seviye/radar/vegapuls-21'
+    },
+    {
+      id: 'vegapuls-31',
+      name: 'VEGAPULS 31',
+      series: 'Basic — Compact Radar with Display',
+      category: 'level',
+      image: VEGA_IMG + 'product-vegapuls-31.png',
+      imageAlt: 'VEGAPULS 31 compact radar level sensor with on-site display',
+      badge: 'موجود',
+      priceEur: 1300,
+      summaryFa: 'رادار فشرده سطح بدون تماس تا ۲۰ متر با نمایشگر محلی و سه دکمه — دقت ±۲ mm، خروجی ۴…۲۰ mA/HART و IP66/IP67؛ تایید Ex اختیاری.',
+      useCaseFa: 'تصفیه آب، مخازن اسید و قلیا، اندازه‌گیری از بیرون دیواره مخزن پلاستیکی؛ سیلوهای کوچک و متوسط و کنترل سطح در محل.',
+      features: [
+        'برد اندازه‌گیری تا ۲۰ متر · دقت ±۲ mm · زاویه پرتو ۸°',
+        'دمای فرآیند −۴۰ تا ۸۰ درجه سانتی‌گراد',
+        'فشار فرآیند −۱ تا ۳ بار · خروجی ۴…۲۰ mA/HART',
+        'نمایشگر محلی و کنترل سه‌دکمه‌ای · بلوتوث',
+        'حفاظت IP66 / IP67 · Type 4X · رزوه G1½ · PVDF'
+      ],
+      applications: ['آب و فاضلاب', 'مخازن شیمیایی', 'مخزن پلاستیکی', 'کنترل در محل'],
+      officialRef: 'https://www.vega.com/tr-tr/urunler/urun-kataloglari/seviye/radar/vegapuls-31'
+    },
+    {
+      id: 'vegaswing-51',
+      name: 'VEGASWING 51',
+      series: 'Vibrating — Liquids',
+      category: 'point',
+      image: VEGA_IMG + 'product-vegaswing-51.png',
+      imageAlt: 'VEGASWING 51 compact vibrating liquid level switch in stainless steel',
+      badge: 'موجود',
+      priceEur: 280,
+      summaryFa: 'سوئیچ نقطه‌سطح لرزشی فشرده برای مایعات — چنگال استیل ۳۱۶L، تشخیص پر/خالی با دقت میلی‌متری بدون تنظیم در محل.',
+      useCaseFa: 'محافظت از سرریز، جلوگیری از کارکرد خشک پمپ و اعلام پر/خالی در مخزن و لوله — نصب در هر جهت.',
+      features: [
+        'دمای فرآیند −۴۰ تا ۱۰۰ درجه سانتی‌گراد',
+        'فشار فرآیند −۱ تا ۶۴ بار · رزوه G¾ · ۳۱۶L',
+        'خروجی ترانزیستور PNP · اتصال M12x1',
+        'طول چنگال ۶۴ mm · هیسترزیس حدود ۲ mm',
+        'حفاظت IP66 / IP67 · Type 4X · بدون تنظیم'
+      ],
+      applications: ['مخازن مایع', 'خطوط لوله', 'محافظ پمپ', 'ضدسرریز'],
+      officialRef: 'https://www.vega.com/tr-tr/urunler/urun-kataloglari/seviye-salteri/titresim/vegaswing-51'
     }
   ],
 

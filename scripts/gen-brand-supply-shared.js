@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const prefixes = ['teltonika', 'gamak', 'digi', 'teraoka'];
+  const prefixes = ['teltonika', 'gamak', 'digi', 'teraoka', 'uwt'];
 const srcPath = path.join(__dirname, '../assets/styles/teltonika.css');
 let css = fs.readFileSync(srcPath, 'utf8');
 

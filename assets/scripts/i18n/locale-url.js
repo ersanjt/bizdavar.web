@@ -32,7 +32,7 @@
 
     var knownPages = {
       about: 1, services: 1, portfolio: 1, blog: 1, contact: 1, privacy: 1, fast: 1, 'field-tech': 1,
-      vega: 1, prosense: 1, teltonika: 1, gamak: 1, 'digi-system': 1, teraoka: 1, 'liqui-moly': 1,
+      vega: 1, prosense: 1, teltonika: 1, gamak: 1, uwt: 1, 'digi-system': 1, teraoka: 1, 'liqui-moly': 1,
       'bz-diamond': 1, 'supplify-trade': 1, 'kaya-one': 1, 'smm-turk': 1, marvispace: 1, 'marvi-society': 1, 'fxguard-exchange': 1, biztejarat: 1, products: 1, biztab: 1, 'bizsanitizer-v5': 1, bizseat: 1, bizpet: 1, gallery: 1,
       fxguard: 1, 'fxguard-accounting': 1, bizswap: 1
     };

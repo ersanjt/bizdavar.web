@@ -41,7 +41,7 @@ const GTM_BODY = `  <!-- Google Tag Manager (noscript) -->
 
 const KNOWN_PAGES = new Set([
   'about', 'services', 'portfolio', 'blog', 'contact', 'privacy', 'fast', 'vega',
-  'prosense', 'teltonika', 'gamak', 'digi-system', 'teraoka', 'bz-diamond', 'biztejarat', 'index'
+  'prosense', 'teltonika', 'gamak', 'uwt', 'digi-system', 'teraoka', 'bz-diamond', 'biztejarat', 'index'
 ]);
 
 function walkHtml(dir, list = []) {

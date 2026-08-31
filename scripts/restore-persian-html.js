@@ -23,6 +23,7 @@ const FILES = [
   'pages/prosense.html',
   'pages/teltonika.html',
   'pages/gamak.html',
+  'pages/uwt.html',
   'pages/teraoka.html',
   'pages/digi-system.html',
   'pages/bz-diamond.html',

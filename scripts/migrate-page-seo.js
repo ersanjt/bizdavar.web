@@ -18,6 +18,7 @@ const PAGE_MAP = {
   'pages/vega.html': { key: 'vega', canonical: 'https://bizdavar.com/pages/vega.html', ogImage: 'assets/images/vega/slides/value-process-safety.jpg' },
   'pages/prosense.html': { key: 'prosense', canonical: 'https://bizdavar.com/pages/prosense.html', ogImage: 'assets/images/prosense/hero-pq-sil2.webp' },
   'pages/gamak.html': { key: 'gamak', canonical: 'https://bizdavar.com/pages/gamak.html' },
+  'pages/uwt.html': { key: 'uwt', canonical: 'https://bizdavar.com/pages/uwt' },
   'pages/bz-diamond.html': { key: 'bzDiamond', canonical: 'https://bizdavar.com/pages/bz-diamond.html' },
   'pages/biztejarat.html': { key: 'biztejarat', canonical: 'https://bizdavar.com/pages/biztejarat.html' },
   'pages/articles/digital-marketing.html': { key: 'articleDigitalMarketing', canonical: 'https://bizdavar.com/pages/articles/digital-marketing.html', type: 'article', ogImage: 'assets/images/content/network-map.svg' },

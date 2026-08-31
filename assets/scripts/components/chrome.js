@@ -120,6 +120,7 @@
         { href: pagePath(R.prosense), label: 'Prosense' },
         { href: pagePath(R.teltonika), label: 'Teltonika' },
         { href: pagePath(R.gamak), label: 'Gamak' },
+        { href: pagePath(R.uwt), label: 'UWT' },
         { href: pagePath(R.digiSystem), label: 'Digi System' },
         { href: pagePath(R.teraoka), label: 'Teraoka' },
         { href: pagePath(R.liquiMoly), label: 'Liqui Moly' }
@@ -164,7 +165,7 @@
     ];
   }
 
-  const SUPPLY_PAGES = new Set(['vega', 'prosense', 'teltonika', 'gamak', 'digi-system', 'teraoka', 'liqui-moly']);
+  const SUPPLY_PAGES = new Set(['vega', 'prosense', 'teltonika', 'gamak', 'uwt', 'digi-system', 'teraoka', 'liqui-moly']);
 
   function getProductNavConfig() {
     return C.productNav || { overviewRoute: 'products', tabs: [], footer: [] };
