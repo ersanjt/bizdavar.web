@@ -194,3 +194,119 @@ body[data-page="uwt"] .uwt-series-card__price {
   display: inline-block;
   margin: 8px 0 4px;
 }
+
+body[data-page="uwt"] .uwt-academy-block {
+  background: #1c1917;
+  border: 1px solid rgba(232, 93, 4, 0.28);
+  grid-template-columns: minmax(220px, 0.85fr) 1.15fr;
+  align-items: stretch;
+  gap: 28px;
+  padding: 24px;
+}
+
+body[data-page="uwt"] .uwt-academy-block__visual {
+  display: block;
+  margin: 0;
+  min-height: 100%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #2a211c;
+}
+
+body[data-page="uwt"] .uwt-academy-block__visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0;
+}
+
+body[data-page="uwt"] .uwt-academy-block__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px 8px 8px 4px;
+  min-width: 0;
+}
+
+body[data-page="uwt"] .uwt-academy-block h3 {
+  font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+  line-height: 1.25;
+  margin: 0 0 10px;
+  text-align: start;
+}
+
+body[data-page="uwt"] .uwt-academy-block__content p {
+  margin: 0 0 18px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.86);
+  max-width: 58ch;
+}
+
+body[data-page="uwt"] .uwt-academy-topics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+  margin: 0 0 22px;
+  padding: 0;
+}
+
+body[data-page="uwt"] .uwt-academy-topics li {
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  padding-inline-start: 16px;
+  position: relative;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+body[data-page="uwt"] .uwt-academy-topics li::before {
+  content: '';
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0.55em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #e85d04;
+}
+
+body[data-page="uwt"] .uwt-academy-block .btn--yellow {
+  align-self: flex-start;
+  background: #e85d04;
+  color: #fff;
+  min-height: 44px;
+  padding: 11px 20px;
+  margin-top: 0;
+}
+
+body[data-page="uwt"] .uwt-academy-block .btn--yellow:hover {
+  background: #c44a00;
+  color: #fff;
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  body[data-page="uwt"] .uwt-academy-block {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  body[data-page="uwt"] .uwt-academy-block__visual img {
+    min-height: 200px;
+    max-height: 220px;
+  }
+
+  body[data-page="uwt"] .uwt-academy-topics {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-page="uwt"] .uwt-academy-block .btn--yellow {
+    width: 100%;
+    justify-content: center;
+  }
+}
