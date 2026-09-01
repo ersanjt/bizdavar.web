@@ -85,7 +85,7 @@
             teraoka: 'ترازو و برچسب‌زن'
           }
         },
-        geoText: 'محصولات مالکیتی و تامین برندهای صنعتی — مشاوره فنی فارسی از استانبول و تبریز.',
+        geoText: 'محصولات مالکیتی و تامین برندهای صنعتی — مشاوره فنی چندزبانه و تبریز.',
         related: [
           { title: 'تامین VEGA', desc: 'سنسور سطح و فشار' },
           { title: 'تامین Prosense', desc: 'دتکتور گاز و شعله' },
@@ -273,7 +273,7 @@
             teraoka: 'Terazi ve etiketleyici'
           }
         },
-        geoText: 'Sahip olunan ürünler ve endüstriyel marka tedariki — İstanbul ve Tebriz’den teknik danışmanlık.',
+        geoText: 'Sahip olunan ürünler ve endüstriyel marka tedariki — İran, Türkiye, Ermenistan ve Dubai ofislerinden teknik danışmanlık.',
         related: [
           { title: 'VEGA tedariki', desc: 'Seviye ve basınç sensörleri' },
           { title: 'Prosense tedariki', desc: 'Gaz ve alev dedektörü' },
@@ -401,7 +401,7 @@
             teraoka: 'Scales and labelers'
           }
         },
-        geoText: 'Owned products and industrial brand supply — technical consulting from Istanbul and Tabriz.',
+        geoText: 'Owned products and industrial brand supply — technical multilingual consulting and Tabriz.',
         related: [
           { title: 'VEGA supply', desc: 'Level and pressure sensors' },
           { title: 'Prosense supply', desc: 'Gas and flame detectors' },

@@ -55,7 +55,7 @@
   };
 
   function injectHreflang(canonicalUrl) {
-    document.querySelectorAll('link[data-bd-hreflang]').forEach(el => el.remove());
+    document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(el => el.remove());
     const LU = window.BIZDAVAR_LOCALE_URL;
     let alts;
     if (LU) {
@@ -210,7 +210,7 @@
     const lang = window.BIZDAVAR_I18N?.locale
       || document.documentElement.getAttribute('lang')
       || 'fa';
-    const map = { fa: 'fa-IR', tr: 'tr-TR', en: 'en-US' };
+    const map = { fa: 'fa-IR', tr: 'tr-TR', en: 'en-US', ru: 'ru-RU', ar: 'ar-AE' };
     return map[lang] || 'fa-IR';
   }
 

@@ -21,7 +21,7 @@
       logoAlt: 'Gamak — Turkish industrial electric motors since 1961',
       heroImage: G + 'category-three-phase.webp',
       heroImageAlt: 'Gamak three-phase asynchronous electric motor — low voltage IE2/IE3',
-      heroEyebrow: 'تامین رسمی الکتروموتور Gamak از ترکیه',
+      heroEyebrow: 'تامین رسمی الکتروموتور Gamak بین‌المللی',
       heroHeadline: 'الکتروموتور صنعتی Gamak',
       heroHeadlineSub: 'سه‌فاز و تک‌فاز · IE2/IE3/IE4 · 0.06 تا 4000 kW — مشاوره انتخاب توان و لجستیک',
       tagline: 'Power to Energize Life',
@@ -29,7 +29,7 @@
       since: 'از سال ۱۹۶۱ · Izmir',
       origin: 'ازمیر — ترکیه',
       officialUrl: 'https://www.gamak.com/en',
-      descriptionFa: 'بیزدوار گروپ تامین‌کننده الکتروموتور Gamak برای پروژه‌های صنعتی، پمپ، HVAC و خطوط تولید در ایران است. محصول اصل با پلاک فنی معتبر — انتخاب توان، دور، فلنج و کلاس IE — با پیش‌فاکتور شفاف و حمل از ترکیه.',
+      descriptionFa: 'بیزدوار گروپ تامین‌کننده الکتروموتور Gamak برای پروژه‌های صنعتی، پمپ، HVAC و خطوط تولید در ایران است. محصول اصل با پلاک فنی معتبر — انتخاب توان، دور، فلنج و کلاس IE — با پیش‌فاکتور شفاف و حمل بین‌المللی.',
       heroStats: [
         { value: '0.06–4000 kW', label: 'محدوده توان' },
         { value: 'IE2/IE3/IE4', label: 'کلاس بهره‌وری' },
@@ -54,7 +54,7 @@
     purchaseSteps: [
       { num: '۱', title: 'استعلام', desc: 'توان kW، دور rpm، فلنج B3/B5/B35، ولتاژ 380V یا 220V، تعداد' },
       { num: '۲', title: 'مشاوره فنی', desc: 'پیشنهاد سری سه‌فاز/تک‌فاز، IE2/IE3/IE4، Ex-proof یا ترمزدار در صورت نیاز' },
-      { num: '۳', title: 'پیش‌فاکتور', desc: 'قیمت Gamak، lead time انبار ترکیه، شرایط پرداخت' },
+      { num: '۳', title: 'پیش‌فاکتور', desc: 'قیمت Gamak، lead time و موجودی، شرایط پرداخت' },
       { num: '۴', title: 'تامین و حمل', desc: 'سفارش از Gamak، بسته‌بندی صنعتی — لجستیک بین‌المللی' },
       { num: '۵', title: 'تحویل و پشتیبانی', desc: 'تحویل در ایران — دیتاشیت، راهنمای نصب و پاسخ فنی' }
     ],

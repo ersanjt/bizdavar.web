@@ -278,7 +278,7 @@ const brands = [
     highlightsTitle: 'محصولات پرتقاضا Digi System',
     highlightsDesc: 'ترازوی PC · POS یکپارچه · اسکنر و پرینتر — برای استعلام هر محصول دکمه «درخواست استعلام» را بزنید.',
     catalogTitle: 'کاتالوگ کامل Digi System',
-    catalogDesc: 'ترازو، POS، peripheral و نرم‌افزار retail — تامین از ترکیه',
+    catalogDesc: 'ترازو، POS، peripheral و نرم‌افزار retail — تامین بین‌المللی',
     iranTitle: 'Digi System در بازار retail ایران',
     iranDesc: 'نوع فروشگاه و تعداد صندوق را بفرستید — پکیج مناسب پیشنهاد می‌دهیم.',
     industriesDesc: 'تجهیزات retail Digi برای انواع فروشگاه و HORECA',

@@ -23,6 +23,7 @@ window.createSupplyBrandPage = function (cfg) {
 
 
   const path = (r) => window.resolvePath(r);
+  const pagePath = (r) => (window.resolvePagePath || path)(r);
 
   const R = window.BIZDAVAR_CONFIG?.routes || {};
 
@@ -35,6 +36,34 @@ window.createSupplyBrandPage = function (cfg) {
   const t = (key, fb) => (window.BIZDAVAR_I18N ? window.BIZDAVAR_I18N.t(`supplyBrand.${key}`, fb) : fb);
   const locale = () => (window.BIZDAVAR_I18N?.locale || 'fa');
   const isFa = () => locale() === 'fa';
+
+  function offerPrice(item) {
+    if (!item) return null;
+    if (item.priceEur != null && item.priceEur !== '' && !Number.isNaN(Number(item.priceEur))) {
+      return { amount: Number(item.priceEur), currency: 'EUR', symbol: '€' };
+    }
+    if (item.priceUsd != null && item.priceUsd !== '' && !Number.isNaN(Number(item.priceUsd))) {
+      return { amount: Number(item.priceUsd), currency: 'USD', symbol: '$' };
+    }
+    return null;
+  }
+
+  function formatOfferAmount(p) {
+    const n = p.amount % 1 ? p.amount.toFixed(2) : String(Math.round(p.amount));
+    return p.symbol + Number(n).toLocaleString('en-US');
+  }
+
+  function priceHtml(item, kind) {
+    const p = offerPrice(item);
+    if (!p) return '';
+    const label = item.priceFrom
+      ? t('priceFrom', 'شروع از')
+      : (p.currency === 'EUR' ? t('priceSellLabel', 'قیمت فروش') : t('approxPrice', 'تقریبی'));
+    if (kind === 'div') {
+      return `<div class="${prefix}-price"><span class="${prefix}-price__label">${label}</span><strong dir="ltr">${formatOfferAmount(p)}</strong></div>`;
+    }
+    return `<span class="${prefix}-series-card__price" dir="ltr">${formatOfferAmount(p)}</span>`;
+  }
 
   function isRemoteMedia(u) {
     return !u || /^https?:/i.test(u) || /liquimolyturkey\.com|shop\.egemot\.com\.tr/i.test(u);
@@ -65,16 +94,16 @@ window.createSupplyBrandPage = function (cfg) {
   function localizedTitle(item) {
     const lang = locale();
     if (lang === 'tr') return item.titleTr || item.titleEn || item.title || item.name || '';
-    if (lang === 'en' || lang === 'ru' || lang === 'ar') {
-      return item.titleEn || item.titleTr || item.title || item.name || '';
-    }
-    return item.title || item.titleTr || item.name || '';
+    if (lang === 'en') return item.titleEn || item.title || item.name || '';
+    if (lang === 'ru') return item.titleRu || item.titleEn || item.title || item.name || '';
+    if (lang === 'ar') return item.titleAr || item.titleEn || item.title || item.name || '';
+    return item.titleFa || item.title || item.name || '';
   }
 
 
   function inquiryUrl(productName) {
 
-    const base = path(R.contact || 'pages/contact.html');
+    const base = pagePath(R.contact || 'pages/contact.html');
 
     const tpl = t('inquiryTemplate', catalog().inquiryTemplate || 'استعلام {product}').replace('{product}', productName);
 
@@ -360,15 +389,16 @@ window.createSupplyBrandPage = function (cfg) {
 
       const name = h.inquiryName || localizedTitle(h);
       const title = localizedTitle(h);
-      const sideLabel = locale() === 'fa' ? (h.titleTr || '') : (locale() === 'en' || locale() === 'tr' ? (h.title || '') : '');
+      const titleEn = h.titleEn || '';
+      const sideLabel = locale() === 'fa' && titleEn && titleEn !== title ? titleEn : '';
 
       return `
 
         <article class="${prefix}-highlight-card"${h.id ? ` id="${prefix}-hl-${h.id}"` : ''}>
 
-          <div class="${prefix}-highlight-card__media">
+          <div class="${prefix}-highlight-card__media${h.id === 'safevader' ? ` ${prefix}-highlight-card__media--product` : ''}">
 
-            ${imgTag(h.image, h.imageAlt || title, { width: 280, height: 280, fallback: catalog().brand?.heroImage || catalog().brand?.logo })}
+            ${imgTag(h.image, h.imageAlt || title, { width: 280, height: 158, fallback: catalog().brand?.logo })}
 
           </div>
 
@@ -380,7 +410,7 @@ window.createSupplyBrandPage = function (cfg) {
 
             <h3>${title}</h3>
 
-            ${h.priceUsd != null ? `<div class="${prefix}-price"><span class="${prefix}-price__label">${h.priceFrom ? t('priceFrom', 'شروع از') : t('approxPrice', 'تقریبی')}</span><strong dir="ltr">$${Number(h.priceUsd) % 1 ? Number(h.priceUsd).toFixed(2) : Number(h.priceUsd)}</strong></div>` : ''}
+            ${priceHtml(h, 'div')}
 
             <p class="${prefix}-highlight-card__desc">${h.desc || ''}</p>
 
@@ -444,13 +474,77 @@ window.createSupplyBrandPage = function (cfg) {
 
 
 
+  function officialSeriesUrl(s) {
+    if (s.officialUrl) return s.officialUrl;
+    if (!s.officialPath) return '';
+    const lang = locale() === 'tr' ? 'tr' : 'en';
+    return `https://www.prosense.com.tr/${s.officialPath}?lang=${lang}`;
+  }
+
+  function renderSeriesCard(cat, s) {
+    const qName = s.inquiryName || s.name;
+    const search = [s.name, s.note, s.specs, s.inquiryName, s.sku, ...(s.features || [])].filter(Boolean).join(' ').replace(/"/g, '');
+    const featured = s.featured ? ` ${prefix}-series-card--featured` : '';
+    const rich = (s.features && s.features.length) || s.officialPath || s.officialUrl || s.specs;
+    const img = imgTag(s.image, s.imageAlt || `${s.name} — ${brandName}`, {
+      width: rich ? 480 : 200,
+      height: rich ? 360 : 200,
+      className: `${prefix}-series-card__img`,
+      fallback: cat.image || catalog().brand?.logo
+    });
+    if (!rich) {
+      return `
+            <a href="${inquiryUrl(qName)}" class="${prefix}-series-card${featured} ${prefix}-series-card--link" data-search="${search}">
+              <span class="${prefix}-series-card__media">${img}</span>
+              <span class="${prefix}-series-card__body">
+                <strong>${s.name}</strong>
+                <span>${s.note || ''}</span>
+                ${priceHtml(s)}
+                <span class="${prefix}-series-card__link">${t('inquirySeries', 'استعلام')}${arrow()}</span>
+              </span>
+            </a>`;
+    }
+    const gallery = (s.gallery || []).map(g => typeof g === 'string' ? { image: g, imageAlt: s.imageAlt } : g);
+    const thumbs = gallery.length > 1 ? `
+              <div class="${prefix}-series-card__thumbs" role="list">
+                ${gallery.map((g, i) => {
+                  const src = path(localMedia(g.image, s.image));
+                  const alt = g.imageAlt || s.imageAlt || s.name;
+                  return `<button type="button" class="${prefix}-series-card__thumb${i === 0 ? ' is-active' : ''}" data-gallery-src="${src}" data-gallery-alt="${alt}" aria-label="${alt}" role="listitem"><img src="${src}" alt="" width="72" height="72" loading="lazy" decoding="async"></button>`;
+                }).join('')}
+              </div>` : '';
+    const feats = (s.features || []).map(f => `<li>${f}</li>`).join('');
+    const off = officialSeriesUrl(s);
+    const msg = t('inquiryTemplate', catalog().inquiryTemplate || 'استعلام {product}').replace('{product}', qName);
+    const pid = s.id ? ` id="${prefix}-product-${s.id}"` : '';
+    return `
+            <article class="${prefix}-series-card${featured} ${prefix}-series-card--product"${pid} data-search="${search}">
+              <span class="${prefix}-series-card__media">${img}</span>
+              ${thumbs}
+              <div class="${prefix}-series-card__body">
+                ${s.specs ? `<span class="${prefix}-series-card__badge">${s.specs}</span>` : ''}
+                <h3 class="${prefix}-series-card__name">${s.name}</h3>
+                <p class="${prefix}-series-card__note">${s.note || ''}</p>
+                ${priceHtml(s, 'div')}
+                ${feats ? `<ul class="${prefix}-series-card__features">${feats}</ul>` : ''}
+                <div class="${prefix}-series-card__actions">
+                  <a href="${inquiryUrl(qName)}" class="btn btn--yellow ${prefix}-series-card__cta">${t('inquirySeries', 'استعلام')}</a>
+                  <a href="${whatsappUrl(msg)}" class="btn btn--green ${prefix}-series-card__cta" target="_blank" rel="noopener noreferrer">${t('whatsappShort', 'واتساپ')}</a>
+                </div>
+                ${off ? `<a href="${off}" class="${prefix}-series-card__official" target="_blank" rel="noopener noreferrer">${t('officialCatalog', 'کاتالوگ رسمی')}${arrow()}</a>` : ''}
+              </div>
+            </article>`;
+  }
+
   function renderCategories() {
 
     const el = document.getElementById(elId('Categories'));
 
     if (!el) return;
 
-    el.innerHTML = catalog().categories.map(cat => `
+    el.innerHTML = catalog().categories.map(cat => {
+      const hasProducts = (cat.series || []).some(s => (s.features && s.features.length) || s.officialPath || s.officialUrl || s.specs);
+      return `
 
       <div class="${prefix}-category-block" id="${prefix}-cat-${cat.id}">
 
@@ -470,7 +564,7 @@ window.createSupplyBrandPage = function (cfg) {
 
               <h2>${cat.title}</h2>
 
-              <small>${isFa() ? cat.titleTr : ''}</small>
+              <small>${isFa() ? (cat.titleEn || '') : ''}</small>
 
               <p>${String(cat.desc || '').replace(/\s*[—-]\s*قیمت به دلار(?:\s*\([^)]*\))?/g, '').replace(/\s*\(نرخ[^)]*\)/g, '').replace(/\s*\(1\s*USD\s*=\s*47[^)]*\)/gi, '').trim()}</p>
 
@@ -482,35 +576,16 @@ window.createSupplyBrandPage = function (cfg) {
 
         </div>
 
-        <div class="${prefix}-series-grid">
+        <div class="${prefix}-series-grid${hasProducts ? ` ${prefix}-series-grid--products` : ''}">
 
-          ${cat.series.map(s => {
-            return `
-
-            <a href="${inquiryUrl(s.name)}" class="${prefix}-series-card${s.featured ? ` ${prefix}-series-card--featured` : ''} ${prefix}-series-card--link" data-search="${(s.name + ' ' + (s.note || '') + ' ' + (s.sku || '')).replace(/"/g, '')}">
-
-              <span class="${prefix}-series-card__media">${imgTag(s.image, s.imageAlt || `${s.name} — ${brandName}`, { width: 200, height: 200, className: `${prefix}-series-card__img`, fallback: cat.image || catalog().brand?.logo })}</span>
-
-              <span class="${prefix}-series-card__body">
-
-                <strong>${s.name}</strong>
-
-                <span>${s.note || ''}</span>
-
-                ${s.priceUsd != null ? `<span class="${prefix}-series-card__price">$${Number(s.priceUsd).toFixed(2)}</span>` : ''}
-
-                <span class="${prefix}-series-card__link">${t('inquirySeries', 'استعلام')}${arrow()}</span>
-
-              </span>
-
-            </a>`;
-          }).join('')}
+          ${(cat.series || []).map(s => renderSeriesCard(cat, s)).join('')}
 
         </div>
 
       </div>
 
-    `).join('');
+    `;
+    }).join('');
 
   }
 
@@ -574,7 +649,7 @@ window.createSupplyBrandPage = function (cfg) {
 
         <strong>${i.name}</strong>
 
-        <small>${isFa() ? i.nameTr : ''}</small>
+        <small>${isFa() ? (i.nameEn || '') : ''}</small>
 
         <p>${i.desc}</p>
 
@@ -732,6 +807,23 @@ window.createSupplyBrandPage = function (cfg) {
 
 
 
+  function setupProductGalleries() {
+    const root = document.getElementById(elId('Categories'));
+    if (!root) return;
+    root.addEventListener('click', (e) => {
+      const btn = e.target.closest(`.${prefix}-series-card__thumb`);
+      if (!btn) return;
+      const src = btn.getAttribute('data-gallery-src');
+      const alt = btn.getAttribute('data-gallery-alt');
+      const card = btn.closest(`.${prefix}-series-card`);
+      const img = card && card.querySelector(`.${prefix}-series-card__img`);
+      if (!src || !img) return;
+      img.src = src;
+      if (alt) img.alt = alt;
+      card.querySelectorAll(`.${prefix}-series-card__thumb`).forEach(b => b.classList.toggle('is-active', b === btn));
+    });
+  }
+
   function setupCatalogSearch() {
     const input = document.getElementById(elId('CatalogSearch'));
     const root = document.getElementById(elId('Categories'));
@@ -776,6 +868,8 @@ window.createSupplyBrandPage = function (cfg) {
 
     renderCategories();
 
+    setupProductGalleries();
+
     setupCatalogSearch();
 
     renderIranIndustries();
@@ -810,11 +904,12 @@ window.createSupplyBrandPage = function (cfg) {
 
     const items = catalog().categories.flatMap(cat =>
 
-      cat.series.map(s => ({
+      cat.series.map(s => {
+        const product = {
 
         '@type': 'Product',
 
-        name: `${s.name} — ${brandName}`,
+        name: `${s.inquiryName || s.name} — ${brandName}`,
 
         description: s.note,
 
@@ -822,23 +917,30 @@ window.createSupplyBrandPage = function (cfg) {
 
         brand: { '@type': 'Brand', name: brandName },
 
-        category: cat.titleTr || cat.title,
+        category: cat.title || cat.titleEn || cat.titleTr,
 
-        image: absImg(s.image || cat.image),
+        image: (() => {
+          const extras = (s.gallery || []).map(g => absImg(typeof g === 'string' ? g : g.image));
+          const imgs = [absImg(s.image || cat.image), ...extras].filter(Boolean);
+          const uniq = [...new Set(imgs)];
+          return uniq.length > 1 ? uniq : uniq[0];
+        })(),
 
-        offers: {
+        url: officialSeriesUrl(s) || undefined
 
-          '@type': 'Offer',
-
-          availability: s.priceUsd != null ? 'https://schema.org/InStock' : 'https://schema.org/PreOrder',
-
-          ...(s.priceUsd != null ? { price: String(s.priceUsd), priceCurrency: 'USD' } : {}),
-
-          seller: { '@type': 'Organization', name: C.siteName }
-
+        };
+        const offer = offerPrice(s);
+        if (offer) {
+          product.offers = {
+            '@type': 'Offer',
+            price: String(offer.amount),
+            priceCurrency: offer.currency,
+            availability: 'https://schema.org/InStock',
+            seller: { '@type': 'Organization', name: C.siteName }
+          };
         }
-
-      }))
+        return product;
+      })
 
     );
 

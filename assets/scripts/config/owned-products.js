@@ -51,7 +51,7 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       logo: 'assets/images/partners/fxguard-accounting.svg',
       page: 'pages/fxguard-accounting.html',
       featured: true,
-      status: 'live'
+      status: 'waitlist'
     },
     {
       id: 'biztab',
@@ -64,6 +64,20 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       image: 'assets/images/products/biztab/biztab-hero.jpg',
       logo: 'assets/images/products/biztab/biztab-hero.jpg',
       page: 'pages/biztab.html',
+      featured: true,
+      status: 'live'
+    },
+    {
+      id: 'bizpet',
+      category: 'iot-health',
+      categoryLabel: 'IoT و بهداشت',
+      name: 'BizPet',
+      title: 'پد حرارتی بیز پت',
+      desc: 'پد حرارتی پدیده — برای خانه، خودرو و جا خواب حیوانات؛ طراحی در مرکز رشد دانشگاه تبریز.',
+      tags: ['پد حرارتی', 'IoT', 'تبریز'],
+      image: 'assets/images/products/bizpet/bizpet-grey.jpg',
+      logo: 'assets/images/products/bizpet/bizpet-grey.jpg',
+      page: 'pages/bizpet.html',
       featured: true,
       status: 'live'
     },

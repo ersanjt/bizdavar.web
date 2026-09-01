@@ -1,14 +1,16 @@
 /**
- * Fast Web Studio — plans, timeline, FAQ
+ * Fast Web Studio — plans, timeline, FAQ, scope, deliverables
  */
 window.FAST_CATALOG = {
   brand: {
     name: 'Fast Web Studio',
     eyebrow: 'محصول اختصاصی بیزدوار گروپ',
     headline: 'طراحی سایت حرفه‌ای در ۵ روز',
-    subtitle: 'همین هفته آنلاین شو — از استارتاپ تا فروشگاه WooCommerce',
-    description: 'Fast Web Studio راه‌اندازی سریع وبسایت RTL با فونت Vazirmatn، فرم تماس، واتساپ و پشتیبانی فارسی است. مناسب کسب‌وکارهای ایران، ترکیه و بازار بین‌المللی.',
-    domain: 'bizdavar.com'
+    subtitle: 'سریع · تخصصی · با استاندارد پروژه واقعی — از لندینگ تا فروشگاه و وب‌اپ',
+    description: 'Fast Web Studio راه‌اندازی سریع وبسایت RTL با فونت Vazirmatn، فرم تماس، واتساپ، سئو پایه و پشتیبانی فارسی است. مناسب کسب‌وکارهای ایران، ترکیه و بازار بین‌المللی — وقتی پروژه بزرگ‌تر شد، همان تیم بیزدوار وب‌اپ و اپلیکیشن اختصاصی را ادامه می‌دهد.',
+    domain: 'bizdavar.com',
+    heroImage: 'assets/images/content/fast-hero.svg',
+    heroAlt: 'موکاپ دسکتاپ و موبایل Fast Web Studio — مسیر ۵ روزه تا آنلاین'
   },
 
   trustSignals: [
@@ -16,6 +18,81 @@ window.FAST_CATALOG = {
     { icon: 'coin', label: 'از $99', desc: 'پلن پایه با تخفیف راه‌اندازی' },
     { icon: 'globe', label: 'RTL + چندزبانه', desc: 'فارسی، انگلیسی و ترکی' },
     { icon: 'whatsapp', label: 'واتساپ فارسی', desc: 'مشاوره و پیگیری مستقیم' }
+  ],
+
+  speedHighlights: [
+    { icon: 'bolt', title: 'سرعت قابل اندازه‌گیری', desc: 'هر روز مایل‌استون مشخص — نه «بعداً خبر می‌دهیم».' },
+    { icon: 'palette', title: 'طراحی حرفه‌ای', desc: 'موبایل‌فرست، RTL تمیز، تایپوگرافی Vazirmatn و CTA واضح.' },
+    { icon: 'monitor', title: 'تخصص فنی', desc: 'فرم، واتساپ، سئو پایه، آنالیتیکس و آموزش مدیریت.' },
+    { icon: 'handshake', title: 'ادامه مسیر', desc: 'از Fast به فروشگاه، چندزبانه، پنل یا اپ — همان تیم.' }
+  ],
+
+  scope: [
+    {
+      icon: 'globe',
+      title: 'سایت شرکتی و لندینگ',
+      desc: 'معرفی برند، خدمات و فرم لید — پلن پایه Fast از $99.',
+      href: '#fast-plans',
+      cta: 'مشاهده پلن‌ها'
+    },
+    {
+      icon: 'bag',
+      title: 'فروشگاه WooCommerce',
+      desc: 'محصول، سبد خرید و درگاه — پلن فروشگاهی و حرفه‌ای.',
+      href: '#fast-plans',
+      cta: 'پلن فروشگاهی'
+    },
+    {
+      icon: 'mobile',
+      title: 'وب‌اپ و اپلیکیشن',
+      desc: 'پنل، PWA، اپ و سامانه‌های سفارشی فراتر از پلن ثابت.',
+      href: 'pages/custom-web-app.html',
+      cta: 'صفحه وب و اپ',
+      internal: true
+    },
+    {
+      icon: 'article',
+      title: 'راهنما و بلاگ',
+      desc: 'چک‌لیست ۵ روزه، پلن‌ها و مسیر توسعه اختصاصی.',
+      href: '#fast-guides',
+      cta: 'مطالب تخصصی'
+    }
+  ],
+
+  deliverables: [
+    { icon: 'mobile', title: 'ریسپانسیو واقعی', desc: 'موبایل، تبلت و دسکتاپ با تست دستی قبل از تحویل.' },
+    { icon: 'whatsapp', title: 'واتساپ و فرم', desc: 'دکمه تماس مستقیم + فرم حرفه‌ای برای لید.' },
+    { icon: 'target', title: 'سئو پایه', desc: 'عنوان، متا، سرعت و ساختار صفحات آماده ایندکس.' },
+    { icon: 'gear', title: 'SSL و هاست', desc: 'خرید دامنه و هاست از Netinode Shop — زیرساخت خود بیزدوار.' },
+    { icon: 'rocket', title: 'آموزش مدیریت', desc: 'ویدیو/راهنما تا خودتان محتوا را به‌روز کنید.' },
+    { icon: 'shield', title: 'پشتیبانی پس از تحویل', desc: 'بازه پشتیبانی شفاف بر اساس پلن انتخابی.' }
+  ],
+
+  guides: [
+    {
+      title: 'راهنمای کامل Fast Studio',
+      desc: 'پلن $99 تا $299، تحویل ۵ روزه و تفاوت با پروژه اختصاصی.',
+      href: 'pages/articles/fast-studio.html',
+      image: 'assets/images/content/fast-hero.svg'
+    },
+    {
+      title: 'چک‌لیست سایت در ۵ روز',
+      desc: 'چه چیزی را از روز اول آماده کنید تا واقعاً سریع آنلاین شوید.',
+      href: 'pages/articles/website-speed-5-days.html',
+      image: 'assets/images/content/fast-speed-banner.svg'
+    },
+    {
+      title: 'وب و اپ اختصاصی',
+      desc: 'چه زمانی از Fast خارج می‌شوید و پروژه سفارشی می‌گیرید.',
+      href: 'pages/articles/custom-web-app-development.html',
+      image: 'assets/images/content/custom-web-app-hero.svg'
+    },
+    {
+      title: 'سایت چندزبانه ایران–ترکیه',
+      desc: 'hreflang، اعتماد محلی و الگوی fa / tr / en.',
+      href: 'pages/articles/multilingual-web-iran-turkey.html',
+      image: 'assets/images/content/related-thumb-fast.svg'
+    }
   ],
 
   plans: [
@@ -33,7 +110,7 @@ window.FAST_CATALOG = {
         'فرم تماس حرفه‌ای',
         'دکمه واتساپ مستقیم',
         'اتصال اینستاگرام / لینکدین',
-        'SSL و هاست اولیه — <a href="https://netinode.net/" target="_blank" rel="noopener noreferrer">خرید دامنه و هاست (Netinode)</a>',
+        'SSL و هاست اولیه — <a href="https://shop.netinode.net/" target="_blank" rel="noopener noreferrer">خرید دامنه و هاست (Netinode Shop)</a> · <a href="https://netinode.net/" target="_blank" rel="noopener noreferrer">netinode.net</a>',
         'آموزش ویدیویی مدیریت'
       ]
     },
@@ -102,24 +179,26 @@ window.FAST_CATALOG = {
   ],
 
   showcases: [
-    { name: 'BZ Diamond', category: 'فروشگاه جواهرات', slug: 'pages/bz-diamond', internal: true },
-    { name: 'Supplify Trade', category: 'تجارت بین‌المللی B2B', slug: 'pages/supplify-trade', internal: true },
-    { name: 'Kaya One AG', category: 'تجارت سوئیسی B2B', slug: 'pages/kaya-one', internal: true },
-    { name: 'SMM Turk', category: 'پنل SMM', slug: 'pages/smm-turk', internal: true },
-    { name: 'FXGuard Exchange', category: 'فین‌تک / تبادل ارز', slug: 'pages/fxguard-exchange', internal: true },
-    { name: 'Karen Leather', category: 'چرم و مد', domain: 'karenleather.com', internal: false },
-    { name: 'Marvelous Holding', category: 'هلدینگ', domain: 'marvelousholding.com', internal: false },
-    { name: 'NIK Aesthetic', category: 'کلینیک زیبایی', domain: 'nikaesthetic.com', internal: false },
-    { name: 'Paparosi', category: 'برند تجاری', domain: 'paparosi.co', internal: false },
-    { name: 'Arian Pumps', category: 'B2B صنعتی', domain: 'arianpumps.com', internal: false }
+    { name: 'BZ Diamond', category: 'فروشگاه جواهرات', slug: 'pages/bz-diamond', internal: true, thumb: 'assets/images/partners/zeddiamond.png' },
+    { name: 'Supplify Trade', category: 'تجارت بین‌المللی B2B', slug: 'pages/supplify-trade', internal: true, thumb: 'assets/images/partners/supplify-trade.svg' },
+    { name: 'Kaya One AG', category: 'تجارت سوئیسی B2B', slug: 'pages/kaya-one', internal: true, thumb: 'assets/images/partners/kaya-one.svg' },
+    { name: 'SMM Turk', category: 'پنل SMM', slug: 'pages/smm-turk', internal: true, thumb: 'assets/images/partners/smm-turk.svg' },
+    { name: 'FXGuard Exchange', category: 'فین‌تک / تبادل ارز', slug: 'pages/fxguard-exchange', internal: true, thumb: 'assets/images/partners/fxguard-exchange.svg' },
+    { name: 'Karen Leather', category: 'چرم و مد', domain: 'karenleather.com', internal: false, thumb: 'assets/images/partners/karen-leather.png' },
+    { name: 'Marvelous Holding', category: 'هلدینگ', domain: 'marvelousholding.com', internal: false, thumb: 'assets/images/partners/marvelous-holding.png' },
+    { name: 'NIK Aesthetic', category: 'کلینیک زیبایی', domain: 'nikaesthetic.com', internal: false, thumb: 'assets/images/partners/nikaesthetic.png' },
+    { name: 'Paparosi', category: 'برند تجاری', domain: 'paparosi.co', internal: false, thumb: 'assets/images/partners/paparosi.png' },
+    { name: 'Arian Pumps', category: 'B2B صنعتی', domain: 'arianpumps.com', internal: false, thumb: 'assets/images/content/services-web-mockup.svg' }
   ],
 
   faq: [
     { q: 'واقعاً در ۵ روز تحویل می‌دهید؟', a: 'بله — برای پلن پایه و فروشگاهی با محتوای آماده مشتری. پلن حرفه‌ای با صفحات بیشتر ممکن است ۵ تا ۷ روز طول بکشد. قبل از شروع، زمان دقیق را در واتساپ تأیید می‌کنیم.' },
-    { q: 'هاست و دامنه شامل قیمت است؟', a: 'هزینه طراحی و راه‌اندازی جداست. دامنه و هاست سالانه را می‌توانید از <a href="https://netinode.net/" target="_blank" rel="noopener noreferrer">Netinode</a> (ثبت دامنه، هاست، WordPress و SSL) تهیه کنید یا با راهنمایی ما انجام دهید.' },
-    { q: 'آیا می‌توانم بعداً سایت را گسترش دهم؟', a: 'بله. می‌توانید از پلن پایه شروع کنید و بعد به فروشگاهی یا حرفه‌ای ارتقا دهید. بیزدوار همان پروژه را ادامه می‌دهد.' },
+    { q: 'هاست و دامنه شامل قیمت است؟', a: 'هزینه طراحی و راه‌اندازی جداست. دامنه و هاست را از فروشگاه <a href="https://shop.netinode.net/" target="_blank" rel="noopener noreferrer">Netinode Shop</a> بخرید (زیرساخت خود بیزدوار) یا از <a href="https://netinode.net/" target="_blank" rel="noopener noreferrer">netinode.net</a> سرویس‌ها را ببینید — راهنمایی هم می‌کنیم.' },
+    { q: 'آیا می‌توانم بعداً سایت را گسترش دهم؟', a: 'بله. می‌توانید از پلن پایه شروع کنید و بعد به فروشگاهی یا حرفه‌ای ارتقا دهید. بیزدوار همان پروژه را ادامه می‌دهد — حتی تا <a href="custom-web-app">وب‌اپ و اپلیکیشن</a>.' },
     { q: 'پرداخت چگونه است؟', a: 'معمولاً ۵۰٪ پیش‌پرداخت و ۵۰٪ قبل از تحویل نهایی — از طریق حواله، کارت یا روش‌های بین‌المللی. جزئیات در واتساپ هماهنگ می‌شود.' },
     { q: 'برای کسب‌وکار خارج از ایران هم کار می‌کنید؟', a: 'بله — Fast Web Studio برای ایران، ترکیه، امارات و اروپا اجرا شده. مشاوره فارسی، انگلیسی و ترکی داریم.' },
-    { q: 'تفاوت Fast با سفارش اختصاصی چیست؟', a: 'Fast برای راه‌اندازی سریع با قیمت ثابت است. پروژه‌های بزرگ‌تر (اپلیکیشن، پورتال B2B، چندزبانه پیچیده) از مسیر <a href="services#web-design">خدمات طراحی وب</a> پیش می‌روند.' }
+    { q: 'تفاوت Fast با سفارش اختصاصی چیست؟', a: 'Fast برای راه‌اندازی سریع با قیمت ثابت است. پروژه‌های بزرگ‌تر (اپلیکیشن، پورتال B2B، چندزبانه پیچیده) از مسیر <a href="custom-web-app">طراحی وب و اپ اختصاصی</a> یا <a href="services#web-design">خدمات طراحی وب</a> پیش می‌روند.' },
+    { q: 'اپلیکیشن موبایل هم می‌سازید؟', a: 'بله — اپ، PWA و پنل‌های سفارشی در صفحه <a href="custom-web-app">وب و اپ اختصاصی</a> توضیح داده شده‌اند. ابتدا نیاز را در واتساپ یا فرم تماس مشخص می‌کنیم.' },
+    { q: 'محتوا و عکس‌ها را چه کسی می‌دهد؟', a: 'متن و لوگو را شما می‌فرستید؛ ما ساختار، طراحی و پیاده‌سازی را انجام می‌دهیم. اگر محتوا آماده نباشد، زمان‌بندی از روز آماده‌سازی محتوا شروع می‌شود — جزئیات در <a href="articles/website-speed-5-days">چک‌لیست ۵ روزه</a>.' }
   ]
 };

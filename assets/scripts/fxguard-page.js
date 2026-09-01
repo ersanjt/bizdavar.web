@@ -1,5 +1,5 @@
 /**
- * WhatsApp CRM script page — dynamic sections + stat counters
+ * FXGuard WhatsApp CRM product page — sections from caseStudy.fxguard
  */
 (function () {
   function raw(key) {
@@ -20,6 +20,12 @@
       ? window.resolvePagePath('pages/contact.html')
       : '/pages/contact';
     return query ? `${base}?${query}` : base;
+  }
+
+  function pageHref(slug) {
+    return window.resolvePagePath
+      ? window.resolvePagePath(`pages/${slug}.html`)
+      : `/pages/${slug}`;
   }
 
   function esc(s) {
@@ -68,20 +74,110 @@
   }
 
   function setStatFallbacks(cs) {
-    const map = [
+    [
       { id: 'fxStatBusinesses', value: '12+' },
       { id: 'fxStatRegions', value: '5' },
       { id: 'fxStatUptime', value: '99.9%' },
       { id: 'fxStatSetup', value: '5' }
-    ];
-    map.forEach(({ id, value }) => {
+    ].forEach(({ id, value }) => {
       const el = document.getElementById(id);
-      if (el && (!el.textContent || /^0/.test(el.textContent.trim()))) {
-        el.textContent = value;
-      }
+      if (el && (!el.textContent || /^0/.test(el.textContent.trim()))) el.textContent = value;
     });
     const regionsVal = document.getElementById('fxStatRegionsLabel');
     if (regionsVal && cs?.stats?.regionsVal) regionsVal.textContent = cs.stats.regionsVal;
+  }
+
+  function renderSuite(cs) {
+    const el = document.getElementById('fxguardSuite');
+    if (!el || !Array.isArray(cs.suite?.products)) return;
+    el.innerHTML = cs.suite.products.map(p => {
+      const href = p.internal ? pageHref(p.internal) : (p.href || 'https://fxguard.io/');
+      const external = /^https?:/.test(href);
+      return `
+        <article class="fxguard-suite-card${p.featured ? ' fxguard-suite-card--live' : ' fxguard-suite-card--soon'}">
+          <span class="fxguard-suite-card__badge">${esc(p.badge || '')}</span>
+          <h3>${esc(p.title)}</h3>
+          <p>${esc(p.desc)}</p>
+          <div class="fxguard-suite-card__actions">
+            <a href="${esc(href)}" class="btn ${p.featured ? 'btn--green' : 'btn--outline'}"${external ? ' target="_blank" rel="noopener noreferrer"' : ''}>${esc(p.cta)}</a>
+            ${p.ctaSecondary && p.secondaryHref ? `<a href="${esc(p.secondaryHref.startsWith('http') || p.secondaryHref.startsWith('/') ? p.secondaryHref : pageHref(p.secondaryHref))}" class="btn btn--outline"${/^https?:/.test(p.secondaryHref) ? ' target="_blank" rel="noopener noreferrer"' : ''}>${esc(p.ctaSecondary)}</a>` : ''}
+          </div>
+        </article>`;
+    }).join('');
+  }
+
+  function renderSolve(cs) {
+    const el = document.getElementById('fxguardSolve');
+    const s = cs.solution;
+    if (!el || !s) return;
+    el.innerHTML = `
+      <div class="fxguard-solve__inner">
+        <h3>${esc(s.title)}</h3>
+        <p>${esc(s.desc)}</p>
+        <a href="${esc(s.href || 'https://app.fxguard.io/')}" class="btn btn--green" target="_blank" rel="noopener noreferrer">${esc(s.cta || 'Demo')}</a>
+      </div>`;
+  }
+
+  function renderWhy(cs) {
+    renderCards('fxguardWhy', cs.why?.items, (item, i) => `
+      <article class="fxguard-why-card">
+        <span class="fxguard-why-card__num">${esc(item.num || String(i + 1).padStart(2, '0'))}</span>
+        <h3>${esc(item.title)}</h3>
+        <p>${esc(item.desc)}</p>
+      </article>`);
+  }
+
+  function renderDemo(cs) {
+    const el = document.getElementById('fxguardDemo');
+    const d = cs.demo;
+    if (!el || !d) return;
+    el.innerHTML = `
+      <div class="fxguard-demo__panel">
+        <span class="fxguard-demo__live">${esc(d.liveBadge || 'LIVE DEMO')}</span>
+        <div class="fxguard-demo__creds">
+          <div>
+            <span class="fxguard-demo__label">${esc(d.userLabel || 'Username')}</span>
+            <code dir="ltr">${esc(d.user || 'demo')}</code>
+          </div>
+          <div>
+            <span class="fxguard-demo__label">${esc(d.passLabel || 'Password')}</span>
+            <code dir="ltr">${esc(d.pass || '123456')}</code>
+          </div>
+        </div>
+        <p class="fxguard-demo__note">${esc(d.note || '')}</p>
+        <a href="https://app.fxguard.io/" class="btn btn--green" target="_blank" rel="noopener noreferrer">${esc(d.cta || 'Open Live Demo')}</a>
+      </div>
+      <ul class="fxguard-demo__shots">
+        ${(d.shots || []).map(s => `<li><strong>${esc(s.title)}</strong><span>${esc(s.desc)}</span></li>`).join('')}
+      </ul>`;
+  }
+
+  function renderUpdates(cs) {
+    const el = document.getElementById('fxguardUpdates');
+    if (!el || !Array.isArray(cs.updates?.items)) return;
+    el.innerHTML = cs.updates.items.map(item => `
+      <article class="fxguard-update">
+        <div class="fxguard-update__meta">
+          <time>${esc(item.date)}</time>
+          <span>${esc(item.tag)}</span>
+        </div>
+        <h3>${esc(item.title)}</h3>
+        <p>${esc(item.desc)}</p>
+        ${Array.isArray(item.bullets) ? `<ul>${item.bullets.map(b => `<li>${esc(b)}</li>`).join('')}</ul>` : ''}
+      </article>`).join('');
+  }
+
+  function injectFaqSchema(items) {
+    if (!items?.length || typeof window.injectJsonLd !== 'function') return;
+    window.injectJsonLd('jsonld-fxguard-faq', {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: items.map(item => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: { '@type': 'Answer', text: item.a }
+      }))
+    });
   }
 
   window.initFxguardPage = function () {
@@ -100,12 +196,16 @@
         regionsEl.removeAttribute('data-i18n');
       }
 
+      renderSuite(cs);
       renderCards('fxguardProblems', cs.problem?.items, item => `
         <article class="fxguard-card">
           <div class="fxguard-card__icon" aria-hidden="true">${iconHtml(item.icon)}</div>
           <h3>${esc(item.title)}</h3>
           <p>${esc(item.desc)}</p>
         </article>`);
+      renderSolve(cs);
+      renderWhy(cs);
+      renderDemo(cs);
 
       renderCards('fxguardSteps', cs.steps?.items, item => `
         <article class="fxguard-step">
@@ -148,6 +248,15 @@
         }).join('');
       }
 
+      renderCards('fxguardSupport', cs.support?.items, item => `
+        <article class="fxguard-card">
+          <div class="fxguard-card__icon" aria-hidden="true">${iconHtml(item.icon)}</div>
+          <h3>${esc(item.title)}</h3>
+          <p>${esc(item.desc)}</p>
+        </article>`);
+
+      renderUpdates(cs);
+
       const faqEl = document.getElementById('fxguardFaq');
       if (faqEl && Array.isArray(cs.faq?.items)) {
         faqEl.innerHTML = cs.faq.items.map(item => `
@@ -155,31 +264,62 @@
             <summary>${esc(item.q)}</summary>
             <p>${esc(item.a)}</p>
           </details>`).join('');
+        injectFaqSchema(cs.faq.items);
       }
 
-      const statMap = [
+      [
         { id: 'fxStatBusinesses', value: 12, suffix: '+' },
         { id: 'fxStatRegions', value: 5, suffix: '' },
         { id: 'fxStatUptime', value: 99.9, suffix: '%' },
         { id: 'fxStatSetup', value: 5, suffix: '' }
-      ];
-      const setupSuffix = cs.stats?.setupSuffix || '';
-      statMap.forEach(({ id, value, suffix }) => {
+      ].forEach(({ id, value, suffix }) => {
         const el = document.getElementById(id);
-        if (el) animateStat(el, value, id === 'fxStatSetup' ? (setupSuffix || suffix) : suffix);
+        if (el) animateStat(el, value, suffix);
       });
-
       const regionsVal = document.getElementById('fxStatRegionsLabel');
       if (regionsVal && cs.stats?.regionsVal) regionsVal.textContent = cs.stats.regionsVal;
-
-      const problemGrid = document.getElementById('fxguardProblems');
-      if (problemGrid && (cs.problem?.items || []).length > 3) {
-        problemGrid.classList.remove('fxguard-card-grid--3');
-        problemGrid.classList.add('fxguard-card-grid--4');
-      }
     } catch (err) {
       console.error('[Bizdavar] initFxguardPage failed', err);
       setStatFallbacks(raw('caseStudy.fxguard'));
+    }
+  };
+
+  window.initFxguardAccountingPage = function () {
+    try {
+      const cs = raw('caseStudy.fxguardAccounting');
+      if (!cs || typeof cs !== 'object') return;
+
+      renderCards('fxAccFeatures', cs.features?.items, item => `
+        <article class="fxguard-card">
+          <div class="fxguard-card__icon" aria-hidden="true">${iconHtml(item.icon || 'check')}</div>
+          <h3>${esc(item.title)}</h3>
+          <p>${esc(item.desc)}</p>
+        </article>`);
+
+      renderCards('fxAccAudience', cs.audience?.items, item => `
+        <article class="fxguard-card">
+          <div class="fxguard-card__icon" aria-hidden="true">${iconHtml(item.icon || 'users')}</div>
+          <h3>${esc(item.title)}</h3>
+          <p>${esc(item.desc)}</p>
+        </article>`);
+
+      renderCards('fxAccSteps', cs.steps?.items, item => `
+        <article class="fxguard-step">
+          <div class="fxguard-step__num">${esc(item.num)}</div>
+          <h3>${esc(item.title)}</h3>
+          <p>${esc(item.desc)}</p>
+        </article>`);
+
+      const faqEl = document.getElementById('fxAccFaq');
+      if (faqEl && Array.isArray(cs.faq?.items)) {
+        faqEl.innerHTML = cs.faq.items.map(item => `
+          <details>
+            <summary>${esc(item.q)}</summary>
+            <p>${esc(item.a)}</p>
+          </details>`).join('');
+      }
+    } catch (err) {
+      console.error('[Bizdavar] initFxguardAccountingPage failed', err);
     }
   };
 })();

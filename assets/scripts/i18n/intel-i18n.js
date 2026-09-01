@@ -18,9 +18,9 @@
       years: 'سال',
       projects: 'پروژه',
       office: 'دفتر',
-      mainOffice: 'دفتر اصلی',
+      mainOffice: 'دفتر',
       whatsapp: 'واتساپ',
-      whatsappIstanbul: 'واتساپ استانبول',
+      whatsappIstanbul: 'واتساپ ترکیه',
       whatsappIran: 'واتساپ ایران',
       armenia: 'ارمنستان',
       iran: 'ایران',
@@ -31,7 +31,7 @@
       contact: 'تماس',
       email: 'ایمیل',
       hubBadge: 'هاب',
-      mapAlt: 'نقشه حضور جهانی بیزدوار — دفتر اصلی استانبول'
+      mapAlt: 'نقشه حضور جهانی بیزدوار — دفاتر ایران، ترکیه، ارمنستان و دبی'
     },
     tr: {
       intlBrand: 'Uluslararası marka',
@@ -47,9 +47,9 @@
       years: 'yıl',
       projects: 'proje',
       office: 'Ofis',
-      mainOffice: 'Ana ofis',
+      mainOffice: 'Ofis',
       whatsapp: 'WhatsApp',
-      whatsappIstanbul: 'İstanbul WhatsApp',
+      whatsappIstanbul: 'Türkiye WhatsApp',
       whatsappIran: 'İran WhatsApp',
       armenia: 'Ermenistan',
       iran: 'İran',
@@ -60,7 +60,7 @@
       contact: 'Telefon',
       email: 'E-posta',
       hubBadge: 'Merkez',
-      mapAlt: 'Bizdavar küresel varlık haritası — İstanbul ana ofis'
+      mapAlt: 'Bizdavar küresel varlık haritası — ofisler: İran, Türkiye, Ermenistan ve Dubai'
     },
     en: {
       intlBrand: 'International brand',
@@ -76,9 +76,9 @@
       years: 'years',
       projects: 'projects',
       office: 'Office',
-      mainOffice: 'Head office',
+      mainOffice: 'Office',
       whatsapp: 'WhatsApp',
-      whatsappIstanbul: 'Istanbul WhatsApp',
+      whatsappIstanbul: 'Turkey WhatsApp',
       whatsappIran: 'Iran WhatsApp',
       armenia: 'Armenia',
       iran: 'Iran',
@@ -89,7 +89,7 @@
       contact: 'Phone',
       email: 'Email',
       hubBadge: 'Hub',
-      mapAlt: 'Bizdavar global presence map — Istanbul HQ'
+      mapAlt: 'Bizdavar global presence map — offices in Iran, Turkey, Armenia and Dubai'
     }
   };
 
@@ -108,9 +108,10 @@
       foundedDisplay: '2013',
       languages: ['Türkçe', 'Farsça', 'English'],
       headquarters: [
-        { city: 'İstanbul', country: 'Türkiye', role: 'Ana ofis · Uluslararası operasyon merkezi', badge: 'HQ' },
-        { city: 'Erivan', country: 'Ermenistan', role: 'Şirket kaydı · Bizdavar Group LLC — SEO ve dijital pazarlama', badge: 'AM' },
-        { city: 'Tebriz', country: 'İran', role: 'Tüzel kişilik · Middle East Development Technology Processors', badge: 'IR' }
+        { city: 'Tebriz', country: 'İran', role: 'İran ofisi · Middle East Development Technology Processors', badge: 'IR' },
+        { city: 'İstanbul', country: 'Türkiye', role: 'Türkiye ofisi · fintech ve uluslararası operasyon', badge: 'TR' },
+        { city: 'Erivan', country: 'Ermenistan', role: 'Ermenistan ofisi · Bizdavar Group LLC', badge: 'AM' },
+        { city: 'Dubai', country: 'BAE', role: 'Dubai ofisi · bölgesel operasyon', badge: 'AE' }
       ],
       directories: [
         { label: 'Spyur.am — Ermenistan profili', url: 'https://www.spyur.am/en/companies/bizdavar/57783/', note: 'Bizdavar Group LLC · Erivan · SEO ve web reklamcılığı' },
@@ -160,26 +161,26 @@
       { name: 'Karen Leather', type: 'İhracat', note: 'B2B deri pazarlama' }
     ],
     presence: {
-      summary: '11 ülkede tamamlanan projeler — ana ofis İstanbul; İran, Türkiye ve MENA projeleri buradan koordine edilir.',
-      summaryFa: '11 ülkede tamamlanan projeler — ana ofis İstanbul; İran, Türkiye ve MENA projeleri buradan koordine edilir.',
+      summary: '11 ülkede tamamlanan projeler — ofisler: İran, Türkiye, Ermenistan ve Dubai.',
+      summaryFa: '11 ülkede tamamlanan projeler — ofisler: İran, Türkiye, Ermenistan ve Dubai.',
       stats: [
         { value: '11', label: 'Aktif ülke' },
-        { value: '3', label: 'Operasyon ofisi' },
+        { value: '4', label: 'Operasyon ofisi' },
         { value: '100+', label: 'Uluslararası proje' }
       ],
       istanbulHub: {
-        title: 'İstanbul operasyon merkezi',
+        title: 'Türkiye ofisi — İstanbul',
         city: 'İstanbul',
         country: 'Türkiye',
         address: 'İstanbul, Türkiye',
         workingHours: '7/24',
         languages: ['Türkçe', 'Farsça', 'English'],
-        intro: 'Bizdavar Group’un İstanbul’daki ana ofisi; dijital, fintech ve B2B endüstriyel tedarik projelerinin koordinasyon merkezidir. Türkçe, Farsça ve İngilizce danışmanlık; proforma, uluslararası lojistik ve teknik destek buradan yönetilir.',
+        intro: 'Bizdavar Group’un Türkiye ofisi (İstanbul) — dört operasyon ofisinden biri (İran, Türkiye, Ermenistan, Dubai). Dijital, fintech ve B2B endüstriyel tedarik; çok dilli danışmanlık, proforma ve uluslararası lojistik.',
         services: [
           'Fintech ve ödeme platformları (ZedPay ekosistemi)',
           'Web tasarım ve Fast Web Studio',
           'Dijital pazarlama, SEO ve SMM',
-          'VEGA, Prosense, Gamak ve Türkiye ekipman tedariki',
+          'VEGA, Prosense, Gamak ve endüstriyel ekipman tedariki',
           'Domain, hosting, SSL ve altyapı (Netinode)',
           'İran ve MENA proje koordinasyonu'
         ],
@@ -228,7 +229,7 @@
           id: 'mena',
           title: 'Orta Doğu ve Türkiye',
           countries: [
-            { name: 'Türkiye', hub: true, city: 'İstanbul', focus: 'Ana ofis · Fintech · Web · Endüstriyel tedarik', detail: 'Uluslararası operasyon merkezi — Türkçe, Farsça ve İngilizce danışmanlık' },
+            { name: 'Türkiye', hub: true, city: 'İstanbul', focus: 'Türkiye ofisi · Fintech · Web · Endüstriyel tedarik', detail: 'Operasyon ofislerinden biri — Türkçe, Farsça ve İngilizce danışmanlık' },
             { name: 'İran', hub: true, city: 'Tebriz', focus: 'Tüzel kişilik · Dijital ve endüstri', detail: 'Middle East Development Technology Processors — Doğu Azerbaycan' },
             { name: 'BAE', focus: 'Ticaret ve fintech' },
             { name: 'Irak', focus: 'B2B endüstri' },
@@ -392,9 +393,10 @@
       foundedDisplay: '2013',
       languages: ['Persian', 'English', 'Turkish'],
       headquarters: [
-        { city: 'Istanbul', country: 'Turkey', role: 'Head office · International operations centre', badge: 'HQ' },
-        { city: 'Yerevan', country: 'Armenia', role: 'Company registration · Bizdavar Group LLC — SEO & digital marketing', badge: 'AM' },
-        { city: 'Tabriz', country: 'Iran', role: 'Legal entity · Middle East Development Technology Processors', badge: 'IR' }
+        { city: 'Tabriz', country: 'Iran', role: 'Iran office · Middle East Development Technology Processors', badge: 'IR' },
+        { city: 'Istanbul', country: 'Turkey', role: 'Turkey office · fintech & international operations', badge: 'TR' },
+        { city: 'Yerevan', country: 'Armenia', role: 'Armenia office · Bizdavar Group LLC', badge: 'AM' },
+        { city: 'Dubai', country: 'UAE', role: 'Dubai office · regional operations', badge: 'AE' }
       ],
       directories: [
         { label: 'Spyur.am — Armenia profile', url: 'https://www.spyur.am/en/companies/bizdavar/57783/', note: 'Bizdavar Group LLC · Yerevan · SEO and web advertising' },
@@ -448,26 +450,26 @@
       { name: 'Karen Leather', type: 'Export', note: 'B2B leather marketing' }
     ],
     presence: {
-      summary: 'Projects delivered in 11 countries — HQ in Istanbul; Iran, Turkey and MENA projects coordinated from this hub.',
-      summaryFa: 'Projects delivered in 11 countries — HQ in Istanbul; Iran, Turkey and MENA projects coordinated from this hub.',
+      summary: 'Projects delivered in 11 countries — offices in Iran, Turkey, Armenia and Dubai.',
+      summaryFa: 'Projects delivered in 11 countries — offices in Iran, Turkey, Armenia and Dubai.',
       stats: [
         { value: '11', label: 'Active countries' },
-        { value: '3', label: 'Operating offices' },
+        { value: '4', label: 'Operating offices' },
         { value: '100+', label: 'International projects' }
       ],
       istanbulHub: {
-        title: 'Istanbul operations centre',
+        title: 'Turkey office — Istanbul',
         city: 'Istanbul',
         country: 'Turkey',
         address: 'Istanbul, Turkey',
         workingHours: '24/7',
         languages: ['Persian', 'Turkish', 'English'],
-        intro: 'Bizdavar Group’s Istanbul HQ coordinates digital, fintech and B2B industrial supply projects. Persian consulting, proforma quotes, international logistics and technical support are managed here.',
+        intro: 'Bizdavar Group’s Turkey office in Istanbul is one of four operating offices (Iran, Turkey, Armenia and Dubai). Multilingual consulting, proforma quotes, international logistics and technical support for digital, fintech and B2B industrial supply.',
         services: [
           'Fintech and payment platforms (ZedPay ecosystem)',
           'Web design and Fast Web Studio',
           'Digital marketing, SEO and SMM',
-          'VEGA, Prosense, Gamak and Turkish equipment supply',
+          'VEGA, Prosense, Gamak and industrial equipment supply',
           'Domains, hosting, SSL and infrastructure (Netinode)',
           'Iran and MENA project coordination'
         ],
@@ -516,7 +518,7 @@
           id: 'mena',
           title: 'Middle East & Turkey',
           countries: [
-            { name: 'Turkey', hub: true, city: 'Istanbul', focus: 'HQ · Fintech · Web · Industrial supply', detail: 'International ops centre — Persian/Turkish/English consulting' },
+            { name: 'Turkey', hub: true, city: 'Istanbul', focus: 'Turkey office · Fintech · Web · Industrial supply', detail: 'One of our operating offices — Persian/Turkish/English consulting' },
             { name: 'Iran', hub: true, city: 'Tabriz', focus: 'Legal entity · Digital & industry', detail: 'Middle East Development Technology Processors — East Azerbaijan' },
             { name: 'UAE', focus: 'Trade and fintech' },
             { name: 'Iraq', focus: 'B2B industry' },

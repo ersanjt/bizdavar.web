@@ -110,6 +110,7 @@
         { href: `${pagePath(R.services)}#digital-marketing`, label: t('footer.digitalMarketing') },
         { href: `${pagePath(R.services)}#web-design`, label: t('footer.webDesign', 'طراحی وب') },
         { href: pagePath(R.fast), label: t('footer.webFast') },
+        { href: pagePath(R.customWebApp || 'pages/custom-web-app.html'), label: t('footer.customWebApp', 'وب و اپ اختصاصی') },
         { href: `${pagePath(R.services)}#software-apps`, label: t('footer.softwareApps', 'اپ و سامانه') },
         { href: `${pagePath(R.services)}#server-ops`, label: t('footer.serverOps', 'مدیریت سرور') },
         { href: `${pagePath(R.services)}#smm`, label: t('footer.smm') },
@@ -869,7 +870,7 @@
           <div class="mobile-footer-hero">
             <a href="${pagePath(R.home)}" class="footer__logo-link"><img src="${path(footerLogo)}" alt="${logoAlt}" class="footer__logo-img footer__logo-img--sm"></a>
             <p class="mobile-footer-hero__tagline">${t('footer.tagline')}</p>
-            <div class="footer__trust">${trustPills}<span class="footer__pill">${t('footer.hq', 'HQ: Istanbul')}</span></div>
+            <div class="footer__trust">${trustPills}<span class="footer__pill">${t('footer.hq', 'Offices: Iran · Turkey · Armenia · Dubai')}</span></div>
             <div class="footer__social footer__social--mobile">
               <a href="${C.contact.instagram}" class="footer__social-btn" target="_blank" rel="noopener noreferrer me" aria-label="Instagram">${ic('instagram', { size: 18 })}</a>
               <a href="${C.contact.linkedin}" class="footer__social-btn" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn">${ic('linkedin', { size: 18 })}</a>

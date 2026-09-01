@@ -40,6 +40,8 @@
     'i18n/locales.js'
   ], afterLocales, [
     'i18n/locales-pages.js',
+    'i18n/articles-body-i18n.js',
+    'i18n/articles-body-ru-ar.js',
     'i18n/locale-seo.js',
     'i18n/locales-ru-ar.js'
   ], afterSeo, [
@@ -53,6 +55,7 @@
     'components/grids.js'
   ], beforeMain, [
     'main.js',
+    'conversions.js',
     'premium.js',
     'nav-flow.js',
     'components/site-boot.js',

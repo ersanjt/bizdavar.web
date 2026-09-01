@@ -15,6 +15,7 @@ window.BIZDAVAR_CONFIG = {
     services: 'pages/services.html',
     portfolio: 'pages/portfolio.html',
     fast: 'pages/fast.html',
+    customWebApp: 'pages/custom-web-app.html',
     blog: 'pages/blog.html',
     contact: 'pages/contact.html',
     privacy: 'pages/privacy.html',
@@ -28,7 +29,9 @@ window.BIZDAVAR_CONFIG = {
     fxguardExchange: 'pages/fxguard-exchange.html',
     biztejarat: 'pages/biztejarat.html',
     biztab: 'pages/biztab.html',
+    bizpet: 'pages/bizpet.html',
     bizsanitizerV5: 'pages/bizsanitizer-v5.html',
+    uwt: 'pages/uwt.html',
     fxguard: 'pages/fxguard.html',
     fxguardAccounting: 'pages/fxguard-accounting.html',
     bizswap: 'pages/bizswap.html',
@@ -43,6 +46,8 @@ window.BIZDAVAR_CONFIG = {
       whatIsDigitalMarketing: 'pages/articles/what-is-digital-marketing.html',
       socialMediaManagement: 'pages/articles/social-media-management.html',
       fastStudio: 'pages/articles/fast-studio.html',
+      websiteSpeed5Days: 'pages/articles/website-speed-5-days.html',
+      customWebAppDev: 'pages/articles/custom-web-app-development.html',
       industrialSensors: 'pages/articles/industrial-sensors.html',
       aboutBizdavar: 'pages/articles/about-bizdavar-group.html'
     }
@@ -81,6 +86,7 @@ window.BIZDAVAR_CONFIG = {
             labelKey: 'nav.productsHardware',
             items: [
               { route: 'biztab', page: 'biztab', labelKey: 'nav.productBiztab', label: 'BizTab', descKey: 'nav.productBiztabDesc' },
+              { route: 'bizpet', page: 'bizpet', labelKey: 'nav.productBizpet', label: 'BizPet', descKey: 'nav.productBizpetDesc' },
               { route: 'bizsanitizerV5', page: 'bizsanitizer-v5', labelKey: 'nav.productBizclean', label: 'BizClean', descKey: 'nav.productBizcleanDesc' }
             ]
           }
@@ -115,6 +121,7 @@ window.BIZDAVAR_CONFIG = {
             labelKey: 'nav.brandGroupSensing',
             items: [
               { route: 'vega', page: 'vega', label: 'VEGA', descKey: 'nav.brandVegaDesc' },
+              { route: 'uwt', page: 'uwt', label: 'UWT', descKey: 'nav.brandUwtDesc' },
               { route: 'prosense', page: 'prosense', label: 'Prosense', descKey: 'nav.brandProsenseDesc' }
             ]
           },
@@ -182,6 +189,8 @@ window.BIZDAVAR_CONFIG = {
             labelKey: 'nav.servicesGroupBuild',
             items: [
               { route: 'services', hash: 'web-design', page: 'services', labelKey: 'nav.serviceWeb', descKey: 'nav.serviceWebDesc' },
+              { route: 'fast', page: 'fast', labelKey: 'nav.webDesign', descKey: 'nav.fastDesc' },
+              { route: 'customWebApp', page: 'custom-web-app', labelKey: 'nav.customWebApp', descKey: 'nav.customWebAppDesc' },
               { route: 'services', hash: 'software-apps', page: 'services', labelKey: 'nav.serviceApps', descKey: 'nav.serviceAppsDesc' },
               { route: 'services', hash: 'server-ops', page: 'services', labelKey: 'nav.serviceServer', descKey: 'nav.serviceServerDesc' }
             ]
@@ -211,6 +220,7 @@ window.BIZDAVAR_CONFIG = {
     footer: [
       { route: 'services', page: 'services', labelKey: 'nav.servicesAll' },
       { route: 'fast', page: 'fast', labelKey: 'nav.webDesign' },
+      { route: 'customWebApp', page: 'custom-web-app', labelKey: 'nav.customWebApp' },
       { route: 'contact', page: 'contact', labelKey: 'nav.servicesConsult' }
     ]
   },
@@ -229,7 +239,7 @@ window.BIZDAVAR_CONFIG = {
     aboutImage: 'assets/images/content/about-hero.svg'
   },
 
-  /** Formspree — set formId from formspree.io and enabled: true to use server submit */
+  /** Formspree — پولی/محدود؛ خاموش. لید رایگان = واتساپ + ایمیل */
   formspree: {
     formId: '',
     enabled: false
@@ -239,6 +249,12 @@ window.BIZDAVAR_CONFIG = {
   bizhub: {
     enabled: false,
     apiBase: '/api'
+  },
+
+  /** Lead capture — WhatsApp FAB + GTM events (no backend required) */
+  leadCapture: {
+    fabEnabled: true,
+    trackGtm: true
   },
 
   contact: {
@@ -261,7 +277,7 @@ window.BIZDAVAR_CONFIG = {
         whatsappMessage: 'سلام، برای خدمات فنی (دوربین مدار بسته / سیم‌کشی / نورمخفی) از وبسایت bizdavar.com پیام می‌دهم.'
       }
     ],
-    address: 'استانبول، ترکیه',
+    address: 'دفاتر: ایران · ترکیه · ارمنستان · دبی',
     workingHours: '۷/۲۴ — همیشه در دسترس',
     linkedin: 'https://www.linkedin.com/in/ersanjt',
     instagram: 'https://www.instagram.com/bizdavar'
@@ -331,12 +347,13 @@ window.BIZDAVAR_CONFIG = {
   },
 
   geo: {
-    headquarters: { city: 'استانبول', country: 'ترکیه', countryCode: 'TR' },
-    summaryFa: 'خدمات از استانبول به ایران، ترکیه و ۱۱ کشور — مشاوره فارسی، واتساپ و تحویل بین‌المللی.',
+    headquarters: { city: 'چنددفتری', country: 'ایران · ترکیه · ارمنستان · دبی', countryCode: 'INTL' },
+    summaryFa: 'خدمات در ایران، ترکیه و ۱۱ کشور — دفاتر در ایران، ترکیه، ارمنستان و دبی · مشاوره فارسی، واتساپ و تحویل بین‌المللی.',
     hubs: [
-      { city: 'استانبول', country: 'ترکیه', code: 'TR', role: 'دفتر اصلی · فین‌تک و عملیات بین‌المللی' },
-      { city: 'تبریز', country: 'ایران', code: 'IR', role: 'بازار ایران · پروژه‌های صنعتی و دیجیتال' },
-      { city: 'ایروان', country: 'ارمنستان', code: 'AM', role: 'ثبت شرکت · Bizdavar Group LLC' },
+      { city: 'تبریز', country: 'ایران', code: 'IR', role: 'دفتر ایران · پروژه‌های صنعتی و دیجیتال' },
+      { city: 'استانبول', country: 'ترکیه', code: 'TR', role: 'دفتر ترکیه · فین‌تک و عملیات بین‌المللی' },
+      { city: 'ایروان', country: 'ارمنستان', code: 'AM', role: 'دفتر ارمنستان · Bizdavar Group LLC' },
+      { city: 'دبی', country: 'امارات', code: 'AE', role: 'دفتر دبی · عملیات منطقه‌ای' },
     ],
     markets: ['ایران', 'ترکیه', 'امارات', 'آلمان', 'ارمنستان', 'عراق', 'گرجستان', 'لبنان', 'ایتالیا', 'انگلستان', 'آمریکا']
   },
@@ -344,7 +361,7 @@ window.BIZDAVAR_CONFIG = {
   seo: {
     defaultTitle: 'بیزدوار گروپ | خدمات دیجیتال، طراحی سایت و تامین تجهیزات صنعتی',
     defaultDescription: 'بیزدوار گروپ — آژانس دیجیتال با ۱۲+ سال تجربه و ۱۰۰+ پروژه در ۱۱ کشور. بازاریابی دیجیتال، طراحی وب، فین‌تک، SMM و تامین تجهیزات صنعتی VEGA و Prosense.',
-    keywords: 'بیزدوار, Bizdavar Group, BizTab, BizClean, ضدعفونی دست, بازاریابی دیجیتال, طراحی سایت, VEGA, Prosense, Fast Web Studio, آژانس دیجیتال استانبول',
+    keywords: 'بیزدوار, Bizdavar Group, BizTab, BizClean, ضدعفونی دست, بازاریابی دیجیتال, طراحی سایت, VEGA, Prosense, Fast Web Studio, آژانس دیجیتال بیزدوار',
     twitterCard: 'summary_large_image',
     author: 'Bizdavar Group',
     themeColor: '#1d1d1b'
@@ -363,8 +380,9 @@ window.BIZDAVAR_CONFIG = {
     netinode: {
       name: 'Netinode',
       url: 'https://netinode.net/',
-      taglineFa: 'دامنه، هاست، WordPress و SSL',
-      taglineEn: 'Domains, hosting, WordPress & SSL'
+      shopUrl: 'https://shop.netinode.net/',
+      taglineFa: 'دامنه، هاست، WordPress و SSL — اکوسیستم بیزدوار',
+      taglineEn: 'Domains, hosting, WordPress & SSL — Bizdavar ecosystem'
     }
   },
 
@@ -380,8 +398,8 @@ window.BIZDAVAR_CONFIG = {
   blogPosts: [
     {
       slug: 'pages/articles/vega-supply-iran.html',
-      title: 'تامین سنسور VEGA در ایران — از استانبول تا پروژه صنعتی',
-      excerpt: 'مسیر مشاوره فارسی، پیش‌فاکتور و لجستیک اصل VEGA برای پروژه‌های ایران.',
+      title: 'تامین سنسور VEGA برای پروژه‌های ایران — از مشاوره تا تحویل',
+      excerpt: 'مشاوره فارسی، پیش‌فاکتور شفاف و لجستیک بین‌المللی VEGA اصل برای پروژه‌های صنعتی.',
       category: 'تجهیزات صنعتی',
       date: '2026-07-29',
       relatedService: 'pages/vega.html'
@@ -421,10 +439,26 @@ window.BIZDAVAR_CONFIG = {
     {
       slug: 'pages/articles/fast-studio.html',
       title: 'راه‌اندازی سایت در ۵ روز — راهنمای کامل Fast Studio',
-      excerpt: 'معرفی پلن‌های Fast Web Studio برای استارتاپ‌ها.',
+      excerpt: 'پلن‌ها، مسیر ۵ روزه و تفاوت با پروژه اختصاصی.',
       category: 'طراحی وب',
-      date: '2025-05-15',
+      date: '2026-08-13',
       relatedService: 'pages/fast.html'
+    },
+    {
+      slug: 'pages/articles/website-speed-5-days.html',
+      title: 'چک‌لیست راه‌اندازی سایت در ۵ روز',
+      excerpt: 'لوگو، متن، دامنه و تصمیم‌های روزبه‌روز برای تحویل واقعی ۵ روزه.',
+      category: 'طراحی وب',
+      date: '2026-08-13',
+      relatedService: 'pages/fast.html'
+    },
+    {
+      slug: 'pages/articles/custom-web-app-development.html',
+      title: 'طراحی وب و اپلیکیشن اختصاصی — راهنمای انتخاب',
+      excerpt: 'چه زمانی Fast کافی است و چه زمانی به وب‌اپ یا اپ نیاز دارید.',
+      category: 'طراحی وب',
+      date: '2026-08-13',
+      relatedService: 'pages/custom-web-app.html'
     },
     {
       slug: 'pages/articles/industrial-sensors.html',
@@ -469,7 +503,7 @@ window.BIZDAVAR_CONFIG = {
 
   featuredPartners: [
     { name: 'ZedPay', url: 'https://zed-pay.com', logo: 'assets/images/partners/zedpay.png', role: 'ecosystem' },
-    { name: 'Netinode', url: 'https://netinode.net/', logo: 'assets/images/partners/netinohost.png', role: 'ecosystem' },
+    { name: 'Netinode', url: 'https://netinode.net/', logo: 'assets/images/partners/netinode.svg', role: 'ecosystem' },
     { name: 'BZ Diamond', url: 'pages/bz-diamond.html', logo: 'assets/images/partners/zeddiamond.png', role: 'case-study' },
     { name: 'Supplify Trade', url: 'pages/supplify-trade.html', logo: 'assets/images/partners/supplify-trade.svg', role: 'case-study' },
     { name: 'Kaya One AG', url: 'pages/kaya-one.html', logo: 'assets/images/partners/kaya-one.svg', role: 'case-study' },
@@ -477,7 +511,7 @@ window.BIZDAVAR_CONFIG = {
     { name: 'FXGuard Exchange', url: 'pages/fxguard-exchange.html', logo: 'assets/images/partners/fxguard-exchange.svg', role: 'case-study' },
     { name: 'Biztejarat', url: 'pages/biztejarat.html', logo: 'assets/images/partners/biztejarat.svg', role: 'case-study' },
     { name: 'Marvelous Holding', url: 'https://marvelousholding.com', logo: 'assets/images/partners/marvelous-holding.png', role: 'client' },
-    { name: 'Grafik Travel', url: 'http://grafiktravel.com/', logo: 'assets/images/partners/grafik-travel.png', role: 'client' },
+    { name: 'Grafik Travel', url: 'https://grafiktravel.com/', logo: 'assets/images/partners/grafik-travel.png', role: 'client' },
     { name: 'پتروشیمی تبریز', url: 'https://tpco.ir', logo: 'assets/images/partners/petrotabriz.png', role: 'client' },
     { name: 'Karen Leather', url: 'https://karenleather.com', logo: 'assets/images/partners/karen-leather.png', role: 'client' },
     { name: 'NIK Aesthetic', url: 'https://nikaesthetic.com', logo: 'assets/images/partners/nikaesthetic.png', role: 'client' },
@@ -496,6 +530,18 @@ window.BIZDAVAR_CONFIG = {
       accent: 'vega',
       tags: ['VEGAPULS', 'VEGABAR', 'VEGAPOINT'],
       cta: 'مشاهده کاتالوگ'
+    },
+    {
+      name: 'UWT',
+      title: 'سنسور سطح سیلو',
+      desc: 'Rotonivo، Vibranivo، NivoRadar و NivoGuide — سوئیچ و رادار سطح برای جامدات فله و مایعات',
+      logo: 'assets/images/partners/uwt.svg',
+      url: 'pages/uwt',
+      internal: true,
+      badge: 'آلمان',
+      accent: 'navy',
+      tags: ['Rotonivo', 'NivoRadar', 'Vibranivo'],
+      cta: 'کاتالوگ UWT'
     },
     {
       name: 'Prosense',
@@ -593,7 +639,7 @@ window.BIZDAVAR_CONFIG = {
     { name: 'Bridged3', domain: 'bridged3.com', category: 'مارکت‌پلیس B2B / فروشگاه', role: 'case-study', internal: false, archived: true, logo: 'assets/images/partners/bridged3.png', note: 'نمونه‌کار ناتمام — هدف پروژه ایجاد فروشگاه B2B و مارکت‌پلیس عمده‌فروشی (مدل علی‌بابا) بود' },
     { name: 'iBan2iBan', domain: 'iban2iban.com', category: 'زیرساخت ایمیل / SMTP', role: 'case-study', internal: false, logo: 'assets/images/partners/iban2iban.png', note: 'نمونه‌کار — راه‌اندازی سیستم مدیریت SMTP' },
     { name: 'Bear Event', domain: 'bearevent.co', category: 'رویداد و بلیت', role: 'ecosystem', internal: false, logo: 'assets/images/partners/bear-event.png' },
-    { name: 'Netinode', domain: 'netinode.net', url: 'https://netinode.net/', category: 'دامنه، هاست و سرور', role: 'case-study', internal: false, logo: 'assets/images/partners/netinohost.png', note: 'نمونه‌کار و سرویس زیرساخت بیزدوار — فروش دامنه، هاست، WordPress Hosting، ایمیل تجاری، DNS و سرور' },
+    { name: 'Netinode', domain: 'netinode.net', url: 'https://shop.netinode.net/', category: 'دامنه، هاست و سرور', role: 'case-study', internal: false, logo: 'assets/images/partners/netinode.svg', note: 'زیرساخت خود بیزدوار — فروش دامنه و هاست در shop.netinode.net · معرفی سرویس‌ها در netinode.net' },
     { name: 'Fast Web Studio', domain: 'bizdavar.com', category: 'طراحی سایت', role: 'case-study', internal: true, slug: 'pages/fast.html', logo: 'assets/images/partners/fast-studio.png', note: 'محصول اختصاصی بیزدوار — طراحی سایت ۵ روزه' },
     { name: 'BizTab', domain: 'nasrnews.ir', url: 'https://nasrnews.ir/print/16727/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D9%88-%D8%B3%D8%A7%D8%AE%D8%AA-%D8%A7%D9%88%D9%84%DB%8C%D9%86-%D8%AF%D9%85%D8%A7%D8%B3%D9%86%D8%AC-%D8%AF%DB%8C%D9%88%D8%A7%D8%B1%DB%8C-%D8%BA%DB%8C%D8%B1%D8%AA%D9%85%D8%A7%D8%B3%DB%8C-%D8%AF%D8%B1-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2', category: 'محصول اختصاصی / IoT و سلامت', role: 'case-study', internal: true, slug: 'pages/biztab.html', logo: 'assets/images/products/biztab/biztab-hero.jpg', note: 'محصول اختصاصی — اولین دماسنج دیواری غیرتماسی تبریز، توسعه تیم بیزدوار' },
     { name: 'BizClean V5', domain: 'digikala.com', url: 'https://www.digikala.com/product/dkp-3730222/', category: 'محصول اختصاصی / بهداشت', role: 'case-study', internal: true, slug: 'pages/bizsanitizer-v5.html', logo: 'assets/images/products/bizsanitizer/bizclean-v5.png', note: 'محصول اختصاصی — دستگاه ضدعفونی دست V5، توسعه در دوران کرونا' },
@@ -604,7 +650,7 @@ window.BIZDAVAR_CONFIG = {
     { name: 'Marvispace', domain: 'marvispace.com', url: 'https://marvispace.com', category: 'طراحی وب / فروشگاه اختصاصی', role: 'case-study', internal: false, logo: 'assets/images/partners/marvispace.svg', note: 'نمونه‌کار — فروشگاه آنلاین اختصاصی با داشبورد ادمین، مدیریت محصول و محتوا' },
     { name: 'Marvi Society', domain: 'marvisociety.com', url: 'https://marvisociety.com', appStoreUrl: 'https://apps.apple.com/us/app/marvi-society/id6783450762', category: 'توسعه اپ موبایل / lifestyle و creator', role: 'case-study', internal: false, logo: 'assets/images/partners/marvi-society.svg', note: 'نمونه‌کار — طراحی، برنامه‌نویسی و راه‌اندازی صفر تا صد اپ iOS؛ کلاب دعوت‌محور همکاری creator و مکان تأییدشده در استانبول — کشف مکان، check-in، ارسال مدرک بازدید، پروفایل TR/EN؛ منتشر در App Store' },
     { name: 'GooPay AI', domain: 'goopay.ai', category: 'هوش مصنوعی / نرم‌افزار اختصاصی', role: 'case-study', internal: false, logo: 'assets/images/partners/goopay-ai.svg', note: 'نمونه‌کار — طراحی و برنامه‌نویسی اختصاصی سیستم‌های هوش مصنوعی' },
-    { name: 'Grafik Travel', domain: 'grafiktravel.com', url: 'http://grafiktravel.com/', category: 'طراحی وب / گردشگری و MICE', role: 'case-study', internal: false, logo: 'assets/images/partners/grafik-travel.png', note: 'نمونه‌کار — طراحی وبسایت تخصصی برای مجموعه گردشگری و خدمات سازمانی' },
+    { name: 'Grafik Travel', domain: 'grafiktravel.com', url: 'https://grafiktravel.com/', category: 'طراحی وب / گردشگری و MICE', role: 'case-study', internal: false, logo: 'assets/images/partners/grafik-travel.png', note: 'نمونه‌کار — طراحی وبسایت تخصصی برای مجموعه گردشگری و خدمات سازمانی' },
     { name: 'Biztejarat', domain: 'instagram.com/biztejarat', category: 'مدیریت SMM / اینستاگرام', role: 'case-study', internal: true, slug: 'pages/biztejarat.html', archived: true, logo: 'assets/images/partners/biztejarat.svg', note: 'پروژه گذشته — این کسب‌وکار فعلاً غیرفعال شده است' },
     { name: 'Arian Pumps', domain: 'arianpumps.com', category: 'طراحی وب / B2B', role: 'case-study', internal: false, logo: 'assets/images/partners/arian-pumps.png', note: 'نمونه‌کار — طراحی وب و خدمات دیجیتال' },
     { name: 'Marvelous Holding', domain: 'marvelousholding.com', url: 'https://marvelousholding.com', category: 'طراحی وب / هلدینگ و سرمایه‌گذاری', role: 'case-study', internal: false, logo: 'assets/images/partners/marvelous-holding.png', note: 'نمونه‌کار — وبسایت هلدینگ، سرمایه‌گذاری و معرفی زیرمجموعه‌ها' },
@@ -623,7 +669,7 @@ window.BIZDAVAR_CONFIG = {
     { name: 'Havana', domain: 'havana.com', category: 'مشاوره تبلیغات / پشتیبانی وب', role: 'case-study', internal: false, logo: 'assets/images/partners/havana.png', note: 'نمونه‌کار — مشاوره تبلیغاتی، پشتیبانی وب، امنیت شبکه و تولید محتوا' },
     { name: 'Sanat Moharek', domain: 'sanatm.com', category: 'طراحی وب / بازاریابی صنعتی', role: 'case-study', internal: false, logo: 'assets/images/partners/sanat-moharek.png', note: 'نمونه‌کار — طراحی وب، بازاریابی، مدیریت شبکه‌های اجتماعی و مشاوره تبلیغاتی' },
     { name: 'هتل شایان تبریز', domain: 'hotel-shayan.com', url: 'https://hotel-shayan.com', category: 'طراحی وب / هتلداری و گردشگری', role: 'case-study', internal: false, logo: 'assets/images/partners/hotel-shayan.png', note: 'نمونه‌کار — وبسایت هتل ۴ ستاره تبریز؛ رزرو، معرفی اتاق‌ها و خدمات اقامتی' },
-    { name: 'Ajansin', domain: 'ajansin.com', url: 'https://ajansin.com', category: 'طراحی وب / آژانس دیجیتال', role: 'case-study', internal: false, logo: 'assets/images/partners/ajansin.svg', note: 'نمونه‌کار — وبسایت آژانس دیجیتال استانبول با Next.js و React؛ طراحی وب، UI/UX، فروشگاه آنلاین و سئو' },
+    { name: 'Ajansin', domain: 'ajansin.com', url: 'https://ajansin.com', category: 'طراحی وب / آژانس دیجیتال', role: 'case-study', internal: false, logo: 'assets/images/partners/ajansin.svg', note: 'نمونه‌کار — وبسایت آژانس دیجیتال بیزدوار با Next.js و React؛ طراحی وب، UI/UX، فروشگاه آنلاین و سئو' },
     { name: 'Bizdavar Group', domain: 'bizdavar.com', url: 'https://bizdavar.com', category: 'طراحی وب / آژانس دیجیتال', role: 'case-study', internal: false, logo: 'assets/images/brand/bizdavar-logo.png', note: 'وبسایت شرکتی چندزبانه (fa/tr/en) — خدمات دیجیتال، تامین صنعتی، محصولات، نمونه‌کارها و Fast Studio' },
     { name: 'Ersan Jahed Tabrizi', domain: 'ersanjahedtabrizi.ir', url: 'https://ersanjahedtabrizi.ir', category: 'طراحی وب / رزومه و معرفی شخصی', role: 'case-study', internal: false, logo: 'assets/images/partners/ersan-jahed-tabrizi.svg', note: 'نمونه‌کار — رزومه و معرفی شخصی بنیان‌گذار؛ timeline حرفه‌ای، مهارت‌ها، نمونه لوگو و دانلود CV' },
     { name: 'Europe Gayrimenkul', domain: 'europegayrimenkul.com', url: 'https://europegayrimenkul.com', category: 'طراحی وب / املاک و سرمایه‌گذاری', role: 'case-study', internal: false, logo: 'assets/images/partners/europe-gayrimenkul.svg', note: 'نمونه‌کار — املاک استانبول؛ فروش، اجاره روزانه/ماهانه، اقامت (oturum)، سند tapu و مشاوره چندزبانه (TR/EN/AR/FA)' },

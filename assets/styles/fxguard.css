@@ -510,3 +510,335 @@ body[data-page="fxguard"] .features-grid .feature-item.reveal {
     flex-direction: row;
   }
 }
+
+/* Suite (CRM live + Accounting soon) */
+.fxguard-suite__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 800px) {
+  .fxguard-suite__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+}
+
+.fxguard-suite-card {
+  padding: clamp(22px, 3vw, 32px);
+  border-radius: var(--radius-lg, 16px);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 100%;
+}
+
+.fxguard-suite-card--live {
+  border-color: rgba(22, 163, 74, 0.35);
+  background: linear-gradient(160deg, #ffffff 0%, #f0fdf4 100%);
+  box-shadow: 0 12px 32px rgba(22, 163, 74, 0.08);
+}
+
+.fxguard-suite-card--soon {
+  background: linear-gradient(160deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.fxguard-suite-card__badge {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.fxguard-suite-card--live .fxguard-suite-card__badge {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.fxguard-suite-card h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #0f172a;
+}
+
+.fxguard-suite-card p {
+  margin: 0;
+  color: var(--text-muted, #64748b);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.fxguard-suite-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* Solution banner after problems */
+.fxguard-solve {
+  margin-top: clamp(28px, 4vw, 40px);
+}
+
+.fxguard-solve__inner {
+  padding: clamp(24px, 4vw, 36px);
+  border-radius: var(--radius-lg, 16px);
+  background: linear-gradient(120deg, #0f172a 0%, #14532d 55%, #166534 100%);
+  color: #f8fafc;
+  display: grid;
+  gap: 12px;
+  align-items: start;
+}
+
+@media (min-width: 720px) {
+  .fxguard-solve__inner {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    column-gap: 24px;
+  }
+
+  .fxguard-solve__inner .btn {
+    grid-row: 1 / span 2;
+    grid-column: 2;
+    align-self: center;
+  }
+}
+
+.fxguard-solve__inner h3 {
+  margin: 0;
+  font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+  color: #fff;
+}
+
+.fxguard-solve__inner p {
+  margin: 0;
+  color: rgba(248, 250, 252, 0.88);
+  line-height: 1.6;
+  max-width: 52ch;
+}
+
+/* Why buy */
+.fxguard-why {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 700px) {
+  .fxguard-why {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1100px) {
+  .fxguard-why {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.fxguard-why-card {
+  padding: 22px 20px;
+  border-radius: var(--radius-lg, 16px);
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.fxguard-why-card__num {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #16a34a;
+  margin-bottom: 10px;
+}
+
+.fxguard-why-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  color: #0f172a;
+}
+
+.fxguard-why-card p {
+  margin: 0;
+  color: var(--text-muted, #64748b);
+  line-height: 1.55;
+  font-size: 0.95rem;
+}
+
+/* Live demo panel */
+.fxguard-demo {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .fxguard-demo {
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 32px;
+  }
+}
+
+.fxguard-demo__panel {
+  padding: clamp(24px, 3.5vw, 36px);
+  border-radius: var(--radius-lg, 16px);
+  background: linear-gradient(160deg, #052e16 0%, #14532d 50%, #166534 100%);
+  color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
+}
+
+.fxguard-demo__live {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.25);
+  color: #bbf7d0;
+  border: 1px solid rgba(134, 239, 172, 0.35);
+}
+
+.fxguard-demo__creds {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.fxguard-demo__label {
+  display: block;
+  font-size: 0.75rem;
+  color: rgba(248, 250, 252, 0.7);
+  margin-bottom: 4px;
+}
+
+.fxguard-demo__creds code {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(15, 23, 42, 0.45);
+  border: 1px solid rgba(248, 250, 252, 0.12);
+  font-size: 1rem;
+  color: #fff;
+}
+
+.fxguard-demo__note {
+  margin: 0;
+  font-size: 0.9rem;
+  color: rgba(248, 250, 252, 0.82);
+  line-height: 1.5;
+}
+
+.fxguard-demo__shots {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.fxguard-demo__shots li {
+  padding: 16px 18px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fxguard-demo__shots strong {
+  color: #0f172a;
+  font-size: 0.98rem;
+}
+
+.fxguard-demo__shots span {
+  color: var(--text-muted, #64748b);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Product updates / changelog */
+.fxguard-updates {
+  display: grid;
+  gap: 16px;
+}
+
+.fxguard-update {
+  padding: clamp(18px, 2.5vw, 24px);
+  border-radius: var(--radius-lg, 16px);
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.fxguard-update__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 0.8rem;
+  color: var(--text-muted, #64748b);
+}
+
+.fxguard-update__meta span {
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #ecfdf5;
+  color: #166534;
+  font-weight: 600;
+}
+
+.fxguard-update h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+.fxguard-update p {
+  margin: 0 0 10px;
+  color: var(--text-muted, #64748b);
+  line-height: 1.55;
+}
+
+.fxguard-update ul {
+  margin: 0;
+  padding-inline-start: 1.15rem;
+  color: #334155;
+  line-height: 1.55;
+}
+
+.fxguard-update li + li {
+  margin-top: 4px;
+}
+
+/* Accounting coming-soon badge */
+.fxguard-badge-soon {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fcd34d;
+}
+
+body[data-page="fxguard-accounting"] .fxguard-hero {
+  background: linear-gradient(135deg, #fffbeb 0%, #f0fdf4 45%, #e0e7ff 100%);
+}

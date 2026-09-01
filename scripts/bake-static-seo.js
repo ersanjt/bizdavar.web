@@ -14,6 +14,7 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 
 global.window = global;
+require(path.join(ROOT, 'assets/scripts/config/site-config.js'));
 require(path.join(ROOT, 'assets/scripts/i18n/seo-head.js'));
 
 const HEAD = global.BIZDAVAR_SEO_HEAD || {};
@@ -24,6 +25,21 @@ const DEFAULT_OG = SITE.defaultOgImage || `${BASE}/assets/images/content/about-h
 /** Prefer raster OG images — WhatsApp often skips SVG. */
 const RASTER_OG = `${BASE}/assets/images/brand/bizdavar-logo-square.png`;
 const HAS_RASTER = fs.existsSync(path.join(ROOT, 'assets/images/brand/bizdavar-logo-square.png'));
+
+const SCHEMA_LANG = { fa: 'fa-IR', tr: 'tr-TR', en: 'en-US', ru: 'ru-RU', ar: 'ar-AE' };
+
+const ARTICLE_DATES = {
+  '/pages/articles/vega-supply-iran': '2026-07-29',
+  '/pages/articles/multilingual-web-iran-turkey': '2026-07-29',
+  '/pages/articles/what-is-digital-marketing': '2025-02-10',
+  '/pages/articles/digital-marketing': '2025-04-01',
+  '/pages/articles/social-media-management': '2025-03-05',
+  '/pages/articles/fast-studio': '2026-08-13',
+  '/pages/articles/industrial-sensors': '2025-03-20',
+  '/pages/articles/about-bizdavar-group': '2025-06-01',
+  '/pages/articles/website-speed-5-days': '2026-08-13',
+  '/pages/articles/custom-web-app-development': '2026-08-13'
+};
 
 const LOCALES = [
   { code: 'fa', prefix: '', ogLocale: 'fa_IR', htmlLang: 'fa', dir: 'rtl' },
@@ -41,6 +57,7 @@ const FILE_TO_ROUTE = {
   'pages/portfolio.html': '/pages/portfolio',
   'pages/blog.html': '/pages/blog',
   'pages/fast.html': '/pages/fast',
+  'pages/custom-web-app.html': '/pages/custom-web-app',
   'pages/field-tech.html': '/pages/field-tech',
   'pages/privacy.html': '/pages/privacy',
   'pages/contact.html': '/pages/contact',
@@ -58,6 +75,8 @@ const FILE_TO_ROUTE = {
   'pages/fxguard-exchange.html': '/pages/fxguard-exchange',
   'pages/biztejarat.html': '/pages/biztejarat',
   'pages/biztab.html': '/pages/biztab',
+  'pages/bizpet.html': '/pages/bizpet',
+  'pages/uwt.html': '/pages/uwt',
   'pages/bizsanitizer-v5.html': '/pages/bizsanitizer-v5',
   'pages/fxguard.html': '/pages/fxguard',
   'pages/fxguard-accounting.html': '/pages/fxguard-accounting',
@@ -66,6 +85,8 @@ const FILE_TO_ROUTE = {
   'pages/articles/what-is-digital-marketing.html': '/pages/articles/what-is-digital-marketing',
   'pages/articles/social-media-management.html': '/pages/articles/social-media-management',
   'pages/articles/fast-studio.html': '/pages/articles/fast-studio',
+  'pages/articles/website-speed-5-days.html': '/pages/articles/website-speed-5-days',
+  'pages/articles/custom-web-app-development.html': '/pages/articles/custom-web-app-development',
   'pages/articles/industrial-sensors.html': '/pages/articles/industrial-sensors',
   'pages/articles/about-bizdavar-group.html': '/pages/articles/about-bizdavar-group',
   'pages/articles/vega-supply-iran.html': '/pages/articles/vega-supply-iran',
@@ -132,11 +153,11 @@ function absoluteUrl(locale, route) {
 
 function hreflangLinks(route) {
   const tags = [
-    ['fa', LOCALES[0]],
-    ['tr', LOCALES[1]],
-    ['en', LOCALES[2]],
-    ['ru', LOCALES[3]],
-    ['ar', LOCALES[4]],
+    ['fa-IR', LOCALES[0]],
+    ['tr-TR', LOCALES[1]],
+    ['en-US', LOCALES[2]],
+    ['ru-RU', LOCALES[3]],
+    ['ar-AE', LOCALES[4]],
     ['x-default', LOCALES[0]]
   ];
   return tags
@@ -144,15 +165,92 @@ function hreflangLinks(route) {
     .join('\n');
 }
 
+function resolveOgImage(ogImage) {
+  let image = ogImage || DEFAULT_OG;
+  if (HAS_RASTER && /\.svg(\?|$)/i.test(image)) {
+    image = RASTER_OG;
+  }
+  return image;
+}
+
+function buildHomeSiteGraph() {
+  const C = global.BIZDAVAR_CONFIG || {};
+  const contact = C.contact || {};
+  const orgId = `${BASE}/#organization`;
+  const webId = `${BASE}/#website`;
+  const logo = RASTER_OG;
+  const sameAs = [contact.linkedin, contact.instagram].filter(Boolean);
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': ['Organization', 'ProfessionalService'],
+        '@id': orgId,
+        name: C.siteNameEn || 'Bizdavar Group',
+        alternateName: [C.siteName || 'بیزدوار گروپ', 'Bizdavar'],
+        url: `${BASE}/`,
+        logo: { '@type': 'ImageObject', url: logo },
+        image: logo,
+        email: contact.email,
+        telephone: contact.phone,
+        foundingDate: '2013',
+        areaServed: ['TR', 'AM', 'IR', 'AE', 'DE', 'US', 'GB'],
+        sameAs
+      },
+      {
+        '@type': 'WebSite',
+        '@id': webId,
+        url: `${BASE}/`,
+        name: C.siteNameEn || 'Bizdavar Group',
+        inLanguage: ['fa-IR', 'tr-TR', 'en-US', 'ru-RU', 'ar-AE'],
+        publisher: { '@id': orgId }
+      }
+    ]
+  };
+}
+
+function buildArticleJsonLd(route, meta, locale) {
+  const url = absoluteUrl(locale, route);
+  const ogImage = resolveOgImage(meta.ogImage);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    '@id': `${url}#article`,
+    url,
+    headline: meta.title,
+    description: meta.description,
+    datePublished: ARTICLE_DATES[route],
+    inLanguage: SCHEMA_LANG[locale.code] || 'fa-IR',
+    author: { '@type': 'Organization', name: 'Bizdavar Group' },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Bizdavar Group',
+      logo: { '@type': 'ImageObject', url: RASTER_OG }
+    },
+    mainEntityOfPage: url,
+    image: ogImage,
+    isPartOf: { '@id': `${BASE}/#website` }
+  };
+}
+
+function upsertJsonLdScript(html, id, data) {
+  const json = JSON.stringify(data);
+  const re = new RegExp(`<script[^>]+id=["']${id}["'][^>]*>[\\s\\S]*?<\\/script>`, 'i');
+  const tag = `<script type="application/ld+json" id="${id}">${json}</script>`;
+  if (re.test(html)) return html.replace(re, tag);
+  return html.replace(/<\/head>/i, `  ${tag}\n</head>`);
+}
+
 function buildBlock(route, meta, locale) {
   const title = meta.title || '';
   const desc = meta.description || '';
-  let ogImage = meta.ogImage || DEFAULT_OG;
-  if (HAS_RASTER && /\.svg(\?|$)/i.test(ogImage)) {
-    ogImage = RASTER_OG;
-  }
+  const ogImage = resolveOgImage(meta.ogImage);
   const url = absoluteUrl(locale, route);
   const type = meta.type || 'website';
+  const articleDate = ARTICLE_DATES[route];
+  const articleMeta = (type === 'article' && articleDate)
+    ? `  <meta property="article:published_time" content="${articleDate}">\n  <meta property="article:author" content="Bizdavar Group">\n`
+    : '';
   const alternates = LOCALES
     .filter((l) => l.code !== locale.code)
     .map((l) => `  <meta property="og:locale:alternate" content="${l.ogLocale}">`)
@@ -168,7 +266,7 @@ function buildBlock(route, meta, locale) {
   <meta property="og:locale" content="${locale.ogLocale}">
 ${alternates}
   <meta property="og:site_name" content="${escAttr(SITE.siteName || 'Bizdavar Group')}">
-  <meta name="twitter:card" content="${escAttr(SITE.twitterCard || 'summary_large_image')}">
+${articleMeta}  <meta name="twitter:card" content="${escAttr(SITE.twitterCard || 'summary_large_image')}">
   <meta name="twitter:title" content="${escAttr(title)}">
   <meta name="twitter:description" content="${escAttr(desc)}">
   <meta name="twitter:image" content="${escAttr(ogImage)}">
@@ -185,6 +283,12 @@ function applySeo(html, route, meta, locale) {
   out = setHtmlLangDir(out, locale.htmlLang, locale.dir);
   out = upsertTitle(out, meta.title);
   out = upsertDescription(out, meta.description);
+  if (route === '/') {
+    out = upsertJsonLdScript(out, 'jsonld-graph-static', buildHomeSiteGraph());
+  }
+  if (route.indexOf('/articles/') >= 0) {
+    out = upsertJsonLdScript(out, 'jsonld-article-static', buildArticleJsonLd(route, meta, locale));
+  }
   const block = buildBlock(route, meta, locale);
   if (/<\/head>/i.test(out)) {
     out = out.replace(/<\/head>/i, `${block}</head>`);

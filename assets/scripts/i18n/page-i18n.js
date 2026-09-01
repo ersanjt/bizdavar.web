@@ -92,7 +92,9 @@
     if (!slug) return;
     const art = raw(`articles.${slug}`);
     if (!art || typeof art !== 'object') return;
-    const header = document.querySelector('.article__header');
+    const lang = window.BIZDAVAR_I18N ? window.BIZDAVAR_I18N.locale : 'fa';
+    const articleEl = document.querySelector('.prose.article, .article.prose');
+    const header = articleEl ? articleEl.querySelector('.article__header') : document.querySelector('.article__header');
     if (header) {
       const cat = header.querySelector('.blog-item__cat');
       const h1 = header.querySelector('h1');
@@ -100,6 +102,30 @@
       if (cat && art.category) cat.textContent = art.category;
       if (h1 && art.title) h1.textContent = art.title;
       if (meta && art.dateDisplay) meta.innerHTML = art.dateDisplay;
+    }
+    const bodies = window.BIZDAVAR_ARTICLE_BODIES;
+    const bodyHtml = bodies && bodies[lang] && bodies[lang][slug];
+    if (bodyHtml && articleEl) {
+      const ctaBlock = articleEl.querySelector('.article__cta');
+      if (header && ctaBlock) {
+        let node = header.nextSibling;
+        while (node && node !== ctaBlock) {
+          const next = node.nextSibling;
+          articleEl.removeChild(node);
+          node = next;
+        }
+        const wrap = document.createElement('div');
+        wrap.innerHTML = bodyHtml;
+        while (wrap.firstChild) {
+          ctaBlock.parentNode.insertBefore(wrap.firstChild, ctaBlock);
+        }
+      } else if (ctaBlock) {
+        const wrap = document.createElement('div');
+        wrap.innerHTML = bodyHtml;
+        while (wrap.firstChild) {
+          ctaBlock.parentNode.insertBefore(wrap.firstChild, ctaBlock);
+        }
+      }
     }
     const ctaBlock = document.querySelector('.article__cta');
     if (ctaBlock && art.cta) {
@@ -136,6 +162,9 @@
       if (typeof window.initPortfolioPage === 'function') window.initPortfolioPage();
       if (typeof window.renderPortfolioRelatedLinks === 'function') window.renderPortfolioRelatedLinks();
     }
+    if (page === 'home' && typeof window.renderLeadPaths === 'function') {
+      window.renderLeadPaths('leadPaths');
+    }
     if (page === 'products' && typeof window.initOwnedProductsPage === 'function') {
       window.initOwnedProductsPage();
     }
@@ -151,13 +180,18 @@
       teltonika: 'initTeltonikaPage',
       prosense: 'initProsensePage',
       'liqui-moly': 'initLiquiMolyPage',
-      vega: 'initVegaPage'
+      vega: 'initVegaPage',
+      uwt: 'initUwtPage'
     };
     if (supplyInits[page] && typeof window[supplyInits[page]] === 'function') {
       window[supplyInits[page]]();
     }
     if (page === 'biztejarat') applyListById('biztejaratServices', 'caseStudy.biztejarat.about.services');
     if (page === 'biztab') applyListById('biztabSpecs', 'caseStudy.biztab.about.specs');
+    if (page === 'bizpet') {
+      applyListById('bizpetSpecs', 'caseStudy.bizpet.about.specs');
+      applyListById('bizpetPetSpecs', 'caseStudy.bizpet.pets.specs');
+    }
     if (page === 'bizsanitizer-v5') applyListById('bizsanitizerSpecs', 'caseStudy.bizsanitizerV5.about.specs');
     if (page === 'fxguard' && typeof window.initFxguardPage === 'function') window.initFxguardPage();
     if (page === 'bizswap' && typeof window.initBizswapPage === 'function') window.initBizswapPage();

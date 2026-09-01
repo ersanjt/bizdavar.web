@@ -3,14 +3,16 @@
  */
 (function () {
   const N = 'https://netinode.net/';
-  const ni = (label) => `<a href="${N}" target="_blank" rel="noopener noreferrer">${label}</a>`;
+  const SHOP = 'https://shop.netinode.net/';
+  const ni = (label, toShop) => `<a href="${toShop ? SHOP : N}" target="_blank" rel="noopener noreferrer">${label}</a>`;
+  const niPair = (shopLabel, siteLabel) => `${ni(shopLabel, true)} · ${ni(siteLabel || 'netinode.net', false)}`;
 
   const en = {
     brand: {
       eyebrow: 'Exclusive Bizdavar Group product',
       headline: 'Professional website design in 5 days',
-      subtitle: 'Go live this week — from startup to WooCommerce store',
-      description: 'Fast Web Studio delivers rapid RTL websites with Vazirmatn font, contact forms, WhatsApp integration and multilingual support — for businesses in Iran, Turkey and international markets.'
+      subtitle: 'Go live this week — fast, professional, specialized — from landing to store and web app',
+      description: 'Fast Web Studio delivers rapid RTL websites with Vazirmatn, contact forms, WhatsApp, basic SEO and multilingual support. When you need panels or apps, the same Bizdavar team continues on the custom track.'
     },
     trustSignals: [
       { label: '5-day delivery', desc: 'Transparent process with daily milestones' },
@@ -28,7 +30,7 @@
           'Professional contact form',
           'Direct WhatsApp button',
           'Instagram / LinkedIn links',
-          `SSL & starter hosting — ${ni('Buy domain & hosting (Netinode)')}`,
+          `SSL & starter hosting — ${niPair('Buy domain & hosting (Netinode Shop)', 'netinode.net')}`,
           'Video tutorial for site management'
         ]
       },
@@ -82,21 +84,53 @@
       { title: 'Backed by Bizdavar', desc: '12+ years and 100+ digital projects across 11 countries.' },
       { title: 'Training & support', desc: 'Site management videos and post-launch assistance.' }
     ],
+    faq: [
+      { q: 'Do you really deliver in 5 days?', a: 'Yes — for Basic and Store plans when content is ready. Pro plans with more pages may take 5–7 days. We confirm the exact timeline on WhatsApp before starting.' },
+      { q: 'Is hosting and domain included in the price?', a: `Design and setup are separate. Buy domain and hosting from ${ni('Netinode Shop', true)} (Bizdavar’s own stack) or browse services on ${ni('netinode.net')} — we can guide you.` },
+      { q: 'Can I expand the site later?', a: 'Yes. Start with Basic and upgrade to Store or Pro. Bizdavar continues on the same project — even to <a href="custom-web-app">custom web & apps</a>.' },
+      { q: 'How does payment work?', a: 'Usually 50% upfront and 50% before final delivery — bank transfer, card or international methods. Details are agreed on WhatsApp.' },
+      { q: 'Do you work with businesses outside Iran?', a: 'Yes — Fast Web Studio has launched sites in Iran, Turkey, UAE and Europe. Consulting in Persian, English and Turkish.' },
+      { q: 'How is Fast different from custom projects?', a: 'Fast is fixed-price rapid launch. Larger projects (apps, B2B portals, complex multilingual sites) go through <a href="custom-web-app">custom web & app</a> or <a href="services#web-design">web design services</a>.' },
+      { q: 'Do you build mobile apps?', a: 'Yes — apps, PWAs and custom panels are covered on the <a href="custom-web-app">custom web & app</a> page.' },
+      { q: 'Who provides content and photos?', a: 'You send copy and logo; we handle structure, design and build. If content is not ready, the 5-day clock starts when it is — see the <a href="articles/website-speed-5-days">5-day checklist</a>.' }
+    ],
+    speedHighlights: [
+      { title: 'Measurable speed', desc: 'Clear daily milestones — not “we will update you later”.' },
+      { title: 'Professional design', desc: 'Mobile-first, clean RTL, Vazirmatn typography and clear CTAs.' },
+      { title: 'Technical craft', desc: 'Forms, WhatsApp, basic SEO, analytics and management training.' },
+      { title: 'Continue the path', desc: 'From Fast to store, multilingual, panel or app — same team.' }
+    ],
+    scope: [
+      { title: 'Corporate site & landing', desc: 'Brand intro, services and lead form — Fast Basic from $99.', cta: 'View plans' },
+      { title: 'WooCommerce store', desc: 'Products, cart and gateway — Store and Pro plans.', cta: 'Store plan' },
+      { title: 'Web apps & applications', desc: 'Panels, PWAs, apps and custom systems beyond fixed plans.', cta: 'Web & app page' },
+      { title: 'Guides & blog', desc: '5-day checklist, plans and custom development path.', cta: 'Articles' }
+    ],
+    deliverables: [
+      { title: 'Real responsive', desc: 'Mobile, tablet and desktop with manual QA before delivery.' },
+      { title: 'WhatsApp & forms', desc: 'Direct contact button + professional lead form.' },
+      { title: 'Basic SEO', desc: 'Titles, meta, speed and index-ready structure.' },
+      { title: 'SSL & hosting', desc: 'Buy domain and hosting on Netinode Shop — Bizdavar’s own infrastructure.' },
+      { title: 'Management training', desc: 'Video/guide so you can update content yourself.' },
+      { title: 'Post-delivery support', desc: 'Clear support window based on the selected plan.' }
+    ],
+    guides: [
+      { title: 'Complete Fast Studio guide', desc: 'Plans $99–$299, 5-day delivery and custom vs Fast.' },
+      { title: '5-day website checklist', desc: 'What to prepare from day one for real speed.' },
+      { title: 'Custom web & apps', desc: 'When to leave Fast and start a custom project.' },
+      { title: 'Multilingual Iran–Turkey sites', desc: 'hreflang, local trust and fa / tr / en pattern.' }
+    ],
     showcases: [
       { category: 'Jewelry store' },
+      { category: 'International B2B trade' },
+      { category: 'Swiss B2B trade' },
+      { category: 'SMM panel' },
+      { category: 'Fintech / FX' },
       { category: 'Leather & fashion' },
       { category: 'Holding' },
       { category: 'Aesthetic clinic' },
       { category: 'Commercial brand' },
       { category: 'Industrial B2B' }
-    ],
-    faq: [
-      { q: 'Do you really deliver in 5 days?', a: 'Yes — for Basic and Store plans when content is ready. Pro plans with more pages may take 5–7 days. We confirm the exact timeline on WhatsApp before starting.' },
-      { q: 'Is hosting and domain included in the price?', a: `Design and setup are separate. You can buy domain and hosting yearly from ${ni('Netinode')} (domain search, web hosting, WordPress hosting and SSL) or we guide you through setup.` },
-      { q: 'Can I expand the site later?', a: 'Yes. Start with Basic and upgrade to Store or Pro. Bizdavar continues on the same project.' },
-      { q: 'How does payment work?', a: 'Usually 50% upfront and 50% before final delivery — bank transfer, card or international methods. Details are agreed on WhatsApp.' },
-      { q: 'Do you work with businesses outside Iran?', a: 'Yes — Fast Web Studio has launched sites in Iran, Turkey, UAE and Europe. Consulting in Persian, English and Turkish.' },
-      { q: 'How is Fast different from custom projects?', a: 'Fast is fixed-price rapid launch. Larger projects (apps, B2B portals, complex multilingual sites) go through our <a href="services#web-design">web design services</a>.' }
     ]
   };
 
@@ -104,8 +138,8 @@
     brand: {
       eyebrow: 'Bizdavar Group özel ürünü',
       headline: '5 günde profesyonel web sitesi',
-      subtitle: 'Bu hafta yayına geç — startup\'tan WooCommerce mağazasına',
-      description: 'Fast Web Studio; Vazirmatn font, iletişim formu, WhatsApp ve çok dilli destekle hızlı RTL web sitesi kurar — Türkiye, İran ve uluslararası pazarlar için.'
+      subtitle: 'Bu hafta yayına geç — hızlı, profesyonel, uzman — landing’den mağaza ve web app’e',
+      description: 'Fast Web Studio; Vazirmatn, iletişim formu, WhatsApp, temel SEO ve çok dilli destekle hızlı RTL site kurar. Panel veya uygulama gerektiğinde aynı Bizdavar ekibi özel yolda devam eder.'
     },
     trustSignals: [
       { label: '5 günde teslim', desc: 'Günlük planlı şeffaf süreç' },
@@ -123,7 +157,7 @@
           'Profesyonel iletişim formu',
           'Doğrudan WhatsApp düğmesi',
           'Instagram / LinkedIn bağlantıları',
-          `SSL ve başlangıç hosting — ${ni('Domain ve hosting satın al (Netinode)')}`,
+          `SSL ve başlangıç hosting — ${niPair('Domain ve hosting satın al (Netinode Shop)', 'netinode.net')}`,
           'Site yönetimi video eğitimi'
         ]
       },
@@ -177,21 +211,53 @@
       { title: 'Bizdavar güvencesi', desc: '11 ülkede 12+ yıl ve 100+ dijital proje.' },
       { title: 'Eğitim ve destek', desc: 'Site yönetimi videoları ve lansman sonrası yardım.' }
     ],
+    faq: [
+      { q: 'Gerçekten 5 günde teslim ediyor musunuz?', a: 'Evet — içerik hazırsa Temel ve Mağaza planları için. Pro planlar 5–7 gün sürebilir. Başlamadan önce WhatsApp\'ta net süre onaylanır.' },
+      { q: 'Hosting ve domain fiyata dahil mi?', a: `Tasarım ve kurulum ayrıdır. Domain ve hosting için ${ni('Netinode Shop', true)} (Bizdavar altyapısı) veya ${ni('netinode.net')} — rehberlik de ederiz.` },
+      { q: 'Siteyi sonra genişletebilir miyim?', a: 'Evet. Temel ile başlayıp Mağaza veya Pro\'ya yükseltebilirsiniz. Bizdavar aynı projeyi sürdürür — hatta <a href="custom-web-app">özel web & uygulama</a>ya.' },
+      { q: 'Ödeme nasıl yapılır?', a: 'Genelde %50 peşin, %50 teslimden önce — havale, kart veya uluslararası yöntemler. Detaylar WhatsApp\'ta netleşir.' },
+      { q: 'İran dışındaki işletmelerle çalışıyor musunuz?', a: 'Evet — Türkiye, İran, BAE ve Avrupa\'da siteler kuruldu. Türkçe, Farsça ve İngilizce danışmanlık.' },
+      { q: 'Fast ile özel proje arasındaki fark nedir?', a: 'Fast sabit fiyatlı hızlı lansman içindir. Büyük projeler <a href="custom-web-app">özel web & uygulama</a> veya <a href="services#web-design">web tasarım hizmetlerimiz</a> üzerinden yürür.' },
+      { q: 'Mobil uygulama da yapıyor musunuz?', a: 'Evet — uygulama, PWA ve özel paneller <a href="custom-web-app">özel web & uygulama</a> sayfasında.' },
+      { q: 'İçerik ve fotoğrafları kim verir?', a: 'Metin ve logoyu siz gönderirsiniz; yapı, tasarım ve geliştirmeyi biz yaparız. İçerik hazır değilse 5 günlük süre hazır olunca başlar — <a href="articles/website-speed-5-days">5 günlük checklist</a>.' }
+    ],
+    speedHighlights: [
+      { title: 'Ölçülebilir hız', desc: 'Net günlük kilometre taşları — “sonra haber veririz” değil.' },
+      { title: 'Profesyonel tasarım', desc: 'Mobil öncelikli, temiz RTL, Vazirmatn ve net CTA.' },
+      { title: 'Teknik uzmanlık', desc: 'Form, WhatsApp, temel SEO, analitik ve yönetim eğitimi.' },
+      { title: 'Yola devam', desc: 'Fast’ten mağaza, çok dil, panel veya uygulamaya — aynı ekip.' }
+    ],
+    scope: [
+      { title: 'Kurumsal site & landing', desc: 'Marka, hizmetler ve lead formu — Fast Temel $99’dan.', cta: 'Planları gör' },
+      { title: 'WooCommerce mağaza', desc: 'Ürün, sepet ve ödeme — Mağaza ve Pro.', cta: 'Mağaza planı' },
+      { title: 'Web app & uygulama', desc: 'Panel, PWA, uygulama ve sabit plan ötesi sistemler.', cta: 'Web & app' },
+      { title: 'Rehber & blog', desc: '5 günlük checklist, planlar ve özel geliştirme.', cta: 'Yazılar' }
+    ],
+    deliverables: [
+      { title: 'Gerçek responsive', desc: 'Mobil, tablet, masaüstü — teslim öncesi manuel test.' },
+      { title: 'WhatsApp & form', desc: 'Doğrudan iletişim + profesyonel lead formu.' },
+      { title: 'Temel SEO', desc: 'Başlık, meta, hız ve index’e hazır yapı.' },
+      { title: 'SSL & hosting', desc: 'Domain ve hosting’i Netinode Shop’tan alın — Bizdavar altyapısı.' },
+      { title: 'Yönetim eğitimi', desc: 'İçeriği kendiniz güncelleyin.' },
+      { title: 'Teslim sonrası destek', desc: 'Seçilen plana göre net destek süresi.' }
+    ],
+    guides: [
+      { title: 'Fast Studio tam rehber', desc: '$99–$299 planlar, 5 gün ve özel farkı.' },
+      { title: '5 günlük checklist', desc: 'Gerçek hız için ilk günden hazırlık.' },
+      { title: 'Özel web & uygulama', desc: 'Ne zaman Fast’ten çıkılır.' },
+      { title: 'İran–Türkiye çok dilli', desc: 'hreflang, yerel güven, fa / tr / en.' }
+    ],
     showcases: [
       { category: 'Mücevher mağazası' },
+      { category: 'Uluslararası B2B ticaret' },
+      { category: 'İsviçre B2B ticaret' },
+      { category: 'SMM paneli' },
+      { category: 'Fintech / döviz' },
       { category: 'Deri ve moda' },
       { category: 'Holding' },
       { category: 'Estetik klinik' },
       { category: 'Ticari marka' },
       { category: 'Endüstriyel B2B' }
-    ],
-    faq: [
-      { q: 'Gerçekten 5 günde teslim ediyor musunuz?', a: 'Evet — içerik hazırsa Temel ve Mağaza planları için. Pro planlar 5–7 gün sürebilir. Başlamadan önce WhatsApp\'ta net süre onaylanır.' },
-      { q: 'Hosting ve domain fiyata dahil mi?', a: `Tasarım ve kurulum ayrıdır. Domain ve yıllık hosting için ${ni('Netinode')} (domain arama, web hosting, WordPress hosting ve SSL) kullanabilir veya rehberlik alabilirsiniz.` },
-      { q: 'Siteyi sonra genişletebilir miyim?', a: 'Evet. Temel ile başlayıp Mağaza veya Pro\'ya yükseltebilirsiniz. Bizdavar aynı projeyi sürdürür.' },
-      { q: 'Ödeme nasıl yapılır?', a: 'Genelde %50 peşin, %50 teslimden önce — havale, kart veya uluslararası yöntemler. Detaylar WhatsApp\'ta netleşir.' },
-      { q: 'İran dışındaki işletmelerle çalışıyor musunuz?', a: 'Evet — Türkiye, İran, BAE ve Avrupa\'da siteler kuruldu. Türkçe, Farsça ve İngilizce danışmanlık.' },
-      { q: 'Fast ile özel proje arasındaki fark nedir?', a: 'Fast sabit fiyatlı hızlı lansman içindir. Büyük projeler (uygulama, B2B portal) <a href="services#web-design">web tasarım hizmetlerimiz</a> üzerinden yürür.' }
     ]
   };
 

@@ -225,7 +225,23 @@
 
   };
 
+  window.renderLeadPaths = function (containerId) {
+    const el = document.getElementById(containerId);
+    if (!el) return;
+    const paths = window.BIZDAVAR_I18N ? window.BIZDAVAR_I18N.raw('home.leadPaths') : null;
+    if (!Array.isArray(paths) || !paths.length) return;
 
+    el.innerHTML = paths.map(p => `
+      <article class="lead-path">
+        <div class="lead-path__icon" data-bd-icon="${p.icon || 'message'}" data-bd-size="24"></div>
+        <h3 class="lead-path__title">${p.title}</h3>
+        <p class="lead-path__desc">${p.desc}</p>
+        <a href="${p.url}" class="btn btn--primary lead-path__cta">${p.cta}</a>
+      </article>
+    `).join('');
+
+    if (typeof window.initDataIcons === 'function') window.initDataIcons(el);
+  };
 
   window.renderCredibilitySection = function (containerId) {
     const I = window.BIZDAVAR_INTEL;
@@ -388,7 +404,7 @@
           ${hubData.exhibitionsNote ? `<p class="presence-istanbul-hub__note presence-istanbul-hub__note--event">${hubData.exhibitionsNote}</p>` : ''}
         </article>`;
       };
-      const hubHtml = renderOfficeHub(hub, { badge: L.mainOffice || 'دفتر اصلی', waLabel: L.whatsappIstanbul || 'واتساپ استانبول' });
+      const hubHtml = renderOfficeHub(hub, { badge: L.mainOffice || 'دفتر', waLabel: L.whatsappIstanbul || 'واتساپ ترکیه' });
       const yerevanHtml = renderOfficeHub(yerevan, { badge: L.armenia || 'ارمنستان', modifier: 'presence-istanbul-hub--armenia' });
       const tabrizHtml = renderOfficeHub(tabriz, { badge: L.iran || 'ایران', waLabel: L.whatsappIran || 'واتساپ ایران', modifier: 'presence-istanbul-hub--iran' });
 

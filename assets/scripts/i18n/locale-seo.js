@@ -8,17 +8,17 @@
     fa: {
       home: {
         seoTitle: 'بیزدوار گروپ | طراحی سایت، بازاریابی دیجیتال و تامین صنعتی',
-        seoDescription: 'از استانبول: طراحی سایت با Fast Web Studio، بازاریابی دیجیتال و SMM، محصول FXGuard WhatsApp CRM، و تامین VEGA، Prosense و Liqui Moly. مشاوره رایگان.',
-        seoKeywords: 'بیزدوار, Bizdavar Group, طراحی سایت, بازاریابی دیجیتال, FXGuard, VEGA, Prosense, Liqui Moly, Fast Web Studio'
+        seoDescription: 'بیزدوار گروپ: مشاوره رایگان — طراحی سایت از $99 (Fast Studio)، بازاریابی دیجیتال، FXGuard CRM و تامین VEGA، UWT، Prosense و Liqui Moly. واتساپ و فرم تماس — ایران، ترکیه، ارمنستان و دبی.',
+        seoKeywords: 'بیزدوار, Bizdavar Group, طراحی سایت, بازاریابی دیجیتال, FXGuard, VEGA, UWT, Prosense, Liqui Moly, Fast Web Studio'
       },
       about: {
         seoTitle: 'درباره بیزدوار | خدمات دیجیتال و تامین صنعتی از ۲۰۱۳',
-        seoDescription: 'بیزدوار گروپ از ۲۰۱۳ در استانبول — طراحی وب، بازاریابی دیجیتال، محصولات FXGuard و تامین تجهیزات صنعتی VEGA، Prosense و Liqui Moly در ۱۱ کشور.',
-        seoKeywords: 'درباره بیزدوار, Bizdavar Group, آژانس دیجیتال استانبول, تامین صنعتی'
+        seoDescription: 'بیزدوار گروپ از ۲۰۱۳ — طراحی وب، بازاریابی دیجیتال، محصولات FXGuard و تامین تجهیزات صنعتی VEGA، Prosense و Liqui Moly در ۱۱ کشور. دفاتر: ایران، ترکیه، ارمنستان و دبی.',
+        seoKeywords: 'درباره بیزدوار, Bizdavar Group, آژانس دیجیتال بیزدوار, تامین صنعتی'
       },
       services: {
         seoTitle: 'خدمات بیزدوار | بازاریابی دیجیتال، طراحی وب، SMM و خدمات فنی',
-        seoDescription: 'خدمات بیزدوار در استانبول و تبریز: بازاریابی دیجیتال، طراحی وب و وب‌اپ، اپ اندروید/iOS، مدیریت سرور، SMM، CCTV، سیم‌کشی و نورمخفی — هماهنگی واتساپ تخصصی.',
+        seoDescription: 'خدمات بیزدوار از دفاتر ایران، ترکیه، ارمنستان و دبی: بازاریابی دیجیتال، طراحی وب و وب‌اپ، اپ اندروید/iOS، مدیریت سرور، SMM، CCTV، سیم‌کشی و نورمخفی — هماهنگی واتساپ تخصصی.',
         seoKeywords: 'خدمات بیزدوار, بازاریابی دیجیتال, طراحی وب, SMM, مدیریت سرور, CCTV استانبول, خدمات فنی تبریز'
       },
       fieldTech: {
@@ -28,7 +28,7 @@
       },
       products: {
         seoTitle: 'محصولات بیزدوار | FXGuard CRM، Fast Web Studio و تامین صنعتی',
-        seoDescription: 'محصولات بیزدوار: FXGuard WhatsApp CRM و Accounting، Fast Web Studio، BizSwap، به‌همراه تامین برندهای صنعتی VEGA، Prosense و Liqui Moly.',
+        seoDescription: 'محصولات بیزدوار: FXGuard WhatsApp CRM و Accounting، Fast Web Studio، BizSwap، به‌همراه تامین برندهای صنعتی VEGA، UWT، Prosense و Liqui Moly.',
         seoKeywords: 'محصولات بیزدوار, FXGuard, WhatsApp CRM, Fast Web Studio, VEGA, Prosense, Liqui Moly'
       },
       portfolio: {
@@ -43,8 +43,13 @@
       },
       fast: {
         seoTitle: 'Fast Web Studio | طراحی سایت حرفه‌ای در ۵ روز — بیزدوار',
-        seoDescription: 'Fast Web Studio بیزدوار — طراحی سایت در ۵ روز. پلن پایه $99، فروشگاهی $199، حرفه‌ای $299. RTL، واتساپ فارسی، WooCommerce و سئو پایه.',
+        seoDescription: 'Fast Web Studio بیزدوار — طراحی سایت حرفه‌ای در ۵ روز. از $99. مسیر روزانه، RTL، واتساپ، WooCommerce. وب و اپ اختصاصی هم در اکوسیستم بیزدوار.',
         seoKeywords: 'Fast Web Studio, طراحی سایت, طراحی سایت ارزان, WooCommerce, بیزدوار, bizdavar.com'
+      },
+      customWebApp: {
+        seoTitle: 'طراحی وب و اپلیکیشن اختصاصی | بیزدوار',
+        seoDescription: 'طراحی وب‌اپ، اپلیکیشن موبایل، پنل مدیریت و سامانه‌های سفارشی B2B — وقتی Fast کافی نیست. مشاوره رایگان، برآورد شفاف و اجرای فنی توسط تیم بیزدوار.',
+        seoKeywords: 'طراحی اپلیکیشن, وب اپ, برنامه نویسی اختصاصی, پنل مدیریت, بیزدوار'
       },
       privacy: {
         seoTitle: 'حریم خصوصی | بیزدوار گروپ',
@@ -53,13 +58,18 @@
       },
       contact: {
         seoTitle: 'تماس با بیزدوار | مشاوره رایگان خدمات و تامین صنعتی',
-        seoDescription: 'مشاوره رایگان بیزدوار: طراحی سایت، بازاریابی دیجیتال، FXGuard و تامین VEGA، Prosense و Liqui Moly. فرم تماس، واتساپ و ایمیل — استانبول.',
+        seoDescription: 'مشاوره رایگان بیزدوار: طراحی سایت، بازاریابی دیجیتال، FXGuard و تامین VEGA، Prosense و Liqui Moly. فرم تماس، واتساپ و ایمیل — دفاتر: ایران، ترکیه، ارمنستان و دبی.',
         seoKeywords: 'تماس بیزدوار, مشاوره رایگان, طراحی سایت, VEGA, Liqui Moly, FXGuard'
       },
       vega: {
         seoTitle: 'خرید سنسور VEGA | VEGAPULS 6X، VEGABAR 39، VEGAPOINT — بیزدوار',
         seoDescription: 'تامین اصل VEGA با قیمت شفاف: VEGAPULS 6X، VEGABAR 39، VEGAVIB S61، VEGAPOINT 11/21/31. مشاوره فنی فارسی، کد سفارش دقیق و لجستیک بین‌المللی — بیزدوار گروپ.',
         seoKeywords: 'خرید VEGA, VEGAPULS 6X, VEGABAR 39, VEGAVIB S61, VEGAPOINT 11, VEGAPOINT 21, VEGAPOINT 31, سنسور سطح, ترانسمیتر فشار, بیزدوار'
+      },
+      uwt: {
+        seoTitle: 'خرید سنسور سطح UWT در ایران | Rotonivo و NivoRadar — بیزدوار گروپ',
+        seoDescription: 'تامین اصل سنسور سطح UWT آلمان برای سیلو و مخزن در ایران. Rotonivo، Vibranivo، NivoRadar و NivoGuide — مشاوره فارسی، پیش‌فاکتور و لجستیک — بیزدوار گروپ.',
+        seoKeywords: 'خرید UWT ایران, Rotonivo, NivoRadar, Vibranivo, سنسور سطح سیلو, بیزدوار'
       },
       prosense: {
         seoTitle: 'خرید دتکتور Prosense | PQ, SafeVader, PPS+ — بیزدوار',
@@ -126,6 +136,11 @@
         seoDescription: 'BizTab — اولین دماسنج دیواری غیرتماسی تبریز. طراحی تیم بیزدوار، دقت کمتر از ۰.۳ درجه، تأیید دانشگاه تبریز.',
         seoKeywords: 'BizTab, دماسنج غیرتماسی, IoT, بیزدوار, تبریز, محصول اختصاصی'
       },
+      bizpet: {
+        seoTitle: 'BizPet | پد حرارتی بیز پت — محصول اصلی ۱۳۹۹ تبریز',
+        seoDescription: 'BizPet محصول اصلی پد حرارتی پدیده برای خانه، خودرو و جا خواب حیوانات. طراحی در مرکز رشد دانشگاه تبریز با ایمن سهند پدیده. ۵ تا ۱۲ ولت.',
+        seoKeywords: 'BizPet, بیز پت, پت بیز, پد حرارتی پدیده, مرکز رشد دانشگاه تبریز, بیزدوار'
+      },
       bizsanitizerV5: {
         seoTitle: 'BizClean V5 | دستگاه ضدعفونی دست بیزدوار — محصول مهندسی‌شده',
         seoDescription: 'BizClean V5 — دستگاه ضدعفونی دست اتوماتیک بیزدوار با سنسور التراسونیک. ساخته‌شده در دوران کرونا، نمایشگاه مرکز رشد دانشگاه تبریز. موجود در دیجی‌کالا.',
@@ -137,9 +152,9 @@
         seoKeywords: 'FXGuard, WhatsApp CRM, CRM واتساپ, اینباکس تیمی, بیزدوار, fxguard.io'
       },
       fxguardAccounting: {
-        seoTitle: 'FXGuard Accounting | سامانه حسابداری — بیزدوار',
-        seoDescription: 'FXGuard Accounting — سامانه حسابداری برای تیم‌های مالی، صرافی و SME. بخشی از سوئیت FXGuard، توسعه بیزدوار گروپ.',
-        seoKeywords: 'FXGuard Accounting, حسابداری, نرم‌افزار حسابداری, بیزدوار, fxguard.io'
+        seoTitle: 'FXGuard Accounting | به‌زودی — حسابداری سوئیت FXGuard — بیزدوار',
+        seoDescription: 'FXGuard Accounting به‌زودی — حسابداری برای تیم‌های صرافی و SME کنار WhatsApp CRM. لیست انتظار باز است. سوئیت FXGuard، توسعه بیزدوار.',
+        seoKeywords: 'FXGuard Accounting, حسابداری, لیست انتظار, بیزدوار, fxguard.io'
       },
       bizswap: {
         seoTitle: 'BizSwap | پیش‌فروش و سواپ توکن Web3 — محصول بیزدوار',
@@ -163,8 +178,18 @@
       },
       articleFastStudio: {
         seoTitle: 'راه‌اندازی سایت در ۵ روز — راهنمای Fast Studio | بیزدوار',
-        seoDescription: 'راهنمای کامل Fast Web Studio: پلن $99 تا $299، تحویل ۵ روزه، WooCommerce و سئو پایه.',
+        seoDescription: 'راهنمای کامل Fast Web Studio: پلن $99 تا $299، مسیر ۵ روزه، WooCommerce و تفاوت با پروژه اختصاصی.',
         seoKeywords: 'Fast Web Studio, طراحی سایت ۵ روز, WooCommerce, بیزدوار'
+      },
+      articleWebsiteSpeed5Days: {
+        seoTitle: 'چک‌لیست راه‌اندازی سایت در ۵ روز | بیزدوار',
+        seoDescription: 'چک‌لیست عملی برای آنلاین شدن در ۵ روز با Fast Web Studio: دامنه، محتوا، RTL، واتساپ، WooCommerce و تحویل. راهنمای گام‌به‌گام بیزدوار.',
+        seoKeywords: 'راه‌اندازی سایت, طراحی سایت سریع, Fast Studio, بیزدوار'
+      },
+      articleCustomWebApp: {
+        seoTitle: 'طراحی وب و اپلیکیشن اختصاصی — راهنمای انتخاب | بیزدوار',
+        seoDescription: 'چه زمانی Fast کافی است و چه زمانی به وب‌اپ، پنل یا اپ موبایل اختصاصی نیاز دارید؟ معیارهای انتخاب، بودجه و مسیر اجرا — راهنمای بیزدوار.',
+        seoKeywords: 'وب اپلیکیشن, اپ موبایل, پروژه اختصاصی, بیزدوار'
       },
       articleIndustrialSensors: {
         seoTitle: 'انتخاب سنسور صنعتی VEGA — راهنمای تامین | بیزدوار',
@@ -177,30 +202,30 @@
         seoKeywords: 'بیزدوار گروپ, Bizdavar Group, تاریخچه, ارسان جاهد تبریزی'
       },
       articleVegaSupplyIran: {
-        seoTitle: 'تامین سنسور VEGA در ایران از استانبول | بیزدوار',
-        seoDescription: 'چگونه سنسور VEGA اصل را برای پروژه‌های ایران تامین کنیم؟ مشاوره فارسی، پیش‌فاکتور و لجستیک از دفتر بیزدوار در استانبول.',
-        seoKeywords: 'خرید VEGA ایران, تامین سنسور VEGA, VEGAPULS, بیزدوار استانبول'
+        seoTitle: 'تامین سنسور VEGA برای پروژه‌های ایران | بیزدوار',
+        seoDescription: 'تامین اصل سنسور VEGA برای پروژه‌های ایران — مشاوره فارسی، پیش‌فاکتور شفاف و لجستیک بین‌المللی. دفاتر: ایران، ترکیه، ارمنستان و دبی.',
+        seoKeywords: 'خرید VEGA ایران, تامین سنسور VEGA, VEGAPULS, بیزدوار'
       },
       articleMultilingualWeb: {
         seoTitle: 'وبسایت چندزبانه برای ایران و ترکیه | بیزدوار',
         seoDescription: 'سایت فارسی–ترکی–انگلیسی با hreflang، اعتماد محلی و تحویل سریع — راهنمای بیزدوار برای کسب‌وکارهای دو بازاری.',
-        seoKeywords: 'طراحی سایت چندزبانه, طراحی سایت استانبول, hreflang, بیزدوار'
+        seoKeywords: 'طراحی سایت چندزبانه, hreflang, سایت فارسی ترکی, بیزدوار'
       }
     },
     tr: {
       home: {
         seoTitle: 'Bizdavar Group | Web tasarım, dijital pazarlama ve endüstriyel tedarik',
-        seoDescription: 'İstanbul merkezli Bizdavar: Fast Web Studio ile web tasarım, dijital pazarlama ve SMM, FXGuard WhatsApp CRM, VEGA, Prosense ve Liqui Moly tedariki. Ücretsiz danışmanlık.',
-        seoKeywords: 'Bizdavar, web tasarım İstanbul, dijital pazarlama, FXGuard, VEGA, Prosense, Liqui Moly, Fast Web Studio'
+        seoDescription: 'Bizdavar Group: ücretsiz danışmanlık — $99’dan web tasarım (Fast Studio), dijital pazarlama, FXGuard CRM, VEGA, UWT, Prosense ve Liqui Moly tedariki. WhatsApp ve form — İran, Türkiye, Ermenistan ve Dubai.',
+        seoKeywords: 'Bizdavar, web tasarım İstanbul, dijital pazarlama, FXGuard, VEGA, UWT, Prosense, Liqui Moly, Fast Web Studio'
       },
       about: {
         seoTitle: 'Hakkımızda | Bizdavar — dijital hizmetler ve endüstriyel tedarik',
-        seoDescription: 'Bizdavar Group 2013’ten beri İstanbul’da: web tasarım, dijital pazarlama, FXGuard ürünleri ve VEGA, Prosense, Liqui Moly tedariki — 11 ülkede hizmet.',
-        seoKeywords: 'Bizdavar hakkımızda, dijital ajans İstanbul, endüstriyel tedarik'
+        seoDescription: 'Bizdavar Group 2013’ten beri: web tasarım, dijital pazarlama, FXGuard ürünleri ve VEGA, Prosense, Liqui Moly tedariki — 11 ülkede. Ofisler: İran, Türkiye, Ermenistan ve Dubai.',
+        seoKeywords: 'Bizdavar hakkımızda, dijital ajans Bizdavar, endüstriyel tedarik'
       },
       services: {
         seoTitle: 'Hizmetler | Dijital pazarlama, web tasarım, SMM ve teknik kurulum',
-        seoDescription: 'Bizdavar hizmetleri — İstanbul ve Tebriz: dijital pazarlama, web/web app, Android-iOS, sunucu, SMM, CCTV, tesisat ve gizli aydınlatma. Teknik WhatsApp ile koordinasyon.',
+        seoDescription: 'Bizdavar hizmetleri — ofisler İran, Türkiye, Ermenistan ve Dubai: dijital pazarlama, web/web app, Android-iOS, sunucu, SMM, CCTV, tesisat ve gizli aydınlatma. Teknik WhatsApp ile koordinasyon.',
         seoKeywords: 'Bizdavar hizmetler, dijital pazarlama, web tasarım, SMM, CCTV İstanbul, teknik hizmet'
       },
       fieldTech: {
@@ -225,8 +250,13 @@
       },
       fast: {
         seoTitle: 'Fast Web Studio | 5 günde profesyonel web sitesi — Bizdavar',
-        seoDescription: 'Bizdavar Fast Web Studio — 5 günde web sitesi. Temel $99, mağaza $199, pro $299. RTL, WhatsApp, WooCommerce ve temel SEO.',
+        seoDescription: 'Bizdavar Fast Web Studio — 5 günde profesyonel site. $99’dan. Günlük yol, RTL, WhatsApp, WooCommerce. Özel web & uygulama da Bizdavar’da.',
         seoKeywords: 'Fast Web Studio, web tasarım, WooCommerce, Bizdavar, bizdavar.com'
+      },
+      customWebApp: {
+        seoTitle: 'Özel web ve uygulama geliştirme | Bizdavar',
+        seoDescription: 'Web app, mobil uygulama, yönetim paneli ve özel B2B sistemler — Fast yetmezse. Ücretsiz danışmanlık, şeffaf teklif ve Bizdavar uzman geliştirmesi.',
+        seoKeywords: 'uygulama geliştirme, web app, özel yazılım, yönetim paneli, Bizdavar'
       },
       privacy: {
         seoTitle: 'Gizlilik Politikası | Bizdavar Group',
@@ -235,13 +265,18 @@
       },
       contact: {
         seoTitle: 'İletişim | Ücretsiz danışmanlık — hizmet ve endüstriyel tedarik',
-        seoDescription: 'Bizdavar ile ücretsiz danışmanlık: web tasarım, dijital pazarlama, FXGuard ve VEGA, Prosense, Liqui Moly tedariki. Form, WhatsApp ve e-posta — İstanbul.',
+        seoDescription: 'Bizdavar ile ücretsiz danışmanlık: web tasarım, dijital pazarlama, FXGuard ve VEGA, Prosense, Liqui Moly tedariki. Form, WhatsApp ve e-posta — ofisler: İran, Türkiye, Ermenistan ve Dubai.',
         seoKeywords: 'Bizdavar iletişim, ücretsiz danışmanlık, web tasarım, VEGA, Liqui Moly, FXGuard'
       },
       vega: {
         seoTitle: 'VEGA sensör tedariki | VEGAPULS 6X, VEGABAR 39, VEGAPOINT — Bizdavar',
-        seoDescription: 'Orijinal VEGA tedariki ve şeffaf fiyat: VEGAPULS 6X, VEGABAR 39, VEGAVIB S61, VEGAPOINT 11/21/31. İstanbul merkezli Türkçe teknik danışmanlık, proforma ve uluslararası lojistik — Bizdavar Group.',
+        seoDescription: 'Orijinal VEGA tedariki ve şeffaf fiyat: VEGAPULS 6X, VEGABAR 39, VEGAVIB S61, VEGAPOINT 11/21/31. uluslararası Türkçe teknik danışmanlık, proforma ve uluslararası lojistik — Bizdavar Group.',
         seoKeywords: 'VEGA sensör, VEGAPULS 6X, VEGABAR 39, VEGAVIB S61, VEGAPOINT 11, VEGAPOINT 21, VEGAPOINT 31, seviye sensörü, basınç transmitter, Bizdavar'
+      },
+      uwt: {
+        seoTitle: 'UWT seviye sensörü tedariki | Rotonivo ve NivoRadar — Bizdavar',
+        seoDescription: 'Almanya\'dan orijinal UWT seviye sensörleri — silo ve tanklar için. Rotonivo, Vibranivo, NivoRadar ve NivoGuide — teknik danışmanlık, proforma ve lojistik — Bizdavar Group.',
+        seoKeywords: 'UWT, Rotonivo, NivoRadar, Vibranivo, silo seviye sensörü, Bizdavar'
       },
       prosense: {
         seoTitle: 'Prosense dedektör tedariki | PQ, SafeVader, PPS+ — Bizdavar',
@@ -308,6 +343,11 @@
         seoDescription: 'BizTab — Tebriz\'de tasarlanan ilk temasız duvar termometresi. Bizdavar ekibi, 0,3°C altı hata payı, Tebriz Üniversitesi onayı.',
         seoKeywords: 'BizTab, temasız termometre, IoT, Bizdavar, Tebriz'
       },
+      bizpet: {
+        seoTitle: 'BizPet | Isıtma pedi — Bizdavar ürünü',
+        seoDescription: 'BizPet — ev, araç ve evcil hayvan yatakları için Padideh ısıtma pedi. Tebriz Üniversitesi Teknoloji Kuluçka Merkezi\'nde tasarlandı. 5–12 V.',
+        seoKeywords: 'BizPet, ısıtma pedi, Padideh, Bizdavar, Tebriz'
+      },
       bizsanitizerV5: {
         seoTitle: 'BizClean V5 | Otomatik el dezenfektanı — Bizdavar',
         seoDescription: 'BizClean V5 — ultrasonik sensörlü otomatik el dezenfektanı. Bizdavar ekibi tasarımı, COVID dönemi üretimi, Digikala\'da satışta.',
@@ -319,9 +359,9 @@
         seoKeywords: 'FXGuard, WhatsApp CRM, ortak inbox, Bizdavar, fxguard.io'
       },
       fxguardAccounting: {
-        seoTitle: 'FXGuard Accounting | Muhasebe sistemi — Bizdavar',
-        seoDescription: 'FXGuard Accounting — finans, döviz ve KOBİ ekipleri için muhasebe. FXGuard suite parçası, Bizdavar Group.',
-        seoKeywords: 'FXGuard Accounting, muhasebe yazılımı, Bizdavar, fxguard.io'
+        seoTitle: 'FXGuard Accounting | Yakında — FXGuard suite muhasebe — Bizdavar',
+        seoDescription: 'FXGuard Accounting yakında — döviz ve KOBİ ekipleri için muhasebe, WhatsApp CRM yanında. Bekleme listesi açık. Bizdavar geliştirmesi.',
+        seoKeywords: 'FXGuard Accounting, muhasebe, bekleme listesi, Bizdavar, fxguard.io'
       },
       bizswap: {
         seoTitle: 'BizSwap | Token ön satış & swap Web3 — Bizdavar ürünü',
@@ -345,8 +385,18 @@
       },
       articleFastStudio: {
         seoTitle: '5 günde site kurulumu — Fast Studio rehberi | Bizdavar',
-        seoDescription: 'Fast Web Studio tam rehber: $99–$299 planlar, 5 günde teslim, WooCommerce ve temel SEO.',
+        seoDescription: 'Fast Web Studio tam rehber: $99–$299 planlar, 5 günlük yol, WooCommerce ve özel proje farkı.',
         seoKeywords: 'Fast Web Studio, 5 günde web sitesi, WooCommerce, Bizdavar'
+      },
+      articleWebsiteSpeed5Days: {
+        seoTitle: '5 günde site kurulum kontrol listesi | Bizdavar',
+        seoDescription: 'Fast Web Studio ile 5 günde yayına çıkmak için pratik kontrol listesi: domain, içerik, RTL, WhatsApp, WooCommerce ve teslim. Bizdavar adım adım rehber.',
+        seoKeywords: 'hızlı web sitesi, Fast Studio, Bizdavar'
+      },
+      articleCustomWebApp: {
+        seoTitle: 'Özel web ve uygulama — seçim rehberi | Bizdavar',
+        seoDescription: 'Ne zaman Fast yeter, ne zaman özel web app, panel veya mobil uygulama gerekir? Seçim kriterleri, bütçe ve uygulama yolu — Bizdavar rehberi.',
+        seoKeywords: 'web app, mobil uygulama, özel proje, Bizdavar'
       },
       articleIndustrialSensors: {
         seoTitle: 'VEGA endüstriyel sensör seçimi — tedarik rehberi | Bizdavar',
@@ -359,9 +409,9 @@
         seoKeywords: 'Bizdavar Group, tarihçe, Ersan Jahed Tabrizi'
       },
       articleVegaSupplyIran: {
-        seoTitle: 'İran’da VEGA sensör tedariki — İstanbul | Bizdavar',
-        seoDescription: 'Orijinal VEGA sensörleri İran projeleri için nasıl tedarik edilir? Farsça danışmanlık, proforma ve lojistik — Bizdavar İstanbul.',
-        seoKeywords: 'VEGA İran, VEGA tedarik, VEGAPULS, Bizdavar İstanbul'
+        seoTitle: 'İran projeleri için VEGA sensör tedariki | Bizdavar',
+        seoDescription: 'İran projeleri için orijinal VEGA — Farsça danışmanlık, şeffaf proforma ve uluslararası lojistik. Ofisler: İran, Türkiye, Ermenistan ve Dubai.',
+        seoKeywords: 'VEGA İran, VEGA tedarik, VEGAPULS, Bizdavar'
       },
       articleMultilingualWeb: {
         seoTitle: 'İran ve Türkiye için çok dilli web sitesi | Bizdavar',
@@ -372,17 +422,17 @@
     en: {
       home: {
         seoTitle: 'Bizdavar Group | Web design, digital marketing & industrial supply',
-        seoDescription: 'From Istanbul: Fast Web Studio websites, digital marketing & SMM, FXGuard WhatsApp CRM, plus VEGA, Prosense and Liqui Moly supply. Free consultation.',
-        seoKeywords: 'Bizdavar, web design Istanbul, digital marketing, FXGuard, VEGA, Prosense, Liqui Moly, Fast Web Studio'
+        seoDescription: 'Bizdavar Group: free consultation — websites from $99 (Fast Studio), digital marketing, FXGuard CRM, plus VEGA, UWT, Prosense and Liqui Moly supply. WhatsApp and contact form — Iran, Turkey, Armenia and Dubai.',
+        seoKeywords: 'Bizdavar, web design Istanbul, digital marketing, FXGuard, VEGA, UWT, Prosense, Liqui Moly, Fast Web Studio'
       },
       about: {
         seoTitle: 'About Bizdavar | Digital services & industrial supply since 2013',
-        seoDescription: 'Bizdavar Group since 2013 in Istanbul — web design, digital marketing, FXGuard products, and VEGA, Prosense & Liqui Moly supply across 11 countries.',
-        seoKeywords: 'about Bizdavar, digital agency Istanbul, industrial supply'
+        seoDescription: 'Bizdavar Group since 2013 — web design, digital marketing, FXGuard products, and VEGA, Prosense & Liqui Moly supply across 11 countries. Offices in Iran, Turkey, Armenia and Dubai.',
+        seoKeywords: 'about Bizdavar, digital agency Bizdavar, industrial supply'
       },
       services: {
         seoTitle: 'Services | Digital marketing, web design, SMM & technical installs',
-        seoDescription: 'Bizdavar services in Istanbul and Tabriz: digital marketing, web/web apps, Android & iOS, servers, SMM, CCTV, wiring and cove lighting — via dedicated technical WhatsApp.',
+        seoDescription: 'Bizdavar services from offices in Iran, Turkey, Armenia and Dubai: digital marketing, web/web apps, Android & iOS, servers, SMM, CCTV, wiring and cove lighting — via dedicated technical WhatsApp.',
         seoKeywords: 'Bizdavar services, digital marketing, web design, SMM, CCTV Istanbul, technical installs'
       },
       fieldTech: {
@@ -407,8 +457,13 @@
       },
       fast: {
         seoTitle: 'Fast Web Studio | Professional website in 5 days — Bizdavar',
-        seoDescription: 'Bizdavar Fast Web Studio — website in 5 days. Basic $99, store $199, pro $299. RTL, WhatsApp, WooCommerce and basic SEO.',
+        seoDescription: 'Bizdavar Fast Web Studio — professional website in 5 days from $99. Daily path, RTL, WhatsApp, WooCommerce. Custom web & apps in the same ecosystem.',
         seoKeywords: 'Fast Web Studio, web design, WooCommerce, Bizdavar, bizdavar.com'
+      },
+      customWebApp: {
+        seoTitle: 'Custom web & app development | Bizdavar',
+        seoDescription: 'Web apps, mobile apps, admin panels and custom B2B systems — when Fast is not enough. Free consultation, clear estimates and expert delivery by Bizdavar.',
+        seoKeywords: 'custom app, web app, custom software, admin panel, Bizdavar'
       },
       privacy: {
         seoTitle: 'Privacy Policy | Bizdavar Group',
@@ -417,13 +472,18 @@
       },
       contact: {
         seoTitle: 'Contact Bizdavar | Free consultation — services & industrial supply',
-        seoDescription: 'Free Bizdavar consultation: web design, digital marketing, FXGuard, and VEGA, Prosense & Liqui Moly supply. Form, WhatsApp and email — Istanbul.',
+        seoDescription: 'Free Bizdavar consultation: web design, digital marketing, FXGuard, and VEGA, Prosense & Liqui Moly supply. Form, WhatsApp and email — offices: Iran, Turkey, Armenia and Dubai.',
         seoKeywords: 'Bizdavar contact, free consultation, web design, VEGA, Liqui Moly, FXGuard'
       },
       vega: {
         seoTitle: 'VEGA sensor supply | VEGAPULS 6X, VEGABAR 39, VEGAPOINT — Bizdavar',
         seoDescription: 'Genuine VEGA supply with clear EUR pricing: VEGAPULS 6X, VEGABAR 39, VEGAVIB S61, VEGAPOINT 11/21/31. Technical consulting, exact order codes and international logistics — Bizdavar Group.',
         seoKeywords: 'VEGA sensor, VEGAPULS 6X, VEGABAR 39, VEGAVIB S61, VEGAPOINT 11, VEGAPOINT 21, VEGAPOINT 31, level sensor, pressure transmitter, Bizdavar'
+      },
+      uwt: {
+        seoTitle: 'UWT level sensor supply | Rotonivo & NivoRadar — Bizdavar',
+        seoDescription: 'Genuine UWT level sensors from Germany for silos and tanks. Rotonivo, Vibranivo, NivoRadar and NivoGuide — technical consulting, proforma and logistics — Bizdavar Group.',
+        seoKeywords: 'UWT, Rotonivo, NivoRadar, Vibranivo, silo level sensor, Bizdavar'
       },
       prosense: {
         seoTitle: 'Prosense detector supply | PQ, SafeVader, PPS+ — Bizdavar',
@@ -442,7 +502,7 @@
       },
       gamak: {
         seoTitle: 'Gamak electric motor supply | IE2/IE3 — Bizdavar Group',
-        seoDescription: 'Genuine Gamak industrial electric motors from Turkey. GM/GMB, IE2/IE3, B3/B5 flange — English, Persian and Turkish technical consulting, proforma and logistics — Bizdavar Group.',
+        seoDescription: 'Genuine Gamak industrial electric motors. GM/GMB, IE2/IE3, B3/B5 flange — English, Persian and Turkish technical consulting, proforma and logistics — Bizdavar Group.',
         seoKeywords: 'Gamak, electric motor, IE2 IE3, industrial motor, Bizdavar'
       },
       digiSystem: {
@@ -490,6 +550,11 @@
         seoDescription: 'BizTab — first non-contact wall thermometer designed in Tabriz by the Bizdavar team. Error under 0.3°C, approved by University of Tabriz.',
         seoKeywords: 'BizTab, non-contact thermometer, IoT, Bizdavar, Tabriz'
       },
+      bizpet: {
+        seoTitle: 'BizPet | Padideh heating pad — Bizdavar product',
+        seoDescription: 'BizPet — portable Padideh heating pad for home, car and pet beds. Designed at University of Tabriz Technology Incubator. 5–12 V.',
+        seoKeywords: 'BizPet, heating pad, Padideh, Bizdavar, Tabriz'
+      },
       bizsanitizerV5: {
         seoTitle: 'BizClean V5 | Automatic hand sanitizer — Bizdavar',
         seoDescription: 'BizClean V5 automatic hand sanitizer — ultrasonic sensor, contact-free spray. Engineered by the Bizdavar team during COVID-19, available on Digikala.',
@@ -501,9 +566,9 @@
         seoKeywords: 'FXGuard, WhatsApp CRM, shared inbox, Bizdavar, fxguard.io'
       },
       fxguardAccounting: {
-        seoTitle: 'FXGuard Accounting | Finance accounting — Bizdavar',
-        seoDescription: 'FXGuard Accounting — accounting for finance, exchange and SME teams. Part of the FXGuard suite by Bizdavar Group.',
-        seoKeywords: 'FXGuard Accounting, accounting software, Bizdavar, fxguard.io'
+        seoTitle: 'FXGuard Accounting | Coming soon — FXGuard suite accounting — Bizdavar',
+        seoDescription: 'FXGuard Accounting coming soon — accounting for exchange and SME teams beside WhatsApp CRM. Waitlist open. Built by Bizdavar.',
+        seoKeywords: 'FXGuard Accounting, accounting, waitlist, Bizdavar, fxguard.io'
       },
       bizswap: {
         seoTitle: 'BizSwap | Token presale & swap Web3 — Bizdavar product',
@@ -527,8 +592,18 @@
       },
       articleFastStudio: {
         seoTitle: 'Launch a website in 5 days — Fast Studio guide | Bizdavar',
-        seoDescription: 'Complete Fast Web Studio guide: $99–$299 plans, 5-day delivery, WooCommerce and basic SEO.',
+        seoDescription: 'Complete Fast Web Studio guide: $99–$299 plans, 5-day path, WooCommerce and custom vs Fast.',
         seoKeywords: 'Fast Web Studio, website in 5 days, WooCommerce, Bizdavar'
+      },
+      articleWebsiteSpeed5Days: {
+        seoTitle: '5-day website launch checklist | Bizdavar',
+        seoDescription: 'Practical checklist to go live in 5 days with Fast Web Studio: domain, content, RTL, WhatsApp, WooCommerce and handoff. Step-by-step Bizdavar guide.',
+        seoKeywords: 'fast website, Fast Studio, Bizdavar'
+      },
+      articleCustomWebApp: {
+        seoTitle: 'Custom web & app — how to choose | Bizdavar',
+        seoDescription: 'When Fast is enough — and when you need a custom web app, admin panel or mobile app. Selection criteria, budget and delivery path — Bizdavar guide.',
+        seoKeywords: 'web app, mobile app, custom project, Bizdavar'
       },
       articleIndustrialSensors: {
         seoTitle: 'Choosing industrial VEGA sensors — supply guide | Bizdavar',
@@ -541,14 +616,14 @@
         seoKeywords: 'Bizdavar Group, history, Ersan Jahed Tabrizi'
       },
       articleVegaSupplyIran: {
-        seoTitle: 'VEGA sensor supply to Iran from Istanbul | Bizdavar',
-        seoDescription: 'How to source original VEGA sensors for Iran projects — Persian consulting, proforma and logistics from Bizdavar’s Istanbul office.',
-        seoKeywords: 'buy VEGA Iran, VEGA supply, VEGAPULS, Bizdavar Istanbul'
+        seoTitle: 'VEGA sensor supply for Iran projects | Bizdavar',
+        seoDescription: 'Original VEGA sensors for Iran projects — Persian consulting, transparent proforma and international logistics. Offices in Iran, Turkey, Armenia and Dubai.',
+        seoKeywords: 'buy VEGA Iran, VEGA supply, VEGAPULS, Bizdavar'
       },
       articleMultilingualWeb: {
         seoTitle: 'Multilingual websites for Iran and Turkey | Bizdavar',
         seoDescription: 'fa/tr/en sites with hreflang and local trust — Bizdavar guide for dual-market businesses.',
-        seoKeywords: 'multilingual website, Istanbul web design, hreflang, Bizdavar'
+        seoKeywords: 'multilingual website, multilingual web design, hreflang, Bizdavar'
       }
     }
   };

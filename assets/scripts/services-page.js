@@ -93,7 +93,7 @@
       { value: '۶', label: 'محور خدمات' },
       { value: '۱۰۰+', label: 'پروژه' },
       { value: '۲', label: 'شهر فنی' },
-      { value: '۱۳+', label: 'سال تجربه' }
+      { value: '۱۲+', label: 'سال تجربه' }
     ]);
     el.innerHTML = stats.map(s => `
       <div class="services-stat">

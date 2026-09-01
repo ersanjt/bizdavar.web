@@ -8,7 +8,7 @@ const path = require('path');
 
 const BASE = 'https://bizdavar.com';
 const OUT = path.join(__dirname, '..', 'sitemap.xml');
-const SITE_UPDATE = '2026-08-12';
+const SITE_UPDATE = '2026-09-01';
 
 const LOCALES = [
   { code: 'fa', prefix: '' },
@@ -19,26 +19,28 @@ const LOCALES = [
 ];
 
 const HREFLANG = [
-  ['fa', 'fa'],
-  ['tr', 'tr'],
-  ['en', 'en'],
-  ['ru', 'ru'],
-  ['ar', 'ar'],
+  ['fa-IR', 'fa'],
+  ['tr-TR', 'tr'],
+  ['en-US', 'en'],
+  ['ru-RU', 'ru'],
+  ['ar-AE', 'ar'],
   ['x-default', 'fa']
 ];
 
 /** @type {{ path: string, changefreq: string, priority: number, lastmod?: string }[]} */
 const PAGES = [
-  { path: '/', changefreq: 'weekly', priority: 1.0, lastmod: '2026-08-12' },
+  { path: '/', changefreq: 'weekly', priority: 1.0, lastmod: '2026-09-01' },
   { path: '/pages/services', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
   { path: '/pages/contact', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
   { path: '/pages/about', changefreq: 'monthly', priority: 0.85, lastmod: SITE_UPDATE },
   { path: '/pages/products', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
   { path: '/pages/portfolio', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/blog', changefreq: 'weekly', priority: 0.75, lastmod: SITE_UPDATE },
+  { path: '/pages/custom-web-app', changefreq: 'monthly', priority: 0.9, lastmod: '2026-08-13' },
   { path: '/pages/fast', changefreq: 'monthly', priority: 0.85, lastmod: SITE_UPDATE },
   { path: '/pages/field-tech', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
   { path: '/pages/vega', changefreq: 'monthly', priority: 0.9, lastmod: '2026-08-12' },
+  { path: '/pages/uwt', changefreq: 'monthly', priority: 0.9, lastmod: '2026-09-01' },
   { path: '/pages/prosense', changefreq: 'monthly', priority: 0.9, lastmod: '2026-08-12' },
   { path: '/pages/liqui-moly', changefreq: 'weekly', priority: 0.9, lastmod: '2026-08-12' },
   { path: '/pages/teltonika', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
@@ -51,7 +53,8 @@ const PAGES = [
   { path: '/pages/smm-turk', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/fxguard-exchange', changefreq: 'monthly', priority: 0.85, lastmod: SITE_UPDATE },
   { path: '/pages/biztejarat', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
-  { path: '/pages/biztab', changefreq: 'monthly', priority: 0.85, lastmod: '2020-03-16' },
+  { path: '/pages/biztab', changefreq: 'monthly', priority: 0.85, lastmod: SITE_UPDATE },
+  { path: '/pages/bizpet', changefreq: 'monthly', priority: 0.85, lastmod: '2026-09-01' },
   { path: '/pages/bizsanitizer-v5', changefreq: 'monthly', priority: 0.85, lastmod: '2021-06-01' },
   { path: '/pages/fxguard', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/fxguard-accounting', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
@@ -62,7 +65,9 @@ const PAGES = [
   { path: '/pages/articles/what-is-digital-marketing', changefreq: 'yearly', priority: 0.7, lastmod: '2025-02-10' },
   { path: '/pages/articles/digital-marketing', changefreq: 'yearly', priority: 0.7, lastmod: '2025-04-01' },
   { path: '/pages/articles/social-media-management', changefreq: 'yearly', priority: 0.7, lastmod: '2025-03-05' },
-  { path: '/pages/articles/fast-studio', changefreq: 'yearly', priority: 0.7, lastmod: '2025-05-15' },
+  { path: '/pages/articles/fast-studio', changefreq: 'monthly', priority: 0.8, lastmod: '2026-08-13' },
+  { path: '/pages/articles/website-speed-5-days', changefreq: 'monthly', priority: 0.8, lastmod: '2026-08-13' },
+  { path: '/pages/articles/custom-web-app-development', changefreq: 'monthly', priority: 0.8, lastmod: '2026-08-13' },
   { path: '/pages/articles/industrial-sensors', changefreq: 'yearly', priority: 0.7, lastmod: '2025-03-20' },
   { path: '/pages/privacy', changefreq: 'yearly', priority: 0.3, lastmod: SITE_UPDATE }
 ];

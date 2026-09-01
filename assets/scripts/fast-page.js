@@ -13,8 +13,12 @@
   const t = (key, fb) => (window.BIZDAVAR_I18N ? window.BIZDAVAR_I18N.t(key, fb) : (fb ?? key));
   const ui = (key, fb) => t(`fastPage.ui.${key}`, fb);
 
-  function netinodeUrl() {
-    return (C.partners && C.partners.netinode && C.partners.netinode.url) || 'https://netinode.net/';
+  function netinodeUrls() {
+    const n = (C.partners && C.partners.netinode) || {};
+    return {
+      site: n.url || 'https://netinode.net/',
+      shop: n.shopUrl || 'https://shop.netinode.net/'
+    };
   }
 
   function planMessage(planId) {
@@ -46,6 +50,7 @@
     const el = document.getElementById('fastHeroContent');
     if (!el) return;
     const b = F.brand;
+    const heroSrc = path(b.heroImage || 'assets/images/content/fast-hero.svg');
     el.innerHTML = `
       <div class="fast-hero__content">
         <a href="${path('pages/fast.html')}" class="fast-hero__brand">
@@ -64,22 +69,11 @@
         <div class="fast-hero__actions">
           <a href="#fast-plans" class="btn btn--blue">${ui('viewPlans', 'مشاهده پلن‌ها')}</a>
           <a href="${whatsappHref('pro')}" class="btn btn--yellow fast-wa-cta" data-plan="pro">${ui('consultWa', 'مشاوره در واتساپ')}</a>
-          <a href="${customDevUrl()}" class="btn btn--outline">${ui('btnDevConsult', 'برنامه‌نویسی تخصصی و مشاوره — تماس بگیرید')}</a>
+          <a href="${path('pages/custom-web-app.html')}" class="btn btn--outline">${ui('btnCustomApp', 'وب و اپ اختصاصی')}</a>
         </div>
       </div>
-      <div class="fast-hero__visual" aria-hidden="true">
-        <svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg">
-          <rect width="480" height="320" rx="16" fill="#EFF6FF"/>
-          <rect x="48" y="40" width="280" height="200" rx="10" fill="#fff" stroke="#3B82F6" stroke-width="2"/>
-          <rect x="68" y="64" width="140" height="10" rx="5" fill="#3B82F6" opacity="0.7"/>
-          <rect x="68" y="88" width="220" height="6" rx="3" fill="#93C5FD"/>
-          <rect x="68" y="102" width="190" height="6" rx="3" fill="#BFDBFE"/>
-          <rect x="68" y="116" width="200" height="6" rx="3" fill="#BFDBFE"/>
-          <rect x="68" y="150" width="90" height="32" rx="6" fill="#3B82F6"/>
-          <rect x="340" y="72" width="92" height="168" rx="14" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
-          <circle cx="386" cy="108" r="18" fill="#3B82F6" opacity="0.25"/>
-          <text x="240" y="280" text-anchor="middle" fill="#1e40af" font-size="13" font-family="monospace">bizdavar.com/fast</text>
-        </svg>
+      <div class="fast-hero__visual">
+        <img src="${heroSrc}" width="960" height="640" alt="${b.heroAlt || b.headline}" decoding="async" fetchpriority="high">
       </div>`;
   }
 
@@ -105,15 +99,24 @@
     if (!el) return;
     const note = window.BIZDAVAR_I18N?.raw('fastPage.hostingNote');
     if (!note) return;
-    const url = netinodeUrl();
+    const { site, shop } = netinodeUrls();
     el.innerHTML = `
       <div class="container fast-hosting-bar__inner">
         <div class="fast-hosting-bar__text">
           <strong>${note.title}</strong>
           <p>${note.text}</p>
         </div>
-        <a href="${url}" class="btn btn--yellow fast-hosting-bar__cta" target="_blank" rel="noopener noreferrer">${note.cta}</a>
+        <div class="fast-hosting-bar__actions">
+          <a href="${shop}" class="btn btn--yellow fast-hosting-bar__cta" target="_blank" rel="noopener noreferrer">${note.ctaShop || note.cta || 'Shop'}</a>
+          <a href="${site}" class="btn btn--outline fast-hosting-bar__cta" target="_blank" rel="noopener noreferrer">${note.ctaSite || 'netinode.net'}</a>
+        </div>
       </div>`;
+  }
+
+  function scopeHref(item) {
+    if (!item) return '#';
+    if (item.internal && item.href && !item.href.startsWith('#')) return path(item.href);
+    return item.href || '#';
   }
 
   function renderNav() {
@@ -121,15 +124,68 @@
     if (!el) return;
     el.setAttribute('aria-label', ui('navAria', 'بخش‌های Fast Web Studio'));
     const links = [
+      { id: 'fast-speed', label: ui('navSpeed', 'سرعت'), icon: 'bolt' },
+      { id: 'fast-scope', label: ui('navScope', 'خدمات'), icon: 'globe' },
       { id: 'fast-plans', label: ui('navPlans', 'پلن‌ها'), icon: 'coin' },
-      { id: 'fast-compare', label: ui('navCompare', 'مقایسه'), icon: 'list' },
       { id: 'fast-timeline', label: ui('navTimeline', 'مسیر ۵ روزه'), icon: 'bolt' },
+      { id: 'fast-why', label: ui('navWhy', 'چرا Fast'), icon: 'target' },
       { id: 'fast-showcase', label: ui('navShowcase', 'نمونه‌کارها'), icon: 'briefcase' },
+      { id: 'fast-guides', label: ui('navGuides', 'راهنما'), icon: 'article' },
       { id: 'fast-faq', label: ui('navFaq', 'سوالات'), icon: 'info' }
     ];
     el.innerHTML = links.map((l, i) =>
       `<a href="#${l.id}" class="fast-nav__item${i === 0 ? ' active' : ''}">${ic(l.icon, { size: 16 })} ${l.label}</a>`
     ).join('');
+  }
+
+  function renderSpeed() {
+    const el = document.getElementById('fastSpeedGrid');
+    if (!el || !Array.isArray(F.speedHighlights)) return;
+    el.innerHTML = F.speedHighlights.map(item => `
+      <article class="fast-speed-card">
+        <span class="fast-speed-card__icon" aria-hidden="true">${ic(item.icon, { size: 28 })}</span>
+        <h3>${item.title}</h3>
+        <p>${item.desc}</p>
+      </article>`).join('');
+  }
+
+  function renderScope() {
+    const el = document.getElementById('fastScopeGrid');
+    if (!el || !Array.isArray(F.scope)) return;
+    el.innerHTML = F.scope.map(item => `
+      <a href="${scopeHref(item)}" class="fast-scope-card">
+        <span class="fast-scope-card__icon" aria-hidden="true">${ic(item.icon, { size: 28 })}</span>
+        <h3>${item.title}</h3>
+        <p>${item.desc}</p>
+        <span class="fast-scope-card__cta">${item.cta || ui('viewCase', 'مشاهده')}${arrow()}</span>
+      </a>`).join('');
+  }
+
+  function renderDeliverables() {
+    const el = document.getElementById('fastDeliverablesGrid');
+    if (!el || !Array.isArray(F.deliverables)) return;
+    el.innerHTML = F.deliverables.map(item => `
+      <article class="fast-deliverable">
+        <span class="fast-deliverable__icon" aria-hidden="true">${ic(item.icon, { size: 26 })}</span>
+        <h3>${item.title}</h3>
+        <p>${item.desc}</p>
+      </article>`).join('');
+  }
+
+  function renderGuides() {
+    const el = document.getElementById('fastGuidesGrid');
+    if (!el || !Array.isArray(F.guides)) return;
+    el.innerHTML = F.guides.map(g => `
+      <a href="${path(g.href)}" class="fast-guide-card">
+        <div class="fast-guide-card__media">
+          <img src="${path(g.image)}" alt="" width="400" height="210" loading="lazy">
+        </div>
+        <div class="fast-guide-card__body">
+          <strong>${g.title}</strong>
+          <span>${g.desc}</span>
+          <em>${ui('readGuide', 'ادامه مطلب')}${arrow()}</em>
+        </div>
+      </a>`).join('');
   }
 
   function planBtnClass(accent) {
@@ -227,8 +283,10 @@
     el.innerHTML = F.showcases.map(s => {
       const url = showcaseUrl(s);
       const ext = !s.internal;
+      const thumb = s.thumb ? path(s.thumb) : '';
       return `
         <a href="${url}" class="fast-showcase-card"${ext ? ' target="_blank" rel="noopener noreferrer"' : ''}>
+          ${thumb ? `<span class="fast-showcase-card__thumb"><img src="${thumb}" alt="" width="160" height="80" loading="lazy"></span>` : ''}
           <span class="fast-showcase-card__cat">${s.category}</span>
           <strong>${s.name}</strong>
           <span class="fast-showcase-card__link">${ui('viewCase', 'مشاهده')}${arrow()}</span>
@@ -319,12 +377,16 @@
     renderTrustBar();
     renderHostingBar();
     renderNav();
+    renderSpeed();
+    renderScope();
     renderPlans();
     renderDevCta();
     renderCompare();
     renderTimeline();
     renderWhy();
+    renderDeliverables();
     renderShowcase();
+    renderGuides();
     renderFaq();
     setupWaLinks();
     setupSticky();
@@ -335,6 +397,7 @@
   window.renderFastRelatedLinks = function () {
     const links = window.BIZDAVAR_I18N?.raw('fastPage.relatedLinks') || [
       { title: 'مقاله Fast Studio', url: 'articles/fast-studio', desc: 'راهنمای سفارش' },
+      { title: 'وب و اپ اختصاصی', url: 'custom-web-app', desc: 'پروژه سفارشی' },
       { title: 'خدمات طراحی وب', url: 'services#web-design', desc: 'جزئیات خدمات' },
       { title: 'نمونه‌کارها', url: 'portfolio', desc: 'پروژه‌های بیزدوار' }
     ];

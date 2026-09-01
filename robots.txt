@@ -1,5 +1,5 @@
 # Bizdavar Group — https://bizdavar.com
-# Multilingual site — fa (root), tr (/tr/), en (/en/) — 81 URLs in sitemap.xml
+# Multilingual site — fa (root), tr, en, ru, ar — 205 URLs in sitemap.xml
 
 User-agent: *
 Allow: /

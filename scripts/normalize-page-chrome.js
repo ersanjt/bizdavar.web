@@ -31,6 +31,9 @@ const PAGE_LOADER = {
     afterPageI18n: 'config/fast-catalog.js',
     beforeMain: 'fast-page.js'
   },
+  'pages/custom-web-app.html': {
+    beforeMain: 'custom-web-app-page.js'
+  },
   'pages/products.html': {
     afterConfig: 'config/owned-products.js',
     afterLocales: 'i18n/owned-products-i18n.js',
@@ -41,6 +44,12 @@ const PAGE_LOADER = {
     afterPageI18n: 'config/vega-products.js',
     beforeMain: 'vega-page.js'
   },
+  'pages/uwt.html': {
+    afterSeo: 'i18n/supply-catalog-i18n.js',
+    afterPageI18n: 'lib/supply-brand-page.js,config/uwt-products.js',
+    beforeMain: 'uwt-page.js'
+  },
+  'pages/bizpet.html': {},
   'pages/prosense.html': {
     afterSeo: 'i18n/supply-catalog-i18n.js',
     afterPageI18n: 'lib/supply-brand-page.js,config/prosense-products.js',

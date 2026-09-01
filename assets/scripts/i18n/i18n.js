@@ -221,7 +221,11 @@
         timeline: this.mergeLocalizedList('fastCatalog.timeline', base.timeline || []),
         whyChoose: this.mergeLocalizedList('fastCatalog.whyChoose', base.whyChoose || []),
         showcases: this.mergeLocalizedList('fastCatalog.showcases', base.showcases || []),
-        faq: this.mergeLocalizedList('fastCatalog.faq', base.faq || [])
+        faq: this.mergeLocalizedList('fastCatalog.faq', base.faq || []),
+        speedHighlights: this.mergeLocalizedList('fastCatalog.speedHighlights', base.speedHighlights || []),
+        scope: this.mergeLocalizedList('fastCatalog.scope', base.scope || []),
+        deliverables: this.mergeLocalizedList('fastCatalog.deliverables', base.deliverables || []),
+        guides: this.mergeLocalizedList('fastCatalog.guides', base.guides || [])
       };
     },
 
@@ -448,8 +452,8 @@
         setLabel('phone', p.phone);
         setLabel('service', p.service);
         setLabel('message', p.message);
-        const fn = form.firstName;
-        const ln = form.lastName;
+        const fn = document.getElementById('firstName');
+        const ln = document.getElementById('lastName');
         if (fn && p.placeholderFirstName) fn.placeholder = p.placeholderFirstName;
         if (ln && p.placeholderLastName) ln.placeholder = p.placeholderLastName;
         const sel = form.service;
@@ -473,7 +477,22 @@
         const msg = form.message;
         if (msg) msg.placeholder = p.messagePlaceholder;
         const submit = form.querySelector('button[type="submit"]');
-        if (submit) submit.textContent = p.submit;
+        const C = window.BIZDAVAR_CONFIG || {};
+        const useServer = (C.formspree?.enabled && C.formspree?.formId) || C.bizhub?.enabled;
+        if (submit) submit.textContent = useServer ? (p.submitEmail || p.submit) : (p.submit || p.submitEmail);
+        let hint = form.querySelector('.form-whatsapp-hint');
+        if (p.formWhatsappHint) {
+          if (!hint) {
+            hint = document.createElement('p');
+            hint.className = 'form-whatsapp-hint';
+            const anchor = form.querySelector('.form-desc');
+            if (anchor && anchor.parentNode) anchor.parentNode.insertBefore(hint, anchor.nextSibling);
+          }
+          hint.hidden = !!useServer;
+          hint.textContent = p.formWhatsappHint;
+        } else if (hint) {
+          hint.hidden = true;
+        }
         const priv = form.querySelector('label input#privacy')?.parentElement;
         if (priv && p.privacyLink) {
           const link = priv.querySelector('a');

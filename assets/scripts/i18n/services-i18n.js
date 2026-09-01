@@ -203,12 +203,12 @@
       {
         title: 'Web design & web apps',
         subtitle: 'Website · Web App · Fast Web Studio',
-        body: 'Corporate sites, stores, campaign landings and custom <strong>web applications</strong> — Persian/RTL UI, foundational SEO, forms and WhatsApp. Fast delivery via <a href="fast">Fast Web Studio</a>, or bespoke builds from discovery to launch. Example: <a href="https://arianpumps.com" target="_blank" rel="noopener noreferrer">Arian Pumps</a>.',
+        body: 'Corporate sites, stores, campaign landings and custom <strong>web applications</strong> — responsive multilingual UI (RTL/LTR), foundational SEO, forms and WhatsApp. Fast delivery via <a href="fast">Fast Web Studio</a>, or bespoke builds from discovery to launch. Example: <a href="https://arianpumps.com" target="_blank" rel="noopener noreferrer">Arian Pumps</a>.',
         tags: ['Website', 'Web App', 'WooCommerce', 'Landing', 'RTL', 'SEO'],
         checks: [
           'Corporate, store and campaign landing sites',
           'Web apps and custom admin panels',
-          'Responsive UI with Persian/RTL typography',
+          'Responsive UI with multilingual RTL/LTR typography',
           'Foundational SEO, content structure and speed',
           'WhatsApp, contact forms and payment when needed',
           'CMS training and post-launch support'
@@ -507,7 +507,7 @@
     },
     en: {
       servicesTitle: 'What we build',
-      processNote: 'From fast landings to custom web apps — Persian/RTL UI, foundational SEO, forms and WhatsApp.',
+      processNote: 'From fast landings to custom web apps — multilingual RTL/LTR UI, foundational SEO, forms and WhatsApp.',
       ctaCustom: 'Custom web project',
       packagesTitle: 'Delivery outputs',
       packages: [
@@ -1058,7 +1058,7 @@
         { value: '۶', label: 'محور خدمات' },
         { value: '۱۰۰+', label: 'پروژه' },
         { value: '۲', label: 'شهر فنی' },
-        { value: '۱۳+', label: 'سال تجربه' }
+        { value: '۱۲+', label: 'سال تجربه' }
       ],
       process: {
         eyebrow: 'فرآیند همکاری',
@@ -1083,7 +1083,7 @@
         { title: 'محصولات بیزدوار', url: 'products', desc: 'SaaS و برندهای تامین' },
         { title: 'تماس', url: 'contact', desc: 'فرم و واتساپ' }
       ],
-      geoText: 'خدمات دیجیتال و فنی بیزدوار — تمرکز اجرایی تبریز و استانبول؛ واتساپ تخصصی خدمات فنی.'
+      geoText: 'خدمات دیجیتال و فنی بیزدوار — دفاتر ایران، ترکیه، ارمنستان و دبی؛ واتساپ تخصصی خدمات فنی.'
     },
     tr: {
       hero: {
@@ -1118,7 +1118,7 @@
         { value: '6', label: 'Hizmet alanı' },
         { value: '100+', label: 'Proje' },
         { value: '2', label: 'Teknik şehir' },
-        { value: '13+', label: 'Yıl deneyim' }
+        { value: '12+', label: 'Yıl deneyim' }
       ],
       process: {
         eyebrow: 'İş birliği süreci',
@@ -1177,7 +1177,7 @@
         { value: '6', label: 'Service areas' },
         { value: '100+', label: 'Projects' },
         { value: '2', label: 'Field cities' },
-        { value: '13+', label: 'Years experience' }
+        { value: '12+', label: 'Years experience' }
       ],
       process: {
         eyebrow: 'Collaboration process',

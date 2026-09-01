@@ -85,7 +85,7 @@
       document.head.appendChild(sitemap);
     }
 
-    document.querySelectorAll('link[data-bd-hreflang]').forEach(function (el) { el.remove(); });
+    document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(function (el) { el.remove(); });
     var alts = LU.hreflangUrls(pagePath);
     Object.keys(alts).forEach(function (hl) {
       var link = document.createElement('link');

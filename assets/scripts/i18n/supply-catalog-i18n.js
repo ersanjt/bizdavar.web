@@ -12,7 +12,7 @@
 
     brand: {
 
-      heroEyebrow: 'Official Gamak electric motor supply from Turkey',
+      heroEyebrow: 'Official Gamak electric motor international supply',
 
       heroHeadline: 'Gamak industrial electric motors',
 
@@ -22,7 +22,7 @@
 
       since: 'Since 1961 · Izmir',
 
-      description: 'Bizdavar Group supplies Gamak electric motors for industrial projects, pumps, HVAC and production lines in Iran and the region. Power, speed, flange and efficiency class selection — with transparent proforma and shipping from Istanbul.',
+      description: 'Bizdavar Group supplies Gamak electric motors for industrial projects, pumps, HVAC and production lines in Iran and the region. Power, speed, flange and efficiency class selection — with transparent proforma and international shipping.',
 
       heroStats: [
 
@@ -44,7 +44,7 @@
 
       { label: 'Built for industry', desc: 'Pumps, compressors, conveyors, HVAC and production lines' },
 
-      { label: 'Transparent logistics', desc: 'Proforma, lead time and shipping from Turkey to project delivery' }
+      { label: 'Transparent logistics', desc: 'Proforma, lead time and international shipping to project delivery' }
 
     ],
 
@@ -66,7 +66,7 @@
 
       { num: '2', title: 'Technical consulting', desc: 'GM/GMB series recommendation, IE2 or IE3, and brake option if needed' },
 
-      { num: '3', title: 'Proforma', desc: 'Gamak price, Turkey warehouse lead time, payment terms' },
+      { num: '3', title: 'Proforma', desc: 'Gamak price, Manufacturer lead time, payment terms' },
 
       { num: '4', title: 'Supply & shipping', desc: 'Order from Gamak, industrial packaging — international logistics' },
 
@@ -170,7 +170,7 @@
 
       { title: 'Official proforma', desc: 'Price, lead time and shipping terms in one document' },
 
-      { title: 'Turkey → project logistics', desc: 'From Gamak/Istanbul warehouse to project delivery' },
+      { title: 'International project logistics', desc: 'From manufacturer stock to project delivery' },
 
       { title: 'Dedicated support', desc: 'info@bizdavar.com and WhatsApp — single point of contact' }
 
@@ -212,7 +212,7 @@
 
       since: '1961\'den beri · İzmir',
 
-      description: 'Bizdavar Group; endüstriyel projeler, pompalar, HVAC ve üretim hatları için Gamak elektrik motoru tedarik eder. Güç, devir, flanş ve verimlilik sınıfı seçimi — İstanbul\'dan şeffaf proforma ve nakliye ile.',
+      description: 'Bizdavar Group; endüstriyel projeler, pompalar, HVAC ve üretim hatları için Gamak elektrik motoru tedarik eder. Güç, devir, flanş ve verimlilik sınıfı seçimi — şeffaf proforma ve uluslararası nakliye ile.',
 
       heroStats: [
 
@@ -360,7 +360,7 @@
 
       { title: 'Resmi proforma', desc: 'Fiyat, lead time ve nakliye koşulları tek belgede' },
 
-      { title: 'Türkiye → proje lojistiği', desc: 'Gamak/İstanbul deposundan proje teslimatına' },
+      { title: 'Uluslararası proje lojistiği', desc: 'uluslararası lojistikle proje teslimatına' },
 
       { title: 'Türkçe destek', desc: 'info@bizdavar.com ve WhatsApp — tek iletişim noktası' }
 
@@ -392,7 +392,7 @@
 
     brand: {
 
-      heroEyebrow: 'Digi System retail equipment supply from Turkey',
+      heroEyebrow: 'Digi System retail equipment international supply',
 
       heroHeadline: 'Digi System scales & POS',
 
@@ -406,7 +406,7 @@
 
       heroImageAlt: 'Digi SM-6000 PC retail scale with touchscreen and label printer — Bizdavar Group',
 
-      description: 'Bizdavar Group supplies Digi System (DIGI) scales, checkout terminals and POS for supermarkets, deli, bakeries and retail chains. Official models (SM-6000, W-5600SRX, LX-5600, AW-5600), technical consulting and logistics from Istanbul.',
+      description: 'Bizdavar Group supplies Digi System (DIGI) scales, checkout terminals and POS for supermarkets, deli, bakeries and retail chains. Official models (SM-6000, W-5600SRX, LX-5600, AW-5600), technical consulting and international logistics.',
 
       heroStats: [
 
@@ -540,7 +540,7 @@
 
       { title: 'Integrated proforma', desc: 'Scale + POS + label printer in one document' },
 
-      { title: 'Logistics from Turkey', desc: 'Faster shipping for retail projects' },
+      { title: 'International logistics', desc: 'Faster shipping for retail projects' },
 
       { title: 'Teraoka Seiko coordination', desc: 'If a premium Japan project is needed — both brands from Bizdavar' },
 
@@ -558,7 +558,7 @@
 
       { q: 'Digi or Teraoka Seiko?', a: 'Digi: fast Turkey supply, suitable for most retail. Teraoka: premium Japan, deeper deli/food-service.' },
 
-      { q: 'Delivery time?', a: 'Typically 2 to 5 weeks from Turkey — depending on model and stock.' }
+      { q: 'Delivery time?', a: 'Typically Typically 2 to 5 weeks depending on model and stock — depending on model and stock.' }
 
     ],
 
@@ -586,7 +586,7 @@
 
       heroImageAlt: 'Digi SM-6000 dokunmatik ekranlı PC perakende terazisi — Bizdavar Group',
 
-      description: 'Bizdavar Group; süpermarket, deli, fırın ve perakende zincirleri için Digi System (DIGI) terazi, kasa ve POS tedarik eder. Resmi modeller (SM-6000, W-5600SRX, LX-5600, AW-5600), teknik danışmanlık ve İstanbul\'dan lojistik.',
+      description: 'Bizdavar Group; süpermarket, deli, fırın ve perakende zincirleri için Digi System (DIGI) terazi, kasa ve POS tedarik eder. Resmi modeller (SM-6000, W-5600SRX, LX-5600, AW-5600), teknik danışmanlık ve uluslararası lojistik.',
 
       heroStats: [
 
@@ -608,7 +608,7 @@
 
       { label: 'Retail ve HORECA', desc: 'Süpermarket, deli, restoran ve franchise' },
 
-      { label: 'Hızlı lojistik', desc: 'Türkiye → proje sahası — Japonya\'ya göre daha kısa lead time' }
+      { label: 'Hızlı lojistik', desc: 'Proje sahasına uluslararası lojistik — rekabetçi lead time' }
 
     ],
 
@@ -752,7 +752,7 @@
 
     brand: {
 
-      heroEyebrow: 'Official Teraoka Seiko supply from Japan',
+      heroEyebrow: 'Official Teraoka Seiko supply',
 
       heroHeadline: 'Teraoka Seiko scales & POS',
 
@@ -762,7 +762,7 @@
 
       since: 'Since 1923 · Tokyo',
 
-      description: 'Bizdavar Group supplies Teraoka Seiko scales, label printers and POS for supermarkets, food service and warehouses. Official models (Luxeed-L, W-5600SRX, LX-5600, DS-782), technical consulting and international logistics from Japan.',
+      description: 'Bizdavar Group supplies Teraoka Seiko scales, label printers and POS for supermarkets, food service and warehouses. Official models (Luxeed-L, W-5600SRX, LX-5600, DS-782), technical consulting and international international logistics.',
 
       heroStats: [
 
@@ -796,7 +796,7 @@
 
       { title: 'Precise specifications', desc: 'Model, capacity, resolution and ports on the proforma.' },
 
-      { title: 'Digi alternative for premium projects', desc: 'Digi from Turkey is faster; Teraoka for professional food-service quality.' }
+      { title: 'Digi alternative for premium projects', desc: 'Digi for faster retail rollout; Teraoka for professional food-service quality.' }
 
     ],
 
@@ -1122,7 +1122,7 @@
 
       heroImageAlt: 'Teltonika Fleet Telematics — GPS trackers and fleet management',
 
-      description: 'Bizdavar Group supplies Teltonika Telematics trackers, sensors and fleet solutions for logistics, corporate fleets, assets and IoT projects in Iran and the region. Genuine hardware, TCT/FOTA configuration guidance, model selection consulting and international logistics from Istanbul.',
+      description: 'Bizdavar Group supplies Teltonika Telematics trackers, sensors and fleet solutions for logistics, corporate fleets, assets and IoT projects in Iran and the region. Genuine hardware, TCT/FOTA configuration guidance, model selection consulting and international international logistics.',
 
       heroStats: [
 
@@ -1152,7 +1152,7 @@
 
       { title: 'Right model and connectivity', desc: '2G/4G/M1, CAN bus, OBD plug-and-play or asset tracking — if you are unsure, tell us vehicle type and required data. We recommend from FMB920 to FMC650 or FTC305.' },
 
-      { title: 'Built for regional fleets', desc: 'Transport, logistics, car rental, mining, agriculture, fuel distribution and corporate fleets — with dedicated support from Istanbul.' },
+      { title: 'Built for regional fleets', desc: 'Transport, logistics, car rental, mining, agriculture, fuel distribution and corporate fleets — with dedicated multilingual support.' },
 
       { title: 'Transparent proforma', desc: 'Before payment you receive price, lead time and the official Teltonika order code on a formal proforma.' },
 
@@ -1288,7 +1288,7 @@
 
       { title: 'Accessories and cables', desc: 'DATA/POWER cable, CAN adapter, fuel sensor, beacon' },
 
-      { title: 'International logistics', desc: 'From Europe/Turkey warehouse to project delivery' },
+      { title: 'International logistics', desc: 'From regional warehouse to project delivery' },
 
       { title: 'TCT/FOTA setup guidance', desc: 'Initial configuration and firmware update guide' },
 
@@ -1336,7 +1336,7 @@
 
       heroImageAlt: 'Teltonika Fleet Telematics — GPS tracker ve filo yönetimi',
 
-      description: 'Bizdavar Group; lojistik, kurumsal filo, varlık ve IoT projeleri için Teltonika Telematics tracker, sensör ve filo çözümleri tedarik eder. Orijinal donanım, TCT/FOTA yapılandırma rehberliği, model seçim danışmanlığı ve İstanbul\'dan uluslararası lojistik.',
+      description: 'Bizdavar Group; lojistik, kurumsal filo, varlık ve IoT projeleri için Teltonika Telematics tracker, sensör ve filo çözümleri tedarik eder. Orijinal donanım, TCT/FOTA yapılandırma rehberliği, model seçim danışmanlığı ve uluslararası lojistik.',
 
       heroStats: [
 
@@ -1366,7 +1366,7 @@
 
       { title: 'Doğru model ve bağlantı', desc: '2G/4G/M1, CAN bus, OBD plug-and-play veya asset tracking — emin değilseniz araç tipi ve gerekli veriyi belirtin. FMB920\'den FMC650 veya FTC305\'e kadar öneririz.' },
 
-      { title: 'Bölgesel filolara uygun', desc: 'Taşımacılık, lojistik, araç kiralama, madencilik, tarım, yakıt dağıtımı ve kurumsal filo — İstanbul\'dan özel destek.' },
+      { title: 'Bölgesel filolara uygun', desc: 'Taşımacılık, lojistik, araç kiralama, madencilik, tarım, yakıt dağıtımı ve kurumsal filo — çok dilli özel destek.' },
 
       { title: 'Şeffaf proforma', desc: 'Ödeme öncesi fiyat, lead time ve resmi Teltonika order code proformada.' },
 
@@ -1502,7 +1502,7 @@
 
       { title: 'Aksesuar ve kablo', desc: 'DATA/POWER kablo, CAN adaptör, yakıt sensörü, beacon' },
 
-      { title: 'Uluslararası lojistik', desc: 'Avrupa/Türkiye deposundan proje teslimatına' },
+      { title: 'Uluslararası lojistik', desc: 'uluslararası lojistikle proje teslimatına' },
 
       { title: 'TCT/FOTA kurulum rehberi', desc: 'İlk yapılandırma ve firmware güncelleme kılavuzu' },
 
@@ -1564,11 +1564,11 @@
 
     trustSignals: [
 
-      { label: 'Genuine Prosense product', desc: 'Sourced directly from Prosense Turkey — valid certificate and serial number' },
+      { label: 'Genuine Prosense product', desc: 'Sourced via official Prosense channels — valid certificate and serial number' },
 
       { label: 'Farsi consulting', desc: 'Gas type, range and model selection — via Farsi WhatsApp from anywhere' },
 
-      { label: 'International logistics', desc: 'Purchase, shipping and customs from Istanbul to your project destination' },
+      { label: 'International logistics', desc: 'Purchase, shipping and customs to your project destination destination' },
 
       { label: 'Certification & calibration', desc: 'SIL2/3 · M1 Mining · EN-50545-1 · TÜRKAK accredited calibration' }
 
@@ -1764,7 +1764,7 @@
 
     faq: [
 
-      { q: 'Is the Prosense product genuine?', a: 'Yes — only genuine Prosense products from Turkey are supplied. Each order includes technical specifications, serial numbers and relevant certificates (SIL, M1, EN and others).' },
+      { q: 'Is the Prosense product genuine?', a: 'Yes — only genuine Prosense genuine products are supplied. Each order includes technical specifications, serial numbers and relevant certificates (SIL, M1, EN and others).' },
 
       { q: 'How do I select gas type and model?', a: 'Send hazardous gas type (H2S, CH4, CO, LEL, etc.), install environment (Ex Zone 1/2), measurement range and signal output (4–20 mA, relay, HART) on Farsi WhatsApp. Our technical team recommends the suitable model.' },
 
@@ -1800,7 +1800,7 @@
 
       since: '2006\'dan beri',
 
-      origin: 'Kartal, İstanbul — Türkiye',
+      origin: 'Türkiye',
 
       description: 'Bizdavar Group; SIL/M1/EN sertifikalı Prosense gaz ve alev dedektörü tedarik eder. Farsça (WhatsApp) model seçim danışmanlığı, şeffaf proforma ve İran ile yurt dışındaki Farsça konuşan alıcılar için lojistik koordinasyonu.',
 
@@ -1822,7 +1822,7 @@
 
       { label: 'Farsça danışmanlık', desc: 'Gaz tipi, aralık ve model seçimi — her yerden Farsça WhatsApp ile' },
 
-      { label: 'Uluslararası lojistik', desc: 'İstanbul\'dan proje destinasyonuna satın alma, nakliye ve gümrük' },
+      { label: 'Uluslararası lojistik', desc: 'proje destinasyonuna satın alma, nakliye ve gümrük' },
 
       { label: 'Sertifikasyon ve kalibrasyon', desc: 'SIL2/3 · M1 Maden · EN-50545-1 · TÜRKAK akredite kalibrasyon' }
 
@@ -2056,7 +2056,7 @@
     trustSignals: [
       { label: 'Оригинальный Prosense', desc: 'Прямые поставки из Prosense Turkey — действующий сертификат и серийный номер' },
       { label: 'Техконсультация', desc: 'Тип газа, диапазон и выбор модели — через WhatsApp из любой точки' },
-      { label: 'Международная логистика', desc: 'Закупка, перевозка и таможня из Стамбула до объекта' },
+      { label: 'Международная логистика', desc: 'Закупка, перевозка и таможня международно до объекта' },
       { label: 'Сертификация и калибровка', desc: 'SIL2/3 · M1 Mining · EN-50545-1 · калибровка TÜRKAK' }
     ],
     whyBuyFromUs: [
@@ -2183,7 +2183,7 @@
     trustSignals: [
       { label: 'منتج Prosense أصلي', desc: 'توريد مباشر من Prosense تركيا — شهادة سارية ورقم تسلسلي' },
       { label: 'استشارة فنية', desc: 'نوع الغاز والمدى واختيار الموديل — عبر واتساب من أي مكان' },
-      { label: 'لوجستيات دولية', desc: 'شراء وشحن وجمارك من إسطنبول إلى موقع مشروعك' },
+      { label: 'لوجستيات دولية', desc: 'شراء وشحن وجمارك دوليًا إلى موقع مشروعك' },
       { label: 'شهادة ومعايرة', desc: 'SIL2/3 · M1 Mining · EN-50545-1 · معايرة TÜRKAK' }
     ],
     whyBuyFromUs: [
@@ -2332,7 +2332,7 @@
 
       { label: 'Technical consulting', desc: 'Engineering support — model selection based on your real process conditions' },
 
-      { label: 'International logistics', desc: 'Purchase, shipping and customs coordination from Istanbul to project delivery' },
+      { label: 'International logistics', desc: 'Purchase, shipping and customs coordination to project delivery' },
 
       { label: 'Project support', desc: 'Assistance with order code, datasheet and automation team coordination' }
 
@@ -2588,7 +2588,7 @@
 
       { label: 'Teknik danışmanlık', desc: 'Mühendislik desteği — gerçek proses koşullarınıza göre model seçimi' },
 
-      { label: 'Uluslararası lojistik', desc: 'İstanbul\'dan proje teslimatına satın alma, nakliye ve gümrük koordinasyonu' },
+      { label: 'Uluslararası lojistik', desc: 'proje teslimatına satın alma, nakliye ve gümrük koordinasyonu' },
 
       { label: 'Proje desteği', desc: 'Order code, datasheet ve otomasyon ekibi koordinasyonunda yardım' }
 
@@ -2959,7 +2959,7 @@
     trustSignals: [
       { label: 'منتج VEGA أصلي', desc: 'من قنوات VEGA الرسمية — لا نسخ ولا سوق رمادية' },
       { label: 'استشارة فنية', desc: 'دعم هندسي — اختيار الموديل وفق ظروف عمليتك الفعلية' },
-      { label: 'لوجستيات دولية', desc: 'شراء وشحن وتنسيق جمركي من إسطنبول إلى موقع المشروع' },
+      { label: 'لوجستيات دولية', desc: 'شراء وشحن وتنسيق جمركي دوليًا إلى موقع المشروع' },
       { label: 'دعم المشروع', desc: 'مساعدة في رمز الطلب وdatasheet والتنسيق مع فريق الأتمتة' }
     ],
     whyBuyFromUs: [

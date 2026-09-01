@@ -333,7 +333,7 @@ window.fillContactDetails = function () {
         <div class="contact-info__label">${t('contactPage.location', 'موقعیت')}</div>
 
         <div class="contact-info__value">
-          <div><strong>${t('contactPage.hqLabel', 'دفتر اصلی')}:</strong> ${C.contact.address}</div>
+          <div><strong>${t('contactPage.hqLabel', 'دفاتر')}:</strong> ${C.contact.address}</div>
           ${am ? `<div class="contact-info__subaddr"><strong>${t('contactPage.armeniaOffice', 'ارمنستان — ایروان')}:</strong> ${am.addressFa || am.address}<br><span class="contact-info__entity">${am.legalName} (${am.companyType || 'LLC'})</span>${am.spyur ? ` · <a href="${am.spyur}" target="_blank" rel="noopener noreferrer">Spyur.am</a>` : ''}</div>` : ''}
           ${ir ? `<div class="contact-info__subaddr"><strong>${t('contactPage.iranOffice', 'ایران — تبریز')}:</strong> ${ir.city || ir.address || 'تبریز'}${ir.province ? ` · ${ir.province}` : ''}<br><span class="contact-info__entity">${ir.legalNameFa}</span>${ir.jooyeshgar ? ` · <a href="${ir.jooyeshgar}" target="_blank" rel="noopener noreferrer">${t('contactPage.jooyeshgar', 'جویشگر')}</a>` : ''}</div>` : ''}
         </div>
@@ -573,6 +573,9 @@ function initContactForm() {
         const json = await res.json().catch(() => ({}));
         if (!res.ok) throw new Error(json.error || 'submit failed');
 
+        if (typeof window.bizdavarTrackLead === 'function') {
+          window.bizdavarTrackLead('contact_form_bizhub', { service: form.service.value });
+        }
         showFeedback('formSuccess', 'پیام شما ثبت شد. به‌زودی با شما تماس می‌گیریم.', null);
         form.reset();
       } catch {
@@ -614,6 +617,9 @@ function initContactForm() {
 
         if (!res.ok) throw new Error('formspree');
 
+        if (typeof window.bizdavarTrackLead === 'function') {
+          window.bizdavarTrackLead('contact_form_formspree', { service: form.service.value });
+        }
         showFeedback('formSuccess', 'پیام شما با موفقیت ارسال شد. به‌زودی با شما تماس می‌گیریم.', null);
         form.reset();
       } catch {
@@ -638,6 +644,9 @@ function initContactForm() {
       : `https://wa.me/${waNum}?text=${encodeURIComponent(bodyText)}`;
 
     window.open(waHref, '_blank', 'noopener,noreferrer');
+    if (typeof window.bizdavarTrackLead === 'function') {
+      window.bizdavarTrackLead('contact_form_whatsapp', { service: form.service.value });
+    }
     showFeedback(
       'formSuccessWhatsapp',
       'پیام شما برای واتساپ آماده شد. اگر پنجره باز نشد، از دکمه‌های واتساپ همین صفحه استفاده کنید.',

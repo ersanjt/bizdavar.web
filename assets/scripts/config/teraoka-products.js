@@ -57,7 +57,7 @@
       { icon: 'target', title: 'کیفیت premium ژاپن', desc: 'برای پروژه‌هایی که دقت، دوام و brand image مهم است — Teraoka Seiko استاندارد صنعت food retail در آسیا و اروپا است.' },
       { icon: 'factory', title: 'اکوسystem یکپارچه', desc: 'ترازوی service (Luxeed-L / DS-782)، POS (W-5600SRX) و label printer (LX-5600) — یک پیش‌فاکتور هماهنگ.' },
       { icon: 'document', title: 'مشخصات دقیق در پیش‌فاکتور', desc: 'مدل، ظرفیت، رزولوشن، پورت و Incoterms — قبل از پرداخت.' },
-      { icon: 'handshake', title: 'Digi یا Teraoka؟', desc: 'Digi System از ترکیه lead time کوتاه‌تر؛ Teraoka Seiko برای food-service حرفه‌ای و پروژه premium — هر دو از بیزدوار.' }
+      { icon: 'handshake', title: 'Digi یا Teraoka؟', desc: 'Digi System بین‌المللی lead time کوتاه‌تر؛ Teraoka Seiko برای food-service حرفه‌ای و پروژه premium — هر دو از بیزدوار.' }
     ],
 
     purchaseSteps: [
@@ -208,7 +208,7 @@
       { title: 'مشاوره انتخاب Luxeed / W / LX', desc: 'بر اساس نوع فروشگاه، layout و budget' },
       { title: 'پیش‌فاکتور رسمی', desc: 'مدل دقیق، Incoterms، lead time و مشخصات فنی' },
       { title: 'لجستیک ژاپن → ایران', desc: 'حمل، بیمه، هماهنگی ترخیص' },
-      { title: 'جایگزین Digi System', desc: 'اگر lead time کوتاه‌تر از ترکیه اولویت است' },
+      { title: 'جایگزین Digi System', desc: 'اگر lead time کوتاه‌تر بین‌المللی اولویت است' },
       { title: 'پشتیبانی فارسی', desc: 'استعلام، پیگیری سفارش و FAQ فنی' }
     ],
 

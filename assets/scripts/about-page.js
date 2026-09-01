@@ -9,7 +9,7 @@
   };
 
   const DEFAULT_STATS = [
-    { value: '۱۳+', label: 'سال تجربه' },
+    { value: '۱۲+', label: 'سال تجربه' },
     { value: '۱۰۰+', label: 'پروژه' },
     { value: '۱۱', label: 'کشور' },
     { value: '۴', label: 'محور خدمات' }

@@ -34,16 +34,16 @@
       logoAlt: 'لوگوی Digi System — ترازو و POS فروشگاهی DIGI',
       heroImage: hero,
       heroImageAlt: 'ترازوی PC فروشگاهی Digi SM-6000 با صفحه لمسی و چاپ لیبل — بیزدوار گروپ',
-      heroEyebrow: 'تامین تجهیزات خرده‌فروشی Digi System (DIGI) از ترکیه',
+      heroEyebrow: 'تامین تجهیزات خرده‌فروشی Digi System (DIGI) بین‌المللی',
       heroHeadline: 'ترازو و POS Digi System',
-      heroHeadlineSub: 'SM-6000 · W-5600SRX · LX-5600 · AW-5600 — تامین سریع از ترکیه برای retail و food service',
+      heroHeadlineSub: 'SM-6000 · W-5600SRX · LX-5600 · AW-5600 — تامین سریع بین‌المللی برای retail و food service',
       tagline: 'Retail & POS Equipment',
-      taglineFa: 'تجهیزات خرده‌فروشی — DIGI · تامین از ترکیه',
+      taglineFa: 'تجهیزات خرده‌فروشی — DIGI · تامین بین‌المللی',
       since: 'از سال ۱۹۷۴ · Istanbul',
-      descriptionFa: 'بیزدوار گروپ تامین‌کننده ترازو، صندوق فروشگاهی و سیستم POS برند Digi System (DIGI) برای سوپرمارکت، deli، نانوایی و زنجیره‌های retail در ایران است. انتخاب مدل رسمی (SM-6000، W-5600SRX، LX-5600، AW-5600)، مشاوره فنی و لجستیک از استانبول.',
+      descriptionFa: 'بیزدوار گروپ تامین‌کننده ترازو، صندوق فروشگاهی و سیستم POS برند Digi System (DIGI) برای سوپرمارکت، deli، نانوایی و زنجیره‌های retail در ایران است. انتخاب مدل رسمی (SM-6000، W-5600SRX، LX-5600، AW-5600)، مشاوره فنی و لجستیک — دفاتر ایران، ترکیه، ارمنستان و دبی.',
       heroStats: [
         { value: 'POS+Scale', label: 'یکپارچه retail' },
-        { value: 'TR', label: 'تامین از ترکیه' },
+        { value: 'TR', label: 'تامین بین‌المللی' },
         { value: 'Metrology', label: 'ترازوی قانونی' }
       ]
     },
@@ -59,14 +59,14 @@
       { icon: 'target', title: 'راه‌حل کامل فروشگاه', desc: 'ترازوی PC (SM-6000) + POS (W-5600SRX) + لیبل (LX-5600) — یک پیش‌فاکتور یکپارچه.' },
       { icon: 'factory', title: 'مناسب بازار ایران', desc: 'سوپرمارکت محلی، franchise و B2B خرده‌فروشی — با پشتیبانی فارسی.' },
       { icon: 'document', title: 'مشخصات شفاف', desc: 'مدل دقیق، ظرفیت ترازو، پورت‌ها و نرم‌افزار در پیش‌فاکتور.' },
-      { icon: 'handshake', title: 'مقایسه با Teraoka', desc: 'Digi برای تامین سریع از ترکیه؛ Teraoka Seiko برای پروژه premium ژاپن — هر دو از بیزدوار.' }
+      { icon: 'handshake', title: 'مقایسه با Teraoka', desc: 'Digi برای تامین سریع بین‌المللی؛ Teraoka Seiko برای پروژه premium ژاپن — هر دو از بیزدوار.' }
     ],
 
     purchaseSteps: [
       { num: '۱', title: 'استعلام', desc: 'نوع فروشگاه، مدل (SM-6000 / W-5600SRX / LX-5600)، تعداد صندوق' },
       { num: '۲', title: 'مشاوره', desc: 'پیشنهاد scale + POS + label printer متناسب با layout' },
       { num: '۳', title: 'پیش‌فاکتور', desc: 'قیمت Digi، lead time ترکیه، Incoterms و نصب اولیه' },
-      { num: '۴', title: 'تامین', desc: 'سفارش رسمی — بسته‌بندی و حمل از استانبول' },
+      { num: '۴', title: 'تامین', desc: 'سفارش رسمی — بسته‌بندی و حمل بین‌المللی' },
       { num: '۵', title: 'تحویل', desc: 'تحویل در ایران — راهنمای راه‌اندازی و کالیبراسیون اولیه' }
     ],
 
@@ -213,7 +213,7 @@
     services: [
       { title: 'مشاوره انتخاب SM / W / LX', desc: 'بر اساس نوع فروشگاه، layout و budget' },
       { title: 'پیش‌فاکتور یکپارچه', desc: 'ترازو + POS + label printer در یک سند' },
-      { title: 'لجستیک از ترکیه', desc: 'حمل سریع‌تر برای پروژه retail' },
+      { title: 'لجستیک بین‌المللی', desc: 'حمل سریع‌تر برای پروژه retail' },
       { title: 'هماهنگی با Teraoka Seiko', desc: 'اگر پروژه premium ژاپن نیاز دارد — هر دو برند از بیزدوار' },
       { title: 'پشتیبانی فارسی', desc: 'استعلام و پیگیری سفارش' }
     ],
@@ -222,8 +222,8 @@
       { q: 'Digi System اصل است؟', a: 'بله — تجهیزات اصل Digi System (DIGI) با مشخصات فنی و مدل رسمی در پیش‌فاکتور.' },
       { q: 'مدل‌های شاخص کدام‌اند؟', a: 'SM-6000 (PC scale)، W-5600SRX (POS)، LX-5600 (label printer)، AW-5600 (AI checkout)، DS-782 (counter).' },
       { q: 'ترازوی قانونی (legal) دارید؟', a: 'بله — SM-6000 و SM-5300 برای فروش بر اساس وزن با metrology معتبر.' },
-      { q: 'Digi یا Teraoka Seiko؟', a: 'Digi: تامین سریع از ترکیه، مناسب اکثر retail. Teraoka: premium ژاپن، deli/food-service عمیق‌تر.' },
-      { q: 'زمان تحویل؟', a: 'معمولاً ۲ تا ۵ هفته از ترکیه — بسته به مدل و موجودی.' }
+      { q: 'Digi یا Teraoka Seiko؟', a: 'Digi: تامین سریع بین‌المللی، مناسب اکثر retail. Teraoka: premium ژاپن، deli/food-service عمیق‌تر.' },
+      { q: 'زمان تحویل؟', a: 'معمولاً ۲ تا ۵ هفته بین‌المللی — بسته به مدل و موجودی.' }
     ],
 
     inquiryTemplate: 'سلام، درخواست استعلام {product} از Digi System دارم.\n\nنوع فروشگاه:\nمدل (SM-6000 / W-5600SRX / LX-5600 / AW-5600):\nتعداد:\n',
