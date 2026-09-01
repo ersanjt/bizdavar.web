@@ -6,12 +6,15 @@
   const U = 'assets/images/uwt/';
   const logo = 'assets/images/partners/uwt.svg';
 
-  const series = (names, note, featuredNames) =>
-    names.map(name => ({
-      name,
-      note: note || 'UWT level sensor',
-      featured: featuredNames ? featuredNames.includes(name) : false
-    }));
+  const series = (items, note, featuredNames) =>
+    items.map(item => {
+      const row = typeof item === 'string' ? { name: item } : item;
+      return {
+        note: note || 'UWT level sensor',
+        featured: !!(featuredNames && featuredNames.includes(row.name)),
+        ...row
+      };
+    });
 
   window.UWT_CATALOG = {
     brand: {
@@ -161,8 +164,8 @@
         titleTr: 'Point Level Measurement',
         titleEn: 'Point Level Measurement',
         icon: 'sensor',
-        image: U + 'point-level.jpg',
-        imageAlt: 'UWT point level switches for bulk solids',
+        image: U + 'category-rotonivo.webp',
+        imageAlt: 'UWT Rotonivo rotary paddle point level switch',
         desc: 'تشخیص پر، خالی و demand در سیلو و مخزن — پدل دوار، لرزشی و خازنی',
         series: [
           {
@@ -268,7 +271,14 @@
             ]
           },
           ...series(
-          ['Rotonivo RN 3000', 'Rotonivo RN 4000', 'Rotonivo RN 6000 (SIL 2)', 'Vibranivo VN 1000/2000', 'Vibranivo VN 7 liquid fork', 'Capanivo CN 4000/7000'],
+          [
+            { name: 'Rotonivo RN 3000', image: U + 'product-rn3001.jpg', imageAlt: 'UWT Rotonivo RN 3001 rotary paddle' },
+            { name: 'Rotonivo RN 4000', image: U + 'category-rotonivo.webp', imageAlt: 'UWT Rotonivo RN 4000 rotary paddle' },
+            { name: 'Rotonivo RN 6000 (SIL 2)', image: U + 'product-rn6001.jpg', imageAlt: 'UWT Rotonivo RN 6001 SIL 2 rotary paddle' },
+            { name: 'Vibranivo VN 1000/2000', image: U + 'product-vn1020.jpg', imageAlt: 'UWT Vibranivo VN 1020 vibrating fork' },
+            { name: 'Vibranivo VN 7 liquid fork', image: U + 'product-vn7120.jpg', imageAlt: 'UWT Vibranivo VN 7120 liquid fork' },
+            { name: 'Capanivo CN 4000/7000', image: U + 'product-cn4020.jpg', imageAlt: 'UWT Capanivo CN 4020 capacitive switch' }
+          ],
           'Point level / solids & liquids',
           ['Rotonivo RN 3000', 'Rotonivo RN 6000 (SIL 2)', 'Vibranivo VN 7 liquid fork']
         )
@@ -280,11 +290,18 @@
         titleTr: 'NivoRadar continuous radar',
         titleEn: 'NivoRadar continuous radar',
         icon: 'sensor',
-        image: U + 'continuous-level.jpg',
-        imageAlt: 'UWT NivoRadar continuous level measurement',
+        image: U + 'category-nivoradar.webp',
+        imageAlt: 'UWT NivoRadar 80 GHz continuous level sensor',
         desc: 'رادار بدون تماس FMCW برای جامدات و مایعات — سری NR 3 / 4 / 7 / 8',
         series: series(
-          ['NivoRadar NR 3100 / 3200 / 3300', 'NivoRadar NR 4100 solids', 'NivoRadar NR 7100 / 7200 liquids', 'NivoRadar NR 8100–8500 liquids', 'NivoRadar NR 3 / NR 4 new solids', 'NivoRadar NR 7 / NR 8 new liquids'],
+          [
+            { name: 'NivoRadar NR 3100 / 3200 / 3300', image: U + 'product-nr3300.jpg', imageAlt: 'UWT NivoRadar NR 3300 solids radar' },
+            { name: 'NivoRadar NR 4100 solids', image: U + 'product-nr4100.jpg', imageAlt: 'UWT NivoRadar NR 4100 solids radar' },
+            { name: 'NivoRadar NR 7100 / 7200 liquids', image: U + 'product-nr7200.jpg', imageAlt: 'UWT NivoRadar NR 7200 liquid radar' },
+            { name: 'NivoRadar NR 8100–8500 liquids', image: U + 'product-nr8200.jpg', imageAlt: 'UWT NivoRadar NR 8200 liquid radar' },
+            { name: 'NivoRadar NR 3 / NR 4 new solids', image: U + 'product-nr3300.jpg', imageAlt: 'UWT NivoRadar NR 3 / NR 4 solids radar' },
+            { name: 'NivoRadar NR 7 / NR 8 new liquids', image: U + 'product-nr8200.jpg', imageAlt: 'UWT NivoRadar NR 7 / NR 8 liquid radar' }
+          ],
           '80 GHz FMCW radar',
           ['NivoRadar NR 4100 solids', 'NivoRadar NR 7100 / 7200 liquids', 'NivoRadar NR 8100–8500 liquids']
         )
@@ -295,11 +312,15 @@
         titleTr: 'NivoGuide guided wave radar',
         titleEn: 'NivoGuide guided wave radar',
         icon: 'droplet',
-        image: U + 'product-ng8100.jpg',
-        imageAlt: 'UWT NivoGuide TDR guided radar',
+        image: U + 'product-ng8200.jpg',
+        imageAlt: 'UWT NivoGuide guided wave radar',
         desc: 'TDR برای مایعات، خمیر، کف و اندازه‌گیری اینترفیس — فشار و دمای بالا',
         series: series(
-          ['NivoGuide NG 8100 solids', 'NivoGuide NG 8200 liquids', 'Interface measurement'],
+          [
+            { name: 'NivoGuide NG 8100 solids', image: U + 'product-ng8100.jpg', imageAlt: 'UWT NivoGuide NG 8100 solids TDR' },
+            { name: 'NivoGuide NG 8200 liquids', image: U + 'product-ng8200.jpg', imageAlt: 'UWT NivoGuide NG 8200 liquid TDR' },
+            { name: 'Interface measurement', image: U + 'product-ng8200.jpg', imageAlt: 'UWT NivoGuide interface measurement' }
+          ],
           'Guided radar / TDR',
           ['NivoGuide NG 8200 liquids', 'NivoGuide NG 8100 solids']
         )
@@ -310,11 +331,15 @@
         titleTr: 'Visualisation & monitoring',
         titleEn: 'Visualisation & monitoring',
         icon: 'list',
-        image: U + 'visualisation.jpg',
-        imageAlt: 'UWT NivoTec visualisation and NivoLED signal lamp',
+        image: U + 'product-nivotec.jpg',
+        imageAlt: 'UWT NivoTec visualisation display',
         desc: 'NivoTec نمایش محلی سطح و NivoLED چراغ سیگنال فیلد',
         series: series(
-          ['NivoTec NT 9000 visualisation', 'NivoLED NL 9000 signal lamp', 'NivoLED NL 9 local status'],
+          [
+            { name: 'NivoTec NT 9000 visualisation', image: U + 'product-nivotec.jpg', imageAlt: 'UWT NivoTec NT 9000 visualisation' },
+            { name: 'NivoLED NL 9000 signal lamp', image: U + 'product-nivoled.jpg', imageAlt: 'UWT NivoLED NL 9000 signal lamp' },
+            { name: 'NivoLED NL 9 local status', image: U + 'product-nivoled.jpg', imageAlt: 'UWT NivoLED NL 9 local status lamp' }
+          ],
           'Monitoring',
           ['NivoTec NT 9000 visualisation', 'NivoLED NL 9000 signal lamp']
         )
@@ -322,23 +347,23 @@
     ],
 
     iranIndustries: [
-      { name: 'سیمان و مصالح', desc: 'Rotonivo و NivoRadar برای سیلو کلینکر، سیمان و سنگ‌دانه', image: U + 'industry-solids.jpg', imageAlt: 'UWT level sensors for cement silos Iran', icon: 'factory' },
-      { name: 'غذا و غلات', desc: 'Vibranivo و Rotonivo — سیلو آرد، شکر، خوراک دام', image: U + 'industry-solids.jpg', imageAlt: 'UWT Vibranivo food grain silo', icon: 'globe' },
-      { name: 'پتروشیمی و شیمیایی', desc: 'NivoGuide و NivoRadar — مخزن مایع، Ex و SIL', image: U + 'industry-liquids.jpg', imageAlt: 'UWT radar for chemical tanks Iran', icon: 'barrel' },
-      { name: 'پلاستیک و پلیمر', desc: 'سوئیچ پدل و رادار برای گرانول و پودر پلیمر', image: U + 'point-level.jpg', imageAlt: 'UWT point level plastics silo', icon: 'factory' },
-      { name: 'آب و فاضلاب', desc: 'رادار بدون تماس برای مخزن آب و حوضچه', image: U + 'industry-liquids.jpg', imageAlt: 'UWT NivoRadar water wastewater', icon: 'droplet' },
-      { name: 'انرژی و نیروگاه', desc: 'سطح زغال، خاکستر و سوخت — شرایط سخت غبار', image: U + 'industry-safety.jpg', imageAlt: 'UWT level sensors power plant', icon: 'bolt' }
+      { name: 'سیمان و مصالح', desc: 'Rotonivo و NivoRadar برای سیلو کلینکر، سیمان و سنگ‌دانه', image: U + 'product-rn3001.jpg', imageAlt: 'UWT Rotonivo for cement silos Iran', icon: 'factory' },
+      { name: 'غذا و غلات', desc: 'Vibranivo و Rotonivo — سیلو آرد، شکر، خوراک دام', image: U + 'product-vn1020.jpg', imageAlt: 'UWT Vibranivo for food and grain silos', icon: 'globe' },
+      { name: 'پتروشیمی و شیمیایی', desc: 'NivoGuide و NivoRadar — مخزن مایع، Ex و SIL', image: U + 'product-ng8200.jpg', imageAlt: 'UWT NivoGuide for chemical tanks Iran', icon: 'barrel' },
+      { name: 'پلاستیک و پلیمر', desc: 'سوئیچ پدل و رادار برای گرانول و پودر پلیمر', image: U + 'product-solido500.png', imageAlt: 'UWT Solido paddle switch for plastics silos', icon: 'factory' },
+      { name: 'آب و فاضلاب', desc: 'رادار بدون تماس برای مخزن آب و حوضچه', image: U + 'product-nr7200.jpg', imageAlt: 'UWT NivoRadar for water and wastewater', icon: 'droplet' },
+      { name: 'انرژی و نیروگاه', desc: 'سطح زغال، خاکستر و سوخت — شرایط سخت غبار', image: U + 'product-nr4100.jpg', imageAlt: 'UWT NivoRadar for power plant silos', icon: 'bolt' }
     ],
 
     industries: [
-      { name: 'سیمان و مصالح', nameTr: 'Building materials', desc: 'Silo high/low and continuous radar', image: U + 'industry-solids.jpg', imageAlt: 'UWT cement bulk solids', icon: 'factory' },
-      { name: 'غذا و نوشیدنی', nameTr: 'Food & Beverage', desc: 'Hygienic vibration and radar options', image: U + 'industry-solids.jpg', imageAlt: 'UWT food industry sensors', icon: 'globe' },
-      { name: 'شیمیایی', nameTr: 'Chemical', desc: 'Ex-rated switches and guided radar', image: U + 'industry-liquids.jpg', imageAlt: 'UWT chemical process sensors', icon: 'barrel' },
-      { name: 'پلاستیک', nameTr: 'Plastics', desc: 'Granule and powder point level', image: U + 'point-level.jpg', imageAlt: 'UWT plastics silo sensors', icon: 'factory' },
+      { name: 'سیمان و مصالح', nameTr: 'Building materials', desc: 'Silo high/low and continuous radar', image: U + 'product-rn3001.jpg', imageAlt: 'UWT cement bulk solids', icon: 'factory' },
+      { name: 'غذا و نوشیدنی', nameTr: 'Food & Beverage', desc: 'Hygienic vibration and radar options', image: U + 'product-vn1020.jpg', imageAlt: 'UWT food industry sensors', icon: 'globe' },
+      { name: 'شیمیایی', nameTr: 'Chemical', desc: 'Ex-rated switches and guided radar', image: U + 'product-ng8200.jpg', imageAlt: 'UWT chemical process sensors', icon: 'barrel' },
+      { name: 'پلاستیک', nameTr: 'Plastics', desc: 'Granule and powder point level', image: U + 'product-els-r1.jpg', imageAlt: 'UWT plastics silo sensors', icon: 'factory' },
       { name: 'چوب و بازیافت', nameTr: 'Wood & recycling', desc: 'Dusty bulk solids detection', image: U + 'industry-technology.webp', imageAlt: 'UWT wood chip silo sensors', icon: 'pickaxe' },
-      { name: 'انرژی', nameTr: 'Power', desc: 'Fuel, ash and additive silos', image: U + 'industry-safety.jpg', imageAlt: 'UWT power plant level', icon: 'bolt' },
-      { name: 'آب', nameTr: 'Water', desc: 'Non-contact radar on tanks', image: U + 'industry-liquids.jpg', imageAlt: 'UWT water tank radar', icon: 'droplet' },
-      { name: 'خوراک دام', nameTr: 'Animal feed', desc: 'Paddle and vibration in feed mills', image: U + 'industry-solids.jpg', imageAlt: 'UWT animal feed mill sensors', icon: 'factory' }
+      { name: 'انرژی', nameTr: 'Power', desc: 'Fuel, ash and additive silos', image: U + 'product-nr3300.jpg', imageAlt: 'UWT power plant level', icon: 'bolt' },
+      { name: 'آب', nameTr: 'Water', desc: 'Non-contact radar on tanks', image: U + 'product-nr7200.jpg', imageAlt: 'UWT water tank radar', icon: 'droplet' },
+      { name: 'خوراک دام', nameTr: 'Animal feed', desc: 'Paddle and vibration in feed mills', image: U + 'product-rn6001.jpg', imageAlt: 'UWT animal feed mill sensors', icon: 'factory' }
     ],
 
     academy: {
