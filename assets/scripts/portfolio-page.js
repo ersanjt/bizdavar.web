@@ -108,7 +108,7 @@
       const external = !p.internal;
       const roleLabel = roleLabels[role] || (external ? roleLabels.website || 'وبسایت' : roleLabels.page || 'صفحه بیزدوار');
       const logoHtml = p.logo
-        ? `<div class="portfolio-card__logo"><img src="${path(p.logo)}" alt="${p.name} logo" loading="lazy" width="160" height="52"></div>`
+        ? `<div class="portfolio-card__logo${p.appStoreUrl ? ' portfolio-card__logo--app' : ''}"><img src="${path(p.logo)}" alt="${p.name} logo" loading="lazy" width="160" height="52"></div>`
         : `<div class="portfolio-card__logo portfolio-card__logo--text"><span>${p.name}</span></div>`;
 
       return `
@@ -127,7 +127,7 @@
               <span class="portfolio-card__links">
                 <a href="${url}" class="portfolio-card__link"
                    ${external ? 'target="_blank" rel="noopener noreferrer"' : ''}>
-                  ${t('common.viewSite', 'مشاهده وبسایت')}${arrow()}
+                  ${role === 'case-study' && p.internal ? t('common.viewPage', 'مشاهده صفحه') : external ? t('common.viewSite', 'مشاهده وبسایت') : t('common.viewPage', 'مشاهده صفحه')}${arrow()}
                 </a>
                 <a href="${p.appStoreUrl}" class="portfolio-card__link portfolio-card__link--app"
                    target="_blank" rel="noopener noreferrer">

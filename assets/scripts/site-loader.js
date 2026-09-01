@@ -14,6 +14,13 @@
   if (!el) return;
 
   var BASE = '/assets/scripts/';
+  var ASSET_VER = '20260831c';
+
+  // Inline page boots run before deferred chain scripts; queue until bootstrap.js.
+  window.bizdavarPageInit = window.bizdavarPageInit || function (fn) {
+    if (typeof fn !== 'function') return;
+    (window.__bizdavarBootQ = window.__bizdavarBootQ || []).push(fn);
+  };
 
   function split(name) {
     return (el.getAttribute(name) || '')
@@ -33,6 +40,20 @@
     else afterPageI18n.push(p);
   });
 
+  var loc = (window.BIZDAVAR_LOCALE_URL && window.BIZDAVAR_LOCALE_URL.currentLocale)
+    ? window.BIZDAVAR_LOCALE_URL.currentLocale()
+    : String(document.documentElement.lang || 'fa').slice(0, 2).toLowerCase();
+  var isArticle = document.body && (
+    document.body.getAttribute('data-page') === 'article' ||
+    document.body.getAttribute('data-article')
+  );
+  var i18nPacks = [
+    'i18n/locales-pages.js',
+    'i18n/locale-seo.js'
+  ];
+  if (loc === 'ru' || loc === 'ar') i18nPacks.push('i18n/locales-ru-ar.js');
+  if (isArticle) i18nPacks.push('i18n/articles-bodies.js');
+
   var chain = [
     'config/paths.js',
     'config/site-config.js'
@@ -48,11 +69,13 @@
     'i18n/i18n.js',
     'i18n/page-i18n.js'
   ], afterPageI18n, [
+    'components/page-shell.js',
     'components/biz-icons.js',
     'components/context.js',
     'components/chrome.js',
     'components/schema.js',
-    'components/grids.js'
+    'components/grids.js',
+    'components/lead-track.js'
   ], beforeMain, [
     'main.js',
     'conversions.js',
@@ -63,6 +86,6 @@
   ]);
 
   document.write(chain.map(function (p) {
-    return '<script src="' + BASE + p + '"><\/script>';
+    return '<script defer src="' + BASE + p + '?v=' + ASSET_VER + '"><\/script>';
   }).join('\n'));
 })();

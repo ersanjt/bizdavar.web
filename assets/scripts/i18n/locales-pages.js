@@ -14,8 +14,8 @@
       { title: 'SMM yönetimi', subtitle: 'Social Media Management · İçerik, reklam ve büyüme', body: 'Sosyal medyada profesyonel görünmek isteyen markalar için içerik takvimi, tasarım, metin, kampanya ve büyüme raporu.', tags: ['Instagram', 'LinkedIn', 'Content', 'Ads'], checks: ['İçerik stratejisi ve yayın takvimi', 'Post ve story tasarımı', 'Türkçe, Farsça ve İngilizce metin yazımı', 'Hedefli reklam ve kampanya', 'Aylık rapor ve iyileştirme önerisi'], cta: 'SMM iş birliğine başla' }
     ],
     en: [
-      { title: 'Digital marketing', subtitle: 'Digital Marketing · Strategy and campaign delivery', body: 'Bizdavar Group increases conversion and online sales through modern digital marketing strategies. Related article: <a href="articles/digital-marketing">How digital marketing increases sales</a>.', tags: ['Google Ads', 'SEO', 'CRO', 'Automation'], checks: ['Competitor and audience analysis', 'Google and social media campaigns', 'Conversion rate optimization (CRO)', 'Marketing automation and email', 'Performance reporting and analysis'], cta: 'Request consulting' },
-      { title: 'Web design and development', subtitle: 'Web Design · Corporate, e-commerce and landing pages', body: 'From corporate sites to WooCommerce stores and landing pages, we build for speed, UX, SEO and conversion. For fast delivery, see <a href="fast">Fast Web Studio</a>.', tags: ['WordPress', 'WooCommerce', 'Landing', 'SEO'], checks: ['Responsive UI/UX design', 'Corporate or e-commerce implementation', 'Contact form, WhatsApp and social links', 'Speed, security and SSL optimization', 'Website management training'], cta: 'View web design plans' },
+      { title: 'Digital marketing', subtitle: 'Digital Marketing · Strategy and campaign delivery', body: 'Bizdavar Group runs English-first campaigns for US and EU buyers — billed in USD or EUR. Related: <a href="articles/digital-marketing-us-eu">digital marketing for US and EU</a>.', tags: ['Google Ads', 'SEO', 'CRO', 'Automation'], checks: ['Competitor and audience analysis', 'Google and social media campaigns', 'Conversion rate optimization (CRO)', 'Marketing automation and email', 'Performance reporting and analysis'], cta: 'Request consulting' },
+      { title: 'Web design and development', subtitle: 'Web Design · Corporate, e-commerce and landing pages', body: 'English sites for US and EU from $99 / ~€90, invoiced in USD or EUR. See <a href="articles/website-design-us-eu">US/EU website design</a> and <a href="fast">Fast Web Studio</a>.', tags: ['WordPress', 'WooCommerce', 'Landing', 'SEO'], checks: ['Responsive UI/UX design', 'Corporate or e-commerce implementation', 'Contact form, WhatsApp and social links', 'Speed, security and SSL optimization', 'Website management training'], cta: 'View web design plans' },
       { title: 'SMM management', subtitle: 'Social Media Management · Content, ads and growth', body: 'Content calendar, post design, captions, campaigns and growth reporting for brands that want a professional social media presence.', tags: ['Instagram', 'LinkedIn', 'Content', 'Ads'], checks: ['Content strategy and publishing calendar', 'Post and story design', 'Persian, Turkish and English copywriting', 'Targeted ads and campaigns', 'Monthly reporting and improvement ideas'], cta: 'Start SMM cooperation' }
     ]
   };
@@ -91,18 +91,21 @@
 
   const fastRelatedLinks = {
     fa: [
+      { title: 'طراحی سایت اروپا و آمریکا', url: 'articles/website-design-us-eu', desc: 'از ۹۹ دلار / فاکتور یورو' },
       { title: 'مقاله Fast Studio', url: 'articles/fast-studio', desc: 'راهنمای سفارش' },
       { title: 'چک‌لیست ۵ روزه', url: 'articles/website-speed-5-days', desc: 'آماده‌سازی محتوا' },
       { title: 'وب و اپ اختصاصی', url: 'custom-web-app', desc: 'پروژه سفارشی' },
       { title: 'نمونه‌کارها', url: 'portfolio', desc: 'پروژه‌های بیزدوار' }
     ],
     tr: [
+      { title: 'ABD/AB web tasarım', url: 'articles/website-design-us-eu', desc: '$99’dan / EUR fatura' },
       { title: 'Fast Studio makalesi', url: 'articles/fast-studio', desc: 'Sipariş rehberi' },
       { title: '5 günlük checklist', url: 'articles/website-speed-5-days', desc: 'İçerik hazırlığı' },
       { title: 'Özel web & uygulama', url: 'custom-web-app', desc: 'Özel proje' },
       { title: 'Portfolyo', url: 'portfolio', desc: 'Bizdavar projeleri' }
     ],
     en: [
+      { title: 'US & EU website design', url: 'articles/website-design-us-eu', desc: 'From $99 / EUR invoice' },
       { title: 'Fast Studio article', url: 'articles/fast-studio', desc: 'Ordering guide' },
       { title: '5-day checklist', url: 'articles/website-speed-5-days', desc: 'Content prep' },
       { title: 'Custom web & app', url: 'custom-web-app', desc: 'Custom project' },
@@ -112,7 +115,7 @@
 
   const fastSchema = {
     fa: {
-      description: 'طراحی سایت حرفه‌ای در ۵ روز — پلن‌های شفاف، واتساپ فارسی و پشتیبانی پس از راه‌اندازی.',
+      description: 'سایت انگلیسی LTR برای آمریکا و اروپا در ۵ روز — فاکتور USD یا EUR، Stripe، Zoom/Meet؛ فارسی/RTL زبان دوم.',
       offers: [
         { name: 'پلن پایه', price: '99' },
         { name: 'پلن فروشگاهی', price: '199' },
@@ -120,7 +123,7 @@
       ]
     },
     tr: {
-      description: '5 günde profesyonel web sitesi — şeffaf planlar, Türkçe WhatsApp danışmanlığı ve yayın sonrası destek.',
+      description: 'ABD ve AB için 5 günde İngilizce LTR site — fatura USD veya EUR, Stripe, Zoom/Meet. Farsça/RTL ikinci dil.',
       offers: [
         { name: 'Temel plan', price: '99' },
         { name: 'Mağaza planı', price: '199' },
@@ -128,7 +131,7 @@
       ]
     },
     en: {
-      description: 'Professional website design in 5 days — transparent plans, WhatsApp consulting and post-launch support.',
+      description: 'English LTR websites for the US and EU in 5 days — billed in USD or EUR, Stripe, Zoom/Meet. Persian/RTL is a second locale.',
       offers: [
         { name: 'Basic plan', price: '99' },
         { name: 'Store plan', price: '199' },
@@ -193,7 +196,7 @@
       statDays: '5 gün', statDaysLabel: 'Standart teslimat',
       statPrice: '$99', statPriceLabel: 'Başlangıç fiyatı',
       statProjects: '100+', statProjectsLabel: 'Bizdavar projesi',
-      viewPlans: 'Planları gör', consultWa: 'WhatsApp danışmanlık',
+      viewPlans: 'Planları gör', consultWa: 'WhatsApp veya Zoom',
       btnDevConsult: 'Özel yazılım ve danışmanlık — iletişime geçin',
       navPlans: 'Planlar', navCompare: 'Karşılaştır', navTimeline: '5 günlük yol', navShowcase: 'Örnek işler', navFaq: 'SSS',
       navSpeed: 'Hız', navScope: 'Hizmetler', navWhy: 'Neden Fast', navGuides: 'Rehber', btnCustomApp: 'Özel web & uygulama', readGuide: 'Devamını oku',
@@ -205,7 +208,7 @@
       statDays: '5 days', statDaysLabel: 'Standard delivery',
       statPrice: '$99', statPriceLabel: 'Starting price',
       statProjects: '100+', statProjectsLabel: 'Bizdavar projects',
-      viewPlans: 'View plans', consultWa: 'Consult on WhatsApp',
+      viewPlans: 'View plans', consultWa: 'WhatsApp or Zoom',
       btnDevConsult: 'Custom development & consulting — contact us',
       navPlans: 'Plans', navCompare: 'Compare', navTimeline: '5-day path', navShowcase: 'Showcase', navFaq: 'FAQ',
       navSpeed: 'Speed', navScope: 'Services', navWhy: 'Why Fast', navGuides: 'Guides', btnCustomApp: 'Custom web & app', readGuide: 'Read more',
@@ -220,7 +223,113 @@
       aboutPage: { hero: { tag: 'درباره بیزدوار', title: 'شریک رشد کسب‌وکار در دیجیتال و صنعت', desc: 'از سال ۱۳۹۲ — ۱۰۰+ پروژه در ۱۱ کشور · بازاریابی، وب، فین‌تک و تامین صنعتی' }, whatIs: { title: 'بیزدوار گروپ چیست؟', p1: 'بیزدوار گروپ (Bizdavar Group) آژانس دیجیتال و تامین‌کننده B2B است که از سال ۲۰۱۳ توسط <strong>ارسان جاهد تبریزی</strong> راه‌اندازی شده. خدمات دیجیتال ما شامل <a href="services#digital-marketing">بازاریابی دیجیتال</a>، <a href="fast">طراحی وب</a>، پلتفرم‌های فین‌تک و مدیریت SMM است. محصولات مالکیتی و <a href="products#supply">برندهای صنعتی</a> در صفحه محصولات هستند.', p2: 'بیش از ۱۰۰ پروژه وب و پلتفرم سفارشی در ۱۱ کشور — از طراحی وب و پلتفرم‌های سفارشی تا تامین VEGA و محصولات دیجیتال. زیرساخت دیجیتال، دامنه، هاست، SSL و پشتیبانی فنی نیز تحت مدیریت ما است. <a href="portfolio">مشاهده نمونه‌کارها</a>' }, features: ['بازاریابی دیجیتال', 'طراحی وب حرفه‌ای', 'تامین تجهیزات', 'مدیریت زیرساخت'], stats: [{ value: '۱۲+', label: 'سال تجربه' }, { value: '۱۰۰+', label: 'پروژه' }, { value: '۱۱', label: 'کشور' }, { value: '۴', label: 'محور کسب‌وکار' }], navAria: 'فهرست بخش‌های صفحه', nav: [{ href: '#profile', label: 'شناسنامه' }, { href: '#activities', label: 'تخصص‌ها' }, { href: '#ecosystem', label: 'اکوسیستم' }, { href: '#presence', label: 'حضور جهانی' }, { href: '#highlights', label: 'دستاوردها' }, { href: '#sources', label: 'منابع' }, { href: '#trust', label: 'اعتبار' }, { href: '#faq', label: 'سوالات' }], sections: { identityEyebrow: 'شناسنامه سازمانی', identityTitle: 'بیزدوار گروپ در یک نگاه', leadershipEyebrow: 'رهبری', leadershipTitle: 'بنیان‌گذار و تیم', activitiesEyebrow: 'دسته‌بندی فعالیت', activitiesTitle: 'حوزه‌های تخصصی', ecosystemEyebrow: 'اکوسیستم', ecosystemTitle: 'برندها و پروژه‌های مرتبط', ecosystemDesc: 'نمونه‌ای از اکوسیستم دیجیتال و صنعتی که بیزدوار در توسعه یا مدیریت آن نقش داشته', presenceEyebrow: 'حضور جهانی', presenceTitle: 'کشورهای فعال', presenceDesc: 'شبکه بین‌المللی پروژه‌ها — دفاتر ایران، ترکیه، ارمنستان و دبی', exhibitionsEyebrow: 'نمایشگاه و رویداد', exhibitionsTitle: 'حضور در نمایشگاه‌های فناوری', exhibitionsDesc: 'رویدادهای نوآوری و تجاری‌سازی فناوری — از RINOTEX تبریز تا نمایشگاه‌های دانشگاهی', achievementsEyebrow: 'دستاوردها', achievementsTitle: 'محصولات و نوآوری‌های بیزدوار', achievementsDesc: 'علاوه بر خدمات دیجیتال و تامین صنعتی، تیم بیزدوار محصولات اختصاصی نیز طراحی و توسعه داده است', sourcesEyebrow: 'منابع معتبر', sourcesTitle: 'رسانه، نمایشگاه و منابع قابل راستی‌آزمایی', sourcesDesc: 'لینک‌های رسمی که درباره محصولات، نمایشگاه‌ها و سوابق بیزدوار منتشر شده‌اند — مستقل از ادعاهای داخلی سایت.', credentialsEyebrow: 'گواهینامه‌ها', credentialsTitle: 'مهارت‌های تأییدشده', proofEyebrow: 'اعتبار حرفه‌ای', proofTitle: 'بازخورد و شاخص‌های اعتماد', proofDesc: 'بر اساس منابع عمومی قابل راستی‌آزمایی — بدون نظر ساختگی', faqEyebrow: 'سوالات متداول', faqTitle: 'پرسش‌های رایج درباره بیزدوار' }, relatedLinks: [{ title: 'خدمات ما', url: 'services', desc: 'بازاریابی دیجیتال، وب، SMM و صنعت' }, { title: 'نمونه‌کارها', url: 'portfolio', desc: 'ZedPay، BZ Diamond و...' }, { title: 'تماس با ما', url: 'contact', desc: 'مشاوره رایگان' }], values: { title: 'ارزش‌های ما', items: [{ title: 'تمرکز بر نتیجه', desc: 'افزایش فروش، تبدیل و رشد برند — نه فقط اجرا.' }, { title: 'همکاری شفاف', desc: 'گزارش‌دهی منظم و ارتباط مستقیم با تیم.' }, { title: 'بازار جهانی', desc: 'پروژه در ایران، ترکیه و بازارهای بین‌المللی.' }, { title: 'سرعت اجرا', desc: 'Fast Web Studio — تحویل سایت در ۵ روز.' }] }, cta: { title: 'آماده همکاری با بیزدوار هستید؟', desc: 'مشاوره اولیه رایگان — از طریق <a href="contact" class="link-yellow">فرم تماس</a> یا واتساپ.', btn: 'تماس با ما' } },
       servicesPage: { hero: { tag: 'خدمات ما', title: 'خدمات دیجیتال و فنی بیزدوار', desc: 'بازاریابی، وب‌اپ، اپلیکیشن، سامانه، سرور و SMM — به‌همراه خدمات فنی دوربین، سیم‌کشی و نورمخفی. محصولات در <a href="products">صفحه محصولات</a> هستند.' }, overview: { eyebrow: 'نمای کلی', title: 'شش محور خدمات بیزدوار', desc: 'دیجیتال و نرم‌افزار در بالا — خدمات فنی ساختمانی با هماهنگی واتساپ تخصصی در پایین.' }, navAria: 'فهرست خدمات', viewDetails: 'مشاهده جزئیات', stats: [{ value: '۶', label: 'محور خدمات' }, { value: '۱۰۰+', label: 'پروژه' }, { value: '۲', label: 'شهر فنی' }, { value: '۱۲+', label: 'سال تجربه' }], cards: serviceBlocks.fa.map(({ title, body, ...rest }) => ({ title, desc: rest.subtitle || body })), blocks: serviceBlocks.fa, panels: servicesPanels.fa, relatedLinks: servicesRelatedLinks.fa, process: { eyebrow: 'فرآیند همکاری', title: 'چگونه با ما کار می‌کنید؟', desc: 'مسیر همکاری ساده، شفاف و قابل پیگیری است.', steps: [{ title: 'مشاوره', desc: 'شناخت نیاز و اهداف کسب‌وکار' }, { title: 'طراحی راهکار', desc: 'پیشنهاد فنی و برآورد زمان‌بندی' }, { title: 'اجرا', desc: 'پیاده‌سازی یا راه‌اندازی کمپین' }, { title: 'پشتیبانی', desc: 'گزارش‌دهی، بهینه‌سازی و همراهی مستمر' }] }, cta: { title: 'نیاز به راهکار اختصاصی دارید؟', desc: 'مشاوره رایگان — نمونه پروژه‌ها در <a href="portfolio">نمونه‌کارهای بیزدوار</a>', btn: 'مشاوره رایگان', btnSecondary: 'مشاهده نمونه‌کارها' } },
       portfolioPage: { hero: { tag: 'نمونه‌کارها', title: 'خدمات، محصولات و پروژه‌های اجراشده بیزدوار', desc: 'طراحی وب، بازاریابی دیجیتال، SMM، محصولات FXGuard و Fast Web Studio، و تامین صنعتی VEGA / Prosense / Liqui Moly — <a href="about">درباره بیزدوار</a>.' }, areas: { eyebrow: 'حوزه‌ها', title: 'دامنه فعالیت پروژه‌ها' }, archived: { eyebrow: 'پروژه‌های گذشته', title: 'همکاری‌های قبلی و ناتمام', desc: 'پروژه‌هایی که دیگر لینک زنده ندارند یا به‌صورت ناتمام متوقف شده‌اند — از جمله سایت‌هایی که سرورشان تمدید نشده یا مارکت‌پلیس‌هایی که تکمیل نشده‌اند. فقط به‌صورت خلاصه ذکر می‌شوند.' }, tags: ['فین‌تک و پرداخت', 'حسابداری و فینانس', 'هوش مصنوعی', 'اپ موبایل iOS', 'رویداد و بلیت', 'هلدینگ و سرمایه‌گذاری', 'هاستینگ و زیرساخت', 'طراحی وب و فروشگاه', 'تجارت بین‌المللی', 'تجارت سوئیسی', 'پنل SMM', 'مدیریت SMM', 'تامین صنعتی', 'سنسور VEGA', 'دتکتور Prosense', 'هواپیمایی', 'بروکر و مالی'], cta: { title: 'پروژه بعدی می‌تواند برند شما باشد', desc: 'از <a href="fast" class="link-yellow">طراحی وب</a> تا مدیریت DNS و SSL — بیزدوار همراه شماست.', btnPrimary: 'شروع پروژه جدید', btnSecondary: 'مشاهده خدمات' }, filters: [{ id: 'all', label: 'همه' }, { id: 'case-study', label: 'نمونه‌کارها' }, { id: 'client', label: 'مشتریان' }, { id: 'ecosystem', label: 'اکوسیستم' }, { id: 'fintech', label: 'فین‌تک' }, { id: 'digital', label: 'دیجیتال' }, { id: 'industrial', label: 'صنعتی' }, { id: 'other', label: 'سایر' }], roleLabels: { ecosystem: 'اکوسیستم', 'case-study': 'نمونه‌کار', client: 'مشتری', website: 'وبسایت', page: 'صفحه بیزدوار' }, statsLabels: ['پروژه و برند', 'نمونه‌کار', 'مشتری', 'اکوسیستم'], filterAria: 'فیلتر نمونه‌کارها', countText: '{count} مورد نمایش داده می‌شود', relatedLinks: portfolioRelatedLinks.fa },
-      blogPage: { hero: { tag: 'وبلاگ', title: 'مطالب تخصصی دیجیتال و صنعت', desc: 'راهنماها و نکات کاربردی از تیم بیزدوار گروپ.' }, cta: { title: 'نیاز به مشاوره تخصصی دارید؟', desc: 'موضوع مطلب شما را در <a href="contact">فرم تماس</a> بنویسید — پاسخگوییم.', btn: 'درخواست مشاوره' }, geoText: 'مقالات تخصصی برای کسب‌وکارهای ایران و ترکیه — بازاریابی دیجیتال، طراحی وب و تامین تجهیزات صنعتی.' },
+      blogPage: {
+        hero: {
+          tag: 'وبلاگ تخصصی',
+          title: 'راهنمای خرید VEGA، Prosense و بازرگانی صنعتی',
+          desc: 'مقالات فارسی برای خریدار ایران: سنسور سطح، دتکتور گاز، ردیاب Teltonika و مسیر استعلام واتساپ — به‌همراه سئو و طراحی سایت.',
+          ctaArticles: 'مشاهده مقالات',
+          ctaTopics: 'موضوعات',
+          ctaConsult: 'مشاوره رایگان'
+        },
+        intro: {
+          title: 'دانش عملی از پروژه‌های واقعی',
+          body: 'اولویت وبلاگ بیزدوار <a href="/pages/products#supply">بازرگانی صنعتی ایران</a> است: <a href="/pages/vega">VEGA</a>، <a href="/pages/prosense">Prosense</a>، <a href="/pages/teltonika">Teltonika</a> و <a href="/pages/liqui-moly">Liqui Moly</a>. کنار آن <a href="/pages/services">خدمات دیجیتال</a> و <a href="/pages/fast">Fast Studio</a> هم هست. هر مقاله به کاتالوگ یا واتساپ لینک می‌شود.',
+          statPosts: '۱۸',
+          statPostsLabel: 'مقاله و راهنما',
+          statLangs: '۵',
+          statLangsLabel: 'زبان انتشار',
+          statTopics: '۵',
+          statTopicsLabel: 'خوشه موضوعی'
+        },
+        topics: {
+          eyebrow: 'خوشه‌های موضوعی',
+          title: 'از سئو تا سنسور VEGA',
+          desc: 'مقالات را بر اساس نیاز انتخاب کنید — هر موضوع به صفحهٔ خدمت یا محصول مرتبط لینک می‌شود.',
+          digital: { label: 'بازاریابی دیجیتال', desc: 'سئو، CRO و مدیریت SMM' },
+          web: { label: 'طراحی وب', desc: 'سایت چندزبانه و Fast Studio' },
+          industrial: { label: 'بازرگانی صنعتی', desc: 'خرید VEGA، Prosense و Teltonika' },
+          products: { label: 'محصولات بیزدوار', desc: 'BizPet، BizTab و BizClean' },
+          company: { label: 'درباره شرکت', desc: 'تاریخچه و حوزه‌های فعالیت' }
+        },
+        catalog: {
+          eyebrow: 'کاتالوگ مقالات',
+          title: 'همه راهنماها در یک نگاه',
+          desc: 'فیلتر موضوعی بزنید یا مستقیم مقاله را باز کنید — لینک‌ها برای موتورهای جستجو در HTML صفحه هستند.',
+          filterAll: 'همه',
+          empty: 'مقاله‌ای در این دسته نیست.',
+          filterAria: 'فیلتر موضوع مقالات',
+          countText: '{count} مطلب',
+          relatedService: 'خدمت مرتبط'
+        },
+        featured: {
+          eyebrow: 'پیشنهاد ویراستار',
+          title: 'جدیدترین راهنماها',
+          desc: 'آخرین مقالات با لینک مستقیم به خدمت یا استعلام.'
+        },
+        linkHub: {
+          eyebrow: 'مسیرهای سریع',
+          title: 'از وبلاگ به صفحات کلیدی',
+          desc: 'لینک‌های داخلی برای پیدا کردن کاتالوگ بازرگانی، راهنمای خرید یا تماس — بدون جستجو در منو.',
+          items: [
+            { title: 'خرید VEGAPULS', url: '/pages/articles/buy-vegapuls-iran', desc: 'سنسور سطح ایران' },
+            { title: 'کاتالوگ VEGA', url: '/pages/vega', desc: 'سنسور سطح و فشار' },
+            { title: 'خرید Prosense', url: '/pages/articles/buy-prosense-iran', desc: 'دتکتور گاز' },
+            { title: 'Prosense', url: '/pages/prosense', desc: 'PQ و SafeVader' },
+            { title: 'Teltonika', url: '/pages/teltonika', desc: 'FMB920 از ۲۹ دلار' },
+            { title: 'Gamak', url: '/pages/articles/buy-gamak-iran', desc: 'الکتروموتور صنعتی' },
+            { title: 'Digi', url: '/pages/articles/buy-digi-system-iran', desc: 'ترازو و POS' },
+            { title: 'Teraoka', url: '/pages/articles/buy-teraoka-iran', desc: 'ترازو ژاپن' },
+            { title: 'Liqui Moly', url: '/pages/liqui-moly', desc: 'روغن و افزودنی' },
+            { title: 'بازرگانی صنعتی', url: '/pages/articles/industrial-trade-iran', desc: 'همه برندها' },
+            { title: 'خدمات دیجیتال', url: '/pages/services', desc: 'سئو، SMM و کمپین' },
+            { title: 'محصولات', url: '/pages/products#supply', desc: 'کاتالوگ تامین' },
+            { title: 'تماس', url: '/pages/contact', desc: 'استعلام واتساپ' }
+          ]
+        },
+        clusters: {
+          eyebrow: 'ادامه مسیر',
+          title: 'از مقاله به خدمت یا استعلام',
+          desc: 'اگر راهنما کافی نبود، همان موضوع را به‌صورت پروژه با تیم بیزدوار جلو ببرید.',
+          digitalTitle: 'بازاریابی و سئو',
+          digitalDesc: 'کمپین، سئو و SMM برای بازار ایران و ترکیه.',
+          webTitle: 'طراحی سایت',
+          webDesc: 'سایت شرکتی و فروشگاهی در ۵ روز — RTL و سئو پایه.',
+          industrialTitle: 'خرید VEGA',
+          industrialDesc: 'کد سفارش، پیش‌فاکتور و لجستیک تا محل پروژه.',
+          prosenseTitle: 'دتکتور Prosense',
+          prosenseDesc: 'گاز، شعله و SIL — پیش‌فاکتور B2B.',
+          portfolioTitle: 'نمونه‌کارها',
+          portfolioDesc: 'Marvi Society، FXGuard و پروژه‌های دیجیتال.',
+          appsTitle: 'اپ iOS',
+          appsDesc: 'طراحی، Swift و انتشار App Store.'
+        },
+        faq: {
+          eyebrow: 'سوالات متداول',
+          title: 'قبل از خواندن مقاله',
+          desc: 'پاسخ کوتاه برای جستجوهای رایج درباره وبلاگ بیزدوار.',
+          items: [
+            { q: 'وبلاگ بیزدوار درباره چیست؟', a: 'اولویت با راهنمای خرید VEGA، Prosense، Teltonika و بازرگانی صنعتی ایران است؛ کنار آن سئو، طراحی سایت و محصولات BizPet و BizTab هم هست.' },
+            { q: 'مقالات به چند زبان منتشر می‌شوند؟', a: 'صفحه وبلاگ و مقالات اصلی به فارسی، ترکی، انگلیسی، روسی و عربی با hreflang جداگانه ایندکس می‌شوند.' },
+            { q: 'چطور مقاله مرتبط با خدمت پیدا کنم؟', a: 'از فیلتر موضوعی بالا استفاده کنید یا از خوشه‌های بازاریابی، طراحی وب و تامین صنعتی به صفحات خدمت بروید.' },
+            { q: 'برای استعلام VEGA بعد از مقاله چه کار کنم؟', a: 'مدل یا مشخصات مخزن را در واتساپ یا فرم تماس بفرستید — پیش‌فاکتور و کد سفارش صادر می‌شود.' },
+            { q: 'آیا محصولات بیزدوار هم در وبلاگ هستند؟', a: 'بله. BizTab، BizClean V5 و پد حرارتی BizPet صفحه اختصاصی دارند و از همین فهرست قابل دسترسی‌اند.' }
+          ]
+        },
+        cta: {
+          title: 'نیاز به مشاوره تخصصی دارید؟',
+          desc: 'موضوع مطلب را در <a href="/pages/contact">فرم تماس</a> بنویسید — یا مستقیم در واتساپ پیام دهید.',
+          btn: 'درخواست مشاوره',
+          btnWa: 'واتساپ فارسی'
+        },
+        geoText: 'مقالات تخصصی برای کسب‌وکارهای ایران و ترکیه — بازاریابی دیجیتال، سئو، طراحی وب چندزبانه و تامین تجهیزات صنعتی VEGA.',
+        related: [
+          { title: 'طراحی سایت US/EU', desc: 'از ۹۹ دلار / فاکتور یورو', titleKey: 'blogPage.related.0.title', descKey: 'blogPage.related.0.desc' },
+          { title: 'Ads آمریکا و اروپا', desc: 'Google، Meta، LinkedIn', titleKey: 'blogPage.related.1.title', descKey: 'blogPage.related.1.desc' },
+          { title: 'کاتالوگ VEGA', desc: 'سنسور سطح و فشار', titleKey: 'blogPage.related.2.title', descKey: 'blogPage.related.2.desc' },
+          { title: 'تماس و استعلام', desc: 'مشاوره رایگان', titleKey: 'blogPage.related.3.title', descKey: 'blogPage.related.3.desc' }
+        ]
+      },
       privacyPage: { hero: { title: 'سیاست حفظ حریم خصوصی', desc: 'نحوه جمع‌آوری و استفاده از اطلاعات شما در وبسایت بیزدوار گروپ' }, sections: [{ title: '۱. اطلاعاتی که جمع‌آوری می‌شود', body: 'هنگام ارسال <a href="contact">فرم تماس</a>، نام، ایمیل، شماره تماس (اختیاری)، نوع خدمات و متن پیام شما دریافت می‌شود. این اطلاعات فقط برای پاسخ به درخواست شما استفاده می‌شود.' }, { title: '۲. نحوه استفاده', items: ['پاسخ به درخواست مشاوره و پیشنهاد خدمات', 'پیگیری پروژه‌های در حال مذاکره', 'بهبود کیفیت خدمات (بدون انتشار عمومی)'] }, { title: '۳. اشتراک‌گذاری با اشخاص ثالث', body: 'اطلاعات شما بدون رضایت صریح شما به اشخاص ثالث فروخته یا منتقل نمی‌شود، مگر الزامات قانونی.' }, { title: '۴. کوکی‌ها و تحلیل', body: 'این وبسایت از <strong>Google Tag Manager</strong> (GTM-NXWQQWF8) و <strong>Google Analytics 4</strong> (G-4GFEY12SLH) برای اندازه‌گیری بازدید و بهبود تجربه استفاده می‌کند. این ابزارها ممکن است کوکی یا شناسه‌های مشابه تنظیم کنند. جزئیات تشخیص زبان در بخش ۵ آمده است.' }, { title: '۵. زبان و تشخیص منطقه', body: 'برای نمایش زبان مناسب (فارسی، ترکی، انگلیسی)، ممکن است آدرس IP شما به‌صورت ناشناس به <strong>ipapi.co</strong> یا <strong>ipwho.is</strong> ارسال شود تا کشور تقریبی تشخیص داده شود. ترجیح زبان در حافظه مرورگر (<code>localStorage</code> — کلید <code>bizdavar_locale</code>) ذخیره می‌شود. می‌توانید هر زمان از منوی زبان یا با پارامتر <code>?lang=fa</code>، <code>?lang=tr</code> یا <code>?lang=en</code> زبان را خودتان انتخاب کنید.' }, { title: '۶. ارتباط با ما', body: 'برای سوالات حریم خصوصی: <a href="mailto:info@bizdavar.com">info@bizdavar.com</a> یا <a href="contact">فرم تماس</a>.' }], updated: 'آخرین به‌روزرسانی: فروردین ۱۴۰۴' },
       gamakPage: { sections: {
         trust: { eyebrow: 'چرا از بیزدوار بخرید؟', title: 'تامین مطمئن Gamak برای واحد فنی و خرید شما', desc: 'ما فقط کاتالوگ نشان نمی‌دهیم — همراه شما از انتخاب توان موتور تا تحویل در ایران هستیم.' },
@@ -294,7 +403,7 @@
         industries: { eyebrow: 'صنایع جهانی', title: 'کاربرد در صنایع مختلف', desc: 'راهکار تشخیص گاز سفارشی برای هر بخش صنعتی' },
         supply: { eyebrow: 'تامین از بیزدوار', title: 'خدمات تامین Prosense', desc: 'شریک تامین شما — نه فقط فروشنده' },
         faq: { eyebrow: 'سوالات متداول', title: 'پرسش‌های رایج خریداران', desc: 'پاسخ سوال خود را پیدا نکردید؟ در واتساپ فارسی پیام بدهید.' }
-      }, officialNote: 'اطلاعات فنی محصولات بر اساس <a href="https://www.prosense.com.tr/?lang=tr" target="_blank" rel="noopener noreferrer">وبسایت رسمی Prosense</a> است. برای استعلام قیمت و تامین — <a href="contact">با بیزدوار تماس بگیرید</a> · <a href="vega">محصولات VEGA</a>', cta: { title: 'آماده استعلام قیمت Prosense هستید؟', desc: 'نوع گاز یا سری مدل را بفرستید — PQ · SafeVader · SOMA · PPS+ · پنل S-DPX', btnForm: 'فرم استعلام', btnServices: 'کاتالوگ محصولات' }, sticky: { label: 'استعلام Prosense', hint: 'مشاوره فنی فارسی · پاسخ سریع' }, geoText: 'تامین اصل دتکتور Prosense — گواهی SIL/M1/EN، مشاوره فارسی در واتساپ و لجستیک برای پروژه‌های نفت، گاز و صنعت.', related: [{ title: 'محصولات VEGA', desc: 'سنسور سطح و فشار' }, { title: 'Teltonika GPS', desc: 'Fleet Telematics' }, { title: 'کاتالوگ محصولات', desc: 'برندهای تامین' }, { title: 'تماس', desc: 'استعلام قیمت' }] },
+      }, officialNote: 'اطلاعات فنی محصولات بر اساس <a href="https://www.prosense.com.tr/?lang=en" target="_blank" rel="noopener noreferrer">وبسایت رسمی Prosense</a> است. برای استعلام قیمت و تامین — <a href="contact">با بیزدوار تماس بگیرید</a> · <a href="articles/buy-prosense-iran">راهنمای خرید Prosense</a> · <a href="vega">محصولات VEGA</a>', cta: { title: 'آماده استعلام قیمت Prosense هستید؟', desc: 'نوع گاز یا سری مدل را بفرستید — PQ · SafeVader · SOMA · PPS+ · پنل S-DPX', btnForm: 'فرم استعلام', btnServices: 'کاتالوگ محصولات' }, sticky: { label: 'استعلام Prosense', hint: 'مشاوره فنی فارسی · پاسخ سریع' }, geoText: 'تامین اصل دتکتور Prosense — گواهی SIL/M1/EN، مشاوره فارسی در واتساپ و لجستیک برای پروژه‌های نفت، گاز و صنعت.', related: [{ title: 'خرید Prosense در ایران', desc: 'PQ و SafeVader' }, { title: 'محصولات VEGA', desc: 'سنسور سطح و فشار' }, { title: 'کاتالوگ محصولات', desc: 'برندهای تامین' }, { title: 'تماس', desc: 'استعلام قیمت' }] },
       teltonikaPage: { sections: {
         trust: { eyebrow: 'چرا از بیزدوار بخرید؟', title: 'تامین مطمئن Teltonika برای واحد فنی و خرید شما', desc: 'ما فقط کاتالوگ نشان نمی‌دهیم — همراه شما از انتخاب مدل ردیاب تا تحویل در ایران هستیم.' },
         buy: { eyebrow: 'مسیر خرید', title: 'از استعلام تا تحویل — ۵ مرحله شفاف', desc: 'بدون پیچیدگی — هر مرحله را می‌دانید و در هر قدم در ارتباط هستید.' },
@@ -304,7 +413,7 @@
         industries: { eyebrow: 'صنایع جهانی', title: 'کاربرد در صنایع مختلف', desc: 'راهکار Fleet Telematics برای هر بخش صنعتی' },
         supply: { eyebrow: 'تامین از بیزدوار', title: 'خدمات تامین Teltonika', desc: 'شریک تامین شما — نه فقط فروشنده' },
         faq: { eyebrow: 'سوالات متداول', title: 'پرسش‌های رایج خریداران ایرانی', desc: 'پاسخ سوال خود را پیدا نکردید؟ مستقیم با ما در تماس باشید.' }
-      }, officialNote: 'اطلاعات فنی محصولات بر اساس <a href="https://www.teltonika-gps.com/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Teltonika Telematics</a> است. برای استعلام — <a href="contact">با بیزدوار تماس بگیرید</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'آماده استعلام قیمت Teltonika هستید؟', desc: 'مدل ردیاب یا نوع ناوگان را بفرستید — FMB920 · FMC650 · FTC305 · DualCam', btnForm: 'فرم استعلام', btnServices: 'کاتالوگ محصولات' }, sticky: { label: 'استعلام Teltonika' }, geoText: 'تامین اصل ردیاب Teltonika به ایران — Fleet Telematics، مشاوره فارسی و تحویل برای ناوگان و IoT.', related: [{ title: 'محصولات VEGA', desc: 'سنسور سطح و فشار' }, { title: 'محصولات Prosense', desc: 'دتکتور گاز و شعله' }, { title: 'کاتالوگ محصولات', desc: 'برندهای تامین' }, { title: 'تماس', desc: 'استعلام قیمت' }] },
+      }, officialNote: 'اطلاعات فنی محصولات بر اساس <a href="https://www.teltonika-gps.com/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Teltonika Telematics</a> است. برای استعلام — <a href="contact">با بیزدوار تماس بگیرید</a> · <a href="articles/buy-teltonika-iran">راهنمای خرید FMB920</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'آماده استعلام قیمت Teltonika هستید؟', desc: 'مدل ردیاب یا نوع ناوگان را بفرستید — FMB920 · FMC650 · FTC305 · DualCam', btnForm: 'فرم استعلام', btnServices: 'کاتالوگ محصولات' }, sticky: { label: 'استعلام Teltonika' }, geoText: 'تامین اصل ردیاب Teltonika به ایران — Fleet Telematics، مشاوره فارسی و تحویل برای ناوگان و IoT.', related: [{ title: 'خرید FMB920 در ایران', desc: 'ردیاب از ۲۹ دلار' }, { title: 'محصولات VEGA', desc: 'سنسور سطح و فشار' }, { title: 'کاتالوگ محصولات', desc: 'برندهای تامین' }, { title: 'تماس', desc: 'استعلام قیمت' }] },
       liquiMolyPage: { sections: {
         trust: { eyebrow: 'چرا از بیزدوار بخرید؟', title: 'تامین مطمئن Liqui Moly با قیمت دلاری شفاف', desc: 'از انتخاب روغن و افزودنی تا پیش‌فاکتور و تحویل — یک تیم فارسی‌زبان همراه شماست.' },
         buy: { eyebrow: 'مسیر خرید', title: 'از انتخاب محصول تا تحویل — ۵ مرحله', desc: 'قیمت نمایشی دلاری است؛ مبلغ نهایی در پیش‌فاکتور تایید می‌شود.' },
@@ -314,13 +423,118 @@
         iran: { eyebrow: 'کاربرد', title: 'Liqui Moly برای چه کسانی؟', desc: 'از تعمیرگاه و ناوگان تا موتورسیکلت و مصرف شخصی — برای هر کاربرد، مسیر استعلام فارسی و تامین اصل آماده است.', note: 'کاربردتان در لیست نیست؟ مدل خودرو، نوع سوخت و تعداد را بفرستید تا پیشنهاد دقیق بگیریم.' },
         supply: { eyebrow: 'تامین از بیزدوار', title: 'خدمات تامین Liqui Moly', desc: 'شریک تامین شما — نه فقط لیست قیمت' },
         faq: { eyebrow: 'سوالات متداول', title: 'پرسش‌های رایج خریداران', desc: 'پاسخ را پیدا نکردید؟ در واتساپ فارسی پیام بدهید.' }
-      }, rateNote: { strong: '', body: '' }, officialNote: 'اطلاعات فنی بر اساس <a href="https://www.liqui-moly.com/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Liqui Moly</a> است. برای سفارش — <a href="contact">تماس با بیزدوار</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'آماده سفارش Liqui Moly هستید؟', desc: 'نام محصول یا کد SKU را بفرستید — Octane Plus · Top Tec · Molygen · افزودنی دیزل', btnForm: 'فرم استعلام', btnServices: 'کاتالوگ محصولات' }, sticky: { label: 'استعلام Liqui Moly', hint: 'قیمت دلاری · مشاوره فارسی' }, geoText: 'تامین اصل Liqui Moly — قیمت دلاری شفاف، مشاوره فارسی و لجستیک برای روغن، افزودنی و مراقبت خودرو.', related: [{ title: 'محصولات VEGA', desc: 'سنسور سطح و فشار صنعتی' }, { title: 'محصولات Prosense', desc: 'دتکتور گاز و شعله' }, { title: 'کاتالوگ محصولات', desc: 'برندهای تامین B2B' }, { title: 'تماس و استعلام', desc: 'استعلام قیمت Liqui Moly' }] }
+      }, rateNote: { strong: '', body: '' }, officialNote: 'اطلاعات فنی بر اساس <a href="https://www.liqui-moly.com/" target="_blank" rel="noopener noreferrer">وبسایت رسمی Liqui Moly</a> است. برای سفارش — <a href="contact">تماس با بیزدوار</a> · <a href="articles/liqui-moly-supply-iran">راهنمای تامین Liqui Moly</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'آماده سفارش Liqui Moly هستید؟', desc: 'نام محصول یا کد SKU را بفرستید — Octane Plus · Top Tec · Molygen · افزودنی دیزل', btnForm: 'فرم استعلام', btnServices: 'کاتالوگ محصولات' }, sticky: { label: 'استعلام Liqui Moly', hint: 'قیمت دلاری · مشاوره فارسی' }, geoText: 'تامین اصل Liqui Moly — قیمت دلاری شفاف، مشاوره فارسی و لجستیک برای روغن، افزودنی و مراقبت خودرو.', related: [{ title: 'تامین Liqui Moly در ایران', desc: 'روغن و افزودنی اصل' }, { title: 'محصولات VEGA', desc: 'سنسور سطح و فشار صنعتی' }, { title: 'کاتالوگ محصولات', desc: 'برندهای تامین B2B' }, { title: 'تماس و استعلام', desc: 'استعلام قیمت Liqui Moly' }] }
     },
     tr: {
       aboutPage: { hero: { tag: 'Bizdavar Hakkında', title: 'Dijital ve endüstride büyüme ortağınız', desc: '2013’ten beri — 11 ülkede 100+ proje · pazarlama, web, fintech ve endüstriyel tedarik' }, whatIs: { title: 'Bizdavar Group nedir?', p1: 'Bizdavar Group, 2013 yılında <strong>Ersan Jahed Tabrizi</strong> tarafından kurulan bir dijital ajans ve B2B tedarik grubudur. Dijital hizmetlerimiz <a href="services#digital-marketing">dijital pazarlama</a>, <a href="fast">web tasarım</a>, fintech platformları ve SMM yönetimini kapsar. Sahip olunan ürünler ve <a href="products#supply">endüstriyel markalar</a> ürünler sayfasındadır.', p2: '11 ülkede 100+ web ve özel platform projesi — web tasarım, özel platformlar, VEGA tedariki ve dijital ürünler dahil. Dijital altyapı, domain, hosting, SSL ve teknik destek de ekibimiz tarafından yönetilir. <a href="portfolio">Portfolyoyu görüntüle</a>' }, features: ['Dijital pazarlama', 'Profesyonel web tasarım', 'Ekipman tedariki', 'Altyapı yönetimi'], stats: [{ value: '12+', label: 'Yıl deneyim' }, { value: '100+', label: 'Proje' }, { value: '11', label: 'Ülke' }, { value: '4', label: 'İş alanı' }], navAria: 'Sayfa bölümleri', nav: [{ href: '#profile', label: 'Kimlik' }, { href: '#activities', label: 'Uzmanlık' }, { href: '#ecosystem', label: 'Ekosistem' }, { href: '#presence', label: 'Küresel varlık' }, { href: '#highlights', label: 'Başarılar' }, { href: '#sources', label: 'Kaynaklar' }, { href: '#trust', label: 'Güven' }, { href: '#faq', label: 'SSS' }], sections: { identityEyebrow: 'Kurumsal kimlik', identityTitle: 'Bizdavar Group’a kısa bakış', leadershipEyebrow: 'Liderlik', leadershipTitle: 'Kurucu ve ekip', activitiesEyebrow: 'Faaliyet alanları', activitiesTitle: 'Uzmanlık alanları', ecosystemEyebrow: 'Ekosistem', ecosystemTitle: 'İlgili marka ve projeler', ecosystemDesc: 'Bizdavar’ın geliştirdiği veya yönettiği dijital ve endüstriyel ekosistemden örnekler', presenceEyebrow: 'Küresel varlık', presenceTitle: 'Aktif ülkeler', presenceDesc: 'Uluslararası proje ağı — ofisler: İran, Türkiye, Ermenistan ve Dubai', exhibitionsEyebrow: 'Fuar ve etkinlik', exhibitionsTitle: 'Teknoloji fuarlarındaki varlık', exhibitionsDesc: 'RINOTEX Tabriz’ten üniversite fuarlarına — inovasyon ve ticarileştirme etkinlikleri', achievementsEyebrow: 'Başarılar', achievementsTitle: 'Bizdavar ürün ve inovasyonları', achievementsDesc: 'Dijital hizmetler ve endüstriyel tedarikin yanı sıra Bizdavar ekibi özel ürünler de tasarladı', sourcesEyebrow: 'Doğrulanmış kaynaklar', sourcesTitle: 'Medya, fuarlar ve doğrulanabilir referanslar', sourcesDesc: 'Ürünler, fuarlar ve Bizdavar geçmişi hakkında yayımlanan resmi bağlantılar — site içi iddialardan bağımsız.', credentialsEyebrow: 'Sertifikalar', credentialsTitle: 'Doğrulanmış yetkinlikler', proofEyebrow: 'Profesyonel güven', proofTitle: 'Güven göstergeleri', proofDesc: 'Doğrulanabilir kamu kaynaklarına dayalıdır — sahte yorum yoktur', faqEyebrow: 'SSS', faqTitle: 'Bizdavar hakkında sık sorulanlar' }, relatedLinks: [{ title: 'Hizmetlerimiz', url: 'services', desc: 'Dijital pazarlama, web, SMM ve endüstri' }, { title: 'Portfolyo', url: 'portfolio', desc: 'ZedPay, BZ Diamond ve daha fazlası' }, { title: 'İletişim', url: 'contact', desc: 'Ücretsiz danışmanlık' }], values: { title: 'Değerlerimiz', items: [{ title: 'Sonuç odaklılık', desc: 'Sadece uygulama değil, satış, dönüşüm ve marka büyümesi.' }, { title: 'Şeffaf iş birliği', desc: 'Düzenli raporlama ve ekiple doğrudan iletişim.' }, { title: 'Küresel pazar', desc: 'İran, Türkiye ve uluslararası pazarlarda projeler.' }, { title: 'Hızlı uygulama', desc: 'Fast Web Studio — 5 günde web sitesi teslimi.' }] }, cta: { title: 'Bizdavar ile çalışmaya hazır mısınız?', desc: 'İlk danışmanlık ücretsiz — <a href="contact" class="link-yellow">iletişim formu</a> veya WhatsApp üzerinden.', btn: 'Bize ulaşın' } },
       servicesPage: { hero: { tag: 'Hizmetlerimiz', title: 'Bizdavar dijital ve teknik hizmetleri', desc: 'Pazarlama, web app, mobil, sistem, sunucu ve SMM — ayrıca CCTV, tesisat ve gizli aydınlatma. Ürünler <a href="products">ürünler sayfasında</a>.' }, overview: { eyebrow: 'Genel bakış', title: 'Altı Bizdavar hizmet alanı', desc: 'Dijital ve yazılım üstte — saha teknik hizmetleri aşağıda, özel teknik WhatsApp ile.' }, navAria: 'Hizmet listesi', viewDetails: 'Detayları gör', stats: [{ value: '6', label: 'Hizmet alanı' }, { value: '100+', label: 'Proje' }, { value: '2', label: 'Teknik şehir' }, { value: '12+', label: 'Yıl deneyim' }], cards: serviceBlocks.tr.map(({ title, body, ...rest }) => ({ title, desc: rest.subtitle || body })), blocks: serviceBlocks.tr, panels: servicesPanels.tr, relatedLinks: servicesRelatedLinks.tr, process: { eyebrow: 'İş birliği süreci', title: 'Nasıl çalışıyoruz?', desc: 'Sade, şeffaf ve takip edilebilir bir süreç.', steps: [{ title: 'Danışmanlık', desc: 'İhtiyaçları ve iş hedeflerini anlama' }, { title: 'Çözüm tasarımı', desc: 'Teknik öneri ve zaman planı' }, { title: 'Uygulama', desc: 'Kampanya, kurulum veya tedarik teslimi' }, { title: 'Destek', desc: 'Raporlama, optimizasyon ve sürekli destek' }] }, cta: { title: 'Özel bir çözüme mi ihtiyacınız var?', desc: 'Ücretsiz danışmanlık — proje örnekleri için <a href="portfolio">Bizdavar portfolyosu</a>', btn: 'Ücretsiz danışmanlık', btnSecondary: 'Portfolyoyu gör' } },
       portfolioPage: { hero: { tag: 'Portfolyo', title: 'Bizdavar hizmetleri, ürünleri ve tamamlanan işler', desc: 'Web tasarım, dijital pazarlama, SMM, FXGuard ve Fast Web Studio ürünleri, VEGA / Prosense / Liqui Moly tedariki — <a href="about">Bizdavar hakkında</a>.' }, areas: { eyebrow: 'Alanlar', title: 'Proje faaliyet alanları' }, archived: { eyebrow: 'Geçmiş projeler', title: 'Önceki ve tamamlanmamış işler', desc: 'Canlı bağlantısı olmayan veya yarım kalan projeler — sunucusu yenilenmeyen siteler veya tamamlanmamış marketplace projeleri dahil. Yalnızca kısaca anılır.' }, tags: ['Fintech ve ödeme', 'Muhasebe ve finans', 'Yapay zeka', 'iOS mobil uygulama', 'Etkinlik ve bilet', 'Holding ve yatırım', 'Hosting ve altyapı', 'Web tasarım ve mağaza', 'Uluslararası ticaret', 'İsviçre ticareti', 'SMM paneli', 'SMM yönetimi', 'Endüstriyel tedarik', 'VEGA sensör', 'Prosense dedektör', 'Havacılık', 'Broker ve finans'], cta: { title: 'Sıradaki proje markanız olabilir', desc: '<a href="fast" class="link-yellow">Web tasarımdan</a> DNS ve SSL yönetimine kadar Bizdavar yanınızda.', btnPrimary: 'Yeni proje başlat', btnSecondary: 'Hizmetleri gör' }, filters: [{ id: 'all', label: 'Tümü' }, { id: 'case-study', label: 'Örnek işler' }, { id: 'client', label: 'Müşteriler' }, { id: 'ecosystem', label: 'Ekosistem' }, { id: 'fintech', label: 'Fintech' }, { id: 'digital', label: 'Dijital' }, { id: 'industrial', label: 'Endüstriyel' }, { id: 'other', label: 'Diğer' }], roleLabels: { ecosystem: 'Ekosistem', 'case-study': 'Örnek iş', client: 'Müşteri', website: 'Web sitesi', page: 'Bizdavar sayfası' }, statsLabels: ['Proje ve marka', 'Örnek iş', 'Müşteri', 'Ekosistem'], filterAria: 'Portfolyo filtreleri', countText: '{count} öğe gösteriliyor', relatedLinks: portfolioRelatedLinks.tr },
-      blogPage: { hero: { tag: 'Blog', title: 'Dijital ve endüstri içgörüleri', desc: 'Bizdavar Group ekibinden pratik rehberler ve ipuçları.' }, cta: { title: 'Uzman danışmanlığa mı ihtiyacınız var?', desc: 'Konunuzu <a href="contact">iletişim formuna</a> yazın — yanıtlarız.', btn: 'Danışmanlık iste' }, geoText: 'İran ve Türkiye’deki işletmeler için dijital pazarlama, web tasarım ve endüstriyel tedarik yazıları.' },
+      blogPage: {
+        hero: {
+          tag: 'Uzman blog',
+          title: 'ABD/AB web tasarım, reklam ve endüstriyel rehberler',
+          desc: 'İngilizce siteler USD veya EUR fatura, Google/Meta/LinkedIn kampanyaları — artı İran için orijinal VEGA tedariki.',
+          ctaArticles: 'Yazıları gör',
+          ctaTopics: 'Konular',
+          ctaConsult: 'Ücretsiz danışmanlık'
+        },
+        intro: {
+          title: 'Gerçek projelerden pratik bilgi',
+          body: 'Bizdavar blog, <a href="/pages/services">dijital hizmetler</a>, <a href="/pages/fast">Fast Studio web tasarım</a> ve <a href="/pages/products#supply">endüstriyel tedarik</a> deneyimini özetler. Dijital pazarlama, SEO, SMM, çok dilli site ve VEGA satın alma yolunu slogan değil — uygulama ile okuyun.',
+          statPosts: '13',
+          statPostsLabel: 'Makale ve rehber',
+          statLangs: '5',
+          statLangsLabel: 'Yayın dili',
+          statTopics: '5',
+          statTopicsLabel: 'Konu kümesi'
+        },
+        topics: {
+          eyebrow: 'Konu kümeleri',
+          title: 'SEO’dan VEGA sensörüne',
+          desc: 'İhtiyaca göre seçin — her konu ilgili hizmet veya ürün sayfasına bağlanır.',
+          digital: { label: 'Dijital pazarlama', desc: 'SEO, CRO ve SMM' },
+          web: { label: 'Web tasarım', desc: 'Çok dilli site ve Fast Studio' },
+          industrial: { label: 'Endüstriyel tedarik', desc: 'VEGA ve ölçüm' },
+          products: { label: 'Bizdavar ürünleri', desc: 'BizPet, BizTab ve BizClean' },
+          company: { label: 'Şirket', desc: 'Tarihçe ve faaliyet alanları' }
+        },
+        catalog: {
+          eyebrow: 'Yazı kataloğu',
+          title: 'Tüm rehberler tek bakışta',
+          desc: 'Konuya göre filtreleyin veya yazıyı açın — bağlantılar HTML’de crawler’lara açıktır.',
+          filterAll: 'Tümü',
+          empty: 'Bu kategoride yazı yok.',
+          filterAria: 'Yazı konusu filtresi',
+          countText: '{count} yazı',
+          relatedService: 'İlgili hizmet'
+        },
+        featured: {
+          eyebrow: 'Editör seçimi',
+          title: 'En yeni rehberler',
+          desc: 'Hizmet veya teklif sayfasına doğrudan bağlantılı son yazılar.'
+        },
+        linkHub: {
+          eyebrow: 'Hızlı yollar',
+          title: 'Blogdan ana sayfalara',
+          desc: 'Hizmet, katalog veya iletişim — menüde aramadan.',
+          items: [
+            { title: 'ABD/AB web tasarım', url: '/pages/articles/website-design-us-eu', desc: '$99’dan / EUR fatura' },
+            { title: 'ABD/AB reklam', url: '/pages/articles/digital-marketing-us-eu', desc: 'Google, Meta, LinkedIn' },
+            { title: 'Fast Studio', url: '/pages/fast', desc: '5 günde İngilizce site' },
+            { title: 'Hizmetler', url: '/pages/services', desc: 'Web, Ads ve uygulama' },
+            { title: 'İletişim / teklif', url: '/pages/contact?service=web-design', desc: 'USD veya EUR fatura' },
+            { title: 'VEGAPULS satın al', url: '/pages/articles/buy-vegapuls-iran', desc: 'İran seviye sensörü' },
+            { title: 'VEGA kataloğu', url: '/pages/vega', desc: 'Seviye sensörü' },
+            { title: 'Prosense satın al', url: '/pages/articles/buy-prosense-iran', desc: 'Gaz dedektörü' },
+            { title: 'Teltonika', url: '/pages/teltonika', desc: 'FMB920 — 29$’dan' },
+            { title: 'Digi', url: '/pages/articles/buy-digi-system-iran', desc: 'Terazi ve POS' },
+            { title: 'Endüstriyel ticaret', url: '/pages/articles/industrial-trade-iran', desc: 'Tüm markalar' },
+            { title: 'Ürünler', url: '/pages/products#supply', desc: 'Tedarik kataloğu' }
+          ]
+        },
+        clusters: {
+          eyebrow: 'Sonraki adım',
+          title: 'Yazıdan hizmete veya teklife',
+          desc: 'Rehber yetmezse aynı konuyu Bizdavar ekibiyle projeye çevirin.',
+          digitalTitle: 'Pazarlama ve SEO',
+          digitalDesc: 'Kampanya, SEO ve SMM — ABD/AB bütçesi USD veya EUR.',
+          webTitle: 'Web tasarım',
+          webDesc: 'İngilizce LTR site 5 günde — $99 / ~€90’dan, Stripe ve Zoom/Meet.',
+          industrialTitle: 'VEGA satın al',
+          industrialDesc: 'Sipariş kodu, proforma ve sahaya lojistik.',
+          prosenseTitle: 'Prosense dedektör',
+          prosenseDesc: 'Gaz, alev ve SIL — B2B proforma.',
+          portfolioTitle: 'Portföy',
+          portfolioDesc: 'Marvi Society, FXGuard ve dijital projeler.',
+          appsTitle: 'iOS uygulama',
+          appsDesc: 'Tasarım, Swift ve App Store.'
+        },
+        faq: {
+          eyebrow: 'SSS',
+          title: 'Okumadan önce',
+          desc: 'Bizdavar blog hakkında sık aranan sorular.',
+          items: [
+            { q: 'Bizdavar blog ne hakkında?', a: 'Dijital pazarlama, SEO, çok dilli web, Fast Web Studio, VEGA sensör tedariki ve BizPet / BizTab gibi özgün ürün rehberleri.' },
+            { q: 'Yazılar kaç dilde yayımlanır?', a: 'Blog ve ana makaleler Farsça, Türkçe, İngilizce, Rusça ve Arapça — ayrı hreflang ile indekslenir.' },
+            { q: 'Hizmetle ilgili yazıyı nasıl bulurum?', a: 'Üstteki konu filtresini kullanın veya pazarlama, web tasarım ve endüstriyel kümelerden hizmet sayfalarına gidin.' },
+            { q: 'VEGA teklifi için ne yapmalıyım?', a: 'Modeli veya tank verisini WhatsApp ya da iletişim formuna gönderin — proforma ve sipariş kodu hazırlanır.' },
+            { q: 'Bizdavar ürünleri blogda var mı?', a: 'Evet. BizTab, BizClean V5 ve BizPet ısı pedinin ayrı sayfaları bu listeden açılır.' }
+          ]
+        },
+        cta: {
+          title: 'Uzman danışmanlığa mı ihtiyacınız var?',
+          desc: 'Konunuzu <a href="/pages/contact">iletişim formuna</a> yazın — veya WhatsApp’tan mesaj atın.',
+          btn: 'Danışmanlık iste',
+          btnWa: 'Farsça WhatsApp'
+        },
+        geoText: 'İran ve Türkiye işletmeleri için yazılar — dijital pazarlama, SEO, çok dilli web ve VEGA endüstriyel tedariki.',
+        related: [
+          { title: 'ABD/AB web tasarım', desc: '$99’dan / EUR fatura', titleKey: 'blogPage.related.0.title', descKey: 'blogPage.related.0.desc' },
+          { title: 'ABD/AB reklam', desc: 'Google, Meta, LinkedIn', titleKey: 'blogPage.related.1.title', descKey: 'blogPage.related.1.desc' },
+          { title: 'VEGA kataloğu', desc: 'Seviye ve basınç sensörü', titleKey: 'blogPage.related.2.title', descKey: 'blogPage.related.2.desc' },
+          { title: 'İletişim', desc: 'Ücretsiz danışmanlık', titleKey: 'blogPage.related.3.title', descKey: 'blogPage.related.3.desc' }
+        ]
+      },
       privacyPage: { hero: { title: 'Gizlilik Politikası', desc: 'Bizdavar Group web sitesinde bilgilerinizin nasıl toplandığı ve kullanıldığı' }, sections: [{ title: '1. Toplanan bilgiler', body: '<a href="contact">İletişim formunu</a> gönderdiğinizde adınız, e-posta adresiniz, telefon numaranız (isteğe bağlı), hizmet türü ve mesajınız alınır. Bu bilgiler yalnızca talebinize yanıt vermek için kullanılır.' }, { title: '2. Kullanım şekli', items: ['Danışmanlık talebine ve hizmet önerisine yanıt vermek', 'Görüşme aşamasındaki projeleri takip etmek', 'Hizmet kalitesini iyileştirmek (kamuya açık paylaşım olmadan)'] }, { title: '3. Üçüncü taraflarla paylaşım', body: 'Bilgileriniz açık izniniz olmadan üçüncü taraflara satılmaz veya aktarılmaz; yasal zorunluluklar hariç.' }, { title: '4. Çerezler ve analiz', body: 'Bu site ziyaret ölçümü için <strong>Google Tag Manager</strong> (GTM-NXWQQWF8) ve <strong>Google Analytics 4</strong> (G-4GFEY12SLH) kullanır. Bu araçlar çerez veya benzer tanımlayıcılar ayarlayabilir. Dil algılama ayrıntıları bölüm 5\'tedir.' }, { title: '5. Dil ve bölge algılama', body: 'Uygun dili göstermek için (Farsça, Türkçe, İngilizce) IP adresiniz yaklaşık ülke tespiti amacıyla anonim olarak <strong>ipapi.co</strong> veya <strong>ipwho.is</strong> servislerine gönderilebilir. Dil tercihi tarayıcı <code>localStorage</code> içinde (<code>bizdavar_locale</code> anahtarı) saklanır. Dili menüden veya <code>?lang=fa</code>, <code>?lang=tr</code>, <code>?lang=en</code> parametreleriyle istediğiniz zaman seçebilirsiniz.' }, { title: '6. Bize ulaşın', body: 'Gizlilik soruları için: <a href="mailto:info@bizdavar.com">info@bizdavar.com</a> veya <a href="contact">iletişim formu</a>.' }], updated: 'Son güncelleme: Nisan 2025' },
       gamakPage: { sections: {
         trust: { eyebrow: 'Neden Bizdavar’dan alın?', title: 'Teknik ve satınalma biriminiz için güvenilir Gamak tedariki', desc: 'Sadece katalog göstermiyoruz — güç seçiminden teslimata kadar yanınızdayız.' },
@@ -394,7 +608,7 @@
         industries: { eyebrow: 'Küresel endüstriler', title: 'Farklı endüstrilerde uygulama', desc: 'Her endüstriyel bölüm için özel gaz algılama çözümü' },
         supply: { eyebrow: 'Bizdavar tedariki', title: 'Prosense tedarik hizmetleri', desc: 'Tedarik ortağınız — sadece satıcı değil' },
         faq: { eyebrow: 'SSS', title: 'Alıcıların sık sorduğu sorular', desc: 'Cevabı bulamadınız mı? Farsça WhatsApp’tan yazın.' }
-      }, officialNote: 'Ürünlerin teknik bilgileri <a href="https://www.prosense.com.tr/?lang=tr" target="_blank" rel="noopener noreferrer">resmi Prosense web sitesine</a> dayanır. Fiyat teklifi ve tedarik için — <a href="contact">Bizdavar ile iletişime geçin</a> · <a href="vega">VEGA ürünleri</a>', cta: { title: 'Prosense fiyat teklifine hazır mısınız?', desc: 'Gaz türünü veya model serisini gönderin — PQ · SafeVader · SOMA · PPS+ · S-DPX paneli', btnForm: 'Teklif formu', btnServices: 'Ürün kataloğu' }, sticky: { label: 'Prosense teklifi', hint: 'Farsça teknik danışmanlık · hızlı yanıt' }, geoText: 'Orijinal Prosense dedektör tedariki — SIL/M1/EN sertifikaları, Farsça WhatsApp danışmanlığı ve petrol, gaz ve endüstri projeleri için lojistik.', related: [{ title: 'VEGA ürünleri', desc: 'Seviye ve basınç sensörleri' }, { title: 'Teltonika GPS', desc: 'Fleet Telematics' }, { title: 'Endüstriyel hizmetler', desc: 'B2B danışmanlık' }, { title: 'İletişim', desc: 'Fiyat teklifi' }] },
+      }, officialNote: 'Ürünlerin teknik bilgileri <a href="https://www.prosense.com.tr/?lang=tr" target="_blank" rel="noopener noreferrer">resmi Prosense web sitesine</a> dayanır. Fiyat teklifi ve tedarik için — <a href="contact">Bizdavar ile iletişime geçin</a> · <a href="articles/buy-prosense-iran">Prosense rehberi</a> · <a href="vega">VEGA ürünleri</a>', cta: { title: 'Prosense fiyat teklifine hazır mısınız?', desc: 'Gaz türünü veya model serisini gönderin — PQ · SafeVader · SOMA · PPS+ · S-DPX paneli', btnForm: 'Teklif formu', btnServices: 'Ürün kataloğu' }, sticky: { label: 'Prosense teklifi', hint: 'Türkçe teknik danışmanlık · hızlı yanıt' }, geoText: 'Orijinal Prosense dedektör tedariki — SIL/M1/EN sertifikaları, Farsça WhatsApp danışmanlığı ve petrol, gaz ve endüstri projeleri için lojistik.', related: [{ title: 'VEGA ürünleri', desc: 'Seviye ve basınç sensörleri' }, { title: 'Teltonika GPS', desc: 'Fleet Telematics' }, { title: 'Endüstriyel hizmetler', desc: 'B2B danışmanlık' }, { title: 'İletişim', desc: 'Fiyat teklifi' }] },
       teltonikaPage: { sections: {
         trust: { eyebrow: 'Neden Bizdavar’dan alın?', title: 'Teknik ve satınalma biriminiz için güvenilir Teltonika tedariki', desc: 'Sadece katalog göstermiyoruz — model seçiminden teslimata kadar yanınızdayız.' },
         buy: { eyebrow: 'Satınalma yolu', title: 'Tekliften teslimata — 5 net adım', desc: 'Karmaşa yok — her adımı bilir ve her aşamada iletişimde olursunuz.' },
@@ -404,7 +618,7 @@
         industries: { eyebrow: 'Küresel endüstriler', title: 'Farklı endüstrilerde uygulama', desc: 'Her sektör için Fleet Telematics çözümü' },
         supply: { eyebrow: 'Bizdavar tedariki', title: 'Teltonika tedarik hizmetleri', desc: 'Tedarik ortağınız — sadece satıcı değil' },
         faq: { eyebrow: 'SSS', title: 'Alıcıların sık sorduğu sorular', desc: 'Cevabı bulamadınız mı? Doğrudan bizimle iletişime geçin.' }
-      }, officialNote: 'Teknik bilgiler <a href="https://www.teltonika-gps.com/" target="_blank" rel="noopener noreferrer">resmi Teltonika Telematics</a> sitesine dayanır. Teklif için — <a href="contact">Bizdavar</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'Teltonika fiyat teklifine hazır mısınız?', desc: 'Tracker modeli veya filo türünü gönderin — FMB920 · FMC650 · FTC305', btnForm: 'Teklif formu', btnServices: 'Ürün kataloğu' }, sticky: { label: 'Teltonika teklifi' }, geoText: 'Orijinal Teltonika GPS tedariki — Fleet Telematics, Türkçe danışmanlık ve uluslararası lojistik.', related: [{ title: 'VEGA ürünleri', desc: 'Seviye ve basınç sensörleri' }, { title: 'Prosense ürünleri', desc: 'Gaz ve alev dedektörü' }, { title: 'Ürün kataloğu', desc: 'Tedarik markaları' }, { title: 'İletişim', desc: 'Fiyat teklifi' }] },
+      }, officialNote: 'Teknik bilgiler <a href="https://www.teltonika-gps.com/" target="_blank" rel="noopener noreferrer">resmi Teltonika Telematics</a> sitesine dayanır. Teklif için — <a href="contact">Bizdavar</a> · <a href="articles/buy-teltonika-iran">FMB920 rehberi</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'Teltonika fiyat teklifine hazır mısınız?', desc: 'Tracker modeli veya filo türünü gönderin — FMB920 · FMC650 · FTC305', btnForm: 'Teklif formu', btnServices: 'Ürün kataloğu' }, sticky: { label: 'Teltonika teklifi' }, geoText: 'Orijinal Teltonika GPS tedariki — Fleet Telematics, Türkçe danışmanlık ve uluslararası lojistik.', related: [{ title: 'VEGA ürünleri', desc: 'Seviye ve basınç sensörleri' }, { title: 'Prosense ürünleri', desc: 'Gaz ve alev dedektörü' }, { title: 'Ürün kataloğu', desc: 'Tedarik markaları' }, { title: 'İletişim', desc: 'Fiyat teklifi' }] },
       liquiMolyPage: { sections: {
         trust: { eyebrow: 'Neden Bizdavar’dan alın?', title: 'Şeffaf dolar fiyatıyla güvenilir Liqui Moly tedariki', desc: 'Yağ ve katkı seçiminden proforma ve teslimata — Farsça ve Türkçe destek.' },
         buy: { eyebrow: 'Satınalma yolu', title: 'Ürün seçiminden teslimata — 5 adım', desc: 'Gösterilen fiyat dolardır; nihai tutar proformada onaylanır.' },
@@ -414,13 +628,118 @@
         iran: { eyebrow: 'Uygulama', title: 'Liqui Moly kimler için?', desc: 'Servisten filoya, motosikletten bireysel kullanıma — her kullanım için Farsça teklif ve orijinal tedarik.', note: 'Listenizde yok mu? Araç modeli, yakıt tipi ve adedi gönderin — net öneri verelim.' },
         supply: { eyebrow: 'Bizdavar tedariki', title: 'Liqui Moly tedarik hizmetleri', desc: 'Tedarik ortağınız — sadece fiyat listesi değil' },
         faq: { eyebrow: 'SSS', title: 'Alıcıların sık sorduğu sorular', desc: 'Cevabı bulamadınız mı? WhatsApp’tan yazın.' }
-      }, rateNote: { strong: '', body: '' }, officialNote: 'Teknik bilgiler <a href="https://www.liqui-moly.com/" target="_blank" rel="noopener noreferrer">resmi Liqui Moly web sitesine</a> dayanır. Sipariş için — <a href="contact">Bizdavar</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'Liqui Moly siparişine hazır mısınız?', desc: 'Ürün adı veya SKU gönderin — Octane Plus · Top Tec · Molygen', btnForm: 'Teklif formu', btnServices: 'Ürün kataloğu' }, sticky: { label: 'Liqui Moly teklifi', hint: 'Dolar fiyat · Farsça danışmanlık' }, geoText: 'Orijinal Liqui Moly tedariki — şeffaf dolar fiyat, Farsça danışmanlık ve uluslararası lojistik.', related: [{ title: 'VEGA ürünleri', desc: 'Seviye ve basınç sensörleri' }, { title: 'Prosense ürünleri', desc: 'Gaz ve alev dedektörü' }, { title: 'Ürün kataloğu', desc: 'B2B tedarik markaları' }, { title: 'İletişim', desc: 'Liqui Moly fiyat teklifi' }] }
+      }, rateNote: { strong: '', body: '' }, officialNote: 'Teknik bilgiler <a href="https://www.liqui-moly.com/" target="_blank" rel="noopener noreferrer">resmi Liqui Moly web sitesine</a> dayanır. Sipariş için — <a href="contact">Bizdavar</a> · <a href="articles/liqui-moly-supply-iran">Liqui Moly rehberi</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'Liqui Moly siparişine hazır mısınız?', desc: 'Ürün adı veya SKU gönderin — Octane Plus · Top Tec · Molygen', btnForm: 'Teklif formu', btnServices: 'Ürün kataloğu' }, sticky: { label: 'Liqui Moly teklifi', hint: 'Dolar fiyat · Farsça danışmanlık' }, geoText: 'Orijinal Liqui Moly tedariki — şeffaf dolar fiyat, Farsça danışmanlık ve uluslararası lojistik.', related: [{ title: 'VEGA ürünleri', desc: 'Seviye ve basınç sensörleri' }, { title: 'Prosense ürünleri', desc: 'Gaz ve alev dedektörü' }, { title: 'Ürün kataloğu', desc: 'B2B tedarik markaları' }, { title: 'İletişim', desc: 'Liqui Moly fiyat teklifi' }] }
     },
     en: {
       aboutPage: { hero: { tag: 'About Bizdavar', title: 'Your growth partner in digital and industry', desc: 'Since 2013 — 100+ projects in 11 countries · marketing, web, fintech and industrial supply' }, whatIs: { title: 'What is Bizdavar Group?', p1: 'Bizdavar Group is a digital agency and B2B supply group founded in 2013 by <strong>Ersan Jahed Tabrizi</strong>. Our digital services include <a href="services#digital-marketing">digital marketing</a>, <a href="fast">web design</a>, fintech platforms and SMM management. Owned products and <a href="products#supply">industrial brands</a> live on the products page.', p2: '100+ custom web and platform projects across 11 countries — from custom web and platforms to VEGA supply and digital products. Digital infrastructure, domains, hosting, SSL and technical support are also managed by our team. <a href="portfolio">View portfolio</a>' }, features: ['Digital marketing', 'Professional web design', 'Equipment supply', 'Infrastructure management'], stats: [{ value: '12+', label: 'Years experience' }, { value: '100+', label: 'Projects' }, { value: '11', label: 'Countries' }, { value: '4', label: 'Business pillars' }], navAria: 'Page sections', nav: [{ href: '#profile', label: 'Profile' }, { href: '#activities', label: 'Expertise' }, { href: '#ecosystem', label: 'Ecosystem' }, { href: '#presence', label: 'Global presence' }, { href: '#highlights', label: 'Highlights' }, { href: '#sources', label: 'Sources' }, { href: '#trust', label: 'Trust' }, { href: '#faq', label: 'FAQ' }], sections: { identityEyebrow: 'Company profile', identityTitle: 'Bizdavar Group at a glance', leadershipEyebrow: 'Leadership', leadershipTitle: 'Founder and team', activitiesEyebrow: 'Activity areas', activitiesTitle: 'Areas of expertise', ecosystemEyebrow: 'Ecosystem', ecosystemTitle: 'Related brands and projects', ecosystemDesc: 'Examples from the digital and industrial ecosystem Bizdavar has developed or managed', presenceEyebrow: 'Global presence', presenceTitle: 'Active countries', presenceDesc: 'International project network offices in Iran, Turkey, Armenia and Dubai — projects across Europe and the US', exhibitionsEyebrow: 'Exhibitions & events', exhibitionsTitle: 'Technology exhibition presence', exhibitionsDesc: 'Innovation and commercialization events — from RINOTEX Tabriz to university fairs', achievementsEyebrow: 'Achievements', achievementsTitle: 'Bizdavar products & innovation', achievementsDesc: 'Beyond digital services and industrial supply, the Bizdavar team has also designed owned products', sourcesEyebrow: 'Verified sources', sourcesTitle: 'Media, exhibitions and verifiable references', sourcesDesc: 'Official links published about products, exhibitions and Bizdavar history — independent of on-site claims.', credentialsEyebrow: 'Certifications', credentialsTitle: 'Verified skills', proofEyebrow: 'Professional credibility', proofTitle: 'Trust indicators', proofDesc: 'Based on verifiable public sources — no fabricated testimonials', faqEyebrow: 'FAQ', faqTitle: 'Common questions about Bizdavar' }, relatedLinks: [{ title: 'Our services', url: 'services', desc: 'Digital marketing, web, SMM and industry' }, { title: 'Portfolio', url: 'portfolio', desc: 'ZedPay, BZ Diamond and more' }, { title: 'Contact us', url: 'contact', desc: 'Free consultation' }], values: { title: 'Our values', items: [{ title: 'Outcome focus', desc: 'Sales, conversion and brand growth — not just execution.' }, { title: 'Transparent collaboration', desc: 'Regular reporting and direct communication with the team.' }, { title: 'Global market', desc: 'Projects in Iran, Turkey and international markets.' }, { title: 'Fast execution', desc: 'Fast Web Studio — website delivery in 5 days.' }] }, cta: { title: 'Ready to work with Bizdavar?', desc: 'Initial consultation is free — through the <a href="contact" class="link-yellow">contact form</a> or WhatsApp.', btn: 'Contact us' } },
       servicesPage: { hero: { tag: 'Our services', title: 'Bizdavar digital & technical services', desc: 'Marketing, web apps, mobile, systems, servers and SMM — plus CCTV, wiring and cove lighting. Products live on the <a href="products">products page</a>.' }, overview: { eyebrow: 'Overview', title: 'Six Bizdavar service areas', desc: 'Digital and software up top — on-site technical services below via dedicated technical WhatsApp.' }, navAria: 'Services list', viewDetails: 'View details', stats: [{ value: '6', label: 'Service areas' }, { value: '100+', label: 'Projects' }, { value: '2', label: 'Field cities' }, { value: '12+', label: 'Years experience' }], cards: serviceBlocks.en.map(({ title, body, ...rest }) => ({ title, desc: rest.subtitle || body })), blocks: serviceBlocks.en, panels: servicesPanels.en, relatedLinks: servicesRelatedLinks.en, process: { eyebrow: 'Collaboration process', title: 'How do we work with you?', desc: 'A simple, transparent and trackable workflow.', steps: [{ title: 'Consulting', desc: 'Understanding your needs and goals' }, { title: 'Solution design', desc: 'Technical proposal and timeline estimate' }, { title: 'Execution', desc: 'Campaign, implementation or supply delivery' }, { title: 'Support', desc: 'Reporting, optimization and ongoing support' }] }, cta: { title: 'Need a custom solution?', desc: 'Free consultation — see project examples in the <a href="portfolio">Bizdavar portfolio</a>', btn: 'Free consultation', btnSecondary: 'View portfolio' } },
       portfolioPage: { hero: { tag: 'Portfolio', title: 'Bizdavar services, products and delivered work', desc: 'Web design, digital marketing, SMM, FXGuard and Fast Web Studio products, plus VEGA / Prosense / Liqui Moly supply — <a href="about">about Bizdavar</a>.' }, areas: { eyebrow: 'Areas', title: 'Project activity areas' }, archived: { eyebrow: 'Past projects', title: 'Previous and incomplete work', desc: 'Projects without a live link or left unfinished — including sites whose hosting expired and marketplaces that were never completed. Listed briefly only.' }, tags: ['Fintech and payments', 'Accounting and finance', 'Artificial intelligence', 'iOS mobile apps', 'Events and tickets', 'Holding and investment', 'Hosting and infrastructure', 'Web design and stores', 'International trade', 'Swiss trade', 'SMM panel', 'SMM management', 'Industrial supply', 'VEGA sensors', 'Prosense detectors', 'Aviation', 'Brokerage and finance'], cta: { title: 'Your brand could be the next project', desc: 'From <a href="fast" class="link-yellow">web design</a> to DNS and SSL management, Bizdavar is with you.', btnPrimary: 'Start a new project', btnSecondary: 'View services' }, filters: [{ id: 'all', label: 'All' }, { id: 'case-study', label: 'Case studies' }, { id: 'client', label: 'Clients' }, { id: 'ecosystem', label: 'Ecosystem' }, { id: 'fintech', label: 'Fintech' }, { id: 'digital', label: 'Digital' }, { id: 'industrial', label: 'Industrial' }, { id: 'other', label: 'Other' }], roleLabels: { ecosystem: 'Ecosystem', 'case-study': 'Case study', client: 'Client', website: 'Website', page: 'Bizdavar page' }, statsLabels: ['Projects & brands', 'Case studies', 'Clients', 'Ecosystem'], filterAria: 'Portfolio filters', countText: '{count} items shown', relatedLinks: portfolioRelatedLinks.en },
-      blogPage: { hero: { tag: 'Blog', title: 'Digital and industrial insights', desc: 'Practical guides and tips from the Bizdavar Group team.' }, cta: { title: 'Need expert consulting?', desc: 'Write your topic in the <a href="contact">contact form</a> — we will respond.', btn: 'Request consulting' }, geoText: 'Specialized articles for businesses in Iran and Turkey — digital marketing, web design and industrial supply.' },
+      blogPage: {
+        hero: {
+          tag: 'Expert blog',
+          title: 'US/EU web design, ads and industrial supply guides',
+          desc: 'English websites billed in USD or EUR, Google/Meta/LinkedIn campaigns, plus genuine VEGA supply for Iran.',
+          ctaArticles: 'Browse articles',
+          ctaTopics: 'Topics',
+          ctaConsult: 'Free consult'
+        },
+        intro: {
+          title: 'Field notes from live projects',
+          body: 'The Bizdavar blog distils <a href="/pages/services">digital services</a>, <a href="/pages/articles/website-design-us-eu">US/EU website design</a>, <a href="/pages/fast">Fast Studio</a> and <a href="/pages/products#supply">industrial supply</a>. Read ads, SEO, SMM and the VEGA buying path as execution — not slogans.',
+          statPosts: '20',
+          statPostsLabel: 'Guides',
+          statLangs: '5',
+          statLangsLabel: 'Languages',
+          statTopics: '5',
+          statTopicsLabel: 'Topic clusters'
+        },
+        topics: {
+          eyebrow: 'Topic clusters',
+          title: 'From SEO to VEGA sensors',
+          desc: 'Pick by need — each cluster links to the matching service or product page.',
+          digital: { label: 'Digital marketing', desc: 'SEO, CRO and SMM' },
+          web: { label: 'Web design', desc: 'US/EU English sites & Fast Studio' },
+          industrial: { label: 'Industrial supply', desc: 'VEGA and instrumentation' },
+          products: { label: 'Bizdavar products', desc: 'BizPet, BizTab and BizClean' },
+          company: { label: 'Company', desc: 'History and activity areas' }
+        },
+        catalog: {
+          eyebrow: 'Article catalog',
+          title: 'All guides at a glance',
+          desc: 'Filter by topic or open a guide — links sit in the HTML for crawlers.',
+          filterAll: 'All',
+          empty: 'No articles in this topic.',
+          filterAria: 'Article topic filter',
+          countText: '{count} posts',
+          relatedService: 'Related service'
+        },
+        featured: {
+          eyebrow: 'Editor picks',
+          title: 'Latest guides',
+          desc: 'Recent articles with direct links to services or quotes.'
+        },
+        linkHub: {
+          eyebrow: 'Quick paths',
+          title: 'From blog to key pages',
+          desc: 'Internal links to services, catalogs and contact — no menu hunting.',
+          items: [
+            { title: 'US/EU websites', url: '/pages/articles/website-design-us-eu', desc: 'From $99 / EUR invoice' },
+            { title: 'US/EU ads', url: '/pages/articles/digital-marketing-us-eu', desc: 'Google, Meta, LinkedIn' },
+            { title: 'Fast Studio', url: '/pages/fast', desc: 'English site in 5 days' },
+            { title: 'Services', url: '/pages/services', desc: 'Web, ads and apps' },
+            { title: 'Contact / quote', url: '/pages/contact?service=web-design', desc: 'USD or EUR invoice' },
+            { title: 'Buy VEGAPULS', url: '/pages/articles/buy-vegapuls-iran', desc: 'Iran level sensor' },
+            { title: 'VEGA catalog', url: '/pages/vega', desc: 'Level sensors' },
+            { title: 'Buy Prosense', url: '/pages/articles/buy-prosense-iran', desc: 'Gas detectors' },
+            { title: 'Teltonika', url: '/pages/teltonika', desc: 'FMB920 from $29' },
+            { title: 'Digi', url: '/pages/articles/buy-digi-system-iran', desc: 'Scales and POS' },
+            { title: 'Industrial trade', url: '/pages/articles/industrial-trade-iran', desc: 'All brands' },
+            { title: 'Products', url: '/pages/products#supply', desc: 'Supply catalogue' }
+          ]
+        },
+        clusters: {
+          eyebrow: 'Next step',
+          title: 'From a guide to a quote',
+          desc: 'If the article is not enough, run the same topic as a project with Bizdavar.',
+          digitalTitle: 'Marketing & SEO',
+          digitalDesc: 'Google Ads, Meta and LinkedIn — budgets in USD or EUR.',
+          webTitle: 'Web design',
+          webDesc: 'English LTR sites in 5 days — from $99 / ~€90, Stripe and Zoom/Meet.',
+          industrialTitle: 'Buy VEGA',
+          industrialDesc: 'Order code, proforma and logistics to site.',
+          prosenseTitle: 'Prosense detectors',
+          prosenseDesc: 'Gas, flame and SIL — B2B proforma.',
+          portfolioTitle: 'Portfolio',
+          portfolioDesc: 'Marvi Society, FXGuard and digital work.',
+          appsTitle: 'iOS apps',
+          appsDesc: 'Design, Swift and App Store release.'
+        },
+        faq: {
+          eyebrow: 'FAQ',
+          title: 'Before you read',
+          desc: 'Short answers to common searches about the Bizdavar blog.',
+          items: [
+            { q: 'What is the Bizdavar blog about?', a: 'Two tracks: English websites and ads for US/EU (USD/EUR invoices), and genuine industrial supply into Iran. Start with <a href="/pages/articles/website-design-us-eu">US/EU web design</a> or a VEGA buying guide.' },
+            { q: 'How many languages are the articles in?', a: 'The blog hub and core articles are indexed in Persian, Turkish, English, Russian and Arabic with separate hreflang URLs.' },
+            { q: 'How do I find a service-related article?', a: 'Use the topic filter above, or jump from the marketing, web design and industrial clusters to the service pages.' },
+            { q: 'What should I do after reading a VEGA guide?', a: 'Send the model or tank data on WhatsApp or the contact form — the proforma and order code are issued by Bizdavar.' },
+            { q: 'Are Bizdavar products listed here too?', a: 'Yes. BizTab, BizClean V5 and the BizPet heating pad have dedicated pages linked from this catalog.' }
+          ]
+        },
+        cta: {
+          title: 'Need expert consulting?',
+          desc: 'Write your topic in the <a href="/pages/contact">contact form</a> — or message us on WhatsApp.',
+          btn: 'Request consulting',
+          btnWa: 'Persian WhatsApp'
+        },
+        geoText: 'Specialized articles for businesses in Iran and Turkey — digital marketing, SEO, multilingual web design and VEGA industrial supply.',
+        related: [
+          { title: 'US/EU websites', desc: 'From $99 / EUR invoice', titleKey: 'blogPage.related.0.title', descKey: 'blogPage.related.0.desc' },
+          { title: 'US/EU ads', desc: 'Google, Meta, LinkedIn', titleKey: 'blogPage.related.1.title', descKey: 'blogPage.related.1.desc' },
+          { title: 'VEGA catalog', desc: 'Level and pressure sensors', titleKey: 'blogPage.related.2.title', descKey: 'blogPage.related.2.desc' },
+          { title: 'Contact', desc: 'Website quote or WhatsApp', titleKey: 'blogPage.related.3.title', descKey: 'blogPage.related.3.desc' }
+        ]
+      },
       privacyPage: { hero: { title: 'Privacy Policy', desc: 'How your information is collected and used on the Bizdavar Group website' }, sections: [{ title: '1. Information we collect', body: 'When you submit the <a href="contact">contact form</a>, we receive your name, email, phone number (optional), service type and message. This information is used only to respond to your request.' }, { title: '2. How we use it', items: ['Responding to consulting requests and service proposals', 'Following up on projects under discussion', 'Improving service quality without public disclosure'] }, { title: '3. Sharing with third parties', body: 'Your information is not sold or transferred to third parties without your explicit consent, except where legally required.' }, { title: '4. Cookies and analytics', body: 'This site uses <strong>Google Tag Manager</strong> (GTM-NXWQQWF8) and <strong>Google Analytics 4</strong> (G-4GFEY12SLH) to measure traffic and improve the experience. These tools may set cookies or similar identifiers. Language detection details are in section 5.' }, { title: '5. Language & region detection', body: 'To show the appropriate language (Persian, Turkish, English), your IP address may be sent anonymously to <strong>ipapi.co</strong> or <strong>ipwho.is</strong> to detect your approximate country. Your language preference is stored in browser <code>localStorage</code> (key <code>bizdavar_locale</code>). You can change language anytime from the menu or with <code>?lang=fa</code>, <code>?lang=tr</code> or <code>?lang=en</code>.' }, { title: '6. Contact us', body: 'For privacy questions: <a href="mailto:info@bizdavar.com">info@bizdavar.com</a> or the <a href="contact">contact form</a>.' }], updated: 'Last updated: April 2025' },
       gamakPage: { sections: {
         trust: { eyebrow: 'Why buy from Bizdavar?', title: 'Reliable Gamak supply for your technical and procurement teams', desc: 'We do more than show a catalog — from power selection to delivery in Iran.' },
@@ -494,7 +813,7 @@
         industries: { eyebrow: 'Global industries', title: 'Application across industries', desc: 'Custom gas detection solution for every industrial sector' },
         supply: { eyebrow: 'Supply by Bizdavar', title: 'Prosense supply services', desc: 'Your supply partner — not just a vendor' },
         faq: { eyebrow: 'FAQ', title: 'Common questions from buyers', desc: 'Didn’t find your answer? Message us on Farsi WhatsApp.' }
-      }, officialNote: 'Product technical information is based on the <a href="https://www.prosense.com.tr/?lang=tr" target="_blank" rel="noopener noreferrer">official Prosense website</a>. For pricing and supply — <a href="contact">contact Bizdavar</a> · <a href="vega">VEGA products</a>', cta: { title: 'Ready for a Prosense quote?', desc: 'Send the gas type or model series — PQ · SafeVader · SOMA · PPS+ · S-DPX panel', btnForm: 'Quote form', btnServices: 'Product catalog' }, sticky: { label: 'Prosense quote', hint: 'Farsi technical consulting · fast reply' }, geoText: 'Genuine Prosense detector supply — SIL/M1/EN certifications, Farsi WhatsApp consulting and logistics for oil, gas and industrial projects.', related: [{ title: 'VEGA products', desc: 'Level and pressure sensors' }, { title: 'Teltonika GPS', desc: 'Fleet Telematics' }, { title: 'Industrial services', desc: 'B2B consulting' }, { title: 'Contact', desc: 'Price inquiry' }] },
+      }, officialNote: 'Product technical information is based on the <a href="https://www.prosense.com.tr/?lang=en" target="_blank" rel="noopener noreferrer">official Prosense website</a>. For pricing and supply — <a href="contact">contact Bizdavar</a> · <a href="articles/buy-prosense-iran">Prosense buyer guide</a> · <a href="vega">VEGA products</a>', cta: { title: 'Ready for a Prosense quote?', desc: 'Send the gas type or model series — PQ · SafeVader · SOMA · PPS+ · S-DPX panel', btnForm: 'Quote form', btnServices: 'Product catalog' }, sticky: { label: 'Prosense quote', hint: 'Farsi technical consulting · fast reply' }, geoText: 'Genuine Prosense detector supply — SIL/M1/EN certifications, Farsi WhatsApp consulting and logistics for oil, gas and industrial projects.', related: [{ title: 'VEGA products', desc: 'Level and pressure sensors' }, { title: 'Teltonika GPS', desc: 'Fleet Telematics' }, { title: 'Industrial services', desc: 'B2B consulting' }, { title: 'Contact', desc: 'Price inquiry' }] },
       teltonikaPage: { sections: {
         trust: { eyebrow: 'Why buy from Bizdavar?', title: 'Reliable Teltonika supply for your technical and procurement teams', desc: 'We do more than show a catalog — from tracker selection to delivery in Iran.' },
         buy: { eyebrow: 'Purchase path', title: 'From quote to delivery — 5 clear steps', desc: 'No complexity — you know every step and stay in touch throughout.' },
@@ -504,7 +823,7 @@
         industries: { eyebrow: 'Global industries', title: 'Application across industries', desc: 'Fleet Telematics solution for every sector' },
         supply: { eyebrow: 'Supply by Bizdavar', title: 'Teltonika supply services', desc: 'Your supply partner — not just a vendor' },
         faq: { eyebrow: 'FAQ', title: 'Common questions from buyers', desc: 'Didn’t find your answer? Contact us directly.' }
-      }, officialNote: 'Technical information is based on the <a href="https://www.teltonika-gps.com/" target="_blank" rel="noopener noreferrer">official Teltonika Telematics website</a>. For quotes — <a href="contact">contact Bizdavar</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'Ready for a Teltonika quote?', desc: 'Send tracker model or fleet type — FMB920 · FMC650 · FTC305 · DualCam', btnForm: 'Quote form', btnServices: 'Product catalog' }, sticky: { label: 'Teltonika quote' }, geoText: 'Genuine Teltonika GPS supply to Iran — Fleet Telematics, multilingual consulting and logistics.', related: [{ title: 'VEGA products', desc: 'Level and pressure sensors' }, { title: 'Prosense products', desc: 'Gas and flame detectors' }, { title: 'Product catalog', desc: 'Supply brands' }, { title: 'Contact', desc: 'Price inquiry' }] },
+      }, officialNote: 'Technical information is based on the <a href="https://www.teltonika-gps.com/" target="_blank" rel="noopener noreferrer">official Teltonika Telematics website</a>. For quotes — <a href="contact">contact Bizdavar</a> · <a href="articles/buy-teltonika-iran">FMB920 buyer guide</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'Ready for a Teltonika quote?', desc: 'Send tracker model or fleet type — FMB920 · FMC650 · FTC305 · DualCam', btnForm: 'Quote form', btnServices: 'Product catalog' }, sticky: { label: 'Teltonika quote' }, geoText: 'Genuine Teltonika GPS supply to Iran — Fleet Telematics, multilingual consulting and logistics.', related: [{ title: 'VEGA products', desc: 'Level and pressure sensors' }, { title: 'Prosense products', desc: 'Gas and flame detectors' }, { title: 'Product catalog', desc: 'Supply brands' }, { title: 'Contact', desc: 'Price inquiry' }] },
       liquiMolyPage: { sections: {
         trust: { eyebrow: 'Why buy from Bizdavar?', title: 'Reliable Liqui Moly supply with transparent USD pricing', desc: 'From oil and additive selection to proforma and delivery — Farsi-speaking support.' },
         buy: { eyebrow: 'Purchase path', title: 'From product pick to delivery — 5 steps', desc: 'Displayed prices are in USD; the final amount is confirmed on the proforma.' },
@@ -514,7 +833,7 @@
         iran: { eyebrow: 'Use cases', title: 'Who is Liqui Moly for?', desc: 'From workshops and fleets to motorcycles and personal use — Farsi inquiry and genuine supply for every use case.', note: 'Not listed? Send vehicle model, fuel type and quantity for a precise recommendation.' },
         supply: { eyebrow: 'Supply by Bizdavar', title: 'Liqui Moly supply services', desc: 'Your supply partner — not just a price list' },
         faq: { eyebrow: 'FAQ', title: 'Common buyer questions', desc: 'Didn’t find your answer? Message us on WhatsApp.' }
-      }, rateNote: { strong: '', body: '' }, officialNote: 'Technical information is based on the <a href="https://www.liqui-moly.com/" target="_blank" rel="noopener noreferrer">official Liqui Moly website</a>. To order — <a href="contact">contact Bizdavar</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'Ready to order Liqui Moly?', desc: 'Send product name or SKU — Octane Plus · Top Tec · Molygen · diesel additives', btnForm: 'Quote form', btnServices: 'Product catalog' }, sticky: { label: 'Liqui Moly quote', hint: 'USD pricing · Farsi consulting' }, geoText: 'Genuine Liqui Moly supply — transparent USD pricing, Farsi consulting and international logistics for oils, additives and car care.', related: [{ title: 'VEGA products', desc: 'Industrial level and pressure sensors' }, { title: 'Prosense products', desc: 'Gas and flame detectors' }, { title: 'Product catalog', desc: 'B2B supply brands' }, { title: 'Contact', desc: 'Liqui Moly price inquiry' }] }
+      }, rateNote: { strong: '', body: '' }, officialNote: 'Technical information is based on the <a href="https://www.liqui-moly.com/" target="_blank" rel="noopener noreferrer">official Liqui Moly website</a>. To order — <a href="contact">contact Bizdavar</a> · <a href="articles/liqui-moly-supply-iran">Liqui Moly guide</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>', cta: { title: 'Ready to order Liqui Moly?', desc: 'Send product name or SKU — Octane Plus · Top Tec · Molygen · diesel additives', btnForm: 'Quote form', btnServices: 'Product catalog' }, sticky: { label: 'Liqui Moly quote', hint: 'USD pricing · Farsi consulting' }, geoText: 'Genuine Liqui Moly supply — transparent USD pricing, Farsi consulting and international logistics for oils, additives and car care.', related: [{ title: 'VEGA products', desc: 'Industrial level and pressure sensors' }, { title: 'Prosense products', desc: 'Gas and flame detectors' }, { title: 'Product catalog', desc: 'B2B supply brands' }, { title: 'Contact', desc: 'Liqui Moly price inquiry' }] }
     }
   };
 
@@ -522,7 +841,7 @@
     fa: [
       ['تامین سنسور VEGA برای پروژه‌های ایران — از مشاوره تا تحویل', 'مشاوره فارسی، پیش‌فاکتور شفاف و لجستیک بین‌المللی VEGA اصل برای پروژه‌های صنعتی.', 'تجهیزات صنعتی'],
       ['وبسایت چندزبانه برای بازار ایران و ترکیه', 'hreflang، اعتماد محلی و تحویل سریع برای کسب‌وکارهای دو بازاری.', 'طراحی وب'],
-      ['دیجیتال مارکتینگ چیست؟ — راهنمای کامل برای کسب‌وکارها', 'تعریف بازاریابی دیجیتال، کانال‌ها و نقش آن در رشد فروش آنلاین.', 'بازاریابی دیجیتال'],
+      ['دیجیتال مارکتینگ چیست؟ — راهنمای کامل برای کسب‌وکارها', 'سئو، گوگل ادز، SMM و سنجش لید — مسیر عملی برای ایران و ترکیه.', 'بازاریابی دیجیتال'],
       ['چگونه بازاریابی دیجیتال فروش را افزایش می‌دهد؟', 'راهکارهای عملی برای تبدیل بازدیدکننده به مشتری.', 'بازاریابی دیجیتال'],
       ['مدیریت شبکه‌های اجتماعی — استراتژی SMM برای برندها', 'تولید محتوا، تقویم انتشار و تبلیغات هدفمند در اینستاگرام و لینکدین.', 'مدیریت SMM'],
       ['راه‌اندازی سایت در ۵ روز — راهنمای کامل Fast Studio', 'پلن‌ها، مسیر ۵ روزه و تفاوت با پروژه اختصاصی.', 'طراحی وب'],
@@ -534,7 +853,7 @@
     tr: [
       ['İran projeleri için VEGA sensör tedariki — danışmanlıktan teslimata', 'Farsça danışmanlık, şeffaf proforma ve uluslararası VEGA lojistiği.', 'Endüstriyel ekipman'],
       ['İran ve Türkiye pazarı için çok dilli web sitesi', 'hreflang, yerel güven ve hızlı teslimat.', 'Web tasarım'],
-      ['Dijital pazarlama nedir? İşletmeler için rehber', 'Dijital pazarlamanın tanımı, kanalları ve online satış büyümesindeki rolü.', 'Dijital pazarlama'],
+      ['Dijital pazarlama nedir? İşletmeler için tam rehber', 'SEO, Google Ads, SMM ve lead ölçümü — İran ve Türkiye için pratik yol.', 'Dijital pazarlama'],
       ['Dijital pazarlama satışları nasıl artırır?', 'Ziyaretçileri müşteriye dönüştürmek için pratik yöntemler.', 'Dijital pazarlama'],
       ['Sosyal medya yönetimi — Markalar için SMM stratejisi', 'Instagram ve LinkedIn için içerik üretimi, yayın takvimi ve hedefli reklamlar.', 'SMM yönetimi'],
       ['5 günde web sitesi — Fast Studio rehberi', 'Planlar, 5 günlük yol ve özel proje farkı.', 'Web tasarım'],
@@ -546,7 +865,7 @@
     en: [
       ['VEGA sensor supply for Iran projects — consulting to delivery', 'Persian consulting, transparent proforma, and international VEGA logistics.', 'Industrial equipment'],
       ['Multilingual websites for Iran and Turkey markets', 'hreflang, local trust signals, and fast delivery for dual-market businesses.', 'Web design'],
-      ['What is digital marketing? A complete guide for businesses', 'Definition, channels, and the role of digital marketing in online sales growth.', 'Digital marketing'],
+      ['What is digital marketing? A complete guide for businesses', 'SEO, Google Ads, SMM and lead measurement — a practical path for Iran and Turkey.', 'Digital marketing'],
       ['How does digital marketing increase sales?', 'Practical methods for turning visitors into customers.', 'Digital marketing'],
       ['Social media management — SMM strategy for brands', 'Content production, publishing calendars, and targeted ads for Instagram and LinkedIn.', 'SMM management'],
       ['Launch a website in 5 days — Fast Studio guide', 'Plans, 5-day path, and custom vs Fast.', 'Web design'],
@@ -744,6 +1063,176 @@
         geoText: 'محصول بهداشتی مهندسی‌شده در ایران — طراحی تیم بیزدوار و عرضه از طریق دیجی‌کالا.'
       },
 
+      bizseat: {
+        hero: {
+          tag: 'همان محصول · BizPet',
+          title: 'BizSeat همان پد حرارتی BizPet است',
+          desc: 'نام فروشگاهی پشتی خودرو — محصول اصلی پد حرارتی بیز پت است، نه یک خط جدا'
+        },
+        about: {
+          title: 'یک محصول، دو نام فروش',
+          imageAlt: 'BizSeat — همان پد حرارتی BizPet در قالب پشتی صندلی خودرو',
+          body: '<strong>BizSeat</strong> محصول جداگانه‌ای نیست. همان <strong>پد حرارتی BizPet</strong> (بیز پت / پت بیز) است که در سال <strong>۱۳۹۹</strong> در <strong>مرکز رشد و پارک علم و فناوری دانشگاه تبریز</strong> طراحی و ساخته شد و به‌صورت پشتی صندلی خودرو هم عرضه شد.',
+          body2: 'توسعه با همکاری <strong>تکنولوژی پردازان توسعه خاورمیانه</strong> و واحد فناور <strong>ایمن سهند پدیده</strong> بود. صفحهٔ اصلی محصول <a href="/pages/bizpet">BizPet</a> است؛ لینک دیجی‌کالا همان کالا را نشان می‌دهد.',
+          specsTitle: 'ویژگی‌ها',
+          specs: [
+            'محصول اصلی: پد حرارتی BizPet',
+            'کاربرد خودرو: پشتی صندلی با همان پد',
+            'طراحی و ساخت ۱۳۹۹ در تبریز',
+            'همکاری ایمن سهند پدیده و تکنولوژی پردازان توسعه خاورمیانه',
+            'عرضه فروشگاهی در دیجی‌کالا (dkp-7694589)'
+          ],
+          ctaDigikala: 'مشاهده در دیجی‌کالا',
+          ctaBizpet: 'صفحه اصلی BizPet',
+          ctaContact: 'استعلام عمده / تماس'
+        },
+        origin: {
+          eyebrow: 'پارک علمی تبریز · ۱۳۹۹',
+          title: 'از اختراع تا تولید در پارک علم و فناوری',
+          desc: 'BizSeat نام فروشگاهی همان پد حرارتی BizPet است — یک مسیر طراحی در اکوسیستم نوآوری دانشگاه تبریز.',
+          parkTitle: 'پارک علم و فناوری',
+          parkDesc: 'دانشگاه تبریز — بستر اختراع، طراحی و ساخت محصول در ۱۳۹۹.',
+          partner1Title: 'تکنولوژی پردازان توسعه خاورمیانه',
+          partner1Desc: 'شریک همکاری در توسعه و تجاری‌سازی محصول.',
+          partner2Title: 'ایمن سهند پدیده',
+          partner2Desc: 'واحد فناور پارک علمی تبریز — همکار طراحی و ساخت.',
+          storeTitle: 'عرضه در دیجی‌کالا',
+          storeDesc: 'شناسه کالا dkp-7694589 — پشتی صندلی خودرو مدل bizdavar.'
+        },
+        related: {
+          title: 'محصولات و خدمات مرتبط',
+          bizclean: 'دستگاه ضدعفونی دست',
+          biztab: 'دماسنج دیواری غیرتماسی',
+          catalog: 'کاتالوگ محصولات',
+          catalogDesc: 'سخت‌افزار و خطوط تولید بیزدوار',
+          about: 'درباره بیزدوار',
+          aboutDesc: 'پارک علمی، نمایشگاه‌ها و دستاوردها'
+        },
+        geoText: 'محصول خودرو اختراع‌شده در پارک علم و فناوری دانشگاه تبریز — طراحی تیم بیزدوار و عرضه در دیجی‌کالا.'
+      },
+
+      bizpet: {
+        hero: {
+          tag: 'محصول اختصاصی · پد حرارتی',
+          title: 'BizPet — پد حرارتی بیز پت',
+          desc: 'محصول اصلی ۱۳۹۹ — پد حرارتی پدیده برای خانه، خودرو و جا خواب حیوانات؛ بیز پت / پت بیز'
+        },
+        nav: {
+          about: 'درباره محصول',
+          rd: 'تحقیق و توسعه',
+          pets: 'جا خواب حیوانات',
+          origin: 'مرکز رشد',
+          gallery: 'گالری تصاویر',
+          contact: 'تماس'
+        },
+        about: {
+          title: 'درباره محصول',
+          imageAlt: 'BizPet — پد حرارتی خاکستری طراحی‌شده توسط تیم بیزدوار',
+          body: '<strong>BizPet</strong> (بیز پت / پت بیز) محصول اصلی پد حرارتی پدیده است — برای گرمایش در فصل سرد و تسکین درد موضعی که در <strong>مرکز رشد فناوری دانشگاه تبریز</strong> طراحی و تولید شد. پشتی صندلی خودرو با نام فروشگاهی BizSeat همان این پد است، نه محصول دوم.',
+          body2: 'توسعه با همکاری <strong>تکنولوژی پردازان توسعه خاورمیانه</strong> و واحد فناور <strong>ایمن سهند پدیده</strong> انجام شد. قابل حمل در خانه و خودرو؛ عرضه فروشگاهی در دیجی‌کالا (dkp-7694589).',
+          specsTitle: 'ویژگی‌ها',
+          specs: [
+            'پد حرارتی پدیده — محصول اصلی BizPet / بیز پت / پت بیز',
+            'همان کالا به‌صورت پشتی صندلی خودرو (نام فروشگاهی BizSeat)',
+            'گرمایش فصل سرد و تسکین درد موضعی',
+            'قابل حمل — خانه، خودرو و جا خواب حیوانات',
+            'ولتاژ کاری ۵ تا ۱۲ ولت (حداکثر ۱ آمپر)',
+            'قابل شستشو پس از خارج کردن المان حرارتی',
+            'طراحی و تولید در مرکز رشد فناوری دانشگاه تبریز',
+            'همکاری ایمن سهند پدیده و تکنولوژی پردازان توسعه خاورمیانه'
+          ],
+          ctaContact: 'استعلام عمده / تماس',
+          ctaCatalog: 'کاتالوگ محصولات'
+        },
+        gallery: {
+          tanAlt: 'BizPet — پد حرارتی کرم با کانکتور برق',
+          elementAlt: 'BizPet — المان حرارتی با نقاط اتصال',
+          posterAlt: 'برگه معرفی پد حرارتی پدیده'
+        },
+        rd: {
+          eyebrow: 'تحقیق و توسعه',
+          title: 'آزمایش المان حرارتی در آزمایشگاه',
+          desc: 'تصاویر تست حرارتی المان، نمونه اولیه و مونتاژ — بخشی از مسیر مهندسی پد حرارتی در مرکز رشد دانشگاه تبریز.',
+          tempHighAlt: 'آزمایش حرارتی المان با دماسنج مادون قرمز',
+          tempHighCaption: 'آزمایش حرارتی المان در آزمایشگاه',
+          tempAlt: 'اندازه‌گیری دمای سطح در تست تحقیق و توسعه',
+          tempCaption: 'اندازه‌گیری دمای سطح در تست R&D',
+          elementAlt: 'المان حرارتی مستطیلی با نقاط اتصال',
+          elementCaption: 'المان حرارتی با نقاط اتصال',
+          protoAlt: 'نمونه اولیه پد حرارتی روی بلوک عایق',
+          protoCaption: 'نمونه اولیه و مونتاژ آزمایشی'
+        },
+        military: {
+          eyebrow: 'تحقیق و توسعه',
+          title: 'پد حرارتی در پوشش لباس نظامی',
+          desc: 'نمونه اولیه جلیقه تاکتیکی با المان حرارتی یکپارچه و واحد کنترل — مسیر R&D برای به‌کارگیری پد حرارتی در پوشش لباس نظامی.',
+          vestAlt: 'نمونه جلیقه نظامی با پد حرارتی روی مانکن',
+          vestCaption: 'نمونه جلیقه تاکتیکی با واحد کنترل حرارتی',
+          liningAlt: 'نمای داخلی جلیقه و سیم‌کشی پد حرارتی',
+          liningCaption: 'نمای داخلی پوشش — المان حرارتی دوخته‌شده',
+          outdoorAlt: 'جلیقه نظامی حرارتی روی مانکن در فضای باز',
+          outdoorCaption: 'نمایش نمونه اولیه در فضای باز'
+        },
+        dryer: {
+          eyebrow: 'تحقیق و توسعه',
+          title: 'پد حرارتی در سبد میوه‌خشک‌کن',
+          desc: 'نمونه طراحی سبد چوبی میوه‌خشک‌کن با توری حرارتی شش‌ضلعی و سیم تغذیه — مسیر R&D برای به‌کارگیری پد حرارتی در سبدهای خشک‌کن میوه.',
+          imageAlt: 'نمونه سبد میوه‌خشک‌کن با توری حرارتی',
+          caption: 'رندر سه‌بعدی سبد خشک‌کن با المان حرارتی مشبک.'
+        },
+        pets: {
+          eyebrow: 'جا خواب حیوانات خانگی',
+          title: 'پد حرارتی مادون قرمز مخصوص حیوانات خانگی',
+          desc: 'همین پد حرارتی برای جا خواب سگ و گربه هم مناسب است — گرم نگه‌داشتن در فصل سرد، با ولتاژ ایمن و روکش قابل شستشو.',
+          imageAlt: 'BizPet — پد حرارتی مادون قرمز برای جا خواب حیوانات خانگی',
+          specs: [
+            'مناسب جا خواب حیوانات خانگی',
+            'نانومواد کربنی · مادون قرمز دور · بازده ۹۵ تا ۹۹ درصد',
+            'ولتاژ ایمن ۵ تا ۱۲ ولت · مصرف ۵ تا ۸ وات',
+            'روکش نرم، جداشدنی و قابل شستشو',
+            'کنترل دما در محدوده دمای بدن حیوان',
+            'کاربرد درمانی: اسپاسم عضلانی و آرتروز — مناسب حیوانات مسن یا باردار'
+          ]
+        },
+        expo: {
+          eyebrow: 'نمایشگاه',
+          title: 'غرفه ایمن سهند پدیده',
+          desc: 'نمایش پدهای حرارتی در نمایشگاه — با تأکید بر مصرف بسیار پایین و سازگاری با محیط زیست.',
+          imageAlt: 'غرفه نمایشگاهی ایمن سهند پدیده با پدهای حرارتی',
+          caption: 'غرفه شرکت ایمن سهند پدیده — معرفی پد حرارتی با مصرف پایین.'
+        },
+        origin: {
+          eyebrow: 'مرکز رشد تبریز · ۱۳۹۹',
+          title: 'از طراحی تا تولید در مرکز رشد فناوری',
+          desc: 'BizPet یکی از محصولات سخت‌افزاری تیم بیزدوار است — پد حرارتی پدیده، با دو شریک فناور محلی در اکوسیستم نوآوری دانشگاه تبریز.',
+          parkTitle: 'مرکز رشد فناوری',
+          parkDesc: 'دانشگاه تبریز — بستر طراحی و تولید پد حرارتی پدیده.',
+          partner1Title: 'تکنولوژی پردازان توسعه خاورمیانه',
+          partner1Desc: 'شریک همکاری در توسعه و تجاری‌سازی محصول.',
+          partner2Title: 'ایمن سهند پدیده',
+          partner2Desc: 'واحد فناور پارک علمی تبریز — همکار طراحی و ساخت پد حرارتی پدیده.',
+          specTitle: '۵ تا ۱۲ ولت · حداکثر ۱ آمپر',
+          specDesc: 'قابل حمل برای خانه و خودرو — قابل شستشو پس از خارج کردن المان حرارتی.'
+        },
+        production: {
+          eyebrow: 'خط تولید',
+          title: 'مونتاژ و تست پد حرارتی',
+          desc: 'ایستگاه مونتاژ و کنترل کیفیت — پدهای پارچه‌ای، واحد تغذیه و بسته‌بندی محصول.',
+          imageAlt: 'خط تولید پد حرارتی BizPet — مونتاژ و تست روی میز کار',
+          caption: 'مونتاژ و تست پدهای حرارتی در کارگاه تولید.'
+        },
+        related: {
+          title: 'محصولات و خدمات مرتبط',
+          bizseat: 'پشتی صندلی خودرو',
+          biztab: 'دماسنج دیواری غیرتماسی',
+          catalog: 'کاتالوگ محصولات',
+          catalogDesc: 'سخت‌افزار و خطوط تولید بیزدوار',
+          about: 'درباره بیزدوار',
+          aboutDesc: 'پارک علمی، نمایشگاه‌ها و دستاوردها'
+        },
+        geoText: 'پد حرارتی طراحی‌شده در مرکز رشد فناوری دانشگاه تبریز — محصول بیز پت تیم بیزدوار.'
+      },
+
       bizswap: {
         hero: {
           tag: 'محصول Web3 · DeFi',
@@ -844,20 +1333,14 @@
 
       fxguard: {
         hero: {
-          tag: 'FXGuard · WhatsApp CRM',
-          title: 'واتساپ را به ماشین فروش تیم خود تبدیل کنید',
-          desc: 'یک شماره، کل تیم، کنترل کامل — اینباکس مشترک، مشتریان، تیکت، تسک، شعب و ۲FA. محصول سوئیت FXGuard؛ Cloud از $49/ماه، لایسنس یک‌باره یا Managed Dedicated.',
-          regionItems: [
-            { code: 'TR', label: 'ترکیه' },
-            { code: 'AE', label: 'دبی' },
-            { code: 'EU', label: 'اروپا' },
-            { code: 'IR', label: 'ایران' }
-          ],
-          regions: 'ترکیه · دبی · اروپا · ایران',
-          trust: 'دموی رایگان زنده · از $49/ماه · فروش در fxguard.io',
-          ctaDemo: 'دموی رایگان',
-          ctaPricing: 'قیمت و خرید',
-          ctaContact: 'خرید / استعلام در واتساپ',
+          tag: 'Exchange · remittance · finance',
+          title: 'Quote the rate on WhatsApp. Keep the customer book.',
+          desc: 'Full copy loads from i18n/fxguard-i18n.js on this page only.',
+          regions: '',
+          trust: 'From $49/mo · guided demo · 7-day money-back',
+          ctaDemo: 'See the panel',
+          ctaPricing: 'Prices',
+          ctaContact: 'Buy on WhatsApp',
           ctaStore: 'fxguard.io'
         },
         stats: {
@@ -1176,6 +1659,12 @@
         geoText: 'FXGuard Accounting — حسابداری سوئیت FXGuard برای تیم‌های صرافی و SME · توسعه بیزدوار.'
       },
 
+      marvispace: {
+        hero: { tag: 'نمونه‌کار طراحی و توسعه وب', title: 'MarviSpace — فروشگاه آنلاین محصولات چرمی', desc: 'برنامه‌نویسی، توسعه و طراحی وبسایت فروشگاهی اختصاصی برای برند محصولات چرمی — توسط بیزدوار گروپ' },
+        about: { title: 'درباره پروژه', body: '<strong>MarviSpace</strong> نمونه‌کار برنامه‌نویسی و طراحی فروشگاه آنلاین بیزدوار گروپ است — فروشگاه اختصاصی محصولات چرمی با کاتالوگ مینیمال، جریان خرید و پنل مدیریت. این صفحه <strong>نمونه‌کار طراحی و توسعه وب فروشگاهی</strong> است.', servicesTitle: 'خدمات اجراشده توسط بیزدوار', services: ['طراحی UI/UX فروشگاه محصولات چرمی', 'برنامه‌نویسی و توسعه فروشگاه اختصاصی', 'کاتالوگ محصول، سبد خرید و جریان سفارش', 'داشبورد ادمین و مدیریت محتوا', 'بهینه‌سازی موبایل و عملکرد', 'پشتیبانی فنی پس از لانچ'], clientTitle: 'حوزه فعالیت مشتری', clientBody: 'MarviSpace برند فروش آنلاین محصولات چرمی است — کت، پوشاک و اکسسوری چرم. جزئیات محصولات و سفارش در وبسایت رسمی مشتری منتشر می‌شود.', challengeTitle: 'چالش پروژه', challenge: 'برند محصولات چرمی به فروشگاه اختصاصی نیاز داشت — گرید محصول مینیمال، کد SKU، تجربه خرید بین‌المللی و پنل مدیریت محتوا؛ نه قالب آماده.', resultsTitle: 'نتایج و دستاورد', result1: 'فروشگاه زنده marvispace.com با کاتالوگ محصولات چرمی', result2: 'تجربه خرید مینیمال و هویت بصری اختصاصی برند', result3: 'پنل مدیریت محصول و محتوا برای تیم فروش', ctaSite: 'مشاهده وبسایت MarviSpace', ctaOrder: 'سفارش فروشگاه مشابه', ctaPortfolio: 'سایر نمونه‌کارها' },
+        shots: { grid: 'کاتالوگ محصولات چرمی روی marvispace.com' },
+        geoText: 'نمونه‌کار برنامه‌نویسی و طراحی فروشگاه آنلاین محصولات چرمی — بیزدوار گروپ.'
+      },
       bzDiamond: {
         hero: { tag: 'نمونه‌کار طراحی وب', title: 'BZ Diamond — طراحی وبسایت و فروشگاه آنلاین', desc: 'پروژه مشتری در حوزه جواهرات و الماس — طراحی، توسعه و پشتیبانی دیجیتال توسط بیزدوار گروپ' },
         about: { title: 'درباره پروژه', body: '<strong>BZ Diamond</strong> یکی از مشتریان بیزدوار گروپ است — برند تخصصی فروش الماس و جواهرات آنلاین. ما وبسایت، فروشگاه WooCommerce، زیرساخت ایمیل و پشتیبانی فنی این پروژه را طراحی و اجرا کرده‌ایم. این صفحه <strong>نمونه‌کار طراحی وب</strong> است، نه بخش کسب‌وکار صنعتی بیزدوار.', servicesTitle: 'خدمات اجراشده توسط بیزدوار', services: ['طراحی و توسعه وبسایت شرکتی و فروشگاهی', 'پیاده‌سازی WooCommerce — فروش آنلاین الماس و جواهرات', 'مدیریت و پیکربندی ایمیل سازمانی (دامنه و صندوق‌های پستی)', 'سئو، ساختار محتوا و بهینه‌سازی صفحات محصول', 'رابط کاربری RTL و چندزبانه (فارسی / انگلیسی)', 'پشتیبانی فنی، به‌روزرسانی و نگهداری سایت'], clientTitle: 'حوزه فعالیت مشتری', clientBody: 'BZ Diamond در حوزه الماس GIA، lab-grown و آموزش انتخاب جواهرات فعالیت می‌کند. جزئیات محصولات و قیمت‌ها در وبسایت رسمی مشتری منتشر می‌شود.', challengeTitle: 'چالش پروژه', challenge: 'نیاز به فروشگاه آنلاین قابل‌اعتماد برای الماس و جواهرات، با RTL فارسی/انگلیسی، سئوی صفحات محصول و ایمیل سازمانی امن — بدون قطع پشتیبانی پس از لانچ.', resultsTitle: 'نتایج و دستاورد', result1: 'فروشگاه WooCommerce با ساختار کاتالوگ و صفحات تبدیل', result2: 'ایمیل دامنه و نگهداری مداوم پس از تحویل', result3: 'پایه سئو و چندزبانه برای بازار هدف مشتری', ctaSite: 'مشاهده وبسایت BZ Diamond', ctaOrder: 'سفارش طراحی سایت مشابه', ctaPortfolio: 'سایر نمونه‌کارها' },
@@ -1195,6 +1684,12 @@
         hero: { tag: 'نمونه‌کار طراحی وب', title: 'SMM Turk — طراحی پنل SMM و وبسایت', desc: 'پروژه مشتری در ترکیه — طراحی رابط کاربری پنل، وبسایت و پشتیبانی دیجیتال توسط بیزدوار گروپ' },
         about: { title: 'درباره پروژه', body: '<strong>SMM Turk</strong> یکی از مشتریان بیزدوار گروپ است — پلتفرم پنل SMM برای رشد کسب‌وکار در شبکه‌های اجتماعی با قیمت رقابتی، تحویل خودکار ۲۴/۷ و برنامه همکاری (affiliate / reseller). ما وبسایت و تجربه کاربری پنل، ساختار محتوا، سئو پایه و پشتیبانی فنی این پروژه را طراحی و اجرا کرده‌ایم. این صفحه <strong>نمونه‌کار طراحی وب</strong> است.', servicesTitle: 'خدمات اجراشده توسط بیزدوار', services: ['طراحی و توسعه وبسایت و پنل کاربری SMM', 'رابط کاربری ورود، ثبت‌نام و داشبورد', 'سئو پایه، ساختار محتوا و صفحات تبدیل', 'بهینه‌سازی موبایل و عملکرد', 'پشتیبانی فنی، به‌روزرسانی و نگهداری'], clientTitle: 'حوزه فعالیت مشتری', clientBody: 'SMM Turk پنل خدمات شبکه‌های اجتماعی ارائه می‌دهد — سفارش خودکار، پرداخت کریپتو (BTC، ETH، USDT)، برنامه نمایندگی (bayi panel) و API. جزئیات قیمت و خدمات در وبسایت رسمی مشتری منتشر می‌شود.', challengeTitle: 'چالش پروژه', challenge: 'پنل SMM ترکیه به UI روشن برای ثبت‌نام، داشبورد و صفحات تبدیل نیاز داشت — با تمرکز بر موبایل و نرخ ثبت‌نام.', resultsTitle: 'نتایج و دستاورد', result1: 'طراحی وبسایت و جریان ورود/داشبورد پنل', result2: 'صفحات تبدیل و سئو پایه برای ترافیک ترکیه', result3: 'پشتیبانی فنی و به‌روزرسانی پس از لانچ', ctaSite: 'مشاهده وبسایت SMM Turk', ctaOrder: 'سفارش طراحی سایت مشابه', ctaPortfolio: 'سایر نمونه‌کارها' },
         geoText: 'نمونه‌کار طراحی وب و پنل SMM برای بازار ترکیه و بین‌الملل — بیزدوار گروپ.'
+      },
+      marviSociety: {
+        hero: { tag: 'نمونه‌کار اپلیکیشن iOS', title: 'Marvi Society — اپ iOS کلاب دعوت‌محور استانبول', desc: 'طراحی، برنامه‌نویسی و انتشار صفر تا صد اپ iOS — اتصال creatorهای تأییدشده با مکان‌های استانبول؛ منتشر در App Store' },
+        about: { title: 'درباره پروژه', body: '<strong>Marvi Society</strong> نمونه‌کار توسعه موبایل بیزدوار گروپ است — اپ iOS دعوت‌محور برای همکاری creator و کسب‌وکارهای تأییدشده در استانبول. کشف رویداد و مکان، ارسال درخواست همکاری، check-in، ارسال مدرک بازدید، مدیریت مکان و پروفایل TR/EN. این صفحه <strong>نمونه‌کار اپلیکیشن iOS</strong> است.', servicesTitle: 'خدمات اجراشده توسط بیزدوار', services: ['طراحی محصول و UI/UX اپ iOS', 'برنامه‌نویسی و معماری اپ موبایل', 'جریان کشف، دعوت، check-in و مدرک بازدید', 'پنل مدیریت مکان، کمپین و اعلان‌ها', 'انتشار در App Store و پشتیبانی پس از لانچ'], clientTitle: 'حوزه فعالیت محصول', clientBody: 'Marvi Society کلاب دعوت‌محور lifestyle در استانبول است — اتصال creator با رستوران، نایت‌لایف، wellness و زیبایی. جزئیات محصول در وبسایت و صفحه App Store منتشر می‌شود.', challengeTitle: 'چالش پروژه', challenge: 'نیاز به اپ دعوت‌محور برای اتصال creator و مکان در استانبول — با کشف رویداد، مدیریت دعوت، check-in و اثبات بازدید، آماده انتشار در App Store.', resultsTitle: 'نتایج و دستاورد', result1: 'اپ iOS منتشرشده در App Store', result2: 'جریان کامل کشف، همکاری و مدیریت مکان', result3: 'هویت بصری دارک و تجربه TR/EN', ctaAppStore: 'مشاهده در App Store', ctaSite: 'وبسایت Marvi Society', ctaOrder: 'سفارش اپلیکیشن مشابه', ctaPortfolio: 'سایر نمونه‌کارها' },
+        shots: { discover: 'کشف رویدادها', events: 'رویدادها و دعوت‌ها', profile: 'پروفایل creator' },
+        geoText: 'نمونه‌کار توسعه اپ iOS برای بازار استانبول و بین‌الملل — طراحی تا انتشار در App Store توسط بیزدوار گروپ.'
       },
       fxguardExchange: {
         hero: { tag: 'نمونه‌کار فین‌تک', title: 'FXGuard Exchange — پلتفرم تبادل تومان و لیر', desc: 'طراحی و توسعه وب‌اپلیکیشن تبادل ارز مسیر ایران ↔ ترکیه — نرخ زنده، سفارش شناسه‌دار، KYC و پیگیری مرحله‌ای توسط بیزدوار گروپ' },
@@ -1344,6 +1839,174 @@
         related: { title: 'İlgili Bizdavar ürünleri' },
         geoText: 'İran\'da mühendislik hijyen ürünü — Bizdavar ekibi tasarımı, Digikala üzerinden satış.'
       },
+      bizseat: {
+        hero: {
+          tag: 'Aynı ürün · BizPet',
+          title: 'BizSeat, BizPet ısı pedidir',
+          desc: 'Araç koltuğu satış adı — asıl ürün ayrı bir hat değil, 1399 Padideh ısı pedi BizPet’tir'
+        },
+        about: {
+          title: 'Bir ürün, iki satış adı',
+          imageAlt: 'BizSeat — araç koltuğunda aynı BizPet ısı pedi',
+          body: '<strong>BizSeat</strong> ayrı bir ürün değildir. Aynı <strong>BizPet ısı pedidir</strong> — <strong>1399</strong>’da <strong>Tebriz Üniversitesi teknoloji kuluçkasında</strong> tasarlandı ve araç koltuğu bel desteği olarak da satıldı.',
+          body2: 'Geliştirme <strong>Teknoloji Pardazan Tosee Khavarmianeh</strong> ve <strong>Imen Sahand Padideh</strong> ile yapıldı. Ana sayfa <a href="/pages/bizpet">BizPet</a>’tir; Digikala aynı SKU’dur.',
+          specsTitle: 'Özellikler',
+          specs: [
+            'Ergonomik araç koltuğu bel desteği',
+            '1399 icat, tasarım ve üretim',
+            'Tebriz Üniversitesi Bilim ve Teknoloji Parkı',
+            'Teknoloji Pardazan Tosee Khavarmianeh iş birliği',
+            'Imen Sahand Padideh teknoloji birimi iş birliği',
+            'Digikala’dan sipariş edilebilir'
+          ],
+          ctaDigikala: 'Digikala’da görüntüle',
+          ctaBizpet: 'Ana sayfa: BizPet',
+          ctaContact: 'Toptan teklif / iletişim'
+        },
+        origin: {
+          eyebrow: 'Tebriz teknoloji parkı · 1399',
+          title: 'İcattan üretime — bilim ve teknoloji parkı',
+          desc: 'BizSeat, Bizdavar ekibinin icat ettiği donanım ürünlerinden biridir — Tebriz Üniversitesi inovasyon ekosisteminde, iki yerel teknoloji ortağıyla tasarım ve üretim.',
+          parkTitle: 'Bilim ve Teknoloji Parkı',
+          parkDesc: 'Tebriz Üniversitesi — 1399’da icat, tasarım ve üretim ortamı.',
+          partner1Title: 'Teknoloji Pardazan Tosee Khavarmianeh',
+          partner1Desc: 'Geliştirme ve ticarileştirme ortağı.',
+          partner2Title: 'Imen Sahand Padideh',
+          partner2Desc: 'Tebriz teknoloji parkı birimi — tasarım ve üretim ortağı.',
+          storeTitle: 'Digikala’da satış',
+          storeDesc: 'Ürün kodu dkp-7694589 — araç koltuğu bel desteği, model bizdavar.'
+        },
+        related: {
+          title: 'İlgili ürün ve hizmetler',
+          bizclean: 'Otomatik el dezenfektanı',
+          biztab: 'Temasız duvar termometresi',
+          catalog: 'Ürün kataloğu',
+          catalogDesc: 'Bizdavar donanımı ve üretim hatları',
+          about: 'Bizdavar hakkında',
+          aboutDesc: 'Teknoloji parkı, fuarlar ve başarılar'
+        },
+        geoText: 'Tebriz Üniversitesi Bilim ve Teknoloji Parkı’nda icat edilen otomotiv ürünü — Bizdavar tasarımı, Digikala satışı.'
+      },
+      bizpet: {
+        hero: {
+          tag: 'Özel ürün · Isı pedi',
+          title: 'BizPet — Bizdavar ısı pedi',
+          desc: 'Tebriz Üniversitesi teknoloji kuluçkasında tasarım ve üretim — BizPet / Pet Biz adlarıyla Bizdavar’ın sahip olduğu ürün'
+        },
+        nav: {
+          about: 'Ürün hakkında',
+          rd: 'Ar-Ge',
+          pets: 'Evcil hayvan yatağı',
+          origin: 'Kuluçka merkezi',
+          gallery: 'Fotoğraf galerisi',
+          contact: 'İletişim'
+        },
+        about: {
+          title: 'Ürün hakkında',
+          imageAlt: 'BizPet — Bizdavar ekibinin tasarladığı gri ısı pedi',
+          body: '<strong>BizPet</strong> (Biz Pet / Pet Biz), Padideh ısı pedidir — soğuk mevsimde ısınma ve bölgesel ağrı rahatlaması için <strong>Tebriz Üniversitesi Teknoloji Kuluçka Merkezi</strong>’nde tasarlanıp üretildi.',
+          body2: 'Geliştirme, <strong>Teknoloji Pardazan Tosee Khavarmianeh</strong> ve teknoloji birimi <strong>Imen Sahand Padideh</strong> ile iş birliğinde yapıldı. Ürün taşınabilir; evde veya araçta kullanılır.',
+          specsTitle: 'Özellikler',
+          specs: [
+            'Padideh ısı pedi — BizPet / Biz Pet / Pet Biz',
+            'Soğuk mevsim ısınması ve bölgesel ağrı rahatlaması',
+            'Taşınabilir — ev ve araç kullanımı',
+            'Çalışma voltajı 5–12 V (maks. 1 A)',
+            'Isıtma elemanı çıkarıldıktan sonra yıkanabilir',
+            'Tebriz Üniversitesi Teknoloji Kuluçka Merkezi’nde tasarım ve üretim',
+            'Imen Sahand Padideh ve Teknoloji Pardazan Tosee Khavarmianeh iş birliği'
+          ],
+          ctaContact: 'Toptan teklif / iletişim',
+          ctaCatalog: 'Ürün kataloğu'
+        },
+        gallery: {
+          tanAlt: 'BizPet — krem ısı pedi, güç konnektörüyle',
+          elementAlt: 'BizPet — temas noktalı ısıtma elemanı',
+          posterAlt: 'Padideh ısı pedi tanıtım afişi'
+        },
+        rd: {
+          eyebrow: 'Ar-Ge',
+          title: 'Laboratuvarda ısıtma elemanı testleri',
+          desc: 'Termal test, prototip ve montaj fotoğrafları — Tebriz Üniversitesi kuluçkasındaki mühendislik süreci.',
+          tempHighAlt: 'Kızılötesi termometreyle ısıtma elemanı testi',
+          tempHighCaption: 'Laboratuvarda ısıtma elemanı testi',
+          tempAlt: 'Ar-Ge testinde yüzey sıcaklığı ölçümü',
+          tempCaption: 'Ar-Ge testinde yüzey sıcaklığı',
+          elementAlt: 'Köşe temaslı dikdörtgen ısıtma elemanı',
+          elementCaption: 'Temas noktalı ısıtma elemanı',
+          protoAlt: 'Yalıtım bloğu üzerinde ısı pedi prototipi',
+          protoCaption: 'Prototip ve deneysel montaj'
+        },
+        military: {
+          eyebrow: 'Ar-Ge',
+          title: 'Askeri giyside ısı pedi',
+          desc: 'Entegre ısıtma elemanı ve kontrol ünitesi olan taktik yelek prototipi — ısı pedinin askeri giysi katmanlarına uygulanması için Ar-Ge.',
+          vestAlt: 'Isı pedli askeri yelek prototipi, manken üzerinde',
+          vestCaption: 'Kontrol ünitesli taktik yelek prototipi',
+          liningAlt: 'Yelek iç astarı ve ısı pedi kablolaması',
+          liningCaption: 'İç astar — dikilmiş ısıtma elemanı',
+          outdoorAlt: 'Açık havada manken üzerinde ısıtmalı askeri yelek',
+          outdoorCaption: 'Prototipin açık hava gösterimi'
+        },
+        dryer: {
+          eyebrow: 'Ar-Ge',
+          title: 'Meyve kurutma sepetinde ısı pedi',
+          desc: 'Altıgen ısıtma filesi ve besleme kablosu olan ahşap meyve kurutma sepeti tasarımı — ısı pedinin kurutma sepetlerine uygulanması için Ar-Ge.',
+          imageAlt: 'Isıtma filesi olan meyve kurutma sepeti prototipi',
+          caption: 'Kurutma sepetinin 3D görseli — gözenekli ısıtma elemanı.'
+        },
+        pets: {
+          eyebrow: 'Evcil hayvan yatağı',
+          title: 'Evcil hayvanlar için kızılötesi ısı pedi',
+          desc: 'Aynı ısı pedi köpek ve kedi yatakları için de uygundur — soğuk mevsimde güvenli voltaj ve yıkanabilir kılıfla ısıtma.',
+          imageAlt: 'BizPet — evcil hayvan yatağı için kızılötesi ısı pedi',
+          specs: [
+            'Evcil hayvan yatakları için uygun',
+            'Karbon nanomalzeme · uzak kızılötesi · %95–99 verim',
+            'Güvenli 5–12 V · 5–8 W tüketim',
+            'Yumuşak, çıkarılabilir ve yıkanabilir kılıf',
+            'Sıcaklık hayvan vücut sıcaklığı aralığında kontrol edilir',
+            'Tedavi: kas spazmı ve artrit — yaşlı veya gebe hayvanlar için'
+          ]
+        },
+        expo: {
+          eyebrow: 'Fuar',
+          title: 'Imen Sahand Padideh standı',
+          desc: 'Fuar standında ısı pedleri — çok düşük tüketim ve çevre uyumu vurgusuyla.',
+          imageAlt: 'Imen Sahand Padideh fuar standı, ısı pedleriyle',
+          caption: 'Imen Sahand Padideh standı — düşük tüketimli ısı pedi tanıtımı.'
+        },
+        origin: {
+          eyebrow: 'Tebriz kuluçka merkezi · 1399',
+          title: 'Tasarımdan üretime — teknoloji kuluçkası',
+          desc: 'BizPet, Bizdavar ekibinin donanım ürünlerinden biridir — Padideh ısı pedi, iki yerel teknoloji ortağıyla.',
+          parkTitle: 'Teknoloji Kuluçka Merkezi',
+          parkDesc: 'Tebriz Üniversitesi — Padideh ısı pedinin tasarım ve üretim yeri.',
+          partner1Title: 'Teknoloji Pardazan Tosee Khavarmianeh',
+          partner1Desc: 'Geliştirme ve ticarileştirme ortağı.',
+          partner2Title: 'Imen Sahand Padideh',
+          partner2Desc: 'Tebriz teknoloji parkı birimi — Padideh ısı pedi tasarım ve üretim ortağı.',
+          specTitle: '5–12 V · maks. 1 A',
+          specDesc: 'Ev ve araç için taşınabilir — ısıtma elemanı çıkarıldıktan sonra yıkanabilir.'
+        },
+        production: {
+          eyebrow: 'Üretim hattı',
+          title: 'Isı pedi montaj ve test',
+          desc: 'Montaj ve kalite kontrol istasyonu — kumaş pedler, güç ünitesi ve ürün paketleme.',
+          imageAlt: 'BizPet ısı pedi üretim hattı — tezgâhta montaj ve test',
+          caption: 'Atölyede ısı pedlerinin montaj ve testi.'
+        },
+        related: {
+          title: 'İlgili ürün ve hizmetler',
+          bizseat: 'Araç koltuğu bel desteği',
+          biztab: 'Temasız duvar termometresi',
+          catalog: 'Ürün kataloğu',
+          catalogDesc: 'Bizdavar donanımı ve üretim hatları',
+          about: 'Bizdavar hakkında',
+          aboutDesc: 'Teknoloji parkı, fuarlar ve başarılar'
+        },
+        geoText: 'Tebriz Üniversitesi teknoloji kuluçkasında tasarlanan ısı pedi — Bizdavar’ın BizPet ürünü.'
+      },
       bizswap: {
         hero: {
           tag: 'Web3 ürün · DeFi',
@@ -1393,20 +2056,14 @@
       },
       fxguard: {
         hero: {
-          tag: 'FXGuard · WhatsApp CRM',
-          title: 'WhatsApp’ı satış makinenize çevirin',
-          desc: 'Tek numara, tüm ekip, tam kontrol — ortak gelen kutusu, müşteriler, ticket, görev, şubeler ve 2FA. FXGuard suite; Cloud $49/ay’dan, tek seferlik lisans veya Managed Dedicated.',
-          regionItems: [
-            { code: 'TR', label: 'Türkiye' },
-            { code: 'AE', label: 'Dubai' },
-            { code: 'EU', label: 'Avrupa' },
-            { code: 'IR', label: 'İran' }
-          ],
-          regions: 'Türkiye · Dubai · Avrupa · İran',
-          trust: 'Ücretsiz canlı demo · $49/ay’dan · fxguard.io',
-          ctaDemo: 'Ücretsiz demo',
-          ctaPricing: 'Fiyat & satın al',
-          ctaContact: 'WhatsApp ile satın al',
+          tag: 'Exchange · remittance · finance',
+          title: 'Quote the rate on WhatsApp. Keep the customer book.',
+          desc: 'Full copy loads from i18n/fxguard-i18n.js on this page only.',
+          regions: '',
+          trust: 'From $49/mo · guided demo · 7-day money-back',
+          ctaDemo: 'See the panel',
+          ctaPricing: 'Prices',
+          ctaContact: 'Buy on WhatsApp',
           ctaStore: 'fxguard.io'
         },
         stats: { businesses: 'Modül+', regions: 'Kullanıcı rolü', regionsVal: 'Owner → Agent', uptime: 'Uptime hedefi', setup: 'Destek dili', setupSuffix: '' },
@@ -1566,6 +2223,7 @@
         related: { title: 'İlgili ürün ve hizmetler' },
         geoText: 'FXGuard WhatsApp CRM — Türkiye, BAE, Avrupa, İran · fxguard.io · Bizdavar ekosistemi.'
       },
+
       fxguardAccounting: {
         hero: {
           tag: 'FXGuard · Accounting',
@@ -1648,6 +2306,12 @@
         hero: { tag: 'Web tasarım örneği', title: 'SMM Turk — SMM paneli ve web sitesi tasarımı', desc: 'Türkiye merkezli müşteri projesi — panel arayüzü, web sitesi ve dijital destek Bizdavar Group tarafından' },
         about: { title: 'Proje hakkında', body: '<strong>SMM Turk</strong>, Bizdavar Group müşterilerinden biridir — rekabetçi fiyatlı, 7/24 otomatik teslimatlı ve ortaklık (affiliate / bayi) programlı bir SMM paneli. Web sitesi ve panel deneyimi, içerik yapısı, temel SEO ve teknik desteği Bizdavar tarafından tasarlanıp uygulanmıştır. Bu sayfa bir <strong>web tasarım örneğidir</strong>.', servicesTitle: 'Bizdavar tarafından yapılan hizmetler', services: ['SMM web sitesi ve kullanıcı paneli tasarımı', 'Giriş, kayıt ve dashboard arayüzü', 'Temel SEO, içerik yapısı ve dönüşüm sayfaları', 'Mobil ve performans optimizasyonu', 'Teknik destek, güncelleme ve bakım'], clientTitle: 'Müşteri faaliyet alanı', clientBody: 'SMM Turk sosyal medya hizmet paneli sunar — otomatik sipariş, kripto ödeme (BTC, ETH, USDT), bayi paneli ve API. Fiyat ve hizmet detayları müşterinin resmi web sitesinde yayınlanır.', challengeTitle: 'Proje zorluğu', challenge: 'Türkiye SMM paneli için kayıt, dashboard ve dönüşüm odaklı net UI — özellikle mobil ve kayıt oranı.', resultsTitle: 'Sonuçlar', result1: 'Site ve panel giriş/dashboard akışı', result2: 'Türkiye trafiği için dönüşüm sayfaları ve temel SEO', result3: 'Lansman sonrası teknik destek', ctaSite: 'SMM Turk web sitesini gör', ctaOrder: 'Benzer site tasarımı sipariş et', ctaPortfolio: 'Diğer örnek işler' },
         geoText: 'Türkiye ve uluslararası pazar için SMM paneli web tasarım örneği — Bizdavar Group.'
+      },
+      marviSociety: {
+        hero: { tag: 'iOS uygulama örneği', title: 'Marvi Society — İstanbul davetli kulüp iOS uygulaması', desc: 'Sıfırdan iOS tasarım, geliştirme ve yayın — onaylı creator’ları İstanbul mekanlarıyla buluşturur; App Store’da yayında' },
+        about: { title: 'Proje hakkında', body: '<strong>Marvi Society</strong>, Bizdavar Group’un mobil geliştirme örneğidir — İstanbul’da onaylı creator’lar ile işletmeleri buluşturan davetli iOS uygulaması. Etkinlik ve mekan keşfi, iş birliği talebi, check-in, ziyaret kanıtı, mekan yönetimi ve TR/EN profil. Bu sayfa bir <strong>iOS uygulama örneğidir</strong>.', servicesTitle: 'Bizdavar tarafından yapılan hizmetler', services: ['iOS ürün ve UI/UX tasarımı', 'Mobil uygulama geliştirme ve mimari', 'Keşif, davet, check-in ve ziyaret kanıtı akışı', 'Mekan, kampanya ve bildirim yönetimi', 'App Store yayını ve lansman sonrası destek'], clientTitle: 'Ürün faaliyet alanı', clientBody: 'Marvi Society, İstanbul’da davetli bir lifestyle kulübüdür — creator’ları restoran, gece hayatı, wellness ve güzellik mekanlarıyla buluşturur. Ürün detayları web sitesi ve App Store sayfasında yayınlanır.', challengeTitle: 'Proje zorluğu', challenge: 'İstanbul’da creator ve mekanları bağlayan davetli bir uygulama — etkinlik keşfi, davet yönetimi, check-in ve ziyaret kanıtı ile App Store’a hazır teslim.', resultsTitle: 'Sonuçlar', result1: 'App Store’da yayınlanan iOS uygulaması', result2: 'Keşif, iş birliği ve mekan yönetimi akışı', result3: 'Koyu görsel kimlik ve TR/EN deneyim', ctaAppStore: 'App Store’da gör', ctaSite: 'Marvi Society web sitesi', ctaOrder: 'Benzer uygulama sipariş et', ctaPortfolio: 'Diğer örnek işler' },
+        shots: { discover: 'Etkinlik keşfi', events: 'Etkinlikler ve davetler', profile: 'Creator profili' },
+        geoText: 'İstanbul ve uluslararası pazar için iOS uygulama geliştirme örneği — tasarımdan App Store yayınına Bizdavar Group.'
       },
       fxguardExchange: {
         hero: { tag: 'Fintech örneği', title: 'FXGuard Exchange — Toman–Lira değişim platformu', desc: 'İran ↔ Türkiye döviz değişim web uygulaması — canlı kur, kimlik doğrulama (KYC) ve aşamalı takip; Bizdavar Group tarafından geliştirildi' },
@@ -1797,6 +2461,173 @@
         related: { title: 'Related Bizdavar products' },
         geoText: 'Engineered hygiene product in Iran — Bizdavar team design, sold via Digikala.'
       },
+      bizseat: {
+        hero: {
+          tag: 'Same product · BizPet',
+          title: 'BizSeat is the BizPet heating pad',
+          desc: 'A shop listing name — not a second line. The 1399 product is BizPet'
+        },
+        about: {
+          title: 'One product, two shop names',
+          imageAlt: 'BizSeat — the same BizPet heating pad as a car-seat support',
+          body: '<strong>BizSeat</strong> is not a separate product. It is the same <strong>BizPet heating pad</strong>, designed in <strong>1399</strong> at the <strong>University of Tabriz Technology Incubator</strong> and also sold as a car-seat backrest.',
+          body2: 'Developed with <strong>Technology Pardazan Tosee Khavarmianeh</strong> and <strong>Imen Sahand Padideh</strong>. The main page is <a href="/pages/bizpet">BizPet</a>; Digikala is the same SKU.',
+          specsTitle: 'Features',
+          specs: [
+            'Main product: BizPet heating pad',
+            'Car-seat listing name: BizSeat',
+            'Designed and built in 1399 in Tabriz',
+            'Imen Sahand Padideh and Technology Pardazan Tosee Khavarmianeh',
+            'Sold on Digikala (dkp-7694589)'
+          ],
+          ctaDigikala: 'View on Digikala',
+          ctaBizpet: 'Main page: BizPet',
+          ctaContact: 'Bulk inquiry / contact'
+        },
+        origin: {
+          eyebrow: 'Tabriz science park · 1399',
+          title: 'From invention to production at the science park',
+          desc: 'BizSeat is one of the hardware products invented by the Bizdavar team — designed and built in the University of Tabriz innovation ecosystem with two local technology partners.',
+          parkTitle: 'Science and Technology Park',
+          parkDesc: 'University of Tabriz — where the product was invented, designed and built in 1399.',
+          partner1Title: 'Technology Pardazan Tosee Khavarmianeh',
+          partner1Desc: 'Development and commercialization partner.',
+          partner2Title: 'Imen Sahand Padideh',
+          partner2Desc: 'Tabriz science-park technology unit — design and manufacturing partner.',
+          storeTitle: 'Sold on Digikala',
+          storeDesc: 'Product ID dkp-7694589 — car seat backrest, model bizdavar.'
+        },
+        related: {
+          title: 'Related products and services',
+          bizclean: 'Automatic hand sanitizer',
+          biztab: 'Non-contact wall thermometer',
+          catalog: 'Product catalog',
+          catalogDesc: 'Bizdavar hardware and production lines',
+          about: 'About Bizdavar',
+          aboutDesc: 'Science park, exhibitions and achievements'
+        },
+        geoText: 'Automotive product invented at the University of Tabriz Science and Technology Park — Bizdavar design, sold on Digikala.'
+      },
+      bizpet: {
+        hero: {
+          tag: 'Owned product · Heating pad',
+          title: 'BizPet — Bizdavar heating pad',
+          desc: 'Designed and produced at the University of Tabriz Technology Incubator — a Bizdavar-owned product also known as Biz Pet / Pet Biz'
+        },
+        nav: {
+          about: 'About the product',
+          rd: 'R&D',
+          pets: 'Pet beds',
+          origin: 'Incubator',
+          gallery: 'Photo gallery',
+          contact: 'Contact'
+        },
+        about: {
+          title: 'About the product',
+          imageAlt: 'BizPet — grey heating pad designed by the Bizdavar team',
+          body: '<strong>BizPet</strong> (Biz Pet / Pet Biz) is the Padideh heating pad — for warming in cold seasons and localized pain relief, designed and produced at the <strong>University of Tabriz Technology Incubator</strong>.',
+          body2: 'It was developed with <strong>Technology Pardazan Tosee Khavarmianeh</strong> and the technology unit <strong>Imen Sahand Padideh</strong>. The pad is portable for home or car use.',
+          specsTitle: 'Features',
+          specs: [
+            'Padideh heating pad — BizPet / Biz Pet / Pet Biz',
+            'Cold-season warming and localized pain relief',
+            'Portable — home and car use',
+            'Operating voltage 5–12 V (max 1 A)',
+            'Washable after removing the heating element',
+            'Designed and produced at the University of Tabriz Technology Incubator',
+            'Collaboration with Imen Sahand Padideh and Technology Pardazan Tosee Khavarmianeh'
+          ],
+          ctaContact: 'Bulk inquiry / contact',
+          ctaCatalog: 'Product catalog'
+        },
+        gallery: {
+          tanAlt: 'BizPet — tan heating pad with power connector',
+          elementAlt: 'BizPet — heating element with contact points',
+          posterAlt: 'Padideh heating pad product poster'
+        },
+        rd: {
+          eyebrow: 'Research & development',
+          title: 'Heating-element tests in the lab',
+          desc: 'Thermal tests, prototype and assembly photos — part of the engineering path at the Tabriz University incubator.',
+          tempHighAlt: 'Infrared thermometer test of the heating element',
+          tempHighCaption: 'Lab thermal test of the heating element',
+          tempAlt: 'Surface temperature measurement during R&D',
+          tempCaption: 'Surface temperature during R&D testing',
+          elementAlt: 'Rectangular heating element with corner contacts',
+          elementCaption: 'Heating element with contact points',
+          protoAlt: 'Heating-pad prototype on an insulation block',
+          protoCaption: 'Prototype and experimental assembly'
+        },
+        military: {
+          eyebrow: 'Research & development',
+          title: 'Heating pads in military clothing',
+          desc: 'A tactical-vest prototype with an integrated heating element and control unit — R&D for applying the heating pad inside military clothing layers.',
+          vestAlt: 'Military vest prototype with heating pad on a mannequin',
+          vestCaption: 'Tactical vest prototype with thermal control unit',
+          liningAlt: 'Vest interior lining and heating-pad wiring',
+          liningCaption: 'Interior lining — stitched-in heating element',
+          outdoorAlt: 'Heated military vest on a mannequin outdoors',
+          outdoorCaption: 'Outdoor display of the prototype'
+        },
+        dryer: {
+          eyebrow: 'Research & development',
+          title: 'Heating pads in fruit-dryer baskets',
+          desc: 'A wooden fruit-dryer basket design with a hexagonal heating mesh and a power lead — R&D for applying the heating pad inside dryer trays.',
+          imageAlt: 'Fruit-dryer basket prototype with heating mesh',
+          caption: '3D render of a dryer basket with a mesh heating element.'
+        },
+        pets: {
+          eyebrow: 'Pet beds',
+          title: 'Infrared heating pad for pets',
+          desc: 'The same heating pad also works well in dog and cat beds — safe low-voltage warmth in cold seasons, with a washable cover.',
+          imageAlt: 'BizPet — infrared heating pad for pet beds',
+          specs: [
+            'Suitable for pet beds',
+            'Carbon nanomaterials · far infrared · 95–99% efficiency',
+            'Safe 5–12 V · 5–8 W consumption',
+            'Soft, removable, washable cover',
+            'Temperature control in the pet’s body-temperature range',
+            'Therapeutic use: muscle spasms and arthritis — for older or pregnant animals'
+          ]
+        },
+        expo: {
+          eyebrow: 'Exhibition',
+          title: 'Imen Sahand Padideh booth',
+          desc: 'Heating pads on display — with emphasis on very low consumption and environmental compatibility.',
+          imageAlt: 'Imen Sahand Padideh exhibition booth with heating pads',
+          caption: 'Imen Sahand Padideh booth — introducing a low-consumption heating pad.'
+        },
+        origin: {
+          eyebrow: 'Tabriz incubator · 1399',
+          title: 'From design to production at the incubator',
+          desc: 'BizPet is one of the hardware products from the Bizdavar team — the Padideh heating pad, with two local technology partners.',
+          parkTitle: 'Technology Incubator',
+          parkDesc: 'University of Tabriz — where the Padideh heating pad was designed and produced.',
+          partner1Title: 'Technology Pardazan Tosee Khavarmianeh',
+          partner1Desc: 'Development and commercialization partner.',
+          partner2Title: 'Imen Sahand Padideh',
+          partner2Desc: 'Tabriz science-park technology unit — design and manufacturing partner for the Padideh heating pad.',
+          specTitle: '5–12 V · max 1 A',
+          specDesc: 'Portable for home and car — washable after removing the heating element.'
+        },
+        production: {
+          eyebrow: 'Production line',
+          title: 'Heating-pad assembly and testing',
+          desc: 'Assembly and quality-control station — fabric pads, power units and product packaging.',
+          imageAlt: 'BizPet heating-pad production line — assembly and testing at the workbench',
+          caption: 'Assembling and testing heating pads in the workshop.'
+        },
+        related: {
+          title: 'Related products and services',
+          bizseat: 'Car seat backrest',
+          biztab: 'Non-contact wall thermometer',
+          catalog: 'Product catalog',
+          catalogDesc: 'Bizdavar hardware and production lines',
+          about: 'About Bizdavar',
+          aboutDesc: 'Science park, exhibitions and achievements'
+        },
+        geoText: 'Heating pad designed at the University of Tabriz Technology Incubator — Bizdavar’s BizPet product.'
+      },
       bizswap: {
         hero: {
           tag: 'Web3 product · DeFi',
@@ -1846,19 +2677,13 @@
       },
       fxguard: {
         hero: {
-          tag: 'FXGuard · WhatsApp CRM',
-          title: 'Turn WhatsApp into your team’s sales machine',
-          desc: 'One number. Every team. Total control — shared inbox, customers, tickets, tasks, branches and 2FA. FXGuard suite; Cloud from $49/mo, one-time License, or Managed Dedicated.',
-          regionItems: [
-            { code: 'TR', label: 'Turkey' },
-            { code: 'AE', label: 'Dubai' },
-            { code: 'EU', label: 'Europe' },
-            { code: 'IR', label: 'Iran' }
-          ],
-          regions: 'Turkey · Dubai · Europe · Iran',
-          trust: 'Free live demo · From $49/mo · fxguard.io',
-          ctaDemo: 'Open free demo',
-          ctaPricing: 'See prices & buy',
+          tag: 'Exchange · remittance · finance',
+          title: 'Quote the rate on WhatsApp. Keep the customer book.',
+          desc: 'Full copy loads from i18n/fxguard-i18n.js on this page only.',
+          regions: '',
+          trust: 'From $49/mo · guided demo · 7-day money-back',
+          ctaDemo: 'See the panel',
+          ctaPricing: 'Prices',
           ctaContact: 'Buy on WhatsApp',
           ctaStore: 'fxguard.io'
         },
@@ -2019,6 +2844,7 @@
         related: { title: 'Related products & services' },
         geoText: 'FXGuard WhatsApp CRM — Turkey, UAE, Europe, Iran · fxguard.io · Bizdavar ecosystem.'
       },
+
       fxguardAccounting: {
         hero: {
           tag: 'FXGuard · Accounting',
@@ -2102,6 +2928,12 @@
         about: { title: 'About the project', body: '<strong>SMM Turk</strong> is a Bizdavar Group client — an SMM panel platform for social growth with competitive pricing, 24/7 automated delivery and affiliate / reseller programs. We designed and implemented the website and panel experience, content structure, foundational SEO and technical support. This page is a <strong>web design case study</strong>.', servicesTitle: 'Services delivered by Bizdavar', services: ['SMM website and user panel design', 'Login, signup and dashboard UI', 'Foundational SEO, content structure and conversion pages', 'Mobile and performance optimization', 'Technical support, updates and maintenance'], clientTitle: 'Client field of activity', clientBody: 'SMM Turk provides a social media services panel — automated orders, crypto payments (BTC, ETH, USDT), reseller panel and API. Pricing and service details are published on the client’s official website.', challengeTitle: 'Project challenge', challenge: 'A Turkey SMM panel needed clear UI for signup, dashboard, and conversion pages — with mobile focus and signup rate in mind.', resultsTitle: 'Results', result1: 'Website and panel login/dashboard flow', result2: 'Conversion pages and foundational SEO for Turkish traffic', result3: 'Post-launch technical support and updates', ctaSite: 'View the SMM Turk website', ctaOrder: 'Order a similar website', ctaPortfolio: 'Other case studies' },
         geoText: 'Web design case study for SMM panels in Turkey and international markets — Bizdavar Group.'
       },
+      marviSociety: {
+        hero: { tag: 'iOS app case study', title: 'Marvi Society — invite-only iOS club for Istanbul', desc: 'Zero-to-launch iOS design and development — connecting verified creators with Istanbul venues; live on the App Store' },
+        about: { title: 'About the project', body: '<strong>Marvi Society</strong> is a Bizdavar Group mobile case study — an invite-only iOS app that connects verified creators with approved Istanbul venues. Discover events and places, request collaborations, check in, submit visit proof, manage venues and TR/EN profiles. This page is an <strong>iOS app case study</strong>.', servicesTitle: 'Services delivered by Bizdavar', services: ['iOS product and UI/UX design', 'Mobile app architecture and development', 'Discover, invite, check-in and visit-proof flows', 'Venue, campaign and notification management', 'App Store launch and post-release support'], clientTitle: 'Product field of activity', clientBody: 'Marvi Society is an invite-only lifestyle club in Istanbul — matching creators with restaurants, nightlife, wellness and beauty venues. Product details are published on the website and App Store page.', challengeTitle: 'Project challenge', challenge: 'An invite-only app to connect creators and venues in Istanbul — with event discovery, invite management, check-in and visit proof, ready for App Store release.', resultsTitle: 'Results', result1: 'iOS app live on the App Store', result2: 'End-to-end discover, collab and venue management flow', result3: 'Dark visual identity with TR/EN experience', ctaAppStore: 'View on the App Store', ctaSite: 'Marvi Society website', ctaOrder: 'Order a similar app', ctaPortfolio: 'Other case studies' },
+        shots: { discover: 'Discover events', events: 'Events and invites', profile: 'Creator profile' },
+        geoText: 'iOS app case study for Istanbul and international markets — from design to App Store launch by Bizdavar Group.'
+      },
       fxguardExchange: {
         hero: { tag: 'Fintech case study', title: 'FXGuard Exchange — Toman–Lira exchange platform', desc: 'Iran ↔ Turkey currency exchange web app — live rates, tracked orders, KYC and step-by-step settlement by Bizdavar Group' },
         about: { title: 'About the project', body: '<strong>FXGuard Exchange</strong> is a specialized Toman–Lira exchange platform designed and developed by Bizdavar Group — focused on the <strong>IRR ↔ TRY</strong> corridor with transparent reference rates, unique order IDs, KYC, a conversion calculator, live rate tables and step-by-step tracking through settlement. This page is a <strong>web and fintech case study</strong> and is separate from the WhatsApp CRM script product.', servicesTitle: 'Services delivered by Bizdavar', services: ['Currency exchange web app design (Persian RTL)', 'Live rates dashboard, conversion calculator and currency tables', 'Order registration, ID-based tracking and KYC flow', 'Light/dark theme, rate-page SEO and content structure', 'Account security (login, 2FA) and order-linked support'], clientTitle: 'Product field of activity', clientBody: 'FXGuard Exchange is specialized Toman–Lira infrastructure for the Iran–Turkey corridor. Live orders currently run on IRR ↔ TRY only; other currencies (USD, EUR, AED…) are shown as price references — not a crypto market.', ctaSite: 'View FXGuard Exchange', ctaCrm: 'WhatsApp CRM script', ctaPortfolio: 'Other case studies' },
@@ -2111,6 +2943,16 @@
   };
 
   const articleSlugs = [
+    'website-design-us-eu',
+    'digital-marketing-us-eu',
+    'buy-vegapuls-iran',
+    'vega-quote-iran',
+    'buy-prosense-iran',
+    'industrial-trade-iran',
+    'buy-teltonika-iran',
+    'buy-gamak-iran',
+    'buy-digi-system-iran',
+    'buy-teraoka-iran',
     'vega-supply-iran',
     'multilingual-web-iran-turkey',
     'what-is-digital-marketing',
@@ -2166,6 +3008,168 @@
     }, {});
   }
 
+  const galleryPage = {
+    fa: {
+      hero: {
+        tag: 'گالری بیزدوار',
+        title: 'تصاویر تولید، تحقیق و نمایشگاه',
+        desc: 'خط تولید، آزمایشگاه، محصولات و حضور در نمایشگاه‌ها — از مرکز رشد دانشگاه تبریز تا غرفه ایمن سهند پدیده.'
+      },
+      filters: { all: 'همه', exhibition: 'نمایشگاه', rd: 'تحقیق و توسعه', production: 'خط تولید', products: 'محصولات' },
+      filterAria: 'فیلتر گالری',
+      countText: '{count} تصویر',
+      empty: 'در این دسته هنوز تصویری نیست.',
+      close: 'بستن',
+      related: 'مشاهده صفحه مرتبط',
+      relatedTitle: 'صفحات مرتبط',
+      relatedAbout: 'پارک علمی، نمایشگاه‌ها و دستاوردها',
+      relatedBizpet: 'پد حرارتی بیز پت',
+      relatedProducts: 'سخت‌افزار و خطوط تولید',
+      relatedContact: 'مشاوره و استعلام',
+      relatedGamak: 'تامین الکتروموتور صنعتی',
+      geoText: 'تصاویر واقعی از نمایشگاه، تولید و تحقیق تیم بیزدوار در تبریز.',
+      ctaFromAbout: 'گالری تصاویر نمایشگاه و تولید',
+      items: {
+        'expo-imen-booth': { caption: 'غرفه ایمن سهند پدیده — پدهای حرارتی روی میز نمایشگاه', alt: 'غرفه نمایشگاهی ایمن سهند پدیده با پدهای حرارتی سیاه روی میز' },
+        'expo-team-bizdavar': { caption: 'تیم بیزدوار در غرفه نمایشگاه — بنر Bizdavar', alt: 'سه نفر در غرفه نمایشگاه با بنر بیزدوار و ایمن سهند پدیده' },
+        'expo-team-imen': { caption: 'نمایندگان ایمن سهند پدیده در نمایشگاه', alt: 'سه نفر در غرفه ایمن سهند پدیده با پرچم ایران' },
+        'expo-tabrizu': { caption: 'مرکز رشد و نوآوری دانشگاه تبریز', alt: 'غرفه مرکز رشد و نوآوری دانشگاه تبریز' },
+        'bizpet-expo': { caption: 'نمایش پد حرارتی پدیده در غرفه نمایشگاه', alt: 'غرفه نمایشگاهی با پدهای حرارتی پدیده' },
+        'bizpet-production': { caption: 'مونتاژ و تولید پد حرارتی', alt: 'خط تولید پد حرارتی بیز پت' },
+        'bizpet-rd-high': { caption: 'آزمایش حرارتی در آزمایشگاه', alt: 'آزمایش دمای پد حرارتی در آزمایشگاه' },
+        'bizpet-rd-temp': { caption: 'اندازه‌گیری دما روی نمونه آزمایشگاهی', alt: 'اندازه‌گیری دمای پد حرارتی' },
+        'bizpet-prototype': { caption: 'نمونه اولیه پد حرارتی', alt: 'نمونه اولیه پد حرارتی بیز پت' },
+        'bizpet-element': { caption: 'المان حرارتی داخل پد', alt: 'المان حرارتی پد پدیده' },
+        'bizpet-military-vest': { caption: 'تحقیق پوشش حرارتی برای لباس', alt: 'جلیقه با لایه حرارتی در مرحله تحقیق' },
+        'bizpet-military-lining': { caption: 'لایه حرارتی دوخته‌شده در پوشش', alt: 'لایه حرارتی داخل پوشش' },
+        'bizpet-military-outdoor': { caption: 'آزمایش میدانی پوشش حرارتی', alt: 'آزمایش پوشش حرارتی در فضای باز' },
+        'bizpet-dryer': { caption: 'طرح تحقیق خشک‌کن میوه با المان حرارتی', alt: 'طرح سه‌بعدی سبد خشک‌کن میوه' },
+        'bizpet-grey': { caption: 'BizPet — پد حرارتی خاکستری', alt: 'پد حرارتی بیز پت خاکستری' },
+        'bizpet-tan': { caption: 'BizPet — پد حرارتی کرم', alt: 'پد حرارتی بیز پت کرم' },
+        'bizpet-pets': { caption: 'برگه معرفی کاربرد پد برای حیوانات خانگی', alt: 'پوستر BizPet برای جای خواب حیوانات' },
+        'motor-housings': { caption: 'پوسته‌های الکتروموتور در مرحله مونتاژ', alt: 'چند پوسته الکتروموتور روی کف کارگاه' },
+        'motor-stator-pair': { caption: 'سیم‌پیچی مسی داخل پوسته موتور', alt: 'دو استاتور الکتروموتور با سیم‌پیچی مسی' },
+        'motor-stator-wind': { caption: 'سیم‌پیچی استاتور الکتروموتور', alt: 'استاتور با کلاف مسی در حال سیم‌پیچی' },
+        'motor-stators-bench': { caption: 'استاتورها روی میز مونتاژ', alt: 'چند استاتور الکتروموتور روی میز کار' },
+        'motor-stators-leads': { caption: 'استاتور با سیم‌های خروجی آماده اتصال', alt: 'استاتورهای پیچیده با سیم قرمز و زرد' },
+        'motor-shaft': { caption: 'شفت ماشین‌کاری‌شده موتور', alt: 'شفت فلزی الکتروموتور روی کف کارگاه' },
+        'motor-rotor': { caption: 'روتور و یاتاقان روی پوسته موتور', alt: 'روتور الکتروموتور با یاتاقان روی پوسته' },
+        'motor-parts': { caption: 'قطعات ریخته‌گری و جعبه ترمینال', alt: 'قطعات الکتروموتور روی پالت چوبی' },
+        'motor-machining': { caption: 'ماشین‌کاری پوسته الکتروموتور', alt: 'سوراخ‌کاری پوسته موتور روی گیره ماشین' },
+        'motor-molds': { caption: 'قالب ریخته‌گری پوسته موتور', alt: 'قالب‌های ریخته‌گری پوسته الکتروموتور' },
+        'motor-finished-row': { caption: 'الکتروموتورهای مونتاژشده', alt: 'ردیف موتورهای صنعتی مونتاژشده' },
+        'motor-vibrator-orange': { caption: 'موتور ویبره صنعتی', alt: 'موتور ویبره صنعتی نارنجی روی میز کار' },
+        'motor-vibrator-weights': { caption: 'وزنه‌های خارج از مرکز موتور ویبره', alt: 'موتور ویبره نارنجی با وزنه روی شفت' }
+      }
+    },
+    tr: {
+      hero: {
+        tag: 'Bizdavar galerisi',
+        title: 'Üretim, Ar-Ge ve fuar görselleri',
+        desc: 'Üretim hattı, laboratuvar, ürünler ve fuar standları — Tebriz Üniversitesi kuluçka merkezinden Imen Sahand Padideh standına.'
+      },
+      filters: { all: 'Tümü', exhibition: 'Fuar', rd: 'Ar-Ge', production: 'Üretim', products: 'Ürünler' },
+      filterAria: 'Galeri filtresi',
+      countText: '{count} görsel',
+      empty: 'Bu kategoride henüz görsel yok.',
+      close: 'Kapat',
+      related: 'İlgili sayfayı gör',
+      relatedTitle: 'İlgili sayfalar',
+      relatedAbout: 'Teknopark, fuarlar ve başarılar',
+      relatedBizpet: 'BizPet ısı pedi',
+      relatedProducts: 'Donanım ve üretim hatları',
+      relatedContact: 'Danışmanlık ve teklif',
+      relatedGamak: 'Türkiye’den endüstriyel motor tedariki',
+      geoText: 'Bizdavar ekibinin Tebriz’deki fuar, üretim ve Ar-Ge fotoğrafları.',
+      ctaFromAbout: 'Fuar ve üretim galerisi',
+      items: {
+        'expo-imen-booth': { caption: 'Imen Sahand Padideh standı — ısı pedleri masada', alt: 'Fuar standında siyah ısı pedleri' },
+        'expo-team-bizdavar': { caption: 'Bizdavar ekibi fuar standında', alt: 'Bizdavar ve Imen Sahand Padideh standında üç kişi' },
+        'expo-team-imen': { caption: 'Imen Sahand Padideh temsilcileri fuarda', alt: 'Imen Sahand Padideh standında üç kişi ve İran bayrağı' },
+        'expo-tabrizu': { caption: 'Tebriz Üniversitesi kuluçka ve inovasyon merkezi', alt: 'Tebriz Üniversitesi kuluçka merkezi standı' },
+        'bizpet-expo': { caption: 'Padideh ısı pedinin fuarda sergilenmesi', alt: 'Fuar standında Padideh ısı pedleri' },
+        'bizpet-production': { caption: 'Isı pedi montajı', alt: 'BizPet ısı pedi üretim hattı' },
+        'bizpet-rd-high': { caption: 'Laboratuvarda ısıl test', alt: 'Laboratuvarda ısı pedi sıcaklık testi' },
+        'bizpet-rd-temp': { caption: 'Numune üzerinde sıcaklık ölçümü', alt: 'Isı pedi sıcaklık ölçümü' },
+        'bizpet-prototype': { caption: 'Isı pedi prototipi', alt: 'BizPet ısı pedi prototipi' },
+        'bizpet-element': { caption: 'Ped içindeki ısıtıcı eleman', alt: 'Padideh ısıtıcı eleman' },
+        'bizpet-military-vest': { caption: 'Giysi için ısıtmalı astar araştırması', alt: 'Isıtmalı astarlı yelek prototipi' },
+        'bizpet-military-lining': { caption: 'Giysiye dikilmiş ısıtmalı katman', alt: 'Giysi içinde ısıtmalı astar' },
+        'bizpet-military-outdoor': { caption: 'Isıtmalı giysinin saha testi', alt: 'Açık alanda ısıtmalı giysi testi' },
+        'bizpet-dryer': { caption: 'Meyve kurutucu araştırma tasarımı', alt: 'Meyve kurutucu sepetinin 3B görseli' },
+        'bizpet-grey': { caption: 'BizPet — gri ısı pedi', alt: 'Gri BizPet ısı pedi' },
+        'bizpet-tan': { caption: 'BizPet — bej ısı pedi', alt: 'Bej BizPet ısı pedi' },
+        'bizpet-pets': { caption: 'Evcil hayvan yatağı uygulaması', alt: 'BizPet evcil hayvan afişi' },
+        'motor-housings': { caption: 'Montaj aşamasındaki motor gövdeleri', alt: 'Atölye zemininde elektrik motoru gövdeleri' },
+        'motor-stator-pair': { caption: 'Motor gövdesinde bakır sargı', alt: 'Bakır sargılı iki motor statoru' },
+        'motor-stator-wind': { caption: 'Elektrik motoru stator sargısı', alt: 'Bakır bobinlerle sarılan stator' },
+        'motor-stators-bench': { caption: 'Montaj tezgâhındaki statorlar', alt: 'İş tezgâhında elektrik motoru statorları' },
+        'motor-stators-leads': { caption: 'Bağlantı kablolu statorlar', alt: 'Kırmızı ve sarı kablolu sarılmış statorlar' },
+        'motor-shaft': { caption: 'İşlenmiş motor mili', alt: 'Atölye zemininde elektrik motoru mili' },
+        'motor-rotor': { caption: 'Rotor ve rulman, motor gövdesinde', alt: 'Rulmanlı rotor motor gövdesinin üzerinde' },
+        'motor-parts': { caption: 'Döküm parçalar ve klemens kutusu', alt: 'Ahşap palet üzerinde motor parçaları' },
+        'motor-machining': { caption: 'Motor gövdesinin talaşlı imalatı', alt: 'Mengenede delinen motor gövdesi' },
+        'motor-molds': { caption: 'Motor gövdesi döküm kalıpları', alt: 'Elektrik motoru gövde kalıpları' },
+        'motor-finished-row': { caption: 'Montajı tamamlanmış elektrik motorları', alt: 'Sıralanmış endüstriyel motorlar' },
+        'motor-vibrator-orange': { caption: 'Endüstriyel vibratör motoru', alt: 'Tezgâhta turuncu vibratör motoru' },
+        'motor-vibrator-weights': { caption: 'Vibratör motorunun eksantrik ağırlıkları', alt: 'Şaftında ağırlık bulunan turuncu vibratör' }
+      }
+    },
+    en: {
+      hero: {
+        tag: 'Bizdavar gallery',
+        title: 'Production, R&D and exhibition photos',
+        desc: 'Factory floor, lab work, products and trade-show booths — from the University of Tabriz incubator to the Imen Sahand Padideh stand.'
+      },
+      filters: { all: 'All', exhibition: 'Exhibitions', rd: 'R&D', production: 'Production', products: 'Products' },
+      filterAria: 'Gallery filter',
+      countText: '{count} photos',
+      empty: 'No photos in this category yet.',
+      close: 'Close',
+      related: 'Open related page',
+      relatedTitle: 'Related pages',
+      relatedAbout: 'Science park, exhibitions and milestones',
+      relatedBizpet: 'BizPet heating pad',
+      relatedProducts: 'Hardware and production lines',
+      relatedContact: 'Consulting and quotes',
+      relatedGamak: 'Industrial motor supply from Turkey',
+      geoText: 'Real photos of Bizdavar exhibitions, production and R&D in Tabriz.',
+      ctaFromAbout: 'Exhibition and production gallery',
+      items: {
+        'expo-imen-booth': { caption: 'Imen Sahand Padideh booth — heating pads on display', alt: 'Exhibition booth with black heating pads on the table' },
+        'expo-team-bizdavar': { caption: 'Bizdavar team at the exhibition booth', alt: 'Three people at the Bizdavar and Imen Sahand Padideh booth' },
+        'expo-team-imen': { caption: 'Imen Sahand Padideh representatives at the show', alt: 'Three people at the Imen Sahand Padideh booth with the Iranian flag' },
+        'expo-tabrizu': { caption: 'University of Tabriz Incubation and Innovation Center', alt: 'University of Tabriz incubation center booth' },
+        'bizpet-expo': { caption: 'Padideh heating pads at the exhibition', alt: 'Exhibition booth showing Padideh heating pads' },
+        'bizpet-production': { caption: 'Heating-pad assembly', alt: 'BizPet heating pad production' },
+        'bizpet-rd-high': { caption: 'Thermal testing in the lab', alt: 'Heating pad temperature test in the laboratory' },
+        'bizpet-rd-temp': { caption: 'Temperature reading on a lab sample', alt: 'Heating pad temperature measurement' },
+        'bizpet-prototype': { caption: 'Heating pad prototype', alt: 'BizPet heating pad prototype' },
+        'bizpet-element': { caption: 'Heating element inside the pad', alt: 'Padideh heating element' },
+        'bizpet-military-vest': { caption: 'Heated-clothing research vest', alt: 'Vest with a heating lining in R&D' },
+        'bizpet-military-lining': { caption: 'Heating layer sewn into a garment', alt: 'Heating lining inside a garment' },
+        'bizpet-military-outdoor': { caption: 'Outdoor test of heated clothing', alt: 'Heated clothing field test' },
+        'bizpet-dryer': { caption: 'Fruit-dryer research concept', alt: '3D render of a fruit-dryer basket' },
+        'bizpet-grey': { caption: 'BizPet — grey heating pad', alt: 'Grey BizPet heating pad' },
+        'bizpet-tan': { caption: 'BizPet — tan heating pad', alt: 'Tan BizPet heating pad' },
+        'bizpet-pets': { caption: 'Pet-bed application flyer', alt: 'BizPet pet-bed poster' },
+        'motor-housings': { caption: 'Electric motor housings in assembly', alt: 'Electric motor housings on the workshop floor' },
+        'motor-stator-pair': { caption: 'Copper windings inside the motor housing', alt: 'Two motor stators with copper windings' },
+        'motor-stator-wind': { caption: 'Stator winding for an electric motor', alt: 'Stator with copper coils during winding' },
+        'motor-stators-bench': { caption: 'Stators on the assembly bench', alt: 'Electric motor stators on a workbench' },
+        'motor-stators-leads': { caption: 'Wound stators with connection leads', alt: 'Stators with red and yellow lead wires' },
+        'motor-shaft': { caption: 'Machined motor shaft', alt: 'Electric motor shaft on the workshop floor' },
+        'motor-rotor': { caption: 'Rotor and bearing on a motor housing', alt: 'Motor rotor with a bearing on the housing' },
+        'motor-parts': { caption: 'Cast parts and a terminal box', alt: 'Electric motor parts on a wooden pallet' },
+        'motor-machining': { caption: 'Machining a motor housing', alt: 'Drilling a motor housing in a machine vise' },
+        'motor-molds': { caption: 'Casting molds for motor housings', alt: 'Molds for electric motor housings' },
+        'motor-finished-row': { caption: 'Assembled electric motors', alt: 'Rows of assembled industrial motors' },
+        'motor-vibrator-orange': { caption: 'Industrial vibrator motor', alt: 'Orange industrial vibrator motor on a bench' },
+        'motor-vibrator-weights': { caption: 'Eccentric weights on a vibrator motor', alt: 'Orange vibrator motor with shaft weights' }
+      }
+    }
+  };
+
   ['fa', 'tr', 'en'].forEach(lang => {
     if (!window.BIZDAVAR_LOCALES || !window.BIZDAVAR_LOCALES[lang]) return;
     if (page[lang].fastPage) {
@@ -2175,6 +3179,7 @@
       page[lang].fastPage.schema = fastSchema[lang];
     }
     Object.assign(window.BIZDAVAR_LOCALES[lang], page[lang], {
+      galleryPage: galleryPage[lang],
       blogPosts: asBlogRows(blogPosts[lang]),
       caseStudy: caseStudy[lang],
       articles: asArticles(lang)

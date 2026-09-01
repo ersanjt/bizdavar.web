@@ -12,39 +12,39 @@
       {
         title: 'بازاریابی دیجیتال',
         subtitle: 'Digital Marketing · استراتژی و اجرای کمپین',
-        body: 'استراتژی، اجرا و بهینه‌سازی <strong>بازاریابی دیجیتال</strong> برای رشد فروش آنلاین — از تحلیل بازار و سئو تا <strong>Google Ads</strong>، کمپین‌های اجتماعی، CRO و اتوماسیون. مسیر جذب تا تبدیل را شفاف و قابل اندازه‌گیری می‌کنیم. مطلب مرتبط: <a href="articles/digital-marketing">چگونه دیجیتال مارکتینگ فروش را افزایش می‌دهد؟</a>',
-        tags: ['Google Ads', 'سئو', 'CRO', 'اتوماسیون', 'Analytics', 'Funnel'],
+        body: 'استراتژی، اجرا و بهینه‌سازی <strong>بازاریابی دیجیتال</strong> برای رشد فروش آنلاین — از تحلیل بازار و سئو تا <strong>Google Ads</strong>، Meta، LinkedIn، CRO و اتوماسیون. برای مشتری اروپا و آمریکا کمپین را با ارز دلار/یورو و گزارش GA4 می‌چینیم. مطلب مرتبط: <a href="articles/digital-marketing">چگونه دیجیتال مارکتینگ فروش را افزایش می‌دهد؟</a>',
+        tags: ['Google Ads', 'Meta', 'LinkedIn', 'SEO', 'CRO', 'GA4'],
         checks: [
-          'تحلیل رقبا، بازار هدف و قیف فروش',
-          'کمپین‌های Google Ads و شبکه‌های اجتماعی',
-          'سئو فنی/محتوایی و ساختار صفحات تبدیل',
+          'تحلیل رقبا، بازار هدف آمریکا/اروپا و قیف فروش',
+          'کمپین‌های Google Ads، Meta و LinkedIn با بودجه USD/EUR',
+          'سئو فنی/محتوایی انگلیسی و صفحات تبدیل',
           'بهینه‌سازی نرخ تبدیل (CRO) روی لندینگ و فرم',
           'اتوماسیون بازاریابی، ایمیل و nurture',
-          'گزارش KPI ماهانه و پیشنهاد بهبود مستمر'
+          'گزارش KPI ماهانه به دلار یا یورو'
         ],
         cta: 'درخواست مشاوره'
       },
       {
         title: 'طراحی وب و وب‌اپلیکیشن',
-        subtitle: 'Website · Web App · Fast Web Studio',
-        body: 'طراحی و توسعه <strong>سایت شرکتی</strong>، <strong>فروشگاه</strong>، لندینگ کمپین و <strong>وب‌اپلیکیشن</strong> اختصاصی — با UI فارسی/RTL، سئو پایه و اتصال فرم و واتساپ. برای تحویل سریع از <a href="fast">Fast Web Studio</a> استفاده کنید؛ پروژه‌های سفارشی هم از تحلیل تا لانچ پوشش داده می‌شود. نمونه: <a href="https://arianpumps.com" target="_blank" rel="noopener noreferrer">Arian Pumps</a>.',
-        tags: ['وب‌سایت', 'وب‌اپ', 'WooCommerce', 'Landing', 'RTL', 'SEO'],
+        subtitle: 'Website · Web App · Fast Web Studio · USD / EUR',
+        body: 'طراحی و توسعه <strong>سایت شرکتی انگلیسی</strong>، <strong>فروشگاه</strong>، لندینگ کمپین و <strong>وب‌اپلیکیشن</strong> برای مشتری اروپا و آمریکا — فاکتور دلار یا یورو، Stripe/PayPal، هاست بین‌المللی و همپوشانی ساعت با CET و EST. برای تحویل سریع از <a href="fast">Fast Web Studio</a> (از ۹۹ دلار) استفاده کنید؛ پروژه‌های سفارشی از تحلیل تا لانچ. نمونه: <a href="https://arianpumps.com" target="_blank" rel="noopener noreferrer">Arian Pumps</a>.',
+        tags: ['Website', 'Web App', 'Stripe', 'SEO', 'USD/EUR', '5-day'],
         checks: [
-          'سایت شرکتی، فروشگاهی و لندینگ کمپین',
+          'سایت شرکتی، فروشگاهی و لندینگ انگلیسی برای بازار US/EU',
           'وب‌اپلیکیشن و پنل مدیریت اختصاصی',
-          'UI ریسپانسیو با فونت و جهت فارسی (RTL)',
-          'سئو پایه، ساختار محتوا و بهینه‌سازی سرعت',
-          'اتصال واتساپ، فرم تماس و درگاه در صورت نیاز',
-          'آموزش مدیریت محتوا و پشتیبانی پس از لانچ'
+          'UI ریسپانسیو LTR یا RTL — چندزبانه در صورت نیاز',
+          'سئو پایه، Core Web Vitals و ساختار محتوا',
+          'Stripe، PayPal، فرم تماس و تقویم جلسه Zoom/Meet',
+          'فاکتور USD یا EUR، آموزش CMS و پشتیبانی پس از لانچ'
         ],
         cta: 'مشاهده پلن‌های Fast Studio'
       },
       {
         title: 'اپلیکیشن موبایل و سامانه',
         subtitle: 'Android · iOS · سامانه سازمانی',
-        body: 'طراحی و توسعه <strong>اپلیکیشن اندروید و iOS</strong>، سامانه سازمانی، پنل B2B و راهکارهای نرم‌افزاری سفارشی — از تحلیل نیاز تا انتشار، یکپارچه‌سازی و پشتیبانی.',
-        tags: ['Android', 'iOS', 'سامانه', 'API'],
-        checks: ['اپلیکیشن اندروید و iOS', 'سامانه و پنل سازمانی', 'اتصال به API و درگاه پرداخت', 'UI/UX فارسی و چندزبانه', 'پشتیبانی و به‌روزرسانی'],
+        body: 'طراحی و توسعه <strong>اپلیکیشن اندروید و iOS</strong>، سامانه سازمانی، پنل B2B و راهکارهای نرم‌افزاری سفارشی برای بازار داخلی و بین‌المللی — از تحلیل نیاز تا انتشار App Store / Google Play، یکپارچه‌سازی Stripe و پشتیبانی. نمونه: <a href="marvi-society">Marvi Society</a> در App Store.',
+        tags: ['Android', 'iOS', 'App Store', 'API', 'Stripe'],
+        checks: ['اپلیکیشن اندروید و iOS با UI انگلیسی یا چندزبانه', 'سامانه و پنل سازمانی / B2B', 'اتصال به API، Stripe و درگاه پرداخت', 'انتشار App Store و Google Play', 'پشتیبانی و به‌روزرسانی پس از لانچ', '<a href="marvi-society">Marvi Society</a> — نمونه‌کار اپ iOS'],
         cta: 'درخواست پروژه نرم‌افزاری'
       },
       {
@@ -84,10 +84,10 @@
       {
         title: 'خدمات فنی و ساختمانی',
         subtitle: 'دوربین مدار بسته · سیم‌کشی · نورمخفی',
-        body: 'نصب و راه‌اندازی <strong>دوربین مدار بسته</strong>، <strong>سیم‌کشی ساختمان</strong> و <strong>نورمخفی</strong> واحدهای مسکونی و تجاری در <strong>تبریز</strong> و <strong>استانبول</strong> — توسط <strong>تیم فنی بیزدوار</strong>.',
-        tags: ['CCTV', 'سیم‌کشی', 'نورمخفی', 'تبریز', 'استانبول'],
+        body: 'نصب و راه‌اندازی <strong>دوربین مدار بسته</strong>، <strong>سیم‌کشی ساختمان</strong> و <strong>نورمخفی</strong> واحدهای مسکونی و تجاری در <strong>تبریز</strong> — توسط <strong>تیم فنی بیزدوار</strong>.',
+        tags: ['CCTV', 'سیم‌کشی', 'نورمخفی', 'تبریز'],
         checks: [
-          'نصب دوربین مدار بسته منزل و محل کار — تبریز و استانبول',
+          'نصب دوربین مدار بسته منزل و محل کار — تبریز',
           'سیم‌کشی ساختمانی واحدهای مسکونی و تجاری',
           'نورمخفی داخل واحد و فضای تجاری',
           'بازدید فنی و پیشنهاد طرح اجرا',
@@ -100,39 +100,39 @@
       {
         title: 'Dijital pazarlama',
         subtitle: 'Digital Marketing · Strateji ve kampanya',
-        body: 'Online satış büyümesi için <strong>dijital pazarlama</strong> stratejisi, uygulama ve optimizasyon — pazar analizi, SEO, <strong>Google Ads</strong>, sosyal kampanyalar, CRO ve otomasyon. Edinmeden dönüşüme ölçülebilir yol. İlgili yazı: <a href="articles/digital-marketing">Dijital pazarlama satışları nasıl artırır?</a>',
-        tags: ['Google Ads', 'SEO', 'CRO', 'Otomasyon', 'Analytics', 'Funnel'],
+        body: 'ABD ve AB pazarında <strong>USD/EUR ciro</strong> için <strong>dijital pazarlama</strong> — pazar analizi, SEO, <strong>Google Ads</strong>, Meta, LinkedIn, CRO ve otomasyon. Kampanyalar GA4 ile fatura para biriminizde raporlanır. İlgili yazı: <a href="articles/digital-marketing">Dijital pazarlama satışları nasıl artırır?</a>',
+        tags: ['Google Ads', 'Meta', 'LinkedIn', 'SEO', 'CRO', 'GA4'],
         checks: [
-          'Rakip, hedef kitle ve satış hunisi analizi',
-          'Google Ads ve sosyal medya kampanyaları',
-          'Teknik/içerik SEO ve dönüşüm sayfaları',
-          'Landing ve formlarda CRO',
+          'ABD/AB hedef kitle, rakip ve satış hunisi analizi',
+          'Google Ads, Meta ve LinkedIn — bütçe USD veya EUR',
+          'İngilizce teknik/içerik SEO ve dönüşüm sayfaları',
+          'Landing, form ve checkout’ta CRO',
           'Pazarlama otomasyonu, e-posta ve nurture',
-          'Aylık KPI raporu ve iyileştirme önerileri'
+          'Aylık KPI raporu dolar veya euro cinsinden'
         ],
         cta: 'Danışmanlık iste'
       },
       {
         title: 'Web ve web uygulaması',
-        subtitle: 'Website · Web App · Fast Web Studio',
-        body: '<strong>Kurumsal site</strong>, <strong>e-ticaret</strong>, kampanya landing ve özel <strong>web uygulaması</strong> — Farsça/RTL UI, temel SEO ve form/WhatsApp bağlantısı ile. Hızlı teslim için <a href="fast">Fast Web Studio</a>; özel projeler analizden yayına. Örnek: <a href="https://arianpumps.com" target="_blank" rel="noopener noreferrer">Arian Pumps</a>.',
-        tags: ['Website', 'Web App', 'WooCommerce', 'Landing', 'RTL', 'SEO'],
+        subtitle: 'Website · Web App · Fast Web Studio · USD / EUR',
+        body: 'Avrupa ve ABD müşterileri için İngilizce <strong>kurumsal site</strong>, <strong>e-ticaret</strong>, kampanya landing ve özel <strong>web uygulaması</strong> — fatura <strong>USD veya EUR</strong>, Stripe/PayPal, uluslararası hosting, CET ve EST örtüşmesi. Hızlı teslim: <a href="fast">Fast Web Studio</a> ($99 / ~€90’dan). Örnek: <a href="https://arianpumps.com" target="_blank" rel="noopener noreferrer">Arian Pumps</a>.',
+        tags: ['Website', 'Web App', 'Stripe', 'SEO', 'USD/EUR', '5-day'],
         checks: [
-          'Kurumsal, mağaza ve kampanya landing siteleri',
+          'ABD/AB pazarı için İngilizce kurumsal, mağaza ve landing',
           'Web uygulaması ve özel admin paneli',
-          'Responsive UI — Farsça/RTL tipografi',
-          'Temel SEO, içerik yapısı ve hız optimizasyonu',
-          'WhatsApp, iletişim formu ve gerekirse ödeme entegrasyonu',
-          'İçerik yönetimi eğitimi ve lansman sonrası destek'
+          'Responsive LTR (gerekirse RTL) — çok dilli',
+          'Teknik SEO, Core Web Vitals ve içerik yapısı',
+          'Stripe, PayPal, iletişim formu ve Zoom/Meet randevu',
+          'USD veya EUR fatura, CMS eğitimi ve lansman sonrası destek'
         ],
         cta: 'Fast Studio planları'
       },
       {
         title: 'Mobil uygulama ve sistem',
         subtitle: 'Android · iOS · Kurumsal sistem',
-        body: '<strong>Android / iOS</strong> uygulaması, kurumsal sistem, B2B paneller ve özel yazılım çözümleri — ihtiyaç analizinden yayına, entegrasyona ve desteğe kadar.',
-        tags: ['Android', 'iOS', 'Sistem', 'API'],
-        checks: ['Android ve iOS uygulama', 'Kurumsal sistem / panel', 'API ve ödeme entegrasyonu', 'Çok dilli UI', 'Destek ve güncelleme'],
+        body: 'Uluslararası ürünler için <strong>Android / iOS</strong> uygulaması, kurumsal sistem, B2B paneller ve özel yazılım — ihtiyaç analizinden App Store / Google Play yayınına, Stripe entegrasyonuna ve desteğe. Örnek: App Store’daki <a href="marvi-society">Marvi Society</a>.',
+        tags: ['Android', 'iOS', 'App Store', 'API', 'Stripe'],
+        checks: ['İngilizce veya çok dilli UI ile Android ve iOS', 'Kurumsal sistem / B2B paneli', 'API, Stripe ve ödeme entegrasyonu', 'App Store ve Google Play yayını', 'Lansman sonrası destek ve güncelleme', '<a href="marvi-society">Marvi Society</a> — iOS uygulama örneği'],
         cta: 'Yazılım projesi iste'
       },
       {
@@ -172,8 +172,8 @@
       {
         title: 'Teknik ve bina hizmetleri',
         subtitle: 'CCTV · Tesisat · Gizli aydınlatma',
-        body: '<strong>Güvenlik kamerası</strong>, <strong>bina tesisatı</strong> ve <strong>gizli aydınlatma</strong> — <strong>Tebriz</strong> ve <strong>İstanbul</strong>. Bizdavar teknik ekibi tarafından uygulanır.',
-        tags: ['CCTV', 'Tesisat', 'Aydınlatma', 'Tebriz', 'İstanbul'],
+        body: '<strong>Güvenlik kamerası</strong>, <strong>bina tesisatı</strong> ve <strong>gizli aydınlatma</strong> — <strong>Tebriz</strong>. Bizdavar teknik ekibi tarafından uygulanır.',
+        tags: ['CCTV', 'Tesisat', 'Aydınlatma', 'Tebriz'],
         checks: [
           'CCTV kurulum — konut ve işyeri',
           'Bina elektrik tesisatı',
@@ -188,15 +188,15 @@
       {
         title: 'Digital marketing',
         subtitle: 'Strategy and campaign delivery',
-        body: 'Strategy, execution and optimization for <strong>digital marketing</strong> that grows online sales — market analysis, SEO, <strong>Google Ads</strong>, social campaigns, CRO and automation. A measurable path from acquisition to conversion. Related: <a href="articles/digital-marketing">How digital marketing increases sales</a>.',
-        tags: ['Google Ads', 'SEO', 'CRO', 'Automation', 'Analytics', 'Funnel'],
+        body: 'Strategy, execution and optimization for <strong>digital marketing</strong> that grows USD/EUR revenue — market analysis, SEO, <strong>Google Ads</strong>, Meta, LinkedIn, CRO and automation. Campaigns for US and EU audiences with GA4 reporting in your billing currency. Related: <a href="articles/digital-marketing">How digital marketing increases sales</a>.',
+        tags: ['Google Ads', 'Meta', 'LinkedIn', 'SEO', 'CRO', 'GA4'],
         checks: [
-          'Competitor, audience and funnel analysis',
-          'Google Ads and social media campaigns',
-          'Technical/content SEO and conversion pages',
-          'CRO on landings and forms',
+          'US/EU audience, competitor and funnel analysis',
+          'Google Ads, Meta and LinkedIn campaigns billed in USD or EUR',
+          'English technical/content SEO and conversion pages',
+          'CRO on landings, forms and checkout',
           'Marketing automation, email and nurture',
-          'Monthly KPI reporting and continuous improvement'
+          'Monthly KPI reporting in dollars or euros'
         ],
         cta: 'Request consulting'
       },
@@ -218,9 +218,9 @@
       {
         title: 'Mobile apps & systems',
         subtitle: 'Android · iOS · Business systems',
-        body: 'Design and build <strong>Android and iOS</strong> apps, enterprise systems, B2B panels and custom software — from requirements through release, integration and support.',
-        tags: ['Android', 'iOS', 'Systems', 'API'],
-        checks: ['Android and iOS apps', 'Business systems and panels', 'API and payment integrations', 'Multilingual UI', 'Support and updates'],
+        body: 'Design and build <strong>Android and iOS</strong> apps, enterprise systems, B2B panels and custom software for international products — from requirements through App Store / Google Play, Stripe integration and support. Example: <a href="marvi-society">Marvi Society</a> on the App Store.',
+        tags: ['Android', 'iOS', 'App Store', 'API', 'Stripe'],
+        checks: ['Android and iOS apps with English or multilingual UI', 'Business systems and B2B panels', 'API, Stripe and payment integrations', 'App Store and Google Play release', 'Support and updates after launch', '<a href="marvi-society">Marvi Society</a> — iOS app case study'],
         cta: 'Request a software project'
       },
       {
@@ -260,8 +260,8 @@
       {
         title: 'Technical & building services',
         subtitle: 'CCTV · Wiring · Cove lighting',
-        body: '<strong>CCTV installation</strong>, <strong>building wiring</strong> and <strong>cove lighting</strong> for homes and commercial units in <strong>Tabriz</strong> and <strong>Istanbul</strong> — by the <strong>Bizdavar technical team</strong>.',
-        tags: ['CCTV', 'Wiring', 'Lighting', 'Tabriz', 'Istanbul'],
+        body: '<strong>CCTV installation</strong>, <strong>building wiring</strong> and <strong>cove lighting</strong> for homes and commercial units in <strong>Tabriz</strong> — by the <strong>Bizdavar technical team</strong>.',
+        tags: ['CCTV', 'Wiring', 'Lighting', 'Tabriz'],
         checks: [
           'CCTV for homes and workplaces',
           'Residential and commercial wiring',
@@ -276,149 +276,149 @@
 
   const cards = {
     fa: [
-      { title: 'بازاریابی دیجیتال', desc: 'استراتژی، کمپین، سئو و CRO برای رشد فروش آنلاین.' },
-      { title: 'وب و وب‌اپلیکیشن', desc: 'سایت، فروشگاه و وب‌اپ اختصاصی — Fast Studio یا سفارشی.' },
-      { title: 'اپ و سامانه', desc: 'اندروید، iOS و سامانه‌های سازمانی.' },
+      { title: 'بازاریابی دیجیتال', desc: 'Google Ads، Meta و LinkedIn برای رشد فروش دلاری و یورویی.' },
+      { title: 'وب و وب‌اپلیکیشن', desc: 'سایت انگلیسی برای اروپا و آمریکا — از ۹۹ دلار، فاکتور USD/EUR.' },
+      { title: 'اپ و سامانه', desc: 'اندروید، iOS و وب‌اپ — App Store / Play و Stripe.' },
       { title: 'مدیریت سرور', desc: 'VPS، امنیت، بکاپ، مانیتورینگ، DNS و مهاجرت.' },
       { title: 'مدیریت SMM', desc: 'محتوا، گرافیک، ریلز، تبلیغات و گزارش رشد.' },
-      { title: 'خدمات فنی', desc: 'دوربین مدار بسته، سیم‌کشی و نورمخفی — تبریز و استانبول.' }
+      { title: 'خدمات فنی', desc: 'دوربین مدار بسته، سیم‌کشی و نورمخفی — تبریز.' }
     ],
     tr: [
-      { title: 'Dijital pazarlama', desc: 'Strateji, kampanya, SEO ve CRO.' },
-      { title: 'Web ve web app', desc: 'Site, mağaza ve özel web uygulaması.' },
-      { title: 'Uygulama ve sistem', desc: 'Android, iOS ve kurumsal sistemler.' },
+      { title: 'Dijital pazarlama', desc: 'Google Ads, Meta ve LinkedIn — USD/EUR ciro.' },
+      { title: 'Web ve web app', desc: 'ABD/AB için İngilizce site — $99’dan, fatura USD/EUR.' },
+      { title: 'Uygulama ve sistem', desc: 'Android, iOS ve web app — App Store / Play ve Stripe.' },
       { title: 'Sunucu yönetimi', desc: 'VPS, güvenlik, yedek, monitoring, DNS ve migrasyon.' },
       { title: 'SMM yönetimi', desc: 'İçerik, grafik, reels, reklam ve büyüme raporu.' },
-      { title: 'Teknik hizmetler', desc: 'CCTV, tesisat ve gizli aydınlatma — Tebriz & İstanbul.' }
+      { title: 'Teknik hizmetler', desc: 'CCTV, tesisat ve gizli aydınlatma — Tebriz.' }
     ],
     en: [
-      { title: 'Digital marketing', desc: 'Strategy, campaigns, SEO and CRO.' },
-      { title: 'Web & web apps', desc: 'Sites, stores and custom web applications.' },
-      { title: 'Apps & systems', desc: 'Android, iOS and business systems.' },
+      { title: 'Digital marketing', desc: 'Google Ads, Meta and LinkedIn that grow USD/EUR revenue.' },
+      { title: 'Web & web apps', desc: 'English sites for US & EU — from $99, billed in USD or EUR.' },
+      { title: 'Apps & systems', desc: 'Android, iOS and web apps — App Store / Play and Stripe.' },
       { title: 'Server management', desc: 'VPS, security, backups, monitoring, DNS and migration.' },
       { title: 'SMM management', desc: 'Content, design, reels, ads and growth reporting.' },
-      { title: 'Technical services', desc: 'CCTV, wiring and cove lighting — Tabriz & Istanbul.' }
+      { title: 'Technical services', desc: 'CCTV, wiring and cove lighting — Tabriz.' }
     ]
   };
 
   const digitalMarketing = {
     fa: {
       servicesTitle: 'در بازاریابی دیجیتال چه می‌کنیم؟',
-      processNote: 'از تحلیل بازار تا کمپین، CRO و گزارش ماهانه — مسیر رشد قابل اندازه‌گیری.',
+      processNote: 'کمپین برای مخاطب آمریکا و اروپا — Google Ads، Meta، LinkedIn، سئوی انگلیسی و گزارش GA4 به دلار یا یورو.',
       ctaArticle: 'مقاله دیجیتال مارکتینگ',
       packagesTitle: 'خروجی‌های همکاری',
       packages: [
-        'نقشه کانال و قیف فروش',
-        'راه‌اندازی و بهینه‌سازی کمپین',
-        'آزمایش CRO روی صفحات کلیدی',
-        'گزارش KPI ماهانه'
+        'نقشه کانال برای بازار US/EU',
+        'راه‌اندازی Ads با بودجه USD/EUR',
+        'آزمایش CRO روی لندینگ انگلیسی',
+        'گزارش KPI ماهانه به دلار یا یورو'
       ],
       panels: [
-        { title: 'Ads', desc: 'Google و شبکه‌های اجتماعی' },
-        { title: 'SEO', desc: 'سئو و محتوای هدفمند' },
-        { title: 'CRO', desc: 'بهینه‌سازی نرخ تبدیل' },
-        { title: 'Email', desc: 'اتوماسیون و ایمیل' },
-        { title: 'Analytics', desc: 'گزارش و KPI' },
-        { title: 'Funnel', desc: 'مسیر جذب تا خرید' }
+        { title: 'Google Ads', desc: 'جستجو و Performance Max — US/EU' },
+        { title: 'Meta', desc: 'Facebook و Instagram Ads' },
+        { title: 'LinkedIn', desc: 'لید B2B اروپا و آمریکا' },
+        { title: 'SEO', desc: 'سئوی انگلیسی و صفحات تبدیل' },
+        { title: 'CRO', desc: 'نرخ تبدیل لندینگ و چک‌اوت' },
+        { title: 'GA4', desc: 'گزارش به USD یا EUR' }
       ],
       faqEyebrow: 'دیجیتال مارکتینگ',
       faqTitle: 'سوالات پرتکرار بازاریابی دیجیتال',
       faq: [
         {
-          q: 'بازاریابی دیجیتال بیزدوار چه کانال‌هایی را پوشش می‌دهد؟',
-          a: 'Google Ads، سئو، کمپین‌های شبکه‌های اجتماعی، CRO روی لندینگ و فرم، اتوماسیون ایمیل و گزارش عملکرد — بسته به هدف فروش شما ترکیب می‌شود.'
+          q: 'برای مشتری اروپا و آمریکا هم کمپین اجرا می‌کنید؟',
+          a: 'بله. بودجه و فاکتور را به دلار یا یورو می‌بندیم، مخاطب را در بازار US/EU هدف می‌گیریم و گزارش را با GA4 به همان ارز می‌دهیم.'
+        },
+        {
+          q: 'کدام کانال‌ها پوشش داده می‌شود؟',
+          a: 'Google Ads، Meta، LinkedIn، سئوی انگلیسی، CRO روی لندینگ و فرم، اتوماسیون ایمیل و گزارش عملکرد — ترکیب بر اساس هدف فروش دلاری/یورویی شما.'
         },
         {
           q: 'از کجا شروع می‌کنید؟',
-          a: 'با تحلیل بازار، رقبا و قیف فعلی شروع می‌کنیم؛ بعد کانال‌ها و بودجه را اولویت‌بندی و کمپین یا بهینه‌سازی را اجرا می‌کنیم.'
+          a: 'با تحلیل بازار هدف آمریکا/اروپا، رقبا و قیف فعلی؛ بعد کانال و بودجه را اولویت می‌دهیم و کمپین یا بهینه‌سازی را اجرا می‌کنیم.'
         },
         {
-          q: 'نتیجه را چطور می‌سنجید؟',
-          a: 'با KPIهای شفاف مثل هزینه جذب، نرخ تبدیل، کیفیت لید و درآمد نسبت به هزینه تبلیغ — در گزارش ماهانه.'
-        },
-        {
-          q: 'با SMM یا طراحی وب هم هماهنگ می‌شود؟',
-          a: 'بله. کمپین‌ها با محتوای شبکه‌های اجتماعی و صفحات وب/لندینگ هم‌راستا می‌شوند تا پیام و تبدیل یکدست باشد.'
+          q: 'با طراحی وب هم هماهنگ می‌شود؟',
+          a: 'بله. کمپین روی لندینگ انگلیسی، Stripe/فرم و صفحات Fast Studio یا سایت سفارشی شما سوار می‌شود تا پیام و تبدیل یکدست باشد.'
         }
       ]
     },
     tr: {
       servicesTitle: 'Dijital pazarda neler yapıyoruz?',
-      processNote: 'Pazar analizinden kampanyaya, CRO ve aylık rapora — ölçülebilir büyüme yolu.',
+      processNote: 'ABD ve AB kitleleri için kampanya — Google Ads, Meta, LinkedIn, İngilizce SEO ve GA4 raporu USD veya EUR.',
       ctaArticle: 'Dijital pazarlama yazısı',
       packagesTitle: 'İş birliği çıktıları',
       packages: [
-        'Kanal ve huni haritası',
-        'Kampanya kurulum ve optimizasyon',
-        'Kritik sayfalarda CRO testleri',
-        'Aylık KPI raporu'
+        'ABD/AB kanal ve huni haritası',
+        'Ads kurulumu — bütçe USD/EUR',
+        'İngilizce landing’de CRO testleri',
+        'Aylık KPI — dolar veya euro'
       ],
       panels: [
-        { title: 'Ads', desc: 'Google ve sosyal ağlar' },
-        { title: 'SEO', desc: 'SEO ve odaklı içerik' },
-        { title: 'CRO', desc: 'Dönüşüm optimizasyonu' },
-        { title: 'Email', desc: 'Otomasyon ve e-posta' },
-        { title: 'Analytics', desc: 'Rapor ve KPI' },
-        { title: 'Funnel', desc: 'Edinimden satışa yol' }
+        { title: 'Google Ads', desc: 'Arama ve Performance Max — US/EU' },
+        { title: 'Meta', desc: 'Facebook ve Instagram Ads' },
+        { title: 'LinkedIn', desc: 'ABD/AB B2B lead' },
+        { title: 'SEO', desc: 'İngilizce SEO ve dönüşüm sayfaları' },
+        { title: 'CRO', desc: 'Landing ve checkout dönüşümü' },
+        { title: 'GA4', desc: 'Rapor USD veya EUR' }
       ],
       faqEyebrow: 'Dijital pazarlama',
       faqTitle: 'Dijital pazarlama SSS',
       faq: [
         {
+          q: 'Avrupa ve ABD müşterileri için kampanya yürütüyor musunuz?',
+          a: 'Evet. Bütçe ve fatura USD veya EUR; hedef kitle US/EU; raporlama GA4 ile aynı para biriminde.'
+        },
+        {
           q: 'Hangi kanalları kapsıyorsunuz?',
-          a: 'Google Ads, SEO, sosyal kampanyalar, landing/form CRO, e-posta otomasyonu ve performans raporu — satış hedefine göre birleştirilir.'
+          a: 'Google Ads, Meta, LinkedIn, İngilizce SEO, landing/form CRO, e-posta otomasyonu ve performans raporu — dolar/euro satış hedefine göre birleştirilir.'
         },
         {
           q: 'Nasıl başlıyorsunuz?',
-          a: 'Pazar, rakip ve mevcut huni analiziyle; ardından kanal/bütçe önceliği ve kampanya veya optimizasyon.'
+          a: 'ABD/AB pazar, rakip ve mevcut huni analiziyle; ardından kanal/bütçe önceliği ve kampanya veya optimizasyon.'
         },
         {
-          q: 'Sonucu nasıl ölçüyorsunuz?',
-          a: 'CAC, dönüşüm oranı, lead kalitesi ve reklam maliyetine göre gelir gibi KPI’larla — aylık raporda.'
-        },
-        {
-          q: 'SMM veya web tasarımla uyumlu mu?',
-          a: 'Evet. Kampanyalar sosyal içerik ve web/landing sayfalarıyla aynı mesaj ve dönüşüm hedefinde hizalanır.'
+          q: 'Web tasarımla uyumlu mu?',
+          a: 'Evet. Kampanyalar İngilizce landing, Stripe/form ve Fast Studio veya özel sitenizle aynı mesajda hizalanır.'
         }
       ]
     },
     en: {
       servicesTitle: 'What we do in digital marketing',
-      processNote: 'From market analysis to campaigns, CRO and monthly reporting — a measurable growth path.',
+      processNote: 'Campaigns for US and EU audiences — Google Ads, Meta, LinkedIn, English SEO and GA4 reports in USD or EUR.',
       ctaArticle: 'Digital marketing article',
       packagesTitle: 'Engagement outputs',
       packages: [
-        'Channel and funnel map',
-        'Campaign setup and optimization',
-        'CRO tests on key pages',
-        'Monthly KPI report'
+        'US/EU channel and funnel map',
+        'Ads setup billed in USD or EUR',
+        'CRO tests on English landings',
+        'Monthly KPI report in dollars or euros'
       ],
       panels: [
-        { title: 'Ads', desc: 'Google and social networks' },
-        { title: 'SEO', desc: 'SEO and targeted content' },
-        { title: 'CRO', desc: 'Conversion rate optimization' },
-        { title: 'Email', desc: 'Automation and email' },
-        { title: 'Analytics', desc: 'Reporting and KPIs' },
-        { title: 'Funnel', desc: 'Acquisition to purchase' }
+        { title: 'Google Ads', desc: 'Search & Performance Max — US/EU' },
+        { title: 'Meta', desc: 'Facebook and Instagram Ads' },
+        { title: 'LinkedIn', desc: 'B2B leads in the US and EU' },
+        { title: 'SEO', desc: 'English SEO and conversion pages' },
+        { title: 'CRO', desc: 'Landing and checkout conversion' },
+        { title: 'GA4', desc: 'Reporting in USD or EUR' }
       ],
       faqEyebrow: 'Digital marketing',
       faqTitle: 'Digital marketing FAQ',
       faq: [
         {
+          q: 'Do you run ads for US and EU companies?',
+          a: 'Yes. Media budgets and invoices are in USD or EUR, audiences are targeted in US/EU markets, and GA4 reports match your billing currency.'
+        },
+        {
           q: 'Which channels does Bizdavar cover?',
-          a: 'Google Ads, SEO, social campaigns, landing/form CRO, email automation and performance reporting — combined around your sales goal.'
+          a: 'Google Ads, Meta, LinkedIn, English SEO, landing/form CRO, email automation and performance reporting — combined around your dollar or euro sales goal.'
         },
         {
           q: 'How do you start?',
-          a: 'With market, competitor and current funnel analysis; then we prioritize channels and budget and run campaigns or optimizations.'
+          a: 'With US/EU market, competitor and current funnel analysis; then we prioritize channels and budget and run campaigns or optimizations.'
         },
         {
-          q: 'How do you measure results?',
-          a: 'With clear KPIs such as acquisition cost, conversion rate, lead quality and revenue vs ad spend — in a monthly report.'
-        },
-        {
-          q: 'Does it align with SMM or web design?',
-          a: 'Yes. Campaigns stay aligned with social content and web/landing pages so message and conversion stay consistent.'
+          q: 'Does it align with web design?',
+          a: 'Yes. Campaigns land on English pages, Stripe/forms and Fast Studio or custom sites so message and conversion stay consistent.'
         }
       ]
     }
@@ -427,81 +427,81 @@
   const webDesign = {
     fa: {
       servicesTitle: 'چه می‌سازیم؟',
-      processNote: 'از لندینگ سریع تا وب‌اپ سفارشی — UI فارسی/RTL، سئو پایه و اتصال فرم و واتساپ.',
-      ctaCustom: 'پروژه سفارشی وب',
+      processNote: 'از لندینگ انگلیسی ۵روزه تا وب‌اپ سفارشی — فاکتور دلار/یورو، Stripe/PayPal، هاست بین‌المللی و همپوشانی CET/EST. UI فارسی/RTL برای بازار دوم در صورت نیاز.',
+      ctaCustom: 'پیشنهاد وب به دلار / یورو',
       packagesTitle: 'خروجی‌های تحویل',
       packages: [
-        'طراحی UI/UX و هویت صفحه',
-        'پیاده‌سازی ریسپانسیو RTL',
-        'سئو پایه و سرعت',
-        'آموزش و پشتیبانی لانچ'
+        'UI/UX و هویت صفحه انگلیسی',
+        'پیاده‌سازی ریسپانسیو LTR (RTL در صورت نیاز)',
+        'سئو فنی و Core Web Vitals',
+        'Stripe / PayPal، آموزش CMS و پشتیبانی لانچ'
       ],
       panels: [
-        { title: 'Corporate', desc: 'سایت شرکتی' },
-        { title: 'Store', desc: 'فروشگاه ووکامرس' },
-        { title: 'Web App', desc: 'پنل و سامانه وب' },
-        { title: 'Landing', desc: 'لندینگ کمپین' },
-        { title: 'RTL / FA', desc: 'فونت و UI فارسی' },
-        { title: 'Fast', desc: 'تحویل از $99' }
+        { title: 'Corporate', desc: 'سایت شرکتی انگلیسی' },
+        { title: 'Store', desc: 'فروشگاه + Stripe' },
+        { title: 'Web App', desc: 'پنل و SaaS' },
+        { title: 'Landing', desc: 'لندینگ کمپین US/EU' },
+        { title: 'USD / EUR', desc: 'فاکتور به ارز شما' },
+        { title: 'Fast', desc: 'از $99 / ~€90' }
       ],
       faqEyebrow: 'طراحی وب',
       faqTitle: 'سوالات پرتکرار طراحی وب',
       faq: [
         {
+          q: 'برای مشتری اروپا و آمریکا سایت می‌سازید؟',
+          a: 'بله — این تمرکز اصلی ماست. سایت انگلیسی LTR، فاکتور دلار یا یورو، همپوشانی ساعت با CET و EST، جلسه Zoom/Meet و هاست سازگار با GDPR از طریق Netinode.'
+        },
+        {
           q: 'تفاوت Fast Web Studio با پروژه سفارشی چیست؟',
-          a: 'Fast Studio برای سایت شرکتی/لندینگ با پلن‌های آماده و تحویل سریع است (از حدود $99). پروژه سفارشی برای وب‌اپ، پنل، فروشگاه پیچیده یا نیازمندی‌های خاص از تحلیل تا لانچ تعریف می‌شود.'
+          a: 'Fast Studio برای سایت شرکتی/لندینگ انگلیسی با پلن ثابت و تحویل ۵روزه است (از $99 / حدود €90). پروژه سفارشی برای وب‌اپ، پنل، فروشگاه Stripe یا نیازمندی‌های خاص از تحلیل تا لانچ تعریف می‌شود.'
+        },
+        {
+          q: 'Stripe و PayPal هم وصل می‌کنید؟',
+          a: 'بله. فروشگاه WooCommerce، کاتالوگ، سبد و درگاه بین‌المللی (Stripe/PayPal) در پروژه‌های فروشگاهی و پلن Pro پوشش داده می‌شود.'
         },
         {
           q: 'سایت فارسی و RTL هم طراحی می‌کنید؟',
-          a: 'بله. رابط کاربری راست‌به‌چپ، فونت فارسی و ساختار محتوا برای مخاطب فارسی‌زبان بخش استاندارد پروژه‌های وب بیزدوار است.'
-        },
-        {
-          q: 'فروشگاه ووکامرس و درگاه پرداخت هم دارید؟',
-          a: 'بله. فروشگاه WooCommerce، کاتالوگ محصول، سبد خرید و اتصال درگاه در پروژه‌های فروشگاهی پوشش داده می‌شود.'
-        },
-        {
-          q: 'بعد از لانچ چه پشتیبانی می‌دهید؟',
-          a: 'آموزش مدیریت محتوا، رفع باگ اولیه و در صورت قرارداد، نگهداری، به‌روزرسانی و بهبود سئو/سرعت ادامه پیدا می‌کند.'
+          a: 'بله، به‌عنوان بازار دوم یا پروژه جدا. برای جذب مشتری دلار/یورو، نسخه انگلیسی LTR را پیش‌فرض می‌گیریم.'
         }
       ]
     },
     tr: {
       servicesTitle: 'Ne inşa ediyoruz?',
-      processNote: 'Hızlı landing’den özel web app’e — Farsça/RTL UI, temel SEO, form ve WhatsApp.',
-      ctaCustom: 'Özel web projesi',
+      processNote: '5 günde İngilizce landing’den özel web app’e — USD/EUR fatura, Stripe/PayPal, uluslararası hosting ve CET/EST örtüşmesi. Farsça/RTL ikinci pazar için.',
+      ctaCustom: 'USD / EUR web teklifi',
       packagesTitle: 'Teslim çıktıları',
       packages: [
-        'UI/UX ve sayfa kimliği',
-        'Responsive RTL geliştirme',
-        'Temel SEO ve hız',
-        'Eğitim ve lansman desteği'
+        'UI/UX ve İngilizce sayfa kimliği',
+        'Responsive LTR (isteğe RTL)',
+        'Teknik SEO ve Core Web Vitals',
+        'Stripe / PayPal, CMS eğitimi ve lansman desteği'
       ],
       panels: [
-        { title: 'Corporate', desc: 'Kurumsal site' },
-        { title: 'Store', desc: 'WooCommerce mağaza' },
-        { title: 'Web App', desc: 'Panel ve web sistemi' },
-        { title: 'Landing', desc: 'Kampanya landing' },
-        { title: 'RTL / FA', desc: 'Farsça UI' },
-        { title: 'Fast', desc: '$99’dan teslim' }
+        { title: 'Corporate', desc: 'İngilizce kurumsal site' },
+        { title: 'Store', desc: 'Mağaza + Stripe' },
+        { title: 'Web App', desc: 'Panel ve SaaS' },
+        { title: 'Landing', desc: 'ABD/AB kampanya landing' },
+        { title: 'USD / EUR', desc: 'Fatura sizin para biriminizde' },
+        { title: 'Fast', desc: '$99 / ~€90’dan' }
       ],
       faqEyebrow: 'Web tasarım',
       faqTitle: 'Web tasarım SSS',
       faq: [
         {
+          q: 'Avrupa ve ABD şirketleri için site yapıyor musunuz?',
+          a: 'Evet — asıl odağımız bu. İngilizce LTR site, USD veya EUR fatura, CET/EST örtüşmesi, Zoom/Meet ve Netinode üzerinden GDPR uyumlu hosting.'
+        },
+        {
           q: 'Fast Web Studio ile özel proje farkı nedir?',
-          a: 'Fast Studio hazır planlarla hızlı kurumsal/landing teslimidir (yaklaşık $99’dan). Özel proje web app, panel veya karmaşık mağaza ihtiyaçları içindir.'
+          a: 'Fast Studio sabit fiyatlı 5 günlük kurumsal/landing teslimidir ($99 / ~€90’dan). Özel proje web app, panel veya Stripe mağazası içindir.'
         },
         {
-          q: 'Farsça / RTL site yapıyor musunuz?',
-          a: 'Evet. Sağdan sola arayüz, Farsça tipografi ve içerik yapısı standart kapsamımızdadır.'
+          q: 'Stripe ve PayPal var mı?',
+          a: 'Evet. WooCommerce kataloğu, sepet ve uluslararası ödeme (Stripe/PayPal) e-ticaret ve Pro planda sunulur.'
         },
         {
-          q: 'WooCommerce ve ödeme entegrasyonu var mı?',
-          a: 'Evet. Ürün kataloğu, sepet ve ödeme geçidi e-ticaret projelerinde sunulur.'
-        },
-        {
-          q: 'Lansman sonrası destek nedir?',
-          a: 'İçerik yönetimi eğitimi, ilk hata düzeltmeleri ve sözleşmeye göre bakım / SEO-hız iyileştirmesi devam eder.'
+          q: 'Farsça / RTL site de yapıyor musunuz?',
+          a: 'Evet, ikinci pazar veya ayrı proje olarak. Dolar/euro müşteri için varsayılan İngilizce LTR’dir.'
         }
       ]
     },
@@ -511,37 +511,37 @@
       ctaCustom: 'Custom web project',
       packagesTitle: 'Delivery outputs',
       packages: [
-        'UI/UX and page identity',
-        'Responsive RTL implementation',
-        'Foundational SEO and speed',
-        'Training and launch support'
+        'UI/UX and English page identity',
+        'Responsive LTR (RTL on request)',
+        'Technical SEO and Core Web Vitals',
+        'Stripe / PayPal, CMS training and launch support'
       ],
       panels: [
-        { title: 'Corporate', desc: 'Company websites' },
-        { title: 'Store', desc: 'WooCommerce stores' },
-        { title: 'Web App', desc: 'Panels & web systems' },
-        { title: 'Landing', desc: 'Campaign landings' },
-        { title: 'RTL / FA', desc: 'Persian UI' },
-        { title: 'Fast', desc: 'From $99 delivery' }
+        { title: 'Corporate', desc: 'English company sites' },
+        { title: 'Store', desc: 'WooCommerce + Stripe' },
+        { title: 'Web App', desc: 'Panels & SaaS UI' },
+        { title: 'Landing', desc: 'US/EU campaign landings' },
+        { title: 'USD / EUR', desc: 'Invoice in your currency' },
+        { title: 'Fast', desc: 'From $99 / ~€90' }
       ],
       faqEyebrow: 'Web design',
       faqTitle: 'Web design FAQ',
       faq: [
         {
+          q: 'Do you design websites for US and EU companies?',
+          a: 'Yes — that is the core offer. English LTR sites, invoices in USD or EUR, overlap hours with CET and EST, Zoom/Meet reviews, and GDPR-aware hosting via Netinode.'
+        },
+        {
           q: 'What’s the difference between Fast Web Studio and a custom project?',
-          a: 'Fast Studio is packaged, fast corporate/landing delivery (from about $99). Custom projects cover web apps, panels or complex stores from discovery to launch.'
+          a: 'Fast Studio is packaged 5-day corporate/landing delivery (from $99 / about €90). Custom projects cover web apps, admin panels or Stripe stores from discovery to launch.'
         },
         {
-          q: 'Do you build Persian / RTL sites?',
-          a: 'Yes. Right-to-left UI, Persian typography and content structure are standard in Bizdavar web projects.'
+          q: 'Do you integrate Stripe and PayPal?',
+          a: 'Yes. WooCommerce catalogs, carts and international checkout (Stripe/PayPal) are included in store builds and the Pro plan.'
         },
         {
-          q: 'Do you offer WooCommerce and payment gateways?',
-          a: 'Yes. Product catalogs, carts and payment integrations are included in store projects.'
-        },
-        {
-          q: 'What support do you provide after launch?',
-          a: 'CMS training, early bug fixes and, under agreement, ongoing maintenance plus SEO/speed improvements.'
+          q: 'Can you still build Persian / RTL sites?',
+          a: 'Yes, as a second locale or a separate project. For dollar/euro clients the default is English LTR.'
         }
       ]
     }
@@ -550,7 +550,7 @@
   const softwareApps = {
     fa: {
       servicesTitle: 'چه می‌سازیم؟',
-      processNote: 'از تحلیل نیاز تا انتشار استور و پشتیبانی — اپ موبایل، سامانه و یکپارچه‌سازی API.',
+      processNote: 'از تحلیل نیاز تا انتشار App Store / Google Play — UI انگلیسی یا چندزبانه، Stripe و همپوشانی ساعت با تیم‌های آمریکا/اروپا.',
       ctaPortfolio: 'نمونه‌کار نرم‌افزاری',
       packagesTitle: 'خروجی‌های پروژه',
       packages: [
@@ -572,7 +572,7 @@
       faq: [
         {
           q: 'چه نوع نرم‌افزاری می‌سازید؟',
-          a: 'اپلیکیشن اندروید و iOS، سامانه‌های سازمانی، پنل B2B و نرم‌افزار سفارشی — متناسب با نیاز کسب‌وکار شما.'
+          a: 'اپلیکیشن اندروید و iOS با UI انگلیسی یا چندزبانه، سامانه‌های سازمانی، پنل B2B و نرم‌افزار سفارشی — از جمله محصولاتی که در App Store و Google Play منتشر می‌شوند.'
         },
         {
           q: 'فرآیند پروژه چگونه است؟',
@@ -580,7 +580,7 @@
         },
         {
           q: 'یکپارچه‌سازی با سیستم‌های موجود دارید؟',
-          a: 'بله. اتصال API، درگاه پرداخت، CRM و سرویس‌های ثالث در محدوده پروژه قابل برنامه‌ریزی است.'
+          a: 'بله. اتصال API، Stripe/PayPal، CRM و سرویس‌های ثالث در محدوده پروژه قابل برنامه‌ریزی است — مناسب محصول بین‌المللی با درآمد دلاری/یورویی.'
         },
         {
           q: 'پس از لانچ چه پشتیبانی می‌دهید؟',
@@ -590,7 +590,7 @@
     },
     tr: {
       servicesTitle: 'Ne geliştiriyoruz?',
-      processNote: 'İhtiyaç analizinden mağaza yayını ve desteğe — mobil uygulama, sistem ve API entegrasyonu.',
+      processNote: 'İhtiyaç analizinden App Store / Google Play yayınına — İngilizce veya çok dilli UI, Stripe ve ABD/AB ekipleriyle saat örtüşmesi.',
       ctaPortfolio: 'Yazılım portfolyosu',
       packagesTitle: 'Proje çıktıları',
       packages: [
@@ -620,7 +620,7 @@
         },
         {
           q: 'Mevcut sistemlerle entegrasyon var mı?',
-          a: 'Evet. API, ödeme, CRM ve üçüncü taraf servis bağlantıları proje kapsamında planlanabilir.'
+          a: 'Evet. API, Stripe/PayPal, CRM ve üçüncü taraf servisler proje kapsamında planlanabilir — USD/EUR gelirli uluslararası ürünler için.'
         },
         {
           q: 'Lansman sonrası destek nedir?',
@@ -630,7 +630,7 @@
     },
     en: {
       servicesTitle: 'What we build',
-      processNote: 'From requirements to store release and support — mobile apps, systems and API integration.',
+      processNote: 'From requirements to App Store / Google Play — English or multilingual UI, Stripe, and overlap hours with US/EU teams.',
       ctaPortfolio: 'Software portfolio',
       packagesTitle: 'Project outputs',
       packages: [
@@ -652,7 +652,7 @@
       faq: [
         {
           q: 'What software do you build?',
-          a: 'Android and iOS apps, enterprise systems, B2B panels and custom software — shaped around your business needs.'
+          a: 'Android and iOS apps with English or multilingual UI, enterprise systems, B2B panels and custom software — including products shipped to the App Store and Google Play.'
         },
         {
           q: 'How does a project run?',
@@ -660,7 +660,7 @@
         },
         {
           q: 'Can you integrate with existing systems?',
-          a: 'Yes. APIs, payment gateways, CRM and third-party services can be scoped into the project.'
+          a: 'Yes. APIs, Stripe/PayPal, CRM and third-party services can be scoped in — typical for international products billed in USD or EUR.'
         },
         {
           q: 'What support do you provide after launch?',
@@ -908,12 +908,12 @@
     fa: {
       eyebrow: 'خدمات فنی میدانی',
       title: 'دوربین مدار بسته، سیم‌کشی و نورمخفی',
-      desc: 'اجرای تخصصی در تبریز و استانبول — بازدید، پیشنهاد طرح و نصب.',
+      desc: 'اجرای تخصصی در تبریز — بازدید، پیشنهاد طرح و نصب.',
       leadLabel: 'هماهنگی خدمات فنی',
       leadName: 'تیم فنی بیزدوار',
       leadRole: 'نصب دوربین مدار بسته، سیم‌کشی ساختمان و نورمخفی',
       citiesLabel: 'شهرهای هدف',
-      cities: 'تبریز · استانبول',
+      cities: 'تبریز',
       phoneLabel: 'شماره مستقیم',
       waCta: 'واتساپ خدمات فنی',
       callCta: 'تماس تلفنی',
@@ -926,13 +926,13 @@
         { id: 'wiring', icon: 'bolt', title: 'سیم‌کشی ساختمان', desc: 'واحد مسکونی و تجاری' },
         { id: 'lighting', icon: 'flame', title: 'نورمخفی', desc: 'طراحی و اجرای داخلی' },
         { id: 'survey', icon: 'document', title: 'بازدید فنی', desc: 'طرح و زمان‌بندی اجرا' },
-        { id: 'cities', icon: 'pin', title: 'تبریز و استانبول', desc: 'پوشش اجرایی دو شهر' },
+        { id: 'cities', icon: 'pin', title: 'تبریز', desc: 'پوشش اجرایی دو شهر' },
         { id: 'support', icon: 'shield', title: 'گارانتی اجرا', desc: 'پشتیبانی پس از نصب' }
       ],
       faq: [
         {
-          q: 'نصب دوربین مدار بسته در تبریز و استانبول انجام می‌دهید؟',
-          a: 'بله. نصب و راه‌اندازی دوربین مدار بسته برای واحدهای مسکونی و تجاری در تبریز و استانبول توسط تیم فنی بیزدوار انجام می‌شود.'
+          q: 'نصب دوربین مدار بسته در تبریز انجام می‌دهید؟',
+          a: 'بله. نصب و راه‌اندازی دوربین مدار بسته برای واحدهای مسکونی و تجاری در تبریز توسط تیم فنی بیزدوار انجام می‌شود.'
         },
         {
           q: 'نورمخفی داخل واحد مسکونی یا تجاری هم کار می‌کنید؟',
@@ -947,12 +947,12 @@
     tr: {
       eyebrow: 'Saha teknik hizmetleri',
       title: 'CCTV, tesisat ve gizli aydınlatma',
-      desc: 'Tebriz ve İstanbul’da keşif, plan ve kurulum.',
+      desc: 'Tebriz’de keşif, plan ve kurulum.',
       leadLabel: 'Teknik hizmet koordinasyonu',
       leadName: 'Bizdavar teknik ekibi',
       leadRole: 'CCTV, bina tesisatı ve gizli aydınlatma kurulumu',
       citiesLabel: 'Hedef şehirler',
-      cities: 'Tebriz · İstanbul',
+      cities: 'Tebriz',
       phoneLabel: 'Direkt numara',
       waCta: 'Teknik WhatsApp',
       callCta: 'Telefon',
@@ -965,12 +965,12 @@
         { id: 'wiring', icon: 'bolt', title: 'Bina tesisatı', desc: 'Konut ve ticari birimler' },
         { id: 'lighting', icon: 'flame', title: 'Gizli aydınlatma', desc: 'İç mekân uygulama' },
         { id: 'survey', icon: 'document', title: 'Teknik keşif', desc: 'Plan ve kurulum takvimi' },
-        { id: 'cities', icon: 'pin', title: 'Tebriz ve İstanbul', desc: 'İki şehirde uygulama' },
+        { id: 'cities', icon: 'pin', title: 'Tebriz', desc: 'İki şehirde uygulama' },
         { id: 'support', icon: 'shield', title: 'Kurulum garantisi', desc: 'Kurulum sonrası destek' }
       ],
       faq: [
         {
-          q: 'Tebriz ve İstanbul’da kamera kurulumu var mı?',
+          q: 'Tebriz’de kamera kurulumu var mı?',
           a: 'Evet. Konut ve ticari birimlerde CCTV kurulumu Bizdavar teknik ekibi tarafından yapılır.'
         },
         {
@@ -986,12 +986,12 @@
     en: {
       eyebrow: 'On-site technical services',
       title: 'CCTV, wiring and cove lighting',
-      desc: 'Survey, plan and install in Tabriz and Istanbul.',
+      desc: 'Survey, plan and install in Tabriz.',
       leadLabel: 'Technical coordination',
       leadName: 'Bizdavar technical team',
       leadRole: 'CCTV, building wiring and cove lighting installation',
       citiesLabel: 'Focus cities',
-      cities: 'Tabriz · Istanbul',
+      cities: 'Tabriz',
       phoneLabel: 'Direct line',
       waCta: 'Technical WhatsApp',
       callCta: 'Call',
@@ -1004,13 +1004,13 @@
         { id: 'wiring', icon: 'bolt', title: 'Building wiring', desc: 'Residential and commercial' },
         { id: 'lighting', icon: 'flame', title: 'Cove lighting', desc: 'Indoor design and install' },
         { id: 'survey', icon: 'document', title: 'Site survey', desc: 'Plan and schedule' },
-        { id: 'cities', icon: 'pin', title: 'Tabriz & Istanbul', desc: 'On-site coverage' },
+        { id: 'cities', icon: 'pin', title: 'Tabriz', desc: 'On-site coverage' },
         { id: 'support', icon: 'shield', title: 'Install warranty', desc: 'After-install support' }
       ],
       faq: [
         {
-          q: 'Do you install CCTV in Tabriz and Istanbul?',
-          a: 'Yes. Residential and commercial CCTV install is handled by the Bizdavar technical team in Tabriz and Istanbul.'
+          q: 'Do you install CCTV in Tabriz?',
+          a: 'Yes. Residential and commercial CCTV install is handled by the Bizdavar technical team in Tabriz.'
         },
         {
           q: 'Do you also do cove lighting indoors?',
@@ -1024,33 +1024,147 @@
     }
   };
 
+  const intl = {
+    fa: {
+      eyebrow: 'بازار اروپا و آمریکا',
+      title: 'طراحی سایت، اپ و بازاریابی برای درآمد دلاری و یورویی',
+      desc: 'برای استارتاپ‌ها، SMB و آژانس‌های اروپا و آمریکا سایت انگلیسی، وب‌اپ و کمپین می‌سازیم — فاکتور USD یا EUR، همپوشانی ساعت با CET و EST، و تحویل با Zoom / Meet.',
+      nav: 'اروپا و آمریکا',
+      ctaPrimary: 'درخواست پیشنهاد وب (USD / EUR)',
+      ctaSecondary: 'سایت ۵روزه از $۹۹',
+      note: 'مشاوره اول رایگان است. محدوده، زمان و ارز فاکتور را قبل از شروع مکتوب می‌کنیم.',
+      points: [
+        { title: 'فاکتور دلار یا یورو', desc: 'قرارداد و پیش‌فاکتور به USD یا EUR. نرخ تقریبی €۹۰ برای پلن ۹۹ دلاری را شفاف می‌گوییم.' },
+        { title: 'همپوشانی CET و EST', desc: 'بازار اروپا صبح‌ها و آمریکا بعدازظهر؛ جلسه Zoom / Google Meet در ساعت کاری شما.' },
+        { title: 'انگلیسی‌اول و GDPR', desc: 'سایت LTR انگلیسی، سئو پایه و هاست بین‌المللی سازگار با حریم اروپا از طریق Netinode.' },
+        { title: 'Stripe، PayPal و حواله', desc: 'درگاه بین‌المللی روی فروشگاه و وب‌اپ؛ پرداخت پروژه با کارت، PayPal یا انتقال بانکی.' },
+        { title: 'Figma و بازبینی زنده', desc: 'طراحی در Figma، بازخورد در جلسه تصویری، تحویل با آموزش CMS — بدون رفت‌وآمد حضوری.' },
+        { title: 'سرریز آژانس', desc: 'آژانس‌های US/EU که ظرفیت طراحی وب ندارند می‌توانند پروژه را با برند خود یا بیزدوار بسپارند.' }
+      ],
+      offers: [
+        { name: 'Fast Web Studio', price: 'از $99 / ~€90', desc: 'سایت شرکتی یا لندینگ انگلیسی در ۵ روز کاری — پلن‌های $99 / $199 / $299.', href: 'fast', cta: 'مشاهده پلن‌ها' },
+        { name: 'سایت سفارشی US / EU', price: 'پیشنهاد USD / EUR', desc: 'وب‌اپ، فروشگاه Stripe، چندزبانه یا برند پیچیده — از تحلیل تا لانچ.', href: 'contact?service=web-design', cta: 'درخواست پیشنهاد' },
+        { name: 'اپ و بازاریابی', price: 'پروژه یا ماهانه', desc: 'اندروید / iOS / App Store و کمپین Google Ads، Meta و LinkedIn با بودجه دلاری یا یورویی.', href: 'contact?service=software-apps', cta: 'شروع پروژه' }
+      ]
+    },
+    tr: {
+      eyebrow: 'Avrupa ve ABD',
+      title: 'Dolar ve euro geliri için web, uygulama ve pazarlama',
+      desc: 'Avrupa ve ABD’deki startup, KOBİ ve ajanslar için İngilizce site, web app ve kampanya — USD veya EUR fatura, CET ve EST örtüşmesi, Zoom / Meet teslimatı.',
+      nav: 'Avrupa ve ABD',
+      ctaPrimary: 'Web teklifi iste (USD / EUR)',
+      ctaSecondary: '5 günde site $99’dan',
+      note: 'İlk danışmanlık ücretsizdir. Kapsam, süre ve fatura para birimini başlamadan yazılı netleştiririz.',
+      points: [
+        { title: 'USD veya EUR fatura', desc: 'Sözleşme ve proforma dolar veya euro. $99 plan için yaklaşık €90’ı şeffaf paylaşırız.' },
+        { title: 'CET ve EST örtüşmesi', desc: 'Avrupa sabahları, ABD öğleden sonra; Zoom / Google Meet sizin iş saatlerinizde.' },
+        { title: 'İngilizce önce + GDPR', desc: 'LTR İngilizce site, temel SEO ve Netinode üzerinden Avrupa’ya uygun hosting.' },
+        { title: 'Stripe, PayPal ve havale', desc: 'Mağaza ve web app’te uluslararası ödeme; proje ödemesi kart, PayPal veya banka transferi.' },
+        { title: 'Figma ve canlı inceleme', desc: 'Tasarım Figma’da, geri bildirim görüntülü toplantıda, teslim CMS eğitimiyle — seyahat yok.' },
+        { title: 'Ajans taşması', desc: 'Kapasitesi yetmeyen ABD/AB ajansları web işini kendi markaları veya Bizdavar adı altında devredebilir.' }
+      ],
+      offers: [
+        { name: 'Fast Web Studio', price: '$99 / ~€90’dan', desc: 'İngilizce kurumsal veya landing — 5 iş günü. Planlar $99 / $199 / $299.', href: 'fast', cta: 'Planları gör' },
+        { name: 'Özel US / EU sitesi', price: 'USD / EUR teklif', desc: 'Web app, Stripe mağaza, çok dilli veya karmaşık marka — keşiften yayına.', href: 'contact?service=web-design', cta: 'Teklif iste' },
+        { name: 'Uygulama ve pazarlama', price: 'Proje veya aylık', desc: 'Android / iOS / App Store ve Google Ads, Meta, LinkedIn — bütçe dolar veya euro.', href: 'contact?service=software-apps', cta: 'Projeyi başlat' }
+      ]
+    },
+    en: {
+      eyebrow: 'Europe and the United States',
+      title: 'Websites, apps and marketing billed in USD and EUR',
+      desc: 'We build English sites, web apps and campaigns for US and EU startups, SMBs and agencies — invoiced in USD or EUR, overlap hours with CET and EST, delivery over Zoom / Meet.',
+      nav: 'US & EU',
+      ctaPrimary: 'Request a website quote (USD / EUR)',
+      ctaSecondary: '5-day site from $99',
+      note: 'The first consult is free. Scope, timeline and invoice currency are confirmed in writing before we start.',
+      points: [
+        { title: 'Invoices in USD or EUR', desc: 'Contracts and proformas in dollars or euros. We state the approx. €90 equivalent of the $99 plan up front.' },
+        { title: 'CET and EST overlap', desc: 'Morning slots for Europe, afternoon for the US East Coast — Zoom / Google Meet in your business hours.' },
+        { title: 'English-first and GDPR-aware', desc: 'LTR English sites, technical SEO and EU-friendly hosting via Netinode.' },
+        { title: 'Stripe, PayPal and bank transfer', desc: 'International checkout on stores and web apps; project fees by card, PayPal or wire.' },
+        { title: 'Figma and live reviews', desc: 'Design in Figma, feedback on a video call, handoff with CMS training — no on-site travel required.' },
+        { title: 'Agency overflow', desc: 'US/EU agencies short on web capacity can white-label or co-brand the build with Bizdavar.' }
+      ],
+      offers: [
+        { name: 'Fast Web Studio', price: 'From $99 / ~€90', desc: 'English company or landing site in 5 business days — $99 / $199 / $299 plans.', href: 'fast', cta: 'View plans' },
+        { name: 'Custom US / EU website', price: 'USD / EUR quote', desc: 'Web apps, Stripe stores, multilingual or complex brands — discovery through launch.', href: 'contact?service=web-design', cta: 'Request a quote' },
+        { name: 'Apps & marketing', price: 'Project or monthly', desc: 'Android / iOS / App Store plus Google Ads, Meta and LinkedIn with USD or EUR budgets.', href: 'contact?service=software-apps', cta: 'Start a project' }
+      ]
+    },
+    ru: {
+      eyebrow: 'Европа и США',
+      title: 'Сайты, приложения и маркетинг со счётом в USD и EUR',
+      desc: 'Для стартапов, SMB и агентств в Европе и США делаем английские сайты, web app и кампании — счёт в USD или EUR, пересечение часов с CET и EST, сдача через Zoom / Meet.',
+      nav: 'Европа и США',
+      ctaPrimary: 'Запросить предложение по сайту (USD / EUR)',
+      ctaSecondary: 'Сайт за 5 дней от $99',
+      note: 'Первая консультация бесплатна. Объём, сроки и валюту счёта фиксируем письменно до старта.',
+      points: [
+        { title: 'Счёт в долларах или евро', desc: 'Договор и проформа в USD или EUR. Эквивалент ~€90 для тарифа $99 называем сразу.' },
+        { title: 'Пересечение CET и EST', desc: 'Утро для Европы, день для востока США — Zoom / Google Meet в ваши рабочие часы.' },
+        { title: 'English-first и GDPR', desc: 'Английский LTR-сайт, техническое SEO и хостинг, удобный для ЕС, через Netinode.' },
+        { title: 'Stripe, PayPal и перевод', desc: 'Международная оплата в магазине и web app; гонорар проекта картой, PayPal или SWIFT.' },
+        { title: 'Figma и живые ревью', desc: 'Дизайн в Figma, правки на видеозвонке, сдача с обучением CMS — без выезда на объект.' },
+        { title: 'Overflow для агентств', desc: 'Агентства US/EU без свободной ёмкости могут отдать веб white-label или под брендом Bizdavar.' }
+      ],
+      offers: [
+        { name: 'Fast Web Studio', price: 'от $99 / ~€90', desc: 'Английский корпоративный или лендинг за 5 рабочих дней — тарифы $99 / $199 / $299.', href: 'fast', cta: 'Смотреть тарифы' },
+        { name: 'Индивидуальный сайт US / EU', price: 'оценка USD / EUR', desc: 'Web app, магазин Stripe, мультиязычность или сложный бренд — от анализа до запуска.', href: 'contact?service=web-design', cta: 'Запросить оценку' },
+        { name: 'Приложения и маркетинг', price: 'проект или помесячно', desc: 'Android / iOS / App Store плюс Google Ads, Meta и LinkedIn с бюджетом в USD или EUR.', href: 'contact?service=software-apps', cta: 'Начать проект' }
+      ]
+    },
+    ar: {
+      eyebrow: 'أوروبا وأمريكا',
+      title: 'مواقع وتطبيقات وتسويق بفاتورة بالدولار واليورو',
+      desc: 'للشركات الناشئة وSMB والوكالات في أوروبا وأمريكا نبني مواقع إنجليزية وweb app وحملات — فاتورة USD أو EUR، تداخل ساعات مع CET وEST، والتسليم عبر Zoom / Meet.',
+      nav: 'أوروبا وأمريكا',
+      ctaPrimary: 'اطلب عرض تصميم موقع (USD / EUR)',
+      ctaSecondary: 'موقع خلال ٥ أيام من ٩٩$',
+      note: 'الاستشارة الأولى مجانية. نثبت النطاق والمدة وعملة الفاتورة كتابةً قبل البدء.',
+      points: [
+        { title: 'فاتورة بالدولار أو اليورو', desc: 'عقد وفاتورة مبدئية بـ USD أو EUR. نعادل باقة ٩٩$ بنحو ٩٠€ منذ البداية.' },
+        { title: 'تداخل CET وEST', desc: 'صباحاً لأوروبا وبعد الظهر للساحل الشرقي الأمريكي — Zoom / Google Meet في ساعات عملك.' },
+        { title: 'إنجليزي أولاً وGDPR', desc: 'موقع LTR بالإنجليزية وSEO تقني واستضافة مناسبة لأوروبا عبر Netinode.' },
+        { title: 'Stripe وPayPal والتحويل', desc: 'دفع دولي في المتجر والويب آب؛ أتعاب المشروع ببطاقة أو PayPal أو حوالة.' },
+        { title: 'Figma ومراجعات مباشرة', desc: 'التصميم في Figma والملاحظات في مكالمة فيديو والتسليم مع تدريب CMS — دون سفر.' },
+        { title: 'فائض الوكالات', desc: 'وكالات أمريكا/أوروبا بلا سعة ويب يمكنها تسليم المشروع بعلامتها أو مع Bizdavar.' }
+      ],
+      offers: [
+        { name: 'Fast Web Studio', price: 'من $99 / ~€90', desc: 'موقع شركة أو لاندينغ بالإنجليزية خلال ٥ أيام عمل — باقات $99 / $199 / $299.', href: 'fast', cta: 'عرض الباقات' },
+        { name: 'موقع مخصص US / EU', price: 'عرض USD / EUR', desc: 'ويب آب ومتجر Stripe ومتعدد اللغات أو علامة معقدة — من التحليل حتى الإطلاق.', href: 'contact?service=web-design', cta: 'اطلب عرضاً' },
+        { name: 'تطبيقات وتسويق', price: 'مشروع أو شهري', desc: 'Android / iOS / App Store مع Google Ads وMeta وLinkedIn بميزانية دولار أو يورو.', href: 'contact?service=software-apps', cta: 'ابدأ المشروع' }
+      ]
+    }
+  };
+
   const pageMeta = {
     fa: {
       hero: {
         tag: 'خدمات ما',
-        title: 'خدمات دیجیتال و فنی بیزدوار',
-        desc: 'بازاریابی، وب‌اپ، اپلیکیشن، سامانه، سرور و SMM — به‌همراه خدمات فنی دوربین، سیم‌کشی و نورمخفی در <strong>تبریز</strong> و <strong>استانبول</strong>. محصولات در <a href="products">صفحه محصولات</a> هستند.',
-        ctaPrimary: 'مشاوره دیجیتال',
+        title: 'طراحی سایت و خدمات دیجیتال برای اروپا و آمریکا',
+        desc: 'سایت انگلیسی، وب‌اپ و کمپین بازاریابی با فاکتور <strong>دلار یا یورو</strong> — به‌همراه اپ، سرور، SMM و خدمات فنی در تبریز. پلن سریع از <a href="fast">۹۹ دلار / حدود ۹۰ یورو</a>. محصولات در <a href="products">صفحه محصولات</a>.',
+        ctaPrimary: 'مشاوره طراحی سایت',
+        ctaWeb: 'پلن‌های سایت از ۹۹ دلار',
         ctaField: 'واتساپ خدمات فنی'
       },
       paths: {
         digital: {
           eyebrow: 'مسیر دیجیتال',
-          title: 'بازاریابی، وب، اپ، سرور و SMM',
-          desc: 'از استراتژی رشد تا تحویل نرم‌افزار و زیرساخت — یک تیم برای مسیر آنلاین کسب‌وکار.',
-          cta: 'شروع از بازاریابی دیجیتال'
+          title: 'طراحی وب، بازاریابی، اپ، سرور و SMM',
+          desc: 'از سایت انگلیسی US/EU تا کمپین دلاری/یورویی و تحویل نرم‌افزار — یک تیم برای مسیر آنلاین.',
+          cta: 'شروع از طراحی سایت'
         },
         field: {
           eyebrow: 'مسیر فنی',
           title: 'دوربین، سیم‌کشی و نورمخفی',
-          desc: 'نصب و اجرای میدانی در تبریز و استانبول — هماهنگی مستقیم از واتساپ خدمات فنی.',
+          desc: 'نصب و اجرای میدانی در تبریز — هماهنگی مستقیم از واتساپ خدمات فنی.',
           cta: 'رفتن به خدمات فنی'
         }
       },
       overview: {
         eyebrow: 'نمای کلی',
         title: 'شش محور خدمات بیزدوار',
-        desc: 'دیجیتال و نرم‌افزار در بالا — خدمات فنی ساختمانی با هماهنگی واتساپ تخصصی در پایین.'
+        desc: 'دیجیتال و نرم‌افزار در بالا — طراحی سایت انگلیسی برای اروپا/آمریکا؛ خدمات فنی تبریز در پایین.'
       },
       navAria: 'فهرست خدمات',
       viewDetails: 'مشاهده جزئیات',
@@ -1078,32 +1192,33 @@
         btnSecondary: 'مشاهده نمونه‌کارها'
       },
       relatedLinks: [
-        { title: 'خدمات فنی', url: 'field-tech', desc: 'CCTV، سیم‌کشی، نورمخفی' },
-        { title: 'Fast Web Studio', url: 'fast', desc: 'طراحی سایت از $99' },
-        { title: 'محصولات بیزدوار', url: 'products', desc: 'SaaS و برندهای تامین' },
-        { title: 'تماس', url: 'contact', desc: 'فرم و واتساپ' }
+        { title: 'Fast Web Studio', url: 'fast', desc: 'سایت انگلیسی از $99 / ~€90' },
+        { title: 'مقاله طراحی US/EU', url: 'articles/website-design-us-eu', desc: 'فاکتور دلار یا یورو' },
+        { title: 'مقاله Ads آمریکا و اروپا', url: 'articles/digital-marketing-us-eu', desc: 'Google، Meta، LinkedIn' },
+        { title: 'تماس — پیشنهاد وب', url: 'contact?service=web-design', desc: 'فاکتور USD یا EUR' }
       ],
       geoText: 'خدمات دیجیتال و فنی بیزدوار — دفاتر ایران، ترکیه، ارمنستان و دبی؛ واتساپ تخصصی خدمات فنی.'
     },
     tr: {
       hero: {
         tag: 'Hizmetlerimiz',
-        title: 'Bizdavar dijital ve teknik hizmetleri',
-        desc: 'Pazarlama, web app, mobil, sistem, sunucu ve SMM — ayrıca CCTV, tesisat ve gizli aydınlatma (<strong>Tebriz</strong> & <strong>İstanbul</strong>). Ürünler <a href="products">ürünler sayfasında</a>.',
-        ctaPrimary: 'Dijital danışmanlık',
+        title: 'Avrupa ve ABD için web tasarım ve dijital hizmetler',
+        desc: 'İngilizce site, web app ve pazarlama kampanyası — fatura <strong>USD veya EUR</strong>. Ayrıca uygulama, sunucu, SMM ve Tebriz teknik hizmetleri. Hızlı plan: <a href="fast">$99 / ~€90</a>. Ürünler <a href="products">ürünler sayfasında</a>.',
+        ctaPrimary: 'Web tasarım danışmanlığı',
+        ctaWeb: 'Siteler $99’dan',
         ctaField: 'Teknik WhatsApp'
       },
       paths: {
         digital: {
           eyebrow: 'Dijital yol',
-          title: 'Pazarlama, web, uygulama, sunucu ve SMM',
-          desc: 'Büyüme stratejisinden yazılım ve altyapı teslimine — online iş yolunuz için tek ekip.',
-          cta: 'Dijital pazarlamadan başla'
+          title: 'Web, pazarlama, uygulama, sunucu ve SMM',
+          desc: 'ABD/AB İngilizce siteden USD/EUR kampanyaya ve yazılım teslimine — online işiniz için tek ekip.',
+          cta: 'Web tasarımla başla'
         },
         field: {
           eyebrow: 'Teknik yol',
           title: 'CCTV, tesisat ve gizli aydınlatma',
-          desc: 'Tebriz ve İstanbul’da saha kurulumu — doğrudan teknik WhatsApp ile koordinasyon.',
+          desc: 'Tebriz’de saha kurulumu — doğrudan teknik WhatsApp ile koordinasyon.',
           cta: 'Teknik hizmetlere git'
         }
       },
@@ -1138,38 +1253,39 @@
         btnSecondary: 'Portfolyoyu gör'
       },
       relatedLinks: [
-        { title: 'Teknik hizmetler', url: 'field-tech', desc: 'CCTV, tesisat, aydınlatma' },
-        { title: 'Fast Web Studio', url: 'fast', desc: '$99’dan web tasarım' },
-        { title: 'Bizdavar ürünleri', url: 'products', desc: 'SaaS ve tedarik markaları' },
-        { title: 'İletişim', url: 'contact', desc: 'Form ve WhatsApp' }
+        { title: 'Fast Web Studio', url: 'fast', desc: 'İngilizce site $99 / ~€90’dan' },
+        { title: 'ABD/AB web yazısı', url: 'articles/website-design-us-eu', desc: 'USD veya EUR fatura' },
+        { title: 'ABD/AB Ads yazısı', url: 'articles/digital-marketing-us-eu', desc: 'Google, Meta, LinkedIn' },
+        { title: 'İletişim — web teklifi', url: 'contact?service=web-design', desc: 'Fatura USD veya EUR' }
       ]
     },
     en: {
       hero: {
         tag: 'Our services',
-        title: 'Bizdavar digital & technical services',
-        desc: 'Marketing, web apps, mobile, systems, servers and SMM — plus CCTV, wiring and cove lighting in <strong>Tabriz</strong> and <strong>Istanbul</strong>. Products live on the <a href="products">products page</a>.',
-        ctaPrimary: 'Digital consulting',
+        title: 'Web design & digital services for US and EU clients',
+        desc: 'English websites, web apps and growth campaigns invoiced in <strong>USD or EUR</strong> — plus apps, servers, SMM and field installs in Tabriz. Fast sites from <a href="fast">$99 / ~€90</a>. Products live on the <a href="products">products page</a>.',
+        ctaPrimary: 'Get a website quote',
+        ctaWeb: '5-day sites from $99',
         ctaField: 'Technical WhatsApp'
       },
       paths: {
         digital: {
           eyebrow: 'Digital path',
-          title: 'Marketing, web, apps, servers & SMM',
-          desc: 'From growth strategy to software and infrastructure delivery — one team for your online stack.',
-          cta: 'Start with digital marketing'
+          title: 'Web design, marketing, apps & SMM',
+          desc: 'From English US/EU sites to dollar/euro campaigns and software delivery — one team for your online stack.',
+          cta: 'Start with a website quote'
         },
         field: {
           eyebrow: 'Field path',
           title: 'CCTV, wiring & cove lighting',
-          desc: 'On-site installs in Tabriz and Istanbul — coordinate directly via technical WhatsApp.',
+          desc: 'On-site installs in Tabriz — coordinate directly via technical WhatsApp.',
           cta: 'Go to technical services'
         }
       },
       overview: {
         eyebrow: 'Overview',
         title: 'Six Bizdavar service areas',
-        desc: 'Digital and software up top — on-site technical services below via dedicated technical WhatsApp.'
+        desc: 'Digital and software first — English web for US/EU, then on-site technical services in Tabriz.'
       },
       navAria: 'Services list',
       viewDetails: 'View details',
@@ -1181,13 +1297,13 @@
       ],
       process: {
         eyebrow: 'Collaboration process',
-        title: 'How we work with you',
-        desc: 'A simple, transparent and trackable workflow.',
+        title: 'How we work with US and EU clients',
+        desc: 'Currency, scope and Zoom time are locked in writing before kickoff.',
         steps: [
-          { title: 'Consulting', desc: 'Digital needs or on-site survey' },
-          { title: 'Solution design', desc: 'Technical proposal and timeline' },
-          { title: 'Delivery', desc: 'Software build or technical install' },
-          { title: 'Support', desc: 'Reporting and ongoing improvement' }
+          { title: 'Discovery call', desc: 'Zoom or Meet in CET/EST overlap — goals, invoice currency and timeline' },
+          { title: 'Written quote', desc: 'Scope, USD or EUR price and delivery date before we start' },
+          { title: 'Build', desc: 'English LTR site or ads account — daily progress on the same channel' },
+          { title: 'Launch & report', desc: 'Go-live, CMS training, GA4 or Ads reporting' }
         ]
       },
       cta: {
@@ -1197,10 +1313,10 @@
         btnSecondary: 'View portfolio'
       },
       relatedLinks: [
-        { title: 'Technical services', url: 'field-tech', desc: 'CCTV, wiring, cove lighting' },
-        { title: 'Fast Web Studio', url: 'fast', desc: 'Websites from $99' },
-        { title: 'Bizdavar products', url: 'products', desc: 'SaaS and supply brands' },
-        { title: 'Contact', url: 'contact', desc: 'Form and WhatsApp' }
+        { title: 'Fast Web Studio', url: 'fast', desc: 'English sites from $99 / ~€90' },
+        { title: 'US/EU website article', url: 'articles/website-design-us-eu', desc: 'Invoice in USD or EUR' },
+        { title: 'US/EU ads article', url: 'articles/digital-marketing-us-eu', desc: 'Google, Meta, LinkedIn' },
+        { title: 'Contact — website quote', url: 'contact?service=web-design', desc: 'Invoice in USD or EUR' }
       ]
     }
   };
@@ -1212,7 +1328,7 @@
       appsImgAlt: 'اپلیکیشن اندروید و iOS و سامانه',
       serverImgAlt: 'مدیریت سرور و زیرساخت',
       smmImgAlt: 'مدیریت شبکه‌های اجتماعی — SMM',
-      fieldImgAlt: 'نصب دوربین مدار بسته و نورمخفی — تبریز و استانبول'
+      fieldImgAlt: 'نصب دوربین مدار بسته و نورمخفی — تبریز'
     },
     tr: {
       dmImgAlt: 'Dijital pazarlama — Bizdavar',
@@ -1220,7 +1336,7 @@
       appsImgAlt: 'Android, iOS ve kurumsal sistem',
       serverImgAlt: 'Sunucu yönetimi',
       smmImgAlt: 'SMM yönetimi',
-      fieldImgAlt: 'CCTV ve gizli aydınlatma — Tebriz & İstanbul'
+      fieldImgAlt: 'CCTV ve gizli aydınlatma — Tebriz'
     },
     en: {
       dmImgAlt: 'Digital marketing — Bizdavar',
@@ -1228,7 +1344,7 @@
       appsImgAlt: 'Android, iOS and business systems',
       serverImgAlt: 'Server management',
       smmImgAlt: 'Social media management',
-      fieldImgAlt: 'CCTV and cove lighting — Tabriz & Istanbul'
+      fieldImgAlt: 'CCTV and cove lighting — Tabriz'
     }
   };
 
@@ -1236,6 +1352,7 @@
     const L = window.BIZDAVAR_LOCALES[lang];
     if (!L) return;
     L.servicesPage = Object.assign({}, L.servicesPage || {}, pageMeta[lang], {
+      intl: intl[lang],
       cards: cards[lang],
       blocks: blocks[lang],
       panels: Object.assign({}, (L.servicesPage && L.servicesPage.panels) || {}, panels[lang]),
@@ -1259,6 +1376,35 @@
       serverOps: L.footer.serverOps,
       fieldTech: L.footer.fieldTech,
       webDesign: lang === 'fa' ? 'طراحی وب و وب‌اپلیکیشن' : lang === 'tr' ? 'Web ve web app' : 'Web design & web apps'
+    });
+  });
+
+  const intlHero = {
+    ru: {
+      tag: 'Наши услуги',
+      title: 'Веб-дизайн и цифровые услуги для клиентов в США и ЕС',
+      desc: 'Английские сайты, web app и кампании роста со счётом в <strong>USD или EUR</strong> — плюс приложения, серверы, SMM и монтаж в Тебризе. Быстрые сайты от <a href="fast">$99 / ~€90</a>. Продукты — на <a href="products">странице продуктов</a>.',
+      ctaPrimary: 'Запросить оценку сайта',
+      ctaWeb: 'Сайт за 5 дней от $99',
+      ctaField: 'Технический WhatsApp'
+    },
+    ar: {
+      tag: 'خدماتنا',
+      title: 'تصميم مواقع وخدمات رقمية لعملاء أمريكا وأوروبا',
+      desc: 'مواقع إنجليزية وويب آب وحملات نمو بفاتورة <strong>USD أو EUR</strong> — مع تطبيقات وخوادم وSMM وتركيبات في تبريز. مواقع سريعة من <a href="fast">$99 / ~€90</a>. المنتجات في <a href="products">صفحة المنتجات</a>.',
+      ctaPrimary: 'اطلب عرض تصميم موقع',
+      ctaWeb: 'مواقع خلال ٥ أيام من ٩٩$',
+      ctaField: 'واتساب فني'
+    }
+  };
+
+  ['ru', 'ar'].forEach(lang => {
+    const L = window.BIZDAVAR_LOCALES[lang];
+    const enPage = window.BIZDAVAR_LOCALES.en && window.BIZDAVAR_LOCALES.en.servicesPage;
+    if (!L || !enPage) return;
+    L.servicesPage = Object.assign({}, JSON.parse(JSON.stringify(enPage)), {
+      intl: intl[lang] || enPage.intl,
+      hero: Object.assign({}, enPage.hero, intlHero[lang] || {})
     });
   });
 })();

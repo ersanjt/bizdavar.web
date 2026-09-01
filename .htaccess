@@ -4,6 +4,7 @@
 # ── General ────────────────────────────────────────────────────────────────
 Options -Indexes
 DirectoryIndex index.html
+ErrorDocument 404 /404.html
 
 # Fix Persian/UTF-8 display (e.g. brand pages served as ????)
 AddDefaultCharset UTF-8
@@ -11,6 +12,11 @@ AddType 'text/html; charset=UTF-8' .html
 
 # Block dotfiles (.git, .env, etc.)
 <FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
+
+# Never serve SQLite / dump files from the web root
+<FilesMatch "\.(sqlite|sqlite3|db|sql)$">
   Require all denied
 </FilesMatch>
 
@@ -28,16 +34,18 @@ AddType 'text/html; charset=UTF-8' .html
 <IfModule mod_headers.c>
   Header set X-Content-Type-Options "nosniff"
   Header set X-Frame-Options "SAMEORIGIN"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
   Header set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=()"
 
-  # CSP — self-hosted fonts; inline scripts for static page boot
+  # CSP — GTM via /assets/scripts/gtm-boot.js; inline remains for page boot + img onerror
   Header set Content-Security-Policy "\
     default-src 'self'; \
     script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://static.cloudflareinsights.com; \
     style-src 'self' 'unsafe-inline'; \
     font-src 'self' data:; \
     img-src 'self' data: https:; \
+    object-src 'none'; \
     frame-src 'self' https://www.googletagmanager.com; \
     connect-src 'self' https://ipapi.co https://ipwho.is https://formspree.io https://*.formspree.io https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://analytics.google.com https://cloudflareinsights.com https://*.cloudflareinsights.com; \
     frame-ancestors 'self'; \
@@ -46,9 +54,13 @@ AddType 'text/html; charset=UTF-8' .html
     upgrade-insecure-requests"
 
   # Cache static assets in browser (no CSP on images/fonts — breaks SVG <text> in <img>)
-  <FilesMatch "\.(css|js|png|jpe?g|webp|svg|gif|ico|woff2?)$">
+  <FilesMatch "\.(css|js)$">
     Header unset Content-Security-Policy
-    Header set Cache-Control "public, max-age=604800, immutable"
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(png|jpe?g|webp|svg|gif|ico|woff2?)$">
+    Header unset Content-Security-Policy
+    Header set Cache-Control "public, max-age=2592000, immutable"
   </FilesMatch>
 </IfModule>
 
@@ -90,13 +102,15 @@ AddType 'text/html; charset=UTF-8' .html
   RewriteCond %{REQUEST_URI} ^/(tr|en|ru|ar)/?$ [NC]
   RewriteRule ^ /index.html [L]
 
-  # Locale-prefixed URLs — serve baked copies first, then fall back to shared HTML
-  RewriteCond %{DOCUMENT_ROOT}/%1/pages/blog.html -f
+  # Locale-prefixed URLs — baked copy first, then shared pages/*.html
+  # Use $1/$2 (next RewriteRule captures). %1 is empty in this block and was
+  # matching the FA file, then rewriting to a missing /en/pages/*.html (404).
+  RewriteCond %{DOCUMENT_ROOT}/$1/pages/blog.html -f
   RewriteRule ^(tr|en|ru|ar)/blog/?$ $1/pages/blog.html [L]
   RewriteCond %{DOCUMENT_ROOT}/pages/blog.html -f
   RewriteRule ^(tr|en|ru|ar)/blog/?$ pages/blog.html [L]
 
-  RewriteCond %{DOCUMENT_ROOT}/%1/pages/$2.html -f
+  RewriteCond %{DOCUMENT_ROOT}/$1/pages/$2.html -f
   RewriteRule ^(tr|en|ru|ar)/pages/(.+?)/?$ $1/pages/$2.html [L]
   RewriteRule ^(tr|en|ru|ar)/pages/(.+?)/?$ pages/$2.html [L]
 
@@ -114,6 +128,12 @@ AddType 'text/html; charset=UTF-8' .html
   RewriteRule ^pages/fguard/?$ /pages/fxguard [R=301,L]
   RewriteRule ^assets/images/products/fguard/fguard-hero\.webp$ /assets/images/products/fxguard/fxguard-hero.svg [R=301,L]
   RewriteRule ^assets/images/products/fguard/(.*)$ /assets/images/products/fxguard/$1 [R=301,L]
+
+  # Legacy WordPress / GSC URLs that still get clicks (404 in Search Console)
+  RewriteRule ^about-us/?$ /pages/about [R=301,L]
+  RewriteRule ^radar-6x/?$ /pages/vega [R=301,L]
+  RewriteRule ^prosense-gas-detectors/?$ /pages/prosense [R=301,L]
+  RewriteRule ^webstruct/?$ / [R=301,L]
 
   # Internal serve /blog and /pages/blog without .html
   RewriteRule ^blog/?$ pages/blog.html [L]
@@ -135,8 +155,8 @@ AddType 'text/html; charset=UTF-8' .html
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresByType text/html "access plus 1 hour"
-  ExpiresByType text/css "access plus 7 days"
-  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
   ExpiresByType image/png "access plus 30 days"
   ExpiresByType image/jpeg "access plus 30 days"
   ExpiresByType image/webp "access plus 30 days"

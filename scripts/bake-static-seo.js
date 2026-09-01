@@ -5,11 +5,13 @@
  *
  * - Root HTML (fa): title + meta for Persian
  * - Locale trees: tr/ en/ ru/ ar/ — copies of each page with that locale's SEO
+ *   AND visible data-i18n body text (hero, FAQs, CTAs) so /tr/ is not Persian HTML
  *
  * Run after: node scripts/gen-seo-head.js
  */
 const fs = require('fs');
 const path = require('path');
+const vm = require('vm');
 
 const ROOT = path.join(__dirname, '..');
 
@@ -17,10 +19,432 @@ global.window = global;
 require(path.join(ROOT, 'assets/scripts/config/site-config.js'));
 require(path.join(ROOT, 'assets/scripts/i18n/seo-head.js'));
 
+const { ARTICLES, innerHtml, jsonLd, CTA, ctaLinks, relatedItems, AUTHOR_LINE, secondaryLabel } = require('./article-library');
+const ARTICLE_BY_REL = Object.fromEntries(
+  ARTICLES.map((a) => [`pages/articles/${a.file}`, a])
+);
+
 const HEAD = global.BIZDAVAR_SEO_HEAD || {};
 const SITE = global.BIZDAVAR_SEO_SITE || {};
 const BASE = SITE.base || 'https://bizdavar.com';
-const DEFAULT_OG = SITE.defaultOgImage || `${BASE}/assets/images/content/about-hero.svg`;
+const DEFAULT_OG = SITE.defaultOgImage || `${BASE}/assets/images/content/about-hero.jpg`;
+
+function loadLocales() {
+  const ctx = vm.createContext({ window: {}, console });
+  const files = [
+    'assets/scripts/i18n/locales.js',
+    'assets/scripts/i18n/owned-products-i18n.js',
+    'assets/scripts/i18n/locales-pages.js',
+    'assets/scripts/i18n/locale-seo.js',
+    'assets/scripts/i18n/locales-ru-ar.js',
+    'assets/scripts/i18n/fxguard-i18n.js',
+    'assets/scripts/i18n/field-tech-i18n.js',
+    'assets/scripts/i18n/services-i18n.js',
+    'assets/scripts/i18n/fast-catalog-i18n.js'
+  ];
+  for (const rel of files) {
+    vm.runInContext(fs.readFileSync(path.join(ROOT, rel), 'utf8'), ctx);
+  }
+  return ctx.window.BIZDAVAR_LOCALES || {};
+}
+
+function getNested(obj, keyPath) {
+  return keyPath.split('.').reduce((o, k) => (o && o[k] !== undefined ? o[k] : undefined), obj);
+}
+
+function attrEscape(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+}
+
+function bakeI18nBody(html, dict) {
+  if (!dict) return html;
+
+  html = html.replace(
+    /<(\w+)([^>]*)\sdata-i18n-html="([^"]+)"([^>]*)>([\s\S]*?)<\/\1>/g,
+    (m, tag, pre, key, post) => {
+      const val = getNested(dict, key);
+      if (typeof val !== 'string' || !val) return m;
+      return `<${tag}${pre} data-i18n-html="${key}"${post}>${val}</${tag}>`;
+    }
+  );
+
+  html = html.replace(
+    /<(\w+)([^>]*)\sdata-i18n="([^"]+)"([^>]*)>([\s\S]*?)<\/\1>/g,
+    (m, tag, pre, key, post) => {
+      if (pre.includes('data-i18n-html') || post.includes('data-i18n-html')) return m;
+      const val = getNested(dict, key);
+      if (typeof val !== 'string' || !val) return m;
+      return `<${tag}${pre} data-i18n="${key}"${post}>${val}</${tag}>`;
+    }
+  );
+
+  html = html.replace(
+    /<(\w+)([^>]*?)\sdata-i18n-aria="([^"]+)"([^>]*)>/g,
+    (m, tag, pre, key, post) => {
+      const val = getNested(dict, key);
+      if (typeof val !== 'string' || !val) return m;
+      const cleanedPre = pre.replace(/\saria-label="[^"]*"/g, '');
+      const cleanedPost = post.replace(/\saria-label="[^"]*"/g, '');
+      return `<${tag}${cleanedPre} data-i18n-aria="${key}"${cleanedPost} aria-label="${attrEscape(val)}">`;
+    }
+  );
+
+  html = html.replace(
+    /data-i18n-alt="([^"]+)"([^>]*)\salt="([^"]*)"/g,
+    (m, key, mid) => {
+      const val = getNested(dict, key);
+      if (typeof val !== 'string' || !val) return m;
+      return `data-i18n-alt="${key}"${mid}alt="${attrEscape(val)}"`;
+    }
+  );
+
+  html = html.replace(
+    /alt="([^"]*)"([^>]*)\sdata-i18n-alt="([^"]+)"/g,
+    (m, alt, mid, key) => {
+      const val = getNested(dict, key);
+      if (typeof val !== 'string' || !val) return m;
+      return `alt="${attrEscape(val)}"${mid} data-i18n-alt="${key}"`;
+    }
+  );
+
+  html = html.replace(
+    /data-i18n-placeholder="([^"]+)"([^>]*)/g,
+    (m, key, rest) => {
+      const val = getNested(dict, key);
+      if (typeof val !== 'string' || !val) return m;
+      const cleaned = rest.replace(/\splaceholder="[^"]*"/, '');
+      return `data-i18n-placeholder="${key}"${cleaned} placeholder="${attrEscape(val)}"`;
+    }
+  );
+
+  const faqs = getNested(dict, 'home.faqs');
+  if (Array.isArray(faqs) && faqs.length && html.includes('id="homeFaqGrid"')) {
+    const inner = faqs.map((item) => {
+      const q = item.q || item.q || '';
+      const a = item.a || item.a || '';
+      return `        <details class="faq-item">
+          <summary>${q}</summary>
+          <p>${a}</p>
+        </details>`;
+    }).join('\n');
+    html = html.replace(
+      /<div class="faq-grid" id="homeFaqGrid">[\s\S]*?<\/div>(?=\s*<\/div>\s*<\/section>)/,
+      `<div class="faq-grid" id="homeFaqGrid">\n${inner}\n      </div>`
+    );
+  }
+
+  return html;
+}
+
+const FT_ATTR_MAP = {
+  'hero-eyebrow': 'hero.eyebrow',
+  'hero-title': 'hero.title',
+  'hero-lead': 'hero.lead',
+  'wa-cta': 'hero.waCta',
+  'call-cta': 'hero.callCta',
+  'services-eyebrow': 'services.eyebrow',
+  'services-title': 'services.title',
+  'services-desc': 'services.desc',
+  'cities-eyebrow': 'cities.eyebrow',
+  'cities-title': 'cities.title',
+  'cities-desc': 'cities.desc',
+  'process-eyebrow': 'process.eyebrow',
+  'process-title': 'process.title',
+  'process-desc': 'process.desc',
+  'contact-title': 'contact.title',
+  'contact-desc': 'contact.desc',
+  'faq-eyebrow': 'faq.eyebrow',
+  'faq-title': 'faq.title'
+};
+
+function bakeFtBody(html, dict) {
+  const page = getNested(dict, 'fieldTechPage');
+  if (!page) return html;
+
+  html = html.replace(
+    /<(\w+)([^>]*?)\sdata-ft="([^"]+)"([^>]*)>([\s\S]*?)<\/\1>/g,
+    (m, tag, pre, key, post) => {
+      const pathKey = FT_ATTR_MAP[key];
+      const val = pathKey ? getNested(page, pathKey) : undefined;
+      if (typeof val !== 'string' || !val) return m;
+      return `<${tag}${pre} data-ft="${key}"${post}>${val}</${tag}>`;
+    }
+  );
+
+  const chips = page.hero && page.hero.chips;
+  if (Array.isArray(chips) && chips.length) {
+    const inner = chips.map((c) => `          <li>${c}</li>`).join('\n');
+    html = html.replace(
+      /<ul class="ft-hero__chips" id="ftChips">[\s\S]*?<\/ul>/,
+      `<ul class="ft-hero__chips" id="ftChips">\n${inner}\n        </ul>`
+    );
+  }
+
+  return html;
+}
+
+const STATIC_HERO = {
+  'pages/vega.html': {
+    fa: 'خرید سنسور VEGA اصل — پیش‌فاکتور و مشاوره فارسی',
+    tr: 'Orijinal VEGA sensör satın alın — proforma ve danışmanlık',
+    en: 'Buy genuine VEGA sensors — proforma and consulting',
+    ru: 'Купить оригинальные датчики VEGA — проформа и консультация',
+    ar: 'اشترِ حساسات VEGA الأصلية — فاتورة مبدئية واستشارة'
+  },
+  'pages/fast.html': {
+    fa: 'سایت انگلیسی برای آمریکا و اروپا در ۵ روز از ۹۹ دلار',
+    tr: 'ABD ve AB için 5 günde İngilizce site — $99 / ~€90’dan',
+    en: 'English websites for US & EU in 5 days from $99',
+    ru: 'Английский сайт для США и ЕС за 5 дней от $99',
+    ar: 'موقع إنجليزي لأمريكا وأوروبا خلال ٥ أيام من ٩٩$'
+  }
+};
+
+function bakeStaticHero(html, rel, lang) {
+  const map = STATIC_HERO[rel.replace(/\\/g, '/')];
+  if (!map) return html;
+  const text = map[lang] || map.en;
+  if (!text) return html;
+  return html.replace(
+    /(<h1[^>]*class="[^"]*static-hero-h1[^"]*"[^>]*>)[\s\S]*?(<\/h1>)/,
+    `$1${text}$2`
+  );
+}
+
+function bakeJsonLd(html, locale) {
+  if (!/id="jsonld-graph-static"/.test(html)) return html;
+  const pageUrl = locale.prefix ? `${BASE}${locale.prefix}/` : `${BASE}/`;
+  const graph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': ['Organization', 'ProfessionalService'],
+        '@id': `${BASE}/#organization`,
+        name: 'Bizdavar Group',
+        alternateName: ['بیزدوار گروپ', 'Bizdavar'],
+        url: `${BASE}/`,
+        logo: `${BASE}/assets/images/brand/bizdavar-logo-square.png`,
+        email: 'info@bizdavar.com',
+        telephone: ['+989305880135', '+905010676486'],
+        availableLanguage: ['fa', 'tr', 'en', 'ru', 'ar'],
+        knowsLanguage: ['fa', 'tr', 'en', 'ru', 'ar'],
+        areaServed: ['TR', 'AM', 'IR', 'AE', 'DE', 'US', 'GB', 'LB', 'IQ', 'GE', 'IT'],
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Tabriz',
+          addressCountry: 'IR'
+        },
+        sameAs: [
+          'https://www.linkedin.com/in/ersanjt',
+          'https://www.instagram.com/bizdavar'
+        ]
+      },
+      {
+        '@type': 'WebSite',
+        '@id': `${BASE}/#website`,
+        url: `${BASE}/`,
+        name: 'Bizdavar Group',
+        inLanguage: ['fa-IR', 'tr-TR', 'en-US', 'ru-RU', 'ar-AE'],
+        publisher: { '@id': `${BASE}/#organization` }
+      },
+      {
+        '@type': 'WebPage',
+        '@id': `${pageUrl}#webpage`,
+        url: pageUrl,
+        inLanguage: locale.htmlLang,
+        isPartOf: { '@id': `${BASE}/#website` },
+        about: { '@id': `${BASE}/#organization` }
+      }
+    ]
+  };
+  return html.replace(
+    /<script type="application\/ld\+json" id="jsonld-graph-static">[\s\S]*?<\/script>/,
+    `<script type="application/ld+json" id="jsonld-graph-static">${JSON.stringify(graph)}</script>`
+  );
+}
+
+function bakeFxguard(html, dict) {
+  const cs = getNested(dict, 'caseStudy.fxguard');
+  if (!cs) return html;
+
+  const esc = (s) => String(s || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+
+  if (Array.isArray(cs.faq?.items) && html.includes('id="fxguardFaq"')) {
+    const inner = cs.faq.items.map((item) => `          <details>
+            <summary>${esc(item.q)}</summary>
+            <p>${esc(item.a)}</p>
+          </details>`).join('\n');
+    html = html.replace(
+      /<div class="fxguard-faq" id="fxguardFaq">[\s\S]*?<\/div>/,
+      `<div class="fxguard-faq" id="fxguardFaq">\n${inner}\n        </div>`
+    );
+  }
+  return html;
+}
+
+function loadCatalogs() {
+  const ctx = vm.createContext({ window: {}, console });
+  const files = [
+    'assets/scripts/config/vega-products.js',
+    'assets/scripts/config/prosense-products.js'
+  ];
+  for (const rel of files) {
+    vm.runInContext(fs.readFileSync(path.join(ROOT, rel), 'utf8'), ctx);
+  }
+  return {
+    vega: ctx.window.VEGA_CATALOG || {},
+    prosense: ctx.window.PROSENSE_CATALOG || {}
+  };
+}
+
+function escHtml(s) {
+  return String(s || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function locField(item, lang, faKey, enKey, trKey) {
+  if (lang === 'tr') return item[trKey] || item[enKey] || item[faKey] || '';
+  if (lang === 'fa') return item[faKey] || item[enKey] || '';
+  return item[enKey] || item[faKey] || '';
+}
+
+function replaceDivInnerById(html, id, inner) {
+  const openRe = new RegExp(`<div\\b[^>]*\\sid=["']${id}["'][^>]*>`, 'i');
+  const m = openRe.exec(html);
+  if (!m) return html;
+  const afterOpen = m.index + m[0].length;
+  let depth = 1;
+  const tagRe = /<\/?div\b[^>]*>/gi;
+  tagRe.lastIndex = afterOpen;
+  let endInner = -1;
+  let t;
+  while ((t = tagRe.exec(html))) {
+    if (t[0].slice(0, 2) === '</') {
+      depth -= 1;
+      if (depth === 0) {
+        endInner = t.index;
+        break;
+      }
+    } else {
+      depth += 1;
+    }
+  }
+  if (endInner < 0) return html;
+  return html.slice(0, afterOpen) + inner + html.slice(endInner);
+}
+
+function catalogListHtml(items) {
+  const lis = items
+    .filter((it) => it && it.name)
+    .map((it) => {
+      const name = escHtml(it.name);
+      const extra = it.extra ? ` — ${escHtml(it.extra)}` : '';
+      return `          <li><strong>${name}</strong>${extra}</li>`;
+    })
+    .join('\n');
+  return `\n        <ul class="catalog-ssr">\n${lis}\n        </ul>\n      `;
+}
+
+function bakeCatalogSsr(html, rel, locale) {
+  const page = String(rel).replace(/\\/g, '/');
+  const lang = locale.code || 'fa';
+
+  if (page === 'pages/vega.html' && CATALOGS.vega) {
+    const V = CATALOGS.vega;
+    const featured = (V.featuredProducts || []).map((p) => ({
+      name: p.name,
+      extra: lang === 'fa' ? (p.summaryFa || p.series || '') : (p.imageAlt || p.series || p.summaryFa || '')
+    }));
+    html = replaceDivInnerById(html, 'vegaProductsGrid', catalogListHtml(featured));
+
+    const industries = (V.iranIndustries || []).map((ind) => ({
+      name: lang === 'fa' ? ind.name : (ind.models || ind.name),
+      extra: lang === 'fa' ? (ind.models || '') : (ind.name || '')
+    }));
+    html = replaceDivInnerById(html, 'vegaIranGrid', catalogListHtml(industries));
+  }
+
+  if (page === 'pages/prosense.html' && CATALOGS.prosense) {
+    const P = CATALOGS.prosense;
+    const highlights = (P.highlights || []).map((h) => ({
+      name: locField(h, lang, 'title', 'titleEn', 'titleTr') || h.inquiryName,
+      extra: h.inquiryName && h.inquiryName !== locField(h, lang, 'title', 'titleEn', 'titleTr')
+        ? h.inquiryName
+        : (h.useCaseFa && lang === 'fa' ? h.useCaseFa : '')
+    }));
+    html = replaceDivInnerById(html, 'prosenseHighlights', catalogListHtml(highlights));
+
+    const series = [];
+    for (const cat of P.categories || []) {
+      const catTitle = locField(cat, lang, 'title', 'titleEn', 'titleTr');
+      for (const s of cat.series || []) {
+        series.push({
+          name: locField(s, lang, 'name', 'nameEn', 'nameTr') || s.inquiryName || s.name,
+          extra: catTitle
+        });
+      }
+    }
+    html = replaceDivInnerById(html, 'prosenseCategories', catalogListHtml(series));
+  }
+
+  return html;
+}
+
+function bakeCatalogJsonLd(html, rel, locale) {
+  const page = String(rel).replace(/\\/g, '/');
+  let names = [];
+  let listName = '';
+  if (page === 'pages/vega.html' && CATALOGS.vega) {
+    names = (CATALOGS.vega.featuredProducts || []).map((p) => p.name).filter(Boolean);
+    listName = locale.code === 'fa' ? 'محصولات VEGA — بیزدوار گروپ' : 'VEGA products — Bizdavar Group';
+  } else if (page === 'pages/prosense.html' && CATALOGS.prosense) {
+    names = (CATALOGS.prosense.highlights || [])
+      .map((h) => h.inquiryName || locField(h, locale.code, 'title', 'titleEn', 'titleTr'))
+      .filter(Boolean);
+    listName = locale.code === 'fa' ? 'دتکتورهای Prosense — بیزدوار گروپ' : 'Prosense detectors — Bizdavar Group';
+  } else {
+    return html;
+  }
+  if (!names.length) return html;
+  const node = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: listName,
+    numberOfItems: names.length,
+    itemListElement: names.map((name, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name
+    }))
+  };
+  const tag = `  <script type="application/ld+json" id="jsonld-catalog-static">${JSON.stringify(node)}</script>\n`;
+  html = html.replace(/\n?\s*<script type="application\/ld\+json" id="jsonld-catalog-static">[\s\S]*?<\/script>\s*/gi, '\n');
+  return html.replace(/<\/head>/i, `${tag}</head>`);
+}
+
+function decorateCopy(html, rel, locale) {
+  const dict = LOCALES_DICT[locale.code] || {};
+  html = bakeI18nBody(html, dict);
+  html = bakeFtBody(html, dict);
+  html = bakeStaticHero(html, rel, locale.code);
+  html = bakeJsonLd(html, locale);
+  html = bakeCatalogSsr(html, rel, locale);
+  html = bakeCatalogJsonLd(html, rel, locale);
+  html = bakeArticleLocale(html, rel, locale.code);
+  if (String(rel).replace(/\\/g, '/') === 'pages/fxguard.html') {
+    html = bakeFxguard(html, dict);
+  }
+  return html;
+}
+
+const LOCALES_DICT = loadLocales();
+const CATALOGS = loadCatalogs();
 
 /** Prefer raster OG images — WhatsApp often skips SVG. */
 const RASTER_OG = `${BASE}/assets/images/brand/bizdavar-logo-square.png`;
@@ -52,6 +476,7 @@ const LOCALES = [
 const FILE_TO_ROUTE = {
   'index.html': '/',
   'pages/about.html': '/pages/about',
+  'pages/gallery.html': '/pages/gallery',
   'pages/services.html': '/pages/services',
   'pages/products.html': '/pages/products',
   'pages/portfolio.html': '/pages/portfolio',
@@ -66,18 +491,23 @@ const FILE_TO_ROUTE = {
   'pages/liqui-moly.html': '/pages/liqui-moly',
   'pages/teltonika.html': '/pages/teltonika',
   'pages/gamak.html': '/pages/gamak',
+  'pages/uwt.html': '/pages/uwt',
   'pages/digi-system.html': '/pages/digi-system',
   'pages/teraoka.html': '/pages/teraoka',
   'pages/bz-diamond.html': '/pages/bz-diamond',
+  'pages/marvispace.html': '/pages/marvispace',
   'pages/supplify-trade.html': '/pages/supplify-trade',
   'pages/kaya-one.html': '/pages/kaya-one',
   'pages/smm-turk.html': '/pages/smm-turk',
+  'pages/marvi-society.html': '/pages/marvi-society',
   'pages/fxguard-exchange.html': '/pages/fxguard-exchange',
   'pages/biztejarat.html': '/pages/biztejarat',
   'pages/biztab.html': '/pages/biztab',
   'pages/bizpet.html': '/pages/bizpet',
   'pages/uwt.html': '/pages/uwt',
   'pages/bizsanitizer-v5.html': '/pages/bizsanitizer-v5',
+  'pages/bizseat.html': '/pages/bizseat',
+  'pages/bizpet.html': '/pages/bizpet',
   'pages/fxguard.html': '/pages/fxguard',
   'pages/fxguard-accounting.html': '/pages/fxguard-accounting',
   'pages/bizswap.html': '/pages/bizswap',
@@ -90,7 +520,22 @@ const FILE_TO_ROUTE = {
   'pages/articles/industrial-sensors.html': '/pages/articles/industrial-sensors',
   'pages/articles/about-bizdavar-group.html': '/pages/articles/about-bizdavar-group',
   'pages/articles/vega-supply-iran.html': '/pages/articles/vega-supply-iran',
-  'pages/articles/multilingual-web-iran-turkey.html': '/pages/articles/multilingual-web-iran-turkey'
+  'pages/articles/multilingual-web-iran-turkey.html': '/pages/articles/multilingual-web-iran-turkey',
+  'pages/articles/marvi-society-ios-app.html': '/pages/articles/marvi-society-ios-app',
+  'pages/articles/prosense-gas-detection.html': '/pages/articles/prosense-gas-detection',
+  'pages/articles/field-tech-services.html': '/pages/articles/field-tech-services',
+  'pages/articles/local-seo-iran.html': '/pages/articles/local-seo-iran',
+  'pages/articles/liqui-moly-supply-iran.html': '/pages/articles/liqui-moly-supply-iran',
+  'pages/articles/buy-vegapuls-iran.html': '/pages/articles/buy-vegapuls-iran',
+  'pages/articles/vega-quote-iran.html': '/pages/articles/vega-quote-iran',
+  'pages/articles/buy-prosense-iran.html': '/pages/articles/buy-prosense-iran',
+  'pages/articles/industrial-trade-iran.html': '/pages/articles/industrial-trade-iran',
+  'pages/articles/buy-teltonika-iran.html': '/pages/articles/buy-teltonika-iran',
+  'pages/articles/buy-gamak-iran.html': '/pages/articles/buy-gamak-iran',
+  'pages/articles/buy-digi-system-iran.html': '/pages/articles/buy-digi-system-iran',
+  'pages/articles/buy-teraoka-iran.html': '/pages/articles/buy-teraoka-iran',
+  'pages/articles/website-design-us-eu.html': '/pages/articles/website-design-us-eu',
+  'pages/articles/digital-marketing-us-eu.html': '/pages/articles/digital-marketing-us-eu'
 };
 
 function escAttr(s) {
@@ -130,6 +575,39 @@ function upsertDescription(html, desc) {
     );
   }
   return html.replace(/<\/head>/i, `  <meta name="description" content="${escAttr(desc)}">\n</head>`);
+}
+
+function upsertKeywords(html, keywords) {
+  if (!keywords) return html;
+  if (/<meta\s+name=["']keywords["'][^>]*>/i.test(html)) {
+    return html.replace(
+      /<meta\s+name=["']keywords["'][^>]*>/i,
+      `<meta name="keywords" content="${escAttr(keywords)}">`
+    );
+  }
+  return html.replace(/<\/head>/i, `  <meta name="keywords" content="${escAttr(keywords)}">\n</head>`);
+}
+
+function upsertPageJsonLd(html, route, meta, locale) {
+  if (route.indexOf('/articles/') >= 0) return html;
+  if (/id=["']jsonld-graph-static["']/.test(html)) return html;
+  const url = absoluteUrl(locale, route);
+  const node = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: meta.title || '',
+    description: meta.description || '',
+    url,
+    inLanguage: locale.htmlLang,
+    isPartOf: {
+      '@type': 'WebSite',
+      name: SITE.siteName || 'Bizdavar Group',
+      url: locale.prefix ? `${BASE}${locale.prefix}/` : `${BASE}/`
+    }
+  };
+  const tag = `  <script type="application/ld+json" id="jsonld-page-static">${JSON.stringify(node)}</script>\n`;
+  html = html.replace(/\n?\s*<script type="application\/ld\+json" id="jsonld-page-static">[\s\S]*?<\/script>\s*/gi, '\n');
+  return html.replace(/<\/head>/i, `${tag}</head>`);
 }
 
 function setHtmlLangDir(html, lang, dir) {
@@ -276,6 +754,124 @@ ${hreflangLinks(route)}
 `;
 }
 
+function jsStr(s) {
+  return String(s || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+}
+
+function relatedUrl(u) {
+  return String(u || '')
+    .replace(/^\.\.\//, '')
+    .replace(/^\/pages\//, '');
+}
+
+function relatedJs(a, lang) {
+  return relatedItems(a, lang)
+    .map((r) => `{ title: '${jsStr(r.title)}', url: '${relatedUrl(r.url)}', desc: '${jsStr(r.desc)}' }`)
+    .join(',\n            ');
+}
+
+function bakeArticleLocale(html, rel, lang) {
+  const a = ARTICLE_BY_REL[rel.replace(/\\/g, '/')];
+  if (!a) return html;
+  const loc = ['fa', 'tr', 'en', 'ru', 'ar'].includes(lang) ? lang : 'en';
+  const inner = innerHtml(a, loc);
+  html = html.replace(
+    /<!-- bd-article-inner -->[\s\S]*?<!-- \/bd-article-inner -->/,
+    `<!-- bd-article-inner -->\n${inner}\n      <!-- /bd-article-inner -->`
+  );
+  const title = a.title[loc] || a.title.en;
+  const desc = a.description[loc] || a.description.en;
+  const keywords = a.keywords[loc] || a.keywords.en;
+  const cat = a.category[loc] || a.category.en;
+  const cta = CTA[loc] || CTA.en;
+  const links = ctaLinks(a);
+  const author = AUTHOR_LINE[loc] || AUTHOR_LINE.en;
+  html = html.replace(/(<span class="blog-item__cat">)[\s\S]*?(<\/span>)/, `$1${cat}$2`);
+  html = html.replace(/(<h1>)[\s\S]*?(<\/h1>)/, `$1${title}$2`);
+  html = html.replace(
+    /(<p class="detail-meta article__meta">)[\s\S]*?(<time)/,
+    `$1${author} · $2`
+  );
+  html = html.replace(
+    /<meta name="keywords" content="[^"]*">/,
+    `<meta name="keywords" content="${escAttr(keywords)}">`
+  );
+  html = html.replace(
+    /(<div class="article__cta">\s*<p>)[\s\S]*?(<\/p>)/,
+    `$1${cta.text}$2`
+  );
+  html = html.replace(
+    new RegExp(`href="${links.primary.replace(/[?]/g, '\\?')}" class="btn btn--primary">[\\s\\S]*?<\\/a>`),
+    `href="${links.primary}" class="btn btn--primary">${cta.primary}</a>`
+  );
+  html = html.replace(
+    /(<a href="[^"]+" class="btn btn--yellow">)[\s\S]*?(<\/a>)/,
+    `$1${secondaryLabel(a, loc)}$2`
+  );
+  html = html.replace(
+    new RegExp(`\\{ name: '[^']*', url: '${a.slug}' \\}`),
+    `{ name: '${jsStr(title)}', url: '${a.slug}' }`
+  );
+  html = html.replace(
+    /injectArticleSchema\(\{[\s\S]*?\}\);/,
+    `injectArticleSchema({
+        title: '${jsStr(title)}',
+        description: '${jsStr(desc)}',
+        date: '${a.date}',
+        dateModified: '${a.modified || a.date}',
+        slug: 'pages/articles/${a.slug}',
+        image: '${a.image}',
+        keywords: '${jsStr(keywords)}'
+      });`
+  );
+  html = html.replace(
+    /renderRelatedLinks\(\[[\s\S]*?\]\);/,
+    `renderRelatedLinks([
+            ${relatedJs(a, loc)}
+          ]);`
+  );
+  const ld = JSON.stringify(jsonLd(a, loc));
+  html = html.replace(
+    /<script type="application\/ld\+json" id="jsonld-article-static">[\s\S]*?<\/script>/,
+    `<script type="application/ld+json" id="jsonld-article-static">${ld}</script>`
+  );
+  return html;
+}
+
+function prefixLocaleHrefs(html, localeCode) {
+  if (!localeCode || localeCode === 'fa') return html;
+  const prefix = `/${localeCode}`;
+  return html.replace(/\bhref="(\/[^"]*)"/g, (m, url) => {
+    if (
+      url.startsWith('/assets/') ||
+      url.startsWith('/sitemap') ||
+      url.startsWith('/robots') ||
+      url.startsWith('/llms') ||
+      url.startsWith('/admin') ||
+      url.startsWith('/api/') ||
+      url.startsWith('/go') ||
+      url.startsWith('/404') ||
+      url.startsWith('/tr/') ||
+      url.startsWith('/en/') ||
+      url.startsWith('/ru/') ||
+      url.startsWith('/ar/')
+    ) {
+      return m;
+    }
+    const hashIdx = url.indexOf('#');
+    const qIdx = url.indexOf('?');
+    let cut = url.length;
+    if (hashIdx >= 0) cut = Math.min(cut, hashIdx);
+    if (qIdx >= 0) cut = Math.min(cut, qIdx);
+    const base = url.slice(0, cut) || '/';
+    const rest = url.slice(cut);
+    if (base === '/') {
+      return `href="${prefix}/${rest.replace(/^\//, '')}"`;
+    }
+    return `href="${prefix}${base}${rest}"`;
+  });
+}
+
 function applySeo(html, route, meta, locale) {
   let out = stripSeoBlock(html);
   out = stripCanonicalLinks(out);
@@ -334,7 +930,8 @@ for (const [rel, route] of Object.entries(FILE_TO_ROUTE)) {
   }
 
   // Bake Persian into the canonical source files
-  const faHtml = applySeo(sourceHtml, route, faMeta, faLocale);
+  const faSource = decorateCopy(sourceHtml, rel, faLocale);
+  const faHtml = applySeo(faSource, route, faMeta, faLocale);
   fs.writeFileSync(file, faHtml, 'utf8');
   updated++;
   console.log('baked fa', rel);
@@ -350,7 +947,9 @@ for (const [rel, route] of Object.entries(FILE_TO_ROUTE)) {
     const outRel = localeOutRel(locale.code, rel);
     const outFile = path.join(ROOT, outRel);
     ensureDir(outFile);
-    const localeHtml = applySeo(sourceHtml, route, meta, locale);
+    const withCopy = decorateCopy(sourceHtml, rel, locale);
+    let localeHtml = applySeo(withCopy, route, meta, locale);
+    localeHtml = prefixLocaleHrefs(localeHtml, locale.code);
     fs.writeFileSync(outFile, localeHtml, 'utf8');
     localeFiles++;
   }

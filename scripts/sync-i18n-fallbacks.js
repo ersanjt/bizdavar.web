@@ -265,7 +265,7 @@ function syncAboutExtras(html, about) {
   }
 
   html = html.replace(
-    /(<img[^>]*about-hero\.svg[^>]*)alt="[^"]*"/,
+    /(<img[^>]*about-hero\.jpg[^>]*)alt="[^"]*"/,
     (m, open) => {
       const alt = 'بیزدوار گروپ — آژانس دیجیتال و تامین صنعتی';
       changed = true;
@@ -323,7 +323,7 @@ function syncRelatedLinks(html, links) {
 function syncBrandRelatedFromLocale(html, pageKey, pageData) {
   const related = pageData?.related;
   if (!Array.isArray(related)) return syncRelatedLinks(html, brandRelated[pageKey.replace(/Page$/, '').replace('digiSystem', 'digi-system')]);
-  const urls = ['teraoka', 'digi-system', 'products#supply', 'contact', 'vega', 'prosense', 'gamak'];
+  const urls = ['teraoka', 'digi-system', 'products#supply', 'contact', 'vega', 'prosense', 'gamak', 'uwt'];
   let ui = 0;
   const links = related.map((r, i) => ({
     titleKey: `${pageKey}.related.${i}.title`,
@@ -568,7 +568,7 @@ function syncFile(file, dict, seoPages) {
     const map = {
       home: 'home', about: 'about', services: 'services', portfolio: 'portfolio',
       blog: 'blog', contact: 'contact', privacy: 'privacy', fast: 'fast',
-      vega: 'vega', prosense: 'prosense', teltonika: 'teltonika', gamak: 'gamak',
+      vega: 'vega', prosense: 'prosense', teltonika: 'teltonika', gamak: 'gamak', uwt: 'uwt',
       digiSystem: 'digiSystem', teraoka: 'teraoka', 'bz-diamond': 'bzDiamond',
       biztejarat: 'biztejarat'
     };

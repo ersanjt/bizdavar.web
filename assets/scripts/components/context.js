@@ -20,6 +20,8 @@
     supplifyTrade: 'supplify-trade',
     kayaOne: 'kaya-one',
     smmTurk: 'smm-turk',
+    marvispace: 'marvispace',
+    marviSociety: 'marvi-society',
     fxguardExchange: 'fxguard-exchange'
   };
   function normalizePageId(id) {
@@ -51,9 +53,9 @@
     }
 
     const knownPages = new Set([
-      'about', 'services', 'portfolio', 'blog', 'contact', 'privacy', 'fast', 'vega',
-      'prosense', 'teltonika', 'gamak', 'digi-system', 'teraoka', 'liqui-moly', 'bz-diamond', 'supplify-trade', 'kaya-one', 'smm-turk', 'fxguard-exchange', 'biztejarat',
-      'products', 'biztab', 'bizsanitizer-v5', 'fxguard', 'bizswap'
+      'about', 'services', 'portfolio', 'blog', 'contact', 'privacy', 'fast', 'field-tech', 'vega',
+      'prosense', 'teltonika', 'gamak', 'uwt', 'digi-system', 'teraoka', 'liqui-moly', 'bz-diamond', 'supplify-trade', 'kaya-one', 'smm-turk', 'marvispace', 'marvi-society', 'fxguard-exchange', 'biztejarat',
+      'products', 'biztab', 'bizsanitizer-v5', 'bizseat', 'bizpet', 'gallery', 'fxguard', 'fxguard-accounting', 'bizswap'
     ]);
     const stem = n.replace(/\.html$/, '');
     if (knownPages.has(stem)) return `pages/${stem}.html`;
@@ -92,6 +94,12 @@
     if (urlPath.startsWith('http')) return urlPath;
     const { pathPart, hash } = splitUrl(urlPath);
     const siteRoot = toSiteRootPath(pathPart);
+    const LU = window.BIZDAVAR_LOCALE_URL;
+    const locale = LU?.currentLocale?.() || 'fa';
+    const page = siteRoot === '' ? '/' : '/' + siteRoot.replace(/\.html$/i, '');
+    if (LU && typeof LU.toAbsolute === 'function') {
+      return LU.toAbsolute(locale, page + hash);
+    }
     if (siteRoot === '') {
       return `${C.baseUrl}/${hash}`.replace(/\/#/, '#').replace(/\/$/, '') || `${C.baseUrl}/`;
     }
@@ -150,8 +158,8 @@
     const hq = C.geo?.headquarters;
     return {
       '@type': 'PostalAddress',
-      addressLocality: hq?.city || 'Istanbul',
-      addressCountry: hq?.countryCode || 'TR'
+      addressLocality: hq?.city || 'Tabriz',
+      addressCountry: hq?.countryCode || 'IR'
     };
   }
 
@@ -186,6 +194,9 @@
         msg = `${base}\n${location.href}`;
       }
     }
+    const page = (typeof document !== 'undefined' && document.body && document.body.dataset.page) || 'site';
+    const lang = (typeof document !== 'undefined' && document.documentElement.lang) || '';
+    msg = `${msg}\n[${page}][${lang}]`;
     return `https://wa.me/${num}?text=${encodeURIComponent(msg)}`;
   }
 

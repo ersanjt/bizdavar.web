@@ -60,6 +60,11 @@ const PAGE_LOADER = {
     afterPageI18n: 'lib/supply-brand-page.js,config/gamak-products.js',
     beforeMain: 'gamak-page.js'
   },
+  'pages/uwt.html': {
+    afterSeo: 'i18n/supply-catalog-i18n.js',
+    afterPageI18n: 'lib/supply-brand-page.js,config/uwt-products.js',
+    beforeMain: 'uwt-page.js'
+  },
   'pages/digi-system.html': {
     afterSeo: 'i18n/supply-catalog-i18n.js',
     afterPageI18n: 'lib/supply-brand-page.js,config/digi-system-products.js',
@@ -75,13 +80,14 @@ const PAGE_LOADER = {
     afterPageI18n: 'lib/supply-brand-page.js,config/teltonika-products.js',
     beforeMain: 'teltonika-page.js'
   },
-  'pages/fxguard.html': { beforeMain: 'fxguard-page.js' },
+  'pages/fxguard.html': { afterSeo: 'i18n/fxguard-i18n.js', beforeMain: 'fxguard-page.js' },
   'pages/bizswap.html': { beforeMain: 'bizswap-page.js' }
 };
 
 const STANDARD_CSS = [
   'fonts.css', 'typography.css', 'icons.css', 'tokens.css', 'style.css',
-  'layout.css', 'i18n.css', 'footer.css', 'responsive.css', 'premium.css'
+  'layout.css', 'i18n.css', 'footer.css', 'mobile-chrome.css', 'chrome-responsive.css',
+  'responsive.css', 'premium.css'
 ];
 
 function collectHtmlFiles(dir, base = '') {
@@ -116,16 +122,16 @@ function consolidateCss(html) {
   STANDARD_CSS.forEach(file => {
     out = out.replace(new RegExp(`\\s*<link rel="stylesheet" href="/assets/styles/${file.replace('.', '\\.')}">\\s*`, 'g'), '\n');
   });
-  if (!out.includes('href="/assets/styles/site.css"')) {
+  if (!out.includes('href="/assets/styles/site.css')) {
     out = out.replace(
       /(<link rel="apple-touch-icon"[^>]+>)/,
-      `$1\n  <link rel="stylesheet" href="/assets/styles/site.css">`
+      `$1\n  <link rel="stylesheet" href="/assets/styles/site.css?v=20260826d">`
     );
   }
   pageCss.forEach(file => {
     if (!out.includes(`href="/assets/styles/${file}"`)) {
       out = out.replace(
-        /(<link rel="stylesheet" href="\/assets\/styles\/site.css">)/,
+        /(<link rel="stylesheet" href="\/assets\/styles\/site.css[^"]*">)/,
         `$1\n  <link rel="stylesheet" href="/assets/styles/${file}">`
       );
     }

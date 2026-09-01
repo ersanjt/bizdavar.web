@@ -14,10 +14,10 @@ window.FAST_CATALOG = {
   },
 
   trustSignals: [
-    { icon: 'bolt', label: 'تحویل ۵ روزه', desc: 'قرارداد شفاف با زمان‌بندی روزانه' },
-    { icon: 'coin', label: 'از $99', desc: 'پلن پایه با تخفیف راه‌اندازی' },
-    { icon: 'globe', label: 'RTL + چندزبانه', desc: 'فارسی، انگلیسی و ترکی' },
-    { icon: 'whatsapp', label: 'واتساپ فارسی', desc: 'مشاوره و پیگیری مستقیم' }
+    { icon: 'bolt', label: 'تحویل ۵ روزه', desc: 'جلسه Zoom / Meet یا واتساپ با زمان‌بندی روزانه' },
+    { icon: 'coin', label: 'از $99 / ~€90', desc: 'پلن پایه — فاکتور دلار یا یورو' },
+    { icon: 'globe', label: 'آمریکا و اروپا', desc: 'سایت انگلیسی، Stripe و همپوشانی CET/EST' },
+    { icon: 'whatsapp', label: 'هاست GDPR', desc: 'زیرساخت بین‌المللی از Netinode' }
   ],
 
   speedHighlights: [
@@ -103,6 +103,7 @@ window.FAST_CATALOG = {
       oldPrice: 199,
       price: 99,
       accent: 'green',
+      visual: 'landing',
       featured: false,
       features: [
         'سایت تک‌صفحه‌ای شرکتی',
@@ -121,6 +122,7 @@ window.FAST_CATALOG = {
       oldPrice: 399,
       price: 199,
       accent: 'orange',
+      visual: 'store',
       featured: false,
       features: [
         'همه امکانات پلن پایه',
@@ -139,6 +141,7 @@ window.FAST_CATALOG = {
       oldPrice: 599,
       price: 299,
       accent: 'blue',
+      visual: 'pro',
       featured: true,
       ribbon: 'محبوب‌ترین',
       features: [
@@ -164,18 +167,26 @@ window.FAST_CATALOG = {
   ],
 
   timeline: [
-    { num: '۱', title: 'روز اول — جمع‌آوری', desc: 'تماس واتساپ، دریافت لوگو، رنگ برند، متن‌ها و نمونه‌های مورد علاقه.' },
+    { num: '۱', title: 'روز اول — جمع‌آوری', desc: 'جلسه Zoom / Meet یا واتساپ، دریافت لوگو، رنگ برند، متن انگلیسی و نمونه‌های مورد علاقه.' },
     { num: '۲', title: 'روز دوم — طراحی', desc: 'طراحی صفحه اصلی و ساختار سایت. تأیید شما قبل از توسعه.' },
     { num: '۳', title: 'روز سوم — توسعه', desc: 'کدنویسی، فرم تماس، واتساپ و اتصال شبکه‌های اجتماعی.' },
     { num: '۴', title: 'روز چهارم — فروشگاه', desc: 'در پلن‌های فروشگاهی: محصولات، درگاه و تست خرید.' },
     { num: '۵', title: 'روز پنجم — تحویل', desc: 'آموزش مدیریت، انتقال دامنه و راه‌اندازی نهایی آنلاین.' }
   ],
 
+  audiences: [
+    { icon: 'rocket', title: 'استارتاپ آمریکا و SaaS', desc: 'یک صفحه انگلیسی، فرم تماس و Stripe — همین هفته آنلاین، فاکتور USD.' },
+    { icon: 'bag', title: 'SMB اروپا', desc: 'سایت شرکتی انگلیسی (و زبان محلی در صورت نیاز)، فاکتور EUR، هاست Netinode.' },
+    { icon: 'building', title: 'فروشگاه دلاری / یورویی', desc: 'WooCommerce، چند محصول اولیه و تسویه Stripe/PayPal.' },
+    { icon: 'globe', title: 'سرریز آژانس US/EU', desc: 'تحویل ۵روزه با برند شما یا بیزدوار وقتی استودیو پر است.' },
+    { icon: 'monitor', title: 'هاستینگ، SaaS و پلتفرم', desc: 'فروش هاست، VPS یا پنل — مثل netinohost.com؛ با Fast یا طراحی اختصاصی بیزدوار.' }
+  ],
+
   whyChoose: [
-    { icon: 'bolt', title: 'سرعت واقعی', desc: 'نه وعده مبهم — هر روز گزارش پیشرفت در واتساپ.' },
-    { icon: 'palette', title: 'طراحی مدرن RTL', desc: 'فونت Vazirmatn، موبایل‌فرست و استاندارد دسترسی.' },
+    { icon: 'bolt', title: 'سرعت واقعی', desc: 'نه وعده مبهم — هر روز گزارش در Zoom، Meet یا واتساپ.' },
+    { icon: 'palette', title: 'انگلیسی‌اول برای US/EU', desc: 'رابط LTR، موبایل‌فرست و Core Web Vitals — RTL به‌عنوان زبان دوم.' },
     { icon: 'handshake', title: 'پشتوانه بیزدوار', desc: '۱۲+ سال تجربه و ۱۰۰+ پروژه دیجیتال در ۱۱ کشور.' },
-    { icon: 'toolbox', title: 'آموزش و پشتیبانی', desc: 'ویدیوی مدیریت سایت و پاسخگویی پس از تحویل.' }
+    { icon: 'toolbox', title: 'فاکتور دلار یا یورو', desc: 'کارت، PayPal یا حواله — ارز قبل از شروع مکتوب می‌شود.' }
   ],
 
   showcases: [

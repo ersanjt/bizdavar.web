@@ -127,7 +127,7 @@
           'Elektrik Mühendisliği Lisans — İslam Azad Üniversitesi (Endüstriyel Otomasyon)',
           'Bilgisayar Mühendisliği Lisans — İslam Azad Üniversitesi Teheran',
           'MBA — Teheran Üniversitesi (Dijital Dönüşüm)',
-          'Bilgisayar Mühendisliği Yüksek Lisans — İstanbul Nişantaşı Üniversitesi'
+          'Bilgisayar Mühendisliği Yüksek Lisans — Nişantaşı Üniversitesi'
         ],
         expertise: [
           'Fintech ve ödeme platformları',
@@ -140,17 +140,16 @@
       }
     },
     activityAreas: [
-      { id: 'digital-growth', title: 'Dijital büyüme', items: ['Dijital pazarlama', 'SEO ve Google Ads', 'SMM yönetimi', 'Dönüşüm hunisi', 'GA4 analitiği'] },
-      { id: 'web-platforms', title: 'Web platformları', items: ['Kurumsal web sitesi', 'WooCommerce mağaza', 'Fast Web Studio', 'İleri WordPress', 'Özel geliştirme'] },
-      { id: 'fintech', title: 'Fintech ve ödeme', items: ['Ödeme platformları', 'Finansal panolar', 'Cloudflare güvenliği', 'Telegram botları', 'Finans markalaşması'] },
-      { id: 'industrial', title: 'Endüstri ve B2B', items: ['VEGA ve Prosense tedariki', 'BizTab — IoT termometre', 'Endüstriyel pompa ve motor', 'Proses enstrümantasyonu', 'Otomasyon', 'Uluslararası tedarik'] },
-      { id: 'infrastructure', title: 'Altyapı', items: ['Netinode domain, hosting ve sunucu', 'DNS yönetimi', 'SSL ve güvenlik', 'Teknik destek'] }
+      { id: 'services', title: 'Hizmetler', items: ['Dijital pazarlama, SEO ve SMM', '5 günde site ve web uygulama', 'Özel sistem ve fintech', 'Sunucu, domain ve SSL', 'Tebriz saha işleri'] },
+      { id: 'products', title: 'Kendi ürünlerimiz', items: ['BizPet — 1399 ısı pedi (araç koltuğu aynı ürün)', 'BizTab — temasız termometre', 'BizClean V5 — el dezenfektanı', 'FXGuard — WhatsApp CRM ve Accounting', 'BizSwap — token ön satış'] },
+      { id: 'supply', title: 'Endüstriyel tedarik', items: ['VEGA — seviye ve basınç', 'Prosense — gaz ve alev', 'Gamak — elektrik motoru', 'Liqui Moly — yağ ve katkı', 'Teltonika — filo takibi'] }
     ],
     ecosystem: [
       { name: 'ZedPay', type: 'Fintech / ödeme', note: 'IT yönetimi ve platform geliştirme' },
       { name: 'Netinode', type: 'Domain, hosting, sunucu', note: 'Domain, hosting, WordPress hosting, kurumsal e-posta, DNS' },
       { name: 'BZ Diamond', type: 'Web tasarım referansı', note: 'WooCommerce mağaza, e-posta ve SEO — müşteri projesi' },
       { name: 'Biztejarat', type: 'SMM referansı', note: 'Endüstriyel ürün Instagram sayfası — içerik yönetimi' },
+      { name: 'BizPet', type: 'Isı pedi', note: '1399 Padideh ısı pedi — ev ve araç; BizSeat satış adı aynı üründür' },
       { name: 'BizTab', type: 'IoT / sağlık ürünü', note: 'Temassız duvar termometresi — Tebriz’de ilk örnek, Bizdavar ekibi' },
       { name: 'BizClean V5', type: 'Hijyen ürünü', note: 'Otomatik el dezenfektanı — ultrasonik sensör, Digikala’da satış' },
       { name: 'BZBroker', type: 'P2P borsa', note: 'Kripto platformu' },
@@ -227,7 +226,7 @@
       regions: [
         {
           id: 'mena',
-          title: 'Orta Doğu ve Türkiye',
+          title: 'Orta Doğu',
           countries: [
             { name: 'Türkiye', hub: true, city: 'İstanbul', focus: 'Türkiye ofisi · Fintech · Web · Endüstriyel tedarik', detail: 'Operasyon ofislerinden biri — Türkçe, Farsça ve İngilizce danışmanlık' },
             { name: 'İran', hub: true, city: 'Tebriz', focus: 'Tüzel kişilik · Dijital ve endüstri', detail: 'Middle East Development Technology Processors — Doğu Azerbaycan' },
@@ -265,8 +264,10 @@
         desc: 'Bizdavar ekibinin mühendislik ürünleri — BizTab termometre ve BizClean V5 dezenfektanı dahil — Doğu Azerbaycan valisinin katılımıyla tanıtıldı. ISNA, SNN ve IRIB kapsamı.',
         city: 'Tebriz',
         country: 'İran',
+        source: 'IRIB',
         sourceLabel: 'IRIB haberi',
-        videoLabel: 'Video — fuar görüntüleri'
+        videoLabel: 'Video — fuar görüntüleri',
+        tags: ['Tebriz Üniversitesi', 'COVID-19', 'ISNA', 'IRIB']
       },
       {
         id: 'rinotex-1400',
@@ -281,6 +282,15 @@
         city: 'Tebriz',
         country: 'İran',
         sourceLabel: 'Resmi RINOTEX sitesi',
+        tags: ['RINOTEX', 'Tebriz', 'ICT', 'Teknopark', 'Imen Sahand Padideh', 'Bilgi tabanlı'],
+        relatedPress: [
+          { label: 'RINOTEX — 9. fuar 2021', url: 'https://rinotex.ir/Home/Introduction' },
+          { label: 'Tebriz Üniversitesi teknoparkı', url: 'https://techpark.tabrizu.ac.ir/' },
+          { label: 'ISNA — 2020 büyüme merkezi fuarı', url: 'https://www.isna.ir/news/99022216019/%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D9%BE%DA%98%D9%88%D9%87%D8%B4%DB%8C-%D9%88-%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%D9%87-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7' },
+          { label: 'SNN — 2020 fuarı', url: 'https://snn.ir/fa/news/847064/%D9%86%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%A7%D9%87-%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%E2%80%8C%D9%87%D8%A7%DB%8C-%D9%85%D8%B1%DA%A9%D8%B2-%D8%B1%D8%B4%D8%AF-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%D8%B4%DB%8C%D9%88%D8%B9-%D9%88%DB%8C%D8%B1%D9%88%D8%B3-%DA%A9%D8%B1%D9%88%D9%86%D8%A7-%D8%A7%D9%81%D8%AA%D8%AA%D8%A7%D8%AD-%D8%B4%D8%AF' },
+          { label: 'IRIB — 2020 fuarı', url: 'https://www.iribnews.ir/fa/news/2714063/%D9%86%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%A7%D9%87-%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7' },
+          { label: 'Digikala — BizClean V5', url: 'https://www.digikala.com/product/dkp-3730222/%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D8%B6%D8%AF%D8%B9%D9%81%D9%88%D9%86%DB%8C-%D8%AF%D8%B3%D8%AA-%D8%A8%DB%8C%D8%B2%D8%AF%D9%88%D8%A7%D8%B1-%D9%85%D8%AF%D9%84-v5/' }
+        ],
         parkUnit: {
           name: 'Imen Sahand Padideh',
           host: 'Tebriz Üniversitesi Bilim ve Teknoloji Parkı',
@@ -296,6 +306,10 @@
         year: '2020',
         title: 'BizTab — Tebriz’in ilk temassız duvar termometresi',
         desc: '0,3°C altında hata payı — Tebriz Üniversitesi akademisyenleri tarafından onaylandı. Bizdavar ekibinin özel tasarımı.',
+        source: 'Nasr News',
+        pressLinks: [
+          { label: 'Nasr News', url: 'https://nasrnews.ir/print/16727/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D9%88-%D8%B3%D8%A7%D8%AE%D8%AA-%D8%A7%D9%88%D9%84%DB%8C%D9%86-%D8%AF%D9%85%D8%A7%D8%B3%D9%86%D8%AC-%D8%AF%DB%8C%D9%88%D8%A7%D8%B1%DB%8C-%D8%BA%DB%8C%D8%B1%D8%AA%D9%85%D8%A7%D8%B3%DB%8C-%D8%AF%D8%B1-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2' }
+        ],
         tags: ['IoT', 'Tebriz', 'Özel ürün']
       },
       {
@@ -303,8 +317,28 @@
         year: '2020',
         title: 'BizClean V5 — Otomatik el dezenfektanı',
         desc: 'Bizdavar ekibi tarafından tasarlanıp üretildi (2019–2022), 2020 büyüme merkezi fuarı (ISNA, SNN, IRIB), RINOTEX 1400 teknopark birimi, Digikala satışı.',
+        source: 'Digikala',
         pressLabel: 'IRIB',
+        pressLinks: [
+          { label: 'RINOTEX 1400', url: 'https://rinotex.ir/Home/Introduction' },
+          { label: 'Tebriz Üniversitesi teknoparkı', url: 'https://techpark.tabrizu.ac.ir/' },
+          { label: 'IRIB', url: 'https://www.iribnews.ir/fa/news/2714063/%D9%86%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%A7%D9%87-%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7' },
+          { label: 'ISNA', url: 'https://www.isna.ir/news/99022216019/%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D9%BE%DA%98%D9%88%D9%87%D8%B4%DB%8C-%D9%88-%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%D9%87-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7' },
+          { label: 'SNN', url: 'https://snn.ir/fa/news/847064/%D9%86%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%A7%D9%87-%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%E2%80%8C%D9%87%D8%A7%DB%8C-%D9%85%D8%B1%DA%A9%D8%B2-%D8%B1%D8%B4%D8%AF-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%D8%B4%DB%8C%D9%88%D8%B9-%D9%88%DB%8C%D8%B1%D9%88%D8%B3-%DA%A9%D8%B1%D9%88%D9%86%D8%A7-%D8%A7%D9%81%D8%AA%D8%AA%D8%A7%D8%AD-%D8%B4%D8%AF' }
+        ],
         tags: ['Hijyen', 'IoT', 'COVID-19', 'Tebriz Üniversitesi', 'RINOTEX', 'Imen Sahand Padideh', 'Digikala']
+      },
+      {
+        id: 'bizpet',
+        year: '2020',
+        title: 'BizPet — ısı pedi',
+        desc: 'Asıl 1399 ürünü: Padideh ısı pedi (BizPet / Pet Biz) — Tebriz Üniversitesi teknoloji kuluçkasında, ev, araç koltuğu ve evcil hayvan yatağı için. Digikala dkp-7694589 aynı üründür.',
+        source: 'Tebriz Üniversitesi teknoloji kuluçkası',
+        pressLinks: [
+          { label: 'Tebriz Üniversitesi teknoparkı', url: 'https://techpark.tabrizu.ac.ir/' },
+          { label: 'Digikala — Bizdavar ısı pedi / araç sırtlığı', url: 'https://www.digikala.com/product/dkp-7694589/%D9%BE%D8%B4%D8%AA%DB%8C-%D8%B5%D9%86%D8%AF%D9%84%DB%8C-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%85%D8%AF%D9%84-bizdavar/' }
+        ],
+        tags: ['Isı pedi', 'Otomotiv', 'Tebriz', 'Kuluçka merkezi', 'Imen Sahand Padideh', 'Digikala']
       }
     ],
     verifiedSources: [
@@ -412,7 +446,7 @@
           'BSc Electrical Engineering — Islamic Azad University (Industrial Automation)',
           'BSc Computer Engineering — Islamic Azad University Tehran',
           'MBA — University of Tehran (Digital Transformation)',
-          'MSc Computer Engineering — Nişantaşı University Istanbul'
+          'MSc Computer Engineering — Nişantaşı University'
         ],
         expertise: [
           'Fintech and payment platforms',
@@ -426,13 +460,11 @@
     },
     activityAreas: TR.activityAreas.map((a, i) => ({
       ...a,
-      title: ['Digital growth', 'Web platforms', 'Fintech & payments', 'Industry & B2B', 'Infrastructure'][i],
+      title: ['Services', 'Products we build', 'Industrial supply'][i],
       items: [
-        ['Digital marketing', 'SEO & Google Ads', 'SMM management', 'Conversion funnel', 'GA4 analytics'],
-        ['Corporate websites', 'WooCommerce stores', 'Fast Web Studio', 'Advanced WordPress', 'Custom development'],
-        ['Payment platforms', 'Financial dashboards', 'Cloudflare security', 'Telegram bots', 'Financial branding'],
-        ['VEGA & Prosense supply', 'BizTab — IoT thermometer', 'Industrial pumps & motors', 'Process instrumentation', 'Automation', 'International procurement'],
-        ['Netinode domains, hosting & servers', 'DNS management', 'SSL & security', 'Technical support']
+        ['Digital marketing, SEO and SMM', '5-day websites and web apps', 'Custom systems and fintech', 'Servers, domains and SSL', 'Field work in Tabriz'],
+        ['BizPet — 1399 heating pad (car seat is the same product)', 'BizTab — non-contact thermometer', 'BizClean V5 — hand sanitizer', 'FXGuard — WhatsApp CRM and Accounting', 'BizSwap — token presale'],
+        ['VEGA — level and pressure', 'Prosense — gas and flame', 'Gamak — electric motors', 'Liqui Moly — oils and additives', 'Teltonika — fleet tracking']
       ][i]
     })),
     ecosystem: [
@@ -440,6 +472,7 @@
       { name: 'Netinode', type: 'Domains, hosting & servers', note: 'Domains, hosting, WordPress hosting, business email, DNS' },
       { name: 'BZ Diamond', type: 'Web design case study', note: 'WooCommerce store, email and SEO — client project' },
       { name: 'Biztejarat', type: 'SMM case study', note: 'Industrial product Instagram — content management' },
+      { name: 'BizPet', type: 'Heating pad', note: '1399 Padideh heating pad — home and car; BizSeat is the same product' },
       { name: 'BizTab', type: 'IoT / health product', note: 'Non-contact wall thermometer — first in Tabriz, Bizdavar team' },
       { name: 'BizClean V5', type: 'Hygiene product', note: 'Automatic hand sanitizer — ultrasonic sensor, sold on Digikala' },
       { name: 'BZBroker', type: 'P2P exchange', note: 'Crypto platform' },
@@ -516,7 +549,7 @@
       regions: [
         {
           id: 'mena',
-          title: 'Middle East & Turkey',
+          title: 'Middle East',
           countries: [
             { name: 'Turkey', hub: true, city: 'Istanbul', focus: 'Turkey office · Fintech · Web · Industrial supply', detail: 'One of our operating offices — Persian/Turkish/English consulting' },
             { name: 'Iran', hub: true, city: 'Tabriz', focus: 'Legal entity · Digital & industry', detail: 'Middle East Development Technology Processors — East Azerbaijan' },
@@ -554,8 +587,10 @@
         desc: 'Engineered products by the Bizdavar team — including BizTab thermometer and BizClean V5 sanitizer — presented with the East Azerbaijan governor. Covered by ISNA, SNN and IRIB.',
         city: 'Tabriz',
         country: 'Iran',
+        source: 'IRIB',
         sourceLabel: 'IRIB report',
-        videoLabel: 'Video — exhibition footage'
+        videoLabel: 'Video — exhibition footage',
+        tags: ['University of Tabriz', 'COVID-19', 'ISNA', 'IRIB']
       },
       {
         id: 'rinotex-1400',
@@ -570,6 +605,15 @@
         city: 'Tabriz',
         country: 'Iran',
         sourceLabel: 'Official RINOTEX website',
+        tags: ['RINOTEX', 'Tabriz', 'ICT', 'Tech park', 'Imen Sahand Padideh', 'Knowledge-based'],
+        relatedPress: [
+          { label: 'RINOTEX — 9th exhibition 2021', url: 'https://rinotex.ir/Home/Introduction' },
+          { label: 'Tabriz University Science & Technology Park', url: 'https://techpark.tabrizu.ac.ir/' },
+          { label: 'ISNA — 2020 growth-centre exhibition', url: 'https://www.isna.ir/news/99022216019/%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D9%BE%DA%98%D9%88%D9%87%D8%B4%DB%8C-%D9%88-%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%D9%87-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7' },
+          { label: 'SNN — 2020 exhibition', url: 'https://snn.ir/fa/news/847064/%D9%86%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%A7%D9%87-%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%E2%80%8C%D9%87%D8%A7%DB%8C-%D9%85%D8%B1%DA%A9%D8%B2-%D8%B1%D8%B4%D8%AF-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%D8%B4%DB%8C%D9%88%D8%B9-%D9%88%DB%8C%D8%B1%D9%88%D8%B3-%DA%A9%D8%B1%D9%88%D9%86%D8%A7-%D8%A7%D9%81%D8%AA%D8%AA%D8%A7%D8%AD-%D8%B4%D8%AF' },
+          { label: 'IRIB — 2020 exhibition', url: 'https://www.iribnews.ir/fa/news/2714063/%D9%86%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%A7%D9%87-%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7' },
+          { label: 'Digikala — BizClean V5', url: 'https://www.digikala.com/product/dkp-3730222/%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D8%B6%D8%AF%D8%B9%D9%81%D9%88%D9%86%DB%8C-%D8%AF%D8%B3%D8%AA-%D8%A8%DB%8C%D8%B2%D8%AF%D9%88%D8%A7%D8%B1-%D9%85%D8%AF%D9%84-v5/' }
+        ],
         parkUnit: {
           name: 'Imen Sahand Padideh',
           host: 'Tabriz University Science & Technology Park',
@@ -585,6 +629,10 @@
         year: '2020',
         title: 'BizTab — First non-contact wall thermometer in Tabriz',
         desc: 'Sub-0.3°C error margin — validated by Tabriz University faculty. Exclusive design and ownership by the Bizdavar team.',
+        source: 'Nasr News',
+        pressLinks: [
+          { label: 'Nasr News', url: 'https://nasrnews.ir/print/16727/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D9%88-%D8%B3%D8%A7%D8%AE%D8%AA-%D8%A7%D9%88%D9%84%DB%8C%D9%86-%D8%AF%D9%85%D8%A7%D8%B3%D9%86%D8%AC-%D8%AF%DB%8C%D9%88%D8%A7%D8%B1%DB%8C-%D8%BA%DB%8C%D8%B1%D8%AA%D9%85%D8%A7%D8%B3%DB%8C-%D8%AF%D8%B1-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2' }
+        ],
         tags: ['IoT', 'Tabriz', 'Owned product']
       },
       {
@@ -592,8 +640,28 @@
         year: '2020',
         title: 'BizClean V5 — Automatic hand sanitizer dispenser',
         desc: 'Designed and built by Bizdavar (2019–2022), 2020 growth-centre exhibition (ISNA, SNN, IRIB), RINOTEX 1400 via tech-park unit, sold on Digikala.',
+        source: 'Digikala',
         pressLabel: 'IRIB',
+        pressLinks: [
+          { label: 'RINOTEX 1400', url: 'https://rinotex.ir/Home/Introduction' },
+          { label: 'Tabriz University Science & Technology Park', url: 'https://techpark.tabrizu.ac.ir/' },
+          { label: 'IRIB', url: 'https://www.iribnews.ir/fa/news/2714063/%D9%86%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%A7%D9%87-%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7' },
+          { label: 'ISNA', url: 'https://www.isna.ir/news/99022216019/%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D9%BE%DA%98%D9%88%D9%87%D8%B4%DB%8C-%D9%88-%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%D9%87-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7' },
+          { label: 'SNN', url: 'https://snn.ir/fa/news/847064/%D9%86%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%A7%D9%87-%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%E2%80%8C%D9%87%D8%A7%DB%8C-%D9%85%D8%B1%DA%A9%D8%B2-%D8%B1%D8%B4%D8%AF-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%D8%B4%DB%8C%D9%88%D8%B9-%D9%88%DB%8C%D8%B1%D9%88%D8%B3-%DA%A9%D8%B1%D9%88%D9%86%D8%A7-%D8%A7%D9%81%D8%AA%D8%AA%D8%A7%D8%AD-%D8%B4%D8%AF' }
+        ],
         tags: ['Hygiene', 'IoT', 'COVID-19', 'Tabriz University', 'RINOTEX', 'Imen Sahand Padideh', 'Digikala']
+      },
+      {
+        id: 'bizpet',
+        year: '2020',
+        title: 'BizPet — heating pad',
+        desc: 'The 1399 flagship: Padideh heating pad (BizPet / Pet Biz) for home, car seat and pet beds. Digikala dkp-7694589 is the same product, not a second line.',
+        source: 'University of Tabriz technology incubator',
+        pressLinks: [
+          { label: 'Tabriz University Science & Technology Park', url: 'https://techpark.tabrizu.ac.ir/' },
+          { label: 'Digikala — Bizdavar heating pad / car seat', url: 'https://www.digikala.com/product/dkp-7694589/%D9%BE%D8%B4%D8%AA%DB%8C-%D8%B5%D9%86%D8%AF%D9%84%DB%8C-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%85%D8%AF%D9%84-bizdavar/' }
+        ],
+        tags: ['Heating pad', 'Automotive', 'Tabriz', 'Incubator', 'Imen Sahand Padideh', 'Digikala']
       }
     ],
     verifiedSources: [

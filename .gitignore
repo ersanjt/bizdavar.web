@@ -11,3 +11,23 @@ bizdavar-public_html.zip
 api/config.php
 storage/*.sqlite
 storage/logs/
+
+# Security/local files (Codex senior audit)
+.env
+.env.*
+!.env.example
+!.env.sample
+*.env.bak
+*.env.backup
+*secret*.json
+*service-account*.json
+firebase-service-account.json
+google-services.json
+*.pem
+*.key
+*.p8
+*.p12
+*.jks
+*.keystore
+secrets/
+.secrets/

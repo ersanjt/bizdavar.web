@@ -143,6 +143,12 @@
   max-width: 150px;
 }
 
+.portfolio-card--pro .portfolio-card__logo--app img {
+  max-height: 56px;
+  max-width: 56px;
+  border-radius: 13px;
+}
+
 .portfolio-card--pro .portfolio-card__body {
   padding: 18px 20px 20px;
   flex: 1;

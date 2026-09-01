@@ -116,8 +116,8 @@ origin_http_code() {
 ORIGIN_CURL=(curl -sfL -H "Host: bizdavar.com" -H "Cache-Control: no-cache" -H "Pragma: no-cache")
 ORIGIN_OK=0
 for attempt in 1 2 3 4 5; do
-  if curl -sfL -H "Host: bizdavar.com" http://127.0.0.1/ 2>/dev/null | grep -q 'GTM-NXWQQWF8'; then
-    echo "OK: GTM-NXWQQWF8 visible on origin (attempt $attempt)"
+  if curl -sfL -H "Host: bizdavar.com" http://127.0.0.1/ 2>/dev/null | grep -qE 'gtm-boot\.js|GTM-NXWQQWF8'; then
+    echo "OK: GTM boot visible on origin (attempt $attempt)"
     ORIGIN_OK=1
     break
   fi

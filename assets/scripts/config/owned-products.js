@@ -3,7 +3,8 @@
  * Default copy (fa) lives here; owned-products-i18n.js overrides per locale.
  */
 window.BIZDAVAR_OWNED_PRODUCTS = {
-  imgVersion: '4',
+  imgVersion: '6',
+  homeOrder: ['bizpet', 'biztab', 'fxguard', 'bizswap'],
   categories: [
     { id: 'software', label: 'نرم‌افزار و SaaS', icon: 'globe' },
     { id: 'iot-health', label: 'IoT و بهداشت', icon: 'shield' },
@@ -32,7 +33,7 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       name: 'WhatsApp CRM',
       title: 'FXGuard WhatsApp CRM',
       desc: 'اینباکس تیمی واتساپ، مشتریان، تیکت، شعب و ۲FA — Cloud از $49/ماه، لایسنس یا Managed. دمو رایگان در app.fxguard.io.',
-      tags: ['FXGuard', 'WhatsApp CRM', 'از $49/mo'],
+      tags: ['FXGuard', 'WhatsApp CRM', 'از ۴۹ دلار'],
       image: 'assets/images/products/fxguard/fxguard-hero.svg',
       logo: 'assets/images/products/fxguard/fxguard-logo.svg',
       page: 'pages/fxguard.html',
@@ -61,8 +62,8 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       title: 'دماسنج دیواری غیرتماسی',
       desc: 'اولین دماسنج دیواری غیرتماسی تبریز — دقت کمتر از ۰.۳°C، تأیید دانشگاه تبریز.',
       tags: ['IoT', 'غیرتماسی', 'تبریز'],
-      image: 'assets/images/products/biztab/biztab-hero.jpg',
-      logo: 'assets/images/products/biztab/biztab-hero.jpg',
+      image: 'assets/images/gallery/expo-tabrizu-incubator.jpg',
+      logo: 'assets/images/products/biztab/biztab-logo.svg',
       page: 'pages/biztab.html',
       featured: true,
       status: 'live'
@@ -89,9 +90,23 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       title: 'خط بهداشت و ضدعفونی',
       desc: 'دستگاه ضدعفونی دست اتوماتیک BizClean V5 — تولید تیم بیزدوار؛ RINOTEX 1400، ISNA و صدا و سیما.',
       tags: ['بهداشت', 'اتوماتیک', 'کرونا'],
-      image: 'assets/images/products/bizsanitizer/bizclean-v5.png',
-      logo: 'assets/images/products/bizsanitizer/bizclean-v5.png',
+      image: 'assets/images/gallery/expo-imen-booth.jpg',
+      logo: 'assets/images/products/bizsanitizer/bizsanitizer-logo.svg',
       page: 'pages/bizsanitizer-v5.html',
+      featured: true,
+      status: 'live'
+    },
+    {
+      id: 'bizpet',
+      category: 'medical',
+      categoryLabel: 'پزشکی و PPE',
+      name: 'BizPet',
+      title: 'پد حرارتی بیز پت',
+      desc: 'محصول اصلی ۱۳۹۹ — پد حرارتی پدیده برای خانه، خودرو و جا خواب حیوانات. نام فروشگاهی پشتی صندلی (BizSeat) همان این کالاست، نه محصول دوم. مرکز رشد دانشگاه تبریز، ایمن سهند پدیده. ۵ تا ۱۲ ولت.',
+      tags: ['پد حرارتی', 'خودرو', 'تبریز', '۱۳۹۹'],
+      image: 'assets/images/products/bizpet/bizpet-grey.jpg',
+      logo: 'assets/images/products/bizpet/bizpet-grey.jpg',
+      page: 'pages/bizpet.html',
       featured: true,
       status: 'live'
     },
@@ -171,7 +186,7 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       title: 'ماشین پد گرمایی',
       desc: 'دستگاه تولید پد حرارتی (heat pad) — مصارف درمانی و گرمایشی.',
       tags: ['پد حرارتی', 'پزشکی', 'تولید'],
-      image: 'assets/images/products/product-default.svg',
+      image: 'assets/images/products/bizpet/bizpet-production.jpg',
       status: 'catalog'
     }
   ]

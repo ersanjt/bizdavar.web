@@ -415,15 +415,19 @@
           image: `${C.baseUrl}/${p.image}`,
           brand: { '@type': 'Brand', name: 'VEGA' },
           category: p.series,
+          url: p.officialRef || undefined,
           inLanguage,
           areaServed: ['IR', 'TR'],
-          offers: {
-            '@type': 'Offer',
-            availability: p.priceEur != null ? 'https://schema.org/InStock' : 'https://schema.org/PreOrder',
-            ...(p.priceEur != null ? { price: String(p.priceEur), priceCurrency: 'EUR' } : {}),
-            seller: { '@type': 'Organization', name: sellerName },
-            areaServed: ['IR', 'TR']
-          }
+          ...(p.priceEur != null ? {
+            offers: {
+              '@type': 'Offer',
+              price: String(p.priceEur),
+              priceCurrency: 'EUR',
+              availability: 'https://schema.org/InStock',
+              seller: { '@type': 'Organization', name: sellerName },
+              areaServed: ['IR', 'TR']
+            }
+          } : {})
         }
       }))
     };

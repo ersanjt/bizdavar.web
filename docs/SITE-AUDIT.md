@@ -3,4 +3,62 @@
 Generated: 2026-09-01T12:56:22.620Z
 
 - Errors: 0
-- Warnings: 0
+- Warnings: 57
+
+- **warn** `index.html`: Body scripts still use defer
+- **warn** `pages\about.html`: Body scripts still use defer
+- **warn** `pages\articles\about-bizdavar-group.html`: Body scripts still use defer
+- **warn** `pages\articles\buy-digi-system-iran.html`: Body scripts still use defer
+- **warn** `pages\articles\buy-gamak-iran.html`: Body scripts still use defer
+- **warn** `pages\articles\buy-prosense-iran.html`: Body scripts still use defer
+- **warn** `pages\articles\buy-teltonika-iran.html`: Body scripts still use defer
+- **warn** `pages\articles\buy-teraoka-iran.html`: Body scripts still use defer
+- **warn** `pages\articles\buy-vegapuls-iran.html`: Body scripts still use defer
+- **warn** `pages\articles\digital-marketing-us-eu.html`: Body scripts still use defer
+- **warn** `pages\articles\digital-marketing.html`: Body scripts still use defer
+- **warn** `pages\articles\fast-studio.html`: Body scripts still use defer
+- **warn** `pages\articles\field-tech-services.html`: Body scripts still use defer
+- **warn** `pages\articles\industrial-sensors.html`: Body scripts still use defer
+- **warn** `pages\articles\industrial-trade-iran.html`: Body scripts still use defer
+- **warn** `pages\articles\liqui-moly-supply-iran.html`: Body scripts still use defer
+- **warn** `pages\articles\local-seo-iran.html`: Body scripts still use defer
+- **warn** `pages\articles\marvi-society-ios-app.html`: Body scripts still use defer
+- **warn** `pages\articles\multilingual-web-iran-turkey.html`: Body scripts still use defer
+- **warn** `pages\articles\prosense-gas-detection.html`: Body scripts still use defer
+- **warn** `pages\articles\social-media-management.html`: Body scripts still use defer
+- **warn** `pages\articles\vega-quote-iran.html`: Body scripts still use defer
+- **warn** `pages\articles\vega-supply-iran.html`: Body scripts still use defer
+- **warn** `pages\articles\website-design-us-eu.html`: Body scripts still use defer
+- **warn** `pages\articles\what-is-digital-marketing.html`: Body scripts still use defer
+- **warn** `pages\bizpet.html`: Body scripts still use defer
+- **warn** `pages\bizsanitizer-v5.html`: Body scripts still use defer
+- **warn** `pages\bizseat.html`: Body scripts still use defer
+- **warn** `pages\bizswap.html`: Body scripts still use defer
+- **warn** `pages\biztab.html`: Body scripts still use defer
+- **warn** `pages\biztejarat.html`: Body scripts still use defer
+- **warn** `pages\blog.html`: Body scripts still use defer
+- **warn** `pages\bz-diamond.html`: Body scripts still use defer
+- **warn** `pages\contact.html`: Body scripts still use defer
+- **warn** `pages\digi-system.html`: Body scripts still use defer
+- **warn** `pages\fast.html`: Body scripts still use defer
+- **warn** `pages\field-tech.html`: Body scripts still use defer
+- **warn** `pages\fxguard-accounting.html`: Body scripts still use defer
+- **warn** `pages\fxguard-exchange.html`: Body scripts still use defer
+- **warn** `pages\fxguard.html`: Body scripts still use defer
+- **warn** `pages\gallery.html`: Body scripts still use defer
+- **warn** `pages\gamak.html`: Body scripts still use defer
+- **warn** `pages\kaya-one.html`: Body scripts still use defer
+- **warn** `pages\liqui-moly.html`: Body scripts still use defer
+- **warn** `pages\marvi-society.html`: Body scripts still use defer
+- **warn** `pages\marvispace.html`: Body scripts still use defer
+- **warn** `pages\portfolio.html`: Body scripts still use defer
+- **warn** `pages\privacy.html`: Body scripts still use defer
+- **warn** `pages\products.html`: Body scripts still use defer
+- **warn** `pages\prosense.html`: Body scripts still use defer
+- **warn** `pages\services.html`: Body scripts still use defer
+- **warn** `pages\smm-turk.html`: Body scripts still use defer
+- **warn** `pages\supplify-trade.html`: Body scripts still use defer
+- **warn** `pages\teltonika.html`: Body scripts still use defer
+- **warn** `pages\teraoka.html`: Body scripts still use defer
+- **warn** `pages\uwt.html`: Body scripts still use defer
+- **warn** `pages\vega.html`: Body scripts still use defer

@@ -32,7 +32,7 @@ if command -v rsync >/dev/null 2>&1; then
     "$REPO_DIR/" "$WEB_ROOT/"
   mkdir -p "$WEB_ROOT/.well-known/acme-challenge" "$WEB_ROOT/.well-known/pki-validation"
 else
-  /bin/cp -f index.html robots.txt sitemap.xml .htaccess "$WEB_ROOT/"
+  /bin/cp -f index.html go.html robots.txt sitemap.xml .htaccess "$WEB_ROOT/"
   /bin/cp -a assets/. "$WEB_ROOT/assets/"
   /bin/cp -a pages/. "$WEB_ROOT/pages/"
   for loc in tr en ru ar; do

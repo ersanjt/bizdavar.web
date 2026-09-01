@@ -9,12 +9,12 @@
       productsPage: {
         crumb: 'محصولات بیزدوار',
         hero: {
-          tag: 'مهندسی و تولید بیزدوار',
-          title: 'محصولات بیزدوار',
-          desc: 'سخت‌افزار، خطوط تولید، SaaS اختصاصی و برندهای صنعتی تامین‌شده — از تبریز تا استانبول.',
+          tag: 'بازرگانی صنعتی و محصولات بیزدوار',
+          title: 'خرید VEGA، Prosense و محصولات بیزدوار',
+          desc: 'اولویت با خریدار ایران: سنسور VEGA، دتکتور Prosense، Liqui Moly و Teltonika — کنار سخت‌افزار و SaaS خودمان از تبریز.',
           ctaLive: 'محصولات زنده',
           ctaCatalog: 'کاتالوگ کامل',
-          ctaSupply: 'برندهای تامین',
+          ctaSupply: 'کاتالوگ بازرگانی',
           ctaContact: 'استعلام محصول'
         },
         pillars: {
@@ -24,10 +24,10 @@
         },
         intro: {
           title: 'ما چه می‌سازیم؟',
-          body: 'بیزدوار گروپ علاوه بر خدمات دیجیتال و تامین صنعتی، <strong>محصولات سخت‌افزاری و نرم‌افزار SaaS اختصاصی</strong> نیز تولید می‌کند. مالکیت فکری با تیم بیزدوار است؛ مهندسی در تبریز و استانبول، قابل عرضه برای بازار داخلی و بین‌المللی.',
+          body: 'بیزدوار گروپ علاوه بر خدمات دیجیتال و تامین صنعتی، <strong>محصولات سخت‌افزاری و نرم‌افزار SaaS اختصاصی</strong> نیز تولید می‌کند. مالکیت فکری با تیم بیزدوار است؛ مهندسی در تبریز، قابل عرضه برای بازار داخلی و بین‌المللی.',
           ctaContact: 'استعلام و سفارش',
           ctaPortfolio: 'نمونه‌کارهای دیجیتال',
-          statProducts: '۱۱+',
+          statProducts: '۱۲+',
           statProductsLabel: 'محصول و خط',
           statCats: '۴',
           statCatsLabel: 'دسته اصلی',
@@ -37,19 +37,19 @@
         featured: {
           eyebrow: 'محصولات زنده',
           title: 'صفحات محصول آماده سفارش',
-          desc: 'WhatsApp CRM، Accounting، BizSwap، BizTab و BizClean — با صفحه اختصاصی و مسیر استعلام شفاف.'
+          desc: 'WhatsApp CRM، Accounting، BizSwap، BizTab، BizClean و BizPet — با صفحه اختصاصی و مسیر استعلام شفاف.'
         },
         filterAll: 'همه',
         empty: 'محصولی برای نمایش نیست.',
         catalog: {
           eyebrow: 'کاتالوگ کامل',
           title: 'همه محصولات مهندسی‌شده بیزدوار',
-          desc: '۱۱ محصول و خط تولید — فیلتر بر اساس دسته یا مستقیم استعلام بگیرید.'
+          desc: '۱۳ محصول و خط تولید — فیلتر بر اساس دسته یا مستقیم استعلام بگیرید.'
         },
         supply: {
           eyebrow: 'تامین برند',
           title: 'برندهای صنعتی که تامین می‌کنیم',
-          desc: 'VEGA، Prosense، Liqui Moly، Teltonika، Gamak، Digi System و Teraoka — کاتالوگ جداگانه با مشاوره فنی و پیش‌فاکتور شفاف.',
+          desc: 'VEGA، UWT، Prosense، Liqui Moly، Teltonika، Gamak، Digi System و Teraoka — کاتالوگ جداگانه با مشاوره فنی و پیش‌فاکتور شفاف.',
           cta: 'کاتالوگ محصولات مالکیتی',
           ctaContact: 'استعلام تامین برند'
         },
@@ -76,7 +76,9 @@
             bizswap: 'پیش‌فروش و سواپ توکن',
             biztab: 'دماسنج IoT غیرتماسی',
             bizclean: 'ضدعفونی دست اتوماتیک',
+            bizpet: 'پد حرارتی — خانه و خودرو',
             vega: 'سنسور سطح و فشار',
+            uwt: 'سنسور سطح سیلو و مخزن',
             prosense: 'دتکتور گاز و شعله',
             teltonika: 'Fleet Telematics / GPS',
             liqui: 'روغن و افزودنی خودرو',
@@ -87,7 +89,7 @@
         },
         geoText: 'محصولات مالکیتی و تامین برندهای صنعتی — مشاوره فنی چندزبانه و تبریز.',
         related: [
-          { title: 'تامین VEGA', desc: 'سنسور سطح و فشار' },
+          { title: 'خرید VEGAPULS', desc: 'سنسور سطح ایران' },
           { title: 'تامین Prosense', desc: 'دتکتور گاز و شعله' },
           { title: 'Teltonika GPS', desc: 'Fleet Telematics از $29' },
           { title: 'تماس و استعلام', desc: 'مشاوره رایگان' }
@@ -102,7 +104,7 @@
           software: { label: 'نرم‌افزار و SaaS', desc: 'WhatsApp CRM و Accounting از سوئیت FXGuard، به‌همراه BizSwap' },
           'iot-health': { label: 'IoT و بهداشت', desc: 'دماسنج، ضدعفونی‌کننده و تجهیزات بدون تماس' },
           packaging: { label: 'بسته‌بندی و سیل', desc: 'دستگاه‌های کش‌زن و خطوط بسته‌بندی' },
-          medical: { label: 'پزشکی و PPE', desc: 'خطوط تولید ماسک و پد حرارتی' }
+          medical: { label: 'پزشکی و PPE', desc: 'پد حرارتی BizPet (خانه و خودرو) و خطوط تولید ماسک' }
         },
         items: {
           bizswap: {
@@ -115,7 +117,7 @@
             name: 'WhatsApp CRM',
             title: 'FXGuard WhatsApp CRM',
             desc: 'اینباکس تیمی واتساپ، مشتریان، تیکت، شعب و ۲FA — Cloud از $49/ماه، لایسنس یا Managed. دمو رایگان در app.fxguard.io.',
-            tags: ['FXGuard', 'WhatsApp CRM', 'از $49/mo']
+            tags: ['FXGuard', 'WhatsApp CRM', 'از ۴۹ دلار']
           },
           'fxguard-accounting': {
             name: 'Accounting',
@@ -134,6 +136,12 @@
             title: 'خط بهداشت و ضدعفونی',
             desc: 'دستگاه ضدعفونی دست اتوماتیک BizClean V5 — تولید تیم بیزدوار، RINOTEX 1400 از طریق واحد پارکی «ایمن سهند پدیده»، پوشش ISNA و صدا و سیما.',
             tags: ['بهداشت', 'اتوماتیک', 'کرونا']
+          },
+          bizpet: {
+            name: 'BizPet',
+            title: 'پد حرارتی بیز پت',
+            desc: 'محصول اصلی ۱۳۹۹ — پد حرارتی پدیده برای خانه، خودرو و جا خواب حیوانات. پشتی صندلی با نام BizSeat همان این کالاست. مرکز رشد دانشگاه تبریز، ایمن سهند پدیده. ۵ تا ۱۲ ولت.',
+            tags: ['پد حرارتی', 'خودرو', 'تبریز', '۱۳۹۹']
           },
           biztouch: {
             name: 'BizTouch',
@@ -189,7 +197,7 @@
       home: {
         ownedEyebrow: 'محصولات بیزدوار',
         ownedTitle: 'آنچه می‌سازیم',
-        ownedDesc: 'علاوه بر خدمات دیجیتال، تیم بیزدوار دستگاه و خط تولید اختصاصی نیز مهندسی می‌کند — از BizTab تا خطوط بسته‌بندی و PPE.',
+        ownedDesc: 'علاوه بر خدمات دیجیتال، تیم بیزدوار دستگاه و نرم‌افزار اختصاصی هم می‌سازد — از پد حرارتی BizPet و دماسنج BizTab تا FXGuard و BizSwap.',
         ownedCta: 'مشاهده همه محصولات'
       }
     },
@@ -199,7 +207,7 @@
         hero: {
           tag: 'Bizdavar mühendislik ve üretim',
           title: 'Bizdavar ürünleri',
-          desc: 'Özel donanım, üretim hatları ve SaaS — Bizdavar ekibi tarafından Tebriz ve İstanbul\'da tasarlandı.',
+          desc: 'Özel donanım, üretim hatları ve SaaS — Bizdavar ekibi tarafından Tebriz\'da tasarlandı.',
           ctaLive: 'Canlı ürünler',
           ctaCatalog: 'Tam katalog',
           ctaSupply: 'Tedarik markaları',
@@ -212,10 +220,10 @@
         },
         intro: {
           title: 'Ne üretiyoruz?',
-          body: 'Bizdavar Group, dijital hizmetler ve endüstriyel tedarikin yanı sıra <strong>özel donanım ve SaaS ürünleri</strong> de geliştirir. Fikri mülkiyet Bizdavar ekibine aittir; mühendislik Tebriz ve İstanbul\'da yapılır.',
+          body: 'Bizdavar Group, dijital hizmetler ve endüstriyel tedarikin yanı sıra <strong>özel donanım ve SaaS ürünleri</strong> de geliştirir. Fikri mülkiyet Bizdavar ekibine aittir; mühendislik Tebriz\'da yapılır.',
           ctaContact: 'Teklif ve sipariş',
           ctaPortfolio: 'Dijital portfolyo',
-          statProducts: '11+',
+          statProducts: '12+',
           statProductsLabel: 'ürün ve hat',
           statCats: '4',
           statCatsLabel: 'ana kategori',
@@ -225,19 +233,19 @@
         featured: {
           eyebrow: 'Canlı ürünler',
           title: 'Siparişe hazır ürün sayfaları',
-          desc: 'WhatsApp CRM, Accounting, BizSwap, BizTab ve BizClean — özel sayfa ve net teklif yolu.'
+          desc: 'WhatsApp CRM, Accounting, BizSwap, BizTab, BizClean ve BizPet — özel sayfa ve net teklif yolu.'
         },
         filterAll: 'Tümü',
         empty: 'Gösterilecek ürün yok.',
         catalog: {
           eyebrow: 'Tam katalog',
           title: 'Tüm Bizdavar mühendislik ürünleri',
-          desc: '11 ürün ve üretim hattı — kategoriye göre filtreleyin veya teklif isteyin.'
+          desc: '13 ürün ve üretim hattı — kategoriye göre filtreleyin veya teklif isteyin.'
         },
         supply: {
           eyebrow: 'Marka tedariki',
           title: 'Tedarik ettiğimiz endüstriyel markalar',
-          desc: 'VEGA, Prosense, Liqui Moly, Teltonika, Gamak, Digi System ve Teraoka — ayrı katalog, teknik danışmanlık ve şeffaf proforma.',
+          desc: 'VEGA, UWT, Prosense, Liqui Moly, Teltonika, Gamak, Digi System ve Teraoka — ayrı katalog, teknik danışmanlık ve şeffaf proforma.',
           cta: 'Sahip olunan ürün kataloğu',
           ctaContact: 'Marka tedarik teklifi'
         },
@@ -264,7 +272,9 @@
             bizswap: 'Token ön satış & swap',
             biztab: 'Temassız IoT termometre',
             bizclean: 'Otomatik el dezenfektanı',
+            bizpet: 'Isı pedi — ev ve araç',
             vega: 'Seviye ve basınç sensörü',
+            uwt: 'Silo ve tank seviye sensörü',
             prosense: 'Gaz ve alev dedektörü',
             teltonika: 'Fleet Telematics / GPS',
             liqui: 'Yağ ve katkı',
@@ -275,7 +285,7 @@
         },
         geoText: 'Sahip olunan ürünler ve endüstriyel marka tedariki — İran, Türkiye, Ermenistan ve Dubai ofislerinden teknik danışmanlık.',
         related: [
-          { title: 'VEGA tedariki', desc: 'Seviye ve basınç sensörleri' },
+          { title: 'VEGAPULS satın al', desc: 'İran seviye sensörü' },
           { title: 'Prosense tedariki', desc: 'Gaz ve alev dedektörü' },
           { title: 'Teltonika GPS', desc: 'Fleet Telematics 29$’dan' },
           { title: 'İletişim', desc: 'Ücretsiz danışmanlık' }
@@ -290,7 +300,7 @@
           software: { label: 'Yazılım ve SaaS', desc: 'FXGuard WhatsApp CRM ve Accounting, ayrıca BizSwap' },
           'iot-health': { label: 'IoT ve hijyen', desc: 'Termometre, dezenfektan ve temasız ekipman' },
           packaging: { label: 'Ambalaj ve vakum', desc: 'Vakum makineleri ve ambalaj hatları' },
-          medical: { label: 'Medikal ve PPE', desc: 'Maske ve ısı pedi üretim hatları' }
+          medical: { label: 'Medikal ve PPE', desc: 'BizPet ısı pedi (ev ve araç) ve maske üretim hatları' }
         },
         items: {
           bizswap: { name: 'BizSwap', title: 'Token ön satış & swap', desc: 'Web3 modülü — cüzdan bağlantısı, stablecoin-token swap, on-chain ön satış, slippage ve admin paneli (BEP-20 / RWA).', tags: ['DeFi', 'Web3', 'Token Swap'] },
@@ -298,6 +308,7 @@
           'fxguard-accounting': { name: 'Accounting', title: 'FXGuard Accounting', desc: 'Finans, döviz ve KOBİ ekipleri için muhasebe sistemi — FXGuard ürün ailesinin parçası.', tags: ['FXGuard', 'Accounting', 'Finance'] },
           biztab: { name: 'BizTab', title: 'Temasız duvar termometresi', desc: 'Tebriz\'deki ilk temasız duvar termometresi — 0,3°C altı hata, üniversite onayı.', tags: ['IoT', 'Temasız', 'Tebriz'] },
           bizclean: { name: 'BizClean', title: 'Hijyen ve dezenfeksiyon', desc: 'Otomatik el dezenfektan (BizClean V5) — Bizdavar üretimi; RINOTEX 1400 «Imen Sahand Padideh» park birimi; ISNA/IRIB basını.', tags: ['Hijyen', 'Otomatik', 'COVID'] },
+          bizpet: { name: 'BizPet', title: 'BizPet ısı pedi', desc: 'Asıl 1399 ürünü — ev, araç ve evcil hayvan yatağı için Padideh ısı pedi. BizSeat satış adı aynı üründür, ikinci hat değil.', tags: ['Isı pedi', 'Otomotiv', 'Tebriz', '1399'] },
           biztouch: { name: 'BizTouch', title: 'Temasız çözümler', desc: 'Giriş, hijyen ve kamusal alanlar için temasız cihazlar — Bizdavar tasarımı.', tags: ['Temasız', 'IoT', 'Giriş'] },
           bizroll: { name: 'BizRoll', title: 'Rulo ve ambalaj sistemleri', desc: 'Endüstriyel rulo ve ambalaj makineleri.', tags: ['Ambalaj', 'Rulo', 'Endüstriyel'] },
           'sealer-home': { name: 'Ev tipi vakum makinesi', title: 'Ev vakumu', desc: 'Ev ve küçük atölyeler için vakum/kapama makinesi.', tags: ['Vakum', 'Ev', 'Kapama'] },
@@ -317,7 +328,7 @@
       home: {
         ownedEyebrow: 'Bizdavar ürünleri',
         ownedTitle: 'Ne üretiyoruz',
-        ownedDesc: 'Dijital hizmetlerin yanı sıra Bizdavar ekibi özel makine ve üretim hatları mühendislik eder — BizTab\'dan ambalaj ve PPE hatlarına.',
+        ownedDesc: 'Dijital hizmetlerin yanı sıra Bizdavar kendi cihaz ve yazılımını da üretir — BizPet ısı pedi, BizTab, FXGuard ve BizSwap.',
         ownedCta: 'Tüm ürünleri gör'
       }
     },
@@ -327,7 +338,7 @@
         hero: {
           tag: 'Bizdavar engineering & manufacturing',
           title: 'Bizdavar products',
-          desc: 'Proprietary hardware, production lines and SaaS — designed and built by the Bizdavar team from Tabriz to Istanbul.',
+          desc: 'Proprietary hardware, production lines and SaaS — designed and built by the Bizdavar team in Tabriz.',
           ctaLive: 'Live products',
           ctaCatalog: 'Full catalog',
           ctaSupply: 'Supply brands',
@@ -340,10 +351,10 @@
         },
         intro: {
           title: 'What we build',
-          body: 'Beyond digital services and industrial supply, Bizdavar Group develops <strong>proprietary hardware and SaaS</strong>. IP stays with the Bizdavar team; engineering in Tabriz and Istanbul — for domestic and international markets.',
+          body: 'Beyond digital services and industrial supply, Bizdavar Group develops <strong>proprietary hardware and SaaS</strong>. IP stays with the Bizdavar team; engineering in Tabriz — for domestic and international markets.',
           ctaContact: 'Quote & order',
           ctaPortfolio: 'Digital portfolio',
-          statProducts: '11+',
+          statProducts: '12+',
           statProductsLabel: 'products & lines',
           statCats: '4',
           statCatsLabel: 'main categories',
@@ -353,19 +364,19 @@
         featured: {
           eyebrow: 'Live products',
           title: 'Ready product pages',
-          desc: 'WhatsApp CRM, Accounting, BizSwap, BizTab and BizClean — dedicated pages with a clear inquiry path.'
+          desc: 'WhatsApp CRM, Accounting, BizSwap, BizTab, BizClean and BizPet — dedicated pages with a clear inquiry path.'
         },
         filterAll: 'All',
         empty: 'No products to display.',
         catalog: {
           eyebrow: 'Full catalog',
           title: 'All engineered Bizdavar products',
-          desc: 'Eleven products and production lines — filter by category or request a quote.'
+          desc: 'Thirteen products and production lines — filter by category or request a quote.'
         },
         supply: {
           eyebrow: 'Brand supply',
           title: 'Industrial brands we supply',
-          desc: 'VEGA, Prosense, Liqui Moly, Teltonika, Gamak, Digi System and Teraoka — separate catalogs with technical consulting and transparent proformas.',
+          desc: 'VEGA, UWT, Prosense, Liqui Moly, Teltonika, Gamak, Digi System and Teraoka — separate catalogs with technical consulting and transparent proformas.',
           cta: 'Owned products catalog',
           ctaContact: 'Brand supply inquiry'
         },
@@ -392,7 +403,9 @@
             bizswap: 'Token presale & swap',
             biztab: 'Non-contact IoT thermometer',
             bizclean: 'Automatic hand sanitizer',
+            bizpet: 'Heating pad — home and car',
             vega: 'Level and pressure sensors',
+            uwt: 'Silo and tank level sensors',
             prosense: 'Gas and flame detectors',
             teltonika: 'Fleet Telematics / GPS',
             liqui: 'Oils and additives',
@@ -403,7 +416,7 @@
         },
         geoText: 'Owned products and industrial brand supply — technical multilingual consulting and Tabriz.',
         related: [
-          { title: 'VEGA supply', desc: 'Level and pressure sensors' },
+          { title: 'Buy VEGAPULS', desc: 'Iran level sensor' },
           { title: 'Prosense supply', desc: 'Gas and flame detectors' },
           { title: 'Teltonika GPS', desc: 'Fleet telematics from $29' },
           { title: 'Contact', desc: 'Free consultation' }
@@ -418,7 +431,7 @@
           software: { label: 'Software & SaaS', desc: 'FXGuard WhatsApp CRM and Accounting, plus BizSwap' },
           'iot-health': { label: 'IoT & hygiene', desc: 'Thermometers, sanitizers and contactless devices' },
           packaging: { label: 'Packaging & sealing', desc: 'Vacuum sealers and packaging lines' },
-          medical: { label: 'Medical & PPE', desc: 'Mask and heat pad production lines' }
+          medical: { label: 'Medical & PPE', desc: 'BizPet heating pad (home and car) and mask production lines' }
         },
         items: {
           bizswap: { name: 'BizSwap', title: 'Token presale & swap', desc: 'Web3 module — wallet connect, stablecoin-to-token swap, on-chain presale, slippage UI and admin panel for BEP-20 / RWA projects.', tags: ['DeFi', 'Web3', 'Token Swap'] },
@@ -426,6 +439,7 @@
           'fxguard-accounting': { name: 'Accounting', title: 'FXGuard Accounting', desc: 'Accounting system for finance, exchange and SME teams — part of the FXGuard product suite.', tags: ['FXGuard', 'Accounting', 'Finance'] },
           biztab: { name: 'BizTab', title: 'Non-contact wall thermometer', desc: 'First non-contact wall thermometer in Tabriz — under 0.3°C error, university validated.', tags: ['IoT', 'Contactless', 'Tabriz'] },
           bizclean: { name: 'BizClean', title: 'Hygiene & disinfection line', desc: 'Automatic hand sanitizer (BizClean V5) — Bizdavar production; RINOTEX 1400 via «Imen Sahand Padideh» park unit; ISNA & IRIB press.', tags: ['Hygiene', 'Automatic', 'COVID'] },
+          bizpet: { name: 'BizPet', title: 'BizPet heating pad', desc: 'The 1399 flagship Padideh heating pad for home, car and pet beds. BizSeat is the shop name for the same product, not a second line.', tags: ['Heating pad', 'Automotive', 'Tabriz', '1399'] },
           biztouch: { name: 'BizTouch', title: 'Contactless solutions', desc: 'Contactless devices for entrances, hygiene and public spaces — Bizdavar engineered.', tags: ['Contactless', 'IoT', 'Entrance'] },
           bizroll: { name: 'BizRoll', title: 'Roll & packaging systems', desc: 'Engineered roll and packaging machinery for industrial production.', tags: ['Packaging', 'Roll', 'Industrial'] },
           'sealer-home': { name: 'Home vacuum sealer', title: 'Domestic sealing', desc: 'Vacuum sealer designed for home use and small workshops.', tags: ['Vacuum', 'Home', 'Sealing'] },
@@ -445,7 +459,7 @@
       home: {
         ownedEyebrow: 'Bizdavar products',
         ownedTitle: 'What we manufacture',
-        ownedDesc: 'Alongside digital services, the Bizdavar team engineers proprietary machines and production lines — from BizTab to packaging and PPE equipment.',
+        ownedDesc: 'Alongside digital services, Bizdavar builds its own hardware and software — BizPet heating pad, BizTab, FXGuard and BizSwap.',
         ownedCta: 'View all products'
       }
     }

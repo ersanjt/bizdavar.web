@@ -119,8 +119,7 @@
         url: base
       },
       areaServed: [
-        { '@type': 'City', name: 'Tabriz', containedInPlace: { '@type': 'Country', name: 'Iran' } },
-        { '@type': 'City', name: 'Istanbul', containedInPlace: { '@type': 'Country', name: 'Turkey' } }
+        { '@type': 'City', name: 'Tabriz', containedInPlace: { '@type': 'Country', name: 'Iran' } }
       ],
       serviceType: ['CCTV installation', 'Building wiring', 'Cove lighting'],
       url: `${base}/pages/field-tech`,
@@ -138,8 +137,7 @@
       telephone: ft.tel || '+989364115151',
       availableLanguage: ['fa', 'tr', 'en', 'ru', 'ar'],
       areaServed: [
-        { '@type': 'City', name: 'Tabriz' },
-        { '@type': 'City', name: 'Istanbul' }
+        { '@type': 'City', name: 'Tabriz' }
       ]
     };
     if (typeof window.injectJsonLd === 'function') {
@@ -183,7 +181,9 @@
     });
 
     const img = document.getElementById('ftHeroImg');
-    if (img && p.hero?.imgAlt) img.setAttribute('alt', p.hero.imgAlt);
+    if (img && p.hero?.imgAlt) {
+      img.setAttribute('aria-label', p.hero.imgAlt);
+    }
 
     const phone = document.getElementById('ftPhoneLabel');
     const display = t('servicesPage.fieldTech.waHint', fieldCfg().phoneDisplay || '+98 936 411 5151');

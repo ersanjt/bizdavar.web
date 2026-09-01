@@ -1,10 +1,14 @@
 RewriteEngine On
 RewriteBase /api/
 
-# Block config
-<Files "config.php">
+# Secrets and installer — never serve over HTTP
+<FilesMatch "^(config\.php|config\.sample\.php|install\.php)$">
   Require all denied
-</Files>
+</FilesMatch>
 
+# Block direct hits to library PHP
+RewriteRule ^lib/ - [F,L]
+
+# Front controller
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php [QSA,L]

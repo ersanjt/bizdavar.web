@@ -38,6 +38,8 @@ function openMobileDrawer() {
 
     drawer.setAttribute('aria-hidden', 'false');
 
+    drawer.removeAttribute('inert');
+
   }
 
   if (overlay) overlay.classList.add('active');
@@ -92,6 +94,8 @@ function closeMobileDrawer() {
     drawer.classList.remove('open');
 
     drawer.setAttribute('aria-hidden', 'true');
+
+    drawer.setAttribute('inert', '');
 
   }
 
@@ -395,7 +399,7 @@ window.setupWhatsappLinks = function () {
   const waUrl = (num) => (window.BD_CTX?.buildWaUrl ? window.BD_CTX.buildWaUrl(num) : `https://wa.me/${num}?text=${encodeURIComponent(C.contact.whatsappMessage || '')}`);
 
   if (!channels.length && !C.contact.whatsapp) {
-    document.querySelectorAll('#homeWhatsapp').forEach(el => {
+    document.querySelectorAll('#homeWhatsapp, #homeWhatsappHero').forEach(el => {
       if (el) el.textContent = t('contactPage.quickContact', 'تماس سریع');
     });
     return;
@@ -404,7 +408,7 @@ window.setupWhatsappLinks = function () {
   const primaryNum = window.BD_CTX?.getPrimaryWhatsapp?.() || channels[0]?.whatsapp || C.contact.whatsapp;
   const primaryUrl = waUrl(primaryNum);
 
-  document.querySelectorAll('#homeWhatsapp').forEach(el => {
+  document.querySelectorAll('#homeWhatsapp, #homeWhatsappHero').forEach(el => {
     if (el) {
       el.href = primaryUrl;
       el.innerHTML = waBtnHtml(t('common.whatsapp', 'واتساپ'));
@@ -440,6 +444,11 @@ window.setupWhatsappLinks = function () {
 
 
 
+function cssAttrEscape(val) {
+  if (window.CSS && typeof CSS.escape === 'function') return CSS.escape(val);
+  return String(val).replace(/["\\]/g, '\\$&');
+}
+
 function prefillContactFromQuery() {
   const form = document.getElementById('contactForm');
   if (!form) return;
@@ -449,7 +458,7 @@ function prefillContactFromQuery() {
 
   if (params.get('service')) {
     const val = params.get('service');
-    const opt = form.service.querySelector(`option[value="${val}"]`);
+    const opt = form.service.querySelector(`option[value="${cssAttrEscape(val)}"]`);
     if (opt) form.service.value = val;
   }
 
@@ -469,6 +478,10 @@ function prefillContactFromQuery() {
       ? window.BIZDAVAR_I18N.t('contactPage.productInquiry', '')
       : '') || 'درخواست استعلام قیمت و تامین {product}.\n\nشرایط کاربرد:\nتعداد مورد نیاز:\n';
     form.message.value = tpl.replace('{product}', product);
+    if (!params.get('service') && /vega|prosense|teltonika|liqui|gamak|uwt|digi|teraoka/i.test(product)) {
+      const industrial = form.service.querySelector('option[value="industrial"]');
+      if (industrial) form.service.value = 'industrial';
+    }
   }
 }
 
@@ -567,7 +580,8 @@ function initContactForm() {
             message: data.message,
             locale: window.BIZDAVAR_I18N?.locale || 'fa',
             pageUrl: window.location.href,
-            source: 'contact-form'
+            source: 'contact-form',
+            website: form.website ? form.website.value : ''
           })
         });
         const json = await res.json().catch(() => ({}));
@@ -652,7 +666,6 @@ function initContactForm() {
       'پیام شما برای واتساپ آماده شد. اگر پنجره باز نشد، از دکمه‌های واتساپ همین صفحه استفاده کنید.',
       null
     );
-    form.reset();
 
   });
 

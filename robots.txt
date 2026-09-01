@@ -4,16 +4,34 @@
 User-agent: *
 Allow: /
 
-# SEO/i18n boot scripts (needed for Google to see per-locale title, canonical, hreflang)
-Allow: /assets/scripts/i18n/
-
-# Other JS/CSS bundles — not indexable pages
-Disallow: /assets/scripts/
-Disallow: /assets/styles/
-
-# Non-public areas
+# Private surfaces
 Disallow: /admin/
 Disallow: /api/
+
+# AI / answer-engine crawlers — same public content as Google
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
 
 Sitemap: https://bizdavar.com/sitemap.xml
 

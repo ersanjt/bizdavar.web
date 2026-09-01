@@ -6,7 +6,7 @@ const CLEAN = 'e2081e4';
 const FILES = [
   'pages/contact.html', 'pages/services.html', 'pages/products.html', 'pages/privacy.html',
   'pages/fast.html', 'pages/blog.html', 'pages/portfolio.html', 'pages/vega.html', 'pages/prosense.html',
-  'pages/teltonika.html', 'pages/gamak.html', 'pages/teraoka.html', 'pages/digi-system.html',
+  'pages/teltonika.html', 'pages/gamak.html', 'pages/uwt.html', 'pages/teraoka.html', 'pages/digi-system.html',
   'pages/bz-diamond.html', 'pages/biztejarat.html', 'pages/biztab.html', 'pages/bizsanitizer-v5.html',
   'pages/fxguard.html', 'pages/bizswap.html'
 ];

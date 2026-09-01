@@ -12,6 +12,7 @@ window.BIZDAVAR_CONFIG = {
   routes: {
     home: 'index.html',
     about: 'pages/about.html',
+    gallery: 'pages/gallery.html',
     services: 'pages/services.html',
     portfolio: 'pages/portfolio.html',
     fast: 'pages/fast.html',
@@ -26,6 +27,8 @@ window.BIZDAVAR_CONFIG = {
     supplifyTrade: 'pages/supplify-trade.html',
     kayaOne: 'pages/kaya-one.html',
     smmTurk: 'pages/smm-turk.html',
+    marvispace: 'pages/marvispace.html',
+    marviSociety: 'pages/marvi-society.html',
     fxguardExchange: 'pages/fxguard-exchange.html',
     biztejarat: 'pages/biztejarat.html',
     biztab: 'pages/biztab.html',
@@ -37,6 +40,7 @@ window.BIZDAVAR_CONFIG = {
     bizswap: 'pages/bizswap.html',
     products: 'pages/products.html',
     gamak: 'pages/gamak.html',
+    uwt: 'pages/uwt.html',
     digiSystem: 'pages/digi-system.html',
     teraoka: 'pages/teraoka.html',
     liquiMoly: 'pages/liqui-moly.html',
@@ -65,7 +69,7 @@ window.BIZDAVAR_CONFIG = {
       page: 'biztab',
       labelKey: 'nav.productBiztab',
       descKey: 'nav.productBiztabDesc',
-      image: 'assets/images/products/biztab/biztab-hero.jpg'
+      image: 'assets/images/gallery/expo-tabrizu-incubator.jpg'
     },
     tabs: [
       {
@@ -234,9 +238,9 @@ window.BIZDAVAR_CONFIG = {
     /** Same wordmark inverted for dark backgrounds (footer) */
     logoOnDark: 'assets/images/brand/bizdavar-logo-light.png',
     logoAlt: 'Bizdavar — official logo',
-    ogImage: 'assets/images/content/about-hero.svg',
+    ogImage: 'assets/images/content/about-hero.jpg',
     heroImage: 'assets/images/content/hero-home.svg',
-    aboutImage: 'assets/images/content/about-hero.svg'
+    aboutImage: 'assets/images/content/about-hero.jpg'
   },
 
   /** Formspree — پولی/محدود؛ خاموش. لید رایگان = واتساپ + ایمیل */
@@ -266,7 +270,7 @@ window.BIZDAVAR_CONFIG = {
     whatsappMessage: 'سلام، از وبسایت bizdavar.com پیام می‌دهم.',
     channels: [
       { id: 'ir', label: 'واتساپ فارسی', display: '+98 930 588 0135', tel: '+989305880135', whatsapp: '989305880135', primary: true },
-      { id: 'tr', label: 'ترکیه', display: '+90 501 067 6486', tel: '+905010676486', whatsapp: '905010676486' },
+      { id: 'tr', label: 'واتساپ فروش', display: '+90 501 067 6486', tel: '+905010676486', whatsapp: '905010676486' },
       {
         id: 'field',
         label: 'خدمات فنی',
@@ -295,8 +299,8 @@ window.BIZDAVAR_CONFIG = {
     whatsapp: '989364115151',
     phoneDisplay: '+98 936 411 5151',
     tel: '+989364115151',
-    cities: ['تبریز', 'استانبول'],
-    citiesEn: ['Tabriz', 'Istanbul'],
+    cities: ['تبریز'],
+    citiesEn: ['Tabriz'],
     whatsappMessage: 'سلام، برای خدمات فنی (دوربین مدار بسته / سیم‌کشی / نورمخفی) از وبسایت bizdavar.com پیام می‌دهم.'
   },
 
@@ -397,11 +401,113 @@ window.BIZDAVAR_CONFIG = {
 
   blogPosts: [
     {
+      slug: 'pages/articles/website-design-us-eu.html',
+      title: 'طراحی سایت انگلیسی برای اروپا و آمریکا — فاکتور دلار یا یورو',
+      excerpt: 'پلن ۵روزه از ۹۹ دلار، پروژه سفارشی، Stripe و فاکتور USD/EUR برای مشتری آمریکا و اروپا.',
+      category: 'طراحی وب',
+      catId: 'web',
+      date: '2026-08-29',
+      image: 'assets/images/content/services-web-mockup.svg',
+      relatedService: 'pages/services.html#web-design'
+    },
+    {
+      slug: 'pages/articles/digital-marketing-us-eu.html',
+      title: 'بازاریابی دیجیتال برای بازار آمریکا و اروپا — بودجه دلار و یورو',
+      excerpt: 'Google Ads، Meta و LinkedIn برای مخاطب US/EU با فاکتور دلار یا یورو و گزارش GA4.',
+      category: 'بازاریابی دیجیتال',
+      catId: 'digital',
+      date: '2026-08-29',
+      image: 'assets/images/content/services-dm-visual.svg',
+      relatedService: 'pages/services.html#digital-marketing'
+    },
+    {
+      slug: 'pages/articles/buy-vegapuls-iran.html',
+      title: 'خرید VEGAPULS 6X در ایران — قیمت، کد سفارش و استعلام',
+      excerpt: 'چطور سنسور سطح راداری اصل برای مخزن ایران بخرید — پیش‌فاکتور فارسی و واتساپ.',
+      category: 'تجهیزات صنعتی',
+      catId: 'industrial',
+      date: '2026-08-29',
+      image: 'assets/images/vega/product-vegapuls-6x-photo.webp',
+      relatedService: 'pages/vega.html'
+    },
+    {
+      slug: 'pages/articles/vega-quote-iran.html',
+      title: 'استعلام قیمت سنسور VEGA در ایران — چه اطلاعاتی بفرستید',
+      excerpt: 'چک‌لیست خریدار: مخزن، رسانه، Ex/SIL و عکس پلاک برای پیش‌فاکتور دقیق.',
+      category: 'تجهیزات صنعتی',
+      catId: 'industrial',
+      date: '2026-08-29',
+      image: 'assets/images/vega/product-vegabar-39.png',
+      relatedService: 'pages/vega.html'
+    },
+    {
+      slug: 'pages/articles/buy-prosense-iran.html',
+      title: 'خرید دتکتور گاز Prosense در ایران — PQ، SafeVader و SIL',
+      excerpt: 'دتکتور گاز صنعتی اصل برای نفت، پتروشیمی و HVAC — استعلام واتساپ فارسی.',
+      category: 'تجهیزات صنعتی',
+      catId: 'industrial',
+      date: '2026-08-28',
+      image: 'assets/images/prosense/series-pq.webp',
+      relatedService: 'pages/prosense.html'
+    },
+    {
+      slug: 'pages/articles/industrial-trade-iran.html',
+      title: 'بازرگانی تجهیزات صنعتی در ایران — VEGA، Prosense و برندهای اصل',
+      excerpt: 'یک نقطه تماس فارسی برای ابزار دقیق، ایمنی گاز، ردیاب و روغن صنعتی.',
+      category: 'تجهیزات صنعتی',
+      catId: 'industrial',
+      date: '2026-08-27',
+      image: 'assets/images/content/supply-hero.jpg',
+      relatedService: 'pages/products.html#supply'
+    },
+    {
+      slug: 'pages/articles/buy-teltonika-iran.html',
+      title: 'خرید ردیاب Teltonika FMB920 در ایران — از ۲۹ دلار',
+      excerpt: 'ردیاب GPS اصل برای ناوگان ایران — FMB920، FMC650 و DualCam.',
+      category: 'تجهیزات صنعتی',
+      catId: 'industrial',
+      date: '2026-08-26',
+      image: 'assets/images/partners/teltonika.png',
+      relatedService: 'pages/teltonika.html'
+    },
+    {
+      slug: 'pages/articles/buy-gamak-iran.html',
+      title: 'خرید الکتروموتور Gamak در ایران — توان، فلنج و استعلام',
+      excerpt: 'موتور اصل برای پمپ، فن و خط تولید — kW، دور، B3/B5 و پیش‌فاکتور فارسی.',
+      category: 'تجهیزات صنعتی',
+      catId: 'industrial',
+      date: '2026-08-29',
+      image: 'assets/images/gamak/category-three-phase.webp',
+      relatedService: 'pages/gamak.html'
+    },
+    {
+      slug: 'pages/articles/buy-digi-system-iran.html',
+      title: 'خرید ترازو و POS Digi System در ایران — فروشگاه و صندوق',
+      excerpt: 'ترازو و صندوق اصل برای سوپرمارکت ایران — نوع فروشگاه، تعداد صندوق و پیش‌فاکتور فارسی.',
+      category: 'تجهیزات صنعتی',
+      catId: 'industrial',
+      date: '2026-08-29',
+      image: 'assets/images/digi-system/hero/digi-retail-hero.webp',
+      relatedService: 'pages/digi-system.html'
+    },
+    {
+      slug: 'pages/articles/buy-teraoka-iran.html',
+      title: 'خرید ترازو Teraoka در ایران — deli، POS و برچسب‌زن',
+      excerpt: 'ترازو و برچسب‌زن اصل Teraoka Seiko برای فروشگاه و آشپزخانه — پیش‌فاکتور فارسی.',
+      category: 'تجهیزات صنعتی',
+      catId: 'industrial',
+      date: '2026-08-29',
+      image: 'assets/images/teraoka/hero/teraoka-retail-hero.webp',
+      relatedService: 'pages/teraoka.html'
+    },
+    {
       slug: 'pages/articles/vega-supply-iran.html',
       title: 'تامین سنسور VEGA برای پروژه‌های ایران — از مشاوره تا تحویل',
       excerpt: 'مشاوره فارسی، پیش‌فاکتور شفاف و لجستیک بین‌المللی VEGA اصل برای پروژه‌های صنعتی.',
       category: 'تجهیزات صنعتی',
+      catId: 'industrial',
       date: '2026-07-29',
+      image: 'assets/images/vega/slides/value-process-safety.jpg',
       relatedService: 'pages/vega.html'
     },
     {
@@ -409,7 +515,9 @@ window.BIZDAVAR_CONFIG = {
       title: 'وبسایت چندزبانه برای بازار ایران و ترکیه',
       excerpt: 'hreflang، اعتماد محلی و تحویل سریع برای کسب‌وکارهای دو بازاری.',
       category: 'طراحی وب',
+      catId: 'web',
       date: '2026-07-29',
+      image: 'assets/images/content/services-web-mockup.svg',
       relatedService: 'pages/fast.html'
     },
     {
@@ -417,7 +525,9 @@ window.BIZDAVAR_CONFIG = {
       title: 'دیجیتال مارکتینگ چیست؟ — راهنمای کامل برای کسب‌وکارها',
       excerpt: 'تعریف بازاریابی دیجیتال، کانال‌ها و نقش آن در رشد فروش آنلاین.',
       category: 'بازاریابی دیجیتال',
+      catId: 'digital',
       date: '2025-02-10',
+      image: 'assets/images/content/network-map.svg',
       relatedService: 'pages/services.html#digital-marketing'
     },
     {
@@ -425,7 +535,9 @@ window.BIZDAVAR_CONFIG = {
       title: 'چگونه بازاریابی دیجیتال فروش را افزایش می‌دهد؟',
       excerpt: 'راهکارهای عملی برای تبدیل بازدیدکننده به مشتری.',
       category: 'بازاریابی دیجیتال',
+      catId: 'digital',
       date: '2025-04-01',
+      image: 'assets/images/content/services-dm-visual.svg',
       relatedService: 'pages/services.html#digital-marketing'
     },
     {
@@ -433,7 +545,9 @@ window.BIZDAVAR_CONFIG = {
       title: 'مدیریت شبکه‌های اجتماعی — استراتژی SMM برای برندها',
       excerpt: 'تولید محتوا، تقویم انتشار و تبلیغات هدفمند در اینستاگرام و لینکدین.',
       category: 'مدیریت SMM',
+      catId: 'digital',
       date: '2025-03-05',
+      image: 'assets/images/content/services-smm-mockup.svg',
       relatedService: 'pages/services.html#smm'
     },
     {
@@ -465,7 +579,9 @@ window.BIZDAVAR_CONFIG = {
       title: 'انتخاب سنسور صنعتی مناسب — راهنمای VEGA و ابزار دقیق',
       excerpt: 'نکات مهم در تامین تجهیزات VEGA و ابزار دقیق.',
       category: 'تجهیزات صنعتی',
+      catId: 'industrial',
       date: '2025-03-20',
+      image: 'assets/images/vega/blog-industrial-sensors.jpg',
       relatedService: 'pages/products.html#supply'
     },
     {
@@ -473,7 +589,9 @@ window.BIZDAVAR_CONFIG = {
       title: 'بیزدوار گروپ چیست؟ — تاریخچه، تیم و حوزه‌های فعالیت',
       excerpt: 'شناسنامه کامل بیزدوار: بنیان‌گذار، ۱۱ کشور، ۱۰۰+ پروژه و اکوسیستم برندها.',
       category: 'درباره شرکت',
+      catId: 'company',
       date: '2025-06-01',
+      image: 'assets/images/content/about-hero.jpg',
       relatedService: 'pages/about.html'
     },
     {
@@ -481,7 +599,9 @@ window.BIZDAVAR_CONFIG = {
       title: 'BizTab — اولین دماسنج دیواری غیرتماسی تبریز',
       excerpt: 'محصول اختصاصی تیم بیزدوار — دقت کمتر از ۰.۳ درجه، تأیید دانشگاه تبریز.',
       category: 'محصول اختصاصی',
+      catId: 'products',
       date: '2020-03-16',
+      image: 'assets/images/gallery/expo-tabrizu-incubator.jpg',
       relatedService: 'pages/biztab.html'
     },
     {
@@ -489,8 +609,80 @@ window.BIZDAVAR_CONFIG = {
       title: 'دستگاه ضدعفونی دست بیزدوار V5',
       excerpt: 'سنسور التراسونیک و پاشش خودکار — مهندسی‌شده توسط تیم بیزدوار.',
       category: 'محصول اختصاصی',
+      catId: 'products',
       date: '2021-06-01',
+      image: 'assets/images/gallery/expo-imen-booth.jpg',
       relatedService: 'pages/bizsanitizer-v5.html'
+    },
+    {
+      slug: 'pages/bizpet.html',
+      title: 'BizPet — پد حرارتی بیز پت',
+      excerpt: 'طراحی و تولید در مرکز رشد فناوری دانشگاه تبریز با همکاری ایمن سهند پدیده.',
+      category: 'محصول اختصاصی',
+      catId: 'products',
+      date: '2020-09-01',
+      image: 'assets/images/products/bizpet/bizpet-grey.jpg',
+      relatedService: 'pages/bizpet.html'
+    },
+    {
+      slug: 'pages/articles/marvi-society-ios-app.html',
+      title: 'توسعه اپ iOS — نمونه‌کار Marvi Society و انتشار App Store',
+      excerpt: 'از UI/UX تا Swift و App Store — کلاب creator دعوت‌محور در استانبول.',
+      category: 'طراحی اپ',
+      catId: 'web',
+      date: '2026-08-01',
+      image: 'assets/images/content/marvi-society/screen-discover.jpg',
+      relatedService: 'pages/marvi-society.html'
+    },
+    {
+      slug: 'pages/articles/prosense-gas-detection.html',
+      title: 'تامین دتکتور گاز Prosense — از انتخاب مدل تا نصب',
+      excerpt: 'راهنمای دتکتور گاز و شعله برای نفت، پتروشیمی و HVAC — استعلام B2B.',
+      category: 'تجهیزات صنعتی',
+      catId: 'industrial',
+      date: '2026-06-15',
+      image: 'assets/images/prosense/slides/pq-sil.jpg',
+      relatedService: 'pages/prosense.html'
+    },
+    {
+      slug: 'pages/articles/liqui-moly-supply-iran.html',
+      title: 'تامین Liqui Moly آلمان — روغن و افزودنی اصل',
+      excerpt: 'مسیر استعلام روغن موتور و افزودنی برای ناوگان و کارگاه — B2B بیزدوار.',
+      category: 'تجهیزات صنعتی',
+      catId: 'industrial',
+      date: '2026-06-01',
+      image: 'assets/images/liqui-moly/octane-plus.jpg',
+      relatedService: 'pages/liqui-moly.html'
+    },
+    {
+      slug: 'pages/articles/field-tech-services.html',
+      title: 'خدمات فنی میدانی بیزدوار — تبریز',
+      excerpt: 'دوربین، سیم‌کشی و نورمخفی — هماهنگی واتساپ و اجرای میدانی.',
+      category: 'خدمات فنی',
+      catId: 'company',
+      date: '2026-05-10',
+      image: 'assets/images/content/field-tech-hero.svg',
+      relatedService: 'pages/field-tech.html'
+    },
+    {
+      slug: 'pages/articles/local-seo-iran.html',
+      title: 'سئو محلی برای کسب‌وکار ایران — Google Maps',
+      excerpt: 'Google Business Profile، NAP یکسان و صفحات محلی — مسیر عملی رشد.',
+      category: 'بازاریابی دیجیتال',
+      catId: 'digital',
+      date: '2026-04-20',
+      image: 'assets/images/content/network-map.svg',
+      relatedService: 'pages/services.html#digital-marketing'
+    },
+    {
+      slug: 'pages/fxguard-exchange.html',
+      title: 'FXGuard Exchange — پلتفرم صرافی و OTC',
+      excerpt: 'نمونه‌کار فین‌تک: KYC، کیف پول، OTC و پنل ادمین — توسعه بیزدوار.',
+      category: 'فین‌تک',
+      catId: 'web',
+      date: '2024-11-01',
+      image: 'assets/images/products/fxguard/fxguard-hero.svg',
+      relatedService: 'pages/fxguard-exchange.html'
     }
   ],
 
@@ -505,9 +697,11 @@ window.BIZDAVAR_CONFIG = {
     { name: 'ZedPay', url: 'https://zed-pay.com', logo: 'assets/images/partners/zedpay.png', role: 'ecosystem' },
     { name: 'Netinode', url: 'https://netinode.net/', logo: 'assets/images/partners/netinode.svg', role: 'ecosystem' },
     { name: 'BZ Diamond', url: 'pages/bz-diamond.html', logo: 'assets/images/partners/zeddiamond.png', role: 'case-study' },
+    { name: 'Marvispace', url: 'pages/marvispace.html', logo: 'assets/images/partners/marvispace.svg', role: 'case-study' },
     { name: 'Supplify Trade', url: 'pages/supplify-trade.html', logo: 'assets/images/partners/supplify-trade.svg', role: 'case-study' },
     { name: 'Kaya One AG', url: 'pages/kaya-one.html', logo: 'assets/images/partners/kaya-one.svg', role: 'case-study' },
     { name: 'SMM Turk', url: 'pages/smm-turk.html', logo: 'assets/images/partners/smm-turk.svg', role: 'case-study' },
+    { name: 'Marvi Society', url: 'pages/marvi-society.html', logo: 'assets/images/partners/marvi-society.png', role: 'case-study' },
     { name: 'FXGuard Exchange', url: 'pages/fxguard-exchange.html', logo: 'assets/images/partners/fxguard-exchange.svg', role: 'case-study' },
     { name: 'Biztejarat', url: 'pages/biztejarat.html', logo: 'assets/images/partners/biztejarat.svg', role: 'case-study' },
     { name: 'Marvelous Holding', url: 'https://marvelousholding.com', logo: 'assets/images/partners/marvelous-holding.png', role: 'client' },
@@ -641,14 +835,15 @@ window.BIZDAVAR_CONFIG = {
     { name: 'Bear Event', domain: 'bearevent.co', category: 'رویداد و بلیت', role: 'ecosystem', internal: false, logo: 'assets/images/partners/bear-event.png' },
     { name: 'Netinode', domain: 'netinode.net', url: 'https://shop.netinode.net/', category: 'دامنه، هاست و سرور', role: 'case-study', internal: false, logo: 'assets/images/partners/netinode.svg', note: 'زیرساخت خود بیزدوار — فروش دامنه و هاست در shop.netinode.net · معرفی سرویس‌ها در netinode.net' },
     { name: 'Fast Web Studio', domain: 'bizdavar.com', category: 'طراحی سایت', role: 'case-study', internal: true, slug: 'pages/fast.html', logo: 'assets/images/partners/fast-studio.png', note: 'محصول اختصاصی بیزدوار — طراحی سایت ۵ روزه' },
-    { name: 'BizTab', domain: 'nasrnews.ir', url: 'https://nasrnews.ir/print/16727/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D9%88-%D8%B3%D8%A7%D8%AE%D8%AA-%D8%A7%D9%88%D9%84%DB%8C%D9%86-%D8%AF%D9%85%D8%A7%D8%B3%D9%86%D8%AC-%D8%AF%DB%8C%D9%88%D8%A7%D8%B1%DB%8C-%D8%BA%DB%8C%D8%B1%D8%AA%D9%85%D8%A7%D8%B3%DB%8C-%D8%AF%D8%B1-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2', category: 'محصول اختصاصی / IoT و سلامت', role: 'case-study', internal: true, slug: 'pages/biztab.html', logo: 'assets/images/products/biztab/biztab-hero.jpg', note: 'محصول اختصاصی — اولین دماسنج دیواری غیرتماسی تبریز، توسعه تیم بیزدوار' },
-    { name: 'BizClean V5', domain: 'digikala.com', url: 'https://www.digikala.com/product/dkp-3730222/', category: 'محصول اختصاصی / بهداشت', role: 'case-study', internal: true, slug: 'pages/bizsanitizer-v5.html', logo: 'assets/images/products/bizsanitizer/bizclean-v5.png', note: 'محصول اختصاصی — دستگاه ضدعفونی دست V5، توسعه در دوران کرونا' },
+    { name: 'BizTab', domain: 'nasrnews.ir', url: 'https://nasrnews.ir/print/16727/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D9%88-%D8%B3%D8%A7%D8%AE%D8%AA-%D8%A7%D9%88%D9%84%DB%8C%D9%86-%D8%AF%D9%85%D8%A7%D8%B3%D9%86%D8%AC-%D8%AF%DB%8C%D9%88%D8%A7%D8%B1%DB%8C-%D8%BA%DB%8C%D8%B1%D8%AA%D9%85%D8%A7%D8%B3%DB%8C-%D8%AF%D8%B1-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2', category: 'محصول اختصاصی / IoT و سلامت', role: 'case-study', internal: true, slug: 'pages/biztab.html', logo: 'assets/images/products/biztab/biztab-logo.svg', note: 'محصول اختصاصی — اولین دماسنج دیواری غیرتماسی تبریز، توسعه تیم بیزدوار' },
+    { name: 'BizClean V5', domain: 'digikala.com', url: 'https://www.digikala.com/product/dkp-3730222/', category: 'محصول اختصاصی / بهداشت', role: 'case-study', internal: true, slug: 'pages/bizsanitizer-v5.html', logo: 'assets/images/products/bizsanitizer/bizsanitizer-logo.svg', note: 'محصول اختصاصی — دستگاه ضدعفونی دست V5، توسعه در دوران کرونا' },
+    { name: 'BizPet', domain: 'digikala.com', url: 'https://www.digikala.com/product/dkp-7694589/', category: 'محصول اختصاصی / پد حرارتی', role: 'case-study', internal: true, slug: 'pages/bizpet.html', logo: 'assets/images/products/bizpet/bizpet-grey.jpg', note: 'محصول اصلی ۱۳۹۹ — پد حرارتی پدیده؛ همان کالا به‌صورت پشتی خودرو در دیجی‌کالا' },
     { name: 'FXGuard', domain: 'fxguard.io', url: 'https://fxguard.io/', category: 'WhatsApp CRM', role: 'case-study', internal: true, slug: 'pages/fxguard.html', logo: 'assets/images/products/fxguard/fxguard-logo.svg', note: 'FXGuard WhatsApp CRM — اینباکس تیمی، تیکت، شعب و ۲FA؛ Cloud از $49/ماه، لایسنس یا Managed — فروش در fxguard.io' },
     { name: 'BizSwap', domain: 'Web3 · DeFi Module', category: 'Web3 / پیش‌فروش و سواپ توکن', role: 'case-study', internal: true, slug: 'pages/bizswap.html', logo: 'assets/images/products/bizswap/bizswap-logo.svg', note: 'نمونه‌کار — ماژول پیش‌فروش و سواپ on-chain (BEP-20)، اتصال کیف پول و UI DeFi؛ توسعه تیم بیزدوار' },
     { name: 'FXGuard Exchange', domain: 'exchange.fxguard.io', url: 'https://exchange.fxguard.io/', category: 'طراحی وب / صرافی و فین‌تک', role: 'case-study', internal: true, slug: 'pages/fxguard-exchange.html', logo: 'assets/images/partners/fxguard-exchange.svg', note: 'نمونه‌کار — پلتفرم تبادل تومان و لیر با نرخ زنده، KYC و پیگیری سفارش' },
     { name: 'FXGuard Accounting', domain: 'accounting.fxguard.io', url: 'https://accounting.fxguard.io/', category: 'نرم‌افزار حسابداری / فینانس', role: 'case-study', internal: true, slug: 'pages/fxguard-accounting.html', logo: 'assets/images/partners/fxguard-accounting.svg', note: 'محصول FXGuard — سامانه حسابداری برای تیم‌های مالی، صرافی و SME؛ بخشی از سوئیت fxguard.io' },
-    { name: 'Marvispace', domain: 'marvispace.com', url: 'https://marvispace.com', category: 'طراحی وب / فروشگاه اختصاصی', role: 'case-study', internal: false, logo: 'assets/images/partners/marvispace.svg', note: 'نمونه‌کار — فروشگاه آنلاین اختصاصی با داشبورد ادمین، مدیریت محصول و محتوا' },
-    { name: 'Marvi Society', domain: 'marvisociety.com', url: 'https://marvisociety.com', appStoreUrl: 'https://apps.apple.com/us/app/marvi-society/id6783450762', category: 'توسعه اپ موبایل / lifestyle و creator', role: 'case-study', internal: false, logo: 'assets/images/partners/marvi-society.svg', note: 'نمونه‌کار — طراحی، برنامه‌نویسی و راه‌اندازی صفر تا صد اپ iOS؛ کلاب دعوت‌محور همکاری creator و مکان تأییدشده در استانبول — کشف مکان، check-in، ارسال مدرک بازدید، پروفایل TR/EN؛ منتشر در App Store' },
+    { name: 'Marvispace', domain: 'marvispace.com', url: 'https://marvispace.com/', category: 'طراحی وب / فروشگاه محصولات چرمی', role: 'case-study', internal: true, slug: 'pages/marvispace.html', logo: 'assets/images/partners/marvispace.svg', note: 'نمونه‌کار برنامه‌نویسی و توسعه فروشگاه آنلاین اختصاصی برای محصولات چرمی — کاتالوگ، سبد خرید و پنل مدیریت' },
+    { name: 'Marvi Society', domain: 'marvisociety.com', url: 'https://marvisociety.com', appStoreUrl: 'https://apps.apple.com/us/app/marvi-society/id6783450762', category: 'توسعه اپ موبایل / lifestyle و creator', role: 'case-study', internal: true, slug: 'pages/marvi-society.html', logo: 'assets/images/partners/marvi-society.png', note: 'نمونه‌کار — طراحی، برنامه‌نویسی و راه‌اندازی صفر تا صد اپ iOS؛ کلاب دعوت‌محور همکاری creator و مکان تأییدشده در استانبول — کشف مکان، check-in، ارسال مدرک بازدید، پروفایل TR/EN؛ منتشر در App Store' },
     { name: 'GooPay AI', domain: 'goopay.ai', category: 'هوش مصنوعی / نرم‌افزار اختصاصی', role: 'case-study', internal: false, logo: 'assets/images/partners/goopay-ai.svg', note: 'نمونه‌کار — طراحی و برنامه‌نویسی اختصاصی سیستم‌های هوش مصنوعی' },
     { name: 'Grafik Travel', domain: 'grafiktravel.com', url: 'https://grafiktravel.com/', category: 'طراحی وب / گردشگری و MICE', role: 'case-study', internal: false, logo: 'assets/images/partners/grafik-travel.png', note: 'نمونه‌کار — طراحی وبسایت تخصصی برای مجموعه گردشگری و خدمات سازمانی' },
     { name: 'Biztejarat', domain: 'instagram.com/biztejarat', category: 'مدیریت SMM / اینستاگرام', role: 'case-study', internal: true, slug: 'pages/biztejarat.html', archived: true, logo: 'assets/images/partners/biztejarat.svg', note: 'پروژه گذشته — این کسب‌وکار فعلاً غیرفعال شده است' },

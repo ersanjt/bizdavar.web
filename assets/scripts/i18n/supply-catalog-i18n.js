@@ -1,6 +1,6 @@
 /**
 
- * Supply catalogs — Gamak, Digi System, Teraoka, Teltonika, Prosense, VEGA (en / tr)
+ * Supply catalogs — Gamak, UWT, Digi System, Teraoka, Teltonika, Prosense, VEGA (en / tr)
 
  * Merged by index in getSupplyCatalog (i18n.js)
 
@@ -1548,15 +1548,17 @@
 
       origin: 'Kartal, Istanbul — Turkey',
 
+      officialUrl: 'https://www.prosense.com.tr/?lang=en',
+
       description: 'Bizdavar Group supplies Prosense gas and flame detectors with SIL/M1/EN certification. Model selection consulting in Farsi (WhatsApp), transparent proforma and shipping coordination for projects in Iran and for Persian-speaking buyers abroad.',
 
       heroStats: [
 
-        { label: 'Detectable gases' },
+        { value: '1000+', label: 'Detectable gases' },
 
-        { label: 'Safety certification' },
+        { value: 'SIL2/3', label: 'Safety certification' },
 
-        { label: 'Years of supply experience' }
+        { value: '12+', label: 'Years of supply experience' }
 
       ]
 
@@ -1630,7 +1632,7 @@
 
       { name: 'PQ Series', tag: 'SIL2/3', hint: 'Process safety · H2S / LEL / O2' },
 
-      { name: 'SafeVader', tag: 'Process Safety', hint: 'Toxic and flammable gases' },
+      { name: 'SafeVader', tag: 'Safe Area', hint: 'Labs, HVAC, hydrogen rooms' },
 
       { name: 'SOMA M1', tag: 'Mining', hint: 'Tunnels and underground mines' },
 
@@ -1642,7 +1644,7 @@
 
       { title: 'PQ Series — SIL2 / SIL3', desc: 'Best-selling fixed detector — SIL certificate for petrochemical and refinery process safety', useCase: 'H2S, LEL, O2 — Ex environment and SIS projects', badge: 'SIL' },
 
-      { title: 'SafeVader Series', desc: 'Process safety detector — common choice for HSE and automation units', useCase: 'Toxic and flammable gases in industrial facilities', badge: 'Process Safety' },
+      { title: 'SafeVader Series', desc: 'Indoor / safe-area detector — LCD, 4–20 mA + RS485 Modbus and onboard relays. For labs, hospitals, HVAC, refrigerant and hydrogen rooms — not an Ex/SIL process detector.', useCase: 'Non-Ex indoor areas · laboratories, HVAC, hospitals, battery rooms', badge: 'Safe Area' },
 
       { title: 'Marine & Offshore', desc: 'Marine certification — H2S and CH4 systems for vessels and offshore platforms', useCase: 'Shipbuilding, offshore platforms, ports', badge: 'Marine' },
 
@@ -1650,7 +1652,7 @@
 
       { title: 'PQD VOC', desc: 'VOC detector — reduced risk from volatile organic compounds', useCase: 'Chemical, paint and petrochemical industries', badge: 'VOC' },
 
-      { title: 'TÜRKAK — Calibration', desc: 'Calibration per TS EN ISO/IEC 17025 — AB-0260-K accredited laboratory', useCase: 'Periodic detector maintenance — coordinated through Bizdavar', badge: 'Calibration' },
+      { title: 'TÜRKAK — Calibration', desc: 'Calibration per TS EN ISO/IEC 17025 — AB-2060-K accredited laboratory', useCase: 'Periodic detector maintenance — coordinated through Bizdavar', badge: 'Calibration' },
 
       { title: 'SOMA Series — M1', desc: 'Mining detector — M1 certificate for mines and tunnels', useCase: 'Coal mines, metro tunnels, underground workshops', badge: 'Mining' },
 
@@ -1660,7 +1662,7 @@
 
     categories: [
 
-      { title: 'Fixed gas detectors', desc: 'Fixed gas sensors for permanent installation in industrial facilities' },
+      { title: 'Fixed gas detectors', desc: 'Official Prosense range — combustible, toxic, asphyxiant and VOC fixed detectors from SIL2/ATEX heavy industry to indoor safe-area' },
 
       { title: 'Portable gas detectors', desc: 'Portable measuring instruments for personnel and field inspection' },
 
@@ -1774,6 +1776,8 @@
 
       { q: 'Do I need SIL certification for my project?', a: 'For process safety (SIS) projects, the PQ series with SIL2/3 certification is suitable. Describe your project type so we recommend the correct model and certification level.' },
 
+      { q: 'Is SafeVader a SIL or explosion-proof detector?', a: 'No. SafeVader is for indoor safe areas (labs, hospitals, HVAC, refrigerant and hydrogen rooms) with LCD, 4–20 mA, Modbus and onboard relays. Use the PQ series for Ex Zone 1/2 and SIS/SIL projects.' },
+
       { q: 'Can you supply calibration cylinders and test gas?', a: 'Yes — Prosense Span/Test cylinders, mixed gas and calibration regulators are available. TÜRKAK calibration services in Turkey can also be coordinated.' },
 
       { q: 'Do you supply control panels and software?', a: 'Yes — S-DP4 to S-DPX128 panels, S-MCX software and complete PPS+ parking systems can be supplied as an integrated package.' }
@@ -1790,11 +1794,11 @@
 
     brand: {
 
-      heroEyebrow: 'Dünya genelinde Farsça konuşan mühendisler için orijinal Prosense tedariki',
+      heroEyebrow: 'Türkiye ve uluslararası projeler için orijinal Prosense tedariki',
 
       heroHeadline: 'Prosense gaz ve alev dedektörleri',
 
-      heroHeadlineSub: 'Gaz, alev ve proses güvenliği — Farsça teknik danışmanlık, şeffaf proforma ve uluslararası lojistik',
+      heroHeadlineSub: 'Gaz, alev ve proses güvenliği — Türkçe teknik danışmanlık, şeffaf proforma ve uluslararası lojistik',
 
       tagline: 'Gaz ve alev dedektörleri — Türkiye üretimi',
 
@@ -1802,7 +1806,9 @@
 
       origin: 'Türkiye',
 
-      description: 'Bizdavar Group; SIL/M1/EN sertifikalı Prosense gaz ve alev dedektörü tedarik eder. Farsça (WhatsApp) model seçim danışmanlığı, şeffaf proforma ve İran ile yurt dışındaki Farsça konuşan alıcılar için lojistik koordinasyonu.',
+      officialUrl: 'https://www.prosense.com.tr/?lang=tr',
+
+      description: 'Bizdavar Group; SIL/M1/EN sertifikalı Prosense gaz ve alev dedektörü tedarik eder. Türkçe model seçim danışmanlığı, şeffaf proforma ve uluslararası lojistik koordinasyonu.',
 
       heroStats: [
 
@@ -1820,7 +1826,7 @@
 
       { label: 'Orijinal Prosense ürünü', desc: 'Doğrudan Prosense Türkiye\'den tedarik — geçerli sertifika ve seri numarası' },
 
-      { label: 'Farsça danışmanlık', desc: 'Gaz tipi, aralık ve model seçimi — her yerden Farsça WhatsApp ile' },
+      { label: 'Türkçe danışmanlık', desc: 'Gaz tipi, aralık ve model seçimi — her yerden Türkçe WhatsApp ile' },
 
       { label: 'Uluslararası lojistik', desc: 'proje destinasyonuna satın alma, nakliye ve gümrük' },
 
@@ -1842,7 +1848,7 @@
 
     purchaseSteps: [
 
-      { num: '1', title: 'Talep', desc: 'Farsça WhatsApp veya form — gaz tipi, montaj ortamı (Ex/normal), adet ve tercih edilen seri' },
+      { num: '1', title: 'Talep', desc: 'Türkçe WhatsApp veya form — gaz tipi, montaj ortamı (Ex/normal), adet ve tercih edilen seri' },
 
       { num: '2', title: 'Teknik danışmanlık', desc: 'Seri ve model önerisi — PQ/SafeVader/SOMA/PPS+ ve gerekirse S-DPX panel' },
 
@@ -1884,7 +1890,7 @@
 
       { name: 'PQ Serisi', tag: 'SIL2/3', hint: 'Proses güvenliği · H2S / LEL / O2' },
 
-      { name: 'SafeVader', tag: 'Process Safety', hint: 'Zehirli ve yanıcı gazlar' },
+      { name: 'SafeVader', tag: 'Emniyetli Alan', hint: 'Laboratuvar, HVAC, hidrojen odaları' },
 
       { name: 'SOMA M1', tag: 'Maden', hint: 'Tünel ve yeraltı madenleri' },
 
@@ -1896,7 +1902,7 @@
 
       { title: 'PQ Serisi — SIL2 / SIL3', desc: 'En çok satan sabit dedektör — petrokimya ve rafineri proses güvenliği için SIL sertifikası', useCase: 'H2S, LEL, O2 — Ex ortam ve SIS projeleri', badge: 'SIL' },
 
-      { title: 'SafeVader Serisi', desc: 'Proses güvenliği dedektörü — HSE ve otomasyon birimlerinde yaygın tercih', useCase: 'Endüstriyel tesislerde zehirli ve yanıcı gazlar', badge: 'Process Safety' },
+      { title: 'SafeVader Serisi', desc: 'İç mekân / emniyetli alan dedektörü — LCD, 4–20 mA + RS485 Modbus ve röle. Laboratuvar, hastane, HVAC, soğutucu gaz ve hidrojen odaları — Ex/SIL proses dedektörü değildir.', useCase: 'Ex olmayan iç mekân · laboratuvar, HVAC, hastane, akü odası', badge: 'Emniyetli Alan' },
 
       { title: 'Denizcilik ve Offshore', desc: 'Denizcilik sertifikası — gemi ve offshore için H2S ve CH4 sistemleri', useCase: 'Gemi inşa, offshore platformlar, limanlar', badge: 'Denizcilik' },
 
@@ -1904,7 +1910,7 @@
 
       { title: 'PQD VOC', desc: 'VOC dedektörü — uçucu organik bileşik riskini azaltır', useCase: 'Kimya, boya ve petrokimya endüstrileri', badge: 'VOC' },
 
-      { title: 'TÜRKAK — Kalibrasyon', desc: 'TS EN ISO/IEC 17025\'e uygun kalibrasyon — AB-0260-K akredite laboratuvar', useCase: 'Periyodik dedektör bakımı — Bizdavar üzerinden koordinasyon', badge: 'Kalibrasyon' },
+      { title: 'TÜRKAK — Kalibrasyon', desc: 'TS EN ISO/IEC 17025\'e uygun kalibrasyon — AB-2060-K akredite laboratuvar', useCase: 'Periyodik dedektör bakımı — Bizdavar üzerinden koordinasyon', badge: 'Kalibrasyon' },
 
       { title: 'SOMA Serisi — M1', desc: 'Maden dedektörü — maden ve tüneller için M1 sertifikası', useCase: 'Kömür madenleri, metro tünelleri, yeraltı atölyeleri', badge: 'Maden' },
 
@@ -1914,7 +1920,7 @@
 
     categories: [
 
-      { title: 'Sabit gaz dedektörleri', desc: 'Endüstriyel tesislerde kalıcı montaj için sabit gaz sensörleri' },
+      { title: 'Sabit gaz dedektörleri', desc: 'Resmi Prosense sabit gaz ailesi — yanıcı, toksik, asfiksi ve VOC; SIL2/ATEX ağır sanayiden emniyetli alan iç mekâna' },
 
       { title: 'Portatif gaz dedektörleri', desc: 'Personel ve saha denetimi için taşınabilir ölçüm cihazları' },
 
@@ -2028,6 +2034,8 @@
 
       { q: 'Projem için SIL sertifikası gerekli mi?', a: 'Proses güvenliği (SIS) projeleri için SIL2/3 sertifikalı PQ serisi uygundur. Proje tipinizi belirtin; doğru model ve sertifikasyon seviyesini öneririz.' },
 
+      { q: 'SafeVader SIL veya Ex-proof dedektör mü?', a: 'Hayır. SafeVader iç mekân emniyetli alan içindir (laboratuvar, hastane, HVAC, soğutucu gaz ve hidrojen odaları) — LCD, 4–20 mA, Modbus ve röle. Ex Zone 1/2 ve SIS/SIL için PQ serisini kullanın.' },
+
       { q: 'Kalibrasyon tüpü ve test gazı tedarik ediliyor mu?', a: 'Evet — Prosense Span/Test tüpleri, karışım gazı ve kalibrasyon regülatörleri mevcuttur. Türkiye\'de TÜRKAK kalibrasyon hizmetleri de koordine edilebilir.' },
 
       { q: 'Kontrol paneli ve yazılım da var mı?', a: 'Evet — S-DP4\'ten S-DPX128\'e paneller, S-MCX yazılımı ve eksiksiz PPS+ otopark sistemleri entegre paket olarak tedarik edilebilir.' }
@@ -2046,6 +2054,7 @@
       tagline: 'Газовые и пламенные детекторы — производство Турция',
       since: 'С 2006 года',
       origin: 'Картал, Стамбул — Турция',
+      officialUrl: 'https://www.prosense.com.tr/?lang=en',
       description: 'Bizdavar Group поставляет газовые и пламенные детекторы Prosense с сертификацией SIL/M1/EN. Консультация по выбору модели в WhatsApp, прозрачная проформа и координация доставки для проектов в регионе.',
       heroStats: [
         { label: 'Обнаруживаемых газов' },
@@ -2087,22 +2096,22 @@
     },
     quickSeries: [
       { name: 'PQ Series', tag: 'SIL2/3', hint: 'Процессная безопасность · H2S / LEL / O2' },
-      { name: 'SafeVader', tag: 'Process Safety', hint: 'Токсичные и горючие газы' },
+      { name: 'SafeVader', tag: 'Safe Area', hint: 'Лаборатории, HVAC, водородные помещения' },
       { name: 'SOMA M1', tag: 'Mining', hint: 'Туннели и подземные рудники' },
       { name: 'PPS+', tag: 'EN-50545-1', hint: 'Закрытый паркинг CO / NO2' }
     ],
     highlights: [
       { title: 'PQ Series — SIL2 / SIL3', desc: 'Бестселлер среди стационарных детекторов — SIL для нефтехимии и НПЗ', useCase: 'H2S, LEL, O2 — Ex-среда и проекты SIS', badge: 'SIL' },
-      { title: 'SafeVader Series', desc: 'Детектор процессной безопасности — частый выбор HSE и АСУ ТП', useCase: 'Токсичные и горючие газы на промплощадках', badge: 'Process Safety' },
+      { title: 'SafeVader Series', desc: 'Детектор для безопасной зоны / помещений — LCD, 4–20 мА + RS485 Modbus и реле. Лаборатории, больницы, HVAC, хладагенты и водородные комнаты — это не Ex/SIL процессный детектор.', useCase: 'Не-Ex внутри помещений · лаборатории, HVAC, больницы, зарядные', badge: 'Safe Area' },
       { title: 'Marine & Offshore', desc: 'Морская сертификация — системы H2S и CH4 для судов и оффшора', useCase: 'Судостроение, оффшорные платформы, порты', badge: 'Marine' },
       { title: 'MPS™ Hydrocarbon', desc: 'Датчик MPS — высокая точность детектирования углеводородов', useCase: 'НПЗ, трубопроводы, резервуары', badge: 'MPS' },
       { title: 'PQD VOC', desc: 'Детектор VOC — снижение рисков ЛОС', useCase: 'Химия, ЛКМ и нефтехимия', badge: 'VOC' },
-      { title: 'TÜRKAK — калибровка', desc: 'Калибровка по TS EN ISO/IEC 17025 — лаборатория AB-0260-K', useCase: 'Периодическое ТО детекторов — через Bizdavar', badge: 'Calibration' },
+      { title: 'TÜRKAK — калибровка', desc: 'Калибровка по TS EN ISO/IEC 17025 — лаборатория AB-2060-K', useCase: 'Периодическое ТО детекторов — через Bizdavar', badge: 'Calibration' },
       { title: 'SOMA Series — M1', desc: 'Горный детектор — сертификат M1 для шахт и туннелей', useCase: 'Угольные шахты, метро, подземные объекты', badge: 'Mining' },
       { title: 'PPS+ Parking — EN 50545-1', desc: 'Паркинговая система по EN-50545-1 — детекция CO и NO2', useCase: 'Закрытые паркинги, ТЦ и больницы', badge: 'Parking' }
     ],
     categories: [
-      { title: 'Стационарные газовые детекторы', desc: 'Стационарные датчики газа для постоянной установки' },
+      { title: 'Стационарные газовые детекторы', desc: 'Официальная линейка Prosense — горючие, токсичные, удушающие и VOC; от SIL2/ATEX до безопасной зоны внутри помещений' },
       { title: 'Портативные газовые детекторы', desc: 'Переносные приборы для персонала и полевого контроля' },
       { title: 'Детекторы пламени', desc: 'Обнаружение пламени и пожара в промышленных средах' },
       { title: 'Панели управления', desc: 'Аналоговые и цифровые панели для нескольких детекторов' },
@@ -2159,6 +2168,7 @@
       { q: 'Можно запросить из-за рубежа?', a: 'Да — консультация и WhatsApp доступны инженерам и покупателям по всему миру. Пункт доставки и условия перевозки указываются в проформе.' },
       { q: 'Какой срок поставки?', a: 'Обычно 3–6 недель в зависимости от модели, склада и пункта назначения. Точный срок — в проформе. Для срочных проектов предлагаем доступные альтернативы.' },
       { q: 'Нужна ли сертификация SIL?', a: 'Для проектов процессной безопасности (SIS) подходит серия PQ с SIL2/3. Опишите тип проекта — подберём модель и уровень сертификации.' },
+      { q: 'SafeVader — это SIL или Ex-детектор?', a: 'Нет. SafeVader для безопасных помещений (лаборатории, больницы, HVAC, хладагенты и водородные комнаты) — LCD, 4–20 мА, Modbus и реле. Для Zone 1/2 и SIS/SIL используйте серию PQ.' },
       { q: 'Можно заказать калибровочные баллоны и test gas?', a: 'Да — баллоны Prosense Span/Test, смешанные газы и регуляторы. Также координируем калибровку TÜRKAK в Турции.' },
       { q: 'Поставляете панели и ПО?', a: 'Да — панели S-DP4–S-DPX128, ПО S-MCX и полные системы PPS+ для паркингов — как интегрированный пакет.' }
     ],
@@ -2173,6 +2183,7 @@
       tagline: 'كواشف غاز ولهب — صنع في تركيا',
       since: 'منذ 2006',
       origin: 'كارتال، إسطنبول — تركيا',
+      officialUrl: 'https://www.prosense.com.tr/?lang=en',
       description: 'مجموعة Bizdavar تورّد كواشف غاز ولهب Prosense بشهادات SIL/M1/EN. استشارة اختيار الموديل عبر واتساب، فاتورة مبدئية شفافة وتنسيق الشحن لمشاريع المنطقة.',
       heroStats: [
         { label: 'غازات قابلة للكشف' },
@@ -2214,22 +2225,22 @@
     },
     quickSeries: [
       { name: 'PQ Series', tag: 'SIL2/3', hint: 'سلامة العملية · H2S / LEL / O2' },
-      { name: 'SafeVader', tag: 'Process Safety', hint: 'غازات سامة وقابلة للاشتعال' },
+      { name: 'SafeVader', tag: 'منطقة آمنة', hint: 'مختبرات وHVAC وغرف هيدروجين' },
       { name: 'SOMA M1', tag: 'Mining', hint: 'أنفاق ومناجم تحت الأرض' },
       { name: 'PPS+', tag: 'EN-50545-1', hint: 'مواقف مغلقة CO / NO2' }
     ],
     highlights: [
       { title: 'PQ Series — SIL2 / SIL3', desc: 'الأكثر مبيعاً بين الكواشف الثابتة — شهادة SIL للبتروكيماويات والمصافي', useCase: 'H2S، LEL، O2 — بيئة Ex ومشاريع SIS', badge: 'SIL' },
-      { title: 'SafeVader Series', desc: 'كاشف سلامة العملية — اختيار شائع لوحدات HSE والأتمتة', useCase: 'غازات سامة وقابلة للاشتعال في المنشآت الصناعية', badge: 'Process Safety' },
+      { title: 'SafeVader Series', desc: 'كاشف للمنطقة الآمنة الداخلية — LCD ومخرج 4–20 mA وModbus وريليه. للمختبرات والمستشفيات وHVAC وغازات التبريد وغرف الهيدروجين — ليس كاشف Ex/SIL للعملية.', useCase: 'مناطق داخلية غير Ex · مختبرات وHVAC ومستشفيات وشحن بطاريات', badge: 'منطقة آمنة' },
       { title: 'Marine & Offshore', desc: 'شهادة بحرية — أنظمة H2S وCH4 للسفن والمنصات', useCase: 'بناء سفن ومنصات بحرية وموانئ', badge: 'Marine' },
       { title: 'MPS™ Hydrocarbon', desc: 'حساس MPS — دقة عالية في كشف الهيدروكربونات', useCase: 'مصفاة وأنابيب وخزانات', badge: 'MPS' },
       { title: 'PQD VOC', desc: 'كاشف VOC — تقليل مخاطر المركبات العضوية المتطايرة', useCase: 'صناعات كيميائية ودهانات وبتروكيماويات', badge: 'VOC' },
-      { title: 'TÜRKAK — معايرة', desc: 'معايرة وفق TS EN ISO/IEC 17025 — مختبر معتمد AB-0260-K', useCase: 'صيانة دورية للكواشف — عبر Bizdavar', badge: 'Calibration' },
+      { title: 'TÜRKAK — معايرة', desc: 'معايرة وفق TS EN ISO/IEC 17025 — مختبر معتمد AB-2060-K', useCase: 'صيانة دورية للكواشف — عبر Bizdavar', badge: 'Calibration' },
       { title: 'SOMA Series — M1', desc: 'كاشف تعدين — شهادة M1 للمناجم والأنفاق', useCase: 'مناجم فحم ومترو وورش تحت الأرض', badge: 'Mining' },
       { title: 'PPS+ Parking — EN 50545-1', desc: 'نظام مواقف وفق EN-50545-1 — كشف CO وNO2', useCase: 'مواقف مغلقة ومراكز تجارية ومستشفيات', badge: 'Parking' }
     ],
     categories: [
-      { title: 'كواشف غاز ثابتة', desc: 'حساسات غاز ثابتة للتركيب الدائم في المنشآت' },
+      { title: 'كواشف غاز ثابتة', desc: 'مجموعة Prosense الرسمية — كواشف ثابتة للغازات القابلة للاشتعال والسامة والخانقة وVOC من SIL2/ATEX إلى المنطقة الآمنة الداخلية' },
       { title: 'كواشف غاز محمولة', desc: 'أجهزة قياس محمولة للأفراد والمعاينة الميدانية' },
       { title: 'كواشف لهب', desc: 'كشف اللهب والحريق في البيئات الصناعية والخطرة' },
       { title: 'لوحات تحكم', desc: 'لوحات تماثلية ورقمية لإدارة عدة كواشف' },
@@ -2286,6 +2297,7 @@
       { q: 'هل يمكن الاستعلام من خارج إيران؟', a: 'نعم — الاستشارة وواتساب متاحان للمهندسين والمشترين حول العالم. وجهة التسليم وشروط الشحن تُضبط في الفاتورة المبدئية.' },
       { q: 'ما مدة التسليم؟', a: 'عادة 3 إلى 6 أسابيع حسب الموديل والمخزون والوجهة. المدة الدقيقة تُذكر في الفاتورة. للمشاريع العاجلة نقترح بدائل متاحة.' },
       { q: 'هل أحتاج شهادة SIL لمشروعي؟', a: 'لمشاريع سلامة العملية (SIS) تناسب سلسلة PQ بشهادة SIL2/3. صف نوع مشروعك لنوصي بالموديل ومستوى الشهادة الصحيح.' },
+      { q: 'هل SafeVader كاشف SIL أو مقاوم للانفجار؟', a: 'لا. SafeVader للمناطق الآمنة الداخلية (مختبرات ومستشفيات وHVAC وغازات تبريد وغرف هيدروجين) مع LCD و4–20 mA وModbus وريليه. لمناطق Ex Zone 1/2 ومشاريع SIS استخدم سلسلة PQ.' },
       { q: 'هل يمكن توريد أسطوانات معايرة وغاز اختبار؟', a: 'نعم — أسطوانات Prosense Span/Test وغاز مختلط ومنظمات معايرة متاحة. ويمكن تنسيق خدمات معايرة TÜRKAK في تركيا.' },
       { q: 'هل تورّدون لوحات تحكم وبرمجيات؟', a: 'نعم — لوحات S-DP4 إلى S-DPX128 وبرمجيات S-MCX وأنظمة PPS+ كاملة للمواقف كحزمة متكاملة.' }
     ],
@@ -2430,7 +2442,19 @@
 
       { summary: 'Compact capacitive limit switch for light bulk solids — 360° status display, IO-Link and adjustment-free install.', useCase: 'Silos and vessels with light powder/granulate in food and pharma — same compact VEGAPOINT platform optimised for solids.', badge: 'In stock', features: ['Process temperature −40 to 115 °C', 'Process pressure −1 to 64 bar', 'Optimised for light bulk solids', 'Coloured 360° status display', 'Transistor NPN/PNP · IO-Link · Bluetooth'], applications: ['Food', 'Pharma', 'Powder silos', 'Light bulk solids'] },
 
-      { summary: 'Vibrating level switch for granulated and coarse bulk solids — reliable min/max point detection in silos and vessels.', useCase: 'Free-flowing powders, granulates and coarse solids from 100 g/l — avoids jamming where fork probes retain material.', badge: 'In stock', features: ['Process temperature −50 to 150 °C', 'Process pressure −1 to 16 bar', 'Smooth vibrating rod — resists buildup', 'Relay DPDT or transistor NPN/PNP', 'Preset lengths 150, 500, 1000 and 1500 mm'], applications: ['Cement & mining', 'Food', 'Bulk silos', 'Chemicals'] }
+      { summary: 'Vibrating level switch for granulated and coarse bulk solids — reliable min/max point detection in silos and vessels.', useCase: 'Free-flowing powders, granulates and coarse solids from 100 g/l — avoids jamming where fork probes retain material.', badge: 'In stock', features: ['Process temperature −50 to 150 °C', 'Process pressure −1 to 16 bar', 'Smooth vibrating rod — resists buildup', 'Relay DPDT or transistor NPN/PNP', 'Preset lengths 150, 500, 1000 and 1500 mm'], applications: ['Cement & mining', 'Food', 'Bulk silos', 'Chemicals'] },
+
+      { summary: 'Compact non-contact radar for continuous liquid level in simple applications that need high ingress protection.', useCase: 'Water treatment, pumping stations, storm overflow basins and level monitoring; small bulk silos and open containers.', badge: 'In stock', features: ['Measuring range up to 10 m · accuracy ±5 mm', 'Process temperature −40 to 60 °C', 'Process pressure −1 to 3 bar · 4…20 mA', 'Maintenance-free 80 GHz radar', 'IP66 / IP68 (3 bar) · Type 6P · axial PVC cable'], applications: ['Water & wastewater', 'Pumping stations', 'Small silos', 'Food'] },
+
+      { summary: 'Compact non-contact radar up to 30 m — continuous level of liquids and bulk solids with IP66/IP68 and 4…20 mA/HART.', useCase: 'Water treatment, pumping stations, storm overflow, open-channel flow and level monitoring; medium silos, segmented vessels and open heaps.', badge: 'In stock', features: ['Measuring range up to 30 m · accuracy ±2 mm · beam 4°', 'Process temperature −40 to 80 °C', 'Process pressure −1 to 3 bar · 4…20 mA/HART', 'Maintenance-free 80 GHz radar · axial cable (5 m on this code)', 'IP66 / IP68 · Type 6P · thread G1 · PVDF'], applications: ['Water & wastewater', 'Pumping stations', 'Medium silos', 'Petrochemical'] },
+
+      { summary: 'Compact housing radar for continuous liquid and bulk level up to 10 m — 4…20 mA, IP66/IP67 plastic housing.', useCase: 'Water treatment, acid/alkali storage tanks, measurement through plastic tank walls; small silos and open containers.', badge: 'In stock', features: ['Measuring range up to 10 m · accuracy ±5 mm · beam 8°', 'Process temperature −40 to 60 °C', 'Process pressure −1 to 3 bar · 4…20 mA', '80 GHz non-contact radar · Bluetooth setup', 'IP66 / IP67 · Type 4X · thread G1½ · PVDF'], applications: ['Water & wastewater', 'Chemical tanks', 'Plastic vessels', 'Small silos'] },
+
+      { summary: 'Compact housing radar up to 20 m — ±2 mm accuracy, 4…20 mA/HART, IP66/IP67; Ex approval optional.', useCase: 'Water treatment, acid/alkali tanks, measurement through plastic/IBC walls; small and medium silos.', badge: 'In stock', features: ['Measuring range up to 20 m · accuracy ±2 mm · beam 8°', 'Process temperature −40 to 80 °C', 'Process pressure −1 to 3 bar · 4…20 mA/HART', '80 GHz non-contact radar · Bluetooth and HART', 'IP66 / IP67 · Type 4X · thread G1½ · PVDF'], applications: ['Water & wastewater', 'Chemical tanks', 'Plastic vessels', 'Medium silos'] },
+
+      { summary: 'Compact housing radar up to 20 m with on-site display and 3-button operation — ±2 mm, 4…20 mA/HART, IP66/IP67; Ex optional.', useCase: 'Water treatment, acid/alkali tanks, measurement through plastic tank walls; small and medium silos and local level checking.', badge: 'In stock', features: ['Measuring range up to 20 m · accuracy ±2 mm · beam 8°', 'Process temperature −40 to 80 °C', 'Process pressure −1 to 3 bar · 4…20 mA/HART', 'On-site display and 3-button operation · Bluetooth', 'IP66 / IP67 · Type 4X · thread G1½ · PVDF'], applications: ['Water & wastewater', 'Chemical tanks', 'Plastic vessels', 'On-site control'] },
+
+      { summary: 'Compact vibrating liquid point-level switch — 316L tuning fork, millimetre-accurate full/empty detection with no on-site adjustment.', useCase: 'Overfill protection, dry-run/pump protection and full/empty signalling in vessels and pipelines — any mounting position.', badge: 'In stock', features: ['Process temperature −40 to 100 °C', 'Process pressure −1 to 64 bar · thread G¾ · 316L', 'Transistor PNP output · M12x1 connector', 'Fork length 64 mm · hysteresis approx. 2 mm', 'IP66 / IP67 · Type 4X · adjustment-free'], applications: ['Liquid vessels', 'Pipelines', 'Pump protection', 'Overfill safety'] }
 
     ],
 
@@ -2537,7 +2561,7 @@
 
     quickSeries: [
       { name: 'VEGAPULS 6X', tag: 'Flagship radar', hint: 'Tall tanks & critical process' },
-      { name: 'VEGAPULS', tag: 'Compact radar', hint: 'Ultrasonic upgrade' },
+      { name: 'VEGAPULS C 11', tag: 'Cable radar · €580', hint: 'Water & wastewater up to 10 m' },
       { name: 'VEGABAR 39', tag: 'Pressure · €510', hint: 'Transmitter with 360° display' },
       { name: 'VEGAVIB S61', tag: 'Solids · €540', hint: 'Vibrating silo switch' }
     ],
@@ -2686,7 +2710,19 @@
 
       { summary: 'Hafif dökme malzemeler için kompakt kapasitif limit şalteri — 360° durum göstergesi, IO-Link ve ayarsız montaj.', useCase: 'Gıda ve ilaçta hafif toz/granül siloları — katılar için optimize edilmiş aynı kompakt VEGAPOINT platformu.', badge: 'Stokta', features: ['Proses sıcaklığı −40 … 115 °C', 'Proses basıncı −1 … 64 bar', 'Hafif dökme malzemeler için optimize', 'Renkli 360° durum göstergesi', 'Transistör NPN/PNP · IO-Link · Bluetooth'], applications: ['Gıda', 'İlaç', 'Toz siloları', 'Hafif dökme malzeme'] },
 
-      { summary: 'Granül ve kaba dökme malzemeler için titreşimli seviye şalteri — silo ve kaplarda güvenilir min/max algılama.', useCase: 'Serbest akan toz, granül ve kaba katılar (min. 100 g/l) — çatal probların malzeme tuttuğu yerlerde sıkışmayı önler.', badge: 'Stokta', features: ['Proses sıcaklığı −50 … 150 °C', 'Proses basıncı −1 … 16 bar', 'Kenarsız titreşim çubuğu — birikmeyi önler', 'Röle DPDT veya transistör NPN/PNP', 'Hazır uzunluklar 150, 500, 1000 ve 1500 mm'], applications: ['Çimento ve madencilik', 'Gıda', 'Dökme malzeme siloları', 'Kimyasallar'] }
+      { summary: 'Granül ve kaba dökme malzemeler için titreşimli seviye şalteri — silo ve kaplarda güvenilir min/max algılama.', useCase: 'Serbest akan toz, granül ve kaba katılar (min. 100 g/l) — çatal probların malzeme tuttuğu yerlerde sıkışmayı önler.', badge: 'Stokta', features: ['Proses sıcaklığı −50 … 150 °C', 'Proses basıncı −1 … 16 bar', 'Kenarsız titreşim çubuğu — birikmeyi önler', 'Röle DPDT veya transistör NPN/PNP', 'Hazır uzunluklar 150, 500, 1000 ve 1500 mm'], applications: ['Çimento ve madencilik', 'Gıda', 'Dökme malzeme siloları', 'Kimyasallar'] },
+
+      { summary: 'Basit uygulamalarda yüksek koruma gereken sürekli sıvı seviye için kompakt temassız radar.', useCase: 'Su arıtma, pompa istasyonu, yağmur taşma havuzu ve seviye izleme; küçük dökme silolar ve açık kaplar.', badge: 'Stokta', features: ['Ölçüm aralığı 10 m’ye kadar · doğruluk ±5 mm', 'Proses sıcaklığı −40 … 60 °C', 'Proses basıncı −1 … 3 bar · 4…20 mA', 'Bakımsız 80 GHz radar', 'IP66 / IP68 (3 bar) · Type 6P · eksenel PVC kablo'], applications: ['Su ve atıksu', 'Pompa istasyonu', 'Küçük silo', 'Gıda'] },
+
+      { summary: '30 m’ye kadar kompakt temassız radar — sıvı ve dökme katılarda sürekli seviye, IP66/IP68 ve 4…20 mA/HART.', useCase: 'Su arıtma, pompa istasyonu, yağmur taşması, açık kanal debisi ve seviye izleme; orta silolar, bölmeli kaplar ve açık yığınlar.', badge: 'Stokta', features: ['Ölçüm aralığı 30 m’ye kadar · doğruluk ±2 mm · ışın 4°', 'Proses sıcaklığı −40 … 80 °C', 'Proses basıncı −1 … 3 bar · 4…20 mA/HART', 'Bakımsız 80 GHz radar · eksenel kablo (bu kodda 5 m)', 'IP66 / IP68 · Type 6P · diş G1 · PVDF'], applications: ['Su ve atıksu', 'Pompa istasyonu', 'Orta silo', 'Petrokimya'] },
+
+      { summary: '10 m’ye kadar sürekli sıvı ve dökme seviye için kompakt gövdeli radar — 4…20 mA, IP66/IP67 plastik gövde.', useCase: 'Su arıtma, asit/alkali depolama tankları, plastik tank duvarından ölçüm; küçük silolar ve açık kaplar.', badge: 'Stokta', features: ['Ölçüm aralığı 10 m’ye kadar · doğruluk ±5 mm · ışın 8°', 'Proses sıcaklığı −40 … 60 °C', 'Proses basıncı −1 … 3 bar · 4…20 mA', '80 GHz temassız radar · Bluetooth ayar', 'IP66 / IP67 · Type 4X · diş G1½ · PVDF'], applications: ['Su ve atıksu', 'Kimyasal tanklar', 'Plastik kaplar', 'Küçük silo'] },
+
+      { summary: '20 m’ye kadar kompakt gövdeli radar — ±2 mm doğruluk, 4…20 mA/HART, IP66/IP67; Ex onayı opsiyonel.', useCase: 'Su arıtma, asit/alkali tankları, plastik/IBC duvarından ölçüm; küçük ve orta silolar.', badge: 'Stokta', features: ['Ölçüm aralığı 20 m’ye kadar · doğruluk ±2 mm · ışın 8°', 'Proses sıcaklığı −40 … 80 °C', 'Proses basıncı −1 … 3 bar · 4…20 mA/HART', '80 GHz temassız radar · Bluetooth ve HART', 'IP66 / IP67 · Type 4X · diş G1½ · PVDF'], applications: ['Su ve atıksu', 'Kimyasal tanklar', 'Plastik kaplar', 'Orta silo'] },
+
+      { summary: '20 m’ye kadar kompakt gövdeli radar — yerinde gösterge ve 3 tuşlu kontrol, ±2 mm, 4…20 mA/HART, IP66/IP67; Ex opsiyonel.', useCase: 'Su arıtma, asit/alkali tankları, plastik tank duvarından ölçüm; küçük ve orta silolar ve yerinde seviye kontrolü.', badge: 'Stokta', features: ['Ölçüm aralığı 20 m’ye kadar · doğruluk ±2 mm · ışın 8°', 'Proses sıcaklığı −40 … 80 °C', 'Proses basıncı −1 … 3 bar · 4…20 mA/HART', 'Yerinde gösterge ve 3 tuşlu kontrol · Bluetooth', 'IP66 / IP67 · Type 4X · diş G1½ · PVDF'], applications: ['Su ve atıksu', 'Kimyasal tanklar', 'Plastik kaplar', 'Yerinde kontrol'] },
+
+      { summary: 'Sıvılar için kompakt titreşimli limit şalteri — 316L çatal, milimetrik dolu/boş algılama, sahada ayarsız.', useCase: 'Aşırı dolum emniyeti, pompa kuru çalışma koruması ve kap/boru içinde dolu/boş sinyali — her montaj konumunda.', badge: 'Stokta', features: ['Proses sıcaklığı −40 … 100 °C', 'Proses basıncı −1 … 64 bar · diş G¾ · 316L', 'Transistör PNP çıkış · M12x1 konnektör', 'Çatal boyu 64 mm · histerezis yakl. 2 mm', 'IP66 / IP67 · Type 4X · ayarsız'], applications: ['Sıvı kaplar', 'Boru hatları', 'Pompa koruması', 'Aşırı dolum'] }
 
     ],
 
@@ -2793,7 +2829,7 @@
 
     quickSeries: [
       { name: 'VEGAPULS 6X', tag: 'Bayrak radar', hint: 'Yüksek tank ve kritik proses' },
-      { name: 'VEGAPULS', tag: 'Kompakt radar', hint: 'Ultrasonik yükseltme' },
+      { name: 'VEGAPULS C 11', tag: 'Kablolu radar · €580', hint: 'Su ve atıksu 10 m’ye kadar' },
       { name: 'VEGABAR 39', tag: 'Basınç · €510', hint: '360° göstergeli transmitter' },
       { name: 'VEGAVIB S61', tag: 'Dökme · €540', hint: 'Titreşimli silo şalteri' }
     ],
@@ -2871,7 +2907,13 @@
       { summary: 'Сверхкомпактный ёмкостный сигнализатор — обнаружение водных жидкостей без настройки на объекте.', useCase: 'Пищевка, напитки и фарма с гигиеническими адаптерами — компактный размер от резьбы ½", выход транзистор/IO-Link.', badge: 'В наличии', features: ['Температура −20…100 °C', 'Давление −1…64 бар', 'Без настройки на объекте', 'Транзистор PNP · IO-Link', 'Опция гигиенического G1"'], applications: ['Пищевка и напитки', 'Фарма', 'Вода', 'Малые ёмкости'] },
       { summary: 'Компактный ёмкостный сигнализатор для водных жидкостей — цветная индикация 360° и IO-Link.', useCase: 'Гигиенические процессы пищевки и фармы — универсальное присоединение G1", Bluetooth и Ex.', badge: 'В наличии', features: ['Температура −40…115 °C', 'Давление −1…64 бар · DK > 1.5', 'Настраиваемая цветная индикация 360°', 'Транзистор NPN/PNP · IO-Link', 'Bluetooth и гигиена / Ex'], applications: ['Пищевка и напитки', 'Фарма', 'Технологические ёмкости', 'Пена и точка уровня'] },
       { summary: 'Компактный ёмкостный сигнализатор для лёгких сыпучих — индикация 360°, IO-Link, монтаж без настройки.', useCase: 'Силосы и ёмкости с лёгким порошком/гранулятом в пищевке и фарме — та же платформа VEGAPOINT для сыпучих.', badge: 'В наличии', features: ['Температура −40…115 °C', 'Давление −1…64 бар', 'Оптимизирован для лёгких сыпучих', 'Цветная индикация 360°', 'Транзистор NPN/PNP · IO-Link · Bluetooth'], applications: ['Пищевка', 'Фарма', 'Порошковые силосы', 'Лёгкие сыпучие'] },
-      { summary: 'Вибрационный сигнализатор уровня для гранулированных и крупных сыпучих — надёжное мин/макс в силосах.', useCase: 'Сыпучие порошки, грануляты и крупные фракции от 100 г/л — меньше залипания, чем у вилочных зондов.', badge: 'В наличии', features: ['Температура −50…150 °C', 'Давление −1…16 бар', 'Гладкий вибрационный стержень', 'Реле DPDT или транзистор NPN/PNP', 'Длины 150, 500, 1000 и 1500 мм'], applications: ['Цемент и добыча', 'Пищевка', 'Силосы', 'Химия'] }
+      { summary: 'Вибрационный сигнализатор уровня для гранулированных и крупных сыпучих — надёжное мин/макс в силосах.', useCase: 'Сыпучие порошки, грануляты и крупные фракции от 100 г/л — меньше залипания, чем у вилочных зондов.', badge: 'В наличии', features: ['Температура −50…150 °C', 'Давление −1…16 бар', 'Гладкий вибрационный стержень', 'Реле DPDT или транзистор NPN/PNP', 'Длины 150, 500, 1000 и 1500 мм'], applications: ['Цемент и добыча', 'Пищевка', 'Силосы', 'Химия'] },
+      { summary: 'Компактный бесконтактный радар непрерывного уровня жидкости для простых задач с высокой степенью защиты.', useCase: 'Водоочистка, насосные станции, ливневые переливы и мониторинг уровня; малые силосы и открытые ёмкости.', badge: 'В наличии', features: ['Дальность до 10 м · точность ±5 мм', 'Температура −40…60 °C', 'Давление −1…3 бар · 4…20 мА', 'Бесконтактный радар 80 ГГц без обслуживания', 'IP66 / IP68 (3 бар) · Type 6P · осевой кабель PVC'], applications: ['Вода и стоки', 'Насосные станции', 'Малые силосы', 'Пищевка'] },
+      { summary: 'Компактный бесконтактный радар до 30 м — непрерывный уровень жидкостей и сыпучих, IP66/IP68 и 4…20 мА/HART.', useCase: 'Водоочистка, насосные, ливневые переливы, расход в открытом канале и мониторинг; средние силосы, секционные ёмкости и открытые насыпи.', badge: 'В наличии', features: ['Дальность до 30 м · точность ±2 мм · луч 4°', 'Температура −40…80 °C', 'Давление −1…3 бар · 4…20 мА/HART', 'Радар 80 ГГц без обслуживания · осевой кабель (5 м на этом коде)', 'IP66 / IP68 · Type 6P · резьба G1 · PVDF'], applications: ['Вода и стоки', 'Насосные станции', 'Средние силосы', 'Нефтехимия'] },
+      { summary: 'Компактный радар в пластиковом корпусе до 10 м — непрерывный уровень жидкостей и сыпучих, 4…20 мА, IP66/IP67.', useCase: 'Водоочистка, кислотные/щелочные ёмкости, измерение сквозь стенку пластикового бака; малые силосы и открытые ёмкости.', badge: 'В наличии', features: ['Дальность до 10 м · точность ±5 мм · луч 8°', 'Температура −40…60 °C', 'Давление −1…3 бар · 4…20 мА', 'Радар 80 ГГц · настройка Bluetooth', 'IP66 / IP67 · Type 4X · резьба G1½ · PVDF'], applications: ['Вода и стоки', 'Химёмкости', 'Пластиковые баки', 'Малые силосы'] },
+      { summary: 'Компактный радар до 20 м — точность ±2 мм, 4…20 мА/HART, IP66/IP67; Ex опционально.', useCase: 'Водоочистка, кислотные/щелочные ёмкости, измерение сквозь пластик/IBC; малые и средние силосы.', badge: 'В наличии', features: ['Дальность до 20 м · точность ±2 мм · луч 8°', 'Температура −40…80 °C', 'Давление −1…3 бар · 4…20 мА/HART', 'Радар 80 ГГц · Bluetooth и HART', 'IP66 / IP67 · Type 4X · резьба G1½ · PVDF'], applications: ['Вода и стоки', 'Химёмкости', 'Пластиковые баки', 'Средние силосы'] },
+      { summary: 'Компактный радар до 20 м с локальным дисплеем и 3 кнопками — ±2 мм, 4…20 мА/HART, IP66/IP67; Ex опционально.', useCase: 'Водоочистка, кислотные/щелочные ёмкости, измерение сквозь стенку пластикового бака; малые и средние силосы и контроль уровня на месте.', badge: 'В наличии', features: ['Дальность до 20 м · точность ±2 мм · луч 8°', 'Температура −40…80 °C', 'Давление −1…3 бар · 4…20 мА/HART', 'Локальный дисплей и 3 кнопки · Bluetooth', 'IP66 / IP67 · Type 4X · резьба G1½ · PVDF'], applications: ['Вода и стоки', 'Химёмкости', 'Пластиковые баки', 'Контроль на месте'] },
+      { summary: 'Компактный вибрационный сигнализатор уровня жидкости — вилка 316L, точность до миллиметра, без настройки на объекте.', useCase: 'Защита от перелива, сухого хода насоса и сигнал полно/пусто в ёмкостях и трубопроводах — любое положение монтажа.', badge: 'В наличии', features: ['Температура −40…100 °C', 'Давление −1…64 бар · резьба G¾ · 316L', 'Транзистор PNP · разъём M12x1', 'Длина вилки 64 мм · гистерезис ок. 2 мм', 'IP66 / IP67 · Type 4X · без настройки'], applications: ['Ёмкости с жидкостью', 'Трубопроводы', 'Защита насоса', 'Защита от перелива'] }
     ],
     valueProps: [
       { title: 'Безопасность процесса', desc: 'Предотвращение перелива или сухого хода с высокой точностью — сигнализаторы VEGA дают надёжный сигнал в любых условиях.' },
@@ -2932,7 +2974,7 @@
     },
     quickSeries: [
       { name: 'VEGAPULS 6X', tag: 'Флагманский радар', hint: 'Высокие ёмкости и критичный процесс' },
-      { name: 'VEGAPULS', tag: 'Компактный радар', hint: 'Замена ультразвука' },
+      { name: 'VEGAPULS C 11', tag: 'Кабельный радар · €580', hint: 'Вода и стоки до 10 м' },
       { name: 'VEGABAR 39', tag: 'Давление · €510', hint: 'Преобразователь с индикацией 360°' },
       { name: 'VEGAVIB S61', tag: 'Сыпучие · €540', hint: 'Вибрационный сигнализатор силоса' }
     ],
@@ -3008,7 +3050,13 @@
       { summary: 'مفتاح حد سعوي فائق الصغر ومنخفض التكلفة — يكتشف السوائل المائية دون ضبط في الموقع.', useCase: 'غذاء ومشروبات ودواء مع محولات صحية — حجم صغير من سن ½" ومخرج ترانزستور/IO-Link.', badge: 'متوفر', features: ['حرارة −20 إلى 100 °C', 'ضغط −1 إلى 64 بار', 'إعداد بلا ضبط', 'ترانزستور PNP · IO-Link', 'وصلة صحية اختيارية G1"'], applications: ['غذاء ومشروبات', 'دواء', 'مياه', 'أوعية صغيرة'] },
       { summary: 'مفتاح حد سعوي مدمج للسوائل المائية — عرض حالة ملون 360° وIO-Link.', useCase: 'عمليات غذائية ودوائية صحية — وصلة محول عامة G1" وBluetooth وموافقات Ex.', badge: 'متوفر', features: ['حرارة −40 إلى 115 °C', 'ضغط −1 إلى 64 بار · DK > 1.5', 'عرض حالة ملون قابل للضبط 360°', 'ترانزستور NPN/PNP · IO-Link', 'Bluetooth وموافقات صحية / Ex'], applications: ['غذاء ومشروبات', 'دواء', 'أوعية عملية', 'رغوة ونقطة مستوى'] },
       { summary: 'مفتاح حد سعوي مدمج للمواد السائبة الخفيفة — عرض 360° وIO-Link وتركيب بلا ضبط.', useCase: 'صوامع وأوعية بمسحوق/حبيبات خفيفة في الغذاء والدواء — منصة VEGAPOINT نفسها محسّنة للسوائب.', badge: 'متوفر', features: ['حرارة −40 إلى 115 °C', 'ضغط −1 إلى 64 بار', 'محسّن للسوائب الخفيفة', 'عرض حالة ملون 360°', 'ترانزستور NPN/PNP · IO-Link · Bluetooth'], applications: ['غذاء', 'دواء', 'صوامع مسحوق', 'سوائب خفيفة'] },
-      { summary: 'مفتاح مستوى اهتزازي للمواد السائبة الحبيبية والخشنة — كشف min/max موثوق في الصوامع.', useCase: 'مساحيق وحبيبات ومواد خشنة من 100 غ/ل — يقلل الانسداد مقارنة بمسبارات الشوكة.', badge: 'متوفر', features: ['حرارة −50 إلى 150 °C', 'ضغط −1 إلى 16 بار', 'قضيب اهتزازي أملس يقاوم التراكم', 'ريليه DPDT أو ترانزستور NPN/PNP', 'أطوال 150 و500 و1000 و1500 مم'], applications: ['إسمنت وتعدين', 'غذاء', 'صوامع سائبة', 'كيماويات'] }
+      { summary: 'مفتاح مستوى اهتزازي للمواد السائبة الحبيبية والخشنة — كشف min/max موثوق في الصوامع.', useCase: 'مساحيق وحبيبات ومواد خشنة من 100 غ/ل — يقلل الانسداد مقارنة بمسبارات الشوكة.', badge: 'متوفر', features: ['حرارة −50 إلى 150 °C', 'ضغط −1 إلى 16 بار', 'قضيب اهتزازي أملس يقاوم التراكم', 'ريليه DPDT أو ترانزستور NPN/PNP', 'أطوال 150 و500 و1000 و1500 مم'], applications: ['إسمنت وتعدين', 'غذاء', 'صوامع سائبة', 'كيماويات'] },
+      { summary: 'رادار مدمج غير تلامسي لمستوى السوائل المستمر في المهام البسيطة التي تحتاج حماية عالية.', useCase: 'معالجة المياه ومحطات الضخ وأحواض فائض الأمطار ومراقبة المستوى؛ صوامع سائبة صغيرة وأوعية مفتوحة.', badge: 'متوفر', features: ['مدى قياس حتى 10 م · دقة ±5 مم', 'حرارة العملية −40 إلى 60 °C', 'ضغط −1 إلى 3 بار · 4…20 mA', 'رادار 80 GHz بلا صيانة', 'IP66 / IP68 (3 بار) · Type 6P · كابل PVC محوري'], applications: ['مياه وصرف', 'محطات ضخ', 'صوامع صغيرة', 'غذاء'] },
+      { summary: 'رادار مدمج غير تلامسي حتى 30 م — مستوى مستمر للسوائل والسوائب مع IP66/IP68 و4…20 mA/HART.', useCase: 'معالجة المياه ومحطات الضخ وفائض الأمطار وتدفق القنوات المفتوحة ومراقبة المستوى؛ صوامع متوسطة وأوعية مقسمة وأكوام مفتوحة.', badge: 'متوفر', features: ['مدى قياس حتى 30 م · دقة ±2 مم · شعاع 4°', 'حرارة العملية −40 إلى 80 °C', 'ضغط −1 إلى 3 بار · 4…20 mA/HART', 'رادار 80 GHz بلا صيانة · كابل محوري (5 م لهذا الرمز)', 'IP66 / IP68 · Type 6P · سن G1 · PVDF'], applications: ['مياه وصرف', 'محطات ضخ', 'صوامع متوسطة', 'بتروكيماويات'] },
+      { summary: 'رادار مدمج بجسم بلاستيكي حتى 10 م — مستوى مستمر للسوائل والسوائب، 4…20 mA وIP66/IP67.', useCase: 'معالجة المياه وخزانات الحمض/القلوي والقياس عبر جدار الخزان البلاستيكي؛ صوامع صغيرة وأوعية مفتوحة.', badge: 'متوفر', features: ['مدى قياس حتى 10 م · دقة ±5 مم · شعاع 8°', 'حرارة العملية −40 إلى 60 °C', 'ضغط −1 إلى 3 بار · 4…20 mA', 'رادار 80 GHz · ضبط Bluetooth', 'IP66 / IP67 · Type 4X · سن G1½ · PVDF'], applications: ['مياه وصرف', 'خزانات كيميائية', 'أوعية بلاستيكية', 'صوامع صغيرة'] },
+      { summary: 'رادار مدمج حتى 20 م — دقة ±2 مم و4…20 mA/HART وIP66/IP67؛ موافقة Ex اختيارية.', useCase: 'معالجة المياه وخزانات الحمض/القلوي والقياس عبر جدار البلاستيك/IBC؛ صوامع صغيرة ومتوسطة.', badge: 'متوفر', features: ['مدى قياس حتى 20 م · دقة ±2 مم · شعاع 8°', 'حرارة العملية −40 إلى 80 °C', 'ضغط −1 إلى 3 بار · 4…20 mA/HART', 'رادار 80 GHz · Bluetooth وHART', 'IP66 / IP67 · Type 4X · سن G1½ · PVDF'], applications: ['مياه وصرف', 'خزانات كيميائية', 'أوعية بلاستيكية', 'صوامع متوسطة'] },
+      { summary: 'رادار مدمج حتى 20 م مع شاشة محلية و3 أزرار — دقة ±2 مم و4…20 mA/HART وIP66/IP67؛ موافقة Ex اختيارية.', useCase: 'معالجة المياه وخزانات الحمض/القلوي والقياس عبر جدار الخزان البلاستيكي؛ صوامع صغيرة ومتوسطة ومراقبة المستوى في الموقع.', badge: 'متوفر', features: ['مدى قياس حتى 20 م · دقة ±2 مم · شعاع 8°', 'حرارة العملية −40 إلى 80 °C', 'ضغط −1 إلى 3 بار · 4…20 mA/HART', 'شاشة محلية وتشغيل بثلاثة أزرار · Bluetooth', 'IP66 / IP67 · Type 4X · سن G1½ · PVDF'], applications: ['مياه وصرف', 'خزانات كيميائية', 'أوعية بلاستيكية', 'مراقبة في الموقع'] },
+      { summary: 'مفتاح حد اهتزازي مدمج للسوائل — شوكة 316L وكشف ممتلئ/فارغ بدقة مليمترية دون ضبط في الموقع.', useCase: 'حماية من الفيضان وتشغيل المضخة الجاف وإشارة ممتلئ/فارغ في الأوعية والأنابيب — أي وضع تركيب.', badge: 'متوفر', features: ['حرارة العملية −40 إلى 100 °C', 'ضغط −1 إلى 64 بار · سن G¾ · 316L', 'مخرج ترانزستور PNP · موصل M12x1', 'طول الشوكة 64 مم · هيستيريسيس نحو 2 مم', 'IP66 / IP67 · Type 4X · بلا ضبط'], applications: ['أوعية سوائل', 'أنابيب', 'حماية مضخة', 'منع فيضان'] }
     ],
     valueProps: [
       { title: 'سلامة العملية', desc: 'منع الفيضان أو التشغيل الجاف بدقة عالية — مفاتيح مستوى VEGA تعطي إشارة موثوقة في كل الظروف.' },
@@ -3069,7 +3117,7 @@
     },
     quickSeries: [
       { name: 'VEGAPULS 6X', tag: 'رادار رائد', hint: 'خزانات عالية وعملية حرجة' },
-      { name: 'VEGAPULS', tag: 'رادار مدمج', hint: 'ترقية فوق صوتي' },
+      { name: 'VEGAPULS C 11', tag: 'رادار كابل · €580', hint: 'مياه وصرف حتى 10 م' },
       { name: 'VEGABAR 39', tag: 'ضغط · €510', hint: 'مرسل بعرض 360°' },
       { name: 'VEGAVIB S61', tag: 'سوائب · €540', hint: 'مفتاح اهتزازي للصوامع' }
     ],
@@ -3348,11 +3396,401 @@
     inquiryTemplate: 'مرحباً، أريد عرض سعر لـ Liqui Moly {product}.\n\nالكمية:\nالمركبة / الاستخدام:\nمدينة التسليم:\n'
   };
 
+  const uwtEn = {
+    brand: {
+      heroEyebrow: 'UWT level sensor supply from Germany',
+      heroHeadline: 'UWT level measurement',
+      heroHeadlineSub: 'Point level and continuous radar for bulk solids and liquids — Rotonivo · Vibranivo · NivoRadar',
+      tagline: 'Level. Up to the Max.',
+      since: 'Since 1977 · Germany',
+      description: 'Bizdavar Group supplies genuine UWT level sensors for silos, tanks and process lines. Point-level switches (Rotonivo, Vibranivo, Capanivo) and continuous radar (NivoRadar, NivoGuide) — with a clear proforma and consulting.',
+      heroStats: [
+        { label: 'Founded in Germany' },
+        { label: 'Safety integrity' },
+        { label: 'Hazardous area' }
+      ]
+    },
+    trustSignals: [
+      { label: 'Genuine UWT product', desc: 'Sourced from the German manufacturer — datasheet, serial and certificates' },
+      { label: 'Technical consulting', desc: 'Paddle, vibration or radar — based on medium, silo and process conditions' },
+      { label: 'Solids and liquids', desc: 'Cement, grain, plastics, powders, water, oils and chemicals' },
+      { label: 'Transparent logistics', desc: 'Proforma, lead time and freight to project delivery' }
+    ],
+    whyBuyFromUs: [
+      { title: 'The right measuring principle', desc: 'Rotary paddle, vibration, capacitive or 80 GHz radar — we match the medium, dust, foam and silo height.' },
+      { title: 'Replace a worn sensor', desc: 'Send the current model, process connection and probe length — we map an equivalent UWT series.' },
+      { title: 'Proforma before payment', desc: 'Price, order code, lead time and shipping terms in an official proforma.' },
+      { title: 'Single point of contact', desc: 'Level sensor plus install advice — alongside VEGA in the instrumentation catalogue.' }
+    ],
+    purchaseSteps: [
+      { num: '1', title: 'Inquiry', desc: 'Medium (solid/liquid), silo height, full/empty point, Ex/SIL, quantity' },
+      { num: '2', title: 'Technical consulting', desc: 'Rotonivo / Vibranivo / NivoRadar / NivoGuide recommendation' },
+      { num: '3', title: 'Proforma', desc: 'UWT price, lead time and shipping terms' },
+      { num: '4', title: 'Supply & shipping', desc: 'Genuine order, industrial packaging — international logistics' },
+      { num: '5', title: 'Delivery & support', desc: 'Delivery to site — datasheet, install guide and technical follow-up' }
+    ],
+    highlights: [
+      { title: 'Solido® 500-LAA 24V', desc: 'Compact rotary paddle switch for bulk solids — 24V DC, ATEX, selling price €285', useCase: 'Grain, flour, plastic granules, building materials and feed — full / empty', badge: 'In stock' },
+      { title: 'ELS-R1 230 VAC', desc: 'Economy rotary paddle switch for bulk solids — 230 VAC, SPDT relay, selling price €180', useCase: 'Cement, sand, plastic granules and food powder — full / empty', badge: 'In stock' },
+      { title: 'Rotonivo® rotary paddle', desc: 'Mechanical point level for bulk solids — RN 3000 / 4000 / 6000, SIL 2, up to 1100°C', useCase: 'Cement, grain, plastics and feed silos — full, empty and demand', badge: 'Point' },
+      { title: 'Vibranivo® vibrating fork', desc: 'Vibration point level for powder and granules — VN 1000 to VN 7000 including VN 7 liquid', useCase: 'Food, powder, plastics and low-density media', badge: 'Vibration' },
+      { title: 'NivoRadar® non-contact radar', desc: 'FMCW radar around 80 GHz — NR 3/4 solids, NR 7/8 liquids', useCase: 'Tall silos, liquid tanks, dust and vapour', badge: 'Radar' },
+      { title: 'NivoGuide® guided radar', desc: 'TDR for liquids, paste, foam and interface — NG 8100 / 8200 up to 400 bar', useCase: 'Process vessels, oil/water interface, high P/T', badge: 'TDR' },
+      { title: 'Capanivo® capacitive', desc: 'Compact capacitive switch for solids and liquids — CN 4000 / 7000', useCase: 'Small vessels, side mount, sticky media', badge: 'Capacitive' },
+      { title: 'NivoLED® signal lamp', desc: 'Local status lamp for point-level switches in hazardous areas — NL 9', useCase: 'Full/empty indication on silo and field panel', badge: 'Signal' }
+    ],
+    categories: [
+      { title: 'Point level', desc: 'Full, empty and demand detection — rotary paddle, vibration and capacitive' },
+      { title: 'Continuous radar — NivoRadar', desc: 'Non-contact FMCW radar for solids and liquids — NR 3 / 4 / 7 / 8' },
+      { title: 'Guided radar — NivoGuide', desc: 'TDR for liquids, paste, foam and interface — high pressure and temperature' },
+      { title: 'Visualisation & monitoring', desc: 'NivoTec local display and NivoLED field signal lamp' }
+    ],
+    iranIndustries: [
+      { name: 'Cement & building materials', desc: 'Rotonivo and NivoRadar for clinker, cement and aggregate silos' },
+      { name: 'Food & grain', desc: 'Vibranivo and Rotonivo — flour, sugar and animal-feed silos' },
+      { name: 'Petrochemical & chemical', desc: 'NivoGuide and NivoRadar — liquid tanks, Ex and SIL' },
+      { name: 'Plastics & polymer', desc: 'Paddle switches and radar for granules and polymer powder' },
+      { name: 'Water & wastewater', desc: 'Non-contact radar on water tanks and basins' },
+      { name: 'Power generation', desc: 'Coal, ash and fuel level — dusty conditions' }
+    ],
+    industries: [
+      { name: 'Building materials', desc: 'Silo high/low and continuous radar' },
+      { name: 'Food & Beverage', desc: 'Hygienic vibration and radar options' },
+      { name: 'Chemical', desc: 'Ex-rated switches and guided radar' },
+      { name: 'Plastics', desc: 'Granule and powder point level' },
+      { name: 'Wood & recycling', desc: 'Dusty bulk solids detection' },
+      { name: 'Power', desc: 'Fuel, ash and additive silos' },
+      { name: 'Water', desc: 'Non-contact radar on tanks' },
+      { name: 'Animal feed', desc: 'Paddle and vibration in feed mills' }
+    ],
+    academy: {
+      title: 'UWT — Level. Up to the Max.',
+      desc: 'Since 1977 in Betzigau, Germany, UWT specialises in level measurement of bulk solids and liquids. “Install and forget” sensors with ATEX, IECEx and SIL 2. Bizdavar Group bridges your project and the UWT catalogue for selection, supply and logistics.',
+      topics: [
+        'Point level vs continuous radar — when to choose which',
+        'Rotonivo RN 3000 / 4000 / 6000 — duty and SIL 2',
+        'NivoRadar 80 GHz for dusty solids',
+        'NivoGuide TDR for foam, interface and high pressure',
+        'ATEX / IECEx for dusty silos and gas zones',
+        'Quote checklist: medium, DK, height, process connection'
+      ]
+    },
+    services: [
+      { title: 'Sensor selection consulting', desc: 'Paddle, vibration, capacitive or radar — per UWT datasheet' },
+      { title: 'Replace an existing model', desc: 'Match process connection, probe length and signal output' },
+      { title: 'Official proforma', desc: 'Price, lead time and shipping terms in one document' },
+      { title: 'Logistics to Iran', desc: 'From the UWT factory to project delivery' },
+      { title: 'Multilingual support', desc: 'info@bizdavar.com and WhatsApp — one contact' }
+    ],
+    faq: [
+      { q: 'Is UWT genuine?', a: 'Yes — only genuine UWT Germany sensors with datasheet details on the proforma.' },
+      { q: 'Rotonivo or Vibranivo?', a: 'Rotonivo is a rotary paddle for bulk solids and high temperature. Vibranivo is a vibrating fork/rod for light powders and food. Send the medium and we recommend a series.' },
+      { q: 'How does NivoRadar differ from VEGAPULS?', a: 'Both are non-contact radar. UWT focuses on bulk solids and silos; VEGA is also strong on liquids and pressure. Bizdavar supplies both — send tank conditions.' },
+      { q: 'Ex and SIL certificates?', a: 'UWT series are offered with ATEX, IECEx and some with SIL 2. State Zone and SIL in the inquiry.' },
+      { q: 'Lead time to Iran?', a: 'Typically 3–8 weeks depending on model and stock. Exact time on the proforma.' },
+      { q: 'Sensors for liquids too?', a: 'Yes — NivoRadar liquid series, NivoGuide TDR, Vibranivo VN 7 liquid fork and capacitive switches.' },
+      { q: 'What is the Solido 500-LAA 24V price?', a: 'The selling price for Solido® 500-LAA 24V is €285. Lead time and freight are listed separately on the official proforma.' },
+      { q: 'What is the ELS-R1 230 VAC price?', a: 'The selling price for UWT ELS-R1 230 VAC is €180. Lead time and freight are listed separately on the official proforma.' }
+    ],
+    inquiryTemplate: 'Hello, I need a quote for UWT {product}.\n\nMedium (solid/liquid):\nSilo / tank height:\nMeasurement point (full / empty / continuous):\nEx / SIL:\nQuantity:\n'
+  };
+
+  const uwtTr = {
+    brand: {
+      heroEyebrow: 'Almanya’dan UWT seviye sensör tedariki',
+      heroHeadline: 'UWT seviye ölçümü',
+      heroHeadlineSub: 'Dökme katı ve sıvılar için seviye şalteri ve sürekli radar — Rotonivo · Vibranivo · NivoRadar',
+      tagline: 'Level. Up to the Max.',
+      since: '1977’den beri · Almanya',
+      description: 'Bizdavar Group, silo, tank ve proses hatları için orijinal UWT seviye sensörleri tedarik eder. Şalter (Rotonivo, Vibranivo, Capanivo) ve sürekli radar (NivoRadar, NivoGuide) — şeffaf proforma ve danışmanlık.',
+      heroStats: [
+        { label: 'Almanya kuruluş' },
+        { label: 'Güvenlik bütünlüğü' },
+        { label: 'Patlayıcı ortam' }
+      ]
+    },
+    trustSignals: [
+      { label: 'Orijinal UWT ürünü', desc: 'Alman üreticiden — döküman, seri no ve sertifika' },
+      { label: 'Teknik danışmanlık', desc: 'Paddle, titreşim veya radar — malzeme, silo ve proses şartına göre' },
+      { label: 'Katı ve sıvı', desc: 'Çimento, tahıl, plastik, toz, su, yağ ve kimyasal' },
+      { label: 'Şeffaf lojistik', desc: 'Proforma, lead time ve sahaya teslimat' }
+    ],
+    whyBuyFromUs: [
+      { title: 'Doğru ölçüm prensibi', desc: 'Döner palet, titreşim, kapasitif veya 80 GHz radar — malzeme, toz, köpük ve silo yüksekliğine göre.' },
+      { title: 'Eski sensör değişimi', desc: 'Mevcut model, proses bağlantısı ve sonda boyunu gönderin — eşdeğer UWT serisini eşleştiririz.' },
+      { title: 'Ödemeden önce proforma', desc: 'Fiyat, sipariş kodu, teslim süresi ve sevkiyat şartları resmi proformada.' },
+      { title: 'Tek iletişim noktası', desc: 'Seviye sensörü ve montaj önerisi — VEGA ile aynı enstrümantasyon kataloğunda.' }
+    ],
+    purchaseSteps: [
+      { num: '1', title: 'Sorgu', desc: 'Malzeme (katı/sıvı), silo yüksekliği, dolu/boş noktası, Ex/SIL, adet' },
+      { num: '2', title: 'Teknik danışmanlık', desc: 'Rotonivo / Vibranivo / NivoRadar / NivoGuide önerisi' },
+      { num: '3', title: 'Proforma', desc: 'UWT fiyatı, lead time ve sevkiyat şartları' },
+      { num: '4', title: 'Tedarik ve sevkiyat', desc: 'Orijinal sipariş, endüstriyel ambalaj — uluslararası lojistik' },
+      { num: '5', title: 'Teslim ve destek', desc: 'Sahaya teslim — döküman, montaj kılavuzu ve teknik takip' }
+    ],
+    highlights: [
+      { title: 'Solido® 500-LAA 24V', desc: 'Kompakt döner paletli seviye şalteri — 24V DC, ATEX, satış fiyatı €285', useCase: 'Tahıl, un, plastik granül, yapı malzemesi ve yem siloları — dolu / boş', badge: 'Stokta' },
+      { title: 'ELS-R1 230 VAC', desc: 'Ekonomik döner paletli seviye şalteri — 230 VAC, SPDT röle, satış fiyatı €180', useCase: 'Çimento, kum, plastik granül ve gıda tozu — dolu / boş', badge: 'Stokta' },
+      { title: 'Rotonivo® döner palet', desc: 'Dökme katılar için mekanik seviye şalteri — RN 3000 / 4000 / 6000, SIL 2, 1100°C’ye kadar', useCase: 'Çimento, tahıl, plastik ve yem siloları', badge: 'Point' },
+      { title: 'Vibranivo® titreşim çatalı', desc: 'Toz ve granül için titreşim şalteri — VN 1000–7000, VN 7 sıvı', useCase: 'Gıda, toz, plastik ve düşük yoğunluk', badge: 'Vibration' },
+      { title: 'NivoRadar® temassız radar', desc: 'Yaklaşık 80 GHz FMCW — NR 3/4 katı, NR 7/8 sıvı', useCase: 'Yüksek silo, sıvı tank, toz ve buhar', badge: 'Radar' },
+      { title: 'NivoGuide® kılavuzlu radar', desc: 'Sıvı, macun, köpük ve ara yüzey için TDR — NG 8100 / 8200, 400 bar’a kadar', useCase: 'Proses tankı, yağ/su ara yüzeyi', badge: 'TDR' },
+      { title: 'Capanivo® kapasitif', desc: 'Katı ve sıvı için kompakt kapasitif şalter — CN 4000 / 7000', useCase: 'Küçük tank, yan montaj, yapışkan ortam', badge: 'Capacitive' },
+      { title: 'NivoLED® sinyal lambası', desc: 'Tehlikeli sahada seviye şalteri durum lambası — NL 9', useCase: 'Silo ve saha panosunda dolu/boş göstergesi', badge: 'Signal' }
+    ],
+    categories: [
+      { title: 'Seviye şalteri', desc: 'Dolu, boş ve demand — döner palet, titreşim ve kapasitif' },
+      { title: 'Sürekli radar — NivoRadar', desc: 'Katı ve sıvı için temassız FMCW — NR 3 / 4 / 7 / 8' },
+      { title: 'Kılavuzlu radar — NivoGuide', desc: 'Sıvı, macun, köpük ve ara yüzey — yüksek basınç ve sıcaklık' },
+      { title: 'Görselleştirme ve izleme', desc: 'NivoTec yerel gösterge ve NivoLED saha lambası' }
+    ],
+    iranIndustries: [
+      { name: 'Çimento ve yapı malzemesi', desc: 'Klinker, çimento ve agrega siloları için Rotonivo ve NivoRadar' },
+      { name: 'Gıda ve tahıl', desc: 'Vibranivo ve Rotonivo — un, şeker ve yem siloları' },
+      { name: 'Petrokimya ve kimya', desc: 'NivoGuide ve NivoRadar — sıvı tank, Ex ve SIL' },
+      { name: 'Plastik ve polimer', desc: 'Granül ve polimer tozu için palet şalteri ve radar' },
+      { name: 'Su ve atıksu', desc: 'Su tankı ve havuzda temassız radar' },
+      { name: 'Enerji', desc: 'Kömür, kül ve yakıt seviyesi — tozlu ortam' }
+    ],
+    industries: [
+      { name: 'Yapı malzemeleri', desc: 'Silo dolu/boş ve sürekli radar' },
+      { name: 'Gıda ve içecek', desc: 'Hijyenik titreşim ve radar seçenekleri' },
+      { name: 'Kimya', desc: 'Ex şalterler ve kılavuzlu radar' },
+      { name: 'Plastik', desc: 'Granül ve toz seviye şalteri' },
+      { name: 'Ahşap ve geri dönüşüm', desc: 'Tozlu dökme katı tespiti' },
+      { name: 'Enerji', desc: 'Yakıt, kül ve katkı siloları' },
+      { name: 'Su', desc: 'Tanklarda temassız radar' },
+      { name: 'Hayvan yemi', desc: 'Yem tesisinde palet ve titreşim' }
+    ],
+    academy: {
+      title: 'UWT — Level. Up to the Max.',
+      desc: '1977’den beri Betzigau, Almanya’da UWT dökme katı ve sıvı seviye ölçümünde uzman. ATEX, IECEx ve SIL 2 sertifikalı “tak ve unut” sensörler. Bizdavar Group projeniz ile UWT kataloğu arasında seçim, tedarik ve lojistik köprüsüdür.',
+      topics: [
+        'Seviye şalteri mi sürekli radar mı?',
+        'Rotonivo RN 3000 / 4000 / 6000 — görev ve SIL 2',
+        'Tozlu katılar için NivoRadar 80 GHz',
+        'Köpük, ara yüzey ve yüksek basınç için NivoGuide TDR',
+        'Tozlu silo ve gaz zonları için ATEX / IECEx',
+        'Teklif listesi: malzeme, DK, yükseklik, proses bağlantısı'
+      ]
+    },
+    services: [
+      { title: 'Sensör seçim danışmanlığı', desc: 'Palet, titreşim, kapasitif veya radar — UWT dökümanına göre' },
+      { title: 'Mevcut model değişimi', desc: 'Proses bağlantısı, sonda boyu ve sinyal çıkışını eşleştirme' },
+      { title: 'Resmi proforma', desc: 'Fiyat, lead time ve sevkiyat şartları tek belgede' },
+      { title: 'İran’a lojistik', desc: 'UWT fabrikasından saha teslimine' },
+      { title: 'Çok dilli destek', desc: 'info@bizdavar.com ve WhatsApp — tek iletişim' }
+    ],
+    faq: [
+      { q: 'UWT orijinal mi?', a: 'Evet — yalnızca Almanya UWT orijinal sensörleri, proformada döküman bilgisiyle.' },
+      { q: 'Rotonivo mu Vibranivo mu?', a: 'Rotonivo dökme katı ve yüksek sıcaklık için döner palettir. Vibranivo hafif toz ve gıda için titreşim çatalı/çubuğudur. Malzemeyi gönderin, seriyi önerelim.' },
+      { q: 'NivoRadar ile VEGAPULS farkı?', a: 'İkisi de temassız radardır. UWT dökme katı ve siloya odaklanır; VEGA sıvı ve basınçta da güçlüdür. Bizdavar her ikisini tedarik eder — tank şartlarını gönderin.' },
+      { q: 'Ex ve SIL sertifikası var mı?', a: 'UWT serileri ATEX, IECEx ve bir kısmı SIL 2 ile sunulur. Zone ve SIL ihtiyacını sorguda yazın.' },
+      { q: 'İran teslim süresi?', a: 'Modele ve stoğa göre genelde 3–8 hafta. Net süre proformada.' },
+      { q: 'Sıvılar için de var mı?', a: 'Evet — NivoRadar sıvı serisi, NivoGuide TDR, Vibranivo VN 7 sıvı çatalı ve kapasitif şalterler.' },
+      { q: 'Solido 500-LAA 24V fiyatı nedir?', a: 'Solido® 500-LAA 24V satış fiyatı 285 €’dur. Teslim süresi ve nakliye resmi proformada ayrıca belirtilir.' },
+      { q: 'ELS-R1 230 VAC fiyatı nedir?', a: 'UWT ELS-R1 230 VAC satış fiyatı 180 €’dur. Teslim süresi ve nakliye resmi proformada ayrıca belirtilir.' }
+    ],
+    inquiryTemplate: 'Merhaba, UWT {product} için teklif istiyorum.\n\nMalzeme (katı/sıvı):\nSilo / tank yüksekliği:\nÖlçüm noktası (dolu / boş / sürekli):\nEx / SIL:\nAdet:\n'
+  };
+
+  const uwtRu = {
+    brand: {
+      heroEyebrow: 'Поставка уровнемеров UWT из Германии',
+      heroHeadline: 'Измерение уровня UWT',
+      heroHeadlineSub: 'Сигнализаторы и радар для сыпучих и жидкостей — Rotonivo · Vibranivo · NivoRadar',
+      tagline: 'Level. Up to the Max.',
+      since: 'С 1977 · Германия',
+      description: 'Bizdavar Group поставляет оригинальные датчики уровня UWT для силосов, резервуаров и технологических линий. Сигнализаторы (Rotonivo, Vibranivo, Capanivo) и непрерывный радар (NivoRadar, NivoGuide).',
+      heroStats: [{ label: 'Основана в Германии' }, { label: 'Целостность безопасности' }, { label: 'Взрывоопасная зона' }]
+    },
+    trustSignals: [
+      { label: 'Оригинал UWT', desc: 'От немецкого производителя — паспорт, серийный номер и сертификаты' },
+      { label: 'Техконсультация', desc: 'Лопасть, вибрация или радар — по среде, силосу и условиям процесса' },
+      { label: 'Сыпучие и жидкости', desc: 'Цемент, зерно, пластик, порошки, вода, масла и химия' },
+      { label: 'Прозрачная логистика', desc: 'Проформа, срок и доставка на объект' }
+    ],
+    whyBuyFromUs: [
+      { title: 'Правильный принцип измерения', desc: 'Лопастной, вибрационный, ёмкостный или радар 80 ГГц — по среде, пыли, пене и высоте силоса.' },
+      { title: 'Замена изношенного датчика', desc: 'Пришлите модель, присоединение и длину зонда — подберём серию UWT.' },
+      { title: 'Проформа до оплаты', desc: 'Цена, код заказа, срок и условия поставки в официальной проформе.' },
+      { title: 'Одна точка контакта', desc: 'Датчик уровня и совет по монтажу — рядом с VEGA в каталоге КИП.' }
+    ],
+    purchaseSteps: [
+      { num: '1', title: 'Запрос', desc: 'Среда (твёрдое/жидкость), высота силоса, точка полного/пустого, Ex/SIL, количество' },
+      { num: '2', title: 'Консультация', desc: 'Рекомендация Rotonivo / Vibranivo / NivoRadar / NivoGuide' },
+      { num: '3', title: 'Проформа', desc: 'Цена UWT, срок и условия поставки' },
+      { num: '4', title: 'Поставка', desc: 'Оригинальный заказ, промышленная упаковка — международная логистика' },
+      { num: '5', title: 'Сдача и поддержка', desc: 'Доставка на объект — паспорт, инструкция и техподдержка' }
+    ],
+    highlights: [
+      { title: 'Solido® 500-LAA 24V', desc: 'Компактный лопастной сигнализатор для сыпучих — 24 В DC, ATEX, цена €285', useCase: 'Зерно, мука, гранулы пластика, стройматериалы и корма — полный / пустой', badge: 'В наличии' },
+      { title: 'ELS-R1 230 VAC', desc: 'Экономичный лопастной сигнализатор для сыпучих — 230 В AC, реле SPDT, цена €180', useCase: 'Цемент, песок, гранулы пластика и пищевой порошок — полный / пустой', badge: 'В наличии' },
+      { title: 'Rotonivo® лопастной', desc: 'Механический сигнализатор для сыпучих — RN 3000 / 4000 / 6000, SIL 2, до 1100°C', useCase: 'Силосы цемента, зерна, пластика и кормов', badge: 'Point' },
+      { title: 'Vibranivo® вилка', desc: 'Вибрационный сигнализатор для порошка и гранул — VN 1000–7000, VN 7 жидкость', useCase: 'Пищевая, порошок, пластик', badge: 'Vibration' },
+      { title: 'NivoRadar® бесконтактный радар', desc: 'FMCW около 80 ГГц — NR 3/4 сыпучие, NR 7/8 жидкости', useCase: 'Высокие силосы, жидкие резервуары, пыль и пар', badge: 'Radar' },
+      { title: 'NivoGuide® волноводный радар', desc: 'TDR для жидкостей, пасты, пены и раздела фаз — NG 8100 / 8200 до 400 бар', useCase: 'Технологические ёмкости, нефте/вода', badge: 'TDR' },
+      { title: 'Capanivo® ёмкостный', desc: 'Компактный ёмкостный сигнализатор — CN 4000 / 7000', useCase: 'Малые ёмкости, боковой монтаж', badge: 'Capacitive' },
+      { title: 'NivoLED® сигнальная лампа', desc: 'Локальная лампа статуса для сигнализаторов во взрывоопасной зоне — NL 9', useCase: 'Индикация полного/пустого на силосе', badge: 'Signal' }
+    ],
+    categories: [
+      { title: 'Сигнализаторы уровня', desc: 'Полный, пустой и demand — лопасть, вибрация и ёмкость' },
+      { title: 'Непрерывный радар — NivoRadar', desc: 'Бесконтактный FMCW для сыпучих и жидкостей — NR 3 / 4 / 7 / 8' },
+      { title: 'Волноводный радар — NivoGuide', desc: 'TDR для жидкостей, пасты, пены и раздела фаз' },
+      { title: 'Визуализация и мониторинг', desc: 'NivoTec локальный дисплей и лампа NivoLED' }
+    ],
+    iranIndustries: [
+      { name: 'Цемент и стройматериалы', desc: 'Rotonivo и NivoRadar для силосов клинкера и цемента' },
+      { name: 'Пищевая и зерно', desc: 'Vibranivo и Rotonivo — мука, сахар, корма' },
+      { name: 'Нефтехимия', desc: 'NivoGuide и NivoRadar — жидкие резервуары, Ex и SIL' },
+      { name: 'Пластмассы', desc: 'Лопастные сигнализаторы и радар для гранул' },
+      { name: 'Вода и стоки', desc: 'Бесконтактный радар на резервуарах воды' },
+      { name: 'Энергетика', desc: 'Уровень угля, золы и топлива' }
+    ],
+    industries: [
+      { name: 'Стройматериалы', desc: 'Верх/низ силоса и непрерывный радар' },
+      { name: 'Пищевая', desc: 'Гигиеническая вибрация и радар' },
+      { name: 'Химия', desc: 'Ex-сигнализаторы и волноводный радар' },
+      { name: 'Пластмассы', desc: 'Гранулы и порошок' },
+      { name: 'Дерево и рециклинг', desc: 'Пыльные сыпучие' },
+      { name: 'Энергетика', desc: 'Топливо, зола, добавки' },
+      { name: 'Вода', desc: 'Бесконтактный радар на резервуарах' },
+      { name: 'Корма', desc: 'Лопасть и вибрация на комбикормовых заводах' }
+    ],
+    academy: {
+      title: 'UWT — Level. Up to the Max.',
+      desc: 'С 1977 года в Бецигау (Германия) UWT специализируется на уровне сыпучих и жидкостей. Датчики ATEX, IECEx и SIL 2. Bizdavar Group — мост между вашим проектом и каталогом UWT.',
+      topics: [
+        'Сигнализатор или непрерывный радар',
+        'Rotonivo RN 3000 / 4000 / 6000 и SIL 2',
+        'NivoRadar 80 ГГц для пыльных сыпучих',
+        'NivoGuide TDR для пены и раздела фаз',
+        'ATEX / IECEx для пылевых силосов',
+        'Чек-лист запроса: среда, DK, высота, присоединение'
+      ]
+    },
+    services: [
+      { title: 'Подбор датчика', desc: 'Лопасть, вибрация, ёмкость или радар' },
+      { title: 'Замена существующей модели', desc: 'Присоединение, длина зонда и выход сигнала' },
+      { title: 'Официальная проформа', desc: 'Цена, срок и условия поставки' },
+      { title: 'Логистика в Иран', desc: 'С завода UWT до объекта' },
+      { title: 'Многоязычная поддержка', desc: 'info@bizdavar.com и WhatsApp' }
+    ],
+    faq: [
+      { q: 'UWT оригинал?', a: 'Да — только оригинальные датчики UWT Германия с данными паспорта в проформе.' },
+      { q: 'Rotonivo или Vibranivo?', a: 'Rotonivo — лопастной для сыпучих и высокой температуры. Vibranivo — вилка/стержень для лёгких порошков и пищевых сред.' },
+      { q: 'Чем NivoRadar отличается от VEGAPULS?', a: 'Оба — бесконтактный радар. UWT сильнее на сыпучих и силосах; VEGA — также на жидкостях и давлении. Bizdavar поставляет оба бренда.' },
+      { q: 'Есть Ex и SIL?', a: 'Серии UWT с ATEX, IECEx и частично SIL 2. Укажите зону и SIL в запросе.' },
+      { q: 'Срок в Иран?', a: 'Обычно 3–8 недель в зависимости от модели. Точный срок в проформе.' },
+      { q: 'Есть датчики для жидкостей?', a: 'Да — NivoRadar для жидкостей, NivoGuide TDR, Vibranivo VN 7 и ёмкостные сигнализаторы.' },
+      { q: 'Сколько стоит Solido 500-LAA 24V?', a: 'Цена продажи Solido® 500-LAA 24V — €285. Срок поставки и фрахт указываются отдельно в официальной проформе.' },
+      { q: 'Сколько стоит ELS-R1 230 VAC?', a: 'Цена продажи UWT ELS-R1 230 VAC — €180. Срок поставки и фрахт указываются отдельно в официальной проформе.' }
+    ],
+    inquiryTemplate: 'Здравствуйте, нужен расчёт UWT {product}.\n\nСреда (твёрдое/жидкость):\nВысота силоса / резервуара:\nТочка измерения (полный / пустой / непрерывный):\nEx / SIL:\nКоличество:\n'
+  };
+
+  const uwtAr = {
+    brand: {
+      heroEyebrow: 'توريد حساسات مستوى UWT من ألمانيا',
+      heroHeadline: 'قياس المستوى UWT',
+      heroHeadlineSub: 'مفاتيح مستوى ورادار للمواد الصلبة والسوائل — Rotonivo · Vibranivo · NivoRadar',
+      tagline: 'Level. Up to the Max.',
+      since: 'منذ ١٩٧٧ · ألمانيا',
+      description: 'مجموعة Bizdavar تورّد حساسات مستوى UWT الأصلية للصوامع والخزانات وخطوط العملية. مفاتيح مستوى (Rotonivo وVibranivo وCapanivo) ورادار مستمر (NivoRadar وNivoGuide).',
+      heroStats: [{ label: 'تأسست في ألمانيا' }, { label: 'سلامة وظيفية' }, { label: 'مناطق خطرة' }]
+    },
+    trustSignals: [
+      { label: 'منتج UWT أصلي', desc: 'من المصنّع الألماني — نشرة فنية ورقم تسلسلي وشهادات' },
+      { label: 'استشارة فنية', desc: 'مجداف أو اهتزاز أو رادار — حسب الوسيط والصومعة وظروف العملية' },
+      { label: 'صلب وسائل', desc: 'أسمنت وحبوب وبلاستيك ومساحيق وماء وزيوت وكيماويات' },
+      { label: 'لوجستيات شفافة', desc: 'فاتورة مبدئية ومدة توريد وتسليم للموقع' }
+    ],
+    whyBuyFromUs: [
+      { title: 'مبدأ القياس المناسب', desc: 'مجداف دوار أو اهتزاز أو سعوي أو رادار ٨٠ غيغاهرتز — حسب الوسيط والغبار والرغوة وارتفاع الصومعة.' },
+      { title: 'استبدال حسّاس قديم', desc: 'أرسل الموديل الحالي ووصلة العملية وطول المسبار — نطابق سلسلة UWT.' },
+      { title: 'فاتورة مبدئية قبل الدفع', desc: 'السعر ورمز الطلب ومدة التسليم وشروط الشحن في فاتورة رسمية.' },
+      { title: 'نقطة اتصال واحدة', desc: 'حسّاس مستوى ونصيحة تركيب — بجانب VEGA في كتالوج القياس.' }
+    ],
+    purchaseSteps: [
+      { num: '١', title: 'استعلام', desc: 'الوسيط (صلب/سائل)، ارتفاع الصومعة، نقطة ممتلئ/فارغ، Ex/SIL، الكمية' },
+      { num: '٢', title: 'استشارة فنية', desc: 'اقتراح Rotonivo / Vibranivo / NivoRadar / NivoGuide' },
+      { num: '٣', title: 'فاتورة مبدئية', desc: 'سعر UWT ومدة التوريد وشروط الشحن' },
+      { num: '٤', title: 'توريد وشحن', desc: 'طلب أصلي وتعبئة صناعية — لوجستيات دولية' },
+      { num: '٥', title: 'تسليم ودعم', desc: 'التسليم في الموقع — نشرة فنية ودليل تركيب ومتابعة' }
+    ],
+    highlights: [
+      { title: 'Solido® 500-LAA 24V', desc: 'مفتاح مستوى بمجداف دوار مدمج للمواد الصلبة — 24V DC وATEX وسعر البيع €285', useCase: 'صوامع حبوب ودقيق وحبيبات بلاستيك ومواد بناء وأعلاف — ممتلئ / فارغ', badge: 'متوفر' },
+      { title: 'ELS-R1 230 VAC', desc: 'مفتاح مستوى بمجداف دوار اقتصادي للمواد الصلبة — 230 VAC ومرحل SPDT وسعر البيع €180', useCase: 'أسمنت ورمل وحبيبات بلاستيك ومسحوق غذائي — ممتلئ / فارغ', badge: 'متوفر' },
+      { title: 'Rotonivo® مجداف دوار', desc: 'مفتاح مستوى ميكانيكي للمواد الصلبة — RN 3000 / 4000 / 6000 وSIL 2 حتى ١١٠٠°م', useCase: 'صوامع أسمنت وحبوب وبلاستيك وأعلاف', badge: 'Point' },
+      { title: 'Vibranivo® شوكة اهتزاز', desc: 'مفتاح اهتزازي للمسحوق والحبيبات — VN 1000 إلى VN 7000 بما فيها VN 7 للسوائل', useCase: 'غذاء ومسحوق وبلاستيك وكثافة منخفضة', badge: 'Vibration' },
+      { title: 'NivoRadar® رادار بلا تلامس', desc: 'رادار FMCW نحو ٨٠ غيغاهرتز — NR 3/4 صلب وNR 7/8 سوائل', useCase: 'صوامع عالية وخزانات سوائل وغبار وبخار', badge: 'Radar' },
+      { title: 'NivoGuide® رادار موجّه', desc: 'TDR للسوائل والعجائن والرغوة والواجهة — NG 8100 / 8200 حتى ٤٠٠ بار', useCase: 'خزانات عملية وواجهة زيت/ماء', badge: 'TDR' },
+      { title: 'Capanivo® سعوي', desc: 'مفتاح سعوي مدمج للصلب والسائل — CN 4000 / 7000', useCase: 'خزانات صغيرة وتركيب جانبي ووسائط لزجة', badge: 'Capacitive' },
+      { title: 'NivoLED® مصباح إشارة', desc: 'مصباح حالة محلي لمفاتيح المستوى في المناطق الخطرة — NL 9', useCase: 'بيان ممتلئ/فارغ على الصومعة ولوحة الحقل', badge: 'Signal' }
+    ],
+    categories: [
+      { title: 'مفاتيح المستوى', desc: 'كشف ممتلئ وفارغ وطلب — مجداف واهتزاز وسعوي' },
+      { title: 'رادار مستمر — NivoRadar', desc: 'FMCW بلا تلامس للصلب والسوائل — NR 3 / 4 / 7 / 8' },
+      { title: 'رادار موجّه — NivoGuide', desc: 'TDR للسوائل والعجائن والرغوة والواجهة' },
+      { title: 'عرض ومراقبة', desc: 'شاشة NivoTec محلية ومصباح NivoLED' }
+    ],
+    iranIndustries: [
+      { name: 'أسمنت ومواد بناء', desc: 'Rotonivo وNivoRadar لصوامع الكلنكر والأسمنت' },
+      { name: 'غذاء وحبوب', desc: 'Vibranivo وRotonivo — دقيق وسكر وأعلاف' },
+      { name: 'بتروكيماويات وكيمياء', desc: 'NivoGuide وNivoRadar — خزانات سوائل وEx وSIL' },
+      { name: 'بلاستيك وبوليمر', desc: 'مفاتيح مجداف ورادار للحبيبات ومسحوق البوليمر' },
+      { name: 'مياه وصرف', desc: 'رادار بلا تلامس على خزانات المياه' },
+      { name: 'طاقة', desc: 'مستوى فحم ورماد ووقود — ظروف غبار' }
+    ],
+    industries: [
+      { name: 'مواد بناء', desc: 'ممتلئ/فارغ للصومعة ورادار مستمر' },
+      { name: 'أغذية ومشروبات', desc: 'اهتزاز ورادار صحي' },
+      { name: 'كيمياء', desc: 'مفاتيح Ex ورادار موجّه' },
+      { name: 'بلاستيك', desc: 'مستوى حبيبات ومسحوق' },
+      { name: 'خشب وإعادة تدوير', desc: 'كشف مواد صلبة مغبرة' },
+      { name: 'طاقة', desc: 'صوامع وقود ورماد وإضافات' },
+      { name: 'مياه', desc: 'رادار بلا تلامس على الخزانات' },
+      { name: 'أعلاف', desc: 'مجداف واهتزاز في مطاحن الأعلاف' }
+    ],
+    academy: {
+      title: 'UWT — Level. Up to the Max.',
+      desc: 'منذ ١٩٧٧ في بيتسيغاو بألمانيا تتخصص UWT في قياس مستوى المواد الصلبة والسوائل. حساسات ATEX وIECEx وSIL 2 بمبدأ «ركّب وانسَ». مجموعة Bizdavar جسر بين مشروعك وكتالوج UWT للاختيار والتوريد واللوجستيات.',
+      topics: [
+        'مفتاح مستوى أم رادار مستمر؟',
+        'Rotonivo RN 3000 / 4000 / 6000 وSIL 2',
+        'NivoRadar ٨٠ غيغاهرتز للمواد الصلبة المغبرة',
+        'NivoGuide TDR للرغوة والواجهة والضغط العالي',
+        'ATEX / IECEx لصوامع الغبار ومناطق الغاز',
+        'قائمة الاستعلام: الوسيط وDK والارتفاع ووصلة العملية'
+      ]
+    },
+    services: [
+      { title: 'استشارة اختيار الحسّاس', desc: 'مجداف أو اهتزاز أو سعوي أو رادار' },
+      { title: 'استبدال موديل قائم', desc: 'مطابقة وصلة العملية وطول المسبار ومخرج الإشارة' },
+      { title: 'فاتورة مبدئية رسمية', desc: 'السعر ومدة التوريد وشروط الشحن' },
+      { title: 'لوجستيات إلى إيران', desc: 'من مصنع UWT حتى التسليم في الموقع' },
+      { title: 'دعم متعدد اللغات', desc: 'info@bizdavar.com وواتساب' }
+    ],
+    faq: [
+      { q: 'هل UWT أصلي؟', a: 'نعم — حساسات UWT الألمانية الأصلية فقط مع بيانات النشرة في الفاتورة المبدئية.' },
+      { q: 'Rotonivo أم Vibranivo؟', a: 'Rotonivo مجداف دوار للمواد الصلبة ودرجات الحرارة العالية. Vibranivo شوكة/قضيب اهتزاز للمساحيق الخفيفة والغذاء.' },
+      { q: 'ما الفرق بين NivoRadar وVEGAPULS؟', a: 'كلاهما رادار بلا تلامس. UWT يركز على المواد الصلبة والصوامع؛ VEGA قوي أيضاً في السوائل والضغط. Bizdavar يورّد الاثنين.' },
+      { q: 'هل توجد شهادات Ex وSIL؟', a: 'سلاسل UWT بـ ATEX وIECEx وبعضها SIL 2. اذكر المنطقة وSIL في الاستعلام.' },
+      { q: 'مدة التسليم إلى إيران؟', a: 'عادة ٣ إلى ٨ أسابيع حسب الموديل والمخزون. المدة الدقيقة في الفاتورة المبدئية.' },
+      { q: 'هل توجد حساسات للسوائل؟', a: 'نعم — سلسلة NivoRadar للسوائل وNivoGuide TDR وVibranivo VN 7 ومفاتيح سعوية.' },
+      { q: 'ما سعر Solido 500-LAA 24V؟', a: 'سعر بيع Solido® 500-LAA 24V هو €285. مدة التوريد والشحن تُذكران منفصلتين في الفاتورة المبدئية.' },
+      { q: 'ما سعر ELS-R1 230 VAC؟', a: 'سعر بيع UWT ELS-R1 230 VAC هو €180. مدة التوريد والشحن تُذكران منفصلتين في الفاتورة المبدئية.' }
+    ],
+    inquiryTemplate: 'مرحباً، أريد عرض سعر لـ UWT {product}.\n\nالوسيط (صلب/سائل):\nارتفاع الصومعة / الخزان:\nنقطة القياس (ممتلئ / فارغ / مستمر):\nEx / SIL:\nالكمية:\n'
+  };
+
   if (window.BIZDAVAR_LOCALES) {
 
     if (window.BIZDAVAR_LOCALES.en) {
 
       window.BIZDAVAR_LOCALES.en.gamakCatalog = gamakEn;
+
+      window.BIZDAVAR_LOCALES.en.uwtCatalog = uwtEn;
 
       window.BIZDAVAR_LOCALES.en.digiSystemCatalog = digiEn;
 
@@ -3372,6 +3810,8 @@
 
       window.BIZDAVAR_LOCALES.tr.gamakCatalog = gamakTr;
 
+      window.BIZDAVAR_LOCALES.tr.uwtCatalog = uwtTr;
+
       window.BIZDAVAR_LOCALES.tr.digiSystemCatalog = digiTr;
 
       window.BIZDAVAR_LOCALES.tr.teraokaCatalog = teraokaTr;
@@ -3390,12 +3830,14 @@
       window.BIZDAVAR_LOCALES.ru.liquiMolyCatalog = liquiRu;
       window.BIZDAVAR_LOCALES.ru.vegaCatalog = vegaRu;
       window.BIZDAVAR_LOCALES.ru.prosenseCatalog = prosenseRu;
+      window.BIZDAVAR_LOCALES.ru.uwtCatalog = uwtRu;
     }
 
     if (window.BIZDAVAR_LOCALES.ar) {
       window.BIZDAVAR_LOCALES.ar.liquiMolyCatalog = liquiAr;
       window.BIZDAVAR_LOCALES.ar.vegaCatalog = vegaAr;
       window.BIZDAVAR_LOCALES.ar.prosenseCatalog = prosenseAr;
+      window.BIZDAVAR_LOCALES.ar.uwtCatalog = uwtAr;
     }
 
   }

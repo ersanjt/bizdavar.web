@@ -71,11 +71,20 @@ class Auth
         session_set_cookie_params([
             'lifetime' => $s['lifetime'] ?? 604800,
             'path' => '/',
-            'secure' => (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off'),
+            'secure' => self::isHttps(),
             'httponly' => true,
             'samesite' => 'Lax',
         ]);
         session_start();
+    }
+
+    public static function isHttps(): bool
+    {
+        if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') {
+            return true;
+        }
+        $fwd = strtolower((string) ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? ''));
+        return $fwd === 'https';
     }
 
     public static function user(): ?array
@@ -92,6 +101,37 @@ class Auth
         return $user;
     }
 
+    public static function requireRole(array $roles): array
+    {
+        $user = self::requireUser();
+        $role = (string) ($user['role'] ?? '');
+        if (!in_array($role, $roles, true)) {
+            Response::error('Forbidden', 403);
+        }
+        return $user;
+    }
+
+    public static function csrfToken(): string
+    {
+        if (empty($_SESSION['csrf_token']) || !is_string($_SESSION['csrf_token'])) {
+            $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+        }
+        return $_SESSION['csrf_token'];
+    }
+
+    public static function verifyCsrf(): void
+    {
+        $method = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET'));
+        if (in_array($method, ['GET', 'HEAD', 'OPTIONS'], true)) {
+            return;
+        }
+        $header = (string) ($_SERVER['HTTP_X_CSRF_TOKEN'] ?? '');
+        $token = (string) ($_SESSION['csrf_token'] ?? '');
+        if ($token === '' || $header === '' || !hash_equals($token, $header)) {
+            Response::error('Invalid CSRF token', 403);
+        }
+    }
+
     public static function login(PDO $pdo, string $email, string $password): ?array
     {
         $stmt = $pdo->prepare('SELECT * FROM users WHERE email = ? AND is_active = 1 LIMIT 1');
@@ -101,6 +141,8 @@ class Auth
             return null;
         }
         unset($row['password_hash']);
+        session_regenerate_id(true);
+        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
         $_SESSION['user'] = $row;
         $pdo->prepare('UPDATE users SET last_login_at = NOW() WHERE id = ?')->execute([$row['id']]);
         return $row;
@@ -159,6 +201,21 @@ function bizhub_json_body(): array
     return is_array($data) ? $data : [];
 }
 
+function bizhub_clip(string $value, int $max): string
+{
+    if (function_exists('mb_substr')) {
+        return mb_substr($value, 0, $max, 'UTF-8');
+    }
+    return substr($value, 0, $max);
+}
+
+function bizhub_locale(?string $locale): ?string
+{
+    $allowed = ['fa', 'tr', 'en', 'ar', 'ru'];
+    $loc = strtolower(trim((string) $locale));
+    return in_array($loc, $allowed, true) ? $loc : null;
+}
+
 function bizhub_slugify(string $text): string
 {
     $text = trim(mb_strtolower($text, 'UTF-8'));
@@ -177,7 +234,7 @@ function bizhub_cors(array $cfg): void
         header('Vary: Origin');
     }
     header('Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, OPTIONS');
-    header('Access-Control-Allow-Headers: Content-Type, X-Requested-With');
+    header('Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-CSRF-Token');
     if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
         http_response_code(204);
         exit;

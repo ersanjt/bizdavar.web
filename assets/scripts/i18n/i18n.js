@@ -86,6 +86,15 @@
     I18n.applyDocumentLocale();
     if (window.BIZDAVAR_CONFIG) I18n.syncConfig();
     I18n.ready = true;
+    if (document.body) {
+      I18n.applyDataI18n();
+      I18n.applyHomeFaqs();
+      I18n.applyAboutHeroImage();
+      I18n.applyContactPage();
+      if (typeof window.applyPageI18n === 'function') {
+        window.applyPageI18n();
+      }
+    }
   }
 
   function localizeInternalLinks(root) {
@@ -164,12 +173,15 @@
           .filter(c => c && c.id && c.label)
           .map(c => [c.id, { label: c.label }])
       );
-      return base.map(item => {
+      return base
+        .filter(item => item && item.id !== 'bizseat' && !item.hidden)
+        .map(item => {
         const m = meta[item.id] || {};
         const cat = cats[item.category] || baseCats[item.category] || {};
         return {
           ...item,
           ...m,
+          hidden: false,
           categoryLabel: cat.label || item.categoryLabel || item.category,
           tags: m.tags || item.tags || []
         };
@@ -219,6 +231,7 @@
         plans: this.mergeLocalizedList('fastCatalog.plans', base.plans || []),
         compareRows: this.mergeLocalizedList('fastCatalog.compareRows', base.compareRows || []),
         timeline: this.mergeLocalizedList('fastCatalog.timeline', base.timeline || []),
+        audiences: this.mergeLocalizedList('fastCatalog.audiences', base.audiences || []),
         whyChoose: this.mergeLocalizedList('fastCatalog.whyChoose', base.whyChoose || []),
         showcases: this.mergeLocalizedList('fastCatalog.showcases', base.showcases || []),
         faq: this.mergeLocalizedList('fastCatalog.faq', base.faq || []),
@@ -232,6 +245,7 @@
     getSupplyCatalog(catalogKey) {
       const keyMap = {
         GAMAK_CATALOG: 'gamakCatalog',
+        UWT_CATALOG: 'uwtCatalog',
         DIGI_SYSTEM_CATALOG: 'digiSystemCatalog',
         TERAOKA_CATALOG: 'teraokaCatalog',
         TELTONIKA_CATALOG: 'teltonikaCatalog',
@@ -246,10 +260,15 @@
       const brandOverlay = this.raw(`${i18nKey}.brand`) || {};
       const academyBase = base.academy || {};
       const academyOverlay = this.raw(`${i18nKey}.academy`) || {};
+      const brandBase = base.brand || {};
 
       let result = this.normalizeSupplyCatalog({
         ...base,
-        brand: { ...(base.brand || {}), ...brandOverlay },
+        brand: {
+          ...brandBase,
+          ...brandOverlay,
+          heroStats: this.mergeLocalizedList(`${i18nKey}.brand.heroStats`, brandBase.heroStats || [])
+        },
         trustSignals: this.mergeLocalizedList(`${i18nKey}.trustSignals`, base.trustSignals || []),
         whyBuyFromUs: this.mergeLocalizedList(`${i18nKey}.whyBuyFromUs`, base.whyBuyFromUs || []),
         purchaseSteps: this.mergeLocalizedList(`${i18nKey}.purchaseSteps`, base.purchaseSteps || []),
@@ -308,6 +327,22 @@
 
     normalizeSupplyCatalog(cat) {
       if (!cat || typeof cat !== 'object') return cat;
+      const lang = this.locale || 'fa';
+      const pick = (item, field) => {
+        if (!item) return undefined;
+        const order = {
+          fa: [`${field}Fa`, field],
+          tr: [`${field}Tr`, `${field}En`, field],
+          en: [`${field}En`, `${field}Tr`, field],
+          ru: [`${field}Ru`, `${field}En`, field],
+          ar: [`${field}Ar`, `${field}En`, field]
+        }[lang] || [field];
+        for (let i = 0; i < order.length; i++) {
+          const v = item[order[i]];
+          if (v != null && v !== '') return v;
+        }
+        return item[field];
+      };
       const b = cat.brand || {};
       const a = cat.academy;
       return {
@@ -319,7 +354,36 @@
         },
         highlights: (cat.highlights || []).map(h => ({
           ...h,
-          useCase: h.useCase || h.useCaseFa
+          useCase: pick(h, 'useCase') || h.useCase || h.useCaseFa
+        })),
+        categories: (cat.categories || []).map(c => ({
+          ...c,
+          imageAlt: lang === 'fa'
+            ? (c.imageAltFa || c.imageAlt)
+            : lang === 'tr'
+              ? (c.imageAltTr || c.imageAlt)
+              : (c.imageAltEn || c.imageAlt),
+          series: (c.series || []).map(s => {
+            const featOrder = {
+              fa: s.featuresFa,
+              tr: s.featuresTr,
+              en: s.featuresEn,
+              ru: s.featuresRu || s.featuresEn,
+              ar: s.featuresAr || s.featuresEn
+            };
+            const features = featOrder[lang];
+            return {
+              ...s,
+              name: pick(s, 'name') || s.name,
+              note: pick(s, 'note') || s.note,
+              imageAlt: lang === 'fa'
+                ? (s.imageAltFa || s.imageAlt)
+                : lang === 'tr'
+                  ? (s.imageAltTr || s.imageAlt)
+                  : (s.imageAltEn || s.imageAlt),
+              features: Array.isArray(features) && features.length ? features : (s.features || [])
+            };
+          })
         })),
         academy: a ? { ...a, desc: a.desc || a.descFa } : a,
         featuredProducts: (cat.featuredProducts || []).map(p => ({
@@ -403,20 +467,32 @@
       const faqs = this.raw('home.faqs');
       if (!el || !Array.isArray(faqs)) return;
       const dir = this.dict?.dir || 'rtl';
-      el.innerHTML = faqs.map(item => `
+      el.innerHTML = faqs.map(item => {
+        const q = item.q || item.q || '';
+        const a = item.a || item.a || '';
+        return `
         <details class="faq-item" dir="${dir}">
-          <summary dir="${dir}">${item.q}</summary>
-          <p dir="${dir}">${item.a}</p>
-        </details>
-      `).join('');
+          <summary dir="${dir}">${q}</summary>
+          <p dir="${dir}">${a}</p>
+        </details>`;
+      }).join('');
     },
 
     applyAboutHeroImage() {
-      const file = this.raw('home.aboutHeroImage') || 'assets/images/content/about-hero.svg';
+      const file = this.raw('home.aboutHeroImage') || 'assets/images/content/about-hero.jpg';
       const alt = this.t('home.aboutHeroAlt', 'Bizdavar Group');
       const src = '/' + String(file).replace(/^\//, '');
+      const compact = '/assets/images/content/about-hero-800.webp';
       document.querySelectorAll('[data-about-hero], img[src*="about-hero"]').forEach(img => {
-        img.src = src;
+        const isDefault = /about-hero\.jpg$/i.test(src);
+        img.src = isDefault ? compact : src;
+        if (isDefault) {
+          img.srcset = compact + ' 800w';
+          img.sizes = '(min-width: 1025px) 50vw, 92vw';
+        } else {
+          img.removeAttribute('srcset');
+          img.removeAttribute('sizes');
+        }
         if (alt) img.alt = alt;
       });
     },
@@ -471,7 +547,7 @@
           other: p.optOther
         };
         Object.entries(opts).forEach(([val, label]) => {
-          const o = sel && sel.querySelector(`option[value="${val}"]`);
+          const o = sel && sel.querySelector(`option[value="${window.CSS && CSS.escape ? CSS.escape(val) : val}"]`);
           if (o) o.textContent = label;
         });
         const msg = form.message;
@@ -495,9 +571,28 @@
         }
         const priv = form.querySelector('label input#privacy')?.parentElement;
         if (priv && p.privacyLink) {
-          const link = priv.querySelector('a');
-          if (link) link.textContent = p.privacyLink;
-          priv.innerHTML = `${p.privacyBefore || p.privacy || ''} <a href="/pages/privacy" target="_blank" rel="noopener">${p.privacyLink}</a>${p.privacyAfter || p.privacyAgree || ''}`;
+          const LU = window.BIZDAVAR_LOCALE_URL;
+          const loc = (window.BIZDAVAR_I18N && window.BIZDAVAR_I18N.locale)
+            || (LU && LU.currentLocale ? LU.currentLocale() : 'fa');
+          const privacyHref = LU && LU.toLocalePath ? LU.toLocalePath(loc, '/pages/privacy') : '/pages/privacy';
+          const box = priv.querySelector('input#privacy') || document.createElement('input');
+          if (!box.id) {
+            box.type = 'checkbox';
+            box.id = 'privacy';
+            box.name = 'privacy';
+            box.required = true;
+          }
+          const a = document.createElement('a');
+          a.href = privacyHref;
+          a.target = '_blank';
+          a.rel = 'noopener';
+          a.textContent = p.privacyLink;
+          priv.replaceChildren(
+            box,
+            document.createTextNode('\u00a0' + (p.privacyBefore ? p.privacyBefore + ' ' : '')),
+            a,
+            document.createTextNode(p.privacyAfter || p.privacyAgree || '')
+          );
         }
         const note = document.getElementById('privacy-note');
         if (note && p.formNote) note.textContent = p.formNote;
@@ -534,8 +629,10 @@
         const channels = C.contact.channels || [];
         const ir = channels.find(c => c.id === 'ir');
         const tr = channels.find(c => c.id === 'tr');
+        const field = channels.find(c => c.id === 'field');
         if (ir) ir.label = this.t('contact.channelIr');
         if (tr) tr.label = this.t('contact.channelTr');
+        if (field) field.label = this.t('contact.channelField', this.t('footer.fieldTech', 'خدمات فنی'));
         // Persian-first by default; Turkish locale keeps TR as primary CTA target
         const prefer = this.locale === 'tr' ? tr : ir;
         if (prefer?.whatsapp) {

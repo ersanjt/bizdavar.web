@@ -13,6 +13,7 @@ const CRUMB_MAP = {
   'Fast Web Studio': 'fast',
   'حریم خصوصی': 'privacy',
   'محصولات VEGA': 'vega',
+  'محصولات UWT': 'uwt',
   'محصولات Prosense': 'prosense',
   'Gamak': 'gamak'
 };

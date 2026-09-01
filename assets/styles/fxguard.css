@@ -6,9 +6,153 @@ body[data-page="fxguard"] .features-grid .feature-item.reveal {
 }
 
 .fxguard-hero {
-  background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 40%, #e0e7ff 100%);
+  background: #0b1220;
+  color: #f8fafc;
   padding: clamp(48px, 8vw, 88px) 0 clamp(40px, 6vw, 64px);
-  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  border-bottom: 1px solid rgba(34, 197, 94, 0.18);
+}
+
+.fxguard-hero .section__tag {
+  color: #4ade80;
+}
+
+.fxguard-hero h1 {
+  color: #fff;
+}
+
+.fxguard-hero p,
+.fxguard-hero__regions,
+.fxguard-hero__trust,
+.fxguard-hero__caption {
+  color: #cbd5e1;
+}
+
+.fxguard-hero .fxguard-hero__actions .btn--outline {
+  color: #ecfdf5;
+  border-color: rgba(74, 222, 128, 0.55);
+}
+
+.fxguard-hero .fxguard-hero__actions .btn--outline:hover {
+  background: #ecfdf5;
+  color: #0b1220;
+}
+
+.fxguard-hero .fxguard-hero__actions .btn--primary {
+  background: rgba(34, 197, 94, 0.22);
+  border-color: #22c55e;
+  color: #f8fafc;
+}
+
+.fxguard-hero .fxguard-hero__actions .btn--primary:hover {
+  background: #22c55e;
+  border-color: #22c55e;
+  color: #052e16;
+}
+
+.fxguard-hero__actions--center {
+  justify-content: center;
+}
+
+.fxguard-hero__actions--center .btn--outline {
+  color: #166534;
+  background: #fff;
+  border: 2px solid #16a34a;
+}
+
+.fxguard-hero__actions--center .btn--outline:hover {
+  background: #16a34a;
+  color: #fff;
+}
+
+.fxguard-hero__actions .btn {
+  white-space: normal;
+  text-align: center;
+  line-height: 1.45;
+  max-width: min(100%, 28rem);
+}
+
+.fxguard-hero__caption {
+  margin: 12px 0 0;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.fxguard-why-closer {
+  max-width: 720px;
+  margin: 28px auto 0;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.fxguard-suite-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  height: 100%;
+}
+
+.fxguard-suite-card__link {
+  margin-top: auto;
+  padding-top: 16px;
+  font-weight: 700;
+  color: #16a34a;
+}
+
+.fxguard-module-grid {
+  display: grid;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .fxguard-module-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .fxguard-module-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.fxguard-module-group {
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+}
+
+.fxguard-module-group h3 {
+  font-size: 1rem;
+  margin: 0 0 12px;
+}
+
+.fxguard-module-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fxguard-module-group li {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  padding: 4px 0;
+}
+
+@media (min-width: 768px) {
+  .fxguard-steps--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .fxguard-steps--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .fxguard-hero__grid {
@@ -73,8 +217,8 @@ body[data-page="fxguard"] .features-grid .feature-item.reveal {
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
-  background: linear-gradient(135deg, #ecfdf5, #e0e7ff);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  background: linear-gradient(135deg, #111827, #1e293b);
   min-height: 240px;
 }
 
@@ -104,8 +248,8 @@ body[data-page="fxguard"] .features-grid .feature-item.reveal {
   gap: 12px;
   padding: 20px;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(148, 163, 184, 0.45);
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid rgba(74, 222, 128, 0.25);
   min-height: 180px;
 }
 
@@ -113,7 +257,7 @@ body[data-page="fxguard"] .features-grid .feature-item.reveal {
   width: 42%;
   height: 14px;
   border-radius: 999px;
-  background: #0f172a;
+  background: #4ade80;
 }
 
 .fxguard-hero__mock-line {
@@ -327,6 +471,12 @@ body[data-page="fxguard"] .features-grid .feature-item.reveal {
   .fxguard-pricing {
     grid-template-columns: repeat(3, 1fr);
     align-items: stretch;
+  }
+}
+
+@media (min-width: 1200px) {
+  .fxguard-pricing {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 

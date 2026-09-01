@@ -15,11 +15,11 @@
     return key.split('.').reduce((acc, part) => (acc == null ? undefined : acc[part]), dict);
   }
 
-  function contactHref(query) {
-    const base = window.resolvePagePath
-      ? window.resolvePagePath('pages/contact.html')
-      : '/pages/contact';
-    return query ? `${base}?${query}` : base;
+  function pageHref(href) {
+    if (!href) return '#';
+    if (/^https?:/i.test(href) || href.startsWith('mailto:') || href.startsWith('#')) return href;
+    const cleaned = String(href).replace(/^\//, '').replace(/\.html$/i, '');
+    return window.resolvePagePath ? window.resolvePagePath(cleaned) : href;
   }
 
   function pageHref(slug) {
@@ -73,11 +73,16 @@
     }
   }
 
+  function extAttrs(href, external) {
+    const isExt = external || /^https?:/i.test(href || '');
+    return isExt ? ' target="_blank" rel="noopener noreferrer"' : '';
+  }
+
   function setStatFallbacks(cs) {
     [
       { id: 'fxStatBusinesses', value: '12+' },
       { id: 'fxStatRegions', value: '5' },
-      { id: 'fxStatUptime', value: '99.9%' },
+      { id: 'fxStatUptime', value: '7' },
       { id: 'fxStatSetup', value: '5' }
     ].forEach(({ id, value }) => {
       const el = document.getElementById(id);
@@ -207,6 +212,27 @@
       renderWhy(cs);
       renderDemo(cs);
 
+      renderCards('fxguardChannel', cs.channel?.items, item => `
+        <article class="fxguard-card">
+          <div class="fxguard-card__icon" aria-hidden="true">${iconHtml(item.icon)}</div>
+          <h3>${esc(item.title)}</h3>
+          <p>${esc(item.desc)}</p>
+        </article>`);
+
+      renderCards('fxguardStories', cs.stories?.items, item => `
+        <article class="fxguard-card">
+          <p class="fxguard-card__region">${esc(item.place)}</p>
+          <h3>${esc(item.title)}</h3>
+          <p>${esc(item.desc)}</p>
+        </article>`);
+
+      renderCards('fxguardDemoSteps', cs.demo?.items, item => `
+        <article class="fxguard-step">
+          <div class="fxguard-step__num">${esc(item.num)}</div>
+          <h3>${esc(item.title)}</h3>
+          <p>${esc(item.desc)}</p>
+        </article>`);
+
       renderCards('fxguardSteps', cs.steps?.items, item => `
         <article class="fxguard-step">
           <div class="fxguard-step__num">${esc(item.num)}</div>
@@ -222,6 +248,12 @@
           <p>${esc(item.desc)}</p>
         </article>`);
 
+      renderCards('fxguardModules', cs.modules?.groups, group => `
+        <article class="fxguard-module-group">
+          <h3>${esc(group.title)}</h3>
+          <ul>${(group.items || []).map(f => `<li>${esc(f)}</li>`).join('')}</ul>
+        </article>`);
+
       renderCards('fxguardAudiences', cs.audiences?.items, item => `
         <article class="fxguard-card">
           <div class="fxguard-card__icon" aria-hidden="true">${iconHtml(item.icon)}</div>
@@ -234,8 +266,7 @@
       const pricingEl = document.getElementById('fxguardPricing');
       if (pricingEl && Array.isArray(cs.pricing?.plans)) {
         pricingEl.innerHTML = cs.pricing.plans.map(plan => {
-          const href = plan.href || contactHref('product=whatsapp-crm');
-          const external = /^https?:/.test(href);
+          const href = pageHref(plan.href);
           return `
           <article class="fxguard-plan${plan.featured ? ' fxguard-plan--featured' : ''}">
             ${plan.badge ? `<span class="fxguard-plan__badge">${esc(plan.badge)}</span>` : ''}
@@ -243,7 +274,7 @@
             <p class="fxguard-plan__price">${esc(plan.price)}<span class="fxguard-plan__period">${esc(plan.period || '')}</span></p>
             <p>${esc(plan.desc)}</p>
             <ul>${(plan.features || []).map(f => `<li>${esc(f)}</li>`).join('')}</ul>
-            <a href="${esc(href)}" class="btn ${plan.featured ? 'btn--green' : 'btn--outline'}"${external ? ' target="_blank" rel="noopener noreferrer"' : ''}>${esc(plan.cta)}</a>
+            <a href="${esc(href)}" class="btn ${plan.featured ? 'btn--green' : 'btn--outline'}"${extAttrs(href)}>${esc(plan.cta)}</a>
           </article>`;
         }).join('');
       }
@@ -270,7 +301,7 @@
       [
         { id: 'fxStatBusinesses', value: 12, suffix: '+' },
         { id: 'fxStatRegions', value: 5, suffix: '' },
-        { id: 'fxStatUptime', value: 99.9, suffix: '%' },
+        { id: 'fxStatUptime', value: 7, suffix: '' },
         { id: 'fxStatSetup', value: 5, suffix: '' }
       ].forEach(({ id, value, suffix }) => {
         const el = document.getElementById(id);

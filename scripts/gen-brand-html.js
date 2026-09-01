@@ -248,7 +248,7 @@ const brands = [
     ctaTitle: 'آماده استعلام قیمت Gamak هستید؟',
     ctaDesc: 'توان kW، دور rpm و نوع فلنج را بفرستید — GM/GMB · IE2/IE3 · B3/B5',
     stickyLabel: 'استعلام Gamak',
-    geoText: 'تامین Gamak از ترکیه به ایران — مشاوره فنی فارسی، پیش‌فاکتور و لجستیک توسط بیزدوار گروپ.',
+    geoText: 'تامین Gamak به ایران — مشاوره فنی فارسی، پیش‌فاکتور و لجستیک توسط بیزدوار گروپ.',
     relatedLinks: [
       { titleKey: 'gamakPage.related.0.title', title: 'محصولات VEGA', url: 'vega.html', descKey: 'gamakPage.related.0.desc', desc: 'سنسور سطح و فشار' },
       { titleKey: 'gamakPage.related.1.title', title: 'محصولات Prosense', url: 'prosense.html', descKey: 'gamakPage.related.1.desc', desc: 'دتکتور گاز و شعله' },
@@ -287,7 +287,7 @@ const brands = [
     ctaTitle: 'آماده استعلام قیمت Digi System هستید؟',
     ctaDesc: 'نوع فروشگاه، تعداد صندوق و نیاز ترازو legal-for-trade را بفرستید',
     stickyLabel: 'استعلام Digi System',
-    geoText: 'تامین Digi System از ترکیه به ایران — مشاوره فارسی، پیش‌فاکتور و لجستیک توسط بیزدوار گروپ.',
+    geoText: 'تامین Digi System به ایران — مشاوره فارسی، پیش‌فاکتور و لجستیک توسط بیزدوار گروپ.',
     relatedLinks: [
       { titleKey: 'digiSystemPage.related.0.title', title: 'Teraoka Seiko', url: 'teraoka.html', descKey: 'digiSystemPage.related.0.desc', desc: 'ترازو و POS ژاپن' },
       { titleKey: 'digiSystemPage.related.1.title', title: 'کاتالوگ محصولات', url: 'products.html#supply', descKey: 'digiSystemPage.related.1.desc', desc: 'تامین retail B2B' },

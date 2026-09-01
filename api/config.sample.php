@@ -26,11 +26,11 @@ return [
   'security' => [
     'allowed_origins' => [
       'https://bizdavar.com',
-      'http://localhost:3456',
-      'http://127.0.0.1:3456',
     ],
     'lead_rate_limit' => 8,
     'lead_rate_window' => 3600,
+    'login_rate_limit' => 5,
+    'login_rate_window' => 900,
   ],
 
   /** One-time install — remove after setup */

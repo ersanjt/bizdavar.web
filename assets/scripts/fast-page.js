@@ -21,6 +21,14 @@
     };
   }
 
+  function netinodeShopUrl() {
+    return (C.partners && C.partners.netinode && C.partners.netinode.shopUrl) || 'https://shop.netinode.net/';
+  }
+
+  function netinohostUrl() {
+    return (C.partners && C.partners.netinohost && C.partners.netinohost.url) || 'https://netinohost.com/';
+  }
+
   function planMessage(planId) {
     return (C.fast && C.fast.planMessages && C.fast.planMessages[planId]) || `سلام، می‌خوام پلن ${planId} Fast Web Studio سفارش بدم`;
   }
@@ -44,6 +52,59 @@
   function showcaseUrl(item) {
     if (item.internal && item.slug) return path(item.slug);
     return `https://${item.domain}`;
+  }
+
+  function showcaseLogo(item) {
+    if (item.logo) return item.logo;
+    const list = C.portfolio || [];
+    const match = list.find((p) => p.name === item.name);
+    return match && match.logo ? match.logo : '';
+  }
+
+  function initials(name) {
+    return String(name || '')
+      .split(/\s+/)
+      .filter(Boolean)
+      .slice(0, 2)
+      .map((w) => w[0])
+      .join('')
+      .toUpperCase();
+  }
+
+  function savePercent(oldPrice, price) {
+    const o = Number(oldPrice);
+    const p = Number(price);
+    if (!o || !p || o <= p) return 0;
+    return Math.round(((o - p) / o) * 100);
+  }
+
+  function planPreview(kind) {
+    const k = kind === 'store' || kind === 'pro' ? kind : 'landing';
+    if (k === 'store') {
+      return `<div class="fast-plan-mini fast-plan-mini--store" aria-hidden="true">
+        <div class="fast-plan-mini__row"></div>
+        <div class="fast-plan-mini__grid">
+          <span class="fast-plan-mini__cell"></span>
+          <span class="fast-plan-mini__cell is-accent"></span>
+          <span class="fast-plan-mini__cell"></span>
+        </div>
+      </div>`;
+    }
+    if (k === 'pro') {
+      return `<div class="fast-plan-mini fast-plan-mini--pro" aria-hidden="true">
+        <div class="fast-plan-mini__row"></div>
+        <div class="fast-plan-mini__grid">
+          <span class="fast-plan-mini__cell is-accent"></span>
+          <span class="fast-plan-mini__cell"></span>
+        </div>
+      </div>`;
+    }
+    return `<div class="fast-plan-mini fast-plan-mini--landing" aria-hidden="true">
+      <div class="fast-plan-mini__row"></div>
+      <div class="fast-plan-mini__grid">
+        <span class="fast-plan-mini__cell is-accent"></span>
+      </div>
+    </div>`;
   }
 
   function renderHero() {
@@ -82,12 +143,12 @@
     if (!el) return;
     el.innerHTML = `
       <div class="container fast-trust-bar__inner">
-        ${F.trustSignals.map(t => `
+        ${F.trustSignals.map((item) => `
           <div class="fast-trust-item">
-            <span class="fast-trust-item__icon">${ic(t.icon, { size: 22 })}</span>
+            <span class="fast-trust-item__icon">${ic(item.icon, { size: 22 })}</span>
             <div>
-              <strong>${t.label}</strong>
-              <span>${t.desc}</span>
+              <strong>${item.label}</strong>
+              <span>${item.desc}</span>
             </div>
           </div>
         `).join('')}
@@ -189,16 +250,19 @@
   }
 
   function planBtnClass(accent) {
-    const map = { green: 'btn--green', orange: 'btn--orange', blue: 'btn--blue' };
+    const map = { green: 'btn--green', orange: 'btn--orange', blue: 'btn--yellow' };
     return map[accent] || 'btn--primary';
   }
 
   function renderPlans() {
     const el = document.getElementById('fastPlansGrid');
     if (!el) return;
-    el.innerHTML = F.plans.map(p => `
+    el.innerHTML = F.plans.map((p) => {
+      const off = savePercent(p.oldPrice, p.price);
+      return `
       <article class="fast-plan-card${p.featured ? ' fast-plan-card--featured' : ''}">
         ${p.ribbon ? `<span class="fast-plan-card__ribbon">${p.ribbon}</span>` : ''}
+        <div class="fast-plan-card__preview">${planPreview(p.visual)}</div>
         <header class="fast-plan-card__head">
           <h3>${p.name}</h3>
           <p>${p.subtitle}</p>
@@ -206,17 +270,18 @@
         <div class="fast-plan-card__price">
           <span class="fast-plan-card__old">$${p.oldPrice}</span>
           <span class="fast-plan-card__current">$${p.price}</span>
+          ${off ? `<span class="fast-plan-card__save">${ui('saveOff', '٪{n} تخفیف راه‌اندازی').replace('{n}', off)}</span>` : ''}
           <span class="fast-plan-card__period">${ui('oneTime', 'پرداخت یک‌باره')}</span>
         </div>
         <ul class="fast-plan-card__features">
-          ${p.features.map(f => `<li>${f}</li>`).join('')}
+          ${p.features.map((f) => `<li>${f}</li>`).join('')}
         </ul>
         <footer class="fast-plan-card__foot">
           <a href="${whatsappHref(p.id)}" class="btn ${planBtnClass(p.accent)} fast-plan-order" data-plan="${p.id}">${ui('orderWa', 'سفارش در واتساپ')}</a>
           <a href="${contactUrl(p.id)}" class="fast-plan-contact">${ui('orContact', 'یا فرم تماس')}${arrow()}</a>
         </footer>
-      </article>
-    `).join('');
+      </article>`;
+    }).join('');
   }
 
   function cellValue(val) {
@@ -241,7 +306,7 @@
           </tr>
         </thead>
         <tbody>
-          ${F.compareRows.map(row => `
+          ${F.compareRows.map((row) => `
             <tr>
               <th scope="row">${row.feature}</th>
               <td>${cellValue(row.basic)}</td>
@@ -256,21 +321,23 @@
   function renderTimeline() {
     const el = document.getElementById('fastTimeline');
     if (!el) return;
-    el.innerHTML = F.timeline.map(s => `
-      <div class="fast-step">
-        <span class="fast-step__num">${s.num}</span>
+    el.className = 'fast-path';
+    el.setAttribute('aria-label', ui('navTimeline', 'مسیر ۵ روزه'));
+    el.innerHTML = F.timeline.map((s) => `
+      <li class="fast-path__step">
+        <span class="fast-path__num">${s.num}</span>
         <h3>${s.title}</h3>
         <p>${s.desc}</p>
-      </div>
+      </li>
     `).join('');
   }
 
   function renderWhy() {
     const el = document.getElementById('fastWhyGrid');
     if (!el) return;
-    el.innerHTML = F.whyChoose.map(w => `
+    el.innerHTML = F.whyChoose.map((w) => `
       <div class="fast-why-card">
-        <span class="fast-why-card__icon">${ic(w.icon, { size: 28 })}</span>
+        <span class="fast-why-card__icon">${ic(w.icon, { size: 22 })}</span>
         <h3>${w.title}</h3>
         <p>${w.desc}</p>
       </div>
@@ -280,7 +347,7 @@
   function renderShowcase() {
     const el = document.getElementById('fastShowcaseGrid');
     if (!el) return;
-    el.innerHTML = F.showcases.map(s => {
+    el.innerHTML = F.showcases.map((s) => {
       const url = showcaseUrl(s);
       const ext = !s.internal;
       const thumb = s.thumb ? path(s.thumb) : '';
@@ -297,7 +364,7 @@
   function renderFaq() {
     const el = document.getElementById('fastFaqList');
     if (!el) return;
-    el.innerHTML = F.faq.map(item => `
+    el.innerHTML = F.faq.map((item) => `
       <details class="fast-faq__item">
         <summary>${item.q}</summary>
         <p>${item.a}</p>
@@ -306,7 +373,7 @@
   }
 
   function setupWaLinks() {
-    document.querySelectorAll('.fast-plan-order, .fast-wa-cta').forEach(btn => {
+    document.querySelectorAll('.fast-plan-order, .fast-wa-cta').forEach((btn) => {
       const plan = btn.dataset.plan || 'basic';
       btn.href = whatsappHref(plan);
       if (C.contact.whatsapp) {
@@ -334,12 +401,34 @@
     }
   }
 
+  function setupNavSpy() {
+    const nav = document.getElementById('fastNav');
+    if (!nav || !('IntersectionObserver' in window)) return;
+    const items = [...nav.querySelectorAll('.fast-nav__item')];
+    const ids = items.map((a) => a.getAttribute('href')?.slice(1)).filter(Boolean);
+    const sections = ids.map((id) => document.getElementById(id)).filter(Boolean);
+    if (!sections.length) return;
+
+    const setActive = (id) => {
+      items.forEach((a) => a.classList.toggle('active', a.getAttribute('href') === `#${id}`));
+    };
+
+    const obs = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter((e) => e.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (visible?.target?.id) setActive(visible.target.id);
+    }, { rootMargin: '-35% 0px -50% 0px', threshold: [0.15, 0.4] });
+
+    sections.forEach((s) => obs.observe(s));
+  }
+
   function injectFaqSchema() {
     if (!window.injectJsonLd && !document.head) return;
     const ld = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      mainEntity: F.faq.map(item => ({
+      mainEntity: F.faq.map((item) => ({
         '@type': 'Question',
         name: item.q,
         acceptedAnswer: { '@type': 'Answer', text: item.a.replace(/<[^>]+>/g, '') }
@@ -367,7 +456,7 @@
           <h2>${title}</h2>
           <p>${desc}</p>
         </div>
-        <a href="${customDevUrl()}" class="btn btn--primary">${btn}</a>
+        <a href="${customDevUrl()}" class="btn btn--yellow">${btn}</a>
       </div>`;
   }
 
@@ -390,6 +479,7 @@
     renderFaq();
     setupWaLinks();
     setupSticky();
+    setupNavSpy();
     injectFaqSchema();
     if (window.initDataIcons) initDataIcons();
   };
@@ -423,7 +513,7 @@
       description: data.description || fb.description,
       url: 'pages/fast',
       areaServed: ['IR', 'TR', 'AM', 'AE', 'DE'],
-      offers: (data.offers || fb.offers).map(o => ({ ...o, currency: 'USD' }))
+      offers: (data.offers || fb.offers).map((o) => ({ ...o, currency: 'USD' }))
     });
   };
 })();

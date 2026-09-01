@@ -31,7 +31,8 @@ const PAGE_OG = {
   customWebApp: 'assets/images/digi-system/hero/digi-retail-hero.webp',
   fieldTech: 'assets/images/brand/bizdavar-logo-square.png',
   vega: 'assets/images/vega/hero-vegapuls-6x.png',
-  prosense: 'assets/images/prosense/slides/pq-sil.jpg',
+  uwt: 'assets/images/uwt/og-uwt-logo.jpg',
+  prosense: 'assets/images/prosense/hero-pq-sil2.webp',
   liquiMoly: 'assets/images/liqui-moly/octane-plus.jpg',
   teltonika: 'assets/images/teltonika/hero/fleet-telematics.webp',
   gamak: 'assets/images/gamak/hero/gamak-motor.webp',
@@ -53,10 +54,27 @@ const PAGE_OG = {
   articleIndustrialSensors: 'assets/images/vega/slides/value-process-safety.jpg',
   articleAboutBizdavar: 'assets/images/brand/bizdavar-logo-square.png',
   articleVegaSupplyIran: 'assets/images/vega/slides/value-process-safety.jpg',
-  articleMultilingualWeb: 'assets/images/brand/bizdavar-logo-square.png',
+  articleMultilingualWeb: 'assets/images/content/services-web-mockup.svg',
+  articleMarviSociety: 'assets/images/content/marvi-society/screen-discover.jpg',
+  articleProsenseGas: 'assets/images/prosense/slides/pq-sil.jpg',
+  articleFieldTech: 'assets/images/content/field-tech-hero.svg',
+  articleLocalSeo: 'assets/images/content/network-map.svg',
+  articleLiquiMolySupply: 'assets/images/liqui-moly/octane-plus.jpg',
+  articleBuyVegapulsIran: 'assets/images/vega/product-vegapuls-6x-photo.webp',
+  articleVegaQuoteIran: 'assets/images/vega/product-vegabar-39.png',
+  articleBuyProsenseIran: 'assets/images/prosense/series-pq.webp',
+  articleIndustrialTradeIran: 'assets/images/content/supply-hero.jpg',
+  articleBuyTeltonikaIran: 'assets/images/partners/teltonika.png',
+  articleBuyGamakIran: 'assets/images/gamak/category-three-phase.webp',
+  articleBuyDigiIran: 'assets/images/digi-system/hero/digi-retail-hero.webp',
+  articleBuyTeraokaIran: 'assets/images/teraoka/hero/teraoka-retail-hero.webp',
+  articleWebsiteDesignUsEu: 'assets/images/content/services-web-mockup.svg',
+  articleDigitalMarketingUsEu: 'assets/images/content/services-dm-visual.svg',
   bzDiamond: 'assets/images/partners/bzdiamond.webp',
+  marvispace: 'assets/images/content/marvispace/shop-grid.jpg',
   kayaOne: 'assets/images/partners/kaya-one.svg',
-  smmTurk: 'assets/images/partners/smm-turk.svg'
+  smmTurk: 'assets/images/partners/smm-turk.svg',
+  marviSociety: 'assets/images/partners/marvi-society.png'
 };
 
 const PAGE_ROUTES = {
@@ -76,18 +94,24 @@ const PAGE_ROUTES = {
   liquiMoly: '/pages/liqui-moly',
   teltonika: '/pages/teltonika',
   gamak: '/pages/gamak',
+  uwt: '/pages/uwt',
   digiSystem: '/pages/digi-system',
   teraoka: '/pages/teraoka',
   bzDiamond: '/pages/bz-diamond',
+  marvispace: '/pages/marvispace',
   supplifyTrade: '/pages/supplify-trade',
   kayaOne: '/pages/kaya-one',
   smmTurk: '/pages/smm-turk',
+  marviSociety: '/pages/marvi-society',
   fxguardExchange: '/pages/fxguard-exchange',
   biztejarat: '/pages/biztejarat',
   biztab: '/pages/biztab',
   bizpet: '/pages/bizpet',
   uwt: '/pages/uwt',
   bizsanitizerV5: '/pages/bizsanitizer-v5',
+  bizseat: '/pages/bizseat',
+  bizpet: '/pages/bizpet',
+  gallery: '/pages/gallery',
   fxguard: '/pages/fxguard',
   fxguardAccounting: '/pages/fxguard-accounting',
   bizswap: '/pages/bizswap',
@@ -100,7 +124,22 @@ const PAGE_ROUTES = {
   articleIndustrialSensors: '/pages/articles/industrial-sensors',
   articleAboutBizdavar: '/pages/articles/about-bizdavar-group',
   articleVegaSupplyIran: '/pages/articles/vega-supply-iran',
-  articleMultilingualWeb: '/pages/articles/multilingual-web-iran-turkey'
+  articleMultilingualWeb: '/pages/articles/multilingual-web-iran-turkey',
+  articleMarviSociety: '/pages/articles/marvi-society-ios-app',
+  articleProsenseGas: '/pages/articles/prosense-gas-detection',
+  articleFieldTech: '/pages/articles/field-tech-services',
+  articleLocalSeo: '/pages/articles/local-seo-iran',
+  articleLiquiMolySupply: '/pages/articles/liqui-moly-supply-iran',
+  articleBuyVegapulsIran: '/pages/articles/buy-vegapuls-iran',
+  articleVegaQuoteIran: '/pages/articles/vega-quote-iran',
+  articleBuyProsenseIran: '/pages/articles/buy-prosense-iran',
+  articleIndustrialTradeIran: '/pages/articles/industrial-trade-iran',
+  articleBuyTeltonikaIran: '/pages/articles/buy-teltonika-iran',
+  articleBuyGamakIran: '/pages/articles/buy-gamak-iran',
+  articleBuyDigiIran: '/pages/articles/buy-digi-system-iran',
+  articleBuyTeraokaIran: '/pages/articles/buy-teraoka-iran',
+  articleWebsiteDesignUsEu: '/pages/articles/website-design-us-eu',
+  articleDigitalMarketingUsEu: '/pages/articles/digital-marketing-us-eu'
 };
 
 const manifest = {};
@@ -110,7 +149,8 @@ for (const [key, route] of Object.entries(PAGE_ROUTES)) {
   for (const lang of LANGS) {
     const page = global.BIZDAVAR_LOCALES[lang]?.pages?.[key];
     if (!page) continue;
-    const ogRel = PAGE_OG[key] || DEFAULT_OG;
+    let ogRel = PAGE_OG[key] || DEFAULT_OG;
+    if (/\.svg$/i.test(ogRel)) ogRel = DEFAULT_OG;
     manifest[route][lang] = {
       title: page.seoTitle || '',
       description: page.seoDescription || '',

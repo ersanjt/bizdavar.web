@@ -62,21 +62,26 @@
       const pagePath = LU.currentPagePath();
       alts = LU.hreflangUrls(pagePath);
     } else {
-      let base;
+      let origin = C.baseUrl.replace(/\/$/, '');
+      let pagePath = '/';
       try {
         const raw = canonicalUrl || C.baseUrl;
         const url = new URL(raw.startsWith('http') ? raw : `${C.baseUrl.replace(/\/$/, '')}/${String(raw).replace(/^\//, '')}`);
-        base = url.origin + url.pathname;
+        origin = url.origin;
+        pagePath = url.pathname.replace(/^\/(tr|en|ru|ar)(?=\/|$)/, '') || '/';
+        if (pagePath.length > 1) pagePath = pagePath.replace(/\/$/, '');
       } catch (_) {
-        base = C.baseUrl.replace(/\/$/, '');
+        origin = C.baseUrl.replace(/\/$/, '');
+        pagePath = '/';
       }
+      const locPath = (code) => origin + (code === 'fa' ? '' : '/' + code) + (pagePath === '/' ? '/' : pagePath);
       alts = {
-        fa: `${base}?lang=fa`,
-        tr: `${base}?lang=tr`,
-        en: `${base}?lang=en`,
-        ru: `${base}?lang=ru`,
-        ar: `${base}?lang=ar`,
-        'x-default': base
+        fa: locPath('fa'),
+        tr: locPath('tr'),
+        en: locPath('en'),
+        ru: locPath('ru'),
+        ar: locPath('ar'),
+        'x-default': locPath('fa')
       };
     }
     Object.entries(alts).forEach(([hreflang, href]) => {
@@ -252,12 +257,42 @@
       { name: t('common.freeConsult', 'مشاوره رایگان'), url: absUrl(R.contact) },
       { name: t('nav.productsSupplyLink', 'تامین برندهای صنعتی'), url: absUrl(R.products) + '#supply' },
       { name: 'VEGA', url: absUrl(R.vega) },
+      { name: 'UWT', url: absUrl(R.uwt) },
       { name: 'Prosense', url: absUrl(R.prosense) },
       { name: 'Liqui Moly', url: absUrl(R.liquiMoly) },
       { name: 'FXGuard', url: absUrl(R.fxguard) },
       { name: t('nav.blog', 'وبلاگ'), url: absUrl(R.blog) },
       { name: t('nav.about', 'درباره ما'), url: absUrl(R.about) }
     ];
+  }
+
+  function offerCatalog() {
+    return {
+      '@type': 'OfferCatalog',
+      name: t('home.svcTitle', 'Bizdavar Group offers'),
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: { '@type': 'Service', name: 'VEGA industrial sensor supply', url: absUrl(R.vega) }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: { '@type': 'Service', name: 'UWT level sensor supply', url: absUrl(R.uwt) }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: { '@type': 'Service', name: 'Prosense gas detector supply', url: absUrl(R.prosense) }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: { '@type': 'Service', name: t('nav.webDesign', 'Fast Web Studio'), url: absUrl(R.fast) }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: { '@type': 'Service', name: t('common.freeConsult', 'Consultation'), url: absUrl(R.contact) }
+        }
+      ]
+    };
   }
 
   function buildSiteGraph() {
@@ -293,6 +328,8 @@
             sameAs: C.contact.linkedin
           },
           areaServed: ['TR', 'AM', 'IR', 'AE', 'DE', 'US', 'GB', 'LB', 'IQ', 'GE', 'IT'],
+          availableLanguage: ['fa', 'tr', 'en', 'ru', 'ar'],
+          knowsLanguage: ['fa', 'tr', 'en', 'ru', 'ar'],
           knowsAbout: [
             'Digital Marketing',
             'Web Design',
@@ -308,7 +345,8 @@
           ],
           address: orgAddress(),
           sameAs,
-          contactPoint: buildContactPoints()
+          contactPoint: buildContactPoints(),
+          hasOfferCatalog: offerCatalog()
         },
         {
           '@type': 'WebSite',
@@ -319,7 +357,13 @@
           description: t('seo.defaultDescription', ''),
           inLanguage: ['fa-IR', 'tr-TR', 'en-US', 'ru-RU', 'ar-AE'],
           publisher: { '@id': orgId },
-          about: { '@id': orgId }
+          about: { '@id': orgId },
+          hasPart: siteNavEntries().map((entry) => ({
+            '@type': 'WebPage',
+            '@id': entry.url,
+            name: entry.name,
+            url: entry.url
+          }))
         },
         {
           '@type': 'ItemList',
@@ -347,8 +391,8 @@
           image: logoAbsUrl(),
           address: {
             '@type': 'PostalAddress',
-            addressLocality: hq.city || 'Istanbul',
-            addressCountry: hq.countryCode || 'TR'
+            addressLocality: hq.city || 'Tabriz',
+            addressCountry: hq.countryCode || 'IR'
           },
           parentOrganization: { '@id': orgId },
           areaServed: ['TR', 'IR', 'AM', 'AE', 'DE']
@@ -469,6 +513,8 @@
 
     if (!items || !items.length) return;
 
+    const strip = (s) => String(s || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+
     const ld = {
 
       '@context': 'https://schema.org',
@@ -479,9 +525,9 @@
 
         '@type': 'Question',
 
-        name: item.q,
+        name: strip(item.q || item.q),
 
-        acceptedAnswer: { '@type': 'Answer', text: item.a }
+        acceptedAnswer: { '@type': 'Answer', text: strip(item.a || item.a) }
 
       }))
 
@@ -537,21 +583,71 @@
   };
 
   window.injectBlogListSchema = function () {
-    if (!C.blogPosts) return;
+    const posts = (typeof window.getBlogPostsList === 'function'
+      ? window.getBlogPostsList()
+      : C.blogPosts) || [];
+    if (!posts.length) return;
+    const blogUrl = absUrl(R.blog);
+    const desc = t('pages.blog.seoDescription', t('blogPage.hero.desc', ''));
+    const lang = window.BIZDAVAR_I18N?.locale || 'fa';
+    const inLanguage = ({ fa: 'fa-IR', tr: 'tr-TR', en: 'en-US', ru: 'ru-RU', ar: 'ar-AE' })[lang] || lang;
+    const toAbs = (rel) => {
+      if (!rel) return undefined;
+      if (/^https?:\/\//i.test(rel)) return rel;
+      return `${C.baseUrl}/${String(rel).replace(/^\//, '')}`;
+    };
     const ld = {
       '@context': 'https://schema.org',
-      '@type': 'Blog',
-      name: t('seo.schemaBlog', 'وبلاگ بیزدوار گروپ'),
-      url: absUrl(R.blog),
-      inLanguage: C.locale,
-      publisher: { '@type': 'Organization', name: C.siteNameEn, url: C.baseUrl },
-      blogPost: C.blogPosts.map(p => ({
-        '@type': 'BlogPosting',
-        headline: p.title,
-        description: p.excerpt,
-        datePublished: p.date,
-        url: absUrl(p.slug)
-      }))
+      '@graph': [
+        {
+          '@type': 'CollectionPage',
+          '@id': blogUrl + '#webpage',
+          url: blogUrl,
+          name: t('pages.blog.seoTitle', t('seo.schemaBlog', 'وبلاگ بیزدوار گروپ')),
+          description: desc,
+          inLanguage,
+          isPartOf: { '@type': 'WebSite', name: C.siteNameEn, url: C.baseUrl },
+          about: { '@id': blogUrl + '#blog' },
+          mainEntity: { '@id': blogUrl + '#itemlist' }
+        },
+        {
+          '@type': 'Blog',
+          '@id': blogUrl + '#blog',
+          name: t('seo.schemaBlog', 'وبلاگ بیزدوار گروپ'),
+          url: blogUrl,
+          description: desc,
+          inLanguage,
+          publisher: {
+            '@type': 'Organization',
+            name: C.siteNameEn,
+            url: C.baseUrl,
+            logo: { '@type': 'ImageObject', url: `${C.baseUrl}/assets/images/brand/bizdavar-logo-square.png` }
+          },
+          blogPost: posts.map(p => ({
+            '@type': 'BlogPosting',
+            headline: p.title,
+            description: p.excerpt,
+            datePublished: p.date,
+            inLanguage,
+            image: toAbs(p.image),
+            url: absUrl(p.slug),
+            author: { '@type': 'Organization', name: C.siteNameEn }
+          }))
+        },
+        {
+          '@type': 'ItemList',
+          '@id': blogUrl + '#itemlist',
+          name: t('seo.schemaBlog', 'وبلاگ بیزدوار گروپ'),
+          numberOfItems: posts.length,
+          itemListOrder: 'https://schema.org/ItemListUnordered',
+          itemListElement: posts.map((p, i) => ({
+            '@type': 'ListItem',
+            position: i + 1,
+            url: absUrl(p.slug),
+            name: p.title
+          }))
+        }
+      ]
     };
     injectJsonLd('jsonld-blog', ld);
   };
@@ -603,19 +699,25 @@
       description: data.description,
       brand: { '@type': 'Brand', name: data.brand || data.name },
       category: data.category,
-      areaServed: data.areaServed || ['IR', 'TR'],
-      offers: {
+      image: data.image ? absUrl(data.image) : undefined,
+      url: data.url && String(data.url).startsWith('http') ? data.url : absUrl(data.url || R.contact),
+      areaServed: data.areaServed || ['IR', 'TR']
+    };
+    const price = data.price != null ? data.price : data.priceUsd;
+    if (price != null && price !== '' && !Number.isNaN(Number(price))) {
+      ld.offers = {
         '@type': 'Offer',
-        availability: 'https://schema.org/PreOrder',
-        priceCurrency: 'USD',
+        price: String(price),
+        priceCurrency: data.priceCurrency || 'USD',
+        availability: 'https://schema.org/InStock',
         seller: {
           '@type': 'Organization',
           name: C.siteNameEn,
           areaServed: ['IR', 'TR']
         },
-        url: data.url && String(data.url).startsWith('http') ? data.url : absUrl(data.url || R.contact)
-      }
-    };
+        url: ld.url
+      };
+    }
     injectJsonLd('jsonld-supply-' + (data.id || data.name), ld);
   };
 
@@ -637,6 +739,15 @@
 
   window.injectServiceProductSchema = function (data) {
     if (!data) return;
+    const offers = (data.offers || [])
+      .filter(o => o && o.price != null && o.price !== '' && !Number.isNaN(Number(o.price)))
+      .map(o => ({
+        '@type': 'Offer',
+        name: o.name,
+        price: String(o.price),
+        priceCurrency: o.currency || 'USD',
+        url: o.url ? absUrl(o.url) : absUrl(R.contact)
+      }));
     const ld = {
       '@context': 'https://schema.org',
       '@type': 'Service',
@@ -644,15 +755,9 @@
       description: data.description,
       provider: { '@type': 'Organization', name: C.siteNameEn, url: C.baseUrl },
       areaServed: data.areaServed || ['IR', 'TR', 'AM', 'AE', 'DE'],
-      offers: (data.offers || []).map(o => ({
-        '@type': 'Offer',
-        name: o.name,
-        price: o.price,
-        priceCurrency: o.currency || 'USD',
-        url: o.url ? absUrl(o.url) : absUrl(R.contact)
-      })),
       url: data.url ? absUrl(data.url) : C.baseUrl
     };
+    if (offers.length) ld.offers = offers;
     injectJsonLd('jsonld-service-product', ld);
   };
 
@@ -671,6 +776,8 @@
       headline: article.title,
       description: article.description,
       datePublished: article.date,
+      dateModified: article.dateModified || article.date,
+      keywords: article.keywords || undefined,
       inLanguage: schemaLangTag(),
       author: { '@type': 'Organization', name: C.siteNameEn },
       publisher: {

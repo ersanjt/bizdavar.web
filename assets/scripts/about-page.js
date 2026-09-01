@@ -12,7 +12,7 @@
     { value: '۱۲+', label: 'سال تجربه' },
     { value: '۱۰۰+', label: 'پروژه' },
     { value: '۱۱', label: 'کشور' },
-    { value: '۴', label: 'محور خدمات' }
+    { value: '۳', label: 'مسیر کار' }
   ];
 
   const DEFAULT_NAV = [
@@ -30,9 +30,20 @@
     const el = document.getElementById('aboutHeroStats');
     if (!el) return;
     const stats = rawList('aboutPage.stats', DEFAULT_STATS);
+    const existing = el.querySelectorAll('.about-stat');
+    if (existing.length) {
+      existing.forEach((node, i) => {
+        if (!stats[i]) return;
+        const strong = node.querySelector('strong');
+        const span = node.querySelector('span');
+        if (strong && stats[i].value) strong.textContent = stats[i].value;
+        if (span && stats[i].label) span.textContent = stats[i].label;
+      });
+      return;
+    }
     el.innerHTML = stats.map(s => `
       <div class="about-stat">
-        <strong>${s.value}</strong>
+        <strong dir="ltr">${s.value}</strong>
         <span>${s.label}</span>
       </div>
     `).join('');
@@ -42,6 +53,14 @@
     const el = document.getElementById('aboutNav');
     if (!el) return;
     const items = rawList('aboutPage.nav', DEFAULT_NAV);
+    const nav = el.querySelector('.about-nav');
+    if (nav) {
+      nav.querySelectorAll('.about-nav__item').forEach((a, i) => {
+        if (items[i]?.label) a.textContent = items[i].label;
+        if (items[i]?.href) a.setAttribute('href', items[i].href);
+      });
+      return;
+    }
     el.innerHTML = `
       <nav class="about-nav" aria-label="${t('aboutPage.navAria', 'فهرست بخش‌های صفحه')}">
         ${items.map(item => `
@@ -64,16 +83,41 @@
 
     if (!sections.length) return;
 
+    let activeId = '';
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    function centerNavItem(link) {
+      const navBox = nav.getBoundingClientRect();
+      const itemBox = link.getBoundingClientRect();
+      const pad = 8;
+      if (itemBox.left >= navBox.left + pad && itemBox.right <= navBox.right - pad) return;
+      const delta = (itemBox.left + itemBox.right) / 2 - (navBox.left + navBox.right) / 2;
+      nav.scrollBy({
+        left: delta,
+        behavior: reduceMotion.matches ? 'auto' : 'smooth'
+      });
+    }
+
     const setActive = (id) => {
+      if (!id || id === activeId) return;
+      activeId = id;
       links.forEach(a => {
-        a.classList.toggle('is-active', a.getAttribute('href') === `#${id}`);
+        const on = a.getAttribute('href') === `#${id}`;
+        a.classList.toggle('is-active', on);
+        if (on) centerNavItem(a);
       });
     };
 
     const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) setActive(entry.target.id);
+      const visible = entries.filter(entry => entry.isIntersecting);
+      if (!visible.length) return;
+      const mid = window.innerHeight * 0.42;
+      visible.sort((a, b) => {
+        const aMid = a.boundingClientRect.top + a.boundingClientRect.height / 2;
+        const bMid = b.boundingClientRect.top + b.boundingClientRect.height / 2;
+        return Math.abs(aMid - mid) - Math.abs(bMid - mid);
       });
+      setActive(visible[0].target.id);
     }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
 
     sections.forEach(section => observer.observe(section));
@@ -83,7 +127,10 @@
         const target = document.querySelector(a.getAttribute('href'));
         if (!target) return;
         e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        target.scrollIntoView({
+          behavior: reduceMotion.matches ? 'auto' : 'smooth',
+          block: 'start'
+        });
         history.replaceState(null, '', a.getAttribute('href'));
         setActive(target.id);
       });

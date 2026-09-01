@@ -93,6 +93,7 @@
   function runPageBoot(fn) {
     syncLocaleNow();
     snapshotChrome();
+    ensureSiteChrome();
     afterLocale();
     try {
       if (typeof fn === 'function') fn();
@@ -121,7 +122,11 @@
 
   snapshotChrome();
   syncLocaleNow();
-  afterLocale();
+  try {
+    afterLocale();
+  } catch (e) {
+    console.error('[Bizdavar] afterLocale failed', e);
+  }
 
   if (window.BIZDAVAR_I18N) {
     window.bizdavarReady = Promise.resolve(window.BIZDAVAR_I18N.init())
@@ -155,4 +160,10 @@
     }
     runPageBoot(fn);
   };
+
+  var queued = window.__bizdavarBootQ || [];
+  window.__bizdavarBootQ = [];
+  queued.forEach(function (fn) {
+    window.bizdavarPageInit(fn);
+  });
 })();

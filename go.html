@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bizdavar</title>
+  <link rel="canonical" href="https://bizdavar.com/">
+  <script>
+    (function () {
+      var dest = {
+        ig: '/?utm_source=instagram&utm_medium=social&utm_campaign=bio',
+        li: '/?utm_source=linkedin&utm_medium=social&utm_campaign=bio',
+        wa: '/?utm_source=whatsapp&utm_medium=chat&utm_campaign=bio',
+        mail: '/?utm_source=email&utm_medium=signature&utm_campaign=bio',
+        tg: '/?utm_source=telegram&utm_medium=social&utm_campaign=bio'
+      };
+      var s = '';
+      try { s = new URLSearchParams(location.search).get('s') || ''; } catch (e) {}
+      location.replace(dest[s] || '/?utm_source=referral&utm_medium=bio&utm_campaign=bio');
+    })();
+  </script>
+</head>
+<body>
+  <p><a href="/">bizdavar.com</a></p>
+</body>
+</html>

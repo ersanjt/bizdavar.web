@@ -1,0 +1,420 @@
+# Bizdavar Group
+
+> English websites and ads for US & EU (invoiced USD or EUR, from $99 / ~€90), owned products, and industrial supply to Iran (VEGA, Prosense, Liqui Moly) since 2013.
+> Persian is the default (x-default). English, Turkish, Russian and Arabic are full locales.
+> US/EU web: https://bizdavar.com/en/pages/fast and https://bizdavar.com/en/pages/services
+> Official site: https://bizdavar.com
+
+## Locales
+
+- Persian (x-default): https://bizdavar.com/
+- Turkish: https://bizdavar.com/tr/
+- English: https://bizdavar.com/en/
+- Russian: https://bizdavar.com/ru/
+- Arabic: https://bizdavar.com/ar/
+
+## Index
+
+Sitemap: https://bizdavar.com/sitemap.xml
+Robots: https://bizdavar.com/robots.txt
+
+## Pages
+
+### Home
+- Persian: https://bizdavar.com/
+- Turkish: https://bizdavar.com/tr/
+- English: https://bizdavar.com/en/
+- Russian: https://bizdavar.com/ru/
+- Arabic: https://bizdavar.com/ar/
+
+### /pages/services
+- Persian: https://bizdavar.com/pages/services
+- Turkish: https://bizdavar.com/tr/pages/services
+- English: https://bizdavar.com/en/pages/services
+- Russian: https://bizdavar.com/ru/pages/services
+- Arabic: https://bizdavar.com/ar/pages/services
+
+### /pages/contact
+- Persian: https://bizdavar.com/pages/contact
+- Turkish: https://bizdavar.com/tr/pages/contact
+- English: https://bizdavar.com/en/pages/contact
+- Russian: https://bizdavar.com/ru/pages/contact
+- Arabic: https://bizdavar.com/ar/pages/contact
+
+### /pages/about
+- Persian: https://bizdavar.com/pages/about
+- Turkish: https://bizdavar.com/tr/pages/about
+- English: https://bizdavar.com/en/pages/about
+- Russian: https://bizdavar.com/ru/pages/about
+- Arabic: https://bizdavar.com/ar/pages/about
+
+### /pages/gallery
+- Persian: https://bizdavar.com/pages/gallery
+- Turkish: https://bizdavar.com/tr/pages/gallery
+- English: https://bizdavar.com/en/pages/gallery
+- Russian: https://bizdavar.com/ru/pages/gallery
+- Arabic: https://bizdavar.com/ar/pages/gallery
+
+### /pages/products
+- Persian: https://bizdavar.com/pages/products
+- Turkish: https://bizdavar.com/tr/pages/products
+- English: https://bizdavar.com/en/pages/products
+- Russian: https://bizdavar.com/ru/pages/products
+- Arabic: https://bizdavar.com/ar/pages/products
+
+### /pages/portfolio
+- Persian: https://bizdavar.com/pages/portfolio
+- Turkish: https://bizdavar.com/tr/pages/portfolio
+- English: https://bizdavar.com/en/pages/portfolio
+- Russian: https://bizdavar.com/ru/pages/portfolio
+- Arabic: https://bizdavar.com/ar/pages/portfolio
+
+### /pages/blog
+- Persian: https://bizdavar.com/pages/blog
+- Turkish: https://bizdavar.com/tr/pages/blog
+- English: https://bizdavar.com/en/pages/blog
+- Russian: https://bizdavar.com/ru/pages/blog
+- Arabic: https://bizdavar.com/ar/pages/blog
+
+### /pages/fast
+- Persian: https://bizdavar.com/pages/fast
+- Turkish: https://bizdavar.com/tr/pages/fast
+- English: https://bizdavar.com/en/pages/fast
+- Russian: https://bizdavar.com/ru/pages/fast
+- Arabic: https://bizdavar.com/ar/pages/fast
+
+### /pages/field-tech
+- Persian: https://bizdavar.com/pages/field-tech
+- Turkish: https://bizdavar.com/tr/pages/field-tech
+- English: https://bizdavar.com/en/pages/field-tech
+- Russian: https://bizdavar.com/ru/pages/field-tech
+- Arabic: https://bizdavar.com/ar/pages/field-tech
+
+### /pages/vega
+- Persian: https://bizdavar.com/pages/vega
+- Turkish: https://bizdavar.com/tr/pages/vega
+- English: https://bizdavar.com/en/pages/vega
+- Russian: https://bizdavar.com/ru/pages/vega
+- Arabic: https://bizdavar.com/ar/pages/vega
+
+### /pages/prosense
+- Persian: https://bizdavar.com/pages/prosense
+- Turkish: https://bizdavar.com/tr/pages/prosense
+- English: https://bizdavar.com/en/pages/prosense
+- Russian: https://bizdavar.com/ru/pages/prosense
+- Arabic: https://bizdavar.com/ar/pages/prosense
+
+### /pages/liqui-moly
+- Persian: https://bizdavar.com/pages/liqui-moly
+- Turkish: https://bizdavar.com/tr/pages/liqui-moly
+- English: https://bizdavar.com/en/pages/liqui-moly
+- Russian: https://bizdavar.com/ru/pages/liqui-moly
+- Arabic: https://bizdavar.com/ar/pages/liqui-moly
+
+### /pages/teltonika
+- Persian: https://bizdavar.com/pages/teltonika
+- Turkish: https://bizdavar.com/tr/pages/teltonika
+- English: https://bizdavar.com/en/pages/teltonika
+- Russian: https://bizdavar.com/ru/pages/teltonika
+- Arabic: https://bizdavar.com/ar/pages/teltonika
+
+### /pages/gamak
+- Persian: https://bizdavar.com/pages/gamak
+- Turkish: https://bizdavar.com/tr/pages/gamak
+- English: https://bizdavar.com/en/pages/gamak
+- Russian: https://bizdavar.com/ru/pages/gamak
+- Arabic: https://bizdavar.com/ar/pages/gamak
+
+### /pages/uwt
+- Persian: https://bizdavar.com/pages/uwt
+- Turkish: https://bizdavar.com/tr/pages/uwt
+- English: https://bizdavar.com/en/pages/uwt
+- Russian: https://bizdavar.com/ru/pages/uwt
+- Arabic: https://bizdavar.com/ar/pages/uwt
+
+### /pages/digi-system
+- Persian: https://bizdavar.com/pages/digi-system
+- Turkish: https://bizdavar.com/tr/pages/digi-system
+- English: https://bizdavar.com/en/pages/digi-system
+- Russian: https://bizdavar.com/ru/pages/digi-system
+- Arabic: https://bizdavar.com/ar/pages/digi-system
+
+### /pages/teraoka
+- Persian: https://bizdavar.com/pages/teraoka
+- Turkish: https://bizdavar.com/tr/pages/teraoka
+- English: https://bizdavar.com/en/pages/teraoka
+- Russian: https://bizdavar.com/ru/pages/teraoka
+- Arabic: https://bizdavar.com/ar/pages/teraoka
+
+### /pages/bz-diamond
+- Persian: https://bizdavar.com/pages/bz-diamond
+- Turkish: https://bizdavar.com/tr/pages/bz-diamond
+- English: https://bizdavar.com/en/pages/bz-diamond
+- Russian: https://bizdavar.com/ru/pages/bz-diamond
+- Arabic: https://bizdavar.com/ar/pages/bz-diamond
+
+### /pages/marvispace
+- Persian: https://bizdavar.com/pages/marvispace
+- Turkish: https://bizdavar.com/tr/pages/marvispace
+- English: https://bizdavar.com/en/pages/marvispace
+- Russian: https://bizdavar.com/ru/pages/marvispace
+- Arabic: https://bizdavar.com/ar/pages/marvispace
+
+### /pages/supplify-trade
+- Persian: https://bizdavar.com/pages/supplify-trade
+- Turkish: https://bizdavar.com/tr/pages/supplify-trade
+- English: https://bizdavar.com/en/pages/supplify-trade
+- Russian: https://bizdavar.com/ru/pages/supplify-trade
+- Arabic: https://bizdavar.com/ar/pages/supplify-trade
+
+### /pages/kaya-one
+- Persian: https://bizdavar.com/pages/kaya-one
+- Turkish: https://bizdavar.com/tr/pages/kaya-one
+- English: https://bizdavar.com/en/pages/kaya-one
+- Russian: https://bizdavar.com/ru/pages/kaya-one
+- Arabic: https://bizdavar.com/ar/pages/kaya-one
+
+### /pages/smm-turk
+- Persian: https://bizdavar.com/pages/smm-turk
+- Turkish: https://bizdavar.com/tr/pages/smm-turk
+- English: https://bizdavar.com/en/pages/smm-turk
+- Russian: https://bizdavar.com/ru/pages/smm-turk
+- Arabic: https://bizdavar.com/ar/pages/smm-turk
+
+### /pages/marvi-society
+- Persian: https://bizdavar.com/pages/marvi-society
+- Turkish: https://bizdavar.com/tr/pages/marvi-society
+- English: https://bizdavar.com/en/pages/marvi-society
+- Russian: https://bizdavar.com/ru/pages/marvi-society
+- Arabic: https://bizdavar.com/ar/pages/marvi-society
+
+### /pages/fxguard-exchange
+- Persian: https://bizdavar.com/pages/fxguard-exchange
+- Turkish: https://bizdavar.com/tr/pages/fxguard-exchange
+- English: https://bizdavar.com/en/pages/fxguard-exchange
+- Russian: https://bizdavar.com/ru/pages/fxguard-exchange
+- Arabic: https://bizdavar.com/ar/pages/fxguard-exchange
+
+### /pages/biztejarat
+- Persian: https://bizdavar.com/pages/biztejarat
+- Turkish: https://bizdavar.com/tr/pages/biztejarat
+- English: https://bizdavar.com/en/pages/biztejarat
+- Russian: https://bizdavar.com/ru/pages/biztejarat
+- Arabic: https://bizdavar.com/ar/pages/biztejarat
+
+### /pages/biztab
+- Persian: https://bizdavar.com/pages/biztab
+- Turkish: https://bizdavar.com/tr/pages/biztab
+- English: https://bizdavar.com/en/pages/biztab
+- Russian: https://bizdavar.com/ru/pages/biztab
+- Arabic: https://bizdavar.com/ar/pages/biztab
+
+### /pages/bizsanitizer-v5
+- Persian: https://bizdavar.com/pages/bizsanitizer-v5
+- Turkish: https://bizdavar.com/tr/pages/bizsanitizer-v5
+- English: https://bizdavar.com/en/pages/bizsanitizer-v5
+- Russian: https://bizdavar.com/ru/pages/bizsanitizer-v5
+- Arabic: https://bizdavar.com/ar/pages/bizsanitizer-v5
+
+### /pages/bizseat
+- Persian: https://bizdavar.com/pages/bizseat
+- Turkish: https://bizdavar.com/tr/pages/bizseat
+- English: https://bizdavar.com/en/pages/bizseat
+- Russian: https://bizdavar.com/ru/pages/bizseat
+- Arabic: https://bizdavar.com/ar/pages/bizseat
+
+### /pages/bizpet
+- Persian: https://bizdavar.com/pages/bizpet
+- Turkish: https://bizdavar.com/tr/pages/bizpet
+- English: https://bizdavar.com/en/pages/bizpet
+- Russian: https://bizdavar.com/ru/pages/bizpet
+- Arabic: https://bizdavar.com/ar/pages/bizpet
+
+### /pages/fxguard
+- Persian: https://bizdavar.com/pages/fxguard
+- Turkish: https://bizdavar.com/tr/pages/fxguard
+- English: https://bizdavar.com/en/pages/fxguard
+- Russian: https://bizdavar.com/ru/pages/fxguard
+- Arabic: https://bizdavar.com/ar/pages/fxguard
+
+### /pages/fxguard-accounting
+- Persian: https://bizdavar.com/pages/fxguard-accounting
+- Turkish: https://bizdavar.com/tr/pages/fxguard-accounting
+- English: https://bizdavar.com/en/pages/fxguard-accounting
+- Russian: https://bizdavar.com/ru/pages/fxguard-accounting
+- Arabic: https://bizdavar.com/ar/pages/fxguard-accounting
+
+### /pages/bizswap
+- Persian: https://bizdavar.com/pages/bizswap
+- Turkish: https://bizdavar.com/tr/pages/bizswap
+- English: https://bizdavar.com/en/pages/bizswap
+- Russian: https://bizdavar.com/ru/pages/bizswap
+- Arabic: https://bizdavar.com/ar/pages/bizswap
+
+### /pages/articles/about-bizdavar-group
+- Persian: https://bizdavar.com/pages/articles/about-bizdavar-group
+- Turkish: https://bizdavar.com/tr/pages/articles/about-bizdavar-group
+- English: https://bizdavar.com/en/pages/articles/about-bizdavar-group
+- Russian: https://bizdavar.com/ru/pages/articles/about-bizdavar-group
+- Arabic: https://bizdavar.com/ar/pages/articles/about-bizdavar-group
+
+### /pages/articles/website-design-us-eu
+- Persian: https://bizdavar.com/pages/articles/website-design-us-eu
+- Turkish: https://bizdavar.com/tr/pages/articles/website-design-us-eu
+- English: https://bizdavar.com/en/pages/articles/website-design-us-eu
+- Russian: https://bizdavar.com/ru/pages/articles/website-design-us-eu
+- Arabic: https://bizdavar.com/ar/pages/articles/website-design-us-eu
+
+### /pages/articles/digital-marketing-us-eu
+- Persian: https://bizdavar.com/pages/articles/digital-marketing-us-eu
+- Turkish: https://bizdavar.com/tr/pages/articles/digital-marketing-us-eu
+- English: https://bizdavar.com/en/pages/articles/digital-marketing-us-eu
+- Russian: https://bizdavar.com/ru/pages/articles/digital-marketing-us-eu
+- Arabic: https://bizdavar.com/ar/pages/articles/digital-marketing-us-eu
+
+### /pages/articles/buy-vegapuls-iran
+- Persian: https://bizdavar.com/pages/articles/buy-vegapuls-iran
+- Turkish: https://bizdavar.com/tr/pages/articles/buy-vegapuls-iran
+- English: https://bizdavar.com/en/pages/articles/buy-vegapuls-iran
+- Russian: https://bizdavar.com/ru/pages/articles/buy-vegapuls-iran
+- Arabic: https://bizdavar.com/ar/pages/articles/buy-vegapuls-iran
+
+### /pages/articles/vega-quote-iran
+- Persian: https://bizdavar.com/pages/articles/vega-quote-iran
+- Turkish: https://bizdavar.com/tr/pages/articles/vega-quote-iran
+- English: https://bizdavar.com/en/pages/articles/vega-quote-iran
+- Russian: https://bizdavar.com/ru/pages/articles/vega-quote-iran
+- Arabic: https://bizdavar.com/ar/pages/articles/vega-quote-iran
+
+### /pages/articles/buy-prosense-iran
+- Persian: https://bizdavar.com/pages/articles/buy-prosense-iran
+- Turkish: https://bizdavar.com/tr/pages/articles/buy-prosense-iran
+- English: https://bizdavar.com/en/pages/articles/buy-prosense-iran
+- Russian: https://bizdavar.com/ru/pages/articles/buy-prosense-iran
+- Arabic: https://bizdavar.com/ar/pages/articles/buy-prosense-iran
+
+### /pages/articles/industrial-trade-iran
+- Persian: https://bizdavar.com/pages/articles/industrial-trade-iran
+- Turkish: https://bizdavar.com/tr/pages/articles/industrial-trade-iran
+- English: https://bizdavar.com/en/pages/articles/industrial-trade-iran
+- Russian: https://bizdavar.com/ru/pages/articles/industrial-trade-iran
+- Arabic: https://bizdavar.com/ar/pages/articles/industrial-trade-iran
+
+### /pages/articles/buy-teltonika-iran
+- Persian: https://bizdavar.com/pages/articles/buy-teltonika-iran
+- Turkish: https://bizdavar.com/tr/pages/articles/buy-teltonika-iran
+- English: https://bizdavar.com/en/pages/articles/buy-teltonika-iran
+- Russian: https://bizdavar.com/ru/pages/articles/buy-teltonika-iran
+- Arabic: https://bizdavar.com/ar/pages/articles/buy-teltonika-iran
+
+### /pages/articles/buy-gamak-iran
+- Persian: https://bizdavar.com/pages/articles/buy-gamak-iran
+- Turkish: https://bizdavar.com/tr/pages/articles/buy-gamak-iran
+- English: https://bizdavar.com/en/pages/articles/buy-gamak-iran
+- Russian: https://bizdavar.com/ru/pages/articles/buy-gamak-iran
+- Arabic: https://bizdavar.com/ar/pages/articles/buy-gamak-iran
+
+### /pages/articles/buy-digi-system-iran
+- Persian: https://bizdavar.com/pages/articles/buy-digi-system-iran
+- Turkish: https://bizdavar.com/tr/pages/articles/buy-digi-system-iran
+- English: https://bizdavar.com/en/pages/articles/buy-digi-system-iran
+- Russian: https://bizdavar.com/ru/pages/articles/buy-digi-system-iran
+- Arabic: https://bizdavar.com/ar/pages/articles/buy-digi-system-iran
+
+### /pages/articles/buy-teraoka-iran
+- Persian: https://bizdavar.com/pages/articles/buy-teraoka-iran
+- Turkish: https://bizdavar.com/tr/pages/articles/buy-teraoka-iran
+- English: https://bizdavar.com/en/pages/articles/buy-teraoka-iran
+- Russian: https://bizdavar.com/ru/pages/articles/buy-teraoka-iran
+- Arabic: https://bizdavar.com/ar/pages/articles/buy-teraoka-iran
+
+### /pages/articles/vega-supply-iran
+- Persian: https://bizdavar.com/pages/articles/vega-supply-iran
+- Turkish: https://bizdavar.com/tr/pages/articles/vega-supply-iran
+- English: https://bizdavar.com/en/pages/articles/vega-supply-iran
+- Russian: https://bizdavar.com/ru/pages/articles/vega-supply-iran
+- Arabic: https://bizdavar.com/ar/pages/articles/vega-supply-iran
+
+### /pages/articles/multilingual-web-iran-turkey
+- Persian: https://bizdavar.com/pages/articles/multilingual-web-iran-turkey
+- Turkish: https://bizdavar.com/tr/pages/articles/multilingual-web-iran-turkey
+- English: https://bizdavar.com/en/pages/articles/multilingual-web-iran-turkey
+- Russian: https://bizdavar.com/ru/pages/articles/multilingual-web-iran-turkey
+- Arabic: https://bizdavar.com/ar/pages/articles/multilingual-web-iran-turkey
+
+### /pages/articles/what-is-digital-marketing
+- Persian: https://bizdavar.com/pages/articles/what-is-digital-marketing
+- Turkish: https://bizdavar.com/tr/pages/articles/what-is-digital-marketing
+- English: https://bizdavar.com/en/pages/articles/what-is-digital-marketing
+- Russian: https://bizdavar.com/ru/pages/articles/what-is-digital-marketing
+- Arabic: https://bizdavar.com/ar/pages/articles/what-is-digital-marketing
+
+### /pages/articles/digital-marketing
+- Persian: https://bizdavar.com/pages/articles/digital-marketing
+- Turkish: https://bizdavar.com/tr/pages/articles/digital-marketing
+- English: https://bizdavar.com/en/pages/articles/digital-marketing
+- Russian: https://bizdavar.com/ru/pages/articles/digital-marketing
+- Arabic: https://bizdavar.com/ar/pages/articles/digital-marketing
+
+### /pages/articles/social-media-management
+- Persian: https://bizdavar.com/pages/articles/social-media-management
+- Turkish: https://bizdavar.com/tr/pages/articles/social-media-management
+- English: https://bizdavar.com/en/pages/articles/social-media-management
+- Russian: https://bizdavar.com/ru/pages/articles/social-media-management
+- Arabic: https://bizdavar.com/ar/pages/articles/social-media-management
+
+### /pages/articles/fast-studio
+- Persian: https://bizdavar.com/pages/articles/fast-studio
+- Turkish: https://bizdavar.com/tr/pages/articles/fast-studio
+- English: https://bizdavar.com/en/pages/articles/fast-studio
+- Russian: https://bizdavar.com/ru/pages/articles/fast-studio
+- Arabic: https://bizdavar.com/ar/pages/articles/fast-studio
+
+### /pages/articles/industrial-sensors
+- Persian: https://bizdavar.com/pages/articles/industrial-sensors
+- Turkish: https://bizdavar.com/tr/pages/articles/industrial-sensors
+- English: https://bizdavar.com/en/pages/articles/industrial-sensors
+- Russian: https://bizdavar.com/ru/pages/articles/industrial-sensors
+- Arabic: https://bizdavar.com/ar/pages/articles/industrial-sensors
+
+### /pages/articles/marvi-society-ios-app
+- Persian: https://bizdavar.com/pages/articles/marvi-society-ios-app
+- Turkish: https://bizdavar.com/tr/pages/articles/marvi-society-ios-app
+- English: https://bizdavar.com/en/pages/articles/marvi-society-ios-app
+- Russian: https://bizdavar.com/ru/pages/articles/marvi-society-ios-app
+- Arabic: https://bizdavar.com/ar/pages/articles/marvi-society-ios-app
+
+### /pages/articles/prosense-gas-detection
+- Persian: https://bizdavar.com/pages/articles/prosense-gas-detection
+- Turkish: https://bizdavar.com/tr/pages/articles/prosense-gas-detection
+- English: https://bizdavar.com/en/pages/articles/prosense-gas-detection
+- Russian: https://bizdavar.com/ru/pages/articles/prosense-gas-detection
+- Arabic: https://bizdavar.com/ar/pages/articles/prosense-gas-detection
+
+### /pages/articles/field-tech-services
+- Persian: https://bizdavar.com/pages/articles/field-tech-services
+- Turkish: https://bizdavar.com/tr/pages/articles/field-tech-services
+- English: https://bizdavar.com/en/pages/articles/field-tech-services
+- Russian: https://bizdavar.com/ru/pages/articles/field-tech-services
+- Arabic: https://bizdavar.com/ar/pages/articles/field-tech-services
+
+### /pages/articles/local-seo-iran
+- Persian: https://bizdavar.com/pages/articles/local-seo-iran
+- Turkish: https://bizdavar.com/tr/pages/articles/local-seo-iran
+- English: https://bizdavar.com/en/pages/articles/local-seo-iran
+- Russian: https://bizdavar.com/ru/pages/articles/local-seo-iran
+- Arabic: https://bizdavar.com/ar/pages/articles/local-seo-iran
+
+### /pages/articles/liqui-moly-supply-iran
+- Persian: https://bizdavar.com/pages/articles/liqui-moly-supply-iran
+- Turkish: https://bizdavar.com/tr/pages/articles/liqui-moly-supply-iran
+- English: https://bizdavar.com/en/pages/articles/liqui-moly-supply-iran
+- Russian: https://bizdavar.com/ru/pages/articles/liqui-moly-supply-iran
+- Arabic: https://bizdavar.com/ar/pages/articles/liqui-moly-supply-iran
+
+### /pages/privacy
+- Persian: https://bizdavar.com/pages/privacy
+- Turkish: https://bizdavar.com/tr/pages/privacy
+- English: https://bizdavar.com/en/pages/privacy
+- Russian: https://bizdavar.com/ru/pages/privacy
+- Arabic: https://bizdavar.com/ar/pages/privacy

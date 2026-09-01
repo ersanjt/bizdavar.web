@@ -121,12 +121,14 @@
         { href: pagePath(R.prosense), label: 'Prosense' },
         { href: pagePath(R.teltonika), label: 'Teltonika' },
         { href: pagePath(R.gamak), label: 'Gamak' },
+        { href: pagePath(R.uwt), label: 'UWT' },
         { href: pagePath(R.digiSystem), label: 'Digi System' },
         { href: pagePath(R.teraoka), label: 'Teraoka' },
         { href: pagePath(R.liquiMoly), label: 'Liqui Moly' }
       ],
       quick: [
         { href: pagePath(R.about), label: t('nav.about') },
+        { href: pagePath(R.gallery || 'pages/gallery.html'), label: t('nav.gallery', 'گالری تصاویر') },
         { href: pagePath(R.services), label: t('nav.services') },
         { href: pagePath(R.products), label: t('nav.products') },
         { href: pagePath(R.portfolio), label: t('nav.portfolio') },
@@ -164,7 +166,7 @@
     ];
   }
 
-  const SUPPLY_PAGES = new Set(['vega', 'prosense', 'teltonika', 'gamak', 'digi-system', 'teraoka', 'liqui-moly']);
+  const SUPPLY_PAGES = new Set(['vega', 'prosense', 'teltonika', 'gamak', 'uwt', 'digi-system', 'teraoka', 'liqui-moly']);
 
   function getProductNavConfig() {
     return C.productNav || { overviewRoute: 'products', tabs: [], footer: [] };
@@ -668,8 +670,8 @@
     }
     const navItems = getNavItems();
     const logoAlt = A.logoAlt || C.siteName;
-    const headerLogo = A.logo;
-    const footerLogo = A.logoOnDark || A.logo;
+    const headerLogo = 'assets/images/brand/bizdavar-logo-200.webp';
+    const footerLogo = 'assets/images/brand/bizdavar-logo-light-240.webp';
     const topBar = document.getElementById('topBar');
     const header = document.getElementById('siteHeader');
     const footer = document.getElementById('siteFooter');
@@ -719,7 +721,7 @@
         <div class="header__desktop">
           <div class="container header__desktop-inner">
             <a href="${pagePath(R.home)}" class="header__logo" aria-label="${C.siteName} — ${t('common.homeAria', 'صفحه اصلی')}">
-              <img src="${path(headerLogo)}" alt="${logoAlt}" width="120" height="50">
+              <img src="${path(headerLogo)}" alt="${logoAlt}" width="120" height="50" decoding="async">
             </a>
             <nav class="nav nav--desktop nav--primary" id="nav" aria-label="${t('common.mainNav', 'منوی اصلی')}">
               ${navLinks}
@@ -738,7 +740,7 @@
         <div class="mobile-header">
           <div class="mobile-header__bar">
             <a href="${pagePath(R.home)}" class="mobile-header__logo" aria-label="${C.siteName} — ${t('common.homeAria', 'صفحه اصلی')}">
-              <img src="${path(headerLogo)}" alt="${logoAlt}" width="132" height="55" decoding="async" fetchpriority="high">
+              <img src="${path(headerLogo)}" alt="${logoAlt}" width="100" height="42" decoding="async">
             </a>
             <div class="mobile-header__actions">
               ${langSwitcherHtml('lang-dropdown--header-mobile')}
@@ -754,9 +756,9 @@
           </div>
         </div>
 
-        <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+        <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true" inert>
           <div class="mobile-drawer__head">
-            <img src="${path(headerLogo)}" alt="${logoAlt}" height="32">
+            <img src="${path(headerLogo)}" alt="${logoAlt}" width="77" height="32">
             <button type="button" class="mobile-drawer__close" id="mobileDrawerClose" aria-label="${t('common.closeMenu', 'بستن منو')}">${ic('close', { size: 20 })}</button>
           </div>
           ${langDrawerMenuHtml()}
@@ -826,7 +828,7 @@
                   <img src="${path(footerLogo)}" alt="${logoAlt}" class="footer__logo-img" width="120" height="50">
                 </a>
                 <p class="footer__tagline">${t('footer.tagline')}</p>
-                <div class="footer__trust">${trustPills}<span class="footer__pill">${t('footer.hq', 'Istanbul HQ')}</span></div>
+                <div class="footer__trust">${trustPills}<span class="footer__pill">${t('footer.hq', 'Multilingual support')}</span></div>
                 <p class="footer__social-label">${t('footer.followUs', 'Follow us')}</p>
                 <div class="footer__social">
                   <a href="${C.contact.instagram}" class="footer__social-btn" target="_blank" rel="noopener noreferrer me" aria-label="Instagram">${ic('instagram', { size: 18 })}</a>
@@ -868,7 +870,7 @@
 
         <div class="footer__mobile">
           <div class="mobile-footer-hero">
-            <a href="${pagePath(R.home)}" class="footer__logo-link"><img src="${path(footerLogo)}" alt="${logoAlt}" class="footer__logo-img footer__logo-img--sm"></a>
+            <a href="${pagePath(R.home)}" class="footer__logo-link"><img src="${path(footerLogo)}" alt="${logoAlt}" class="footer__logo-img footer__logo-img--sm" width="86" height="36"></a>
             <p class="mobile-footer-hero__tagline">${t('footer.tagline')}</p>
             <div class="footer__trust">${trustPills}<span class="footer__pill">${t('footer.hq', 'Offices: Iran · Turkey · Armenia · Dubai')}</span></div>
             <div class="footer__social footer__social--mobile">
@@ -947,5 +949,42 @@
     bindLangSwitcher(header);
     bindLangSwitcher(footer);
     bindNavDropdowns(header);
+    renderOfferMap();
   };
+
+  function renderOfferMap() {
+    const host = document.getElementById('offerMap');
+    if (!host) return;
+    const servicesHref = pagePath(R.services);
+    const productsHref = pagePath(R.products);
+    const supplyHref = (productsHref.indexOf('#') === -1 ? productsHref : productsHref.split('#')[0]) + '#supply';
+    const inHero = !!host.closest('.hero');
+    host.className = 'offer-map offer-map--paths' + (inHero || currentPage === 'home' ? ' offer-map--hero' : '') + (host.classList.contains('offer-map--about') || !!host.closest('.about-intro') ? ' offer-map--about' : '');
+    host.setAttribute('role', 'navigation');
+    host.setAttribute('aria-label', t('common.offerMap.aria', 'سه مسیر بیزدوار'));
+    const cards = `
+        <p class="offer-map__lead">${t('common.offerMap.lead', 'به چه چیزی نیاز دارید؟')}</p>
+        <div class="offer-map__grid">
+          <a href="${servicesHref}" class="offer-map__card${currentPage === 'services' ? ' is-active' : ''}">
+            <span class="offer-map__num">${t('common.offerMap.servicesNum', '۰۱')}</span>
+            <p class="offer-map__title">${t('common.offerMap.servicesTitle', 'خدمات')}</p>
+            <p class="offer-map__desc">${t('common.offerMap.servicesDesc', 'سایت ۵روزه، بازاریابی دیجیتال، SMM، اپ، سرور و خدمات فنی')}</p>
+            <span class="offer-map__go">${t('common.offerMap.servicesGo', 'ورود به خدمات')}</span>
+          </a>
+          <a href="${productsHref}" class="offer-map__card${currentPage === 'products' ? ' is-active' : ''}">
+            <span class="offer-map__num">${t('common.offerMap.productsNum', '۰۲')}</span>
+            <p class="offer-map__title">${t('common.offerMap.productsTitle', 'محصولات بیزدوار')}</p>
+            <p class="offer-map__desc">${t('common.offerMap.productsDesc', 'محصولات دیجیتال و فیزیکی خودمان — BizPet، BizTab و FXGuard')}</p>
+            <span class="offer-map__go">${t('common.offerMap.productsGo', 'ورود به محصولات')}</span>
+          </a>
+          <a href="${supplyHref}" class="offer-map__card">
+            <span class="offer-map__num">${t('common.offerMap.supplyNum', '۰۳')}</span>
+            <p class="offer-map__title">${t('common.offerMap.supplyTitle', 'تامین صنعتی')}</p>
+            <p class="offer-map__desc">${t('common.offerMap.supplyDesc', 'قطعات صنعتی و ابزار دقیق: دتکتور Prosense، سنسور VEGA و سایر برندها — برای استعلام قیمت با ما در ارتباط باشید')}</p>
+            <span class="offer-map__go">${t('common.offerMap.supplyGo', 'استعلام قیمت')}</span>
+          </a>
+        </div>`;
+    const alreadyInContainer = inHero || !!host.closest('.container');
+    host.innerHTML = alreadyInContainer ? cards : `<div class="container">${cards}</div>`;
+  }
 })();

@@ -115,6 +115,11 @@
     el.innerHTML = `
       <div class="container">
         <nav class="services-nav" aria-label="${t('servicesPage.navAria', 'فهرست خدمات')}">
+          <a href="#intl-markets" class="services-nav__item services-nav__item--blue">
+            <span class="services-nav__num">$</span>
+            ${ic('globe', { size: 18 })}
+            ${t('servicesPage.intl.nav', 'اروپا و آمریکا')}
+          </a>
           ${getServices().map(s => `
             <a href="${s.href}" class="services-nav__item services-nav__item--${s.accent}">
               <span class="services-nav__num">${s.num}</span>
@@ -139,7 +144,7 @@
     const field = {
       eyebrow: t('servicesPage.paths.field.eyebrow', 'مسیر فنی'),
       title: t('servicesPage.paths.field.title', 'دوربین، سیم‌کشی و نورمخفی'),
-      desc: t('servicesPage.paths.field.desc', 'نصب و اجرای میدانی در تبریز و استانبول — هماهنگی مستقیم از واتساپ خدمات فنی.'),
+      desc: t('servicesPage.paths.field.desc', 'نصب و اجرای میدانی در تبریز — هماهنگی مستقیم از واتساپ خدمات فنی.'),
       cta: t('servicesPage.paths.field.cta', 'رفتن به خدمات فنی'),
       href: path('pages/field-tech')
     };
@@ -170,6 +175,38 @@
         <span class="services-overview-card__cta">${t('servicesPage.viewDetails', 'مشاهده جزئیات')}</span>
       </a>
     `).join('');
+  }
+
+  function pageHref(url) {
+    if (!url) return '/pages/contact';
+    if (/^(https?:|mailto:|#)/.test(url)) return url;
+    return window.resolvePagePath ? window.resolvePagePath(url) : url;
+  }
+
+  function renderIntlMarkets() {
+    const pointsEl = document.getElementById('servicesIntlPoints');
+    const offersEl = document.getElementById('servicesIntlOffers');
+    if (!pointsEl && !offersEl) return;
+    const points = rawList('servicesPage.intl.points', []);
+    const offers = rawList('servicesPage.intl.offers', []);
+    if (pointsEl) {
+      pointsEl.innerHTML = points.map(p => `
+        <article class="services-intl__point services-reveal">
+          <h3>${p.title}</h3>
+          <p>${p.desc}</p>
+        </article>
+      `).join('');
+    }
+    if (offersEl) {
+      offersEl.innerHTML = offers.map(o => `
+        <article class="services-intl__offer services-reveal">
+          <h3>${o.name}</h3>
+          <div class="services-intl__price" dir="ltr">${o.price}</div>
+          <p>${o.desc}</p>
+          <a href="${pageHref(o.href)}" class="btn btn--yellow">${o.cta}</a>
+        </article>
+      `).join('');
+    }
   }
 
   const PROCESS_ICONS = ['phone', 'target', 'bolt', 'chart-line'];
@@ -248,21 +285,60 @@
     }
   }
 
+  let servicesRevealObserver = null;
+  let servicesRevealFallbackTimer = 0;
+
+  function revealServicesNode(el) {
+    if (!el || el.classList.contains('is-in')) return;
+    el.classList.add('is-in');
+    if (servicesRevealObserver) servicesRevealObserver.unobserve(el);
+  }
+
+  function flushHiddenServicesReveals() {
+    document.querySelectorAll('.services-reveal:not(.is-in)').forEach(revealServicesNode);
+  }
+
   function initReveals() {
     const nodes = [...document.querySelectorAll('.services-reveal')];
     if (!nodes.length) return;
+
+    if (servicesRevealObserver) {
+      servicesRevealObserver.disconnect();
+      servicesRevealObserver = null;
+    }
+    if (servicesRevealFallbackTimer) {
+      clearTimeout(servicesRevealFallbackTimer);
+      servicesRevealFallbackTimer = 0;
+    }
+
     if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      nodes.forEach(n => n.classList.add('is-in'));
+      nodes.forEach(revealServicesNode);
       return;
     }
+
     const obs = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-in');
-        obs.unobserve(entry.target);
+        revealServicesNode(entry.target);
       });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
-    nodes.forEach(n => obs.observe(n));
+    }, { rootMargin: '0px 0px -5% 0px', threshold: 0.05 });
+    servicesRevealObserver = obs;
+
+    const viewportH = window.innerHeight || document.documentElement.clientHeight || 0;
+    nodes.forEach(n => {
+      obs.observe(n);
+      const rect = n.getBoundingClientRect();
+      if (rect.height > 0 && rect.bottom > 0 && rect.top < viewportH * 0.92) {
+        revealServicesNode(n);
+      }
+    });
+
+    servicesRevealFallbackTimer = window.setTimeout(flushHiddenServicesReveals, 1500);
+  }
+
+  function scheduleServicesReveals() {
+    initReveals();
+    requestAnimationFrame(initReveals);
   }
 
   function applyBlockLists() {
@@ -830,6 +906,7 @@
     renderNav();
     renderPaths();
     renderOverview();
+    renderIntlMarkets();
     renderProcess();
     applyBlockLists();
     renderDmPanel();
@@ -856,8 +933,19 @@
       el.classList.add('services-reveal');
     });
     initNavSpy();
-    initReveals();
+    scheduleServicesReveals();
   };
+
+  document.addEventListener('bizdavar:locale', () => {
+    if (document.body.dataset.page !== 'services') return;
+    scheduleServicesReveals();
+  });
+
+  document.addEventListener('bizdavar:page-entered', scheduleServicesReveals);
+
+  if (document.documentElement.classList.contains('is-page-entered')) {
+    scheduleServicesReveals();
+  }
 
   window.renderServicesRelatedLinks = function () {
     const links = rawList('servicesPage.relatedLinks', [

@@ -33,6 +33,7 @@ const PAGES = [
   { path: '/pages/services', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
   { path: '/pages/contact', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
   { path: '/pages/about', changefreq: 'monthly', priority: 0.85, lastmod: SITE_UPDATE },
+  { path: '/pages/gallery', changefreq: 'monthly', priority: 0.8, lastmod: '2026-08-21' },
   { path: '/pages/products', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
   { path: '/pages/portfolio', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/blog', changefreq: 'weekly', priority: 0.75, lastmod: SITE_UPDATE },
@@ -45,17 +46,22 @@ const PAGES = [
   { path: '/pages/liqui-moly', changefreq: 'weekly', priority: 0.9, lastmod: '2026-08-12' },
   { path: '/pages/teltonika', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
   { path: '/pages/gamak', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
+  { path: '/pages/uwt', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/digi-system', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/teraoka', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/bz-diamond', changefreq: 'monthly', priority: 0.75, lastmod: SITE_UPDATE },
+  { path: '/pages/marvispace', changefreq: 'monthly', priority: 0.8, lastmod: '2026-08-26' },
   { path: '/pages/supplify-trade', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/kaya-one', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/smm-turk', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
+  { path: '/pages/marvi-society', changefreq: 'monthly', priority: 0.8, lastmod: '2026-08-24' },
   { path: '/pages/fxguard-exchange', changefreq: 'monthly', priority: 0.85, lastmod: SITE_UPDATE },
   { path: '/pages/biztejarat', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/biztab', changefreq: 'monthly', priority: 0.85, lastmod: SITE_UPDATE },
   { path: '/pages/bizpet', changefreq: 'monthly', priority: 0.85, lastmod: '2026-09-01' },
   { path: '/pages/bizsanitizer-v5', changefreq: 'monthly', priority: 0.85, lastmod: '2021-06-01' },
+  { path: '/pages/bizseat', changefreq: 'monthly', priority: 0.85, lastmod: '2020-09-01' },
+  { path: '/pages/bizpet', changefreq: 'monthly', priority: 0.85, lastmod: '2026-08-21' },
   { path: '/pages/fxguard', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/fxguard-accounting', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/bizswap', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
@@ -121,3 +127,40 @@ ${allNodes}
 
 fs.writeFileSync(OUT, xml, 'utf8');
 console.log(`Wrote ${totalUrls} URLs (${PAGES.length} pages × ${LOCALES.length} locales) to sitemap.xml`);
+
+const LANG_LABEL = { fa: 'Persian', tr: 'Turkish', en: 'English', ru: 'Russian', ar: 'Arabic' };
+const llmsLines = [
+  '# Bizdavar Group',
+  '',
+  '> English websites and ads for US & EU (invoiced USD or EUR, from $99 / ~€90), owned products, and industrial supply to Iran (VEGA, Prosense, Liqui Moly) since 2013.',
+  '> Persian is the default (x-default). English, Turkish, Russian and Arabic are full locales.',
+  '> US/EU web: https://bizdavar.com/en/pages/fast and https://bizdavar.com/en/pages/services',
+  '> Official site: https://bizdavar.com',
+  '',
+  '## Locales',
+  '',
+  '- Persian (x-default): https://bizdavar.com/',
+  '- Turkish: https://bizdavar.com/tr/',
+  '- English: https://bizdavar.com/en/',
+  '- Russian: https://bizdavar.com/ru/',
+  '- Arabic: https://bizdavar.com/ar/',
+  '',
+  '## Index',
+  '',
+  `Sitemap: ${BASE}/sitemap.xml`,
+  `Robots: ${BASE}/robots.txt`,
+  '',
+  '## Pages'
+];
+
+for (const entry of PAGES) {
+  llmsLines.push('');
+  llmsLines.push(`### ${entry.path === '/' ? 'Home' : entry.path}`);
+  for (const locale of LOCALES) {
+    llmsLines.push(`- ${LANG_LABEL[locale.code]}: ${absoluteUrl(entry, locale)}`);
+  }
+}
+
+const llmsOut = path.join(__dirname, '..', 'llms.txt');
+fs.writeFileSync(llmsOut, llmsLines.join('\n') + '\n', 'utf8');
+console.log(`Wrote llms.txt with ${PAGES.length} page groups`);

@@ -8,9 +8,10 @@
   function initHeaderScroll() {
     const header = document.querySelector('.header');
     if (!header) return;
+    const y = window.scrollY;
     const sync = () => header.classList.toggle('is-scrolled', window.scrollY > 20);
-    sync();
     window.addEventListener('scroll', sync, { passive: true });
+    if (y > 20) header.classList.add('is-scrolled');
   }
 
   function parseStatValue(text) {
@@ -127,12 +128,16 @@
     initHeaderScroll();
     initReveal();
     initCounters();
+    requestAnimationFrame(function () {
+      document.documentElement.classList.add('is-page-entered');
+      document.dispatchEvent(new CustomEvent('bizdavar:page-entered'));
+    });
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', boot);
-  } else {
+  if (document.readyState === 'complete') {
     boot();
+  } else {
+    document.addEventListener('DOMContentLoaded', boot);
   }
 
   document.addEventListener('bizdavar:locale', () => {

@@ -76,7 +76,7 @@ window.BIZDAVAR_INTEL = {
         'کارشناسی مهندسی برق — دانشگاه آزاد اسلامی (اتوماسیون صنعتی)',
         'کارشناسی مهندسی کامپیوتر — دانشگاه آزاد تهران',
         'MBA مدیریت کسب‌وکار — دانشگاه تهران (تحول دیجیتال)',
-        'کارشناسی ارشد مهندسی کامپیوتر — دانشگاه اسنیورت استانبول'
+        'کارشناسی ارشد مهندسی کامپیوتر — دانشگاه اسنیورت'
       ],
       expertise: [
         'پلتفرم‌های فین‌تک و پرداخت',
@@ -89,35 +89,25 @@ window.BIZDAVAR_INTEL = {
       bioFa: 'بیش از ۱۲ سال تجربه در طراحی و توسعه ۱۰۰+ وبسایت و پلتفرم سفارشی. بنیان‌گذار بیزدوار گروپ و رهبر پروژه‌های دیجیتال در ۱۱ کشور — از فین‌تک و پرداخت تا صنعت و هاستینگ ابری.'
     },
     teamModel: 'تیم چندتخصصی — طراحی، توسعه، محتوا، بازاریابی و پشتیبانی فنی',
-    affiliates: 'شبکه همکاران و نمایندگان در ایران، ترکیه و ارمنستان'
+    affiliates: 'شبکه همکاران و نمایندگان در ایران و ارمنستان'
   },
 
   /** حوزه‌های فعالیت (دسته‌بندی خدمات) */
   activityAreas: [
     {
-      id: 'digital-growth',
-      title: 'رشد دیجیتال',
-      items: ['بازاریابی دیجیتال', 'سئو و Google Ads', 'مدیریت SMM', 'قیف تبدیل', 'تحلیل GA4']
+      id: 'services',
+      title: 'خدمات',
+      items: ['بازاریابی دیجیتال، سئو و SMM', 'طراحی سایت ۵روزه و وب‌اپ', 'سامانه و فین‌تک سفارشی', 'سرور، دامنه و SSL', 'خدمات فنی تبریز']
     },
     {
-      id: 'web-platforms',
-      title: 'پلتفرم‌های وب',
-      items: ['طراحی سایت شرکتی', 'فروشگاه WooCommerce', 'Fast Web Studio', 'وردپرس پیشرفته', 'توسعه سفارشی']
+      id: 'products',
+      title: 'محصولات خودمان',
+      items: ['BizPet — پد حرارتی ۱۳۹۹ (همان پشتی خودرو)', 'BizTab — دماسنج غیرتماسی', 'BizClean V5 — ضدعفونی دست', 'FXGuard — WhatsApp CRM و Accounting', 'BizSwap — پیش‌فروش توکن']
     },
     {
-      id: 'fintech',
-      title: 'فین‌تک و پرداخت',
-      items: ['پلتفرم‌های پرداخت', 'داشبورد مالی', 'امنیت Cloudflare', 'ربات تلگرام', 'برندینگ مالی']
-    },
-    {
-      id: 'industrial',
-      title: 'صنعت و B2B',
-      items: ['تامین VEGA و Prosense', 'BizTab — دماسنج IoT', 'پمپ و موتور صنعتی', 'ابزار دقیق', 'اتوماسیون', 'تدارکات بین‌المللی']
-    },
-    {
-      id: 'infrastructure',
-      title: 'زیرساخت',
-      items: ['Netinode برای دامنه، هاست و سرور', 'مدیریت دامنه و DNS', 'SSL و امنیت', 'پشتیبانی فنی']
+      id: 'supply',
+      title: 'تامین صنعتی',
+      items: ['VEGA — سنسور سطح و فشار', 'Prosense — دتکتور گاز و شعله', 'Gamak — الکتروموتور', 'Liqui Moly — روغن و افزودنی', 'Teltonika — ردیاب ناوگان']
     }
   ],
 
@@ -127,8 +117,8 @@ window.BIZDAVAR_INTEL = {
     { name: 'Netinode', type: 'دامنه، هاست و سرور', note: 'ثبت دامنه، هاست، WordPress Hosting، ایمیل تجاری، DNS و سرور' },
     { name: 'BZ Diamond', type: 'نمونه‌کار طراحی وب', note: 'فروشگاه WooCommerce، ایمیل و سئو — پروژه مشتری' },
     { name: 'Biztejarat', type: 'نمونه‌کار SMM (گذشته)', note: 'صفحه اینستاگرام محصولات صنعتی — پروژه غیرفعال، اینستاگرام بسته شده' },
+    { name: 'BizPet', type: 'محصول پد حرارتی', note: 'پد حرارتی پدیده ۱۳۹۹ — خانه و خودرو؛ نام فروشگاهی BizSeat همان این کالاست' },
     { name: 'BizTab', type: 'محصول IoT / سلامت', note: 'دماسنج دیواری غیرتماسی — اولین نمونه تبریز، توسعه تیم بیزدوار' },
-
     { name: 'BizClean V5', type: 'محصول بهداشت', note: 'دستگاه ضدعفونی دست اتوماتیک — سنسور التراسونیک، عرضه دیجی‌کالا' },
     { name: 'BZBroker', type: 'صرافی P2P', note: 'پلتفرم کریپتو' },
     { name: 'WhatsApp CRM', type: 'FXGuard · WhatsApp CRM', note: 'اینباکس تیمی واتساپ — سوئیت fxguard.io' },
@@ -227,7 +217,7 @@ window.BIZDAVAR_INTEL = {
     regions: [
       {
         id: 'mena',
-        title: 'خاورمیانه و ترکیه',
+        title: 'خاورمیانه',
         countries: [
           {
             name: 'ترکیه',
@@ -280,9 +270,7 @@ window.BIZDAVAR_INTEL = {
       source: 'صدا و سیما',
       sourceUrl: 'https://www.iribnews.ir/fa/news/2714063/%D9%86%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%A7%D9%87-%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7',
       sourceLabel: 'گزارش صدا و سیما',
-      image: 'assets/images/products/biztab/biztab-nasrnews-press.png',
-      video: 'assets/videos/products/bizsanitizer/exhibition-irib-2020.mp4',
-      videoPoster: 'assets/images/products/biztab/biztab-press.jpg',
+      image: 'assets/images/gallery/expo-tabrizu-incubator.jpg',
       videoLabel: 'ویدیو — گزارش تصویری نمایشگاه',
       relatedPress: [
         { label: 'ISNA', url: 'https://www.isna.ir/news/99022216019/%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D9%BE%DA%98%D9%88%D9%87%D8%B4%DB%8C-%D9%88-%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%D9%87-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7' },
@@ -309,7 +297,7 @@ window.BIZDAVAR_INTEL = {
       sourceUrl: 'https://rinotex.ir/',
       sourceHistoryUrl: 'https://rinotex.ir/Home/Introduction',
       sourceLabel: 'سایت رسمی رینوتکس',
-      image: 'assets/images/products/biztab/biztab-nasrnews-press.png',
+      image: 'assets/images/gallery/expo-team-bizdavar.jpg',
       parkUnit: {
         name: 'ایمن سهند پدیده',
         nameEn: 'Imen Sahand Padideh',
@@ -344,7 +332,7 @@ window.BIZDAVAR_INTEL = {
       desc: 'دماسنج دیواری غیرتماسی با خطای کمتر از ۰.۳ درجه — تأیید اساتید دانشگاه تبریز. توسعه و مالکیت انحصاری تیم بیزدوار.',
       source: 'آژانس خبری تحلیلی نصر',
       sourceUrl: 'https://nasrnews.ir/print/16727/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D9%88-%D8%B3%D8%A7%D8%AE%D8%AA-%D8%A7%D9%88%D9%84%DB%8C%D9%86-%D8%AF%D9%85%D8%A7%D8%B3%D9%86%D8%AC-%D8%AF%DB%8C%D9%88%D8%A7%D8%B1%DB%8C-%D8%BA%DB%8C%D8%B1%D8%AA%D9%85%D8%A7%D8%B3%DB%8C-%D8%AF%D8%B1-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2',
-      image: 'assets/images/products/biztab/biztab-nasrnews-press.png',
+      image: 'assets/images/gallery/expo-tabrizu-incubator.jpg',
       slug: 'pages/biztab.html',
       pressLinks: [
         { label: 'نصرنیوز', url: 'https://nasrnews.ir/print/16727/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D9%88-%D8%B3%D8%A7%D8%AE%D8%AA-%D8%A7%D9%88%D9%84%DB%8C%D9%86-%D8%AF%D9%85%D8%A7%D8%B3%D9%86%D8%AC-%D8%AF%DB%8C%D9%88%D8%A7%D8%B1%DB%8C-%D8%BA%DB%8C%D8%B1%D8%AA%D9%85%D8%A7%D8%B3%DB%8C-%D8%AF%D8%B1-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2' }
@@ -371,9 +359,26 @@ window.BIZDAVAR_INTEL = {
       pressLabel: 'صدا و سیما',
       videoUrl: 'https://www.youtube.com/shorts/GcOtue1Nmlo',
       videoLabel: 'YouTube — V1',
-      image: 'assets/images/products/bizsanitizer/bizclean-v5.png',
+      image: 'assets/images/gallery/expo-imen-booth.jpg',
       slug: 'pages/bizsanitizer-v5.html',
       tags: ['بهداشت', 'IoT', 'کرونا', 'دانشگاه تبریز', 'RINOTEX', 'ایمن سهند پدیده', 'دیجی‌کالا']
+    },
+    {
+      id: 'bizpet',
+      year: '۱۳۹۹',
+      yearIso: '2020',
+      title: 'BizPet — پد حرارتی بیز پت',
+      titleEn: 'BizPet — Padideh heating pad',
+      desc: 'محصول اصلی ۱۳۹۹: پد حرارتی پدیده (بیز پت / پت بیز) — طراحی و تولید در مرکز رشد فناوری دانشگاه تبریز با تکنولوژی پردازان توسعه خاورمیانه و ایمن سهند پدیده. همین پد برای خانه، خودرو (پشتی صندلی) و جا خواب حیوانات است؛ عرضه فروشگاهی در دیجی‌کالا (dkp-7694589).',
+      source: 'مرکز رشد فناوری دانشگاه تبریز',
+      sourceUrl: 'https://techpark.tabrizu.ac.ir/',
+      pressLinks: [
+        { label: 'پارک علم و فناوری تبریز', url: 'https://techpark.tabrizu.ac.ir/' },
+        { label: 'دیجی‌کالا — پد / پشتی خودرو بیزدوار', url: 'https://www.digikala.com/product/dkp-7694589/%D9%BE%D8%B4%D8%AA%DB%8C-%D8%B5%D9%86%D8%AF%D9%84%DB%8C-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%85%D8%AF%D9%84-bizdavar/' }
+      ],
+      image: 'assets/images/products/bizpet/bizpet-grey.jpg',
+      slug: 'pages/bizpet.html',
+      tags: ['پد حرارتی', 'خودرو', 'تبریز', 'مرکز رشد', 'ایمن سهند پدیده', 'دیجی‌کالا']
     }
   ],
 
@@ -437,6 +442,11 @@ window.BIZDAVAR_INTEL = {
           label: 'دیجی‌کالا — BizClean V5 (dkp-3730222)',
           url: 'https://www.digikala.com/product/dkp-3730222/%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D8%B6%D8%AF%D8%B9%D9%81%D9%88%D9%86%DB%8C-%D8%AF%D8%B3%D8%AA-%D8%A8%DB%8C%D8%B2%D8%AF%D9%88%D8%A7%D8%B1-%D9%85%D8%AF%D9%84-v5/',
           note: 'محصول مهندسی‌شده بیزدوار'
+        },
+        {
+          label: 'دیجی‌کالا — BizPet / پشتی خودرو بیزدوار (dkp-7694589)',
+          url: 'https://www.digikala.com/product/dkp-7694589/%D9%BE%D8%B4%D8%AA%DB%8C-%D8%B5%D9%86%D8%AF%D9%84%DB%8C-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%85%D8%AF%D9%84-bizdavar/',
+          note: 'همان پد حرارتی BizPet — عرضه فروشگاهی ۱۳۹۹'
         },
         {
           label: 'YouTube — نمونه اولیه BizClean V1',

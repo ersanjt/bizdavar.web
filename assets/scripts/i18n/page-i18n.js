@@ -135,6 +135,12 @@
       if (btns[0] && art.cta.btnPrimary) btns[0].textContent = art.cta.btnPrimary;
       if (btns[1] && art.cta.btnSecondary) btns[1].textContent = art.cta.btnSecondary;
     }
+    const inner = document.getElementById('articleInner');
+    const locale = window.BIZDAVAR_I18N?.locale || 'fa';
+    const pack = window.BIZDAVAR_ARTICLE_BODIES;
+    if (inner && pack && pack[slug] && pack[slug][locale]) {
+      inner.innerHTML = pack[slug][locale];
+    }
   }
 
   window.applyPageI18n = function () {
@@ -175,6 +181,7 @@
     }
     const supplyInits = {
       gamak: 'initGamakPage',
+      uwt: 'initUwtPage',
       'digi-system': 'initDigiSystemPage',
       teraoka: 'initTeraokaPage',
       teltonika: 'initTeltonikaPage',
@@ -193,12 +200,20 @@
       applyListById('bizpetPetSpecs', 'caseStudy.bizpet.pets.specs');
     }
     if (page === 'bizsanitizer-v5') applyListById('bizsanitizerSpecs', 'caseStudy.bizsanitizerV5.about.specs');
+    if (page === 'bizseat') applyListById('bizseatSpecs', 'caseStudy.bizseat.about.specs');
+    if (page === 'bizpet') {
+      applyListById('bizpetSpecs', 'caseStudy.bizpet.about.specs');
+      applyListById('bizpetPetSpecs', 'caseStudy.bizpet.pets.specs');
+    }
+    if (page === 'gallery' && typeof window.initGalleryPage === 'function') window.initGalleryPage();
     if (page === 'fxguard' && typeof window.initFxguardPage === 'function') window.initFxguardPage();
     if (page === 'bizswap' && typeof window.initBizswapPage === 'function') window.initBizswapPage();
+    if (page === 'marvispace') applyListById('marvispaceServices', 'caseStudy.marvispace.about.services');
     if (page === 'bz-diamond') applyListById('bzDiamondServices', 'caseStudy.bzDiamond.about.services');
     if (page === 'supplify-trade') applyListById('supplifyTradeServices', 'caseStudy.supplifyTrade.about.services');
     if (page === 'kaya-one') applyListById('kayaOneServices', 'caseStudy.kayaOne.about.services');
     if (page === 'smm-turk') applyListById('smmTurkServices', 'caseStudy.smmTurk.about.services');
+    if (page === 'marvi-society') applyListById('marviSocietyServices', 'caseStudy.marviSociety.about.services');
     if (page === 'fxguard-exchange') applyListById('fxguardExchangeServices', 'caseStudy.fxguardExchange.about.services');
     if (page === 'article') applyArticlePage();
   };

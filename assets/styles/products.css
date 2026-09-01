@@ -196,7 +196,7 @@
 }
 
 .products-live .service-card__link {
-  color: var(--red);
+  color: var(--red-text, #b01016);
 }
 
 .products-catalog {

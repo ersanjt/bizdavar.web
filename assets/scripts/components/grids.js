@@ -10,6 +10,18 @@
     absUrl, breadcrumbHref, localizeCrumbs, buildContactPoints, orgAddress
   } = ctx;
 
+  function hideBrokenImg() {
+    return ' onerror="this.style.display=\'none\'"';
+  }
+
+  function displayPair(primary, secondary) {
+    const a = String(primary || '').trim();
+    const b = String(secondary || '').trim();
+    if (!a) return b;
+    if (!b || a === b) return a;
+    return `${a} (${b})`;
+  }
+
   function exhibitionMediaHtml(e) {
     if (!e || (!e.video && !e.image)) return '';
     const poster = e.videoPoster ? path(e.videoPoster) : (e.image ? path(e.image) : '');
@@ -22,39 +34,213 @@
       </div>` : '';
     const imageBlock = e.image && !e.video ? `
       <figure class="exhibition-card__figure">
-        <img src="${path(e.image)}" alt="${e.title || 'Bizdavar exhibition'}" loading="lazy" width="720" height="405">
+        <img src="${path(e.image)}" alt="${e.title || 'Bizdavar exhibition'}" loading="lazy" width="720" height="405"${hideBrokenImg()}>
       </figure>` : '';
     return `<div class="exhibition-card__media">${videoBlock}${imageBlock}</div>`;
   }
 
-  window.renderBlogGrid = function (containerId, limit) {
+  function formatBlogDate(iso) {
+    if (!iso) return '';
+    try {
+      const locale = window.BIZDAVAR_I18N?.locale || document.documentElement.lang || 'fa';
+      const tags = { fa: 'fa-IR', tr: 'tr-TR', en: 'en-GB', ru: 'ru-RU', ar: 'ar-AE' };
+      return new Intl.DateTimeFormat(tags[locale] || locale, {
+        year: 'numeric', month: 'short', day: 'numeric'
+      }).format(new Date(iso + 'T00:00:00'));
+    } catch (e) {
+      return iso;
+    }
+  }
 
-    const el = document.getElementById(containerId);
+  function blogPostHref(p) {
+    return path(p.slug);
+  }
 
-    if (!el || !C.blogPosts) return;
+  function blogCardHtml(p, opts) {
+    const rich = !!(opts && opts.rich);
+    const href = blogPostHref(p);
+    const img = p.image
+      ? `<a href="${href}" class="blog-item__media" tabindex="-1">
+          <img src="${path(p.image)}" alt="${p.title}" loading="lazy" decoding="async" width="640" height="360">
+        </a>`
+      : '';
+    const dateHtml = p.date
+      ? `<time class="blog-item__date" datetime="${p.date}">${formatBlogDate(p.date)}</time>`
+      : '';
+    const serviceLink = p.relatedService
+      ? `<a href="${path(p.relatedService)}" class="blog-item__service-link">${t('blogPage.catalog.relatedService', 'خدمت مرتبط')}${linkArrow()}</a>`
+      : '';
+    return `
+      <article class="blog-item${rich ? ' blog-item--card' : ''}" data-cat="${p.catId || ''}">
+        ${rich ? img : ''}
+        <div class="blog-item__body">
+          <div class="blog-item__meta">
+            <span class="blog-item__cat">${p.category}</span>
+            ${dateHtml}
+          </div>
+          <h3><a href="${href}">${p.title}</a></h3>
+          <p>${p.excerpt}</p>
+          <div class="blog-item__links">
+            <a href="${href}" class="service-card__link">${t('common.readMore', 'ادامه مطلب')}: ${p.title}${linkArrow()}</a>
+            ${serviceLink}
+          </div>
+        </div>
+      </article>`;
+  }
 
-    const sourcePosts = window.BIZDAVAR_I18N?.getBlogPosts
+  window.getBlogPostsList = function () {
+    return window.BIZDAVAR_I18N?.getBlogPosts
       ? window.BIZDAVAR_I18N.getBlogPosts()
-      : C.blogPosts;
-    const posts = limit ? sourcePosts.slice(0, limit) : sourcePosts;
-
-    el.innerHTML = posts.map(p => `
-
-      <article class="blog-item">
-
-        <span class="blog-item__cat">${p.category}</span>
-
-        <h3><a href="${path(p.slug)}">${p.title}</a></h3>
-
-        <p>${p.excerpt}</p>
-
-        <a href="${path(p.slug)}" class="service-card__link">${t('common.readMore', 'ادامه مطلب')}${linkArrow()}</a>
-
-      </article>
-
-    `).join('');
-
+      : (C.blogPosts || []);
   };
+
+  window.renderBlogGrid = function (containerId, limit) {
+    const el = document.getElementById(containerId);
+    if (!el || !C.blogPosts) return;
+    const sourcePosts = window.getBlogPostsList();
+    const posts = limit ? sourcePosts.slice(0, limit) : sourcePosts;
+    const rich = !limit;
+    el.innerHTML = posts.map(p => blogCardHtml(p, { rich })).join('');
+  };
+
+  window.initBlogPage = function () {
+    const filterEl = document.getElementById('blogFilters');
+    const gridEl = document.getElementById('blogGrid');
+    const pillarsEl = document.getElementById('blogPillars');
+    const countEl = document.getElementById('blogCount');
+    const featuredEl = document.getElementById('blogFeatured');
+    const linkHubEl = document.getElementById('blogLinkHub');
+    if (!gridEl) return;
+
+    const posts = window.getBlogPostsList().slice().sort((a, b) =>
+      (b.date || '').localeCompare(a.date || '')
+    );
+    const cats = [
+      { id: 'digital', key: 'blogPage.topics.digital' },
+      { id: 'web', key: 'blogPage.topics.web' },
+      { id: 'industrial', key: 'blogPage.topics.industrial' },
+      { id: 'products', key: 'blogPage.topics.products' },
+      { id: 'company', key: 'blogPage.topics.company' }
+    ];
+    const params = new URLSearchParams(window.location.search);
+    const catFromQuery = params.get('topic');
+    let active = cats.some(c => c.id === catFromQuery) ? catFromQuery : 'all';
+
+    function catLabel(id) {
+      const row = cats.find(c => c.id === id);
+      return row ? t(row.key + '.label', id) : id;
+    }
+
+    function catDesc(id) {
+      const row = cats.find(c => c.id === id);
+      return row ? t(row.key + '.desc', '') : '';
+    }
+
+    function visiblePosts() {
+      return active === 'all' ? posts : posts.filter(p => p.catId === active);
+    }
+
+    function renderCount() {
+      if (!countEl) return;
+      const tpl = t('blogPage.catalog.countText', '{count}');
+      countEl.textContent = tpl.replace('{count}', String(visiblePosts().length));
+    }
+
+    function renderGrid() {
+      const list = visiblePosts();
+      gridEl.innerHTML = list.length
+        ? list.map(p => blogCardHtml(p, { rich: true })).join('')
+        : `<p class="blog-empty">${t('blogPage.catalog.empty', 'مقاله‌ای در این دسته نیست.')}</p>`;
+      renderCount();
+    }
+
+    function setActive(cat, scroll) {
+      active = cat || 'all';
+      if (filterEl) {
+        filterEl.querySelectorAll('[data-cat]').forEach(b => {
+          b.classList.toggle('is-active', b.getAttribute('data-cat') === active);
+        });
+      }
+      if (pillarsEl) {
+        pillarsEl.querySelectorAll('[data-cat]').forEach(b => {
+          b.classList.toggle('is-active', b.getAttribute('data-cat') === active);
+        });
+      }
+      renderGrid();
+      if (scroll) {
+        const target = document.getElementById('catalog');
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    if (pillarsEl) {
+      pillarsEl.innerHTML = cats.map(c => {
+        const count = posts.filter(p => p.catId === c.id).length;
+        return `<a href="#catalog" class="blog-pillar" data-cat="${c.id}">
+          <span class="blog-pillar__count">${count}</span>
+          <span class="blog-pillar__label">${catLabel(c.id)}</span>
+          <span class="blog-pillar__desc">${catDesc(c.id)}</span>
+        </a>`;
+      }).join('');
+      if (!pillarsEl.dataset.bound) {
+        pillarsEl.dataset.bound = '1';
+        pillarsEl.addEventListener('click', (e) => {
+          const link = e.target.closest('[data-cat]');
+          if (!link) return;
+          e.preventDefault();
+          setActive(link.getAttribute('data-cat'), true);
+        });
+      }
+    }
+
+    if (filterEl) {
+      const allLabel = t('blogPage.catalog.filterAll', 'همه');
+      filterEl.innerHTML = [
+        `<button type="button" class="product-filter__btn is-active" data-cat="all">${allLabel}</button>`,
+        ...cats.map(c =>
+          `<button type="button" class="product-filter__btn" data-cat="${c.id}">${catLabel(c.id)}</button>`
+        )
+      ].join('');
+      if (!filterEl.dataset.bound) {
+        filterEl.dataset.bound = '1';
+        filterEl.addEventListener('click', (e) => {
+          const btn = e.target.closest('[data-cat]');
+          if (!btn) return;
+          setActive(btn.getAttribute('data-cat'), false);
+        });
+      }
+    }
+
+    const faqEl = document.getElementById('blogFaqGrid');
+    const faqItems = window.BIZDAVAR_I18N?.raw('blogPage.faq.items');
+    if (faqEl && Array.isArray(faqItems) && faqItems.length) {
+      const dir = window.BIZDAVAR_I18N?.dict?.dir || document.documentElement.dir || 'rtl';
+      faqEl.innerHTML = faqItems.map(item => `
+        <details class="faq-item" dir="${dir}">
+          <summary dir="${dir}">${item.q}</summary>
+          <p dir="${dir}">${item.a}</p>
+        </details>`).join('');
+      if (typeof window.injectFaqSchema === 'function') window.injectFaqSchema(faqItems);
+    }
+
+    if (featuredEl && posts.length) {
+      const featured = posts.slice(0, 2);
+      featuredEl.innerHTML = featured.map(p => blogCardHtml(p, { rich: true })).join('');
+    }
+
+    const hubItems = window.BIZDAVAR_I18N?.raw('blogPage.linkHub.items');
+    if (linkHubEl && Array.isArray(hubItems) && hubItems.length) {
+      linkHubEl.innerHTML = hubItems.map(item => `
+        <a href="${path(item.url)}" class="blog-link-hub__item">
+          <strong>${item.title}</strong>
+          <span>${item.desc || ''}</span>
+        </a>`).join('');
+    }
+
+    setActive(active, false);
+  };
+
+
 
 
 
@@ -75,7 +261,7 @@
       const external = !p.internal;
 
       const logoHtml = p.logo
-        ? `<div class="portfolio-card__logo"><img src="${path(p.logo)}" alt="${p.name}" loading="lazy" width="160" height="52"></div>`
+        ? `<div class="portfolio-card__logo${p.appStoreUrl ? ' portfolio-card__logo--app' : ''}"><img src="${path(p.logo)}" alt="${p.name}" loading="lazy" width="160" height="52"></div>`
         : `<div class="portfolio-card__logo portfolio-card__logo--text"><span>${p.name}</span></div>`;
 
       return `
@@ -209,7 +395,7 @@
 
               <li class="trust-bar__item">
 
-                <strong class="trust-bar__value">${m.value}</strong>
+                <strong class="trust-bar__value" dir="ltr">${m.value}</strong>
 
                 <span class="trust-bar__label">${m.label}</span>
 
@@ -262,10 +448,10 @@
             <p class="section__desc">${t('credibility.desc')}</p>
           </div>
           <div class="intel-stats">
-            <div class="intel-stat"><strong>${f.projectsCount}</strong><span>${t('credibility.projects')}</span></div>
-            <div class="intel-stat"><strong>${f.countriesCount}</strong><span>${t('credibility.countries')}</span></div>
-            <div class="intel-stat"><strong>${f.experienceYears}</strong><span>${t('credibility.years')}</span></div>
-            <div class="intel-stat"><strong>${foundedDisplay}</strong><span>${t('credibility.founded')}</span></div>
+            <div class="intel-stat"><strong dir="ltr">${f.projectsCount}</strong><span>${t('credibility.projects')}</span></div>
+            <div class="intel-stat"><strong dir="ltr">${f.countriesCount}</strong><span>${t('credibility.countries')}</span></div>
+            <div class="intel-stat"><strong dir="ltr">${f.experienceYears}</strong><span>${t('credibility.years')}</span></div>
+            <div class="intel-stat"><strong dir="ltr">${foundedDisplay}</strong><span>${t('credibility.founded')}</span></div>
           </div>
           <div class="intel-proof-grid">
             ${localizedHighlights.map(h => `
@@ -303,8 +489,8 @@
       identityEl.innerHTML = `
         <div class="intel-identity-grid">
           <dl class="intel-dl">
-            <div><dt>${L.intlBrand || 'برند بین‌المللی'}</dt><dd>${I.identity.legalNameFa} (${I.identity.legalName})</dd></div>
-            <div><dt>${L.armeniaReg || 'ثبت ارمنستان'}</dt><dd><strong>${I.identity.armeniaLegalName}</strong> (${I.identity.armeniaLegalType})<br><span class="intel-legal-brand">${I.identity.armeniaBrandFa}</span></dd></div>
+            <div><dt>${L.intlBrand || 'برند بین‌المللی'}</dt><dd>${displayPair(I.identity.legalNameFa, I.identity.legalName)}</dd></div>
+            <div><dt>${L.armeniaReg || 'ثبت ارمنستان'}</dt><dd><strong>${I.identity.armeniaLegalName}</strong> (${I.identity.armeniaLegalType})${I.identity.armeniaBrandFa && I.identity.armeniaBrandFa !== I.identity.armeniaLegalName ? `<br><span class="intel-legal-brand">${I.identity.armeniaBrandFa}</span>` : ''}</dd></div>
             <div><dt>${L.iranLegal || 'شخصیت حقوقی ایران'}</dt><dd><strong>${iranLegal}</strong><br><span class="intel-legal-brand">${L.brandPrefix || 'برند'}: ${iranBrand}</span></dd></div>
             <div><dt>${L.founded || 'تأسیس'}</dt><dd>${I.identity.foundedDisplay}</dd></div>
             <div><dt>${L.domains || 'دامنه‌ها'}</dt><dd dir="ltr">${I.identity.domains.join(' · ')}</dd></div>
@@ -373,17 +559,19 @@
         if (!hubData) return '';
         const badge = opts.badge || L.office || 'دفتر';
         const waLabel = opts.waLabel || L.whatsapp || 'واتساپ';
+        const openAttr = opts.open ? ' open' : '';
         return `
-        <article class="presence-istanbul-hub${opts.modifier ? ' ' + opts.modifier : ''}">
-          <div class="presence-istanbul-hub__head">
-            <div>
+        <details class="presence-istanbul-hub${opts.modifier ? ' ' + opts.modifier : ''}"${openAttr}>
+          <summary class="presence-istanbul-hub__head">
+            <div class="presence-istanbul-hub__summary">
               <span class="presence-istanbul-hub__eyebrow">${hubData.subtitle || ''}</span>
               <h3 class="presence-istanbul-hub__title">${hubData.title}</h3>
               <p class="presence-istanbul-hub__location">${hubData.city}${hubData.province ? ', ' + hubData.province : ''}, ${hubData.country}${hubData.timezone ? ' · ' + hubData.timezone : ''}</p>
               ${hubData.brand ? `<p class="presence-istanbul-hub__brand">${hubData.brand}</p>` : ''}
             </div>
             <span class="presence-country__badge presence-istanbul-hub__badge">${badge}</span>
-          </div>
+          </summary>
+          <div class="presence-istanbul-hub__body">
           <p class="presence-istanbul-hub__intro">${hubData.intro}</p>
           <ul class="presence-istanbul-hub__services">
             ${(hubData.services || []).map(s => `<li>${s}</li>`).join('')}
@@ -402,7 +590,8 @@
           </div>
           ${hubData.note ? `<p class="presence-istanbul-hub__note">${hubData.note}</p>` : ''}
           ${hubData.exhibitionsNote ? `<p class="presence-istanbul-hub__note presence-istanbul-hub__note--event">${hubData.exhibitionsNote}</p>` : ''}
-        </article>`;
+          </div>
+        </details>`;
       };
       const hubHtml = renderOfficeHub(hub, { badge: L.mainOffice || 'دفتر', waLabel: L.whatsappIstanbul || 'واتساپ ترکیه' });
       const yerevanHtml = renderOfficeHub(yerevan, { badge: L.armenia || 'ارمنستان', modifier: 'presence-istanbul-hub--armenia' });
@@ -450,6 +639,17 @@
             `).join('')}
           </div>
         </div>`;
+      const officeMq = window.matchMedia('(min-width: 900px)');
+      const offices = presenceEl.querySelectorAll('.presence-istanbul-hub');
+      const preferredOffice = [...offices].find((el) => el.classList.contains('presence-istanbul-hub--iran')) || offices[0];
+      const syncOffices = () => {
+        offices.forEach((el, i) => {
+          el.open = officeMq.matches ? el === preferredOffice : i === 0;
+        });
+      };
+      syncOffices();
+      if (officeMq.addEventListener) officeMq.addEventListener('change', syncOffices);
+      else officeMq.addListener(syncOffices);
     }
 
     const credEl = document.getElementById('intelCredentials');
@@ -480,7 +680,7 @@
                 ${e.section ? `<div><dt>${t('exhibitions.section', 'بخش')}</dt><dd>${e.section}</dd></div>` : ''}
                 ${e.zone ? `<div><dt>${t('exhibitions.zone', 'زون')}</dt><dd>${e.zone}</dd></div>` : ''}
                 ${e.booth ? `<div><dt>${t('exhibitions.booth', 'غرفه')}</dt><dd>${e.booth}</dd></div>` : ''}
-                ${e.city ? `<div><dt>${t('exhibitions.location', 'مکان')}</dt><dd>${e.city}${e.country ? '، ' + e.country : ''}</dd></div>` : ''}
+                ${e.city ? `<div><dt>${t('exhibitions.location', 'مکان')}</dt><dd>${e.city}${e.country ? (/^(fa|ar)/.test(lang) ? '، ' : ', ') + e.country : ''}</dd></div>` : ''}
               </dl>
               ${(e.tags || []).length ? `<div class="exhibition-card__tags">${e.tags.map(tag => `<span class="exhibition-card__tag">${tag}</span>`).join('')}</div>` : ''}
               ${e.parkUnit ? `
@@ -516,7 +716,7 @@
           ${I.achievements.map(a => `
             <article class="achievement-card">
               <a href="${path(a.slug)}" class="achievement-card__media">
-                <img src="${path(a.image)}" alt="${a.title}" loading="lazy" width="480" height="280">
+                <img src="${path(a.image)}" alt="${a.title}" loading="lazy" width="480" height="280"${hideBrokenImg()}>
               </a>
               <div class="achievement-card__body">
                 <span class="achievement-card__year">${a.year}</span>
@@ -652,6 +852,18 @@
 
           </div>
 
+          <figure class="industrial-visual">
+            <img src="/assets/images/content/supply-hero-800.webp"
+                 srcset="/assets/images/content/supply-hero-800.webp 800w, /assets/images/content/supply-hero.jpg 1152w"
+                 sizes="(min-width: 1025px) 520px, 92vw"
+                 width="800" height="600" loading="lazy"
+                 alt="${t('industrial.visualAlt', 'Industrial sensors and export crates ready for B2B supply')}">
+            <figcaption>
+              <strong>${t('industrial.visualLead')}</strong>
+              <p>${t('industrial.visualNote')}</p>
+            </figcaption>
+          </figure>
+
           <div class="industrial-grid">${cards}</div>
 
           <div class="industrial-cta-bar">
@@ -760,7 +972,10 @@
     const href = ownedProductHref(p);
     const statusKey = p.status === 'live' ? 'productsPage.statusLive' : 'productsPage.statusCatalog';
     const statusLabel = t(statusKey, p.status === 'live' ? 'Product page' : 'Quote');
-    const tags = (p.tags || []).map(tag => `<span class="owned-product-card__tag">${tag}</span>`).join('');
+    const tags = (p.tags || []).map(tag => {
+      const ltr = /[$+]|\d+\s*\/\s*[a-z]/i.test(tag);
+      return `<span class="owned-product-card__tag"${ltr ? ' dir="ltr"' : ''}>${tag}</span>`;
+    }).join('');
     const img = ownedProductImageSrc(p);
     const fallback = ownedProductImageFallback(p);
     const isPhoto = /\.(jpe?g|webp|png)$/i.test(p.image || '');
@@ -777,8 +992,7 @@
           <p class="owned-product-card__desc">${p.desc || ''}</p>
           ${tags ? `<div class="owned-product-card__tags">${tags}</div>` : ''}
           <footer class="owned-product-card__footer">
-            <span class="owned-product-card__status">${statusLabel}</span>
-            <a href="${href}" class="service-card__link">${p.status === 'live' ? t('common.learnMore', 'بیشتر') : t('ownedProducts.contact', 'استعلام')}${linkArrow()}</a>
+            <a href="${href}" class="service-card__link">${p.status === 'live' ? t('productsPage.statusLive', statusLabel) : t('ownedProducts.contact', 'استعلام')}${linkArrow()}</a>
           </footer>
         </div>
       </article>`;
@@ -790,9 +1004,14 @@
     const opts = options || {};
     const I18n = window.BIZDAVAR_I18N;
     let items = I18n ? I18n.getOwnedProducts() : (window.BIZDAVAR_OWNED_PRODUCTS?.items || []);
+    items = items.filter(p => p && p.id !== 'bizseat' && !p.hidden);
     if (opts.featured) items = items.filter(p => p.featured);
     if (opts.status) items = items.filter(p => p.status === opts.status);
     if (opts.category && opts.category !== 'all') items = items.filter(p => p.category === opts.category);
+    if (opts.homeOrder) {
+      const order = window.BIZDAVAR_OWNED_PRODUCTS?.homeOrder || [];
+      items = order.map(id => items.find(p => p.id === id)).filter(Boolean);
+    }
     if (opts.limit) items = items.slice(0, opts.limit);
     el.innerHTML = items.length
       ? items.map(p => ownedProductCardHtml(p)).join('')
@@ -817,7 +1036,7 @@
           </p>
         </div>
       </section>`;
-    renderOwnedProductsGrid('ownedProductsHomeGrid', { featured: true, limit: 4 });
+    renderOwnedProductsGrid('ownedProductsHomeGrid', { featured: true, homeOrder: true, limit: 4 });
   };
 
   window.initOwnedProductsPage = function () {
@@ -831,10 +1050,11 @@
     const catFromQuery = params.get('cat');
     let active = categories.some(c => c.id === catFromQuery) ? catFromQuery : 'all';
 
+    const allItems = (I18n ? I18n.getOwnedProducts() : (window.BIZDAVAR_OWNED_PRODUCTS?.items || [])).filter(p => p && p.id !== 'bizseat' && !p.hidden);
+    const visibleCats = categories.filter(c => allItems.some(p => p.category === c.id));
     const pillarsEl = document.getElementById('productPillars');
     if (pillarsEl) {
-      const allItems = I18n ? I18n.getOwnedProducts() : (window.BIZDAVAR_OWNED_PRODUCTS?.items || []);
-      pillarsEl.innerHTML = categories.map(c => {
+      pillarsEl.innerHTML = visibleCats.map(c => {
         const count = allItems.filter(p => p.category === c.id).length;
         return `<a href="#catalog" class="products-pillar" data-cat="${c.id}">
           <span class="products-pillar__count">${count}</span>
@@ -866,7 +1086,7 @@
       const allLabel = t('productsPage.filterAll', 'همه');
       filterEl.innerHTML = [
         `<button type="button" class="product-filter__btn is-active" data-cat="all">${allLabel}</button>`,
-        ...categories.map(c =>
+        ...visibleCats.map(c =>
           `<button type="button" class="product-filter__btn" data-cat="${c.id}">${c.label}</button>`
         )
       ].join('');

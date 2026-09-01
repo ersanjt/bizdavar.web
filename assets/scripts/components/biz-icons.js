@@ -54,6 +54,7 @@
     flame: `<path ${S} d="M12 3c-2 4-5 5-5 9a5 5 0 1010 0c0-4-3-5-5-9z"/><circle cx="12" cy="14" r="1.5" ${A}/>`,
     desktop: `<rect x="3" y="5" width="18" height="11" rx="2" ${S}/><path ${S} d="M8 21h8M12 16v5"/><circle cx="12" cy="10" r="1.5" ${A}/>`,
     parking: `<rect x="4" y="4" width="16" height="16" rx="2" ${S}/><path ${S} d="M9 8h3.5a2.5 2.5 0 010 5H9V8z"/><circle cx="17" cy="7" r="1" ${A}/>`,
+    car: `<path ${S} d="M4 16l1.6-5.2A2 2 0 017.5 9.5h9a2 2 0 011.9 1.3L20 16"/><path ${S} d="M7 10l1.2-3.2A1.5 1.5 0 019.6 5.5h4.8a1.5 1.5 0 011.4 1.3L17 10"/><circle cx="7.5" cy="16.5" r="1.6" ${S}/><circle cx="16.5" cy="16.5" r="1.6" ${S}/>`,
     lab: `<path ${S} d="M9 3h6v6l5 9a2 2 0 01-1.7 3H5.7a2 2 0 01-1.7-3l5-9V3z"/><path ${S} d="M9 9h6"/><circle cx="12" cy="15" r="1.5" ${A}/>`,
     flask: `<path ${S} d="M10 3h4v5l4.5 8.5a2 2 0 01-1.7 3h-9.6a2 2 0 01-1.7-3L10 8V3z"/><circle cx="12" cy="14" r="1.5" ${A}/>`,
     utensils: `<path ${S} d="M6 3v8a2 2 0 004 0V3M8 11v10"/><path ${S} d="M14 3v18M18 3v6a3 3 0 01-6 0V3"/><circle cx="14" cy="6" r="1" ${A}/>`,
