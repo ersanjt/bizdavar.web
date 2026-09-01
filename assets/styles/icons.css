@@ -218,10 +218,14 @@
 }
 
 .mobile-footer-cta__btn .bd-icon {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   margin-inline-end: 6px;
   vertical-align: -3px;
+}
+
+.mobile-footer-cta__btn--primary .bd-icon {
+  color: #fff;
 }
 
 /* VEGA / Prosense */

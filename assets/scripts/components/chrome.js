@@ -33,9 +33,10 @@
     const cur = I.locale;
     const langs = getLangOptions();
     const current = langs.find(l => l.id === cur) || langs[0];
+    const onDark = extraClass && extraClass.indexOf('lang-dropdown--footer') !== -1;
     return `<details class="lang-dropdown${extraClass ? ' ' + extraClass : ''}" data-lang-dropdown>
       <summary class="lang-dropdown__toggle" aria-label="${t('common.langLabel', 'زبان')}">
-        <span class="lang-dropdown__icon">${ic('globe', { size: 15 })}</span>
+        <span class="lang-dropdown__icon">${ic('globe', onDark ? { size: 18, variant: 'white' } : { size: 18 })}</span>
         <span class="lang-dropdown__label">${current.label}</span>
         <span class="lang-dropdown__chev" aria-hidden="true"></span>
       </summary>
@@ -881,7 +882,7 @@
             ${langSwitcherHtml('lang-dropdown--footer')}
           </div>
           <div class="mobile-footer-cta${channels.length >= 2 ? ' mobile-footer-cta--multi-wa' : ''}">
-            <a href="${pagePath(R.contact)}" class="mobile-footer-cta__btn mobile-footer-cta__btn--primary">${ic('send', { size: 18 })} ${t('common.contactForm')}</a>
+            <a href="${pagePath(R.contact)}" class="mobile-footer-cta__btn mobile-footer-cta__btn--primary">${ic('send', { size: 20, variant: 'white' })} ${t('common.contactForm')}</a>
             ${channels.length >= 2
               ? channels.map(ch => `
             <a href="${buildWaUrl(ch.whatsapp)}" class="mobile-footer-cta__btn mobile-footer-cta__btn--wa"

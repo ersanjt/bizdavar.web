@@ -346,6 +346,16 @@
   font-size: 12px;
 }
 
+.lang-dropdown--footer .lang-dropdown__icon {
+  opacity: 1;
+}
+
+.lang-dropdown--footer .lang-dropdown__icon .bd-icon {
+  color: #fff;
+  width: 18px;
+  height: 18px;
+}
+
 .lang-dropdown--footer .lang-dropdown__panel {
   inset-inline-end: auto;
   inset-inline-start: 0;
