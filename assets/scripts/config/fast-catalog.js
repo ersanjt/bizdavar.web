@@ -9,7 +9,7 @@ window.FAST_CATALOG = {
     subtitle: 'سریع · تخصصی · با استاندارد پروژه واقعی — از لندینگ تا فروشگاه و وب‌اپ',
     description: 'Fast Web Studio راه‌اندازی سریع وبسایت RTL با فونت Vazirmatn، فرم تماس، واتساپ، سئو پایه و پشتیبانی فارسی است. مناسب کسب‌وکارهای ایران، ترکیه و بازار بین‌المللی — وقتی پروژه بزرگ‌تر شد، همان تیم بیزدوار وب‌اپ و اپلیکیشن اختصاصی را ادامه می‌دهد.',
     domain: 'bizdavar.com',
-    heroImage: 'assets/images/content/fast-hero.svg',
+    heroImage: 'assets/images/content/fast-hero.svg?v=20260901d',
     heroAlt: 'موکاپ دسکتاپ و موبایل Fast Web Studio — مسیر ۵ روزه تا آنلاین'
   },
 
@@ -73,19 +73,19 @@ window.FAST_CATALOG = {
       title: 'راهنمای کامل Fast Studio',
       desc: 'پلن $99 تا $299، تحویل ۵ روزه و تفاوت با پروژه اختصاصی.',
       href: 'pages/articles/fast-studio.html',
-      image: 'assets/images/content/fast-hero.svg'
+      image: 'assets/images/content/fast-hero.svg?v=20260901d'
     },
     {
       title: 'چک‌لیست سایت در ۵ روز',
       desc: 'چه چیزی را از روز اول آماده کنید تا واقعاً سریع آنلاین شوید.',
       href: 'pages/articles/website-speed-5-days.html',
-      image: 'assets/images/content/fast-speed-banner.svg'
+      image: 'assets/images/content/fast-speed-banner.svg?v=20260901d'
     },
     {
       title: 'وب و اپ اختصاصی',
       desc: 'چه زمانی از Fast خارج می‌شوید و پروژه سفارشی می‌گیرید.',
       href: 'pages/articles/custom-web-app-development.html',
-      image: 'assets/images/content/custom-web-app-hero.svg'
+      image: 'assets/images/content/custom-web-app-hero.svg?v=20260901d'
     },
     {
       title: 'سایت چندزبانه ایران–ترکیه',

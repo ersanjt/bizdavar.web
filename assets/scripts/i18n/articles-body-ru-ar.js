@@ -74,7 +74,7 @@
       '<p>Точный таргетинг аудитории со ссылками на лендинги или <a href="/ru/pages/contact">форму обратной связи</a>.</p>',
 
     'fast-studio':
-      '<img src="/assets/images/content/fast-hero.svg" alt="Fast Web Studio — макет для desktop и mobile" class="article__img" loading="lazy" width="960" height="640">' +
+      '<img src="/assets/images/content/fast-hero.svg?v=20260901d" alt="Fast Web Studio — макет для desktop и mobile" class="article__img" loading="lazy" width="960" height="640">' +
       '<p><a href="/ru/pages/fast">Fast Web Studio</a> — продукт Bizdavar для сдачи корпоративных сайтов и интернет-магазинов с <strong>фиксированной ценой</strong> и <strong>ежедневными этапами</strong> — от $99 до $299. Цель: выйти в эфир на этой неделе, а не через месяцы неопределённых переговоров.</p>' +
       '<h2>Почему Fast важен для бизнеса</h2>' +
       '<p>Многие команды застревают между «дешёвым некачественным сайтом» и «многомесячным индивидуальным проектом». Fast — посередине: профессиональный RTL-дизайн, WhatsApp и формы лидов, понятный 5-дневный путь — с возможностью апгрейда до магазина, многоязычного сайта или <a href="/ru/pages/custom-web-app">индивидуального веб-приложения</a>.</p>' +
@@ -135,7 +135,7 @@
       '<p>Сочетание цифровой экспертизы и B2B промышленных поставок — один контакт для проектов в Иране, Турции и на международном уровне. <a href="/ru/pages/portfolio">Портфолио</a> · <a href="/ru/pages/contact">Контакты</a></p>',
 
     'website-speed-5-days':
-      '<img src="/assets/images/content/fast-speed-banner.svg" alt="Скорость профессионального веб-дизайна — Bizdavar" class="article__img" loading="lazy" width="800" height="280">' +
+      '<img src="/assets/images/content/fast-speed-banner.svg?v=20260901d" alt="Скорость профессионального веб-дизайна — Bizdavar" class="article__img" loading="lazy" width="800" height="280">' +
       '<p>5-дневная сдача реальна только когда контент и решения готовы. Этот чек-лист — то, что команда <a href="/ru/pages/fast">Fast Web Studio</a> запрашивает перед стартом, чтобы скорость, качество и экспертиза шли вместе.</p>' +
       '<h2>До 1-го дня — подготовьте это</h2>' +
       '<ul>' +
@@ -168,7 +168,7 @@
       '<p>Базовое SEO включено в Pro-тариф; устойчивый рост продолжается через контент, рекламу и иногда <a href="/ru/pages/services#digital-marketing">цифровой маркетинг</a>. Гид по тарифам: <a href="/ru/pages/articles/fast-studio">статья Fast Studio</a>.</p>',
 
     'custom-web-app-development':
-      '<img src="/assets/images/content/custom-web-app-hero.svg" alt="Индивидуальный веб и приложение Bizdavar" class="article__img" loading="lazy" width="800" height="420">' +
+      '<img src="/assets/images/content/custom-web-app-hero.svg?v=20260901d" alt="Индивидуальный веб и приложение Bizdavar" class="article__img" loading="lazy" width="800" height="420">' +
       '<p>Bizdavar предлагает два понятных пути к цифровому присутствию: <a href="/ru/pages/fast">Fast Web Studio</a> для быстрого запуска с фиксированной ценой и <a href="/ru/pages/custom-web-app">индивидуальные веб-приложения</a>, когда бизнесу нужна логика, роли пользователей или нативные приложения. Этот гид поможет выбрать правильный путь — без лишних затрат.</p>' +
       '<h2>Fast достаточно, если…</h2>' +
       '<ul>' +
@@ -267,7 +267,7 @@
       '<p>استهداف دقيق للجمهور مع روابط إلى صفحات الهبوط أو <a href="/ar/pages/contact">نموذج التواصل</a>.</p>',
 
     'fast-studio':
-      '<img src="/assets/images/content/fast-hero.svg" alt="Fast Web Studio — نموذج سطح المكتب والجوال" class="article__img" loading="lazy" width="960" height="640">' +
+      '<img src="/assets/images/content/fast-hero.svg?v=20260901d" alt="Fast Web Studio — نموذج سطح المكتب والجوال" class="article__img" loading="lazy" width="960" height="640">' +
       '<p><a href="/ar/pages/fast">Fast Web Studio</a> منتج Bizdavar لتسليم مواقع مؤسسية أو متاجر بـ<strong>أسعار ثابتة</strong> و<strong>معالم يومية</strong> — من 99$ إلى 299$. الهدف: الإطلاق هذا الأسبوع، لا بعد أشهر من مفاوضات غامضة.</p>' +
       '<h2>لماذا Fast مهم للأعمال؟</h2>' +
       '<p>كثير من الفرق تتوقف بين «مواقع رخيصة منخفضة الجودة» و«مشاريع مخصّصة لأشهر». Fast في الوسط: تصميم RTL احترافي وWhatsApp ونماذج leads ومسار واضح لـ5 أيام — مع ترقيات إلى متجر أو موقع متعدد اللغات أو <a href="/ar/pages/custom-web-app">تطبيق ويب مخصّص</a>.</p>' +
@@ -328,7 +328,7 @@
       '<p>مزيج من الخبرة الرقمية والتوريد الصناعي B2B — جهة اتصال واحدة لمشاريع في إيران وتركيا ودوليًا. <a href="/ar/pages/portfolio">الأعمال</a> · <a href="/ar/pages/contact">التواصل</a></p>',
 
     'website-speed-5-days':
-      '<img src="/assets/images/content/fast-speed-banner.svg" alt="سرعة تصميم المواقع الاحترافي — Bizdavar" class="article__img" loading="lazy" width="800" height="280">' +
+      '<img src="/assets/images/content/fast-speed-banner.svg?v=20260901d" alt="سرعة تصميم المواقع الاحترافي — Bizdavar" class="article__img" loading="lazy" width="800" height="280">' +
       '<p>التسليم خلال 5 أيام يتحقق فقط عندما يكون المحتوى والقرارات جاهزين. هذه القائمة هي ما يطلبه فريق <a href="/ar/pages/fast">Fast Web Studio</a> قبل البدء — ليبقى السرعة والجودة والخبرة متوافقين.</p>' +
       '<h2>قبل اليوم 1 — جهّز التالي</h2>' +
       '<ul>' +
@@ -361,7 +361,7 @@
       '<p>SEO أساسي مضمّن في خطة Pro؛ النمو المستدام يستمر بالمحتوى والإعلانات وأحيانًا <a href="/ar/pages/services#digital-marketing">التسويق الرقمي</a>. دليل الخطط: <a href="/ar/pages/articles/fast-studio">مقال Fast Studio</a>.</p>',
 
     'custom-web-app-development':
-      '<img src="/assets/images/content/custom-web-app-hero.svg" alt="تطبيق ويب مخصّص من Bizdavar" class="article__img" loading="lazy" width="800" height="420">' +
+      '<img src="/assets/images/content/custom-web-app-hero.svg?v=20260901d" alt="تطبيق ويب مخصّص من Bizdavar" class="article__img" loading="lazy" width="800" height="420">' +
       '<p>تقدّم Bizdavar مسارين واضحين للحضور الرقمي: <a href="/ar/pages/fast">Fast Web Studio</a> للإطلاق السريع بأسعار ثابتة، و<a href="/ar/pages/custom-web-app">تطبيقات ويب مخصّصة</a> عندما يحتاج عملك منطقًا أو أدوار مستخدمين أو تطبيقات أصلية. يساعدك هذا الدليل على اختيار المسار الصحيح — دون هدر الميزانية.</p>' +
       '<h2>Fast يكفي إذا…</h2>' +
       '<ul>' +

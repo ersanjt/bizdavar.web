@@ -111,7 +111,7 @@
     const el = document.getElementById('fastHeroContent');
     if (!el) return;
     const b = F.brand;
-    const heroSrc = path(b.heroImage || 'assets/images/content/fast-hero.svg');
+    const heroSrc = path(b.heroImage || 'assets/images/content/fast-hero.svg?v=20260901d');
     el.innerHTML = `
       <div class="fast-hero__content">
         <a href="${path('pages/fast.html')}" class="fast-hero__brand">

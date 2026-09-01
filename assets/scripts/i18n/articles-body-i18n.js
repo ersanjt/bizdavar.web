@@ -72,7 +72,7 @@
       '<p>Precise audience targeting with links to landing pages or the <a href="/en/pages/contact">contact form</a>.</p>',
 
     'fast-studio':
-      '<img src="/assets/images/content/fast-hero.svg" alt="Fast Web Studio — desktop and mobile mockup" class="article__img" loading="lazy" width="960" height="640">' +
+      '<img src="/assets/images/content/fast-hero.svg?v=20260901d" alt="Fast Web Studio — desktop and mobile mockup" class="article__img" loading="lazy" width="960" height="640">' +
       '<p><a href="/en/pages/fast">Fast Web Studio</a> is Bizdavar\'s product for delivering corporate or store websites with <strong>fixed pricing</strong> and <strong>daily milestones</strong> — from $99 to $299. The goal: go live this week, not after months of vague negotiation.</p>' +
       '<h2>Why Fast matters for business</h2>' +
       '<p>Many teams get stuck between "cheap low-quality sites" and "multi-month custom projects." Fast sits in the middle: professional RTL design, WhatsApp and lead forms, and a clear 5-day path — with upgrades to stores, multilingual sites or even <a href="/en/pages/custom-web-app">custom web and apps</a>.</p>' +
@@ -133,7 +133,7 @@
       '<p>A combination of digital expertise and B2B industrial supply — one contact for projects in Iran, Turkey and internationally. <a href="/en/pages/portfolio">Portfolio</a> · <a href="/en/pages/contact">Contact</a></p>',
 
     'website-speed-5-days':
-      '<img src="/assets/images/content/fast-speed-banner.svg" alt="Professional web design speed — Bizdavar" class="article__img" loading="lazy" width="800" height="280">' +
+      '<img src="/assets/images/content/fast-speed-banner.svg?v=20260901d" alt="Professional web design speed — Bizdavar" class="article__img" loading="lazy" width="800" height="280">' +
       '<p>A 5-day delivery is only real when content and decisions are ready. This checklist is what the <a href="/en/pages/fast">Fast Web Studio</a> team asks for before starting — so speed, quality and expertise stay aligned.</p>' +
       '<h2>Before day 1 — prepare these</h2>' +
       '<ul>' +
@@ -166,7 +166,7 @@
       '<p>Basic SEO is included in the Pro plan; sustainable growth continues with content, ads and sometimes <a href="/en/pages/services#digital-marketing">digital marketing</a>. Plan guide: <a href="/en/pages/articles/fast-studio">Fast Studio article</a>.</p>',
 
     'custom-web-app-development':
-      '<img src="/assets/images/content/custom-web-app-hero.svg" alt="Bizdavar custom web and app" class="article__img" loading="lazy" width="800" height="420">' +
+      '<img src="/assets/images/content/custom-web-app-hero.svg?v=20260901d" alt="Bizdavar custom web and app" class="article__img" loading="lazy" width="800" height="420">' +
       '<p>Bizdavar offers two clear paths for digital presence: <a href="/en/pages/fast">Fast Web Studio</a> for fast launch with fixed pricing, and <a href="/en/pages/custom-web-app">custom web and apps</a> when your business needs logic, user roles or native apps. This guide helps you choose the right path — without wasting budget.</p>' +
       '<h2>Fast is enough if…</h2>' +
       '<ul>' +
@@ -265,7 +265,7 @@
       '<p>Hassas hedef kitle ve landing veya <a href="/tr/pages/contact">iletişim formuna</a> link.</p>',
 
     'fast-studio':
-      '<img src="/assets/images/content/fast-hero.svg" alt="Fast Web Studio — masaüstü ve mobil mockup" class="article__img" loading="lazy" width="960" height="640">' +
+      '<img src="/assets/images/content/fast-hero.svg?v=20260901d" alt="Fast Web Studio — masaüstü ve mobil mockup" class="article__img" loading="lazy" width="960" height="640">' +
       '<p><a href="/tr/pages/fast">Fast Web Studio</a>, kurumsal veya mağaza sitelerini <strong>sabit fiyat</strong> ve <strong>günlük kilometre taşları</strong> ile teslim etmek için Bizdavar\'ın ürünüdür — $99\'dan $299\'a. Amaç: aylarca belirsiz pazarlık değil, bu hafta yayına çıkmak.</p>' +
       '<h2>Fast işletme için neden önemli?</h2>' +
       '<p>Pek çok ekip "ucuz düşük kaliteli site" ile "aylar süren özel proje" arasında kalır. Fast ikisinin ortasında: profesyonel RTL tasarım, WhatsApp ve lead formları, net 5 günlük yol — mağaza, çok dilli veya <a href="/tr/pages/custom-web-app">özel web ve uygulama</a> yükseltmeleriyle.</p>' +
@@ -326,7 +326,7 @@
       '<p>Dijital uzmanlık ve B2B endüstriyel tedarik birleşimi — İran, Türkiye ve uluslararası projeler için tek iletişim noktası. <a href="/tr/pages/portfolio">Portfolyo</a> · <a href="/tr/pages/contact">İletişim</a></p>',
 
     'website-speed-5-days':
-      '<img src="/assets/images/content/fast-speed-banner.svg" alt="Profesyonel web tasarım hızı — Bizdavar" class="article__img" loading="lazy" width="800" height="280">' +
+      '<img src="/assets/images/content/fast-speed-banner.svg?v=20260901d" alt="Profesyonel web tasarım hızı — Bizdavar" class="article__img" loading="lazy" width="800" height="280">' +
       '<p>5 günlük teslimat yalnızca içerik ve kararlar hazır olduğunda gerçektir. Bu kontrol listesi, <a href="/tr/pages/fast">Fast Web Studio</a> ekibinin başlamadan önce istediği şeylerdir — hız, kalite ve uzmanlık bir arada kalsın diye.</p>' +
       '<h2>1. günden önce — bunları hazırlayın</h2>' +
       '<ul>' +
@@ -359,7 +359,7 @@
       '<p>Pro planda temel SEO vardır; sürdürülebilir büyüme içerik, reklam ve bazen <a href="/tr/pages/services#digital-marketing">dijital pazarlama</a> ile devam eder. Plan rehberi: <a href="/tr/pages/articles/fast-studio">Fast Studio makalesi</a>.</p>',
 
     'custom-web-app-development':
-      '<img src="/assets/images/content/custom-web-app-hero.svg" alt="Bizdavar özel web ve uygulama" class="article__img" loading="lazy" width="800" height="420">' +
+      '<img src="/assets/images/content/custom-web-app-hero.svg?v=20260901d" alt="Bizdavar özel web ve uygulama" class="article__img" loading="lazy" width="800" height="420">' +
       '<p>Bizdavar dijital varlık için iki net yol sunar: sabit fiyatlı hızlı lansman için <a href="/tr/pages/fast">Fast Web Studio</a> ve iş mantığı, kullanıcı rolleri veya uygulama gerektiğinde <a href="/tr/pages/custom-web-app">özel web ve uygulama</a>. Bu rehber doğru yolu seçmenize yardımcı olur — bütçe israfı olmadan.</p>' +
       '<h2>Fast yeterli ise…</h2>' +
       '<ul>' +
