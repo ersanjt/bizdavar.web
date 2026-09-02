@@ -24,15 +24,19 @@
     gap: var(--space-5);
   }
 
+  .about-block--profile .about-profile-grid {
+    grid-template-columns: 1fr;
+  }
+
   .presence-regions {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .presence-regions .presence-region:last-child {
-    grid-column: 1 / -1;
-    max-width: 360px;
-    margin-inline: auto;
-    width: 100%;
+    grid-column: auto;
+    max-width: none;
+    margin-inline: 0;
+    width: auto;
   }
 }
 
@@ -72,8 +76,8 @@
   }
 }
 
-/* ─── Phone & small tablet extras (mobile chrome at 1024px) ─── */
-@media (max-width: 768px) {
+/* ─── Phone only (iPad portrait is 768px — keep two columns there) ─── */
+@media (max-width: 767px) {
   .container {
     width: min(1200px, 94%);
   }
@@ -702,9 +706,63 @@
 
 img,
 svg,
-video {
+video,
+iframe,
+canvas {
   max-width: 100%;
   height: auto;
+}
+
+.container,
+.section,
+main,
+article,
+[class*="-grid"],
+[class*="__media"],
+[class*="__image"],
+.about__image,
+.fast-promo__media,
+.service-card,
+.industrial-card,
+.owned-product-card,
+.exhibition-card,
+.achievement-card {
+  min-width: 0;
+}
+
+.service-card__media,
+.industrial-card__media,
+.owned-product-card__media,
+.about__image,
+.fast-promo__media,
+.exhibition-card__media,
+.achievement-card__media {
+  overflow: hidden;
+}
+
+.service-card__media img,
+.industrial-card__media img,
+.owned-product-card__media img,
+.about__image img,
+.fast-promo__media img,
+.exhibition-card__figure img,
+.achievement-card__media img {
+  max-width: 100%;
+  display: block;
+}
+
+table {
+  max-width: 100%;
+}
+
+.table-wrap,
+.exhibition-card__meta,
+.intel-dl {
+  overflow-x: auto;
+}
+
+html {
+  overflow-x: clip;
 }
 
 .service-nav {
@@ -713,4 +771,45 @@ video {
 
 .service-nav::-webkit-scrollbar {
   display: none;
+}
+
+@media (max-width: 480px) {
+  .features-grid,
+  .process-grid,
+  .related-links__grid,
+  .blog-grid,
+  .testimonials-grid,
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-bar__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .presence-stat {
+    padding: var(--space-3) var(--space-2);
+  }
+
+  .presence-stat strong {
+    font-size: var(--text-lg);
+  }
+
+  .presence-stat span,
+  .home-hero__stats span {
+    overflow-wrap: anywhere;
+  }
+
+  .hero__actions .btn,
+  .home-hero__copy .hero__actions .btn,
+  .about-hero__actions .btn,
+  .products-hero__actions .btn {
+    width: 100%;
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+
+  .mobile-footer-cta {
+    grid-template-columns: 1fr;
+  }
 }

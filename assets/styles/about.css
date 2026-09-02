@@ -386,6 +386,18 @@
   margin-inline: auto;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about-highlights-grid {
+    grid-template-columns: 1fr;
+    gap: clamp(32px, 5vw, 56px);
+  }
+
+  .about-page .exhibition-card--media .exhibition-card__figure img,
+  .about-page .exhibition-card--media .exhibition-card__video video {
+    max-height: 380px;
+  }
+}
+
 @media (max-width: 1024px) {
   .about-page {
     --header-height: 56px;
@@ -407,16 +419,25 @@
 
   .about-intro .about__image {
     order: 2;
+    min-width: 0;
+    overflow: hidden;
   }
 
   .about-intro .about__image img {
     max-height: 280px;
+    width: 100%;
     object-fit: cover;
   }
 
   .about-block {
     padding-block: clamp(32px, 5vw, 56px);
     scroll-margin-top: calc(var(--header-height) + 52px);
+  }
+
+  .about-highlights-grid,
+  .about-trust-grid,
+  .about-block--profile .about-profile-grid {
+    grid-template-columns: 1fr;
   }
 
   .intel-leader-card {

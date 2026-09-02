@@ -260,6 +260,33 @@
   }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .mobile-header__bar {
+    min-height: 64px;
+    padding-inline: 22px;
+    gap: 14px;
+  }
+
+  .mobile-header__logo {
+    max-width: 42%;
+  }
+
+  .mobile-header__logo img {
+    height: 46px;
+  }
+
+  .mobile-header__actions {
+    gap: 10px;
+  }
+
+  .mobile-header__icon-btn,
+  .mobile-header__icon-btn--wa {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+  }
+}
+
 @media (max-width: 480px) {
   .mobile-header__bar {
     padding-inline: 12px;

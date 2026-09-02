@@ -616,6 +616,21 @@
     width: 100%;
   }
 
+  .products-hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .products-hero__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .products-supply .industrial-grid,
+  .products-live .owned-products-grid {
+    grid-template-columns: 1fr;
+  }
+
   .products-supply__footer {
     flex-direction: column;
   }
