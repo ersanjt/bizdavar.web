@@ -249,7 +249,7 @@
           digital: { label: 'بازاریابی دیجیتال', desc: 'سئو، CRO و مدیریت SMM' },
           web: { label: 'طراحی وب', desc: 'سایت چندزبانه و Fast Studio' },
           industrial: { label: 'بازرگانی صنعتی', desc: 'خرید VEGA، Prosense و Teltonika' },
-          products: { label: 'محصولات بیزدوار', desc: 'BizPet، BizTab و BizClean' },
+          products: { label: 'محصولات بیزدوار', desc: 'BizPad، BizTab و BizClean' },
           company: { label: 'درباره شرکت', desc: 'تاریخچه و حوزه‌های فعالیت' }
         },
         catalog: {
@@ -309,11 +309,11 @@
           title: 'قبل از خواندن مقاله',
           desc: 'پاسخ کوتاه برای جستجوهای رایج درباره وبلاگ بیزدوار.',
           items: [
-            { q: 'وبلاگ بیزدوار درباره چیست؟', a: 'اولویت با راهنمای خرید VEGA، Prosense، Teltonika و بازرگانی صنعتی ایران است؛ کنار آن سئو، طراحی سایت و محصولات BizPet و BizTab هم هست.' },
+            { q: 'وبلاگ بیزدوار درباره چیست؟', a: 'اولویت با راهنمای خرید VEGA، Prosense، Teltonika و بازرگانی صنعتی ایران است؛ کنار آن سئو، طراحی سایت و محصولات BizPad و BizTab هم هست.' },
             { q: 'مقالات به چند زبان منتشر می‌شوند؟', a: 'صفحه وبلاگ و مقالات اصلی به فارسی، ترکی، انگلیسی، روسی و عربی با hreflang جداگانه ایندکس می‌شوند.' },
             { q: 'چطور مقاله مرتبط با خدمت پیدا کنم؟', a: 'از فیلتر موضوعی بالا استفاده کنید یا از خوشه‌های بازاریابی، طراحی وب و تامین صنعتی به صفحات خدمت بروید.' },
             { q: 'برای استعلام VEGA بعد از مقاله چه کار کنم؟', a: 'مدل یا مشخصات مخزن را در واتساپ یا فرم تماس بفرستید — پیش‌فاکتور و کد سفارش صادر می‌شود.' },
-            { q: 'آیا محصولات بیزدوار هم در وبلاگ هستند؟', a: 'بله. BizTab، BizClean V5 و پد حرارتی BizPet صفحه اختصاصی دارند و از همین فهرست قابل دسترسی‌اند.' }
+            { q: 'آیا محصولات بیزدوار هم در وبلاگ هستند؟', a: 'بله. BizTab، BizClean V5 و پد حرارتی BizPad صفحه اختصاصی دارند و از همین فهرست قابل دسترسی‌اند.' }
           ]
         },
         cta: {
@@ -455,7 +455,7 @@
           digital: { label: 'Dijital pazarlama', desc: 'SEO, CRO ve SMM' },
           web: { label: 'Web tasarım', desc: 'Çok dilli site ve Fast Studio' },
           industrial: { label: 'Endüstriyel tedarik', desc: 'VEGA ve ölçüm' },
-          products: { label: 'Bizdavar ürünleri', desc: 'BizPet, BizTab ve BizClean' },
+          products: { label: 'Bizdavar ürünleri', desc: 'BizPad, BizTab ve BizClean' },
           company: { label: 'Şirket', desc: 'Tarihçe ve faaliyet alanları' }
         },
         catalog: {
@@ -514,11 +514,11 @@
           title: 'Okumadan önce',
           desc: 'Bizdavar blog hakkında sık aranan sorular.',
           items: [
-            { q: 'Bizdavar blog ne hakkında?', a: 'Dijital pazarlama, SEO, çok dilli web, Fast Web Studio, VEGA sensör tedariki ve BizPet / BizTab gibi özgün ürün rehberleri.' },
+            { q: 'Bizdavar blog ne hakkında?', a: 'Dijital pazarlama, SEO, çok dilli web, Fast Web Studio, VEGA sensör tedariki ve BizPad / BizTab gibi özgün ürün rehberleri.' },
             { q: 'Yazılar kaç dilde yayımlanır?', a: 'Blog ve ana makaleler Farsça, Türkçe, İngilizce, Rusça ve Arapça — ayrı hreflang ile indekslenir.' },
             { q: 'Hizmetle ilgili yazıyı nasıl bulurum?', a: 'Üstteki konu filtresini kullanın veya pazarlama, web tasarım ve endüstriyel kümelerden hizmet sayfalarına gidin.' },
             { q: 'VEGA teklifi için ne yapmalıyım?', a: 'Modeli veya tank verisini WhatsApp ya da iletişim formuna gönderin — proforma ve sipariş kodu hazırlanır.' },
-            { q: 'Bizdavar ürünleri blogda var mı?', a: 'Evet. BizTab, BizClean V5 ve BizPet ısı pedinin ayrı sayfaları bu listeden açılır.' }
+            { q: 'Bizdavar ürünleri blogda var mı?', a: 'Evet. BizTab, BizClean V5 ve BizPad ısı pedinin ayrı sayfaları bu listeden açılır.' }
           ]
         },
         cta: {
@@ -660,7 +660,7 @@
           digital: { label: 'Digital marketing', desc: 'SEO, CRO and SMM' },
           web: { label: 'Web design', desc: 'US/EU English sites & Fast Studio' },
           industrial: { label: 'Industrial supply', desc: 'VEGA and instrumentation' },
-          products: { label: 'Bizdavar products', desc: 'BizPet, BizTab and BizClean' },
+          products: { label: 'Bizdavar products', desc: 'BizPad, BizTab and BizClean' },
           company: { label: 'Company', desc: 'History and activity areas' }
         },
         catalog: {
@@ -723,7 +723,7 @@
             { q: 'How many languages are the articles in?', a: 'The blog hub and core articles are indexed in Persian, Turkish, English, Russian and Arabic with separate hreflang URLs.' },
             { q: 'How do I find a service-related article?', a: 'Use the topic filter above, or jump from the marketing, web design and industrial clusters to the service pages.' },
             { q: 'What should I do after reading a VEGA guide?', a: 'Send the model or tank data on WhatsApp or the contact form — the proforma and order code are issued by Bizdavar.' },
-            { q: 'Are Bizdavar products listed here too?', a: 'Yes. BizTab, BizClean V5 and the BizPet heating pad have dedicated pages linked from this catalog.' }
+            { q: 'Are Bizdavar products listed here too?', a: 'Yes. BizTab, BizClean V5 and the BizPad heating pad have dedicated pages linked from this catalog.' }
           ]
         },
         cta: {
@@ -936,20 +936,20 @@
         geoText: 'طراحی و توسعه محصول IoT در تبریز — بخشی از اکوسیستم نوآوری و صنعتی بیزدوار گروپ.'
       },
 
-      bizpet: {
-        hero: { tag: 'محصول اختصاصی · پد حرارتی', title: 'BizPet — پد حرارتی بیز پت', desc: 'محصول اصلی ۱۳۹۹ — پد حرارتی پدیده برای خانه، خودرو و جا خواب حیوانات؛ بیز پت / پت بیز' },
+      bizpad: {
+        hero: { tag: 'محصول اختصاصی · پد حرارتی', title: 'BizPad — پد حرارتی بیز پد', desc: 'محصول اصلی ۱۳۹۹ — پد حرارتی پدیده برای خانه، خودرو و جا خواب حیوانات؛ بیز پد' },
         nav: { about: 'درباره محصول', rd: 'تحقیق و توسعه', pets: 'جا خواب حیوانات', origin: 'مرکز رشد', contact: 'تماس' },
         about: {
           title: 'درباره محصول',
-          imageAlt: 'BizPet — پد حرارتی خاکستری طراحی‌شده توسط تیم بیزدوار',
-          body: '<strong>BizPet</strong> (بیز پت / پت بیز) محصول اصلی پد حرارتی پدیده است — برای گرمایش در فصل سرد و تسکین درد موضعی که در <strong>مرکز رشد فناوری دانشگاه تبریز</strong> طراحی و تولید شد. پشتی صندلی خودرو با نام فروشگاهی BizSeat همان این پد است، نه محصول دوم.',
+          imageAlt: 'BizPad — پد حرارتی خاکستری طراحی‌شده توسط تیم بیزدوار',
+          body: '<strong>BizPad</strong> (بیز پد) محصول اصلی پد حرارتی پدیده است — برای گرمایش در فصل سرد و تسکین درد موضعی که در <strong>مرکز رشد فناوری دانشگاه تبریز</strong> طراحی و تولید شد. پشتی صندلی خودرو با نام فروشگاهی BizSeat همان این پد است، نه محصول دوم.',
           body2: 'توسعه با همکاری <strong>تکنولوژی پردازان توسعه خاورمیانه</strong> و واحد فناور <strong>ایمن سهند پدیده</strong> انجام شد. قابل حمل در خانه و خودرو؛ عرضه فروشگاهی در دیجی‌کالا (dkp-7694589).',
           specsTitle: 'ویژگی‌ها',
-          specs: ['پد حرارتی پدیده — BizPet / بیز پت / پت بیز', 'گرمایش فصل سرد و تسکین درد موضعی', 'قابل حمل — استفاده در خانه و خودرو', 'ولتاژ کاری ۵ تا ۱۲ ولت (حداکثر ۱ آمپر)', 'قابل شستشو پس از خارج کردن المان حرارتی', 'طراحی و تولید در مرکز رشد فناوری دانشگاه تبریز', 'همکاری ایمن سهند پدیده و تکنولوژی پردازان توسعه خاورمیانه'],
+          specs: ['پد حرارتی پدیده — BizPad / بیز پد', 'گرمایش فصل سرد و تسکین درد موضعی', 'قابل حمل — استفاده در خانه و خودرو', 'ولتاژ کاری ۵ تا ۱۲ ولت (حداکثر ۱ آمپر)', 'قابل شستشو پس از خارج کردن المان حرارتی', 'طراحی و تولید در مرکز رشد فناوری دانشگاه تبریز', 'همکاری ایمن سهند پدیده و تکنولوژی پردازان توسعه خاورمیانه'],
           ctaContact: 'استعلام عمده / تماس',
           ctaCatalog: 'کاتالوگ محصولات'
         },
-        gallery: { tanAlt: 'BizPet — پد حرارتی کرم با کانکتور برق', elementAlt: 'BizPet — المان حرارتی با نقاط اتصال', posterAlt: 'برگه معرفی پد حرارتی پدیده' },
+        gallery: { tanAlt: 'BizPad — پد حرارتی کرم با کانکتور برق', elementAlt: 'BizPad — المان حرارتی با نقاط اتصال', posterAlt: 'برگه معرفی پد حرارتی پدیده' },
         rd: {
           eyebrow: 'تحقیق و توسعه',
           title: 'آزمایش المان حرارتی در آزمایشگاه',
@@ -961,18 +961,18 @@
           portfolioCta: 'نمونه‌کارها — نمایشگاه و تولید'
         },
         military: { vestAlt: 'نمونه جلیقه نظامی با پد حرارتی روی مانکن', vestCaption: 'نمونه جلیقه تاکتیکی با واحد کنترل حرارتی' },
-        production: { imageAlt: 'خط تولید پد حرارتی BizPet — مونتاژ و تست روی میز کار', caption: 'مونتاژ و تست پدهای حرارتی در کارگاه تولید.' },
+        production: { imageAlt: 'خط تولید پد حرارتی BizPad — مونتاژ و تست روی میز کار', caption: 'مونتاژ و تست پدهای حرارتی در کارگاه تولید.' },
         pets: {
           eyebrow: 'جا خواب حیوانات خانگی',
           title: 'پد حرارتی مادون قرمز مخصوص حیوانات خانگی',
           desc: 'همین پد حرارتی برای جا خواب سگ و گربه هم مناسب است — گرم نگه‌داشتن در فصل سرد، با ولتاژ ایمن و روکش قابل شستشو.',
-          imageAlt: 'BizPet — پد حرارتی مادون قرمز برای جا خواب حیوانات خانگی',
+          imageAlt: 'BizPad — پد حرارتی مادون قرمز برای جا خواب حیوانات خانگی',
           specs: ['مناسب جا خواب حیوانات خانگی', 'نانومواد کربنی · مادون قرمز دور · بازده ۹۵ تا ۹۹ درصد', 'ولتاژ ایمن ۵ تا ۱۲ ولت · مصرف ۵ تا ۸ وات', 'روکش نرم، جداشدنی و قابل شستشو', 'کنترل دما در محدوده دمای بدن حیوان', 'کاربرد درمانی: اسپاسم عضلانی و آرتروز — مناسب حیوانات مسن یا باردار']
         },
         origin: {
           eyebrow: 'مرکز رشد تبریز · ۱۳۹۹',
           title: 'از طراحی تا تولید در مرکز رشد فناوری',
-          desc: 'BizPet یکی از محصولات سخت‌افزاری تیم بیزدوار است — پد حرارتی پدیده، با دو شریک فناور محلی در اکوسیستم نوآوری دانشگاه تبریز.',
+          desc: 'BizPad یکی از محصولات سخت‌افزاری تیم بیزدوار است — پد حرارتی پدیده، با دو شریک فناور محلی در اکوسیستم نوآوری دانشگاه تبریز.',
           parkTitle: 'مرکز رشد فناوری',
           parkDesc: 'دانشگاه تبریز — بستر طراحی و تولید پد حرارتی پدیده.',
           partner1Title: 'تکنولوژی پردازان توسعه خاورمیانه',
@@ -991,7 +991,7 @@
           about: 'درباره بیزدوار',
           aboutDesc: 'پارک علمی، نمایشگاه‌ها و دستاوردها'
         },
-        geoText: 'پد حرارتی طراحی‌شده در مرکز رشد فناوری دانشگاه تبریز — محصول بیز پت تیم بیزدوار.'
+        geoText: 'پد حرارتی طراحی‌شده در مرکز رشد فناوری دانشگاه تبریز — محصول بیز پد تیم بیزدوار.'
       },
 
       bizsanitizerV5: {
@@ -1065,31 +1065,31 @@
 
       bizseat: {
         hero: {
-          tag: 'همان محصول · BizPet',
-          title: 'BizSeat همان پد حرارتی BizPet است',
-          desc: 'نام فروشگاهی پشتی خودرو — محصول اصلی پد حرارتی بیز پت است، نه یک خط جدا'
+          tag: 'همان محصول · BizPad',
+          title: 'BizSeat همان پد حرارتی BizPad است',
+          desc: 'نام فروشگاهی پشتی خودرو — محصول اصلی پد حرارتی بیز پد است، نه یک خط جدا'
         },
         about: {
           title: 'یک محصول، دو نام فروش',
-          imageAlt: 'BizSeat — همان پد حرارتی BizPet در قالب پشتی صندلی خودرو',
-          body: '<strong>BizSeat</strong> محصول جداگانه‌ای نیست. همان <strong>پد حرارتی BizPet</strong> (بیز پت / پت بیز) است که در سال <strong>۱۳۹۹</strong> در <strong>مرکز رشد و پارک علم و فناوری دانشگاه تبریز</strong> طراحی و ساخته شد و به‌صورت پشتی صندلی خودرو هم عرضه شد.',
-          body2: 'توسعه با همکاری <strong>تکنولوژی پردازان توسعه خاورمیانه</strong> و واحد فناور <strong>ایمن سهند پدیده</strong> بود. صفحهٔ اصلی محصول <a href="/pages/bizpet">BizPet</a> است؛ لینک دیجی‌کالا همان کالا را نشان می‌دهد.',
+          imageAlt: 'BizSeat — همان پد حرارتی BizPad در قالب پشتی صندلی خودرو',
+          body: '<strong>BizSeat</strong> محصول جداگانه‌ای نیست. همان <strong>پد حرارتی BizPad</strong> (بیز پد) است که در سال <strong>۱۳۹۹</strong> در <strong>مرکز رشد و پارک علم و فناوری دانشگاه تبریز</strong> طراحی و ساخته شد و به‌صورت پشتی صندلی خودرو هم عرضه شد.',
+          body2: 'توسعه با همکاری <strong>تکنولوژی پردازان توسعه خاورمیانه</strong> و واحد فناور <strong>ایمن سهند پدیده</strong> بود. صفحهٔ اصلی محصول <a href="/pages/bizpad">BizPad</a> است؛ لینک دیجی‌کالا همان کالا را نشان می‌دهد.',
           specsTitle: 'ویژگی‌ها',
           specs: [
-            'محصول اصلی: پد حرارتی BizPet',
+            'محصول اصلی: پد حرارتی BizPad',
             'کاربرد خودرو: پشتی صندلی با همان پد',
             'طراحی و ساخت ۱۳۹۹ در تبریز',
             'همکاری ایمن سهند پدیده و تکنولوژی پردازان توسعه خاورمیانه',
             'عرضه فروشگاهی در دیجی‌کالا (dkp-7694589)'
           ],
           ctaDigikala: 'مشاهده در دیجی‌کالا',
-          ctaBizpet: 'صفحه اصلی BizPet',
+          ctaBizpad: 'صفحه اصلی BizPad',
           ctaContact: 'استعلام عمده / تماس'
         },
         origin: {
           eyebrow: 'پارک علمی تبریز · ۱۳۹۹',
           title: 'از اختراع تا تولید در پارک علم و فناوری',
-          desc: 'BizSeat نام فروشگاهی همان پد حرارتی BizPet است — یک مسیر طراحی در اکوسیستم نوآوری دانشگاه تبریز.',
+          desc: 'BizSeat نام فروشگاهی همان پد حرارتی BizPad است — یک مسیر طراحی در اکوسیستم نوآوری دانشگاه تبریز.',
           parkTitle: 'پارک علم و فناوری',
           parkDesc: 'دانشگاه تبریز — بستر اختراع، طراحی و ساخت محصول در ۱۳۹۹.',
           partner1Title: 'تکنولوژی پردازان توسعه خاورمیانه',
@@ -1111,11 +1111,11 @@
         geoText: 'محصول خودرو اختراع‌شده در پارک علم و فناوری دانشگاه تبریز — طراحی تیم بیزدوار و عرضه در دیجی‌کالا.'
       },
 
-      bizpet: {
+      bizpad: {
         hero: {
           tag: 'محصول اختصاصی · پد حرارتی',
-          title: 'BizPet — پد حرارتی بیز پت',
-          desc: 'محصول اصلی ۱۳۹۹ — پد حرارتی پدیده برای خانه، خودرو و جا خواب حیوانات؛ بیز پت / پت بیز'
+          title: 'BizPad — پد حرارتی بیز پد',
+          desc: 'محصول اصلی ۱۳۹۹ — پد حرارتی پدیده برای خانه، خودرو و جا خواب حیوانات؛ بیز پد'
         },
         nav: {
           about: 'درباره محصول',
@@ -1127,12 +1127,12 @@
         },
         about: {
           title: 'درباره محصول',
-          imageAlt: 'BizPet — پد حرارتی خاکستری طراحی‌شده توسط تیم بیزدوار',
-          body: '<strong>BizPet</strong> (بیز پت / پت بیز) محصول اصلی پد حرارتی پدیده است — برای گرمایش در فصل سرد و تسکین درد موضعی که در <strong>مرکز رشد فناوری دانشگاه تبریز</strong> طراحی و تولید شد. پشتی صندلی خودرو با نام فروشگاهی BizSeat همان این پد است، نه محصول دوم.',
+          imageAlt: 'BizPad — پد حرارتی خاکستری طراحی‌شده توسط تیم بیزدوار',
+          body: '<strong>BizPad</strong> (بیز پد) محصول اصلی پد حرارتی پدیده است — برای گرمایش در فصل سرد و تسکین درد موضعی که در <strong>مرکز رشد فناوری دانشگاه تبریز</strong> طراحی و تولید شد. پشتی صندلی خودرو با نام فروشگاهی BizSeat همان این پد است، نه محصول دوم.',
           body2: 'توسعه با همکاری <strong>تکنولوژی پردازان توسعه خاورمیانه</strong> و واحد فناور <strong>ایمن سهند پدیده</strong> انجام شد. قابل حمل در خانه و خودرو؛ عرضه فروشگاهی در دیجی‌کالا (dkp-7694589).',
           specsTitle: 'ویژگی‌ها',
           specs: [
-            'پد حرارتی پدیده — محصول اصلی BizPet / بیز پت / پت بیز',
+            'پد حرارتی پدیده — محصول اصلی BizPad / بیز پد',
             'همان کالا به‌صورت پشتی صندلی خودرو (نام فروشگاهی BizSeat)',
             'گرمایش فصل سرد و تسکین درد موضعی',
             'قابل حمل — خانه، خودرو و جا خواب حیوانات',
@@ -1145,8 +1145,8 @@
           ctaCatalog: 'کاتالوگ محصولات'
         },
         gallery: {
-          tanAlt: 'BizPet — پد حرارتی کرم با کانکتور برق',
-          elementAlt: 'BizPet — المان حرارتی با نقاط اتصال',
+          tanAlt: 'BizPad — پد حرارتی کرم با کانکتور برق',
+          elementAlt: 'BizPad — المان حرارتی با نقاط اتصال',
           posterAlt: 'برگه معرفی پد حرارتی پدیده'
         },
         rd: {
@@ -1184,7 +1184,7 @@
           eyebrow: 'جا خواب حیوانات خانگی',
           title: 'پد حرارتی مادون قرمز مخصوص حیوانات خانگی',
           desc: 'همین پد حرارتی برای جا خواب سگ و گربه هم مناسب است — گرم نگه‌داشتن در فصل سرد، با ولتاژ ایمن و روکش قابل شستشو.',
-          imageAlt: 'BizPet — پد حرارتی مادون قرمز برای جا خواب حیوانات خانگی',
+          imageAlt: 'BizPad — پد حرارتی مادون قرمز برای جا خواب حیوانات خانگی',
           specs: [
             'مناسب جا خواب حیوانات خانگی',
             'نانومواد کربنی · مادون قرمز دور · بازده ۹۵ تا ۹۹ درصد',
@@ -1204,7 +1204,7 @@
         origin: {
           eyebrow: 'مرکز رشد تبریز · ۱۳۹۹',
           title: 'از طراحی تا تولید در مرکز رشد فناوری',
-          desc: 'BizPet یکی از محصولات سخت‌افزاری تیم بیزدوار است — پد حرارتی پدیده، با دو شریک فناور محلی در اکوسیستم نوآوری دانشگاه تبریز.',
+          desc: 'BizPad یکی از محصولات سخت‌افزاری تیم بیزدوار است — پد حرارتی پدیده، با دو شریک فناور محلی در اکوسیستم نوآوری دانشگاه تبریز.',
           parkTitle: 'مرکز رشد فناوری',
           parkDesc: 'دانشگاه تبریز — بستر طراحی و تولید پد حرارتی پدیده.',
           partner1Title: 'تکنولوژی پردازان توسعه خاورمیانه',
@@ -1218,7 +1218,7 @@
           eyebrow: 'خط تولید',
           title: 'مونتاژ و تست پد حرارتی',
           desc: 'ایستگاه مونتاژ و کنترل کیفیت — پدهای پارچه‌ای، واحد تغذیه و بسته‌بندی محصول.',
-          imageAlt: 'خط تولید پد حرارتی BizPet — مونتاژ و تست روی میز کار',
+          imageAlt: 'خط تولید پد حرارتی BizPad — مونتاژ و تست روی میز کار',
           caption: 'مونتاژ و تست پدهای حرارتی در کارگاه تولید.'
         },
         related: {
@@ -1230,7 +1230,7 @@
           about: 'درباره بیزدوار',
           aboutDesc: 'پارک علمی، نمایشگاه‌ها و دستاوردها'
         },
-        geoText: 'پد حرارتی طراحی‌شده در مرکز رشد فناوری دانشگاه تبریز — محصول بیز پت تیم بیزدوار.'
+        geoText: 'پد حرارتی طراحی‌شده در مرکز رشد فناوری دانشگاه تبریز — محصول بیز پد تیم بیزدوار.'
       },
 
       bizswap: {
@@ -1720,20 +1720,20 @@
         related: { title: 'İlgili ürün ve hizmetler' },
         geoText: 'Tebriz\'de IoT ürün tasarımı — Bizdavar Group inovasyon ve endüstriyel ekosisteminin parçası.'
       },
-      bizpet: {
-        hero: { tag: 'Özel ürün · Isıtma pedi', title: 'BizPet — Isıtma pedi', desc: '2020 ana ürün — ev, araç ve evcil hayvan yatakları için Padideh ısıtma pedi; BizPet / Pet Biz' },
+      bizpad: {
+        hero: { tag: 'Özel ürün · Isıtma pedi', title: 'BizPad — Isıtma pedi', desc: '2020 ana ürün — ev, araç ve evcil hayvan yatakları için Padideh ısıtma pedi; BizPad' },
         nav: { about: 'Ürün hakkında', rd: 'Ar-Ge', pets: 'Evcil hayvan yatağı', origin: 'Kuluçka merkezi', contact: 'İletişim' },
         about: {
           title: 'Ürün hakkında',
-          imageAlt: 'BizPet — Bizdavar ekibi tarafından tasarlanan gri ısıtma pedi',
-          body: '<strong>BizPet</strong> (Biz Pet / Pet Biz), <strong>Tebriz Üniversitesi Teknoloji Kuluçka Merkezi</strong>\'nde tasarlanıp üretilen Padideh ısıtma pedinin ana ürünüdür — kışın ısınma ve lokal ağrı giderme için. BizSeat adlı araç koltuk minderi aynı peddir, ayrı bir ürün değildir.',
+          imageAlt: 'BizPad — Bizdavar ekibi tarafından tasarlanan gri ısıtma pedi',
+          body: '<strong>BizPad</strong>, <strong>Tebriz Üniversitesi Teknoloji Kuluçka Merkezi</strong>\'nde tasarlanıp üretilen Padideh ısıtma pedinin ana ürünüdür — kışın ısınma ve lokal ağrı giderme için. BizSeat adlı araç koltuk minderi aynı peddir, ayrı bir ürün değildir.',
           body2: '<strong>Teknoloji Pardazan Tosee Khavarmiyaneh</strong> ve <strong>Imen Sahand Padideh</strong> teknoloji birimi ile geliştirildi. Ev ve araçta taşınabilir; Digikala\'da satışta (dkp-7694589).',
           specsTitle: 'Özellikler',
-          specs: ['Padideh ısıtma pedi — BizPet / Biz Pet / Pet Biz', 'Kış ısıtması ve lokal ağrı giderme', 'Taşınabilir — ev ve araçta kullanım', '5–12 V çalışma gerilimi (maks. 1 A)', 'Isıtma elemanı çıkarıldıktan sonra yıkanabilir', 'Tebriz Üniversitesi Teknoloji Kuluçka Merkezi\'nde tasarım ve üretim', 'Imen Sahand Padideh ve Teknoloji Pardazan iş birliği'],
+          specs: ['Padideh ısıtma pedi — BizPad', 'Kış ısıtması ve lokal ağrı giderme', 'Taşınabilir — ev ve araçta kullanım', '5–12 V çalışma gerilimi (maks. 1 A)', 'Isıtma elemanı çıkarıldıktan sonra yıkanabilir', 'Tebriz Üniversitesi Teknoloji Kuluçka Merkezi\'nde tasarım ve üretim', 'Imen Sahand Padideh ve Teknoloji Pardazan iş birliği'],
           ctaContact: 'Toptan teklif / iletişim',
           ctaCatalog: 'Ürün kataloğu'
         },
-        gallery: { tanAlt: 'BizPet — krem renk ısıtma pedi ve güç konnektörü', elementAlt: 'BizPet — bağlantı noktalı ısıtma elemanı', posterAlt: 'Padideh ısıtma pedi tanıtım afişi' },
+        gallery: { tanAlt: 'BizPad — krem renk ısıtma pedi ve güç konnektörü', elementAlt: 'BizPad — bağlantı noktalı ısıtma elemanı', posterAlt: 'Padideh ısıtma pedi tanıtım afişi' },
         rd: {
           eyebrow: 'Ar-Ge',
           title: 'Laboratuvar ısıtma elemanı testi',
@@ -1745,18 +1745,18 @@
           portfolioCta: 'Portfolyo — sergi ve üretim'
         },
         military: { vestAlt: 'Manken üzerinde ısıtma pedli taktik yelek', vestCaption: 'Isı kontrol üniteli taktik yelek örneği' },
-        production: { imageAlt: 'BizPet ısıtma pedi üretim hattı — montaj ve test', caption: 'Atölyede ısıtma pedlerinin montajı ve testi.' },
+        production: { imageAlt: 'BizPad ısıtma pedi üretim hattı — montaj ve test', caption: 'Atölyede ısıtma pedlerinin montajı ve testi.' },
         pets: {
           eyebrow: 'Evcil hayvan yatağı',
           title: 'Evcil hayvanlar için kızılötesi ısıtma pedi',
           desc: 'Aynı ısıtma pedi köpek ve kedi yatakları için de uygundur — kışın sıcak tutma, güvenli voltaj ve yıkanabilir kılıf.',
-          imageAlt: 'BizPet — evcil hayvan yatağı için kızılötesi ısıtma pedi',
+          imageAlt: 'BizPad — evcil hayvan yatağı için kızılötesi ısıtma pedi',
           specs: ['Evcil hayvan yatakları için uygun', 'Karbon nanomalzeme · uzun dalga kızılötesi · %95–99 verim', 'Güvenli 5–12 V · 5–8 W tüketim', 'Yumuşak, çıkarılabilir ve yıkanabilir kılıf', 'Hayvan vücut sıcaklığı aralığında sıcaklık kontrolü', 'Terapötik: kas spazmı ve artrit — yaşlı veya gebe hayvanlar için']
         },
         origin: {
           eyebrow: 'Tebriz Kuluçka · 2020',
           title: 'Tasarımdan üretime teknoloji kuluçka merkezinde',
-          desc: 'BizPet, Bizdavar ekibinin donanım ürünlerinden biridir — Tebriz Üniversitesi inovasyon ekosisteminde iki yerel teknoloji ortağıyla.',
+          desc: 'BizPad, Bizdavar ekibinin donanım ürünlerinden biridir — Tebriz Üniversitesi inovasyon ekosisteminde iki yerel teknoloji ortağıyla.',
           parkTitle: 'Teknoloji kuluçka merkezi',
           parkDesc: 'Tebriz Üniversitesi — Padideh ısıtma pedi tasarım ve üretim ortamı.',
           partner1Title: 'Teknoloji Pardazan Tosee Khavarmiyaneh',
@@ -1775,7 +1775,7 @@
           about: 'Bizdavar hakkında',
           aboutDesc: 'Bilim parkı, sergiler ve başarılar'
         },
-        geoText: 'Tebriz Üniversitesi Teknoloji Kuluçka Merkezi\'nde tasarlanan ısıtma pedi — Bizdavar ekibinin BizPet ürünü.'
+        geoText: 'Tebriz Üniversitesi Teknoloji Kuluçka Merkezi\'nde tasarlanan ısıtma pedi — Bizdavar ekibinin BizPad ürünü.'
       },
       bizsanitizerV5: {
         hero: { tag: 'Özel ürün · Hijyen', title: 'BizClean V5 — Otomatik el dezenfektanı', desc: 'Ultrasonik sensörlü otomatik cihaz — küresel COVID-19 salgını döneminde üretildi, Bizdavar ekibi tarafından tasarlandı' },
@@ -1841,15 +1841,15 @@
       },
       bizseat: {
         hero: {
-          tag: 'Aynı ürün · BizPet',
-          title: 'BizSeat, BizPet ısı pedidir',
-          desc: 'Araç koltuğu satış adı — asıl ürün ayrı bir hat değil, 1399 Padideh ısı pedi BizPet’tir'
+          tag: 'Aynı ürün · BizPad',
+          title: 'BizSeat, BizPad ısı pedidir',
+          desc: 'Araç koltuğu satış adı — asıl ürün ayrı bir hat değil, 1399 Padideh ısı pedi BizPad’tir'
         },
         about: {
           title: 'Bir ürün, iki satış adı',
-          imageAlt: 'BizSeat — araç koltuğunda aynı BizPet ısı pedi',
-          body: '<strong>BizSeat</strong> ayrı bir ürün değildir. Aynı <strong>BizPet ısı pedidir</strong> — <strong>1399</strong>’da <strong>Tebriz Üniversitesi teknoloji kuluçkasında</strong> tasarlandı ve araç koltuğu bel desteği olarak da satıldı.',
-          body2: 'Geliştirme <strong>Teknoloji Pardazan Tosee Khavarmianeh</strong> ve <strong>Imen Sahand Padideh</strong> ile yapıldı. Ana sayfa <a href="/pages/bizpet">BizPet</a>’tir; Digikala aynı SKU’dur.',
+          imageAlt: 'BizSeat — araç koltuğunda aynı BizPad ısı pedi',
+          body: '<strong>BizSeat</strong> ayrı bir ürün değildir. Aynı <strong>BizPad ısı pedidir</strong> — <strong>1399</strong>’da <strong>Tebriz Üniversitesi teknoloji kuluçkasında</strong> tasarlandı ve araç koltuğu bel desteği olarak da satıldı.',
+          body2: 'Geliştirme <strong>Teknoloji Pardazan Tosee Khavarmianeh</strong> ve <strong>Imen Sahand Padideh</strong> ile yapıldı. Ana sayfa <a href="/pages/bizpad">BizPad</a>’tir; Digikala aynı SKU’dur.',
           specsTitle: 'Özellikler',
           specs: [
             'Ergonomik araç koltuğu bel desteği',
@@ -1860,7 +1860,7 @@
             'Digikala’dan sipariş edilebilir'
           ],
           ctaDigikala: 'Digikala’da görüntüle',
-          ctaBizpet: 'Ana sayfa: BizPet',
+          ctaBizpad: 'Ana sayfa: BizPad',
           ctaContact: 'Toptan teklif / iletişim'
         },
         origin: {
@@ -1887,11 +1887,11 @@
         },
         geoText: 'Tebriz Üniversitesi Bilim ve Teknoloji Parkı’nda icat edilen otomotiv ürünü — Bizdavar tasarımı, Digikala satışı.'
       },
-      bizpet: {
+      bizpad: {
         hero: {
           tag: 'Özel ürün · Isı pedi',
-          title: 'BizPet — Bizdavar ısı pedi',
-          desc: 'Tebriz Üniversitesi teknoloji kuluçkasında tasarım ve üretim — BizPet / Pet Biz adlarıyla Bizdavar’ın sahip olduğu ürün'
+          title: 'BizPad — Bizdavar ısı pedi',
+          desc: 'Tebriz Üniversitesi teknoloji kuluçkasında tasarım ve üretim — BizPad adıyla Bizdavar’ın sahip olduğu ürün'
         },
         nav: {
           about: 'Ürün hakkında',
@@ -1903,12 +1903,12 @@
         },
         about: {
           title: 'Ürün hakkında',
-          imageAlt: 'BizPet — Bizdavar ekibinin tasarladığı gri ısı pedi',
-          body: '<strong>BizPet</strong> (Biz Pet / Pet Biz), Padideh ısı pedidir — soğuk mevsimde ısınma ve bölgesel ağrı rahatlaması için <strong>Tebriz Üniversitesi Teknoloji Kuluçka Merkezi</strong>’nde tasarlanıp üretildi.',
+          imageAlt: 'BizPad — Bizdavar ekibinin tasarladığı gri ısı pedi',
+          body: '<strong>BizPad</strong>, Padideh ısı pedidir — soğuk mevsimde ısınma ve bölgesel ağrı rahatlaması için <strong>Tebriz Üniversitesi Teknoloji Kuluçka Merkezi</strong>’nde tasarlanıp üretildi.',
           body2: 'Geliştirme, <strong>Teknoloji Pardazan Tosee Khavarmianeh</strong> ve teknoloji birimi <strong>Imen Sahand Padideh</strong> ile iş birliğinde yapıldı. Ürün taşınabilir; evde veya araçta kullanılır.',
           specsTitle: 'Özellikler',
           specs: [
-            'Padideh ısı pedi — BizPet / Biz Pet / Pet Biz',
+            'Padideh ısı pedi — BizPad',
             'Soğuk mevsim ısınması ve bölgesel ağrı rahatlaması',
             'Taşınabilir — ev ve araç kullanımı',
             'Çalışma voltajı 5–12 V (maks. 1 A)',
@@ -1920,8 +1920,8 @@
           ctaCatalog: 'Ürün kataloğu'
         },
         gallery: {
-          tanAlt: 'BizPet — krem ısı pedi, güç konnektörüyle',
-          elementAlt: 'BizPet — temas noktalı ısıtma elemanı',
+          tanAlt: 'BizPad — krem ısı pedi, güç konnektörüyle',
+          elementAlt: 'BizPad — temas noktalı ısıtma elemanı',
           posterAlt: 'Padideh ısı pedi tanıtım afişi'
         },
         rd: {
@@ -1959,7 +1959,7 @@
           eyebrow: 'Evcil hayvan yatağı',
           title: 'Evcil hayvanlar için kızılötesi ısı pedi',
           desc: 'Aynı ısı pedi köpek ve kedi yatakları için de uygundur — soğuk mevsimde güvenli voltaj ve yıkanabilir kılıfla ısıtma.',
-          imageAlt: 'BizPet — evcil hayvan yatağı için kızılötesi ısı pedi',
+          imageAlt: 'BizPad — evcil hayvan yatağı için kızılötesi ısı pedi',
           specs: [
             'Evcil hayvan yatakları için uygun',
             'Karbon nanomalzeme · uzak kızılötesi · %95–99 verim',
@@ -1979,7 +1979,7 @@
         origin: {
           eyebrow: 'Tebriz kuluçka merkezi · 1399',
           title: 'Tasarımdan üretime — teknoloji kuluçkası',
-          desc: 'BizPet, Bizdavar ekibinin donanım ürünlerinden biridir — Padideh ısı pedi, iki yerel teknoloji ortağıyla.',
+          desc: 'BizPad, Bizdavar ekibinin donanım ürünlerinden biridir — Padideh ısı pedi, iki yerel teknoloji ortağıyla.',
           parkTitle: 'Teknoloji Kuluçka Merkezi',
           parkDesc: 'Tebriz Üniversitesi — Padideh ısı pedinin tasarım ve üretim yeri.',
           partner1Title: 'Teknoloji Pardazan Tosee Khavarmianeh',
@@ -1993,7 +1993,7 @@
           eyebrow: 'Üretim hattı',
           title: 'Isı pedi montaj ve test',
           desc: 'Montaj ve kalite kontrol istasyonu — kumaş pedler, güç ünitesi ve ürün paketleme.',
-          imageAlt: 'BizPet ısı pedi üretim hattı — tezgâhta montaj ve test',
+          imageAlt: 'BizPad ısı pedi üretim hattı — tezgâhta montaj ve test',
           caption: 'Atölyede ısı pedlerinin montaj ve testi.'
         },
         related: {
@@ -2005,7 +2005,7 @@
           about: 'Bizdavar hakkında',
           aboutDesc: 'Teknoloji parkı, fuarlar ve başarılar'
         },
-        geoText: 'Tebriz Üniversitesi teknoloji kuluçkasında tasarlanan ısı pedi — Bizdavar’ın BizPet ürünü.'
+        geoText: 'Tebriz Üniversitesi teknoloji kuluçkasında tasarlanan ısı pedi — Bizdavar’ın BizPad ürünü.'
       },
       bizswap: {
         hero: {
@@ -2342,20 +2342,20 @@
         related: { title: 'Related products & services' },
         geoText: 'IoT product design in Tabriz — part of Bizdavar Group innovation and industrial ecosystem.'
       },
-      bizpet: {
-        hero: { tag: 'Owned product · Heating pad', title: 'BizPet — Heating pad', desc: '2020 flagship — Padideh heating pad for home, car and pet beds; BizPet / Pet Biz' },
+      bizpad: {
+        hero: { tag: 'Owned product · Heating pad', title: 'BizPad — Heating pad', desc: '2020 flagship — Padideh heating pad for home, car and pet beds; BizPad' },
         nav: { about: 'About the product', rd: 'R&D', pets: 'Pet beds', origin: 'Incubator', contact: 'Contact' },
         about: {
           title: 'About the product',
-          imageAlt: 'BizPet — grey heating pad designed by the Bizdavar team',
-          body: '<strong>BizPet</strong> (Biz Pet / Pet Biz) is the flagship Padideh heating pad — for winter warmth and local pain relief, designed and produced at the <strong>University of Tabriz Technology Incubator</strong>. The BizSeat car seat cushion is the same pad, not a separate product.',
+          imageAlt: 'BizPad — grey heating pad designed by the Bizdavar team',
+          body: '<strong>BizPad</strong> is the flagship Padideh heating pad — for winter warmth and local pain relief, designed and produced at the <strong>University of Tabriz Technology Incubator</strong>. The BizSeat car seat cushion is the same pad, not a separate product.',
           body2: 'Developed with <strong>Teknoloji Pardazan Tosee Khavarmiyaneh</strong> and the <strong>Imen Sahand Padideh</strong> technology unit. Portable for home and car; available on Digikala (dkp-7694589).',
           specsTitle: 'Features',
-          specs: ['Padideh heating pad — BizPet / Biz Pet / Pet Biz', 'Winter heating and local pain relief', 'Portable — home and car use', '5–12 V operating voltage (max 1 A)', 'Washable after removing the heating element', 'Designed and produced at University of Tabriz Technology Incubator', 'Partnership with Imen Sahand Padideh and Teknoloji Pardazan'],
+          specs: ['Padideh heating pad — BizPad', 'Winter heating and local pain relief', 'Portable — home and car use', '5–12 V operating voltage (max 1 A)', 'Washable after removing the heating element', 'Designed and produced at University of Tabriz Technology Incubator', 'Partnership with Imen Sahand Padideh and Teknoloji Pardazan'],
           ctaContact: 'Bulk inquiry / contact',
           ctaCatalog: 'Product catalog'
         },
-        gallery: { tanAlt: 'BizPet — tan heating pad with power connector', elementAlt: 'BizPet — heating element with connection points', posterAlt: 'Padideh heating pad product sheet' },
+        gallery: { tanAlt: 'BizPad — tan heating pad with power connector', elementAlt: 'BizPad — heating element with connection points', posterAlt: 'Padideh heating pad product sheet' },
         rd: {
           eyebrow: 'R&D',
           title: 'Laboratory heating element testing',
@@ -2367,18 +2367,18 @@
           portfolioCta: 'Portfolio — exhibitions and production'
         },
         military: { vestAlt: 'Tactical vest with heating pad on mannequin', vestCaption: 'Tactical vest sample with heat control unit' },
-        production: { imageAlt: 'BizPet heating pad production line — assembly and bench test', caption: 'Assembly and testing of heating pads in the workshop.' },
+        production: { imageAlt: 'BizPad heating pad production line — assembly and bench test', caption: 'Assembly and testing of heating pads in the workshop.' },
         pets: {
           eyebrow: 'Pet beds',
           title: 'Infrared heating pad for pets',
           desc: 'The same heating pad suits dog and cat beds — keeping warm in winter with safe voltage and a washable cover.',
-          imageAlt: 'BizPet — infrared heating pad for pet beds',
+          imageAlt: 'BizPad — infrared heating pad for pet beds',
           specs: ['Suitable for pet beds', 'Carbon nanomaterials · far infrared · 95–99% efficiency', 'Safe 5–12 V · 5–8 W consumption', 'Soft, removable and washable cover', 'Temperature control within pet body temperature range', 'Therapeutic use: muscle spasm and arthritis — for senior or pregnant pets']
         },
         origin: {
           eyebrow: 'Tabriz incubator · 2020',
           title: 'From design to production at the technology incubator',
-          desc: 'BizPet is one of Bizdavar’s hardware products — the Padideh heating pad, with two local technology partners in the University of Tabriz innovation ecosystem.',
+          desc: 'BizPad is one of Bizdavar’s hardware products — the Padideh heating pad, with two local technology partners in the University of Tabriz innovation ecosystem.',
           parkTitle: 'Technology incubator',
           parkDesc: 'University of Tabriz — design and production environment for the Padideh heating pad.',
           partner1Title: 'Teknoloji Pardazan Tosee Khavarmiyaneh',
@@ -2397,7 +2397,7 @@
           about: 'About Bizdavar',
           aboutDesc: 'Science park, exhibitions and achievements'
         },
-        geoText: 'Heating pad designed at the University of Tabriz Technology Incubator — Bizdavar team’s BizPet product.'
+        geoText: 'Heating pad designed at the University of Tabriz Technology Incubator — Bizdavar team’s BizPad product.'
       },
       bizsanitizerV5: {
         hero: { tag: 'Owned product · Hygiene', title: 'BizClean V5 — Automatic hand sanitizer', desc: 'Automatic device with ultrasonic sensor — built during the global COVID-19 pandemic, engineered by the Bizdavar team' },
@@ -2463,25 +2463,25 @@
       },
       bizseat: {
         hero: {
-          tag: 'Same product · BizPet',
-          title: 'BizSeat is the BizPet heating pad',
-          desc: 'A shop listing name — not a second line. The 1399 product is BizPet'
+          tag: 'Same product · BizPad',
+          title: 'BizSeat is the BizPad heating pad',
+          desc: 'A shop listing name — not a second line. The 1399 product is BizPad'
         },
         about: {
           title: 'One product, two shop names',
-          imageAlt: 'BizSeat — the same BizPet heating pad as a car-seat support',
-          body: '<strong>BizSeat</strong> is not a separate product. It is the same <strong>BizPet heating pad</strong>, designed in <strong>1399</strong> at the <strong>University of Tabriz Technology Incubator</strong> and also sold as a car-seat backrest.',
-          body2: 'Developed with <strong>Technology Pardazan Tosee Khavarmianeh</strong> and <strong>Imen Sahand Padideh</strong>. The main page is <a href="/pages/bizpet">BizPet</a>; Digikala is the same SKU.',
+          imageAlt: 'BizSeat — the same BizPad heating pad as a car-seat support',
+          body: '<strong>BizSeat</strong> is not a separate product. It is the same <strong>BizPad heating pad</strong>, designed in <strong>1399</strong> at the <strong>University of Tabriz Technology Incubator</strong> and also sold as a car-seat backrest.',
+          body2: 'Developed with <strong>Technology Pardazan Tosee Khavarmianeh</strong> and <strong>Imen Sahand Padideh</strong>. The main page is <a href="/pages/bizpad">BizPad</a>; Digikala is the same SKU.',
           specsTitle: 'Features',
           specs: [
-            'Main product: BizPet heating pad',
+            'Main product: BizPad heating pad',
             'Car-seat listing name: BizSeat',
             'Designed and built in 1399 in Tabriz',
             'Imen Sahand Padideh and Technology Pardazan Tosee Khavarmianeh',
             'Sold on Digikala (dkp-7694589)'
           ],
           ctaDigikala: 'View on Digikala',
-          ctaBizpet: 'Main page: BizPet',
+          ctaBizpad: 'Main page: BizPad',
           ctaContact: 'Bulk inquiry / contact'
         },
         origin: {
@@ -2508,11 +2508,11 @@
         },
         geoText: 'Automotive product invented at the University of Tabriz Science and Technology Park — Bizdavar design, sold on Digikala.'
       },
-      bizpet: {
+      bizpad: {
         hero: {
           tag: 'Owned product · Heating pad',
-          title: 'BizPet — Bizdavar heating pad',
-          desc: 'Designed and produced at the University of Tabriz Technology Incubator — a Bizdavar-owned product also known as Biz Pet / Pet Biz'
+          title: 'BizPad — Bizdavar heating pad',
+          desc: 'Designed and produced at the University of Tabriz Technology Incubator — a Bizdavar-owned product'
         },
         nav: {
           about: 'About the product',
@@ -2524,12 +2524,12 @@
         },
         about: {
           title: 'About the product',
-          imageAlt: 'BizPet — grey heating pad designed by the Bizdavar team',
-          body: '<strong>BizPet</strong> (Biz Pet / Pet Biz) is the Padideh heating pad — for warming in cold seasons and localized pain relief, designed and produced at the <strong>University of Tabriz Technology Incubator</strong>.',
+          imageAlt: 'BizPad — grey heating pad designed by the Bizdavar team',
+          body: '<strong>BizPad</strong> is the Padideh heating pad — for warming in cold seasons and localized pain relief, designed and produced at the <strong>University of Tabriz Technology Incubator</strong>.',
           body2: 'It was developed with <strong>Technology Pardazan Tosee Khavarmianeh</strong> and the technology unit <strong>Imen Sahand Padideh</strong>. The pad is portable for home or car use.',
           specsTitle: 'Features',
           specs: [
-            'Padideh heating pad — BizPet / Biz Pet / Pet Biz',
+            'Padideh heating pad — BizPad',
             'Cold-season warming and localized pain relief',
             'Portable — home and car use',
             'Operating voltage 5–12 V (max 1 A)',
@@ -2541,8 +2541,8 @@
           ctaCatalog: 'Product catalog'
         },
         gallery: {
-          tanAlt: 'BizPet — tan heating pad with power connector',
-          elementAlt: 'BizPet — heating element with contact points',
+          tanAlt: 'BizPad — tan heating pad with power connector',
+          elementAlt: 'BizPad — heating element with contact points',
           posterAlt: 'Padideh heating pad product poster'
         },
         rd: {
@@ -2580,7 +2580,7 @@
           eyebrow: 'Pet beds',
           title: 'Infrared heating pad for pets',
           desc: 'The same heating pad also works well in dog and cat beds — safe low-voltage warmth in cold seasons, with a washable cover.',
-          imageAlt: 'BizPet — infrared heating pad for pet beds',
+          imageAlt: 'BizPad — infrared heating pad for pet beds',
           specs: [
             'Suitable for pet beds',
             'Carbon nanomaterials · far infrared · 95–99% efficiency',
@@ -2600,7 +2600,7 @@
         origin: {
           eyebrow: 'Tabriz incubator · 1399',
           title: 'From design to production at the incubator',
-          desc: 'BizPet is one of the hardware products from the Bizdavar team — the Padideh heating pad, with two local technology partners.',
+          desc: 'BizPad is one of the hardware products from the Bizdavar team — the Padideh heating pad, with two local technology partners.',
           parkTitle: 'Technology Incubator',
           parkDesc: 'University of Tabriz — where the Padideh heating pad was designed and produced.',
           partner1Title: 'Technology Pardazan Tosee Khavarmianeh',
@@ -2614,7 +2614,7 @@
           eyebrow: 'Production line',
           title: 'Heating-pad assembly and testing',
           desc: 'Assembly and quality-control station — fabric pads, power units and product packaging.',
-          imageAlt: 'BizPet heating-pad production line — assembly and testing at the workbench',
+          imageAlt: 'BizPad heating-pad production line — assembly and testing at the workbench',
           caption: 'Assembling and testing heating pads in the workshop.'
         },
         related: {
@@ -2626,7 +2626,7 @@
           about: 'About Bizdavar',
           aboutDesc: 'Science park, exhibitions and achievements'
         },
-        geoText: 'Heating pad designed at the University of Tabriz Technology Incubator — Bizdavar’s BizPet product.'
+        geoText: 'Heating pad designed at the University of Tabriz Technology Incubator — Bizdavar’s BizPad product.'
       },
       bizswap: {
         hero: {
@@ -3023,7 +3023,7 @@
       related: 'مشاهده صفحه مرتبط',
       relatedTitle: 'صفحات مرتبط',
       relatedAbout: 'پارک علمی، نمایشگاه‌ها و دستاوردها',
-      relatedBizpet: 'پد حرارتی بیز پت',
+      relatedBizpad: 'پد حرارتی بیز پد',
       relatedProducts: 'سخت‌افزار و خطوط تولید',
       relatedContact: 'مشاوره و استعلام',
       relatedGamak: 'تامین الکتروموتور صنعتی',
@@ -3034,19 +3034,19 @@
         'expo-team-bizdavar': { caption: 'تیم بیزدوار در غرفه نمایشگاه — بنر Bizdavar', alt: 'سه نفر در غرفه نمایشگاه با بنر بیزدوار و ایمن سهند پدیده' },
         'expo-team-imen': { caption: 'نمایندگان ایمن سهند پدیده در نمایشگاه', alt: 'سه نفر در غرفه ایمن سهند پدیده با پرچم ایران' },
         'expo-tabrizu': { caption: 'مرکز رشد و نوآوری دانشگاه تبریز', alt: 'غرفه مرکز رشد و نوآوری دانشگاه تبریز' },
-        'bizpet-expo': { caption: 'نمایش پد حرارتی پدیده در غرفه نمایشگاه', alt: 'غرفه نمایشگاهی با پدهای حرارتی پدیده' },
-        'bizpet-production': { caption: 'مونتاژ و تولید پد حرارتی', alt: 'خط تولید پد حرارتی بیز پت' },
-        'bizpet-rd-high': { caption: 'آزمایش حرارتی در آزمایشگاه', alt: 'آزمایش دمای پد حرارتی در آزمایشگاه' },
-        'bizpet-rd-temp': { caption: 'اندازه‌گیری دما روی نمونه آزمایشگاهی', alt: 'اندازه‌گیری دمای پد حرارتی' },
-        'bizpet-prototype': { caption: 'نمونه اولیه پد حرارتی', alt: 'نمونه اولیه پد حرارتی بیز پت' },
-        'bizpet-element': { caption: 'المان حرارتی داخل پد', alt: 'المان حرارتی پد پدیده' },
-        'bizpet-military-vest': { caption: 'تحقیق پوشش حرارتی برای لباس', alt: 'جلیقه با لایه حرارتی در مرحله تحقیق' },
-        'bizpet-military-lining': { caption: 'لایه حرارتی دوخته‌شده در پوشش', alt: 'لایه حرارتی داخل پوشش' },
-        'bizpet-military-outdoor': { caption: 'آزمایش میدانی پوشش حرارتی', alt: 'آزمایش پوشش حرارتی در فضای باز' },
-        'bizpet-dryer': { caption: 'طرح تحقیق خشک‌کن میوه با المان حرارتی', alt: 'طرح سه‌بعدی سبد خشک‌کن میوه' },
-        'bizpet-grey': { caption: 'BizPet — پد حرارتی خاکستری', alt: 'پد حرارتی بیز پت خاکستری' },
-        'bizpet-tan': { caption: 'BizPet — پد حرارتی کرم', alt: 'پد حرارتی بیز پت کرم' },
-        'bizpet-pets': { caption: 'برگه معرفی کاربرد پد برای حیوانات خانگی', alt: 'پوستر BizPet برای جای خواب حیوانات' },
+        'bizpad-expo': { caption: 'نمایش پد حرارتی پدیده در غرفه نمایشگاه', alt: 'غرفه نمایشگاهی با پدهای حرارتی پدیده' },
+        'bizpad-production': { caption: 'مونتاژ و تولید پد حرارتی', alt: 'خط تولید پد حرارتی بیز پد' },
+        'bizpad-rd-high': { caption: 'آزمایش حرارتی در آزمایشگاه', alt: 'آزمایش دمای پد حرارتی در آزمایشگاه' },
+        'bizpad-rd-temp': { caption: 'اندازه‌گیری دما روی نمونه آزمایشگاهی', alt: 'اندازه‌گیری دمای پد حرارتی' },
+        'bizpad-prototype': { caption: 'نمونه اولیه پد حرارتی', alt: 'نمونه اولیه پد حرارتی بیز پد' },
+        'bizpad-element': { caption: 'المان حرارتی داخل پد', alt: 'المان حرارتی پد پدیده' },
+        'bizpad-military-vest': { caption: 'تحقیق پوشش حرارتی برای لباس', alt: 'جلیقه با لایه حرارتی در مرحله تحقیق' },
+        'bizpad-military-lining': { caption: 'لایه حرارتی دوخته‌شده در پوشش', alt: 'لایه حرارتی داخل پوشش' },
+        'bizpad-military-outdoor': { caption: 'آزمایش میدانی پوشش حرارتی', alt: 'آزمایش پوشش حرارتی در فضای باز' },
+        'bizpad-dryer': { caption: 'طرح تحقیق خشک‌کن میوه با المان حرارتی', alt: 'طرح سه‌بعدی سبد خشک‌کن میوه' },
+        'bizpad-grey': { caption: 'BizPad — پد حرارتی خاکستری', alt: 'پد حرارتی بیز پد خاکستری' },
+        'bizpad-tan': { caption: 'BizPad — پد حرارتی کرم', alt: 'پد حرارتی بیز پد کرم' },
+        'bizpad-pets': { caption: 'برگه معرفی کاربرد پد برای حیوانات خانگی', alt: 'پوستر BizPad برای جای خواب حیوانات' },
         'motor-housings': { caption: 'پوسته‌های الکتروموتور در مرحله مونتاژ', alt: 'چند پوسته الکتروموتور روی کف کارگاه' },
         'motor-stator-pair': { caption: 'سیم‌پیچی مسی داخل پوسته موتور', alt: 'دو استاتور الکتروموتور با سیم‌پیچی مسی' },
         'motor-stator-wind': { caption: 'سیم‌پیچی استاتور الکتروموتور', alt: 'استاتور با کلاف مسی در حال سیم‌پیچی' },
@@ -3076,7 +3076,7 @@
       related: 'İlgili sayfayı gör',
       relatedTitle: 'İlgili sayfalar',
       relatedAbout: 'Teknopark, fuarlar ve başarılar',
-      relatedBizpet: 'BizPet ısı pedi',
+      relatedBizpad: 'BizPad ısı pedi',
       relatedProducts: 'Donanım ve üretim hatları',
       relatedContact: 'Danışmanlık ve teklif',
       relatedGamak: 'Türkiye’den endüstriyel motor tedariki',
@@ -3087,19 +3087,19 @@
         'expo-team-bizdavar': { caption: 'Bizdavar ekibi fuar standında', alt: 'Bizdavar ve Imen Sahand Padideh standında üç kişi' },
         'expo-team-imen': { caption: 'Imen Sahand Padideh temsilcileri fuarda', alt: 'Imen Sahand Padideh standında üç kişi ve İran bayrağı' },
         'expo-tabrizu': { caption: 'Tebriz Üniversitesi kuluçka ve inovasyon merkezi', alt: 'Tebriz Üniversitesi kuluçka merkezi standı' },
-        'bizpet-expo': { caption: 'Padideh ısı pedinin fuarda sergilenmesi', alt: 'Fuar standında Padideh ısı pedleri' },
-        'bizpet-production': { caption: 'Isı pedi montajı', alt: 'BizPet ısı pedi üretim hattı' },
-        'bizpet-rd-high': { caption: 'Laboratuvarda ısıl test', alt: 'Laboratuvarda ısı pedi sıcaklık testi' },
-        'bizpet-rd-temp': { caption: 'Numune üzerinde sıcaklık ölçümü', alt: 'Isı pedi sıcaklık ölçümü' },
-        'bizpet-prototype': { caption: 'Isı pedi prototipi', alt: 'BizPet ısı pedi prototipi' },
-        'bizpet-element': { caption: 'Ped içindeki ısıtıcı eleman', alt: 'Padideh ısıtıcı eleman' },
-        'bizpet-military-vest': { caption: 'Giysi için ısıtmalı astar araştırması', alt: 'Isıtmalı astarlı yelek prototipi' },
-        'bizpet-military-lining': { caption: 'Giysiye dikilmiş ısıtmalı katman', alt: 'Giysi içinde ısıtmalı astar' },
-        'bizpet-military-outdoor': { caption: 'Isıtmalı giysinin saha testi', alt: 'Açık alanda ısıtmalı giysi testi' },
-        'bizpet-dryer': { caption: 'Meyve kurutucu araştırma tasarımı', alt: 'Meyve kurutucu sepetinin 3B görseli' },
-        'bizpet-grey': { caption: 'BizPet — gri ısı pedi', alt: 'Gri BizPet ısı pedi' },
-        'bizpet-tan': { caption: 'BizPet — bej ısı pedi', alt: 'Bej BizPet ısı pedi' },
-        'bizpet-pets': { caption: 'Evcil hayvan yatağı uygulaması', alt: 'BizPet evcil hayvan afişi' },
+        'bizpad-expo': { caption: 'Padideh ısı pedinin fuarda sergilenmesi', alt: 'Fuar standında Padideh ısı pedleri' },
+        'bizpad-production': { caption: 'Isı pedi montajı', alt: 'BizPad ısı pedi üretim hattı' },
+        'bizpad-rd-high': { caption: 'Laboratuvarda ısıl test', alt: 'Laboratuvarda ısı pedi sıcaklık testi' },
+        'bizpad-rd-temp': { caption: 'Numune üzerinde sıcaklık ölçümü', alt: 'Isı pedi sıcaklık ölçümü' },
+        'bizpad-prototype': { caption: 'Isı pedi prototipi', alt: 'BizPad ısı pedi prototipi' },
+        'bizpad-element': { caption: 'Ped içindeki ısıtıcı eleman', alt: 'Padideh ısıtıcı eleman' },
+        'bizpad-military-vest': { caption: 'Giysi için ısıtmalı astar araştırması', alt: 'Isıtmalı astarlı yelek prototipi' },
+        'bizpad-military-lining': { caption: 'Giysiye dikilmiş ısıtmalı katman', alt: 'Giysi içinde ısıtmalı astar' },
+        'bizpad-military-outdoor': { caption: 'Isıtmalı giysinin saha testi', alt: 'Açık alanda ısıtmalı giysi testi' },
+        'bizpad-dryer': { caption: 'Meyve kurutucu araştırma tasarımı', alt: 'Meyve kurutucu sepetinin 3B görseli' },
+        'bizpad-grey': { caption: 'BizPad — gri ısı pedi', alt: 'Gri BizPad ısı pedi' },
+        'bizpad-tan': { caption: 'BizPad — bej ısı pedi', alt: 'Bej BizPad ısı pedi' },
+        'bizpad-pets': { caption: 'Evcil hayvan yatağı uygulaması', alt: 'BizPad evcil hayvan afişi' },
         'motor-housings': { caption: 'Montaj aşamasındaki motor gövdeleri', alt: 'Atölye zemininde elektrik motoru gövdeleri' },
         'motor-stator-pair': { caption: 'Motor gövdesinde bakır sargı', alt: 'Bakır sargılı iki motor statoru' },
         'motor-stator-wind': { caption: 'Elektrik motoru stator sargısı', alt: 'Bakır bobinlerle sarılan stator' },
@@ -3129,7 +3129,7 @@
       related: 'Open related page',
       relatedTitle: 'Related pages',
       relatedAbout: 'Science park, exhibitions and milestones',
-      relatedBizpet: 'BizPet heating pad',
+      relatedBizpad: 'BizPad heating pad',
       relatedProducts: 'Hardware and production lines',
       relatedContact: 'Consulting and quotes',
       relatedGamak: 'Industrial motor supply from Turkey',
@@ -3140,19 +3140,19 @@
         'expo-team-bizdavar': { caption: 'Bizdavar team at the exhibition booth', alt: 'Three people at the Bizdavar and Imen Sahand Padideh booth' },
         'expo-team-imen': { caption: 'Imen Sahand Padideh representatives at the show', alt: 'Three people at the Imen Sahand Padideh booth with the Iranian flag' },
         'expo-tabrizu': { caption: 'University of Tabriz Incubation and Innovation Center', alt: 'University of Tabriz incubation center booth' },
-        'bizpet-expo': { caption: 'Padideh heating pads at the exhibition', alt: 'Exhibition booth showing Padideh heating pads' },
-        'bizpet-production': { caption: 'Heating-pad assembly', alt: 'BizPet heating pad production' },
-        'bizpet-rd-high': { caption: 'Thermal testing in the lab', alt: 'Heating pad temperature test in the laboratory' },
-        'bizpet-rd-temp': { caption: 'Temperature reading on a lab sample', alt: 'Heating pad temperature measurement' },
-        'bizpet-prototype': { caption: 'Heating pad prototype', alt: 'BizPet heating pad prototype' },
-        'bizpet-element': { caption: 'Heating element inside the pad', alt: 'Padideh heating element' },
-        'bizpet-military-vest': { caption: 'Heated-clothing research vest', alt: 'Vest with a heating lining in R&D' },
-        'bizpet-military-lining': { caption: 'Heating layer sewn into a garment', alt: 'Heating lining inside a garment' },
-        'bizpet-military-outdoor': { caption: 'Outdoor test of heated clothing', alt: 'Heated clothing field test' },
-        'bizpet-dryer': { caption: 'Fruit-dryer research concept', alt: '3D render of a fruit-dryer basket' },
-        'bizpet-grey': { caption: 'BizPet — grey heating pad', alt: 'Grey BizPet heating pad' },
-        'bizpet-tan': { caption: 'BizPet — tan heating pad', alt: 'Tan BizPet heating pad' },
-        'bizpet-pets': { caption: 'Pet-bed application flyer', alt: 'BizPet pet-bed poster' },
+        'bizpad-expo': { caption: 'Padideh heating pads at the exhibition', alt: 'Exhibition booth showing Padideh heating pads' },
+        'bizpad-production': { caption: 'Heating-pad assembly', alt: 'BizPad heating pad production' },
+        'bizpad-rd-high': { caption: 'Thermal testing in the lab', alt: 'Heating pad temperature test in the laboratory' },
+        'bizpad-rd-temp': { caption: 'Temperature reading on a lab sample', alt: 'Heating pad temperature measurement' },
+        'bizpad-prototype': { caption: 'Heating pad prototype', alt: 'BizPad heating pad prototype' },
+        'bizpad-element': { caption: 'Heating element inside the pad', alt: 'Padideh heating element' },
+        'bizpad-military-vest': { caption: 'Heated-clothing research vest', alt: 'Vest with a heating lining in R&D' },
+        'bizpad-military-lining': { caption: 'Heating layer sewn into a garment', alt: 'Heating lining inside a garment' },
+        'bizpad-military-outdoor': { caption: 'Outdoor test of heated clothing', alt: 'Heated clothing field test' },
+        'bizpad-dryer': { caption: 'Fruit-dryer research concept', alt: '3D render of a fruit-dryer basket' },
+        'bizpad-grey': { caption: 'BizPad — grey heating pad', alt: 'Grey BizPad heating pad' },
+        'bizpad-tan': { caption: 'BizPad — tan heating pad', alt: 'Tan BizPad heating pad' },
+        'bizpad-pets': { caption: 'Pet-bed application flyer', alt: 'BizPad pet-bed poster' },
         'motor-housings': { caption: 'Electric motor housings in assembly', alt: 'Electric motor housings on the workshop floor' },
         'motor-stator-pair': { caption: 'Copper windings inside the motor housing', alt: 'Two motor stators with copper windings' },
         'motor-stator-wind': { caption: 'Stator winding for an electric motor', alt: 'Stator with copper coils during winding' },

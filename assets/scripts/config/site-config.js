@@ -32,7 +32,7 @@ window.BIZDAVAR_CONFIG = {
     fxguardExchange: 'pages/fxguard-exchange.html',
     biztejarat: 'pages/biztejarat.html',
     biztab: 'pages/biztab.html',
-    bizpet: 'pages/bizpet.html',
+    bizpad: 'pages/bizpad.html',
     bizsanitizerV5: 'pages/bizsanitizer-v5.html',
     uwt: 'pages/uwt.html',
     fxguard: 'pages/fxguard.html',
@@ -90,7 +90,7 @@ window.BIZDAVAR_CONFIG = {
             labelKey: 'nav.productsHardware',
             items: [
               { route: 'biztab', page: 'biztab', labelKey: 'nav.productBiztab', label: 'BizTab', descKey: 'nav.productBiztabDesc' },
-              { route: 'bizpet', page: 'bizpet', labelKey: 'nav.productBizpet', label: 'BizPet', descKey: 'nav.productBizpetDesc' },
+              { route: 'bizpad', page: 'bizpad', labelKey: 'nav.productBizpad', label: 'BizPad', descKey: 'nav.productBizpadDesc' },
               { route: 'bizsanitizerV5', page: 'bizsanitizer-v5', labelKey: 'nav.productBizclean', label: 'BizClean', descKey: 'nav.productBizcleanDesc' }
             ]
           }
@@ -615,14 +615,14 @@ window.BIZDAVAR_CONFIG = {
       relatedService: 'pages/bizsanitizer-v5.html'
     },
     {
-      slug: 'pages/bizpet.html',
-      title: 'BizPet — پد حرارتی بیز پت',
+      slug: 'pages/bizpad.html',
+      title: 'BizPad — پد حرارتی بیز پد',
       excerpt: 'طراحی و تولید در مرکز رشد فناوری دانشگاه تبریز با همکاری ایمن سهند پدیده.',
       category: 'محصول اختصاصی',
       catId: 'products',
       date: '2020-09-01',
       image: 'assets/images/products/bizpet/bizpet-grey.jpg',
-      relatedService: 'pages/bizpet.html'
+      relatedService: 'pages/bizpad.html'
     },
     {
       slug: 'pages/articles/marvi-society-ios-app.html',
@@ -731,7 +731,7 @@ window.BIZDAVAR_CONFIG = {
       title: 'سنسور سطح سیلو',
       desc: 'Rotonivo، Vibranivo، NivoRadar و NivoGuide — سوئیچ و رادار سطح برای جامدات فله و مایعات',
       logo: 'assets/images/partners/uwt.svg',
-      photo: 'assets/images/uwt/hero-solids.webp',
+      photo: 'assets/images/uwt/product-vn1020.jpg',
       url: 'pages/uwt',
       internal: true,
       badge: 'آلمان',
@@ -832,7 +832,7 @@ window.BIZDAVAR_CONFIG = {
     { name: 'Fast Web Studio', domain: 'bizdavar.com', category: 'طراحی سایت', role: 'case-study', internal: true, slug: 'pages/fast.html', logo: 'assets/images/partners/fast-studio.png', note: 'محصول اختصاصی بیزدوار — طراحی سایت ۵ روزه' },
     { name: 'BizTab', domain: 'nasrnews.ir', url: 'https://nasrnews.ir/print/16727/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D9%88-%D8%B3%D8%A7%D8%AE%D8%AA-%D8%A7%D9%88%D9%84%DB%8C%D9%86-%D8%AF%D9%85%D8%A7%D8%B3%D9%86%D8%AC-%D8%AF%DB%8C%D9%88%D8%A7%D8%B1%DB%8C-%D8%BA%DB%8C%D8%B1%D8%AA%D9%85%D8%A7%D8%B3%DB%8C-%D8%AF%D8%B1-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2', category: 'محصول اختصاصی / IoT و سلامت', role: 'case-study', internal: true, slug: 'pages/biztab.html', logo: 'assets/images/products/biztab/biztab-logo.svg', note: 'محصول اختصاصی — اولین دماسنج دیواری غیرتماسی تبریز، توسعه تیم بیزدوار' },
     { name: 'BizClean V5', domain: 'digikala.com', url: 'https://www.digikala.com/product/dkp-3730222/', category: 'محصول اختصاصی / بهداشت', role: 'case-study', internal: true, slug: 'pages/bizsanitizer-v5.html', logo: 'assets/images/products/bizsanitizer/bizsanitizer-logo.svg', note: 'محصول اختصاصی — دستگاه ضدعفونی دست V5، توسعه در دوران کرونا' },
-    { name: 'BizPet', domain: 'digikala.com', url: 'https://www.digikala.com/product/dkp-7694589/', category: 'محصول اختصاصی / پد حرارتی', role: 'case-study', internal: true, slug: 'pages/bizpet.html', logo: 'assets/images/products/bizpet/bizpet-grey.jpg', note: 'محصول اصلی ۱۳۹۹ — پد حرارتی پدیده؛ همان کالا به‌صورت پشتی خودرو در دیجی‌کالا' },
+    { name: 'BizPad', domain: 'digikala.com', url: 'https://www.digikala.com/product/dkp-7694589/', category: 'محصول اختصاصی / پد حرارتی', role: 'case-study', internal: true, slug: 'pages/bizpad.html', logo: 'assets/images/products/bizpet/bizpet-grey.jpg', note: 'محصول اصلی ۱۳۹۹ — پد حرارتی پدیده؛ همان کالا به‌صورت پشتی خودرو در دیجی‌کالا' },
     { name: 'FXGuard', domain: 'fxguard.io', url: 'https://fxguard.io/', category: 'WhatsApp CRM', role: 'case-study', internal: true, slug: 'pages/fxguard.html', logo: 'assets/images/products/fxguard/fxguard-logo.svg', note: 'FXGuard WhatsApp CRM — اینباکس تیمی، تیکت، شعب و ۲FA؛ Cloud از $49/ماه، لایسنس یا Managed — فروش در fxguard.io' },
     { name: 'BizSwap', domain: 'Web3 · DeFi Module', category: 'Web3 / پیش‌فروش و سواپ توکن', role: 'case-study', internal: true, slug: 'pages/bizswap.html', logo: 'assets/images/products/bizswap/bizswap-logo.svg', note: 'نمونه‌کار — ماژول پیش‌فروش و سواپ on-chain (BEP-20)، اتصال کیف پول و UI DeFi؛ توسعه تیم بیزدوار' },
     { name: 'FXGuard Exchange', domain: 'exchange.fxguard.io', url: 'https://exchange.fxguard.io/', category: 'طراحی وب / صرافی و فین‌تک', role: 'case-study', internal: true, slug: 'pages/fxguard-exchange.html', logo: 'assets/images/partners/fxguard-exchange.svg', note: 'نمونه‌کار — پلتفرم تبادل تومان و لیر با نرخ زنده، KYC و پیگیری سفارش' },

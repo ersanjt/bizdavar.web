@@ -72,17 +72,17 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       status: 'live'
     },
     {
-      id: 'bizpet',
+      id: 'bizpad',
       category: 'iot-health',
       categoryLabel: 'IoT و بهداشت',
-      name: 'BizPet',
-      title: 'پد حرارتی بیز پت',
+      name: 'BizPad',
+      title: 'پد حرارتی بیز پد',
       desc: 'پد حرارتی برای خانه، خودرو و جای خواب حیوان — طراحی تیم بیزدوار.',
       homeDesc: 'پد حرارتی خانه و صندلی خودرو',
       tags: ['پد حرارتی', 'خودرو', 'تبریز'],
       image: 'assets/images/products/bizpet/bizpet-grey.jpg',
       logo: 'assets/images/products/bizpet/bizpet-grey.jpg',
-      page: 'pages/bizpet.html',
+      page: 'pages/bizpad.html',
       featured: false,
       status: 'live'
     },
@@ -101,16 +101,16 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       status: 'live'
     },
     {
-      id: 'bizpet',
+      id: 'bizpad',
       category: 'medical',
       categoryLabel: 'پزشکی و PPE',
-      name: 'BizPet',
-      title: 'پد حرارتی بیز پت',
+      name: 'BizPad',
+      title: 'پد حرارتی بیز پد',
       desc: 'محصول اصلی ۱۳۹۹ — پد حرارتی پدیده برای خانه، خودرو و جا خواب حیوانات. نام فروشگاهی پشتی صندلی (BizSeat) همان این کالاست، نه محصول دوم. مرکز رشد دانشگاه تبریز، ایمن سهند پدیده. ۵ تا ۱۲ ولت.',
       tags: ['پد حرارتی', 'خودرو', 'تبریز', '۱۳۹۹'],
       image: 'assets/images/products/bizpet/bizpet-grey.jpg',
       logo: 'assets/images/products/bizpet/bizpet-grey.jpg',
-      page: 'pages/bizpet.html',
+      page: 'pages/bizpad.html',
       featured: false,
       hidden: true,
       status: 'live'

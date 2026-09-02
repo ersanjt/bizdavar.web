@@ -31,7 +31,11 @@
       contact: 'تماس',
       email: 'ایمیل',
       hubBadge: 'هاب',
-      mapAlt: 'نقشه حضور جهانی بیزدوار — دفاتر ایران، ترکیه، ارمنستان و دبی'
+      mapAlt: 'نقشه حضور جهانی بیزدوار — دفاتر ایران، ترکیه، ارمنستان و دبی',
+      mapLegendActive: 'کشور پروژه',
+      mapLegendOffice: 'دفتر عملیاتی',
+      mapOffices: { istanbul: 'استانبول — دفتر ترکیه', tabriz: 'تبریز — دفتر ایران', yerevan: 'ایروان — دفتر ارمنستان', dubai: 'دبی — دفتر امارات' },
+      mapCountries: { usa: 'آمریکا', britain: 'انگلستان', germany: 'آلمان', italy: 'ایتالیا', turkey: 'ترکیه', iran: 'ایران', armenia: 'ارمنستان', georgia: 'گرجستان', emirates: 'امارات', iraq: 'عراق', lebanon: 'لبنان', canada: 'کانادا', russia: 'روسیه', china: 'چین', australia: 'استرالیا' }
     },
     tr: {
       intlBrand: 'Uluslararası marka',
@@ -60,7 +64,11 @@
       contact: 'Telefon',
       email: 'E-posta',
       hubBadge: 'Merkez',
-      mapAlt: 'Bizdavar küresel varlık haritası — ofisler: İran, Türkiye, Ermenistan ve Dubai'
+      mapAlt: 'Bizdavar küresel varlık haritası — ofisler: İran, Türkiye, Ermenistan ve Dubai',
+      mapLegendActive: 'Proje ülkesi',
+      mapLegendOffice: 'Operasyon ofisi',
+      mapOffices: { istanbul: 'İstanbul — Türkiye ofisi', tabriz: 'Tebriz — İran ofisi', yerevan: 'Erivan — Ermenistan ofisi', dubai: 'Dubai — BAE ofisi' },
+      mapCountries: { usa: 'ABD', britain: 'Birleşik Krallık', germany: 'Almanya', italy: 'İtalya', turkey: 'Türkiye', iran: 'İran', armenia: 'Ermenistan', georgia: 'Gürcistan', emirates: 'BAE', iraq: 'Irak', lebanon: 'Lübnan', canada: 'Kanada', russia: 'Rusya', china: 'Çin', australia: 'Avustralya' }
     },
     en: {
       intlBrand: 'International brand',
@@ -89,7 +97,11 @@
       contact: 'Phone',
       email: 'Email',
       hubBadge: 'Hub',
-      mapAlt: 'Bizdavar global presence map — offices in Iran, Turkey, Armenia and Dubai'
+      mapAlt: 'Bizdavar global presence map — offices in Iran, Turkey, Armenia and Dubai',
+      mapLegendActive: 'Project country',
+      mapLegendOffice: 'Operations office',
+      mapOffices: { istanbul: 'Istanbul — Turkey office', tabriz: 'Tabriz — Iran office', yerevan: 'Yerevan — Armenia office', dubai: 'Dubai — UAE office' },
+      mapCountries: { usa: 'United States', britain: 'United Kingdom', germany: 'Germany', italy: 'Italy', turkey: 'Turkey', iran: 'Iran', armenia: 'Armenia', georgia: 'Georgia', emirates: 'UAE', iraq: 'Iraq', lebanon: 'Lebanon', canada: 'Canada', russia: 'Russia', china: 'China', australia: 'Australia' }
     }
   };
 
@@ -149,7 +161,7 @@
       { name: 'Netinode', type: 'Domain, hosting, sunucu', note: 'Domain, hosting, WordPress hosting, kurumsal e-posta, DNS' },
       { name: 'BZ Diamond', type: 'Web tasarım referansı', note: 'WooCommerce mağaza, e-posta ve SEO — müşteri projesi' },
       { name: 'Biztejarat', type: 'SMM referansı', note: 'Endüstriyel ürün Instagram sayfası — içerik yönetimi' },
-      { name: 'BizPet', type: 'Isı pedi', note: '1399 Padideh ısı pedi — ev ve araç; BizSeat satış adı aynı üründür' },
+      { name: 'BizPad', type: 'Isı pedi', note: '1399 Padideh ısı pedi — ev ve araç; BizSeat satış adı aynı üründür' },
       { name: 'BizTab', type: 'IoT / sağlık ürünü', note: 'Temassız duvar termometresi — Tebriz’de ilk örnek, Bizdavar ekibi' },
       { name: 'BizClean V5', type: 'Hijyen ürünü', note: 'Otomatik el dezenfektanı — ultrasonik sensör, Digikala’da satış' },
       { name: 'BZBroker', type: 'P2P borsa', note: 'Kripto platformu' },
@@ -160,10 +172,10 @@
       { name: 'Karen Leather', type: 'İhracat', note: 'B2B deri pazarlama' }
     ],
     presence: {
-      summary: '11 ülkede tamamlanan projeler — ofisler: İran, Türkiye, Ermenistan ve Dubai.',
-      summaryFa: '11 ülkede tamamlanan projeler — ofisler: İran, Türkiye, Ermenistan ve Dubai.',
+      summary: '15 ülkede tamamlanan projeler — ofisler: İran, Türkiye, Ermenistan ve Dubai.',
+      summaryFa: '15 ülkede tamamlanan projeler — ofisler: İran, Türkiye, Ermenistan ve Dubai.',
       stats: [
-        { value: '11', label: 'Aktif ülke' },
+        { value: '15', label: 'Aktif ülke' },
         { value: '4', label: 'Operasyon ofisi' },
         { value: '100+', label: 'Uluslararası proje' }
       ],
@@ -243,14 +255,24 @@
             { name: 'Gürcistan', focus: 'Uluslararası ticaret' },
             { name: 'Almanya', focus: 'Ekipman tedariki' },
             { name: 'İngiltere', focus: 'Fintech ve danışmanlık' },
-            { name: 'İtalya', focus: 'Endüstriyel projeler' }
+            { name: 'İtalya', focus: 'Endüstriyel projeler' },
+            { name: 'Rusya', focus: 'Uluslararası projeler' }
           ]
         },
         {
           id: 'americas',
           title: 'Amerika',
           countries: [
-            { name: 'ABD', focus: 'Platform ve startup' }
+            { name: 'ABD', focus: 'Platform ve startup' },
+            { name: 'Kanada', focus: 'Dijital projeler' }
+          ]
+        },
+        {
+          id: 'asia-pacific',
+          title: 'Asya ve Okyanusya',
+          countries: [
+            { name: 'Çin', focus: 'Tedarik ve ticaret' },
+            { name: 'Avustralya', focus: 'Uluslararası projeler' }
           ]
         }
       ]
@@ -329,10 +351,10 @@
         tags: ['Hijyen', 'IoT', 'COVID-19', 'Tebriz Üniversitesi', 'RINOTEX', 'Imen Sahand Padideh', 'Digikala']
       },
       {
-        id: 'bizpet',
+        id: 'bizpad',
         year: '2020',
-        title: 'BizPet — ısı pedi',
-        desc: 'Asıl 1399 ürünü: Padideh ısı pedi (BizPet / Pet Biz) — Tebriz Üniversitesi teknoloji kuluçkasında, ev, araç koltuğu ve evcil hayvan yatağı için. Digikala dkp-7694589 aynı üründür.',
+        title: 'BizPad — ısı pedi',
+        desc: 'Asıl 1399 ürünü: Padideh ısı pedi (BizPad) — Tebriz Üniversitesi teknoloji kuluçkasında, ev, araç koltuğu ve evcil hayvan yatağı için. Digikala dkp-7694589 aynı üründür.',
         source: 'Tebriz Üniversitesi teknoloji kuluçkası',
         pressLinks: [
           { label: 'Tebriz Üniversitesi teknoparkı', url: 'https://techpark.tabrizu.ac.ir/' },
@@ -411,7 +433,7 @@
       { q: 'Bizdavar ile “Imen Sahand Padideh” ilişkisi nedir?', a: '“Imen Sahand Padideh”, Tebriz Üniversitesi teknoparkında faaliyet gösteren bir birimdi. 2019–2022 arasında kurucu kişisel yatırım yaptı; BizClean V5 dahil tüm tasarım ve üretim Bizdavar ekibince yapıldı. RINOTEX 1400’de teknopark birimi aracılığıyla tanıtıldı.' },
       { q: 'Ermenistan kaydı nasıl?', a: 'Bizdavar Group, Erivan’da LLC olarak kayıtlı — SEO, web reklamcılığı ve dijital pazarlamada aktif. Spyur.am profili (57783) doğrulanabilir.' },
       { q: 'Bizdavar Group hangi yıldan beri faal?', a: '2013’ten beri Ersan Jahed Tabrizi tarafından kuruldu; dijital, web ve endüstriyel hizmetleri tek marka altında sunar.' },
-      { q: 'Bizdavar hangi ülkelerde proje yürüttü?', a: 'Türkiye, BAE, Almanya, ABD, İngiltere, Ermenistan, Lübnan, İran, Irak, Gürcistan ve İtalya dahil 11 ülkede projeler tamamlandı.' },
+      { q: 'Bizdavar hangi ülkelerde proje yürüttü?', a: 'Türkiye, BAE, Almanya, ABD, İngiltere, Ermenistan, Lübnan, İran, Irak, Gürcistan, İtalya, Rusya, Çin, Kanada ve Avustralya dahil 15 ülkede projeler tamamlandı.' },
       { q: 'Bizdavar’ı diğer ajanslardan ayıran nedir?', a: 'Tam dijital ajans (SEO, reklam, SMM) + teknik geliştirme (WordPress, fintech, AI) + B2B endüstriyel tedarik — büyüme ve altyapı için tek ekip.' },
       { q: 'Bizdavar sadece web sitesi mi yapıyor?', a: 'Hayır. Fast Web Studio’nun yanı sıra dijital pazarlama, Netinode altyapı yönetimi, fintech ve VEGA/Prosense tedariki de sunulur.' },
       { q: 'Bizdavar’ın güvenilirliğini nasıl doğrularım?', a: 'Kurucu LinkedIn profili, canlı portfolyo, Google sertifikaları ve info@bizdavar.com üzerinden doğrudan iletişim.' }
@@ -472,7 +494,7 @@
       { name: 'Netinode', type: 'Domains, hosting & servers', note: 'Domains, hosting, WordPress hosting, business email, DNS' },
       { name: 'BZ Diamond', type: 'Web design case study', note: 'WooCommerce store, email and SEO — client project' },
       { name: 'Biztejarat', type: 'SMM case study', note: 'Industrial product Instagram — content management' },
-      { name: 'BizPet', type: 'Heating pad', note: '1399 Padideh heating pad — home and car; BizSeat is the same product' },
+      { name: 'BizPad', type: 'Heating pad', note: '1399 Padideh heating pad — home and car; BizSeat is the same product' },
       { name: 'BizTab', type: 'IoT / health product', note: 'Non-contact wall thermometer — first in Tabriz, Bizdavar team' },
       { name: 'BizClean V5', type: 'Hygiene product', note: 'Automatic hand sanitizer — ultrasonic sensor, sold on Digikala' },
       { name: 'BZBroker', type: 'P2P exchange', note: 'Crypto platform' },
@@ -483,10 +505,10 @@
       { name: 'Karen Leather', type: 'Export', note: 'B2B leather marketing' }
     ],
     presence: {
-      summary: 'Projects delivered in 11 countries — offices in Iran, Turkey, Armenia and Dubai.',
-      summaryFa: 'Projects delivered in 11 countries — offices in Iran, Turkey, Armenia and Dubai.',
+      summary: 'Projects delivered in 15 countries — offices in Iran, Turkey, Armenia and Dubai.',
+      summaryFa: 'Projects delivered in 15 countries — offices in Iran, Turkey, Armenia and Dubai.',
       stats: [
-        { value: '11', label: 'Active countries' },
+        { value: '15', label: 'Active countries' },
         { value: '4', label: 'Operating offices' },
         { value: '100+', label: 'International projects' }
       ],
@@ -566,14 +588,24 @@
             { name: 'Georgia', focus: 'International trade' },
             { name: 'Germany', focus: 'Equipment supply' },
             { name: 'United Kingdom', focus: 'Fintech and consulting' },
-            { name: 'Italy', focus: 'Industrial projects' }
+            { name: 'Italy', focus: 'Industrial projects' },
+            { name: 'Russia', focus: 'International projects' }
           ]
         },
         {
           id: 'americas',
           title: 'Americas',
           countries: [
-            { name: 'United States', focus: 'Platforms and startups' }
+            { name: 'United States', focus: 'Platforms and startups' },
+            { name: 'Canada', focus: 'Digital projects' }
+          ]
+        },
+        {
+          id: 'asia-pacific',
+          title: 'Asia-Pacific',
+          countries: [
+            { name: 'China', focus: 'Supply and trade' },
+            { name: 'Australia', focus: 'International projects' }
           ]
         }
       ]
@@ -652,10 +684,10 @@
         tags: ['Hygiene', 'IoT', 'COVID-19', 'Tabriz University', 'RINOTEX', 'Imen Sahand Padideh', 'Digikala']
       },
       {
-        id: 'bizpet',
+        id: 'bizpad',
         year: '2020',
-        title: 'BizPet — heating pad',
-        desc: 'The 1399 flagship: Padideh heating pad (BizPet / Pet Biz) for home, car seat and pet beds. Digikala dkp-7694589 is the same product, not a second line.',
+        title: 'BizPad — heating pad',
+        desc: 'The 1399 flagship: Padideh heating pad (BizPad) for home, car seat and pet beds. Digikala dkp-7694589 is the same product, not a second line.',
         source: 'University of Tabriz technology incubator',
         pressLinks: [
           { label: 'Tabriz University Science & Technology Park', url: 'https://techpark.tabrizu.ac.ir/' },
@@ -734,7 +766,7 @@
       { q: 'What is the relationship between Bizdavar and “Imen Sahand Padideh”?', a: '“Imen Sahand Padideh” was a unit at Tabriz University Science & Technology Park. From 2019–2022 the founder invested personally; all design and production (including BizClean V5) was by the Bizdavar team. Introduced at RINOTEX 1400 via the park unit.' },
       { q: 'How is the Armenia registration structured?', a: 'Bizdavar Group is registered as an LLC in Yerevan — active in SEO, web advertising and digital marketing. Spyur.am profile (57783) is verifiable.' },
       { q: 'Since when has Bizdavar Group operated?', a: 'Founded in 2013 by Ersan Jahed Tabrizi, offering digital, web and industrial services under one integrated brand.' },
-      { q: 'In which countries has Bizdavar delivered projects?', a: 'Projects in 11 countries including Turkey, UAE, Germany, USA, UK, Armenia, Lebanon, Iran, Iraq, Georgia and Italy.' },
+      { q: 'In which countries has Bizdavar delivered projects?', a: 'Projects in 15 countries including Turkey, UAE, Germany, USA, UK, Armenia, Lebanon, Iran, Iraq, Georgia, Italy, Russia, China, Canada and Australia.' },
       { q: 'How is Bizdavar different from typical digital agencies?', a: 'Full digital agency (SEO, ads, SMM) plus technical delivery (WordPress, fintech, AI) and B2B industrial supply — one team for growth and infrastructure.' },
       { q: 'Does Bizdavar only build websites?', a: 'No. Beyond Fast Web Studio, we offer digital marketing, Netinode infrastructure, fintech and VEGA/Prosense industrial supply.' },
       { q: 'How can I verify Bizdavar’s credibility?', a: 'Founder LinkedIn profile, live portfolio, Google certifications and direct contact via info@bizdavar.com.' }

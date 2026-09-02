@@ -15,7 +15,7 @@ body[data-page="uwt"] .uwt-hero {
 body[data-page="uwt"] .uwt-hero::before {
   background:
     linear-gradient(105deg, rgba(247, 244, 240, 0.97) 42%, rgba(247, 244, 240, 0.55) 68%, rgba(247, 244, 240, 0.2) 100%),
-    url('../images/uwt/hero-solids.webp') center right / cover no-repeat;
+    url('../images/uwt/product-vn1020.jpg') center right / contain no-repeat;
 }
 
 body[data-page="uwt"] .uwt-hero__logo {

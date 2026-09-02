@@ -47,8 +47,8 @@
     gallery: {
       crumb: 'Галерея',
       seoTitle: 'Фотогалерея Bizdavar | выставки, производство и R&D',
-      seoDescription: 'Реальные фото Bizdavar: стенд Imen Sahand Padideh, инкубатор Университета Тебриза, линия сборки и R&D нагревательного мата BizPet.',
-      seoKeywords: 'галерея Bizdavar, выставка Imen Sahand Padideh, инкубатор Тебриз, BizPet'
+      seoDescription: 'Реальные фото Bizdavar: стенд Imen Sahand Padideh, инкубатор Университета Тебриза, линия сборки и R&D нагревательного мата BizPad.',
+      seoKeywords: 'галерея Bizdavar, выставка Imen Sahand Padideh, инкубатор Тебриз, BizPad'
     },
     services: {
       crumb: 'Услуги',
@@ -206,11 +206,11 @@
       seoDescription: 'BizTab — первый бесконтактный настенный термометр, разработанный в Тебризе командой Bizdavar. Погрешность менее 0,3°C, одобрен Университетом Тебриза.',
       seoKeywords: 'BizTab, бесконтактный термометр, IoT, Bizdavar, Тебриз'
     },
-    bizpet: {
-      crumb: 'BizPet',
-      seoTitle: 'BizPet | грелка Padideh — продукт Bizdavar',
-      seoDescription: 'BizPet — переносная грелка Padideh для дома, автомобиля и лежанок питомцев. Разработана в технологическом инкубаторе Университета Тебриза. 5–12 В.',
-      seoKeywords: 'BizPet, грелка, Padideh, Bizdavar, Тебриз'
+    bizpad: {
+      crumb: 'BizPad',
+      seoTitle: 'BizPad | грелка Padideh — продукт Bizdavar',
+      seoDescription: 'BizPad — переносная грелка Padideh для дома, автомобиля и лежанок питомцев. Разработана в технологическом инкубаторе Университета Тебриза. 5–12 В.',
+      seoKeywords: 'BizPad, грелка, Padideh, Bizdavar, Тебриз'
     },
     uwt: {
       crumb: 'UWT',
@@ -226,15 +226,15 @@
     },
     bizseat: {
       crumb: 'BizSeat',
-      seoTitle: 'BizSeat — это BizPet | нагревательный мат',
-      seoDescription: 'BizSeat не отдельный продукт: это торговое имя того же нагревательного мата BizPet 1399. Основная страница — BizPet.',
-      seoKeywords: 'BizSeat, BizPet, нагревательный мат, Bizdavar, Digikala'
+      seoTitle: 'BizSeat — это BizPad | нагревательный мат',
+      seoDescription: 'BizSeat не отдельный продукт: это торговое имя того же нагревательного мата BizPad 1399. Основная страница — BizPad.',
+      seoKeywords: 'BizSeat, BizPad, нагревательный мат, Bizdavar, Digikala'
     },
-    bizpet: {
-      crumb: 'BizPet',
-      seoTitle: 'BizPet | нагревательный мат — основной продукт 1399',
-      seoDescription: 'BizPet — основной нагревательный мат Padideh для дома, автокресла и лежанки животных. Карточка Digikala — тот же товар.',
-      seoKeywords: 'BizPet, нагревательный мат, Padideh, Университет Тебриза, Imen Sahand Padideh, Bizdavar'
+    bizpad: {
+      crumb: 'BizPad',
+      seoTitle: 'BizPad | нагревательный мат — основной продукт 1399',
+      seoDescription: 'BizPad — основной нагревательный мат Padideh для дома, автокресла и лежанки животных. Карточка Digikala — тот же товар.',
+      seoKeywords: 'BizPad, нагревательный мат, Padideh, Университет Тебриза, Imen Sahand Padideh, Bizdavar'
     },
     fxguard: {
       crumb: 'FXGuard',
@@ -332,8 +332,8 @@
     gallery: {
       crumb: 'معرض الصور',
       seoTitle: 'معرض صور بيزدوار | معارض وإنتاج وبحث',
-      seoDescription: 'صور حقيقية لبيزدوار: جناح إيمن سهند پديده، حاضنة جامعة تبريز، خط الإنتاج وأبحاث حصيرة BizPet الحرارية.',
-      seoKeywords: 'معرض بيزدوار, معرض إيمن سهند پديده, حاضنة تبريز, BizPet'
+      seoDescription: 'صور حقيقية لبيزدوار: جناح إيمن سهند پديده، حاضنة جامعة تبريز، خط الإنتاج وأبحاث حصيرة BizPad الحرارية.',
+      seoKeywords: 'معرض بيزدوار, معرض إيمن سهند پديده, حاضنة تبريز, BizPad'
     },
     services: {
       crumb: 'الخدمات',
@@ -491,11 +491,11 @@
       seoDescription: 'BizTab — أول مقياس حرارة جداري بلا تلامس صُمم في تبريز بواسطة فريق Bizdavar. خطأ أقل من ٠٫٣°م، معتمد من جامعة تبريز.',
       seoKeywords: 'BizTab, مقياس حرارة بلا تلامس, IoT, Bizdavar, تبريز'
     },
-    bizpet: {
-      crumb: 'BizPet',
-      seoTitle: 'BizPet | وسادة تدفئة Padideh — منتج Bizdavar',
-      seoDescription: 'BizPet — وسادة تدفئة Padideh محمولة للمنزل والسيارة وأسرة الحيوانات. صُممت في حاضنة جامعة تبريز. 5–12 فولت.',
-      seoKeywords: 'BizPet, وسادة تدفئة, Padideh, Bizdavar, تبريز'
+    bizpad: {
+      crumb: 'BizPad',
+      seoTitle: 'BizPad | وسادة تدفئة Padideh — منتج Bizdavar',
+      seoDescription: 'BizPad — وسادة تدفئة Padideh محمولة للمنزل والسيارة وأسرة الحيوانات. صُممت في حاضنة جامعة تبريز. 5–12 فولت.',
+      seoKeywords: 'BizPad, وسادة تدفئة, Padideh, Bizdavar, تبريز'
     },
     uwt: {
       crumb: 'UWT',
@@ -511,15 +511,15 @@
     },
     bizseat: {
       crumb: 'BizSeat',
-      seoTitle: 'BizSeat هو BizPet | وسادة التدفئة',
-      seoDescription: 'BizSeat ليس خطاً منفصلاً — إنه اسم بيع وسادة التدفئة BizPet لعام ١٣٩٩. الصفحة الرئيسية BizPet.',
-      seoKeywords: 'BizSeat, BizPet, وسادة تدفئة, Bizdavar, ديجي‌كالا'
+      seoTitle: 'BizSeat هو BizPad | وسادة التدفئة',
+      seoDescription: 'BizSeat ليس خطاً منفصلاً — إنه اسم بيع وسادة التدفئة BizPad لعام ١٣٩٩. الصفحة الرئيسية BizPad.',
+      seoKeywords: 'BizSeat, BizPad, وسادة تدفئة, Bizdavar, ديجي‌كالا'
     },
-    bizpet: {
-      crumb: 'BizPet',
-      seoTitle: 'BizPet | وسادة تدفئة — حاضنة تبريز التقنية',
-      seoDescription: 'BizPet (بیز پت / پت بیز) — وسادة التدفئة پدیده. صُممت وأُنتجت في حاضنة التكنولوجيا بجامعة تبريز بالتعاون مع ایمن سهند پدیده. ٥–١٢ فولت، محمولة للمنزل والسيارة.',
-      seoKeywords: 'BizPet, وسادة تدفئة, پدیده, جامعة تبريز, ایمن سهند پدیده, Bizdavar'
+    bizpad: {
+      crumb: 'BizPad',
+      seoTitle: 'BizPad | وسادة تدفئة — حاضنة تبريز التقنية',
+      seoDescription: 'BizPad (بیز پد) — وسادة التدفئة پدیده. صُممت وأُنتجت في حاضنة التكنولوجيا بجامعة تبريز بالتعاون مع ایمن سهند پدیده. ٥–١٢ فولت، محمولة للمنزل والسيارة.',
+      seoKeywords: 'BizPad, وسادة تدفئة, پدیده, جامعة تبريز, ایمن سهند پدیده, Bizdavar'
     },
     fxguard: {
       crumb: 'FXGuard',
@@ -1724,7 +1724,7 @@
         desc: 'Командный inbox, тикеты и филиалы — от $49/мес. Демо: app.fxguard.io.',
         homeDesc: 'Командный WhatsApp inbox — от $49'
       },
-      bizpet: {
+      bizpad: {
         title: 'Нагревательный мат',
         desc: 'Мат для дома, авто и лежанки питомца — дизайн команды Bizdavar.',
         homeDesc: 'Нагревательный мат для дома и автокресла'
@@ -1770,7 +1770,7 @@
       digital: { label: 'Цифровой маркетинг', desc: 'SEO, CRO и SMM' },
       web: { label: 'Веб-дизайн', desc: 'Многоязычный сайт и Fast Studio' },
       industrial: { label: 'Промпоставки', desc: 'VEGA и КИП' },
-      products: { label: 'Продукты Bizdavar', desc: 'BizPet, BizTab и BizClean' },
+      products: { label: 'Продукты Bizdavar', desc: 'BizPad, BizTab и BizClean' },
       company: { label: 'О компании', desc: 'История и направления' }
     },
     catalog: {
@@ -1798,11 +1798,11 @@
       title: 'Перед чтением',
       desc: 'Короткие ответы на частые запросы о блоге Bizdavar.',
       items: [
-        { q: 'О чём блог Bizdavar?', a: 'Гайды по цифровому маркетингу, SEO, многоязычным сайтам, Fast Web Studio, поставке датчиков VEGA и продуктам BizPet и BizTab.' },
+        { q: 'О чём блог Bizdavar?', a: 'Гайды по цифровому маркетингу, SEO, многоязычным сайтам, Fast Web Studio, поставке датчиков VEGA и продуктам BizPad и BizTab.' },
         { q: 'На скольких языках публикуются статьи?', a: 'Хаб блога и основные статьи индексируются на фарси, турецком, английском, русском и арабском — отдельные hreflang URL.' },
         { q: 'Как найти статью по услуге?', a: 'Используйте фильтр тем или перейдите из кластеров маркетинга, веба и поставок на страницы услуг.' },
         { q: 'Что делать после гайда по VEGA?', a: 'Отправьте модель или данные резервуара в WhatsApp или форму — проформа и код заказа выдаются Bizdavar.' },
-        { q: 'Есть ли продукты Bizdavar в блоге?', a: 'Да. BizTab, BizClean V5 и нагревательный мат BizPet открываются из этого каталога.' }
+        { q: 'Есть ли продукты Bizdavar в блоге?', a: 'Да. BizTab, BizClean V5 и нагревательный мат BizPad открываются из этого каталога.' }
       ]
     },
     cta: {
@@ -1840,7 +1840,7 @@
     { title: 'Что такое Bizdavar Group? История, команда, направления', excerpt: 'Профиль: основатель, 11 стран, 100+ проектов и экосистема брендов.', category: 'О компании' },
     { title: 'BizTab — первый бесконтактный настенный термометр Тебриза', excerpt: 'Продукт Bizdavar — погрешность менее 0,3°C, одобрение Университета Тебриза.', category: 'Свой продукт' },
     { title: 'Санитайзер рук Bizdavar V5', excerpt: 'Ультразвуковой датчик и автораспыление — инженерия Bizdavar.', category: 'Свой продукт' },
-    { title: 'BizPet — нагревательный мат BizPet', excerpt: 'Проектирование и производство в инкубаторе Университета Тебриза с Imen Sahand Padideh.', category: 'Свой продукт' },
+    { title: 'BizPad — нагревательный мат BizPad', excerpt: 'Проектирование и производство в инкубаторе Университета Тебриза с Imen Sahand Padideh.', category: 'Свой продукт' },
     { title: 'Разработка iOS — кейс Marvi Society', excerpt: 'UI/UX, Swift и App Store — клуб creator в Стамбуле.', category: 'Разработка приложений' },
     { title: 'Поставка газовых датчиков Prosense', excerpt: 'Выбор модели и B2B-запрос для нефти и HVAC.', category: 'Промоборудование' },
     { title: 'Поставка Liqui Moly — масла и присадки', excerpt: 'Моторные масла для автопарка и мастерских — B2B Bizdavar.', category: 'Промоборудование' },
@@ -2021,7 +2021,7 @@
         desc: 'صندوق فريق وتذاكر وفروع — من ٤٩ دولاراً شهرياً. التجربة: app.fxguard.io.',
         homeDesc: 'صندوق واتساب للفريق — من ٤٩ دولاراً'
       },
-      bizpet: {
+      bizpad: {
         title: 'وسادة تدفئة',
         desc: 'وسادة للمنزل والسيارة وسرير الحيوان — تصميم فريق بيزدوار.',
         homeDesc: 'وسادة تدفئة للمنزل ومقعد السيارة'
@@ -2068,7 +2068,7 @@
       digital: { label: 'تسويق رقمي', desc: 'SEO وCRO وSMM' },
       web: { label: 'تصميم مواقع', desc: 'موقع متعدد اللغات وFast Studio' },
       industrial: { label: 'توريد صناعي', desc: 'VEGA وأجهزة القياس' },
-      products: { label: 'منتجات Bizdavar', desc: 'BizPet وBizTab وBizClean' },
+      products: { label: 'منتجات Bizdavar', desc: 'BizPad وBizTab وBizClean' },
       company: { label: 'عن الشركة', desc: 'التاريخ ومجالات النشاط' }
     },
     catalog: {
@@ -2096,11 +2096,11 @@
       title: 'قبل القراءة',
       desc: 'إجابات قصيرة لعمليات البحث الشائعة عن مدونة Bizdavar.',
       items: [
-        { q: 'عن ماذا تتحدث مدونة Bizdavar؟', a: 'أدلة تسويق رقمي وSEO ومواقع متعددة اللغات وFast Web Studio وتوريد حساسات VEGA ومنتجات مثل BizPet وBizTab.' },
+        { q: 'عن ماذا تتحدث مدونة Bizdavar؟', a: 'أدلة تسويق رقمي وSEO ومواقع متعددة اللغات وFast Web Studio وتوريد حساسات VEGA ومنتجات مثل BizPad وBizTab.' },
         { q: 'بكم لغة تُنشر المقالات؟', a: 'مركز المدونة والمقالات الأساسية مفهرسة بالفارسية والتركية والإنجليزية والروسية والعربية مع عناوين hreflang منفصلة.' },
         { q: 'كيف أجد مقالاً مرتبطاً بخدمة؟', a: 'استخدم فلتر الموضوع أو انتقل من عناقيد التسويق وتصميم الويب والتوريد إلى صفحات الخدمات.' },
         { q: 'ماذا أفعل بعد دليل VEGA؟', a: 'أرسل الموديل أو بيانات الخزان عبر واتساب أو النموذج — الفاتورة المبدئية ورمز الطلب يصدران من Bizdavar.' },
-        { q: 'هل منتجات Bizdavar موجودة هنا؟', a: 'نعم. BizTab وBizClean V5 ووسادة BizPet الحرارية لها صفحات من هذا الكتالوج.' }
+        { q: 'هل منتجات Bizdavar موجودة هنا؟', a: 'نعم. BizTab وBizClean V5 ووسادة BizPad الحرارية لها صفحات من هذا الكتالوج.' }
       ]
     },
     cta: {
@@ -2138,7 +2138,7 @@
     { title: 'ما هي Bizdavar Group؟ التاريخ والفريق والأنشطة', excerpt: 'الملف: المؤسس، ١١ دولة، أكثر من ١٠٠ مشروع ونظام العلامات.', category: 'عن الشركة' },
     { title: 'BizTab — أول مقياس حرارة جداري بلا تلامس في تبريز', excerpt: 'منتج Bizdavar — خطأ أقل من ٠٫٣°م واعتماد جامعة تبريز.', category: 'منتج خاص' },
     { title: 'معقم اليدين Bizdavar V5', excerpt: 'مستشعر فوق صوتي ورش تلقائي — هندسة Bizdavar.', category: 'منتج خاص' },
-    { title: 'BizPet — وسادة التدفئة BizPet', excerpt: 'تصميم وإنتاج في حاضنة جامعة تبريز مع ایمن سهند پدیده.', category: 'منتج خاص' },
+    { title: 'BizPad — وسادة التدفئة BizPad', excerpt: 'تصميم وإنتاج في حاضنة جامعة تبريز مع ایمن سهند پدیده.', category: 'منتج خاص' },
     { title: 'تطوير iOS — دراسة Marvi Society', excerpt: 'UI/UX وSwift وApp Store — نادٍ للمبدعين في إسطنبول.', category: 'تطوير تطبيقات' },
     { title: 'توريد كاشف غاز Prosense', excerpt: 'اختيار الطراز وعرض B2B للنفط وHVAC.', category: 'معدات صناعية' },
     { title: 'توريد Liqui Moly — زيوت وإضافات أصلية', excerpt: 'زيت محرك للأساطيل والورش — B2B بيزدوار.', category: 'معدات صناعية' },

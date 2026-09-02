@@ -467,6 +467,140 @@
       </section>`;
   };
 
+  function enhancePresenceMap(wrap, labels) {
+    if (!wrap || wrap.dataset.enhanced === '1' || typeof fetch !== 'function') return;
+    const src = wrap.getAttribute('data-presence-src');
+    if (!src) return;
+    wrap.dataset.enhanced = '1';
+    const countries = labels.mapCountries || {};
+    const offices = labels.mapOffices || {};
+    fetch(src, { credentials: 'same-origin' })
+      .then((res) => (res.ok ? res.text() : Promise.reject(new Error('map'))))
+      .then((xml) => {
+        const parsed = new DOMParser().parseFromString(xml, 'image/svg+xml');
+        const svg = parsed.documentElement;
+        if (!svg || svg.nodeName.toLowerCase() !== 'svg' || parsed.querySelector('parsererror')) {
+          wrap.dataset.enhanced = '0';
+          return;
+        }
+        svg.removeAttribute('width');
+        svg.removeAttribute('height');
+        svg.setAttribute('class', 'presence-map-svg');
+        svg.setAttribute('aria-hidden', 'true');
+        const live = document.importNode(svg, true);
+        const fallback = wrap.querySelector('img');
+        wrap.insertBefore(live, fallback);
+        if (fallback) fallback.hidden = true;
+
+        const officeCountry = { tabriz: 'iran', yerevan: 'armenia', istanbul: 'turkey', dubai: 'emirates' };
+        const landAliases = { tasmania: 'australia' };
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const ns = 'http://www.w3.org/2000/svg';
+
+        live.querySelectorAll('.presence-arcs, .presence-pins, .presence-hq-glow, .presence-hq-ring').forEach((el) => {
+          el.setAttribute('pointer-events', 'none');
+        });
+
+        live.querySelectorAll('path[fill="#FFDE00"]').forEach((p) => {
+          p.classList.add('is-active');
+          const countryId = landAliases[p.id] || p.id;
+          const name = countries[countryId];
+          if (name) {
+            p.setAttribute('tabindex', '0');
+            p.setAttribute('role', 'button');
+            p.setAttribute('aria-label', name);
+            p.dataset.label = name;
+          }
+        });
+        live.querySelectorAll('.presence-arc').forEach((arc, i) => {
+          arc.style.setProperty('--arc-delay', `${(i % 5) * 0.45}s`);
+          if (reduceMotion) return;
+          const d = arc.getAttribute('d');
+          if (!d || !arc.parentNode) return;
+          const packet = document.createElementNS(ns, 'circle');
+          packet.setAttribute('r', '2.35');
+          packet.setAttribute('class', 'presence-packet');
+          packet.setAttribute('pointer-events', 'none');
+          const motion = document.createElementNS(ns, 'animateMotion');
+          motion.setAttribute('dur', `${2.6 + (i % 4) * 0.45}s`);
+          motion.setAttribute('repeatCount', 'indefinite');
+          motion.setAttribute('path', d);
+          motion.setAttribute('begin', `${(i % 6) * 0.28}s`);
+          packet.appendChild(motion);
+          arc.parentNode.appendChild(packet);
+        });
+        live.querySelectorAll('.presence-pin-ring, .presence-hq-ring').forEach((el, i) => {
+          el.style.animationDelay = `${(i % 8) * 0.22}s`;
+        });
+        live.querySelectorAll('.presence-office').forEach((el, i) => {
+          const id = el.getAttribute('data-office');
+          if (offices[id]) el.dataset.label = offices[id];
+          el.style.animationDelay = `${i * 0.32}s`;
+        });
+
+        const tip = document.createElement('div');
+        tip.className = 'presence-map__tip';
+        tip.hidden = true;
+        wrap.appendChild(tip);
+
+        const legend = document.createElement('div');
+        legend.className = 'presence-map__legend';
+        legend.innerHTML = `
+          <span><i class="presence-map__swatch presence-map__swatch--land"></i>${labels.mapLegendActive || 'کشور فعال'}</span>
+          <span><i class="presence-map__swatch presence-map__swatch--office"></i>${labels.mapLegendOffice || 'دفتر عملیاتی'}</span>`;
+        wrap.appendChild(legend);
+
+        const cards = wrap.closest('#intelPresence')?.querySelectorAll('.presence-country') || [];
+        const countryIdFromHit = (hit) => {
+          if (!hit) return '';
+          if (hit.id && countries[hit.id]) return hit.id;
+          if (hit.id && countries[landAliases[hit.id]]) return landAliases[hit.id];
+          const pin = hit.getAttribute('data-pin');
+          if (pin) return pin;
+          return officeCountry[hit.getAttribute('data-office')] || '';
+        };
+        const syncHot = (text, countryId) => {
+          live.querySelectorAll('path.is-active').forEach((p) => {
+            p.classList.toggle('is-hot', Boolean(countryId) && (p.id === countryId || landAliases[p.id] === countryId));
+          });
+          cards.forEach((card) => {
+            const name = (card.querySelector('.presence-country__head strong') || card.querySelector('strong'))?.textContent.trim() || '';
+            card.classList.toggle('is-map-hot', Boolean(text && name && (text === name || text.includes(name))));
+          });
+        };
+        const showTip = (text, event, countryId) => {
+          if (!text) return;
+          tip.hidden = false;
+          tip.textContent = text;
+          const rect = wrap.getBoundingClientRect();
+          const x = event.clientX - rect.left;
+          const y = event.clientY - rect.top;
+          tip.style.left = `${Math.max(14, Math.min(rect.width - 14, x))}px`;
+          tip.style.top = `${Math.max(14, y - 18)}px`;
+          syncHot(text, countryId);
+        };
+        const hideTip = () => {
+          tip.hidden = true;
+          syncHot('', '');
+        };
+
+        live.addEventListener('pointermove', (event) => {
+          const hit = event.target.closest('[data-label], .is-active, .presence-office');
+          if (!hit) { hideTip(); return; }
+          showTip(hit.dataset.label || hit.getAttribute('aria-label'), event, countryIdFromHit(hit));
+        });
+        live.addEventListener('pointerleave', hideTip);
+        live.addEventListener('focusin', (event) => {
+          const el = event.target;
+          if (!el.dataset.label) return;
+          const box = el.getBoundingClientRect();
+          showTip(el.dataset.label, { clientX: box.left + box.width / 2, clientY: box.top }, countryIdFromHit(el));
+        });
+        live.addEventListener('focusout', hideTip);
+      })
+      .catch(() => { wrap.dataset.enhanced = '0'; });
+  }
+
   window.renderCompanyIntelAbout = function () {
     const I = window.getIntelLocalized ? window.getIntelLocalized() : window.BIZDAVAR_INTEL;
     if (!I) return;
@@ -600,8 +734,8 @@
       presenceEl.innerHTML = `
         <div class="presence-showcase">
           <div class="presence-showcase__hero">
-            <div class="presence-showcase__map">
-              <img src="${path(P.mapImage || 'assets/images/content/presence-map.svg')}" alt="${L.mapAlt || 'نقشه حضور جهانی بیزدوار'}" width="480" height="300" loading="lazy">
+            <div class="presence-showcase__map" data-presence-src="${path(P.mapImage || 'assets/images/content/presence-map.svg')}">
+              <img src="${path(P.mapImage || 'assets/images/content/presence-map.svg')}" alt="${L.mapAlt || 'نقشه حضور جهانی بیزدوار'}" width="960" height="600" loading="lazy">
             </div>
             <div class="presence-showcase__intro">
               <p class="presence-showcase__desc">${P.summary || P.summaryFa || ''}</p>
@@ -650,15 +784,19 @@
       syncOffices();
       if (officeMq.addEventListener) officeMq.addEventListener('change', syncOffices);
       else officeMq.addListener(syncOffices);
+      enhancePresenceMap(presenceEl.querySelector('[data-presence-src]'), L);
     }
 
     const credEl = document.getElementById('intelCredentials');
     if (credEl) {
       credEl.innerHTML = I.credentials.map(c => `
-        <div class="intel-cred-card">
-          <strong>${c.name}</strong>
-          <span>${c.issuer} — ${c.year}</span>
-        </div>
+        <article class="intel-cred-card">
+          <span class="intel-cred-card__mark" aria-hidden="true"></span>
+          <div class="intel-cred-card__body">
+            <strong>${c.name}</strong>
+            <span>${c.issuer} · ${c.year}</span>
+          </div>
+        </article>
       `).join('');
     }
 
@@ -667,7 +805,9 @@
       exEl.innerHTML = `
         <div class="exhibitions-grid">
           ${I.exhibitions.map(e => `
-            <article class="exhibition-card">
+            <article class="exhibition-card${e.image || e.video ? ' exhibition-card--media' : ''}">
+              ${exhibitionMediaHtml(e)}
+              <div class="exhibition-card__body">
               <div class="exhibition-card__head">
                 <span class="exhibition-card__year">${e.dateDisplay || e.year}</span>
                 <span class="exhibition-card__source">${e.source}</span>
@@ -675,7 +815,6 @@
               <h3 class="exhibition-card__title">${e.title}</h3>
               <p class="exhibition-card__entity"><strong>${e.entity}</strong>${e.brand ? ` · ${e.brand}` : ''}</p>
               <p class="exhibition-card__desc">${e.desc}</p>
-              ${exhibitionMediaHtml(e)}
               <dl class="exhibition-card__meta">
                 ${e.section ? `<div><dt>${t('exhibitions.section', 'بخش')}</dt><dd>${e.section}</dd></div>` : ''}
                 ${e.zone ? `<div><dt>${t('exhibitions.zone', 'زون')}</dt><dd>${e.zone}</dd></div>` : ''}
@@ -702,8 +841,9 @@
               ` : ''}
               <footer class="exhibition-card__footer">
                 ${e.sourceUrl ? `<a href="${e.sourceUrl}" target="_blank" rel="noopener noreferrer" class="service-card__link">${e.sourceLabel || e.source}${linkArrow()}</a>` : ''}
-                ${e.sourceHistoryUrl ? ` · <a href="${e.sourceHistoryUrl}" target="_blank" rel="noopener noreferrer" class="service-card__link">${t('exhibitions.history', 'تاریخچه نمایشگاه')}${linkArrow()}</a>` : ''}
+                ${e.sourceHistoryUrl ? `<a href="${e.sourceHistoryUrl}" target="_blank" rel="noopener noreferrer" class="service-card__link">${t('exhibitions.history', 'تاریخچه نمایشگاه')}${linkArrow()}</a>` : ''}
               </footer>
+              </div>
             </article>
           `).join('')}
         </div>`;
@@ -727,9 +867,9 @@
                 </div>
                 <footer class="achievement-card__footer">
                   ${(a.pressLinks && a.pressLinks.length)
-                    ? a.pressLinks.map(p => `<a href="${p.url}" target="_blank" rel="noopener noreferrer" class="service-card__link">${p.label}${linkArrow()}</a>`).join(' · ') + ' · '
-                    : (a.pressUrl ? `<a href="${a.pressUrl}" target="_blank" rel="noopener noreferrer" class="service-card__link">${a.pressLabel || 'Press'}${linkArrow()}</a> · ` : '')}
-                  ${a.videoUrl ? `<a href="${a.videoUrl}" target="_blank" rel="noopener noreferrer" class="service-card__link">${a.videoLabel || 'YouTube'}${linkArrow()}</a> · ` : ''}
+                    ? a.pressLinks.map(p => `<a href="${p.url}" target="_blank" rel="noopener noreferrer" class="service-card__link">${p.label}${linkArrow()}</a>`).join('')
+                    : (a.pressUrl ? `<a href="${a.pressUrl}" target="_blank" rel="noopener noreferrer" class="service-card__link">${a.pressLabel || 'Press'}${linkArrow()}</a>` : '')}
+                  ${a.videoUrl ? `<a href="${a.videoUrl}" target="_blank" rel="noopener noreferrer" class="service-card__link">${a.videoLabel || 'YouTube'}${linkArrow()}</a>` : ''}
                   <a href="${a.sourceUrl}" target="_blank" rel="noopener noreferrer" class="service-card__link">${a.source}${linkArrow()}</a>
                 </footer>
               </div>
@@ -767,7 +907,10 @@
             <article class="intel-proof-card">
               <span class="intel-proof-card__cat">${h.category}</span>
               <p>${h.text}</p>
-              <footer><cite>${h.source}</cite></footer>
+              <footer>
+                <cite>${h.source}</cite>
+                ${h.year ? `<span class="intel-proof-card__year">${h.year}</span>` : ''}
+              </footer>
             </article>
           `).join('')}
         </div>

@@ -49,7 +49,7 @@ const PAGE_LOADER = {
     afterPageI18n: 'lib/supply-brand-page.js,config/uwt-products.js',
     beforeMain: 'uwt-page.js'
   },
-  'pages/bizpet.html': {},
+  'pages/bizpad.html': {},
   'pages/prosense.html': {
     afterSeo: 'i18n/supply-catalog-i18n.js',
     afterPageI18n: 'lib/supply-brand-page.js,config/prosense-products.js',

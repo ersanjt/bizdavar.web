@@ -151,10 +151,10 @@
         seoDescription: 'BizTab — اولین دماسنج دیواری غیرتماسی تبریز. طراحی تیم بیزدوار، دقت کمتر از ۰.۳ درجه، تأیید دانشگاه تبریز.',
         seoKeywords: 'BizTab, دماسنج غیرتماسی, IoT, بیزدوار, تبریز, محصول اختصاصی'
       },
-      bizpet: {
-        seoTitle: 'BizPet | پد حرارتی بیز پت — محصول اصلی ۱۳۹۹ تبریز',
-        seoDescription: 'BizPet محصول اصلی پد حرارتی پدیده برای خانه، خودرو و جا خواب حیوانات. طراحی در مرکز رشد دانشگاه تبریز با ایمن سهند پدیده. ۵ تا ۱۲ ولت.',
-        seoKeywords: 'BizPet, بیز پت, پت بیز, پد حرارتی پدیده, مرکز رشد دانشگاه تبریز, بیزدوار'
+      bizpad: {
+        seoTitle: 'BizPad | پد حرارتی بیز پد — محصول اصلی ۱۳۹۹ تبریز',
+        seoDescription: 'BizPad محصول اصلی پد حرارتی پدیده برای خانه، خودرو و جا خواب حیوانات. طراحی در مرکز رشد دانشگاه تبریز با ایمن سهند پدیده. ۵ تا ۱۲ ولت.',
+        seoKeywords: 'BizPad, بیز پد, پد حرارتی پدیده, مرکز رشد دانشگاه تبریز, بیزدوار'
       },
       bizsanitizerV5: {
         seoTitle: 'BizClean V5 | دستگاه ضدعفونی دست بیزدوار — محصول مهندسی‌شده',
@@ -162,14 +162,14 @@
         seoKeywords: 'BizClean V5, BizClean, ضدعفونی دست, بیزدوار, کرونا, دیجی‌کالا, محصول اختصاصی'
       },
       bizseat: {
-        seoTitle: 'BizSeat همان BizPet است | پد حرارتی و پشتی خودرو',
-        seoDescription: 'BizSeat نام فروشگاهی جدا نیست — همان پد حرارتی BizPet محصول ۱۳۹۹ مرکز رشد دانشگاه تبریز است. صفحه اصلی محصول BizPet.',
-        seoKeywords: 'BizSeat, BizPet, پد حرارتی, پشتی صندلی خودرو, بیزدوار, دیجی‌کالا'
+        seoTitle: 'BizSeat همان BizPad است | پد حرارتی و پشتی خودرو',
+        seoDescription: 'BizSeat نام فروشگاهی جدا نیست — همان پد حرارتی BizPad محصول ۱۳۹۹ مرکز رشد دانشگاه تبریز است. صفحه اصلی محصول BizPad.',
+        seoKeywords: 'BizSeat, BizPad, پد حرارتی, پشتی صندلی خودرو, بیزدوار, دیجی‌کالا'
       },
-      bizpet: {
-        seoTitle: 'BizPet | پد حرارتی بیز پت — محصول اصلی ۱۳۹۹ تبریز',
-        seoDescription: 'BizPet محصول اصلی پد حرارتی پدیده برای خانه، خودرو و جا خواب حیوانات. طراحی در مرکز رشد دانشگاه تبریز با ایمن سهند پدیده. ۵ تا ۱۲ ولت. پشتی خودرو همان این محصول است.',
-        seoKeywords: 'BizPet, بیز پت, پت بیز, پد حرارتی پدیده, مرکز رشد دانشگاه تبریز, ایمن سهند پدیده, بیزدوار'
+      bizpad: {
+        seoTitle: 'BizPad | پد حرارتی بیز پد — محصول اصلی ۱۳۹۹ تبریز',
+        seoDescription: 'BizPad محصول اصلی پد حرارتی پدیده برای خانه، خودرو و جا خواب حیوانات. طراحی در مرکز رشد دانشگاه تبریز با ایمن سهند پدیده. ۵ تا ۱۲ ولت. پشتی خودرو همان این محصول است.',
+        seoKeywords: 'BizPad, بیز پد, پد حرارتی پدیده, مرکز رشد دانشگاه تبریز, ایمن سهند پدیده, بیزدوار'
       },
       fxguard: {
         seoTitle: 'FXGuard | نرخ واتساپ برای میز صرافی — از $49/ماه — بیزدوار',
@@ -378,10 +378,10 @@
         seoDescription: 'BizTab — Tebriz\'de tasarlanan ilk temasız duvar termometresi. Bizdavar ekibi, 0,3°C altı hata payı, Tebriz Üniversitesi onayı.',
         seoKeywords: 'BizTab, temasız termometre, IoT, Bizdavar, Tebriz'
       },
-      bizpet: {
-        seoTitle: 'BizPet | Isıtma pedi — Bizdavar ürünü',
-        seoDescription: 'BizPet — ev, araç ve evcil hayvan yatakları için Padideh ısıtma pedi. Tebriz Üniversitesi Teknoloji Kuluçka Merkezi\'nde tasarlandı. 5–12 V.',
-        seoKeywords: 'BizPet, ısıtma pedi, Padideh, Bizdavar, Tebriz'
+      bizpad: {
+        seoTitle: 'BizPad | Isıtma pedi — Bizdavar ürünü',
+        seoDescription: 'BizPad — ev, araç ve evcil hayvan yatakları için Padideh ısıtma pedi. Tebriz Üniversitesi Teknoloji Kuluçka Merkezi\'nde tasarlandı. 5–12 V.',
+        seoKeywords: 'BizPad, ısıtma pedi, Padideh, Bizdavar, Tebriz'
       },
       bizsanitizerV5: {
         seoTitle: 'BizClean V5 | Otomatik el dezenfektanı — Bizdavar',
@@ -389,14 +389,14 @@
         seoKeywords: 'BizClean V5, BizClean, el dezenfektan, Bizdavar, Digikala'
       },
       bizseat: {
-        seoTitle: 'BizSeat, BizPet ile aynı üründür | ısı pedi',
-        seoDescription: 'BizSeat ayrı bir hat değil — 1399 Tebriz ısı pedi BizPet’in araç koltuğu satış adıdır. Ana sayfa BizPet.',
-        seoKeywords: 'BizSeat, BizPet, ısı pedi, araç koltuğu, Bizdavar, Digikala'
+        seoTitle: 'BizSeat, BizPad ile aynı üründür | ısı pedi',
+        seoDescription: 'BizSeat ayrı bir hat değil — 1399 Tebriz ısı pedi BizPad’in araç koltuğu satış adıdır. Ana sayfa BizPad.',
+        seoKeywords: 'BizSeat, BizPad, ısı pedi, araç koltuğu, Bizdavar, Digikala'
       },
-      bizpet: {
-        seoTitle: 'BizPet | Isı pedi — asıl 1399 Tebriz ürünü',
-        seoDescription: 'BizPet, ev, araç koltuğu ve evcil hayvan yatağı için asıl Padideh ısı pedidir. Digikala koltuk desteği aynı üründür.',
-        seoKeywords: 'BizPet, ısı pedi, Padideh, Tebriz Üniversitesi, Imen Sahand Padideh, Bizdavar'
+      bizpad: {
+        seoTitle: 'BizPad | Isı pedi — asıl 1399 Tebriz ürünü',
+        seoDescription: 'BizPad, ev, araç koltuğu ve evcil hayvan yatağı için asıl Padideh ısı pedidir. Digikala koltuk desteği aynı üründür.',
+        seoKeywords: 'BizPad, ısı pedi, Padideh, Tebriz Üniversitesi, Imen Sahand Padideh, Bizdavar'
       },
       fxguard: {
         seoTitle: 'FXGuard | WhatsApp kur paneli — $49/ay’dan — Bizdavar',
@@ -687,10 +687,10 @@
         seoDescription: 'BizTab — first non-contact wall thermometer designed in Tabriz by the Bizdavar team. Error under 0.3°C, approved by University of Tabriz.',
         seoKeywords: 'BizTab, non-contact thermometer, IoT, Bizdavar, Tabriz'
       },
-      bizpet: {
-        seoTitle: 'BizPet | Padideh heating pad — Bizdavar product',
-        seoDescription: 'BizPet — portable Padideh heating pad for home, car and pet beds. Designed at University of Tabriz Technology Incubator. 5–12 V.',
-        seoKeywords: 'BizPet, heating pad, Padideh, Bizdavar, Tabriz'
+      bizpad: {
+        seoTitle: 'BizPad | Padideh heating pad — Bizdavar product',
+        seoDescription: 'BizPad — portable Padideh heating pad for home, car and pet beds. Designed at University of Tabriz Technology Incubator. 5–12 V.',
+        seoKeywords: 'BizPad, heating pad, Padideh, Bizdavar, Tabriz'
       },
       bizsanitizerV5: {
         seoTitle: 'BizClean V5 | Automatic hand sanitizer — Bizdavar',
@@ -698,14 +698,14 @@
         seoKeywords: 'BizClean V5, BizClean, hand sanitizer, Bizdavar, Digikala'
       },
       bizseat: {
-        seoTitle: 'BizSeat is BizPet | heating pad, not a second line',
-        seoDescription: 'BizSeat is the car-seat listing name for the same 1399 BizPet heating pad. The main product page is BizPet.',
-        seoKeywords: 'BizSeat, BizPet, heating pad, car seat, Bizdavar, Digikala'
+        seoTitle: 'BizSeat is BizPad | heating pad, not a second line',
+        seoDescription: 'BizSeat is the car-seat listing name for the same 1399 BizPad heating pad. The main product page is BizPad.',
+        seoKeywords: 'BizSeat, BizPad, heating pad, car seat, Bizdavar, Digikala'
       },
-      bizpet: {
-        seoTitle: 'BizPet | Heating pad — the 1399 Tabriz product',
-        seoDescription: 'BizPet is the flagship Padideh heating pad for home, car seat and pet beds. The Digikala car-backrest listing is the same product.',
-        seoKeywords: 'BizPet, heating pad, Padideh, University of Tabriz, Imen Sahand Padideh, Bizdavar'
+      bizpad: {
+        seoTitle: 'BizPad | Heating pad — the 1399 Tabriz product',
+        seoDescription: 'BizPad is the flagship Padideh heating pad for home, car seat and pet beds. The Digikala car-backrest listing is the same product.',
+        seoKeywords: 'BizPad, heating pad, Padideh, University of Tabriz, Imen Sahand Padideh, Bizdavar'
       },
       fxguard: {
         seoTitle: 'FXGuard | Quote rates on WhatsApp — from $49/mo — Bizdavar',

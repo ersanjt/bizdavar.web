@@ -928,6 +928,14 @@ body[data-page="home"] .industrial-card[data-brand="liqui-moly"] .industrial-car
   object-position: 38% 55%;
 }
 
+body[data-page="home"] .industrial-card[data-brand="uwt"] .industrial-card__media img {
+  object-fit: contain;
+  object-position: center 42%;
+  transform: none;
+  padding: 52px 2% 18%;
+  box-sizing: border-box;
+}
+
 body[data-page="home"] .industrial-card::after {
   content: '';
   position: absolute;
@@ -1018,7 +1026,9 @@ body[data-page="home"] .industrial-card--link:focus-visible .industrial-card__me
 }
 
 body[data-page="home"] .industrial-card[data-brand="vega"]:hover .industrial-card__media img,
-body[data-page="home"] .industrial-card[data-brand="vega"]:focus-visible .industrial-card__media img {
+body[data-page="home"] .industrial-card[data-brand="vega"]:focus-visible .industrial-card__media img,
+body[data-page="home"] .industrial-card[data-brand="uwt"]:hover .industrial-card__media img,
+body[data-page="home"] .industrial-card[data-brand="uwt"]:focus-visible .industrial-card__media img {
   transform: scale(1.04);
 }
 

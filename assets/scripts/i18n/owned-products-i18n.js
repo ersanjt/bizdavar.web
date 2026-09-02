@@ -76,7 +76,7 @@
             bizswap: 'پیش‌فروش و سواپ توکن',
             biztab: 'دماسنج IoT غیرتماسی',
             bizclean: 'ضدعفونی دست اتوماتیک',
-            bizpet: 'پد حرارتی — خانه و خودرو',
+            bizpad: 'پد حرارتی — خانه و خودرو',
             vega: 'سنسور سطح و فشار',
             uwt: 'سنسور سطح سیلو و مخزن',
             prosense: 'دتکتور گاز و شعله',
@@ -104,7 +104,7 @@
           software: { label: 'نرم‌افزار و SaaS', desc: 'WhatsApp CRM و Accounting از سوئیت FXGuard، به‌همراه BizSwap' },
           'iot-health': { label: 'IoT و بهداشت', desc: 'دماسنج، ضدعفونی‌کننده و تجهیزات بدون تماس' },
           packaging: { label: 'بسته‌بندی و سیل', desc: 'دستگاه‌های کش‌زن و خطوط بسته‌بندی' },
-          medical: { label: 'پزشکی و PPE', desc: 'پد حرارتی BizPet (خانه و خودرو) و خطوط تولید ماسک' }
+          medical: { label: 'پزشکی و PPE', desc: 'پد حرارتی BizPad (خانه و خودرو) و خطوط تولید ماسک' }
         },
         items: {
           bizswap: {
@@ -140,8 +140,8 @@
             desc: 'دستگاه ضدعفونی دست اتوماتیک BizClean V5 — تولید تیم بیزدوار، RINOTEX 1400 از طریق واحد پارکی «ایمن سهند پدیده»، پوشش ISNA و صدا و سیما.',
             tags: ['بهداشت', 'اتوماتیک', 'کرونا']
           },
-          bizpet: {
-            name: 'BizPet',
+          bizpad: {
+            name: 'BizPad',
             title: 'پد حرارتی',
             desc: 'پد حرارتی برای خانه، خودرو و جای خواب حیوان — طراحی تیم بیزدوار در تبریز.',
             homeDesc: 'پد حرارتی خانه و صندلی خودرو',
@@ -277,7 +277,7 @@
             bizswap: 'Token ön satış & swap',
             biztab: 'Temassız IoT termometre',
             bizclean: 'Otomatik el dezenfektanı',
-            bizpet: 'Isı pedi — ev ve araç',
+            bizpad: 'Isı pedi — ev ve araç',
             vega: 'Seviye ve basınç sensörü',
             uwt: 'Silo ve tank seviye sensörü',
             prosense: 'Gaz ve alev dedektörü',
@@ -305,7 +305,7 @@
           software: { label: 'Yazılım ve SaaS', desc: 'FXGuard WhatsApp CRM ve Accounting, ayrıca BizSwap' },
           'iot-health': { label: 'IoT ve hijyen', desc: 'Termometre, dezenfektan ve temasız ekipman' },
           packaging: { label: 'Ambalaj ve vakum', desc: 'Vakum makineleri ve ambalaj hatları' },
-          medical: { label: 'Medikal ve PPE', desc: 'BizPet ısı pedi (ev ve araç) ve maske üretim hatları' }
+          medical: { label: 'Medikal ve PPE', desc: 'BizPad ısı pedi (ev ve araç) ve maske üretim hatları' }
         },
         items: {
           bizswap: { name: 'BizSwap', title: 'Token ön satış & swap', desc: 'Cüzdan bağlantısı, token swap ve on-chain ön satış — BEP-20 ve RWA.', homeDesc: 'Zincir üstü token swap ve ön satış', tags: ['DeFi', 'Web3', 'Token Swap'] },
@@ -313,7 +313,7 @@
           'fxguard-accounting': { name: 'Accounting', title: 'FXGuard Accounting', desc: 'Finans, döviz ve KOBİ ekipleri için muhasebe sistemi — FXGuard ürün ailesinin parçası.', tags: ['FXGuard', 'Accounting', 'Finance'] },
           biztab: { name: 'BizTab', title: 'Temasız duvar termometresi', desc: 'Temasız duvar termometresi — 0,3°C altı hata, Tebriz üretimi.', homeDesc: 'Giriş ve klinik için temasız termometre', tags: ['IoT', 'Temasız', 'Tebriz'] },
           bizclean: { name: 'BizClean', title: 'Hijyen ve dezenfeksiyon', desc: 'Otomatik el dezenfektan (BizClean V5) — Bizdavar üretimi; RINOTEX 1400 «Imen Sahand Padideh» park birimi; ISNA/IRIB basını.', tags: ['Hijyen', 'Otomatik', 'COVID'] },
-          bizpet: { name: 'BizPet', title: 'BizPet ısı pedi', desc: 'Ev, araç ve pet yatağı için ısı pedi — Bizdavar tasarımı.', homeDesc: 'Ev ve araç koltuğu ısı pedi', tags: ['Isı pedi', 'Otomotiv', 'Tebriz'] },
+          bizpad: { name: 'BizPad', title: 'BizPad ısı pedi', desc: 'Ev, araç ve pet yatağı için ısı pedi — Bizdavar tasarımı.', homeDesc: 'Ev ve araç koltuğu ısı pedi', tags: ['Isı pedi', 'Otomotiv', 'Tebriz'] },
           biztouch: { name: 'BizTouch', title: 'Temasız çözümler', desc: 'Giriş, hijyen ve kamusal alanlar için temasız cihazlar — Bizdavar tasarımı.', tags: ['Temasız', 'IoT', 'Giriş'] },
           bizroll: { name: 'BizRoll', title: 'Rulo ve ambalaj sistemleri', desc: 'Endüstriyel rulo ve ambalaj makineleri.', tags: ['Ambalaj', 'Rulo', 'Endüstriyel'] },
           'sealer-home': { name: 'Ev tipi vakum makinesi', title: 'Ev vakumu', desc: 'Ev ve küçük atölyeler için vakum/kapama makinesi.', tags: ['Vakum', 'Ev', 'Kapama'] },
@@ -409,7 +409,7 @@
             bizswap: 'Token presale & swap',
             biztab: 'Non-contact IoT thermometer',
             bizclean: 'Automatic hand sanitizer',
-            bizpet: 'Heating pad — home and car',
+            bizpad: 'Heating pad — home and car',
             vega: 'Level and pressure sensors',
             uwt: 'Silo and tank level sensors',
             prosense: 'Gas and flame detectors',
@@ -437,7 +437,7 @@
           software: { label: 'Software & SaaS', desc: 'FXGuard WhatsApp CRM and Accounting, plus BizSwap' },
           'iot-health': { label: 'IoT & hygiene', desc: 'Thermometers, sanitizers and contactless devices' },
           packaging: { label: 'Packaging & sealing', desc: 'Vacuum sealers and packaging lines' },
-          medical: { label: 'Medical & PPE', desc: 'BizPet heating pad (home and car) and mask production lines' }
+          medical: { label: 'Medical & PPE', desc: 'BizPad heating pad (home and car) and mask production lines' }
         },
         items: {
           bizswap: { name: 'BizSwap', title: 'Token presale & swap', desc: 'Wallet connect, token swap and on-chain presale — BEP-20 and RWA.', homeDesc: 'On-chain token swap and presale', tags: ['DeFi', 'Web3', 'Token Swap'] },
@@ -445,7 +445,7 @@
           'fxguard-accounting': { name: 'Accounting', title: 'FXGuard Accounting', desc: 'Accounting system for finance, exchange and SME teams — part of the FXGuard product suite.', tags: ['FXGuard', 'Accounting', 'Finance'] },
           biztab: { name: 'BizTab', title: 'Non-contact wall thermometer', desc: 'Wall-mounted non-contact thermometer — under 0.3°C error, built in Tabriz.', homeDesc: 'Lobby and clinic non-contact thermometer', tags: ['IoT', 'Contactless', 'Tabriz'] },
           bizclean: { name: 'BizClean', title: 'Hygiene & disinfection line', desc: 'Automatic hand sanitizer (BizClean V5) — Bizdavar production; RINOTEX 1400 via «Imen Sahand Padideh» park unit; ISNA & IRIB press.', tags: ['Hygiene', 'Automatic', 'COVID'] },
-          bizpet: { name: 'BizPet', title: 'Heating pad', desc: 'Heating pad for home, car and pet beds — designed by the Bizdavar team.', homeDesc: 'Home and car-seat heating pad', tags: ['Heating pad', 'Automotive', 'Tabriz'] },
+          bizpad: { name: 'BizPad', title: 'Heating pad', desc: 'Heating pad for home, car and pet beds — designed by the Bizdavar team.', homeDesc: 'Home and car-seat heating pad', tags: ['Heating pad', 'Automotive', 'Tabriz'] },
           biztouch: { name: 'BizTouch', title: 'Contactless solutions', desc: 'Contactless devices for entrances, hygiene and public spaces — Bizdavar engineered.', tags: ['Contactless', 'IoT', 'Entrance'] },
           bizroll: { name: 'BizRoll', title: 'Roll & packaging systems', desc: 'Engineered roll and packaging machinery for industrial production.', tags: ['Packaging', 'Roll', 'Industrial'] },
           'sealer-home': { name: 'Home vacuum sealer', title: 'Domestic sealing', desc: 'Vacuum sealer designed for home use and small workshops.', tags: ['Vacuum', 'Home', 'Sealing'] },
