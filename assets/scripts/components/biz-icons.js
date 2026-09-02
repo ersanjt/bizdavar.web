@@ -84,7 +84,8 @@
     health: `<path ${S} d="M12 21s-7-4-7-10a4 4 0 017-2 4 4 0 017 2c0 6-7 10-7 10z"/><path ${S} d="M12 10v6M9 13h6"/><circle cx="12" cy="8" r="1" ${A}/>`,
     swap: `<path ${S} d="M7 16l-3-3 3-3M17 8l3 3-3 3"/><path ${S} d="M4 13h7M20 11h-7"/><circle cx="12" cy="12" r="1.5" ${A}/>`,
     hourglass: `<path ${S} d="M8 3h8v4l-4 5 4 5v4H8v-4l4-5-4-5V3z"/><circle cx="12" cy="12" r="1.5" ${A}/>`,
-    check: `<path ${S} d="M5 12l4 4 10-10"/><circle cx="7" cy="12" r="1" ${A}/>`
+    check: `<path ${S} d="M5 12l4 4 10-10"/><circle cx="7" cy="12" r="1" ${A}/>`,
+    message: `<path ${S} d="M5 5h14a2 2 0 012 2v9a2 2 0 01-2 2H9l-4 3v-3H5a2 2 0 01-2-2V7a2 2 0 012-2z"/><circle cx="8.5" cy="11.5" r="1.1" ${A}/><circle cx="12" cy="11.5" r="1.1" ${A}/><circle cx="15.5" cy="11.5" r="1.1" ${A}/>`
   };
 
   function resolveIconName(name) {

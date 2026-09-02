@@ -65,11 +65,11 @@ window.BIZDAVAR_CONFIG = {
     overviewRoute: 'products',
     defaultTab: 'owned',
     featured: {
-      route: 'biztab',
-      page: 'biztab',
-      labelKey: 'nav.productBiztab',
-      descKey: 'nav.productBiztabDesc',
-      image: 'assets/images/gallery/expo-tabrizu-incubator.jpg'
+      route: 'fxguard',
+      page: 'fxguard',
+      labelKey: 'nav.productFxguard',
+      descKey: 'nav.productFxguardDesc',
+      image: 'assets/images/content/home-owned-fxguard.webp'
     },
     tabs: [
       {
@@ -695,7 +695,7 @@ window.BIZDAVAR_CONFIG = {
 
   featuredPartners: [
     { name: 'ZedPay', url: 'https://zed-pay.com', logo: 'assets/images/partners/zedpay.png', role: 'ecosystem' },
-    { name: 'Netinode', url: 'https://netinode.net/', logo: 'assets/images/partners/netinode.svg', role: 'ecosystem' },
+    { name: 'Netinode', url: 'https://netinode.net/', logo: 'assets/images/partners/netinode.svg?v=2', role: 'ecosystem' },
     { name: 'BZ Diamond', url: 'pages/bz-diamond.html', logo: 'assets/images/partners/zeddiamond.png', role: 'case-study' },
     { name: 'Marvispace', url: 'pages/marvispace.html', logo: 'assets/images/partners/marvispace.svg', role: 'case-study' },
     { name: 'Supplify Trade', url: 'pages/supplify-trade.html', logo: 'assets/images/partners/supplify-trade.svg', role: 'case-study' },
@@ -718,6 +718,7 @@ window.BIZDAVAR_CONFIG = {
       title: 'سنسور و ابزار دقیق',
       desc: 'اندازه‌گیری سطح، فشار، جریان و سوئیچ — استاندارد صنایع نفت، پتروشیمی و آب',
       logo: 'assets/images/partners/vega.svg',
+      photo: 'assets/images/vega/product-vegapuls-6x-photo.webp',
       url: 'pages/vega',
       internal: true,
       badge: 'آلمان',
@@ -730,6 +731,7 @@ window.BIZDAVAR_CONFIG = {
       title: 'سنسور سطح سیلو',
       desc: 'Rotonivo، Vibranivo، NivoRadar و NivoGuide — سوئیچ و رادار سطح برای جامدات فله و مایعات',
       logo: 'assets/images/partners/uwt.svg',
+      photo: 'assets/images/uwt/hero-solids.webp',
       url: 'pages/uwt',
       internal: true,
       badge: 'آلمان',
@@ -742,6 +744,7 @@ window.BIZDAVAR_CONFIG = {
       title: 'دتکتور گاز و شعله',
       desc: 'سیستم‌های ثابت و پرتابل با گواهی SIL2/3 — مناسب معدن، پتروشیمی و پارکینگ',
       logo: 'assets/images/partners/prosense.svg',
+      photo: 'assets/images/prosense/industry-mining.webp',
       url: 'pages/prosense',
       internal: true,
       badge: 'ترکیه',
@@ -754,6 +757,7 @@ window.BIZDAVAR_CONFIG = {
       title: 'GPS و Fleet Telematics',
       desc: 'ردیاب ناوگان، CAN/OBD، BLE، ویدئو — FMB920، FMC650، FTC305 و راهکارهای IoT',
       logo: 'assets/images/partners/teltonika.png',
+      photo: 'assets/images/teltonika/hero/fleet-telematics.webp',
       url: 'pages/teltonika',
       internal: true,
       badge: 'لیتوانی',
@@ -766,6 +770,7 @@ window.BIZDAVAR_CONFIG = {
       title: 'الکتروموتور صنعتی',
       desc: 'موتورهای الکتریکی سه‌فاز و تک‌فاز — تامین، مشاوره انتخاب و پشتیبانی فنی',
       logo: 'assets/images/partners/gamak.svg',
+      photo: 'assets/images/gamak/category-three-phase.webp',
       url: 'pages/gamak',
       internal: true,
       badge: 'ترکیه',
@@ -774,22 +779,11 @@ window.BIZDAVAR_CONFIG = {
       cta: 'اطلاعات Gamak'
     },
     {
-      name: 'Digi System',
-      title: 'تجهیزات خرده‌فروشی و POS',
-      desc: 'تامین محصولات Digi — ترازو، صندوق فروشگاهی، سیستم‌های POS و تجهیزات خرده‌فروشی',
-      logo: 'assets/images/partners/digi-system.svg',
-      url: 'pages/digi-system',
-      internal: true,
-      badge: 'ترکیه',
-      accent: 'red',
-      tags: ['POS', 'Retail', 'Scales'],
-      cta: 'مشاهده محصولات'
-    },
-    {
       name: 'Teraoka',
       title: 'ترازو و تجهیزات فروشگاهی',
       desc: 'تامین کامل محصولات Teraoka Seiko — ترازو، برچسب‌زن، POS و تجهیزات فروشگاهی و صنعتی',
       logo: 'assets/images/partners/teraoka.svg',
+      photo: 'assets/images/content/home-brand-teraoka.webp',
       url: 'pages/teraoka',
       internal: true,
       badge: 'ژاپن',
@@ -802,6 +796,7 @@ window.BIZDAVAR_CONFIG = {
       title: 'روغن و افزودنی خودرو',
       desc: 'روغن موتور، Octane Plus، افزودنی دیزل و مراقبت خودرو — قیمت دلاری شفاف',
       logo: 'assets/images/partners/liqui-moly.svg',
+      photo: 'assets/images/content/home-brand-liqui-moly.webp',
       url: 'pages/liqui-moly',
       internal: true,
       badge: 'آلمان',
@@ -833,7 +828,7 @@ window.BIZDAVAR_CONFIG = {
     { name: 'Bridged3', domain: 'bridged3.com', category: 'مارکت‌پلیس B2B / فروشگاه', role: 'case-study', internal: false, archived: true, logo: 'assets/images/partners/bridged3.png', note: 'نمونه‌کار ناتمام — هدف پروژه ایجاد فروشگاه B2B و مارکت‌پلیس عمده‌فروشی (مدل علی‌بابا) بود' },
     { name: 'iBan2iBan', domain: 'iban2iban.com', category: 'زیرساخت ایمیل / SMTP', role: 'case-study', internal: false, logo: 'assets/images/partners/iban2iban.png', note: 'نمونه‌کار — راه‌اندازی سیستم مدیریت SMTP' },
     { name: 'Bear Event', domain: 'bearevent.co', category: 'رویداد و بلیت', role: 'ecosystem', internal: false, logo: 'assets/images/partners/bear-event.png' },
-    { name: 'Netinode', domain: 'netinode.net', url: 'https://shop.netinode.net/', category: 'دامنه، هاست و سرور', role: 'case-study', internal: false, logo: 'assets/images/partners/netinode.svg', note: 'زیرساخت خود بیزدوار — فروش دامنه و هاست در shop.netinode.net · معرفی سرویس‌ها در netinode.net' },
+    { name: 'Netinode', domain: 'netinode.net', url: 'https://shop.netinode.net/', category: 'دامنه، هاست و سرور', role: 'case-study', internal: false, logo: 'assets/images/partners/netinode.svg?v=2', note: 'زیرساخت خود بیزدوار — فروش دامنه و هاست در shop.netinode.net · معرفی سرویس‌ها در netinode.net' },
     { name: 'Fast Web Studio', domain: 'bizdavar.com', category: 'طراحی سایت', role: 'case-study', internal: true, slug: 'pages/fast.html', logo: 'assets/images/partners/fast-studio.png', note: 'محصول اختصاصی بیزدوار — طراحی سایت ۵ روزه' },
     { name: 'BizTab', domain: 'nasrnews.ir', url: 'https://nasrnews.ir/print/16727/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D9%88-%D8%B3%D8%A7%D8%AE%D8%AA-%D8%A7%D9%88%D9%84%DB%8C%D9%86-%D8%AF%D9%85%D8%A7%D8%B3%D9%86%D8%AC-%D8%AF%DB%8C%D9%88%D8%A7%D8%B1%DB%8C-%D8%BA%DB%8C%D8%B1%D8%AA%D9%85%D8%A7%D8%B3%DB%8C-%D8%AF%D8%B1-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2', category: 'محصول اختصاصی / IoT و سلامت', role: 'case-study', internal: true, slug: 'pages/biztab.html', logo: 'assets/images/products/biztab/biztab-logo.svg', note: 'محصول اختصاصی — اولین دماسنج دیواری غیرتماسی تبریز، توسعه تیم بیزدوار' },
     { name: 'BizClean V5', domain: 'digikala.com', url: 'https://www.digikala.com/product/dkp-3730222/', category: 'محصول اختصاصی / بهداشت', role: 'case-study', internal: true, slug: 'pages/bizsanitizer-v5.html', logo: 'assets/images/products/bizsanitizer/bizsanitizer-logo.svg', note: 'محصول اختصاصی — دستگاه ضدعفونی دست V5، توسعه در دوران کرونا' },

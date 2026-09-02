@@ -237,12 +237,142 @@
 .products-supply {
   padding-block: clamp(2.5rem, 5vw, 4rem);
   background:
-    linear-gradient(180deg, #f7f7f5 0%, #fff 70%);
-  border-top: 1px solid rgba(29, 29, 27, 0.06);
+    radial-gradient(ellipse 70% 50% at 8% 0%, rgba(255, 222, 0, 0.08) 0%, transparent 46%),
+    linear-gradient(180deg, #161614 0%, #0f0f0d 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.products-supply .section__eyebrow {
+  color: var(--yellow);
+}
+
+.products-supply .section__title {
+  color: #fff;
+}
+
+.products-supply .section__desc {
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .products-supply .industrial-grid {
   margin-top: 0.5rem;
+  gap: 16px;
+}
+
+.products-supply .industrial-card {
+  position: relative;
+  display: flex;
+  min-height: 280px;
+  padding: 0;
+  overflow: hidden;
+  isolation: isolate;
+  color: #fff;
+  background: #1a1a18;
+  border: 0;
+  border-radius: 22px;
+  box-shadow: none;
+}
+
+.products-supply .industrial-card--link:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.products-supply .industrial-card__media {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  background: #111;
+}
+
+.products-supply .industrial-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.products-supply .industrial-card[data-brand="vega"] .industrial-card__media img {
+  object-fit: contain;
+  object-position: center 42%;
+  padding: 48px 2% 18%;
+  box-sizing: border-box;
+}
+
+.products-supply .industrial-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(12, 12, 10, 0.08) 18%, rgba(12, 12, 10, 0.88) 100%);
+  pointer-events: none;
+}
+
+.products-supply .industrial-card__head {
+  position: absolute;
+  top: 16px;
+  inset-inline: 16px;
+  z-index: 3;
+  margin: 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.products-supply .industrial-card__logo {
+  flex: 0 0 auto;
+  width: auto;
+  min-height: 0;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 0;
+}
+
+.products-supply .industrial-card__logo img {
+  width: auto;
+  height: 28px;
+  max-height: 28px;
+  max-width: 110px;
+}
+
+.products-supply .industrial-card__body {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 8px;
+  width: 100%;
+  margin-top: auto;
+  padding: 22px;
+}
+
+.products-supply .industrial-card__title {
+  margin: 0;
+  color: #fff;
+}
+
+.products-supply .industrial-card__desc {
+  display: none;
+}
+
+.products-supply .industrial-card__tag {
+  color: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.products-supply .industrial-card__cta {
+  color: var(--yellow);
+}
+
+.products-supply .buyer-guides__heading {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.products-supply .btn--outline {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.35);
 }
 
 .products-supply__footer {

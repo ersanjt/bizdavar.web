@@ -141,7 +141,7 @@
     },
     activityAreas: [
       { id: 'services', title: 'Hizmetler', items: ['Dijital pazarlama, SEO ve SMM', '5 günde site ve web uygulama', 'Özel sistem ve fintech', 'Sunucu, domain ve SSL', 'Tebriz saha işleri'] },
-      { id: 'products', title: 'Kendi ürünlerimiz', items: ['BizPet — 1399 ısı pedi (araç koltuğu aynı ürün)', 'BizTab — temasız termometre', 'BizClean V5 — el dezenfektanı', 'FXGuard — WhatsApp CRM ve Accounting', 'BizSwap — token ön satış'] },
+      { id: 'products', title: 'Kendi ürünlerimiz', items: ['FXGuard — WhatsApp CRM ve Accounting', 'BizSwap — token ön satış', 'Geçmiş donanım üretimi — başarılar bölümünde (ped, termometre, dezenfektan)'] },
       { id: 'supply', title: 'Endüstriyel tedarik', items: ['VEGA — seviye ve basınç', 'Prosense — gaz ve alev', 'Gamak — elektrik motoru', 'Liqui Moly — yağ ve katkı', 'Teltonika — filo takibi'] }
     ],
     ecosystem: [
@@ -463,7 +463,7 @@
       title: ['Services', 'Products we build', 'Industrial supply'][i],
       items: [
         ['Digital marketing, SEO and SMM', '5-day websites and web apps', 'Custom systems and fintech', 'Servers, domains and SSL', 'Field work in Tabriz'],
-        ['BizPet — 1399 heating pad (car seat is the same product)', 'BizTab — non-contact thermometer', 'BizClean V5 — hand sanitizer', 'FXGuard — WhatsApp CRM and Accounting', 'BizSwap — token presale'],
+        ['FXGuard — WhatsApp CRM and Accounting', 'BizSwap — token presale', 'Past hardware — in achievements (pad, thermometer, sanitizer)'],
         ['VEGA — level and pressure', 'Prosense — gas and flame', 'Gamak — electric motors', 'Liqui Moly — oils and additives', 'Teltonika — fleet tracking']
       ][i]
     })),

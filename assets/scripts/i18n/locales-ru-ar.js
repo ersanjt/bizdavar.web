@@ -708,13 +708,46 @@
     viewServices: 'Смотреть услуги',
     heroFast: 'Сайт от $99 — 5 дней',
     heroIndustrial: 'Промышленный запрос',
+    heroVisualAlt: 'Радарный датчик уровня на промышленном резервуаре — поставки Bizdavar',
+    heroDigitalAlt: 'Студия веб-дизайна и цифровая панель Bizdavar',
+    heroChipVega: 'Каталог VEGA',
+    heroChipFast: 'Сайт от $99',
+    statProjectsValue: '+100',
+    statCountriesValue: '11',
+    statYearsValue: '2013',
+    statFastValue: '5 дней',
+    statFast: 'Сдача сайта',
+    marqueeAria: 'Промышленные и цифровые бренды Bizdavar',
+    marqueeLabel: 'Бренды, которые мы поставляем и создаём',
+    pathEyebrow: 'Три пути сотрудничества',
+    pathTitle: 'С чего начать?',
+    pathDesc: 'Промпоставки, продукты Bizdavar или цифровые услуги — выберите путь',
+    pathSupplyAlt: 'КИП, готовый к поставке на объект в Иране',
+    pathProductsAlt: 'WhatsApp CRM и программные продукты Bizdavar',
+    pathDigitalAlt: 'Студия сайтов, приложений и цифрового маркетинга',
+    svcDmImgAlt: 'Цифровой маркетинг и реклама',
+    svcWebImgAlt: 'Английский сайт Fast Web Studio',
+    svcSmmImgAlt: 'Ведение соцсетей',
+    svcAppsImgAlt: 'Разработка приложений и систем',
+    svcServerImgAlt: 'Управление серверами и инфраструктурой',
+    svcFieldImgAlt: 'Камеры и электрика в Тебризе',
+    fastImgAlt: 'Английский сайт за пять рабочих дней',
+    intentNavLabel: 'Быстрая покупка для Ирана',
+    intentVega: 'Купить VEGA',
+    intentProsense: 'Детектор Prosense',
+    intentLiqui: 'Liqui Moly',
+    intentTeltonika: 'Трекер Teltonika',
+    intentGamak: 'Двигатель Gamak',
+    intentDigi: 'Весы Digi',
+    intentTeraoka: 'Весы Teraoka',
+    intentQuote: 'Бесплатный запрос',
     leadPathsEyebrow: 'Быстрый старт',
     leadPathsTitle: 'Как вы хотите с нами работать?',
     leadPathsDesc: 'Выберите путь — обычно отвечаем в течение 24 часов',
     leadPaths: [
-      { icon: 'bolt', title: 'Сайт и онлайн-продажи', desc: 'Fast Web Studio — от $99, сдача за 5 дней, WhatsApp и форма лидов', cta: 'Смотреть тарифы', url: '/ru/pages/fast' },
-      { icon: 'wrench', title: 'Промышленные поставки', desc: 'VEGA, Prosense, UWT, Liqui Moly — запрос с техконсультацией', cta: 'Запросить цену', url: '/ru/pages/contact?service=industrial' },
-      { icon: 'message', title: 'Бесплатная консультация', desc: 'Веб, маркетинг, FXGuard CRM или кастомный проект — без обязательств', cta: 'Связаться', url: '/ru/pages/contact' }
+      { icon: 'desktop', title: 'Сайт и онлайн-продажи', desc: 'Fast Web Studio — от $99, сдача за 5 дней, WhatsApp и форма лидов', cta: 'Смотреть тарифы', url: '/ru/pages/fast' },
+      { icon: 'factory', title: 'Промышленные поставки', desc: 'VEGA, Prosense, UWT, Liqui Moly — запрос с техконсультацией', cta: 'Запросить цену', url: '/ru/pages/contact?service=industrial' },
+      { icon: 'phone', title: 'Бесплатная консультация', desc: 'Веб, маркетинг, FXGuard CRM или кастомный проект — без обязательств', cta: 'Связаться', url: '/ru/pages/contact' }
     ],
     heroCard: 'Цифровой маркетинг · Веб-дизайн · Промышленность',
     statProjects: 'Цифровых проектов',
@@ -745,16 +778,17 @@
     fastBtn: 'Смотреть тарифы',
     aboutTag: 'О нас',
     aboutTitle: 'Bizdavar Group — партнёр роста вашего бизнеса',
-    aboutP1: 'Цифровые услуги, сайты и промпоставки — плюс свои продукты: нагревательный мат BizPet и FXGuard. От финтеха до промышленности.',
+    aboutP1: 'Большинство клиентов в Иране покупают промпоставки: VEGA, Prosense, Liqui Moly. Рядом делаем сайты, маркетинг и ПО вроде FXGuard.',
     aboutP2: 'Цифровая инфраструктура, домены, SSL и безопасность — тоже наши услуги. Международный хостинг и домены через <a href="https://netinode.net/" class="service-card__link" target="_blank" rel="noopener noreferrer">Netinode</a>.',
-    aboutHeroImage: 'assets/images/content/about-hero.jpg',
-    aboutHeroAlt: 'Команда Bizdavar на выставке в Тебризе',
+    aboutHeroImage: 'assets/images/content/home-about.webp',
+    aboutHeroAlt: 'Промышленные датчики и цифровая панель на рабочем столе Bizdavar',
     aboutMore: 'Подробнее о Bizdavar',
     aboutInfra: 'Управление инфраструктурой',
-    ownedEyebrow: 'Продукты Bizdavar',
-    ownedTitle: 'Что мы производим',
-    ownedDesc: 'Помимо цифровых услуг Bizdavar делает свои устройства и ПО — нагревательный мат BizPet, BizTab, FXGuard и BizSwap.',
+    ownedEyebrow: 'Сделано Bizdavar',
+    ownedTitle: 'Что делаем сами',
+    ownedDesc: 'WhatsApp CRM и BizSwap — живые продукты. Произведённое железо — в достижениях компании.',
     ownedCta: 'Все продукты',
+    ownedAchievements: 'Достижения и производство',
     clientsTitle: 'Услуги и продукты на практике',
     clientsDesc: 'Веб-дизайн, продукты FXGuard и Fast Web Studio, промышленные поставки',
     clientsAll: 'Смотреть всё портфолио',
@@ -782,13 +816,46 @@
     viewServices: 'عرض الخدمات',
     heroFast: 'موقع من $99 — ٥ أيام',
     heroIndustrial: 'عرض سعر صناعي',
+    heroVisualAlt: 'حساس مستوى راداري على خزان صناعي — توريد بيزدوار',
+    heroDigitalAlt: 'استوديو تصميم المواقع ولوحة رقمية من بيزدوار',
+    heroChipVega: 'كتالوج VEGA',
+    heroChipFast: 'موقع من ٩٩ دولاراً',
+    statProjectsValue: '+١٠٠',
+    statCountriesValue: '١١',
+    statYearsValue: '٢٠١٣',
+    statFastValue: '٥ أيام',
+    statFast: 'تسليم الموقع',
+    marqueeAria: 'علامات بيزدوار الصناعية والرقمية',
+    marqueeLabel: 'علامات نوفرها ونبنيها',
+    pathEyebrow: 'ثلاثة مسارات للتعاون',
+    pathTitle: 'من أين نبدأ؟',
+    pathDesc: 'توريد صناعي أو منتجات بيزدوار أو خدمات رقمية — اختر المسار المناسب',
+    pathSupplyAlt: 'أجهزة قياس جاهزة للتسليم إلى مشروع في إيران',
+    pathProductsAlt: 'WhatsApp CRM ومنتجات برمجيات بيزدوار',
+    pathDigitalAlt: 'استوديو المواقع والتطبيقات والتسويق الرقمي',
+    svcDmImgAlt: 'تسويق رقمي وإعلانات',
+    svcWebImgAlt: 'تصميم موقع إنجليزي Fast Web Studio',
+    svcSmmImgAlt: 'إدارة شبكات اجتماعية',
+    svcAppsImgAlt: 'تطوير تطبيقات وأنظمة',
+    svcServerImgAlt: 'إدارة الخوادم والبنية التحتية',
+    svcFieldImgAlt: 'كاميرات وتمديدات في تبريز',
+    fastImgAlt: 'موقع إنجليزي خلال خمسة أيام عمل',
+    intentNavLabel: 'شراء سريع لإيران',
+    intentVega: 'شراء VEGA',
+    intentProsense: 'كاشف Prosense',
+    intentLiqui: 'Liqui Moly',
+    intentTeltonika: 'متعقب Teltonika',
+    intentGamak: 'محرك Gamak',
+    intentDigi: 'ميزان Digi',
+    intentTeraoka: 'ميزان Teraoka',
+    intentQuote: 'عرض سعر مجاني',
     leadPathsEyebrow: 'بداية سريعة',
     leadPathsTitle: 'كيف تريد العمل معنا؟',
     leadPathsDesc: 'اختر المسار — نرد عادةً خلال ٢٤ ساعة',
     leadPaths: [
-      { icon: 'bolt', title: 'موقع ومبيعات أونلاين', desc: 'Fast Web Studio — من $99، تسليم خلال ٥ أيام، واتساب ونموذج leads', cta: 'عرض الباقات', url: '/ar/pages/fast' },
-      { icon: 'wrench', title: 'توريد صناعي', desc: 'VEGA وProsense وUWT وLiqui Moly — عرض سعر مع استشارة فنية', cta: 'طلب عرض سعر', url: '/ar/pages/contact?service=industrial' },
-      { icon: 'message', title: 'استشارة مجانية', desc: 'ويب، تسويق، FXGuard CRM أو مشروع مخصص — بدون التزام', cta: 'اتصل بنا', url: '/ar/pages/contact' }
+      { icon: 'desktop', title: 'موقع ومبيعات أونلاين', desc: 'Fast Web Studio — من $99، تسليم خلال ٥ أيام، واتساب ونموذج leads', cta: 'عرض الباقات', url: '/ar/pages/fast' },
+      { icon: 'factory', title: 'توريد صناعي', desc: 'VEGA وProsense وUWT وLiqui Moly — عرض سعر مع استشارة فنية', cta: 'طلب عرض سعر', url: '/ar/pages/contact?service=industrial' },
+      { icon: 'phone', title: 'استشارة مجانية', desc: 'ويب، تسويق، FXGuard CRM أو مشروع مخصص — بدون التزام', cta: 'اتصل بنا', url: '/ar/pages/contact' }
     ],
     heroCard: 'تسويق رقمي · تصميم ويب · صناعي',
     statProjects: 'مشاريع رقمية',
@@ -819,16 +886,17 @@
     fastBtn: 'عرض الباقات',
     aboutTag: 'من نحن',
     aboutTitle: 'Bizdavar Group — شريك نمو أعمالك',
-    aboutP1: 'خدمات رقمية ومواقع وتوريد صناعي — ومنتجاتنا مثل وسادة BizPet وFXGuard. من الفنتك إلى الصناعة.',
+    aboutP1: 'معظم عملائنا في إيران يشترون التوريد الصناعي: VEGA وProsense وLiqui Moly. إلى جانبه نبني المواقع والتسويق وبرمجيات مثل FXGuard.',
     aboutP2: 'البنية الرقمية والنطاقات وSSL والأمان جزء من خدماتنا أيضاً — استضافة ونطاقات دولية عبر <a href="https://netinode.net/" class="service-card__link" target="_blank" rel="noopener noreferrer">Netinode</a>.',
-    aboutHeroImage: 'assets/images/content/about-hero.jpg',
-    aboutHeroAlt: 'فريق بيزدوار في معرض تبريز',
+    aboutHeroImage: 'assets/images/content/home-about.webp',
+    aboutHeroAlt: 'حساسات صناعية ولوحة رقمية على مكتب عمل بيزدوار',
     aboutMore: 'المزيد عن Bizdavar',
     aboutInfra: 'إدارة البنية',
-    ownedEyebrow: 'منتجات Bizdavar',
-    ownedTitle: 'ما نصنعه',
-    ownedDesc: 'إلى جانب الخدمات الرقمية يصنع Bizdavar أجهزته وبرامجه — وسادة BizPet وBizTab وFXGuard وBizSwap.',
+    ownedEyebrow: 'صنع بيزدوار',
+    ownedTitle: 'ما نصنعه بأنفسنا',
+    ownedDesc: 'WhatsApp CRM وBizSwap — منتجات حية. العتاد المُنتَج في إنجازات الشركة.',
     ownedCta: 'عرض كل المنتجات',
+    ownedAchievements: 'إنجازات وإنتاج',
     clientsTitle: 'الخدمات والمنتجات عملياً',
     clientsDesc: 'تصميم مواقع ومنتجات FXGuard وFast Web Studio وتوريد العلامات الصناعية',
     clientsAll: 'عرض كل الأعمال',
@@ -896,16 +964,18 @@
       ctaDesc: 'Подбор модели, международная закупка, перевозка и таможня — команда Bizdavar',
       ctaBtn: 'Запросить цену',
       ctaLink: 'Промышленные услуги',
-      visualAlt: 'Датчик уровня, газовый детектор и экспортные ящики — промышленные поставки Bizdavar',
+      visualAlt: 'Экспортный ящик промышленного оборудования для проекта в Иране',
       visualLead: 'От запроса до поставки на объект',
-      visualNote: 'Подбор модели, международная закупка и логистика — VEGA, Prosense, моторы и насосы.',
+      visualNote: 'Назовите модель — проформа на фарси и логистика до объекта в Иране.',
+      step1: 'Подбор модели',
+      step2: 'Проформа на фарси',
+      step3: 'Доставка в Иран',
       products: [
         { name: 'VEGA', title: 'Датчики и КИП', desc: 'Уровень, давление, расход — нефть, нефтехимия и вода', badge: 'Германия', tags: ['VEGAPULS', 'VEGABAR', 'VEGAPOINT'], cta: 'Смотреть каталог' },
         { name: 'UWT', title: 'Уровень силоса и резервуара', desc: 'Сигнализаторы и радар для сыпучих и жидкостей — Rotonivo, Vibranivo, NivoRadar', badge: 'Германия', tags: ['Rotonivo', 'NivoRadar', 'Vibranivo'], cta: 'Каталог UWT' },
         { name: 'Prosense', title: 'Газовые и пламенные детекторы', desc: 'Стационарные и портативные системы с сертификацией SIL2/3', badge: 'Турция', tags: ['PQ+', 'SafeVader', 'PPS'], cta: 'Линейки продуктов' },
         { name: 'Teltonika', title: 'GPS и Fleet Telematics', desc: 'Трекеры флота, CAN/OBD, BLE, видео и IoT — FMB920 · FMC650 · FTC305', badge: 'Литва', tags: ['FMB920', 'FTC305', 'DualCam'], cta: 'Каталог Teltonika' },
         { name: 'Gamak', title: 'Промышленные электродвигатели', desc: 'Трёхфазные и однофазные моторы — поставка и техподдержка', badge: 'Турция', tags: ['IE2/IE3', 'Фланец', 'Под проект'], cta: 'О Gamak' },
-        { name: 'Digi System', title: 'Ритейл и POS', desc: 'Поставка Digi — весы, кассы, POS и торговое оборудование', badge: 'Турция', tags: ['POS', 'Retail', 'Scales'], cta: 'Смотреть продукты' },
         { name: 'Teraoka', title: 'Весы и магазинное оборудование', desc: 'Полная линейка Teraoka Seiko — весы, этикетирование, POS', badge: 'Япония', tags: ['Scales', 'Labeling', 'POS'], cta: 'Смотреть бренд' },
         { name: 'Liqui Moly', title: 'Масла и присадки', desc: 'Моторные масла, Octane Plus, дизельные присадки и автохимия — цены в USD', badge: 'Германия', tags: ['Octane Plus', 'Top Tec', '5W-30'], cta: 'Каталог и цены' }
       ]
@@ -961,16 +1031,18 @@
       ctaDesc: 'اختيار الموديل والشراء الدولي والشحن والجمارك — فريق Bizdavar الفني',
       ctaBtn: 'طلب عرض سعر',
       ctaLink: 'خدمات صناعية',
-      visualAlt: 'حساس مستوى وكاشف غاز وصناديق تصدير — توريد صناعي بيزدوار',
+      visualAlt: 'صندوق تصدير لمعدات صناعية جاهزة لمشروع في إيران',
       visualLead: 'من الاستفسار حتى التسليم في الموقع',
-      visualNote: 'اختيار الموديل والشراء الدولي واللوجستيات — VEGA وProsense ومحركات ومضخات.',
+      visualNote: 'حدّدوا الموديل — عرض سعر بالفارسية ولوجستيات حتى المشروع في إيران.',
+      step1: 'اختيار الموديل',
+      step2: 'عرض سعر بالفارسية',
+      step3: 'تسليم إلى إيران',
       products: [
         { name: 'VEGA', title: 'حساسات وأدوات دقيقة', desc: 'مستوى وضغط وتدفق — نفط وبتروكيماويات ومياه', badge: 'ألمانيا', tags: ['VEGAPULS', 'VEGABAR', 'VEGAPOINT'], cta: 'عرض الكتالوج' },
         { name: 'UWT', title: 'قياس مستوى الصوامع والخزانات', desc: 'مفاتيح مستوى ورادار للمواد الصلبة والسوائل — Rotonivo وVibranivo وNivoRadar', badge: 'ألمانيا', tags: ['Rotonivo', 'NivoRadar', 'Vibranivo'], cta: 'كتالوج UWT' },
         { name: 'Prosense', title: 'كواشف غاز ولهب', desc: 'أنظمة ثابتة ومحمولة بشهادة SIL2/3', badge: 'تركيا', tags: ['PQ+', 'SafeVader', 'PPS'], cta: 'سلاسل المنتجات' },
         { name: 'Teltonika', title: 'GPS وFleet Telematics', desc: 'متتبعات أساطيل وCAN/OBD وBLE وفيديو وIoT — FMB920 · FMC650 · FTC305', badge: 'ليتوانيا', tags: ['FMB920', 'FTC305', 'DualCam'], cta: 'كتالوج Teltonika' },
         { name: 'Gamak', title: 'محركات كهربائية صناعية', desc: 'محركات ثلاثية وأحادية الطور — توريد ودعم فني', badge: 'تركيا', tags: ['IE2/IE3', 'فلانش', 'حسب المشروع'], cta: 'معلومات Gamak' },
-        { name: 'Digi System', title: 'معدات تجزئة وPOS', desc: 'توريد Digi — موازين وصناديق وأنظمة POS', badge: 'تركيا', tags: ['POS', 'Retail', 'Scales'], cta: 'عرض المنتجات' },
         { name: 'Teraoka', title: 'موازين ومعدات متاجر', desc: 'توريد Teraoka Seiko الكامل — موازين وملصقات وPOS', badge: 'اليابان', tags: ['Scales', 'Labeling', 'POS'], cta: 'عرض العلامة' },
         { name: 'Liqui Moly', title: 'زيوت وإضافات', desc: 'زيوت محرك وOctane Plus وإضافات ديزل وعناية — أسعار بالدولار', badge: 'ألمانيا', tags: ['Octane Plus', 'Top Tec', '5W-30'], cta: 'الكتالوج والأسعار' }
       ]
@@ -1575,7 +1647,10 @@
     backToTop: 'Наверх',
     details: 'Подробности',
     view: 'Смотреть',
-    articleLocaleNote: 'Статья отображается на выбранном языке.'
+    articleLocaleNote: 'Статья отображается на выбранном языке.',
+    offerMap: {
+      productsDesc: 'WhatsApp CRM, FXGuard Accounting и BizSwap'
+    }
   }));
   deepMerge(ru.nav, {
     home: 'Главная',
@@ -1603,7 +1678,9 @@
     serviceFieldDesc: 'CCTV, проводка и освещение',
     serviceFieldFeaturedDesc: 'Тебриз и Стамбул — полевые работы',
     productsSupplyDesc: 'Консультация, подбор модели и проформа',
-    productsSupplyLink: 'Промышленные бренды'
+    productsSupplyLink: 'Промышленные бренды',
+    productsHardware: 'Достижения и производство',
+    productsMegaHint: 'ПО и SaaS Bizdavar'
   });
   deepMerge(ru.footer, {
     tagline: 'Цифровые услуги, веб-дизайн, онлайн-маркетинг и промышленные поставки.',
@@ -1637,6 +1714,33 @@
   deepMerge(ru.supplyBrand, supplyBrandRu);
   deepMerge(ru.home, homeRu);
   deepMerge(ru, homeSectionsRu);
+  deepMerge(ru.productsPage || {}, {
+    featured: {
+      desc: 'WhatsApp CRM, Accounting и BizSwap — к заказу. Нагревательный мат и BizTab — в достижениях и полном каталоге.'
+    },
+    items: {
+      fxguard: {
+        title: 'Общий WhatsApp inbox',
+        desc: 'Командный inbox, тикеты и филиалы — от $49/мес. Демо: app.fxguard.io.',
+        homeDesc: 'Командный WhatsApp inbox — от $49'
+      },
+      bizpet: {
+        title: 'Нагревательный мат',
+        desc: 'Мат для дома, авто и лежанки питомца — дизайн команды Bizdavar.',
+        homeDesc: 'Нагревательный мат для дома и автокресла'
+      },
+      biztab: {
+        title: 'Бесконтактный настенный термометр',
+        desc: 'Настенный бесконтактный термометр — погрешность менее 0,3°C, Тебриз.',
+        homeDesc: 'Бесконтактный термометр для входа и клиники'
+      },
+      bizswap: {
+        title: 'Пресale и своп токенов',
+        desc: 'Кошелёк, своп и on-chain пресейл — BEP-20 и RWA.',
+        homeDesc: 'Ончейн-своп и пресейл токена'
+      }
+    }
+  });
   if (!ru.pages) ru.pages = {};
   deepMerge(ru.pages, pageSeoRu);
   if (!ru.blogPage) ru.blogPage = {};
@@ -1841,7 +1945,10 @@
     backToTop: 'العودة للأعلى',
     details: 'التفاصيل',
     view: 'عرض',
-    articleLocaleNote: 'يُعرض المقال باللغة التي اخترتها.'
+    articleLocaleNote: 'يُعرض المقال باللغة التي اخترتها.',
+    offerMap: {
+      productsDesc: 'WhatsApp CRM ومحاسبة FXGuard وBizSwap'
+    }
   }));
   deepMerge(ar.nav, {
     home: 'الرئيسية',
@@ -1869,7 +1976,9 @@
     serviceFieldDesc: 'كاميرات وتمديدات وإضاءة',
     serviceFieldFeaturedDesc: 'تبريز وإسطنبول — فرق ميدانية',
     productsSupplyDesc: 'استشارة واختيار الموديل وعرض سعر شفاف',
-    productsSupplyLink: 'علامات صناعية'
+    productsSupplyLink: 'علامات صناعية',
+    productsHardware: 'إنجازات وإنتاج',
+    productsMegaHint: 'برمجيات وSaaS بيزدوار'
   });
   deepMerge(ar.footer, {
     tagline: 'خدمات رقمية وتصميم مواقع وتسويق عبر الإنترنت وتوريد معدات صناعية.',
@@ -1902,6 +2011,33 @@
   });
   deepMerge(ar.supplyBrand, supplyBrandAr);
   deepMerge(ar.home, homeAr);
+  deepMerge(ar.productsPage || {}, {
+    featured: {
+      desc: 'WhatsApp CRM ومحاسبة FXGuard وBizSwap — جاهزة للطلب. وسادة التدفئة وBizTab في الإنجازات والكتالوج الكامل.'
+    },
+    items: {
+      fxguard: {
+        title: 'صندوق واتساب مشترك',
+        desc: 'صندوق فريق وتذاكر وفروع — من ٤٩ دولاراً شهرياً. التجربة: app.fxguard.io.',
+        homeDesc: 'صندوق واتساب للفريق — من ٤٩ دولاراً'
+      },
+      bizpet: {
+        title: 'وسادة تدفئة',
+        desc: 'وسادة للمنزل والسيارة وسرير الحيوان — تصميم فريق بيزدوار.',
+        homeDesc: 'وسادة تدفئة للمنزل ومقعد السيارة'
+      },
+      biztab: {
+        title: 'مقياس حرارة جداري بلا لمس',
+        desc: 'مقياس جداري بلا لمس — خطأ أقل من ٠٫٣°م، صنع تبريز.',
+        homeDesc: 'مقياس بلا لمس للمدخل والعيادة'
+      },
+      bizswap: {
+        title: 'بيع مسبق ومبادلة توكن',
+        desc: 'محفظة ومبادلة وبيع مسبق على السلسلة — BEP-20 وRWA.',
+        homeDesc: 'مبادلة وبيع مسبق للتوكن على السلسلة'
+      }
+    }
+  });
   deepMerge(ar, homeSectionsAr);
   if (!ar.pages) ar.pages = {};
   deepMerge(ar.pages, pageSeoAr);

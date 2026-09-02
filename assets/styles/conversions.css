@@ -78,14 +78,25 @@ body[data-page="contact"] .wa-fab {
 }
 
 .lead-path__icon {
-  width: 44px;
-  height: 44px;
+  width: 64px;
+  height: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 12px;
-  background: var(--color-primary-soft, #eff6ff);
-  color: var(--color-primary, #1e40af);
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: var(--yellow);
+  color: var(--navy);
+  box-shadow: var(--shadow-sm, 0 4px 12px rgba(15, 23, 42, 0.08));
+}
+
+.lead-path__icon .bd-icon {
+  width: 34px;
+  height: 34px;
+}
+
+.lead-path__icon svg path[stroke] {
+  stroke-width: 2.15;
 }
 
 .lead-path__title {

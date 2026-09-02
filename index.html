@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <link rel="stylesheet" href="/assets/styles/site.css?v=20260831e">
+  <link rel="stylesheet" href="/assets/styles/site.css?v=20260901s">
   <link rel="preload" href="/assets/fonts/vazirmatn/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/estedad/Estedad-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <!-- Google Tag Manager -->
@@ -64,71 +64,144 @@
   <div class="overlay" id="overlay"></div>
 <main id="main-content" class="site-main">
 
-  <section class="hero landing-hero landing-hero--paths" id="home">
+  <section class="hero landing-hero landing-hero--visual" id="home">
     <div class="container">
-      <div class="hero__content">
-        <span class="hero__badge" data-i18n="home.heroBadge">Bizdavar Group — دیجیتال و بازرگانی صنعتی</span>
-        <h1 class="hero__title">
-          <span data-i18n="home.heroTitle">رشد کسب‌وکار شما با</span>
-          <span data-i18n="home.heroTitleSpan">دیجیتال و تامین</span>
-          <span data-i18n="home.heroTitleEnd">صنعتی</span>
-        </h1>
-        <p class="hero__desc" data-i18n="home.heroDesc">طراحی سایت با Fast Web Studio، بازاریابی دیجیتال، FXGuard و تامین VEGA، Prosense، Liqui Moly و UWT — دفاتر ایران، ترکیه، ارمنستان و دبی.</p>
-        <div class="hero__actions">
-          <a href="/pages/contact" class="btn btn--yellow" data-i18n="common.freeConsult">مشاوره رایگان</a>
-          <a href="/pages/fast" class="btn btn--primary" data-i18n="home.heroFast">سایت از $99 — ۵ روز</a>
-          <a href="/pages/contact?service=industrial" class="btn btn--outline" data-i18n="home.heroIndustrial">استعلام صنعتی</a>
-        </div>
-        <nav class="intent-nav" aria-labelledby="intentNavLabel">
-          <p class="intent-nav__lead" id="intentNavLabel" data-i18n="home.intentNavLabel">خرید سریع برای ایران</p>
-          <div class="intent-nav__list">
-            <a href="/pages/vega" class="intent-nav__chip" data-i18n="home.intentVega">خرید VEGA</a>
-            <a href="/pages/prosense" class="intent-nav__chip" data-i18n="home.intentProsense">دتکتور Prosense</a>
-            <a href="/pages/liqui-moly" class="intent-nav__chip" data-i18n="home.intentLiqui">Liqui Moly</a>
-            <a href="/pages/teltonika" class="intent-nav__chip" data-i18n="home.intentTeltonika">ردیاب Teltonika</a>
-            <a href="/pages/gamak" class="intent-nav__chip" data-i18n="home.intentGamak">الکتروموتور Gamak</a>
-            <a href="/pages/digi-system" class="intent-nav__chip" data-i18n="home.intentDigi">ترازو Digi</a>
-            <a href="/pages/teraoka" class="intent-nav__chip" data-i18n="home.intentTeraoka">ترازو Teraoka</a>
-            <a href="/pages/contact" class="intent-nav__chip intent-nav__chip--cta" data-i18n="home.intentQuote">استعلام رایگان</a>
+      <div class="home-hero">
+        <div class="hero__content home-hero__copy">
+          <span class="hero__badge" data-i18n="home.heroBadge">Bizdavar Group — دیجیتال و بازرگانی صنعتی</span>
+          <h1 class="hero__title">
+            <span data-i18n="home.heroTitle">رشد کسب‌وکار شما با</span>
+            <span data-i18n="home.heroTitleSpan">دیجیتال و تامین</span>
+            <span data-i18n="home.heroTitleEnd">صنعتی</span>
+          </h1>
+          <p class="hero__desc" data-i18n="home.heroDesc">طراحی سایت با Fast Web Studio، بازاریابی دیجیتال، FXGuard و تامین VEGA، Prosense، Liqui Moly و UWT — دفاتر ایران، ترکیه، ارمنستان و دبی.</p>
+          <div class="hero__actions">
+            <a href="/pages/contact" class="btn btn--yellow" data-i18n="common.freeConsult">مشاوره رایگان</a>
+            <a href="/pages/contact?service=industrial" class="btn btn--outline" data-i18n="home.heroIndustrial">استعلام صنعتی</a>
+            <a href="/pages/fast" class="btn btn--primary" data-i18n="home.heroFast">سایت از $99 — ۵ روز</a>
           </div>
-        </nav>
+          <ul class="home-hero__stats">
+            <li><strong dir="ltr" data-i18n="home.statProjectsValue">+۱۰۰</strong><span data-i18n="home.statProjects">پروژه دیجیتال</span></li>
+            <li><strong dir="ltr" data-i18n="home.statCountriesValue">۱۱</strong><span data-i18n="home.statCountries">کشور فعال</span></li>
+            <li><strong dir="ltr" data-i18n="home.statYearsValue">۲۰۱۳</strong><span data-i18n="home.statYears">سال تجربه</span></li>
+            <li><strong dir="ltr" data-i18n="home.statFastValue">۵ روز</strong><span data-i18n="home.statFast">تحویل سایت</span></li>
+          </ul>
+        </div>
+        <div class="home-hero__stage">
+          <figure class="home-hero__frame">
+            <img class="home-hero__shot"
+                 src="/assets/images/content/home-hero-industrial.webp"
+                 srcset="/assets/images/content/home-hero-industrial-800.webp 800w, /assets/images/content/home-hero-industrial.webp 1536w"
+                 sizes="(min-width: 1025px) 560px, 92vw"
+                 width="1536" height="1024"
+                 alt="سنسور سطح راداری روی مخزن صنعتی — تامین تجهیزات بیزدوار"
+                 data-i18n-alt="home.heroVisualAlt"
+                 fetchpriority="high" decoding="async">
+            <img class="home-hero__inset"
+                 src="/assets/images/content/home-hero-digital.webp"
+                 width="960" height="640"
+                 alt="استودیو طراحی سایت و داشبورد دیجیتال بیزدوار"
+                 data-i18n-alt="home.heroDigitalAlt"
+                 loading="lazy" decoding="async">
+            <a class="home-hero__chip home-hero__chip--vega" href="/pages/vega">
+              <img src="/assets/images/vega/product-vegapuls-6x-photo.webp" alt="" width="72" height="72" decoding="async">
+              <span data-i18n="home.heroChipVega">کاتالوگ VEGA</span>
+            </a>
+            <a class="home-hero__chip home-hero__chip--fast" href="/pages/fast">
+              <span data-i18n="home.heroChipFast">سایت از ۹۹ دلار</span>
+            </a>
+          </figure>
+        </div>
       </div>
-      <div id="offerMap" class="offer-map offer-map--hero offer-map--paths" role="navigation" data-i18n-aria="common.offerMap.aria" aria-label="سه مسیر بیزدوار">
-        <p class="offer-map__lead" data-i18n="common.offerMap.lead">از کجا شروع کنیم؟</p>
-        <div class="offer-map__grid">
-          <a href="/pages/products#supply" class="offer-map__card offer-map__card--featured">
-            <span class="offer-map__num" data-i18n="common.offerMap.supplyNum">۰۱</span>
-            <p class="offer-map__title" data-i18n="common.offerMap.supplyTitle">بازرگانی و تامین صنعتی</p>
-            <p class="offer-map__desc" data-i18n="common.offerMap.supplyDesc">خرید VEGA، Prosense، Liqui Moly، Teltonika و Gamak برای پروژه ایران — پیش‌فاکتور فارسی</p>
-            <span class="offer-map__go" data-i18n="common.offerMap.supplyGo">ورود به کاتالوگ بازرگانی</span>
-          </a>
-          <a href="/pages/products" class="offer-map__card">
-            <span class="offer-map__num" data-i18n="common.offerMap.productsNum">۰۲</span>
-            <p class="offer-map__title" data-i18n="common.offerMap.productsTitle">محصولات بیزدوار</p>
-            <p class="offer-map__desc" data-i18n="common.offerMap.productsDesc">محصولات دیجیتال و فیزیکی خودمان — BizPet، BizTab و FXGuard</p>
-            <span class="offer-map__go" data-i18n="common.offerMap.productsGo">ورود به محصولات</span>
-          </a>
-          <a href="/pages/services" class="offer-map__card">
-            <span class="offer-map__num" data-i18n="common.offerMap.servicesNum">۰۳</span>
-            <p class="offer-map__title" data-i18n="common.offerMap.servicesTitle">خدمات</p>
-            <p class="offer-map__desc" data-i18n="common.offerMap.servicesDesc">سایت انگلیسی از ۹۹ دلار برای اروپا/آمریکا، بازاریابی، اپ و خدمات فنی</p>
-            <span class="offer-map__go" data-i18n="common.offerMap.servicesGo">ورود به خدمات</span>
-          </a>
+      <div class="home-marquee" data-i18n-aria="home.marqueeAria" aria-label="برندهای صنعتی و دیجیتال بیزدوار">
+        <p class="home-marquee__label" data-i18n="home.marqueeLabel">برندهایی که تامین و می‌سازیم</p>
+        <div class="home-marquee__viewport" dir="ltr">
+          <div class="home-marquee__track">
+            <img src="/assets/images/partners/vega.svg" alt="VEGA" width="120" height="28">
+            <img src="/assets/images/partners/uwt.svg" alt="UWT" width="120" height="28">
+            <img src="/assets/images/partners/prosense.svg" alt="Prosense" width="120" height="28">
+            <img src="/assets/images/partners/liqui-moly.svg" alt="Liqui Moly" width="120" height="28">
+            <img src="/assets/images/partners/gamak.svg" alt="Gamak" width="120" height="28">
+            <img src="/assets/images/partners/teraoka.svg" alt="Teraoka" width="120" height="28">
+            <img src="/assets/images/partners/fxguard-exchange.svg" alt="FXGuard" width="120" height="28">
+            <img src="/assets/images/partners/vega.svg" alt="" width="120" height="28" aria-hidden="true">
+            <img src="/assets/images/partners/uwt.svg" alt="" width="120" height="28" aria-hidden="true">
+            <img src="/assets/images/partners/prosense.svg" alt="" width="120" height="28" aria-hidden="true">
+            <img src="/assets/images/partners/liqui-moly.svg" alt="" width="120" height="28" aria-hidden="true">
+            <img src="/assets/images/partners/gamak.svg" alt="" width="120" height="28" aria-hidden="true">
+            <img src="/assets/images/partners/teraoka.svg" alt="" width="120" height="28" aria-hidden="true">
+            <img src="/assets/images/partners/fxguard-exchange.svg" alt="" width="120" height="28" aria-hidden="true">
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <div id="trustBar"></div>
-
-  <section class="section section--gray">
+  <div class="home-intent">
     <div class="container">
-      <h2 class="visually-hidden" data-i18n="home.featSectionTitle">مزایای همکاری با بیزدوار</h2>
-      <div class="features-grid">
-        <a href="/pages/fast" class="feature-item feature-item--link"><span class="feature-item__icon" data-bd-icon="bolt" data-bd-size="26"></span><h3 data-i18n="home.featFast">تحویل سریع</h3><p data-i18n="home.featFastDesc">Fast Web Studio — سایت در ۵ روز</p></a>
-        <a href="/pages/about" class="feature-item feature-item--link"><span class="feature-item__icon" data-bd-icon="globe" data-bd-size="26"></span><h3 data-i18n="home.featGlobal">بازار جهانی</h3><p data-i18n="home.featGlobalDesc">پروژه‌های ایران، ترکیه و بین‌الملل</p></a>
-        <a href="/pages/products#supply" class="feature-item feature-item--link"><span class="feature-item__icon" data-bd-icon="wrench" data-bd-size="26"></span><h3 data-i18n="home.featIndustrial">تخصص صنعتی</h3><p data-i18n="home.featIndustrialDesc">تامین VEGA، Prosense و Liqui Moly</p></a>
-        <a href="/pages/services#digital-marketing" class="feature-item feature-item--link"><span class="feature-item__icon" data-bd-icon="chart-bar" data-bd-size="26"></span><h3 data-i18n="home.featResults">نتایج ملموس</h3><p data-i18n="home.featResultsDesc">افزایش نرخ تبدیل و رشد برند</p></a>
+      <nav class="intent-nav" aria-labelledby="intentNavLabel">
+        <p class="intent-nav__lead" id="intentNavLabel" data-i18n="home.intentNavLabel">خرید سریع برای ایران</p>
+        <div class="intent-nav__list">
+          <a href="/pages/vega" class="intent-nav__chip" data-i18n="home.intentVega">خرید VEGA</a>
+          <a href="/pages/prosense" class="intent-nav__chip" data-i18n="home.intentProsense">دتکتور Prosense</a>
+          <a href="/pages/liqui-moly" class="intent-nav__chip" data-i18n="home.intentLiqui">Liqui Moly</a>
+          <a href="/pages/teltonika" class="intent-nav__chip" data-i18n="home.intentTeltonika">ردیاب Teltonika</a>
+          <a href="/pages/gamak" class="intent-nav__chip" data-i18n="home.intentGamak">الکتروموتور Gamak</a>
+          <a href="/pages/teraoka" class="intent-nav__chip" data-i18n="home.intentTeraoka">ترازو Teraoka</a>
+          <a href="/pages/contact" class="intent-nav__chip intent-nav__chip--cta" data-i18n="home.intentQuote">استعلام رایگان</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section" id="homePaths" aria-labelledby="homePathsTitle">
+    <div class="container">
+      <div class="section__header section__header--pro">
+        <span class="section__eyebrow" data-i18n="home.pathEyebrow">سه مسیر همکاری</span>
+        <h2 class="section__title" id="homePathsTitle" data-i18n="home.pathTitle">از کجا شروع کنیم؟</h2>
+        <p class="section__desc" data-i18n="home.pathDesc">بازرگانی صنعتی، محصولات بیزدوار یا خدمات دیجیتال — مسیر مناسب را انتخاب کنید</p>
+      </div>
+      <div class="home-paths">
+        <a href="/pages/products#supply" class="home-path home-path--featured">
+          <img src="/assets/images/content/home-path-supply.webp"
+               srcset="/assets/images/content/home-path-supply-800.webp 800w, /assets/images/content/home-path-supply.webp 1400w"
+               sizes="(min-width: 1025px) 560px, 92vw"
+               width="1400" height="933"
+               alt="تجهیزات ابزاردقیق آماده ارسال برای پروژه ایران"
+               data-i18n-alt="home.pathSupplyAlt" loading="lazy" decoding="async">
+          <div class="home-path__body">
+            <span class="home-path__num" data-i18n="common.offerMap.supplyNum">۰۱</span>
+            <p class="home-path__title" data-i18n="common.offerMap.supplyTitle">بازرگانی و تامین صنعتی</p>
+            <p class="home-path__desc" data-i18n="common.offerMap.supplyDesc">خرید VEGA، Prosense، Liqui Moly، Teltonika و Gamak برای پروژه ایران — پیش‌فاکتور فارسی</p>
+            <span class="home-path__go" data-i18n="common.offerMap.supplyGo">ورود به کاتالوگ بازرگانی</span>
+          </div>
+        </a>
+        <a href="/pages/products" class="home-path">
+          <img src="/assets/images/content/home-owned-fxguard.webp"
+               width="1536" height="1024"
+               alt="WhatsApp CRM و محصولات نرم‌افزاری بیزدوار"
+               data-i18n-alt="home.pathProductsAlt" loading="lazy" decoding="async">
+          <div class="home-path__body">
+            <span class="home-path__num" data-i18n="common.offerMap.productsNum">۰۲</span>
+            <p class="home-path__title" data-i18n="common.offerMap.productsTitle">محصولات بیزدوار</p>
+            <p class="home-path__desc" data-i18n="common.offerMap.productsDesc">WhatsApp CRM، حسابداری FXGuard و BizSwap</p>
+            <span class="home-path__go" data-i18n="common.offerMap.productsGo">ورود به محصولات</span>
+          </div>
+        </a>
+        <a href="/pages/services" class="home-path">
+          <img src="/assets/images/content/home-path-digital.webp"
+               srcset="/assets/images/content/home-path-digital-800.webp 800w, /assets/images/content/home-path-digital.webp 1200w"
+               sizes="(min-width: 1025px) 360px, 92vw"
+               width="1200" height="800"
+               alt="استودیو طراحی سایت، اپ و بازاریابی دیجیتال"
+               data-i18n-alt="home.pathDigitalAlt" loading="lazy" decoding="async">
+          <div class="home-path__body">
+            <span class="home-path__num" data-i18n="common.offerMap.servicesNum">۰۳</span>
+            <p class="home-path__title" data-i18n="common.offerMap.servicesTitle">خدمات</p>
+            <p class="home-path__desc" data-i18n="common.offerMap.servicesDesc">سایت انگلیسی از ۹۹ دلار برای اروپا/آمریکا، بازاریابی، اپ و خدمات فنی</p>
+            <span class="home-path__go" data-i18n="common.offerMap.servicesGo">ورود به خدمات</span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -141,41 +214,71 @@
         <p class="section__desc" data-i18n="home.svcDesc">شش محور خدمات — طراحی سایت انگلیسی US/EU، نرم‌افزار و خدمات فنی تبریز</p>
       </div>
       <div class="services-grid services-grid--pro">
-        <article class="service-card service-card--pro">
-          <div class="service-card__icon" data-bd-icon="chart-line" data-bd-size="28"></div>
-          <h3 class="service-card__title" data-i18n="services.digitalMarketing">بازاریابی دیجیتال</h3>
-          <p class="service-card__desc" data-i18n="home.svcDmDesc">Google Ads، Meta و LinkedIn برای رشد فروش دلاری و یورویی.</p>
-          <a href="/pages/services#digital-marketing" class="service-card__link"><span data-i18n="common.details">جزئیات</span><span class="visually-hidden">: <span data-i18n="services.digitalMarketing">بازاریابی دیجیتال</span></span></a>
+        <article class="service-card service-card--pro service-card--media">
+          <div class="service-card__media">
+            <img src="/assets/images/content/home-svc-dm.webp" srcset="/assets/images/content/home-svc-dm-800.webp 800w, /assets/images/content/home-svc-dm.webp 1536w" sizes="(min-width: 1025px) 620px, 92vw" width="1536" height="1024" alt="بازاریابی دیجیتال و تبلیغات" data-i18n-alt="home.svcDmImgAlt" loading="lazy" decoding="async">
+          </div>
+          <div class="service-card__body">
+            <div class="service-card__icon" data-bd-icon="chart-line" data-bd-size="32"></div>
+            <h3 class="service-card__title" data-i18n="services.digitalMarketing">بازاریابی دیجیتال</h3>
+            <p class="service-card__desc" data-i18n="home.svcDmDesc">Google Ads، Meta و LinkedIn برای رشد فروش دلاری و یورویی.</p>
+            <a href="/pages/services#digital-marketing" class="service-card__link"><span data-i18n="common.details">جزئیات</span><span class="visually-hidden">: <span data-i18n="services.digitalMarketing">بازاریابی دیجیتال</span></span></a>
+          </div>
         </article>
-        <article class="service-card service-card--pro">
-          <div class="service-card__icon" data-bd-icon="globe" data-bd-size="28"></div>
-          <h3 class="service-card__title" data-i18n="services.webDesign">طراحی وب و وب‌اپلیکیشن</h3>
-          <p class="service-card__desc" data-i18n="home.svcWebDesc">سایت انگلیسی برای اروپا و آمریکا — فاکتور دلار/یورو، از ۹۹ دلار در ۵ روز.</p>
-          <a href="/pages/fast" class="service-card__link" data-i18n="home.svcPlans">پلن‌ها و قیمت</a>
+        <article class="service-card service-card--pro service-card--media">
+          <div class="service-card__media">
+            <img src="/assets/images/content/home-fast-studio.webp" srcset="/assets/images/content/home-fast-studio-800.webp 800w, /assets/images/content/home-fast-studio.webp 1400w" sizes="(min-width: 1025px) 620px, 92vw" width="1400" height="933" alt="طراحی سایت انگلیسی Fast Web Studio" data-i18n-alt="home.svcWebImgAlt" loading="lazy" decoding="async">
+          </div>
+          <div class="service-card__body">
+            <div class="service-card__icon" data-bd-icon="globe" data-bd-size="32"></div>
+            <h3 class="service-card__title" data-i18n="services.webDesign">طراحی وب و وب‌اپلیکیشن</h3>
+            <p class="service-card__desc" data-i18n="home.svcWebDesc">سایت انگلیسی برای اروپا و آمریکا — فاکتور دلار/یورو، از ۹۹ دلار در ۵ روز.</p>
+            <a href="/pages/fast" class="service-card__link" data-i18n="home.svcPlans">پلن‌ها و قیمت</a>
+          </div>
         </article>
-        <article class="service-card service-card--pro">
-          <div class="service-card__icon" data-bd-icon="users" data-bd-size="28"></div>
-          <h3 class="service-card__title" data-i18n="services.smm">مدیریت SMM</h3>
-          <p class="service-card__desc" data-i18n="home.svcSmmDesc">تولید محتوا، مدیریت صفحات و تبلیغات هدفمند در شبکه‌های اجتماعی.</p>
-          <a href="/pages/services#smm" class="service-card__link"><span data-i18n="common.details">جزئیات</span><span class="visually-hidden">: <span data-i18n="services.smm">مدیریت SMM</span></span></a>
+        <article class="service-card service-card--pro service-card--media">
+          <div class="service-card__media">
+            <img src="/assets/images/content/home-svc-smm.webp" srcset="/assets/images/content/home-svc-smm-800.webp 800w, /assets/images/content/home-svc-smm.webp 1536w" sizes="(min-width: 1025px) 310px, (min-width: 641px) 46vw, 92vw" width="1536" height="1024" alt="مدیریت شبکه‌های اجتماعی" data-i18n-alt="home.svcSmmImgAlt" loading="lazy" decoding="async">
+          </div>
+          <div class="service-card__body">
+            <div class="service-card__icon" data-bd-icon="message" data-bd-size="32"></div>
+            <h3 class="service-card__title" data-i18n="services.smm">مدیریت SMM</h3>
+            <p class="service-card__desc" data-i18n="home.svcSmmDesc">تولید محتوا، مدیریت صفحات و تبلیغات هدفمند در شبکه‌های اجتماعی.</p>
+            <a href="/pages/services#smm" class="service-card__link"><span data-i18n="common.details">جزئیات</span><span class="visually-hidden">: <span data-i18n="services.smm">مدیریت SMM</span></span></a>
+          </div>
         </article>
-        <article class="service-card service-card--pro">
-          <div class="service-card__icon" data-bd-icon="desktop" data-bd-size="28"></div>
-          <h3 class="service-card__title" data-i18n="services.softwareApps">اپ و سامانه</h3>
-          <p class="service-card__desc" data-i18n="home.svcAppsDesc">اپلیکیشن اندروید و iOS با انتشار App Store / Play و Stripe.</p>
-          <a href="/pages/services#software-apps" class="service-card__link"><span data-i18n="common.details">جزئیات</span><span class="visually-hidden">: <span data-i18n="services.softwareApps">اپ و سامانه</span></span></a>
+        <article class="service-card service-card--pro service-card--media">
+          <div class="service-card__media">
+            <img src="/assets/images/content/home-svc-apps.webp" srcset="/assets/images/content/home-svc-apps-800.webp 800w, /assets/images/content/home-svc-apps.webp 1536w" sizes="(min-width: 1025px) 310px, (min-width: 641px) 46vw, 92vw" width="1536" height="1024" alt="توسعه اپلیکیشن موبایل و سامانه" data-i18n-alt="home.svcAppsImgAlt" loading="lazy" decoding="async">
+          </div>
+          <div class="service-card__body">
+            <div class="service-card__icon" data-bd-icon="desktop" data-bd-size="32"></div>
+            <h3 class="service-card__title" data-i18n="services.softwareApps">اپ و سامانه</h3>
+            <p class="service-card__desc" data-i18n="home.svcAppsDesc">اپلیکیشن اندروید و iOS با انتشار App Store / Play و Stripe.</p>
+            <a href="/pages/services#software-apps" class="service-card__link"><span data-i18n="common.details">جزئیات</span><span class="visually-hidden">: <span data-i18n="services.softwareApps">اپ و سامانه</span></span></a>
+          </div>
         </article>
-        <article class="service-card service-card--pro">
-          <div class="service-card__icon" data-bd-icon="monitor" data-bd-size="28"></div>
-          <h3 class="service-card__title" data-i18n="services.serverOps">مدیریت سرور</h3>
-          <p class="service-card__desc" data-i18n="home.svcServerDesc">راه‌اندازی، امنیت، بکاپ، مانیتورینگ و مهاجرت سرور.</p>
-          <a href="/pages/services#server-ops" class="service-card__link"><span data-i18n="common.details">جزئیات</span><span class="visually-hidden">: <span data-i18n="services.serverOps">مدیریت سرور</span></span></a>
+        <article class="service-card service-card--pro service-card--media">
+          <div class="service-card__media">
+            <img src="/assets/images/content/home-svc-server.webp" srcset="/assets/images/content/home-svc-server-800.webp 800w, /assets/images/content/home-svc-server.webp 1536w" sizes="(min-width: 1025px) 310px, (min-width: 641px) 46vw, 92vw" width="1536" height="1024" alt="مدیریت سرور و زیرساخت" data-i18n-alt="home.svcServerImgAlt" loading="lazy" decoding="async">
+          </div>
+          <div class="service-card__body">
+            <div class="service-card__icon" data-bd-icon="monitor" data-bd-size="32"></div>
+            <h3 class="service-card__title" data-i18n="services.serverOps">مدیریت سرور</h3>
+            <p class="service-card__desc" data-i18n="home.svcServerDesc">راه‌اندازی، امنیت، بکاپ، مانیتورینگ و مهاجرت سرور.</p>
+            <a href="/pages/services#server-ops" class="service-card__link"><span data-i18n="common.details">جزئیات</span><span class="visually-hidden">: <span data-i18n="services.serverOps">مدیریت سرور</span></span></a>
+          </div>
         </article>
-        <article class="service-card service-card--pro">
-          <div class="service-card__icon" data-bd-icon="wrench" data-bd-size="28"></div>
-          <h3 class="service-card__title" data-i18n="services.fieldTech">خدمات فنی</h3>
-          <p class="service-card__desc" data-i18n="home.svcFieldDesc">دوربین مدار بسته، سیم‌کشی و نورمخفی — تبریز.</p>
-          <a href="/pages/services#field-tech" class="service-card__link"><span data-i18n="common.details">جزئیات</span><span class="visually-hidden">: <span data-i18n="services.fieldTech">خدمات فنی</span></span></a>
+        <article class="service-card service-card--pro service-card--media">
+          <div class="service-card__media">
+            <img src="/assets/images/content/home-svc-field.webp" srcset="/assets/images/content/home-svc-field-800.webp 800w, /assets/images/content/home-svc-field.webp 1536w" sizes="(min-width: 1025px) 310px, (min-width: 641px) 46vw, 92vw" width="1536" height="1024" alt="خدمات فنی دوربین و سیم‌کشی در تبریز" data-i18n-alt="home.svcFieldImgAlt" loading="lazy" decoding="async">
+          </div>
+          <div class="service-card__body">
+            <div class="service-card__icon" data-bd-icon="wrench" data-bd-size="32"></div>
+            <h3 class="service-card__title" data-i18n="services.fieldTech">خدمات فنی</h3>
+            <p class="service-card__desc" data-i18n="home.svcFieldDesc">دوربین مدار بسته، سیم‌کشی و نورمخفی — تبریز.</p>
+            <a href="/pages/services#field-tech" class="service-card__link"><span data-i18n="common.details">جزئیات</span><span class="visually-hidden">: <span data-i18n="services.fieldTech">خدمات فنی</span></span></a>
+          </div>
         </article>
       </div>
     </div>
@@ -205,12 +308,20 @@
 
   <section class="section">
     <div class="container">
-      <div class="fast-promo">
-        <div>
+      <div class="fast-promo fast-promo--visual">
+        <div class="fast-promo__media">
+          <img src="/assets/images/content/home-fast-studio.webp"
+               srcset="/assets/images/content/home-fast-studio-800.webp 800w, /assets/images/content/home-fast-studio.webp 1400w"
+               sizes="(min-width: 1025px) 560px, 92vw"
+               width="1400" height="933"
+               alt="طراحی سایت انگلیسی در پنج روز کاری"
+               data-i18n-alt="home.fastImgAlt" loading="lazy" decoding="async">
+        </div>
+        <div class="fast-promo__copy">
           <h2 class="fast-promo__title" data-i18n="home.fastTitle">طراحی سایت حرفه‌ای در ۵ روز!</h2>
           <p class="fast-promo__desc" data-i18n="home.fastDesc">سایتت رو راه بنداز و همین هفته درآمدتو شروع کن — Fast Web Studio</p>
+          <a href="/pages/fast" class="btn btn--yellow" data-i18n="home.fastBtn">مشاهده پلن‌ها</a>
         </div>
-        <a href="/pages/fast" class="btn btn--yellow" data-i18n="home.fastBtn">مشاهده پلن‌ها</a>
       </div>
     </div>
   </section>
@@ -218,12 +329,12 @@
   <section class="section landing-about" id="about">
     <div class="container about-grid">
       <div class="about__image">
-        <img src="/assets/images/content/about-hero-800.webp" srcset="/assets/images/content/about-hero-800.webp 800w, /assets/images/content/about-hero.jpg 1152w" sizes="(min-width: 1025px) 570px, 92vw" alt="تیم بیزدوار در نمایشگاه تبریز" data-about-hero data-i18n-alt="home.aboutHeroAlt" loading="lazy" width="800" height="600">
+        <img src="/assets/images/content/home-about-800.webp" srcset="/assets/images/content/home-about-800.webp 800w, /assets/images/content/home-about.webp 1536w" sizes="(min-width: 1025px) 570px, 92vw" alt="سنسور صنعتی و داشبورد دیجیتال روی میز کار بیزدوار" data-about-hero data-i18n-alt="home.aboutHeroAlt" loading="lazy" width="800" height="533">
       </div>
       <div class="about__content">
         <span class="section__tag" data-i18n="home.aboutTag">درباره ما</span>
         <h2 data-i18n="home.aboutTitle">بیزدوار گروپ — بازرگانی صنعتی و خدمات دیجیتال</h2>
-        <p data-i18n="home.aboutP1">بیشتر مشتری‌های ما در ایران خریدار بخش بازرگانی هستند: VEGA، Prosense، Liqui Moly و برندهای صنعتی. کنار آن، سایت، بازاریابی و محصولاتی مثل BizPet و FXGuard هم می‌سازیم.</p>
+        <p data-i18n="home.aboutP1">بیشتر مشتری‌های ما در ایران خریدار بخش بازرگانی هستند: VEGA، Prosense، Liqui Moly و برندهای صنعتی. کنار آن سایت، بازاریابی و نرم‌افزارهایی مثل FXGuard می‌سازیم.</p>
         <p data-i18n-html="home.aboutP2">زیرساخت دیجیتال، مدیریت دامنه، SSL و امنیت نیز بخشی از خدمات ماست — میزبانی و دامنه بین‌المللی از طریق <a href="https://netinode.net/" class="service-card__link" target="_blank" rel="noopener noreferrer">Netinode</a>.</p>
         <p class="mt-16"><a href="/pages/about" class="service-card__link" data-i18n="home.aboutMore">بیشتر درباره بیزدوار</a></p>
         <div class="about__features">
@@ -327,7 +438,7 @@
   <footer class="footer" id="siteFooter"></footer>
   <button class="back-to-top" id="backToTop" data-i18n-aria="common.backToTop" aria-label="بازگشت به بالا"></button>
 
-  <script src="/assets/scripts/site-loader.js?v=20260831e" data-after-config="config/owned-products.js" data-after-locales="i18n/owned-products-i18n.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20260901t" data-after-config="config/owned-products.js" data-after-locales="i18n/owned-products-i18n.js"></script>
 
   <script>
     function bootHomePage() {
@@ -335,7 +446,6 @@
       setupWhatsappLinks();
       injectPageSeo('home', { canonical: 'https://bizdavar.com/' });
       injectServiceSchema();
-      renderTrustBar('trustBar');
       renderCredibilitySection('credibilitySection');
       renderProcessSection('processSection');
       renderOwnedProductsSection('ownedProductsSection');

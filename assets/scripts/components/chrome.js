@@ -123,7 +123,6 @@
         { href: pagePath(R.teltonika), label: 'Teltonika' },
         { href: pagePath(R.gamak), label: 'Gamak' },
         { href: pagePath(R.uwt), label: 'UWT' },
-        { href: pagePath(R.digiSystem), label: 'Digi System' },
         { href: pagePath(R.teraoka), label: 'Teraoka' },
         { href: pagePath(R.liquiMoly), label: 'Liqui Moly' }
       ],
@@ -955,7 +954,7 @@
 
   function renderOfferMap() {
     const host = document.getElementById('offerMap');
-    if (!host) return;
+    if (!host || currentPage === 'home') return;
     const servicesHref = pagePath(R.services);
     const productsHref = pagePath(R.products);
     const supplyHref = (productsHref.indexOf('#') === -1 ? productsHref : productsHref.split('#')[0]) + '#supply';
@@ -975,7 +974,7 @@
           <a href="${productsHref}" class="offer-map__card${currentPage === 'products' ? ' is-active' : ''}">
             <span class="offer-map__num">${t('common.offerMap.productsNum', '۰۲')}</span>
             <p class="offer-map__title">${t('common.offerMap.productsTitle', 'محصولات بیزدوار')}</p>
-            <p class="offer-map__desc">${t('common.offerMap.productsDesc', 'محصولات دیجیتال و فیزیکی خودمان — BizPet، BizTab و FXGuard')}</p>
+            <p class="offer-map__desc">${t('common.offerMap.productsDesc', 'WhatsApp CRM، حسابداری FXGuard و BizSwap')}</p>
             <span class="offer-map__go">${t('common.offerMap.productsGo', 'ورود به محصولات')}</span>
           </a>
           <a href="${supplyHref}" class="offer-map__card">

@@ -102,7 +102,7 @@ window.BIZDAVAR_INTEL = {
     {
       id: 'products',
       title: 'محصولات خودمان',
-      items: ['BizPet — پد حرارتی ۱۳۹۹ (همان پشتی خودرو)', 'BizTab — دماسنج غیرتماسی', 'BizClean V5 — ضدعفونی دست', 'FXGuard — WhatsApp CRM و Accounting', 'BizSwap — پیش‌فروش توکن']
+      items: ['FXGuard — WhatsApp CRM و Accounting', 'BizSwap — پیش‌فروش توکن', 'تولید سخت‌افزاری گذشته — در دستاوردها (پد، دماسنج، ضدعفونی)']
     },
     {
       id: 'supply',

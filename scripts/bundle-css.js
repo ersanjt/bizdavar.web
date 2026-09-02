@@ -20,7 +20,9 @@ const PARTS = [
   'mobile-chrome.css',
   'chrome-responsive.css',
   'responsive.css',
-  'premium.css'
+  'premium.css',
+  'conversions.css',
+  'home.css'
 ];
 
 const banner = `/**

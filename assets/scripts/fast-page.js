@@ -239,7 +239,7 @@
     el.innerHTML = F.guides.map(g => `
       <a href="${path(g.href)}" class="fast-guide-card">
         <div class="fast-guide-card__media">
-          <img src="${path(g.image)}" alt="" width="400" height="210" loading="lazy">
+          <img src="${path(g.image)}" alt="${g.title}" width="800" height="533" loading="lazy">
         </div>
         <div class="fast-guide-card__body">
           <strong>${g.title}</strong>

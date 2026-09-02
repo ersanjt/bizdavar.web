@@ -3,8 +3,8 @@
  * Default copy (fa) lives here; owned-products-i18n.js overrides per locale.
  */
 window.BIZDAVAR_OWNED_PRODUCTS = {
-  imgVersion: '6',
-  homeOrder: ['bizpet', 'biztab', 'fxguard', 'bizswap'],
+  imgVersion: '8',
+  homeOrder: ['fxguard', 'bizswap'],
   categories: [
     { id: 'software', label: 'نرم‌افزار و SaaS', icon: 'globe' },
     { id: 'iot-health', label: 'IoT و بهداشت', icon: 'shield' },
@@ -19,8 +19,9 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       name: 'BizSwap',
       title: 'پیش‌فروش و سواپ توکن',
       desc: 'ماژول Web3 برای اتصال کیف پول، سواپ stablecoin به توکن پروژه، پیش‌فروش on-chain و پنل ادمین — BEP-20 و RWA.',
+      homeDesc: 'سواپ و پیش‌فروش توکن روی زنجیره',
       tags: ['DeFi', 'Web3', 'Token Swap'],
-      image: 'assets/images/products/bizswap/bizswap-hero.svg',
+      image: 'assets/images/content/home-owned-bizswap.webp',
       logo: 'assets/images/products/bizswap/bizswap-logo.svg',
       page: 'pages/bizswap.html',
       featured: true,
@@ -32,9 +33,10 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       categoryLabel: 'نرم‌افزار و SaaS',
       name: 'WhatsApp CRM',
       title: 'FXGuard WhatsApp CRM',
-      desc: 'اینباکس تیمی واتساپ، مشتریان، تیکت، شعب و ۲FA — Cloud از $49/ماه، لایسنس یا Managed. دمو رایگان در app.fxguard.io.',
+      desc: 'اینباکس تیمی واتساپ برای شعب و فروش — از ۴۹ دلار در ماه.',
+      homeDesc: 'اینباکس تیمی واتساپ — از ۴۹ دلار',
       tags: ['FXGuard', 'WhatsApp CRM', 'از ۴۹ دلار'],
-      image: 'assets/images/products/fxguard/fxguard-hero.svg',
+      image: 'assets/images/content/home-owned-fxguard.webp',
       logo: 'assets/images/products/fxguard/fxguard-logo.svg',
       page: 'pages/fxguard.html',
       featured: true,
@@ -60,12 +62,13 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       categoryLabel: 'IoT و بهداشت',
       name: 'BizTab',
       title: 'دماسنج دیواری غیرتماسی',
-      desc: 'اولین دماسنج دیواری غیرتماسی تبریز — دقت کمتر از ۰.۳°C، تأیید دانشگاه تبریز.',
+      desc: 'دماسنج دیواری غیرتماسی — دقت زیر ۰.۳ درجه، ساخته‌شده در تبریز.',
+      homeDesc: 'دماسنج دیواری غیرتماسی برای ورودی و کلینیک',
       tags: ['IoT', 'غیرتماسی', 'تبریز'],
       image: 'assets/images/gallery/expo-tabrizu-incubator.jpg',
       logo: 'assets/images/products/biztab/biztab-logo.svg',
       page: 'pages/biztab.html',
-      featured: true,
+      featured: false,
       status: 'live'
     },
     {
@@ -74,12 +77,13 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       categoryLabel: 'IoT و بهداشت',
       name: 'BizPet',
       title: 'پد حرارتی بیز پت',
-      desc: 'پد حرارتی پدیده — برای خانه، خودرو و جا خواب حیوانات؛ طراحی در مرکز رشد دانشگاه تبریز.',
-      tags: ['پد حرارتی', 'IoT', 'تبریز'],
+      desc: 'پد حرارتی برای خانه، خودرو و جای خواب حیوان — طراحی تیم بیزدوار.',
+      homeDesc: 'پد حرارتی خانه و صندلی خودرو',
+      tags: ['پد حرارتی', 'خودرو', 'تبریز'],
       image: 'assets/images/products/bizpet/bizpet-grey.jpg',
       logo: 'assets/images/products/bizpet/bizpet-grey.jpg',
       page: 'pages/bizpet.html',
-      featured: true,
+      featured: false,
       status: 'live'
     },
     {
@@ -107,7 +111,8 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       image: 'assets/images/products/bizpet/bizpet-grey.jpg',
       logo: 'assets/images/products/bizpet/bizpet-grey.jpg',
       page: 'pages/bizpet.html',
-      featured: true,
+      featured: false,
+      hidden: true,
       status: 'live'
     },
     {

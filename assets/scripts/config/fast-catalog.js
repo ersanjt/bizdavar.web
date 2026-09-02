@@ -73,25 +73,25 @@ window.FAST_CATALOG = {
       title: 'راهنمای کامل Fast Studio',
       desc: 'پلن $99 تا $299، تحویل ۵ روزه و تفاوت با پروژه اختصاصی.',
       href: 'pages/articles/fast-studio.html',
-      image: 'assets/images/content/fast-hero.svg?v=20260901d'
+      image: 'assets/images/content/home-fast-studio.webp'
     },
     {
       title: 'چک‌لیست سایت در ۵ روز',
       desc: 'چه چیزی را از روز اول آماده کنید تا واقعاً سریع آنلاین شوید.',
       href: 'pages/articles/website-speed-5-days.html',
-      image: 'assets/images/content/fast-speed-banner.svg?v=20260901d'
+      image: 'assets/images/content/fast-guide-checklist.webp'
     },
     {
       title: 'وب و اپ اختصاصی',
       desc: 'چه زمانی از Fast خارج می‌شوید و پروژه سفارشی می‌گیرید.',
       href: 'pages/articles/custom-web-app-development.html',
-      image: 'assets/images/content/custom-web-app-hero.svg?v=20260901d'
+      image: 'assets/images/content/home-svc-apps.webp'
     },
     {
       title: 'سایت چندزبانه ایران–ترکیه',
       desc: 'hreflang، اعتماد محلی و الگوی fa / tr / en.',
       href: 'pages/articles/multilingual-web-iran-turkey.html',
-      image: 'assets/images/content/related-thumb-fast.svg'
+      image: 'assets/images/content/fast-guide-i18n.webp'
     }
   ],
 

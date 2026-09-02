@@ -1,9 +1,9 @@
 # Site Audit
 
-Generated: 2026-09-01T12:56:22.620Z
+Generated: 2026-09-01T14:29:11.291Z
 
 - Errors: 0
-- Warnings: 57
+- Warnings: 55
 
 - **warn** `index.html`: Body scripts still use defer
 - **warn** `pages\about.html`: Body scripts still use defer
@@ -16,7 +16,6 @@ Generated: 2026-09-01T12:56:22.620Z
 - **warn** `pages\articles\buy-vegapuls-iran.html`: Body scripts still use defer
 - **warn** `pages\articles\digital-marketing-us-eu.html`: Body scripts still use defer
 - **warn** `pages\articles\digital-marketing.html`: Body scripts still use defer
-- **warn** `pages\articles\fast-studio.html`: Body scripts still use defer
 - **warn** `pages\articles\field-tech-services.html`: Body scripts still use defer
 - **warn** `pages\articles\industrial-sensors.html`: Body scripts still use defer
 - **warn** `pages\articles\industrial-trade-iran.html`: Body scripts still use defer
@@ -30,7 +29,6 @@ Generated: 2026-09-01T12:56:22.620Z
 - **warn** `pages\articles\vega-supply-iran.html`: Body scripts still use defer
 - **warn** `pages\articles\website-design-us-eu.html`: Body scripts still use defer
 - **warn** `pages\articles\what-is-digital-marketing.html`: Body scripts still use defer
-- **warn** `pages\bizpet.html`: Body scripts still use defer
 - **warn** `pages\bizsanitizer-v5.html`: Body scripts still use defer
 - **warn** `pages\bizseat.html`: Body scripts still use defer
 - **warn** `pages\bizswap.html`: Body scripts still use defer
@@ -42,6 +40,7 @@ Generated: 2026-09-01T12:56:22.620Z
 - **warn** `pages\digi-system.html`: Body scripts still use defer
 - **warn** `pages\fast.html`: Body scripts still use defer
 - **warn** `pages\field-tech.html`: Body scripts still use defer
+- **warn** `pages\fxguard-accounting.html`: Missing locale-preload.js in head
 - **warn** `pages\fxguard-accounting.html`: Body scripts still use defer
 - **warn** `pages\fxguard-exchange.html`: Body scripts still use defer
 - **warn** `pages\fxguard.html`: Body scripts still use defer
@@ -60,5 +59,4 @@ Generated: 2026-09-01T12:56:22.620Z
 - **warn** `pages\supplify-trade.html`: Body scripts still use defer
 - **warn** `pages\teltonika.html`: Body scripts still use defer
 - **warn** `pages\teraoka.html`: Body scripts still use defer
-- **warn** `pages\uwt.html`: Body scripts still use defer
 - **warn** `pages\vega.html`: Body scripts still use defer

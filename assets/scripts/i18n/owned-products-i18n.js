@@ -11,7 +11,7 @@
         hero: {
           tag: 'بازرگانی صنعتی و محصولات بیزدوار',
           title: 'خرید VEGA، Prosense و محصولات بیزدوار',
-          desc: 'اولویت با خریدار ایران: سنسور VEGA، دتکتور Prosense، Liqui Moly و Teltonika — کنار سخت‌افزار و SaaS خودمان از تبریز.',
+          desc: 'اولویت با خریدار ایران: سنسور VEGA، دتکتور Prosense، Liqui Moly و Teltonika — کنار سایت، بازاریابی و نرم‌افزارهایی مثل FXGuard.',
           ctaLive: 'محصولات زنده',
           ctaCatalog: 'کاتالوگ کامل',
           ctaSupply: 'کاتالوگ بازرگانی',
@@ -24,7 +24,7 @@
         },
         intro: {
           title: 'ما چه می‌سازیم؟',
-          body: 'بیزدوار گروپ علاوه بر خدمات دیجیتال و تامین صنعتی، <strong>محصولات سخت‌افزاری و نرم‌افزار SaaS اختصاصی</strong> نیز تولید می‌کند. مالکیت فکری با تیم بیزدوار است؛ مهندسی در تبریز، قابل عرضه برای بازار داخلی و بین‌المللی.',
+          body: 'اولویت امروز بیزدوار <strong>بازرگانی صنعتی، سایت، بازاریابی و نرم‌افزار SaaS</strong> مثل FXGuard است. محصولات سخت‌افزاری که قبلاً ساخته‌ایم در دستاوردهای شرکت هستند.',
           ctaContact: 'استعلام و سفارش',
           ctaPortfolio: 'نمونه‌کارهای دیجیتال',
           statProducts: '۱۲+',
@@ -37,7 +37,7 @@
         featured: {
           eyebrow: 'محصولات زنده',
           title: 'صفحات محصول آماده سفارش',
-          desc: 'WhatsApp CRM، Accounting، BizSwap، BizTab، BizClean و BizPet — با صفحه اختصاصی و مسیر استعلام شفاف.'
+          desc: 'WhatsApp CRM، Accounting و BizSwap — آماده سفارش. پد حرارتی و BizTab در دستاوردها و کاتالوگ کامل هستند.'
         },
         filterAll: 'همه',
         empty: 'محصولی برای نمایش نیست.',
@@ -59,7 +59,7 @@
           desc: 'نرم‌افزار مالکیتی، سخت‌افزار بیزدوار و برندهای صنعتی تامین — یک کلیک تا صفحه اختصاصی.',
           ownedKicker: 'Owned · Software & Hardware',
           ownedTitle: 'محصولات مالکیتی',
-          ownedDesc: 'سوئیت FXGuard، BizSwap و دستگاه‌های مهندسی‌شده تیم بیزدوار.',
+          ownedDesc: 'WhatsApp CRM و BizSwap — محصولات زنده. تولید سخت‌افزاری در دستاوردها و کاتالوگ است.',
           supplyKicker: 'Supply · Industrial Brands',
           supplyTitle: 'برندهای تامین',
           supplyDesc: 'کاتالوگ جداگانه، مشاوره فنی و پیش‌فاکتور شفاف برای پروژه‌های صنعتی.',
@@ -110,14 +110,16 @@
           bizswap: {
             name: 'BizSwap',
             title: 'پیش‌فروش و سواپ توکن',
-            desc: 'ماژول Web3 — اتصال کیف پول، سواپ stablecoin به توکن، پیش‌فروش on-chain، اسلیپیج و پنل ادمین برای BEP-20 و RWA.',
+            desc: 'اتصال کیف پول، سواپ و پیش‌فروش توکن روی زنجیره — برای پروژه‌های BEP-20 و RWA.',
+            homeDesc: 'سواپ و پیش‌فروش توکن روی زنجیره',
             tags: ['DeFi', 'Web3', 'Token Swap']
           },
           fxguard: {
             name: 'WhatsApp CRM',
-            title: 'FXGuard WhatsApp CRM',
-            desc: 'اینباکس تیمی واتساپ، مشتریان، تیکت، شعب و ۲FA — Cloud از $49/ماه، لایسنس یا Managed. دمو رایگان در app.fxguard.io.',
-            tags: ['FXGuard', 'WhatsApp CRM', 'از ۴۹ دلار']
+            title: 'اینباکس تیمی واتساپ',
+            desc: 'اینباکس مشترک، تیکت و شعب — از ۴۹ دلار در ماه. دمو در app.fxguard.io.',
+            homeDesc: 'اینباکس تیمی واتساپ — از ۴۹ دلار',
+            tags: ['FXGuard', 'CRM', 'از ۴۹ دلار']
           },
           'fxguard-accounting': {
             name: 'Accounting',
@@ -128,7 +130,8 @@
           biztab: {
             name: 'BizTab',
             title: 'دماسنج دیواری غیرتماسی',
-            desc: 'اولین دماسنج دیواری غیرتماسی تبریز — دقت کمتر از ۰.۳°C، تأیید دانشگاه تبریز.',
+            desc: 'دماسنج دیواری غیرتماسی — دقت زیر ۰.۳ درجه، ساخته‌شده در تبریز.',
+            homeDesc: 'دماسنج دیواری غیرتماسی برای ورودی و کلینیک',
             tags: ['IoT', 'غیرتماسی', 'تبریز']
           },
           bizclean: {
@@ -139,9 +142,10 @@
           },
           bizpet: {
             name: 'BizPet',
-            title: 'پد حرارتی بیز پت',
-            desc: 'محصول اصلی ۱۳۹۹ — پد حرارتی پدیده برای خانه، خودرو و جا خواب حیوانات. پشتی صندلی با نام BizSeat همان این کالاست. مرکز رشد دانشگاه تبریز، ایمن سهند پدیده. ۵ تا ۱۲ ولت.',
-            tags: ['پد حرارتی', 'خودرو', 'تبریز', '۱۳۹۹']
+            title: 'پد حرارتی',
+            desc: 'پد حرارتی برای خانه، خودرو و جای خواب حیوان — طراحی تیم بیزدوار در تبریز.',
+            homeDesc: 'پد حرارتی خانه و صندلی خودرو',
+            tags: ['پد حرارتی', 'خودرو', 'تبریز']
           },
           biztouch: {
             name: 'BizTouch',
@@ -195,10 +199,11 @@
         contact: 'استعلام محصول'
       },
       home: {
-        ownedEyebrow: 'محصولات بیزدوار',
-        ownedTitle: 'آنچه می‌سازیم',
-        ownedDesc: 'علاوه بر خدمات دیجیتال، تیم بیزدوار دستگاه و نرم‌افزار اختصاصی هم می‌سازد — از پد حرارتی BizPet و دماسنج BizTab تا FXGuard و BizSwap.',
-        ownedCta: 'مشاهده همه محصولات'
+        ownedEyebrow: 'ساخت بیزدوار',
+        ownedTitle: 'آنچه خودمان می‌سازیم',
+        ownedDesc: 'WhatsApp CRM و BizSwap — محصولات زنده. تولید سخت‌افزاری در دستاوردهای شرکت است.',
+        ownedCta: 'همه محصولات',
+        ownedAchievements: 'دستاوردها و تولید'
       }
     },
     tr: {
@@ -207,7 +212,7 @@
         hero: {
           tag: 'Bizdavar mühendislik ve üretim',
           title: 'Bizdavar ürünleri',
-          desc: 'Özel donanım, üretim hatları ve SaaS — Bizdavar ekibi tarafından Tebriz\'da tasarlandı.',
+          desc: 'İran alıcısı öncelikli: VEGA, Prosense, Liqui Moly ve Teltonika — yanında web, pazarlama ve FXGuard gibi yazılımlar.',
           ctaLive: 'Canlı ürünler',
           ctaCatalog: 'Tam katalog',
           ctaSupply: 'Tedarik markaları',
@@ -220,7 +225,7 @@
         },
         intro: {
           title: 'Ne üretiyoruz?',
-          body: 'Bizdavar Group, dijital hizmetler ve endüstriyel tedarikin yanı sıra <strong>özel donanım ve SaaS ürünleri</strong> de geliştirir. Fikri mülkiyet Bizdavar ekibine aittir; mühendislik Tebriz\'da yapılır.',
+          body: 'Bugünün önceliği <strong>endüstriyel tedarik, web, pazarlama ve SaaS</strong> (FXGuard). Daha önce ürettiğimiz donanım şirket başarılarında durur.',
           ctaContact: 'Teklif ve sipariş',
           ctaPortfolio: 'Dijital portfolyo',
           statProducts: '12+',
@@ -233,7 +238,7 @@
         featured: {
           eyebrow: 'Canlı ürünler',
           title: 'Siparişe hazır ürün sayfaları',
-          desc: 'WhatsApp CRM, Accounting, BizSwap, BizTab, BizClean ve BizPet — özel sayfa ve net teklif yolu.'
+          desc: 'WhatsApp CRM, Accounting ve BizSwap — siparişe hazır. Isı pedi ve BizTab başarılar ve tam katalogda.'
         },
         filterAll: 'Tümü',
         empty: 'Gösterilecek ürün yok.',
@@ -255,7 +260,7 @@
           desc: 'Sahip olunan yazılım/donanım ve endüstriyel tedarik markaları — tek tıkla özel sayfa.',
           ownedKicker: 'Owned · Software & Hardware',
           ownedTitle: 'Sahip olunan ürünler',
-          ownedDesc: 'FXGuard suite, BizSwap ve Bizdavar mühendislik cihazları.',
+          ownedDesc: 'WhatsApp CRM ve BizSwap — canlı ürünler. Donanım, başarılar ve tam katalogda.',
           supplyKicker: 'Supply · Industrial Brands',
           supplyTitle: 'Tedarik markaları',
           supplyDesc: 'Ayrı katalog, teknik danışmanlık ve şeffaf proforma.',
@@ -303,12 +308,12 @@
           medical: { label: 'Medikal ve PPE', desc: 'BizPet ısı pedi (ev ve araç) ve maske üretim hatları' }
         },
         items: {
-          bizswap: { name: 'BizSwap', title: 'Token ön satış & swap', desc: 'Web3 modülü — cüzdan bağlantısı, stablecoin-token swap, on-chain ön satış, slippage ve admin paneli (BEP-20 / RWA).', tags: ['DeFi', 'Web3', 'Token Swap'] },
-          fxguard: { name: 'WhatsApp CRM', title: 'FXGuard WhatsApp CRM', desc: 'Ortak WhatsApp inbox, müşteriler, ticket, şubeler ve 2FA — Cloud $49/ay’dan, lisans veya Managed. Ücretsiz demo: app.fxguard.io.', tags: ['FXGuard', 'WhatsApp CRM', 'From $49/mo'] },
+          bizswap: { name: 'BizSwap', title: 'Token ön satış & swap', desc: 'Cüzdan bağlantısı, token swap ve on-chain ön satış — BEP-20 ve RWA.', homeDesc: 'Zincir üstü token swap ve ön satış', tags: ['DeFi', 'Web3', 'Token Swap'] },
+          fxguard: { name: 'WhatsApp CRM', title: 'Paylaşılan WhatsApp inbox', desc: 'Ortak inbox, ticket ve şubeler — ayda 49 dolardan. Demo: app.fxguard.io.', homeDesc: 'WhatsApp ekip inbox — 49 dolardan', tags: ['FXGuard', 'CRM', 'From $49/mo'] },
           'fxguard-accounting': { name: 'Accounting', title: 'FXGuard Accounting', desc: 'Finans, döviz ve KOBİ ekipleri için muhasebe sistemi — FXGuard ürün ailesinin parçası.', tags: ['FXGuard', 'Accounting', 'Finance'] },
-          biztab: { name: 'BizTab', title: 'Temasız duvar termometresi', desc: 'Tebriz\'deki ilk temasız duvar termometresi — 0,3°C altı hata, üniversite onayı.', tags: ['IoT', 'Temasız', 'Tebriz'] },
+          biztab: { name: 'BizTab', title: 'Temasız duvar termometresi', desc: 'Temasız duvar termometresi — 0,3°C altı hata, Tebriz üretimi.', homeDesc: 'Giriş ve klinik için temasız termometre', tags: ['IoT', 'Temasız', 'Tebriz'] },
           bizclean: { name: 'BizClean', title: 'Hijyen ve dezenfeksiyon', desc: 'Otomatik el dezenfektan (BizClean V5) — Bizdavar üretimi; RINOTEX 1400 «Imen Sahand Padideh» park birimi; ISNA/IRIB basını.', tags: ['Hijyen', 'Otomatik', 'COVID'] },
-          bizpet: { name: 'BizPet', title: 'BizPet ısı pedi', desc: 'Asıl 1399 ürünü — ev, araç ve evcil hayvan yatağı için Padideh ısı pedi. BizSeat satış adı aynı üründür, ikinci hat değil.', tags: ['Isı pedi', 'Otomotiv', 'Tebriz', '1399'] },
+          bizpet: { name: 'BizPet', title: 'BizPet ısı pedi', desc: 'Ev, araç ve pet yatağı için ısı pedi — Bizdavar tasarımı.', homeDesc: 'Ev ve araç koltuğu ısı pedi', tags: ['Isı pedi', 'Otomotiv', 'Tebriz'] },
           biztouch: { name: 'BizTouch', title: 'Temasız çözümler', desc: 'Giriş, hijyen ve kamusal alanlar için temasız cihazlar — Bizdavar tasarımı.', tags: ['Temasız', 'IoT', 'Giriş'] },
           bizroll: { name: 'BizRoll', title: 'Rulo ve ambalaj sistemleri', desc: 'Endüstriyel rulo ve ambalaj makineleri.', tags: ['Ambalaj', 'Rulo', 'Endüstriyel'] },
           'sealer-home': { name: 'Ev tipi vakum makinesi', title: 'Ev vakumu', desc: 'Ev ve küçük atölyeler için vakum/kapama makinesi.', tags: ['Vakum', 'Ev', 'Kapama'] },
@@ -326,10 +331,11 @@
         contact: 'Ürün teklifi'
       },
       home: {
-        ownedEyebrow: 'Bizdavar ürünleri',
-        ownedTitle: 'Ne üretiyoruz',
-        ownedDesc: 'Dijital hizmetlerin yanı sıra Bizdavar kendi cihaz ve yazılımını da üretir — BizPet ısı pedi, BizTab, FXGuard ve BizSwap.',
-        ownedCta: 'Tüm ürünleri gör'
+        ownedEyebrow: 'Bizdavar üretimi',
+        ownedTitle: 'Kendimiz ne üretiyoruz',
+        ownedDesc: 'WhatsApp CRM ve BizSwap — canlı ürünler. Donanım üretimi şirket başarılarında.',
+        ownedCta: 'Tüm ürünleri gör',
+        ownedAchievements: 'Başarılar ve üretim'
       }
     },
     en: {
@@ -338,7 +344,7 @@
         hero: {
           tag: 'Bizdavar engineering & manufacturing',
           title: 'Bizdavar products',
-          desc: 'Proprietary hardware, production lines and SaaS — designed and built by the Bizdavar team in Tabriz.',
+          desc: 'Iran buyers first: VEGA, Prosense, Liqui Moly and Teltonika — plus websites, marketing and software like FXGuard.',
           ctaLive: 'Live products',
           ctaCatalog: 'Full catalog',
           ctaSupply: 'Supply brands',
@@ -351,7 +357,7 @@
         },
         intro: {
           title: 'What we build',
-          body: 'Beyond digital services and industrial supply, Bizdavar Group develops <strong>proprietary hardware and SaaS</strong>. IP stays with the Bizdavar team; engineering in Tabriz — for domestic and international markets.',
+          body: 'Today the priority is <strong>industrial supply, websites, marketing and SaaS</strong> such as FXGuard. Hardware we built earlier lives in company achievements.',
           ctaContact: 'Quote & order',
           ctaPortfolio: 'Digital portfolio',
           statProducts: '12+',
@@ -364,7 +370,7 @@
         featured: {
           eyebrow: 'Live products',
           title: 'Ready product pages',
-          desc: 'WhatsApp CRM, Accounting, BizSwap, BizTab, BizClean and BizPet — dedicated pages with a clear inquiry path.'
+          desc: 'WhatsApp CRM, Accounting and BizSwap — ready to order. Heating pad and BizTab live in achievements and the full catalog.'
         },
         filterAll: 'All',
         empty: 'No products to display.',
@@ -386,7 +392,7 @@
           desc: 'Owned software and hardware plus industrial supply brands — one click to each dedicated page.',
           ownedKicker: 'Owned · Software & Hardware',
           ownedTitle: 'Owned products',
-          ownedDesc: 'FXGuard suite, BizSwap and Bizdavar-engineered devices.',
+          ownedDesc: 'WhatsApp CRM and BizSwap — live products. Hardware sits in achievements and the full catalog.',
           supplyKicker: 'Supply · Industrial Brands',
           supplyTitle: 'Supply brands',
           supplyDesc: 'Separate catalogs, technical consulting and transparent proformas.',
@@ -434,12 +440,12 @@
           medical: { label: 'Medical & PPE', desc: 'BizPet heating pad (home and car) and mask production lines' }
         },
         items: {
-          bizswap: { name: 'BizSwap', title: 'Token presale & swap', desc: 'Web3 module — wallet connect, stablecoin-to-token swap, on-chain presale, slippage UI and admin panel for BEP-20 / RWA projects.', tags: ['DeFi', 'Web3', 'Token Swap'] },
-          fxguard: { name: 'WhatsApp CRM', title: 'FXGuard WhatsApp CRM', desc: 'Shared WhatsApp inbox, customers, tickets, branches and 2FA — Cloud from $49/mo, License or Managed. Free demo at app.fxguard.io.', tags: ['FXGuard', 'WhatsApp CRM', 'From $49/mo'] },
+          bizswap: { name: 'BizSwap', title: 'Token presale & swap', desc: 'Wallet connect, token swap and on-chain presale — BEP-20 and RWA.', homeDesc: 'On-chain token swap and presale', tags: ['DeFi', 'Web3', 'Token Swap'] },
+          fxguard: { name: 'WhatsApp CRM', title: 'Shared WhatsApp inbox', desc: 'Team inbox, tickets and branches — from $49/mo. Demo at app.fxguard.io.', homeDesc: 'Team WhatsApp inbox — from $49', tags: ['FXGuard', 'CRM', 'From $49/mo'] },
           'fxguard-accounting': { name: 'Accounting', title: 'FXGuard Accounting', desc: 'Accounting system for finance, exchange and SME teams — part of the FXGuard product suite.', tags: ['FXGuard', 'Accounting', 'Finance'] },
-          biztab: { name: 'BizTab', title: 'Non-contact wall thermometer', desc: 'First non-contact wall thermometer in Tabriz — under 0.3°C error, university validated.', tags: ['IoT', 'Contactless', 'Tabriz'] },
+          biztab: { name: 'BizTab', title: 'Non-contact wall thermometer', desc: 'Wall-mounted non-contact thermometer — under 0.3°C error, built in Tabriz.', homeDesc: 'Lobby and clinic non-contact thermometer', tags: ['IoT', 'Contactless', 'Tabriz'] },
           bizclean: { name: 'BizClean', title: 'Hygiene & disinfection line', desc: 'Automatic hand sanitizer (BizClean V5) — Bizdavar production; RINOTEX 1400 via «Imen Sahand Padideh» park unit; ISNA & IRIB press.', tags: ['Hygiene', 'Automatic', 'COVID'] },
-          bizpet: { name: 'BizPet', title: 'BizPet heating pad', desc: 'The 1399 flagship Padideh heating pad for home, car and pet beds. BizSeat is the shop name for the same product, not a second line.', tags: ['Heating pad', 'Automotive', 'Tabriz', '1399'] },
+          bizpet: { name: 'BizPet', title: 'Heating pad', desc: 'Heating pad for home, car and pet beds — designed by the Bizdavar team.', homeDesc: 'Home and car-seat heating pad', tags: ['Heating pad', 'Automotive', 'Tabriz'] },
           biztouch: { name: 'BizTouch', title: 'Contactless solutions', desc: 'Contactless devices for entrances, hygiene and public spaces — Bizdavar engineered.', tags: ['Contactless', 'IoT', 'Entrance'] },
           bizroll: { name: 'BizRoll', title: 'Roll & packaging systems', desc: 'Engineered roll and packaging machinery for industrial production.', tags: ['Packaging', 'Roll', 'Industrial'] },
           'sealer-home': { name: 'Home vacuum sealer', title: 'Domestic sealing', desc: 'Vacuum sealer designed for home use and small workshops.', tags: ['Vacuum', 'Home', 'Sealing'] },
@@ -457,10 +463,11 @@
         contact: 'Product inquiry'
       },
       home: {
-        ownedEyebrow: 'Bizdavar products',
-        ownedTitle: 'What we manufacture',
-        ownedDesc: 'Alongside digital services, Bizdavar builds its own hardware and software — BizPet heating pad, BizTab, FXGuard and BizSwap.',
-        ownedCta: 'View all products'
+        ownedEyebrow: 'Built by Bizdavar',
+        ownedTitle: 'What we build ourselves',
+        ownedDesc: 'WhatsApp CRM and BizSwap — live products. Hardware we produced is in company achievements.',
+        ownedCta: 'View all products',
+        ownedAchievements: 'Achievements & production'
       }
     }
   };

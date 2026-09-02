@@ -325,7 +325,7 @@
       const href = external ? p.url : siteLink(p.url);
 
       const inner = p.logo
-        ? `<img src="${path(p.logo)}" alt="${p.name}" loading="lazy" class="client-item__logo">`
+        ? `<img src="${path(p.logo)}" alt="${p.name}" loading="lazy" class="client-item__logo" width="130" height="52" onerror="this.outerHTML='<span class=\\'client-item__name\\'>'+this.alt+'</span>'">`
         : `<span class="client-item__name">${p.name}</span>`;
 
       return `
@@ -419,7 +419,7 @@
 
     el.innerHTML = paths.map(p => `
       <article class="lead-path">
-        <div class="lead-path__icon" data-bd-icon="${p.icon || 'message'}" data-bd-size="24"></div>
+        <div class="lead-path__icon" data-bd-icon="${p.icon || 'phone'}" data-bd-size="36" aria-hidden="true"></div>
         <h3 class="lead-path__title">${p.title}</h3>
         <p class="lead-path__desc">${p.desc}</p>
         <a href="${p.url}" class="btn btn--primary lead-path__cta">${p.cta}</a>
@@ -788,6 +788,34 @@
     }
   };
 
+  function industrialBrandCard(p) {
+    const href = p.internal ? siteLink(p.url) : p.url;
+    const external = !p.internal && p.url && String(p.url).startsWith('http');
+    const tags = (p.tags || []).map(tag => `<span class="industrial-card__tag">${tag}</span>`).join('');
+    const brand = String(p.name || '').toLowerCase().replace(/\s+/g, '-');
+    const accentClass = (a) => (a ? ` industrial-card--${a}` : '');
+    return `
+      <a href="${href}" class="industrial-card industrial-card--link${p.photo ? ' industrial-card--photo' : ''}${accentClass(p.accent)}"
+         data-brand="${brand}"
+         ${external ? 'target="_blank" rel="noopener noreferrer"' : ''}>
+        ${p.photo ? `<div class="industrial-card__media"><img src="${path(p.photo)}" alt="${p.name}" loading="lazy" decoding="async" width="640" height="400"${hideBrokenImg()}></div>` : ''}
+        <div class="industrial-card__head">
+          <div class="industrial-card__logo">
+            ${p.logo
+              ? `<img src="${path(p.logo)}" alt="${p.name}" loading="lazy" width="140" height="48">`
+              : `<span class="industrial-card__logo-text">${p.name}</span>`}
+          </div>
+          ${p.badge ? `<span class="industrial-card__badge">${p.badge}</span>` : ''}
+        </div>
+        <div class="industrial-card__body">
+          <h3 class="industrial-card__title">${p.title}</h3>
+          <p class="industrial-card__desc">${p.desc}</p>
+          ${tags ? `<div class="industrial-card__tags">${tags}</div>` : ''}
+          <span class="industrial-card__cta">${p.cta || t('common.learnMore', 'بیشتر بدانید')}${linkArrow()}</span>
+        </div>
+      </a>`;
+  }
+
   window.renderIndustrialSection = function (containerId) {
 
     const el = document.getElementById(containerId);
@@ -796,45 +824,7 @@
 
     if (!el || !products || !products.length) return;
 
-    const accentClass = (a) => (a ? ` industrial-card--${a}` : '');
-
-    const cards = products.map(p => {
-
-      const href = p.internal ? siteLink(p.url) : p.url;
-
-      const external = !p.internal && p.url.startsWith('http');
-
-      const tags = (p.tags || []).map(t => `<span class="industrial-card__tag">${t}</span>`).join('');
-
-      return `
-
-        <a href="${href}" class="industrial-card industrial-card--link${accentClass(p.accent)}"
-
-           ${external ? 'target="_blank" rel="noopener noreferrer"' : ''}>
-
-          <div class="industrial-card__head">
-
-            <div class="industrial-card__logo">
-              ${p.logo
-                ? `<img src="${path(p.logo)}" alt="${p.name}" loading="lazy" width="140" height="48">`
-                : `<span class="industrial-card__logo-text">${p.name}</span>`}
-            </div>
-
-            ${p.badge ? `<span class="industrial-card__badge">${p.badge}</span>` : ''}
-
-          </div>
-
-          <h3 class="industrial-card__title">${p.title}</h3>
-
-          <p class="industrial-card__desc">${p.desc}</p>
-
-          ${tags ? `<div class="industrial-card__tags">${tags}</div>` : ''}
-
-          <span class="industrial-card__cta">${p.cta || t('common.learnMore', 'بیشتر بدانید')}${linkArrow()}</span>
-
-        </a>`;
-
-    }).join('');
+    const cards = products.map(industrialBrandCard).join('');
 
     el.innerHTML = `
 
@@ -853,18 +843,32 @@
           </div>
 
           <figure class="industrial-visual">
-            <img src="/assets/images/content/supply-hero-800.webp"
-                 srcset="/assets/images/content/supply-hero-800.webp 800w, /assets/images/content/supply-hero.jpg 1152w"
-                 sizes="(min-width: 1025px) 520px, 92vw"
-                 width="800" height="600" loading="lazy"
+            <img src="/assets/images/content/home-path-supply-800.webp"
+                 srcset="/assets/images/content/home-path-supply-800.webp 800w, /assets/images/content/home-path-supply.webp 1400w"
+                 sizes="(min-width: 1025px) 1100px, 92vw"
+                 width="1400" height="900" loading="lazy" decoding="async"
                  alt="${t('industrial.visualAlt', 'Industrial sensors and export crates ready for B2B supply')}">
             <figcaption>
               <strong>${t('industrial.visualLead')}</strong>
               <p>${t('industrial.visualNote')}</p>
+              <ol class="industrial-steps">
+                <li>
+                  <span class="industrial-steps__icon" data-bd-icon="document" data-bd-size="20" aria-hidden="true"></span>
+                  <span>${t('industrial.step1', 'انتخاب مدل')}</span>
+                </li>
+                <li>
+                  <span class="industrial-steps__icon" data-bd-icon="coin" data-bd-size="20" aria-hidden="true"></span>
+                  <span>${t('industrial.step2', 'پیش‌فاکتور فارسی')}</span>
+                </li>
+                <li>
+                  <span class="industrial-steps__icon" data-bd-icon="ship" data-bd-size="20" aria-hidden="true"></span>
+                  <span>${t('industrial.step3', 'تحویل تا ایران')}</span>
+                </li>
+              </ol>
             </figcaption>
           </figure>
 
-          <div class="industrial-grid">${cards}</div>
+          <div class="industrial-grid industrial-grid--brands">${cards}</div>
 
           <div class="industrial-cta-bar">
 
@@ -896,6 +900,7 @@
 
       </section>`;
 
+    if (typeof window.initDataIcons === 'function') window.initDataIcons(el);
   };
 
 
@@ -968,7 +973,7 @@
     return ownedProductImageSrc({ image: 'assets/images/products/product-default.svg' });
   }
 
-  function ownedProductCardHtml(p) {
+  function ownedProductCardHtml(p, opts) {
     const href = ownedProductHref(p);
     const statusKey = p.status === 'live' ? 'productsPage.statusLive' : 'productsPage.statusCatalog';
     const statusLabel = t(statusKey, p.status === 'live' ? 'Product page' : 'Quote');
@@ -979,11 +984,30 @@
     const img = ownedProductImageSrc(p);
     const fallback = ownedProductImageFallback(p);
     const isPhoto = /\.(jpe?g|webp|png)$/i.test(p.image || '');
+    const imgOnError = `onerror="if(this.dataset.fbk!=='1'){this.dataset.fbk='1';this.src='${fallback}';}else{this.closest('.owned-product-card__media').classList.add('owned-product-card__media--empty');}"`;
+    if (opts && opts.home) {
+      const line = p.homeDesc || p.title || '';
+      return `
+      <article class="owned-product-card owned-product-card--home" data-category="${p.category}" data-product="${p.id}" id="product-${p.id}">
+        <a href="${href}" class="owned-product-card__overlay">
+          <div class="owned-product-card__media">
+            <img src="${img}" alt="${p.name || p.id}" loading="lazy" decoding="async" width="800" height="500" ${imgOnError}>
+          </div>
+          <div class="owned-product-card__head">
+            <span class="owned-product-card__cat">${p.categoryLabel || ''}</span>
+          </div>
+          <div class="owned-product-card__body">
+            <h3>${p.name}</h3>
+            ${line ? `<p class="owned-product-card__home-desc">${line}</p>` : ''}
+            <span class="owned-product-card__cta">${p.status === 'live' ? t('productsPage.statusLive', statusLabel) : t('ownedProducts.contact', 'استعلام')}${linkArrow()}</span>
+          </div>
+        </a>
+      </article>`;
+    }
     return `
       <article class="owned-product-card" data-category="${p.category}" id="product-${p.id}">
         <a href="${href}" class="owned-product-card__media${isPhoto ? '' : ' owned-product-card__media--art'}">
-          <img src="${img}" alt="${p.name || p.id}" loading="lazy" decoding="async" width="480" height="300"
-            onerror="if(this.dataset.fbk!=='1'){this.dataset.fbk='1';this.src='${fallback}';}else{this.closest('.owned-product-card__media').classList.add('owned-product-card__media--empty');}">
+          <img src="${img}" alt="${p.name || p.id}" loading="lazy" decoding="async" width="480" height="300" ${imgOnError}>
         </a>
         <div class="owned-product-card__body">
           <span class="owned-product-card__cat">${p.categoryLabel || ''}</span>
@@ -1014,7 +1038,7 @@
     }
     if (opts.limit) items = items.slice(0, opts.limit);
     el.innerHTML = items.length
-      ? items.map(p => ownedProductCardHtml(p)).join('')
+      ? items.map(p => ownedProductCardHtml(p, opts)).join('')
       : `<p class="owned-products-empty">${t('productsPage.empty', 'محصولی برای نمایش نیست.')}</p>`;
     if (typeof window.refreshBizIcons === 'function') window.refreshBizIcons(el);
   };
@@ -1031,12 +1055,13 @@
             <p class="section__desc">${t('home.ownedDesc', t('ownedProducts.desc'))}</p>
           </div>
           <div class="owned-products-grid" id="ownedProductsHomeGrid"></div>
-          <p class="text-center mt-24">
+          <p class="text-center mt-24 landing-owned-products__links">
             <a href="${path('pages/products.html')}" class="btn btn--outline">${t('home.ownedCta', t('ownedProducts.viewAll'))}</a>
+            <a href="${path('pages/about.html')}#achievements" class="service-card__link">${t('home.ownedAchievements', 'دستاوردها و تولید')}</a>
           </p>
         </div>
       </section>`;
-    renderOwnedProductsGrid('ownedProductsHomeGrid', { featured: true, homeOrder: true, limit: 4 });
+    renderOwnedProductsGrid('ownedProductsHomeGrid', { featured: true, homeOrder: true, limit: 2, home: true });
   };
 
   window.initOwnedProductsPage = function () {
@@ -1113,7 +1138,7 @@
 
     const liveGrid = document.getElementById('ownedProductsLive');
     if (liveGrid) {
-      renderOwnedProductsGrid('ownedProductsLive', { status: 'live' });
+      renderOwnedProductsGrid('ownedProductsLive', { status: 'live', category: 'software' });
     }
 
     const supplyGrid = document.getElementById('productsSupplyGrid');
@@ -1121,28 +1146,8 @@
       const brands = window.BIZDAVAR_I18N
         ? window.BIZDAVAR_I18N.getIndustrialProducts()
         : (C.industrialProducts || []);
-      const accentClass = (a) => (a ? ` industrial-card--${a}` : '');
-      supplyGrid.innerHTML = brands.map(p => {
-        const href = p.internal ? siteLink(p.url) : p.url;
-        const external = !p.internal && p.url && String(p.url).startsWith('http');
-        const tags = (p.tags || []).map(tag => `<span class="industrial-card__tag">${tag}</span>`).join('');
-        return `
-          <a href="${href}" class="industrial-card industrial-card--link${accentClass(p.accent)}"
-             ${external ? 'target="_blank" rel="noopener noreferrer"' : ''}>
-            <div class="industrial-card__head">
-              <div class="industrial-card__logo">
-                ${p.logo
-                  ? `<img src="${path(p.logo)}" alt="${p.name}" loading="lazy" width="140" height="48">`
-                  : `<span class="industrial-card__logo-text">${p.name}</span>`}
-              </div>
-              ${p.badge ? `<span class="industrial-card__badge">${p.badge}</span>` : ''}
-            </div>
-            <h3 class="industrial-card__title">${p.title}</h3>
-            <p class="industrial-card__desc">${p.desc}</p>
-            ${tags ? `<div class="industrial-card__tags">${tags}</div>` : ''}
-            <span class="industrial-card__cta">${p.cta || t('common.learnMore', 'بیشتر بدانید')}${linkArrow()}</span>
-          </a>`;
-      }).join('');
+      supplyGrid.classList.add('industrial-grid--brands');
+      supplyGrid.innerHTML = brands.map(industrialBrandCard).join('');
     }
 
     setActive(active, false);
