@@ -301,10 +301,14 @@
   box-sizing: border-box;
 }
 
+.products-supply .industrial-card[data-brand="uwt"] .industrial-card__media {
+  background: #000;
+}
+
 .products-supply .industrial-card[data-brand="uwt"] .industrial-card__media img {
   object-fit: contain;
-  object-position: center 42%;
-  padding: 48px 2% 18%;
+  object-position: center 46%;
+  padding: 36px 8% 16%;
   box-sizing: border-box;
 }
 

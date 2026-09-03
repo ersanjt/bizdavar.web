@@ -10554,11 +10554,15 @@ body[data-page="home"] .industrial-card[data-brand="liqui-moly"] .industrial-car
   object-position: 38% 55%;
 }
 
+body[data-page="home"] .industrial-card[data-brand="uwt"] .industrial-card__media {
+  background: #000;
+}
+
 body[data-page="home"] .industrial-card[data-brand="uwt"] .industrial-card__media img {
   object-fit: contain;
-  object-position: center 42%;
+  object-position: center 46%;
   transform: none;
-  padding: 52px 2% 18%;
+  padding: 36px 8% 16%;
   box-sizing: border-box;
 }
 
