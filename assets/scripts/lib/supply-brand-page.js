@@ -37,6 +37,16 @@ window.createSupplyBrandPage = function (cfg) {
   const locale = () => (window.BIZDAVAR_I18N?.locale || 'fa');
   const isFa = () => locale() === 'fa';
 
+  function compactHeroSrc(src) {
+    return String(src || '').replace(/\.(webp|jpe?g|png)(\?.*)?$/i, '-800.webp');
+  }
+
+  function heroImgTag(src, alt) {
+    const full = path(src);
+    const compact = compactHeroSrc(full);
+    return `<img src="${compact}" srcset="${compact} 800w, ${compact} 1280w" sizes="(min-width: 901px) 480px, 92vw" alt="${alt}" width="480" height="320" loading="eager" decoding="async" fetchpriority="high" onerror="this.onerror=null;this.removeAttribute('srcset');this.src='${full}'">`;
+  }
+
   function offerPrice(item) {
     if (!item) return null;
     if (item.priceEur != null && item.priceEur !== '' && !Number.isNaN(Number(item.priceEur))) {
@@ -211,7 +221,7 @@ window.createSupplyBrandPage = function (cfg) {
 
       <div class="${prefix}-hero__visual">
 
-        <img src="${path(b.heroImage)}" alt="${b.heroImageAlt || brandName}" width="480" height="320" loading="eager" decoding="async" fetchpriority="high">
+        ${heroImgTag(b.heroImage, b.heroImageAlt || brandName)}
 
       </div>`;
 

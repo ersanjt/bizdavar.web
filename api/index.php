@@ -60,10 +60,43 @@ if ($method === 'POST' && $uri === '/auth/login') {
     if (!RateLimit::check($pdo, $emailKey, 'login_email', $loginMax, $loginWindow)) {
         Response::error('Too many login attempts. Try again later.', 429);
     }
-    $user = Auth::login($pdo, $email, $password);
-    if (!$user) {
+    Auth::requireAdminIp($cfg);
+    $row = Auth::verifyPassword($pdo, $email, $password);
+    if (!$row) {
         Response::error('Invalid credentials', 401);
     }
+    $requireMfa = Auth::mfaRequired($cfg);
+    $enrolled = !empty($row['totp_enabled']);
+    if ($enrolled) {
+        session_regenerate_id(true);
+        $_SESSION['mfa_pending_uid'] = (int) $row['id'];
+        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+        unset($_SESSION['user'], $_SESSION['mfa_ok']);
+        Response::json(['ok' => true, 'mfaRequired' => true, 'csrfToken' => Auth::csrfToken()]);
+    }
+    $user = Auth::establishSession($pdo, $row, !$requireMfa);
+    Response::json([
+        'ok' => true,
+        'user' => $user,
+        'mfaEnroll' => $requireMfa,
+        'csrfToken' => Auth::csrfToken(),
+    ]);
+}
+
+if ($method === 'POST' && $uri === '/auth/mfa/verify') {
+    Auth::requireAdminIp($cfg);
+    $body = bizhub_json_body();
+    $code = (string) ($body['code'] ?? '');
+    $uid = (int) ($_SESSION['mfa_pending_uid'] ?? 0);
+    if ($uid < 1) {
+        Response::error('MFA challenge expired', 401);
+    }
+    $row = Auth::loadUser($pdo, $uid);
+    $secret = (string) ($row['totp_secret'] ?? '');
+    if (!$row || $secret === '' || !Totp::verify($secret, $code)) {
+        Response::error('Invalid MFA code', 401);
+    }
+    $user = Auth::establishSession($pdo, $row, true);
     Response::json(['ok' => true, 'user' => $user, 'csrfToken' => Auth::csrfToken()]);
 }
 
@@ -77,7 +110,13 @@ if ($method === 'GET' && $uri === '/auth/me') {
     if (!$user) {
         Response::error('Unauthorized', 401);
     }
-    Response::json(['ok' => true, 'user' => $user, 'csrfToken' => Auth::csrfToken()]);
+    Response::json([
+        'ok' => true,
+        'user' => $user,
+        'mfaOk' => !empty($_SESSION['mfa_ok']),
+        'mfaEnroll' => Auth::mfaRequired($cfg) && empty($user['totp_enabled']),
+        'csrfToken' => Auth::csrfToken(),
+    ]);
 }
 
 // ─── Public: submit lead (contact form) ───
@@ -166,11 +205,62 @@ if ($method === 'GET' && $uri === '/public/faqs') {
 }
 
 // ─── Protected routes below ───
+Auth::requireAdminIp($cfg);
 Auth::requireUser();
 Auth::verifyCsrf();
 
+if ($method === 'GET' && $uri === '/auth/mfa/setup') {
+    $user = Auth::user();
+    if (!empty($user['totp_enabled'])) {
+        Response::error('MFA already enabled', 409);
+    }
+    $secret = Totp::secret();
+    $_SESSION['mfa_enroll_secret'] = $secret;
+    $email = (string) ($user['email'] ?? 'admin');
+    Response::json([
+        'ok' => true,
+        'secret' => $secret,
+        'otpauth' => Totp::otpauthUri($secret, $email, (string) ($cfg['app_name'] ?? 'BizHub')),
+    ]);
+}
+
+if ($method === 'POST' && $uri === '/auth/mfa/enable') {
+    $user = Auth::user();
+    $secret = (string) ($_SESSION['mfa_enroll_secret'] ?? '');
+    $body = bizhub_json_body();
+    $code = (string) ($body['code'] ?? '');
+    if ($secret === '' || !Totp::verify($secret, $code)) {
+        Response::error('Invalid MFA code', 422);
+    }
+    $pdo->prepare('UPDATE users SET totp_secret = ?, totp_enabled = 1 WHERE id = ?')
+        ->execute([$secret, (int) $user['id']]);
+    unset($_SESSION['mfa_enroll_secret']);
+    $_SESSION['user']['totp_enabled'] = true;
+    $_SESSION['mfa_ok'] = true;
+    Response::json(['ok' => true, 'user' => Auth::user(), 'csrfToken' => Auth::csrfToken()]);
+}
+
+if ($method === 'POST' && $uri === '/auth/mfa/disable') {
+    Auth::requireRole(['admin']);
+    Auth::requireMfaOk($cfg);
+    $body = bizhub_json_body();
+    $row = Auth::loadUser($pdo, (int) Auth::user()['id']);
+    $secret = (string) ($row['totp_secret'] ?? '');
+    if ($secret === '' || !Totp::verify($secret, (string) ($body['code'] ?? ''))) {
+        Response::error('Invalid MFA code', 422);
+    }
+    $pdo->prepare('UPDATE users SET totp_secret = NULL, totp_enabled = 0 WHERE id = ?')
+        ->execute([(int) $row['id']]);
+    $_SESSION['user']['totp_enabled'] = false;
+    $_SESSION['mfa_ok'] = !Auth::mfaRequired($cfg);
+    Response::json(['ok' => true]);
+}
+
+Auth::requireMfaOk($cfg);
+
 // ─── Dashboard ───
 if ($method === 'GET' && $uri === '/dashboard/stats') {
+    Auth::requireRole(['admin', 'editor', 'sales']);
     $stats = [];
     $stats['leads_total'] = (int)$pdo->query('SELECT COUNT(*) FROM leads')->fetchColumn();
     $stats['leads_new'] = (int)$pdo->query("SELECT COUNT(*) FROM leads WHERE status = 'new'")->fetchColumn();
@@ -186,6 +276,10 @@ if ($method === 'GET' && $uri === '/dashboard/stats') {
 }
 
 // ─── Leads CRM ───
+if (str_starts_with($uri, '/leads')) {
+    Auth::requireRole(['admin', 'editor', 'sales']);
+}
+
 if ($method === 'GET' && $uri === '/leads') {
     $status = $_GET['status'] ?? '';
     $q = trim($_GET['q'] ?? '');

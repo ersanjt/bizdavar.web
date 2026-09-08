@@ -18,7 +18,15 @@
   }
 
   function asset(src) {
-    return window.resolveAssetPath ? window.resolveAssetPath(src) : '/' + src.replace(/^\//, '');
+    if (!src) return '';
+    if (/^https?:/i.test(src) || src.indexOf('/') === 0) return src;
+    return window.resolveAssetPath
+      ? window.resolveAssetPath(src)
+      : (window.resolvePath ? window.resolvePath(src) : ('/' + src.replace(/^\//, '')));
+  }
+
+  function thumb(src) {
+    return String(src || '').replace(/\.(jpe?g|png|webp)(\?.*)?$/i, '-800.webp');
   }
 
   function pageHref(href) {
@@ -108,7 +116,7 @@
       const portrait = it.portrait ? ' photo-gallery-card--portrait' : '';
       return '<figure class="photo-gallery-card' + portrait + '" data-gallery-id="' + esc(it.id) + '" data-gallery-cat="' + esc(it.cat) + '">' +
         '<a href="' + esc(asset(it.src)) + '" class="photo-gallery-card__open" aria-label="' + esc(alt) + '">' +
-        '<img src="' + esc(asset(it.src)) + '" alt="' + esc(alt) + '" width="800" height="600" loading="lazy">' +
+        '<img src="' + esc(asset(thumb(it.src))) + '" alt="' + esc(alt) + '" width="800" height="600" loading="lazy" onerror="this.onerror=null;this.src=\'' + esc(asset(it.src)) + '\'">' +
         '</a>' +
         (caption ? '<figcaption>' + esc(caption) + '</figcaption>' : '') +
         '</figure>';

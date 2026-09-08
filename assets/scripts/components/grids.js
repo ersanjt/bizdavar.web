@@ -14,6 +14,15 @@
     return ' onerror="this.style.display=\'none\'"';
   }
 
+  function industrialPhotoTag(p) {
+    const src = path(p.photo);
+    if (!/\.webp$/i.test(p.photo)) {
+      return `<img src="${src}" alt="${p.name}" loading="lazy" decoding="async" width="640" height="400"${hideBrokenImg()}>`;
+    }
+    const compact = src.replace(/\.webp$/i, '-800.webp');
+    return `<img src="${compact}" srcset="${compact} 800w, ${compact} 1280w" sizes="(min-width: 1025px) 320px, 46vw" alt="${p.name}" loading="lazy" decoding="async" width="640" height="400"${hideBrokenImg()} onerror="this.onerror=null;this.removeAttribute('srcset');this.src='${src}'">`;
+  }
+
   function displayPair(primary, secondary) {
     const a = String(primary || '').trim();
     const b = String(secondary || '').trim();
@@ -941,7 +950,7 @@
       <a href="${href}" class="industrial-card industrial-card--link${p.photo ? ' industrial-card--photo' : ''}${accentClass(p.accent)}"
          data-brand="${brand}"
          ${external ? 'target="_blank" rel="noopener noreferrer"' : ''}>
-        ${p.photo ? `<div class="industrial-card__media"><img src="${path(p.photo)}" alt="${p.name}" loading="lazy" decoding="async" width="640" height="400"${hideBrokenImg()}></div>` : ''}
+        ${p.photo ? `<div class="industrial-card__media">${industrialPhotoTag(p)}</div>` : ''}
         <div class="industrial-card__head">
           <div class="industrial-card__logo">
             ${p.logo

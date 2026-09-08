@@ -41,7 +41,11 @@
     });
     const data = await res.json().catch(() => ({}));
     if (data.csrfToken) state.csrfToken = data.csrfToken;
-    if (!res.ok) throw new Error(data.error || res.statusText);
+    if (!res.ok) {
+      const err = new Error(data.error || res.statusText);
+      err.payload = data;
+      throw err;
+    }
     return data;
   }
 
@@ -64,17 +68,83 @@
     return `<span class="hub-badge hub-badge--${esc(status)}">${esc(STATUS_LABELS[status] || status)}</span>`;
   }
 
+  async function enterHub(r) {
+    if (r.csrfToken) state.csrfToken = r.csrfToken;
+    if (r.mfaRequired) {
+      renderLogin(null, 'mfa');
+      return;
+    }
+    if (r.mfaEnroll) {
+      await startEnroll();
+      return;
+    }
+    state.user = r.user;
+    await loadDashboard();
+    renderShell();
+  }
+
+  async function startEnroll() {
+    try {
+      const r = await api('/auth/mfa/setup');
+      if (r.csrfToken) state.csrfToken = r.csrfToken;
+      renderEnroll(r);
+    } catch (err) {
+      renderLogin(err.message);
+    }
+  }
+
+  function renderEnroll(data) {
+    app.innerHTML = `
+      <div class="hub-login">
+        <div class="hub-login__card">
+          <div class="hub-login__brand">
+            <h1>فعال‌سازی MFA</h1>
+            <p>Google Authenticator یا برنامه مشابه</p>
+          </div>
+          <p class="hub-muted">کلید را در Authenticator اضافه کنید، سپس کد ۶رقمی را وارد کنید.</p>
+          <p class="hub-otpauth" dir="ltr">${esc(data.otpauth || '')}</p>
+          <p class="hub-secret" dir="ltr">${esc(data.secret || '')}</p>
+          <form id="enrollForm">
+            <div class="hub-field">
+              <label for="mfaCode">کد یک‌بارمصرف</label>
+              <input id="mfaCode" name="code" inputmode="numeric" autocomplete="one-time-code" required maxlength="8" dir="ltr">
+            </div>
+            <button type="submit" class="hub-btn hub-btn--primary">تأیید و ورود</button>
+          </form>
+        </div>
+      </div>`;
+    document.getElementById('enrollForm').addEventListener('submit', async e => {
+      e.preventDefault();
+      try {
+        const r = await api('/auth/mfa/enable', {
+          method: 'POST',
+          body: { code: document.getElementById('mfaCode').value }
+        });
+        await enterHub({ ...r, mfaEnroll: false });
+      } catch (err) {
+        renderLogin(err.message, 'enroll-retry');
+        startEnroll();
+      }
+    });
+  }
+
   // ─── Login ───
-  function renderLogin(err) {
+  function renderLogin(err, mode) {
+    const mfa = mode === 'mfa';
     app.innerHTML = `
       <div class="hub-login">
         <div class="hub-login__card">
           <div class="hub-login__brand">
             <h1>BizHub</h1>
-            <p>CRM & CMS — Bizdavar Group</p>
+            <p>${mfa ? 'کد Authenticator' : 'CRM & CMS — Bizdavar Group'}</p>
           </div>
           ${err ? `<div class="hub-error">${esc(err)}</div>` : ''}
           <form id="loginForm">
+            ${mfa ? `
+            <div class="hub-field">
+              <label for="mfaCode">کد یک‌بارمصرف</label>
+              <input id="mfaCode" name="code" inputmode="numeric" autocomplete="one-time-code" required maxlength="8" dir="ltr">
+            </div>` : `
             <div class="hub-field">
               <label for="email">ایمیل</label>
               <input type="email" id="email" name="email" required autocomplete="username" dir="ltr">
@@ -82,25 +152,30 @@
             <div class="hub-field">
               <label for="password">رمز عبور</label>
               <input type="password" id="password" name="password" required autocomplete="current-password">
-            </div>
-            <button type="submit" class="hub-btn hub-btn--primary">ورود</button>
+            </div>`}
+            <button type="submit" class="hub-btn hub-btn--primary">${mfa ? 'تأیید MFA' : 'ورود'}</button>
           </form>
         </div>
       </div>`;
     document.getElementById('loginForm').addEventListener('submit', async e => {
       e.preventDefault();
-      const fd = new FormData(e.target);
       try {
+        if (mfa) {
+          const r = await api('/auth/mfa/verify', {
+            method: 'POST',
+            body: { code: document.getElementById('mfaCode').value }
+          });
+          await enterHub(r);
+          return;
+        }
+        const fd = new FormData(e.target);
         const r = await api('/auth/login', {
           method: 'POST',
           body: { email: fd.get('email'), password: fd.get('password') }
         });
-        state.user = r.user;
-        if (r.csrfToken) state.csrfToken = r.csrfToken;
-        await loadDashboard();
-        renderShell();
+        await enterHub(r);
       } catch (err) {
-        renderLogin(err.message);
+        renderLogin(err.message, mfa ? 'mfa' : undefined);
       }
     });
   }
@@ -454,10 +529,12 @@
   async function boot() {
     try {
       const r = await api('/auth/me');
-      state.user = r.user;
       if (r.csrfToken) state.csrfToken = r.csrfToken;
-      await loadDashboard();
-      renderShell();
+      if (r.mfaEnroll && !r.mfaOk) {
+        await startEnroll();
+        return;
+      }
+      await enterHub({ ...r, mfaEnroll: false, mfaRequired: false });
     } catch {
       renderLogin();
     }

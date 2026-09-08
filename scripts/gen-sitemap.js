@@ -133,21 +133,21 @@ const llmsLines = [
   '',
   '> English websites and ads for US & EU (invoiced USD or EUR, from $99 / ~€90), owned products, and industrial supply to Iran (VEGA, Prosense, Liqui Moly) since 2013.',
   '> Persian is the default (x-default). English, Turkish, Russian and Arabic are full locales.',
-  '> US/EU web: https://bizdavar.com/en/pages/fast and https://bizdavar.com/en/pages/services',
-  '> Official site: https://bizdavar.com',
+  '> US/EU web: [Fast Studio](https://bizdavar.com/en/pages/fast) and [Services](https://bizdavar.com/en/pages/services)',
+  '> Official site: [bizdavar.com](https://bizdavar.com/)',
   '',
   '## Locales',
   '',
-  '- Persian (x-default): https://bizdavar.com/',
-  '- Turkish: https://bizdavar.com/tr/',
-  '- English: https://bizdavar.com/en/',
-  '- Russian: https://bizdavar.com/ru/',
-  '- Arabic: https://bizdavar.com/ar/',
+  '- [Persian (x-default)](https://bizdavar.com/)',
+  '- [Turkish](https://bizdavar.com/tr/)',
+  '- [English](https://bizdavar.com/en/)',
+  '- [Russian](https://bizdavar.com/ru/)',
+  '- [Arabic](https://bizdavar.com/ar/)',
   '',
   '## Index',
   '',
-  `Sitemap: ${BASE}/sitemap.xml`,
-  `Robots: ${BASE}/robots.txt`,
+  `- [Sitemap](${BASE}/sitemap.xml)`,
+  `- [Robots](${BASE}/robots.txt)`,
   '',
   '## Pages'
 ];
@@ -156,7 +156,8 @@ for (const entry of PAGES) {
   llmsLines.push('');
   llmsLines.push(`### ${entry.path === '/' ? 'Home' : entry.path}`);
   for (const locale of LOCALES) {
-    llmsLines.push(`- ${LANG_LABEL[locale.code]}: ${absoluteUrl(entry, locale)}`);
+    const href = absoluteUrl(entry, locale);
+    llmsLines.push(`- [${LANG_LABEL[locale.code]}](${href})`);
   }
 }
 

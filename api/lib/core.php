@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+require_once __DIR__ . '/totp.php';
+
 class Response
 {
     public static function json(mixed $data, int $status = 200): void
@@ -132,7 +134,47 @@ class Auth
         }
     }
 
-    public static function login(PDO $pdo, string $email, string $password): ?array
+    public static function publicUser(?array $row): ?array
+    {
+        if (!$row) {
+            return null;
+        }
+        unset($row['password_hash'], $row['totp_secret']);
+        $row['totp_enabled'] = !empty($row['totp_enabled']);
+        return $row;
+    }
+
+    public static function loadUser(PDO $pdo, int $id): ?array
+    {
+        $stmt = $pdo->prepare('SELECT * FROM users WHERE id = ? AND is_active = 1 LIMIT 1');
+        $stmt->execute([$id]);
+        $row = $stmt->fetch();
+        return $row ?: null;
+    }
+
+    public static function requireAdminIp(array $cfg): void
+    {
+        $allow = $cfg['security']['admin_allow_ips'] ?? [];
+        if (!is_array($allow) || $allow === []) {
+            return;
+        }
+        $ip = (string) ($_SERVER['REMOTE_ADDR'] ?? '');
+        if (!empty($cfg['security']['trust_cloudflare']) && !empty($_SERVER['HTTP_CF_CONNECTING_IP'])) {
+            $candidate = trim((string) $_SERVER['HTTP_CF_CONNECTING_IP']);
+            if (filter_var($candidate, FILTER_VALIDATE_IP)) {
+                $ip = $candidate;
+            }
+        }
+        foreach ($allow as $ok) {
+            if (is_string($ok) && $ok !== '' && hash_equals($ok, $ip)) {
+                return;
+            }
+        }
+        Response::error('Forbidden', 403);
+    }
+
+    /** Password check only — does not open a full session. */
+    public static function verifyPassword(PDO $pdo, string $email, string $password): ?array
     {
         $stmt = $pdo->prepare('SELECT * FROM users WHERE email = ? AND is_active = 1 LIMIT 1');
         $stmt->execute([strtolower(trim($email))]);
@@ -140,12 +182,51 @@ class Auth
         if (!$row || !password_verify($password, $row['password_hash'])) {
             return null;
         }
+        return $row;
+    }
+
+    public static function establishSession(PDO $pdo, array $row, bool $mfaOk): array
+    {
         unset($row['password_hash']);
         session_regenerate_id(true);
         $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-        $_SESSION['user'] = $row;
+        $_SESSION['user'] = self::publicUser($row);
+        $_SESSION['mfa_ok'] = $mfaOk;
+        unset($_SESSION['mfa_pending_uid'], $_SESSION['mfa_enroll_secret']);
         $pdo->prepare('UPDATE users SET last_login_at = NOW() WHERE id = ?')->execute([$row['id']]);
-        return $row;
+        return $_SESSION['user'];
+    }
+
+    public static function login(PDO $pdo, string $email, string $password): ?array
+    {
+        $row = self::verifyPassword($pdo, $email, $password);
+        if (!$row) {
+            return null;
+        }
+        return self::establishSession($pdo, $row, empty($row['totp_enabled']));
+    }
+
+    public static function mfaRequired(array $cfg): bool
+    {
+        $sec = $cfg['security'] ?? [];
+        return array_key_exists('require_mfa', $sec) ? !empty($sec['require_mfa']) : true;
+    }
+
+    public static function requireMfaOk(array $cfg): void
+    {
+        $user = self::requireUser();
+        $require = self::mfaRequired($cfg);
+        $enrolled = !empty($user['totp_enabled']);
+        if (!empty($_SESSION['mfa_ok']) && $enrolled) {
+            return;
+        }
+        if (!$require && !$enrolled) {
+            return;
+        }
+        Response::error('MFA required', 403, [
+            'mfaRequired' => true,
+            'mfaEnroll' => $require && !$enrolled,
+        ]);
     }
 
     public static function logout(): void

@@ -120,7 +120,17 @@
       ],
       note: 'رمز مشتری واقعی را در هیچ محیط مشترکی وارد نکنید. برای خط زنده جلسه رزرو کنید.',
       ctaDemo: 'رزرو دموی هدایت‌شده در واتساپ',
-      ctaTrial: 'درخواست آزمایش ۷روزه روی شماره خودتان'
+      ctaTrial: 'درخواست آزمایش ۷روزه روی شماره خودتان',
+      waDemo: 'سلام، دموی ۱۰ دقیقه‌ای هدایت‌شده FXGuard می‌خواهم (نرخ، اینباکس، نقش، شعبه).',
+      waTrial: 'سلام، آزمایش ۷روزه FXGuard روی شماره خودم می‌خواهم.',
+      galleryTitle: 'صفحه‌های واقعی، دسکتاپ و موبایل',
+      screens: {
+        dashboard: { caption: 'داشبورد — نمای زنده و اقدام سریع', alt: 'داشبورد دسکتاپ FXGuard — نمای زنده و اقدام سریع' },
+        users: { caption: 'کاربران و نقش‌ها — Owner، Admin، Manager، Supervisor، Agent', alt: 'صفحه کاربران و نقش‌های FXGuard' },
+        profile: { caption: 'امنیت و پروفایل — ۲FA و تنظیمات حساب', alt: 'صفحه پروفایل، رمز و ۲FA در FXGuard' },
+        mobileDash: { caption: 'داشبورد موبایل — مدیریت از هر جا', alt: 'نمای داشبورد موبایل FXGuard' },
+        mobileChat: { caption: 'گفتگوهای موبایل — اینباکس واتساپ در حرکت', alt: 'نمای گفتگوهای واتساپ موبایل FXGuard' }
+      }
     },
     steps: {
       eyebrow: 'خرید در ۳ گام',
@@ -376,7 +386,17 @@
       ],
       note: 'Paylaşılan hiçbir ortamda gerçek müşteri sırlarını girmeyin. Canlı hat için oturum ayırtın.',
       ctaDemo: 'WhatsApp’tan rehberli demo ayırtın',
-      ctaTrial: '7 günlük kendi-numara denemesi isteyin'
+      ctaTrial: '7 günlük kendi-numara denemesi isteyin',
+      waDemo: 'Merhaba, FXGuard için 10 dakikalık rehberli demo istiyorum (kur, gelen kutusu, roller, şubeler).',
+      waTrial: 'Merhaba, FXGuard için 7 günlük kendi-numara denemesi istiyorum.',
+      galleryTitle: 'Gerçek ekranlar, masaüstü ve mobil',
+      screens: {
+        dashboard: { caption: 'Dashboard — canlı özet ve hızlı işlemler', alt: 'FXGuard masaüstü dashboard — canlı özet ve hızlı işlemler' },
+        users: { caption: 'Kullanıcılar ve roller — Owner, Admin, Manager, Supervisor, Agent', alt: 'FXGuard kullanıcı ve rol ekranı' },
+        profile: { caption: 'Güvenlik ve profil — 2FA ve hesap ayarları', alt: 'FXGuard profil, şifre ve 2FA ekranı' },
+        mobileDash: { caption: 'Mobil dashboard — her yerden yönetin', alt: 'FXGuard mobil dashboard görünümü' },
+        mobileChat: { caption: 'Mobil konuşmalar — yoldayken WhatsApp gelen kutusu', alt: 'FXGuard mobil WhatsApp konuşmaları' }
+      }
     },
     steps: {
       eyebrow: '3 adımda satın al',
@@ -585,7 +605,17 @@
       ],
       note: 'Do not enter real customer secrets in any shared environment. For a live line, book a session.',
       ctaDemo: 'Book a guided demo on WhatsApp',
-      ctaTrial: 'Ask for a 7-day own-number trial'
+      ctaTrial: 'Ask for a 7-day own-number trial',
+      waDemo: 'Hi, I want a 10-minute guided demo of FXGuard (rates, inbox, roles, branches).',
+      waTrial: 'Hi, I want a 7-day own-number trial of FXGuard.',
+      galleryTitle: 'Real screens, desktop and mobile',
+      screens: {
+        dashboard: { caption: 'Dashboard — live overview and quick actions', alt: 'FXGuard WhatsApp CRM desktop dashboard — live overview and quick actions' },
+        users: { caption: 'Users and roles — Owner, Admin, Manager, Supervisor, Agent', alt: 'FXGuard users and roles management screen' },
+        profile: { caption: 'Security and profile — 2FA and account settings', alt: 'FXGuard profile, password and 2FA screen' },
+        mobileDash: { caption: 'Mobile dashboard — manage from anywhere', alt: 'FXGuard mobile dashboard view' },
+        mobileChat: { caption: 'Mobile conversations — WhatsApp inbox on the go', alt: 'FXGuard mobile WhatsApp conversations view' }
+      }
     },
     steps: {
       eyebrow: 'Buy in 3 steps',
@@ -794,7 +824,17 @@
       ],
       note: 'Не вводите секреты реальных клиентов в общей среде. Для живой линии запишитесь на сессию.',
       ctaDemo: 'Записать демо с гидом в WhatsApp',
-      ctaTrial: 'Запросить 7-дневный пробник на своём номере'
+      ctaTrial: 'Запросить 7-дневный пробник на своём номере',
+      waDemo: 'Здравствуйте, хочу 10-минутное демо FXGuard с гидом (курсы, inbox, роли, филиалы).',
+      waTrial: 'Здравствуйте, хочу 7-дневный пробник FXGuard на своём номере.',
+      galleryTitle: 'Реальные экраны, десктоп и мобильный',
+      screens: {
+        dashboard: { caption: 'Дашборд — живой обзор и быстрые действия', alt: 'Десктопный дашборд FXGuard — живой обзор и быстрые действия' },
+        users: { caption: 'Пользователи и роли — Owner, Admin, Manager, Supervisor, Agent', alt: 'Экран пользователей и ролей FXGuard' },
+        profile: { caption: 'Безопасность и профиль — 2FA и настройки аккаунта', alt: 'Экран профиля, пароля и 2FA в FXGuard' },
+        mobileDash: { caption: 'Мобильный дашборд — управление откуда угодно', alt: 'Мобильный дашборд FXGuard' },
+        mobileChat: { caption: 'Мобильные диалоги — inbox WhatsApp в пути', alt: 'Мобильные диалоги WhatsApp в FXGuard' }
+      }
     },
     steps: {
       eyebrow: 'Покупка за 3 шага',
@@ -1003,7 +1043,17 @@
       ],
       note: 'لا تُدخل أسرار عملاء حقيقيين في أي بيئة مشتركة. للخط الحي احجز جلسة.',
       ctaDemo: 'احجز عرضاً موجَّهاً على واتساب',
-      ctaTrial: 'اطلب تجربة ٧ أيام على رقمك'
+      ctaTrial: 'اطلب تجربة ٧ أيام على رقمك',
+      waDemo: 'مرحباً، أريد عرضاً موجَّهاً لـ FXGuard لمدة ١٠ دقائق (الأسعار والصندوق والأدوار والفروع).',
+      waTrial: 'مرحباً، أريد تجربة FXGuard لسبعة أيام على رقمي.',
+      galleryTitle: 'شاشات حقيقية، سطح المكتب والجوال',
+      screens: {
+        dashboard: { caption: 'لوحة التحكم — نظرة حية وإجراءات سريعة', alt: 'لوحة تحكم سطح المكتب لـ FXGuard — نظرة حية وإجراءات سريعة' },
+        users: { caption: 'المستخدمون والأدوار — Owner، Admin، Manager، Supervisor، Agent', alt: 'شاشة المستخدمين والأدوار في FXGuard' },
+        profile: { caption: 'الأمان والملف — 2FA وإعدادات الحساب', alt: 'شاشة الملف وكلمة المرور و2FA في FXGuard' },
+        mobileDash: { caption: 'لوحة الجوال — إدارة من أي مكان', alt: 'عرض لوحة FXGuard على الجوال' },
+        mobileChat: { caption: 'محادثات الجوال — صندوق واتساب أثناء التنقل', alt: 'محادثات واتساب على جوال FXGuard' }
+      }
     },
     steps: {
       eyebrow: 'الشراء في ٣ خطوات',

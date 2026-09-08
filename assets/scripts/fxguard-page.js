@@ -132,29 +132,82 @@
       </article>`);
   }
 
+  var DEMO_SCREENS = {
+    dashboard: { src: '/assets/images/products/fxguard/desktop-dashboard.png?v=20260904f', w: 1024, h: 507 },
+    users: { src: '/assets/images/products/fxguard/desktop-users.png?v=20260904f', w: 1024, h: 484 },
+    profile: { src: '/assets/images/products/fxguard/desktop-profile.png?v=20260904f', w: 1024, h: 484 },
+    mobileDash: { src: '/assets/images/products/fxguard/mobile-view.png?v=20260904f', w: 425, h: 926 },
+    mobileChat: { src: '/assets/images/products/fxguard/mobile-conversations.png?v=20260904f', w: 429, h: 924 }
+  };
+
   function renderDemo(cs) {
     const el = document.getElementById('fxguardDemo');
     const d = cs.demo;
     if (!el || !d) return;
+    const demoMsg = d.waDemo || d.waMessage || d.ctaDemo || d.cta || 'FXGuard guided demo';
+    const trialMsg = d.waTrial || d.ctaTrial || 'FXGuard 7-day trial';
+    const waDemo = window.getWhatsappUrl ? window.getWhatsappUrl(demoMsg) : 'https://wa.me/905010676486';
+    const waTrial = window.getWhatsappUrl ? window.getWhatsappUrl(trialMsg) : 'https://wa.me/905010676486';
+    const steps = d.items || d.shots || [];
+    const shots = d.screens || {};
     el.innerHTML = `
       <div class="fxguard-demo__panel">
-        <span class="fxguard-demo__live">${esc(d.liveBadge || 'LIVE DEMO')}</span>
-        <div class="fxguard-demo__creds">
-          <div>
-            <span class="fxguard-demo__label">${esc(d.userLabel || 'Username')}</span>
-            <code dir="ltr">${esc(d.user || 'demo')}</code>
+        ${steps.length ? `<ol class="fxguard-demo__steps">
+          ${steps.map(s => `<li><strong>${esc(s.title)}</strong> — ${esc(s.desc)}</li>`).join('')}
+        </ol>` : ''}
+        <p class="fxguard-demo__note">${esc(d.note || d.desc || '')}</p>
+        <div class="fxguard-demo__actions">
+          <a href="${esc(waDemo)}" class="btn btn--green" target="_blank" rel="noopener noreferrer">${esc(d.ctaDemo || d.cta || 'رزرو دمو')}</a>
+          ${d.ctaTrial ? `<a href="${esc(waTrial)}" class="btn btn--outline fxguard-demo__trial" target="_blank" rel="noopener noreferrer">${esc(d.ctaTrial)}</a>` : ''}
+        </div>
+      </div>
+      <div class="fxguard-demo__gallery-wrap">
+        <h3 class="fxguard-demo__gallery-title">${esc(d.galleryTitle || '')}</h3>
+        <div class="fxguard-demo__gallery">
+          <div class="fxguard-demo__primary">
+            <div class="fxguard-browser">
+              <div class="fxguard-browser__bar">
+                <div class="fxguard-browser__dots" aria-hidden="true"><span></span><span></span><span></span></div>
+                <div class="fxguard-browser__url">app.fxguard.io/dashboard</div>
+              </div>
+              <div class="fxguard-browser__content">
+                <img src="${DEMO_SCREENS.dashboard.src}" alt="${esc(shots.dashboard?.alt || d.galleryTitle || 'FXGuard')}" width="${DEMO_SCREENS.dashboard.w}" height="${DEMO_SCREENS.dashboard.h}" loading="lazy" decoding="async">
+              </div>
+            </div>
+            ${shots.dashboard?.caption ? `<span class="fxguard-demo__badge">${esc(shots.dashboard.caption)}</span>` : ''}
           </div>
-          <div>
-            <span class="fxguard-demo__label">${esc(d.passLabel || 'Password')}</span>
-            <code dir="ltr">${esc(d.pass || '123456')}</code>
+          <div class="fxguard-demo__secondary">
+            <figure class="fxguard-shot">
+              <img src="${DEMO_SCREENS.users.src}" alt="${esc(shots.users?.alt || '')}" width="${DEMO_SCREENS.users.w}" height="${DEMO_SCREENS.users.h}" loading="lazy" decoding="async">
+              <figcaption>${esc(shots.users?.caption || '')}</figcaption>
+            </figure>
+            <figure class="fxguard-shot">
+              <img src="${DEMO_SCREENS.profile.src}" alt="${esc(shots.profile?.alt || '')}" width="${DEMO_SCREENS.profile.w}" height="${DEMO_SCREENS.profile.h}" loading="lazy" decoding="async">
+              <figcaption>${esc(shots.profile?.caption || '')}</figcaption>
+            </figure>
+          </div>
+          <div class="fxguard-demo__mobiles">
+            <div class="fxguard-phone">
+              <div class="fxguard-phone__frame">
+                <div class="fxguard-phone__notch" aria-hidden="true"></div>
+                <div class="fxguard-phone__screen">
+                  <img src="${DEMO_SCREENS.mobileDash.src}" alt="${esc(shots.mobileDash?.alt || '')}" width="${DEMO_SCREENS.mobileDash.w}" height="${DEMO_SCREENS.mobileDash.h}" loading="lazy" decoding="async">
+                </div>
+              </div>
+              <p class="fxguard-phone__caption">${esc(shots.mobileDash?.caption || '')}</p>
+            </div>
+            <div class="fxguard-phone">
+              <div class="fxguard-phone__frame">
+                <div class="fxguard-phone__notch" aria-hidden="true"></div>
+                <div class="fxguard-phone__screen">
+                  <img src="${DEMO_SCREENS.mobileChat.src}" alt="${esc(shots.mobileChat?.alt || '')}" width="${DEMO_SCREENS.mobileChat.w}" height="${DEMO_SCREENS.mobileChat.h}" loading="lazy" decoding="async">
+                </div>
+              </div>
+              <p class="fxguard-phone__caption">${esc(shots.mobileChat?.caption || '')}</p>
+            </div>
           </div>
         </div>
-        <p class="fxguard-demo__note">${esc(d.note || '')}</p>
-        <a href="https://app.fxguard.io/" class="btn btn--green" target="_blank" rel="noopener noreferrer">${esc(d.cta || 'Open Live Demo')}</a>
-      </div>
-      <ul class="fxguard-demo__shots">
-        ${(d.shots || []).map(s => `<li><strong>${esc(s.title)}</strong><span>${esc(s.desc)}</span></li>`).join('')}
-      </ul>`;
+      </div>`;
   }
 
   function renderUpdates(cs) {

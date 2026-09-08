@@ -1406,20 +1406,25 @@
           ]
         },
         demo: {
-          eyebrow: 'دموی زنده',
-          title: 'محصول واقعی را خودتان امتحان کنید',
-          desc: 'این پنل زنده FXGuard است، نه ماکاپ.',
-          liveBadge: 'LIVE DEMO',
-          userLabel: 'نام کاربری',
-          passLabel: 'رمز عبور',
-          user: 'demo',
-          pass: '123456',
-          note: 'محیط دموی عمومی — آزادانه کاوش کنید. چیزی که وارد یا تغییر می‌دهید ذخیره نمی‌شود.',
-          cta: 'باز کردن دموی زنده',
+          eyebrow: 'دمو',
+          title: 'دموی هدایت‌شده رزرو کنید',
+          desc: 'رمز عمومی مشترک روی این صفحه منتشر نمی‌کنیم.',
+          note: 'رمز مشتری واقعی را در هیچ محیط مشترکی وارد نکنید. برای خط زنده جلسه رزرو کنید.',
+          cta: 'رزرو دموی هدایت‌شده در واتساپ',
+          ctaDemo: 'رزرو دموی هدایت‌شده در واتساپ',
+          ctaTrial: 'درخواست آزمایش ۷روزه روی شماره خودتان',
+          galleryTitle: 'صفحه‌های واقعی، دسکتاپ و موبایل',
+          screens: {
+            dashboard: { caption: 'داشبورد — نمای زنده و اقدام سریع', alt: 'داشبورد دسکتاپ FXGuard' },
+            users: { caption: 'کاربران و نقش‌ها', alt: 'صفحه کاربران FXGuard' },
+            profile: { caption: 'امنیت و پروفایل — ۲FA', alt: 'صفحه پروفایل FXGuard' },
+            mobileDash: { caption: 'داشبورد موبایل', alt: 'داشبورد موبایل FXGuard' },
+            mobileChat: { caption: 'گفتگوهای موبایل', alt: 'گفتگوهای موبایل FXGuard' }
+          },
           shots: [
-            { title: 'Dashboard', desc: 'نمای زنده و اکشن‌های سریع' },
-            { title: 'Users & Roles', desc: 'Owner تا Agent · امنیت و ۲FA' },
-            { title: 'Mobile', desc: 'داشبورد و مکالمات در موبایل' }
+            { title: 'بازدید ۱۰ دقیقه‌ای', desc: 'نرخ، اینباکس، نقش و شعبه' },
+            { title: 'آزمایش اختیاری', desc: 'واتساپ خودتان را وصل کنید، بعد قطع کنید' },
+            { title: 'خرید', desc: 'Cloud Start یا پیش‌فاکتور Business / لایسنس' }
           ]
         },
         steps: {
@@ -1427,7 +1432,7 @@
           title: 'دمو رایگان، انتخاب پکیج، خرید امروز',
           desc: 'چرخه فروش طولانی نیست — اول محصول واقعی را ببینید، بعد مدل استقرار را انتخاب کنید.',
           items: [
-            { num: '01', icon: 'bolt', title: 'دموی زنده را امتحان کنید', desc: 'app.fxguard.io — کاربر demo / رمز 123456. محصول واقعی است، نه ماکاپ.' },
+            { num: '01', icon: 'bolt', title: 'دموی هدایت‌شده رزرو کنید', desc: 'ده دقیقه روی نرخ، اینباکس، نقش و شعبه. رمز عمومی مشترک منتشر نمی‌شود.' },
             { num: '02', icon: 'target', title: 'پکیج را انتخاب کنید', desc: 'Hosted Cloud برای سرعت، Self-hosted License برای مالکیت، یا Managed Dedicated برای استقرار کامل.' },
             { num: '03', icon: 'whatsapp', title: 'خرید یا استعلام', desc: 'از طریق واتساپ فروش یا فرم در fxguard.io — معمولاً در روز کاری کمتر از ۲۴ ساعت پاسخ می‌گیرید.' }
           ],
@@ -1520,7 +1525,7 @@
           title: 'پرسش‌های پرتکرار',
           items: [
             { q: 'تفاوت Cloud، لایسنس و Managed چیست؟', a: 'Cloud: ما میزبانی می‌کنیم (ماهانه/سالانه). لایسنس: سیستم را یک‌بار می‌خرید و روی سرور خودتان اجرا می‌کنید. Managed: اینستنس اختصاصی را ما نصب و اداره می‌کنیم. هر سه همان ماژول‌های اصلی را دارند.' },
-            { q: 'قبل از خرید می‌توانم امتحان کنم؟', a: 'بله. دموی زنده در app.fxguard.io (کاربر demo / رمز 123456) محصول واقعی است — عمومی است و تغییرات ذخیره نمی‌شود.' },
+            { q: 'قبل از خرید می‌توانم امتحان کنم؟', a: 'بله — دموی هدایت‌شده ۱۰ دقیقه‌ای یا آزمایش زمان‌دار روی شماره خودتان رزرو کنید. رمز عمومی مشترک منتشر نمی‌شود.' },
             { q: 'شروع قیمت چقدر است؟', a: 'Hosted Cloud از $49 در ماه یا $490 در سال. لایسنس و Managed با استعلام قیمت سفارشی.' },
             { q: 'داده بکاپ می‌شود؟', a: 'روی Cloud و Managed بکاپ روزانه بخشی از سرویس است. روی لایسنس Self-hosted بکاپ روی زیرساخت شماست — راهنمایی و قرارداد پشتیبانی در دسترس است.' },
             { q: 'امنیت چگونه است؟', a: 'هر حساب می‌تواند ۲FA با Google Authenticator داشته باشد. دسترسی نقش‌محور (Owner تا Agent) و لاگ کامل فعالیت وجود دارد.' },
@@ -1552,8 +1557,8 @@
             {
               date: 'Jul 2026',
               tag: 'Latest',
-              title: 'دموی عمومی زنده و مدل‌های استقرار شفاف‌تر',
-              desc: 'محیط دموی عمومی در app.fxguard.io و بسته‌بندی روشن‌تر برای Cloud، لایسنس و Managed.',
+              title: 'دموی هدایت‌شده و مدل‌های استقرار شفاف‌تر',
+              desc: 'رزرو دمو از واتساپ و بسته‌بندی روشن‌تر برای Cloud، لایسنس و Managed.',
               bullets: ['دموی پنل با اعتبار مشترک', 'مسیر فروش لایسنس و Managed', 'اسکرین واقعی دسکتاپ و موبایل']
             },
             {
@@ -2105,20 +2110,25 @@
           ]
         },
         demo: {
-          eyebrow: 'Canlı demo',
-          title: 'Gerçek ürünü deneyin',
-          desc: 'Canlı FXGuard paneli — maket değil.',
-          liveBadge: 'LIVE DEMO',
-          userLabel: 'Kullanıcı',
-          passLabel: 'Şifre',
-          user: 'demo',
-          pass: '123456',
-          note: 'Genel demo ortamı — değişiklikler kaydedilmez.',
-          cta: 'Canlı demoyu aç',
+          eyebrow: 'Demo',
+          title: 'Rehberli demo ayırtın',
+          desc: 'Bu sitede paylaşılan genel şifre yayımlamayız.',
+          note: 'Gerçek müşteri sırlarını paylaşılan ortamda girmeyin. Canlı hat için oturum ayırtın.',
+          cta: 'WhatsApp’tan rehberli demo ayırtın',
+          ctaDemo: 'WhatsApp’tan rehberli demo ayırtın',
+          ctaTrial: '7 günlük kendi-numara denemesi isteyin',
+          galleryTitle: 'Gerçek ekranlar, masaüstü ve mobil',
+          screens: {
+            dashboard: { caption: 'Dashboard — canlı özet ve hızlı işlemler', alt: 'FXGuard masaüstü dashboard' },
+            users: { caption: 'Kullanıcılar ve roller', alt: 'FXGuard kullanıcı ekranı' },
+            profile: { caption: 'Güvenlik ve profil — 2FA', alt: 'FXGuard profil ekranı' },
+            mobileDash: { caption: 'Mobil dashboard', alt: 'FXGuard mobil dashboard' },
+            mobileChat: { caption: 'Mobil konuşmalar', alt: 'FXGuard mobil konuşmalar' }
+          },
           shots: [
-            { title: 'Dashboard', desc: 'Canlı özet ve hızlı aksiyonlar' },
-            { title: 'Users & Roles', desc: 'Owner → Agent · 2FA' },
-            { title: 'Mobile', desc: 'Mobil dashboard ve sohbetler' }
+            { title: '10 dakikalık tur', desc: 'Kur, gelen kutusu, roller ve şubeler' },
+            { title: 'İsteğe bağlı deneme', desc: 'Kendi WhatsApp’ınızı bağlayın, sonra kesin' },
+            { title: 'Satın alma', desc: 'Cloud Start veya Business / lisans teklifi' }
           ]
         },
         steps: {
@@ -2126,7 +2136,7 @@
           title: 'Demo, paket, satın alma',
           desc: 'Önce gerçek ürünü görün, sonra kurulum modelini seçin.',
           items: [
-            { num: '01', icon: 'bolt', title: 'Canlı demoyu deneyin', desc: 'app.fxguard.io — demo / 123456. Gerçek ürün.' },
+            { num: '01', icon: 'bolt', title: 'Rehberli demo ayırtın', desc: 'On dakika: kur, gelen kutusu, rol ve şube. Genel paylaşılan şifre yayımlanmaz.' },
             { num: '02', icon: 'target', title: 'Paketi seçin', desc: 'Cloud, Self-hosted License veya Managed Dedicated.' },
             { num: '03', icon: 'whatsapp', title: 'Satın alın / teklif alın', desc: 'WhatsApp veya fxguard.io formu — iş gününde genelde 24 saat içinde yanıt.' }
           ],
@@ -2172,7 +2182,7 @@
           title: 'Sık sorulanlar',
           items: [
             { q: 'Cloud, lisans ve Managed farkı?', a: 'Cloud: biz barındırırız. Lisans: siz kendi sunucunuzda çalıştırırsınız. Managed: dedicated instance’ı biz işletiriz. Üçünde de aynı çekirdek modüller.' },
-            { q: 'Satın almadan deneyebilir miyim?', a: 'Evet — app.fxguard.io (demo / 123456) gerçek üründür.' },
+            { q: 'Satın almadan deneyebilir miyim?', a: 'Evet — 10 dakikalık rehberli demo veya kendi numaranızda süreli deneme ayırtın. Genel paylaşılan şifre yayımlamayız.' },
             { q: 'Fiyat ne kadar başlar?', a: 'Cloud $49/ay veya $490/yıl. Lisans ve Managed teklifle.' },
             { q: 'Veri yedekleniyor mu?', a: 'Cloud ve Managed’de günlük yedek hizmetin parçasıdır. Self-hosted’ta yedek sizin altyapınızda — rehberlik ve destek sözleşmesi mevcut.' },
             { q: 'Güvenlik nasıl?', a: 'Google Authenticator 2FA, rol tabanlı erişim (Owner→Agent) ve tam aktivite logları.' },
@@ -2201,7 +2211,7 @@
           title: 'FXGuard’da neler yeni?',
           desc: 'Cloud ve Managed otomatik güncellenir; Self-hosted güncelleme sözleşmesiyle.',
           items: [
-            { date: 'Jul 2026', tag: 'Latest', title: 'Genel canlı demo & net paketler', desc: 'app.fxguard.io demosu ve Cloud / License / Managed paketleri.', bullets: ['Paylaşılan demo hesabı', 'Lisans ve managed satış yolu', 'Gerçek ekran görüntüleri'] },
+            { date: 'Jul 2026', tag: 'Latest', title: 'Rehberli demo & net paketler', desc: 'WhatsApp üzerinden rehberli demo ve Cloud / License / Managed paketleri.', bullets: ['Paylaşılan şifre yok', 'Lisans ve managed satış yolu', 'Gerçek ekran görüntüleri'] },
             { date: 'May 2026', tag: 'Security', title: 'Daha güçlü hesap güvenliği', desc: '2FA, profil sertleştirme ve panel markalama.', bullets: ['2FA kurulumu', 'Owner→Agent roller', 'Giriş görünümü ayarı'] },
             { date: 'Mar 2026', tag: 'Product', title: 'Çok şube & FX araçları', desc: 'Şube/departman ve FX oran araçları.', bullets: ['Şube yapısı', 'Online durum', 'FX oranları ve servisler'] },
             { date: 'Jan 2026', tag: 'Core', title: 'Inbox, ticket, görev & mobil', desc: 'Çekirdek CRM döngüsü masaüstü ve mobilde.', bullets: ['Takım WhatsApp inbox', 'Müşteri/ticket/görev', 'Mobil dashboard'] }
@@ -2726,20 +2736,25 @@
           ]
         },
         demo: {
-          eyebrow: 'Live demo',
-          title: 'See the real product — try it yourself',
-          desc: 'This is the live FXGuard panel, not a mockup.',
-          liveBadge: 'LIVE DEMO',
-          userLabel: 'Username',
-          passLabel: 'Password',
-          user: 'demo',
-          pass: '123456',
-          note: 'Public demo environment — nothing you change is saved.',
-          cta: 'Open live demo',
+          eyebrow: 'Demo',
+          title: 'Book a guided demo',
+          desc: 'We do not publish a shared public password on this site.',
+          note: 'Do not enter real customer secrets in any shared environment. For a live line, book a session.',
+          cta: 'Book a guided demo on WhatsApp',
+          ctaDemo: 'Book a guided demo on WhatsApp',
+          ctaTrial: 'Ask for a 7-day own-number trial',
+          galleryTitle: 'Real screens, desktop and mobile',
+          screens: {
+            dashboard: { caption: 'Dashboard — live overview and quick actions', alt: 'FXGuard desktop dashboard' },
+            users: { caption: 'Users and roles', alt: 'FXGuard users screen' },
+            profile: { caption: 'Security and profile — 2FA', alt: 'FXGuard profile screen' },
+            mobileDash: { caption: 'Mobile dashboard', alt: 'FXGuard mobile dashboard' },
+            mobileChat: { caption: 'Mobile conversations', alt: 'FXGuard mobile conversations' }
+          },
           shots: [
-            { title: 'Dashboard', desc: 'Live overview & quick actions' },
-            { title: 'Users & Roles', desc: 'Owner → Agent · 2FA security' },
-            { title: 'Mobile', desc: 'Dashboard & conversations on the go' }
+            { title: '10-minute walkthrough', desc: 'Rates, inbox, roles and branches' },
+            { title: 'Optional trial', desc: 'Connect your WhatsApp, then disconnect it' },
+            { title: 'Purchase', desc: 'Cloud Start, or a written quote for Business / license' }
           ]
         },
         steps: {
@@ -2747,7 +2762,7 @@
           title: 'Demo free, pick a package, purchase today',
           desc: 'No long sales cycle — evaluate the real product first.',
           items: [
-            { num: '01', icon: 'bolt', title: 'Try the live demo', desc: 'app.fxguard.io — demo / 123456. Real product, not a mockup.' },
+            { num: '01', icon: 'bolt', title: 'Book a guided demo', desc: 'Ten minutes on rates, inbox, roles and branches. We do not publish a shared public password.' },
             { num: '02', icon: 'target', title: 'Pick your package', desc: 'Hosted Cloud, Self-hosted License, or Managed Dedicated.' },
             { num: '03', icon: 'whatsapp', title: 'Purchase or request a quote', desc: 'WhatsApp sales or the form on fxguard.io — usually within 24 hours on business days.' }
           ],
@@ -2793,7 +2808,7 @@
           title: 'Common questions',
           items: [
             { q: 'Cloud vs License vs Managed?', a: 'Cloud: we host it. License: you run it on your servers. Managed: we operate a dedicated instance. All three share the same core modules.' },
-            { q: 'Can I try before buying?', a: 'Yes — app.fxguard.io (demo / 123456) is the real product.' },
+            { q: 'Can I try before buying?', a: 'Yes — book a 10-minute guided demo or a time-limited trial on your own number. We do not publish a shared public password.' },
             { q: 'What does pricing start at?', a: 'Hosted Cloud from $49/mo or $490/year. License and Managed are custom quotes.' },
             { q: 'Is my data backed up?', a: 'On Cloud and Managed, daily backups are included. On Self-hosted, backups run on your infrastructure — guidance and optional support contracts available.' },
             { q: 'How secure is FXGuard?', a: 'Google Authenticator 2FA, role-based access (Owner→Agent) and full activity logs.' },
@@ -2822,7 +2837,7 @@
           title: 'What’s new in FXGuard',
           desc: 'Cloud and Managed get updates automatically; Self-hosted with the update contract.',
           items: [
-            { date: 'Jul 2026', tag: 'Latest', title: 'Public live demo & clearer packages', desc: 'Public demo at app.fxguard.io plus clearer Cloud / License / Managed packaging.', bullets: ['Shared demo credentials', 'License and managed sales paths', 'Real product screenshots'] },
+            { date: 'Jul 2026', tag: 'Latest', title: 'Guided demo & clearer packages', desc: 'Guided demo via WhatsApp plus clearer Cloud / License / Managed packaging.', bullets: ['No shared public password', 'License and managed sales paths', 'Real product screenshots'] },
             { date: 'May 2026', tag: 'Security', title: 'Stronger account security', desc: '2FA, profile hardening and panel branding.', bullets: ['2FA in profile', 'Owner→Agent roles', 'Configurable login visuals'] },
             { date: 'Mar 2026', tag: 'Product', title: 'Multi-branch ops & FX tools', desc: 'Branches, departments and FX rate tools.', bullets: ['Branch structure', 'Online status', 'FX rates and services'] },
             { date: 'Jan 2026', tag: 'Core', title: 'Inbox, tickets, tasks & mobile', desc: 'Core CRM loop on desktop and mobile.', bullets: ['Team WhatsApp inbox', 'Customers, tickets, tasks', 'Mobile dashboard'] }

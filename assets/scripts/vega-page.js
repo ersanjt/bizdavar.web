@@ -17,11 +17,6 @@
   const ic = (name, opts) => (window.BD_ICON ? window.BD_ICON(name, opts) : '');
   const arrow = () => (window.BD_LINK_ARROW ? window.BD_LINK_ARROW() : ' ←');
 
-  function statValue(b, stat) {
-    if (stat.valueKey && b[stat.valueKey]) return b[stat.valueKey];
-    return stat.value || '';
-  }
-
   function inquiryUrl(productName) {
     const V = catalog();
     const base = path(R.contact || 'pages/contact.html');
@@ -40,32 +35,27 @@
     const b = catalog().brand;
     const V = catalog();
     const msg = (V.inquiryTemplate || '').replace('{product}', 'VEGA');
-    const stats = b.heroStats || [
-      { valueKey: 'founded', label: 'تجربه برند' },
-      { valueKey: 'origin', label: 'تولید آلمان' },
-      { value: '۱۲+', label: 'سال همراهی بیزدوار' }
-    ];
+    const scene = path(b.heroScene || 'assets/images/content/home-hero-industrial.webp');
+    const scene800 = path('assets/images/content/home-hero-industrial-800.webp');
+    const product = path(b.heroImage);
 
     el.innerHTML = `
-      <div class="vega-hero__content">
-        <img class="vega-hero__logo" src="${path(b.logo)}" alt="VEGA — Home of Values" width="200" height="48" loading="eager">
-        <span class="vega-hero__claim">${b.heroClaim || 'HOME OF VALUES'}</span>
-        <span class="vega-hero__eyebrow">${b.heroEyebrow}</span>
-        <h1 class="vega-hero__title">${b.heroHeadline}</h1>
-        <p class="vega-hero__subtitle">${b.heroHeadlineSub}</p>
-        <span class="vega-hero__badge">${b.tagline || b.taglineFa} — ${b.name}</span>
-        <p class="vega-hero__desc">${b.description || b.descriptionFa}</p>
-        <div class="vega-hero__stats">
-          ${stats.map(s => `<div class="vega-hero__stat"><strong>${statValue(b, s)}</strong><span>${s.label}</span></div>`).join('')}
+      <div class="vega-hero__frame">
+        <div class="vega-hero__stage">
+          <img class="vega-hero__scene" src="${scene800}" srcset="${scene800} 800w, ${scene800} 1280w, ${scene} 1536w" sizes="(min-width: 901px) 70vw, 92vw" alt="" width="1536" height="864" decoding="async" fetchpriority="high">
+          <span class="vega-hero__rings" aria-hidden="true"></span>
+          <img class="vega-hero__product" src="${product}" alt="${b.heroImageAlt || 'VEGA VEGAPULS 6X'}" width="640" height="640" decoding="async">
         </div>
-        <div class="hero__actions mt-24">
-          <a href="${whatsappUrl(msg)}" class="btn btn--green" target="_blank" rel="noopener noreferrer">${ic('whatsapp', { size: 18, variant: 'white' })} ${t('whatsappInquiry', 'استعلام در واتساپ')}</a>
-          <a href="${inquiryUrl('VEGA')}" class="btn btn--yellow">${t('inquiryCta', 'استعلام قیمت و تامین')}</a>
-          <a href="#vega-quote" class="btn btn--primary">${t('quoteGuideCta', 'راهنمای استعلام')}</a>
+        <div class="vega-hero__card">
+          <img class="vega-hero__logo" src="${path(b.logo)}" alt="VEGA — Home of Values" width="160" height="40" loading="eager">
+          <span class="vega-hero__eyebrow">${b.heroEyebrow}</span>
+          <h1 class="vega-hero__title">${b.heroHeadline}</h1>
+          <p class="vega-hero__desc">${b.heroHeadlineSub}</p>
+          <div class="vega-hero__actions">
+            <a href="${whatsappUrl(msg)}" class="btn btn--yellow" target="_blank" rel="noopener noreferrer">${t('whatsappInquiry', 'استعلام در واتساپ')}</a>
+            <a href="${inquiryUrl('VEGA')}" class="btn btn--outline">${t('inquiryCta', 'استعلام قیمت و تامین')}</a>
+          </div>
         </div>
-      </div>
-      <div class="vega-hero__visual">
-        <img src="${path(b.heroImage)}" alt="${b.heroImageAlt || 'VEGA process instrumentation'}" width="610" height="1010" loading="eager" decoding="async">
       </div>`;
   }
 
@@ -247,7 +237,7 @@
     if (!el) return;
     el.innerHTML = V.valueProps.map(v => `
       <div class="vega-value-card">
-        <div class="vega-value-card__media">
+        <div class="vega-value-card__media${/blog-|content\//.test(v.image) ? ' vega-value-card__media--photo' : ''}">
           <img src="${path(v.image)}" alt="${v.titleEn}" width="320" height="180" loading="lazy">
         </div>
         <div class="vega-value-card__body">
@@ -265,7 +255,7 @@
     if (!el) return;
     el.innerHTML = V.industries.map(ind => `
       <div class="vega-industry-item">
-        <div class="vega-industry-item__media">
+        <div class="vega-industry-item__media${/blog-|content\//.test(ind.image) ? ' vega-industry-item__media--photo' : ''}">
           <img src="${path(ind.image)}" alt="${ind.nameEn}" width="160" height="90" loading="lazy">
         </div>
         <span class="vega-industry-item__icon">${ic(ind.icon, { size: 20 })}</span>

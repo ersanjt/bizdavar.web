@@ -9,8 +9,8 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const CSS_VER = '20260831e';
-const JS_VER = '20260831e';
+const CSS_VER = '20260908b';
+const JS_VER = '20260908b';
 const GTM_ID = 'GTM-NXWQQWF8';
 const VIEWPORT = '<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">';
 const CSS_HREF = `/assets/styles/site.css?v=${CSS_VER}`;
@@ -83,12 +83,33 @@ function transform(html) {
     '\n'
   );
 
+  out = out.replace(
+    /\s*<link rel="preload" as="image"[^>]*>\s*/g,
+    '\n'
+  );
+
+  const pageMatch = out.match(/data-page="([^"]+)"/);
+  const page = pageMatch ? pageMatch[1] : '';
+  const lcpPreloads = {
+    home: '  <link rel="preload" as="image" type="image/webp" href="/assets/images/content/home-hero-industrial-800.webp" imagesrcset="/assets/images/content/home-hero-industrial-800.webp 800w, /assets/images/content/home-hero-industrial-800.webp 1280w, /assets/images/content/home-hero-industrial.webp 1536w" imagesizes="(min-width: 1025px) 560px, 92vw" fetchpriority="high">',
+    about: '  <link rel="preload" as="image" type="image/webp" href="/assets/images/content/about-hero-800.webp" fetchpriority="high">',
+    vega: '  <link rel="preload" as="image" type="image/webp" href="/assets/images/content/home-hero-industrial-800.webp" fetchpriority="high">',
+    teltonika: '  <link rel="preload" as="image" type="image/webp" href="/assets/images/teltonika/hero/fleet-telematics-800.webp" fetchpriority="high">',
+    prosense: '  <link rel="preload" as="image" type="image/webp" href="/assets/images/prosense/hero-pq-sil2-800.webp" fetchpriority="high">',
+    gamak: '  <link rel="preload" as="image" type="image/webp" href="/assets/images/gamak/category-three-phase-800.webp" fetchpriority="high">',
+    teraoka: '  <link rel="preload" as="image" type="image/webp" href="/assets/images/teraoka/hero/teraoka-retail-hero-800.webp" fetchpriority="high">',
+    'digi-system': '  <link rel="preload" as="image" type="image/webp" href="/assets/images/digi-system/hero/digi-retail-hero-800.webp" fetchpriority="high">',
+    'liqui-moly': '  <link rel="preload" as="image" type="image/webp" href="/assets/images/liqui-moly/octane-plus-800.webp" fetchpriority="high">',
+    uwt: '  <link rel="preload" as="image" type="image/webp" href="/assets/images/uwt/product-vn1020-800.webp" fetchpriority="high">'
+  };
+  const lcpPreload = lcpPreloads[page] || '';
   const critical = [
     '  ' + viewport,
     `  <link rel="stylesheet" href="${CSS_HREF}">`,
     fontPreloads(htmlDir(out)),
+    lcpPreload,
     GTM_HEAD
-  ].join('\n');
+  ].filter(Boolean).join('\n');
 
   if (!/<meta charset="UTF-8">/i.test(out)) return html;
   out = out.replace(
@@ -116,7 +137,7 @@ function transform(html) {
     `<link rel="stylesheet" href="$1?v=${CSS_VER}">`
   );
 
-  const headerSkel = '<header class="header" id="siteHeader"><div class="header-skel"><img src="/assets/images/brand/bizdavar-logo-200.webp" alt="Bizdavar" width="100" height="42" fetchpriority="high" decoding="async"></div></header>';
+  const headerSkel = '<header class="header" id="siteHeader"><div class="header-skel"><img src="/assets/images/brand/bizdavar-logo-200.webp" alt="Bizdavar" width="100" height="42" decoding="async"></div></header>';
   out = out.replace(
     /<header class="header" id="siteHeader">[\s\S]*?<\/header>/,
     headerSkel

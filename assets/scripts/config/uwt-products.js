@@ -272,7 +272,7 @@
           },
           ...series(
           [
-            { name: 'Rotonivo RN 3000', image: U + 'product-rn3001.jpg', imageAlt: 'UWT Rotonivo RN 3001 rotary paddle' },
+            { name: 'Rotonivo RN 3000', image: U + 'product-rn3001-paddle.png', imageAlt: 'UWT Rotonivo RN 3001 rotary paddle' },
             { name: 'Rotonivo RN 4000', image: U + 'category-rotonivo.webp', imageAlt: 'UWT Rotonivo RN 4000 rotary paddle' },
             { name: 'Rotonivo RN 6000 (SIL 2)', image: U + 'product-rn6001.jpg', imageAlt: 'UWT Rotonivo RN 6001 SIL 2 rotary paddle' },
             { name: 'Vibranivo VN 1000/2000', image: U + 'product-vn1020.jpg', imageAlt: 'UWT Vibranivo VN 1020 vibrating fork' },

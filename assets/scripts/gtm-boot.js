@@ -11,6 +11,10 @@
     var s = d.createElement('script');
     s.async = true;
     s.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-NXWQQWF8';
+    var nonce = (d.currentScript && d.currentScript.nonce)
+      || (d.querySelector('script[nonce]') && d.querySelector('script[nonce]').nonce)
+      || (d.querySelector('meta[name="csp-nonce"]') && d.querySelector('meta[name="csp-nonce"]').content);
+    if (nonce) s.setAttribute('nonce', nonce);
     d.head.appendChild(s);
   }
   if (d.readyState === 'complete') {

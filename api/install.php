@@ -5,16 +5,16 @@ declare(strict_types=1);
 /**
  * One-time installer — CLI only. HTTP access is denied.
  *
- *   php api/install.php
  *   php api/install.php --key=YOUR_INSTALL_KEY
  *
+ * --key is required. After success this file deletes itself and writes storage/install.lock.
  * Then remove install_key and admin_password from config.php.
  */
 
 if (PHP_SAPI !== 'cli') {
     http_response_code(403);
     header('Content-Type: text/plain; charset=utf-8');
-    echo "Installer is CLI-only.\nRun: php api/install.php\n";
+    echo "Installer is CLI-only.\nRun: php api/install.php --key=YOUR_INSTALL_KEY\n";
     exit;
 }
 
@@ -35,11 +35,21 @@ foreach (array_slice($argv, 1) as $arg) {
     }
 }
 
+$lockFile = dirname(__DIR__) . '/storage/install.lock';
+if (is_file($lockFile)) {
+    fwrite(STDERR, "Already installed (storage/install.lock). Remove the lock only if you intend a clean re-install.\n");
+    exit(1);
+}
+
 if ($installKey === '' || $installKey === 'CHANGE_ME_RANDOM_STRING') {
     fwrite(STDERR, "Set a real install_key in config.php first.\n");
     exit(1);
 }
-if ($provided !== '' && !hash_equals($installKey, $provided)) {
+if ($provided === '') {
+    fwrite(STDERR, "Required: php api/install.php --key=YOUR_INSTALL_KEY\n");
+    exit(1);
+}
+if (!hash_equals($installKey, $provided)) {
     fwrite(STDERR, "Forbidden: invalid install key.\n");
     exit(1);
 }
@@ -84,5 +94,17 @@ if ($check->fetch()) {
     echo "Admin created: $email\n";
 }
 
+$lockDir = dirname($lockFile);
+if (!is_dir($lockDir)) {
+    @mkdir($lockDir, 0750, true);
+}
+file_put_contents($lockFile, date('c') . "\n");
+
 echo "\nDone. Remove install_key and admin_password from config.php.\n";
-echo "HTTP access to this file is blocked; keep it off the public tree if you can.\n";
+echo "Enable MFA on first BizHub login. Optionally set security.admin_allow_ips and create admin/.htpasswd.\n";
+
+if (@unlink(__FILE__)) {
+    echo "install.php deleted.\n";
+} else {
+    fwrite(STDERR, "Could not delete install.php — remove api/install.php from the server now.\n");
+}

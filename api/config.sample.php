@@ -31,6 +31,14 @@ return [
     'lead_rate_window' => 3600,
     'login_rate_limit' => 5,
     'login_rate_window' => 900,
+    /** Require TOTP after password. First login shows enroll. */
+    'require_mfa' => true,
+    /**
+     * Extra IP allowlist for /admin API (empty = no IP lock).
+     * Do not fill with placeholders — only real office/home IPs.
+     */
+    'admin_allow_ips' => [],
+    'trust_cloudflare' => false,
   ],
 
   /** One-time install — remove after setup */

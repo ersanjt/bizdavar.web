@@ -14,7 +14,7 @@
   if (!el) return;
 
   var BASE = '/assets/scripts/';
-  var ASSET_VER = '20260903a';
+  var ASSET_VER = '20260908b';
 
   // Inline page boots run before deferred chain scripts; queue until bootstrap.js.
   window.bizdavarPageInit = window.bizdavarPageInit || function (fn) {
@@ -52,20 +52,17 @@
     'i18n/locale-seo.js'
   ];
   if (loc === 'ru' || loc === 'ar') i18nPacks.push('i18n/locales-ru-ar.js');
-  if (isArticle) i18nPacks.push('i18n/articles-bodies.js');
+  if (isArticle) {
+    i18nPacks.push('i18n/articles-body-i18n.js');
+    if (loc === 'ru' || loc === 'ar') i18nPacks.push('i18n/articles-body-ru-ar.js');
+  }
 
   var chain = [
     'config/paths.js',
     'config/site-config.js'
   ].concat(afterConfig, [
     'i18n/locales.js'
-  ], afterLocales, [
-    'i18n/locales-pages.js',
-    'i18n/articles-body-i18n.js',
-    'i18n/articles-body-ru-ar.js',
-    'i18n/locale-seo.js',
-    'i18n/locales-ru-ar.js'
-  ], afterSeo, [
+  ], afterLocales, i18nPacks, afterSeo, [
     'i18n/i18n.js',
     'i18n/page-i18n.js'
   ], afterPageI18n, [

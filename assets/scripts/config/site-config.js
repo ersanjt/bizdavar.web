@@ -731,7 +731,7 @@ window.BIZDAVAR_CONFIG = {
       title: 'سنسور سطح سیلو',
       desc: 'Rotonivo، Vibranivo، NivoRadar و NivoGuide — سوئیچ و رادار سطح برای جامدات فله و مایعات',
       logo: 'assets/images/partners/uwt.svg',
-      photo: 'assets/images/uwt/product-rn3001-studio.png',
+      photo: 'assets/images/uwt/product-rn3001-paddle.png',
       url: 'pages/uwt',
       internal: true,
       badge: 'آلمان',

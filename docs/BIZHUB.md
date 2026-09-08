@@ -58,10 +58,12 @@ Edit `api/config.php`:
 On the server (SSH / cPanel Terminal):
 
 ```bash
-php api/install.php
+php api/install.php --key=YOUR_INSTALL_KEY
 ```
 
-HTTP access to `install.php` is blocked. Then **remove** `install_key` and `admin_password` from `config.php`.
+`--key` is required. The installer deletes itself and writes `storage/install.lock`. Then **remove** `install_key` and `admin_password` from `config.php`.
+
+Existing databases: run `database/migrate-mfa.sql` once before enabling MFA.
 
 ### 4) Enable contact form → CRM
 
@@ -93,9 +95,11 @@ Use the admin email/password from install.
 | POST | `/api/public/leads` | — | Submit contact form |
 | GET | `/api/public/posts?locale=fa` | — | Published posts |
 | GET | `/api/public/faqs?locale=fa` | — | Published FAQs |
-| POST | `/api/auth/login` | — | Admin login |
-| GET | `/api/dashboard/stats` | ✓ | Dashboard |
-| GET/PATCH | `/api/leads` | ✓ | CRM leads |
+| POST | `/api/auth/login` | — | Admin login (then MFA) |
+| POST | `/api/auth/mfa/verify` | pending | TOTP challenge |
+| GET/POST | `/api/auth/mfa/setup` `/enable` | session | Enroll Authenticator |
+| GET | `/api/dashboard/stats` | admin/editor/sales + MFA | Dashboard |
+| GET/PATCH | `/api/leads` | admin/editor/sales + MFA | CRM leads |
 
 ---
 
@@ -105,7 +109,11 @@ Use the admin email/password from install.
 - Rate limit on public lead submission (8/hour per IP)
 - Session cookies: HttpOnly, Secure, SameSite=Lax
 - Block `/admin/` and `/api/` in robots.txt
-- Installer is CLI-only; Apache denies HTTP access to `install.php` and `storage/`
+- Installer is CLI-only, requires `--key`, self-deletes, and Apache denies HTTP access to `install.php` and `storage/`
+- `/leads` and `/dashboard/stats` require role `admin`, `editor`, or `sales`
+- TOTP MFA is required by default (`security.require_mfa`)
+- Extra `/admin` lock: create `admin/.htpasswd` (Basic Auth). Optional `security.admin_allow_ips` — only real IPs, never placeholders
+- Do not enable BizHub (`site-config.js`) until MFA is enrolled and `/admin` Basic Auth is on
 
 ---
 

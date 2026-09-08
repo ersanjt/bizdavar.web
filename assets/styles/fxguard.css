@@ -823,22 +823,17 @@ body[data-page="fxguard"] .features-grid .feature-item.reveal {
   font-size: 0.95rem;
 }
 
-/* Live demo panel */
+/* Guided demo + real product screens (aligned with fxguard.io #demo) */
 .fxguard-demo {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  align-items: start;
-}
-
-@media (min-width: 900px) {
-  .fxguard-demo {
-    grid-template-columns: 0.95fr 1.05fr;
-    gap: 32px;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .fxguard-demo__panel {
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
   padding: clamp(24px, 3.5vw, 36px);
   border-radius: var(--radius-lg, 16px);
   background: linear-gradient(160deg, #052e16 0%, #14532d 50%, #166534 100%);
@@ -846,7 +841,24 @@ body[data-page="fxguard"] .features-grid .feature-item.reveal {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  text-align: center;
   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
+}
+
+.fxguard-demo__steps {
+  margin: 0;
+  padding-inline-start: 1.25rem;
+  text-align: start;
+  color: rgba(248, 250, 252, 0.88);
+  line-height: 1.55;
+}
+
+.fxguard-demo__steps li + li {
+  margin-top: 8px;
+}
+
+.fxguard-demo__steps strong {
+  color: #fff;
 }
 
 .fxguard-demo__live {
@@ -861,10 +873,25 @@ body[data-page="fxguard"] .features-grid .feature-item.reveal {
   border: 1px solid rgba(134, 239, 172, 0.35);
 }
 
+.fxguard-demo__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.fxguard-demo__trial {
+  border-color: rgba(248, 250, 252, 0.45);
+  color: #f8fafc;
+}
+
+.fxguard-demo__trial:hover {
+  background: rgba(248, 250, 252, 0.12);
+  color: #fff;
+}
+
 .fxguard-demo__creds {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  display: none;
 }
 
 .fxguard-demo__label {
@@ -918,6 +945,193 @@ body[data-page="fxguard"] .features-grid .feature-item.reveal {
   color: var(--text-muted, #64748b);
   font-size: 0.9rem;
   line-height: 1.5;
+}
+
+.fxguard-demo__gallery-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.fxguard-demo__gallery-title {
+  margin: 0;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.fxguard-demo__gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 44px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.fxguard-demo__primary {
+  width: 100%;
+  max-width: 720px;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.fxguard-browser {
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+.fxguard-browser__bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #0f172a;
+  direction: ltr;
+}
+
+.fxguard-browser__dots {
+  display: flex;
+  gap: 6px;
+}
+
+.fxguard-browser__dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.fxguard-browser__dots span:nth-child(1) { background: #ff5f57; }
+.fxguard-browser__dots span:nth-child(2) { background: #febc2e; }
+.fxguard-browser__dots span:nth-child(3) { background: #28c840; }
+
+.fxguard-browser__url {
+  flex: 1;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  font-size: 0.78rem;
+  color: #94a3b8;
+  text-align: center;
+}
+
+.fxguard-browser__content {
+  line-height: 0;
+  background: #f8fafc;
+}
+
+.fxguard-browser__content img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.fxguard-demo__badge {
+  position: absolute;
+  bottom: -14px;
+  inset-inline-start: 20px;
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #166534;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+}
+
+.fxguard-demo__secondary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  width: 100%;
+}
+
+.fxguard-shot {
+  flex: 1 1 280px;
+  max-width: 340px;
+  margin: 0;
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+}
+
+.fxguard-shot img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.fxguard-shot figcaption {
+  padding: 14px 16px;
+  font-size: 0.88rem;
+  color: var(--text-muted, #64748b);
+  line-height: 1.45;
+  border-top: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.fxguard-demo__mobiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  width: 100%;
+}
+
+.fxguard-phone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fxguard-phone__frame {
+  width: 100%;
+  max-width: 220px;
+  background: linear-gradient(145deg, #1a2028 0%, #0d1117 100%);
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-radius: 36px;
+  padding: 14px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+}
+
+.fxguard-phone__notch {
+  width: 88px;
+  height: 18px;
+  background: #020617;
+  border-radius: 0 0 14px 14px;
+  margin: -4px auto 10px;
+}
+
+.fxguard-phone__screen {
+  border-radius: 22px;
+  overflow: hidden;
+  background: #fff;
+  line-height: 0;
+}
+
+.fxguard-phone__screen img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.fxguard-phone__caption {
+  margin: 16px 0 0;
+  text-align: center;
+  color: var(--text-muted, #64748b);
+  font-size: 0.85rem;
+  max-width: 220px;
+  line-height: 1.45;
 }
 
 /* Product updates / changelog */

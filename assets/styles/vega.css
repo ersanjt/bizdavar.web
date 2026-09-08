@@ -21,38 +21,86 @@ body[data-page="vega"] .section__desc {
 }
 
 .vega-hero {
-  background: #f8f8f6;
+  background: #fff;
   color: #1a1a1a;
-  padding: 56px 0 48px;
+  padding: 20px 0 48px;
   position: relative;
-  overflow: hidden;
-  border-bottom: 4px solid #ffde00;
-}
-
-.vega-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(105deg, rgba(255, 255, 255, 0.94) 40%, rgba(255, 255, 255, 0.72) 62%, rgba(255, 255, 255, 0.25) 100%),
-    url('../images/vega/slides/value-hydrogen.jpg') center right / cover no-repeat;
-  pointer-events: none;
+  overflow: visible;
 }
 
 .vega-hero .container {
   position: relative;
   z-index: 1;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 48px;
-  align-items: center;
+  display: block;
+}
+
+.vega-hero__frame {
+  position: relative;
+}
+
+.vega-hero__stage {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 28px;
+  min-height: 460px;
+  aspect-ratio: 16 / 9;
+  background: #111;
+}
+
+.vega-hero__scene {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.vega-hero__rings {
+  position: absolute;
+  inset-inline-end: 6%;
+  top: 50%;
+  width: min(44%, 480px);
+  aspect-ratio: 1;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  pointer-events: none;
+  background:
+    radial-gradient(circle, transparent 38%, rgba(255, 222, 0, 0.22) 39%, transparent 44%, rgba(255, 222, 0, 0.16) 45%, transparent 52%, rgba(255, 222, 0, 0.1) 53%, transparent 62%);
+}
+
+.vega-hero__product {
+  position: absolute;
+  inset-inline-end: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: min(36%, 400px);
+  height: 78%;
+  object-fit: contain;
+  object-position: center;
+  mix-blend-mode: lighten;
+  pointer-events: none;
+}
+
+.vega-hero__card {
+  position: absolute;
+  inset-inline-start: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: min(460px, 48%);
+  z-index: 2;
+  background: #fff;
+  border-radius: 20px;
+  padding: 28px 30px 24px;
+  box-shadow: 0 22px 56px rgba(16, 16, 16, 0.16);
 }
 
 .vega-hero__logo {
   display: block;
-  width: min(220px, 75%);
+  width: min(148px, 55%);
   height: auto;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .vega-hero__claim {
@@ -88,9 +136,9 @@ body[data-page="vega"] .section__desc {
 
 .vega-hero__title {
   font-family: var(--font-display);
-  font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+  font-size: clamp(1.5rem, 2.8vw, 2.15rem);
   font-weight: var(--fw-black);
-  line-height: 1.12;
+  line-height: 1.18;
   margin-bottom: 12px;
   color: #1a1a1a;
   letter-spacing: -0.03em;
@@ -108,65 +156,72 @@ body[data-page="vega"] .section__desc {
 
 .vega-hero__desc {
   font-family: var(--font-body);
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
   font-weight: var(--fw-regular);
   color: #4b5563;
-  line-height: 1.75;
-  margin-bottom: 24px;
-  max-width: 52ch;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.vega-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.vega-hero__actions .btn {
+  min-height: 44px;
 }
 
 .vega-hero__stats {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 20px;
+  gap: 8px;
+  margin-top: 4px;
 }
 
 .vega-hero__stat {
-  background: var(--white);
-  border: 1px solid #e5e7eb;
+  background: #f7f7f4;
+  border: 1px solid #ecece7;
   border-top: 3px solid #ffde00;
-  border-radius: var(--radius);
-  padding: 14px 18px;
-  box-shadow: var(--shadow-sm);
+  border-radius: 10px;
+  padding: 8px 12px;
+  flex: 1 1 110px;
 }
 
 .vega-hero__stat strong {
   display: block;
-  font-size: var(--text-lg);
+  font-size: var(--text-sm);
   color: #1a1a1a;
 }
 
 .vega-hero__stat span {
-  font-size: var(--text-sm);
+  font-size: 11px;
   color: var(--text-muted);
 }
 
-.vega-hero__visual {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 0;
+.vega-hero .btn--yellow {
+  background: #ffde00;
+  color: #1a1a1a;
+  border-color: #ffde00;
 }
 
-.vega-hero__visual img {
-  display: block;
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  max-height: min(520px, 68vh);
-  border-radius: var(--radius-lg);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
-  object-fit: contain;
-  object-position: center;
-  background: #0b0b0b;
+.vega-hero .btn--yellow:hover {
+  background: #e6c800;
+  border-color: #e6c800;
+  color: #1a1a1a;
 }
 
-@media (max-width: 640px) {
-  .vega-hero__visual img {
-    max-height: min(380px, 55vh);
-  }
+.vega-hero .btn--outline {
+  background: #fff;
+  color: #1a1a1a;
+  border-color: #1a1a1a;
+}
+
+.vega-hero .btn--outline:hover {
+  background: #1a1a1a;
+  color: #ffde00;
 }
 
 .vega-hero .btn--primary {
@@ -185,32 +240,35 @@ body[data-page="vega"] .section__desc {
 .vega-cat-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 0;
   justify-content: center;
-  padding: 16px;
+  padding: 0 12px;
   background: #ffde00;
-  border-bottom: 2px solid #e6c800;
+  border-bottom: 1px solid #e6c800;
   position: sticky;
-  top: 0;
+  top: var(--header-height, 72px);
   z-index: var(--z-dropdown);
 }
 
 .vega-cat-nav__item {
-  padding: 10px 18px;
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: var(--radius-full);
+  padding: 14px 18px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
   font-size: var(--text-sm);
-  font-weight: 600;
+  font-weight: 700;
   color: #1a1a1a;
   transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
 }
 
 .vega-cat-nav__item:hover,
 .vega-cat-nav__item.active {
   background: #1a1a1a;
   color: #ffde00;
-  border-color: #1a1a1a;
 }
 
 /* Product cards */
@@ -239,24 +297,24 @@ body[data-page="vega"] .section__desc {
 }
 
 .vega-product-card__media {
-  background:
-    linear-gradient(180deg, #f6f6f3 0%, #efefe9 100%);
+  background: #0b0b0b;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 28px 24px;
-  min-height: 220px;
-  aspect-ratio: 4 / 3;
+  min-height: 0;
+  aspect-ratio: 1;
   border-bottom: 1px solid #ecece7;
 }
 
 .vega-product-card__media img {
-  width: auto;
-  max-width: min(220px, 72%);
-  max-height: 180px;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
   object-fit: contain;
-  filter: drop-shadow(0 8px 18px rgba(26, 26, 26, 0.08));
+  object-position: center;
+  filter: none;
 }
 
 .vega-product-card__body {
@@ -592,14 +650,17 @@ body[data-page="vega"] .section__desc {
 }
 
 .vega-iran-card__media {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 1;
   overflow: hidden;
+  background: #0b0b0b;
 }
 
 .vega-iran-card__media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
+  padding: 18px;
 }
 
 .vega-iran-card__body {
@@ -917,14 +978,23 @@ body[data-page="vega"] .section__desc {
 }
 
 .vega-value-card__media {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 1;
   overflow: hidden;
+  background: #0b0b0b;
 }
 
 .vega-value-card__media img {
   width: 100%;
   height: 100%;
+  object-fit: contain;
+  object-position: center;
+  padding: 16px;
+}
+
+.vega-value-card__media--photo img,
+.vega-industry-item__media--photo img {
   object-fit: cover;
+  padding: 0;
 }
 
 .vega-value-card__body {
@@ -975,14 +1045,17 @@ body[data-page="vega"] .section__desc {
 }
 
 .vega-industry-item__media {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 1;
   overflow: hidden;
+  background: #0b0b0b;
 }
 
 .vega-industry-item__media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
+  padding: 12px;
 }
 
 .vega-industry-item__icon {
@@ -1049,10 +1122,22 @@ body[data-page="vega"] .section__desc {
   border-top: 4px solid #ffde00;
 }
 
+.vega-digital-block__visual {
+  background: #0b0b0b;
+  border-radius: var(--radius);
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
 .vega-digital-block__visual img {
   width: 100%;
+  height: 220px;
+  object-fit: contain;
+  object-position: center;
   border-radius: var(--radius);
-  box-shadow: var(--shadow-md);
 }
 
 .vega-digital-block h3 {
@@ -1133,8 +1218,20 @@ body[data-page="vega"] .section__desc {
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .vega-hero .container { grid-template-columns: 1fr; }
-  .vega-hero__visual { order: -1; }
+  .vega-hero__stage {
+    min-height: 380px;
+  }
+  .vega-hero__card {
+    width: min(400px, 52%);
+    padding: 22px 22px 18px;
+    inset-inline-start: 18px;
+  }
+  .vega-hero__title {
+    font-size: clamp(1.35rem, 3vw, 1.8rem);
+  }
+  .vega-hero__stat span {
+    display: none;
+  }
   .vega-value-grid { grid-template-columns: repeat(2, 1fr); }
   .vega-digital-block { grid-template-columns: 1fr; }
   .vega-digital-block__visual { order: -1; }
@@ -1148,10 +1245,40 @@ body[data-page="vega"] .section__desc {
 }
 
 @media (max-width: 768px) {
+  .vega-hero {
+    padding: 12px 0 32px;
+  }
+  .vega-hero__frame {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .vega-hero__stage {
+    aspect-ratio: 4 / 3;
+    min-height: 240px;
+    border-radius: 20px;
+  }
+  .vega-hero__card {
+    position: relative;
+    inset: auto;
+    transform: none;
+    width: 100%;
+    box-shadow: 0 10px 28px rgba(16, 16, 16, 0.08);
+    padding: 22px 20px 18px;
+  }
+  .vega-hero__product {
+    width: min(48%, 220px);
+    height: 72%;
+  }
+  .vega-hero__rings {
+    width: min(58%, 260px);
+  }
+  .vega-hero__stat span {
+    display: block;
+  }
   .vega-products-grid { grid-template-columns: 1fr; }
   .vega-product-card__media {
-    min-height: 180px;
-    padding: 20px 16px;
+    padding: 22px 18px;
   }
   .vega-product-card__body { padding: 18px 16px 16px; }
   .vega-product-card__actions { grid-template-columns: 1fr; }

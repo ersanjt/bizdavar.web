@@ -30,7 +30,7 @@ const PAGE_OG = {
   fast: 'assets/images/digi-system/hero/digi-retail-hero.webp',
   customWebApp: 'assets/images/digi-system/hero/digi-retail-hero.webp',
   fieldTech: 'assets/images/brand/bizdavar-logo-square.png',
-  vega: 'assets/images/vega/hero-vegapuls-6x.png',
+  vega: 'assets/images/vega/product-vegapuls-6x-photo.webp',
   uwt: 'assets/images/uwt/og-uwt-logo.jpg',
   prosense: 'assets/images/prosense/hero-pq-sil2.webp',
   liquiMoly: 'assets/images/liqui-moly/octane-plus.jpg',
