@@ -9,8 +9,8 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const CSS_VER = '20260908c';
-const JS_VER = '20260908c';
+const CSS_VER = '20260908d';
+const JS_VER = '20260908d';
 const GTM_ID = 'GTM-NXWQQWF8';
 const VIEWPORT = '<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">';
 const CSS_HREF = `/assets/styles/site.css?v=${CSS_VER}`;
