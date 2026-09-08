@@ -9902,7 +9902,15 @@ body[data-page="home"] .landing-hero .btn--primary:focus-visible {
 }
 
 .home-path--featured {
-  min-height: 340px;
+  min-height: 0;
+  aspect-ratio: 1400 / 933;
+  background: #111;
+}
+
+.home-path--featured .home-path__body {
+  position: absolute;
+  inset: 0;
+  margin-top: 0;
 }
 
 .home-path img {
@@ -9911,8 +9919,16 @@ body[data-page="home"] .landing-hero .btn--primary:focus-visible {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.04);
+  object-position: center;
+  transform: none;
   transition: transform 0.55s var(--ease-out, cubic-bezier(0.22, 1, 0.36, 1));
+}
+
+.home-path--featured img {
+  object-fit: contain;
+  object-position: center;
+  padding: 10px 10px 8px;
+  box-sizing: border-box;
 }
 
 .home-path::after {
@@ -9965,7 +9981,12 @@ body[data-page="home"] .landing-hero .btn--primary:focus-visible {
 
 .home-path:hover img,
 .home-path:focus-visible img {
-  transform: scale(1.1);
+  transform: scale(1.04);
+}
+
+.home-path--featured:hover img,
+.home-path--featured:focus-visible img {
+  transform: scale(1.02);
 }
 
 .home-path:focus-visible {
@@ -10350,46 +10371,54 @@ body[data-page="home"] .landing-industrial .section__desc {
 body[data-page="home"] .landing-industrial .industrial-visual {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr;
-  min-height: 340px;
+  grid-template: "media copy" auto / minmax(0, 1.2fr) minmax(0, 0.85fr);
+  align-items: stretch;
+  width: 100%;
+  min-height: 0;
+  height: auto;
+  aspect-ratio: auto;
   margin: 0 0 28px;
   overflow: hidden;
   isolation: isolate;
-  background: #111;
+  background: #161614;
   border: 0;
   border-radius: 22px;
 }
 
+html[dir="rtl"] body[data-page="home"] .landing-industrial .industrial-visual {
+  grid-template: "copy media" auto / minmax(0, 0.85fr) minmax(0, 1.2fr);
+}
+
 body[data-page="home"] .industrial-visual img {
-  position: absolute;
-  inset: 0;
+  grid-area: media;
+  position: relative;
+  inset: auto;
+  display: block;
   width: 100%;
-  height: 100%;
-  aspect-ratio: auto;
+  height: auto;
+  aspect-ratio: 1400 / 933;
   object-fit: cover;
-  object-position: 42% 55%;
+  object-position: center;
+  padding: 0;
 }
 
 body[data-page="home"] .industrial-visual::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: linear-gradient(to left, rgba(12, 12, 10, 0.88) 0%, rgba(12, 12, 10, 0.42) 48%, rgba(12, 12, 10, 0.12) 100%);
-  pointer-events: none;
-}
-
-html[dir="ltr"] body[data-page="home"] .industrial-visual::after {
-  background: linear-gradient(to right, rgba(12, 12, 10, 0.88) 0%, rgba(12, 12, 10, 0.42) 48%, rgba(12, 12, 10, 0.12) 100%);
+  display: none;
 }
 
 body[data-page="home"] .industrial-visual figcaption {
+  grid-area: copy;
   position: relative;
+  inset: auto;
   z-index: 2;
-  justify-content: flex-end;
-  max-width: 38rem;
+  justify-content: center;
+  max-width: none;
   padding: clamp(22px, 4vw, 40px);
   color: #fff;
+}
+
+body[data-page="home"] .industrial-visual figcaption > * {
+  max-width: 38rem;
 }
 
 body[data-page="home"] .industrial-visual figcaption strong {
@@ -10694,13 +10723,16 @@ html[dir="ltr"] body[data-page="home"] .service-card--media::before {
     inset-inline-end: 8px;
   }
 
-  .home-path,
-  .home-path--featured {
+  .home-path {
     min-height: 220px;
   }
 
+  .home-path--featured {
+    min-height: 0;
+  }
+
   body[data-page="home"] .landing-industrial .industrial-visual {
-    min-height: 280px;
+    min-height: 0;
   }
 
   body[data-page="home"] .industrial-grid--brands {
@@ -10772,7 +10804,7 @@ html[dir="ltr"] body[data-page="home"] .service-card--media::before {
 
   .home-path--featured {
     grid-column: 1 / -1;
-    min-height: 280px;
+    min-height: 0;
   }
 
   body[data-page="home"] .fast-promo--visual {
@@ -10800,6 +10832,11 @@ html[dir="ltr"] body[data-page="home"] .service-card--media::before {
 
   .home-paths {
     grid-template-columns: 1fr;
+  }
+
+  body[data-page="home"] .landing-industrial .industrial-visual,
+  html[dir="rtl"] body[data-page="home"] .landing-industrial .industrial-visual {
+    grid-template: "media" auto "copy" auto / 1fr;
   }
 
   body[data-page="home"] .fast-promo--visual {

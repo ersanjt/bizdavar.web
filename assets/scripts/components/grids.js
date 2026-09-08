@@ -998,7 +998,7 @@
             <img src="/assets/images/content/home-path-supply-800.webp"
                  srcset="/assets/images/content/home-path-supply-800.webp 800w, /assets/images/content/home-path-supply.webp 1400w"
                  sizes="(min-width: 1025px) 1100px, 92vw"
-                 width="1400" height="900" loading="lazy" decoding="async"
+                 width="1400" height="933" loading="lazy" decoding="async"
                  alt="${t('industrial.visualAlt', 'Industrial sensors and export crates ready for B2B supply')}">
             <figcaption>
               <strong>${t('industrial.visualLead')}</strong>
