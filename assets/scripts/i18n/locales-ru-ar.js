@@ -746,7 +746,7 @@
     leadPathsDesc: 'Выберите путь — обычно отвечаем в течение 24 часов',
     leadPaths: [
       { icon: 'desktop', title: 'Сайт и онлайн-продажи', desc: 'Fast Web Studio — от $99, сдача за 5 дней, WhatsApp и форма лидов', cta: 'Смотреть тарифы', url: '/ru/pages/fast' },
-      { icon: 'factory', title: 'Промышленные поставки', desc: 'VEGA, Prosense, UWT, Liqui Moly — запрос с техконсультацией', cta: 'Запросить цену', url: '/ru/pages/contact?service=industrial' },
+      { icon: 'factory', title: 'Промышленные поставки', desc: 'VEGA, Prosense, UWT, Liqui Moly — запрос с техконсультацией', cta: 'Промышленный запрос', url: '/ru/pages/contact?service=industrial' },
       { icon: 'phone', title: 'Бесплатная консультация', desc: 'Веб, маркетинг, FXGuard CRM или кастомный проект — без обязательств', cta: 'Связаться', url: '/ru/pages/contact' }
     ],
     heroCard: 'Цифровой маркетинг · Веб-дизайн · Промышленность',
@@ -854,7 +854,7 @@
     leadPathsDesc: 'اختر المسار — نرد عادةً خلال ٢٤ ساعة',
     leadPaths: [
       { icon: 'desktop', title: 'موقع ومبيعات أونلاين', desc: 'Fast Web Studio — من $99، تسليم خلال ٥ أيام، واتساب ونموذج leads', cta: 'عرض الباقات', url: '/ar/pages/fast' },
-      { icon: 'factory', title: 'توريد صناعي', desc: 'VEGA وProsense وUWT وLiqui Moly — عرض سعر مع استشارة فنية', cta: 'طلب عرض سعر', url: '/ar/pages/contact?service=industrial' },
+      { icon: 'factory', title: 'توريد صناعي', desc: 'VEGA وProsense وUWT وLiqui Moly — عرض سعر مع استشارة فنية', cta: 'استعلام صناعي', url: '/ar/pages/contact?service=industrial' },
       { icon: 'phone', title: 'استشارة مجانية', desc: 'ويب، تسويق، FXGuard CRM أو مشروع مخصص — بدون التزام', cta: 'اتصل بنا', url: '/ar/pages/contact' }
     ],
     heroCard: 'تسويق رقمي · تصميم ويب · صناعي',
@@ -962,7 +962,7 @@
       desc: 'Датчики, детекторы, моторы и насосы — технический подбор, прайс и международная логистика для B2B',
       ctaTitle: 'Нужна консультация по поставкам?',
       ctaDesc: 'Подбор модели, международная закупка, перевозка и таможня — команда Bizdavar',
-      ctaBtn: 'Запросить цену',
+      ctaBtn: 'Форма запроса поставки',
       ctaLink: 'Промышленные услуги',
       visualAlt: 'Экспортный ящик промышленного оборудования для проекта в Иране',
       visualLead: 'От запроса до поставки на объект',
@@ -1029,7 +1029,7 @@
       desc: 'حساسات وكواشف ومحركات ومضخات — اختيار فني وعروض أسعار ولوجستيات دولية لـ B2B',
       ctaTitle: 'تحتاج استشارة توريد؟',
       ctaDesc: 'اختيار الموديل والشراء الدولي والشحن والجمارك — فريق Bizdavar الفني',
-      ctaBtn: 'طلب عرض سعر',
+      ctaBtn: 'نموذج استعلام التوريد',
       ctaLink: 'خدمات صناعية',
       visualAlt: 'صندوق تصدير لمعدات صناعية جاهزة لمشروع في إيران',
       visualLead: 'من الاستفسار حتى التسليم في الموقع',
@@ -1635,6 +1635,7 @@
     rights: 'Все права защищены',
     skipLink: 'Перейти к основному содержимому',
     freeConsult: 'Бесплатная консультация',
+    freeConsultWa: 'Бесплатная консультация в WhatsApp',
     contact: 'Контакты',
     menu: 'Меню',
     whatsapp: 'WhatsApp',
@@ -1933,6 +1934,7 @@
     rights: 'جميع الحقوق محفوظة',
     skipLink: 'الانتقال إلى المحتوى الرئيسي',
     freeConsult: 'استشارة مجانية',
+    freeConsultWa: 'استشارة مجانية عبر واتساب',
     contact: 'اتصل بنا',
     menu: 'القائمة',
     whatsapp: 'واتساب',

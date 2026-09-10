@@ -9,8 +9,8 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const CSS_VER = '20260910a';
-const JS_VER = '20260910a';
+const CSS_VER = '20260910b';
+const JS_VER = '20260910b';
 const GTM_ID = 'GTM-NXWQQWF8';
 const VIEWPORT = '<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">';
 const CSS_HREF = `/assets/styles/site.css?v=${CSS_VER}`;
@@ -45,7 +45,7 @@ function fontPreloads(dir) {
   }
   return [
     '  <link rel="preload" href="/assets/fonts/vazirmatn/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossorigin>',
-    '  <link rel="preload" href="/assets/fonts/estedad/Estedad-Bold.woff2" as="font" type="font/woff2" crossorigin>'
+    '  <link rel="preload" href="/assets/fonts/estedad/Estedad-Black.woff2" as="font" type="font/woff2" crossorigin>'
   ].join('\n');
 }
 

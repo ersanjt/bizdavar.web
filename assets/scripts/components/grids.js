@@ -65,6 +65,37 @@
     return path(p.slug);
   }
 
+  function relatedServiceLinkLabel(p) {
+    const raw = String(p.relatedService || '');
+    if (p.relatedServiceLabel) return p.relatedServiceLabel;
+    const file = raw.split('/').pop() || '';
+    const [page, hash] = file.replace(/\.html$/i, '').split('#');
+    const byPage = {
+      vega: 'VEGA',
+      prosense: 'Prosense',
+      teltonika: 'Teltonika',
+      gamak: 'Gamak',
+      uwt: 'UWT',
+      'digi-system': 'Digi System',
+      teraoka: 'Teraoka',
+      'liqui-moly': 'Liqui Moly',
+      fast: 'Fast Studio',
+      about: t('nav.about', 'درباره ما'),
+      products: t('nav.productsCatalog', 'کاتالوگ محصولات'),
+      'custom-web-app': t('services.webDesign', 'طراحی وب'),
+      biztab: 'BizTab',
+      bizpad: 'BizPad',
+      'bizsanitizer-v5': 'BizSanitizer',
+      'marvi-society': 'Marvi Society',
+      services: ({
+        'web-design': t('services.webDesign', 'طراحی وب'),
+        'digital-marketing': t('services.digitalMarketing', 'بازاریابی دیجیتال'),
+        smm: t('services.smm', 'مدیریت SMM')
+      })[hash] || t('nav.services', 'خدمات')
+    };
+    return byPage[page] || p.category || t('blogPage.catalog.relatedService', 'خدمت مرتبط');
+  }
+
   function blogCardHtml(p, opts) {
     const rich = !!(opts && opts.rich);
     const href = blogPostHref(p);
@@ -76,8 +107,9 @@
     const dateHtml = p.date
       ? `<time class="blog-item__date" datetime="${p.date}">${formatBlogDate(p.date)}</time>`
       : '';
+    const serviceName = relatedServiceLinkLabel(p);
     const serviceLink = p.relatedService
-      ? `<a href="${path(p.relatedService)}" class="blog-item__service-link">${t('blogPage.catalog.relatedService', 'خدمت مرتبط')}${linkArrow()}</a>`
+      ? `<a href="${path(p.relatedService)}" class="blog-item__service-link">${t('blogPage.catalog.relatedService', 'خدمت مرتبط')}: ${serviceName}${linkArrow()}</a>`
       : '';
     return `
       <article class="blog-item${rich ? ' blog-item--card' : ''}" data-cat="${p.catId || ''}">

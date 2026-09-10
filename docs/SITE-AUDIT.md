@@ -1,9 +1,9 @@
 # Site Audit
 
-Generated: 2026-09-01T14:29:11.291Z
+Generated: 2026-09-10T08:40:01.806Z
 
 - Errors: 0
-- Warnings: 55
+- Warnings: 62
 
 - **warn** `index.html`: Body scripts still use defer
 - **warn** `pages\about.html`: Body scripts still use defer
@@ -14,8 +14,10 @@ Generated: 2026-09-01T14:29:11.291Z
 - **warn** `pages\articles\buy-teltonika-iran.html`: Body scripts still use defer
 - **warn** `pages\articles\buy-teraoka-iran.html`: Body scripts still use defer
 - **warn** `pages\articles\buy-vegapuls-iran.html`: Body scripts still use defer
+- **warn** `pages\articles\custom-web-app-development.html`: Body scripts still use defer
 - **warn** `pages\articles\digital-marketing-us-eu.html`: Body scripts still use defer
 - **warn** `pages\articles\digital-marketing.html`: Body scripts still use defer
+- **warn** `pages\articles\fast-studio.html`: Body scripts still use defer
 - **warn** `pages\articles\field-tech-services.html`: Body scripts still use defer
 - **warn** `pages\articles\industrial-sensors.html`: Body scripts still use defer
 - **warn** `pages\articles\industrial-trade-iran.html`: Body scripts still use defer
@@ -28,7 +30,10 @@ Generated: 2026-09-01T14:29:11.291Z
 - **warn** `pages\articles\vega-quote-iran.html`: Body scripts still use defer
 - **warn** `pages\articles\vega-supply-iran.html`: Body scripts still use defer
 - **warn** `pages\articles\website-design-us-eu.html`: Body scripts still use defer
+- **warn** `pages\articles\website-speed-5-days.html`: Body scripts still use defer
 - **warn** `pages\articles\what-is-digital-marketing.html`: Body scripts still use defer
+- **warn** `pages\bizpad.html`: Body scripts still use defer
+- **warn** `pages\bizpet.html`: Missing locale-preload.js in head
 - **warn** `pages\bizsanitizer-v5.html`: Body scripts still use defer
 - **warn** `pages\bizseat.html`: Body scripts still use defer
 - **warn** `pages\bizswap.html`: Body scripts still use defer
@@ -37,6 +42,7 @@ Generated: 2026-09-01T14:29:11.291Z
 - **warn** `pages\blog.html`: Body scripts still use defer
 - **warn** `pages\bz-diamond.html`: Body scripts still use defer
 - **warn** `pages\contact.html`: Body scripts still use defer
+- **warn** `pages\custom-web-app.html`: Body scripts still use defer
 - **warn** `pages\digi-system.html`: Body scripts still use defer
 - **warn** `pages\fast.html`: Body scripts still use defer
 - **warn** `pages\field-tech.html`: Body scripts still use defer
@@ -59,4 +65,5 @@ Generated: 2026-09-01T14:29:11.291Z
 - **warn** `pages\supplify-trade.html`: Body scripts still use defer
 - **warn** `pages\teltonika.html`: Body scripts still use defer
 - **warn** `pages\teraoka.html`: Body scripts still use defer
+- **warn** `pages\uwt.html`: Body scripts still use defer
 - **warn** `pages\vega.html`: Body scripts still use defer

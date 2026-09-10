@@ -39,6 +39,7 @@ window.BIZDAVAR_LOCALES = {
     common: {
       skipLink: 'رفتن به محتوای اصلی',
       freeConsult: 'مشاوره رایگان',
+      freeConsultWa: 'مشاوره رایگان در واتساپ',
       contact: 'تماس',
       menu: 'منو',
       closeMenu: 'بستن منو',
@@ -290,7 +291,7 @@ window.BIZDAVAR_LOCALES = {
       desc: 'سنسور سطح، دتکتور گاز، ردیاب ناوگان و روغن صنعتی — انتخاب مدل، پیش‌فاکتور فارسی و لجستیک تا پروژه ایران',
       ctaTitle: 'نیاز به مشاوره تامین دارید؟',
       ctaDesc: 'انتخاب مدل، خرید بین‌المللی، حمل و گمرک — پاسخ توسط تیم فنی بیزدوار',
-      ctaBtn: 'درخواست استعلام',
+      ctaBtn: 'فرم استعلام تامین',
       ctaLink: 'خدمات صنعتی',
       visualAlt: 'جعبه صادراتی تجهیزات صنعتی آماده ارسال به پروژه ایران',
       visualLead: 'از استعلام تا تحویل روی سایت',
@@ -389,7 +390,7 @@ window.BIZDAVAR_LOCALES = {
       leadPathsDesc: 'مسیر مناسب را انتخاب کنید — پاسخ معمولاً در ۲۴ ساعت',
       leadPaths: [
         { icon: 'desktop', title: 'سایت و فروش آنلاین', desc: 'Fast Web Studio — از $99، تحویل ۵ روز، واتساپ و فرم لید', cta: 'مشاهده پلن‌ها', url: '/pages/fast' },
-        { icon: 'factory', title: 'تامین صنعتی', desc: 'VEGA، Prosense، UWT و Liqui Moly — استعلام با مشاوره فنی فارسی', cta: 'درخواست استعلام', url: '/pages/contact?service=industrial' },
+        { icon: 'factory', title: 'تامین صنعتی', desc: 'VEGA، Prosense، UWT و Liqui Moly — استعلام با مشاوره فنی فارسی', cta: 'استعلام صنعتی', url: '/pages/contact?service=industrial' },
         { icon: 'phone', title: 'مشاوره رایگان', desc: 'وب، مارکتینگ، FXGuard CRM یا پروژه اختصاصی — بدون تعهد', cta: 'تماس با ما', url: '/pages/contact' }
       ],
       heroCard: 'دیجیتال مارکتینگ · طراحی وب · تجهیزات صنعتی',
@@ -601,6 +602,7 @@ window.BIZDAVAR_LOCALES = {
     common: {
       skipLink: 'Ana içeriğe geç',
       freeConsult: 'Ücretsiz danışmanlık',
+      freeConsultWa: 'WhatsApp ile ücretsiz danışmanlık',
       contact: 'İletişim',
       menu: 'Menü',
       closeMenu: 'Menüyü kapat',
@@ -852,7 +854,7 @@ window.BIZDAVAR_LOCALES = {
       desc: 'Sensör, dedektör, motor ve pompa — B2B projeler için teknik seçim, fiyat teklifi ve uluslararası lojistik',
       ctaTitle: 'Tedarik danışmanlığı mı lazım?',
       ctaDesc: 'Model seçimi, uluslararası satın alma, nakliye ve gümrük — Bizdavar teknik ekibi',
-      ctaBtn: 'Teklif iste',
+      ctaBtn: 'Tedarik teklif formu',
       ctaLink: 'Endüstriyel hizmetler',
       visualAlt: 'İran projesine hazır endüstriyel ihracat kasası',
       visualLead: 'Sorgudan sahaya teslim',
@@ -951,7 +953,7 @@ window.BIZDAVAR_LOCALES = {
       leadPathsDesc: 'Doğru yolu seçin — genelde 24 saat içinde yanıt',
       leadPaths: [
         { icon: 'desktop', title: 'Web ve online satış', desc: 'Fast Web Studio — $99\'dan, 5 günde teslim, WhatsApp ve lead formu', cta: 'Planları gör', url: '/tr/pages/fast' },
-        { icon: 'factory', title: 'Endüstriyel tedarik', desc: 'VEGA, Prosense, UWT, Liqui Moly — teknik danışmanlıkla teklif', cta: 'Teklif iste', url: '/tr/pages/contact?service=industrial' },
+        { icon: 'factory', title: 'Endüstriyel tedarik', desc: 'VEGA, Prosense, UWT, Liqui Moly — teknik danışmanlıkla teklif', cta: 'Endüstriyel teklif', url: '/tr/pages/contact?service=industrial' },
         { icon: 'phone', title: 'Ücretsiz danışmanlık', desc: 'Web, pazarlama, FXGuard CRM veya özel proje — taahhütsüz', cta: 'İletişim', url: '/tr/pages/contact' }
       ],
       heroCard: 'Dijital pazarlama · Web tasarım · Endüstriyel',
@@ -1175,6 +1177,7 @@ window.BIZDAVAR_LOCALES = {
     common: {
       skipLink: 'Skip to main content',
       freeConsult: 'Free consultation',
+      freeConsultWa: 'Free consultation on WhatsApp',
       contact: 'Contact',
       menu: 'Menu',
       closeMenu: 'Close menu',
@@ -1426,7 +1429,7 @@ window.BIZDAVAR_LOCALES = {
       desc: 'Sensors, detectors, motors, and pumps — technical selection, quotes, and international logistics for B2B',
       ctaTitle: 'Need supply consulting?',
       ctaDesc: 'Model selection, international purchase, shipping, and customs — Bizdavar technical team',
-      ctaBtn: 'Request quote',
+      ctaBtn: 'Supply quote form',
       ctaLink: 'Industrial services',
       visualAlt: 'Export crate of industrial equipment ready for an Iran project',
       visualLead: 'From inquiry to site delivery',
@@ -1525,7 +1528,7 @@ window.BIZDAVAR_LOCALES = {
       leadPathsDesc: 'Pick your path — we usually reply within 24 hours',
       leadPaths: [
         { icon: 'desktop', title: 'Website & online sales', desc: 'Fast Web Studio — from $99, 5-day delivery, WhatsApp & lead forms', cta: 'View plans', url: '/en/pages/fast' },
-        { icon: 'factory', title: 'Industrial supply', desc: 'VEGA, Prosense, UWT, Liqui Moly — quote with technical consulting', cta: 'Request quote', url: '/en/pages/contact?service=industrial' },
+        { icon: 'factory', title: 'Industrial supply', desc: 'VEGA, Prosense, UWT, Liqui Moly — quote with technical consulting', cta: 'Industrial quote', url: '/en/pages/contact?service=industrial' },
         { icon: 'phone', title: 'Free consultation', desc: 'Web, marketing, FXGuard CRM or custom project — no commitment', cta: 'Contact us', url: '/en/pages/contact' }
       ],
       heroCard: 'Digital marketing · Web design · Industrial',

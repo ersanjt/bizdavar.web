@@ -228,6 +228,7 @@ body[data-page="home"] .landing-hero .btn--primary:focus-visible {
 
 .home-marquee__viewport {
   overflow: hidden;
+  min-height: 28px;
   mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 }
 
@@ -252,6 +253,8 @@ body[data-page="home"] .landing-hero .btn--primary:focus-visible {
   padding: 22px 0 18px;
   background: var(--white);
   border-bottom: 1px solid var(--gray-200);
+  min-height: 6.75rem;
+  box-sizing: border-box;
 }
 
 .home-intent .intent-nav {

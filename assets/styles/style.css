@@ -52,6 +52,9 @@ ul { list-style: none; }
   font-weight: 300;
   padding: 10px 0;
   border-bottom: 2px solid var(--brand-red);
+  /* Reserve desktop chrome height before JS fills #topBar (CLS). */
+  min-height: 50px;
+  box-sizing: border-box;
 }
 
 .top-bar .container {

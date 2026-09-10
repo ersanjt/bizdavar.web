@@ -729,6 +729,7 @@
             <div class="header__actions">
               ${langSwitcherHtml()}
               <a href="${wa}" class="btn btn--primary nav__cta"
+                 aria-label="${t('common.freeConsultWa', 'مشاوره رایگان در واتساپ')}"
                  ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''}>${t('common.freeConsult', 'مشاوره رایگان')}</a>
             </div>
             <button class="menu-toggle" id="menuToggle" aria-label="${t('common.openMenu', 'باز و بسته کردن منو')}" aria-expanded="false">
@@ -782,6 +783,7 @@
             </div>
           </div>
           <a href="${wa}" class="btn btn--yellow mobile-drawer__cta"
+             aria-label="${t('common.freeConsultWa', 'مشاوره رایگان در واتساپ')}"
              ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''}>${t('common.freeConsult', 'مشاوره رایگان')}</a>
         </aside>`;
     }
@@ -802,7 +804,8 @@
       </a>`;
       const channelChips = channels.length
         ? channels.map(ch => `
-          <a href="${buildWaUrl(ch.whatsapp)}" class="footer__chip footer__chip--wa" target="_blank" rel="noopener noreferrer">
+          <a href="${buildWaUrl(ch.whatsapp)}" class="footer__chip footer__chip--wa" target="_blank" rel="noopener noreferrer"
+             aria-label="${t('common.whatsapp', 'واتساپ')} — ${ch.label} (${ch.display})">
             <span class="footer__chip-icon">${ic('whatsapp', { size: 16 })}</span>
             <span class="footer__chip-body">
               <span class="footer__chip-label">${ch.label}</span>
@@ -838,19 +841,19 @@
                 ${langSwitcherHtml('lang-dropdown--footer')}
               </div>
               <nav class="footer__nav-col" aria-label="${t('footer.services')}">
-                <h4 class="footer__title">${t('footer.services', 'خدمات')}</h4>
+                <h2 class="footer__title">${t('footer.services', 'خدمات')}</h2>
                 <ul class="footer__links">${footerLinksHtml(footerLinks.services)}</ul>
               </nav>
               <nav class="footer__nav-col" aria-label="${t('footer.brands', 'برندها و تامین‌کنندگان')}">
-                <h4 class="footer__title">${t('footer.brands', 'برندها')}</h4>
+                <h2 class="footer__title">${t('footer.brands', 'برندها')}</h2>
                 <ul class="footer__links">${footerLinksHtml(footerLinks.brands)}</ul>
               </nav>
               <nav class="footer__nav-col" aria-label="${t('footer.quickLinks')}">
-                <h4 class="footer__title">${t('footer.quickLinks', 'دسترسی سریع')}</h4>
+                <h2 class="footer__title">${t('footer.quickLinks', 'دسترسی سریع')}</h2>
                 <ul class="footer__links">${footerLinksHtml(footerLinks.quick)}</ul>
               </nav>
               <div class="footer__nav-col">
-                <h4 class="footer__title">${t('footer.connect', 'ارتباط با ما')}</h4>
+                <h2 class="footer__title">${t('footer.connect', 'ارتباط با ما')}</h2>
                 <div class="footer__contact-chips">
                   ${mailChip}
                   ${channelChips}
@@ -885,9 +888,11 @@
             ${channels.length >= 2
               ? channels.map(ch => `
             <a href="${buildWaUrl(ch.whatsapp)}" class="mobile-footer-cta__btn mobile-footer-cta__btn--wa"
-               target="_blank" rel="noopener noreferrer">${ic('whatsapp', { size: 18 })} ${ch.label}</a>`).join('')
+               target="_blank" rel="noopener noreferrer"
+               aria-label="${t('common.whatsapp', 'واتساپ')} — ${ch.label}">${ic('whatsapp', { size: 18 })} ${ch.label}</a>`).join('')
               : `<a href="${wa}" class="mobile-footer-cta__btn mobile-footer-cta__btn--wa"
-               ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''}>${ic('whatsapp', { size: 18 })} ${t('common.whatsapp')}</a>`}
+               ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''}
+               aria-label="${t('common.whatsapp', 'واتساپ')}">${ic('whatsapp', { size: 18 })} ${t('common.whatsapp')}</a>`}
           </div>
           <div class="mobile-footer-accordions">
             ${mobileFooterAccHtml(t('footer.services'), footerLinks.services)}
@@ -900,7 +905,8 @@
                 ${C.contact.emailAlt ? `<li><a href="mailto:${C.contact.emailAlt}">${C.contact.emailAlt}</a></li>` : ''}
                 ${channels.length
                   ? channels.map(ch => `
-                <li><a href="${buildWaUrl(ch.whatsapp)}" target="_blank" rel="noopener noreferrer">
+                <li><a href="${buildWaUrl(ch.whatsapp)}" target="_blank" rel="noopener noreferrer"
+                  aria-label="${t('common.whatsapp', 'واتساپ')} — ${ch.label} (${ch.display})">
                   <span class="footer__chip-label">${ch.label}</span>
                   <span dir="ltr">${ch.display}</span>
                 </a></li>`).join('')
