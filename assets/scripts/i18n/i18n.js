@@ -206,7 +206,43 @@
     },
 
     getBlogPosts() {
-      return this.mergeLocalizedList('blogPosts', window.BIZDAVAR_CONFIG?.blogPosts || []);
+      const base = window.BIZDAVAR_CONFIG?.blogPosts || [];
+      const localized = this.raw('blogPosts');
+      if (!localized) return base.slice();
+
+      const normalizeRow = (row) => {
+        if (!row) return {};
+        if (Array.isArray(row)) {
+          const [title, excerpt, category] = row;
+          return {
+            ...(title ? { title } : {}),
+            ...(excerpt ? { excerpt } : {}),
+            ...(category ? { category } : {})
+          };
+        }
+        return row;
+      };
+
+      const rowForSlug = (slug) => {
+        if (!slug || Array.isArray(localized)) return null;
+        const bare = String(slug)
+          .replace(/^pages\/(articles\/)?/, '')
+          .replace(/\.html$/i, '');
+        return localized[slug]
+          || localized['pages/articles/' + bare + '.html']
+          || localized['pages/' + bare + '.html']
+          || localized[bare]
+          || null;
+      };
+
+      // Slug-keyed object (preferred) — never remap by fragile array index.
+      if (!Array.isArray(localized)) {
+        return base.map((item) => ({ ...item, ...normalizeRow(rowForSlug(item.slug)) }));
+      }
+
+      // Legacy arrays: only merge when length matches config order exactly.
+      if (localized.length !== base.length) return base.slice();
+      return base.map((item, i) => ({ ...item, ...normalizeRow(localized[i]) }));
     },
 
     getPortfolioItems() {

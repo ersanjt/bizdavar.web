@@ -838,70 +838,117 @@
   };
 
   const blogPosts = {
-    fa: [
-      ['تامین سنسور VEGA برای پروژه‌های ایران — از مشاوره تا تحویل', 'مشاوره فارسی، پیش‌فاکتور شفاف و لجستیک بین‌المللی VEGA اصل برای پروژه‌های صنعتی.', 'تجهیزات صنعتی'],
-      ['وبسایت چندزبانه برای بازار ایران و ترکیه', 'hreflang، اعتماد محلی و تحویل سریع برای کسب‌وکارهای دو بازاری.', 'طراحی وب'],
-      ['دیجیتال مارکتینگ چیست؟ — راهنمای کامل برای کسب‌وکارها', 'سئو، گوگل ادز، SMM و سنجش لید — مسیر عملی برای ایران و ترکیه.', 'بازاریابی دیجیتال'],
-      ['چگونه بازاریابی دیجیتال فروش را افزایش می‌دهد؟', 'راهکارهای عملی برای تبدیل بازدیدکننده به مشتری.', 'بازاریابی دیجیتال'],
-      ['مدیریت شبکه‌های اجتماعی — استراتژی SMM برای برندها', 'تولید محتوا، تقویم انتشار و تبلیغات هدفمند در اینستاگرام و لینکدین.', 'مدیریت SMM'],
-      ['راه‌اندازی سایت در ۵ روز — راهنمای کامل Fast Studio', 'پلن‌ها، مسیر ۵ روزه و تفاوت با پروژه اختصاصی.', 'طراحی وب'],
-      ['انتخاب سنسور صنعتی مناسب — راهنمای VEGA و ابزار دقیق', 'نکات مهم در تامین تجهیزات VEGA و ابزار دقیق.', 'تجهیزات صنعتی'],
-      ['بیزدوار گروپ چیست؟ — تاریخچه، تیم و حوزه‌های فعالیت', 'شناسنامه کامل بیزدوار: بنیان‌گذار، ۱۱ کشور، ۱۰۰+ پروژه و اکوسیستم برندها.', 'درباره شرکت'],
-      ['چک‌لیست راه‌اندازی سایت در ۵ روز', 'لوگو، متن، دامنه و تصمیم‌های روزبه‌روز برای تحویل واقعی.', 'طراحی وب'],
-      ['طراحی وب و اپلیکیشن اختصاصی — راهنمای انتخاب', 'چه زمانی Fast کافی است و چه زمانی به وب‌اپ نیاز دارید.', 'طراحی وب']
-    ],
-    tr: [
-      ['İran projeleri için VEGA sensör tedariki — danışmanlıktan teslimata', 'Farsça danışmanlık, şeffaf proforma ve uluslararası VEGA lojistiği.', 'Endüstriyel ekipman'],
-      ['İran ve Türkiye pazarı için çok dilli web sitesi', 'hreflang, yerel güven ve hızlı teslimat.', 'Web tasarım'],
-      ['Dijital pazarlama nedir? İşletmeler için tam rehber', 'SEO, Google Ads, SMM ve lead ölçümü — İran ve Türkiye için pratik yol.', 'Dijital pazarlama'],
-      ['Dijital pazarlama satışları nasıl artırır?', 'Ziyaretçileri müşteriye dönüştürmek için pratik yöntemler.', 'Dijital pazarlama'],
-      ['Sosyal medya yönetimi — Markalar için SMM stratejisi', 'Instagram ve LinkedIn için içerik üretimi, yayın takvimi ve hedefli reklamlar.', 'SMM yönetimi'],
-      ['5 günde web sitesi — Fast Studio rehberi', 'Planlar, 5 günlük yol ve özel proje farkı.', 'Web tasarım'],
-      ['Doğru endüstriyel sensör seçimi — VEGA ve ölçüm cihazları', 'VEGA ve endüstriyel ölçüm ekipmanı tedarikinde önemli noktalar.', 'Endüstriyel ekipman'],
-      ['Bizdavar Group nedir? Tarihçe, ekip ve faaliyet alanları', 'Bizdavar profili: kurucu, 11 ülke, 100+ proje ve marka ekosistemi.', 'Şirket hakkında'],
-      ['5 günde site kurulum kontrol listesi', 'Logo, metin, domain ve günlük kararlar.', 'Web tasarım'],
-      ['Özel web ve uygulama — seçim rehberi', 'Ne zaman Fast yeter, ne zaman web app gerekir.', 'Web tasarım']
-    ],
-    en: [
-      ['VEGA sensor supply for Iran projects — consulting to delivery', 'Persian consulting, transparent proforma, and international VEGA logistics.', 'Industrial equipment'],
-      ['Multilingual websites for Iran and Turkey markets', 'hreflang, local trust signals, and fast delivery for dual-market businesses.', 'Web design'],
-      ['What is digital marketing? A complete guide for businesses', 'SEO, Google Ads, SMM and lead measurement — a practical path for Iran and Turkey.', 'Digital marketing'],
-      ['How does digital marketing increase sales?', 'Practical methods for turning visitors into customers.', 'Digital marketing'],
-      ['Social media management — SMM strategy for brands', 'Content production, publishing calendars, and targeted ads for Instagram and LinkedIn.', 'SMM management'],
-      ['Launch a website in 5 days — Fast Studio guide', 'Plans, 5-day path, and custom vs Fast.', 'Web design'],
-      ['Choosing the right industrial sensor — VEGA and instrumentation', 'Key points in VEGA and instrumentation supply.', 'Industrial equipment'],
-      ['What is Bizdavar Group? History, team and activities', 'Bizdavar profile: founder, 11 countries, 100+ projects and brand ecosystem.', 'About company'],
-      ['5-day website launch checklist', 'Logo, copy, domain and day-by-day decisions.', 'Web design'],
-      ['Custom web & app — how to choose', 'When Fast is enough vs when you need a web app.', 'Web design']
-    ],
-    ru: [
-      ['Поставка датчиков VEGA для проектов в Иране — от консультации до доставки', 'Консультации, прозрачная проформа и международная логистика VEGA.', 'Промышленное оборудование'],
-      ['Многоязычные сайты для рынков Ирана и Турции', 'hreflang, локальное доверие и быстрая сдача для двух рынков.', 'Веб-дизайн'],
-      ['Что такое цифровой маркетинг? Полное руководство для бизнеса', 'Определение, каналы и роль цифрового маркетинга в росте продаж.', 'Цифровой маркетинг'],
-      ['Как цифровой маркетинг увеличивает продажи?', 'Практические методы превращения посетителей в клиентов.', 'Цифровой маркетинг'],
-      ['Управление соцсетями — SMM-стратегия для брендов', 'Контент, календарь публикаций и таргетированная реклама в Instagram и LinkedIn.', 'SMM'],
-      ['Запуск сайта за 5 дней — гайд Fast Studio', 'Тарифы, 5-дневный путь и отличие от кастомного проекта.', 'Веб-дизайн'],
-      ['Выбор промышленного датчика — VEGA и КИП', 'Ключевые моменты при поставке VEGA и измерительного оборудования.', 'Промышленное оборудование'],
-      ['Что такое Bizdavar Group? История, команда и направления', 'Профиль Bizdavar: основатель, 11 стран, 100+ проектов и экосистема брендов.', 'О компании'],
-      ['Чеклист запуска сайта за 5 дней', 'Логотип, тексты, домен и решения по дням.', 'Веб-дизайн'],
-      ['Кастомный web и приложения — как выбрать', 'Когда хватает Fast, а когда нужен web app.', 'Веб-дизайн']
-    ],
-    ar: [
-      ['توريد حساسات VEGA لمشاريع إيران — من الاستشارة إلى التسليم', 'استشارة، عرض سعر شفاف ولوجستيات VEGA الدولية.', 'معدات صناعية'],
-      ['مواقع متعددة اللغات لأسواق إيران وتركيا', 'hreflang وثقة محلية وتسليم سريع للأسواق المزدوجة.', 'تصميم مواقع'],
-      ['ما هو التسويق الرقمي؟ دليل شامل للأعمال', 'تعريف التسويق الرقمي وقنواته ودوره في نمو المبيعات.', 'تسويق رقمي'],
-      ['كيف يزيد التسويق الرقمي المبيعات؟', 'طرق عملية لتحويل الزوار إلى عملاء.', 'تسويق رقمي'],
-      ['إدارة الشبكات الاجتماعية — استراتيجية SMM للعلامات', 'إنتاج محتوى وتقويم نشر وإعلانات مستهدفة على Instagram وLinkedIn.', 'إدارة SMM'],
-      ['إطلاق موقع خلال ٥ أيام — دليل Fast Studio', 'الباقات ومسار ٥ أيام والفرق عن المشروع المخصّص.', 'تصميم مواقع'],
-      ['اختيار الحساس الصناعي المناسب — VEGA وأجهزة القياس', 'نقاط مهمة في توريد VEGA ومعدات القياس.', 'معدات صناعية'],
-      ['ما هي Bizdavar Group؟ التاريخ والفريق ومجالات العمل', 'ملف Bizdavar: المؤسس و١١ دولة وأكثر من ١٠٠ مشروع.', 'عن الشركة'],
-      ['قائمة التحقق لإطلاق موقع خلال ٥ أيام', 'الشعار والنصوص والنطاق وقرارات كل يوم.', 'تصميم مواقع'],
-      ['تطبيق ويب مخصّص — كيف تختار', 'متى يكفي Fast ومتى تحتاج web app.', 'تصميم مواقع']
-    ]
+    fa: {
+      'website-design-us-eu': ['طراحی سایت انگلیسی برای اروپا و آمریکا — فاکتور دلار یا یورو', 'پلن ۵روزه از ۹۹ دلار، پروژه سفارشی، Stripe و فاکتور USD/EUR برای مشتری آمریکا و اروپا.', 'طراحی وب'],
+      'digital-marketing-us-eu': ['بازاریابی دیجیتال برای بازار آمریکا و اروپا — بودجه دلار و یورو', 'Google Ads، Meta و LinkedIn برای مخاطب US/EU با فاکتور دلار یا یورو و گزارش GA4.', 'بازاریابی دیجیتال'],
+      'buy-vegapuls-iran': ['خرید VEGAPULS 6X در ایران — قیمت، کد سفارش و استعلام', 'چطور سنسور سطح راداری اصل برای مخزن ایران بخرید — پیش‌فاکتور فارسی و واتساپ.', 'تجهیزات صنعتی'],
+      'vega-quote-iran': ['استعلام قیمت سنسور VEGA در ایران — چه اطلاعاتی بفرستید', 'چک‌لیست خریدار: مخزن، رسانه، Ex/SIL و عکس پلاک برای پیش‌فاکتور دقیق.', 'تجهیزات صنعتی'],
+      'buy-prosense-iran': ['خرید دتکتور گاز Prosense در ایران — PQ، SafeVader و SIL', 'دتکتور گاز صنعتی اصل برای نفت، پتروشیمی و HVAC — استعلام واتساپ فارسی.', 'تجهیزات صنعتی'],
+      'industrial-trade-iran': ['بازرگانی تجهیزات صنعتی در ایران — VEGA، Prosense و برندهای اصل', 'یک نقطه تماس فارسی برای ابزار دقیق، ایمنی گاز، ردیاب و روغن صنعتی.', 'تجهیزات صنعتی'],
+      'buy-teltonika-iran': ['خرید ردیاب Teltonika FMB920 در ایران — از ۲۹ دلار', 'ردیاب GPS اصل برای ناوگان ایران — FMB920، FMC650 و DualCam.', 'تجهیزات صنعتی'],
+      'buy-gamak-iran': ['خرید الکتروموتور Gamak در ایران — توان، فلنج و استعلام', 'موتور اصل برای پمپ، فن و خط تولید — kW، دور، B3/B5 و پیش‌فاکتور فارسی.', 'تجهیزات صنعتی'],
+      'buy-digi-system-iran': ['خرید ترازو و POS Digi System در ایران — فروشگاه و صندوق', 'ترازو و صندوق اصل برای سوپرمارکت ایران — نوع فروشگاه، تعداد صندوق و پیش‌فاکتور فارسی.', 'تجهیزات صنعتی'],
+      'buy-teraoka-iran': ['خرید ترازو Teraoka در ایران — deli، POS و برچسب‌زن', 'ترازو و برچسب‌زن اصل Teraoka Seiko برای فروشگاه و آشپزخانه — پیش‌فاکتور فارسی.', 'تجهیزات صنعتی'],
+      'vega-supply-iran': ['تامین سنسور VEGA برای پروژه‌های ایران — از مشاوره تا تحویل', 'مشاوره فارسی، پیش‌فاکتور شفاف و لجستیک بین‌المللی VEGA اصل برای پروژه‌های صنعتی.', 'تجهیزات صنعتی'],
+      'multilingual-web-iran-turkey': ['وبسایت چندزبانه برای بازار ایران و ترکیه', 'hreflang، اعتماد محلی و تحویل سریع برای کسب‌وکارهای دو بازاری.', 'طراحی وب'],
+      'what-is-digital-marketing': ['دیجیتال مارکتینگ چیست؟ — راهنمای کامل برای کسب‌وکارها', 'سئو، گوگل ادز، SMM و سنجش لید — مسیر عملی برای ایران و ترکیه.', 'بازاریابی دیجیتال'],
+      'digital-marketing': ['چگونه بازاریابی دیجیتال فروش را افزایش می‌دهد؟', 'راهکارهای عملی برای تبدیل بازدیدکننده به مشتری.', 'بازاریابی دیجیتال'],
+      'social-media-management': ['مدیریت شبکه‌های اجتماعی — استراتژی SMM برای برندها', 'تولید محتوا، تقویم انتشار و تبلیغات هدفمند در اینستاگرام و لینکدین.', 'مدیریت SMM'],
+      'fast-studio': ['راه‌اندازی سایت در ۵ روز — راهنمای کامل Fast Studio', 'پلن‌ها، مسیر ۵ روزه و تفاوت با پروژه اختصاصی.', 'طراحی وب'],
+      'website-speed-5-days': ['چک‌لیست راه‌اندازی سایت در ۵ روز', 'لوگو، متن، دامنه و تصمیم‌های روزبه‌روز برای تحویل واقعی.', 'طراحی وب'],
+      'custom-web-app-development': ['طراحی وب و اپلیکیشن اختصاصی — راهنمای انتخاب', 'چه زمانی Fast کافی است و چه زمانی به وب‌اپ نیاز دارید.', 'طراحی وب'],
+      'industrial-sensors': ['انتخاب سنسور صنعتی مناسب — راهنمای VEGA و ابزار دقیق', 'نکات مهم در تامین تجهیزات VEGA و ابزار دقیق.', 'تجهیزات صنعتی'],
+      'about-bizdavar-group': ['بیزدوار گروپ چیست؟ — تاریخچه، تیم و حوزه‌های فعالیت', 'شناسنامه کامل بیزدوار: بنیان‌گذار، ۱۱ کشور، ۱۰۰+ پروژه و اکوسیستم برندها.', 'درباره شرکت'],
+      'biztab': ['BizTab — اولین دماسنج دیواری غیرتماسی تبریز', 'محصول اختصاصی تیم بیزدوار — دقت کمتر از ۰.۳ درجه، تأیید دانشگاه تبریز.', 'محصول اختصاصی'],
+      'bizsanitizer-v5': ['دستگاه ضدعفونی دست بیزدوار V5', 'سنسور التراسونیک و پاشش خودکار — مهندسی‌شده توسط تیم بیزدوار.', 'محصول اختصاصی'],
+      'bizpad': ['BizPad — پد حرارتی بیز پد', 'طراحی و تولید در مرکز رشد فناوری دانشگاه تبریز با همکاری ایمن سهند پدیده.', 'محصول اختصاصی'],
+      'marvi-society-ios-app': ['توسعه اپ iOS — نمونه‌کار Marvi Society و انتشار App Store', 'از UI/UX تا Swift و App Store — کلاب creator دعوت‌محور در استانبول.', 'طراحی اپ'],
+      'prosense-gas-detection': ['تامین دتکتور گاز Prosense — از انتخاب مدل تا نصب', 'راهنمای دتکتور گاز و شعله برای نفت، پتروشیمی و HVAC — استعلام B2B.', 'تجهیزات صنعتی'],
+      'liqui-moly-supply-iran': ['تامین Liqui Moly آلمان — روغن و افزودنی اصل', 'مسیر استعلام روغن موتور و افزودنی برای ناوگان و کارگاه — B2B بیزدوار.', 'تجهیزات صنعتی'],
+      'field-tech-services': ['خدمات فنی میدانی بیزدوار — تبریز', 'دوربین، سیم‌کشی و نورمخفی — هماهنگی واتساپ و اجرای میدانی.', 'خدمات فنی'],
+      'local-seo-iran': ['سئو محلی برای کسب‌وکار ایران — Google Maps', 'Google Business Profile، NAP یکسان و صفحات محلی — مسیر عملی رشد.', 'بازاریابی دیجیتال'],
+      'fxguard-exchange': ['FXGuard Exchange — پلتفرم صرافی و OTC', 'سامانه فین‌تک: KYC، کیف پول، OTC و پنل مدیریت.', 'فین‌تک']
+    },
+    tr: {
+      'website-design-us-eu': ['Avrupa ve ABD için İngilizce web tasarım — USD veya EUR fatura', '5 günde $99’dan, Stripe ve ABD/AB müşteri için USD/EUR fatura.', 'Web tasarım'],
+      'digital-marketing-us-eu': ['ABD ve AB için dijital pazarlama — USD ve EUR bütçe', 'Google Ads, Meta ve LinkedIn — USD/EUR fatura ve GA4.', 'Dijital pazarlama'],
+      'buy-vegapuls-iran': ['İran’da VEGAPULS 6X satın al — fiyat, sipariş kodu, teklif', 'Orijinal radar seviye sensörünü İran tankı için nasıl alırsınız — Farsça proforma.', 'Endüstriyel ekipman'],
+      'vega-quote-iran': ['İran’da VEGA fiyat teklifi — ne göndermelisiniz', 'Alıcı kontrol listesi: tank, ortam, Ex/SIL ve etiket fotoğrafı.', 'Endüstriyel ekipman'],
+      'buy-prosense-iran': ['İran’da Prosense gaz dedektörü — PQ, SafeVader ve SIL', 'Petrol ve HVAC için orijinal gaz dedektörü — WhatsApp teklifi.', 'Endüstriyel ekipman'],
+      'industrial-trade-iran': ['İran’da endüstriyel ticaret — VEGA, Prosense ve orijinal markalar', 'Ölçüm, gaz güvenliği, GPS ve yağ için tek Farsça iletişim.', 'Endüstriyel ekipman'],
+      'buy-teltonika-iran': ['İran’da Teltonika FMB920 — 29$’dan', 'İran filoları için orijinal GPS — FMB920, FMC650 ve DualCam.', 'Endüstriyel ekipman'],
+      'buy-gamak-iran': ['İran’da Gamak motor — kW, flanş, teklif', 'Pompa ve hat için orijinal motor — Farsça proforma.', 'Endüstriyel ekipman'],
+      'buy-digi-system-iran': ['İran’da Digi System terazi ve POS', 'Orijinal terazi ve kasa — Farsça proforma.', 'Endüstriyel ekipman'],
+      'buy-teraoka-iran': ['İran’da Teraoka terazi — deli ve POS', 'Orijinal Teraoka Seiko — mağaza ve mutfak.', 'Endüstriyel ekipman'],
+      'vega-supply-iran': ['İran projeleri için VEGA sensör tedariki — danışmanlıktan teslimata', 'Farsça danışmanlık, şeffaf proforma ve uluslararası VEGA lojistiği.', 'Endüstriyel ekipman'],
+      'multilingual-web-iran-turkey': ['İran ve Türkiye pazarı için çok dilli web sitesi', 'hreflang, yerel güven ve hızlı teslimat.', 'Web tasarım'],
+      'what-is-digital-marketing': ['Dijital pazarlama nedir? İşletmeler için tam rehber', 'SEO, Google Ads, SMM ve lead ölçümü — İran ve Türkiye için pratik yol.', 'Dijital pazarlama'],
+      'digital-marketing': ['Dijital pazarlama satışları nasıl artırır?', 'Ziyaretçileri müşteriye dönüştürmek için pratik yöntemler.', 'Dijital pazarlama'],
+      'social-media-management': ['Sosyal medya yönetimi — Markalar için SMM stratejisi', 'Instagram ve LinkedIn için içerik üretimi, yayın takvimi ve hedefli reklamlar.', 'SMM yönetimi'],
+      'fast-studio': ['5 günde web sitesi — Fast Studio rehberi', 'Planlar, 5 günlük yol ve özel proje farkı.', 'Web tasarım'],
+      'website-speed-5-days': ['5 günde site kurulum kontrol listesi', 'Logo, metin, domain ve günlük kararlar.', 'Web tasarım'],
+      'custom-web-app-development': ['Özel web ve uygulama — seçim rehberi', 'Ne zaman Fast yeter, ne zaman web app gerekir.', 'Web tasarım'],
+      'industrial-sensors': ['Doğru endüstriyel sensör seçimi — VEGA ve ölçüm cihazları', 'VEGA ve endüstriyel ölçüm ekipmanı tedarikinde önemli noktalar.', 'Endüstriyel ekipman'],
+      'about-bizdavar-group': ['Bizdavar Group nedir? Tarihçe, ekip ve faaliyet alanları', 'Bizdavar profili: kurucu, 11 ülke, 100+ proje ve marka ekosistemi.', 'Şirket hakkında'],
+      'biztab': ['BizTab — Tebriz’in ilk temassız duvar termometresi', 'Bizdavar ürünü — 0,3°C’den düşük sapma, Tebriz Üniversitesi onayı.', 'Özel ürün'],
+      'bizsanitizer-v5': ['Bizdavar V5 el dezenfektan cihazı', 'Ultrasonik sensör ve otomatik püskürtme — Bizdavar mühendisliği.', 'Özel ürün'],
+      'bizpad': ['BizPad — ısıtıcı ped', 'Tebriz Üniversitesi teknoloji inkübatöründe üretim.', 'Özel ürün'],
+      'marvi-society-ios-app': ['iOS geliştirme — Marvi Society App Store örneği', 'UI/UX’ten Swift ve App Store’a — İstanbul creator kulübü.', 'Uygulama tasarımı'],
+      'prosense-gas-detection': ['Prosense gaz dedektörü tedariki', 'Model seçimi ve B2B teklif — petrol ve HVAC.', 'Endüstriyel ekipman'],
+      'liqui-moly-supply-iran': ['Liqui Moly Almanya — orijinal yağ ve katkı', 'Filo ve atölye için B2B teklif yolu.', 'Endüstriyel ekipman'],
+      'field-tech-services': ['Bizdavar saha teknik hizmetleri — Tebriz', 'CCTV, kablolama ve gizli aydınlatma — WhatsApp.', 'Teknik hizmetler'],
+      'local-seo-iran': ['İran işletmeleri için yerel SEO — Google Maps', 'Google Business Profile, NAP ve yerel sayfalar.', 'Dijital pazarlama'],
+      'fxguard-exchange': ['FXGuard Exchange — borsa ve OTC platformu', 'Fintech: KYC, cüzdan, OTC ve yönetim paneli.', 'Fintech']
+    },
+    en: {
+      'website-design-us-eu': ['English website design for US and EU businesses — billed in USD or EUR', '5-day plans from $99 / ~€90, Stripe, Zoom/Meet and invoices in dollars or euros.', 'Web design'],
+      'digital-marketing-us-eu': ['Digital marketing for US and EU markets — budgets in USD and EUR', 'Google Ads, Meta and LinkedIn with USD/EUR billing and GA4 reporting.', 'Digital marketing'],
+      'buy-vegapuls-iran': ['Buy VEGAPULS 6X in Iran — price, order code and quote', 'How to buy a genuine radar level sensor for an Iran tank — Persian proforma.', 'Industrial equipment'],
+      'vega-quote-iran': ['VEGA sensor quote in Iran — what to send', 'Buyer checklist: tank, media, Ex/SIL and nameplate photo.', 'Industrial equipment'],
+      'buy-prosense-iran': ['Buy Prosense gas detectors in Iran — PQ, SafeVader and SIL', 'Genuine industrial gas detectors for oil and HVAC — WhatsApp quote.', 'Industrial equipment'],
+      'industrial-trade-iran': ['Industrial trade in Iran — VEGA, Prosense and genuine brands', 'One Persian contact for instrumentation, gas safety, GPS and oils.', 'Industrial equipment'],
+      'buy-teltonika-iran': ['Buy Teltonika FMB920 in Iran — from $29', 'Genuine GPS for Iran fleets — FMB920, FMC650 and DualCam.', 'Industrial equipment'],
+      'buy-gamak-iran': ['Buy Gamak motors in Iran — kW, flange, quote', 'Genuine motors for pumps and lines — Persian proforma.', 'Industrial equipment'],
+      'buy-digi-system-iran': ['Buy Digi System scales and POS in Iran', 'Genuine scales and checkout — Persian proforma.', 'Industrial equipment'],
+      'buy-teraoka-iran': ['Buy Teraoka scales in Iran — deli and POS', 'Genuine Teraoka Seiko for stores and kitchens.', 'Industrial equipment'],
+      'vega-supply-iran': ['VEGA sensor supply for Iran projects — consulting to delivery', 'Persian consulting, transparent proforma, and international VEGA logistics.', 'Industrial equipment'],
+      'multilingual-web-iran-turkey': ['Multilingual websites for Iran and Turkey markets', 'hreflang, local trust signals, and fast delivery for dual-market businesses.', 'Web design'],
+      'what-is-digital-marketing': ['What is digital marketing? A complete guide for businesses', 'SEO, Google Ads, SMM and lead measurement — a practical path for Iran and Turkey.', 'Digital marketing'],
+      'digital-marketing': ['How does digital marketing increase sales?', 'Practical methods for turning visitors into customers.', 'Digital marketing'],
+      'social-media-management': ['Social media management — SMM strategy for brands', 'Content production, publishing calendars, and targeted ads for Instagram and LinkedIn.', 'SMM management'],
+      'fast-studio': ['Launch a website in 5 days — Fast Studio guide', 'Plans, 5-day path, and custom vs Fast.', 'Web design'],
+      'website-speed-5-days': ['5-day website launch checklist', 'Logo, copy, domain and day-by-day decisions.', 'Web design'],
+      'custom-web-app-development': ['Custom web & app — how to choose', 'When Fast is enough vs when you need a web app.', 'Web design'],
+      'industrial-sensors': ['Choosing the right industrial sensor — VEGA and instrumentation', 'Key points in VEGA and instrumentation supply.', 'Industrial equipment'],
+      'about-bizdavar-group': ['What is Bizdavar Group? History, team and activities', 'Bizdavar profile: founder, 11 countries, 100+ projects and brand ecosystem.', 'About company'],
+      'biztab': ['BizTab — Tabriz’s first wall-mounted non-contact thermometer', 'Bizdavar product — under 0.3°C error, University of Tabriz approval.', 'Owned product'],
+      'bizsanitizer-v5': ['Bizdavar V5 hand sanitizer unit', 'Ultrasonic sensor and auto spray — engineered by Bizdavar.', 'Owned product'],
+      'bizpad': ['BizPad — heating pad', 'Designed and produced at University of Tabriz tech incubator.', 'Owned product'],
+      'marvi-society-ios-app': ['iOS development — Marvi Society App Store case', 'From UI/UX to Swift and App Store — invite-only creator club in Istanbul.', 'App design'],
+      'prosense-gas-detection': ['Prosense gas detector supply — model to install', 'Gas and flame detectors for oil and HVAC — B2B quote.', 'Industrial equipment'],
+      'liqui-moly-supply-iran': ['Liqui Moly Germany — genuine oils and additives', 'Quote path for fleets and workshops — Bizdavar B2B.', 'Industrial equipment'],
+      'field-tech-services': ['Bizdavar field technical services — Tabriz', 'CCTV, wiring and cove lighting — WhatsApp coordination.', 'Field services'],
+      'local-seo-iran': ['Local SEO for Iran businesses — Google Maps', 'Google Business Profile, consistent NAP and local pages.', 'Digital marketing'],
+      'fxguard-exchange': ['FXGuard Exchange — exchange and OTC platform', 'Fintech stack: KYC, wallet, OTC and admin panel.', 'Fintech']
+    }
   };
 
-  function asBlogRows(rows) {
-    return rows.map(([title, excerpt, category]) => ({ title, excerpt, category }));
+  function asBlogMap(rows) {
+    if (!rows || typeof rows !== 'object') return {};
+    if (Array.isArray(rows)) {
+      return rows.map(([title, excerpt, category]) => ({ title, excerpt, category }));
+    }
+    const out = {};
+    Object.keys(rows).forEach((key) => {
+      const row = rows[key];
+      if (Array.isArray(row)) {
+        const [title, excerpt, category] = row;
+        out[key] = { title, excerpt, category };
+      } else {
+        out[key] = row;
+      }
+    });
+    return out;
   }
 
   const caseStudy = {
@@ -3011,11 +3058,21 @@
 
   function asArticles(lang) {
     const cta = articleCta[lang] || articleCta.en;
-    return articleSlugs.reduce((acc, slug, i) => {
-      const row = blogPosts[lang][i] || blogPosts.en[i] || blogPosts.en[0];
+    const posts = blogPosts[lang] || blogPosts.en || {};
+    return articleSlugs.reduce((acc, slug) => {
+      const row = posts[slug] || posts['pages/articles/' + slug + '.html'];
+      let title = slug;
+      let category = '';
+      if (Array.isArray(row)) {
+        title = row[0] || title;
+        category = row[2] || '';
+      } else if (row && typeof row === 'object') {
+        title = row.title || title;
+        category = row.category || '';
+      }
       acc[slug] = {
-        category: row[2],
-        title: row[0],
+        category,
+        title,
         dateDisplay: articleDateDisplay(lang, slug),
         cta: cta
       };
@@ -3195,7 +3252,7 @@
     }
     Object.assign(window.BIZDAVAR_LOCALES[lang], page[lang], {
       galleryPage: galleryPage[lang],
-      blogPosts: asBlogRows(blogPosts[lang]),
+      blogPosts: asBlogMap(blogPosts[lang]),
       caseStudy: caseStudy[lang],
       articles: asArticles(lang)
     });

@@ -35,6 +35,23 @@
   padding-block: clamp(2rem, 4vw, 3.25rem);
 }
 
+.blog-intro .about__image {
+  background: #fff;
+  border: 1px solid rgba(29, 29, 27, 0.08);
+  box-shadow: 0 10px 28px rgba(29, 29, 27, 0.06);
+}
+
+.blog-intro .about__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  padding: clamp(1rem, 3vw, 1.75rem);
+  box-sizing: border-box;
+  border-radius: 0;
+  background: #fff;
+}
+
 .blog-intro__stats {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -143,16 +160,34 @@
 
 .blog-item__media {
   display: block;
-  aspect-ratio: 16 / 9;
-  background: #f3f3f4;
+  aspect-ratio: 16 / 10;
+  background:
+    linear-gradient(180deg, #f7f7f8 0%, #ececee 100%);
   overflow: hidden;
+  position: relative;
 }
 
 .blog-item__media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
+}
+
+/* Product shots, logos, and SVGs stay fully visible inside the frame */
+.blog-item__media img[src$=".svg"],
+.blog-item__media img[src$=".png"],
+.blog-item__media img[src*="/partners/"],
+.blog-item__media img[src*="/liqui-moly/"],
+.blog-item__media img[src*="product-"],
+.blog-item__media img[src*="series-"],
+.blog-item__media img[src*="octane-"] {
+  object-fit: contain;
+  object-position: center;
+  padding: 0.85rem;
+  box-sizing: border-box;
+  background: #fff;
 }
 
 .blog-item__body {

@@ -555,7 +555,9 @@ window.BIZDAVAR_CONFIG = {
       title: 'راه‌اندازی سایت در ۵ روز — راهنمای کامل Fast Studio',
       excerpt: 'پلن‌ها، مسیر ۵ روزه و تفاوت با پروژه اختصاصی.',
       category: 'طراحی وب',
+      catId: 'web',
       date: '2026-08-13',
+      image: 'assets/images/content/home-fast-studio-800.webp',
       relatedService: 'pages/fast.html'
     },
     {
@@ -563,7 +565,9 @@ window.BIZDAVAR_CONFIG = {
       title: 'چک‌لیست راه‌اندازی سایت در ۵ روز',
       excerpt: 'لوگو، متن، دامنه و تصمیم‌های روزبه‌روز برای تحویل واقعی ۵ روزه.',
       category: 'طراحی وب',
+      catId: 'web',
       date: '2026-08-13',
+      image: 'assets/images/content/services-web-mockup.svg',
       relatedService: 'pages/fast.html'
     },
     {
@@ -571,7 +575,9 @@ window.BIZDAVAR_CONFIG = {
       title: 'طراحی وب و اپلیکیشن اختصاصی — راهنمای انتخاب',
       excerpt: 'چه زمانی Fast کافی است و چه زمانی به وب‌اپ یا اپ نیاز دارید.',
       category: 'طراحی وب',
+      catId: 'web',
       date: '2026-08-13',
+      image: 'assets/images/content/services-dm-visual.svg',
       relatedService: 'pages/custom-web-app.html'
     },
     {

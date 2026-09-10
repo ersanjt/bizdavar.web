@@ -2238,4 +2238,47 @@
 
   window.BIZDAVAR_LOCALES.ru = ru;
   window.BIZDAVAR_LOCALES.ar = ar;
+
+  // Remap legacy blogPosts arrays → slug-keyed maps (index order in ru/ar lists).
+  (function remapBlogPostsBySlug() {
+    const order = [
+      'website-design-us-eu',
+      'digital-marketing-us-eu',
+      'buy-vegapuls-iran',
+      'vega-quote-iran',
+      'buy-prosense-iran',
+      'industrial-trade-iran',
+      'buy-teltonika-iran',
+      'buy-gamak-iran',
+      'buy-digi-system-iran',
+      'buy-teraoka-iran',
+      'vega-supply-iran',
+      'multilingual-web-iran-turkey',
+      'what-is-digital-marketing',
+      'digital-marketing',
+      'social-media-management',
+      'fast-studio',
+      'industrial-sensors',
+      'about-bizdavar-group',
+      'biztab',
+      'bizsanitizer-v5',
+      'bizpad',
+      'marvi-society-ios-app',
+      'prosense-gas-detection',
+      'liqui-moly-supply-iran',
+      'field-tech-services',
+      'local-seo-iran',
+      'fxguard-exchange'
+    ];
+    ['ru', 'ar'].forEach((lang) => {
+      const loc = window.BIZDAVAR_LOCALES[lang];
+      if (!loc || !Array.isArray(loc.blogPosts)) return;
+      const map = {};
+      loc.blogPosts.forEach((row, i) => {
+        const key = order[i];
+        if (key && row) map[key] = row;
+      });
+      loc.blogPosts = map;
+    });
+  })();
 })();
