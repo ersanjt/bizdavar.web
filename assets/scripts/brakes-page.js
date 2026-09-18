@@ -34,7 +34,9 @@
       touch: 'ارتباط',
       sort: 'مرتب‌سازی: موجودها اول',
       results: 'نتیجه جستجو',
-      desk: 'لنت و دیسک ترمز'
+      desk: 'لنت و دیسک ترمز',
+      assureTitle: 'ضمانت تامین فروشگاه ترمز',
+      assure: 'دیسک و لنت با کد سازنده. قیمت دلاری تحویل ایران است و موجودی نهایی قبل از ارسال تأیید می‌شود.'
     },
     tr: {
       search: 'Marka, model, OEM veya parça kodu ara',
@@ -63,7 +65,9 @@
       touch: 'İletişime geç',
       sort: 'Sırala: stoktakiler',
       results: 'Arama sonucu',
-      desk: 'Fren balatası ve diski'
+      desk: 'Fren balatası ve diski',
+      assureTitle: 'Fren tedarik güvencesi',
+      assure: 'Disk ve balata üretici koduyla. Kart fiyatı İran teslim USD; stok sevkiyattan önce doğrulanır.'
     },
     en: {
       search: 'Search brand, model, OEM or part code',
@@ -92,7 +96,9 @@
       touch: 'Get in touch',
       sort: 'Sort: in stock first',
       results: 'Search results',
-      desk: 'Brake pads and discs'
+      desk: 'Brake pads and discs',
+      assureTitle: 'Brake shop supply guarantee',
+      assure: 'Discs and pads with the maker code. Card price is Iran-delivery USD; stock is confirmed before dispatch.'
     },
     ru: {
       search: 'Марка, модель, OEM или код детали',
@@ -121,7 +127,9 @@
       touch: 'Написать',
       sort: 'Сначала в наличии',
       results: 'Результаты',
-      desk: 'Колодки и диски'
+      desk: 'Колодки и диски',
+      assureTitle: 'Гарантия поставки тормозов',
+      assure: 'Диски и колодки с кодом производителя. Цена в долларах с доставкой в Иран; наличие уточняется до отправки.'
     },
     ar: {
       search: 'ابحث بالماركة أو الموديل أو رمز القطعة',
@@ -150,7 +158,9 @@
       touch: 'تواصل',
       sort: 'المتوفر أولاً',
       results: 'نتائج البحث',
-      desk: 'فحمات وأقراص الفرامل'
+      desk: 'فحمات وأقراص الفرامل',
+      assureTitle: 'ضمان توريد متجر الفرامل',
+      assure: 'أقراص وفحمات برمز المصنع. السعر بالدولار لتسليم إيران، والتوفر يُؤكد قبل الإرسال.'
     }
   };
 
@@ -475,25 +485,39 @@
     const brand = brandById(item.brand);
     const part = (PART_NAME[loc()] && PART_NAME[loc()][item.part]) || item.part;
     const cards = related.map((row) => cardHtml(row)).join('');
-    return '<article class="brake-detail">' +
-      '<button type="button" class="brake-back" data-close-product="1">' + esc(c.back) + '</button>' +
-      '<div class="brake-detail__grid">' +
-        '<div class="brake-detail__art">' + art(item.part) + '</div>' +
-        '<div>' +
-          '<h2>' + esc(item.title) + '</h2>' +
-          '<p class="brake-stars" aria-hidden="true">★★★★★</p>' +
-          '<p class="brake-detail__price" dir="ltr">' + esc(money(item.priceUsd)) + '</p>' +
-          '<a class="brake-wa" href="' + waLink(item) + '" target="_blank" rel="noopener noreferrer">' + esc(c.wa) + '</a>' +
-          '<div class="brake-badge">' + esc(c.original) + '</div>' +
-          '<ul class="brake-specs">' +
-            '<li>SKU: ' + esc(item.sku || '—') + '</li>' +
-            '<li>MPN: ' + esc(item.mpn || '—') + '</li>' +
-            '<li>' + esc(brand ? brand.name : '') + '</li>' +
-            '<li>' + esc(part) + '</li>' +
-            '<li>' + esc(item.maker || '') + '</li>' +
-            '<li>' + esc(item.stock ? c.in : c.out) + '</li>' +
-          '</ul>' +
-        '</div>' +
+    const stock = item.stock ? c.in : c.out;
+    const figure = art(item.part);
+    return '<article class="shop-pdp brake-pdp">' +
+      '<nav class="shop-pdp__crumb">' +
+        '<button type="button" class="brake-back" data-close-product="1">' + esc(c.back) + '</button>' +
+        (brand ? '<span>' + esc(brand.name) + '</span>' : '') +
+        '<span>' + esc(part) + '</span>' +
+        '<span>' + esc(item.title) + '</span>' +
+      '</nav>' +
+      '<div class="shop-pdp__gallery">' +
+        '<div class="shop-pdp__thumbs"><button type="button" class="is-active" tabindex="-1">' + figure + '</button></div>' +
+        '<div class="shop-pdp__stage">' + figure + '</div>' +
+      '</div>' +
+      '<div class="shop-pdp__buy">' +
+        '<h1>' + esc(item.title) + '</h1>' +
+        '<p class="shop-pdp__price" dir="ltr">' + esc(money(item.priceUsd)) + '</p>' +
+        '<a class="shop-pdp__wa" href="' + waLink(item) + '" target="_blank" rel="noopener noreferrer">' + esc(c.wa) + '</a>' +
+        '<div class="shop-pdp__badge">' + esc(c.original) + '</div>' +
+        '<ul class="brake-specs">' +
+          '<li>SKU: ' + esc(item.sku || '—') + '</li>' +
+          '<li>MPN: ' + esc(item.mpn || '—') + '</li>' +
+          '<li>' + esc(brand ? brand.name : '') + '</li>' +
+          '<li>' + esc(part) + '</li>' +
+          '<li>' + esc(item.maker || '') + '</li>' +
+          '<li>' + esc(stock) + '</li>' +
+        '</ul>' +
+        '<div class="shop-pdp__assure"><h2>' + esc(c.assureTitle) + '</h2><p>' + esc(c.assure) + '</p></div>' +
+      '</div>' +
+      '<div class="shop-pdp__dock">' +
+        '<div class="shop-pdp__dock-art">' + figure + '</div>' +
+        '<div><strong>' + esc(item.title) + '</strong><small>' + esc(part) + '</small></div>' +
+        '<p class="shop-pdp__dock-price" dir="ltr">' + esc(money(item.priceUsd)) + '</p>' +
+        '<span class="shop-pdp__stock' + (item.stock ? ' is-in' : ' is-out') + '">' + esc(stock) + '</span>' +
       '</div>' +
       (cards ? '<div class="brake-related"><p>' + esc(c.kicker) + '</p><h3>' + esc(c.related) + '</h3><div class="brake-cards">' + cards + '</div></div>' : '') +
     '</article>';
