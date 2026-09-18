@@ -123,18 +123,32 @@
         if (typeof val === 'object') return fallback !== undefined ? fallback : key;
         return val;
       }
+      // Non-Persian locales must never inherit FA copy — English is the bridge.
+      if (this.locale !== 'fa') {
+        const enVal = getByPath(window.BIZDAVAR_LOCALES?.en, key);
+        if (enVal !== undefined && enVal !== null && enVal !== '' && typeof enVal !== 'object') {
+          return enVal;
+        }
+      }
       if (fallback !== undefined) return fallback;
-      const fa = window.BIZDAVAR_LOCALES?.fa;
-      const faVal = getByPath(fa, key);
-      if (faVal !== undefined && typeof faVal !== 'object') return faVal;
+      if (this.locale === 'fa') {
+        const faVal = getByPath(window.BIZDAVAR_LOCALES?.fa, key);
+        if (faVal !== undefined && typeof faVal !== 'object') return faVal;
+      }
       return key;
     },
 
     raw(key) {
       const val = getByPath(this.dict, key);
       if (val !== undefined && val !== null) return val;
-      const fa = window.BIZDAVAR_LOCALES?.fa;
-      return getByPath(fa, key);
+      if (this.locale !== 'fa') {
+        const enVal = getByPath(window.BIZDAVAR_LOCALES?.en, key);
+        if (enVal !== undefined && enVal !== null) return enVal;
+      }
+      if (this.locale === 'fa') {
+        return getByPath(window.BIZDAVAR_LOCALES?.fa, key);
+      }
+      return undefined;
     },
 
     getGeo() {
@@ -202,7 +216,12 @@
     mergeLocalizedList(key, base) {
       const localized = this.raw(key);
       if (!Array.isArray(localized)) return base || [];
-      return (base || []).map((item, i) => ({ ...item, ...(localized[i] || {}) }));
+      const enList = this.locale === 'fa' ? null : getByPath(window.BIZDAVAR_LOCALES?.en, key);
+      return (base || []).map((item, i) => {
+        const loc = localized[i] || (Array.isArray(enList) ? enList[i] : null);
+        if (!loc && this.locale !== 'fa') return null;
+        return { ...item, ...(loc || {}) };
+      }).filter(Boolean);
     },
 
     getBlogPosts() {
@@ -259,7 +278,9 @@
     },
 
     getFastCatalog() {
-      const base = window.FAST_CATALOG || {};
+      const rawBase = window.FAST_CATALOG || {};
+      const enCat = window.BIZDAVAR_LOCALES?.en?.fastCatalog || {};
+      const base = this.locale === 'fa' ? rawBase : { ...rawBase, ...enCat, brand: { ...(rawBase.brand || {}), ...(enCat.brand || {}) } };
       return {
         ...base,
         brand: { ...(base.brand || {}), ...(this.raw('fastCatalog.brand') || {}) },
@@ -338,8 +359,8 @@
             return {
               ...item,
               ...loc,
-              summary: loc.summary || item.summaryFa,
-              useCase: loc.useCase || item.useCaseFa,
+              summary: loc.summary || item.summary || (this.locale === 'fa' ? item.summaryFa : ''),
+              useCase: loc.useCase || item.useCase || (this.locale === 'fa' ? item.useCaseFa : ''),
               features: Array.isArray(loc.features) ? loc.features : item.features,
               applications: Array.isArray(loc.applications) ? loc.applications : item.applications,
               badge: loc.badge != null && loc.badge !== '' ? loc.badge : item.badge
@@ -351,7 +372,7 @@
           digitalServices: {
             ...ds,
             ...dsLoc,
-            desc: dsLoc.desc || ds.desc || ds.descFa
+            desc: dsLoc.desc || ds.desc || (this.locale === 'fa' ? ds.descFa : '')
           },
           quoteChecklist: this.raw(`${i18nKey}.quoteChecklist`) || base.quoteChecklist,
           quickSeries: this.mergeLocalizedList(`${i18nKey}.quickSeries`, base.quickSeries || [])
@@ -662,9 +683,9 @@
         const field = channels.find(c => c.id === 'field');
         if (ir) ir.label = this.t('contact.channelIr');
         if (tr) tr.label = this.t('contact.channelTr');
-        if (field) field.label = this.t('contact.channelField', this.t('footer.fieldTech', 'خدمات فنی'));
-        // Persian-first by default; Turkish locale keeps TR as primary CTA target
-        const prefer = this.locale === 'tr' ? tr : ir;
+        if (field) field.label = this.t('contact.channelField', this.t('footer.fieldTech', 'Technical services'));
+        // FA → Iran desk; TR/EN/RU/AR → Istanbul international sales
+        const prefer = this.locale === 'fa' ? ir : tr;
         if (prefer?.whatsapp) {
           C.contact.whatsapp = prefer.whatsapp;
           if (prefer.tel) C.contact.phone = prefer.tel;
@@ -687,6 +708,8 @@
         if (pathLocale !== LU.DEFAULT) {
           return pathLocale;
         }
+        // Unprefixed site is Persian. A leftover language click is redirected in locale-preload.
+        return 'fa';
       }
       if (document.body?.dataset?.page === 'article') {
         return 'fa';
@@ -755,7 +778,8 @@
     },
 
     setLocale(lang) {
-      if (!window.BIZDAVAR_LOCALES[lang]) return;
+      const known = (window.BIZDAVAR_LOCALE_URL && window.BIZDAVAR_LOCALE_URL.LOCALES) || ['fa', 'tr', 'en', 'ru', 'ar'];
+      if (known.indexOf(lang) === -1) return;
       localStorage.setItem(STORAGE_KEY, lang);
       localStorage.setItem(MANUAL_KEY, '1');
       if (window.BIZDAVAR_LOCALE_URL) {
@@ -767,10 +791,11 @@
           window.location.href = target + window.location.hash;
           return;
         }
-      } else {
+      } else if (!window.BIZDAVAR_LOCALES[lang]) {
         window.location.reload();
         return;
       }
+      if (!window.BIZDAVAR_LOCALES[lang]) return;
       applyLocaleData(lang);
       document.dispatchEvent(new CustomEvent('bizdavar:locale', { detail: { locale: lang } }));
     },

@@ -65,7 +65,8 @@
     fab.target = '_blank';
     fab.rel = 'noopener noreferrer';
     fab.setAttribute('aria-label', t('conversions.fabAria', 'مشاوره رایگان در واتساپ'));
-    fab.innerHTML = '<span class="wa-fab__icon" aria-hidden="true"></span><span class="wa-fab__label">' +
+    fab.setAttribute('data-i18n-aria', 'conversions.fabAria');
+    fab.innerHTML = '<span class="wa-fab__icon" aria-hidden="true"></span><span class="wa-fab__label" data-i18n="conversions.fabLabel">' +
       t('conversions.fabLabel', 'مشاوره رایگان') + '</span>';
 
     fab.addEventListener('click', function () {
@@ -107,6 +108,9 @@
     mountFab();
     bindClickTracking();
     document.addEventListener('bizdavar:locale', refreshFabLocale);
+    if (window.bizdavarReady && typeof window.bizdavarReady.then === 'function') {
+      window.bizdavarReady.then(refreshFabLocale).catch(function () {});
+    }
   }
 
   if (document.readyState === 'loading') {

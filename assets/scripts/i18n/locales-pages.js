@@ -190,7 +190,8 @@
       navSpeed: 'سرعت', navScope: 'خدمات', navWhy: 'چرا Fast', navGuides: 'راهنما', btnCustomApp: 'وب و اپ اختصاصی', readGuide: 'ادامه مطلب',
       oneTime: 'پرداخت یک‌باره', orderWa: 'سفارش در واتساپ', orContact: 'یا فرم تماس',
       compareFeature: 'امکانات', compareBasic: 'پایه', compareStore: 'فروشگاهی', comparePro: 'حرفه‌ای',
-      viewCase: 'مشاهده', navAria: 'بخش‌های Fast Web Studio'
+      viewCase: 'مشاهده', navAria: 'بخش‌های Fast Web Studio',
+      saveOff: '٪{n} تخفیف راه‌اندازی'
     },
     tr: {
       statDays: '5 gün', statDaysLabel: 'Standart teslimat',
@@ -202,7 +203,8 @@
       navSpeed: 'Hız', navScope: 'Hizmetler', navWhy: 'Neden Fast', navGuides: 'Rehber', btnCustomApp: 'Özel web & uygulama', readGuide: 'Devamını oku',
       oneTime: 'Tek seferlik ödeme', orderWa: 'WhatsApp sipariş', orContact: 'veya iletişim formu',
       compareFeature: 'Özellikler', compareBasic: 'Temel', compareStore: 'Mağaza', comparePro: 'Pro',
-      viewCase: 'Görüntüle', navAria: 'Fast Web Studio bölümleri'
+      viewCase: 'Görüntüle', navAria: 'Fast Web Studio bölümleri',
+      saveOff: '%{n} kurulum indirimi'
     },
     en: {
       statDays: '5 days', statDaysLabel: 'Standard delivery',
@@ -214,7 +216,8 @@
       navSpeed: 'Speed', navScope: 'Services', navWhy: 'Why Fast', navGuides: 'Guides', btnCustomApp: 'Custom web & app', readGuide: 'Read more',
       oneTime: 'One-time payment', orderWa: 'Order on WhatsApp', orContact: 'or contact form',
       compareFeature: 'Features', compareBasic: 'Basic', compareStore: 'Store', comparePro: 'Pro',
-      viewCase: 'View', navAria: 'Fast Web Studio sections'
+      viewCase: 'View', navAria: 'Fast Web Studio sections',
+      saveOff: '{n}% launch discount'
     }
   };
 

@@ -119,7 +119,7 @@
           <span>${b.name}</span>
         </a>
         <span class="fast-hero__eyebrow">${b.eyebrow}</span>
-        <h1 class="fast-hero__title">${b.headline}</h1>
+        <h1 class="fast-hero__title">${t('fastPage.hero.title', b.headline)}</h1>
         <p class="fast-hero__subtitle">${b.subtitle}</p>
         <p class="fast-hero__desc">${b.description}</p>
         <div class="fast-hero__stats">

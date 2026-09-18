@@ -286,7 +286,7 @@
   merge('tr', {
     hero: {
       tag: 'Döviz · havale · finans',
-      title: 'Kuru WhatsApp’tan verin. Müşteri defteri sizde kalsın.',
+      title: 'Kuru WhatsApp’tan gönderin. Müşteri kaydı sizde kalsın.',
       desc: 'Tek şirket numarası. Personel panelden yanıtlar. Biri ayrılınca sohbetler ve verilen fiyatlar sizde kalır — kişisel telefonda değil.',
       regionItems: [
         { code: 'TR', label: 'Türkiye' },
@@ -943,7 +943,7 @@
   merge('ar', {
     hero: {
       tag: 'صرافة · حوالات · مالية',
-      title: 'سعّر السعر على واتساب. دفتر العملاء يبقى عندك.',
+      title: 'أرسل السعر على واتساب. دفتر العملاء يبقى عندك.',
       desc: 'رقم شركة واحد. الموظفون يردّون من اللوحة. إذا غادر أحدهم، المحادثات والأسعار المعلنة تبقى عندك — لا على هاتف شخصي.',
       regionItems: [
         { code: 'TR', label: 'تركيا' },

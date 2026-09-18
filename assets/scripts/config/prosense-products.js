@@ -141,6 +141,24 @@ window.PROSENSE_CATALOG = {
 
   highlights: [
     {
+      id: 'pqd-7035-t1-c1',
+      title: 'PQD-7035 T1 C1 — هیدروکربن',
+      titleFa: 'PQD-7035 T1 C1 — هیدروکربن',
+      titleEn: 'PQD-7035 T1 C1 — Hydrocarbon',
+      titleTr: 'PQD-7035 T1 C1 — Hidrokarbon',
+      titleRu: 'PQD-7035 T1 C1 — углеводород',
+      titleAr: 'PQD-7035 T1 C1 — هيدروكربون',
+      desc: 'دتکتور ثابت گاز هیدروکربن سری PQ — حسگر پلستور ۰–۱۰۰٪ LEL، نمایشگر OLED، بدنه آلومینیوم حدود ۲٫۶ کیلو',
+      useCaseFa: 'نفت، گاز و پتروشیمی — محیط Ex Zone 1/2 · گارانتی سنسور ۱ سال و الکترونیک ۲ سال',
+      badge: '۰–۱۰۰٪ LEL',
+      inquiryName: 'PQD-7035 T1 C1',
+      sku: 'PQD-7035 T1 C1',
+      priceEur: 647,
+      priceFrom: true,
+      image: PROSENSE_IMG + 'series-pq.webp',
+      imageAlt: 'Prosense PQD-7035 T1 C1 hydrocarbon pellistor gas detector with OLED display'
+    },
+    {
       id: 'pq',
       title: 'سری PQ — SIL2 / SIL3',
       titleEn: 'PQ Series — SIL2 / SIL3',
@@ -247,6 +265,65 @@ window.PROSENSE_CATALOG = {
       imageAltTr: 'Prosense sabit gaz dedektörleri — sanayi, denizcilik ve ticari tesisler',
       desc: 'دتکتورهای ثابت گازهای قابل اشتعال، سمی، خفه‌کننده و VOC — از صنعت سنگین SIL2 تا محیط امن داخلی، مطابق کاتالوگ رسمی Prosense',
       series: [
+        {
+          id: 'pqd-7035-t1-c1',
+          sku: 'PQD-7035 T1 C1',
+          officialPath: 'pq-series',
+          featured: true,
+          inquiryName: 'PQD-7035 T1 C1',
+          specs: '0–100% LEL · −40…+70°C',
+          priceEur: 647,
+          priceFrom: true,
+          ...pnm('PQD-7035 T1 C1 — دتکتور هیدروکربن', 'PQD-7035 T1 C1 — Hidrokarbon Gaz Dedektörü', 'PQD-7035 T1 C1 — Hydrocarbon Gas Detector'),
+          nameRu: 'PQD-7035 T1 C1 — детектор углеводородов',
+          nameAr: 'PQD-7035 T1 C1 — كاشف غاز الهيدروكربون',
+          ...pn(
+            'دتکتور ثابت گاز هیدروکربن سری PQ — حسگر پلستور ۰–۱۰۰٪ LEL، نمایشگر OLED، بدنه آلومینیوم حدود ۲٫۶ کیلو',
+            'PQ Serisi hidrokarbon gaz dedektörü — pellistor 0–100% LEL, OLED ekran, alüminyum gövde yaklaşık 2,6 kg',
+            'PQ Series hydrocarbon gas detector — pellistor 0–100% LEL, OLED display, aluminium housing approx. 2.6 kg'
+          ),
+          noteRu: 'Стационарный детектор углеводородов серии PQ — pellistor 0–100% LEL, OLED, алюминий ≈ 2,6 кг',
+          noteAr: 'كاشف هيدروكربون ثابت من سلسلة PQ — pellistor 0–100% LEL وشاشة OLED وهيكل ألومنيوم نحو 2.6 كغ',
+          image: PROSENSE_IMG + 'series-pq.webp',
+          imageAlt: 'Prosense PQD-7035 T1 C1 hydrocarbon pellistor gas detector with OLED display',
+          imageAltFa: 'دتکتور گاز هیدروکربن PQD-7035 T1 C1 پروسense با نمایشگر OLED',
+          imageAltTr: 'Prosense PQD-7035 T1 C1 hidrokarbon gaz dedektörü, OLED ekranlı',
+          featuresFa: [
+            'کد سفارش PQD-7035 T1 C1 · حسگر پلستور هیدروکربن ۰–۱۰۰٪ LEL',
+            'دمای کار −۴۰ تا +۷۰ درجه سانتی‌گراد · IP65/IP66 · ATEX / IECEx',
+            'نمایشگر OLED ۱۲۸×۶۴ · خروجی ۴–۲۰mA و Modbus RS485',
+            'بدنه آلومینیوم حدود ۲٫۶ کیلو · نسخه استیل حدود ۵ کیلو',
+            'گارانتی سنسور ۱ سال و الکترونیک ۲ سال · قیمت پایه از ۶۴۷ یورو'
+          ],
+          featuresTr: [
+            'Sipariş kodu PQD-7035 T1 C1 · hidrokarbon pellistor 0–100% LEL',
+            'Çalışma sıcaklığı −40…+70°C · IP65/IP66 · ATEX / IECEx',
+            '128×64 OLED ekran · 4–20 mA ve Modbus RS485',
+            'Alüminyum gövde yaklaşık 2,6 kg · paslanmaz çelik yaklaşık 5 kg',
+            'Sensör 1 yıl, elektronik 2 yıl garanti · taban fiyat €647’den'
+          ],
+          featuresEn: [
+            'Order code PQD-7035 T1 C1 · hydrocarbon pellistor 0–100% LEL',
+            'Operating temperature −40 to +70°C · IP65/IP66 · ATEX / IECEx',
+            '128×64 OLED display · 4–20 mA and Modbus RS485',
+            'Aluminium housing approx. 2.6 kg · stainless steel approx. 5 kg',
+            '1-year sensor and 2-year electronics warranty · from €647'
+          ],
+          featuresRu: [
+            'Код PQD-7035 T1 C1 · pellistor углеводородов 0–100% LEL',
+            'Температура −40…+70°C · IP65/IP66 · ATEX / IECEx',
+            'OLED 128×64 · 4–20 мА и Modbus RS485',
+            'Алюминий ≈ 2,6 кг · нержавеющая сталь ≈ 5 кг',
+            'Гарантия: сенсор 1 год, электроника 2 года · от €647'
+          ],
+          featuresAr: [
+            'رمز الطلب PQD-7035 T1 C1 · pellistor هيدروكربون 0–100% LEL',
+            'درجة التشغيل −40 إلى +70°م · IP65/IP66 · ATEX / IECEx',
+            'شاشة OLED 128×64 · خرج 4–20 mA وModbus RS485',
+            'هيكل ألومنيوم نحو 2.6 كغ · فولاذ مقاوم نحو 5 كغ',
+            'ضمان الحساس سنة والإلكترونيات سنتان · من 647 يورو'
+          ]
+        },
         {
           id: 'pq',
           officialPath: 'pq-series',

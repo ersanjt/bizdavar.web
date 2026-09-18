@@ -1642,6 +1642,8 @@
 
     highlights: [
 
+      { title: 'PQD-7035 T1 C1 — Hydrocarbon', desc: 'PQ Series hydrocarbon gas detector — pellistor 0–100% LEL, OLED display, aluminium housing approx. 2.6 kg', useCase: 'Oil, gas and petrochemical — Ex Zone 1/2 · 1-year sensor and 2-year electronics warranty', badge: '0–100% LEL' },
+
       { title: 'PQ Series — SIL2 / SIL3', desc: 'Best-selling fixed detector — SIL certificate for petrochemical and refinery process safety', useCase: 'H2S, LEL, O2 — Ex environment and SIS projects', badge: 'SIL' },
 
       { title: 'SafeVader Series', desc: 'Indoor / safe-area detector — LCD, 4–20 mA + RS485 Modbus and onboard relays. For labs, hospitals, HVAC, refrigerant and hydrogen rooms — not an Ex/SIL process detector.', useCase: 'Non-Ex indoor areas · laboratories, HVAC, hospitals, battery rooms', badge: 'Safe Area' },
@@ -1900,6 +1902,8 @@
 
     highlights: [
 
+      { title: 'PQD-7035 T1 C1 — Hidrokarbon', desc: 'PQ Serisi hidrokarbon gaz dedektörü — pellistor 0–100% LEL, OLED ekran, alüminyum gövde yaklaşık 2,6 kg', useCase: 'Petrol, gaz ve petrokimya — Ex Zone 1/2 · sensör 1 yıl, elektronik 2 yıl garanti', badge: '0–100% LEL' },
+
       { title: 'PQ Serisi — SIL2 / SIL3', desc: 'En çok satan sabit dedektör — petrokimya ve rafineri proses güvenliği için SIL sertifikası', useCase: 'H2S, LEL, O2 — Ex ortam ve SIS projeleri', badge: 'SIL' },
 
       { title: 'SafeVader Serisi', desc: 'İç mekân / emniyetli alan dedektörü — LCD, 4–20 mA + RS485 Modbus ve röle. Laboratuvar, hastane, HVAC, soğutucu gaz ve hidrojen odaları — Ex/SIL proses dedektörü değildir.', useCase: 'Ex olmayan iç mekân · laboratuvar, HVAC, hastane, akü odası', badge: 'Emniyetli Alan' },
@@ -2101,6 +2105,7 @@
       { name: 'PPS+', tag: 'EN-50545-1', hint: 'Закрытый паркинг CO / NO2' }
     ],
     highlights: [
+      { title: 'PQD-7035 T1 C1 — углеводород', desc: 'Стационарный детектор углеводородов серии PQ — pellistor 0–100% LEL, OLED, алюминий ≈ 2,6 кг', useCase: 'Нефть, газ и нефтехимия — Ex Zone 1/2 · гарантия сенсора 1 год, электроники 2 года', badge: '0–100% LEL' },
       { title: 'PQ Series — SIL2 / SIL3', desc: 'Бестселлер среди стационарных детекторов — SIL для нефтехимии и НПЗ', useCase: 'H2S, LEL, O2 — Ex-среда и проекты SIS', badge: 'SIL' },
       { title: 'SafeVader Series', desc: 'Детектор для безопасной зоны / помещений — LCD, 4–20 мА + RS485 Modbus и реле. Лаборатории, больницы, HVAC, хладагенты и водородные комнаты — это не Ex/SIL процессный детектор.', useCase: 'Не-Ex внутри помещений · лаборатории, HVAC, больницы, зарядные', badge: 'Safe Area' },
       { title: 'Marine & Offshore', desc: 'Морская сертификация — системы H2S и CH4 для судов и оффшора', useCase: 'Судостроение, оффшорные платформы, порты', badge: 'Marine' },
@@ -2230,6 +2235,7 @@
       { name: 'PPS+', tag: 'EN-50545-1', hint: 'مواقف مغلقة CO / NO2' }
     ],
     highlights: [
+      { title: 'PQD-7035 T1 C1 — هيدروكربون', desc: 'كاشف هيدروكربون ثابت من سلسلة PQ — pellistor 0–100% LEL وشاشة OLED وهيكل ألومنيوم نحو 2.6 كغ', useCase: 'نفط وغاز وبتروكيماويات — Ex Zone 1/2 · ضمان الحساس سنة والإلكترونيات سنتان', badge: '0–100% LEL' },
       { title: 'PQ Series — SIL2 / SIL3', desc: 'الأكثر مبيعاً بين الكواشف الثابتة — شهادة SIL للبتروكيماويات والمصافي', useCase: 'H2S، LEL، O2 — بيئة Ex ومشاريع SIS', badge: 'SIL' },
       { title: 'SafeVader Series', desc: 'كاشف للمنطقة الآمنة الداخلية — LCD ومخرج 4–20 mA وModbus وريليه. للمختبرات والمستشفيات وHVAC وغازات التبريد وغرف الهيدروجين — ليس كاشف Ex/SIL للعملية.', useCase: 'مناطق داخلية غير Ex · مختبرات وHVAC ومستشفيات وشحن بطاريات', badge: 'منطقة آمنة' },
       { title: 'Marine & Offshore', desc: 'شهادة بحرية — أنظمة H2S وCH4 للسفن والمنصات', useCase: 'بناء سفن ومنصات بحرية وموانئ', badge: 'Marine' },

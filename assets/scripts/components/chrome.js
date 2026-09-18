@@ -729,6 +729,8 @@
             <div class="header__actions">
               ${langSwitcherHtml()}
               <a href="${wa}" class="btn btn--primary nav__cta"
+                 data-i18n="common.freeConsult"
+                 data-i18n-aria="common.freeConsultWa"
                  aria-label="${t('common.freeConsultWa', 'مشاوره رایگان در واتساپ')}"
                  ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''}>${t('common.freeConsult', 'مشاوره رایگان')}</a>
             </div>
@@ -783,6 +785,8 @@
             </div>
           </div>
           <a href="${wa}" class="btn btn--yellow mobile-drawer__cta"
+             data-i18n="common.freeConsult"
+             data-i18n-aria="common.freeConsultWa"
              aria-label="${t('common.freeConsultWa', 'مشاوره رایگان در واتساپ')}"
              ${C.contact.whatsapp ? 'target="_blank" rel="noopener noreferrer"' : ''}>${t('common.freeConsult', 'مشاوره رایگان')}</a>
         </aside>`;

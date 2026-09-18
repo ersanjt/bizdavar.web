@@ -157,13 +157,21 @@
   var onPrefixedLocale = LU && pathLocale && pathLocale !== LU.DEFAULT;
   var stored = localStorage.getItem('bizdavar_locale');
   var manual = localStorage.getItem('bizdavar_locale_manual');
-  var geoCached = sessionStorage.getItem('bizdavar_geo_locale');
 
-  var lang = (onPrefixedLocale ? pathLocale : null)
-    || ((q && valid(q)) ? q
-    : (stored && valid(stored) && manual === '1') ? stored
-    : (geoCached && valid(geoCached)) ? geoCached
-    : hintFromNavigator());
+  // Prefixed URL is the language. Unprefixed is always Persian — never overlay TR/EN/RU/AR on /pages/*.
+  if (onPrefixedLocale) {
+    var lang = pathLocale;
+  } else if (stored && valid(stored) && manual === '1' && stored !== 'fa' && LU) {
+    var bounce = LU.toLocalePath(stored, LU.currentPagePath());
+    var bouncePath = bounce.split('#')[0];
+    if (window.location.pathname !== bouncePath) {
+      window.location.replace(bounce + window.location.hash);
+      return;
+    }
+    var lang = stored;
+  } else {
+    var lang = 'fa';
+  }
 
   if (!lang) lang = 'fa';
 

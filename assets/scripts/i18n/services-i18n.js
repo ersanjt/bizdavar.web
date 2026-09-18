@@ -1141,8 +1141,8 @@
     fa: {
       hero: {
         tag: 'خدمات ما',
-        title: 'طراحی سایت و خدمات دیجیتال برای اروپا و آمریکا',
-        desc: 'سایت انگلیسی، وب‌اپ و کمپین بازاریابی با فاکتور <strong>دلار یا یورو</strong> — به‌همراه اپ، سرور، SMM و خدمات فنی در تبریز. پلن سریع از <a href="fast">۹۹ دلار / حدود ۹۰ یورو</a>. محصولات در <a href="products">صفحه محصولات</a>.',
+        title: 'خدمات دیجیتال و فنی برای کسب‌وکار ایران',
+        desc: 'سایت، بازاریابی و نرم‌افزار — به‌همراه خدمات فنی تبریز. اگر بازار آمریکا و اروپا دارید، فاکتور دلار یا یورو هم می‌دهیم. پلن سریع از <a href="fast">۹۹ دلار</a>. محصولات در <a href="products">صفحه محصولات</a>.',
         ctaPrimary: 'مشاوره طراحی سایت',
         ctaWeb: 'پلن‌های سایت از ۹۹ دلار',
         ctaField: 'واتساپ خدمات فنی'
@@ -1202,8 +1202,8 @@
     tr: {
       hero: {
         tag: 'Hizmetlerimiz',
-        title: 'Avrupa ve ABD için web tasarım ve dijital hizmetler',
-        desc: 'İngilizce site, web app ve pazarlama kampanyası — fatura <strong>USD veya EUR</strong>. Ayrıca uygulama, sunucu, SMM ve Tebriz teknik hizmetleri. Hızlı plan: <a href="fast">$99 / ~€90</a>. Ürünler <a href="products">ürünler sayfasında</a>.',
+        title: 'Türkiye için web, pazarlama ve teknik hizmetler',
+        desc: 'İstanbul ve Türkiye pazarı için site, SMM ve yazılım — artı Tebriz saha hizmetleri. ABD/AB işi için fatura USD veya EUR. Hızlı plan: <a href="fast">$99</a>. Ürünler <a href="products">ürünler sayfasında</a>.',
         ctaPrimary: 'Web tasarım danışmanlığı',
         ctaWeb: 'Siteler $99’dan',
         ctaField: 'Teknik WhatsApp'
@@ -1382,18 +1382,18 @@
   const intlHero = {
     ru: {
       tag: 'Наши услуги',
-      title: 'Веб-дизайн и цифровые услуги для клиентов в США и ЕС',
-      desc: 'Английские сайты, web app и кампании роста со счётом в <strong>USD или EUR</strong> — плюс приложения, серверы, SMM и монтаж в Тебризе. Быстрые сайты от <a href="fast">$99 / ~€90</a>. Продукты — на <a href="products">странице продуктов</a>.',
-      ctaPrimary: 'Запросить оценку сайта',
+      title: 'Цифровые и технические услуги на русском',
+      desc: 'Сайты, маркетинг и FXGuard — плюс поставки VEGA и Prosense. Счёт в USD или EUR, консультация на русском. Быстрые сайты от <a href="fast">$99</a>. Продукты — на <a href="products">странице продуктов</a>.',
+      ctaPrimary: 'Получить консультацию',
       ctaWeb: 'Сайт за 5 дней от $99',
       ctaField: 'Технический WhatsApp'
     },
     ar: {
       tag: 'خدماتنا',
-      title: 'تصميم مواقع وخدمات رقمية لعملاء أمريكا وأوروبا',
-      desc: 'مواقع إنجليزية وويب آب وحملات نمو بفاتورة <strong>USD أو EUR</strong> — مع تطبيقات وخوادم وSMM وتركيبات في تبريز. مواقع سريعة من <a href="fast">$99 / ~€90</a>. المنتجات في <a href="products">صفحة المنتجات</a>.',
-      ctaPrimary: 'اطلب عرض تصميم موقع',
-      ctaWeb: 'مواقع خلال ٥ أيام من ٩٩$',
+      title: 'خدمات رقمية وفنية بالعربية',
+      desc: 'مواقع وتسويق وFXGuard — مع توريد VEGA وProsense. فاتورة بالدولار أو اليورو واستشارة عربية. مواقع سريعة من <a href="fast">٩٩$</a>. المنتجات في <a href="products">صفحة المنتجات</a>.',
+      ctaPrimary: 'اطلب استشارة',
+      ctaWeb: 'موقع خلال ٥ أيام من ٩٩$',
       ctaField: 'واتساب فني'
     }
   };

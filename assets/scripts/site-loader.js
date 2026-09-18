@@ -14,7 +14,7 @@
   if (!el) return;
 
   var BASE = '/assets/scripts/';
-  var ASSET_VER = '20260910c';
+  var ASSET_VER = '20260918c';
 
   // Inline page boots run before deferred chain scripts; queue until bootstrap.js.
   window.bizdavarPageInit = window.bizdavarPageInit || function (fn) {
@@ -40,18 +40,25 @@
     else afterPageI18n.push(p);
   });
 
+  function localeFromPath() {
+    var path = '';
+    try { path = String(location.pathname || ''); } catch (_) {}
+    var first = path.replace(/^\/+/, '').split('/')[0];
+    if (first === 'tr' || first === 'en' || first === 'ru' || first === 'ar') return first;
+    return '';
+  }
   var loc = (window.BIZDAVAR_LOCALE_URL && window.BIZDAVAR_LOCALE_URL.currentLocale)
     ? window.BIZDAVAR_LOCALE_URL.currentLocale()
-    : String(document.documentElement.lang || 'fa').slice(0, 2).toLowerCase();
+    : (localeFromPath() || String(document.documentElement.lang || 'fa').slice(0, 2).toLowerCase());
   var isArticle = document.body && (
     document.body.getAttribute('data-page') === 'article' ||
     document.body.getAttribute('data-article')
   );
   var i18nPacks = [
     'i18n/locales-pages.js',
-    'i18n/locale-seo.js'
+    'i18n/locale-seo.js',
+    'i18n/locales-ru-ar.js'
   ];
-  if (loc === 'ru' || loc === 'ar') i18nPacks.push('i18n/locales-ru-ar.js');
   if (isArticle) {
     i18nPacks.push('i18n/articles-body-i18n.js');
     if (loc === 'ru' || loc === 'ar') i18nPacks.push('i18n/articles-body-ru-ar.js');

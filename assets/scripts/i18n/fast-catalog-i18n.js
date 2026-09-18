@@ -4,15 +4,18 @@
 (function () {
   const N = 'https://netinode.net/';
   const SHOP = 'https://shop.netinode.net/';
+  const HOST = 'https://netinohost.com/';
   const ni = (label, toShop) => `<a href="${toShop ? SHOP : N}" target="_blank" rel="noopener noreferrer">${label}</a>`;
+  const shop = (label) => ni(label, true);
+  const nh = (label) => `<a href="${HOST}" target="_blank" rel="noopener noreferrer">${label}</a>`;
   const niPair = (shopLabel, siteLabel) => `${ni(shopLabel, true)} · ${ni(siteLabel || 'netinode.net', false)}`;
 
   const en = {
     brand: {
       eyebrow: 'Exclusive Bizdavar Group product',
       headline: 'Professional website design in 5 days',
-      subtitle: 'Go live this week — fast, professional, specialized — from landing to store and web app',
-      description: 'Fast Web Studio delivers rapid RTL websites with Vazirmatn, contact forms, WhatsApp, basic SEO and multilingual support. When you need panels or apps, the same Bizdavar team continues on the custom track.'
+      subtitle: 'Go live this week — invoice in USD or EUR, from $99 / ~€90',
+      description: 'Fast Web Studio builds English LTR sites for US and EU companies: Stripe/PayPal, lead form, Zoom/Meet and GDPR-aware hosting via Netinode. When you need a custom panel or app, the same Bizdavar team continues.'
     },
     trustSignals: [
       { label: '5-day delivery', desc: 'Daily milestones on Zoom, Meet or WhatsApp' },
@@ -145,19 +148,19 @@
     brand: {
       eyebrow: 'Bizdavar Group özel ürünü',
       headline: '5 günde profesyonel web sitesi',
-      subtitle: 'Bu hafta yayına geç — hızlı, profesyonel, uzman — landing’den mağaza ve web app’e',
-      description: 'Fast Web Studio; Vazirmatn, iletişim formu, WhatsApp, temel SEO ve çok dilli destekle hızlı RTL site kurar. Panel veya uygulama gerektiğinde aynı Bizdavar ekibi özel yolda devam eder.'
+      subtitle: 'Bu hafta yayına geç — İstanbul ekibi, Türkçe destek, $99’dan',
+      description: 'Fast Web Studio Türkiye işletmeleri için kurumsal site, mağaza veya landing teslim eder: form, WhatsApp, temel SEO ve Netinode hosting. Panel veya uygulama gerektiğinde aynı Bizdavar ekibi devam eder.'
     },
     trustSignals: [
       { label: '5 günde teslim', desc: 'Günlük kilometre Zoom, Meet veya WhatsApp’ta' },
       { label: '$99 / ~€90’dan', desc: 'Temel plan — fatura USD veya EUR' },
-      { label: 'ABD ve AB hazır', desc: 'İngilizce LTR, Stripe ve CET/EST örtüşmesi' },
+      { label: 'Türkiye ve bölge', desc: 'Türkçe site, WhatsApp ve İstanbul desteği' },
       { label: 'GDPR hosting', desc: 'Uluslararası altyapı Netinode üzerinden' }
     ],
     plans: [
       {
         name: 'Temel plan',
-        subtitle: 'ABD/AB startup ve yeni işletmeler',
+        subtitle: 'Türkiye startup ve yeni işletmeler',
         features: [
           'Tek sayfalık kurumsal site',
           'Mobil uyumlu tasarım',
@@ -282,19 +285,19 @@
       window.BIZDAVAR_LOCALES.ru.fastCatalog = Object.assign({}, en, {
         brand: {
           eyebrow: 'Эксклюзивный продукт Bizdavar Group',
-          headline: 'Английские сайты для США и ЕС за 5 дней',
+          headline: 'Сайт за 5 дней — на русском или английском',
           subtitle: 'Онлайн на этой неделе — счёт в USD или EUR, от $99 / ~€90',
-          description: 'Fast Web Studio сдаёт английские LTR-сайты со Stripe/PayPal, формой, Zoom/Meet и хостингом с учётом GDPR через Netinode — для стартапов, SMB и агентств в США и Европе. Персидский/RTL и турецкий остаются дополнительными языками.'
+          description: 'Fast Web Studio сдаёт сайты для компаний СНГ и русскоязычных команд: русский или английский, форма, Zoom/Meet, WhatsApp и хостинг через Netinode. Счёт в USD или EUR — от $99.'
         },
         trustSignals: [
           { label: 'Сдача за 5 дней', desc: 'Ежедневные этапы в Zoom, Meet или WhatsApp' },
           { label: 'От $99 / ~€90', desc: 'Базовый план — счёт в USD или EUR' },
-          { label: 'США и ЕС', desc: 'Английский LTR, Stripe и перекрытие CET/EST' },
+          { label: 'СНГ и русскоязычные', desc: 'Русский или английский, Zoom и WhatsApp' },
           { label: 'Хостинг GDPR', desc: 'Международный стек через Netinode' }
         ],
         audiences: [
-          { title: 'Стартапы и SaaS США', desc: 'Английская одностраничка, форма и Stripe — запуск на этой неделе, счёт в USD.' },
-          { title: 'SMB ЕС', desc: 'Корпоративный сайт на английском (плюс локальный язык при необходимости), счёт в EUR, хостинг Netinode.' },
+          { title: 'Компании СНГ', desc: 'Сайт на русском или английском, форма и Zoom — запуск на этой неделе, счёт в USD или EUR.' },
+          { title: 'Русскоязычный SMB', desc: 'Корпоративный сайт, счёт в USD или EUR, хостинг Netinode.' },
           { title: 'Магазины в долларах или евро', desc: 'WooCommerce, стартовые товары и оплата Stripe/PayPal.' },
           { title: 'Агентства без свободной ёмкости', desc: 'White-label или совместный бренд за 5 дней, когда студия заполнена.' },
           { title: 'Хостинг, SaaS и платформы', desc: 'Хостинг, VPS или панели — как netinohost.com; Fast или индивидуальный дизайн Bizdavar.' }
@@ -333,19 +336,19 @@
       window.BIZDAVAR_LOCALES.ar.fastCatalog = Object.assign({}, en, {
         brand: {
           eyebrow: 'منتج حصري لـ Bizdavar Group',
-          headline: 'مواقع إنجليزية لأمريكا وأوروبا خلال ٥ أيام',
-          subtitle: 'أونلاين هذا الأسبوع — فاتورة USD أو EUR من ٩٩$ / ~€90',
-          description: 'Fast Web Studio يبني مواقع إنجليزية LTR مع Stripe/PayPal ونموذج وZoom/Meet واستضافة تراعي GDPR عبر Netinode — للشركات الناشئة وSMB والوكالات في أمريكا وأوروبا. الفارسية/RTL والتركية لغات إضافية.'
+          headline: 'موقع احترافي خلال ٥ أيام — بالعربية أو الإنجليزية',
+          subtitle: 'أونلاين هذا الأسبوع — فاتورة بالدولار أو اليورو من ٩٩$ / ~€90',
+          description: 'Fast Web Studio يبني مواقع لشركات الخليج والمنطقة: عربية أو إنجليزية، نموذج وZoom/Meet وواتساب واستضافة عبر Netinode. فاتورة بالدولار أو اليورو من ٩٩$.'
         },
         trustSignals: [
           { label: 'تسليم خلال ٥ أيام', desc: 'محطات يومية على Zoom أو Meet أو واتساب' },
           { label: 'من $99 / ~€90', desc: 'الخطة الأساسية — فاتورة USD أو EUR' },
-          { label: 'أمريكا وأوروبا', desc: 'إنجليزي LTR وStripe وتداخل CET/EST' },
+          { label: 'الخليج والمنطقة', desc: 'عربية أو إنجليزية، Zoom وواتساب' },
           { label: 'استضافة GDPR', desc: 'بنية دولية عبر Netinode' }
         ],
         audiences: [
-          { title: 'شركات ناشئة وSaaS أمريكية', desc: 'صفحة إنجليزية واحدة ونموذج وStripe — أونلاين هذا الأسبوع بفاتورة USD.' },
-          { title: 'شركات صغيرة أوروبية', desc: 'موقع شركة بالإنجليزية (ولغة محلية عند الحاجة) وفاتورة EUR واستضافة Netinode.' },
+          { title: 'شركات الخليج', desc: 'موقع بالعربية أو الإنجليزية ونموذج وZoom — أونلاين هذا الأسبوع بفاتورة دولار.' },
+          { title: 'شركات صغيرة في المنطقة', desc: 'موقع شركة وفاتورة بالدولار أو اليورو واستضافة Netinode.' },
           { title: 'متاجر بالدولار أو اليورو', desc: 'WooCommerce ومنتجات أولية ودفع Stripe/PayPal.' },
           { title: 'وكالات بلا سعة', desc: 'تسليم ٥ أيام بعلامتكم أو بيزدوار عندما يمتلئ الاستوديو.' },
           { title: 'استضافة وSaaS ومنصات', desc: 'استضافة أو VPS أو لوحات — مثل netinohost.com؛ Fast أو تصميم مخصص من Bizdavar.' }

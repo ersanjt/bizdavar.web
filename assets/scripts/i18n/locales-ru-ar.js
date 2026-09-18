@@ -659,7 +659,7 @@
     formSending: 'Отправка…',
     formSuccess: 'Сообщение отправлено. Мы свяжемся с вами в ближайшее время.',
     formError: 'Ошибка отправки. Повторите попытку или напишите на info@bizdavar.com.',
-    geoText: 'Консультация из офисов в Иране, Турции, Армении и Дубае — WhatsApp на персидском и турецком.',
+    geoText: 'Консультация на русском из Стамбула и Дубая — Zoom/Meet или WhatsApp. Счёт в USD или EUR.',
     waTr: 'WhatsApp Турция',
     waIr: 'WhatsApp персидский'
   };
@@ -694,7 +694,7 @@
     formSending: 'جارٍ الإرسال…',
     formSuccess: 'تم إرسال رسالتك بنجاح. سنتواصل معك قريباً.',
     formError: 'فشل الإرسال. حاول مرة أخرى أو راسل info@bizdavar.com.',
-    geoText: 'استشارة من مكاتب إيران وتركيا وأرمينيا ودبي — واتساب بالفارسية والتركية.',
+    geoText: 'استشارة بالعربية من دبي وإسطنبول — Zoom/Meet أو واتساب. فاتورة بالدولار أو اليورو.',
     waTr: 'واتساب تركيا',
     waIr: 'واتساب فارسي'
   };
@@ -732,7 +732,7 @@
     svcServerImgAlt: 'Управление серверами и инфраструктурой',
     svcFieldImgAlt: 'Камеры и электрика в Тебризе',
     fastImgAlt: 'Английский сайт за пять рабочих дней',
-    intentNavLabel: 'Быстрая покупка для Ирана',
+    intentNavLabel: 'Быстрый запрос поставки',
     intentVega: 'Купить VEGA',
     intentProsense: 'Детектор Prosense',
     intentLiqui: 'Liqui Moly',
@@ -795,8 +795,8 @@
     blogTitle: 'Последние статьи',
     blogAll: 'Все материалы блога',
     faqTitle: 'Частые вопросы',
-    ctaTitle: 'Нужен английский сайт или реклама в USD/EUR?',
-    ctaDesc: 'Форма расчёта или Zoom/Meet — валюту фиксируем письменно. Поставки в Иран — по WhatsApp.',
+    ctaTitle: 'Нужен сайт, FXGuard или поставка VEGA?',
+    ctaDesc: 'Консультация на русском — форма, Zoom/Meet или WhatsApp. Счёт в USD или EUR.',
     ctaForm: 'Запросить расчёт',
     faqs: [
       { q: 'С какого года работает Bizdavar Group?', a: 'С 2013 года, основатель — Эрсан Джахед Табризи. Более 100 проектов в 11 странах.' },
@@ -840,7 +840,7 @@
     svcServerImgAlt: 'إدارة الخوادم والبنية التحتية',
     svcFieldImgAlt: 'كاميرات وتمديدات في تبريز',
     fastImgAlt: 'موقع إنجليزي خلال خمسة أيام عمل',
-    intentNavLabel: 'شراء سريع لإيران',
+    intentNavLabel: 'طلب توريد سريع',
     intentVega: 'شراء VEGA',
     intentProsense: 'كاشف Prosense',
     intentLiqui: 'Liqui Moly',
@@ -903,8 +903,8 @@
     blogTitle: 'أحدث المقالات',
     blogAll: 'كل مقالات المدونة',
     faqTitle: 'الأسئلة الشائعة',
-    ctaTitle: 'تحتاج موقعاً إنجليزياً أو إعلانات بفاتورة USD/EUR؟',
-    ctaDesc: 'نموذج العرض أو Zoom/Meet — نثبّت العملة كتابياً. توريد إيران ما زال عبر واتساب.',
+    ctaTitle: 'تحتاج موقعاً أو FXGuard أو توريد VEGA؟',
+    ctaDesc: 'استشارة بالعربية — النموذج أو Zoom/Meet أو واتساب. الفاتورة بالدولار أو اليورو.',
     ctaForm: 'طلب عرض سعر',
     faqs: [
       { q: 'منذ متى تعمل مجموعة Bizdavar؟', a: 'منذ ٢٠١٣، أسسها إرسان جاهد تبريزي — أكثر من ١٠٠ مشروع في ١١ دولة.' },
@@ -1649,8 +1649,19 @@
     details: 'Подробности',
     view: 'Смотреть',
     articleLocaleNote: 'Статья отображается на выбранном языке.',
+    closeMenu: 'Закрыть меню',
+    openMenu: 'Открыть или закрыть меню',
+    mobileNav: 'Мобильное меню',
+    bottomNav: 'Нижняя навигация',
+    openDrawer: 'Открыть меню',
+    guidesTitle: 'Прочитайте перед запросом',
+    guidesDesc: 'Гайды для закупки — код заказа, чек-лист и WhatsApp.',
+    guideBuyProsense: 'Купить детектор Prosense',
+    guideBuyProsenseDesc: 'PQ, SafeVader и SIL',
     offerMap: {
-      productsDesc: 'WhatsApp CRM, FXGuard Accounting и BizSwap'
+      servicesDesc: 'Сайты от $99, маркетинг, приложения и техуслуги — консультация на русском',
+      productsDesc: 'WhatsApp CRM, FXGuard Accounting и BizSwap',
+      supplyDesc: 'VEGA, Prosense, Liqui Moly и Teltonika — проформа в USD/EUR из Стамбула'
     }
   }));
   deepMerge(ru.nav, {
@@ -1668,7 +1679,7 @@
     serviceDigital: 'Цифровой маркетинг',
     serviceDigitalDesc: 'Кампании, SEO и CRO',
     serviceWeb: 'Веб и web app',
-    serviceWebDesc: 'Сайты, магазины и Fast Studio',
+    serviceWebDesc: 'Сайты для СНГ от $99 — русский или английский',
     serviceApps: 'Приложения и системы',
     serviceAppsDesc: 'Android, iOS и панели',
     serviceServer: 'Управление серверами',
@@ -1681,10 +1692,59 @@
     productsSupplyDesc: 'Консультация, подбор модели и проформа',
     productsSupplyLink: 'Промышленные бренды',
     productsHardware: 'Достижения и производство',
-    productsMegaHint: 'ПО и SaaS Bizdavar'
+    productsMegaHint: 'ПО и SaaS Bizdavar',
+    servicesMegaHint: 'Выездные услуги Bizdavar',
+    servicesConsult: 'Консультация по услугам',
+    servicesConsultDesc: 'Форма и WhatsApp',
+    tabServicesDigital: 'Цифра и ПО',
+    tabServicesField: 'Технические услуги',
+    servicesGroupGrowth: 'Рост и маркетинг',
+    servicesGroupBuild: 'Разработка и инфраструктура',
+    servicesGroupField: 'Выездные работы',
+    serviceFieldBadge: 'Выезд',
+    tabOwned: 'Продукты Bizdavar',
+    tabLines: 'Линии и каталог',
+    tabBrands: 'Промышленные бренды',
+    productsLines: 'Производственные линии',
+    productsSoftware: 'ПО и SaaS',
+    productsQuote: 'Запросить цену',
+    brandGroupSensing: 'Датчики и безопасность',
+    brandGroupTelematics: 'Флот и трекинг',
+    brandGroupPower: 'Моторы и авто',
+    brandGroupRetail: 'Ритейл и весы',
+    brandVegaDesc: 'Датчики уровня и давления',
+    brandUwtDesc: 'Датчики уровня силоса',
+    brandProsenseDesc: 'Газовые и пламенные детекторы',
+    brandTeltonikaDesc: 'GPS и телематика флота',
+    brandTeltonikaBadge: 'От $29',
+    brandGamakDesc: 'Промышленные электродвигатели',
+    brandLiquiDesc: 'Масла и присадки',
+    brandDigiDesc: 'POS и торговое оборудование',
+    brandTeraokaDesc: 'Весы и этикетки',
+    productFxguard: 'WhatsApp CRM',
+    productFxguardDesc: 'Общий inbox · от $49/мес',
+    productFxguardAccounting: 'Бухгалтерия',
+    productFxguardAccountingDesc: 'Финансовый учёт · FXGuard',
+    productBizswap: 'BizSwap',
+    productBizswapDesc: 'Пресейл и своп токена',
+    productBiztab: 'BizTab',
+    productBiztabDesc: 'Бесконтактный IoT-термометр',
+    productBizpad: 'BizPad',
+    productBizpadDesc: 'Нагревательный мат BizPad',
+    productBizclean: 'BizClean',
+    productBizcleanDesc: 'Автоматический санитайзер',
+    productPackaging: 'Упаковка и запайка',
+    productPackagingDesc: 'Запайщики и упаковочные линии',
+    productMedical: 'Медицина и СИЗ',
+    productMedicalDesc: 'Линии масок и грелок',
+    customWebApp: 'Веб и приложения на заказ',
+    fastDesc: 'Сайт с фиксированной ценой за 5 дней',
+    customWebAppDesc: 'Web app, панели и заказные приложения',
+    portfolioShort: 'Работы',
+    site: 'Сайт'
   });
   deepMerge(ru.footer, {
-    tagline: 'Цифровые услуги, веб-дизайн, онлайн-маркетинг и промышленные поставки.',
+    tagline: 'Цифровые услуги и промышленные поставки для русскоязычного рынка — консультация на русском, счёт в USD или EUR.',
     services: 'Услуги',
     quickLinks: 'Быстрые ссылки',
     brands: 'Бренды',
@@ -1701,7 +1761,13 @@
     serverOps: 'Управление серверами',
     fieldTech: 'Технические услуги',
     industrialShort: 'Промышленность',
-    hq: 'Многоязычная поддержка'
+    customWebApp: 'Веб и приложения на заказ',
+    instagram: 'Instagram',
+    linkedin: 'LinkedIn',
+    connectShort: 'Связь',
+    followUs: 'Мы в соцсетях',
+    legal: 'Правовая информация',
+    hq: 'Офисы: Иран · Турция · Армения · Дубай'
   });
   deepMerge(ru.services, {
     digitalMarketing: 'Цифровой маркетинг',
@@ -1715,7 +1781,105 @@
   deepMerge(ru.supplyBrand, supplyBrandRu);
   deepMerge(ru.home, homeRu);
   deepMerge(ru, homeSectionsRu);
+  deepMerge(ru.aboutPage || {}, {
+    hero: {
+      tag: 'О Bizdavar',
+      title: 'Партнёр роста в цифре и промышленности',
+      desc: 'С 2013 — 100+ проектов в 11 странах · маркетинг, веб, финтех и промышленные поставки'
+    },
+    whatIs: {
+      title: 'Что такое Bizdavar Group?',
+      p1: 'Bizdavar Group — цифровое агентство и B2B-поставщик, основанный в 2013 году <strong>Эрсаном Джахедом Табризи</strong>. Цифровые услуги: <a href="services#digital-marketing">маркетинг</a>, <a href="fast">веб-дизайн</a>, финтех и SMM. ПО вроде FXGuard и BizSwap плюс <a href="products#supply">промышленные бренды</a> — на странице продуктов.',
+      p2: '100+ веб-проектов в 11 странах — от сайтов до поставок VEGA. Инфраструктура, домены, хостинг и SSL тоже наши. <a href="portfolio">Портфолио</a>'
+    },
+    features: ['Цифровой маркетинг', 'Профессиональный веб', 'Поставки оборудования', 'Инфраструктура'],
+    sections: {
+      identityTitle: 'Bizdavar Group кратко',
+      leadershipTitle: 'Основатель и команда',
+      activitiesTitle: 'Направления экспертизы',
+      ecosystemTitle: 'Смежные бренды и проекты',
+      presenceTitle: 'Страны присутствия',
+      exhibitionsTitle: 'Выставки и события',
+      achievementsTitle: 'Продукты и инновации Bizdavar',
+      sourcesTitle: 'Источники и ссылки',
+      credentialsTitle: 'Подтверждённые навыки',
+      proofTitle: 'Индикаторы доверия',
+      faqTitle: 'Частые вопросы о Bizdavar'
+    },
+    relatedLinks: [
+      { title: 'Услуги', url: 'services', desc: 'Маркетинг, веб, SMM и промышленность' },
+      { title: 'Портфолио', url: 'portfolio', desc: 'Кейсы и бренды' },
+      { title: 'Контакты', url: 'contact', desc: 'Бесплатная консультация' }
+    ],
+    cta: {
+      title: 'Готовы работать с Bizdavar?',
+      desc: 'Первая консультация бесплатна — <a href="contact" class="link-yellow">форма</a> или WhatsApp.',
+      btn: 'Связаться'
+    }
+  });
+  deepMerge(ru.fastPage || {}, {
+    hero: {
+      title: 'Сайт за 5 дней — на русском или английском'
+    },
+    ui: {
+      statDays: '5 дней', statDaysLabel: 'Стандартная сдача',
+      statPrice: '$99', statPriceLabel: 'Стартовая цена',
+      statProjects: '100+', statProjectsLabel: 'проектов Bizdavar',
+      viewPlans: 'Смотреть тарифы', consultWa: 'WhatsApp или Zoom',
+      btnDevConsult: 'Заказная разработка — свяжитесь с нами',
+      navPlans: 'Тарифы', navCompare: 'Сравнение', navTimeline: '5 дней', navShowcase: 'Примеры', navFaq: 'FAQ',
+      navSpeed: 'Скорость', navScope: 'Услуги', navWhy: 'Почему Fast', navGuides: 'Гайды', btnCustomApp: 'Веб и приложения на заказ', readGuide: 'Читать',
+      oneTime: 'Разовый платёж', orderWa: 'Заказ в WhatsApp', orContact: 'или форма',
+      compareFeature: 'Возможности', compareBasic: 'Базовый', compareStore: 'Магазин', comparePro: 'Pro',
+      viewCase: 'Смотреть', navAria: 'Разделы Fast Web Studio',
+      saveOff: 'скидка {n}% на запуск'
+    },
+    sections: {
+      for: { eyebrow: 'Кому подходит', title: 'Кому подходит Fast Web Studio?', desc: 'Компании СНГ и русскоязычные команды: корпоративный сайт, магазин или лендинг на русском или английском.' },
+      speed: { eyebrow: 'Скорость', title: 'Как мы работаем быстро и предметно?', desc: 'Ежедневный план, современный дизайн и путь к web app.' },
+      scope: { eyebrow: 'Объём', title: 'Сайт, магазин, web app и приложения', desc: 'Начните с фиксированного тарифа Fast; заказной проект — на <a href="custom-web-app">странице веб и приложений</a>.' },
+      deliverables: { eyebrow: 'Результат', title: 'Что вы реально получаете?', desc: 'Сайт, готовый к лидам и продажам — не пустой шаблон.' },
+      guides: { eyebrow: 'Гайды', title: 'Материалы по вебу и приложениям', desc: 'Прочитайте перед заказом — или откройте <a href="blog">блог</a>.' },
+      plans: { eyebrow: 'Тарифы', title: 'Выберите план под задачу', desc: 'Фиксированная цена — заказ в WhatsApp или через <a href="contact">форму</a>.' },
+      compare: { eyebrow: 'Сравнение', title: 'Что входит в каждый план?', desc: 'Сверьте таблицу или спросите в WhatsApp.' },
+      timeline: { eyebrow: 'Путь сдачи', title: '5 дней до запуска — по шагам', desc: 'У каждого дня есть цель — прогресс в Zoom, Meet или WhatsApp.' },
+      why: { eyebrow: 'Почему Fast?', title: 'Почему Fast Web Studio?' },
+      showcase: { eyebrow: 'Примеры', title: 'Сайты, сделанные с Bizdavar' },
+      faq: { eyebrow: 'FAQ', title: 'Вопросы перед заказом' }
+    },
+    cta: {
+      title: 'Готовы запустить сайт?',
+      desc: 'Форма, Zoom/Meet или WhatsApp — счёт в USD или EUR от $99.',
+      btnWa: 'Начать в WhatsApp',
+      btnForm: 'Форма контакта'
+    },
+    relatedLinks: [
+      { title: 'Статья Fast Studio', url: 'articles/fast-studio', desc: 'Как заказать' },
+      { title: 'Чек-лист 5 дней', url: 'articles/website-speed-5-days', desc: 'Подготовка контента' },
+      { title: 'Веб и приложения на заказ', url: 'custom-web-app', desc: 'Индивидуальный проект' },
+      { title: 'Портфолио', url: 'portfolio', desc: 'Проекты Bizdavar' }
+    ]
+  });
   deepMerge(ru.productsPage || {}, {
+    crumb: 'Продукты Bizdavar',
+    hero: {
+      tag: 'Продукты и промышленные бренды',
+      title: 'Продукты Bizdavar и поставки VEGA, Prosense',
+      desc: 'WhatsApp CRM и сайты — плюс датчики VEGA, детекторы Prosense, Liqui Moly и Teltonika. Консультация на русском.',
+      ctaLive: 'Живые продукты',
+      ctaCatalog: 'Полный каталог',
+      ctaSupply: 'Промышленные бренды',
+      ctaContact: 'Запросить продукт'
+    },
+    pillars: {
+      eyebrow: 'Четыре оси',
+      title: 'От ПО до производственных линий',
+      desc: 'Собственные продукты Bizdavar в четырёх категориях — выберите ось.'
+    },
+    intro: {
+      title: 'Что мы делаем',
+      body: 'Сегодня приоритет — <strong>промпоставки, сайты, маркетинг и SaaS</strong> вроде FXGuard. Ранее сделанное железо — в достижениях компании.'
+    },
     featured: {
       desc: 'WhatsApp CRM, Accounting и BizSwap — к заказу. Нагревательный мат и BizTab — в достижениях и полном каталоге.'
     },
@@ -1857,10 +2021,10 @@
   deepMerge(ru.contactPage || {}, contactPageRu);
   if (ru.contact) {
     ru.contact.whatsappMessage = 'Здравствуйте, пишу с сайта bizdavar.com.';
-    ru.contact.channelIr = 'WhatsApp';
-    ru.contact.channelTr = 'WhatsApp продажи';
+    ru.contact.channelIr = 'WhatsApp Иран';
+    ru.contact.channelTr = 'WhatsApp Турция';
     ru.contact.channelField = 'Технические услуги';
-    ru.contact.address = 'Тебриз';
+    ru.contact.address = 'Офисы: Иран · Турция · Армения · Дубай';
     ru.contact.workingHours = '24/7 — всегда на связи';
   }
   ru.contactPage = Object.assign({}, ru.contactPage || {}, {
@@ -1868,8 +2032,8 @@
     websites: 'Сайты',
     title: 'Контакты',
     mapImgAlt: 'Международное сотрудничество — Bizdavar Group',
-    heroTitle: 'Расчёт сайта в USD или EUR — Zoom, Meet или форма',
-    heroDesc: 'Английские сайты и реклама для США и ЕС: форма и Zoom/Meet, счёт в долларах или евро. VEGA/Prosense для Ирана быстрее в WhatsApp — модель, количество и фото шильдика.',
+    heroTitle: 'Консультация на русском — сайт, CRM или поставка',
+    heroDesc: 'Для компаний СНГ и русскоязычных команд: сайт, WhatsApp CRM или датчики VEGA/Prosense. Форма, Zoom/Meet или WhatsApp. Счёт в USD или EUR.',
     formTitle: 'Форма заявки',
     formDesc: 'Имя и WhatsApp обязательны. Email по желанию.',
     subtitle: 'Заполните форму или напишите в WhatsApp — ответ в рабочие часы',
@@ -1895,14 +2059,14 @@
     formSuccess: 'Сообщение отправлено. Мы свяжемся с вами в ближайшее время.',
     formSuccessMailto: 'Сообщение готово к отправке. Если окно почты не открылось, напишите на info@bizdavar.com.',
     formSuccessWhatsapp: 'Сообщение готово для WhatsApp. Если окно не открылось, используйте кнопки WhatsApp на этой странице.',
-    geoText: 'Перекрытие CET/EST — Zoom/Meet, счёт USD или EUR. Поставки в Иран через WhatsApp.',
+    geoText: 'Консультация на русском из Стамбула — Zoom/Meet или WhatsApp. Счёт в USD или EUR. Поставки в СНГ и на Ближний Восток.',
     formError: 'Отправка не удалась. Повторите попытку или напишите на info@bizdavar.com.',
-    waTr: 'WhatsApp продажи',
-    waIr: 'WhatsApp (фарси)',
+    waTr: 'WhatsApp Турция',
+    waIr: 'WhatsApp Иран',
     mapTitle: 'Международное сотрудничество',
-    mapDesc: 'Bizdavar Group работает с цифровыми и промышленными проектами в Иране, Турции и на международных рынках.',
+    mapDesc: 'Русскоязычная поддержка для СНГ: сайты, маркетинг и промышленные поставки из Стамбула и Дубая.',
     optDm: 'Цифровой маркетинг',
-    optWeb: 'Английский сайт (USD / EUR)',
+    optWeb: 'Сайт на русском или английском (USD / EUR)',
     optFast: 'Fast Web Studio — от $99',
     optApps: 'Приложения и системы',
     optServer: 'Серверы и инфраструктура',
@@ -1913,7 +2077,7 @@
     optOther: 'Другое'
   });
   if (ru.geo) {
-    ru.geo.summary = 'Услуги международно для Ирана, Турции и 11 стран — многоязычная поддержка, WhatsApp и международная доставка.';
+    ru.geo.summary = 'Русскоязычная поддержка для СНГ и 11 стран — WhatsApp, Zoom и международная поставка из Стамбула.';
   }
   if (ru.seo) {
     ru.seo.defaultTitle = pageSeoRu.home.seoTitle;
@@ -1948,8 +2112,19 @@
     details: 'التفاصيل',
     view: 'عرض',
     articleLocaleNote: 'يُعرض المقال باللغة التي اخترتها.',
+    closeMenu: 'إغلاق القائمة',
+    openMenu: 'فتح أو إغلاق القائمة',
+    mobileNav: 'قائمة الجوال',
+    bottomNav: 'تنقل سفلي',
+    openDrawer: 'فتح القائمة',
+    guidesTitle: 'اقرأ قبل الاستعلام',
+    guidesDesc: 'أدلة الشراء — رمز الطلب وقائمة تحقق وواتساب.',
+    guideBuyProsense: 'شراء كاشف Prosense',
+    guideBuyProsenseDesc: 'PQ وSafeVader وSIL',
     offerMap: {
-      productsDesc: 'WhatsApp CRM ومحاسبة FXGuard وBizSwap'
+      servicesDesc: 'مواقع من ٩٩$ وتسويق وتطبيقات وخدمات فنية — استشارة بالعربية',
+      productsDesc: 'WhatsApp CRM ومحاسبة FXGuard وBizSwap',
+      supplyDesc: 'VEGA وProsense وLiqui Moly وTeltonika — فاتورة بالدولار من دبي وإسطنبول'
     }
   }));
   deepMerge(ar.nav, {
@@ -1967,7 +2142,7 @@
     serviceDigital: 'التسويق الرقمي',
     serviceDigitalDesc: 'حملات وSEO وتحسين التحويل',
     serviceWeb: 'ويب وتطبيقات',
-    serviceWebDesc: 'مواقع ومتاجر وFast Studio',
+    serviceWebDesc: 'مواقع للخليج من ٩٩$ — عربية أو إنجليزية',
     serviceApps: 'تطبيقات وأنظمة',
     serviceAppsDesc: 'Android وiOS ولوحات إدارية',
     serviceServer: 'إدارة الخوادم',
@@ -1980,10 +2155,59 @@
     productsSupplyDesc: 'استشارة واختيار الموديل وعرض سعر شفاف',
     productsSupplyLink: 'علامات صناعية',
     productsHardware: 'إنجازات وإنتاج',
-    productsMegaHint: 'برمجيات وSaaS بيزدوار'
+    productsMegaHint: 'برمجيات وSaaS بيزدوار',
+    servicesMegaHint: 'خدمات ميدانية بيزدوار',
+    servicesConsult: 'استشارة خدمات',
+    servicesConsultDesc: 'النموذج وواتساب',
+    tabServicesDigital: 'رقمي وبرمجيات',
+    tabServicesField: 'خدمات فنية',
+    servicesGroupGrowth: 'نمو وتسويق',
+    servicesGroupBuild: 'بناء وبنية تحتية',
+    servicesGroupField: 'تنفيذ ميداني',
+    serviceFieldBadge: 'ميداني',
+    tabOwned: 'منتجات بيزدوار',
+    tabLines: 'خطوط وكتالوج',
+    tabBrands: 'علامات صناعية',
+    productsLines: 'خطوط إنتاج',
+    productsSoftware: 'برمجيات وSaaS',
+    productsQuote: 'طلب عرض سعر',
+    brandGroupSensing: 'حساسات وسلامة',
+    brandGroupTelematics: 'أسطول وتتبع',
+    brandGroupPower: 'محركات وسيارات',
+    brandGroupRetail: 'تجزئة وموازين',
+    brandVegaDesc: 'حساسات مستوى وضغط',
+    brandUwtDesc: 'حساسات مستوى الصوامع',
+    brandProsenseDesc: 'كواشف غاز ولهب',
+    brandTeltonikaDesc: 'GPS وتتبع الأسطول',
+    brandTeltonikaBadge: 'من ٢٩$',
+    brandGamakDesc: 'محركات كهربائية صناعية',
+    brandLiquiDesc: 'زيوت وإضافات',
+    brandDigiDesc: 'نقاط بيع ومعدات متجر',
+    brandTeraokaDesc: 'موازين وملصقات',
+    productFxguard: 'WhatsApp CRM',
+    productFxguardDesc: 'صندوق وارد مشترك · من ٤٩$/شهر',
+    productFxguardAccounting: 'محاسبة',
+    productFxguardAccountingDesc: 'نظام محاسبة مالية · FXGuard',
+    productBizswap: 'BizSwap',
+    productBizswapDesc: 'ما قبل البيع وتبادل التوكن',
+    productBiztab: 'BizTab',
+    productBiztabDesc: 'مقياس حرارة IoT دون تلامس',
+    productBizpad: 'BizPad',
+    productBizpadDesc: 'حصيرة تدفئة BizPad',
+    productBizclean: 'BizClean',
+    productBizcleanDesc: 'معقم يدين تلقائي',
+    productPackaging: 'تغليف ولحام',
+    productPackagingDesc: 'لحامات وخطوط تغليف',
+    productMedical: 'طبي وPPE',
+    productMedicalDesc: 'خطوط كمامات ووسائد حرارية',
+    customWebApp: 'ويب وتطبيق مخصص',
+    fastDesc: 'موقع بسعر ثابت خلال ٥ أيام',
+    customWebAppDesc: 'ويب أب ولوحات وتطبيقات مخصصة',
+    portfolioShort: 'أعمال',
+    site: 'الموقع'
   });
   deepMerge(ar.footer, {
-    tagline: 'خدمات رقمية وتصميم مواقع وتسويق عبر الإنترنت وتوريد معدات صناعية.',
+    tagline: 'خدمات رقمية وتوريد صناعي للخليج والمنطقة — استشارة بالعربية وفاتورة بالدولار من دبي وإسطنبول.',
     services: 'الخدمات',
     quickLinks: 'روابط سريعة',
     brands: 'العلامات',
@@ -2000,7 +2224,13 @@
     serverOps: 'إدارة الخوادم',
     fieldTech: 'خدمات فنية',
     industrialShort: 'صناعي',
-    hq: 'دعم متعدد اللغات'
+    customWebApp: 'ويب وتطبيق مخصص',
+    instagram: 'Instagram',
+    linkedin: 'LinkedIn',
+    connectShort: 'تواصل',
+    followUs: 'تابعنا',
+    legal: 'قانوني ووصول',
+    hq: 'مكاتب: إيران · تركيا · أرمينيا · دبي'
   });
   deepMerge(ar.services, {
     digitalMarketing: 'التسويق الرقمي',
@@ -2013,7 +2243,105 @@
   });
   deepMerge(ar.supplyBrand, supplyBrandAr);
   deepMerge(ar.home, homeAr);
+  deepMerge(ar.aboutPage || {}, {
+    hero: {
+      tag: 'عن بيزدوار',
+      title: 'شريك نموك في الرقمي والصناعة',
+      desc: 'منذ ٢٠١٣ — أكثر من ١٠٠ مشروع في ١١ دولة · تسويق وويب وفنتك وتوريد صناعي'
+    },
+    whatIs: {
+      title: 'ما هي مجموعة Bizdavar؟',
+      p1: 'Bizdavar Group وكالة رقمية ومورّد B2B أسّسها <strong>إرسان جاهد تبريزي</strong> عام ٢٠١٣. خدماتنا الرقمية: <a href="services#digital-marketing">التسويق</a> و<a href="fast">تصميم الويب</a> والفنك وSMM. برمجيات مثل FXGuard وBizSwap و<a href="products#supply">العلامات الصناعية</a> في صفحة المنتجات.',
+      p2: 'أكثر من ١٠٠ مشروع ويب في ١١ دولة — من المواقع إلى توريد VEGA. البنية والنطاقات والاستضافة وSSL أيضاً لدينا. <a href="portfolio">الأعمال</a>'
+    },
+    features: ['تسويق رقمي', 'ويب احترافي', 'توريد معدات', 'بنية تحتية'],
+    sections: {
+      identityTitle: 'Bizdavar Group باختصار',
+      leadershipTitle: 'المؤسس والفريق',
+      activitiesTitle: 'مجالات الخبرة',
+      ecosystemTitle: 'علامات ومشاريع مرتبطة',
+      presenceTitle: 'الدول النشطة',
+      exhibitionsTitle: 'المعارض والفعاليات',
+      achievementsTitle: 'منتجات وابتكار بيزدوار',
+      sourcesTitle: 'مصادر وروابط',
+      credentialsTitle: 'مهارات موثّقة',
+      proofTitle: 'مؤشرات الثقة',
+      faqTitle: 'أسئلة شائعة عن بيزدوار'
+    },
+    relatedLinks: [
+      { title: 'الخدمات', url: 'services', desc: 'تسويق وويب وSMM وصناعة' },
+      { title: 'الأعمال', url: 'portfolio', desc: 'حالات وعلامات' },
+      { title: 'اتصل بنا', url: 'contact', desc: 'استشارة مجانية' }
+    ],
+    cta: {
+      title: 'جاهز للعمل مع Bizdavar؟',
+      desc: 'الاستشارة الأولى مجانية — <a href="contact" class="link-yellow">النموذج</a> أو واتساب.',
+      btn: 'تواصل معنا'
+    }
+  });
+  deepMerge(ar.fastPage || {}, {
+    hero: {
+      title: 'موقع احترافي خلال ٥ أيام — بالعربية أو الإنجليزية'
+    },
+    ui: {
+      statDays: '٥ أيام', statDaysLabel: 'تسليم قياسي',
+      statPrice: '$99', statPriceLabel: 'سعر البداية',
+      statProjects: '١٠٠+', statProjectsLabel: 'مشروع بيزدوار',
+      viewPlans: 'عرض الباقات', consultWa: 'واتساب أو Zoom',
+      btnDevConsult: 'تطوير مخصص — تواصل معنا',
+      navPlans: 'الباقات', navCompare: 'مقارنة', navTimeline: '٥ أيام', navShowcase: 'نماذج', navFaq: 'أسئلة',
+      navSpeed: 'السرعة', navScope: 'الخدمات', navWhy: 'لماذا Fast', navGuides: 'أدلة', btnCustomApp: 'ويب وتطبيق مخصص', readGuide: 'اقرأ المزيد',
+      oneTime: 'دفعة واحدة', orderWa: 'اطلب عبر واتساب', orContact: 'أو النموذج',
+      compareFeature: 'المزايا', compareBasic: 'أساسي', compareStore: 'متجر', comparePro: 'احترافي',
+      viewCase: 'عرض', navAria: 'أقسام Fast Web Studio',
+      saveOff: 'خصم {n}٪ على الإطلاق'
+    },
+    sections: {
+      for: { eyebrow: 'لمن؟', title: 'لمن يناسب Fast Web Studio؟', desc: 'شركات الخليج والمنطقة: موقع شركة أو متجر أو صفحة هبوط بالعربية أو الإنجليزية.' },
+      speed: { eyebrow: 'السرعة', title: 'كيف نعمل بسرعة وبتخصص؟', desc: 'خطة يومية وتصميم حديث ومسار إلى ويب آب.' },
+      scope: { eyebrow: 'النطاق', title: 'موقع ومتجر وويب آب وتطبيقات', desc: 'ابدأ بسعر Fast الثابت؛ للمشروع المخصص راجع <a href="custom-web-app">صفحة الويب والتطبيق</a>.' },
+      deliverables: { eyebrow: 'التسليم', title: 'ماذا تستلم فعلاً؟', desc: 'موقع جاهز للبيع والليدات — لا قالباً فارغاً.' },
+      guides: { eyebrow: 'أدلة', title: 'مواد تصميم الويب والتطبيق', desc: 'اقرأ قبل الطلب — أو افتح <a href="blog">المدونة</a>.' },
+      plans: { eyebrow: 'الباقات', title: 'اختر الباقة المناسبة', desc: 'سعر ثابت — اطلب عبر واتساب أو <a href="contact">النموذج</a>.' },
+      compare: { eyebrow: 'مقارنة', title: 'ماذا في كل باقة؟', desc: 'راجع الجدول أو اسأل على واتساب.' },
+      timeline: { eyebrow: 'مسار التسليم', title: '٥ أيام حتى الإطلاق — خطوة بخطوة', desc: 'لكل يوم هدف — المتابعة عبر Zoom أو Meet أو واتساب.' },
+      why: { eyebrow: 'لماذا Fast؟', title: 'لماذا Fast Web Studio؟' },
+      showcase: { eyebrow: 'نماذج', title: 'مواقع أنجزناها مع بيزدوار' },
+      faq: { eyebrow: 'أسئلة', title: 'أسئلة قبل الطلب' }
+    },
+    cta: {
+      title: 'جاهز لإطلاق موقعك؟',
+      desc: 'النموذج أو Zoom/Meet أو واتساب — فاتورة بالدولار أو اليورو من ٩٩$.',
+      btnWa: 'ابدأ عبر واتساب',
+      btnForm: 'نموذج التواصل'
+    },
+    relatedLinks: [
+      { title: 'مقال Fast Studio', url: 'articles/fast-studio', desc: 'دليل الطلب' },
+      { title: 'قائمة ٥ أيام', url: 'articles/website-speed-5-days', desc: 'تجهيز المحتوى' },
+      { title: 'ويب وتطبيق مخصص', url: 'custom-web-app', desc: 'مشروع مخصص' },
+      { title: 'الأعمال', url: 'portfolio', desc: 'مشاريع بيزدوار' }
+    ]
+  });
   deepMerge(ar.productsPage || {}, {
+    crumb: 'منتجات بيزدوار',
+    hero: {
+      tag: 'منتجات وعلامات صناعية',
+      title: 'منتجات بيزدوار وتوريد VEGA وProsense',
+      desc: 'WhatsApp CRM ومواقع — مع حساسات VEGA وكواشف Prosense وLiqui Moly وTeltonika. استشارة بالعربية.',
+      ctaLive: 'منتجات حيّة',
+      ctaCatalog: 'الكتالوج الكامل',
+      ctaSupply: 'علامات صناعية',
+      ctaContact: 'استعلام منتج'
+    },
+    pillars: {
+      eyebrow: 'أربعة محاور',
+      title: 'من البرمجيات إلى خطوط الإنتاج',
+      desc: 'منتجات بيزدوار في أربع فئات — اختر المحور.'
+    },
+    intro: {
+      title: 'ماذا نبني',
+      body: 'الأولوية اليوم <strong>التوريد الصناعي والمواقع والتسويق وSaaS</strong> مثل FXGuard. العتاد السابق في إنجازات الشركة.'
+    },
     featured: {
       desc: 'WhatsApp CRM ومحاسبة FXGuard وBizSwap — جاهزة للطلب. وسادة التدفئة وBizTab في الإنجازات والكتالوج الكامل.'
     },
@@ -2156,10 +2484,10 @@
   deepMerge(ar.contactPage || {}, contactPageAr);
   if (ar.contact) {
     ar.contact.whatsappMessage = 'مرحباً، أراسل من موقع bizdavar.com.';
-    ar.contact.channelIr = 'واتساب';
-    ar.contact.channelTr = 'واتساب المبيعات';
+    ar.contact.channelIr = 'واتساب إيران';
+    ar.contact.channelTr = 'واتساب تركيا / المبيعات';
     ar.contact.channelField = 'خدمات فنية';
-    ar.contact.address = 'تبريز';
+    ar.contact.address = 'مكاتب: إيران · تركيا · أرمينيا · دبي';
     ar.contact.workingHours = 'على مدار الساعة';
   }
   ar.contactPage = Object.assign({}, ar.contactPage || {}, {
@@ -2167,8 +2495,8 @@
     websites: 'المواقع',
     title: 'اتصل بنا',
     mapImgAlt: 'تعاون دولي — Bizdavar Group',
-    heroTitle: 'عرض موقع USD أو EUR — Zoom أو Meet أو النموذج',
-    heroDesc: 'المواقع والإعلانات الإنجليزية لأمريكا وأوروبا: أرسلوا النموذج ونحدد Zoom أو Meet. الفاتورة بالدولار أو اليورو. VEGA/Prosense لإيران أسرع على واتساب.',
+    heroTitle: 'استشارة بالعربية — موقع أو CRM أو توريد',
+    heroDesc: 'لشركات الخليج والمنطقة: موقع أو WhatsApp CRM أو حساسات VEGA/Prosense. النموذج أو Zoom/Meet أو واتساب. الفاتورة بالدولار أو اليورو.',
     formTitle: 'نموذج طلب التواصل',
     formDesc: 'الاسم وواتساب إلزاميان. البريد اختياري.',
     subtitle: 'املأ النموذج أو راسلنا على واتساب — الرد خلال ساعات العمل',
@@ -2194,14 +2522,14 @@
     formSuccess: 'تم إرسال رسالتك. سنتواصل معك قريباً.',
     formSuccessMailto: 'الرسالة جاهزة للإرسال. إذا لم تفتح نافذة البريد، اكتب إلى info@bizdavar.com.',
     formSuccessWhatsapp: 'الرسالة جاهزة لواتساب. إذا لم تفتح النافذة، استخدم أزرار واتساب في هذه الصفحة.',
-    geoText: 'تداخل CET/EST — Zoom/Meet وفاتورة USD أو EUR. توريد إيران عبر واتساب.',
+    geoText: 'استشارة بالعربية من دبي وإسطنبول — Zoom/Meet أو واتساب. فاتورة بالدولار أو اليورو. توريد للخليج والمنطقة.',
     formError: 'فشل الإرسال. أعد المحاولة أو راسل info@bizdavar.com مباشرة.',
-    waTr: 'واتساب المبيعات',
-    waIr: 'واتساب الفارسية',
+    waTr: 'واتساب تركيا',
+    waIr: 'واتساب إيران',
     mapTitle: 'تعاون دولي',
-    mapDesc: 'تقدم Bizdavar Group خدمات رقمية وصناعية في إيران وتركيا والأسواق الدولية.',
+    mapDesc: 'دعم عربي للخليج: مواقع وتسويق وتوريد صناعي من دبي وإسطنبول.',
     optDm: 'التسويق الرقمي',
-    optWeb: 'موقع إنجليزي (USD / EUR)',
+    optWeb: 'موقع بالعربية أو الإنجليزية (دولار / يورو)',
     optFast: 'Fast Web Studio — من ٩٩$',
     optApps: 'تطبيقات وأنظمة',
     optServer: 'إدارة الخوادم والبنية',
@@ -2212,7 +2540,7 @@
     optOther: 'أخرى'
   });
   if (ar.geo) {
-    ar.geo.summary = 'خدمات دوليًا إلى إيران وتركيا و١١ دولة — دعم متعدد اللغات وواتساب وتسليم دولي.';
+    ar.geo.summary = 'دعم عربي للخليج و١١ دولة — واتساب وZoom وتوريد دولي من دبي وإسطنبول.';
   }
   if (ar.seo) {
     ar.seo.defaultTitle = pageSeoAr.home.seoTitle;
