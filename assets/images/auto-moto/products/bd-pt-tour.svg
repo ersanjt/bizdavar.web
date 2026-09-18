@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="BD-PT-TOUR">
+  <rect width="240" height="240" rx="28" fill="#f3efe8"/>
+  <rect x="16" y="16" width="208" height="208" rx="22" fill="#fff"/>
+  <path d="M88 50h64l8 34-8 108h-20L120 116 100 192H80L72 84z" fill="#14261c"/><rect x="90" y="128" width="20" height="16" rx="3" fill="#0f6b4c"/><rect x="130" y="128" width="20" height="16" rx="3" fill="#0f6b4c"/>
+  <rect x="28" y="196" width="184" height="22" rx="8" fill="#14261c"/>
+  <text x="120" y="212" text-anchor="middle" fill="#f5c518" font-family="Arial, sans-serif" font-size="10" font-weight="700">BD-PT-TOUR</text>
+</svg>

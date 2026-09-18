@@ -489,6 +489,7 @@ const FILE_TO_ROUTE = {
   'pages/vega.html': '/pages/vega',
   'pages/prosense.html': '/pages/prosense',
   'pages/liqui-moly.html': '/pages/liqui-moly',
+  'pages/auto-moto.html': '/pages/auto-moto',
   'pages/teltonika.html': '/pages/teltonika',
   'pages/gamak.html': '/pages/gamak',
   'pages/uwt.html': '/pages/uwt',

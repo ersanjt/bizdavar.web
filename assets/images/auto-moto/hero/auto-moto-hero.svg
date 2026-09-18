@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640" role="img" aria-labelledby="heroTitle heroDesc">
+  <title id="heroTitle">Bizdavar motorcycle gear</title>
+  <desc id="heroDesc">Helmet, jacket and boots for the Bizdavar motorcycle catalog</desc>
+  <rect width="960" height="640" rx="28" fill="#1d1d1b"/>
+  <circle cx="760" cy="150" r="120" fill="none" stroke="#f5c518" stroke-width="8" opacity="0.35"/>
+  <circle cx="760" cy="150" r="70" fill="none" stroke="#d0122d" stroke-width="6" opacity="0.8"/>
+  <g transform="translate(70 150)">
+    <path d="M40 250c40-120 210-120 250 0" fill="#2a2a28" stroke="#f5c518" stroke-width="10"/>
+    <circle cx="100" cy="262" r="42" fill="#111" stroke="#d0122d" stroke-width="10"/>
+    <circle cx="230" cy="262" r="42" fill="#111" stroke="#d0122d" stroke-width="10"/>
+    <path d="M150 70c28-48 78-48 106 0v70H150z" fill="#f4f1ea"/>
+    <path d="M172 72c18-28 48-28 66 0" fill="#d0122d"/>
+    <rect x="168" y="118" width="70" height="18" rx="6" fill="#1d1d1b"/>
+  </g>
+  <g transform="translate(470 210)">
+    <path d="M30 150c20-90 90-120 150-80 40 26 70 20 100-10v90c-40 30-80 50-140 50H40z" fill="#d0122d"/>
+    <path d="M70 90c30-20 70-16 96 8" fill="none" stroke="#f5c518" stroke-width="8"/>
+    <rect x="40" y="168" width="70" height="90" rx="16" fill="#f4f1ea"/>
+    <rect x="140" y="168" width="70" height="90" rx="16" fill="#f4f1ea"/>
+    <rect x="52" y="180" width="46" height="14" rx="4" fill="#1d1d1b"/>
+    <rect x="152" y="180" width="46" height="14" rx="4" fill="#1d1d1b"/>
+  </g>
+  <text x="70" y="90" fill="#f5c518" font-family="Arial, sans-serif" font-size="28" font-weight="700">MOTORCYCLE GEAR</text>
+  <text x="70" y="560" fill="#f4f1ea" font-family="Arial, sans-serif" font-size="22">Helmet | Jacket | Boots</text>
+</svg>

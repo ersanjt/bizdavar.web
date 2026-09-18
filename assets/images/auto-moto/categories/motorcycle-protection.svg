@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="motorcycle-protection">
+  <rect width="240" height="240" rx="28" fill="#f4f0ea"/>
+  
+  <path d="M120 40l64 26v54c0 46-28 72-64 86-36-14-64-40-64-86V66z" fill="#0f6b4c"/>
+  <path d="M120 62l42 16v40c0 32-18 52-42 62-24-10-42-30-42-62V78z" fill="#14825c"/>
+  <circle cx="120" cy="112" r="16" fill="#f5c518"/>
+</svg>

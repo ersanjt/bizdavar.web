@@ -86,6 +86,21 @@
         seoDescription: 'بیزدوار گروپ تامین‌کننده محصولات اصل Liqui Moly: روغن موتور، Octane Plus، افزودنی دیزل، ضدیخ و مراقبت خودرو. قیمت دلاری شفاف و مشاوره فارسی.',
         seoKeywords: 'Liqui Moly, Octane Plus, Top Tec, Molygen, روغن موتور, افزودنی بنزین, بیزدوار'
       },
+      autoMoto: {
+        seoTitle: 'اتو‌موتو | فروشگاه موتورسیکلت و قطعات خودرو | بیزدوار',
+        seoDescription: 'اتو‌موتو بیزدوار دو فروشگاه جدا دارد: تجهیزات موتورسیکلت با قیمت دلاری تحویل ایران، و قطعات خودرو (لنت، فیلتر، آرم، رینگ) فقط با استعلام.',
+        seoKeywords: 'اتو‌موتو, تجهیزات موتورسیکلت, قطعات خودرو, لنت ترمز, بیزدوار'
+      },
+      motorcycle: {
+        seoTitle: 'خرید تجهیزات موتورسیکلت | کلاه، کاپشن و بوت | بیزدوار',
+        seoDescription: 'خرید تجهیزات موتورسیکلت از بیزدوار: کلاه ایمنی، کاپشن، دستکش، شلوار، بوت، اینترکام و محافظ. قیمت دلاری تحویل ایران (لیر ÷ ۴۸ + ۲۰٪). اگر قیمت نباشد استعلام است.',
+        seoKeywords: 'تجهیزات موتورسیکلت, کلاه ایمنی موتور, کاپشن موتور, دستکش موتور, بوت موتور, اینترکام, بیزدوار'
+      },
+      carParts: {
+        seoTitle: 'خرید لنت و دیسک ترمز | انتخاب برند و مدل | بیزدوار',
+        seoDescription: 'فروشگاه ترمز بیزدوار: لنت، دیسک، ترمز عملکردی و روغن ترمز با انتخاب برند و مدل. قیمت دلاری تحویل، لیر تقسیم بر ۴۸ به‌علاوه ۲۰٪.',
+        seoKeywords: 'لنت ترمز, دیسک ترمز, لنت BMW, لنت بنز, بیزدوار'
+      },
       teltonika: {
         seoTitle: 'خرید ردیاب Teltonika FMB920 | از ۲۹ دلار',
         seoDescription: 'ردیاب GPS اصل Teltonika برای ناوگان. FMB920 از ۲۹ دلار، FMC650 و DualCam — استعلام فارسی و لجستیک از بیزدوار.',
@@ -312,6 +327,21 @@
         seoTitle: 'Liqui Moly tedariki | Motor yağı ve katkı ürünleri | Bizdavar',
         seoDescription: 'Bizdavar Group orijinal Liqui Moly tedarik eder: motor yağı, Octane Plus, dizel katkı, antifriz ve oto bakım. Şeffaf dolar fiyat ve Farsça danışmanlık.',
         seoKeywords: 'Liqui Moly, Octane Plus, motor yağı, Bizdavar'
+      },
+      autoMoto: {
+        seoTitle: 'Auto-Moto | motosiklet ve oto parçası | Bizdavar',
+        seoDescription: 'Bizdavar Auto-Moto iki ayrı mağaza: motosiklet ekipmanı İran teslim USD, oto parçası (balata, filtre, arma, jant) yalnızca teklif.',
+        seoKeywords: 'Auto-Moto, motosiklet ekipmanı, oto parçası, Bizdavar'
+      },
+      motorcycle: {
+        seoTitle: 'Motosiklet ekipmanı | kask, mont ve bot | Bizdavar',
+        seoDescription: 'Bizdavar motosiklet ekipmanı: kask, mont, eldiven, pantolon, bot, interkom ve koruma. Kart fiyatı İran teslim USD (liste TL ÷ 48 + %20). Fiyat yoksa teklif.',
+        seoKeywords: 'motosiklet ekipmanı, motosiklet kask, motosiklet mont, motosiklet bot, interkom, Bizdavar'
+      },
+      carParts: {
+        seoTitle: 'Fren balatası ve diski | marka ve model seç | Bizdavar',
+        seoDescription: 'Bizdavar fren mağazası: balata, disk, performans freni ve fren sıvısı. Kart fiyatı teslim USD, TL ÷ 48 artı %20.',
+        seoKeywords: 'fren balatası, fren diski, BMW balata, Mercedes balata, Bizdavar'
       },
       teltonika: {
         seoTitle: 'Teltonika GPS tedariki | FMB920 29$’dan — Bizdavar',
@@ -621,6 +651,21 @@
         seoTitle: 'Liqui Moly supply | Motor oil & fuel additives | Bizdavar',
         seoDescription: 'Bizdavar Group supplies genuine Liqui Moly: engine oil, Octane Plus, diesel additives, antifreeze and car care. Transparent USD pricing and multilingual consulting.',
         seoKeywords: 'Liqui Moly, Octane Plus, engine oil, Bizdavar'
+      },
+      autoMoto: {
+        seoTitle: 'Auto-Moto | motorcycle gear and car parts | Bizdavar',
+        seoDescription: 'Bizdavar Auto-Moto is two separate shops: motorcycle gear with Iran-delivery USD, and car parts (pads, filters, emblems, rims) by inquiry only.',
+        seoKeywords: 'Auto-Moto, motorcycle gear, car parts, Bizdavar'
+      },
+      motorcycle: {
+        seoTitle: 'Motorcycle gear | helmets, jackets and boots | Bizdavar',
+        seoDescription: 'Motorcycle gear from Bizdavar: helmets, jackets, gloves, pants, boots, intercoms and protection. Card prices are Iran-delivery USD (listing TRY ÷ 48 + 20%). If there is no price, request a quote.',
+        seoKeywords: 'motorcycle gear, motorcycle helmet, motorcycle jacket, motorcycle boots, intercom, Bizdavar'
+      },
+      carParts: {
+        seoTitle: 'Brake pads and discs | choose brand and model | Bizdavar',
+        seoDescription: 'Bizdavar brake parts: pads, discs, performance brakes and fluid by brand and model. Card price is delivery USD, TRY ÷ 48 plus 20%.',
+        seoKeywords: 'brake pads, brake discs, BMW pads, Mercedes pads, Bizdavar'
       },
       teltonika: {
         seoTitle: 'Teltonika GPS tracker supply | FMB920 from $29 — Bizdavar',

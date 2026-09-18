@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="motorcycle-pants">
+  <rect width="240" height="240" rx="28" fill="#f4f0ea"/>
+  
+  <path d="M86 48h68l8 36-8 108H148L120 118 92 192H78L70 84z" fill="#3d3d3a"/>
+  <path d="M120 84v34" stroke="#f4f0ea" stroke-width="6"/>
+  <rect x="88" y="128" width="22" height="18" rx="4" fill="#d0122d"/>
+  <rect x="130" y="128" width="22" height="18" rx="4" fill="#d0122d"/>
+</svg>

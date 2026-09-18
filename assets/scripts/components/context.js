@@ -16,6 +16,7 @@
     bizsanitizerV5: 'bizsanitizer-v5',
     digiSystem: 'digi-system',
     liquiMoly: 'liqui-moly',
+    autoMoto: 'auto-moto',
     bzDiamond: 'bz-diamond',
     supplifyTrade: 'supplify-trade',
     kayaOne: 'kaya-one',
@@ -55,7 +56,7 @@
     const knownPages = new Set([
       'about', 'services', 'portfolio', 'blog', 'contact', 'privacy', 'fast', 'field-tech', 'vega',
       'prosense', 'teltonika', 'gamak', 'uwt', 'digi-system', 'teraoka', 'liqui-moly', 'bz-diamond', 'supplify-trade', 'kaya-one', 'smm-turk', 'marvispace', 'marvi-society', 'fxguard-exchange', 'biztejarat',
-      'products', 'biztab', 'bizsanitizer-v5', 'bizseat', 'bizpad', 'gallery', 'fxguard', 'fxguard-accounting', 'bizswap'
+      'products', 'biztab', 'bizsanitizer-v5', 'bizseat', 'bizpad', 'gallery', 'fxguard', 'fxguard-accounting', 'bizswap', 'auto-moto', 'motorcycle', 'car-parts'
     ]);
     const stem = n.replace(/\.html$/, '');
     if (knownPages.has(stem)) return `pages/${stem}.html`;

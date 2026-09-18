@@ -68,11 +68,32 @@
       seoDescription: 'Каталог Bizdavar: датчики VEGA, детекторы Prosense, Liqui Moly, Teltonika и FXGuard WhatsApp CRM. Прозрачная цена и расчёт в WhatsApp.',
       seoKeywords: 'купить VEGA, Prosense, FXGuard, Fast Web Studio, Liqui Moly, Bizdavar'
     },
+    supply: {
+      crumb: 'Поставки и дистрибуция'
+    },
     contact: {
       crumb: 'Контакты',
       seoTitle: 'Расчёт сайта USD/EUR или поставка в Иран | Bizdavar',
       seoDescription: 'Английский сайт и реклама — Zoom/Meet, счёт в USD или EUR. VEGA, Prosense и Gamak для Ирана по-прежнему через WhatsApp.',
       seoKeywords: 'расчёт сайта USD, счёт EUR, веб-дизайн США, запрос VEGA, Bizdavar'
+    },
+    autoMoto: {
+      crumb: 'Авто и мото',
+      seoTitle: 'Auto-Moto | мотоэкипировка и автозапчасти | Bizdavar',
+      seoDescription: 'Два отдельных магазина: мотоэкипировка с ценой в долларах и доставкой в Иран, и автозапчасти (колодки, фильтры, эмблемы, диски) только по запросу.',
+      seoKeywords: 'Auto-Moto, мотоэкипировка, автозапчасти, Bizdavar'
+    },
+    motorcycle: {
+      crumb: 'Мотоэкипировка',
+      seoTitle: 'Мотоэкипировка | шлем, куртка, боты | Bizdavar',
+      seoDescription: 'Каталог мотоэкипировки Bizdavar: шлемы, куртки, перчатки, боты, интерком и защита. Цена на карточке в долларах с доставкой в Иран. Если цены нет — запрос.',
+      seoKeywords: 'мотоэкипировка, мотошлем, мотокуртка, мотоботы, интерком, Bizdavar'
+    },
+    carParts: {
+      crumb: 'Тормоза',
+      seoTitle: 'Тормозные колодки и диски | марка и модель | Bizdavar',
+      seoDescription: 'Магазин тормозов Bizdavar: колодки, диски, спорт и жидкость. Цена на карточке — USD, лира ÷ 48 плюс 20%.',
+      seoKeywords: 'тормозные колодки, тормозные диски, BMW, Mercedes, Bizdavar'
     },
     liquiMoly: {
       crumb: 'Продукция Liqui Moly',
@@ -353,11 +374,32 @@
       seoDescription: 'كتالوج Bizdavar: حساسات VEGA وكواشف Prosense وLiqui Moly وTeltonika وFXGuard WhatsApp CRM. سعر واضح وعرض واتساب.',
       seoKeywords: 'شراء VEGA, Prosense, FXGuard, Fast Web Studio, Liqui Moly, Bizdavar'
     },
+    supply: {
+      crumb: 'توريد وتوزيع'
+    },
     contact: {
       crumb: 'اتصل بنا',
       seoTitle: 'عرض موقع USD/EUR أو توريد إيران | Bizdavar',
       seoDescription: 'عرض موقع وإعلانات إنجليزية — Zoom/Meet وفاتورة USD أو EUR. VEGA وProsense وGamak لإيران ما زالت عبر واتساب.',
       seoKeywords: 'عرض موقع USD, فاتورة EUR, تصميم مواقع أمريكا, استعلام VEGA, بيزدوار'
+    },
+    autoMoto: {
+      crumb: 'سيارات ودراجات',
+      seoTitle: 'Auto-Moto | عتاد دراجة وقطع سيارات | Bizdavar',
+      seoDescription: 'متجران منفصلان: عتاد الدراجة بسعر دولار لتسليم إيران، وقطع السيارات (فحمات وفلاتر وشعارات وجنوط) بالاستعلام فقط.',
+      seoKeywords: 'Auto-Moto, عتاد دراجة, قطع سيارات, بيزدوار'
+    },
+    motorcycle: {
+      crumb: 'عتاد دراجة',
+      seoTitle: 'عتاد دراجة نارية | خوذة وسترة وبوت | Bizdavar',
+      seoDescription: 'كتالوج عتاد الدراجة من بيزدوار: خوذات وسترات وقفازات وبوت وإنتركم وحماية. السعر على البطاقة بالدولار لتسليم إيران. إن لم يوجد سعر فاستعلام.',
+      seoKeywords: 'عتاد دراجة, خوذة دراجة, سترة دراجة, بوت دراجة, إنتركم, بيزدوار'
+    },
+    carParts: {
+      crumb: 'فرامل',
+      seoTitle: 'فحمات وأقراص الفرامل | اختر الماركة | Bizdavar',
+      seoDescription: 'متجر فرامل بيزدوار: فحمات وأقراص وسوائل مع اختيار الماركة والموديل. السعر بالدولار: الليرة ÷ ٤٨ ثم + ٢٠٪.',
+      seoKeywords: 'فحمات فرامل, أقراص فرامل, BMW, Mercedes, Bizdavar'
     },
     liquiMoly: {
       crumb: 'منتجات Liqui Moly',
@@ -1579,6 +1621,12 @@
     priceFrom: 'от',
     catalogSearch: 'Поиск в каталоге…',
     catalogSearchEmpty: 'По этому запросу ничего не найдено.',
+    showMore: 'Показать ещё',
+    catalogLoading: 'Загрузка каталога мототехники…',
+    catalogCount: '{count} товаров в каталоге',
+    catalogBrandAll: 'Все бренды',
+    quotePrice: 'Запросить цену',
+    priceIranLabel: 'Доставка в Иран',
     priceSellLabel: 'Цена продажи',
     techConsultCta: 'Запросить техконсультацию',
     navTrust: 'Почему Bizdavar',
@@ -1590,7 +1638,28 @@
     navAria: 'Категории продуктов поставок',
     inquiryTemplate: 'Запрос: {product}',
     officialCatalog: 'Официальный каталог',
-    orderCodeCta: 'Запрос кода заказа'
+    orderCodeCta: 'Запрос кода заказа',
+    productDetail: 'Детали, размер и цвет',
+    productFacts: 'О товаре',
+    sizesLabel: 'Размер',
+    colorsLabel: 'Цвет',
+    specsLabel: 'Характеристики',
+    boxLabel: 'Комплектация',
+    closeDetail: 'Закрыть',
+    specBrand: 'Бренд',
+    specCategory: 'Категория',
+    specType: 'Тип',
+    specSku: 'Артикул',
+    specStock: 'Наличие',
+    specDelivery: 'Доставка',
+    specPriceUnit: 'Валюта',
+    specPrice: 'Цена',
+    stockIn: 'В наличии',
+    stockOut: 'Нет в наличии',
+    stockAsk: 'Нужен запрос',
+    deliveryIranValue: 'Иран',
+    currencyUsd: 'USD',
+    priceQuoteValue: 'По запросу'
   };
 
   var supplyBrandAr = {
@@ -1607,6 +1676,12 @@
     priceFrom: 'من',
     catalogSearch: 'البحث في الكتالوج…',
     catalogSearchEmpty: 'لا توجد منتجات مطابقة.',
+    showMore: 'عرض المزيد',
+    catalogLoading: 'جارٍ تحميل كتالوج الدراجات النارية…',
+    catalogCount: '{count} منتجًا في الكتالوج',
+    catalogBrandAll: 'كل العلامات',
+    quotePrice: 'طلب السعر',
+    priceIranLabel: 'تسليم إيران',
     priceSellLabel: 'سعر البيع',
     techConsultCta: 'طلب استشارة فنية',
     navTrust: 'لماذا Bizdavar',
@@ -1618,7 +1693,28 @@
     navAria: 'فئات منتجات التوريد',
     inquiryTemplate: 'استعلام: {product}',
     officialCatalog: 'الكتالوج الرسمي',
-    orderCodeCta: 'طلب رمز الطلب'
+    orderCodeCta: 'طلب رمز الطلب',
+    productDetail: 'التفاصيل والمقاس واللون',
+    productFacts: 'تفاصيل المنتج',
+    sizesLabel: 'المقاس',
+    colorsLabel: 'اللون',
+    specsLabel: 'المواصفات',
+    boxLabel: 'محتويات العلبة',
+    closeDetail: 'إغلاق',
+    specBrand: 'العلامة',
+    specCategory: 'الفئة',
+    specType: 'النوع',
+    specSku: 'رمز المنتج',
+    specStock: 'التوفر',
+    specDelivery: 'التسليم',
+    specPriceUnit: 'العملة',
+    specPrice: 'السعر',
+    stockIn: 'متوفر',
+    stockOut: 'غير متوفر',
+    stockAsk: 'يحتاج استعلام',
+    deliveryIranValue: 'إيران',
+    currencyUsd: 'دولار',
+    priceQuoteValue: 'استعلام'
   };
 
   /* ─── Russian ─── */
@@ -1708,9 +1804,10 @@
     productsLines: 'Производственные линии',
     productsSoftware: 'ПО и SaaS',
     productsQuote: 'Запросить цену',
-    brandGroupSensing: 'Датчики и безопасность',
+    brandGroupSensing: 'Точные приборы',
     brandGroupTelematics: 'Флот и трекинг',
-    brandGroupPower: 'Моторы и авто',
+    brandGroupPower: 'Пром. оборудование',
+    brandGroupAuto: 'Авто и мото',
     brandGroupRetail: 'Ритейл и весы',
     brandVegaDesc: 'Датчики уровня и давления',
     brandUwtDesc: 'Датчики уровня силоса',
@@ -1719,6 +1816,19 @@
     brandTeltonikaBadge: 'От $29',
     brandGamakDesc: 'Промышленные электродвигатели',
     brandLiquiDesc: 'Масла и присадки',
+    productAutoMoto: 'Auto-Moto',
+    brandAutoMotoDesc: 'Шлемы, куртки, боты и мотоэкипировка',
+    brandAutoMotoBadge: 'Новое',
+    autoJacket: 'Мотокуртка',
+    autoJacketDesc: 'Кожа, текстиль и дождевик',
+    autoBoots: 'Мотоботы',
+    autoBootsDesc: 'Город, туринг и оффроуд',
+    autoGloves: 'Мотоперчатки',
+    autoGlovesDesc: 'Лето, кожа и Gore-Tex',
+    autoHelmet: 'Мотошлем',
+    autoHelmetDesc: 'Полный, модульный и кросс',
+    autoAllCats: 'Все категории',
+    autoAllCatsDesc: 'Полный каталог Auto-Moto',
     brandDigiDesc: 'POS и торговое оборудование',
     brandTeraokaDesc: 'Весы и этикетки',
     productFxguard: 'WhatsApp CRM',
@@ -2014,6 +2124,23 @@
     { title: 'FXGuard Exchange — биржа и OTC', excerpt: 'Fintech: KYC, кошелёк, OTC и админ-панель.', category: 'Fintech' }
   ];
   ru.liquiMolyPage = liquiPage.ru;
+  ru.autoMotoPage = {
+    sections: {
+      trust: { eyebrow: 'Почему Bizdavar', title: 'Полный каталог мотоэкипировки', desc: 'Цена на карточке — доллары с доставкой в Иран (лира ÷ 48 + 20%). Если цены нет — только запрос.' },
+      buy: { eyebrow: 'Путь покупки', title: 'От выбора до отправки — 5 шагов', desc: 'Запрос товара отдельно, почта отдельно — обе в проформе.' },
+      quote: { eyebrow: 'Как запросить', title: 'Пришлите размер или SKU', desc: 'Размер, рост и вес для одежды — проформа быстрее.' },
+      highlights: { eyebrow: 'Хиты', title: 'От шлема до туристических бот', desc: 'Доллары с доставкой в Иран. Если цены нет — запрос.' },
+      catalog: { eyebrow: 'Каталог', title: 'Мотоэкипировка', desc: '3876 мототоваров с фото — шлемы, куртки, перчатки, штаны, боты и интерком.' },
+      iran: { eyebrow: 'Для кого', title: 'Кому подходит', desc: 'Мотомагазин, городской райдер, оффроуд и частный заказ.', note: 'Нет размера? Пришлите рост и вес.' },
+      supply: { eyebrow: 'Поставка Bizdavar', title: 'Сервис Auto-Moto', desc: 'Один контакт для мотоэкипировки.' },
+      faq: { eyebrow: 'FAQ', title: 'Цена, почта и размер', desc: 'Нет ответа? Напишите в WhatsApp.' }
+    },
+    officialNote: 'Цена на карточке — доллары с доставкой в Иран (лира ÷ 48 + 20%). Лира не показывается. Если цены нет — запрос. Масла Германии — <a href="liqui-moly">Liqui Moly</a>.',
+    cta: { title: 'Готовы запросить шлем, куртку или боты?', desc: 'Размер или SKU — проформа и почта после заказа', btnForm: 'Форма запроса', btnServices: 'Каталог' },
+    sticky: { label: 'Запрос Auto-Moto', hint: 'USD с доставкой в Иран' },
+    geoText: 'Поставка мотоэкипировки — доллары с доставкой в Иран.',
+    related: [{ title: 'Liqui Moly', desc: 'Масла' }, { title: 'Teltonika', desc: 'GPS' }, { title: 'Каталог', desc: 'B2B' }, { title: 'Контакты', desc: 'Запрос Auto-Moto' }]
+  };
   ru.vegaPage = vegaPage.ru;
   ru.uwtPage = uwtPage.ru;
   ru.prosensePage = prosensePage.ru;
@@ -2171,9 +2298,10 @@
     productsLines: 'خطوط إنتاج',
     productsSoftware: 'برمجيات وSaaS',
     productsQuote: 'طلب عرض سعر',
-    brandGroupSensing: 'حساسات وسلامة',
+    brandGroupSensing: 'أجهزة دقيقة',
     brandGroupTelematics: 'أسطول وتتبع',
-    brandGroupPower: 'محركات وسيارات',
+    brandGroupPower: 'معدات صناعية',
+    brandGroupAuto: 'سيارات ودراجات',
     brandGroupRetail: 'تجزئة وموازين',
     brandVegaDesc: 'حساسات مستوى وضغط',
     brandUwtDesc: 'حساسات مستوى الصوامع',
@@ -2182,6 +2310,19 @@
     brandTeltonikaBadge: 'من ٢٩$',
     brandGamakDesc: 'محركات كهربائية صناعية',
     brandLiquiDesc: 'زيوت وإضافات',
+    productAutoMoto: 'Auto-Moto',
+    brandAutoMotoDesc: 'خوذة وسترة وعتاد دراجة',
+    brandAutoMotoBadge: 'جديد',
+    autoJacket: 'سترة دراجة',
+    autoJacketDesc: 'جلد ونسيج ومطر',
+    autoBoots: 'بوت دراجة',
+    autoBootsDesc: 'مدينة وتورينغ وأوف رود',
+    autoGloves: 'قفازات دراجة',
+    autoGlovesDesc: 'صيفي وجلد وGore-Tex',
+    autoHelmet: 'خوذة دراجة',
+    autoHelmetDesc: 'وجه كامل وذقن متحرك وكروس',
+    autoAllCats: 'كل الفئات',
+    autoAllCatsDesc: 'كتالوج Auto-Moto الكامل',
     brandDigiDesc: 'نقاط بيع ومعدات متجر',
     brandTeraokaDesc: 'موازين وملصقات',
     productFxguard: 'WhatsApp CRM',
@@ -2477,6 +2618,23 @@
     { title: 'FXGuard Exchange — منصة صرف وOTC', excerpt: 'فintech: KYC ومحفظة وOTC ولوحة إدارة.', category: 'Fintech' }
   ];
   ar.liquiMolyPage = liquiPage.ar;
+  ar.autoMotoPage = {
+    sections: {
+      trust: { eyebrow: 'لماذا Bizdavar', title: 'كتالوج كامل لعتاد الدراجة', desc: 'السعر على البطاقة بالدولار لتسليم إيران (الليرة ÷ ٤٨ + ٢٠٪). إن لم يوجد سعر فاستعلام فقط.' },
+      buy: { eyebrow: 'مسار الشراء', title: 'من الاختيار إلى الإرسال — ٥ خطوات', desc: 'استعلام السلعة منفصل والشحن منفصل — كلاهما في الفاتورة المبدئية.' },
+      quote: { eyebrow: 'دليل الاستعلام', title: 'أرسل المقاس أو رمز SKU', desc: 'المقاس والطول والوزن للملابس — الفاتورة المبدئية أسرع.' },
+      highlights: { eyebrow: 'الأكثر طلباً', title: 'من الخوذة إلى بوت التورينغ', desc: 'دولار لتسليم إيران. إن لم يوجد سعر فاستعلام.' },
+      catalog: { eyebrow: 'الكتالوج الكامل', title: 'عتاد دراجة نارية', desc: '٣٨٧٦ منتج دراجة بصور حقيقية — خوذات وسترات وقفازات وبوت وإنتركم.' },
+      iran: { eyebrow: 'الاستخدام', title: 'لمن؟', desc: 'متجر دراجات وراكب مدينة وأوف رود وطلب شخصي.', note: 'لا يوجد مقاس؟ أرسل الطول والوزن.' },
+      supply: { eyebrow: 'توريد Bizdavar', title: 'خدمات Auto-Moto', desc: 'جهة اتصال واحدة لعتاد الدراجة.' },
+      faq: { eyebrow: 'أسئلة', title: 'السعر والشحن والمقاس', desc: 'لا جواب؟ راسل واتساب.' }
+    },
+    officialNote: 'السعر على البطاقة بالدولار لتسليم إيران (الليرة ÷ ٤٨ + ٢٠٪). الليرة لا تظهر. إن لم يوجد سعر فاستعلام. لزيوت ألمانيا راجع <a href="liqui-moly">Liqui Moly</a>.',
+    cta: { title: 'جاهز لاستعلام خوذة أو سترة أو بوت؟', desc: 'المقاس أو SKU — فاتورة مبدئية والشحن بعد الطلب', btnForm: 'نموذج استعلام', btnServices: 'الكتالوج' },
+    sticky: { label: 'استعلام Auto-Moto', hint: 'دولار لتسليم إيران' },
+    geoText: 'توريد عتاد دراجة نارية — دولار لتسليم إيران.',
+    related: [{ title: 'Liqui Moly', desc: 'زيوت' }, { title: 'Teltonika', desc: 'تتبع' }, { title: 'الكتالوج', desc: 'B2B' }, { title: 'اتصل', desc: 'استعلام Auto-Moto' }]
+  };
   ar.vegaPage = vegaPage.ar;
   ar.uwtPage = uwtPage.ar;
   ar.prosensePage = prosensePage.ar;

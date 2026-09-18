@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="car-hood-emblem">
+  <rect width="240" height="240" rx="28" fill="#f4f0ea"/>
+  
+  <path d="M40 168c46-78 114-78 160 0" fill="#3a3a38"/>
+  <path d="M120 58c18 28 18 52 0 86-18-34-18-58 0-86z" fill="#d0122d"/>
+  <rect x="112" y="142" width="16" height="18" rx="3" fill="#1d1d1b"/>
+  <circle cx="120" cy="86" r="8" fill="#f5c518"/>
+</svg>

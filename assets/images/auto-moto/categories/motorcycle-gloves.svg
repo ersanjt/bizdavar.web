@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="motorcycle-gloves">
+  <rect width="240" height="240" rx="28" fill="#f4f0ea"/>
+  
+  <path d="M70 92h78c16 0 28 16 28 32v46c0 14-12 22-26 22H86c-16 0-26-12-26-28V118c0-14 10-26 10-26z" fill="#c45a11"/>
+  <rect x="86" y="70" width="18" height="36" rx="8" fill="#a0460d"/>
+  <rect x="108" y="62" width="18" height="42" rx="8" fill="#a0460d"/>
+  <rect x="130" y="70" width="18" height="36" rx="8" fill="#a0460d"/>
+  <rect x="152" y="86" width="22" height="28" rx="8" fill="#1d1d1b"/>
+  <path d="M86 128h58" stroke="#f5c518" stroke-width="6" stroke-linecap="round"/>
+</svg>

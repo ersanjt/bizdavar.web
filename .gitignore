@@ -14,6 +14,11 @@ storage/logs/
 storage/install.lock
 admin/.htpasswd
 
+# Large Auto-Moto product media — extract with scripts/import-automoto-catalog.js
+/media/catalog/
+/media/review/
+/work/
+
 # Security/local files (Codex senior audit)
 .env
 .env.*

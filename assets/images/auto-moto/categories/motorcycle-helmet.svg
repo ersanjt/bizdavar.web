@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="motorcycle-helmet">
+  <rect width="240" height="240" rx="28" fill="#f4f0ea"/>
+  
+  <path d="M48 150c8-62 48-96 72-96 28 0 68 28 76 96" fill="#1d1d1b"/>
+  <path d="M52 150c10-48 42-78 68-78s56 28 66 78" fill="#2c2c29"/>
+  <path d="M70 148h108c2 18-18 34-54 34s-56-16-54-34z" fill="#d0122d"/>
+  <path d="M78 118h92c6 10 4 22-8 28H86c-12-6-14-18-8-28z" fill="#c7d4e0"/>
+  <rect x="108" y="78" width="24" height="10" rx="3" fill="#f5c518"/>
+</svg>

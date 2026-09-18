@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="motorcycle-parts">
+  <rect width="240" height="240" rx="28" fill="#f4f0ea"/>
+  
+  <rect x="46" y="108" width="148" height="18" rx="6" fill="#1d4e89"/>
+  <rect x="72" y="70" width="28" height="92" rx="8" fill="#1d1d1b"/>
+  <rect x="140" y="70" width="28" height="92" rx="8" fill="#1d1d1b"/>
+  <circle cx="86" cy="176" r="12" fill="#d0122d"/>
+  <circle cx="154" cy="176" r="12" fill="#f5c518"/>
+</svg>

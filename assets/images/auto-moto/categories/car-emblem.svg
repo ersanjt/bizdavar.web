@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="car-emblem">
+  <rect width="240" height="240" rx="28" fill="#f4f0ea"/>
+  
+  <path d="M120 42l62 36v56l-62 42-62-42V78z" fill="#1d1d1b"/>
+  <path d="M120 64l40 24v36l-40 28-40-28V88z" fill="#2c2c29"/>
+  <circle cx="120" cy="112" r="18" fill="#d0122d"/>
+  <circle cx="120" cy="112" r="8" fill="#f5c518"/>
+</svg>

@@ -1,5 +1,5 @@
 # Bizdavar Group — https://bizdavar.com
-# Multilingual site — fa (root), tr, en, ru, ar — 205 URLs in sitemap.xml
+# Public locale URLs: fa (root), tr/en/ru/ar — see sitemap.xml and llms.txt
 
 User-agent: *
 Allow: /
@@ -34,6 +34,7 @@ User-agent: Bytespider
 Allow: /
 
 Sitemap: https://bizdavar.com/sitemap.xml
+Sitemap: https://bizdavar.com/sitemap-motorcycle.xml
 
 # Yandex host preference
 Host: https://bizdavar.com

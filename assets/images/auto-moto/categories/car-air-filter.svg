@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="car-air-filter">
+  <rect width="240" height="240" rx="28" fill="#f4f0ea"/>
+  
+  <rect x="52" y="78" width="136" height="92" rx="16" fill="#2b6b4a"/>
+  <rect x="68" y="60" width="104" height="22" rx="8" fill="#1d1d1b"/>
+  <path d="M72 104h96M72 122h96M72 140h96" stroke="#d9efe4" stroke-width="6" stroke-linecap="round"/>
+</svg>

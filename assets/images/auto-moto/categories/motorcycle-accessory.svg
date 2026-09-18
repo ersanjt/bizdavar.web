@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="motorcycle-accessory">
+  <rect width="240" height="240" rx="28" fill="#f4f0ea"/>
+  
+  <path d="M86 78h68v18H86z" fill="#1d1d1b"/>
+  <path d="M70 96h100l-10 86H80z" fill="#5b3a8c"/>
+  <path d="M92 118h56" stroke="#f5c518" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="120" cy="150" r="10" fill="#d0122d"/>
+</svg>

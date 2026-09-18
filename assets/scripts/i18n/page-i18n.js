@@ -187,6 +187,9 @@
       teltonika: 'initTeltonikaPage',
       prosense: 'initProsensePage',
       'liqui-moly': 'initLiquiMolyPage',
+      'auto-moto': 'initAutoMotoPage',
+      motorcycle: 'initAutoMotoPage',
+      'car-parts': 'initCarPartsPage',
       vega: 'initVegaPage',
       uwt: 'initUwtPage'
     };

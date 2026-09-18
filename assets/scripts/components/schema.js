@@ -260,6 +260,7 @@
       { name: 'UWT', url: absUrl(R.uwt) },
       { name: 'Prosense', url: absUrl(R.prosense) },
       { name: 'Liqui Moly', url: absUrl(R.liquiMoly) },
+      { name: 'Auto-Moto', url: absUrl(R.autoMoto) },
       { name: 'FXGuard', url: absUrl(R.fxguard) },
       { name: t('nav.blog', 'وبلاگ'), url: absUrl(R.blog) },
       { name: t('nav.about', 'درباره ما'), url: absUrl(R.about) }

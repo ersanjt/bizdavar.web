@@ -37,7 +37,7 @@
     if (!relativeFromRoot) return root || './';
     if (/^(https?:|mailto:|tel:|#)/.test(relativeFromRoot)) return relativeFromRoot;
     const clean = relativeFromRoot.replace(/^\//, '');
-    if (clean.startsWith('assets/')) return window.resolveAssetPath(clean);
+    if (clean.startsWith('assets/') || clean.startsWith('media/')) return window.resolveAssetPath(clean);
     const joined = root + clean;
     return prettifyInternalPath(joined);
   };
@@ -67,7 +67,7 @@
 
     const knownPages = new Set([
       'about', 'services', 'portfolio', 'blog', 'contact', 'privacy', 'fast', 'vega', 'uwt',
-      'prosense', 'teltonika', 'gamak', 'digi-system', 'teraoka', 'liqui-moly', 'bz-diamond', 'supplify-trade', 'kaya-one', 'smm-turk', 'fxguard-exchange', 'biztejarat',
+      'prosense', 'teltonika', 'gamak', 'digi-system', 'teraoka', 'liqui-moly', 'auto-moto', 'motorcycle', 'car-parts', 'bz-diamond', 'supplify-trade', 'kaya-one', 'smm-turk', 'fxguard-exchange', 'biztejarat',
       'products', 'biztab', 'bizpad', 'bizpet', 'bizsanitizer-v5', 'fxguard', 'fxguard-accounting', 'bizswap'
     ]);
     const stem = pathPart.replace(/\.html$/i, '').split('/').pop();

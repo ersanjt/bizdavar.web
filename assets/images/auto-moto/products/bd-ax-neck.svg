@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="BD-AX-NECK">
+  <rect width="240" height="240" rx="28" fill="#f3efe8"/>
+  <rect x="16" y="16" width="208" height="208" rx="22" fill="#fff"/>
+  <path d="M88 78h64v16H88z" fill="#1d2433"/><path d="M72 94h96l-8 80H80z" fill="#2b4c7e"/><circle cx="120" cy="140" r="10" fill="#d0122d"/>
+  <rect x="28" y="196" width="184" height="22" rx="8" fill="#1d2433"/>
+  <text x="120" y="212" text-anchor="middle" fill="#f5c518" font-family="Arial, sans-serif" font-size="10" font-weight="700">BD-AX-NECK</text>
+</svg>

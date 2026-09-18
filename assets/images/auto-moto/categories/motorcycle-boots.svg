@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="motorcycle-boots">
+  <rect width="240" height="240" rx="28" fill="#f4f0ea"/>
+  
+  <path d="M78 58h52v86H70z" fill="#1d1d1b"/>
+  <path d="M70 144h118c12 0 18 10 18 18v16H70z" fill="#2a2a28"/>
+  <path d="M70 168h136v14H70z" fill="#d0122d"/>
+  <rect x="88" y="78" width="28" height="10" rx="3" fill="#f5c518"/>
+  <rect x="88" y="100" width="28" height="10" rx="3" fill="#f5c518"/>
+</svg>

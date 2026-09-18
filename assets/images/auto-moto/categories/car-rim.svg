@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="car-rim">
+  <rect width="240" height="240" rx="28" fill="#f4f0ea"/>
+  
+  <circle cx="120" cy="120" r="72" fill="#1d1d1b"/>
+  <circle cx="120" cy="120" r="58" fill="none" stroke="#d0122d" stroke-width="10"/>
+  <circle cx="120" cy="120" r="18" fill="#f5c518"/>
+  <path d="M120 62l10 40-10 18-10-18zM178 120l-40 10-18-10 18-10zM120 178l-10-40 10-18 10 18zM62 120l40-10 18 10-18 10z" fill="#f4f0ea"/>
+</svg>

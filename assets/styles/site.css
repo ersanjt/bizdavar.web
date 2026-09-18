@@ -10700,20 +10700,43 @@ body[data-page="home"] .industrial-card__media img {
   transition: transform 0.55s var(--ease-out, cubic-bezier(0.22, 1, 0.36, 1));
 }
 
-body[data-page="home"] .industrial-card[data-brand="vega"] .industrial-card__media img {
-  object-fit: contain;
-  object-position: center 42%;
+body[data-page="home"] .industrial-card[data-brand="vega"] .industrial-card__media,
+body[data-page="home"] .industrial-card[data-brand="gamak"] .industrial-card__media {
+  background: #050505;
+}
+
+body[data-page="home"] .industrial-card[data-brand="vega"] .industrial-card__media img,
+body[data-page="home"] .industrial-card[data-brand="gamak"] .industrial-card__media img {
+  object-fit: cover;
   transform: none;
-  padding: 52px 2% 18%;
-  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+body[data-page="home"] .industrial-card[data-brand="vega"] .industrial-card__media img {
+  object-position: center center;
+}
+
+body[data-page="home"] .industrial-card[data-brand="gamak"] .industrial-card__media img {
+  object-position: center center;
+}
+
+body[data-page="home"] .industrial-card[data-brand="vega"]::after {
+  background: linear-gradient(180deg, rgba(12, 12, 10, 0) 0 54%, rgba(12, 12, 10, 0.92) 72%);
+}
+
+body[data-page="home"] .industrial-card[data-brand="gamak"]::after {
+  background: linear-gradient(180deg, rgba(12, 12, 10, 0) 0 46%, rgba(12, 12, 10, 0.94) 64%);
 }
 
 body[data-page="home"] .industrial-card[data-brand="prosense"] .industrial-card__media img {
   object-position: 14% 50%;
 }
 
-body[data-page="home"] .industrial-card[data-brand="gamak"] .industrial-card__media img {
-  object-position: 28% 55%;
+
+body[data-page="home"] .industrial-card[data-brand="auto-moto"] .industrial-card__media img {
+  object-position: center 42%;
 }
 
 body[data-page="home"] .industrial-card[data-brand="teraoka"] .industrial-card__media img {
@@ -10827,6 +10850,11 @@ body[data-page="home"] .industrial-card--link:focus-visible .industrial-card__me
 
 body[data-page="home"] .industrial-card[data-brand="vega"]:hover .industrial-card__media img,
 body[data-page="home"] .industrial-card[data-brand="vega"]:focus-visible .industrial-card__media img,
+body[data-page="home"] .industrial-card[data-brand="gamak"]:hover .industrial-card__media img,
+body[data-page="home"] .industrial-card[data-brand="gamak"]:focus-visible .industrial-card__media img {
+  transform: none;
+}
+
 body[data-page="home"] .industrial-card[data-brand="uwt"]:hover .industrial-card__media img,
 body[data-page="home"] .industrial-card[data-brand="uwt"]:focus-visible .industrial-card__media img {
   transform: scale(1.04);

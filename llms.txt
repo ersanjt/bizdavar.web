@@ -125,6 +125,27 @@
 - [Russian](https://bizdavar.com/ru/pages/liqui-moly)
 - [Arabic](https://bizdavar.com/ar/pages/liqui-moly)
 
+### /pages/auto-moto
+- [Persian](https://bizdavar.com/pages/auto-moto)
+- [Turkish](https://bizdavar.com/tr/pages/auto-moto)
+- [English](https://bizdavar.com/en/pages/auto-moto)
+- [Russian](https://bizdavar.com/ru/pages/auto-moto)
+- [Arabic](https://bizdavar.com/ar/pages/auto-moto)
+
+### /pages/motorcycle
+- [Persian](https://bizdavar.com/pages/motorcycle)
+- [Turkish](https://bizdavar.com/tr/pages/motorcycle)
+- [English](https://bizdavar.com/en/pages/motorcycle)
+- [Russian](https://bizdavar.com/ru/pages/motorcycle)
+- [Arabic](https://bizdavar.com/ar/pages/motorcycle)
+
+### /pages/car-parts
+- [Persian](https://bizdavar.com/pages/car-parts)
+- [Turkish](https://bizdavar.com/tr/pages/car-parts)
+- [English](https://bizdavar.com/en/pages/car-parts)
+- [Russian](https://bizdavar.com/ru/pages/car-parts)
+- [Arabic](https://bizdavar.com/ar/pages/car-parts)
+
 ### /pages/teltonika
 - [Persian](https://bizdavar.com/pages/teltonika)
 - [Turkish](https://bizdavar.com/tr/pages/teltonika)

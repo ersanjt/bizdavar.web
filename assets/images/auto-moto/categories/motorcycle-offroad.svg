@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="motorcycle-offroad">
+  <rect width="240" height="240" rx="28" fill="#f4f0ea"/>
+  
+  <path d="M52 156h136" stroke="#8a1c2b" stroke-width="10" stroke-linecap="round"/>
+  <path d="M78 156l28-62h36l30 62" fill="none" stroke="#1d1d1b" stroke-width="10" stroke-linejoin="round"/>
+  <circle cx="88" cy="168" r="22" fill="#1d1d1b" stroke="#d0122d" stroke-width="8"/>
+  <circle cx="168" cy="168" r="22" fill="#1d1d1b" stroke="#d0122d" stroke-width="8"/>
+  <circle cx="88" cy="168" r="6" fill="#f5c518"/>
+  <circle cx="168" cy="168" r="6" fill="#f5c518"/>
+  <path d="M118 94h28l-8-22h-20z" fill="#d0122d"/>
+</svg>

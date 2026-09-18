@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" role="img" aria-label="Bizdavar Brake">
+  <title>Bizdavar Brake</title>
+  <desc>Bizdavar wordmark in motion with a brake-caliper mark</desc>
+  <defs>
+    <linearGradient id="bbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1c1414"/>
+      <stop offset="1" stop-color="#0b0b0b"/>
+    </linearGradient>
+    <linearGradient id="bstreak" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".5"/>
+    </linearGradient>
+    <linearGradient id="bslash" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e3191f" stop-opacity="0"/>
+      <stop offset=".2" stop-color="#e3191f"/>
+      <stop offset=".55" stop-color="#fff"/>
+      <stop offset="1" stop-color="#e3191f" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="rotor" x1=".2" y1="0" x2=".9" y2="1">
+      <stop offset="0" stop-color="#9a9a9a"/>
+      <stop offset=".45" stop-color="#3a3a3a"/>
+      <stop offset="1" stop-color="#d0d0d0"/>
+    </linearGradient>
+    <filter id="bblur" x="-40%" y="-20%" width="180%" height="140%">
+      <feGaussianBlur stdDeviation="9 0"/>
+    </filter>
+    <style>
+      @media (prefers-reduced-motion: no-preference) {
+        .b-streak { animation: b-whoosh 1.15s linear infinite; }
+        .b-ghost { animation: b-trail 1.8s ease-in-out infinite; }
+      }
+      @keyframes b-whoosh {
+        from { transform: translateX(-18px); opacity: .14; }
+        to { transform: translateX(46px); opacity: 0; }
+      }
+      @keyframes b-trail {
+        0%, 100% { transform: translateX(0); opacity: .22; }
+        50% { transform: translateX(-10px); opacity: .08; }
+      }
+    </style>
+  </defs>
+
+  <rect width="880" height="300" rx="28" fill="url(#bbg)"/>
+
+  <g fill="url(#bstreak)" opacity=".75">
+    <rect class="b-streak" x="30" y="58" width="128" height="3" rx="2"/>
+    <rect class="b-streak" x="22" y="76" width="86" height="2" rx="1" style="animation-delay:.18s"/>
+    <rect class="b-streak" x="48" y="228" width="140" height="3" rx="2" style="animation-delay:.42s"/>
+    <rect class="b-streak" x="18" y="246" width="72" height="2" rx="1" style="animation-delay:.64s"/>
+  </g>
+
+  <!-- Caliper as an A-like mark: two red arms clamping a disc -->
+  <g transform="translate(54 42) skewX(-14)">
+    <circle cx="78" cy="108" r="58" fill="#141414" stroke="url(#rotor)" stroke-width="11"/>
+    <circle cx="78" cy="108" r="44" fill="none" stroke="#2c2c2c" stroke-width="2"/>
+    <g stroke="#555" stroke-width="1.5" opacity=".85">
+      <path d="M78 62 V92M78 124 V154M32 108 H62M94 108 H124"/>
+      <path d="M46 76 L66 96M90 120 L110 140M46 140 L66 120M90 96 L110 76"/>
+    </g>
+    <circle cx="78" cy="108" r="12" fill="#111" stroke="#c8c8c8" stroke-width="3"/>
+    <path d="M28 168 L66 18 H90 L78 18 L42 168 Z" fill="#e3191f"/>
+    <path d="M90 18 L128 168 H104 L78 18 Z" fill="#e3191f"/>
+    <path d="M48 96 H108 V122 H48 Z" fill="#b4141a"/>
+    <rect x="58" y="88" width="9" height="44" rx="1.5" fill="#1a1a1a"/>
+    <rect x="89" y="88" width="9" height="44" rx="1.5" fill="#1a1a1a"/>
+    <circle cx="78" cy="28" r="6" fill="#1a1a1a"/>
+    <circle cx="78" cy="28" r="2.4" fill="#f2f2f2"/>
+  </g>
+
+  <g font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="92" font-weight="700" letter-spacing="-0.045em">
+    <g transform="translate(236 190) skewX(-16)" fill="#fff" opacity=".18" filter="url(#bblur)">
+      <g class="b-ghost">
+        <text><tspan>Bizda</tspan><tspan fill="#e3191f">var</tspan></text>
+      </g>
+    </g>
+    <g transform="translate(246 188) skewX(-14)">
+      <text>
+        <tspan fill="#f4f4f4">Bizda</tspan><tspan fill="#e3191f">var</tspan>
+      </text>
+    </g>
+  </g>
+
+  <path d="M20 172 L860 124" fill="none" stroke="#000" stroke-width="8" stroke-linecap="round" opacity=".5"/>
+  <path d="M20 170 L860 122" fill="none" stroke="url(#bslash)" stroke-width="4" stroke-linecap="round"/>
+</svg>

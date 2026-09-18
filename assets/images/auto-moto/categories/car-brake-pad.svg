@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="car-brake-pad">
+  <rect width="240" height="240" rx="28" fill="#f4f0ea"/>
+  
+  <path d="M58 78h124c8 0 12 8 10 16L176 168c-2 8-10 12-18 12H82c-8 0-16-4-18-12L48 94c-2-8 2-16 10-16z" fill="#d0122d"/>
+  <path d="M74 100h92l-10 56H84z" fill="#2a2a28"/>
+  <path d="M86 118h68" stroke="#f5c518" stroke-width="6" stroke-linecap="round"/>
+  <path d="M90 138h60" stroke="#f5c518" stroke-width="6" stroke-linecap="round"/>
+</svg>

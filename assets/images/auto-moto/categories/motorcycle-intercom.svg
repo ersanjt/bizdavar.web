@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="motorcycle-intercom">
+  <rect width="240" height="240" rx="28" fill="#f4f0ea"/>
+  
+  <rect x="58" y="70" width="70" height="96" rx="18" fill="#1d1d1b"/>
+  <rect x="70" y="86" width="46" height="28" rx="8" fill="#2b4c7e"/>
+  <circle cx="93" cy="140" r="10" fill="#f5c518"/>
+  <rect x="132" y="96" width="52" height="36" rx="8" fill="#d0122d"/>
+  <path d="M184 114h16" stroke="#1d1d1b" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="204" cy="114" r="7" fill="#1d1d1b"/>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="motorcycle-jacket">
+  <rect width="240" height="240" rx="28" fill="#f4f0ea"/>
+  
+  <path d="M78 54l42 22 42-22 22 36-10 18-16-8v86H82V100l-16 8-10-18z" fill="#2b4c7e"/>
+  <path d="M120 76v114" stroke="#f4f0ea" stroke-width="6"/>
+  <rect x="86" y="108" width="22" height="16" rx="4" fill="#d0122d"/>
+  <rect x="132" y="108" width="22" height="16" rx="4" fill="#d0122d"/>
+  <path d="M96 54l24 18 24-18" fill="none" stroke="#1d1d1b" stroke-width="8" stroke-linecap="round"/>
+</svg>

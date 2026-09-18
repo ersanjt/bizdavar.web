@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="BD-GL-SUM">
+  <rect width="240" height="240" rx="28" fill="#f3efe8"/>
+  <rect x="16" y="16" width="208" height="208" rx="22" fill="#fff"/>
+  <path d="M72 96h74c14 0 26 14 26 30v40c0 12-10 20-22 20H88c-14 0-24-10-24-24v-42c0-12 8-24 8-24z" fill="#1d1d1b"/><rect x="88" y="74" width="16" height="32" rx="7" fill="#d0122d"/><rect x="108" y="68" width="16" height="36" rx="7" fill="#d0122d"/><path d="M90 128h50" stroke="#f5c518" stroke-width="5" stroke-linecap="round"/>
+  <rect x="28" y="196" width="184" height="22" rx="8" fill="#1d1d1b"/>
+  <text x="120" y="212" text-anchor="middle" fill="#f5c518" font-family="Arial, sans-serif" font-size="10" font-weight="700">BD-GL-SUM</text>
+</svg>

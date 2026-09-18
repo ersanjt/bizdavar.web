@@ -44,6 +44,9 @@ window.BIZDAVAR_CONFIG = {
     digiSystem: 'pages/digi-system.html',
     teraoka: 'pages/teraoka.html',
     liquiMoly: 'pages/liqui-moly.html',
+    autoMoto: 'pages/auto-moto.html',
+    motorcycle: 'pages/motorcycle.html',
+    carParts: 'pages/car-parts.html',
     fieldTech: 'pages/field-tech.html',
     articles: {
       digitalMarketing: 'pages/articles/digital-marketing.html',
@@ -142,6 +145,15 @@ window.BIZDAVAR_CONFIG = {
             items: [
               { route: 'gamak', page: 'gamak', label: 'Gamak', descKey: 'nav.brandGamakDesc' },
               { route: 'liquiMoly', page: 'liqui-moly', label: 'Liqui Moly', descKey: 'nav.brandLiquiDesc' }
+            ]
+          },
+          {
+            id: 'auto',
+            labelKey: 'nav.brandGroupAuto',
+            items: [
+              { route: 'autoMoto', page: 'auto-moto', labelKey: 'nav.productAutoMoto', label: 'اتو‌موتو', descKey: 'nav.brandAutoMotoDesc' },
+              { route: 'motorcycle', page: 'motorcycle', labelKey: 'nav.autoMotoShop', label: 'موتورسیکلت', descKey: 'nav.autoMotoShopDesc' },
+              { route: 'carParts', page: 'car-parts', labelKey: 'nav.autoCarShop', label: 'قطعات خودرو', descKey: 'nav.autoCarShopDesc' }
             ]
           },
           {
@@ -724,7 +736,7 @@ window.BIZDAVAR_CONFIG = {
       title: 'سنسور و ابزار دقیق',
       desc: 'اندازه‌گیری سطح، فشار، جریان و سوئیچ — استاندارد صنایع نفت، پتروشیمی و آب',
       logo: 'assets/images/partners/vega.svg',
-      photo: 'assets/images/vega/product-vegapuls-6x-photo.webp',
+      photo: 'assets/images/content/home-brand-vega.webp',
       url: 'pages/vega',
       internal: true,
       badge: 'آلمان',
@@ -776,7 +788,7 @@ window.BIZDAVAR_CONFIG = {
       title: 'الکتروموتور صنعتی',
       desc: 'موتورهای الکتریکی سه‌فاز و تک‌فاز — تامین، مشاوره انتخاب و پشتیبانی فنی',
       logo: 'assets/images/partners/gamak.svg',
-      photo: 'assets/images/gamak/category-three-phase.webp',
+      photo: 'assets/images/content/home-brand-gamak-bleed.webp',
       url: 'pages/gamak',
       internal: true,
       badge: 'ترکیه',
@@ -809,6 +821,19 @@ window.BIZDAVAR_CONFIG = {
       accent: 'navy',
       tags: ['Octane Plus', 'Top Tec', '5W-30'],
       cta: 'کاتالوگ و قیمت'
+    },
+    {
+      name: 'Auto-Moto',
+      title: 'تجهیزات موتورسیکلت',
+      desc: 'کلاه ایمنی، کاپشن، دستکش، شلوار، بوت، اینترکام و محافظ — قیمت دلاری تحویل ایران',
+      logo: 'assets/images/auto-moto/logo-moto-shop.svg',
+      photo: 'assets/images/content/home-brand-auto-moto.webp',
+      url: 'pages/auto-moto',
+      internal: true,
+      badge: 'جدید',
+      accent: 'navy',
+      tags: ['کلاه ایمنی', 'کاپشن موتور', 'بوت موتور'],
+      cta: 'کاتالوگ و استعلام'
     }
   ],
 

@@ -308,11 +308,20 @@
         TELTONIKA_CATALOG: 'teltonikaCatalog',
         VEGA_CATALOG: 'vegaCatalog',
         PROSENSE_CATALOG: 'prosenseCatalog',
-        LIQUI_MOLY_CATALOG: 'liquiMolyCatalog'
+        LIQUI_MOLY_CATALOG: 'liquiMolyCatalog',
+        AUTO_MOTO_CATALOG: 'autoMotoCatalog',
+        CAR_PARTS_CATALOG: 'carPartsCatalog'
       };
       const i18nKey = keyMap[catalogKey];
       const base = window[catalogKey] || {};
-      if (!i18nKey) return this.normalizeSupplyCatalog(base);
+      const cacheKey = catalogKey + ':' + (this.locale || 'fa') + ':' + (base._rev || 0) + ':' + (base.imported ? '1' : '0');
+      this._supplyCache = this._supplyCache || {};
+      if (this._supplyCache[cacheKey]) return this._supplyCache[cacheKey];
+      const remember = (value) => {
+        this._supplyCache[cacheKey] = value;
+        return value;
+      };
+      if (!i18nKey) return remember(this.normalizeSupplyCatalog(base));
 
       const brandOverlay = this.raw(`${i18nKey}.brand`) || {};
       const academyBase = base.academy || {};
@@ -379,7 +388,7 @@
         };
       }
 
-      return result;
+      return remember(result);
     },
 
     normalizeSupplyCatalog(cat) {
@@ -406,21 +415,33 @@
         ...cat,
         brand: {
           ...b,
-          tagline: b.tagline || b.taglineFa,
-          description: b.description || b.descriptionFa
+          tagline: pick(b, 'tagline') || b.tagline || b.taglineFa,
+          description: pick(b, 'description') || b.description || b.descriptionFa,
+          since: pick(b, 'since') || b.since
         },
+        quickSeries: (cat.quickSeries || []).map(function (s) {
+          return {
+            ...s,
+            name: pick(s, 'name') || s.name,
+            hint: pick(s, 'hint') || s.hint
+          };
+        }),
         highlights: (cat.highlights || []).map(h => ({
           ...h,
           useCase: pick(h, 'useCase') || h.useCase || h.useCaseFa
         })),
         categories: (cat.categories || []).map(c => ({
           ...c,
+          title: pick(c, 'title') || c.title,
+          desc: pick(c, 'desc') || c.desc,
           imageAlt: lang === 'fa'
             ? (c.imageAltFa || c.imageAlt)
             : lang === 'tr'
               ? (c.imageAltTr || c.imageAlt)
               : (c.imageAltEn || c.imageAlt),
-          series: (c.series || []).map(s => {
+          series: cat.lazyCatalog
+            ? (c.series || [])
+            : (c.series || []).map(s => {
             const featOrder = {
               fa: s.featuresFa,
               tr: s.featuresTr,

@@ -45,6 +45,7 @@ User-agent: Bytespider
 Allow: /
 
 Sitemap: ${BASE}/sitemap.xml
+Sitemap: ${BASE}/sitemap-motorcycle.xml
 
 # Yandex host preference
 Host: ${BASE}
