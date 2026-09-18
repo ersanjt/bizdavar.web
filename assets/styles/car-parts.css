@@ -1,3 +1,4 @@
+@import url('/assets/styles/shop-pdp.css?v=20260919w');
 /* Car-parts brake desk — dark garage hero, then a white parts list. */
 body.car-page {
   --brake-red: #ef3b42;
@@ -5,7 +6,21 @@ body.car-page {
   --brake-muted: #6b6560;
   background: #070707;
 }
-body.car-page .site-main { background: #070707; }
+body.car-page.is-brake-pdp {
+  background: #fff;
+}
+body.car-page.is-brake-pdp .site-main { background: #fff; }
+body.car-page.is-brake-pdp .breadcrumbs-wrap {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+body.car-page.is-brake-pdp .breadcrumbs-wrap a,
+body.car-page.is-brake-pdp .breadcrumbs { color: #555; }
+.brake-desk--pdp {
+  background: #fff;
+  color: var(--brake-ink);
+  padding-top: 12px;
+}
 body.car-page .breadcrumbs-wrap {
   background: #070707;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);

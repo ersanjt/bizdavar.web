@@ -732,7 +732,7 @@ window.BIZDAVAR_LOCALES = {
         productsGo: 'Ürünlere git',
         supplyNum: '01',
         supplyTitle: 'Ticaret ve endüstriyel tedarik',
-        supplyDesc: 'Türkiye ve bölge için VEGA, Prosense, Liqui Moly, Teltonika ve Gamak — Türkçe teklif',
+        supplyDesc: 'Türkiye ve bölge için VEGA, Gamak, Teltonika, motosiklet ekipmanı ve oto parça — Türkçe teklif',
         supplyGo: 'Tedarik kataloğuna git'
       }
     },
@@ -1365,7 +1365,7 @@ window.BIZDAVAR_LOCALES = {
         productsGo: 'Go to products',
         supplyNum: '01',
         supplyTitle: 'Trade and industrial supply',
-        supplyDesc: 'Buy VEGA, Prosense, Liqui Moly, Teltonika and Gamak — USD/EUR proforma from Istanbul',
+        supplyDesc: 'Buy VEGA, Gamak, Teltonika, motorcycle gear and car parts — USD/EUR proforma from Istanbul',
         supplyGo: 'Open the trade catalogue'
       }
     },
@@ -1698,7 +1698,7 @@ window.BIZDAVAR_LOCALES = {
       leadPathsDesc: 'Pick your path — we usually reply within 24 hours',
       leadPaths: [
         { icon: 'desktop', title: 'Website & online sales', desc: 'Fast Web Studio — from $99, 5-day delivery, WhatsApp & lead forms', cta: 'View plans', url: '/en/pages/fast' },
-        { icon: 'factory', title: 'Industrial supply', desc: 'VEGA, Prosense, UWT, Liqui Moly — quote with technical consulting', cta: 'Industrial quote', url: '/en/pages/contact?service=industrial' },
+        { icon: 'factory', title: 'Industrial supply', desc: 'VEGA, Gamak, Teltonika, motorcycle gear and car parts — quote with technical consulting', cta: 'Industrial quote', url: '/en/pages/contact?service=industrial' },
         { icon: 'phone', title: 'Free consultation', desc: 'Web, marketing, FXGuard CRM or custom project — no commitment', cta: 'Contact us', url: '/en/pages/contact' }
       ],
       heroCard: 'Digital marketing · Web design · Industrial',
@@ -1711,7 +1711,7 @@ window.BIZDAVAR_LOCALES = {
       featGlobal: 'Global reach',
       featGlobalDesc: 'US, EU and 11-country delivery',
       featIndustrial: 'Industrial expertise',
-      featIndustrialDesc: 'VEGA, UWT, Prosense & Liqui Moly supply',
+      featIndustrialDesc: 'VEGA, Gamak, Teltonika, motorcycle gear and car parts',
       featResults: 'Measurable results',
       featResultsDesc: 'Higher conversion & brand growth',
       svcEyebrow: 'Expert services',
@@ -1723,7 +1723,7 @@ window.BIZDAVAR_LOCALES = {
       svcAppsDesc: 'Android and iOS apps — App Store / Play release and Stripe.',
       svcServerDesc: 'Setup, security, backups, monitoring and server migration.',
       svcFieldDesc: 'CCTV, wiring and cove lighting — Tabriz.',
-      svcIndDesc: 'VEGA sensors, Prosense detectors, Liqui Moly and supply consulting.',
+      svcIndDesc: 'VEGA sensors, Gamak motors, motorcycle shop and car parts, with supply consulting.',
       svcPlans: 'Plans & pricing',
       fastTitle: 'Professional website in 5 days',
       fastDesc: 'Launch your site and start selling online this week — Fast Web Studio',

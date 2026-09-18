@@ -413,6 +413,9 @@
       : [];
 
     const menu = MENU[loc()] || MENU.fa;
+    document.body.classList.toggle('is-brake-pdp', !!open);
+    document.body.classList.toggle('has-shop-pdp-dock', !!open);
+
     const finder =
       '<div class="fren-mega' + (menuOpen && !open ? ' is-open' : '') + '" id="frenMega">' +
         '<div class="fren-mega__head"><strong>' + esc(menu.open) + '</strong><button type="button" data-mega-close="1">' + esc(menu.close) + '</button></div>' +
@@ -425,7 +428,7 @@
         '</section>' +
       '</div>';
 
-    root.innerHTML =
+    const stage = open ? '' :
       '<div class="fren-stage">' +
         '<section class="brake-hero">' +
           '<video autoplay muted loop playsinline preload="metadata"><source src="' + esc(catalog.video || '/assets/video/porsche-997-gt3rs.mp4') + '" type="video/mp4"></video>' +
@@ -443,8 +446,11 @@
           pills +
         '</nav>' +
         finder +
-      '</div>' +
-      '<section class="brake-desk" id="brakeDesk">' +
+      '</div>';
+
+    root.innerHTML =
+      stage +
+      '<section class="brake-desk' + (open ? ' brake-desk--pdp' : '') + '" id="brakeDesk">' +
         (open ? detailHtml(open, related, c) :
           '<div class="brake-desk__bar"><div><h2>' + esc(heading) + '</h2><p>' + items.length + ' ' + esc(c.products) + '</p></div><span class="brake-sort">' + esc(c.sort) + '</span></div>' +
           '<div class="brake-results">' +

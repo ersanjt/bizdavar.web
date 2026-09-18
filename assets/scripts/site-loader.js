@@ -14,7 +14,7 @@
   if (!el) return;
 
   var BASE = '/assets/scripts/';
-  var ASSET_VER = '20260919v';
+  var ASSET_VER = '20260919w';
 
   // Inline page boots run before deferred chain scripts; queue until bootstrap.js.
   window.bizdavarPageInit = window.bizdavarPageInit || function (fn) {
@@ -63,6 +63,8 @@
     i18nPacks.push('i18n/articles-body-i18n.js');
     if (loc === 'ru' || loc === 'ar') i18nPacks.push('i18n/articles-body-ru-ar.js');
   }
+
+  if (document.querySelector('.am-pdp')) beforeMain.push('auto-moto-pdp.js');
 
   var chain = [
     'config/paths.js',
