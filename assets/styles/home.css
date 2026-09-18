@@ -192,9 +192,14 @@ body[data-page="home"] .landing-hero .btn--primary:focus-visible {
   background: #fff;
 }
 
-.home-hero__chip--vega {
+.home-hero__chip--moto {
   top: 16px;
-  inset-inline-end: 12px;
+  inset-inline-start: 16px;
+}
+
+.home-hero__chip--moto img {
+  object-fit: cover;
+  background: #111;
 }
 
 .home-hero__chip--fast {

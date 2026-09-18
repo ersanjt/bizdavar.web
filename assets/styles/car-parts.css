@@ -6,6 +6,7 @@ body.car-page {
   --brake-muted: #6b6560;
   background: #070707;
 }
+body.car-page .site-main { background: #070707; }
 body.car-page.is-brake-pdp {
   background: #fff;
 }
