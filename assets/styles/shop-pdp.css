@@ -89,6 +89,9 @@ html[dir='rtl'] .shop-pdp__crumb a + span::before { content: '‹'; }
   display: grid;
   place-items: center;
 }
+.shop-pdp__stage svg { width: min(72%, 380px); height: auto; }
+body.has-shop-pdp-dock .shop-pdp,
+body.has-shop-pdp-dock .brake-desk--pdp { padding-bottom: 88px; }
 .shop-pdp__gallery:not(:has(.shop-pdp__thumbs)),
 .am-pdp.shop-pdp .am-pdp__gallery:not(:has(.am-pdp__thumbs)) {
   grid-template-columns: 1fr;
@@ -175,7 +178,8 @@ html[dir='rtl'] .shop-pdp__crumb a + span::before { content: '‹'; }
 .shop-pdp__assure p { margin: 0; color: #555; line-height: 1.7; }
 
 .shop-pdp__dock {
-  position: sticky;
+  position: fixed;
+  inset-inline: 0;
   bottom: 0;
   z-index: 25;
   grid-column: 1 / -1;

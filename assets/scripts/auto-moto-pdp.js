@@ -85,6 +85,9 @@
     const img = root.querySelector('.am-pdp__main');
     const specStock = Array.from(root.querySelectorAll('.am-pdp__specs dd')).pop();
 
+    const back = buy && buy.querySelector('p > a[href*="motorcycle"]');
+    if (back && back.parentElement) back.parentElement.hidden = true;
+
     if (buy && !buy.querySelector('.shop-pdp__wa')) {
       const wa = document.createElement('a');
       wa.className = 'shop-pdp__wa';
