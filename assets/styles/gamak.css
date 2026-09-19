@@ -17,3 +17,46 @@ body[data-page="gamak"] .gamak-hero::before {
     linear-gradient(105deg, rgba(244, 249, 250, 0.97) 42%, rgba(244, 249, 250, 0.55) 68%, rgba(244, 249, 250, 0.2) 100%),
     url('../images/gamak/category-three-phase.webp') center right / cover no-repeat;
 }
+
+/* Official Gamak assets are 1:1 or ultra-wide banners; keep them fully in-frame. */
+body[data-page="gamak"] .gamak-hero__visual img {
+  aspect-ratio: 4 / 3;
+  max-height: 360px;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+  background: #f3eee8;
+}
+
+body[data-page="gamak"] .gamak-highlight-card__media,
+body[data-page="gamak"] .gamak-industry-card__media,
+body[data-page="gamak"] .gamak-iran-card__media {
+  aspect-ratio: 4 / 3;
+  background: #f3eee8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body[data-page="gamak"] .gamak-highlight-card__media img,
+body[data-page="gamak"] .gamak-industry-card__media img,
+body[data-page="gamak"] .gamak-iran-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+body[data-page="gamak"] .gamak-category-block__visual {
+  background: #f3eee8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body[data-page="gamak"] .gamak-category-block__visual img {
+  height: 160px;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}

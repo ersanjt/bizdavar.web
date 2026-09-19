@@ -312,6 +312,14 @@
   box-sizing: border-box;
 }
 
+.products-supply .industrial-card[data-brand="liqui-moly"] .industrial-card__media img,
+.products-supply .industrial-card[data-brand="car-parts"] .industrial-card__media img {
+  object-fit: cover;
+  object-position: center 42%;
+  transform: none;
+  padding: 0;
+}
+
 .products-supply .industrial-card::after {
   content: '';
   position: absolute;

@@ -836,6 +836,19 @@ window.BIZDAVAR_CONFIG = {
       accent: 'navy',
       tags: ['کلاه ایمنی', 'کاپشن موتور', 'بوت موتور'],
       cta: 'کاتالوگ و استعلام'
+    },
+    {
+      name: 'Car Parts',
+      title: 'لنت و دیسک ترمز',
+      desc: 'لنت، دیسک و قطعات ترمز با انتخاب برند و مدل — قیمت دلاری تحویل ایران',
+      logo: 'assets/images/auto-moto/logo-brake-shop.svg',
+      photo: 'assets/images/content/home-brand-car-parts.jpg',
+      url: 'pages/car-parts',
+      internal: true,
+      badge: 'جدید',
+      accent: 'navy',
+      tags: ['لنت ترمز', 'دیسک ترمز', 'اصل'],
+      cta: 'فروشگاه ترمز'
     }
   ],
 

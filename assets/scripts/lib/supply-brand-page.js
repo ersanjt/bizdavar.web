@@ -887,14 +887,14 @@ window.createSupplyBrandPage = function (cfg) {
 
     if (!el || !catalog().iranIndustries) return;
 
-    el.innerHTML = catalog().iranIndustries.map((ind, idx) => `
-
-      <a href="${inquiryUrl(ind.name)}" class="${prefix}-iran-card ${prefix}-iran-card--link ${prefix}-iran-card--tone-${(idx % 4) + 1}" style="--iran-i:${idx}">
-
+    el.innerHTML = catalog().iranIndustries.map((ind, idx) => {
+      const imgSrc = path(ind.image);
+      const imgAlt = String(ind.imageAlt || ind.name).replace(/"/g, '&quot;');
+      const isPhoto = /\.(webp|jpe?g|png)(\?|#|$)/i.test(imgSrc);
+      return `
+      <a href="${inquiryUrl(ind.name)}" class="${prefix}-iran-card ${prefix}-iran-card--link ${prefix}-iran-card--tone-${(idx % 4) + 1}${isPhoto ? ` ${prefix}-iran-card--photo` : ''}" style="--iran-i:${idx}">
         <div class="${prefix}-iran-card__media">
-
-          <img src="${path(ind.image)}" alt="${ind.imageAlt || ind.name}" width="640" height="360" loading="lazy" decoding="async">
-
+          <img src="${imgSrc}" alt="${imgAlt}" width="640" height="360" loading="lazy" decoding="async">
         </div>
 
         <div class="${prefix}-iran-card__body">
@@ -913,7 +913,8 @@ window.createSupplyBrandPage = function (cfg) {
 
       </a>
 
-    `).join('');
+    `;
+    }).join('');
 
   }
 

@@ -1046,7 +1046,9 @@ body[data-page="home"] .industrial-card:nth-child(2) {
 }
 
 body[data-page="home"] .industrial-card:nth-child(6),
-body[data-page="home"] .industrial-card:nth-child(7) {
+body[data-page="home"] .industrial-card:nth-child(7),
+body[data-page="home"] .industrial-card:nth-child(8),
+body[data-page="home"] .industrial-card:nth-child(9) {
   grid-column: span 6;
   min-height: 300px;
 }
@@ -1119,7 +1121,21 @@ body[data-page="home"] .industrial-card[data-brand="teraoka"] .industrial-card__
 }
 
 body[data-page="home"] .industrial-card[data-brand="liqui-moly"] .industrial-card__media img {
-  object-position: 38% 55%;
+  object-fit: cover;
+  object-position: center 42%;
+  transform: none;
+  padding: 0;
+}
+
+body[data-page="home"] .industrial-card[data-brand="car-parts"] .industrial-card__media {
+  background: #111;
+}
+
+body[data-page="home"] .industrial-card[data-brand="car-parts"] .industrial-card__media img {
+  object-fit: cover;
+  object-position: center center;
+  transform: none;
+  padding: 0;
 }
 
 body[data-page="home"] .industrial-card[data-brand="uwt"] .industrial-card__media {

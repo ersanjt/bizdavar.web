@@ -1062,8 +1062,18 @@ body.auto-drawer-open { overflow: hidden; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
   transition: transform 0.5s ease;
+}
+
+.auto-iran-card--photo .auto-iran-card__media {
+  background: #121212;
+}
+
+.auto-iran-card--photo .auto-iran-card__media img {
+  object-fit: cover;
+  object-position: center;
 }
 
 .auto-iran-card:hover .auto-iran-card__media img {

@@ -982,7 +982,8 @@ window.BIZDAVAR_LOCALES = {
         { name: 'Teltonika', title: 'GPS ve Fleet Telematics', desc: 'Filo takip, CAN/OBD, BLE, video ve IoT çözümleri — FMB920 · FMC650 · FTC305', badge: 'Litvanya', tags: ['FMB920', 'FTC305', 'DualCam'], cta: 'Teltonika katalog' },
         { name: 'Gamak', title: 'Endüstriyel elektrik motoru', desc: 'Üç fazlı ve tek fazlı motorlar — tedarik ve teknik destek', badge: 'Türkiye', tags: ['IE2/IE3', 'Flanşlı', 'Projeye özel'], cta: 'Gamak bilgisi' },
         { name: 'Teraoka', title: 'Terazi ve mağaza ekipmanları', desc: 'Teraoka Seiko ürünlerinin tam tedariki — terazi, etiketleme, POS', badge: 'Japonya', tags: ['Scales', 'Labeling', 'POS'], cta: 'Markayı gör' },
-        { name: 'Liqui Moly', title: 'Motor yağı ve katkı', desc: 'Motor yağı, Octane Plus, dizel katkı ve oto bakım — şeffaf dolar fiyat', badge: 'Almanya', tags: ['Octane Plus', 'Top Tec', '5W-30'], cta: 'Katalog ve fiyat' }
+        { name: 'Liqui Moly', title: 'Motor yağı ve katkı', desc: 'Motor yağı, Octane Plus, dizel katkı ve oto bakım — şeffaf dolar fiyat', badge: 'Almanya', tags: ['Octane Plus', 'Top Tec', '5W-30'], cta: 'Katalog ve fiyat' },
+        { name: 'Car Parts', title: 'Fren balatası ve diski', desc: 'Balata, disk ve fren parçası — marka ve model seçimi, İran teslim USD', badge: 'Yeni', tags: ['Balata', 'Disk', 'Orijinal'], cta: 'Fren mağazası' }
       ]
     },
     process: {
@@ -1617,7 +1618,8 @@ window.BIZDAVAR_LOCALES = {
         { name: 'Teltonika', title: 'GPS & Fleet Telematics', desc: 'Fleet trackers, CAN/OBD, BLE, video and IoT solutions — FMB920 · FMC650 · FTC305', badge: 'Lithuania', tags: ['FMB920', 'FTC305', 'DualCam'], cta: 'Teltonika catalog' },
         { name: 'Gamak', title: 'Industrial electric motors', desc: 'Three-phase and single-phase motors — supply and technical support', badge: 'Turkey', tags: ['IE2/IE3', 'Flange mount', 'Project-based'], cta: 'Gamak info' },
         { name: 'Teraoka', title: 'Scales & store equipment', desc: 'Full Teraoka Seiko supply — scales, labeling, POS and retail/industrial equipment', badge: 'Japan', tags: ['Scales', 'Labeling', 'POS'], cta: 'View brand' },
-        { name: 'Liqui Moly', title: 'Oils & fuel additives', desc: 'Engine oils, Octane Plus, diesel additives and car care — transparent USD pricing', badge: 'Germany', tags: ['Octane Plus', 'Top Tec', '5W-30'], cta: 'Catalog & pricing' }
+        { name: 'Liqui Moly', title: 'Oils & fuel additives', desc: 'Engine oils, Octane Plus, diesel additives and car care — transparent USD pricing', badge: 'Germany', tags: ['Octane Plus', 'Top Tec', '5W-30'], cta: 'Catalog & pricing' },
+        { name: 'Car Parts', title: 'Brake pads and discs', desc: 'Pads, discs and brake parts by brand and model — Iran-delivery USD', badge: 'New', tags: ['Pads', 'Discs', 'OEM'], cta: 'Brake shop' }
       ]
     },
     process: {

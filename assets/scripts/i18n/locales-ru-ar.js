@@ -1025,7 +1025,8 @@
         { name: 'Teltonika', title: 'GPS и Fleet Telematics', desc: 'Трекеры флота, CAN/OBD, BLE, видео и IoT — FMB920 · FMC650 · FTC305', badge: 'Литва', tags: ['FMB920', 'FTC305', 'DualCam'], cta: 'Каталог Teltonika' },
         { name: 'Gamak', title: 'Промышленные электродвигатели', desc: 'Трёхфазные и однофазные моторы — поставка и техподдержка', badge: 'Турция', tags: ['IE2/IE3', 'Фланец', 'Под проект'], cta: 'О Gamak' },
         { name: 'Teraoka', title: 'Весы и магазинное оборудование', desc: 'Полная линейка Teraoka Seiko — весы, этикетирование, POS', badge: 'Япония', tags: ['Scales', 'Labeling', 'POS'], cta: 'Смотреть бренд' },
-        { name: 'Liqui Moly', title: 'Масла и присадки', desc: 'Моторные масла, Octane Plus, дизельные присадки и автохимия — цены в USD', badge: 'Германия', tags: ['Octane Plus', 'Top Tec', '5W-30'], cta: 'Каталог и цены' }
+        { name: 'Liqui Moly', title: 'Масла и присадки', desc: 'Моторные масла, Octane Plus, дизельные присадки и автохимия — цены в USD', badge: 'Германия', tags: ['Octane Plus', 'Top Tec', '5W-30'], cta: 'Каталог и цены' },
+        { name: 'Car Parts', title: 'Колодки и диски', desc: 'Колодки, диски и тормозные детали по марке и модели — цена в USD с доставкой', badge: 'Новое', tags: ['Колодки', 'Диски', 'Оригинал'], cta: 'Магазин тормозов' }
       ]
     }
   };
@@ -1092,7 +1093,8 @@
         { name: 'Teltonika', title: 'GPS وFleet Telematics', desc: 'متتبعات أساطيل وCAN/OBD وBLE وفيديو وIoT — FMB920 · FMC650 · FTC305', badge: 'ليتوانيا', tags: ['FMB920', 'FTC305', 'DualCam'], cta: 'كتالوج Teltonika' },
         { name: 'Gamak', title: 'محركات كهربائية صناعية', desc: 'محركات ثلاثية وأحادية الطور — توريد ودعم فني', badge: 'تركيا', tags: ['IE2/IE3', 'فلانش', 'حسب المشروع'], cta: 'معلومات Gamak' },
         { name: 'Teraoka', title: 'موازين ومعدات متاجر', desc: 'توريد Teraoka Seiko الكامل — موازين وملصقات وPOS', badge: 'اليابان', tags: ['Scales', 'Labeling', 'POS'], cta: 'عرض العلامة' },
-        { name: 'Liqui Moly', title: 'زيوت وإضافات', desc: 'زيوت محرك وOctane Plus وإضافات ديزل وعناية — أسعار بالدولار', badge: 'ألمانيا', tags: ['Octane Plus', 'Top Tec', '5W-30'], cta: 'الكتالوج والأسعار' }
+        { name: 'Liqui Moly', title: 'زيوت وإضافات', desc: 'زيوت محرك وOctane Plus وإضافات ديزل وعناية — أسعار بالدولار', badge: 'ألمانيا', tags: ['Octane Plus', 'Top Tec', '5W-30'], cta: 'الكتالوج والأسعار' },
+        { name: 'Car Parts', title: 'فحمات وأقراص الفرامل', desc: 'فحمات وأقراص وقطع فرامل حسب الماركة والموديل — السعر بالدولار', badge: 'جديد', tags: ['فحمات', 'أقراص', 'أصلي'], cta: 'متجر الفرامل' }
       ]
     }
   };

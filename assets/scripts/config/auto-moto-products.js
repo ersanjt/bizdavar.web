@@ -660,32 +660,32 @@
       {
         name: 'فروشگاه و کلاب موتور',
         desc: 'کلاه، کاپشن، دستکش و بوت برای فروشگاه موتورسیکلت — سایزبندی و موجودی روز.',
-        image: CAT + 'motorcycle-helmet.svg',
-        imageAlt: 'فروشگاه تجهیزات موتور',
+        image: IMG + 'audiences/shop.webp',
+        imageAlt: 'فروشگاه تجهیزات موتور — قفسه کلاه و کاپشن',
         icon: 'box',
         models: 'کلاه · لباس · بوت'
       },
       {
         name: 'سوار شهری و جاده',
         desc: 'کلاه تمام‌صورت، کاپشن سه‌فصل و بوت تورینگ برای استفاده روزانه.',
-        image: CAT + 'motorcycle-jacket.svg',
-        imageAlt: 'پوشاک موتورسوار',
+        image: IMG + 'audiences/urban.webp',
+        imageAlt: 'موتورسوار شهری با کلاه تمام‌صورت و کاپشن جاده',
         icon: 'users',
         models: 'کلاه · کاپشن · بوت'
       },
       {
         name: 'آفرود و کراس',
         desc: 'جرسی، عینک، بوت و محافظ برای MX و آفرود.',
-        image: CAT + 'motorcycle-offroad.svg',
-        imageAlt: 'تجهیزات آفرود',
+        image: IMG + 'audiences/offroad.webp',
+        imageAlt: 'موتورسوار کراس با جرسی، کلاه و عینک آفرود',
         icon: 'wrench',
         models: 'جرسی · عینک · بوت'
       },
       {
         name: 'سفارش شخصی',
         desc: 'یک کلاه، یک کاپشن یا یک جفت دستکش — مشاوره واتساپ و ارسال پس از سفارش.',
-        image: CAT + 'motorcycle-gloves.svg',
-        imageAlt: 'سفارش شخصی تجهیزات موتور',
+        image: IMG + 'audiences/personal.webp',
+        imageAlt: 'سفارش شخصی دستکش و تجهیزات موتور',
         icon: 'users',
         models: 'تکی · سایز شخصی'
       }
