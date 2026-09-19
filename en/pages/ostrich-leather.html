@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <link rel="stylesheet" href="/assets/styles/site.css?v=20260910c">
+  <link rel="stylesheet" href="/assets/styles/ostrich-leather.css?v=20260919e">
   <link rel="preload" href="/assets/fonts/vazirmatn/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/estedad/Estedad-Black.woff2" as="font" type="font/woff2" crossorigin>
   <!-- Google Tag Manager -->
@@ -34,7 +35,7 @@
       "https://bizdavar.com/assets/images/products/ostrich/color-swatches.jpg",
       "https://bizdavar.com/assets/images/products/ostrich/inventory-racks.jpg",
       "https://bizdavar.com/assets/images/products/ostrich/legs-length.jpg",
-      "https://bizdavar.com/assets/images/products/ostrich/goods-black-leg.jpg"
+      "https://bizdavar.com/assets/images/products/ostrich/studio-black.jpg"
     ],
     "offers": [
       {
@@ -99,283 +100,377 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <script src="/assets/scripts/components/page-shell.js?v=20260910c" defer></script>
-<main id="main-content" class="site-main">
+<main id="main-content" class="site-main ost">
 
-  <section class="page-hero page-hero--pro">
-    <div class="container">
-      <span class="section__tag" data-i18n="caseStudy.ostrich.hero.tag">Made in Iran · Exotic leather</span>
-      <h1 data-i18n="caseStudy.ostrich.hero.title">Iranian ostrich leather — crust, dyed and leg</h1>
-      <p data-i18n="caseStudy.ostrich.hero.desc">End to end in Iran. Crust from $6.50 per sq ft, dyed from $8.50, each leg from $6. Already exported to China and Turkey.</p>
+  <section class="ost-hero">
+    <div class="ost-hero__field" aria-hidden="true"></div>
+    <div class="container ost-hero__grid">
+      <div class="ost-hero__copy">
+        <p class="ost-kicker ost-kicker--light" data-i18n="caseStudy.ostrich.hero.tag">Made in Iran · Exotic leather</p>
+        <h1 data-i18n="caseStudy.ostrich.hero.title">Iranian ostrich leather: crust, dyed and leg</h1>
+        <p class="ost-lead" data-i18n="caseStudy.ostrich.hero.desc">We tan this leather in Iran, from the raw skin to leather ready for cutting. Crust starts at $6.50 per square foot, dyed leather at $8.50, and each leg at $6. We have already shipped to China and Turkey.</p>
+        <div class="ost-hero__cta">
+          <a href="/en/pages/contact" class="btn btn--yellow" data-i18n="caseStudy.ostrich.about.ctaContact">Wholesale inquiry</a>
+          <a href="#ostrich-gallery" class="btn btn--outline" data-i18n="caseStudy.ostrich.nav.gallery">Stock and color</a>
+        </div>
+        <div class="ost-index">
+          <a href="#ostrich-prices">
+            <span data-i18n="caseStudy.ostrich.prices.crustName">Crust</span>
+            <strong data-i18n="caseStudy.ostrich.prices.crustPrice">$6.50</strong>
+            <small data-i18n="caseStudy.ostrich.prices.crustUnit">per square foot · from</small>
+          </a>
+          <a href="#ostrich-prices">
+            <span data-i18n="caseStudy.ostrich.prices.dyedName">Dyed leather</span>
+            <strong data-i18n="caseStudy.ostrich.prices.dyedPrice">$8.50</strong>
+            <small data-i18n="caseStudy.ostrich.prices.dyedUnit">per square foot · from</small>
+          </a>
+          <a href="#ostrich-prices">
+            <span data-i18n="caseStudy.ostrich.prices.legName">Leg</span>
+            <strong data-i18n="caseStudy.ostrich.prices.legPrice">$6</strong>
+            <small data-i18n="caseStudy.ostrich.prices.legUnit">per leg · from</small>
+          </a>
+        </div>
+      </div>
+      <button type="button" class="ost-frame" data-ost-open>
+        <img src="/assets/images/products/ostrich/color-swatches.jpg" alt="Colored Iranian ostrich leather samples with the quill pattern" data-i18n-alt="caseStudy.ostrich.about.imageAlt" width="750" height="1000" fetchpriority="high" decoding="async">
+      </button>
     </div>
   </section>
 
-  <div class="product-subnav-wrap">
+  <div class="ost-nav">
     <div class="container">
-      <nav class="product-subnav" aria-label="بخش‌های صفحه">
+      <nav class="ost-nav__row" data-i18n-aria="caseStudy.ostrich.nav.menu" aria-label="On this page">
         <a href="#ostrich-about" data-i18n="caseStudy.ostrich.nav.about">The leather</a>
         <a href="#ostrich-prices" data-i18n="caseStudy.ostrich.nav.prices">Prices</a>
         <a href="#ostrich-specs" data-i18n="caseStudy.ostrich.nav.specs">Specs</a>
         <a href="#ostrich-process" data-i18n="caseStudy.ostrich.nav.process">Production</a>
-        <a href="#ostrich-gallery" data-i18n="caseStudy.ostrich.nav.gallery">Stock & color</a>
+        <a href="#ostrich-gallery" data-i18n="caseStudy.ostrich.nav.gallery">Stock and color</a>
         <a href="#ostrich-goods" data-i18n="caseStudy.ostrich.nav.goods">Uses</a>
         <a href="#ostrich-export" data-i18n="caseStudy.ostrich.nav.export">Export</a>
-        <a href="#ostrich-faq" data-i18n="caseStudy.ostrich.nav.faq">FAQ</a>
+        <a href="#ostrich-faq" data-i18n="caseStudy.ostrich.nav.faq">Questions</a>
         <a href="/en/pages/contact" data-i18n="caseStudy.ostrich.nav.contact">Inquiry</a>
       </nav>
     </div>
   </div>
 
-  <section class="section" id="ostrich-about">
-    <div class="container about-grid">
-      <div class="about__image biztab-gallery product-gallery">
-        <img src="/assets/images/products/ostrich/color-swatches.jpg" alt="Colored Iranian ostrich leather swatches with quill pattern" data-i18n-alt="caseStudy.ostrich.about.imageAlt" width="1200" height="1600" loading="eager">
-        <div class="biztab-gallery__thumbs">
-          <img src="/assets/images/products/ostrich/legs-length.jpg" alt="Crust ostrich leg skins, about 70 cm long" data-i18n-alt="caseStudy.ostrich.about.thumb1Alt" width="800" height="1067" loading="lazy">
-          <img src="/assets/images/products/ostrich/goods-black-leg.jpg" alt="Black ostrich-leg wallet and cardholder" data-i18n-alt="caseStudy.ostrich.about.thumb2Alt" width="800" height="1067" loading="lazy">
-          <img src="/assets/images/products/ostrich/crust-roll-width.jpg" alt="Roll of ostrich crust leather on a workshop bench" data-i18n-alt="caseStudy.ostrich.about.thumb3Alt" width="800" height="600" loading="lazy">
-        </div>
-      </div>
-      <div class="about__content prose">
-        <h2 data-i18n="caseStudy.ostrich.about.title">Ostrich leather we produce in Iran</h2>
-        <p data-i18n-html="caseStudy.ostrich.about.body">This page is for <strong>Iranian ostrich leather</strong>, produced and supplied by us in Iran from the skin through to cuttable leather. Wholesale buyers order body hides (crust or dyed, by the square foot) and legs separately.</p>
-        <p data-i18n-html="caseStudy.ostrich.about.body2">Ostrich leather stays soft because of the feather follicles (quills), resists cracking at flex points, and breathes better than cowhide. It sits with crocodile, snake and lizard as exotic leather — the quill pattern is not a printable fake. For a lot inquiry use the <a href="/en/pages/contact">contact form</a> or WhatsApp. Other owned lines are in the <a href="/en/pages/products">product catalog</a>.</p>
-        <h3 data-i18n="caseStudy.ostrich.about.specsTitle">What we supply</h3>
-        <ul>
-          <li data-i18n="caseStudy.ostrich.about.spec1">Body crust — tanned, not yet finally dyed</li>
-          <li data-i18n="caseStudy.ostrich.about.spec2">Dyed body leather — wide palette, ready to cut</li>
-          <li data-i18n="caseStudy.ostrich.about.spec3">Ostrich leg — large central scales, for boots and small goods</li>
-          <li data-i18n="caseStudy.ostrich.about.spec4">Produced end to end in Iran</li>
-          <li data-i18n="caseStudy.ostrich.about.spec5">Exported to China and Turkey</li>
-          <li data-i18n="caseStudy.ostrich.about.spec6">Starting prices; grade, footage and color on the proforma</li>
+  <section class="ost-block ost-story" id="ostrich-about">
+    <div class="container ost-split">
+      <div class="ost-prose">
+        <header class="ost-head">
+          <h2 data-i18n="caseStudy.ostrich.about.title">Ostrich leather we tan in Iran</h2>
+        </header>
+        <p data-i18n-html="caseStudy.ostrich.about.body">This page is for <strong>Iranian ostrich leather</strong>. We tan the skin in Iran until it is ready to cut, and we sell that leather to wholesale buyers. Body hides, crust or dyed, are sold by the square foot. Legs are sold separately, by the piece.</p>
+        <p data-i18n-html="caseStudy.ostrich.about.body2">The leather stays soft because of the feather follicles, called quills in the trade. It is less likely to crack on a fold than many hides, and it breathes more than cowhide. It belongs with crocodile, snake and lizard as an exotic leather, and the quill pattern cannot be printed. For a lot inquiry, use the <a href="/en/pages/contact">contact form</a> or WhatsApp. Our other lines are in the <a href="/en/pages/products">product catalog</a>.</p>
+        <h3 data-i18n="caseStudy.ostrich.about.specsTitle">What we sell</h3>
+        <ul class="ost-list">
+          <li data-i18n="caseStudy.ostrich.about.spec1">Body crust: tanned, not yet given its final color</li>
+          <li data-i18n="caseStudy.ostrich.about.spec2">Dyed body leather: a wide color range, ready to cut</li>
+          <li data-i18n="caseStudy.ostrich.about.spec3">Ostrich leg: a large central scale row, for boots and small leather goods</li>
+          <li data-i18n="caseStudy.ostrich.about.spec4">Tanned in Iran, from the skin to finished leather</li>
+          <li data-i18n="caseStudy.ostrich.about.spec5">Already shipped to China and Turkey</li>
+          <li data-i18n="caseStudy.ostrich.about.spec6">Prices are starting points; grade, area and color go on the proforma</li>
         </ul>
-        <div class="article__cta">
+        <div class="ost-actions">
           <a href="/en/pages/contact" class="btn btn--primary" data-i18n="caseStudy.ostrich.about.ctaContact">Wholesale inquiry</a>
           <a href="/en/pages/products" class="btn btn--outline" data-i18n="caseStudy.ostrich.about.ctaCatalog">Product catalog</a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="section section--gray" id="ostrich-prices">
-    <div class="container">
-      <div class="section__header section__header--pro">
-        <span class="section__eyebrow" data-i18n="caseStudy.ostrich.prices.eyebrow">Wholesale starting prices</span>
-        <h2 class="section__title" data-i18n="caseStudy.ostrich.prices.title">Crust, dyed and leg</h2>
-        <p class="section__desc" data-i18n="caseStudy.ostrich.prices.desc">In this trade a “foot” means one square foot. Prices are starting points, not a fixed rate per hide.</p>
-      </div>
-      <div class="features-grid">
-        <article class="feature-item">
-          <h3 data-i18n="caseStudy.ostrich.prices.crustName">Crust leather</h3>
-          <p class="price-hint" data-i18n="caseStudy.ostrich.prices.crustPrice">$6.50</p>
-          <p data-i18n="caseStudy.ostrich.prices.crustUnit">per sq ft · from</p>
-          <p data-i18n="caseStudy.ostrich.prices.crustDesc">Tanned through to crust, natural cream. For the buyer’s own dye.</p>
-        </article>
-        <article class="feature-item">
-          <h3 data-i18n="caseStudy.ostrich.prices.dyedName">Dyed leather</h3>
-          <p class="price-hint" data-i18n="caseStudy.ostrich.prices.dyedPrice">$8.50</p>
-          <p data-i18n="caseStudy.ostrich.prices.dyedUnit">per sq ft · from</p>
-          <p data-i18n="caseStudy.ostrich.prices.dyedDesc">Dyed and ready to cut. The color range is in stock and in the showroom.</p>
-        </article>
-        <article class="feature-item">
-          <h3 data-i18n="caseStudy.ostrich.prices.legName">Leg</h3>
-          <p class="price-hint" data-i18n="caseStudy.ostrich.prices.legPrice">$6</p>
-          <p data-i18n="caseStudy.ostrich.prices.legUnit">per leg · from</p>
-          <p data-i18n="caseStudy.ostrich.prices.legDesc">Leg skin with the central scale row. Sold by the piece, not by the square foot.</p>
-        </article>
-      </div>
-      <p class="section__desc" data-i18n="caseStudy.ostrich.prices.note">The final rate depends on crown grade, cuttable area, color, thickness and volume. The proforma is issued once the lot is defined.</p>
-    </div>
-  </section>
-
-  <section class="section" id="ostrich-specs">
-    <div class="container">
-      <div class="section__header section__header--pro">
-        <span class="section__eyebrow" data-i18n="caseStudy.ostrich.specs.eyebrow">For factory buyers</span>
-        <h2 class="section__title" data-i18n="caseStudy.ostrich.specs.title">Quill, grade, crust and leg</h2>
-        <p class="section__desc" data-i18n="caseStudy.ostrich.specs.desc">The terms are tannery language. Exact figures for each shipment go on the proforma — they do not replace it.</p>
-      </div>
-      <div class="features-grid">
-        <article class="feature-item">
-          <h3 data-i18n="caseStudy.ostrich.specs.quillTitle">Crown and quill</h3>
-          <p data-i18n="caseStudy.ostrich.specs.quillBody">A quill is the round follicle where the feather sat. The crown is the center of the hide, where quills are large and even. In practice about two-thirds of a hide is full quill; the rest is partial quill or smooth. If you need full-quill footage, order about 1.5 times that area.</p>
-        </article>
-        <article class="feature-item">
-          <h3 data-i18n="caseStudy.ostrich.specs.gradeTitle">Grading</h3>
-          <p data-i18n="caseStudy.ostrich.specs.gradeBody">Grade follows the cutting value of the crown, not the dye. Grade 1: crown free of defects (bags and upholstery). Grade 2: one or two defects. Grade 3: more defects — shoes, boots and small leather goods. Under-developed or sunken quills can drop a grade. We state the grade of each lot.</p>
-        </article>
-        <article class="feature-item">
-          <h3 data-i18n="caseStudy.ostrich.specs.crustTitle">Crust versus dyed</h3>
-          <p data-i18n="caseStudy.ostrich.specs.crustBody">Crust is leather after tanning, retan, fatliquor, drying and softening, before the final color and finish. It is cream and suited to the buyer’s own dye. Dyed leather is the same hide after color, ready to cut. Typical commercial body thickness is about 0.6–1.2 mm.</p>
-        </article>
-        <article class="feature-item">
-          <h3 data-i18n="caseStudy.ostrich.specs.legTitle">Leg</h3>
-          <p data-i18n="caseStudy.ostrich.specs.legBody">A leg is narrow, with one row of large scales down the center and a finer grain on the sides. Stock samples in the photos run about 70 cm long and about 10–12 cm wide at the measured point. Used for boots, watch straps, wallets and cardholders.</p>
-        </article>
+      <div class="ost-stack">
+        <button type="button" class="ost-shot" data-ost-open>
+          <img src="/assets/images/products/ostrich/crust-roll-width.jpg" alt="A roll of ostrich crust on the workshop bench" data-i18n-alt="caseStudy.ostrich.about.thumb3Alt" width="575" height="1024" loading="lazy">
+        </button>
+        <button type="button" class="ost-shot" data-ost-open>
+          <img src="/assets/images/products/ostrich/legs-width.jpg" alt="A stack of crust legs about 10 to 12 cm wide" data-i18n-alt="caseStudy.ostrich.gallery.a3" width="575" height="1024" loading="lazy">
+          <span class="ost-shot__cap" data-i18n="caseStudy.ostrich.gallery.c3">At the tape, this stack of legs is about 10 to 12 cm wide.</span>
+        </button>
       </div>
     </div>
   </section>
 
-  <section class="section section--gray" id="ostrich-process">
+  <section class="ost-block ost-dark ost-prices" id="ostrich-prices">
     <div class="container">
-      <div class="section__header section__header--pro">
-        <span class="section__eyebrow" data-i18n="caseStudy.ostrich.process.eyebrow">End to end</span>
-        <h2 class="section__title" data-i18n="caseStudy.ostrich.process.title">Made in Iran, not a rebranded raw skin</h2>
-        <p class="section__desc" data-i18n="caseStudy.ostrich.process.desc">The chain stays in Iran: skin to crust, dye, and sample finished goods. The workshop and stock photos on this page are from that production.</p>
+      <header class="ost-head">
+        <p class="ost-kicker ost-kicker--light" data-i18n="caseStudy.ostrich.prices.eyebrow">Wholesale starting prices</p>
+        <h2 data-i18n="caseStudy.ostrich.prices.title">Crust, dyed leather and legs</h2>
+        <p data-i18n="caseStudy.ostrich.prices.desc">In this trade, one “foot” is one square foot. The figures below are starting prices, not a fixed rate for every hide.</p>
+      </header>
+      <div class="ost-price-grid">
+        <article class="ost-card">
+          <button type="button" class="ost-shot" data-ost-open>
+            <img src="/assets/images/products/ostrich/crust-roll-length.jpg" alt="An ostrich crust roll about one metre long" data-i18n-alt="caseStudy.ostrich.gallery.a1" width="575" height="1024" loading="lazy">
+            <span class="ost-shot__cap" data-i18n="caseStudy.ostrich.gallery.c1">This crust roll measures about 95 to 100 cm.</span>
+          </button>
+          <div class="ost-card__body">
+            <h3 data-i18n="caseStudy.ostrich.prices.crustName">Crust</h3>
+            <p class="ost-card__price" data-i18n="caseStudy.ostrich.prices.crustPrice">$6.50</p>
+            <p class="ost-card__unit" data-i18n="caseStudy.ostrich.prices.crustUnit">per square foot · from</p>
+            <p class="ost-card__desc" data-i18n="caseStudy.ostrich.prices.crustDesc">Tanned through to crust, in its natural cream color. The right choice if you dye it yourself.</p>
+          </div>
+        </article>
+        <article class="ost-card ost-card--wide">
+          <button type="button" class="ost-shot" data-ost-open>
+            <img src="/assets/images/products/ostrich/inventory-tiers.jpg" alt="Three tiers: body hide, legs and dyed sheets" data-i18n-alt="caseStudy.ostrich.gallery.a6" width="1024" height="575" loading="lazy">
+            <span class="ost-shot__cap" data-i18n="caseStudy.ostrich.gallery.c6">The rack has three tiers: body hide, legs, and dyed sheets.</span>
+          </button>
+          <div class="ost-card__body">
+            <h3 data-i18n="caseStudy.ostrich.prices.dyedName">Dyed leather</h3>
+            <p class="ost-card__price" data-i18n="caseStudy.ostrich.prices.dyedPrice">$8.50</p>
+            <p class="ost-card__unit" data-i18n="caseStudy.ostrich.prices.dyedUnit">per square foot · from</p>
+            <p class="ost-card__desc" data-i18n="caseStudy.ostrich.prices.dyedDesc">Colored and ready to cut. The color range is in the warehouse and the showroom.</p>
+          </div>
+        </article>
+        <article class="ost-card">
+          <button type="button" class="ost-shot" data-ost-open>
+            <img src="/assets/images/products/ostrich/legs-length.jpg" alt="Crust ostrich leg skins, about 70 cm long" data-i18n-alt="caseStudy.ostrich.about.thumb1Alt" width="575" height="1024" loading="lazy">
+          </button>
+          <div class="ost-card__body">
+            <h3 data-i18n="caseStudy.ostrich.prices.legName">Leg</h3>
+            <p class="ost-card__price" data-i18n="caseStudy.ostrich.prices.legPrice">$6</p>
+            <p class="ost-card__unit" data-i18n="caseStudy.ostrich.prices.legUnit">per leg · from</p>
+            <p class="ost-card__desc" data-i18n="caseStudy.ostrich.prices.legDesc">Leg skin with one row of large scales down the center. Sold by the piece, not by the square foot.</p>
+          </div>
+        </article>
       </div>
-      <div class="features-grid">
-        <article class="feature-item">
-          <h3 data-i18n="caseStudy.ostrich.process.s1Title">1. Skin and preparation</h3>
-          <p data-i18n="caseStudy.ostrich.process.s1Desc">Quill quality depends on feather ripeness at harvest. A ripe feather leaves a round, full quill; a green feather leaves a flat, open one.</p>
-        </article>
-        <article class="feature-item">
-          <h3 data-i18n="caseStudy.ostrich.process.s2Title">2. Tanning to crust</h3>
-          <p data-i18n="caseStudy.ostrich.process.s2Desc">The skin is tanned, retanned and fatliquored, then dried and softened. The output is a cream crust roll, measured in the workshop.</p>
-        </article>
-        <article class="feature-item">
-          <h3 data-i18n="caseStudy.ostrich.process.s3Title">3. Color and finish</h3>
-          <p data-i18n="caseStudy.ostrich.process.s3Desc">Dye goes through the crust. The palette runs from cream and brown to green, blue, yellow and magenta. Legs and body hides are dyed separately.</p>
-        </article>
-        <article class="feature-item">
-          <h3 data-i18n="caseStudy.ostrich.process.s4Title">4. Check and ship</h3>
-          <p data-i18n="caseStudy.ostrich.process.s4Desc">Footage, grade and color are on the proforma. Export shipments to China and Turkey are done; other destinations are arranged with logistics.</p>
-        </article>
+      <p class="ost-note" data-i18n="caseStudy.ostrich.prices.note">The final price depends on crown grade, cuttable area, color, thickness and order volume. We issue the proforma once the lot is defined.</p>
+    </div>
+  </section>
+
+  <section class="ost-block ost-specs" id="ostrich-specs">
+    <div class="container">
+      <header class="ost-head">
+        <p class="ost-kicker" data-i18n="caseStudy.ostrich.specs.eyebrow">For factory buyers</p>
+        <h2 data-i18n="caseStudy.ostrich.specs.title">Crown, grade, crust and leg</h2>
+        <p data-i18n="caseStudy.ostrich.specs.desc">These are the terms used in the tannery and among exotic-leather buyers. The exact figures for each shipment are written on the proforma. This page does not replace that document.</p>
+      </header>
+      <div class="ost-split">
+        <div class="ost-specs__photo">
+          <button type="button" class="ost-shot" data-ost-open>
+            <img src="/assets/images/products/ostrich/inventory-racks.jpg" alt="Racks of ostrich body hides and legs in several colors" data-i18n-alt="caseStudy.ostrich.gallery.a5" width="575" height="1024" loading="lazy">
+            <span class="ost-shot__cap" data-i18n="caseStudy.ostrich.gallery.c5">In the warehouse the body hides are below and the legs are on the upper rail.</span>
+          </button>
+        </div>
+        <div class="ost-chapters">
+          <article class="ost-chapter">
+            <h3 data-i18n="caseStudy.ostrich.specs.quillTitle">Crown and quill</h3>
+            <p data-i18n="caseStudy.ostrich.specs.quillBody">A quill is the round bump where a feather grew. The crown is the center of the hide, and that is where the quills are largest and most even. In practice about two-thirds of a hide is full quill. The rest is fine quill or smooth. If you need a given area of full quill, order about one and a half times that area.</p>
+          </article>
+          <article class="ost-chapter">
+            <h3 data-i18n="caseStudy.ostrich.specs.gradeTitle">Grading</h3>
+            <p data-i18n="caseStudy.ostrich.specs.gradeBody">Grade follows how much of the crown can be cut, not the color alone. Grade 1 has a clean crown and suits bags and upholstery. Grade 2 has one or two defects. Grade 3 has more defects and suits shoes, boots and small leather goods. An immature or sunken quill can lower the grade. We state the grade of each lot separately.</p>
+          </article>
+          <article class="ost-chapter">
+            <h3 data-i18n="caseStudy.ostrich.specs.crustTitle">Crust and dyed</h3>
+            <p data-i18n="caseStudy.ostrich.specs.crustBody">Crust is the hide after tanning, retanning, fatliquoring, drying and softening, and before the final color and finish. It is cream, and it is meant for the buyer’s own dye. Dyed leather is the same hide after color, ready to cut. Body hides on the market are often about 0.6 to 1.2 mm thick. We write the thickness of your lot on the proforma.</p>
+          </article>
+          <article class="ost-chapter">
+            <h3 data-i18n="caseStudy.ostrich.specs.legTitle">Leg</h3>
+            <p data-i18n="caseStudy.ostrich.specs.legBody">A leg is narrow. One row of large scales runs down the center, and the sides are finer. On the warehouse samples, length is about 70 cm and width, where the tape was placed, is about 10 to 12 cm. That is a sample size, not a promise for every order. Legs are used for boots, watch straps, wallets and cardholders.</p>
+          </article>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="ostrich-gallery">
-    <div class="container">
-      <div class="section__header section__header--pro">
-        <span class="section__eyebrow" data-i18n="caseStudy.ostrich.gallery.eyebrow">Real stock</span>
-        <h2 class="section__title" data-i18n="caseStudy.ostrich.gallery.title">Crust, legs, color and showroom</h2>
-        <p class="section__desc" data-i18n="caseStudy.ostrich.gallery.desc">Photos are from our workshop, warehouse and showroom — not catalog renders.</p>
+  <section class="ost-block ost-dark ost-process" id="ostrich-process">
+    <div class="container ost-split">
+      <div>
+        <header class="ost-head">
+          <p class="ost-kicker ost-kicker--light" data-i18n="caseStudy.ostrich.process.eyebrow">How it is made</p>
+          <h2 data-i18n="caseStudy.ostrich.process.title">Tanned in Iran, not a traded raw skin</h2>
+          <p data-i18n="caseStudy.ostrich.process.desc">The chain stays in Iran: from the skin to crust, then color, then sample goods that have been cut and sewn. The workshop and warehouse photos on this page are from that production.</p>
+        </header>
+        <ol class="ost-steps">
+          <li class="ost-step">
+            <h3 data-i18n="caseStudy.ostrich.process.s1Title">1. Skin and preparation</h3>
+            <p data-i18n="caseStudy.ostrich.process.s1Desc">Quill quality depends on whether the feather was mature when the skin was taken. A ripe feather leaves a round, full quill. An unripe feather leaves a flat, hollow one.</p>
+          </li>
+          <li class="ost-step">
+            <h3 data-i18n="caseStudy.ostrich.process.s2Title">2. Tanning to crust</h3>
+            <p data-i18n="caseStudy.ostrich.process.s2Desc">The skin is tanned, retanned and fatliquored, then dried and softened. The result is a cream crust roll, measured in the workshop.</p>
+          </li>
+          <li class="ost-step">
+            <h3 data-i18n="caseStudy.ostrich.process.s3Title">3. Color and finish</h3>
+            <p data-i18n="caseStudy.ostrich.process.s3Desc">The dye penetrates the crust. Colors run from cream and brown to green, blue, yellow and magenta. Legs and body hides are dyed separately.</p>
+          </li>
+          <li class="ost-step">
+            <h3 data-i18n="caseStudy.ostrich.process.s4Title">4. Check and shipment</h3>
+            <p data-i18n="caseStudy.ostrich.process.s4Desc">Area, grade and color are written on the proforma. We have shipped to China and Turkey. Other destinations are checked with the forwarder.</p>
+          </li>
+        </ol>
       </div>
-      <div class="product-photo-grid">
-        <figure>
-          <img src="/assets/images/products/ostrich/crust-roll-length.jpg" alt="Ostrich crust roll about one metre long" data-i18n-alt="caseStudy.ostrich.gallery.a1" width="1200" height="900" loading="lazy">
-          <figcaption data-i18n="caseStudy.ostrich.gallery.c1">Crust roll; this sample is about 95–100 cm long.</figcaption>
-        </figure>
-        <figure>
-          <img src="/assets/images/products/ostrich/workshop-crust.jpg" alt="Crust hides hanging beside color samples in the workshop" data-i18n-alt="caseStudy.ostrich.gallery.a2" width="900" height="1200" loading="lazy">
-          <figcaption data-i18n="caseStudy.ostrich.gallery.c2">Workshop: crust hides next to color samples and ostrich feathers.</figcaption>
-        </figure>
-        <figure>
-          <img src="/assets/images/products/ostrich/legs-width.jpg" alt="Stack of crust legs about 10–12 cm wide" data-i18n-alt="caseStudy.ostrich.gallery.a3" width="1200" height="900" loading="lazy">
-          <figcaption data-i18n="caseStudy.ostrich.gallery.c3">Crust leg stack; about 10–12 cm wide at the tape.</figcaption>
-        </figure>
-        <figure>
-          <img src="/assets/images/products/ostrich/hide-full-quill.jpg" alt="Full ostrich hide with a quilled crown" data-i18n-alt="caseStudy.ostrich.gallery.a4" width="1024" height="505" loading="lazy">
-          <figcaption data-i18n="caseStudy.ostrich.gallery.c4">Full hide: quilled crown in the center, smoother edges.</figcaption>
-        </figure>
-        <figure>
-          <img src="/assets/images/products/ostrich/inventory-racks.jpg" alt="Racks of ostrich body hides and legs in many colors" data-i18n-alt="caseStudy.ostrich.gallery.a5" width="1200" height="900" loading="lazy">
-          <figcaption data-i18n="caseStudy.ostrich.gallery.c5">Warehouse: body hides below, legs on the upper bar.</figcaption>
-        </figure>
-        <figure>
-          <img src="/assets/images/products/ostrich/inventory-tiers.jpg" alt="Three-tier display of body, leg and dyed sheets" data-i18n-alt="caseStudy.ostrich.gallery.a6" width="900" height="1200" loading="lazy">
-          <figcaption data-i18n="caseStudy.ostrich.gallery.c6">Three tiers: body, leg, dyed sheets.</figcaption>
-        </figure>
-        <figure>
-          <img src="/assets/images/products/ostrich/showroom-mirror.jpg" alt="Mirror framed with colored ostrich skins in the showroom" data-i18n-alt="caseStudy.ostrich.gallery.a7" width="900" height="1200" loading="lazy">
-          <figcaption data-i18n="caseStudy.ostrich.gallery.c7">Showroom: body and leg colors, used in shoes and bags.</figcaption>
-        </figure>
-        <figure>
-          <img src="/assets/images/products/ostrich/showroom-green.jpg" alt="Green ostrich hide on a showroom bench" data-i18n-alt="caseStudy.ostrich.gallery.a8" width="1200" height="900" loading="lazy">
-          <figcaption data-i18n="caseStudy.ostrich.gallery.c8">Green hide on the bench, beside belts and luggage.</figcaption>
-        </figure>
-        <figure>
-          <img src="/assets/images/products/ostrich/showroom-bags.jpg" alt="Dark green hide beside leather bags and shoes" data-i18n-alt="caseStudy.ostrich.gallery.a9" width="900" height="1200" loading="lazy">
-          <figcaption data-i18n="caseStudy.ostrich.gallery.c9">Dyed hide beside bags, shoes and belts.</figcaption>
-        </figure>
+      <div class="ost-process__photo">
+        <button type="button" class="ost-shot" data-ost-open>
+          <img src="/assets/images/products/ostrich/workshop-crust.jpg" alt="Crust hides hanging beside color samples in the workshop" data-i18n-alt="caseStudy.ostrich.gallery.a2" width="575" height="1024" loading="lazy">
+          <span class="ost-shot__cap" data-i18n="caseStudy.ostrich.gallery.c2">In the workshop, crust hides hang beside color samples and ostrich feathers.</span>
+        </button>
       </div>
     </div>
   </section>
 
-  <section class="section section--gray" id="ostrich-goods">
+  <section class="ost-block ost-look" id="ostrich-goods">
     <div class="container">
-      <div class="section__header section__header--pro">
-        <span class="section__eyebrow" data-i18n="caseStudy.ostrich.goods.eyebrow">What it becomes</span>
-        <h2 class="section__title" data-i18n="caseStudy.ostrich.goods.title">What this skin is cut into</h2>
-        <p class="section__desc" data-i18n="caseStudy.ostrich.goods.desc">Finished pieces show cutting and stitching. Wholesale on this page is the skin, not a single wallet.</p>
-      </div>
-      <div class="product-photo-grid">
-        <figure>
-          <img src="/assets/images/products/ostrich/folders-leg.jpg" alt="Ostrich-leg document folders in several colors" data-i18n-alt="caseStudy.ostrich.goods.a1" width="1200" height="900" loading="lazy">
-          <figcaption data-i18n="caseStudy.ostrich.goods.c1">Leg folders: brown, blue, orange, navy and green.</figcaption>
-        </figure>
-        <figure>
-          <img src="/assets/images/products/ostrich/goods-yellow.jpg" alt="Yellow wallet with a leg strip on a body hide" data-i18n-alt="caseStudy.ostrich.goods.a2" width="1200" height="900" loading="lazy">
-          <figcaption data-i18n="caseStudy.ostrich.goods.c2">Yellow wallet: body quill plus a leg-scale strip.</figcaption>
-        </figure>
-        <figure>
-          <img src="/assets/images/products/ostrich/cardholders-trio.jpg" alt="Black, cognac and brown cardholders on an ostrich hide" data-i18n-alt="caseStudy.ostrich.goods.a3" width="900" height="1200" loading="lazy">
-          <figcaption data-i18n="caseStudy.ostrich.goods.c3">Three cardholders on a quilled body hide.</figcaption>
-        </figure>
-        <figure>
-          <img src="/assets/images/products/ostrich/goods-flatlay.jpg" alt="Wallets laid out with a raw ostrich-leg strip" data-i18n-alt="caseStudy.ostrich.goods.a4" width="900" height="1200" loading="lazy">
-          <figcaption data-i18n="caseStudy.ostrich.goods.c4">From a raw leg strip to finished wallets — black, yellow and honey.</figcaption>
-        </figure>
+      <header class="ost-head">
+        <p class="ost-kicker" data-i18n="caseStudy.ostrich.goods.eyebrow">What it is cut into</p>
+        <h2 data-i18n="caseStudy.ostrich.goods.title">What can be made from this skin</h2>
+        <p data-i18n="caseStudy.ostrich.goods.desc">The finished pieces only show the cut and the stitch. What we sell wholesale on this page is the skin itself, not a single bag.</p>
+      </header>
+      <div class="ost-look__grid">
+        <button type="button" class="ost-shot" data-ost-open>
+          <img src="/assets/images/products/ostrich/studio-black.jpg" alt="Black wallet and cardholder in ostrich leg leather" data-i18n-alt="caseStudy.ostrich.about.thumb2Alt" width="864" height="1152" loading="lazy">
+          <span class="ost-shot__cap" data-i18n="caseStudy.ostrich.about.thumb2Alt">Black wallet and cardholder in ostrich leg leather</span>
+        </button>
+        <button type="button" class="ost-shot" data-ost-open>
+          <img src="/assets/images/products/ostrich/studio-yellow.jpg" alt="A yellow wallet with a leg strip, on a body hide" data-i18n-alt="caseStudy.ostrich.goods.a2" width="864" height="1152" loading="lazy">
+          <span class="ost-shot__cap" data-i18n="caseStudy.ostrich.goods.c2">This yellow wallet is body quill, with one strip of leg scale.</span>
+        </button>
+        <button type="button" class="ost-shot" data-ost-open>
+          <img src="/assets/images/products/ostrich/studio-flatlay.jpg" alt="Wallets beside a raw ostrich-leg strip" data-i18n-alt="caseStudy.ostrich.goods.a4" width="864" height="1152" loading="lazy">
+          <span class="ost-shot__cap" data-i18n="caseStudy.ostrich.goods.c4">From a raw leg strip to a finished wallet: black, yellow and honey.</span>
+        </button>
+        <button type="button" class="ost-shot" data-ost-open>
+            <img src="/assets/images/products/ostrich/studio-folders.jpg" alt="Document folders in ostrich leg leather, in several colors" data-i18n-alt="caseStudy.ostrich.goods.a1" width="864" height="1152" loading="lazy">
+            <span class="ost-shot__cap" data-i18n="caseStudy.ostrich.goods.c1">Leg folders in brown, blue, orange, navy and green.</span>
+          </button>
+        <button type="button" class="ost-shot" data-ost-open>
+          <img src="/assets/images/products/ostrich/studio-trio.jpg" alt="Three cardholders, black, cognac and brown, on an ostrich hide" data-i18n-alt="caseStudy.ostrich.goods.a3" width="864" height="1152" loading="lazy">
+          <span class="ost-shot__cap" data-i18n="caseStudy.ostrich.goods.c3">Three cardholders laid on a quilled body hide.</span>
+        </button>
       </div>
     </div>
   </section>
 
-  <section class="section" id="ostrich-export">
+  <section class="ost-block ost-dark ost-room" id="ostrich-gallery">
     <div class="container">
-      <div class="section__header section__header--pro">
-        <span class="section__eyebrow" data-i18n="caseStudy.ostrich.export.eyebrow">Export markets</span>
-        <h2 class="section__title" data-i18n="caseStudy.ostrich.export.title">China and Turkey, and the next buyer</h2>
-        <p class="section__desc" data-i18n-html="caseStudy.ostrich.export.body">Ostrich leather has already shipped to <strong>China</strong> and <strong>Turkey</strong>. A shoe, bag or small-leather factory can take crust and dye it, or order dyed hides and legs. Start from <a href="/en/pages/contact">contact</a>. Company background is on <a href="/en/pages/about">About Bizdavar</a>.</p>
+      <header class="ost-head">
+        <p class="ost-kicker ost-kicker--light" data-i18n="caseStudy.ostrich.gallery.eyebrow">Actual stock</p>
+        <h2 data-i18n="caseStudy.ostrich.gallery.title">Crust, legs, color and the showroom</h2>
+        <p data-i18n="caseStudy.ostrich.gallery.desc">These photos were taken in our workshop, warehouse and showroom. They are not catalog renders.</p>
+      </header>
+      <div class="ost-room__grid">
+        <button type="button" class="ost-shot" data-ost-open>
+          <img src="/assets/images/products/ostrich/showroom-mirror.jpg" alt="A mirror framed with colored ostrich skins in the showroom" data-i18n-alt="caseStudy.ostrich.gallery.a7" width="540" height="960" loading="lazy">
+          <span class="ost-shot__cap" data-i18n="caseStudy.ostrich.gallery.c7">The showroom shows body and leg colors used for shoes and bags.</span>
+        </button>
+        <button type="button" class="ost-shot" data-ost-open>
+          <img src="/assets/images/products/ostrich/showroom-green.jpg" alt="A green ostrich hide on the showroom bench" data-i18n-alt="caseStudy.ostrich.gallery.a8" width="768" height="1024" loading="lazy">
+          <span class="ost-shot__cap" data-i18n="caseStudy.ostrich.gallery.c8">A green hide lies on the bench, next to belts and luggage.</span>
+        </button>
+        <button type="button" class="ost-shot" data-ost-open>
+          <img src="/assets/images/products/ostrich/showroom-bags.jpg" alt="A dark green hide beside leather bags and shoes" data-i18n-alt="caseStudy.ostrich.gallery.a9" width="540" height="960" loading="lazy">
+          <span class="ost-shot__cap" data-i18n="caseStudy.ostrich.gallery.c9">Dyed leather is shown beside bags, shoes and belts.</span>
+        </button>
       </div>
-      <div class="features-grid">
-        <article class="feature-item">
+    </div>
+  </section>
+
+  <section class="ost-block ost-export" id="ostrich-export">
+    <div class="container">
+      <header class="ost-head ost-prose">
+        <p class="ost-kicker" data-i18n="caseStudy.ostrich.export.eyebrow">Export</p>
+        <h2 data-i18n="caseStudy.ostrich.export.title">Shipped to China and Turkey</h2>
+        <p data-i18n-html="caseStudy.ostrich.export.body">Ostrich leather has been delivered to <strong>China</strong> and <strong>Turkey</strong>. A shoe, bag or small-leather factory can take crust and dye it, or order dyed hides and legs. Start with <a href="/en/pages/contact">contact</a>. The company is introduced on <a href="/en/pages/about">About Bizdavar</a>.</p>
+      </header>
+      <div class="ost-export__grid">
+        <article>
           <h3 data-i18n="caseStudy.ostrich.export.chinaTitle">China</h3>
-          <p data-i18n="caseStudy.ostrich.export.chinaDesc">Export completed. For bag, shoe and small-leather factories that want footage and grade on the proforma.</p>
+          <p data-i18n="caseStudy.ostrich.export.chinaDesc">The shipment has been made. It suits factories that want area and grade written on the proforma.</p>
         </article>
-        <article class="feature-item">
+        <article>
           <h3 data-i18n="caseStudy.ostrich.export.turkeyTitle">Turkey</h3>
-          <p data-i18n="caseStudy.ostrich.export.turkeyDesc">Export completed. A regional logistics path for Istanbul and Anatolian buyers working exotic leather.</p>
+          <p data-i18n="caseStudy.ostrich.export.turkeyDesc">The shipment has been made. Buyers in Istanbul and Anatolia who work exotic leather can use the regional route.</p>
         </article>
-        <article class="feature-item">
+        <article>
           <h3 data-i18n="caseStudy.ostrich.export.iranTitle">Origin: Iran</h3>
-          <p data-i18n="caseStudy.ostrich.export.iranDesc">Production is domestic, not a relabel of imported skins. The warehouse and workshop photos are the evidence.</p>
+          <p data-i18n="caseStudy.ostrich.export.iranDesc">The leather is produced in Iran. We do not relabel imported skins. The warehouse and workshop photos show that.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="section section--gray" id="ostrich-faq">
-    <div class="container prose">
-      <div class="section__header">
-        <h2 class="section__title" data-i18n="caseStudy.ostrich.faq.title">Wholesale questions</h2>
-      </div>
-      <h3 data-i18n="caseStudy.ostrich.faq.q1">Does “foot” mean a square foot?</h3>
-      <p data-i18n="caseStudy.ostrich.faq.a1">Yes. In this trade one foot is one square foot. Crust starts at $6.50 and dyed at $8.50 per square foot. Legs are priced per piece, from $6.</p>
-      <h3 data-i18n="caseStudy.ostrich.faq.q2">Can we dye the crust ourselves?</h3>
-      <p data-i18n="caseStudy.ostrich.faq.a2">Yes. That is what crust is for: tanned leather without the final color. If you want ready color, take the dyed rate.</p>
-      <h3 data-i18n="caseStudy.ostrich.faq.q3">How do you state grade and area?</h3>
-      <p data-i18n="caseStudy.ostrich.faq.a3">Crown grade, area, and for legs the lot dimensions, are written on the proforma. Tape photos are stock samples, not a size guarantee for every order.</p>
-      <h3 data-i18n="caseStudy.ostrich.faq.q4">What is the minimum order?</h3>
-      <p data-i18n="caseStudy.ostrich.faq.a4">We do not publish a fixed minimum. Send volume, grade and destination and that lot is priced. A sample for hand-feel before a volume order is possible.</p>
-      <h3 data-i18n="caseStudy.ostrich.faq.q5">Which countries have you shipped to?</h3>
-      <p data-i18n="caseStudy.ostrich.faq.a5">Ostrich leather has been exported to China and Turkey. Other destinations are checked case by case.</p>
+  <section class="ost-block ost-faq" id="ostrich-faq">
+    <div class="container">
+      <header class="ost-head">
+        <h2 data-i18n="caseStudy.ostrich.faq.title">Questions from wholesale buyers</h2>
+      </header>
+      <details class="ost-acc">
+        <summary data-i18n="caseStudy.ostrich.faq.q1">Does “foot” mean a square foot?</summary>
+        <p data-i18n="caseStudy.ostrich.faq.a1">Yes. In this trade one foot is one square foot. Crust starts at $6.50 and dyed leather at $8.50 per square foot. Legs are sold by the piece, from $6.</p>
+      </details>
+      <details class="ost-acc">
+        <summary data-i18n="caseStudy.ostrich.faq.q2">Can we dye the crust ourselves?</summary>
+        <p data-i18n="caseStudy.ostrich.faq.a2">Yes. That is what crust is for: tanned leather that does not yet have its final color. If you want the color already done, take the dyed price.</p>
+      </details>
+      <details class="ost-acc">
+        <summary data-i18n="caseStudy.ostrich.faq.q3">How do you state grade and area?</summary>
+        <p data-i18n="caseStudy.ostrich.faq.a3">Crown grade, area, and for legs the measurements of the lot, are written on the proforma. Photos with a tape measure are warehouse samples. They are not a size promise for every order.</p>
+      </details>
+      <details class="ost-acc">
+        <summary data-i18n="caseStudy.ostrich.faq.q4">What is the minimum order?</summary>
+        <p data-i18n="caseStudy.ostrich.faq.a4">We do not publish a fixed minimum on the site. Tell us the volume, grade and destination, and we price that lot. A sample to check the hand, before a larger order, is possible.</p>
+      </details>
+      <details class="ost-acc">
+        <summary data-i18n="caseStudy.ostrich.faq.q5">Which countries have you shipped to?</summary>
+        <p data-i18n="caseStudy.ostrich.faq.a5">We have exported ostrich leather to China and Turkey. Other destinations are looked at one by one.</p>
+      </details>
     </div>
   </section>
 
-  <section class="section">
+  <section class="ost-next">
     <div class="container">
-      <div class="section__header">
-        <h2 class="section__title" data-i18n="caseStudy.ostrich.related.title">Continue on the site</h2>
-      </div>
-      <div class="features-grid">
-        <a href="/en/pages/products" class="feature-item feature-item--link"><span class="feature-item__icon" data-bd-icon="box" data-bd-size="26"></span><h3 data-i18n="caseStudy.ostrich.related.products">Product catalog</h3><p data-i18n="caseStudy.ostrich.related.productsDesc">Ostrich leather beside other Bizdavar production</p></a>
-        <a href="/en/pages/contact" class="feature-item feature-item--link"><span class="feature-item__icon" data-bd-icon="phone" data-bd-size="26"></span><h3 data-i18n="caseStudy.ostrich.related.contact">Inquiry and proforma</h3><p data-i18n="caseStudy.ostrich.related.contactDesc">Send grade, footage, color and destination</p></a>
-        <a href="/en/pages/about" class="feature-item feature-item--link"><span class="feature-item__icon" data-bd-icon="globe" data-bd-size="26"></span><h3 data-i18n="caseStudy.ostrich.related.about">About Bizdavar</h3><p data-i18n="caseStudy.ostrich.related.aboutDesc">The company since 2013 — Iran and the region</p></a>
+      <h2 data-i18n="caseStudy.ostrich.related.title">Elsewhere on the site</h2>
+      <div class="ost-next__row">
+        <a href="/en/pages/products">
+          <strong data-i18n="caseStudy.ostrich.related.products">Product catalog</strong>
+          <span data-i18n="caseStudy.ostrich.related.productsDesc">Ostrich leather alongside the rest of Bizdavar production</span>
+        </a>
+        <a href="/en/pages/contact">
+          <strong data-i18n="caseStudy.ostrich.related.contact">Inquiry and proforma</strong>
+          <span data-i18n="caseStudy.ostrich.related.contactDesc">Send the grade, area, color and destination</span>
+        </a>
+        <a href="/en/pages/about">
+          <strong data-i18n="caseStudy.ostrich.related.about">About Bizdavar</strong>
+          <span data-i18n="caseStudy.ostrich.related.aboutDesc">The company since 2013, in Iran and the region</span>
+        </a>
       </div>
     </div>
   </section>
+
+  <dialog class="ost-light" id="ostLight">
+    <button type="button" class="ost-light__x" data-ost-close>×</button>
+    <img alt="">
+    <p hidden></p>
+  </dialog>
+  <script>
+    (function () {
+      var dialog = document.getElementById('ostLight');
+      if (!dialog || typeof dialog.showModal !== 'function') return;
+      var img = dialog.querySelector('img');
+      var cap = dialog.querySelector('p');
+      var closeBtn = dialog.querySelector('[data-ost-close]');
+      var labels = { fa: 'بستن', ar: 'إغلاق', ru: 'Закрыть', tr: 'Kapat', en: 'Close' };
+      var lang = (document.documentElement.lang || 'en').slice(0, 2);
+      if (closeBtn) closeBtn.setAttribute('aria-label', labels[lang] || 'Close');
+      document.querySelectorAll('[data-ost-open]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var source = btn.querySelector('img');
+          if (!source) return;
+          img.src = source.currentSrc || source.src;
+          img.alt = source.alt || '';
+          var note = btn.querySelector('.ost-shot__cap');
+          cap.textContent = note ? note.textContent.trim() : '';
+          cap.hidden = !cap.textContent;
+          dialog.showModal();
+        });
+      });
+      dialog.addEventListener('click', function (event) {
+        if (event.target === dialog) dialog.close();
+      });
+      if (closeBtn) closeBtn.addEventListener('click', function () { dialog.close(); });
+    })();
+  </script>
 
   <div id="geoStrip"></div>
-  </main>
+</main>
 
   <script src="/assets/scripts/site-loader.js?v=20260919x" data-after-seo="i18n/ostrich-leather-i18n.js"></script>
   <script>

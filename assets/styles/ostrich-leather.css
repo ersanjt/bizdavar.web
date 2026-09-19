@@ -1,0 +1,655 @@
+/* Ostrich leather catalog. Light paper, small sharp frames, no dark template. */
+
+body[data-page="ostrich-leather"] {
+  --ost-ink: #1c1915;
+  --ost-muted: #5e564e;
+  --ost-paper: #f6f1ea;
+  --ost-paper-2: #efe8de;
+  --ost-card: #fffdf9;
+  --ost-line: rgba(28, 25, 21, 0.12);
+  --ost-cognac: #8a5a34;
+  background: var(--ost-paper);
+  color: var(--ost-ink);
+}
+
+body[data-page="ostrich-leather"] .ost {
+  background: var(--ost-paper);
+}
+
+body[data-page="ostrich-leather"] .ost-block,
+body[data-page="ostrich-leather"] .ost-hero,
+body[data-page="ostrich-leather"] .ost-nav,
+body[data-page="ostrich-leather"] .ost-next {
+  scroll-margin-top: calc(var(--header-height, 72px) + 52px);
+}
+
+body[data-page="ostrich-leather"] .ost-hero__field {
+  display: none;
+}
+
+body[data-page="ostrich-leather"] .ost-hero {
+  position: relative;
+  color: var(--ost-ink);
+  background: var(--ost-paper);
+  padding: clamp(28px, 4vw, 52px) 0 8px;
+}
+
+body[data-page="ostrich-leather"] .ost-hero::after {
+  content: none;
+}
+
+body[data-page="ostrich-leather"] .ost-hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(220px, 0.72fr);
+  gap: clamp(28px, 4vw, 64px);
+  align-items: end;
+}
+
+body[data-page="ostrich-leather"] .ost-kicker,
+body[data-page="ostrich-leather"] .ost-kicker--light {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 12px;
+  color: var(--ost-cognac);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+body[data-page="ostrich-leather"] .ost-kicker::before,
+body[data-page="ostrich-leather"] .ost-kicker--light::before {
+  content: "";
+  width: 18px;
+  height: 2px;
+  flex: 0 0 auto;
+  background: #e3191f;
+}
+
+body[data-page="ostrich-leather"] .ost-hero h1 {
+  margin: 0;
+  max-width: 12em;
+  font-family: var(--font-display);
+  font-size: clamp(2.15rem, 4.4vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.28;
+  color: var(--ost-ink);
+}
+
+body[data-page="ostrich-leather"] .ost-lead {
+  margin: 16px 0 0;
+  max-width: 38rem;
+  color: var(--ost-muted);
+  font-size: 1.02rem;
+  line-height: 1.9;
+}
+
+body[data-page="ostrich-leather"] .ost-hero__cta,
+body[data-page="ostrich-leather"] .ost-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+body[data-page="ostrich-leather"] .ost-hero .btn--outline {
+  color: var(--ost-ink);
+  border-color: rgba(28, 25, 21, 0.35);
+  background: transparent;
+}
+
+body[data-page="ostrich-leather"] .ost-hero .btn--outline:hover,
+body[data-page="ostrich-leather"] .ost-hero .btn--outline:focus-visible {
+  color: #fff;
+  background: var(--ost-ink);
+  border-color: var(--ost-ink);
+}
+
+body[data-page="ostrich-leather"] .ost-index {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+  padding-top: 16px;
+  border-top: 1px solid var(--ost-line);
+}
+
+body[data-page="ostrich-leather"] .ost-index a {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-decoration: none;
+}
+
+body[data-page="ostrich-leather"] .ost-index span,
+body[data-page="ostrich-leather"] .ost-index small {
+  color: var(--ost-muted);
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+body[data-page="ostrich-leather"] .ost-index strong {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 2.4vw, 2.15rem);
+  font-weight: 800;
+  line-height: 1.05;
+  color: var(--ost-ink);
+}
+
+body[data-page="ostrich-leather"] .ost-frame {
+  display: block;
+  width: min(100%, 380px);
+  margin-inline-start: auto;
+  padding: 0;
+  border: 1px solid var(--ost-line);
+  border-radius: 4px;
+  overflow: hidden;
+  background: #e7dfd4;
+  aspect-ratio: 3 / 4;
+  cursor: zoom-in;
+  box-shadow: 0 16px 40px rgba(40, 28, 16, 0.08);
+}
+
+body[data-page="ostrich-leather"] .ost-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  display: block;
+}
+
+body[data-page="ostrich-leather"] .ost-nav {
+  position: sticky;
+  top: var(--header-height, 72px);
+  z-index: 40;
+  background: rgba(246, 241, 234, 0.94);
+  border-bottom: 1px solid var(--ost-line);
+  backdrop-filter: blur(12px);
+}
+
+body[data-page="ostrich-leather"] .ost-nav__row {
+  display: flex;
+  gap: 2px;
+  overflow-x: auto;
+  padding: 6px 0;
+  scrollbar-width: none;
+}
+
+body[data-page="ostrich-leather"] .ost-nav__row::-webkit-scrollbar {
+  display: none;
+}
+
+body[data-page="ostrich-leather"] .ost-nav a {
+  flex: 0 0 auto;
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: #3d342c;
+  font-size: 0.92rem;
+  text-decoration: none;
+}
+
+body[data-page="ostrich-leather"] .ost-nav a:hover,
+body[data-page="ostrich-leather"] .ost-nav a:focus-visible {
+  background: rgba(138, 90, 52, 0.1);
+  color: var(--ost-ink);
+}
+
+body[data-page="ostrich-leather"] .ost-nav a:last-child {
+  background: var(--ost-ink);
+  color: #f6f1ea;
+}
+
+body[data-page="ostrich-leather"] .ost-block {
+  padding: clamp(48px, 6vw, 84px) 0;
+}
+
+body[data-page="ostrich-leather"] .ost-dark,
+body[data-page="ostrich-leather"] .ost-story,
+body[data-page="ostrich-leather"] .ost-specs,
+body[data-page="ostrich-leather"] .ost-look,
+body[data-page="ostrich-leather"] .ost-export,
+body[data-page="ostrich-leather"] .ost-faq {
+  background: var(--ost-paper);
+  color: var(--ost-ink);
+}
+
+body[data-page="ostrich-leather"] .ost-prices,
+body[data-page="ostrich-leather"] .ost-room {
+  background: var(--ost-paper-2);
+}
+
+body[data-page="ostrich-leather"] .ost-head {
+  max-width: 44rem;
+  margin-bottom: clamp(22px, 3vw, 36px);
+}
+
+body[data-page="ostrich-leather"] .ost-head h2,
+body[data-page="ostrich-leather"] .ost-next h2,
+body[data-page="ostrich-leather"] .ost-prose h3,
+body[data-page="ostrich-leather"] .ost-chapter h3,
+body[data-page="ostrich-leather"] .ost-step h3,
+body[data-page="ostrich-leather"] .ost-export h3,
+body[data-page="ostrich-leather"] .ost-card h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--ost-ink);
+}
+
+body[data-page="ostrich-leather"] .ost-head h2,
+body[data-page="ostrich-leather"] .ost-next h2 {
+  font-size: clamp(1.7rem, 3vw, 2.45rem);
+  line-height: 1.3;
+}
+
+body[data-page="ostrich-leather"] .ost-head p,
+body[data-page="ostrich-leather"] .ost-prose p,
+body[data-page="ostrich-leather"] .ost-chapter p,
+body[data-page="ostrich-leather"] .ost-step p,
+body[data-page="ostrich-leather"] .ost-export p,
+body[data-page="ostrich-leather"] .ost-note,
+body[data-page="ostrich-leather"] .ost-acc p {
+  margin: 10px 0 0;
+  color: var(--ost-muted);
+  font-size: 1.02rem;
+  line-height: 1.9;
+}
+
+body[data-page="ostrich-leather"] .ost-prose a {
+  color: var(--ost-cognac);
+}
+
+body[data-page="ostrich-leather"] .ost-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(240px, 0.78fr);
+  gap: clamp(24px, 4vw, 48px);
+  align-items: start;
+}
+
+body[data-page="ostrich-leather"] .ost-list {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+body[data-page="ostrich-leather"] .ost-list li {
+  position: relative;
+  padding-inline-start: 16px;
+  line-height: 1.7;
+}
+
+body[data-page="ostrich-leather"] .ost-list li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--ost-cognac);
+}
+
+body[data-page="ostrich-leather"] .ost-shot,
+body[data-page="ostrich-leather"] .ost-frame {
+  color: inherit;
+  text-align: start;
+}
+
+body[data-page="ostrich-leather"] .ost-shot {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: visible;
+  border-radius: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+body[data-page="ostrich-leather"] .ost-shot img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  border-radius: 4px;
+  background: #e7dfd4;
+}
+
+body[data-page="ostrich-leather"] .ost-shot__cap {
+  position: static;
+  display: block;
+  padding: 8px 2px 0;
+  background: none;
+  color: var(--ost-muted);
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+body[data-page="ostrich-leather"] .ost-shot:focus-visible,
+body[data-page="ostrich-leather"] .ost-frame:focus-visible,
+body[data-page="ostrich-leather"] .ost-nav a:focus-visible,
+body[data-page="ostrich-leather"] .ost-index a:focus-visible,
+body[data-page="ostrich-leather"] .ost-acc summary:focus-visible {
+  outline: 2px solid var(--ost-cognac);
+  outline-offset: 3px;
+}
+
+body[data-page="ostrich-leather"] .ost-stack {
+  display: grid;
+  gap: 16px;
+}
+
+body[data-page="ostrich-leather"] .ost-stack .ost-shot img {
+  aspect-ratio: 3 / 4;
+  height: auto;
+}
+
+body[data-page="ostrich-leather"] .ost-price-grid,
+body[data-page="ostrich-leather"] .ost-look__grid,
+body[data-page="ostrich-leather"] .ost-room__grid,
+body[data-page="ostrich-leather"] .ost-export__grid,
+body[data-page="ostrich-leather"] .ost-next__row {
+  display: grid;
+  gap: 16px;
+}
+
+body[data-page="ostrich-leather"] .ost-price-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+body[data-page="ostrich-leather"] .ost-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 10px 10px 16px;
+  border: 1px solid var(--ost-line);
+  border-radius: 6px;
+  background: var(--ost-card);
+}
+
+body[data-page="ostrich-leather"] .ost-card .ost-shot img,
+body[data-page="ostrich-leather"] .ost-card--wide .ost-shot img {
+  aspect-ratio: 4 / 3;
+  height: auto;
+}
+
+body[data-page="ostrich-leather"] .ost-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 6px 0;
+}
+
+body[data-page="ostrich-leather"] .ost-card h3 {
+  font-size: 1rem;
+}
+
+body[data-page="ostrich-leather"] .ost-card__price {
+  margin: 2px 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 3vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--ost-ink);
+}
+
+body[data-page="ostrich-leather"] .ost-card__unit,
+body[data-page="ostrich-leather"] .ost-card__desc {
+  margin: 0;
+  color: var(--ost-muted);
+  line-height: 1.65;
+}
+
+body[data-page="ostrich-leather"] .ost-note {
+  max-width: 46rem;
+}
+
+body[data-page="ostrich-leather"] .ost-chapter {
+  padding: 16px 0;
+  border-top: 1px solid var(--ost-line);
+}
+
+body[data-page="ostrich-leather"] .ost-chapter h3,
+body[data-page="ostrich-leather"] .ost-step h3,
+body[data-page="ostrich-leather"] .ost-export h3 {
+  font-size: 1.2rem;
+}
+
+body[data-page="ostrich-leather"] .ost-specs__photo .ost-shot img,
+body[data-page="ostrich-leather"] .ost-process__photo .ost-shot img {
+  aspect-ratio: 4 / 5;
+  height: auto;
+}
+
+body[data-page="ostrich-leather"] .ost-steps {
+  display: grid;
+  gap: 0;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+body[data-page="ostrich-leather"] .ost-step {
+  position: relative;
+  padding: 0 0 18px;
+  padding-inline-start: 22px;
+  border-inline-start: 1px solid rgba(138, 90, 52, 0.35);
+}
+
+body[data-page="ostrich-leather"] .ost-step::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: -4px;
+  top: 8px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--ost-cognac);
+}
+
+body[data-page="ostrich-leather"] .ost-room__grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+body[data-page="ostrich-leather"] .ost-look__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+body[data-page="ostrich-leather"] .ost-look__grid > .ost-shot {
+  flex: 0 0 calc((100% - 32px) / 3);
+  width: calc((100% - 32px) / 3);
+  max-width: calc((100% - 32px) / 3);
+}
+
+body[data-page="ostrich-leather"] .ost-look__grid .ost-shot img,
+body[data-page="ostrich-leather"] .ost-room__grid .ost-shot img {
+  aspect-ratio: 3 / 4;
+  height: auto;
+}
+
+body[data-page="ostrich-leather"] .ost-export__grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+body[data-page="ostrich-leather"] .ost-export article {
+  padding: 16px 0 0;
+  border-top: 2px solid var(--ost-cognac);
+}
+
+body[data-page="ostrich-leather"] .ost-faq {
+  border-top: 1px solid var(--ost-line);
+}
+
+body[data-page="ostrich-leather"] .ost-acc {
+  border-bottom: 1px solid var(--ost-line);
+}
+
+body[data-page="ostrich-leather"] .ost-acc summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 0;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  font-weight: 800;
+  list-style: none;
+}
+
+body[data-page="ostrich-leather"] .ost-acc summary::-webkit-details-marker {
+  display: none;
+}
+
+body[data-page="ostrich-leather"] .ost-acc summary::after {
+  content: "+";
+  flex: 0 0 auto;
+  color: var(--ost-cognac);
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+body[data-page="ostrich-leather"] .ost-acc[open] summary::after {
+  content: "–";
+}
+
+body[data-page="ostrich-leather"] .ost-next {
+  background: #1c1915;
+  color: #f6f1ea;
+  padding: clamp(36px, 5vw, 64px) 0;
+}
+
+body[data-page="ostrich-leather"] .ost-next h2 {
+  margin-bottom: 16px;
+  color: #f6f1ea;
+}
+
+body[data-page="ostrich-leather"] .ost-next__row {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+body[data-page="ostrich-leather"] .ost-next a {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px;
+  border: 1px solid rgba(246, 241, 234, 0.16);
+  border-radius: 6px;
+  color: inherit;
+  text-decoration: none;
+}
+
+body[data-page="ostrich-leather"] .ost-next a:hover,
+body[data-page="ostrich-leather"] .ost-next a:focus-visible {
+  border-color: #c4a574;
+}
+
+body[data-page="ostrich-leather"] .ost-next strong {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+}
+
+body[data-page="ostrich-leather"] .ost-next span {
+  color: rgba(246, 241, 234, 0.7);
+  line-height: 1.6;
+}
+
+body[data-page="ostrich-leather"] #geoStrip {
+  background: var(--ost-paper);
+}
+
+body[data-page="ostrich-leather"] .ost-light {
+  width: min(920px, calc(100vw - 28px));
+  max-height: calc(100vh - 28px);
+  margin: auto;
+  padding: 12px;
+  border: 0;
+  border-radius: 8px;
+  background: #141210;
+  color: #f6f1ea;
+}
+
+body[data-page="ostrich-leather"] .ost-light::backdrop {
+  background: rgba(12, 10, 8, 0.84);
+}
+
+body[data-page="ostrich-leather"] .ost-light img {
+  display: block;
+  width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+  background: #0e0c0a;
+  border-radius: 4px;
+}
+
+body[data-page="ostrich-leather"] .ost-light p {
+  margin: 10px 4px 4px;
+  line-height: 1.6;
+}
+
+body[data-page="ostrich-leather"] .ost-light__x {
+  position: absolute;
+  inset-block-start: 8px;
+  inset-inline-end: 8px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(20, 16, 12, 0.8);
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 980px) {
+  body[data-page="ostrich-leather"] .ost-hero__grid,
+  body[data-page="ostrich-leather"] .ost-split,
+  body[data-page="ostrich-leather"] .ost-price-grid,
+  body[data-page="ostrich-leather"] .ost-look__grid,
+  body[data-page="ostrich-leather"] .ost-room__grid,
+  body[data-page="ostrich-leather"] .ost-export__grid,
+  body[data-page="ostrich-leather"] .ost-next__row {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-page="ostrich-leather"] .ost-frame {
+    width: min(100%, 320px);
+    margin-inline: auto;
+    order: -1;
+  }
+
+  body[data-page="ostrich-leather"] .ost-hero h1 {
+    max-width: none;
+  }
+
+  body[data-page="ostrich-leather"] .ost-look__grid > .ost-shot {
+    flex-basis: 100%;
+    width: min(100%, 420px);
+    max-width: 420px;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  body[data-page="ostrich-leather"] .ost-index {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

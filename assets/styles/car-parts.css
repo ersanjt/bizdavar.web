@@ -446,58 +446,249 @@ body.car-page .breadcrumbs { color: rgba(255, 255, 255, 0.78); }
 .brake-cards {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px 14px;
+  align-items: stretch;
+  gap: 28px 22px;
 }
 .brake-card {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 100%;
   min-width: 0;
+  box-sizing: border-box;
   background: #fff;
   border: 0;
   padding: 0;
   text-align: start;
   cursor: pointer;
-  color: inherit;
+  color: #141414;
   font: inherit;
 }
 .brake-card:focus-visible { outline: 2px solid var(--brake-red); outline-offset: 3px; }
 .brake-card__art {
-  background: #f6f6f6;
+  position: relative;
+  flex: 0 0 auto;
+  width: 100%;
   aspect-ratio: 1;
-  display: grid;
-  place-items: center;
-  margin-bottom: 10px;
+  overflow: hidden;
+  background: #fff;
+  margin-bottom: 14px;
 }
-.brake-card__art svg { width: 72%; height: 72%; }
-.brake-card__meta {
+.brake-card__art svg,
+.brake-card__art img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #fff;
+}
+.brake-card__art svg { width: 62%; height: 62%; margin: auto; }
+.brake-card__body {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.brake-card__brand {
+  display: flex;
+  align-items: center;
   gap: 8px;
-  color: #888;
+  height: 22px;
+  margin-bottom: 8px;
+}
+.brake-card__brand strong {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  font-weight: 800;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-.brake-card h3 {
-  margin: 6px 0;
-  font-size: 14px;
-  line-height: 1.45;
-  min-height: 3.9em;
+.brake-card__brand .brake-logo {
+  flex: 0 0 auto;
+  margin-inline-start: auto;
+  width: 28px;
+  height: 18px;
+  object-fit: contain;
 }
-.brake-card__stock { margin: 0; color: #888; font-size: 12px; }
-.brake-card__stock.is-in { color: #1d7a45; }
-.brake-card__price {
-  margin: auto 0 0;
-  font-size: 20px;
+.brake-card__mark {
+  flex: 0 0 22px;
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  background: #1c1c1c;
+  color: #fff;
+  font-size: 8px;
   font-weight: 800;
+}
+.brake-card h3 {
+  margin: 0 0 8px;
+  height: 4.2em;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  color: #6b2a2a;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.brake-card__fit {
+  margin: 0;
+  height: 2.8em;
+  overflow: hidden;
+  color: #9a9a9a;
+  font-size: 11px;
+  line-height: 1.4;
+}
+.brake-card__meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 12px;
+}
+.brake-card__stock {
+  margin: 0;
+  color: #8a8a8a;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.brake-card__stock::before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-inline-end: 6px;
+  border-radius: 50%;
+  background: #c5c5c5;
+  vertical-align: 1px;
+}
+.brake-card__stock.is-in { color: #1d7a45; }
+.brake-card__stock.is-in::before { background: #1d7a45; }
+.brake-card__price {
+  margin: 0;
+  color: #1a1a1a;
+  font-size: 16px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.brake-card__go {
+  display: block;
+  margin-top: 14px;
+  color: #8a3a3a;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .brake-pages {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 8px;
   margin-top: 22px;
+}
+.brake-pages .is-gap {
+  display: grid;
+  place-items: center;
+  min-width: 16px;
+  color: #888;
+}
+.brake-desk--pdp .brake-pdp {
+  width: min(1080px, calc(100% - 32px));
+  margin-inline: auto;
+  gap: 24px 32px;
+}
+.brake-pdp .shop-pdp__gallery {
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 12px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+}
+.brake-pdp .shop-pdp__thumbs button.is-active {
+  border-color: #c81e1e;
+  box-shadow: none;
+}
+.brake-pdp .shop-pdp__stage {
+  background: #fff;
+  border: 0;
+}
+.brake-pdp .shop-pdp__buy h1 {
+  color: #5c2424;
+  text-transform: uppercase;
+  font-size: clamp(1.2rem, 1.7vw, 1.55rem);
+  font-weight: 800;
+  line-height: 1.35;
+}
+.brake-pdp .shop-pdp__badge {
+  justify-content: center;
+  border: 0;
+  background: #c81e1e;
+  color: #fff;
+}
+.brake-pdp .shop-pdp__badge::before { background: #fff; }
+.brake-pdp .shop-pdp__assure h2 { color: #6b2a2a; text-transform: none; }
+.brake-pdp .brake-related {
+  text-align: center;
+  margin-top: 28px;
+  padding-top: 8px;
+  border-top: 0;
+}
+.brake-pdp .brake-related > p { color: #e4b4b4; letter-spacing: 0.16em; }
+.brake-pdp .brake-related > h3 {
+  color: #6b2a2a;
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+}
+.brake-pdp .brake-card__art { border: 0; border-radius: 0; }
+.brake-pdp .shop-pdp__thumbs {
+  max-height: 440px;
+  overflow: auto;
+  gap: 8px;
+}
+.brake-pdp .shop-pdp__thumbs button {
+  width: 64px;
+  height: 64px;
+  padding: 4px;
+  border-radius: 8px;
+  background: #fff;
+}
+.brake-pdp .shop-pdp__stage {
+  min-height: 0;
+  aspect-ratio: 1;
+  max-height: 460px;
+  border-radius: 8px;
+  background: #fff;
+}
+.brake-pdp .shop-pdp__stage img {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: contain;
+}
+.brake-pdp .shop-pdp__buy h1 {
+  color: #5c2424;
+}
+.brake-pdp .shop-pdp__price { margin-bottom: 12px; font-size: 1.55rem; }
+.brake-pdp .brake-specs li { font-size: 14px; padding: 7px 0; }
+.brake-pdp .brake-related > h3 {
+  color: #6b2a2a;
+}
+@media (max-width: 900px) {
+  .brake-desk--pdp .brake-pdp { width: min(100% - 24px, 1080px); }
+  .brake-pdp .shop-pdp__gallery { grid-template-columns: 1fr; }
+  .brake-pdp .shop-pdp__stage { max-height: 320px; }
 }
 .brake-pages button {
   min-width: 36px;
@@ -566,8 +757,8 @@ body.car-page .breadcrumbs { color: rgba(255, 255, 255, 0.78); }
 .brake-specs li { padding: 6px 0; border-bottom: 1px solid #eee; }
 
 .brake-related { margin-top: 36px; text-align: center; }
-.brake-related p { margin: 0; color: #9a9a9a; letter-spacing: 0.14em; font-size: 12px; text-transform: uppercase; }
-.brake-related h3 { margin: 6px 0 16px; color: #5c2a2a; font-size: 1.6rem; }
+.brake-related > p { margin: 0; color: #9a9a9a; letter-spacing: 0.14em; font-size: 12px; text-transform: uppercase; }
+.brake-related > h3 { margin: 6px 0 16px; color: #5c2a2a; font-size: 1.6rem; }
 .brake-related .brake-cards { text-align: start; }
 
 .brake-float { display: none; }

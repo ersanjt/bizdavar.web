@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <link rel="stylesheet" href="/assets/styles/site.css?v=20260910c">
+  <link rel="stylesheet" href="/assets/styles/ostrich-leather.css?v=20260919e">
   <link rel="preload" href="/assets/fonts/vazirmatn/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/estedad/Estedad-Black.woff2" as="font" type="font/woff2" crossorigin>
   <!-- Google Tag Manager -->
@@ -34,7 +35,7 @@
       "https://bizdavar.com/assets/images/products/ostrich/color-swatches.jpg",
       "https://bizdavar.com/assets/images/products/ostrich/inventory-racks.jpg",
       "https://bizdavar.com/assets/images/products/ostrich/legs-length.jpg",
-      "https://bizdavar.com/assets/images/products/ostrich/goods-black-leg.jpg"
+      "https://bizdavar.com/assets/images/products/ostrich/studio-black.jpg"
     ],
     "offers": [
       {
@@ -99,19 +100,46 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <script src="/assets/scripts/components/page-shell.js?v=20260910c" defer></script>
-<main id="main-content" class="site-main">
+<main id="main-content" class="site-main ost">
 
-  <section class="page-hero page-hero--pro">
-    <div class="container">
-      <span class="section__tag" data-i18n="caseStudy.ostrich.hero.tag">Производство Ирана · Экзотическая кожа</span>
-      <h1 data-i18n="caseStudy.ostrich.hero.title">Иранская страусиная кожа — краст, окрашенная и нога</h1>
-      <p data-i18n="caseStudy.ostrich.hero.desc">Полный цикл в Иране. Краст от $6.50 за кв. фут, окрашенная от $8.50, нога от $6. Экспорт в Китай и Турцию уже выполнен.</p>
+  <section class="ost-hero">
+    <div class="ost-hero__field" aria-hidden="true"></div>
+    <div class="container ost-hero__grid">
+      <div class="ost-hero__copy">
+        <p class="ost-kicker ost-kicker--light" data-i18n="caseStudy.ostrich.hero.tag">Производство Ирана · Экзотическая кожа</p>
+        <h1 data-i18n="caseStudy.ostrich.hero.title">Иранская страусиная кожа: краст, окрашенная и нога</h1>
+        <p class="ost-lead" data-i18n="caseStudy.ostrich.hero.desc">Мы выделываем эту кожу в Иране, от сырой шкуры до кожи, готовой к раскрою. Краст начинается от $6.50 за квадратный фут, окрашенная кожа от $8.50, каждая нога от $6. В Китай и Турцию уже отгружали.</p>
+        <div class="ost-hero__cta">
+          <a href="/ru/pages/contact" class="btn btn--yellow" data-i18n="caseStudy.ostrich.about.ctaContact">Оптовый запрос</a>
+          <a href="#ostrich-gallery" class="btn btn--outline" data-i18n="caseStudy.ostrich.nav.gallery">Склад и цвет</a>
+        </div>
+        <div class="ost-index">
+          <a href="#ostrich-prices">
+            <span data-i18n="caseStudy.ostrich.prices.crustName">Краст</span>
+            <strong data-i18n="caseStudy.ostrich.prices.crustPrice">$6.50</strong>
+            <small data-i18n="caseStudy.ostrich.prices.crustUnit">за квадратный фут · от</small>
+          </a>
+          <a href="#ostrich-prices">
+            <span data-i18n="caseStudy.ostrich.prices.dyedName">Окрашенная кожа</span>
+            <strong data-i18n="caseStudy.ostrich.prices.dyedPrice">$8.50</strong>
+            <small data-i18n="caseStudy.ostrich.prices.dyedUnit">за квадратный фут · от</small>
+          </a>
+          <a href="#ostrich-prices">
+            <span data-i18n="caseStudy.ostrich.prices.legName">Нога</span>
+            <strong data-i18n="caseStudy.ostrich.prices.legPrice">$6</strong>
+            <small data-i18n="caseStudy.ostrich.prices.legUnit">за ногу · от</small>
+          </a>
+        </div>
+      </div>
+      <button type="button" class="ost-frame" data-ost-open>
+        <img src="/assets/images/products/ostrich/color-swatches.jpg" alt="Цветные образцы иранской страусиной кожи с рисунком квилла" data-i18n-alt="caseStudy.ostrich.about.imageAlt" width="750" height="1000" fetchpriority="high" decoding="async">
+      </button>
     </div>
   </section>
 
-  <div class="product-subnav-wrap">
+  <div class="ost-nav">
     <div class="container">
-      <nav class="product-subnav" aria-label="بخش‌های صفحه">
+      <nav class="ost-nav__row" data-i18n-aria="caseStudy.ostrich.nav.menu" aria-label="Разделы страницы">
         <a href="#ostrich-about" data-i18n="caseStudy.ostrich.nav.about">О коже</a>
         <a href="#ostrich-prices" data-i18n="caseStudy.ostrich.nav.prices">Цены</a>
         <a href="#ostrich-specs" data-i18n="caseStudy.ostrich.nav.specs">Характеристики</a>
@@ -125,257 +153,324 @@
     </div>
   </div>
 
-  <section class="section" id="ostrich-about">
-    <div class="container about-grid">
-      <div class="about__image biztab-gallery product-gallery">
-        <img src="/assets/images/products/ostrich/color-swatches.jpg" alt="Цветные образцы иранской страусиной кожи с рисунком quill" data-i18n-alt="caseStudy.ostrich.about.imageAlt" width="1200" height="1600" loading="eager">
-        <div class="biztab-gallery__thumbs">
-          <img src="/assets/images/products/ostrich/legs-length.jpg" alt="Краст кожи ног страуса, длина около 70 см" data-i18n-alt="caseStudy.ostrich.about.thumb1Alt" width="800" height="1067" loading="lazy">
-          <img src="/assets/images/products/ostrich/goods-black-leg.jpg" alt="Чёрный бумажник и картхолдер из кожи ноги страуса" data-i18n-alt="caseStudy.ostrich.about.thumb2Alt" width="800" height="1067" loading="lazy">
-          <img src="/assets/images/products/ostrich/crust-roll-width.jpg" alt="Рулон краста страуса на столе цеха" data-i18n-alt="caseStudy.ostrich.about.thumb3Alt" width="800" height="600" loading="lazy">
-        </div>
-      </div>
-      <div class="about__content prose">
-        <h2 data-i18n="caseStudy.ostrich.about.title">Страусиная кожа, которую мы производим в Иране</h2>
-        <p data-i18n-html="caseStudy.ostrich.about.body">Эта страница про <strong>иранскую страусиную кожу</strong>: мы производим и поставляем её в Иране — от шкуры до кожи, готовой к раскрою. Опт заказывает кожу тела (краст или окрашенную, за квадратный фут) и ноги отдельно.</p>
-        <p data-i18n-html="caseStudy.ostrich.about.body2">Страусиная кожа остаётся мягкой за счёт фолликулов пера (quill), не трескается на сгибе и дышит лучше, чем бычья. Это экзотическая кожа рядом с крокодилом, змеёй и ящерицей — рисунок quill не печатается. Запрос партии — через <a href="/ru/pages/contact">форму</a> или WhatsApp. Остальные продукты — в <a href="/ru/pages/products">каталоге</a>.</p>
-        <h3 data-i18n="caseStudy.ostrich.about.specsTitle">Что поставляем</h3>
-        <ul>
-          <li data-i18n="caseStudy.ostrich.about.spec1">Краст тела — выдублен, финальной краски ещё нет</li>
-          <li data-i18n="caseStudy.ostrich.about.spec2">Окрашенная кожа тела — широкая палитра, к раскрою</li>
-          <li data-i18n="caseStudy.ostrich.about.spec3">Нога страуса — крупная чешуя по центру, для сапог и мелочи</li>
-          <li data-i18n="caseStudy.ostrich.about.spec4">Полный цикл внутри Ирана</li>
-          <li data-i18n="caseStudy.ostrich.about.spec5">Экспорт в Китай и Турцию выполнен</li>
-          <li data-i18n="caseStudy.ostrich.about.spec6">Стартовая цена; сорт, метраж и цвет — в проформе</li>
+  <section class="ost-block ost-story" id="ostrich-about">
+    <div class="container ost-split">
+      <div class="ost-prose">
+        <header class="ost-head">
+          <h2 data-i18n="caseStudy.ostrich.about.title">Страусиную кожу мы выделываем в Иране</h2>
+        </header>
+        <p data-i18n-html="caseStudy.ostrich.about.body">Эта страница про <strong>иранскую страусиную кожу</strong>. Шкуру мы выделываем в Иране, пока она не готова к раскрою, и в таком виде отдаём её оптовому покупателю. Кожу тела, краст или окрашенную, продаём за квадратный фут. Ноги продаём отдельно, поштучно.</p>
+        <p data-i18n-html="caseStudy.ostrich.about.body2">Мягкость этой кожи идёт от фолликула пера. В торговле его называют квилл. На сгибе она трескается реже многих кож и дышит лучше, чем бычья. Вместе с крокодилом, змеёй и ящерицей это экзотическая кожа, и рисунок квилла не печатается. Запрос партии — через <a href="/ru/pages/contact">форму</a> или WhatsApp. Остальное производство — в <a href="/ru/pages/products">каталоге</a>.</p>
+        <h3 data-i18n="caseStudy.ostrich.about.specsTitle">Что продаём</h3>
+        <ul class="ost-list">
+          <li data-i18n="caseStudy.ostrich.about.spec1">Краст тела: выдублен, финального цвета ещё нет</li>
+          <li data-i18n="caseStudy.ostrich.about.spec2">Окрашенная кожа тела: широкая палитра, к раскрою</li>
+          <li data-i18n="caseStudy.ostrich.about.spec3">Нога страуса: крупная чешуя по центру, для сапог и мелкой кожи</li>
+          <li data-i18n="caseStudy.ostrich.about.spec4">Выделка в Иране, от шкуры до готовой кожи</li>
+          <li data-i18n="caseStudy.ostrich.about.spec5">Отгрузки в Китай и Турцию уже были</li>
+          <li data-i18n="caseStudy.ostrich.about.spec6">Цены стартовые; сорт, площадь и цвет пишем в проформе</li>
         </ul>
-        <div class="article__cta">
+        <div class="ost-actions">
           <a href="/ru/pages/contact" class="btn btn--primary" data-i18n="caseStudy.ostrich.about.ctaContact">Оптовый запрос</a>
-          <a href="/ru/pages/products" class="btn btn--outline" data-i18n="caseStudy.ostrich.about.ctaCatalog">Каталог продуктов</a>
+          <a href="/ru/pages/products" class="btn btn--outline" data-i18n="caseStudy.ostrich.about.ctaCatalog">Каталог</a>
+        </div>
+      </div>
+      <div class="ost-stack">
+        <button type="button" class="ost-shot" data-ost-open>
+          <img src="/assets/images/products/ostrich/crust-roll-width.jpg" alt="Рулон краста страуса на столе цеха" data-i18n-alt="caseStudy.ostrich.about.thumb3Alt" width="575" height="1024" loading="lazy">
+        </button>
+        <button type="button" class="ost-shot" data-ost-open>
+          <img src="/assets/images/products/ostrich/legs-width.jpg" alt="Стопка ног краста шириной около 10–12 см" data-i18n-alt="caseStudy.ostrich.gallery.a3" width="575" height="1024" loading="lazy">
+          <span class="ost-shot__cap" data-i18n="caseStudy.ostrich.gallery.c3">Ширина этой стопки ног по рулетке около 10–12 см.</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="ost-block ost-dark ost-prices" id="ostrich-prices">
+    <div class="container">
+      <header class="ost-head">
+        <p class="ost-kicker ost-kicker--light" data-i18n="caseStudy.ostrich.prices.eyebrow">Стартовая оптовая цена</p>
+        <h2 data-i18n="caseStudy.ostrich.prices.title">Краст, окрашенная кожа и нога</h2>
+        <p data-i18n="caseStudy.ostrich.prices.desc">В этой торговле один «фут» — это один квадратный фут. Цифры ниже — стартовые цены, а не фиксированная ставка за каждую шкуру.</p>
+      </header>
+      <div class="ost-price-grid">
+        <article class="ost-card">
+          <button type="button" class="ost-shot" data-ost-open>
+            <img src="/assets/images/products/ostrich/crust-roll-length.jpg" alt="Рулон краста страуса длиной около метра" data-i18n-alt="caseStudy.ostrich.gallery.a1" width="575" height="1024" loading="lazy">
+            <span class="ost-shot__cap" data-i18n="caseStudy.ostrich.gallery.c1">Длина этого рулона краста около 95–100 см.</span>
+          </button>
+          <div class="ost-card__body">
+            <h3 data-i18n="caseStudy.ostrich.prices.crustName">Краст</h3>
+            <p class="ost-card__price" data-i18n="caseStudy.ostrich.prices.crustPrice">$6.50</p>
+            <p class="ost-card__unit" data-i18n="caseStudy.ostrich.prices.crustUnit">за квадратный фут · от</p>
+            <p class="ost-card__desc" data-i18n="caseStudy.ostrich.prices.crustDesc">Выдублен до краста, натуральный цвет кремовый. Подходит цеху, который красит сам.</p>
+          </div>
+        </article>
+        <article class="ost-card ost-card--wide">
+          <button type="button" class="ost-shot" data-ost-open>
+            <img src="/assets/images/products/ostrich/inventory-tiers.jpg" alt="Три яруса: тело, нога и окрашенные полотна" data-i18n-alt="caseStudy.ostrich.gallery.a6" width="1024" height="575" loading="lazy">
+            <span class="ost-shot__cap" data-i18n="caseStudy.ostrich.gallery.c6">Три яруса: кожа тела, нога и окрашенное полотно.</span>
+          </button>
+          <div class="ost-card__body">
+            <h3 data-i18n="caseStudy.ostrich.prices.dyedName">Окрашенная кожа</h3>
+            <p class="ost-card__price" data-i18n="caseStudy.ostrich.prices.dyedPrice">$8.50</p>
+            <p class="ost-card__unit" data-i18n="caseStudy.ostrich.prices.dyedUnit">за квадратный фут · от</p>
+            <p class="ost-card__desc" data-i18n="caseStudy.ostrich.prices.dyedDesc">Окрашена и готова к раскрою. Палитра есть на складе и в шоуруме.</p>
+          </div>
+        </article>
+        <article class="ost-card">
+          <button type="button" class="ost-shot" data-ost-open>
+            <img src="/assets/images/products/ostrich/legs-length.jpg" alt="Краст кожи ног страуса, длина около 70 см" data-i18n-alt="caseStudy.ostrich.about.thumb1Alt" width="575" height="1024" loading="lazy">
+          </button>
+          <div class="ost-card__body">
+            <h3 data-i18n="caseStudy.ostrich.prices.legName">Нога</h3>
+            <p class="ost-card__price" data-i18n="caseStudy.ostrich.prices.legPrice">$6</p>
+            <p class="ost-card__unit" data-i18n="caseStudy.ostrich.prices.legUnit">за ногу · от</p>
+            <p class="ost-card__desc" data-i18n="caseStudy.ostrich.prices.legDesc">У кожи ноги по центру один ряд крупной чешуи. Продаётся поштучно, не за квадратный фут.</p>
+          </div>
+        </article>
+      </div>
+      <p class="ost-note" data-i18n="caseStudy.ostrich.prices.note">Итоговая цена зависит от сорта короны, полезной площади, цвета, толщины и объёма заказа. Проформу выставляем, когда партия определена.</p>
+    </div>
+  </section>
+
+  <section class="ost-block ost-specs" id="ostrich-specs">
+    <div class="container">
+      <header class="ost-head">
+        <p class="ost-kicker" data-i18n="caseStudy.ostrich.specs.eyebrow">Для фабрики</p>
+        <h2 data-i18n="caseStudy.ostrich.specs.title">Корона, сорт, краст и нога</h2>
+        <p data-i18n="caseStudy.ostrich.specs.desc">Это термины дубильни и покупателей экзотической кожи. Точные цифры каждой партии пишем в проформе. Эта страница проформу не заменяет.</p>
+      </header>
+      <div class="ost-split">
+        <div class="ost-specs__photo">
+          <button type="button" class="ost-shot" data-ost-open>
+            <img src="/assets/images/products/ostrich/inventory-racks.jpg" alt="Стеллажи кожи тела и ног разных цветов" data-i18n-alt="caseStudy.ostrich.gallery.a5" width="575" height="1024" loading="lazy">
+            <span class="ost-shot__cap" data-i18n="caseStudy.ostrich.gallery.c5">На складе кожа тела снизу, ноги на верхней перекладине.</span>
+          </button>
+        </div>
+        <div class="ost-chapters">
+          <article class="ost-chapter">
+            <h3 data-i18n="caseStudy.ostrich.specs.quillTitle">Корона и квилл</h3>
+            <p data-i18n="caseStudy.ostrich.specs.quillBody">Квилл — круглая выпуклость на месте пера. Корона — центр шкуры, там квилл крупнее и ровнее. На практике около двух третей шкуры — полный квилл, остальное мелкий квилл или гладкое поле. Если нужна площадь полного квилла, заказывайте примерно в полтора раза больше.</p>
+          </article>
+          <article class="ost-chapter">
+            <h3 data-i18n="caseStudy.ostrich.specs.gradeTitle">Сорт</h3>
+            <p data-i18n="caseStudy.ostrich.specs.gradeBody">Сорт смотрит на то, сколько короны можно скроить, а не только на цвет. Первый сорт — чистая корона, для сумок и обивки. Второй — один или два дефекта. Третий — дефектов больше, он идёт на обувь, сапоги и мелкую кожгалантерею. Недозрелый или просевший квилл может снизить сорт. Сорт каждой партии указываем отдельно.</p>
+          </article>
+          <article class="ost-chapter">
+            <h3 data-i18n="caseStudy.ostrich.specs.crustTitle">Краст и окрашенная кожа</h3>
+            <p data-i18n="caseStudy.ostrich.specs.crustBody">Краст — это кожа после дубления, редубления, жирования, сушки и мягчения, до финального цвета и отделки. Она кремовая и рассчитана на краску покупателя. Окрашенная — та же шкура после цвета, к раскрою. На рынке кожа тела чаще всего около 0,6–1,2 мм. Толщину вашей партии пишем в проформе.</p>
+          </article>
+          <article class="ost-chapter">
+            <h3 data-i18n="caseStudy.ostrich.specs.legTitle">Нога</h3>
+            <p data-i18n="caseStudy.ostrich.specs.legBody">Нога узкая. По центру один ряд крупной чешуи, по бокам зерно мельче. На складских образцах длина около 70 см, ширина там, где стояла рулетка, около 10–12 см. Это размер образца, а не обещание на каждый заказ. Нога идёт на сапоги, ремешки, бумажники и картхолдеры.</p>
+          </article>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section section--gray" id="ostrich-prices">
-    <div class="container">
-      <div class="section__header section__header--pro">
-        <span class="section__eyebrow" data-i18n="caseStudy.ostrich.prices.eyebrow">Старт оптовой цены</span>
-        <h2 class="section__title" data-i18n="caseStudy.ostrich.prices.title">Краст, окрашенная и нога</h2>
-        <p class="section__desc" data-i18n="caseStudy.ostrich.prices.desc">В этой торговле «фут» — это квадратный фут. Цены стартовые, не фиксированная ставка за шкуру.</p>
+  <section class="ost-block ost-dark ost-process" id="ostrich-process">
+    <div class="container ost-split">
+      <div>
+        <header class="ost-head">
+          <p class="ost-kicker ost-kicker--light" data-i18n="caseStudy.ostrich.process.eyebrow">Как делаем</p>
+          <h2 data-i18n="caseStudy.ostrich.process.title">Выделываем в Иране, это не сырьё от посредника</h2>
+          <p data-i18n="caseStudy.ostrich.process.desc">Цепочка внутри Ирана: от шкуры до краста, затем цвет, затем скроенный и сшитый образец. Фото цеха и склада на этой странице с этого производства.</p>
+        </header>
+        <ol class="ost-steps">
+          <li class="ost-step">
+            <h3 data-i18n="caseStudy.ostrich.process.s1Title">1. Шкура и подготовка</h3>
+            <p data-i18n="caseStudy.ostrich.process.s1Desc">Качество квилла зависит от того, спелым ли было перо, когда сняли шкуру. Спелое перо оставляет круглый полный квилл. Неспелое — плоский и пустой.</p>
+          </li>
+          <li class="ost-step">
+            <h3 data-i18n="caseStudy.ostrich.process.s2Title">2. Дубление до краста</h3>
+            <p data-i18n="caseStudy.ostrich.process.s2Desc">Шкуру дубят, затем редубят и жируют, после этого сушат и мягчат. На выходе кремовый рулон краста, его меряют в цехе.</p>
+          </li>
+          <li class="ost-step">
+            <h3 data-i18n="caseStudy.ostrich.process.s3Title">3. Цвет и отделка</h3>
+            <p data-i18n="caseStudy.ostrich.process.s3Desc">Краска проходит краст насквозь. Цвета от кремового и коричневого до зелёного, синего, жёлтого и мадженты. Ноги и тело красим отдельно.</p>
+          </li>
+          <li class="ost-step">
+            <h3 data-i18n="caseStudy.ostrich.process.s4Title">4. Проверка и отгрузка</h3>
+            <p data-i18n="caseStudy.ostrich.process.s4Desc">Площадь, сорт и цвет пишем в проформе. В Китай и Турцию уже отгружали. Другие направления смотрим вместе с перевозчиком.</p>
+          </li>
+        </ol>
       </div>
-      <div class="features-grid">
-        <article class="feature-item">
-          <h3 data-i18n="caseStudy.ostrich.prices.crustName">Краст</h3>
-          <p class="price-hint" data-i18n="caseStudy.ostrich.prices.crustPrice">$6.50</p>
-          <p data-i18n="caseStudy.ostrich.prices.crustUnit">за кв. фут · от</p>
-          <p data-i18n="caseStudy.ostrich.prices.crustDesc">Выдублен до краста, натуральный кремовый. Под краску покупателя.</p>
-        </article>
-        <article class="feature-item">
-          <h3 data-i18n="caseStudy.ostrich.prices.dyedName">Окрашенная</h3>
-          <p class="price-hint" data-i18n="caseStudy.ostrich.prices.dyedPrice">$8.50</p>
-          <p data-i18n="caseStudy.ostrich.prices.dyedUnit">за кв. фут · от</p>
-          <p data-i18n="caseStudy.ostrich.prices.dyedDesc">Окрашена и готова к раскрою. Палитра есть на складе и в шоуруме.</p>
-        </article>
-        <article class="feature-item">
-          <h3 data-i18n="caseStudy.ostrich.prices.legName">Нога</h3>
-          <p class="price-hint" data-i18n="caseStudy.ostrich.prices.legPrice">$6</p>
-          <p data-i18n="caseStudy.ostrich.prices.legUnit">за ногу · от</p>
-          <p data-i18n="caseStudy.ostrich.prices.legDesc">Кожа ноги с центральным рядом чешуи. Продаётся штучно, не за квадратный фут.</p>
-        </article>
-      </div>
-      <p class="section__desc" data-i18n="caseStudy.ostrich.prices.note">Итог зависит от сорта короны, полезной площади, цвета, толщины и объёма. Проформа выставляется, когда партия определена.</p>
-    </div>
-  </section>
-
-  <section class="section" id="ostrich-specs">
-    <div class="container">
-      <div class="section__header section__header--pro">
-        <span class="section__eyebrow" data-i18n="caseStudy.ostrich.specs.eyebrow">Для фабрики</span>
-        <h2 class="section__title" data-i18n="caseStudy.ostrich.specs.title">Quill, сорт, краст и нога</h2>
-        <p class="section__desc" data-i18n="caseStudy.ostrich.specs.desc">Термины — язык дубильни. Точные цифры каждой отгрузки пишутся в проформе и её не заменяют.</p>
-      </div>
-      <div class="features-grid">
-        <article class="feature-item">
-          <h3 data-i18n="caseStudy.ostrich.specs.quillTitle">Корона и quill</h3>
-          <p data-i18n="caseStudy.ostrich.specs.quillBody">Quill — круглая фолликула, где сидело перо. Корона — центр шкуры, там quill крупный и ровный. На практике около двух третей шкуры — полный quill, остальное мелкий quill или гладкое поле. Если нужна площадь полного quill, заказывайте примерно в 1,5 раза больше.</p>
-        </article>
-        <article class="feature-item">
-          <h3 data-i18n="caseStudy.ostrich.specs.gradeTitle">Сортность</h3>
-          <p data-i18n="caseStudy.ostrich.specs.gradeBody">Сорт смотрит на кроящую ценность короны, а не только на цвет. 1-й сорт: корона без дефектов (сумки и обивка). 2-й: один-два дефекта. 3-й: дефектов больше — обувь, сапоги и мелкая кожгалантерея. Недозрелый или проваленный quill может снизить сорт. Сорт каждой партии указываем отдельно.</p>
-        </article>
-        <article class="feature-item">
-          <h3 data-i18n="caseStudy.ostrich.specs.crustTitle">Краст и окрашенная</h3>
-          <p data-i18n="caseStudy.ostrich.specs.crustBody">Краст — кожа после дубления, редубления, жирования, сушки и мягчения, до финального цвета и отделки. Кремовая, под краску покупателя. Окрашенная — та же шкура после цвета, к раскрою. Типичная рыночная толщина кожи тела около 0,6–1,2 мм.</p>
-        </article>
-        <article class="feature-item">
-          <h3 data-i18n="caseStudy.ostrich.specs.legTitle">Нога</h3>
-          <p data-i18n="caseStudy.ostrich.specs.legBody">Нога узкая: по центру ряд крупной чешуи, по бокам зерно мельче. На складских образцах длина около 70 см, ширина в точке замера около 10–12 см. Идёт на сапоги, ремешки, бумажники и картхолдеры.</p>
-        </article>
+      <div class="ost-process__photo">
+        <button type="button" class="ost-shot" data-ost-open>
+          <img src="/assets/images/products/ostrich/workshop-crust.jpg" alt="Краст на вешалках рядом с образцами цвета в цехе" data-i18n-alt="caseStudy.ostrich.gallery.a2" width="575" height="1024" loading="lazy">
+          <span class="ost-shot__cap" data-i18n="caseStudy.ostrich.gallery.c2">В цехе краст висит рядом с образцами цвета и страусиным пером.</span>
+        </button>
       </div>
     </div>
   </section>
 
-  <section class="section section--gray" id="ostrich-process">
+  <section class="ost-block ost-look" id="ostrich-goods">
     <div class="container">
-      <div class="section__header section__header--pro">
-        <span class="section__eyebrow" data-i18n="caseStudy.ostrich.process.eyebrow">Полный цикл</span>
-        <h2 class="section__title" data-i18n="caseStudy.ostrich.process.title">Производство в Иране, не переклеенная сырая шкура</h2>
-        <p class="section__desc" data-i18n="caseStudy.ostrich.process.desc">Цепочка внутри Ирана: от шкуры до краста, краски и образца изделия. Фото цеха и склада на этой странице — с этого производства.</p>
-      </div>
-      <div class="features-grid">
-        <article class="feature-item">
-          <h3 data-i18n="caseStudy.ostrich.process.s1Title">1. Шкура и подготовка</h3>
-          <p data-i18n="caseStudy.ostrich.process.s1Desc">Качество quill зависит от спелости пера при съёме. Спелое перо оставляет круглый полный quill; зелёное — плоский и открытый.</p>
-        </article>
-        <article class="feature-item">
-          <h3 data-i18n="caseStudy.ostrich.process.s2Title">2. Дубление до краста</h3>
-          <p data-i18n="caseStudy.ostrich.process.s2Desc">Шкуру дубят, редубят и жируют, затем сушат и мягчат. На выходе — кремовый рулон краста, который меряют в цехе.</p>
-        </article>
-        <article class="feature-item">
-          <h3 data-i18n="caseStudy.ostrich.process.s3Title">3. Цвет и отделка</h3>
-          <p data-i18n="caseStudy.ostrich.process.s3Desc">Краска проходит краст. Палитра от кремового и коричневого до зелёного, синего, жёлтого и мадженты. Ноги и тело красят отдельно.</p>
-        </article>
-        <article class="feature-item">
-          <h3 data-i18n="caseStudy.ostrich.process.s4Title">4. Контроль и отгрузка</h3>
-          <p data-i18n="caseStudy.ostrich.process.s4Desc">Метраж, сорт и цвет — в проформе. Экспорт в Китай и Турцию выполнен; другие направления согласуются с логистикой.</p>
-        </article>
+      <header class="ost-head">
+        <p class="ost-kicker" data-i18n="caseStudy.ostrich.goods.eyebrow">Что из неё кроят</p>
+        <h2 data-i18n="caseStudy.ostrich.goods.title">Что шьют из этой кожи</h2>
+        <p data-i18n="caseStudy.ostrich.goods.desc">Готовая вещь показывает только крой и строчку. Оптом на этой странице мы продаём саму кожу, а не одну сумку.</p>
+      </header>
+      <div class="ost-look__grid">
+        <button type="button" class="ost-shot" data-ost-open>
+          <img src="/assets/images/products/ostrich/studio-black.jpg" alt="Чёрный бумажник и картхолдер из кожи ноги страуса" data-i18n-alt="caseStudy.ostrich.about.thumb2Alt" width="864" height="1152" loading="lazy">
+          <span class="ost-shot__cap" data-i18n="caseStudy.ostrich.about.thumb2Alt">Чёрный бумажник и картхолдер из кожи ноги страуса</span>
+        </button>
+        <button type="button" class="ost-shot" data-ost-open>
+          <img src="/assets/images/products/ostrich/studio-yellow.jpg" alt="Жёлтый бумажник с полосой ноги на коже тела" data-i18n-alt="caseStudy.ostrich.goods.a2" width="864" height="1152" loading="lazy">
+          <span class="ost-shot__cap" data-i18n="caseStudy.ostrich.goods.c2">Этот жёлтый бумажник из квилла тела, с одной полосой чешуи ноги.</span>
+        </button>
+        <button type="button" class="ost-shot" data-ost-open>
+          <img src="/assets/images/products/ostrich/studio-flatlay.jpg" alt="Бумажники рядом с сырой полосой ноги" data-i18n-alt="caseStudy.ostrich.goods.a4" width="864" height="1152" loading="lazy">
+          <span class="ost-shot__cap" data-i18n="caseStudy.ostrich.goods.c4">От сырой полосы ноги до готового бумажника: чёрный, жёлтый и медовый.</span>
+        </button>
+        <button type="button" class="ost-shot" data-ost-open>
+            <img src="/assets/images/products/ostrich/studio-folders.jpg" alt="Папки из кожи ноги страуса нескольких цветов" data-i18n-alt="caseStudy.ostrich.goods.a1" width="864" height="1152" loading="lazy">
+            <span class="ost-shot__cap" data-i18n="caseStudy.ostrich.goods.c1">Папки из ноги: коричневый, синий, оранжевый, тёмно-синий и зелёный.</span>
+          </button>
+        <button type="button" class="ost-shot" data-ost-open>
+          <img src="/assets/images/products/ostrich/studio-trio.jpg" alt="Три картхолдера — чёрный, коньяк и коричневый — на шкуре страуса" data-i18n-alt="caseStudy.ostrich.goods.a3" width="864" height="1152" loading="lazy">
+          <span class="ost-shot__cap" data-i18n="caseStudy.ostrich.goods.c3">Три картхолдера лежат на коже тела с квиллом.</span>
+        </button>
       </div>
     </div>
   </section>
 
-  <section class="section" id="ostrich-gallery">
+  <section class="ost-block ost-dark ost-room" id="ostrich-gallery">
     <div class="container">
-      <div class="section__header section__header--pro">
-        <span class="section__eyebrow" data-i18n="caseStudy.ostrich.gallery.eyebrow">Реальный склад</span>
-        <h2 class="section__title" data-i18n="caseStudy.ostrich.gallery.title">Краст, ноги, цвет и шоурум</h2>
-        <p class="section__desc" data-i18n="caseStudy.ostrich.gallery.desc">Фото из нашего цеха, склада и шоурума — не рендер каталога.</p>
-      </div>
-      <div class="product-photo-grid">
-        <figure>
-          <img src="/assets/images/products/ostrich/crust-roll-length.jpg" alt="Рулон краста страуса длиной около метра" data-i18n-alt="caseStudy.ostrich.gallery.a1" width="1200" height="900" loading="lazy">
-          <figcaption data-i18n="caseStudy.ostrich.gallery.c1">Рулон краста; этот образец около 95–100 см.</figcaption>
-        </figure>
-        <figure>
-          <img src="/assets/images/products/ostrich/workshop-crust.jpg" alt="Краст на вешалках рядом с образцами цвета в цехе" data-i18n-alt="caseStudy.ostrich.gallery.a2" width="900" height="1200" loading="lazy">
-          <figcaption data-i18n="caseStudy.ostrich.gallery.c2">Цех: краст, образцы цвета и страусиное перо.</figcaption>
-        </figure>
-        <figure>
-          <img src="/assets/images/products/ostrich/legs-width.jpg" alt="Стопка ног краста шириной около 10–12 см" data-i18n-alt="caseStudy.ostrich.gallery.a3" width="1200" height="900" loading="lazy">
-          <figcaption data-i18n="caseStudy.ostrich.gallery.c3">Стопка ног краста; ширина у рулетки около 10–12 см.</figcaption>
-        </figure>
-        <figure>
-          <img src="/assets/images/products/ostrich/hide-full-quill.jpg" alt="Целая шкура страуса с короной quill" data-i18n-alt="caseStudy.ostrich.gallery.a4" width="1024" height="505" loading="lazy">
-          <figcaption data-i18n="caseStudy.ostrich.gallery.c4">Целая шкура: корона с quill в центре, края ровнее.</figcaption>
-        </figure>
-        <figure>
-          <img src="/assets/images/products/ostrich/inventory-racks.jpg" alt="Стеллажи кожи тела и ног разных цветов" data-i18n-alt="caseStudy.ostrich.gallery.a5" width="1200" height="900" loading="lazy">
-          <figcaption data-i18n="caseStudy.ostrich.gallery.c5">Склад: тело снизу, ноги на верхней перекладине.</figcaption>
-        </figure>
-        <figure>
-          <img src="/assets/images/products/ostrich/inventory-tiers.jpg" alt="Три яруса: тело, нога и окрашенные полотна" data-i18n-alt="caseStudy.ostrich.gallery.a6" width="900" height="1200" loading="lazy">
-          <figcaption data-i18n="caseStudy.ostrich.gallery.c6">Три яруса: тело, нога, окрашенные полотна.</figcaption>
-        </figure>
-        <figure>
-          <img src="/assets/images/products/ostrich/showroom-mirror.jpg" alt="Зеркало в раме из цветных шкур страуса в шоуруме" data-i18n-alt="caseStudy.ostrich.gallery.a7" width="900" height="1200" loading="lazy">
-          <figcaption data-i18n="caseStudy.ostrich.gallery.c7">Шоурум: цвета тела и ног, применение в обуви и сумках.</figcaption>
-        </figure>
-        <figure>
-          <img src="/assets/images/products/ostrich/showroom-green.jpg" alt="Зелёная шкура страуса на скамье шоурума" data-i18n-alt="caseStudy.ostrich.gallery.a8" width="1200" height="900" loading="lazy">
-          <figcaption data-i18n="caseStudy.ostrich.gallery.c8">Зелёная шкура на скамье, рядом ремни и чемоданы.</figcaption>
-        </figure>
-        <figure>
-          <img src="/assets/images/products/ostrich/showroom-bags.jpg" alt="Тёмно-зелёная шкура рядом с сумками и обувью" data-i18n-alt="caseStudy.ostrich.gallery.a9" width="900" height="1200" loading="lazy">
-          <figcaption data-i18n="caseStudy.ostrich.gallery.c9">Окрашенная шкура рядом с сумками, обувью и ремнями.</figcaption>
-        </figure>
+      <header class="ost-head">
+        <p class="ost-kicker ost-kicker--light" data-i18n="caseStudy.ostrich.gallery.eyebrow">Реальный склад</p>
+        <h2 data-i18n="caseStudy.ostrich.gallery.title">Краст, ноги, цвет и шоурум</h2>
+        <p data-i18n="caseStudy.ostrich.gallery.desc">Эти фото сняты в нашем цехе, на складе и в шоуруме. Это не рендер каталога.</p>
+      </header>
+      <div class="ost-room__grid">
+        <button type="button" class="ost-shot" data-ost-open>
+          <img src="/assets/images/products/ostrich/showroom-mirror.jpg" alt="Зеркало в раме из цветных шкур страуса в шоуруме" data-i18n-alt="caseStudy.ostrich.gallery.a7" width="540" height="960" loading="lazy">
+          <span class="ost-shot__cap" data-i18n="caseStudy.ostrich.gallery.c7">В шоуруме показаны цвета тела и ног для обуви и сумок.</span>
+        </button>
+        <button type="button" class="ost-shot" data-ost-open>
+          <img src="/assets/images/products/ostrich/showroom-green.jpg" alt="Зелёная шкура страуса на скамье шоурума" data-i18n-alt="caseStudy.ostrich.gallery.a8" width="768" height="1024" loading="lazy">
+          <span class="ost-shot__cap" data-i18n="caseStudy.ostrich.gallery.c8">Зелёная шкура лежит на скамье, рядом ремни и чемоданы.</span>
+        </button>
+        <button type="button" class="ost-shot" data-ost-open>
+          <img src="/assets/images/products/ostrich/showroom-bags.jpg" alt="Тёмно-зелёная шкура рядом с сумками и обувью" data-i18n-alt="caseStudy.ostrich.gallery.a9" width="540" height="960" loading="lazy">
+          <span class="ost-shot__cap" data-i18n="caseStudy.ostrich.gallery.c9">Окрашенная кожа показана рядом с сумкой, обувью и ремнём.</span>
+        </button>
       </div>
     </div>
   </section>
 
-  <section class="section section--gray" id="ostrich-goods">
+  <section class="ost-block ost-export" id="ostrich-export">
     <div class="container">
-      <div class="section__header section__header--pro">
-        <span class="section__eyebrow" data-i18n="caseStudy.ostrich.goods.eyebrow">Пример применения</span>
-        <h2 class="section__title" data-i18n="caseStudy.ostrich.goods.title">Что кроят из этой кожи</h2>
-        <p class="section__desc" data-i18n="caseStudy.ostrich.goods.desc">Готовые вещи показывают крой и строчку. Опт на этой странице — шкура, не один бумажник.</p>
-      </div>
-      <div class="product-photo-grid">
-        <figure>
-          <img src="/assets/images/products/ostrich/folders-leg.jpg" alt="Папки из кожи ноги страуса нескольких цветов" data-i18n-alt="caseStudy.ostrich.goods.a1" width="1200" height="900" loading="lazy">
-          <figcaption data-i18n="caseStudy.ostrich.goods.c1">Папки из ноги: коричневый, синий, оранжевый, тёмно-синий и зелёный.</figcaption>
-        </figure>
-        <figure>
-          <img src="/assets/images/products/ostrich/goods-yellow.jpg" alt="Жёлтый бумажник с полосой ноги на коже тела" data-i18n-alt="caseStudy.ostrich.goods.a2" width="1200" height="900" loading="lazy">
-          <figcaption data-i18n="caseStudy.ostrich.goods.c2">Жёлтый бумажник: quill тела плюс полоса чешуи ноги.</figcaption>
-        </figure>
-        <figure>
-          <img src="/assets/images/products/ostrich/cardholders-trio.jpg" alt="Три картхолдера на шкуре страуса" data-i18n-alt="caseStudy.ostrich.goods.a3" width="900" height="1200" loading="lazy">
-          <figcaption data-i18n="caseStudy.ostrich.goods.c3">Чёрный, коньяк и коричневый картхолдер на коже тела с quill.</figcaption>
-        </figure>
-        <figure>
-          <img src="/assets/images/products/ostrich/goods-flatlay.jpg" alt="Бумажники и сырая полоса ноги страуса" data-i18n-alt="caseStudy.ostrich.goods.a4" width="900" height="1200" loading="lazy">
-          <figcaption data-i18n="caseStudy.ostrich.goods.c4">От сырой полосы ноги до готового бумажника — чёрный, жёлтый и медовый.</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="ostrich-export">
-    <div class="container">
-      <div class="section__header section__header--pro">
-        <span class="section__eyebrow" data-i18n="caseStudy.ostrich.export.eyebrow">Экспорт</span>
-        <h2 class="section__title" data-i18n="caseStudy.ostrich.export.title">Китай и Турция и следующий покупатель</h2>
-        <p class="section__desc" data-i18n-html="caseStudy.ostrich.export.body">Страусиная кожа уже отгружалась в <strong>Китай</strong> и <strong>Турцию</strong>. Фабрика обуви, сумок или мелкой кожи может взять краст и красить сама либо заказать окрашенную кожу и ноги. Старт — <a href="/ru/pages/contact">контакт</a>. О компании — <a href="/ru/pages/about">Bizdavar</a>.</p>
-      </div>
-      <div class="features-grid">
-        <article class="feature-item">
+      <header class="ost-head ost-prose">
+        <p class="ost-kicker" data-i18n="caseStudy.ostrich.export.eyebrow">Экспорт</p>
+        <h2 data-i18n="caseStudy.ostrich.export.title">Отгружали в Китай и Турцию</h2>
+        <p data-i18n-html="caseStudy.ostrich.export.body">Страусиная кожа уже доходила до <strong>Китая</strong> и <strong>Турции</strong>. Фабрика обуви, сумок или мелкой кожи может взять краст и красить сама либо заказать окрашенную кожу и ноги. Начало — <a href="/ru/pages/contact">контакт</a>. О компании — на странице <a href="/ru/pages/about">Bizdavar</a>.</p>
+      </header>
+      <div class="ost-export__grid">
+        <article>
           <h3 data-i18n="caseStudy.ostrich.export.chinaTitle">Китай</h3>
-          <p data-i18n="caseStudy.ostrich.export.chinaDesc">Экспорт выполнен. Для фабрик сумок, обуви и мелкой кожи, которым нужны метраж и сорт в проформе.</p>
+          <p data-i18n="caseStudy.ostrich.export.chinaDesc">Отгрузка была. Подходит фабрикам, которым нужны площадь и сорт в проформе.</p>
         </article>
-        <article class="feature-item">
+        <article>
           <h3 data-i18n="caseStudy.ostrich.export.turkeyTitle">Турция</h3>
-          <p data-i18n="caseStudy.ostrich.export.turkeyDesc">Экспорт выполнен. Региональная логистика для покупателей Стамбула и Анатолии, которые работают с экзотической кожей.</p>
+          <p data-i18n="caseStudy.ostrich.export.turkeyDesc">Отгрузка была. Для покупателей Стамбула и Анатолии, которые работают с экзотической кожей, есть региональный маршрут.</p>
         </article>
-        <article class="feature-item">
-          <h3 data-i18n="caseStudy.ostrich.export.iranTitle">Происхождение — Иран</h3>
-          <p data-i18n="caseStudy.ostrich.export.iranDesc">Производство местное, это не переклейка импортной шкуры. Фото склада и цеха — подтверждение.</p>
+        <article>
+          <h3 data-i18n="caseStudy.ostrich.export.iranTitle">Происхождение: Иран</h3>
+          <p data-i18n="caseStudy.ostrich.export.iranDesc">Производство в Иране. Импортные шкуры под своим именем не продаём. Фото склада и цеха это показывают.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="section section--gray" id="ostrich-faq">
-    <div class="container prose">
-      <div class="section__header">
-        <h2 class="section__title" data-i18n="caseStudy.ostrich.faq.title">Вопросы опта</h2>
-      </div>
-      <h3 data-i18n="caseStudy.ostrich.faq.q1">Фут — это квадратный фут?</h3>
-      <p data-i18n="caseStudy.ostrich.faq.a1">Да. В этой торговле один фут — один квадратный фут. Краст от $6.50, окрашенная от $8.50 за квадратный фут. Нога считается штучно и стартует от $6.</p>
-      <h3 data-i18n="caseStudy.ostrich.faq.q2">Можно ли красить краст самим?</h3>
-      <p data-i18n="caseStudy.ostrich.faq.a2">Да. Краст для этого и нужен: выдубленная кожа без финального цвета. Если нужен готовый цвет — берите цену окрашенной.</p>
-      <h3 data-i18n="caseStudy.ostrich.faq.q3">Как вы указываете сорт и площадь?</h3>
-      <p data-i18n="caseStudy.ostrich.faq.a3">Сорт короны, площадь, а для ног размеры партии пишутся в проформе. Фото с рулеткой — складские образцы, не гарантия размера каждого заказа.</p>
-      <h3 data-i18n="caseStudy.ostrich.faq.q4">Какой минимум заказа?</h3>
-      <p data-i18n="caseStudy.ostrich.faq.a4">Фиксированный минимум на сайте не публикуем. Напишите объём, сорт и направление — оценим эту партию. Образец на ощупь до крупного заказа возможен.</p>
-      <h3 data-i18n="caseStudy.ostrich.faq.q5">В какие страны уже отправляли?</h3>
-      <p data-i18n="caseStudy.ostrich.faq.a5">Страусиная кожа экспортировалась в Китай и Турцию. Другие направления смотрим отдельно.</p>
-    </div>
-  </section>
-
-  <section class="section">
+  <section class="ost-block ost-faq" id="ostrich-faq">
     <div class="container">
-      <div class="section__header">
-        <h2 class="section__title" data-i18n="caseStudy.ostrich.related.title">Дальше по сайту</h2>
-      </div>
-      <div class="features-grid">
-        <a href="/ru/pages/products" class="feature-item feature-item--link"><span class="feature-item__icon" data-bd-icon="box" data-bd-size="26"></span><h3 data-i18n="caseStudy.ostrich.related.products">Каталог продуктов</h3><p data-i18n="caseStudy.ostrich.related.productsDesc">Страусиная кожа рядом с другим производством Bizdavar</p></a>
-        <a href="/ru/pages/contact" class="feature-item feature-item--link"><span class="feature-item__icon" data-bd-icon="phone" data-bd-size="26"></span><h3 data-i18n="caseStudy.ostrich.related.contact">Запрос и проформа</h3><p data-i18n="caseStudy.ostrich.related.contactDesc">Пришлите сорт, метраж, цвет и направление</p></a>
-        <a href="/ru/pages/about" class="feature-item feature-item--link"><span class="feature-item__icon" data-bd-icon="globe" data-bd-size="26"></span><h3 data-i18n="caseStudy.ostrich.related.about">О Bizdavar</h3><p data-i18n="caseStudy.ostrich.related.aboutDesc">Компания с 2013 года — Иран и регион</p></a>
+      <header class="ost-head">
+        <h2 data-i18n="caseStudy.ostrich.faq.title">Вопросы оптового покупателя</h2>
+      </header>
+      <details class="ost-acc">
+        <summary data-i18n="caseStudy.ostrich.faq.q1">Фут — это квадратный фут?</summary>
+        <p data-i18n="caseStudy.ostrich.faq.a1">Да. В этой торговле один фут — один квадратный фут. Краст начинается от $6.50, окрашенная кожа от $8.50 за квадратный фут. Ногу продаём поштучно, от $6.</p>
+      </details>
+      <details class="ost-acc">
+        <summary data-i18n="caseStudy.ostrich.faq.q2">Можно ли красить краст самим?</summary>
+        <p data-i18n="caseStudy.ostrich.faq.a2">Да. Краст для этого и нужен: выдубленная кожа, у которой ещё нет финального цвета. Если цвет нужен готовым, берите цену окрашенной кожи.</p>
+      </details>
+      <details class="ost-acc">
+        <summary data-i18n="caseStudy.ostrich.faq.q3">Как вы указываете сорт и площадь?</summary>
+        <p data-i18n="caseStudy.ostrich.faq.a3">Сорт короны, площадь, а для ног размеры партии пишем в проформе. Фото с рулеткой — складские образцы. Это не обещание размера на каждый заказ.</p>
+      </details>
+      <details class="ost-acc">
+        <summary data-i18n="caseStudy.ostrich.faq.q4">Какой минимум заказа?</summary>
+        <p data-i18n="caseStudy.ostrich.faq.a4">Фиксированный минимум на сайте не публикуем. Напишите объём, сорт и направление — оценим эту партию. Образец, чтобы пощупать кожу до крупного заказа, возможен.</p>
+      </details>
+      <details class="ost-acc">
+        <summary data-i18n="caseStudy.ostrich.faq.q5">В какие страны уже отправляли?</summary>
+        <p data-i18n="caseStudy.ostrich.faq.a5">Страусиную кожу экспортировали в Китай и Турцию. Другие направления смотрим по одному.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="ost-next">
+    <div class="container">
+      <h2 data-i18n="caseStudy.ostrich.related.title">Дальше по сайту</h2>
+      <div class="ost-next__row">
+        <a href="/ru/pages/products">
+          <strong data-i18n="caseStudy.ostrich.related.products">Каталог</strong>
+          <span data-i18n="caseStudy.ostrich.related.productsDesc">Страусиная кожа рядом с остальным производством Bizdavar</span>
+        </a>
+        <a href="/ru/pages/contact">
+          <strong data-i18n="caseStudy.ostrich.related.contact">Запрос и проформа</strong>
+          <span data-i18n="caseStudy.ostrich.related.contactDesc">Пришлите сорт, площадь, цвет и направление</span>
+        </a>
+        <a href="/ru/pages/about">
+          <strong data-i18n="caseStudy.ostrich.related.about">О Bizdavar</strong>
+          <span data-i18n="caseStudy.ostrich.related.aboutDesc">Компания с 2013 года, в Иране и регионе</span>
+        </a>
       </div>
     </div>
   </section>
+
+  <dialog class="ost-light" id="ostLight">
+    <button type="button" class="ost-light__x" data-ost-close>×</button>
+    <img alt="">
+    <p hidden></p>
+  </dialog>
+  <script>
+    (function () {
+      var dialog = document.getElementById('ostLight');
+      if (!dialog || typeof dialog.showModal !== 'function') return;
+      var img = dialog.querySelector('img');
+      var cap = dialog.querySelector('p');
+      var closeBtn = dialog.querySelector('[data-ost-close]');
+      var labels = { fa: 'بستن', ar: 'إغلاق', ru: 'Закрыть', tr: 'Kapat', en: 'Close' };
+      var lang = (document.documentElement.lang || 'en').slice(0, 2);
+      if (closeBtn) closeBtn.setAttribute('aria-label', labels[lang] || 'Close');
+      document.querySelectorAll('[data-ost-open]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var source = btn.querySelector('img');
+          if (!source) return;
+          img.src = source.currentSrc || source.src;
+          img.alt = source.alt || '';
+          var note = btn.querySelector('.ost-shot__cap');
+          cap.textContent = note ? note.textContent.trim() : '';
+          cap.hidden = !cap.textContent;
+          dialog.showModal();
+        });
+      });
+      dialog.addEventListener('click', function (event) {
+        if (event.target === dialog) dialog.close();
+      });
+      if (closeBtn) closeBtn.addEventListener('click', function () { dialog.close(); });
+    })();
+  </script>
 
   <div id="geoStrip"></div>
-  </main>
+</main>
 
   <script src="/assets/scripts/site-loader.js?v=20260919x" data-after-seo="i18n/ostrich-leather-i18n.js"></script>
   <script>

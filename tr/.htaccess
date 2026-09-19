@@ -2,11 +2,15 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # pages/motorcycle/ is the SKU folder. Serve this locale's shop HTML.
+  RewriteRule ^pages/motorcycle/?$ /tr/pages/motorcycle.html [END]
+
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME}.html -f
   RewriteRule ^(.+?)/?$ $1.html [L]
 
   RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{DOCUMENT_ROOT}/pages/$1.html -f
   RewriteRule ^pages/(.+?)/?$ /pages/$1.html [L]
 </IfModule>

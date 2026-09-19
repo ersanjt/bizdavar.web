@@ -109,9 +109,12 @@ AddType 'text/html; charset=UTF-8' .html
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
   # Shop HTML shares a name with the SKU folder pages/motorcycle/.
-  # Without this, Apache directory-slashes the URL and returns 403.
-  RewriteRule ^pages/motorcycle/?$ pages/motorcycle.html [L]
-  RewriteRule ^(tr|en|ru|ar)/pages/motorcycle/?$ $1/pages/motorcycle.html [L]
+  # [END] so the locale .htaccess cannot fall through to the Persian file.
+  RewriteRule ^pages/motorcycle/?$ /pages/motorcycle.html [END]
+  RewriteRule ^tr/pages/motorcycle/?$ /tr/pages/motorcycle.html [END]
+  RewriteRule ^en/pages/motorcycle/?$ /en/pages/motorcycle.html [END]
+  RewriteRule ^ru/pages/motorcycle/?$ /ru/pages/motorcycle.html [END]
+  RewriteRule ^ar/pages/motorcycle/?$ /ar/pages/motorcycle.html [END]
 
   # /index.html → / (only when browser requests index.html directly, not locale rewrites)
   RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]

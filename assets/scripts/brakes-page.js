@@ -20,6 +20,7 @@
       modelFind: 'جستجوی مدل',
       products: 'قطعه',
       empty: 'برای این انتخاب، قطعه‌ای با قیمت ثبت‌شده پیدا نشد. کد قطعه را جستجو کنید یا در واتساپ بفرستید.',
+      askPrice: 'استعلام قیمت',
       in: 'موجود',
       out: 'ناموجود — استعلام',
       wa: 'پرسش در واتساپ',
@@ -27,6 +28,8 @@
       kicker: 'بر اساس تطبیق خودرو',
       related: 'قطعات سازگار',
       original: 'قطعه نو با کد سازنده',
+      fit: 'سازگاری خودرو را در جزئیات قطعه ببینید',
+      view: 'مشاهده',
       brands: 'برند',
       loading: 'در حال چیدن کاتالوگ ترمز…',
       error: 'کاتالوگ باز نشد. دوباره تلاش کنید.',
@@ -51,6 +54,7 @@
       modelFind: 'Model ara',
       products: 'ürün',
       empty: 'Bu seçim için fiyatlı parça yok. Kodu arayın veya WhatsApp’tan yazın.',
+      askPrice: 'Fiyat sorun',
       in: 'Stokta',
       out: 'Stokta yok — teklif',
       wa: 'WhatsApp ile sor',
@@ -58,6 +62,8 @@
       kicker: 'Araç eşleşmesine göre',
       related: 'Uyumlu parçalar',
       original: 'Üretici kodlu yeni parça',
+      fit: 'Araç uyumunu ürün detayında görün',
+      view: 'İncele',
       brands: 'marka',
       loading: 'Fren kataloğu hazırlanıyor…',
       error: 'Katalog açılmadı. Tekrar deneyin.',
@@ -82,6 +88,7 @@
       modelFind: 'Find a model',
       products: 'parts',
       empty: 'No priced part for this filter. Search a code or ask on WhatsApp.',
+      askPrice: 'Ask for price',
       in: 'In stock',
       out: 'Out of stock — ask',
       wa: 'Ask on WhatsApp',
@@ -89,6 +96,8 @@
       kicker: 'Matched to the vehicle',
       related: 'Compatible parts',
       original: 'New part with maker code',
+      fit: 'Check vehicle fit on the part page',
+      view: 'View',
       brands: 'brands',
       loading: 'Loading the brake catalog…',
       error: 'The catalog did not open. Try again.',
@@ -113,6 +122,7 @@
       modelFind: 'Найти модель',
       products: 'деталей',
       empty: 'Для этого фильтра нет детали с ценой. Напишите код в WhatsApp.',
+      askPrice: 'Цена по запросу',
       in: 'В наличии',
       out: 'Нет в наличии',
       wa: 'Спросить в WhatsApp',
@@ -120,6 +130,8 @@
       kicker: 'По совпадению авто',
       related: 'Подходящие детали',
       original: 'Новая деталь с кодом производителя',
+      fit: 'Совместимость смотрите на странице детали',
+      view: 'Смотреть',
       brands: 'марок',
       loading: 'Каталог тормозов загружается…',
       error: 'Каталог не открылся. Повторите.',
@@ -144,6 +156,7 @@
       modelFind: 'ابحث عن الموديل',
       products: 'قطعة',
       empty: 'لا توجد قطعة مسعّرة لهذا الاختيار. أرسل الرمز على واتساب.',
+      askPrice: 'السعر عند الطلب',
       in: 'متوفر',
       out: 'غير متوفر — استعلام',
       wa: 'اسأل عبر واتساب',
@@ -151,6 +164,8 @@
       kicker: 'حسب توافق السيارة',
       related: 'قطع متوافقة',
       original: 'قطعة جديدة برمز المصنع',
+      fit: 'راجع توافق السيارة في التفاصيل',
+      view: 'عرض',
       brands: 'ماركة',
       loading: 'جاري تجهيز كتالوج الفرامل…',
       error: 'تعذر فتح الكتالوج. أعد المحاولة.',
@@ -185,6 +200,7 @@
   });
 
   let catalog = null;
+  let countCache = new Map();
   let booted = false;
   let loading = false;
   let menuOpen = false;
@@ -198,6 +214,179 @@
     return COPY[code] ? code : 'fa';
   }
   function t() { return COPY[loc()]; }
+
+  const TR_GROUPS = [
+    ['ıiIİ', '[ıiIİ]'],
+    ['şsŞS', '[şsŞS]'],
+    ['ğgĞG', '[ğgĞG]'],
+    ['üuÜU', '[üuÜU]'],
+    ['öoÖO', '[öoÖO]'],
+    ['çcÇC', '[çcÇC]']
+  ];
+  const WORD_EDGE = '[^A-Za-z0-9À-ÿçğıöşüÇĞİÖŞÜ]';
+
+  function phraseToRe(src, word) {
+    const alts = String(src).split('|').map((phrase) => {
+      let out = '';
+      for (let i = 0; i < phrase.length; i++) {
+        const ch = phrase.charAt(i);
+        if (/\s/.test(ch)) {
+          out += '\\s+';
+          continue;
+        }
+        if ('./-'.indexOf(ch) !== -1) {
+          out += '\\' + ch;
+          continue;
+        }
+        if ('()[]{}+*?^$|\\'.indexOf(ch) !== -1) {
+          out += '\\' + ch;
+          continue;
+        }
+        let mapped = '';
+        for (let g = 0; g < TR_GROUPS.length; g++) {
+          if (TR_GROUPS[g][0].indexOf(ch) !== -1) {
+            mapped = TR_GROUPS[g][1];
+            break;
+          }
+        }
+        out += mapped || ch;
+      }
+      return out;
+    });
+    const body = alts.join('|');
+    if (!word) return new RegExp(body, 'gi');
+    return new RegExp('(^|' + WORD_EDGE + ')(?:' + body + ')(?=' + WORD_EDGE + '|$)', 'gi');
+  }
+
+  const BRAKE_PHRASES = [
+    ['Fren Balatası İkaz Sensörü|Fren Balata İkaz Sensörü', { fa: 'سنسور هشدار لنت ترمز', en: 'brake pad wear sensor', ru: 'датчик износа колодок', ar: 'حساس تآكل فحمات الفرامل' }],
+    ['Park Frenı Pabucu|Park Freni Pabucu', { fa: 'لنت ترمز دستی', en: 'handbrake shoe', ru: 'колодка ручника', ar: 'فحمة فرامل اليد' }],
+    ['Kampanalı Araçlar İçin', { fa: 'برای خودرو کاسه‌ای', en: 'for drum-brake cars', ru: 'для барабанных тормозов', ar: 'للسيارات ذات الأسطوانة' }],
+    ['Metal Indıkatorlu|Metal Indikatorlu', { fa: 'با نشانگر فلزی', en: 'with metal wear indicator', ru: 'с металлическим индикатором', ar: 'مع مؤشر معدني' }],
+    ['Manyetık ABS Okuyucu|Manyetik ABS Okuyucu', { fa: 'خواننده مغناطیسی ABS', en: 'magnetic ABS ring', ru: 'магнитное кольцо ABS', ar: 'حلقة ABS مغناطيسية' }],
+    ['Hava Soğutmalı', { fa: 'خنک‌شونده با هوا', en: 'air-cooled', ru: 'с воздушным охлаждением', ar: 'مبرد بالهواء' }],
+    ['Hava Kanallı', { fa: 'شیار هوا', en: 'vented', ru: 'вентилируемый', ar: 'بفتحات تهوية' }],
+    ['Havalandırmalı', { fa: 'خنک‌شونده', en: 'ventilated', ru: 'вентилируемый', ar: 'مهوّى' }],
+    ['Yuksek Karbon Kaplamalı|Karbon Kaplamalı', { fa: 'پوشش کربن', en: 'carbon coated', ru: 'с углеродным покрытием', ar: 'بطلاء كربوني' }],
+    ['Corbon Formül|Carbon Formül', { fa: 'فرمول کربن', en: 'carbon formula', ru: 'карбоновая смесь', ar: 'تركيبة كربون' }],
+    ['Tekli Paket', { fa: 'بسته تکی', en: 'single pack', ru: 'одиночная упаковка', ar: 'عبوة مفردة' }],
+    ['Çiftli Paket', { fa: 'بسته جفت', en: 'twin pack', ru: 'двойная упаковка', ar: 'عبوة مزدوجة' }],
+    ['Tamir Kit', { fa: 'کیت تعمیر', en: 'repair kit', ru: 'ремкомплект', ar: 'طقم تصليح' }],
+    ['Toz Sacı', { fa: 'شیلد گردگیر', en: 'dust shield', ru: 'защитный щиток', ar: 'ساتر الغبار' }],
+    ['Koruma Sacı', { fa: 'شیلد محافظ', en: 'protection shield', ru: 'защитный щиток', ar: 'ساتر حماية' }],
+    ['Dış Çapı|Dıs Çapı', { fa: 'قطر خارجی', en: 'outer diameter', ru: 'внешний диаметр', ar: 'القطر الخارجي' }],
+    ['Merkez Çapı', { fa: 'قطر مرکزی', en: 'centre diameter', ru: 'посадочный диаметр', ar: 'قطر المركز' }],
+    ['Kasa Ağırlığı|Kasa Agırlıgı', { fa: 'وزن شاسی', en: 'chassis weight', ru: 'масса кузова', ar: 'وزن الهيكل' }],
+    ['Model Sonrası', { fa: 'مدل به بعد', en: 'onwards', ru: 'и новее', ar: 'من موديل' }],
+    ['Yeni Kasa', { fa: 'نسل جدید', en: 'new body', ru: 'новый кузов', ar: 'جيل جديد' }],
+    ['Yengec Tip', { fa: 'نوع گیره', en: 'clip type', ru: 'тип клипсы', ar: 'نوع المشبك' }],
+    ['Poryalı Rulmanlı|Poryalı-Rulmanlı', { fa: 'توپی و بلبرینگ‌دار', en: 'hub and bearing', ru: 'со ступицей и подшипником', ar: 'بمحور ومحمل' }],
+    ['Kampanalı Tip', { fa: 'نوع کاسه‌ای', en: 'drum type', ru: 'барабанный тип', ar: 'نوع أسطواني' }],
+    ['Arka Fren Balatası', { fa: 'لنت ترمز عقب', en: 'rear brake pads', ru: 'задние колодки', ar: 'فحمات فرامل خلفية' }],
+    ['Ön Fren Balatası|On Fren Balatası', { fa: 'لنت ترمز جلو', en: 'front brake pads', ru: 'передние колодки', ar: 'فحمات فرامل أمامية' }],
+    ['Arka Fren Diski', { fa: 'دیسک ترمز عقب', en: 'rear brake disc', ru: 'задний диск', ar: 'قرص فرامل خلفي' }],
+    ['Ön Fren Diski|On Fren Diski', { fa: 'دیسک ترمز جلو', en: 'front brake disc', ru: 'передний диск', ar: 'قرص فرامل أمامي' }],
+    ['Fren Balatası', { fa: 'لنت ترمز', en: 'brake pads', ru: 'тормозные колодки', ar: 'فحمات فرامل' }],
+    ['Fren Diski', { fa: 'دیسک ترمز', en: 'brake disc', ru: 'тормозной диск', ar: 'قرص فرامل' }],
+    ['Fren Balata', { fa: 'لنت ترمز', en: 'brake pad', ru: 'колодка', ar: 'فحمة فرامل' }],
+    ['ABS li|ABS\'li', { fa: 'با ABS', en: 'with ABS', ru: 'с ABS', ar: 'مع ABS' }],
+    ['Ym.', { fa: 'نسل جدید', en: 'facelift', ru: 'рестайлинг', ar: 'فيس ليفت' }],
+    ['Aynası', { fa: 'با توپی', en: 'with hub', ru: 'со ступицей', ar: 'بمحور' }, true],
+    ['Havalı', { fa: 'خنک‌شونده', en: 'ventilated', ru: 'вентилируемый', ar: 'مهوّى' }, true],
+    ['Ikazlı|İkazlı', { fa: 'هشداردهنده', en: 'with wear indicator', ru: 'с датчиком износа', ar: 'مع مؤشر تآكل' }, true],
+    ['İkaz|Ikaz', { fa: 'هشدار', en: 'wear indicator', ru: 'индикатор износа', ar: 'مؤشر تآكل' }, true],
+    ['Fişli', { fa: 'فیش‌دار', en: 'with connector', ru: 'с разъёмом', ar: 'بوصلة' }, true],
+    ['Delikli', { fa: 'سوراخ‌دار', en: 'drilled', ru: 'перфорированный', ar: 'مثقب' }, true],
+    ['Deliksiz', { fa: 'بدون سوراخ', en: 'undrilled', ru: 'без перфорации', ar: 'غير مثقب' }, true],
+    ['Kaplamalı', { fa: 'پوشش‌دار', en: 'coated', ru: 'с покрытием', ar: 'مطلي' }, true],
+    ['Pabuçlu', { fa: 'کفشکی', en: 'shoe type', ru: 'колодочный', ar: 'نوع حذاء' }, true],
+    ['Pabuç', { fa: 'کفشک ترمز', en: 'brake shoe', ru: 'тормозная колодка', ar: 'حذاء الفرامل' }, true],
+    ['Kanallı', { fa: 'شیاردار', en: 'slotted', ru: 'с канавками', ar: 'بشقوق' }, true],
+    ['Boyalı', { fa: 'رنگ‌شده', en: 'painted', ru: 'окрашенный', ar: 'مطلي' }, true],
+    ['Sonrası', { fa: 'به بعد', en: 'onwards', ru: 'и новее', ar: 'وما بعد' }, true],
+    ['Çiftli', { fa: 'جفت', en: 'twin', ru: 'сдвоенный', ar: 'مزدوج' }, true],
+    ['Sensörü|Sensoru', { fa: 'سنسور', en: 'sensor', ru: 'датчик', ar: 'حساس' }, true],
+    ['Sensör|Sensor', { fa: 'سنسور', en: 'sensor', ru: 'датчик', ar: 'حساس' }, true],
+    ['Rulmanlı', { fa: 'بلبرینگ‌دار', en: 'with bearing', ru: 'с подшипником', ar: 'بمحمل' }, true],
+    ['Poryalı', { fa: 'توپی‌دار', en: 'with hub', ru: 'со ступицей', ar: 'بمحور' }, true],
+    ['Kampanalı', { fa: 'کاسه‌ای', en: 'drum', ru: 'барабанный', ar: 'أسطواني' }, true],
+    ['Kampana', { fa: 'کاسه ترمز', en: 'brake drum', ru: 'тормозной барабан', ar: 'أسطوانة فرامل' }, true],
+    ['Kulaklı', { fa: 'گوشواره‌دار', en: 'with lugs', ru: 'с ушками', ar: 'بألسنة' }, true],
+    ['Soğutmalı', { fa: 'خنک‌شونده', en: 'cooled', ru: 'с охлаждением', ar: 'مبرد' }, true],
+    ['Serisi', { fa: 'سری', en: 'Series', ru: 'серия', ar: 'فئة' }, true],
+    ['Takımı', { fa: 'ست', en: 'set', ru: 'комплект', ar: 'طقم' }, true],
+    ['Seti', { fa: 'ست', en: 'set', ru: 'комплект', ar: 'طقم' }, true],
+    ['Sağ', { fa: 'راست', en: 'right', ru: 'правый', ar: 'يمين' }, true],
+    ['Sol', { fa: 'چپ', en: 'left', ru: 'левый', ar: 'يسار' }, true],
+    ['Performans', { fa: 'عملکردی', en: 'performance', ru: 'спорт', ar: 'أداء' }, true],
+    ['Orijinal|Orjinal', { fa: 'اصل', en: 'genuine', ru: 'оригинал', ar: 'أصلي' }, true],
+    ['Benzinli', { fa: 'بنزینی', en: 'petrol', ru: 'бензиновый', ar: 'بنزين' }, true],
+    ['Elektrikli', { fa: 'برقی', en: 'electric', ru: 'электрический', ar: 'كهربائي' }, true],
+    ['Minibüs', { fa: 'مینی‌بوس', en: 'minibus', ru: 'микроавтобус', ar: 'حافلة صغيرة' }, true],
+    ['Büyük', { fa: 'بزرگ', en: 'large', ru: 'большой', ar: 'كبير' }, true],
+    ['Sacı', { fa: 'شیلد ورقی', en: 'sheet shield', ru: 'щиток', ar: 'ساتر صفائح' }, true],
+    ['İçin|Icin', { fa: 'برای', en: 'for', ru: 'для', ar: 'لـ' }, true],
+    ['Yaylı', { fa: 'فنردار', en: 'sprung', ru: 'с пружиной', ar: 'بنابض' }, true],
+    ['Yayı', { fa: 'فنر', en: 'spring', ru: 'пружина', ar: 'نابض' }, true],
+    ['Seramik', { fa: 'سرامیکی', en: 'ceramic', ru: 'керамический', ar: 'سيراميك' }, true],
+    ['Tamir', { fa: 'تعمیر', en: 'repair', ru: 'ремонт', ar: 'تصليح' }, true],
+    ['Düz', { fa: 'توپر', en: 'solid', ru: 'сплошной', ar: 'مصمت' }, true],
+    ['Kalınlık', { fa: 'ضخامت', en: 'thickness', ru: 'толщина', ar: 'السماكة' }, true],
+    ['Ölçü', { fa: 'اندازه', en: 'size', ru: 'размер', ar: 'القياس' }, true],
+    ['Adet', { fa: 'عدد', en: 'pcs', ru: 'шт.', ar: 'قطعة' }, true],
+    ['Fişi', { fa: 'فیش', en: 'connector', ru: 'разъём', ar: 'فيش' }, true],
+    ['Kasa', { fa: 'نسل', en: 'chassis', ru: 'кузов', ar: 'جيل' }, true],
+    ['Seri', { fa: 'سری', en: 'Series', ru: 'серия', ar: 'فئة' }, true],
+    ['Tekli', { fa: 'تکی', en: 'single', ru: 'одинарный', ar: 'مفرد' }, true],
+    ['Çift', { fa: 'جفت', en: 'twin', ru: 'сдвоенный', ar: 'مزدوج' }, true],
+    ['Yeni', { fa: 'جدید', en: 'new', ru: 'новый', ar: 'جديد' }, true],
+    ['Ön', { fa: 'جلو', en: 'front', ru: 'передние', ar: 'أمامي' }, true],
+    ['Arka', { fa: 'عقب', en: 'rear', ru: 'задние', ar: 'خلفي' }, true],
+    ['On', { fa: 'جلو', en: 'front', ru: 'передние', ar: 'أمامي' }, true],
+    ['Diski', { fa: 'دیسک', en: 'disc', ru: 'диск', ar: 'قرص' }, true],
+    ['Balatası', { fa: 'لنت', en: 'pads', ru: 'колодки', ar: 'فحمات' }, true],
+    ['Balata', { fa: 'لنت', en: 'pad', ru: 'колодка', ar: 'فحمة' }, true],
+    ['ve', { fa: 'و', en: 'and', ru: 'и', ar: 'و' }, true]
+  ].map((row) => ({
+    re: phraseToRe(row[0], row[2]),
+    word: !!row[2],
+    fa: row[1].fa,
+    en: row[1].en,
+    ru: row[1].ru,
+    ar: row[1].ar
+  }));
+
+  function translateBrakeText(text, lang) {
+    const code = lang || loc();
+    const raw = String(text || '');
+    if (!raw || code === 'tr') return raw;
+    let out = raw;
+    for (let i = 0; i < BRAKE_PHRASES.length; i++) {
+      const row = BRAKE_PHRASES[i];
+      const next = row[code];
+      if (!next) continue;
+      if (row.word) out = out.replace(row.re, function (full, edge) { return (edge || '') + next; });
+      else out = out.replace(row.re, next);
+    }
+    return out.replace(/[ \t]+/g, ' ').replace(/\s+([.,])/g, '$1').trim();
+  }
+
+  function itemTitle(item) {
+    const lang = loc();
+    const raw = (lang === 'fa' && item && item.titleFa) ? item.titleFa : ((item && item.title) || '');
+    return translateBrakeText(raw, lang);
+  }
+
+  function modelName(model) {
+    return translateBrakeText((model && model.name) || '', loc());
+  }
+
+  let pageTitle = '';
+  function syncDocumentTitle(open) {
+    if (!pageTitle) pageTitle = document.title;
+    if (open) document.title = itemTitle(open) + ' | ' + t().desk;
+    else document.title = pageTitle;
+  }
 
   function esc(value) {
     return String(value || '')
@@ -214,8 +403,32 @@
     return '<img class="brake-logo" alt="" aria-hidden="true" width="28" height="20" loading="lazy" src="/assets/images/vehicle-brands/' + esc(id) + '.svg">';
   }
 
+  function makerMark(name) {
+    const clean = String(name || '').replace(/[^A-Za-z0-9]/g, '');
+    return (clean.slice(0, 2) || 'BD').toUpperCase();
+  }
+
   function money(amount) {
     return '$' + Number(amount).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  function priceText(item) {
+    const amount = Number(item && item.priceUsd);
+    if (!Number.isFinite(amount) || amount <= 0) return t().askPrice;
+    return money(amount);
+  }
+
+  function imgUrl(rel) {
+    if (!rel) return '';
+    if (String(rel).charAt(0) === '/') return rel;
+    const root = (catalog && catalog.imageRoot) || '/media/catalog/brakeshop/';
+    return root + String(rel).replace(/^\.\//, '');
+  }
+
+  function shotsOf(item) {
+    if (item && item.gallery && item.gallery.length) return item.gallery;
+    if (item && item.img) return [item.img];
+    return [];
   }
 
   function readState() {
@@ -248,6 +461,45 @@
 
   function brandById(id) {
     return (catalog.brands || []).find((b) => b.id === id) || null;
+  }
+
+  function indexCatalog(data) {
+    const byBrand = new Map();
+    (data.products || []).forEach((item) => {
+      const key = item.brand || '';
+      const list = byBrand.get(key);
+      if (list) list.push(item);
+      else byBrand.set(key, [item]);
+    });
+    data._byBrand = byBrand;
+    countCache = new Map();
+  }
+
+  function brandCount(brandId, part) {
+    const key = 'b|' + brandId + '|' + part;
+    if (countCache.has(key)) return countCache.get(key);
+    const list = (catalog._byBrand && catalog._byBrand.get(brandId)) || [];
+    let n = 0;
+    for (let i = 0; i < list.length; i++) {
+      if (part === 'all' || list[i].part === part) n += 1;
+    }
+    countCache.set(key, n);
+    return n;
+  }
+
+  function modelCount(brandId, modelId, part) {
+    const key = 'm|' + brandId + '|' + modelId + '|' + part;
+    if (countCache.has(key)) return countCache.get(key);
+    const list = (catalog._byBrand && catalog._byBrand.get(brandId)) || [];
+    let n = 0;
+    for (let i = 0; i < list.length; i++) {
+      const item = list[i];
+      if (part !== 'all' && item.part !== part) continue;
+      if (!item.models || item.models.indexOf(modelId) === -1) continue;
+      n += 1;
+    }
+    countCache.set(key, n);
+    return n;
   }
 
   const FIT = {
@@ -321,15 +573,22 @@
 
   function filtered(state) {
     const query = state.q.trim().toLowerCase();
+    const source = state.brand && catalog._byBrand
+      ? (catalog._byBrand.get(state.brand) || [])
+      : (catalog.products || []);
     const model = state.model && state.brand
       ? ((brandById(state.brand) || {}).models || []).find((m) => m.id === state.model)
       : null;
-    return (catalog.products || []).filter((item) => {
+    return source.filter((item) => {
       if (state.part !== 'all' && item.part !== state.part) return false;
       if (state.brand && item.brand !== state.brand) return false;
-      if (model && !matchesModel(item, model)) return false;
+      if (state.model) {
+        if (Array.isArray(item.models)) {
+          if (item.models.indexOf(state.model) === -1) return false;
+        } else if (!model || !matchesModel(item, model)) return false;
+      }
       if (!query) return true;
-      const hay = [item.title, item.mpn, item.sku, item.maker, item.id].join(' ').toLowerCase();
+      const hay = [item.title, item.titleFa, itemTitle(item), item.mpn, item.sku, item.maker, item.id].join(' ').toLowerCase();
       return hay.includes(query);
     });
   }
@@ -349,8 +608,56 @@
   }
 
   function waLink(item) {
-    const text = t().wa + '\n' + item.title + '\n' + (item.mpn || item.sku || '') + '\n' + money(item.priceUsd);
+    const text = t().wa + '\n' + itemTitle(item) + '\n' + (item.mpn || item.sku || '') + '\n' + priceText(item);
     return WA + '?text=' + encodeURIComponent(text);
+  }
+
+  function mediaHtml(item, alt, eager) {
+    const shots = shotsOf(item);
+    if (!shots.length) return art(item.part);
+    return '<img src="' + esc(imgUrl(shots[0])) + '" alt="' + esc(alt || '') + '"' +
+      (eager ? '' : ' loading="lazy"') +
+      ' decoding="async" data-fallback="' + esc(item.part || 'discs') + '">';
+  }
+
+  function galleryHtml(item) {
+    const shots = shotsOf(item);
+    if (!shots.length) return '<div class="shop-pdp__stage">' + art(item.part) + '</div>';
+    const title = itemTitle(item);
+    const thumbs = shots.map((rel, index) => {
+      const src = imgUrl(rel);
+      return '<button type="button" class="' + (index === 0 ? 'is-active' : '') + '" data-shot="' + esc(src) + '" aria-label="' + esc(title) + ' ' + (index + 1) + '">' +
+        '<img src="' + esc(src) + '" alt="" width="72" height="72" loading="lazy" decoding="async" data-fallback="' + esc(item.part || 'discs') + '">' +
+      '</button>';
+    }).join('');
+    return '<div class="shop-pdp__thumbs">' + thumbs + '</div>' +
+      '<div class="shop-pdp__stage"><img class="brake-stage" src="' + esc(imgUrl(shots[0])) + '" alt="' + esc(title) + '" decoding="async" data-fallback="' + esc(item.part || 'discs') + '"></div>';
+  }
+
+  function pagerHtml(page, pages) {
+    if (pages <= 1) return '';
+    const marks = [];
+    function add(n) {
+      if (n >= 1 && n <= pages && marks.indexOf(n) === -1) marks.push(n);
+    }
+    add(1);
+    add(page - 2);
+    add(page - 1);
+    add(page);
+    add(page + 1);
+    add(page + 2);
+    add(pages);
+    marks.sort((a, b) => a - b);
+    let html = '<div class="brake-pages">';
+    if (page > 1) html += '<button type="button" data-page="' + (page - 1) + '">‹</button>';
+    let prev = 0;
+    marks.forEach((n) => {
+      if (prev && n - prev > 1) html += '<span class="is-gap" aria-hidden="true">…</span>';
+      html += '<button type="button" class="' + (n === page ? 'is-on' : '') + '" data-page="' + n + '">' + n + '</button>';
+      prev = n;
+    });
+    if (page < pages) html += '<button type="button" data-page="' + (page + 1) + '">›</button>';
+    return html + '</div>';
   }
 
   function paint() {
@@ -360,12 +667,13 @@
     const state = readState();
     const brand = brandById(state.brand);
     const items = filtered(state);
+    items.sort((a, b) => ((b.stock === true) - (a.stock === true)) || ((b.img ? 1 : 0) - (a.img ? 1 : 0)) || String(a.title).localeCompare(String(b.title), 'tr'));
     const pages = Math.max(1, Math.ceil(items.length / PAGE_SIZE));
     const page = Math.min(state.page, pages);
     const slice = items.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
     const open = (catalog.products || []).find((item) => item.id === state.product) || null;
     const parts = PARTS[loc()];
-    const heading = open ? open.title : (state.q ? c.results : (brand ? brand.name + ' — ' + (PART_NAME[loc()][state.part] || c.desk) : c.desk));
+    const heading = open ? itemTitle(open) : (state.q ? c.results : (brand ? brand.name + ' — ' + (PART_NAME[loc()][state.part] || c.desk) : c.desk));
 
     const pills = (catalog.brands || []).map((b) =>
       '<button type="button" class="brake-pill' + (state.brand === b.id ? ' is-on' : '') + '" data-brand="' + esc(b.id) + '">' + (brandLogo(b.id) || '<span class="brake-pill__mark" aria-hidden="true">' + esc(b.name.slice(0, 1)) + '</span>') + '<span>' + esc(b.name) + '</span></button>'
@@ -378,7 +686,7 @@
     const qBrand = brandQuery.trim().toLowerCase();
     const qModel = modelQuery.trim().toLowerCase();
     const brandRows = (catalog.brands || []).map((b) => {
-      const n = (catalog.products || []).filter((item) => item.brand === b.id && (state.part === 'all' || item.part === state.part)).length;
+      const n = brandCount(b.id, state.part);
       return { b: b, n: n };
     }).filter((row) => !qBrand || row.b.name.toLowerCase().indexOf(qBrand) !== -1 || row.b.id.indexOf(qBrand) !== -1);
     brandRows.sort((a, b) => (b.n > 0) - (a.n > 0));
@@ -391,22 +699,18 @@
 
     const modelRows = brand
       ? (brand.models || []).map((m) => {
-        const n = (catalog.products || []).filter((item) => item.brand === brand.id && (state.part === 'all' || item.part === state.part) && matchesModel(item, m)).length;
+        const n = modelCount(brand.id, m.id, state.part);
         return { m: m, n: n };
-      }).filter((row) => !qModel || row.m.name.toLowerCase().indexOf(qModel) !== -1)
+      }).filter((row) => !qModel || row.m.name.toLowerCase().indexOf(qModel) !== -1 || modelName(row.m).toLowerCase().indexOf(qModel) !== -1)
       : [];
     modelRows.sort((a, b) => (b.n > 0) - (a.n > 0) || a.m.name.localeCompare(b.m.name, 'tr'));
     const models = modelRows.map((row) => {
       const m = row.m;
-      return '<button type="button" class="brake-model' + (state.model === m.id ? ' is-on' : '') + (row.n ? '' : ' is-empty') + '" data-model="' + esc(m.id) + '">' + carIcon() + '<span>' + esc(m.name) + '</span><small>' + row.n + ' ' + esc(c.products) + '</small></button>';
+      return '<button type="button" class="brake-model' + (state.model === m.id ? ' is-on' : '') + (row.n ? '' : ' is-empty') + '" data-model="' + esc(m.id) + '">' + carIcon() + '<span dir="auto">' + esc(modelName(m)) + '</span><small>' + row.n + ' ' + esc(c.products) + '</small></button>';
     }).join('');
 
     const cards = slice.map((item) => cardHtml(item)).join('');
-    const pager = pages > 1
-      ? '<div class="brake-pages">' + Array.from({ length: pages }, (_, i) =>
-        '<button type="button" class="' + (i + 1 === page ? 'is-on' : '') + '" data-page="' + (i + 1) + '">' + (i + 1) + '</button>'
-      ).join('') + '</div>'
-      : '';
+    const pager = pagerHtml(page, pages);
 
     const related = open
       ? (catalog.products || []).filter((item) => item.id !== open.id && item.brand === open.brand && item.part === open.part).slice(0, 4)
@@ -452,13 +756,14 @@
       stage +
       '<section class="brake-desk' + (open ? ' brake-desk--pdp' : '') + '" id="brakeDesk">' +
         (open ? detailHtml(open, related, c) :
-          '<div class="brake-desk__bar"><div><h2>' + esc(heading) + '</h2><p>' + items.length + ' ' + esc(c.products) + '</p></div><span class="brake-sort">' + esc(c.sort) + '</span></div>' +
+          '<div class="brake-desk__bar"><div><h2 dir="auto">' + esc(heading) + '</h2><p>' + items.length + ' ' + esc(c.products) + '</p></div><span class="brake-sort">' + esc(c.sort) + '</span></div>' +
           '<div class="brake-results">' +
             (cards ? '<div class="brake-cards">' + cards + '</div>' + pager : '<p class="brake-empty">' + esc(c.empty) + '</p>') +
           '</div>') +
       '</section>';
 
     bind(root);
+    syncDocumentTitle(open);
     if (focusField) {
       const kept = root.querySelector(focusField);
       if (kept) {
@@ -478,12 +783,23 @@
   function cardHtml(item) {
     const c = t();
     const brand = brandById(item.brand);
+    const logo = brand ? brandLogo(item.brand) : '';
     return '<button type="button" class="brake-card" data-product="' + esc(item.id) + '">' +
-      '<div class="brake-card__art">' + art(item.part) + '</div>' +
-      '<div class="brake-card__meta"><span>' + esc(item.maker || '') + '</span><span>' + esc(brand ? brand.name : '') + '</span></div>' +
-      '<h3>' + esc(item.title) + '</h3>' +
-      '<p class="brake-card__stock' + (item.stock ? ' is-in' : '') + '">' + esc(item.stock ? c.in : c.out) + '</p>' +
-      '<p class="brake-card__price" dir="ltr">' + esc(money(item.priceUsd)) + '</p>' +
+      '<div class="brake-card__art">' + mediaHtml(item, itemTitle(item), false) + '</div>' +
+      '<div class="brake-card__body">' +
+        '<div class="brake-card__brand">' +
+          '<span class="brake-card__mark" aria-hidden="true">' + esc(makerMark(item.maker || (brand && brand.name))) + '</span>' +
+          '<strong>' + esc(item.maker || (brand ? brand.name : '')) + '</strong>' +
+          logo +
+        '</div>' +
+        '<h3 dir="auto">' + esc(itemTitle(item)) + '</h3>' +
+        '<p class="brake-card__fit">' + esc(c.fit) + '</p>' +
+        '<div class="brake-card__meta">' +
+          '<p class="brake-card__stock' + (item.stock ? ' is-in' : '') + '">' + esc(item.stock ? c.in : c.out) + '</p>' +
+          '<p class="brake-card__price" dir="ltr">' + esc(priceText(item)) + '</p>' +
+        '</div>' +
+        '<span class="brake-card__go">' + esc(c.view) + '</span>' +
+      '</div>' +
     '</button>';
   }
 
@@ -492,21 +808,19 @@
     const part = (PART_NAME[loc()] && PART_NAME[loc()][item.part]) || item.part;
     const cards = related.map((row) => cardHtml(row)).join('');
     const stock = item.stock ? c.in : c.out;
-    const figure = art(item.part);
+    const title = itemTitle(item);
+    const figure = shotsOf(item).length ? mediaHtml(item, title, true) : art(item.part);
     return '<article class="shop-pdp brake-pdp">' +
       '<nav class="shop-pdp__crumb">' +
         '<button type="button" class="brake-back" data-close-product="1">' + esc(c.back) + '</button>' +
         (brand ? '<span>' + esc(brand.name) + '</span>' : '') +
         '<span>' + esc(part) + '</span>' +
-        '<span>' + esc(item.title) + '</span>' +
+        '<span dir="auto">' + esc(title) + '</span>' +
       '</nav>' +
-      '<div class="shop-pdp__gallery">' +
-        '<div class="shop-pdp__thumbs"><button type="button" class="is-active" tabindex="-1">' + figure + '</button></div>' +
-        '<div class="shop-pdp__stage">' + figure + '</div>' +
-      '</div>' +
+      '<div class="shop-pdp__gallery">' + galleryHtml(item) + '</div>' +
       '<div class="shop-pdp__buy">' +
-        '<h1>' + esc(item.title) + '</h1>' +
-        '<p class="shop-pdp__price" dir="ltr">' + esc(money(item.priceUsd)) + '</p>' +
+        '<h1 dir="auto">' + esc(title) + '</h1>' +
+        '<p class="shop-pdp__price" dir="ltr">' + esc(priceText(item)) + '</p>' +
         '<a class="shop-pdp__wa" href="' + waLink(item) + '" target="_blank" rel="noopener noreferrer">' + esc(c.wa) + '</a>' +
         '<div class="shop-pdp__badge">' + esc(c.original) + '</div>' +
         '<ul class="brake-specs">' +
@@ -521,12 +835,49 @@
       '</div>' +
       '<div class="shop-pdp__dock">' +
         '<div class="shop-pdp__dock-art">' + figure + '</div>' +
-        '<div><strong>' + esc(item.title) + '</strong><small>' + esc(part) + '</small></div>' +
-        '<p class="shop-pdp__dock-price" dir="ltr">' + esc(money(item.priceUsd)) + '</p>' +
+        '<div><strong dir="auto">' + esc(title) + '</strong><small>' + esc(part) + '</small></div>' +
+        '<p class="shop-pdp__dock-price" dir="ltr">' + esc(priceText(item)) + '</p>' +
         '<span class="shop-pdp__stock' + (item.stock ? ' is-in' : ' is-out') + '">' + esc(stock) + '</span>' +
       '</div>' +
       (cards ? '<div class="brake-related"><p>' + esc(c.kicker) + '</p><h3>' + esc(c.related) + '</h3><div class="brake-cards">' + cards + '</div></div>' : '') +
     '</article>';
+  }
+
+  function bindMedia(root) {
+    root.querySelectorAll('[data-shot]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const stage = root.querySelector('.brake-stage');
+        const src = btn.getAttribute('data-shot');
+        if (stage && src) stage.src = src;
+        root.querySelectorAll('[data-shot]').forEach((other) => {
+          other.classList.toggle('is-active', other === btn);
+        });
+      });
+    });
+    root.querySelectorAll('img[data-fallback]').forEach((img) => {
+      img.addEventListener('error', () => {
+        const part = img.getAttribute('data-fallback') || 'discs';
+        const shot = img.closest('[data-shot]');
+        if (img.classList.contains('brake-stage')) {
+          if (img.parentElement) img.parentElement.innerHTML = art(part);
+          return;
+        }
+        if (shot) {
+          const wasActive = shot.classList.contains('is-active');
+          shot.remove();
+          if (wasActive) {
+            const next = root.querySelector('[data-shot]');
+            if (next) next.click();
+            else {
+              const stage = root.querySelector('.shop-pdp__stage');
+              if (stage) stage.innerHTML = art(part);
+            }
+          }
+          return;
+        }
+        img.outerHTML = art(part);
+      });
+    });
   }
 
   function bind(root) {
@@ -649,6 +1000,7 @@
         if (desk) desk.scrollIntoView({ block: 'start' });
       });
     }
+    bindMedia(root);
   }
 
   function showError() {
@@ -668,13 +1020,14 @@
     if (catalog) { paint(); return; }
     loading = true;
     root.innerHTML = '<p class="brake-loading">' + esc(t().loading) + '</p>';
-    fetch('/assets/data/brakes/catalog.json?v=20260918u')
+    fetch('/assets/data/brakes/catalog.json?v=20260919ac')
       .then((res) => {
         if (!res.ok) throw new Error('catalog');
         return res.json();
       })
       .then((data) => {
         catalog = data;
+        indexCatalog(catalog);
         paint();
         if (typeof window.injectCarPartsSchema === 'function') window.injectCarPartsSchema();
       })
@@ -694,28 +1047,45 @@
   };
 
   window.injectCarPartsSchema = function () {
-    if (!catalog || document.getElementById('jsonld-brakes')) return;
-    const top = (catalog.products || []).slice(0, 12).map((item) => ({
-      '@type': 'Product',
-      name: item.title,
-      sku: item.sku || item.mpn || item.id,
-      brand: item.maker || 'Bizdavar',
-      offers: {
-        '@type': 'Offer',
-        priceCurrency: 'USD',
-        price: String(item.priceUsd),
-        availability: item.stock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock'
-      }
-    }));
-    const script = document.createElement('script');
-    script.id = 'jsonld-brakes';
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify({
+    if (!catalog) return;
+    const lang = loc();
+    const inLanguage = { fa: 'fa-IR', tr: 'tr-TR', en: 'en-US', ru: 'ru-RU', ar: 'ar-AE' }[lang] || 'fa-IR';
+    const top = (catalog.products || []).filter((item) => item.stock && item.priceUsd).slice(0, 12).map((item, index) => {
+      const images = shotsOf(item).slice(0, 4).map(imgUrl);
+      const product = {
+        '@type': 'Product',
+        name: itemTitle(item),
+        sku: item.sku || item.mpn || item.id,
+        brand: item.maker || 'Bizdavar',
+        inLanguage: inLanguage,
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'USD',
+          price: String(item.priceUsd),
+          availability: 'https://schema.org/InStock'
+        }
+      };
+      if (images.length) product.image = images;
+      return {
+        '@type': 'ListItem',
+        position: index + 1,
+        item: product
+      };
+    });
+    const payload = JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: 'Bizdavar brake parts',
+      name: t().desk,
+      inLanguage: inLanguage,
       itemListElement: top
     });
-    document.head.appendChild(script);
+    let script = document.getElementById('jsonld-brakes');
+    if (!script) {
+      script = document.createElement('script');
+      script.id = 'jsonld-brakes';
+      script.type = 'application/ld+json';
+      document.head.appendChild(script);
+    }
+    script.textContent = payload;
   };
 })();

@@ -98,7 +98,7 @@
       },
       carParts: {
         seoTitle: 'خرید لنت و دیسک ترمز | انتخاب برند و مدل | بیزدوار',
-        seoDescription: 'فروشگاه ترمز بیزدوار: لنت، دیسک، ترمز عملکردی و روغن ترمز با انتخاب برند و مدل. قیمت دلاری تحویل، لیر تقسیم بر ۴۸ به‌علاوه ۲۰٪.',
+        seoDescription: 'فروشگاه ترمز بیزدوار: لنت، دیسک، ترمز عملکردی و روغن ترمز با انتخاب برند و مدل. قیمت دلاری تحویل ایران.',
         seoKeywords: 'لنت ترمز, دیسک ترمز, لنت BMW, لنت بنز, بیزدوار'
       },
       teltonika: {
@@ -340,7 +340,7 @@
       },
       carParts: {
         seoTitle: 'Fren balatası ve diski | marka ve model seç | Bizdavar',
-        seoDescription: 'Bizdavar fren mağazası: balata, disk, performans freni ve fren sıvısı. Kart fiyatı teslim USD, TL ÷ 48 artı %20.',
+        seoDescription: 'Bizdavar fren mağazası: balata, disk, performans freni ve fren sıvısı. Kart fiyatı teslim USD.',
         seoKeywords: 'fren balatası, fren diski, BMW balata, Mercedes balata, Bizdavar'
       },
       teltonika: {
@@ -664,7 +664,7 @@
       },
       carParts: {
         seoTitle: 'Brake pads and discs | choose brand and model | Bizdavar',
-        seoDescription: 'Bizdavar brake parts: pads, discs, performance brakes and fluid by brand and model. Card price is delivery USD, TRY ÷ 48 plus 20%.',
+        seoDescription: 'Bizdavar brake parts: pads, discs, performance brakes and fluid by brand and model. Card price is delivery USD.',
         seoKeywords: 'brake pads, brake discs, BMW pads, Mercedes pads, Bizdavar'
       },
       teltonika: {
