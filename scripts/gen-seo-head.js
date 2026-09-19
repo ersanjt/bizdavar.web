@@ -13,6 +13,7 @@ require(path.join(ROOT, 'assets/scripts/i18n/locales.js'));
 require(path.join(ROOT, 'assets/scripts/i18n/locales-pages.js'));
 require(path.join(ROOT, 'assets/scripts/i18n/locale-seo.js'));
 require(path.join(ROOT, 'assets/scripts/i18n/locales-ru-ar.js'));
+require(path.join(ROOT, 'assets/scripts/i18n/ostrich-leather-i18n.js'));
 
 const BASE = 'https://bizdavar.com';
 const DEFAULT_OG = 'assets/images/brand/bizdavar-logo-square.png';
@@ -43,6 +44,7 @@ const PAGE_OG = {
   bizswap: 'assets/images/brand/bizdavar-logo-square.png',
   biztab: 'assets/images/products/biztab/biztab-hero.jpg',
   bizpad: 'assets/images/products/bizpet/bizpet-grey.jpg',
+  ostrichLeather: 'assets/images/products/ostrich/color-swatches.jpg',
   uwt: 'assets/images/uwt/og-uwt-logo.jpg',
   bizsanitizerV5: 'assets/images/products/bizsanitizer/bizclean-v5.png',
   fxguardAccounting: 'assets/images/brand/bizdavar-logo-square.png',
@@ -111,6 +113,7 @@ const PAGE_ROUTES = {
   biztejarat: '/pages/biztejarat',
   biztab: '/pages/biztab',
   bizpad: '/pages/bizpad',
+  ostrichLeather: '/pages/ostrich-leather',
   uwt: '/pages/uwt',
   bizsanitizerV5: '/pages/bizsanitizer-v5',
   bizseat: '/pages/bizseat',

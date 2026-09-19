@@ -11,7 +11,7 @@
       origin: 'Sourced from Turkey and Europe',
       logoAlt: 'Bizdavar Auto-Moto — motorcycle gear',
       heroImageAlt: 'Motorcycle helmet, jacket and boots — Bizdavar Auto-Moto catalog',
-      description: 'Bizdavar supplies motorcycle gear. Card prices are Iran-delivery USD: listing TRY ÷ 48 plus 20%. Lira is not shown. If there is no price, request a quote.',
+      description: 'Helmets, jackets, gloves, pants, boots, intercoms and protection for riders. Card prices are USD for delivery in Iran. If a product has no price, it is quote only.',
       heroStats: [
         { label: 'Products in catalog' },
         { label: 'Iran delivery' },
@@ -19,7 +19,7 @@
       ]
     },
     trustSignals: [
-      { label: 'Iran-delivery USD', desc: 'Listing TRY ÷ 48 plus 20%. Lira is not shown on the card' },
+      { label: 'Iran-delivery USD', desc: 'The amount on the card is for delivery in Iran. No price means quote only.' },
       { label: 'Shipping after order', desc: 'Postage is calculated after weight, volume and destination' },
       { label: 'Persian consulting', desc: 'Send clothing size or SKU on WhatsApp' },
       { label: 'Single and bulk orders', desc: 'Personal use and motorcycle shops' }
@@ -49,7 +49,7 @@
       tip: 'If there is no card price, goods and postage appear on the proforma after inquiry.'
     },
     faq: [
-      { q: 'Is the card price final?', a: 'Card prices are Iran-delivery USD: listing TRY ÷ 48 plus 20%. Lira is not shown. If there is no price, request a quote. The final amount is on the proforma.' },
+      { q: 'Is the card price final?', a: 'The card price is for delivery in Iran. The final amount and postage are confirmed on the proforma. No price means quote only.' },
       { q: 'Is shipping included?', a: 'No. Postage, insurance and clearance are confirmed after weight, volume and destination.' },
       { q: 'What do you need for apparel?', a: 'Send size, height and weight. If you are between sizes, write on WhatsApp.' },
       { q: 'How do I choose size and color?', a: 'Open product details. If you are between sizes, send height and weight on WhatsApp.' },
@@ -67,7 +67,7 @@
       origin: 'Türkiye ve Avrupa tedariki',
       logoAlt: 'Bizdavar Auto-Moto — motosiklet ekipmanı',
       heroImageAlt: 'Motosiklet kaskı, mont ve bot — Bizdavar Auto-Moto kataloğu',
-      description: 'Bizdavar motosiklet ekipmanı tedarik eder. Kart fiyatı İran teslim dolardır: liste lirası ÷ 48 + %20. Lira gösterilmez. Fiyat yoksa yalnızca teklif alınır.',
+      description: 'Kask, mont, eldiven, pantolon, bot, interkom ve koruma. Kart fiyatı İran teslimi için dolardır. Fiyat yoksa ürün yalnızca teklifle satılır.',
       heroStats: [
         { label: 'Katalogdaki ürün' },
         { label: 'İran teslim' },
@@ -75,7 +75,7 @@
       ]
     },
     trustSignals: [
-      { label: 'İran teslim USD', desc: 'Liste lirası ÷ 48 + %20. Kartta lira yok' },
+      { label: 'İran teslim USD', desc: 'Karttaki tutar İran teslimi içindir. Fiyat yoksa yalnızca teklif.' },
       { label: 'Kargo sipariş sonrası', desc: 'Kargo ağırlık, hacim ve varışa göre hesaplanır' },
       { label: 'Farsça danışmanlık', desc: 'Beden veya SKU’yu WhatsApp’tan gönderin' },
       { label: 'Tekil ve toptan', desc: 'Bireysel ve motosiklet mağazası' }
@@ -105,7 +105,7 @@
       tip: 'Kartta fiyat yoksa ürün ve kargo tutarı teklif sonrası proformada gelir.'
     },
     faq: [
-      { q: 'Kart fiyatı nihai mi?', a: 'Kart fiyatı İran teslim dolardır: liste lirası ÷ 48 + %20. Lira gösterilmez. Fiyat yoksa teklif isteyin. Nihai tutar proformadadır.' },
+      { q: 'Kart fiyatı nihai mi?', a: 'Kart fiyatı İran teslimi içindir. Nihai tutar ve kargo proformada netleşir. Fiyat yoksa yalnızca teklif istenir.' },
       { q: 'Kargo fiyata dahil mi?', a: 'Hayır. Kargo, sigorta ve gümrük ağırlık, hacim ve varış sonrası netleşir.' },
       { q: 'Giyim için ne gerekli?', a: 'Beden, boy ve kilo gönderin. İki beden arasındaysanız WhatsApp’tan yazın.' },
       { q: 'Beden ve rengi nasıl seçerim?', a: 'Ürün detayını açın. İki beden arasındaysanız boy ve kiloyu WhatsApp’tan yazın.' },
@@ -131,7 +131,7 @@
           ]
         },
         trustSignals: [
-          { label: 'USD с доставкой в Иран', desc: 'Лира ÷ 48 + 20%. Лира на карточке не показывается' },
+          { label: 'USD с доставкой в Иран', desc: 'Сумма на карточке — с доставкой в Иран. Нет цены — только запрос.' },
           { label: 'Почта после заказа', desc: 'Доставка после веса, объёма и пункта назначения' },
           { label: 'Консультация', desc: 'Пришлите размер или SKU в WhatsApp' },
           { label: 'Розница и опт', desc: 'Лично и мотомагазин' }
@@ -153,7 +153,7 @@
           ]
         },
         trustSignals: [
-          { label: 'دولار لتسليم إيران', desc: 'الليرة ÷ ٤٨ + ٢٠٪. الليرة لا تظهر على البطاقة' },
+          { label: 'دولار لتسليم إيران', desc: 'المبلغ على البطاقة لتسليم إيران. بلا سعر يعني استعلام فقط.' },
           { label: 'الشحن بعد الطلب', desc: 'يحسب الشحن بعد الوزن والحجم والوجهة' },
           { label: 'استشارة', desc: 'أرسل المقاس أو SKU عبر واتساب' },
           { label: 'قطعي وجملة', desc: 'استخدام شخصي ومتجر دراجات' }

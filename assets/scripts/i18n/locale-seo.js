@@ -93,7 +93,7 @@
       },
       motorcycle: {
         seoTitle: 'خرید تجهیزات موتورسیکلت | کلاه، کاپشن و بوت | بیزدوار',
-        seoDescription: 'خرید تجهیزات موتورسیکلت از بیزدوار: کلاه ایمنی، کاپشن، دستکش، شلوار، بوت، اینترکام و محافظ. قیمت دلاری تحویل ایران (لیر ÷ ۴۸ + ۲۰٪). اگر قیمت نباشد استعلام است.',
+        seoDescription: 'خرید تجهیزات موتورسیکلت از بیزدوار: کلاه ایمنی، کاپشن، دستکش، شلوار، بوت، اینترکام و محافظ. قیمت روی کارت به دلار و برای تحویل در ایران است. اگر قیمت نباشد، فقط استعلام است.',
         seoKeywords: 'تجهیزات موتورسیکلت, کلاه ایمنی موتور, کاپشن موتور, دستکش موتور, بوت موتور, اینترکام, بیزدوار'
       },
       carParts: {
@@ -335,7 +335,7 @@
       },
       motorcycle: {
         seoTitle: 'Motosiklet ekipmanı | kask, mont ve bot | Bizdavar',
-        seoDescription: 'Bizdavar motosiklet ekipmanı: kask, mont, eldiven, pantolon, bot, interkom ve koruma. Kart fiyatı İran teslim USD (liste TL ÷ 48 + %20). Fiyat yoksa teklif.',
+        seoDescription: 'Bizdavar motosiklet ekipmanı: kask, mont, eldiven, pantolon, bot, interkom ve koruma. Kart fiyatı İran teslimi için dolardır. Fiyat yoksa teklif.',
         seoKeywords: 'motosiklet ekipmanı, motosiklet kask, motosiklet mont, motosiklet bot, interkom, Bizdavar'
       },
       carParts: {
@@ -659,7 +659,7 @@
       },
       motorcycle: {
         seoTitle: 'Motorcycle gear | helmets, jackets and boots | Bizdavar',
-        seoDescription: 'Motorcycle gear from Bizdavar: helmets, jackets, gloves, pants, boots, intercoms and protection. Card prices are Iran-delivery USD (listing TRY ÷ 48 + 20%). If there is no price, request a quote.',
+        seoDescription: 'Motorcycle gear from Bizdavar: helmets, jackets, gloves, pants, boots, intercoms and protection. Card prices are USD for delivery in Iran. If there is no price, request a quote.',
         seoKeywords: 'motorcycle gear, motorcycle helmet, motorcycle jacket, motorcycle boots, intercom, Bizdavar'
       },
       carParts: {

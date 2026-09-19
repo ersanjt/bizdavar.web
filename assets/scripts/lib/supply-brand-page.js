@@ -48,6 +48,13 @@ window.createSupplyBrandPage = function (cfg) {
     return pagePath(rel);
   }
 
+  function cardMedia(item, img) {
+    const href = productHref(item);
+    if (href) return `<a class="${prefix}-series-card__media" href="${href}">${img}</a>`;
+    if (item && item.id) return `<button type="button" class="${prefix}-series-card__media" data-product-open="${item.id}">${img}</button>`;
+    return `<span class="${prefix}-series-card__media">${img}</span>`;
+  }
+
   function heroImgTag(src, alt) {
     const full = path(src);
     const safeAlt = String(alt || '').replace(/"/g, '&quot;');
@@ -579,15 +586,18 @@ window.createSupplyBrandPage = function (cfg) {
       const titleEn = h.titleEn || '';
       const sideLabel = locale() === 'fa' && titleEn && titleEn !== title ? titleEn : '';
 
+      const href = productHref(h);
+      const mediaTag = href ? 'a' : 'div';
+      const mediaAttr = href ? ` href="${href}"` : '';
       return `
 
         <article class="${prefix}-highlight-card"${h.id ? ` id="${prefix}-hl-${h.id}"` : ''}>
 
-          <div class="${prefix}-highlight-card__media${h.id === 'safevader' ? ` ${prefix}-highlight-card__media--product` : ''}">
+          <${mediaTag} class="${prefix}-highlight-card__media${h.id === 'safevader' ? ` ${prefix}-highlight-card__media--product` : ''}"${mediaAttr}>
 
             ${imgTag(h.image, h.imageAlt || title, { width: 280, height: 158, fallback: catalog().brand?.logo })}
 
-          </div>
+          </${mediaTag}>
 
           <div class="${prefix}-highlight-card__body">
 
@@ -696,8 +706,9 @@ window.createSupplyBrandPage = function (cfg) {
       fallback: cat.image || catalog().brand?.logo
     });
     if (!rich) {
+      const dest = productHref(s) || inquiryUrl(qName);
       return `
-            <a href="${inquiryUrl(qName)}" class="${prefix}-series-card${featured} ${prefix}-series-card--link" data-search="${search}">
+            <a href="${dest}" class="${prefix}-series-card${featured} ${prefix}-series-card--link" data-search="${search}">
               <span class="${prefix}-series-card__media">${img}</span>
               <span class="${prefix}-series-card__body">
                 <strong>${localizedTitle(s)}</strong>
@@ -739,26 +750,30 @@ window.createSupplyBrandPage = function (cfg) {
     const detailLabel = ((s.sizes && s.sizes.length) || (s.colors && s.colors.length))
       ? t('productDetail', 'جزئیات، سایز و رنگ')
       : t('productFacts', 'جزئیات محصول');
-    const detailBtn = (s.sizes || s.colors || s.specList || s.desc)
-      ? `<button type="button" class="btn ${prefix}-series-card__detail" data-product-open="${s.id}">${detailLabel}</button>`
-      : '';
+    const detailBtn = permalink
+      ? `<a class="btn ${prefix}-series-card__detail" href="${permalink}">${detailLabel}</a>`
+      : ((s.sizes || s.colors || s.specList || s.desc)
+        ? `<button type="button" class="btn ${prefix}-series-card__detail" data-product-open="${s.id}">${detailLabel}</button>`
+        : '');
     return `
             <article class="${prefix}-series-card${featured} ${prefix}-series-card--product"${pid} data-search="${search}" data-product-id="${s.id || ''}" data-leaf="${String(s.leafFa || '').replace(/"/g, '')}">
-              <span class="${prefix}-series-card__media">${img}</span>
+              ${cardMedia(s, img)}
               ${thumbs}
               <div class="${prefix}-series-card__body">
                 ${badge ? `<span class="${prefix}-series-card__badge">${badge}</span>` : ''}
                 <h3 class="${prefix}-series-card__name">${titleHtml}</h3>
                 ${desc ? `<p class="${prefix}-series-card__desc">${desc}</p>` : ''}
                 ${specPreview}
-                ${priceHtml(s, 'div')}
                 ${swatches}
                 ${sizeLine}
                 ${feats ? `<ul class="${prefix}-series-card__features">${feats}</ul>` : ''}
-                ${detailBtn}
-                <div class="${prefix}-series-card__actions">
-                  <a href="${inquiryUrl(qName)}" class="btn btn--yellow ${prefix}-series-card__cta">${t('inquirySeries', 'استعلام')}</a>
-                  <a href="${whatsappUrl(msg)}" class="btn btn--green ${prefix}-series-card__cta" target="_blank" rel="noopener noreferrer">${t('whatsappShort', 'واتساپ')}</a>
+                <div class="${prefix}-series-card__foot">
+                  ${priceHtml(s, 'div')}
+                  ${detailBtn}
+                  <div class="${prefix}-series-card__actions">
+                    <a href="${inquiryUrl(qName)}" class="btn btn--yellow ${prefix}-series-card__cta">${t('inquirySeries', 'استعلام')}</a>
+                    <a href="${whatsappUrl(msg)}" class="btn btn--green ${prefix}-series-card__cta" target="_blank" rel="noopener noreferrer">${t('whatsappShort', 'واتساپ')}</a>
+                  </div>
                 </div>
                 ${off ? `<a href="${off}" class="${prefix}-series-card__official" target="_blank" rel="noopener noreferrer">${t('officialCatalog', 'کاتالوگ رسمی')}${arrow()}</a>` : ''}
               </div>
@@ -1217,7 +1232,12 @@ window.createSupplyBrandPage = function (cfg) {
       const msg = t('inquiryTemplate', catalog().inquiryTemplate || 'استعلام {product}').replace('{product}', name);
       const el = document.getElementById(elId('DrawerActions'));
       if (!el) return;
+      const page = productHref(s);
+      const pageLink = page
+        ? `<a href="${page}" class="btn">${t('productPage', 'صفحه محصول')}</a>`
+        : '';
       el.innerHTML = `
+        ${pageLink}
         <a href="${inquiryUrl(name)}" class="btn btn--yellow">${t('inquirySeries', 'استعلام')}</a>
         <a href="${whatsappUrl(msg)}" class="btn btn--green" target="_blank" rel="noopener noreferrer">${t('whatsappShort', 'واتساپ')}</a>`;
     };

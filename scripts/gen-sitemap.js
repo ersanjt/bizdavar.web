@@ -62,6 +62,7 @@ const PAGES = [
   { path: '/pages/biztejarat', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/biztab', changefreq: 'monthly', priority: 0.85, lastmod: SITE_UPDATE },
   { path: '/pages/bizpad', changefreq: 'monthly', priority: 0.85, lastmod: '2026-09-02' },
+  { path: '/pages/ostrich-leather', changefreq: 'monthly', priority: 0.9, lastmod: '2026-09-19' },
   { path: '/pages/bizsanitizer-v5', changefreq: 'monthly', priority: 0.85, lastmod: '2021-06-01' },
   { path: '/pages/bizseat', changefreq: 'monthly', priority: 0.85, lastmod: '2020-09-01' },
   { path: '/pages/fxguard', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },

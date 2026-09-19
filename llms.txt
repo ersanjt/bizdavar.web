@@ -251,6 +251,13 @@
 - [Russian](https://bizdavar.com/ru/pages/bizpad)
 - [Arabic](https://bizdavar.com/ar/pages/bizpad)
 
+### /pages/ostrich-leather
+- [Persian](https://bizdavar.com/pages/ostrich-leather)
+- [Turkish](https://bizdavar.com/tr/pages/ostrich-leather)
+- [English](https://bizdavar.com/en/pages/ostrich-leather)
+- [Russian](https://bizdavar.com/ru/pages/ostrich-leather)
+- [Arabic](https://bizdavar.com/ar/pages/ostrich-leather)
+
 ### /pages/bizsanitizer-v5
 - [Persian](https://bizdavar.com/pages/bizsanitizer-v5)
 - [Turkish](https://bizdavar.com/tr/pages/bizsanitizer-v5)

@@ -33,6 +33,7 @@ window.BIZDAVAR_CONFIG = {
     biztejarat: 'pages/biztejarat.html',
     biztab: 'pages/biztab.html',
     bizpad: 'pages/bizpad.html',
+    ostrichLeather: 'pages/ostrich-leather.html',
     bizsanitizerV5: 'pages/bizsanitizer-v5.html',
     uwt: 'pages/uwt.html',
     fxguard: 'pages/fxguard.html',
@@ -94,6 +95,7 @@ window.BIZDAVAR_CONFIG = {
             items: [
               { route: 'biztab', page: 'biztab', labelKey: 'nav.productBiztab', label: 'BizTab', descKey: 'nav.productBiztabDesc' },
               { route: 'bizpad', page: 'bizpad', labelKey: 'nav.productBizpad', label: 'BizPad', descKey: 'nav.productBizpadDesc' },
+              { route: 'ostrichLeather', page: 'ostrich-leather', labelKey: 'nav.productOstrich', label: 'Ostrich leather', descKey: 'nav.productOstrichDesc' },
               { route: 'bizsanitizerV5', page: 'bizsanitizer-v5', labelKey: 'nav.productBizclean', label: 'BizClean', descKey: 'nav.productBizcleanDesc' }
             ]
           }

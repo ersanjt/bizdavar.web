@@ -24,13 +24,6 @@ createSupplyBrandPage({
 
   const ALL = { fa: 'همه', tr: 'Tümü', en: 'All', ru: 'Все', ar: 'الكل' };
   const CLEAR = { fa: 'پاک کردن فیلتر', tr: 'Filtreyi temizle', en: 'Clear filter', ru: 'Сбросить фильтр', ar: 'مسح التصفية' };
-  const PARENT_ARIA = { fa: 'دسته‌های تامین', tr: 'Tedarik kategorileri', en: 'Supply categories', ru: 'Категории поставок', ar: 'فئات التوريد' };
-  const PARENTS = [
-    { id: 'precision', route: 'vega', fa: 'ابزار دقیق', tr: 'Hassas ölçüm', en: 'Precision instruments', ru: 'Точные приборы', ar: 'أجهزة دقيقة' },
-    { id: 'industrial', route: 'products', hash: '#supply', fa: 'تجهیزات صنعتی', tr: 'Endüstriyel ekipman', en: 'Industrial equipment', ru: 'Пром. оборудование', ar: 'معدات صناعية' },
-    { id: 'auto', route: 'autoMoto', current: true, fa: 'خودرو و موتور', tr: 'Oto ve motor', en: 'Auto & motorcycle', ru: 'Авто и мото', ar: 'سيارات ودراجات' },
-    { id: 'weighing', route: 'digiSystem', fa: 'توزین', tr: 'Tartı', en: 'Weighing', ru: 'Весовое оборудование', ar: 'وزن' }
-  ];
 
   function L(map) {
     const loc = window.BIZDAVAR_I18N?.locale || document.documentElement.lang || 'fa';
@@ -251,24 +244,6 @@ createSupplyBrandPage({
     return window.resolvePath ? window.resolvePath(src) : src;
   }
 
-  function pageHref(route, hash) {
-    const R = window.BIZDAVAR_CONFIG?.routes || {};
-    const raw = R[route] || route;
-    const href = window.resolvePagePath ? window.resolvePagePath(raw) : path(raw);
-    return href + (hash || '');
-  }
-
-  function paintParents() {
-    const el = document.getElementById('autoShopParents');
-    if (!el) return;
-    el.setAttribute('aria-label', L(PARENT_ARIA));
-    el.innerHTML = PARENTS.map(function (p) {
-      return '<a href="' + esc(pageHref(p.route, p.hash)) + '"' +
-        (p.current ? ' class="is-current" aria-current="page"' : '') + '>' +
-        esc(pick(p)) + '</a>';
-    }).join('');
-  }
-
   function setFilter(cat, leaves, label) {
     window.BIZDAVAR_SUPPLY_FILTER = window.BIZDAVAR_SUPPLY_FILTER || {};
     if (!cat) {
@@ -386,10 +361,6 @@ createSupplyBrandPage({
       chrome = document.createElement('div');
       chrome.id = 'autoShopChrome';
       chrome.className = 'auto-shop-chrome';
-      const parents = document.createElement('nav');
-      parents.id = 'autoShopParents';
-      parents.className = 'auto-shop-parents';
-      chrome.appendChild(parents);
       if (!bar) {
         bar = document.createElement('div');
         bar.id = 'autoCatBar';
@@ -408,7 +379,6 @@ createSupplyBrandPage({
     if (crumbs && crumbs.parentNode && chrome.previousElementSibling !== crumbs) {
       crumbs.parentNode.insertBefore(chrome, crumbs.nextSibling);
     }
-    paintParents();
     nav.classList.add('auto-cat-nav--shop');
     const cats = localizedCatalog()?.categories || [];
     const byId = {};

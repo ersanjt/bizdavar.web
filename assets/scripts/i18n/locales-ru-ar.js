@@ -1849,6 +1849,8 @@
     productBizpadDesc: 'Нагревательный мат BizPad',
     productBizclean: 'BizClean',
     productBizcleanDesc: 'Автоматический санитайзер',
+    productOstrich: 'Страусиная кожа',
+    productOstrichDesc: 'Краст от $6.50 · нога от $6',
     productPackaging: 'Упаковка и запайка',
     productPackagingDesc: 'Запайщики и упаковочные линии',
     productMedical: 'Медицина и СИЗ',
@@ -2132,7 +2134,7 @@
   ru.liquiMolyPage = liquiPage.ru;
   ru.autoMotoPage = {
     sections: {
-      trust: { eyebrow: 'Почему Bizdavar', title: 'Полный каталог мотоэкипировки', desc: 'Цена на карточке — доллары с доставкой в Иран (лира ÷ 48 + 20%). Если цены нет — только запрос.' },
+      trust: { eyebrow: 'Почему Bizdavar', title: 'Полный каталог мотоэкипировки', desc: 'Цена на карточке — доллары с доставкой в Иран. Если цены нет — только запрос.' },
       buy: { eyebrow: 'Путь покупки', title: 'От выбора до отправки — 5 шагов', desc: 'Запрос товара отдельно, почта отдельно — обе в проформе.' },
       quote: { eyebrow: 'Как запросить', title: 'Пришлите размер или SKU', desc: 'Размер, рост и вес для одежды — проформа быстрее.' },
       highlights: { eyebrow: 'Хиты', title: 'От шлема до туристических бот', desc: 'Доллары с доставкой в Иран. Если цены нет — запрос.' },
@@ -2141,7 +2143,7 @@
       supply: { eyebrow: 'Поставка Bizdavar', title: 'Сервис Auto-Moto', desc: 'Один контакт для мотоэкипировки.' },
       faq: { eyebrow: 'FAQ', title: 'Цена, почта и размер', desc: 'Нет ответа? Напишите в WhatsApp.' }
     },
-    officialNote: 'Цена на карточке — доллары с доставкой в Иран (лира ÷ 48 + 20%). Лира не показывается. Если цены нет — запрос. Масла Германии — <a href="liqui-moly">Liqui Moly</a>.',
+    officialNote: 'Цена на карточке — доллары с доставкой в Иран. Если цены нет — запрос. Масла Германии — <a href="liqui-moly">Liqui Moly</a>.',
     cta: { title: 'Готовы запросить шлем, куртку или боты?', desc: 'Размер или SKU — проформа и почта после заказа', btnForm: 'Форма запроса', btnServices: 'Каталог' },
     sticky: { label: 'Запрос Auto-Moto', hint: 'USD с доставкой в Иран' },
     geoText: 'Поставка мотоэкипировки — доллары с доставкой в Иран.',
@@ -2343,6 +2345,8 @@
     productBizpadDesc: 'حصيرة تدفئة BizPad',
     productBizclean: 'BizClean',
     productBizcleanDesc: 'معقم يدين تلقائي',
+    productOstrich: 'جلد النعام',
+    productOstrichDesc: 'كراست من 6.5 دولار · ساق من 6',
     productPackaging: 'تغليف ولحام',
     productPackagingDesc: 'لحامات وخطوط تغليف',
     productMedical: 'طبي وPPE',
@@ -2626,7 +2630,7 @@
   ar.liquiMolyPage = liquiPage.ar;
   ar.autoMotoPage = {
     sections: {
-      trust: { eyebrow: 'لماذا Bizdavar', title: 'كتالوج كامل لعتاد الدراجة', desc: 'السعر على البطاقة بالدولار لتسليم إيران (الليرة ÷ ٤٨ + ٢٠٪). إن لم يوجد سعر فاستعلام فقط.' },
+      trust: { eyebrow: 'لماذا Bizdavar', title: 'كتالوج كامل لعتاد الدراجة', desc: 'السعر على البطاقة بالدولار لتسليم إيران. إن لم يوجد سعر فاستعلام فقط.' },
       buy: { eyebrow: 'مسار الشراء', title: 'من الاختيار إلى الإرسال — ٥ خطوات', desc: 'استعلام السلعة منفصل والشحن منفصل — كلاهما في الفاتورة المبدئية.' },
       quote: { eyebrow: 'دليل الاستعلام', title: 'أرسل المقاس أو رمز SKU', desc: 'المقاس والطول والوزن للملابس — الفاتورة المبدئية أسرع.' },
       highlights: { eyebrow: 'الأكثر طلباً', title: 'من الخوذة إلى بوت التورينغ', desc: 'دولار لتسليم إيران. إن لم يوجد سعر فاستعلام.' },
@@ -2635,7 +2639,7 @@
       supply: { eyebrow: 'توريد Bizdavar', title: 'خدمات Auto-Moto', desc: 'جهة اتصال واحدة لعتاد الدراجة.' },
       faq: { eyebrow: 'أسئلة', title: 'السعر والشحن والمقاس', desc: 'لا جواب؟ راسل واتساب.' }
     },
-    officialNote: 'السعر على البطاقة بالدولار لتسليم إيران (الليرة ÷ ٤٨ + ٢٠٪). الليرة لا تظهر. إن لم يوجد سعر فاستعلام. لزيوت ألمانيا راجع <a href="liqui-moly">Liqui Moly</a>.',
+    officialNote: 'السعر على البطاقة بالدولار لتسليم إيران. إن لم يوجد سعر فاستعلام. لزيوت ألمانيا راجع <a href="liqui-moly">Liqui Moly</a>.',
     cta: { title: 'جاهز لاستعلام خوذة أو سترة أو بوت؟', desc: 'المقاس أو SKU — فاتورة مبدئية والشحن بعد الطلب', btnForm: 'نموذج استعلام', btnServices: 'الكتالوج' },
     sticky: { label: 'استعلام Auto-Moto', hint: 'دولار لتسليم إيران' },
     geoText: 'توريد عتاد دراجة نارية — دولار لتسليم إيران.',

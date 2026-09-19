@@ -9,7 +9,8 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
     { id: 'software', label: 'نرم‌افزار و SaaS', icon: 'globe' },
     { id: 'iot-health', label: 'IoT و بهداشت', icon: 'shield' },
     { id: 'packaging', label: 'بسته‌بندی و سیل', icon: 'box' },
-    { id: 'medical', label: 'پزشکی و PPE', icon: 'heart' }
+    { id: 'medical', label: 'پزشکی و PPE', icon: 'heart' },
+    { id: 'leather', label: 'چرم اگزوتیک', icon: 'box' }
   ],
   items: [
     {
@@ -193,6 +194,20 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       tags: ['پد حرارتی', 'پزشکی', 'تولید'],
       image: 'assets/images/products/bizpet/bizpet-production.jpg',
       status: 'catalog'
+    },
+    {
+      id: 'ostrich-leather',
+      category: 'leather',
+      categoryLabel: 'چرم اگزوتیک',
+      name: 'چرم شترمرغ',
+      title: 'چرم شترمرغ ایرانی',
+      desc: 'تولید صفر تا صد در ایران. کراس از ۶.۵ دلار هر فوت مربع، رنگ‌شده ۸.۵ دلار، ساق از ۶ دلار. صادرات به چین و ترکیه.',
+      homeDesc: 'چرم شترمرغ ایرانی — از ۶ دلار',
+      tags: ['چرم شترمرغ', 'کراس', 'صادرات'],
+      image: 'assets/images/products/ostrich/color-swatches.jpg',
+      page: 'pages/ostrich-leather.html',
+      featured: false,
+      status: 'live'
     }
   ]
 };
