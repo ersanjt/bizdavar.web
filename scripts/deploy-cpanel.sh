@@ -29,6 +29,8 @@ if command -v rsync >/dev/null 2>&1; then
     --exclude scripts/ \
     --exclude README.md \
     --exclude '*.zip' \
+    --exclude media/catalog/ \
+    --exclude media/review/ \
     "$REPO_DIR/" "$WEB_ROOT/"
   mkdir -p "$WEB_ROOT/.well-known/acme-challenge" "$WEB_ROOT/.well-known/pki-validation"
 else

@@ -44,6 +44,8 @@ rsync -av --delete \
   --exclude '*.zip' \
   --exclude .cursor/ \
   --exclude api/config.php \
+  --exclude media/catalog/ \
+  --exclude media/review/ \
   "$REPO/" "$WEB/"
 
 echo "===== FORCE SYNC assets/scripts (JS bundles) ====="
