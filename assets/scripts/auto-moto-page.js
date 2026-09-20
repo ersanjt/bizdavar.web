@@ -16,10 +16,10 @@ createSupplyBrandPage({
 
   const SHORT = {
     fa: { intercom: 'اینترکام', helmets: 'کلاه', jackets: 'کاپشن', gloves: 'دستکش', boots: 'بوت', pants: 'شلوار', protection: 'محافظ', offroad: 'آفرود', casual: 'روزمره', 'moto-parts': 'قطعات', accessories: 'اکسسوری' },
-    tr: { intercom: 'Interkom', helmets: 'Kask', jackets: 'Mont', gloves: 'Eldiven', boots: 'Bot', pants: 'Pantolon', protection: 'Koruma', offroad: 'MX Off-road', casual: 'Casual', 'moto-parts': 'Motorunuza', accessories: 'Aksesuar' },
-    en: { intercom: 'Intercom', helmets: 'Helmets', jackets: 'Jackets', gloves: 'Gloves', boots: 'Boots', pants: 'Pants', protection: 'Protection', offroad: 'MX Off-road', casual: 'Casual', 'moto-parts': 'On the bike', accessories: 'Accessories' },
-    ru: { intercom: 'Интерком', helmets: 'Шлемы', jackets: 'Куртки', gloves: 'Перчатки', boots: 'Боты', pants: 'Штаны', protection: 'Защита', offroad: 'MX', casual: 'Casual', 'moto-parts': 'На мото', accessories: 'Аксессуары' },
-    ar: { intercom: 'إنتركم', helmets: 'خوذات', jackets: 'سترات', gloves: 'قفازات', boots: 'بوت', pants: 'بناطيل', protection: 'حماية', offroad: 'أوف رود', casual: 'كاجوال', 'moto-parts': 'على الدراجة', accessories: 'إكسسوار' }
+    tr: { intercom: 'Interkom', helmets: 'Kask', jackets: 'Mont', gloves: 'Eldiven', boots: 'Bot', pants: 'Pantolon', protection: 'Koruma', offroad: 'MX / off-road', casual: 'Günlük', 'moto-parts': 'Motor üzeri', accessories: 'Aksesuar' },
+    en: { intercom: 'Intercom', helmets: 'Helmets', jackets: 'Jackets', gloves: 'Gloves', boots: 'Boots', pants: 'Pants', protection: 'Protection', offroad: 'MX / off-road', casual: 'Casual', 'moto-parts': 'On the bike', accessories: 'Accessories' },
+    ru: { intercom: 'Интерком', helmets: 'Шлемы', jackets: 'Куртки', gloves: 'Перчатки', boots: 'Мотоботы', pants: 'Брюки', protection: 'Защита', offroad: 'MX', casual: 'Повседневное', 'moto-parts': 'На мото', accessories: 'Аксессуары' },
+    ar: { intercom: 'إنتركم', helmets: 'خوذات', jackets: 'سترات', gloves: 'قفازات', boots: 'بوت', pants: 'بناطيل', protection: 'حماية', offroad: 'أوف رود', casual: 'يومي', 'moto-parts': 'على الدراجة', accessories: 'إكسسوارات' }
   };
 
   const ALL = { fa: 'همه', tr: 'Tümü', en: 'All', ru: 'Все', ar: 'الكل' };

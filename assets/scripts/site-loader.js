@@ -14,7 +14,7 @@
   if (!el) return;
 
   var BASE = '/assets/scripts/';
-  var ASSET_VER = '20260919ah';
+  var ASSET_VER = '20260920b';
 
   // Inline page boots run before deferred chain scripts; queue until bootstrap.js.
   window.bizdavarPageInit = window.bizdavarPageInit || function (fn) {
@@ -68,7 +68,8 @@
 
   var chain = [
     'config/paths.js',
-    'config/site-config.js'
+    'config/site-config.js',
+    'i18n/locale-url.js'
   ].concat(afterConfig, [
     'i18n/locales.js'
   ], afterLocales, i18nPacks, afterSeo, [

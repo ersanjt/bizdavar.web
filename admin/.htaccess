@@ -1,17 +1,20 @@
 Options -Indexes
 
-# Extra lock on /admin — activate by creating .htpasswd in this folder:
-#   htpasswd -cB admin/.htpasswd YOUR_USER
-# Then set AuthUserFile to the absolute server path if the prompt does not appear.
+# Extra lock on /admin: use cPanel → Directory Privacy, or uncomment
+# the block below AFTER creating .htpasswd with an ABSOLUTE path.
 #
-# Optional IP lock (uncomment and use real IPs only):
-#   Require ip 203.0.113.10
+# Do not use <IfFile> or AuthUserFile "${DOCUMENT_ROOT}/..." — both
+# 500 on LiteSpeed/cPanel when credentials are submitted.
 #
-<IfFile .htpasswd>
-  AuthType Basic
-  AuthName "BizHub"
-  AuthUserFile "${DOCUMENT_ROOT}/admin/.htpasswd"
-  <RequireAll>
-    Require valid-user
-  </RequireAll>
-</IfFile>
+#   htpasswd -c /home/bizdavar/public_html/admin/.htpasswd YOUR_USER
+#   (omit -B; bcrypt hashes 500 on LiteSpeed)
+#
+# AuthType Basic
+# AuthName "BizHub"
+# AuthUserFile /home/bizdavar/public_html/admin/.htpasswd
+# Require valid-user
+
+# Stop parent ErrorDocument from looping on 401/500 inside /admin/
+ErrorDocument 401 default
+ErrorDocument 403 default
+ErrorDocument 500 default

@@ -87,13 +87,13 @@
         seoKeywords: 'Liqui Moly, Octane Plus, Top Tec, Molygen, روغن موتور, افزودنی بنزین, بیزدوار'
       },
       autoMoto: {
-        seoTitle: 'اتو‌موتو | فروشگاه موتورسیکلت و قطعات خودرو | بیزدوار',
-        seoDescription: 'اتو‌موتو بیزدوار دو فروشگاه جدا دارد: تجهیزات موتورسیکلت با قیمت دلاری تحویل ایران، و قطعات خودرو (لنت، فیلتر، آرم، رینگ) فقط با استعلام.',
-        seoKeywords: 'اتو‌موتو, تجهیزات موتورسیکلت, قطعات خودرو, لنت ترمز, بیزدوار'
+        seoTitle: 'اتوموتو | فروشگاه موتورسیکلت و فروشگاه ترمز | بیزدوار',
+        seoDescription: 'دو فروشگاه جدا: تجهیزات موتورسیکلت با قیمت دلاری برای تحویل در ایران، و لنت و دیسک ترمز با انتخاب برند و مدل.',
+        seoKeywords: 'اتوموتو, تجهیزات موتورسیکلت, لنت ترمز, دیسک ترمز, بیزدوار'
       },
       motorcycle: {
         seoTitle: 'خرید تجهیزات موتورسیکلت | کلاه، کاپشن و بوت | بیزدوار',
-        seoDescription: 'خرید تجهیزات موتورسیکلت از بیزدوار: کلاه ایمنی، کاپشن، دستکش، شلوار، بوت، اینترکام و محافظ. قیمت روی کارت به دلار و برای تحویل در ایران است. اگر قیمت نباشد، فقط استعلام است.',
+        seoDescription: 'خرید تجهیزات موتورسیکلت از بیزدوار: کلاه ایمنی، کاپشن، دستکش، شلوار، بوت، اینترکام و محافظ. قیمت روی کارت به دلار است و برای تحویل در ایران. اگر قیمت نباشد، فقط استعلام می‌کنیم.',
         seoKeywords: 'تجهیزات موتورسیکلت, کلاه ایمنی موتور, کاپشن موتور, دستکش موتور, بوت موتور, اینترکام, بیزدوار'
       },
       carParts: {
@@ -329,13 +329,13 @@
         seoKeywords: 'Liqui Moly, Octane Plus, motor yağı, Bizdavar'
       },
       autoMoto: {
-        seoTitle: 'Auto-Moto | motosiklet ve oto parçası | Bizdavar',
-        seoDescription: 'Bizdavar Auto-Moto iki ayrı mağaza: motosiklet ekipmanı İran teslim USD, oto parçası (balata, filtre, arma, jant) yalnızca teklif.',
-        seoKeywords: 'Auto-Moto, motosiklet ekipmanı, oto parçası, Bizdavar'
+        seoTitle: 'Auto-Moto | motosiklet ekipmanı ve fren parçaları | Bizdavar',
+        seoDescription: 'İki ayrı mağaza. Motosiklet ekipmanının fiyatı kartta dolar olarak yazar ve İran teslimi içindir. Fren mağazasında balata ve diski araç markasına göre seçersiniz.',
+        seoKeywords: 'Auto-Moto, motosiklet ekipmanı, fren balatası, fren diski, Bizdavar'
       },
       motorcycle: {
         seoTitle: 'Motosiklet ekipmanı | kask, mont ve bot | Bizdavar',
-        seoDescription: 'Bizdavar motosiklet ekipmanı: kask, mont, eldiven, pantolon, bot, interkom ve koruma. Kart fiyatı İran teslimi için dolardır. Fiyat yoksa teklif.',
+        seoDescription: 'Bizdavar motosiklet ekipmanı: kask, mont, eldiven, pantolon, bot, interkom ve koruma. Karttaki fiyat ABD dolarıdır ve İran teslimi içindir. Fiyat yoksa yalnızca teklif alınır.',
         seoKeywords: 'motosiklet ekipmanı, motosiklet kask, motosiklet mont, motosiklet bot, interkom, Bizdavar'
       },
       carParts: {
@@ -653,13 +653,13 @@
         seoKeywords: 'Liqui Moly, Octane Plus, engine oil, Bizdavar'
       },
       autoMoto: {
-        seoTitle: 'Auto-Moto | motorcycle gear and car parts | Bizdavar',
-        seoDescription: 'Bizdavar Auto-Moto is two separate shops: motorcycle gear with Iran-delivery USD, and car parts (pads, filters, emblems, rims) by inquiry only.',
-        seoKeywords: 'Auto-Moto, motorcycle gear, car parts, Bizdavar'
+        seoTitle: 'Auto-Moto | motorcycle gear and brake parts | Bizdavar',
+        seoDescription: 'Two separate shops. Motorcycle gear is priced in US dollars for delivery in Iran. The brake shop lists pads and discs by vehicle brand and model.',
+        seoKeywords: 'Auto-Moto, motorcycle gear, brake pads, brake discs, Bizdavar'
       },
       motorcycle: {
         seoTitle: 'Motorcycle gear | helmets, jackets and boots | Bizdavar',
-        seoDescription: 'Motorcycle gear from Bizdavar: helmets, jackets, gloves, pants, boots, intercoms and protection. Card prices are USD for delivery in Iran. If there is no price, request a quote.',
+        seoDescription: 'Motorcycle gear from Bizdavar: helmets, jackets, gloves, pants, boots, intercoms and armour. Card prices are in US dollars, for delivery in Iran. If there is no price, we quote on request.',
         seoKeywords: 'motorcycle gear, motorcycle helmet, motorcycle jacket, motorcycle boots, intercom, Bizdavar'
       },
       carParts: {

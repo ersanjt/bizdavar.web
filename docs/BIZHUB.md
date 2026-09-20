@@ -112,8 +112,8 @@ Use the admin email/password from install.
 - Installer is CLI-only, requires `--key`, self-deletes, and Apache denies HTTP access to `install.php` and `storage/`
 - `/leads` and `/dashboard/stats` require role `admin`, `editor`, or `sales`
 - TOTP MFA is required by default (`security.require_mfa`)
-- Extra `/admin` lock: create `admin/.htpasswd` (Basic Auth). Optional `security.admin_allow_ips` — only real IPs, never placeholders
-- Do not enable BizHub (`site-config.js`) until MFA is enrolled and `/admin` Basic Auth is on
+- Extra `/admin` lock: cPanel → Directory Privacy on `admin/`, or `htpasswd -c /home/bizdavar/public_html/admin/.htpasswd USER` then uncomment the absolute `AuthUserFile` in `admin/.htaccess`. Do not use `<IfFile>` or `${DOCUMENT_ROOT}` (LiteSpeed 500). Omit `htpasswd -B` (bcrypt 500s on LiteSpeed). Optional `security.admin_allow_ips` — only real IPs, never placeholders
+- Do not enable BizHub (`site-config.js`) until MFA is enrolled. Extra Basic Auth is optional and must use an absolute `AuthUserFile` path
 
 ---
 

@@ -44,6 +44,7 @@ rsync -av --delete \
   --exclude '*.zip' \
   --exclude .cursor/ \
   --exclude api/config.php \
+  --exclude admin/.htpasswd \
   --exclude media/catalog/ \
   --exclude media/review/ \
   "$REPO/" "$WEB/"

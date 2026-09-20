@@ -78,12 +78,16 @@
       title: 'کلاه ایمنی موتور',
       titleEn: 'Motorcycle helmets',
       titleTr: 'Motosiklet kaskları',
+      titleRu: 'Мотошлемы',
+      titleAr: 'خوذات الدراجات النارية',
       icon: 'shield',
       image: CAT + 'motorcycle-helmet.svg',
       imageAlt: 'کلاه ایمنی موتورسیکلت — تمام‌صورت، فک‌متحرک و کراس',
       desc: 'کلاه تمام‌صورت، فک‌متحرک، باز و کراس با استاندارد ECE — رنگ، سایز و مشخصات هر مدل را در کارت ببینید.',
       descTr: 'Tam yüz, çene açılır, açık ve kros kasklar. Renk, beden ve stok kartta.',
       descEn: 'Full-face, modular, open and MX helmets. See color, size and stock on the card.',
+      descRu: 'Интегралы, модуляры, открытые и кроссовые шлемы ECE. Цвет, размер и наличие — на карточке.',
+      descAr: 'خوذات وجه كامل وفك متحرك ومفتوحة وموتوكروس بمعيار ECE. اللون والمقاس والتوفر على البطاقة.',
       series: [
         series('bd-hm-ff06', 'کلاه ایمنی تمام‌صورت شهری ECE 22.06', 'Urban full-face helmet ECE 22.06', 'Şehir tam yüz kask ECE 22.06', 5690, CAT + 'motorcycle-helmet.svg', {
           featured: true,
@@ -251,12 +255,16 @@
       title: 'اینترکام و دوربین',
       titleEn: 'Intercom & camera',
       titleTr: 'Interkom ve kamera',
+      titleRu: 'Интерком и камера',
+      titleAr: 'إنتركم وكاميرا',
       icon: 'phone',
       image: CAT + 'motorcycle-intercom.svg',
       imageAlt: 'اینترکام بلوتوث و دوربین موتورسیکلت',
       desc: 'هندزفری بلوتوث، اینترکام جفت و دوربین ثبت مسیر — نصب روی بیشتر کلاه‌های استاندارد.',
       descTr: 'Bluetooth interkom, çift set ve kamera. Çoğu standart kaska takılır.',
       descEn: 'Bluetooth intercom, pair kits and cameras for standard helmets.',
+      descRu: 'Bluetooth-интерком, парные комплекты и камеры для стандартных шлемов.',
+      descAr: 'إنتركم بلوتوث وأطقم زوجية وكاميرات للخوذات القياسية.',
       series: [
         series('bd-ic-bt1', 'اینترکام بلوتوث تک‌نفره', 'Single Bluetooth intercom', 'Tekli Bluetooth interkom', 2400, CAT + 'motorcycle-intercom.svg', { featured: true, specs: 'BT 5.1', features: ['موسیقی و تماس', 'ضدآب', 'شارژ USB-C'] }),
         series('bd-ic-pair', 'اینترکام جفت راننده و ترک‌نشین', 'Rider–passenger intercom pair', 'Çift interkom', 4100, CAT + 'motorcycle-intercom.svg', { specs: 'Mesh pair' }),
@@ -270,12 +278,16 @@
       title: 'کاپشن و لباس موتور',
       titleEn: 'Motorcycle jackets',
       titleTr: 'Motosiklet montları',
+      titleRu: 'Мотокуртки',
+      titleAr: 'سترات الدراجات النارية',
       icon: 'bag',
       image: CAT + 'motorcycle-jacket.svg',
       imageAlt: 'کاپشن موتور چرمی و پارچه‌ای با محافظ CE',
       desc: 'کاپشن چرم، پارچه‌ای چهارفصل و ضدآب — محافظ شانه و آرنج CE.',
       descTr: 'Deri, tekstil, 3 mevsim ve Gore-Tex montlar. Kadın ve çocuk modelleri dahil.',
       descEn: 'Leather, textile, 3-season and Gore-Tex jackets, including women and kids.',
+      descRu: 'Кожа, текстиль, три сезона и Gore-Tex — включая женские и детские модели.',
+      descAr: 'سترات جلد وقماش وثلاثة فصول وGore-Tex، بما فيها النسائي والأطفال.',
       series: [
         series('bd-jk-leather', 'کاپشن چرمی چهارفصل با محافظ CE', 'Leather CE touring jacket', 'Deri CE mont', 8900, CAT + 'motorcycle-jacket.svg', {
           featured: true,
@@ -327,12 +339,16 @@
       title: 'شلوار موتور',
       titleEn: 'Motorcycle pants',
       titleTr: 'Motosiklet pantolonları',
+      titleRu: 'Мотобрюки',
+      titleAr: 'بناطيل الدراجات النارية',
       icon: 'toolbox',
       image: CAT + 'motorcycle-pants.svg',
       imageAlt: 'شلوار موتور با محافظ زانو',
       desc: 'شلوار پارچه‌ای، جین تقویتی و ضدآب با محافظ زانو.',
       descTr: 'Yazlık, 3 mevsim, Gore-Tex, jean ve kadın pantolonlar.',
       descEn: 'Summer, 3-season, Gore-Tex, jeans and women pants.',
+      descRu: 'Летние, трёхсезонные, Gore-Tex, джинсы и женские мотобрюки.',
+      descAr: 'صيفي وثلاثة فصول وGore-Tex وجينز وبناطيل نسائية.',
       series: [
         series('bd-pt-tour', 'شلوار تورینگ با محافظ زانو', 'Touring pants with knee armor', 'Diz korumalı pantolon', 4100, CAT + 'motorcycle-pants.svg', {
           featured: true,
@@ -366,12 +382,16 @@
       title: 'دستکش موتور',
       titleEn: 'Motorcycle gloves',
       titleTr: 'Motosiklet eldivenleri',
+      titleRu: 'Мотоперчатки',
+      titleAr: 'قفازات الدراجات النارية',
       icon: 'handshake',
       image: CAT + 'motorcycle-gloves.svg',
       imageAlt: 'دستکش موتور تابستانه، زمستانه و چرمی',
       desc: 'دستکش تابستانه، زمستانه و چرمی با محافظ بند انگشت.',
       descTr: 'Yazlık, 3 mevsim, deri ve Gore-Tex eldivenler.',
       descEn: 'Summer, 3-season, leather and Gore-Tex gloves.',
+      descRu: 'Летние, трёхсезонные, кожаные и Gore-Tex мотоперчатки.',
+      descAr: 'قفازات صيفية وثلاثة فصول وجلد وGore-Tex.',
       series: [
         series('bd-gl-sum', 'دستکش تابستانه تهویه‌دار', 'Ventilated summer gloves', 'Yazlık eldiven', 980, CAT + 'motorcycle-gloves.svg', {
           featured: true,
@@ -412,12 +432,16 @@
       title: 'بوت و کفش موتور',
       titleEn: 'Motorcycle boots',
       titleTr: 'Motosiklet botları',
+      titleRu: 'Мотоботы',
+      titleAr: 'بوت الدراجات النارية',
       icon: 'bag',
       image: CAT + 'motorcycle-boots.svg',
       imageAlt: 'بوت موتور شهری و آفرود',
       desc: 'بوت شهری، تورینگ و آفرود با زیره ضدلغزش.',
       descTr: 'Yazlık, 3 mevsim, Gore-Tex ve kadın botlar.',
       descEn: 'Summer, 3-season, Gore-Tex and women boots.',
+      descRu: 'Летние, трёхсезонные, Gore-Tex и женские мотоботы.',
+      descAr: 'بوت صيفي وثلاثة فصول وGore-Tex ونسائي.',
       series: [
         series('bd-bt-urban', 'بوت شهری کوتاه', 'Short urban riding boot', 'Kısa şehir botu', 3200, CAT + 'motorcycle-boots.svg', {
           featured: true,
@@ -452,12 +476,16 @@
       title: 'محافظ بدن',
       titleEn: 'Body protection',
       titleTr: 'Vücut koruma',
+      titleRu: 'Защита тела',
+      titleAr: 'حماية الجسم',
       icon: 'shield',
       image: CAT + 'motorcycle-protection.svg',
       imageAlt: 'محافظ کمر، زانو، آرنج و گردن موتورسیکلت',
       desc: 'محافظ کمر، زانو، آرنج، سینه و گردن با سطح CE.',
       descTr: 'Sırtlık, diz-dirsek, göğüs, airbag ve bel koruma.',
       descEn: 'Back, knee, chest, airbag and waist protection.',
+      descRu: 'Спина, колени, грудь, подушка безопасности и пояс.',
+      descAr: 'حماية الظهر والركبة والصدر والوسادة الهوائية والخصر.',
       series: [
         series('bd-pr-back', 'محافظ کمر CE', 'CE back protector', 'Sırt koruması', 1450, CAT + 'motorcycle-protection.svg', { featured: true, specs: 'CE Level 2' }),
         series('bd-pr-knee', 'محافظ زانو و ساق', 'Knee and shin guard', 'Diz-baldır koruma', 1100, CAT + 'motorcycle-protection.svg'),
@@ -471,12 +499,16 @@
       title: 'آفرود و کراس',
       titleEn: 'MX & off-road',
       titleTr: 'MX ve off-road',
+      titleRu: 'MX и оффроуд',
+      titleAr: 'موتوكروس وأوف رود',
       icon: 'bolt',
       image: CAT + 'motorcycle-offroad.svg',
       imageAlt: 'لباس و تجهیزات موتور کراس و اندرو',
       desc: 'ست لباس کراس، عینک، محافظ بدن و بوت آفرود.',
       descTr: 'MX bot, gözlük, jersey, pantolon ve genç/çocuk off-road.',
       descEn: 'MX boots, goggles, jersey, pants and youth off-road.',
+      descRu: 'Мотоботы MX, очки, джерси, брюки и детский оффроуд.',
+      descAr: 'بوت موتوكروس ونظارات وجيرسي وبناطيل وأوف رود للشباب.',
       series: [
         series('bd-mx-kit', 'ست لباس کراس پیراهن و شلوار', 'MX jersey and pant kit', 'MX forma takımı', 2800, CAT + 'motorcycle-offroad.svg', { featured: true }),
         series('bd-mx-gog', 'عینک کراس ضدبخار', 'Anti-fog MX goggles', 'MX gözlük', 720, CAT + 'motorcycle-offroad.svg'),
@@ -489,12 +521,16 @@
       title: 'اکسسوری موتور',
       titleEn: 'Rider accessories',
       titleTr: 'Sürücü aksesuarı',
+      titleRu: 'Аксессуары райдера',
+      titleAr: 'إكسسوارات الراكب',
       icon: 'bag',
       image: CAT + 'motorcycle-accessory.svg',
       imageAlt: 'کوله، گردن‌پوش، بارانی و اکسسوری موتورسوار',
       desc: 'کوله، گردن‌پوش، بالاکلاوا، کاور باران و کیف باک.',
       descTr: 'Yelek, yağmurluk, boyunluk, balaklava, hediyelik ve sürücü çantası.',
       descEn: 'Vests, rainwear, neck tubes, balaclava, gifts and rider bags.',
+      descRu: 'Жилеты, дождевики, баффы, балаклава, подарки и сумки райдера.',
+      descAr: 'سترات مطر وأنابيب رقبة وبلالاكلفا وهدايا وحقائب الراكب.',
       series: [
         series('bd-ax-bag', 'کوله و کیف باک ضدآب', 'Waterproof tank / backpack', 'Su geçirmez çanta', 1900, CAT + 'motorcycle-accessory.svg', { featured: true }),
         series('bd-ax-neck', 'گردن‌پوش و بالاکلاوا', 'Neck tube and balaclava', 'Boyunluk ve maske', 320, CAT + 'motorcycle-accessory.svg'),
@@ -508,12 +544,16 @@
       title: 'قطعات روی موتور',
       titleEn: 'Motorcycle parts',
       titleTr: 'Motor üzeri parçalar',
+      titleRu: 'Детали на мотоцикл',
+      titleAr: 'قطع على الدراجة النارية',
       icon: 'wrench',
       image: CAT + 'motorcycle-parts.svg',
       imageAlt: 'چراغ، آینه، اگزوز و قطعات روی موتورسیکلت',
       desc: 'چراغ، آینه، محافظ دست، زنجیر و قطعات ظاهری موتور.',
       descTr: 'Telefon tutucu, kilit, branda, çanta, yağ ve bakım.',
       descEn: 'Phone mounts, locks, covers, bags, oil and care.',
+      descRu: 'Держатели телефона, замки, чехлы, сумки, масло и уход.',
+      descAr: 'حوامل هاتف وأقفال وأغطية وحقائب وزيت وعناية.',
       series: [
         series('bd-mp-light', 'چراغ جلو LED موتور', 'LED motorcycle headlight', 'LED far', 1350, CAT + 'motorcycle-parts.svg', { featured: true }),
         series('bd-mp-mirror', 'جفت آینه موتور', 'Motorcycle mirror pair', 'Ayna takımı', 420, CAT + 'motorcycle-parts.svg'),
@@ -524,14 +564,34 @@
   ];
 
   const groupCopy = {
-    moto: { title: 'تجهیزات موتورسیکلت', desc: 'کلاه، اینترکام، لباس، بوت، محافظ و قطعات روی موتور' }
+    moto: {
+      title: 'تجهیزات موتورسیکلت',
+      titleTr: 'Motosiklet ekipmanı',
+      titleEn: 'Motorcycle gear',
+      titleRu: 'Мотоэкипировка',
+      titleAr: 'معدات الدراجات النارية',
+      desc: 'کلاه، اینترکام، لباس، بوت، محافظ و قطعات روی موتور',
+      descTr: 'Kask, interkom, giyim, bot, koruma ve motor üzeri parçalar',
+      descEn: 'Helmets, intercoms, apparel, boots, armour and on-bike parts',
+      descRu: 'Шлемы, интерком, одежда, мотоботы, защита и детали на мото',
+      descAr: 'خوذات وإنتركم وملابس وبوت وحماية وقطع على الدراجة النارية'
+    }
   };
   const seenFamily = {};
   categories.forEach(function (cat) {
     if (cat.family && !seenFamily[cat.family] && groupCopy[cat.family]) {
       seenFamily[cat.family] = true;
-      cat.groupTitle = groupCopy[cat.family].title;
-      cat.groupDesc = groupCopy[cat.family].desc;
+      const g = groupCopy[cat.family];
+      cat.groupTitle = g.title;
+      cat.groupTitleTr = g.titleTr;
+      cat.groupTitleEn = g.titleEn;
+      cat.groupTitleRu = g.titleRu;
+      cat.groupTitleAr = g.titleAr;
+      cat.groupDesc = g.desc;
+      cat.groupDescTr = g.descTr;
+      cat.groupDescEn = g.descEn;
+      cat.groupDescRu = g.descRu;
+      cat.groupDescAr = g.descAr;
     }
   });
 
@@ -572,7 +632,7 @@
       heroStats: [
         { value: String(products.length) + '+', label: 'محصول در کاتالوگ' },
         { value: 'USD', label: 'تحویل ایران' },
-        { value: '۱۱', label: 'دسته کالا' }
+        { value: '11', label: 'دسته کالا' }
       ]
     },
     trustSignals: [
@@ -799,12 +859,16 @@
       title: 'لباس روزمره موتور',
       titleEn: 'Casual rider wear',
       titleTr: 'Casual giyim',
+      titleRu: 'Повседневная мотоодежда',
+      titleAr: 'ملابس يومية للراكب',
       icon: 'bag',
       image: CAT + 'motorcycle-accessory.svg',
       imageAlt: 'تیشرت، سویشرت و کلاه کپ موتورسوار',
       desc: 'تیشرت، سویشرت، کلاه کپ و لباس روزمره کنار تجهیزات موتور.',
       descTr: 'Tişört, sweatshirt, şapka ve günlük sürücü giyimi.',
       descEn: 'T-shirts, hoodies, caps and casual rider wear.',
+      descRu: 'Футболки, худи, кепки и повседневная одежда райдера.',
+      descAr: 'تيشيرتات وهوديز وقبعات وملابس يومية للراكب.',
       series: []
     }
   };

@@ -155,6 +155,8 @@ window.createSupplyBrandPage = function (cfg) {
     const lang = locale();
     const raw = lang === 'tr' ? (item.categoryTr || item.leafTr || '')
       : lang === 'en' ? (item.categoryEn || item.leafEn || item.categoryTr || '')
+      : lang === 'ru' ? (item.categoryRu || item.categoryEn || item.leafEn || item.leafTr || '')
+      : lang === 'ar' ? (item.categoryAr || item.categoryEn || item.leafEn || '')
       : (item.categoryFa || item.leafFa || item.specs || '');
     if (!raw) return '';
     if ((lang === 'tr' || lang === 'en' || lang === 'ru') && isFaScript(raw)) return '';

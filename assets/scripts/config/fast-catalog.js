@@ -190,7 +190,7 @@ window.FAST_CATALOG = {
   ],
 
   showcases: [
-    { name: 'BZ Diamond', category: 'فروشگاه جواهرات', slug: 'pages/bz-diamond', internal: true, thumb: 'assets/images/partners/zeddiamond.png' },
+    { name: 'BZ Diamond', category: 'فروشگاه جواهرات', slug: 'pages/bz-diamond', internal: true, hidden: true, thumb: 'assets/images/partners/zeddiamond.png' },
     { name: 'Supplify Trade', category: 'تجارت بین‌المللی B2B', slug: 'pages/supplify-trade', internal: true, thumb: 'assets/images/partners/supplify-trade.svg' },
     { name: 'Kaya One AG', category: 'تجارت سوئیسی B2B', slug: 'pages/kaya-one', internal: true, thumb: 'assets/images/partners/kaya-one.svg' },
     { name: 'SMM Turk', category: 'پنل SMM', slug: 'pages/smm-turk', internal: true, thumb: 'assets/images/partners/smm-turk.svg' },

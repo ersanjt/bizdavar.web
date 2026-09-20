@@ -267,10 +267,10 @@
     getPortfolioItems() {
       const base = window.BIZDAVAR_CONFIG?.portfolio || [];
       const localized = this.raw('portfolioMeta');
-      if (!localized || typeof localized !== 'object' || Array.isArray(localized)) {
-        return this.mergeLocalizedList('portfolioMeta', base);
-      }
-      return base.map(p => ({ ...p, ...(localized[p.name] || {}) }));
+      const items = (!localized || typeof localized !== 'object' || Array.isArray(localized))
+        ? this.mergeLocalizedList('portfolioMeta', base)
+        : base.map(p => ({ ...p, ...(localized[p.name] || {}) }));
+      return items.filter(p => window.isPortfolioPublic ? window.isPortfolioPublic(p) : p.hidden !== true);
     },
 
     getServicesPageCards() {
@@ -423,7 +423,8 @@
           return {
             ...s,
             name: pick(s, 'name') || s.name,
-            hint: pick(s, 'hint') || s.hint
+            hint: pick(s, 'hint') || s.hint,
+            tag: pick(s, 'tag') || s.tag
           };
         }),
         highlights: (cat.highlights || []).map(h => ({
@@ -434,6 +435,8 @@
           ...c,
           title: pick(c, 'title') || c.title,
           desc: pick(c, 'desc') || c.desc,
+          groupTitle: pick(c, 'groupTitle') || c.groupTitle,
+          groupDesc: pick(c, 'groupDesc') || c.groupDesc,
           imageAlt: lang === 'fa'
             ? (c.imageAltFa || c.imageAlt)
             : lang === 'tr'

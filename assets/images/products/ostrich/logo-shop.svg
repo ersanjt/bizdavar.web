@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 180" role="img" aria-label="Bizdavar Ostrich">
+  <title>Bizdavar Ostrich</title>
+  <rect width="720" height="180" rx="20" fill="#171513"/>
+  <g fill="#c4a574">
+    <circle cx="48" cy="62" r="8"/>
+    <circle cx="74" cy="62" r="8"/>
+    <circle cx="100" cy="62" r="8"/>
+    <circle cx="61" cy="88" r="8"/>
+    <circle cx="87" cy="88" r="8"/>
+    <circle cx="74" cy="114" r="8"/>
+  </g>
+  <text x="132" y="118" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="72" font-weight="700" letter-spacing="-0.04em">
+    <tspan fill="#f4f4f4">Bizda</tspan><tspan fill="#e3191f">var</tspan>
+  </text>
+</svg>

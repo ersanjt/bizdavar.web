@@ -665,9 +665,9 @@
 
       name: t('seo.schemaPortfolio', 'نمونه‌کارهای بیزدوار گروپ'),
 
-      numberOfItems: C.portfolio.filter(p => !p.archived).length,
+      numberOfItems: C.portfolio.filter(p => !p.archived && p.hidden !== true).length,
 
-      itemListElement: C.portfolio.filter(p => !p.archived).map((p, i) => ({
+      itemListElement: C.portfolio.filter(p => !p.archived && p.hidden !== true).map((p, i) => ({
 
         '@type': 'ListItem',
 

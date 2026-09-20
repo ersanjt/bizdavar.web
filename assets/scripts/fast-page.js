@@ -347,7 +347,7 @@
   function renderShowcase() {
     const el = document.getElementById('fastShowcaseGrid');
     if (!el) return;
-    el.innerHTML = F.showcases.map((s) => {
+    el.innerHTML = F.showcases.filter((s) => !s.hidden).map((s) => {
       const url = showcaseUrl(s);
       const ext = !s.internal;
       const thumb = s.thumb ? path(s.thumb) : '';

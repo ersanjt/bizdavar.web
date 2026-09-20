@@ -101,7 +101,7 @@ if (!is_dir($lockDir)) {
 file_put_contents($lockFile, date('c') . "\n");
 
 echo "\nDone. Remove install_key and admin_password from config.php.\n";
-echo "Enable MFA on first BizHub login. Optionally set security.admin_allow_ips and create admin/.htpasswd.\n";
+echo "Enable MFA on first BizHub login. Extra /admin lock: cPanel Directory Privacy (not IfFile/.htpasswd bcrypt).\n";
 
 if (@unlink(__FILE__)) {
     echo "install.php deleted.\n";

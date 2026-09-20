@@ -10683,6 +10683,11 @@ body[data-page="home"] .industrial-card:nth-child(9) {
   min-height: 300px;
 }
 
+body[data-page="home"] .industrial-card:last-child {
+  grid-column: span 12;
+  min-height: 340px;
+}
+
 body[data-page="home"] .industrial-card--link:hover,
 body[data-page="home"] .industrial-card--link:focus-visible {
   transform: translateY(-4px);
@@ -10766,6 +10771,20 @@ body[data-page="home"] .industrial-card[data-brand="car-parts"] .industrial-card
   object-position: center center;
   transform: none;
   padding: 0;
+}
+
+body[data-page="home"] .industrial-card[data-brand="ostrich"] .industrial-card__media {
+  background: #0c0b0a;
+}
+
+body[data-page="home"] .industrial-card[data-brand="ostrich"] .industrial-card__media img {
+  object-fit: cover;
+  object-position: center 52%;
+  transform: none;
+}
+
+body[data-page="home"] .industrial-card[data-brand="ostrich"]::after {
+  background: linear-gradient(180deg, rgba(12, 12, 10, 0.1) 0 46%, rgba(12, 12, 10, 0.9) 86%);
 }
 
 body[data-page="home"] .industrial-card[data-brand="uwt"] .industrial-card__media {
@@ -10872,7 +10891,9 @@ body[data-page="home"] .industrial-card--link:focus-visible .industrial-card__me
 body[data-page="home"] .industrial-card[data-brand="vega"]:hover .industrial-card__media img,
 body[data-page="home"] .industrial-card[data-brand="vega"]:focus-visible .industrial-card__media img,
 body[data-page="home"] .industrial-card[data-brand="gamak"]:hover .industrial-card__media img,
-body[data-page="home"] .industrial-card[data-brand="gamak"]:focus-visible .industrial-card__media img {
+body[data-page="home"] .industrial-card[data-brand="gamak"]:focus-visible .industrial-card__media img,
+body[data-page="home"] .industrial-card[data-brand="ostrich"]:hover .industrial-card__media img,
+body[data-page="home"] .industrial-card[data-brand="ostrich"]:focus-visible .industrial-card__media img {
   transform: none;
 }
 
@@ -10934,7 +10955,8 @@ html[dir="ltr"] body[data-page="home"] .service-card--media::before {
     min-height: 260px;
   }
 
-  body[data-page="home"] .industrial-card:first-child {
+  body[data-page="home"] .industrial-card:first-child,
+  body[data-page="home"] .industrial-card:last-child {
     grid-column: 1 / -1;
     min-height: 320px;
   }

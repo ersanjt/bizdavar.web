@@ -44,9 +44,10 @@
   }
 
   function getPortfolioList() {
-    return window.BIZDAVAR_I18N?.getPortfolioItems
+    const list = window.BIZDAVAR_I18N?.getPortfolioItems
       ? window.BIZDAVAR_I18N.getPortfolioItems()
       : C.portfolio;
+    return (list || []).filter(p => window.isPortfolioPublic ? window.isPortfolioPublic(p) : p.hidden !== true);
   }
 
   function isArchived(p) {
@@ -60,17 +61,19 @@
     const roles = { client: 0, 'case-study': 0, ecosystem: 0 };
     portfolio.forEach(p => { if (roles[p.role] !== undefined) roles[p.role]++; });
     const labels = rawOr('portfolioPage.statsLabels', ['پروژه و برند', 'نمونه‌کار', 'مشتری', 'اکوسیستم']);
-    el.innerHTML = [
+    const stats = [
       { value: String(portfolio.length), label: labels[0] },
       { value: String(roles['case-study']), label: labels[1] },
       { value: String(roles.client), label: labels[2] },
       { value: String(roles.ecosystem), label: labels[3] }
-    ].map(s => `
+    ].filter((s, i) => i === 0 || Number(s.value) > 0);
+    el.innerHTML = stats.map(s => `
       <div class="portfolio-stat">
         <strong>${s.value}</strong>
         <span>${s.label}</span>
       </div>
     `).join('');
+    el.style.setProperty('--stat-cols', String(Math.max(stats.length, 2)));
   }
 
   function renderFilters() {
@@ -101,49 +104,47 @@
     const portfolio = getPortfolioList().filter(p => !isArchived(p));
     const roleLabels = rawOr('portfolioPage.roleLabels', ROLE_LABELS);
 
-    el.innerHTML = portfolio.map(p => {
+    el.innerHTML = portfolio.map((p, i) => {
       const group = getGroup(p.category);
       const role = p.role || 'client';
       const url = getUrl(p);
       const external = !p.internal;
       const roleLabel = roleLabels[role] || (external ? roleLabels.website || 'وبسایت' : roleLabels.page || 'صفحه بیزدوار');
-      const logoHtml = p.logo
-        ? `<div class="portfolio-card__logo${p.appStoreUrl ? ' portfolio-card__logo--app' : ''}"><img src="${path(p.logo)}" alt="${p.name} logo" loading="lazy" width="160" height="52"></div>`
-        : `<div class="portfolio-card__logo portfolio-card__logo--text"><span>${p.name}</span></div>`;
+      const viewLabel = role === 'case-study' && p.internal
+        ? t('common.viewPage', 'مشاهده صفحه')
+        : external ? t('common.viewSite', 'مشاهده وبسایت') : t('common.viewPage', 'مشاهده صفحه');
+      const extAttrs = external ? ' target="_blank" rel="noopener noreferrer"' : '';
+      const logoClass = p.appStoreUrl ? ' portfolio-card__logo--app' : (p.logo ? '' : ' portfolio-card__logo--text');
+      const logoInner = p.logo
+        ? `<img src="${path(p.logo)}" alt="${p.name} logo" loading="lazy" width="160" height="52">`
+        : `<span>${p.name}</span>`;
 
       return `
-        <article class="portfolio-card portfolio-card--pro portfolio-card--${role}" data-group="${group}" data-role="${role}" data-name="${p.name}">
-          ${logoHtml}
+        <article class="portfolio-card portfolio-card--pro portfolio-card--${role}" data-group="${group}" data-role="${role}" data-name="${p.name}" style="--reveal-delay:${Math.min(i, 11) * 35}ms">
+          <a class="portfolio-card__hit" href="${url}"${extAttrs} aria-label="${p.name}"></a>
+          <div class="portfolio-card__media">
+            <div class="portfolio-card__logo${logoClass}">${logoInner}</div>
+            <span class="portfolio-card__badge portfolio-card__badge--${role}">${roleLabel}</span>
+          </div>
           <div class="portfolio-card__body">
-            <div class="portfolio-card__top">
-              <h3>${p.name}</h3>
-              <span class="portfolio-card__cat">${p.category}</span>
-            </div>
+            <p class="portfolio-card__cat">${p.category}</p>
+            <h3>${p.name}</h3>
             <p class="portfolio-card__domain" dir="ltr">${p.domain}</p>
             ${p.note ? `<p class="portfolio-card__note">${p.note}</p>` : ''}
             <div class="portfolio-card__footer">
-              <span class="portfolio-card__badge portfolio-card__badge--${role}">${roleLabel}</span>
+              <span class="portfolio-card__link">${viewLabel}${arrow()}</span>
               ${p.appStoreUrl ? `
-              <span class="portfolio-card__links">
-                <a href="${url}" class="portfolio-card__link"
-                   ${external ? 'target="_blank" rel="noopener noreferrer"' : ''}>
-                  ${role === 'case-study' && p.internal ? t('common.viewPage', 'مشاهده صفحه') : external ? t('common.viewSite', 'مشاهده وبسایت') : t('common.viewPage', 'مشاهده صفحه')}${arrow()}
-                </a>
-                <a href="${p.appStoreUrl}" class="portfolio-card__link portfolio-card__link--app"
-                   target="_blank" rel="noopener noreferrer">
-                  ${t('common.viewAppStore', 'App Store')}${arrow()}
-                </a>
-              </span>` : `
-              <a href="${url}" class="portfolio-card__link"
-                 ${external ? 'target="_blank" rel="noopener noreferrer"' : ''}>
-                ${role === 'case-study' && p.internal ? t('common.viewPage', 'مشاهده صفحه') : external ? t('common.viewSite', 'مشاهده وبسایت') : t('common.viewPage', 'مشاهده صفحه')}${arrow()}
-              </a>`}
+              <a href="${p.appStoreUrl}" class="portfolio-card__link portfolio-card__link--app"
+                 target="_blank" rel="noopener noreferrer">
+                ${t('common.viewAppStore', 'App Store')}${arrow()}
+              </a>` : ''}
             </div>
           </div>
         </article>`;
     }).join('');
 
     bindFilters();
+    pruneEmptyFilters();
     updateCount();
   }
 
@@ -194,11 +195,26 @@
     });
   }
 
+  function pruneEmptyFilters() {
+    const cards = [...document.querySelectorAll('.portfolio-card--pro')];
+    document.querySelectorAll('.portfolio-filters__btn').forEach(btn => {
+      const filter = btn.dataset.filter;
+      if (filter === 'all') return;
+      btn.hidden = !cards.some(card => cardMatchesFilter(card, filter));
+    });
+  }
+
   function updateCount() {
     const el = document.getElementById('portfolioCount');
-    if (!el) return;
+    const empty = document.getElementById('portfolioEmpty');
     const shown = document.querySelectorAll('.portfolio-card--pro:not(.is-hidden)').length;
-    el.textContent = t('portfolioPage.countText', '{count} مورد نمایش داده می‌شود').replace('{count}', shown);
+    if (el) {
+      el.textContent = t('portfolioPage.countText', '{count} مورد نمایش داده می‌شود').replace('{count}', shown);
+    }
+    if (empty) {
+      empty.hidden = shown > 0;
+      if (!shown) empty.textContent = t('portfolioPage.emptyFilter', 'موردی در این فیلتر نیست.');
+    }
   }
 
   window.initPortfolioPage = function () {

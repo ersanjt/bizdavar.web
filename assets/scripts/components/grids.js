@@ -20,7 +20,7 @@
       return `<img src="${src}" alt="${p.name}" loading="lazy" decoding="async" width="640" height="400"${hideBrokenImg()}>`;
     }
     const compact = src.replace(/\.webp$/i, '-800.webp');
-    return `<img src="${compact}" srcset="${compact} 800w, ${compact} 1280w" sizes="(min-width: 1025px) 320px, 46vw" alt="${p.name}" loading="lazy" decoding="async" width="640" height="400"${hideBrokenImg()} onerror="this.onerror=null;this.removeAttribute('srcset');this.src='${src}'">`;
+    return `<img src="${compact}" srcset="${compact} 800w, ${src} 1280w" sizes="(min-width: 1025px) 42vw, 92vw" alt="${p.name}" loading="lazy" decoding="async" width="640" height="400"${hideBrokenImg()} onerror="this.onerror=null;this.removeAttribute('srcset');this.src='${src}'">`;
   }
 
   function displayPair(primary, secondary) {
@@ -293,7 +293,7 @@
 
     const portfolio = (window.BIZDAVAR_I18N?.getPortfolioItems
       ? window.BIZDAVAR_I18N.getPortfolioItems()
-      : C.portfolio).filter(p => !p.archived);
+      : C.portfolio).filter(p => !p.archived && (window.isPortfolioPublic ? window.isPortfolioPublic(p) : p.hidden !== true));
 
     el.innerHTML = portfolio.map(p => {
 
@@ -357,7 +357,7 @@
 
     if (!el || !partners) return;
 
-    const showcase = partners.filter(p => p.role !== 'supplier');
+    const showcase = partners.filter(p => p.role !== 'supplier' && p.hidden !== true);
     const items = limit ? showcase.slice(0, limit) : showcase;
 
     el.innerHTML = items.map(p => {
