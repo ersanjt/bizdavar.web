@@ -4328,8 +4328,8 @@ html[dir="rtl"] .product-subnav {
 .exhibition-card__footer,
 .verified-sources-item__link,
 .achievement-card__footer {
-  overflow-wrap: anywhere;
-  word-break: break-word;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .exhibition-card__head {
@@ -4399,14 +4399,22 @@ html[dir="rtl"] .product-subnav {
 .exhibition-card--media .exhibition-card__figure,
 .exhibition-card--media .exhibition-card__video {
   min-width: 0;
+  aspect-ratio: 16 / 7;
+  max-height: 440px;
+  overflow: hidden;
+  background: #1a1a1a;
 }
 
 .exhibition-card--media .exhibition-card__video video,
 .exhibition-card--media .exhibition-card__figure img {
+  width: 100%;
+  height: 100%;
   max-width: none;
-  min-height: 200px;
-  max-height: 340px;
-  aspect-ratio: 16 / 9;
+  min-height: 0;
+  max-height: none;
+  aspect-ratio: auto;
+  object-fit: cover;
+  object-position: center top;
   border-radius: 0;
   border: 0;
 }
@@ -4428,8 +4436,12 @@ html[dir="rtl"] .product-subnav {
 .exhibition-card__meta div {
   display: flex;
   flex-wrap: wrap;
+  align-items: baseline;
   gap: 0.35rem 0.5rem;
   min-width: 0;
+  padding: 0.28rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(29, 29, 27, 0.045);
 }
 
 .exhibition-card__meta dt {
@@ -4502,12 +4514,23 @@ html[dir="rtl"] .product-subnav {
   padding: 0;
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
 }
 
 .exhibition-card__press-list li {
   margin: 0;
+  max-width: 100%;
+}
+
+.exhibition-card__press-list .service-card__link,
+.exhibition-card__footer .service-card__link,
+.exhibition-card__park .service-card__link {
+  min-height: 0;
+  padding: 0.15rem 0;
+  font-size: 0.875rem;
+  line-height: 1.45;
 }
 
 .heritage-timeline {
@@ -4801,8 +4824,18 @@ html[dir="rtl"] .product-subnav {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 35%;
+  object-position: center top;
   transition: transform 0.45s ease;
+}
+
+.achievement-card__media--product {
+  background: #fff;
+}
+
+.achievement-card__media--product img {
+  object-fit: contain;
+  object-position: center;
+  padding: 0.75rem;
 }
 
 .achievement-card:hover .achievement-card__media img {
@@ -4819,6 +4852,8 @@ html[dir="rtl"] .product-subnav {
 
 .achievement-card__year {
   display: inline-block;
+  align-self: flex-start;
+  width: fit-content;
   margin-bottom: 0.5rem;
   padding: 0.2rem 0.65rem;
   border-radius: var(--radius-full);
@@ -4866,10 +4901,30 @@ html[dir="rtl"] .product-subnav {
 }
 
 .achievement-card__footer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem 0.85rem;
+  display: block;
+  width: 100%;
   margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(29, 29, 27, 0.08);
+}
+
+.achievement-card__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+}
+
+.achievement-card__links .service-card__link {
+  min-height: 0;
+  padding: 0.12rem 0;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.45;
+  max-width: 100%;
 }
 
 @media (min-width: 768px) and (max-width: 899px) {
@@ -4914,6 +4969,7 @@ html[dir="rtl"] .product-subnav {
 }
 
 .verified-sources-group {
+  height: 100%;
   padding: 1.25rem 1.35rem;
   background: var(--white);
   border: 1px solid rgba(29, 29, 27, 0.08);
@@ -4945,11 +5001,15 @@ html[dir="rtl"] .product-subnav {
 }
 
 .verified-sources-item__link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
+  display: inline;
   font-weight: 600;
   line-height: 1.5;
+}
+
+.verified-sources-item__link .bd-icon {
+  display: inline-block;
+  vertical-align: -0.15em;
+  margin-inline-start: 0.2rem;
 }
 
 .verified-sources-item__date {
@@ -5507,16 +5567,23 @@ html[dir="rtl"] .product-subnav {
 }
 .intel-hq-list__badge {
   display: inline-block;
+  width: auto;
   font-size: 10px;
   font-weight: 800;
   color: var(--navy);
   background: var(--yellow);
   padding: 2px 8px;
   border-radius: var(--radius-full);
+  margin-top: 0;
   margin-inline-start: 6px;
   vertical-align: middle;
 }
-.intel-hq-list span { display: block; font-size: var(--text-sm); color: var(--text-muted); margin-top: 4px; }
+.intel-hq-list li > span {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  margin-top: 4px;
+}
 
 .intel-leader-card {
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
@@ -5597,11 +5664,15 @@ html[dir="rtl"] .product-subnav {
 
 .intel-eco-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 160px), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
   gap: var(--space-4);
+  align-items: stretch;
 }
 
 .intel-eco-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   background: var(--gray-100);
   padding: var(--space-5);
   border-radius: var(--radius-sm);

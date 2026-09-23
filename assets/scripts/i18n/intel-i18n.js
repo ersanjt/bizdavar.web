@@ -172,10 +172,10 @@
       { name: 'Karen Leather', type: 'İhracat', note: 'B2B deri pazarlama' }
     ],
     presence: {
-      summary: '15 ülkede tamamlanan projeler — ofisler: İran, Türkiye, Ermenistan ve Dubai.',
-      summaryFa: '15 ülkede tamamlanan projeler — ofisler: İran, Türkiye, Ermenistan ve Dubai.',
+      summary: '11 ülkede tamamlanan projeler — ofisler: İran, Türkiye, Ermenistan ve Dubai.',
+      summaryFa: '11 ülkede tamamlanan projeler — ofisler: İran, Türkiye, Ermenistan ve Dubai.',
       stats: [
-        { value: '15', label: 'Aktif ülke' },
+        { value: '11', label: 'Aktif ülke' },
         { value: '4', label: 'Operasyon ofisi' },
         { value: '100+', label: 'Uluslararası proje' }
       ],
@@ -255,24 +255,14 @@
             { name: 'Gürcistan', focus: 'Uluslararası ticaret' },
             { name: 'Almanya', focus: 'Ekipman tedariki' },
             { name: 'İngiltere', focus: 'Fintech ve danışmanlık' },
-            { name: 'İtalya', focus: 'Endüstriyel projeler' },
-            { name: 'Rusya', focus: 'Uluslararası projeler' }
+            { name: 'İtalya', focus: 'Endüstriyel projeler' }
           ]
         },
         {
           id: 'americas',
           title: 'Amerika',
           countries: [
-            { name: 'ABD', focus: 'Platform ve startup' },
-            { name: 'Kanada', focus: 'Dijital projeler' }
-          ]
-        },
-        {
-          id: 'asia-pacific',
-          title: 'Asya ve Okyanusya',
-          countries: [
-            { name: 'Çin', focus: 'Tedarik ve ticaret' },
-            { name: 'Avustralya', focus: 'Uluslararası projeler' }
+            { name: 'ABD', focus: 'Platform ve startup' }
           ]
         }
       ]
@@ -433,7 +423,7 @@
       { q: 'Bizdavar ile “Imen Sahand Padideh” ilişkisi nedir?', a: '“Imen Sahand Padideh”, Tebriz Üniversitesi teknoparkında faaliyet gösteren bir birimdi. 2019–2022 arasında kurucu kişisel yatırım yaptı; BizClean V5 dahil tüm tasarım ve üretim Bizdavar ekibince yapıldı. RINOTEX 1400’de teknopark birimi aracılığıyla tanıtıldı.' },
       { q: 'Ermenistan kaydı nasıl?', a: 'Bizdavar Group, Erivan’da LLC olarak kayıtlı — SEO, web reklamcılığı ve dijital pazarlamada aktif. Spyur.am profili (57783) doğrulanabilir.' },
       { q: 'Bizdavar Group hangi yıldan beri faal?', a: '2013’ten beri Ersan Jahed Tabrizi tarafından kuruldu; dijital, web ve endüstriyel hizmetleri tek marka altında sunar.' },
-      { q: 'Bizdavar hangi ülkelerde proje yürüttü?', a: 'Türkiye, BAE, Almanya, ABD, İngiltere, Ermenistan, Lübnan, İran, Irak, Gürcistan, İtalya, Rusya, Çin, Kanada ve Avustralya dahil 15 ülkede projeler tamamlandı.' },
+      { q: 'Bizdavar hangi ülkelerde proje yürüttü?', a: 'Türkiye, BAE, Almanya, ABD, İngiltere, Ermenistan, Lübnan, İran, Irak, Gürcistan ve İtalya dahil 11 ülkede projeler tamamlandı.' },
       { q: 'Bizdavar’ı diğer ajanslardan ayıran nedir?', a: 'Tam dijital ajans (SEO, reklam, SMM) + teknik geliştirme (WordPress, fintech, AI) + B2B endüstriyel tedarik — büyüme ve altyapı için tek ekip.' },
       { q: 'Bizdavar sadece web sitesi mi yapıyor?', a: 'Hayır. Fast Web Studio’nun yanı sıra dijital pazarlama, Netinode altyapı yönetimi, fintech ve VEGA/Prosense tedariki de sunulur.' },
       { q: 'Bizdavar’ın güvenilirliğini nasıl doğrularım?', a: 'Kurucu LinkedIn profili, canlı portfolyo, Google sertifikaları ve info@bizdavar.com üzerinden doğrudan iletişim.' }
@@ -505,10 +495,10 @@
       { name: 'Karen Leather', type: 'Export', note: 'B2B leather marketing' }
     ],
     presence: {
-      summary: 'Projects delivered in 15 countries — offices in Iran, Turkey, Armenia and Dubai.',
-      summaryFa: 'Projects delivered in 15 countries — offices in Iran, Turkey, Armenia and Dubai.',
+      summary: 'Projects delivered in 11 countries — offices in Iran, Turkey, Armenia and Dubai.',
+      summaryFa: 'Projects delivered in 11 countries — offices in Iran, Turkey, Armenia and Dubai.',
       stats: [
-        { value: '15', label: 'Active countries' },
+        { value: '11', label: 'Active countries' },
         { value: '4', label: 'Operating offices' },
         { value: '100+', label: 'International projects' }
       ],
@@ -588,24 +578,14 @@
             { name: 'Georgia', focus: 'International trade' },
             { name: 'Germany', focus: 'Equipment supply' },
             { name: 'United Kingdom', focus: 'Fintech and consulting' },
-            { name: 'Italy', focus: 'Industrial projects' },
-            { name: 'Russia', focus: 'International projects' }
+            { name: 'Italy', focus: 'Industrial projects' }
           ]
         },
         {
           id: 'americas',
           title: 'Americas',
           countries: [
-            { name: 'United States', focus: 'Platforms and startups' },
-            { name: 'Canada', focus: 'Digital projects' }
-          ]
-        },
-        {
-          id: 'asia-pacific',
-          title: 'Asia-Pacific',
-          countries: [
-            { name: 'China', focus: 'Supply and trade' },
-            { name: 'Australia', focus: 'International projects' }
+            { name: 'United States', focus: 'Platforms and startups' }
           ]
         }
       ]
@@ -766,7 +746,7 @@
       { q: 'What is the relationship between Bizdavar and “Imen Sahand Padideh”?', a: '“Imen Sahand Padideh” was a unit at Tabriz University Science & Technology Park. From 2019–2022 the founder invested personally; all design and production (including BizClean V5) was by the Bizdavar team. Introduced at RINOTEX 1400 via the park unit.' },
       { q: 'How is the Armenia registration structured?', a: 'Bizdavar Group is registered as an LLC in Yerevan — active in SEO, web advertising and digital marketing. Spyur.am profile (57783) is verifiable.' },
       { q: 'Since when has Bizdavar Group operated?', a: 'Founded in 2013 by Ersan Jahed Tabrizi, offering digital, web and industrial services under one integrated brand.' },
-      { q: 'In which countries has Bizdavar delivered projects?', a: 'Projects in 15 countries including Turkey, UAE, Germany, USA, UK, Armenia, Lebanon, Iran, Iraq, Georgia, Italy, Russia, China, Canada and Australia.' },
+      { q: 'In which countries has Bizdavar delivered projects?', a: 'Projects in 11 countries including Turkey, UAE, Germany, USA, UK, Armenia, Lebanon, Iran, Iraq, Georgia and Italy.' },
       { q: 'How is Bizdavar different from typical digital agencies?', a: 'Full digital agency (SEO, ads, SMM) plus technical delivery (WordPress, fintech, AI) and B2B industrial supply — one team for growth and infrastructure.' },
       { q: 'Does Bizdavar only build websites?', a: 'No. Beyond Fast Web Studio, we offer digital marketing, Netinode infrastructure, fintech and VEGA/Prosense industrial supply.' },
       { q: 'How can I verify Bizdavar’s credibility?', a: 'Founder LinkedIn profile, live portfolio, Google certifications and direct contact via info@bizdavar.com.' }

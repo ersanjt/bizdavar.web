@@ -890,13 +890,45 @@
         </div>`;
     }
 
+    function achievementLinkKey(url) {
+      try {
+        const u = new URL(url, 'https://bizdavar.com');
+        return (u.host + u.pathname).replace(/\/+$/, '').toLowerCase();
+      } catch (err) {
+        return String(url || '').trim().toLowerCase();
+      }
+    }
+
+    function achievementLinksHtml(a) {
+      const items = [];
+      const seenHref = new Set();
+      const seenLabel = new Set();
+      const add = (url, label) => {
+        const href = String(url || '').trim();
+        const text = String(label || '').trim();
+        if (!href || !text) return;
+        const hrefKey = achievementLinkKey(href);
+        const labelKey = text.toLowerCase();
+        if (seenHref.has(hrefKey) || seenLabel.has(labelKey)) return;
+        seenHref.add(hrefKey);
+        seenLabel.add(labelKey);
+        items.push({ href, text });
+      };
+      if (a.pressLinks && a.pressLinks.length) a.pressLinks.forEach(p => add(p.url, p.label));
+      else add(a.pressUrl, a.pressLabel || 'Press');
+      add(a.videoUrl, a.videoLabel || 'YouTube');
+      add(a.sourceUrl, a.source);
+      if (!items.length) return '';
+      return `<ul class="achievement-card__links">${items.map(p => `<li><a href="${p.href}" target="_blank" rel="noopener noreferrer" class="service-card__link">${p.text}${linkArrow()}</a></li>`).join('')}</ul>`;
+    }
+
     const achEl = document.getElementById('intelAchievements');
     if (achEl && I.achievements && I.achievements.length) {
       achEl.innerHTML = `
         <div class="achievements-grid">
           ${I.achievements.map(a => `
             <article class="achievement-card">
-              <a href="${path(a.slug)}" class="achievement-card__media">
+              <a href="${path(a.slug)}" class="achievement-card__media${/\/products\//.test(String(a.image || '')) ? ' achievement-card__media--product' : ''}">
                 <img src="${path(a.image)}" alt="${a.title}" loading="lazy" width="480" height="280"${hideBrokenImg()}>
               </a>
               <div class="achievement-card__body">
@@ -907,11 +939,7 @@
                   ${(a.tags || []).map(tag => `<span class="achievement-card__tag">${tag}</span>`).join('')}
                 </div>
                 <footer class="achievement-card__footer">
-                  ${(a.pressLinks && a.pressLinks.length)
-                    ? a.pressLinks.map(p => `<a href="${p.url}" target="_blank" rel="noopener noreferrer" class="service-card__link">${p.label}${linkArrow()}</a>`).join('')
-                    : (a.pressUrl ? `<a href="${a.pressUrl}" target="_blank" rel="noopener noreferrer" class="service-card__link">${a.pressLabel || 'Press'}${linkArrow()}</a>` : '')}
-                  ${a.videoUrl ? `<a href="${a.videoUrl}" target="_blank" rel="noopener noreferrer" class="service-card__link">${a.videoLabel || 'YouTube'}${linkArrow()}</a>` : ''}
-                  <a href="${a.sourceUrl}" target="_blank" rel="noopener noreferrer" class="service-card__link">${a.source}${linkArrow()}</a>
+                  ${achievementLinksHtml(a)}
                 </footer>
               </div>
             </article>

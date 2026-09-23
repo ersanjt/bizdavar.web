@@ -310,11 +310,15 @@
   text-align: center;
   max-width: 40rem;
   margin-inline: auto;
-  margin-bottom: var(--space-8);
+  margin-bottom: 1.25rem;
+}
+
+.about-highlights-grid .section__header--pro p {
+  margin-bottom: 0.65rem;
 }
 
 .about-highlights-grid .section__header--pro .btn {
-  margin-top: 0.35rem;
+  margin-top: 0.15rem;
 }
 
 .about-trust-grid {
@@ -400,9 +404,9 @@
     gap: clamp(32px, 5vw, 56px);
   }
 
-  .about-page .exhibition-card--media .exhibition-card__figure img,
-  .about-page .exhibition-card--media .exhibition-card__video video {
-    max-height: 380px;
+  .about-page .exhibition-card--media .exhibition-card__figure,
+  .about-page .exhibition-card--media .exhibition-card__video {
+    max-height: 360px;
   }
 }
 
