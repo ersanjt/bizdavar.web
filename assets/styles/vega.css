@@ -952,11 +952,11 @@ body[data-page="vega"] .section__desc {
   line-height: var(--leading-relaxed);
 }
 
-/* Industries */
+/* Industries — 15 cards: 5×3, then 3×5, so the last row stays full */
 .vega-industries-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .vega-industry-item {
@@ -977,12 +977,14 @@ body[data-page="vega"] .section__desc {
 .vega-industry-item__media {
   aspect-ratio: 16 / 9;
   overflow: hidden;
+  background: #e8eaed;
 }
 
 .vega-industry-item__media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .vega-industry-item__icon {
@@ -1142,6 +1144,7 @@ body[data-page="vega"] .section__desc {
   .vega-trust-bar__inner { grid-template-columns: repeat(2, 1fr); }
   .vega-steps { grid-template-columns: repeat(3, 1fr); }
   .vega-iran-grid { grid-template-columns: repeat(2, 1fr); }
+  .vega-industries-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .vega-supply-grid { grid-template-columns: repeat(2, 1fr); }
   .vega-quick-series { grid-template-columns: repeat(2, 1fr); }
   .vega-quote-box { grid-template-columns: 1fr; }
@@ -1161,6 +1164,12 @@ body[data-page="vega"] .section__desc {
   .vega-why-grid { grid-template-columns: 1fr; }
   .vega-steps { grid-template-columns: 1fr; }
   .vega-iran-grid { grid-template-columns: 1fr; }
+  .vega-industries-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .vega-industry-item:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    width: min(100%, 280px);
+    justify-self: center;
+  }
   .vega-quick-series { grid-template-columns: 1fr 1fr; }
   .vega-sticky-cta__text span { display: none; }
   .vega-supply-grid { grid-template-columns: 1fr; }
