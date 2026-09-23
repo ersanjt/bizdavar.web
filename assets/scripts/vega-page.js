@@ -255,8 +255,8 @@
     if (!el) return;
     el.innerHTML = V.industries.map(ind => `
       <div class="vega-industry-item">
-        <div class="vega-industry-item__media${/blog-|content\//.test(ind.image) ? ' vega-industry-item__media--photo' : ''}">
-          <img src="${path(ind.image)}" alt="${ind.nameEn}" width="160" height="90" loading="lazy">
+        <div class="vega-industry-item__media">
+          <img src="${path(ind.image)}" alt="${ind.nameEn}" width="320" height="180" loading="lazy"${ind.objectPosition ? ` style="object-position:${ind.objectPosition}"` : ''}>
         </div>
         <span class="vega-industry-item__icon">${ic(ind.icon, { size: 20 })}</span>
         <strong>${ind.name}</strong>
@@ -395,31 +395,35 @@
       inLanguage,
       numberOfItems: V.featuredProducts.length,
       areaServed: ['IR', 'TR', 'AM', 'AE', 'DE'],
-      itemListElement: V.featuredProducts.map((p, i) => ({
-        '@type': 'ListItem',
-        position: i + 1,
-        item: {
-          '@type': 'Product',
+      itemListElement: V.featuredProducts.map((p, i) => {
+        const pageUrl = p.officialRef || `${C.baseUrl}/${(window.resolvePagePath || window.resolvePath)('pages/vega')}`;
+        const fields = {
           name: p.name,
           description: p.summary || p.summaryFa,
-          image: `${C.baseUrl}/${p.image}`,
+          image: `${C.baseUrl}/${String(p.image).replace(/^\//, '')}`,
           brand: { '@type': 'Brand', name: 'VEGA' },
           category: p.series,
-          url: p.officialRef || undefined,
-          inLanguage,
-          areaServed: ['IR', 'TR'],
-          ...(p.priceEur != null ? {
-            offers: {
-              '@type': 'Offer',
-              price: String(p.priceEur),
-              priceCurrency: 'EUR',
-              availability: 'https://schema.org/InStock',
-              seller: { '@type': 'Organization', name: sellerName },
-              areaServed: ['IR', 'TR']
+          url: pageUrl
+        };
+        const build = window.BD_SCHEMA?.buildProductOrThing;
+        const item = build
+          ? build(fields, { priceEur: p.priceEur, url: pageUrl, sellerName })
+          : (p.priceEur != null
+            ? {
+              '@type': 'Product',
+              ...fields,
+              offers: {
+                '@type': 'Offer',
+                price: String(p.priceEur),
+                priceCurrency: 'EUR',
+                availability: 'https://schema.org/InStock',
+                url: pageUrl,
+                seller: { '@type': 'Organization', name: sellerName, url: C.baseUrl }
+              }
             }
-          } : {})
-        }
-      }))
+            : { '@type': 'Thing', ...fields, brand: fields.brand });
+        return { '@type': 'ListItem', position: i + 1, item };
+      })
     };
 
     let script = document.getElementById('jsonld-vega-products');

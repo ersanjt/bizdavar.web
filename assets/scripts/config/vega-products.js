@@ -468,21 +468,21 @@ window.VEGA_CATALOG = {
   ],
 
   industries: [
-    { name: 'صنایع شیمیایی', nameEn: 'Chemical industry', icon: 'flask', image: VEGA_IMG + 'product-vegapuls-6x-photo.webp' },
-    { name: 'صنایع غذایی', nameEn: 'Food industry', icon: 'utensils', image: VEGA_IMG + 'product-vegapoint-21.png' },
-    { name: 'داروسازی', nameEn: 'Pharmaceutical', icon: 'pill', image: VEGA_IMG + 'product-vegapoint-11.png' },
-    { name: 'آب و فاضلاب', nameEn: 'Water & wastewater', icon: 'droplet', image: VEGA_IMG + 'product-vegapuls-c-11.png' },
-    { name: 'آبزی‌پروری', nameEn: 'Aquaculture', icon: 'fish', image: VEGA_IMG + 'product-vegapuls-c-23.png' },
-    { name: 'مصالح ساختمانی', nameEn: 'Building materials', icon: 'crane', image: VEGA_IMG + 'product-vegavib-s61.webp' },
-    { name: 'جذب کربن', nameEn: 'Carbon Capture', icon: 'leaf', image: VEGA_IMG + 'product-vegapuls-31.png' },
-    { name: 'انرژی', nameEn: 'Energy', icon: 'bolt', image: VEGA_IMG + 'product-vegabar-39.png' },
-    { name: 'معدن و فلزات', nameEn: 'Mining & metals', icon: 'pickaxe', image: VEGA_IMG + 'product-vegavib-s61.webp' },
-    { name: 'نفت و گاز دریایی', nameEn: 'Oil & gas offshore', icon: 'barrel', image: VEGA_IMG + 'product-vegapuls-photo.webp' },
-    { name: 'صنایع کاغذ', nameEn: 'Paper industry', icon: 'document', image: VEGA_IMG + 'product-vegapoint-31.png' },
-    { name: 'پالایش و پتروشیمی', nameEn: 'Refining & petrochemicals', icon: 'factory', image: VEGA_IMG + 'product-vegapuls-6x-photo.webp' },
-    { name: 'کشتی‌سازی', nameEn: 'Ship & yacht building', icon: 'ship', image: VEGA_IMG + 'product-vegaswing-51.png' },
-    { name: 'محیط‌زیست و بازیافت', nameEn: 'Environment & recycling', icon: 'recycle', image: VEGA_IMG + 'blog-industrial-sensors.jpg' },
-    { name: 'سیمان', nameEn: 'Cement', icon: 'block', image: VEGA_IMG + 'product-vegapuls-11.png' }
+    { name: 'صنایع شیمیایی', nameEn: 'Chemical industry', icon: 'flask', image: VEGA_IMG + 'industry-chemical.jpg' },
+    { name: 'صنایع غذایی', nameEn: 'Food industry', icon: 'utensils', image: VEGA_IMG + 'industry-food.jpg' },
+    { name: 'داروسازی', nameEn: 'Pharmaceutical', icon: 'pill', image: VEGA_IMG + 'industry-pharma.png', objectPosition: '18% center' },
+    { name: 'آب و فاضلاب', nameEn: 'Water & wastewater', icon: 'droplet', image: VEGA_IMG + 'industry-water.jpg' },
+    { name: 'آبزی‌پروری', nameEn: 'Aquaculture', icon: 'fish', image: VEGA_IMG + 'industry-aquaculture.jpg' },
+    { name: 'مصالح ساختمانی', nameEn: 'Building materials', icon: 'crane', image: VEGA_IMG + 'industry-building.jpg' },
+    { name: 'جذب کربن', nameEn: 'Carbon Capture', icon: 'leaf', image: VEGA_IMG + 'industry-carbon-capture.png' },
+    { name: 'انرژی', nameEn: 'Energy', icon: 'bolt', image: VEGA_IMG + 'industry-energy.jpg' },
+    { name: 'معدن و فلزات', nameEn: 'Mining & metals', icon: 'pickaxe', image: VEGA_IMG + 'industry-mining.jpg' },
+    { name: 'نفت و گاز دریایی', nameEn: 'Oil & gas offshore', icon: 'barrel', image: VEGA_IMG + 'industry-oil-gas.jpg' },
+    { name: 'صنایع کاغذ', nameEn: 'Paper industry', icon: 'document', image: VEGA_IMG + 'industry-paper.jpg' },
+    { name: 'پالایش و پتروشیمی', nameEn: 'Refining & petrochemicals', icon: 'factory', image: VEGA_IMG + 'industry-refining.jpg' },
+    { name: 'کشتی‌سازی', nameEn: 'Ship & yacht building', icon: 'ship', image: VEGA_IMG + 'industry-ship.jpg' },
+    { name: 'محیط‌زیست و بازیافت', nameEn: 'Environment & recycling', icon: 'recycle', image: VEGA_IMG + 'industry-environment.jpg' },
+    { name: 'سیمان', nameEn: 'Cement', icon: 'block', image: VEGA_IMG + 'industry-cement.jpg' }
   ],
 
   digitalServices: {
