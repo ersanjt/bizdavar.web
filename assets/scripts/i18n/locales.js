@@ -101,7 +101,7 @@ window.BIZDAVAR_LOCALES = {
       offerMap: {
         aria: 'سه مسیر بیزدوار',
         lead: 'از کجا شروع کنیم؟',
-        servicesNum: '۰۳',
+        servicesNum: '۰۱',
         servicesTitle: 'خدمات',
         servicesDesc: 'سایت انگلیسی از ۹۹ دلار برای اروپا/آمریکا، بازاریابی، اپ و خدمات فنی',
         servicesGo: 'ورود به خدمات',
@@ -109,7 +109,7 @@ window.BIZDAVAR_LOCALES = {
         productsTitle: 'محصولات بیزدوار',
         productsDesc: 'WhatsApp CRM، حسابداری FXGuard و BizSwap',
         productsGo: 'ورود به محصولات',
-        supplyNum: '۰۱',
+        supplyNum: '۰۳',
         supplyTitle: 'بازرگانی و تامین صنعتی',
         supplyDesc: 'خرید VEGA، Gamak، Teltonika، تجهیزات موتورسیکلت و قطعات خودرو برای پروژه ایران — پیش‌فاکتور فارسی',
         supplyGo: 'ورود به کاتالوگ بازرگانی'
@@ -764,7 +764,7 @@ window.BIZDAVAR_LOCALES = {
       offerMap: {
         aria: 'Bizdavar’ın üç yolu',
         lead: 'Nereden başlamalı?',
-        servicesNum: '03',
+        servicesNum: '01',
         servicesTitle: 'Hizmetler',
         servicesDesc: 'Türkiye için web, pazarlama, uygulama ve teknik hizmet — Fast Studio $99’dan',
         servicesGo: 'Hizmetlere git',
@@ -772,7 +772,7 @@ window.BIZDAVAR_LOCALES = {
         productsTitle: 'Bizdavar ürünleri',
         productsDesc: 'WhatsApp CRM, FXGuard Accounting ve BizSwap',
         productsGo: 'Ürünlere git',
-        supplyNum: '01',
+        supplyNum: '03',
         supplyTitle: 'Ticaret ve endüstriyel tedarik',
         supplyDesc: 'Türkiye ve bölge için VEGA, Gamak, Teltonika, motosiklet ekipmanı ve oto parça — Türkçe teklif',
         supplyGo: 'Tedarik kataloğuna git'
@@ -1439,7 +1439,7 @@ window.BIZDAVAR_LOCALES = {
       offerMap: {
         aria: 'Bizdavar’s three paths',
         lead: 'Where should you start?',
-        servicesNum: '03',
+        servicesNum: '01',
         servicesTitle: 'Services',
         servicesDesc: 'English websites from $99 for US/EU, marketing, apps and technical services',
         servicesGo: 'Go to services',
@@ -1447,7 +1447,7 @@ window.BIZDAVAR_LOCALES = {
         productsTitle: 'Bizdavar products',
         productsDesc: 'WhatsApp CRM, FXGuard Accounting and BizSwap',
         productsGo: 'Go to products',
-        supplyNum: '01',
+        supplyNum: '03',
         supplyTitle: 'Trade and industrial supply',
         supplyDesc: 'Buy VEGA, Gamak, Teltonika, motorcycle gear and car parts — USD/EUR proforma from Istanbul',
         supplyGo: 'Open the trade catalogue'

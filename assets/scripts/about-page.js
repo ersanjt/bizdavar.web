@@ -9,8 +9,8 @@
   };
 
   const DEFAULT_STATS = [
-    { value: '۱۲+', label: 'سال تجربه' },
-    { value: '۱۰۰+', label: 'پروژه' },
+    { value: '+۱۳', label: 'سال تجربه' },
+    { value: '+۱۰۰', label: 'پروژه' },
     { value: '۱۱', label: 'کشور' },
     { value: '۳', label: 'مسیر کار' }
   ];

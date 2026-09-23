@@ -1894,16 +1894,23 @@ html[dir="rtl"] .product-subnav {
 }
 .intel-hq-list__badge {
   display: inline-block;
+  width: auto;
   font-size: 10px;
   font-weight: 800;
   color: var(--navy);
   background: var(--yellow);
   padding: 2px 8px;
   border-radius: var(--radius-full);
+  margin-top: 0;
   margin-inline-start: 6px;
   vertical-align: middle;
 }
-.intel-hq-list span { display: block; font-size: var(--text-sm); color: var(--text-muted); margin-top: 4px; }
+.intel-hq-list li > span {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  margin-top: 4px;
+}
 
 .intel-leader-card {
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
@@ -1984,11 +1991,15 @@ html[dir="rtl"] .product-subnav {
 
 .intel-eco-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 160px), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
   gap: var(--space-4);
+  align-items: stretch;
 }
 
 .intel-eco-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   background: var(--gray-100);
   padding: var(--space-5);
   border-radius: var(--radius-sm);

@@ -298,6 +298,14 @@
   background: transparent;
 }
 
+@media (min-width: 992px) {
+  .about-block--profile .about-profile-grid > .about-block__sub {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+}
+
 .about-highlights-grid .section__header--pro {
   text-align: center;
   max-width: 40rem;

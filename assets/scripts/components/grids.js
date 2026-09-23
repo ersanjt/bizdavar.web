@@ -675,7 +675,7 @@
           <ul class="intel-hq-list">
             ${I.identity.headquarters.map(h => `
               <li class="${h.badge === 'HQ' ? 'intel-hq-list__item--hq' : h.badge === 'IR' ? 'intel-hq-list__item--ir' : h.badge === 'AM' ? 'intel-hq-list__item--am' : ''}">
-                <strong>${h.city}, ${h.country}${h.badge ? ` <span class="intel-hq-list__badge">${h.badge}</span>` : ''}</strong>
+                <strong>${h.city}${(lang === 'fa' || lang === 'ar') ? '، ' : ', '}${h.country}${h.badge ? ` <span class="intel-hq-list__badge">${h.badge}</span>` : ''}</strong>
                 <span>${h.role}</span>
               </li>
             `).join('')}
