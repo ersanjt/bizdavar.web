@@ -168,7 +168,7 @@ window.VEGA_CATALOG = {
       name: 'VEGAPULS',
       series: 'Basic — Compact Radar',
       category: 'level',
-      image: VEGA_IMG + 'product-vegapuls-photo.webp',
+      image: VEGA_IMG + 'product-vegapuls-photo.webp?v=20260923d',
       imageAlt: 'VEGAPULS compact radar level sensor',
       badge: 'فشرده',
       summaryFa: 'رادار فشرده و اقتصادی — جایگزین مطمئن اولتراسونیک؛ مناسب ارتقای سیستم‌های قدیمی.',
