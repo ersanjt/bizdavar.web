@@ -100,7 +100,7 @@ window.BIZDAVAR_LOCALES = {
       offerMap: {
         aria: 'سه مسیر بیزدوار',
         lead: 'از کجا شروع کنیم؟',
-        servicesNum: '۰۳',
+        servicesNum: '۰۱',
         servicesTitle: 'خدمات',
         servicesDesc: 'سایت انگلیسی از ۹۹ دلار برای اروپا/آمریکا، بازاریابی، اپ و خدمات فنی',
         servicesGo: 'ورود به خدمات',
@@ -108,7 +108,7 @@ window.BIZDAVAR_LOCALES = {
         productsTitle: 'محصولات بیزدوار',
         productsDesc: 'محصولات دیجیتال و فیزیکی خودمان — BizPet، BizTab و FXGuard',
         productsGo: 'ورود به محصولات',
-        supplyNum: '۰۱',
+        supplyNum: '۰۳',
         supplyTitle: 'بازرگانی و تامین صنعتی',
         supplyDesc: 'خرید VEGA، Prosense، Liqui Moly، Teltonika و Gamak برای پروژه ایران — پیش‌فاکتور فارسی',
         supplyGo: 'ورود به کاتالوگ بازرگانی'
@@ -627,7 +627,7 @@ window.BIZDAVAR_LOCALES = {
       offerMap: {
         aria: 'Bizdavar’ın üç yolu',
         lead: 'Nereden başlamalı?',
-        servicesNum: '03',
+        servicesNum: '01',
         servicesTitle: 'Hizmetler',
         servicesDesc: 'ABD/AB için İngilizce site $99’dan, pazarlama, uygulama ve teknik hizmet',
         servicesGo: 'Hizmetlere git',
@@ -635,7 +635,7 @@ window.BIZDAVAR_LOCALES = {
         productsTitle: 'Bizdavar ürünleri',
         productsDesc: 'Kendi dijital ve fiziksel ürünlerimiz — BizPet, BizTab ve FXGuard',
         productsGo: 'Ürünlere git',
-        supplyNum: '01',
+        supplyNum: '03',
         supplyTitle: 'Ticaret ve endüstriyel tedarik',
         supplyDesc: 'İran projeleri için VEGA, Prosense, Liqui Moly, Teltonika ve Gamak — Farsça/Türkçe proforma',
         supplyGo: 'Tedarik kataloğuna git'
@@ -1166,7 +1166,7 @@ window.BIZDAVAR_LOCALES = {
       offerMap: {
         aria: 'Bizdavar’s three paths',
         lead: 'Where should you start?',
-        servicesNum: '03',
+        servicesNum: '01',
         servicesTitle: 'Services',
         servicesDesc: 'English websites from $99 for US/EU, marketing, apps and technical services',
         servicesGo: 'Go to services',
@@ -1174,7 +1174,7 @@ window.BIZDAVAR_LOCALES = {
         productsTitle: 'Bizdavar products',
         productsDesc: 'Our digital and physical products — BizPet, BizTab and FXGuard',
         productsGo: 'Go to products',
-        supplyNum: '01',
+        supplyNum: '03',
         supplyTitle: 'Trade and industrial supply',
         supplyDesc: 'Buy VEGA, Prosense, Liqui Moly, Teltonika and Gamak for Iran projects — Persian proforma',
         supplyGo: 'Open the trade catalogue'

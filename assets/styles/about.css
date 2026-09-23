@@ -293,6 +293,12 @@
 }
 
 @media (min-width: 992px) {
+  .about-block--profile .about-profile-grid > .about-block__sub {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
   .about-highlights-grid {
     grid-template-columns: 1fr 1fr;
     align-items: start;

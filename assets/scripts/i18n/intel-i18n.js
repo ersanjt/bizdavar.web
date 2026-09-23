@@ -122,7 +122,7 @@
       founder: {
         nameFa: 'Ersan Jahed Tabrizi',
         titleFa: 'Kurucu ve strateji lideri',
-        bioFa: '12+ yıllık deneyimle 100+ web sitesi ve özel platform tasarladı ve geliştirdi. Bizdavar Group kurucusu; fintech ve ödemelerden endüstri ve bulut hostinge kadar 11 ülkede dijital projelere liderlik eder.',
+        bioFa: '13+ yıllık deneyimle 100+ web sitesi ve özel platform tasarladı ve geliştirdi. Bizdavar Group kurucusu; fintech ve ödemelerden endüstri ve bulut hostinge kadar 11 ülkede dijital projelere liderlik eder.',
         education: [
           'Elektrik Mühendisliği Lisans — İslam Azad Üniversitesi (Endüstriyel Otomasyon)',
           'Bilgisayar Mühendisliği Lisans — İslam Azad Üniversitesi Teheran',
@@ -441,7 +441,7 @@
       founder: {
         nameFa: 'Ersan Jahed Tabrizi',
         titleFa: 'Founder & lead strategist',
-        bioFa: '12+ years designing and building 100+ websites and custom platforms. Founder of Bizdavar Group, leading digital projects across 11 countries — from fintech and payments to industry and cloud hosting.',
+        bioFa: '13+ years designing and building 100+ websites and custom platforms. Founder of Bizdavar Group, leading digital projects across 11 countries — from fintech and payments to industry and cloud hosting.',
         education: [
           'BSc Electrical Engineering — Islamic Azad University (Industrial Automation)',
           'BSc Computer Engineering — Islamic Azad University Tehran',
