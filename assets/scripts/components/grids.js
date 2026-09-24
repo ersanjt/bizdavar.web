@@ -535,6 +535,8 @@
 
         const officeCountry = { tabriz: 'iran', yerevan: 'armenia', istanbul: 'turkey', dubai: 'emirates' };
         const landAliases = { tasmania: 'australia' };
+        const activeLands = new Set(['turkey', 'emirates', 'germany', 'usa', 'britain', 'armenia', 'lebanon', 'iran', 'iraq', 'georgia', 'italy']);
+        const droppedPins = new Set(['canada', 'russia', 'china', 'australia']);
         const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         const ns = 'http://www.w3.org/2000/svg';
 
@@ -543,8 +545,14 @@
         });
 
         live.querySelectorAll('path[fill="#FFDE00"]').forEach((p) => {
-          p.classList.add('is-active');
           const countryId = landAliases[p.id] || p.id;
+          if (!activeLands.has(countryId)) {
+            p.setAttribute('fill', '#3a3d72');
+            p.setAttribute('stroke', '#12122e');
+            p.setAttribute('stroke-width', '0.35');
+            return;
+          }
+          p.classList.add('is-active');
           const name = countries[countryId];
           if (name) {
             p.setAttribute('tabindex', '0');
@@ -552,6 +560,16 @@
             p.setAttribute('aria-label', name);
             p.dataset.label = name;
           }
+        });
+        droppedPins.forEach((id) => {
+          const pin = live.querySelector(`.presence-pin[data-pin="${id}"]`);
+          if (pin) pin.remove();
+        });
+        live.querySelectorAll('.presence-arc').forEach((arc) => {
+          const d = arc.getAttribute('d') || '';
+          const end = (d.match(/([\d.]+,[\d.]+)\s*$/) || [])[1];
+          const droppedEnds = { canada: '200.0,95.0', russia: '640.0,105.0', china: '715.0,215.0', australia: '800.0,450.0' };
+          if (Object.values(droppedEnds).includes(end)) arc.remove();
         });
         live.querySelectorAll('.presence-arc').forEach((arc, i) => {
           arc.style.setProperty('--arc-delay', `${(i % 5) * 0.45}s`);
@@ -957,7 +975,7 @@
               <ul class="verified-sources-list">
                 ${g.items.map(item => `
                   <li class="verified-sources-item">
-                    <a href="${item.url}" target="_blank" rel="noopener noreferrer me" class="verified-sources-item__link">${item.label}${linkArrow()}</a>
+                    <a href="${item.url}" target="_blank" rel="noopener noreferrer me" class="verified-sources-item__link"><span>${item.label}</span>${linkArrow()}</a>
                     ${item.date ? `<span class="verified-sources-item__date">${item.date}</span>` : ''}
                     ${item.note ? `<p class="verified-sources-item__note">${item.note}</p>` : ''}
                   </li>

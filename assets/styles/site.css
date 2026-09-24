@@ -5001,15 +5001,20 @@ html[dir="rtl"] .product-subnav {
 }
 
 .verified-sources-item__link {
-  display: inline;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.35rem;
   font-weight: 600;
   line-height: 1.5;
 }
 
+.verified-sources-item__link > span {
+  min-width: 0;
+}
+
 .verified-sources-item__link .bd-icon {
-  display: inline-block;
-  vertical-align: -0.15em;
-  margin-inline-start: 0.2rem;
+  flex: 0 0 auto;
+  margin-top: 0.2em;
 }
 
 .verified-sources-item__date {
@@ -5456,6 +5461,8 @@ html[dir="rtl"] .product-subnav {
 
 .intel-proof-card__cat {
   display: inline-flex;
+  align-self: flex-start;
+  width: fit-content;
   align-items: center;
   margin-bottom: 0.7rem;
   padding: 0.2rem 0.6rem;
@@ -5498,7 +5505,8 @@ html[dir="rtl"] .product-subnav {
 
 .intel-dl div {
   display: grid;
-  grid-template-columns: minmax(0, 120px) minmax(0, 1fr);
+  grid-template-columns: minmax(11.75rem, 14rem) minmax(0, 1fr);
+  align-items: start;
   gap: var(--space-3);
   padding: var(--space-3) 0;
   border-bottom: 1px solid var(--gray-200);
