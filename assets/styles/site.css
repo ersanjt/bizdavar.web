@@ -4398,23 +4398,23 @@ html[dir="rtl"] .product-subnav {
 
 .exhibition-card--media .exhibition-card__figure,
 .exhibition-card--media .exhibition-card__video {
-  min-width: 0;
-  aspect-ratio: 16 / 7;
-  max-height: 440px;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 8;
   overflow: hidden;
-  background: #1a1a1a;
+  background: #ececec;
 }
 
 .exhibition-card--media .exhibition-card__video video,
 .exhibition-card--media .exhibition-card__figure img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   max-width: none;
-  min-height: 0;
   max-height: none;
-  aspect-ratio: auto;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 28%;
   border-radius: 0;
   border: 0;
 }
@@ -4813,6 +4813,7 @@ html[dir="rtl"] .product-subnav {
 }
 
 .achievement-card__media {
+  position: relative;
   display: block;
   aspect-ratio: 16 / 10;
   overflow: hidden;
@@ -4820,11 +4821,13 @@ html[dir="rtl"] .product-subnav {
 }
 
 .achievement-card__media img {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 32%;
   transition: transform 0.45s ease;
 }
 

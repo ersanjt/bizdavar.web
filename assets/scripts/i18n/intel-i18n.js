@@ -331,6 +331,7 @@
         desc: 'Bizdavar ekibi tarafından tasarlanıp üretildi (2019–2022), 2020 büyüme merkezi fuarı (ISNA, SNN, IRIB), RINOTEX 1400 teknopark birimi, Digikala satışı.',
         source: 'Digikala',
         pressLabel: 'IRIB',
+        videoLabel: 'YouTube — V1 prototip',
         pressLinks: [
           { label: 'RINOTEX 1400', url: 'https://rinotex.ir/Home/Introduction' },
           { label: 'Tebriz Üniversitesi teknoparkı', url: 'https://techpark.tabrizu.ac.ir/' },
@@ -375,6 +376,7 @@
         group: 'Satış ve video',
         items: [
           { label: 'Digikala — BizClean V5 (dkp-3730222)', note: 'Bizdavar mühendislik ürünü' },
+          { label: 'Digikala — BizPad / araç sırtlığı (dkp-7694589)', note: 'Aynı BizPad ısı pedi — 2020 mağaza satışı' },
           { label: 'YouTube — BizClean V1 prototip', note: 'Kısa video — V1 prototip; ticari sürüm V5 Digikala\'da' }
         ]
       },
@@ -654,6 +656,7 @@
         desc: 'Designed and built by Bizdavar (2019–2022), 2020 growth-centre exhibition (ISNA, SNN, IRIB), RINOTEX 1400 via tech-park unit, sold on Digikala.',
         source: 'Digikala',
         pressLabel: 'IRIB',
+        videoLabel: 'YouTube — V1 prototype',
         pressLinks: [
           { label: 'RINOTEX 1400', url: 'https://rinotex.ir/Home/Introduction' },
           { label: 'Tabriz University Science & Technology Park', url: 'https://techpark.tabrizu.ac.ir/' },
@@ -698,7 +701,8 @@
         group: 'Sales & video',
         items: [
           { label: 'Digikala — BizClean V5 (dkp-3730222)', note: 'Bizdavar engineered product' },
-          { label: 'YouTube — BizClean V1 prototype', note: 'Short video — V1 prototype; retail product is V5 on Digikala' }
+          { label: 'Digikala — BizPad / car seat (dkp-7694589)', note: 'The same BizPad heating pad — 2020 retail listing' },
+          { label: 'YouTube — BizClean V1 prototype', note: 'Short video — V1 prototype; the commercial version on Digikala is V5' }
         ]
       },
       {
