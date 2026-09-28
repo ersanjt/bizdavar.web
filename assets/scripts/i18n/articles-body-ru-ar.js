@@ -122,7 +122,7 @@
       '<p>Запрос → проформа → заказ → логистика — подробности в <a href="/ru/pages/products#supply">промышленных услугах</a>.</p>',
 
     'about-bizdavar-group':
-      '<img src="/assets/images/content/about-hero.svg" alt="Bizdavar Group — глобальное присутствие" class="article__img" loading="lazy" width="768" height="400">' +
+      '<img src="/assets/images/content/about-hero.jpg" alt="Bizdavar Group — глобальное присутствие" class="article__img" loading="lazy" width="768" height="400">' +
       '<p>Bizdavar Group работает с 2013 года, основана <strong>Ersan Jahed Tabrizi</strong> — более 100 проектов в 11 странах.</p>' +
       '<h2>Направления деятельности</h2>' +
       '<ul>' +
@@ -315,7 +315,7 @@
       '<p>استفسار → بروفورма → طلب → لوجستيات — التفاصيل في <a href="/ar/pages/products#supply">الخدمات الصناعية</a>.</p>',
 
     'about-bizdavar-group':
-      '<img src="/assets/images/content/about-hero.svg" alt="Bizdavar Group — حضور عالمي" class="article__img" loading="lazy" width="768" height="400">' +
+      '<img src="/assets/images/content/about-hero.jpg" alt="Bizdavar Group — حضور عالمي" class="article__img" loading="lazy" width="768" height="400">' +
       '<p>تعمل Bizdavar Group منذ 2013، تأسست على يد <strong>Ersan Jahed Tabrizi</strong> — أكثر من 100 مشروع في 11 دولة.</p>' +
       '<h2>مجالات النشاط</h2>' +
       '<ul>' +

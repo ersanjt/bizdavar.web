@@ -449,9 +449,9 @@
         seoKeywords: 'dijital pazarlama, satış artışı, CRO, SEO, Bizdavar'
       },
       articleWhatIsDm: {
-        seoTitle: 'Dijital pazarlama nedir? | Tam rehber — Bizdavar',
-        seoDescription: 'Dijital pazarlama nedir: SEO, Google Ads, SMM, içerik ve lead ölçümü — İran ve Türkiye için Bizdavar uygulama yolu.',
-        seoKeywords: 'dijital pazarlama nedir, SEO, Google Ads, SMM, CRO, Bizdavar'
+        seoTitle: 'Dijital pazarlama nedir? Kanallar, huni ve 2026 rehberi | Bizdavar',
+        seoDescription: 'Dijital pazarlama nedir? SEO, Google Ads, SMM ve lead ölçümü — İran ve Türkiye işletmeleri için adım adım rehber. Ücretsiz danışmanlık.',
+        seoKeywords: 'dijital pazarlama, dijital pazarlama nedir, dijital marketing, SEO, Google Ads, SMM, CRO, Bizdavar'
       },
       articleSmm: {
         seoTitle: 'Sosyal medya yönetimi (SMM) | Bizdavar',

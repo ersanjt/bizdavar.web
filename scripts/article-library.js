@@ -10,33 +10,37 @@ function fig(src, alt, cap) {
   return `<figure class="article__figure"><img src="${src}" alt="${esc(alt)}" width="960" height="540" loading="lazy"><figcaption>${cap}</figcaption></figure>`;
 }
 
+function L(fa, tr, en, ru, ar) {
+  return { fa: fa, tr: tr, en: en, ru: ru, ar: ar };
+}
+
 const ARTICLES = [
   {
     file: 'what-is-digital-marketing.html',
     slug: 'what-is-digital-marketing',
     seoKey: 'articleWhatIsDm',
     date: '2025-02-10',
-    modified: '2026-08-26',
+    modified: '2026-09-01',
     image: 'assets/images/content/network-map.svg',
     extraImg: 'assets/images/content/services-dm-visual.svg',
     category: { fa: 'بازاریابی دیجیتال', tr: 'Dijital pazarlama', en: 'Digital marketing', ru: 'Цифровой маркетинг', ar: 'التسويق الرقمي' },
     title: {
       fa: 'دیجیتال مارکتینگ چیست؟ — راهنمای کامل برای کسب‌وکارها',
-      tr: 'Dijital pazarlama nedir? İşletmeler için tam rehber',
+      tr: 'Dijital pazarlama nedir? Kanallar, huni ve 2026 rehberi',
       en: 'What is digital marketing? A complete guide for businesses',
       ru: 'Что такое цифровой маркетинг? Полный гид для бизнеса',
       ar: 'ما هو التسويق الرقمي؟ دليل كامل للأعمال'
     },
     description: {
       fa: 'دیجیتال مارکتینگ چیست: سئو، گوگل ادز، SMM، محتوا و سنجش لید — مسیر عملی بیزدوار برای ایران و ترکیه.',
-      tr: 'Dijital pazarlama nedir: SEO, Google Ads, SMM, içerik ve lead ölçümü — İran ve Türkiye için Bizdavar yolu.',
+      tr: 'Dijital pazarlama nedir? SEO, Google Ads, SMM ve lead ölçümü — İran ve Türkiye işletmeleri için adım adım rehber. Ücretsiz danışmanlık.',
       en: 'What digital marketing is: SEO, Google Ads, SMM, content and lead measurement — Bizdavar’s path for Iran and Turkey.',
       ru: 'Что такое цифровой маркетинг: SEO, Google Ads, SMM, контент и измерение лидов — путь Bizdavar для Ирана и Турции.',
       ar: 'ما هو التسويق الرقمي: سيو وإعلانات جوجل وSMM والمحتوى وقياس العملاء — مسار بيزدوار لإيران وتركيا.'
     },
     keywords: {
       fa: 'دیجیتال مارکتینگ چیست, بازاریابی دیجیتال, سئو, تبلیغات گوگل, SMM, CRO, بیزدوار',
-      tr: 'dijital pazarlama nedir, SEO, Google Ads, SMM, CRO, Bizdavar',
+      tr: 'dijital pazarlama, dijital pazarlama nedir, dijital marketing, SEO, Google Ads, SMM, CRO, Bizdavar',
       en: 'what is digital marketing, SEO, Google Ads, SMM, CRO, Bizdavar',
       ru: 'что такое цифровой маркетинг, SEO, Google Ads, SMM, CRO, Bizdavar',
       ar: 'ما هو التسويق الرقمي, سيو, إعلانات جوجل, SMM, CRO, بيزدوار'
@@ -245,9 +249,9 @@ const ARTICLES = [
       ]
     },
     related: [
-      { title: 'خدمات دیجیتال مارکتینگ', url: '../services#digital-marketing', desc: 'کمپین و CRO' },
-      { title: 'Fast Web Studio', url: '../fast', desc: 'لندینگ فروش' },
-      { title: 'استعلام', url: '../contact?service=digital-marketing', desc: 'شروع کمپین' }
+      { title: L('خدمات دیجیتال مارکتینگ', 'Dijital pazarlama hizmetleri', 'Digital marketing services', 'Услуги цифрового маркетинга', 'خدمات التسويق الرقمي'), url: '../services#digital-marketing', desc: L('کمپین و CRO', 'Kampanya ve CRO', 'Campaigns and CRO', 'Кампании и CRO', 'حملات وتحسين التحويل') },
+      { title: L('Fast Web Studio', 'Fast Web Studio', 'Fast Web Studio', 'Fast Web Studio', 'Fast Web Studio'), url: '../fast', desc: L('لندینگ فروش', 'Satış landing', 'Sales landing', 'Продающий лендинг', 'صفحة هبوط للمبيعات') },
+      { title: L('استعلام', 'Teklif', 'Request a quote', 'Запрос', 'استعلام'), url: '../contact?service=digital-marketing', desc: L('شروع کمپین', 'Kampanya başlat', 'Start a campaign', 'Запуск кампании', 'بدء الحملة') }
     ]
   },
   {
@@ -317,9 +321,9 @@ const ARTICLES = [
       ]
     },
     related: [
-      { title: 'خدمات SMM', url: '../services#smm', desc: 'تولید محتوا و تبلیغات' },
-      { title: 'نمونه‌کار بیزتجارت', url: '../biztejarat', desc: 'اینستاگرام B2B' },
-      { title: 'استعلام SMM', url: '../contact?service=smm', desc: 'شروع همکاری' }
+      { title: L('خدمات SMM', 'SMM hizmetleri', 'SMM services', 'Услуги SMM', 'خدمات SMM'), url: '../services#smm', desc: L('تولید محتوا و تبلیغات', 'İçerik ve reklam', 'Content and ads', 'Контент и реклама', 'محتوى وإعلانات') },
+      { title: L('نمونه‌کار بیزتجارت', 'BizTejarat örnek çalışma', 'BizTejarat case study', 'Кейс BizTejarat', 'دراسة BizTejarat'), url: '../biztejarat', desc: L('اینستاگرام B2B', 'Instagram B2B', 'Instagram B2B', 'Instagram B2B', 'إنستغرام B2B') },
+      { title: L('استعلام SMM', 'SMM teklifi', 'SMM quote', 'Запрос SMM', 'استعلام SMM'), url: '../contact?service=smm', desc: L('شروع همکاری', 'İş birliği', 'Start a collaboration', 'Начать сотрудничество', 'بدء التعاون') }
     ]
   },
   {
@@ -461,9 +465,9 @@ const ARTICLES = [
       ]
     },
     related: [
-      { title: 'کاتالوگ VEGA', url: '../vega', desc: 'سنسور و ابزار دقیق' },
-      { title: 'خدمات صنعتی', url: '../products#supply', desc: 'مشاوره B2B' },
-      { title: 'تماس', url: '../contact', desc: 'استعلام قیمت' }
+      { title: L('کاتالوگ VEGA', 'VEGA kataloğu', 'VEGA catalog', 'Каталог VEGA', 'كتالوج VEGA'), url: '../vega', desc: L('سنسور و ابزار دقیق', 'Sensör ve enstrümantasyon', 'Sensors and instrumentation', 'Датчики и КИП', 'حساسات وأجهزة قياس') },
+      { title: L('خدمات صنعتی', 'Endüstriyel hizmetler', 'Industrial services', 'Промышленные услуги', 'خدمات صناعية'), url: '../products#supply', desc: L('مشاوره B2B', 'B2B danışmanlık', 'B2B consulting', 'B2B-консультация', 'استشارة B2B') },
+      { title: L('تماس', 'İletişim', 'Contact', 'Контакты', 'اتصل بنا'), url: '../contact', desc: L('استعلام قیمت', 'Fiyat teklifi', 'Price quote', 'Запрос цены', 'استعلام السعر') }
     ]
   },
   {
@@ -533,9 +537,9 @@ const ARTICLES = [
       ]
     },
     related: [
-      { title: 'درباره ما', url: '../about', desc: 'تیم و تاریخچه' },
-      { title: 'خدمات', url: '../services', desc: 'چهار محور اصلی' },
-      { title: 'تماس', url: '../contact', desc: 'مشاوره رایگان' }
+      { title: L('درباره ما', 'Hakkımızda', 'About', 'О нас', 'من نحن'), url: '../about', desc: L('تیم و تاریخچه', 'Ekip ve tarihçe', 'Team and history', 'Команда и история', 'الفريق والتاريخ') },
+      { title: L('خدمات', 'Hizmetler', 'Services', 'Услуги', 'الخدمات'), url: '../services', desc: L('چهار محور اصلی', 'Dört ana eksen', 'Four core areas', 'Четыре направления', 'أربعة محاور') },
+      { title: L('تماس', 'İletişim', 'Contact', 'Контакты', 'اتصل بنا'), url: '../contact', desc: L('مشاوره رایگان', 'Ücretsiz danışmanlık', 'Free consultation', 'Бесплатная консультация', 'استشارة مجانية') }
     ]
   },
   {
@@ -605,9 +609,9 @@ const ARTICLES = [
       ]
     },
     related: [
-      { title: 'راهنمای انتخاب سنسور', url: 'industrial-sensors', desc: 'نکات فنی' },
-      { title: 'کاتالوگ VEGA', url: '../vega', desc: 'سنسور سطح و فشار' },
-      { title: 'تماس', url: '../contact', desc: 'استعلام قیمت' }
+      { title: L('راهنمای انتخاب سنسور', 'Sensör seçim rehberi', 'Sensor selection guide', 'Выбор датчика', 'دليل اختيار الحساس'), url: 'industrial-sensors', desc: L('نکات فنی', 'Teknik notlar', 'Technical notes', 'Технические заметки', 'ملاحظات فنية') },
+      { title: L('کاتالوگ VEGA', 'VEGA kataloğu', 'VEGA catalog', 'Каталог VEGA', 'كتالوج VEGA'), url: '../vega', desc: L('سنسور سطح و فشار', 'Seviye ve basınç', 'Level and pressure', 'Уровень и давление', 'مستوى وضغط') },
+      { title: L('تماس', 'İletişim', 'Contact', 'Контакты', 'اتصل بنا'), url: '../contact', desc: L('استعلام قیمت', 'Fiyat teklifi', 'Price quote', 'Запрос цены', 'استعلام السعر') }
     ]
   },
   {
@@ -677,9 +681,9 @@ const ARTICLES = [
       ]
     },
     related: [
-      { title: 'Fast Web Studio', url: '../fast', desc: 'تحویل ۵روزه' },
-      { title: 'خدمات طراحی وب', url: '../services#web-design', desc: 'پروژه سفارشی' },
-      { title: 'استعلام', url: '../contact?service=web-design', desc: 'شروع پروژه' }
+      { title: L('Fast Web Studio', 'Fast Web Studio', 'Fast Web Studio', 'Fast Web Studio', 'Fast Web Studio'), url: '../fast', desc: L('تحویل ۵روزه', '5 günde teslim', '5-day delivery', 'Сдача за 5 дней', 'تسليم خلال ٥ أيام') },
+      { title: L('خدمات طراحی وب', 'Web tasarım hizmetleri', 'Web design services', 'Услуги веб-дизайна', 'خدمات تصميم الويب'), url: '../services#web-design', desc: L('پروژه سفارشی', 'Özel proje', 'Custom project', 'Индивидуальный проект', 'مشروع مخصص') },
+      { title: L('استعلام', 'Teklif', 'Request a quote', 'Запрос', 'استعلام'), url: '../contact?service=web-design', desc: L('شروع پروژه', 'Projeyi başlat', 'Start a project', 'Старт проекта', 'بدء المشروع') }
     ]
   },
   {
@@ -749,9 +753,9 @@ const ARTICLES = [
       ]
     },
     related: [
-      { title: 'صفحه Marvi Society', url: '../marvi-society', desc: 'اسکرین‌شات و App Store' },
-      { title: 'نمونه‌کارها', url: '../portfolio', desc: 'پروژه‌های دیجیتال' },
-      { title: 'خدمات اپ', url: '../services#app-development', desc: 'iOS و وب‌اپ' }
+      { title: L('صفحه Marvi Society', 'Marvi Society sayfası', 'Marvi Society page', 'Страница Marvi Society', 'صفحة Marvi Society'), url: '../marvi-society', desc: L('اسکرین‌شات و App Store', 'Ekran görüntüleri ve App Store', 'Screenshots and the App Store', 'Скриншоты и App Store', 'لقطات وApp Store') },
+      { title: L('نمونه‌کارها', 'Portföy', 'Portfolio', 'Портфолио', 'الأعمال'), url: '../portfolio', desc: L('پروژه‌های دیجیتال', 'Dijital projeler', 'Digital projects', 'Цифровые проекты', 'مشاريع رقمية') },
+      { title: L('خدمات اپ', 'Uygulama hizmetleri', 'App services', 'Услуги приложений', 'خدمات التطبيقات'), url: '../services#app-development', desc: L('iOS و وب‌اپ', 'iOS ve web app', 'iOS and web apps', 'iOS и веб-приложения', 'iOS وتطبيقات ويب') }
     ]
   },
   {
@@ -821,9 +825,9 @@ const ARTICLES = [
       ]
     },
     related: [
-      { title: 'کاتالوگ Prosense', url: '../prosense', desc: 'دتکتور و SIL' },
-      { title: 'راهنمای VEGA', url: 'vega-supply-iran', desc: 'سنسور سطح' },
-      { title: 'تماس B2B', url: '../contact?product=Prosense', desc: 'پیش‌فاکتور' }
+      { title: L('کاتالوگ Prosense', 'Prosense kataloğu', 'Prosense catalog', 'Каталог Prosense', 'كتالوج Prosense'), url: '../prosense', desc: L('دتکتور و SIL', 'Dedektör ve SIL', 'Detectors and SIL', 'Детекторы и SIL', 'كواشف وSIL') },
+      { title: L('راهنمای VEGA', 'VEGA rehberi', 'VEGA guide', 'Гид VEGA', 'دليل VEGA'), url: 'vega-supply-iran', desc: L('سنسور سطح', 'Seviye sensörü', 'Level sensors', 'Датчики уровня', 'حساسات المستوى') },
+      { title: L('تماس B2B', 'B2B iletişim', 'B2B contact', 'Контакт B2B', 'تواصل B2B'), url: '../contact?product=Prosense', desc: L('پیش‌فاکتور', 'Proforma', 'Proforma', 'Проформа', 'فاتورة مبدئية') }
     ]
   },
   {
@@ -893,9 +897,9 @@ const ARTICLES = [
       ]
     },
     related: [
-      { title: 'صفحه فیلد تک', url: '../field-tech', desc: 'CCTV و نورمخفی' },
-      { title: 'خدمات دیجیتال', url: '../services', desc: 'وب و SMM' },
-      { title: 'تماس', url: '../contact', desc: 'هماهنگی واتساپ' }
+      { title: L('صفحه فیلد تک', 'Saha hizmetleri sayfası', 'Field services page', 'Страница полевых услуг', 'صفحة الخدمات الميدانية'), url: '../field-tech', desc: L('CCTV و نورمخفی', 'CCTV ve gizli aydınlatma', 'CCTV and cove lighting', 'CCTV и скрытый свет', 'كاميرات وإضاءة مخفية') },
+      { title: L('خدمات دیجیتال', 'Dijital hizmetler', 'Digital services', 'Цифровые услуги', 'خدمات رقمية'), url: '../services', desc: L('وب و SMM', 'Web ve SMM', 'Web and SMM', 'Веб и SMM', 'ويب وSMM') },
+      { title: L('تماس', 'İletişim', 'Contact', 'Контакты', 'اتصل بنا'), url: '../contact', desc: L('هماهنگی واتساپ', 'WhatsApp koordinasyonu', 'WhatsApp coordination', 'Координация в WhatsApp', 'تنسيق عبر واتساب') }
     ]
   },
   {
@@ -965,9 +969,9 @@ const ARTICLES = [
       ]
     },
     related: [
-      { title: 'خدمات سئو', url: '../services#digital-marketing', desc: 'کمپین و محتوا' },
-      { title: 'Fast Studio', url: '../fast', desc: 'لندینگ سریع' },
-      { title: 'استعلام سئو', url: '../contact?service=digital-marketing', desc: 'مشاوره محلی' }
+      { title: L('خدمات سئو', 'SEO hizmetleri', 'SEO services', 'Услуги SEO', 'خدمات SEO'), url: '../services#digital-marketing', desc: L('کمپین و محتوا', 'Kampanya ve içerik', 'Campaigns and content', 'Кампании и контент', 'حملات ومحتوى') },
+      { title: L('Fast Studio', 'Fast Studio', 'Fast Studio', 'Fast Studio', 'Fast Studio'), url: '../fast', desc: L('لندینگ سریع', 'Hızlı landing', 'Fast landing', 'Быстрый лендинг', 'صفحة هبوط سريعة') },
+      { title: L('استعلام سئو', 'SEO teklifi', 'SEO quote', 'Запрос SEO', 'استعلام SEO'), url: '../contact?service=digital-marketing', desc: L('مشاوره محلی', 'Yerel danışmanlık', 'Local consulting', 'Локальная консультация', 'استشارة محلية') }
     ]
   },
   {
@@ -1037,9 +1041,9 @@ const ARTICLES = [
       ]
     },
     related: [
-      { title: 'کاتالوگ Liqui Moly', url: '../liqui-moly', desc: 'روغن و افزودنی' },
-      { title: 'محصولات B2B', url: '../products#supply', desc: 'VEGA و Prosense' },
-      { title: 'استعلام', url: '../contact?product=Liqui%20Moly', desc: 'پیش‌فاکتور' }
+      { title: L('کاتالوگ Liqui Moly', 'Liqui Moly kataloğu', 'Liqui Moly catalog', 'Каталог Liqui Moly', 'كتالوج Liqui Moly'), url: '../liqui-moly', desc: L('روغن و افزودنی', 'Yağ ve katkı', 'Oils and additives', 'Масла и присадки', 'زيوت وإضافات') },
+      { title: L('محصولات B2B', 'B2B ürünler', 'B2B products', 'Продукты B2B', 'منتجات B2B'), url: '../products#supply', desc: L('VEGA و Prosense', 'VEGA ve Prosense', 'VEGA and Prosense', 'VEGA и Prosense', 'VEGA وProsense') },
+      { title: L('استعلام', 'Teklif', 'Request a quote', 'Запрос', 'استعلام'), url: '../contact?product=Liqui%20Moly', desc: L('پیش‌فاکتور', 'Proforma', 'Proforma', 'Проформа', 'فاتورة مبدئية') }
     ]
   }
 ];
@@ -1386,6 +1390,7 @@ ${fig('/' + a.extraImg, 'Каналы цифрового маркетинга, �
 </ol>
 <p>Для кампании — <a href="/pages/contact?service=digital-marketing">форма контакта</a> или <a href="/pages/services#digital-marketing">услуги маркетинга</a>.</p>`
   };
+  Object.assign(map, require('./article-locale-extra').ru(a, fig));
   if (map[a.slug]) return map[a.slug];
   return enBody(a)
     .replace(/Digital marketing is reaching the right audience online/g, 'Цифровой маркетинг — доступ к нужной аудитории онлайн')
@@ -1431,6 +1436,7 @@ ${fig('/' + a.extraImg, 'قنوات التسويق الرقمي المتصلة �
 </ol>
 <p>لتشغيل حملة استخدموا <a href="/pages/contact?service=digital-marketing">نموذج الاتصال</a> أو راجعوا <a href="/pages/services#digital-marketing">خدمات التسويق</a>.</p>`
   };
+  Object.assign(map, require('./article-locale-extra').ar(a, fig));
   if (map[a.slug]) return map[a.slug];
   return enBody(a)
     .replace(/Digital marketing is reaching the right audience online/g, 'التسويق الرقمي هو الوصول للجمهور المناسب عبر الإنترنت')

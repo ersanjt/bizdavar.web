@@ -5,6 +5,7 @@
  */
 const fs = require('fs');
 const path = require('path');
+const { ARTICLES } = require('./article-library');
 
 const ROOT = path.join(__dirname, '..');
 
@@ -13,8 +14,7 @@ require(path.join(ROOT, 'assets/scripts/i18n/locales.js'));
 require(path.join(ROOT, 'assets/scripts/i18n/locales-pages.js'));
 require(path.join(ROOT, 'assets/scripts/i18n/locale-seo.js'));
 require(path.join(ROOT, 'assets/scripts/i18n/locales-ru-ar.js'));
-require(path.join(ROOT, 'assets/scripts/i18n/articles-body-i18n.js'));
-require(path.join(ROOT, 'assets/scripts/i18n/articles-body-ru-ar.js'));
+require(path.join(ROOT, 'assets/scripts/i18n/articles-bodies.js'));
 
 const BODIES = global.BIZDAVAR_ARTICLE_BODIES || {};
 const LOCALES = global.BIZDAVAR_LOCALES || {};
@@ -39,6 +39,16 @@ const CTA_BY_SLUG = {
       ar: { p: 'اطلع على الباقات في صفحة Fast أو اسأل عبر واتساب الآن.', primary: 'Fast Web Studio', secondary: 'نموذج الطلب' }
     }
   },
+  'what-is-digital-marketing': {
+    paths: ['contact?service=digital-marketing', 'services#digital-marketing'],
+    labels: {
+      fa: { p: 'برای مشاوره تخصصی با بیزدوار تماس بگیرید.', primary: 'مشاوره رایگان', secondary: 'مشاهده خدمات' },
+      tr: { p: 'Dijital pazarlama danışmanlığı için Bizdavar ile iletişime geçin.', primary: 'Ücretsiz danışmanlık', secondary: 'Pazarlama hizmetleri' },
+      en: { p: 'Contact Bizdavar for digital marketing consulting.', primary: 'Free consultation', secondary: 'Marketing services' },
+      ru: { p: 'Свяжитесь с Bizdavar для консультации по цифровому маркетингу.', primary: 'Бесплатная консультация', secondary: 'Услуги маркетинга' },
+      ar: { p: 'تواصل مع Bizdavar لاستشارة التسويق الرقمي.', primary: 'استشارة مجانية', secondary: 'خدمات التسويق' }
+    }
+  },
   default: {
     paths: ['contact', 'services'],
     labels: {
@@ -56,6 +66,18 @@ function articlePath(prefix, slug) {
     ? path.join(prefix.slice(1), 'pages', 'articles', slug + '.html')
     : path.join('pages', 'articles', slug + '.html');
   return path.join(ROOT, rel);
+}
+
+function headerMeta(slug, lang) {
+  const a = ARTICLES.find((row) => row.slug === slug);
+  if (!a) return null;
+  const brand = lang === 'fa' ? 'بیزدوار گروپ' : 'Bizdavar Group';
+  const display = a.date;
+  return {
+    category: a.category[lang] || a.category.en,
+    title: a.title[lang] || a.title.en,
+    dateDisplay: `${brand} · <time datetime="${a.date}">${display}</time>`
+  };
 }
 
 function upsertHeader(html, art) {
@@ -80,6 +102,19 @@ function upsertHeader(html, art) {
     );
   }
   return out;
+}
+
+function localizeBodyPaths(html, prefix) {
+  if (!prefix) return html;
+  return html
+    .replace(/href="\/pages\//g, `href="${prefix}/pages/`)
+    .replace(/href="\/index"/g, `href="${prefix}/"`);
+}
+
+function bodyForLocale(bodies, code, slug) {
+  const pack = bodies[slug];
+  if (!pack) return null;
+  return pack[code] || pack.en || null;
 }
 
 function upsertBody(html, bodyHtml) {
@@ -115,19 +150,18 @@ function upsertCta(html, lang, slug, prefix) {
 let updated = 0;
 
 for (const loc of LOCALE_DIRS) {
-  const bodies = BODIES[loc.code];
   const pageLocale = LOCALES[loc.code];
   const articles = pageLocale?.articles || {};
-  if (!bodies) continue;
 
-  for (const slug of SLUGS) {
-    const body = bodies[slug];
+  for (const slug of Object.keys(BODIES)) {
+    let body = bodyForLocale(BODIES, loc.code, slug);
     if (!body) continue;
+    body = localizeBodyPaths(body, loc.prefix);
     const file = articlePath(loc.prefix, slug);
     if (!fs.existsSync(file)) continue;
 
     let html = fs.readFileSync(file, 'utf8');
-    html = upsertHeader(html, articles[slug]);
+    html = upsertHeader(html, headerMeta(slug, loc.code));
     const withBody = upsertBody(html, body);
     if (!withBody) continue;
     html = upsertCta(withBody, loc.code, slug, loc.prefix);

@@ -120,10 +120,10 @@
         service: 'طراحی وبسایت شرکتی و سئو',
         slug: 'pages/supplify-trade'
       });
-      renderRelatedLinks([
-        { title: 'Fast Web Studio', url: 'fast', desc: 'طراحی سایت از $99' },
-        { title: 'نمونه‌کارها', url: 'portfolio', desc: 'پروژه‌های بیزدوار' },
-        { title: 'تماس', url: 'contact', desc: 'مشاوره رایگان' }
+      renderRelatedLinks(window.BIZDAVAR_I18N?.raw('caseStudy.supplifyTrade.related') || [
+        { title: 'Fast Web Studio', url: 'fast', desc: 'Сайт от $99' },
+        { title: 'Портфолио', url: 'portfolio', desc: 'Проекты Bizdavar' },
+        { title: 'Контакты', url: 'contact', desc: 'Бесплатная консультация' }
       ]);
       setupWhatsappLinks();
     });

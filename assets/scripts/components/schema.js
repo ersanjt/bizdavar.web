@@ -691,35 +691,87 @@
 
   };
 
+  function formatSchemaPrice(amount) {
+    const n = Number(amount);
+    if (Number.isNaN(n) || n <= 0) return null;
+    return String(n % 1 ? n.toFixed(2) : Math.round(n));
+  }
+
+  function parseOfferPricing(source) {
+    if (!source || typeof source !== 'object') return null;
+    if (source.priceEur != null && source.priceEur !== '' && !Number.isNaN(Number(source.priceEur))) {
+      return { amount: Number(source.priceEur), currency: 'EUR' };
+    }
+    if (source.priceUsd != null && source.priceUsd !== '' && !Number.isNaN(Number(source.priceUsd))) {
+      return { amount: Number(source.priceUsd), currency: 'USD' };
+    }
+    const price = source.price;
+    if (price != null && price !== '' && !Number.isNaN(Number(price))) {
+      return {
+        amount: Number(price),
+        currency: source.priceCurrency || source.currency || 'USD'
+      };
+    }
+    return null;
+  }
+
+  function buildProductOffer(opts) {
+    const parsed = parseOfferPricing(opts);
+    if (!parsed) return null;
+    const price = formatSchemaPrice(parsed.amount);
+    if (!price) return null;
+    const offerUrl = opts.url
+      ? (String(opts.url).startsWith('http') ? opts.url : absUrl(opts.url))
+      : absUrl(R.contact);
+    return {
+      '@type': 'Offer',
+      price,
+      priceCurrency: parsed.currency || 'USD',
+      availability: 'https://schema.org/InStock',
+      url: offerUrl,
+      seller: {
+        '@type': 'Organization',
+        name: opts.sellerName || C.siteNameEn,
+        url: C.baseUrl
+      }
+    };
+  }
+
+  /** Product + valid Offer, or Thing when price is quote-only (Google Product snippets). */
+  function buildProductOrThing(fields, offerOpts) {
+    const offer = buildProductOffer(offerOpts);
+    if (offer) {
+      return { '@type': 'Product', ...fields, offers: offer };
+    }
+    const thing = { '@type': 'Thing', ...fields };
+    if (fields.brand) thing.brand = fields.brand;
+    return thing;
+  }
+
+  window.BD_SCHEMA = {
+    parseOfferPricing,
+    buildProductOffer,
+    buildProductOrThing
+  };
+
   window.injectSupplyBrandSchema = function (data) {
     if (!data) return;
-    const ld = {
-      '@context': 'https://schema.org',
-      '@type': 'Product',
+    const pageUrl = data.url && String(data.url).startsWith('http')
+      ? data.url
+      : absUrl(data.url || R.contact);
+    const fields = {
       name: data.name,
       description: data.description,
       brand: { '@type': 'Brand', name: data.brand || data.name },
       category: data.category,
       image: data.image ? absUrl(data.image) : undefined,
-      url: data.url && String(data.url).startsWith('http') ? data.url : absUrl(data.url || R.contact),
-      areaServed: data.areaServed || ['IR', 'TR']
+      url: pageUrl
     };
-    const price = data.price != null ? data.price : data.priceUsd;
-    if (price != null && price !== '' && !Number.isNaN(Number(price))) {
-      ld.offers = {
-        '@type': 'Offer',
-        price: String(price),
-        priceCurrency: data.priceCurrency || 'USD',
-        availability: 'https://schema.org/InStock',
-        seller: {
-          '@type': 'Organization',
-          name: C.siteNameEn,
-          areaServed: ['IR', 'TR']
-        },
-        url: ld.url
-      };
-    }
-    injectJsonLd('jsonld-supply-' + (data.id || data.name), ld);
+    const item = buildProductOrThing(fields, { ...data, url: pageUrl, sellerName: C.siteNameEn });
+    injectJsonLd('jsonld-supply-' + (data.id || data.name), {
+      '@context': 'https://schema.org',
+      ...item
+    });
   };
 
   window.injectCaseStudySchema = function (data) {

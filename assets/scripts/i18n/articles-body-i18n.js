@@ -120,7 +120,7 @@
       '<p>Inquiry → proforma → order → logistics — details in <a href="/en/pages/products#supply">industrial services</a>.</p>',
 
     'about-bizdavar-group':
-      '<img src="/assets/images/content/about-hero.svg" alt="Bizdavar Group — global presence" class="article__img" loading="lazy" width="768" height="400">' +
+      '<img src="/assets/images/content/about-hero.jpg" alt="Bizdavar Group — global presence" class="article__img" loading="lazy" width="768" height="400">' +
       '<p>Bizdavar Group has operated since 2013, founded by <strong>Ersan Jahed Tabrizi</strong> — 100+ projects across 11 countries.</p>' +
       '<h2>Areas of activity</h2>' +
       '<ul>' +
@@ -313,7 +313,7 @@
       '<p>Talep → proforma → sipariş → lojistik — detaylar <a href="/tr/pages/products#supply">endüstriyel hizmetlerde</a>.</p>',
 
     'about-bizdavar-group':
-      '<img src="/assets/images/content/about-hero.svg" alt="Bizdavar Group — küresel varlık" class="article__img" loading="lazy" width="768" height="400">' +
+      '<img src="/assets/images/content/about-hero.jpg" alt="Bizdavar Group — küresel varlık" class="article__img" loading="lazy" width="768" height="400">' +
       '<p>Bizdavar Group, <strong>Ersan Jahed Tabrizi</strong> tarafından 2013\'ten beri faaliyet gösterir — 11 ülkede 100+ proje.</p>' +
       '<h2>Faaliyet alanları</h2>' +
       '<ul>' +
