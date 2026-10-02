@@ -56,6 +56,8 @@ const PAGES = [
   { path: '/pages/marvispace', changefreq: 'monthly', priority: 0.8, lastmod: '2026-08-26' },
   { path: '/pages/supplify-trade', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/kaya-one', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
+  { path: '/pages/asil-feed', changefreq: 'monthly', priority: 0.8, lastmod: '2026-10-02' },
+  { path: '/pages/shop', changefreq: 'weekly', priority: 0.8, lastmod: '2026-10-02' },
   { path: '/pages/smm-turk', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/marvi-society', changefreq: 'monthly', priority: 0.8, lastmod: '2026-08-24' },
   { path: '/pages/fxguard-exchange', changefreq: 'monthly', priority: 0.85, lastmod: SITE_UPDATE },

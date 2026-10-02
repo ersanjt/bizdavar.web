@@ -26,6 +26,8 @@ window.BIZDAVAR_CONFIG = {
     bzDiamond: 'pages/bz-diamond.html',
     supplifyTrade: 'pages/supplify-trade.html',
     kayaOne: 'pages/kaya-one.html',
+    asilFeed: 'pages/asil-feed.html',
+    shop: 'pages/shop.html',
     smmTurk: 'pages/smm-turk.html',
     marvispace: 'pages/marvispace.html',
     marviSociety: 'pages/marvi-society.html',
@@ -110,7 +112,8 @@ window.BIZDAVAR_CONFIG = {
             labelKey: 'nav.productsLines',
             items: [
               { route: 'products', page: 'products', hash: 'catalog', cat: 'packaging', labelKey: 'nav.productPackaging', descKey: 'nav.productPackagingDesc' },
-              { route: 'products', page: 'products', hash: 'catalog', cat: 'medical', labelKey: 'nav.productMedical', descKey: 'nav.productMedicalDesc' }
+              { route: 'products', page: 'products', hash: 'catalog', cat: 'medical', labelKey: 'nav.productMedical', descKey: 'nav.productMedicalDesc' },
+              { route: 'shop', page: 'shop', labelKey: 'nav.productShop', descKey: 'nav.productShopDesc' }
             ]
           }
         ]
@@ -714,6 +717,7 @@ window.BIZDAVAR_CONFIG = {
   ],
 
   featuredPartners: [
+    { name: 'ASIL', url: 'pages/asil-feed.html', logo: 'assets/images/partners/asil-feed.webp', role: 'case-study' },
     { name: 'Netinode', url: 'https://netinode.net/', logo: 'assets/images/partners/netinode.png?v=3', role: 'ecosystem' },
     { name: 'Marvispace', url: 'pages/marvispace.html', logo: 'assets/images/partners/marvispace.svg', role: 'case-study' },
     { name: 'Supplify Trade', url: 'pages/supplify-trade.html', logo: 'assets/images/partners/supplify-trade.svg', role: 'case-study' },
@@ -875,6 +879,7 @@ window.BIZDAVAR_CONFIG = {
     { name: 'ZedGP', domain: 'zedgp.com', category: 'خدمات مالی', role: 'ecosystem', internal: false, hidden: true, archived: true, logo: 'assets/images/partners/zedgp.png', note: 'پروژه غیرفعال' },
     { name: 'ZedX DMCC', domain: 'zedxdmcc.com', category: 'طراحی وب / زیرساخت', role: 'case-study', internal: false, hidden: true, logo: 'assets/images/partners/zedxdmcc.png', note: 'نمونه‌کار — طراحی وبسایت و زیرساخت' },
     { name: 'BZ Diamond', domain: 'bzdiamond.com', category: 'طراحی وب / فروشگاه', role: 'case-study', internal: true, hidden: true, slug: 'pages/bz-diamond.html', logo: 'assets/images/partners/zeddiamond.png', note: 'نمونه‌کار — WooCommerce و مدیریت ایمیل' },
+    { name: 'ASIL', domain: 'asilfeed.com', url: 'https://asilfeed.com/', category: 'طراحی وب / سرور و ایمیل سازمانی', role: 'case-study', internal: true, slug: 'pages/asil-feed.html', logo: 'assets/images/partners/asil-feed.webp', note: 'نمونه‌کار — طراحی وبسایت، راه‌اندازی سرور و ایمیل‌های شرکت برای برند خوراک ASIL در دبی' },
     { name: 'Supplify Trade', domain: 'supplifytrade.com', url: 'https://supplifytrade.com/', category: 'طراحی وب / تجارت بین‌المللی B2B', role: 'case-study', internal: true, slug: 'pages/supplify-trade.html', logo: 'assets/images/partners/supplify-trade.svg', note: 'نمونه‌کار — وبسایت شرکتی تجارت و sourcing با لایسنس RAKEZ امارات' },
     { name: 'Kaya One AG', domain: 'kayaone.ch', url: 'https://kayaone.ch/', category: 'طراحی وب / تجارت سوئیسی B2B', role: 'case-study', internal: true, slug: 'pages/kaya-one.html', logo: 'assets/images/partners/kaya-one.svg', note: 'نمونه‌کار — وبسایت شرکتی تجارت و راهکارهای صنعتی سوئیس (Brunnen)' },
     { name: 'Zed Diamond', domain: 'zeddiamond.com', category: 'طراحی وب / فروشگاه جواهرات', role: 'case-study', internal: false, hidden: true, logo: 'assets/images/partners/zeddiamond.png', note: 'نمونه‌کار — طراحی وبسایت فروشگاهی و تولید محتوا' },

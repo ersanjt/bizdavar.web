@@ -215,6 +215,7 @@
     if (page === 'bz-diamond') applyListById('bzDiamondServices', 'caseStudy.bzDiamond.about.services');
     if (page === 'supplify-trade') applyListById('supplifyTradeServices', 'caseStudy.supplifyTrade.about.services');
     if (page === 'kaya-one') applyListById('kayaOneServices', 'caseStudy.kayaOne.about.services');
+    if (page === 'asil-feed') applyListById('asilFeedServices', 'caseStudy.asilFeed.about.services');
     if (page === 'smm-turk') applyListById('smmTurkServices', 'caseStudy.smmTurk.about.services');
     if (page === 'marvi-society') applyListById('marviSocietyServices', 'caseStudy.marviSociety.about.services');
     if (page === 'fxguard-exchange') applyListById('fxguardExchangeServices', 'caseStudy.fxguardExchange.about.services');

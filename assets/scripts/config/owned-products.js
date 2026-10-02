@@ -5,6 +5,7 @@
 window.BIZDAVAR_OWNED_PRODUCTS = {
   imgVersion: '8',
   homeOrder: ['fxguard', 'bizswap'],
+  liveOrder: ['fxguard', 'bizswap', 'bizclean', 'biztab', 'bizpad', 'ostrich-leather'],
   categories: [
     { id: 'software', label: 'نرم‌افزار و SaaS', icon: 'globe' },
     { id: 'iot-health', label: 'IoT و بهداشت', icon: 'shield' },

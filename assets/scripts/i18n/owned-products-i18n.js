@@ -18,18 +18,18 @@
           ctaContact: 'استعلام محصول'
         },
         pillars: {
-          eyebrow: 'چهار محور محصول',
+          eyebrow: 'دسته‌های محصول',
           title: 'از نرم‌افزار تا خط تولید',
-          desc: 'محصولات مالکیتی بیزدوار در چهار دسته — برای پرش سریع، دسته را انتخاب کنید.'
+          desc: 'پنج دسته — نرم‌افزار، بهداشت، بسته‌بندی، پزشکی و چرم. دسته را انتخاب کنید تا همان بخش کاتالوگ باز شود.'
         },
         intro: {
           title: 'ما چه می‌سازیم؟',
-          body: 'اولویت امروز بیزدوار <strong>بازرگانی صنعتی، سایت، بازاریابی و نرم‌افزار SaaS</strong> مثل FXGuard است. محصولات سخت‌افزاری که قبلاً ساخته‌ایم در دستاوردهای شرکت هستند.',
+          body: 'نرم‌افزار زنده <strong>FXGuard</strong> و BizSwap، سخت‌افزار تبریز (BizTab، BizClean و BizPad) و چرم شترمرغ هر کدام صفحه خودش را دارد — کنار تامین برندهای صنعتی.',
           ctaContact: 'استعلام و سفارش',
           ctaPortfolio: 'نمونه‌کارهای دیجیتال',
-          statProducts: '۱۲+',
+          statProducts: '۱۴',
           statProductsLabel: 'محصول و خط',
-          statCats: '۴',
+          statCats: '۵',
           statCatsLabel: 'دسته اصلی',
           statOrigin: 'تبریز',
           statOriginLabel: 'مهندسی و IP'
@@ -37,14 +37,14 @@
         featured: {
           eyebrow: 'محصولات زنده',
           title: 'صفحات محصول آماده سفارش',
-          desc: 'WhatsApp CRM، Accounting و BizSwap — آماده سفارش. پد حرارتی و BizTab در دستاوردها و کاتالوگ کامل هستند.'
+          desc: 'صفحه اختصاصی دارند: واتساپ CRM از ۴۹ دلار، BizSwap، BizClean، BizTab، BizPad و چرم شترمرغ. حسابداری FXGuard در لیست انتظار است.'
         },
         filterAll: 'همه',
         empty: 'محصولی برای نمایش نیست.',
         catalog: {
           eyebrow: 'کاتالوگ کامل',
           title: 'همه محصولات مهندسی‌شده بیزدوار',
-          desc: '۱۳ محصول و خط تولید — فیلتر بر اساس دسته یا مستقیم استعلام بگیرید.'
+          desc: '۱۴ محصول و خط — فیلتر بر اساس دسته، یا برای خطی که صفحه ندارد استعلام بگیرید.'
         },
         supply: {
           eyebrow: 'تامین برند',
@@ -59,7 +59,7 @@
           desc: 'نرم‌افزار مالکیتی، سخت‌افزار بیزدوار و برندهای صنعتی تامین — یک کلیک تا صفحه اختصاصی.',
           ownedKicker: 'Owned · Software & Hardware',
           ownedTitle: 'محصولات مالکیتی',
-          ownedDesc: 'WhatsApp CRM و BizSwap — محصولات زنده. تولید سخت‌افزاری در دستاوردها و کاتالوگ است.',
+          ownedDesc: 'نرم‌افزار، سخت‌افزار تبریز و چرم شترمرغ صفحه اختصاصی دارند. حسابداری FXGuard در انتظار است.',
           supplyKicker: 'Supply · Industrial Brands',
           supplyTitle: 'برندهای تامین',
           supplyDesc: 'کاتالوگ جداگانه، مشاوره فنی و پیش‌فاکتور شفاف برای پروژه‌های صنعتی.',
@@ -124,7 +124,7 @@
           'fxguard-accounting': {
             name: 'Accounting',
             title: 'FXGuard Accounting',
-            desc: 'سامانه حسابداری برای تیم‌های مالی، صرافی و SME — بخشی از سوئیت محصولات FXGuard.',
+            desc: 'سامانه حسابداری برای تیم مالی و صرافی — هنوز در لیست انتظار؛ دموی عمومی جدا از CRM است.',
             tags: ['FXGuard', 'Accounting', 'Finance']
           },
           biztab: {
@@ -219,18 +219,18 @@
           ctaContact: 'Ürün teklifi'
         },
         pillars: {
-          eyebrow: 'Dört ürün ekseni',
+          eyebrow: 'Ürün kategorileri',
           title: 'Yazılımdan üretim hattına',
-          desc: 'Bizdavar\'ın kendi ürünleri dört kategoride — hızlı geçiş için kategoriyi seçin.'
+          desc: 'Beş grup — yazılım, hijyen, ambalaj, medikal ve deri. Kataloğun o dilimini açmak için kategoriyi seçin.'
         },
         intro: {
           title: 'Ne üretiyoruz?',
-          body: 'Bugünün önceliği <strong>endüstriyel tedarik, web, pazarlama ve SaaS</strong> (FXGuard). Daha önce ürettiğimiz donanım şirket başarılarında durur.',
+          body: 'Canlı yazılım <strong>FXGuard</strong> ve BizSwap. Tebriz donanımı — BizTab, BizClean ve BizPad — ile devekuşu derisinin ayrı sayfası var; yanında endüstriyel marka tedariki.',
           ctaContact: 'Teklif ve sipariş',
           ctaPortfolio: 'Dijital portfolyo',
-          statProducts: '12+',
+          statProducts: '14',
           statProductsLabel: 'ürün ve hat',
-          statCats: '4',
+          statCats: '5',
           statCatsLabel: 'ana kategori',
           statOrigin: 'Tebriz',
           statOriginLabel: 'mühendislik ve IP'
@@ -238,14 +238,14 @@
         featured: {
           eyebrow: 'Canlı ürünler',
           title: 'Siparişe hazır ürün sayfaları',
-          desc: 'WhatsApp CRM, Accounting ve BizSwap — siparişe hazır. Isı pedi ve BizTab başarılar ve tam katalogda.'
+          desc: 'Ayrı sayfası olanlar: WhatsApp CRM ayda 49 dolardan, BizSwap, BizClean, BizTab, BizPad ve devekuşu derisi. FXGuard Accounting bekleme listesinde.'
         },
         filterAll: 'Tümü',
         empty: 'Gösterilecek ürün yok.',
         catalog: {
           eyebrow: 'Tam katalog',
           title: 'Tüm Bizdavar mühendislik ürünleri',
-          desc: '13 ürün ve üretim hattı — kategoriye göre filtreleyin veya teklif isteyin.'
+          desc: '14 ürün ve hat — kategoriye göre filtreleyin veya sayfası olmayan hat için teklif isteyin.'
         },
         supply: {
           eyebrow: 'Marka tedariki',
@@ -260,7 +260,7 @@
           desc: 'Sahip olunan yazılım/donanım ve endüstriyel tedarik markaları — tek tıkla özel sayfa.',
           ownedKicker: 'Owned · Software & Hardware',
           ownedTitle: 'Sahip olunan ürünler',
-          ownedDesc: 'WhatsApp CRM ve BizSwap — canlı ürünler. Donanım, başarılar ve tam katalogda.',
+          ownedDesc: 'Yazılım, Tebriz donanımı ve devekuşu derisinin ayrı sayfası var. FXGuard Accounting bekleme listesinde.',
           supplyKicker: 'Supply · Industrial Brands',
           supplyTitle: 'Tedarik markaları',
           supplyDesc: 'Ayrı katalog, teknik danışmanlık ve şeffaf proforma.',
@@ -310,7 +310,7 @@
         items: {
           bizswap: { name: 'BizSwap', title: 'Token ön satış & swap', desc: 'Cüzdan bağlantısı, token swap ve on-chain ön satış — BEP-20 ve RWA.', homeDesc: 'Zincir üstü token swap ve ön satış', tags: ['DeFi', 'Web3', 'Token Swap'] },
           fxguard: { name: 'WhatsApp CRM', title: 'Paylaşılan WhatsApp inbox', desc: 'Ortak inbox, ticket ve şubeler — ayda 49 dolardan. Demo: app.fxguard.io.', homeDesc: 'WhatsApp ekip inbox — 49 dolardan', tags: ['FXGuard', 'CRM', 'From $49/mo'] },
-          'fxguard-accounting': { name: 'Accounting', title: 'FXGuard Accounting', desc: 'Finans, döviz ve KOBİ ekipleri için muhasebe sistemi — FXGuard ürün ailesinin parçası.', tags: ['FXGuard', 'Accounting', 'Finance'] },
+          'fxguard-accounting': { name: 'Accounting', title: 'FXGuard Accounting', desc: 'Finans ve döviz ekipleri için muhasebe — henüz bekleme listesinde; herkese açık demo CRM’den ayrıdır.', tags: ['FXGuard', 'Accounting', 'Waitlist'] },
           biztab: { name: 'BizTab', title: 'Temasız duvar termometresi', desc: 'Temasız duvar termometresi — 0,3°C altı hata, Tebriz üretimi.', homeDesc: 'Giriş ve klinik için temasız termometre', tags: ['IoT', 'Temasız', 'Tebriz'] },
           bizclean: { name: 'BizClean', title: 'Hijyen ve dezenfeksiyon', desc: 'Otomatik el dezenfektan (BizClean V5) — Bizdavar üretimi; RINOTEX 1400 «Imen Sahand Padideh» park birimi; ISNA/IRIB basını.', tags: ['Hijyen', 'Otomatik', 'COVID'] },
           bizpad: { name: 'BizPad', title: 'BizPad ısı pedi', desc: 'Ev, araç ve pet yatağı için ısı pedi — Bizdavar tasarımı.', homeDesc: 'Ev ve araç koltuğu ısı pedi', tags: ['Isı pedi', 'Otomotiv', 'Tebriz'] },
@@ -351,18 +351,18 @@
           ctaContact: 'Product inquiry'
         },
         pillars: {
-          eyebrow: 'Four product pillars',
+          eyebrow: 'Product categories',
           title: 'From software to production lines',
-          desc: 'Bizdavar-owned products across four categories — pick a pillar to jump ahead.'
+          desc: 'Five groups — software, hygiene, packaging, medical and leather. Pick one to open that slice of the catalog.'
         },
         intro: {
           title: 'What we build',
-          body: 'Today the priority is <strong>industrial supply, websites, marketing and SaaS</strong> such as FXGuard. Hardware we built earlier lives in company achievements.',
+          body: 'Live software is <strong>FXGuard</strong> and BizSwap. Tabriz hardware — BizTab, BizClean and BizPad — and ostrich leather each have a page, beside industrial brand supply.',
           ctaContact: 'Quote & order',
           ctaPortfolio: 'Digital portfolio',
-          statProducts: '12+',
+          statProducts: '14',
           statProductsLabel: 'products & lines',
-          statCats: '4',
+          statCats: '5',
           statCatsLabel: 'main categories',
           statOrigin: 'Tabriz',
           statOriginLabel: 'engineering & IP'
@@ -370,14 +370,14 @@
         featured: {
           eyebrow: 'Live products',
           title: 'Ready product pages',
-          desc: 'WhatsApp CRM, Accounting and BizSwap — ready to order. Heating pad and BizTab live in achievements and the full catalog.'
+          desc: 'Dedicated pages: WhatsApp CRM from $49/mo, BizSwap, BizClean, BizTab, BizPad and ostrich leather. FXGuard Accounting is on the waitlist.'
         },
         filterAll: 'All',
         empty: 'No products to display.',
         catalog: {
           eyebrow: 'Full catalog',
           title: 'All engineered Bizdavar products',
-          desc: 'Thirteen products and production lines — filter by category or request a quote.'
+          desc: '14 products and lines — filter by category, or request a quote for a line without its own page.'
         },
         supply: {
           eyebrow: 'Brand supply',
@@ -392,7 +392,7 @@
           desc: 'Owned software and hardware plus industrial supply brands — one click to each dedicated page.',
           ownedKicker: 'Owned · Software & Hardware',
           ownedTitle: 'Owned products',
-          ownedDesc: 'WhatsApp CRM and BizSwap — live products. Hardware sits in achievements and the full catalog.',
+          ownedDesc: 'Software, Tabriz hardware and ostrich leather each have a page. FXGuard Accounting is on the waitlist.',
           supplyKicker: 'Supply · Industrial Brands',
           supplyTitle: 'Supply brands',
           supplyDesc: 'Separate catalogs, technical consulting and transparent proformas.',
@@ -442,7 +442,7 @@
         items: {
           bizswap: { name: 'BizSwap', title: 'Token presale & swap', desc: 'Wallet connect, token swap and on-chain presale — BEP-20 and RWA.', homeDesc: 'On-chain token swap and presale', tags: ['DeFi', 'Web3', 'Token Swap'] },
           fxguard: { name: 'WhatsApp CRM', title: 'Shared WhatsApp inbox', desc: 'Team inbox, tickets and branches — from $49/mo. Demo at app.fxguard.io.', homeDesc: 'Team WhatsApp inbox — from $49', tags: ['FXGuard', 'CRM', 'From $49/mo'] },
-          'fxguard-accounting': { name: 'Accounting', title: 'FXGuard Accounting', desc: 'Accounting system for finance, exchange and SME teams — part of the FXGuard product suite.', tags: ['FXGuard', 'Accounting', 'Finance'] },
+          'fxguard-accounting': { name: 'Accounting', title: 'FXGuard Accounting', desc: 'Accounting for finance and exchange teams — still on the waitlist. The public demo is separate from the CRM.', tags: ['FXGuard', 'Accounting', 'Waitlist'] },
           biztab: { name: 'BizTab', title: 'Non-contact wall thermometer', desc: 'Wall-mounted non-contact thermometer — under 0.3°C error, built in Tabriz.', homeDesc: 'Lobby and clinic non-contact thermometer', tags: ['IoT', 'Contactless', 'Tabriz'] },
           bizclean: { name: 'BizClean', title: 'Hygiene & disinfection line', desc: 'Automatic hand sanitizer (BizClean V5) — Bizdavar production; RINOTEX 1400 via «Imen Sahand Padideh» park unit; ISNA & IRIB press.', tags: ['Hygiene', 'Automatic', 'COVID'] },
           bizpad: { name: 'BizPad', title: 'Heating pad', desc: 'Heating pad for home, car and pet beds — designed by the Bizdavar team.', homeDesc: 'Home and car-seat heating pad', tags: ['Heating pad', 'Automotive', 'Tabriz'] },

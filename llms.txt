@@ -209,6 +209,20 @@
 - [Russian](https://bizdavar.com/ru/pages/kaya-one)
 - [Arabic](https://bizdavar.com/ar/pages/kaya-one)
 
+### /pages/asil-feed
+- [Persian](https://bizdavar.com/pages/asil-feed)
+- [Turkish](https://bizdavar.com/tr/pages/asil-feed)
+- [English](https://bizdavar.com/en/pages/asil-feed)
+- [Russian](https://bizdavar.com/ru/pages/asil-feed)
+- [Arabic](https://bizdavar.com/ar/pages/asil-feed)
+
+### /pages/shop
+- [Persian](https://bizdavar.com/pages/shop)
+- [Turkish](https://bizdavar.com/tr/pages/shop)
+- [English](https://bizdavar.com/en/pages/shop)
+- [Russian](https://bizdavar.com/ru/pages/shop)
+- [Arabic](https://bizdavar.com/ar/pages/shop)
+
 ### /pages/smm-turk
 - [Persian](https://bizdavar.com/pages/smm-turk)
 - [Turkish](https://bizdavar.com/tr/pages/smm-turk)

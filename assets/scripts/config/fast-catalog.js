@@ -199,7 +199,8 @@ window.FAST_CATALOG = {
     { name: 'Marvelous Holding', category: 'هلدینگ', domain: 'marvelousholding.com', internal: false, thumb: 'assets/images/partners/marvelous-holding.png' },
     { name: 'NIK Aesthetic', category: 'کلینیک زیبایی', domain: 'nikaesthetic.com', internal: false, thumb: 'assets/images/partners/nikaesthetic.png' },
     { name: 'Paparosi', category: 'برند تجاری', domain: 'paparosi.co', internal: false, thumb: 'assets/images/partners/paparosi.png' },
-    { name: 'Arian Pumps', category: 'B2B صنعتی', domain: 'arianpumps.com', internal: false, thumb: 'assets/images/content/services-web-mockup.svg' }
+    { name: 'Arian Pumps', category: 'B2B صنعتی', domain: 'arianpumps.com', internal: false, thumb: 'assets/images/content/services-web-mockup.svg' },
+    { name: 'ASIL', category: 'خوراک اسب و دام · دبی', slug: 'pages/asil-feed', internal: true, thumb: 'assets/images/partners/asil-feed.webp' }
   ],
 
   faq: [

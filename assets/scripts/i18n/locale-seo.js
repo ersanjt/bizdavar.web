@@ -141,6 +141,16 @@
         seoDescription: 'نمونه طراحی سایت شرکتی برای تجارت و راهکارهای صنعتی: ساختار محتوا، سئو و پشتیبانی فنی — خدمات طراحی وب بیزدوار گروپ.',
         seoKeywords: 'طراحی وب شرکتی, تجارت صنعتی, نمونه طراحی سایت, بیزدوار'
       },
+      asilFeed: {
+        seoTitle: 'نمونه طراحی وب ASIL | سرور و ایمیل شرکت — بیزدوار',
+        seoDescription: 'نمونه‌کار طراحی وبسایت، راه‌اندازی سرور و ایمیل سازمانی برای برند خوراک اسب و دام ASIL در دبی — بیزدوار گروپ.',
+        seoKeywords: 'طراحی وبسایت, راه‌اندازی سرور, ایمیل سازمانی, ASIL, خوراک اسب, بیزدوار'
+      },
+      shop: {
+        seoTitle: 'فروشگاه درهم | کالاهای صنعتی و الکترونیکی — بیزدوار',
+        seoDescription: 'فروشگاه بیزدوار با قیمت درهم امارات. کالاهای صنعتی، ابزار دقیق، الکترونیکی و سایر اقلام — سفارش از واتساپ.',
+        seoKeywords: 'فروشگاه درهم, AED, کالای صنعتی, ابزار دقیق, الکترونیکی, بیزدوار'
+      },
       smmTurk: {
         seoTitle: 'نمونه طراحی پنل SMM | UI و سئو — بیزدوار گروپ',
         seoDescription: 'نمونه طراحی وب و پنل خدمات شبکه‌های اجتماعی: UI، صفحات تبدیل، سئو و پشتیبانی — خدمات طراحی وب بیزدوار گروپ.',
@@ -382,6 +392,16 @@
         seoTitle: 'Endüstriyel ticaret web tasarım örneği | Kurumsal site — Bizdavar',
         seoDescription: 'Kurumsal web tasarım örneği: ticaret ve endüstriyel çözümler sitesi, içerik yapısı, SEO ve teknik destek — Bizdavar Group.',
         seoKeywords: 'kurumsal web tasarım, endüstriyel ticaret, web tasarım örneği, Bizdavar'
+      },
+      asilFeed: {
+        seoTitle: 'ASIL web tasarım örneği | Sunucu ve kurumsal e-posta — Bizdavar',
+        seoDescription: 'Örnek iş: Dubai’deki ASIL at ve hayvan yemi markası için web sitesi, sunucu kurulumu ve kurumsal e-posta — Bizdavar Group.',
+        seoKeywords: 'web tasarım, sunucu kurulumu, kurumsal e-posta, ASIL, at yemi, Bizdavar'
+      },
+      shop: {
+        seoTitle: 'Dirhem mağaza | Endüstriyel ve elektronik ürünler — Bizdavar',
+        seoDescription: 'Bizdavar mağazası, fiyatlar BAE dirhemi. Endüstriyel ürünler, ölçüm cihazları, elektronik ve diğer kalemler — sipariş WhatsApp ile.',
+        seoKeywords: 'dirhem mağaza, AED, endüstriyel, ölçüm cihazı, elektronik, Bizdavar'
       },
       smmTurk: {
         seoTitle: 'SMM panel web tasarım örneği | UI ve SEO — Bizdavar',
@@ -706,6 +726,16 @@
         seoTitle: 'Industrial trade web design case study | Corporate site — Bizdavar',
         seoDescription: 'Corporate web design case study: trading and industrial solutions site, content structure, SEO and technical support — Bizdavar Group.',
         seoKeywords: 'corporate web design, industrial trade, web design case study, Bizdavar'
+      },
+      asilFeed: {
+        seoTitle: 'ASIL website case study | Server and company email — Bizdavar',
+        seoDescription: 'Case study: website design, server setup and company email for ASIL, a Dubai horse and livestock feed brand — Bizdavar Group.',
+        seoKeywords: 'website design, server setup, company email, ASIL, horse feed, Bizdavar'
+      },
+      shop: {
+        seoTitle: 'Dirham shop | Industrial and electronic goods — Bizdavar',
+        seoDescription: 'Bizdavar shop priced in UAE dirhams. Industrial goods, precision instruments, electronics and other items — order on WhatsApp.',
+        seoKeywords: 'dirham shop, AED, industrial goods, instruments, electronics, Bizdavar'
       },
       smmTurk: {
         seoTitle: 'SMM panel web design case study | UI & SEO — Bizdavar',

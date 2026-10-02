@@ -500,6 +500,8 @@ const FILE_TO_ROUTE = {
   'pages/marvispace.html': '/pages/marvispace',
   'pages/supplify-trade.html': '/pages/supplify-trade',
   'pages/kaya-one.html': '/pages/kaya-one',
+  'pages/asil-feed.html': '/pages/asil-feed',
+  'pages/shop.html': '/pages/shop',
   'pages/smm-turk.html': '/pages/smm-turk',
   'pages/marvi-society.html': '/pages/marvi-society',
   'pages/fxguard-exchange.html': '/pages/fxguard-exchange',

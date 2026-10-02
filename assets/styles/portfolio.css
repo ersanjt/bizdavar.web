@@ -195,6 +195,7 @@
 .portfolio-card--pro .portfolio-card__logo img {
   max-height: 42px;
   max-width: 148px;
+  object-fit: contain;
   transition: transform 0.28s ease;
 }
 

@@ -310,12 +310,12 @@ window.BIZDAVAR_INTEL = {
         note: 'سرمایه‌گذاری شخصی بنیان‌گذار — طراحی و تولید توسط تیم بیزدوار'
       },
       relatedPress: [
-        { label: 'RINOTEX — نهمین نمایشگاه ۱۴۰۰', url: 'https://rinotex.ir/Home/Introduction' },
-        { label: 'پارک علم و فناوری دانشگاه تبریز', url: 'https://techpark.tabrizu.ac.ir/' },
-        { label: 'ISNA — نمایشگاه مرکز رشد ۱۳۹۹', url: 'https://www.isna.ir/news/99022216019/%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D9%BE%DA%98%D9%88%D9%87%D8%B4%DB%8C-%D9%88-%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%D9%87-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7' },
-        { label: 'SNN — نمایشگاه ۱۳۹۹', url: 'https://snn.ir/fa/news/847064/%D9%86%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%A7%D9%87-%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%E2%80%8C%D9%87%D8%A7%DB%8C-%D9%85%D8%B1%DA%A9%D8%B2-%D8%B1%D8%B4%D8%AF-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%D8%B4%DB%8C%D9%88%D8%B9-%D9%88%DB%8C%D8%B1%D9%88%D8%B3-%DA%A9%D8%B1%D9%88%D9%86%D8%A7-%D8%A7%D9%81%D8%AA%D8%AA%D8%A7%D8%AD-%D8%B4%D8%AF' },
-        { label: 'صدا و سیما — نمایشگاه ۱۳۹۹', url: 'https://www.iribnews.ir/fa/news/2714063/%D9%86%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%A7%D9%87-%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7' },
-        { label: 'دیجی‌کالا — BizClean V5', url: 'https://www.digikala.com/product/dkp-3730222/%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D8%B6%D8%AF%D8%B9%D9%81%D9%88%D9%86%DB%8C-%D8%AF%D8%B3%D8%AA-%D8%A8%DB%8C%D8%B2%D8%AF%D9%88%D8%A7%D8%B1-%D9%85%D8%AF%D9%84-v5/' }
+        { label: 'RINOTEX 1400', url: 'https://rinotex.ir/Home/Introduction' },
+        { label: 'پارک علم و فناوری', url: 'https://techpark.tabrizu.ac.ir/' },
+        { label: 'ISNA', url: 'https://www.isna.ir/news/99022216019/%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D9%BE%DA%98%D9%88%D9%87%D8%B4%DB%8C-%D9%88-%D9%81%D9%86%D8%A7%D9%88%D8%B1%D8%A7%D9%86%D9%87-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7' },
+        { label: 'SNN', url: 'https://snn.ir/fa/news/847064/%D9%86%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%A7%D9%87-%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%E2%80%8C%D9%87%D8%A7%DB%8C-%D9%85%D8%B1%DA%A9%D8%B2-%D8%B1%D8%B4%D8%AF-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%D8%B4%DB%8C%D9%88%D8%B9-%D9%88%DB%8C%D8%B1%D9%88%D8%B3-%DA%A9%D8%B1%D9%88%D9%86%D8%A7-%D8%A7%D9%81%D8%AA%D8%AA%D8%A7%D8%AD-%D8%B4%D8%AF' },
+        { label: 'صدا و سیما', url: 'https://www.iribnews.ir/fa/news/2714063/%D9%86%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%A7%D9%87-%D8%AF%D8%B3%D8%AA%D8%A7%D9%88%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%DA%A9%D8%B1%D9%88%D9%86%D8%A7' },
+        { label: 'دیجی‌کالا', url: 'https://www.digikala.com/product/dkp-3730222/%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D8%B6%D8%AF%D8%B9%D9%81%D9%88%D9%86%DB%8C-%D8%AF%D8%B3%D8%AA-%D8%A8%DB%8C%D8%B2%D8%AF%D9%88%D8%A7%D8%B1-%D9%85%D8%AF%D9%84-v5/' }
       ],
       tags: ['RINOTEX', 'تبریز', 'ICT', 'پارک علم و فناوری', 'ایمن سهند پدیده', 'دانش‌بنیان']
     }
@@ -329,15 +329,20 @@ window.BIZDAVAR_INTEL = {
       yearIso: '2020',
       title: 'BizTab — اولین دماسنج دیواری غیرتماسی تبریز',
       titleEn: 'BizTab — First non-contact wall thermometer in Tabriz',
-      desc: 'دماسنج دیواری غیرتماسی با خطای کمتر از ۰.۳ درجه — تأیید اساتید دانشگاه تبریز. توسعه و مالکیت انحصاری تیم بیزدوار.',
-      source: 'آژانس خبری تحلیلی نصر',
+      desc: 'اولین دماسنج دیواری غیرتماسی که در تبریز طراحی و ساخته شد. نصرنیوز در ۲۶ اسفند ۱۳۹۸ آن را گزارش کرد.',
+      highlights: [
+        'خطای کمتر از ۰٫۳ درجه',
+        'تأیید اساتید دانشگاه تبریز',
+        'همکاری با ایمن سهند پدیده'
+      ],
+      source: 'نصرنیوز',
       sourceUrl: 'https://nasrnews.ir/print/16727/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D9%88-%D8%B3%D8%A7%D8%AE%D8%AA-%D8%A7%D9%88%D9%84%DB%8C%D9%86-%D8%AF%D9%85%D8%A7%D8%B3%D9%86%D8%AC-%D8%AF%DB%8C%D9%88%D8%A7%D8%B1%DB%8C-%D8%BA%DB%8C%D8%B1%D8%AA%D9%85%D8%A7%D8%B3%DB%8C-%D8%AF%D8%B1-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2',
       image: 'assets/images/gallery/expo-tabrizu-incubator.jpg',
       slug: 'pages/biztab.html',
       pressLinks: [
         { label: 'نصرنیوز', url: 'https://nasrnews.ir/print/16727/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D9%88-%D8%B3%D8%A7%D8%AE%D8%AA-%D8%A7%D9%88%D9%84%DB%8C%D9%86-%D8%AF%D9%85%D8%A7%D8%B3%D9%86%D8%AC-%D8%AF%DB%8C%D9%88%D8%A7%D8%B1%DB%8C-%D8%BA%DB%8C%D8%B1%D8%AA%D9%85%D8%A7%D8%B3%DB%8C-%D8%AF%D8%B1-%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2' }
       ],
-      tags: ['IoT', 'تبریز', 'محصول اختصاصی']
+      tags: ['IoT', 'تبریز', 'غیرتماسی']
     },
     {
       id: 'bizsanitizer-v5',
@@ -345,7 +350,12 @@ window.BIZDAVAR_INTEL = {
       yearIso: '2020',
       title: 'BizClean V5 — دستگاه ضدعفونی دست اتوماتیک',
       titleEn: 'BizClean V5 — Automatic hand sanitizer dispenser',
-      desc: 'دستگاه ضدعفونی دست — طراحی و تولید تیم بیزدوار (دی ۱۳۹۸ — شهریور ۱۴۰۱)، نمایشگاه مرکز رشد ۱۳۹۹ (ISNA، SNN، صدا و سیما)، RINOTEX ۱۴۰۰ از طریق واحد فناور پارک علمی «ایمن سهند پدیده»، عرضه در دیجی‌کالا.',
+      desc: 'ضدعفونی دست بدون تماس. طراحی و تولید تیم بیزدوار از دی ۱۳۹۸ تا شهریور ۱۴۰۱ و عرضه در دیجی‌کالا.',
+      highlights: [
+        'سنسور التراسونیک',
+        'نمایشگاه مرکز رشد ۱۳۹۹ — ISNA و صدا و سیما',
+        'RINOTEX ۱۴۰۰، واحد فناور پارک علمی'
+      ],
       source: 'دیجی‌کالا',
       sourceUrl: 'https://www.digikala.com/product/dkp-3730222/%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D8%B6%D8%AF%D8%B9%D9%81%D9%88%D9%86%DB%8C-%D8%AF%D8%B3%D8%AA-%D8%A8%DB%8C%D8%B2%D8%AF%D9%88%D8%A7%D8%B1-%D9%85%D8%AF%D9%84-v5/',
       pressLinks: [
@@ -361,7 +371,7 @@ window.BIZDAVAR_INTEL = {
       videoLabel: 'YouTube — V1',
       image: 'assets/images/gallery/expo-imen-booth.jpg',
       slug: 'pages/bizsanitizer-v5.html',
-      tags: ['بهداشت', 'IoT', 'کرونا', 'دانشگاه تبریز', 'RINOTEX', 'ایمن سهند پدیده', 'دیجی‌کالا']
+      tags: ['بهداشت', 'دانشگاه تبریز', 'دیجی‌کالا']
     },
     {
       id: 'bizpad',
@@ -369,16 +379,21 @@ window.BIZDAVAR_INTEL = {
       yearIso: '2020',
       title: 'BizPad — پد حرارتی بیز پد',
       titleEn: 'BizPad — Padideh heating pad',
-      desc: 'محصول اصلی ۱۳۹۹: پد حرارتی پدیده (بیز پد) — طراحی و تولید در مرکز رشد فناوری دانشگاه تبریز با تکنولوژی پردازان توسعه خاورمیانه و ایمن سهند پدیده. همین پد برای خانه، خودرو (پشتی صندلی) و جا خواب حیوانات است؛ عرضه فروشگاهی در دیجی‌کالا (dkp-7694589).',
-      source: 'مرکز رشد فناوری دانشگاه تبریز',
+      desc: 'پد حرارتی پدیده برای خانه، پشتی خودرو و جا خواب حیوانات. فهرست دیجی‌کالا همان این کالاست، نه محصول دوم.',
+      highlights: [
+        '۵ تا ۱۲ ولت، قابل‌حمل',
+        'طراحی در مرکز رشد دانشگاه تبریز',
+        'BizSeat نام جداگانه‌ای نیست'
+      ],
+      source: 'پارک علم و فناوری',
       sourceUrl: 'https://techpark.tabrizu.ac.ir/',
       pressLinks: [
-        { label: 'پارک علم و فناوری تبریز', url: 'https://techpark.tabrizu.ac.ir/' },
-        { label: 'دیجی‌کالا — پد / پشتی خودرو بیزدوار', url: 'https://www.digikala.com/product/dkp-7694589/%D9%BE%D8%B4%D8%AA%DB%8C-%D8%B5%D9%86%D8%AF%D9%84%DB%8C-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%85%D8%AF%D9%84-bizdavar/' }
+        { label: 'پارک علم و فناوری', url: 'https://techpark.tabrizu.ac.ir/' },
+        { label: 'دیجی‌کالا', url: 'https://www.digikala.com/product/dkp-7694589/%D9%BE%D8%B4%D8%AA%DB%8C-%D8%B5%D9%86%D8%AF%D9%84%DB%8C-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%85%D8%AF%D9%84-bizdavar/' }
       ],
       image: 'assets/images/products/bizpet/bizpet-grey.jpg',
       slug: 'pages/bizpad.html',
-      tags: ['پد حرارتی', 'خودرو', 'تبریز', 'مرکز رشد', 'ایمن سهند پدیده', 'دیجی‌کالا']
+      tags: ['پد حرارتی', 'خودرو', 'مرکز رشد']
     }
   ],
 

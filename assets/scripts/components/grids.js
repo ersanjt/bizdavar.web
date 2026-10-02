@@ -31,6 +31,47 @@
     return `${a} (${b})`;
   }
 
+  function achievementSources(a) {
+    const items = [];
+    const seen = new Set();
+    const push = (label, url) => {
+      const href = String(url || '').trim();
+      const text = String(label || '').trim();
+      if (!href || !text || seen.has(href) || items.length >= 3) return;
+      seen.add(href);
+      items.push({ label: text, url: href });
+    };
+    push(a.source, a.sourceUrl);
+    if (a.videoUrl) push(a.videoLabel || 'YouTube', a.videoUrl);
+    (a.pressLinks || []).forEach((p) => push(p.label, p.url));
+    return items;
+  }
+
+  function achievementCard(a) {
+    const href = path(a.slug);
+    const facts = (a.highlights || []).slice(0, 3);
+    const tags = (a.tags || []).slice(0, 3);
+    const sources = achievementSources(a);
+    const productShot = /\/products\//.test(String(a.image || ''));
+    return `
+      <article class="achievement-card${productShot ? ' achievement-card--product' : ''}">
+        <a href="${href}" class="achievement-card__media" aria-label="${a.title}">
+          <img src="${path(a.image)}" alt="" loading="lazy" width="480" height="300"${hideBrokenImg()}>
+          <span class="achievement-card__year">${a.year}</span>
+        </a>
+        <div class="achievement-card__body">
+          <h3><a href="${href}">${a.title}</a></h3>
+          <p class="achievement-card__desc">${a.desc}</p>
+          ${facts.length ? `<ul class="achievement-card__facts">${facts.map((f) => `<li>${f}</li>`).join('')}</ul>` : ''}
+          ${tags.length ? `<div class="achievement-card__tags">${tags.map((tag) => `<span class="achievement-card__tag">${tag}</span>`).join('')}</div>` : ''}
+          <footer class="achievement-card__footer">
+            <a href="${href}" class="achievement-card__cta">${t('exhibitions.viewProduct', 'مشاهده محصول')}${linkArrow()}</a>
+            ${sources.length ? `<div class="achievement-card__sources">${sources.map((p) => `<a href="${p.url}" target="_blank" rel="noopener noreferrer" class="achievement-card__source">${p.label}</a>`).join('')}</div>` : ''}
+          </footer>
+        </div>
+      </article>`;
+  }
+
   function exhibitionMediaHtml(e) {
     if (!e || (!e.video && !e.image)) return '';
     const poster = e.videoPoster ? path(e.videoPoster) : (e.image ? path(e.image) : '');
@@ -43,9 +84,70 @@
       </div>` : '';
     const imageBlock = e.image && !e.video ? `
       <figure class="exhibition-card__figure">
-        <img src="${path(e.image)}" alt="${e.title || 'Bizdavar exhibition'}" loading="lazy" width="720" height="405"${hideBrokenImg()}>
+        <img src="${path(e.image)}" alt="${e.title || 'Bizdavar exhibition'}" loading="lazy" width="720" height="450"${hideBrokenImg()}>
       </figure>` : '';
-    return `<div class="exhibition-card__media">${videoBlock}${imageBlock}</div>`;
+    const when = e.dateDisplay || e.year || '';
+    return `<div class="exhibition-card__media">${videoBlock}${imageBlock}${when ? `<span class="exhibition-card__year">${when}</span>` : ''}</div>`;
+  }
+
+  function exhibitionPlace(e, lang) {
+    if (!e.city) return '';
+    const sep = /^(fa|ar)/.test(lang) ? '، ' : ', ';
+    return e.city + (e.country ? sep + e.country : '');
+  }
+
+  function exhibitionLinks(e) {
+    const items = [];
+    const seen = new Set();
+    const push = (label, url) => {
+      const href = String(url || '').trim();
+      const text = String(label || '').trim();
+      if (!href || !text || seen.has(href)) return;
+      seen.add(href);
+      items.push({ label: text, url: href });
+    };
+    (e.relatedPress || []).forEach((p) => push(p.label, p.url));
+    push(e.sourceLabel || e.source, e.sourceUrl);
+    if (e.sourceHistoryUrl) push(t('exhibitions.history', 'تاریخچه نمایشگاه'), e.sourceHistoryUrl);
+    return items;
+  }
+
+  function exhibitionCard(e, lang) {
+    const place = exhibitionPlace(e, lang);
+    const links = exhibitionLinks(e);
+    const tags = e.tags || [];
+    const park = e.parkUnit;
+    const productHref = park && park.productSlug ? path(park.productSlug) : '';
+    const meta = [
+      e.section ? [t('exhibitions.section', 'بخش'), e.section] : null,
+      e.zone ? [t('exhibitions.zone', 'زون'), e.zone] : null,
+      e.booth ? [t('exhibitions.booth', 'غرفه'), e.booth] : null,
+      place ? [t('exhibitions.location', 'مکان'), place] : null
+    ].filter(Boolean);
+    return `
+      <article class="exhibition-card${e.image || e.video ? ' exhibition-card--media' : ''}">
+        ${exhibitionMediaHtml(e)}
+        <div class="exhibition-card__body">
+          ${e.source ? `<p class="exhibition-card__source">${e.source}</p>` : ''}
+          <h3 class="exhibition-card__title">${e.title}</h3>
+          <p class="exhibition-card__entity"><strong>${e.entity}</strong>${e.brand ? ` · ${e.brand}` : ''}</p>
+          <p class="exhibition-card__desc">${e.desc}</p>
+          ${meta.length ? `<dl class="exhibition-card__meta">${meta.map(([dt, dd]) => `<div><dt>${dt}</dt><dd>${dd}</dd></div>`).join('')}</dl>` : ''}
+          ${tags.length ? `<div class="exhibition-card__tags">${tags.map((tag) => `<span class="exhibition-card__tag">${tag}</span>`).join('')}</div>` : ''}
+          ${park ? `
+            <div class="exhibition-card__park">
+              <h4 class="exhibition-card__park-title">${t('exhibitions.parkUnit', 'واحد فناور پارک علمی')}</h4>
+              <p class="exhibition-card__park-name"><strong>${park.name}</strong>${park.host ? ` · ${park.hostUrl ? `<a href="${park.hostUrl}" target="_blank" rel="noopener noreferrer">${park.host}</a>` : park.host}` : ''}</p>
+              ${park.product ? `<p class="exhibition-card__park-product">${t('exhibitions.product', 'محصول')}: ${park.product}</p>` : ''}
+              ${park.note || park.period ? `<p class="exhibition-card__park-note">${[park.note, park.period].filter(Boolean).join(' · ')}</p>` : ''}
+            </div>
+          ` : ''}
+          <footer class="exhibition-card__footer">
+            ${productHref ? `<a href="${productHref}" class="exhibition-card__cta">${t('exhibitions.viewProduct', 'مشاهده محصول')}${linkArrow()}</a>` : ''}
+            ${links.length ? `<div class="exhibition-card__chips">${links.map((p) => `<a href="${p.url}" target="_blank" rel="noopener noreferrer" class="exhibition-card__chip">${p.label}</a>`).join('')}</div>` : ''}
+          </footer>
+        </div>
+      </article>`;
   }
 
   function formatBlogDate(iso) {
@@ -863,48 +965,7 @@
     if (exEl && I.exhibitions && I.exhibitions.length) {
       exEl.innerHTML = `
         <div class="exhibitions-grid">
-          ${I.exhibitions.map(e => `
-            <article class="exhibition-card${e.image || e.video ? ' exhibition-card--media' : ''}">
-              ${exhibitionMediaHtml(e)}
-              <div class="exhibition-card__body">
-              <div class="exhibition-card__head">
-                <span class="exhibition-card__year">${e.dateDisplay || e.year}</span>
-                <span class="exhibition-card__source">${e.source}</span>
-              </div>
-              <h3 class="exhibition-card__title">${e.title}</h3>
-              <p class="exhibition-card__entity"><strong>${e.entity}</strong>${e.brand ? ` · ${e.brand}` : ''}</p>
-              <p class="exhibition-card__desc">${e.desc}</p>
-              <dl class="exhibition-card__meta">
-                ${e.section ? `<div><dt>${t('exhibitions.section', 'بخش')}</dt><dd>${e.section}</dd></div>` : ''}
-                ${e.zone ? `<div><dt>${t('exhibitions.zone', 'زون')}</dt><dd>${e.zone}</dd></div>` : ''}
-                ${e.booth ? `<div><dt>${t('exhibitions.booth', 'غرفه')}</dt><dd>${e.booth}</dd></div>` : ''}
-                ${e.city ? `<div><dt>${t('exhibitions.location', 'مکان')}</dt><dd>${e.city}${e.country ? (/^(fa|ar)/.test(lang) ? '، ' : ', ') + e.country : ''}</dd></div>` : ''}
-              </dl>
-              ${(e.tags || []).length ? `<div class="exhibition-card__tags">${e.tags.map(tag => `<span class="exhibition-card__tag">${tag}</span>`).join('')}</div>` : ''}
-              ${e.parkUnit ? `
-                <div class="exhibition-card__park">
-                  <h4 class="exhibition-card__park-title">${t('exhibitions.parkUnit', 'واحد فناور پارک علمی')}</h4>
-                  <p class="exhibition-card__park-name"><strong>${e.parkUnit.name}</strong>${e.parkUnit.host ? ` · <a href="${e.parkUnit.hostUrl || '#'}" target="_blank" rel="noopener noreferrer" class="service-card__link">${e.parkUnit.host}</a>` : ''}</p>
-                  ${e.parkUnit.product ? `<p class="exhibition-card__park-product">${t('exhibitions.product', 'محصول')}: ${e.parkUnit.product}</p>` : ''}
-                  ${e.parkUnit.note ? `<p class="exhibition-card__park-note">${e.parkUnit.note}${e.parkUnit.period ? ` · ${e.parkUnit.period}` : ''}</p>` : ''}
-                  ${e.parkUnit.productSlug ? `<a href="${path(e.parkUnit.productSlug)}" class="service-card__link">${t('exhibitions.viewProduct', 'مشاهده محصول')}${linkArrow()}</a>` : ''}
-                </div>
-              ` : ''}
-              ${(e.relatedPress || []).length ? `
-                <div class="exhibition-card__press">
-                  <h4 class="exhibition-card__press-title">${t('exhibitions.relatedPress', 'منابع مرتبط')}</h4>
-                  <ul class="exhibition-card__press-list">
-                    ${e.relatedPress.map(p => `<li><a href="${p.url}" target="_blank" rel="noopener noreferrer" class="service-card__link">${p.label}${linkArrow()}</a></li>`).join('')}
-                  </ul>
-                </div>
-              ` : ''}
-              <footer class="exhibition-card__footer">
-                ${e.sourceUrl ? `<a href="${e.sourceUrl}" target="_blank" rel="noopener noreferrer" class="service-card__link">${e.sourceLabel || e.source}${linkArrow()}</a>` : ''}
-                ${e.sourceHistoryUrl ? `<a href="${e.sourceHistoryUrl}" target="_blank" rel="noopener noreferrer" class="service-card__link">${t('exhibitions.history', 'تاریخچه نمایشگاه')}${linkArrow()}</a>` : ''}
-              </footer>
-              </div>
-            </article>
-          `).join('')}
+          ${I.exhibitions.map((e) => exhibitionCard(e, lang)).join('')}
         </div>`;
     }
 
@@ -1266,6 +1327,10 @@
       const order = window.BIZDAVAR_OWNED_PRODUCTS?.homeOrder || [];
       items = order.map(id => items.find(p => p.id === id)).filter(Boolean);
     }
+    if (opts.liveOrder) {
+      const order = window.BIZDAVAR_OWNED_PRODUCTS?.liveOrder || [];
+      items = order.map(id => items.find(p => p.id === id)).filter(Boolean);
+    }
     if (opts.limit) items = items.slice(0, opts.limit);
     el.innerHTML = items.length
       ? items.map(p => ownedProductCardHtml(p, opts)).join('')
@@ -1368,7 +1433,7 @@
 
     const liveGrid = document.getElementById('ownedProductsLive');
     if (liveGrid) {
-      renderOwnedProductsGrid('ownedProductsLive', { status: 'live', category: 'software' });
+      renderOwnedProductsGrid('ownedProductsLive', { status: 'live', liveOrder: true });
     }
 
     const supplyGrid = document.getElementById('productsSupplyGrid');

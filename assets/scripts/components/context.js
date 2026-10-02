@@ -20,6 +20,7 @@
     bzDiamond: 'bz-diamond',
     supplifyTrade: 'supplify-trade',
     kayaOne: 'kaya-one',
+    asilFeed: 'asil-feed',
     smmTurk: 'smm-turk',
     marvispace: 'marvispace',
     marviSociety: 'marvi-society',
@@ -55,7 +56,7 @@
 
     const knownPages = new Set([
       'about', 'services', 'portfolio', 'blog', 'contact', 'privacy', 'fast', 'field-tech', 'vega',
-      'prosense', 'teltonika', 'gamak', 'uwt', 'digi-system', 'teraoka', 'liqui-moly', 'bz-diamond', 'supplify-trade', 'kaya-one', 'smm-turk', 'marvispace', 'marvi-society', 'fxguard-exchange', 'biztejarat',
+      'prosense', 'teltonika', 'gamak', 'uwt', 'digi-system', 'teraoka', 'liqui-moly', 'bz-diamond', 'supplify-trade', 'kaya-one', 'asil-feed', 'shop', 'smm-turk', 'marvispace', 'marvi-society', 'fxguard-exchange', 'biztejarat',
       'products', 'biztab', 'bizsanitizer-v5', 'bizseat', 'bizpad', 'gallery', 'fxguard', 'fxguard-accounting', 'bizswap', 'auto-moto', 'motorcycle', 'car-parts'
     ]);
     const stem = n.replace(/\.html$/, '');
