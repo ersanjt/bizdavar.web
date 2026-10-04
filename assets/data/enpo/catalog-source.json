@@ -1,0 +1,4747 @@
+[
+  {
+    "kid": "1758528905",
+    "parent": null,
+    "depth": 0,
+    "title": "Hava Hazırlayıcılar",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1758528905",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1758530094",
+        "name": "Dağıtıcı Bloklar",
+        "img": "yuklenen/kategoriler/1758530094/k-1758530094-17591549073481.jpg"
+      },
+      {
+        "kid": "1759141523",
+        "name": "Elektrik Uyarılı Aç Kapa Valfleri",
+        "img": "yuklenen/kategoriler/1759141523/k-1759141523-17591417868670.jpg"
+      },
+      {
+        "kid": "1759141854",
+        "name": "Filtreler",
+        "img": "yuklenen/kategoriler/1759141854/k-1759141854-17591424246915.jpg"
+      },
+      {
+        "kid": "1759142426",
+        "name": "İkili Şartlandırıcılar FR+L",
+        "img": "yuklenen/kategoriler/1759142426/k-1759142426-1759142476751.jpg"
+      },
+      {
+        "kid": "1759142760",
+        "name": "Kombine Filtre Regülatörler",
+        "img": "yuklenen/kategoriler/1759142760/k-1759142760-17591428033170.jpg"
+      },
+      {
+        "kid": "1759143069",
+        "name": "Manometre Ve Basınç Vakum Anahtarları",
+        "img": "yuklenen/kategoriler/1759143069/k-1759143069-1759143188169.jpg"
+      },
+      {
+        "kid": "1759143594",
+        "name": "Manuel Aç Kapa Valfleri",
+        "img": "yuklenen/kategoriler/1759143594/k-1759143594-17591436302623.jpg"
+      },
+      {
+        "kid": "1759143704",
+        "name": "Regülatörler",
+        "img": "yuklenen/kategoriler/1759143704/k-1759143704-17591438169196.jpg"
+      },
+      {
+        "kid": "1759154414",
+        "name": "Üçlü Şartlandırıcılar F+R+L",
+        "img": "yuklenen/kategoriler/1759154414/k-1759154414-17591544959345.jpg"
+      },
+      {
+        "kid": "1759154706",
+        "name": "Yağlayıcılar",
+        "img": "assets/img/noimage.jpg\r\n"
+      },
+      {
+        "kid": "1759154724",
+        "name": "Yavaş Başlatma Valfleri",
+        "img": "yuklenen/kategoriler/1759154724/k-1759154724-17591547513104.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1758530094",
+    "parent": "1758528905",
+    "depth": 1,
+    "title": "Dağıtıcı Bloklar",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1758530094",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1758530421",
+        "name": "HZE-N Serisi Dağıtıcılar",
+        "img": "yuklenen/kategoriler/1758530421/k-1758530421-17585304948359.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1758530421",
+    "parent": "1758530094",
+    "depth": 2,
+    "title": "HZE-N Serisi Dağıtıcılar",
+    "img": "assets/images/enpo/1758530421.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1758530421/1758530558zhn.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1758530421",
+    "facts": {
+      "codes": [
+        "HZE1N10G",
+        "HZE1N15G",
+        "HZE1N1006G",
+        "HZE0N08G"
+      ],
+      "pressure": [
+        "10 bar",
+        "15 bar",
+        "1 bar",
+        "3 bar"
+      ],
+      "temp": [
+        "0 ÷ 60 °C",
+        "1 - 145\nc",
+        "-1-145\nc"
+      ],
+      "ports": [
+        "G1/4",
+        "G3/8",
+        "G1/2",
+        "G3/4",
+        "G1",
+        "G1/8"
+      ],
+      "pages": 20,
+      "chars": 20076
+    },
+    "children": []
+  },
+  {
+    "kid": "1759141523",
+    "parent": "1758528905",
+    "depth": 1,
+    "title": "Elektrik Uyarılı Aç Kapa Valfleri",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759141523",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759141541",
+        "name": "HZE-S Serisi Servo Kontrollü Aç Kapa Valfleri",
+        "img": "yuklenen/kategoriler/1759141541/k-1759141541-17591416994837.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1759141541",
+    "parent": "1759141523",
+    "depth": 2,
+    "title": "HZE-S Serisi Servo Kontrollü Aç Kapa Valfleri",
+    "img": "assets/images/enpo/1759141541.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759141541/1759141762hze-s_serisi_servo_kontrollu_ac_kapa_valfleri.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759141541",
+    "facts": {
+      "codes": [],
+      "pressure": [
+        "10 bar",
+        "15 bar",
+        "1 bar",
+        "3 bar"
+      ],
+      "temp": [
+        "0 ÷ 60 °C",
+        "1 - 145\nc",
+        "-1-145\nc"
+      ],
+      "ports": [
+        "G1/4",
+        "G3/8",
+        "G1/2",
+        "G3/4",
+        "G1",
+        "G1/8"
+      ],
+      "pages": 20,
+      "chars": 20076
+    },
+    "children": []
+  },
+  {
+    "kid": "1759141854",
+    "parent": "1758528905",
+    "depth": 1,
+    "title": "Filtreler",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759141854",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759141902",
+        "name": "HZE-F Serisi Filtreler",
+        "img": "yuklenen/kategoriler/1759141902/k-1759141902-17591422084344.jpg"
+      },
+      {
+        "kid": "1759142147",
+        "name": "HZE3F Serisi Büyük Filtreler",
+        "img": "yuklenen/kategoriler/1759142147/k-1759142147-17591423621827.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1759141902",
+    "parent": "1759141854",
+    "depth": 2,
+    "title": "HZE-F Serisi Filtreler",
+    "img": "assets/images/enpo/1759141902.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759141902/1759142230hze-f-serisi-filtreler.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759141902",
+    "facts": {
+      "codes": [
+        "HZE0F08G",
+        "HZE2F15G",
+        "HZE1F10G",
+        "HZE1F15G",
+        "HZE05F08G",
+        "HZE05F10G"
+      ],
+      "pressure": [
+        "10 bar",
+        "15 bar",
+        "7 bar",
+        "0,5 bar"
+      ],
+      "temp": [
+        "0 ÷ +60 °C",
+        "0-05\nC",
+        "1 - 145\nc"
+      ],
+      "ports": [
+        "G1/4",
+        "G1/2",
+        "G3/8",
+        "G1/8",
+        "G3/4",
+        "G1"
+      ],
+      "pages": 7,
+      "chars": 12276
+    },
+    "children": []
+  },
+  {
+    "kid": "1759142147",
+    "parent": "1759141854",
+    "depth": 2,
+    "title": "HZE3F Serisi Büyük Filtreler",
+    "img": "assets/images/enpo/1759142147.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759142147/1759142386hze3f-serisi-buì?yuì?k-filtreler.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759142147",
+    "facts": {
+      "codes": [],
+      "pressure": [],
+      "temp": [],
+      "ports": []
+    },
+    "children": []
+  },
+  {
+    "kid": "1759142426",
+    "parent": "1758528905",
+    "depth": 1,
+    "title": "İkili Şartlandırıcılar FR+L",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759142426",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759142538",
+        "name": "HZE-D Serisi İkili Şartlandırıcılar FR+L",
+        "img": "yuklenen/kategoriler/1759142538/k-1759142538-17591426015510.jpg"
+      },
+      {
+        "kid": "1759142673",
+        "name": "HZE3D Serisi Büyük Gövde İkili Şartlandırıcılar FR+L",
+        "img": "yuklenen/kategoriler/1759142673/k-1759142673-17591427382065.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1759142538",
+    "parent": "1759142426",
+    "depth": 2,
+    "title": "HZE-D Serisi İkili Şartlandırıcılar FR+L",
+    "img": "assets/images/enpo/1759142538.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759142538/1759142620hze-d-serisi-iì?kili-sì§artlandiricilar-fr+l.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759142538",
+    "facts": {
+      "codes": [],
+      "pressure": [],
+      "temp": [],
+      "ports": []
+    },
+    "children": []
+  },
+  {
+    "kid": "1759142673",
+    "parent": "1759142426",
+    "depth": 2,
+    "title": "HZE3D Serisi Büyük Gövde İkili Şartlandırıcılar FR+L",
+    "img": "assets/images/enpo/1759142673.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759142673/1759142760hze3d-serisi-buì?yuì?k-goì?vde-iì?kili-sì§artlandiricilar-frl.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759142673",
+    "facts": {
+      "codes": [],
+      "pressure": [],
+      "temp": [],
+      "ports": []
+    },
+    "children": []
+  },
+  {
+    "kid": "1759142760",
+    "parent": "1758528905",
+    "depth": 1,
+    "title": "Kombine Filtre Regülatörler",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759142760",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759142806",
+        "name": "HZE-B Serisi Filtre Regülatörler",
+        "img": "yuklenen/kategoriler/1759142806/k-1759142806-17591428531840.jpg"
+      },
+      {
+        "kid": "1759142875",
+        "name": "HZE3B Serisi Büyük Gövde Filtre Regülatörler",
+        "img": "yuklenen/kategoriler/1759142875/k-1759142875-17591429166128.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1759142806",
+    "parent": "1759142760",
+    "depth": 2,
+    "title": "HZE-B Serisi Filtre Regülatörler",
+    "img": "assets/images/enpo/1759142806.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759142806/1759142874hze-b-serisi-filtre-reguì?latoì?rler.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759142806",
+    "facts": {
+      "codes": [],
+      "pressure": [],
+      "temp": [],
+      "ports": []
+    },
+    "children": []
+  },
+  {
+    "kid": "1759142875",
+    "parent": "1759142760",
+    "depth": 2,
+    "title": "HZE3B Serisi Büyük Gövde Filtre Regülatörler",
+    "img": "assets/images/enpo/1759142875.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759142875/1759143068abc.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759142875",
+    "facts": {
+      "codes": [
+        "HZE3B25GS",
+        "HZE3B25G",
+        "HZE3B25GSQ",
+        "HZE3B25GQ/GT",
+        "HZE3B25GQ",
+        "HZE3B25GT"
+      ],
+      "pressure": [
+        "10 bar",
+        "15 bar",
+        "20 bar",
+        "7 bar"
+      ],
+      "temp": [
+        "-5 ÷ 60 °C",
+        "5 ÷ 10\nc"
+      ],
+      "ports": [
+        "G1",
+        "G1/8",
+        "G1/2"
+      ],
+      "pages": 10,
+      "chars": 8319
+    },
+    "children": []
+  },
+  {
+    "kid": "1759143069",
+    "parent": "1758528905",
+    "depth": 1,
+    "title": "Manometre Ve Basınç Vakum Anahtarları",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143069",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759143190",
+        "name": "HZ9 Serisi Manometreler",
+        "img": "yuklenen/kategoriler/1759143190/k-1759143190-17591432246715.jpg"
+      },
+      {
+        "kid": "1759143242",
+        "name": "HZ9N Serisi Dijital Anahtarlar",
+        "img": "yuklenen/kategoriler/1759143242/k-1759143242-1759143308168.png"
+      },
+      {
+        "kid": "1759143324",
+        "name": "HZ9-50 IP65 Dijital Anahtarlar",
+        "img": "yuklenen/kategoriler/1759143324/k-1759143324-17591434177579.jpg"
+      },
+      {
+        "kid": "1759143434",
+        "name": "HZ9NP40 Serisi Şartlandırıya Uyumlu Dijital Anahtarlar",
+        "img": "yuklenen/kategoriler/1759143434/k-1759143434-17591435122848.png"
+      },
+      {
+        "kid": "1759143525",
+        "name": "HZ9464G Serisi Gömme Manometreler",
+        "img": "yuklenen/kategoriler/1759143525/k-1759143525-17591435763230.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1759143190",
+    "parent": "1759143069",
+    "depth": 2,
+    "title": "HZ9 Serisi Manometreler",
+    "img": "assets/images/enpo/1759143190.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759143190/1759143242enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143190",
+    "facts": {
+      "codes": [
+        "HZ9PB400318",
+        "HZ9PB400618",
+        "HZ9PB401018",
+        "HZ9PB500314",
+        "HZ9PB500614",
+        "HZ9PB501014",
+        "HZ9PB630314",
+        "HZ9PB630614",
+        "HZ9PB631014",
+        "HZ9P400318",
+        "HZ9P400618",
+        "HZ9P401018",
+        "HZ9P500314",
+        "HZ9P500614"
+      ],
+      "pressure": [
+        "2,5 bar",
+        "6 bar",
+        "10 bar",
+        "12 bar"
+      ],
+      "temp": [],
+      "ports": [
+        "G1/4",
+        "G1/8"
+      ],
+      "pages": 2,
+      "chars": 2492
+    },
+    "children": []
+  },
+  {
+    "kid": "1759143242",
+    "parent": "1759143069",
+    "depth": 2,
+    "title": "HZ9N Serisi Dijital Anahtarlar",
+    "img": "assets/images/enpo/1759143242.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759143242/1759143324enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143242",
+    "facts": {
+      "codes": [
+        "HZ9NC",
+        "HZ9NP",
+        "HZ9N1F",
+        "HZ9N2F",
+        "HZ9NM08-0200"
+      ],
+      "pressure": [
+        "10 bar",
+        "15 bar",
+        "1 bar",
+        "3 bar"
+      ],
+      "temp": [
+        "0 ÷ 50 °C",
+        "-10 ÷ 60°C",
+        "0-50°C"
+      ],
+      "ports": [
+        "G1/8"
+      ],
+      "pages": 2,
+      "chars": 3352
+    },
+    "children": []
+  },
+  {
+    "kid": "1759143324",
+    "parent": "1759143069",
+    "depth": 2,
+    "title": "HZ9-50 IP65 Dijital Anahtarlar",
+    "img": "assets/images/enpo/1759143324.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759143324/1759143434enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143324",
+    "facts": {
+      "codes": [
+        "HZ9NC50",
+        "HZ9NP50",
+        "HZ9N1F-50",
+        "HZ9N2F-51",
+        "HZ9N2F-52"
+      ],
+      "pressure": [
+        "10 bar",
+        "15 bar",
+        "1 bar",
+        "3 bar"
+      ],
+      "temp": [
+        "0 ÷ 50 °C",
+        "-10 ÷ 60°C",
+        "0-50°C"
+      ],
+      "ports": [],
+      "pages": 2,
+      "chars": 3335
+    },
+    "children": []
+  },
+  {
+    "kid": "1759143434",
+    "parent": "1759143069",
+    "depth": 2,
+    "title": "HZ9NP40 Serisi Şartlandırıya Uyumlu Dijital Anahtarlar",
+    "img": "assets/images/enpo/1759143434.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759143434/1759143525enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143434",
+    "facts": {
+      "codes": [],
+      "pressure": [
+        "10 bar",
+        "15 bar",
+        "1 bar",
+        "3 bar"
+      ],
+      "temp": [
+        "0 ÷ 50 °C",
+        "-10 ÷ 60°C",
+        "0-50°C"
+      ],
+      "ports": [
+        "G1/8"
+      ],
+      "pages": 2,
+      "chars": 3352
+    },
+    "children": []
+  },
+  {
+    "kid": "1759143525",
+    "parent": "1759143069",
+    "depth": 2,
+    "title": "HZ9464G Serisi Gömme Manometreler",
+    "img": "assets/images/enpo/1759143525.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759143525/1759143593enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143525",
+    "facts": {
+      "codes": [
+        "HZ9464G"
+      ],
+      "pressure": [
+        "2,5 bar",
+        "6 bar",
+        "10 bar",
+        "12 bar"
+      ],
+      "temp": [],
+      "ports": [
+        "G1/4",
+        "G1/8"
+      ],
+      "pages": 2,
+      "chars": 2492
+    },
+    "children": []
+  },
+  {
+    "kid": "1759143594",
+    "parent": "1758528905",
+    "depth": 1,
+    "title": "Manuel Aç Kapa Valfleri",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143594",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759143633",
+        "name": "HZE-P Serisi Manuel Aç Kapa Valfleri",
+        "img": "yuklenen/kategoriler/1759143633/k-1759143633-17591436839657.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1759143633",
+    "parent": "1759143594",
+    "depth": 2,
+    "title": "HZE-P Serisi Manuel Aç Kapa Valfleri",
+    "img": "assets/images/enpo/1759143633.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759143633/1759143703enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143633",
+    "facts": {
+      "codes": [
+        "HZE1P10G",
+        "HZE1P15G"
+      ],
+      "pressure": [
+        "10 bar",
+        "15 bar",
+        "1 bar",
+        "3 bar"
+      ],
+      "temp": [
+        "0 ÷ 60 °C",
+        "1 - 145\nc",
+        "-1-145\nc"
+      ],
+      "ports": [
+        "G1/4",
+        "G3/8",
+        "G1/2",
+        "G3/4",
+        "G1",
+        "G1/8"
+      ],
+      "pages": 20,
+      "chars": 20076
+    },
+    "children": []
+  },
+  {
+    "kid": "1759143704",
+    "parent": "1758528905",
+    "depth": 1,
+    "title": "Regülatörler",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143704",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759143715",
+        "name": "HZE-R Serisi Regülatörler",
+        "img": "yuklenen/kategoriler/1759143715/k-1759143715-17591437418659.jpg"
+      },
+      {
+        "kid": "1759143818",
+        "name": "HZE3R Srisi Büyük Seri Regülatörler",
+        "img": "yuklenen/kategoriler/1759143818/k-1759143818-17591438727795.jpg"
+      },
+      {
+        "kid": "1759143874",
+        "name": "HZRE Serisi Oransal Regülatör",
+        "img": "yuklenen/kategoriler/1759143874/k-1759143874-17591439758088.png"
+      },
+      {
+        "kid": "1759154194",
+        "name": "HZRP30 Serisi Hassas Regülatörler",
+        "img": "yuklenen/kategoriler/1759154194/k-1759154194-17591542859240.jpg"
+      },
+      {
+        "kid": "1759154311",
+        "name": "HZRS Serisi Mikro Regülatör",
+        "img": "yuklenen/kategoriler/1759154311/k-1759154311-17591543877688.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1759143715",
+    "parent": "1759143704",
+    "depth": 2,
+    "title": "HZE-R Serisi Regülatörler",
+    "img": "assets/images/enpo/1759143715.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759143715/1759143787enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143715",
+    "facts": {
+      "codes": [
+        "HZE0R08GM",
+        "HZE1R10GM",
+        "HZE2R15GM",
+        "HZE05R08GM",
+        "HZE1R15GM",
+        "HZE05R10GM",
+        "HZE0R08G",
+        "HZE05R08G",
+        "HZE05R10G",
+        "HZE05RL08GM",
+        "HZE05RL10GM",
+        "HZE1RL10GM",
+        "HZE1RL15GM",
+        "HZE2RL15GM"
+      ],
+      "pressure": [
+        "10 bar",
+        "15 bar",
+        "1 bar",
+        "3 bar"
+      ],
+      "temp": [
+        "0 ÷ 60 °C",
+        "1 - 145\nc",
+        "-1-145\nc"
+      ],
+      "ports": [
+        "G1/4",
+        "G3/8",
+        "G1/2",
+        "G3/4",
+        "G1",
+        "G1/8"
+      ],
+      "pages": 20,
+      "chars": 20076
+    },
+    "children": []
+  },
+  {
+    "kid": "1759143818",
+    "parent": "1759143704",
+    "depth": 2,
+    "title": "HZE3R Srisi Büyük Seri Regülatörler",
+    "img": "assets/images/enpo/1759143818.webp",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143818",
+    "facts": {},
+    "children": []
+  },
+  {
+    "kid": "1759143874",
+    "parent": "1759143704",
+    "depth": 2,
+    "title": "HZRE Serisi Oransal Regülatör",
+    "img": "assets/images/enpo/1759143874.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759143874/1759154179enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143874",
+    "facts": {
+      "codes": [
+        "HZRE31",
+        "HZRE32",
+        "HZRE33",
+        "HZRE3106G",
+        "HZRE3208G",
+        "HZRE3315G",
+        "HZRE30300",
+        "HZRE30310",
+        "HZREM12L03D",
+        "HZREM12L03L"
+      ],
+      "pressure": [
+        "1 bar",
+        "5 bar",
+        "9 bar",
+        "10 bar"
+      ],
+      "temp": [
+        "0 ÷ 50 °C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4",
+        "G1/2"
+      ],
+      "pages": 4,
+      "chars": 3292
+    },
+    "children": []
+  },
+  {
+    "kid": "1759154194",
+    "parent": "1759143704",
+    "depth": 2,
+    "title": "HZRP30 Serisi Hassas Regülatörler",
+    "img": "assets/images/enpo/1759154194.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759154194/1759154311enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759154194",
+    "facts": {
+      "codes": [
+        "HZRP30",
+        "HZRP3008GC",
+        "HZRP3008GB",
+        "HZRP3008GA",
+        "HZRP3008GA/B/C"
+      ],
+      "pressure": [
+        "2 bar",
+        "4 bar",
+        "8 bar",
+        "10 bar"
+      ],
+      "temp": [
+        "-5 ÷ +60 °C"
+      ],
+      "ports": [
+        "G1/4"
+      ],
+      "pages": 3,
+      "chars": 2123
+    },
+    "children": []
+  },
+  {
+    "kid": "1759154311",
+    "parent": "1759143704",
+    "depth": 2,
+    "title": "HZRS Serisi Mikro Regülatör",
+    "img": "assets/images/enpo/1759154311.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759154311/1759154413enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759154311",
+    "facts": {
+      "codes": [
+        "HZRS08G",
+        "HZRS652",
+        "HZRS654",
+        "HZRS656"
+      ],
+      "pressure": [
+        "8 bar",
+        "2 bar",
+        "4 bar",
+        "6 bar"
+      ],
+      "temp": [
+        "-10 ÷ 50 °C"
+      ],
+      "ports": [
+        "G1/4",
+        "G1/8"
+      ],
+      "pages": 2,
+      "chars": 1454
+    },
+    "children": []
+  },
+  {
+    "kid": "1759154414",
+    "parent": "1758528905",
+    "depth": 1,
+    "title": "Üçlü Şartlandırıcılar F+R+L",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759154414",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759154498",
+        "name": "HZE-C Serisi Üçlü Şartlandırıcılar F+R+L",
+        "img": "yuklenen/kategoriler/1759154498/k-1759154498-17591545497476.jpg"
+      },
+      {
+        "kid": "1759154570",
+        "name": "HZE3C Serisi Büyük Gövde Üçlü Şartlandırıcılar F+R+L",
+        "img": "yuklenen/kategoriler/1759154570/k-1759154570-17591546791286.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1759154498",
+    "parent": "1759154414",
+    "depth": 2,
+    "title": "HZE-C Serisi Üçlü Şartlandırıcılar F+R+L",
+    "img": "assets/images/enpo/1759154498.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759154498/1759154569enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759154498",
+    "facts": {
+      "codes": [
+        "HZE1C10GM",
+        "HZE1C15GM",
+        "HZE05C08GM",
+        "HZE05C10GM",
+        "HZE0C08GM",
+        "HZE2C15GM"
+      ],
+      "pressure": [
+        "10 bar",
+        "15 bar",
+        "1 bar",
+        "3 bar"
+      ],
+      "temp": [
+        "0 ÷ 60 °C",
+        "1 - 145\nc",
+        "-1-145\nc"
+      ],
+      "ports": [
+        "G1/4",
+        "G3/8",
+        "G1/2",
+        "G3/4",
+        "G1",
+        "G1/8"
+      ],
+      "pages": 20,
+      "chars": 20076
+    },
+    "children": []
+  },
+  {
+    "kid": "1759154570",
+    "parent": "1759154414",
+    "depth": 2,
+    "title": "HZE3C Serisi Büyük Gövde Üçlü Şartlandırıcılar F+R+L",
+    "img": "assets/images/enpo/1759154570.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759154570/1759154696enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759154570",
+    "facts": {
+      "codes": [
+        "HZE3C25GS"
+      ],
+      "pressure": [
+        "10 bar",
+        "15 bar",
+        "20 bar",
+        "7 bar"
+      ],
+      "temp": [
+        "-5 ÷ 60 °C",
+        "5 ÷ 10\nc"
+      ],
+      "ports": [
+        "G1",
+        "G1/8",
+        "G1/2"
+      ],
+      "pages": 10,
+      "chars": 8319
+    },
+    "children": []
+  },
+  {
+    "kid": "1759154706",
+    "parent": "1758528905",
+    "depth": 1,
+    "title": "Yağlayıcılar",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759154706",
+    "facts": {},
+    "children": []
+  },
+  {
+    "kid": "1759154724",
+    "parent": "1758528905",
+    "depth": 1,
+    "title": "Yavaş Başlatma Valfleri",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759154724",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759154777",
+        "name": "HZE-Y Serisi Yavaş Başlatma Valfleri",
+        "img": "yuklenen/kategoriler/1759154777/k-1759154777-17591548276328.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1759154777",
+    "parent": "1759154724",
+    "depth": 2,
+    "title": "HZE-Y Serisi Yavaş Başlatma Valfleri",
+    "img": "assets/images/enpo/1759154777.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759154777/1759154864enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759154777",
+    "facts": {
+      "codes": [
+        "HZE1Y10G",
+        "HZE1Y15G",
+        "HZE0Y08G"
+      ],
+      "pressure": [
+        "10 bar",
+        "15 bar",
+        "1 bar",
+        "3 bar"
+      ],
+      "temp": [
+        "0 ÷ 60 °C",
+        "1 - 145\nc",
+        "-1-145\nc"
+      ],
+      "ports": [
+        "G1/4",
+        "G3/8",
+        "G1/2",
+        "G3/4",
+        "G1",
+        "G1/8"
+      ],
+      "pages": 20,
+      "chars": 20076
+    },
+    "children": []
+  },
+  {
+    "kid": "1758529434",
+    "parent": null,
+    "depth": 0,
+    "title": "Silindirler",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1758529434",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759141431",
+        "name": "Kompakt Silindirler",
+        "img": "yuklenen/kategoriler/1759141431/k-1759141431-1759154949798.jpg"
+      },
+      {
+        "kid": "1759141680",
+        "name": "Manyetik Sensörler",
+        "img": "yuklenen/kategoriler/1759141680/k-1759141680-17591549789230.jpg"
+      },
+      {
+        "kid": "1759141718",
+        "name": "Oval Silindirler",
+        "img": "yuklenen/kategoriler/1759141718/k-1759141718-175915591568.jpg"
+      },
+      {
+        "kid": "1759141751",
+        "name": "Paslanmaz Silindirler",
+        "img": "yuklenen/kategoriler/1759141751/k-1759141751-17591550036126.jpg"
+      },
+      {
+        "kid": "1759141765",
+        "name": "Rodless Milsiz Silindirler",
+        "img": "yuklenen/kategoriler/1759141765/k-1759141765-17591557084724.jpg"
+      },
+      {
+        "kid": "1759141784",
+        "name": "Short Kısa Stroklu Silindirler",
+        "img": "yuklenen/kategoriler/1759141784/k-1759141784-17591553036759.jpg"
+      },
+      {
+        "kid": "1759141818",
+        "name": "Silindirler",
+        "img": "yuklenen/kategoriler/1759141818/k-1759141818-1768382033513.jpg"
+      },
+      {
+        "kid": "1759141842",
+        "name": "Yataklı Silindirler",
+        "img": "yuklenen/kategoriler/1759141842/k-1759141842-17592222811213.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1759141431",
+    "parent": "1758529434",
+    "depth": 1,
+    "title": "Kompakt Silindirler",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759141431",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759141857",
+        "name": "RO-RN Serisi Silindirler",
+        "img": "yuklenen/kategoriler/1759141857/k-1759141857-17591496116669.jpg"
+      },
+      {
+        "kid": "1759141994",
+        "name": "RP-RM Serisi CETOP ISO21287 Serisi",
+        "img": "yuklenen/kategoriler/1759141994/k-1759141994-1759149677430.jpg"
+      },
+      {
+        "kid": "1759142070",
+        "name": "RQ Strong Serisi Silindirler",
+        "img": "yuklenen/kategoriler/1759142070/k-1759142070-17591497427891.jpg"
+      },
+      {
+        "kid": "1759142116",
+        "name": "RS Strong Seri Silindirler",
+        "img": "yuklenen/kategoriler/1759142116/k-1759142116-17591498046012.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1759141857",
+    "parent": "1759141431",
+    "depth": 2,
+    "title": "RO-RN Serisi Silindirler",
+    "img": "assets/images/enpo/1759141857.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759141857/1759141994ro-rn-serisi-silindirler.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759141857",
+    "facts": {
+      "codes": [
+        "RO-RN"
+      ],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "-20 ÷ 80°C"
+      ],
+      "ports": [
+        "G1/8"
+      ],
+      "pages": 16,
+      "chars": 25207
+    },
+    "children": []
+  },
+  {
+    "kid": "1759141994",
+    "parent": "1759141431",
+    "depth": 2,
+    "title": "RP-RM Serisi CETOP ISO21287 Serisi",
+    "img": "assets/images/enpo/1759141994.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759141994/1759142069rp-rm-serisi-cetop-iso21287-serisi-kompakt-silindirler.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759141994",
+    "facts": {
+      "codes": [
+        "RP-RM"
+      ],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "-20 ÷ 80 °C"
+      ],
+      "ports": [
+        "G1/8"
+      ],
+      "pages": 21,
+      "chars": 34834
+    },
+    "children": []
+  },
+  {
+    "kid": "1759142070",
+    "parent": "1759141431",
+    "depth": 2,
+    "title": "RQ Strong Serisi Silindirler",
+    "img": "assets/images/enpo/1759142070.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759142070/1759142116rq-strong-serisi-silindirler.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759142070",
+    "facts": {
+      "codes": [],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "-20 ÷ 80°C"
+      ],
+      "ports": [
+        "G1/8"
+      ],
+      "pages": 22,
+      "chars": 33304
+    },
+    "children": []
+  },
+  {
+    "kid": "1759142116",
+    "parent": "1759141431",
+    "depth": 2,
+    "title": "RS Strong Seri Silindirler",
+    "img": "assets/images/enpo/1759142116.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759142116/1759142156rs-strong-seri-silindirler.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759142116",
+    "facts": {
+      "codes": [],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "-20 ÷ 80°C"
+      ],
+      "ports": [
+        "G1/8"
+      ],
+      "pages": 22,
+      "chars": 33304
+    },
+    "children": []
+  },
+  {
+    "kid": "1759141680",
+    "parent": "1758529434",
+    "depth": 1,
+    "title": "Manyetik Sensörler",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759141680",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759142163",
+        "name": "DF-MA IO Link Serisi Mantyetik Sensörler",
+        "img": "yuklenen/kategoriler/1759142163/k-1759142163-17591554811314.jpg"
+      },
+      {
+        "kid": "1759142235",
+        "name": "DF-RW Serisi Manyetik Sensörler",
+        "img": "yuklenen/kategoriler/1759142235/k-1759142235-17591556842268.png"
+      },
+      {
+        "kid": "1759142264",
+        "name": "DF Serisi Manyetik Sensörler",
+        "img": "yuklenen/kategoriler/1759142264/k-1759142264-17591557726099.png"
+      },
+      {
+        "kid": "1759142307",
+        "name": "DF-T Serisi Manyetik Sensörler",
+        "img": "yuklenen/kategoriler/1759142307/k-1759142307-17591526925515.jpg"
+      },
+      {
+        "kid": "1759142330",
+        "name": "DH Serisi Manyetik Sensörler",
+        "img": "yuklenen/kategoriler/1759142330/k-1759142330-17591558486772.png"
+      }
+    ]
+  },
+  {
+    "kid": "1759142163",
+    "parent": "1759141680",
+    "depth": 2,
+    "title": "DF-MA IO Link Serisi Mantyetik Sensörler",
+    "img": "assets/images/enpo/1759142163.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759142163/1759142235df-ma-io-link-serisi-manyetik-sensorler.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759142163",
+    "facts": {
+      "codes": [
+        "DF-MA",
+        "IO-LINK",
+        "DF-MA0287M08",
+        "DF-MA0359M08",
+        "DF-MA0431M08",
+        "DF-MA0503M08",
+        "DF-004",
+        "DF-MSS12TO"
+      ],
+      "pressure": [],
+      "temp": [
+        "-20÷+70°C",
+        "8 - 90° c"
+      ],
+      "ports": [],
+      "pages": 3,
+      "chars": 5748
+    },
+    "children": []
+  },
+  {
+    "kid": "1759142235",
+    "parent": "1759141680",
+    "depth": 2,
+    "title": "DF-RW Serisi Manyetik Sensörler",
+    "img": "assets/images/enpo/1759142235.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759142235/1759142264df-rw-serisi-manyetik-sensorler.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759142235",
+    "facts": {
+      "codes": [
+        "DF-RW700L03",
+        "DF-RW700M12",
+        "DF-RW"
+      ],
+      "pressure": [],
+      "temp": [],
+      "ports": [],
+      "pages": 3,
+      "chars": 2932
+    },
+    "children": []
+  },
+  {
+    "kid": "1759142264",
+    "parent": "1759141680",
+    "depth": 2,
+    "title": "DF Serisi Manyetik Sensörler",
+    "img": "assets/images/enpo/1759142264.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759142264/1759142307df-serisi-manyetik-sensorler.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759142264",
+    "facts": {
+      "codes": [
+        "DF-440",
+        "DF-330",
+        "DF-220",
+        "DF-770",
+        "DF-770M08",
+        "DF-770M12",
+        "DF-220M08",
+        "DF-220M12",
+        "DF-330M08",
+        "DF-330M12",
+        "DF-440M08",
+        "DF-440M12",
+        "DF-001",
+        "DF-220L5"
+      ],
+      "pressure": [],
+      "temp": [
+        "5 -10°C"
+      ],
+      "ports": [],
+      "pages": 3,
+      "chars": 4027
+    },
+    "children": []
+  },
+  {
+    "kid": "1759142307",
+    "parent": "1759141680",
+    "depth": 2,
+    "title": "DF-T Serisi Manyetik Sensörler",
+    "img": "assets/images/enpo/1759142307.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759142307/1759142330df-t-serisi-manyetik-sensorler.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759142307",
+    "facts": {
+      "codes": [
+        "DF-T700L03",
+        "DF-T200M08",
+        "DF-T200L03",
+        "DF-T700M08",
+        "DF-T200"
+      ],
+      "pressure": [],
+      "temp": [],
+      "ports": [],
+      "pages": 2,
+      "chars": 2679
+    },
+    "children": []
+  },
+  {
+    "kid": "1759142330",
+    "parent": "1759141680",
+    "depth": 2,
+    "title": "DH Serisi Manyetik Sensörler",
+    "img": "assets/images/enpo/1759142330.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759142330/1759142358dh-serisi-manyetik-sensorler.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759142330",
+    "facts": {
+      "codes": [
+        "DH-500",
+        "DH-200",
+        "DH-700",
+        "DH-700L5",
+        "DH-700L10",
+        "DH-700M08",
+        "DH-700M12",
+        "DH-200L5",
+        "DH-200L10",
+        "DH-200M08",
+        "DH-200M12",
+        "DH-500L5",
+        "DH-500L10",
+        "DH-500M08"
+      ],
+      "pressure": [],
+      "temp": [
+        "5 -10°C"
+      ],
+      "ports": [],
+      "pages": 4,
+      "chars": 4058
+    },
+    "children": []
+  },
+  {
+    "kid": "1759141718",
+    "parent": "1758529434",
+    "depth": 1,
+    "title": "Oval Silindirler",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759141718",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759142363",
+        "name": "OV Serisi Oval Silindirler",
+        "img": "yuklenen/kategoriler/1759142363/k-1759142363-17591488235007.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1759142363",
+    "parent": "1759141718",
+    "depth": 2,
+    "title": "OV Serisi Oval Silindirler",
+    "img": "assets/images/enpo/1759142363.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759142363/1759142392ov-serisi-oval-silindirler.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759142363",
+    "facts": {
+      "codes": [
+        "OVF-11018",
+        "OVF-11025",
+        "OVF-11032",
+        "OVF-11040",
+        "OVF-11050",
+        "OVF-11063",
+        "OVF-11080",
+        "OVF-12018",
+        "OVF-12025",
+        "OVF-12032",
+        "OVF-12040",
+        "OVF-12050",
+        "OVF-12063",
+        "OVF-12080"
+      ],
+      "pressure": [
+        "10 bar",
+        "4711\nbar"
+      ],
+      "temp": [
+        "-20 ÷ 80 °C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4"
+      ],
+      "pages": 8,
+      "chars": 9844
+    },
+    "children": []
+  },
+  {
+    "kid": "1759141751",
+    "parent": "1758529434",
+    "depth": 1,
+    "title": "Paslanmaz Silindirler",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759141751",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759142392",
+        "name": "PK Serisi Paslanmaz ISO15552 Serisi Silindirler",
+        "img": "yuklenen/kategoriler/1759142392/k-1759142392-17591549246082.jpg"
+      },
+      {
+        "kid": "1759142463",
+        "name": "PM 32-63 Paslanmaz Silindirler",
+        "img": "yuklenen/kategoriler/1759142463/k-1759142463-17591550715692.jpg"
+      },
+      {
+        "kid": "1759142522",
+        "name": "PM Serisi 16-25 ISO6432 Paslanmaz Silindirler",
+        "img": "yuklenen/kategoriler/1759142522/k-1759142522-17591551419715.jpg"
+      },
+      {
+        "kid": "1759142694",
+        "name": "PRM 20-100 ISO21287 Serisi Paslanmaz Silindirler",
+        "img": "yuklenen/kategoriler/1759142694/k-1759142694-17591551992078.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1759142392",
+    "parent": "1759141751",
+    "depth": 2,
+    "title": "PK Serisi Paslanmaz ISO15552 Serisi Silindirler",
+    "img": "assets/images/enpo/1759142392.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759142392/1759142441pk-serisi-paslanmaz-iso15552-serisi-silindirler.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759142392",
+    "facts": {
+      "codes": [
+        "PK300",
+        "PK301"
+      ],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "0 ÷ 80 °C",
+        "0 ÷ 150 °C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4",
+        "G3/8",
+        "G1/2"
+      ],
+      "pages": 8,
+      "chars": 11324
+    },
+    "children": []
+  },
+  {
+    "kid": "1759142463",
+    "parent": "1759141751",
+    "depth": 2,
+    "title": "PM 32-63 Paslanmaz Silindirler",
+    "img": "assets/images/enpo/1759142463.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759142463/1759142522pm-32-63-paslanmaz-silindirler.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759142463",
+    "facts": {
+      "codes": [
+        "PM301",
+        "PM300"
+      ],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "0 ÷ 80 °C"
+      ],
+      "ports": [
+        "G1",
+        "G2",
+        "G1/8",
+        "G1/4",
+        "G3/8"
+      ],
+      "pages": 5,
+      "chars": 5444
+    },
+    "children": []
+  },
+  {
+    "kid": "1759142522",
+    "parent": "1759141751",
+    "depth": 2,
+    "title": "PM Serisi 16-25 ISO6432 Paslanmaz Silindirler",
+    "img": "assets/images/enpo/1759142522.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759142522/1759142677pm-serisi-16-25-iso6432-paslanmaz-silindirler.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759142522",
+    "facts": {
+      "codes": [
+        "PM300",
+        "PM350",
+        "PM301",
+        "PM351"
+      ],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "0 ÷ 80 °C"
+      ],
+      "ports": [
+        "G1/8"
+      ],
+      "pages": 5,
+      "chars": 5385
+    },
+    "children": []
+  },
+  {
+    "kid": "1759142694",
+    "parent": "1759141751",
+    "depth": 2,
+    "title": "PRM 20-100 ISO21287 Serisi Paslanmaz Silindirler",
+    "img": "assets/images/enpo/1759142694.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759142694/1759142711prm-20-100-iso21287-serisi-paslanmaz-silindirler.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759142694",
+    "facts": {
+      "codes": [
+        "PRM100/PRM300",
+        "PRM101/PRP301",
+        "PRM160/PRM360",
+        "PRM170/PRM370"
+      ],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "0 ÷ 80 °C",
+        "0\n-1\nC"
+      ],
+      "ports": [
+        "G1/8"
+      ],
+      "pages": 8,
+      "chars": 11803
+    },
+    "children": []
+  },
+  {
+    "kid": "1759141765",
+    "parent": "1758529434",
+    "depth": 1,
+    "title": "Rodless Milsiz Silindirler",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759141765",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759142740",
+        "name": "S1 Serisi Rodless Silindirler",
+        "img": "yuklenen/kategoriler/1759142740/k-1759142740-17591554913658.jpg"
+      },
+      {
+        "kid": "1759142781",
+        "name": "S5 Serisi Yataklı Rodless Silindirler",
+        "img": "yuklenen/kategoriler/1759142781/k-1759142781-17591555512273.png"
+      },
+      {
+        "kid": "1759142830",
+        "name": "S Serisi Montaj Kitleri",
+        "img": "yuklenen/kategoriler/1759142830/k-1759142830-17591556058419.jpg"
+      },
+      {
+        "kid": "1759142864",
+        "name": "VL1 Serisi Rodless Silindirler",
+        "img": "yuklenen/kategoriler/1759142864/k-1759142864-17591556607664.png"
+      }
+    ]
+  },
+  {
+    "kid": "1759142740",
+    "parent": "1759141765",
+    "depth": 2,
+    "title": "S1 Serisi Rodless Silindirler",
+    "img": "assets/images/enpo/1759142740.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759142740/1759142762s1-serisi-rodless-silindirler.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759142740",
+    "facts": {
+      "codes": [],
+      "pressure": [
+        "10 bar",
+        "6 bar"
+      ],
+      "temp": [
+        "-20÷80 °C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4",
+        "G3/8"
+      ],
+      "pages": 9,
+      "chars": 10149
+    },
+    "children": []
+  },
+  {
+    "kid": "1759142781",
+    "parent": "1759141765",
+    "depth": 2,
+    "title": "S5 Serisi Yataklı Rodless Silindirler",
+    "img": "assets/images/enpo/1759142781.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759142781/1759142800s5-serisi-yatakli-rodless-silindirler.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759142781",
+    "facts": {
+      "codes": [],
+      "pressure": [
+        "10 bar",
+        "6 bar"
+      ],
+      "temp": [
+        "-20÷80 °C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4",
+        "G3/8"
+      ],
+      "pages": 6,
+      "chars": 5919
+    },
+    "children": []
+  },
+  {
+    "kid": "1759142830",
+    "parent": "1759141765",
+    "depth": 2,
+    "title": "S Serisi Montaj Kitleri",
+    "img": "assets/images/enpo/1759142830.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759142830/1759142864s-serisi-montaj-kitleri.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759142830",
+    "facts": {
+      "codes": [],
+      "pressure": [],
+      "temp": [],
+      "ports": [],
+      "pages": 1,
+      "chars": 351
+    },
+    "children": []
+  },
+  {
+    "kid": "1759142864",
+    "parent": "1759141765",
+    "depth": 2,
+    "title": "VL1 Serisi Rodless Silindirler",
+    "img": "assets/images/enpo/1759142864.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759142864/1759142982vl1-serisi-rodless-silindirler.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759142864",
+    "facts": {
+      "codes": [],
+      "pressure": [
+        "10 bar",
+        "6 bar"
+      ],
+      "temp": [
+        "-20÷80 °C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4",
+        "G3/8"
+      ],
+      "pages": 13,
+      "chars": 17381
+    },
+    "children": []
+  },
+  {
+    "kid": "1759141784",
+    "parent": "1758529434",
+    "depth": 1,
+    "title": "Short Kısa Stroklu Silindirler",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759141784",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759142982",
+        "name": "W Serisi KIsa Stroklu Silindirler",
+        "img": "yuklenen/kategoriler/1759142982/k-1759142982-17591489129825.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1759142982",
+    "parent": "1759141784",
+    "depth": 2,
+    "title": "W Serisi KIsa Stroklu Silindirler",
+    "img": "assets/images/enpo/1759142982.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759142982/1759143032w-serisi-kisa-stroklu-silindirler.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759142982",
+    "facts": {
+      "codes": [
+        "WF-50012",
+        "WF-50020",
+        "WF-50032",
+        "WF-50040",
+        "WF-50050",
+        "WF-50063",
+        "WF-50080"
+      ],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "-20 ÷ 80 °C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4",
+        "G3/8"
+      ],
+      "pages": 14,
+      "chars": 20414
+    },
+    "children": []
+  },
+  {
+    "kid": "1759141818",
+    "parent": "1758529434",
+    "depth": 1,
+    "title": "Silindirler",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759141818",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759143122",
+        "name": "K 160-200 ISO15552 Serisi",
+        "img": "yuklenen/kategoriler/1759143122/k-1759143122-17592207902489.jpg"
+      },
+      {
+        "kid": "1759143228",
+        "name": "K 250-320 ISO15552 Serisi",
+        "img": "yuklenen/kategoriler/1759143228/k-1759143228-17592208803909.jpg"
+      },
+      {
+        "kid": "1759143257",
+        "name": "KD Serisi ISO15552 Serisi",
+        "img": "yuklenen/kategoriler/1759143257/k-1759143257-17592218403124.png"
+      },
+      {
+        "kid": "1759143281",
+        "name": "K-KE Serisi ISO15552 Serisi",
+        "img": "yuklenen/kategoriler/1759143281/k-1759143281-17592219064633.jpg"
+      },
+      {
+        "kid": "1759143304",
+        "name": "KL Serisi ISO 15552 Serisi",
+        "img": "yuklenen/kategoriler/1759143304/k-1759143304-17592219438158.jpg"
+      },
+      {
+        "kid": "1759143327",
+        "name": "M Serisi Kalem Silindirler",
+        "img": "yuklenen/kategoriler/1759143327/k-1759143327-17592219927500.png"
+      }
+    ]
+  },
+  {
+    "kid": "1759143122",
+    "parent": "1759141818",
+    "depth": 2,
+    "title": "K 160-200 ISO15552 Serisi",
+    "img": "assets/images/enpo/1759143122.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759143122/1759143197enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143122",
+    "facts": {
+      "codes": [],
+      "pressure": [
+        "10 bar",
+        "8\nbar"
+      ],
+      "temp": [
+        "-20 ÷ 80 °C"
+      ],
+      "ports": [
+        "G3/4"
+      ],
+      "pages": 11,
+      "chars": 11699
+    },
+    "children": []
+  },
+  {
+    "kid": "1759143228",
+    "parent": "1759141818",
+    "depth": 2,
+    "title": "K 250-320 ISO15552 Serisi",
+    "img": "assets/images/enpo/1759143228.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759143228/1759143245enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143228",
+    "facts": {
+      "codes": [],
+      "pressure": [
+        "10 bar",
+        "8\nbar"
+      ],
+      "temp": [
+        "-20 ÷ 80 °C"
+      ],
+      "ports": [
+        "G1"
+      ],
+      "pages": 6,
+      "chars": 6218
+    },
+    "children": []
+  },
+  {
+    "kid": "1759143257",
+    "parent": "1759141818",
+    "depth": 2,
+    "title": "KD Serisi ISO15552 Serisi",
+    "img": "assets/images/enpo/1759143257.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759143257/1759143271enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143257",
+    "facts": {
+      "codes": [
+        "KD190",
+        "KD290",
+        "KDF-14",
+        "KD100/200",
+        "KD160/260",
+        "KD170/270",
+        "KD101/201",
+        "KDF-14032"
+      ],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "-20 ÷ 80 °C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4",
+        "G3/8",
+        "G1/2"
+      ],
+      "pages": 13,
+      "chars": 21563
+    },
+    "children": []
+  },
+  {
+    "kid": "1759143281",
+    "parent": "1759141818",
+    "depth": 2,
+    "title": "K-KE Serisi ISO15552 Serisi",
+    "img": "assets/images/enpo/1759143281.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759143281/1759143300enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143281",
+    "facts": {
+      "codes": [
+        "KE190",
+        "KE290",
+        "KE101/201",
+        "KE160/260",
+        "KE170/270",
+        "KE100/200"
+      ],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "-20 ÷ 80 °C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4",
+        "G3/8",
+        "G1/2"
+      ],
+      "pages": 13,
+      "chars": 22127
+    },
+    "children": []
+  },
+  {
+    "kid": "1759143304",
+    "parent": "1759141818",
+    "depth": 2,
+    "title": "KL Serisi ISO 15552 Serisi",
+    "img": "assets/images/enpo/1759143304.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759143304/1759143318enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143304",
+    "facts": {
+      "codes": [
+        "KLF-14",
+        "KL160/260",
+        "KL170/270",
+        "KL100/200",
+        "KL101/201",
+        "KLF-14032",
+        "KLF-14040",
+        "KLF-14050",
+        "KLF-14063"
+      ],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "-20 ÷ 80 °C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4",
+        "G3/8",
+        "G1/2"
+      ],
+      "pages": 13,
+      "chars": 22075
+    },
+    "children": []
+  },
+  {
+    "kid": "1759143327",
+    "parent": "1759141818",
+    "depth": 2,
+    "title": "M Serisi Kalem Silindirler",
+    "img": "assets/images/enpo/1759143327.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759143327/1759143507enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143327",
+    "facts": {
+      "codes": [
+        "MF-12008",
+        "MF-12012",
+        "MF-12020",
+        "MF-13008",
+        "MF-13012",
+        "MF-13020",
+        "MF-21008",
+        "MF-21012",
+        "MF-21020",
+        "MF-20008",
+        "MF-20012",
+        "MF-20020",
+        "MF-15008",
+        "MF-15012"
+      ],
+      "pressure": [
+        "10 bar",
+        "8\nbar",
+        "4711\nbar",
+        "1 bar"
+      ],
+      "temp": [
+        "-20 ÷ 80 °C",
+        "-20 ÷ 80°C",
+        "0 ÷ 80 °C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1",
+        "G1/4",
+        "G3/8",
+        "G1/2",
+        "G3/4",
+        "G2"
+      ],
+      "pages": 269,
+      "chars": 373618
+    },
+    "children": []
+  },
+  {
+    "kid": "1759141842",
+    "parent": "1758529434",
+    "depth": 1,
+    "title": "Yataklı Silindirler",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759141842",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759143523",
+        "name": "J1 serisi Yataklı Silindirler M-KL-KE-K-KD Serisi",
+        "img": "yuklenen/kategoriler/1759143523/k-1759143523-17592220772485.jpg"
+      },
+      {
+        "kid": "1759143555",
+        "name": "J64RS Serisi Yataklı Silindirler S Serisi",
+        "img": "yuklenen/kategoriler/1759143555/k-1759143555-17592221234754.jpg"
+      },
+      {
+        "kid": "1759143581",
+        "name": "J64RT2 Serisi Yataklı Silindirler RT2 Serisi",
+        "img": "yuklenen/kategoriler/1759143581/k-1759143581-17592221775338.jpg"
+      },
+      {
+        "kid": "1759143602",
+        "name": "J65 Serisi Yataklı Silindirler RP Serisi",
+        "img": "yuklenen/kategoriler/1759143602/k-1759143602-1759222202949.jpg"
+      },
+      {
+        "kid": "1759143623",
+        "name": "J Serisi Yataklı Silindirler RS Serisi",
+        "img": "yuklenen/kategoriler/1759143623/k-1759143623-17592222454685.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1759143523",
+    "parent": "1759141842",
+    "depth": 2,
+    "title": "J1 serisi Yataklı Silindirler M-KL-KE-K-KD Serisi",
+    "img": "assets/images/enpo/1759143523.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759143523/1759143551enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143523",
+    "facts": {
+      "codes": [],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "-20 ÷ 80 °C",
+        "32÷100 c"
+      ],
+      "ports": [
+        "G1/8",
+        "G2",
+        "G1",
+        "G1/4",
+        "G3/8"
+      ],
+      "pages": 25,
+      "chars": 31767
+    },
+    "children": []
+  },
+  {
+    "kid": "1759143555",
+    "parent": "1759141842",
+    "depth": 2,
+    "title": "J64RS Serisi Yataklı Silindirler S Serisi",
+    "img": "assets/images/enpo/1759143555.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759143555/1759143577enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143555",
+    "facts": {
+      "codes": [],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "-20 ÷ 80 °C",
+        "32÷100 c"
+      ],
+      "ports": [
+        "G1/8",
+        "G2",
+        "G1",
+        "G1/4",
+        "G3/8"
+      ],
+      "pages": 25,
+      "chars": 31767
+    },
+    "children": []
+  },
+  {
+    "kid": "1759143581",
+    "parent": "1759141842",
+    "depth": 2,
+    "title": "J64RT2 Serisi Yataklı Silindirler RT2 Serisi",
+    "img": "assets/images/enpo/1759143581.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759143581/1759143599enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143581",
+    "facts": {
+      "codes": [],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "-20 ÷ 80 °C",
+        "32÷100 c"
+      ],
+      "ports": [
+        "G1/8",
+        "G2",
+        "G1",
+        "G1/4",
+        "G3/8"
+      ],
+      "pages": 25,
+      "chars": 31767
+    },
+    "children": []
+  },
+  {
+    "kid": "1759143602",
+    "parent": "1759141842",
+    "depth": 2,
+    "title": "J65 Serisi Yataklı Silindirler RP Serisi",
+    "img": "assets/images/enpo/1759143602.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759143602/1759143623enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143602",
+    "facts": {
+      "codes": [],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "-20 ÷ 80 °C",
+        "32÷100 c"
+      ],
+      "ports": [
+        "G1/8",
+        "G2",
+        "G1",
+        "G1/4",
+        "G3/8"
+      ],
+      "pages": 25,
+      "chars": 31767
+    },
+    "children": []
+  },
+  {
+    "kid": "1759143623",
+    "parent": "1759141842",
+    "depth": 2,
+    "title": "J Serisi Yataklı Silindirler RS Serisi",
+    "img": "assets/images/enpo/1759143623.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759143623/1759143642enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143623",
+    "facts": {
+      "codes": [
+        "RS22J",
+        "JF-13016",
+        "JF-13025",
+        "JF-13032",
+        "JF-13040",
+        "JF-13050",
+        "JF-13063",
+        "JF-13080",
+        "JF-13100",
+        "JF-14016",
+        "JF-14025",
+        "JF-14032",
+        "JF-14040",
+        "JF-14050"
+      ],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "-20 ÷ 80 °C",
+        "32÷100 c"
+      ],
+      "ports": [
+        "G1/8",
+        "G2",
+        "G1",
+        "G1/4",
+        "G3/8"
+      ],
+      "pages": 25,
+      "chars": 31767
+    },
+    "children": []
+  },
+  {
+    "kid": "1758529463",
+    "parent": null,
+    "depth": 0,
+    "title": "Valfler",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1758529463",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759143740",
+        "name": "Aksesuarlar ve Diğer Valf Grupları",
+        "img": "yuklenen/kategoriler/1759143740/k-1759143740-17592235598368.jpg"
+      },
+      {
+        "kid": "1759143750",
+        "name": "Bobinler",
+        "img": "yuklenen/kategoriler/1759143750/k-1759143750-17592236871696.png"
+      },
+      {
+        "kid": "1759143767",
+        "name": "Elektropilotlar",
+        "img": "yuklenen/kategoriler/1759143767/k-1759143767-17592241255313.jpg"
+      },
+      {
+        "kid": "1759143781",
+        "name": "ISO Valfler",
+        "img": "yuklenen/kategoriler/1759143781/k-1759143781-17592252705873.jpg"
+      },
+      {
+        "kid": "1759143794",
+        "name": "Mekanik Operatörler",
+        "img": "yuklenen/kategoriler/1759143794/k-1759143794-17592253275310.jpg"
+      },
+      {
+        "kid": "1759143806",
+        "name": "Popet Ve Genel Maksat Valfler",
+        "img": "yuklenen/kategoriler/1759143806/k-1759143806-17592258898928.jpg"
+      },
+      {
+        "kid": "1759143826",
+        "name": "P Serisi Multipine Valfler",
+        "img": "yuklenen/kategoriler/1759143826/k-1759143826-1759226068341.jpg"
+      },
+      {
+        "kid": "1759143835",
+        "name": "Seri İletişim Modülleri",
+        "img": "yuklenen/kategoriler/1759143835/k-1759143835-17592261881877.jpg"
+      },
+      {
+        "kid": "1759143851",
+        "name": "Spool Valfler",
+        "img": "assets/img/noimage.jpg\r\n"
+      }
+    ]
+  },
+  {
+    "kid": "1759143740",
+    "parent": "1758529463",
+    "depth": 1,
+    "title": "Aksesuarlar ve Diğer Valf Grupları",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143740",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759144165",
+        "name": "AM4 Serisi Hava Ve Yağ Tankı",
+        "img": "yuklenen/kategoriler/1759144165/k-1759144165-17592223702088.jpg"
+      },
+      {
+        "kid": "1759144213",
+        "name": "AM-50 Serisi Kısma Valfleri",
+        "img": "yuklenen/kategoriler/1759144213/k-1759144213-1759222617326.jpg"
+      },
+      {
+        "kid": "1759144245",
+        "name": "AM-51 Serisi Ve Veya Valfleri",
+        "img": "yuklenen/kategoriler/1759144245/k-1759144245-17592226272687.jpg"
+      },
+      {
+        "kid": "1759144273",
+        "name": "AM-52 Yavaş Başlatma Valfi",
+        "img": "yuklenen/kategoriler/1759144273/k-1759144273-17592226432797.jpg"
+      },
+      {
+        "kid": "1759144847",
+        "name": "AM-53 Serisi Ekonomizatörler",
+        "img": "yuklenen/kategoriler/1759144847/k-1759144847-17592226628304.jpg"
+      },
+      {
+        "kid": "1759144890",
+        "name": "AM-54 Serisi Valfler",
+        "img": "yuklenen/kategoriler/1759144890/k-1759144890-17592226719437.jpg"
+      },
+      {
+        "kid": "1759145007",
+        "name": "AM-55 Serisi Kilitleme Valfleri",
+        "img": "yuklenen/kategoriler/1759145007/k-1759145007-17592226803910.jpg"
+      },
+      {
+        "kid": "1759145051",
+        "name": "AM-5200 Serisi Transducer",
+        "img": "yuklenen/kategoriler/1759145051/k-1759145051-17592228683773.jpg"
+      },
+      {
+        "kid": "1759145085",
+        "name": "AM-5220 Serisi Ayarlı Basınç Anahtarı",
+        "img": "yuklenen/kategoriler/1759145085/k-1759145085-17592228781845.jpg"
+      },
+      {
+        "kid": "1759145135",
+        "name": "AP Serisi Flip Flop Valfler",
+        "img": "yuklenen/kategoriler/1759145135/k-1759145135-17592228962958.jpg"
+      },
+      {
+        "kid": "1759145196",
+        "name": "YF Serisi Solenoid Valfler",
+        "img": "yuklenen/kategoriler/1759145196/k-1759145196-17592224616684.jpg"
+      },
+      {
+        "kid": "1759145251",
+        "name": "YG-6300 Pnömatik Silindirler için Konumlandırma Valfi",
+        "img": "yuklenen/kategoriler/1759145251/k-1759145251-17592225189756.jpg"
+      },
+      {
+        "kid": "1759145312",
+        "name": "YR Serisi Akümülatörler",
+        "img": "yuklenen/kategoriler/1759145312/k-1759145312-17592225578445.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1759144165",
+    "parent": "1759143740",
+    "depth": 2,
+    "title": "AM4 Serisi Hava Ve Yağ Tankı",
+    "img": "assets/images/enpo/1759144165.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759144165/1759144213enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759144165",
+    "facts": {
+      "codes": [
+        "AM41000060",
+        "AM41000080",
+        "AM41000120",
+        "AM41000160",
+        "AM41000200",
+        "AM41000240",
+        "AM41000280",
+        "AM41000320",
+        "AM41000360",
+        "AM41000400",
+        "AM41000440"
+      ],
+      "pressure": [
+        "8 bar"
+      ],
+      "temp": [
+        "-20 ÷ 80 °C"
+      ],
+      "ports": [],
+      "pages": 2,
+      "chars": 1273
+    },
+    "children": []
+  },
+  {
+    "kid": "1759144213",
+    "parent": "1759143740",
+    "depth": 2,
+    "title": "AM-50 Serisi Kısma Valfleri",
+    "img": "assets/images/enpo/1759144213.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759144213/1759144245enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759144213",
+    "facts": {
+      "codes": [
+        "AM-5070",
+        "AM-5071",
+        "AM-5072",
+        "AM-5074",
+        "AM-5076",
+        "AM-5077",
+        "AM-5060",
+        "AM-5061",
+        "AM-5062",
+        "AM-5063",
+        "AM-5064",
+        "AM-5065",
+        "AM-5066",
+        "AM-5067"
+      ],
+      "pressure": [
+        "10 bar",
+        "3 bar"
+      ],
+      "temp": [
+        "-30 ÷ +80 °C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4",
+        "G3/8",
+        "G1/2",
+        "G3/4",
+        "G1"
+      ],
+      "pages": 2,
+      "chars": 2274
+    },
+    "children": []
+  },
+  {
+    "kid": "1759144245",
+    "parent": "1759143740",
+    "depth": 2,
+    "title": "AM-51 Serisi  Ve Veya Valfleri",
+    "img": "assets/images/enpo/1759144245.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759144245/1759144272enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759144245",
+    "facts": {
+      "codes": [
+        "AM-51",
+        "AM-5160",
+        "AM-5164",
+        "AM-5161",
+        "AM-5162",
+        "AM-5163"
+      ],
+      "pressure": [
+        "10 bar",
+        "3 bar"
+      ],
+      "temp": [
+        "-30 ÷ +80 °C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4",
+        "G3/8",
+        "G1/2",
+        "G3/4",
+        "G1"
+      ],
+      "pages": 2,
+      "chars": 2274
+    },
+    "children": []
+  },
+  {
+    "kid": "1759144273",
+    "parent": "1759143740",
+    "depth": 2,
+    "title": "AM-52 Yavaş Başlatma Valfi",
+    "img": "assets/images/enpo/1759144273.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759144273/1759144361enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759144273",
+    "facts": {
+      "codes": [
+        "AM-5070",
+        "AM-5071",
+        "AM-5072",
+        "AM-5074",
+        "AM-5076",
+        "AM-5077",
+        "AM-5060",
+        "AM-5061",
+        "AM-5062",
+        "AM-5063",
+        "AM-5064",
+        "AM-5065",
+        "AM-5066",
+        "AM-5067"
+      ],
+      "pressure": [
+        "10 bar",
+        "3 bar"
+      ],
+      "temp": [
+        "-30 ÷ +80 °C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4",
+        "G3/8",
+        "G1/2",
+        "G3/4",
+        "G1"
+      ],
+      "pages": 2,
+      "chars": 2274
+    },
+    "children": []
+  },
+  {
+    "kid": "1759144847",
+    "parent": "1759143740",
+    "depth": 2,
+    "title": "AM-53 Serisi Ekonomizatörler",
+    "img": "assets/images/enpo/1759144847.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759144847/1759144890enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759144847",
+    "facts": {
+      "codes": [
+        "AM-5350",
+        "AM-5351",
+        "AM-5352",
+        "AM-5353",
+        "AM-5354",
+        "AM-5355",
+        "AM-5356",
+        "AM-53"
+      ],
+      "pressure": [
+        "10 bar",
+        "3 bar"
+      ],
+      "temp": [
+        "-30 ÷ +80 °C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4",
+        "G3/8",
+        "G1/2",
+        "G3/4",
+        "G1"
+      ],
+      "pages": 2,
+      "chars": 2274
+    },
+    "children": []
+  },
+  {
+    "kid": "1759144890",
+    "parent": "1759143740",
+    "depth": 2,
+    "title": "AM-54 Serisi Valfler",
+    "img": "assets/images/enpo/1759144890.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759144890/1759145000enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759144890",
+    "facts": {
+      "codes": [
+        "AM-5400",
+        "AM-5401",
+        "AM-5402",
+        "AM-54"
+      ],
+      "pressure": [
+        "10 bar",
+        "3 bar"
+      ],
+      "temp": [
+        "-30 ÷ +80 °C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4",
+        "G3/8",
+        "G1/2",
+        "G3/4",
+        "G1"
+      ],
+      "pages": 2,
+      "chars": 2274
+    },
+    "children": []
+  },
+  {
+    "kid": "1759145007",
+    "parent": "1759143740",
+    "depth": 2,
+    "title": "AM-55 Serisi Kilitleme Valfleri",
+    "img": "assets/images/enpo/1759145007.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759145007/1759145051enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759145007",
+    "facts": {
+      "codes": [
+        "AM-5500",
+        "AM-5501",
+        "AM-5502",
+        "AM-5503",
+        "AM-5504",
+        "AM-5510",
+        "AM-5511",
+        "AM-5512",
+        "AM-5513",
+        "AM-5514",
+        "AM-55"
+      ],
+      "pressure": [
+        "10 bar",
+        "3 bar"
+      ],
+      "temp": [
+        "-30 ÷ +80 °C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4",
+        "G3/8",
+        "G1/2",
+        "G3/4",
+        "G1"
+      ],
+      "pages": 2,
+      "chars": 2274
+    },
+    "children": []
+  },
+  {
+    "kid": "1759145051",
+    "parent": "1759143740",
+    "depth": 2,
+    "title": "AM-5200 Serisi Transducer",
+    "img": "assets/images/enpo/1759145051.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759145051/1759145085enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759145051",
+    "facts": {
+      "codes": [
+        "AM-5200"
+      ],
+      "pressure": [
+        "10 bar",
+        "3 bar"
+      ],
+      "temp": [
+        "-30 ÷ +80 °C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4",
+        "G3/8",
+        "G1/2",
+        "G3/4",
+        "G1"
+      ],
+      "pages": 2,
+      "chars": 2274
+    },
+    "children": []
+  },
+  {
+    "kid": "1759145085",
+    "parent": "1759143740",
+    "depth": 2,
+    "title": "AM-5220 Serisi Ayarlı Basınç Anahtarı",
+    "img": "assets/images/enpo/1759145085.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759145085/1759145134enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759145085",
+    "facts": {
+      "codes": [
+        "AM-5220"
+      ],
+      "pressure": [
+        "10 bar",
+        "3 bar"
+      ],
+      "temp": [
+        "-30 ÷ +80 °C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4",
+        "G3/8",
+        "G1/2",
+        "G3/4",
+        "G1"
+      ],
+      "pages": 2,
+      "chars": 2274
+    },
+    "children": []
+  },
+  {
+    "kid": "1759145135",
+    "parent": "1759143740",
+    "depth": 2,
+    "title": "AP Serisi Flip Flop Valfler",
+    "img": "assets/images/enpo/1759145135.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759145135/1759145188enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759145135",
+    "facts": {
+      "codes": [
+        "AP-500",
+        "AP-520"
+      ],
+      "pressure": [
+        "10 bar",
+        "3 bar"
+      ],
+      "temp": [
+        "-30 ÷ +80 °C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4",
+        "G3/8",
+        "G1/2",
+        "G3/4",
+        "G1"
+      ],
+      "pages": 2,
+      "chars": 2274
+    },
+    "children": []
+  },
+  {
+    "kid": "1759145196",
+    "parent": "1759143740",
+    "depth": 2,
+    "title": "YF Serisi Solenoid Valfler",
+    "img": "assets/images/enpo/1759145196.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759145196/1759145247enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759145196",
+    "facts": {
+      "codes": [
+        "YF310061D",
+        "YF310082D",
+        "YF210151S",
+        "YF210201S",
+        "YF210251S",
+        "YF210061D",
+        "YF210062D",
+        "YF210082D",
+        "YFDA-0224",
+        "YFDA-0211",
+        "YFDA-0223",
+        "YFDB-0224",
+        "YFDB-0211",
+        "YFDB-0223"
+      ],
+      "pressure": [],
+      "temp": [
+        "-20 ÷ +50 °C",
+        "-10 ÷ +95 °C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4",
+        "G1/2",
+        "G3/4",
+        "G1",
+        "G2"
+      ],
+      "pages": 1,
+      "chars": 1526
+    },
+    "children": []
+  },
+  {
+    "kid": "1759145251",
+    "parent": "1759143740",
+    "depth": 2,
+    "title": "YG-6300 Pnömatik Silindirler için Konumlandırma Valfi",
+    "img": "assets/images/enpo/1759145251.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759145251/1759145311enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759145251",
+    "facts": {
+      "codes": [
+        "YG-6300"
+      ],
+      "pressure": [
+        "9 bar"
+      ],
+      "temp": [
+        "-20 ÷ +50 °C"
+      ],
+      "ports": [
+        "G1/4"
+      ],
+      "pages": 1,
+      "chars": 838
+    },
+    "children": []
+  },
+  {
+    "kid": "1759145312",
+    "parent": "1759143740",
+    "depth": 2,
+    "title": "YR Serisi Akümülatörler",
+    "img": "assets/images/enpo/1759145312.webp",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759145312",
+    "facts": {},
+    "children": []
+  },
+  {
+    "kid": "1759143750",
+    "parent": "1758529463",
+    "depth": 1,
+    "title": "Bobinler",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143750",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759145369",
+        "name": "Bobin Ve Konnektörler",
+        "img": "yuklenen/kategoriler/1759145369/k-1759145369-17592236641824.png"
+      }
+    ]
+  },
+  {
+    "kid": "1759145369",
+    "parent": "1759143750",
+    "depth": 2,
+    "title": "Bobin Ve Konnektörler",
+    "img": "assets/images/enpo/1759145369.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759145369/1759145446enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759145369",
+    "facts": {
+      "codes": [],
+      "pressure": [],
+      "temp": [
+        "5 - 10°C",
+        "-10 ÷ +45 °C",
+        "-10 ÷ +95 °C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4",
+        "G6",
+        "G7",
+        "G3/8",
+        "G1/2",
+        "G1"
+      ],
+      "pages": 6,
+      "chars": 7772
+    },
+    "children": []
+  },
+  {
+    "kid": "1759143767",
+    "parent": "1758529463",
+    "depth": 1,
+    "title": "Elektropilotlar",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143767",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759145495",
+        "name": "AA Serisi Minyatür Elektropilot U1",
+        "img": "yuklenen/kategoriler/1759145495/k-1759145495-17592238056244.jpg"
+      },
+      {
+        "kid": "1759145514",
+        "name": "AB Serisi Minyatür Elektropilot U2",
+        "img": "yuklenen/kategoriler/1759145514/k-1759145514-17592238663292.jpg"
+      },
+      {
+        "kid": "1759145558",
+        "name": "A Serisi 15mm Mikro Valf",
+        "img": "yuklenen/kategoriler/1759145558/k-1759145558-17592239236971.jpg"
+      },
+      {
+        "kid": "1759145903",
+        "name": "B11-B10-B12 10 mm Nanovalves ISO 15218",
+        "img": "yuklenen/kategoriler/1759145903/k-1759145903-17592239833412.jpg"
+      },
+      {
+        "kid": "1759145942",
+        "name": "B Serisi 10mm Nano Valf",
+        "img": "yuklenen/kategoriler/1759145942/k-1759145942-1759224039977.jpg"
+      },
+      {
+        "kid": "1759145966",
+        "name": "CSA-UL Sertifikaları Solenoid Valfler",
+        "img": "yuklenen/kategoriler/1759145966/k-1759145966-17592240885586.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1759145495",
+    "parent": "1759143767",
+    "depth": 2,
+    "title": "AA Serisi Minyatür Elektropilot U1",
+    "img": "assets/images/enpo/1759145495.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759145495/1759145514enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759145495",
+    "facts": {
+      "codes": [
+        "AA-0150",
+        "AA-0157",
+        "AA-0170",
+        "AA-0184",
+        "AA-0186",
+        "AA-0188",
+        "AA-0211",
+        "AA-0219",
+        "AA-0213",
+        "AA-0231",
+        "AA-0239",
+        "AA-0233",
+        "AA-0402",
+        "AA-0404"
+      ],
+      "pressure": [],
+      "temp": [
+        "-10 ÷ +50 °C"
+      ],
+      "ports": [
+        "G1/8"
+      ],
+      "pages": 5,
+      "chars": 7584
+    },
+    "children": []
+  },
+  {
+    "kid": "1759145514",
+    "parent": "1759143767",
+    "depth": 2,
+    "title": "AB Serisi Minyatür Elektropilot U2",
+    "img": "assets/images/enpo/1759145514.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759145514/1759145558enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759145514",
+    "facts": {
+      "codes": [
+        "AB-0600",
+        "AB-0613",
+        "AB-0640",
+        "AB-0643",
+        "AB-0681",
+        "AB-0685",
+        "AB-0687",
+        "AB-0722",
+        "AB-0728",
+        "AB-0751",
+        "AB-0755",
+        "AB-0757",
+        "AB-0765",
+        "AB-0771"
+      ],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "5-10°C",
+        "-10 ÷ +50 °C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4"
+      ],
+      "pages": 6,
+      "chars": 8479
+    },
+    "children": []
+  },
+  {
+    "kid": "1759145558",
+    "parent": "1759143767",
+    "depth": 2,
+    "title": "A Serisi 15mm Mikro Valf",
+    "img": "assets/images/enpo/1759145558.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759145558/1759145903enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759145558",
+    "facts": {
+      "codes": [
+        "A-299-11",
+        "A-141N",
+        "A-161N",
+        "A-101N",
+        "A-121N",
+        "A-142N",
+        "A-162N",
+        "A-102N",
+        "A-122N",
+        "A-151N",
+        "A-171N",
+        "A-111N",
+        "A-131N",
+        "A-152N"
+      ],
+      "pressure": [
+        "9 bar"
+      ],
+      "temp": [
+        "5-10°C",
+        "-5 ÷ +50 °C"
+      ],
+      "ports": [
+        "G1/8"
+      ],
+      "pages": 5,
+      "chars": 7016
+    },
+    "children": []
+  },
+  {
+    "kid": "1759145903",
+    "parent": "1759143767",
+    "depth": 2,
+    "title": "B11-B10-B12 10 mm Nanovalves ISO 15218",
+    "img": "assets/images/enpo/1759145903.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759145903/1759145942enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759145903",
+    "facts": {
+      "codes": [],
+      "pressure": [
+        "7 bar"
+      ],
+      "temp": [
+        "-5 ÷ +50 °C"
+      ],
+      "ports": [],
+      "pages": 6,
+      "chars": 7859
+    },
+    "children": []
+  },
+  {
+    "kid": "1759145942",
+    "parent": "1759143767",
+    "depth": 2,
+    "title": "B Serisi 10mm Nano Valf",
+    "img": "assets/images/enpo/1759145942.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759145942/1759145966enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759145942",
+    "facts": {
+      "codes": [
+        "B-101N",
+        "B-121N",
+        "B-102N"
+      ],
+      "pressure": [
+        "8 bar",
+        "0 bar"
+      ],
+      "temp": [
+        "5-10°C",
+        "-5 ÷ +50 °C",
+        "2300 ÷ 3000 c"
+      ],
+      "ports": [],
+      "pages": 2,
+      "chars": 2521
+    },
+    "children": []
+  },
+  {
+    "kid": "1759145966",
+    "parent": "1759143767",
+    "depth": 2,
+    "title": "CSA-UL Sertifikaları Solenoid Valfler",
+    "img": "assets/images/enpo/1759145966.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759145966/1759145992enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759145966",
+    "facts": {
+      "codes": [
+        "CSA-UL"
+      ],
+      "pressure": [],
+      "temp": [
+        "100\n-10°C",
+        "10\n-10°C",
+        "08\n-10°C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4",
+        "G7",
+        "G1/2",
+        "G1"
+      ],
+      "pages": 3,
+      "chars": 3772
+    },
+    "children": []
+  },
+  {
+    "kid": "1759143781",
+    "parent": "1758529463",
+    "depth": 1,
+    "title": "ISO Valfler",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143781",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759145996",
+        "name": "AC-N Serisi Namur Valfler",
+        "img": "yuklenen/kategoriler/1759145996/k-1759145996-17592250805425.jpg"
+      },
+      {
+        "kid": "1759146030",
+        "name": "AE Serisi ISO Valfler",
+        "img": "yuklenen/kategoriler/1759146030/k-1759146030-17592251296305.jpg"
+      },
+      {
+        "kid": "1759146052",
+        "name": "BD Serisi ISO 15407 Valfler",
+        "img": "yuklenen/kategoriler/1759146052/k-1759146052-17592251854448.jpg"
+      },
+      {
+        "kid": "1759146077",
+        "name": "BE-BE12 ISO Valfler",
+        "img": "yuklenen/kategoriler/1759146077/k-1759146077-17592252351526.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1759145996",
+    "parent": "1759143781",
+    "depth": 2,
+    "title": "AC-N Serisi Namur Valfler",
+    "img": "assets/images/enpo/1759145996.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759145996/1759146030enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759145996",
+    "facts": {
+      "codes": [
+        "AC-N8100",
+        "AC-N8520",
+        "AC-N8120",
+        "AC-N8500"
+      ],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "-10 ÷ 45 °C",
+        "-10 ÷ 50 °C"
+      ],
+      "ports": [
+        "G1/4"
+      ],
+      "pages": 2,
+      "chars": 2800
+    },
+    "children": []
+  },
+  {
+    "kid": "1759146030",
+    "parent": "1759143781",
+    "depth": 2,
+    "title": "AE Serisi ISO Valfler",
+    "img": "assets/images/enpo/1759146030.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759146030/1759146052enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146030",
+    "facts": {
+      "codes": [
+        "AE-1009",
+        "AE-1120",
+        "AE-1010",
+        "AE-1121",
+        "AE-1000",
+        "AE-1100",
+        "AE-1003",
+        "AE-1103"
+      ],
+      "pressure": [
+        "10 Bar",
+        "10 bar"
+      ],
+      "temp": [
+        "-10 ÷ +50 °C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4",
+        "G3/8",
+        "G1/2"
+      ],
+      "pages": 4,
+      "chars": 5992
+    },
+    "children": []
+  },
+  {
+    "kid": "1759146052",
+    "parent": "1759143781",
+    "depth": 2,
+    "title": "BD Serisi ISO 15407 Valfler",
+    "img": "assets/images/enpo/1759146052.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759146052/1759146076enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146052",
+    "facts": {
+      "codes": [
+        "BDE-324024",
+        "BDE-324124",
+        "BDE-324424",
+        "BDE-334424",
+        "BDE-344424",
+        "BDE-354424",
+        "BDE-364424",
+        "BDE-374424",
+        "BDE-384424",
+        "BDE-424024",
+        "BDE-424124",
+        "BDE-424424",
+        "BDE-434424",
+        "BDE-464424"
+      ],
+      "pressure": [
+        "9 bar",
+        "10 bar"
+      ],
+      "temp": [
+        "-20 ÷ +50 °C"
+      ],
+      "ports": [
+        "G2",
+        "G1",
+        "G3/8",
+        "G1/2",
+        "G1/8",
+        "G1/4"
+      ],
+      "pages": 18,
+      "chars": 31661
+    },
+    "children": []
+  },
+  {
+    "kid": "1759146077",
+    "parent": "1759143781",
+    "depth": 2,
+    "title": "BE-BE12 ISO Valfler",
+    "img": "assets/images/enpo/1759146077.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759146077/1759146102enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146077",
+    "facts": {
+      "codes": [
+        "BE-3800",
+        "BE-4800",
+        "BE-5800",
+        "BE-6800",
+        "BE-3850",
+        "BE-4850",
+        "BE-5850",
+        "BE-6850",
+        "BE-3870",
+        "BE-4870",
+        "BE-5870",
+        "BE-6870",
+        "BE-3100",
+        "BE-4100"
+      ],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "-10 ÷ +50 °C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4",
+        "G3/8",
+        "G1/2",
+        "G3/4",
+        "G1"
+      ],
+      "pages": 11,
+      "chars": 17407
+    },
+    "children": []
+  },
+  {
+    "kid": "1759143794",
+    "parent": "1758529463",
+    "depth": 1,
+    "title": "Mekanik Operatörler",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143794",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759146102",
+        "name": "Operatörler",
+        "img": "yuklenen/kategoriler/1759146102/k-1759146102-17592253439812.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1759146102",
+    "parent": "1759143794",
+    "depth": 2,
+    "title": "Operatörler",
+    "img": "assets/images/enpo/1759146102.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759146102/1759146144enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146102",
+    "facts": {
+      "codes": [],
+      "pressure": [
+        "6 bar"
+      ],
+      "temp": [],
+      "ports": [],
+      "pages": 6,
+      "chars": 5134
+    },
+    "children": []
+  },
+  {
+    "kid": "1759143806",
+    "parent": "1758529463",
+    "depth": 1,
+    "title": "Popet Ve Genel Maksat Valfler",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143806",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759146147",
+        "name": "AC Serisi Valfler",
+        "img": "yuklenen/kategoriler/1759146147/k-1759146147-17592254174510.jpg"
+      },
+      {
+        "kid": "1759146181",
+        "name": "AF Serisi Popet Valfler",
+        "img": "yuklenen/kategoriler/1759146181/k-1759146181-17592254665612.jpg"
+      },
+      {
+        "kid": "1759146199",
+        "name": "AG Serisi Vakum Ve Dıştan Pilotlu Valfler",
+        "img": "yuklenen/kategoriler/1759146199/k-1759146199-1759225513600.jpg"
+      },
+      {
+        "kid": "1759146246",
+        "name": "AI-JET2 Serisi Pano Bağlantılı Mekanik Valfler",
+        "img": "yuklenen/kategoriler/1759146246/k-1759146246-17592255621905.jpg"
+      },
+      {
+        "kid": "1759146300",
+        "name": "AI-JET Serisi Mekanik Valfler",
+        "img": "yuklenen/kategoriler/1759146300/k-1759146300-17592256344679.jpg"
+      },
+      {
+        "kid": "1759146322",
+        "name": "AI Serisi Minyatür Pimli Valf",
+        "img": "yuklenen/kategoriler/1759146322/k-1759146322-17592256824188.jpg"
+      },
+      {
+        "kid": "1759146365",
+        "name": "AM Serisi Pedal Valfler",
+        "img": "yuklenen/kategoriler/1759146365/k-1759146365-17592257313233.jpg"
+      },
+      {
+        "kid": "1759146386",
+        "name": "CH Serisi Valfler",
+        "img": "yuklenen/kategoriler/1759146386/k-1759146386-17592257716596.jpg"
+      },
+      {
+        "kid": "1759146420",
+        "name": "EL18F Serisi Valfler",
+        "img": "yuklenen/kategoriler/1759146420/k-1759146420-17592258123799.jpg"
+      },
+      {
+        "kid": "1759146451",
+        "name": "EL22F Serisi Valfler",
+        "img": "yuklenen/kategoriler/1759146451/k-1759146451-17592258568912.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1759146147",
+    "parent": "1759143806",
+    "depth": 2,
+    "title": "AC Serisi Valfler",
+    "img": "assets/images/enpo/1759146147.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759146147/1759146180enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146147",
+    "facts": {
+      "codes": [
+        "AC-7010",
+        "AC-8010",
+        "AC-9010",
+        "AC-7013",
+        "AC-8013",
+        "AC-9013",
+        "AC-7013P",
+        "AC-8013P",
+        "AC-9013P",
+        "AC-7100",
+        "AC-8100",
+        "AC-9100",
+        "AC-7120",
+        "AC-8120"
+      ],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "5-10°C",
+        "-10 ÷ +45 °C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4",
+        "G1/2"
+      ],
+      "pages": 7,
+      "chars": 7775
+    },
+    "children": []
+  },
+  {
+    "kid": "1759146181",
+    "parent": "1759143806",
+    "depth": 2,
+    "title": "AF Serisi Popet Valfler",
+    "img": "assets/images/enpo/1759146181.webp",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146181",
+    "facts": {},
+    "children": []
+  },
+  {
+    "kid": "1759146199",
+    "parent": "1759143806",
+    "depth": 2,
+    "title": "AG Serisi Vakum Ve Dıştan Pilotlu Valfler",
+    "img": "assets/images/enpo/1759146199.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759146199/1759146245enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146199",
+    "facts": {
+      "codes": [
+        "AG-3001",
+        "AG-3009",
+        "AG-3011",
+        "AG-3002",
+        "AG-3010",
+        "AG-3012",
+        "AG-3020",
+        "AG-3040",
+        "AG-3050",
+        "AG-3062",
+        "AG-3021",
+        "AG-3041",
+        "AG-3051",
+        "AG-3063"
+      ],
+      "pressure": [],
+      "temp": [
+        "5-10°C",
+        "-5 ÷ +60 °C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4",
+        "G1",
+        "G3/8",
+        "G1/2",
+        "G3/4"
+      ],
+      "pages": 7,
+      "chars": 9778
+    },
+    "children": []
+  },
+  {
+    "kid": "1759146246",
+    "parent": "1759143806",
+    "depth": 2,
+    "title": "AI-JET2 Serisi Pano Bağlantılı Mekanik Valfler",
+    "img": "assets/images/enpo/1759146246.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759146246/1759146299enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146246",
+    "facts": {
+      "codes": [
+        "AI-9500B",
+        "AI-9510B",
+        "AI-9520B",
+        "AI-9550B",
+        "AI-9560B",
+        "AI-9570B",
+        "AI-9500BM",
+        "AI-9510BM",
+        "AI-9520BM",
+        "AI-9550BM",
+        "AI-9560BM",
+        "AI-9570BM",
+        "AI-35B10N",
+        "AI-35B10R"
+      ],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "-10 ÷ +90 °C"
+      ],
+      "ports": [],
+      "pages": 3,
+      "chars": 2661
+    },
+    "children": []
+  },
+  {
+    "kid": "1759146300",
+    "parent": "1759143806",
+    "depth": 2,
+    "title": "AI-JET Serisi Mekanik Valfler",
+    "img": "assets/images/enpo/1759146300.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759146300/1759146321enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146300",
+    "facts": {
+      "codes": [
+        "AI-9000",
+        "AI-9010",
+        "AI-9020",
+        "AI-9000M",
+        "AI-9010M",
+        "AI-9020M",
+        "AI-9100",
+        "AI-9110",
+        "AI-9120",
+        "AI-9100M",
+        "AI-9110M",
+        "AI-9120M",
+        "AI-9200",
+        "AI-9210"
+      ],
+      "pressure": [
+        "10 bar",
+        "6 bar"
+      ],
+      "temp": [
+        "-10 ÷ +90 °C"
+      ],
+      "ports": [],
+      "pages": 6,
+      "chars": 5294
+    },
+    "children": []
+  },
+  {
+    "kid": "1759146322",
+    "parent": "1759143806",
+    "depth": 2,
+    "title": "AI Serisi Minyatür Pimli Valf",
+    "img": "assets/images/enpo/1759146322.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759146322/1759146359enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146322",
+    "facts": {
+      "codes": [
+        "AI-3500",
+        "AI-3500S",
+        "AI-3502",
+        "AI-3503",
+        "AI-3501",
+        "AI-3501S",
+        "AI-3511",
+        "AI-3512",
+        "AI-3513",
+        "AI-3526",
+        "AI-3525",
+        "AI-3523",
+        "AI-3522",
+        "AI-3514"
+      ],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "-10 ÷ +90 °C"
+      ],
+      "ports": [],
+      "pages": 4,
+      "chars": 4093
+    },
+    "children": []
+  },
+  {
+    "kid": "1759146365",
+    "parent": "1759143806",
+    "depth": 2,
+    "title": "AM Serisi Pedal Valfler",
+    "img": "assets/images/enpo/1759146365.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759146365/1759146386enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146365",
+    "facts": {
+      "codes": [
+        "AM-5000",
+        "AM-5001",
+        "AM-5002",
+        "AM-5005",
+        "AM-5004",
+        "AM-5003",
+        "AM-5021",
+        "AM-5031",
+        "AM-5041",
+        "AM-5015",
+        "AM-5012",
+        "AM-5011",
+        "AM-5000A",
+        "AM-5001A"
+      ],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "-10 ÷ +70 °C",
+        "-10 ÷ +50 °C"
+      ],
+      "ports": [
+        "G1/4",
+        "G1/8"
+      ],
+      "pages": 3,
+      "chars": 4183
+    },
+    "children": []
+  },
+  {
+    "kid": "1759146386",
+    "parent": "1759143806",
+    "depth": 2,
+    "title": "CH Serisi Valfler",
+    "img": "assets/images/enpo/1759146386.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759146386/1759146420enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146386",
+    "facts": {
+      "codes": [
+        "CH-260",
+        "CH-262",
+        "CH-264",
+        "CH-266",
+        "CH-250",
+        "CH-252",
+        "CH-254",
+        "CH-256",
+        "CH-270",
+        "CH-272",
+        "CH-274",
+        "CH-276",
+        "CH-280",
+        "CH-282"
+      ],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "-10 ÷ +45 °C"
+      ],
+      "ports": [
+        "G1/8"
+      ],
+      "pages": 3,
+      "chars": 2240
+    },
+    "children": []
+  },
+  {
+    "kid": "1759146420",
+    "parent": "1759143806",
+    "depth": 2,
+    "title": "EL18F Serisi Valfler",
+    "img": "assets/images/enpo/1759146420.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759146420/1759146451enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146420",
+    "facts": {
+      "codes": [
+        "EL18F",
+        "EL18F250",
+        "EL18F251",
+        "EL18F255",
+        "EL18F355",
+        "EL18F455",
+        "EL18F555",
+        "EL18F655",
+        "EL18F755",
+        "EL18F855",
+        "EL18F230",
+        "EL18F231",
+        "EL18F233",
+        "EL18F333"
+      ],
+      "pressure": [
+        "8 bar",
+        "10 bar"
+      ],
+      "temp": [
+        "5 - 10°C",
+        "-5 ÷ 50 °C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4"
+      ],
+      "pages": 5,
+      "chars": 5484
+    },
+    "children": []
+  },
+  {
+    "kid": "1759146451",
+    "parent": "1759143806",
+    "depth": 2,
+    "title": "EL22F Serisi Valfler",
+    "img": "assets/images/enpo/1759146451.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759146451/1759146504enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146451",
+    "facts": {
+      "codes": [
+        "EL22F",
+        "EL22F250",
+        "EL22F251",
+        "EL22F255",
+        "EL22F355",
+        "EL22F455",
+        "EL22F555",
+        "EL22F655",
+        "EL22F755",
+        "EL22F855",
+        "EL22F233",
+        "EL22F333",
+        "EL22F433",
+        "EL22F533"
+      ],
+      "pressure": [
+        "8 bar",
+        "10 bar"
+      ],
+      "temp": [
+        "5 - 10°C",
+        "-5 ÷ 50 °C"
+      ],
+      "ports": [
+        "G1/4",
+        "G3/8"
+      ],
+      "pages": 5,
+      "chars": 5435
+    },
+    "children": []
+  },
+  {
+    "kid": "1759143826",
+    "parent": "1758529463",
+    "depth": 1,
+    "title": "P Serisi Multipine Valfler",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143826",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759146504",
+        "name": "P10 Serisi Valfler",
+        "img": "yuklenen/kategoriler/1759146504/k-1759146504-17592259473805.jpg"
+      },
+      {
+        "kid": "1759146536",
+        "name": "P15E Serisi Valfler",
+        "img": "yuklenen/kategoriler/1759146536/k-1759146536-17592259904518.jpg"
+      },
+      {
+        "kid": "1759146557",
+        "name": "P15 Serisi Valfler",
+        "img": "yuklenen/kategoriler/1759146557/k-1759146557-17592260393442.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1759146504",
+    "parent": "1759143826",
+    "depth": 2,
+    "title": "P10 Serisi Valfler",
+    "img": "assets/images/enpo/1759146504.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759146504/1759146536enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146504",
+    "facts": {
+      "codes": [],
+      "pressure": [
+        "7 bar",
+        "10 bar"
+      ],
+      "temp": [
+        "5 - 10°C",
+        "-5 ÷ +50 °C",
+        "-3-5 c"
+      ],
+      "ports": [
+        "G1/8"
+      ],
+      "pages": 9,
+      "chars": 13356
+    },
+    "children": []
+  },
+  {
+    "kid": "1759146536",
+    "parent": "1759143826",
+    "depth": 2,
+    "title": "P15E Serisi Valfler",
+    "img": "assets/images/enpo/1759146536.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759146536/1759146557enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146536",
+    "facts": {
+      "codes": [],
+      "pressure": [
+        "9 bar"
+      ],
+      "temp": [
+        "-5 ÷ 50 °C",
+        "-3-5 c"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4"
+      ],
+      "pages": 12,
+      "chars": 14960
+    },
+    "children": []
+  },
+  {
+    "kid": "1759146557",
+    "parent": "1759143826",
+    "depth": 2,
+    "title": "P15 Serisi Valfler",
+    "img": "assets/images/enpo/1759146557.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759146557/1759146580enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146557",
+    "facts": {
+      "codes": [],
+      "pressure": [
+        "9 bar",
+        "10 bar"
+      ],
+      "temp": [
+        "5 - 10°C",
+        "-5 ÷ +50 °C",
+        "-3-5 c"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4"
+      ],
+      "pages": 10,
+      "chars": 17035
+    },
+    "children": []
+  },
+  {
+    "kid": "1759143835",
+    "parent": "1758529463",
+    "depth": 1,
+    "title": "Seri İletişim Modülleri",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143835",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759146580",
+        "name": "Klavuz",
+        "img": "yuklenen/kategoriler/1759146580/k-1759146580-17592261225950.jpg"
+      },
+      {
+        "kid": "1759146625",
+        "name": "TC Haberleşme Modüleri",
+        "img": "yuklenen/kategoriler/1759146625/k-1759146625-17592261649159.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1759146580",
+    "parent": "1759143835",
+    "depth": 2,
+    "title": "Klavuz",
+    "img": "assets/images/enpo/1759146580.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759146580/1759146625enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146580",
+    "facts": {
+      "codes": [],
+      "pressure": [],
+      "temp": [],
+      "ports": [],
+      "pages": 80,
+      "chars": 113952
+    },
+    "children": []
+  },
+  {
+    "kid": "1759146625",
+    "parent": "1759143835",
+    "depth": 2,
+    "title": "TC Haberleşme Modüleri",
+    "img": "assets/images/enpo/1759146625.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759146625/1759146650enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146625",
+    "facts": {
+      "codes": [
+        "TC8I412",
+        "TC8U412",
+        "TC8I808",
+        "TCR32ID",
+        "TCR32UD",
+        "TC16I812",
+        "TCXUS78"
+      ],
+      "pressure": [],
+      "temp": [],
+      "ports": [],
+      "pages": 2,
+      "chars": 3995
+    },
+    "children": []
+  },
+  {
+    "kid": "1759143851",
+    "parent": "1758529463",
+    "depth": 1,
+    "title": "Spool Valfler",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143851",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759146651",
+        "name": "CL-CM Serisi Valfler",
+        "img": "yuklenen/kategoriler/1759146651/k-1759146651-17592262473001.jpg"
+      },
+      {
+        "kid": "1759146695",
+        "name": "E serisi Minyatür Valfler",
+        "img": "yuklenen/kategoriler/1759146695/k-1759146695-17592262908872.jpg"
+      },
+      {
+        "kid": "1759146723",
+        "name": "F Serisi COMPA 4 Valfler",
+        "img": "yuklenen/kategoriler/1759146723/k-1759146723-17592263298618.jpg"
+      },
+      {
+        "kid": "1759146746",
+        "name": "G-6 Serisi 20mm Valfler",
+        "img": "yuklenen/kategoriler/1759146746/k-1759146746-17592264121842.jpg"
+      },
+      {
+        "kid": "1759146772",
+        "name": "G-7 Serisi 26mm Valfler",
+        "img": "yuklenen/kategoriler/1759146772/k-1759146772-17592264577479.jpg"
+      },
+      {
+        "kid": "1759146793",
+        "name": "GL-6 Serisi 20mm Valfler",
+        "img": "yuklenen/kategoriler/1759146793/k-1759146793-17592265116141.jpg"
+      },
+      {
+        "kid": "1759146815",
+        "name": "PS Serisi COMBOBOX Valfler",
+        "img": "yuklenen/kategoriler/1759146815/k-1759146815-17592265585084.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1759146651",
+    "parent": "1759143851",
+    "depth": 2,
+    "title": "CL-CM Serisi Valfler",
+    "img": "assets/images/enpo/1759146651.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759146651/1759146695enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146651",
+    "facts": {
+      "codes": [
+        "CL-CM"
+      ],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "-10 ÷ +50 °C",
+        "9÷13\nC",
+        "5÷10\nC"
+      ],
+      "ports": [
+        "G1/4",
+        "G1/8",
+        "G3/8"
+      ],
+      "pages": 26,
+      "chars": 35248
+    },
+    "children": []
+  },
+  {
+    "kid": "1759146695",
+    "parent": "1759143851",
+    "depth": 2,
+    "title": "E serisi Minyatür Valfler",
+    "img": "assets/images/enpo/1759146695.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759146695/1759146723enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146695",
+    "facts": {
+      "codes": [],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "5-10°C",
+        "-10 ÷ +45 °C",
+        "-20 ÷ +50 °C"
+      ],
+      "ports": [
+        "G1/8"
+      ],
+      "pages": 8,
+      "chars": 7663
+    },
+    "children": []
+  },
+  {
+    "kid": "1759146723",
+    "parent": "1759143851",
+    "depth": 2,
+    "title": "F Serisi COMPA 4 Valfler",
+    "img": "assets/images/enpo/1759146723.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759146723/1759146746enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146723",
+    "facts": {
+      "codes": [
+        "F-0240",
+        "F-0244",
+        "F-0544",
+        "F-0644",
+        "F-0744",
+        "F-0220",
+        "F-0270",
+        "F-0222",
+        "F-0277",
+        "F-0522",
+        "F-0577",
+        "F-0622",
+        "F-0677",
+        "F-0722"
+      ],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "5-10°C",
+        "-10 ÷ +45 °C",
+        "-20 ÷ +50 °C"
+      ],
+      "ports": [
+        "G1/8"
+      ],
+      "pages": 4,
+      "chars": 3469
+    },
+    "children": []
+  },
+  {
+    "kid": "1759146746",
+    "parent": "1759143851",
+    "depth": 2,
+    "title": "G-6 Serisi 20mm Valfler",
+    "img": "assets/images/enpo/1759146746.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759146746/1759146772enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146746",
+    "facts": {
+      "codes": [
+        "G-6241",
+        "G-6251",
+        "G-6240",
+        "G-6250",
+        "G-6244",
+        "G-6255",
+        "G-6344",
+        "G-6355",
+        "G-6444",
+        "G-6455",
+        "G-6544",
+        "G-6555",
+        "G-6844",
+        "G-6855"
+      ],
+      "pressure": [
+        "9 bar"
+      ],
+      "temp": [
+        "-5 ÷ +50 °C",
+        "-051-2C",
+        "-040-2C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4"
+      ],
+      "pages": 9,
+      "chars": 11715
+    },
+    "children": []
+  },
+  {
+    "kid": "1759146772",
+    "parent": "1759143851",
+    "depth": 2,
+    "title": "G-7 Serisi 26mm Valfler",
+    "img": "assets/images/enpo/1759146772.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759146772/1759146792enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146772",
+    "facts": {
+      "codes": [
+        "G-7231",
+        "G-7230",
+        "G-7233",
+        "G-7333",
+        "G-7433",
+        "G-7533",
+        "G-7291",
+        "G-7290",
+        "G-7299",
+        "G-7399",
+        "G-7499",
+        "G-7599",
+        "G-7900-02",
+        "G-7900-03"
+      ],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "-10 ÷ +45 °C",
+        "2-4 c"
+      ],
+      "ports": [
+        "G1/8",
+        "G7"
+      ],
+      "pages": 4,
+      "chars": 4698
+    },
+    "children": []
+  },
+  {
+    "kid": "1759146793",
+    "parent": "1759143851",
+    "depth": 2,
+    "title": "GL-6 Serisi 20mm Valfler",
+    "img": "assets/images/enpo/1759146793.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759146793/1759146815enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146793",
+    "facts": {
+      "codes": [
+        "GL-6241",
+        "GL-6251",
+        "GL-6240",
+        "GL-6250",
+        "GL-6244",
+        "GL-6255",
+        "GL-6344",
+        "GL-6355",
+        "GL-6444",
+        "GL-6455",
+        "GL-6544",
+        "GL-6555",
+        "GL-6844",
+        "GL-6855"
+      ],
+      "pressure": [
+        "9 bar"
+      ],
+      "temp": [
+        "-5 ÷ +50 °C",
+        "-051-2C",
+        "-040-2C"
+      ],
+      "ports": [
+        "G1/8",
+        "G1/4"
+      ],
+      "pages": 9,
+      "chars": 13361
+    },
+    "children": []
+  },
+  {
+    "kid": "1759146815",
+    "parent": "1759143851",
+    "depth": 2,
+    "title": "PS Serisi COMBOBOX Valfler",
+    "img": "assets/images/enpo/1759146815.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759146815/1759146837enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146815",
+    "facts": {
+      "codes": [
+        "PSC26024",
+        "PSC26124",
+        "PSC26624",
+        "PSC36624",
+        "PSC46624",
+        "PSC56624",
+        "PSC66624",
+        "PSC76624",
+        "PSC86624",
+        "PSP26024",
+        "PSP26124",
+        "PSP26624",
+        "PSP36624",
+        "PSP46624"
+      ],
+      "pressure": [
+        "9 bar",
+        "10 bar"
+      ],
+      "temp": [
+        "-5 ÷ +50 °C",
+        "-15 ÷ +50 °C"
+      ],
+      "ports": [
+        "G1/4",
+        "G1/8"
+      ],
+      "pages": 12,
+      "chars": 14954
+    },
+    "children": []
+  },
+  {
+    "kid": "1758530071",
+    "parent": null,
+    "depth": 0,
+    "title": "Yüksek Teknoloji Ürünleri",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1758530071",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759143863",
+        "name": "Gripper Serileri",
+        "img": "yuklenen/kategoriler/1759143863/k-1759143863-17591546458852.jpg"
+      },
+      {
+        "kid": "1759143883",
+        "name": "Kilitleme Üniteleri",
+        "img": "yuklenen/kategoriler/1759143883/k-1759143883-17592267374328.jpg"
+      },
+      {
+        "kid": "1759143911",
+        "name": "Pnömatik Tahrikli Programlanabilir Silindirler",
+        "img": "yuklenen/kategoriler/1759143911/k-1759143911-17592267924967.jpg"
+      },
+      {
+        "kid": "1759143925",
+        "name": "Teleskopik Silindirler",
+        "img": "yuklenen/kategoriler/1759143925/k-1759143925-17592282464667.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1759143863",
+    "parent": "1758530071",
+    "depth": 1,
+    "title": "Gripper Serileri",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143863",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759146840",
+        "name": "YMA11 Serisi Açılı Gripper",
+        "img": "yuklenen/kategoriler/1759146840/k-1759146840-17591495273620.jpg"
+      },
+      {
+        "kid": "1759146930",
+        "name": "YMA20 Serisi 180 Derece Gripper",
+        "img": "yuklenen/kategoriler/1759146930/k-1759146930-17592266283772.jpg"
+      },
+      {
+        "kid": "1759146950",
+        "name": "YMP20 Serisi Paralel Seri Gripper",
+        "img": "yuklenen/kategoriler/1759146950/k-1759146950-17592266545891.jpg"
+      },
+      {
+        "kid": "1759146972",
+        "name": "YMP30 Serisi Paralel Gripper",
+        "img": "yuklenen/kategoriler/1759146972/k-1759146972-17592266654380.jpg"
+      },
+      {
+        "kid": "1759147000",
+        "name": "YMP40 Serisi Paralel Gripper",
+        "img": "yuklenen/kategoriler/1759147000/k-1759147000-17592266741905.jpg"
+      },
+      {
+        "kid": "1759147021",
+        "name": "YMP50 3 Ayaklı Gripper",
+        "img": "yuklenen/kategoriler/1759147021/k-1759147021-17592266832754.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1759146840",
+    "parent": "1759143863",
+    "depth": 2,
+    "title": "YMA11 Serisi Açılı Gripper",
+    "img": "assets/images/enpo/1759146840.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759146840/1759146929enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146840",
+    "facts": {
+      "codes": [
+        "YMA11",
+        "YMA11-10",
+        "YMA11-16",
+        "YMA11-20",
+        "YMA11-25"
+      ],
+      "pressure": [
+        "7 bar",
+        "6 bar",
+        "5 bar"
+      ],
+      "temp": [
+        "-5 ÷ 60 °C",
+        "-10 ÷ 60 °C",
+        "0 ÷ 60 °C"
+      ],
+      "ports": [],
+      "pages": 2,
+      "chars": 2856
+    },
+    "children": []
+  },
+  {
+    "kid": "1759146930",
+    "parent": "1759143863",
+    "depth": 2,
+    "title": "YMA20 Serisi 180 Derece Gripper",
+    "img": "assets/images/enpo/1759146930.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759146930/1759146950enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146930",
+    "facts": {
+      "codes": [
+        "YMA20",
+        "YMA20-10",
+        "YMA20-16",
+        "YMA20-20",
+        "YMA20-25"
+      ],
+      "pressure": [
+        "7 bar",
+        "6 bar",
+        "5 bar"
+      ],
+      "temp": [
+        "-5 ÷ 60 °C",
+        "-10 ÷ 60 °C",
+        "0 ÷ 60 °C"
+      ],
+      "ports": [],
+      "pages": 2,
+      "chars": 2856
+    },
+    "children": []
+  },
+  {
+    "kid": "1759146950",
+    "parent": "1759143863",
+    "depth": 2,
+    "title": "YMP20 Serisi Paralel Seri Gripper",
+    "img": "assets/images/enpo/1759146950.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759146950/1759146971enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146950",
+    "facts": {
+      "codes": [
+        "YMP20",
+        "YMP20-10",
+        "YMP20-16",
+        "YMP20-20",
+        "YMP20-25",
+        "YMP20-32",
+        "YMP20-40"
+      ],
+      "pressure": [
+        "7 bar",
+        "6 bar",
+        "5 bar"
+      ],
+      "temp": [
+        "-5 ÷ 60 °C",
+        "-10 ÷ 60 °C",
+        "0 ÷ 60 °C"
+      ],
+      "ports": [],
+      "pages": 2,
+      "chars": 2856
+    },
+    "children": []
+  },
+  {
+    "kid": "1759146972",
+    "parent": "1759143863",
+    "depth": 2,
+    "title": "YMP30 Serisi Paralel Gripper",
+    "img": "assets/images/enpo/1759146972.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759146972/1759146999enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759146972",
+    "facts": {
+      "codes": [
+        "YMP30012",
+        "YMP30016",
+        "YMP30020",
+        "YMP30"
+      ],
+      "pressure": [
+        "7 bar",
+        "6 bar",
+        "5 bar"
+      ],
+      "temp": [
+        "-5 ÷ 60 °C",
+        "-10 ÷ 60 °C",
+        "0 ÷ 60 °C"
+      ],
+      "ports": [],
+      "pages": 2,
+      "chars": 2856
+    },
+    "children": []
+  },
+  {
+    "kid": "1759147000",
+    "parent": "1759143863",
+    "depth": 2,
+    "title": "YMP40 Serisi Paralel Gripper",
+    "img": "assets/images/enpo/1759147000.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759147000/1759147021enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759147000",
+    "facts": {
+      "codes": [
+        "YMP40",
+        "YMP40010",
+        "YMP40016",
+        "YMP40020",
+        "YMP40025",
+        "YMP40032"
+      ],
+      "pressure": [
+        "7 bar",
+        "6 bar",
+        "5 bar"
+      ],
+      "temp": [
+        "-5 ÷ 60 °C",
+        "-10 ÷ 60 °C",
+        "0 ÷ 60 °C"
+      ],
+      "ports": [],
+      "pages": 2,
+      "chars": 2856
+    },
+    "children": []
+  },
+  {
+    "kid": "1759147021",
+    "parent": "1759143863",
+    "depth": 2,
+    "title": "YMP50 3 Ayaklı Gripper",
+    "img": "assets/images/enpo/1759147021.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759147021/1759147043enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759147021",
+    "facts": {
+      "codes": [
+        "YMP50",
+        "YMP50-16",
+        "YMP50-20",
+        "YMP50-25",
+        "YMP50-32",
+        "YMP50-40",
+        "YMP50-50",
+        "YMP50-63",
+        "YMP50-80",
+        "YMP50-100",
+        "YMP50-125"
+      ],
+      "pressure": [
+        "7 bar",
+        "6 bar",
+        "5 bar"
+      ],
+      "temp": [
+        "-5 ÷ 60 °C",
+        "-10 ÷ 60 °C",
+        "0 ÷ 60 °C"
+      ],
+      "ports": [],
+      "pages": 2,
+      "chars": 2856
+    },
+    "children": []
+  },
+  {
+    "kid": "1759143883",
+    "parent": "1758530071",
+    "depth": 1,
+    "title": "Kilitleme Üniteleri",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143883",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759147047",
+        "name": "L1-N Silindir Kilitleme Ünitesi",
+        "img": "yuklenen/kategoriler/1759147047/k-1759147047-17591492586884.jpg"
+      },
+      {
+        "kid": "1759147073",
+        "name": "L6 Rodless Milsiz Silindir Kilitleme Ünitesi",
+        "img": "yuklenen/kategoriler/1759147073/k-1759147073-17591492887437.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1759147047",
+    "parent": "1759143883",
+    "depth": 2,
+    "title": "L1-N Silindir Kilitleme Ünitesi",
+    "img": "assets/images/enpo/1759147047.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759147047/1759147073enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759147047",
+    "facts": {
+      "codes": [],
+      "pressure": [
+        "10 bar",
+        "6 bar",
+        "4 bar"
+      ],
+      "temp": [
+        "-20 ÷ 80 °C"
+      ],
+      "ports": [
+        "G1",
+        "G1/8"
+      ],
+      "pages": 6,
+      "chars": 8570
+    },
+    "children": []
+  },
+  {
+    "kid": "1759147073",
+    "parent": "1759143883",
+    "depth": 2,
+    "title": "L6 Rodless Milsiz Silindir Kilitleme Ünitesi",
+    "img": "assets/images/enpo/1759147073.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759147073/1759147092enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759147073",
+    "facts": {
+      "codes": [],
+      "pressure": [
+        "10 bar",
+        "4,5 bar"
+      ],
+      "temp": [
+        "-20 ÷ +80 °C"
+      ],
+      "ports": [],
+      "pages": 1,
+      "chars": 1172
+    },
+    "children": []
+  },
+  {
+    "kid": "1759143911",
+    "parent": "1758530071",
+    "depth": 1,
+    "title": "Pnömatik Tahrikli Programlanabilir Silindirler",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143911",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759147093",
+        "name": "NFZ Serisi",
+        "img": "yuklenen/kategoriler/1759147093/k-1759147093-17592281191461.jpg"
+      },
+      {
+        "kid": "1759147121",
+        "name": "NQZ Serisi",
+        "img": "yuklenen/kategoriler/1759147121/k-1759147121-17592281685372.jpg"
+      },
+      {
+        "kid": "1759147140",
+        "name": "NTZ Serisi",
+        "img": "yuklenen/kategoriler/1759147140/k-1759147140-17592282065553.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1759147093",
+    "parent": "1759143911",
+    "depth": 2,
+    "title": "NFZ Serisi",
+    "img": "assets/images/enpo/1759147093.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759147093/1759147120enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759147093",
+    "facts": {
+      "codes": [],
+      "pressure": [
+        "6 bar",
+        "10 bar",
+        "3 bar"
+      ],
+      "temp": [
+        "-10 ÷ 70°C"
+      ],
+      "ports": [
+        "G1/8"
+      ],
+      "pages": 2,
+      "chars": 2553
+    },
+    "children": []
+  },
+  {
+    "kid": "1759147121",
+    "parent": "1759143911",
+    "depth": 2,
+    "title": "NQZ Serisi",
+    "img": "assets/images/enpo/1759147121.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759147121/1759147139enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759147121",
+    "facts": {
+      "codes": [],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "-10 ÷ 70°C"
+      ],
+      "ports": [
+        "G1/8"
+      ],
+      "pages": 3,
+      "chars": 4603
+    },
+    "children": []
+  },
+  {
+    "kid": "1759147140",
+    "parent": "1759143911",
+    "depth": 2,
+    "title": "NTZ Serisi",
+    "img": "assets/images/enpo/1759147140.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759147140/1759147383enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759147140",
+    "facts": {
+      "codes": [],
+      "pressure": [
+        "10 bar",
+        "3 bar",
+        "6 bar"
+      ],
+      "temp": [
+        "-10 ÷ 70°C"
+      ],
+      "ports": [
+        "G1/8"
+      ],
+      "pages": 3,
+      "chars": 4374
+    },
+    "children": []
+  },
+  {
+    "kid": "1759143925",
+    "parent": "1758530071",
+    "depth": 1,
+    "title": "Teleskopik Silindirler",
+    "img": "",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759143925",
+    "facts": {},
+    "children": [
+      {
+        "kid": "1759147384",
+        "name": "RT Serisi Teleskopik Silindirler",
+        "img": "yuklenen/kategoriler/1759147384/k-1759147384-17591493991549.jpg"
+      }
+    ]
+  },
+  {
+    "kid": "1759147384",
+    "parent": "1759143925",
+    "depth": 2,
+    "title": "RT Serisi Teleskopik Silindirler",
+    "img": "assets/images/enpo/1759147384.webp",
+    "pdf": "http://www.enpo.net/yuklenen/pdf/kategoriler/1759147384/1759147440enpo.pdf",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1759147384",
+    "facts": {
+      "codes": [
+        "RT220",
+        "RT220I",
+        "RT220M",
+        "RT223",
+        "RT230",
+        "RT230I",
+        "RT230M",
+        "RT233",
+        "RT220/RT220I/RT220M/RT223",
+        "RT230/RT230I/RT230M/RT233",
+        "RT220...M",
+        "RT220...I",
+        "RTF-13025",
+        "RTF-13050"
+      ],
+      "pressure": [
+        "10 bar"
+      ],
+      "temp": [
+        "-20 ÷ 80 °C"
+      ],
+      "ports": [
+        "G1/8"
+      ],
+      "pages": 16,
+      "chars": 21703
+    },
+    "children": []
+  },
+  {
+    "kid": "1758700727",
+    "parent": null,
+    "depth": 0,
+    "title": "Diğer Ürünlerimiz",
+    "img": "assets/images/enpo/1758700727.webp",
+    "pdf": "",
+    "page": "http://www.enpo.net/kategoriler.php?kid=1758700727",
+    "facts": {},
+    "children": []
+  }
+]

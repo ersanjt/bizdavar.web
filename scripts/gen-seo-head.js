@@ -76,6 +76,7 @@ const PAGE_OG = {
   bzDiamond: 'assets/images/partners/bzdiamond.webp',
   marvispace: 'assets/images/content/marvispace/shop-grid.jpg',
   kayaOne: 'assets/images/partners/kaya-one.svg',
+  asilFeed: 'assets/images/content/asil-feed/hero.webp',
   smmTurk: 'assets/images/partners/smm-turk.svg',
   marviSociety: 'assets/images/partners/marvi-society.png'
 };
@@ -107,6 +108,8 @@ const PAGE_ROUTES = {
   marvispace: '/pages/marvispace',
   supplifyTrade: '/pages/supplify-trade',
   kayaOne: '/pages/kaya-one',
+  asilFeed: '/pages/asil-feed',
+  shop: '/pages/shop',
   smmTurk: '/pages/smm-turk',
   marviSociety: '/pages/marvi-society',
   fxguardExchange: '/pages/fxguard-exchange',

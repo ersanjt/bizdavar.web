@@ -140,7 +140,8 @@
       { category: 'Holding' },
       { category: 'Aesthetic clinic' },
       { category: 'Commercial brand' },
-      { category: 'Industrial B2B' }
+      { category: 'Industrial B2B' },
+      { category: 'Equine feed · Dubai' }
     ]
   };
 
@@ -274,7 +275,8 @@
       { category: 'Holding' },
       { category: 'Estetik klinik' },
       { category: 'Ticari marka' },
-      { category: 'Endüstriyel B2B' }
+      { category: 'Endüstriyel B2B' },
+      { category: 'At yemi · Dubai' }
     ]
   };
 
@@ -319,6 +321,7 @@
           { category: 'Кожа и мода' },
           { category: 'Холдинг' },
           { category: 'Клиника эстетики' },
+          { category: 'Корма для лошадей · Дубай' },
           { category: 'Коммерческий бренд' },
           { category: 'Промышленный B2B' }
         ],
@@ -370,6 +373,7 @@
           { category: 'جلد وأزياء' },
           { category: 'قابضة' },
           { category: 'عيادة تجميل' },
+          { category: 'أعلاف خيول · دبي' },
           { category: 'علامة تجارية' },
           { category: 'B2B صناعي' }
         ],

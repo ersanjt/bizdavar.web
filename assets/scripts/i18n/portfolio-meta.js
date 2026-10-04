@@ -8,6 +8,7 @@
     'ZedGP': { category: 'Financial services', note: 'Inactive project' },
     'ZedX DMCC': { category: 'Web design / infrastructure', note: 'Case study — website and infrastructure design' },
     'BZ Diamond': { category: 'Web design / e-commerce', note: 'Case study — WooCommerce and email management' },
+    'ASIL': { category: 'Web design / server and company email', note: 'Case study — website design, server setup and company email for the ASIL feed brand in Dubai' },
     'Supplify Trade': { category: 'Web design / international B2B trade', note: 'Case study — corporate trade & sourcing website for RAKEZ-licensed UAE company' },
     'Kaya One AG': { category: 'Web design / Swiss B2B trade', note: 'Case study — corporate trade & industrial solutions website for Swiss AG (Brunnen)' },
     'Zed Diamond': { category: 'Web design / jewelry store', note: 'Case study — e-commerce website and content production' },
@@ -64,6 +65,7 @@
     'ZedGP': { category: 'Finansal hizmetler', note: 'Pasif proje' },
     'ZedX DMCC': { category: 'Web tasarım / altyapı', note: 'Örnek iş — web sitesi ve altyapı tasarımı' },
     'BZ Diamond': { category: 'Web tasarım / e-ticaret', note: 'Örnek iş — WooCommerce ve e-posta yönetimi' },
+    'ASIL': { category: 'Web tasarım / sunucu ve kurumsal e-posta', note: 'Örnek iş — Dubai’deki ASIL yem markası için web sitesi, sunucu kurulumu ve kurumsal e-posta' },
     'Supplify Trade': { category: 'Web tasarım / uluslararası B2B ticaret', note: 'Örnek iş — RAKEZ lisanslı BAE ticaret ve sourcing şirketinin kurumsal web sitesi' },
     'Kaya One AG': { category: 'Web tasarım / İsviçre B2B ticaret', note: 'Örnek iş — İsviçre AG ticaret ve endüstriyel çözümler kurumsal web sitesi (Brunnen)' },
     'Zed Diamond': { category: 'Web tasarım / mücevher mağazası', note: 'Örnek iş — e-ticaret sitesi ve içerik üretimi' },
@@ -114,8 +116,22 @@
     'پتروشیمی تبریز': { category: 'Endüstriyel tedarik / petrokimya', note: 'Örnek iş — endüstriyel ekipman tedariki', name: 'Tabriz Petrochemical (TPCO)' }
   };
 
+  const ruAsil = { category: 'Веб-дизайн / сервер и корпоративная почта', note: 'Кейс — сайт, сервер и корпоративная почта для бренда кормов ASIL в Дубае' };
+  const arAsil = { category: 'تصميم ويب / خادم وبريد الشركة', note: 'نموذج عمل — تصميم موقع وتشغيل خادم وبريد الشركة لعلامة ASIL للأعلاف في دبي' };
+
+  function putPortfolioMeta(locale, row) {
+    const loc = window.BIZDAVAR_LOCALES && window.BIZDAVAR_LOCALES[locale];
+    if (!loc) return;
+    if (!loc.portfolioMeta || typeof loc.portfolioMeta !== 'object' || Array.isArray(loc.portfolioMeta)) {
+      loc.portfolioMeta = {};
+    }
+    loc.portfolioMeta.ASIL = row;
+  }
+
   if (window.BIZDAVAR_LOCALES) {
     if (window.BIZDAVAR_LOCALES.en) window.BIZDAVAR_LOCALES.en.portfolioMeta = en;
     if (window.BIZDAVAR_LOCALES.tr) window.BIZDAVAR_LOCALES.tr.portfolioMeta = tr;
+    putPortfolioMeta('ru', ruAsil);
+    putPortfolioMeta('ar', arAsil);
   }
 })();

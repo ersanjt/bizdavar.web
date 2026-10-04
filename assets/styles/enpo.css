@@ -1,0 +1,19 @@
+body[data-page="enpo"] {
+  --brand-accent: #0095d8;
+  --brand-accent-dark: #006fa3;
+  --brand-surface: #f3f8fb;
+}
+body[data-page="enpo"] .enpo-hero {
+  background: #f3f8fb;
+  border-bottom-color: #0095d8;
+}
+body[data-page="enpo"] .enpo-hero::before {
+  background:
+    linear-gradient(105deg, rgba(243, 248, 251, 0.97) 42%, rgba(243, 248, 251, 0.55) 68%, rgba(243, 248, 251, 0.2) 100%),
+    url('../images/enpo/1758530421.webp') center right / cover no-repeat;
+}
+body[data-page="enpo"] .enpo-hero__visual img,
+body[data-page="enpo"] .enpo-series-card__img--photo {
+  object-fit: contain;
+  background: #fff;
+}

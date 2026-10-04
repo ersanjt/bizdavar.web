@@ -371,11 +371,11 @@ window.createSupplyBrandPage = function (cfg) {
 
         <img class="${prefix}-hero__logo" src="${path(b.logo)}" alt="${b.logoAlt || brandName}" width="200" height="56" loading="eager">
 
-        <span class="${prefix}-hero__eyebrow">${b.heroEyebrow}</span>
+        <span class="${prefix}-hero__eyebrow">${localizedTitle({ title: b.heroEyebrow, titleFa: b.heroEyebrowFa || b.heroEyebrow, titleTr: b.heroEyebrowTr, titleEn: b.heroEyebrowEn, titleRu: b.heroEyebrowRu, titleAr: b.heroEyebrowAr })}</span>
 
-        <h1 class="${prefix}-hero__title"><span>${b.heroHeadline}</span></h1>
+        <h1 class="${prefix}-hero__title"><span>${localizedTitle({ title: b.heroHeadline, titleFa: b.heroHeadlineFa || b.heroHeadline, titleTr: b.heroHeadlineTr, titleEn: b.heroHeadlineEn, titleRu: b.heroHeadlineRu, titleAr: b.heroHeadlineAr })}</span></h1>
 
-        <p class="${prefix}-hero__subtitle">${b.heroHeadlineSub}</p>
+        <p class="${prefix}-hero__subtitle">${localizedTitle({ title: b.heroHeadlineSub, titleFa: b.heroHeadlineSubFa || b.heroHeadlineSub, titleTr: b.heroHeadlineSubTr, titleEn: b.heroHeadlineSubEn, titleRu: b.heroHeadlineSubRu, titleAr: b.heroHeadlineSubAr })}</p>
 
         <span class="${prefix}-hero__badge">${b.tagline || b.taglineFa} — ${b.since}</span>
 
@@ -829,9 +829,19 @@ window.createSupplyBrandPage = function (cfg) {
       const remaining = Math.max(0, filtered.length - visible.length);
       if ((q || brand || type) && !visible.length) return '';
       const hasProducts = visible.some(s => (s.features && s.features.length) || s.officialPath || s.officialUrl || s.specs || (s.gallery && s.gallery.length));
-      const groupHead = !q && !type && cat.groupTitle
+      const groupLabel = cat.groupTitle
+        ? localizedTitle({
+            title: cat.groupTitle,
+            titleFa: cat.groupTitleFa || cat.groupTitle,
+            titleTr: cat.groupTitleTr,
+            titleEn: cat.groupTitleEn,
+            titleRu: cat.groupTitleRu,
+            titleAr: cat.groupTitleAr
+          })
+        : '';
+      const groupHead = !q && !type && groupLabel
         ? `<div class="${prefix}-catalog-group" id="${prefix}-group-${cat.family || cat.id}">
-            <h2 class="${prefix}-catalog-group__title">${cat.groupTitle}</h2>
+            <h2 class="${prefix}-catalog-group__title">${groupLabel}</h2>
             ${cat.groupDesc ? `<p class="${prefix}-catalog-group__desc">${cat.groupDesc}</p>` : ''}
           </div>`
         : '';

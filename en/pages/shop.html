@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <link rel="stylesheet" href="/assets/styles/site.css?v=20261002c">
+  <link rel="preload" href="/assets/fonts/vazirmatn/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/estedad/Estedad-Black.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="/assets/scripts/gtm-boot.js?v=20260910c" defer></script>
+  <script src="/assets/scripts/i18n/locale-url.js?v=20260910c" defer></script>
+  <script src="/assets/scripts/i18n/seo-head.js?v=20260910c" defer></script>
+  <script src="/assets/scripts/i18n/locale-preload.js?v=20260910c" defer></script>
+  <meta name="view-transition" content="same-origin">
+  <title>Dirham shop | Industrial and electronic goods — Bizdavar</title>
+  <link rel="icon" href="/assets/images/brand/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/images/brand/favicon.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/assets/images/brand/favicon-16.png" type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" href="/assets/images/brand/apple-touch-icon.png">
+  <meta name="description" content="Bizdavar shop priced in UAE dirhams. Industrial goods, precision instruments, electronics and other items — order on WhatsApp.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="keywords" content="dirham shop, AED, industrial goods, instruments, electronics, Bizdavar">
+  <meta property="og:title" content="Dirham shop | Industrial and electronic goods — Bizdavar">
+  <meta property="og:description" content="Bizdavar shop priced in UAE dirhams. Industrial goods, precision instruments, electronics and other items — order on WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bizdavar.com/pages/shop">
+  <meta property="og:image" content="https://bizdavar.com/assets/images/brand/bizdavar-logo-square.png">
+  <meta property="og:locale" content="fa_IR">
+  <meta property="og:locale:alternate" content="tr_TR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="ru_RU">
+  <meta property="og:locale:alternate" content="ar_AE">
+  <meta property="og:site_name" content="Bizdavar Group">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dirham shop | Industrial and electronic goods — Bizdavar">
+  <meta name="twitter:description" content="Bizdavar shop priced in UAE dirhams. Industrial goods, precision instruments, electronics and other items — order on WhatsApp.">
+  <meta name="twitter:image" content="https://bizdavar.com/assets/images/brand/bizdavar-logo-square.png">
+  <link rel="canonical" href="https://bizdavar.com/pages/shop">
+  <link rel="alternate" hreflang="fa-IR" href="https://bizdavar.com/pages/shop">
+  <link rel="alternate" hreflang="tr-TR" href="https://bizdavar.com/tr/pages/shop">
+  <link rel="alternate" hreflang="en-US" href="https://bizdavar.com/en/pages/shop">
+  <link rel="alternate" hreflang="ru-RU" href="https://bizdavar.com/ru/pages/shop">
+  <link rel="alternate" hreflang="ar-AE" href="https://bizdavar.com/ar/pages/shop">
+  <link rel="alternate" hreflang="x-default" href="https://bizdavar.com/pages/shop">
+</head>
+<body data-page="shop" data-depth="1">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXWQQWF8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script src="/assets/scripts/components/page-shell.js?v=20260910c" defer></script>
+  <main id="main-content" class="site-main">
+    <section class="page-hero page-hero--pro">
+      <div class="container">
+        <span class="section__tag" data-i18n="shopPage.hero.tag">Dirham shop</span>
+        <h1 data-i18n="shopPage.hero.title">UAE dirham shop</h1>
+        <p data-i18n="shopPage.hero.desc">Industrial goods, precision instruments, electronics and other items. Every price is in UAE dirhams (AED). Orders go through WhatsApp.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div id="shopFilters" class="shop-filters" role="group" aria-label="Categories"></div>
+        <p id="shopCount" class="shop-count"></p>
+        <div id="shopGrid" class="shop-grid"></div>
+      </div>
+    </section>
+    <div id="geoStrip"></div>
+    <div id="relatedLinks"></div>
+  </main>
+  <script src="/assets/scripts/site-loader.js?v=20261002c" data-after-config="config/dirham-shop.js" data-after-seo="i18n/dirham-shop-i18n.js" data-before-main="shop-page.js"></script>
+  <script>
+    bizdavarPageInit(function () {
+      injectPageSeo('shop', { canonical: 'https://bizdavar.com/pages/shop' });
+      var crumbs = [
+        { page: 'home', url: 'index' },
+        { page: 'products', url: 'products' },
+        { page: 'shop', url: 'shop' }
+      ];
+      renderBreadcrumbs(crumbs);
+      injectBreadcrumbSchema(crumbs);
+      renderGeoStrip('geoStrip', {
+        textKey: 'shopPage.geoText',
+        text: 'Bizdavar shop priced in UAE dirhams — industrial goods, instruments and electronics.'
+      });
+      renderRelatedLinks([
+        { title: 'Products', url: 'products', desc: 'Bizdavar brands and lines' },
+        { title: 'Contact', url: 'contact', desc: 'Orders and inquiries' }
+      ]);
+      if (window.renderDirhamShop) window.renderDirhamShop();
+      setupWhatsappLinks();
+    });
+  </script>
+</body>
+</html>

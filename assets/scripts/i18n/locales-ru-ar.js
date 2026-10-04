@@ -193,6 +193,12 @@
       seoDescription: 'Оригинальные промышленные электродвигатели Gamak из Турции. GM/GMB, IE2/IE3, фланец B3/B5 — техконсультация, проформа и логистика — Bizdavar Group.',
       seoKeywords: 'Gamak, электродвигатель, IE2 IE3, промышленный мотор, Bizdavar'
     },
+    enpo: {
+      crumb: 'ENPO',
+      seoTitle: 'Пневматика ENPO | цилиндры, клапаны и подготовка воздуха — Bizdavar',
+      seoDescription: 'Серии пневматики ENPO: подготовка воздуха, цилиндры, клапаны, магнитные датчики и захваты. Названия серий совпадают с каталогом ENPO — Bizdavar Group.',
+      seoKeywords: 'ENPO, пневматика, цилиндр, клапан, Bizdavar'
+    },
     digiSystem: {
       crumb: 'Digi System',
       seoTitle: 'Купить Digi System | торговые весы и POS | Bizdavar',
@@ -228,6 +234,18 @@
       seoTitle: 'Кейс сайта промышленной торговли | корпоративный сайт — Bizdavar',
       seoDescription: 'Кейс корпоративного сайта для торговли и промышленных решений: структура контента, SEO и техподдержка — Bizdavar Group.',
       seoKeywords: 'корпоративный веб-дизайн, промышленная торговля, кейс сайта, Bizdavar'
+    },
+    asilFeed: {
+      crumb: 'ASIL',
+      seoTitle: 'Кейс сайта ASIL | сервер и корпоративная почта — Bizdavar',
+      seoDescription: 'Кейс: дизайн сайта, сервер и корпоративная почта для ASIL — бренда кормов для лошадей и скота в Дубае — Bizdavar Group.',
+      seoKeywords: 'веб-дизайн, сервер, корпоративная почта, ASIL, корма для лошадей, Bizdavar'
+    },
+    shop: {
+      crumb: 'Магазин в дирхамах',
+      seoTitle: 'Магазин в дирхамах | Промышленные и электронные товары — Bizdavar',
+      seoDescription: 'Магазин Bizdavar с ценами в дирхамах ОАЭ. Промышленные товары, приборы, электроника и другие позиции — заказ в WhatsApp.',
+      seoKeywords: 'магазин дирхам, AED, промышленные товары, приборы, электроника, Bizdavar'
     },
     smmTurk: {
       crumb: 'SMM Turk',
@@ -531,6 +549,12 @@
       seoDescription: 'موتورات Gamak الصناعية الأصلية من تركيا. GM/GMB، IE2/IE3، شفة B3/B5 — استشارة فنية وفاتورة مبدئية ولوجستيات — Bizdavar Group.',
       seoKeywords: 'Gamak, موتور كهربائي, IE2 IE3, موتور صناعي, Bizdavar'
     },
+    enpo: {
+      crumb: 'ENPO',
+      seoTitle: 'معدات ENPO الهوائية | أسطوانات وصمامات وتجهيز هواء — بيزدوار',
+      seoDescription: 'سلاسل ENPO الهوائية: تجهيز الهواء، الأسطوانات، الصمامات، الحساسات المغناطيسية والقوابض. الأسماء مطابقة لكتالوج ENPO — Bizdavar Group.',
+      seoKeywords: 'ENPO, هواء مضغوط, أسطوانة, صمام, بيزدوار'
+    },
     digiSystem: {
       crumb: 'Digi System',
       seoTitle: 'شراء Digi System | موازين وPOS للتجزئة | Bizdavar',
@@ -566,6 +590,18 @@
       seoTitle: 'نموذج موقع تجارة صناعية | موقع مؤسسي — Bizdavar',
       seoDescription: 'نموذج موقع مؤسسي للتجارة والحلول الصناعية: هيكل محتوى، SEO ودعم فني — Bizdavar Group.',
       seoKeywords: 'تصميم ويب مؤسسي, تجارة صناعية, نموذج موقع, Bizdavar'
+    },
+    asilFeed: {
+      crumb: 'ASIL',
+      seoTitle: 'نموذج موقع ASIL | خادم وبريد الشركة — Bizdavar',
+      seoDescription: 'نموذج عمل: تصميم موقع وتشغيل خادم وبريد مؤسسي لعلامة ASIL لأعلاف الخيول والمواشي في دبي — Bizdavar Group.',
+      seoKeywords: 'تصميم مواقع, تشغيل خادم, بريد مؤسسي, ASIL, أعلاف خيول, Bizdavar'
+    },
+    shop: {
+      crumb: 'متجر بالدرهم',
+      seoTitle: 'متجر بالدرهم | منتجات صناعية وإلكترونية — Bizdavar',
+      seoDescription: 'متجر بيزدوار بأسعار درهم الإمارات. سلع صناعية وأجهزة قياس وإلكترونيات وأصناف أخرى — الطلب عبر واتساب.',
+      seoKeywords: 'متجر درهم, AED, صناعي, أدوات دقيقة, إلكترونيات, Bizdavar'
     },
     smmTurk: {
       crumb: 'SMM Turk',
@@ -1091,6 +1127,7 @@
         { name: 'Prosense', title: 'Газовые и пламенные детекторы', desc: 'Стационарные и портативные системы с сертификацией SIL2/3', badge: 'Турция', tags: ['PQ+', 'SafeVader', 'PPS'], cta: 'Линейки продуктов' },
         { name: 'Teltonika', title: 'GPS и Fleet Telematics', desc: 'Трекеры флота, CAN/OBD, BLE, видео и IoT — FMB920 · FMC650 · FTC305', badge: 'Литва', tags: ['FMB920', 'FTC305', 'DualCam'], cta: 'Каталог Teltonika' },
         { name: 'Gamak', title: 'Промышленные электродвигатели', desc: 'Трёхфазные и однофазные моторы — поставка и техподдержка', badge: 'Турция', tags: ['IE2/IE3', 'Фланец', 'Под проект'], cta: 'О Gamak' },
+        { name: 'ENPO', title: 'Промышленная пневматика', desc: 'Подготовка воздуха, цилиндры, клапаны и магнитные датчики — серии как в каталоге ENPO', badge: 'Турция', tags: ['FRL', 'Цилиндр', 'Клапан'], cta: 'Каталог ENPO' },
         { name: 'Teraoka', title: 'Весы и магазинное оборудование', desc: 'Полная линейка Teraoka Seiko — весы, этикетирование, POS', badge: 'Япония', tags: ['Scales', 'Labeling', 'POS'], cta: 'Смотреть бренд' },
         { name: 'Liqui Moly', title: 'Масла и присадки', desc: 'Моторные масла, Octane Plus, дизельные присадки и автохимия — цены в USD', badge: 'Германия', tags: ['Octane Plus', 'Top Tec', '5W-30'], cta: 'Каталог и цены' },
         { name: 'Auto-Moto', title: 'Мотоэкипировка', desc: 'Шлемы, куртки, перчатки, штаны, ботинки, интеркомы и защита — цена на карточке в долларах с доставкой в Иран', badge: 'Новое', tags: ['Шлемы', 'Куртки', 'Ботинки'], cta: 'Каталог и запрос' },
@@ -1162,6 +1199,7 @@
         { name: 'Prosense', title: 'كواشف غاز ولهب', desc: 'أنظمة ثابتة ومحمولة بشهادة SIL2/3', badge: 'تركيا', tags: ['PQ+', 'SafeVader', 'PPS'], cta: 'سلاسل المنتجات' },
         { name: 'Teltonika', title: 'GPS وFleet Telematics', desc: 'متتبعات أساطيل وCAN/OBD وBLE وفيديو وIoT — FMB920 · FMC650 · FTC305', badge: 'ليتوانيا', tags: ['FMB920', 'FTC305', 'DualCam'], cta: 'كتالوج Teltonika' },
         { name: 'Gamak', title: 'محركات كهربائية صناعية', desc: 'محركات ثلاثية وأحادية الطور — توريد ودعم فني', badge: 'تركيا', tags: ['IE2/IE3', 'فلانش', 'حسب المشروع'], cta: 'معلومات Gamak' },
+        { name: 'ENPO', title: 'معدات هواء مضغوط', desc: 'تجهيز الهواء والأسطوانات والصمامات والحساسات المغناطيسية — السلاسل مطابقة لكتالوج ENPO', badge: 'تركيا', tags: ['FRL', 'أسطوانة', 'صمام'], cta: 'كتالوج ENPO' },
         { name: 'Teraoka', title: 'موازين ومعدات متاجر', desc: 'توريد Teraoka Seiko الكامل — موازين وملصقات وPOS', badge: 'اليابان', tags: ['Scales', 'Labeling', 'POS'], cta: 'عرض العلامة' },
         { name: 'Liqui Moly', title: 'زيوت وإضافات', desc: 'زيوت محرك وOctane Plus وإضافات ديزل وعناية — أسعار بالدولار', badge: 'ألمانيا', tags: ['Octane Plus', 'Top Tec', '5W-30'], cta: 'الكتالوج والأسعار' },
         { name: 'Auto-Moto', title: 'معدات الدراجات النارية', desc: 'خوذات وسترات وقفازات وبوت وإنتركم وحماية. السعر على البطاقة بالدولار لتسليم إيران.', badge: 'جديد', tags: ['خوذة', 'سترة', 'بوت'], cta: 'الكتالوج والاستعلام' },
@@ -1895,6 +1933,7 @@
     brandTeltonikaDesc: 'GPS и телематика флота',
     brandTeltonikaBadge: 'От $29',
     brandGamakDesc: 'Промышленные электродвигатели',
+    brandEnpoDesc: 'Пневматика, цилиндры и клапаны',
     brandLiquiDesc: 'Масла и присадки',
     productAutoMoto: 'Auto-Moto',
     brandAutoMotoDesc: 'Два магазина: мотоэкипировка и тормоза',
@@ -1933,6 +1972,8 @@
     productPackagingDesc: 'Запайщики и упаковочные линии',
     productMedical: 'Медицина и СИЗ',
     productMedicalDesc: 'Линии масок и грелок',
+    productShop: 'Магазин в дирхамах',
+    productShopDesc: 'Цены в дирхамах ОАЭ',
     customWebApp: 'Веб и приложения на заказ',
     fastDesc: 'Сайт с фиксированной ценой за 5 дней',
     customWebAppDesc: 'Web app, панели и заказные приложения',
@@ -1997,6 +2038,7 @@
       presenceTitle: 'Страны присутствия',
       exhibitionsTitle: 'Выставки и события',
       achievementsTitle: 'Продукты и инновации Bizdavar',
+      achievementsDesc: 'Три аппаратных продукта, спроектированных и собранных в Тебризе: бесконтактный термометр, автоматический санитайзер и нагревательный мат. Характеристики и источники — на карточках.',
       sourcesTitle: 'Источники и ссылки',
       credentialsTitle: 'Подтверждённые навыки',
       proofTitle: 'Индикаторы доверия',
@@ -2068,16 +2110,32 @@
       ctaContact: 'Запросить продукт'
     },
     pillars: {
-      eyebrow: 'Четыре оси',
+      eyebrow: 'Категории продуктов',
       title: 'От ПО до производственных линий',
-      desc: 'Собственные продукты Bizdavar в четырёх категориях — выберите ось.'
+      desc: 'Пять групп — ПО, гигиена, упаковка, медицина и кожа. Выберите категорию, чтобы открыть эту часть каталога.'
     },
     intro: {
       title: 'Что мы делаем',
-      body: 'Сегодня приоритет — <strong>промпоставки, сайты, маркетинг и SaaS</strong> вроде FXGuard. Ранее сделанное железо — в достижениях компании.'
+      body: 'Живое ПО — <strong>FXGuard</strong> и BizSwap. Железо из Тебриза — BizTab, BizClean и BizPad — и страусиная кожа имеют свои страницы, рядом промышленные поставки.',
+      statProducts: '14',
+      statProductsLabel: 'продукты и линии',
+      statCats: '5',
+      statCatsLabel: 'основные категории'
     },
     featured: {
-      desc: 'WhatsApp CRM, Accounting и BizSwap — к заказу. Нагревательный мат и BizTab — в достижениях и полном каталоге.'
+      desc: 'Свои страницы: WhatsApp CRM от $49/мес, BizSwap, BizClean, BizTab, BizPad и страусиная кожа. FXGuard Accounting в листе ожидания.'
+    },
+    catalog: {
+      desc: '14 продуктов и линий — фильтр по категории или запрос на линию без своей страницы.'
+    },
+    explore: {
+      ownedDesc: 'У ПО, тебризского железа и страусиной кожи есть свои страницы. FXGuard Accounting в листе ожидания.'
+    },
+    categories: {
+      software: { label: 'ПО и SaaS', desc: 'WhatsApp CRM и Accounting из FXGuard, плюс BizSwap' },
+      'iot-health': { label: 'IoT и гигиена', desc: 'Термометр, санитайзер и бесконтактные устройства' },
+      packaging: { label: 'Упаковка и запайка', desc: 'Вакуумные запайщики и линии упаковки' },
+      medical: { label: 'Медицина и СИЗ', desc: 'Нагревательный мат BizPad и линии масок' }
     },
     items: {
       fxguard: {
@@ -2096,14 +2154,82 @@
         homeDesc: 'Бесконтактный термометр для входа и клиники'
       },
       bizswap: {
-        title: 'Пресale и своп токенов',
+        title: 'Пресейл и своп токенов',
         desc: 'Кошелёк, своп и on-chain пресейл — BEP-20 и RWA.',
         homeDesc: 'Ончейн-своп и пресейл токена'
+      },
+      'fxguard-accounting': {
+        title: 'FXGuard Accounting',
+        desc: 'Учёт для финансовых и обменных команд — пока в листе ожидания. Публичное демо отдельно от CRM.'
+      },
+      bizclean: {
+        name: 'BizClean',
+        title: 'Гигиена и дезинфекция',
+        desc: 'Автоматический санитайзер для рук BizClean V5 — производство Bizdavar; RINOTEX 1400 через парк «Imen Sahand Padideh»; пресса ISNA и IRIB.'
+      },
+      biztouch: {
+        name: 'BizTouch',
+        title: 'Бесконтактные решения',
+        desc: 'Бесконтактные устройства для входа, гигиены и общественных пространств.'
+      },
+      bizroll: {
+        name: 'BizRoll',
+        title: 'Рулон и упаковка',
+        desc: 'Рулонные и упаковочные машины для промышленного производства.'
+      },
+      'sealer-home': {
+        name: 'Бытовой вакууматор',
+        title: 'Домашняя запайка',
+        desc: 'Вакуумный запайщик для дома и небольшой мастерской.'
+      },
+      'sealer-pneumatic': {
+        name: 'Пневматический вакууматор',
+        title: 'Пневматическая запайка',
+        desc: 'Пневматический запайщик для полупромышленных линий.'
+      },
+      'sealer-robotic': {
+        name: 'Роботизированный вакууматор',
+        title: 'Роботизированная запайка',
+        desc: 'Роботизированная линия запайки для серийной упаковки.'
+      },
+      'mask-production': {
+        name: 'Линия трёхслойных масок',
+        title: 'Машина для масок',
+        desc: 'Оборудование для трёхслойных масок — разработано в период COVID под спрос на СИЗ.'
+      },
+      'heat-pad-production': {
+        name: 'Линия нагревательных матов',
+        title: 'Машина для матов',
+        desc: 'Оборудование для производства нагревательных матов — медицина и обогрев.'
       }
     }
   });
   if (!ru.pages) ru.pages = {};
   deepMerge(ru.pages, pageSeoRu);
+  if (!ru.caseStudy) ru.caseStudy = {};
+  ru.caseStudy.asilFeed = {
+    hero: { tag: 'Кейс веб-дизайна', title: 'ASIL — сайт, сервер и корпоративная почта', desc: 'Бренд кормов для лошадей и скота в Дубае — двуязычный сайт, сервер и корпоративная почта от Bizdavar Group' },
+    about: {
+      title: 'О проекте',
+      body: '<strong>ASIL</strong> — клиент Bizdavar Group, бренд питания лошадей и скота компании Bio Balance International Foodstuff Trading LLC в Дубае. Мы спроектировали двуязычный сайт, подняли сервер и настроили корпоративную почту на домене asilfeed.com. Это <strong>кейс веб-дизайна и инфраструктуры</strong>.',
+      servicesTitle: 'Что сделала Bizdavar',
+      services: ['Дизайн и разработка двуязычного корпоративного сайта (английский и арабский)', 'Каталог продуктов, подбор корма и страницы контактов', 'Запуск сервера и размещение домена asilfeed.com', 'Корпоративная почта компании на домене', 'Мобильная вёрстка и структура контента'],
+      clientTitle: 'Сфера клиента',
+      clientBody: 'ASIL поставляет корма для лошадей, витамины и добавки, а также корма для верблюдов, овец и коз с учётом климата Персидского залива. Подробности на официальном сайте клиента.',
+      challengeTitle: 'Задача',
+      challenge: 'Бренду в Дубае нужны были двуязычный сайт, стабильный сервер и почта на собственном домене, чтобы конюшни и клиенты региона видели продукты и контакты в одном месте.',
+      resultsTitle: 'Результат',
+      result1: 'Живой сайт asilfeed.com с кормами, добавками и разделом для скота',
+      result2: 'Сервер запущен, сайт работает на инфраструктуре компании',
+      result3: 'Корпоративная почта на домене, включая info@asilfeed.com',
+      ctaSite: 'Открыть сайт ASIL',
+      ctaOrder: 'Заказать похожий сайт',
+      ctaPortfolio: 'Другие кейсы',
+      siteTitle: 'Карта сайта'
+    },
+    shots: { hero: 'Главная — натуральное питание лошадей для жары', why: 'Четыре причины выбрать ASIL: климат Залива, натуральный состав, экспертная поддержка, поставка из Дубая', range: 'Три линейки: корма для лошадей, витамины и добавки, корма для скота', feeds: 'Каталог кормов для лошадей', supplements: 'Каталог витаминов и добавок', pack: 'Упаковка мешка с кормом, рядом с каталогом', product: 'Страница продукта ASIL Endurance', guide: 'Руководство по кормлению, польза и назначение', related: 'Сопутствующие продукты на странице товара', finder: 'Feed Finder и статьи по питанию', about: 'О Bio Balance International', footer: 'Подвал с контактами — два телефона Дубая, WhatsApp и info@asilfeed.com' },
+    geoText: 'Кейс сайта, сервера и корпоративной почты для брендов кормов в ОАЭ и Персидском заливе — Bizdavar Group.'
+  };
   if (!ru.blogPage) ru.blogPage = {};
   deepMerge(ru.blogPage, {
     hero: {
@@ -2395,6 +2521,7 @@
     brandTeltonikaDesc: 'GPS وتتبع الأسطول',
     brandTeltonikaBadge: 'من ٢٩$',
     brandGamakDesc: 'محركات كهربائية صناعية',
+    brandEnpoDesc: 'هواء مضغوط وأسطوانات وصمامات',
     brandLiquiDesc: 'زيوت وإضافات',
     productAutoMoto: 'Auto-Moto',
     brandAutoMotoDesc: 'متجران: معدات دراجات نارية وفرامل',
@@ -2433,6 +2560,8 @@
     productPackagingDesc: 'لحامات وخطوط تغليف',
     productMedical: 'طبي وPPE',
     productMedicalDesc: 'خطوط كمامات ووسائد حرارية',
+    productShop: 'متجر بالدرهم',
+    productShopDesc: 'أسعار بالدرهم الإماراتي',
     customWebApp: 'ويب وتطبيق مخصص',
     fastDesc: 'موقع بسعر ثابت خلال ٥ أيام',
     customWebAppDesc: 'ويب أب ولوحات وتطبيقات مخصصة',
@@ -2496,6 +2625,7 @@
       presenceTitle: 'الدول النشطة',
       exhibitionsTitle: 'المعارض والفعاليات',
       achievementsTitle: 'منتجات وابتكار بيزدوار',
+      achievementsDesc: 'ثلاثة منتجات عتاد صُممت وصُنعت في تبريز: مقياس حرارة بلا تلامس، معقّم يدين آلي ووسادة تدفئة. المواصفات والمصادر على البطاقات.',
       sourcesTitle: 'مصادر وروابط',
       credentialsTitle: 'مهارات موثّقة',
       proofTitle: 'مؤشرات الثقة',
@@ -2567,16 +2697,32 @@
       ctaContact: 'استعلام منتج'
     },
     pillars: {
-      eyebrow: 'أربعة محاور',
+      eyebrow: 'فئات المنتجات',
       title: 'من البرمجيات إلى خطوط الإنتاج',
-      desc: 'منتجات بيزدوار في أربع فئات — اختر المحور.'
+      desc: 'خمس مجموعات — برمجيات، نظافة، تغليف، طب وجلد. اختر الفئة لفتح ذلك الجزء من الكتالوج.'
     },
     intro: {
       title: 'ماذا نبني',
-      body: 'الأولوية اليوم <strong>التوريد الصناعي والمواقع والتسويق وSaaS</strong> مثل FXGuard. العتاد السابق في إنجازات الشركة.'
+      body: 'البرمجيات الحيّة هي <strong>FXGuard</strong> وBizSwap. عتاد تبريز — BizTab وBizClean وBizPad — وجلد النعام لكل منها صفحة، إلى جانب التوريد الصناعي.',
+      statProducts: '14',
+      statProductsLabel: 'منتج وخط',
+      statCats: '5',
+      statCatsLabel: 'فئات رئيسية'
     },
     featured: {
-      desc: 'WhatsApp CRM ومحاسبة FXGuard وBizSwap — جاهزة للطلب. وسادة التدفئة وBizTab في الإنجازات والكتالوج الكامل.'
+      desc: 'لها صفحات خاصة: WhatsApp CRM من ٤٩ دولاراً شهرياً، وBizSwap وBizClean وBizTab وBizPad وجلد النعام. محاسبة FXGuard في قائمة الانتظار.'
+    },
+    catalog: {
+      desc: '١٤ منتجاً وخطاً — صفِّ حسب الفئة، أو اطلب عرض سعر لخط بلا صفحة خاصة.'
+    },
+    explore: {
+      ownedDesc: 'البرمجيات وعتاد تبريز وجلد النعام لها صفحات خاصة. محاسبة FXGuard في الانتظار.'
+    },
+    categories: {
+      software: { label: 'برمجيات وSaaS', desc: 'WhatsApp CRM ومحاسبة FXGuard، مع BizSwap' },
+      'iot-health': { label: 'إنترنت الأشياء والنظافة', desc: 'مقياس حرارة ومعقّم وأجهزة بلا لمس' },
+      packaging: { label: 'تغليف ولحام', desc: 'آلات تفريغ وخطوط تغليف' },
+      medical: { label: 'طب ومعدات وقاية', desc: 'وسادة BizPad الحرارية وخطوط الكمامات' }
     },
     items: {
       fxguard: {
@@ -2598,12 +2744,80 @@
         title: 'بيع مسبق ومبادلة توكن',
         desc: 'محفظة ومبادلة وبيع مسبق على السلسلة — BEP-20 وRWA.',
         homeDesc: 'مبادلة وبيع مسبق للتوكن على السلسلة'
+      },
+      'fxguard-accounting': {
+        title: 'FXGuard Accounting',
+        desc: 'محاسبة لفرق المال والصرافة — ما زالت في قائمة الانتظار. العرض العام منفصل عن CRM.'
+      },
+      bizclean: {
+        name: 'BizClean',
+        title: 'نظافة وتعقيم',
+        desc: 'معقّم يد أوتوماتيكي BizClean V5 — إنتاج بيزدوار؛ RINOTEX 1400 عبر وحدة «Imen Sahand Padideh»؛ تغطية ISNA والإذاعة.'
+      },
+      biztouch: {
+        name: 'BizTouch',
+        title: 'حلول بلا لمس',
+        desc: 'أجهزة بلا لمس للمداخل والنظافة والأماكن العامة.'
+      },
+      bizroll: {
+        name: 'BizRoll',
+        title: 'لفّ وتغليف',
+        desc: 'آلات لفّ وتغليف للإنتاج الصناعي.'
+      },
+      'sealer-home': {
+        name: 'لحّام تفريغ منزلي',
+        title: 'لحام منزلي',
+        desc: 'آلة تفريغ للمنزل والورش الصغيرة.'
+      },
+      'sealer-pneumatic': {
+        name: 'لحّام تفريغ هوائي',
+        title: 'لحام هوائي',
+        desc: 'آلة تفريغ هوائية لخطوط نصف صناعية.'
+      },
+      'sealer-robotic': {
+        name: 'لحّام تفريغ روبوتي',
+        title: 'لحام روبوتي',
+        desc: 'خط لحام روبوتي للتغليف الكمي.'
+      },
+      'mask-production': {
+        name: 'خط كمامات ثلاثية الطبقات',
+        title: 'آلة كمامات',
+        desc: 'تجهيز كمامات ثلاثية الطبقات — طُوّر خلال كورونا لتلبية طلب معدات الوقاية.'
+      },
+      'heat-pad-production': {
+        name: 'خط وسائد التدفئة',
+        title: 'آلة الوسادة الحرارية',
+        desc: 'تجهيز إنتاج وسادة التدفئة للاستخدام الطبي والتدفئة.'
       }
     }
   });
   deepMerge(ar, homeSectionsAr);
   if (!ar.pages) ar.pages = {};
   deepMerge(ar.pages, pageSeoAr);
+  if (!ar.caseStudy) ar.caseStudy = {};
+  ar.caseStudy.asilFeed = {
+    hero: { tag: 'نموذج تصميم ويب', title: 'ASIL — موقع وخادم وبريد الشركة', desc: 'علامة أعلاف خيول ومواشٍ في دبي — موقع ثنائي اللغة وخادم وبريد مؤسسي من Bizdavar Group' },
+    about: {
+      title: 'عن المشروع',
+      body: '<strong>ASIL</strong> من عملاء Bizdavar Group — علامة تغذية الخيول والمواشي التابعة لـ Bio Balance International Foodstuff Trading LLC في دبي. صممنا الموقع ثنائي اللغة وأعددنا الخادم وبريد الشركة على النطاق asilfeed.com. هذه الصفحة <strong>نموذج تصميم ويب وبنية تحتية</strong>.',
+      servicesTitle: 'ما نفّذته Bizdavar',
+      services: ['تصميم وتطوير موقع مؤسسي ثنائي اللغة (الإنجليزية والعربية)', 'كتالوج المنتجات ومساعد اختيار العلف وصفحات التواصل', 'تشغيل الخادم واستضافة النطاق asilfeed.com', 'صناديق بريد الشركة على النطاق', 'تخطيط الجوال وهيكل المحتوى'],
+      clientTitle: 'مجال عمل العميل',
+      clientBody: 'تقدّم ASIL أعلاف الخيول والفيتامينات والمكمّلات وأعلاف الإبل والأغنام والماعز لظروف الخليج. تفاصيل المنتجات منشورة على الموقع الرسمي للعميل.',
+      challengeTitle: 'تحدّي المشروع',
+      challenge: 'احتاجت العلامة في دبي إلى موقع ثنائي اللغة وخادم مستقر وبريد شركة على نطاقها حتى ترى الإسطبلات وعملاء المنطقة المنتجات وطرق التواصل في مكان واحد.',
+      resultsTitle: 'النتائج',
+      result1: 'موقع asilfeed.com يعمل ويعرض الأعلاف والمكمّلات والمواشي',
+      result2: 'الخادم يعمل والموقع مستضاف على بنية الشركة',
+      result3: 'بريد الشركة فعّال، بما فيه info@asilfeed.com',
+      ctaSite: 'عرض موقع ASIL',
+      ctaOrder: 'طلب موقع مشابه',
+      ctaPortfolio: 'أعمال أخرى',
+      siteTitle: 'خريطة الموقع'
+    },
+    shots: { hero: 'الصفحة الرئيسية — تغذية طبيعية للخيول في الحر', why: 'أربعة أسباب لاختيار ASIL: مناخ الخليج، مكوّنات طبيعية، دعم خبراء، توريد من دبي', range: 'ثلاث فئات: أعلاف الخيول، فيتامينات ومكمّلات، أعلاف المواشي', feeds: 'كتالوج أعلاف الخيول', supplements: 'كتالوج الفيتامينات والمكمّلات', pack: 'تغليف كيس العلف، إلى جانب الكتالوج', product: 'صفحة منتج ASIL Endurance', guide: 'دليل التغذية والفوائد والاستخدام المناسب', related: 'منتجات ذات صلة في صفحة المنتج', finder: 'Feed Finder ومقالات استشارة التغذية', about: 'عن Bio Balance International', footer: 'تذييل التواصل — هاتفا دبي وواتساب وinfo@asilfeed.com' },
+    geoText: 'نموذج موقع وخادم وبريد مؤسسي لعلامات الأعلاف في الإمارات والخليج — Bizdavar Group.'
+  };
   if (!ar.blogPage) ar.blogPage = {};
   deepMerge(ar.blogPage, {
     hero: {
