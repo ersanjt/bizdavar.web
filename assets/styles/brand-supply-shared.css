@@ -20,7 +20,7 @@
   border-bottom: 4px solid var(--brand-accent);
 }
 
-.teltonika-hero::before, .gamak-hero::before, .digi-hero::before, .teraoka-hero, .uwt-hero::before {
+.teltonika-hero::before, .gamak-hero::before, .digi-hero::before, .teraoka-hero::before, .uwt-hero::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -30,7 +30,7 @@
   pointer-events: none;
 }
 
-.teltonika-hero .container, .gamak-hero .container, .digi-hero .container, .teraoka-hero, .uwt-hero .container {
+.teltonika-hero .container, .gamak-hero .container, .digi-hero .container, .teraoka-hero .container, .uwt-hero .container {
   position: relative;
   z-index: 1;
   display: grid;
@@ -77,7 +77,7 @@
   letter-spacing: -0.03em;
 }
 
-.teltonika-hero__title span, .gamak-hero__title span, .digi-hero__title span, .teraoka-hero__title, .uwt-hero__title span { color: var(--brand-accent); }
+.teltonika-hero__title span, .gamak-hero__title span, .digi-hero__title span, .teraoka-hero__title span, .uwt-hero__title span { color: var(--brand-accent); }
 
 .teltonika-hero__subtitle, .gamak-hero__subtitle, .digi-hero__subtitle, .teraoka-hero__subtitle, .uwt-hero__subtitle {
   font-family: var(--font-display);
@@ -114,31 +114,31 @@
   box-shadow: var(--shadow-sm);
 }
 
-.teltonika-hero__stat strong, .gamak-hero__stat strong, .digi-hero__stat strong, .teraoka-hero__stat, .uwt-hero__stat strong {
+.teltonika-hero__stat strong, .gamak-hero__stat strong, .digi-hero__stat strong, .teraoka-hero__stat strong, .uwt-hero__stat strong {
   display: block;
   font-size: var(--text-lg);
   color: #1a2b4a;
 }
 
-.teltonika-hero__stat span, .gamak-hero__stat span, .digi-hero__stat span, .teraoka-hero__stat, .uwt-hero__stat span {
+.teltonika-hero__stat span, .gamak-hero__stat span, .digi-hero__stat span, .teraoka-hero__stat span, .uwt-hero__stat span {
   font-size: var(--text-sm);
   color: var(--text-muted);
 }
 
-.teltonika-hero__visual img, .gamak-hero__visual img, .digi-hero__visual img, .teraoka-hero__visual, .uwt-hero__visual img {
+.teltonika-hero__visual img, .gamak-hero__visual img, .digi-hero__visual img, .teraoka-hero__visual img, .uwt-hero__visual img {
   border-radius: var(--radius-lg);
   box-shadow: 0 12px 40px rgba(5, 141, 155, 0.2);
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   max-height: 360px;
 }
 
-.teltonika-hero .btn--primary, .gamak-hero .btn--primary, .digi-hero .btn--primary, .teraoka-hero, .uwt-hero .btn--primary {
+.teltonika-hero .btn--primary, .gamak-hero .btn--primary, .digi-hero .btn--primary, .teraoka-hero .btn--primary, .uwt-hero .btn--primary {
   background: var(--brand-accent);
   border-color: var(--brand-accent);
 }
 
-.teltonika-hero .btn--primary:hover, .gamak-hero .btn--primary:hover, .digi-hero .btn--primary:hover, .teraoka-hero, .uwt-hero .btn--primary:hover {
+.teltonika-hero .btn--primary:hover, .gamak-hero .btn--primary:hover, .digi-hero .btn--primary:hover, .teraoka-hero .btn--primary:hover, .uwt-hero .btn--primary:hover {
   background: #003d82;
   border-color: #003d82;
 }
@@ -164,10 +164,10 @@
   overflow: hidden;
 }
 
-.teltonika-highlight-card__media img, .gamak-highlight-card__media img, .digi-highlight-card__media img, .teraoka-highlight-card__media, .uwt-highlight-card__media img {
+.teltonika-highlight-card__media img, .gamak-highlight-card__media img, .digi-highlight-card__media img, .teraoka-highlight-card__media img, .uwt-highlight-card__media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .teltonika-highlight-card__body, .gamak-highlight-card__body, .digi-highlight-card__body, .teraoka-highlight-card__body, .uwt-highlight-card__body {
@@ -194,7 +194,7 @@
   gap: 12px;
 }
 
-.teltonika-highlight-card__actions .btn, .gamak-highlight-card__actions .btn, .digi-highlight-card__actions .btn, .teraoka-highlight-card__actions, .uwt-highlight-card__actions .btn {
+.teltonika-highlight-card__actions .btn, .gamak-highlight-card__actions .btn, .digi-highlight-card__actions .btn, .teraoka-highlight-card__actions .btn, .uwt-highlight-card__actions .btn {
   width: 100%;
   justify-content: center;
 }
@@ -214,13 +214,13 @@
   margin: 4px 0 6px;
 }
 
-.teltonika-highlight-card h3, .gamak-highlight-card h3, .digi-highlight-card h3, .teraoka-highlight-card, .uwt-highlight-card h3 {
+.teltonika-highlight-card h3, .gamak-highlight-card h3, .digi-highlight-card h3, .teraoka-highlight-card h3, .uwt-highlight-card h3 {
   font-size: var(--text-base);
   margin: 0 0 6px;
   color: #1a2b4a;
 }
 
-.teltonika-highlight-card p, .gamak-highlight-card p, .digi-highlight-card p, .teraoka-highlight-card, .uwt-highlight-card p {
+.teltonika-highlight-card p, .gamak-highlight-card p, .digi-highlight-card p, .teraoka-highlight-card p, .uwt-highlight-card p {
   font-size: var(--text-sm);
   color: var(--text-muted);
   line-height: 1.5;
@@ -249,7 +249,7 @@
   transition: var(--transition);
 }
 
-.teltonika-cat-nav__item:hover, .gamak-cat-nav__item:hover, .digi-cat-nav__item:hover, .teraoka-cat-nav__item, .uwt-cat-nav__item:hover {
+.teltonika-cat-nav__item:hover, .gamak-cat-nav__item:hover, .digi-cat-nav__item:hover, .teraoka-cat-nav__item:hover, .uwt-cat-nav__item:hover {
   background: var(--brand-accent);
   color: var(--white);
   border-color: var(--brand-accent);
@@ -270,10 +270,10 @@
   border-bottom: 2px solid #b8e8ec;
 }
 
-.teltonika-category-block__visual img, .gamak-category-block__visual img, .digi-category-block__visual img, .teraoka-category-block__visual, .uwt-category-block__visual img {
+.teltonika-category-block__visual img, .gamak-category-block__visual img, .digi-category-block__visual img, .teraoka-category-block__visual img, .uwt-category-block__visual img {
   width: 100%;
   height: 130px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
 }
@@ -291,13 +291,13 @@
   color: var(--brand-accent);
 }
 
-.teltonika-category-block__head h2, .gamak-category-block__head h2, .digi-category-block__head h2, .teraoka-category-block__head, .uwt-category-block__head h2 {
+.teltonika-category-block__head h2, .gamak-category-block__head h2, .digi-category-block__head h2, .teraoka-category-block__head h2, .uwt-category-block__head h2 {
   font-size: var(--text-2xl);
   color: #003d82;
   margin-bottom: 4px;
 }
 
-.teltonika-category-block__head small, .gamak-category-block__head small, .digi-category-block__head small, .teraoka-category-block__head, .uwt-category-block__head small {
+.teltonika-category-block__head small, .gamak-category-block__head small, .digi-category-block__head small, .teraoka-category-block__head small, .uwt-category-block__head small {
   display: block;
   color: var(--text-muted);
   font-size: var(--text-sm);
@@ -305,7 +305,7 @@
   text-align: right;
 }
 
-.teltonika-category-block__head p, .gamak-category-block__head p, .digi-category-block__head p, .teraoka-category-block__head, .uwt-category-block__head p {
+.teltonika-category-block__head p, .gamak-category-block__head p, .digi-category-block__head p, .teraoka-category-block__head p, .uwt-category-block__head p {
   font-size: var(--text-sm);
   color: var(--text-muted);
   margin-top: 6px;
@@ -447,7 +447,7 @@
   background: #f4fbfb;
 }
 
-.teltonika-series-card--featured::after, .gamak-series-card--featured::after, .digi-series-card--featured::after, .teraoka-series-card--featured, .uwt-series-card--featured::after {
+.teltonika-series-card--featured::after, .gamak-series-card--featured::after, .digi-series-card--featured::after, .teraoka-series-card--featured::after, .uwt-series-card--featured::after {
   content: '★';
   position: absolute;
   top: 8px;
@@ -456,19 +456,19 @@
   font-size: 12px;
 }
 
-.teltonika-series-card:hover, .gamak-series-card:hover, .digi-series-card:hover, .teraoka-series-card, .uwt-series-card:hover {
+.teltonika-series-card:hover, .gamak-series-card:hover, .digi-series-card:hover, .teraoka-series-card:hover, .uwt-series-card:hover {
   border-color: var(--brand-accent);
   box-shadow: var(--shadow-sm);
 }
 
-.teltonika-series-card strong, .gamak-series-card strong, .digi-series-card strong, .teraoka-series-card, .uwt-series-card strong {
+.teltonika-series-card strong, .gamak-series-card strong, .digi-series-card strong, .teraoka-series-card strong, .uwt-series-card strong {
   display: block;
   font-size: var(--text-sm);
   color: #1a2b4a;
   margin-bottom: 4px;
 }
 
-.teltonika-series-card span, .gamak-series-card span, .digi-series-card span, .teraoka-series-card, .uwt-series-card span {
+.teltonika-series-card span, .gamak-series-card span, .digi-series-card span, .teraoka-series-card span, .uwt-series-card span {
   font-size: 12px;
   color: var(--text-muted);
 }
@@ -488,7 +488,7 @@
   transition: var(--transition);
 }
 
-.teltonika-industry-card:hover, .gamak-industry-card:hover, .digi-industry-card:hover, .teraoka-industry-card, .uwt-industry-card:hover {
+.teltonika-industry-card:hover, .gamak-industry-card:hover, .digi-industry-card:hover, .teraoka-industry-card:hover, .uwt-industry-card:hover {
   border-color: var(--brand-accent);
   box-shadow: var(--shadow-sm);
   transform: translateY(-2px);
@@ -499,10 +499,10 @@
   overflow: hidden;
 }
 
-.teltonika-industry-card__media img, .gamak-industry-card__media img, .digi-industry-card__media img, .teraoka-industry-card__media, .uwt-industry-card__media img {
+.teltonika-industry-card__media img, .gamak-industry-card__media img, .digi-industry-card__media img, .teraoka-industry-card__media img, .uwt-industry-card__media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .teltonika-industry-card__icon, .gamak-industry-card__icon, .digi-industry-card__icon, .teraoka-industry-card__icon, .uwt-industry-card__icon {
@@ -512,13 +512,13 @@
   color: var(--brand-accent);
 }
 
-.teltonika-industry-card strong, .gamak-industry-card strong, .digi-industry-card strong, .teraoka-industry-card, .uwt-industry-card strong {
+.teltonika-industry-card strong, .gamak-industry-card strong, .digi-industry-card strong, .teraoka-industry-card strong, .uwt-industry-card strong {
   display: block;
   font-size: var(--text-base);
   margin-bottom: 4px;
 }
 
-.teltonika-industry-card small, .gamak-industry-card small, .digi-industry-card small, .teraoka-industry-card, .uwt-industry-card small {
+.teltonika-industry-card small, .gamak-industry-card small, .digi-industry-card small, .teraoka-industry-card small, .uwt-industry-card small {
   display: block;
   font-size: 11px;
   color: var(--text-muted);
@@ -527,11 +527,11 @@
 
 .teltonika-industry-card strong,
 .teltonika-industry-card small,
-.teltonika-industry-card p, .gamak-industry-card p, .digi-industry-card p, .teraoka-industry-card, .uwt-industry-card p {
+.teltonika-industry-card p, .gamak-industry-card p, .digi-industry-card p, .teraoka-industry-card p, .uwt-industry-card p {
   padding: 0 12px;
 }
 
-.teltonika-industry-card p, .gamak-industry-card p, .digi-industry-card p, .teraoka-industry-card, .uwt-industry-card p {
+.teltonika-industry-card p, .gamak-industry-card p, .digi-industry-card p, .teraoka-industry-card p, .uwt-industry-card p {
   font-size: 12px;
   color: var(--text-muted);
   margin: 8px 0 14px;
@@ -554,10 +554,10 @@
   gap: 12px;
 }
 
-.teltonika-academy-block__visual img, .gamak-academy-block__visual img, .digi-academy-block__visual img, .teraoka-academy-block__visual, .uwt-academy-block__visual img {
+.teltonika-academy-block__visual img, .gamak-academy-block__visual img, .digi-academy-block__visual img, .teraoka-academy-block__visual img, .uwt-academy-block__visual img {
   width: 100%;
   border-radius: var(--radius);
-  object-fit: cover;
+  object-fit: contain;
   min-height: 160px;
 }
 
@@ -565,7 +565,7 @@
   margin-top: 24px;
 }
 
-.teltonika-academy-block h3, .gamak-academy-block h3, .digi-academy-block h3, .teraoka-academy-block, .uwt-academy-block h3 {
+.teltonika-academy-block h3, .gamak-academy-block h3, .digi-academy-block h3, .teraoka-academy-block h3, .uwt-academy-block h3 {
   font-size: var(--text-2xl);
   margin-bottom: 10px;
 }
@@ -578,14 +578,14 @@
   list-style: none;
 }
 
-.teltonika-academy-topics li, .gamak-academy-topics li, .digi-academy-topics li, .teraoka-academy-topics, .uwt-academy-topics li {
+.teltonika-academy-topics li, .gamak-academy-topics li, .digi-academy-topics li, .teraoka-academy-topics li, .uwt-academy-topics li {
   background: rgba(255, 255, 255, 0.12);
   padding: 8px 14px;
   border-radius: var(--radius-full);
   font-size: var(--text-sm);
 }
 
-.teltonika-academy-block .btn--yellow, .gamak-academy-block .btn--yellow, .digi-academy-block .btn--yellow, .teraoka-academy-block, .uwt-academy-block .btn--yellow {
+.teltonika-academy-block .btn--yellow, .gamak-academy-block .btn--yellow, .digi-academy-block .btn--yellow, .teraoka-academy-block .btn--yellow, .uwt-academy-block .btn--yellow {
   background: var(--brand-accent);
   color: var(--white);
   border-color: var(--brand-accent);
@@ -615,7 +615,7 @@
   color: var(--brand-accent);
 }
 
-.teltonika-trust-item strong, .gamak-trust-item strong, .digi-trust-item strong, .teraoka-trust-item, .uwt-trust-item strong {
+.teltonika-trust-item strong, .gamak-trust-item strong, .digi-trust-item strong, .teraoka-trust-item strong, .uwt-trust-item strong {
   display: block;
   font-family: var(--font-display);
   font-weight: var(--fw-bold);
@@ -624,7 +624,7 @@
   margin-bottom: 2px;
 }
 
-.teltonika-trust-item span, .gamak-trust-item span, .digi-trust-item span, .teraoka-trust-item, .uwt-trust-item span {
+.teltonika-trust-item span, .gamak-trust-item span, .digi-trust-item span, .teraoka-trust-item span, .uwt-trust-item span {
   font-family: var(--font-body);
   font-size: 11px;
   opacity: 0.82;
@@ -653,13 +653,13 @@
   margin-bottom: 14px;
 }
 
-.teltonika-why-card h3, .gamak-why-card h3, .digi-why-card h3, .teraoka-why-card, .uwt-why-card h3 {
+.teltonika-why-card h3, .gamak-why-card h3, .digi-why-card h3, .teraoka-why-card h3, .uwt-why-card h3 {
   font-size: var(--text-lg);
   margin-bottom: 10px;
   color: #1a2b4a;
 }
 
-.teltonika-why-card p, .gamak-why-card p, .digi-why-card p, .teraoka-why-card, .uwt-why-card p {
+.teltonika-why-card p, .gamak-why-card p, .digi-why-card p, .teraoka-why-card p, .uwt-why-card p {
   font-size: var(--text-sm);
   color: var(--text-muted);
   line-height: var(--leading-relaxed);
@@ -694,13 +694,13 @@
   font-size: var(--text-sm);
 }
 
-.teltonika-step h3, .gamak-step h3, .digi-step h3, .teraoka-step, .uwt-step h3 {
+.teltonika-step h3, .gamak-step h3, .digi-step h3, .teraoka-step h3, .uwt-step h3 {
   font-size: var(--text-base);
   margin-bottom: 8px;
   color: #1a2b4a;
 }
 
-.teltonika-step p, .gamak-step p, .digi-step p, .teraoka-step, .uwt-step p {
+.teltonika-step p, .gamak-step p, .digi-step p, .teraoka-step p, .uwt-step p {
   font-size: 12px;
   color: var(--text-muted);
   line-height: 1.5;
@@ -718,7 +718,7 @@
   line-height: var(--leading-relaxed);
 }
 
-.teltonika-highlight-card .teltonika-btn-inquiry, .gamak-highlight-card .gamak-btn-inquiry, .digi-highlight-card .digi-btn-inquiry, .teraoka-highlight-card, .uwt-highlight-card .teraoka-btn-inquiry, .uwt-btn-inquiry {
+.teltonika-highlight-card .teltonika-btn-inquiry, .gamak-highlight-card .gamak-btn-inquiry, .digi-highlight-card .digi-btn-inquiry, .teraoka-highlight-card .teraoka-btn-inquiry, .uwt-highlight-card .uwt-btn-inquiry {
   margin-top: 4px;
 }
 
@@ -737,7 +737,7 @@
   transition: var(--transition);
 }
 
-.teltonika-iran-card:hover, .gamak-iran-card:hover, .digi-iran-card:hover, .teraoka-iran-card, .uwt-iran-card:hover {
+.teltonika-iran-card:hover, .gamak-iran-card:hover, .digi-iran-card:hover, .teraoka-iran-card:hover, .uwt-iran-card:hover {
   border-color: var(--brand-accent);
   box-shadow: var(--shadow-md);
   transform: translateY(-3px);
@@ -748,10 +748,10 @@
   overflow: hidden;
 }
 
-.teltonika-iran-card__media img, .gamak-iran-card__media img, .digi-iran-card__media img, .teraoka-iran-card__media, .uwt-iran-card__media img {
+.teltonika-iran-card__media img, .gamak-iran-card__media img, .digi-iran-card__media img, .teraoka-iran-card__media img, .uwt-iran-card__media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .teltonika-iran-card__body, .gamak-iran-card__body, .digi-iran-card__body, .teraoka-iran-card__body, .uwt-iran-card__body {
@@ -764,13 +764,13 @@
   display: block;
 }
 
-.teltonika-iran-card h3, .gamak-iran-card h3, .digi-iran-card h3, .teraoka-iran-card, .uwt-iran-card h3 {
+.teltonika-iran-card h3, .gamak-iran-card h3, .digi-iran-card h3, .teraoka-iran-card h3, .uwt-iran-card h3 {
   font-size: var(--text-base);
   margin-bottom: 8px;
   color: #1a2b4a;
 }
 
-.teltonika-iran-card p, .gamak-iran-card p, .digi-iran-card p, .teraoka-iran-card, .uwt-iran-card p {
+.teltonika-iran-card p, .gamak-iran-card p, .digi-iran-card p, .teraoka-iran-card p, .uwt-iran-card p {
   font-size: var(--text-sm);
   color: var(--text-muted);
   line-height: var(--leading-relaxed);
@@ -785,7 +785,7 @@
   color: var(--brand-accent);
 }
 
-.teltonika-series-card__link:hover, .gamak-series-card__link:hover, .digi-series-card__link:hover, .teraoka-series-card__link, .uwt-series-card__link:hover {
+.teltonika-series-card__link:hover, .gamak-series-card__link:hover, .digi-series-card__link:hover, .teraoka-series-card__link:hover, .uwt-series-card__link:hover {
   color: #1a2b4a;
 }
 
@@ -804,13 +804,13 @@
   border-right: 4px solid var(--brand-accent);
 }
 
-.teltonika-supply-card h4, .gamak-supply-card h4, .digi-supply-card h4, .teraoka-supply-card, .uwt-supply-card h4 {
+.teltonika-supply-card h4, .gamak-supply-card h4, .digi-supply-card h4, .teraoka-supply-card h4, .uwt-supply-card h4 {
   font-size: var(--text-base);
   margin-bottom: 8px;
   color: #1a2b4a;
 }
 
-.teltonika-supply-card p, .gamak-supply-card p, .digi-supply-card p, .teraoka-supply-card, .uwt-supply-card p {
+.teltonika-supply-card p, .gamak-supply-card p, .digi-supply-card p, .teraoka-supply-card p, .uwt-supply-card p {
   font-size: var(--text-sm);
   color: var(--text-muted);
   line-height: var(--leading-relaxed);
@@ -828,7 +828,7 @@
   border: 1px solid #b8e4e9;
 }
 
-.teltonika-official-note a, .gamak-official-note a, .digi-official-note a, .teraoka-official-note, .uwt-official-note a {
+.teltonika-official-note a, .gamak-official-note a, .digi-official-note a, .teraoka-official-note a, .uwt-official-note a {
   color: #003d82;
   font-weight: 600;
 }
@@ -847,7 +847,7 @@
   overflow: hidden;
 }
 
-.teltonika-faq__item summary, .gamak-faq__item summary, .digi-faq__item summary, .teraoka-faq__item, .uwt-faq__item summary {
+.teltonika-faq__item summary, .gamak-faq__item summary, .digi-faq__item summary, .teraoka-faq__item summary, .uwt-faq__item summary {
   padding: 18px 20px;
   font-weight: 600;
   cursor: pointer;
@@ -855,22 +855,22 @@
   color: #1a2b4a;
 }
 
-.teltonika-faq__item summary::-webkit-details-marker, .gamak-faq__item summary::-webkit-details-marker, .digi-faq__item summary::-webkit-details-marker, .teraoka-faq__item, .uwt-faq__item summary::-webkit-details-marker {
+.teltonika-faq__item summary::-webkit-details-marker, .gamak-faq__item summary::-webkit-details-marker, .digi-faq__item summary::-webkit-details-marker, .teraoka-faq__item summary::-webkit-details-marker, .uwt-faq__item summary::-webkit-details-marker {
   display: none;
 }
 
-.teltonika-faq__item summary::before, .gamak-faq__item summary::before, .digi-faq__item summary::before, .teraoka-faq__item, .uwt-faq__item summary::before {
+.teltonika-faq__item summary::before, .gamak-faq__item summary::before, .digi-faq__item summary::before, .teraoka-faq__item summary::before, .uwt-faq__item summary::before {
   content: '+';
   float: left;
   font-weight: 800;
   color: var(--brand-accent);
 }
 
-.teltonika-faq__item[open] summary::before, .gamak-faq__item[open] summary::before, .digi-faq__item[open] summary::before, .teraoka-faq__item, .uwt-faq__item[open] summary::before {
+.teltonika-faq__item[open] summary::before, .gamak-faq__item[open] summary::before, .digi-faq__item[open] summary::before, .teraoka-faq__item[open] summary::before, .uwt-faq__item[open] summary::before {
   content: '−';
 }
 
-.teltonika-faq__item p, .gamak-faq__item p, .digi-faq__item p, .teraoka-faq__item, .uwt-faq__item p {
+.teltonika-faq__item p, .gamak-faq__item p, .digi-faq__item p, .teraoka-faq__item p, .uwt-faq__item p {
   padding: 0 20px 18px;
   font-size: var(--text-sm);
   color: var(--text-muted);
@@ -897,11 +897,11 @@
   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
 }
 
-.teltonika-sticky-cta.is-visible, .gamak-sticky-cta.is-visible, .digi-sticky-cta.is-visible, .teraoka-sticky-cta, .uwt-sticky-cta.is-visible {
+.teltonika-sticky-cta.is-visible, .gamak-sticky-cta.is-visible, .digi-sticky-cta.is-visible, .teraoka-sticky-cta.is-visible, .uwt-sticky-cta.is-visible {
   transform: translateY(0);
 }
 
-.teltonika-sticky-cta span, .gamak-sticky-cta span, .digi-sticky-cta span, .teraoka-sticky-cta, .uwt-sticky-cta span {
+.teltonika-sticky-cta span, .gamak-sticky-cta span, .digi-sticky-cta span, .teraoka-sticky-cta span, .uwt-sticky-cta span {
   font-weight: 600;
   font-size: var(--text-sm);
 }

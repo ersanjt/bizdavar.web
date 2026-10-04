@@ -4,7 +4,7 @@
  */
 (function () {
   const IMG = 'assets/images/auto-moto/';
-  const CAT = IMG + 'categories/';
+  const CAT = 'assets/icons/categories/';
 
   const SIZE_HELMET = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
   const SIZE_JACKET = ['S', 'M', 'L', 'XL', 'XXL', '3XL'];

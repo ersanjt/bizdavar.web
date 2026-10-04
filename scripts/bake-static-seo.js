@@ -612,6 +612,22 @@ function upsertPageJsonLd(html, route, meta, locale) {
   return html.replace(/<\/head>/i, `${tag}</head>`);
 }
 
+const GEO_BY_LOCALE = {
+  fa: { region: 'IR-03', placename: 'تبریز, استانبول' },
+  tr: { region: 'TR-34', placename: 'İstanbul' },
+  en: { region: 'TR-34', placename: 'Istanbul, Tabriz' },
+  ru: { region: 'TR-34', placename: 'Istanbul, Tabriz' },
+  ar: { region: 'TR-34', placename: 'Istanbul, Tabriz' }
+};
+
+function upsertGeo(html, localeCode) {
+  const geo = GEO_BY_LOCALE[localeCode];
+  if (!geo || !/<meta\s+name=["']geo\.placename["']/i.test(html)) return html;
+  return html
+    .replace(/<meta\s+name=["']geo\.region["'][^>]*>/i, `<meta name="geo.region" content="${escAttr(geo.region)}">`)
+    .replace(/<meta\s+name=["']geo\.placename["'][^>]*>/i, `<meta name="geo.placename" content="${escAttr(geo.placename)}">`);
+}
+
 function setHtmlLangDir(html, lang, dir) {
   return html.replace(
     /<html\b([^>]*)>/i,
@@ -881,6 +897,9 @@ function applySeo(html, route, meta, locale) {
   out = setHtmlLangDir(out, locale.htmlLang, locale.dir);
   out = upsertTitle(out, meta.title);
   out = upsertDescription(out, meta.description);
+  out = upsertKeywords(out, meta.keywords);
+  out = upsertGeo(out, locale.code);
+  out = upsertPageJsonLd(out, route, meta, locale);
   if (route === '/') {
     out = upsertJsonLdScript(out, 'jsonld-graph-static', buildHomeSiteGraph());
   }
@@ -910,8 +929,11 @@ let localeFiles = 0;
 let skipped = 0;
 
 const faLocale = LOCALES[0];
+const onlyArg = process.argv.find(a => a.startsWith('--only='));
+const onlyRoutes = onlyArg ? onlyArg.slice(7).split(',').filter(Boolean) : null;
 
 for (const [rel, route] of Object.entries(FILE_TO_ROUTE)) {
+  if (onlyRoutes && !onlyRoutes.includes(route)) continue;
   const file = path.join(ROOT, rel);
   if (!fs.existsSync(file)) {
     console.warn('missing', rel);

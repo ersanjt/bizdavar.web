@@ -381,6 +381,7 @@ window.BIZDAVAR_LOCALES = {
       foundedDisplay: '۱۳۹۲ / ۲۰۱۳',
       sources: 'منابع',
       founderLinkedin: 'LinkedIn بنیان‌گذار',
+      founderSite: 'وبسایت شخصی بنیان‌گذار',
       portfolio: 'نمونه‌کارها',
       fullAbout: 'درباره کامل',
       highlights: [
@@ -1044,6 +1045,7 @@ window.BIZDAVAR_LOCALES = {
       foundedDisplay: '2013',
       sources: 'Kaynaklar',
       founderLinkedin: 'Kurucu LinkedIn',
+      founderSite: 'Kurucunun kişisel sitesi',
       portfolio: 'Portfolyo',
       fullAbout: 'Tam hakkımızda',
       highlights: [
@@ -1719,6 +1721,7 @@ window.BIZDAVAR_LOCALES = {
       foundedDisplay: '2013',
       sources: 'Sources',
       founderLinkedin: 'Founder LinkedIn',
+      founderSite: 'Founder personal website',
       portfolio: 'Portfolio',
       fullAbout: 'Full about page',
       highlights: [

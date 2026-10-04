@@ -3,9 +3,21 @@
  */
 
 /* Hero */
+.services-hero h1 {
+  max-width: 24ch;
+  margin-inline: auto;
+  text-wrap: balance;
+}
+
+.services-hero p {
+  max-width: 46rem;
+  margin-inline: auto;
+}
+
 .services-hero .services-hero-actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 12px;
   margin-top: 22px;
 }
@@ -13,6 +25,7 @@
 .services-hero-stats {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 12px;
   margin-top: 26px;
 }
@@ -1065,12 +1078,11 @@
 }
 
 .service-block--reverse .service-block__inner {
-  direction: ltr;
+  grid-template-columns: 0.95fr 1.05fr;
 }
 
-.service-block--reverse .service-block__content,
 .service-block--reverse .service-block__visual {
-  direction: rtl;
+  order: -1;
 }
 
 .service-block__content > p {

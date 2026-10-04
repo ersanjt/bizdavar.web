@@ -325,8 +325,8 @@
             '@type': 'Person',
             name: 'Ersan Jahed Tabrizi',
             jobTitle: 'Founder',
-            url: C.contact.linkedin,
-            sameAs: C.contact.linkedin
+            url: 'https://ersanjahedtabrizi.ir/',
+            sameAs: [C.contact.linkedin, 'https://ersanjahedtabrizi.ir/'].filter(Boolean)
           },
           areaServed: ['TR', 'AM', 'IR', 'AE', 'DE', 'US', 'GB', 'LB', 'IQ', 'GE', 'IT'],
           availableLanguage: ['fa', 'tr', 'en', 'ru', 'ar'],
@@ -543,6 +543,10 @@
   window.injectServiceSchema = function () {
     if (!C.services || !C.services.length) return;
 
+    const cards = (window.BIZDAVAR_I18N && window.BIZDAVAR_I18N.raw('servicesPage.cards')) || [];
+    const lang = document.documentElement.lang || 'fa';
+    const strip = (s) => String(s || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+
     const ld = {
 
       '@context': 'https://schema.org',
@@ -550,6 +554,8 @@
       '@type': 'ItemList',
 
       name: t('seo.schemaServices', 'خدمات بیزدوار گروپ'),
+
+      inLanguage: lang,
 
       itemListElement: C.services.map((s, i) => ({
 
@@ -561,15 +567,19 @@
 
           '@type': 'Service',
 
-          name: s.title,
+          name: strip((cards[i] && cards[i].title) || s.title),
+
+          description: strip(cards[i] && cards[i].desc) || undefined,
+
+          serviceType: strip((cards[i] && cards[i].title) || s.title),
 
           provider: {
             '@type': 'Organization',
-            name: C.siteNameEn,
-            areaServed: ['IR', 'TR', 'AM', 'AE', 'DE']
+            '@id': `${C.baseUrl || 'https://bizdavar.com'}/#organization`,
+            name: C.siteNameEn
           },
 
-          areaServed: ['IR', 'TR', 'AM', 'AE', 'DE'],
+          areaServed: ['IR', 'TR', 'AM', 'AE', 'DE'].map(code => ({ '@type': 'Country', name: code })),
 
           url: absUrl(s.slug)
 
@@ -865,6 +875,8 @@
     script.textContent = JSON.stringify(data);
 
   }
+
+  window.injectJsonLd = injectJsonLd;
 
   window.injectIntelFaqSchema = function () {
     const I = window.BIZDAVAR_INTEL;

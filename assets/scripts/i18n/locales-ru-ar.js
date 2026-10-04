@@ -1058,6 +1058,7 @@
       foundedDisplay: '2013',
       sources: 'Источники',
       founderLinkedin: 'LinkedIn основателя',
+      founderSite: 'Личный сайт основателя',
       portfolio: 'Портфолио',
       fullAbout: 'Полная страница о нас'
     },
@@ -1128,6 +1129,7 @@
       foundedDisplay: '٢٠١٣',
       sources: 'المصادر',
       founderLinkedin: 'LinkedIn المؤسس',
+      founderSite: 'الموقع الشخصي للمؤسس',
       portfolio: 'الأعمال',
       fullAbout: 'صفحة من نحن كاملة'
     },

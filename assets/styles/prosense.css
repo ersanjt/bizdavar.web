@@ -202,7 +202,7 @@ body[data-page="prosense"] .section__desc {
 .prosense-highlight-card__media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .prosense-highlight-card__media--product img {
@@ -337,7 +337,7 @@ body[data-page="prosense"] .section__desc {
 .prosense-category-block__visual img {
   width: 100%;
   height: 130px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
 }
@@ -639,7 +639,7 @@ body[data-page="prosense"] .section__desc {
 .prosense-industry-card__media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .prosense-industry-card__icon {
@@ -694,7 +694,7 @@ body[data-page="prosense"] .section__desc {
 .prosense-academy-block__visual img {
   width: 100%;
   border-radius: var(--radius);
-  object-fit: cover;
+  object-fit: contain;
   min-height: 160px;
 }
 
@@ -891,7 +891,7 @@ body[data-page="prosense"] .section__desc {
 .prosense-iran-card__media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .prosense-iran-card__body {

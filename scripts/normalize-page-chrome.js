@@ -125,7 +125,7 @@ function consolidateCss(html) {
   if (!out.includes('href="/assets/styles/site.css')) {
     out = out.replace(
       /(<link rel="apple-touch-icon"[^>]+>)/,
-      `$1\n  <link rel="stylesheet" href="/assets/styles/site.css?v=20260826d">`
+      `$1\n  <link rel="stylesheet" href="/assets/styles/site.css?v=20261003a">`
     );
   }
   pageCss.forEach(file => {

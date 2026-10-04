@@ -180,9 +180,11 @@
     });
   }
 
+  const ic = (name, size) => (window.BD_ICON ? window.BD_ICON(name, { size }) : '');
+
   // ─── Shell ───
   function navItem(id, label, icon) {
-    return `<button type="button" class="hub-nav__item${state.view === id ? ' is-active' : ''}" data-view="${id}">${icon} ${label}</button>`;
+    return `<button type="button" class="hub-nav__item${state.view === id ? ' is-active' : ''}" data-view="${id}">${ic(icon, 18)}<span>${label}</span></button>`;
   }
 
   function renderShell() {
@@ -194,10 +196,10 @@
             <span>CRM & Content</span>
           </div>
           <nav class="hub-nav">
-            ${navItem('dashboard', 'داشبورد', '📊')}
-            ${navItem('leads', 'سرنخ‌ها (CRM)', '👥')}
-            ${navItem('posts', 'مقالات (CMS)', '📝')}
-            ${navItem('faqs', 'سوالات متداول', '❓')}
+            ${navItem('dashboard', 'داشبورد', 'chart-bar')}
+            ${navItem('leads', 'سرنخ‌ها (CRM)', 'users')}
+            ${navItem('posts', 'مقالات (CMS)', 'article')}
+            ${navItem('faqs', 'سوالات متداول', 'help')}
           </nav>
           <div class="hub-sidebar__foot">
             ${esc(state.user?.name || '')}<br>
@@ -367,7 +369,7 @@
           ${state.faqs.map(f => `<tr>
             <td>${esc(f.question_fa)}</td>
             <td>${f.sort_order}</td>
-            <td>${f.is_published == 1 ? '✓ منتشر' : '— مخفی'}</td>
+            <td>${f.is_published == 1 ? ic('check', 14) + ' منتشر' : '— مخفی'}</td>
             <td><button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" data-edit-faq="${f.id}">ویرایش</button></td>
           </tr>`).join('') || '<tr><td colspan="4">سوالی نیست</td></tr>'}
         </tbody></table></div>
@@ -409,7 +411,7 @@
       <div class="hub-modal" role="dialog">
         <div class="hub-modal__head">
           <strong>${esc(l.first_name)} ${esc(l.last_name)}</strong>
-          <button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" id="closeModal">✕</button>
+          <button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" id="closeModal" aria-label="بستن">${ic('close', 16)}</button>
         </div>
         <div class="hub-modal__body">
           <p><strong>ایمیل:</strong> <span dir="ltr">${esc(l.email)}</span></p>
@@ -507,7 +509,7 @@
     backdrop.className = 'hub-modal-backdrop';
     backdrop.innerHTML = `
       <div class="hub-modal"><div class="hub-modal__head"><strong>${title}</strong>
-        <button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" id="closeModal">✕</button></div>
+        <button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" id="closeModal" aria-label="بستن">${ic('close', 16)}</button></div>
         <div class="hub-modal__body">${bodyHtml}</div>
         <div class="hub-modal__foot">
           <button type="button" class="hub-btn hub-btn--primary hub-btn--sm" id="saveModal">ذخیره</button>

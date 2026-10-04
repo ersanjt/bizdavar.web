@@ -503,7 +503,7 @@
               </article>
             `).join('')}
           </div>
-          <p class="intel-note text-center mt-24">${t('credibility.sources')}: <a href="${f.linkedin}" target="_blank" rel="noopener noreferrer me">${t('credibility.founderLinkedin')}</a> · <a href="${siteLink(R.portfolio)}">${t('credibility.portfolio')}</a> · <a href="${siteLink(R.about)}">${t('credibility.fullAbout')}</a></p>
+          <p class="intel-note text-center mt-24">${t('credibility.sources')}: <a href="${f.linkedin}" target="_blank" rel="noopener noreferrer me">${t('credibility.founderLinkedin')}</a>${f.website ? ` · <a href="${f.website}" target="_blank" rel="noopener me">${t('credibility.founderSite')}</a>` : ''} · <a href="${siteLink(R.portfolio)}">${t('credibility.portfolio')}</a> · <a href="${siteLink(R.about)}">${t('credibility.fullAbout')}</a></p>
         </div>
       </section>`;
   };
@@ -709,6 +709,7 @@
             <h3>${f.nameFa || f.name}</h3>
             <p>${f.titleFa || f.title} · ${f.experienceYears} ${L.years || 'سال'} · ${f.projectsCount} ${L.projects || 'پروژه'}</p>
             <a href="${f.linkedin}" class="service-card__link" target="_blank" rel="noopener noreferrer me">${L.linkedinProfile || 'پروفایل LinkedIn'}${linkArrow()}</a>
+            ${f.website ? `<a href="${f.website}" class="service-card__link" target="_blank" rel="noopener me">${L.personalSite || 'وبسایت شخصی'}${linkArrow()}</a>` : ''}
           </div>
           <p>${f.bioFa || f.bio || ''}</p>
           <div class="intel-tags">

@@ -573,13 +573,12 @@ body[data-page="liqui-moly"] .liqui-hero::before {
 .liqui-iran-card__media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
   transition: transform 0.5s ease;
 }
 
-.liqui-iran-card:hover .liqui-iran-card__media img {
-  transform: scale(1.04);
+.liqui-iran-card:hover .liqui-iran-card__media img {
 }
 
 .liqui-iran-card__body {

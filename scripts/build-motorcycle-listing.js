@@ -398,7 +398,7 @@ function page(loc) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <link rel="stylesheet" href="/assets/styles/site.css?v=20260910c">
+  <link rel="stylesheet" href="/assets/styles/site.css?v=20261003a">
   <link rel="preload" href="/assets/fonts/vazirmatn/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/estedad/Estedad-Black.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="image" type="image/webp" href="/assets/images/auto-moto/hero/auto-moto-hero-800.webp" fetchpriority="high">

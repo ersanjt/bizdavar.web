@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="motorcycle-helmet">
+  <rect width="240" height="240" rx="28" fill="#f4f0ea"/>
+  <circle cx="120" cy="120" r="84" fill="#fff"/>
+  <g transform="translate(66 66) scale(4.5)" fill="none" stroke="#1d1d1b" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5C4.5 10 8 5.5 13 5.5c4 0 7 3 7 7.5v3.5a1.5 1.5 0 01-1.5 1.5H6a1.5 1.5 0 01-1.5-1.5z"/><path d="M11 10.5h8.7v3.5H12.5a1.5 1.5 0 01-1.5-1.5z"/><circle fill="#E62833" stroke="none" cx="7.5" cy="12" r="1.1"/></g>
+</svg>

@@ -15,5 +15,5 @@ body[data-page="teraoka"] .teraoka-hero {
 body[data-page="teraoka"] .teraoka-hero::before {
   background:
     linear-gradient(105deg, rgba(244, 249, 250, 0.97) 42%, rgba(244, 249, 250, 0.55) 68%, rgba(244, 249, 250, 0.2) 100%),
-    url('../images/teraoka/hero/teraoka-retail-hero.webp') center right / cover no-repeat;
+    url('../images/teraoka/hero/teraoka-luxeed-hero.webp') center right / cover no-repeat;
 }

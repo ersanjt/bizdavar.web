@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="car-emblem">
+  <rect width="240" height="240" rx="28" fill="#f4f0ea"/>
+  <circle cx="120" cy="120" r="84" fill="#fff"/>
+  <g transform="translate(66 66) scale(4.5)" fill="none" stroke="#1d1d1b" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="8.5" ry="6"/><path fill="#E62833" stroke="none" d="M12 8.5l1.1 2.3 2.4.3-1.8 1.7.5 2.4-2.2-1.2-2.2 1.2.5-2.4-1.8-1.7 2.4-.3z"/></g>
+</svg>

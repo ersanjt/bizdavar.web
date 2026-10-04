@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="motorcycle-accessory">
+  <rect width="240" height="240" rx="28" fill="#f4f0ea"/>
+  <circle cx="120" cy="120" r="84" fill="#fff"/>
+  <g transform="translate(66 66) scale(4.5)" fill="none" stroke="#1d1d1b" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12.3V4.5a1 1 0 011-1h7.8l8.2 8.2a1.5 1.5 0 010 2.1l-6.4 6.4a1.5 1.5 0 01-2.1 0z"/><circle fill="#E62833" stroke="none" cx="8" cy="8" r="1.5"/></g>
+</svg>

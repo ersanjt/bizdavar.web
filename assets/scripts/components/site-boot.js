@@ -24,4 +24,8 @@
       if (typeof opts.init === 'function') opts.init();
     });
   };
+
+  const queued = window.__bizdavarBootPageQ || [];
+  window.__bizdavarBootPageQ = [];
+  queued.forEach(opts => window.bizdavarBootPage(opts));
 })();

@@ -237,7 +237,7 @@ createSupplyBrandPage({
     const cat = catById(catId);
     const series = cat && cat.series ? cat.series : [];
     const hit = series.find(function (s) { return s.image && leaves.indexOf(s.leafFa) !== -1; });
-    return (hit && hit.image) || (cat && cat.image) || '/assets/images/auto-moto/categories/motorcycle-helmet.svg';
+    return (hit && hit.image) || (cat && cat.image) || '/assets/icons/categories/motorcycle-helmet.svg';
   }
 
   function path(src) {

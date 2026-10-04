@@ -993,7 +993,7 @@ body[data-page="vega"] .section__desc {
 
 .vega-value-card__media--photo img,
 .vega-industry-item__media--photo img {
-  object-fit: cover;
+  object-fit: contain;
   padding: 0;
 }
 
@@ -1053,7 +1053,7 @@ body[data-page="vega"] .section__desc {
 .vega-industry-item__media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 

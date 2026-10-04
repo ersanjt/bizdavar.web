@@ -4,7 +4,7 @@
  */
 (function () {
   const base = 'assets/images/teraoka';
-  const hero = `${base}/hero/teraoka-retail-hero.webp`;
+  const hero = `${base}/hero/teraoka-luxeed-hero.webp`;
   const luxeed = `${base}/products/luxeed-l-retail-scale.png`;
   const ds782 = `${base}/products/ds-782-service-scale.jpg`;
   const pos = `${base}/products/w5600srx-pos.png`;
@@ -18,11 +18,22 @@
   const indHospitality = `${base}/industries/hospitality.webp`;
   const logo = 'assets/images/partners/teraoka.svg';
 
+  const modelImages = {
+    'Luxeed-L': luxeed,
+    'AW-5600': checkout,
+    'DS-782': ds782,
+    'DS-502HD': portable,
+    'LX-5600': label,
+    'W-5600SRX': pos,
+    'TCS-205': industrial
+  };
+
   const series = (names, note, featuredNames) =>
     names.map(name => ({
       name,
       note: note || 'Teraoka Seiko equipment',
-      featured: featuredNames ? featuredNames.includes(name) : false
+      featured: featuredNames ? featuredNames.includes(name) : false,
+      ...(modelImages[name] ? { image: modelImages[name], imageAlt: `Teraoka Seiko ${name}` } : {})
     }));
 
   window.TERAOKA_CATALOG = {
@@ -48,9 +59,9 @@
 
     trustSignals: [
       { icon: 'target', label: 'محصول اصل Teraoka', desc: 'تامین از Teraoka Seiko ژاپن — ساخت، QC و مشخصات کارخانه' },
-      { icon: 'globe', label: 'مشاوره فارسی', desc: 'انتخاب Luxeed-L، W-5600SRX، LX-5600 یا DS-782 بر اساس نوع فروشگاه' },
+      { icon: 'headset', label: 'مشاوره فارسی', desc: 'انتخاب Luxeed-L، W-5600SRX، LX-5600 یا DS-782 بر اساس نوع فروشگاه' },
       { icon: 'factory', label: 'Food service & retail', desc: 'deli، fresh food، hypermarket و franchise premium' },
-      { icon: 'mail', label: 'لجستیک بین‌المللی', desc: 'ژاپن → ترکیه/امارات → ایران — lead time شفاف در پیش‌فاکتور' }
+      { icon: 'truck', label: 'لجستیک بین‌المللی', desc: 'ژاپن → ترکیه/امارات → ایران — lead time شفاف در پیش‌فاکتور' }
     ],
 
     whyBuyFromUs: [
@@ -116,7 +127,7 @@
         id: 'retail-scales',
         title: 'Retail scales — Luxeed-L / AW-5600',
         titleTr: 'Retail & Checkout Scales',
-        icon: 'globe',
+        icon: 'scale',
         image: checkout,
         imageAlt: 'Teraoka Seiko AW-5600 AI retail checkout scale with recognition',
         desc: 'Luxeed-L service scale و AW-5600 checkout — PLU، label، AI recognition',
@@ -130,7 +141,7 @@
         id: 'deli',
         title: 'Deli & fresh food — DS-782 / DS-502HD',
         titleTr: 'Deli & Fresh Food',
-        icon: 'globe',
+        icon: 'utensils',
         image: ds782,
         imageAlt: 'Teraoka Seiko DS-782 deli and fresh food service counter scale',
         desc: 'Service counter، portion control و ترازوی portable outdoor',
@@ -144,7 +155,7 @@
         id: 'label',
         title: 'Label printers — LX-5600',
         titleTr: 'Label Printers',
-        icon: 'wrench',
+        icon: 'tag',
         image: label,
         imageAlt: 'Teraoka Seiko LX-5600 label printer integrated with retail scales',
         desc: 'LX-5600 — GS1، nutrition labeling و scale integration',
@@ -164,7 +175,7 @@
         id: 'industrial',
         title: 'Industrial weighing — TCS-205 / DSX',
         titleTr: 'Industrial Scales',
-        icon: 'factory',
+        icon: 'scale',
         image: industrial,
         imageAlt: 'Teraoka Seiko TCS-205 industrial portioning and checkweigh scale',
         desc: 'TCS-205 portioning، platform و counting — انبار و food production',
@@ -173,19 +184,19 @@
     ],
 
     iranIndustries: [
-      { name: 'Hypermarket و supermarket', desc: 'Luxeed-L + W-5600SRX + LX-5600 یکپارچه', image: indSuper, imageAlt: 'Teraoka Seiko scales and POS for Iranian hypermarkets', icon: 'briefcase' },
-      { name: 'Deli و fresh food', desc: 'DS-782 service counter + label printer', image: ds782, imageAlt: 'Teraoka DS-782 deli counter scale for fresh food in Iran', icon: 'globe' },
-      { name: 'رستوران و catering', desc: 'portion control، kitchen scale و DS-502HD portable', image: indFood, imageAlt: 'Teraoka Seiko food service weighing for restaurants', icon: 'globe' },
-      { name: 'انبار و logistics', desc: 'TCS-205 و platform scale برای warehouse', image: indLogistics, imageAlt: 'Teraoka industrial scales for warehouse and logistics', icon: 'factory' },
-      { name: 'Franchise premium', desc: 'استاندارد تجهیز یکسان ژاپن در شعب', image: luxeed, imageAlt: 'Teraoka Luxeed-L premium franchise retail equipment', icon: 'briefcase' },
+      { name: 'Hypermarket و supermarket', desc: 'Luxeed-L + W-5600SRX + LX-5600 یکپارچه', image: indSuper, imageAlt: 'Teraoka Seiko scales and POS for Iranian hypermarkets', icon: 'cart' },
+      { name: 'Deli و fresh food', desc: 'DS-782 service counter + label printer', image: ds782, imageAlt: 'Teraoka DS-782 deli counter scale for fresh food in Iran', icon: 'utensils' },
+      { name: 'رستوران و catering', desc: 'portion control، kitchen scale و DS-502HD portable', image: indFood, imageAlt: 'Teraoka Seiko food service weighing for restaurants', icon: 'utensils' },
+      { name: 'انبار و logistics', desc: 'TCS-205 و platform scale برای warehouse', image: indLogistics, imageAlt: 'Teraoka industrial scales for warehouse and logistics', icon: 'truck' },
+      { name: 'Franchise premium', desc: 'استاندارد تجهیز یکسان ژاپن در شعب', image: luxeed, imageAlt: 'Teraoka Luxeed-L premium franchise retail equipment', icon: 'store' },
       { name: 'صادرات مواد غذایی', desc: 'checkweigher، GS1 label و TCS-205', image: industrial, imageAlt: 'Teraoka TCS-205 checkweigh scale for food export labeling', icon: 'factory' }
     ],
 
     industries: [
-      { name: 'Supermarket & Hypermarket', nameTr: 'Supermarket', desc: 'Luxeed-L, AW-5600 and W-5600SRX POS', image: indSuper, imageAlt: 'Teraoka supermarket retail solutions', icon: 'briefcase' },
-      { name: 'Food Service & Deli', nameTr: 'Food Service', desc: 'DS-782 service scales and LX-5600 labels', image: indFood, imageAlt: 'Teraoka food service and deli equipment', icon: 'globe' },
-      { name: 'Logistics & Warehouse', nameTr: 'Logistics', desc: 'TCS-205 and industrial weighing', image: indLogistics, imageAlt: 'Teraoka logistics and warehouse scales', icon: 'factory' },
-      { name: 'Hospitality', nameTr: 'Hospitality', desc: 'Kitchen and portion control scales', image: indHospitality, imageAlt: 'Teraoka hospitality weighing equipment', icon: 'globe' }
+      { name: 'Supermarket & Hypermarket', nameTr: 'Supermarket', desc: 'Luxeed-L, AW-5600 and W-5600SRX POS', image: indSuper, imageAlt: 'Teraoka supermarket retail solutions', icon: 'cart' },
+      { name: 'Food Service & Deli', nameTr: 'Food Service', desc: 'DS-782 service scales and LX-5600 labels', image: indFood, imageAlt: 'Teraoka food service and deli equipment', icon: 'utensils' },
+      { name: 'Logistics & Warehouse', nameTr: 'Logistics', desc: 'TCS-205 and industrial weighing', image: indLogistics, imageAlt: 'Teraoka logistics and warehouse scales', icon: 'truck' },
+      { name: 'Hospitality', nameTr: 'Hospitality', desc: 'Kitchen and portion control scales', image: indHospitality, imageAlt: 'Teraoka hospitality weighing equipment', icon: 'utensils' }
     ],
 
     academy: {

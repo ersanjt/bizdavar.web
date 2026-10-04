@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="motorcycle-gloves">
+  <rect width="240" height="240" rx="28" fill="#f4f0ea"/>
+  <circle cx="120" cy="120" r="84" fill="#fff"/>
+  <g transform="translate(66 66) scale(4.5)" fill="none" stroke="#1d1d1b" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 20v-4.5L5.5 12a1.5 1.5 0 012.2-2L9 11.3V5a1.25 1.25 0 012.5 0v5V4a1.25 1.25 0 012.5 0v6V5a1.25 1.25 0 012.5 0v6.5V7.5a1.25 1.25 0 012.5 0V14a6 6 0 01-3 5.2V20z"/><path d="M8 17.5h9"/><circle fill="#E62833" stroke="none" cx="12.5" cy="14.5" r="1"/></g>
+</svg>

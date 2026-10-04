@@ -97,7 +97,7 @@ function transform(html) {
     teltonika: '  <link rel="preload" as="image" type="image/webp" href="/assets/images/teltonika/hero/fleet-telematics-800.webp" fetchpriority="high">',
     prosense: '  <link rel="preload" as="image" type="image/webp" href="/assets/images/prosense/hero-pq-sil2-800.webp" fetchpriority="high">',
     gamak: '  <link rel="preload" as="image" type="image/webp" href="/assets/images/gamak/category-three-phase-800.webp" fetchpriority="high">',
-    teraoka: '  <link rel="preload" as="image" type="image/webp" href="/assets/images/teraoka/hero/teraoka-retail-hero-800.webp" fetchpriority="high">',
+    teraoka: '  <link rel="preload" as="image" type="image/webp" href="/assets/images/teraoka/hero/teraoka-luxeed-hero-800.webp" fetchpriority="high">',
     'digi-system': '  <link rel="preload" as="image" type="image/webp" href="/assets/images/digi-system/hero/digi-retail-hero-800.webp" fetchpriority="high">',
     'liqui-moly': '  <link rel="preload" as="image" type="image/webp" href="/assets/images/liqui-moly/octane-plus-800.webp" fetchpriority="high">',
     uwt: '  <link rel="preload" as="image" type="image/webp" href="/assets/images/uwt/product-vn1020-800.webp" fetchpriority="high">'

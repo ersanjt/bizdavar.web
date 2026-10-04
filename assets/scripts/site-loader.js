@@ -14,12 +14,15 @@
   if (!el) return;
 
   var BASE = '/assets/scripts/';
-  var ASSET_VER = '20260928a';
+  var ASSET_VER = '20261003a';
 
   // Inline page boots run before deferred chain scripts; queue until bootstrap.js.
   window.bizdavarPageInit = window.bizdavarPageInit || function (fn) {
     if (typeof fn !== 'function') return;
     (window.__bizdavarBootQ = window.__bizdavarBootQ || []).push(fn);
+  };
+  window.bizdavarBootPage = window.bizdavarBootPage || function (opts) {
+    (window.__bizdavarBootPageQ = window.__bizdavarBootPageQ || []).push(opts);
   };
 
   function split(name) {
@@ -95,4 +98,15 @@
   document.write(chain.map(function (p) {
     return '<script defer src="' + BASE + p + '?v=' + ASSET_VER + '"><\/script>';
   }).join('\n'));
+
+  // Repleo chat widget — public pages only. Token is the public embed key.
+  var path = '';
+  try { path = String(location.pathname || ''); } catch (_) {}
+  if (path.indexOf('/admin') !== 0 && !document.querySelector('script[data-repleo-widget]')) {
+    var rplSc = document.createElement('script');
+    rplSc.src = 'https://repleo.app/widget/repleo-widget-v4.js?v=' + new Date().getTime();
+    rplSc.setAttribute('data-token', 'e6352f14c5c1cae29d61fcf3dadc620f');
+    rplSc.setAttribute('data-repleo-widget', '1');
+    document.head.appendChild(rplSc);
+  }
 })();

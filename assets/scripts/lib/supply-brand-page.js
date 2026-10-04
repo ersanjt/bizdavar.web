@@ -62,7 +62,7 @@ window.createSupplyBrandPage = function (cfg) {
       return `<img src="${full}" alt="${safeAlt}" width="960" height="640" loading="eager" decoding="async" fetchpriority="high">`;
     }
     const compact = compactHeroSrc(full);
-    return `<img src="${compact}" srcset="${compact} 800w, ${compact} 1280w" sizes="(min-width: 901px) 480px, 92vw" alt="${safeAlt}" width="480" height="320" loading="eager" decoding="async" fetchpriority="high" onerror="this.onerror=null;this.removeAttribute('srcset');this.src='${full}'">`;
+    return `<img src="${compact}" srcset="${compact} 800w, ${full} 1280w" sizes="(min-width: 901px) 480px, 92vw" alt="${safeAlt}" width="480" height="320" loading="eager" decoding="async" fetchpriority="high" onerror="this.onerror=null;this.removeAttribute('srcset');this.src='${full}'">`;
   }
 
   function offerPrice(item) {

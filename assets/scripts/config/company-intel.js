@@ -68,6 +68,7 @@ window.BIZDAVAR_INTEL = {
       title: 'Founder & Lead Strategist',
       titleFa: 'بنیان‌گذار و مدیر استراتژی',
       linkedin: 'https://www.linkedin.com/in/ersanjt',
+      website: 'https://ersanjahedtabrizi.ir/',
       experienceYears: '13+',
       projectsCount: '100+',
       countriesCount: 11,
@@ -459,6 +460,7 @@ window.BIZDAVAR_INTEL = {
       group: 'پروفایل سازمانی',
       items: [
         { label: 'LinkedIn — ارسان جاهد تبریزی', url: 'https://www.linkedin.com/in/ersanjt' },
+        { label: 'وبسایت شخصی — ارسان جاهد تبریزی', url: 'https://ersanjahedtabrizi.ir/' },
         { label: 'Spyur.am — Bizdavar Group (ارمنستان)', url: 'https://www.spyur.am/en/companies/bizdavar/57783/' },
         { label: 'جویشگر — تکنولوژی پردازان توسعه خاورمیانه', url: 'https://www.jooyeshgar.com/company/det-29884' }
       ]

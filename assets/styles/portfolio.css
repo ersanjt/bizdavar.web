@@ -198,8 +198,7 @@
   transition: transform 0.28s ease;
 }
 
-.portfolio-card--pro:hover .portfolio-card__logo img {
-  transform: scale(1.04);
+.portfolio-card--pro:hover .portfolio-card__logo img {
 }
 
 .portfolio-card--pro .portfolio-card__logo--app img {

@@ -236,6 +236,11 @@
     z-index: 190;
   }
 
+  /* Repleo launcher sits on the right; keep it clear of the tab bar. */
+  body.has-mobile-chrome #repleo-widget-container {
+    bottom: calc(72px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
   body.drawer-open .mobile-bottom-nav {
     pointer-events: none;
     opacity: 0.55;
@@ -284,6 +289,12 @@
     width: 44px;
     height: 44px;
     min-width: 44px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  body.has-mobile-chrome #repleo-chat-window {
+    max-height: calc(100dvh - 168px - env(safe-area-inset-bottom, 0px)) !important;
   }
 }
 

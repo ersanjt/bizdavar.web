@@ -79,7 +79,7 @@ body.auto-page .auto-hero::before {
   width: 100%;
   aspect-ratio: 3 / 2;
   max-height: 420px;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center 46%;
   border-radius: var(--radius-lg);
   background: #141311;
@@ -1061,7 +1061,7 @@ body.auto-drawer-open { overflow: hidden; }
 .auto-iran-card__media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   display: block;
   transition: transform 0.5s ease;
@@ -1072,12 +1072,11 @@ body.auto-drawer-open { overflow: hidden; }
 }
 
 .auto-iran-card--photo .auto-iran-card__media img {
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 
-.auto-iran-card:hover .auto-iran-card__media img {
-  transform: scale(1.04);
+.auto-iran-card:hover .auto-iran-card__media img {
 }
 
 .auto-iran-card__body {

@@ -12,6 +12,26 @@
   };
   const C = () => window.BIZDAVAR_CONFIG || {};
 
+  const faqGroups = {};
+  const stripHtml = (v) => String(v || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+
+  function publishFaq(id, entities) {
+    faqGroups[id] = entities || [];
+    if (typeof window.injectJsonLd !== 'function') return;
+    const mainEntity = Object.values(faqGroups).flat().map(q => ({
+      '@type': 'Question',
+      name: stripHtml(q.name),
+      acceptedAnswer: { '@type': 'Answer', text: stripHtml(q.acceptedAnswer && q.acceptedAnswer.text) }
+    }));
+    if (!mainEntity.length) return;
+    window.injectJsonLd('jsonld-services-faq', {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: document.documentElement.lang || 'fa',
+      mainEntity
+    });
+  }
+
   const SERVICES = [
     {
       id: 'digital-marketing',
@@ -45,7 +65,7 @@
       num: '04',
       title: 'مدیریت سرور',
       desc: 'راه‌اندازی، امنیت، بکاپ، مانیتورینگ و مهاجرت.',
-      icon: 'monitor',
+      icon: 'server',
       accent: 'slate',
       href: '#server-ops'
     },
@@ -54,7 +74,7 @@
       num: '05',
       title: 'مدیریت SMM',
       desc: 'محتوا، گرافیک، ریلز، تبلیغات و گزارش رشد.',
-      icon: 'palette',
+      icon: 'megaphone',
       accent: 'red',
       href: '#smm'
     },
@@ -109,24 +129,36 @@
     return SERVICES.map((service, i) => ({ ...service, ...(localized[i] || {}) }));
   }
 
+  // Turkish visitors are mostly local businesses — US/EU offer goes after the core services.
+  const intlLast = () => String(document.documentElement.lang || '').slice(0, 2) === 'tr';
+
+  function placeIntlSection() {
+    if (!intlLast()) return;
+    const intl = document.getElementById('intl-markets');
+    const anchor = document.getElementById('field-tech');
+    if (intl && anchor && anchor.nextElementSibling !== intl) anchor.after(intl);
+  }
+
   function renderNav() {
     const el = document.getElementById('serviceNav');
     if (!el) return;
-    el.innerHTML = `
-      <div class="container">
-        <nav class="services-nav" aria-label="${t('servicesPage.navAria', 'فهرست خدمات')}">
+    const intlItem = `
           <a href="#intl-markets" class="services-nav__item services-nav__item--blue">
             <span class="services-nav__num">$</span>
             ${ic('globe', { size: 18 })}
             ${t('servicesPage.intl.nav', 'اروپا و آمریکا')}
-          </a>
-          ${getServices().map(s => `
+          </a>`;
+    const serviceItems = getServices().map(s => `
             <a href="${s.href}" class="services-nav__item services-nav__item--${s.accent}">
               <span class="services-nav__num">${s.num}</span>
               ${ic(s.icon, { size: 18 })}
               ${s.title}
             </a>
-          `).join('')}
+          `).join('');
+    el.innerHTML = `
+      <div class="container">
+        <nav class="services-nav" aria-label="${t('servicesPage.navAria', 'فهرست خدمات')}">
+          ${intlLast() ? serviceItems + intlItem : intlItem + serviceItems}
         </nav>
       </div>`;
   }
@@ -237,7 +269,8 @@
     navSpyReady = true;
     const nav = document.querySelector('.services-nav');
     if (!nav) return;
-    const links = [...nav.querySelectorAll('.services-nav__item')];
+    const links = [...nav.querySelectorAll('.services-nav__item')]
+      .filter(a => /^#[\w-]+$/.test(a.getAttribute('href') || ''));
     const sections = links
       .map(a => document.querySelector(a.getAttribute('href')))
       .filter(Boolean);
@@ -435,9 +468,7 @@
         acceptedAnswer: { '@type': 'Answer', text: item.a }
       }))
     };
-    if (typeof window.injectJsonLd === 'function') {
-      window.injectJsonLd('jsonld-dm-faq', ld);
-    }
+    publishFaq('dm', ld.mainEntity);
   }
 
   function renderWebDesignPanel() {
@@ -514,9 +545,7 @@
         acceptedAnswer: { '@type': 'Answer', text: item.a }
       }))
     };
-    if (typeof window.injectJsonLd === 'function') {
-      window.injectJsonLd('jsonld-web-design-faq', ld);
-    }
+    publishFaq('web-design', ld.mainEntity);
   }
 
   function renderAppsPanel() {
@@ -592,9 +621,7 @@
         acceptedAnswer: { '@type': 'Answer', text: item.a }
       }))
     };
-    if (typeof window.injectJsonLd === 'function') {
-      window.injectJsonLd('jsonld-apps-faq', ld);
-    }
+    publishFaq('apps', ld.mainEntity);
   }
 
   function renderSmmPanel() {
@@ -672,9 +699,7 @@
         acceptedAnswer: { '@type': 'Answer', text: item.a }
       }))
     };
-    if (typeof window.injectJsonLd === 'function') {
-      window.injectJsonLd('jsonld-smm-faq', ld);
-    }
+    publishFaq('smm', ld.mainEntity);
   }
 
   function renderServerOpsPanel() {
@@ -748,9 +773,7 @@
         acceptedAnswer: { '@type': 'Answer', text: item.a }
       }))
     };
-    if (typeof window.injectJsonLd === 'function') {
-      window.injectJsonLd('jsonld-server-ops-faq', ld);
-    }
+    publishFaq('server-ops', ld.mainEntity);
   }
 
   function wireFieldTechCtas() {
@@ -868,18 +891,7 @@
         acceptedAnswer: { '@type': 'Answer', text: item.a }
       }))
     };
-    if (typeof window.injectJsonLd === 'function') {
-      window.injectJsonLd('jsonld-field-tech-faq', ld);
-    } else {
-      let node = document.getElementById('jsonld-field-tech-faq');
-      if (!node) {
-        node = document.createElement('script');
-        node.type = 'application/ld+json';
-        node.id = 'jsonld-field-tech-faq';
-        document.head.appendChild(node);
-      }
-      node.textContent = JSON.stringify(ld);
-    }
+    publishFaq('field-tech', ld.mainEntity);
   }
 
   function injectFieldTechPersonSchema() {
@@ -902,6 +914,7 @@
 
   window.initServicesPage = function () {
     redirectLegacyIndustrialHash();
+    placeIntlSection();
     renderStats();
     renderNav();
     renderPaths();

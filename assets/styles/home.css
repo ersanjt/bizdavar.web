@@ -143,7 +143,7 @@ body[data-page="home"] .landing-hero .btn--primary:focus-visible {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 28px;
   border: 1px solid rgba(255, 255, 255, 0.14);
   box-shadow:
@@ -155,7 +155,7 @@ body[data-page="home"] .landing-hero .btn--primary:focus-visible {
   position: absolute;
   width: min(46%, 240px);
   aspect-ratio: 4 / 3;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 16px;
   border: 3px solid #fff;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
@@ -198,7 +198,7 @@ body[data-page="home"] .landing-hero .btn--primary:focus-visible {
 }
 
 .home-hero__chip--moto img {
-  object-fit: cover;
+  object-fit: contain;
   background: #111;
 }
 
@@ -326,14 +326,14 @@ body[data-page="home"] .landing-hero .btn--primary:focus-visible {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   transform: none;
   transition: transform 0.55s var(--ease-out, cubic-bezier(0.22, 1, 0.36, 1));
 }
 
 .home-path--featured img {
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 
@@ -404,13 +404,19 @@ body[data-page="home"] .landing-hero .btn--primary:focus-visible {
 }
 
 .home-path__go::after {
-  content: '→';
-  font-weight: 800;
+  content: '';
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  background-color: currentColor;
+  -webkit-mask: var(--bd-icon-arrow) no-repeat center / contain;
+  mask: var(--bd-icon-arrow) no-repeat center / contain;
   transition: transform 0.25s ease;
 }
 
 html[dir="rtl"] .home-path__go::after {
-  content: '←';
+  -webkit-mask-image: var(--bd-icon-arrow-rtl);
+  mask-image: var(--bd-icon-arrow-rtl);
 }
 
 .home-path:hover,
@@ -421,7 +427,6 @@ html[dir="rtl"] .home-path__go::after {
 
 .home-path:hover img,
 .home-path:focus-visible img {
-  transform: scale(1.04);
 }
 
 .home-path:hover .home-path__go::after,
@@ -506,15 +511,13 @@ body[data-page="home"] .service-card__media {
 body[data-page="home"] .service-card__media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
-  transform: scale(1.04);
   transition: transform 0.55s var(--ease-out, cubic-bezier(0.22, 1, 0.36, 1));
 }
 
 body[data-page="home"] .landing-services .service-card--media:hover .service-card__media img,
 body[data-page="home"] .landing-services .service-card--media:focus-within .service-card__media img {
-  transform: scale(1.1);
 }
 
 body[data-page="home"] .landing-services .service-card__body {
@@ -582,13 +585,19 @@ body[data-page="home"] .landing-services .service-card--media .service-card__lin
 }
 
 body[data-page="home"] .landing-services .service-card--media .service-card__link::after {
-  content: '→';
-  font-weight: 800;
+  content: '';
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  background-color: currentColor;
+  -webkit-mask: var(--bd-icon-arrow) no-repeat center / contain;
+  mask: var(--bd-icon-arrow) no-repeat center / contain;
   transition: transform 0.25s ease;
 }
 
 html[dir="rtl"] body[data-page="home"] .landing-services .service-card--media .service-card__link::after {
-  content: '←';
+  -webkit-mask-image: var(--bd-icon-arrow-rtl);
+  mask-image: var(--bd-icon-arrow-rtl);
 }
 
 body[data-page="home"] .landing-services .service-card--media .service-card__link:hover,
@@ -630,14 +639,12 @@ body[data-page="home"] .fast-promo__media {
 body[data-page="home"] .fast-promo__media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
-  transform: scale(1.02);
   transition: transform 0.55s var(--ease-out, cubic-bezier(0.22, 1, 0.36, 1));
 }
 
 body[data-page="home"] .fast-promo--visual:hover .fast-promo__media img {
-  transform: scale(1.06);
 }
 
 body[data-page="home"] .fast-promo__copy {
@@ -735,8 +742,7 @@ body[data-page="home"] .owned-product-card--home .owned-product-card__media {
 body[data-page="home"] .owned-product-card--home .owned-product-card__media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transform: scale(1.04);
+  object-fit: contain;
   transition: transform 0.55s var(--ease-out, cubic-bezier(0.22, 1, 0.36, 1));
 }
 
@@ -816,23 +822,17 @@ body[data-page="home"] .owned-product-card__cta {
   font-weight: 700;
 }
 
-body[data-page="home"] .owned-product-card__cta::after {
-  content: '→';
-  font-weight: 800;
+body[data-page="home"] .owned-product-card__cta .bd-icon {
   transition: transform 0.25s ease;
 }
 
-html[dir="rtl"] body[data-page="home"] .owned-product-card__cta::after {
-  content: '←';
-}
-
-body[data-page="home"] .owned-product-card__overlay:hover .owned-product-card__cta::after,
-body[data-page="home"] .owned-product-card__overlay:focus-visible .owned-product-card__cta::after {
+body[data-page="home"] .owned-product-card__overlay:hover .owned-product-card__cta .bd-icon,
+body[data-page="home"] .owned-product-card__overlay:focus-visible .owned-product-card__cta .bd-icon {
   transform: translateX(4px);
 }
 
-html[dir="rtl"] body[data-page="home"] .owned-product-card__overlay:hover .owned-product-card__cta::after,
-html[dir="rtl"] body[data-page="home"] .owned-product-card__overlay:focus-visible .owned-product-card__cta::after {
+html[dir="rtl"] body[data-page="home"] .owned-product-card__overlay:hover .owned-product-card__cta .bd-icon,
+html[dir="rtl"] body[data-page="home"] .owned-product-card__overlay:focus-visible .owned-product-card__cta .bd-icon {
   transform: translateX(-4px);
 }
 
@@ -843,7 +843,6 @@ body[data-page="home"] .owned-product-card__overlay:focus-visible .owned-product
 
 body[data-page="home"] .owned-product-card__overlay:hover .owned-product-card__media img,
 body[data-page="home"] .owned-product-card__overlay:focus-visible .owned-product-card__media img {
-  transform: scale(1.1);
 }
 
 body[data-page="home"] .owned-product-card__overlay:focus-visible {
@@ -910,7 +909,7 @@ body[data-page="home"] .industrial-visual img {
   width: 100%;
   height: auto;
   aspect-ratio: 1400 / 933;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   padding: 0;
 }
@@ -1077,8 +1076,7 @@ body[data-page="home"] .industrial-card__media {
 body[data-page="home"] .industrial-card__media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transform: scale(1.04);
+  object-fit: contain;
   transition: transform 0.55s var(--ease-out, cubic-bezier(0.22, 1, 0.36, 1));
 }
 
@@ -1089,7 +1087,7 @@ body[data-page="home"] .industrial-card[data-brand="gamak"] .industrial-card__me
 
 body[data-page="home"] .industrial-card[data-brand="vega"] .industrial-card__media img,
 body[data-page="home"] .industrial-card[data-brand="gamak"] .industrial-card__media img {
-  object-fit: cover;
+  object-fit: contain;
   transform: none;
   width: 100%;
   height: 100%;
@@ -1126,7 +1124,7 @@ body[data-page="home"] .industrial-card[data-brand="teraoka"] .industrial-card__
 }
 
 body[data-page="home"] .industrial-card[data-brand="liqui-moly"] .industrial-card__media img {
-  object-fit: cover;
+  object-fit: contain;
   object-position: center 42%;
   transform: none;
   padding: 0;
@@ -1137,7 +1135,7 @@ body[data-page="home"] .industrial-card[data-brand="car-parts"] .industrial-card
 }
 
 body[data-page="home"] .industrial-card[data-brand="car-parts"] .industrial-card__media img {
-  object-fit: cover;
+  object-fit: contain;
   object-position: center center;
   transform: none;
   padding: 0;
@@ -1148,7 +1146,7 @@ body[data-page="home"] .industrial-card[data-brand="ostrich"] .industrial-card__
 }
 
 body[data-page="home"] .industrial-card[data-brand="ostrich"] .industrial-card__media img {
-  object-fit: cover;
+  object-fit: contain;
   object-position: center 52%;
   transform: none;
 }
@@ -1255,7 +1253,6 @@ body[data-page="home"] .industrial-card--link:focus-visible .industrial-card__ct
 
 body[data-page="home"] .industrial-card--link:hover .industrial-card__media img,
 body[data-page="home"] .industrial-card--link:focus-visible .industrial-card__media img {
-  transform: scale(1.1);
 }
 
 body[data-page="home"] .industrial-card[data-brand="vega"]:hover .industrial-card__media img,
@@ -1269,7 +1266,6 @@ body[data-page="home"] .industrial-card[data-brand="ostrich"]:focus-visible .ind
 
 body[data-page="home"] .industrial-card[data-brand="uwt"]:hover .industrial-card__media img,
 body[data-page="home"] .industrial-card[data-brand="uwt"]:focus-visible .industrial-card__media img {
-  transform: scale(1.04);
 }
 
 body[data-page="home"] .industrial-card:focus-visible {

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="motorcycle-jacket">
+  <rect width="240" height="240" rx="28" fill="#f4f0ea"/>
+  <circle cx="120" cy="120" r="84" fill="#fff"/>
+  <g transform="translate(66 66) scale(4.5)" fill="none" stroke="#1d1d1b" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 4L4 6.5 3.5 20H9v-8M15.5 4L20 6.5l.5 13.5H15v-8"/><path d="M8.5 4L12 7l3.5-3M9 20h6M12 7v13"/><circle fill="#E62833" stroke="none" cx="12" cy="10" r="1"/></g>
+</svg>

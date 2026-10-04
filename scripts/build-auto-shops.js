@@ -165,7 +165,7 @@ function hubHtml(loc) {
   <link rel="canonical" href="${canonical}">
 ${alts}
   <link rel="alternate" hreflang="x-default" href="${BASE}/pages/auto-moto">
-  <link rel="stylesheet" href="/assets/styles/site.css?v=20260910c">
+  <link rel="stylesheet" href="/assets/styles/site.css?v=20261003a">
   <link rel="stylesheet" href="/assets/styles/auto-moto.css?v=${VER}">
   <link rel="icon" href="/assets/images/brand/favicon.svg" type="image/svg+xml">
 </head>
@@ -232,7 +232,7 @@ function toCar(html, loc) {
     .replaceAll('initAutoMotoPage', 'initCarPartsPage')
     .replaceAll('injectAutoMotoSchema', 'injectCarPartsSchema')
     .replace('i18n/supply-catalog-i18n.js,i18n/auto-moto-catalog-i18n.js', 'i18n/supply-catalog-i18n.js,i18n/car-parts-catalog-i18n.js')
-    .replace('/assets/styles/auto-moto.css?v=20260918s', '/assets/styles/auto-moto.css?v=' + VER + '">\n  <link rel="stylesheet" href="/assets/styles/car-parts.css?v=' + VER)
+    .replace('/assets/styles/auto-moto.css?v=20261003a', '/assets/styles/auto-moto.css?v=' + VER + '">\n  <link rel="stylesheet" href="/assets/styles/car-parts.css?v=' + VER)
     .replaceAll('20260918r', VER)
     .replace(/<title>[^<]*<\/title>/, '<title>' + esc(CAR_TITLE[loc.code]) + '</title>')
     .replace(/<meta name="description" content="[^"]*">/, '<meta name="description" content="' + esc(CAR_DESC[loc.code]) + '">')
@@ -306,7 +306,7 @@ function productHtml(loc, item, catId, images) {
   const desc = String(descBase).replace(/\s+/g, ' ').slice(0, 280);
   const price = item.priceUsd != null && item.priceUsd !== '' ? `$${item.priceUsd} ${copy.price}` : copy.quote;
   const gallery = (images && images.length ? images : [localImage(item.image)]).filter(Boolean);
-  const img = gallery[0] || '/assets/images/auto-moto/categories/motorcycle-helmet.svg';
+  const img = gallery[0] || '/assets/icons/categories/motorcycle-helmet.svg';
   const url = `${BASE}${loc.prefix}/pages/motorcycle/${item.id}`;
   const shop = `${loc.prefix}/pages/motorcycle#auto-cat-${catId}`;
   const availability = item.availability === 'in_stock' ? 'https://schema.org/InStock' : 'https://schema.org/PreOrder';
@@ -349,7 +349,7 @@ ${hreflang(item.id)}
   <meta property="og:description" content="${esc(desc)}">
   <meta property="og:url" content="${url}">
   <meta property="og:image" content="${BASE}${img}">
-  <link rel="stylesheet" href="/assets/styles/site.css?v=20260910c">
+  <link rel="stylesheet" href="/assets/styles/site.css?v=20261003a">
   <link rel="stylesheet" href="/assets/styles/auto-moto.css?v=${VER}">
   <script type="application/ld+json">${ld}</script>
 </head>
@@ -359,7 +359,7 @@ ${hreflang(item.id)}
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="${esc(img)}" alt="${esc(title)}" width="640" height="640" onerror="this.onerror=null;this.src='/assets/images/auto-moto/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="${esc(img)}" alt="${esc(title)}" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
           ${thumbs}
         </div>
         <div>

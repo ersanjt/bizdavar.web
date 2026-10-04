@@ -92,7 +92,7 @@ async function main() {
     'assets/images/teltonika/hero/fleet-telematics.webp',
     'assets/images/prosense/hero-pq-sil2.webp',
     'assets/images/gamak/category-three-phase.webp',
-    'assets/images/teraoka/hero/teraoka-retail-hero.webp',
+    'assets/images/teraoka/hero/teraoka-luxeed-hero.webp',
     'assets/images/digi-system/hero/digi-retail-hero.webp',
     'assets/images/liqui-moly/octane-plus.jpg',
     'assets/images/uwt/product-vn1020.jpg',

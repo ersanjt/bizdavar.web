@@ -193,7 +193,7 @@
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .about-intro .about__content {
@@ -438,7 +438,7 @@
   .about-intro .about__image img {
     max-height: 280px;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   .about-block {

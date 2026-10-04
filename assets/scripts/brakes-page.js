@@ -593,18 +593,18 @@
     });
   }
 
+  function icon(name, size) {
+    return window.BD_ICON ? window.BD_ICON(name, { size: size || 24 }) : '';
+  }
+
   function art(part) {
-    if (part === 'pads') {
-      return '<svg viewBox="0 0 120 80" aria-hidden="true"><rect x="8" y="18" width="104" height="44" rx="8" fill="none" stroke="#222" stroke-width="3"/><path d="M20 40h80M28 28h64M28 52h64" stroke="#ef3b42" stroke-width="3"/></svg>';
-    }
-    if (part === 'fluids') {
-      return '<svg viewBox="0 0 80 110" aria-hidden="true"><path d="M28 16h24l8 18v58a12 12 0 0 1-12 12H32a12 12 0 0 1-12-12V34z" fill="none" stroke="#222" stroke-width="3"/><path d="M24 58h32" stroke="#ef3b42" stroke-width="3"/></svg>';
-    }
-    return '<svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="46" fill="none" stroke="#222" stroke-width="8"/><circle cx="60" cy="60" r="16" fill="none" stroke="#ef3b42" stroke-width="6"/><path d="M60 14v18M60 88v18M14 60h18M88 60h18" stroke="#bbb" stroke-width="4"/></svg>';
+    if (part === 'pads') return icon('brake-pad', 96);
+    if (part === 'fluids') return icon('fluid', 96);
+    return icon('brake-disc', 96);
   }
 
   function carIcon() {
-    return '<svg viewBox="0 0 80 36" aria-hidden="true"><path d="M6 22c2-7 8-11 16-12l7-5h20l9 5c7 1 12 5 16 12" fill="none" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/><path d="M22 10l7 8h24l-5-8" fill="none" stroke="#fff" stroke-width="1.3"/><path d="M8 22h64" stroke="#fff" stroke-width="1.5"/><circle cx="22" cy="26" r="4.2" fill="none" stroke="#fff" stroke-width="1.4"/><circle cx="58" cy="26" r="4.2" fill="none" stroke="#fff" stroke-width="1.4"/></svg>';
+    return icon('car', 28);
   }
 
   function waLink(item) {
@@ -738,10 +738,10 @@
           '<video autoplay muted loop playsinline preload="metadata"><source src="' + esc(catalog.video || '/assets/video/porsche-997-gt3rs.mp4') + '" type="video/mp4"></video>' +
           '<div class="brake-hero__shade"></div>' +
           '<form class="brake-search" role="search">' +
-            '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>' +
+            icon('search', 18) +
             '<label class="visually-hidden" for="brakeQ">' + esc(c.search) + '</label>' +
             '<input id="brakeQ" name="q" type="search" autocomplete="off" placeholder="' + esc(c.search) + '" value="' + esc(state.q) + '">' +
-            '<button type="submit" aria-label="' + esc(c.search) + '"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>' +
+            '<button type="submit" aria-label="' + esc(c.search) + '">' + icon('search', 18) + '</button>' +
           '</form>' +
           '<div class="brake-dots" aria-hidden="true"><span></span><span></span><span></span></div>' +
         '</section>' +

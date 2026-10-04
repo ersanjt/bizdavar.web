@@ -156,8 +156,8 @@ body.has-shop-pdp-dock .brake-desk--pdp { padding-bottom: 88px; }
   height: 22px;
   flex: 0 0 22px;
   background: #d0122d;
-  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.8 7.2 16.9l.9-5.4L4.2 7.7l5.4-.8z'/%3E%3C/svg%3E") center / contain no-repeat;
-  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.8 7.2 16.9l.9-5.4L4.2 7.7l5.4-.8z'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: var(--bd-icon-star) center / contain no-repeat;
+  -webkit-mask: var(--bd-icon-star) center / contain no-repeat;
 }
 .shop-pdp__desc,
 .am-pdp.shop-pdp .am-pdp__note {

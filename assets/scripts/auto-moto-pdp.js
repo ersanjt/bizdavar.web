@@ -56,7 +56,7 @@
     if (document.querySelector('link[href*="shop-pdp.css"]')) return;
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = '/assets/styles/shop-pdp.css?v=20260919w';
+    link.href = '/assets/styles/shop-pdp.css?v=20261003a';
     document.head.appendChild(link);
   }
 

@@ -181,6 +181,7 @@ body.car-page .breadcrumbs { color: rgba(255, 255, 255, 0.78); }
   display: grid;
   place-items: center;
 }
+.brake-search button svg { color: inherit; }
 .brake-search button:focus-visible { outline: 2px solid #111; outline-offset: 2px; }
 .brake-dots {
   position: absolute;
@@ -395,7 +396,7 @@ body.car-page .breadcrumbs { color: rgba(255, 255, 255, 0.78); }
   gap: 4px;
   text-align: center;
 }
-.brake-model svg { width: 64px; height: 28px; }
+.brake-model svg { width: 64px; height: 28px; color: inherit; }
 .brake-model.is-on {
   border-color: var(--brake-red);
   background: rgba(239, 59, 66, 0.14);
@@ -483,7 +484,9 @@ body.car-page .breadcrumbs { color: rgba(255, 255, 255, 0.78); }
   object-fit: contain;
   background: #fff;
 }
-.brake-card__art svg { width: 62%; height: 62%; margin: auto; }
+.brake-card__art svg { width: 46%; height: 46%; margin: auto; color: #2a2a2a; }
+.brake-card__art .bd-icon g,
+.brake-detail__art .bd-icon g { stroke-width: 1.1; }
 .brake-card__body {
   display: flex;
   flex-direction: column;
@@ -723,7 +726,7 @@ body.car-page .breadcrumbs { color: rgba(255, 255, 255, 0.78); }
   display: grid;
   place-items: center;
 }
-.brake-detail__art svg { width: 68%; height: 68%; }
+.brake-detail__art svg { width: 50%; height: 50%; color: #2a2a2a; }
 .brake-detail h2 { margin: 0 0 8px; font-size: clamp(1.2rem, 2vw, 1.7rem); line-height: 1.35; }
 .brake-stars { color: #c4a574; letter-spacing: 2px; margin: 0 0 10px; }
 .brake-detail__price { margin: 0 0 14px; font-size: 28px; font-weight: 800; }
@@ -783,5 +786,5 @@ body.car-page .breadcrumbs { color: rgba(255, 255, 255, 0.78); }
 }
 @media (prefers-reduced-motion: reduce) {
   .brake-hero video { display: none; }
-  .brake-hero { background: #1a1a1a url('/assets/images/auto-moto/categories/car-brake-pad.svg') center/contain no-repeat; }
+  .brake-hero { background: #1a1a1a url('/assets/icons/categories/car-brake-pad.svg') center/contain no-repeat; }
 }

@@ -290,7 +290,7 @@
 .products-supply .industrial-card__media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 
@@ -314,7 +314,7 @@
 
 .products-supply .industrial-card[data-brand="liqui-moly"] .industrial-card__media img,
 .products-supply .industrial-card[data-brand="car-parts"] .industrial-card__media img {
-  object-fit: cover;
+  object-fit: contain;
   object-position: center 42%;
   transform: none;
   padding: 0;

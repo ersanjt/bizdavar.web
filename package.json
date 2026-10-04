@@ -14,6 +14,7 @@
     "strip-gtag": "node scripts/strip-standalone-gtag.js",
     "robots": "node scripts/gen-robots.js",
     "css": "node scripts/bundle-css.js",
+    "icons": "node scripts/build-icons.js",
     "optimize": "node scripts/optimize-html.js",
     "hoist-css": "node scripts/hoist-critical-css.js",
     "brand:icons": "python scripts/generate-brand-icons.py",

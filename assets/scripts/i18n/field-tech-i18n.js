@@ -20,7 +20,7 @@
         title: 'چه خدماتی ارائه می‌دهیم؟',
         desc: 'یک لیست شفاف — بدون تکرار و بدون کارت تو در تو.',
         items: [
-          { id: 'cctv', icon: 'monitor', title: 'دوربین مدار بسته', desc: 'نصب و راه‌اندازی CCTV منزل و محل کار' },
+          { id: 'cctv', icon: 'cctv', title: 'دوربین مدار بسته', desc: 'نصب و راه‌اندازی CCTV منزل و محل کار' },
           { id: 'wiring', icon: 'bolt', title: 'سیم‌کشی ساختمان', desc: 'واحدهای مسکونی و تجاری' },
           { id: 'lighting', icon: 'flame', title: 'نورمخفی', desc: 'طراحی و اجرای داخلی و فضای تجاری' },
           { id: 'survey', icon: 'document', title: 'بازدید فنی', desc: 'پیشنهاد طرح و زمان‌بندی اجرا' },
@@ -94,7 +94,7 @@
         title: 'Ne sunuyoruz?',
         desc: 'Tek net liste — tekrar yok.',
         items: [
-          { id: 'cctv', icon: 'monitor', title: 'Güvenlik kamerası', desc: 'Konut ve işyeri CCTV kurulumu' },
+          { id: 'cctv', icon: 'cctv', title: 'Güvenlik kamerası', desc: 'Konut ve işyeri CCTV kurulumu' },
           { id: 'wiring', icon: 'bolt', title: 'Bina tesisatı', desc: 'Konut ve ticari birimler' },
           { id: 'lighting', icon: 'flame', title: 'Gizli aydınlatma', desc: 'İç mekân ve ticari alan' },
           { id: 'survey', icon: 'document', title: 'Teknik keşif', desc: 'Plan ve kurulum takvimi' },
@@ -168,7 +168,7 @@
         title: 'On-site technical services',
         desc: 'One clear list — no nested duplicate cards.',
         items: [
-          { id: 'cctv', icon: 'monitor', title: 'CCTV', desc: 'Home and workplace camera install' },
+          { id: 'cctv', icon: 'cctv', title: 'CCTV', desc: 'Home and workplace camera install' },
           { id: 'wiring', icon: 'bolt', title: 'Building wiring', desc: 'Residential and commercial units' },
           { id: 'lighting', icon: 'flame', title: 'Cove lighting', desc: 'Indoor and commercial spaces' },
           { id: 'survey', icon: 'document', title: 'Site survey', desc: 'Plan and install schedule' },
@@ -251,7 +251,7 @@
         title: 'Выездные технические услуги',
         desc: 'Один понятный список — без вложенных карточек.',
         items: [
-          { id: 'cctv', icon: 'monitor', title: 'CCTV', desc: 'Установка камер дома и на объекте' },
+          { id: 'cctv', icon: 'cctv', title: 'CCTV', desc: 'Установка камер дома и на объекте' },
           { id: 'wiring', icon: 'bolt', title: 'Проводка', desc: 'Жилые и коммерческие помещения' },
           { id: 'lighting', icon: 'flame', title: 'Скрытое освещение', desc: 'Интерьер и коммерческие зоны' },
           { id: 'survey', icon: 'document', title: 'Технический осмотр', desc: 'План и график монтажа' },
@@ -327,7 +327,7 @@
         title: 'خدمات فنية ميدانية',
         desc: 'قائمة واحدة واضحة — بدون بطاقات متداخلة.',
         items: [
-          { id: 'cctv', icon: 'monitor', title: 'كاميرات مراقبة', desc: 'تركيب كاميرات للمنازل وأماكن العمل' },
+          { id: 'cctv', icon: 'cctv', title: 'كاميرات مراقبة', desc: 'تركيب كاميرات للمنازل وأماكن العمل' },
           { id: 'wiring', icon: 'bolt', title: 'تمديدات المبنى', desc: 'وحدات سكنية وتجارية' },
           { id: 'lighting', icon: 'flame', title: 'إضاءة مخفية', desc: 'داخليات ومساحات تجارية' },
           { id: 'survey', icon: 'document', title: 'معاينة فنية', desc: 'خطة وجدول التركيب' },

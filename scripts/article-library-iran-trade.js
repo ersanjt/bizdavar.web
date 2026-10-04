@@ -1067,7 +1067,7 @@ ${fig('/assets/images/digi-system/hero/digi-retail-hero.webp', 'ميزان Digi 
     seoKey: 'articleBuyTeraokaIran',
     date: '2026-08-29',
     modified: '2026-08-29',
-    image: 'assets/images/teraoka/hero/teraoka-retail-hero.webp',
+    image: 'assets/images/teraoka/hero/teraoka-luxeed-hero.webp',
     extraImg: 'assets/images/partners/teraoka.svg',
     category: loc('تجهیزات صنعتی', 'Endüstriyel ekipman', 'Industrial equipment', 'Промоборудование', 'معدات صناعية'),
     title: loc(
@@ -1143,7 +1143,7 @@ ${fig('/assets/images/digi-system/hero/digi-retail-hero.webp', 'ميزان Digi 
     body: {
       fa: `
 <p>فروشگاه مواد غذایی و آشپزخانه صنعتی ایران گاهی ترازو و برچسب‌زن با استاندارد خرده‌فروشی می‌خواهد. <strong>Teraoka Seiko</strong> خط ژاپن است — ترازوی فروشگاهی، deli، POS و لیبل. بیزدوار <a href="/pages/teraoka">کاتالوگ اصل</a> را با پیش‌فاکتور فارسی تامین می‌کند.</p>
-${fig('/assets/images/teraoka/hero/teraoka-retail-hero.webp', 'ترازو و تجهیزات خرده‌فروشی Teraoka Seiko', 'نوع ترازو، ظرفیت و تعداد صندوق را در استعلام اول بنویسید.')}
+${fig('/assets/images/teraoka/hero/teraoka-luxeed-hero.webp', 'ترازو و تجهیزات خرده‌فروشی Teraoka Seiko', 'نوع ترازو، ظرفیت و تعداد صندوق را در استعلام اول بنویسید.')}
 <h2 id="ch-who">برای چه کاربردی؟</h2>
 <p>پیشخوان delicatessen، صندوق فروشگاه، برچسب قیمت و ترازوی سرویس. سری‌های پرتقاضا در کاتالوگ: Luxeed L، DS-782، W5600SRX و LX5600. مدل دقیق بعد از استعلام مشخص می‌شود.</p>
 <h2 id="ch-spec">چه اطلاعاتی بفرستید</h2>
@@ -1164,7 +1164,7 @@ ${fig('/assets/images/partners/teraoka.svg', 'لوگوی Teraoka Seiko — تر�
 <p>خط ترکیه از همین میز: <a href="/pages/articles/buy-digi-system-iran">خرید Digi System</a>. استعلام: <a href="/pages/contact?product=Teraoka">واتساپ Teraoka</a>.</p>`,
       tr: `
 <p>İran gıda mağazaları Japon terazi ve etiketleme ister. <strong>Teraoka Seiko</strong> — deli, POS, etiket. Bizdavar orijinal <a href="/pages/teraoka">katalog</a> tedarik eder.</p>
-${fig('/assets/images/teraoka/hero/teraoka-retail-hero.webp', 'Teraoka perakende terazi', 'Terazi türü ve kapasiteyi yazın.')}
+${fig('/assets/images/teraoka/hero/teraoka-luxeed-hero.webp', 'Teraoka perakende terazi', 'Terazi türü ve kapasiteyi yazın.')}
 <h2 id="ch-who">Hangi kullanım</h2>
 <p>Deli tezgâhı, kasa, etiket, servis terazisi. Luxeed L, DS-782, W5600SRX.</p>
 <h2 id="ch-spec">Ne göndermelisiniz</h2>
@@ -1173,7 +1173,7 @@ ${fig('/assets/images/teraoka/hero/teraoka-retail-hero.webp', 'Teraoka perakende
 <p><a href="/pages/contact?product=Teraoka">Teklif</a> · <a href="/pages/articles/buy-digi-system-iran">Digi</a>.</p>`,
       en: `
 <p>Iran food stores and commercial kitchens often need a retail-grade scale and labeler. <strong>Teraoka Seiko</strong> is the Japan line — shop scales, deli, POS and labeling. Bizdavar supplies the genuine <a href="/pages/teraoka">catalogue</a> with a Persian proforma.</p>
-${fig('/assets/images/teraoka/hero/teraoka-retail-hero.webp', 'Teraoka Seiko retail scales and labeling', 'Put scale type, capacity and checkout count in the first inquiry.')}
+${fig('/assets/images/teraoka/hero/teraoka-luxeed-hero.webp', 'Teraoka Seiko retail scales and labeling', 'Put scale type, capacity and checkout count in the first inquiry.')}
 <h2 id="ch-who">Which duty</h2>
 <p>Deli counter, store checkout, price labeling and service scales. High-demand series on the catalogue include Luxeed L, DS-782, W5600SRX and LX5600. Engineering picks the exact model after the inquiry.</p>
 <h2 id="ch-spec">What to send</h2>
@@ -1189,7 +1189,7 @@ ${fig('/assets/images/partners/teraoka.svg', 'Teraoka Seiko logo — Japanese sc
 <p>Turkey line from the same desk: <a href="/pages/articles/buy-digi-system-iran">buy Digi System</a>. Quote: <a href="/pages/contact?product=Teraoka">Teraoka WhatsApp</a>.</p>`,
       ru: `
 <p>Продовольственным магазинам в Иране нужны японские весы и этикетка. <strong>Teraoka Seiko</strong> — deli, POS, этикетка. Bizdavar поставляет оригинальный <a href="/pages/teraoka">каталог</a>.</p>
-${fig('/assets/images/teraoka/hero/teraoka-retail-hero.webp', 'Весы Teraoka', 'Укажите тип и грузоподъёмность.')}
+${fig('/assets/images/teraoka/hero/teraoka-luxeed-hero.webp', 'Весы Teraoka', 'Укажите тип и грузоподъёмность.')}
 <h2 id="ch-who">Какая задача</h2>
 <p>Deli, касса, этикетка. Luxeed L, DS-782, W5600SRX.</p>
 <h2 id="ch-spec">Что прислать</h2>
@@ -1198,7 +1198,7 @@ ${fig('/assets/images/teraoka/hero/teraoka-retail-hero.webp', 'Весы Teraoka'
 <p><a href="/pages/contact?product=Teraoka">Запрос</a>.</p>`,
       ar: `
 <p>متاجر الغذاء في إيران تحتاج موازين وملصقات يابانية. <strong>Teraoka Seiko</strong> — دلّي وPOS وملصقات. بيزدوار يورّد <a href="/pages/teraoka">الكتالوج</a> الأصلي.</p>
-${fig('/assets/images/teraoka/hero/teraoka-retail-hero.webp', 'موازين Teraoka للتجزئة', 'اكتبوا نوع الميزان والسعة.')}
+${fig('/assets/images/teraoka/hero/teraoka-luxeed-hero.webp', 'موازين Teraoka للتجزئة', 'اكتبوا نوع الميزان والسعة.')}
 <h2 id="ch-who">أي استخدام</h2>
 <p>كاونتر دلّي وصندوق وملصقات. Luxeed L وDS-782 وW5600SRX.</p>
 <h2 id="ch-spec">ماذا ترسلون</h2>

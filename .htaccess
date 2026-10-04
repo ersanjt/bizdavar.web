@@ -42,13 +42,14 @@ AddType 'text/html; charset=UTF-8' .html
   # Next step: add per-request nonce on HTML <script> tags, then drop unsafe-inline from script-src.
   Header set Content-Security-Policy "\
     default-src 'self'; \
-    script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://static.cloudflareinsights.com; \
+    script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://static.cloudflareinsights.com https://repleo.app https://cdn.socket.io; \
     style-src 'self' 'unsafe-inline'; \
     font-src 'self' data:; \
     img-src 'self' data: https:; \
+    media-src 'self' https://assets.mixkit.co; \
     object-src 'none'; \
     frame-src 'self' https://www.googletagmanager.com; \
-    connect-src 'self' https://ipapi.co https://ipwho.is https://formspree.io https://*.formspree.io https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://analytics.google.com https://cloudflareinsights.com https://*.cloudflareinsights.com; \
+    connect-src 'self' https://ipapi.co https://ipwho.is https://formspree.io https://*.formspree.io https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://analytics.google.com https://cloudflareinsights.com https://*.cloudflareinsights.com https://repleo.app https://socket.repleo.app wss://socket.repleo.app; \
     frame-ancestors 'self'; \
     base-uri 'self'; \
     form-action 'self' mailto: https://formspree.io https://*.formspree.io; \
@@ -57,13 +58,14 @@ AddType 'text/html; charset=UTF-8' .html
   # Report-Only preview without script unsafe-inline (does not break GTM).
   Header set Content-Security-Policy-Report-Only "\
     default-src 'self'; \
-    script-src 'self' https://www.googletagmanager.com https://static.cloudflareinsights.com; \
+    script-src 'self' https://www.googletagmanager.com https://static.cloudflareinsights.com https://repleo.app https://cdn.socket.io; \
     style-src 'self' 'unsafe-inline'; \
     font-src 'self' data:; \
     img-src 'self' data: https:; \
+    media-src 'self' https://assets.mixkit.co; \
     object-src 'none'; \
     frame-src 'self' https://www.googletagmanager.com; \
-    connect-src 'self' https://ipapi.co https://ipwho.is https://formspree.io https://*.formspree.io https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://analytics.google.com https://cloudflareinsights.com https://*.cloudflareinsights.com; \
+    connect-src 'self' https://ipapi.co https://ipwho.is https://formspree.io https://*.formspree.io https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://analytics.google.com https://cloudflareinsights.com https://*.cloudflareinsights.com https://repleo.app https://socket.repleo.app wss://socket.repleo.app; \
     frame-ancestors 'self'; \
     base-uri 'self'; \
     form-action 'self' mailto: https://formspree.io https://*.formspree.io"

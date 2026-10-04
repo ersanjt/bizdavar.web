@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="motorcycle-protection">
+  <rect width="240" height="240" rx="28" fill="#f4f0ea"/>
+  <circle cx="120" cy="120" r="84" fill="#fff"/>
+  <g transform="translate(66 66) scale(4.5)" fill="none" stroke="#1d1d1b" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h8l1.5 3-1.5 3 1.5 3-1.5 3 1.5 3-1.5 2H8l-1.5-2L8 16l-1.5-3L8 10 6.5 7z"/><path d="M12 4v16"/><circle fill="#E62833" stroke="none" cx="12" cy="7" r="1"/></g>
+</svg>

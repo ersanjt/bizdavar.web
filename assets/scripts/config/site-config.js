@@ -511,7 +511,7 @@ window.BIZDAVAR_CONFIG = {
       category: 'تجهیزات صنعتی',
       catId: 'industrial',
       date: '2026-08-29',
-      image: 'assets/images/teraoka/hero/teraoka-retail-hero.webp',
+      image: 'assets/images/teraoka/hero/teraoka-luxeed-hero.webp',
       relatedService: 'pages/teraoka.html'
     },
     {

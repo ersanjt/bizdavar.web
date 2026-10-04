@@ -264,9 +264,9 @@
         seoKeywords: 'Bizdavar hakkımızda, dijital ajans Bizdavar, endüstriyel tedarik'
       },
       services: {
-        seoTitle: 'Hizmetler | Dijital pazarlama, web tasarım, SMM ve teknik kurulum',
-        seoDescription: 'Bizdavar hizmetleri — ofisler İran, Türkiye, Ermenistan ve Dubai: dijital pazarlama, web/web app, Android-iOS, sunucu, SMM, CCTV, tesisat ve gizli aydınlatma. Teknik WhatsApp ile koordinasyon.',
-        seoKeywords: 'Bizdavar hizmetler, dijital pazarlama, web tasarım, SMM, CCTV İstanbul, teknik hizmet'
+        seoTitle: 'Web Tasarım, SEO ve Dijital Pazarlama Ajansı | Bizdavar İstanbul',
+        seoDescription: 'Kurumsal web sitesi, e-ticaret, SEO, Google Ads, sosyal medya yönetimi, mobil uygulama ve sunucu yönetimi — İstanbul ekibi, ücretsiz danışmanlık, $99’dan site.',
+        seoKeywords: 'web tasarım İstanbul, kurumsal web sitesi, e-ticaret sitesi, SEO hizmeti, dijital pazarlama ajansı, Google Ads yönetimi, sosyal medya yönetimi, mobil uygulama geliştirme, sunucu yönetimi, Bizdavar'
       },
       fieldTech: {
         seoTitle: 'Teknik hizmetler | CCTV, tesisat ve gizli aydınlatma — Tebriz',

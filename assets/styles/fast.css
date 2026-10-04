@@ -1464,15 +1464,13 @@ html[dir="rtl"] .fast-path::before {
 .fast-guide-card__media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  display: block;
-  transform: scale(1.04);
+  object-fit: contain;
+  display: block;
   transition: transform 0.55s var(--ease-out, cubic-bezier(0.22, 1, 0.36, 1));
 }
 
 .fast-guide-card:hover .fast-guide-card__media img,
-.fast-guide-card:focus-visible .fast-guide-card__media img {
-  transform: scale(1.1);
+.fast-guide-card:focus-visible .fast-guide-card__media img {
 }
 
 .fast-guide-card__body {

@@ -98,39 +98,39 @@
     ],
     tr: [
       {
-        title: 'Dijital pazarlama',
-        subtitle: 'Digital Marketing · Strateji ve kampanya',
-        body: 'ABD ve AB pazarında <strong>USD/EUR ciro</strong> için <strong>dijital pazarlama</strong> — pazar analizi, SEO, <strong>Google Ads</strong>, Meta, LinkedIn, CRO ve otomasyon. Kampanyalar GA4 ile fatura para biriminizde raporlanır. İlgili yazı: <a href="articles/digital-marketing">Dijital pazarlama satışları nasıl artırır?</a>',
-        tags: ['Google Ads', 'Meta', 'LinkedIn', 'SEO', 'CRO', 'GA4'],
+        title: 'Dijital pazarlama ve SEO',
+        subtitle: 'SEO · Google Ads · Meta Ads · CRO',
+        body: 'Türkiye ve yurt dışı pazarı için <strong>dijital pazarlama</strong> — pazar analizi, Türkçe ve İngilizce <strong>SEO</strong>, <strong>Google Ads</strong>, Meta ve LinkedIn reklamları, CRO ve otomasyon. Sonuçları GA4 ile aylık KPI raporunda görürsünüz. İlgili yazı: <a href="articles/digital-marketing">Dijital pazarlama satışları nasıl artırır?</a>',
+        tags: ['SEO', 'Google Ads', 'Meta Ads', 'LinkedIn', 'CRO', 'GA4'],
         checks: [
-          'ABD/AB hedef kitle, rakip ve satış hunisi analizi',
-          'Google Ads, Meta ve LinkedIn — bütçe USD veya EUR',
-          'İngilizce teknik/içerik SEO ve dönüşüm sayfaları',
-          'Landing, form ve checkout’ta CRO',
-          'Pazarlama otomasyonu, e-posta ve nurture',
-          'Aylık KPI raporu dolar veya euro cinsinden'
+          'Hedef kitle, rakip ve satış hunisi analizi',
+          'Google Ads, Meta ve LinkedIn kampanya yönetimi',
+          'Türkçe ve İngilizce teknik SEO ve içerik',
+          'Landing, form ve ödeme adımlarında CRO',
+          'Pazarlama otomasyonu ve e-posta akışları',
+          'Aylık KPI ve GA4 raporu'
         ],
         cta: 'Danışmanlık iste'
       },
       {
-        title: 'Web ve web uygulaması',
-        subtitle: 'Website · Web App · Fast Web Studio · USD / EUR',
-        body: 'Avrupa ve ABD müşterileri için İngilizce <strong>kurumsal site</strong>, <strong>e-ticaret</strong>, kampanya landing ve özel <strong>web uygulaması</strong> — fatura <strong>USD veya EUR</strong>, Stripe/PayPal, uluslararası hosting, CET ve EST örtüşmesi. Hızlı teslim: <a href="fast">Fast Web Studio</a> ($99 / ~€90’dan). Örnek: <a href="https://arianpumps.com" target="_blank" rel="noopener noreferrer">Arian Pumps</a>.',
-        tags: ['Website', 'Web App', 'Stripe', 'SEO', 'USD/EUR', '5-day'],
+        title: 'Web tasarım ve web uygulaması',
+        subtitle: 'Kurumsal site · E-ticaret · Web App · Fast Web Studio',
+        body: '<strong>Kurumsal web sitesi</strong>, <strong>e-ticaret sitesi</strong>, kampanya landing sayfası ve özel <strong>web uygulaması</strong> — Türkçe, İngilizce veya çok dilli; mobil uyumlu, hızlı ve SEO uyumlu. Yurt dışı projelerde USD/EUR fatura ve Stripe/PayPal. Hızlı teslim: <a href="fast">Fast Web Studio</a> ($99’dan). Örnek: <a href="https://arianpumps.com" target="_blank" rel="noopener noreferrer">Arian Pumps</a>.',
+        tags: ['Kurumsal site', 'E-ticaret', 'Web App', 'SEO', 'Mobil uyum', '5 gün'],
         checks: [
-          'ABD/AB pazarı için İngilizce kurumsal, mağaza ve landing',
-          'Web uygulaması ve özel admin paneli',
-          'Responsive LTR (gerekirse RTL) — çok dilli',
+          'Kurumsal site, e-ticaret ve landing sayfası',
+          'Web uygulaması ve özel yönetim paneli',
+          'Mobil uyumlu, çok dilli (TR / EN / gerekirse RTL)',
           'Teknik SEO, Core Web Vitals ve içerik yapısı',
-          'Stripe, PayPal, iletişim formu ve Zoom/Meet randevu',
-          'USD veya EUR fatura, CMS eğitimi ve lansman sonrası destek'
+          'Ödeme, iletişim formu ve online randevu entegrasyonu',
+          'CMS eğitimi ve yayın sonrası destek'
         ],
         cta: 'Fast Studio planları'
       },
       {
-        title: 'Mobil uygulama ve sistem',
+        title: 'Mobil uygulama geliştirme',
         subtitle: 'Android · iOS · Kurumsal sistem',
-        body: 'Uluslararası ürünler için <strong>Android / iOS</strong> uygulaması, kurumsal sistem, B2B paneller ve özel yazılım — ihtiyaç analizinden App Store / Google Play yayınına, Stripe entegrasyonuna ve desteğe. Örnek: App Store’daki <a href="marvi-society">Marvi Society</a>.',
+        body: 'İşletmeniz ve uluslararası ürünler için <strong>Android / iOS</strong> uygulaması, kurumsal sistem, B2B paneller ve özel yazılım — ihtiyaç analizinden App Store / Google Play yayınına, Stripe entegrasyonuna ve desteğe. Örnek: App Store’daki <a href="marvi-society">Marvi Society</a>.',
         tags: ['Android', 'iOS', 'App Store', 'API', 'Stripe'],
         checks: ['İngilizce veya çok dilli UI ile Android ve iOS', 'Kurumsal sistem / B2B paneli', 'API, Stripe ve ödeme entegrasyonu', 'App Store ve Google Play yayını', 'Lansman sonrası destek ve güncelleme', '<a href="marvi-society">Marvi Society</a> — iOS uygulama örneği'],
         cta: 'Yazılım projesi iste'
@@ -153,8 +153,8 @@
         cta: 'Sunucu danışmanlığı'
       },
       {
-        title: 'SMM yönetimi',
-        subtitle: 'Social Media · İçerik · Reklam · Büyüme',
+        title: 'Sosyal medya yönetimi (SMM)',
+        subtitle: 'Instagram · LinkedIn · İçerik · Reklam',
         body: 'Markanın sosyal medya varlığını profesyonel yönetiyoruz — içerik, görsel tasarım, yayın takvimi, etkileşim ve <strong>hedefli reklam (Paid Social)</strong>; Instagram ve LinkedIn’de aylık büyüme raporu ile.',
         tags: ['İçerik takvimi', 'Copywriting', 'Grafik', 'Reels / Video', 'Paid Social', 'Büyüme raporu'],
         checks: [
@@ -284,11 +284,11 @@
       { title: 'خدمات فنی', desc: 'دوربین مدار بسته، سیم‌کشی و نورمخفی — تبریز.' }
     ],
     tr: [
-      { title: 'Dijital pazarlama', desc: 'Google Ads, Meta ve LinkedIn — USD/EUR ciro.' },
-      { title: 'Web ve web app', desc: 'ABD/AB için İngilizce site — $99’dan, fatura USD/EUR.' },
-      { title: 'Uygulama ve sistem', desc: 'Android, iOS ve web app — App Store / Play ve Stripe.' },
+      { title: 'Dijital pazarlama ve SEO', desc: 'SEO, Google Ads, Meta ve LinkedIn reklamlarıyla satış büyümesi.' },
+      { title: 'Web tasarım', desc: 'Kurumsal site, e-ticaret ve web app — $99’dan, mobil uyumlu ve SEO uyumlu.' },
+      { title: 'Mobil uygulama', desc: 'Android, iOS ve web app — App Store / Google Play yayını.' },
       { title: 'Sunucu yönetimi', desc: 'VPS, güvenlik, yedek, monitoring, DNS ve migrasyon.' },
-      { title: 'SMM yönetimi', desc: 'İçerik, grafik, reels, reklam ve büyüme raporu.' },
+      { title: 'Sosyal medya yönetimi', desc: 'İçerik, grafik, reels, reklam ve büyüme raporu.' },
       { title: 'Teknik hizmetler', desc: 'CCTV, tesisat ve gizli aydınlatma — Tebriz.' }
     ],
     en: [
@@ -344,26 +344,30 @@
     },
     tr: {
       servicesTitle: 'Dijital pazarda neler yapıyoruz?',
-      processNote: 'ABD ve AB kitleleri için kampanya — Google Ads, Meta, LinkedIn, İngilizce SEO ve GA4 raporu USD veya EUR.',
+      processNote: 'Türkiye ve yurt dışı kitleleri için kampanya — Google Ads, Meta, LinkedIn, Türkçe/İngilizce SEO ve aylık GA4 raporu.',
       ctaArticle: 'Dijital pazarlama yazısı',
       packagesTitle: 'İş birliği çıktıları',
       packages: [
-        'ABD/AB kanal ve huni haritası',
-        'Ads kurulumu — bütçe USD/EUR',
-        'İngilizce landing’de CRO testleri',
-        'Aylık KPI — dolar veya euro'
+        'Kanal ve satış hunisi haritası',
+        'Google Ads ve Meta kampanya kurulumu',
+        'Landing sayfalarında CRO testleri',
+        'Aylık KPI ve GA4 raporu'
       ],
       panels: [
-        { title: 'Google Ads', desc: 'Arama ve Performance Max — US/EU' },
-        { title: 'Meta', desc: 'Facebook ve Instagram Ads' },
-        { title: 'LinkedIn', desc: 'ABD/AB B2B lead' },
-        { title: 'SEO', desc: 'İngilizce SEO ve dönüşüm sayfaları' },
-        { title: 'CRO', desc: 'Landing ve checkout dönüşümü' },
-        { title: 'GA4', desc: 'Rapor USD veya EUR' }
+        { title: 'Google Ads', desc: 'Arama, Performance Max ve YouTube' },
+        { title: 'Meta', desc: 'Facebook ve Instagram reklamları' },
+        { title: 'LinkedIn', desc: 'B2B lead ve marka bilinirliği' },
+        { title: 'SEO', desc: 'Türkçe ve İngilizce SEO, içerik' },
+        { title: 'CRO', desc: 'Landing ve ödeme dönüşümü' },
+        { title: 'GA4', desc: 'Aylık KPI raporu' }
       ],
       faqEyebrow: 'Dijital pazarlama',
       faqTitle: 'Dijital pazarlama SSS',
       faq: [
+        {
+          q: 'Türkiye’deki işletmeler için SEO ve Google Ads yönetiyor musunuz?',
+          a: 'Evet. İstanbul ekibimiz Türkçe anahtar kelime araştırması, teknik SEO, içerik ve Google Ads / Meta kampanyalarını yönetir; sonuçları aylık GA4 raporuyla paylaşırız.'
+        },
         {
           q: 'Avrupa ve ABD müşterileri için kampanya yürütüyor musunuz?',
           a: 'Evet. Bütçe ve fatura USD veya EUR; hedef kitle US/EU; raporlama GA4 ile aynı para biriminde.'
@@ -467,26 +471,30 @@
     },
     tr: {
       servicesTitle: 'Ne inşa ediyoruz?',
-      processNote: '5 günde İngilizce landing’den özel web app’e — USD/EUR fatura, Stripe/PayPal, uluslararası hosting ve CET/EST örtüşmesi. Farsça/RTL ikinci pazar için.',
-      ctaCustom: 'USD / EUR web teklifi',
+      processNote: '5 günde hazır kurumsal siteden özel web uygulamasına — Türkçe, İngilizce veya çok dilli; mobil uyumlu, hızlı ve SEO uyumlu. Yurt dışı projelerde USD/EUR fatura.',
+      ctaCustom: 'Web sitesi teklifi al',
       packagesTitle: 'Teslim çıktıları',
       packages: [
-        'UI/UX ve İngilizce sayfa kimliği',
-        'Responsive LTR (isteğe RTL)',
+        'UI/UX tasarım ve marka uyumlu sayfalar',
+        'Mobil uyumlu, çok dilli yapı',
         'Teknik SEO ve Core Web Vitals',
-        'Stripe / PayPal, CMS eğitimi ve lansman desteği'
+        'Ödeme entegrasyonu, CMS eğitimi ve yayın desteği'
       ],
       panels: [
-        { title: 'Corporate', desc: 'İngilizce kurumsal site' },
-        { title: 'Store', desc: 'Mağaza + Stripe' },
-        { title: 'Web App', desc: 'Panel ve SaaS' },
-        { title: 'Landing', desc: 'ABD/AB kampanya landing' },
-        { title: 'USD / EUR', desc: 'Fatura sizin para biriminizde' },
-        { title: 'Fast', desc: '$99 / ~€90’dan' }
+        { title: 'Kurumsal', desc: 'Türkçe / İngilizce kurumsal site' },
+        { title: 'E-ticaret', desc: 'Online mağaza ve ödeme' },
+        { title: 'Web App', desc: 'Yönetim paneli ve SaaS' },
+        { title: 'Landing', desc: 'Kampanya ve reklam sayfası' },
+        { title: 'SEO', desc: 'Hızlı, SEO uyumlu altyapı' },
+        { title: 'Fast', desc: '5 günde site, $99’dan' }
       ],
       faqEyebrow: 'Web tasarım',
       faqTitle: 'Web tasarım SSS',
       faq: [
+        {
+          q: 'İstanbul’da kurumsal web sitesi ve e-ticaret sitesi yapıyor musunuz?',
+          a: 'Evet. Türkçe ve çok dilli kurumsal site, e-ticaret ve landing sayfası tasarlıyoruz — mobil uyumlu, hızlı ve SEO uyumlu. Hazır paketler 5 günde $99’dan başlar; özel projeler için ücretsiz teklif veriyoruz.'
+        },
         {
           q: 'Avrupa ve ABD şirketleri için site yapıyor musunuz?',
           a: 'Evet — asıl odağımız bu. İngilizce LTR site, USD veya EUR fatura, CET/EST örtüşmesi, Zoom/Meet ve Netinode üzerinden GDPR uyumlu hosting.'
@@ -922,7 +930,7 @@
       processNote: 'بازدید فنی، پیشنهاد طرح و زمان‌بندی اجرا — هماهنگی مستقیم از واتساپ خدمات فنی.',
       faqTitle: 'سوالات پرتکرار خدمات فنی',
       panel: [
-        { id: 'cctv', icon: 'monitor', title: 'دوربین مدار بسته', desc: 'نصب CCTV منزل و محل کار' },
+        { id: 'cctv', icon: 'cctv', title: 'دوربین مدار بسته', desc: 'نصب CCTV منزل و محل کار' },
         { id: 'wiring', icon: 'bolt', title: 'سیم‌کشی ساختمان', desc: 'واحد مسکونی و تجاری' },
         { id: 'lighting', icon: 'flame', title: 'نورمخفی', desc: 'طراحی و اجرای داخلی' },
         { id: 'survey', icon: 'document', title: 'بازدید فنی', desc: 'طرح و زمان‌بندی اجرا' },
@@ -961,7 +969,7 @@
       processNote: 'Teknik keşif, uygulama planı ve kurulum takvimi — Teknik WhatsApp’tan yazın.',
       faqTitle: 'Teknik hizmet SSS',
       panel: [
-        { id: 'cctv', icon: 'monitor', title: 'Güvenlik kamerası', desc: 'Konut ve işyeri CCTV' },
+        { id: 'cctv', icon: 'cctv', title: 'Güvenlik kamerası', desc: 'Konut ve işyeri CCTV' },
         { id: 'wiring', icon: 'bolt', title: 'Bina tesisatı', desc: 'Konut ve ticari birimler' },
         { id: 'lighting', icon: 'flame', title: 'Gizli aydınlatma', desc: 'İç mekân uygulama' },
         { id: 'survey', icon: 'document', title: 'Teknik keşif', desc: 'Plan ve kurulum takvimi' },
@@ -1000,7 +1008,7 @@
       processNote: 'Site survey, execution plan and install schedule — message via Technical WhatsApp.',
       faqTitle: 'Technical services FAQ',
       panel: [
-        { id: 'cctv', icon: 'monitor', title: 'CCTV', desc: 'Home and workplace cameras' },
+        { id: 'cctv', icon: 'cctv', title: 'CCTV', desc: 'Home and workplace cameras' },
         { id: 'wiring', icon: 'bolt', title: 'Building wiring', desc: 'Residential and commercial' },
         { id: 'lighting', icon: 'flame', title: 'Cove lighting', desc: 'Indoor design and install' },
         { id: 'survey', icon: 'document', title: 'Site survey', desc: 'Plan and schedule' },
@@ -1202,17 +1210,17 @@
     tr: {
       hero: {
         tag: 'Hizmetlerimiz',
-        title: 'Türkiye için web, pazarlama ve teknik hizmetler',
-        desc: 'İstanbul ve Türkiye pazarı için site, SMM ve yazılım — artı Tebriz saha hizmetleri. ABD/AB işi için fatura USD veya EUR. Hızlı plan: <a href="fast">$99</a>. Ürünler <a href="products">ürünler sayfasında</a>.',
-        ctaPrimary: 'Web tasarım danışmanlığı',
-        ctaWeb: 'Siteler $99’dan',
+        title: 'İstanbul’dan web tasarım, SEO ve dijital pazarlama hizmetleri',
+        desc: 'Türkiye’deki işletmeler için <strong>kurumsal web sitesi</strong>, <strong>e-ticaret</strong>, <strong>SEO</strong>, Google Ads ve sosyal medya yönetimi — ayrıca mobil uygulama ve sunucu yönetimi. Yurt dışı projelerde USD/EUR fatura. Hızlı site: <a href="fast">$99’dan</a>. Ürünler <a href="products">ürünler sayfasında</a>.',
+        ctaPrimary: 'Ücretsiz web tasarım danışmanlığı',
+        ctaWeb: '$99’dan web sitesi',
         ctaField: 'Teknik WhatsApp'
       },
       paths: {
         digital: {
           eyebrow: 'Dijital yol',
-          title: 'Web, pazarlama, uygulama, sunucu ve SMM',
-          desc: 'ABD/AB İngilizce siteden USD/EUR kampanyaya ve yazılım teslimine — online işiniz için tek ekip.',
+          title: 'Web, SEO, reklam, uygulama, sunucu ve SMM',
+          desc: 'Kurumsal siteden SEO ve reklam kampanyasına, mobil uygulamadan sunucu yönetimine — online işiniz için tek ekip.',
           cta: 'Web tasarımla başla'
         },
         field: {
@@ -1224,9 +1232,10 @@
       },
       overview: {
         eyebrow: 'Genel bakış',
-        title: 'Altı Bizdavar hizmet alanı',
-        desc: 'Dijital ve yazılım üstte — saha teknik hizmetleri aşağıda, özel teknik WhatsApp ile.'
+        title: 'Altı hizmet alanı, tek ekip',
+        desc: 'Web tasarım, SEO, reklam, mobil uygulama, sunucu ve sosyal medya — dijital işleriniz tek ekipte. CCTV ve tesisat hizmetleri Tebriz’de.'
       },
+      geoText: 'İstanbul ekibinden Türkçe danışmanlık — web tasarım, SEO, reklam ve sosyal medya. CCTV ve tesisat hizmetleri Tebriz’de.',
       navAria: 'Hizmet listesi',
       viewDetails: 'Detayları gör',
       stats: [
@@ -1253,10 +1262,12 @@
         btnSecondary: 'Portfolyoyu gör'
       },
       relatedLinks: [
-        { title: 'Fast Web Studio', url: 'fast', desc: 'İngilizce site $99 / ~€90’dan' },
-        { title: 'ABD/AB web yazısı', url: 'articles/website-design-us-eu', desc: 'USD veya EUR fatura' },
-        { title: 'ABD/AB Ads yazısı', url: 'articles/digital-marketing-us-eu', desc: 'Google, Meta, LinkedIn' },
-        { title: 'İletişim — web teklifi', url: 'contact?service=web-design', desc: 'Fatura USD veya EUR' }
+        { title: 'Fast Web Studio', url: 'fast', desc: '5 günde web sitesi, $99’dan' },
+        { title: 'Dijital pazarlama nedir?', url: 'articles/what-is-digital-marketing', desc: 'SEO, Google Ads ve sosyal medya' },
+        { title: 'Sosyal medya yönetimi', url: 'articles/social-media-management', desc: 'İçerik, reklam ve büyüme raporu' },
+        { title: 'Türkiye ve İran için çok dilli web', url: 'articles/multilingual-web-iran-turkey', desc: 'TR / FA / EN site yapısı' },
+        { title: 'Özel web uygulaması', url: 'articles/custom-web-app-development', desc: 'Panel, CRM ve entegrasyon' },
+        { title: 'İletişim — teklif al', url: 'contact?service=web-design', desc: 'Ücretsiz ilk danışmanlık' }
       ]
     },
     en: {
@@ -1287,6 +1298,7 @@
         title: 'Six Bizdavar service areas',
         desc: 'Digital and software first — English web for US/EU, then on-site technical services in Tabriz.'
       },
+      geoText: 'English consulting from our Istanbul team — web design, SEO, ads and social media. CCTV and wiring installs are delivered in Tabriz.',
       navAria: 'Services list',
       viewDetails: 'View details',
       stats: [

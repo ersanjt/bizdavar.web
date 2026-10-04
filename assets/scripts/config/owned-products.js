@@ -6,11 +6,11 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
   imgVersion: '8',
   homeOrder: ['fxguard', 'bizswap'],
   categories: [
-    { id: 'software', label: 'نرم‌افزار و SaaS', icon: 'globe' },
-    { id: 'iot-health', label: 'IoT و بهداشت', icon: 'shield' },
-    { id: 'packaging', label: 'بسته‌بندی و سیل', icon: 'box' },
-    { id: 'medical', label: 'پزشکی و PPE', icon: 'heart' },
-    { id: 'leather', label: 'چرم اگزوتیک', icon: 'box' }
+    { id: 'software', label: 'نرم‌افزار و SaaS', icon: 'code' },
+    { id: 'iot-health', label: 'IoT و بهداشت', icon: 'chip' },
+    { id: 'packaging', label: 'بسته‌بندی و سیل', icon: 'sealer' },
+    { id: 'medical', label: 'پزشکی و PPE', icon: 'mask' },
+    { id: 'leather', label: 'چرم اگزوتیک', icon: 'leather' }
   ],
   items: [
     {
