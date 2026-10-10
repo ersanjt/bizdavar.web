@@ -18,6 +18,9 @@ admin/.htpasswd
 /media/catalog/
 /media/review/
 /work/
+/promo-video/out/
+/promo-video/mascot/out/
+/promo-video/mascot/out_v2/
 
 # Security/local files (Codex senior audit)
 .env

@@ -43,7 +43,7 @@ window.BIZDAVAR_CONFIG = {
     bizswap: 'pages/bizswap.html',
     products: 'pages/products.html',
     gamak: 'pages/gamak.html',
-    enpo: 'pages/enpo.html',
+    enpo: 'pages/pneumatic.html',
     uwt: 'pages/uwt.html',
     digiSystem: 'pages/digi-system.html',
     teraoka: 'pages/teraoka.html',
@@ -150,7 +150,7 @@ window.BIZDAVAR_CONFIG = {
             labelKey: 'nav.brandGroupPower',
             items: [
               { route: 'gamak', page: 'gamak', label: 'Gamak', descKey: 'nav.brandGamakDesc' },
-              { route: 'enpo', page: 'enpo', label: 'ENPO', descKey: 'nav.brandEnpoDesc' },
+              { route: 'enpo', page: 'enpo', labelKey: 'nav.brandPneumaticLabel', label: 'Pneumatics', descKey: 'nav.brandEnpoDesc' },
               { route: 'liquiMoly', page: 'liqui-moly', label: 'Liqui Moly', descKey: 'nav.brandLiquiDesc' }
             ]
           },
@@ -300,7 +300,7 @@ window.BIZDAVAR_CONFIG = {
         whatsappMessage: 'سلام، برای خدمات فنی (دوربین مدار بسته / سیم‌کشی / نورمخفی) از وبسایت bizdavar.com پیام می‌دهم.'
       }
     ],
-    address: 'دفاتر: ایران · ترکیه · ارمنستان · دبی',
+    address: 'ایران · ترکیه · ارمنستان · دبی',
     workingHours: '۷/۲۴ — همیشه در دسترس',
     linkedin: 'https://www.linkedin.com/in/ersanjt',
     instagram: 'https://www.instagram.com/bizdavar'
@@ -802,17 +802,17 @@ window.BIZDAVAR_CONFIG = {
       cta: 'اطلاعات Gamak'
     },
     {
-      name: 'ENPO',
+      name: 'Pneumatic',
       title: 'پنوماتیک صنعتی',
-      desc: 'آماده‌سازی هوا، سیلندر، شیر، سنسور مغناطیسی و گریپر — سری‌ها مطابق کاتالوگ ENPO',
-      logo: 'assets/images/enpo/logo.png',
+      desc: 'سیلندر، شیر برقی، واحد مراقبت هوا، سنسور مغناطیسی و گریپر برای خطوط تولید ایران',
+      logo: 'assets/images/brand/bizdavar-logo.png',
       photo: 'assets/images/enpo/1759141902.webp',
-      url: 'pages/enpo',
+      url: 'pages/pneumatic',
       internal: true,
       badge: 'ترکیه',
       accent: 'blue',
-      tags: ['FRL', 'سیلندر', 'شیر'],
-      cta: 'کاتالوگ ENPO'
+      tags: ['واحد مراقبت', 'سیلندر', 'شیر برقی'],
+      cta: 'کاتالوگ پنوماتیک'
     },
     {
       name: 'Teraoka',

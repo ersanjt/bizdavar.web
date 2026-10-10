@@ -112,9 +112,9 @@
         seoKeywords: 'Gamak ایران, الکتروموتور صنعتی, IE2 IE3, موتور سه فاز, بیزدوار'
       },
       enpo: {
-        seoTitle: 'تجهیزات پنوماتیک ENPO | سیلندر، شیر و واحد مراقبت — بیزدوار',
-        seoDescription: 'تامین سری‌های پنوماتیک ENPO: آماده‌سازی هوا، سیلندر، شیر، سنسور مغناطیسی و گریپر. نام و کد سفارش مطابق کاتالوگ ENPO — بیزدوار گروپ.',
-        seoKeywords: 'ENPO, پنوماتیک, سیلندر, شیر, واحد مراقبت هوا, بیزدوار'
+        seoTitle: 'خرید سیلندر و شیر پنوماتیک | واحد مراقبت هوا — بیزدوار',
+        seoDescription: 'سیلندر پنوماتیک، شیر برقی، واحد مراقبت هوا، فیلتر، رگولاتور و روغن‌زن برای خطوط تولید ایران. مشاوره فارسی و پیش‌فاکتور از بیزدوار گروپ.',
+        seoKeywords: 'سیلندر پنوماتیک, خرید سیلندر پنوماتیک, شیر پنوماتیک, شیر برقی پنوماتیک, واحد مراقبت هوا, فیلتر رگولاتور, روغن‌زن پنوماتیک, سنسور مغناطیسی سیلندر, گریپر پنوماتیک, پنوماتیک صنعتی, بیزدوار'
       },
       digiSystem: {
         seoTitle: 'خرید Digi System | ترازو و POS فروشگاهی | بیزدوار',
@@ -369,9 +369,9 @@
         seoKeywords: 'Gamak, elektrik motoru, IE2 IE3, endüstriyel motor, Bizdavar'
       },
       enpo: {
-        seoTitle: 'ENPO pnömatik | Silindir, valf ve hava hazırlayıcı — Bizdavar',
-        seoDescription: 'ENPO pnömatik serileri: hava hazırlama, silindir, valf, manyetik sensör ve gripper. Seri adları ENPO kataloğu ile aynıdır — Bizdavar Group.',
-        seoKeywords: 'ENPO, pnömatik, silindir, valf, hava hazırlayıcı, Bizdavar'
+        seoTitle: 'Endüstriyel pnömatik | Silindir, valf ve hava hazırlayıcı — Bizdavar',
+        seoDescription: 'Endüstriyel pnömatik serileri: hava hazırlama, silindir, valf, manyetik sensör ve gripper. Teklif Bizdavar Group.',
+        seoKeywords: 'endüstriyel pnömatik, silindir, valf, hava hazırlayıcı, Bizdavar'
       },
       digiSystem: {
         seoTitle: 'Digi System tedariki | Terazi ve POS | Bizdavar',
@@ -708,9 +708,9 @@
         seoKeywords: 'Gamak, electric motor, IE2 IE3, industrial motor, Bizdavar'
       },
       enpo: {
-        seoTitle: 'ENPO pneumatics | Cylinders, valves and air prep — Bizdavar',
-        seoDescription: 'ENPO pneumatic series: air preparation, cylinders, valves, magnetic sensors and grippers. Series names match the ENPO catalog — Bizdavar Group.',
-        seoKeywords: 'ENPO, pneumatic, cylinder, valve, air preparation, Bizdavar'
+        seoTitle: 'Industrial pneumatics | Cylinders, valves and air prep — Bizdavar',
+        seoDescription: 'Industrial pneumatic series: air preparation, cylinders, valves, magnetic sensors and grippers. Quote the exact model with Bizdavar Group.',
+        seoKeywords: 'industrial pneumatics, pneumatic cylinder, pneumatic valve, air preparation unit, Bizdavar'
       },
       digiSystem: {
         seoTitle: 'Digi System supply | Retail scales & POS | Bizdavar',

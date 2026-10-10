@@ -194,10 +194,10 @@
       seoKeywords: 'Gamak, электродвигатель, IE2 IE3, промышленный мотор, Bizdavar'
     },
     enpo: {
-      crumb: 'ENPO',
-      seoTitle: 'Пневматика ENPO | цилиндры, клапаны и подготовка воздуха — Bizdavar',
-      seoDescription: 'Серии пневматики ENPO: подготовка воздуха, цилиндры, клапаны, магнитные датчики и захваты. Названия серий совпадают с каталогом ENPO — Bizdavar Group.',
-      seoKeywords: 'ENPO, пневматика, цилиндр, клапан, Bizdavar'
+      crumb: 'Пневматика',
+      seoTitle: 'Промышленная пневматика | цилиндры, клапаны и подготовка воздуха — Bizdavar',
+      seoDescription: 'Серии промышленной пневматики: подготовка воздуха, цилиндры, клапаны, магнитные датчики и захваты. Запрос точной модели — Bizdavar Group.',
+      seoKeywords: 'промышленная пневматика, цилиндр, клапан, подготовка воздуха, Bizdavar'
     },
     digiSystem: {
       crumb: 'Digi System',
@@ -550,10 +550,10 @@
       seoKeywords: 'Gamak, موتور كهربائي, IE2 IE3, موتور صناعي, Bizdavar'
     },
     enpo: {
-      crumb: 'ENPO',
-      seoTitle: 'معدات ENPO الهوائية | أسطوانات وصمامات وتجهيز هواء — بيزدوار',
-      seoDescription: 'سلاسل ENPO الهوائية: تجهيز الهواء، الأسطوانات، الصمامات، الحساسات المغناطيسية والقوابض. الأسماء مطابقة لكتالوج ENPO — Bizdavar Group.',
-      seoKeywords: 'ENPO, هواء مضغوط, أسطوانة, صمام, بيزدوار'
+      crumb: 'هواء مضغوط',
+      seoTitle: 'معدات هواء مضغوط صناعية | أسطوانات وصمامات وتجهيز هواء — بيزدوار',
+      seoDescription: 'سلاسل هواء مضغوط صناعية: تجهيز الهواء، الأسطوانات، الصمامات، الحساسات المغناطيسية والقوابض. استفسار بالموديل الدقيق من Bizdavar Group.',
+      seoKeywords: 'هواء مضغوط, أسطوانة, صمام, تجهيز هواء, بيزدوار'
     },
     digiSystem: {
       crumb: 'Digi System',
@@ -1127,7 +1127,7 @@
         { name: 'Prosense', title: 'Газовые и пламенные детекторы', desc: 'Стационарные и портативные системы с сертификацией SIL2/3', badge: 'Турция', tags: ['PQ+', 'SafeVader', 'PPS'], cta: 'Линейки продуктов' },
         { name: 'Teltonika', title: 'GPS и Fleet Telematics', desc: 'Трекеры флота, CAN/OBD, BLE, видео и IoT — FMB920 · FMC650 · FTC305', badge: 'Литва', tags: ['FMB920', 'FTC305', 'DualCam'], cta: 'Каталог Teltonika' },
         { name: 'Gamak', title: 'Промышленные электродвигатели', desc: 'Трёхфазные и однофазные моторы — поставка и техподдержка', badge: 'Турция', tags: ['IE2/IE3', 'Фланец', 'Под проект'], cta: 'О Gamak' },
-        { name: 'ENPO', title: 'Промышленная пневматика', desc: 'Подготовка воздуха, цилиндры, клапаны и магнитные датчики — серии как в каталоге ENPO', badge: 'Турция', tags: ['FRL', 'Цилиндр', 'Клапан'], cta: 'Каталог ENPO' },
+        { name: 'Pneumatic', title: 'Промышленная пневматика', desc: 'Подготовка воздуха, цилиндры, клапаны и магнитные датчики', badge: 'Турция', tags: ['FRL', 'Цилиндр', 'Клапан'], cta: 'Каталог пневматики' },
         { name: 'Teraoka', title: 'Весы и магазинное оборудование', desc: 'Полная линейка Teraoka Seiko — весы, этикетирование, POS', badge: 'Япония', tags: ['Scales', 'Labeling', 'POS'], cta: 'Смотреть бренд' },
         { name: 'Liqui Moly', title: 'Масла и присадки', desc: 'Моторные масла, Octane Plus, дизельные присадки и автохимия — цены в USD', badge: 'Германия', tags: ['Octane Plus', 'Top Tec', '5W-30'], cta: 'Каталог и цены' },
         { name: 'Auto-Moto', title: 'Мотоэкипировка', desc: 'Шлемы, куртки, перчатки, штаны, ботинки, интеркомы и защита — цена на карточке в долларах с доставкой в Иран', badge: 'Новое', tags: ['Шлемы', 'Куртки', 'Ботинки'], cta: 'Каталог и запрос' },
@@ -1199,7 +1199,7 @@
         { name: 'Prosense', title: 'كواشف غاز ولهب', desc: 'أنظمة ثابتة ومحمولة بشهادة SIL2/3', badge: 'تركيا', tags: ['PQ+', 'SafeVader', 'PPS'], cta: 'سلاسل المنتجات' },
         { name: 'Teltonika', title: 'GPS وFleet Telematics', desc: 'متتبعات أساطيل وCAN/OBD وBLE وفيديو وIoT — FMB920 · FMC650 · FTC305', badge: 'ليتوانيا', tags: ['FMB920', 'FTC305', 'DualCam'], cta: 'كتالوج Teltonika' },
         { name: 'Gamak', title: 'محركات كهربائية صناعية', desc: 'محركات ثلاثية وأحادية الطور — توريد ودعم فني', badge: 'تركيا', tags: ['IE2/IE3', 'فلانش', 'حسب المشروع'], cta: 'معلومات Gamak' },
-        { name: 'ENPO', title: 'معدات هواء مضغوط', desc: 'تجهيز الهواء والأسطوانات والصمامات والحساسات المغناطيسية — السلاسل مطابقة لكتالوج ENPO', badge: 'تركيا', tags: ['FRL', 'أسطوانة', 'صمام'], cta: 'كتالوج ENPO' },
+        { name: 'Pneumatic', title: 'معدات هواء مضغوط', desc: 'تجهيز الهواء والأسطوانات والصمامات والحساسات المغناطيسية', badge: 'تركيا', tags: ['FRL', 'أسطوانة', 'صمام'], cta: 'كتالوج الهواء المضغوط' },
         { name: 'Teraoka', title: 'موازين ومعدات متاجر', desc: 'توريد Teraoka Seiko الكامل — موازين وملصقات وPOS', badge: 'اليابان', tags: ['Scales', 'Labeling', 'POS'], cta: 'عرض العلامة' },
         { name: 'Liqui Moly', title: 'زيوت وإضافات', desc: 'زيوت محرك وOctane Plus وإضافات ديزل وعناية — أسعار بالدولار', badge: 'ألمانيا', tags: ['Octane Plus', 'Top Tec', '5W-30'], cta: 'الكتالوج والأسعار' },
         { name: 'Auto-Moto', title: 'معدات الدراجات النارية', desc: 'خوذات وسترات وقفازات وبوت وإنتركم وحماية. السعر على البطاقة بالدولار لتسليم إيران.', badge: 'جديد', tags: ['خوذة', 'سترة', 'بوت'], cta: 'الكتالوج والاستعلام' },
@@ -1933,6 +1933,7 @@
     brandTeltonikaDesc: 'GPS и телематика флота',
     brandTeltonikaBadge: 'От $29',
     brandGamakDesc: 'Промышленные электродвигатели',
+    brandPneumaticLabel: 'Пневматика',
     brandEnpoDesc: 'Пневматика, цилиндры и клапаны',
     brandLiquiDesc: 'Масла и присадки',
     productAutoMoto: 'Auto-Moto',
@@ -2363,7 +2364,7 @@
     ru.contact.channelIr = 'WhatsApp Иран';
     ru.contact.channelTr = 'WhatsApp Турция';
     ru.contact.channelField = 'Технические услуги';
-    ru.contact.address = 'Офисы: Иран · Турция · Армения · Дубай';
+    ru.contact.address = 'Иран · Турция · Армения · Дубай';
     ru.contact.workingHours = '24/7 — всегда на связи';
   }
   ru.contactPage = Object.assign({}, ru.contactPage || {}, {
@@ -2521,6 +2522,7 @@
     brandTeltonikaDesc: 'GPS وتتبع الأسطول',
     brandTeltonikaBadge: 'من ٢٩$',
     brandGamakDesc: 'محركات كهربائية صناعية',
+    brandPneumaticLabel: 'هواء مضغوط',
     brandEnpoDesc: 'هواء مضغوط وأسطوانات وصمامات',
     brandLiquiDesc: 'زيوت وإضافات',
     productAutoMoto: 'Auto-Moto',
@@ -2951,7 +2953,7 @@
     ar.contact.channelIr = 'واتساب إيران';
     ar.contact.channelTr = 'واتساب تركيا / المبيعات';
     ar.contact.channelField = 'خدمات فنية';
-    ar.contact.address = 'مكاتب: إيران · تركيا · أرمينيا · دبي';
+    ar.contact.address = 'إيران · تركيا · أرمينيا · دبي';
     ar.contact.workingHours = 'على مدار الساعة';
   }
   ar.contactPage = Object.assign({}, ar.contactPage || {}, {

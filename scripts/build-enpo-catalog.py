@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """Build the ENPO supply catalog and locale pages from crawled source data."""
+import html
 import json
 import re
 from pathlib import Path
@@ -396,13 +397,7 @@ LABELS = {
     "pressure": {"fa": "فشار کاری", "tr": "Çalışma basıncı", "en": "Working pressure", "ru": "Рабочее давление", "ar": "ضغط التشغيل"},
     "ports": {"fa": "اتصال", "tr": "Bağlantı", "en": "Ports", "ru": "Присоединение", "ar": "التوصيل"},
     "temp": {"fa": "دما", "tr": "Sıcaklık", "en": "Temperature", "ru": "Температура", "ar": "الحرارة"},
-    "fallback": {
-        "fa": "این سری در کاتالوگ ENPO پنوماتیک است. مدل، سایز و تعداد را برای استعلام بفرستید.",
-        "tr": "Bu seri ENPO pnömatik kataloğundadır. Teklif için model, ölçü ve adet gönderin.",
-        "en": "This series is in the ENPO pneumatic catalog. Send the model, size and quantity for a quote.",
-        "ru": "Серия из каталога пневматики ENPO. Для предложения укажите модель, размер и количество.",
-        "ar": "هذه السلسلة من كتالوج ENPO للهواء المضغوط. أرسلوا الموديل والمقاس والكمية لعرض السعر.",
-    },
+    "fallback": {"fa": "", "tr": "", "en": "", "ru": "", "ar": ""},
 }
 
 
@@ -434,25 +429,20 @@ def image_for(kid):
         return f"assets/images/enpo/{kid}.webp"
     if jpg.exists():
         return f"assets/images/enpo/{kid}.jpg"
-    return "assets/images/enpo/logo.png"
+    return "assets/images/enpo/placeholder.svg"
 
 
 def describe(lang, facts):
     facts = facts or {}
     bits = []
-    codes = facts.get("codes") or []
-    if codes:
-        bits.append(LABELS["codes"][lang] + ": " + " · ".join(codes[:8]))
     if facts.get("pressure"):
-        bits.append(LABELS["pressure"][lang] + ": " + " · ".join(facts["pressure"][:3]))
+        bits.append(LABELS["pressure"][lang] + " " + " · ".join(facts["pressure"][:3]))
     if facts.get("ports"):
-        bits.append(LABELS["ports"][lang] + ": " + " · ".join(facts["ports"][:6]))
+        bits.append(LABELS["ports"][lang] + " " + " · ".join(facts["ports"][:6]))
     temps = [" ".join(t.split()) for t in (facts.get("temp") or []) if "°" in t and len(t) < 40]
     if temps:
-        bits.append(LABELS["temp"][lang] + ": " + " · ".join(temps[:2]))
-    if not bits:
-        return LABELS["fallback"][lang]
-    return ". ".join(bits) + "."
+        bits.append(LABELS["temp"][lang] + " " + " · ".join(temps[:2]))
+    return ". ".join(bits)
 
 
 def titles(title):
@@ -483,7 +473,6 @@ def build_catalog(nodes):
                 facts = s.get("facts") or {}
                 named = titles(s["title"])
                 parent_names = titles(node["title"])
-                official = s["pdf"] if facts.get("pages") else s["page"]
                 item = {
                     "id": s["kid"],
                     "name": s["title"],
@@ -494,15 +483,14 @@ def build_catalog(nodes):
                     "descRu": describe("ru", facts),
                     "descAr": describe("ar", facts),
                     "image": image_for(s["kid"]),
-                    "imageAlt": named["titleEn"] + " — ENPO",
+                    "imageAlt": named["titleEn"],
                     "categoryFa": parent_names["titleFa"],
                     "categoryTr": parent_names["titleTr"],
                     "categoryEn": parent_names["titleEn"],
                     "categoryRu": parent_names["titleRu"],
                     "categoryAr": parent_names["titleAr"],
                     "leafFa": parent_names["titleFa"],
-                    "officialUrl": official,
-                    "inquiryName": "ENPO " + s["title"],
+                    "inquiryName": s["title"],
                     "quoteOnly": True,
                     "specList": [],
                 }
@@ -520,8 +508,16 @@ def build_catalog(nodes):
                 "image": image_for(node["kid"]),
                 "imageAlt": cat_names["titleEn"],
                 "desc": "",
+                "descFa": "",
+                "descTr": "",
+                "descEn": "",
+                "descRu": "",
+                "descAr": "",
                 "series": series,
             }
+            real = next((s["image"] for s in series if not s["image"].endswith("placeholder.svg")), "")
+            if real:
+                cat["image"] = real
             if first:
                 cat["groupTitle"] = root_names["titleFa"]
                 cat["groupTitleFa"] = root_names["titleFa"]
@@ -539,7 +535,7 @@ def hero_image(categories):
         for s in cat["series"]:
             if s["image"].endswith(".webp"):
                 return s["image"]
-    return "assets/images/enpo/logo.png"
+    return "assets/images/enpo/placeholder.svg"
 
 
 def catalog_object(categories):
@@ -557,56 +553,57 @@ def catalog_object(categories):
             "titleEn": cat.get("groupTitleEn") or cat["titleEn"],
             "titleRu": cat.get("groupTitleRu") or cat["titleRu"],
             "titleAr": cat.get("groupTitleAr") or cat["titleAr"],
-            "descFa": "سری‌های همین خانواده را در کاتالوگ پایین ببینید و برای مدل دقیق استعلام بگیرید.",
-            "descTr": "Seriler aşağıdaki katalogda. Model için teklif isteyin.",
-            "descEn": "The series in this family are in the catalog below. Ask for a quote with the exact model.",
-            "descRu": "Серии этой группы — в каталоге ниже. Запросите предложение с точной моделью.",
-            "descAr": "سلاسل هذه العائلة في الكتالوج أدناه. اطلبوا عرض سعر بالموديل الدقيق.",
-            "badge": "ENPO",
-            "inquiryName": "ENPO " + (cat.get("groupTitleTr") or cat["titleTr"]),
+            "descFa": {"1758528905": "فیلتر، رگولاتور، روغن‌زن و واحد مراقبت.", "1758529434": "سیلندر کامپکت، ISO، بدون شفت و قلمی.", "1758529463": "شیر دستی، سلونوئید و نامور.", "1758530071": "گریپر، قفل و سیلندر تلسکوپی."}.get(cat["family"], ""),
+            "descTr": {"1758528905": "Filtre, regülatör, yağlayıcı ve şartlandırıcı.", "1758529434": "Kompakt, ISO, rodsuz ve kalem silindir.", "1758529463": "Manuel, solenoid ve namur valf.", "1758530071": "Gripper, kilit ve teleskopik silindir."}.get(cat["family"], ""),
+            "descEn": {"1758528905": "Filters, regulators, lubricators and air-prep units.", "1758529434": "Compact, ISO, rodless and pencil cylinders.", "1758529463": "Manual, solenoid and Namur valves.", "1758530071": "Grippers, locks and telescopic cylinders."}.get(cat["family"], ""),
+            "descRu": {"1758528905": "Фильтры, регуляторы, лубрикаторы и блоки подготовки воздуха.", "1758529434": "Компактные, ISO, бесштоковые и карандашные цилиндры.", "1758529463": "Ручные, соленоидные и Namur клапаны.", "1758530071": "Захваты, замки и телескопические цилиндры."}.get(cat["family"], ""),
+            "descAr": {"1758528905": "مرشحات ومنظمات ومزيتات ووحدات تجهيز الهواء.", "1758529434": "أسطوانات مدمجة وISO ومن دون ذراع وقلمية.", "1758529463": "صمامات يدوية وملف لولبي ونامور.", "1758530071": "قوابض وأقفال وأسطوانات تلسكوبية."}.get(cat["family"], ""),
+            "badge": "Bizdavar",
+            "inquiryName": cat.get("groupTitleTr") or cat["titleTr"],
             "image": cat["image"],
             "imageAlt": cat["imageAlt"],
             "quoteOnly": True,
         })
     return {
         "quoteEmptyPrices": True,
+        "hideQuotePrice": True,
         "lazyCatalog": True,
         "catalogPageSize": 12,
+        "navMode": "categories",
         "brand": {
-            "name": "ENPO",
-            "nameFa": "انپو",
-            "logo": "assets/images/enpo/logo.png",
-            "logoAlt": "ENPO Pnömatik",
+            "name": "پنوماتیک",
+            "nameFa": "پنوماتیک",
+            "logo": "assets/images/brand/bizdavar-logo.png",
+            "logoAlt": "Bizdavar",
             "heroImage": hero,
-            "heroImageAlt": "ENPO pneumatic air preparation and cylinders",
-            "heroEyebrow": "تامین پنوماتیک ENPO",
-            "heroEyebrowFa": "تامین پنوماتیک ENPO",
-            "heroEyebrowTr": "ENPO pnömatik tedariki",
-            "heroEyebrowEn": "ENPO pneumatic supply",
-            "heroEyebrowRu": "Поставка пневматики ENPO",
-            "heroEyebrowAr": "توريد ENPO للهواء المضغوط",
-            "heroHeadline": "تجهیزات پنوماتیک ENPO",
-            "heroHeadlineFa": "تجهیزات پنوماتیک ENPO",
-            "heroHeadlineTr": "ENPO pnömatik ekipman",
-            "heroHeadlineEn": "ENPO pneumatic equipment",
-            "heroHeadlineRu": "Пневматическое оборудование ENPO",
-            "heroHeadlineAr": "معدات ENPO الهوائية",
+            "heroImageAlt": "Industrial pneumatic air preparation and cylinders",
+            "heroEyebrow": "تامین پنوماتیک صنعتی",
+            "heroEyebrowFa": "تامین پنوماتیک صنعتی",
+            "heroEyebrowTr": "Endüstriyel pnömatik tedariki",
+            "heroEyebrowEn": "Industrial pneumatic supply",
+            "heroEyebrowRu": "Поставка промышленной пневматики",
+            "heroEyebrowAr": "توريد معدات الهواء المضغوط",
+            "heroHeadline": "تجهیزات پنوماتیک صنعتی",
+            "heroHeadlineFa": "تجهیزات پنوماتیک صنعتی",
+            "heroHeadlineTr": "Endüstriyel pnömatik ekipman",
+            "heroHeadlineEn": "Industrial pneumatic equipment",
+            "heroHeadlineRu": "Промышленное пневматическое оборудование",
+            "heroHeadlineAr": "معدات هواء مضغوط صناعية",
             "heroHeadlineSub": "آماده‌سازی هوا، سیلندر، شیر، سنسور مغناطیسی و گریپر — استعلام مدل دقیق",
             "heroHeadlineSubFa": "آماده‌سازی هوا، سیلندر، شیر، سنسور مغناطیسی و گریپر — استعلام مدل دقیق",
             "heroHeadlineSubTr": "Hava hazırlama, silindir, valf, manyetik sensör ve gripper — net model için teklif",
             "heroHeadlineSubEn": "Air preparation, cylinders, valves, magnetic sensors and grippers — quote the exact model",
             "heroHeadlineSubRu": "Подготовка воздуха, цилиндры, клапаны, датчики и захваты — запрос точной модели",
             "heroHeadlineSubAr": "تجهيز الهواء، الأسطوانات، الصمامات، الحساسات والقوابض — استفسار بالموديل الدقيق",
-            "descriptionTr": "Bizdavar Group, ENPO pnömatik serilerini tedarik eder. Seri adları ve okunabilen sipariş kodları ENPO kataloğu ile aynıdır.",
-            "descriptionEn": "Bizdavar Group supplies ENPO pneumatic series. Series names and readable order codes match the ENPO catalog.",
-            "descriptionRu": "Bizdavar Group поставляет серии пневматики ENPO. Названия серий и считанные коды заказа совпадают с каталогом ENPO.",
-            "descriptionAr": "تورد مجموعة بيزدوار سلاسل ENPO الهوائية. أسماء السلاسل ورموز الطلب المقروءة مطابقة لكتالوج ENPO.",
-            "tagline": "ENPO Pnömatik",
+            "descriptionTr": "Bizdavar Group endüstriyel pnömatik serilerini tedarik eder: hava hazırlama, silindir, valf, manyetik sensör ve gripper.",
+            "descriptionEn": "Bizdavar Group supplies industrial pneumatic series: air preparation, cylinders, valves, magnetic sensors and grippers.",
+            "descriptionRu": "Bizdavar Group поставляет серии промышленной пневматики: подготовка воздуха, цилиндры, клапаны, датчики и захваты.",
+            "descriptionAr": "تورد مجموعة بيزدوار سلاسل الهواء المضغوط الصناعية: تجهيز الهواء، الأسطوانات، الصمامات، الحساسات والقوابض.",
+            "tagline": "پنوماتیک صنعتی",
             "taglineFa": "پنوماتیک صنعتی — استانبول",
             "since": "İstanbul",
             "origin": "استانبول — ترکیه",
-            "officialUrl": "http://www.enpo.net/",
-            "descriptionFa": "بیزدوار گروپ سری‌های پنوماتیک ENPO را برای خطوط تولید و پروژه‌های صنعتی تامین می‌کند: واحد مراقبت هوا، سیلندر، شیر، سنسور مغناطیسی و گریپر. نام سری و کد سفارش مطابق کاتالوگ ENPO است.",
+            "descriptionFa": "سیلندر پنوماتیک، شیر برقی، واحد مراقبت هوا، فیلتر، رگولاتور و روغن‌زن برای خطوط تولید ایران. مشاوره فارسی و پیش‌فاکتور از بیزدوار گروپ.",
             "heroStats": [
                 {"value": "4", "label": "خانواده محصول"},
                 {"value": str(sum(len(c["series"]) for c in categories)), "label": "سری محصول"},
@@ -614,20 +611,20 @@ def catalog_object(categories):
             ],
         },
         "trustSignals": [
-            {"icon": "target", "label": "مطابق کاتالوگ ENPO", "desc": "نام سری، عکس و کد سفارش از کاتالوگ رسمی ENPO برداشته شده است"},
+            {"icon": "target", "label": "کد سفارش خوانا", "desc": "نام سری، عکس و کد سفارشی که در کاتالوگ خوانا بوده کنار محصول آمده است"},
             {"icon": "globe", "label": "مشاوره فارسی", "desc": "انتخاب سایز پورت، کورس سیلندر و ولتاژ بوبین بر اساس کاربرد"},
             {"icon": "factory", "label": "پنوماتیک صنعتی", "desc": "واحد مراقبت، سیلندر ISO، شیر و سنسور موقعیت"},
             {"icon": "mail", "label": "پیش‌فاکتور", "desc": "مدل، تعداد و زمان تامین قبل از سفارش مشخص می‌شود"},
         ],
         "whyBuyFromUs": [
-            {"icon": "target", "title": "همان سری‌های ENPO", "desc": "دسته‌ها و نام سری‌ها با سایت ENPO یکی است؛ کدهایی که در PDF خوانا بوده‌اند کنار محصول آمده‌اند."},
-            {"icon": "document", "title": "کاتالوگ رسمی", "desc": "برای هر سری لینک کاتالوگ یا صفحه ENPO هست تا نقشه فنی را ببینید."},
+            {"icon": "target", "title": "سری‌های کامل", "desc": "دسته‌ها و نام سری‌ها کنار هم هستند؛ کدهایی که در کاتالوگ خوانا بوده‌اند کنار محصول آمده‌اند."},
+            {"icon": "document", "title": "کد سفارش", "desc": "اگر کد روی بدنه را دارید همان را بفرستید تا مدل دقیق پیش‌فاکتور شود."},
             {"icon": "factory", "title": "انتخاب روی کاربرد", "desc": "اگر فقط مصرف هوا، کورس یا دبی را دارید، سری مناسب را پیشنهاد می‌دهیم."},
             {"icon": "handshake", "title": "یک نقطه تماس", "desc": "استعلام فارسی، پیش‌فاکتور و لجستیک از بیزدوار."},
         ],
         "purchaseSteps": [
-            {"num": "۱", "title": "استعلام", "desc": "نام سری ENPO، کد سفارش، سایز پورت یا کورس، تعداد"},
-            {"num": "۲", "title": "تطبیق فنی", "desc": "مقایسه با کاتالوگ ENPO و پیشنهاد جایگزین در صورت نیاز"},
+            {"num": "۱", "title": "استعلام", "desc": "نام سری، کد سفارش، سایز پورت یا کورس، تعداد"},
+            {"num": "۲", "title": "تطبیق فنی", "desc": "بررسی مدل و پیشنهاد جایگزین در صورت نیاز"},
             {"num": "۳", "title": "پیش‌فاکتور", "desc": "قیمت، زمان تامین و شرایط حمل"},
             {"num": "۴", "title": "تامین", "desc": "سفارش و حمل بین‌المللی"},
             {"num": "۵", "title": "تحویل", "desc": "تحویل به همراه مشخصات سری"},
@@ -635,22 +632,20 @@ def catalog_object(categories):
         "highlights": highlights,
         "categories": categories,
         "iranIndustries": [
-            {"name": "خطوط مونتاژ", "desc": "سیلندر، شیر و سنسور موقعیت", "image": hero, "imageAlt": "ENPO cylinders for assembly lines", "icon": "factory"},
-            {"name": "بسته‌بندی", "desc": "گریپر، سیلندر کامپکت و شیر", "image": hero, "imageAlt": "ENPO grippers for packaging", "icon": "gear"},
-            {"name": "هوای فشرده کارخانه", "desc": "فیلتر، رگولاتور و روغن‌زن", "image": hero, "imageAlt": "ENPO air preparation", "icon": "droplet"},
+            {"name": "خطوط مونتاژ", "desc": "سیلندر، شیر و سنسور موقعیت", "image": hero, "imageAlt": "Pneumatic cylinders for assembly lines", "icon": "factory"},
+            {"name": "بسته‌بندی", "desc": "گریپر، سیلندر کامپکت و شیر", "image": hero, "imageAlt": "Pneumatic grippers for packaging", "icon": "gear"},
+            {"name": "هوای فشرده کارخانه", "desc": "فیلتر، رگولاتور و روغن‌زن", "image": hero, "imageAlt": "Industrial air preparation", "icon": "droplet"},
         ],
         "industries": [
-            {"name": "مونتاژ", "nameEn": "Assembly", "desc": "Cylinders, valves and sensors", "image": hero, "imageAlt": "ENPO assembly", "icon": "factory"},
-            {"name": "بسته‌بندی", "nameEn": "Packaging", "desc": "Grippers and compact cylinders", "image": hero, "imageAlt": "ENPO packaging", "icon": "gear"},
-            {"name": "ماشین‌سازی", "nameEn": "Machinery", "desc": "Air prep and control valves", "image": hero, "imageAlt": "ENPO machinery", "icon": "bolt"},
+            {"name": "مونتاژ", "nameEn": "Assembly", "desc": "Cylinders, valves and sensors", "image": hero, "imageAlt": "Pneumatic assembly", "icon": "factory"},
+            {"name": "بسته‌بندی", "nameEn": "Packaging", "desc": "Grippers and compact cylinders", "image": hero, "imageAlt": "Pneumatic packaging", "icon": "gear"},
+            {"name": "ماشین‌سازی", "nameEn": "Machinery", "desc": "Air prep and control valves", "image": hero, "imageAlt": "Pneumatic machinery", "icon": "bolt"},
         ],
         "academy": {
-            "title": "ENPO — پنوماتیک صنعتی",
-            "descFa": "کاتالوگ این صفحه از دسته‌بندی عمومی ENPO برداشته شده است: آماده‌سازی هوا، سیلندر، شیر و محصولات فناوری بالا. کدهای سفارش فقط وقتی آمده‌اند که در PDF همان سری قابل خواندن بوده‌اند.",
+            "title": "پنوماتیک صنعتی",
+            "descFa": "این کاتالوگ آماده‌سازی هوا، سیلندر، شیر و محصولات فناوری بالا را پوشش می‌دهد. کد سفارش فقط وقتی آمده که در برگهٔ همان سری خوانا بوده است.",
             "image": hero,
-            "imageAlt": "ENPO pneumatic products",
-            "url": "http://www.enpo.net/",
-            "urlLabel": "سایت ENPO",
+            "imageAlt": "Industrial pneumatic products",
             "topics": [
                 "واحد FRL و سایز پورت",
                 "سیلندر ISO 15552 و ISO 21287",
@@ -660,130 +655,244 @@ def catalog_object(categories):
         },
         "services": [
             {"title": "انتخاب سری", "desc": "بر اساس پورت، کورس، دبی و ولتاژ بوبین"},
-            {"title": "جایگزینی", "desc": "تطبیق کد ENPO با قطعه نصب‌شده"},
+            {"title": "جایگزینی", "desc": "تطبیق کد سفارش با قطعه نصب‌شده"},
             {"title": "پیش‌فاکتور", "desc": "قیمت و زمان تامین در یک سند"},
             {"title": "لجستیک", "desc": "حمل از ترکیه تا پروژه"},
             {"title": "پشتیبانی فارسی", "desc": "یک نقطه تماس برای استعلام"},
         ],
         "faq": [
-            {"q": "این محصولات همان ENPO هستند؟", "a": "نام دسته، نام سری و عکس از کاتالوگ ENPO است. کد سفارش فقط برای سری‌هایی آمده که در PDF همان صفحه خوانا بوده است."},
-            {"q": "چرا بعضی سری‌ها کد سفارش ندارند؟", "a": "اگر PDF آن سری روی ENPO تصویر باشد یا فایل کاتالوگ باز نشود، کد را حدس نمی‌زنیم. لینک صفحه رسمی همان سری برای استعلام هست."},
-            {"q": "چطور سفارش بدهم؟", "a": "نام سری یا کد روی بدنه، تعداد و ولتاژ بوبین را بفرستید. پیش‌فاکتور قبل از خرید صادر می‌شود."},
-            {"q": "سیلندر و واحد مراقبت هر دو هست؟", "a": "بله. آماده‌سازی هوا، سیلندر، شیر، سنسور مغناطیسی، گریپر و سیلندر تلسکوپی در همین کاتالوگ است."},
+            {
+                "qFa": "کد سفارش را کجا ببینم؟",
+                "aFa": "روی کارت هر سری، کدهای خوانا آمده است. جزئیات را باز کنید و برای خرید همان کد را در فرم یا واتساپ بفرستید.",
+                "qTr": "Sipariş kodunu nerede görürüm?",
+                "aTr": "Okunabilen kodlar seri kartındadır. Ayrıntıyı açın ve satın almak için kodu form veya WhatsApp ile gönderin.",
+                "qEn": "Where do I see the order code?",
+                "aEn": "Readable codes are on each series card. Open the details and send that code by the form or WhatsApp to buy.",
+                "qRu": "Где смотреть код заказа?",
+                "aRu": "Читаемые коды указаны на карточке серии. Откройте подробности и отправьте код через форму или WhatsApp.",
+                "qAr": "أين أرى رمز الطلب؟",
+                "aAr": "الرموز المقروءة على بطاقة كل سلسلة. افتحوا التفاصيل وأرسلوا الرمز عبر النموذج أو واتساب للشراء.",
+            },
+            {
+                "qFa": "چرا بعضی سری‌ها کد ندارند؟",
+                "aFa": "اگر برگهٔ فنی آن سری فقط تصویر باشد، کد را حدس نمی‌زنیم. نام سری را بفرستید تا همان مدل استعلام شود.",
+                "qTr": "Bazı serilerde neden kod yok?",
+                "aTr": "Teknik sayfa yalnızca görselse kod uydurmayız. Seri adını gönderin, aynı model için teklif verelim.",
+                "qEn": "Why do some series have no code?",
+                "aEn": "If that series sheet is image-only, we do not guess a code. Send the series name and we will quote that model.",
+                "qRu": "Почему у части серий нет кода?",
+                "aRu": "Если лист серии только картинка, код не угадываем. Пришлите название серии — подготовим предложение.",
+                "qAr": "لماذا بعض السلاسل بلا رمز؟",
+                "aAr": "إذا كانت ورقة السلسلة صورة فقط لا نخمن الرمز. أرسلوا اسم السلسلة لنقدّم عرض السعر.",
+            },
+            {
+                "qFa": "چطور خرید کنم؟",
+                "aFa": "نام سری یا کد روی بدنه، تعداد و ولتاژ بوبین را بفرستید. پیش‌فاکتور قبل از خرید صادر می‌شود.",
+                "qTr": "Nasıl satın alırım?",
+                "aTr": "Seri adını veya gövdedeki kodu, adedi ve bobin voltajını gönderin. Proforma satın almadan önce çıkar.",
+                "qEn": "How do I buy?",
+                "aEn": "Send the series name or the code on the body, the quantity and the coil voltage. A proforma is issued before you buy.",
+                "qRu": "Как купить?",
+                "aRu": "Пришлите название серии или код с корпуса, количество и напряжение катушки. Проформа выставляется до покупки.",
+                "qAr": "كيف أشتري؟",
+                "aAr": "أرسلوا اسم السلسلة أو الرمز على الهيكل والكمية وفولتية الملف. يصدر عرض السعر قبل الشراء.",
+            },
+            {
+                "qFa": "سیلندر و واحد مراقبت هر دو هست؟",
+                "aFa": "بله. آماده‌سازی هوا، سیلندر، شیر، سنسور مغناطیسی، گریپر و سیلندر تلسکوپی در همین کاتالوگ است.",
+                "qTr": "Silindir ve şartlandırıcı ikisi de var mı?",
+                "aTr": "Evet. Hava hazırlama, silindir, valf, manyetik sensör, gripper ve teleskopik silindir bu katalogdadır.",
+                "qEn": "Are both cylinders and air-prep units listed?",
+                "aEn": "Yes. Air preparation, cylinders, valves, magnetic sensors, grippers and telescopic cylinders are in this catalog.",
+                "qRu": "Есть и цилиндры, и подготовка воздуха?",
+                "aRu": "Да. Подготовка воздуха, цилиндры, клапаны, магнитные датчики, захваты и телескопические цилиндры есть в этом каталоге.",
+                "qAr": "هل الأسطوانات ووحدات تجهيز الهواء متوفرة معاً؟",
+                "aAr": "نعم. تجهيز الهواء والأسطوانات والصمامات والحساسات المغناطيسية والقوابض والأسطوانات التلسكوبية في هذا الكتالوج.",
+            },
         ],
-        "inquiryTemplate": "سلام، درخواست استعلام {product} از ENPO دارم.\n\nکد سفارش:\nسایز / کورس:\nتعداد:\n",
-        "officialUrl": "http://www.enpo.net/",
+        "inquiryTemplate": "سلام، درخواست استعلام {product} دارم.\n\nکد سفارش:\nسایز / کورس:\nتعداد:\n",
     }
 
 
 LOCALES = [
     {
         "lang": "fa", "dir": "rtl", "folder": "pages", "prefix": "",
-        "title": "تجهیزات پنوماتیک ENPO | سیلندر، شیر و واحد مراقبت — بیزدوار",
-        "desc": "تامین سری‌های پنوماتیک ENPO: آماده‌سازی هوا، سیلندر، شیر، سنسور مغناطیسی و گریپر. نام و کد سفارش مطابق کاتالوگ ENPO — بیزدوار گروپ.",
-        "trust_e": "چرا از بیزدوار", "trust_t": "تامین ENPO برای واحد فنی و خرید", "trust_d": "سری‌ها را از کاتالوگ ENPO آورده‌ایم و برای مدل دقیق پیش‌فاکتور می‌دهیم.",
+        "title": "خرید سیلندر و شیر پنوماتیک | واحد مراقبت هوا — بیزدوار",
+        "desc": "سیلندر پنوماتیک، شیر برقی، واحد مراقبت هوا، فیلتر، رگولاتور و روغن‌زن برای خطوط تولید ایران. مشاوره فارسی و پیش‌فاکتور از بیزدوار گروپ.",
+        "keywords": "سیلندر پنوماتیک, خرید سیلندر پنوماتیک, شیر پنوماتیک, شیر برقی پنوماتیک, واحد مراقبت هوا, فیلتر رگولاتور, روغن‌زن پنوماتیک, سنسور مغناطیسی سیلندر, گریپر پنوماتیک, پنوماتیک صنعتی, بیزدوار",
+        "trust_e": "چرا از بیزدوار", "trust_t": "تامین پنوماتیک برای واحد فنی و خرید", "trust_d": "سری‌ها را در کاتالوگ آورده‌ایم و برای مدل دقیق پیش‌فاکتور می‌دهیم.",
         "buy_e": "مسیر خرید", "buy_t": "از استعلام تا تحویل", "buy_d": "کد سری، تعداد و زمان تامین در هر مرحله مشخص است.",
-        "hi_e": "خانواده‌های محصول", "hi_t": "چهار گروه اصلی ENPO", "hi_d": "آماده‌سازی هوا، سیلندر، شیر و محصولات فناوری پیشرفته.",
-        "cat_e": "کاتالوگ", "cat_t": "کاتالوگ سری‌های ENPO", "cat_d": "هر کارت یک سری از سایت ENPO است. کدهای سفارش از PDF همان سری خوانده شده‌اند.",
-        "iran_e": "کاربرد", "iran_t": "ENPO در خطوط صنعتی", "iran_d": "اگر صنعت شما در لیست نیست، مصرف هوا و نوع عملگر را بفرستید.",
+        "hi_e": "خانواده‌های محصول", "hi_t": "چهار گروه اصلی", "hi_d": "آماده‌سازی هوا، سیلندر، شیر و محصولات فناوری پیشرفته.",
+        "cat_e": "کاتالوگ", "cat_t": "کاتالوگ سری‌ها", "cat_d": "هر کارت یک سری است. کد سفارش، فشار و سایز اتصال روی همان کارت آمده است.",
+        "iran_e": "کاربرد", "iran_t": "پنوماتیک در خطوط صنعتی", "iran_d": "اگر صنعت شما در لیست نیست، مصرف هوا و نوع عملگر را بفرستید.",
         "ind_e": "صنایع", "ind_t": "کاربرد تجهیزات پنوماتیک", "ind_d": "مونتاژ، بسته‌بندی و ماشین‌سازی.",
-        "sup_e": "تامین", "sup_t": "خدمات تامین ENPO", "sup_d": "انتخاب سری، پیش‌فاکتور و حمل.",
-        "faq_e": "پرسش‌ها", "faq_t": "سوال‌های رایج", "faq_d": "اگر کد روی قطعه را دارید همان را بفرستید.",
-        "cta_t": "برای ENPO استعلام می‌خواهید؟", "cta_d": "نام سری یا کد سفارش را بفرستید.",
-        "cta_form": "فرم استعلام", "cta_cat": "کاتالوگ محصولات", "sticky": "استعلام ENPO",
-        "geo": "تامین پنوماتیک ENPO — مشاوره فنی، پیش‌فاکتور و لجستیک توسط بیزدوار گروپ.",
-        "note": "مشخصات از <a href=\"http://www.enpo.net/\" target=\"_blank\" rel=\"noopener noreferrer\">کاتالوگ ENPO</a> است. برای استعلام <a href=\"contact\">با بیزدوار تماس بگیرید</a>.",
-        "nav": "دسته‌های ENPO",
+        "sup_e": "تامین", "sup_t": "خدمات تامین پنوماتیک", "sup_d": "انتخاب سری، پیش‌فاکتور و حمل.",
+        "faq_e": "پرسش‌ها", "faq_t": "پرسش‌های خرید", "faq_d": "مدل، کد سفارش و پیش‌فاکتور.",
+        "cta_t": "برای پنوماتیک استعلام می‌خواهید؟", "cta_d": "نام سری یا کد سفارش را بفرستید.",
+        "cta_form": "فرم استعلام", "cta_cat": "کاتالوگ محصولات", "sticky": "استعلام پنوماتیک",
+        "geo": "تامین پنوماتیک صنعتی — مشاوره فنی، پیش‌فاکتور و لجستیک توسط بیزدوار گروپ.",
+        "note": "برای استعلام مدل دقیق <a href=\"contact\">با بیزدوار تماس بگیرید</a>.",
+        "nav": "دسته‌های پنوماتیک",
+        "search_label": "جستجو در کاتالوگ",
+        "search_ph": "جستجو: فیلتر، سیلندر، شیر یا کد سفارش",
+        "search_empty": "چیزی با این عبارت پیدا نشد. نام سری یا کد را کوتاه‌تر بنویسید، یا از دسته‌ها انتخاب کنید.",
+        "jumps_label": "گروه‌های اصلی",
     },
     {
         "lang": "tr", "dir": "ltr", "folder": "tr/pages", "prefix": "/tr",
-        "title": "ENPO pnömatik | Silindir, valf ve hava hazırlayıcı — Bizdavar",
-        "desc": "ENPO pnömatik serileri: hava hazırlama, silindir, valf, manyetik sensör ve gripper. Seri adları ENPO kataloğu ile aynıdır — Bizdavar Group.",
-        "trust_e": "Neden Bizdavar", "trust_t": "ENPO tedariki", "trust_d": "Seriler ENPO kataloğundan alındı. Net model için proforma veriyoruz.",
+        "title": "Endüstriyel pnömatik | Silindir, valf ve hava hazırlayıcı — Bizdavar",
+        "desc": "Endüstriyel pnömatik serileri: hava hazırlama, silindir, valf, manyetik sensör ve gripper. Teklif Bizdavar Group.",
+        "keywords": "endüstriyel pnömatik, silindir, valf, hava hazırlayıcı, Bizdavar",
+        "trust_e": "Neden Bizdavar", "trust_t": "Pnömatik tedariki", "trust_d": "Seriler katalogda. Net model için proforma veriyoruz.",
         "buy_e": "Satın alma", "buy_t": "Tekliften teslimata", "buy_d": "Seri kodu, adet ve termin her adımda açıktır.",
-        "hi_e": "Ürün grupları", "hi_t": "Dört ana ENPO grubu", "hi_d": "Hava hazırlayıcılar, silindirler, valfler ve yüksek teknoloji.",
-        "cat_e": "Katalog", "cat_t": "ENPO seri kataloğu", "cat_d": "Her kart ENPO sitesindeki bir seridir. Sipariş kodları o serinin PDF’inden okunmuştur.",
-        "iran_e": "Uygulama", "iran_t": "Endüstriyel hatlarda ENPO", "iran_d": "Listenizde yoksa hava tüketimini ve aktüatör tipini gönderin.",
+        "hi_e": "Ürün grupları", "hi_t": "Dört ana grup", "hi_d": "Hava hazırlayıcılar, silindirler, valfler ve yüksek teknoloji.",
+        "cat_e": "Katalog", "cat_t": "Seri kataloğu", "cat_d": "Her kart bir seridir. Sipariş kodları o serinin kataloğundan okunmuştur.",
+        "iran_e": "Uygulama", "iran_t": "Endüstriyel hatlarda pnömatik", "iran_d": "Listenizde yoksa hava tüketimini ve aktüatör tipini gönderin.",
         "ind_e": "Sektörler", "ind_t": "Pnömatik kullanım", "ind_d": "Montaj, paketleme ve makine imalatı.",
-        "sup_e": "Tedarik", "sup_t": "ENPO tedarik hizmeti", "sup_d": "Seri seçimi, proforma ve lojistik.",
+        "sup_e": "Tedarik", "sup_t": "Pnömatik tedarik hizmeti", "sup_d": "Seri seçimi, proforma ve lojistik.",
         "faq_e": "Sorular", "faq_t": "Sık sorulanlar", "faq_d": "Gövdedeki kodu gönderin.",
-        "cta_t": "ENPO teklifi ister misiniz?", "cta_d": "Seri adını veya sipariş kodunu gönderin.",
-        "cta_form": "Teklif formu", "cta_cat": "Ürün kataloğu", "sticky": "ENPO teklifi",
-        "geo": "ENPO pnömatik tedariki — teknik danışmanlık, proforma ve lojistik, Bizdavar Group.",
-        "note": "Bilgiler <a href=\"http://www.enpo.net/\" target=\"_blank\" rel=\"noopener noreferrer\">ENPO kataloğundan</a> gelir. Teklif için <a href=\"contact\">Bizdavar</a>.",
-        "nav": "ENPO kategorileri",
+        "cta_t": "Pnömatik teklifi ister misiniz?", "cta_d": "Seri adını veya sipariş kodunu gönderin.",
+        "cta_form": "Teklif formu", "cta_cat": "Ürün kataloğu", "sticky": "Pnömatik teklifi",
+        "geo": "Endüstriyel pnömatik tedariki — teknik danışmanlık, proforma ve lojistik, Bizdavar Group.",
+        "note": "Teklif için <a href=\"contact\">Bizdavar</a> ile iletişime geçin.",
+        "nav": "Pnömatik kategorileri",
+        "search_label": "Katalogda ara",
+        "search_ph": "Ara: filtre, silindir, valf veya sipariş kodu",
+        "search_empty": "Bu aramayla sonuç yok. Seri adını veya kodu kısaltın, ya da kategorilerden seçin.",
+        "jumps_label": "Ana gruplar",
     },
     {
         "lang": "en", "dir": "ltr", "folder": "en/pages", "prefix": "/en",
-        "title": "ENPO pneumatics | Cylinders, valves and air prep — Bizdavar",
-        "desc": "ENPO pneumatic series: air preparation, cylinders, valves, magnetic sensors and grippers. Series names match the ENPO catalog — Bizdavar Group.",
-        "trust_e": "Why Bizdavar", "trust_t": "ENPO supply", "trust_d": "Series come from the ENPO catalog. We quote the exact model.",
+        "title": "Industrial pneumatics | Cylinders, valves and air prep — Bizdavar",
+        "desc": "Industrial pneumatic series: air preparation, cylinders, valves, magnetic sensors and grippers. Quote the exact model with Bizdavar Group.",
+        "keywords": "industrial pneumatics, pneumatic cylinder, pneumatic valve, air preparation unit, Bizdavar",
+        "trust_e": "Why Bizdavar", "trust_t": "Pneumatic supply", "trust_d": "Series are in the catalog. We quote the exact model.",
         "buy_e": "How to buy", "buy_t": "From inquiry to delivery", "buy_d": "Series code, quantity and lead time are clear at each step.",
-        "hi_e": "Product families", "hi_t": "Four ENPO groups", "hi_d": "Air preparation, cylinders, valves and advanced products.",
-        "cat_e": "Catalog", "cat_t": "ENPO series catalog", "cat_d": "Each card is one ENPO series. Order codes were read from that series PDF.",
-        "iran_e": "Applications", "iran_t": "ENPO on industrial lines", "iran_d": "If your industry is not listed, send air use and actuator type.",
+        "hi_e": "Product families", "hi_t": "Four product groups", "hi_d": "Air preparation, cylinders, valves and advanced products.",
+        "cat_e": "Catalog", "cat_t": "Series catalog", "cat_d": "Each card is one series. Order codes were read from that series sheet.",
+        "iran_e": "Applications", "iran_t": "Pneumatics on industrial lines", "iran_d": "If your industry is not listed, send air use and actuator type.",
         "ind_e": "Industries", "ind_t": "Where pneumatics are used", "ind_d": "Assembly, packaging and machinery.",
-        "sup_e": "Supply", "sup_t": "ENPO supply service", "sup_d": "Series selection, proforma and logistics.",
+        "sup_e": "Supply", "sup_t": "Pneumatic supply service", "sup_d": "Series selection, proforma and logistics.",
         "faq_e": "Questions", "faq_t": "Common questions", "faq_d": "Send the code printed on the part.",
-        "cta_t": "Need an ENPO quote?", "cta_d": "Send the series name or order code.",
-        "cta_form": "Quote form", "cta_cat": "Product catalog", "sticky": "ENPO quote",
-        "geo": "ENPO pneumatic supply — technical consulting, proforma and logistics by Bizdavar Group.",
-        "note": "Data comes from the <a href=\"http://www.enpo.net/\" target=\"_blank\" rel=\"noopener noreferrer\">ENPO catalog</a>. For a quote, <a href=\"contact\">contact Bizdavar</a>.",
-        "nav": "ENPO categories",
+        "cta_t": "Need a pneumatic quote?", "cta_d": "Send the series name or order code.",
+        "cta_form": "Quote form", "cta_cat": "Product catalog", "sticky": "Pneumatic quote",
+        "geo": "Industrial pneumatic supply — technical consulting, proforma and logistics by Bizdavar Group.",
+        "note": "For a quote, <a href=\"contact\">contact Bizdavar</a>.",
+        "nav": "Pneumatic categories",
+        "search_label": "Search the catalog",
+        "search_ph": "Search: filter, cylinder, valve or order code",
+        "search_empty": "Nothing matched. Shorten the series name or code, or pick a category.",
+        "jumps_label": "Main groups",
     },
     {
         "lang": "ru", "dir": "ltr", "folder": "ru/pages", "prefix": "/ru",
-        "title": "Пневматика ENPO | Цилиндры, клапаны и подготовка воздуха — Bizdavar",
-        "desc": "Серии пневматики ENPO: подготовка воздуха, цилиндры, клапаны, магнитные датчики и захваты. Названия серий совпадают с каталогом ENPO — Bizdavar Group.",
-        "trust_e": "Почему Bizdavar", "trust_t": "Поставка ENPO", "trust_d": "Серии взяты из каталога ENPO. Точную модель указываем в предложении.",
+        "title": "Промышленная пневматика | Цилиндры, клапаны и подготовка воздуха — Bizdavar",
+        "desc": "Серии промышленной пневматики: подготовка воздуха, цилиндры, клапаны, магнитные датчики и захваты. Запрос точной модели — Bizdavar Group.",
+        "keywords": "промышленная пневматика, пневмоцилиндр, пневмоклапан, подготовка воздуха, Bizdavar",
+        "trust_e": "Почему Bizdavar", "trust_t": "Поставка пневматики", "trust_d": "Серии есть в каталоге. Точную модель указываем в предложении.",
         "buy_e": "Покупка", "buy_t": "От запроса до поставки", "buy_d": "Код серии, количество и срок видны на каждом шаге.",
-        "hi_e": "Группы", "hi_t": "Четыре группы ENPO", "hi_d": "Подготовка воздуха, цилиндры, клапаны и высокие технологии.",
-        "cat_e": "Каталог", "cat_t": "Каталог серий ENPO", "cat_d": "Каждая карточка — серия с сайта ENPO. Коды заказа прочитаны из PDF этой серии.",
-        "iran_e": "Применение", "iran_t": "ENPO на промышленных линиях", "iran_d": "Если вашей отрасли нет в списке, пришлите расход воздуха и тип привода.",
+        "hi_e": "Группы", "hi_t": "Четыре группы", "hi_d": "Подготовка воздуха, цилиндры, клапаны и высокие технологии.",
+        "cat_e": "Каталог", "cat_t": "Каталог серий", "cat_d": "Каждая карточка — одна серия. Коды заказа прочитаны из листа этой серии.",
+        "iran_e": "Применение", "iran_t": "Пневматика на промышленных линиях", "iran_d": "Если вашей отрасли нет в списке, пришлите расход воздуха и тип привода.",
         "ind_e": "Отрасли", "ind_t": "Где применяется пневматика", "ind_d": "Сборка, упаковка и машиностроение.",
-        "sup_e": "Поставка", "sup_t": "Поставка ENPO", "sup_d": "Подбор серии, проформа и логистика.",
+        "sup_e": "Поставка", "sup_t": "Поставка пневматики", "sup_d": "Подбор серии, проформа и логистика.",
         "faq_e": "Вопросы", "faq_t": "Частые вопросы", "faq_d": "Пришлите код с корпуса.",
-        "cta_t": "Нужно предложение ENPO?", "cta_d": "Пришлите название серии или код заказа.",
-        "cta_form": "Форма запроса", "cta_cat": "Каталог", "sticky": "Запрос ENPO",
-        "geo": "Поставка пневматики ENPO — консультация, проформа и логистика Bizdavar Group.",
-        "note": "Данные из <a href=\"http://www.enpo.net/\" target=\"_blank\" rel=\"noopener noreferrer\">каталога ENPO</a>. Для предложения — <a href=\"contact\">Bizdavar</a>.",
-        "nav": "Категории ENPO",
+        "cta_t": "Нужно предложение по пневматике?", "cta_d": "Пришлите название серии или код заказа.",
+        "cta_form": "Форма запроса", "cta_cat": "Каталог", "sticky": "Запрос пневматики",
+        "geo": "Поставка промышленной пневматики — консультация, проформа и логистика Bizdavar Group.",
+        "note": "Для предложения — <a href=\"contact\">Bizdavar</a>.",
+        "nav": "Категории пневматики",
+        "search_label": "Поиск по каталогу",
+        "search_ph": "Поиск: фильтр, цилиндр, клапан или код заказа",
+        "search_empty": "Ничего не найдено. Сократите название или код, либо выберите категорию.",
+        "jumps_label": "Основные группы",
     },
     {
         "lang": "ar", "dir": "rtl", "folder": "ar/pages", "prefix": "/ar",
-        "title": "معدات ENPO الهوائية | أسطوانات وصمامات وتجهيز هواء — بيزدوار",
-        "desc": "سلاسل ENPO الهوائية: تجهيز الهواء، الأسطوانات، الصمامات، الحساسات المغناطيسية والقوابض. الأسماء مطابقة لكتالوج ENPO — Bizdavar Group.",
-        "trust_e": "لماذا بيزدوار", "trust_t": "توريد ENPO", "trust_d": "السلاسل مأخوذة من كتالوج ENPO. الموديل الدقيق يظهر في عرض السعر.",
+        "title": "معدات هواء مضغوط صناعية | أسطوانات وصمامات وتجهيز هواء — بيزدوار",
+        "desc": "سلاسل هواء مضغوط صناعية: تجهيز الهواء، الأسطوانات، الصمامات، الحساسات المغناطيسية والقوابض. استفسار بالموديل الدقيق من Bizdavar Group.",
+        "keywords": "هواء مضغوط, أسطوانة هوائية, صمام, تجهيز هواء, بيزدوار",
+        "trust_e": "لماذا بيزدوار", "trust_t": "توريد الهواء المضغوط", "trust_d": "السلاسل في الكتالوج. الموديل الدقيق يظهر في عرض السعر.",
         "buy_e": "الشراء", "buy_t": "من الاستفسار إلى التسليم", "buy_d": "رمز السلسلة والكمية ومدة التوريد واضحة في كل خطوة.",
-        "hi_e": "العائلات", "hi_t": "أربع مجموعات ENPO", "hi_d": "تجهيز الهواء، الأسطوانات، الصمامات والتقنية المتقدمة.",
-        "cat_e": "الكتالوج", "cat_t": "كتالوج سلاسل ENPO", "cat_d": "كل بطاقة سلسلة من موقع ENPO. رموز الطلب قُرئت من PDF تلك السلسلة.",
-        "iran_e": "الاستخدام", "iran_t": "ENPO في الخطوط الصناعية", "iran_d": "إذا لم تكن صناعتكم في القائمة، أرسلوا استهلاك الهواء ونوع المشغل.",
+        "hi_e": "العائلات", "hi_t": "أربع مجموعات", "hi_d": "تجهيز الهواء، الأسطوانات، الصمامات والتقنية المتقدمة.",
+        "cat_e": "الكتالوج", "cat_t": "كتالوج السلاسل", "cat_d": "كل بطاقة سلسلة واحدة. رموز الطلب قُرئت من ورقة تلك السلسلة.",
+        "iran_e": "الاستخدام", "iran_t": "الهواء المضغوط في الخطوط الصناعية", "iran_d": "إذا لم تكن صناعتكم في القائمة، أرسلوا استهلاك الهواء ونوع المشغل.",
         "ind_e": "القطاعات", "ind_t": "استخدام الهواء المضغوط", "ind_d": "التجميع والتغليف وبناء الآلات.",
-        "sup_e": "التوريد", "sup_t": "خدمة توريد ENPO", "sup_d": "اختيار السلسلة وعرض السعر واللوجستيات.",
+        "sup_e": "التوريد", "sup_t": "خدمة توريد الهواء المضغوط", "sup_d": "اختيار السلسلة وعرض السعر واللوجستيات.",
         "faq_e": "أسئلة", "faq_t": "أسئلة شائعة", "faq_d": "أرسلوا الرمز المكتوب على القطعة.",
-        "cta_t": "تريدون عرض سعر ENPO؟", "cta_d": "أرسلوا اسم السلسلة أو رمز الطلب.",
-        "cta_form": "نموذج الاستفسار", "cta_cat": "كتالوج المنتجات", "sticky": "استفسار ENPO",
-        "geo": "توريد معدات ENPO الهوائية — استشارة فنية وعرض سعر ولوجستيات من بيزدوار.",
-        "note": "البيانات من <a href=\"http://www.enpo.net/\" target=\"_blank\" rel=\"noopener noreferrer\">كتالوج ENPO</a>. للاستفسار <a href=\"contact\">تواصلوا مع بيزدوار</a>.",
-        "nav": "فئات ENPO",
+        "cta_t": "تريدون عرض سعر للهواء المضغوط؟", "cta_d": "أرسلوا اسم السلسلة أو رمز الطلب.",
+        "cta_form": "نموذج الاستفسار", "cta_cat": "كتالوج المنتجات", "sticky": "استفسار هواء مضغوط",
+        "geo": "توريد معدات هواء مضغوط صناعية — استشارة فنية وعرض سعر ولوجستيات من بيزدوار.",
+        "note": "للاستفسار <a href=\"contact\">تواصلوا مع بيزدوار</a>.",
+        "nav": "فئات الهواء المضغوط",
+        "search_label": "بحث في الكتالوج",
+        "search_ph": "ابحثوا: مرشح، أسطوانة، صمام أو رمز الطلب",
+        "search_empty": "لا توجد نتيجة. اختصروا اسم السلسلة أو الرمز، أو اختاروا فئة.",
+        "jumps_label": "المجموعات الرئيسية",
     },
 ]
 
 
-def page_html(loc, hero_src):
+def family_jumps(categories, lang):
+    key = {"fa": "groupTitleFa", "tr": "groupTitleTr", "en": "groupTitleEn", "ru": "groupTitleRu", "ar": "groupTitleAr"}[lang]
+    seen = []
+    parts = []
+    for cat in categories:
+        if cat["family"] in seen or not cat.get("groupTitleFa"):
+            continue
+        seen.append(cat["family"])
+        label = html.escape(cat.get(key) or cat["groupTitleFa"])
+        parts.append(f'<a class="enpo-family-jump" href="#enpo-group-{cat["family"]}">{label}</a>')
+    return "".join(parts)
+
+
+SHARE_IMAGE = "assets/images/enpo/1759141902.webp"
+
+
+def faq_jsonld(faq, lang):
+    suffix = {"fa": "Fa", "tr": "Tr", "en": "En", "ru": "Ru", "ar": "Ar"}[lang]
+    lang_tag = {"fa": "fa-IR", "tr": "tr-TR", "en": "en-US", "ru": "ru-RU", "ar": "ar-AE"}[lang]
+    entities = []
+    for item in faq:
+        q = item.get("q" + suffix) or item.get("q")
+        a = item.get("a" + suffix) or item.get("a")
+        if not q or not a:
+            continue
+        entities.append({
+            "@type": "Question",
+            "name": q,
+            "acceptedAnswer": {"@type": "Answer", "text": a},
+        })
+    return json.dumps({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "inLanguage": lang_tag,
+        "mainEntity": entities,
+    }, ensure_ascii=False)
+
+
+def page_html(loc, hero_src, jumps, faq_ld):
     p = loc["prefix"]
-    canon = f"https://bizdavar.com{p}/pages/enpo"
+    canon = f"https://bizdavar.com{p}/pages/pneumatic"
     hrefs = {
-        "fa-IR": "https://bizdavar.com/pages/enpo",
-        "tr-TR": "https://bizdavar.com/tr/pages/enpo",
-        "en-US": "https://bizdavar.com/en/pages/enpo",
-        "ru-RU": "https://bizdavar.com/ru/pages/enpo",
-        "ar-AE": "https://bizdavar.com/ar/pages/enpo",
+        "fa-IR": "https://bizdavar.com/pages/pneumatic",
+        "tr-TR": "https://bizdavar.com/tr/pages/pneumatic",
+        "en-US": "https://bizdavar.com/en/pages/pneumatic",
+        "ru-RU": "https://bizdavar.com/ru/pages/pneumatic",
+        "ar-AE": "https://bizdavar.com/ar/pages/pneumatic",
     }
     alts = "\n".join(
         f'  <link rel="alternate" hreflang="{k}" href="{v}">' for k, v in hrefs.items()
     )
-    og_locale = {"fa": "fa_IR", "tr": "tr_TR", "en": "en_US", "ru": "ru_RU", "ar": "ar_AE"}[loc["lang"]]
+    og_map = {"fa": "fa_IR", "tr": "tr_TR", "en": "en_US", "ru": "ru_RU", "ar": "ar_AE"}
+    og_locale = og_map[loc["lang"]]
+    og_alts = "\n".join(
+        f'  <meta property="og:locale:alternate" content="{v}">' for k, v in og_map.items() if k != loc["lang"]
+    )
+    title_attr = html.escape(loc["title"], quote=True)
+    desc_attr = html.escape(loc["desc"], quote=True)
+    keywords_attr = html.escape(loc["keywords"], quote=True)
+    share = "https://bizdavar.com/" + SHARE_IMAGE
     hero_url = "/" + hero_src.replace(".webp", "-800.webp")
     if not (ROOT / hero_src.replace(".webp", "-800.webp")).exists():
         hero_url = "/" + hero_src
@@ -801,28 +910,38 @@ def page_html(loc, hero_src):
   <script src="/assets/scripts/i18n/seo-head.js?v=20260910c" defer></script>
 <script src="/assets/scripts/i18n/locale-preload.js?v=20260910c" defer></script>
 <meta name="view-transition" content="same-origin">
-  <title>{loc['title']}</title>
+  <title>{html.escape(loc['title'])}</title>
   <link rel="icon" href="/assets/images/brand/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/assets/images/brand/favicon.png" type="image/png" sizes="32x32">
   <link rel="icon" href="/assets/images/brand/favicon-16.png" type="image/png" sizes="16x16">
   <link rel="apple-touch-icon" href="/assets/images/brand/apple-touch-icon.png">
 <link rel="stylesheet" href="/assets/styles/brand-supply-shared.css?v=20261004a">
-  <link rel="stylesheet" href="/assets/styles/enpo.css?v=20261004a">
-  <meta name="description" content="{loc['desc']}">
-  <meta name="keywords" content="ENPO, pnömatik, pneumatic, سیلندر, شیر, بیزدوار">
-  <meta property="og:title" content="{loc['title']}">
-  <meta property="og:description" content="{loc['desc']}">
+  <link rel="stylesheet" href="/assets/styles/enpo.css?v=20261008c">
+  <meta name="description" content="{desc_attr}">
+  <meta name="keywords" content="{keywords_attr}">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:title" content="{title_attr}">
+  <meta property="og:description" content="{desc_attr}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{canon}">
-  <meta property="og:image" content="https://bizdavar.com/{hero_src}">
+  <meta property="og:image" content="{share}">
+  <meta property="og:image:secure_url" content="{share}">
+  <meta property="og:image:type" content="image/webp">
+  <meta property="og:image:width" content="500">
+  <meta property="og:image:height" content="450">
+  <meta property="og:image:alt" content="{title_attr}">
   <meta property="og:locale" content="{og_locale}">
+{og_alts}
   <meta property="og:site_name" content="Bizdavar Group">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{loc['title']}">
-  <meta name="twitter:description" content="{loc['desc']}">
+  <meta name="twitter:title" content="{title_attr}">
+  <meta name="twitter:description" content="{desc_attr}">
+  <meta name="twitter:image" content="{share}">
+  <meta name="twitter:image:alt" content="{title_attr}">
   <link rel="canonical" href="{canon}">
 {alts}
-  <link rel="alternate" hreflang="x-default" href="https://bizdavar.com/pages/enpo">
+  <link rel="alternate" hreflang="x-default" href="https://bizdavar.com/pages/pneumatic">
+  <script type="application/ld+json">{faq_ld}</script>
 </head>
 <body data-page="enpo" data-depth="1">
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXWQQWF8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -861,6 +980,14 @@ def page_html(loc, hero_src):
       <h2 class="section__title">{loc['cat_t']}</h2>
       <p class="section__desc">{loc['cat_d']}</p>
     </div>
+    <nav class="enpo-family-jumps" aria-label="{html.escape(loc['jumps_label'])}">{jumps}</nav>
+    <div class="enpo-catalog-toolbar">
+      <label class="enpo-catalog-search" for="enpoCatalogSearch">
+        <span class="visually-hidden">{html.escape(loc['search_label'])}</span>
+        <input type="search" id="enpoCatalogSearch" name="q" autocomplete="off" enterkeyhint="search" placeholder="{html.escape(loc['search_ph'])}">
+      </label>
+    </div>
+    <p class="enpo-catalog-empty" id="enpoCatalogEmpty" hidden>{html.escape(loc['search_empty'])}</p>
     <div id="enpoCategories"></div>
   </div></section>
   <section class="section section--gray" id="enpo-iran"><div class="container">
@@ -913,32 +1040,32 @@ def page_html(loc, hero_src):
   <div id="geoStrip"></div>
   <div id="relatedLinks"></div>
 </main>
-  <script src="/assets/scripts/site-loader.js?v=20261004a" data-after-seo="i18n/supply-catalog-i18n.js" data-after-page-i18n="lib/supply-brand-page.js,config/enpo-products.js" data-before-main="enpo-page.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261009a" data-after-seo="i18n/supply-catalog-i18n.js" data-after-page-i18n="lib/supply-brand-page.js,config/enpo-products.js" data-before-main="enpo-page.js"></script>
   <script>
     bizdavarPageInit(function () {{
       injectPageSeo('enpo', {{
         canonical: '{canon}',
-        ogImage: '{hero_src}',
-        title: '{loc['title']}',
-        description: '{loc['desc']}'
+        ogImage: '{SHARE_IMAGE}',
+        ogImageAlt: {json.dumps(loc['title'], ensure_ascii=False)},
+        keywords: {json.dumps(loc['keywords'], ensure_ascii=False)},
+        title: {json.dumps(loc['title'], ensure_ascii=False)},
+        description: {json.dumps(loc['desc'], ensure_ascii=False)}
       }});
       renderBreadcrumbs([
         {{ page: 'home', url: 'index' }},
         {{ page: 'products', url: 'products#supply' }},
-        {{ page: 'enpo', url: 'enpo' }}
+        {{ page: 'enpo', url: 'pneumatic' }}
       ]);
       injectBreadcrumbSchema([
         {{ page: 'home', url: 'index' }},
         {{ page: 'products', url: 'pages/products#supply' }},
-        {{ page: 'enpo', url: 'pages/enpo' }}
+        {{ page: 'enpo', url: 'pages/pneumatic' }}
       ]);
       initEnpoPage();
       injectEnpoSchema();
       renderGeoStrip('geoStrip', {{ text: '{loc['geo']}' }});
       renderRelatedLinks([
-        {{ title: 'VEGA', url: 'vega', desc: 'Level' }},
-        {{ title: 'Gamak', url: 'gamak', desc: 'Motors' }},
-        {{ title: 'Catalog', url: 'products#supply', desc: 'Brands' }},
+        {{ title: 'Catalog', url: 'products#supply', desc: 'Supply' }},
         {{ title: 'Contact', url: 'contact', desc: 'Quote' }}
       ]);
       setupWhatsappLinks();
@@ -977,6 +1104,183 @@ body[data-page="enpo"] .enpo-series-card__img--photo {{
   object-fit: contain;
   background: #fff;
 }}
+body[data-page="enpo"] .enpo-family-jumps {{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 16px;
+}}
+body[data-page="enpo"] .enpo-family-jump {{
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid #c5d7e4;
+  color: #006fa3;
+  font-weight: 700;
+  text-decoration: none;
+}}
+body[data-page="enpo"] .enpo-family-jump:hover {{
+  background: #0095d8;
+  border-color: #0095d8;
+  color: #fff;
+}}
+body[data-page="enpo"] .enpo-catalog-toolbar {{
+  margin-bottom: 16px;
+}}
+body[data-page="enpo"] .enpo-catalog-search {{
+  display: block;
+}}
+body[data-page="enpo"] .enpo-catalog-search input {{
+  width: 100%;
+  min-height: 52px;
+  padding: 0 18px;
+  border: 1px solid #c5d7e4;
+  border-radius: 14px;
+  background: #fff;
+  font: inherit;
+  color: inherit;
+}}
+body[data-page="enpo"] .enpo-catalog-search input:focus {{
+  outline: 3px solid rgba(0, 149, 216, 0.28);
+  border-color: #0095d8;
+}}
+body[data-page="enpo"] .enpo-catalog-empty {{
+  margin: 0 0 16px;
+  padding: 14px 16px;
+  background: #fff;
+  border: 1px solid #c5d7e4;
+  border-radius: 12px;
+}}
+body[data-page="enpo"] .enpo-series-grid--products {{
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}}
+body[data-page="enpo"] .enpo-series-card__desc {{
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}}
+body[data-page="enpo"] .enpo-series-card__specs dd {{
+  overflow-wrap: anywhere;
+}}
+body[data-page="enpo"] .enpo-series-card__foot {{
+  margin-top: auto;
+}}
+body[data-page="enpo"] .enpo-series-card__actions {{
+  display: flex;
+  gap: 8px;
+}}
+body[data-page="enpo"] .enpo-series-card__actions .btn {{
+  flex: 1 1 0;
+}}
+body[data-page="enpo"] .visually-hidden {{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}}
+@media (max-width: 720px) {{
+  body[data-page="enpo"] .enpo-series-grid--products {{
+    grid-template-columns: 1fr;
+  }}
+}}
+.enpo-drawer {{
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+}}
+.enpo-drawer[hidden] {{ display: none !important; }}
+.enpo-drawer__backdrop {{
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 24, 36, 0.55);
+}}
+.enpo-drawer__panel {{
+  position: relative;
+  margin: 4vh auto;
+  width: min(960px, calc(100% - 24px));
+  max-height: 92vh;
+  overflow: auto;
+  background: #fff;
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 24px;
+  padding: 24px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+}}
+.enpo-drawer__close {{
+  position: absolute;
+  top: 10px;
+  inset-inline-end: 10px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 999px;
+  background: #f3f8fb;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 1;
+}}
+.enpo-drawer__media > img {{
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  background: #f3f8fb;
+  border-radius: 12px;
+}}
+.enpo-drawer__info h2 {{
+  margin: 0 0 10px;
+  font-size: 1.35rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}}
+.enpo-drawer__desc {{ margin: 0 0 12px; color: #334; }}
+.enpo-drawer__specs {{
+  display: grid;
+  gap: 8px;
+  margin: 12px 0 0;
+}}
+.enpo-drawer__spec {{
+  display: grid;
+  gap: 4px;
+  padding: 10px 12px;
+  background: #f3f8fb;
+  border-radius: 10px;
+}}
+.enpo-drawer__spec dd {{
+  margin: 0;
+  overflow-wrap: anywhere;
+  font-weight: 700;
+}}
+.enpo-drawer__actions {{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}}
+.enpo-drawer__actions .btn {{ flex: 1 1 140px; justify-content: center; }}
+body.enpo-drawer-open {{ overflow: hidden; }}
+@media (max-width: 800px) {{
+  .enpo-drawer__panel {{
+    grid-template-columns: 1fr;
+    margin: 0;
+    width: 100%;
+    max-height: 100vh;
+    height: 100vh;
+    border-radius: 0;
+  }}
+}}
 """,
         encoding="utf-8",
     )
@@ -992,9 +1296,15 @@ def main():
         """createSupplyBrandPage({
   prefix: 'enpo',
   catalogKey: 'ENPO_CATALOG',
-  brandName: 'ENPO',
+  brandName: 'Bizdavar',
   schemaId: 'jsonld-enpo',
-  schemaListName: 'ENPO pneumatic catalog — Bizdavar Group',
+  schemaListName: {
+    fa: 'کاتالوگ پنوماتیک صنعتی — بیزدوار گروپ',
+    tr: 'Endüstriyel pnömatik kataloğu — Bizdavar Group',
+    en: 'Industrial pneumatic catalog — Bizdavar Group',
+    ru: 'Каталог промышленной пневматики — Bizdavar Group',
+    ar: 'كتالوج الهواء المضغوط الصناعي — Bizdavar Group'
+  },
   initFn: 'initEnpoPage',
   schemaFn: 'injectEnpoSchema'
 });
@@ -1003,8 +1313,8 @@ def main():
     )
     hero = data["brand"]["heroImage"]
     for loc in LOCALES:
-        path = ROOT / loc["folder"] / "enpo.html"
-        path.write_text(page_html(loc, hero), encoding="utf-8")
+        path = ROOT / loc["folder"] / "pneumatic.html"
+        path.write_text(page_html(loc, hero, family_jumps(categories, loc["lang"]), faq_jsonld(data["faq"], loc["lang"])), encoding="utf-8")
     patch_css(hero)
     series_n = sum(len(c["series"]) for c in categories)
     coded = sum(1 for c in categories for s in c["series"] if s["specList"])

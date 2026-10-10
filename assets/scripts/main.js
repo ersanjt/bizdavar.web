@@ -338,8 +338,8 @@ window.fillContactDetails = function () {
 
         <div class="contact-info__value">
           <div><strong>${t('contactPage.hqLabel', 'دفاتر')}:</strong> ${C.contact.address}</div>
-          ${am ? `<div class="contact-info__subaddr"><strong>${t('contactPage.armeniaOffice', 'ارمنستان — ایروان')}:</strong> ${am.addressFa || am.address}<br><span class="contact-info__entity">${am.legalName} (${am.companyType || 'LLC'})</span>${am.spyur ? ` · <a href="${am.spyur}" target="_blank" rel="noopener noreferrer">Spyur.am</a>` : ''}</div>` : ''}
-          ${ir ? `<div class="contact-info__subaddr"><strong>${t('contactPage.iranOffice', 'ایران — تبریز')}:</strong> ${ir.city || ir.address || 'تبریز'}${ir.province ? ` · ${ir.province}` : ''}<br><span class="contact-info__entity">${ir.legalNameFa}</span>${ir.jooyeshgar ? ` · <a href="${ir.jooyeshgar}" target="_blank" rel="noopener noreferrer">${t('contactPage.jooyeshgar', 'جویشگر')}</a>` : ''}</div>` : ''}
+          ${am ? `<div class="contact-info__subaddr"><strong>${t('contactPage.armeniaOffice', 'ارمنستان — ایروان')}:</strong> ${(window.BIZDAVAR_I18N?.locale === 'fa') ? (am.addressFa || am.address) : am.address}<br><span class="contact-info__entity">${am.legalName} (${am.companyType || 'LLC'})</span>${am.spyur ? ` · <a href="${am.spyur}" target="_blank" rel="noopener noreferrer">Spyur.am</a>` : ''}</div>` : ''}
+          ${ir ? `<div class="contact-info__subaddr"><strong>${t('contactPage.iranOffice', 'ایران — تبریز')}:</strong> ${(() => { const lang = window.BIZDAVAR_I18N?.locale || 'fa'; const places = { fa: [ir.city, ir.province], tr: ['Tebriz', 'Doğu Azerbaycan'], en: ['Tabriz', 'East Azerbaijan'], ru: ['Тебриз', 'Восточный Азербайджан'], ar: ['تبريز', 'أذربيجان الشرقية'] }; return (places[lang] || places.en).filter(Boolean).join(' · '); })()}<br><span class="contact-info__entity">${(window.BIZDAVAR_I18N?.locale === 'fa') ? ir.legalNameFa : (ir.legalNameEn || ir.legalNameFa)}</span>${ir.jooyeshgar ? ` · <a href="${ir.jooyeshgar}" target="_blank" rel="noopener noreferrer">${t('contactPage.jooyeshgar', 'جویشگر')}</a>` : ''}</div>` : ''}
         </div>
 
       </div>

@@ -17,3 +17,180 @@ body[data-page="enpo"] .enpo-series-card__img--photo {
   object-fit: contain;
   background: #fff;
 }
+body[data-page="enpo"] .enpo-family-jumps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 16px;
+}
+body[data-page="enpo"] .enpo-family-jump {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid #c5d7e4;
+  color: #006fa3;
+  font-weight: 700;
+  text-decoration: none;
+}
+body[data-page="enpo"] .enpo-family-jump:hover {
+  background: #0095d8;
+  border-color: #0095d8;
+  color: #fff;
+}
+body[data-page="enpo"] .enpo-catalog-toolbar {
+  margin-bottom: 16px;
+}
+body[data-page="enpo"] .enpo-catalog-search {
+  display: block;
+}
+body[data-page="enpo"] .enpo-catalog-search input {
+  width: 100%;
+  min-height: 52px;
+  padding: 0 18px;
+  border: 1px solid #c5d7e4;
+  border-radius: 14px;
+  background: #fff;
+  font: inherit;
+  color: inherit;
+}
+body[data-page="enpo"] .enpo-catalog-search input:focus {
+  outline: 3px solid rgba(0, 149, 216, 0.28);
+  border-color: #0095d8;
+}
+body[data-page="enpo"] .enpo-catalog-empty {
+  margin: 0 0 16px;
+  padding: 14px 16px;
+  background: #fff;
+  border: 1px solid #c5d7e4;
+  border-radius: 12px;
+}
+body[data-page="enpo"] .enpo-series-grid--products {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+body[data-page="enpo"] .enpo-series-card__desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+body[data-page="enpo"] .enpo-series-card__specs dd {
+  overflow-wrap: anywhere;
+}
+body[data-page="enpo"] .enpo-series-card__foot {
+  margin-top: auto;
+}
+body[data-page="enpo"] .enpo-series-card__actions {
+  display: flex;
+  gap: 8px;
+}
+body[data-page="enpo"] .enpo-series-card__actions .btn {
+  flex: 1 1 0;
+}
+body[data-page="enpo"] .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+@media (max-width: 720px) {
+  body[data-page="enpo"] .enpo-series-grid--products {
+    grid-template-columns: 1fr;
+  }
+}
+.enpo-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+}
+.enpo-drawer[hidden] { display: none !important; }
+.enpo-drawer__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 24, 36, 0.55);
+}
+.enpo-drawer__panel {
+  position: relative;
+  margin: 4vh auto;
+  width: min(960px, calc(100% - 24px));
+  max-height: 92vh;
+  overflow: auto;
+  background: #fff;
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 24px;
+  padding: 24px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+}
+.enpo-drawer__close {
+  position: absolute;
+  top: 10px;
+  inset-inline-end: 10px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 999px;
+  background: #f3f8fb;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 1;
+}
+.enpo-drawer__media > img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  background: #f3f8fb;
+  border-radius: 12px;
+}
+.enpo-drawer__info h2 {
+  margin: 0 0 10px;
+  font-size: 1.35rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+.enpo-drawer__desc { margin: 0 0 12px; color: #334; }
+.enpo-drawer__specs {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0 0;
+}
+.enpo-drawer__spec {
+  display: grid;
+  gap: 4px;
+  padding: 10px 12px;
+  background: #f3f8fb;
+  border-radius: 10px;
+}
+.enpo-drawer__spec dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  font-weight: 700;
+}
+.enpo-drawer__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+.enpo-drawer__actions .btn { flex: 1 1 140px; justify-content: center; }
+body.enpo-drawer-open { overflow: hidden; }
+@media (max-width: 800px) {
+  .enpo-drawer__panel {
+    grid-template-columns: 1fr;
+    margin: 0;
+    width: 100%;
+    max-height: 100vh;
+    height: 100vh;
+    border-radius: 0;
+  }
+}

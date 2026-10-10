@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>Bizdavar — Promo</title>
+<style>
+@font-face { font-family: Estedad; src: url(../assets/fonts/estedad/Estedad-Black.woff2) format('woff2'); font-weight: 900; }
+@font-face { font-family: Estedad; src: url(../assets/fonts/estedad/Estedad-ExtraBold.woff2) format('woff2'); font-weight: 800; }
+@font-face { font-family: Estedad; src: url(../assets/fonts/estedad/Estedad-Bold.woff2) format('woff2'); font-weight: 700; }
+@font-face { font-family: Vazirmatn; src: url(../assets/fonts/vazirmatn/Vazirmatn-Regular.woff2) format('woff2'); font-weight: 400; }
+@font-face { font-family: Vazirmatn; src: url(../assets/fonts/vazirmatn/Vazirmatn-SemiBold.woff2) format('woff2'); font-weight: 600; }
+@font-face { font-family: Inter; src: url(../assets/fonts/inter/Inter-ExtraBold.woff2) format('woff2'); font-weight: 800 900; }
+@font-face { font-family: Inter; src: url(../assets/fonts/inter/Inter-Bold.woff2) format('woff2'); font-weight: 700; }
+@font-face { font-family: Inter; src: url(../assets/fonts/inter/Inter-SemiBold.woff2) format('woff2'); font-weight: 600; }
+
+:root { --red: #e3191f; --ink: #0d0d0e; --white: #fff; --w: 1080px; --h: 1920px; }
+body.landscape { --w: 1920px; --h: 1080px; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: var(--w); height: var(--h); overflow: hidden; background: var(--ink); }
+body { font-family: Inter, Vazirmatn, sans-serif; color: var(--white); }
+.kicker, h1, h2, .tag, .price b, .stat b, .city, .cta { font-family: Inter, Estedad, sans-serif !important; }
+h1, h2, .lead { text-wrap: balance; }
+
+#stage { position: relative; width: var(--w); height: var(--h); overflow: hidden; background: radial-gradient(120% 80% at 50% 0%, #1b1b1f 0%, #0b0b0c 70%); }
+.glow { position: absolute; width: 1400px; height: 1400px; border-radius: 50%; background: radial-gradient(circle, rgba(227,25,31,.42) 0%, rgba(227,25,31,0) 62%); filter: blur(20px); }
+.grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px); background-size: 90px 90px; mask-image: radial-gradient(circle at 50% 45%, #000 0%, transparent 75%); }
+
+.scene { position: absolute; inset: 0; opacity: 0; }
+.scene.off { display: none; }
+[data-a] { opacity: 0; will-change: transform, opacity; }
+
+.center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 90px; }
+
+.logo { width: 640px; }
+.kicker { font-weight: 700; font-size: 40px; color: rgba(255,255,255,.75); }
+.redline { height: 8px; width: 180px; background: var(--red); border-radius: 8px; }
+
+h1, h2 { font-weight: 900; line-height: 1.25; }
+h1 { font-size: 112px; }
+h2 { font-size: 92px; }
+.red { color: var(--red); }
+.lead { font-size: 46px; font-weight: 600; line-height: 1.6; color: rgba(255,255,255,.85); }
+
+.photo { position: absolute; left: 0; right: 0; top: 0; height: 1150px; overflow: hidden; }
+.photo img { width: 100%; height: 100%; object-fit: cover; transform-origin: 50% 50%; }
+.photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,11,12,.15) 0%, rgba(11,11,12,0) 45%, rgba(11,11,12,.85) 85%, #0b0b0c 100%); }
+.panel { position: absolute; left: 0; right: 0; bottom: 0; height: 900px; padding: 0 90px 170px; display: flex; flex-direction: column; justify-content: flex-end; gap: 34px; }
+.tag { align-self: flex-start; font-weight: 800; font-size: 36px; padding: 14px 34px; background: var(--red); border-radius: 60px; }
+.chips { display: flex; flex-wrap: wrap; gap: 18px; }
+.chip { font-weight: 800; font-size: 38px; padding: 16px 30px; border: 2px solid rgba(255,255,255,.25); border-radius: 18px; background: rgba(255,255,255,.06); direction: ltr; }
+.price { display: flex; gap: 26px; align-items: stretch; }
+.price > div { flex: 1; padding: 28px 30px; border-radius: 28px; background: rgba(255,255,255,.07); border: 2px solid rgba(255,255,255,.12); }
+.price b { display: block; font-weight: 900; font-size: 84px; color: var(--white); }
+.price span { font-size: 36px; color: rgba(255,255,255,.7); font-weight: 600; }
+
+.stats { display: grid; grid-template-columns: 1fr; gap: 34px; width: 100%; }
+.stat { display: flex; align-items: center; justify-content: space-between; padding: 40px 56px; border-radius: 36px; background: rgba(255,255,255,.06); border: 2px solid rgba(255,255,255,.1); }
+.stat b { font-weight: 900; font-size: 120px; color: var(--red); line-height: 1; direction: ltr; }
+.stat b i { font-style: normal; }
+.stat span { font-size: 50px; font-weight: 600; }
+.cities { display: flex; gap: 22px; justify-content: center; flex-wrap: wrap; }
+.city { font-weight: 700; font-size: 40px; padding: 14px 32px; border-radius: 60px; background: rgba(227,25,31,.16); border: 2px solid rgba(227,25,31,.55); }
+
+.cta { font-weight: 900; font-size: 56px; padding: 34px 70px; border-radius: 80px; background: var(--red); box-shadow: 0 24px 80px rgba(227,25,31,.55); }
+.url { font-family: Inter; font-weight: 800; font-size: 76px; direction: ltr; letter-spacing: -1px; }
+.wa { display: flex; align-items: center; gap: 22px; font-family: Inter; font-weight: 800; font-size: 50px; direction: ltr; color: rgba(255,255,255,.9); }
+.wa svg { width: 60px; height: 60px; }
+.progress { position: absolute; inset-inline-start: 0; bottom: 0; height: 10px; background: var(--red); }
+
+/* 16:9 */
+.landscape h1 { font-size: 96px; }
+.landscape h2 { font-size: 80px; }
+.landscape .lead { font-size: 40px; }
+.landscape .center { padding: 0 200px; }
+.landscape .hook { gap: 18px !important; }
+.landscape .hook .lead { margin-top: 30px; }
+.landscape .photo { top: 0; bottom: 0; height: auto; left: auto; right: auto; inset-inline-end: 0; width: 1180px; }
+.landscape .photo::after { background: linear-gradient(to left, rgba(11,11,12,0) 45%, #0b0b0c 100%), linear-gradient(180deg, rgba(11,11,12,0) 70%, rgba(11,11,12,.7) 100%); }
+[dir=rtl] .landscape .photo::after { background: linear-gradient(to right, rgba(11,11,12,0) 45%, #0b0b0c 100%), linear-gradient(180deg, rgba(11,11,12,0) 70%, rgba(11,11,12,.7) 100%); }
+.landscape .panel { top: 0; bottom: 0; height: auto; left: auto; right: auto; inset-inline-start: 0; width: 900px; padding: 0 110px; justify-content: center; }
+.landscape .stats { grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.landscape .stat { flex-direction: column-reverse; gap: 20px; padding: 40px 30px; }
+.landscape .stat b { font-size: 110px; }
+.landscape .stat span { font-size: 38px; }
+.landscape .why { gap: 50px !important; }
+.landscape .ctas { gap: 34px !important; }
+.landscape .ctas .logo { width: 420px !important; }
+.landscape .ctas h2 br { display: none; }
+.landscape .ctas .url { font-size: 64px; }
+.landscape .ctas .cta { font-size: 48px; padding: 26px 60px; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="glow" id="glow1"></div>
+  <div class="glow" id="glow2" style="width:1000px;height:1000px;opacity:.6"></div>
+  <div class="grid"></div>
+
+  <section class="scene" data-id="intro">
+    <div class="center" style="gap:56px">
+      <img class="logo" src="../assets/images/brand/bizdavar-logo-light.png" alt="" data-a="0.2" data-fx="zoom" data-dur="1.1">
+      <div class="redline" data-a="0.9" data-fx="grow" data-dur="0.7"></div>
+      <div class="kicker" data-a="1.2" data-fx="up" data-t="kicker"></div>
+    </div>
+  </section>
+
+  <section class="scene" data-id="hook">
+    <div class="center hook" style="gap:50px">
+      <h1 data-a="0.1" data-fx="up" data-t="hook1"></h1>
+      <h1 data-a="0.45" data-fx="up" data-t="hook2"></h1>
+      <h1 data-a="0.8" data-fx="up" data-t="hook3"></h1>
+      <p class="lead" data-a="1.5" data-fx="up" data-t="hookLead"></p>
+    </div>
+  </section>
+
+  <section class="scene" data-id="web">
+    <div class="photo"><img data-kb="1" src="../assets/images/content/home-fast-studio.webp" alt=""></div>
+    <div class="panel">
+      <div class="tag" data-a="0.2" data-fx="side">Fast Web Studio</div>
+      <h2 data-a="0.4" data-fx="up" data-t="webTitle"></h2>
+      <div class="price" data-a="0.9" data-fx="up">
+        <div><b>$99</b><span data-t="priceLabel"></span></div>
+        <div><b data-t="daysVal"></b><span data-t="daysLabel"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene" data-id="dm">
+    <div class="photo"><img data-kb="-1" src="../assets/images/content/home-svc-dm.webp" alt=""></div>
+    <div class="panel">
+      <div class="tag" data-a="0.2" data-fx="side" data-t="dmTag"></div>
+      <h2 data-a="0.4" data-fx="up" data-t="dmTitle"></h2>
+      <p class="lead" data-a="0.8" data-fx="up" data-t="dmLead"></p>
+    </div>
+  </section>
+
+  <section class="scene" data-id="ind">
+    <div class="photo"><img data-kb="1" src="../assets/images/content/home-hero-industrial.webp" alt=""></div>
+    <div class="panel">
+      <div class="tag" data-a="0.2" data-fx="side" data-t="indTag"></div>
+      <h2 data-a="0.4" data-fx="up" data-t="indTitle"></h2>
+      <div class="chips">
+        <div class="chip" data-a="0.8" data-fx="pop">VEGA</div>
+        <div class="chip" data-a="0.92" data-fx="pop">Prosense</div>
+        <div class="chip" data-a="1.04" data-fx="pop">Gamak</div>
+        <div class="chip" data-a="1.16" data-fx="pop">Teltonika</div>
+        <div class="chip" data-a="1.28" data-fx="pop">Liqui Moly</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene" data-id="why">
+    <div class="center why" style="gap:46px">
+      <h2 data-a="0.1" data-fx="up" style="font-size:84px" data-t="whyTitle"></h2>
+      <div class="stats">
+        <div class="stat" data-a="0.4" data-fx="side"><span data-t="statProjects"></span><b>+<i data-count="100" data-from="0.4">0</i></b></div>
+        <div class="stat" data-a="0.6" data-fx="side"><span data-t="statCountries"></span><b><i data-count="11" data-from="0.6">0</i></b></div>
+        <div class="stat" data-a="0.8" data-fx="side"><span data-t="statFounded"></span><b><i data-count="2013" data-from="0.8" data-start="1990">0</i></b></div>
+      </div>
+      <div class="cities" data-a="1.4" data-fx="up" id="cities"></div>
+    </div>
+  </section>
+
+  <section class="scene" data-id="cta" data-last="1">
+    <div class="center ctas" style="gap:60px">
+      <img class="logo" style="width:560px" src="../assets/images/brand/bizdavar-logo-light.png" alt="" data-a="0.1" data-fx="zoom">
+      <h2 data-a="0.4" data-fx="up" style="font-size:80px" data-t="ctaTitle"></h2>
+      <div class="cta" data-a="0.8" data-fx="pop" data-t="ctaBtn"></div>
+      <div class="url" data-a="1.1" data-fx="up">bizdavar.com</div>
+      <div class="wa" data-a="1.3" data-fx="up">
+        <svg viewBox="0 0 24 24" fill="#25D366"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>
+        <span data-t="phone"></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="progress" id="progress"></div>
+</div>
+
+<script>
+const TEXT = {
+  fa: {
+    kicker: 'Bizdavar Group · از ۲۰۱۳',
+    hook1: 'رشد کسب‌وکار شما',
+    hook2: 'با <span class="red">دیجیتال</span>',
+    hook3: 'و <span class="red">تامین صنعتی</span>',
+    hookLead: 'طراحی سایت · بازاریابی دیجیتال · تجهیزات صنعتی',
+    webTitle: 'سایت حرفه‌ای<br>در <span class="red">۵ روز</span>',
+    priceLabel: 'شروع قیمت', daysVal: '۵ روز', daysLabel: 'تحویل کامل',
+    dmTag: 'بازاریابی دیجیتال',
+    dmTitle: 'تبلیغات هدفمند،<br><span class="red">مشتری واقعی</span>',
+    dmLead: 'سئو، شبکه‌های اجتماعی، اپلیکیشن و CRM واتساپ FXGuard',
+    indTag: 'تامین صنعتی برای ایران',
+    indTitle: 'تجهیزات اصل<br>با <span class="red">مشاوره فنی فارسی</span>',
+    whyTitle: 'چرا <span class="red">بیزدوار</span>؟',
+    statProjects: 'پروژه وب و پلتفرم', statCountries: 'کشور فعال', statFounded: 'شروع فعالیت',
+    cities: ['تبریز', 'استانبول', 'ایروان', 'دبی'],
+    ctaTitle: 'همین امروز <br>شروع کنید',
+    ctaBtn: 'مشاوره رایگان',
+    phone: '+98 930 588 0135'
+  },
+  en: {
+    kicker: 'Bizdavar Group · Since 2013',
+    hook1: 'Grow your business',
+    hook2: 'with <span class="red">digital</span>',
+    hook3: '& <span class="red">industrial supply</span>',
+    hookLead: 'Web design · Digital marketing · Industrial equipment',
+    webTitle: 'A pro website<br>in <span class="red">5 days</span>',
+    priceLabel: 'Starting price', daysVal: '5 days', daysLabel: 'Full delivery',
+    dmTag: 'Digital marketing',
+    dmTitle: 'Targeted ads,<br><span class="red">real customers</span>',
+    dmLead: 'SEO, social media, apps and FXGuard WhatsApp CRM',
+    indTag: 'Industrial supply',
+    indTitle: 'Genuine equipment,<br><span class="red">expert support</span>',
+    whyTitle: 'Why <span class="red">Bizdavar</span>?',
+    statProjects: 'Web & platform projects', statCountries: 'Countries served', statFounded: 'Founded',
+    cities: ['Tabriz', 'Istanbul', 'Yerevan', 'Dubai'],
+    ctaTitle: 'Start <br>today',
+    ctaBtn: 'Free consultation',
+    phone: '+90 501 067 6486'
+  },
+  tr: {
+    kicker: 'Bizdavar Group · 2013\'ten beri',
+    hook1: '<span class="red">Dijital</span> çözümler',
+    hook2: 've <span class="red">endüstriyel tedarikle</span>',
+    hook3: 'işinizi büyütün',
+    hookLead: 'Web tasarım · Dijital pazarlama · Endüstriyel ekipman',
+    webTitle: '<span class="red">5 günde</span><br>profesyonel site',
+    priceLabel: 'Başlangıç fiyatı', daysVal: '5 gün', daysLabel: 'Teslim süresi',
+    dmTag: 'Dijital pazarlama',
+    dmTitle: 'Hedefli reklam,<br><span class="red">gerçek müşteri</span>',
+    dmLead: 'SEO, sosyal medya, uygulama ve FXGuard WhatsApp CRM',
+    indTag: 'Endüstriyel tedarik',
+    indTitle: 'Orijinal ekipman,<br><span class="red">uzman destek</span>',
+    whyTitle: 'Neden <span class="red">Bizdavar</span>?',
+    statProjects: 'Web ve platform projesi', statCountries: 'Aktif ülke', statFounded: 'Kuruluş',
+    cities: ['Tebriz', 'İstanbul', 'Erivan', 'Dubai'],
+    ctaTitle: 'Bugün <br>başlayın',
+    ctaBtn: 'Ücretsiz danışmanlık',
+    phone: '+90 501 067 6486'
+  }
+};
+
+const TIMELINES = {
+  full: { duration: 30, scenes: { intro: [0, 3.6], hook: [3.6, 7.8], web: [7.8, 12.4], dm: [12.4, 16.8], ind: [16.8, 21.4], why: [21.4, 25.6], cta: [25.6, 30] } },
+  short: { duration: 15, scenes: { intro: [0, 2.2], web: [2.2, 5.6], ind: [5.6, 9.0], why: [9.0, 11.6], cta: [11.6, 15] } }
+};
+
+const q = new URLSearchParams(location.search);
+const lang = TEXT[q.get('lang')] ? q.get('lang') : 'fa';
+const cut = TIMELINES[q.get('cut')] ? q.get('cut') : 'full';
+const T = TEXT[lang];
+const rtl = lang === 'fa';
+document.documentElement.lang = lang;
+document.documentElement.dir = rtl ? 'rtl' : 'ltr';
+if (q.get('layout') === 'landscape') document.body.classList.add('landscape');
+
+document.querySelectorAll('[data-t]').forEach(el => { el.innerHTML = T[el.dataset.t].replace(/ · /g, '&nbsp;· '); });
+document.getElementById('cities').innerHTML = T.cities.map(c => `<div class="city">${c}</div>`).join('');
+
+const DURATION = TIMELINES[cut].duration;
+const FA = '۰۱۲۳۴۵۶۷۸۹';
+const fmt = n => rtl ? String(n).replace(/\d/g, d => FA[d]) : String(n);
+const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+const easeOut = p => 1 - Math.pow(1 - p, 3);
+const easeBack = p => { const c = 1.6; return 1 + (c + 1) * Math.pow(p - 1, 3) + c * Math.pow(p - 1, 2); };
+const sideDir = rtl ? 1 : -1;
+
+const scenes = [];
+document.querySelectorAll('[data-id]').forEach(el => {
+  const span = TIMELINES[cut].scenes[el.dataset.id];
+  if (!span) { el.classList.add('off'); return; }
+  scenes.push({
+    el,
+    start: span[0],
+    end: span[1],
+    last: !!el.dataset.last,
+    items: [...el.querySelectorAll('[data-a]')],
+    kb: el.querySelector('[data-kb]'),
+    counters: [...el.querySelectorAll('[data-count]')]
+  });
+});
+
+function fx(el, local) {
+  const at = +el.dataset.a;
+  const dur = +(el.dataset.dur || 0.8);
+  const p = clamp((local - at) / dur);
+  const e = easeOut(p);
+  switch (el.dataset.fx) {
+    case 'zoom': el.style.transform = `scale(${0.6 + 0.4 * easeBack(p)})`; el.style.filter = `blur(${(1 - e) * 18}px)`; break;
+    case 'grow': el.style.transform = `scaleX(${e})`; break;
+    case 'side': el.style.transform = `translateX(${sideDir * (1 - e) * 140}px)`; break;
+    case 'pop': el.style.transform = `scale(${0.5 + 0.5 * easeBack(p)})`; break;
+    default: el.style.transform = `translateY(${(1 - e) * 70}px)`;
+  }
+  el.style.opacity = clamp(p * 1.6);
+}
+
+window.render = function (t) {
+  for (const s of scenes) {
+    const local = t - s.start;
+    const span = s.end - s.start;
+    let o = 0;
+    if (t >= s.start - 0.001 && t < s.end + 0.4) {
+      const fadeIn = s.start === 0 ? 1 : clamp(local / 0.4);
+      const fadeOut = s.last ? 1 : clamp((s.end + 0.4 - t) / 0.4);
+      o = Math.min(fadeIn, fadeOut);
+    }
+    s.el.style.opacity = o;
+    s.el.style.transform = o < 1 && local > span ? `scale(${1 + (local - span) * 0.12})` : '';
+    if (o === 0) continue;
+    s.items.forEach(el => fx(el, local));
+    if (s.kb) {
+      const p = clamp(local / (span + 0.4));
+      s.kb.style.transform = `scale(${1.08 + 0.14 * p}) translateX(${+s.kb.dataset.kb * (p - 0.5) * 40}px)`;
+    }
+    s.counters.forEach(c => {
+      const from = +(c.dataset.start || 0);
+      const p = easeOut(clamp((local - +c.dataset.from) / 1.4));
+      c.textContent = fmt(Math.round(from + (+c.dataset.count - from) * p));
+    });
+  }
+  const W = document.body.classList.contains('landscape') ? 1920 : 1080;
+  const H = document.body.classList.contains('landscape') ? 1080 : 1920;
+  document.getElementById('glow1').style.transform = `translate(${-500 + Math.sin(t * 0.35) * 260}px, ${-500 + Math.cos(t * 0.27) * 300}px)`;
+  document.getElementById('glow2').style.transform = `translate(${W - 700 + Math.cos(t * 0.31) * 200}px, ${H - 670 + Math.sin(t * 0.4) * 220}px)`;
+  document.getElementById('progress').style.width = `${(t / DURATION) * 100}%`;
+};
+
+window.DURATION = DURATION;
+window.CUTS = Object.values(TIMELINES[cut].scenes).map(s => s[0]).filter(Boolean);
+render(0);
+</script>
+</body>
+</html>

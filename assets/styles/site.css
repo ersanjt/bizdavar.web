@@ -3242,6 +3242,11 @@ a.about__feature:hover {
 .page-hero--compact { padding: 50px 0 36px; }
 
 .page-hero a:not(.btn) { color: var(--yellow); }
+.page-hero a.intent-nav__chip--cta,
+.page-hero a.intent-nav__chip--cta:hover,
+.page-hero a.intent-nav__chip--cta:focus-visible {
+  color: var(--navy, #16163f);
+}
 
 .tags-cloud__tag {
   background: var(--white);

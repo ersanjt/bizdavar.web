@@ -85,6 +85,7 @@ window.createSupplyBrandPage = function (cfg) {
   function priceHtml(item, kind) {
     const p = offerPrice(item);
     if (!p) {
+      if (catalog().hideQuotePrice) return '';
       if (!(item.quoteOnly || catalog().quoteEmptyPrices)) return '';
       const quote = t('quotePrice', 'استعلام قیمت');
       if (kind === 'div') {
@@ -249,10 +250,17 @@ window.createSupplyBrandPage = function (cfg) {
   const shownCount = {};
 
   function seriesHay(s) {
-    return [s.name, s.titleFa, s.titleTr, s.titleEn, s.sku, s.brand, s.note, s.specs, s.desc, s.descFa, s.inquiryName, s.leafFa]
+    const specs = (s.specList || []).map(function (row) { return row && row.value; });
+    return [s.name, s.titleFa, s.titleTr, s.titleEn, s.titleRu, s.titleAr, s.sku, s.brand, s.note, s.specs, s.desc, s.descFa, s.descTr, s.descEn, s.descRu, s.descAr, s.inquiryName, s.leafFa, s.categoryFa, s.categoryTr, s.categoryEn, s.categoryRu, s.categoryAr].concat(specs)
       .filter(Boolean)
       .join(' ')
       .toLowerCase();
+  }
+
+  function pickLang(item, base) {
+    if (!item) return '';
+    const suffix = { fa: 'Fa', tr: 'Tr', en: 'En', ru: 'Ru', ar: 'Ar' }[locale()] || 'Fa';
+    return item[base + suffix] || item[base] || '';
   }
 
   function catalogQuery() {
@@ -821,14 +829,15 @@ window.createSupplyBrandPage = function (cfg) {
         if (type && type.leaves && type.leaves.length && type.leaves.indexOf(s.leafFa) === -1) return false;
         if (brand && String(s.brand || '') !== brand) return false;
         if (!q) return true;
-        return seriesHay(s).includes(q) || String(cat.title || '').toLowerCase().includes(q);
+        const catHay = [cat.title, cat.titleFa, cat.titleTr, cat.titleEn, cat.titleRu, cat.titleAr, cat.desc, cat.descFa, cat.descTr, cat.descEn, cat.descRu, cat.descAr].filter(Boolean).join(' ').toLowerCase();
+        return seriesHay(s).includes(q) || catHay.includes(q);
       });
       if (shownCount[cat.id] == null) shownCount[cat.id] = size;
       const limit = lazy ? shownCount[cat.id] : filtered.length;
       const visible = filtered.slice(0, Math.min(limit, filtered.length));
       const remaining = Math.max(0, filtered.length - visible.length);
       if ((q || brand || type) && !visible.length) return '';
-      const hasProducts = visible.some(s => (s.features && s.features.length) || s.officialPath || s.officialUrl || s.specs || (s.gallery && s.gallery.length));
+      const hasProducts = visible.some(s => (s.features && s.features.length) || s.officialPath || s.officialUrl || s.specs || (s.specList && s.specList.length) || (s.gallery && s.gallery.length));
       const groupLabel = cat.groupTitle
         ? localizedTitle({
             title: cat.groupTitle,
@@ -867,7 +876,7 @@ window.createSupplyBrandPage = function (cfg) {
 
               <small>${isFa() ? (cat.titleEn || '') : ''}</small>
 
-              <p>${String(cat.desc || '').replace(/\s*[—-]\s*قیمت به دلار(?:\s*\([^)]*\))?/g, '').replace(/\s*\(نرخ[^)]*\)/g, '').replace(/\s*\(1\s*USD\s*=\s*47[^)]*\)/gi, '').trim()}</p>
+              ${(() => { const catDesc = String(pickLang(cat, 'desc') || cat.desc || '').replace(/\s*[—-]\s*قیمت به دلار(?:\s*\([^)]*\))?/g, '').replace(/\s*\(نرخ[^)]*\)/g, '').replace(/\s*\(1\s*USD\s*=\s*47[^)]*\)/gi, '').trim(); return catDesc ? `<p>${catDesc}</p>` : ''; })()}
 
               <a href="${inquiryUrl(cat.title)}" class="btn btn--yellow ${prefix}-btn-inquiry">${t('inquiryCategory', 'استعلام این دسته')}</a>
 
@@ -1024,9 +1033,9 @@ window.createSupplyBrandPage = function (cfg) {
 
       <details class="${prefix}-faq__item"${i === 0 ? ' open' : ''}>
 
-        <summary>${item.q}</summary>
+        <summary>${pickLang(item, 'q') || item.q || ''}</summary>
 
-        <p>${item.a}</p>
+        <p>${pickLang(item, 'a') || item.a || ''}</p>
 
       </details>
 
@@ -1439,8 +1448,8 @@ window.createSupplyBrandPage = function (cfg) {
         const s = series[si];
         const product = {
           '@type': 'Product',
-          name: `${s.inquiryName || s.name} — ${brandName}`,
-          description: s.desc || s.note,
+          name: `${localizedTitle(s)} — ${brandName}`,
+          description: localizedDesc(s) || s.desc || s.note,
           sku: s.sku || undefined,
           brand: { '@type': 'Brand', name: brandName },
           category: cat.title || cat.titleEn || cat.titleTr,
