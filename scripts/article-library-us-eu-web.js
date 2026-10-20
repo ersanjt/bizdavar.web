@@ -21,7 +21,7 @@ module.exports = [
     seoKey: 'articleWebsiteDesignUsEu',
     date: '2026-08-29',
     modified: '2026-08-29',
-    image: 'assets/images/content/services-web-mockup.svg',
+    image: 'assets/images/blog/blog-web-us-eu.webp',
     extraImg: 'assets/images/content/related-thumb-fast.svg',
     category: loc('طراحی وب', 'Web tasarım', 'Web design', 'Веб-дизайн', 'تصميم ويب'),
     title: loc(
@@ -98,7 +98,7 @@ module.exports = [
     body: {
       fa: `
 <p>اگر بازار هدف شما <strong>اروپا یا آمریکاست</strong>، سایت باید انگلیسی، سریع و قابل فاکتور به <strong>دلار یا یورو</strong> باشد — نه فقط یک قالب RTL. بیزدوار همین مسیر را در <a href="/pages/services#web-design">طراحی وب</a> و <a href="/pages/fast">Fast Web Studio</a> می‌فروشد.</p>
-${fig('/assets/images/content/services-web-mockup.svg', 'ماکاپ طراحی سایت شرکتی انگلیسی — Fast Web Studio', 'پلن پایه از ۹۹ دلار / حدود ۹۰ یورو — تحویل ۵ روز کاری.')}
+${fig('/assets/images/blog/blog-web-us-eu.webp', 'ماکاپ طراحی سایت شرکتی انگلیسی — Fast Web Studio', 'پلن پایه از ۹۹ دلار / حدود ۹۰ یورو — تحویل ۵ روز کاری.')}
 <h2 id="ch-who">برای چه کسب‌وکاری مناسب است؟</h2>
 <ul>
 <li>استارتاپ و SaaS آمریکا که به لندینگ انگلیسی و Stripe نیاز دارند</li>
@@ -115,7 +115,7 @@ ${fig('/assets/images/content/related-thumb-fast.svg', 'تحویل سایت شر
 <p>ارز فاکتور را قبل از شروع مکتوب می‌کنیم (USD یا EUR). درگاه فروشگاه: Stripe یا PayPal. هاست بین‌المللی از <a href="https://netinode.net/" target="_blank" rel="noopener noreferrer">Netinode</a>. شروع: <a href="/pages/contact?service=web-design">فرم پیشنهاد وب</a>.</p>`,
       tr: `
 <p>Hedefiniz <strong>Avrupa veya ABD</strong> ise site İngilizce, hızlı ve <strong>USD veya EUR</strong> faturalı olmalı. Bizdavar bunu <a href="/pages/services#web-design">web tasarım</a> ve <a href="/pages/fast">Fast Web Studio</a> ile satar.</p>
-${fig('/assets/images/content/services-web-mockup.svg', 'İngilizce kurumsal site mockup — Fast Web Studio', 'Temel plan 99$ / ~€90 — 5 iş günü.')}
+${fig('/assets/images/blog/blog-web-us-eu.webp', 'İngilizce kurumsal site mockup — Fast Web Studio', 'Temel plan 99$ / ~€90 — 5 iş günü.')}
 <h2 id="ch-who">Hangi işletmeye uygun?</h2>
 <ul>
 <li>Stripe’lı İngilizce landing isteyen ABD startup / SaaS</li>
@@ -132,7 +132,7 @@ ${fig('/assets/images/content/related-thumb-fast.svg', 'Beş iş gününde kurum
 <p>Para birimi başlamadan yazılı netleşir. Mağaza: Stripe veya PayPal. Hosting: <a href="https://netinode.net/" target="_blank" rel="noopener noreferrer">Netinode</a>. Başlangıç: <a href="/pages/contact?service=web-design">web teklif formu</a>.</p>`,
       en: `
 <p>If your buyers are in the <strong>United States or Europe</strong>, the site should be English-first, fast, and invoiced in <strong>USD or EUR</strong> — not an RTL template with machine translation. Bizdavar sells that path on <a href="/pages/services#web-design">web design</a> and <a href="/pages/fast">Fast Web Studio</a>.</p>
-${fig('/assets/images/content/services-web-mockup.svg', 'English corporate website mockup — Fast Web Studio', 'Basic plan from $99 / about €90 — five business days.')}
+${fig('/assets/images/blog/blog-web-us-eu.webp', 'English corporate website mockup — Fast Web Studio', 'Basic plan from $99 / about €90 — five business days.')}
 <h2 id="ch-who">Who it is for</h2>
 <ul>
 <li>US startups and SaaS that need an English landing and Stripe</li>
@@ -149,7 +149,7 @@ ${fig('/assets/images/content/related-thumb-fast.svg', 'Corporate website delive
 <p>We lock invoice currency in writing before kickoff (USD or EUR). Store checkout uses Stripe or PayPal. International hosting is via <a href="https://netinode.net/" target="_blank" rel="noopener noreferrer">Netinode</a>. Start on the <a href="/pages/contact?service=web-design">website quote form</a>.</p>`,
       ru: `
 <p>Если покупатели в <strong>США или Европе</strong>, сайт должен быть на английском, быстрым и со счётом в <strong>USD или EUR</strong>. Этот путь — на <a href="/pages/services#web-design">веб-дизайне</a> и <a href="/pages/fast">Fast Web Studio</a>.</p>
-${fig('/assets/images/content/services-web-mockup.svg', 'Макет английского корпоративного сайта — Fast Web Studio', 'Базовый тариф от $99 / ~€90 — 5 рабочих дней.')}
+${fig('/assets/images/blog/blog-web-us-eu.webp', 'Макет английского корпоративного сайта — Fast Web Studio', 'Базовый тариф от $99 / ~€90 — 5 рабочих дней.')}
 <h2 id="ch-who">Для кого</h2>
 <ul>
 <li>Стартапы и SaaS США — английский лендинг и Stripe</li>
@@ -166,7 +166,7 @@ ${fig('/assets/images/content/related-thumb-fast.svg', 'Корпоративны
 <p>Валюту фиксируем письменно до старта. Магазин: Stripe или PayPal. Хостинг: <a href="https://netinode.net/" target="_blank" rel="noopener noreferrer">Netinode</a>. Старт: <a href="/pages/contact?service=web-design">форма оценки сайта</a>.</p>`,
       ar: `
 <p>إذا كان عملاؤكم في <strong>أمريكا أو أوروبا</strong> فالموقع يجب أن يكون بالإنجليزية وسريعاً وبفاتورة <strong>USD أو EUR</strong>. هذا المسار على <a href="/pages/services#web-design">تصميم الويب</a> و<a href="/pages/fast">Fast Web Studio</a>.</p>
-${fig('/assets/images/content/services-web-mockup.svg', 'نموذج موقع شركات إنجليزي — Fast Web Studio', 'الباقة الأساسية من ٩٩$ / نحو ٩٠€ — خمسة أيام عمل.')}
+${fig('/assets/images/blog/blog-web-us-eu.webp', 'نموذج موقع شركات إنجليزي — Fast Web Studio', 'الباقة الأساسية من ٩٩$ / نحو ٩٠€ — خمسة أيام عمل.')}
 <h2 id="ch-who">لمن</h2>
 <ul>
 <li>شركات ناشئة وSaaS أمريكية تحتاج لاندينغ إنجليزي وStripe</li>
@@ -189,7 +189,7 @@ ${fig('/assets/images/content/related-thumb-fast.svg', 'تسليم موقع شر
     seoKey: 'articleDigitalMarketingUsEu',
     date: '2026-08-29',
     modified: '2026-08-29',
-    image: 'assets/images/content/services-dm-visual.svg',
+    image: 'assets/images/blog/blog-ads-us-eu.webp',
     extraImg: 'assets/images/content/network-map.svg',
     category: loc('بازاریابی دیجیتال', 'Dijital pazarlama', 'Digital marketing', 'Цифровой маркетинг', 'التسويق الرقمي'),
     title: loc(
@@ -266,7 +266,7 @@ ${fig('/assets/images/content/related-thumb-fast.svg', 'تسليم موقع شر
     body: {
       fa: `
 <p>کمپین برای <strong>مخاطب آمریکا و اروپا</strong> با بودجه ریالی و لندینگ فارسی جلو نمی‌رود. بیزدوار Ads را روی سایت انگلیسی، فرم تبدیل و فاکتور <strong>دلار یا یورو</strong> می‌چیند — جزئیات اجرا در <a href="/pages/services#digital-marketing">بازاریابی دیجیتال</a>.</p>
-${fig('/assets/images/content/services-dm-visual.svg', 'شبکه بازاریابی دیجیتال و کانال‌های جهانی', 'Google Ads، Meta و LinkedIn با گزارش GA4 به ارز فاکتور.')}
+${fig('/assets/images/blog/blog-ads-us-eu.webp', 'شبکه بازاریابی دیجیتال و کانال‌های جهانی', 'Google Ads، Meta و LinkedIn با گزارش GA4 به ارز فاکتور.')}
 <h2 id="ch-why">چرا جدا از بازار ایران؟</h2>
 <p>حراج، زبان، درگاه و ساعت کاری فرق دارد. پیام فارسی برای جستجوی انگلیسی تبدیل نمی‌شود. اول <a href="/pages/articles/website-design-us-eu">سایت انگلیسی</a>، بعد بودجه.</p>
 <h2 id="ch-channels">کانال‌ها</h2>
@@ -282,7 +282,7 @@ ${fig('/assets/images/content/network-map.svg', 'نقشه شبکه و مسیر �
 <p>KPI ماهانه: هزینه جذب، نرخ تبدیل، کیفیت لید و درآمد به USD یا EUR. شروع: <a href="/pages/contact?service=digital-marketing">استعلام کمپین</a>.</p>`,
       tr: `
 <p><strong>ABD/AB kitlesi</strong> için reklam, İngilizce site ve <strong>USD veya EUR</strong> fatura ister. Uygulama: <a href="/pages/services#digital-marketing">dijital pazarlama</a>.</p>
-${fig('/assets/images/content/services-dm-visual.svg', 'Küresel dijital pazarlama ağı', 'Google Ads, Meta ve LinkedIn — GA4 fatura para biriminde.')}
+${fig('/assets/images/blog/blog-ads-us-eu.webp', 'Küresel dijital pazarlama ağı', 'Google Ads, Meta ve LinkedIn — GA4 fatura para biriminde.')}
 <h2 id="ch-why">Neden ayrı?</h2>
 <p>Dil, ödeme ve saat farklı. Önce <a href="/pages/articles/website-design-us-eu">İngilizce site</a>, sonra bütçe.</p>
 <h2 id="ch-channels">Kanallar</h2>
@@ -298,7 +298,7 @@ ${fig('/assets/images/content/network-map.svg', 'Uluslararası edinme ağı', 'H
 <p>Aylık KPI USD veya EUR. Başlangıç: <a href="/pages/contact?service=digital-marketing">kampanya talebi</a>.</p>`,
       en: `
 <p>Campaigns for <strong>US and EU buyers</strong> need an English site and a budget invoiced in <strong>USD or EUR</strong>. Bizdavar runs that stack on <a href="/pages/services#digital-marketing">digital marketing</a>.</p>
-${fig('/assets/images/content/services-dm-visual.svg', 'Global digital marketing network', 'Google Ads, Meta and LinkedIn with GA4 in your billing currency.')}
+${fig('/assets/images/blog/blog-ads-us-eu.webp', 'Global digital marketing network', 'Google Ads, Meta and LinkedIn with GA4 in your billing currency.')}
 <h2 id="ch-why">Why not reuse an Iran funnel?</h2>
 <p>Language, checkout and time zones differ. Persian copy does not convert English search. Ship an <a href="/pages/articles/website-design-us-eu">English website</a> first, then spend.</p>
 <h2 id="ch-channels">Channels</h2>
@@ -314,7 +314,7 @@ ${fig('/assets/images/content/network-map.svg', 'International acquisition map',
 <p>Monthly KPIs: acquisition cost, conversion rate, lead quality and revenue in USD or EUR. Start with a <a href="/pages/contact?service=digital-marketing">campaign quote</a>.</p>`,
       ru: `
 <p>Кампании для <strong>США и ЕС</strong> нуждаются в английском сайте и бюджете в <strong>USD или EUR</strong>. Стек — на <a href="/pages/services#digital-marketing">цифровом маркетинге</a>.</p>
-${fig('/assets/images/content/services-dm-visual.svg', 'Глобальная сеть цифрового маркетинга', 'Google Ads, Meta и LinkedIn — GA4 в валюте счёта.')}
+${fig('/assets/images/blog/blog-ads-us-eu.webp', 'Глобальная сеть цифрового маркетинга', 'Google Ads, Meta и LinkedIn — GA4 в валюте счёта.')}
 <h2 id="ch-why">Почему отдельно?</h2>
 <p>Язык, оплата и часовые пояса другие. Сначала <a href="/pages/articles/website-design-us-eu">английский сайт</a>, потом бюджет.</p>
 <h2 id="ch-channels">Каналы</h2>
@@ -330,7 +330,7 @@ ${fig('/assets/images/content/network-map.svg', 'Карта международ
 <p>KPI в USD или EUR. Старт: <a href="/pages/contact?service=digital-marketing">запрос кампании</a>.</p>`,
       ar: `
 <p>حملات <strong>أمريكا وأوروبا</strong> تحتاج موقعاً إنجليزياً وميزانية <strong>USD أو EUR</strong>. التنفيذ على <a href="/pages/services#digital-marketing">التسويق الرقمي</a>.</p>
-${fig('/assets/images/content/services-dm-visual.svg', 'شبكة تسويق رقمي عالمية', 'Google Ads وMeta وLinkedIn مع GA4 بعملة الفاتورة.')}
+${fig('/assets/images/blog/blog-ads-us-eu.webp', 'شبكة تسويق رقمي عالمية', 'Google Ads وMeta وLinkedIn مع GA4 بعملة الفاتورة.')}
 <h2 id="ch-why">لماذا مسار منفصل؟</h2>
 <p>اللغة والدفع والمناطق الزمنية مختلفة. أولاً <a href="/pages/articles/website-design-us-eu">موقع إنجليزي</a> ثم الميزانية.</p>
 <h2 id="ch-channels">القنوات</h2>

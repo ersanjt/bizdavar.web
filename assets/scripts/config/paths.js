@@ -50,7 +50,7 @@
 
     const hashIdx = href.indexOf('#');
     const hash = hashIdx >= 0 ? href.slice(hashIdx) : '';
-    let pathPart = (hashIdx >= 0 ? href.slice(0, hashIdx) : href).replace(/^\//, '');
+    let pathPart = (hashIdx >= 0 ? href.slice(0, hashIdx) : href).replace(/^\//, '').replace(/^(?:\.\.?\/)+/, '');
 
     // Strip existing locale prefix so we never double-prefix (/ru/pages/x → pages/x)
     const locMatch = pathPart.match(/^(tr|en|ru|ar)(?:\/(.*))?$/);

@@ -269,6 +269,16 @@
     const catFromQuery = params.get('topic');
     let active = cats.some(c => c.id === catFromQuery) ? catFromQuery : 'all';
 
+    function formatCount(n) {
+      const locale = window.BIZDAVAR_I18N?.locale || document.documentElement.lang || 'fa';
+      const tags = { fa: 'fa-IR', tr: 'tr-TR', en: 'en-GB', ru: 'ru-RU', ar: 'ar-EG' };
+      try {
+        return new Intl.NumberFormat(tags[locale] || locale).format(n);
+      } catch (e) {
+        return String(n);
+      }
+    }
+
     function catLabel(id) {
       const row = cats.find(c => c.id === id);
       return row ? t(row.key + '.label', id) : id;
@@ -286,7 +296,7 @@
     function renderCount() {
       if (!countEl) return;
       const tpl = t('blogPage.catalog.countText', '{count}');
-      countEl.textContent = tpl.replace('{count}', String(visiblePosts().length));
+      countEl.textContent = tpl.replace('{count}', formatCount(visiblePosts().length));
     }
 
     function renderGrid() {
@@ -320,7 +330,7 @@
       pillarsEl.innerHTML = cats.map(c => {
         const count = posts.filter(p => p.catId === c.id).length;
         return `<a href="#catalog" class="blog-pillar" data-cat="${c.id}">
-          <span class="blog-pillar__count">${count}</span>
+          <span class="blog-pillar__count">${formatCount(count)}</span>
           <span class="blog-pillar__label">${catLabel(c.id)}</span>
           <span class="blog-pillar__desc">${catDesc(c.id)}</span>
         </a>`;
@@ -365,6 +375,9 @@
         </details>`).join('');
       if (typeof window.injectFaqSchema === 'function') window.injectFaqSchema(faqItems);
     }
+
+    const statPostsEl = document.getElementById('blogStatPosts');
+    if (statPostsEl && posts.length) statPostsEl.textContent = formatCount(posts.length);
 
     if (featuredEl && posts.length) {
       const featured = posts.slice(0, 2);

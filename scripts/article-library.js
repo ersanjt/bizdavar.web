@@ -21,7 +21,7 @@ const ARTICLES = [
     seoKey: 'articleWhatIsDm',
     date: '2025-02-10',
     modified: '2026-09-01',
-    image: 'assets/images/content/network-map.svg',
+    image: 'assets/images/blog/blog-what-is-dm.webp',
     extraImg: 'assets/images/content/services-dm-visual.svg',
     category: { fa: 'بازاریابی دیجیتال', tr: 'Dijital pazarlama', en: 'Digital marketing', ru: 'Цифровой маркетинг', ar: 'التسويق الرقمي' },
     title: {
@@ -188,7 +188,7 @@ const ARTICLES = [
     seoKey: 'articleDigitalMarketing',
     date: '2025-04-01',
     modified: '2026-08-24',
-    image: 'assets/images/content/services-dm-visual.svg',
+    image: 'assets/images/blog/blog-dm-sales.webp',
     extraImg: 'assets/images/content/network-map.svg',
     category: { fa: 'بازاریابی دیجیتال', tr: 'Dijital pazarlama', en: 'Digital marketing', ru: 'Цифровой маркетинг', ar: 'التسويق الرقمي' },
     title: {
@@ -260,7 +260,7 @@ const ARTICLES = [
     seoKey: 'articleSmm',
     date: '2025-03-05',
     modified: '2026-08-24',
-    image: 'assets/images/content/services-smm-mockup.svg',
+    image: 'assets/images/blog/blog-smm.webp',
     extraImg: 'assets/images/content/network-map.svg',
     category: { fa: 'مدیریت SMM', tr: 'SMM yönetimi', en: 'SMM', ru: 'SMM', ar: 'إدارة SMM' },
     title: {
@@ -620,7 +620,7 @@ const ARTICLES = [
     seoKey: 'articleMultilingualWeb',
     date: '2026-07-29',
     modified: '2026-08-24',
-    image: 'assets/images/content/services-web-mockup.svg',
+    image: 'assets/images/blog/blog-multilingual.webp',
     extraImg: 'assets/images/content/related-thumb-fast.svg',
     category: { fa: 'طراحی وب', tr: 'Web tasarım', en: 'Web design', ru: 'Веб-дизайн', ar: 'تصميم ويب' },
     title: {
@@ -836,7 +836,7 @@ const ARTICLES = [
     seoKey: 'articleFieldTech',
     date: '2026-05-10',
     modified: '2026-08-24',
-    image: 'assets/images/content/field-tech-hero.svg',
+    image: 'assets/images/content/home-svc-field-800.webp',
     extraImg: 'assets/images/content/services-web-mockup.svg',
     category: { fa: 'خدمات فنی', tr: 'Saha hizmetleri', en: 'Field services', ru: 'Выездные услуги', ar: 'خدمات ميدانية' },
     title: {
@@ -908,7 +908,7 @@ const ARTICLES = [
     seoKey: 'articleLocalSeo',
     date: '2026-04-20',
     modified: '2026-08-24',
-    image: 'assets/images/content/network-map.svg',
+    image: 'assets/images/blog/blog-local-seo.webp',
     extraImg: 'assets/images/content/services-dm-visual.svg',
     category: { fa: 'بازاریابی دیجیتال', tr: 'Dijital pazarlama', en: 'Digital marketing', ru: 'Цифровой маркетинг', ar: 'التسويق الرقمي' },
     title: {

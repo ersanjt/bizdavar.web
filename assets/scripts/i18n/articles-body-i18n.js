@@ -40,7 +40,7 @@
       '<p>Describe your target markets (IR / TR / international), required languages and site type in the <a href="/en/pages/contact">contact form</a> so we can recommend the right path.</p>',
 
     'what-is-digital-marketing':
-      '<img src="/assets/images/content/network-map.svg" alt="Digital marketing channel map" class="article__img" loading="lazy" width="768" height="400">' +
+      '<img src="/assets/images/blog/blog-what-is-dm.webp" alt="Digital marketing channel map" class="article__img" loading="lazy" width="768" height="400">' +
       '<p>Digital marketing means using online channels — websites, social media, ads, SEO and email — to attract audiences, build trust and increase sales. At <a href="/en/pages/about">Bizdavar Group</a> we align this track with our <a href="/en/pages/services#digital-marketing">digital marketing services</a>.</p>' +
       '<h2>1. Main channels</h2>' +
       '<p>SEO, pay-per-click (Google Ads), social networks, email marketing and expert content (blog) are the most important channels.</p>' +
@@ -233,7 +233,7 @@
       '<p>Hedef pazarlarınızı (IR / TR / uluslararası), gerekli dilleri ve site türünü <a href="/tr/pages/contact">iletişim formunda</a> yazın; uygun yolu önerelim.</p>',
 
     'what-is-digital-marketing':
-      '<img src="/assets/images/content/network-map.svg" alt="Dijital pazarlama kanal haritası" class="article__img" loading="lazy" width="768" height="400">' +
+      '<img src="/assets/images/blog/blog-what-is-dm.webp" alt="Dijital pazarlama kanal haritası" class="article__img" loading="lazy" width="768" height="400">' +
       '<p>Dijital pazarlama; web sitesi, sosyal medya, reklamlar, SEO ve e-posta gibi çevrimiçi kanalları kullanarak kitle çekmek, güven oluşturmak ve satışı artırmak demektir. <a href="/tr/pages/about">Bizdavar Group</a> bu ekseni <a href="/tr/pages/services#digital-marketing">dijital pazarlama hizmetleri</a> ile uyumlu yürütür.</p>' +
       '<h2>1. Ana kanallar</h2>' +
       '<p>SEO, tıklama başına reklam (Google Ads), sosyal ağlar, e-posta pazarlaması ve uzman içerik (blog) en önemli kanallardır.</p>' +

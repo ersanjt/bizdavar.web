@@ -171,9 +171,9 @@
     },
     blog: {
       crumb: 'Блог',
-      seoTitle: 'Блог Bizdavar | сайты US/EU, реклама и поставки',
-      seoDescription: 'Английские сайты со счётом USD/EUR, кампании Google/Meta, Fast Studio — плюс оригинальная поставка VEGA в Иран.',
-      seoKeywords: 'блог Bizdavar, веб-дизайн США, цифровой маркетинг ЕС, Fast Web Studio, VEGA Иран'
+      seoTitle: 'Блог Bizdavar | веб-дизайн, маркетинг и промышленные гайды',
+      seoDescription: 'Английские сайты со счётом USD/EUR, кампании Google/Meta, SEO и оригинальные VEGA и Prosense для Ирана — плюс бесплатные тест скорости, ссылки WhatsApp и UTM.',
+      seoKeywords: 'блог Bizdavar, веб-дизайн США, цифровой маркетинг ЕС, Fast Web Studio, VEGA Иран, бесплатные инструменты'
     },
     privacy: {
       crumb: 'Конфиденциальность',
@@ -527,9 +527,9 @@
     },
     blog: {
       crumb: 'المدونة',
-      seoTitle: 'مدونة Bizdavar | مواقع US/EU وإعلانات وتوريد صناعي',
-      seoDescription: 'مواقع إنجليزية بفاتورة USD/EUR وحملات Google/Meta وFast Studio — مع توريد VEGA الأصلي لإيران.',
-      seoKeywords: 'مدونة Bizdavar, تصميم مواقع أمريكا, تسويق رقمي أوروبا, Fast Web Studio, VEGA إيران'
+      seoTitle: 'مدونة Bizdavar | تصميم مواقع وتسويق وأدلة صناعية',
+      seoDescription: 'مواقع إنجليزية بفاتورة USD/EUR وحملات Google/Meta وSEO وتوريد VEGA وProsense الأصلي لإيران — مع أدوات مجانية لاختبار السرعة وروابط واتساب وUTM.',
+      seoKeywords: 'مدونة Bizdavar, تصميم مواقع أمريكا, تسويق رقمي أوروبا, Fast Web Studio, VEGA إيران, أدوات مجانية'
     },
     privacy: {
       crumb: 'الخصوصية',
@@ -2237,21 +2237,63 @@
   deepMerge(ru.blogPage, {
     hero: {
       tag: 'Экспертный блог',
-      title: 'Цифровой маркетинг, SEO и промышленные поставки',
-      desc: 'Практические гайды Bizdavar: рост онлайн-продаж, многоязычные сайты и оригинальные датчики VEGA для Ирана и Турции.',
+      title: 'Веб-дизайн, цифровой рост и промышленные поставки',
+      desc: 'Гайды с живых проектов: англоязычные сайты со счётом в USD или EUR, кампании Google/Meta/LinkedIn, SEO и оригинальные VEGA, Prosense и Teltonika для Ирана — плюс бесплатные инструменты, чтобы сразу применить советы.',
       ctaArticles: 'Смотреть статьи',
       ctaTopics: 'Темы',
+      ctaTools: 'Бесплатные инструменты',
       ctaConsult: 'Бесплатная консультация'
     },
     intro: {
       title: 'Практика с живых проектов',
-      body: 'Блог Bizdavar — сжатый опыт <a href="/pages/services">цифровых услуг</a>, <a href="/pages/fast">Fast Studio</a> и <a href="/pages/products#supply">промпоставок</a>. Маркетинг, SEO, SMM, многоязычный сайт и закупка VEGA — как исполнение, не слоган.',
-      statPosts: '13',
+      body: 'У блога Bizdavar три направления: <a href="/pages/products#supply">промышленные поставки</a> (<a href="/pages/vega">VEGA</a>, <a href="/pages/prosense">Prosense</a>, <a href="/pages/teltonika">Teltonika</a>, <a href="/pages/liqui-moly">Liqui Moly</a>), <a href="/pages/fast">сайты и приложения</a> и <a href="/pages/services">цифровой маркетинг</a>. Каждая статья ведёт в каталог, на услугу или к запросу в WhatsApp, а <a href="/pages/tools">бесплатные инструменты</a> помогут применить советы в тот же день.',
+      imageAlt: 'Рабочий стол с промышленным датчиком уровня и маркетинговой панелью — блог Bizdavar',
+      statPosts: '29',
       statPostsLabel: 'Гайды',
       statLangs: '5',
       statLangsLabel: 'Языки',
+      statTools: '7',
+      statToolsLabel: 'Бесплатных инструментов',
       statTopics: '5',
       statTopicsLabel: 'Тематические кластеры'
+    },
+    tools: {
+      eyebrow: 'Бесплатные инструменты',
+      title: 'От чтения к делу — с бесплатными инструментами',
+      desc: 'Без регистрации, прямо в браузере: проверьте скорость сайта, создайте ссылку WhatsApp и UTM или рассчитайте объём резервуара.',
+      all: 'Все бесплатные инструменты',
+      items: [
+        { title: 'Тест скорости сайта', desc: 'Оценка PageSpeed и Core Web Vitals — дополнение к статьям о веб-дизайне и SEO.' },
+        { title: 'Генератор ссылки WhatsApp', desc: 'Ссылка wa.me с готовым сообщением и QR — для страницы контактов, локального SEO и Instagram.' },
+        { title: 'Конструктор UTM', desc: 'Узнайте, какая кампания принесла продажу, — в паре со статьями о маркетинге.' },
+        { title: 'Расчёт объёма резервуара', desc: 'Вертикальный, горизонтальный и прямоугольный резервуар — до выбора датчика уровня VEGA.' },
+        { title: 'Конвертер давления и расхода', desc: 'bar, psi, м³/ч и gpm — для чтения даташитов и промышленных запросов.' },
+        { title: 'Тест скорости интернета', desc: 'Загрузка, отдача, пинг и джиттер за 30 секунд.' }
+      ]
+    },
+    featured: {
+      eyebrow: 'Выбор редакции',
+      title: 'Новые гайды',
+      desc: 'Свежие статьи с прямыми ссылками на услугу или запрос цены.'
+    },
+    linkHub: {
+      eyebrow: 'Быстрые переходы',
+      title: 'Из блога на ключевые страницы',
+      desc: 'Внутренние ссылки на услуги, каталоги и контакты — без поиска по меню.',
+      items: [
+        { title: 'Бесплатные инструменты', url: '/pages/tools', desc: '7 инструментов без регистрации' },
+        { title: 'Тест скорости сайта', url: '/pages/website-speed-test', desc: 'PageSpeed и Core Web Vitals' },
+        { title: 'Сайты для США/ЕС', url: '/pages/articles/website-design-us-eu', desc: 'От $99 / счёт в EUR' },
+        { title: 'Реклама США/ЕС', url: '/pages/articles/digital-marketing-us-eu', desc: 'Google, Meta, LinkedIn' },
+        { title: 'Fast Studio', url: '/pages/fast', desc: 'Сайт за 5 дней' },
+        { title: 'Услуги', url: '/pages/services', desc: 'Веб, реклама и приложения' },
+        { title: 'Купить VEGAPULS', url: '/pages/articles/buy-vegapuls-iran', desc: 'Датчик уровня для Ирана' },
+        { title: 'Каталог VEGA', url: '/pages/vega', desc: 'Датчики уровня и давления' },
+        { title: 'Купить Prosense', url: '/pages/articles/buy-prosense-iran', desc: 'Газоанализаторы' },
+        { title: 'Teltonika', url: '/pages/teltonika', desc: 'FMB920 от $29' },
+        { title: 'Промышленная торговля', url: '/pages/articles/industrial-trade-iran', desc: 'Все бренды' },
+        { title: 'Контакты', url: '/pages/contact', desc: 'Запрос в WhatsApp' }
+      ]
     },
     topics: {
       eyebrow: 'Кластеры',
@@ -2270,7 +2312,8 @@
       filterAll: 'Все',
       empty: 'В этой теме статей нет.',
       filterAria: 'Фильтр тем блога',
-      countText: '{count} материалов'
+      countText: '{count} материалов',
+      relatedService: 'Связанная услуга'
     },
     clusters: {
       eyebrow: 'Следующий шаг',
@@ -2281,7 +2324,13 @@
       webTitle: 'Веб-дизайн',
       webDesc: 'Корпоративный и магазин за 5 дней — RTL и базовое SEO.',
       industrialTitle: 'Купить VEGA',
-      industrialDesc: 'Order code, проформа и логистика.'
+      industrialDesc: 'Order code, проформа и логистика.',
+      prosenseTitle: 'Детекторы Prosense',
+      prosenseDesc: 'Газ, пламя и SIL — B2B-проформа.',
+      portfolioTitle: 'Портфолио',
+      portfolioDesc: 'Marvi Society, FXGuard и цифровые проекты.',
+      appsTitle: 'iOS-приложения',
+      appsDesc: 'Дизайн, Swift и публикация в App Store.'
     },
     faq: {
       eyebrow: 'FAQ',
@@ -2292,7 +2341,9 @@
         { q: 'На скольких языках публикуются статьи?', a: 'Хаб блога и основные статьи индексируются на фарси, турецком, английском, русском и арабском — отдельные hreflang URL.' },
         { q: 'Как найти статью по услуге?', a: 'Используйте фильтр тем или перейдите из кластеров маркетинга, веба и поставок на страницы услуг.' },
         { q: 'Что делать после гайда по VEGA?', a: 'Отправьте модель или данные резервуара в WhatsApp или форму — проформа и код заказа выдаются Bizdavar.' },
-        { q: 'Есть ли продукты Bizdavar в блоге?', a: 'Да. BizTab, BizClean V5 и нагревательный мат BizPad открываются из этого каталога.' }
+        { q: 'Есть ли продукты Bizdavar в блоге?', a: 'Да. BizTab, BizClean V5 и нагревательный мат BizPad открываются из этого каталога.' },
+        { q: 'Какие бесплатные инструменты есть у Bizdavar?', a: 'Тест скорости сайта и интернета, «Мой IP», генераторы ссылок WhatsApp и UTM, расчёт объёма резервуара и конвертер давления/расхода — бесплатно, без регистрации и на пяти языках.' },
+        { q: 'У меня есть идея для статьи — куда её отправить?', a: 'Напишите вопрос или тему в WhatsApp или через форму контакта — новые гайды пишутся по реальным вопросам покупателей и клиентов.' }
       ]
     },
     cta: {
@@ -2828,21 +2879,63 @@
   deepMerge(ar.blogPage, {
     hero: {
       tag: 'مدونة متخصصة',
-      title: 'تسويق رقمي وSEO وتوريد صناعي',
-      desc: 'أدلة عملية من Bizdavar: نمو المبيعات، مواقع متعددة اللغات وحساسات VEGA الأصلية لإيران وتركيا.',
+      title: 'تصميم المواقع والنمو الرقمي والتوريد الصناعي',
+      desc: 'أدلة من مشاريع حقيقية: مواقع إنجليزية بفاتورة USD أو EUR، حملات Google وMeta وLinkedIn، وSEO، وتوريد VEGA وProsense وTeltonika الأصلية لإيران — مع أدوات مجانية لتطبيق النصائح فوراً.',
       ctaArticles: 'عرض المقالات',
       ctaTopics: 'المواضيع',
+      ctaTools: 'أدوات مجانية',
       ctaConsult: 'استشارة مجانية'
     },
     intro: {
       title: 'معرفة من مشاريع حقيقية',
-      body: 'مدونة Bizdavar تلخّص <a href="/pages/services">الخدمات الرقمية</a> و<a href="/pages/fast">تصميم Fast Studio</a> و<a href="/pages/products#supply">التوريد الصناعي</a>. اقرأ التسويق وSEO وSMM والموقع متعدد اللغات ومسار شراء VEGA كتنفيذ لا شعارات.',
-      statPosts: '١٣',
+      body: 'لمدونة Bizdavar ثلاثة مسارات: <a href="/pages/products#supply">التوريد الصناعي</a> (<a href="/pages/vega">VEGA</a> و<a href="/pages/prosense">Prosense</a> و<a href="/pages/teltonika">Teltonika</a> و<a href="/pages/liqui-moly">Liqui Moly</a>)، و<a href="/pages/fast">المواقع والتطبيقات</a>، و<a href="/pages/services">التسويق الرقمي</a>. كل دليل يقود إلى كتالوج أو خدمة أو طلب عرض سعر عبر واتساب، و<a href="/pages/tools">الأدوات المجانية</a> تساعدك على التطبيق في اليوم نفسه.',
+      imageAlt: 'مكتب عليه حساس مستوى صناعي ولوحة تسويق — مدونة Bizdavar',
+      statPosts: '٢٩',
       statPostsLabel: 'مقال ودليل',
       statLangs: '٥',
       statLangsLabel: 'لغات النشر',
+      statTools: '٧',
+      statToolsLabel: 'أدوات مجانية',
       statTopics: '٥',
       statTopicsLabel: 'عناقيد موضوعية'
+    },
+    tools: {
+      eyebrow: 'أدوات مجانية',
+      title: 'من القراءة إلى التنفيذ — بأدوات مجانية',
+      desc: 'بدون تسجيل ومباشرة في المتصفح: اختبر سرعة موقعك، وأنشئ رابط واتساب وUTM، أو احسب حجم الخزان.',
+      all: 'كل الأدوات المجانية',
+      items: [
+        { title: 'اختبار سرعة الموقع', desc: 'درجة PageSpeed ومؤشرات Core Web Vitals — مكمّل لمقالات تصميم المواقع وSEO.' },
+        { title: 'منشئ رابط واتساب', desc: 'رابط wa.me برسالة جاهزة ورمز QR — لصفحة الاتصال وSEO المحلي وإنستغرام.' },
+        { title: 'منشئ روابط UTM', desc: 'اعرف أي حملة جلبت البيع فعلاً — مع مقالات التسويق الرقمي.' },
+        { title: 'حاسبة حجم الخزان', desc: 'خزان أسطواني رأسي وأفقي ومستطيل — قبل اختيار حساس مستوى VEGA.' },
+        { title: 'محوّل الضغط والتدفق', desc: 'bar وpsi وm³/h وgpm — لقراءة النشرات الفنية وطلبات العروض الصناعية.' },
+        { title: 'اختبار سرعة الإنترنت', desc: 'التنزيل والرفع والبينغ والتذبذب خلال ٣٠ ثانية.' }
+      ]
+    },
+    featured: {
+      eyebrow: 'اختيار المحرر',
+      title: 'أحدث الأدلة',
+      desc: 'أحدث المقالات مع روابط مباشرة إلى الخدمة أو طلب السعر.'
+    },
+    linkHub: {
+      eyebrow: 'مسارات سريعة',
+      title: 'من المدونة إلى الصفحات الرئيسية',
+      desc: 'روابط داخلية للخدمات والكتالوجات والتواصل — دون البحث في القائمة.',
+      items: [
+        { title: 'أدوات مجانية', url: '/pages/tools', desc: '٧ أدوات بلا تسجيل' },
+        { title: 'اختبار سرعة الموقع', url: '/pages/website-speed-test', desc: 'PageSpeed وCore Web Vitals' },
+        { title: 'مواقع أمريكا/أوروبا', url: '/pages/articles/website-design-us-eu', desc: 'من ٩٩$ / فاتورة يورو' },
+        { title: 'إعلانات أمريكا/أوروبا', url: '/pages/articles/digital-marketing-us-eu', desc: 'Google وMeta وLinkedIn' },
+        { title: 'Fast Studio', url: '/pages/fast', desc: 'موقع خلال ٥ أيام' },
+        { title: 'الخدمات', url: '/pages/services', desc: 'ويب وإعلانات وتطبيقات' },
+        { title: 'شراء VEGAPULS', url: '/pages/articles/buy-vegapuls-iran', desc: 'حساس مستوى لإيران' },
+        { title: 'كتالوج VEGA', url: '/pages/vega', desc: 'حساسات مستوى وضغط' },
+        { title: 'شراء Prosense', url: '/pages/articles/buy-prosense-iran', desc: 'كواشف غاز' },
+        { title: 'Teltonika', url: '/pages/teltonika', desc: 'FMB920 من ٢٩$' },
+        { title: 'التجارة الصناعية', url: '/pages/articles/industrial-trade-iran', desc: 'كل العلامات' },
+        { title: 'اتصال', url: '/pages/contact', desc: 'استفسار عبر واتساب' }
+      ]
     },
     topics: {
       eyebrow: 'العناقيد',
@@ -2861,7 +2954,8 @@
       filterAll: 'الكل',
       empty: 'لا مقالات في هذا الموضوع.',
       filterAria: 'فلتر مواضيع المدونة',
-      countText: '{count} مادة'
+      countText: '{count} مادة',
+      relatedService: 'خدمة مرتبطة'
     },
     clusters: {
       eyebrow: 'الخطوة التالية',
@@ -2872,7 +2966,13 @@
       webTitle: 'تصميم مواقع',
       webDesc: 'موقع شركات ومتجر خلال ٥ أيام — RTL وSEO أساسي.',
       industrialTitle: 'شراء VEGA',
-      industrialDesc: 'رمز الطلب وفاتورة مبدئية ولوجستيات.'
+      industrialDesc: 'رمز الطلب وفاتورة مبدئية ولوجستيات.',
+      prosenseTitle: 'كواشف Prosense',
+      prosenseDesc: 'غاز ولهب وSIL — فاتورة مبدئية B2B.',
+      portfolioTitle: 'الأعمال',
+      portfolioDesc: 'Marvi Society وFXGuard ومشاريع رقمية.',
+      appsTitle: 'تطبيقات iOS',
+      appsDesc: 'تصميم وSwift ونشر على App Store.'
     },
     faq: {
       eyebrow: 'أسئلة شائعة',
@@ -2883,7 +2983,9 @@
         { q: 'بكم لغة تُنشر المقالات؟', a: 'مركز المدونة والمقالات الأساسية مفهرسة بالفارسية والتركية والإنجليزية والروسية والعربية مع عناوين hreflang منفصلة.' },
         { q: 'كيف أجد مقالاً مرتبطاً بخدمة؟', a: 'استخدم فلتر الموضوع أو انتقل من عناقيد التسويق وتصميم الويب والتوريد إلى صفحات الخدمات.' },
         { q: 'ماذا أفعل بعد دليل VEGA؟', a: 'أرسل الموديل أو بيانات الخزان عبر واتساب أو النموذج — الفاتورة المبدئية ورمز الطلب يصدران من Bizdavar.' },
-        { q: 'هل منتجات Bizdavar موجودة هنا؟', a: 'نعم. BizTab وBizClean V5 ووسادة BizPad الحرارية لها صفحات من هذا الكتالوج.' }
+        { q: 'هل منتجات Bizdavar موجودة هنا؟', a: 'نعم. BizTab وBizClean V5 ووسادة BizPad الحرارية لها صفحات من هذا الكتالوج.' },
+        { q: 'ما الأدوات المجانية التي تقدمها Bizdavar؟', a: 'اختبار سرعة الموقع والإنترنت، وما هو عنوان IP الخاص بي، ومنشئ روابط واتساب وUTM، وحاسبة حجم الخزان، ومحوّل وحدات الضغط والتدفق — مجاناً وبلا تسجيل وبخمس لغات.' },
+        { q: 'لديّ فكرة لمقال — أين أرسلها؟', a: 'أرسل سؤالك أو موضوعك عبر واتساب أو نموذج الاتصال — تُكتب الأدلة الجديدة من أسئلة المشترين والعملاء الحقيقية.' }
       ]
     },
     cta: {
@@ -2921,13 +3023,13 @@
     { title: 'ما هي Bizdavar Group؟ التاريخ والفريق والأنشطة', excerpt: 'الملف: المؤسس، ١١ دولة، أكثر من ١٠٠ مشروع ونظام العلامات.', category: 'عن الشركة' },
     { title: 'BizTab — أول مقياس حرارة جداري بلا تلامس في تبريز', excerpt: 'منتج Bizdavar — خطأ أقل من ٠٫٣°م واعتماد جامعة تبريز.', category: 'منتج خاص' },
     { title: 'معقم اليدين Bizdavar V5', excerpt: 'مستشعر فوق صوتي ورش تلقائي — هندسة Bizdavar.', category: 'منتج خاص' },
-    { title: 'BizPad — وسادة التدفئة BizPad', excerpt: 'تصميم وإنتاج في حاضنة جامعة تبريز مع ایمن سهند پدیده.', category: 'منتج خاص' },
+    { title: 'BizPad — وسادة التدفئة BizPad', excerpt: 'تصميم وإنتاج في حاضنة جامعة تبريز مع إيمن سهند بديده.', category: 'منتج خاص' },
     { title: 'تطوير iOS — دراسة Marvi Society', excerpt: 'UI/UX وSwift وApp Store — نادٍ للمبدعين في إسطنبول.', category: 'تطوير تطبيقات' },
     { title: 'توريد كاشف غاز Prosense', excerpt: 'اختيار الطراز وعرض B2B للنفط وHVAC.', category: 'معدات صناعية' },
     { title: 'توريد Liqui Moly — زيوت وإضافات أصلية', excerpt: 'زيت محرك للأساطيل والورش — B2B بيزدوار.', category: 'معدات صناعية' },
     { title: 'خدمات ميدانية — تبريز', excerpt: 'كاميرات وتوصيلات وإضاءة مخفية — واتساب.', category: 'خدمات ميدانية' },
     { title: 'SEO محلي — Google Maps لإيران', excerpt: 'Google Business Profile وNAP وصفحات محلية.', category: 'تسويق رقمي' },
-    { title: 'FXGuard Exchange — منصة صرف وOTC', excerpt: 'فintech: KYC ومحفظة وOTC ولوحة إدارة.', category: 'Fintech' }
+    { title: 'FXGuard Exchange — منصة صرف وOTC', excerpt: 'تقنية مالية: KYC ومحفظة وOTC ولوحة إدارة.', category: 'Fintech' }
   ];
   ar.liquiMolyPage = liquiPage.ar;
   ar.autoMotoPage = {
@@ -3068,6 +3170,16 @@
       'local-seo-iran',
       'fxguard-exchange'
     ];
+    const extra = {
+      ru: {
+        'website-speed-5-days': { title: 'Чек-лист запуска сайта за 5 дней', excerpt: 'Логотип, тексты, домен и решения по дням — для реальной сдачи в срок.', category: 'Веб-дизайн' },
+        'custom-web-app-development': { title: 'Индивидуальный сайт и веб-приложение — как выбрать', excerpt: 'Когда хватит Fast, а когда нужно веб-приложение.', category: 'Веб-дизайн' }
+      },
+      ar: {
+        'website-speed-5-days': { title: 'قائمة إطلاق موقع خلال ٥ أيام', excerpt: 'الشعار والنصوص والنطاق وقرارات كل يوم — لتسليم فعلي في الموعد.', category: 'تصميم ويب' },
+        'custom-web-app-development': { title: 'موقع وتطبيق ويب مخصّص — كيف تختار', excerpt: 'متى تكفي باقة Fast ومتى تحتاج تطبيق ويب.', category: 'تصميم ويب' }
+      }
+    };
     ['ru', 'ar'].forEach((lang) => {
       const loc = window.BIZDAVAR_LOCALES[lang];
       if (!loc || !Array.isArray(loc.blogPosts)) return;
@@ -3076,7 +3188,7 @@
         const key = order[i];
         if (key && row) map[key] = row;
       });
-      loc.blogPosts = map;
+      loc.blogPosts = Object.assign(map, extra[lang]);
     });
   })();
 })();

@@ -229,21 +229,39 @@
       blogPage: {
         hero: {
           tag: 'وبلاگ تخصصی',
-          title: 'راهنمای خرید VEGA، Prosense و بازرگانی صنعتی',
-          desc: 'مقالات فارسی برای خریدار ایران: سنسور سطح، دتکتور گاز، ردیاب Teltonika و مسیر استعلام واتساپ — به‌همراه سئو و طراحی سایت.',
+          title: 'راهنمای خرید صنعتی، طراحی سایت و رشد دیجیتال',
+          desc: 'راهنماهای فارسی از دل پروژه‌های واقعی: خرید VEGA، Prosense، Teltonika و Gamak، طراحی سایت چندزبانه، سئو و تبلیغات — به‌همراه ابزارهای رایگان برای اجرای همان توصیه‌ها.',
           ctaArticles: 'مشاهده مقالات',
           ctaTopics: 'موضوعات',
+          ctaTools: 'ابزارهای رایگان',
           ctaConsult: 'مشاوره رایگان'
         },
         intro: {
           title: 'دانش عملی از پروژه‌های واقعی',
-          body: 'اولویت وبلاگ بیزدوار <a href="/pages/products#supply">بازرگانی صنعتی ایران</a> است: <a href="/pages/vega">VEGA</a>، <a href="/pages/prosense">Prosense</a>، <a href="/pages/teltonika">Teltonika</a> و <a href="/pages/liqui-moly">Liqui Moly</a>. کنار آن <a href="/pages/services">خدمات دیجیتال</a> و <a href="/pages/fast">Fast Studio</a> هم هست. هر مقاله به کاتالوگ یا واتساپ لینک می‌شود.',
-          statPosts: '۱۸',
+          body: 'وبلاگ بیزدوار سه مسیر دارد: <a href="/pages/products#supply">بازرگانی صنعتی</a> با برندهای <a href="/pages/vega">VEGA</a>، <a href="/pages/prosense">Prosense</a>، <a href="/pages/teltonika">Teltonika</a> و <a href="/pages/liqui-moly">Liqui Moly</a>؛ <a href="/pages/fast">طراحی سایت و اپ</a>؛ و <a href="/pages/services">بازاریابی دیجیتال</a>. هر مقاله به کاتالوگ، خدمت یا استعلام واتساپ می‌رسد و با <a href="/pages/tools">ابزارهای رایگان</a> می‌توانید همان روز توصیه‌ها را اجرا کنید.',
+          imageAlt: 'میز کار با سنسور سطح صنعتی و داشبورد بازاریابی — وبلاگ بیزدوار',
+          statPosts: '۲۹',
           statPostsLabel: 'مقاله و راهنما',
           statLangs: '۵',
           statLangsLabel: 'زبان انتشار',
+          statTools: '۷',
+          statToolsLabel: 'ابزار رایگان',
           statTopics: '۵',
           statTopicsLabel: 'خوشه موضوعی'
+        },
+        tools: {
+          eyebrow: 'ابزار رایگان',
+          title: 'از خواندن تا اجرا — با ابزارهای رایگان',
+          desc: 'بدون ثبت‌نام و مستقیم در مرورگر: سرعت سایت را بسنجید، لینک واتساپ و UTM بسازید یا حجم مخزن را حساب کنید.',
+          all: 'همه ابزارهای رایگان',
+          items: [
+            { title: 'تست سرعت سایت', desc: 'امتیاز PageSpeed و Core Web Vitals — مکمل مقاله‌های طراحی سایت و سئو.' },
+            { title: 'ساخت لینک واتساپ', desc: 'لینک wa.me با پیام آماده و QR — برای صفحه تماس، سئو محلی و اینستاگرام.' },
+            { title: 'ساخت لینک UTM', desc: 'بفهمید فروش از کدام کمپین آمده — همراه مقاله‌های بازاریابی دیجیتال.' },
+            { title: 'محاسبه حجم مخزن', desc: 'حجم مخزن استوانه‌ای، افقی و مکعبی — قبل از انتخاب سنسور سطح VEGA.' },
+            { title: 'تبدیل واحد فشار و دبی', desc: 'bar، psi، m³/h و gpm — برای خواندن دیتاشیت و استعلام صنعتی.' },
+            { title: 'تست سرعت اینترنت', desc: 'دانلود، آپلود، پینگ و جیتر را در ۳۰ ثانیه بسنجید.' }
+          ]
         },
         topics: {
           eyebrow: 'خوشه‌های موضوعی',
@@ -275,6 +293,8 @@
           title: 'از وبلاگ به صفحات کلیدی',
           desc: 'لینک‌های داخلی برای پیدا کردن کاتالوگ بازرگانی، راهنمای خرید یا تماس — بدون جستجو در منو.',
           items: [
+            { title: 'ابزارهای رایگان', url: '/pages/tools', desc: '۷ ابزار بدون ثبت‌نام' },
+            { title: 'تست سرعت سایت', url: '/pages/website-speed-test', desc: 'PageSpeed و Core Web Vitals' },
             { title: 'خرید VEGAPULS', url: '/pages/articles/buy-vegapuls-iran', desc: 'سنسور سطح ایران' },
             { title: 'کاتالوگ VEGA', url: '/pages/vega', desc: 'سنسور سطح و فشار' },
             { title: 'خرید Prosense', url: '/pages/articles/buy-prosense-iran', desc: 'دتکتور گاز' },
@@ -316,7 +336,9 @@
             { q: 'مقالات به چند زبان منتشر می‌شوند؟', a: 'صفحه وبلاگ و مقالات اصلی به فارسی، ترکی، انگلیسی، روسی و عربی با hreflang جداگانه ایندکس می‌شوند.' },
             { q: 'چطور مقاله مرتبط با خدمت پیدا کنم؟', a: 'از فیلتر موضوعی بالا استفاده کنید یا از خوشه‌های بازاریابی، طراحی وب و تامین صنعتی به صفحات خدمت بروید.' },
             { q: 'برای استعلام VEGA بعد از مقاله چه کار کنم؟', a: 'مدل یا مشخصات مخزن را در واتساپ یا فرم تماس بفرستید — پیش‌فاکتور و کد سفارش صادر می‌شود.' },
-            { q: 'آیا محصولات بیزدوار هم در وبلاگ هستند؟', a: 'بله. BizTab، BizClean V5 و پد حرارتی BizPad صفحه اختصاصی دارند و از همین فهرست قابل دسترسی‌اند.' }
+            { q: 'آیا محصولات بیزدوار هم در وبلاگ هستند؟', a: 'بله. BizTab، BizClean V5 و پد حرارتی BizPad صفحه اختصاصی دارند و از همین فهرست قابل دسترسی‌اند.' },
+            { q: 'ابزارهای رایگان بیزدوار چه هستند؟', a: 'تست سرعت سایت و اینترنت، آی‌پی من، ساخت لینک واتساپ و UTM، محاسبه حجم مخزن و تبدیل واحد فشار و دبی — بدون ثبت‌نام، رایگان و در پنج زبان.' },
+            { q: 'موضوع مقاله پیشنهادی دارم؛ کجا بفرستم؟', a: 'سوال یا موضوع خود را در واتساپ یا فرم تماس بفرستید — راهنماهای جدید بر اساس سوالات واقعی خریداران و مشتریان نوشته می‌شوند.' }
           ]
         },
         cta: {
@@ -445,21 +467,39 @@
       blogPage: {
         hero: {
           tag: 'Uzman blog',
-          title: 'ABD/AB web tasarım, reklam ve endüstriyel rehberler',
-          desc: 'İngilizce siteler USD veya EUR fatura, Google/Meta/LinkedIn kampanyaları — artı İran için orijinal VEGA tedariki.',
+          title: 'Web tasarım, dijital büyüme ve endüstriyel tedarik rehberleri',
+          desc: 'Gerçek projelerden rehberler: USD/EUR faturalı İngilizce siteler, Google/Meta/LinkedIn kampanyaları, SEO ve İran için orijinal VEGA, Prosense ve Teltonika tedariki — artı tavsiyeleri hemen uygulamak için ücretsiz araçlar.',
           ctaArticles: 'Yazıları gör',
           ctaTopics: 'Konular',
+          ctaTools: 'Ücretsiz araçlar',
           ctaConsult: 'Ücretsiz danışmanlık'
         },
         intro: {
           title: 'Gerçek projelerden pratik bilgi',
-          body: 'Bizdavar blog, <a href="/pages/services">dijital hizmetler</a>, <a href="/pages/fast">Fast Studio web tasarım</a> ve <a href="/pages/products#supply">endüstriyel tedarik</a> deneyimini özetler. Dijital pazarlama, SEO, SMM, çok dilli site ve VEGA satın alma yolunu slogan değil — uygulama ile okuyun.',
-          statPosts: '13',
+          body: 'Bizdavar blogunun üç yolu var: <a href="/pages/products#supply">endüstriyel tedarik</a> (<a href="/pages/vega">VEGA</a>, <a href="/pages/prosense">Prosense</a>, <a href="/pages/teltonika">Teltonika</a>, <a href="/pages/liqui-moly">Liqui Moly</a>), <a href="/pages/fast">web sitesi ve uygulama</a> ve <a href="/pages/services">dijital pazarlama</a>. Her yazı bir kataloğa, hizmete veya WhatsApp teklifine bağlanır; <a href="/pages/tools">ücretsiz araçlarla</a> tavsiyeleri aynı gün uygulayabilirsiniz.',
+          imageAlt: 'Endüstriyel seviye sensörü ve pazarlama paneli olan çalışma masası — Bizdavar blog',
+          statPosts: '29',
           statPostsLabel: 'Makale ve rehber',
           statLangs: '5',
           statLangsLabel: 'Yayın dili',
+          statTools: '7',
+          statToolsLabel: 'Ücretsiz araç',
           statTopics: '5',
           statTopicsLabel: 'Konu kümesi'
+        },
+        tools: {
+          eyebrow: 'Ücretsiz araçlar',
+          title: 'Okumaktan uygulamaya — ücretsiz araçlarla',
+          desc: 'Kayıt yok, doğrudan tarayıcıda: site hızını ölçün, WhatsApp ve UTM bağlantısı oluşturun veya tank hacmini hesaplayın.',
+          all: 'Tüm ücretsiz araçlar',
+          items: [
+            { title: 'Web sitesi hız testi', desc: 'PageSpeed skoru ve Core Web Vitals — web tasarım ve SEO yazılarının tamamlayıcısı.' },
+            { title: 'WhatsApp link oluşturucu', desc: 'Hazır mesajlı wa.me linki ve QR — iletişim sayfası, yerel SEO ve Instagram için.' },
+            { title: 'UTM link oluşturucu', desc: 'Satışın hangi kampanyadan geldiğini görün — dijital pazarlama yazılarıyla birlikte.' },
+            { title: 'Tank hacmi hesaplama', desc: 'Silindirik, yatay ve dikdörtgen tank hacmi — VEGA seviye sensörü seçmeden önce.' },
+            { title: 'Basınç ve debi birim çevirici', desc: 'bar, psi, m³/h ve gpm — datasheet okumak ve endüstriyel teklif için.' },
+            { title: 'İnternet hız testi', desc: 'İndirme, yükleme, ping ve jitter’ı 30 saniyede ölçün.' }
+          ]
         },
         topics: {
           eyebrow: 'Konu kümeleri',
@@ -491,6 +531,8 @@
           title: 'Blogdan ana sayfalara',
           desc: 'Hizmet, katalog veya iletişim — menüde aramadan.',
           items: [
+            { title: 'Ücretsiz araçlar', url: '/pages/tools', desc: 'Kayıtsız 7 araç' },
+            { title: 'Site hız testi', url: '/pages/website-speed-test', desc: 'PageSpeed ve Core Web Vitals' },
             { title: 'ABD/AB web tasarım', url: '/pages/articles/website-design-us-eu', desc: '$99’dan / EUR fatura' },
             { title: 'ABD/AB reklam', url: '/pages/articles/digital-marketing-us-eu', desc: 'Google, Meta, LinkedIn' },
             { title: 'Fast Studio', url: '/pages/fast', desc: '5 günde İngilizce site' },
@@ -531,7 +573,9 @@
             { q: 'Yazılar kaç dilde yayımlanır?', a: 'Blog ve ana makaleler Farsça, Türkçe, İngilizce, Rusça ve Arapça — ayrı hreflang ile indekslenir.' },
             { q: 'Hizmetle ilgili yazıyı nasıl bulurum?', a: 'Üstteki konu filtresini kullanın veya pazarlama, web tasarım ve endüstriyel kümelerden hizmet sayfalarına gidin.' },
             { q: 'VEGA teklifi için ne yapmalıyım?', a: 'Modeli veya tank verisini WhatsApp ya da iletişim formuna gönderin — proforma ve sipariş kodu hazırlanır.' },
-            { q: 'Bizdavar ürünleri blogda var mı?', a: 'Evet. BizTab, BizClean V5 ve BizPad ısı pedinin ayrı sayfaları bu listeden açılır.' }
+            { q: 'Bizdavar ürünleri blogda var mı?', a: 'Evet. BizTab, BizClean V5 ve BizPad ısı pedinin ayrı sayfaları bu listeden açılır.' },
+            { q: 'Bizdavar’ın ücretsiz araçları neler?', a: 'Site ve internet hız testi, IP adresim, WhatsApp ve UTM link oluşturucu, tank hacmi hesaplama ve basınç/debi birim çevirici — kayıt gerektirmez, ücretsizdir ve beş dilde çalışır.' },
+            { q: 'Yazı konusu önerim var; nereye göndereyim?', a: 'Sorunuzu veya konunuzu WhatsApp ya da iletişim formuyla gönderin — yeni rehberler alıcıların ve müşterilerin gerçek sorularına göre yazılır.' }
           ]
         },
         cta: {
@@ -660,21 +704,39 @@
       blogPage: {
         hero: {
           tag: 'Expert blog',
-          title: 'US/EU web design, ads and industrial supply guides',
-          desc: 'English websites billed in USD or EUR, Google/Meta/LinkedIn campaigns, plus genuine VEGA supply for Iran.',
+          title: 'Web design, digital growth and industrial supply guides',
+          desc: 'Guides from live projects: English websites billed in USD or EUR, Google/Meta/LinkedIn campaigns, SEO, and genuine VEGA, Prosense and Teltonika supply for Iran — plus free tools to act on the advice right away.',
           ctaArticles: 'Browse articles',
           ctaTopics: 'Topics',
+          ctaTools: 'Free tools',
           ctaConsult: 'Free consult'
         },
         intro: {
           title: 'Field notes from live projects',
-          body: 'The Bizdavar blog distils <a href="/pages/services">digital services</a>, <a href="/pages/articles/website-design-us-eu">US/EU website design</a>, <a href="/pages/fast">Fast Studio</a> and <a href="/pages/products#supply">industrial supply</a>. Read ads, SEO, SMM and the VEGA buying path as execution — not slogans.',
-          statPosts: '20',
+          body: 'The Bizdavar blog follows three tracks: <a href="/pages/products#supply">industrial supply</a> (<a href="/pages/vega">VEGA</a>, <a href="/pages/prosense">Prosense</a>, <a href="/pages/teltonika">Teltonika</a>, <a href="/pages/liqui-moly">Liqui Moly</a>), <a href="/pages/articles/website-design-us-eu">websites and apps</a>, and <a href="/pages/services">digital marketing</a>. Every guide leads to a catalog, a service or a WhatsApp quote — and the <a href="/pages/tools">free tools</a> let you apply it the same day.',
+          imageAlt: 'Desk with an industrial level sensor and a marketing dashboard — Bizdavar blog',
+          statPosts: '29',
           statPostsLabel: 'Guides',
           statLangs: '5',
           statLangsLabel: 'Languages',
+          statTools: '7',
+          statToolsLabel: 'Free tools',
           statTopics: '5',
           statTopicsLabel: 'Topic clusters'
+        },
+        tools: {
+          eyebrow: 'Free tools',
+          title: 'From reading to doing — with free tools',
+          desc: 'No sign-up, right in your browser: test your site speed, build WhatsApp and UTM links, or calculate a tank volume.',
+          all: 'All free tools',
+          items: [
+            { title: 'Website speed test', desc: 'PageSpeed score and Core Web Vitals — the companion to our web design and SEO guides.' },
+            { title: 'WhatsApp link generator', desc: 'wa.me link with a prefilled message and QR code — for contact pages, local SEO and Instagram.' },
+            { title: 'UTM builder', desc: 'See which campaign actually drove the sale — pairs with the digital marketing guides.' },
+            { title: 'Tank volume calculator', desc: 'Vertical, horizontal and rectangular tanks — before choosing a VEGA level sensor.' },
+            { title: 'Pressure & flow converter', desc: 'bar, psi, m³/h and gpm — for reading datasheets and industrial quotes.' },
+            { title: 'Internet speed test', desc: 'Download, upload, ping and jitter in 30 seconds.' }
+          ]
         },
         topics: {
           eyebrow: 'Topic clusters',
@@ -706,6 +768,8 @@
           title: 'From blog to key pages',
           desc: 'Internal links to services, catalogs and contact — no menu hunting.',
           items: [
+            { title: 'Free tools', url: '/pages/tools', desc: '7 tools, no sign-up' },
+            { title: 'Website speed test', url: '/pages/website-speed-test', desc: 'PageSpeed and Core Web Vitals' },
             { title: 'US/EU websites', url: '/pages/articles/website-design-us-eu', desc: 'From $99 / EUR invoice' },
             { title: 'US/EU ads', url: '/pages/articles/digital-marketing-us-eu', desc: 'Google, Meta, LinkedIn' },
             { title: 'Fast Studio', url: '/pages/fast', desc: 'English site in 5 days' },
@@ -746,7 +810,9 @@
             { q: 'How many languages are the articles in?', a: 'The blog hub and core articles are indexed in Persian, Turkish, English, Russian and Arabic with separate hreflang URLs.' },
             { q: 'How do I find a service-related article?', a: 'Use the topic filter above, or jump from the marketing, web design and industrial clusters to the service pages.' },
             { q: 'What should I do after reading a VEGA guide?', a: 'Send the model or tank data on WhatsApp or the contact form — the proforma and order code are issued by Bizdavar.' },
-            { q: 'Are Bizdavar products listed here too?', a: 'Yes. BizTab, BizClean V5 and the BizPad heating pad have dedicated pages linked from this catalog.' }
+            { q: 'Are Bizdavar products listed here too?', a: 'Yes. BizTab, BizClean V5 and the BizPad heating pad have dedicated pages linked from this catalog.' },
+            { q: 'What free tools does Bizdavar offer?', a: 'Website and internet speed tests, What is my IP, WhatsApp and UTM link builders, a tank volume calculator and a pressure/flow unit converter — free, no sign-up, in five languages.' },
+            { q: 'I have a topic idea — where do I send it?', a: 'Send your question or topic on WhatsApp or via the contact form — new guides are written from real buyer and client questions.' }
           ]
         },
         cta: {

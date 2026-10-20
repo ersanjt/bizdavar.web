@@ -436,7 +436,7 @@ window.BIZDAVAR_CONFIG = {
       category: 'طراحی وب',
       catId: 'web',
       date: '2026-08-29',
-      image: 'assets/images/content/services-web-mockup.svg',
+      image: 'assets/images/blog/blog-web-us-eu.webp',
       relatedService: 'pages/services.html#web-design'
     },
     {
@@ -446,7 +446,7 @@ window.BIZDAVAR_CONFIG = {
       category: 'بازاریابی دیجیتال',
       catId: 'digital',
       date: '2026-08-29',
-      image: 'assets/images/content/services-dm-visual.svg',
+      image: 'assets/images/blog/blog-ads-us-eu.webp',
       relatedService: 'pages/services.html#digital-marketing'
     },
     {
@@ -496,7 +496,7 @@ window.BIZDAVAR_CONFIG = {
       category: 'تجهیزات صنعتی',
       catId: 'industrial',
       date: '2026-08-26',
-      image: 'assets/images/partners/teltonika.png',
+      image: 'assets/images/teltonika/products/fmb920.png',
       relatedService: 'pages/teltonika.html'
     },
     {
@@ -546,7 +546,7 @@ window.BIZDAVAR_CONFIG = {
       category: 'طراحی وب',
       catId: 'web',
       date: '2026-07-29',
-      image: 'assets/images/content/services-web-mockup.svg',
+      image: 'assets/images/blog/blog-multilingual.webp',
       relatedService: 'pages/fast.html'
     },
     {
@@ -556,7 +556,7 @@ window.BIZDAVAR_CONFIG = {
       category: 'بازاریابی دیجیتال',
       catId: 'digital',
       date: '2025-02-10',
-      image: 'assets/images/content/network-map.svg',
+      image: 'assets/images/blog/blog-what-is-dm.webp',
       relatedService: 'pages/services.html#digital-marketing'
     },
     {
@@ -566,7 +566,7 @@ window.BIZDAVAR_CONFIG = {
       category: 'بازاریابی دیجیتال',
       catId: 'digital',
       date: '2025-04-01',
-      image: 'assets/images/content/services-dm-visual.svg',
+      image: 'assets/images/blog/blog-dm-sales.webp',
       relatedService: 'pages/services.html#digital-marketing'
     },
     {
@@ -576,7 +576,7 @@ window.BIZDAVAR_CONFIG = {
       category: 'مدیریت SMM',
       catId: 'digital',
       date: '2025-03-05',
-      image: 'assets/images/content/services-smm-mockup.svg',
+      image: 'assets/images/blog/blog-smm.webp',
       relatedService: 'pages/services.html#smm'
     },
     {
@@ -596,7 +596,7 @@ window.BIZDAVAR_CONFIG = {
       category: 'طراحی وب',
       catId: 'web',
       date: '2026-08-13',
-      image: 'assets/images/content/services-web-mockup.svg',
+      image: 'assets/images/content/fast-guide-checklist-800.webp',
       relatedService: 'pages/fast.html'
     },
     {
@@ -606,7 +606,7 @@ window.BIZDAVAR_CONFIG = {
       category: 'طراحی وب',
       catId: 'web',
       date: '2026-08-13',
-      image: 'assets/images/content/services-dm-visual.svg',
+      image: 'assets/images/blog/blog-custom-app.webp',
       relatedService: 'pages/custom-web-app.html'
     },
     {
@@ -696,7 +696,7 @@ window.BIZDAVAR_CONFIG = {
       category: 'خدمات فنی',
       catId: 'company',
       date: '2026-05-10',
-      image: 'assets/images/content/field-tech-hero.svg',
+      image: 'assets/images/content/home-svc-field-800.webp',
       relatedService: 'pages/field-tech.html'
     },
     {
@@ -706,7 +706,7 @@ window.BIZDAVAR_CONFIG = {
       category: 'بازاریابی دیجیتال',
       catId: 'digital',
       date: '2026-04-20',
-      image: 'assets/images/content/network-map.svg',
+      image: 'assets/images/blog/blog-local-seo.webp',
       relatedService: 'pages/services.html#digital-marketing'
     },
     {

@@ -42,7 +42,7 @@
       '<p>Опишите целевые рынки (IR / TR / международные), нужные языки и тип сайта в <a href="/ru/pages/contact">форме обратной связи</a> — мы порекомендуем подходящий путь.</p>',
 
     'what-is-digital-marketing':
-      '<img src="/assets/images/content/network-map.svg" alt="Карта каналов цифрового маркетинга" class="article__img" loading="lazy" width="768" height="400">' +
+      '<img src="/assets/images/blog/blog-what-is-dm.webp" alt="Карта каналов цифрового маркетинга" class="article__img" loading="lazy" width="768" height="400">' +
       '<p>Цифровой маркетинг — это использование онлайн-каналов (сайты, соцсети, реклама, SEO и email) для привлечения аудитории, построения доверия и роста продаж. В <a href="/ru/pages/about">Bizdavar Group</a> мы выстраиваем это направление в связке с <a href="/ru/pages/services#digital-marketing">услугами цифрового маркетинга</a>.</p>' +
       '<h2>1. Основные каналы</h2>' +
       '<p>SEO, контекстная реклама (Google Ads), социальные сети, email-маркетинг и экспертный контент (блог) — ключевые каналы.</p>' +
@@ -235,7 +235,7 @@
       '<p>صف أسواقك المستهدفة (IR / TR / دولي)، واللغات المطلوبة ونوع الموقع في <a href="/ar/pages/contact">نموذج التواصل</a> لنوصي بالمسار المناسب.</p>',
 
     'what-is-digital-marketing':
-      '<img src="/assets/images/content/network-map.svg" alt="خريطة قنوات التسويق الرقمي" class="article__img" loading="lazy" width="768" height="400">' +
+      '<img src="/assets/images/blog/blog-what-is-dm.webp" alt="خريطة قنوات التسويق الرقمي" class="article__img" loading="lazy" width="768" height="400">' +
       '<p>التسويق الرقمي يعني استخدام القنوات الإلكترونية — المواقع ووسائل التواصل والإعلانات وSEO والبريد الإلكتروني — لجذب الجمهور وبناء الثقة وزيادة المبيعات. في <a href="/ar/pages/about">Bizdavar Group</a> ننسّق هذا المسار مع <a href="/ar/pages/services#digital-marketing">خدمات التسويق الرقمي</a>.</p>' +
       '<h2>1. القنوات الرئيسية</h2>' +
       '<p>SEO والإعلانات بنظام الدفع لكل نقرة (Google Ads) وشبكات التواصل والتسويق عبر البريد والمحتوى المتخصص (المدونة) هي أهم القنوات.</p>' +

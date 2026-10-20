@@ -37,9 +37,9 @@
         seoKeywords: 'نمونه کار بیزدوار, طراحی وب, بازاریابی دیجیتال, FXGuard, Fast Web Studio, VEGA, تامین صنعتی'
       },
       blog: {
-        seoTitle: 'وبلاگ بیزدوار | خرید VEGA، Prosense و راهنمای بازرگانی',
-        seoDescription: 'راهنمای خرید سنسور VEGA، دتکتور گاز Prosense، ردیاب Teltonika و تامین صنعتی برای پروژه‌های ایران — به‌همراه سئو و طراحی سایت.',
-        seoKeywords: 'خرید VEGA ایران, خرید Prosense, دتکتور گاز, سنسور سطح, Teltonika, بازرگانی صنعتی, وبلاگ بیزدوار'
+        seoTitle: 'وبلاگ بیزدوار | راهنمای خرید صنعتی، طراحی سایت و بازاریابی',
+        seoDescription: 'راهنمای خرید VEGA، Prosense، Teltonika و Gamak، طراحی سایت چندزبانه، سئو و تبلیغات دیجیتال — به‌همراه ابزارهای رایگان تست سرعت سایت، لینک واتساپ و UTM.',
+        seoKeywords: 'خرید VEGA ایران, خرید Prosense, دتکتور گاز, سنسور سطح, Teltonika, طراحی سایت, سئو, بازاریابی دیجیتال, ابزار رایگان, وبلاگ بیزدوار'
       },
       fast: {
         seoTitle: 'Fast Web Studio | طراحی سایت حرفه‌ای در ۵ روز — بیزدوار',
@@ -299,9 +299,9 @@
         seoKeywords: 'Bizdavar portfolyo, web tasarım, dijital pazarlama, FXGuard, Fast Web Studio, VEGA, endüstriyel tedarik'
       },
       blog: {
-        seoTitle: 'Bizdavar blog | ABD/AB web, reklam ve endüstriyel rehber',
-        seoDescription: 'İngilizce siteler USD/EUR fatura, Google/Meta kampanyaları, Fast Studio — artı İran için orijinal VEGA tedariki.',
-        seoKeywords: 'Bizdavar blog, web tasarım ABD, dijital pazarlama AB, Fast Web Studio, VEGA İran'
+        seoTitle: 'Bizdavar blog | Web tasarım, dijital pazarlama ve endüstriyel rehber',
+        seoDescription: 'USD/EUR faturalı İngilizce siteler, Google/Meta kampanyaları, SEO ve İran için orijinal VEGA, Prosense tedariki — artı ücretsiz hız testi, WhatsApp ve UTM araçları.',
+        seoKeywords: 'Bizdavar blog, web tasarım ABD, dijital pazarlama AB, Fast Web Studio, VEGA İran, ücretsiz araçlar'
       },
       fast: {
         seoTitle: 'Fast Web Studio | 5 günde profesyonel web sitesi — Bizdavar',
@@ -633,9 +633,9 @@
         seoKeywords: 'Bizdavar portfolio, web design, digital marketing, FXGuard, Fast Web Studio, VEGA, industrial supply'
       },
       blog: {
-        seoTitle: 'Bizdavar blog | US/EU web design, ads and industrial guides',
-        seoDescription: 'English websites billed in USD or EUR, Google/Meta/LinkedIn campaigns, Fast Studio — plus genuine VEGA supply for Iran.',
-        seoKeywords: 'Bizdavar blog, web design US, digital marketing EU, Fast Web Studio, VEGA Iran'
+        seoTitle: 'Bizdavar blog | Web design, digital marketing & industrial guides',
+        seoDescription: 'English websites billed in USD or EUR, Google/Meta/LinkedIn campaigns, SEO and genuine VEGA and Prosense supply for Iran — plus free speed test, WhatsApp and UTM tools.',
+        seoKeywords: 'Bizdavar blog, web design US, digital marketing EU, Fast Web Studio, VEGA Iran, free tools'
       },
       fast: {
         seoTitle: 'Fast Web Studio | Professional website in 5 days — Bizdavar',
