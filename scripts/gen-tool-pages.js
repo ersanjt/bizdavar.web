@@ -14,7 +14,7 @@ const { TOOLS, HUB, HUB_GROUPS, I18N_FILES } = require('./free-tools-config');
 
 const ROOT = path.join(__dirname, '..');
 const LANGS = ['fa', 'tr', 'en', 'ru', 'ar'];
-const LOADER_VER = '20261020c';
+const LOADER_VER = '20261020d';
 const CSS_VER = '20261020b';
 
 global.window = global;

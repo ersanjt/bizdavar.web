@@ -5,6 +5,8 @@
   const STORAGE_KEY = 'bizdavar_locale';
   const MANUAL_KEY = 'bizdavar_locale_manual';
   const GEO_CACHE_KEY = 'bizdavar_geo_locale';
+  // Read by the geo redirect in .htaccess so a manual language choice wins over the visitor's country.
+  const LOCALE_COOKIE = 'bd_locale';
   const GEO_MAP = {
     TR: 'tr',
     IR: 'fa',
@@ -806,6 +808,7 @@
       if (known.indexOf(lang) === -1) return;
       localStorage.setItem(STORAGE_KEY, lang);
       localStorage.setItem(MANUAL_KEY, '1');
+      document.cookie = `${LOCALE_COOKIE}=${lang}; path=/; max-age=31536000; SameSite=Lax; Secure`;
       if (window.BIZDAVAR_LOCALE_URL) {
         const target = window.BIZDAVAR_LOCALE_URL.toLocalePath(
           lang,

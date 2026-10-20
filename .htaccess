@@ -125,6 +125,39 @@ AddType 'text/html; charset=UTF-8' .html
   # /fa/ prefix → root (Persian is default, no /fa/ in URLs)
   RewriteRule ^fa/?(.*)$ /$1 [R=301,L]
 
+  # Geo language on entry: pick the locale from Cloudflare's CF-IPCountry before any Persian
+  # HTML loads, instead of the client-side redirect in i18n.js (same map as GEO_MAP there).
+  # Only for visitors arriving from outside the site on an unprefixed page; never for internal
+  # navigation (language switcher), crawlers, ?lang=, a saved Persian choice or rewritten sub-requests.
+  RewriteCond %{ENV:REDIRECT_STATUS} ^$
+  RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
+  RewriteCond %{QUERY_STRING} !(^|&)lang= [NC]
+  RewriteCond %{HTTP_REFERER} !^https?://(www\.)?bizdavar\.com [NC]
+  RewriteCond %{HTTP_USER_AGENT} !(bot|crawl|spider|slurp|google|bing|yandex|baidu|facebookexternalhit|whatsapp|telegram|skype|discord|preview|chatgpt|anthropic|perplexity|cohere|meta-external) [NC]
+  RewriteCond %{HTTP_COOKIE} !(^|;\s*)bd_locale=fa(;|$)
+  RewriteRule ^(pages/[^.]*(\.html)?)?$ - [E=BD_GEO:1]
+
+  RewriteCond %{ENV:BD_GEO} =1
+  RewriteCond %{HTTP_COOKIE} (^|;\s*)bd_locale=(tr|en|ru|ar)(;|$)
+  RewriteRule ^(pages/[^.]*(\.html)?)?$ /%2/$1 [R=302,L]
+
+  RewriteCond %{ENV:BD_GEO} =1
+  RewriteCond %{HTTP:CF-IPCountry} ^TR$ [NC]
+  RewriteRule ^(pages/[^.]*(\.html)?)?$ /tr/$1 [R=302,L]
+
+  RewriteCond %{ENV:BD_GEO} =1
+  RewriteCond %{HTTP:CF-IPCountry} ^(RU|BY|KZ|KG|AM|AZ)$ [NC]
+  RewriteRule ^(pages/[^.]*(\.html)?)?$ /ru/$1 [R=302,L]
+
+  RewriteCond %{ENV:BD_GEO} =1
+  RewriteCond %{HTTP:CF-IPCountry} ^(AE|SA|QA|KW|BH|OM|EG|IQ|JO|LB|SY|YE|LY|MA|DZ|TN|PS|SD)$ [NC]
+  RewriteRule ^(pages/[^.]*(\.html)?)?$ /ar/$1 [R=302,L]
+
+  RewriteCond %{ENV:BD_GEO} =1
+  RewriteCond %{HTTP:CF-IPCountry} ^[A-Z]{2}$ [NC]
+  RewriteCond %{HTTP:CF-IPCountry} !^(IR|XX|T1)$ [NC]
+  RewriteRule ^(pages/[^.]*(\.html)?)?$ /en/$1 [R=302,L]
+
   # Short shareable speed test URLs (/speed-test, /speedtest, /en/speed-test, …)
   RewriteRule ^speed-?test/?$ /pages/speed-test [R=301,L,NC]
   RewriteRule ^(tr|en|ru|ar)/speed-?test/?$ /$1/pages/speed-test [R=301,L,NC]

@@ -157,6 +157,9 @@
   var onPrefixedLocale = LU && pathLocale && pathLocale !== LU.DEFAULT;
   var stored = localStorage.getItem('bizdavar_locale');
   var manual = localStorage.getItem('bizdavar_locale_manual');
+  if (manual === '1' && stored && valid(stored) && document.cookie.indexOf('bd_locale=') === -1) {
+    document.cookie = 'bd_locale=' + stored + '; path=/; max-age=31536000; SameSite=Lax; Secure';
+  }
 
   // Prefixed URL is the language. Unprefixed is always Persian — never overlay TR/EN/RU/AR on /pages/*.
   if (onPrefixedLocale) {
