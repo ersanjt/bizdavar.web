@@ -90,6 +90,13 @@
 - [Russian](https://bizdavar.com/ru/pages/fast)
 - [Arabic](https://bizdavar.com/ar/pages/fast)
 
+### /pages/speed-test
+- [Persian](https://bizdavar.com/pages/speed-test)
+- [Turkish](https://bizdavar.com/tr/pages/speed-test)
+- [English](https://bizdavar.com/en/pages/speed-test)
+- [Russian](https://bizdavar.com/ru/pages/speed-test)
+- [Arabic](https://bizdavar.com/ar/pages/speed-test)
+
 ### /pages/field-tech
 - [Persian](https://bizdavar.com/pages/field-tech)
 - [Turkish](https://bizdavar.com/tr/pages/field-tech)
@@ -152,6 +159,13 @@
 - [English](https://bizdavar.com/en/pages/teltonika)
 - [Russian](https://bizdavar.com/ru/pages/teltonika)
 - [Arabic](https://bizdavar.com/ar/pages/teltonika)
+
+### /pages/pneumatic
+- [Persian](https://bizdavar.com/pages/pneumatic)
+- [Turkish](https://bizdavar.com/tr/pages/pneumatic)
+- [English](https://bizdavar.com/en/pages/pneumatic)
+- [Russian](https://bizdavar.com/ru/pages/pneumatic)
+- [Arabic](https://bizdavar.com/ar/pages/pneumatic)
 
 ### /pages/gamak
 - [Persian](https://bizdavar.com/pages/gamak)

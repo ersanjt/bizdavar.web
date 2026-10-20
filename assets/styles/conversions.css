@@ -42,10 +42,35 @@
   background: center / contain no-repeat var(--bd-img-whatsapp-white);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .wa-fab {
     bottom: max(24px, env(safe-area-inset-bottom, 0px));
-    right: max(24px, env(safe-area-inset-right, 0px));
+    /* Sit left of the Repleo launcher (60px + gap) so the two buttons do not cover each other. */
+    right: 100px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wa-fab {
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    justify-content: center;
+    gap: 0;
+    right: calc(86px + env(safe-area-inset-right, 0px));
+    bottom: calc(76px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .wa-fab__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 }
 

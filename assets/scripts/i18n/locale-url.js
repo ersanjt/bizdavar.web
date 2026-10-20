@@ -31,7 +31,7 @@
     if (part === '' || part === 'index' || part === 'index.html') return '/' + hash;
 
     var knownPages = {
-      about: 1, services: 1, portfolio: 1, blog: 1, contact: 1, privacy: 1, fast: 1, 'custom-web-app': 1, 'field-tech': 1,
+      about: 1, services: 1, portfolio: 1, blog: 1, contact: 1, privacy: 1, 'speed-test': 1, fast: 1, 'custom-web-app': 1, 'field-tech': 1,
       vega: 1, prosense: 1, teltonika: 1, gamak: 1, 'digi-system': 1, teraoka: 1, 'liqui-moly': 1, 'auto-moto': 1, motorcycle: 1, 'car-parts': 1,
       'bz-diamond': 1, 'supplify-trade': 1, 'kaya-one': 1, 'asil-feed': 1, shop: 1, 'smm-turk': 1, 'fxguard-exchange': 1, biztejarat: 1, products: 1, biztab: 1, 'bizsanitizer-v5': 1,
       fxguard: 1, 'fxguard-accounting': 1, bizswap: 1
@@ -97,7 +97,20 @@
     return BASE + rel;
   }
 
+  /** Global tools: language-only hreflang (any Arabic/English speaker, not one country) and English x-default. */
+  var LANGUAGE_ONLY_HREFLANG = { '/pages/speed-test': true };
+
   function hreflangUrls(pagePath) {
+    if (LANGUAGE_ONLY_HREFLANG[normalizePagePath(pagePath).split('#')[0]]) {
+      return {
+        fa: toAbsolute('fa', pagePath),
+        tr: toAbsolute('tr', pagePath),
+        en: toAbsolute('en', pagePath),
+        ru: toAbsolute('ru', pagePath),
+        ar: toAbsolute('ar', pagePath),
+        'x-default': toAbsolute('en', pagePath)
+      };
+    }
     return {
       'fa-IR': toAbsolute('fa', pagePath),
       'tr-TR': toAbsolute('tr', pagePath),

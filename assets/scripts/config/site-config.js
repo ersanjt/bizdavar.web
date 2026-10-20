@@ -20,6 +20,7 @@ window.BIZDAVAR_CONFIG = {
     blog: 'pages/blog.html',
     contact: 'pages/contact.html',
     privacy: 'pages/privacy.html',
+    speedTest: 'pages/speed-test.html',
     vega: 'pages/vega.html',
     prosense: 'pages/prosense.html',
     teltonika: 'pages/teltonika.html',

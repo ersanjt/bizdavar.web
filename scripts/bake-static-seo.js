@@ -41,7 +41,8 @@ function loadLocales() {
     'assets/scripts/i18n/fxguard-i18n.js',
     'assets/scripts/i18n/field-tech-i18n.js',
     'assets/scripts/i18n/services-i18n.js',
-    'assets/scripts/i18n/fast-catalog-i18n.js'
+    'assets/scripts/i18n/fast-catalog-i18n.js',
+    'assets/scripts/i18n/speed-test-i18n.js'
   ];
   for (const rel of files) {
     vm.runInContext(fs.readFileSync(path.join(ROOT, rel), 'utf8'), ctx);
@@ -429,6 +430,45 @@ function bakeCatalogJsonLd(html, rel, locale) {
   return html.replace(/<\/head>/i, `${tag}</head>`);
 }
 
+function bakeSpeedTestJsonLd(html, rel, locale) {
+  if (String(rel).replace(/\\/g, '/') !== 'pages/speed-test.html') return html;
+  const dict = LOCALES_DICT[locale.code] || {};
+  const page = dict.speedTestPage;
+  if (!page) return html;
+  const seo = getNested(dict, 'pages.speedTest') || {};
+  const url = absoluteUrl(locale, '/pages/speed-test');
+  const graph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebApplication',
+        '@id': `${url}#app`,
+        name: page.hero.title,
+        description: seo.seoDescription || page.hero.lead,
+        url,
+        inLanguage: locale.htmlLang,
+        applicationCategory: 'UtilitiesApplication',
+        operatingSystem: 'Any',
+        browserRequirements: 'Requires JavaScript',
+        isAccessibleForFree: true,
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+        publisher: { '@type': 'Organization', name: 'Bizdavar Group', url: `${BASE}/` }
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `${url}#faq`,
+        inLanguage: locale.htmlLang,
+        mainEntity: (page.faq.items || []).map((item) => ({
+          '@type': 'Question',
+          name: item.q,
+          acceptedAnswer: { '@type': 'Answer', text: item.a }
+        }))
+      }
+    ]
+  };
+  return upsertJsonLdScript(html, 'jsonld-speedtest-static', graph);
+}
+
 function decorateCopy(html, rel, locale) {
   const dict = LOCALES_DICT[locale.code] || {};
   html = bakeI18nBody(html, dict);
@@ -438,6 +478,7 @@ function decorateCopy(html, rel, locale) {
   html = bakeCatalogSsr(html, rel, locale);
   html = bakeCatalogJsonLd(html, rel, locale);
   html = bakeArticleLocale(html, rel, locale.code);
+  html = bakeSpeedTestJsonLd(html, rel, locale);
   if (String(rel).replace(/\\/g, '/') === 'pages/fxguard.html') {
     html = bakeFxguard(html, dict);
   }
@@ -486,6 +527,7 @@ const FILE_TO_ROUTE = {
   'pages/custom-web-app.html': '/pages/custom-web-app',
   'pages/field-tech.html': '/pages/field-tech',
   'pages/privacy.html': '/pages/privacy',
+  'pages/speed-test.html': '/pages/speed-test',
   'pages/contact.html': '/pages/contact',
   'pages/vega.html': '/pages/vega',
   'pages/prosense.html': '/pages/prosense',
@@ -649,15 +691,27 @@ function absoluteUrl(locale, route) {
   return `${BASE}${locale.prefix}${route}`;
 }
 
+/** Global tools target every speaker of a language, so no region and English as x-default. */
+const LANGUAGE_ONLY_HREFLANG_ROUTES = new Set(['/pages/speed-test']);
+
 function hreflangLinks(route) {
-  const tags = [
-    ['fa-IR', LOCALES[0]],
-    ['tr-TR', LOCALES[1]],
-    ['en-US', LOCALES[2]],
-    ['ru-RU', LOCALES[3]],
-    ['ar-AE', LOCALES[4]],
-    ['x-default', LOCALES[0]]
-  ];
+  const tags = LANGUAGE_ONLY_HREFLANG_ROUTES.has(route)
+    ? [
+      ['fa', LOCALES[0]],
+      ['tr', LOCALES[1]],
+      ['en', LOCALES[2]],
+      ['ru', LOCALES[3]],
+      ['ar', LOCALES[4]],
+      ['x-default', LOCALES[2]]
+    ]
+    : [
+      ['fa-IR', LOCALES[0]],
+      ['tr-TR', LOCALES[1]],
+      ['en-US', LOCALES[2]],
+      ['ru-RU', LOCALES[3]],
+      ['ar-AE', LOCALES[4]],
+      ['x-default', LOCALES[0]]
+    ];
   return tags
     .map(([hl, loc]) => `  <link rel="alternate" hreflang="${hl}" href="${escAttr(absoluteUrl(loc, route))}">`)
     .join('\n');

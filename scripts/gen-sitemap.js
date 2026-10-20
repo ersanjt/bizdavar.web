@@ -39,6 +39,7 @@ const PAGES = [
   { path: '/pages/blog', changefreq: 'weekly', priority: 0.75, lastmod: SITE_UPDATE },
   { path: '/pages/custom-web-app', changefreq: 'monthly', priority: 0.9, lastmod: '2026-08-13' },
   { path: '/pages/fast', changefreq: 'monthly', priority: 0.85, lastmod: SITE_UPDATE },
+  { path: '/pages/speed-test', changefreq: 'monthly', priority: 0.85, lastmod: '2026-10-20', languageOnlyHreflang: true },
   { path: '/pages/field-tech', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
   { path: '/pages/vega', changefreq: 'monthly', priority: 0.9, lastmod: '2026-08-12' },
   { path: '/pages/uwt', changefreq: 'monthly', priority: 0.9, lastmod: '2026-09-01' },
@@ -48,6 +49,7 @@ const PAGES = [
   { path: '/pages/motorcycle', changefreq: 'weekly', priority: 0.9, lastmod: '2026-09-18' },
   { path: '/pages/car-parts', changefreq: 'weekly', priority: 0.85, lastmod: '2026-09-18' },
   { path: '/pages/teltonika', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
+  { path: '/pages/pneumatic', changefreq: 'monthly', priority: 0.8, lastmod: '2026-10-04' },
   { path: '/pages/gamak', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/uwt', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/digi-system', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
@@ -96,8 +98,19 @@ function absoluteUrl(entry, locale) {
   return `${BASE}${p}`;
 }
 
+/** Global tools target every speaker of a language, so no region and English as x-default. */
+const HREFLANG_LANGUAGE_ONLY = [
+  ['fa', 'fa'],
+  ['tr', 'tr'],
+  ['en', 'en'],
+  ['ru', 'ru'],
+  ['ar', 'ar'],
+  ['x-default', 'en']
+];
+
 function hreflangBlock(entry) {
-  return HREFLANG.map(([hl, locCode]) => {
+  const pairs = entry.languageOnlyHreflang ? HREFLANG_LANGUAGE_ONLY : HREFLANG;
+  return pairs.map(([hl, locCode]) => {
     const loc = LOCALES.find(l => l.code === locCode) || LOCALES[0];
     const href = absoluteUrl(entry, loc);
     return `    <xhtml:link rel="alternate" hreflang="${hl}" href="${href}"/>`;

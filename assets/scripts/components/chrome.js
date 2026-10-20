@@ -135,6 +135,7 @@
         { href: pagePath(R.fast), label: t('nav.webDesign') },
         { href: pagePath(R.blog), label: t('nav.blog') },
         { href: pagePath(R.contact), label: t('footer.contactUs') },
+        { href: pagePath(R.speedTest || 'pages/speed-test.html'), label: t('footer.speedTest', 'تست سرعت اینترنت') },
         { href: pagePath(R.privacy), label: t('footer.privacy') },
         { href: `${pagePath(R.home)}#faq`, label: t('footer.faq') }
       ]

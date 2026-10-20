@@ -49,7 +49,7 @@ AddType 'text/html; charset=UTF-8' .html
     media-src 'self' https://assets.mixkit.co; \
     object-src 'none'; \
     frame-src 'self' https://www.googletagmanager.com; \
-    connect-src 'self' https://ipapi.co https://ipwho.is https://formspree.io https://*.formspree.io https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://analytics.google.com https://cloudflareinsights.com https://*.cloudflareinsights.com https://repleo.app https://socket.repleo.app wss://socket.repleo.app; \
+    connect-src 'self' https://speed.cloudflare.com https://ipapi.co https://ipwho.is https://formspree.io https://*.formspree.io https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://analytics.google.com https://cloudflareinsights.com https://*.cloudflareinsights.com https://repleo.app https://socket.repleo.app wss://socket.repleo.app; \
     frame-ancestors 'self'; \
     base-uri 'self'; \
     form-action 'self' mailto: https://formspree.io https://*.formspree.io; \
@@ -65,7 +65,7 @@ AddType 'text/html; charset=UTF-8' .html
     media-src 'self' https://assets.mixkit.co; \
     object-src 'none'; \
     frame-src 'self' https://www.googletagmanager.com; \
-    connect-src 'self' https://ipapi.co https://ipwho.is https://formspree.io https://*.formspree.io https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://analytics.google.com https://cloudflareinsights.com https://*.cloudflareinsights.com https://repleo.app https://socket.repleo.app wss://socket.repleo.app; \
+    connect-src 'self' https://speed.cloudflare.com https://ipapi.co https://ipwho.is https://formspree.io https://*.formspree.io https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://analytics.google.com https://cloudflareinsights.com https://*.cloudflareinsights.com https://repleo.app https://socket.repleo.app wss://socket.repleo.app; \
     frame-ancestors 'self'; \
     base-uri 'self'; \
     form-action 'self' mailto: https://formspree.io https://*.formspree.io"
@@ -124,6 +124,10 @@ AddType 'text/html; charset=UTF-8' .html
 
   # /fa/ prefix → root (Persian is default, no /fa/ in URLs)
   RewriteRule ^fa/?(.*)$ /$1 [R=301,L]
+
+  # Short shareable speed test URLs (/speed-test, /speedtest, /en/speed-test, …)
+  RewriteRule ^speed-?test/?$ /pages/speed-test [R=301,L,NC]
+  RewriteRule ^(tr|en|ru|ar)/speed-?test/?$ /$1/pages/speed-test [R=301,L,NC]
 
   # Locale homes — prefer baked locale HTML (correct OG/title for crawlers & WhatsApp)
   RewriteCond %{REQUEST_URI} ^/(tr|en|ru|ar)/?$ [NC]

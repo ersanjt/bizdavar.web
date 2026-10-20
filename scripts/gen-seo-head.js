@@ -14,6 +14,7 @@ require(path.join(ROOT, 'assets/scripts/i18n/locales-pages.js'));
 require(path.join(ROOT, 'assets/scripts/i18n/locale-seo.js'));
 require(path.join(ROOT, 'assets/scripts/i18n/locales-ru-ar.js'));
 require(path.join(ROOT, 'assets/scripts/i18n/ostrich-leather-i18n.js'));
+require(path.join(ROOT, 'assets/scripts/i18n/speed-test-i18n.js'));
 
 const BASE = 'https://bizdavar.com';
 const DEFAULT_OG = 'assets/images/brand/bizdavar-logo-square.png';
@@ -92,6 +93,7 @@ const PAGE_ROUTES = {
   customWebApp: '/pages/custom-web-app',
   fieldTech: '/pages/field-tech',
   privacy: '/pages/privacy',
+  speedTest: '/pages/speed-test',
   contact: '/pages/contact',
   vega: '/pages/vega',
   prosense: '/pages/prosense',
