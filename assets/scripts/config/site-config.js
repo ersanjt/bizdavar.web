@@ -9,7 +9,7 @@ window.BIZDAVAR_CONFIG = {
   locale: 'fa_IR',
   language: 'fa',
   // Google PageSpeed Insights API key for the website speed test; restrict it to bizdavar.com referrers in Google Cloud.
-  pagespeedApiKey: '',
+  pagespeedApiKey: 'AIzaSyAWunG7OaqOrAKoddLmO1p1kHp5westm7w',
 
   routes: {
     home: 'index.html',
