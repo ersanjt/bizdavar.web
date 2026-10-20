@@ -711,8 +711,8 @@ window.BIZDAVAR_CONFIG = {
     },
     {
       slug: 'pages/fxguard-exchange.html',
-      title: 'FXGuard Exchange — پلتفرم صرافی و OTC',
-      excerpt: 'نمونه‌کار فین‌تک: KYC، کیف پول، OTC و پنل ادمین — توسعه بیزدوار.',
+      title: 'طراحی وبسایت صرافی و فینانس',
+      excerpt: 'نرخ زنده ارز، احراز هویت KYC، کیف پول، OTC و پنل مدیریت — نمونه‌کار بیزدوار.',
       category: 'فین‌تک',
       catId: 'web',
       date: '2024-11-01',

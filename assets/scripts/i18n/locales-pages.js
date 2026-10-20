@@ -966,7 +966,7 @@
       'liqui-moly-supply-iran': ['تامین Liqui Moly آلمان — روغن و افزودنی اصل', 'مسیر استعلام روغن موتور و افزودنی برای ناوگان و کارگاه — B2B بیزدوار.', 'تجهیزات صنعتی'],
       'field-tech-services': ['خدمات فنی میدانی بیزدوار — تبریز', 'دوربین، سیم‌کشی و نورمخفی — هماهنگی واتساپ و اجرای میدانی.', 'خدمات فنی'],
       'local-seo-iran': ['سئو محلی برای کسب‌وکار ایران — Google Maps', 'Google Business Profile، NAP یکسان و صفحات محلی — مسیر عملی رشد.', 'بازاریابی دیجیتال'],
-      'fxguard-exchange': ['FXGuard Exchange — پلتفرم صرافی و OTC', 'سامانه فین‌تک: KYC، کیف پول، OTC و پنل مدیریت.', 'فین‌تک']
+      'fxguard-exchange': ['طراحی وبسایت صرافی و فینانس', 'نرخ زنده ارز، احراز هویت KYC، کیف پول، OTC و پنل مدیریت — نمونه‌کار بیزدوار.', 'فین‌تک']
     },
     tr: {
       'website-design-us-eu': ['Avrupa ve ABD için İngilizce web tasarım — USD veya EUR fatura', '5 günde $99’dan, Stripe ve ABD/AB müşteri için USD/EUR fatura.', 'Web tasarım'],
@@ -997,7 +997,7 @@
       'liqui-moly-supply-iran': ['Liqui Moly Almanya — orijinal yağ ve katkı', 'Filo ve atölye için B2B teklif yolu.', 'Endüstriyel ekipman'],
       'field-tech-services': ['Bizdavar saha teknik hizmetleri — Tebriz', 'CCTV, kablolama ve gizli aydınlatma — WhatsApp.', 'Teknik hizmetler'],
       'local-seo-iran': ['İran işletmeleri için yerel SEO — Google Maps', 'Google Business Profile, NAP ve yerel sayfalar.', 'Dijital pazarlama'],
-      'fxguard-exchange': ['FXGuard Exchange — borsa ve OTC platformu', 'Fintech: KYC, cüzdan, OTC ve yönetim paneli.', 'Fintech']
+      'fxguard-exchange': ['Döviz bürosu ve finans web sitesi tasarımı', 'Canlı kur, KYC, cüzdan, OTC ve yönetim paneli — Bizdavar örneği.', 'Fintech']
     },
     en: {
       'website-design-us-eu': ['English website design for US and EU businesses — billed in USD or EUR', '5-day plans from $99 / ~€90, Stripe, Zoom/Meet and invoices in dollars or euros.', 'Web design'],
@@ -1028,7 +1028,7 @@
       'liqui-moly-supply-iran': ['Liqui Moly Germany — genuine oils and additives', 'Quote path for fleets and workshops — Bizdavar B2B.', 'Industrial equipment'],
       'field-tech-services': ['Bizdavar field technical services — Tabriz', 'CCTV, wiring and cove lighting — WhatsApp coordination.', 'Field services'],
       'local-seo-iran': ['Local SEO for Iran businesses — Google Maps', 'Google Business Profile, consistent NAP and local pages.', 'Digital marketing'],
-      'fxguard-exchange': ['FXGuard Exchange — exchange and OTC platform', 'Fintech stack: KYC, wallet, OTC and admin panel.', 'Fintech']
+      'fxguard-exchange': ['Currency exchange & finance website design', 'Live rates, KYC, wallet, OTC and admin panel — a Bizdavar case study.', 'Fintech']
     }
   };
 

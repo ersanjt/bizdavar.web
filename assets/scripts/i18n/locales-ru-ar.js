@@ -2387,7 +2387,7 @@
     { title: 'Поставка Liqui Moly — масла и присадки', excerpt: 'Моторные масла для автопарка и мастерских — B2B Bizdavar.', category: 'Промоборудование' },
     { title: 'Выездные услуги Bizdavar — Тебриз', excerpt: 'CCTV, проводка и скрытая подсветка — WhatsApp.', category: 'Выездные услуги' },
     { title: 'Локальное SEO — Google Maps для Ирана', excerpt: 'Google Business Profile, NAP и локальные страницы.', category: 'Цифровой маркетинг' },
-    { title: 'FXGuard Exchange — биржа и OTC', excerpt: 'Fintech: KYC, кошелёк, OTC и админ-панель.', category: 'Fintech' }
+    { title: 'Дизайн сайта для обменника и финансов', excerpt: 'Живые курсы, KYC, кошелёк, OTC и админ-панель — кейс Bizdavar.', category: 'Финтех' }
   ];
   ru.liquiMolyPage = liquiPage.ru;
   ru.autoMotoPage = {
@@ -3029,7 +3029,7 @@
     { title: 'توريد Liqui Moly — زيوت وإضافات أصلية', excerpt: 'زيت محرك للأساطيل والورش — B2B بيزدوار.', category: 'معدات صناعية' },
     { title: 'خدمات ميدانية — تبريز', excerpt: 'كاميرات وتوصيلات وإضاءة مخفية — واتساب.', category: 'خدمات ميدانية' },
     { title: 'SEO محلي — Google Maps لإيران', excerpt: 'Google Business Profile وNAP وصفحات محلية.', category: 'تسويق رقمي' },
-    { title: 'FXGuard Exchange — منصة صرف وOTC', excerpt: 'تقنية مالية: KYC ومحفظة وOTC ولوحة إدارة.', category: 'Fintech' }
+    { title: 'تصميم موقع صرافة ومالية', excerpt: 'أسعار حية وKYC ومحفظة وOTC ولوحة إدارة — نموذج من Bizdavar.', category: 'تقنية مالية' }
   ];
   ar.liquiMolyPage = liquiPage.ar;
   ar.autoMotoPage = {
