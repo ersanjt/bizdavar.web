@@ -661,13 +661,13 @@ window.BIZDAVAR_CONFIG = {
     },
     {
       slug: 'pages/articles/marvi-society-ios-app.html',
-      title: 'توسعه اپ iOS — نمونه‌کار Marvi Society و انتشار App Store',
-      excerpt: 'از UI/UX تا Swift و App Store — کلاب creator دعوت‌محور در استانبول.',
+      title: 'توسعه انواع اپلیکیشن — iOS، اندروید و وب‌اپ',
+      excerpt: 'از ایده و طراحی UI/UX تا برنامه‌نویسی و انتشار در App Store و Google Play.',
       category: 'طراحی اپ',
       catId: 'web',
       date: '2026-08-01',
-      image: 'assets/images/content/marvi-society/screen-discover.jpg',
-      relatedService: 'pages/marvi-society.html'
+      image: 'assets/images/content/home-svc-apps-800.webp',
+      relatedService: 'pages/custom-web-app.html'
     },
     {
       slug: 'pages/articles/prosense-gas-detection.html',
