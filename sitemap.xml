@@ -662,6 +662,426 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/speed-test"/>
   </url>
   <url>
+    <loc>https://bizdavar.com/pages/tools</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/tools"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/tools"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/tools"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/tools"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/tools"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/tools"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/tr/pages/tools</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/tools"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/tools"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/tools"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/tools"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/tools"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/tools"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/en/pages/tools</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/tools"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/tools"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/tools"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/tools"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/tools"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/tools"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/ru/pages/tools</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/tools"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/tools"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/tools"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/tools"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/tools"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/tools"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/ar/pages/tools</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/tools"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/tools"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/tools"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/tools"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/tools"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/tools"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/pages/website-speed-test</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/website-speed-test"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/website-speed-test"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/website-speed-test"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/website-speed-test"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/website-speed-test"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/website-speed-test"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/tr/pages/website-speed-test</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/website-speed-test"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/website-speed-test"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/website-speed-test"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/website-speed-test"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/website-speed-test"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/website-speed-test"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/en/pages/website-speed-test</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/website-speed-test"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/website-speed-test"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/website-speed-test"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/website-speed-test"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/website-speed-test"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/website-speed-test"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/ru/pages/website-speed-test</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/website-speed-test"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/website-speed-test"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/website-speed-test"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/website-speed-test"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/website-speed-test"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/website-speed-test"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/ar/pages/website-speed-test</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/website-speed-test"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/website-speed-test"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/website-speed-test"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/website-speed-test"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/website-speed-test"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/website-speed-test"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/pages/what-is-my-ip</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/what-is-my-ip"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/what-is-my-ip"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/what-is-my-ip"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/what-is-my-ip"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/what-is-my-ip"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/what-is-my-ip"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/tr/pages/what-is-my-ip</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/what-is-my-ip"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/what-is-my-ip"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/what-is-my-ip"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/what-is-my-ip"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/what-is-my-ip"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/what-is-my-ip"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/en/pages/what-is-my-ip</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/what-is-my-ip"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/what-is-my-ip"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/what-is-my-ip"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/what-is-my-ip"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/what-is-my-ip"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/what-is-my-ip"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/ru/pages/what-is-my-ip</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/what-is-my-ip"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/what-is-my-ip"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/what-is-my-ip"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/what-is-my-ip"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/what-is-my-ip"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/what-is-my-ip"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/ar/pages/what-is-my-ip</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/what-is-my-ip"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/what-is-my-ip"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/what-is-my-ip"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/what-is-my-ip"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/what-is-my-ip"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/what-is-my-ip"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/pages/whatsapp-link-generator</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/whatsapp-link-generator"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/whatsapp-link-generator"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/whatsapp-link-generator"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/whatsapp-link-generator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/whatsapp-link-generator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/whatsapp-link-generator"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/tr/pages/whatsapp-link-generator</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/whatsapp-link-generator"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/whatsapp-link-generator"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/whatsapp-link-generator"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/whatsapp-link-generator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/whatsapp-link-generator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/whatsapp-link-generator"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/en/pages/whatsapp-link-generator</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/whatsapp-link-generator"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/whatsapp-link-generator"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/whatsapp-link-generator"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/whatsapp-link-generator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/whatsapp-link-generator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/whatsapp-link-generator"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/ru/pages/whatsapp-link-generator</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/whatsapp-link-generator"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/whatsapp-link-generator"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/whatsapp-link-generator"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/whatsapp-link-generator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/whatsapp-link-generator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/whatsapp-link-generator"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/ar/pages/whatsapp-link-generator</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/whatsapp-link-generator"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/whatsapp-link-generator"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/whatsapp-link-generator"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/whatsapp-link-generator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/whatsapp-link-generator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/whatsapp-link-generator"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/pages/utm-builder</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/utm-builder"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/utm-builder"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/utm-builder"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/utm-builder"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/utm-builder"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/utm-builder"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/tr/pages/utm-builder</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/utm-builder"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/utm-builder"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/utm-builder"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/utm-builder"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/utm-builder"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/utm-builder"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/en/pages/utm-builder</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/utm-builder"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/utm-builder"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/utm-builder"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/utm-builder"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/utm-builder"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/utm-builder"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/ru/pages/utm-builder</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/utm-builder"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/utm-builder"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/utm-builder"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/utm-builder"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/utm-builder"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/utm-builder"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/ar/pages/utm-builder</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/utm-builder"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/utm-builder"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/utm-builder"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/utm-builder"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/utm-builder"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/utm-builder"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/pages/tank-volume-calculator</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/tank-volume-calculator"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/tank-volume-calculator"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/tank-volume-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/tank-volume-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/tank-volume-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/tank-volume-calculator"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/tr/pages/tank-volume-calculator</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/tank-volume-calculator"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/tank-volume-calculator"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/tank-volume-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/tank-volume-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/tank-volume-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/tank-volume-calculator"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/en/pages/tank-volume-calculator</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/tank-volume-calculator"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/tank-volume-calculator"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/tank-volume-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/tank-volume-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/tank-volume-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/tank-volume-calculator"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/ru/pages/tank-volume-calculator</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/tank-volume-calculator"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/tank-volume-calculator"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/tank-volume-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/tank-volume-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/tank-volume-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/tank-volume-calculator"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/ar/pages/tank-volume-calculator</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/tank-volume-calculator"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/tank-volume-calculator"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/tank-volume-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/tank-volume-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/tank-volume-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/tank-volume-calculator"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/pages/unit-converter</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/unit-converter"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/unit-converter"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/unit-converter"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/unit-converter"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/unit-converter"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/unit-converter"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/tr/pages/unit-converter</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/unit-converter"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/unit-converter"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/unit-converter"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/unit-converter"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/unit-converter"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/unit-converter"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/en/pages/unit-converter</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/unit-converter"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/unit-converter"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/unit-converter"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/unit-converter"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/unit-converter"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/unit-converter"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/ru/pages/unit-converter</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/unit-converter"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/unit-converter"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/unit-converter"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/unit-converter"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/unit-converter"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/unit-converter"/>
+  </url>
+  <url>
+    <loc>https://bizdavar.com/ar/pages/unit-converter</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/unit-converter"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/unit-converter"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/unit-converter"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/unit-converter"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/unit-converter"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/unit-converter"/>
+  </url>
+  <url>
     <loc>https://bizdavar.com/pages/field-tech</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>

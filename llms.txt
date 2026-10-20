@@ -97,6 +97,55 @@
 - [Russian](https://bizdavar.com/ru/pages/speed-test)
 - [Arabic](https://bizdavar.com/ar/pages/speed-test)
 
+### /pages/tools
+- [Persian](https://bizdavar.com/pages/tools)
+- [Turkish](https://bizdavar.com/tr/pages/tools)
+- [English](https://bizdavar.com/en/pages/tools)
+- [Russian](https://bizdavar.com/ru/pages/tools)
+- [Arabic](https://bizdavar.com/ar/pages/tools)
+
+### /pages/website-speed-test
+- [Persian](https://bizdavar.com/pages/website-speed-test)
+- [Turkish](https://bizdavar.com/tr/pages/website-speed-test)
+- [English](https://bizdavar.com/en/pages/website-speed-test)
+- [Russian](https://bizdavar.com/ru/pages/website-speed-test)
+- [Arabic](https://bizdavar.com/ar/pages/website-speed-test)
+
+### /pages/what-is-my-ip
+- [Persian](https://bizdavar.com/pages/what-is-my-ip)
+- [Turkish](https://bizdavar.com/tr/pages/what-is-my-ip)
+- [English](https://bizdavar.com/en/pages/what-is-my-ip)
+- [Russian](https://bizdavar.com/ru/pages/what-is-my-ip)
+- [Arabic](https://bizdavar.com/ar/pages/what-is-my-ip)
+
+### /pages/whatsapp-link-generator
+- [Persian](https://bizdavar.com/pages/whatsapp-link-generator)
+- [Turkish](https://bizdavar.com/tr/pages/whatsapp-link-generator)
+- [English](https://bizdavar.com/en/pages/whatsapp-link-generator)
+- [Russian](https://bizdavar.com/ru/pages/whatsapp-link-generator)
+- [Arabic](https://bizdavar.com/ar/pages/whatsapp-link-generator)
+
+### /pages/utm-builder
+- [Persian](https://bizdavar.com/pages/utm-builder)
+- [Turkish](https://bizdavar.com/tr/pages/utm-builder)
+- [English](https://bizdavar.com/en/pages/utm-builder)
+- [Russian](https://bizdavar.com/ru/pages/utm-builder)
+- [Arabic](https://bizdavar.com/ar/pages/utm-builder)
+
+### /pages/tank-volume-calculator
+- [Persian](https://bizdavar.com/pages/tank-volume-calculator)
+- [Turkish](https://bizdavar.com/tr/pages/tank-volume-calculator)
+- [English](https://bizdavar.com/en/pages/tank-volume-calculator)
+- [Russian](https://bizdavar.com/ru/pages/tank-volume-calculator)
+- [Arabic](https://bizdavar.com/ar/pages/tank-volume-calculator)
+
+### /pages/unit-converter
+- [Persian](https://bizdavar.com/pages/unit-converter)
+- [Turkish](https://bizdavar.com/tr/pages/unit-converter)
+- [English](https://bizdavar.com/en/pages/unit-converter)
+- [Russian](https://bizdavar.com/ru/pages/unit-converter)
+- [Arabic](https://bizdavar.com/ar/pages/unit-converter)
+
 ### /pages/field-tech
 - [Persian](https://bizdavar.com/pages/field-tech)
 - [Turkish](https://bizdavar.com/tr/pages/field-tech)

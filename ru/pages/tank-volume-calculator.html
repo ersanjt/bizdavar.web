@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <link rel="stylesheet" href="/assets/styles/site.css?v=20261003a">
+  <link rel="preload" href="/assets/fonts/vazirmatn/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/estedad/Estedad-Black.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Google Tag Manager -->
+  <script src="/assets/scripts/gtm-boot.js?v=20260910c" defer></script>
+  <!-- End Google Tag Manager -->
+  <script src="/assets/scripts/i18n/locale-url.js?v=20261020b" defer></script>
+  <script src="/assets/scripts/i18n/seo-head.js?v=20261020b" defer></script>
+  <script src="/assets/scripts/i18n/locale-preload.js?v=20260910c" defer></script>
+  <meta name="view-transition" content="same-origin">
+  <title>Калькулятор объёма резервуара — цилиндр, горизонтальный, прямоугольный, шар | Bizdavar</title>
+  <link rel="icon" href="/assets/images/brand/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/images/brand/favicon.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/assets/images/brand/favicon-16.png" type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" href="/assets/images/brand/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/styles/speed-test.css?v=20261020a">
+  <link rel="stylesheet" href="/assets/styles/tools.css?v=20261020b">
+  <meta name="description" content="Рассчитайте полный объём и объём заполнения вертикального и горизонтального цилиндрического, прямоугольного и шарового резервуара в литрах, м³ и галлонах по уровню жидкости.">
+  <meta name="keywords" content="калькулятор объема резервуара, объем цилиндрической емкости, объем горизонтальной емкости, расчет объема бочки, объем бака в литрах, калькулятор объема емкости, расчет объема резервуара по уровню">
+  <script type="application/ld+json" id="jsonld-tool-static">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","@id":"https://bizdavar.com/ru/pages/tank-volume-calculator#app","name":"Калькулятор объёма резервуара","description":"Рассчитайте полный объём и объём заполнения вертикального и горизонтального цилиндрического, прямоугольного и шарового резервуара в литрах, м³ и галлонах по уровню жидкости.","url":"https://bizdavar.com/ru/pages/tank-volume-calculator","inLanguage":"ru","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"Bizdavar Group","url":"https://bizdavar.com/"}},{"@type":"FAQPage","@id":"https://bizdavar.com/ru/pages/tank-volume-calculator#faq","inLanguage":"ru","mainEntity":[{"@type":"Question","name":"Как рассчитать объём цилиндрической ёмкости?","acceptedAnswer":{"@type":"Answer","text":"Возведите радиус (половину диаметра) в квадрат, умножьте на 3,1416 и на высоту. Если размеры в метрах, результат в м³; умножьте на 1000, чтобы получить литры."}},{"@type":"Question","name":"Сколько литров в одном кубометре?","acceptedAnswer":{"@type":"Answer","text":"В одном кубометре 1000 литров, или около 264,2 галлона США."}},{"@type":"Question","name":"Почему в горизонтальной ёмкости объём не пропорционален уровню?","acceptedAnswer":{"@type":"Answer","text":"Ширина зеркала жидкости максимальна посередине и минимальна у дна и верха. Половина высоты — это 50% объёма, а 25% высоты — лишь около 19,6%."}},{"@type":"Question","name":"Как учесть эллиптические днища?","acceptedAnswer":{"@type":"Answer","text":"Инструмент считает днища плоскими. Для эллиптического днища 2:1 объём каждого примерно π × D³ / 24 — прибавьте его к объёму обечайки."}},{"@type":"Question","name":"Как измерять уровень в резервуаре автоматически?","acceptedAnswer":{"@type":"Answer","text":"Радарные уровнемеры, например VEGAPULS, измеряют уровень бесконтактно и вместе с градуировочной таблицей показывают объём в литрах в реальном времени."}}]}]}</script>
+  <script type="application/ld+json" id="jsonld-page-static">{"@context":"https://schema.org","@type":"WebPage","name":"Калькулятор объёма резервуара — цилиндр, горизонтальный, прямоугольный, шар | Bizdavar","description":"Рассчитайте полный объём и объём заполнения вертикального и горизонтального цилиндрического, прямоугольного и шарового резервуара в литрах, м³ и галлонах по уровню жидкости.","url":"https://bizdavar.com/ru/pages/tank-volume-calculator","inLanguage":"ru","isPartOf":{"@type":"WebSite","name":"Bizdavar Group","url":"https://bizdavar.com/ru/"}}</script>
+  <!-- bd-static-seo -->
+  <meta property="og:title" content="Калькулятор объёма резервуара — цилиндр, горизонтальный, прямоугольный, шар | Bizdavar">
+  <meta property="og:description" content="Рассчитайте полный объём и объём заполнения вертикального и горизонтального цилиндрического, прямоугольного и шарового резервуара в литрах, м³ и галлонах по уровню жидкости.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bizdavar.com/ru/pages/tank-volume-calculator">
+  <meta property="og:image" content="https://bizdavar.com/assets/images/vega/product-vegapuls-6x-photo.webp">
+  <meta property="og:image:alt" content="Калькулятор объёма резервуара — цилиндр, горизонтальный, прямоугольный, шар | Bizdavar">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:locale:alternate" content="fa_IR">
+  <meta property="og:locale:alternate" content="tr_TR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="ar_AE">
+  <meta property="og:site_name" content="Bizdavar Group">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Калькулятор объёма резервуара — цилиндр, горизонтальный, прямоугольный, шар | Bizdavar">
+  <meta name="twitter:description" content="Рассчитайте полный объём и объём заполнения вертикального и горизонтального цилиндрического, прямоугольного и шарового резервуара в литрах, м³ и галлонах по уровню жидкости.">
+  <meta name="twitter:image" content="https://bizdavar.com/assets/images/vega/product-vegapuls-6x-photo.webp">
+  <link rel="canonical" href="https://bizdavar.com/ru/pages/tank-volume-calculator">
+  <link rel="alternate" hreflang="fa" href="https://bizdavar.com/pages/tank-volume-calculator">
+  <link rel="alternate" hreflang="tr" href="https://bizdavar.com/tr/pages/tank-volume-calculator">
+  <link rel="alternate" hreflang="en" href="https://bizdavar.com/en/pages/tank-volume-calculator">
+  <link rel="alternate" hreflang="ru" href="https://bizdavar.com/ru/pages/tank-volume-calculator">
+  <link rel="alternate" hreflang="ar" href="https://bizdavar.com/ar/pages/tank-volume-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://bizdavar.com/en/pages/tank-volume-calculator">
+  <!-- /bd-static-seo -->
+</head>
+<body data-page="tank-volume-calculator" data-depth="1">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXWQQWF8"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <script src="/assets/scripts/components/page-shell.js?v=20260910c" defer></script>
+<main id="main-content" class="site-main">
+
+  <section class="page-hero page-hero--compact st-hero">
+    <div class="container">
+      <span class="st-hero__eyebrow" data-i18n="tankVolumePage.hero.eyebrow">Бесплатный промышленный инструмент</span>
+      <h1 data-i18n="tankVolumePage.hero.title">Калькулятор объёма резервуара</h1>
+      <p data-i18n="tankVolumePage.hero.lead">Введите размеры и уровень жидкости — и получите полный объём и объём заполнения резервуара в литрах, кубометрах и галлонах.</p>
+    </div>
+  </section>
+
+  <section class="section st-tool-section">
+    <div class="container">
+      <div class="st-card ft-card" id="freeTool" data-tool="tank">
+        <div class="ft-seg" id="tankShape" role="group" data-i18n-aria="tankVolumePage.ui.shape" aria-label="Форма резервуара">
+          <button type="button" class="ft-seg__btn" data-shape="vcyl" aria-pressed="true" data-i18n="tankVolumePage.ui.shapeVcyl">Вертикальный цилиндр</button>
+          <button type="button" class="ft-seg__btn" data-shape="hcyl" aria-pressed="false" data-i18n="tankVolumePage.ui.shapeHcyl">Горизонтальный цилиндр</button>
+          <button type="button" class="ft-seg__btn" data-shape="rect" aria-pressed="false" data-i18n="tankVolumePage.ui.shapeRect">Прямоугольный</button>
+          <button type="button" class="ft-seg__btn" data-shape="sphere" aria-pressed="false" data-i18n="tankVolumePage.ui.shapeSphere">Шаровой</button>
+        </div>
+        <form class="ft-form" id="tankForm" novalidate>
+          <div class="ft-grid">
+            <div class="form-group">
+              <label for="tankUnit" data-i18n="tankVolumePage.ui.unit">Единица размеров</label>
+              <select id="tankUnit">
+                <option value="mm" data-i18n="tankVolumePage.ui.unitMm">Миллиметры (мм)</option>
+                <option value="cm" selected data-i18n="tankVolumePage.ui.unitCm">Сантиметры (см)</option>
+                <option value="m" data-i18n="tankVolumePage.ui.unitM">Метры (м)</option>
+                <option value="in" data-i18n="tankVolumePage.ui.unitIn">Дюймы (in)</option>
+                <option value="ft" data-i18n="tankVolumePage.ui.unitFt">Футы (ft)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="tankD" data-i18n="tankVolumePage.ui.diameter">Внутренний диаметр</label>
+              <input id="tankD" type="text" inputmode="decimal" dir="ltr" autocomplete="off">
+            </div>
+            <div class="form-group" hidden>
+              <label for="tankL" data-i18n="tankVolumePage.ui.length">Длина</label>
+              <input id="tankL" type="text" inputmode="decimal" dir="ltr" autocomplete="off">
+            </div>
+            <div class="form-group" hidden>
+              <label for="tankW" data-i18n="tankVolumePage.ui.width">Ширина</label>
+              <input id="tankW" type="text" inputmode="decimal" dir="ltr" autocomplete="off">
+            </div>
+            <div class="form-group">
+              <label for="tankH" data-i18n="tankVolumePage.ui.height">Высота</label>
+              <input id="tankH" type="text" inputmode="decimal" dir="ltr" autocomplete="off">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="tankFill" data-i18n="tankVolumePage.ui.fill">Уровень жидкости</label>
+            <input id="tankFill" type="text" inputmode="decimal" dir="ltr" autocomplete="off">
+            <p class="ft-hint" data-i18n="tankVolumePage.ui.fillHint">Необязательно — высота жидкости от дна, для объёма заполнения</p>
+            <p class="ft-error" id="tankError" role="alert" hidden data-i18n="tankVolumePage.ui.errFill">Уровень жидкости не может быть выше внутренней высоты резервуара.</p>
+          </div>
+        </form>
+
+        <div class="ft-output" aria-live="polite">
+          <h2 class="ft-output__title" data-i18n="tankVolumePage.ui.resultTitle">Результат</h2>
+          <p class="ft-output__empty" id="tankEmpty" data-i18n="tankVolumePage.ui.resultEmpty">Введите размеры резервуара.</p>
+          <div id="tankResult" hidden>
+            <div class="ft-tank-results">
+              <div class="st-metric" id="tank_total">
+                <span class="st-metric__label" data-i18n="tankVolumePage.ui.total">Полный объём</span>
+                <span class="st-metric__value"><b>–</b> <small data-i18n="tankVolumePage.ui.liters">литров</small></span>
+                <span class="ft-sub"></span>
+              </div>
+              <div class="st-metric" id="tank_filled">
+                <span class="st-metric__label" data-i18n="tankVolumePage.ui.filled">Объём жидкости</span>
+                <span class="st-metric__value"><b>–</b> <small data-i18n="tankVolumePage.ui.liters">литров</small></span>
+                <span class="ft-sub"></span>
+              </div>
+              <div class="st-metric" id="tank_empty">
+                <span class="st-metric__label" data-i18n="tankVolumePage.ui.empty">Свободный объём</span>
+                <span class="st-metric__value"><b>–</b> <small data-i18n="tankVolumePage.ui.liters">литров</small></span>
+                <span class="ft-sub"></span>
+              </div>
+            </div>
+            <div class="ft-fill" id="tankFillWrap" hidden>
+              <div class="ft-fill__bar"><span id="tankFillBar"></span></div>
+              <div class="ft-fill__label"><span data-i18n="tankVolumePage.ui.fillPct">Заполнение</span><b id="tankFillPct" dir="ltr"></b></div>
+            </div>
+            <div class="st-actions">
+              <button type="button" class="btn btn--outline" id="tankCopy" data-i18n="tankVolumePage.ui.copy">Копировать результат</button>
+            </div>
+          </div>
+        </div>
+
+        <p class="st-note" data-i18n="tankVolumePage.ui.note">Расчёт для резервуара с плоскими днищами. Для эллиптических или конических днищ добавьте их объём отдельно.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--gray" id="tool-explained">
+    <div class="container">
+      <div class="section__header section__header--pro">
+        <span class="section__eyebrow" data-i18n="tankVolumePage.explain.eyebrow">Формулы</span>
+        <h2 class="section__title" data-i18n="tankVolumePage.explain.title">Как рассчитать объём резервуара?</h2>
+      </div>
+      <div class="st-explain-grid st-explain-grid--3">
+        <article class="st-explain">
+          <h3 data-i18n="tankVolumePage.explain.items.0.title">Вертикальный цилиндр и прямоугольный</h3>
+          <p data-i18n="tankVolumePage.explain.items.0.body">Объём вертикального цилиндра — π × r² × h, прямоугольного резервуара — длина × ширина × высота. Для объёма жидкости вместо h подставьте уровень.</p>
+        </article>
+        <article class="st-explain">
+          <h3 data-i18n="tankVolumePage.explain.items.1.title">Горизонтальный цилиндр</h3>
+          <p data-i18n="tankVolumePage.explain.items.1.body">В горизонтальной ёмкости сечение жидкости — круговой сегмент, поэтому объём не пропорционален уровню. Площадь сегмента × длина даёт точный объём.</p>
+        </article>
+        <article class="st-explain">
+          <h3 data-i18n="tankVolumePage.explain.items.2.title">Шаровой резервуар</h3>
+          <p data-i18n="tankVolumePage.explain.items.2.body">Объём шара — (4/3) × π × r³. Объём жидкости на уровне h считается по формуле шарового сегмента: π × h² × (3r − h) / 3.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="tool-tips">
+    <div class="container">
+      <div class="st-tips">
+        <h2 class="st-tips__title" data-i18n="tankVolumePage.tips.title">Как измерить точно</h2>
+        <ol class="st-tips__list">
+          <li data-i18n="tankVolumePage.tips.items.0">Измеряйте внутренний диаметр — толщина стенки на больших ёмкостях даёт разницу в сотни литров.</li>
+          <li data-i18n="tankVolumePage.tips.items.1">Вводите все размеры в одной единице; инструмент сам переведёт результат в литры и м³.</li>
+          <li data-i18n="tankVolumePage.tips.items.2">Для коммерческого учёта и продажи топлива используйте градуировочную таблицу резервуара.</li>
+          <li data-i18n="tankVolumePage.tips.items.3">Для постоянного контроля установите радарный или ультразвуковой уровнемер вместо метрштока.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--gray" id="tool-faq">
+    <div class="container">
+      <div class="section__header section__header--pro">
+        <span class="section__eyebrow" data-i18n="tankVolumePage.faq.eyebrow">Вопросы и ответы</span>
+        <h2 class="section__title" data-i18n="tankVolumePage.faq.title">Вопросы об объёме резервуара</h2>
+      </div>
+      <div class="st-faq">
+        <details class="st-faq__item">
+          <summary data-i18n="tankVolumePage.faq.items.0.q">Как рассчитать объём цилиндрической ёмкости?</summary>
+          <p data-i18n="tankVolumePage.faq.items.0.a">Возведите радиус (половину диаметра) в квадрат, умножьте на 3,1416 и на высоту. Если размеры в метрах, результат в м³; умножьте на 1000, чтобы получить литры.</p>
+        </details>
+        <details class="st-faq__item">
+          <summary data-i18n="tankVolumePage.faq.items.1.q">Сколько литров в одном кубометре?</summary>
+          <p data-i18n="tankVolumePage.faq.items.1.a">В одном кубометре 1000 литров, или около 264,2 галлона США.</p>
+        </details>
+        <details class="st-faq__item">
+          <summary data-i18n="tankVolumePage.faq.items.2.q">Почему в горизонтальной ёмкости объём не пропорционален уровню?</summary>
+          <p data-i18n="tankVolumePage.faq.items.2.a">Ширина зеркала жидкости максимальна посередине и минимальна у дна и верха. Половина высоты — это 50% объёма, а 25% высоты — лишь около 19,6%.</p>
+        </details>
+        <details class="st-faq__item">
+          <summary data-i18n="tankVolumePage.faq.items.3.q">Как учесть эллиптические днища?</summary>
+          <p data-i18n="tankVolumePage.faq.items.3.a">Инструмент считает днища плоскими. Для эллиптического днища 2:1 объём каждого примерно π × D³ / 24 — прибавьте его к объёму обечайки.</p>
+        </details>
+        <details class="st-faq__item">
+          <summary data-i18n="tankVolumePage.faq.items.4.q">Как измерять уровень в резервуаре автоматически?</summary>
+          <p data-i18n="tankVolumePage.faq.items.4.a">Радарные уровнемеры, например VEGAPULS, измеряют уровень бесконтактно и вместе с градуировочной таблицей показывают объём в литрах в реальном времени.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="st-cta">
+        <h2 data-i18n="tankVolumePage.cta.title">Измеряйте уровень в резервуаре автоматически</h2>
+        <p data-i18n="tankVolumePage.cta.desc">Bizdavar поставляет датчики уровня и давления VEGA для резервуаров с водой, топливом и химией и помогает подобрать модель.</p>
+        <div class="st-cta__actions">
+          <a href="/ru/pages/vega" class="btn btn--yellow" data-i18n="tankVolumePage.cta.btn">Датчики VEGA</a>
+          <a href="/ru/pages/contact" class="btn btn--outline" data-i18n="tankVolumePage.cta.btn2">Консультация инженера</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="geoStrip"></div>
+  <div id="relatedLinks"></div>
+  </main>
+
+  <script src="/assets/scripts/site-loader.js?v=20261020b" data-after-seo="i18n/tank-volume-i18n.js" data-before-main="free-tools.js"></script>
+
+  <script>
+    bizdavarPageInit(function () {
+      const toolsLabel = window.BIZDAVAR_I18N ? window.BIZDAVAR_I18N.t('nav.tools', '') : '';
+      const crumbs = [
+        { page: 'home', url: 'index' },
+        { page: 'tools', name: toolsLabel, url: 'pages/tools' },
+        { page: 'tankVolume', url: 'pages/tank-volume-calculator' }
+      ];
+      injectPageSeo('tankVolume', {
+        canonical: 'https://bizdavar.com/pages/tank-volume-calculator',
+        robots: 'index, follow, max-image-preview:large'
+      });
+      renderBreadcrumbs(crumbs);
+      injectBreadcrumbSchema(crumbs);
+      setupWhatsappLinks();
+      renderGeoStrip('geoStrip', { textKey: 'tankVolumePage.geoText' });
+      const related = window.BIZDAVAR_I18N && window.BIZDAVAR_I18N.raw('tankVolumePage.related');
+      if (Array.isArray(related)) renderRelatedLinks(related);
+      if (typeof window.initFreeTool === 'function') window.initFreeTool();
+    });
+  </script>
+</body>
+</html>

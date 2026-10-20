@@ -135,6 +135,7 @@
         { href: pagePath(R.fast), label: t('nav.webDesign') },
         { href: pagePath(R.blog), label: t('nav.blog') },
         { href: pagePath(R.contact), label: t('footer.contactUs') },
+        { href: pagePath(R.tools || 'pages/tools.html'), label: t('nav.tools', 'ابزارهای رایگان') },
         { href: pagePath(R.speedTest || 'pages/speed-test.html'), label: t('footer.speedTest', 'تست سرعت اینترنت') },
         { href: pagePath(R.privacy), label: t('footer.privacy') },
         { href: `${pagePath(R.home)}#faq`, label: t('footer.faq') }
@@ -163,9 +164,15 @@
       { page: 'portfolio', route: R.portfolio, label: t('nav.portfolio', 'نمونه‌کارها'), icon: 'briefcase' },
       { page: 'fast', route: R.fast, label: t('nav.webDesign', 'طراحی سایت'), icon: 'globe' },
       { page: 'blog', route: R.blog, label: t('nav.blog', 'وبلاگ'), icon: 'article' },
+      { page: 'tools', route: R.tools || 'pages/tools.html', label: t('nav.tools', 'ابزارهای رایگان'), icon: 'toolbox' },
       { page: 'contact', route: R.contact, label: t('nav.contact', 'تماس'), icon: 'phone' }
     ];
   }
+
+  const TOOL_PAGES = new Set([
+    'tools', 'speed-test', 'whatsapp-link-generator', 'website-speed-test', 'what-is-my-ip',
+    'utm-builder', 'tank-volume-calculator', 'unit-converter'
+  ]);
 
   const SUPPLY_PAGES = new Set(['vega', 'prosense', 'teltonika', 'gamak', 'uwt', 'digi-system', 'teraoka', 'liqui-moly']);
 
@@ -550,6 +557,7 @@
 
   function isActive(page) {
     if (page === 'blog' && (currentPage === 'blog' || currentPage === 'article')) return ' active';
+    if (page === 'tools' && TOOL_PAGES.has(currentPage)) return ' active';
     return currentPage === page ? ' active' : '';
   }
 

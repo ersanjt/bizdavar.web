@@ -31,7 +31,8 @@
     if (part === '' || part === 'index' || part === 'index.html') return '/' + hash;
 
     var knownPages = {
-      about: 1, services: 1, portfolio: 1, blog: 1, contact: 1, privacy: 1, 'speed-test': 1, fast: 1, 'custom-web-app': 1, 'field-tech': 1,
+      about: 1, services: 1, portfolio: 1, blog: 1, contact: 1, privacy: 1, 'speed-test': 1, tools: 1, 'whatsapp-link-generator': 1, 'website-speed-test': 1, 'what-is-my-ip': 1,
+      'utm-builder': 1, 'tank-volume-calculator': 1, 'unit-converter': 1, fast: 1, 'custom-web-app': 1, 'field-tech': 1,
       vega: 1, prosense: 1, teltonika: 1, gamak: 1, 'digi-system': 1, teraoka: 1, 'liqui-moly': 1, 'auto-moto': 1, motorcycle: 1, 'car-parts': 1,
       'bz-diamond': 1, 'supplify-trade': 1, 'kaya-one': 1, 'asil-feed': 1, shop: 1, 'smm-turk': 1, 'fxguard-exchange': 1, biztejarat: 1, products: 1, biztab: 1, 'bizsanitizer-v5': 1,
       fxguard: 1, 'fxguard-accounting': 1, bizswap: 1
@@ -98,7 +99,16 @@
   }
 
   /** Global tools: language-only hreflang (any Arabic/English speaker, not one country) and English x-default. */
-  var LANGUAGE_ONLY_HREFLANG = { '/pages/speed-test': true };
+  var LANGUAGE_ONLY_HREFLANG = {
+    '/pages/speed-test': true,
+    '/pages/tools': true,
+    '/pages/whatsapp-link-generator': true,
+    '/pages/website-speed-test': true,
+    '/pages/what-is-my-ip': true,
+    '/pages/utm-builder': true,
+    '/pages/tank-volume-calculator': true,
+    '/pages/unit-converter': true
+  };
 
   function hreflangUrls(pagePath) {
     if (LANGUAGE_ONLY_HREFLANG[normalizePagePath(pagePath).split('#')[0]]) {

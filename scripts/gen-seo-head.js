@@ -15,6 +15,9 @@ require(path.join(ROOT, 'assets/scripts/i18n/locale-seo.js'));
 require(path.join(ROOT, 'assets/scripts/i18n/locales-ru-ar.js'));
 require(path.join(ROOT, 'assets/scripts/i18n/ostrich-leather-i18n.js'));
 require(path.join(ROOT, 'assets/scripts/i18n/speed-test-i18n.js'));
+['tools-hub', 'whatsapp-link', 'site-speed', 'my-ip', 'utm-builder', 'tank-volume', 'unit-converter'].forEach((name) => {
+  require(path.join(ROOT, `assets/scripts/i18n/${name}-i18n.js`));
+});
 
 const BASE = 'https://bizdavar.com';
 const DEFAULT_OG = 'assets/images/brand/bizdavar-logo-square.png';
@@ -79,7 +82,9 @@ const PAGE_OG = {
   kayaOne: 'assets/images/partners/kaya-one.svg',
   asilFeed: 'assets/images/content/asil-feed/hero.webp',
   smmTurk: 'assets/images/partners/smm-turk.svg',
-  marviSociety: 'assets/images/partners/marvi-society.png'
+  marviSociety: 'assets/images/partners/marvi-society.png',
+  tankVolume: 'assets/images/vega/product-vegapuls-6x-photo.webp',
+  unitConverter: 'assets/images/vega/product-vegabar-39.png'
 };
 
 const PAGE_ROUTES = {
@@ -94,6 +99,13 @@ const PAGE_ROUTES = {
   fieldTech: '/pages/field-tech',
   privacy: '/pages/privacy',
   speedTest: '/pages/speed-test',
+  tools: '/pages/tools',
+  whatsappLink: '/pages/whatsapp-link-generator',
+  siteSpeed: '/pages/website-speed-test',
+  myIp: '/pages/what-is-my-ip',
+  utmBuilder: '/pages/utm-builder',
+  tankVolume: '/pages/tank-volume-calculator',
+  unitConverter: '/pages/unit-converter',
   contact: '/pages/contact',
   vega: '/pages/vega',
   prosense: '/pages/prosense',

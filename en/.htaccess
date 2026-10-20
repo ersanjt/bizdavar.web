@@ -6,6 +6,9 @@
   RewriteRule ^pages/motorcycle/?$ /en/pages/motorcycle.html [END]
 
   RewriteRule ^speed-?test/?$ /en/pages/speed-test [R=301,L,NC]
+  RewriteRule ^tools/?$ /en/pages/tools [R=301,L,NC]
+  RewriteRule ^my-?ip/?$ /en/pages/what-is-my-ip [R=301,L,NC]
+  RewriteRule ^utm/?$ /en/pages/utm-builder [R=301,L,NC]
 
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME}.html -f

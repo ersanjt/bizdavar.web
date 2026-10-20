@@ -1,5 +1,6 @@
 /**
- * Internet speed test page
+ * Internet speed test page. Its card, explainer, FAQ, CTA and table styles are
+ * also the shared section styles of every free tool page (see tools.css).
  */
 .st-hero__eyebrow {
   display: inline-block;

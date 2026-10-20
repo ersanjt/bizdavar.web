@@ -66,7 +66,8 @@
     }
 
     const knownPages = new Set([
-      'about', 'services', 'portfolio', 'blog', 'contact', 'privacy', 'speed-test', 'fast', 'vega', 'uwt',
+      'about', 'services', 'portfolio', 'blog', 'contact', 'privacy', 'speed-test', 'tools', 'whatsapp-link-generator', 'website-speed-test', 'what-is-my-ip',
+      'utm-builder', 'tank-volume-calculator', 'unit-converter', 'fast', 'vega', 'uwt',
       'prosense', 'teltonika', 'gamak', 'digi-system', 'teraoka', 'liqui-moly', 'auto-moto', 'motorcycle', 'car-parts', 'bz-diamond', 'supplify-trade', 'kaya-one', 'asil-feed', 'shop', 'smm-turk', 'fxguard-exchange', 'biztejarat',
       'products', 'biztab', 'bizpad', 'bizpet', 'bizsanitizer-v5', 'fxguard', 'fxguard-accounting', 'bizswap'
     ]);

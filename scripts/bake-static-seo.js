@@ -20,6 +20,7 @@ require(path.join(ROOT, 'assets/scripts/config/site-config.js'));
 require(path.join(ROOT, 'assets/scripts/i18n/seo-head.js'));
 
 const { ARTICLES, innerHtml, jsonLd, CTA, ctaLinks, relatedItems, AUTHOR_LINE, secondaryLabel } = require('./article-library');
+const FREE_TOOLS = require('./free-tools-config');
 const ARTICLE_BY_REL = Object.fromEntries(
   ARTICLES.map((a) => [`pages/articles/${a.file}`, a])
 );
@@ -42,7 +43,8 @@ function loadLocales() {
     'assets/scripts/i18n/field-tech-i18n.js',
     'assets/scripts/i18n/services-i18n.js',
     'assets/scripts/i18n/fast-catalog-i18n.js',
-    'assets/scripts/i18n/speed-test-i18n.js'
+    'assets/scripts/i18n/speed-test-i18n.js',
+    ...FREE_TOOLS.I18N_FILES
   ];
   for (const rel of files) {
     vm.runInContext(fs.readFileSync(path.join(ROOT, rel), 'utf8'), ctx);
@@ -430,43 +432,84 @@ function bakeCatalogJsonLd(html, rel, locale) {
   return html.replace(/<\/head>/i, `${tag}</head>`);
 }
 
-function bakeSpeedTestJsonLd(html, rel, locale) {
-  if (String(rel).replace(/\\/g, '/') !== 'pages/speed-test.html') return html;
-  const dict = LOCALES_DICT[locale.code] || {};
-  const page = dict.speedTestPage;
-  if (!page) return html;
-  const seo = getNested(dict, 'pages.speedTest') || {};
-  const url = absoluteUrl(locale, '/pages/speed-test');
-  const graph = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'WebApplication',
-        '@id': `${url}#app`,
-        name: page.hero.title,
-        description: seo.seoDescription || page.hero.lead,
-        url,
-        inLanguage: locale.htmlLang,
-        applicationCategory: 'UtilitiesApplication',
-        operatingSystem: 'Any',
-        browserRequirements: 'Requires JavaScript',
-        isAccessibleForFree: true,
-        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-        publisher: { '@type': 'Organization', name: 'Bizdavar Group', url: `${BASE}/` }
-      },
-      {
-        '@type': 'FAQPage',
-        '@id': `${url}#faq`,
-        inLanguage: locale.htmlLang,
-        mainEntity: (page.faq.items || []).map((item) => ({
-          '@type': 'Question',
-          name: item.q,
-          acceptedAnswer: { '@type': 'Answer', text: item.a }
-        }))
-      }
-    ]
+function faqNode(url, locale, items) {
+  return {
+    '@type': 'FAQPage',
+    '@id': `${url}#faq`,
+    inLanguage: locale.htmlLang,
+    mainEntity: (items || []).map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a }
+    }))
   };
-  return upsertJsonLdScript(html, 'jsonld-speedtest-static', graph);
+}
+
+/** WebApplication + FAQPage for each free tool; CollectionPage + ItemList for the tools hub. */
+function bakeFreeToolJsonLd(html, rel, locale) {
+  const file = String(rel).replace(/\\/g, '/');
+  const dict = LOCALES_DICT[locale.code] || {};
+  const publisher = { '@type': 'Organization', name: 'Bizdavar Group', url: `${BASE}/` };
+
+  const tool = FREE_TOOLS.TOOLS.find((t) => file === `pages/${t.slug}.html`);
+  if (tool) {
+    const page = dict[tool.ns];
+    if (!page) return html;
+    const seo = getNested(dict, `pages.${tool.seoKey}`) || {};
+    const url = absoluteUrl(locale, `/pages/${tool.slug}`);
+    return upsertJsonLdScript(html, tool.jsonLdId || 'jsonld-tool-static', {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'WebApplication',
+          '@id': `${url}#app`,
+          name: page.hero.title,
+          description: seo.seoDescription || page.hero.lead,
+          url,
+          inLanguage: locale.htmlLang,
+          applicationCategory: tool.category,
+          operatingSystem: 'Any',
+          browserRequirements: 'Requires JavaScript',
+          isAccessibleForFree: true,
+          offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+          publisher
+        },
+        faqNode(url, locale, page.faq && page.faq.items)
+      ]
+    });
+  }
+
+  const hub = FREE_TOOLS.HUB;
+  if (file === `pages/${hub.slug}.html`) {
+    const page = dict[hub.ns];
+    if (!page) return html;
+    const seo = getNested(dict, `pages.${hub.seoKey}`) || {};
+    const url = absoluteUrl(locale, `/pages/${hub.slug}`);
+    const items = [];
+    FREE_TOOLS.HUB_GROUPS.forEach((slugs, gi) => {
+      slugs.forEach((slug, ci) => {
+        const card = getNested(page, `groups.${gi}.cards.${ci}`) || {};
+        items.push({ '@type': 'ListItem', position: items.length + 1, name: card.title, url: absoluteUrl(locale, `/pages/${slug}`) });
+      });
+    });
+    return upsertJsonLdScript(html, 'jsonld-tools-static', {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'CollectionPage',
+          '@id': `${url}#page`,
+          name: page.hero.title,
+          description: seo.seoDescription || page.hero.lead,
+          url,
+          inLanguage: locale.htmlLang,
+          publisher,
+          mainEntity: { '@type': 'ItemList', numberOfItems: items.length, itemListElement: items }
+        },
+        faqNode(url, locale, page.faq && page.faq.items)
+      ]
+    });
+  }
+  return html;
 }
 
 function decorateCopy(html, rel, locale) {
@@ -478,7 +521,7 @@ function decorateCopy(html, rel, locale) {
   html = bakeCatalogSsr(html, rel, locale);
   html = bakeCatalogJsonLd(html, rel, locale);
   html = bakeArticleLocale(html, rel, locale.code);
-  html = bakeSpeedTestJsonLd(html, rel, locale);
+  html = bakeFreeToolJsonLd(html, rel, locale);
   if (String(rel).replace(/\\/g, '/') === 'pages/fxguard.html') {
     html = bakeFxguard(html, dict);
   }
@@ -528,6 +571,13 @@ const FILE_TO_ROUTE = {
   'pages/field-tech.html': '/pages/field-tech',
   'pages/privacy.html': '/pages/privacy',
   'pages/speed-test.html': '/pages/speed-test',
+  'pages/tools.html': '/pages/tools',
+  'pages/whatsapp-link-generator.html': '/pages/whatsapp-link-generator',
+  'pages/website-speed-test.html': '/pages/website-speed-test',
+  'pages/what-is-my-ip.html': '/pages/what-is-my-ip',
+  'pages/utm-builder.html': '/pages/utm-builder',
+  'pages/tank-volume-calculator.html': '/pages/tank-volume-calculator',
+  'pages/unit-converter.html': '/pages/unit-converter',
   'pages/contact.html': '/pages/contact',
   'pages/vega.html': '/pages/vega',
   'pages/prosense.html': '/pages/prosense',
@@ -692,7 +742,9 @@ function absoluteUrl(locale, route) {
 }
 
 /** Global tools target every speaker of a language, so no region and English as x-default. */
-const LANGUAGE_ONLY_HREFLANG_ROUTES = new Set(['/pages/speed-test']);
+const LANGUAGE_ONLY_HREFLANG_ROUTES = new Set(
+  [...FREE_TOOLS.TOOLS, FREE_TOOLS.HUB].map((t) => `/pages/${t.slug}`)
+);
 
 function hreflangLinks(route) {
   const tags = LANGUAGE_ONLY_HREFLANG_ROUTES.has(route)

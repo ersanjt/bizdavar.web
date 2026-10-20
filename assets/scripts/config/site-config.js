@@ -8,6 +8,8 @@ window.BIZDAVAR_CONFIG = {
   baseUrl: 'https://bizdavar.com',
   locale: 'fa_IR',
   language: 'fa',
+  // Google PageSpeed Insights API key for the website speed test; restrict it to bizdavar.com referrers in Google Cloud.
+  pagespeedApiKey: '',
 
   routes: {
     home: 'index.html',
@@ -21,6 +23,13 @@ window.BIZDAVAR_CONFIG = {
     contact: 'pages/contact.html',
     privacy: 'pages/privacy.html',
     speedTest: 'pages/speed-test.html',
+    tools: 'pages/tools.html',
+    whatsappLink: 'pages/whatsapp-link-generator.html',
+    siteSpeed: 'pages/website-speed-test.html',
+    myIp: 'pages/what-is-my-ip.html',
+    utmBuilder: 'pages/utm-builder.html',
+    tankVolume: 'pages/tank-volume-calculator.html',
+    unitConverter: 'pages/unit-converter.html',
     vega: 'pages/vega.html',
     prosense: 'pages/prosense.html',
     teltonika: 'pages/teltonika.html',

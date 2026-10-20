@@ -281,6 +281,7 @@ window.BIZDAVAR_LOCALES = {
       fastDesc: 'سایت ۵ روزه با قیمت ثابت',
       customWebAppDesc: 'وب‌اپ، پنل و اپ سفارشی',
       blog: 'وبلاگ',
+      tools: 'ابزارها',
       contact: 'تماس',
       site: 'سایت'
     },
@@ -954,6 +955,7 @@ window.BIZDAVAR_LOCALES = {
       fastDesc: '5 günde sabit fiyatlı site',
       customWebAppDesc: 'Web app, panel ve özel uygulama',
       blog: 'Blog',
+      tools: 'Araçlar',
       contact: 'İletişim',
       site: 'Site'
     },
@@ -1639,6 +1641,7 @@ window.BIZDAVAR_LOCALES = {
       fastDesc: 'Fixed-price site in 5 days',
       customWebAppDesc: 'Web apps, panels and custom apps',
       blog: 'Blog',
+      tools: 'Free tools',
       contact: 'Contact',
       site: 'Site'
     },
