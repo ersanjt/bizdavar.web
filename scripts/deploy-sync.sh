@@ -96,6 +96,10 @@ done
 if [[ -x /usr/local/lsws/bin/lswsctrl ]]; then
   /usr/local/lsws/bin/lswsctrl restart 2>/dev/null || true
 fi
+if [[ -x /usr/local/cpanel/scripts/clear_nginx_cache ]]; then
+  /usr/local/cpanel/scripts/clear_nginx_cache "$CPANEL_USER" 2>/dev/null || true
+fi
+rm -rf "/var/cache/ea-nginx/proxy/$CPANEL_USER"/* 2>/dev/null || true
 sleep 2
 
 echo "===== ORIGIN VERIFY (bypass Cloudflare) ====="

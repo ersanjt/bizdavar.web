@@ -139,24 +139,31 @@ AddType 'text/html; charset=UTF-8' .html
 
   RewriteCond %{ENV:BD_GEO} =1
   RewriteCond %{HTTP_COOKIE} (^|;\s*)bd_locale=(tr|en|ru|ar)(;|$)
-  RewriteRule ^(pages/[^.]*(\.html)?)?$ /%2/$1 [R=302,L]
+  RewriteRule ^(pages/[^.]*(\.html)?)?$ /%2/$1 [R=302,L,E=BD_GEO_REDIR:1]
 
   RewriteCond %{ENV:BD_GEO} =1
   RewriteCond %{HTTP:CF-IPCountry} ^TR$ [NC]
-  RewriteRule ^(pages/[^.]*(\.html)?)?$ /tr/$1 [R=302,L]
+  RewriteRule ^(pages/[^.]*(\.html)?)?$ /tr/$1 [R=302,L,E=BD_GEO_REDIR:1]
 
   RewriteCond %{ENV:BD_GEO} =1
   RewriteCond %{HTTP:CF-IPCountry} ^(RU|BY|KZ|KG|AM|AZ)$ [NC]
-  RewriteRule ^(pages/[^.]*(\.html)?)?$ /ru/$1 [R=302,L]
+  RewriteRule ^(pages/[^.]*(\.html)?)?$ /ru/$1 [R=302,L,E=BD_GEO_REDIR:1]
 
   RewriteCond %{ENV:BD_GEO} =1
   RewriteCond %{HTTP:CF-IPCountry} ^(AE|SA|QA|KW|BH|OM|EG|IQ|JO|LB|SY|YE|LY|MA|DZ|TN|PS|SD)$ [NC]
-  RewriteRule ^(pages/[^.]*(\.html)?)?$ /ar/$1 [R=302,L]
+  RewriteRule ^(pages/[^.]*(\.html)?)?$ /ar/$1 [R=302,L,E=BD_GEO_REDIR:1]
 
   RewriteCond %{ENV:BD_GEO} =1
   RewriteCond %{HTTP:CF-IPCountry} ^[A-Z]{2}$ [NC]
   RewriteCond %{HTTP:CF-IPCountry} !^(IR|XX|T1)$ [NC]
-  RewriteRule ^(pages/[^.]*(\.html)?)?$ /en/$1 [R=302,L]
+  RewriteRule ^(pages/[^.]*(\.html)?)?$ /en/$1 [R=302,L,E=BD_GEO_REDIR:1]
+
+  # The geo 302 depends on country, cookie, referer and user agent — a shared cache must never
+  # store it, or one visitor's redirect is replayed to Iranian users and crawlers.
+  <IfModule mod_headers.c>
+    Header always set Cache-Control "private, no-store, max-age=0" env=BD_GEO_REDIR
+    Header always set Vary "Cookie, Referer, User-Agent, CF-IPCountry" env=BD_GEO_REDIR
+  </IfModule>
 
   # Short shareable speed test URLs (/speed-test, /speedtest, /en/speed-test, …)
   RewriteRule ^speed-?test/?$ /pages/speed-test [R=301,L,NC]
