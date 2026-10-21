@@ -4,47 +4,7 @@
     "available": false,
     "reason": "no service-account credentials (see docs/growth/GSC-SETUP.md)"
   },
-  "live": {
-    "checked": 395,
-    "ok": 390,
-    "byStatus": {
-      "200": 390,
-      "301": 5
-    },
-    "bad": [
-      {
-        "url": "https://bizdavar.com/pages/motorcycle",
-        "status": 301,
-        "location": "https://bizdavar.com/pages/motorcycle/",
-        "ms": 111
-      },
-      {
-        "url": "https://bizdavar.com/tr/pages/motorcycle",
-        "status": 301,
-        "location": "https://bizdavar.com/tr/pages/motorcycle/",
-        "ms": 162
-      },
-      {
-        "url": "https://bizdavar.com/en/pages/motorcycle",
-        "status": 301,
-        "location": "https://bizdavar.com/en/pages/motorcycle/",
-        "ms": 340
-      },
-      {
-        "url": "https://bizdavar.com/ru/pages/motorcycle",
-        "status": 301,
-        "location": "https://bizdavar.com/ru/pages/motorcycle/",
-        "ms": 104
-      },
-      {
-        "url": "https://bizdavar.com/ar/pages/motorcycle",
-        "status": 301,
-        "location": "https://bizdavar.com/ar/pages/motorcycle/",
-        "ms": 108
-      }
-    ],
-    "slow": []
-  },
+  "live": null,
   "scan": {
     "pages": 19760,
     "byKind": {
@@ -3075,10 +3035,6 @@
   },
   "nextTasks": [
     {
-      "id": "P0-03",
-      "title": "اتصال Search Console API با Service Account — راهنما: `docs/growth/GSC-SETUP.md` (نیاز به صاحب سایت)"
-    },
-    {
       "id": "P1-01",
       "title": "رفع حلقه canonical فروشگاه موتورسیکلت در ۵ زبان: `/pages/motorcycle` با 301 به `/pages/motorcycle/` می‌رود ولی canonical به نسخه بدون اسلش اشاره می‌کند. canonical، hreflang، og:url، ورودی sitemap و لینک‌های داخلی را روی نسخه با اسلش (که 200 می‌دهد) یکی کن؛ در `scripts/build-motorcycle-listing.js`، `scripts/gen-seo-head.js` و `scripts/gen-sitemap.js` هم اعمال شود. بعد از deploy باید هر دو آدرس به یک URL نهایی 200 با canonical خودش برسند."
     },
@@ -3093,6 +3049,10 @@
     {
       "id": "P1-04",
       "title": "تگ H1 ثابت در HTML (نه فقط با JS) برای صفحات برند digi-system، gamak، liqui-moly، pneumatic، prosense، teltonika، teraoka و uwt در ۵ زبان، با همان عنوان hero ترجمه‌شده."
+    },
+    {
+      "id": "P1-05",
+      "title": "هر URL که در Search Console نمایش دارد ولی در بررسی زنده 200 نمی‌دهد، با 301 در `.htaccess` به نزدیک‌ترین صفحه زنده برود (منبع: جدول Live HTTP در گزارش روزانه). اگر خروجی 404 از Search Console در `docs/growth/inbox/` گذاشته شد، همان‌ها اول."
     }
   ]
 }
