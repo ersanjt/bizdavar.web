@@ -48,7 +48,7 @@
 
 - [x] **P0-01** اسکریپت رشد روزانه: اسکن سئو، بررسی زنده HTTP، Search Console، گزارش و دروازه انتشار (`scripts/growth/`)
 - [x] **P0-02** تست و انتشار کار نیمه‌تمام CSP (حذف اسکریپت‌های inline) — اسکن: ۰ اسکریپت inline ممنوع
-- [ ] **P0-03** اتصال Search Console API با Service Account — راهنما: `docs/growth/GSC-SETUP.md` (نیاز به صاحب سایت)
+- [!] **P0-03** اتصال Search Console API با Service Account — راهنما: `docs/growth/GSC-SETUP.md` (blocked: نیاز به صاحب سایت؛ تا آن موقع گزارش بدون داده Search Console ساخته می‌شود)
 
 ### فاز ۱ — سلامت فنی و ایندکس (هفته ۱ تا ۲)
 
