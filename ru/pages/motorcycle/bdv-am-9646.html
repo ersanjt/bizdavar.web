@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/05/bdv-am-05bd63f99e056c0bf9b6.jpg" alt="Alpinestars Mustang V2 Protective Leather Motorcycle Glove" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/05/bdv-am-05bd63f99e056c0bf9b6.jpg" alt="Alpinestars Mustang V2 Protective Leather Motorcycle Glove" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/05/bdv-am-05bd63f99e056c0bf9b6.jpg" class="is-active" aria-label="Alpinestars Mustang V2 Protective Leather Motorcycle Glove 1"><img src="/media/catalog/automoto/assets/05/bdv-am-05bd63f99e056c0bf9b6.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/61/bdv-am-616a23e2226453b29733.jpg" class="" aria-label="Alpinestars Mustang V2 Protective Leather Motorcycle Glove 2"><img src="/media/catalog/automoto/assets/61/bdv-am-616a23e2226453b29733.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/c5/bdv-am-c5ff87e159dbb6787de8.jpg" class="" aria-label="Alpinestars Mustang V2 Protective Leather Motorcycle Glove 3"><img src="/media/catalog/automoto/assets/c5/bdv-am-c5ff87e159dbb6787de8.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

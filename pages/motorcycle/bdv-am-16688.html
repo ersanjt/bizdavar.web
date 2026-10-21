@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/03/bdv-am-037faafeaf79c9a73d27.jpg" alt="قطعات موتورسیکلت 4Riders کربن Evo Series باک روی Ve عقب کیف مشکی" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/03/bdv-am-037faafeaf79c9a73d27.jpg" alt="قطعات موتورسیکلت 4Riders کربن Evo Series باک روی Ve عقب کیف مشکی" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/03/bdv-am-037faafeaf79c9a73d27.jpg" class="is-active" aria-label="قطعات موتورسیکلت 4Riders کربن Evo Series باک روی Ve عقب کیف مشکی 1"><img src="/media/catalog/automoto/assets/03/bdv-am-037faafeaf79c9a73d27.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/0f/bdv-am-0ffd5711f2dbefba335f.jpg" class="" aria-label="قطعات موتورسیکلت 4Riders کربن Evo Series باک روی Ve عقب کیف مشکی 2"><img src="/media/catalog/automoto/assets/0f/bdv-am-0ffd5711f2dbefba335f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/17/bdv-am-17b291c73e4d24dddf84.jpg" class="" aria-label="قطعات موتورسیکلت 4Riders کربن Evo Series باک روی Ve عقب کیف مشکی 3"><img src="/media/catalog/automoto/assets/17/bdv-am-17b291c73e4d24dddf84.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/23/bdv-am-23cd8465787e7cdc9036.jpg" class="" aria-label="قطعات موتورسیکلت 4Riders کربن Evo Series باک روی Ve عقب کیف مشکی 4"><img src="/media/catalog/automoto/assets/23/bdv-am-23cd8465787e7cdc9036.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/6c/bdv-am-6c12876cd65803ecc943.jpg" class="" aria-label="قطعات موتورسیکلت 4Riders کربن Evo Series باک روی Ve عقب کیف مشکی 5"><img src="/media/catalog/automoto/assets/6c/bdv-am-6c12876cd65803ecc943.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/90/bdv-am-90219db32f6ca3cea908.jpg" class="" aria-label="قطعات موتورسیکلت 4Riders کربن Evo Series باک روی Ve عقب کیف مشکی 6"><img src="/media/catalog/automoto/assets/90/bdv-am-90219db32f6ca3cea908.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/93/bdv-am-93be50c08f0b99f959e0.jpg" class="" aria-label="قطعات موتورسیکلت 4Riders کربن Evo Series باک روی Ve عقب کیف مشکی 7"><img src="/media/catalog/automoto/assets/93/bdv-am-93be50c08f0b99f959e0.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/95/bdv-am-95b5a343695730653fae.jpg" class="" aria-label="قطعات موتورسیکلت 4Riders کربن Evo Series باک روی Ve عقب کیف مشکی 8"><img src="/media/catalog/automoto/assets/95/bdv-am-95b5a343695730653fae.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a1/bdv-am-a12546880b3ba7aaf752.jpg" class="" aria-label="قطعات موتورسیکلت 4Riders کربن Evo Series باک روی Ve عقب کیف مشکی 9"><img src="/media/catalog/automoto/assets/a1/bdv-am-a12546880b3ba7aaf752.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/bf/bdv-am-bf9964bd15ed22182f00.jpg" class="" aria-label="قطعات موتورسیکلت 4Riders کربن Evo Series باک روی Ve عقب کیف مشکی 10"><img src="/media/catalog/automoto/assets/bf/bdv-am-bf9964bd15ed22182f00.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

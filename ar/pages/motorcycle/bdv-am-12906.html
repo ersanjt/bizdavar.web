@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/04/bdv-am-04981717f8670e192ae7.jpg" alt="Alpinestars Faster-4 Protective Motorcycle Boot Black / White / Red" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/04/bdv-am-04981717f8670e192ae7.jpg" alt="Alpinestars Faster-4 Protective Motorcycle Boot Black / White / Red" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/04/bdv-am-04981717f8670e192ae7.jpg" class="is-active" aria-label="Alpinestars Faster-4 Protective Motorcycle Boot Black / White / Red 1"><img src="/media/catalog/automoto/assets/04/bdv-am-04981717f8670e192ae7.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/0b/bdv-am-0bf02077b96649e7eb67.jpg" class="" aria-label="Alpinestars Faster-4 Protective Motorcycle Boot Black / White / Red 2"><img src="/media/catalog/automoto/assets/0b/bdv-am-0bf02077b96649e7eb67.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/24/bdv-am-240adffae69a141800dc.jpg" class="" aria-label="Alpinestars Faster-4 Protective Motorcycle Boot Black / White / Red 3"><img src="/media/catalog/automoto/assets/24/bdv-am-240adffae69a141800dc.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/3e/bdv-am-3e24d42720663f390a23.jpg" class="" aria-label="Alpinestars Faster-4 Protective Motorcycle Boot Black / White / Red 4"><img src="/media/catalog/automoto/assets/3e/bdv-am-3e24d42720663f390a23.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/5e/bdv-am-5e87185d8ad988677449.jpg" class="" aria-label="Alpinestars Faster-4 Protective Motorcycle Boot Black / White / Red 5"><img src="/media/catalog/automoto/assets/5e/bdv-am-5e87185d8ad988677449.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a0/bdv-am-a06f63aa787ee9db6ba4.jpg" class="" aria-label="Alpinestars Faster-4 Protective Motorcycle Boot Black / White / Red 6"><img src="/media/catalog/automoto/assets/a0/bdv-am-a06f63aa787ee9db6ba4.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/d5/bdv-am-d548e362da074de6f3e9.jpg" class="" aria-label="Alpinestars Faster-4 Protective Motorcycle Boot Black / White / Red 7"><img src="/media/catalog/automoto/assets/d5/bdv-am-d548e362da074de6f3e9.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

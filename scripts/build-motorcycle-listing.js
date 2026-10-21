@@ -3,6 +3,7 @@
  */
 const fs = require('fs');
 const path = require('path');
+const { bootTag } = require('./lib/page-boot-tag');
 
 const ROOT = path.join(__dirname, '..');
 const VER = '20260919mc';
@@ -626,8 +627,7 @@ ${alts}
 
   <script src="/assets/scripts/site-loader.js?v=${VER}" data-after-seo="i18n/supply-catalog-i18n.js,i18n/auto-moto-catalog-i18n.js" data-after-page-i18n="lib/supply-brand-page.js,config/auto-moto-products.js" data-before-main="auto-moto-page.js"></script>
 
-  <script>
-    bizdavarPageInit(function () {
+  ${bootTag(`bizdavarPageInit(function () {
       injectPageSeo('motorcycle', {
         canonical: 'https://bizdavar.com/pages/motorcycle',
         ogImage: 'assets/images/auto-moto/hero/auto-moto-hero.webp'
@@ -654,8 +654,7 @@ ${alts}
 ${relatedJs}
       ]);
       setupWhatsappLinks();
-    });
-  </script>
+    });`)}
 </body>
 </html>
 `;

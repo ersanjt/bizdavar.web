@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/15/bdv-am-1560106890864a627ac9.jpg" alt="Alpinestars Supertech Corp Goggle Motocross Goggles Black / Red" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/15/bdv-am-1560106890864a627ac9.jpg" alt="Alpinestars Supertech Corp Goggle Motocross Goggles Black / Red" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/15/bdv-am-1560106890864a627ac9.jpg" class="is-active" aria-label="Alpinestars Supertech Corp Goggle Motocross Goggles Black / Red 1"><img src="/media/catalog/automoto/assets/15/bdv-am-1560106890864a627ac9.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a7/bdv-am-a7faa840bfa70a5f86ea.jpg" class="" aria-label="Alpinestars Supertech Corp Goggle Motocross Goggles Black / Red 2"><img src="/media/catalog/automoto/assets/a7/bdv-am-a7faa840bfa70a5f86ea.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/c7/bdv-am-c7686ab545cb1c743275.jpg" class="" aria-label="Alpinestars Supertech Corp Goggle Motocross Goggles Black / Red 3"><img src="/media/catalog/automoto/assets/c7/bdv-am-c7686ab545cb1c743275.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/d8/bdv-am-d8dd9b74b3012782e12d.jpg" class="" aria-label="Alpinestars Supertech Corp Goggle Motocross Goggles Black / Red 4"><img src="/media/catalog/automoto/assets/d8/bdv-am-d8dd9b74b3012782e12d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

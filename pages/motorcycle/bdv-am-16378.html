@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/00/bdv-am-009875d16ad0192eb8a2.jpg" alt="بوت موتورسیکلت Alpinestars Corozal V2 ADV DS محافظ‌دار مشکی" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/00/bdv-am-009875d16ad0192eb8a2.jpg" alt="بوت موتورسیکلت Alpinestars Corozal V2 ADV DS محافظ‌دار مشکی" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/00/bdv-am-009875d16ad0192eb8a2.jpg" class="is-active" aria-label="بوت موتورسیکلت Alpinestars Corozal V2 ADV DS محافظ‌دار مشکی 1"><img src="/media/catalog/automoto/assets/00/bdv-am-009875d16ad0192eb8a2.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/07/bdv-am-07b1921c72e7204715c5.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars Corozal V2 ADV DS محافظ‌دار مشکی 2"><img src="/media/catalog/automoto/assets/07/bdv-am-07b1921c72e7204715c5.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/74/bdv-am-748298d984a85408566f.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars Corozal V2 ADV DS محافظ‌دار مشکی 3"><img src="/media/catalog/automoto/assets/74/bdv-am-748298d984a85408566f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ab/bdv-am-ab3b1b985c8c6c4ba4fc.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars Corozal V2 ADV DS محافظ‌دار مشکی 4"><img src="/media/catalog/automoto/assets/ab/bdv-am-ab3b1b985c8c6c4ba4fc.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/bd/bdv-am-bd8d906646eb026239e0.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars Corozal V2 ADV DS محافظ‌دار مشکی 5"><img src="/media/catalog/automoto/assets/bd/bdv-am-bd8d906646eb026239e0.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ca/bdv-am-cadcdd7db595788a6d2c.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars Corozal V2 ADV DS محافظ‌دار مشکی 6"><img src="/media/catalog/automoto/assets/ca/bdv-am-cadcdd7db595788a6d2c.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e0/bdv-am-e06edd551a523278b955.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars Corozal V2 ADV DS محافظ‌دار مشکی 7"><img src="/media/catalog/automoto/assets/e0/bdv-am-e06edd551a523278b955.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

@@ -122,30 +122,9 @@
     <div id="relatedLinks"></div>
   </main>
 
-  <script src="/assets/scripts/site-loader.js?v=20261003a" data-after-seo="i18n/portfolio-meta.js" data-before-main="portfolio-page.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g" data-after-seo="i18n/portfolio-meta.js" data-before-main="portfolio-page.js"></script>
   
 
-  <script>
-    bizdavarPageInit(function () {
-      const renderChrome = window.__bizdavarChrome || window.renderSiteChrome;
-      if (typeof renderChrome === 'function') renderChrome();
-
-      const crumbs = [
-        { page: 'home', url: 'index' },
-        { page: 'portfolio', url: 'pages/portfolio' }
-      ];
-      injectPageSeo('portfolio', {
-        canonical: 'https://bizdavar.com/pages/portfolio',
-        ogImage: 'assets/images/content/about-hero.jpg'
-      });
-      setupWhatsappLinks();
-      renderBreadcrumbs(crumbs);
-      injectBreadcrumbSchema(crumbs);
-      initPortfolioPage();
-      injectPortfolioSchema();
-      renderGeoStrip('geoStrip');
-      if (window.renderPortfolioRelatedLinks) window.renderPortfolioRelatedLinks();
-    });
-  </script>
+  <script src="/assets/scripts/page-boot/659fdf1eef491c99.js"></script>
 </body>
 </html>

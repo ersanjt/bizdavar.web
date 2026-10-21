@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/1e/bdv-am-1efecaf78231dafae500.jpg" alt="کاپشن موتورسیکلت Knox Urbane Pro MOVE محافظ‌دار زنانه Petrol آبی" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/1e/bdv-am-1efecaf78231dafae500.jpg" alt="کاپشن موتورسیکلت Knox Urbane Pro MOVE محافظ‌دار زنانه Petrol آبی" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/1e/bdv-am-1efecaf78231dafae500.jpg" class="is-active" aria-label="کاپشن موتورسیکلت Knox Urbane Pro MOVE محافظ‌دار زنانه Petrol آبی 1"><img src="/media/catalog/automoto/assets/1e/bdv-am-1efecaf78231dafae500.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/85/bdv-am-851e0682710e432a43f9.jpg" class="" aria-label="کاپشن موتورسیکلت Knox Urbane Pro MOVE محافظ‌دار زنانه Petrol آبی 2"><img src="/media/catalog/automoto/assets/85/bdv-am-851e0682710e432a43f9.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/8d/bdv-am-8d23a25c5a95a33aefb9.jpg" class="" aria-label="کاپشن موتورسیکلت Knox Urbane Pro MOVE محافظ‌دار زنانه Petrol آبی 3"><img src="/media/catalog/automoto/assets/8d/bdv-am-8d23a25c5a95a33aefb9.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/8e/bdv-am-8e9ccf618b0d6d56c7f6.jpg" class="" aria-label="کاپشن موتورسیکلت Knox Urbane Pro MOVE محافظ‌دار زنانه Petrol آبی 4"><img src="/media/catalog/automoto/assets/8e/bdv-am-8e9ccf618b0d6d56c7f6.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/96/bdv-am-96329dff1b5b204b6505.jpg" class="" aria-label="کاپشن موتورسیکلت Knox Urbane Pro MOVE محافظ‌دار زنانه Petrol آبی 5"><img src="/media/catalog/automoto/assets/96/bdv-am-96329dff1b5b204b6505.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a2/bdv-am-a218c71aacfe55d82a5d.jpg" class="" aria-label="کاپشن موتورسیکلت Knox Urbane Pro MOVE محافظ‌دار زنانه Petrol آبی 6"><img src="/media/catalog/automoto/assets/a2/bdv-am-a218c71aacfe55d82a5d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b9/bdv-am-b9c12135d81b11b684f8.jpg" class="" aria-label="کاپشن موتورسیکلت Knox Urbane Pro MOVE محافظ‌دار زنانه Petrol آبی 7"><img src="/media/catalog/automoto/assets/b9/bdv-am-b9c12135d81b11b684f8.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/c7/bdv-am-c772bfa5c9343314136a.jpg" class="" aria-label="کاپشن موتورسیکلت Knox Urbane Pro MOVE محافظ‌دار زنانه Petrol آبی 8"><img src="/media/catalog/automoto/assets/c7/bdv-am-c772bfa5c9343314136a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/cf/bdv-am-cf2f52dfc750241f63b9.jpg" class="" aria-label="کاپشن موتورسیکلت Knox Urbane Pro MOVE محافظ‌دار زنانه Petrol آبی 9"><img src="/media/catalog/automoto/assets/cf/bdv-am-cf2f52dfc750241f63b9.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f1/bdv-am-f1f15ccdc031618c3ff7.jpg" class="" aria-label="کاپشن موتورسیکلت Knox Urbane Pro MOVE محافظ‌دار زنانه Petrol آبی 10"><img src="/media/catalog/automoto/assets/f1/bdv-am-f1f15ccdc031618c3ff7.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/fc/bdv-am-fc3d4e81b215c146592f.jpg" class="" aria-label="کاپشن موتورسیکلت Knox Urbane Pro MOVE محافظ‌دار زنانه Petrol آبی 11"><img src="/media/catalog/automoto/assets/fc/bdv-am-fc3d4e81b215c146592f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

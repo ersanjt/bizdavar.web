@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/05/bdv-am-0503e6d411c240fba3db.jpg" alt="Alpinestars Missile V3 Deri Korumalı Motosiklet Montu Siyah / Beyaz" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/05/bdv-am-0503e6d411c240fba3db.jpg" alt="Alpinestars Missile V3 Deri Korumalı Motosiklet Montu Siyah / Beyaz" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/05/bdv-am-0503e6d411c240fba3db.jpg" class="is-active" aria-label="Alpinestars Missile V3 Deri Korumalı Motosiklet Montu Siyah / Beyaz 1"><img src="/media/catalog/automoto/assets/05/bdv-am-0503e6d411c240fba3db.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/1d/bdv-am-1df302031279f6142ed6.jpg" class="" aria-label="Alpinestars Missile V3 Deri Korumalı Motosiklet Montu Siyah / Beyaz 2"><img src="/media/catalog/automoto/assets/1d/bdv-am-1df302031279f6142ed6.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/44/bdv-am-449019adbf21deb1bff8.jpg" class="" aria-label="Alpinestars Missile V3 Deri Korumalı Motosiklet Montu Siyah / Beyaz 3"><img src="/media/catalog/automoto/assets/44/bdv-am-449019adbf21deb1bff8.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/5e/bdv-am-5e6496fe7cc8cf7a0932.jpg" class="" aria-label="Alpinestars Missile V3 Deri Korumalı Motosiklet Montu Siyah / Beyaz 4"><img src="/media/catalog/automoto/assets/5e/bdv-am-5e6496fe7cc8cf7a0932.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/7f/bdv-am-7fa2e433035714daeed1.jpg" class="" aria-label="Alpinestars Missile V3 Deri Korumalı Motosiklet Montu Siyah / Beyaz 5"><img src="/media/catalog/automoto/assets/7f/bdv-am-7fa2e433035714daeed1.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f1/bdv-am-f19be16aaec6fd6f8da8.jpg" class="" aria-label="Alpinestars Missile V3 Deri Korumalı Motosiklet Montu Siyah / Beyaz 6"><img src="/media/catalog/automoto/assets/f1/bdv-am-f19be16aaec6fd6f8da8.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

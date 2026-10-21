@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/0e/bdv-am-0e38aa6d1801a63125dc.jpg" alt="بوت موتورسیکلت Alpinestars TECH 3 کراس قرمز / آبی" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/0e/bdv-am-0e38aa6d1801a63125dc.jpg" alt="بوت موتورسیکلت Alpinestars TECH 3 کراس قرمز / آبی" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/0e/bdv-am-0e38aa6d1801a63125dc.jpg" class="is-active" aria-label="بوت موتورسیکلت Alpinestars TECH 3 کراس قرمز / آبی 1"><img src="/media/catalog/automoto/assets/0e/bdv-am-0e38aa6d1801a63125dc.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/1c/bdv-am-1c7f4f04bc09374152f5.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars TECH 3 کراس قرمز / آبی 2"><img src="/media/catalog/automoto/assets/1c/bdv-am-1c7f4f04bc09374152f5.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/45/bdv-am-452c1de2443c4e3dd705.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars TECH 3 کراس قرمز / آبی 3"><img src="/media/catalog/automoto/assets/45/bdv-am-452c1de2443c4e3dd705.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/5a/bdv-am-5acd32842c6f99691635.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars TECH 3 کراس قرمز / آبی 4"><img src="/media/catalog/automoto/assets/5a/bdv-am-5acd32842c6f99691635.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/61/bdv-am-61a5a7c4cda51c047a6a.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars TECH 3 کراس قرمز / آبی 5"><img src="/media/catalog/automoto/assets/61/bdv-am-61a5a7c4cda51c047a6a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/c2/bdv-am-c22a0b6b43dcdbcbb920.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars TECH 3 کراس قرمز / آبی 6"><img src="/media/catalog/automoto/assets/c2/bdv-am-c22a0b6b43dcdbcbb920.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/c2/bdv-am-c24755f6c8a0a3f2e565.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars TECH 3 کراس قرمز / آبی 7"><img src="/media/catalog/automoto/assets/c2/bdv-am-c24755f6c8a0a3f2e565.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/d1/bdv-am-d125f63edd7d7afb451c.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars TECH 3 کراس قرمز / آبی 8"><img src="/media/catalog/automoto/assets/d1/bdv-am-d125f63edd7d7afb451c.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/1a/bdv-am-1a9d637e167bb64d1b7a.jpg" alt="Sp Connect C+ Adapter (Pro Modeller For For)" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/1a/bdv-am-1a9d637e167bb64d1b7a.jpg" alt="Sp Connect C+ Adapter (Pro Modeller For For)" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/1a/bdv-am-1a9d637e167bb64d1b7a.jpg" class="is-active" aria-label="Sp Connect C+ Adapter (Pro Modeller For For) 1"><img src="/media/catalog/automoto/assets/1a/bdv-am-1a9d637e167bb64d1b7a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/25/bdv-am-25597db5c03a3650e469.jpg" class="" aria-label="Sp Connect C+ Adapter (Pro Modeller For For) 2"><img src="/media/catalog/automoto/assets/25/bdv-am-25597db5c03a3650e469.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/42/bdv-am-4242fdac418521cf2870.jpg" class="" aria-label="Sp Connect C+ Adapter (Pro Modeller For For) 3"><img src="/media/catalog/automoto/assets/42/bdv-am-4242fdac418521cf2870.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/43/bdv-am-432a8d7d955b26d940de.jpg" class="" aria-label="Sp Connect C+ Adapter (Pro Modeller For For) 4"><img src="/media/catalog/automoto/assets/43/bdv-am-432a8d7d955b26d940de.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/4d/bdv-am-4df4540702e7df803e71.jpg" class="" aria-label="Sp Connect C+ Adapter (Pro Modeller For For) 5"><img src="/media/catalog/automoto/assets/4d/bdv-am-4df4540702e7df803e71.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/54/bdv-am-5431f1043664d5a9c8d7.jpg" class="" aria-label="Sp Connect C+ Adapter (Pro Modeller For For) 6"><img src="/media/catalog/automoto/assets/54/bdv-am-5431f1043664d5a9c8d7.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/bf/bdv-am-bf3cac6d2b51acc82b66.jpg" class="" aria-label="Sp Connect C+ Adapter (Pro Modeller For For) 7"><img src="/media/catalog/automoto/assets/bf/bdv-am-bf3cac6d2b51acc82b66.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

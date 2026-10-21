@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/1b/bdv-am-1be6f32835ed066632be.jpg" alt="Alpinestars ST-1 WP Protective Motorcycle Jacket Bej / Grey / Black" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/1b/bdv-am-1be6f32835ed066632be.jpg" alt="Alpinestars ST-1 WP Protective Motorcycle Jacket Bej / Grey / Black" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/1b/bdv-am-1be6f32835ed066632be.jpg" class="is-active" aria-label="Alpinestars ST-1 WP Protective Motorcycle Jacket Bej / Grey / Black 1"><img src="/media/catalog/automoto/assets/1b/bdv-am-1be6f32835ed066632be.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/2b/bdv-am-2b88339bdb2adf7bf9af.jpg" class="" aria-label="Alpinestars ST-1 WP Protective Motorcycle Jacket Bej / Grey / Black 2"><img src="/media/catalog/automoto/assets/2b/bdv-am-2b88339bdb2adf7bf9af.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/58/bdv-am-589531369e629c6bc959.jpg" class="" aria-label="Alpinestars ST-1 WP Protective Motorcycle Jacket Bej / Grey / Black 3"><img src="/media/catalog/automoto/assets/58/bdv-am-589531369e629c6bc959.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/67/bdv-am-67b7d849fc5f6bd1456a.jpg" class="" aria-label="Alpinestars ST-1 WP Protective Motorcycle Jacket Bej / Grey / Black 4"><img src="/media/catalog/automoto/assets/67/bdv-am-67b7d849fc5f6bd1456a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/78/bdv-am-78f7964d5d43b9d2067a.jpg" class="" aria-label="Alpinestars ST-1 WP Protective Motorcycle Jacket Bej / Grey / Black 5"><img src="/media/catalog/automoto/assets/78/bdv-am-78f7964d5d43b9d2067a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b3/bdv-am-b31daba4e9ec82636e4d.jpg" class="" aria-label="Alpinestars ST-1 WP Protective Motorcycle Jacket Bej / Grey / Black 6"><img src="/media/catalog/automoto/assets/b3/bdv-am-b31daba4e9ec82636e4d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/25/bdv-am-25563aebd3df11d8a8a3.jpg" alt="Alpinestars CR-1 Protective Motorcycle Boot Black / Grey / Brown" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/25/bdv-am-25563aebd3df11d8a8a3.jpg" alt="Alpinestars CR-1 Protective Motorcycle Boot Black / Grey / Brown" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/25/bdv-am-25563aebd3df11d8a8a3.jpg" class="is-active" aria-label="Alpinestars CR-1 Protective Motorcycle Boot Black / Grey / Brown 1"><img src="/media/catalog/automoto/assets/25/bdv-am-25563aebd3df11d8a8a3.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/4f/bdv-am-4f8d81fe6234ba06110a.jpg" class="" aria-label="Alpinestars CR-1 Protective Motorcycle Boot Black / Grey / Brown 2"><img src="/media/catalog/automoto/assets/4f/bdv-am-4f8d81fe6234ba06110a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a3/bdv-am-a37bb94c5b5a23c9983b.jpg" class="" aria-label="Alpinestars CR-1 Protective Motorcycle Boot Black / Grey / Brown 3"><img src="/media/catalog/automoto/assets/a3/bdv-am-a37bb94c5b5a23c9983b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/af/bdv-am-afaa6a3e39b96189fa80.jpg" class="" aria-label="Alpinestars CR-1 Protective Motorcycle Boot Black / Grey / Brown 4"><img src="/media/catalog/automoto/assets/af/bdv-am-afaa6a3e39b96189fa80.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/d1/bdv-am-d1326f7a3400392d2174.jpg" class="" aria-label="Alpinestars CR-1 Protective Motorcycle Boot Black / Grey / Brown 5"><img src="/media/catalog/automoto/assets/d1/bdv-am-d1326f7a3400392d2174.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ef/bdv-am-ef50954014bc6d64fb87.jpg" class="" aria-label="Alpinestars CR-1 Protective Motorcycle Boot Black / Grey / Brown 6"><img src="/media/catalog/automoto/assets/ef/bdv-am-ef50954014bc6d64fb87.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f0/bdv-am-f028fb0a0de4915de5bc.jpg" class="" aria-label="Alpinestars CR-1 Protective Motorcycle Boot Black / Grey / Brown 7"><img src="/media/catalog/automoto/assets/f0/bdv-am-f028fb0a0de4915de5bc.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

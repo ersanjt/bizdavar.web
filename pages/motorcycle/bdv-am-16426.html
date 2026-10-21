@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/53/bdv-am-53586ec87a868e070793.jpg" alt="کلاه ایمنی موتورسیکلت Klim X1 Alpha کربن Patroit محافظ‌دار ADV متالیک مشکی" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/53/bdv-am-53586ec87a868e070793.jpg" alt="کلاه ایمنی موتورسیکلت Klim X1 Alpha کربن Patroit محافظ‌دار ADV متالیک مشکی" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/53/bdv-am-53586ec87a868e070793.jpg" class="is-active" aria-label="کلاه ایمنی موتورسیکلت Klim X1 Alpha کربن Patroit محافظ‌دار ADV متالیک مشکی 1"><img src="/media/catalog/automoto/assets/53/bdv-am-53586ec87a868e070793.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/5b/bdv-am-5ba2e8ca25245fad5f1e.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim X1 Alpha کربن Patroit محافظ‌دار ADV متالیک مشکی 2"><img src="/media/catalog/automoto/assets/5b/bdv-am-5ba2e8ca25245fad5f1e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/73/bdv-am-7322d720f0a0f811be52.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim X1 Alpha کربن Patroit محافظ‌دار ADV متالیک مشکی 3"><img src="/media/catalog/automoto/assets/73/bdv-am-7322d720f0a0f811be52.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/86/bdv-am-86e70b13a0e634df103b.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim X1 Alpha کربن Patroit محافظ‌دار ADV متالیک مشکی 4"><img src="/media/catalog/automoto/assets/86/bdv-am-86e70b13a0e634df103b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/8d/bdv-am-8d2f81c192584cfb2ba8.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim X1 Alpha کربن Patroit محافظ‌دار ADV متالیک مشکی 5"><img src="/media/catalog/automoto/assets/8d/bdv-am-8d2f81c192584cfb2ba8.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/91/bdv-am-916dadfba52a2facc29c.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim X1 Alpha کربن Patroit محافظ‌دار ADV متالیک مشکی 6"><img src="/media/catalog/automoto/assets/91/bdv-am-916dadfba52a2facc29c.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/9b/bdv-am-9b627f983d3c20ec1a1c.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim X1 Alpha کربن Patroit محافظ‌دار ADV متالیک مشکی 7"><img src="/media/catalog/automoto/assets/9b/bdv-am-9b627f983d3c20ec1a1c.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/bb/bdv-am-bb13c9600ec3ce596fee.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim X1 Alpha کربن Patroit محافظ‌دار ADV متالیک مشکی 8"><img src="/media/catalog/automoto/assets/bb/bdv-am-bb13c9600ec3ce596fee.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

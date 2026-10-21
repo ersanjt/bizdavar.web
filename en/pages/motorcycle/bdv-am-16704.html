@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/2a/bdv-am-2ac4c3ee8e621313042c.jpg" alt="Alpinestars Halo Pro DS Protective Motorcycle Jacket Black / Red" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/2a/bdv-am-2ac4c3ee8e621313042c.jpg" alt="Alpinestars Halo Pro DS Protective Motorcycle Jacket Black / Red" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/2a/bdv-am-2ac4c3ee8e621313042c.jpg" class="is-active" aria-label="Alpinestars Halo Pro DS Protective Motorcycle Jacket Black / Red 1"><img src="/media/catalog/automoto/assets/2a/bdv-am-2ac4c3ee8e621313042c.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/5a/bdv-am-5a2caac0afc7babb44df.jpg" class="" aria-label="Alpinestars Halo Pro DS Protective Motorcycle Jacket Black / Red 2"><img src="/media/catalog/automoto/assets/5a/bdv-am-5a2caac0afc7babb44df.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/62/bdv-am-627425ed892b3114c965.jpg" class="" aria-label="Alpinestars Halo Pro DS Protective Motorcycle Jacket Black / Red 3"><img src="/media/catalog/automoto/assets/62/bdv-am-627425ed892b3114c965.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a9/bdv-am-a90a58680e50e7cac850.jpg" class="" aria-label="Alpinestars Halo Pro DS Protective Motorcycle Jacket Black / Red 4"><img src="/media/catalog/automoto/assets/a9/bdv-am-a90a58680e50e7cac850.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/dc/bdv-am-dc1d73ea47533236179b.jpg" class="" aria-label="Alpinestars Halo Pro DS Protective Motorcycle Jacket Black / Red 5"><img src="/media/catalog/automoto/assets/dc/bdv-am-dc1d73ea47533236179b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e1/bdv-am-e1cfdd8bd664ddb95350.jpg" class="" aria-label="Alpinestars Halo Pro DS Protective Motorcycle Jacket Black / Red 6"><img src="/media/catalog/automoto/assets/e1/bdv-am-e1cfdd8bd664ddb95350.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

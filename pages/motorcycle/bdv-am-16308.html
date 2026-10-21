@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/07/bdv-am-0791b9b19ae87da89f6b.jpg" alt="بوت موتورسیکلت Alpinestars TECH 10 Enduro محافظ‌دار مشکی" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/07/bdv-am-0791b9b19ae87da89f6b.jpg" alt="بوت موتورسیکلت Alpinestars TECH 10 Enduro محافظ‌دار مشکی" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/07/bdv-am-0791b9b19ae87da89f6b.jpg" class="is-active" aria-label="بوت موتورسیکلت Alpinestars TECH 10 Enduro محافظ‌دار مشکی 1"><img src="/media/catalog/automoto/assets/07/bdv-am-0791b9b19ae87da89f6b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/6b/bdv-am-6b3b613742592f4a4cb7.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars TECH 10 Enduro محافظ‌دار مشکی 2"><img src="/media/catalog/automoto/assets/6b/bdv-am-6b3b613742592f4a4cb7.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/6b/bdv-am-6b88d5b7df7f20c21719.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars TECH 10 Enduro محافظ‌دار مشکی 3"><img src="/media/catalog/automoto/assets/6b/bdv-am-6b88d5b7df7f20c21719.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/98/bdv-am-98b490dd82718b745fff.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars TECH 10 Enduro محافظ‌دار مشکی 4"><img src="/media/catalog/automoto/assets/98/bdv-am-98b490dd82718b745fff.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a7/bdv-am-a77296b788ecb4a5dc77.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars TECH 10 Enduro محافظ‌دار مشکی 5"><img src="/media/catalog/automoto/assets/a7/bdv-am-a77296b788ecb4a5dc77.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/be/bdv-am-beda3cb2d6ba4a7b99b4.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars TECH 10 Enduro محافظ‌دار مشکی 6"><img src="/media/catalog/automoto/assets/be/bdv-am-beda3cb2d6ba4a7b99b4.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/fa/bdv-am-fae027cd60c51e59e532.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars TECH 10 Enduro محافظ‌دار مشکی 7"><img src="/media/catalog/automoto/assets/fa/bdv-am-fae027cd60c51e59e532.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/fe/bdv-am-fecaf3aea9b8e8481941.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars TECH 10 Enduro محافظ‌دار مشکی 8"><img src="/media/catalog/automoto/assets/fe/bdv-am-fecaf3aea9b8e8481941.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

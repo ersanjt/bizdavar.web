@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/0b/bdv-am-0b728eead67c25634150.jpg" alt="Alpinestars Ignite Air Korumalı Motosiklet Montu Siyah / Mavi" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/0b/bdv-am-0b728eead67c25634150.jpg" alt="Alpinestars Ignite Air Korumalı Motosiklet Montu Siyah / Mavi" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/0b/bdv-am-0b728eead67c25634150.jpg" class="is-active" aria-label="Alpinestars Ignite Air Korumalı Motosiklet Montu Siyah / Mavi 1"><img src="/media/catalog/automoto/assets/0b/bdv-am-0b728eead67c25634150.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/14/bdv-am-14bde6e61fe9122948d9.jpg" class="" aria-label="Alpinestars Ignite Air Korumalı Motosiklet Montu Siyah / Mavi 2"><img src="/media/catalog/automoto/assets/14/bdv-am-14bde6e61fe9122948d9.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/7b/bdv-am-7bc69f41c8f45731f3e2.jpg" class="" aria-label="Alpinestars Ignite Air Korumalı Motosiklet Montu Siyah / Mavi 3"><img src="/media/catalog/automoto/assets/7b/bdv-am-7bc69f41c8f45731f3e2.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/c3/bdv-am-c367fbf8539100504bc4.jpg" class="" aria-label="Alpinestars Ignite Air Korumalı Motosiklet Montu Siyah / Mavi 4"><img src="/media/catalog/automoto/assets/c3/bdv-am-c367fbf8539100504bc4.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/c9/bdv-am-c9f82d0f52ecef160723.jpg" class="" aria-label="Alpinestars Ignite Air Korumalı Motosiklet Montu Siyah / Mavi 5"><img src="/media/catalog/automoto/assets/c9/bdv-am-c9f82d0f52ecef160723.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e3/bdv-am-e38681611e28cb3d25d5.jpg" class="" aria-label="Alpinestars Ignite Air Korumalı Motosiklet Montu Siyah / Mavi 6"><img src="/media/catalog/automoto/assets/e3/bdv-am-e38681611e28cb3d25d5.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ed/bdv-am-ed5029eb374dfc2c0ee8.jpg" class="" aria-label="Alpinestars Ignite Air Korumalı Motosiklet Montu Siyah / Mavi 7"><img src="/media/catalog/automoto/assets/ed/bdv-am-ed5029eb374dfc2c0ee8.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

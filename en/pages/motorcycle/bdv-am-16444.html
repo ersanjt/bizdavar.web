@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/33/bdv-am-33b2f8041769575050dd.jpg" alt="Alpinestars Corozal V2 ADV DS Protective Motorcycle Boot Brown / Black" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/33/bdv-am-33b2f8041769575050dd.jpg" alt="Alpinestars Corozal V2 ADV DS Protective Motorcycle Boot Brown / Black" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/33/bdv-am-33b2f8041769575050dd.jpg" class="is-active" aria-label="Alpinestars Corozal V2 ADV DS Protective Motorcycle Boot Brown / Black 1"><img src="/media/catalog/automoto/assets/33/bdv-am-33b2f8041769575050dd.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/5d/bdv-am-5da15c6980dea8391f59.jpg" class="" aria-label="Alpinestars Corozal V2 ADV DS Protective Motorcycle Boot Brown / Black 2"><img src="/media/catalog/automoto/assets/5d/bdv-am-5da15c6980dea8391f59.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/5e/bdv-am-5e0603dc4934fb208676.jpg" class="" aria-label="Alpinestars Corozal V2 ADV DS Protective Motorcycle Boot Brown / Black 3"><img src="/media/catalog/automoto/assets/5e/bdv-am-5e0603dc4934fb208676.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/62/bdv-am-6216edb52cdbb1840398.jpg" class="" aria-label="Alpinestars Corozal V2 ADV DS Protective Motorcycle Boot Brown / Black 4"><img src="/media/catalog/automoto/assets/62/bdv-am-6216edb52cdbb1840398.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/64/bdv-am-64fa025d6ecbba221d3a.jpg" class="" aria-label="Alpinestars Corozal V2 ADV DS Protective Motorcycle Boot Brown / Black 5"><img src="/media/catalog/automoto/assets/64/bdv-am-64fa025d6ecbba221d3a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/cc/bdv-am-cc40923266014581df7b.jpg" class="" aria-label="Alpinestars Corozal V2 ADV DS Protective Motorcycle Boot Brown / Black 6"><img src="/media/catalog/automoto/assets/cc/bdv-am-cc40923266014581df7b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e1/bdv-am-e1ba5e01b3e252fec0c9.jpg" class="" aria-label="Alpinestars Corozal V2 ADV DS Protective Motorcycle Boot Brown / Black 7"><img src="/media/catalog/automoto/assets/e1/bdv-am-e1ba5e01b3e252fec0c9.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

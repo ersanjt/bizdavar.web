@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/0d/bdv-am-0dfeb63e9e6a6de62dab.jpg" alt="قطعات موتورسیکلت 4Riders Bull Disc 6mm آلارم‌دار Disk Kilidi" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/0d/bdv-am-0dfeb63e9e6a6de62dab.jpg" alt="قطعات موتورسیکلت 4Riders Bull Disc 6mm آلارم‌دار Disk Kilidi" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/0d/bdv-am-0dfeb63e9e6a6de62dab.jpg" class="is-active" aria-label="قطعات موتورسیکلت 4Riders Bull Disc 6mm آلارم‌دار Disk Kilidi 1"><img src="/media/catalog/automoto/assets/0d/bdv-am-0dfeb63e9e6a6de62dab.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/1c/bdv-am-1c63c1956500d757e554.jpg" class="" aria-label="قطعات موتورسیکلت 4Riders Bull Disc 6mm آلارم‌دار Disk Kilidi 2"><img src="/media/catalog/automoto/assets/1c/bdv-am-1c63c1956500d757e554.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/46/bdv-am-46a60b0e3128b090fe94.jpg" class="" aria-label="قطعات موتورسیکلت 4Riders Bull Disc 6mm آلارم‌دار Disk Kilidi 3"><img src="/media/catalog/automoto/assets/46/bdv-am-46a60b0e3128b090fe94.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/59/bdv-am-5985362988f6f6f0f932.jpg" class="" aria-label="قطعات موتورسیکلت 4Riders Bull Disc 6mm آلارم‌دار Disk Kilidi 4"><img src="/media/catalog/automoto/assets/59/bdv-am-5985362988f6f6f0f932.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a2/bdv-am-a2d294973d8cb10a33f4.jpg" class="" aria-label="قطعات موتورسیکلت 4Riders Bull Disc 6mm آلارم‌دار Disk Kilidi 5"><img src="/media/catalog/automoto/assets/a2/bdv-am-a2d294973d8cb10a33f4.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ba/bdv-am-bab7bc73660b0dbef4f1.jpg" class="" aria-label="قطعات موتورسیکلت 4Riders Bull Disc 6mm آلارم‌دار Disk Kilidi 6"><img src="/media/catalog/automoto/assets/ba/bdv-am-bab7bc73660b0dbef4f1.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/bf/bdv-am-bf3ac3e9bbd6954eff7e.jpg" class="" aria-label="قطعات موتورسیکلت 4Riders Bull Disc 6mm آلارم‌دار Disk Kilidi 7"><img src="/media/catalog/automoto/assets/bf/bdv-am-bf3ac3e9bbd6954eff7e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

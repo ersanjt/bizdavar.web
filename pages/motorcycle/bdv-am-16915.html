@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/1b/bdv-am-1bb26d61fa9acfe1d70d.jpg" alt="کلاه ایمنی موتورسیکلت Sena Outstar 2 مش اینترکامlu کلاه باز سفید" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/1b/bdv-am-1bb26d61fa9acfe1d70d.jpg" alt="کلاه ایمنی موتورسیکلت Sena Outstar 2 مش اینترکامlu کلاه باز سفید" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/1b/bdv-am-1bb26d61fa9acfe1d70d.jpg" class="is-active" aria-label="کلاه ایمنی موتورسیکلت Sena Outstar 2 مش اینترکامlu کلاه باز سفید 1"><img src="/media/catalog/automoto/assets/1b/bdv-am-1bb26d61fa9acfe1d70d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/35/bdv-am-35d97069071a73a133ba.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Sena Outstar 2 مش اینترکامlu کلاه باز سفید 2"><img src="/media/catalog/automoto/assets/35/bdv-am-35d97069071a73a133ba.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/36/bdv-am-362c4eab7334e8271c68.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Sena Outstar 2 مش اینترکامlu کلاه باز سفید 3"><img src="/media/catalog/automoto/assets/36/bdv-am-362c4eab7334e8271c68.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/6f/bdv-am-6f6d8c3be1df01ee21d3.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Sena Outstar 2 مش اینترکامlu کلاه باز سفید 4"><img src="/media/catalog/automoto/assets/6f/bdv-am-6f6d8c3be1df01ee21d3.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/7c/bdv-am-7c0e938c1d18b7ab63b8.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Sena Outstar 2 مش اینترکامlu کلاه باز سفید 5"><img src="/media/catalog/automoto/assets/7c/bdv-am-7c0e938c1d18b7ab63b8.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/7c/bdv-am-7c3595f80fd744a75cd6.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Sena Outstar 2 مش اینترکامlu کلاه باز سفید 6"><img src="/media/catalog/automoto/assets/7c/bdv-am-7c3595f80fd744a75cd6.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a1/bdv-am-a170ef6559a82109f288.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Sena Outstar 2 مش اینترکامlu کلاه باز سفید 7"><img src="/media/catalog/automoto/assets/a1/bdv-am-a170ef6559a82109f288.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f4/bdv-am-f4a02c95476af502c122.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Sena Outstar 2 مش اینترکامlu کلاه باز سفید 8"><img src="/media/catalog/automoto/assets/f4/bdv-am-f4a02c95476af502c122.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f8/bdv-am-f85771bffe640c4b5954.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Sena Outstar 2 مش اینترکامlu کلاه باز سفید 9"><img src="/media/catalog/automoto/assets/f8/bdv-am-f85771bffe640c4b5954.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/31/bdv-am-3189ecf64e885909b539.jpg" alt="تجهیزات آفرود Torc Mojave کراس-Retro کلاه ایمنی برای عینک" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/31/bdv-am-3189ecf64e885909b539.jpg" alt="تجهیزات آفرود Torc Mojave کراس-Retro کلاه ایمنی برای عینک" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/31/bdv-am-3189ecf64e885909b539.jpg" class="is-active" aria-label="تجهیزات آفرود Torc Mojave کراس-Retro کلاه ایمنی برای عینک 1"><img src="/media/catalog/automoto/assets/31/bdv-am-3189ecf64e885909b539.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/5c/bdv-am-5c8465e69c47b6a8a75d.jpg" class="" aria-label="تجهیزات آفرود Torc Mojave کراس-Retro کلاه ایمنی برای عینک 2"><img src="/media/catalog/automoto/assets/5c/bdv-am-5c8465e69c47b6a8a75d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/66/bdv-am-668a32d797b67df9966d.jpg" class="" aria-label="تجهیزات آفرود Torc Mojave کراس-Retro کلاه ایمنی برای عینک 3"><img src="/media/catalog/automoto/assets/66/bdv-am-668a32d797b67df9966d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/6b/bdv-am-6bee6613475c94185466.jpg" class="" aria-label="تجهیزات آفرود Torc Mojave کراس-Retro کلاه ایمنی برای عینک 4"><img src="/media/catalog/automoto/assets/6b/bdv-am-6bee6613475c94185466.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/76/bdv-am-769cc64ae296e592ab87.jpg" class="" aria-label="تجهیزات آفرود Torc Mojave کراس-Retro کلاه ایمنی برای عینک 5"><img src="/media/catalog/automoto/assets/76/bdv-am-769cc64ae296e592ab87.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/af/bdv-am-af3b9ab23b53e994dac6.jpg" class="" aria-label="تجهیزات آفرود Torc Mojave کراس-Retro کلاه ایمنی برای عینک 6"><img src="/media/catalog/automoto/assets/af/bdv-am-af3b9ab23b53e994dac6.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b0/bdv-am-b02c235c22727868c947.jpg" class="" aria-label="تجهیزات آفرود Torc Mojave کراس-Retro کلاه ایمنی برای عینک 7"><img src="/media/catalog/automoto/assets/b0/bdv-am-b02c235c22727868c947.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/be/bdv-am-be9bdf3a202fe46c0929.jpg" class="" aria-label="تجهیزات آفرود Torc Mojave کراس-Retro کلاه ایمنی برای عینک 8"><img src="/media/catalog/automoto/assets/be/bdv-am-be9bdf3a202fe46c0929.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f5/bdv-am-f55cd16643b1890978d8.jpg" class="" aria-label="تجهیزات آفرود Torc Mojave کراس-Retro کلاه ایمنی برای عینک 9"><img src="/media/catalog/automoto/assets/f5/bdv-am-f55cd16643b1890978d8.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

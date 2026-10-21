@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/09/bdv-am-09cfe93c07dd235a625c.jpg" alt="کاپشن موتورسیکلت Shima Rush 2.0 محافظ‌دار مشکی" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/09/bdv-am-09cfe93c07dd235a625c.jpg" alt="کاپشن موتورسیکلت Shima Rush 2.0 محافظ‌دار مشکی" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/09/bdv-am-09cfe93c07dd235a625c.jpg" class="is-active" aria-label="کاپشن موتورسیکلت Shima Rush 2.0 محافظ‌دار مشکی 1"><img src="/media/catalog/automoto/assets/09/bdv-am-09cfe93c07dd235a625c.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/18/bdv-am-184687d437e83db69ceb.jpg" class="" aria-label="کاپشن موتورسیکلت Shima Rush 2.0 محافظ‌دار مشکی 2"><img src="/media/catalog/automoto/assets/18/bdv-am-184687d437e83db69ceb.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/21/bdv-am-21148ef8598a8f6a902e.jpg" class="" aria-label="کاپشن موتورسیکلت Shima Rush 2.0 محافظ‌دار مشکی 3"><img src="/media/catalog/automoto/assets/21/bdv-am-21148ef8598a8f6a902e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/27/bdv-am-271eded2a7095611f8b3.jpg" class="" aria-label="کاپشن موتورسیکلت Shima Rush 2.0 محافظ‌دار مشکی 4"><img src="/media/catalog/automoto/assets/27/bdv-am-271eded2a7095611f8b3.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/47/bdv-am-47071faf6da71a334f1b.jpg" class="" aria-label="کاپشن موتورسیکلت Shima Rush 2.0 محافظ‌دار مشکی 5"><img src="/media/catalog/automoto/assets/47/bdv-am-47071faf6da71a334f1b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/50/bdv-am-509b2f1926b4732af490.jpg" class="" aria-label="کاپشن موتورسیکلت Shima Rush 2.0 محافظ‌دار مشکی 6"><img src="/media/catalog/automoto/assets/50/bdv-am-509b2f1926b4732af490.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/6c/bdv-am-6cdd0ea49698d9438881.jpg" class="" aria-label="کاپشن موتورسیکلت Shima Rush 2.0 محافظ‌دار مشکی 7"><img src="/media/catalog/automoto/assets/6c/bdv-am-6cdd0ea49698d9438881.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/76/bdv-am-76267386ec9994f5e79a.jpg" class="" aria-label="کاپشن موتورسیکلت Shima Rush 2.0 محافظ‌دار مشکی 8"><img src="/media/catalog/automoto/assets/76/bdv-am-76267386ec9994f5e79a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/c4/bdv-am-c48ae7fc0936ad3a814b.jpg" class="" aria-label="کاپشن موتورسیکلت Shima Rush 2.0 محافظ‌دار مشکی 9"><img src="/media/catalog/automoto/assets/c4/bdv-am-c48ae7fc0936ad3a814b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/cb/bdv-am-cbf5fa5af7b2f9a40ce2.jpg" class="" aria-label="کاپشن موتورسیکلت Shima Rush 2.0 محافظ‌دار مشکی 10"><img src="/media/catalog/automoto/assets/cb/bdv-am-cbf5fa5af7b2f9a40ce2.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

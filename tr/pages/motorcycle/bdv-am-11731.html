@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/03/bdv-am-03988be9de9df0654c94.jpg" alt="Knox Zero MK4 Kışlık Korumalı Motosiklet Eldiveni Siyah" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/03/bdv-am-03988be9de9df0654c94.jpg" alt="Knox Zero MK4 Kışlık Korumalı Motosiklet Eldiveni Siyah" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/03/bdv-am-03988be9de9df0654c94.jpg" class="is-active" aria-label="Knox Zero MK4 Kışlık Korumalı Motosiklet Eldiveni Siyah 1"><img src="/media/catalog/automoto/assets/03/bdv-am-03988be9de9df0654c94.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/61/bdv-am-61e39a191603db89f3c4.jpg" class="" aria-label="Knox Zero MK4 Kışlık Korumalı Motosiklet Eldiveni Siyah 2"><img src="/media/catalog/automoto/assets/61/bdv-am-61e39a191603db89f3c4.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/65/bdv-am-6530b50ab5b5f113210f.jpg" class="" aria-label="Knox Zero MK4 Kışlık Korumalı Motosiklet Eldiveni Siyah 3"><img src="/media/catalog/automoto/assets/65/bdv-am-6530b50ab5b5f113210f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a3/bdv-am-a3915ddec3030b65ea93.jpg" class="" aria-label="Knox Zero MK4 Kışlık Korumalı Motosiklet Eldiveni Siyah 4"><img src="/media/catalog/automoto/assets/a3/bdv-am-a3915ddec3030b65ea93.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e3/bdv-am-e383ed9ed36d30e9d733.jpg" class="" aria-label="Knox Zero MK4 Kışlık Korumalı Motosiklet Eldiveni Siyah 5"><img src="/media/catalog/automoto/assets/e3/bdv-am-e383ed9ed36d30e9d733.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e9/bdv-am-e9ddc26a3334a016375a.jpg" class="" aria-label="Knox Zero MK4 Kışlık Korumalı Motosiklet Eldiveni Siyah 6"><img src="/media/catalog/automoto/assets/e9/bdv-am-e9ddc26a3334a016375a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f3/bdv-am-f3c6a4ee64a1871edc1e.jpg" class="" aria-label="Knox Zero MK4 Kışlık Korumalı Motosiklet Eldiveni Siyah 7"><img src="/media/catalog/automoto/assets/f3/bdv-am-f3c6a4ee64a1871edc1e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f4/bdv-am-f4dece38bc9fe7f41b28.jpg" class="" aria-label="Knox Zero MK4 Kışlık Korumalı Motosiklet Eldiveni Siyah 8"><img src="/media/catalog/automoto/assets/f4/bdv-am-f4dece38bc9fe7f41b28.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

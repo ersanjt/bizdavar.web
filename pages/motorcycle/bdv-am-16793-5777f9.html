@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/0b/bdv-am-0b78f449e9c86fa6ffba.jpg" alt="بوت موتورسیکلت Alpinestars Radon DS WP محافظ‌دار مشکی" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/0b/bdv-am-0b78f449e9c86fa6ffba.jpg" alt="بوت موتورسیکلت Alpinestars Radon DS WP محافظ‌دار مشکی" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/0b/bdv-am-0b78f449e9c86fa6ffba.jpg" class="is-active" aria-label="بوت موتورسیکلت Alpinestars Radon DS WP محافظ‌دار مشکی 1"><img src="/media/catalog/automoto/assets/0b/bdv-am-0b78f449e9c86fa6ffba.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/31/bdv-am-31974026b839df7e3017.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars Radon DS WP محافظ‌دار مشکی 2"><img src="/media/catalog/automoto/assets/31/bdv-am-31974026b839df7e3017.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/32/bdv-am-321254ec96f3258d7fbf.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars Radon DS WP محافظ‌دار مشکی 3"><img src="/media/catalog/automoto/assets/32/bdv-am-321254ec96f3258d7fbf.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/43/bdv-am-43b6f6ff55f0f80ff7c5.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars Radon DS WP محافظ‌دار مشکی 4"><img src="/media/catalog/automoto/assets/43/bdv-am-43b6f6ff55f0f80ff7c5.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/8c/bdv-am-8c51ce410ebf4a790cff.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars Radon DS WP محافظ‌دار مشکی 5"><img src="/media/catalog/automoto/assets/8c/bdv-am-8c51ce410ebf4a790cff.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a6/bdv-am-a6eddbcc4d2925366bfa.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars Radon DS WP محافظ‌دار مشکی 6"><img src="/media/catalog/automoto/assets/a6/bdv-am-a6eddbcc4d2925366bfa.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e4/bdv-am-e401536a4a805b9a87c9.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars Radon DS WP محافظ‌دار مشکی 7"><img src="/media/catalog/automoto/assets/e4/bdv-am-e401536a4a805b9a87c9.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

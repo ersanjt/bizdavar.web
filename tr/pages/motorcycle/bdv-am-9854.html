@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/13/bdv-am-13b040b6ab6ddc76552b.jpg" alt="Klim Badlands PRO A3 Gore-Tex Korumalı Motosiklet Montu Mavi / Gri" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/13/bdv-am-13b040b6ab6ddc76552b.jpg" alt="Klim Badlands PRO A3 Gore-Tex Korumalı Motosiklet Montu Mavi / Gri" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/13/bdv-am-13b040b6ab6ddc76552b.jpg" class="is-active" aria-label="Klim Badlands PRO A3 Gore-Tex Korumalı Motosiklet Montu Mavi / Gri 1"><img src="/media/catalog/automoto/assets/13/bdv-am-13b040b6ab6ddc76552b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/31/bdv-am-31393ee4fbc501732a2d.jpg" class="" aria-label="Klim Badlands PRO A3 Gore-Tex Korumalı Motosiklet Montu Mavi / Gri 2"><img src="/media/catalog/automoto/assets/31/bdv-am-31393ee4fbc501732a2d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/6d/bdv-am-6d511aa71db21a6e8019.jpg" class="" aria-label="Klim Badlands PRO A3 Gore-Tex Korumalı Motosiklet Montu Mavi / Gri 3"><img src="/media/catalog/automoto/assets/6d/bdv-am-6d511aa71db21a6e8019.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/77/bdv-am-77d8f822355fbf5b9109.jpg" class="" aria-label="Klim Badlands PRO A3 Gore-Tex Korumalı Motosiklet Montu Mavi / Gri 4"><img src="/media/catalog/automoto/assets/77/bdv-am-77d8f822355fbf5b9109.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a0/bdv-am-a04e9568723a26c1759d.jpg" class="" aria-label="Klim Badlands PRO A3 Gore-Tex Korumalı Motosiklet Montu Mavi / Gri 5"><img src="/media/catalog/automoto/assets/a0/bdv-am-a04e9568723a26c1759d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ac/bdv-am-aca0c7a80b621906040c.jpg" class="" aria-label="Klim Badlands PRO A3 Gore-Tex Korumalı Motosiklet Montu Mavi / Gri 6"><img src="/media/catalog/automoto/assets/ac/bdv-am-aca0c7a80b621906040c.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

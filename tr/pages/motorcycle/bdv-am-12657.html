@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/23/bdv-am-23628101dfd99b0ca5ec.jpg" alt="Alpinestars CR-8 Gore-Tex Korumalı Motosiklet Botu Siyah / Koyu Gri" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/23/bdv-am-23628101dfd99b0ca5ec.jpg" alt="Alpinestars CR-8 Gore-Tex Korumalı Motosiklet Botu Siyah / Koyu Gri" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/23/bdv-am-23628101dfd99b0ca5ec.jpg" class="is-active" aria-label="Alpinestars CR-8 Gore-Tex Korumalı Motosiklet Botu Siyah / Koyu Gri 1"><img src="/media/catalog/automoto/assets/23/bdv-am-23628101dfd99b0ca5ec.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/53/bdv-am-53b9b8ef8c7721ba0f31.jpg" class="" aria-label="Alpinestars CR-8 Gore-Tex Korumalı Motosiklet Botu Siyah / Koyu Gri 2"><img src="/media/catalog/automoto/assets/53/bdv-am-53b9b8ef8c7721ba0f31.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/7e/bdv-am-7e725ffd9fc60fe0b5fb.jpg" class="" aria-label="Alpinestars CR-8 Gore-Tex Korumalı Motosiklet Botu Siyah / Koyu Gri 3"><img src="/media/catalog/automoto/assets/7e/bdv-am-7e725ffd9fc60fe0b5fb.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/83/bdv-am-83c18cd63b2c68beaae0.jpg" class="" aria-label="Alpinestars CR-8 Gore-Tex Korumalı Motosiklet Botu Siyah / Koyu Gri 4"><img src="/media/catalog/automoto/assets/83/bdv-am-83c18cd63b2c68beaae0.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/96/bdv-am-9639f02619442db0ab12.jpg" class="" aria-label="Alpinestars CR-8 Gore-Tex Korumalı Motosiklet Botu Siyah / Koyu Gri 5"><img src="/media/catalog/automoto/assets/96/bdv-am-9639f02619442db0ab12.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b2/bdv-am-b249aca043d08691a963.jpg" class="" aria-label="Alpinestars CR-8 Gore-Tex Korumalı Motosiklet Botu Siyah / Koyu Gri 6"><img src="/media/catalog/automoto/assets/b2/bdv-am-b249aca043d08691a963.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/cb/bdv-am-cb2ba860e024853aa250.jpg" class="" aria-label="Alpinestars CR-8 Gore-Tex Korumalı Motosiklet Botu Siyah / Koyu Gri 7"><img src="/media/catalog/automoto/assets/cb/bdv-am-cb2ba860e024853aa250.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

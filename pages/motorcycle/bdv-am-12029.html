@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/30/bdv-am-3001f33051787a5e43b9.jpg" alt="کلاه ایمنی موتورسیکلت Icon Airform Brozak MIPS تمام‌صورت قرمز / زرد" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/30/bdv-am-3001f33051787a5e43b9.jpg" alt="کلاه ایمنی موتورسیکلت Icon Airform Brozak MIPS تمام‌صورت قرمز / زرد" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/30/bdv-am-3001f33051787a5e43b9.jpg" class="is-active" aria-label="کلاه ایمنی موتورسیکلت Icon Airform Brozak MIPS تمام‌صورت قرمز / زرد 1"><img src="/media/catalog/automoto/assets/30/bdv-am-3001f33051787a5e43b9.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/4a/bdv-am-4a361d5d3bad30e2ad3d.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Icon Airform Brozak MIPS تمام‌صورت قرمز / زرد 2"><img src="/media/catalog/automoto/assets/4a/bdv-am-4a361d5d3bad30e2ad3d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/58/bdv-am-58d244522e69584b5274.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Icon Airform Brozak MIPS تمام‌صورت قرمز / زرد 3"><img src="/media/catalog/automoto/assets/58/bdv-am-58d244522e69584b5274.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/c3/bdv-am-c32c3459b029ffa9c424.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Icon Airform Brozak MIPS تمام‌صورت قرمز / زرد 4"><img src="/media/catalog/automoto/assets/c3/bdv-am-c32c3459b029ffa9c424.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

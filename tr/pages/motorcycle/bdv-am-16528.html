@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/27/bdv-am-27e3e5d83500e81e287c.jpg" alt="Knox Shield Hoody (AAA) Korumalı Kapüşonlu Kadın Motosiklet Montu Siyah" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/27/bdv-am-27e3e5d83500e81e287c.jpg" alt="Knox Shield Hoody (AAA) Korumalı Kapüşonlu Kadın Motosiklet Montu Siyah" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/27/bdv-am-27e3e5d83500e81e287c.jpg" class="is-active" aria-label="Knox Shield Hoody (AAA) Korumalı Kapüşonlu Kadın Motosiklet Montu Siyah 1"><img src="/media/catalog/automoto/assets/27/bdv-am-27e3e5d83500e81e287c.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/36/bdv-am-36518572aea747f1d608.jpg" class="" aria-label="Knox Shield Hoody (AAA) Korumalı Kapüşonlu Kadın Motosiklet Montu Siyah 2"><img src="/media/catalog/automoto/assets/36/bdv-am-36518572aea747f1d608.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b2/bdv-am-b2f919f9b0afdee0845e.jpg" class="" aria-label="Knox Shield Hoody (AAA) Korumalı Kapüşonlu Kadın Motosiklet Montu Siyah 3"><img src="/media/catalog/automoto/assets/b2/bdv-am-b2f919f9b0afdee0845e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e7/bdv-am-e7bd3816278f1e8da221.jpg" class="" aria-label="Knox Shield Hoody (AAA) Korumalı Kapüşonlu Kadın Motosiklet Montu Siyah 4"><img src="/media/catalog/automoto/assets/e7/bdv-am-e7bd3816278f1e8da221.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

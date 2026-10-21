@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/06/bdv-am-0692c28530e244d5099a.jpg" alt="شلوار موتورسیکلت Knox Urbane Pro MOVE محافظ‌دار مشکی" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/06/bdv-am-0692c28530e244d5099a.jpg" alt="شلوار موتورسیکلت Knox Urbane Pro MOVE محافظ‌دار مشکی" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/06/bdv-am-0692c28530e244d5099a.jpg" class="is-active" aria-label="شلوار موتورسیکلت Knox Urbane Pro MOVE محافظ‌دار مشکی 1"><img src="/media/catalog/automoto/assets/06/bdv-am-0692c28530e244d5099a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/10/bdv-am-10a156d4b3a5a40c2e39.jpg" class="" aria-label="شلوار موتورسیکلت Knox Urbane Pro MOVE محافظ‌دار مشکی 2"><img src="/media/catalog/automoto/assets/10/bdv-am-10a156d4b3a5a40c2e39.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/2e/bdv-am-2e9a6d8c58842d125f6d.jpg" class="" aria-label="شلوار موتورسیکلت Knox Urbane Pro MOVE محافظ‌دار مشکی 3"><img src="/media/catalog/automoto/assets/2e/bdv-am-2e9a6d8c58842d125f6d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/30/bdv-am-30cb5b1742c41cfdef08.jpg" class="" aria-label="شلوار موتورسیکلت Knox Urbane Pro MOVE محافظ‌دار مشکی 4"><img src="/media/catalog/automoto/assets/30/bdv-am-30cb5b1742c41cfdef08.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/8f/bdv-am-8fd96fadfcb4d0b27861.jpg" class="" aria-label="شلوار موتورسیکلت Knox Urbane Pro MOVE محافظ‌دار مشکی 5"><img src="/media/catalog/automoto/assets/8f/bdv-am-8fd96fadfcb4d0b27861.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/9f/bdv-am-9f2ed5e760a4f8fbda89.jpg" class="" aria-label="شلوار موتورسیکلت Knox Urbane Pro MOVE محافظ‌دار مشکی 6"><img src="/media/catalog/automoto/assets/9f/bdv-am-9f2ed5e760a4f8fbda89.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/cb/bdv-am-cb8c90588da64e7b9a6d.jpg" class="" aria-label="شلوار موتورسیکلت Knox Urbane Pro MOVE محافظ‌دار مشکی 7"><img src="/media/catalog/automoto/assets/cb/bdv-am-cb8c90588da64e7b9a6d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/d8/bdv-am-d878518b3c062df13add.jpg" class="" aria-label="شلوار موتورسیکلت Knox Urbane Pro MOVE محافظ‌دار مشکی 8"><img src="/media/catalog/automoto/assets/d8/bdv-am-d878518b3c062df13add.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ea/bdv-am-ea86315930595fb24210.jpg" class="" aria-label="شلوار موتورسیکلت Knox Urbane Pro MOVE محافظ‌دار مشکی 9"><img src="/media/catalog/automoto/assets/ea/bdv-am-ea86315930595fb24210.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f4/bdv-am-f4a12eaef2b694b82b2d.jpg" class="" aria-label="شلوار موتورسیکلت Knox Urbane Pro MOVE محافظ‌دار مشکی 10"><img src="/media/catalog/automoto/assets/f4/bdv-am-f4a12eaef2b694b82b2d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/fd/bdv-am-fd74d6701c0bb6d4cdcf.jpg" class="" aria-label="شلوار موتورسیکلت Knox Urbane Pro MOVE محافظ‌دار مشکی 11"><img src="/media/catalog/automoto/assets/fd/bdv-am-fd74d6701c0bb6d4cdcf.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

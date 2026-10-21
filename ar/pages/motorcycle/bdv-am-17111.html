@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/2d/bdv-am-2dfbbdec3ce970d89fc5.jpg" alt="Alpinestars AT-15 SıRt ÇAntası Grey / Blue" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/2d/bdv-am-2dfbbdec3ce970d89fc5.jpg" alt="Alpinestars AT-15 SıRt ÇAntası Grey / Blue" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/2d/bdv-am-2dfbbdec3ce970d89fc5.jpg" class="is-active" aria-label="Alpinestars AT-15 SıRt ÇAntası Grey / Blue 1"><img src="/media/catalog/automoto/assets/2d/bdv-am-2dfbbdec3ce970d89fc5.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/6f/bdv-am-6f6d934557745c04f5fa.jpg" class="" aria-label="Alpinestars AT-15 SıRt ÇAntası Grey / Blue 2"><img src="/media/catalog/automoto/assets/6f/bdv-am-6f6d934557745c04f5fa.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/87/bdv-am-87d55b20d44acd046c9e.jpg" class="" aria-label="Alpinestars AT-15 SıRt ÇAntası Grey / Blue 3"><img src="/media/catalog/automoto/assets/87/bdv-am-87d55b20d44acd046c9e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/d3/bdv-am-d39a5b159cbcdfd15c9b.jpg" class="" aria-label="Alpinestars AT-15 SıRt ÇAntası Grey / Blue 4"><img src="/media/catalog/automoto/assets/d3/bdv-am-d39a5b159cbcdfd15c9b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f0/bdv-am-f079fe2f9c299e800e24.jpg" class="" aria-label="Alpinestars AT-15 SıRt ÇAntası Grey / Blue 5"><img src="/media/catalog/automoto/assets/f0/bdv-am-f079fe2f9c299e800e24.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

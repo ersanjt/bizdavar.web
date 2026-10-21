@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/04/bdv-am-04efd99051ed4e8fd821.jpg" alt="Alpinestars Honda SMX-6 V3 Korumalı Motosiklet Botu Siyah / Kırmızı / Beyaz" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/04/bdv-am-04efd99051ed4e8fd821.jpg" alt="Alpinestars Honda SMX-6 V3 Korumalı Motosiklet Botu Siyah / Kırmızı / Beyaz" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/04/bdv-am-04efd99051ed4e8fd821.jpg" class="is-active" aria-label="Alpinestars Honda SMX-6 V3 Korumalı Motosiklet Botu Siyah / Kırmızı / Beyaz 1"><img src="/media/catalog/automoto/assets/04/bdv-am-04efd99051ed4e8fd821.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/25/bdv-am-259826784988c2992da0.jpg" class="" aria-label="Alpinestars Honda SMX-6 V3 Korumalı Motosiklet Botu Siyah / Kırmızı / Beyaz 2"><img src="/media/catalog/automoto/assets/25/bdv-am-259826784988c2992da0.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/26/bdv-am-269210348ad8173e5d6e.jpg" class="" aria-label="Alpinestars Honda SMX-6 V3 Korumalı Motosiklet Botu Siyah / Kırmızı / Beyaz 3"><img src="/media/catalog/automoto/assets/26/bdv-am-269210348ad8173e5d6e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/5e/bdv-am-5e83c510d3804ffb8d07.jpg" class="" aria-label="Alpinestars Honda SMX-6 V3 Korumalı Motosiklet Botu Siyah / Kırmızı / Beyaz 4"><img src="/media/catalog/automoto/assets/5e/bdv-am-5e83c510d3804ffb8d07.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/8e/bdv-am-8e053971ae8f81c3153c.jpg" class="" aria-label="Alpinestars Honda SMX-6 V3 Korumalı Motosiklet Botu Siyah / Kırmızı / Beyaz 5"><img src="/media/catalog/automoto/assets/8e/bdv-am-8e053971ae8f81c3153c.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/c9/bdv-am-c91d5c09125f1181ccff.jpg" class="" aria-label="Alpinestars Honda SMX-6 V3 Korumalı Motosiklet Botu Siyah / Kırmızı / Beyaz 6"><img src="/media/catalog/automoto/assets/c9/bdv-am-c91d5c09125f1181ccff.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e9/bdv-am-e9120a686e55112cc3c1.jpg" class="" aria-label="Alpinestars Honda SMX-6 V3 Korumalı Motosiklet Botu Siyah / Kırmızı / Beyaz 7"><img src="/media/catalog/automoto/assets/e9/bdv-am-e9120a686e55112cc3c1.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

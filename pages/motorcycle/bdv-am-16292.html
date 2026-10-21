@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/18/bdv-am-1816a4518648fe6d3729.jpg" alt="شلوار موتورسیکلت Alpinestars Racer Riway آفرود زرد / مشکی" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/18/bdv-am-1816a4518648fe6d3729.jpg" alt="شلوار موتورسیکلت Alpinestars Racer Riway آفرود زرد / مشکی" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/18/bdv-am-1816a4518648fe6d3729.jpg" class="is-active" aria-label="شلوار موتورسیکلت Alpinestars Racer Riway آفرود زرد / مشکی 1"><img src="/media/catalog/automoto/assets/18/bdv-am-1816a4518648fe6d3729.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/34/bdv-am-341fb5f68b19ab1decf1.jpg" class="" aria-label="شلوار موتورسیکلت Alpinestars Racer Riway آفرود زرد / مشکی 2"><img src="/media/catalog/automoto/assets/34/bdv-am-341fb5f68b19ab1decf1.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/47/bdv-am-47e54ffee39b71e39dd1.jpg" class="" aria-label="شلوار موتورسیکلت Alpinestars Racer Riway آفرود زرد / مشکی 3"><img src="/media/catalog/automoto/assets/47/bdv-am-47e54ffee39b71e39dd1.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/57/bdv-am-579ea68b992e18a91e4b.jpg" class="" aria-label="شلوار موتورسیکلت Alpinestars Racer Riway آفرود زرد / مشکی 4"><img src="/media/catalog/automoto/assets/57/bdv-am-579ea68b992e18a91e4b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/57/bdv-am-57d146890ee92903d473.jpg" class="" aria-label="شلوار موتورسیکلت Alpinestars Racer Riway آفرود زرد / مشکی 5"><img src="/media/catalog/automoto/assets/57/bdv-am-57d146890ee92903d473.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/5a/bdv-am-5ac6eb05f902c54b5dac.jpg" class="" aria-label="شلوار موتورسیکلت Alpinestars Racer Riway آفرود زرد / مشکی 6"><img src="/media/catalog/automoto/assets/5a/bdv-am-5ac6eb05f902c54b5dac.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b2/bdv-am-b28e14e2de2eaa869e36.jpg" class="" aria-label="شلوار موتورسیکلت Alpinestars Racer Riway آفرود زرد / مشکی 7"><img src="/media/catalog/automoto/assets/b2/bdv-am-b28e14e2de2eaa869e36.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b7/bdv-am-b7d419f9452fe7664687.jpg" class="" aria-label="شلوار موتورسیکلت Alpinestars Racer Riway آفرود زرد / مشکی 8"><img src="/media/catalog/automoto/assets/b7/bdv-am-b7d419f9452fe7664687.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/bb/bdv-am-bb0fb4ee553fa2ca1dac.jpg" class="" aria-label="شلوار موتورسیکلت Alpinestars Racer Riway آفرود زرد / مشکی 9"><img src="/media/catalog/automoto/assets/bb/bdv-am-bb0fb4ee553fa2ca1dac.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

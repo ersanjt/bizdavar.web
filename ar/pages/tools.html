@@ -195,27 +195,8 @@
   <div id="relatedLinks"></div>
   </main>
 
-  <script src="/assets/scripts/site-loader.js?v=20261020d" data-after-seo="i18n/tools-hub-i18n.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g" data-after-seo="i18n/tools-hub-i18n.js"></script>
 
-  <script>
-    bizdavarPageInit(function () {
-      const toolsLabel = window.BIZDAVAR_I18N ? window.BIZDAVAR_I18N.t('nav.tools', '') : '';
-      const crumbs = [
-        { page: 'home', url: 'index' },
-        { page: 'tools', url: 'pages/tools' }
-      ];
-      injectPageSeo('tools', {
-        canonical: 'https://bizdavar.com/pages/tools',
-        robots: 'index, follow, max-image-preview:large'
-      });
-      renderBreadcrumbs(crumbs);
-      injectBreadcrumbSchema(crumbs);
-      setupWhatsappLinks();
-      renderGeoStrip('geoStrip', { textKey: 'toolsPage.geoText' });
-      const related = window.BIZDAVAR_I18N && window.BIZDAVAR_I18N.raw('toolsPage.related');
-      if (Array.isArray(related)) renderRelatedLinks(related);
-      if (typeof window.initFreeTool === 'function') window.initFreeTool();
-    });
-  </script>
+  <script src="/assets/scripts/page-boot/6afdcfc914c850bc.js"></script>
 </body>
 </html>

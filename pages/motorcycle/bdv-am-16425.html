@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/0b/bdv-am-0b3f24c7bb0851fbb788.jpg" alt="کلاه ایمنی موتورسیکلت Klim X1 Alpha کربن محافظ‌دار ADV زرد / سفید" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/0b/bdv-am-0b3f24c7bb0851fbb788.jpg" alt="کلاه ایمنی موتورسیکلت Klim X1 Alpha کربن محافظ‌دار ADV زرد / سفید" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/0b/bdv-am-0b3f24c7bb0851fbb788.jpg" class="is-active" aria-label="کلاه ایمنی موتورسیکلت Klim X1 Alpha کربن محافظ‌دار ADV زرد / سفید 1"><img src="/media/catalog/automoto/assets/0b/bdv-am-0b3f24c7bb0851fbb788.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/22/bdv-am-22469a5866d18d34a305.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim X1 Alpha کربن محافظ‌دار ADV زرد / سفید 2"><img src="/media/catalog/automoto/assets/22/bdv-am-22469a5866d18d34a305.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/35/bdv-am-3573f56045d9f3ec12aa.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim X1 Alpha کربن محافظ‌دار ADV زرد / سفید 3"><img src="/media/catalog/automoto/assets/35/bdv-am-3573f56045d9f3ec12aa.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/3d/bdv-am-3de0c708cd0c3d2a77a1.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim X1 Alpha کربن محافظ‌دار ADV زرد / سفید 4"><img src="/media/catalog/automoto/assets/3d/bdv-am-3de0c708cd0c3d2a77a1.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/68/bdv-am-68c9ecd3e5226bb326a2.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim X1 Alpha کربن محافظ‌دار ADV زرد / سفید 5"><img src="/media/catalog/automoto/assets/68/bdv-am-68c9ecd3e5226bb326a2.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/73/bdv-am-737def58787def3adb81.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim X1 Alpha کربن محافظ‌دار ADV زرد / سفید 6"><img src="/media/catalog/automoto/assets/73/bdv-am-737def58787def3adb81.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/88/bdv-am-88528c53c60366627339.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim X1 Alpha کربن محافظ‌دار ADV زرد / سفید 7"><img src="/media/catalog/automoto/assets/88/bdv-am-88528c53c60366627339.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b6/bdv-am-b6d091f202306e04ecd3.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim X1 Alpha کربن محافظ‌دار ADV زرد / سفید 8"><img src="/media/catalog/automoto/assets/b6/bdv-am-b6d091f202306e04ecd3.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

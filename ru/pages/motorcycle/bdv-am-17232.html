@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/2e/bdv-am-2eee39042135d7579a4d.jpg" alt="Knox Tor Protective Women Motorcycle Jacket Grey" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/2e/bdv-am-2eee39042135d7579a4d.jpg" alt="Knox Tor Protective Women Motorcycle Jacket Grey" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/2e/bdv-am-2eee39042135d7579a4d.jpg" class="is-active" aria-label="Knox Tor Protective Women Motorcycle Jacket Grey 1"><img src="/media/catalog/automoto/assets/2e/bdv-am-2eee39042135d7579a4d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/44/bdv-am-442ed13242c141fa696a.jpg" class="" aria-label="Knox Tor Protective Women Motorcycle Jacket Grey 2"><img src="/media/catalog/automoto/assets/44/bdv-am-442ed13242c141fa696a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/4a/bdv-am-4a542003b3ffe756e2df.jpg" class="" aria-label="Knox Tor Protective Women Motorcycle Jacket Grey 3"><img src="/media/catalog/automoto/assets/4a/bdv-am-4a542003b3ffe756e2df.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/5b/bdv-am-5b5e5cd8ba64fb9b1abe.jpg" class="" aria-label="Knox Tor Protective Women Motorcycle Jacket Grey 4"><img src="/media/catalog/automoto/assets/5b/bdv-am-5b5e5cd8ba64fb9b1abe.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a1/bdv-am-a1ecee21cdb56a6f11d5.jpg" class="" aria-label="Knox Tor Protective Women Motorcycle Jacket Grey 5"><img src="/media/catalog/automoto/assets/a1/bdv-am-a1ecee21cdb56a6f11d5.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/c1/bdv-am-c1a1382b5e07a7ea257b.jpg" class="" aria-label="Knox Tor Protective Women Motorcycle Jacket Grey 6"><img src="/media/catalog/automoto/assets/c1/bdv-am-c1a1382b5e07a7ea257b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/eb/bdv-am-eb71e28f3e477d20b523.jpg" class="" aria-label="Knox Tor Protective Women Motorcycle Jacket Grey 7"><img src="/media/catalog/automoto/assets/eb/bdv-am-eb71e28f3e477d20b523.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

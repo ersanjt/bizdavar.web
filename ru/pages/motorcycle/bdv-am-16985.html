@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/30/bdv-am-3045f71e9c7a1aa14cb9.jpg" alt="Alpinestars Maxdura DS XF Protective Motorcycle Jacket Dark Grey / Black" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/30/bdv-am-3045f71e9c7a1aa14cb9.jpg" alt="Alpinestars Maxdura DS XF Protective Motorcycle Jacket Dark Grey / Black" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/30/bdv-am-3045f71e9c7a1aa14cb9.jpg" class="is-active" aria-label="Alpinestars Maxdura DS XF Protective Motorcycle Jacket Dark Grey / Black 1"><img src="/media/catalog/automoto/assets/30/bdv-am-3045f71e9c7a1aa14cb9.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/41/bdv-am-41871eaa18fac6efa5ff.jpg" class="" aria-label="Alpinestars Maxdura DS XF Protective Motorcycle Jacket Dark Grey / Black 2"><img src="/media/catalog/automoto/assets/41/bdv-am-41871eaa18fac6efa5ff.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b5/bdv-am-b5c26322dc2bec3e5bc5.jpg" class="" aria-label="Alpinestars Maxdura DS XF Protective Motorcycle Jacket Dark Grey / Black 3"><img src="/media/catalog/automoto/assets/b5/bdv-am-b5c26322dc2bec3e5bc5.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b8/bdv-am-b80de42bec3ae5a6b639.jpg" class="" aria-label="Alpinestars Maxdura DS XF Protective Motorcycle Jacket Dark Grey / Black 4"><img src="/media/catalog/automoto/assets/b8/bdv-am-b80de42bec3ae5a6b639.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/be/bdv-am-bec3a8b6cb8174dc0796.jpg" class="" aria-label="Alpinestars Maxdura DS XF Protective Motorcycle Jacket Dark Grey / Black 5"><img src="/media/catalog/automoto/assets/be/bdv-am-bec3a8b6cb8174dc0796.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/bf/bdv-am-bfe80435ce9a8917ed9f.jpg" class="" aria-label="Alpinestars Maxdura DS XF Protective Motorcycle Jacket Dark Grey / Black 6"><img src="/media/catalog/automoto/assets/bf/bdv-am-bfe80435ce9a8917ed9f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/c6/bdv-am-c66a0e70e75d95004035.jpg" class="" aria-label="Alpinestars Maxdura DS XF Protective Motorcycle Jacket Dark Grey / Black 7"><img src="/media/catalog/automoto/assets/c6/bdv-am-c66a0e70e75d95004035.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

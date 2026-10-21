@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/14/bdv-am-1447331c88c4cbc7e76c.jpg" alt="Alpinestars Stella Stated Podium Korumalı Kadın Motosiklet Botu Siyah" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/14/bdv-am-1447331c88c4cbc7e76c.jpg" alt="Alpinestars Stella Stated Podium Korumalı Kadın Motosiklet Botu Siyah" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/14/bdv-am-1447331c88c4cbc7e76c.jpg" class="is-active" aria-label="Alpinestars Stella Stated Podium Korumalı Kadın Motosiklet Botu Siyah 1"><img src="/media/catalog/automoto/assets/14/bdv-am-1447331c88c4cbc7e76c.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/40/bdv-am-407e8db8845e4d920147.jpg" class="" aria-label="Alpinestars Stella Stated Podium Korumalı Kadın Motosiklet Botu Siyah 2"><img src="/media/catalog/automoto/assets/40/bdv-am-407e8db8845e4d920147.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/43/bdv-am-438682792e68afbaa87b.jpg" class="" aria-label="Alpinestars Stella Stated Podium Korumalı Kadın Motosiklet Botu Siyah 3"><img src="/media/catalog/automoto/assets/43/bdv-am-438682792e68afbaa87b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/4a/bdv-am-4ab09038c1d605fbec3e.jpg" class="" aria-label="Alpinestars Stella Stated Podium Korumalı Kadın Motosiklet Botu Siyah 4"><img src="/media/catalog/automoto/assets/4a/bdv-am-4ab09038c1d605fbec3e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/61/bdv-am-618179808c4df8add248.jpg" class="" aria-label="Alpinestars Stella Stated Podium Korumalı Kadın Motosiklet Botu Siyah 5"><img src="/media/catalog/automoto/assets/61/bdv-am-618179808c4df8add248.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ae/bdv-am-aeb1df857f1fc02feb1f.jpg" class="" aria-label="Alpinestars Stella Stated Podium Korumalı Kadın Motosiklet Botu Siyah 6"><img src="/media/catalog/automoto/assets/ae/bdv-am-aeb1df857f1fc02feb1f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/d5/bdv-am-d58c5bfdba2b98703374.jpg" class="" aria-label="Alpinestars Stella Stated Podium Korumalı Kadın Motosiklet Botu Siyah 7"><img src="/media/catalog/automoto/assets/d5/bdv-am-d58c5bfdba2b98703374.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

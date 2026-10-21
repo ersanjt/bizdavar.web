@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/05/bdv-am-0562c753b81ad1275843.jpg" alt="Torc T-50 Del Mar Captain Vegas Açık Motosiklet Kaskı Beyaz" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/05/bdv-am-0562c753b81ad1275843.jpg" alt="Torc T-50 Del Mar Captain Vegas Açık Motosiklet Kaskı Beyaz" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/05/bdv-am-0562c753b81ad1275843.jpg" class="is-active" aria-label="Torc T-50 Del Mar Captain Vegas Açık Motosiklet Kaskı Beyaz 1"><img src="/media/catalog/automoto/assets/05/bdv-am-0562c753b81ad1275843.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/08/bdv-am-0811a02c19c450b3837f.jpg" class="" aria-label="Torc T-50 Del Mar Captain Vegas Açık Motosiklet Kaskı Beyaz 2"><img src="/media/catalog/automoto/assets/08/bdv-am-0811a02c19c450b3837f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/36/bdv-am-36ef890df842928cec84.jpg" class="" aria-label="Torc T-50 Del Mar Captain Vegas Açık Motosiklet Kaskı Beyaz 3"><img src="/media/catalog/automoto/assets/36/bdv-am-36ef890df842928cec84.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/4e/bdv-am-4e22933d2a6b235d8776.jpg" class="" aria-label="Torc T-50 Del Mar Captain Vegas Açık Motosiklet Kaskı Beyaz 4"><img src="/media/catalog/automoto/assets/4e/bdv-am-4e22933d2a6b235d8776.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/52/bdv-am-52adcb7f7a45d4ac5fd7.jpg" class="" aria-label="Torc T-50 Del Mar Captain Vegas Açık Motosiklet Kaskı Beyaz 5"><img src="/media/catalog/automoto/assets/52/bdv-am-52adcb7f7a45d4ac5fd7.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/63/bdv-am-630f52393469290440e4.jpg" class="" aria-label="Torc T-50 Del Mar Captain Vegas Açık Motosiklet Kaskı Beyaz 6"><img src="/media/catalog/automoto/assets/63/bdv-am-630f52393469290440e4.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/78/bdv-am-7820fae060eff54638dc.jpg" class="" aria-label="Torc T-50 Del Mar Captain Vegas Açık Motosiklet Kaskı Beyaz 7"><img src="/media/catalog/automoto/assets/78/bdv-am-7820fae060eff54638dc.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b4/bdv-am-b478b81dc660e3b252c5.jpg" class="" aria-label="Torc T-50 Del Mar Captain Vegas Açık Motosiklet Kaskı Beyaz 8"><img src="/media/catalog/automoto/assets/b4/bdv-am-b478b81dc660e3b252c5.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/32/bdv-am-32a5370e14c90fa7a664.jpg" alt="لوازم جانبی موتور Klim Aggressor 3.0 Sıcak بالا لباس زیر مشکی" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/32/bdv-am-32a5370e14c90fa7a664.jpg" alt="لوازم جانبی موتور Klim Aggressor 3.0 Sıcak بالا لباس زیر مشکی" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/32/bdv-am-32a5370e14c90fa7a664.jpg" class="is-active" aria-label="لوازم جانبی موتور Klim Aggressor 3.0 Sıcak بالا لباس زیر مشکی 1"><img src="/media/catalog/automoto/assets/32/bdv-am-32a5370e14c90fa7a664.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/3d/bdv-am-3d8e5abe059afeb8190d.jpg" class="" aria-label="لوازم جانبی موتور Klim Aggressor 3.0 Sıcak بالا لباس زیر مشکی 2"><img src="/media/catalog/automoto/assets/3d/bdv-am-3d8e5abe059afeb8190d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/54/bdv-am-542f26c736299dd9a2fb.jpg" class="" aria-label="لوازم جانبی موتور Klim Aggressor 3.0 Sıcak بالا لباس زیر مشکی 3"><img src="/media/catalog/automoto/assets/54/bdv-am-542f26c736299dd9a2fb.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/85/bdv-am-85d5db6fd76e044f4956.jpg" class="" aria-label="لوازم جانبی موتور Klim Aggressor 3.0 Sıcak بالا لباس زیر مشکی 4"><img src="/media/catalog/automoto/assets/85/bdv-am-85d5db6fd76e044f4956.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/98/bdv-am-983fbe363bfc248bc525.jpg" class="" aria-label="لوازم جانبی موتور Klim Aggressor 3.0 Sıcak بالا لباس زیر مشکی 5"><img src="/media/catalog/automoto/assets/98/bdv-am-983fbe363bfc248bc525.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/9a/bdv-am-9a659cc7df17477d7c78.jpg" class="" aria-label="لوازم جانبی موتور Klim Aggressor 3.0 Sıcak بالا لباس زیر مشکی 6"><img src="/media/catalog/automoto/assets/9a/bdv-am-9a659cc7df17477d7c78.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

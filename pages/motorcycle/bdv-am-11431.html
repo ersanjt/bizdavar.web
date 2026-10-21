@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/90/bdv-am-908f1adcf992623385bd.jpg" alt="پوشاک روزمره موتور Alpinestars Many CS SS تیشرت مشکی" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/90/bdv-am-908f1adcf992623385bd.jpg" alt="پوشاک روزمره موتور Alpinestars Many CS SS تیشرت مشکی" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/90/bdv-am-908f1adcf992623385bd.jpg" class="is-active" aria-label="پوشاک روزمره موتور Alpinestars Many CS SS تیشرت مشکی 1"><img src="/media/catalog/automoto/assets/90/bdv-am-908f1adcf992623385bd.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/92/bdv-am-925327cbed78574b33cb.jpg" class="" aria-label="پوشاک روزمره موتور Alpinestars Many CS SS تیشرت مشکی 2"><img src="/media/catalog/automoto/assets/92/bdv-am-925327cbed78574b33cb.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b7/bdv-am-b750da47508ab10d063d.jpg" class="" aria-label="پوشاک روزمره موتور Alpinestars Many CS SS تیشرت مشکی 3"><img src="/media/catalog/automoto/assets/b7/bdv-am-b750da47508ab10d063d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/bc/bdv-am-bc18b4e24b1537014acd.jpg" class="" aria-label="پوشاک روزمره موتور Alpinestars Many CS SS تیشرت مشکی 4"><img src="/media/catalog/automoto/assets/bc/bdv-am-bc18b4e24b1537014acd.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/d8/bdv-am-d82473319e11b59f73fb.jpg" class="" aria-label="پوشاک روزمره موتور Alpinestars Many CS SS تیشرت مشکی 5"><img src="/media/catalog/automoto/assets/d8/bdv-am-d82473319e11b59f73fb.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ee/bdv-am-eecd04bb98cf3575a14f.jpg" class="" aria-label="پوشاک روزمره موتور Alpinestars Many CS SS تیشرت مشکی 6"><img src="/media/catalog/automoto/assets/ee/bdv-am-eecd04bb98cf3575a14f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ef/bdv-am-efeb5ee5245e857eae1b.jpg" class="" aria-label="پوشاک روزمره موتور Alpinestars Many CS SS تیشرت مشکی 7"><img src="/media/catalog/automoto/assets/ef/bdv-am-efeb5ee5245e857eae1b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

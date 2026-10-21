@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/02/bdv-am-02db15ea0f39d9862815.jpg" alt="قطعات موتورسیکلت Sp Connect Pro Yapışkanlı اتصال" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/02/bdv-am-02db15ea0f39d9862815.jpg" alt="قطعات موتورسیکلت Sp Connect Pro Yapışkanlı اتصال" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/02/bdv-am-02db15ea0f39d9862815.jpg" class="is-active" aria-label="قطعات موتورسیکلت Sp Connect Pro Yapışkanlı اتصال 1"><img src="/media/catalog/automoto/assets/02/bdv-am-02db15ea0f39d9862815.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/04/bdv-am-04f7cfbfe16d124c7593.jpg" class="" aria-label="قطعات موتورسیکلت Sp Connect Pro Yapışkanlı اتصال 2"><img src="/media/catalog/automoto/assets/04/bdv-am-04f7cfbfe16d124c7593.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/21/bdv-am-210d069d224390f0c27b.jpg" class="" aria-label="قطعات موتورسیکلت Sp Connect Pro Yapışkanlı اتصال 3"><img src="/media/catalog/automoto/assets/21/bdv-am-210d069d224390f0c27b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/29/bdv-am-295b14f0c6a7f6953c87.jpg" class="" aria-label="قطعات موتورسیکلت Sp Connect Pro Yapışkanlı اتصال 4"><img src="/media/catalog/automoto/assets/29/bdv-am-295b14f0c6a7f6953c87.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/8a/bdv-am-8adacea14f51d828c27d.jpg" class="" aria-label="قطعات موتورسیکلت Sp Connect Pro Yapışkanlı اتصال 5"><img src="/media/catalog/automoto/assets/8a/bdv-am-8adacea14f51d828c27d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b5/bdv-am-b5e82a302785ae1962b3.jpg" class="" aria-label="قطعات موتورسیکلت Sp Connect Pro Yapışkanlı اتصال 6"><img src="/media/catalog/automoto/assets/b5/bdv-am-b5e82a302785ae1962b3.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/c4/bdv-am-c417fa1ecb3958c82ebd.jpg" class="" aria-label="قطعات موتورسیکلت Sp Connect Pro Yapışkanlı اتصال 7"><img src="/media/catalog/automoto/assets/c4/bdv-am-c417fa1ecb3958c82ebd.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

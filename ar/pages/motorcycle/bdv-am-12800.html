@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/13/bdv-am-13be9d16e3e69813a5bf.jpg" alt="Alpinestars Stella T-Dyno Air Protective Women Motorcycle Jacket Black / Red" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/13/bdv-am-13be9d16e3e69813a5bf.jpg" alt="Alpinestars Stella T-Dyno Air Protective Women Motorcycle Jacket Black / Red" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/13/bdv-am-13be9d16e3e69813a5bf.jpg" class="is-active" aria-label="Alpinestars Stella T-Dyno Air Protective Women Motorcycle Jacket Black / Red 1"><img src="/media/catalog/automoto/assets/13/bdv-am-13be9d16e3e69813a5bf.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/18/bdv-am-18ec5af5940432da146f.jpg" class="" aria-label="Alpinestars Stella T-Dyno Air Protective Women Motorcycle Jacket Black / Red 2"><img src="/media/catalog/automoto/assets/18/bdv-am-18ec5af5940432da146f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/78/bdv-am-7811b049cb573ee98cd8.jpg" class="" aria-label="Alpinestars Stella T-Dyno Air Protective Women Motorcycle Jacket Black / Red 3"><img src="/media/catalog/automoto/assets/78/bdv-am-7811b049cb573ee98cd8.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/7b/bdv-am-7b71b3e90f90c0f9c8d7.jpg" class="" aria-label="Alpinestars Stella T-Dyno Air Protective Women Motorcycle Jacket Black / Red 4"><img src="/media/catalog/automoto/assets/7b/bdv-am-7b71b3e90f90c0f9c8d7.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/8f/bdv-am-8f593ad7cf1b3eed1de2.jpg" class="" aria-label="Alpinestars Stella T-Dyno Air Protective Women Motorcycle Jacket Black / Red 5"><img src="/media/catalog/automoto/assets/8f/bdv-am-8f593ad7cf1b3eed1de2.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a5/bdv-am-a5ccbd7c743467caa4bb.jpg" class="" aria-label="Alpinestars Stella T-Dyno Air Protective Women Motorcycle Jacket Black / Red 6"><img src="/media/catalog/automoto/assets/a5/bdv-am-a5ccbd7c743467caa4bb.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b7/bdv-am-b7bbb2308ea49a73954d.jpg" class="" aria-label="Alpinestars Stella T-Dyno Air Protective Women Motorcycle Jacket Black / Red 7"><img src="/media/catalog/automoto/assets/b7/bdv-am-b7bbb2308ea49a73954d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b8/bdv-am-b820deba0b068e96464b.jpg" class="" aria-label="Alpinestars Stella T-Dyno Air Protective Women Motorcycle Jacket Black / Red 8"><img src="/media/catalog/automoto/assets/b8/bdv-am-b820deba0b068e96464b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ff/bdv-am-ffaadd030ae2c44b9647.jpg" class="" aria-label="Alpinestars Stella T-Dyno Air Protective Women Motorcycle Jacket Black / Red 9"><img src="/media/catalog/automoto/assets/ff/bdv-am-ffaadd030ae2c44b9647.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

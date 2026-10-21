@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/62/bdv-am-62393b0bf07ed25faed1.jpg" alt="Icon Airflite Edo MIPS Kapalı Motorcycle Helmet Black / Blue / Grey / Turuncu" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/62/bdv-am-62393b0bf07ed25faed1.jpg" alt="Icon Airflite Edo MIPS Kapalı Motorcycle Helmet Black / Blue / Grey / Turuncu" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/62/bdv-am-62393b0bf07ed25faed1.jpg" class="is-active" aria-label="Icon Airflite Edo MIPS Kapalı Motorcycle Helmet Black / Blue / Grey / Turuncu 1"><img src="/media/catalog/automoto/assets/62/bdv-am-62393b0bf07ed25faed1.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/8e/bdv-am-8ee10f38d62a808026e6.jpg" class="" aria-label="Icon Airflite Edo MIPS Kapalı Motorcycle Helmet Black / Blue / Grey / Turuncu 2"><img src="/media/catalog/automoto/assets/8e/bdv-am-8ee10f38d62a808026e6.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b2/bdv-am-b2c38f8ccbc9ab6989a5.jpg" class="" aria-label="Icon Airflite Edo MIPS Kapalı Motorcycle Helmet Black / Blue / Grey / Turuncu 3"><img src="/media/catalog/automoto/assets/b2/bdv-am-b2c38f8ccbc9ab6989a5.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/cb/bdv-am-cb5db059c5d56648a966.jpg" class="" aria-label="Icon Airflite Edo MIPS Kapalı Motorcycle Helmet Black / Blue / Grey / Turuncu 4"><img src="/media/catalog/automoto/assets/cb/bdv-am-cb5db059c5d56648a966.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/cc/bdv-am-cc67179af79492d33d9f.jpg" class="" aria-label="Icon Airflite Edo MIPS Kapalı Motorcycle Helmet Black / Blue / Grey / Turuncu 5"><img src="/media/catalog/automoto/assets/cc/bdv-am-cc67179af79492d33d9f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/eb/bdv-am-eb6fd3d68d38a76836f0.jpg" class="" aria-label="Icon Airflite Edo MIPS Kapalı Motorcycle Helmet Black / Blue / Grey / Turuncu 6"><img src="/media/catalog/automoto/assets/eb/bdv-am-eb6fd3d68d38a76836f0.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

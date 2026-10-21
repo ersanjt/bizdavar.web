@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/21/bdv-am-21e70685a5cfc42eeaa9.jpg" alt="کلاه ایمنی موتورسیکلت Alpinestars S-M7 Core آفرود کلاه ایمنی آبی / سفید / نارنجی" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/21/bdv-am-21e70685a5cfc42eeaa9.jpg" alt="کلاه ایمنی موتورسیکلت Alpinestars S-M7 Core آفرود کلاه ایمنی آبی / سفید / نارنجی" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/21/bdv-am-21e70685a5cfc42eeaa9.jpg" class="is-active" aria-label="کلاه ایمنی موتورسیکلت Alpinestars S-M7 Core آفرود کلاه ایمنی آبی / سفید / نارنجی 1"><img src="/media/catalog/automoto/assets/21/bdv-am-21e70685a5cfc42eeaa9.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/39/bdv-am-39ee7cb3af3ba2454160.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Alpinestars S-M7 Core آفرود کلاه ایمنی آبی / سفید / نارنجی 2"><img src="/media/catalog/automoto/assets/39/bdv-am-39ee7cb3af3ba2454160.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/81/bdv-am-81dc8df17e20c316caea.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Alpinestars S-M7 Core آفرود کلاه ایمنی آبی / سفید / نارنجی 3"><img src="/media/catalog/automoto/assets/81/bdv-am-81dc8df17e20c316caea.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/c0/bdv-am-c07d206b48f80b5e30b2.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Alpinestars S-M7 Core آفرود کلاه ایمنی آبی / سفید / نارنجی 4"><img src="/media/catalog/automoto/assets/c0/bdv-am-c07d206b48f80b5e30b2.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/cb/bdv-am-cb91d6998700a22caded.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Alpinestars S-M7 Core آفرود کلاه ایمنی آبی / سفید / نارنجی 5"><img src="/media/catalog/automoto/assets/cb/bdv-am-cb91d6998700a22caded.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/fa/bdv-am-faa7909a1ffb9ef9f160.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Alpinestars S-M7 Core آفرود کلاه ایمنی آبی / سفید / نارنجی 6"><img src="/media/catalog/automoto/assets/fa/bdv-am-faa7909a1ffb9ef9f160.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/fd/bdv-am-fd9a73a7a20954599a5a.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Alpinestars S-M7 Core آفرود کلاه ایمنی آبی / سفید / نارنجی 7"><img src="/media/catalog/automoto/assets/fd/bdv-am-fd9a73a7a20954599a5a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

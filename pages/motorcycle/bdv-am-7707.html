@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/0f/bdv-am-0f4b85627d1f0f9229bb.jpg" alt="قطعات موتورسیکلت Sp Connect iPhone 11 Pro روغنmur کاور" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/0f/bdv-am-0f4b85627d1f0f9229bb.jpg" alt="قطعات موتورسیکلت Sp Connect iPhone 11 Pro روغنmur کاور" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/0f/bdv-am-0f4b85627d1f0f9229bb.jpg" class="is-active" aria-label="قطعات موتورسیکلت Sp Connect iPhone 11 Pro روغنmur کاور 1"><img src="/media/catalog/automoto/assets/0f/bdv-am-0f4b85627d1f0f9229bb.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/78/bdv-am-78f00763021bce3780d0.jpg" class="" aria-label="قطعات موتورسیکلت Sp Connect iPhone 11 Pro روغنmur کاور 2"><img src="/media/catalog/automoto/assets/78/bdv-am-78f00763021bce3780d0.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/cd/bdv-am-cdf08e1fa08e002e8a70.jpg" class="" aria-label="قطعات موتورسیکلت Sp Connect iPhone 11 Pro روغنmur کاور 3"><img src="/media/catalog/automoto/assets/cd/bdv-am-cdf08e1fa08e002e8a70.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e0/bdv-am-e093bad5c018fce6fae2.jpg" class="" aria-label="قطعات موتورسیکلت Sp Connect iPhone 11 Pro روغنmur کاور 4"><img src="/media/catalog/automoto/assets/e0/bdv-am-e093bad5c018fce6fae2.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/fd/bdv-am-fd8c340b885a5d4b4387.jpg" class="" aria-label="قطعات موتورسیکلت Sp Connect iPhone 11 Pro روغنmur کاور 5"><img src="/media/catalog/automoto/assets/fd/bdv-am-fd8c340b885a5d4b4387.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

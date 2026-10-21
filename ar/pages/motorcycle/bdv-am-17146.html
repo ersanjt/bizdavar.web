@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/01/bdv-am-01e9ea82214a422a64e7.jpg" alt="Torc Malibu Horizon Kapalı Motorcycle Helmet Black / White" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/01/bdv-am-01e9ea82214a422a64e7.jpg" alt="Torc Malibu Horizon Kapalı Motorcycle Helmet Black / White" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/01/bdv-am-01e9ea82214a422a64e7.jpg" class="is-active" aria-label="Torc Malibu Horizon Kapalı Motorcycle Helmet Black / White 1"><img src="/media/catalog/automoto/assets/01/bdv-am-01e9ea82214a422a64e7.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/35/bdv-am-357f8f5304b23250f129.jpg" class="" aria-label="Torc Malibu Horizon Kapalı Motorcycle Helmet Black / White 2"><img src="/media/catalog/automoto/assets/35/bdv-am-357f8f5304b23250f129.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/45/bdv-am-4552ee418affa688800c.jpg" class="" aria-label="Torc Malibu Horizon Kapalı Motorcycle Helmet Black / White 3"><img src="/media/catalog/automoto/assets/45/bdv-am-4552ee418affa688800c.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/55/bdv-am-55ab23d8f5e7a90493e2.jpg" class="" aria-label="Torc Malibu Horizon Kapalı Motorcycle Helmet Black / White 4"><img src="/media/catalog/automoto/assets/55/bdv-am-55ab23d8f5e7a90493e2.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/bb/bdv-am-bba6f83e9d63f54f496e.jpg" class="" aria-label="Torc Malibu Horizon Kapalı Motorcycle Helmet Black / White 5"><img src="/media/catalog/automoto/assets/bb/bdv-am-bba6f83e9d63f54f496e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/fa/bdv-am-fa30dea26a87c121a3d9.jpg" class="" aria-label="Torc Malibu Horizon Kapalı Motorcycle Helmet Black / White 6"><img src="/media/catalog/automoto/assets/fa/bdv-am-fa30dea26a87c121a3d9.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

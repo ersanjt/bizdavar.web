@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/49/bdv-am-4901bf84dc15bd69ce7e.jpg" alt="کلاه ایمنی موتورسیکلت Klim F3 Tilt کربن Pro کراس سبز" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/49/bdv-am-4901bf84dc15bd69ce7e.jpg" alt="کلاه ایمنی موتورسیکلت Klim F3 Tilt کربن Pro کراس سبز" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/49/bdv-am-4901bf84dc15bd69ce7e.jpg" class="is-active" aria-label="کلاه ایمنی موتورسیکلت Klim F3 Tilt کربن Pro کراس سبز 1"><img src="/media/catalog/automoto/assets/49/bdv-am-4901bf84dc15bd69ce7e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/49/bdv-am-49ffc73e3db80fda5142.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim F3 Tilt کربن Pro کراس سبز 2"><img src="/media/catalog/automoto/assets/49/bdv-am-49ffc73e3db80fda5142.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/55/bdv-am-55abfe64c60ff6aff7e9.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim F3 Tilt کربن Pro کراس سبز 3"><img src="/media/catalog/automoto/assets/55/bdv-am-55abfe64c60ff6aff7e9.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/9a/bdv-am-9ae052e0920c82e37e13.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim F3 Tilt کربن Pro کراس سبز 4"><img src="/media/catalog/automoto/assets/9a/bdv-am-9ae052e0920c82e37e13.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a0/bdv-am-a089a653b9717826c98e.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim F3 Tilt کربن Pro کراس سبز 5"><img src="/media/catalog/automoto/assets/a0/bdv-am-a089a653b9717826c98e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/be/bdv-am-be423b04a17ab2544110.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim F3 Tilt کربن Pro کراس سبز 6"><img src="/media/catalog/automoto/assets/be/bdv-am-be423b04a17ab2544110.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e7/bdv-am-e7632f9f7b44f6755319.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim F3 Tilt کربن Pro کراس سبز 7"><img src="/media/catalog/automoto/assets/e7/bdv-am-e7632f9f7b44f6755319.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f2/bdv-am-f2189f5cdf8e49cba21a.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim F3 Tilt کربن Pro کراس سبز 8"><img src="/media/catalog/automoto/assets/f2/bdv-am-f2189f5cdf8e49cba21a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

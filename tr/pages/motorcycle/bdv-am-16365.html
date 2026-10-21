@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/10/bdv-am-10977186b97044e21754.jpg" alt="Torc T-1 Newport Cali Iridecent Kapalı Motosiklet Kaskı Turkuaz" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/10/bdv-am-10977186b97044e21754.jpg" alt="Torc T-1 Newport Cali Iridecent Kapalı Motosiklet Kaskı Turkuaz" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/10/bdv-am-10977186b97044e21754.jpg" class="is-active" aria-label="Torc T-1 Newport Cali Iridecent Kapalı Motosiklet Kaskı Turkuaz 1"><img src="/media/catalog/automoto/assets/10/bdv-am-10977186b97044e21754.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/58/bdv-am-5894e56213e78f8a8655.jpg" class="" aria-label="Torc T-1 Newport Cali Iridecent Kapalı Motosiklet Kaskı Turkuaz 2"><img src="/media/catalog/automoto/assets/58/bdv-am-5894e56213e78f8a8655.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/6b/bdv-am-6b4b40ca911c4689d018.jpg" class="" aria-label="Torc T-1 Newport Cali Iridecent Kapalı Motosiklet Kaskı Turkuaz 3"><img src="/media/catalog/automoto/assets/6b/bdv-am-6b4b40ca911c4689d018.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/aa/bdv-am-aa2622c4c14ffbe2783e.jpg" class="" aria-label="Torc T-1 Newport Cali Iridecent Kapalı Motosiklet Kaskı Turkuaz 4"><img src="/media/catalog/automoto/assets/aa/bdv-am-aa2622c4c14ffbe2783e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b5/bdv-am-b5a92adecace5c5b6a32.jpg" class="" aria-label="Torc T-1 Newport Cali Iridecent Kapalı Motosiklet Kaskı Turkuaz 5"><img src="/media/catalog/automoto/assets/b5/bdv-am-b5a92adecace5c5b6a32.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

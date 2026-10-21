@@ -116,7 +116,7 @@
       const portrait = it.portrait ? ' photo-gallery-card--portrait' : '';
       return '<figure class="photo-gallery-card' + portrait + '" data-gallery-id="' + esc(it.id) + '" data-gallery-cat="' + esc(it.cat) + '">' +
         '<a href="' + esc(asset(it.src)) + '" class="photo-gallery-card__open" aria-label="' + esc(alt) + '">' +
-        '<img src="' + esc(asset(thumb(it.src))) + '" alt="' + esc(alt) + '" width="800" height="600" loading="lazy" onerror="this.onerror=null;this.src=\'' + esc(asset(it.src)) + '\'">' +
+        '<img src="' + esc(asset(thumb(it.src))) + '" alt="' + esc(alt) + '" width="800" height="600" loading="lazy" data-fallback="' + esc(asset(it.src)) + '">' +
         '</a>' +
         (caption ? '<figcaption>' + esc(caption) + '</figcaption>' : '') +
         '</figure>';

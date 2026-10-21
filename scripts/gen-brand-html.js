@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { bootTag } = require('./lib/page-boot-tag');
 
 function brandHtml(b) {
   const P = b.prefix;
@@ -185,8 +186,7 @@ function brandHtml(b) {
   <script src="../assets/scripts/i18n/bootstrap.js"></script>
   <script src="../assets/scripts/main.js"></script>
 
-  <script>
-    bizdavarPageInit(function () {
+  ${bootTag(`bizdavarPageInit(function () {
       injectPageSeo('${b.seo}', {
         canonical: '${b.canonical}',
         ogImage: '${b.og}'
@@ -210,8 +210,7 @@ function brandHtml(b) {
       });
       renderRelatedLinks(${JSON.stringify(b.relatedLinks)});
       setupWhatsappLinks();
-    });
-  </script>
+    });`)}
 </body>
 </html>`;
 }

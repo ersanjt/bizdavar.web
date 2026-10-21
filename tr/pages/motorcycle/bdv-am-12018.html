@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/08/bdv-am-08cb0a63ec187c194fdd.jpg" alt="Icon Domain Grand Maw Kapalı Motosiklet Kaskı Gri / Siyah" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/08/bdv-am-08cb0a63ec187c194fdd.jpg" alt="Icon Domain Grand Maw Kapalı Motosiklet Kaskı Gri / Siyah" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/08/bdv-am-08cb0a63ec187c194fdd.jpg" class="is-active" aria-label="Icon Domain Grand Maw Kapalı Motosiklet Kaskı Gri / Siyah 1"><img src="/media/catalog/automoto/assets/08/bdv-am-08cb0a63ec187c194fdd.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/1c/bdv-am-1c2bc953fbd994cfd0c3.jpg" class="" aria-label="Icon Domain Grand Maw Kapalı Motosiklet Kaskı Gri / Siyah 2"><img src="/media/catalog/automoto/assets/1c/bdv-am-1c2bc953fbd994cfd0c3.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/20/bdv-am-206ebf23a25c3bcaef9f.jpg" class="" aria-label="Icon Domain Grand Maw Kapalı Motosiklet Kaskı Gri / Siyah 3"><img src="/media/catalog/automoto/assets/20/bdv-am-206ebf23a25c3bcaef9f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/43/bdv-am-4393fc630750946a791f.jpg" class="" aria-label="Icon Domain Grand Maw Kapalı Motosiklet Kaskı Gri / Siyah 4"><img src="/media/catalog/automoto/assets/43/bdv-am-4393fc630750946a791f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/56/bdv-am-561a8e944ea498e054bd.jpg" class="" aria-label="Icon Domain Grand Maw Kapalı Motosiklet Kaskı Gri / Siyah 5"><img src="/media/catalog/automoto/assets/56/bdv-am-561a8e944ea498e054bd.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/5d/bdv-am-5d53a44fe2b49b68d593.jpg" class="" aria-label="Icon Domain Grand Maw Kapalı Motosiklet Kaskı Gri / Siyah 6"><img src="/media/catalog/automoto/assets/5d/bdv-am-5d53a44fe2b49b68d593.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/68/bdv-am-68df25c12c9b9ed216c9.jpg" class="" aria-label="Icon Domain Grand Maw Kapalı Motosiklet Kaskı Gri / Siyah 7"><img src="/media/catalog/automoto/assets/68/bdv-am-68df25c12c9b9ed216c9.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/82/bdv-am-823bf6d5c3d2047a3a76.jpg" class="" aria-label="Icon Domain Grand Maw Kapalı Motosiklet Kaskı Gri / Siyah 8"><img src="/media/catalog/automoto/assets/82/bdv-am-823bf6d5c3d2047a3a76.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/84/bdv-am-84db8fa35268764d533e.jpg" class="" aria-label="Icon Domain Grand Maw Kapalı Motosiklet Kaskı Gri / Siyah 9"><img src="/media/catalog/automoto/assets/84/bdv-am-84db8fa35268764d533e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/da/bdv-am-da9c7a81b476733bfd86.jpg" class="" aria-label="Icon Domain Grand Maw Kapalı Motosiklet Kaskı Gri / Siyah 10"><img src="/media/catalog/automoto/assets/da/bdv-am-da9c7a81b476733bfd86.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e4/bdv-am-e45eb5384902ca175392.jpg" class="" aria-label="Icon Domain Grand Maw Kapalı Motosiklet Kaskı Gri / Siyah 11"><img src="/media/catalog/automoto/assets/e4/bdv-am-e45eb5384902ca175392.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ff/bdv-am-ffbd2b1a30ed94d12770.jpg" class="" aria-label="Icon Domain Grand Maw Kapalı Motosiklet Kaskı Gri / Siyah 12"><img src="/media/catalog/automoto/assets/ff/bdv-am-ffbd2b1a30ed94d12770.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

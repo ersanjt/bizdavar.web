@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/05/bdv-am-0592fc8fc1a9032a4bc4.jpg" alt="Icon Airform Counterstrike MIPS Kapalı Motorcycle Helmet Matte Blue" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/05/bdv-am-0592fc8fc1a9032a4bc4.jpg" alt="Icon Airform Counterstrike MIPS Kapalı Motorcycle Helmet Matte Blue" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/05/bdv-am-0592fc8fc1a9032a4bc4.jpg" class="is-active" aria-label="Icon Airform Counterstrike MIPS Kapalı Motorcycle Helmet Matte Blue 1"><img src="/media/catalog/automoto/assets/05/bdv-am-0592fc8fc1a9032a4bc4.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/3f/bdv-am-3f3b2d67b03bf6bd782c.jpg" class="" aria-label="Icon Airform Counterstrike MIPS Kapalı Motorcycle Helmet Matte Blue 2"><img src="/media/catalog/automoto/assets/3f/bdv-am-3f3b2d67b03bf6bd782c.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/51/bdv-am-51f0eac34791581853db.jpg" class="" aria-label="Icon Airform Counterstrike MIPS Kapalı Motorcycle Helmet Matte Blue 3"><img src="/media/catalog/automoto/assets/51/bdv-am-51f0eac34791581853db.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/7e/bdv-am-7ed8959571a938b7f2f1.jpg" class="" aria-label="Icon Airform Counterstrike MIPS Kapalı Motorcycle Helmet Matte Blue 4"><img src="/media/catalog/automoto/assets/7e/bdv-am-7ed8959571a938b7f2f1.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b1/bdv-am-b1b44d18a334d63e7c10.jpg" class="" aria-label="Icon Airform Counterstrike MIPS Kapalı Motorcycle Helmet Matte Blue 5"><img src="/media/catalog/automoto/assets/b1/bdv-am-b1b44d18a334d63e7c10.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e2/bdv-am-e2022d90114c2608a5b9.jpg" class="" aria-label="Icon Airform Counterstrike MIPS Kapalı Motorcycle Helmet Matte Blue 6"><img src="/media/catalog/automoto/assets/e2/bdv-am-e2022d90114c2608a5b9.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

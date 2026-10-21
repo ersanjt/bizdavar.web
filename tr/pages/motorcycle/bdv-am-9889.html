@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/0e/bdv-am-0e8f59456303e72d21cb.jpg" alt="Thoska Shape 40 Arka Çanta Siyah" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/0e/bdv-am-0e8f59456303e72d21cb.jpg" alt="Thoska Shape 40 Arka Çanta Siyah" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/0e/bdv-am-0e8f59456303e72d21cb.jpg" class="is-active" aria-label="Thoska Shape 40 Arka Çanta Siyah 1"><img src="/media/catalog/automoto/assets/0e/bdv-am-0e8f59456303e72d21cb.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/1d/bdv-am-1d7dfb3a26ee3b5cdc52.jpg" class="" aria-label="Thoska Shape 40 Arka Çanta Siyah 2"><img src="/media/catalog/automoto/assets/1d/bdv-am-1d7dfb3a26ee3b5cdc52.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/39/bdv-am-3944bd724a71fd89e817.jpg" class="" aria-label="Thoska Shape 40 Arka Çanta Siyah 3"><img src="/media/catalog/automoto/assets/39/bdv-am-3944bd724a71fd89e817.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/5a/bdv-am-5afcc23781b68c04aab9.jpg" class="" aria-label="Thoska Shape 40 Arka Çanta Siyah 4"><img src="/media/catalog/automoto/assets/5a/bdv-am-5afcc23781b68c04aab9.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a3/bdv-am-a326dc05be0f7ea59403.jpg" class="" aria-label="Thoska Shape 40 Arka Çanta Siyah 5"><img src="/media/catalog/automoto/assets/a3/bdv-am-a326dc05be0f7ea59403.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/cf/bdv-am-cf2faf356846427b9db2.jpg" class="" aria-label="Thoska Shape 40 Arka Çanta Siyah 6"><img src="/media/catalog/automoto/assets/cf/bdv-am-cf2faf356846427b9db2.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e7/bdv-am-e733bd5c68be452de60e.jpg" class="" aria-label="Thoska Shape 40 Arka Çanta Siyah 7"><img src="/media/catalog/automoto/assets/e7/bdv-am-e733bd5c68be452de60e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f0/bdv-am-f03ff9ddce655e8de7ce.jpg" class="" aria-label="Thoska Shape 40 Arka Çanta Siyah 8"><img src="/media/catalog/automoto/assets/f0/bdv-am-f03ff9ddce655e8de7ce.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

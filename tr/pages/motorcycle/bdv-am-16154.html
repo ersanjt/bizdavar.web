@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/4c/bdv-am-4c94cab260bb9aec929c.jpg" alt="Alpinestars Stella C-1 Air Korumalı Kadın Motosiklet Montu Bordo" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/4c/bdv-am-4c94cab260bb9aec929c.jpg" alt="Alpinestars Stella C-1 Air Korumalı Kadın Motosiklet Montu Bordo" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/4c/bdv-am-4c94cab260bb9aec929c.jpg" class="is-active" aria-label="Alpinestars Stella C-1 Air Korumalı Kadın Motosiklet Montu Bordo 1"><img src="/media/catalog/automoto/assets/4c/bdv-am-4c94cab260bb9aec929c.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/57/bdv-am-5783c7608ff430800dc4.jpg" class="" aria-label="Alpinestars Stella C-1 Air Korumalı Kadın Motosiklet Montu Bordo 2"><img src="/media/catalog/automoto/assets/57/bdv-am-5783c7608ff430800dc4.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/bc/bdv-am-bcda70dece7d12fed741.jpg" class="" aria-label="Alpinestars Stella C-1 Air Korumalı Kadın Motosiklet Montu Bordo 3"><img src="/media/catalog/automoto/assets/bc/bdv-am-bcda70dece7d12fed741.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/d2/bdv-am-d22372bec9b0ab217d55.jpg" class="" aria-label="Alpinestars Stella C-1 Air Korumalı Kadın Motosiklet Montu Bordo 4"><img src="/media/catalog/automoto/assets/d2/bdv-am-d22372bec9b0ab217d55.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/fd/bdv-am-fd1636101d052a006ada.jpg" class="" aria-label="Alpinestars Stella C-1 Air Korumalı Kadın Motosiklet Montu Bordo 5"><img src="/media/catalog/automoto/assets/fd/bdv-am-fd1636101d052a006ada.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

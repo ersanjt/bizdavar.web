@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/4b/bdv-am-4b30c5ada98921e3921d.jpg" alt="پوشاک روزمره موتور Alpinestars Prelude Oversize CSF تیشرت قهوه‌ای" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/4b/bdv-am-4b30c5ada98921e3921d.jpg" alt="پوشاک روزمره موتور Alpinestars Prelude Oversize CSF تیشرت قهوه‌ای" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/4b/bdv-am-4b30c5ada98921e3921d.jpg" class="is-active" aria-label="پوشاک روزمره موتور Alpinestars Prelude Oversize CSF تیشرت قهوه‌ای 1"><img src="/media/catalog/automoto/assets/4b/bdv-am-4b30c5ada98921e3921d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/6b/bdv-am-6bfa65056bac42f5013d.jpg" class="" aria-label="پوشاک روزمره موتور Alpinestars Prelude Oversize CSF تیشرت قهوه‌ای 2"><img src="/media/catalog/automoto/assets/6b/bdv-am-6bfa65056bac42f5013d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/3f/bdv-am-3f8ee0655b24b2f4f1c6.jpg" alt="بوت موتورسیکلت Alpinestars Stella SMX-6 V3 محافظ‌دار زنانه مشکی / سفید / صورتی" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/3f/bdv-am-3f8ee0655b24b2f4f1c6.jpg" alt="بوت موتورسیکلت Alpinestars Stella SMX-6 V3 محافظ‌دار زنانه مشکی / سفید / صورتی" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/3f/bdv-am-3f8ee0655b24b2f4f1c6.jpg" class="is-active" aria-label="بوت موتورسیکلت Alpinestars Stella SMX-6 V3 محافظ‌دار زنانه مشکی / سفید / صورتی 1"><img src="/media/catalog/automoto/assets/3f/bdv-am-3f8ee0655b24b2f4f1c6.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/55/bdv-am-555d4761827fa202f60d.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars Stella SMX-6 V3 محافظ‌دار زنانه مشکی / سفید / صورتی 2"><img src="/media/catalog/automoto/assets/55/bdv-am-555d4761827fa202f60d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/69/bdv-am-69e30d663a7d995b2713.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars Stella SMX-6 V3 محافظ‌دار زنانه مشکی / سفید / صورتی 3"><img src="/media/catalog/automoto/assets/69/bdv-am-69e30d663a7d995b2713.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/6a/bdv-am-6a2067f808de6736e959.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars Stella SMX-6 V3 محافظ‌دار زنانه مشکی / سفید / صورتی 4"><img src="/media/catalog/automoto/assets/6a/bdv-am-6a2067f808de6736e959.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/7d/bdv-am-7d9aea684cefe75d2e6f.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars Stella SMX-6 V3 محافظ‌دار زنانه مشکی / سفید / صورتی 5"><img src="/media/catalog/automoto/assets/7d/bdv-am-7d9aea684cefe75d2e6f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/cb/bdv-am-cb81a6da01d684fc966a.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars Stella SMX-6 V3 محافظ‌دار زنانه مشکی / سفید / صورتی 6"><img src="/media/catalog/automoto/assets/cb/bdv-am-cb81a6da01d684fc966a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/fb/bdv-am-fb42baf03abec3171d21.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars Stella SMX-6 V3 محافظ‌دار زنانه مشکی / سفید / صورتی 7"><img src="/media/catalog/automoto/assets/fb/bdv-am-fb42baf03abec3171d21.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

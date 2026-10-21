@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/2c/bdv-am-2c4356b617ead6413d58.jpg" alt="GARAJJ Alpinestars Stella Faster-3 DS Korumalı Kadın Motosiklet Botu Siyah / Gri / Fuşya" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/2c/bdv-am-2c4356b617ead6413d58.jpg" alt="GARAJJ Alpinestars Stella Faster-3 DS Korumalı Kadın Motosiklet Botu Siyah / Gri / Fuşya" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/2c/bdv-am-2c4356b617ead6413d58.jpg" class="is-active" aria-label="GARAJJ Alpinestars Stella Faster-3 DS Korumalı Kadın Motosiklet Botu Siyah / Gri / Fuşya 1"><img src="/media/catalog/automoto/assets/2c/bdv-am-2c4356b617ead6413d58.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/45/bdv-am-45c28b0fc4845377a3d0.jpg" class="" aria-label="GARAJJ Alpinestars Stella Faster-3 DS Korumalı Kadın Motosiklet Botu Siyah / Gri / Fuşya 2"><img src="/media/catalog/automoto/assets/45/bdv-am-45c28b0fc4845377a3d0.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/6d/bdv-am-6d77917d04fa64325a39.jpg" class="" aria-label="GARAJJ Alpinestars Stella Faster-3 DS Korumalı Kadın Motosiklet Botu Siyah / Gri / Fuşya 3"><img src="/media/catalog/automoto/assets/6d/bdv-am-6d77917d04fa64325a39.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/8c/bdv-am-8c08c80d1e6ce7d239a4.jpg" class="" aria-label="GARAJJ Alpinestars Stella Faster-3 DS Korumalı Kadın Motosiklet Botu Siyah / Gri / Fuşya 4"><img src="/media/catalog/automoto/assets/8c/bdv-am-8c08c80d1e6ce7d239a4.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/98/bdv-am-98fd1e70975289ed47e0.jpg" class="" aria-label="GARAJJ Alpinestars Stella Faster-3 DS Korumalı Kadın Motosiklet Botu Siyah / Gri / Fuşya 5"><img src="/media/catalog/automoto/assets/98/bdv-am-98fd1e70975289ed47e0.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/98/bdv-am-98ff8553421c57a0a95f.jpg" class="" aria-label="GARAJJ Alpinestars Stella Faster-3 DS Korumalı Kadın Motosiklet Botu Siyah / Gri / Fuşya 6"><img src="/media/catalog/automoto/assets/98/bdv-am-98ff8553421c57a0a95f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e6/bdv-am-e6267b0b008b52d0a1c1.jpg" class="" aria-label="GARAJJ Alpinestars Stella Faster-3 DS Korumalı Kadın Motosiklet Botu Siyah / Gri / Fuşya 7"><img src="/media/catalog/automoto/assets/e6/bdv-am-e6267b0b008b52d0a1c1.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

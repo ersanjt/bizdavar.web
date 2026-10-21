@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/3d/bdv-am-3d046a390c92a4fe4def.jpg" alt="پوشاک روزمره موتور Alpinestars Maze کلاه کپ تیره خاکستری" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/3d/bdv-am-3d046a390c92a4fe4def.jpg" alt="پوشاک روزمره موتور Alpinestars Maze کلاه کپ تیره خاکستری" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/3d/bdv-am-3d046a390c92a4fe4def.jpg" class="is-active" aria-label="پوشاک روزمره موتور Alpinestars Maze کلاه کپ تیره خاکستری 1"><img src="/media/catalog/automoto/assets/3d/bdv-am-3d046a390c92a4fe4def.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/47/bdv-am-4797e668e2f764e636c0.jpg" class="" aria-label="پوشاک روزمره موتور Alpinestars Maze کلاه کپ تیره خاکستری 2"><img src="/media/catalog/automoto/assets/47/bdv-am-4797e668e2f764e636c0.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/8a/bdv-am-8a971a9bdc38b9f9e596.jpg" class="" aria-label="پوشاک روزمره موتور Alpinestars Maze کلاه کپ تیره خاکستری 3"><img src="/media/catalog/automoto/assets/8a/bdv-am-8a971a9bdc38b9f9e596.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/90/bdv-am-905db965cd8c930ff568.jpg" class="" aria-label="پوشاک روزمره موتور Alpinestars Maze کلاه کپ تیره خاکستری 4"><img src="/media/catalog/automoto/assets/90/bdv-am-905db965cd8c930ff568.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/d3/bdv-am-d3a110c56c308d0a4f94.jpg" class="" aria-label="پوشاک روزمره موتور Alpinestars Maze کلاه کپ تیره خاکستری 5"><img src="/media/catalog/automoto/assets/d3/bdv-am-d3a110c56c308d0a4f94.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/00/bdv-am-006a432d1125be0f3910.jpg" alt="اینترکام موتورسیکلت Sena 50C دوربین" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/00/bdv-am-006a432d1125be0f3910.jpg" alt="اینترکام موتورسیکلت Sena 50C دوربین" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/00/bdv-am-006a432d1125be0f3910.jpg" class="is-active" aria-label="اینترکام موتورسیکلت Sena 50C دوربین 1"><img src="/media/catalog/automoto/assets/00/bdv-am-006a432d1125be0f3910.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/54/bdv-am-540f7b131e8bc89d3bc4.jpg" class="" aria-label="اینترکام موتورسیکلت Sena 50C دوربین 2"><img src="/media/catalog/automoto/assets/54/bdv-am-540f7b131e8bc89d3bc4.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/7a/bdv-am-7a9ad187f800cb348877.jpg" class="" aria-label="اینترکام موتورسیکلت Sena 50C دوربین 3"><img src="/media/catalog/automoto/assets/7a/bdv-am-7a9ad187f800cb348877.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/99/bdv-am-99d1f4246aab3733d210.jpg" class="" aria-label="اینترکام موتورسیکلت Sena 50C دوربین 4"><img src="/media/catalog/automoto/assets/99/bdv-am-99d1f4246aab3733d210.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/9c/bdv-am-9c3547ae8365537cc3c3.jpg" class="" aria-label="اینترکام موتورسیکلت Sena 50C دوربین 5"><img src="/media/catalog/automoto/assets/9c/bdv-am-9c3547ae8365537cc3c3.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/bd/bdv-am-bd6c99d82685c2b6cc77.jpg" class="" aria-label="اینترکام موتورسیکلت Sena 50C دوربین 6"><img src="/media/catalog/automoto/assets/bd/bdv-am-bd6c99d82685c2b6cc77.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/d0/bdv-am-d005c7970afa4b992bfd.jpg" class="" aria-label="اینترکام موتورسیکلت Sena 50C دوربین 7"><img src="/media/catalog/automoto/assets/d0/bdv-am-d005c7970afa4b992bfd.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/eb/bdv-am-ebad11837bfb54a9b6fb.jpg" class="" aria-label="اینترکام موتورسیکلت Sena 50C دوربین 8"><img src="/media/catalog/automoto/assets/eb/bdv-am-ebad11837bfb54a9b6fb.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

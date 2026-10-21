@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/17/bdv-am-17809baaca41052576b4.jpg" alt="لوازم جانبی موتور Klim Arsenal 30 کمر کیف آبی" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/17/bdv-am-17809baaca41052576b4.jpg" alt="لوازم جانبی موتور Klim Arsenal 30 کمر کیف آبی" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/17/bdv-am-17809baaca41052576b4.jpg" class="is-active" aria-label="لوازم جانبی موتور Klim Arsenal 30 کمر کیف آبی 1"><img src="/media/catalog/automoto/assets/17/bdv-am-17809baaca41052576b4.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/1e/bdv-am-1eba27eaace9762606ab.jpg" class="" aria-label="لوازم جانبی موتور Klim Arsenal 30 کمر کیف آبی 2"><img src="/media/catalog/automoto/assets/1e/bdv-am-1eba27eaace9762606ab.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/4a/bdv-am-4ab888fe0acd8ac501f3.jpg" class="" aria-label="لوازم جانبی موتور Klim Arsenal 30 کمر کیف آبی 3"><img src="/media/catalog/automoto/assets/4a/bdv-am-4ab888fe0acd8ac501f3.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/69/bdv-am-69feab25fa8bd8eb250f.jpg" class="" aria-label="لوازم جانبی موتور Klim Arsenal 30 کمر کیف آبی 4"><img src="/media/catalog/automoto/assets/69/bdv-am-69feab25fa8bd8eb250f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/86/bdv-am-862ba623b9670d03aeec.jpg" class="" aria-label="لوازم جانبی موتور Klim Arsenal 30 کمر کیف آبی 5"><img src="/media/catalog/automoto/assets/86/bdv-am-862ba623b9670d03aeec.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/86/bdv-am-8650ca31e6957e7b146a.jpg" class="" aria-label="لوازم جانبی موتور Klim Arsenal 30 کمر کیف آبی 6"><img src="/media/catalog/automoto/assets/86/bdv-am-8650ca31e6957e7b146a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a0/bdv-am-a0ddb43b0dd4005a6fe3.jpg" class="" aria-label="لوازم جانبی موتور Klim Arsenal 30 کمر کیف آبی 7"><img src="/media/catalog/automoto/assets/a0/bdv-am-a0ddb43b0dd4005a6fe3.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/df/bdv-am-dfb85b5522df051485d3.jpg" class="" aria-label="لوازم جانبی موتور Klim Arsenal 30 کمر کیف آبی 8"><img src="/media/catalog/automoto/assets/df/bdv-am-dfb85b5522df051485d3.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f2/bdv-am-f23f8851bc6f9d9ab18e.jpg" class="" aria-label="لوازم جانبی موتور Klim Arsenal 30 کمر کیف آبی 9"><img src="/media/catalog/automoto/assets/f2/bdv-am-f23f8851bc6f9d9ab18e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

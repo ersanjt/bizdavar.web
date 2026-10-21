@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/28/bdv-am-28a606790d90b325b435.jpg" alt="4Riders Rex Pro Korumalı Softshell Motosiklet Montu Siyah" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/28/bdv-am-28a606790d90b325b435.jpg" alt="4Riders Rex Pro Korumalı Softshell Motosiklet Montu Siyah" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/28/bdv-am-28a606790d90b325b435.jpg" class="is-active" aria-label="4Riders Rex Pro Korumalı Softshell Motosiklet Montu Siyah 1"><img src="/media/catalog/automoto/assets/28/bdv-am-28a606790d90b325b435.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/55/bdv-am-556288b696b7c3bf7a55.jpg" class="" aria-label="4Riders Rex Pro Korumalı Softshell Motosiklet Montu Siyah 2"><img src="/media/catalog/automoto/assets/55/bdv-am-556288b696b7c3bf7a55.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/86/bdv-am-86eaac6c7cd4cd755408.jpg" class="" aria-label="4Riders Rex Pro Korumalı Softshell Motosiklet Montu Siyah 3"><img src="/media/catalog/automoto/assets/86/bdv-am-86eaac6c7cd4cd755408.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b1/bdv-am-b1f39b8c2583154d39a3.jpg" class="" aria-label="4Riders Rex Pro Korumalı Softshell Motosiklet Montu Siyah 4"><img src="/media/catalog/automoto/assets/b1/bdv-am-b1f39b8c2583154d39a3.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/c4/bdv-am-c4a88854d010e4b87786.jpg" class="" aria-label="4Riders Rex Pro Korumalı Softshell Motosiklet Montu Siyah 5"><img src="/media/catalog/automoto/assets/c4/bdv-am-c4a88854d010e4b87786.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/d3/bdv-am-d31a4b94106bc3ec9dc2.jpg" class="" aria-label="4Riders Rex Pro Korumalı Softshell Motosiklet Montu Siyah 6"><img src="/media/catalog/automoto/assets/d3/bdv-am-d31a4b94106bc3ec9dc2.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/dd/bdv-am-dd558580e394de53cce7.jpg" class="" aria-label="4Riders Rex Pro Korumalı Softshell Motosiklet Montu Siyah 7"><img src="/media/catalog/automoto/assets/dd/bdv-am-dd558580e394de53cce7.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

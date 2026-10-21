@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/21/bdv-am-21785c96b7fe1dfe75fc.jpg" alt="Alpinestars Faster-3 Rideknit Protective Motorcycle Boot Black / White / Red" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/21/bdv-am-21785c96b7fe1dfe75fc.jpg" alt="Alpinestars Faster-3 Rideknit Protective Motorcycle Boot Black / White / Red" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/21/bdv-am-21785c96b7fe1dfe75fc.jpg" class="is-active" aria-label="Alpinestars Faster-3 Rideknit Protective Motorcycle Boot Black / White / Red 1"><img src="/media/catalog/automoto/assets/21/bdv-am-21785c96b7fe1dfe75fc.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/30/bdv-am-305d5f707ce8c9dafab8.jpg" class="" aria-label="Alpinestars Faster-3 Rideknit Protective Motorcycle Boot Black / White / Red 2"><img src="/media/catalog/automoto/assets/30/bdv-am-305d5f707ce8c9dafab8.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/5d/bdv-am-5dcd19a4f85ea4b52e68.jpg" class="" aria-label="Alpinestars Faster-3 Rideknit Protective Motorcycle Boot Black / White / Red 3"><img src="/media/catalog/automoto/assets/5d/bdv-am-5dcd19a4f85ea4b52e68.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/86/bdv-am-8663ca3db4799452cf43.jpg" class="" aria-label="Alpinestars Faster-3 Rideknit Protective Motorcycle Boot Black / White / Red 4"><img src="/media/catalog/automoto/assets/86/bdv-am-8663ca3db4799452cf43.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a3/bdv-am-a3221933d11198020170.jpg" class="" aria-label="Alpinestars Faster-3 Rideknit Protective Motorcycle Boot Black / White / Red 5"><img src="/media/catalog/automoto/assets/a3/bdv-am-a3221933d11198020170.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ec/bdv-am-ec85f9801e27fc9e79ae.jpg" class="" aria-label="Alpinestars Faster-3 Rideknit Protective Motorcycle Boot Black / White / Red 6"><img src="/media/catalog/automoto/assets/ec/bdv-am-ec85f9801e27fc9e79ae.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ed/bdv-am-edb81d16467a99e5755f.jpg" class="" aria-label="Alpinestars Faster-3 Rideknit Protective Motorcycle Boot Black / White / Red 7"><img src="/media/catalog/automoto/assets/ed/bdv-am-edb81d16467a99e5755f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

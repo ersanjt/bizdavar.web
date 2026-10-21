@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/36/bdv-am-36c198de0d6165ca2f93.jpg" alt="پوشاک روزمره موتور Alpinestars Blaze هودی کلاه‌دار سویشرت مشکی / قرمز" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/36/bdv-am-36c198de0d6165ca2f93.jpg" alt="پوشاک روزمره موتور Alpinestars Blaze هودی کلاه‌دار سویشرت مشکی / قرمز" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/36/bdv-am-36c198de0d6165ca2f93.jpg" class="is-active" aria-label="پوشاک روزمره موتور Alpinestars Blaze هودی کلاه‌دار سویشرت مشکی / قرمز 1"><img src="/media/catalog/automoto/assets/36/bdv-am-36c198de0d6165ca2f93.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/48/bdv-am-48a7dc00f176d44b939e.jpg" class="" aria-label="پوشاک روزمره موتور Alpinestars Blaze هودی کلاه‌دار سویشرت مشکی / قرمز 2"><img src="/media/catalog/automoto/assets/48/bdv-am-48a7dc00f176d44b939e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a5/bdv-am-a52501e82b68b3070eeb.jpg" class="" aria-label="پوشاک روزمره موتور Alpinestars Blaze هودی کلاه‌دار سویشرت مشکی / قرمز 3"><img src="/media/catalog/automoto/assets/a5/bdv-am-a52501e82b68b3070eeb.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

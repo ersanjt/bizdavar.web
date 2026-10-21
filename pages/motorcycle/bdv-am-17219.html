@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/45/bdv-am-45d4d8eeccf8276021ea.jpg" alt="کلاه ایمنی موتورسیکلت Sena Specter Smart اینترکامlu فک بازشو سفید" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/45/bdv-am-45d4d8eeccf8276021ea.jpg" alt="کلاه ایمنی موتورسیکلت Sena Specter Smart اینترکامlu فک بازشو سفید" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/45/bdv-am-45d4d8eeccf8276021ea.jpg" class="is-active" aria-label="کلاه ایمنی موتورسیکلت Sena Specter Smart اینترکامlu فک بازشو سفید 1"><img src="/media/catalog/automoto/assets/45/bdv-am-45d4d8eeccf8276021ea.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/50/bdv-am-50612d86df81e19ffac7.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Sena Specter Smart اینترکامlu فک بازشو سفید 2"><img src="/media/catalog/automoto/assets/50/bdv-am-50612d86df81e19ffac7.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/5a/bdv-am-5aba76b99e2c7047dae8.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Sena Specter Smart اینترکامlu فک بازشو سفید 3"><img src="/media/catalog/automoto/assets/5a/bdv-am-5aba76b99e2c7047dae8.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/6b/bdv-am-6bb4c04e8034993f282e.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Sena Specter Smart اینترکامlu فک بازشو سفید 4"><img src="/media/catalog/automoto/assets/6b/bdv-am-6bb4c04e8034993f282e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/6e/bdv-am-6eda32c4a4eef5667952.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Sena Specter Smart اینترکامlu فک بازشو سفید 5"><img src="/media/catalog/automoto/assets/6e/bdv-am-6eda32c4a4eef5667952.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/90/bdv-am-90822716080241578232.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Sena Specter Smart اینترکامlu فک بازشو سفید 6"><img src="/media/catalog/automoto/assets/90/bdv-am-90822716080241578232.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/99/bdv-am-9913e846be968e4470a4.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Sena Specter Smart اینترکامlu فک بازشو سفید 7"><img src="/media/catalog/automoto/assets/99/bdv-am-9913e846be968e4470a4.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/99/bdv-am-99da32e63730a8f6412e.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Sena Specter Smart اینترکامlu فک بازشو سفید 8"><img src="/media/catalog/automoto/assets/99/bdv-am-99da32e63730a8f6412e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/dd/bdv-am-dd505007a08e127c5879.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Sena Specter Smart اینترکامlu فک بازشو سفید 9"><img src="/media/catalog/automoto/assets/dd/bdv-am-dd505007a08e127c5879.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e2/bdv-am-e228fd7ab88c5a6b14eb.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Sena Specter Smart اینترکامlu فک بازشو سفید 10"><img src="/media/catalog/automoto/assets/e2/bdv-am-e228fd7ab88c5a6b14eb.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

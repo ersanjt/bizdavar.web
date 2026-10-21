@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/21/bdv-am-21e581dbcf4b6f1f7040.jpg" alt="Sp Connect Motosiklet Gidon Bağlantısı (Pro)" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/21/bdv-am-21e581dbcf4b6f1f7040.jpg" alt="Sp Connect Motosiklet Gidon Bağlantısı (Pro)" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/21/bdv-am-21e581dbcf4b6f1f7040.jpg" class="is-active" aria-label="Sp Connect Motosiklet Gidon Bağlantısı (Pro) 1"><img src="/media/catalog/automoto/assets/21/bdv-am-21e581dbcf4b6f1f7040.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/69/bdv-am-6966859bfbf5e772b93d.jpg" class="" aria-label="Sp Connect Motosiklet Gidon Bağlantısı (Pro) 2"><img src="/media/catalog/automoto/assets/69/bdv-am-6966859bfbf5e772b93d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/82/bdv-am-82eca33e907ff33438b9.jpg" class="" aria-label="Sp Connect Motosiklet Gidon Bağlantısı (Pro) 3"><img src="/media/catalog/automoto/assets/82/bdv-am-82eca33e907ff33438b9.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/83/bdv-am-8304dfdc847e4deaa77a.jpg" class="" aria-label="Sp Connect Motosiklet Gidon Bağlantısı (Pro) 4"><img src="/media/catalog/automoto/assets/83/bdv-am-8304dfdc847e4deaa77a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/85/bdv-am-85e695f00d96da8e0f11.jpg" class="" aria-label="Sp Connect Motosiklet Gidon Bağlantısı (Pro) 5"><img src="/media/catalog/automoto/assets/85/bdv-am-85e695f00d96da8e0f11.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a3/bdv-am-a340b64f55e129a5c235.jpg" class="" aria-label="Sp Connect Motosiklet Gidon Bağlantısı (Pro) 6"><img src="/media/catalog/automoto/assets/a3/bdv-am-a340b64f55e129a5c235.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/d1/bdv-am-d1c809dc7d169b1edb94.jpg" class="" aria-label="Sp Connect Motosiklet Gidon Bağlantısı (Pro) 7"><img src="/media/catalog/automoto/assets/d1/bdv-am-d1c809dc7d169b1edb94.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

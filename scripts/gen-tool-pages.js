@@ -11,6 +11,7 @@ const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
 const { TOOLS, HUB, HUB_GROUPS, I18N_FILES } = require('./free-tools-config');
+const { bootTag } = require('./lib/page-boot-tag');
 
 const ROOT = path.join(__dirname, '..');
 const LANGS = ['fa', 'tr', 'en', 'ru', 'ar'];
@@ -517,8 +518,7 @@ function page(entry, isHub) {
 
   <script src="/assets/scripts/site-loader.js?v=${LOADER_VER}" data-after-seo="i18n/${entry.i18n}-i18n.js"${before}></script>
 
-  <script>
-    bizdavarPageInit(function () {
+  ${bootTag(`bizdavarPageInit(function () {
       const toolsLabel = window.BIZDAVAR_I18N ? window.BIZDAVAR_I18N.t('nav.tools', '') : '';
       const crumbs = ${crumbs};
       injectPageSeo('${seoKey}', {
@@ -532,8 +532,7 @@ function page(entry, isHub) {
       const related = window.BIZDAVAR_I18N && window.BIZDAVAR_I18N.raw('${ns}.related');
       if (Array.isArray(related)) renderRelatedLinks(related);
       if (typeof window.initFreeTool === 'function') window.initFreeTool();
-    });
-  </script>
+    });`)}
 </body>
 </html>
 `;

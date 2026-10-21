@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/08/bdv-am-08f8503d409c274404a7.jpg" alt="Klim Arsenal 30 Sırt Çantası Asfalt" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/08/bdv-am-08f8503d409c274404a7.jpg" alt="Klim Arsenal 30 Sırt Çantası Asfalt" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/08/bdv-am-08f8503d409c274404a7.jpg" class="is-active" aria-label="Klim Arsenal 30 Sırt Çantası Asfalt 1"><img src="/media/catalog/automoto/assets/08/bdv-am-08f8503d409c274404a7.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/0e/bdv-am-0ea359412a9eea239bb1.jpg" class="" aria-label="Klim Arsenal 30 Sırt Çantası Asfalt 2"><img src="/media/catalog/automoto/assets/0e/bdv-am-0ea359412a9eea239bb1.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/23/bdv-am-23d8b09676cc0281374c.jpg" class="" aria-label="Klim Arsenal 30 Sırt Çantası Asfalt 3"><img src="/media/catalog/automoto/assets/23/bdv-am-23d8b09676cc0281374c.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/2e/bdv-am-2e47abe21a7bf957859a.jpg" class="" aria-label="Klim Arsenal 30 Sırt Çantası Asfalt 4"><img src="/media/catalog/automoto/assets/2e/bdv-am-2e47abe21a7bf957859a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/37/bdv-am-37d870d025eb2544e8da.jpg" class="" aria-label="Klim Arsenal 30 Sırt Çantası Asfalt 5"><img src="/media/catalog/automoto/assets/37/bdv-am-37d870d025eb2544e8da.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/7e/bdv-am-7e73402412b596dffaaa.jpg" class="" aria-label="Klim Arsenal 30 Sırt Çantası Asfalt 6"><img src="/media/catalog/automoto/assets/7e/bdv-am-7e73402412b596dffaaa.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/88/bdv-am-88d320c5b845907abf03.jpg" class="" aria-label="Klim Arsenal 30 Sırt Çantası Asfalt 7"><img src="/media/catalog/automoto/assets/88/bdv-am-88d320c5b845907abf03.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e2/bdv-am-e24190198c20ff4f3273.jpg" class="" aria-label="Klim Arsenal 30 Sırt Çantası Asfalt 8"><img src="/media/catalog/automoto/assets/e2/bdv-am-e24190198c20ff4f3273.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f2/bdv-am-f270a5bffa5af7801650.jpg" class="" aria-label="Klim Arsenal 30 Sırt Çantası Asfalt 9"><img src="/media/catalog/automoto/assets/f2/bdv-am-f270a5bffa5af7801650.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

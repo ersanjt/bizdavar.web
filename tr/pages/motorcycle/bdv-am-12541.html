@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/06/bdv-am-062f6feca1116e10c376.jpg" alt="Just1 J-GPR Animal Replica Kapalı Motosiklet Kaskı Siyah / Gri / Sarı / Yeşil" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/06/bdv-am-062f6feca1116e10c376.jpg" alt="Just1 J-GPR Animal Replica Kapalı Motosiklet Kaskı Siyah / Gri / Sarı / Yeşil" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/06/bdv-am-062f6feca1116e10c376.jpg" class="is-active" aria-label="Just1 J-GPR Animal Replica Kapalı Motosiklet Kaskı Siyah / Gri / Sarı / Yeşil 1"><img src="/media/catalog/automoto/assets/06/bdv-am-062f6feca1116e10c376.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/49/bdv-am-49763950a628d41e171c.jpg" class="" aria-label="Just1 J-GPR Animal Replica Kapalı Motosiklet Kaskı Siyah / Gri / Sarı / Yeşil 2"><img src="/media/catalog/automoto/assets/49/bdv-am-49763950a628d41e171c.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/4a/bdv-am-4ac21c0aa66d76608b60.jpg" class="" aria-label="Just1 J-GPR Animal Replica Kapalı Motosiklet Kaskı Siyah / Gri / Sarı / Yeşil 3"><img src="/media/catalog/automoto/assets/4a/bdv-am-4ac21c0aa66d76608b60.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/4a/bdv-am-4aeb1e0cbc64a2303cf5.jpg" class="" aria-label="Just1 J-GPR Animal Replica Kapalı Motosiklet Kaskı Siyah / Gri / Sarı / Yeşil 4"><img src="/media/catalog/automoto/assets/4a/bdv-am-4aeb1e0cbc64a2303cf5.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/4f/bdv-am-4fbf86b3310215fc0533.jpg" class="" aria-label="Just1 J-GPR Animal Replica Kapalı Motosiklet Kaskı Siyah / Gri / Sarı / Yeşil 5"><img src="/media/catalog/automoto/assets/4f/bdv-am-4fbf86b3310215fc0533.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/c9/bdv-am-c943fb090599e85f276d.jpg" class="" aria-label="Just1 J-GPR Animal Replica Kapalı Motosiklet Kaskı Siyah / Gri / Sarı / Yeşil 6"><img src="/media/catalog/automoto/assets/c9/bdv-am-c943fb090599e85f276d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f3/bdv-am-f3f9dcabb212d2c8445a.jpg" class="" aria-label="Just1 J-GPR Animal Replica Kapalı Motosiklet Kaskı Siyah / Gri / Sarı / Yeşil 7"><img src="/media/catalog/automoto/assets/f3/bdv-am-f3f9dcabb212d2c8445a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

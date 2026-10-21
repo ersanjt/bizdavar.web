@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/4b/bdv-am-4bb48634e829e6d22b2e.jpg" alt="قطعات موتورسیکلت Thoska Heibe AX 8 Yan کیف ست" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/4b/bdv-am-4bb48634e829e6d22b2e.jpg" alt="قطعات موتورسیکلت Thoska Heibe AX 8 Yan کیف ست" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/4b/bdv-am-4bb48634e829e6d22b2e.jpg" class="is-active" aria-label="قطعات موتورسیکلت Thoska Heibe AX 8 Yan کیف ست 1"><img src="/media/catalog/automoto/assets/4b/bdv-am-4bb48634e829e6d22b2e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/50/bdv-am-50f0e9b0faccfb7b470b.jpg" class="" aria-label="قطعات موتورسیکلت Thoska Heibe AX 8 Yan کیف ست 2"><img src="/media/catalog/automoto/assets/50/bdv-am-50f0e9b0faccfb7b470b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/86/bdv-am-866d7dbe334de005bc02.jpg" class="" aria-label="قطعات موتورسیکلت Thoska Heibe AX 8 Yan کیف ست 3"><img src="/media/catalog/automoto/assets/86/bdv-am-866d7dbe334de005bc02.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/92/bdv-am-9245bdb27fb35b66709d.jpg" class="" aria-label="قطعات موتورسیکلت Thoska Heibe AX 8 Yan کیف ست 4"><img src="/media/catalog/automoto/assets/92/bdv-am-9245bdb27fb35b66709d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/92/bdv-am-92551506c137ae897639.jpg" class="" aria-label="قطعات موتورسیکلت Thoska Heibe AX 8 Yan کیف ست 5"><img src="/media/catalog/automoto/assets/92/bdv-am-92551506c137ae897639.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a0/bdv-am-a0315cf8598048e2e972.jpg" class="" aria-label="قطعات موتورسیکلت Thoska Heibe AX 8 Yan کیف ست 6"><img src="/media/catalog/automoto/assets/a0/bdv-am-a0315cf8598048e2e972.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a7/bdv-am-a728c19b1ae47989b831.jpg" class="" aria-label="قطعات موتورسیکلت Thoska Heibe AX 8 Yan کیف ست 7"><img src="/media/catalog/automoto/assets/a7/bdv-am-a728c19b1ae47989b831.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/c6/bdv-am-c6a48bcc684f356dbd5a.jpg" class="" aria-label="قطعات موتورسیکلت Thoska Heibe AX 8 Yan کیف ست 8"><img src="/media/catalog/automoto/assets/c6/bdv-am-c6a48bcc684f356dbd5a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/c6/bdv-am-c6a7904fb5592bc9499c.jpg" class="" aria-label="قطعات موتورسیکلت Thoska Heibe AX 8 Yan کیف ست 9"><img src="/media/catalog/automoto/assets/c6/bdv-am-c6a7904fb5592bc9499c.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e5/bdv-am-e582aa6b5160eaf843c0.jpg" class="" aria-label="قطعات موتورسیکلت Thoska Heibe AX 8 Yan کیف ست 10"><img src="/media/catalog/automoto/assets/e5/bdv-am-e582aa6b5160eaf843c0.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

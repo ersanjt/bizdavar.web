@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/07/bdv-am-07ab4c5278e3b87f4eb2.jpg" alt="Thoska Shape 20 Arka ÇAnta" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/07/bdv-am-07ab4c5278e3b87f4eb2.jpg" alt="Thoska Shape 20 Arka ÇAnta" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/07/bdv-am-07ab4c5278e3b87f4eb2.jpg" class="is-active" aria-label="Thoska Shape 20 Arka ÇAnta 1"><img src="/media/catalog/automoto/assets/07/bdv-am-07ab4c5278e3b87f4eb2.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/55/bdv-am-557353fa1f3a17a590cf.jpg" class="" aria-label="Thoska Shape 20 Arka ÇAnta 2"><img src="/media/catalog/automoto/assets/55/bdv-am-557353fa1f3a17a590cf.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/62/bdv-am-6271a9686d85cb686885.jpg" class="" aria-label="Thoska Shape 20 Arka ÇAnta 3"><img src="/media/catalog/automoto/assets/62/bdv-am-6271a9686d85cb686885.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/75/bdv-am-75e4377b9c51ea6b1beb.jpg" class="" aria-label="Thoska Shape 20 Arka ÇAnta 4"><img src="/media/catalog/automoto/assets/75/bdv-am-75e4377b9c51ea6b1beb.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/7d/bdv-am-7d128297288f9ebe2bd7.jpg" class="" aria-label="Thoska Shape 20 Arka ÇAnta 5"><img src="/media/catalog/automoto/assets/7d/bdv-am-7d128297288f9ebe2bd7.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a6/bdv-am-a670e45a30cf9210a195.jpg" class="" aria-label="Thoska Shape 20 Arka ÇAnta 6"><img src="/media/catalog/automoto/assets/a6/bdv-am-a670e45a30cf9210a195.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a8/bdv-am-a8531018bfac069bd2ca.jpg" class="" aria-label="Thoska Shape 20 Arka ÇAnta 7"><img src="/media/catalog/automoto/assets/a8/bdv-am-a8531018bfac069bd2ca.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b2/bdv-am-b2018c00c2e1935aa9e4.jpg" class="" aria-label="Thoska Shape 20 Arka ÇAnta 8"><img src="/media/catalog/automoto/assets/b2/bdv-am-b2018c00c2e1935aa9e4.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b4/bdv-am-b4fb33b6fff229cd954f.jpg" class="" aria-label="Thoska Shape 20 Arka ÇAnta 9"><img src="/media/catalog/automoto/assets/b4/bdv-am-b4fb33b6fff229cd954f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/fd/bdv-am-fdc1f8ab2e2769242669.jpg" class="" aria-label="Thoska Shape 20 Arka ÇAnta 10"><img src="/media/catalog/automoto/assets/fd/bdv-am-fdc1f8ab2e2769242669.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

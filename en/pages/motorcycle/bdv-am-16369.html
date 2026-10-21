@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/26/bdv-am-2691aea15a1ece99dfa3.jpg" alt="Alpinestars CR-X Drystar Protective Motorcycle Boot Black / Yellow" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/26/bdv-am-2691aea15a1ece99dfa3.jpg" alt="Alpinestars CR-X Drystar Protective Motorcycle Boot Black / Yellow" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/26/bdv-am-2691aea15a1ece99dfa3.jpg" class="is-active" aria-label="Alpinestars CR-X Drystar Protective Motorcycle Boot Black / Yellow 1"><img src="/media/catalog/automoto/assets/26/bdv-am-2691aea15a1ece99dfa3.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/29/bdv-am-296ad68de4560b9b3050.jpg" class="" aria-label="Alpinestars CR-X Drystar Protective Motorcycle Boot Black / Yellow 2"><img src="/media/catalog/automoto/assets/29/bdv-am-296ad68de4560b9b3050.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/9b/bdv-am-9b8a90dbad0f7e4f0d16.jpg" class="" aria-label="Alpinestars CR-X Drystar Protective Motorcycle Boot Black / Yellow 3"><img src="/media/catalog/automoto/assets/9b/bdv-am-9b8a90dbad0f7e4f0d16.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a6/bdv-am-a698247cf129bfee3e37.jpg" class="" aria-label="Alpinestars CR-X Drystar Protective Motorcycle Boot Black / Yellow 4"><img src="/media/catalog/automoto/assets/a6/bdv-am-a698247cf129bfee3e37.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/d5/bdv-am-d5a9d2e1e9e48d5ab89e.jpg" class="" aria-label="Alpinestars CR-X Drystar Protective Motorcycle Boot Black / Yellow 5"><img src="/media/catalog/automoto/assets/d5/bdv-am-d5a9d2e1e9e48d5ab89e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e7/bdv-am-e7069aabea7eedfb1dce.jpg" class="" aria-label="Alpinestars CR-X Drystar Protective Motorcycle Boot Black / Yellow 6"><img src="/media/catalog/automoto/assets/e7/bdv-am-e7069aabea7eedfb1dce.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f4/bdv-am-f4436d265a8c9ca7577b.jpg" class="" aria-label="Alpinestars CR-X Drystar Protective Motorcycle Boot Black / Yellow 7"><img src="/media/catalog/automoto/assets/f4/bdv-am-f4436d265a8c9ca7577b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

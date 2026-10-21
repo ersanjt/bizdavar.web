@@ -10,6 +10,63 @@
  *   data-extra             — shorthand: *-page.js → before-main; else → after-page-i18n
  */
 (function () {
+  if (!window.__bizdavarImgFallback) {
+    window.__bizdavarImgFallback = true;
+    function onImgError(event) {
+      var el = event.target;
+      if (!el || el.tagName !== 'IMG') return;
+      if (el.getAttribute('data-fallback-handled') === '1') return;
+      var fb = el.getAttribute('data-fallback');
+      function finish() {
+        var emptySel = el.getAttribute('data-fallback-empty');
+        if (emptySel) {
+          var box = el.closest(emptySel);
+          if (box) box.classList.add('owned-product-card__media--empty');
+        }
+        if (el.hasAttribute('data-fallback-broken')) el.classList.add('is-broken');
+        if (el.hasAttribute('data-fallback-label')) {
+          var span = document.createElement('span');
+          span.className = 'client-item__name';
+          span.textContent = el.getAttribute('alt') || '';
+          if (el.parentNode) el.parentNode.replaceChild(span, el);
+        }
+      }
+      if (fb) {
+        var same = false;
+        try { same = new URL(fb, document.baseURI).href === el.src; } catch (err) { same = false; }
+        if (el.getAttribute('data-fallback-used') === '1' || same) {
+          el.setAttribute('data-fallback-handled', '1');
+          finish();
+          return;
+        }
+        el.setAttribute('data-fallback-used', '1');
+        if (el.hasAttribute('data-fallback-clear-srcset')) el.removeAttribute('srcset');
+        el.src = fb;
+        return;
+      }
+      el.setAttribute('data-fallback-handled', '1');
+      if (el.hasAttribute('data-hide-broken')) {
+        el.style.display = 'none';
+        return;
+      }
+      if (el.hasAttribute('data-remove-broken')) {
+        el.remove();
+        return;
+      }
+      if (el.hasAttribute('data-fallback-label')) finish();
+    }
+    document.addEventListener('error', onImgError, true);
+    function repairBrokenImages() {
+      var nodes = document.querySelectorAll('img[data-fallback], img[data-hide-broken], img[data-remove-broken], img[data-fallback-label]');
+      for (var i = 0; i < nodes.length; i++) {
+        var img = nodes[i];
+        if (img.complete && img.naturalWidth === 0) onImgError({ target: img });
+      }
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', repairBrokenImages);
+    repairBrokenImages();
+  }
+
   var el = document.currentScript;
   if (!el) return;
 

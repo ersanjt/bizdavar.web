@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/08/bdv-am-0823324e30bbe9b62c62.jpg" alt="کاپشن موتورسیکلت Clover GTS-5 محافظ‌دار دودی / زرد" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/08/bdv-am-0823324e30bbe9b62c62.jpg" alt="کاپشن موتورسیکلت Clover GTS-5 محافظ‌دار دودی / زرد" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/08/bdv-am-0823324e30bbe9b62c62.jpg" class="is-active" aria-label="کاپشن موتورسیکلت Clover GTS-5 محافظ‌دار دودی / زرد 1"><img src="/media/catalog/automoto/assets/08/bdv-am-0823324e30bbe9b62c62.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/24/bdv-am-24390307b6d3a9fd2609.jpg" class="" aria-label="کاپشن موتورسیکلت Clover GTS-5 محافظ‌دار دودی / زرد 2"><img src="/media/catalog/automoto/assets/24/bdv-am-24390307b6d3a9fd2609.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/49/bdv-am-49e12256e961675a5bbb.jpg" class="" aria-label="کاپشن موتورسیکلت Clover GTS-5 محافظ‌دار دودی / زرد 3"><img src="/media/catalog/automoto/assets/49/bdv-am-49e12256e961675a5bbb.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/c6/bdv-am-c654d8c96efefa172f1b.jpg" class="" aria-label="کاپشن موتورسیکلت Clover GTS-5 محافظ‌دار دودی / زرد 4"><img src="/media/catalog/automoto/assets/c6/bdv-am-c654d8c96efefa172f1b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

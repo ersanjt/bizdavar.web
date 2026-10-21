@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/5e/bdv-am-5e53dd370e8194299b2a.jpg" alt="بوت موتورسیکلت Alpinestars Fastback 2 Drystar محافظ‌دار مشکی / سفید" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/5e/bdv-am-5e53dd370e8194299b2a.jpg" alt="بوت موتورسیکلت Alpinestars Fastback 2 Drystar محافظ‌دار مشکی / سفید" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/5e/bdv-am-5e53dd370e8194299b2a.jpg" class="is-active" aria-label="بوت موتورسیکلت Alpinestars Fastback 2 Drystar محافظ‌دار مشکی / سفید 1"><img src="/media/catalog/automoto/assets/5e/bdv-am-5e53dd370e8194299b2a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/5f/bdv-am-5f331d54b158521c39ab.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars Fastback 2 Drystar محافظ‌دار مشکی / سفید 2"><img src="/media/catalog/automoto/assets/5f/bdv-am-5f331d54b158521c39ab.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/63/bdv-am-639d063bc2566712de7f.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars Fastback 2 Drystar محافظ‌دار مشکی / سفید 3"><img src="/media/catalog/automoto/assets/63/bdv-am-639d063bc2566712de7f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/64/bdv-am-64bc3c09e47242313772.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars Fastback 2 Drystar محافظ‌دار مشکی / سفید 4"><img src="/media/catalog/automoto/assets/64/bdv-am-64bc3c09e47242313772.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/d0/bdv-am-d032a9c5f24e6fdecca0.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars Fastback 2 Drystar محافظ‌دار مشکی / سفید 5"><img src="/media/catalog/automoto/assets/d0/bdv-am-d032a9c5f24e6fdecca0.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e3/bdv-am-e3d5cae16df77dbfd800.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars Fastback 2 Drystar محافظ‌دار مشکی / سفید 6"><img src="/media/catalog/automoto/assets/e3/bdv-am-e3d5cae16df77dbfd800.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ed/bdv-am-ede2616c846c8ca17bd8.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars Fastback 2 Drystar محافظ‌دار مشکی / سفید 7"><img src="/media/catalog/automoto/assets/ed/bdv-am-ede2616c846c8ca17bd8.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

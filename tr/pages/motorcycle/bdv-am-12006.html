@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/1b/bdv-am-1b5d5611891d0b1293af.jpg" alt="GARAJJ Icon Mesh AF LTHR Korumalı File Motosiklet Montu Siyah / Siyah" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/1b/bdv-am-1b5d5611891d0b1293af.jpg" alt="GARAJJ Icon Mesh AF LTHR Korumalı File Motosiklet Montu Siyah / Siyah" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/1b/bdv-am-1b5d5611891d0b1293af.jpg" class="is-active" aria-label="GARAJJ Icon Mesh AF LTHR Korumalı File Motosiklet Montu Siyah / Siyah 1"><img src="/media/catalog/automoto/assets/1b/bdv-am-1b5d5611891d0b1293af.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/20/bdv-am-20332579bf5d51b0d28a.jpg" class="" aria-label="GARAJJ Icon Mesh AF LTHR Korumalı File Motosiklet Montu Siyah / Siyah 2"><img src="/media/catalog/automoto/assets/20/bdv-am-20332579bf5d51b0d28a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/4e/bdv-am-4eb8fa12c60b2519275e.jpg" class="" aria-label="GARAJJ Icon Mesh AF LTHR Korumalı File Motosiklet Montu Siyah / Siyah 3"><img src="/media/catalog/automoto/assets/4e/bdv-am-4eb8fa12c60b2519275e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/82/bdv-am-82c8c0f4411c19f6f8f8.jpg" class="" aria-label="GARAJJ Icon Mesh AF LTHR Korumalı File Motosiklet Montu Siyah / Siyah 4"><img src="/media/catalog/automoto/assets/82/bdv-am-82c8c0f4411c19f6f8f8.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/9b/bdv-am-9b62f08e0fc6de6d2c0e.jpg" class="" aria-label="GARAJJ Icon Mesh AF LTHR Korumalı File Motosiklet Montu Siyah / Siyah 5"><img src="/media/catalog/automoto/assets/9b/bdv-am-9b62f08e0fc6de6d2c0e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/bf/bdv-am-bf1618f2ff2c45457f15.jpg" class="" aria-label="GARAJJ Icon Mesh AF LTHR Korumalı File Motosiklet Montu Siyah / Siyah 6"><img src="/media/catalog/automoto/assets/bf/bdv-am-bf1618f2ff2c45457f15.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/cf/bdv-am-cf113d55dd194165dff2.jpg" class="" aria-label="GARAJJ Icon Mesh AF LTHR Korumalı File Motosiklet Montu Siyah / Siyah 7"><img src="/media/catalog/automoto/assets/cf/bdv-am-cf113d55dd194165dff2.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f1/bdv-am-f19cf087fb81d3be7403.jpg" class="" aria-label="GARAJJ Icon Mesh AF LTHR Korumalı File Motosiklet Montu Siyah / Siyah 8"><img src="/media/catalog/automoto/assets/f1/bdv-am-f19cf087fb81d3be7403.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/fa/bdv-am-fac376097082d1c87d6f.jpg" class="" aria-label="GARAJJ Icon Mesh AF LTHR Korumalı File Motosiklet Montu Siyah / Siyah 9"><img src="/media/catalog/automoto/assets/fa/bdv-am-fac376097082d1c87d6f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

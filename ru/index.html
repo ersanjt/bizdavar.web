@@ -447,28 +447,8 @@
   <footer class="footer" id="siteFooter"></footer>
   <button class="back-to-top" id="backToTop" data-i18n-aria="common.backToTop" aria-label="Наверх"></button>
 
-  <script src="/assets/scripts/site-loader.js?v=20261003a" data-after-config="config/owned-products.js" data-after-locales="i18n/owned-products-i18n.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g" data-after-config="config/owned-products.js" data-after-locales="i18n/owned-products-i18n.js"></script>
 
-  <script>
-    function bootHomePage() {
-      const I = window.BIZDAVAR_I18N;
-      setupWhatsappLinks();
-      injectPageSeo('home', { canonical: 'https://bizdavar.com/' });
-      injectServiceSchema();
-      renderCredibilitySection('credibilitySection');
-      renderProcessSection('processSection');
-      renderOwnedProductsSection('ownedProductsSection');
-      renderIndustrialSection('industrialSection');
-      renderClientsGrid('homeClientsGrid', 12);
-      renderBlogGrid('homeBlogGrid', 6);
-      renderGeoStrip('geoStrip');
-      renderLeadPaths('leadPaths');
-      if (I) {
-        const faqs = I.t('home.faqs', []);
-        if (Array.isArray(faqs)) injectFaqSchema(faqs);
-      }
-    }
-    bizdavarPageInit(bootHomePage);
-  </script>
+  <script src="/assets/scripts/page-boot/557ecf799709fe96.js"></script>
 </body>
 </html>

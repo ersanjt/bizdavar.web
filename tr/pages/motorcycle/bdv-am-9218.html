@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/11/bdv-am-11eede0d6080ed559e0b.jpg" alt="Alpinestars Range 2in1 Gore-Tex Korumalı Motosiklet Eldiveni" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/11/bdv-am-11eede0d6080ed559e0b.jpg" alt="Alpinestars Range 2in1 Gore-Tex Korumalı Motosiklet Eldiveni" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/11/bdv-am-11eede0d6080ed559e0b.jpg" class="is-active" aria-label="Alpinestars Range 2in1 Gore-Tex Korumalı Motosiklet Eldiveni 1"><img src="/media/catalog/automoto/assets/11/bdv-am-11eede0d6080ed559e0b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/57/bdv-am-57ea5c910e16a89bea98.jpg" class="" aria-label="Alpinestars Range 2in1 Gore-Tex Korumalı Motosiklet Eldiveni 2"><img src="/media/catalog/automoto/assets/57/bdv-am-57ea5c910e16a89bea98.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ca/bdv-am-cadc2671e52db78f298b.jpg" class="" aria-label="Alpinestars Range 2in1 Gore-Tex Korumalı Motosiklet Eldiveni 3"><img src="/media/catalog/automoto/assets/ca/bdv-am-cadc2671e52db78f298b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ec/bdv-am-ece28c7d33614006d8e1.jpg" class="" aria-label="Alpinestars Range 2in1 Gore-Tex Korumalı Motosiklet Eldiveni 4"><img src="/media/catalog/automoto/assets/ec/bdv-am-ece28c7d33614006d8e1.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f1/bdv-am-f1cfbc44ca66eac3f5a7.jpg" class="" aria-label="Alpinestars Range 2in1 Gore-Tex Korumalı Motosiklet Eldiveni 5"><img src="/media/catalog/automoto/assets/f1/bdv-am-f1cfbc44ca66eac3f5a7.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

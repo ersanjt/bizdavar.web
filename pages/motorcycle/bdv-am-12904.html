@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/3d/bdv-am-3d100b6ef260811071ef.jpg" alt="بوت موتورسیکلت Alpinestars SMX-6 V3 محافظ‌دار مشکی / سفید / قرمز" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/3d/bdv-am-3d100b6ef260811071ef.jpg" alt="بوت موتورسیکلت Alpinestars SMX-6 V3 محافظ‌دار مشکی / سفید / قرمز" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/3d/bdv-am-3d100b6ef260811071ef.jpg" class="is-active" aria-label="بوت موتورسیکلت Alpinestars SMX-6 V3 محافظ‌دار مشکی / سفید / قرمز 1"><img src="/media/catalog/automoto/assets/3d/bdv-am-3d100b6ef260811071ef.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/42/bdv-am-42e9b3020e2c6f70b0ad.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars SMX-6 V3 محافظ‌دار مشکی / سفید / قرمز 2"><img src="/media/catalog/automoto/assets/42/bdv-am-42e9b3020e2c6f70b0ad.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/6e/bdv-am-6ecc6bece1fbe788c963.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars SMX-6 V3 محافظ‌دار مشکی / سفید / قرمز 3"><img src="/media/catalog/automoto/assets/6e/bdv-am-6ecc6bece1fbe788c963.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/95/bdv-am-959586c7a92c6a03df70.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars SMX-6 V3 محافظ‌دار مشکی / سفید / قرمز 4"><img src="/media/catalog/automoto/assets/95/bdv-am-959586c7a92c6a03df70.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b0/bdv-am-b0db8a059ecd85b53eda.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars SMX-6 V3 محافظ‌دار مشکی / سفید / قرمز 5"><img src="/media/catalog/automoto/assets/b0/bdv-am-b0db8a059ecd85b53eda.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/c0/bdv-am-c0e4fe7fe13ef43c1a1a.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars SMX-6 V3 محافظ‌دار مشکی / سفید / قرمز 6"><img src="/media/catalog/automoto/assets/c0/bdv-am-c0e4fe7fe13ef43c1a1a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f4/bdv-am-f453d77af905ace37d5b.jpg" class="" aria-label="بوت موتورسیکلت Alpinestars SMX-6 V3 محافظ‌دار مشکی / سفید / قرمز 7"><img src="/media/catalog/automoto/assets/f4/bdv-am-f453d77af905ace37d5b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/5d/bdv-am-5d62b8bfa6e73eefe40c.jpg" alt="قطعات موتورسیکلت SP Connect C+ یونیورسال Bisiklet موبایل نگهدارنده ست" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/5d/bdv-am-5d62b8bfa6e73eefe40c.jpg" alt="قطعات موتورسیکلت SP Connect C+ یونیورسال Bisiklet موبایل نگهدارنده ست" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/5d/bdv-am-5d62b8bfa6e73eefe40c.jpg" class="is-active" aria-label="قطعات موتورسیکلت SP Connect C+ یونیورسال Bisiklet موبایل نگهدارنده ست 1"><img src="/media/catalog/automoto/assets/5d/bdv-am-5d62b8bfa6e73eefe40c.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/67/bdv-am-67ea57cf44d7891c1178.jpg" class="" aria-label="قطعات موتورسیکلت SP Connect C+ یونیورسال Bisiklet موبایل نگهدارنده ست 2"><img src="/media/catalog/automoto/assets/67/bdv-am-67ea57cf44d7891c1178.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/95/bdv-am-9533e7575c01226559a3.jpg" class="" aria-label="قطعات موتورسیکلت SP Connect C+ یونیورسال Bisiklet موبایل نگهدارنده ست 3"><img src="/media/catalog/automoto/assets/95/bdv-am-9533e7575c01226559a3.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/95/bdv-am-95be3c72a2d98095d92f.jpg" class="" aria-label="قطعات موتورسیکلت SP Connect C+ یونیورسال Bisiklet موبایل نگهدارنده ست 4"><img src="/media/catalog/automoto/assets/95/bdv-am-95be3c72a2d98095d92f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ae/bdv-am-ae9cc10cde32f8b1fbac.jpg" class="" aria-label="قطعات موتورسیکلت SP Connect C+ یونیورسال Bisiklet موبایل نگهدارنده ست 5"><img src="/media/catalog/automoto/assets/ae/bdv-am-ae9cc10cde32f8b1fbac.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e6/bdv-am-e6a0241697de572824e1.jpg" class="" aria-label="قطعات موتورسیکلت SP Connect C+ یونیورسال Bisiklet موبایل نگهدارنده ست 6"><img src="/media/catalog/automoto/assets/e6/bdv-am-e6a0241697de572824e1.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

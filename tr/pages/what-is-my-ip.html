@@ -232,28 +232,8 @@
   <div id="relatedLinks"></div>
   </main>
 
-  <script src="/assets/scripts/site-loader.js?v=20261020d" data-after-seo="i18n/my-ip-i18n.js" data-before-main="free-tools.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g" data-after-seo="i18n/my-ip-i18n.js" data-before-main="free-tools.js"></script>
 
-  <script>
-    bizdavarPageInit(function () {
-      const toolsLabel = window.BIZDAVAR_I18N ? window.BIZDAVAR_I18N.t('nav.tools', '') : '';
-      const crumbs = [
-        { page: 'home', url: 'index' },
-        { page: 'tools', name: toolsLabel, url: 'pages/tools' },
-        { page: 'myIp', url: 'pages/what-is-my-ip' }
-      ];
-      injectPageSeo('myIp', {
-        canonical: 'https://bizdavar.com/pages/what-is-my-ip',
-        robots: 'index, follow, max-image-preview:large'
-      });
-      renderBreadcrumbs(crumbs);
-      injectBreadcrumbSchema(crumbs);
-      setupWhatsappLinks();
-      renderGeoStrip('geoStrip', { textKey: 'myIpPage.geoText' });
-      const related = window.BIZDAVAR_I18N && window.BIZDAVAR_I18N.raw('myIpPage.related');
-      if (Array.isArray(related)) renderRelatedLinks(related);
-      if (typeof window.initFreeTool === 'function') window.initFreeTool();
-    });
-  </script>
+  <script src="/assets/scripts/page-boot/b181d8365dd230c0.js"></script>
 </body>
 </html>

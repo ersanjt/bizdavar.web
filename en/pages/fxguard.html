@@ -71,7 +71,7 @@
         </div>
         <div class="fxguard-hero__media">
           <div class="fxguard-hero__visual" role="img" data-i18n-aria="caseStudy.fxguard.hero.visualAlt" aria-label="FXGuard panel — WhatsApp chat and rates on one screen">
-            <img src="/assets/images/products/fxguard/desktop-dashboard.png?v=20260904e" alt="FXGuard panel — WhatsApp chat and rates on one screen" data-i18n-alt="caseStudy.fxguard.hero.visualAlt" width="1024" height="507" loading="eager" decoding="async" onerror="this.remove()">
+            <img src="/assets/images/products/fxguard/desktop-dashboard.png?v=20260904e" alt="FXGuard panel — WhatsApp chat and rates on one screen" data-i18n-alt="caseStudy.fxguard.hero.visualAlt" width="1024" height="507" loading="eager" decoding="async" data-remove-broken>
             <div class="fxguard-hero__mock" aria-hidden="true">
               <div class="fxguard-hero__mock-panel">
                 <span class="fxguard-hero__mock-bar"></span>
@@ -296,7 +296,7 @@
           </div>
         </div>
         <div class="fxguard-built__media">
-          <img src="/assets/images/products/fxguard/desktop-dashboard.png?v=20260904e" alt="FXGuard panel — WhatsApp chat and rates on one screen" data-i18n-alt="caseStudy.fxguard.hero.visualAlt" loading="lazy" width="1024" height="507" decoding="async" onerror="this.style.display='none'">
+          <img src="/assets/images/products/fxguard/desktop-dashboard.png?v=20260904e" alt="FXGuard panel — WhatsApp chat and rates on one screen" data-i18n-alt="caseStudy.fxguard.hero.visualAlt" loading="lazy" width="1024" height="507" decoding="async" data-hide-broken>
         </div>
       </div>
     </section>
@@ -327,24 +327,7 @@
     <div id="geoStrip"></div>
   </main>
 
-  <script src="/assets/scripts/site-loader.js?v=20261003a" data-after-seo="i18n/fxguard-i18n.js" data-before-main="fxguard-page.js"></script>
-  <script>
-    bizdavarPageInit(function () {
-      const crumbs = [
-        { page: 'home', url: 'index' },
-        { page: 'products', url: 'products' },
-        { page: 'fxguard', url: 'fxguard' }
-      ];
-      injectPageSeo('fxguard', { canonical: 'https://bizdavar.com/pages/fxguard' });
-      renderBreadcrumbs(crumbs);
-      injectBreadcrumbSchema(crumbs);
-      renderGeoStrip('geoStrip', {
-        textKey: 'caseStudy.fxguard.geoText',
-        text: 'FXGuard — پنل واتساپ میز صرافی، حواله و مالی · fxguard.io · اکوسیستم بیزدوار.'
-      });
-      if (typeof initFxguardPage === 'function') initFxguardPage();
-      if (typeof initDataIcons === 'function') initDataIcons(document.getElementById('main-content'));
-    });
-  </script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g" data-after-seo="i18n/fxguard-i18n.js" data-before-main="fxguard-page.js"></script>
+  <script src="/assets/scripts/page-boot/295bfbaff9ad39e1.js"></script>
 </body>
 </html>

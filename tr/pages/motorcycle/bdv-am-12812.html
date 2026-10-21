@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/24/bdv-am-243037edf435bb095737.jpg" alt="Knox Handroid Pod MK5 Kısa Korumalı Deri Motosiklet Eldiveni Siyah / Kahve" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/24/bdv-am-243037edf435bb095737.jpg" alt="Knox Handroid Pod MK5 Kısa Korumalı Deri Motosiklet Eldiveni Siyah / Kahve" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/24/bdv-am-243037edf435bb095737.jpg" class="is-active" aria-label="Knox Handroid Pod MK5 Kısa Korumalı Deri Motosiklet Eldiveni Siyah / Kahve 1"><img src="/media/catalog/automoto/assets/24/bdv-am-243037edf435bb095737.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/25/bdv-am-252bad017eab4c791d6d.jpg" class="" aria-label="Knox Handroid Pod MK5 Kısa Korumalı Deri Motosiklet Eldiveni Siyah / Kahve 2"><img src="/media/catalog/automoto/assets/25/bdv-am-252bad017eab4c791d6d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/25/bdv-am-257a5455bf5e32ef6e92.jpg" class="" aria-label="Knox Handroid Pod MK5 Kısa Korumalı Deri Motosiklet Eldiveni Siyah / Kahve 3"><img src="/media/catalog/automoto/assets/25/bdv-am-257a5455bf5e32ef6e92.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/3c/bdv-am-3c60e5813dfa126c3790.jpg" class="" aria-label="Knox Handroid Pod MK5 Kısa Korumalı Deri Motosiklet Eldiveni Siyah / Kahve 4"><img src="/media/catalog/automoto/assets/3c/bdv-am-3c60e5813dfa126c3790.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/48/bdv-am-4810ab7679833945d4d3.jpg" class="" aria-label="Knox Handroid Pod MK5 Kısa Korumalı Deri Motosiklet Eldiveni Siyah / Kahve 5"><img src="/media/catalog/automoto/assets/48/bdv-am-4810ab7679833945d4d3.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/6c/bdv-am-6c137a89c00e6288dabb.jpg" class="" aria-label="Knox Handroid Pod MK5 Kısa Korumalı Deri Motosiklet Eldiveni Siyah / Kahve 6"><img src="/media/catalog/automoto/assets/6c/bdv-am-6c137a89c00e6288dabb.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/8e/bdv-am-8eab38034a2ed1521f6a.jpg" class="" aria-label="Knox Handroid Pod MK5 Kısa Korumalı Deri Motosiklet Eldiveni Siyah / Kahve 7"><img src="/media/catalog/automoto/assets/8e/bdv-am-8eab38034a2ed1521f6a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b8/bdv-am-b8a8aa11d6abb63cda40.jpg" class="" aria-label="Knox Handroid Pod MK5 Kısa Korumalı Deri Motosiklet Eldiveni Siyah / Kahve 8"><img src="/media/catalog/automoto/assets/b8/bdv-am-b8a8aa11d6abb63cda40.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e2/bdv-am-e23c9de0489d476d1cc1.jpg" class="" aria-label="Knox Handroid Pod MK5 Kısa Korumalı Deri Motosiklet Eldiveni Siyah / Kahve 9"><img src="/media/catalog/automoto/assets/e2/bdv-am-e23c9de0489d476d1cc1.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

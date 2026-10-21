@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/3a/bdv-am-3a8aa65d646073766f17.jpg" alt="کاپشن موتورسیکلت Knox Urbane Pro MK3 محافظ‌دار توری" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/3a/bdv-am-3a8aa65d646073766f17.jpg" alt="کاپشن موتورسیکلت Knox Urbane Pro MK3 محافظ‌دار توری" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/3a/bdv-am-3a8aa65d646073766f17.jpg" class="is-active" aria-label="کاپشن موتورسیکلت Knox Urbane Pro MK3 محافظ‌دار توری 1"><img src="/media/catalog/automoto/assets/3a/bdv-am-3a8aa65d646073766f17.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/4a/bdv-am-4ad5d27f63fec139fcbb.jpg" class="" aria-label="کاپشن موتورسیکلت Knox Urbane Pro MK3 محافظ‌دار توری 2"><img src="/media/catalog/automoto/assets/4a/bdv-am-4ad5d27f63fec139fcbb.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/55/bdv-am-559f4f81e6672f8133f4.jpg" class="" aria-label="کاپشن موتورسیکلت Knox Urbane Pro MK3 محافظ‌دار توری 3"><img src="/media/catalog/automoto/assets/55/bdv-am-559f4f81e6672f8133f4.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/6c/bdv-am-6cd7a07f23dc7a7aed4a.jpg" class="" aria-label="کاپشن موتورسیکلت Knox Urbane Pro MK3 محافظ‌دار توری 4"><img src="/media/catalog/automoto/assets/6c/bdv-am-6cd7a07f23dc7a7aed4a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/cc/bdv-am-cc26e7ac981b93ae039f.jpg" class="" aria-label="کاپشن موتورسیکلت Knox Urbane Pro MK3 محافظ‌دار توری 5"><img src="/media/catalog/automoto/assets/cc/bdv-am-cc26e7ac981b93ae039f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f9/bdv-am-f9d02028785314565c61.jpg" class="" aria-label="کاپشن موتورسیکلت Knox Urbane Pro MK3 محافظ‌دار توری 6"><img src="/media/catalog/automoto/assets/f9/bdv-am-f9d02028785314565c61.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

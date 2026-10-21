@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/36/bdv-am-36adba3dc477b45e9185.jpg" alt="دستکش موتورسیکلت Knox Handroid MK5 محافظ‌دار چرمی مشکی / سفید" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/36/bdv-am-36adba3dc477b45e9185.jpg" alt="دستکش موتورسیکلت Knox Handroid MK5 محافظ‌دار چرمی مشکی / سفید" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/36/bdv-am-36adba3dc477b45e9185.jpg" class="is-active" aria-label="دستکش موتورسیکلت Knox Handroid MK5 محافظ‌دار چرمی مشکی / سفید 1"><img src="/media/catalog/automoto/assets/36/bdv-am-36adba3dc477b45e9185.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/3c/bdv-am-3cf5223c6f93217e2f1b.jpg" class="" aria-label="دستکش موتورسیکلت Knox Handroid MK5 محافظ‌دار چرمی مشکی / سفید 2"><img src="/media/catalog/automoto/assets/3c/bdv-am-3cf5223c6f93217e2f1b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/3f/bdv-am-3fedeef93156eb597ef1.jpg" class="" aria-label="دستکش موتورسیکلت Knox Handroid MK5 محافظ‌دار چرمی مشکی / سفید 3"><img src="/media/catalog/automoto/assets/3f/bdv-am-3fedeef93156eb597ef1.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/79/bdv-am-794b84c18b236dea056f.jpg" class="" aria-label="دستکش موتورسیکلت Knox Handroid MK5 محافظ‌دار چرمی مشکی / سفید 4"><img src="/media/catalog/automoto/assets/79/bdv-am-794b84c18b236dea056f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/7b/bdv-am-7b048a6d6b547c6839ac.jpg" class="" aria-label="دستکش موتورسیکلت Knox Handroid MK5 محافظ‌دار چرمی مشکی / سفید 5"><img src="/media/catalog/automoto/assets/7b/bdv-am-7b048a6d6b547c6839ac.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/8a/bdv-am-8aaed2d98aa34ebd89df.jpg" class="" aria-label="دستکش موتورسیکلت Knox Handroid MK5 محافظ‌دار چرمی مشکی / سفید 6"><img src="/media/catalog/automoto/assets/8a/bdv-am-8aaed2d98aa34ebd89df.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a6/bdv-am-a636900281960f5a0cc9.jpg" class="" aria-label="دستکش موتورسیکلت Knox Handroid MK5 محافظ‌دار چرمی مشکی / سفید 7"><img src="/media/catalog/automoto/assets/a6/bdv-am-a636900281960f5a0cc9.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ce/bdv-am-ce2fcb3773b550240e82.jpg" class="" aria-label="دستکش موتورسیکلت Knox Handroid MK5 محافظ‌دار چرمی مشکی / سفید 8"><img src="/media/catalog/automoto/assets/ce/bdv-am-ce2fcb3773b550240e82.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/d1/bdv-am-d1ae2498361c7747aacf.jpg" class="" aria-label="دستکش موتورسیکلت Knox Handroid MK5 محافظ‌دار چرمی مشکی / سفید 9"><img src="/media/catalog/automoto/assets/d1/bdv-am-d1ae2498361c7747aacf.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e7/bdv-am-e73ea477d16abc1b65a6.jpg" class="" aria-label="دستکش موتورسیکلت Knox Handroid MK5 محافظ‌دار چرمی مشکی / سفید 10"><img src="/media/catalog/automoto/assets/e7/bdv-am-e73ea477d16abc1b65a6.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f1/bdv-am-f18129c9c9ed00c00906.jpg" class="" aria-label="دستکش موتورسیکلت Knox Handroid MK5 محافظ‌دار چرمی مشکی / سفید 11"><img src="/media/catalog/automoto/assets/f1/bdv-am-f18129c9c9ed00c00906.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/03/bdv-am-03f1e9507ac3150ec00e.jpg" alt="Alpinestars TECH 7 Kros Motosiklet Botu Siyah" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/03/bdv-am-03f1e9507ac3150ec00e.jpg" alt="Alpinestars TECH 7 Kros Motosiklet Botu Siyah" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/03/bdv-am-03f1e9507ac3150ec00e.jpg" class="is-active" aria-label="Alpinestars TECH 7 Kros Motosiklet Botu Siyah 1"><img src="/media/catalog/automoto/assets/03/bdv-am-03f1e9507ac3150ec00e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/67/bdv-am-6750e401f6e128c7dd9b.jpg" class="" aria-label="Alpinestars TECH 7 Kros Motosiklet Botu Siyah 2"><img src="/media/catalog/automoto/assets/67/bdv-am-6750e401f6e128c7dd9b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/81/bdv-am-8113e393ae7d6f6d28aa.jpg" class="" aria-label="Alpinestars TECH 7 Kros Motosiklet Botu Siyah 3"><img src="/media/catalog/automoto/assets/81/bdv-am-8113e393ae7d6f6d28aa.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/89/bdv-am-89b92e856f9b85a83677.jpg" class="" aria-label="Alpinestars TECH 7 Kros Motosiklet Botu Siyah 4"><img src="/media/catalog/automoto/assets/89/bdv-am-89b92e856f9b85a83677.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ae/bdv-am-ae29c1920c986461899a.jpg" class="" aria-label="Alpinestars TECH 7 Kros Motosiklet Botu Siyah 5"><img src="/media/catalog/automoto/assets/ae/bdv-am-ae29c1920c986461899a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e3/bdv-am-e3abd0ebc47f6f393e67.jpg" class="" aria-label="Alpinestars TECH 7 Kros Motosiklet Botu Siyah 6"><img src="/media/catalog/automoto/assets/e3/bdv-am-e3abd0ebc47f6f393e67.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f3/bdv-am-f3e38e419dfe67762060.jpg" class="" aria-label="Alpinestars TECH 7 Kros Motosiklet Botu Siyah 7"><img src="/media/catalog/automoto/assets/f3/bdv-am-f3e38e419dfe67762060.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

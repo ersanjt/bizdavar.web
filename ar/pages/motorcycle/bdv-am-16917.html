@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/1e/bdv-am-1e26104c8fb952551f1d.jpg" alt="Sena Phantom ANC Intercomlu Motorcycle Helmet White" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/1e/bdv-am-1e26104c8fb952551f1d.jpg" alt="Sena Phantom ANC Intercomlu Motorcycle Helmet White" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/1e/bdv-am-1e26104c8fb952551f1d.jpg" class="is-active" aria-label="Sena Phantom ANC Intercomlu Motorcycle Helmet White 1"><img src="/media/catalog/automoto/assets/1e/bdv-am-1e26104c8fb952551f1d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/59/bdv-am-590e0b32a4277b0a4eda.jpg" class="" aria-label="Sena Phantom ANC Intercomlu Motorcycle Helmet White 2"><img src="/media/catalog/automoto/assets/59/bdv-am-590e0b32a4277b0a4eda.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/79/bdv-am-79e7790780b28f8f9dbe.jpg" class="" aria-label="Sena Phantom ANC Intercomlu Motorcycle Helmet White 3"><img src="/media/catalog/automoto/assets/79/bdv-am-79e7790780b28f8f9dbe.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/9e/bdv-am-9e59b9d51022f81d120f.jpg" class="" aria-label="Sena Phantom ANC Intercomlu Motorcycle Helmet White 4"><img src="/media/catalog/automoto/assets/9e/bdv-am-9e59b9d51022f81d120f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b7/bdv-am-b72711ffc4c010e07157.jpg" class="" aria-label="Sena Phantom ANC Intercomlu Motorcycle Helmet White 5"><img src="/media/catalog/automoto/assets/b7/bdv-am-b72711ffc4c010e07157.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

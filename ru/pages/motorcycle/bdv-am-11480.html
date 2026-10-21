@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/2b/bdv-am-2b1dc53a283ac02b386a.jpg" alt="Alpinestars SMX-6 V3 DS WP Protective Motorcycle Boot Black / Red" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/2b/bdv-am-2b1dc53a283ac02b386a.jpg" alt="Alpinestars SMX-6 V3 DS WP Protective Motorcycle Boot Black / Red" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/2b/bdv-am-2b1dc53a283ac02b386a.jpg" class="is-active" aria-label="Alpinestars SMX-6 V3 DS WP Protective Motorcycle Boot Black / Red 1"><img src="/media/catalog/automoto/assets/2b/bdv-am-2b1dc53a283ac02b386a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/2f/bdv-am-2f224b74d47d1c7a644f.jpg" class="" aria-label="Alpinestars SMX-6 V3 DS WP Protective Motorcycle Boot Black / Red 2"><img src="/media/catalog/automoto/assets/2f/bdv-am-2f224b74d47d1c7a644f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/58/bdv-am-5805415827d384c3dbb1.jpg" class="" aria-label="Alpinestars SMX-6 V3 DS WP Protective Motorcycle Boot Black / Red 3"><img src="/media/catalog/automoto/assets/58/bdv-am-5805415827d384c3dbb1.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/71/bdv-am-71a4f58d063ffe55ceea.jpg" class="" aria-label="Alpinestars SMX-6 V3 DS WP Protective Motorcycle Boot Black / Red 4"><img src="/media/catalog/automoto/assets/71/bdv-am-71a4f58d063ffe55ceea.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/75/bdv-am-75203ae018111a505e51.jpg" class="" aria-label="Alpinestars SMX-6 V3 DS WP Protective Motorcycle Boot Black / Red 5"><img src="/media/catalog/automoto/assets/75/bdv-am-75203ae018111a505e51.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/bf/bdv-am-bf739c3d762813a74469.jpg" class="" aria-label="Alpinestars SMX-6 V3 DS WP Protective Motorcycle Boot Black / Red 6"><img src="/media/catalog/automoto/assets/bf/bdv-am-bf739c3d762813a74469.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/d4/bdv-am-d45044bdd8400c6e229f.jpg" class="" aria-label="Alpinestars SMX-6 V3 DS WP Protective Motorcycle Boot Black / Red 7"><img src="/media/catalog/automoto/assets/d4/bdv-am-d45044bdd8400c6e229f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

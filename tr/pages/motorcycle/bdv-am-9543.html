@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/77/bdv-am-7727c06aa9db32bdd390.jpg" alt="Klim Sundance Kadın Termal Mont" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/77/bdv-am-7727c06aa9db32bdd390.jpg" alt="Klim Sundance Kadın Termal Mont" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/77/bdv-am-7727c06aa9db32bdd390.jpg" class="is-active" aria-label="Klim Sundance Kadın Termal Mont 1"><img src="/media/catalog/automoto/assets/77/bdv-am-7727c06aa9db32bdd390.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/bc/bdv-am-bc36c895c4c41881d60b.jpg" class="" aria-label="Klim Sundance Kadın Termal Mont 2"><img src="/media/catalog/automoto/assets/bc/bdv-am-bc36c895c4c41881d60b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e4/bdv-am-e4f2cccae9292d512423.jpg" class="" aria-label="Klim Sundance Kadın Termal Mont 3"><img src="/media/catalog/automoto/assets/e4/bdv-am-e4f2cccae9292d512423.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e4/bdv-am-e4f38ad7549d4a843dc5.jpg" class="" aria-label="Klim Sundance Kadın Termal Mont 4"><img src="/media/catalog/automoto/assets/e4/bdv-am-e4f38ad7549d4a843dc5.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f8/bdv-am-f89e442240dcb53ef009.jpg" class="" aria-label="Klim Sundance Kadın Termal Mont 5"><img src="/media/catalog/automoto/assets/f8/bdv-am-f89e442240dcb53ef009.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

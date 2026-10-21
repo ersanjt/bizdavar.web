@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/1a/bdv-am-1ad40bfa160b17cad965.jpg" alt="Klim Krios Pro Carbon Echo Adv Rally Motorcycle Helmet Black / YeşIl" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/1a/bdv-am-1ad40bfa160b17cad965.jpg" alt="Klim Krios Pro Carbon Echo Adv Rally Motorcycle Helmet Black / YeşIl" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/1a/bdv-am-1ad40bfa160b17cad965.jpg" class="is-active" aria-label="Klim Krios Pro Carbon Echo Adv Rally Motorcycle Helmet Black / YeşIl 1"><img src="/media/catalog/automoto/assets/1a/bdv-am-1ad40bfa160b17cad965.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/3e/bdv-am-3e94512cc8f5dc4a9a93.jpg" class="" aria-label="Klim Krios Pro Carbon Echo Adv Rally Motorcycle Helmet Black / YeşIl 2"><img src="/media/catalog/automoto/assets/3e/bdv-am-3e94512cc8f5dc4a9a93.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/40/bdv-am-4028c5c86c707b7de165.jpg" class="" aria-label="Klim Krios Pro Carbon Echo Adv Rally Motorcycle Helmet Black / YeşIl 3"><img src="/media/catalog/automoto/assets/40/bdv-am-4028c5c86c707b7de165.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/40/bdv-am-404a62a95b79ef4b371a.jpg" class="" aria-label="Klim Krios Pro Carbon Echo Adv Rally Motorcycle Helmet Black / YeşIl 4"><img src="/media/catalog/automoto/assets/40/bdv-am-404a62a95b79ef4b371a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/44/bdv-am-44d966cd25edbf3baa25.jpg" class="" aria-label="Klim Krios Pro Carbon Echo Adv Rally Motorcycle Helmet Black / YeşIl 5"><img src="/media/catalog/automoto/assets/44/bdv-am-44d966cd25edbf3baa25.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/9d/bdv-am-9d61dacd72446070560d.jpg" class="" aria-label="Klim Krios Pro Carbon Echo Adv Rally Motorcycle Helmet Black / YeşIl 6"><img src="/media/catalog/automoto/assets/9d/bdv-am-9d61dacd72446070560d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/d3/bdv-am-d3e019ae75e74461b381.jpg" class="" aria-label="Klim Krios Pro Carbon Echo Adv Rally Motorcycle Helmet Black / YeşIl 7"><img src="/media/catalog/automoto/assets/d3/bdv-am-d3e019ae75e74461b381.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/fb/bdv-am-fb0074bbea5d2f4b01af.jpg" class="" aria-label="Klim Krios Pro Carbon Echo Adv Rally Motorcycle Helmet Black / YeşIl 8"><img src="/media/catalog/automoto/assets/fb/bdv-am-fb0074bbea5d2f4b01af.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

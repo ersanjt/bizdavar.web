@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/33/bdv-am-33392ddf2e58137c2155.jpg" alt="Clover Rally Pro WP Korumalı Motosiklet Montu Siyah / Gri" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/33/bdv-am-33392ddf2e58137c2155.jpg" alt="Clover Rally Pro WP Korumalı Motosiklet Montu Siyah / Gri" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/33/bdv-am-33392ddf2e58137c2155.jpg" class="is-active" aria-label="Clover Rally Pro WP Korumalı Motosiklet Montu Siyah / Gri 1"><img src="/media/catalog/automoto/assets/33/bdv-am-33392ddf2e58137c2155.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/48/bdv-am-48a8cab2a67ea5a95c55.jpg" class="" aria-label="Clover Rally Pro WP Korumalı Motosiklet Montu Siyah / Gri 2"><img src="/media/catalog/automoto/assets/48/bdv-am-48a8cab2a67ea5a95c55.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/67/bdv-am-675eec7e9994da18cba3.jpg" class="" aria-label="Clover Rally Pro WP Korumalı Motosiklet Montu Siyah / Gri 3"><img src="/media/catalog/automoto/assets/67/bdv-am-675eec7e9994da18cba3.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/9f/bdv-am-9ff7856228f7da2920aa.jpg" class="" aria-label="Clover Rally Pro WP Korumalı Motosiklet Montu Siyah / Gri 4"><img src="/media/catalog/automoto/assets/9f/bdv-am-9ff7856228f7da2920aa.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a1/bdv-am-a144b8b0d441b8915c22.jpg" class="" aria-label="Clover Rally Pro WP Korumalı Motosiklet Montu Siyah / Gri 5"><img src="/media/catalog/automoto/assets/a1/bdv-am-a144b8b0d441b8915c22.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a6/bdv-am-a67ed2f1e28f03a9616b.jpg" class="" aria-label="Clover Rally Pro WP Korumalı Motosiklet Montu Siyah / Gri 6"><img src="/media/catalog/automoto/assets/a6/bdv-am-a67ed2f1e28f03a9616b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a7/bdv-am-a78b53f86d6e6034ed30.jpg" class="" aria-label="Clover Rally Pro WP Korumalı Motosiklet Montu Siyah / Gri 7"><img src="/media/catalog/automoto/assets/a7/bdv-am-a78b53f86d6e6034ed30.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b1/bdv-am-b1191f7e92851ef70497.jpg" class="" aria-label="Clover Rally Pro WP Korumalı Motosiklet Montu Siyah / Gri 8"><img src="/media/catalog/automoto/assets/b1/bdv-am-b1191f7e92851ef70497.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

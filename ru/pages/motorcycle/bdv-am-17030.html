@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/3b/bdv-am-3b18bee11a519e56c54b.jpg" alt="Alpinestars S-M7 Core Off-Road Helmet Red" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/3b/bdv-am-3b18bee11a519e56c54b.jpg" alt="Alpinestars S-M7 Core Off-Road Helmet Red" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/3b/bdv-am-3b18bee11a519e56c54b.jpg" class="is-active" aria-label="Alpinestars S-M7 Core Off-Road Helmet Red 1"><img src="/media/catalog/automoto/assets/3b/bdv-am-3b18bee11a519e56c54b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/5c/bdv-am-5c7788f4e497bbfef29d.jpg" class="" aria-label="Alpinestars S-M7 Core Off-Road Helmet Red 2"><img src="/media/catalog/automoto/assets/5c/bdv-am-5c7788f4e497bbfef29d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/82/bdv-am-82972b1b34e13dbd870a.jpg" class="" aria-label="Alpinestars S-M7 Core Off-Road Helmet Red 3"><img src="/media/catalog/automoto/assets/82/bdv-am-82972b1b34e13dbd870a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/be/bdv-am-be65ff55b9aff96af8d4.jpg" class="" aria-label="Alpinestars S-M7 Core Off-Road Helmet Red 4"><img src="/media/catalog/automoto/assets/be/bdv-am-be65ff55b9aff96af8d4.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/c2/bdv-am-c26ddbb534280c255d20.jpg" class="" aria-label="Alpinestars S-M7 Core Off-Road Helmet Red 5"><img src="/media/catalog/automoto/assets/c2/bdv-am-c26ddbb534280c255d20.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/dc/bdv-am-dc6ec5e0394ebc5a575b.jpg" class="" aria-label="Alpinestars S-M7 Core Off-Road Helmet Red 6"><img src="/media/catalog/automoto/assets/dc/bdv-am-dc6ec5e0394ebc5a575b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/eb/bdv-am-eb4ffcb38fb69ae84531.jpg" class="" aria-label="Alpinestars S-M7 Core Off-Road Helmet Red 7"><img src="/media/catalog/automoto/assets/eb/bdv-am-eb4ffcb38fb69ae84531.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

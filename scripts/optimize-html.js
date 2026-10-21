@@ -15,12 +15,7 @@ const GTM_HEAD = `  <!-- Google Tag Manager -->
 
 const GA4_HEAD = `  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=${GA4_ID}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', '${GA4_ID}');
-  </script>`;
+  <script src="/assets/scripts/ga4-boot.js"></script>`;
 
 const GTM_BODY = `  <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}"

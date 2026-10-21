@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/03/bdv-am-03433fd6a596c8cf46f0.jpg" alt="کلاه ایمنی موتورسیکلت Klim Krios Pro کربن Spectrum Adv Rally سفید / آبی" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/03/bdv-am-03433fd6a596c8cf46f0.jpg" alt="کلاه ایمنی موتورسیکلت Klim Krios Pro کربن Spectrum Adv Rally سفید / آبی" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/03/bdv-am-03433fd6a596c8cf46f0.jpg" class="is-active" aria-label="کلاه ایمنی موتورسیکلت Klim Krios Pro کربن Spectrum Adv Rally سفید / آبی 1"><img src="/media/catalog/automoto/assets/03/bdv-am-03433fd6a596c8cf46f0.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/04/bdv-am-04e33400ca0746aa48ca.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim Krios Pro کربن Spectrum Adv Rally سفید / آبی 2"><img src="/media/catalog/automoto/assets/04/bdv-am-04e33400ca0746aa48ca.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/21/bdv-am-21973761226e06648433.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim Krios Pro کربن Spectrum Adv Rally سفید / آبی 3"><img src="/media/catalog/automoto/assets/21/bdv-am-21973761226e06648433.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/4c/bdv-am-4c3f085794e8369efb22.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim Krios Pro کربن Spectrum Adv Rally سفید / آبی 4"><img src="/media/catalog/automoto/assets/4c/bdv-am-4c3f085794e8369efb22.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/75/bdv-am-755add97ea5fbe031855.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim Krios Pro کربن Spectrum Adv Rally سفید / آبی 5"><img src="/media/catalog/automoto/assets/75/bdv-am-755add97ea5fbe031855.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/7d/bdv-am-7de14703499649204a8f.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim Krios Pro کربن Spectrum Adv Rally سفید / آبی 6"><img src="/media/catalog/automoto/assets/7d/bdv-am-7de14703499649204a8f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b1/bdv-am-b186e7e7278d6098fbf6.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim Krios Pro کربن Spectrum Adv Rally سفید / آبی 7"><img src="/media/catalog/automoto/assets/b1/bdv-am-b186e7e7278d6098fbf6.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ca/bdv-am-ca3969f13060383f1938.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim Krios Pro کربن Spectrum Adv Rally سفید / آبی 8"><img src="/media/catalog/automoto/assets/ca/bdv-am-ca3969f13060383f1938.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

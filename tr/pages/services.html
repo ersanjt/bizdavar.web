@@ -447,33 +447,8 @@
   <footer class="footer" id="siteFooter"></footer>
   <button class="back-to-top" id="backToTop" data-i18n-aria="common.backToTop" aria-label="Yukarı dön"></button>
 
-  <script src="/assets/scripts/site-loader.js?v=20261003a" data-after-page-i18n="i18n/services-i18n.js,i18n/services-i18n-ru-ar.js" data-before-main="services-page.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g" data-after-page-i18n="i18n/services-i18n.js,i18n/services-i18n-ru-ar.js" data-before-main="services-page.js"></script>
 
-  <script>
-    if (typeof bizdavarBootPage === 'function') bizdavarBootPage({
-      seo: 'services',
-      seoOptions: {
-        canonical: 'https://bizdavar.com/pages/services',
-        ogImage: 'assets/images/content/hero-home.svg'
-      },
-      crumbs: [
-        { page: 'home', url: 'index' },
-        { page: 'services', url: 'services' }
-      ],
-      init: function () {
-        if (typeof window.ensureBizdavarPageShell === 'function') window.ensureBizdavarPageShell();
-        if (typeof window.renderSiteChrome === 'function') window.renderSiteChrome();
-        if (typeof window.initServicesPage === 'function') window.initServicesPage();
-        if (typeof window.injectServiceSchema === 'function') window.injectServiceSchema();
-        if (typeof window.renderGeoStrip === 'function') {
-          window.renderGeoStrip('geoStrip', {
-            textKey: 'servicesPage.geoText',
-            text: 'خدمات دیجیتال و فنی بیزدوار — تمرکز اجرایی تبریز و استانبول، مشاوره فارسی و واتساپ تخصصی خدمات فنی.'
-          });
-        }
-        if (typeof window.renderServicesRelatedLinks === 'function') window.renderServicesRelatedLinks();
-      }
-    });
-  </script>
+  <script src="/assets/scripts/page-boot/ef496d81ee2164ce.js"></script>
 </body>
 </html>

@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/01/bdv-am-0114a61f87f10dbdb1e9.jpg" alt="Torc T-15 Kapalı Motorcycle Helmet Matte Black" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/01/bdv-am-0114a61f87f10dbdb1e9.jpg" alt="Torc T-15 Kapalı Motorcycle Helmet Matte Black" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/01/bdv-am-0114a61f87f10dbdb1e9.jpg" class="is-active" aria-label="Torc T-15 Kapalı Motorcycle Helmet Matte Black 1"><img src="/media/catalog/automoto/assets/01/bdv-am-0114a61f87f10dbdb1e9.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/0d/bdv-am-0da9c885e073d660402b.jpg" class="" aria-label="Torc T-15 Kapalı Motorcycle Helmet Matte Black 2"><img src="/media/catalog/automoto/assets/0d/bdv-am-0da9c885e073d660402b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/12/bdv-am-12529df1d88fdd1c283c.jpg" class="" aria-label="Torc T-15 Kapalı Motorcycle Helmet Matte Black 3"><img src="/media/catalog/automoto/assets/12/bdv-am-12529df1d88fdd1c283c.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/27/bdv-am-27a9e59e737a9b503b7a.jpg" class="" aria-label="Torc T-15 Kapalı Motorcycle Helmet Matte Black 4"><img src="/media/catalog/automoto/assets/27/bdv-am-27a9e59e737a9b503b7a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/5e/bdv-am-5e0744d3b8eae23e35c9.jpg" class="" aria-label="Torc T-15 Kapalı Motorcycle Helmet Matte Black 5"><img src="/media/catalog/automoto/assets/5e/bdv-am-5e0744d3b8eae23e35c9.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/72/bdv-am-729bad4182f8b48354f1.jpg" class="" aria-label="Torc T-15 Kapalı Motorcycle Helmet Matte Black 6"><img src="/media/catalog/automoto/assets/72/bdv-am-729bad4182f8b48354f1.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/82/bdv-am-82cdbeeb41a2b829a5d5.jpg" class="" aria-label="Torc T-15 Kapalı Motorcycle Helmet Matte Black 7"><img src="/media/catalog/automoto/assets/82/bdv-am-82cdbeeb41a2b829a5d5.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/8f/bdv-am-8fb8411c3d7ae54384db.jpg" class="" aria-label="Torc T-15 Kapalı Motorcycle Helmet Matte Black 8"><img src="/media/catalog/automoto/assets/8f/bdv-am-8fb8411c3d7ae54384db.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/c0/bdv-am-c02dd6ed6a00f4663549.jpg" class="" aria-label="Torc T-15 Kapalı Motorcycle Helmet Matte Black 9"><img src="/media/catalog/automoto/assets/c0/bdv-am-c02dd6ed6a00f4663549.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ca/bdv-am-ca9805b7e034e9808220.jpg" class="" aria-label="Torc T-15 Kapalı Motorcycle Helmet Matte Black 10"><img src="/media/catalog/automoto/assets/ca/bdv-am-ca9805b7e034e9808220.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/cd/bdv-am-cd59a2681208d266c125.jpg" class="" aria-label="Torc T-15 Kapalı Motorcycle Helmet Matte Black 11"><img src="/media/catalog/automoto/assets/cd/bdv-am-cd59a2681208d266c125.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e9/bdv-am-e97ad71ebc5c2d50f4fe.jpg" class="" aria-label="Torc T-15 Kapalı Motorcycle Helmet Matte Black 12"><img src="/media/catalog/automoto/assets/e9/bdv-am-e97ad71ebc5c2d50f4fe.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

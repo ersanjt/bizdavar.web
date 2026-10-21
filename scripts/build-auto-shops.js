@@ -5,6 +5,19 @@
  */
 const fs = require('fs');
 const path = require('path');
+const { bootTag } = require('./lib/page-boot-tag');
+
+const GALLERY_TAG = bootTag(`document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
+      var main = root.querySelector('.am-pdp__main');
+      root.addEventListener('click', function (event) {
+        var btn = event.target.closest('button[data-src]');
+        if (!btn || !main) return;
+        main.src = btn.getAttribute('data-src');
+        root.querySelectorAll('button[data-src]').forEach(function (node) {
+          node.classList.toggle('is-active', node === btn);
+        });
+      });
+    });`);
 
 const ROOT = path.join(__dirname, '..');
 const BASE = 'https://bizdavar.com';
@@ -196,15 +209,13 @@ ${alts}
     </section>
   </main>
   <script src="/assets/scripts/site-loader.js?v=${VER}"></script>
-  <script>
-    bizdavarPageInit(function () {
+  ${bootTag(`bizdavarPageInit(function () {
       renderBreadcrumbs([
         { page: 'home', url: 'index' },
-        { page: 'products', url: 'products#supply' },
+        { page: 'supply', url: 'products#supply' },
         { page: 'autoMoto', url: 'auto-moto' }
       ]);
-    });
-  </script>
+    });`)}
 </body>
 </html>
 `;
@@ -359,7 +370,7 @@ ${hreflang(item.id)}
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="${esc(img)}" alt="${esc(title)}" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="${esc(img)}" alt="${esc(title)}" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           ${thumbs}
         </div>
         <div>
@@ -374,19 +385,7 @@ ${hreflang(item.id)}
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
+  ${GALLERY_TAG}
   <script src="/assets/scripts/site-loader.js?v=${VER}"></script>
 </body>
 </html>

@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/46/bdv-am-46b4a759858e123f28dc.jpg" alt="Alpinestars SM3 Youth Wurx Off-Road Kids Youth Motorcycle Helmet Blue / White / Red" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/46/bdv-am-46b4a759858e123f28dc.jpg" alt="Alpinestars SM3 Youth Wurx Off-Road Kids Youth Motorcycle Helmet Blue / White / Red" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/46/bdv-am-46b4a759858e123f28dc.jpg" class="is-active" aria-label="Alpinestars SM3 Youth Wurx Off-Road Kids Youth Motorcycle Helmet Blue / White / Red 1"><img src="/media/catalog/automoto/assets/46/bdv-am-46b4a759858e123f28dc.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/59/bdv-am-596d8eb77af524d010ce.jpg" class="" aria-label="Alpinestars SM3 Youth Wurx Off-Road Kids Youth Motorcycle Helmet Blue / White / Red 2"><img src="/media/catalog/automoto/assets/59/bdv-am-596d8eb77af524d010ce.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/80/bdv-am-807f834b01e6cd09d578.jpg" class="" aria-label="Alpinestars SM3 Youth Wurx Off-Road Kids Youth Motorcycle Helmet Blue / White / Red 3"><img src="/media/catalog/automoto/assets/80/bdv-am-807f834b01e6cd09d578.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/9d/bdv-am-9d1a0aa07e5aeaba3ec3.jpg" class="" aria-label="Alpinestars SM3 Youth Wurx Off-Road Kids Youth Motorcycle Helmet Blue / White / Red 4"><img src="/media/catalog/automoto/assets/9d/bdv-am-9d1a0aa07e5aeaba3ec3.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/bc/bdv-am-bce7d63a381dafe1824c.jpg" class="" aria-label="Alpinestars SM3 Youth Wurx Off-Road Kids Youth Motorcycle Helmet Blue / White / Red 5"><img src="/media/catalog/automoto/assets/bc/bdv-am-bce7d63a381dafe1824c.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e5/bdv-am-e535d010cab39f5764f0.jpg" class="" aria-label="Alpinestars SM3 Youth Wurx Off-Road Kids Youth Motorcycle Helmet Blue / White / Red 6"><img src="/media/catalog/automoto/assets/e5/bdv-am-e535d010cab39f5764f0.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ea/bdv-am-ea02bac3160ca30d878e.jpg" class="" aria-label="Alpinestars SM3 Youth Wurx Off-Road Kids Youth Motorcycle Helmet Blue / White / Red 7"><img src="/media/catalog/automoto/assets/ea/bdv-am-ea02bac3160ca30d878e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

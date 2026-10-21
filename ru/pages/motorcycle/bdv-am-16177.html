@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/66/bdv-am-6679c77b27c3a61f5d7f.jpg" alt="Alpinestars SM3 Radium Off-Road Helmet Black / Red / White" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/66/bdv-am-6679c77b27c3a61f5d7f.jpg" alt="Alpinestars SM3 Radium Off-Road Helmet Black / Red / White" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/66/bdv-am-6679c77b27c3a61f5d7f.jpg" class="is-active" aria-label="Alpinestars SM3 Radium Off-Road Helmet Black / Red / White 1"><img src="/media/catalog/automoto/assets/66/bdv-am-6679c77b27c3a61f5d7f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ac/bdv-am-ac8bea751f6180fc414d.jpg" class="" aria-label="Alpinestars SM3 Radium Off-Road Helmet Black / Red / White 2"><img src="/media/catalog/automoto/assets/ac/bdv-am-ac8bea751f6180fc414d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b8/bdv-am-b83616713015af9a690b.jpg" class="" aria-label="Alpinestars SM3 Radium Off-Road Helmet Black / Red / White 3"><img src="/media/catalog/automoto/assets/b8/bdv-am-b83616713015af9a690b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/c8/bdv-am-c83d766d0461991a73db.jpg" class="" aria-label="Alpinestars SM3 Radium Off-Road Helmet Black / Red / White 4"><img src="/media/catalog/automoto/assets/c8/bdv-am-c83d766d0461991a73db.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/df/bdv-am-df0295c1bc3d49dc1364.jpg" class="" aria-label="Alpinestars SM3 Radium Off-Road Helmet Black / Red / White 5"><img src="/media/catalog/automoto/assets/df/bdv-am-df0295c1bc3d49dc1364.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ea/bdv-am-eab061c5c35b77ce66e7.jpg" class="" aria-label="Alpinestars SM3 Radium Off-Road Helmet Black / Red / White 6"><img src="/media/catalog/automoto/assets/ea/bdv-am-eab061c5c35b77ce66e7.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f8/bdv-am-f8fd1e1aa98a5c904b4a.jpg" class="" aria-label="Alpinestars SM3 Radium Off-Road Helmet Black / Red / White 7"><img src="/media/catalog/automoto/assets/f8/bdv-am-f8fd1e1aa98a5c904b4a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

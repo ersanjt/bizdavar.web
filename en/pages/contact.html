@@ -160,28 +160,8 @@
   <div id="geoStrip"></div>
   </main>
 
-  <script src="/assets/scripts/site-loader.js?v=20261009c"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
   
-  <script>
-    bizdavarPageInit(function () {
-      injectPageSeo('contact', {
-        canonical: 'https://bizdavar.com/pages/contact',
-        ogImage: 'assets/images/content/contact-banner.svg'
-      });
-      const crumbs = [
-        { page: 'home', url: 'index' },
-        { page: 'contact', url: 'contact' }
-      ];
-renderBreadcrumbs(crumbs);
-      injectBreadcrumbSchema(crumbs);
-      fillContactDetails();
-      setupWhatsappLinks();
-      injectContactPageSchema();
-      renderGeoStrip('geoStrip', {
-        textKey: 'contactPage.geoText',
-        text: 'مشاوره و پشتیبانی از دفاتر ایران، ترکیه، ارمنستان و دبی — واتساپ فارسی و ترکی.'
-      });
-    });
-  </script>
+  <script src="/assets/scripts/page-boot/313be61f8189f429.js"></script>
 </body>
 </html>

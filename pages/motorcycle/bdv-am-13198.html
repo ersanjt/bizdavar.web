@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/70/bdv-am-7003783073f9f7b685d8.jpg" alt="شلوار موتورسیکلت Clover ADV محافظ‌دار (کوتاه پا) مشکی" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/70/bdv-am-7003783073f9f7b685d8.jpg" alt="شلوار موتورسیکلت Clover ADV محافظ‌دار (کوتاه پا) مشکی" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/70/bdv-am-7003783073f9f7b685d8.jpg" class="is-active" aria-label="شلوار موتورسیکلت Clover ADV محافظ‌دار (کوتاه پا) مشکی 1"><img src="/media/catalog/automoto/assets/70/bdv-am-7003783073f9f7b685d8.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/89/bdv-am-891cb896bfe2491b4fdf.jpg" class="" aria-label="شلوار موتورسیکلت Clover ADV محافظ‌دار (کوتاه پا) مشکی 2"><img src="/media/catalog/automoto/assets/89/bdv-am-891cb896bfe2491b4fdf.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/8b/bdv-am-8b82e26d05b91dc34dde.jpg" class="" aria-label="شلوار موتورسیکلت Clover ADV محافظ‌دار (کوتاه پا) مشکی 3"><img src="/media/catalog/automoto/assets/8b/bdv-am-8b82e26d05b91dc34dde.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ce/bdv-am-ceb4c74041b3573b84e1.jpg" class="" aria-label="شلوار موتورسیکلت Clover ADV محافظ‌دار (کوتاه پا) مشکی 4"><img src="/media/catalog/automoto/assets/ce/bdv-am-ceb4c74041b3573b84e1.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/fb/bdv-am-fb7e92b565318cc69e0b.jpg" class="" aria-label="شلوار موتورسیکلت Clover ADV محافظ‌دار (کوتاه پا) مشکی 5"><img src="/media/catalog/automoto/assets/fb/bdv-am-fb7e92b565318cc69e0b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

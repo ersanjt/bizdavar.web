@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/01/bdv-am-016e04ed973414d01ef7.jpg" alt="کلاه ایمنی موتورسیکلت Klim Krios Pro Adv Ventura مشکی / خاکستری / آبی" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/01/bdv-am-016e04ed973414d01ef7.jpg" alt="کلاه ایمنی موتورسیکلت Klim Krios Pro Adv Ventura مشکی / خاکستری / آبی" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/01/bdv-am-016e04ed973414d01ef7.jpg" class="is-active" aria-label="کلاه ایمنی موتورسیکلت Klim Krios Pro Adv Ventura مشکی / خاکستری / آبی 1"><img src="/media/catalog/automoto/assets/01/bdv-am-016e04ed973414d01ef7.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/2d/bdv-am-2d8b1aed49036818b385.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim Krios Pro Adv Ventura مشکی / خاکستری / آبی 2"><img src="/media/catalog/automoto/assets/2d/bdv-am-2d8b1aed49036818b385.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/31/bdv-am-3175e3c30aeb1618484f.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim Krios Pro Adv Ventura مشکی / خاکستری / آبی 3"><img src="/media/catalog/automoto/assets/31/bdv-am-3175e3c30aeb1618484f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/5d/bdv-am-5d79ca27310e4e1d24b0.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim Krios Pro Adv Ventura مشکی / خاکستری / آبی 4"><img src="/media/catalog/automoto/assets/5d/bdv-am-5d79ca27310e4e1d24b0.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/6a/bdv-am-6a1ba372bc42260f0e03.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim Krios Pro Adv Ventura مشکی / خاکستری / آبی 5"><img src="/media/catalog/automoto/assets/6a/bdv-am-6a1ba372bc42260f0e03.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/95/bdv-am-95eac82a097708a18682.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim Krios Pro Adv Ventura مشکی / خاکستری / آبی 6"><img src="/media/catalog/automoto/assets/95/bdv-am-95eac82a097708a18682.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a1/bdv-am-a106a180431320489ae3.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim Krios Pro Adv Ventura مشکی / خاکستری / آبی 7"><img src="/media/catalog/automoto/assets/a1/bdv-am-a106a180431320489ae3.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a5/bdv-am-a5369fa29fee40eb1657.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim Krios Pro Adv Ventura مشکی / خاکستری / آبی 8"><img src="/media/catalog/automoto/assets/a5/bdv-am-a5369fa29fee40eb1657.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

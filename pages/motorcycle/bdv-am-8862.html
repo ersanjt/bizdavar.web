@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/2c/bdv-am-2ce5dd1b3f7a8247c204.jpg" alt="قطعات موتورسیکلت Sp Connect C+ iPhone 14 Plus موبایل کاور" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/2c/bdv-am-2ce5dd1b3f7a8247c204.jpg" alt="قطعات موتورسیکلت Sp Connect C+ iPhone 14 Plus موبایل کاور" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/2c/bdv-am-2ce5dd1b3f7a8247c204.jpg" class="is-active" aria-label="قطعات موتورسیکلت Sp Connect C+ iPhone 14 Plus موبایل کاور 1"><img src="/media/catalog/automoto/assets/2c/bdv-am-2ce5dd1b3f7a8247c204.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/5d/bdv-am-5dfc5ffeae0fdb99472e.jpg" class="" aria-label="قطعات موتورسیکلت Sp Connect C+ iPhone 14 Plus موبایل کاور 2"><img src="/media/catalog/automoto/assets/5d/bdv-am-5dfc5ffeae0fdb99472e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/69/bdv-am-69679cc1c937b02f64e2.jpg" class="" aria-label="قطعات موتورسیکلت Sp Connect C+ iPhone 14 Plus موبایل کاور 3"><img src="/media/catalog/automoto/assets/69/bdv-am-69679cc1c937b02f64e2.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a1/bdv-am-a19afa078c5e0e7eb9c7.jpg" class="" aria-label="قطعات موتورسیکلت Sp Connect C+ iPhone 14 Plus موبایل کاور 4"><img src="/media/catalog/automoto/assets/a1/bdv-am-a19afa078c5e0e7eb9c7.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/c6/bdv-am-c6cc0ddd0c8fcc703c72.jpg" class="" aria-label="قطعات موتورسیکلت Sp Connect C+ iPhone 14 Plus موبایل کاور 5"><img src="/media/catalog/automoto/assets/c6/bdv-am-c6cc0ddd0c8fcc703c72.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

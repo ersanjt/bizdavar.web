@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/43/bdv-am-43fe0f9d56a193ea4647.jpg" alt="بوت موتورسیکلت Icon Stormhawk محافظ‌دار مشکی" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/43/bdv-am-43fe0f9d56a193ea4647.jpg" alt="بوت موتورسیکلت Icon Stormhawk محافظ‌دار مشکی" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/43/bdv-am-43fe0f9d56a193ea4647.jpg" class="is-active" aria-label="بوت موتورسیکلت Icon Stormhawk محافظ‌دار مشکی 1"><img src="/media/catalog/automoto/assets/43/bdv-am-43fe0f9d56a193ea4647.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/68/bdv-am-68fc1857f4bed98eebbc.jpg" class="" aria-label="بوت موتورسیکلت Icon Stormhawk محافظ‌دار مشکی 2"><img src="/media/catalog/automoto/assets/68/bdv-am-68fc1857f4bed98eebbc.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/6d/bdv-am-6dbfba310502f8b585ec.jpg" class="" aria-label="بوت موتورسیکلت Icon Stormhawk محافظ‌دار مشکی 3"><img src="/media/catalog/automoto/assets/6d/bdv-am-6dbfba310502f8b585ec.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/76/bdv-am-76870f34cccb709feac0.jpg" class="" aria-label="بوت موتورسیکلت Icon Stormhawk محافظ‌دار مشکی 4"><img src="/media/catalog/automoto/assets/76/bdv-am-76870f34cccb709feac0.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/7f/bdv-am-7fe470760ff01a74b96f.jpg" class="" aria-label="بوت موتورسیکلت Icon Stormhawk محافظ‌دار مشکی 5"><img src="/media/catalog/automoto/assets/7f/bdv-am-7fe470760ff01a74b96f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/9c/bdv-am-9c16dc53446f80fc9a62.jpg" class="" aria-label="بوت موتورسیکلت Icon Stormhawk محافظ‌دار مشکی 6"><img src="/media/catalog/automoto/assets/9c/bdv-am-9c16dc53446f80fc9a62.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b4/bdv-am-b42be5929a728b6068e5.jpg" class="" aria-label="بوت موتورسیکلت Icon Stormhawk محافظ‌دار مشکی 7"><img src="/media/catalog/automoto/assets/b4/bdv-am-b42be5929a728b6068e5.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ce/bdv-am-ce8bcbeac5b24cdc3341.jpg" class="" aria-label="بوت موتورسیکلت Icon Stormhawk محافظ‌دار مشکی 8"><img src="/media/catalog/automoto/assets/ce/bdv-am-ce8bcbeac5b24cdc3341.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e0/bdv-am-e01e093a59123115123e.jpg" class="" aria-label="بوت موتورسیکلت Icon Stormhawk محافظ‌دار مشکی 9"><img src="/media/catalog/automoto/assets/e0/bdv-am-e01e093a59123115123e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e0/bdv-am-e0aa9ce18244b885dfbb.jpg" class="" aria-label="بوت موتورسیکلت Icon Stormhawk محافظ‌دار مشکی 10"><img src="/media/catalog/automoto/assets/e0/bdv-am-e0aa9ce18244b885dfbb.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/eb/bdv-am-eb5ebda87e36d7fe88fc.jpg" class="" aria-label="بوت موتورسیکلت Icon Stormhawk محافظ‌دار مشکی 11"><img src="/media/catalog/automoto/assets/eb/bdv-am-eb5ebda87e36d7fe88fc.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f1/bdv-am-f12880ffe38387c4f10f.jpg" class="" aria-label="بوت موتورسیکلت Icon Stormhawk محافظ‌دار مشکی 12"><img src="/media/catalog/automoto/assets/f1/bdv-am-f12880ffe38387c4f10f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

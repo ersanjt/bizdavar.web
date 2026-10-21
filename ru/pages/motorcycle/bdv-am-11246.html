@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/5c/bdv-am-5c2a46746ee0131c518c.jpg" alt="Alpinestars Chrome Crafted Drystar WP Protective Motorcycle Boot Brown" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/5c/bdv-am-5c2a46746ee0131c518c.jpg" alt="Alpinestars Chrome Crafted Drystar WP Protective Motorcycle Boot Brown" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/5c/bdv-am-5c2a46746ee0131c518c.jpg" class="is-active" aria-label="Alpinestars Chrome Crafted Drystar WP Protective Motorcycle Boot Brown 1"><img src="/media/catalog/automoto/assets/5c/bdv-am-5c2a46746ee0131c518c.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/67/bdv-am-672801bcaa73b2fdd3b9.jpg" class="" aria-label="Alpinestars Chrome Crafted Drystar WP Protective Motorcycle Boot Brown 2"><img src="/media/catalog/automoto/assets/67/bdv-am-672801bcaa73b2fdd3b9.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a0/bdv-am-a0d69ba790dcb98a758c.jpg" class="" aria-label="Alpinestars Chrome Crafted Drystar WP Protective Motorcycle Boot Brown 3"><img src="/media/catalog/automoto/assets/a0/bdv-am-a0d69ba790dcb98a758c.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b0/bdv-am-b0a2dea6dcff9736bd25.jpg" class="" aria-label="Alpinestars Chrome Crafted Drystar WP Protective Motorcycle Boot Brown 4"><img src="/media/catalog/automoto/assets/b0/bdv-am-b0a2dea6dcff9736bd25.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b6/bdv-am-b69e7df422592cdfc849.jpg" class="" aria-label="Alpinestars Chrome Crafted Drystar WP Protective Motorcycle Boot Brown 5"><img src="/media/catalog/automoto/assets/b6/bdv-am-b69e7df422592cdfc849.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/d9/bdv-am-d9bf5fbe5ef41a01c308.jpg" class="" aria-label="Alpinestars Chrome Crafted Drystar WP Protective Motorcycle Boot Brown 6"><img src="/media/catalog/automoto/assets/d9/bdv-am-d9bf5fbe5ef41a01c308.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f9/bdv-am-f90de1dc535e6184b027.jpg" class="" aria-label="Alpinestars Chrome Crafted Drystar WP Protective Motorcycle Boot Brown 7"><img src="/media/catalog/automoto/assets/f9/bdv-am-f90de1dc535e6184b027.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

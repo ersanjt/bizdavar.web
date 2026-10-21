@@ -4,6 +4,7 @@
  */
 const fs = require('fs');
 const path = require('path');
+const { bootTag } = require('./lib/page-boot-tag');
 const {
   ARTICLES,
   esc,
@@ -109,8 +110,7 @@ ${inner}
   </main>
 
   <script src="/assets/scripts/site-loader.js"></script>
-  <script>
-    bizdavarPageInit(function () {
+  ${bootTag(`bizdavarPageInit(function () {
       const crumbs = [
             { page: 'home', url: 'index' },
             { page: 'blog', url: 'blog' },
@@ -136,8 +136,7 @@ ${inner}
             ${related}
           ]);
       setupWhatsappLinks();
-    });
-  </script>
+    });`)}
 </body>
 </html>`;
 }

@@ -62,7 +62,7 @@ window.createSupplyBrandPage = function (cfg) {
       return `<img src="${full}" alt="${safeAlt}" width="960" height="640" loading="eager" decoding="async" fetchpriority="high">`;
     }
     const compact = compactHeroSrc(full);
-    return `<img src="${compact}" srcset="${compact} 800w, ${full} 1280w" sizes="(min-width: 901px) 480px, 92vw" alt="${safeAlt}" width="480" height="320" loading="eager" decoding="async" fetchpriority="high" onerror="this.onerror=null;this.removeAttribute('srcset');this.src='${full}'">`;
+    return `<img src="${compact}" srcset="${compact} 800w, ${full} 1280w" sizes="(min-width: 901px) 480px, 92vw" alt="${safeAlt}" width="480" height="320" loading="eager" decoding="async" fetchpriority="high" data-fallback="${full}" data-fallback-clear-srcset>`;
   }
 
   function offerPrice(item) {
@@ -127,7 +127,7 @@ window.createSupplyBrandPage = function (cfg) {
     const w = a.width || 280;
     const h = a.height || 160;
     const cls = a.className ? ` class="${a.className}"` : '';
-    return `<img src="${primary}" alt="${alt || 'Bizdavar'}" width="${w}" height="${h}" loading="lazy" decoding="async"${cls} onerror="if(this.dataset.fbk!=='1'){this.dataset.fbk='1';this.src='${fallback}';}else{this.classList.add('is-broken');}">`;
+    return `<img src="${primary}" alt="${alt || 'Bizdavar'}" width="${w}" height="${h}" loading="lazy" decoding="async"${cls} data-fallback="${fallback}" data-fallback-broken>`;
   }
 
   function localizedTitle(item) {

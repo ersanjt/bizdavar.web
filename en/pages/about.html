@@ -278,31 +278,7 @@
   <footer class="footer" id="siteFooter"></footer>
   <button class="back-to-top" id="backToTop" data-i18n-aria="common.backToTop" aria-label="Back to top"></button>
 
-  <script src="/assets/scripts/site-loader.js?v=20261003a" data-after-page-i18n="config/company-intel.js,i18n/intel-i18n.js" data-before-main="about-page.js"></script>
-  <script>
-    bizdavarBootPage({
-      seo: 'about',
-      seoOptions: {
-        canonical: 'https://bizdavar.com/pages/about',
-        ogImage: 'assets/images/content/about-hero.jpg'
-      },
-      crumbs: [
-        { page: 'home', url: 'index' },
-        { page: 'about', url: 'about' }
-      ],
-      init: function () {
-        if (typeof window.ensureBizdavarPageShell === 'function') window.ensureBizdavarPageShell();
-        if (typeof window.renderSiteChrome === 'function') window.renderSiteChrome();
-        renderCompanyIntelAbout();
-        injectIntelFaqSchema();
-        const related = window.BIZDAVAR_I18N?.raw('aboutPage.relatedLinks') || [
-          { title: 'خدمات ما', url: 'services', desc: 'بازاریابی دیجیتال، وب، SMM و صنعت' },
-          { title: 'نمونه‌کارها', url: 'portfolio', desc: 'طراحی وب، محصولات و تامین صنعتی' },
-          { title: 'تماس با ما', url: 'contact', desc: 'مشاوره رایگان' }
-        ];
-        renderRelatedLinks(related);
-      }
-    });
-  </script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g" data-after-page-i18n="config/company-intel.js,i18n/intel-i18n.js" data-before-main="about-page.js"></script>
+  <script src="/assets/scripts/page-boot/2b67ffa1c26fa797.js"></script>
 </body>
 </html>

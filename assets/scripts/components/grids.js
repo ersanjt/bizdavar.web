@@ -11,7 +11,7 @@
   } = ctx;
 
   function hideBrokenImg() {
-    return ' onerror="this.style.display=\'none\'"';
+    return ' data-hide-broken';
   }
 
   function industrialPhotoTag(p) {
@@ -20,7 +20,7 @@
       return `<img src="${src}" alt="${p.name}" loading="lazy" decoding="async" width="640" height="400"${hideBrokenImg()}>`;
     }
     const compact = src.replace(/\.webp$/i, '-800.webp');
-    return `<img src="${compact}" srcset="${compact} 800w, ${src} 1280w" sizes="(min-width: 1025px) 42vw, 92vw" alt="${p.name}" loading="lazy" decoding="async" width="640" height="400"${hideBrokenImg()} onerror="this.onerror=null;this.removeAttribute('srcset');this.src='${src}'">`;
+    return `<img src="${compact}" srcset="${compact} 800w, ${src} 1280w" sizes="(min-width: 1025px) 42vw, 92vw" alt="${p.name}" loading="lazy" decoding="async" width="640" height="400" data-fallback="${src}" data-fallback-clear-srcset>`;
   }
 
   function displayPair(primary, secondary) {
@@ -481,7 +481,7 @@
       const href = external ? p.url : siteLink(p.url);
 
       const inner = p.logo
-        ? `<img src="${path(p.logo)}" alt="${p.name}" loading="lazy" class="client-item__logo" width="130" height="52" onerror="this.outerHTML='<span class=\\'client-item__name\\'>'+this.alt+'</span>'">`
+        ? `<img src="${path(p.logo)}" alt="${p.name}" loading="lazy" class="client-item__logo" width="130" height="52" data-fallback-label>`
         : `<span class="client-item__name">${p.name}</span>`;
 
       return `
@@ -1289,7 +1289,7 @@
     const img = ownedProductImageSrc(p);
     const fallback = ownedProductImageFallback(p);
     const isPhoto = /\.(jpe?g|webp|png)$/i.test(p.image || '');
-    const imgOnError = `onerror="if(this.dataset.fbk!=='1'){this.dataset.fbk='1';this.src='${fallback}';}else{this.closest('.owned-product-card__media').classList.add('owned-product-card__media--empty');}"`;
+    const imgOnError = `data-fallback="${fallback}" data-fallback-empty=".owned-product-card__media"`;
     if (opts && opts.home) {
       const line = p.homeDesc || p.title || '';
       return `

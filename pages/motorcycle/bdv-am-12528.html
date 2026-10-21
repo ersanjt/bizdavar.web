@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/0d/bdv-am-0d408d65e55b1ecd4a46.jpg" alt="کلاه ایمنی موتورسیکلت Just1 J40 Sixties آفرود کلاه ایمنی مشکی / سفید" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/0d/bdv-am-0d408d65e55b1ecd4a46.jpg" alt="کلاه ایمنی موتورسیکلت Just1 J40 Sixties آفرود کلاه ایمنی مشکی / سفید" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/0d/bdv-am-0d408d65e55b1ecd4a46.jpg" class="is-active" aria-label="کلاه ایمنی موتورسیکلت Just1 J40 Sixties آفرود کلاه ایمنی مشکی / سفید 1"><img src="/media/catalog/automoto/assets/0d/bdv-am-0d408d65e55b1ecd4a46.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/37/bdv-am-3725ffee6c7d0f4be79b.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Just1 J40 Sixties آفرود کلاه ایمنی مشکی / سفید 2"><img src="/media/catalog/automoto/assets/37/bdv-am-3725ffee6c7d0f4be79b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/3c/bdv-am-3c9ed0cd0039a7a38aba.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Just1 J40 Sixties آفرود کلاه ایمنی مشکی / سفید 3"><img src="/media/catalog/automoto/assets/3c/bdv-am-3c9ed0cd0039a7a38aba.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/5b/bdv-am-5b12f830bcecaba230ae.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Just1 J40 Sixties آفرود کلاه ایمنی مشکی / سفید 4"><img src="/media/catalog/automoto/assets/5b/bdv-am-5b12f830bcecaba230ae.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/93/bdv-am-9324dc32366111794c48.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Just1 J40 Sixties آفرود کلاه ایمنی مشکی / سفید 5"><img src="/media/catalog/automoto/assets/93/bdv-am-9324dc32366111794c48.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/9a/bdv-am-9a5e79c412d5eece82c4.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Just1 J40 Sixties آفرود کلاه ایمنی مشکی / سفید 6"><img src="/media/catalog/automoto/assets/9a/bdv-am-9a5e79c412d5eece82c4.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/d7/bdv-am-d7c271099f75ca50839e.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Just1 J40 Sixties آفرود کلاه ایمنی مشکی / سفید 7"><img src="/media/catalog/automoto/assets/d7/bdv-am-d7c271099f75ca50839e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/01/bdv-am-0161f1278e3b9195eec6.jpg" alt="قطعات موتورسیکلت Sp Connect iPhone 8 Plus-7 Plus-6S Plus-6 Plus موتورسیکلت ست" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/01/bdv-am-0161f1278e3b9195eec6.jpg" alt="قطعات موتورسیکلت Sp Connect iPhone 8 Plus-7 Plus-6S Plus-6 Plus موتورسیکلت ست" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/01/bdv-am-0161f1278e3b9195eec6.jpg" class="is-active" aria-label="قطعات موتورسیکلت Sp Connect iPhone 8 Plus-7 Plus-6S Plus-6 Plus موتورسیکلت ست 1"><img src="/media/catalog/automoto/assets/01/bdv-am-0161f1278e3b9195eec6.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/61/bdv-am-6124f97f8f4684f0bcfa.jpg" class="" aria-label="قطعات موتورسیکلت Sp Connect iPhone 8 Plus-7 Plus-6S Plus-6 Plus موتورسیکلت ست 2"><img src="/media/catalog/automoto/assets/61/bdv-am-6124f97f8f4684f0bcfa.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/81/bdv-am-81610e606382b8c3125f.jpg" class="" aria-label="قطعات موتورسیکلت Sp Connect iPhone 8 Plus-7 Plus-6S Plus-6 Plus موتورسیکلت ست 3"><img src="/media/catalog/automoto/assets/81/bdv-am-81610e606382b8c3125f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/92/bdv-am-926800e49f6ebb7925ab.jpg" class="" aria-label="قطعات موتورسیکلت Sp Connect iPhone 8 Plus-7 Plus-6S Plus-6 Plus موتورسیکلت ست 4"><img src="/media/catalog/automoto/assets/92/bdv-am-926800e49f6ebb7925ab.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/c6/bdv-am-c6dcf708f5f3fc45ba13.jpg" class="" aria-label="قطعات موتورسیکلت Sp Connect iPhone 8 Plus-7 Plus-6S Plus-6 Plus موتورسیکلت ست 5"><img src="/media/catalog/automoto/assets/c6/bdv-am-c6dcf708f5f3fc45ba13.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e5/bdv-am-e59f4f23cfa4eff32fdc.jpg" class="" aria-label="قطعات موتورسیکلت Sp Connect iPhone 8 Plus-7 Plus-6S Plus-6 Plus موتورسیکلت ست 6"><img src="/media/catalog/automoto/assets/e5/bdv-am-e59f4f23cfa4eff32fdc.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e6/bdv-am-e67913abc73582c640c4.jpg" class="" aria-label="قطعات موتورسیکلت Sp Connect iPhone 8 Plus-7 Plus-6S Plus-6 Plus موتورسیکلت ست 7"><img src="/media/catalog/automoto/assets/e6/bdv-am-e67913abc73582c640c4.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

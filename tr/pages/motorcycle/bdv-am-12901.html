@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/0b/bdv-am-0b1a682edc306082c6a4.jpg" alt="Alpinestars Stated Korumalı Motosiklet Botu Gri / Kırmızı" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/0b/bdv-am-0b1a682edc306082c6a4.jpg" alt="Alpinestars Stated Korumalı Motosiklet Botu Gri / Kırmızı" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/0b/bdv-am-0b1a682edc306082c6a4.jpg" class="is-active" aria-label="Alpinestars Stated Korumalı Motosiklet Botu Gri / Kırmızı 1"><img src="/media/catalog/automoto/assets/0b/bdv-am-0b1a682edc306082c6a4.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/0d/bdv-am-0db1c159ad933d54cda9.jpg" class="" aria-label="Alpinestars Stated Korumalı Motosiklet Botu Gri / Kırmızı 2"><img src="/media/catalog/automoto/assets/0d/bdv-am-0db1c159ad933d54cda9.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/53/bdv-am-53a6ce338f7084cd8b59.jpg" class="" aria-label="Alpinestars Stated Korumalı Motosiklet Botu Gri / Kırmızı 3"><img src="/media/catalog/automoto/assets/53/bdv-am-53a6ce338f7084cd8b59.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ad/bdv-am-ad9c43023ce796a6556f.jpg" class="" aria-label="Alpinestars Stated Korumalı Motosiklet Botu Gri / Kırmızı 4"><img src="/media/catalog/automoto/assets/ad/bdv-am-ad9c43023ce796a6556f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/c0/bdv-am-c077e9eb09a2f8869f2c.jpg" class="" aria-label="Alpinestars Stated Korumalı Motosiklet Botu Gri / Kırmızı 5"><img src="/media/catalog/automoto/assets/c0/bdv-am-c077e9eb09a2f8869f2c.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e5/bdv-am-e5807cf7231170251d37.jpg" class="" aria-label="Alpinestars Stated Korumalı Motosiklet Botu Gri / Kırmızı 6"><img src="/media/catalog/automoto/assets/e5/bdv-am-e5807cf7231170251d37.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/fd/bdv-am-fdd6e72945bf5c9ded49.jpg" class="" aria-label="Alpinestars Stated Korumalı Motosiklet Botu Gri / Kırmızı 7"><img src="/media/catalog/automoto/assets/fd/bdv-am-fdd6e72945bf5c9ded49.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

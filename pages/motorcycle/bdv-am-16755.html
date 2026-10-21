@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/59/bdv-am-59ee322e39ac59f08eea.jpg" alt="قطعات موتورسیکلت 4Riders Guardian Disc 14mm آلارم‌دار Disk Kilidi" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/59/bdv-am-59ee322e39ac59f08eea.jpg" alt="قطعات موتورسیکلت 4Riders Guardian Disc 14mm آلارم‌دار Disk Kilidi" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/59/bdv-am-59ee322e39ac59f08eea.jpg" class="is-active" aria-label="قطعات موتورسیکلت 4Riders Guardian Disc 14mm آلارم‌دار Disk Kilidi 1"><img src="/media/catalog/automoto/assets/59/bdv-am-59ee322e39ac59f08eea.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/74/bdv-am-748a5a0ba6f7a039b16c.jpg" class="" aria-label="قطعات موتورسیکلت 4Riders Guardian Disc 14mm آلارم‌دار Disk Kilidi 2"><img src="/media/catalog/automoto/assets/74/bdv-am-748a5a0ba6f7a039b16c.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/77/bdv-am-77c2293928b1563b19be.jpg" class="" aria-label="قطعات موتورسیکلت 4Riders Guardian Disc 14mm آلارم‌دار Disk Kilidi 3"><img src="/media/catalog/automoto/assets/77/bdv-am-77c2293928b1563b19be.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/91/bdv-am-91d2fa8498ab923de35f.jpg" class="" aria-label="قطعات موتورسیکلت 4Riders Guardian Disc 14mm آلارم‌دار Disk Kilidi 4"><img src="/media/catalog/automoto/assets/91/bdv-am-91d2fa8498ab923de35f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/9a/bdv-am-9a72a9822bb449d6611d.jpg" class="" aria-label="قطعات موتورسیکلت 4Riders Guardian Disc 14mm آلارم‌دار Disk Kilidi 5"><img src="/media/catalog/automoto/assets/9a/bdv-am-9a72a9822bb449d6611d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/be/bdv-am-be71890838a342ddf7c7.jpg" class="" aria-label="قطعات موتورسیکلت 4Riders Guardian Disc 14mm آلارم‌دار Disk Kilidi 6"><img src="/media/catalog/automoto/assets/be/bdv-am-be71890838a342ddf7c7.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e7/bdv-am-e7b43e1a633203ad9691.jpg" class="" aria-label="قطعات موتورسیکلت 4Riders Guardian Disc 14mm آلارم‌دار Disk Kilidi 7"><img src="/media/catalog/automoto/assets/e7/bdv-am-e7b43e1a633203ad9691.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

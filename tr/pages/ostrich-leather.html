@@ -440,70 +440,12 @@
     <img alt="">
     <p hidden></p>
   </dialog>
-  <script>
-    (function () {
-      var dialog = document.getElementById('ostLight');
-      if (!dialog || typeof dialog.showModal !== 'function') return;
-      var img = dialog.querySelector('img');
-      var cap = dialog.querySelector('p');
-      var closeBtn = dialog.querySelector('[data-ost-close]');
-      var labels = { fa: 'بستن', ar: 'إغلاق', ru: 'Закрыть', tr: 'Kapat', en: 'Close' };
-      var lang = (document.documentElement.lang || 'en').slice(0, 2);
-      if (closeBtn) closeBtn.setAttribute('aria-label', labels[lang] || 'Close');
-      document.querySelectorAll('[data-ost-open]').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          var source = btn.querySelector('img');
-          if (!source) return;
-          img.src = source.currentSrc || source.src;
-          img.alt = source.alt || '';
-          var note = btn.querySelector('.ost-shot__cap');
-          cap.textContent = note ? note.textContent.trim() : '';
-          cap.hidden = !cap.textContent;
-          dialog.showModal();
-        });
-      });
-      dialog.addEventListener('click', function (event) {
-        if (event.target === dialog) dialog.close();
-      });
-      if (closeBtn) closeBtn.addEventListener('click', function () { dialog.close(); });
-    })();
-  </script>
+  <script src="/assets/scripts/page-boot/9b6a8ef3340b411b.js"></script>
 
   <div id="geoStrip"></div>
 </main>
 
-  <script src="/assets/scripts/site-loader.js?v=20261003a" data-after-seo="i18n/ostrich-leather-i18n.js"></script>
-  <script>
-    bizdavarPageInit(function () {
-      const I = window.BIZDAVAR_I18N;
-      const crumbName = I && typeof I.t === 'function' ? I.t('nav.productOstrich', 'Ostrich leather') : 'Ostrich leather';
-      const crumbs = [
-        { page: 'home', url: 'index' },
-        { page: 'products', url: 'products' },
-        { name: crumbName, url: 'ostrich-leather' }
-      ];
-      injectPageSeo('ostrichLeather', { canonical: 'https://bizdavar.com/pages/ostrich-leather' });
-      renderBreadcrumbs(crumbs);
-      injectBreadcrumbSchema(crumbs);
-      renderGeoStrip('geoStrip', {
-        textKey: 'caseStudy.ostrich.geoText',
-        text: 'چرم شترمرغ تولید ایران — کراس، رنگ‌شده و ساق. صادرات به چین و ترکیه.'
-      });
-      if (typeof injectSupplyBrandSchema === 'function') {
-        injectSupplyBrandSchema({
-          id: 'ostrich-leather',
-          name: 'Iranian Ostrich Leather',
-          description: 'Iranian ostrich leather produced end to end in Iran. Crust from 6.50 USD per square foot, dyed from 8.50 USD per square foot, leg skins from 6 USD. Exported to China and Turkey.',
-          brand: 'Bizdavar',
-          category: 'Exotic leather',
-          image: 'assets/images/products/ostrich/color-swatches.jpg',
-          url: 'pages/ostrich-leather.html',
-          price: '6.00',
-          priceCurrency: 'USD',
-          areaServed: ['IR', 'CN', 'TR']
-        });
-      }
-    });
-  </script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g" data-after-seo="i18n/ostrich-leather-i18n.js"></script>
+  <script src="/assets/scripts/page-boot/cf343d16fa9d44e3.js"></script>
 </body>
 </html>

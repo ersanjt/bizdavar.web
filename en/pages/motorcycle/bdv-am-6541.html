@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/1b/bdv-am-1ba3d9c4cb0ede837a93.jpg" alt="Sp Connect C+ Moto Mount Pro" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/1b/bdv-am-1ba3d9c4cb0ede837a93.jpg" alt="Sp Connect C+ Moto Mount Pro" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/1b/bdv-am-1ba3d9c4cb0ede837a93.jpg" class="is-active" aria-label="Sp Connect C+ Moto Mount Pro 1"><img src="/media/catalog/automoto/assets/1b/bdv-am-1ba3d9c4cb0ede837a93.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/31/bdv-am-318d7e6535e6cee74fd2.jpg" class="" aria-label="Sp Connect C+ Moto Mount Pro 2"><img src="/media/catalog/automoto/assets/31/bdv-am-318d7e6535e6cee74fd2.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/55/bdv-am-5538fdf0d9469c723117.jpg" class="" aria-label="Sp Connect C+ Moto Mount Pro 3"><img src="/media/catalog/automoto/assets/55/bdv-am-5538fdf0d9469c723117.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/9c/bdv-am-9ccd16cc7b5df90dbc1d.jpg" class="" aria-label="Sp Connect C+ Moto Mount Pro 4"><img src="/media/catalog/automoto/assets/9c/bdv-am-9ccd16cc7b5df90dbc1d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/c0/bdv-am-c0ee80a2eb600a533c96.jpg" class="" aria-label="Sp Connect C+ Moto Mount Pro 5"><img src="/media/catalog/automoto/assets/c0/bdv-am-c0ee80a2eb600a533c96.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/d2/bdv-am-d20e673221686c37283b.jpg" class="" aria-label="Sp Connect C+ Moto Mount Pro 6"><img src="/media/catalog/automoto/assets/d2/bdv-am-d20e673221686c37283b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

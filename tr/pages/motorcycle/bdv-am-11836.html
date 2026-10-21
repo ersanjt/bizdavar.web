@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/26/bdv-am-260245ed58182d65cc37.jpg" alt="Shima Division Bacak Çantası Siyah" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/26/bdv-am-260245ed58182d65cc37.jpg" alt="Shima Division Bacak Çantası Siyah" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/26/bdv-am-260245ed58182d65cc37.jpg" class="is-active" aria-label="Shima Division Bacak Çantası Siyah 1"><img src="/media/catalog/automoto/assets/26/bdv-am-260245ed58182d65cc37.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/48/bdv-am-48c39d022322dab5b351.jpg" class="" aria-label="Shima Division Bacak Çantası Siyah 2"><img src="/media/catalog/automoto/assets/48/bdv-am-48c39d022322dab5b351.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/60/bdv-am-60f2d1dde312393884b9.jpg" class="" aria-label="Shima Division Bacak Çantası Siyah 3"><img src="/media/catalog/automoto/assets/60/bdv-am-60f2d1dde312393884b9.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/8d/bdv-am-8d6b90f53d50831af884.jpg" class="" aria-label="Shima Division Bacak Çantası Siyah 4"><img src="/media/catalog/automoto/assets/8d/bdv-am-8d6b90f53d50831af884.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ba/bdv-am-ba73621f0891f121e77b.jpg" class="" aria-label="Shima Division Bacak Çantası Siyah 5"><img src="/media/catalog/automoto/assets/ba/bdv-am-ba73621f0891f121e77b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ca/bdv-am-ca77757854a8a4d71e92.jpg" class="" aria-label="Shima Division Bacak Çantası Siyah 6"><img src="/media/catalog/automoto/assets/ca/bdv-am-ca77757854a8a4d71e92.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e5/bdv-am-e5bb91b7ba5775f5d68f.jpg" class="" aria-label="Shima Division Bacak Çantası Siyah 7"><img src="/media/catalog/automoto/assets/e5/bdv-am-e5bb91b7ba5775f5d68f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ee/bdv-am-ee3192655c59baf6c02f.jpg" class="" aria-label="Shima Division Bacak Çantası Siyah 8"><img src="/media/catalog/automoto/assets/ee/bdv-am-ee3192655c59baf6c02f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

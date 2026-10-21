@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/08/bdv-am-08c77ec58a016c9c1b23.jpg" alt="Torc T-28 Vertex Çene Açılır Motosiklet Kaskı Siyah / Beyaz / Kırmızı" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/08/bdv-am-08c77ec58a016c9c1b23.jpg" alt="Torc T-28 Vertex Çene Açılır Motosiklet Kaskı Siyah / Beyaz / Kırmızı" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/08/bdv-am-08c77ec58a016c9c1b23.jpg" class="is-active" aria-label="Torc T-28 Vertex Çene Açılır Motosiklet Kaskı Siyah / Beyaz / Kırmızı 1"><img src="/media/catalog/automoto/assets/08/bdv-am-08c77ec58a016c9c1b23.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/1d/bdv-am-1dac18b405108da78f4a.jpg" class="" aria-label="Torc T-28 Vertex Çene Açılır Motosiklet Kaskı Siyah / Beyaz / Kırmızı 2"><img src="/media/catalog/automoto/assets/1d/bdv-am-1dac18b405108da78f4a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/27/bdv-am-271cd1c40f949db1db5a.jpg" class="" aria-label="Torc T-28 Vertex Çene Açılır Motosiklet Kaskı Siyah / Beyaz / Kırmızı 3"><img src="/media/catalog/automoto/assets/27/bdv-am-271cd1c40f949db1db5a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/3e/bdv-am-3ede1fcbbac7c6968c7a.jpg" class="" aria-label="Torc T-28 Vertex Çene Açılır Motosiklet Kaskı Siyah / Beyaz / Kırmızı 4"><img src="/media/catalog/automoto/assets/3e/bdv-am-3ede1fcbbac7c6968c7a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/67/bdv-am-67dcad4c8db9d24d175e.jpg" class="" aria-label="Torc T-28 Vertex Çene Açılır Motosiklet Kaskı Siyah / Beyaz / Kırmızı 5"><img src="/media/catalog/automoto/assets/67/bdv-am-67dcad4c8db9d24d175e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/97/bdv-am-978b8b5b250639a4b015.jpg" class="" aria-label="Torc T-28 Vertex Çene Açılır Motosiklet Kaskı Siyah / Beyaz / Kırmızı 6"><img src="/media/catalog/automoto/assets/97/bdv-am-978b8b5b250639a4b015.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/e7/bdv-am-e70d956c01a0792520cb.jpg" class="" aria-label="Torc T-28 Vertex Çene Açılır Motosiklet Kaskı Siyah / Beyaz / Kırmızı 7"><img src="/media/catalog/automoto/assets/e7/bdv-am-e70d956c01a0792520cb.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f1/bdv-am-f18743a6d6f67986a0b3.jpg" class="" aria-label="Torc T-28 Vertex Çene Açılır Motosiklet Kaskı Siyah / Beyaz / Kırmızı 8"><img src="/media/catalog/automoto/assets/f1/bdv-am-f18743a6d6f67986a0b3.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

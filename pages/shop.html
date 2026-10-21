@@ -63,28 +63,7 @@
     <div id="geoStrip"></div>
     <div id="relatedLinks"></div>
   </main>
-  <script src="/assets/scripts/site-loader.js?v=20261002c" data-after-config="config/dirham-shop.js" data-after-seo="i18n/dirham-shop-i18n.js" data-before-main="shop-page.js"></script>
-  <script>
-    bizdavarPageInit(function () {
-      injectPageSeo('shop', { canonical: 'https://bizdavar.com/pages/shop' });
-      var crumbs = [
-        { page: 'home', url: 'index' },
-        { page: 'products', url: 'products' },
-        { page: 'shop', url: 'shop' }
-      ];
-      renderBreadcrumbs(crumbs);
-      injectBreadcrumbSchema(crumbs);
-      renderGeoStrip('geoStrip', {
-        textKey: 'shopPage.geoText',
-        text: 'فروشگاه بیزدوار با قیمت درهم امارات — کالاهای صنعتی، ابزار دقیق و الکترونیکی.'
-      });
-      renderRelatedLinks([
-        { title: 'محصولات', url: 'products', desc: 'برندها و خطوط بیزدوار' },
-        { title: 'تماس', url: 'contact', desc: 'سفارش و استعلام' }
-      ]);
-      if (window.renderDirhamShop) window.renderDirhamShop();
-      setupWhatsappLinks();
-    });
-  </script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g" data-after-config="config/dirham-shop.js" data-after-seo="i18n/dirham-shop-i18n.js" data-before-main="shop-page.js"></script>
+  <script src="/assets/scripts/page-boot/d434270184719fc4.js"></script>
 </body>
 </html>

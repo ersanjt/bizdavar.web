@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/0a/bdv-am-0a846f91154c461bea69.jpg" alt="Alpinestars Belize Drystar Korumalı Motosiklet Botu Kahverengi" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/0a/bdv-am-0a846f91154c461bea69.jpg" alt="Alpinestars Belize Drystar Korumalı Motosiklet Botu Kahverengi" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/0a/bdv-am-0a846f91154c461bea69.jpg" class="is-active" aria-label="Alpinestars Belize Drystar Korumalı Motosiklet Botu Kahverengi 1"><img src="/media/catalog/automoto/assets/0a/bdv-am-0a846f91154c461bea69.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/1d/bdv-am-1d3c0970904129a7992a.jpg" class="" aria-label="Alpinestars Belize Drystar Korumalı Motosiklet Botu Kahverengi 2"><img src="/media/catalog/automoto/assets/1d/bdv-am-1d3c0970904129a7992a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/1f/bdv-am-1f1b35e4950f3160af8d.jpg" class="" aria-label="Alpinestars Belize Drystar Korumalı Motosiklet Botu Kahverengi 3"><img src="/media/catalog/automoto/assets/1f/bdv-am-1f1b35e4950f3160af8d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/59/bdv-am-5923e03961b699dfd9d7.jpg" class="" aria-label="Alpinestars Belize Drystar Korumalı Motosiklet Botu Kahverengi 4"><img src="/media/catalog/automoto/assets/59/bdv-am-5923e03961b699dfd9d7.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/91/bdv-am-91ca74c2d4e9488c356a.jpg" class="" aria-label="Alpinestars Belize Drystar Korumalı Motosiklet Botu Kahverengi 5"><img src="/media/catalog/automoto/assets/91/bdv-am-91ca74c2d4e9488c356a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ed/bdv-am-eda43509c1ce3c67d192.jpg" class="" aria-label="Alpinestars Belize Drystar Korumalı Motosiklet Botu Kahverengi 6"><img src="/media/catalog/automoto/assets/ed/bdv-am-eda43509c1ce3c67d192.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ee/bdv-am-eec8dfa7469b0a5e2839.jpg" class="" aria-label="Alpinestars Belize Drystar Korumalı Motosiklet Botu Kahverengi 7"><img src="/media/catalog/automoto/assets/ee/bdv-am-eec8dfa7469b0a5e2839.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ef/bdv-am-ef0eb4183038ea8c2402.jpg" class="" aria-label="Alpinestars Belize Drystar Korumalı Motosiklet Botu Kahverengi 8"><img src="/media/catalog/automoto/assets/ef/bdv-am-ef0eb4183038ea8c2402.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

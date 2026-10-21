@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { bootTag } = require('./lib/page-boot-tag');
 const ROOT = path.join(__dirname, '..');
 const BASE = 'https://bizdavar.com';
 const VER = '20260919m';
@@ -57,8 +58,7 @@ ${alts}
     <div id="relatedLinks"></div>
   </main>
   <script src="/assets/scripts/site-loader.js?v=${VER}" data-before-main="brakes-page.js"></script>
-  <script>
-    bizdavarPageInit(function () {
+  ${bootTag(`bizdavarPageInit(function () {
       injectPageSeo('carParts', {
         canonical: '${canonical}',
         ogImage: 'assets/images/brand/bizdavar-logo-square.png'
@@ -76,8 +76,7 @@ ${alts}
       initCarPartsPage();
       injectCarPartsSchema();
       renderRelatedLinks(${JSON.stringify(loc.related)});
-    });
-  </script>
+    });`)}
 </body>
 </html>
 `;

@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/01/bdv-am-01164323a5709c2d7283.jpg" alt="کاپشن موتورسیکلت 4Riders Mugello CE دارای گواهی محافظ‌دار" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/01/bdv-am-01164323a5709c2d7283.jpg" alt="کاپشن موتورسیکلت 4Riders Mugello CE دارای گواهی محافظ‌دار" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/01/bdv-am-01164323a5709c2d7283.jpg" class="is-active" aria-label="کاپشن موتورسیکلت 4Riders Mugello CE دارای گواهی محافظ‌دار 1"><img src="/media/catalog/automoto/assets/01/bdv-am-01164323a5709c2d7283.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/5b/bdv-am-5b6d6b0fee360f86a864.jpg" class="" aria-label="کاپشن موتورسیکلت 4Riders Mugello CE دارای گواهی محافظ‌دار 2"><img src="/media/catalog/automoto/assets/5b/bdv-am-5b6d6b0fee360f86a864.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/6d/bdv-am-6dc9bbe35d488c131370.jpg" class="" aria-label="کاپشن موتورسیکلت 4Riders Mugello CE دارای گواهی محافظ‌دار 3"><img src="/media/catalog/automoto/assets/6d/bdv-am-6dc9bbe35d488c131370.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/88/bdv-am-881dda2f7f734dfbf57c.jpg" class="" aria-label="کاپشن موتورسیکلت 4Riders Mugello CE دارای گواهی محافظ‌دار 4"><img src="/media/catalog/automoto/assets/88/bdv-am-881dda2f7f734dfbf57c.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/d5/bdv-am-d58acd4c79f6d26dc151.jpg" class="" aria-label="کاپشن موتورسیکلت 4Riders Mugello CE دارای گواهی محافظ‌دار 5"><img src="/media/catalog/automoto/assets/d5/bdv-am-d58acd4c79f6d26dc151.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/db/bdv-am-db2ec9a905b9aef9868f.jpg" class="" aria-label="کاپشن موتورسیکلت 4Riders Mugello CE دارای گواهی محافظ‌دار 6"><img src="/media/catalog/automoto/assets/db/bdv-am-db2ec9a905b9aef9868f.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ec/bdv-am-ec45e2aebbf6d670be95.jpg" class="" aria-label="کاپشن موتورسیکلت 4Riders Mugello CE دارای گواهی محافظ‌دار 7"><img src="/media/catalog/automoto/assets/ec/bdv-am-ec45e2aebbf6d670be95.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

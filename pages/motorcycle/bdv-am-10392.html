@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/0b/bdv-am-0bcf216bbc52e6e452dc.jpg" alt="قطعات موتورسیکلت Thoska T-Bag عقب کیف 10 L مشکی" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/0b/bdv-am-0bcf216bbc52e6e452dc.jpg" alt="قطعات موتورسیکلت Thoska T-Bag عقب کیف 10 L مشکی" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/0b/bdv-am-0bcf216bbc52e6e452dc.jpg" class="is-active" aria-label="قطعات موتورسیکلت Thoska T-Bag عقب کیف 10 L مشکی 1"><img src="/media/catalog/automoto/assets/0b/bdv-am-0bcf216bbc52e6e452dc.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/6a/bdv-am-6ac0d2da18acdbff724c.jpg" class="" aria-label="قطعات موتورسیکلت Thoska T-Bag عقب کیف 10 L مشکی 2"><img src="/media/catalog/automoto/assets/6a/bdv-am-6ac0d2da18acdbff724c.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/79/bdv-am-791d3d8ebcff0578bbbc.jpg" class="" aria-label="قطعات موتورسیکلت Thoska T-Bag عقب کیف 10 L مشکی 3"><img src="/media/catalog/automoto/assets/79/bdv-am-791d3d8ebcff0578bbbc.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/7b/bdv-am-7b8d468c674df086d791.jpg" class="" aria-label="قطعات موتورسیکلت Thoska T-Bag عقب کیف 10 L مشکی 4"><img src="/media/catalog/automoto/assets/7b/bdv-am-7b8d468c674df086d791.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/82/bdv-am-8292eb76e626f4b785d7.jpg" class="" aria-label="قطعات موتورسیکلت Thoska T-Bag عقب کیف 10 L مشکی 5"><img src="/media/catalog/automoto/assets/82/bdv-am-8292eb76e626f4b785d7.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/a1/bdv-am-a1b538c6f2ad1a66739a.jpg" class="" aria-label="قطعات موتورسیکلت Thoska T-Bag عقب کیف 10 L مشکی 6"><img src="/media/catalog/automoto/assets/a1/bdv-am-a1b538c6f2ad1a66739a.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/c2/bdv-am-c206bc44a1dc9c4bc53e.jpg" class="" aria-label="قطعات موتورسیکلت Thoska T-Bag عقب کیف 10 L مشکی 7"><img src="/media/catalog/automoto/assets/c2/bdv-am-c206bc44a1dc9c4bc53e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ce/bdv-am-ce6c0a8a4d909f197d77.jpg" class="" aria-label="قطعات موتورسیکلت Thoska T-Bag عقب کیف 10 L مشکی 8"><img src="/media/catalog/automoto/assets/ce/bdv-am-ce6c0a8a4d909f197d77.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ed/bdv-am-ed4dc78d3a06f4bcd2c8.jpg" class="" aria-label="قطعات موتورسیکلت Thoska T-Bag عقب کیف 10 L مشکی 9"><img src="/media/catalog/automoto/assets/ed/bdv-am-ed4dc78d3a06f4bcd2c8.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

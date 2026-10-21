@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/11/bdv-am-1166865c8605ac2658f1.jpg" alt="کلاه ایمنی موتورسیکلت Klim Krios Pro کربن ADV مات مشکی" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/11/bdv-am-1166865c8605ac2658f1.jpg" alt="کلاه ایمنی موتورسیکلت Klim Krios Pro کربن ADV مات مشکی" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/11/bdv-am-1166865c8605ac2658f1.jpg" class="is-active" aria-label="کلاه ایمنی موتورسیکلت Klim Krios Pro کربن ADV مات مشکی 1"><img src="/media/catalog/automoto/assets/11/bdv-am-1166865c8605ac2658f1.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/29/bdv-am-2988ae55ea8e97c6570b.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim Krios Pro کربن ADV مات مشکی 2"><img src="/media/catalog/automoto/assets/29/bdv-am-2988ae55ea8e97c6570b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/65/bdv-am-6548500ed8f8a560ca02.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim Krios Pro کربن ADV مات مشکی 3"><img src="/media/catalog/automoto/assets/65/bdv-am-6548500ed8f8a560ca02.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/6d/bdv-am-6dd01a8c7eee9eff3f0d.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim Krios Pro کربن ADV مات مشکی 4"><img src="/media/catalog/automoto/assets/6d/bdv-am-6dd01a8c7eee9eff3f0d.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/d8/bdv-am-d8c5ba8b8296f9a65c08.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim Krios Pro کربن ADV مات مشکی 5"><img src="/media/catalog/automoto/assets/d8/bdv-am-d8c5ba8b8296f9a65c08.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ed/bdv-am-edfbdfab845599d3ce9b.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim Krios Pro کربن ADV مات مشکی 6"><img src="/media/catalog/automoto/assets/ed/bdv-am-edfbdfab845599d3ce9b.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/ee/bdv-am-eeefc22bdb457491abf9.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim Krios Pro کربن ADV مات مشکی 7"><img src="/media/catalog/automoto/assets/ee/bdv-am-eeefc22bdb457491abf9.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/fc/bdv-am-fc68a278e2dc95299725.jpg" class="" aria-label="کلاه ایمنی موتورسیکلت Klim Krios Pro کربن ADV مات مشکی 8"><img src="/media/catalog/automoto/assets/fc/bdv-am-fc68a278e2dc95299725.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>

@@ -27,7 +27,7 @@
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <img class="am-pdp__main" src="/media/catalog/automoto/assets/0d/bdv-am-0d36e030a88367696519.jpg" alt="4Riders Carbon Evo Series Arka Çanta Siyah" width="640" height="640" onerror="this.onerror=null;this.src='/assets/icons/categories/motorcycle-helmet.svg'">
+          <img class="am-pdp__main" src="/media/catalog/automoto/assets/0d/bdv-am-0d36e030a88367696519.jpg" alt="4Riders Carbon Evo Series Arka Çanta Siyah" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           <div class="am-pdp__thumbs" role="list"><button type="button" data-src="/media/catalog/automoto/assets/0d/bdv-am-0d36e030a88367696519.jpg" class="is-active" aria-label="4Riders Carbon Evo Series Arka Çanta Siyah 1"><img src="/media/catalog/automoto/assets/0d/bdv-am-0d36e030a88367696519.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/21/bdv-am-213d60b78b189dd5ff56.jpg" class="" aria-label="4Riders Carbon Evo Series Arka Çanta Siyah 2"><img src="/media/catalog/automoto/assets/21/bdv-am-213d60b78b189dd5ff56.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/39/bdv-am-396ae2ed635a77f8557e.jpg" class="" aria-label="4Riders Carbon Evo Series Arka Çanta Siyah 3"><img src="/media/catalog/automoto/assets/39/bdv-am-396ae2ed635a77f8557e.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/66/bdv-am-66e01d44ad7ee4ac84bb.jpg" class="" aria-label="4Riders Carbon Evo Series Arka Çanta Siyah 4"><img src="/media/catalog/automoto/assets/66/bdv-am-66e01d44ad7ee4ac84bb.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/8a/bdv-am-8aa3e62ce743937283cc.jpg" class="" aria-label="4Riders Carbon Evo Series Arka Çanta Siyah 5"><img src="/media/catalog/automoto/assets/8a/bdv-am-8aa3e62ce743937283cc.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/b7/bdv-am-b76a882e8ac21cc24c81.jpg" class="" aria-label="4Riders Carbon Evo Series Arka Çanta Siyah 6"><img src="/media/catalog/automoto/assets/b7/bdv-am-b76a882e8ac21cc24c81.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/c1/bdv-am-c18ab8dd7e64c6d8afa9.jpg" class="" aria-label="4Riders Carbon Evo Series Arka Çanta Siyah 7"><img src="/media/catalog/automoto/assets/c1/bdv-am-c18ab8dd7e64c6d8afa9.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/db/bdv-am-db8f3cf4466dd8ac2531.jpg" class="" aria-label="4Riders Carbon Evo Series Arka Çanta Siyah 8"><img src="/media/catalog/automoto/assets/db/bdv-am-db8f3cf4466dd8ac2531.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f3/bdv-am-f3e7d83d23bce97f72dd.jpg" class="" aria-label="4Riders Carbon Evo Series Arka Çanta Siyah 9"><img src="/media/catalog/automoto/assets/f3/bdv-am-f3e7d83d23bce97f72dd.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f4/bdv-am-f4c3c3e3f91baaa9dbb8.jpg" class="" aria-label="4Riders Carbon Evo Series Arka Çanta Siyah 10"><img src="/media/catalog/automoto/assets/f4/bdv-am-f4c3c3e3f91baaa9dbb8.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button><button type="button" data-src="/media/catalog/automoto/assets/f6/bdv-am-f66bad5ee5f9fb07af09.jpg" class="" aria-label="4Riders Carbon Evo Series Arka Çanta Siyah 11"><img src="/media/catalog/automoto/assets/f6/bdv-am-f66bad5ee5f9fb07af09.jpg" alt="" width="72" height="72" loading="lazy" decoding="async"></button></div>
         </div>
         <div>
@@ -42,19 +42,7 @@
       </div>
     </article>
   </main>
-  <script>
-    document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
-      var main = root.querySelector('.am-pdp__main');
-      root.addEventListener('click', function (event) {
-        var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
-      });
-    });
-  </script>
-  <script src="/assets/scripts/site-loader.js?v=20261003a"></script>
+  <script src="/assets/scripts/page-boot/a0896e7d5d81ae04.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261020g"></script>
 </body>
 </html>
