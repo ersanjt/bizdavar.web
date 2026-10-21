@@ -1,0 +1,3098 @@
+{
+  "date": "2026-10-21",
+  "gsc": {
+    "available": false,
+    "reason": "no service-account credentials (see docs/growth/GSC-SETUP.md)"
+  },
+  "live": {
+    "checked": 395,
+    "ok": 390,
+    "byStatus": {
+      "200": 390,
+      "301": 5
+    },
+    "bad": [
+      {
+        "url": "https://bizdavar.com/pages/motorcycle",
+        "status": 301,
+        "location": "https://bizdavar.com/pages/motorcycle/",
+        "ms": 111
+      },
+      {
+        "url": "https://bizdavar.com/tr/pages/motorcycle",
+        "status": 301,
+        "location": "https://bizdavar.com/tr/pages/motorcycle/",
+        "ms": 162
+      },
+      {
+        "url": "https://bizdavar.com/en/pages/motorcycle",
+        "status": 301,
+        "location": "https://bizdavar.com/en/pages/motorcycle/",
+        "ms": 340
+      },
+      {
+        "url": "https://bizdavar.com/ru/pages/motorcycle",
+        "status": 301,
+        "location": "https://bizdavar.com/ru/pages/motorcycle/",
+        "ms": 104
+      },
+      {
+        "url": "https://bizdavar.com/ar/pages/motorcycle",
+        "status": 301,
+        "location": "https://bizdavar.com/ar/pages/motorcycle/",
+        "ms": 108
+      }
+    ],
+    "slow": []
+  },
+  "scan": {
+    "pages": 19760,
+    "byKind": {
+      "page": 255,
+      "article": 125,
+      "product": 19380
+    },
+    "sitemapUrls": {
+      "sitemap.xml": 305,
+      "sitemap-motorcycle.xml": 19380
+    },
+    "errors": 0,
+    "warnings": 576,
+    "counts": {
+      "desc-long": 38,
+      "title-long": 46,
+      "h1-count": 40,
+      "img-alt": 5,
+      "canonical-mismatch": 4,
+      "desc-short": 9,
+      "title-duplicate": 350,
+      "sitemap-duplicate": 5,
+      "sitemap-noncanonical": 4,
+      "not-in-sitemap": 75
+    },
+    "issues": [
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "index.html",
+        "msg": "description 185 chars"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "tr/index.html",
+        "msg": "title 70 chars: Bizdavar Group | Web tasarım, dijital pazarlama ve endüstriyel tedarik"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "tr/index.html",
+        "msg": "description 204 chars"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "en/index.html",
+        "msg": "title 66 chars: Bizdavar Group | Web design, digital marketing & industrial supply"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "en/index.html",
+        "msg": "description 209 chars"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "ru/index.html",
+        "msg": "title 71 chars: Bizdavar Group | веб-дизайн, цифровой маркетинг и промышленные поставки"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "pages/about.html",
+        "msg": "description 166 chars"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "pages/digi-system.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "pages/fxguard.html",
+        "msg": "description 177 chars"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "pages/gamak.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "pages/liqui-moly.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "pages/motorcycle.html",
+        "msg": "description 177 chars"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "pages/pneumatic.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "pages/prosense.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "pages/services.html",
+        "msg": "description 171 chars"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "pages/teltonika.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "pages/teraoka.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "pages/tools.html",
+        "msg": "title 79 chars: ابزارهای رایگان آنلاین | تست سرعت، IP، لینک واتساپ، UTM و ابزار صنعتی — بیزدوار"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "pages/utm-builder.html",
+        "msg": "title 66 chars: ساخت لینک UTM رایگان | UTM Builder برای Google Analytics — بیزدوار"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "pages/uwt.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "pages/website-speed-test.html",
+        "msg": "title 68 chars: تست سرعت سایت رایگان | بررسی امتیاز گوگل و Core Web Vitals — بیزدوار"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "pages/whatsapp-link-generator.html",
+        "msg": "title 66 chars: ساخت لینک واتساپ رایگان | لینک مستقیم wa.me با پیام و QR — بیزدوار"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "pages/whatsapp-link-generator.html",
+        "msg": "description 167 chars"
+      },
+      {
+        "level": "warn",
+        "code": "img-alt",
+        "rel": "pages/whatsapp-link-generator.html",
+        "msg": "1 <img> without alt"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "tr/pages/about.html",
+        "msg": "description 175 chars"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "tr/pages/articles/what-is-digital-marketing.html",
+        "msg": "title 66 chars: Dijital pazarlama nedir? Kanallar, huni ve 2026 rehberi | Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "tr/pages/blog.html",
+        "msg": "title 68 chars: Bizdavar blog | Web tasarım, dijital pazarlama ve endüstriyel rehber"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "tr/pages/contact.html",
+        "msg": "description 187 chars"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "tr/pages/digi-system.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "tr/pages/fxguard-exchange.html",
+        "msg": "title 73 chars: FXGuard Exchange vaka çalışması | Toman–Lira değişim platformu — Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "tr/pages/fxguard.html",
+        "msg": "description 176 chars"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "tr/pages/gamak.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "tr/pages/liqui-moly.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "tr/pages/motorcycle.html",
+        "msg": "description 175 chars"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "tr/pages/ostrich-leather.html",
+        "msg": "description 171 chars"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "tr/pages/pneumatic.html",
+        "msg": "title 68 chars: Endüstriyel pnömatik | Silindir, valf ve hava hazırlayıcı — Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "tr/pages/pneumatic.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "tr/pages/portfolio.html",
+        "msg": "title 74 chars: Portfolyo | Web tasarım, dijital ürünler ve endüstriyel tedarik — Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "tr/pages/prosense.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "canonical-mismatch",
+        "rel": "tr/pages/shop.html",
+        "msg": "canonical https://bizdavar.com/pages/shop ≠ served https://bizdavar.com/tr/pages/shop"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "tr/pages/speed-test.html",
+        "msg": "description 173 chars"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "tr/pages/tank-volume-calculator.html",
+        "msg": "title 72 chars: Tank Hacmi Hesaplama — Silindir, Yatay, Dikdörtgen ve Küresel | Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "tr/pages/teltonika.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "tr/pages/teraoka.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "tr/pages/tools.html",
+        "msg": "title 94 chars: Ücretsiz Online Araçlar | Hız Testi, IP, WhatsApp Linki, UTM ve Endüstriyel Araçlar — Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "tr/pages/tools.html",
+        "msg": "description 172 chars"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "tr/pages/unit-converter.html",
+        "msg": "title 73 chars: Basınç, Debi ve Sıcaklık Birim Çevirici | bar'dan psi'ye, m³/h — Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "tr/pages/utm-builder.html",
+        "msg": "description 181 chars"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "tr/pages/uwt.html",
+        "msg": "description 171 chars"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "tr/pages/uwt.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "tr/pages/vega.html",
+        "msg": "title 68 chars: VEGA sensör tedariki | VEGAPULS 6X, VEGABAR 39, VEGAPOINT — Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "tr/pages/vega.html",
+        "msg": "description 189 chars"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "tr/pages/website-speed-test.html",
+        "msg": "title 71 chars: Web Sitesi Hız Testi — Ücretsiz PageSpeed ve Core Web Vitals | Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "tr/pages/whatsapp-link-generator.html",
+        "msg": "title 67 chars: WhatsApp Link Oluşturma — Ücretsiz wa.me Linki ve QR Kod | Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "tr/pages/whatsapp-link-generator.html",
+        "msg": "description 166 chars"
+      },
+      {
+        "level": "warn",
+        "code": "img-alt",
+        "rel": "tr/pages/whatsapp-link-generator.html",
+        "msg": "1 <img> without alt"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "en/pages/about.html",
+        "msg": "description 180 chars"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "en/pages/articles/about-bizdavar-group.html",
+        "msg": "title 66 chars: What is Bizdavar Group? — History, team, 11 countries | Full guide"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "en/pages/blog.html",
+        "msg": "description 168 chars"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "en/pages/contact.html",
+        "msg": "title 67 chars: Contact Bizdavar | Free consultation — services & industrial supply"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "en/pages/contact.html",
+        "msg": "description 176 chars"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "en/pages/digi-system.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "en/pages/fxguard-accounting.html",
+        "msg": "title 70 chars: FXGuard Accounting | Coming soon — FXGuard suite accounting — Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "en/pages/fxguard-exchange.html",
+        "msg": "title 69 chars: FXGuard Exchange case study | Toman–Lira exchange platform — Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "en/pages/fxguard.html",
+        "msg": "description 217 chars"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "en/pages/gamak.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "en/pages/kaya-one.html",
+        "msg": "title 66 chars: Industrial trade web design case study | Corporate site — Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "en/pages/liqui-moly.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "en/pages/marvispace.html",
+        "msg": "title 67 chars: Leather e-commerce case study | Custom store development — Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "en/pages/motorcycle.html",
+        "msg": "description 188 chars"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "en/pages/pneumatic.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "en/pages/portfolio.html",
+        "msg": "title 71 chars: Portfolio | Web design, digital products & industrial supply — Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "en/pages/prosense.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "en/pages/services.html",
+        "msg": "title 66 chars: Services | Digital marketing, web design, SMM & technical installs"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "en/pages/services.html",
+        "msg": "description 195 chars"
+      },
+      {
+        "level": "warn",
+        "code": "canonical-mismatch",
+        "rel": "en/pages/shop.html",
+        "msg": "canonical https://bizdavar.com/pages/shop ≠ served https://bizdavar.com/en/pages/shop"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "en/pages/tank-volume-calculator.html",
+        "msg": "title 78 chars: Tank Volume Calculator — Cylinder, Horizontal, Rectangular & Sphere | Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "en/pages/tank-volume-calculator.html",
+        "msg": "description 172 chars"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "en/pages/teltonika.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "en/pages/teraoka.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "en/pages/tools.html",
+        "msg": "title 93 chars: Free Online Tools | Speed Test, My IP, WhatsApp Link, UTM & Industrial Calculators — Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "en/pages/tools.html",
+        "msg": "description 188 chars"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "en/pages/unit-converter.html",
+        "msg": "title 73 chars: Pressure, Flow & Temperature Unit Converter | bar to psi, m³/h — Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "en/pages/utm-builder.html",
+        "msg": "title 71 chars: UTM Builder — Free Campaign URL Builder for Google Analytics | Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "en/pages/uwt.html",
+        "msg": "description 169 chars"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "en/pages/uwt.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "en/pages/website-speed-test.html",
+        "msg": "title 70 chars: Website Speed Test — Free PageSpeed & Core Web Vitals Check | Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "en/pages/whatsapp-link-generator.html",
+        "msg": "title 70 chars: WhatsApp Link Generator — Free wa.me Link with Message & QR | Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "en/pages/whatsapp-link-generator.html",
+        "msg": "description 167 chars"
+      },
+      {
+        "level": "warn",
+        "code": "img-alt",
+        "rel": "en/pages/whatsapp-link-generator.html",
+        "msg": "1 <img> without alt"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "ru/pages/articles/about-bizdavar-group.html",
+        "msg": "title 68 chars: Что такое Bizdavar Group? — история, команда, 11 стран | Полный гайд"
+      },
+      {
+        "level": "warn",
+        "code": "desc-short",
+        "rel": "ru/pages/articles/website-speed-5-days.html",
+        "msg": "description 67 chars"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "ru/pages/digi-system.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "ru/pages/fxguard.html",
+        "msg": "description 190 chars"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "ru/pages/gamak.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "ru/pages/liqui-moly.html",
+        "msg": "description 172 chars"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "ru/pages/liqui-moly.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "ru/pages/marvispace.html",
+        "msg": "title 66 chars: Кейс магазина кожаных изделий | разработка и веб-дизайн — Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "ru/pages/motorcycle.html",
+        "msg": "description 172 chars"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "ru/pages/pneumatic.html",
+        "msg": "title 75 chars: Промышленная пневматика | Цилиндры, клапаны и подготовка воздуха — Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "ru/pages/pneumatic.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "ru/pages/portfolio.html",
+        "msg": "title 76 chars: Портфолио | веб-дизайн, цифровые продукты и промышленные поставки — Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "ru/pages/prosense.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "canonical-mismatch",
+        "rel": "ru/pages/shop.html",
+        "msg": "canonical https://bizdavar.com/pages/shop ≠ served https://bizdavar.com/ru/pages/shop"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "ru/pages/tank-volume-calculator.html",
+        "msg": "title 86 chars: Калькулятор объёма резервуара — цилиндр, горизонтальный, прямоугольный, шар | Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "ru/pages/tank-volume-calculator.html",
+        "msg": "description 173 chars"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "ru/pages/teltonika.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "ru/pages/teraoka.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "ru/pages/tools.html",
+        "msg": "title 112 chars: Бесплатные онлайн-инструменты | Тест скорости, мой IP, ссылка WhatsApp, UTM и инженерные калькуляторы — Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "ru/pages/tools.html",
+        "msg": "description 206 chars"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "ru/pages/unit-converter.html",
+        "msg": "title 77 chars: Конвертер единиц давления, расхода и температуры | бар в psi, м³/ч — Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "ru/pages/utm-builder.html",
+        "msg": "title 83 chars: Генератор UTM-меток — бесплатный конструктор ссылок для Google Analytics | Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "ru/pages/utm-builder.html",
+        "msg": "description 181 chars"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "ru/pages/uwt.html",
+        "msg": "description 171 chars"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "ru/pages/uwt.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "ru/pages/website-speed-test.html",
+        "msg": "title 75 chars: Проверка скорости сайта — бесплатный PageSpeed и Core Web Vitals | Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "ru/pages/what-is-my-ip.html",
+        "msg": "title 72 chars: Мой IP-адрес — узнать IPv4, IPv6, провайдера и местоположение | Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "ru/pages/whatsapp-link-generator.html",
+        "msg": "title 77 chars: Генератор ссылки WhatsApp — бесплатная ссылка wa.me с текстом и QR | Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "img-alt",
+        "rel": "ru/pages/whatsapp-link-generator.html",
+        "msg": "1 <img> without alt"
+      },
+      {
+        "level": "warn",
+        "code": "desc-short",
+        "rel": "ar/pages/articles/buy-digi-system-iran.html",
+        "msg": "description 65 chars"
+      },
+      {
+        "level": "warn",
+        "code": "desc-short",
+        "rel": "ar/pages/articles/buy-prosense-iran.html",
+        "msg": "description 62 chars"
+      },
+      {
+        "level": "warn",
+        "code": "desc-short",
+        "rel": "ar/pages/articles/buy-teltonika-iran.html",
+        "msg": "description 68 chars"
+      },
+      {
+        "level": "warn",
+        "code": "desc-short",
+        "rel": "ar/pages/articles/custom-web-app-development.html",
+        "msg": "description 46 chars"
+      },
+      {
+        "level": "warn",
+        "code": "desc-short",
+        "rel": "ar/pages/articles/industrial-trade-iran.html",
+        "msg": "description 65 chars"
+      },
+      {
+        "level": "warn",
+        "code": "desc-short",
+        "rel": "ar/pages/articles/vega-quote-iran.html",
+        "msg": "description 61 chars"
+      },
+      {
+        "level": "warn",
+        "code": "desc-short",
+        "rel": "ar/pages/articles/website-speed-5-days.html",
+        "msg": "description 51 chars"
+      },
+      {
+        "level": "warn",
+        "code": "desc-short",
+        "rel": "ar/pages/custom-web-app.html",
+        "msg": "description 64 chars"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "ar/pages/digi-system.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "ar/pages/fxguard.html",
+        "msg": "description 171 chars"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "ar/pages/gamak.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "ar/pages/liqui-moly.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "ar/pages/pneumatic.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "ar/pages/prosense.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "canonical-mismatch",
+        "rel": "ar/pages/shop.html",
+        "msg": "canonical https://bizdavar.com/pages/shop ≠ served https://bizdavar.com/ar/pages/shop"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "ar/pages/teltonika.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "ar/pages/teraoka.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "ar/pages/tools.html",
+        "msg": "title 94 chars: أدوات مجانية عبر الإنترنت | اختبار السرعة وعنوان IP ورابط واتساب وUTM وأدوات صناعية — Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "desc-long",
+        "rel": "ar/pages/tools.html",
+        "msg": "description 170 chars"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "ar/pages/utm-builder.html",
+        "msg": "title 73 chars: منشئ روابط UTM مجاناً — بناء روابط الحملات لـ Google Analytics | Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "h1-count",
+        "rel": "ar/pages/uwt.html",
+        "msg": "0 <h1> tags"
+      },
+      {
+        "level": "warn",
+        "code": "title-long",
+        "rel": "ar/pages/website-speed-test.html",
+        "msg": "title 69 chars: اختبار سرعة الموقع مجاناً — فحص PageSpeed وCore Web Vitals | Bizdavar"
+      },
+      {
+        "level": "warn",
+        "code": "img-alt",
+        "rel": "ar/pages/whatsapp-link-generator.html",
+        "msg": "1 <img> without alt"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-10027.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-9898.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-10488-c6f5d3.html",
+        "msg": "same title on 4 pages (fa): pages/motorcycle/bdv-am-10488-cf6ebd.html, pages/motorcycle/bdv-am-10488-d4556c.html, pages/motorcycle/bdv-am-10488.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-11238.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-9090.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-11456-29d1b5.html",
+        "msg": "same title on 5 pages (fa): pages/motorcycle/bdv-am-11456-8b3dc3.html, pages/motorcycle/bdv-am-11456-9c7446.html, pages/motorcycle/bdv-am-11456-b9c4c3.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-11584-b4ee93.html",
+        "msg": "same title on 3 pages (fa): pages/motorcycle/bdv-am-11584-c745ba.html, pages/motorcycle/bdv-am-11584.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-11619.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-12182.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-11647.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-11831.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-11684.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-13116.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-11695.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-12600.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-11825.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-12743.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-11826.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-12742.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-11827.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-12744.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-11828.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-11835.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-11832.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-11833.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-12371-901710.html",
+        "msg": "same title on 3 pages (fa): pages/motorcycle/bdv-am-12371-bc17d8.html, pages/motorcycle/bdv-am-12371.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-12411-a8a86e.html",
+        "msg": "same title on 3 pages (fa): pages/motorcycle/bdv-am-12411-fc808e.html, pages/motorcycle/bdv-am-12411.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-12447-95c9af.html",
+        "msg": "same title on 3 pages (fa): pages/motorcycle/bdv-am-12447-cceead.html, pages/motorcycle/bdv-am-12447.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-12468-89c5f4.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-12468.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-12473-98a784.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-12473.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-12477-110a0d.html",
+        "msg": "same title on 3 pages (fa): pages/motorcycle/bdv-am-12477-b9ce1a.html, pages/motorcycle/bdv-am-12477.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-12507-3814ff.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-12507.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-12559.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-12593.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-12602.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-12726.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-12709-0886d9.html",
+        "msg": "same title on 8 pages (fa): pages/motorcycle/bdv-am-12709-5efeaa.html, pages/motorcycle/bdv-am-12709-77e382.html, pages/motorcycle/bdv-am-12709-7ff526.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-12814-6cdb16.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-12814.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-12894-50677e.html",
+        "msg": "same title on 3 pages (fa): pages/motorcycle/bdv-am-12894-823a4b.html, pages/motorcycle/bdv-am-12894.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-12947-239098.html",
+        "msg": "same title on 6 pages (fa): pages/motorcycle/bdv-am-12947-6b313c.html, pages/motorcycle/bdv-am-12947-9a31b8.html, pages/motorcycle/bdv-am-12947-ea45bb.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-13043-aa15be.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-13043.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-13115-03530e.html",
+        "msg": "same title on 6 pages (fa): pages/motorcycle/bdv-am-13115-1a0cbc.html, pages/motorcycle/bdv-am-13115-2e5c70.html, pages/motorcycle/bdv-am-13115-7103ff.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-13200-bb3077.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-13200.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-16279-7f8bb2.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-16279.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-16307-226de9.html",
+        "msg": "same title on 5 pages (fa): pages/motorcycle/bdv-am-16307-3c9194.html, pages/motorcycle/bdv-am-16307-5509d0.html, pages/motorcycle/bdv-am-16307-e176c2.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-16344-5eca62.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-16344.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-16396-5beda1.html",
+        "msg": "same title on 7 pages (fa): pages/motorcycle/bdv-am-16396-73b5ed.html, pages/motorcycle/bdv-am-16396-d2825d.html, pages/motorcycle/bdv-am-16396-e1016a.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-16438-34b44c.html",
+        "msg": "same title on 4 pages (fa): pages/motorcycle/bdv-am-16438-5438b0.html, pages/motorcycle/bdv-am-16438-9f784a.html, pages/motorcycle/bdv-am-16438.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-16491-d5a037.html",
+        "msg": "same title on 3 pages (fa): pages/motorcycle/bdv-am-16491-f73536.html, pages/motorcycle/bdv-am-16491.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-16592.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-9412.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-16621-2be692.html",
+        "msg": "same title on 3 pages (fa): pages/motorcycle/bdv-am-16621-9186e3.html, pages/motorcycle/bdv-am-16621.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-16623-f0962a.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-16623.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-16793-5777f9.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-16793.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-16875-5bd228.html",
+        "msg": "same title on 4 pages (fa): pages/motorcycle/bdv-am-16875-9501a4.html, pages/motorcycle/bdv-am-16875-9c0e72.html, pages/motorcycle/bdv-am-16875.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-16892-629904.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-16892.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-16939-2f87c6.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-16939.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-17001-012d39.html",
+        "msg": "same title on 19 pages (fa): pages/motorcycle/bdv-am-17001-020e23.html, pages/motorcycle/bdv-am-17001-03cf19.html, pages/motorcycle/bdv-am-17001-09e9cf.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-17043-057ed3.html",
+        "msg": "same title on 14 pages (fa): pages/motorcycle/bdv-am-17043-087921.html, pages/motorcycle/bdv-am-17043-2bc89f.html, pages/motorcycle/bdv-am-17043-48b112.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-17048-08b9f8.html",
+        "msg": "same title on 22 pages (fa): pages/motorcycle/bdv-am-17048-48e5f4.html, pages/motorcycle/bdv-am-17048-4cc935.html, pages/motorcycle/bdv-am-17048-559852.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-17052-057b32.html",
+        "msg": "same title on 15 pages (fa): pages/motorcycle/bdv-am-17052-19faff.html, pages/motorcycle/bdv-am-17052-1c1da3.html, pages/motorcycle/bdv-am-17052-4a9e12.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-17055-014c93.html",
+        "msg": "same title on 16 pages (fa): pages/motorcycle/bdv-am-17055-30314d.html, pages/motorcycle/bdv-am-17055-42fb6a.html, pages/motorcycle/bdv-am-17055-489ea8.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-17056-155749.html",
+        "msg": "same title on 3 pages (fa): pages/motorcycle/bdv-am-17056-3a8e73.html, pages/motorcycle/bdv-am-17056.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-17058-428639.html",
+        "msg": "same title on 4 pages (fa): pages/motorcycle/bdv-am-17058-d7f0e0.html, pages/motorcycle/bdv-am-17058-f7e58c.html, pages/motorcycle/bdv-am-17058.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-17068-4731fa.html",
+        "msg": "same title on 14 pages (fa): pages/motorcycle/bdv-am-17068-66e792.html, pages/motorcycle/bdv-am-17068-6c9e97.html, pages/motorcycle/bdv-am-17068-7430d1.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-17076-054702.html",
+        "msg": "same title on 15 pages (fa): pages/motorcycle/bdv-am-17076-07125c.html, pages/motorcycle/bdv-am-17076-1e5628.html, pages/motorcycle/bdv-am-17076-225dd1.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-17104-f3a187.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-17104.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-17106-1162f3.html",
+        "msg": "same title on 8 pages (fa): pages/motorcycle/bdv-am-17106-1490ab.html, pages/motorcycle/bdv-am-17106-4a8126.html, pages/motorcycle/bdv-am-17106-711180.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-17107-0a2551.html",
+        "msg": "same title on 4 pages (fa): pages/motorcycle/bdv-am-17107-3f6b62.html, pages/motorcycle/bdv-am-17107-ee38b0.html, pages/motorcycle/bdv-am-17107.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-17141-66d777.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-17141.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-17143-47c754.html",
+        "msg": "same title on 9 pages (fa): pages/motorcycle/bdv-am-17143-83523f.html, pages/motorcycle/bdv-am-17143-84903b.html, pages/motorcycle/bdv-am-17143-8da05d.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-17156-9e9e1a.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-17156.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-17161-64aa73.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-17161.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-17164-7f832e.html",
+        "msg": "same title on 3 pages (fa): pages/motorcycle/bdv-am-17164-c69fc5.html, pages/motorcycle/bdv-am-17164.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-17167-18407d.html",
+        "msg": "same title on 10 pages (fa): pages/motorcycle/bdv-am-17167-2b76ec.html, pages/motorcycle/bdv-am-17167-3650ea.html, pages/motorcycle/bdv-am-17167-59756f.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-17168-1ceb37.html",
+        "msg": "same title on 3 pages (fa): pages/motorcycle/bdv-am-17168-a5fddd.html, pages/motorcycle/bdv-am-17168.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-17174-482790.html",
+        "msg": "same title on 4 pages (fa): pages/motorcycle/bdv-am-17174-8be140.html, pages/motorcycle/bdv-am-17174-a68487.html, pages/motorcycle/bdv-am-17174.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-17181-05dd55.html",
+        "msg": "same title on 23 pages (fa): pages/motorcycle/bdv-am-17181-0e151f.html, pages/motorcycle/bdv-am-17181-22ac8c.html, pages/motorcycle/bdv-am-17181-2b1bcb.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-17183-86e691.html",
+        "msg": "same title on 5 pages (fa): pages/motorcycle/bdv-am-17183-8f0885.html, pages/motorcycle/bdv-am-17183-cbceaa.html, pages/motorcycle/bdv-am-17183-e11baf.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-17325-c8f3f3.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-17325.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-8354.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-9622.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-8616-0bf505.html",
+        "msg": "same title on 3 pages (fa): pages/motorcycle/bdv-am-8616-2a34be.html, pages/motorcycle/bdv-am-8616.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-8840-eeb2ea.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-8840.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "pages/motorcycle/bdv-am-9530-116a2f.html",
+        "msg": "same title on 2 pages (fa): pages/motorcycle/bdv-am-9530.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-10027.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-9898.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-10488-c6f5d3.html",
+        "msg": "same title on 4 pages (tr): tr/pages/motorcycle/bdv-am-10488-cf6ebd.html, tr/pages/motorcycle/bdv-am-10488-d4556c.html, tr/pages/motorcycle/bdv-am-10488.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-11238.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-9090.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-11456-29d1b5.html",
+        "msg": "same title on 5 pages (tr): tr/pages/motorcycle/bdv-am-11456-8b3dc3.html, tr/pages/motorcycle/bdv-am-11456-9c7446.html, tr/pages/motorcycle/bdv-am-11456-b9c4c3.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-11584-b4ee93.html",
+        "msg": "same title on 3 pages (tr): tr/pages/motorcycle/bdv-am-11584-c745ba.html, tr/pages/motorcycle/bdv-am-11584.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-11619.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-12182.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-11647.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-11831.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-11684.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-13116.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-11695.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-12600.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-11825.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-12743.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-11826.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-12742.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-11827.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-12744.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-11828.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-11835.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-11832.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-11833.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-12371-901710.html",
+        "msg": "same title on 3 pages (tr): tr/pages/motorcycle/bdv-am-12371-bc17d8.html, tr/pages/motorcycle/bdv-am-12371.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-12411-a8a86e.html",
+        "msg": "same title on 3 pages (tr): tr/pages/motorcycle/bdv-am-12411-fc808e.html, tr/pages/motorcycle/bdv-am-12411.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-12447-95c9af.html",
+        "msg": "same title on 3 pages (tr): tr/pages/motorcycle/bdv-am-12447-cceead.html, tr/pages/motorcycle/bdv-am-12447.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-12468-89c5f4.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-12468.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-12473-98a784.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-12473.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-12477-110a0d.html",
+        "msg": "same title on 3 pages (tr): tr/pages/motorcycle/bdv-am-12477-b9ce1a.html, tr/pages/motorcycle/bdv-am-12477.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-12507-3814ff.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-12507.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-12559.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-12593.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-12602.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-12726.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-12709-0886d9.html",
+        "msg": "same title on 8 pages (tr): tr/pages/motorcycle/bdv-am-12709-5efeaa.html, tr/pages/motorcycle/bdv-am-12709-77e382.html, tr/pages/motorcycle/bdv-am-12709-7ff526.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-12814-6cdb16.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-12814.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-12894-50677e.html",
+        "msg": "same title on 3 pages (tr): tr/pages/motorcycle/bdv-am-12894-823a4b.html, tr/pages/motorcycle/bdv-am-12894.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-12947-239098.html",
+        "msg": "same title on 6 pages (tr): tr/pages/motorcycle/bdv-am-12947-6b313c.html, tr/pages/motorcycle/bdv-am-12947-9a31b8.html, tr/pages/motorcycle/bdv-am-12947-ea45bb.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-13043-aa15be.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-13043.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-13115-03530e.html",
+        "msg": "same title on 6 pages (tr): tr/pages/motorcycle/bdv-am-13115-1a0cbc.html, tr/pages/motorcycle/bdv-am-13115-2e5c70.html, tr/pages/motorcycle/bdv-am-13115-7103ff.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-13200-bb3077.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-13200.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-16279-7f8bb2.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-16279.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-16307-226de9.html",
+        "msg": "same title on 5 pages (tr): tr/pages/motorcycle/bdv-am-16307-3c9194.html, tr/pages/motorcycle/bdv-am-16307-5509d0.html, tr/pages/motorcycle/bdv-am-16307-e176c2.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-16344-5eca62.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-16344.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-16396-5beda1.html",
+        "msg": "same title on 7 pages (tr): tr/pages/motorcycle/bdv-am-16396-73b5ed.html, tr/pages/motorcycle/bdv-am-16396-d2825d.html, tr/pages/motorcycle/bdv-am-16396-e1016a.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-16438-34b44c.html",
+        "msg": "same title on 4 pages (tr): tr/pages/motorcycle/bdv-am-16438-5438b0.html, tr/pages/motorcycle/bdv-am-16438-9f784a.html, tr/pages/motorcycle/bdv-am-16438.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-16491-d5a037.html",
+        "msg": "same title on 3 pages (tr): tr/pages/motorcycle/bdv-am-16491-f73536.html, tr/pages/motorcycle/bdv-am-16491.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-16592.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-9412.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-16621-2be692.html",
+        "msg": "same title on 3 pages (tr): tr/pages/motorcycle/bdv-am-16621-9186e3.html, tr/pages/motorcycle/bdv-am-16621.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-16623-f0962a.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-16623.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-16793-5777f9.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-16793.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-16875-5bd228.html",
+        "msg": "same title on 4 pages (tr): tr/pages/motorcycle/bdv-am-16875-9501a4.html, tr/pages/motorcycle/bdv-am-16875-9c0e72.html, tr/pages/motorcycle/bdv-am-16875.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-16892-629904.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-16892.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-16939-2f87c6.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-16939.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-17001-012d39.html",
+        "msg": "same title on 19 pages (tr): tr/pages/motorcycle/bdv-am-17001-020e23.html, tr/pages/motorcycle/bdv-am-17001-03cf19.html, tr/pages/motorcycle/bdv-am-17001-09e9cf.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-17043-057ed3.html",
+        "msg": "same title on 14 pages (tr): tr/pages/motorcycle/bdv-am-17043-087921.html, tr/pages/motorcycle/bdv-am-17043-2bc89f.html, tr/pages/motorcycle/bdv-am-17043-48b112.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-17048-08b9f8.html",
+        "msg": "same title on 22 pages (tr): tr/pages/motorcycle/bdv-am-17048-48e5f4.html, tr/pages/motorcycle/bdv-am-17048-4cc935.html, tr/pages/motorcycle/bdv-am-17048-559852.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-17052-057b32.html",
+        "msg": "same title on 15 pages (tr): tr/pages/motorcycle/bdv-am-17052-19faff.html, tr/pages/motorcycle/bdv-am-17052-1c1da3.html, tr/pages/motorcycle/bdv-am-17052-4a9e12.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-17055-014c93.html",
+        "msg": "same title on 16 pages (tr): tr/pages/motorcycle/bdv-am-17055-30314d.html, tr/pages/motorcycle/bdv-am-17055-42fb6a.html, tr/pages/motorcycle/bdv-am-17055-489ea8.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-17056-155749.html",
+        "msg": "same title on 3 pages (tr): tr/pages/motorcycle/bdv-am-17056-3a8e73.html, tr/pages/motorcycle/bdv-am-17056.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-17058-428639.html",
+        "msg": "same title on 4 pages (tr): tr/pages/motorcycle/bdv-am-17058-d7f0e0.html, tr/pages/motorcycle/bdv-am-17058-f7e58c.html, tr/pages/motorcycle/bdv-am-17058.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-17068-4731fa.html",
+        "msg": "same title on 14 pages (tr): tr/pages/motorcycle/bdv-am-17068-66e792.html, tr/pages/motorcycle/bdv-am-17068-6c9e97.html, tr/pages/motorcycle/bdv-am-17068-7430d1.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-17076-054702.html",
+        "msg": "same title on 15 pages (tr): tr/pages/motorcycle/bdv-am-17076-07125c.html, tr/pages/motorcycle/bdv-am-17076-1e5628.html, tr/pages/motorcycle/bdv-am-17076-225dd1.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-17104-f3a187.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-17104.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-17106-1162f3.html",
+        "msg": "same title on 8 pages (tr): tr/pages/motorcycle/bdv-am-17106-1490ab.html, tr/pages/motorcycle/bdv-am-17106-4a8126.html, tr/pages/motorcycle/bdv-am-17106-711180.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-17107-0a2551.html",
+        "msg": "same title on 4 pages (tr): tr/pages/motorcycle/bdv-am-17107-3f6b62.html, tr/pages/motorcycle/bdv-am-17107-ee38b0.html, tr/pages/motorcycle/bdv-am-17107.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-17141-66d777.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-17141.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-17143-47c754.html",
+        "msg": "same title on 9 pages (tr): tr/pages/motorcycle/bdv-am-17143-83523f.html, tr/pages/motorcycle/bdv-am-17143-84903b.html, tr/pages/motorcycle/bdv-am-17143-8da05d.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-17156-9e9e1a.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-17156.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-17161-64aa73.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-17161.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-17164-7f832e.html",
+        "msg": "same title on 3 pages (tr): tr/pages/motorcycle/bdv-am-17164-c69fc5.html, tr/pages/motorcycle/bdv-am-17164.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-17167-18407d.html",
+        "msg": "same title on 10 pages (tr): tr/pages/motorcycle/bdv-am-17167-2b76ec.html, tr/pages/motorcycle/bdv-am-17167-3650ea.html, tr/pages/motorcycle/bdv-am-17167-59756f.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-17168-1ceb37.html",
+        "msg": "same title on 3 pages (tr): tr/pages/motorcycle/bdv-am-17168-a5fddd.html, tr/pages/motorcycle/bdv-am-17168.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-17174-482790.html",
+        "msg": "same title on 4 pages (tr): tr/pages/motorcycle/bdv-am-17174-8be140.html, tr/pages/motorcycle/bdv-am-17174-a68487.html, tr/pages/motorcycle/bdv-am-17174.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-17181-05dd55.html",
+        "msg": "same title on 23 pages (tr): tr/pages/motorcycle/bdv-am-17181-0e151f.html, tr/pages/motorcycle/bdv-am-17181-22ac8c.html, tr/pages/motorcycle/bdv-am-17181-2b1bcb.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-17183-86e691.html",
+        "msg": "same title on 5 pages (tr): tr/pages/motorcycle/bdv-am-17183-8f0885.html, tr/pages/motorcycle/bdv-am-17183-cbceaa.html, tr/pages/motorcycle/bdv-am-17183-e11baf.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-17325-c8f3f3.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-17325.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-8354.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-9622.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-8616-0bf505.html",
+        "msg": "same title on 3 pages (tr): tr/pages/motorcycle/bdv-am-8616-2a34be.html, tr/pages/motorcycle/bdv-am-8616.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-8840-eeb2ea.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-8840.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "tr/pages/motorcycle/bdv-am-9530-116a2f.html",
+        "msg": "same title on 2 pages (tr): tr/pages/motorcycle/bdv-am-9530.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-10027.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-9898.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-10488-c6f5d3.html",
+        "msg": "same title on 4 pages (en): en/pages/motorcycle/bdv-am-10488-cf6ebd.html, en/pages/motorcycle/bdv-am-10488-d4556c.html, en/pages/motorcycle/bdv-am-10488.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-11238.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-9090.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-11456-29d1b5.html",
+        "msg": "same title on 5 pages (en): en/pages/motorcycle/bdv-am-11456-8b3dc3.html, en/pages/motorcycle/bdv-am-11456-9c7446.html, en/pages/motorcycle/bdv-am-11456-b9c4c3.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-11584-b4ee93.html",
+        "msg": "same title on 3 pages (en): en/pages/motorcycle/bdv-am-11584-c745ba.html, en/pages/motorcycle/bdv-am-11584.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-11619.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-12182.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-11647.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-11831.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-11684.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-13116.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-11695.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-12600.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-11825.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-12743.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-11826.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-12742.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-11827.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-12744.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-11828.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-11835.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-11832.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-11833.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-12371-901710.html",
+        "msg": "same title on 3 pages (en): en/pages/motorcycle/bdv-am-12371-bc17d8.html, en/pages/motorcycle/bdv-am-12371.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-12411-a8a86e.html",
+        "msg": "same title on 3 pages (en): en/pages/motorcycle/bdv-am-12411-fc808e.html, en/pages/motorcycle/bdv-am-12411.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-12447-95c9af.html",
+        "msg": "same title on 3 pages (en): en/pages/motorcycle/bdv-am-12447-cceead.html, en/pages/motorcycle/bdv-am-12447.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-12468-89c5f4.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-12468.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-12473-98a784.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-12473.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-12477-110a0d.html",
+        "msg": "same title on 3 pages (en): en/pages/motorcycle/bdv-am-12477-b9ce1a.html, en/pages/motorcycle/bdv-am-12477.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-12507-3814ff.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-12507.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-12559.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-12593.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-12602.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-12726.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-12709-0886d9.html",
+        "msg": "same title on 8 pages (en): en/pages/motorcycle/bdv-am-12709-5efeaa.html, en/pages/motorcycle/bdv-am-12709-77e382.html, en/pages/motorcycle/bdv-am-12709-7ff526.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-12814-6cdb16.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-12814.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-12894-50677e.html",
+        "msg": "same title on 3 pages (en): en/pages/motorcycle/bdv-am-12894-823a4b.html, en/pages/motorcycle/bdv-am-12894.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-12947-239098.html",
+        "msg": "same title on 6 pages (en): en/pages/motorcycle/bdv-am-12947-6b313c.html, en/pages/motorcycle/bdv-am-12947-9a31b8.html, en/pages/motorcycle/bdv-am-12947-ea45bb.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-13043-aa15be.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-13043.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-13115-03530e.html",
+        "msg": "same title on 6 pages (en): en/pages/motorcycle/bdv-am-13115-1a0cbc.html, en/pages/motorcycle/bdv-am-13115-2e5c70.html, en/pages/motorcycle/bdv-am-13115-7103ff.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-13200-bb3077.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-13200.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-16279-7f8bb2.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-16279.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-16307-226de9.html",
+        "msg": "same title on 5 pages (en): en/pages/motorcycle/bdv-am-16307-3c9194.html, en/pages/motorcycle/bdv-am-16307-5509d0.html, en/pages/motorcycle/bdv-am-16307-e176c2.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-16344-5eca62.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-16344.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-16396-5beda1.html",
+        "msg": "same title on 7 pages (en): en/pages/motorcycle/bdv-am-16396-73b5ed.html, en/pages/motorcycle/bdv-am-16396-d2825d.html, en/pages/motorcycle/bdv-am-16396-e1016a.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-16438-34b44c.html",
+        "msg": "same title on 4 pages (en): en/pages/motorcycle/bdv-am-16438-5438b0.html, en/pages/motorcycle/bdv-am-16438-9f784a.html, en/pages/motorcycle/bdv-am-16438.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-16491-d5a037.html",
+        "msg": "same title on 3 pages (en): en/pages/motorcycle/bdv-am-16491-f73536.html, en/pages/motorcycle/bdv-am-16491.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-16592.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-9412.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-16621-2be692.html",
+        "msg": "same title on 3 pages (en): en/pages/motorcycle/bdv-am-16621-9186e3.html, en/pages/motorcycle/bdv-am-16621.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-16623-f0962a.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-16623.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-16793-5777f9.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-16793.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-16875-5bd228.html",
+        "msg": "same title on 4 pages (en): en/pages/motorcycle/bdv-am-16875-9501a4.html, en/pages/motorcycle/bdv-am-16875-9c0e72.html, en/pages/motorcycle/bdv-am-16875.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-16892-629904.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-16892.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-16939-2f87c6.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-16939.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-17001-012d39.html",
+        "msg": "same title on 19 pages (en): en/pages/motorcycle/bdv-am-17001-020e23.html, en/pages/motorcycle/bdv-am-17001-03cf19.html, en/pages/motorcycle/bdv-am-17001-09e9cf.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-17043-057ed3.html",
+        "msg": "same title on 14 pages (en): en/pages/motorcycle/bdv-am-17043-087921.html, en/pages/motorcycle/bdv-am-17043-2bc89f.html, en/pages/motorcycle/bdv-am-17043-48b112.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-17048-08b9f8.html",
+        "msg": "same title on 22 pages (en): en/pages/motorcycle/bdv-am-17048-48e5f4.html, en/pages/motorcycle/bdv-am-17048-4cc935.html, en/pages/motorcycle/bdv-am-17048-559852.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-17052-057b32.html",
+        "msg": "same title on 15 pages (en): en/pages/motorcycle/bdv-am-17052-19faff.html, en/pages/motorcycle/bdv-am-17052-1c1da3.html, en/pages/motorcycle/bdv-am-17052-4a9e12.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-17055-014c93.html",
+        "msg": "same title on 16 pages (en): en/pages/motorcycle/bdv-am-17055-30314d.html, en/pages/motorcycle/bdv-am-17055-42fb6a.html, en/pages/motorcycle/bdv-am-17055-489ea8.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-17056-155749.html",
+        "msg": "same title on 3 pages (en): en/pages/motorcycle/bdv-am-17056-3a8e73.html, en/pages/motorcycle/bdv-am-17056.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-17058-428639.html",
+        "msg": "same title on 4 pages (en): en/pages/motorcycle/bdv-am-17058-d7f0e0.html, en/pages/motorcycle/bdv-am-17058-f7e58c.html, en/pages/motorcycle/bdv-am-17058.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-17068-4731fa.html",
+        "msg": "same title on 14 pages (en): en/pages/motorcycle/bdv-am-17068-66e792.html, en/pages/motorcycle/bdv-am-17068-6c9e97.html, en/pages/motorcycle/bdv-am-17068-7430d1.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-17076-054702.html",
+        "msg": "same title on 15 pages (en): en/pages/motorcycle/bdv-am-17076-07125c.html, en/pages/motorcycle/bdv-am-17076-1e5628.html, en/pages/motorcycle/bdv-am-17076-225dd1.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-17104-f3a187.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-17104.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-17106-1162f3.html",
+        "msg": "same title on 8 pages (en): en/pages/motorcycle/bdv-am-17106-1490ab.html, en/pages/motorcycle/bdv-am-17106-4a8126.html, en/pages/motorcycle/bdv-am-17106-711180.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-17107-0a2551.html",
+        "msg": "same title on 4 pages (en): en/pages/motorcycle/bdv-am-17107-3f6b62.html, en/pages/motorcycle/bdv-am-17107-ee38b0.html, en/pages/motorcycle/bdv-am-17107.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-17141-66d777.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-17141.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-17143-47c754.html",
+        "msg": "same title on 9 pages (en): en/pages/motorcycle/bdv-am-17143-83523f.html, en/pages/motorcycle/bdv-am-17143-84903b.html, en/pages/motorcycle/bdv-am-17143-8da05d.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-17156-9e9e1a.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-17156.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-17161-64aa73.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-17161.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-17164-7f832e.html",
+        "msg": "same title on 3 pages (en): en/pages/motorcycle/bdv-am-17164-c69fc5.html, en/pages/motorcycle/bdv-am-17164.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-17167-18407d.html",
+        "msg": "same title on 10 pages (en): en/pages/motorcycle/bdv-am-17167-2b76ec.html, en/pages/motorcycle/bdv-am-17167-3650ea.html, en/pages/motorcycle/bdv-am-17167-59756f.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-17168-1ceb37.html",
+        "msg": "same title on 3 pages (en): en/pages/motorcycle/bdv-am-17168-a5fddd.html, en/pages/motorcycle/bdv-am-17168.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-17174-482790.html",
+        "msg": "same title on 4 pages (en): en/pages/motorcycle/bdv-am-17174-8be140.html, en/pages/motorcycle/bdv-am-17174-a68487.html, en/pages/motorcycle/bdv-am-17174.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-17181-05dd55.html",
+        "msg": "same title on 23 pages (en): en/pages/motorcycle/bdv-am-17181-0e151f.html, en/pages/motorcycle/bdv-am-17181-22ac8c.html, en/pages/motorcycle/bdv-am-17181-2b1bcb.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-17183-86e691.html",
+        "msg": "same title on 5 pages (en): en/pages/motorcycle/bdv-am-17183-8f0885.html, en/pages/motorcycle/bdv-am-17183-cbceaa.html, en/pages/motorcycle/bdv-am-17183-e11baf.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-17325-c8f3f3.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-17325.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-8354.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-9622.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-8616-0bf505.html",
+        "msg": "same title on 3 pages (en): en/pages/motorcycle/bdv-am-8616-2a34be.html, en/pages/motorcycle/bdv-am-8616.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-8840-eeb2ea.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-8840.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "en/pages/motorcycle/bdv-am-9530-116a2f.html",
+        "msg": "same title on 2 pages (en): en/pages/motorcycle/bdv-am-9530.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-10027.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-9898.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-10488-c6f5d3.html",
+        "msg": "same title on 4 pages (ru): ru/pages/motorcycle/bdv-am-10488-cf6ebd.html, ru/pages/motorcycle/bdv-am-10488-d4556c.html, ru/pages/motorcycle/bdv-am-10488.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-11238.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-9090.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-11456-29d1b5.html",
+        "msg": "same title on 5 pages (ru): ru/pages/motorcycle/bdv-am-11456-8b3dc3.html, ru/pages/motorcycle/bdv-am-11456-9c7446.html, ru/pages/motorcycle/bdv-am-11456-b9c4c3.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-11584-b4ee93.html",
+        "msg": "same title on 3 pages (ru): ru/pages/motorcycle/bdv-am-11584-c745ba.html, ru/pages/motorcycle/bdv-am-11584.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-11619.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-12182.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-11647.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-11831.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-11684.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-13116.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-11695.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-12600.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-11825.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-12743.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-11826.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-12742.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-11827.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-12744.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-11828.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-11835.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-11832.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-11833.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-12371-901710.html",
+        "msg": "same title on 3 pages (ru): ru/pages/motorcycle/bdv-am-12371-bc17d8.html, ru/pages/motorcycle/bdv-am-12371.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-12411-a8a86e.html",
+        "msg": "same title on 3 pages (ru): ru/pages/motorcycle/bdv-am-12411-fc808e.html, ru/pages/motorcycle/bdv-am-12411.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-12447-95c9af.html",
+        "msg": "same title on 3 pages (ru): ru/pages/motorcycle/bdv-am-12447-cceead.html, ru/pages/motorcycle/bdv-am-12447.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-12468-89c5f4.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-12468.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-12473-98a784.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-12473.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-12477-110a0d.html",
+        "msg": "same title on 3 pages (ru): ru/pages/motorcycle/bdv-am-12477-b9ce1a.html, ru/pages/motorcycle/bdv-am-12477.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-12507-3814ff.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-12507.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-12559.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-12593.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-12602.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-12726.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-12709-0886d9.html",
+        "msg": "same title on 8 pages (ru): ru/pages/motorcycle/bdv-am-12709-5efeaa.html, ru/pages/motorcycle/bdv-am-12709-77e382.html, ru/pages/motorcycle/bdv-am-12709-7ff526.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-12814-6cdb16.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-12814.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-12894-50677e.html",
+        "msg": "same title on 3 pages (ru): ru/pages/motorcycle/bdv-am-12894-823a4b.html, ru/pages/motorcycle/bdv-am-12894.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-12947-239098.html",
+        "msg": "same title on 6 pages (ru): ru/pages/motorcycle/bdv-am-12947-6b313c.html, ru/pages/motorcycle/bdv-am-12947-9a31b8.html, ru/pages/motorcycle/bdv-am-12947-ea45bb.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-13043-aa15be.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-13043.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-13115-03530e.html",
+        "msg": "same title on 6 pages (ru): ru/pages/motorcycle/bdv-am-13115-1a0cbc.html, ru/pages/motorcycle/bdv-am-13115-2e5c70.html, ru/pages/motorcycle/bdv-am-13115-7103ff.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-13200-bb3077.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-13200.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-16279-7f8bb2.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-16279.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-16307-226de9.html",
+        "msg": "same title on 5 pages (ru): ru/pages/motorcycle/bdv-am-16307-3c9194.html, ru/pages/motorcycle/bdv-am-16307-5509d0.html, ru/pages/motorcycle/bdv-am-16307-e176c2.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-16344-5eca62.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-16344.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-16396-5beda1.html",
+        "msg": "same title on 7 pages (ru): ru/pages/motorcycle/bdv-am-16396-73b5ed.html, ru/pages/motorcycle/bdv-am-16396-d2825d.html, ru/pages/motorcycle/bdv-am-16396-e1016a.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-16438-34b44c.html",
+        "msg": "same title on 4 pages (ru): ru/pages/motorcycle/bdv-am-16438-5438b0.html, ru/pages/motorcycle/bdv-am-16438-9f784a.html, ru/pages/motorcycle/bdv-am-16438.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-16491-d5a037.html",
+        "msg": "same title on 3 pages (ru): ru/pages/motorcycle/bdv-am-16491-f73536.html, ru/pages/motorcycle/bdv-am-16491.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-16592.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-9412.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-16621-2be692.html",
+        "msg": "same title on 3 pages (ru): ru/pages/motorcycle/bdv-am-16621-9186e3.html, ru/pages/motorcycle/bdv-am-16621.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-16623-f0962a.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-16623.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-16793-5777f9.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-16793.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-16875-5bd228.html",
+        "msg": "same title on 4 pages (ru): ru/pages/motorcycle/bdv-am-16875-9501a4.html, ru/pages/motorcycle/bdv-am-16875-9c0e72.html, ru/pages/motorcycle/bdv-am-16875.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-16892-629904.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-16892.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-16939-2f87c6.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-16939.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-17001-012d39.html",
+        "msg": "same title on 19 pages (ru): ru/pages/motorcycle/bdv-am-17001-020e23.html, ru/pages/motorcycle/bdv-am-17001-03cf19.html, ru/pages/motorcycle/bdv-am-17001-09e9cf.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-17043-057ed3.html",
+        "msg": "same title on 14 pages (ru): ru/pages/motorcycle/bdv-am-17043-087921.html, ru/pages/motorcycle/bdv-am-17043-2bc89f.html, ru/pages/motorcycle/bdv-am-17043-48b112.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-17048-08b9f8.html",
+        "msg": "same title on 22 pages (ru): ru/pages/motorcycle/bdv-am-17048-48e5f4.html, ru/pages/motorcycle/bdv-am-17048-4cc935.html, ru/pages/motorcycle/bdv-am-17048-559852.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-17052-057b32.html",
+        "msg": "same title on 15 pages (ru): ru/pages/motorcycle/bdv-am-17052-19faff.html, ru/pages/motorcycle/bdv-am-17052-1c1da3.html, ru/pages/motorcycle/bdv-am-17052-4a9e12.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-17055-014c93.html",
+        "msg": "same title on 16 pages (ru): ru/pages/motorcycle/bdv-am-17055-30314d.html, ru/pages/motorcycle/bdv-am-17055-42fb6a.html, ru/pages/motorcycle/bdv-am-17055-489ea8.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-17056-155749.html",
+        "msg": "same title on 3 pages (ru): ru/pages/motorcycle/bdv-am-17056-3a8e73.html, ru/pages/motorcycle/bdv-am-17056.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-17058-428639.html",
+        "msg": "same title on 4 pages (ru): ru/pages/motorcycle/bdv-am-17058-d7f0e0.html, ru/pages/motorcycle/bdv-am-17058-f7e58c.html, ru/pages/motorcycle/bdv-am-17058.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-17068-4731fa.html",
+        "msg": "same title on 14 pages (ru): ru/pages/motorcycle/bdv-am-17068-66e792.html, ru/pages/motorcycle/bdv-am-17068-6c9e97.html, ru/pages/motorcycle/bdv-am-17068-7430d1.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-17076-054702.html",
+        "msg": "same title on 15 pages (ru): ru/pages/motorcycle/bdv-am-17076-07125c.html, ru/pages/motorcycle/bdv-am-17076-1e5628.html, ru/pages/motorcycle/bdv-am-17076-225dd1.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-17104-f3a187.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-17104.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-17106-1162f3.html",
+        "msg": "same title on 8 pages (ru): ru/pages/motorcycle/bdv-am-17106-1490ab.html, ru/pages/motorcycle/bdv-am-17106-4a8126.html, ru/pages/motorcycle/bdv-am-17106-711180.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-17107-0a2551.html",
+        "msg": "same title on 4 pages (ru): ru/pages/motorcycle/bdv-am-17107-3f6b62.html, ru/pages/motorcycle/bdv-am-17107-ee38b0.html, ru/pages/motorcycle/bdv-am-17107.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-17141-66d777.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-17141.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-17143-47c754.html",
+        "msg": "same title on 9 pages (ru): ru/pages/motorcycle/bdv-am-17143-83523f.html, ru/pages/motorcycle/bdv-am-17143-84903b.html, ru/pages/motorcycle/bdv-am-17143-8da05d.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-17156-9e9e1a.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-17156.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-17161-64aa73.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-17161.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-17164-7f832e.html",
+        "msg": "same title on 3 pages (ru): ru/pages/motorcycle/bdv-am-17164-c69fc5.html, ru/pages/motorcycle/bdv-am-17164.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-17167-18407d.html",
+        "msg": "same title on 10 pages (ru): ru/pages/motorcycle/bdv-am-17167-2b76ec.html, ru/pages/motorcycle/bdv-am-17167-3650ea.html, ru/pages/motorcycle/bdv-am-17167-59756f.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-17168-1ceb37.html",
+        "msg": "same title on 3 pages (ru): ru/pages/motorcycle/bdv-am-17168-a5fddd.html, ru/pages/motorcycle/bdv-am-17168.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-17174-482790.html",
+        "msg": "same title on 4 pages (ru): ru/pages/motorcycle/bdv-am-17174-8be140.html, ru/pages/motorcycle/bdv-am-17174-a68487.html, ru/pages/motorcycle/bdv-am-17174.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-17181-05dd55.html",
+        "msg": "same title on 23 pages (ru): ru/pages/motorcycle/bdv-am-17181-0e151f.html, ru/pages/motorcycle/bdv-am-17181-22ac8c.html, ru/pages/motorcycle/bdv-am-17181-2b1bcb.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-17183-86e691.html",
+        "msg": "same title on 5 pages (ru): ru/pages/motorcycle/bdv-am-17183-8f0885.html, ru/pages/motorcycle/bdv-am-17183-cbceaa.html, ru/pages/motorcycle/bdv-am-17183-e11baf.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-17325-c8f3f3.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-17325.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-8354.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-9622.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-8616-0bf505.html",
+        "msg": "same title on 3 pages (ru): ru/pages/motorcycle/bdv-am-8616-2a34be.html, ru/pages/motorcycle/bdv-am-8616.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-8840-eeb2ea.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-8840.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ru/pages/motorcycle/bdv-am-9530-116a2f.html",
+        "msg": "same title on 2 pages (ru): ru/pages/motorcycle/bdv-am-9530.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-10027.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-9898.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-10488-c6f5d3.html",
+        "msg": "same title on 4 pages (ar): ar/pages/motorcycle/bdv-am-10488-cf6ebd.html, ar/pages/motorcycle/bdv-am-10488-d4556c.html, ar/pages/motorcycle/bdv-am-10488.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-11238.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-9090.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-11456-29d1b5.html",
+        "msg": "same title on 5 pages (ar): ar/pages/motorcycle/bdv-am-11456-8b3dc3.html, ar/pages/motorcycle/bdv-am-11456-9c7446.html, ar/pages/motorcycle/bdv-am-11456-b9c4c3.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-11584-b4ee93.html",
+        "msg": "same title on 3 pages (ar): ar/pages/motorcycle/bdv-am-11584-c745ba.html, ar/pages/motorcycle/bdv-am-11584.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-11619.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-12182.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-11647.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-11831.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-11684.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-13116.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-11695.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-12600.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-11825.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-12743.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-11826.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-12742.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-11827.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-12744.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-11828.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-11835.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-11832.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-11833.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-12371-901710.html",
+        "msg": "same title on 3 pages (ar): ar/pages/motorcycle/bdv-am-12371-bc17d8.html, ar/pages/motorcycle/bdv-am-12371.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-12411-a8a86e.html",
+        "msg": "same title on 3 pages (ar): ar/pages/motorcycle/bdv-am-12411-fc808e.html, ar/pages/motorcycle/bdv-am-12411.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-12447-95c9af.html",
+        "msg": "same title on 3 pages (ar): ar/pages/motorcycle/bdv-am-12447-cceead.html, ar/pages/motorcycle/bdv-am-12447.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-12468-89c5f4.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-12468.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-12473-98a784.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-12473.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-12477-110a0d.html",
+        "msg": "same title on 3 pages (ar): ar/pages/motorcycle/bdv-am-12477-b9ce1a.html, ar/pages/motorcycle/bdv-am-12477.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-12507-3814ff.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-12507.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-12559.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-12593.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-12602.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-12726.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-12709-0886d9.html",
+        "msg": "same title on 8 pages (ar): ar/pages/motorcycle/bdv-am-12709-5efeaa.html, ar/pages/motorcycle/bdv-am-12709-77e382.html, ar/pages/motorcycle/bdv-am-12709-7ff526.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-12814-6cdb16.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-12814.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-12894-50677e.html",
+        "msg": "same title on 3 pages (ar): ar/pages/motorcycle/bdv-am-12894-823a4b.html, ar/pages/motorcycle/bdv-am-12894.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-12947-239098.html",
+        "msg": "same title on 6 pages (ar): ar/pages/motorcycle/bdv-am-12947-6b313c.html, ar/pages/motorcycle/bdv-am-12947-9a31b8.html, ar/pages/motorcycle/bdv-am-12947-ea45bb.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-13043-aa15be.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-13043.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-13115-03530e.html",
+        "msg": "same title on 6 pages (ar): ar/pages/motorcycle/bdv-am-13115-1a0cbc.html, ar/pages/motorcycle/bdv-am-13115-2e5c70.html, ar/pages/motorcycle/bdv-am-13115-7103ff.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-13200-bb3077.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-13200.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-16279-7f8bb2.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-16279.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-16307-226de9.html",
+        "msg": "same title on 5 pages (ar): ar/pages/motorcycle/bdv-am-16307-3c9194.html, ar/pages/motorcycle/bdv-am-16307-5509d0.html, ar/pages/motorcycle/bdv-am-16307-e176c2.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-16344-5eca62.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-16344.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-16396-5beda1.html",
+        "msg": "same title on 7 pages (ar): ar/pages/motorcycle/bdv-am-16396-73b5ed.html, ar/pages/motorcycle/bdv-am-16396-d2825d.html, ar/pages/motorcycle/bdv-am-16396-e1016a.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-16438-34b44c.html",
+        "msg": "same title on 4 pages (ar): ar/pages/motorcycle/bdv-am-16438-5438b0.html, ar/pages/motorcycle/bdv-am-16438-9f784a.html, ar/pages/motorcycle/bdv-am-16438.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-16491-d5a037.html",
+        "msg": "same title on 3 pages (ar): ar/pages/motorcycle/bdv-am-16491-f73536.html, ar/pages/motorcycle/bdv-am-16491.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-16592.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-9412.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-16621-2be692.html",
+        "msg": "same title on 3 pages (ar): ar/pages/motorcycle/bdv-am-16621-9186e3.html, ar/pages/motorcycle/bdv-am-16621.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-16623-f0962a.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-16623.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-16793-5777f9.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-16793.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-16875-5bd228.html",
+        "msg": "same title on 4 pages (ar): ar/pages/motorcycle/bdv-am-16875-9501a4.html, ar/pages/motorcycle/bdv-am-16875-9c0e72.html, ar/pages/motorcycle/bdv-am-16875.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-16892-629904.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-16892.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-16939-2f87c6.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-16939.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-17001-012d39.html",
+        "msg": "same title on 19 pages (ar): ar/pages/motorcycle/bdv-am-17001-020e23.html, ar/pages/motorcycle/bdv-am-17001-03cf19.html, ar/pages/motorcycle/bdv-am-17001-09e9cf.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-17043-057ed3.html",
+        "msg": "same title on 14 pages (ar): ar/pages/motorcycle/bdv-am-17043-087921.html, ar/pages/motorcycle/bdv-am-17043-2bc89f.html, ar/pages/motorcycle/bdv-am-17043-48b112.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-17048-08b9f8.html",
+        "msg": "same title on 22 pages (ar): ar/pages/motorcycle/bdv-am-17048-48e5f4.html, ar/pages/motorcycle/bdv-am-17048-4cc935.html, ar/pages/motorcycle/bdv-am-17048-559852.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-17052-057b32.html",
+        "msg": "same title on 15 pages (ar): ar/pages/motorcycle/bdv-am-17052-19faff.html, ar/pages/motorcycle/bdv-am-17052-1c1da3.html, ar/pages/motorcycle/bdv-am-17052-4a9e12.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-17055-014c93.html",
+        "msg": "same title on 16 pages (ar): ar/pages/motorcycle/bdv-am-17055-30314d.html, ar/pages/motorcycle/bdv-am-17055-42fb6a.html, ar/pages/motorcycle/bdv-am-17055-489ea8.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-17056-155749.html",
+        "msg": "same title on 3 pages (ar): ar/pages/motorcycle/bdv-am-17056-3a8e73.html, ar/pages/motorcycle/bdv-am-17056.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-17058-428639.html",
+        "msg": "same title on 4 pages (ar): ar/pages/motorcycle/bdv-am-17058-d7f0e0.html, ar/pages/motorcycle/bdv-am-17058-f7e58c.html, ar/pages/motorcycle/bdv-am-17058.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-17068-4731fa.html",
+        "msg": "same title on 14 pages (ar): ar/pages/motorcycle/bdv-am-17068-66e792.html, ar/pages/motorcycle/bdv-am-17068-6c9e97.html, ar/pages/motorcycle/bdv-am-17068-7430d1.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-17076-054702.html",
+        "msg": "same title on 15 pages (ar): ar/pages/motorcycle/bdv-am-17076-07125c.html, ar/pages/motorcycle/bdv-am-17076-1e5628.html, ar/pages/motorcycle/bdv-am-17076-225dd1.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-17104-f3a187.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-17104.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-17106-1162f3.html",
+        "msg": "same title on 8 pages (ar): ar/pages/motorcycle/bdv-am-17106-1490ab.html, ar/pages/motorcycle/bdv-am-17106-4a8126.html, ar/pages/motorcycle/bdv-am-17106-711180.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-17107-0a2551.html",
+        "msg": "same title on 4 pages (ar): ar/pages/motorcycle/bdv-am-17107-3f6b62.html, ar/pages/motorcycle/bdv-am-17107-ee38b0.html, ar/pages/motorcycle/bdv-am-17107.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-17141-66d777.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-17141.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-17143-47c754.html",
+        "msg": "same title on 9 pages (ar): ar/pages/motorcycle/bdv-am-17143-83523f.html, ar/pages/motorcycle/bdv-am-17143-84903b.html, ar/pages/motorcycle/bdv-am-17143-8da05d.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-17156-9e9e1a.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-17156.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-17161-64aa73.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-17161.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-17164-7f832e.html",
+        "msg": "same title on 3 pages (ar): ar/pages/motorcycle/bdv-am-17164-c69fc5.html, ar/pages/motorcycle/bdv-am-17164.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-17167-18407d.html",
+        "msg": "same title on 10 pages (ar): ar/pages/motorcycle/bdv-am-17167-2b76ec.html, ar/pages/motorcycle/bdv-am-17167-3650ea.html, ar/pages/motorcycle/bdv-am-17167-59756f.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-17168-1ceb37.html",
+        "msg": "same title on 3 pages (ar): ar/pages/motorcycle/bdv-am-17168-a5fddd.html, ar/pages/motorcycle/bdv-am-17168.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-17174-482790.html",
+        "msg": "same title on 4 pages (ar): ar/pages/motorcycle/bdv-am-17174-8be140.html, ar/pages/motorcycle/bdv-am-17174-a68487.html, ar/pages/motorcycle/bdv-am-17174.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-17181-05dd55.html",
+        "msg": "same title on 23 pages (ar): ar/pages/motorcycle/bdv-am-17181-0e151f.html, ar/pages/motorcycle/bdv-am-17181-22ac8c.html, ar/pages/motorcycle/bdv-am-17181-2b1bcb.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-17183-86e691.html",
+        "msg": "same title on 5 pages (ar): ar/pages/motorcycle/bdv-am-17183-8f0885.html, ar/pages/motorcycle/bdv-am-17183-cbceaa.html, ar/pages/motorcycle/bdv-am-17183-e11baf.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-17325-c8f3f3.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-17325.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-8354.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-9622.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-8616-0bf505.html",
+        "msg": "same title on 3 pages (ar): ar/pages/motorcycle/bdv-am-8616-2a34be.html, ar/pages/motorcycle/bdv-am-8616.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-8840-eeb2ea.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-8840.html"
+      },
+      {
+        "level": "warn",
+        "code": "title-duplicate",
+        "rel": "ar/pages/motorcycle/bdv-am-9530-116a2f.html",
+        "msg": "same title on 2 pages (ar): ar/pages/motorcycle/bdv-am-9530.html"
+      },
+      {
+        "level": "warn",
+        "code": "sitemap-duplicate",
+        "rel": "sitemap.xml",
+        "msg": "listed twice: https://bizdavar.com/pages/uwt"
+      },
+      {
+        "level": "warn",
+        "code": "sitemap-duplicate",
+        "rel": "sitemap.xml",
+        "msg": "listed twice: https://bizdavar.com/tr/pages/uwt"
+      },
+      {
+        "level": "warn",
+        "code": "sitemap-duplicate",
+        "rel": "sitemap.xml",
+        "msg": "listed twice: https://bizdavar.com/en/pages/uwt"
+      },
+      {
+        "level": "warn",
+        "code": "sitemap-duplicate",
+        "rel": "sitemap.xml",
+        "msg": "listed twice: https://bizdavar.com/ru/pages/uwt"
+      },
+      {
+        "level": "warn",
+        "code": "sitemap-duplicate",
+        "rel": "sitemap.xml",
+        "msg": "listed twice: https://bizdavar.com/ar/pages/uwt"
+      },
+      {
+        "level": "warn",
+        "code": "sitemap-noncanonical",
+        "rel": "sitemap.xml",
+        "msg": "https://bizdavar.com/tr/pages/shop canonicalises to https://bizdavar.com/pages/shop"
+      },
+      {
+        "level": "warn",
+        "code": "sitemap-noncanonical",
+        "rel": "sitemap.xml",
+        "msg": "https://bizdavar.com/en/pages/shop canonicalises to https://bizdavar.com/pages/shop"
+      },
+      {
+        "level": "warn",
+        "code": "sitemap-noncanonical",
+        "rel": "sitemap.xml",
+        "msg": "https://bizdavar.com/ru/pages/shop canonicalises to https://bizdavar.com/pages/shop"
+      }
+    ]
+  },
+  "nextTasks": [
+    {
+      "id": "P0-03",
+      "title": "اتصال Search Console API با Service Account — راهنما: `docs/growth/GSC-SETUP.md` (نیاز به صاحب سایت)"
+    },
+    {
+      "id": "P1-01",
+      "title": "رفع حلقه canonical فروشگاه موتورسیکلت در ۵ زبان: `/pages/motorcycle` با 301 به `/pages/motorcycle/` می‌رود ولی canonical به نسخه بدون اسلش اشاره می‌کند. canonical، hreflang، og:url، ورودی sitemap و لینک‌های داخلی را روی نسخه با اسلش (که 200 می‌دهد) یکی کن؛ در `scripts/build-motorcycle-listing.js`، `scripts/gen-seo-head.js` و `scripts/gen-sitemap.js` هم اعمال شود. بعد از deploy باید هر دو آدرس به یک URL نهایی 200 با canonical خودش برسند."
+    },
+    {
+      "id": "P1-02",
+      "title": "افزودن ۱۵ مقاله جاافتاده × ۵ زبان (۷۵ آدرس: `buy-*-iran`، `digital-marketing-us-eu`، `website-design-us-eu`، `local-seo-iran`، `field-tech-services`، `industrial-trade-iran`، `liqui-moly-supply-iran`، `prosense-gas-detection`، `vega-quote-iran`، `marvi-society-ios-app`) به `scripts/gen-sitemap.js`، حذف ورودی تکراری `/pages/uwt`، و تولید دوباره `sitemap.xml` و `llms.txt`."
+    },
+    {
+      "id": "P1-03",
+      "title": "صفحه shop در tr/en/ru/ar به `/pages/shop` canonical شده ولی در sitemap آمده. اگر محتوای هر زبان ترجمه شده، canonical را به خودش برگردان؛ اگر نه، آن ۴ آدرس را از sitemap حذف کن."
+    },
+    {
+      "id": "P1-04",
+      "title": "تگ H1 ثابت در HTML (نه فقط با JS) برای صفحات برند digi-system، gamak، liqui-moly، pneumatic، prosense، teltonika، teraoka و uwt در ۵ زبان، با همان عنوان hero ترجمه‌شده."
+    }
+  ]
+}
