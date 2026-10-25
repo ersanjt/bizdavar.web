@@ -280,7 +280,7 @@ window.BIZDAVAR_CONFIG = {
 
   /** BizHub — internal CRM + CMS (PHP API on /api) */
   bizhub: {
-    enabled: false,
+    enabled: true,
     apiBase: '/api'
   },
 

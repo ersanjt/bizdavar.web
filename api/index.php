@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 require __DIR__ . '/lib/core.php';
+require __DIR__ . '/lib/site-index.php';
 
 $configPath = __DIR__ . '/config.php';
 if (!is_file($configPath)) {
@@ -16,6 +17,14 @@ try {
     $pdo = Database::connect($cfg);
 } catch (Throwable $e) {
     Response::error('Database connection failed', 503);
+}
+try {
+    $tzOffset = (new DateTimeImmutable('now'))->format('P');
+    if (preg_match('/^[+-]\d{2}:\d{2}$/', $tzOffset)) {
+        $pdo->exec("SET time_zone = '" . $tzOffset . "'");
+    }
+} catch (Throwable $e) {
+    // Keep the database clock if the account cannot set a session time zone.
 }
 
 Auth::startSession($cfg);
@@ -204,6 +213,28 @@ if ($method === 'GET' && $uri === '/public/faqs') {
     Response::json(['ok' => true, 'faqs' => $out]);
 }
 
+// ─── Public: page view (aggregated, no personal data) ───
+if ($method === 'POST' && $uri === '/public/hit') {
+    $ua = (string) ($_SERVER['HTTP_USER_AGENT'] ?? '');
+    $fetchSite = strtolower((string) ($_SERVER['HTTP_SEC_FETCH_SITE'] ?? ''));
+    $bot = (bool) preg_match('/bot|crawl|spider|slurp|preview|facebookexternalhit|wget|curl/i', $ua);
+    $crossSite = $fetchSite !== '' && $fetchSite !== 'same-origin';
+    if (!$bot && !$crossSite) {
+        $ip = (string) ($_SERVER['REMOTE_ADDR'] ?? '0.0.0.0');
+        if (!empty($cfg['security']['trust_cloudflare']) && !empty($_SERVER['HTTP_CF_CONNECTING_IP'])) {
+            $candidate = trim((string) $_SERVER['HTTP_CF_CONNECTING_IP']);
+            if (filter_var($candidate, FILTER_VALIDATE_IP)) {
+                $ip = $candidate;
+            }
+        }
+        if (RateLimit::check($pdo, $ip, 'page_hit', 240, 60)) {
+            $body = bizhub_json_body();
+            bizhub_record_hit($pdo, (string) ($body['path'] ?? ''));
+        }
+    }
+    Response::json(['ok' => true]);
+}
+
 // ─── Protected routes below ───
 Auth::requireAdminIp($cfg);
 Auth::requireUser();
@@ -275,7 +306,42 @@ if ($method === 'GET' && $uri === '/dashboard/stats') {
         $stats['pipeline'][$row['status']] = (int)$row['c'];
     }
     $recent = $pdo->query('SELECT id, first_name, last_name, email, service, status, created_at FROM leads ORDER BY created_at DESC LIMIT 8')->fetchAll();
-    Response::json(['ok' => true, 'stats' => $stats, 'recentLeads' => $recent]);
+    $site = bizhub_site_stats($pdo);
+    Response::json(['ok' => true, 'stats' => $stats, 'recentLeads' => $recent, 'site' => $site]);
+}
+
+if ($method === 'GET' && $uri === '/site-pages') {
+    Auth::requireRole(['admin', 'editor', 'sales']);
+    bizhub_import_site_index($pdo);
+    $section = substr(trim((string) ($_GET['section'] ?? '')), 0, 40);
+    $locale = substr(trim((string) ($_GET['locale'] ?? '')), 0, 5);
+    $q = trim((string) ($_GET['q'] ?? ''));
+    $offset = max(0, (int) ($_GET['offset'] ?? 0));
+    $limit = 40;
+    $where = ' WHERE 1=1';
+    $params = [];
+    if ($section !== '') {
+        $where .= ' AND section = ?';
+        $params[] = $section;
+    }
+    if ($locale !== '') {
+        $where .= ' AND locale = ?';
+        $params[] = $locale;
+    }
+    if ($q !== '') {
+        $where .= ' AND (path LIKE ? OR title LIKE ? OR summary LIKE ?)';
+        $like = '%' . str_replace(['\\', '%', '_'], ['\\\\', '\\%', '\\_'], $q) . '%';
+        $params[] = $like;
+        $params[] = $like;
+        $params[] = $like;
+    }
+    $countStmt = $pdo->prepare('SELECT COUNT(*) FROM site_pages' . $where);
+    $countStmt->execute($params);
+    $total = (int) $countStmt->fetchColumn();
+    $sql = 'SELECT path, locale, section, title, summary FROM site_pages' . $where . ' ORDER BY path ASC LIMIT ' . $limit . ' OFFSET ' . $offset;
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute($params);
+    Response::json(['ok' => true, 'total' => $total, 'offset' => $offset, 'pages' => $stmt->fetchAll()]);
 }
 
 // ─── Leads CRM ───

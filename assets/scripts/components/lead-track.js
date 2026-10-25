@@ -66,4 +66,17 @@
 
   bindClicks();
   document.addEventListener('DOMContentLoaded', bindClicks);
+
+  try {
+    var viewPath = String(location.pathname || '/');
+    if (viewPath.indexOf('/admin') !== 0 && viewPath.indexOf('/api') !== 0) {
+      fetch('/api/public/hit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ path: viewPath }),
+        credentials: 'omit',
+        keepalive: true
+      }).catch(function () {});
+    }
+  } catch (e) {}
 })();

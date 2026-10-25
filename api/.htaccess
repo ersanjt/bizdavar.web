@@ -2,12 +2,13 @@ RewriteEngine On
 RewriteBase /api/
 
 # Secrets and installer — never serve over HTTP
-<FilesMatch "^(config\.php|config\.sample\.php|install\.php)$">
+<FilesMatch "^(config\.php|config\.sample\.php|install\.php|sync-pages\.php)$">
   Require all denied
 </FilesMatch>
 
-# Block direct hits to library PHP
+# Block direct hits to library PHP and the page catalog
 RewriteRule ^lib/ - [F,L]
+RewriteRule ^data/ - [F,L]
 
 # Front controller
 RewriteCond %{REQUEST_FILENAME} !-f

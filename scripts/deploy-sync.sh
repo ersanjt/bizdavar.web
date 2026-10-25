@@ -44,6 +44,7 @@ rsync -av --delete \
   --exclude '*.zip' \
   --exclude .cursor/ \
   --exclude api/config.php \
+  --exclude storage/install.lock \
   --exclude admin/.htpasswd \
   --exclude media/catalog/ \
   --exclude media/review/ \
@@ -63,6 +64,13 @@ mkdir -p "$WEB/.well-known/acme-challenge" "$WEB/.well-known/pki-validation"
 chown -R "$CPANEL_USER:$CPANEL_USER" "$WEB"
 find "$WEB" -type d -exec chmod 755 {} \;
 find "$WEB" -type f -exec chmod 644 {} \;
+
+echo "===== CRM PAGE CATALOG ====="
+if [[ -f "$WEB/api/config.php" && -f "$WEB/api/sync-pages.php" ]]; then
+  php "$WEB/api/sync-pages.php" || echo "WARN: CRM page catalog was not imported. Run: php $WEB/api/sync-pages.php"
+else
+  echo "WARN: api/config.php missing — page catalog not imported"
+fi
 
 # Fix git metadata if pull was run as root
 chown "$CPANEL_USER:$CPANEL_USER" "$REPO/.git/index" "$REPO/.git/ORIG_HEAD" 2>/dev/null || true

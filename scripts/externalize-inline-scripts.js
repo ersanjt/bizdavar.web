@@ -8,7 +8,7 @@ const path = require('path');
 const { bootTag } = require('./lib/page-boot-tag');
 
 const root = path.join(__dirname, '..');
-const LOADER_VER = '20261020g';
+const LOADER_VER = '20261025c';
 
 const HANDLERS = [
   [

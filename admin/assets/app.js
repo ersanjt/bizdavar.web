@@ -11,6 +11,13 @@
     won: 'موفق',
     lost: 'از دست رفته'
   };
+  const LOCALE_LABELS = { fa: 'فارسی', tr: 'ترکی', en: 'انگلیسی', ru: 'روسی', ar: 'عربی' };
+  const SECTION_LABELS = {
+    motorcycle: 'موتورسیکلت', articles: 'مقالات', home: 'خانه', about: 'درباره ما',
+    contact: 'تماس', services: 'خدمات', products: 'محصولات', tools: 'ابزارها',
+    blog: 'وبلاگ', shop: 'فروشگاه', fast: 'Fast', fxguard: 'FXGuard'
+  };
+  const sectionLabel = (s) => SECTION_LABELS[s] || s;
 
   let state = {
     user: null,
@@ -22,7 +29,13 @@
     stats: null,
     leadFilter: '',
     leadSearch: '',
-    selectedLead: null
+    selectedLead: null,
+    pageRows: [],
+    pageTotal: 0,
+    pageOffset: 0,
+    pageSearch: '',
+    pageSection: '',
+    pageLocale: ''
   };
 
   const app = document.getElementById('app');
@@ -61,6 +74,14 @@
       return new Intl.DateTimeFormat('fa-IR', { dateStyle: 'medium', timeStyle: 'short' }).format(new Date(s));
     } catch {
       return s;
+    }
+  }
+
+  function dayLabel(iso) {
+    try {
+      return new Intl.DateTimeFormat('fa-IR', { weekday: 'short' }).format(new Date(iso + 'T12:00:00'));
+    } catch {
+      return String(iso || '').slice(5);
     }
   }
 
@@ -207,6 +228,7 @@
           </div>
           <nav class="hub-nav">
             ${navItem('dashboard', 'داشبورد', 'chart-bar')}
+            ${navItem('pages', 'صفحات سایت', 'link')}
             ${navItem('leads', 'سرنخ‌ها (CRM)', 'users')}
             ${navItem('posts', 'مقالات (CMS)', 'article')}
             ${navItem('faqs', 'سوالات متداول', 'help')}
@@ -240,6 +262,7 @@
     main.innerHTML = '<div class="hub-loading">بارگذاری…</div>';
     try {
       if (state.view === 'dashboard') await loadDashboard();
+      if (state.view === 'pages') await loadPages();
       if (state.view === 'leads') await loadLeads();
       if (state.view === 'posts') await loadPosts();
       if (state.view === 'faqs') await loadFaqs();
@@ -274,23 +297,90 @@
   function renderView() {
     const main = document.getElementById('hubMain');
     if (state.view === 'dashboard') main.innerHTML = renderDashboard();
+    if (state.view === 'pages') main.innerHTML = renderPages();
     if (state.view === 'leads') main.innerHTML = renderLeads();
     if (state.view === 'posts') main.innerHTML = renderPosts();
     if (state.view === 'faqs') main.innerHTML = renderFaqs();
     bindViewEvents();
   }
 
+  async function loadPages() {
+    const q = new URLSearchParams();
+    if (state.pageSearch) q.set('q', state.pageSearch);
+    if (state.pageSection) q.set('section', state.pageSection);
+    if (state.pageLocale) q.set('locale', state.pageLocale);
+    if (state.pageOffset) q.set('offset', String(state.pageOffset));
+    const r = await api('/site-pages' + (q.toString() ? '?' + q.toString() : ''));
+    state.pageRows = r.pages || [];
+    state.pageTotal = r.total || 0;
+  }
+
   function renderDashboard() {
     const s = state.stats?.stats || {};
+    const site = state.stats?.site || {};
+    const locales = site.locales || {};
+    const sections = site.sections || [];
+    const top = site.top_pages || [];
+    const series = site.series || [];
+    const maxViews = Math.max(1, ...series.map(d => Number(d.views) || 0));
     const pipe = s.pipeline || {};
     const recent = state.stats?.recentLeads || [];
     return `
       <div class="hub-topbar"><h2>داشبورد</h2><span class="hub-topbar__user">${esc(state.user?.email)}</span></div>
       <div class="hub-stats">
+        <div class="hub-stat"><div class="hub-stat__val">${site.pages ?? 0}</div><div class="hub-stat__label">صفحه در سایت</div></div>
+        <div class="hub-stat"><div class="hub-stat__val">${locales.fa ?? 0}</div><div class="hub-stat__label">فارسی</div></div>
+        <div class="hub-stat"><div class="hub-stat__val">${locales.tr ?? 0}</div><div class="hub-stat__label">ترکی</div></div>
+        <div class="hub-stat"><div class="hub-stat__val">${locales.en ?? 0}</div><div class="hub-stat__label">انگلیسی</div></div>
+        <div class="hub-stat"><div class="hub-stat__val">${locales.ru ?? 0}</div><div class="hub-stat__label">روسی</div></div>
+        <div class="hub-stat"><div class="hub-stat__val">${locales.ar ?? 0}</div><div class="hub-stat__label">عربی</div></div>
+      </div>
+      <div class="hub-stats">
+        <div class="hub-stat"><div class="hub-stat__val">${site.visits_today ?? 0}</div><div class="hub-stat__label">بازدید امروز</div></div>
+        <div class="hub-stat"><div class="hub-stat__val">${site.visits_week ?? 0}</div><div class="hub-stat__label">بازدید ۷ روز</div></div>
         <div class="hub-stat"><div class="hub-stat__val">${s.leads_new ?? 0}</div><div class="hub-stat__label">سرنخ جدید</div></div>
         <div class="hub-stat"><div class="hub-stat__val">${s.leads_total ?? 0}</div><div class="hub-stat__label">کل سرنخ‌ها</div></div>
         <div class="hub-stat"><div class="hub-stat__val">${s.posts_published ?? 0}</div><div class="hub-stat__label">مقاله منتشرشده</div></div>
         <div class="hub-stat"><div class="hub-stat__val">${s.posts_draft ?? 0}</div><div class="hub-stat__label">پیش‌نویس</div></div>
+      </div>
+      <p class="hub-hint">شمارش بازدید از همین به‌روزرسانی شروع می‌شود و تاریخچهٔ قبلی را شامل نمی‌شود. آرشیو قبلی در Google Analytics است: G-4GFEY12SLH. فرم تماس سایت از این به بعد سرنخ می‌سازد.</p>
+      <div class="hub-card hub-card--chart">
+        <div class="hub-card__head"><h3>بازدید ۱۴ روز اخیر</h3></div>
+        <div class="hub-bars">
+          ${series.map(d => {
+            const h = Math.max(4, Math.round(((Number(d.views) || 0) / maxViews) * 100));
+            return `<div class="hub-bar" title="${esc(d.day)}: ${d.views}">
+              <div class="hub-bar__col" style="height:${h}%"></div>
+              <span class="hub-bar__lbl">${esc(dayLabel(d.day))}</span>
+            </div>`;
+          }).join('') || '<p class="hub-hint">هنوز بازدیدی ثبت نشده</p>'}
+        </div>
+      </div>
+      <div class="hub-split">
+        <div class="hub-card">
+          <div class="hub-card__head"><h3>بخش‌های سایت</h3></div>
+          <div class="hub-table-wrap"><table class="hub-table"><thead><tr>
+            <th>بخش</th><th>صفحه</th><th>بازدید ۷ روز</th>
+          </tr></thead><tbody>
+            ${sections.map(row => `<tr data-open-section="${esc(row.section)}">
+              <td>${esc(sectionLabel(row.section))}</td>
+              <td>${row.count}</td>
+              <td>${row.views ?? 0}</td>
+            </tr>`).join('') || '<tr><td colspan="3">فهرست صفحات هنوز وارد نشده</td></tr>'}
+          </tbody></table></div>
+        </div>
+        <div class="hub-card">
+          <div class="hub-card__head"><h3>پربازدیدترین صفحه‌ها، ۷ روز</h3></div>
+          <div class="hub-table-wrap"><table class="hub-table"><thead><tr>
+            <th>صفحه</th><th>بازدید</th>
+          </tr></thead><tbody>
+            ${top.map(row => `<tr>
+              <td><a href="${esc(row.path)}" target="_blank" rel="noopener">${esc(row.title || row.path)}</a>
+                <div class="hub-path" dir="ltr">${esc(row.path)}</div></td>
+              <td>${row.views}</td>
+            </tr>`).join('') || '<tr><td colspan="2">هنوز بازدیدی ثبت نشده</td></tr>'}
+          </tbody></table></div>
+        </div>
       </div>
       <div class="hub-pipeline">
         ${Object.keys(STATUS_LABELS).map(st => `
@@ -311,6 +401,48 @@
             <td>${fmtDate(l.created_at)}</td>
           </tr>`).join('') || '<tr><td colspan="5">سرنخی نیست</td></tr>'}
         </tbody></table></div>
+      </div>`;
+  }
+
+  function renderPages() {
+    const from = state.pageTotal ? state.pageOffset + 1 : 0;
+    const to = Math.min(state.pageOffset + state.pageRows.length, state.pageTotal);
+    const sections = state.stats?.site?.sections || [];
+    return `
+      <div class="hub-topbar"><h2>صفحات سایت</h2><span class="hub-topbar__user">${state.pageTotal} صفحه</span></div>
+      <div class="hub-card">
+        <div class="hub-card__head">
+          <h3>فهرست محتوا</h3>
+          <div class="hub-toolbar">
+            <input type="search" class="hub-search" id="pageSearch" placeholder="جستجو در عنوان، خلاصه یا مسیر…" value="${esc(state.pageSearch)}">
+            <select id="pageLocale" class="hub-search">
+              <option value="">همه زبان‌ها</option>
+              ${Object.entries(LOCALE_LABELS).map(([k, v]) =>
+                `<option value="${k}"${state.pageLocale === k ? ' selected' : ''}>${v}</option>`).join('')}
+            </select>
+            <select id="pageSection" class="hub-search">
+              <option value="">همه بخش‌ها</option>
+              ${sections.map(row =>
+                `<option value="${esc(row.section)}"${state.pageSection === row.section ? ' selected' : ''}>${esc(sectionLabel(row.section))}</option>`).join('')}
+            </select>
+          </div>
+        </div>
+        <div class="hub-table-wrap"><table class="hub-table"><thead><tr>
+          <th>عنوان</th><th>خلاصه</th><th>زبان</th><th>بخش</th>
+        </tr></thead><tbody>
+          ${state.pageRows.map(p => `<tr>
+            <td><a href="${esc(p.path)}" target="_blank" rel="noopener">${esc(p.title)}</a>
+              <div class="hub-path" dir="ltr">${esc(p.path)}</div></td>
+            <td>${esc(p.summary || '—')}</td>
+            <td>${esc(LOCALE_LABELS[p.locale] || p.locale)}</td>
+            <td>${esc(sectionLabel(p.section))}</td>
+          </tr>`).join('') || '<tr><td colspan="4">صفحه‌ای نیست</td></tr>'}
+        </tbody></table></div>
+        <div class="hub-pager">
+          <button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" id="pagePrev" ${state.pageOffset <= 0 ? 'disabled' : ''}>قبلی</button>
+          <span>${from}–${to} از ${state.pageTotal}</span>
+          <button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" id="pageNext" ${state.pageOffset + 40 >= state.pageTotal ? 'disabled' : ''}>بعدی</button>
+        </div>
       </div>`;
   }
 
@@ -397,6 +529,26 @@
     }
     const filter = document.getElementById('leadFilter');
     if (filter) filter.addEventListener('change', e => { state.leadFilter = e.target.value; loadView(); });
+
+    document.querySelectorAll('[data-open-section]').forEach(row => {
+      row.addEventListener('click', () => {
+        state.view = 'pages';
+        state.pageSection = row.dataset.openSection || '';
+        state.pageOffset = 0;
+        renderShell();
+      });
+    });
+    const pageSearch = document.getElementById('pageSearch');
+    if (pageSearch) {
+      pageSearch.addEventListener('change', e => { state.pageSearch = e.target.value; state.pageOffset = 0; loadView(); });
+      pageSearch.addEventListener('keydown', e => { if (e.key === 'Enter') { state.pageSearch = e.target.value; state.pageOffset = 0; loadView(); } });
+    }
+    const pageLocale = document.getElementById('pageLocale');
+    if (pageLocale) pageLocale.addEventListener('change', e => { state.pageLocale = e.target.value; state.pageOffset = 0; loadView(); });
+    const pageSection = document.getElementById('pageSection');
+    if (pageSection) pageSection.addEventListener('change', e => { state.pageSection = e.target.value; state.pageOffset = 0; loadView(); });
+    document.getElementById('pagePrev')?.addEventListener('click', () => { state.pageOffset = Math.max(0, state.pageOffset - 40); loadView(); });
+    document.getElementById('pageNext')?.addEventListener('click', () => { state.pageOffset += 40; loadView(); });
 
     document.getElementById('newPostBtn')?.addEventListener('click', () => openPostModal());
     document.querySelectorAll('[data-edit-post]').forEach(b => b.addEventListener('click', e => {

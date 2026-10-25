@@ -86,6 +86,33 @@ CREATE TABLE IF NOT EXISTS faqs (
   INDEX idx_faqs_sort (sort_order)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+CREATE TABLE IF NOT EXISTS site_pages (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  path VARCHAR(120) NOT NULL,
+  locale CHAR(5) NOT NULL,
+  section VARCHAR(40) NOT NULL,
+  title VARCHAR(255) NOT NULL,
+  summary VARCHAR(255) NOT NULL DEFAULT '',
+  UNIQUE KEY uk_site_page_path (path),
+  INDEX idx_site_page_section (section),
+  INDEX idx_site_page_locale (locale)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS page_hits (
+  path_hash CHAR(40) NOT NULL,
+  path VARCHAR(120) NOT NULL,
+  day DATE NOT NULL,
+  views INT UNSIGNED NOT NULL DEFAULT 0,
+  PRIMARY KEY (path_hash, day),
+  INDEX idx_page_hits_day (day),
+  INDEX idx_page_hits_path (path)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS site_meta (
+  name VARCHAR(40) NOT NULL PRIMARY KEY,
+  meta_value VARCHAR(64) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 CREATE TABLE IF NOT EXISTS rate_limits (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   ip_hash CHAR(64) NOT NULL,
