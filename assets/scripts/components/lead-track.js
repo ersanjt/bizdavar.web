@@ -68,6 +68,15 @@
   document.addEventListener('DOMContentLoaded', bindClicks);
 
   try {
+    var ref = new URLSearchParams(location.search).get('ref') || '';
+    ref = ref.replace(/[^a-zA-Z0-9]/g, '').slice(0, 32).toLowerCase();
+    if (ref) localStorage.setItem('bd_partner_ref', ref);
+  } catch (e) {}
+  window.BD_partnerRef = function () {
+    try { return localStorage.getItem('bd_partner_ref') || ''; } catch (e) { return ''; }
+  };
+
+  try {
     var viewPath = String(location.pathname || '/');
     if (viewPath.indexOf('/admin') !== 0 && viewPath.indexOf('/api') !== 0) {
       fetch('/api/public/hit', {

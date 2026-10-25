@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 require __DIR__ . '/lib/core.php';
 require __DIR__ . '/lib/site-index.php';
+require __DIR__ . '/lib/partners.php';
 
 $configPath = __DIR__ . '/config.php';
 if (!is_file($configPath)) {
@@ -74,7 +75,7 @@ if ($method === 'POST' && $uri === '/auth/login') {
     if (!$row) {
         Response::error('Invalid credentials', 401);
     }
-    $requireMfa = Auth::mfaRequired($cfg);
+    $requireMfa = Auth::mfaRequired($cfg) && (($row['role'] ?? '') !== 'partner');
     $enrolled = !empty($row['totp_enabled']);
     if ($enrolled) {
         session_regenerate_id(true);
@@ -123,7 +124,7 @@ if ($method === 'GET' && $uri === '/auth/me') {
         'ok' => true,
         'user' => $user,
         'mfaOk' => !empty($_SESSION['mfa_ok']),
-        'mfaEnroll' => Auth::mfaRequired($cfg) && empty($user['totp_enabled']),
+        'mfaEnroll' => ($user['role'] ?? '') !== 'partner' && Auth::mfaRequired($cfg) && empty($user['totp_enabled']),
         'csrfToken' => Auth::csrfToken(),
     ]);
 }
@@ -159,8 +160,12 @@ if ($method === 'POST' && $uri === '/public/leads') {
         Response::error('Invalid email', 422);
     }
 
-    $stmt = $pdo->prepare('INSERT INTO leads (first_name, last_name, email, phone, service, message, source, locale, page_url, ip_address)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
+    bizhub_ensure_partner_tables($pdo);
+    $partnerCode = strtolower(preg_replace('/[^a-z0-9]/', '', (string) ($body['partnerCode'] ?? '')) ?? '');
+    $partnerCode = substr($partnerCode, 0, 32);
+    $partnerId = $partnerCode !== '' ? bizhub_active_partner_id($pdo, $partnerCode) : null;
+    $stmt = $pdo->prepare('INSERT INTO leads (first_name, last_name, email, phone, service, message, source, partner_code, locale, page_url, ip_address, assigned_to)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
     $stmt->execute([
         $first,
         $last,
@@ -168,10 +173,12 @@ if ($method === 'POST' && $uri === '/public/leads') {
         $phone !== '' ? $phone : null,
         $service,
         $message,
-        bizhub_clip(trim($body['source'] ?? 'website'), 60),
+        $partnerId ? 'partner' : bizhub_clip(trim($body['source'] ?? 'website'), 60),
+        $partnerId ? $partnerCode : null,
         bizhub_locale($body['locale'] ?? null),
         bizhub_clip(trim($body['pageUrl'] ?? $body['page_url'] ?? ''), 500) ?: null,
         $ip,
+        $partnerId,
     ]);
 
     Response::json(['ok' => true, 'message' => 'Lead created'], 201);
@@ -449,11 +456,13 @@ if ($method === 'DELETE' && ($p = route_match($uri, '/leads/{id}'))) {
 
 // ─── Posts CMS ───
 if ($method === 'GET' && $uri === '/posts') {
+    Auth::requireRole(['admin', 'editor', 'sales']);
     $stmt = $pdo->query('SELECT id, slug, category, title_fa, status, published_at, updated_at FROM posts ORDER BY updated_at DESC');
     Response::json(['ok' => true, 'posts' => $stmt->fetchAll()]);
 }
 
 if ($method === 'GET' && ($p = route_match($uri, '/posts/{id}'))) {
+    Auth::requireRole(['admin', 'editor', 'sales']);
     $stmt = $pdo->prepare('SELECT * FROM posts WHERE id = ?');
     $stmt->execute([(int)$p['id']]);
     $post = $stmt->fetch();
@@ -535,6 +544,7 @@ if ($method === 'DELETE' && ($p = route_match($uri, '/posts/{id}'))) {
 
 // ─── FAQs CMS ───
 if ($method === 'GET' && $uri === '/faqs') {
+    Auth::requireRole(['admin', 'editor', 'sales']);
     $stmt = $pdo->query('SELECT * FROM faqs ORDER BY sort_order ASC, id ASC');
     Response::json(['ok' => true, 'faqs' => $stmt->fetchAll()]);
 }
@@ -582,5 +592,7 @@ if ($method === 'DELETE' && ($p = route_match($uri, '/faqs/{id}'))) {
     $pdo->prepare('DELETE FROM faqs WHERE id = ?')->execute([(int)$p['id']]);
     Response::json(['ok' => true]);
 }
+
+require __DIR__ . '/lib/partner-routes.php';
 
 Response::error('Not found', 404);

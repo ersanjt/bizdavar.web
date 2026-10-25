@@ -215,6 +215,9 @@ class Auth
     public static function requireMfaOk(array $cfg): void
     {
         $user = self::requireUser();
+        if (($user['role'] ?? '') === 'partner' && empty($user['totp_enabled'])) {
+            return;
+        }
         $require = self::mfaRequired($cfg);
         $enrolled = !empty($user['totp_enabled']);
         if (!empty($_SESSION['mfa_ok']) && $enrolled) {

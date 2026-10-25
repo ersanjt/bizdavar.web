@@ -625,6 +625,19 @@ body {
 
 .hub-form-grid .hub-field--full { grid-column: 1 / -1; }
 
+.hub-links { display: flex; flex-direction: column; gap: 12px; padding: 16px; }
+.hub-links > div { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.hub-links code { font-size: 0.8125rem; }
+.hub-prices { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.hub-price { background: var(--hub-card); border: 1px solid var(--hub-border); border-radius: var(--hub-radius); padding: 16px; box-shadow: var(--hub-shadow); }
+.hub-price h3 { margin: 6px 0; color: var(--hub-navy); font-size: 1.05rem; }
+.hub-price p { color: var(--hub-muted); font-size: 0.875rem; margin-bottom: 12px; }
+.hub-price__amount { font-weight: 800; color: var(--hub-red); margin-bottom: 8px; }
+.hub-thread { display: flex; flex-direction: column; gap: 10px; padding: 16px; }
+.hub-bubble { background: var(--hub-bg); border-radius: 10px; padding: 12px; font-size: 0.9rem; }
+.hub-bubble--mine { background: #eef2ff; }
+.hub-table textarea { width: 100%; min-width: 180px; min-height: 64px; }
+
 @media (max-width: 900px) {
   .hub-shell { grid-template-columns: 1fr; }
   .hub-sidebar {

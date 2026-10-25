@@ -581,6 +581,7 @@ function initContactForm() {
             locale: window.BIZDAVAR_I18N?.locale || 'fa',
             pageUrl: window.location.href,
             source: 'contact-form',
+            partnerCode: typeof window.BD_partnerRef === 'function' ? window.BD_partnerRef() : '',
             website: form.website ? form.website.value : ''
           })
         });

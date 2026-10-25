@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS users (
   email VARCHAR(190) NOT NULL UNIQUE,
   password_hash VARCHAR(255) NOT NULL,
   name VARCHAR(120) NOT NULL,
-  role ENUM('admin','editor','sales') NOT NULL DEFAULT 'admin',
+  role ENUM('admin','editor','sales','partner') NOT NULL DEFAULT 'admin',
   is_active TINYINT(1) NOT NULL DEFAULT 1,
   totp_secret VARCHAR(64) NULL,
   totp_enabled TINYINT(1) NOT NULL DEFAULT 0,
@@ -25,6 +25,7 @@ CREATE TABLE IF NOT EXISTS leads (
   status ENUM('new','contacted','qualified','proposal','won','lost') NOT NULL DEFAULT 'new',
   priority ENUM('low','normal','high') NOT NULL DEFAULT 'normal',
   source VARCHAR(60) NOT NULL DEFAULT 'website',
+  partner_code VARCHAR(32) NULL,
   locale VARCHAR(5) NULL,
   page_url VARCHAR(500) NULL,
   ip_address VARCHAR(45) NULL,
@@ -34,6 +35,7 @@ CREATE TABLE IF NOT EXISTS leads (
   INDEX idx_leads_status (status),
   INDEX idx_leads_email (email),
   INDEX idx_leads_created (created_at),
+  INDEX idx_leads_partner (partner_code),
   CONSTRAINT fk_leads_assigned FOREIGN KEY (assigned_to) REFERENCES users(id) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -111,6 +113,63 @@ CREATE TABLE IF NOT EXISTS page_hits (
 CREATE TABLE IF NOT EXISTS site_meta (
   name VARCHAR(40) NOT NULL PRIMARY KEY,
   meta_value VARCHAR(64) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS partners (
+  user_id INT UNSIGNED NOT NULL PRIMARY KEY,
+  code VARCHAR(32) NOT NULL,
+  phone VARCHAR(40) NULL,
+  company VARCHAR(120) NULL,
+  UNIQUE KEY uk_partner_code (code),
+  CONSTRAINT fk_partners_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS price_items (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(180) NOT NULL,
+  category VARCHAR(80) NOT NULL DEFAULT 'services',
+  summary VARCHAR(500) NOT NULL DEFAULT '',
+  price_label VARCHAR(80) NOT NULL,
+  amount DECIMAL(12,2) NULL,
+  is_active TINYINT(1) NOT NULL DEFAULT 1,
+  sort_order INT NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS partner_orders (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  partner_id INT UNSIGNED NOT NULL,
+  price_item_id INT UNSIGNED NULL,
+  client_name VARCHAR(160) NOT NULL,
+  client_phone VARCHAR(40) NULL,
+  client_email VARCHAR(190) NULL,
+  service_title VARCHAR(180) NOT NULL,
+  details TEXT NOT NULL,
+  status ENUM('new','quoted','accepted','rejected','done') NOT NULL DEFAULT 'new',
+  quote_note TEXT NULL,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  INDEX idx_partner_orders_partner (partner_id),
+  INDEX idx_partner_orders_status (status)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS tickets (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  partner_id INT UNSIGNED NOT NULL,
+  subject VARCHAR(180) NOT NULL,
+  status ENUM('open','answered','closed') NOT NULL DEFAULT 'open',
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  INDEX idx_tickets_partner (partner_id),
+  INDEX idx_tickets_status (status)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS ticket_messages (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  ticket_id INT UNSIGNED NOT NULL,
+  user_id INT UNSIGNED NOT NULL,
+  body TEXT NOT NULL,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  INDEX idx_ticket_messages_ticket (ticket_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE IF NOT EXISTS rate_limits (
