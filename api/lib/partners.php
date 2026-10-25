@@ -219,6 +219,37 @@ function bizhub_order_files_root(): string
     return dirname(__DIR__, 2) . '/storage/order-files';
 }
 
+function bizhub_upload_kind(string $tmp, string $mime): ?array
+{
+    $allowed = [
+        'application/pdf' => 'pdf',
+        'image/jpeg' => 'jpg',
+        'image/png' => 'png',
+        'image/webp' => 'webp',
+        'image/gif' => 'gif',
+    ];
+    if (isset($allowed[$mime])) {
+        return [$mime, $allowed[$mime]];
+    }
+    $head = (string) file_get_contents($tmp, false, null, 0, 16);
+    if (str_starts_with($head, '%PDF-')) {
+        return ['application/pdf', 'pdf'];
+    }
+    if (str_starts_with($head, "\xFF\xD8\xFF")) {
+        return ['image/jpeg', 'jpg'];
+    }
+    if (str_starts_with($head, "\x89PNG\r\n\x1A\n")) {
+        return ['image/png', 'png'];
+    }
+    if (str_starts_with($head, 'GIF87a') || str_starts_with($head, 'GIF89a')) {
+        return ['image/gif', 'gif'];
+    }
+    if (strlen($head) >= 12 && substr($head, 0, 4) === 'RIFF' && substr($head, 8, 4) === 'WEBP') {
+        return ['image/webp', 'webp'];
+    }
+    return null;
+}
+
 function bizhub_store_order_uploads(PDO $pdo, int $orderId, int $userId): array
 {
     if (empty($_FILES['files']) || !is_array($_FILES['files'])) {
@@ -236,13 +267,6 @@ function bizhub_store_order_uploads(PDO $pdo, int $orderId, int $userId): array
     if ($count > 5) {
         Response::error('حداکثر ۵ فایل برای هر سفارش', 422);
     }
-    $allowed = [
-        'application/pdf' => 'pdf',
-        'image/jpeg' => 'jpg',
-        'image/png' => 'png',
-        'image/webp' => 'webp',
-        'image/gif' => 'gif',
-    ];
     $finfo = new finfo(FILEINFO_MIME_TYPE);
     $accepted = [];
     for ($i = 0; $i < $count; $i++) {
@@ -264,16 +288,17 @@ function bizhub_store_order_uploads(PDO $pdo, int $orderId, int $userId): array
         if ($tmp === '' || !is_uploaded_file($tmp)) {
             Response::error('فایل معتبر نیست', 422);
         }
-        $mime = (string) $finfo->file($tmp);
-        if (!isset($allowed[$mime])) {
+        $kind = bizhub_upload_kind($tmp, (string) $finfo->file($tmp));
+        if ($kind === null) {
             Response::error('فقط تصویر و PDF پذیرفته می‌شود', 422);
         }
+        [$mime, $ext] = $kind;
         $original = bizhub_clip(trim((string) ($names[$i] ?? 'file')), 180);
         $original = str_replace(["\r", "\n", "\0"], '', $original);
         if ($original === '') {
-            $original = 'file.' . $allowed[$mime];
+            $original = 'file.' . $ext;
         }
-        $accepted[] = [$tmp, $mime, $allowed[$mime], $original, $size];
+        $accepted[] = [$tmp, $mime, $ext, $original, $size];
     }
     if ($accepted === []) {
         return [];

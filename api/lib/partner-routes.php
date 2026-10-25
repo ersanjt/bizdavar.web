@@ -284,13 +284,14 @@ if ($method === 'POST' && $uri === '/orders') {
             (string) $price['title'],
             $details,
         ]);
+    $orderId = (int) $pdo->lastInsertId();
     bizhub_notify_staff(
         $pdo,
         $cfg,
         'سفارش جدید: ' . (string) $price['title'],
         "بازاریاب: " . (string) ($actor['name'] ?? '') . "\nمشتری: {$client}\nتلفن: {$phone}\nایمیل: {$email}\nجزئیات:\n" . bizhub_clip($details, 800) . "\n\n" . bizhub_app_origin($cfg) . '/admin/'
     );
-    Response::json(['ok' => true, 'id' => (int) $pdo->lastInsertId()], 201);
+    Response::json(['ok' => true, 'id' => $orderId], 201);
 }
 
 if ($method === 'PATCH' && ($p = route_match($uri, '/orders/{id}'))) {
