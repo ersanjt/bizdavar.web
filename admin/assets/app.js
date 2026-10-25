@@ -216,7 +216,7 @@
               <input type="password" id="password" name="password" required autocomplete="current-password">
             </div>`}
             <button type="submit" class="hub-btn hub-btn--primary">${mfa ? 'تأیید MFA' : 'ورود'}</button>
-            ${mfa ? '' : '<button type="button" class="hub-btn hub-btn--ghost" id="forgotBtn" style="margin-top:8px">رمز را فراموش کرده‌ام</button>'}
+            ${mfa ? '' : '<button type="button" class="hub-btn hub-btn--ghost" id="forgotBtn">رمز را فراموش کرده‌ام</button>'}
           </form>
         </div>
       </div>`;
@@ -245,7 +245,7 @@
     if (forgotBtn) forgotBtn.addEventListener('click', () => renderForgot());
   }
 
-  function renderForgot(err, notice) {
+  function renderForgot(err, notice, email) {
     app.innerHTML = `
       <div class="hub-login">
         <div class="hub-login__card">
@@ -258,22 +258,22 @@
           <form id="forgotForm">
             <div class="hub-field">
               <label for="email">ایمیل</label>
-              <input type="email" id="email" name="email" required autocomplete="username" dir="ltr">
+              <input type="email" id="email" name="email" required autocomplete="username" dir="ltr" value="${esc(email || '')}">
             </div>
             <button type="submit" class="hub-btn hub-btn--primary">ارسال لینک</button>
-            <button type="button" class="hub-btn hub-btn--ghost" id="backLogin" style="margin-top:8px">بازگشت به ورود</button>
+            <button type="button" class="hub-btn hub-btn--ghost" id="backLogin">بازگشت به ورود</button>
           </form>
         </div>
       </div>`;
     document.getElementById('backLogin').addEventListener('click', () => renderLogin());
     document.getElementById('forgotForm').addEventListener('submit', async e => {
       e.preventDefault();
-      const email = document.getElementById('email').value;
+      const typed = document.getElementById('email').value;
       try {
-        const r = await api('/auth/forgot', { method: 'POST', body: { email } });
-        renderForgot('', r.message || 'اگر این ایمیل در BizHub باشد، لینک بازیابی ارسال شد.');
+        const r = await api('/auth/forgot', { method: 'POST', body: { email: typed } });
+        renderForgot('', r.message || 'اگر این ایمیل در BizHub باشد، لینک بازیابی ارسال شد. پوشه هرزنامه را هم ببینید.', typed);
       } catch (err) {
-        renderForgot(err.message);
+        renderForgot(err.message, '', typed);
       }
     });
   }
