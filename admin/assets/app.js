@@ -77,14 +77,6 @@
     }
   }
 
-  function dayLabel(iso) {
-    try {
-      return new Intl.DateTimeFormat('fa-IR', { weekday: 'short' }).format(new Date(iso + 'T12:00:00'));
-    } catch {
-      return String(iso || '').slice(5);
-    }
-  }
-
   function badge(status) {
     return `<span class="hub-badge hub-badge--${esc(status)}">${esc(STATUS_LABELS[status] || status)}</span>`;
   }
@@ -348,10 +340,12 @@
         <div class="hub-card__head"><h3>بازدید ۱۴ روز اخیر</h3></div>
         <div class="hub-bars">
           ${series.map(d => {
-            const h = Math.max(4, Math.round(((Number(d.views) || 0) / maxViews) * 100));
-            return `<div class="hub-bar" title="${esc(d.day)}: ${d.views}">
-              <div class="hub-bar__col" style="height:${h}%"></div>
-              <span class="hub-bar__lbl">${esc(dayLabel(d.day))}</span>
+            const views = Number(d.views) || 0;
+            const h = views === 0 ? 0 : Math.max(18, Math.round((views / maxViews) * 78));
+            const dayNum = String(d.day || '').slice(8);
+            return `<div class="hub-bar" title="${esc(d.day)}: ${views}">
+              <div class="hub-bar__plot"><div class="hub-bar__col" style="height:${h}%">${views ? `<span class="hub-bar__n">${views}</span>` : ''}</div></div>
+              <span class="hub-bar__lbl">${esc(dayNum)}</span>
             </div>`;
           }).join('') || '<p class="hub-hint">هنوز بازدیدی ثبت نشده</p>'}
         </div>
@@ -473,6 +467,7 @@
             <td>${fmtDate(l.created_at)}</td>
           </tr>`).join('') || '<tr><td colspan="6">سرنخی یافت نشد</td></tr>'}
         </tbody></table></div>
+        ${state.leads.length ? '' : '<p class="hub-hint hub-hint--in">سرنخ‌ها از فرم تماس سایت می‌آیند. تا وقتی کسی فرم را نفرستد، این فهرست خالی می‌ماند.</p>'}
       </div>`;
   }
 
@@ -482,6 +477,7 @@
         <h2>مدیریت مقالات</h2>
         <button type="button" class="hub-btn hub-btn--yellow" id="newPostBtn">+ مقاله جدید</button>
       </div>
+      <p class="hub-hint">مقالات منتشرشدهٔ سایت اینجاست. ویرایش در این پنل هنوز صفحهٔ زنده را عوض نمی‌کند.</p>
       <div class="hub-card">
         <div class="hub-table-wrap"><table class="hub-table"><thead><tr>
           <th>عنوان</th><th>slug</th><th>دسته</th><th>وضعیت</th><th>به‌روزرسانی</th><th></th>
@@ -504,6 +500,7 @@
         <h2>سوالات متداول</h2>
         <button type="button" class="hub-btn hub-btn--yellow" id="newFaqBtn">+ سوال جدید</button>
       </div>
+      <p class="hub-hint">پرسش‌هایی که روی صفحات سایت منتشر شده‌اند. ویرایش اینجا هنوز صفحهٔ زنده را عوض نمی‌کند.</p>
       <div class="hub-card">
         <div class="hub-table-wrap"><table class="hub-table"><thead><tr>
           <th>سوال</th><th>ترتیب</th><th>وضعیت</th><th></th>

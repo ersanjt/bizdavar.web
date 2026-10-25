@@ -165,9 +165,108 @@ function bizhub_record_hit(PDO $pdo, string $path): void
     )->execute([sha1($path), $path]);
 }
 
+function bizhub_import_editorial(PDO $pdo): array
+{
+    bizhub_ensure_site_tables($pdo);
+    $dir = dirname(__DIR__) . '/data';
+    $posts = bizhub_import_json_once($pdo, 'articles_hash', $dir . '/articles.json', 'bizhub_store_articles');
+    $faqs = bizhub_import_json_once($pdo, 'faqs_hash', $dir . '/faqs.json', 'bizhub_store_faqs');
+    return ['posts' => $posts, 'faqs' => $faqs];
+}
+
+function bizhub_import_json_once(PDO $pdo, string $metaName, string $file, string $saver): int
+{
+    if (!is_file($file)) {
+        return 0;
+    }
+    $hash = hash_file('sha256', $file) ?: '';
+    $stored = (string) $pdo->query('SELECT meta_value FROM site_meta WHERE name = ' . $pdo->quote($metaName))->fetchColumn();
+    if ($stored !== '' && strlen($stored) === strlen($hash) && hash_equals($stored, $hash)) {
+        return 0;
+    }
+    $rows = json_decode((string) file_get_contents($file), true);
+    $saved = is_array($rows) ? $saver($pdo, $rows) : 0;
+    $pdo->prepare('INSERT INTO site_meta (name, meta_value) VALUES (?, ?) ON DUPLICATE KEY UPDATE meta_value = VALUES(meta_value)')
+        ->execute([$metaName, $hash]);
+    return $saved;
+}
+
+function bizhub_store_articles(PDO $pdo, array $rows): int
+{
+    $saved = 0;
+    $find = $pdo->prepare('SELECT id FROM posts WHERE slug = ? LIMIT 1');
+    $insert = $pdo->prepare(
+        'INSERT INTO posts (slug, category, title_fa, title_tr, title_en, excerpt_fa, excerpt_tr, excerpt_en, content_fa, content_tr, content_en, thumb, status, published_at)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, \'published\', ?)'
+    );
+    foreach ($rows as $row) {
+        if (!is_array($row)) {
+            continue;
+        }
+        $slug = substr(preg_replace('/[^a-z0-9-]/', '', strtolower((string) ($row['slug'] ?? ''))) ?? '', 0, 160);
+        if ($slug === '') {
+            continue;
+        }
+        $find->execute([$slug]);
+        if ($find->fetch()) {
+            continue;
+        }
+        $fa = is_array($row['fa'] ?? null) ? $row['fa'] : [];
+        $tr = is_array($row['tr'] ?? null) ? $row['tr'] : [];
+        $en = is_array($row['en'] ?? null) ? $row['en'] : [];
+        $title = bizhub_clip((string) ($fa['title'] ?? $slug), 240);
+        $published = (string) ($row['published'] ?? '');
+        $publishedAt = preg_match('/^\d{4}-\d{2}-\d{2}$/', $published) ? $published . ' 09:00:00' : null;
+        $insert->execute([
+            $slug,
+            bizhub_clip((string) ($row['category'] ?? 'general'), 80) ?: 'general',
+            $title,
+            bizhub_clip((string) ($tr['title'] ?? ''), 240) ?: null,
+            bizhub_clip((string) ($en['title'] ?? ''), 240) ?: null,
+            bizhub_clip((string) ($fa['excerpt'] ?? ''), 500) ?: null,
+            bizhub_clip((string) ($tr['excerpt'] ?? ''), 500) ?: null,
+            bizhub_clip((string) ($en['excerpt'] ?? ''), 500) ?: null,
+            (string) ($fa['content'] ?? '') ?: null,
+            (string) ($tr['content'] ?? '') ?: null,
+            (string) ($en['content'] ?? '') ?: null,
+            bizhub_clip((string) ($row['thumb'] ?? ''), 500) ?: null,
+            $publishedAt,
+        ]);
+        $saved++;
+    }
+    return $saved;
+}
+
+function bizhub_store_faqs(PDO $pdo, array $rows): int
+{
+    $saved = 0;
+    $find = $pdo->prepare('SELECT id FROM faqs WHERE question_fa = ? LIMIT 1');
+    $insert = $pdo->prepare('INSERT INTO faqs (question_fa, answer_fa, sort_order, is_published) VALUES (?, ?, ?, 1)');
+    $order = (int) $pdo->query('SELECT COALESCE(MAX(sort_order), 0) FROM faqs')->fetchColumn();
+    foreach ($rows as $row) {
+        if (!is_array($row)) {
+            continue;
+        }
+        $question = bizhub_clip(trim((string) ($row['question'] ?? '')), 480);
+        $answer = bizhub_clip(trim((string) ($row['answer'] ?? '')), 4000);
+        if ($question === '' || $answer === '') {
+            continue;
+        }
+        $find->execute([$question]);
+        if ($find->fetch()) {
+            continue;
+        }
+        $order++;
+        $insert->execute([$question, $answer, $order]);
+        $saved++;
+    }
+    return $saved;
+}
+
 function bizhub_site_stats(PDO $pdo): array
 {
     bizhub_import_site_index($pdo);
+    bizhub_import_editorial($pdo);
     $pages = (int) $pdo->query('SELECT COUNT(*) FROM site_pages')->fetchColumn();
     $locales = [];
     foreach ($pdo->query('SELECT locale, COUNT(*) AS c FROM site_pages GROUP BY locale')->fetchAll() as $row) {

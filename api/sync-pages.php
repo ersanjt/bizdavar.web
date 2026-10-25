@@ -38,9 +38,14 @@ try {
         // Catalog import does not depend on the session time zone.
     }
     $count = bizhub_import_site_index($pdo, true);
+    $editorial = bizhub_import_editorial($pdo);
 } catch (Throwable $e) {
     fwrite(STDERR, "Catalog sync failed: " . $e->getMessage() . "\n");
     exit(1);
 }
 
+$postCount = (int) $pdo->query('SELECT COUNT(*) FROM posts')->fetchColumn();
+$faqCount = (int) $pdo->query('SELECT COUNT(*) FROM faqs')->fetchColumn();
 echo "Site pages in CRM: {$count}\n";
+echo "Articles in CRM: {$postCount} (added {$editorial['posts']})\n";
+echo "FAQs in CRM: {$faqCount} (added {$editorial['faqs']})\n";
