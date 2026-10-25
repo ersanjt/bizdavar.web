@@ -20,6 +20,7 @@ try {
 } catch (Throwable $e) {
     Response::error('Database connection failed', 503);
 }
+bizhub_ensure_session_epoch($pdo);
 try {
     $tzOffset = (new DateTimeImmutable('now'))->format('P');
     if (preg_match('/^[+-]\d{2}:\d{2}$/', $tzOffset)) {
@@ -102,6 +103,11 @@ if ($method === 'POST' && $uri === '/auth/mfa/verify') {
     if ($uid < 1) {
         Response::error('MFA challenge expired', 401);
     }
+    $ip = (string) ($_SERVER['REMOTE_ADDR'] ?? '0.0.0.0');
+    if (!RateLimit::check($pdo, $ip . ':mfa:' . $uid, 'mfa_verify', 8, 900)) {
+        unset($_SESSION['mfa_pending_uid']);
+        Response::error('تلاش برای کد زیاد بود. دوباره با رمز وارد شوید.', 429);
+    }
     $row = Auth::loadUser($pdo, $uid);
     $secret = (string) ($row['totp_secret'] ?? '');
     if (!$row || $secret === '' || !Totp::verify($secret, $code)) {
@@ -174,8 +180,13 @@ if ($method === 'POST' && $uri === '/auth/reset') {
     if (!$active->fetch()) {
         Response::error('این کاربر فعال نیست', 422);
     }
-    $pdo->prepare('UPDATE users SET password_hash = ? WHERE id = ?')
-        ->execute([password_hash($password, PASSWORD_DEFAULT), (int) $row['user_id']]);
+    if (bizhub_ensure_session_epoch($pdo)) {
+        $pdo->prepare('UPDATE users SET password_hash = ?, session_epoch = session_epoch + 1 WHERE id = ?')
+            ->execute([password_hash($password, PASSWORD_DEFAULT), (int) $row['user_id']]);
+    } else {
+        $pdo->prepare('UPDATE users SET password_hash = ? WHERE id = ?')
+            ->execute([password_hash($password, PASSWORD_DEFAULT), (int) $row['user_id']]);
+    }
     $pdo->prepare('UPDATE password_resets SET used_at = NOW() WHERE user_id = ? AND used_at IS NULL')
         ->execute([(int) $row['user_id']]);
     Response::json(['ok' => true, 'message' => 'رمز عوض شد. با رمز جدید وارد شوید.']);
@@ -186,6 +197,7 @@ if ($method === 'GET' && $uri === '/auth/me') {
     if (!$user) {
         Response::error('Unauthorized', 401);
     }
+    Auth::requireFreshSession($pdo);
     Response::json([
         'ok' => true,
         'user' => $user,
@@ -318,6 +330,7 @@ if ($method === 'POST' && $uri === '/public/hit') {
 // ─── Protected routes below ───
 Auth::requireAdminIp($cfg);
 Auth::requireUser();
+Auth::requireFreshSession($pdo);
 Auth::verifyCsrf();
 
 if ($method === 'GET' && $uri === '/auth/mfa/setup') {
@@ -415,6 +428,7 @@ if ($method === 'GET' && $uri === '/site-pages') {
     Auth::requireRole(['admin', 'editor', 'sales']);
     bizhub_import_site_index($pdo);
     $section = substr(trim((string) ($_GET['section'] ?? '')), 0, 40);
+    $area = substr(trim((string) ($_GET['area'] ?? '')), 0, 20);
     $locale = substr(trim((string) ($_GET['locale'] ?? '')), 0, 5);
     $q = trim((string) ($_GET['q'] ?? ''));
     $offset = max(0, (int) ($_GET['offset'] ?? 0));
@@ -424,6 +438,13 @@ if ($method === 'GET' && $uri === '/site-pages') {
     if ($section !== '') {
         $where .= ' AND section = ?';
         $params[] = $section;
+    }
+    $areaFilter = bizhub_area_filter($area);
+    if ($areaFilter) {
+        $where .= $areaFilter[0];
+        foreach ($areaFilter[1] as $param) {
+            $params[] = $param;
+        }
     }
     if ($locale !== '') {
         $where .= ' AND locale = ?';

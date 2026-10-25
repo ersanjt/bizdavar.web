@@ -103,6 +103,22 @@ class Auth
         return $user;
     }
 
+    public static function requireFreshSession(PDO $pdo): void
+    {
+        $user = self::requireUser();
+        if (!bizhub_ensure_session_epoch($pdo)) {
+            return;
+        }
+        $stmt = $pdo->prepare('SELECT session_epoch FROM users WHERE id = ?');
+        $stmt->execute([(int) $user['id']]);
+        $current = (int) $stmt->fetchColumn();
+        $stored = (int) ($_SESSION['session_epoch'] ?? 0);
+        if ($current > 0 && $stored !== $current) {
+            self::logout();
+            Response::error('نشست منقضی شد. دوباره وارد شوید.', 401);
+        }
+    }
+
     public static function requireRole(array $roles): array
     {
         $user = self::requireUser();
@@ -139,7 +155,7 @@ class Auth
         if (!$row) {
             return null;
         }
-        unset($row['password_hash'], $row['totp_secret']);
+        unset($row['password_hash'], $row['totp_secret'], $row['session_epoch']);
         $row['totp_enabled'] = !empty($row['totp_enabled']);
         return $row;
     }
@@ -187,10 +203,12 @@ class Auth
 
     public static function establishSession(PDO $pdo, array $row, bool $mfaOk): array
     {
+        $epoch = (int) ($row['session_epoch'] ?? 1);
         unset($row['password_hash']);
         session_regenerate_id(true);
         $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
         $_SESSION['user'] = self::publicUser($row);
+        $_SESSION['session_epoch'] = $epoch;
         $_SESSION['mfa_ok'] = $mfaOk;
         unset($_SESSION['mfa_pending_uid'], $_SESSION['mfa_enroll_secret']);
         $pdo->prepare('UPDATE users SET last_login_at = NOW() WHERE id = ?')->execute([$row['id']]);
@@ -283,6 +301,24 @@ function bizhub_json_body(): array
     }
     $data = json_decode($raw, true);
     return is_array($data) ? $data : [];
+}
+
+function bizhub_ensure_session_epoch(PDO $pdo): bool
+{
+    static $ready = null;
+    if ($ready !== null) {
+        return $ready;
+    }
+    try {
+        $col = $pdo->query("SHOW COLUMNS FROM users LIKE 'session_epoch'")->fetch();
+        if (!$col) {
+            $pdo->exec('ALTER TABLE users ADD COLUMN session_epoch INT UNSIGNED NOT NULL DEFAULT 1');
+        }
+        $ready = true;
+    } catch (Throwable $e) {
+        $ready = false;
+    }
+    return $ready;
 }
 
 function bizhub_clip(string $value, int $max): string

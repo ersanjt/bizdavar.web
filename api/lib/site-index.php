@@ -263,6 +263,49 @@ function bizhub_store_faqs(PDO $pdo, array $rows): int
     return $saved;
 }
 
+function bizhub_content_groups(): array
+{
+    return [
+        'company' => ['home', 'about', 'contact', 'gallery', 'portfolio', 'privacy', '404'],
+        'services' => ['services', 'fast', 'custom-web-app', 'field-tech', 'smm-turk'],
+        'articles' => ['articles', 'blog'],
+        'tools' => ['tools', 'speed-test', 'website-speed-test', 'what-is-my-ip', 'whatsapp-link-generator', 'utm-builder', 'tank-volume-calculator', 'unit-converter'],
+        'catalog' => ['motorcycle', 'auto-moto', 'car-parts'],
+    ];
+}
+
+function bizhub_page_area(string $section): string
+{
+    foreach (bizhub_content_groups() as $area => $sections) {
+        if (in_array($section, $sections, true)) {
+            return $area;
+        }
+    }
+    return 'supply';
+}
+
+/** @return array{0:string,1:array<int,string>}|null */
+function bizhub_area_filter(string $area): ?array
+{
+    $groups = bizhub_content_groups();
+    if ($area === 'supply') {
+        $known = [];
+        foreach ($groups as $sections) {
+            foreach ($sections as $section) {
+                $known[] = $section;
+            }
+        }
+        $marks = implode(',', array_fill(0, count($known), '?'));
+        return [' AND section NOT IN (' . $marks . ')', $known];
+    }
+    if (!isset($groups[$area])) {
+        return null;
+    }
+    $sections = $groups[$area];
+    $marks = implode(',', array_fill(0, count($sections), '?'));
+    return [' AND section IN (' . $marks . ')', $sections];
+}
+
 function bizhub_site_stats(PDO $pdo): array
 {
     bizhub_import_site_index($pdo);
@@ -315,10 +358,43 @@ function bizhub_site_stats(PDO $pdo): array
          ORDER BY views DESC
          LIMIT 8'
     )->fetchAll();
+    $areaOrder = ['company', 'services', 'articles', 'supply', 'catalog', 'tools'];
+    $areaCounts = [];
+    foreach ($sections as $row) {
+        $area = bizhub_page_area($row['section']);
+        if (!isset($areaCounts[$area])) {
+            $areaCounts[$area] = ['area' => $area, 'count' => 0, 'views' => 0];
+        }
+        $areaCounts[$area]['count'] += $row['count'];
+        $areaCounts[$area]['views'] += $row['views'];
+    }
+    $areas = [];
+    foreach ($areaOrder as $name) {
+        if (isset($areaCounts[$name])) {
+            $areas[] = $areaCounts[$name];
+        }
+    }
+    $content = [];
+    foreach ($pdo->query("SELECT path, section, title, summary FROM site_pages WHERE locale = 'fa' AND section <> 'motorcycle' ORDER BY path ASC")->fetchAll() as $row) {
+        $content[] = [
+            'path' => (string) $row['path'],
+            'section' => (string) $row['section'],
+            'area' => bizhub_page_area((string) $row['section']),
+            'title' => (string) $row['title'],
+            'summary' => (string) $row['summary'],
+        ];
+    }
+    $rank = array_flip($areaOrder);
+    usort($content, static function (array $a, array $b) use ($rank): int {
+        $byArea = ($rank[$a['area']] ?? 9) <=> ($rank[$b['area']] ?? 9);
+        return $byArea !== 0 ? $byArea : strcmp($a['path'], $b['path']);
+    });
     return [
         'pages' => $pages,
         'locales' => $locales,
         'sections' => $sections,
+        'areas' => $areas,
+        'content' => $content,
         'visits_today' => $today,
         'visits_week' => $week,
         'series' => $series,

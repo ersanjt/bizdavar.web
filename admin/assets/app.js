@@ -12,6 +12,14 @@
     lost: 'از دست رفته'
   };
   const LOCALE_LABELS = { fa: 'فارسی', tr: 'ترکی', en: 'انگلیسی', ru: 'روسی', ar: 'عربی' };
+  const AREA_LABELS = {
+    company: 'شرکت',
+    services: 'خدمات',
+    articles: 'مقالات',
+    supply: 'تامین و برندها',
+    catalog: 'موتور و خودرو',
+    tools: 'ابزارها'
+  };
   const SECTION_LABELS = {
     motorcycle: 'موتورسیکلت', articles: 'مقالات', home: 'خانه', about: 'درباره ما',
     contact: 'تماس', services: 'خدمات', products: 'محصولات', tools: 'ابزارها',
@@ -35,6 +43,7 @@
     pageOffset: 0,
     pageSearch: '',
     pageSection: '',
+    pageArea: '',
     pageLocale: '',
     partnerHome: null,
     partnerFlash: null,
@@ -442,6 +451,7 @@
     const q = new URLSearchParams();
     if (state.pageSearch) q.set('q', state.pageSearch);
     if (state.pageSection) q.set('section', state.pageSection);
+    if (state.pageArea) q.set('area', state.pageArea);
     if (state.pageLocale) q.set('locale', state.pageLocale);
     if (state.pageOffset) q.set('offset', String(state.pageOffset));
     const r = await api('/site-pages' + (q.toString() ? '?' + q.toString() : ''));
@@ -453,7 +463,8 @@
     const s = state.stats?.stats || {};
     const site = state.stats?.site || {};
     const locales = site.locales || {};
-    const sections = site.sections || [];
+    const areas = site.areas || [];
+    const content = site.content || [];
     const top = site.top_pages || [];
     const series = site.series || [];
     const maxViews = Math.max(1, ...series.map(d => Number(d.views) || 0));
@@ -502,12 +513,12 @@
       </div>
       <div class="hub-split">
         <div class="hub-card">
-          <div class="hub-card__head"><h3>بخش‌های سایت</h3></div>
+          <div class="hub-card__head"><h3>محتوای سایت</h3></div>
           <div class="hub-table-wrap"><table class="hub-table"><thead><tr>
-            <th>بخش</th><th>صفحه</th><th>بازدید ۷ روز</th>
+            <th>دسته</th><th>صفحه</th><th>بازدید ۷ روز</th>
           </tr></thead><tbody>
-            ${sections.map(row => `<tr data-open-section="${esc(row.section)}">
-              <td>${esc(sectionLabel(row.section))}</td>
+            ${areas.map(row => `<tr data-open-area="${esc(row.area)}">
+              <td>${esc(AREA_LABELS[row.area] || row.area)}</td>
               <td>${row.count}</td>
               <td>${row.views ?? 0}</td>
             </tr>`).join('') || '<tr><td colspan="3">فهرست صفحات هنوز وارد نشده</td></tr>'}
@@ -525,6 +536,20 @@
             </tr>`).join('') || '<tr><td colspan="2">هنوز بازدیدی ثبت نشده</td></tr>'}
           </tbody></table></div>
         </div>
+      </div>
+      <div class="hub-card hub-card--content">
+        <div class="hub-card__head"><h3>صفحه‌ها و متن سایت</h3></div>
+        <p class="hub-hint">عنوان و توضیح همین صفحه‌های زندهٔ فارسی است. صفحهٔ محصول موتورسیکلت در دستهٔ موتور و خودرو است و اینجا تکرار نمی‌شود.</p>
+        <div class="hub-table-wrap"><table class="hub-table"><thead><tr>
+          <th>عنوان</th><th>متن صفحه</th><th>دسته</th>
+        </tr></thead><tbody>
+          ${content.map(p => `<tr>
+            <td><a href="${esc(p.path)}" target="_blank" rel="noopener">${esc(p.title)}</a>
+              <div class="hub-path" dir="ltr">${esc(p.path)}</div></td>
+            <td>${esc(p.summary || '—')}</td>
+            <td>${esc(AREA_LABELS[p.area] || sectionLabel(p.section))}</td>
+          </tr>`).join('') || '<tr><td colspan="3">محتوا هنوز وارد نشده</td></tr>'}
+        </tbody></table></div>
       </div>
       <div class="hub-pipeline">
         ${Object.keys(STATUS_LABELS).map(st => `
@@ -563,6 +588,11 @@
               <option value="">همه زبان‌ها</option>
               ${Object.entries(LOCALE_LABELS).map(([k, v]) =>
                 `<option value="${k}"${state.pageLocale === k ? ' selected' : ''}>${v}</option>`).join('')}
+            </select>
+            <select id="pageArea" class="hub-search">
+              <option value="">همه دسته‌ها</option>
+              ${Object.entries(AREA_LABELS).map(([k, v]) =>
+                `<option value="${k}"${state.pageArea === k ? ' selected' : ''}>${v}</option>`).join('')}
             </select>
             <select id="pageSection" class="hub-search">
               <option value="">همه بخش‌ها</option>
@@ -691,6 +721,8 @@
       search.addEventListener('change', e => { state.leadSearch = e.target.value; loadView(); });
       search.addEventListener('keydown', e => { if (e.key === 'Enter') { state.leadSearch = e.target.value; loadView(); } });
     }
+    const pageArea = document.getElementById('pageArea');
+    if (pageArea) pageArea.addEventListener('change', e => { state.pageArea = e.target.value; state.pageOffset = 0; loadView(); });
     const filter = document.getElementById('leadFilter');
     if (filter) filter.addEventListener('change', e => { state.leadFilter = e.target.value; loadView(); });
 
@@ -698,6 +730,16 @@
       row.addEventListener('click', () => {
         state.view = 'pages';
         state.pageSection = row.dataset.openSection || '';
+        state.pageArea = '';
+        state.pageOffset = 0;
+        renderShell();
+      });
+    });
+    document.querySelectorAll('[data-open-area]').forEach(row => {
+      row.addEventListener('click', () => {
+        state.view = 'pages';
+        state.pageArea = row.dataset.openArea || '';
+        state.pageSection = '';
         state.pageOffset = 0;
         renderShell();
       });
