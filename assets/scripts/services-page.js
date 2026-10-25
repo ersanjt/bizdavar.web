@@ -912,6 +912,425 @@
     }
   }
 
+  const STAGE_COPY = {
+    fa: {
+      prev: 'نمونه قبلی',
+      next: 'نمونه بعدی',
+      web: {
+        title: 'نمونه‌های طراحی وب',
+        lead: 'سایت شرکتی، فروشگاه و وب‌اپ‌هایی که برای برندها طراحی و تحویل داده‌ایم.',
+        all: 'همه نمونه‌کارها',
+        tags: ['طراحی وب', 'فروشگاه', 'وب‌اپ'],
+        offers: [
+          { art: 'store', title: 'طراحی فروشگاه اینترنتی', en: 'E-COMMERCE WEBSITE', sub: 'از ویترین محصول تا پرداخت، یک مسیر فروش روشن.', href: 'pages/contact.html?service=web-design' },
+          { art: 'corp', title: 'طراحی سایت شرکتی', en: 'CORPORATE WEBSITE', sub: 'جایگاه برند را دقیق، سریع و قابل اعتماد نشان دهید.', href: 'pages/contact.html?service=web-design' }
+        ],
+        closer: { kicker: 'قدم بعدی', title: 'پروژه بعدی، نام برند شماست', consult: 'درخواست مشاوره' }
+      },
+      apps: {
+        title: 'نمونه‌های اپ و سامانه',
+        lead: 'از اپ iOS تا پنل سازمانی — محصول را در قاب موبایل ببینید.',
+        all: 'همه نمونه‌کارها',
+        tags: ['iOS', 'اندروید', 'سامانه'],
+        offers: [
+          { art: 'app', title: 'اپلیکیشن موبایل', en: 'MOBILE APP', sub: 'طراحی، توسعه و انتشار در App Store و Google Play.', href: 'pages/contact.html?service=software-apps' },
+          { art: 'system', title: 'سامانه سازمانی', en: 'BUSINESS SYSTEM', sub: 'پنل، گردش‌کار و اتصال API برای تیم شما.', href: 'pages/contact.html?service=software-apps' }
+        ]
+      },
+      smm: {
+        title: 'نمونه‌های حضور اجتماعی',
+        lead: 'محتوا، هویت بصری و کمپین — ساختار اجرا را در قاب ببینید.',
+        all: 'همه نمونه‌کارها',
+        tags: ['محتوا', 'هویت', 'تبلیغ'],
+        offers: [
+          { art: 'content', title: 'استودیو محتوا', en: 'CONTENT STUDIO', sub: 'تقویم، طراحی و ریتم انتشار برای برند.', href: 'pages/contact.html?service=smm' },
+          { art: 'ads', title: 'تبلیغات اجتماعی', en: 'PAID SOCIAL', sub: 'کمپین هدفمند با گزارش رشد ماهانه.', href: 'pages/contact.html?service=smm' }
+        ]
+      }
+    },
+    en: {
+      prev: 'Previous sample',
+      next: 'Next sample',
+      web: {
+        title: 'Web design samples',
+        lead: 'Corporate sites, stores, and web apps we have designed and shipped.',
+        all: 'All work',
+        tags: ['Web design', 'Store', 'Web app'],
+        offers: [
+          { art: 'store', title: 'Online store design', en: 'E-COMMERCE WEBSITE', sub: 'A clear path from catalog to checkout.', href: 'pages/contact.html?service=web-design' },
+          { art: 'corp', title: 'Corporate website', en: 'CORPORATE WEBSITE', sub: 'Show the brand clearly, quickly, and with trust.', href: 'pages/contact.html?service=web-design' }
+        ],
+        closer: { kicker: 'Next step', title: 'The next project can carry your name', consult: 'Request a consult' }
+      },
+      apps: {
+        title: 'App and system samples',
+        lead: 'From an iOS app to an operations panel — see the product in a phone frame.',
+        all: 'All work',
+        tags: ['iOS', 'Android', 'Systems'],
+        offers: [
+          { art: 'app', title: 'Mobile app', en: 'MOBILE APP', sub: 'Design, build, and release on the App Store and Google Play.', href: 'pages/contact.html?service=software-apps' },
+          { art: 'system', title: 'Business system', en: 'BUSINESS SYSTEM', sub: 'Panels, workflows, and API connections for your team.', href: 'pages/contact.html?service=software-apps' }
+        ]
+      },
+      smm: {
+        title: 'Social presence samples',
+        lead: 'Content, visual identity, and campaigns — see how the work is structured.',
+        all: 'All work',
+        tags: ['Content', 'Identity', 'Ads'],
+        offers: [
+          { art: 'content', title: 'Content studio', en: 'CONTENT STUDIO', sub: 'Calendar, design, and a publishing rhythm for the brand.', href: 'pages/contact.html?service=smm' },
+          { art: 'ads', title: 'Paid social', en: 'PAID SOCIAL', sub: 'Targeted campaigns with a monthly growth report.', href: 'pages/contact.html?service=smm' }
+        ]
+      }
+    },
+    tr: {
+      prev: 'Önceki örnek',
+      next: 'Sonraki örnek',
+      web: {
+        title: 'Web tasarım örnekleri',
+        lead: 'Tasarlayıp teslim ettiğimiz kurumsal siteler, mağazalar ve web uygulamaları.',
+        all: 'Tüm işler',
+        tags: ['Web tasarım', 'Mağaza', 'Web uygulaması'],
+        offers: [
+          { art: 'store', title: 'E-ticaret sitesi', en: 'E-COMMERCE WEBSITE', sub: 'Vitrinden ödemeye net bir satış yolu.', href: 'pages/contact.html?service=web-design' },
+          { art: 'corp', title: 'Kurumsal site', en: 'CORPORATE WEBSITE', sub: 'Markanın yerini net, hızlı ve güvenilir gösterin.', href: 'pages/contact.html?service=web-design' }
+        ],
+        closer: { kicker: 'Sonraki adım', title: 'Sıradaki proje markanızın adı olsun', consult: 'Danışmanlık iste' }
+      },
+      apps: {
+        title: 'Uygulama ve sistem örnekleri',
+        lead: 'iOS uygulamasından kurumsal panele — ürünü telefon çerçevesinde görün.',
+        all: 'Tüm işler',
+        tags: ['iOS', 'Android', 'Sistem'],
+        offers: [
+          { art: 'app', title: 'Mobil uygulama', en: 'MOBILE APP', sub: 'Tasarım, geliştirme ve App Store / Google Play yayını.', href: 'pages/contact.html?service=software-apps' },
+          { art: 'system', title: 'Kurumsal sistem', en: 'BUSINESS SYSTEM', sub: 'Panel, iş akışı ve API bağlantısı.', href: 'pages/contact.html?service=software-apps' }
+        ]
+      },
+      smm: {
+        title: 'Sosyal varlık örnekleri',
+        lead: 'İçerik, görsel kimlik ve kampanya — yürütmenin yapısını görün.',
+        all: 'Tüm işler',
+        tags: ['İçerik', 'Kimlik', 'Reklam'],
+        offers: [
+          { art: 'content', title: 'İçerik stüdyosu', en: 'CONTENT STUDIO', sub: 'Takvim, tasarım ve yayın ritmi.', href: 'pages/contact.html?service=smm' },
+          { art: 'ads', title: 'Sosyal reklam', en: 'PAID SOCIAL', sub: 'Hedefli kampanya ve aylık büyüme raporu.', href: 'pages/contact.html?service=smm' }
+        ]
+      }
+    },
+    ru: {
+      prev: 'Предыдущий пример',
+      next: 'Следующий пример',
+      web: {
+        title: 'Примеры веб-дизайна',
+        lead: 'Корпоративные сайты, магазины и веб-приложения, которые мы спроектировали и сдали.',
+        all: 'Все работы',
+        tags: ['Веб-дизайн', 'Магазин', 'Веб-приложение'],
+        offers: [
+          { art: 'store', title: 'Интернет-магазин', en: 'E-COMMERCE WEBSITE', sub: 'Понятный путь от витрины до оплаты.', href: 'pages/contact.html?service=web-design' },
+          { art: 'corp', title: 'Корпоративный сайт', en: 'CORPORATE WEBSITE', sub: 'Покажите позицию бренда точно и быстро.', href: 'pages/contact.html?service=web-design' }
+        ],
+        closer: { kicker: 'Следующий шаг', title: 'Следующий проект — имя вашего бренда', consult: 'Запросить консультацию' }
+      },
+      apps: {
+        title: 'Примеры приложений и систем',
+        lead: 'От iOS-приложения до рабочей панели — продукт в рамке телефона.',
+        all: 'Все работы',
+        tags: ['iOS', 'Android', 'Система'],
+        offers: [
+          { art: 'app', title: 'Мобильное приложение', en: 'MOBILE APP', sub: 'Дизайн, разработка и публикация в App Store и Google Play.', href: 'pages/contact.html?service=software-apps' },
+          { art: 'system', title: 'Бизнес-система', en: 'BUSINESS SYSTEM', sub: 'Панели, процессы и подключение API.', href: 'pages/contact.html?service=software-apps' }
+        ]
+      },
+      smm: {
+        title: 'Примеры соцсетей',
+        lead: 'Контент, айдентика и кампании — структура работы в кадре.',
+        all: 'Все работы',
+        tags: ['Контент', 'Айдентика', 'Реклама'],
+        offers: [
+          { art: 'content', title: 'Контент-студия', en: 'CONTENT STUDIO', sub: 'Календарь, дизайн и ритм публикаций.', href: 'pages/contact.html?service=smm' },
+          { art: 'ads', title: 'Реклама в соцсетях', en: 'PAID SOCIAL', sub: 'Точные кампании и ежемесячный отчёт роста.', href: 'pages/contact.html?service=smm' }
+        ]
+      }
+    },
+    ar: {
+      prev: 'النموذج السابق',
+      next: 'النموذج التالي',
+      web: {
+        title: 'نماذج تصميم الويب',
+        lead: 'مواقع شركات ومتاجر وتطبيقات ويب صمّمناها وسلّمناها.',
+        all: 'كل الأعمال',
+        tags: ['تصميم الويب', 'متجر', 'تطبيق ويب'],
+        offers: [
+          { art: 'store', title: 'تصميم متجر إلكتروني', en: 'E-COMMERCE WEBSITE', sub: 'مسار بيع واضح من الواجهة حتى الدفع.', href: 'pages/contact.html?service=web-design' },
+          { art: 'corp', title: 'تصميم موقع شركة', en: 'CORPORATE WEBSITE', sub: 'أظهروا مكانة العلامة بدقة وسرعة.', href: 'pages/contact.html?service=web-design' }
+        ],
+        closer: { kicker: 'الخطوة التالية', title: 'المشروع التالي يحمل اسم علامتكم', consult: 'طلب استشارة' }
+      },
+      apps: {
+        title: 'نماذج التطبيقات والأنظمة',
+        lead: 'من تطبيق iOS إلى لوحة تشغيل — شاهدوا المنتج داخل إطار الهاتف.',
+        all: 'كل الأعمال',
+        tags: ['iOS', 'أندرويد', 'نظام'],
+        offers: [
+          { art: 'app', title: 'تطبيق جوّال', en: 'MOBILE APP', sub: 'تصميم وتطوير ونشر على App Store وGoogle Play.', href: 'pages/contact.html?service=software-apps' },
+          { art: 'system', title: 'نظام أعمال', en: 'BUSINESS SYSTEM', sub: 'لوحات وسير عمل وربط API.', href: 'pages/contact.html?service=software-apps' }
+        ]
+      },
+      smm: {
+        title: 'نماذج الحضور الاجتماعي',
+        lead: 'محتوى وهوية بصرية وحملات — شاهدوا هيكل التنفيذ.',
+        all: 'كل الأعمال',
+        tags: ['محتوى', 'هوية', 'إعلان'],
+        offers: [
+          { art: 'content', title: 'استوديو المحتوى', en: 'CONTENT STUDIO', sub: 'رزنامة وتصميم وإيقاع نشر.', href: 'pages/contact.html?service=smm' },
+          { art: 'ads', title: 'إعلانات اجتماعية', en: 'PAID SOCIAL', sub: 'حملات موجّهة وتقرير نمو شهري.', href: 'pages/contact.html?service=smm' }
+        ]
+      }
+    }
+  };
+
+  const WEB_SAMPLES = [
+    { name: 'Marvispace', href: 'pages/marvispace.html', logo: 'assets/images/partners/marvispace.svg', tone: 'violet', layout: 'store' },
+    { name: 'Supplify', href: 'pages/supplify-trade.html', logo: 'assets/images/partners/supplify-trade.svg', tone: 'green', layout: 'corp' },
+    { name: 'Kaya One', href: 'pages/kaya-one.html', logo: 'assets/images/partners/kaya-one.svg', tone: 'sand', layout: 'corp' },
+    { name: 'SMM Turk', href: 'pages/smm-turk.html', logo: 'assets/images/partners/smm-turk.svg', tone: 'rose', layout: 'panel' },
+    { name: 'FXGuard', href: 'pages/fxguard-exchange.html', logo: 'assets/images/partners/fxguard-exchange.svg', tone: 'blue', layout: 'panel' },
+    { name: 'Fast Studio', href: 'pages/fast.html', logo: 'assets/images/partners/fast-studio.png', tone: 'navy', layout: 'corp' },
+    { name: 'Arian Pumps', href: 'https://arianpumps.com', logo: 'assets/images/partners/arian-pumps.png', tone: 'green', layout: 'corp' }
+  ];
+
+  const APP_SAMPLES = [
+    { name: 'Marvi Society', href: 'pages/marvi-society.html', logo: 'assets/images/partners/marvi-society.png', tone: 'violet', layout: 'app' },
+    { name: 'FXGuard', href: 'pages/fxguard.html', logo: 'assets/images/products/fxguard/fxguard-logo.svg', tone: 'green', layout: 'app' },
+    { name: 'FXGuard Accounting', href: 'pages/fxguard-accounting.html', logo: 'assets/images/partners/fxguard-accounting.svg', tone: 'sand', layout: 'panel' },
+    { name: 'BizSwap', href: 'pages/bizswap.html', logo: 'assets/images/products/bizswap/bizswap-logo.svg', tone: 'rose', layout: 'app' },
+    { name: 'GooPay AI', href: 'pages/portfolio.html', logo: 'assets/images/partners/goopay-ai.svg', tone: 'blue', layout: 'panel' }
+  ];
+
+  const SMM_SAMPLES = [
+    { name: 'Biztejarat', href: 'pages/biztejarat.html', logo: 'assets/images/partners/biztejarat.svg', tone: 'violet', layout: 'app' },
+    { name: 'SMM Turk', href: 'pages/smm-turk.html', logo: 'assets/images/partners/smm-turk.svg', tone: 'rose', layout: 'panel' },
+    { name: 'Karen Leather', href: 'https://karenleather.com', logo: 'assets/images/partners/karen-leather.png', tone: 'sand', layout: 'store' },
+    { name: 'NIK Aesthetic', href: 'https://nikaesthetic.com', logo: 'assets/images/partners/nikaesthetic.png', tone: 'green', layout: 'corp' },
+    { name: 'Paparosi', href: 'https://paparosi.co', logo: 'assets/images/partners/paparosi.png', tone: 'blue', layout: 'store' }
+  ];
+
+  const WAVE_TOP = '<svg viewBox="0 0 1440 72" preserveAspectRatio="none" aria-hidden="true"><path fill="#5b4dff" d="M0 72C220 18 460 64 740 30C1020 0 1220 52 1440 16V72H0Z"/><path fill="#0c1024" d="M0 72C260 28 500 72 760 40C1020 8 1240 58 1440 26V72H0Z"/></svg>';
+  const WAVE_BOTTOM = '<svg viewBox="0 0 1440 72" preserveAspectRatio="none" aria-hidden="true"><path fill="#5b4dff" d="M0 0C220 54 460 8 740 42C1020 72 1220 20 1440 56V0H0Z"/><path fill="#0c1024" d="M0 0C260 44 500 0 760 32C1020 64 1240 14 1440 46V0H0Z"/></svg>';
+
+  function escStage(value) {
+    return String(value || '').replace(/[&<>"']/g, (ch) => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[ch]));
+  }
+
+  function stageHref(href) {
+    if (/^(https?:|tel:|mailto:)/.test(href)) return href;
+    return path(href);
+  }
+
+  function starSvg() {
+    return '<svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="#fb7185" d="M8 1.2 9.7 5.3l4.4.4-3.3 2.9.9 4.3L8 10.7 4.3 12.9l.9-4.3L1.9 5.7l4.4-.4z"/></svg>';
+  }
+
+  function chevronSvg() {
+    return '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg>';
+  }
+
+  function artSvg(kind) {
+    const arts = {
+      store: '<svg viewBox="0 0 220 140" aria-hidden="true"><rect x="16" y="34" width="42" height="42" rx="10" fill="#3b82f6"/><rect x="30" y="50" width="42" height="42" rx="10" fill="#93c5fd"/><rect x="8" y="84" width="36" height="36" rx="8" fill="#1d4ed8"/><rect x="86" y="12" width="72" height="116" rx="16" fill="#0b1228" stroke="#bfdbfe" stroke-width="3"/><rect x="96" y="26" width="52" height="70" rx="6" fill="#e0f2fe"/><rect x="102" y="32" width="40" height="20" rx="4" fill="#38bdf8"/><rect x="102" y="56" width="18" height="14" rx="3" fill="#fff"/><rect x="124" y="56" width="18" height="14" rx="3" fill="#fff"/><rect x="102" y="74" width="40" height="8" rx="3" fill="#0284c7"/><path fill="#fbbf24" d="M156 92h26l-3 16h-20l-6-12h3z"/><circle cx="166" cy="116" r="4" fill="#f8fafc"/><circle cx="180" cy="116" r="4" fill="#f8fafc"/></svg>',
+      corp: '<svg viewBox="0 0 220 140" aria-hidden="true"><rect x="18" y="28" width="128" height="82" rx="10" fill="#e2e8f0"/><rect x="26" y="36" width="112" height="62" rx="4" fill="#fff"/><rect x="34" y="44" width="46" height="8" rx="3" fill="#1d4ed8"/><rect x="34" y="58" width="70" height="5" rx="2" fill="#cbd5e1"/><rect x="34" y="68" width="54" height="5" rx="2" fill="#e2e8f0"/><rect x="34" y="80" width="28" height="8" rx="3" fill="#f97316"/><path d="M62 110h40l8 12H54z" fill="#94a3b8"/><path fill="#60a5fa" d="M168 28l6 14h14l-11 9 4 14-13-8-13 8 4-14-11-9h14z"/><path fill="#fff" stroke="#0f172a" stroke-width="2" d="M150 78l18 18-8 2-4 8-6-28z"/></svg>',
+      app: '<svg viewBox="0 0 220 140" aria-hidden="true"><rect x="78" y="10" width="64" height="120" rx="16" fill="#0b1228" stroke="#c4b5fd" stroke-width="3"/><rect x="88" y="24" width="44" height="78" rx="8" fill="#ede9fe"/><circle cx="100" cy="40" r="8" fill="#8b5cf6"/><circle cx="118" cy="40" r="8" fill="#f472b6"/><rect x="94" y="56" width="32" height="8" rx="3" fill="#fff"/><rect x="94" y="70" width="32" height="8" rx="3" fill="#fff"/><rect x="94" y="84" width="22" height="8" rx="3" fill="#7c3aed"/><rect x="28" y="46" width="36" height="36" rx="10" fill="#22c55e"/><rect x="156" y="58" width="36" height="36" rx="10" fill="#38bdf8"/></svg>',
+      system: '<svg viewBox="0 0 220 140" aria-hidden="true"><rect x="16" y="22" width="120" height="78" rx="10" fill="#0f172a"/><rect x="26" y="34" width="36" height="54" rx="4" fill="#1e293b"/><rect x="68" y="34" width="58" height="24" rx="4" fill="#3b82f6"/><rect x="68" y="64" width="26" height="24" rx="4" fill="#22c55e"/><rect x="100" y="64" width="26" height="24" rx="4" fill="#f59e0b"/><rect x="146" y="40" width="58" height="72" rx="8" fill="#e2e8f0"/><rect x="154" y="50" width="42" height="8" rx="3" fill="#1d4ed8"/><rect x="154" y="64" width="42" height="5" rx="2" fill="#94a3b8"/><rect x="154" y="74" width="30" height="5" rx="2" fill="#cbd5e1"/><rect x="154" y="88" width="24" height="10" rx="3" fill="#0f172a"/></svg>',
+      content: '<svg viewBox="0 0 220 140" aria-hidden="true"><rect x="24" y="20" width="78" height="100" rx="12" fill="#fb7185"/><rect x="34" y="32" width="58" height="40" rx="6" fill="#fff"/><rect x="34" y="80" width="40" height="6" rx="3" fill="#ffe4e6"/><rect x="34" y="92" width="28" height="6" rx="3" fill="#fecdd3"/><rect x="112" y="36" width="78" height="78" rx="14" fill="#0f172a"/><circle cx="136" cy="62" r="12" fill="#fbbf24"/><rect x="156" y="54" width="24" height="6" rx="3" fill="#fff"/><rect x="124" y="84" width="52" height="8" rx="3" fill="#38bdf8"/></svg>',
+      ads: '<svg viewBox="0 0 220 140" aria-hidden="true"><rect x="20" y="30" width="110" height="80" rx="12" fill="#1d4ed8"/><rect x="32" y="42" width="70" height="10" rx="4" fill="#fff"/><rect x="32" y="60" width="86" height="6" rx="3" fill="#bfdbfe"/><rect x="32" y="74" width="54" height="6" rx="3" fill="#93c5fd"/><circle cx="158" cy="48" r="22" fill="#f97316"/><path fill="#fff" d="M150 48h16M158 40v16" stroke="#fff" stroke-width="3"/><rect x="140" y="80" width="62" height="28" rx="8" fill="#0f172a"/><rect x="150" y="90" width="42" height="8" rx="3" fill="#22c55e"/></svg>'
+    };
+    return arts[kind] || arts.corp;
+  }
+
+  function screenMarkup(item) {
+    const brand = item.logo
+      ? `<img src="${path(item.logo)}" alt="" data-mark="${escStage(item.name)}" width="120" height="32" loading="lazy" decoding="async">`
+      : `<span>${escStage(item.name)}</span>`;
+    const foot = `<div class="svc-ui__brand">${brand}</div>`;
+    if (item.layout === 'store') {
+      return `<div class="svc-ui svc-ui--store"><div class="svc-ui__bar"></div><div class="svc-ui__hero"></div><div class="svc-ui__tiles"><i></i><i></i><i></i><i></i></div>${foot}</div>`;
+    }
+    if (item.layout === 'panel') {
+      return `<div class="svc-ui svc-ui--panel"><div class="svc-ui__bar"></div><div class="svc-ui__split"><b></b><div><i></i><i></i><i></i></div></div>${foot}</div>`;
+    }
+    if (item.layout === 'app') {
+      return `<div class="svc-ui svc-ui--app"><div class="svc-ui__status"></div><div class="svc-ui__apps"><i></i><i></i><i></i></div><div class="svc-ui__list"><i></i><i></i><i></i></div>${foot}</div>`;
+    }
+    return `<div class="svc-ui svc-ui--corp"><div class="svc-ui__bar"></div><div class="svc-ui__lines"><i></i><i></i></div><div class="svc-ui__stats"><i></i><i></i><i></i></div>${foot}</div>`;
+  }
+
+  function phoneMarkup(item) {
+    const href = stageHref(item.href);
+    const ext = /^(https?:)/.test(item.href) ? ' target="_blank" rel="noopener noreferrer"' : '';
+    return `<a class="svc-phone svc-phone--${item.tone}" href="${href}"${ext} aria-label="${escStage(item.name)}">
+      <span class="svc-phone__star">${starSvg()}</span>
+      <span class="svc-phone__badge">SPECIAL</span>
+      <div class="svc-phone__shell">
+        <div class="svc-phone__screen">${screenMarkup(item)}</div>
+        <div class="svc-phone__glyphs" aria-hidden="true"><i></i><i></i><i></i></div>
+      </div>
+    </a>`;
+  }
+
+  function stageHtml(block, samples, labels) {
+    const dots = samples.map((item, i) => `<button type="button" class="svc-rail__dot" aria-label="${escStage(item.name)}" aria-selected="${i === 0 ? 'true' : 'false'}"></button>`).join('');
+    const tags = (labels.tags || []).map(tag => `<span>${escStage(tag)}</span>`).join('');
+    return `<div class="svc-stage" data-svc-mount="${block}">
+      <div class="svc-stage__edge svc-stage__edge--top">${WAVE_TOP}</div>
+      <div class="svc-stage__body">
+        <div class="container svc-stage__head">
+          <h3>${escStage(labels.title)}</h3>
+          <p>${escStage(labels.lead)}</p>
+          <a class="svc-stage__all" href="${path('pages/portfolio.html')}">${escStage(labels.all)}</a>
+        </div>
+        <div class="svc-rail" data-svc-rail>
+          <button type="button" class="svc-rail__nav svc-rail__nav--prev" aria-label="${escStage(labels.prev)}">${chevronSvg()}</button>
+          <div class="svc-rail__scroller">${samples.map(phoneMarkup).join('')}</div>
+          <button type="button" class="svc-rail__nav svc-rail__nav--next" aria-label="${escStage(labels.next)}">${chevronSvg()}</button>
+          <div class="svc-rail__dots" role="tablist">${dots}</div>
+        </div>
+        <div class="svc-stage__tags">${tags}</div>
+      </div>
+      <div class="svc-stage__edge svc-stage__edge--bottom">${WAVE_BOTTOM}</div>
+    </div>`;
+  }
+
+  function offersHtml(offers) {
+    if (!offers || !offers.length) return '';
+    const cards = offers.map(offer => `<a class="svc-kind" href="${stageHref(offer.href)}">
+      <span class="svc-kind__art">${artSvg(offer.art)}</span>
+      <span class="svc-kind__copy">
+        <strong class="svc-kind__title">${escStage(offer.title)}</strong>
+        <span class="svc-kind__en" dir="ltr">${escStage(offer.en)}</span>
+        <span class="svc-kind__sub">${escStage(offer.sub)}</span>
+      </span>
+      <span class="svc-kind__go" aria-hidden="true">${chevronSvg()}</span>
+    </a>`).join('');
+    return `<div class="svc-kinds" data-svc-mount><div class="container svc-kinds__grid">${cards}</div></div>`;
+  }
+
+  function closerHtml(closer) {
+    if (!closer) return '';
+    const contact = (C().contact && C().contact.channels && C().contact.channels[0]) || {};
+    const tel = contact.tel || (C().contact && C().contact.phone) || '+989305880135';
+    const display = contact.display || '+98 930 588 0135';
+    return `<div class="svc-closer" data-svc-mount>
+      <div class="container">
+        <p class="svc-closer__kicker">${escStage(closer.kicker)}</p>
+        <h3 class="svc-closer__title">${escStage(closer.title)}</h3>
+        <div class="svc-closer__actions">
+          <a class="svc-closer__phone" href="tel:${escStage(tel)}" dir="ltr">${escStage(display)}</a>
+          <a class="svc-closer__consult" href="${path('pages/contact.html')}">${escStage(closer.consult)}</a>
+        </div>
+      </div>
+    </div>`;
+  }
+
+  let stageResizeBound = false;
+
+  function syncRail(rail) {
+    const scroller = rail.querySelector('.svc-rail__scroller');
+    if (!scroller) return;
+    const overflow = scroller.scrollWidth - scroller.clientWidth > 12;
+    rail.classList.toggle('is-static', !overflow);
+  }
+
+  function bindRail(rail) {
+    const scroller = rail.querySelector('.svc-rail__scroller');
+    const cards = [...scroller.querySelectorAll('.svc-phone')];
+    const dots = [...rail.querySelectorAll('.svc-rail__dot')];
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const behavior = reduce ? 'auto' : 'smooth';
+
+    function closestIndex() {
+      const box = scroller.getBoundingClientRect();
+      const mid = box.left + box.width / 2;
+      let best = 0;
+      let bestDist = Infinity;
+      cards.forEach((card, i) => {
+        const rect = card.getBoundingClientRect();
+        const dist = Math.abs(rect.left + rect.width / 2 - mid);
+        if (dist < bestDist) {
+          bestDist = dist;
+          best = i;
+        }
+      });
+      return best;
+    }
+
+    function paint() {
+      const active = closestIndex();
+      dots.forEach((dot, i) => dot.setAttribute('aria-selected', i === active ? 'true' : 'false'));
+    }
+
+    function center(index) {
+      const card = cards[index];
+      if (!card) return;
+      const box = scroller.getBoundingClientRect();
+      const rect = card.getBoundingClientRect();
+      const delta = (rect.left + rect.width / 2) - (box.left + box.width / 2);
+      scroller.scrollBy({ left: delta, behavior });
+    }
+
+    rail.querySelector('.svc-rail__nav--prev').addEventListener('click', () => {
+      center(Math.max(0, closestIndex() - 1));
+    });
+    rail.querySelector('.svc-rail__nav--next').addEventListener('click', () => {
+      center(Math.min(cards.length - 1, closestIndex() + 1));
+    });
+    dots.forEach((dot, i) => dot.addEventListener('click', () => center(i)));
+    scroller.addEventListener('scroll', () => window.requestAnimationFrame(paint), { passive: true });
+    rail.__sync = () => syncRail(rail);
+    syncRail(rail);
+    paint();
+  }
+
+  function mountStage(sectionId, key, samples, labels) {
+    const section = document.getElementById(sectionId);
+    if (!section || !labels) return;
+    section.querySelectorAll('[data-svc-mount]').forEach(node => node.remove());
+    const faq = section.querySelector(':scope > .field-tech-faq-section');
+    const holder = document.createElement('div');
+    holder.innerHTML = stageHtml(key, samples, labels) + offersHtml(labels.offers) + closerHtml(labels.closer);
+    [...holder.childNodes].filter(node => node.nodeType === 1).forEach(node => {
+      if (faq) section.insertBefore(node, faq);
+      else section.appendChild(node);
+    });
+    section.querySelectorAll('[data-svc-rail]').forEach(bindRail);
+    section.querySelectorAll('.svc-ui__brand img').forEach(img => {
+      img.addEventListener('error', () => {
+        const span = document.createElement('span');
+        span.textContent = img.getAttribute('data-mark') || '';
+        img.replaceWith(span);
+      });
+    });
+  }
+
+  function renderServiceStages() {
+    const lang = String(document.documentElement.lang || 'fa').slice(0, 2);
+    const copy = STAGE_COPY[lang] || STAGE_COPY.en;
+    const nav = { prev: copy.prev, next: copy.next };
+    mountStage('web-design', 'web', WEB_SAMPLES, Object.assign({}, copy.web, nav));
+    mountStage('software-apps', 'apps', APP_SAMPLES, Object.assign({}, copy.apps, nav));
+    mountStage('smm', 'smm', SMM_SAMPLES, Object.assign({}, copy.smm, nav));
+    if (!stageResizeBound) {
+      stageResizeBound = true;
+      window.addEventListener('resize', () => {
+        document.querySelectorAll('[data-svc-rail]').forEach(rail => {
+          if (typeof rail.__sync === 'function') rail.__sync();
+        });
+      });
+    }
+  }
+
   window.initServicesPage = function () {
     redirectLegacyIndustrialHash();
     placeIntlSection();
@@ -937,6 +1356,7 @@
     renderSmmPanel();
     renderSmmDeliverables();
     renderSmmFaq();
+    renderServiceStages();
     renderFieldTechPanel();
     renderFieldTechLead();
     renderFieldFaq();

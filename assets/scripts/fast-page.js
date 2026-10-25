@@ -199,8 +199,97 @@
     ).join('');
   }
 
+  function escFast(value) {
+    return String(value || '').replace(/[&<>"']/g, (ch) => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[ch]));
+  }
+
+  function fpStar() {
+    return '<svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="#fb7185" d="M8 1.2 9.7 5.3l4.4.4-3.3 2.9.9 4.3L8 10.7 4.3 12.9l.9-4.3L1.9 5.7l4.4-.4z"/></svg>';
+  }
+
+  function fpChevron() {
+    return '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg>';
+  }
+
+  function fpScreen(layout, brand) {
+    const face = layout === 'store'
+      ? '<span class="fp-ui__bar"></span><span class="fp-ui__hero"></span><span class="fp-ui__tiles"><i></i><i></i><i></i><i></i></span>'
+      : layout === 'panel'
+        ? '<span class="fp-ui__bar"></span><span class="fp-ui__lines"><i></i><i></i></span><span class="fp-ui__stats"><i></i><i></i><i></i></span>'
+        : '<span class="fp-ui__bar"></span><span class="fp-ui__lines"><i></i><i></i></span><span class="fp-ui__hero"></span>';
+    return `<span class="fp-ui fp-ui--${layout}">${face}<span class="fp-ui__brand">${brand}</span></span>`;
+  }
+
+  function fpPhone(item) {
+    const ext = /^(https?:)/.test(item.href) ? ' target="_blank" rel="noopener noreferrer"' : '';
+    const brand = item.logo
+      ? `<img src="${path(item.logo)}" alt="" width="120" height="28" loading="lazy" decoding="async">`
+      : `<span>${escFast(item.brandText || item.name)}</span>`;
+    return `<a class="fp-phone fp-phone--${item.tone}" href="${item.href}"${ext} aria-label="${escFast(item.name)}">
+      <span class="fp-phone__star">${fpStar()}</span>
+      <span class="fp-phone__badge">SPECIAL</span>
+      <span class="fp-phone__shell">
+        <span class="fp-phone__screen">${fpScreen(item.layout, brand)}</span>
+        <span class="fp-phone__glyphs" aria-hidden="true"><i></i><i></i><i></i></span>
+      </span>
+      <span class="fp-phone__cap">${escFast(item.caption || item.name)}</span>
+    </a>`;
+  }
+
+  function bindFastRail(rail) {
+    const scroller = rail.querySelector('.fp-scroller');
+    if (!scroller) return;
+    const cards = [...scroller.querySelectorAll('.fp-phone')];
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const behavior = reduce ? 'auto' : 'smooth';
+    function closest() {
+      const box = scroller.getBoundingClientRect();
+      const mid = box.left + box.width / 2;
+      let best = 0;
+      let dist = Infinity;
+      cards.forEach((card, i) => {
+        const rect = card.getBoundingClientRect();
+        const d = Math.abs(rect.left + rect.width / 2 - mid);
+        if (d < dist) { dist = d; best = i; }
+      });
+      return best;
+    }
+    function center(index) {
+      const card = cards[index];
+      if (!card) return;
+      const box = scroller.getBoundingClientRect();
+      const rect = card.getBoundingClientRect();
+      scroller.scrollBy({ left: (rect.left + rect.width / 2) - (box.left + box.width / 2), behavior });
+    }
+    const prev = rail.querySelector('.fp-nav--prev');
+    const next = rail.querySelector('.fp-nav--next');
+    if (prev) prev.addEventListener('click', () => center(Math.max(0, closest() - 1)));
+    if (next) next.addEventListener('click', () => center(Math.min(cards.length - 1, closest() + 1)));
+    const sync = () => rail.classList.toggle('is-static', scroller.scrollWidth - scroller.clientWidth < 12);
+    sync();
+    rail.__sync = sync;
+  }
+
+  function renderSpeedVisual() {
+    const el = document.getElementById('fastSpeedVisual');
+    if (!el || !Array.isArray(F.plans)) return;
+    const tones = ['green', 'rose', 'blue'];
+    const layouts = { landing: 'corp', store: 'store', pro: 'panel' };
+    el.innerHTML = `<div class="fp-row">${F.plans.slice(0, 3).map((plan, i) => fpPhone({
+      name: plan.name,
+      caption: plan.name,
+      brandText: `$${plan.price}`,
+      href: '#fast-plans',
+      tone: tones[i] || 'navy',
+      layout: layouts[plan.visual] || 'corp'
+    })).join('')}</div>`;
+  }
+
   function renderSpeed() {
     const el = document.getElementById('fastSpeedGrid');
+    renderSpeedVisual();
     if (!el || !Array.isArray(F.speedHighlights)) return;
     el.innerHTML = F.speedHighlights.map(item => `
       <article class="fast-speed-card">
@@ -347,18 +436,23 @@
   function renderShowcase() {
     const el = document.getElementById('fastShowcaseGrid');
     if (!el) return;
-    el.innerHTML = F.showcases.filter((s) => !s.hidden).map((s) => {
-      const url = showcaseUrl(s);
-      const ext = !s.internal;
-      const thumb = s.thumb ? path(s.thumb) : '';
-      return `
-        <a href="${url}" class="fast-showcase-card"${ext ? ' target="_blank" rel="noopener noreferrer"' : ''}>
-          ${thumb ? `<span class="fast-showcase-card__thumb"><img src="${thumb}" alt="" width="160" height="80" loading="lazy"></span>` : ''}
-          <span class="fast-showcase-card__cat">${s.category}</span>
-          <strong>${s.name}</strong>
-          <span class="fast-showcase-card__link">${ui('viewCase', 'مشاهده')}${arrow()}</span>
-        </a>`;
-    }).join('');
+    const tones = ['violet', 'green', 'sand', 'rose', 'blue', 'navy'];
+    const layouts = ['store', 'corp', 'panel', 'corp', 'store', 'panel'];
+    const items = F.showcases.filter((s) => !s.hidden);
+    const phones = items.map((s, i) => fpPhone({
+      name: s.name,
+      caption: s.category || s.name,
+      href: showcaseUrl(s),
+      logo: s.thumb || '',
+      tone: tones[i % tones.length],
+      layout: layouts[i % layouts.length]
+    })).join('');
+    el.innerHTML = `<div class="fp-rail">
+      <button type="button" class="fp-nav fp-nav--prev" aria-label="${escFast(ui('prevSample', 'نمونه قبلی'))}">${fpChevron()}</button>
+      <div class="fp-scroller">${phones}</div>
+      <button type="button" class="fp-nav fp-nav--next" aria-label="${escFast(ui('nextSample', 'نمونه بعدی'))}">${fpChevron()}</button>
+    </div>`;
+    bindFastRail(el.querySelector('.fp-rail'));
   }
 
   function renderFaq() {

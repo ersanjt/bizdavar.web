@@ -9364,7 +9364,7 @@ html.premium-ui.is-page-entered .breadcrumbs-wrap {
   to { opacity: 1; }
 }
 
-.site-main a.bd-link:not(.btn):not(.service-card__link):not(.related-links__card):not(.feature-item--link):not(.about__feature):not(.client-item):not(.blog-card):not(.mobile-footer-cta__btn):not(.footer__chip):not(.footer__social-btn) {
+.site-main a.bd-link:not(.btn):not(.service-card__link):not(.related-links__card):not(.feature-item--link):not(.about__feature):not(.client-item):not(.blog-card):not(.mobile-footer-cta__btn):not(.footer__chip):not(.footer__social-btn):not(.svc-kind):not(.svc-phone):not(.svc-stage__all):not(.svc-closer__phone):not(.svc-closer__consult) {
   text-decoration: none;
   background-image: linear-gradient(currentColor, currentColor);
   background-position: 100% calc(100% - 2px);
@@ -9375,8 +9375,8 @@ html.premium-ui.is-page-entered .breadcrumbs-wrap {
     color 0.2s ease;
 }
 
-.site-main a.bd-link:not(.btn):hover,
-.site-main a.bd-link:not(.btn):focus-visible,
+.site-main a.bd-link:not(.btn):not(.svc-kind):not(.svc-phone):not(.svc-stage__all):not(.svc-closer__phone):not(.svc-closer__consult):hover,
+.site-main a.bd-link:not(.btn):not(.svc-kind):not(.svc-phone):not(.svc-stage__all):not(.svc-closer__phone):not(.svc-closer__consult):focus-visible,
 .footer__links a.bd-link:hover,
 .footer__legal a.bd-link:hover {
   background-size: 100% 1.5px;
