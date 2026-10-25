@@ -245,6 +245,12 @@ if ($method === 'POST' && $uri === '/orders') {
             (string) $price['title'],
             $details,
         ]);
+    bizhub_notify_staff(
+        $pdo,
+        $cfg,
+        'سفارش جدید: ' . (string) $price['title'],
+        "بازاریاب: " . (string) ($actor['name'] ?? '') . "\nمشتری: {$client}\nتلفن: {$phone}\nایمیل: {$email}\nجزئیات:\n" . bizhub_clip($details, 800) . "\n\n" . bizhub_app_origin($cfg) . '/admin/'
+    );
     Response::json(['ok' => true, 'id' => (int) $pdo->lastInsertId()], 201);
 }
 
@@ -257,8 +263,23 @@ if ($method === 'PATCH' && ($p = route_match($uri, '/orders/{id}'))) {
         Response::error('وضعیت نامعتبر است', 422);
     }
     $note = bizhub_clip(trim((string) ($body['quote_note'] ?? '')), 4000);
+    $info = $pdo->prepare('SELECT partner_id, client_name, service_title FROM partner_orders WHERE id = ?');
+    $info->execute([(int) $p['id']]);
+    $order = $info->fetch();
     $pdo->prepare('UPDATE partner_orders SET status = ?, quote_note = ? WHERE id = ?')
         ->execute([$status, $note !== '' ? $note : null, (int) $p['id']]);
+    if ($order) {
+        $labels = ['new' => 'جدید', 'quoted' => 'قیمت داده شد', 'accepted' => 'پذیرفته', 'rejected' => 'رد شد', 'done' => 'انجام شد'];
+        $email = bizhub_user_email($pdo, (int) $order['partner_id']);
+        if ($email !== '') {
+            bizhub_mail(
+                $cfg,
+                $email,
+                'وضعیت سفارش ' . (string) $order['client_name'],
+                "سفارش " . $order['service_title'] . " برای " . $order['client_name'] . "\nوضعیت: " . ($labels[$status] ?? $status) . "\n" . ($note !== '' ? $note . "\n" : '') . "\n" . bizhub_app_origin($cfg) . '/admin/'
+            );
+        }
+    }
     Response::json(['ok' => true]);
 }
 
@@ -303,6 +324,12 @@ if ($method === 'POST' && $uri === '/tickets') {
         }
         throw $e;
     }
+    bizhub_notify_staff(
+        $pdo,
+        $cfg,
+        'تیکت جدید: ' . $subject,
+        (string) ($actor['name'] ?? '') . " نوشت:\n\n" . bizhub_clip($text, 800) . "\n\n" . bizhub_app_origin($cfg) . '/admin/'
+    );
     Response::json(['ok' => true, 'id' => $id], 201);
 }
 
@@ -333,7 +360,7 @@ if ($method === 'GET' && ($p = route_match($uri, '/tickets/{id}'))) {
 if ($method === 'POST' && ($p = route_match($uri, '/tickets/{id}/messages'))) {
     Auth::requireRole(['admin', 'sales', 'partner']);
     $id = (int) $p['id'];
-    $stmt = $pdo->prepare('SELECT id, partner_id, status FROM tickets WHERE id = ?');
+    $stmt = $pdo->prepare('SELECT id, partner_id, status, subject FROM tickets WHERE id = ?');
     $stmt->execute([$id]);
     $ticket = $stmt->fetch();
     if (!$ticket) {
@@ -354,6 +381,16 @@ if ($method === 'POST' && ($p = route_match($uri, '/tickets/{id}/messages'))) {
     $pdo->prepare('INSERT INTO ticket_messages (ticket_id, user_id, body) VALUES (?, ?, ?)')
         ->execute([$id, (int) $actor['id'], $text]);
     $pdo->prepare('UPDATE tickets SET status = ? WHERE id = ?')->execute([$next, $id]);
+    $preview = bizhub_clip($text, 800);
+    $panel = bizhub_app_origin($cfg) . '/admin/';
+    if ($isPartner) {
+        bizhub_notify_staff($pdo, $cfg, 'پاسخ تیکت: ' . (string) $ticket['subject'], "بازاریاب پاسخ داد:\n\n{$preview}\n\n{$panel}");
+    } else {
+        $email = bizhub_user_email($pdo, (int) $ticket['partner_id']);
+        if ($email !== '') {
+            bizhub_mail($cfg, $email, 'پاسخ تیکت: ' . (string) $ticket['subject'], "پاسخ بیزداور:\n\n{$preview}\n\n{$panel}");
+        }
+    }
     Response::json(['ok' => true]);
 }
 

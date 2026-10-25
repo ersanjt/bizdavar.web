@@ -23,6 +23,24 @@ return [
     'lifetime' => 86400 * 7,
   ],
 
+  /**
+   * Leave smtp.host empty to use the server's local mail().
+   * Put the real SMTP password only in config.php on the server.
+   */
+  'mail' => [
+    'from' => 'info@bizdavar.com',
+    'from_name' => 'BizHub',
+    'notify' => 'info@bizdavar.com',
+    'smtp' => [
+      'host' => '',
+      'port' => 587,
+      'encryption' => 'tls',
+      'username' => '',
+      'password' => '',
+      'verify' => true,
+    ],
+  ],
+
   'security' => [
     'allowed_origins' => [
       'https://bizdavar.com',

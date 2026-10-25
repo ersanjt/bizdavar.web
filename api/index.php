@@ -5,6 +5,7 @@ declare(strict_types=1);
 require __DIR__ . '/lib/core.php';
 require __DIR__ . '/lib/site-index.php';
 require __DIR__ . '/lib/partners.php';
+require __DIR__ . '/lib/mail.php';
 
 $configPath = __DIR__ . '/config.php';
 if (!is_file($configPath)) {
@@ -115,6 +116,71 @@ if ($method === 'POST' && $uri === '/auth/logout') {
     Response::json(['ok' => true]);
 }
 
+if ($method === 'POST' && $uri === '/auth/forgot') {
+    $ip = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
+    if (!RateLimit::check($pdo, $ip, 'forgot', 8, 3600)) {
+        Response::error('تعداد درخواست زیاد است. کمی بعد دوباره تلاش کنید.', 429);
+    }
+    $email = strtolower(trim((string) (bizhub_json_body()['email'] ?? '')));
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        Response::error('ایمیل معتبر نیست', 422);
+    }
+    if (!RateLimit::check($pdo, 'email:' . $email, 'forgot_email', 5, 3600)) {
+        Response::error('تعداد درخواست زیاد است. کمی بعد دوباره تلاش کنید.', 429);
+    }
+    bizhub_ensure_mail_tables($pdo);
+    $stmt = $pdo->prepare('SELECT id, email FROM users WHERE email = ? AND is_active = 1 LIMIT 1');
+    $stmt->execute([$email]);
+    $user = $stmt->fetch();
+    if ($user) {
+        $pdo->prepare('DELETE FROM password_resets WHERE user_id = ? OR expires_at < NOW()')->execute([(int) $user['id']]);
+        $token = bin2hex(random_bytes(32));
+        $pdo->prepare('INSERT INTO password_resets (user_id, token_hash, expires_at) VALUES (?, ?, DATE_ADD(NOW(), INTERVAL 1 HOUR))')
+            ->execute([(int) $user['id'], hash('sha256', $token)]);
+        $link = bizhub_app_origin($cfg) . '/admin/?reset=' . $token;
+        bizhub_mail(
+            $cfg,
+            (string) $user['email'],
+            'بازیابی رمز BizHub',
+            "برای ساختن رمز جدید این لینک را باز کنید. یک ساعت معتبر است.\n\n{$link}\n\nاگر شما این درخواست را نداده‌اید، این ایمیل را نادیده بگیرید. رمز فعلی عوض نمی‌شود."
+        );
+    }
+    Response::json(['ok' => true, 'message' => 'اگر این ایمیل در BizHub باشد، لینک بازیابی ارسال شد.']);
+}
+
+if ($method === 'POST' && $uri === '/auth/reset') {
+    $ip = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
+    if (!RateLimit::check($pdo, $ip, 'reset', 10, 3600)) {
+        Response::error('تعداد درخواست زیاد است. کمی بعد دوباره تلاش کنید.', 429);
+    }
+    bizhub_ensure_mail_tables($pdo);
+    $body = bizhub_json_body();
+    $token = strtolower(trim((string) ($body['token'] ?? '')));
+    $password = (string) ($body['password'] ?? '');
+    if (!preg_match('/^[a-f0-9]{64}$/', $token)) {
+        Response::error('لینک بازیابی نامعتبر است', 422);
+    }
+    if (strlen($password) < 10) {
+        Response::error('رمز حداقل ۱۰ کاراکتر باشد', 422);
+    }
+    $stmt = $pdo->prepare('SELECT id, user_id, expires_at, used_at FROM password_resets WHERE token_hash = ? LIMIT 1');
+    $stmt->execute([hash('sha256', $token)]);
+    $row = $stmt->fetch();
+    if (!$row || !empty($row['used_at']) || strtotime((string) $row['expires_at']) < time()) {
+        Response::error('لینک بازیابی نامعتبر یا منقضی شده است', 422);
+    }
+    $active = $pdo->prepare('SELECT id FROM users WHERE id = ? AND is_active = 1');
+    $active->execute([(int) $row['user_id']]);
+    if (!$active->fetch()) {
+        Response::error('این کاربر فعال نیست', 422);
+    }
+    $pdo->prepare('UPDATE users SET password_hash = ? WHERE id = ?')
+        ->execute([password_hash($password, PASSWORD_DEFAULT), (int) $row['user_id']]);
+    $pdo->prepare('UPDATE password_resets SET used_at = NOW() WHERE user_id = ? AND used_at IS NULL')
+        ->execute([(int) $row['user_id']]);
+    Response::json(['ok' => true, 'message' => 'رمز عوض شد. با رمز جدید وارد شوید.']);
+}
+
 if ($method === 'GET' && $uri === '/auth/me') {
     $user = Auth::user();
     if (!$user) {
@@ -180,6 +246,13 @@ if ($method === 'POST' && $uri === '/public/leads') {
         $ip,
         $partnerId,
     ]);
+
+    bizhub_notify_staff(
+        $pdo,
+        $cfg,
+        'سرنخ جدید BizHub',
+        "نام: {$first} {$last}\nایمیل: {$email}\nتلفن: {$phone}\nخدمت: {$service}\nمنبع: " . ($partnerId ? $partnerCode : 'website') . "\n\n" . bizhub_clip($message, 800) . "\n\n" . bizhub_app_origin($cfg) . '/admin/'
+    );
 
     Response::json(['ok' => true, 'message' => 'Lead created'], 201);
 }
@@ -298,6 +371,27 @@ if ($method === 'POST' && $uri === '/auth/mfa/disable') {
 }
 
 Auth::requireMfaOk($cfg);
+
+if ($method === 'POST' && $uri === '/mail/test') {
+    Auth::requireRole(['admin']);
+    $email = (string) (Auth::user()['email'] ?? '');
+    try {
+        bizhub_mail_send(
+            $cfg,
+            $email,
+            'آزمایش ایمیل BizHub',
+            "این یک ایمیل آزمایشی از BizHub است.\nاگر این نامه را می‌بینید، ارسال ایمیل کار می‌کند.\n" . bizhub_app_origin($cfg) . '/admin/'
+        );
+    } catch (Throwable $e) {
+        $msg = $e->getMessage();
+        $secret = (string) ($cfg['mail']['smtp']['password'] ?? '');
+        if ($secret !== '') {
+            $msg = str_replace($secret, '***', $msg);
+        }
+        Response::error(bizhub_clip($msg, 300), 502);
+    }
+    Response::json(['ok' => true, 'message' => 'ایمیل آزمایشی به ' . $email . ' ارسال شد']);
+}
 
 // ─── Dashboard ───
 if ($method === 'GET' && $uri === '/dashboard/stats') {

@@ -172,6 +172,7 @@ if ($method === 'POST' && $uri === '/documents') {
         }
         throw $e;
     }
+    bizhub_mail_document_notice($pdo, $cfg, $id);
     Response::json(['ok' => true, 'id' => $id, 'number' => $number], 201);
 }
 
@@ -206,6 +207,7 @@ if ($method === 'PATCH' && ($p = route_match($uri, '/documents/{id}'))) {
         Response::error('وضعیت این سند نامعتبر است', 422);
     }
     $pdo->prepare('UPDATE documents SET status = ? WHERE id = ?')->execute([$status, (int) $p['id']]);
+    bizhub_mail_document_notice($pdo, $cfg, (int) $p['id']);
     Response::json(['ok' => true]);
 }
 
@@ -258,6 +260,7 @@ if ($method === 'POST' && ($p = route_match($uri, '/documents/{id}/invoice'))) {
         }
         throw $e;
     }
+    bizhub_mail_document_notice($pdo, $cfg, $id);
     Response::json(['ok' => true, 'id' => $id, 'number' => $number], 201);
 }
 
@@ -283,7 +286,7 @@ if ($method === 'GET' && ($p = route_match($uri, '/orders/{id}'))) {
 if ($method === 'POST' && ($p = route_match($uri, '/orders/{id}/messages'))) {
     Auth::requireRole(['admin', 'sales', 'partner']);
     $id = (int) $p['id'];
-    $stmt = $pdo->prepare('SELECT id, partner_id FROM partner_orders WHERE id = ?');
+    $stmt = $pdo->prepare('SELECT id, partner_id, client_name FROM partner_orders WHERE id = ?');
     $stmt->execute([$id]);
     $order = $stmt->fetch();
     if (!$order) {
@@ -298,6 +301,16 @@ if ($method === 'POST' && ($p = route_match($uri, '/orders/{id}/messages'))) {
     }
     $pdo->prepare('INSERT INTO order_messages (order_id, user_id, body) VALUES (?, ?, ?)')
         ->execute([$id, (int) $actor['id'], $text]);
+    $preview = bizhub_clip($text, 800);
+    $panel = bizhub_app_origin($cfg) . '/admin/';
+    if ($isPartner) {
+        bizhub_notify_staff($pdo, $cfg, 'پیام سفارش #' . $id, "بازاریاب روی سفارش " . $order['client_name'] . " نوشت:\n\n{$preview}\n\n{$panel}");
+    } else {
+        $email = bizhub_user_email($pdo, (int) $order['partner_id']);
+        if ($email !== '') {
+            bizhub_mail($cfg, $email, 'پاسخ سفارش #' . $id, "پاسخ جدید روی سفارش " . $order['client_name'] . ":\n\n{$preview}\n\n{$panel}");
+        }
+    }
     Response::json(['ok' => true]);
 }
 

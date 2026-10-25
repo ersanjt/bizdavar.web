@@ -179,7 +179,7 @@
   }
 
   // ─── Login ───
-  function renderLogin(err, mode) {
+  function renderLogin(err, mode, notice) {
     const mfa = mode === 'mfa';
     app.innerHTML = `
       <div class="hub-login">
@@ -188,6 +188,7 @@
             <h1>BizHub</h1>
             <p>${mfa ? 'کد Authenticator' : 'CRM & CMS — Bizdavar Group'}</p>
           </div>
+          ${notice ? `<p class="hub-muted">${esc(notice)}</p>` : ''}
           ${err ? `<div class="hub-error">${esc(err)}</div>` : ''}
           <form id="loginForm">
             ${mfa ? `
@@ -204,6 +205,7 @@
               <input type="password" id="password" name="password" required autocomplete="current-password">
             </div>`}
             <button type="submit" class="hub-btn hub-btn--primary">${mfa ? 'تأیید MFA' : 'ورود'}</button>
+            ${mfa ? '' : '<button type="button" class="hub-btn hub-btn--ghost" id="forgotBtn" style="margin-top:8px">رمز را فراموش کرده‌ام</button>'}
           </form>
         </div>
       </div>`;
@@ -226,6 +228,80 @@
         await enterHub(r);
       } catch (err) {
         renderLogin(err.message, mfa ? 'mfa' : undefined);
+      }
+    });
+    const forgotBtn = document.getElementById('forgotBtn');
+    if (forgotBtn) forgotBtn.addEventListener('click', () => renderForgot());
+  }
+
+  function renderForgot(err, notice) {
+    app.innerHTML = `
+      <div class="hub-login">
+        <div class="hub-login__card">
+          <div class="hub-login__brand">
+            <h1>بازیابی رمز</h1>
+            <p>لینک به ایمیل حساب فرستاده می‌شود</p>
+          </div>
+          ${notice ? `<p class="hub-muted">${esc(notice)}</p>` : ''}
+          ${err ? `<div class="hub-error">${esc(err)}</div>` : ''}
+          <form id="forgotForm">
+            <div class="hub-field">
+              <label for="email">ایمیل</label>
+              <input type="email" id="email" name="email" required autocomplete="username" dir="ltr">
+            </div>
+            <button type="submit" class="hub-btn hub-btn--primary">ارسال لینک</button>
+            <button type="button" class="hub-btn hub-btn--ghost" id="backLogin" style="margin-top:8px">بازگشت به ورود</button>
+          </form>
+        </div>
+      </div>`;
+    document.getElementById('backLogin').addEventListener('click', () => renderLogin());
+    document.getElementById('forgotForm').addEventListener('submit', async e => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      try {
+        const r = await api('/auth/forgot', { method: 'POST', body: { email } });
+        renderForgot('', r.message || 'اگر این ایمیل در BizHub باشد، لینک بازیابی ارسال شد.');
+      } catch (err) {
+        renderForgot(err.message);
+      }
+    });
+  }
+
+  function renderReset(token, err) {
+    app.innerHTML = `
+      <div class="hub-login">
+        <div class="hub-login__card">
+          <div class="hub-login__brand">
+            <h1>رمز جدید</h1>
+            <p>حداقل ۱۰ کاراکتر</p>
+          </div>
+          ${err ? `<div class="hub-error">${esc(err)}</div>` : ''}
+          <form id="resetForm">
+            <div class="hub-field">
+              <label for="password">رمز جدید</label>
+              <input type="password" id="password" required minlength="10" autocomplete="new-password">
+            </div>
+            <div class="hub-field">
+              <label for="password2">تکرار رمز</label>
+              <input type="password" id="password2" required minlength="10" autocomplete="new-password">
+            </div>
+            <button type="submit" class="hub-btn hub-btn--primary">ذخیره رمز</button>
+          </form>
+        </div>
+      </div>`;
+    document.getElementById('resetForm').addEventListener('submit', async e => {
+      e.preventDefault();
+      const password = document.getElementById('password').value;
+      if (password !== document.getElementById('password2').value) {
+        renderReset(token, 'تکرار رمز یکسان نیست');
+        return;
+      }
+      try {
+        await api('/auth/reset', { method: 'POST', body: { token, password } });
+        history.replaceState({}, '', '/admin/');
+        renderLogin('', undefined, 'رمز عوض شد. با رمز جدید وارد شوید. اگر Authenticator فعال است، همان کد قبلی لازم است.');
+      } catch (err) {
+        renderReset(token, err.message);
       }
     });
   }
@@ -384,7 +460,7 @@
     const pipe = s.pipeline || {};
     const recent = state.stats?.recentLeads || [];
     return `
-      <div class="hub-topbar"><h2>داشبورد</h2><span class="hub-topbar__user">${esc(state.user?.email)}</span></div>
+      <div class="hub-topbar"><h2>داشبورد</h2><span class="hub-topbar__user">${state.user?.role === 'admin' ? '<button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" id="mailTest">آزمایش ایمیل</button> ' : ''}${esc(state.user?.email)}</span></div>
       <div class="hub-stats">
         <div class="hub-stat"><div class="hub-stat__val">${site.pages ?? 0}</div><div class="hub-stat__label">صفحه در سایت</div></div>
         <div class="hub-stat"><div class="hub-stat__val">${locales.fa ?? 0}</div><div class="hub-stat__label">فارسی</div></div>
@@ -591,6 +667,22 @@
   }
 
   function bindViewEvents() {
+    const mailTest = document.getElementById('mailTest');
+    if (mailTest) {
+      mailTest.addEventListener('click', async () => {
+        mailTest.disabled = true;
+        const label = mailTest.textContent;
+        try {
+          const r = await api('/mail/test', { method: 'POST', body: {} });
+          mailTest.textContent = r.message || 'ارسال شد';
+        } catch (e) {
+          mailTest.textContent = e.message || 'ارسال نشد';
+        } finally {
+          mailTest.disabled = false;
+          setTimeout(() => { mailTest.textContent = label; }, 6000);
+        }
+      });
+    }
     document.querySelectorAll('[data-lead-id]').forEach(row => {
       row.addEventListener('click', () => openLeadModal(+row.dataset.leadId));
     });
@@ -837,8 +929,8 @@
     const flash = state.partnerFlash;
     return `
       <div class="hub-topbar"><h2>بازاریاب‌ها</h2></div>
-      <p class="hub-hint">از اینجا کاربر بازاریاب بسازید. خودش رمز می‌گذارد و وارد ${esc(origin + '/admin/')} می‌شود. لینک معرفی را به او بدهید تا مشتری‌ها را بیاورد.</p>
-      ${flash ? `<div class="hub-card" style="margin-bottom:16px;padding:16px">بازاریاب ساخته شد.<br>ورود: <code dir="ltr">${esc(flash.loginUrl)}</code><br>ایمیل: <code dir="ltr">${esc(flash.email || '')}</code><br>رمز: <code dir="ltr">${esc(flash.password || '')}</code><br>لینک معرفی: <code dir="ltr">${esc(flash.referralUrl)}</code><br>این رمز را فقط همین‌جا می‌بینید. برای بازاریاب بفرستید.</div>` : ''}
+      <p class="hub-hint">از اینجا کاربر بازاریاب بسازید. با همان ایمیل وارد ${esc(origin + '/admin/')} می‌شود. اگر رمز را گم کرد، از صفحه ورود «رمز را فراموش کرده‌ام» را می‌زند. لینک معرفی را به او بدهید تا مشتری‌ها را بیاورد.</p>
+      ${flash ? `<div class="hub-card" style="margin-bottom:16px;padding:16px">بازاریاب ساخته شد.<br>ورود: <code dir="ltr">${esc(flash.loginUrl)}</code><br>ایمیل: <code dir="ltr">${esc(flash.email || '')}</code><br>رمز: <code dir="ltr">${esc(flash.password || '')}</code><br>لینک معرفی: <code dir="ltr">${esc(flash.referralUrl)}</code><br>این رمز را فقط همین‌جا می‌بینید. برای بازاریاب بفرستید. بعداً خودش هم می‌تواند از فراموشی رمز استفاده کند.</div>` : ''}
       <div class="hub-card" style="margin-bottom:16px">
         <div class="hub-card__head"><h3>کاربر جدید</h3></div>
         <form id="partnerForm" class="hub-form-grid" style="padding:16px">
@@ -1390,6 +1482,11 @@
 
   // ─── Boot ───
   async function boot() {
+    const resetToken = new URLSearchParams(location.search).get('reset');
+    if (resetToken) {
+      renderReset(resetToken);
+      return;
+    }
     try {
       const r = await api('/auth/me');
       if (r.csrfToken) state.csrfToken = r.csrfToken;
