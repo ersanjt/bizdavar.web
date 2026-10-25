@@ -375,7 +375,7 @@ function bizhub_site_stats(PDO $pdo): array
         }
     }
     $content = [];
-    foreach ($pdo->query("SELECT path, section, title, summary FROM site_pages WHERE locale = 'fa' AND section <> 'motorcycle' ORDER BY path ASC")->fetchAll() as $row) {
+    foreach ($pdo->query("SELECT path, section, title, summary FROM site_pages WHERE locale = 'fa' AND section NOT IN ('motorcycle', '404') ORDER BY path ASC")->fetchAll() as $row) {
         $content[] = [
             'path' => (string) $row['path'],
             'section' => (string) $row['section'],

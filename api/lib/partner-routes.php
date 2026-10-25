@@ -164,7 +164,7 @@ if ($method === 'POST' && $uri === '/prices') {
     $pdo->prepare('INSERT INTO price_items (title, category, summary, price_label, amount, is_active, sort_order) VALUES (?, ?, ?, ?, ?, ?, ?)')
         ->execute([
             $title,
-            bizhub_clip(trim((string) ($body['category'] ?? 'services')), 80) ?: 'services',
+            bizhub_clip(trim((string) ($body['category'] ?? '')), 80) ?: 'عمومی',
             bizhub_clip(trim((string) ($body['summary'] ?? '')), 500),
             $label,
             $amount,

@@ -398,6 +398,15 @@ body {
   overflow: auto;
 }
 
+.hub-summary {
+  max-width: 36rem;
+  color: var(--hub-muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .hub-path {
   margin-top: 2px;
   font-size: 0.75rem;

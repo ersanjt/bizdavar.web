@@ -515,7 +515,7 @@
         <div class="hub-card">
           <div class="hub-card__head"><h3>محتوای سایت</h3></div>
           <div class="hub-table-wrap"><table class="hub-table"><thead><tr>
-            <th>دسته</th><th>صفحه</th><th>بازدید ۷ روز</th>
+            <th>دسته</th><th>صفحه در همه زبان‌ها</th><th>بازدید ۷ روز</th>
           </tr></thead><tbody>
             ${areas.map(row => `<tr data-open-area="${esc(row.area)}">
               <td>${esc(AREA_LABELS[row.area] || row.area)}</td>
@@ -546,7 +546,7 @@
           ${content.map(p => `<tr>
             <td><a href="${esc(p.path)}" target="_blank" rel="noopener">${esc(p.title)}</a>
               <div class="hub-path" dir="ltr">${esc(p.path)}</div></td>
-            <td>${esc(p.summary || '—')}</td>
+            <td><div class="hub-summary" title="${esc(p.summary || '')}">${esc(p.summary || '—')}</div></td>
             <td>${esc(AREA_LABELS[p.area] || sectionLabel(p.section))}</td>
           </tr>`).join('') || '<tr><td colspan="3">محتوا هنوز وارد نشده</td></tr>'}
         </tbody></table></div>
@@ -607,7 +607,7 @@
           ${state.pageRows.map(p => `<tr>
             <td><a href="${esc(p.path)}" target="_blank" rel="noopener">${esc(p.title)}</a>
               <div class="hub-path" dir="ltr">${esc(p.path)}</div></td>
-            <td>${esc(p.summary || '—')}</td>
+            <td><div class="hub-summary" title="${esc(p.summary || '')}">${esc(p.summary || '—')}</div></td>
             <td>${esc(LOCALE_LABELS[p.locale] || p.locale)}</td>
             <td>${esc(sectionLabel(p.section))}</td>
           </tr>`).join('') || '<tr><td colspan="4">صفحه‌ای نیست</td></tr>'}
@@ -1030,7 +1030,7 @@
       <div class="hub-card" style="margin-bottom:16px">
         <form id="priceForm" class="hub-form-grid" style="padding:16px">
           <div class="hub-field"><label>عنوان خدمت</label><input name="title" required></div>
-          <div class="hub-field"><label>دسته</label><input name="category" value="services"></div>
+          <div class="hub-field"><label>دسته</label><input name="category" placeholder="طراحی سایت"></div>
           <div class="hub-field"><label>قیمت نمایشی</label><input name="price_label" placeholder="از ۹۹ دلار یا استعلام" required></div>
           <div class="hub-field"><label>عدد، اگر دارد</label><input name="amount" dir="ltr" inputmode="decimal"></div>
           <div class="hub-field hub-field--full"><label>توضیح</label><textarea name="summary"></textarea></div>
