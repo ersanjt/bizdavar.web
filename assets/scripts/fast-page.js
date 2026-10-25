@@ -213,7 +213,11 @@
     return '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg>';
   }
 
-  function fpScreen(layout, brand) {
+  function fpScreen(item, brand) {
+    if (item.shot) {
+      return `<span class="fp-ui fp-ui--shot"><img src="${path(item.shot)}" alt="" width="390" height="780" loading="lazy" decoding="async"></span>`;
+    }
+    const layout = item.layout;
     const face = layout === 'store'
       ? '<span class="fp-ui__bar"></span><span class="fp-ui__hero"></span><span class="fp-ui__tiles"><i></i><i></i><i></i><i></i></span>'
       : layout === 'panel'
@@ -231,7 +235,7 @@
       <span class="fp-phone__star">${fpStar()}</span>
       <span class="fp-phone__badge">SPECIAL</span>
       <span class="fp-phone__shell">
-        <span class="fp-phone__screen">${fpScreen(item.layout, brand)}</span>
+        <span class="fp-phone__screen">${fpScreen(item, brand)}</span>
         <span class="fp-phone__glyphs" aria-hidden="true"><i></i><i></i><i></i></span>
       </span>
       <span class="fp-phone__cap">${escFast(item.caption || item.name)}</span>
@@ -444,6 +448,7 @@
       caption: s.category || s.name,
       href: showcaseUrl(s),
       logo: s.thumb || '',
+      shot: s.shot || '',
       tone: tones[i % tones.length],
       layout: layouts[i % layouts.length]
     })).join('');

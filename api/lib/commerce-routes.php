@@ -280,7 +280,13 @@ if ($method === 'GET' && ($p = route_match($uri, '/orders/{id}'))) {
     $msgs->execute([$id]);
     $docs = $pdo->prepare('SELECT id, kind, number, status, currency FROM documents WHERE order_id = ? ORDER BY id DESC');
     $docs->execute([$id]);
-    Response::json(['ok' => true, 'order' => $order, 'messages' => $msgs->fetchAll(), 'documents' => $docs->fetchAll()]);
+    Response::json([
+        'ok' => true,
+        'order' => $order,
+        'messages' => $msgs->fetchAll(),
+        'documents' => $docs->fetchAll(),
+        'files' => bizhub_order_file_rows($pdo, $id),
+    ]);
 }
 
 if ($method === 'POST' && ($p = route_match($uri, '/orders/{id}/messages'))) {

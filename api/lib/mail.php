@@ -33,6 +33,38 @@ function bizhub_ensure_mail_tables(PDO $pdo): void
     $ready = true;
 }
 
+function bizhub_send_password_reset(PDO $pdo, array $cfg, int $userId): bool
+{
+    bizhub_ensure_mail_tables($pdo);
+    $stmt = $pdo->prepare('SELECT id, email FROM users WHERE id = ? AND is_active = 1 LIMIT 1');
+    $stmt->execute([$userId]);
+    $user = $stmt->fetch();
+    if (!$user || !filter_var((string) $user['email'], FILTER_VALIDATE_EMAIL)) {
+        return false;
+    }
+    $pdo->prepare('DELETE FROM password_resets WHERE user_id = ? OR expires_at < NOW()')->execute([(int) $user['id']]);
+    $token = bin2hex(random_bytes(32));
+    $code = str_pad((string) random_int(0, 999999), 6, '0', STR_PAD_LEFT);
+    $pdo->prepare('INSERT INTO password_resets (user_id, token_hash, code_hash, expires_at) VALUES (?, ?, ?, DATE_ADD(NOW(), INTERVAL 1 HOUR))')
+        ->execute([(int) $user['id'], hash('sha256', $token), hash('sha256', $code)]);
+    $link = bizhub_app_origin($cfg) . '/admin/?reset=' . $token;
+    bizhub_mail(
+        $cfg,
+        (string) $user['email'],
+        'بازیابی رمز بیزداور',
+        '',
+        [
+            'heading' => 'بازیابی رمز',
+            'intro' => 'درخواست عوض کردن رمز برای این ایمیل ثبت شد. لینک و کد، هر دو یک ساعت معتبرند.',
+            'code' => $code,
+            'button_label' => 'باز کردن صفحه بازیابی',
+            'button_url' => $link,
+            'note' => 'اگر شما این درخواست را نداده‌اید، این ایمیل را نادیده بگیرید. رمز فعلی عوض نمی‌شود.',
+        ]
+    );
+    return true;
+}
+
 function bizhub_user_email(PDO $pdo, int $userId): string
 {
     $stmt = $pdo->prepare('SELECT email FROM users WHERE id = ? AND is_active = 1');

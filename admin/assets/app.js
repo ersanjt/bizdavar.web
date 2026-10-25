@@ -64,7 +64,9 @@
     docDraft: null,
     purchases: [],
     openOrder: null,
-    orderThread: null
+    orderThread: null,
+    compose: null,
+    priceEdit: null
   };
   const DOC_LABELS = {
     draft: 'پیش‌نویس', sent: 'ارسال شده', accepted: 'پذیرفته', rejected: 'رد شده',
@@ -97,6 +99,25 @@
       throw err;
     }
     return data;
+  }
+
+  async function apiForm(path, formData) {
+    const headers = {};
+    if (state.csrfToken) headers['X-CSRF-Token'] = state.csrfToken;
+    const res = await fetch(API + path, { method: 'POST', credentials: 'include', headers, body: formData });
+    const data = await res.json().catch(() => ({}));
+    if (data.csrfToken) state.csrfToken = data.csrfToken;
+    if (!res.ok) throw new Error(data.error || res.statusText);
+    return data;
+  }
+
+  async function uploadOrderFiles(orderId, form) {
+    const input = form.querySelector('input[type="file"]');
+    const files = [...(input?.files || [])].filter(file => file && file.size > 0);
+    if (!files.length) return;
+    const body = new FormData();
+    files.forEach(file => body.append('files[]', file));
+    await apiForm('/orders/' + orderId + '/files', body);
   }
 
   function esc(s) {
@@ -340,10 +361,20 @@
   function renderShell() {
     app.innerHTML = `
       <div class="hub-shell">
+        <header class="hub-mobilebar">
+          <button type="button" class="hub-nav-toggle" id="navToggle" aria-label="باز کردن منو" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="hub-mobilebar__title">
+            <strong>BizHub</strong>
+            <span id="navTitle"></span>
+          </div>
+        </header>
         <aside class="hub-sidebar">
           <div class="hub-sidebar__brand">
             <strong>BizHub</strong>
             <span>${isPartnerUser() ? 'میز بازاریاب' : 'CRM & Content'}</span>
+            <button type="button" class="hub-nav-close" id="navClose" aria-label="بستن منو">×</button>
           </div>
           <nav class="hub-nav">
             ${isPartnerUser() ? `
@@ -375,11 +406,28 @@
             <button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" id="logoutBtn" style="margin-top:8px;width:100%">خروج</button>
           </div>
         </aside>
+        <button type="button" class="hub-backdrop" id="navBackdrop" aria-label="بستن منو" hidden></button>
         <main class="hub-main" id="hubMain"></main>
       </div>`;
 
+    const sidebar = app.querySelector('.hub-sidebar');
+    const backdrop = document.getElementById('navBackdrop');
+    const toggle = document.getElementById('navToggle');
+    const title = document.getElementById('navTitle');
+    const active = app.querySelector('.hub-nav__item.is-active span');
+    if (title && active) title.textContent = active.textContent;
+    function setNav(open) {
+      sidebar.classList.toggle('is-open', open);
+      backdrop.hidden = !open;
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.classList.toggle('hub-nav-open', open);
+    }
+    toggle.addEventListener('click', () => setNav(!sidebar.classList.contains('is-open')));
+    document.getElementById('navClose').addEventListener('click', () => setNav(false));
+    backdrop.addEventListener('click', () => setNav(false));
     app.querySelectorAll('[data-view]').forEach(btn => {
       btn.addEventListener('click', () => {
+        setNav(false);
         state.view = btn.dataset.view;
         renderShell();
         loadView();
@@ -462,7 +510,29 @@
     if (state.view === 'inbox') main.innerHTML = renderInbox();
     if (state.view === 'docs') main.innerHTML = renderDocs();
     if (state.view === 'purchases') main.innerHTML = renderPurchases();
+    fitTables(main);
     bindViewEvents();
+  }
+
+  function fitTables(root) {
+    root.querySelectorAll('.hub-table').forEach(table => {
+      const heads = [...table.querySelectorAll('thead th')].map(th => th.textContent.trim());
+      table.querySelectorAll('tbody tr').forEach(tr => {
+        [...tr.children].forEach((td, i) => {
+          if (td.tagName !== 'TD' || td.dataset.fit === '1') return;
+          td.dataset.fit = '1';
+          const wrap = document.createElement('span');
+          wrap.className = 'hub-cell';
+          while (td.firstChild) wrap.appendChild(td.firstChild);
+          td.appendChild(wrap);
+          if (td.colSpan > 1 || !heads[i]) {
+            td.dataset.stack = 'full';
+            return;
+          }
+          td.dataset.label = heads[i];
+        });
+      });
+    });
   }
 
   async function loadPages() {
@@ -477,22 +547,54 @@
     state.pageTotal = r.total || 0;
   }
 
-  function renderPeopleBlock(people, logins) {
+  function renderCompose() {
+    const c = state.compose;
+    if (!c) return '';
+    const ticket = c.kind === 'ticket';
     return `
+      <div class="hub-card" style="margin-bottom:16px">
+        <div class="hub-card__head"><h3>${ticket ? 'تیکت برای' : 'ایمیل به'} ${esc(c.name)}</h3>
+          <button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" id="cancelCompose">انصراف</button></div>
+        <form id="composeForm" class="hub-form-grid" style="padding:16px">
+          <p class="hub-hint hub-hint--in" style="grid-column:1/-1">${esc(c.email)} — ${ticket ? 'تیکت در پنل او می‌ماند و همین متن برایش ایمیل می‌شود.' : 'این متن فقط ایمیل می‌شود و در تیکت‌ها ذخیره نمی‌شود.'}</p>
+          <div class="hub-field hub-field--full"><label>موضوع</label><input name="subject" required value="${esc(c.subject || '')}"></div>
+          <div class="hub-field hub-field--full"><label>متن</label><textarea name="body" required></textarea></div>
+          <div class="hub-field hub-field--full"><button class="hub-btn hub-btn--yellow" type="submit">${ticket ? 'ثبت تیکت و ارسال ایمیل' : 'ارسال ایمیل'}</button></div>
+        </form>
+      </div>`;
+  }
+
+  function userActions(p) {
+    if (state.user?.role !== 'admin') return '';
+    const ticket = p.role === 'partner'
+      ? `<button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" data-compose="ticket" data-user="${p.id}" data-name="${esc(p.name)}" data-email="${esc(p.email)}">تیکت</button>`
+      : '';
+    return `<div class="hub-actions">
+      <button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" data-reset-mail="${p.id}">بازیابی رمز</button>
+      <button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" data-compose="mail" data-user="${p.id}" data-name="${esc(p.name)}" data-email="${esc(p.email)}">ایمیل</button>
+      ${ticket}
+    </div>`;
+  }
+
+  function renderPeopleBlock(people, logins) {
+    const admin = state.user?.role === 'admin';
+    return `
+      ${renderCompose()}
       <div class="hub-split">
         <div class="hub-card">
           <div class="hub-card__head"><h3>کاربران و بازاریاب‌ها</h3></div>
           <div class="hub-table-wrap"><table class="hub-table"><thead><tr>
-            <th>نام</th><th>نقش</th><th>آخرین ورود</th><th>سفارش</th><th>تیکت</th><th>وضعیت</th>
+            <th>نام</th><th>نقش</th><th>آخرین ورود</th><th>سفارش</th><th>تیکت</th><th>وضعیت</th>${admin ? '<th></th>' : ''}
           </tr></thead><tbody>
-            ${(people || []).map(p => `<tr${p.role === 'partner' ? ' data-open-view="partners"' : ''}>
-              <td>${esc(p.name)}<div class="hub-path" dir="ltr">${esc(p.email)}</div></td>
-              <td>${esc(ROLE_LABELS[p.role] || p.role || '—')}${p.partner_code ? `<div class="hub-path" dir="ltr">${esc(p.partner_code)}</div>` : ''}</td>
-              <td>${fmtDate(p.last_login_at)}</td>
+            ${(people || []).map(p => `<tr>
+              <td>${esc(p.name)}<div class="hub-path hub-nowrap" dir="ltr">${esc(p.email)}</div></td>
+              <td>${esc(ROLE_LABELS[p.role] || p.role || '—')}${p.partner_code ? `<div class="hub-path hub-nowrap" dir="ltr">${esc(p.partner_code)}</div>` : ''}</td>
+              <td class="hub-nowrap">${fmtDate(p.last_login_at)}</td>
               <td>${p.role === 'partner' ? (p.orders ?? 0) : '—'}</td>
               <td>${p.role === 'partner' ? (p.tickets ?? 0) : '—'}</td>
               <td>${Number(p.is_active) ? 'فعال' : 'خاموش'}</td>
-            </tr>`).join('') || '<tr><td colspan="6">کاربری نیست</td></tr>'}
+              ${admin ? `<td>${userActions(p)}</td>` : ''}
+            </tr>`).join('') || `<tr><td colspan="${admin ? 7 : 6}">کاربری نیست</td></tr>`}
           </tbody></table></div>
         </div>
         <div class="hub-card">
@@ -501,11 +603,11 @@
             <th>زمان</th><th>کاربر</th><th>نقش</th><th>نتیجه</th><th>آی‌پی</th>
           </tr></thead><tbody>
             ${(logins || []).map(l => `<tr>
-              <td>${fmtDate(l.created_at)}</td>
-              <td dir="ltr">${esc(l.email)}</td>
+              <td class="hub-nowrap">${fmtDate(l.created_at)}</td>
+              <td class="hub-nowrap" dir="ltr">${esc(l.email)}</td>
               <td>${esc(ROLE_LABELS[l.role] || l.role || '—')}</td>
               <td>${Number(l.ok) ? 'موفق' : 'ناموفق'}</td>
-              <td dir="ltr">${esc(l.ip_address || '—')}</td>
+              <td class="hub-nowrap" dir="ltr">${esc(l.ip_address || '—')}</td>
             </tr>`).join('') || '<tr><td colspan="5">هنوز ورودی ثبت نشده</td></tr>'}
           </tbody></table></div>
         </div>
@@ -521,7 +623,7 @@
         <div class="hub-stat"><div class="hub-stat__val">${a.partners ?? 0}</div><div class="hub-stat__label">بازاریاب</div></div>
         <div class="hub-stat"><div class="hub-stat__val">${a.logins_today ?? 0}</div><div class="hub-stat__label">ورود موفق امروز</div></div>
       </div>
-      <p class="hub-hint">آخرین ورود هر کاربر همین‌جا است. از این به‌روزرسانی، هر ورود موفق یا ناموفق با زمان و آی‌پی ثبت می‌شود.</p>
+      <p class="hub-hint">آخرین ورود هر کاربر همین‌جا است. از ردیف هر کاربر می‌توانید ایمیل بفرستید، برای بازاریاب تیکت باز کنید، یا لینک و کد بازیابی رمز را ایمیل کنید.</p>
       ${renderPeopleBlock(a.people || [], a.logins || [])}`;
   }
 
@@ -1039,6 +1141,11 @@
         <div class="hub-stat"><div class="hub-stat__val">${h.documents?.proforma || 0}</div><div class="hub-stat__label">پیش‌فاکتور</div></div>
         <div class="hub-stat"><div class="hub-stat__val">${h.documents?.invoice || 0}</div><div class="hub-stat__label">فاکتور</div></div>
       </div>
+      <div class="hub-actions" style="margin-bottom:16px">
+        <button type="button" class="hub-btn hub-btn--yellow" data-go="prices">فهرست قیمت</button>
+        <button type="button" class="hub-btn hub-btn--ghost" data-go="orders">سفارش جدید</button>
+        <button type="button" class="hub-btn hub-btn--ghost" data-go="tickets">تیکت جدید</button>
+      </div>
       <div class="hub-card" style="margin-bottom:16px">
         <div class="hub-card__head"><h3>لینک‌های شما</h3></div>
         <div class="hub-links">
@@ -1048,6 +1155,24 @@
             <button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" data-copy="${esc(h.loginUrl || '')}">کپی</button></div>
           <div><span>کد معرفی</span><code dir="ltr">${esc(h.code || '')}</code></div>
         </div>
+      </div>
+      <div class="hub-split">
+        <div class="hub-card">
+          <div class="hub-card__head"><h3>آخرین سفارش‌ها</h3></div>
+          <div class="hub-table-wrap"><table class="hub-table"><thead><tr><th>مشتری</th><th>خدمت</th><th>وضعیت</th></tr></thead><tbody>
+            ${(h.recentOrders || []).map(o => `<tr data-go="orders" data-go-order="${o.id}">
+              <td>${esc(o.client_name)}</td><td>${esc(o.service_title)}</td><td>${esc(ORDER_LABELS[o.status] || o.status)}</td>
+            </tr>`).join('') || '<tr><td colspan="3">هنوز سفارشی نیست. از فهرست قیمت شروع کنید.</td></tr>'}
+          </tbody></table></div>
+        </div>
+        <div class="hub-card">
+          <div class="hub-card__head"><h3>آخرین تیکت‌ها</h3></div>
+          <div class="hub-table-wrap"><table class="hub-table"><thead><tr><th>موضوع</th><th>وضعیت</th></tr></thead><tbody>
+            ${(h.recentTickets || []).map(t => `<tr data-go="tickets" data-go-ticket="${t.id}">
+              <td>${esc(t.subject)}</td><td>${esc(TICKET_LABELS[t.status] || t.status)}</td>
+            </tr>`).join('') || '<tr><td colspan="2">تیکتی نیست</td></tr>'}
+          </tbody></table></div>
+        </div>
       </div>`;
   }
 
@@ -1056,7 +1181,7 @@
     const flash = state.partnerFlash;
     return `
       <div class="hub-topbar"><h2>بازاریاب‌ها</h2></div>
-      <p class="hub-hint">از اینجا کاربر بازاریاب بسازید. با همان ایمیل وارد ${esc(origin + '/admin/')} می‌شود. اگر رمز را گم کرد، از صفحه ورود «رمز را فراموش کرده‌ام» را می‌زند. لینک معرفی را به او بدهید تا مشتری‌ها را بیاورد.</p>
+      <p class="hub-hint">از اینجا کاربر بازاریاب بسازید. با همان ایمیل وارد ${esc(origin + '/admin/')} می‌شود. از دکمه‌های هر ردیف، لینک بازیابی رمز، ایمیل، یا تیکت برایش می‌رود. لینک معرفی را به او بدهید تا مشتری‌ها را بیاورد.</p>
       ${flash ? `<div class="hub-card" style="margin-bottom:16px;padding:16px">بازاریاب ساخته شد.<br>ورود: <code dir="ltr">${esc(flash.loginUrl)}</code><br>ایمیل: <code dir="ltr">${esc(flash.email || '')}</code><br>رمز: <code dir="ltr">${esc(flash.password || '')}</code><br>لینک معرفی: <code dir="ltr">${esc(flash.referralUrl)}</code><br>این رمز را فقط همین‌جا می‌بینید. برای بازاریاب بفرستید. بعداً خودش هم می‌تواند از فراموشی رمز استفاده کند.</div>` : ''}
       <div class="hub-card" style="margin-bottom:16px">
         <div class="hub-card__head"><h3>کاربر جدید</h3></div>
@@ -1070,6 +1195,7 @@
           <div class="hub-field hub-field--full"><button type="submit" class="hub-btn hub-btn--yellow">ساخت بازاریاب</button></div>
         </form>
       </div>
+      ${renderCompose()}
       <div class="hub-card">
         <div class="hub-table-wrap"><table class="hub-table"><thead><tr>
           <th>نام</th><th>ایمیل</th><th>کد</th><th>سفارش</th><th>تیکت باز</th><th>وضعیت</th><th></th>
@@ -1078,15 +1204,20 @@
             const ref = origin + '/?ref=' + encodeURIComponent(p.code || '');
             return `<tr>
               <td>${esc(p.name)}${p.company ? `<div class="hub-path">${esc(p.company)}</div>` : ''}</td>
-              <td dir="ltr">${esc(p.email)}</td>
-              <td dir="ltr">${esc(p.code)}</td>
+              <td dir="ltr" class="hub-nowrap">${esc(p.email)}</td>
+              <td dir="ltr" class="hub-nowrap">${esc(p.code)}</td>
               <td>${p.orders_count}</td>
               <td>${p.tickets_open}</td>
               <td>${Number(p.is_active) ? 'فعال' : 'غیرفعال'}</td>
               <td>
-                <button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" data-copy="${esc(ref)}">کپی لینک</button>
-                <button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" data-reset-partner="${p.id}">رمز جدید</button>
-                <button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" data-toggle-partner="${p.id}" data-active="${Number(p.is_active) ? '0' : '1'}">${Number(p.is_active) ? 'غیرفعال' : 'فعال'}</button>
+                <div class="hub-actions">
+                  <button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" data-copy="${esc(ref)}">کپی لینک</button>
+                  <button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" data-reset-mail="${p.id}">ایمیل بازیابی</button>
+                  <button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" data-compose="mail" data-user="${p.id}" data-name="${esc(p.name)}" data-email="${esc(p.email)}">ایمیل</button>
+                  <button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" data-compose="ticket" data-user="${p.id}" data-name="${esc(p.name)}" data-email="${esc(p.email)}">تیکت</button>
+                  <button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" data-reset-partner="${p.id}">رمز در پنل</button>
+                  <button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" data-toggle-partner="${p.id}" data-active="${Number(p.is_active) ? '0' : '1'}">${Number(p.is_active) ? 'غیرفعال' : 'فعال'}</button>
+                </div>
               </td>
             </tr>`;
           }).join('') || '<tr><td colspan="7">هنوز بازاریابی نیست</td></tr>'}
@@ -1094,43 +1225,67 @@
       </div>`;
   }
 
+  function priceGroups(items) {
+    const groups = [];
+    const map = new Map();
+    (items || []).forEach(item => {
+      const name = item.category || 'عمومی';
+      if (!map.has(name)) {
+        const group = { name, items: [] };
+        map.set(name, group);
+        groups.push(group);
+      }
+      map.get(name).items.push(item);
+    });
+    return groups;
+  }
+
+  function priceCard(p) {
+    return `<article class="hub-price">
+      <h3>${esc(p.title)}</h3>
+      <div class="hub-price__amount">${esc(p.price_label)}</div>
+      <p>${esc(p.summary || '')}</p>
+      <button type="button" class="hub-btn hub-btn--yellow hub-btn--sm" data-order-item="${p.id}">درخواست برای مشتری</button>
+    </article>`;
+  }
+
   function renderPrices() {
     if (isPartnerUser()) {
+      const groups = priceGroups(state.prices);
       return `
         <div class="hub-topbar"><h2>فهرست قیمت</h2></div>
-        <p class="hub-hint">قیمت‌های «از» شروع همکاری است. خدمت‌های استعلامی را به‌صورت سفارش بفرستید تا قیمت دقیق جواب داده شود.</p>
-        <div class="hub-prices">
-          ${state.prices.map(p => `<article class="hub-price">
-            <div class="hub-path">${esc(p.category)}</div>
-            <h3>${esc(p.title)}</h3>
-            <div class="hub-price__amount">${esc(p.price_label)}</div>
-            <p>${esc(p.summary || '')}</p>
-            <button type="button" class="hub-btn hub-btn--yellow hub-btn--sm" data-order-item="${p.id}">درخواست برای مشتری</button>
-          </article>`).join('') || '<p>فهرست قیمت خالی است</p>'}
-        </div>`;
+        <p class="hub-hint">قیمت‌های «از» شروع همکاری است. خدمت‌های استعلامی را به‌صورت سفارش بفرستید و لوگو، تصویر یا PDF را کنار همان سفارش بگذارید.</p>
+        ${groups.map(g => `<h3 class="hub-group">${esc(g.name)}</h3><div class="hub-prices">${g.items.map(priceCard).join('')}</div>`).join('') || '<p>فهرست قیمت خالی است</p>'}`;
     }
+    const edit = state.priceEdit;
     return `
       <div class="hub-topbar"><h2>فهرست قیمت</h2></div>
-      <p class="hub-hint">این فهرست را بازاریاب‌ها می‌بینند. قیمت را همان‌طور بنویسید که باید به مشتری گفته شود.</p>
+      <p class="hub-hint">این فهرست را بازاریاب‌ها، دسته‌بندی‌شده، می‌بینند. قیمت را همان‌طور بنویسید که باید به مشتری گفته شود.</p>
       <div class="hub-card" style="margin-bottom:16px">
         <form id="priceForm" class="hub-form-grid" style="padding:16px">
-          <div class="hub-field"><label>عنوان خدمت</label><input name="title" required></div>
-          <div class="hub-field"><label>دسته</label><input name="category" placeholder="طراحی سایت"></div>
-          <div class="hub-field"><label>قیمت نمایشی</label><input name="price_label" placeholder="از ۹۹ دلار یا استعلام" required></div>
-          <div class="hub-field"><label>عدد، اگر دارد</label><input name="amount" dir="ltr" inputmode="decimal"></div>
-          <div class="hub-field hub-field--full"><label>توضیح</label><textarea name="summary"></textarea></div>
-          <div class="hub-field hub-field--full"><button class="hub-btn hub-btn--yellow" type="submit">افزودن به فهرست</button></div>
+          <div class="hub-field"><label>عنوان خدمت</label><input name="title" required value="${esc(edit?.title || '')}"></div>
+          <div class="hub-field"><label>دسته</label><input name="category" placeholder="طراحی سایت" value="${esc(edit?.category || '')}"></div>
+          <div class="hub-field"><label>قیمت نمایشی</label><input name="price_label" placeholder="از ۹۹ دلار یا استعلام" required value="${esc(edit?.price_label || '')}"></div>
+          <div class="hub-field"><label>عدد، اگر دارد</label><input name="amount" dir="ltr" inputmode="decimal" value="${edit?.amount ?? ''}"></div>
+          <div class="hub-field hub-field--full"><label>توضیح</label><textarea name="summary">${esc(edit?.summary || '')}</textarea></div>
+          <div class="hub-field hub-field--full hub-actions">
+            <button class="hub-btn hub-btn--yellow" type="submit">${edit ? 'ذخیره تغییر' : 'افزودن به فهرست'}</button>
+            ${edit ? '<button class="hub-btn hub-btn--ghost" type="button" id="cancelPriceEdit">انصراف</button>' : ''}
+          </div>
         </form>
       </div>
-      <div class="hub-card"><div class="hub-table-wrap"><table class="hub-table"><thead><tr>
-        <th>خدمت</th><th>دسته</th><th>قیمت</th><th>وضعیت</th><th></th>
+      ${priceGroups(state.prices).map(g => `<h3 class="hub-group">${esc(g.name)}</h3><div class="hub-card" style="margin-bottom:16px"><div class="hub-table-wrap"><table class="hub-table"><thead><tr>
+        <th>خدمت</th><th>توضیح</th><th>قیمت</th><th>وضعیت</th><th></th>
       </tr></thead><tbody>
-        ${state.prices.map(p => `<tr>
-          <td>${esc(p.title)}</td><td>${esc(p.category)}</td><td>${esc(p.price_label)}</td>
+        ${g.items.map(p => `<tr>
+          <td>${esc(p.title)}</td><td>${esc(p.summary || '—')}</td><td>${esc(p.price_label)}</td>
           <td>${Number(p.is_active) ? 'فعال' : 'مخفی'}</td>
-          <td><button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" data-toggle-price="${p.id}" data-active="${Number(p.is_active) ? '0' : '1'}">${Number(p.is_active) ? 'مخفی کن' : 'نشان بده'}</button></td>
-        </tr>`).join('') || '<tr><td colspan="5">موردی نیست</td></tr>'}
-      </tbody></table></div></div>`;
+          <td><div class="hub-actions">
+            <button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" data-edit-price="${p.id}">ویرایش</button>
+            <button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" data-toggle-price="${p.id}" data-active="${Number(p.is_active) ? '0' : '1'}">${Number(p.is_active) ? 'مخفی کن' : 'نشان بده'}</button>
+          </div></td>
+        </tr>`).join('')}
+      </tbody></table></div></div>`).join('') || '<p>موردی نیست</p>'}`;
   }
 
   function renderOrders() {
@@ -1145,6 +1300,7 @@
           <div class="hub-field"><label>تلفن مشتری</label><input name="client_phone" dir="ltr"></div>
           <div class="hub-field"><label>ایمیل مشتری</label><input name="client_email" type="email" dir="ltr"></div>
           <div class="hub-field hub-field--full"><label>توضیح نیاز</label><textarea name="details" required placeholder="شهر، زبان سایت، مهلت، یا مشخصات کالا"></textarea></div>
+          <div class="hub-field hub-field--full"><label>فایل مشتری</label><input name="files" type="file" multiple accept="image/jpeg,image/png,image/webp,image/gif,application/pdf"><p class="hub-hint hub-hint--in">لوگو، تصویر یا PDF. حداکثر ۵ فایل و هر کدام تا ۸ مگابایت.</p></div>
           <div class="hub-field hub-field--full"><button class="hub-btn hub-btn--yellow" type="submit">ثبت سفارش</button></div>
         </form>
       </div>` : '';
@@ -1159,9 +1315,11 @@
             <div class="hub-note__meta">${esc(m.author_name)} — ${fmtDate(m.created_at)}</div>${esc(m.body)}
           </div>`).join('') || '<p class="hub-hint hub-hint--in">هنوز پیامی نیست</p>'}
           ${(state.orderThread.documents || []).map(d => `<p class="hub-hint hub-hint--in">${d.kind === 'invoice' ? 'فاکتور' : 'پیش‌فاکتور'} ${esc(d.number)} — ${esc(DOC_LABELS[d.status] || d.status)}</p>`).join('')}
+          ${(state.orderThread.files || []).map(f => `<p class="hub-hint hub-hint--in"><a href="/api/orders/${state.openOrder}/files/${f.id}" target="_blank" rel="noopener">${esc(f.original_name)}</a></p>`).join('')}
         </div>
         <form id="orderReply" style="padding:16px">
           <div class="hub-field"><textarea name="body" required placeholder="پیام درباره قیمت، خرید یا تحویل…"></textarea></div>
+          <div class="hub-field"><label>افزودن تصویر یا PDF</label><input name="files" type="file" multiple accept="image/jpeg,image/png,image/webp,image/gif,application/pdf"></div>
           <button class="hub-btn hub-btn--yellow hub-btn--sm" type="submit">ارسال پیام</button>
         </form>
       </div>` : ''}
@@ -1227,11 +1385,60 @@
       </div>` : '';
     return `
       <div class="hub-topbar"><h2>تیکت‌ها</h2></div>
-      <p class="hub-hint">سؤال قیمت، ابهام مشتری، یا پیگیری را اینجا بنویسید. پاسخ در همین صفحه می‌ماند.</p>
+      <p class="hub-hint">${isPartnerUser() ? 'سؤال قیمت، ابهام مشتری، یا پیگیری را اینجا بنویسید. پاسخ در همین صفحه می‌ماند.' : 'پاسخ تیکت‌ها همین‌جا می‌ماند. برای تیکت تازه، از «بازاریاب‌ها» یا «ورود و کاربران» روی دکمه تیکت بزنید تا برای او ایمیل هم برود.'}</p>
       ${pane}${create}${ticket ? '' : list}`;
   }
 
   function bindGrowthEvents() {
+    document.querySelectorAll('[data-compose]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        state.compose = {
+          kind: btn.dataset.compose,
+          userId: btn.dataset.user,
+          name: btn.dataset.name || '',
+          email: btn.dataset.email || ''
+        };
+        renderView();
+      });
+    });
+    document.getElementById('cancelCompose')?.addEventListener('click', () => {
+      state.compose = null;
+      renderView();
+    });
+    document.getElementById('composeForm')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const c = state.compose;
+      if (!c) return;
+      const fd = new FormData(e.target);
+      try {
+        if (c.kind === 'ticket') {
+          await api('/tickets', { method: 'POST', body: { partner_id: Number(c.userId), subject: fd.get('subject'), body: fd.get('body') } });
+          alert('تیکت ثبت شد و برای بازاریاب ایمیل رفت');
+        } else {
+          await api('/users/' + c.userId + '/mail', { method: 'POST', body: { subject: fd.get('subject'), body: fd.get('body') } });
+          alert('ایمیل فرستاده شد');
+        }
+        state.compose = null;
+        loadView();
+      } catch (err) { alert(err.message); }
+    });
+    document.querySelectorAll('[data-reset-mail]').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        if (!window.confirm('لینک و کد بازیابی برای این کاربر ایمیل شود؟')) return;
+        try {
+          const r = await api('/users/' + btn.dataset.resetMail + '/reset-mail', { method: 'POST', body: {} });
+          alert(r.message || 'ایمیل بازیابی فرستاده شد');
+        } catch (err) { alert(err.message); }
+      });
+    });
+    document.querySelectorAll('[data-go]').forEach(row => {
+      row.addEventListener('click', () => {
+        if (row.dataset.goOrder) state.openOrder = row.dataset.goOrder;
+        if (row.dataset.goTicket) state.openTicket = row.dataset.goTicket;
+        state.view = row.dataset.go;
+        renderShell();
+      });
+    });
     document.querySelectorAll('[data-copy]').forEach(btn => {
       btn.addEventListener('click', () => copyText(btn.dataset.copy || '', btn));
     });
@@ -1272,13 +1479,32 @@
     document.getElementById('priceForm')?.addEventListener('submit', async (e) => {
       e.preventDefault();
       const fd = new FormData(e.target);
+      const payload = {
+        title: fd.get('title'), category: fd.get('category'), price_label: fd.get('price_label'),
+        amount: fd.get('amount'), summary: fd.get('summary'),
+        is_active: state.priceEdit ? !!Number(state.priceEdit.is_active) : true,
+        sort_order: state.priceEdit?.sort_order || 0
+      };
       try {
-        await api('/prices', { method: 'POST', body: {
-          title: fd.get('title'), category: fd.get('category'), price_label: fd.get('price_label'),
-          amount: fd.get('amount'), summary: fd.get('summary'), is_active: true
-        } });
+        if (state.priceEdit) {
+          await api('/prices/' + state.priceEdit.id, { method: 'PATCH', body: payload });
+          state.priceEdit = null;
+        } else {
+          await api('/prices', { method: 'POST', body: payload });
+        }
         loadView();
       } catch (err) { alert(err.message); }
+    });
+    document.querySelectorAll('[data-edit-price]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        state.priceEdit = state.prices.find(p => String(p.id) === btn.dataset.editPrice) || null;
+        renderView();
+        document.getElementById('priceForm')?.scrollIntoView({ block: 'nearest' });
+      });
+    });
+    document.getElementById('cancelPriceEdit')?.addEventListener('click', () => {
+      state.priceEdit = null;
+      renderView();
     });
     document.querySelectorAll('[data-toggle-price]').forEach(btn => {
       btn.addEventListener('click', async () => {
@@ -1305,10 +1531,15 @@
       e.preventDefault();
       const fd = new FormData(e.target);
       try {
-        await api('/orders', { method: 'POST', body: {
+        const created = await api('/orders', { method: 'POST', body: {
           client_name: fd.get('client_name'), price_item_id: Number(fd.get('price_item_id')),
           client_phone: fd.get('client_phone'), client_email: fd.get('client_email'), details: fd.get('details')
         } });
+        try {
+          await uploadOrderFiles(created.id, e.target);
+        } catch (fileErr) {
+          alert('سفارش ثبت شد، ولی فایل نرفت: ' + fileErr.message);
+        }
         e.target.reset();
         await loadOrders();
         renderView();
@@ -1365,6 +1596,7 @@
       const fd = new FormData(e.target);
       try {
         await api('/orders/' + state.openOrder + '/messages', { method: 'POST', body: { body: fd.get('body') } });
+        await uploadOrderFiles(state.openOrder, e.target);
         loadView();
       } catch (err) { alert(err.message); }
     });

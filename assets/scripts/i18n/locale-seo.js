@@ -8,7 +8,7 @@
     fa: {
       home: {
         seoTitle: 'بیزدوار گروپ | طراحی سایت، بازاریابی دیجیتال و تامین صنعتی',
-        seoDescription: 'بیزدوار گروپ: مشاوره رایگان — طراحی سایت از $99 (Fast Studio)، بازاریابی دیجیتال، FXGuard CRM و تامین VEGA، UWT، Prosense و Liqui Moly. واتساپ و فرم تماس — ایران، ترکیه، ارمنستان و دبی.',
+        seoDescription: 'طراحی سایت، بازاریابی دیجیتال و تامین صنعتی. مشاوره رایگان — ایران، ترکیه، ارمنستان و دبی.',
         seoKeywords: 'بیزدوار, Bizdavar Group, طراحی سایت, بازاریابی دیجیتال, FXGuard, VEGA, UWT, Prosense, Liqui Moly, Fast Web Studio'
       },
       about: {
@@ -270,7 +270,7 @@
     tr: {
       home: {
         seoTitle: 'Bizdavar Group | Web tasarım, dijital pazarlama ve endüstriyel tedarik',
-        seoDescription: 'Bizdavar Group: ücretsiz danışmanlık — $99’dan web tasarım (Fast Studio), dijital pazarlama, FXGuard CRM, VEGA, UWT, Prosense ve Liqui Moly tedariki. WhatsApp ve form — İran, Türkiye, Ermenistan ve Dubai.',
+        seoDescription: 'Web tasarım, dijital pazarlama ve endüstriyel tedarik. Ücretsiz danışmanlık — İran, Türkiye, Ermenistan ve Dubai.',
         seoKeywords: 'Bizdavar, web tasarım İstanbul, dijital pazarlama, FXGuard, VEGA, UWT, Prosense, Liqui Moly, Fast Web Studio'
       },
       about: {
@@ -604,7 +604,7 @@
     en: {
       home: {
         seoTitle: 'Bizdavar Group | Web design, digital marketing & industrial supply',
-        seoDescription: 'Bizdavar Group: free consultation — websites from $99 (Fast Studio), digital marketing, FXGuard CRM, plus VEGA, UWT, Prosense and Liqui Moly supply. WhatsApp and contact form — Iran, Turkey, Armenia and Dubai.',
+        seoDescription: 'Web design, digital marketing and industrial supply. Free consultation — Iran, Turkey, Armenia and Dubai.',
         seoKeywords: 'Bizdavar, web design Istanbul, digital marketing, FXGuard, VEGA, UWT, Prosense, Liqui Moly, Fast Web Studio'
       },
       about: {

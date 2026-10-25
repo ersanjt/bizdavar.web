@@ -136,30 +136,11 @@ if ($method === 'POST' && $uri === '/auth/forgot') {
         Response::error('تعداد درخواست زیاد است. کمی بعد دوباره تلاش کنید.', 429);
     }
     bizhub_ensure_mail_tables($pdo);
-    $stmt = $pdo->prepare('SELECT id, email FROM users WHERE email = ? AND is_active = 1 LIMIT 1');
+    $stmt = $pdo->prepare('SELECT id FROM users WHERE email = ? AND is_active = 1 LIMIT 1');
     $stmt->execute([$email]);
-    $user = $stmt->fetch();
-    if ($user) {
-        $pdo->prepare('DELETE FROM password_resets WHERE user_id = ? OR expires_at < NOW()')->execute([(int) $user['id']]);
-        $token = bin2hex(random_bytes(32));
-        $code = str_pad((string) random_int(0, 999999), 6, '0', STR_PAD_LEFT);
-        $pdo->prepare('INSERT INTO password_resets (user_id, token_hash, code_hash, expires_at) VALUES (?, ?, ?, DATE_ADD(NOW(), INTERVAL 1 HOUR))')
-            ->execute([(int) $user['id'], hash('sha256', $token), hash('sha256', $code)]);
-        $link = bizhub_app_origin($cfg) . '/admin/?reset=' . $token;
-        bizhub_mail(
-            $cfg,
-            (string) $user['email'],
-            'بازیابی رمز بیزداور',
-            '',
-            [
-                'heading' => 'بازیابی رمز',
-                'intro' => 'درخواست عوض کردن رمز برای این ایمیل ثبت شد. لینک و کد، هر دو یک ساعت معتبرند.',
-                'code' => $code,
-                'button_label' => 'باز کردن صفحه بازیابی',
-                'button_url' => $link,
-                'note' => 'اگر شما این درخواست را نداده‌اید، این ایمیل را نادیده بگیرید. رمز فعلی عوض نمی‌شود.',
-            ]
-        );
+    $userId = (int) $stmt->fetchColumn();
+    if ($userId > 0) {
+        bizhub_send_password_reset($pdo, $cfg, $userId);
     }
     Response::json(['ok' => true, 'message' => 'اگر این ایمیل در BizHub باشد، کد تأیید و لینک بازیابی ارسال شد. پوشه هرزنامه را هم ببینید.']);
 }

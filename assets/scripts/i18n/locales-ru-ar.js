@@ -35,7 +35,7 @@
     home: {
       crumb: 'Главная',
       seoTitle: 'Bizdavar Group | веб-дизайн, цифровой маркетинг и промышленные поставки',
-      seoDescription: 'Bizdavar Group: сайты Fast Web Studio, цифровой маркетинг и SMM, FXGuard WhatsApp CRM, поставки VEGA, Prosense и Liqui Moly. Бесплатная консультация.',
+      seoDescription: 'Веб-дизайн, цифровой маркетинг и промышленные поставки. Бесплатная консультация — Иран, Турция, Армения и Дубай.',
       seoKeywords: 'Bizdavar, веб-дизайн Стамбул, цифровой маркетинг, FXGuard, VEGA, Prosense, Liqui Moly, Fast Web Studio'
     },
     about: {
@@ -391,7 +391,7 @@
     home: {
       crumb: 'الرئيسية',
       seoTitle: 'Bizdavar Group | تصميم مواقع وتسويق رقمي وتوريد صناعي',
-      seoDescription: 'Bizdavar Group: مواقع Fast Web Studio، تسويق رقمي وSMM، FXGuard WhatsApp CRM، وتوريد VEGA وProsense وLiqui Moly. استشارة مجانية.',
+      seoDescription: 'تصميم مواقع، تسويق رقمي وتوريد صناعي. استشارة مجانية — إيران، تركيا، أرمينيا ودبي.',
       seoKeywords: 'Bizdavar, تصميم مواقع إسطنبول, تسويق رقمي, FXGuard, VEGA, Prosense, Liqui Moly, Fast Web Studio'
     },
     about: {

@@ -1091,29 +1091,27 @@
   };
 
   const WEB_SAMPLES = [
-    { name: 'Marvispace', href: 'pages/marvispace.html', logo: 'assets/images/partners/marvispace.svg', tone: 'violet', layout: 'store' },
-    { name: 'Supplify', href: 'pages/supplify-trade.html', logo: 'assets/images/partners/supplify-trade.svg', tone: 'green', layout: 'corp' },
-    { name: 'Kaya One', href: 'pages/kaya-one.html', logo: 'assets/images/partners/kaya-one.svg', tone: 'sand', layout: 'corp' },
-    { name: 'SMM Turk', href: 'pages/smm-turk.html', logo: 'assets/images/partners/smm-turk.svg', tone: 'rose', layout: 'panel' },
-    { name: 'FXGuard', href: 'pages/fxguard-exchange.html', logo: 'assets/images/partners/fxguard-exchange.svg', tone: 'blue', layout: 'panel' },
-    { name: 'Fast Studio', href: 'pages/fast.html', logo: 'assets/images/partners/fast-studio.png', tone: 'navy', layout: 'corp' },
-    { name: 'Arian Pumps', href: 'https://arianpumps.com', logo: 'assets/images/partners/arian-pumps.png', tone: 'green', layout: 'corp' }
+    { name: 'Marvispace', href: 'pages/marvispace.html', logo: 'assets/images/partners/marvispace.svg', shot: 'assets/images/content/site-shots/marvispace.jpg', tone: 'violet', layout: 'store' },
+    { name: 'Supplify', href: 'pages/supplify-trade.html', logo: 'assets/images/partners/supplify-trade.svg', shot: 'assets/images/content/site-shots/supplify.jpg', tone: 'green', layout: 'corp' },
+    { name: 'Kaya One', href: 'pages/kaya-one.html', logo: 'assets/images/partners/kaya-one.svg', shot: 'assets/images/content/site-shots/kaya-one.jpg', tone: 'sand', layout: 'corp' },
+    { name: 'SMM Turk', href: 'pages/smm-turk.html', logo: 'assets/images/partners/smm-turk.svg', shot: 'assets/images/content/site-shots/smm-turk.jpg', tone: 'rose', layout: 'panel' },
+    { name: 'FXGuard', href: 'pages/fxguard-exchange.html', logo: 'assets/images/partners/fxguard-exchange.svg', shot: 'assets/images/content/site-shots/fxguard-exchange.jpg', tone: 'blue', layout: 'panel' },
+    { name: 'Fast Studio', href: 'pages/fast.html', logo: 'assets/images/partners/fast-studio.png', shot: 'assets/images/content/site-shots/fast-studio.jpg', tone: 'navy', layout: 'corp' },
+    { name: 'Arian Pumps', href: 'https://arianpumps.com', logo: 'assets/images/partners/arian-pumps.png', shot: 'assets/images/content/site-shots/arian-pumps.jpg', tone: 'green', layout: 'corp' }
   ];
 
   const APP_SAMPLES = [
-    { name: 'Marvi Society', href: 'pages/marvi-society.html', logo: 'assets/images/partners/marvi-society.png', tone: 'violet', layout: 'app' },
-    { name: 'FXGuard', href: 'pages/fxguard.html', logo: 'assets/images/products/fxguard/fxguard-logo.svg', tone: 'green', layout: 'app' },
-    { name: 'FXGuard Accounting', href: 'pages/fxguard-accounting.html', logo: 'assets/images/partners/fxguard-accounting.svg', tone: 'sand', layout: 'panel' },
-    { name: 'BizSwap', href: 'pages/bizswap.html', logo: 'assets/images/products/bizswap/bizswap-logo.svg', tone: 'rose', layout: 'app' },
-    { name: 'GooPay AI', href: 'pages/portfolio.html', logo: 'assets/images/partners/goopay-ai.svg', tone: 'blue', layout: 'panel' }
+    { name: 'Marvi Society', href: 'pages/marvi-society.html', logo: 'assets/images/partners/marvi-society.png', shot: 'assets/images/content/site-shots/marvi-society.jpg', tone: 'violet', layout: 'app' },
+    { name: 'FXGuard', href: 'pages/fxguard.html', logo: 'assets/images/products/fxguard/fxguard-logo.svg', shot: 'assets/images/content/site-shots/fxguard.jpg', tone: 'green', layout: 'app' },
+    { name: 'FXGuard Accounting', href: 'pages/fxguard-accounting.html', logo: 'assets/images/partners/fxguard-accounting.svg', shot: 'assets/images/content/site-shots/fxguard-accounting.jpg', tone: 'sand', layout: 'panel' },
+    { name: 'BizSwap', href: 'pages/bizswap.html', logo: 'assets/images/products/bizswap/bizswap-logo.svg', shot: 'assets/images/content/site-shots/bizswap.jpg', tone: 'rose', layout: 'app' }
   ];
 
   const SMM_SAMPLES = [
-    { name: 'Biztejarat', href: 'pages/biztejarat.html', logo: 'assets/images/partners/biztejarat.svg', tone: 'violet', layout: 'app' },
-    { name: 'SMM Turk', href: 'pages/smm-turk.html', logo: 'assets/images/partners/smm-turk.svg', tone: 'rose', layout: 'panel' },
-    { name: 'Karen Leather', href: 'https://karenleather.com', logo: 'assets/images/partners/karen-leather.png', tone: 'sand', layout: 'store' },
-    { name: 'NIK Aesthetic', href: 'https://nikaesthetic.com', logo: 'assets/images/partners/nikaesthetic.png', tone: 'green', layout: 'corp' },
-    { name: 'Paparosi', href: 'https://paparosi.co', logo: 'assets/images/partners/paparosi.png', tone: 'blue', layout: 'store' }
+    { name: 'SMM Turk', href: 'pages/smm-turk.html', logo: 'assets/images/partners/smm-turk.svg', shot: 'assets/images/content/site-shots/smm-turk.jpg', tone: 'rose', layout: 'panel' },
+    { name: 'Karen Leather', href: 'https://karenleather.com', logo: 'assets/images/partners/karen-leather.png', shot: 'assets/images/content/site-shots/karen-leather.jpg', tone: 'sand', layout: 'store' },
+    { name: 'NIK Aesthetic', href: 'https://nikaesthetic.com', logo: 'assets/images/partners/nikaesthetic.png', shot: 'assets/images/content/site-shots/nik-aesthetic.jpg', tone: 'green', layout: 'corp' },
+    { name: 'Paparosi', href: 'https://paparosi.co', logo: 'assets/images/partners/paparosi.png', shot: 'assets/images/content/site-shots/paparosi.jpg', tone: 'blue', layout: 'store' }
   ];
 
   const WAVE_TOP = '<svg viewBox="0 0 1440 72" preserveAspectRatio="none" aria-hidden="true"><path fill="#5b4dff" d="M0 72C220 18 460 64 740 30C1020 0 1220 52 1440 16V72H0Z"/><path fill="#0c1024" d="M0 72C260 28 500 72 760 40C1020 8 1240 58 1440 26V72H0Z"/></svg>';
@@ -1151,6 +1149,9 @@
   }
 
   function screenMarkup(item) {
+    if (item.shot) {
+      return `<div class="svc-ui svc-ui--shot"><img src="${path(item.shot)}" alt="" width="390" height="780" loading="lazy" decoding="async"></div>`;
+    }
     const brand = item.logo
       ? `<img src="${path(item.logo)}" alt="" data-mark="${escStage(item.name)}" width="120" height="32" loading="lazy" decoding="async">`
       : `<span>${escStage(item.name)}</span>`;

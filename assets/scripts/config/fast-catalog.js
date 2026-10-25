@@ -191,16 +191,16 @@ window.FAST_CATALOG = {
 
   showcases: [
     { name: 'BZ Diamond', category: 'فروشگاه جواهرات', slug: 'pages/bz-diamond', internal: true, hidden: true, thumb: 'assets/images/partners/zeddiamond.png' },
-    { name: 'Supplify Trade', category: 'تجارت بین‌المللی B2B', slug: 'pages/supplify-trade', internal: true, thumb: 'assets/images/partners/supplify-trade.svg' },
-    { name: 'Kaya One AG', category: 'تجارت سوئیسی B2B', slug: 'pages/kaya-one', internal: true, thumb: 'assets/images/partners/kaya-one.svg' },
-    { name: 'SMM Turk', category: 'پنل SMM', slug: 'pages/smm-turk', internal: true, thumb: 'assets/images/partners/smm-turk.svg' },
-    { name: 'FXGuard Exchange', category: 'فین‌تک / تبادل ارز', slug: 'pages/fxguard-exchange', internal: true, thumb: 'assets/images/partners/fxguard-exchange.svg' },
-    { name: 'Karen Leather', category: 'چرم و مد', domain: 'karenleather.com', internal: false, thumb: 'assets/images/partners/karen-leather.png' },
-    { name: 'Marvelous Holding', category: 'هلدینگ', domain: 'marvelousholding.com', internal: false, thumb: 'assets/images/partners/marvelous-holding.png' },
-    { name: 'NIK Aesthetic', category: 'کلینیک زیبایی', domain: 'nikaesthetic.com', internal: false, thumb: 'assets/images/partners/nikaesthetic.png' },
-    { name: 'Paparosi', category: 'برند تجاری', domain: 'paparosi.co', internal: false, thumb: 'assets/images/partners/paparosi.png' },
-    { name: 'Arian Pumps', category: 'B2B صنعتی', domain: 'arianpumps.com', internal: false, thumb: 'assets/images/content/services-web-mockup.svg' },
-    { name: 'ASIL', category: 'خوراک اسب و دام · دبی', slug: 'pages/asil-feed', internal: true, thumb: 'assets/images/partners/asil-feed.webp' }
+    { name: 'Supplify Trade', category: 'تجارت بین‌المللی B2B', slug: 'pages/supplify-trade', internal: true, thumb: 'assets/images/partners/supplify-trade.svg', shot: 'assets/images/content/site-shots/supplify.jpg' },
+    { name: 'Kaya One AG', category: 'تجارت سوئیسی B2B', slug: 'pages/kaya-one', internal: true, thumb: 'assets/images/partners/kaya-one.svg', shot: 'assets/images/content/site-shots/kaya-one.jpg' },
+    { name: 'SMM Turk', category: 'پنل SMM', slug: 'pages/smm-turk', internal: true, thumb: 'assets/images/partners/smm-turk.svg', shot: 'assets/images/content/site-shots/smm-turk.jpg' },
+    { name: 'FXGuard Exchange', category: 'فین‌تک / تبادل ارز', slug: 'pages/fxguard-exchange', internal: true, thumb: 'assets/images/partners/fxguard-exchange.svg', shot: 'assets/images/content/site-shots/fxguard-exchange.jpg' },
+    { name: 'Karen Leather', category: 'چرم و مد', domain: 'karenleather.com', internal: false, thumb: 'assets/images/partners/karen-leather.png', shot: 'assets/images/content/site-shots/karen-leather.jpg' },
+    { name: 'Marvelous Holding', category: 'هلدینگ', domain: 'marvelousholding.com', internal: false, thumb: 'assets/images/partners/marvelous-holding.png', shot: 'assets/images/content/site-shots/marvelous-holding.jpg' },
+    { name: 'NIK Aesthetic', category: 'کلینیک زیبایی', domain: 'nikaesthetic.com', internal: false, thumb: 'assets/images/partners/nikaesthetic.png', shot: 'assets/images/content/site-shots/nik-aesthetic.jpg' },
+    { name: 'Paparosi', category: 'برند تجاری', domain: 'paparosi.co', internal: false, thumb: 'assets/images/partners/paparosi.png', shot: 'assets/images/content/site-shots/paparosi.jpg' },
+    { name: 'Arian Pumps', category: 'B2B صنعتی', domain: 'arianpumps.com', internal: false, thumb: 'assets/images/partners/arian-pumps.png', shot: 'assets/images/content/site-shots/arian-pumps.jpg' },
+    { name: 'ASIL', category: 'خوراک اسب و دام · دبی', slug: 'pages/asil-feed', internal: true, thumb: 'assets/images/partners/asil-feed.webp', shot: 'assets/images/content/site-shots/asil-feed.jpg' }
   ],
 
   faq: [

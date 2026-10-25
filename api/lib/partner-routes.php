@@ -29,6 +29,10 @@ if ($method === 'GET' && $uri === '/partner/home') {
     foreach ($docCounts->fetchAll() as $item) {
         $docs[(string) $item['kind']] = (int) $item['c'];
     }
+    $recentOrders = $pdo->prepare('SELECT id, client_name, service_title, status, created_at FROM partner_orders WHERE partner_id = ? ORDER BY id DESC LIMIT 5');
+    $recentOrders->execute([(int) $actor['id']]);
+    $recentTickets = $pdo->prepare('SELECT id, subject, status, updated_at FROM tickets WHERE partner_id = ? ORDER BY updated_at DESC LIMIT 5');
+    $recentTickets->execute([(int) $actor['id']]);
     Response::json([
         'ok' => true,
         'name' => (string) ($actor['name'] ?? ''),
@@ -36,9 +40,39 @@ if ($method === 'GET' && $uri === '/partner/home') {
         'referralUrl' => $origin . '/?ref=' . rawurlencode((string) $row['code']),
         'loginUrl' => $origin . '/admin/',
         'orders' => $byStatus,
+        'recentOrders' => $recentOrders->fetchAll(),
+        'recentTickets' => $recentTickets->fetchAll(),
         'ticketsOpen' => (int) $openTickets->fetchColumn(),
         'documents' => $docs,
     ]);
+}
+
+if ($method === 'POST' && ($p = route_match($uri, '/users/{id}/reset-mail'))) {
+    Auth::requireRole(['admin']);
+    if (!bizhub_send_password_reset($pdo, $cfg, (int) $p['id'])) {
+        Response::error('این کاربر فعال نیست', 422);
+    }
+    Response::json(['ok' => true, 'message' => 'ایمیل بازیابی، با لینک و کد تأیید، فرستاده شد.']);
+}
+
+if ($method === 'POST' && ($p = route_match($uri, '/users/{id}/mail'))) {
+    Auth::requireRole(['admin']);
+    $body = bizhub_json_body();
+    $subject = str_replace(["\r", "\n"], ' ', bizhub_clip(trim((string) ($body['subject'] ?? '')), 180));
+    $text = bizhub_clip(trim((string) ($body['body'] ?? '')), 4000);
+    if ($subject === '' || $text === '') {
+        Response::error('موضوع و متن ایمیل لازم است', 422);
+    }
+    $email = bizhub_user_email($pdo, (int) $p['id']);
+    if ($email === '') {
+        Response::error('این کاربر ایمیل فعال ندارد', 422);
+    }
+    bizhub_mail($cfg, $email, $subject, $text, [
+        'heading' => $subject,
+        'button_label' => 'باز کردن BizHub',
+        'button_url' => $origin . '/admin/',
+    ]);
+    Response::json(['ok' => true, 'message' => 'ایمیل فرستاده شد.']);
 }
 
 if ($method === 'GET' && $uri === '/partners') {
@@ -177,11 +211,16 @@ if ($method === 'POST' && $uri === '/prices') {
 if ($method === 'PATCH' && ($p = route_match($uri, '/prices/{id}'))) {
     Auth::requireRole(['admin']);
     $body = bizhub_json_body();
+    $title = bizhub_clip(trim((string) ($body['title'] ?? '')), 180);
+    $label = bizhub_clip(trim((string) ($body['price_label'] ?? '')), 80);
+    if ($title === '' || $label === '') {
+        Response::error('عنوان و قیمت لازم است', 422);
+    }
     $amount = array_key_exists('amount', $body) && $body['amount'] !== '' && $body['amount'] !== null ? (float) $body['amount'] : null;
     $pdo->prepare('UPDATE price_items SET title = ?, category = ?, summary = ?, price_label = ?, amount = ?, is_active = ?, sort_order = ? WHERE id = ?')
         ->execute([
-            bizhub_clip(trim((string) ($body['title'] ?? '')), 180),
-            bizhub_clip(trim((string) ($body['category'] ?? 'services')), 80),
+            $title,
+            bizhub_clip(trim((string) ($body['category'] ?? '')), 80) ?: 'عمومی',
             bizhub_clip(trim((string) ($body['summary'] ?? '')), 500),
             bizhub_clip(trim((string) ($body['price_label'] ?? '')), 80),
             $amount,
@@ -301,19 +340,28 @@ if ($method === 'GET' && $uri === '/tickets') {
 }
 
 if ($method === 'POST' && $uri === '/tickets') {
-    Auth::requireRole(['partner']);
+    Auth::requireRole(['admin', 'sales', 'partner']);
     if (!RateLimit::check($pdo, 'user:' . (int) $actor['id'], 'partner_ticket', 20, 3600)) {
         Response::error('تعداد تیکت‌ها زیاد است. کمی بعد دوباره تلاش کنید.', 429);
     }
     $body = bizhub_json_body();
-    $subject = bizhub_clip(trim((string) ($body['subject'] ?? '')), 180);
+    $subject = str_replace(["\r", "\n"], ' ', bizhub_clip(trim((string) ($body['subject'] ?? '')), 180));
     $text = bizhub_clip(trim((string) ($body['body'] ?? '')), 4000);
     if ($subject === '' || $text === '') {
         Response::error('موضوع و متن تیکت لازم است', 422);
     }
+    $partnerId = (int) $actor['id'];
+    if (!$isPartner) {
+        $partnerId = (int) ($body['partner_id'] ?? 0);
+        $who = $pdo->prepare("SELECT id FROM users WHERE id = ? AND role = 'partner' AND is_active = 1");
+        $who->execute([$partnerId]);
+        if (!$who->fetch()) {
+            Response::error('بازاریاب پیدا نشد', 422);
+        }
+    }
     $pdo->beginTransaction();
     try {
-        $pdo->prepare('INSERT INTO tickets (partner_id, subject) VALUES (?, ?)')->execute([(int) $actor['id'], $subject]);
+        $pdo->prepare('INSERT INTO tickets (partner_id, subject) VALUES (?, ?)')->execute([$partnerId, $subject]);
         $id = (int) $pdo->lastInsertId();
         $pdo->prepare('INSERT INTO ticket_messages (ticket_id, user_id, body) VALUES (?, ?, ?)')
             ->execute([$id, (int) $actor['id'], $text]);
@@ -324,13 +372,79 @@ if ($method === 'POST' && $uri === '/tickets') {
         }
         throw $e;
     }
-    bizhub_notify_staff(
-        $pdo,
-        $cfg,
-        'تیکت جدید: ' . $subject,
-        (string) ($actor['name'] ?? '') . " نوشت:\n\n" . bizhub_clip($text, 800) . "\n\n" . bizhub_app_origin($cfg) . '/admin/'
-    );
+    if ($isPartner) {
+        bizhub_notify_staff(
+            $pdo,
+            $cfg,
+            'تیکت جدید: ' . $subject,
+            (string) ($actor['name'] ?? '') . " نوشت:\n\n" . bizhub_clip($text, 800) . "\n\n" . $origin . '/admin/'
+        );
+    } else {
+        $email = bizhub_user_email($pdo, $partnerId);
+        if ($email !== '') {
+            bizhub_mail($cfg, $email, 'تیکت: ' . $subject, $text, [
+                'heading' => $subject,
+                'intro' => 'یک تیکت تازه از بیزداور برای شما ثبت شد.',
+                'button_label' => 'دیدن تیکت',
+                'button_url' => $origin . '/admin/',
+            ]);
+        }
+    }
     Response::json(['ok' => true, 'id' => $id], 201);
+}
+
+if ($method === 'POST' && ($p = route_match($uri, '/orders/{id}/files'))) {
+    Auth::requireRole(['admin', 'sales', 'partner']);
+    $id = (int) $p['id'];
+    $stmt = $pdo->prepare('SELECT id, partner_id FROM partner_orders WHERE id = ?');
+    $stmt->execute([$id]);
+    $order = $stmt->fetch();
+    if (!$order) {
+        Response::error('سفارش پیدا نشد', 404);
+    }
+    if ($isPartner && (int) $order['partner_id'] !== (int) $actor['id']) {
+        Response::error('Forbidden', 403);
+    }
+    $saved = bizhub_store_order_uploads($pdo, $id, (int) $actor['id']);
+    if ($saved === []) {
+        Response::error('فایلی انتخاب نشده', 422);
+    }
+    Response::json(['ok' => true, 'files' => $saved], 201);
+}
+
+if ($method === 'GET' && ($p = route_match($uri, '/orders/{id}/files/{fileId}'))) {
+    Auth::requireRole(['admin', 'sales', 'partner']);
+    $id = (int) $p['id'];
+    $fileId = (int) $p['fileId'];
+    $stmt = $pdo->prepare('SELECT f.*, o.partner_id FROM order_files f INNER JOIN partner_orders o ON o.id = f.order_id WHERE f.id = ? AND f.order_id = ?');
+    $stmt->execute([$fileId, $id]);
+    $file = $stmt->fetch();
+    if (!$file) {
+        Response::error('فایل پیدا نشد', 404);
+    }
+    if ($isPartner && (int) $file['partner_id'] !== (int) $actor['id']) {
+        Response::error('Forbidden', 403);
+    }
+    if (!preg_match('/^[a-f0-9]{32}\.(pdf|jpg|png|webp|gif)$/', (string) $file['stored_name'])) {
+        Response::error('فایل پیدا نشد', 404);
+    }
+    $root = realpath(bizhub_order_files_root());
+    $path = realpath(bizhub_order_files_root() . '/' . $id . '/' . $file['stored_name']);
+    if ($root === false || $path === false || !str_starts_with($path, $root . DIRECTORY_SEPARATOR)) {
+        Response::error('فایل پیدا نشد', 404);
+    }
+    $mime = (string) $file['mime'];
+    if (!in_array($mime, ['application/pdf', 'image/jpeg', 'image/png', 'image/webp', 'image/gif'], true)) {
+        Response::error('فایل پیدا نشد', 404);
+    }
+    header('Content-Type: ' . $mime);
+    header('X-Content-Type-Options: nosniff');
+    header('Content-Length: ' . (string) filesize($path));
+    $original = str_replace(["\r", "\n", '"'], '', (string) $file['original_name']);
+    $ascii = preg_replace('/[^A-Za-z0-9._-]+/', '_', $original) ?: 'file';
+    header('Content-Disposition: inline; filename="' . $ascii . '"; filename*=UTF-8\'\'' . rawurlencode($original));
+    readfile($path);
+    exit;
 }
 
 if ($method === 'GET' && ($p = route_match($uri, '/tickets/{id}'))) {

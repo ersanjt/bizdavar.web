@@ -172,7 +172,9 @@ body {
   transition: transform 0.15s, box-shadow 0.15s;
 }
 
-.hub-btn:hover { transform: translateY(-1px); }
+@media (hover: hover) and (pointer: fine) {
+  .hub-btn:hover { transform: translateY(-1px); }
+}
 .hub-btn:active { transform: translateY(0); }
 
 .hub-btn--primary {
@@ -251,6 +253,9 @@ body {
   flex-direction: column;
   gap: 4px;
   flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .hub-nav__item {
@@ -289,9 +294,16 @@ body {
   opacity: 0.7;
 }
 
+.hub-sidebar .hub-btn--ghost {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.28);
+  opacity: 1;
+}
+
 .hub-main {
   padding: 28px 32px 48px;
   overflow-x: auto;
+  min-width: 0;
 }
 
 .hub-topbar {
@@ -450,16 +462,8 @@ body {
   color: var(--hub-muted);
 }
 
-@media (max-width: 1100px) {
-  .hub-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-}
-
-@media (max-width: 900px) {
+@media (max-width: 1500px) {
   .hub-split { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 640px) {
-  .hub-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 /* Pipeline */
@@ -547,6 +551,14 @@ body {
   padding: 12px 16px;
   text-align: start;
   border-bottom: 1px solid var(--hub-border);
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.hub-nowrap,
+.hub-nowrap .hub-path {
+  white-space: nowrap;
+  overflow-wrap: normal;
 }
 
 .hub-table th {
@@ -655,7 +667,10 @@ body {
 .hub-links { display: flex; flex-direction: column; gap: 12px; padding: 16px; }
 .hub-links > div { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .hub-links code { font-size: 0.8125rem; }
-.hub-prices { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.hub-prices { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-bottom: 18px; }
+.hub-group { margin: 8px 0 10px; font-size: 15px; }
+.hub-actions { display: flex; flex-wrap: wrap; gap: 6px; }
+.hub-table tr[data-go] { cursor: pointer; }
 .hub-price { background: var(--hub-card); border: 1px solid var(--hub-border); border-radius: var(--hub-radius); padding: 16px; box-shadow: var(--hub-shadow); }
 .hub-price h3 { margin: 6px 0; color: var(--hub-navy); font-size: 1.05rem; }
 .hub-price p { color: var(--hub-muted); font-size: 0.875rem; margin-bottom: 12px; }
@@ -668,17 +683,190 @@ body {
 .hub-paper__body { padding: 16px; }
 .hub-table tr[data-inbox], .hub-table tr[data-open-doc] { cursor: pointer; }
 
-@media (max-width: 900px) {
-  .hub-shell { grid-template-columns: 1fr; }
+.hub-mobilebar,
+.hub-nav-close,
+.hub-backdrop { display: none; }
+
+@media (max-width: 1280px) {
+  body.hub-nav-open { overflow: hidden; }
+  .hub-shell { display: block; min-height: 100vh; min-height: 100dvh; }
+  .hub-mobilebar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background: var(--hub-sidebar);
+    color: #fff;
+    padding: 10px 14px;
+    padding-top: calc(10px + env(safe-area-inset-top));
+  }
+  .hub-mobilebar__title { min-width: 0; }
+  .hub-mobilebar__title strong { display: block; color: var(--hub-yellow); font-size: 1rem; line-height: 1.2; }
+  .hub-mobilebar__title span {
+    display: block;
+    font-size: 0.75rem;
+    opacity: 0.75;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .hub-nav-toggle {
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex: 0 0 44px;
+  }
+  .hub-nav-toggle span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+  }
   .hub-sidebar {
     position: fixed;
     z-index: 50;
-    transform: translateX(100%);
-    transition: transform 0.3s;
-    width: 260px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: auto;
+    width: min(340px, 86vw);
+    height: 100vh;
+    height: 100dvh;
+    transform: translateX(110%);
+    transition: transform 0.25s ease;
+    padding-top: calc(16px + env(safe-area-inset-top));
+    padding-bottom: calc(16px + env(safe-area-inset-bottom));
   }
-  html[dir='ltr'] .hub-sidebar { transform: translateX(-100%); }
-  .hub-sidebar.is-open { transform: translateX(0); }
-  .hub-pipeline { grid-template-columns: repeat(3, minmax(120px, 1fr)); }
+  html[dir='ltr'] .hub-sidebar { right: auto; left: 0; transform: translateX(-110%); }
+  .hub-sidebar.is-open,
+  html[dir='ltr'] .hub-sidebar.is-open { transform: translateX(0); }
+  .hub-sidebar__brand { position: relative; padding-left: 48px; }
+  .hub-nav-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 10px;
+    background: transparent;
+    color: #fff;
+    font-size: 1.75rem;
+    line-height: 1;
+  }
+  .hub-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    border: 0;
+    background: rgba(8, 8, 24, 0.55);
+  }
+  .hub-backdrop:not([hidden]) { display: block; }
+  .hub-main { padding: 22px 20px calc(36px + env(safe-area-inset-bottom)); }
+  .hub-topbar { margin-bottom: 16px; }
+  .hub-topbar h2 { font-size: 1.35rem; }
+  .hub-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .hub-search { min-width: 0; flex: 1 1 200px; font-size: 16px; }
+  .hub-toolbar { width: 100%; }
+  .hub-card__head { align-items: stretch; }
+  .hub-field input,
+  .hub-field select,
+  .hub-field textarea { font-size: 16px; }
+  .hub-login { padding: 28px 24px; }
+  .hub-modal-backdrop { padding: 20px 16px; }
+  .hub-links code { word-break: break-all; }
+  .hub-pager { flex-wrap: wrap; }
+  .hub-table th,
+  .hub-table td { padding: 12px; }
+  .hub-pipeline {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 12px;
+  }
+  .hub-pipe-col { flex: 0 0 260px; scroll-snap-align: start; }
+  .hub-btn { min-height: 44px; }
+  .hub-nav__item { min-height: 44px; }
+}
+
+@media (max-width: 760px) {
+  .hub-main { padding: 16px 12px calc(28px + env(safe-area-inset-bottom)); }
+  .hub-topbar h2 { font-size: 1.25rem; }
+  .hub-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hub-form-grid { grid-template-columns: 1fr; }
+  .hub-search { width: 100%; flex-basis: 100%; }
+  .hub-login {
+    align-items: flex-start;
+    padding: 16px;
+    padding-top: max(24px, env(safe-area-inset-top));
+  }
+  .hub-login__card { padding: 28px 18px; }
+  .hub-modal-backdrop { padding: 12px 10px; }
+  .hub-modal__head,
+  .hub-modal__body { padding: 16px; }
+  .hub-modal__foot { padding: 12px 16px; flex-direction: column; }
+  .hub-modal__foot .hub-btn { width: 100%; }
+  .hub-doc-line { grid-template-columns: 1fr; }
+  .hub-pipe-col { flex-basis: 84%; }
+  .hub-qr svg { width: min(220px, 70vw); height: auto; }
+}
+
+@media (max-width: 900px) {
+  .hub-summary { max-width: none; }
+  .hub-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+  .hub-table,
+  .hub-table tbody,
+  .hub-table tr,
+  .hub-table td { display: block; width: 100%; }
+  .hub-table tr {
+    padding: 6px 0;
+    border-bottom: 10px solid var(--hub-bg);
+  }
+  .hub-table td {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    overflow-wrap: anywhere;
+  }
+  .hub-table td::before {
+    content: attr(data-label);
+    flex: 1 1 38%;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--hub-muted);
+  }
+  .hub-table td .hub-cell {
+    flex: 1 1 52%;
+    min-width: 0;
+    text-align: end;
+    unicode-bidi: plaintext;
+  }
+  .hub-table td[data-stack="full"] { display: block; text-align: center; }
+  .hub-table td[data-stack="full"]::before { content: none; }
+  .hub-table td select,
+  .hub-table td input,
+  .hub-table td textarea { width: 100%; min-width: 0; max-width: 100%; }
+  .hub-table textarea { min-width: 0; }
 }

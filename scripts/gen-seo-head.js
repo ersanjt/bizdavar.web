@@ -25,7 +25,7 @@ const LANGS = ['fa', 'tr', 'en', 'ru', 'ar'];
 
 /** Per-page Open Graph images (relative to site root) */
 const PAGE_OG = {
-  home: 'assets/images/brand/bizdavar-logo-square.png',
+  home: 'assets/images/brand/og-home.png',
   about: 'assets/images/brand/bizdavar-logo-square.png',
   services: 'assets/images/brand/bizdavar-logo-square.png',
   products: 'assets/images/brand/bizdavar-logo-square.png',

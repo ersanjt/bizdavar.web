@@ -78,6 +78,19 @@ function bizhub_ensure_partner_tables(PDO $pdo): void
           INDEX idx_ticket_messages_ticket (ticket_id)
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci"
     );
+    $pdo->exec(
+        "CREATE TABLE IF NOT EXISTS order_files (
+          id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+          order_id INT UNSIGNED NOT NULL,
+          user_id INT UNSIGNED NOT NULL,
+          stored_name VARCHAR(80) NOT NULL,
+          original_name VARCHAR(180) NOT NULL,
+          mime VARCHAR(80) NOT NULL,
+          size INT UNSIGNED NOT NULL,
+          created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+          INDEX idx_order_files_order (order_id)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci"
+    );
     $count = (int) $pdo->query('SELECT COUNT(*) FROM price_items')->fetchColumn();
     if ($count === 0) {
         $seed = $pdo->prepare('INSERT INTO price_items (title, category, summary, price_label, amount, sort_order) VALUES (?, ?, ?, ?, ?, ?)');
@@ -199,6 +212,99 @@ function bizhub_partner_code(PDO $pdo): string
         }
     }
     return 'b' . bin2hex(random_bytes(5));
+}
+
+function bizhub_order_files_root(): string
+{
+    return dirname(__DIR__, 2) . '/storage/order-files';
+}
+
+function bizhub_store_order_uploads(PDO $pdo, int $orderId, int $userId): array
+{
+    if (empty($_FILES['files']) || !is_array($_FILES['files'])) {
+        return [];
+    }
+    $bag = $_FILES['files'];
+    $names = $bag['name'] ?? [];
+    if (!is_array($names)) {
+        foreach (['name', 'type', 'tmp_name', 'error', 'size'] as $key) {
+            $bag[$key] = [$bag[$key] ?? null];
+        }
+        $names = $bag['name'];
+    }
+    $count = count($names);
+    if ($count > 5) {
+        Response::error('حداکثر ۵ فایل برای هر سفارش', 422);
+    }
+    $allowed = [
+        'application/pdf' => 'pdf',
+        'image/jpeg' => 'jpg',
+        'image/png' => 'png',
+        'image/webp' => 'webp',
+        'image/gif' => 'gif',
+    ];
+    $finfo = new finfo(FILEINFO_MIME_TYPE);
+    $accepted = [];
+    for ($i = 0; $i < $count; $i++) {
+        if ((int) ($bag['error'][$i] ?? UPLOAD_ERR_NO_FILE) === UPLOAD_ERR_NO_FILE) {
+            continue;
+        }
+        $uploadError = (int) $bag['error'][$i];
+        if ($uploadError === UPLOAD_ERR_INI_SIZE || $uploadError === UPLOAD_ERR_FORM_SIZE) {
+            Response::error('فایل از حد سرور بزرگ‌تر است', 422);
+        }
+        if ($uploadError !== UPLOAD_ERR_OK) {
+            Response::error('یکی از فایل‌ها بارگذاری نشد', 422);
+        }
+        $size = (int) ($bag['size'][$i] ?? 0);
+        if ($size < 1 || $size > 8 * 1024 * 1024) {
+            Response::error('هر فایل باید کمتر از ۸ مگابایت باشد', 422);
+        }
+        $tmp = (string) ($bag['tmp_name'][$i] ?? '');
+        if ($tmp === '' || !is_uploaded_file($tmp)) {
+            Response::error('فایل معتبر نیست', 422);
+        }
+        $mime = (string) $finfo->file($tmp);
+        if (!isset($allowed[$mime])) {
+            Response::error('فقط تصویر و PDF پذیرفته می‌شود', 422);
+        }
+        $original = bizhub_clip(trim((string) ($names[$i] ?? 'file')), 180);
+        $original = str_replace(["\r", "\n", "\0"], '', $original);
+        if ($original === '') {
+            $original = 'file.' . $allowed[$mime];
+        }
+        $accepted[] = [$tmp, $mime, $allowed[$mime], $original, $size];
+    }
+    if ($accepted === []) {
+        return [];
+    }
+    $dir = bizhub_order_files_root() . '/' . $orderId;
+    if (!is_dir($dir) && !mkdir($dir, 0750, true) && !is_dir($dir)) {
+        Response::error('پوشه فایل ساخته نشد', 500);
+    }
+    $saved = [];
+    $insert = $pdo->prepare('INSERT INTO order_files (order_id, user_id, stored_name, original_name, mime, size) VALUES (?, ?, ?, ?, ?, ?)');
+    foreach ($accepted as [$tmp, $mime, $ext, $original, $size]) {
+        $stored = bin2hex(random_bytes(16)) . '.' . $ext;
+        if (!move_uploaded_file($tmp, $dir . '/' . $stored)) {
+            Response::error('ذخیره فایل ناموفق بود', 500);
+        }
+        $insert->execute([$orderId, $userId, $stored, $original, $mime, $size]);
+        $saved[] = [
+            'id' => (int) $pdo->lastInsertId(),
+            'original_name' => $original,
+            'mime' => $mime,
+            'size' => $size,
+        ];
+    }
+    return $saved;
+}
+
+function bizhub_order_file_rows(PDO $pdo, int $orderId): array
+{
+    $stmt = $pdo->prepare('SELECT id, original_name, mime, size, created_at FROM order_files WHERE order_id = ? ORDER BY id ASC');
+    $stmt->execute([$orderId]);
+    return $stmt->fetchAll();
 }
 
 function bizhub_app_origin(array $cfg): string

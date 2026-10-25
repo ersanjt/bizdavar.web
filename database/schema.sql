@@ -165,6 +165,18 @@ CREATE TABLE IF NOT EXISTS partner_orders (
   INDEX idx_partner_orders_status (status)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+CREATE TABLE IF NOT EXISTS order_files (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  order_id INT UNSIGNED NOT NULL,
+  user_id INT UNSIGNED NOT NULL,
+  stored_name VARCHAR(80) NOT NULL,
+  original_name VARCHAR(180) NOT NULL,
+  mime VARCHAR(80) NOT NULL,
+  size INT UNSIGNED NOT NULL,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  INDEX idx_order_files_order (order_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 CREATE TABLE IF NOT EXISTS tickets (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   partner_id INT UNSIGNED NOT NULL,
