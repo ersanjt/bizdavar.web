@@ -82,6 +82,26 @@ body {
   line-height: 1.6;
 }
 
+.hub-qr {
+  display: flex;
+  justify-content: center;
+  margin: 4px 0 16px;
+}
+
+.hub-qr svg {
+  width: 220px;
+  height: 220px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid var(--hub-border);
+}
+
+.hub-secret-label {
+  font-size: 0.75rem;
+  color: var(--hub-muted);
+  margin-bottom: 6px;
+}
+
 .hub-otpauth,
 .hub-secret {
   font-size: 0.75rem;

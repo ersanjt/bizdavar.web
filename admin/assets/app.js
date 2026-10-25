@@ -101,8 +101,9 @@
             <h1>فعال‌سازی MFA</h1>
             <p>Google Authenticator یا برنامه مشابه</p>
           </div>
-          <p class="hub-muted">کلید را در Authenticator اضافه کنید، سپس کد ۶رقمی را وارد کنید.</p>
-          <p class="hub-otpauth" dir="ltr">${esc(data.otpauth || '')}</p>
+          <p class="hub-muted">کد را با دوربین Authenticator اسکن کنید، سپس کد ۶رقمی را وارد کنید.</p>
+          <div class="hub-qr" id="hubQr" role="img" aria-label="کد QR برای Authenticator"></div>
+          <p class="hub-secret-label">اگر اسکن نشد، این کلید را دستی وارد کنید</p>
           <p class="hub-secret" dir="ltr">${esc(data.secret || '')}</p>
           <form id="enrollForm">
             <div class="hub-field">
@@ -113,6 +114,15 @@
           </form>
         </div>
       </div>`;
+    const qrBox = document.getElementById('hubQr');
+    try {
+      const qr = qrcode(0, 'M');
+      qr.addData(data.otpauth || '');
+      qr.make();
+      qrBox.innerHTML = qr.createSvgTag({ cellSize: 4, margin: 8, scalable: true });
+    } catch (err) {
+      qrBox.remove();
+    }
     document.getElementById('enrollForm').addEventListener('submit', async e => {
       e.preventDefault();
       try {

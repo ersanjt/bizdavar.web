@@ -214,8 +214,11 @@ if ($method === 'GET' && $uri === '/auth/mfa/setup') {
     if (!empty($user['totp_enabled'])) {
         Response::error('MFA already enabled', 409);
     }
-    $secret = Totp::secret();
-    $_SESSION['mfa_enroll_secret'] = $secret;
+    $secret = (string) ($_SESSION['mfa_enroll_secret'] ?? '');
+    if ($secret === '') {
+        $secret = Totp::secret();
+        $_SESSION['mfa_enroll_secret'] = $secret;
+    }
     $email = (string) ($user['email'] ?? 'admin');
     Response::json([
         'ok' => true,
