@@ -25,6 +25,28 @@ if ($method === 'GET' && $uri === '/commerce/summary') {
     ]);
 }
 
+if ($method === 'GET' && $uri === '/notices') {
+    Auth::requireRole(['admin', 'sales', 'partner']);
+    Response::json(['ok' => true] + bizhub_notices_for($pdo, $actor));
+}
+
+if ($method === 'POST' && $uri === '/notices/read') {
+    Auth::requireRole(['admin', 'sales', 'partner']);
+    $keys = bizhub_json_body()['keys'] ?? [];
+    if (!is_array($keys)) {
+        $keys = [];
+    }
+    $clean = [];
+    foreach ($keys as $key) {
+        $key = trim((string) $key);
+        if (preg_match('/^(ticket|order|omsg|purchase|lead|doc):[A-Za-z0-9: _.-]{1,80}$/', $key)) {
+            $clean[] = $key;
+        }
+    }
+    bizhub_notice_mark($pdo, (int) $actor['id'], array_slice($clean, 0, 80));
+    Response::json(['ok' => true] + bizhub_notices_for($pdo, $actor));
+}
+
 if ($method === 'GET' && $uri === '/inbox') {
     Auth::requireRole(['admin', 'sales']);
     $items = [];
@@ -353,7 +375,9 @@ if ($method === 'POST' && $uri === '/purchases') {
             $status,
             bizhub_clip(trim((string) ($body['notes'] ?? '')), 2000) ?: null,
         ]);
-    Response::json(['ok' => true, 'id' => (int) $pdo->lastInsertId()], 201);
+    $purchaseId = (int) $pdo->lastInsertId();
+    bizhub_notice_mark($pdo, (int) $actor['id'], ['purchase:' . $purchaseId]);
+    Response::json(['ok' => true, 'id' => $purchaseId], 201);
 }
 
 if ($method === 'PATCH' && ($p = route_match($uri, '/purchases/{id}'))) {

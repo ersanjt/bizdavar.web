@@ -168,6 +168,137 @@ function bizhub_ensure_commerce_tables(PDO $pdo): void
           INDEX idx_order_messages (order_id)
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci"
     );
+    $pdo->exec(
+        "CREATE TABLE IF NOT EXISTS notice_reads (
+          user_id INT UNSIGNED NOT NULL,
+          notice_key VARCHAR(96) NOT NULL,
+          seen_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+          PRIMARY KEY (user_id, notice_key)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci"
+    );
+}
+
+function bizhub_notice_mark(PDO $pdo, int $userId, array $keys): void
+{
+    if ($userId < 1 || $keys === []) {
+        return;
+    }
+    $insert = $pdo->prepare('INSERT IGNORE INTO notice_reads (user_id, notice_key) VALUES (?, ?)');
+    foreach ($keys as $key) {
+        $key = (string) $key;
+        if ($key !== '' && strlen($key) <= 96) {
+            $insert->execute([$userId, $key]);
+        }
+    }
+}
+
+function bizhub_notices_for(PDO $pdo, array $actor): array
+{
+    $userId = (int) ($actor['id'] ?? 0);
+    $role = (string) ($actor['role'] ?? '');
+    $staff = in_array($role, ['admin', 'sales'], true);
+    $partner = $role === 'partner';
+    $seenStmt = $pdo->prepare('SELECT notice_key FROM notice_reads WHERE user_id = ?');
+    $seenStmt->execute([$userId]);
+    $seen = [];
+    foreach ($seenStmt->fetchAll(PDO::FETCH_COLUMN) as $key) {
+        $seen[(string) $key] = true;
+    }
+    $items = [];
+    $add = static function (string $key, string $kind, int $id, string $title, string $body, string $at) use (&$items, $seen): void {
+        if ($key === '' || isset($seen[$key])) {
+            return;
+        }
+        $items[] = [
+            'key' => $key,
+            'kind' => $kind,
+            'id' => $id,
+            'title' => $title,
+            'body' => $body,
+            'at' => $at,
+        ];
+    };
+
+    $ticketSql = "SELECT t.id, t.subject, t.updated_at, u.name AS partner_name,
+            (SELECT m.user_id FROM ticket_messages m WHERE m.ticket_id = t.id ORDER BY m.id DESC LIMIT 1) AS last_user
+         FROM tickets t INNER JOIN users u ON u.id = t.partner_id
+         WHERE t.status <> 'closed'";
+    $ticketParams = [];
+    if ($partner) {
+        $ticketSql .= ' AND t.partner_id = ?';
+        $ticketParams[] = $userId;
+    }
+    $ticketSql .= ' ORDER BY t.updated_at DESC LIMIT 40';
+    $tickets = $pdo->prepare($ticketSql);
+    $tickets->execute($ticketParams);
+    foreach ($tickets->fetchAll() as $row) {
+        if ((int) $row['last_user'] === $userId) {
+            continue;
+        }
+        $add(
+            'ticket:' . (int) $row['id'] . ':' . (string) $row['updated_at'],
+            'ticket',
+            (int) $row['id'],
+            (string) $row['subject'],
+            $partner ? 'پاسخ جدید' : (string) $row['partner_name'],
+            (string) $row['updated_at']
+        );
+    }
+
+    if ($staff) {
+        foreach ($pdo->query("SELECT o.id, o.client_name, o.service_title, o.created_at, u.name AS partner_name FROM partner_orders o INNER JOIN users u ON u.id = o.partner_id WHERE o.status = 'new' AND o.created_at >= DATE_SUB(NOW(), INTERVAL 30 DAY) ORDER BY o.id DESC LIMIT 40") as $row) {
+            $add('order:' . (int) $row['id'], 'order', (int) $row['id'], (string) $row['client_name'], (string) $row['partner_name'] . ' — ' . (string) $row['service_title'], (string) $row['created_at']);
+        }
+        foreach ($pdo->query("SELECT id, supplier, title, created_at FROM purchases WHERE created_at >= DATE_SUB(NOW(), INTERVAL 30 DAY) ORDER BY id DESC LIMIT 40") as $row) {
+            $add('purchase:' . (int) $row['id'], 'purchase', (int) $row['id'], (string) $row['title'], (string) $row['supplier'], (string) $row['created_at']);
+        }
+        foreach ($pdo->query("SELECT id, first_name, last_name, service, created_at FROM leads WHERE status = 'new' AND created_at >= DATE_SUB(NOW(), INTERVAL 30 DAY) ORDER BY id DESC LIMIT 40") as $row) {
+            $add('lead:' . (int) $row['id'], 'lead', (int) $row['id'], trim($row['first_name'] . ' ' . $row['last_name']), (string) $row['service'], (string) $row['created_at']);
+        }
+    }
+
+    if ($partner) {
+        $orders = $pdo->prepare("SELECT id, client_name, service_title, status, updated_at FROM partner_orders WHERE partner_id = ? AND status <> 'new' AND updated_at >= DATE_SUB(NOW(), INTERVAL 30 DAY) ORDER BY updated_at DESC LIMIT 40");
+        $orders->execute([$userId]);
+        foreach ($orders->fetchAll() as $row) {
+            $add('order:' . (int) $row['id'] . ':' . (string) $row['status'], 'order', (int) $row['id'], (string) $row['client_name'], (string) $row['service_title'], (string) $row['updated_at']);
+        }
+        $docs = $pdo->prepare("SELECT id, kind, number, status, client_name, issued_at FROM documents WHERE partner_id = ? AND status IN ('sent','issued','paid') ORDER BY id DESC LIMIT 20");
+        $docs->execute([$userId]);
+        foreach ($docs->fetchAll() as $row) {
+            $label = $row['kind'] === 'invoice' ? 'فاکتور' : 'پیش‌فاکتور';
+            $add('doc:' . (int) $row['id'] . ':' . (string) $row['status'], 'doc', (int) $row['id'], $label . ' ' . (string) $row['number'], (string) $row['client_name'], (string) $row['issued_at']);
+        }
+    }
+
+    $msgSql = "SELECT m.id, m.body, m.created_at, o.id AS order_id, o.client_name
+         FROM order_messages m INNER JOIN partner_orders o ON o.id = m.order_id
+         WHERE m.user_id <> ? AND m.created_at >= DATE_SUB(NOW(), INTERVAL 30 DAY)";
+    $msgParams = [$userId];
+    if ($partner) {
+        $msgSql .= ' AND o.partner_id = ?';
+        $msgParams[] = $userId;
+    }
+    $msgSql .= ' ORDER BY m.id DESC LIMIT 40';
+    $msgs = $pdo->prepare($msgSql);
+    $msgs->execute($msgParams);
+    foreach ($msgs->fetchAll() as $row) {
+        $add('omsg:' . (int) $row['id'], 'omsg', (int) $row['order_id'], 'پیام سفارش ' . (string) $row['client_name'], bizhub_clip((string) $row['body'], 140), (string) $row['created_at']);
+    }
+
+    usort($items, static function ($a, $b) {
+        return strcmp((string) $b['at'], (string) $a['at']);
+    });
+    $items = array_slice($items, 0, 40);
+    $counts = ['tickets' => 0, 'orders' => 0, 'purchases' => 0, 'leads' => 0, 'docs' => 0];
+    $views = ['ticket' => 'tickets', 'order' => 'orders', 'omsg' => 'orders', 'purchase' => 'purchases', 'lead' => 'leads', 'doc' => 'docs'];
+    foreach ($items as $item) {
+        $view = $views[$item['kind']] ?? '';
+        if ($view !== '') {
+            $counts[$view]++;
+        }
+    }
+    return ['total' => count($items), 'counts' => $counts, 'items' => $items];
 }
 
 function bizhub_next_doc_number(PDO $pdo, string $kind): string

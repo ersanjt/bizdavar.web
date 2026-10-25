@@ -66,7 +66,9 @@
     openOrder: null,
     orderThread: null,
     compose: null,
-    priceEdit: null
+    priceEdit: null,
+    notices: { total: 0, counts: {}, items: [] },
+    noticeTimer: 0
   };
   const DOC_LABELS = {
     draft: 'پیش‌نویس', sent: 'ارسال شده', accepted: 'پذیرفته', rejected: 'رد شده',
@@ -152,7 +154,86 @@
     state.user = r.user;
     if (isPartnerUser()) state.view = 'desk';
     else await loadDashboard();
+    try { state.notices = await api('/notices'); } catch { state.notices = { total: 0, counts: {}, items: [] }; }
+    if (state.noticeTimer) clearInterval(state.noticeTimer);
+    state.noticeTimer = setInterval(() => { refreshNotices(); }, 45000);
     renderShell();
+  }
+
+  const NOTICE_LABELS = { ticket: 'تیکت', order: 'سفارش', omsg: 'پیام سفارش', purchase: 'خرید', lead: 'سرنخ', doc: 'سند' };
+
+  function isFresh(kind, id) {
+    return (state.notices?.items || []).some(item => item.kind === kind && String(item.id) === String(id));
+  }
+
+  function freshPill(kind, id) {
+    return isFresh(kind, id) ? '<span class="hub-pill">تازه</span>' : '';
+  }
+
+  function noticeBadge(view) {
+    const n = view === 'total' ? Number(state.notices?.total || 0) : Number(state.notices?.counts?.[view] || 0);
+    return `<span class="hub-count" data-badge="${view}"${n ? '' : ' hidden'}>${n || ''}</span>`;
+  }
+
+  function noticeListHtml() {
+    const items = state.notices?.items || [];
+    if (!items.length) {
+      return '<p class="hub-hint hub-hint--in">چیز تازه‌ای نیست. تیکت، سفارش، خرید و سرنخ جدید اینجا می‌آید.</p>';
+    }
+    return items.map(item => `<button type="button" class="hub-notice" data-notice="${esc(item.key)}" data-kind="${esc(item.kind)}" data-id="${item.id}">
+      <span class="hub-pill">${esc(NOTICE_LABELS[item.kind] || item.kind)}</span>
+      <strong>${esc(item.title)}</strong>
+      <span>${esc(item.body || '')}</span>
+      <time>${fmtDate(item.at)}</time>
+    </button>`).join('');
+  }
+
+  async function refreshNotices() {
+    try {
+      state.notices = await api('/notices');
+    } catch {
+      return;
+    }
+    paintNotices();
+  }
+
+  function paintNotices() {
+    document.querySelectorAll('[data-badge]').forEach(el => {
+      const n = el.dataset.badge === 'total'
+        ? Number(state.notices?.total || 0)
+        : Number(state.notices?.counts?.[el.dataset.badge] || 0);
+      el.hidden = n < 1;
+      el.textContent = n > 0 ? String(n) : '';
+    });
+    const list = document.querySelector('.hub-notices__list');
+    if (list) {
+      list.innerHTML = noticeListHtml();
+      bindNoticeClicks();
+    }
+  }
+
+  function bindNoticeClicks() {
+    document.querySelectorAll('[data-notice]').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const kind = btn.dataset.kind;
+        const id = btn.dataset.id;
+        try { state.notices = await api('/notices/read', { method: 'POST', body: { keys: [btn.dataset.notice] } }); } catch { /* keep going */ }
+        document.getElementById('noticePanel').hidden = true;
+        if (kind === 'ticket') { state.view = 'tickets'; state.openTicket = id; }
+        else if (kind === 'order' || kind === 'omsg') { state.view = 'orders'; state.openOrder = id; }
+        else if (kind === 'purchase') state.view = 'purchases';
+        else if (kind === 'lead') state.view = 'leads';
+        else if (kind === 'doc') { state.view = 'docs'; state.openDoc = id; }
+        renderShell();
+      });
+    });
+  }
+
+  async function markFresh(kind, id) {
+    const keys = (state.notices?.items || []).filter(item => item.kind === kind && String(item.id) === String(id)).map(item => item.key);
+    if (!keys.length) return;
+    try { state.notices = await api('/notices/read', { method: 'POST', body: { keys } }); } catch { return; }
+    paintNotices();
   }
 
   async function startEnroll() {
@@ -355,7 +436,7 @@
 
   // ─── Shell ───
   function navItem(id, label, icon) {
-    return `<button type="button" class="hub-nav__item${state.view === id ? ' is-active' : ''}" data-view="${id}">${ic(icon, 18)}<span>${label}</span></button>`;
+    return `<button type="button" class="hub-nav__item${state.view === id ? ' is-active' : ''}" data-view="${id}">${ic(icon, 18)}<span>${label}</span>${noticeBadge(id)}</button>`;
   }
 
   function renderShell() {
@@ -369,12 +450,14 @@
             <strong>BizHub</strong>
             <span id="navTitle"></span>
           </div>
+          <button type="button" class="hub-bell" aria-label="اعلان‌ها">اعلان‌ها ${noticeBadge('total')}</button>
         </header>
         <aside class="hub-sidebar">
           <div class="hub-sidebar__brand">
             <strong>BizHub</strong>
             <span>${isPartnerUser() ? 'میز بازاریاب' : 'CRM & Content'}</span>
             <button type="button" class="hub-nav-close" id="navClose" aria-label="بستن منو">×</button>
+            <button type="button" class="hub-bell hub-bell--side" aria-label="اعلان‌ها">اعلان‌ها ${noticeBadge('total')}</button>
           </div>
           <nav class="hub-nav">
             ${isPartnerUser() ? `
@@ -408,6 +491,14 @@
         </aside>
         <button type="button" class="hub-backdrop" id="navBackdrop" aria-label="بستن منو" hidden></button>
         <main class="hub-main" id="hubMain"></main>
+        <div class="hub-notices" id="noticePanel" hidden>
+          <div class="hub-notices__head">
+            <strong>اعلان‌ها ${noticeBadge('total')}</strong>
+            <button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" id="noticeReadAll">همه را دیدم</button>
+            <button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" id="noticeClose">بستن</button>
+          </div>
+          <div class="hub-notices__list">${noticeListHtml()}</div>
+        </div>
       </div>`;
 
     const sidebar = app.querySelector('.hub-sidebar');
@@ -434,11 +525,26 @@
       });
     });
     document.getElementById('logoutBtn').addEventListener('click', async () => {
+      if (state.noticeTimer) clearInterval(state.noticeTimer);
       await api('/auth/logout', { method: 'POST' });
       state.user = null;
       state.csrfToken = '';
       renderLogin();
     });
+    const panel = document.getElementById('noticePanel');
+    app.querySelectorAll('.hub-bell').forEach(btn => {
+      btn.addEventListener('click', () => { panel.hidden = !panel.hidden; });
+    });
+    document.getElementById('noticeClose').addEventListener('click', () => { panel.hidden = true; });
+    document.getElementById('noticeReadAll').addEventListener('click', async () => {
+      const keys = (state.notices?.items || []).map(item => item.key);
+      if (keys.length) {
+        try { state.notices = await api('/notices/read', { method: 'POST', body: { keys } }); } catch (err) { alert(err.message); return; }
+      }
+      paintNotices();
+      renderView();
+    });
+    bindNoticeClicks();
     loadView();
   }
 
@@ -1327,7 +1433,7 @@
         <th>مشتری</th><th>خدمت</th>${isPartnerUser() ? '' : '<th>بازاریاب</th>'}<th>وضعیت</th><th>پاسخ قیمت</th><th>تاریخ</th><th></th>
       </tr></thead><tbody>
         ${state.orders.map(o => `<tr>
-          <td>${esc(o.client_name)}<div class="hub-path" dir="ltr">${esc(o.client_phone || o.client_email || '')}</div></td>
+          <td>${freshPill('order', o.id)}${esc(o.client_name)}<div class="hub-path" dir="ltr">${esc(o.client_phone || o.client_email || '')}</div></td>
           <td>${esc(o.service_title)}<div class="hub-path">${esc(o.details)}</div></td>
           ${isPartnerUser() ? '' : `<td>${esc(o.partner_name || '')}<div class="hub-path" dir="ltr">${esc(o.partner_code || '')}</div></td>`}
           <td>${isPartnerUser() ? esc(ORDER_LABELS[o.status] || o.status) : `<select data-order-status="${o.id}">${Object.entries(ORDER_LABELS).map(([k, v]) => `<option value="${k}"${o.status === k ? ' selected' : ''}>${v}</option>`).join('')}</select>`}</td>
@@ -1349,7 +1455,7 @@
           <th>موضوع</th>${isPartnerUser() ? '' : '<th>بازاریاب</th>'}<th>وضعیت</th><th>به‌روزرسانی</th>
         </tr></thead><tbody>
           ${state.tickets.map(t => `<tr data-open-ticket="${t.id}">
-            <td>${esc(t.subject)}</td>
+            <td>${freshPill('ticket', t.id)}${esc(t.subject)}</td>
             ${isPartnerUser() ? '' : `<td>${esc(t.partner_name || '')}</td>`}
             <td>${esc(TICKET_LABELS[t.status] || t.status)}</td>
             <td>${fmtDate(t.updated_at)}</td>
@@ -1557,8 +1663,9 @@
       });
     });
     document.querySelectorAll('[data-open-ticket]').forEach(row => {
-      row.addEventListener('click', () => {
+      row.addEventListener('click', async () => {
         state.openTicket = row.dataset.openTicket;
+        await markFresh('ticket', state.openTicket);
         loadView();
       });
     });
@@ -1588,7 +1695,12 @@
       loadView();
     });
     document.querySelectorAll('[data-open-order]').forEach(btn => {
-      btn.addEventListener('click', () => { state.openOrder = btn.dataset.openOrder; loadView(); });
+      btn.addEventListener('click', async () => {
+        state.openOrder = btn.dataset.openOrder;
+        await markFresh('order', state.openOrder);
+        await markFresh('omsg', state.openOrder);
+        loadView();
+      });
     });
     document.getElementById('closeOrderThread')?.addEventListener('click', () => { state.openOrder = null; loadView(); });
     document.getElementById('orderReply')?.addEventListener('submit', async (e) => {
@@ -1810,7 +1922,7 @@
         <th>تأمین‌کننده</th><th>عنوان</th><th>مبلغ</th><th>سفارش</th><th>وضعیت</th><th>تاریخ</th>
       </tr></thead><tbody>
         ${state.purchases.map(p => `<tr>
-          <td>${esc(p.supplier)}</td>
+          <td>${freshPill('purchase', p.id)}${esc(p.supplier)}</td>
           <td>${esc(p.title)}</td>
           <td>${money(p.amount, p.currency)}</td>
           <td>${p.order_id || '—'}</td>
