@@ -75,6 +75,7 @@ if ($method === 'POST' && $uri === '/auth/login') {
     Auth::requireAdminIp($cfg);
     $row = Auth::verifyPassword($pdo, $email, $password);
     if (!$row) {
+        bizhub_log_login($pdo, $emailKey, false, null, null);
         Response::error('Invalid credentials', 401);
     }
     $requireMfa = Auth::mfaRequired($cfg) && (($row['role'] ?? '') !== 'partner');
@@ -421,7 +422,13 @@ if ($method === 'GET' && $uri === '/dashboard/stats') {
     }
     $recent = $pdo->query('SELECT id, first_name, last_name, email, service, status, created_at FROM leads ORDER BY created_at DESC LIMIT 8')->fetchAll();
     $site = bizhub_site_stats($pdo);
-    Response::json(['ok' => true, 'stats' => $stats, 'recentLeads' => $recent, 'site' => $site]);
+    $activity = (Auth::user()['role'] ?? '') === 'admin' ? bizhub_activity_snapshot($pdo, 20) : null;
+    Response::json(['ok' => true, 'stats' => $stats, 'recentLeads' => $recent, 'site' => $site, 'activity' => $activity]);
+}
+
+if ($method === 'GET' && $uri === '/activity') {
+    Auth::requireRole(['admin']);
+    Response::json(['ok' => true, 'activity' => bizhub_activity_snapshot($pdo, 200)]);
 }
 
 if ($method === 'GET' && $uri === '/site-pages') {

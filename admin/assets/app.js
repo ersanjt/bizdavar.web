@@ -12,6 +12,7 @@
     lost: 'از دست رفته'
   };
   const LOCALE_LABELS = { fa: 'فارسی', tr: 'ترکی', en: 'انگلیسی', ru: 'روسی', ar: 'عربی' };
+  const ROLE_LABELS = { admin: 'مدیر', editor: 'ویرایشگر', sales: 'فروش', partner: 'بازاریاب' };
   const AREA_LABELS = {
     company: 'شرکت',
     services: 'خدمات',
@@ -35,6 +36,7 @@
     posts: [],
     faqs: [],
     stats: null,
+    activity: null,
     leadFilter: '',
     leadSearch: '',
     selectedLead: null,
@@ -339,6 +341,7 @@
               ${navItem('tickets', 'تیکت‌ها', 'help')}
             ` : `
               ${navItem('dashboard', 'داشبورد', 'chart-bar')}
+              ${state.user?.role === 'admin' ? navItem('activity', 'ورود و کاربران', 'users') : ''}
               ${navItem('pages', 'صفحات سایت', 'link')}
               ${navItem('leads', 'سرنخ‌ها (CRM)', 'users')}
               ${navItem('posts', 'مقالات (CMS)', 'article')}
@@ -386,6 +389,7 @@
         await loadDashboard();
         if (state.user?.role === 'admin' || state.user?.role === 'sales') state.commerce = await api('/commerce/summary');
       }
+      if (state.view === 'activity') state.activity = await api('/activity');
       if (state.view === 'pages') await loadPages();
       if (state.view === 'leads') await loadLeads();
       if (state.view === 'posts') await loadPosts();
@@ -432,6 +436,7 @@
   function renderView() {
     const main = document.getElementById('hubMain');
     if (state.view === 'dashboard') main.innerHTML = renderDashboard();
+    if (state.view === 'activity') main.innerHTML = renderActivity();
     if (state.view === 'pages') main.innerHTML = renderPages();
     if (state.view === 'leads') main.innerHTML = renderLeads();
     if (state.view === 'posts') main.innerHTML = renderPosts();
@@ -459,6 +464,54 @@
     state.pageTotal = r.total || 0;
   }
 
+  function renderPeopleBlock(people, logins) {
+    return `
+      <div class="hub-split">
+        <div class="hub-card">
+          <div class="hub-card__head"><h3>کاربران و بازاریاب‌ها</h3></div>
+          <div class="hub-table-wrap"><table class="hub-table"><thead><tr>
+            <th>نام</th><th>نقش</th><th>آخرین ورود</th><th>سفارش</th><th>تیکت</th><th>وضعیت</th>
+          </tr></thead><tbody>
+            ${(people || []).map(p => `<tr${p.role === 'partner' ? ' data-open-view="partners"' : ''}>
+              <td>${esc(p.name)}<div class="hub-path" dir="ltr">${esc(p.email)}</div></td>
+              <td>${esc(ROLE_LABELS[p.role] || p.role || '—')}${p.partner_code ? `<div class="hub-path" dir="ltr">${esc(p.partner_code)}</div>` : ''}</td>
+              <td>${fmtDate(p.last_login_at)}</td>
+              <td>${p.role === 'partner' ? (p.orders ?? 0) : '—'}</td>
+              <td>${p.role === 'partner' ? (p.tickets ?? 0) : '—'}</td>
+              <td>${Number(p.is_active) ? 'فعال' : 'خاموش'}</td>
+            </tr>`).join('') || '<tr><td colspan="6">کاربری نیست</td></tr>'}
+          </tbody></table></div>
+        </div>
+        <div class="hub-card">
+          <div class="hub-card__head"><h3>ورودها</h3></div>
+          <div class="hub-table-wrap"><table class="hub-table"><thead><tr>
+            <th>زمان</th><th>کاربر</th><th>نقش</th><th>نتیجه</th><th>آی‌پی</th>
+          </tr></thead><tbody>
+            ${(logins || []).map(l => `<tr>
+              <td>${fmtDate(l.created_at)}</td>
+              <td dir="ltr">${esc(l.email)}</td>
+              <td>${esc(ROLE_LABELS[l.role] || l.role || '—')}</td>
+              <td>${Number(l.ok) ? 'موفق' : 'ناموفق'}</td>
+              <td dir="ltr">${esc(l.ip_address || '—')}</td>
+            </tr>`).join('') || '<tr><td colspan="5">هنوز ورودی ثبت نشده</td></tr>'}
+          </tbody></table></div>
+        </div>
+      </div>`;
+  }
+
+  function renderActivity() {
+    const a = state.activity?.activity || {};
+    return `
+      <div class="hub-topbar"><h2>ورود و کاربران</h2></div>
+      <div class="hub-stats">
+        <div class="hub-stat"><div class="hub-stat__val">${a.users ?? 0}</div><div class="hub-stat__label">کاربر</div></div>
+        <div class="hub-stat"><div class="hub-stat__val">${a.partners ?? 0}</div><div class="hub-stat__label">بازاریاب</div></div>
+        <div class="hub-stat"><div class="hub-stat__val">${a.logins_today ?? 0}</div><div class="hub-stat__label">ورود موفق امروز</div></div>
+      </div>
+      <p class="hub-hint">آخرین ورود هر کاربر همین‌جا است. از این به‌روزرسانی، هر ورود موفق یا ناموفق با زمان و آی‌پی ثبت می‌شود.</p>
+      ${renderPeopleBlock(a.people || [], a.logins || [])}`;
+  }
+
   function renderDashboard() {
     const s = state.stats?.stats || {};
     const site = state.stats?.site || {};
@@ -470,6 +523,10 @@
     const maxViews = Math.max(1, ...series.map(d => Number(d.views) || 0));
     const pipe = s.pipeline || {};
     const recent = state.stats?.recentLeads || [];
+    const act = state.stats?.activity;
+    const vloc = site.visit_locales || {};
+    const locLine = Object.entries(LOCALE_LABELS).map(([k, label]) => `${label} ${vloc[k] ?? 0}`).join(' · ');
+    const todayLine = (site.top_today || []).map(r => `${r.title || r.path} (${r.views})`).join('، ');
     return `
       <div class="hub-topbar"><h2>داشبورد</h2><span class="hub-topbar__user">${state.user?.role === 'admin' ? '<button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" id="mailTest">آزمایش ایمیل</button> ' : ''}${esc(state.user?.email)}</span></div>
       <div class="hub-stats">
@@ -496,7 +553,14 @@
         <div class="hub-stat"><div class="hub-stat__val">${state.commerce.purchases_open ?? 0}</div><div class="hub-stat__label">خرید باز</div></div>
         <div class="hub-stat"><div class="hub-stat__val">${state.commerce.tickets_open ?? 0}</div><div class="hub-stat__label">تیکت باز</div></div>
       </div>` : ''}
-      <p class="hub-hint">شمارش بازدید از همین به‌روزرسانی شروع می‌شود و تاریخچهٔ قبلی را شامل نمی‌شود. آرشیو قبلی در Google Analytics است: G-4GFEY12SLH. فرم تماس سایت از این به بعد سرنخ می‌سازد.</p>
+      ${act ? `<div class="hub-stats">
+        <div class="hub-stat"><div class="hub-stat__val">${act.users ?? 0}</div><div class="hub-stat__label">کاربر</div></div>
+        <div class="hub-stat"><div class="hub-stat__val">${act.partners ?? 0}</div><div class="hub-stat__label">بازاریاب</div></div>
+        <div class="hub-stat"><div class="hub-stat__val">${act.logins_today ?? 0}</div><div class="hub-stat__label">ورود امروز</div></div>
+        <div class="hub-stat"><div class="hub-stat__val">${site.visits_all ?? 0}</div><div class="hub-stat__label">کل بازدید</div></div>
+      </div>
+      ${renderPeopleBlock(act.people || [], act.logins || [])}` : ''}
+      <p class="hub-hint">شمارش بازدید از همین به‌روزرسانی شروع می‌شود و تاریخچهٔ قبلی را شامل نمی‌شود. آرشیو قبلی در Google Analytics است: G-4GFEY12SLH. بازدید ۷ روز به زبان: ${esc(locLine)}.${todayLine ? ' امروز: ' + esc(todayLine) + '.' : ''}</p>
       <div class="hub-card hub-card--chart">
         <div class="hub-card__head"><h3>بازدید ۱۴ روز اخیر</h3></div>
         <div class="hub-bars">
@@ -732,6 +796,14 @@
         state.pageSection = row.dataset.openSection || '';
         state.pageArea = '';
         state.pageOffset = 0;
+        renderShell();
+      });
+    });
+    document.querySelectorAll('[data-open-view]').forEach(row => {
+      row.addEventListener('click', () => {
+        const view = row.dataset.openView;
+        if (!view) return;
+        state.view = view;
         renderShell();
       });
     });

@@ -349,15 +349,22 @@ function bizhub_site_stats(PDO $pdo): array
         $day = $start->modify('-' . $i . ' days')->format('Y-m-d');
         $series[] = ['day' => $day, 'views' => $byDay[$day] ?? 0];
     }
-    $top = $pdo->query(
-        'SELECT h.path, SUM(h.views) AS views, MAX(p.title) AS title
+    $topSql = 'SELECT h.path, SUM(h.views) AS views, MAX(p.title) AS title
          FROM page_hits h
-         LEFT JOIN site_pages p ON p.path = h.path
+         LEFT JOIN site_pages p ON p.path = h.path';
+    $top = $pdo->query($topSql . ' WHERE h.day >= CURDATE() - INTERVAL 6 DAY GROUP BY h.path ORDER BY views DESC LIMIT 8')->fetchAll();
+    $topToday = $pdo->query($topSql . ' WHERE h.day = CURDATE() GROUP BY h.path ORDER BY views DESC LIMIT 8')->fetchAll();
+    $visitLocales = [];
+    foreach ($pdo->query(
+        "SELECT p.locale, SUM(h.views) AS views
+         FROM page_hits h
+         INNER JOIN site_pages p ON p.path = h.path
          WHERE h.day >= CURDATE() - INTERVAL 6 DAY
-         GROUP BY h.path
-         ORDER BY views DESC
-         LIMIT 8'
-    )->fetchAll();
+         GROUP BY p.locale"
+    )->fetchAll() as $row) {
+        $visitLocales[(string) $row['locale']] = (int) $row['views'];
+    }
+    $visitsAll = (int) $pdo->query('SELECT COALESCE(SUM(views), 0) FROM page_hits')->fetchColumn();
     $areaOrder = ['company', 'services', 'articles', 'supply', 'catalog', 'tools'];
     $areaCounts = [];
     foreach ($sections as $row) {
@@ -397,6 +404,8 @@ function bizhub_site_stats(PDO $pdo): array
         'content' => $content,
         'visits_today' => $today,
         'visits_week' => $week,
+        'visits_all' => $visitsAll,
+        'visit_locales' => $visitLocales,
         'series' => $series,
         'top_pages' => array_map(static function ($row) {
             return [
@@ -405,5 +414,12 @@ function bizhub_site_stats(PDO $pdo): array
                 'title' => (string) ($row['title'] ?? ''),
             ];
         }, $top),
+        'top_today' => array_map(static function ($row) {
+            return [
+                'path' => (string) $row['path'],
+                'views' => (int) $row['views'],
+                'title' => (string) ($row['title'] ?? ''),
+            ];
+        }, $topToday),
     ];
 }

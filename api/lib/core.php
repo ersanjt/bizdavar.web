@@ -212,6 +212,7 @@ class Auth
         $_SESSION['mfa_ok'] = $mfaOk;
         unset($_SESSION['mfa_pending_uid'], $_SESSION['mfa_enroll_secret']);
         $pdo->prepare('UPDATE users SET last_login_at = NOW() WHERE id = ?')->execute([$row['id']]);
+        bizhub_log_login($pdo, (string) ($row['email'] ?? ''), true, (int) $row['id'], (string) ($row['role'] ?? ''));
         return $_SESSION['user'];
     }
 
@@ -301,6 +302,84 @@ function bizhub_json_body(): array
     }
     $data = json_decode($raw, true);
     return is_array($data) ? $data : [];
+}
+
+function bizhub_ensure_login_events(PDO $pdo): void
+{
+    static $ready = false;
+    if ($ready) {
+        return;
+    }
+    $pdo->exec("CREATE TABLE IF NOT EXISTS login_events (
+      id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+      user_id INT UNSIGNED NULL,
+      email VARCHAR(190) NOT NULL,
+      role VARCHAR(20) NULL,
+      ok TINYINT(1) NOT NULL DEFAULT 0,
+      ip_address VARCHAR(45) NULL,
+      created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+      INDEX idx_login_created (created_at),
+      INDEX idx_login_user (user_id)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci");
+    $pdo->exec("INSERT INTO login_events (user_id, email, role, ok, created_at)
+      SELECT u.id, u.email, u.role, 1, u.last_login_at
+      FROM users u
+      WHERE u.last_login_at IS NOT NULL
+        AND NOT EXISTS (SELECT 1 FROM login_events e WHERE e.user_id = u.id)");
+    $ready = true;
+}
+
+function bizhub_log_login(PDO $pdo, string $email, bool $ok, ?int $userId, ?string $role): void
+{
+    try {
+        bizhub_ensure_login_events($pdo);
+        $email = bizhub_clip(strtolower(trim($email)), 190);
+        if ($email === '') {
+            return;
+        }
+        $ip = substr((string) ($_SERVER['REMOTE_ADDR'] ?? ''), 0, 45);
+        $pdo->prepare('INSERT INTO login_events (user_id, email, role, ok, ip_address) VALUES (?, ?, ?, ?, ?)')
+            ->execute([
+                $userId && $userId > 0 ? $userId : null,
+                $email,
+                $role !== null && $role !== '' ? substr($role, 0, 20) : null,
+                $ok ? 1 : 0,
+                $ip !== '' ? $ip : null,
+            ]);
+    } catch (Throwable $e) {
+    }
+}
+
+function bizhub_activity_snapshot(PDO $pdo, int $loginLimit): array
+{
+    bizhub_ensure_login_events($pdo);
+    bizhub_ensure_partner_tables($pdo);
+    $people = $pdo->query(
+        "SELECT u.id, u.name, u.email, u.role, u.is_active, u.last_login_at, u.created_at,
+            p.code AS partner_code,
+            (SELECT COUNT(*) FROM partner_orders o WHERE o.partner_id = u.id) AS orders,
+            (SELECT COUNT(*) FROM tickets t WHERE t.partner_id = u.id) AS tickets
+         FROM users u
+         LEFT JOIN partners p ON p.user_id = u.id
+         ORDER BY (u.last_login_at IS NULL), u.last_login_at DESC, u.id ASC"
+    )->fetchAll();
+    $limit = max(1, min(200, $loginLimit));
+    $logins = $pdo->query(
+        'SELECT id, user_id, email, role, ok, ip_address, created_at FROM login_events ORDER BY id DESC LIMIT ' . $limit
+    )->fetchAll();
+    $partners = 0;
+    foreach ($people as $person) {
+        if ((string) ($person['role'] ?? '') === 'partner') {
+            $partners++;
+        }
+    }
+    return [
+        'people' => $people,
+        'logins' => $logins,
+        'users' => count($people),
+        'partners' => $partners,
+        'logins_today' => (int) $pdo->query('SELECT COUNT(*) FROM login_events WHERE ok = 1 AND created_at >= CURDATE()')->fetchColumn(),
+    ];
 }
 
 function bizhub_ensure_session_epoch(PDO $pdo): bool
