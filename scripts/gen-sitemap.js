@@ -53,7 +53,7 @@ const PAGES = [
   { path: '/pages/prosense', changefreq: 'monthly', priority: 0.9, lastmod: '2026-08-12' },
   { path: '/pages/liqui-moly', changefreq: 'weekly', priority: 0.9, lastmod: '2026-08-12' },
   { path: '/pages/auto-moto', changefreq: 'weekly', priority: 0.85, lastmod: '2026-09-18' },
-  { path: '/pages/motorcycle', changefreq: 'weekly', priority: 0.9, lastmod: '2026-09-18' },
+  { path: '/pages/motorcycle/', changefreq: 'weekly', priority: 0.9, lastmod: '2026-10-25' },
   { path: '/pages/car-parts', changefreq: 'weekly', priority: 0.85, lastmod: '2026-09-18' },
   { path: '/pages/teltonika', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
   { path: '/pages/pneumatic', changefreq: 'monthly', priority: 0.8, lastmod: '2026-10-04' },

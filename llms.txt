@@ -188,12 +188,12 @@
 - [Russian](https://bizdavar.com/ru/pages/auto-moto)
 - [Arabic](https://bizdavar.com/ar/pages/auto-moto)
 
-### /pages/motorcycle
-- [Persian](https://bizdavar.com/pages/motorcycle)
-- [Turkish](https://bizdavar.com/tr/pages/motorcycle)
-- [English](https://bizdavar.com/en/pages/motorcycle)
-- [Russian](https://bizdavar.com/ru/pages/motorcycle)
-- [Arabic](https://bizdavar.com/ar/pages/motorcycle)
+### /pages/motorcycle/
+- [Persian](https://bizdavar.com/pages/motorcycle/)
+- [Turkish](https://bizdavar.com/tr/pages/motorcycle/)
+- [English](https://bizdavar.com/en/pages/motorcycle/)
+- [Russian](https://bizdavar.com/ru/pages/motorcycle/)
+- [Arabic](https://bizdavar.com/ar/pages/motorcycle/)
 
 ### /pages/car-parts
 - [Persian](https://bizdavar.com/pages/car-parts)

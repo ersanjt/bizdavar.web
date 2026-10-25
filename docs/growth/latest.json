@@ -1,10 +1,18 @@
 {
-  "date": "2026-10-21",
+  "date": "2026-10-25",
   "gsc": {
     "available": false,
     "reason": "no service-account credentials (see docs/growth/GSC-SETUP.md)"
   },
-  "live": null,
+  "live": {
+    "checked": 395,
+    "ok": 395,
+    "byStatus": {
+      "200": 395
+    },
+    "bad": [],
+    "slow": []
+  },
   "scan": {
     "pages": 19760,
     "byKind": {
@@ -3035,10 +3043,6 @@
   },
   "nextTasks": [
     {
-      "id": "P1-01",
-      "title": "رفع حلقه canonical فروشگاه موتورسیکلت در ۵ زبان: `/pages/motorcycle` با 301 به `/pages/motorcycle/` می‌رود ولی canonical به نسخه بدون اسلش اشاره می‌کند. canonical، hreflang، og:url، ورودی sitemap و لینک‌های داخلی را روی نسخه با اسلش (که 200 می‌دهد) یکی کن؛ در `scripts/build-motorcycle-listing.js`، `scripts/gen-seo-head.js` و `scripts/gen-sitemap.js` هم اعمال شود. بعد از deploy باید هر دو آدرس به یک URL نهایی 200 با canonical خودش برسند."
-    },
-    {
       "id": "P1-02",
       "title": "افزودن ۱۵ مقاله جاافتاده × ۵ زبان (۷۵ آدرس: `buy-*-iran`، `digital-marketing-us-eu`، `website-design-us-eu`، `local-seo-iran`، `field-tech-services`، `industrial-trade-iran`، `liqui-moly-supply-iran`، `prosense-gas-detection`، `vega-quote-iran`، `marvi-society-ios-app`) به `scripts/gen-sitemap.js`، حذف ورودی تکراری `/pages/uwt`، و تولید دوباره `sitemap.xml` و `llms.txt`."
     },
@@ -3053,6 +3057,10 @@
     {
       "id": "P1-05",
       "title": "هر URL که در Search Console نمایش دارد ولی در بررسی زنده 200 نمی‌دهد، با 301 در `.htaccess` به نزدیک‌ترین صفحه زنده برود (منبع: جدول Live HTTP در گزارش روزانه). اگر خروجی 404 از Search Console در `docs/growth/inbox/` گذاشته شد، همان‌ها اول."
+    },
+    {
+      "id": "P1-06",
+      "title": "ریشه‌یابی خطاهای 5xx: آدرس‌های با وضعیت 0/5xx یا کندتر از ۳ ثانیه در گزارش‌ها را بررسی و رفع کن؛ اگر مشکل از سرور است، شرح دقیق در `docs/growth/inbox/NEEDS-OWNER.md`."
     }
   ]
 }

@@ -92,9 +92,13 @@
     return maybeDevHtml(prettyLocalePath(locale, pagePath));
   }
 
+  /** Pages that share a name with a folder (SKU pages live in /pages/motorcycle/); the server always appends the slash. */
+  var DIRECTORY_PAGES = { '/pages/motorcycle': true };
+
   function toAbsolute(locale, pagePath) {
     var rel = prettyLocalePath(locale, pagePath);
     if (rel === '/') return BASE + '/';
+    if (DIRECTORY_PAGES[normalizePagePath(pagePath)]) rel += '/';
     return BASE + rel;
   }
 

@@ -389,7 +389,7 @@ function esc(value) {
 function page(loc) {
   const t = COPY[loc.code];
   const p = loc.prefix;
-  const url = `${BASE}${p}/pages/motorcycle`;
+  const url = `${BASE}${p}/pages/motorcycle/`;
   const alts = OG_ALTS[loc.code].map((tag) => `  <meta property="og:locale:alternate" content="${tag}">`).join('\n');
   const relatedJs = t.related.map((row, i) =>
     `        { title: ${JSON.stringify(row[0])}, url: ${JSON.stringify(row[1])}, desc: ${JSON.stringify(row[2])}, titleKey: 'autoMotoPage.related.${i}.title', descKey: 'autoMotoPage.related.${i}.desc' }`
@@ -404,7 +404,7 @@ function page(loc) {
   <link rel="preload" href="/assets/fonts/estedad/Estedad-Black.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="image" type="image/webp" href="/assets/images/auto-moto/hero/auto-moto-hero-800.webp" fetchpriority="high">
   <script src="/assets/scripts/gtm-boot.js?v=20260910c" defer></script>
-  <script src="/assets/scripts/i18n/locale-url.js?v=20260910c" defer></script>
+  <script src="/assets/scripts/i18n/locale-url.js?v=20261025a" defer></script>
   <script src="/assets/scripts/i18n/seo-head.js?v=20260910c" defer></script>
   <script src="/assets/scripts/i18n/locale-preload.js?v=20260910c" defer></script>
   <meta name="view-transition" content="same-origin">
@@ -432,12 +432,12 @@ ${alts}
   <meta name="twitter:description" content="${esc(t.twitter)}">
   <meta name="twitter:image" content="https://bizdavar.com/assets/images/brand/bizdavar-logo-square.png">
   <link rel="canonical" href="${url}">
-  <link rel="alternate" hreflang="fa-IR" href="${BASE}/pages/motorcycle">
-  <link rel="alternate" hreflang="tr-TR" href="${BASE}/tr/pages/motorcycle">
-  <link rel="alternate" hreflang="en-US" href="${BASE}/en/pages/motorcycle">
-  <link rel="alternate" hreflang="ru-RU" href="${BASE}/ru/pages/motorcycle">
-  <link rel="alternate" hreflang="ar-AE" href="${BASE}/ar/pages/motorcycle">
-  <link rel="alternate" hreflang="x-default" href="${BASE}/pages/motorcycle">
+  <link rel="alternate" hreflang="fa-IR" href="${BASE}/pages/motorcycle/">
+  <link rel="alternate" hreflang="tr-TR" href="${BASE}/tr/pages/motorcycle/">
+  <link rel="alternate" hreflang="en-US" href="${BASE}/en/pages/motorcycle/">
+  <link rel="alternate" hreflang="ru-RU" href="${BASE}/ru/pages/motorcycle/">
+  <link rel="alternate" hreflang="ar-AE" href="${BASE}/ar/pages/motorcycle/">
+  <link rel="alternate" hreflang="x-default" href="${BASE}/pages/motorcycle/">
   <!-- /bd-static-seo -->
 </head>
 <body data-page="motorcycle" data-depth="1" class="auto-page">
@@ -629,7 +629,7 @@ ${alts}
 
   ${bootTag(`bizdavarPageInit(function () {
       injectPageSeo('motorcycle', {
-        canonical: 'https://bizdavar.com/pages/motorcycle',
+        canonical: 'https://bizdavar.com/pages/motorcycle/',
         ogImage: 'assets/images/auto-moto/hero/auto-moto-hero.webp'
       });
       renderBreadcrumbs([
