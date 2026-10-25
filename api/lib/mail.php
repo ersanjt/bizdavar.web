@@ -12,12 +12,24 @@ function bizhub_ensure_mail_tables(PDO $pdo): void
       id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
       user_id INT UNSIGNED NOT NULL,
       token_hash CHAR(64) NOT NULL,
+      code_hash CHAR(64) NULL,
       expires_at DATETIME NOT NULL,
       used_at DATETIME NULL,
       created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
       UNIQUE KEY uk_reset_token (token_hash),
       INDEX idx_reset_user (user_id)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci");
+    $col = $pdo->query("SHOW COLUMNS FROM password_resets LIKE 'code_hash'")->fetch();
+    if (!$col) {
+        try {
+            $pdo->exec('ALTER TABLE password_resets ADD COLUMN code_hash CHAR(64) NULL AFTER token_hash');
+        } catch (Throwable $e) {
+            $again = $pdo->query("SHOW COLUMNS FROM password_resets LIKE 'code_hash'")->fetch();
+            if (!$again) {
+                throw $e;
+            }
+        }
+    }
     $ready = true;
 }
 
@@ -46,10 +58,10 @@ function bizhub_staff_emails(PDO $pdo, array $cfg): array
     return array_values(array_unique($list));
 }
 
-function bizhub_mail(array $cfg, string $to, string $subject, string $text): void
+function bizhub_mail(array $cfg, string $to, string $subject, string $text, array $view = []): void
 {
     try {
-        bizhub_mail_send($cfg, $to, $subject, $text);
+        bizhub_mail_send($cfg, $to, $subject, $text, $view);
     } catch (Throwable $e) {
     }
 }
@@ -61,7 +73,7 @@ function bizhub_notify_staff(PDO $pdo, array $cfg, string $subject, string $text
     }
 }
 
-function bizhub_mail_send(array $cfg, string $to, string $subject, string $text): void
+function bizhub_mail_send(array $cfg, string $to, string $subject, string $text, array $view = []): void
 {
     $to = strtolower(trim($to));
     if (!filter_var($to, FILTER_VALIDATE_EMAIL)) {
@@ -72,24 +84,28 @@ function bizhub_mail_send(array $cfg, string $to, string $subject, string $text)
     if (!filter_var($from, FILTER_VALIDATE_EMAIL)) {
         throw new RuntimeException('آدرس فرستنده در config معتبر نیست');
     }
-    $fromName = str_replace(["\r", "\n"], '', trim((string) ($mail['from_name'] ?? 'BizHub')));
+    $fromName = str_replace(["\r", "\n"], '', trim((string) ($mail['from_name'] ?? '')));
+    if ($fromName === '' || strcasecmp($fromName, 'BizHub') === 0) {
+        $fromName = 'بیزداور';
+    }
     $subject = str_replace(["\r", "\n"], ' ', $subject);
+    [$plain, $html] = bizhub_mail_render($cfg, $subject, $text, $view);
     $smtp = is_array($mail['smtp'] ?? null) ? $mail['smtp'] : [];
     if (trim((string) ($smtp['host'] ?? '')) !== '') {
-        bizhub_smtp_send($smtp, $from, $fromName, $to, $subject, $text);
+        bizhub_smtp_send($smtp, $from, $fromName, $to, $subject, $plain, $html);
         return;
     }
     $encodedName = '=?UTF-8?B?' . base64_encode($fromName) . '?=';
     $encodedSubject = '=?UTF-8?B?' . base64_encode($subject) . '?=';
-    $headers = "MIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8\r\nFrom: {$encodedName} <{$from}>\r\n";
-    $body = str_replace("\n", "\r\n", str_replace("\r\n", "\n", $text));
+    [$contentType, $body] = bizhub_mail_bundle($plain, $html);
+    $headers = "MIME-Version: 1.0\r\nContent-Type: {$contentType}\r\nFrom: {$encodedName} <{$from}>\r\nReply-To: {$from}\r\n";
     $ok = @mail($to, $encodedSubject, $body, $headers, '-f' . $from);
     if (!$ok) {
         throw new RuntimeException('mail() ارسال نکرد. SMTP را در api/config.php تنظیم کنید.');
     }
 }
 
-function bizhub_smtp_send(array $smtp, string $from, string $fromName, string $to, string $subject, string $text): void
+function bizhub_smtp_send(array $smtp, string $from, string $fromName, string $to, string $subject, string $text, string $html): void
 {
     $host = trim((string) ($smtp['host'] ?? ''));
     $port = (int) ($smtp['port'] ?? 587);
@@ -139,16 +155,18 @@ function bizhub_smtp_send(array $smtp, string $from, string $fromName, string $t
         bizhub_smtp_cmd($fp, 'DATA', [354]);
         $encodedName = '=?UTF-8?B?' . base64_encode($fromName) . '?=';
         $encodedSubject = '=?UTF-8?B?' . base64_encode($subject) . '?=';
+        [$contentType, $body] = bizhub_mail_bundle($text, $html);
         $payload = implode("\r\n", [
             'Date: ' . date('r'),
             'From: ' . $encodedName . ' <' . $from . '>',
             'To: <' . $to . '>',
+            'Reply-To: <' . $from . '>',
+            'Message-ID: <' . bin2hex(random_bytes(16)) . '@bizdavar.com>',
             'Subject: ' . $encodedSubject,
             'MIME-Version: 1.0',
-            'Content-Type: text/plain; charset=UTF-8',
-            'Content-Transfer-Encoding: base64',
+            'Content-Type: ' . $contentType,
             '',
-            chunk_split(base64_encode(str_replace("\n", "\r\n", str_replace("\r\n", "\n", $text))), 76, "\r\n"),
+            $body,
         ]);
         fwrite($fp, bizhub_smtp_dot($payload) . "\r\n.\r\n");
         bizhub_smtp_expect($fp, [250]);
@@ -190,6 +208,177 @@ function bizhub_smtp_dot(string $message): string
         }
     }
     return implode("\r\n", $lines);
+}
+
+function bizhub_mail_bundle(string $plain, string $html): array
+{
+    $boundary = 'bizhub_' . bin2hex(random_bytes(12));
+    $plain = str_replace("\n", "\r\n", str_replace(["\r\n", "\r"], "\n", $plain));
+    $html = str_replace("\n", "\r\n", str_replace(["\r\n", "\r"], "\n", $html));
+    $body = '--' . $boundary . "\r\n"
+        . "Content-Type: text/plain; charset=UTF-8\r\n"
+        . "Content-Transfer-Encoding: base64\r\n\r\n"
+        . chunk_split(base64_encode($plain), 76, "\r\n")
+        . '--' . $boundary . "\r\n"
+        . "Content-Type: text/html; charset=UTF-8\r\n"
+        . "Content-Transfer-Encoding: base64\r\n\r\n"
+        . chunk_split(base64_encode($html), 76, "\r\n")
+        . '--' . $boundary . "--\r\n";
+    return ['multipart/alternative; boundary="' . $boundary . '"', $body];
+}
+
+function bizhub_mail_h(string $value): string
+{
+    return htmlspecialchars($value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+}
+
+function bizhub_mail_safe_url(string $url): string
+{
+    $url = str_replace(["\r", "\n", "\0", ' '], '', trim($url));
+    if (!preg_match('#^https://bizdavar\.com(?:/[^\s<>"]*)?$#', $url)) {
+        return '';
+    }
+    return $url;
+}
+
+function bizhub_mail_render(array $cfg, string $subject, string $text, array $view): array
+{
+    $origin = rtrim((string) ($cfg['app_url'] ?? ''), '/');
+    $origin = bizhub_mail_safe_url($origin !== '' ? $origin : 'https://bizdavar.com') ?: 'https://bizdavar.com';
+    $heading = trim((string) ($view['heading'] ?? ''));
+    if ($heading === '') {
+        $heading = $subject;
+    }
+    $intro = trim((string) ($view['intro'] ?? ''));
+    $code = trim((string) ($view['code'] ?? ''));
+    if (!preg_match('/^\d{6}$/', $code)) {
+        $code = '';
+    }
+    $note = trim((string) ($view['note'] ?? ''));
+    $buttonUrl = bizhub_mail_safe_url((string) ($view['button_url'] ?? ''));
+    $buttonLabel = trim((string) ($view['button_label'] ?? ''));
+
+    $lines = preg_split("/\r\n|\n|\r/", str_replace("\r\n", "\n", $text)) ?: [];
+    $bodyLines = [];
+    foreach ($lines as $line) {
+        $trim = trim($line);
+        $asUrl = bizhub_mail_safe_url($trim);
+        if ($buttonUrl === '' && $asUrl !== '') {
+            $buttonUrl = $asUrl;
+            if ($buttonLabel === '') {
+                $buttonLabel = str_contains($asUrl, '/admin/') ? 'باز کردن BizHub' : 'مشاهده در سایت';
+            }
+            continue;
+        }
+        if ($buttonUrl !== '' && $trim === $buttonUrl) {
+            continue;
+        }
+        $bodyLines[] = rtrim($line);
+    }
+    if ($buttonLabel === '' && $buttonUrl !== '') {
+        $buttonLabel = 'باز کردن';
+    }
+
+    $plain = [$heading, ''];
+    if ($intro !== '') {
+        $plain[] = $intro;
+        $plain[] = '';
+    }
+    if ($code !== '') {
+        $plain[] = 'گام ۱: صفحه را باز کنید.';
+        $plain[] = 'گام ۲: این کد تأیید را وارد کنید و بعد رمز جدید را ذخیره کنید.';
+        $plain[] = 'کد تأیید: ' . $code;
+        $plain[] = '';
+    }
+    $rest = trim(implode("\n", $bodyLines));
+    if ($rest !== '') {
+        $plain[] = $rest;
+        $plain[] = '';
+    }
+    if ($buttonUrl !== '') {
+        $plain[] = $buttonLabel . ': ' . $buttonUrl;
+        $plain[] = '';
+    }
+    if ($note !== '') {
+        $plain[] = $note;
+        $plain[] = '';
+    }
+    $plain[] = 'بیزداور — تکنولوژی پردازان توسعه خاورمیانه';
+    $plain[] = 'info@bizdavar.com · +98 930 588 0135 · +90 501 067 6486 · +98 936 411 5151';
+    $plain[] = 'ایران · ترکیه · ارمنستان · دبی';
+    $plain[] = $origin;
+
+    $htmlLines = '';
+    foreach ($bodyLines as $line) {
+        if (trim($line) === '') {
+            $htmlLines .= '<div style="height:12px;line-height:12px;">&nbsp;</div>';
+            continue;
+        }
+        $htmlLines .= '<p style="margin:0 0 10px;font-size:15px;line-height:1.8;color:#1d1d1b;">' . bizhub_mail_h($line) . '</p>';
+    }
+    $steps = '';
+    $codeBox = '';
+    if ($code !== '') {
+        $steps = '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 18px;">'
+            . '<tr><td style="width:28px;vertical-align:top;font-size:14px;font-weight:700;color:#e3191f;">۱</td>'
+            . '<td style="font-size:14px;line-height:1.7;color:#1d1d1b;padding-bottom:6px;">صفحه را با دکمه زیر باز کنید.</td></tr>'
+            . '<tr><td style="width:28px;vertical-align:top;font-size:14px;font-weight:700;color:#e3191f;">۲</td>'
+            . '<td style="font-size:14px;line-height:1.7;color:#1d1d1b;">کد تأیید را در همان صفحه وارد کنید، بعد رمز جدید را ذخیره کنید.</td></tr>'
+            . '</table>';
+        $codeBox = '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 18px;">'
+            . '<tr><td align="center" style="background:#f6f6f6;border:1px solid #ececec;border-radius:12px;padding:16px 12px;">'
+            . '<div style="font-size:12px;letter-spacing:0.08em;color:#6b7280;margin-bottom:6px;">کد تأیید</div>'
+            . '<div dir="ltr" style="font-family:Consolas,Courier New,monospace;font-size:32px;font-weight:700;letter-spacing:8px;color:#1d1d1b;">' . bizhub_mail_h($code) . '</div>'
+            . '<div style="font-size:12px;color:#6b7280;margin-top:6px;">یک ساعت معتبر است</div>'
+            . '</td></tr></table>';
+    }
+    $introHtml = $intro !== ''
+        ? '<p style="margin:0 0 16px;font-size:15px;line-height:1.8;color:#1d1d1b;">' . bizhub_mail_h($intro) . '</p>'
+        : '';
+    $button = '';
+    if ($buttonUrl !== '') {
+        $button = '<table role="presentation" cellpadding="0" cellspacing="0" style="margin:8px 0 14px;"><tr><td bgcolor="#e3191f" style="border-radius:8px;">'
+            . '<a href="' . bizhub_mail_h($buttonUrl) . '" style="display:inline-block;padding:12px 22px;font-size:15px;font-weight:700;color:#ffffff;text-decoration:none;">' . bizhub_mail_h($buttonLabel) . '</a>'
+            . '</td></tr></table>'
+            . '<p dir="ltr" style="margin:0 0 12px;font-size:12px;line-height:1.6;color:#6b7280;word-break:break-all;">' . bizhub_mail_h($buttonUrl) . '</p>';
+    }
+    $noteHtml = $note !== ''
+        ? '<p style="margin:8px 0 0;font-size:13px;line-height:1.7;color:#6b7280;">' . bizhub_mail_h($note) . '</p>'
+        : '';
+    $year = date('Y');
+    $html = '<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
+        . '<title>' . bizhub_mail_h($heading) . '</title></head>'
+        . '<body style="margin:0;padding:0;background:#f3f3f3;">'
+        . '<div style="display:none;max-height:0;overflow:hidden;opacity:0;">' . bizhub_mail_h($heading) . ' — بیزداور</div>'
+        . '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f3f3f3;padding:24px 12px;"><tr><td align="center">'
+        . '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#ffffff;border-radius:16px;overflow:hidden;border:1px solid #e8e8e8;">'
+        . '<tr><td style="background:#1d1d1b;padding:22px 28px 18px;">'
+        . '<table role="presentation" cellpadding="0" cellspacing="0"><tr>'
+        . '<td style="padding-left:12px;"><img src="https://bizdavar.com/assets/images/brand/favicon-48.png" width="36" height="36" alt="" style="display:block;border:0;"></td>'
+        . '<td><div style="font-size:20px;font-weight:700;color:#ffffff;line-height:1.2;">بیزداور</div>'
+        . '<div style="font-size:12px;color:#d0d0d0;margin-top:3px;">BizHub · bizdavar.com</div></td>'
+        . '</tr></table></td></tr>'
+        . '<tr><td style="height:3px;background:#e3191f;font-size:0;line-height:0;">&nbsp;</td></tr>'
+        . '<tr><td style="padding:28px 28px 8px;font-family:Tahoma,Arial,sans-serif;">'
+        . '<h1 style="margin:0 0 14px;font-size:20px;line-height:1.5;color:#1d1d1b;font-weight:700;">' . bizhub_mail_h($heading) . '</h1>'
+        . $introHtml . $steps . $codeBox . $htmlLines . $button . $noteHtml
+        . '</td></tr>'
+        . '<tr><td style="padding:18px 28px 22px;background:#fafafa;border-top:1px solid #eeeeee;font-family:Tahoma,Arial,sans-serif;">'
+        . '<p style="margin:0 0 6px;font-size:13px;font-weight:700;color:#1d1d1b;">تکنولوژی پردازان توسعه خاورمیانه</p>'
+        . '<p style="margin:0 0 8px;font-size:12px;line-height:1.7;color:#4b4b4b;">آژانس دیجیتال مارکتینگ بیزداور</p>'
+        . '<p style="margin:0 0 4px;font-size:12px;line-height:1.8;color:#4b4b4b;">'
+        . '<a href="mailto:info@bizdavar.com" style="color:#1d1d1b;text-decoration:none;">info@bizdavar.com</a></p>'
+        . '<p dir="ltr" style="margin:0 0 4px;font-size:12px;line-height:1.8;color:#4b4b4b;text-align:right;">'
+        . '<a href="tel:+989305880135" style="color:#1d1d1b;text-decoration:none;">+98 930 588 0135</a>'
+        . ' · <a href="tel:+905010676486" style="color:#1d1d1b;text-decoration:none;">+90 501 067 6486</a>'
+        . ' · <a href="tel:+989364115151" style="color:#1d1d1b;text-decoration:none;">+98 936 411 5151</a></p>'
+        . '<p style="margin:0 0 8px;font-size:12px;line-height:1.7;color:#4b4b4b;">ایران · ترکیه · ارمنستان · دبی</p>'
+        . '<p style="margin:0;font-size:12px;line-height:1.7;color:#6b7280;">این نامه خودکار است. برای پاسخ به info@bizdavar.com بنویسید.'
+        . ' · <a href="' . bizhub_mail_h($origin) . '" style="color:#1d1d1b;text-decoration:none;">bizdavar.com</a>'
+        . ' · ' . bizhub_mail_h($year) . '</p>'
+        . '</td></tr></table></td></tr></table></body></html>';
+
+    return [implode("\n", $plain), $html];
 }
 
 function bizhub_mail_document_notice(PDO $pdo, array $cfg, int $documentId): void

@@ -142,17 +142,26 @@ if ($method === 'POST' && $uri === '/auth/forgot') {
     if ($user) {
         $pdo->prepare('DELETE FROM password_resets WHERE user_id = ? OR expires_at < NOW()')->execute([(int) $user['id']]);
         $token = bin2hex(random_bytes(32));
-        $pdo->prepare('INSERT INTO password_resets (user_id, token_hash, expires_at) VALUES (?, ?, DATE_ADD(NOW(), INTERVAL 1 HOUR))')
-            ->execute([(int) $user['id'], hash('sha256', $token)]);
+        $code = str_pad((string) random_int(0, 999999), 6, '0', STR_PAD_LEFT);
+        $pdo->prepare('INSERT INTO password_resets (user_id, token_hash, code_hash, expires_at) VALUES (?, ?, ?, DATE_ADD(NOW(), INTERVAL 1 HOUR))')
+            ->execute([(int) $user['id'], hash('sha256', $token), hash('sha256', $code)]);
         $link = bizhub_app_origin($cfg) . '/admin/?reset=' . $token;
         bizhub_mail(
             $cfg,
             (string) $user['email'],
-            'بازیابی رمز BizHub',
-            "برای ساختن رمز جدید این لینک را باز کنید. یک ساعت معتبر است.\n\n{$link}\n\nاگر شما این درخواست را نداده‌اید، این ایمیل را نادیده بگیرید. رمز فعلی عوض نمی‌شود."
+            'بازیابی رمز بیزداور',
+            '',
+            [
+                'heading' => 'بازیابی رمز',
+                'intro' => 'درخواست عوض کردن رمز برای این ایمیل ثبت شد. لینک و کد، هر دو یک ساعت معتبرند.',
+                'code' => $code,
+                'button_label' => 'باز کردن صفحه بازیابی',
+                'button_url' => $link,
+                'note' => 'اگر شما این درخواست را نداده‌اید، این ایمیل را نادیده بگیرید. رمز فعلی عوض نمی‌شود.',
+            ]
         );
     }
-    Response::json(['ok' => true, 'message' => 'اگر این ایمیل در BizHub باشد، لینک بازیابی ارسال شد. پوشه هرزنامه را هم ببینید.']);
+    Response::json(['ok' => true, 'message' => 'اگر این ایمیل در BizHub باشد، کد تأیید و لینک بازیابی ارسال شد. پوشه هرزنامه را هم ببینید.']);
 }
 
 if ($method === 'POST' && $uri === '/auth/reset') {
@@ -164,17 +173,25 @@ if ($method === 'POST' && $uri === '/auth/reset') {
     $body = bizhub_json_body();
     $token = strtolower(trim((string) ($body['token'] ?? '')));
     $password = (string) ($body['password'] ?? '');
+    $code = preg_replace('/\D/', '', (string) ($body['code'] ?? '')) ?? '';
     if (!preg_match('/^[a-f0-9]{64}$/', $token)) {
         Response::error('لینک بازیابی نامعتبر است', 422);
+    }
+    if (!preg_match('/^\d{6}$/', $code)) {
+        Response::error('کد تأیید شش رقم است', 422);
     }
     if (strlen($password) < 10) {
         Response::error('رمز حداقل ۱۰ کاراکتر باشد', 422);
     }
-    $stmt = $pdo->prepare('SELECT id, user_id, expires_at, used_at FROM password_resets WHERE token_hash = ? LIMIT 1');
+    $stmt = $pdo->prepare('SELECT id, user_id, code_hash, expires_at, used_at FROM password_resets WHERE token_hash = ? LIMIT 1');
     $stmt->execute([hash('sha256', $token)]);
     $row = $stmt->fetch();
     if (!$row || !empty($row['used_at']) || strtotime((string) $row['expires_at']) < time()) {
         Response::error('لینک بازیابی نامعتبر یا منقضی شده است', 422);
+    }
+    $storedCode = (string) ($row['code_hash'] ?? '');
+    if ($storedCode === '' || !hash_equals($storedCode, hash('sha256', $code))) {
+        Response::error('کد تأیید نادرست است. همان کدی را وارد کنید که در ایمیل آمده.', 422);
     }
     $active = $pdo->prepare('SELECT id FROM users WHERE id = ? AND is_active = 1');
     $active->execute([(int) $row['user_id']]);

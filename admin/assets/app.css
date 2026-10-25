@@ -63,6 +63,13 @@ body {
   margin-top: 8px;
 }
 
+.hub-code {
+  letter-spacing: 0.35em;
+  font-size: 1.25rem;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
 .hub-login__brand {
   text-align: center;
   margin-bottom: 28px;

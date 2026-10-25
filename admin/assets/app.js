@@ -251,7 +251,7 @@
         <div class="hub-login__card">
           <div class="hub-login__brand">
             <h1>بازیابی رمز</h1>
-            <p>لینک به ایمیل حساب فرستاده می‌شود</p>
+            <p>یک کد تأیید و یک لینک به ایمیل می‌رود. هر دو لازم است.</p>
           </div>
           ${notice ? `<p class="hub-muted">${esc(notice)}</p>` : ''}
           ${err ? `<div class="hub-error">${esc(err)}</div>` : ''}
@@ -260,7 +260,7 @@
               <label for="email">ایمیل</label>
               <input type="email" id="email" name="email" required autocomplete="username" dir="ltr" value="${esc(email || '')}">
             </div>
-            <button type="submit" class="hub-btn hub-btn--primary">ارسال لینک</button>
+            <button type="submit" class="hub-btn hub-btn--primary">ارسال کد و لینک</button>
             <button type="button" class="hub-btn hub-btn--ghost" id="backLogin">بازگشت به ورود</button>
           </form>
         </div>
@@ -271,23 +271,27 @@
       const typed = document.getElementById('email').value;
       try {
         const r = await api('/auth/forgot', { method: 'POST', body: { email: typed } });
-        renderForgot('', r.message || 'اگر این ایمیل در BizHub باشد، لینک بازیابی ارسال شد. پوشه هرزنامه را هم ببینید.', typed);
+        renderForgot('', r.message || 'اگر این ایمیل در BizHub باشد، کد تأیید و لینک بازیابی ارسال شد. پوشه هرزنامه را هم ببینید.', typed);
       } catch (err) {
         renderForgot(err.message, '', typed);
       }
     });
   }
 
-  function renderReset(token, err) {
+  function renderReset(token, err, code) {
     app.innerHTML = `
       <div class="hub-login">
         <div class="hub-login__card">
           <div class="hub-login__brand">
             <h1>رمز جدید</h1>
-            <p>حداقل ۱۰ کاراکتر</p>
+            <p>اول کد شش‌رقمی ایمیل، بعد رمز تازه. حداقل ۱۰ کاراکتر.</p>
           </div>
           ${err ? `<div class="hub-error">${esc(err)}</div>` : ''}
           <form id="resetForm">
+            <div class="hub-field">
+              <label for="code">کد تأیید ایمیل</label>
+              <input class="hub-code" type="text" id="code" inputmode="numeric" autocomplete="one-time-code" maxlength="6" required dir="ltr" value="${esc(code || '')}">
+            </div>
             <div class="hub-field">
               <label for="password">رمز جدید</label>
               <input type="password" id="password" required minlength="10" autocomplete="new-password">
@@ -300,19 +304,28 @@
           </form>
         </div>
       </div>`;
+    const codeInput = document.getElementById('code');
+    codeInput.addEventListener('input', () => {
+      codeInput.value = codeInput.value.replace(/\D/g, '').slice(0, 6);
+    });
     document.getElementById('resetForm').addEventListener('submit', async e => {
       e.preventDefault();
       const password = document.getElementById('password').value;
+      const typedCode = document.getElementById('code').value.replace(/\D/g, '');
+      if (!/^\d{6}$/.test(typedCode)) {
+        renderReset(token, 'کد تأیید شش رقم است', typedCode);
+        return;
+      }
       if (password !== document.getElementById('password2').value) {
-        renderReset(token, 'تکرار رمز یکسان نیست');
+        renderReset(token, 'تکرار رمز یکسان نیست', typedCode);
         return;
       }
       try {
-        await api('/auth/reset', { method: 'POST', body: { token, password } });
+        await api('/auth/reset', { method: 'POST', body: { token, password, code: typedCode } });
         history.replaceState({}, '', '/admin/');
         renderLogin('', undefined, 'رمز عوض شد. با رمز جدید وارد شوید. اگر Authenticator فعال است، همان کد قبلی لازم است.');
       } catch (err) {
-        renderReset(token, err.message);
+        renderReset(token, err.message, typedCode);
       }
     });
   }
