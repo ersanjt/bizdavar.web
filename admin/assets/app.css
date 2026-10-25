@@ -637,6 +637,9 @@ body {
 .hub-bubble { background: var(--hub-bg); border-radius: 10px; padding: 12px; font-size: 0.9rem; }
 .hub-bubble--mine { background: #eef2ff; }
 .hub-table textarea { width: 100%; min-width: 180px; min-height: 64px; }
+.hub-doc-line { display: grid; grid-template-columns: 1fr 90px 140px; gap: 8px; margin-bottom: 8px; }
+.hub-paper__body { padding: 16px; }
+.hub-table tr[data-inbox], .hub-table tr[data-open-doc] { cursor: pointer; }
 
 @media (max-width: 900px) {
   .hub-shell { grid-template-columns: 1fr; }

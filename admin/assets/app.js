@@ -43,8 +43,23 @@
     orders: [],
     tickets: [],
     openTicket: null,
-    ticketThread: null
+    ticketThread: null,
+    commerce: null,
+    inbox: [],
+    docs: [],
+    docKind: 'proforma',
+    openDoc: null,
+    docRecord: null,
+    docDraft: null,
+    purchases: [],
+    openOrder: null,
+    orderThread: null
   };
+  const DOC_LABELS = {
+    draft: 'پیش‌نویس', sent: 'ارسال شده', accepted: 'پذیرفته', rejected: 'رد شده',
+    issued: 'صادر شده', paid: 'پرداخت شده', void: 'باطل'
+  };
+  const BUY_LABELS = { planned: 'برنامه‌ریزی', ordered: 'سفارش خرید', received: 'رسیده', cancelled: 'لغو' };
   const ORDER_LABELS = { new: 'جدید', quoted: 'قیمت داده شد', accepted: 'پذیرفته', rejected: 'رد شد', done: 'انجام شد' };
   const TICKET_LABELS = { open: 'باز', answered: 'پاسخ داده شد', closed: 'بسته' };
   const isPartnerUser = () => state.user?.role === 'partner';
@@ -235,6 +250,7 @@
               ${navItem('desk', 'میز کار', 'chart-bar')}
               ${navItem('prices', 'فهرست قیمت', 'article')}
               ${navItem('orders', 'سفارش‌ها', 'users')}
+              ${navItem('docs', 'اسناد من', 'article')}
               ${navItem('tickets', 'تیکت‌ها', 'help')}
             ` : `
               ${navItem('dashboard', 'داشبورد', 'chart-bar')}
@@ -243,9 +259,12 @@
               ${navItem('posts', 'مقالات (CMS)', 'article')}
               ${navItem('faqs', 'سوالات متداول', 'help')}
               ${state.user?.role === 'admin' ? `
+                ${navItem('inbox', 'صندوق پیام', 'help')}
                 ${navItem('partners', 'بازاریاب‌ها', 'users')}
                 ${navItem('prices', 'فهرست قیمت', 'article')}
-                ${navItem('orders', 'سفارش بازاریاب', 'users')}
+                ${navItem('orders', 'سفارش‌ها', 'users')}
+                ${navItem('docs', 'پیش‌فاکتور و فاکتور', 'article')}
+                ${navItem('purchases', 'خریدها', 'link')}
                 ${navItem('tickets', 'تیکت‌ها', 'help')}
               ` : ''}
             `}
@@ -278,7 +297,10 @@
     const main = document.getElementById('hubMain');
     main.innerHTML = '<div class="hub-loading">بارگذاری…</div>';
     try {
-      if (state.view === 'dashboard') await loadDashboard();
+      if (state.view === 'dashboard') {
+        await loadDashboard();
+        if (state.user?.role === 'admin' || state.user?.role === 'sales') state.commerce = await api('/commerce/summary');
+      }
       if (state.view === 'pages') await loadPages();
       if (state.view === 'leads') await loadLeads();
       if (state.view === 'posts') await loadPosts();
@@ -291,6 +313,9 @@
         await loadOrders();
       }
       if (state.view === 'tickets') await loadTickets();
+      if (state.view === 'inbox') state.inbox = (await api('/inbox')).items || [];
+      if (state.view === 'docs') await loadDocs();
+      if (state.view === 'purchases') state.purchases = (await api('/purchases')).purchases || [];
       renderView();
     } catch (e) {
       main.innerHTML = `<div class="hub-error">${esc(e.message)}</div>`;
@@ -331,6 +356,9 @@
     if (state.view === 'prices') main.innerHTML = renderPrices();
     if (state.view === 'orders') main.innerHTML = renderOrders();
     if (state.view === 'tickets') main.innerHTML = renderTickets();
+    if (state.view === 'inbox') main.innerHTML = renderInbox();
+    if (state.view === 'docs') main.innerHTML = renderDocs();
+    if (state.view === 'purchases') main.innerHTML = renderPurchases();
     bindViewEvents();
   }
 
@@ -373,6 +401,14 @@
         <div class="hub-stat"><div class="hub-stat__val">${s.posts_published ?? 0}</div><div class="hub-stat__label">مقاله منتشرشده</div></div>
         <div class="hub-stat"><div class="hub-stat__val">${s.posts_draft ?? 0}</div><div class="hub-stat__label">پیش‌نویس</div></div>
       </div>
+      ${state.commerce ? `<div class="hub-stats">
+        <div class="hub-stat"><div class="hub-stat__val">${state.commerce.orders_open ?? 0}</div><div class="hub-stat__label">سفارش باز</div></div>
+        <div class="hub-stat"><div class="hub-stat__val">${state.commerce.proformas_open ?? 0}</div><div class="hub-stat__label">پیش‌فاکتور باز</div></div>
+        <div class="hub-stat"><div class="hub-stat__val">${state.commerce.invoices_unpaid ?? 0}</div><div class="hub-stat__label">فاکتور پرداخت‌نشده</div></div>
+        <div class="hub-stat"><div class="hub-stat__val">${state.commerce.invoices_paid ?? 0}</div><div class="hub-stat__label">فاکتور پرداخت‌شده</div></div>
+        <div class="hub-stat"><div class="hub-stat__val">${state.commerce.purchases_open ?? 0}</div><div class="hub-stat__label">خرید باز</div></div>
+        <div class="hub-stat"><div class="hub-stat__val">${state.commerce.tickets_open ?? 0}</div><div class="hub-stat__label">تیکت باز</div></div>
+      </div>` : ''}
       <p class="hub-hint">شمارش بازدید از همین به‌روزرسانی شروع می‌شود و تاریخچهٔ قبلی را شامل نمی‌شود. آرشیو قبلی در Google Analytics است: G-4GFEY12SLH. فرم تماس سایت از این به بعد سرنخ می‌سازد.</p>
       <div class="hub-card hub-card--chart">
         <div class="hub-card__head"><h3>بازدید ۱۴ روز اخیر</h3></div>
@@ -752,6 +788,16 @@
   async function loadOrders() {
     const r = await api('/orders');
     state.orders = r.orders || [];
+    state.orderThread = state.openOrder ? await api('/orders/' + state.openOrder) : null;
+  }
+  async function loadDocs() {
+    const r = await api('/documents?kind=' + encodeURIComponent(state.docKind || ''));
+    state.docs = r.documents || [];
+    state.docRecord = state.openDoc ? (await api('/documents/' + state.openDoc)).document : null;
+  }
+  function money(n, currency) {
+    const v = Number(n || 0).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    return v + ' ' + (currency || 'USD');
   }
   async function loadTickets() {
     const r = await api('/tickets');
@@ -771,6 +817,8 @@
         <div class="hub-stat"><div class="hub-stat__val">${orders.new || 0}</div><div class="hub-stat__label">در انتظار قیمت</div></div>
         <div class="hub-stat"><div class="hub-stat__val">${orders.quoted || 0}</div><div class="hub-stat__label">قیمت داده شده</div></div>
         <div class="hub-stat"><div class="hub-stat__val">${h.ticketsOpen || 0}</div><div class="hub-stat__label">تیکت باز</div></div>
+        <div class="hub-stat"><div class="hub-stat__val">${h.documents?.proforma || 0}</div><div class="hub-stat__label">پیش‌فاکتور</div></div>
+        <div class="hub-stat"><div class="hub-stat__val">${h.documents?.invoice || 0}</div><div class="hub-stat__label">فاکتور</div></div>
       </div>
       <div class="hub-card" style="margin-bottom:16px">
         <div class="hub-card__head"><h3>لینک‌های شما</h3></div>
@@ -884,8 +932,22 @@
     return `
       <div class="hub-topbar"><h2>${isPartnerUser() ? 'سفارش‌های من' : 'سفارش بازاریاب‌ها'}</h2></div>
       ${form}
+      ${state.orderThread ? `<div class="hub-card" style="margin-bottom:16px">
+        <div class="hub-card__head"><h3>گفتگوی سفارش ${esc(state.orderThread.order?.client_name || '')}</h3>
+          <button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" id="closeOrderThread">بستن</button></div>
+        <div class="hub-thread">
+          ${(state.orderThread.messages || []).map(m => `<div class="hub-bubble${Number(m.user_id) === Number(state.user?.id) ? ' hub-bubble--mine' : ''}">
+            <div class="hub-note__meta">${esc(m.author_name)} — ${fmtDate(m.created_at)}</div>${esc(m.body)}
+          </div>`).join('') || '<p class="hub-hint hub-hint--in">هنوز پیامی نیست</p>'}
+          ${(state.orderThread.documents || []).map(d => `<p class="hub-hint hub-hint--in">${d.kind === 'invoice' ? 'فاکتور' : 'پیش‌فاکتور'} ${esc(d.number)} — ${esc(DOC_LABELS[d.status] || d.status)}</p>`).join('')}
+        </div>
+        <form id="orderReply" style="padding:16px">
+          <div class="hub-field"><textarea name="body" required placeholder="پیام درباره قیمت، خرید یا تحویل…"></textarea></div>
+          <button class="hub-btn hub-btn--yellow hub-btn--sm" type="submit">ارسال پیام</button>
+        </form>
+      </div>` : ''}
       <div class="hub-card"><div class="hub-table-wrap"><table class="hub-table"><thead><tr>
-        <th>مشتری</th><th>خدمت</th>${isPartnerUser() ? '' : '<th>بازاریاب</th>'}<th>وضعیت</th><th>پاسخ قیمت</th><th>تاریخ</th>
+        <th>مشتری</th><th>خدمت</th>${isPartnerUser() ? '' : '<th>بازاریاب</th>'}<th>وضعیت</th><th>پاسخ قیمت</th><th>تاریخ</th><th></th>
       </tr></thead><tbody>
         ${state.orders.map(o => `<tr>
           <td>${esc(o.client_name)}<div class="hub-path" dir="ltr">${esc(o.client_phone || o.client_email || '')}</div></td>
@@ -894,7 +956,9 @@
           <td>${isPartnerUser() ? esc(ORDER_LABELS[o.status] || o.status) : `<select data-order-status="${o.id}">${Object.entries(ORDER_LABELS).map(([k, v]) => `<option value="${k}"${o.status === k ? ' selected' : ''}>${v}</option>`).join('')}</select>`}</td>
           <td>${isPartnerUser() ? esc(o.quote_note || '—') : `<textarea data-order-note="${o.id}">${esc(o.quote_note || '')}</textarea><button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" data-save-order="${o.id}">ذخیره</button>`}</td>
           <td>${fmtDate(o.created_at)}</td>
-        </tr>`).join('') || `<tr><td colspan="${isPartnerUser() ? 5 : 6}">سفارشی نیست</td></tr>`}
+          <td><button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" data-open-order="${o.id}">گفتگو</button>
+            ${isPartnerUser() ? '' : `<button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" data-proforma-order="${o.id}">پیش‌فاکتور</button>`}</td>
+        </tr>`).join('') || `<tr><td colspan="${isPartnerUser() ? 6 : 7}">سفارشی نیست</td></tr>`}
       </tbody></table></div></div>`;
   }
 
@@ -1073,6 +1137,255 @@
       await api('/tickets/' + state.openTicket, { method: 'PATCH', body: { status: 'closed' } });
       loadView();
     });
+    document.querySelectorAll('[data-open-order]').forEach(btn => {
+      btn.addEventListener('click', () => { state.openOrder = btn.dataset.openOrder; loadView(); });
+    });
+    document.getElementById('closeOrderThread')?.addEventListener('click', () => { state.openOrder = null; loadView(); });
+    document.getElementById('orderReply')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      try {
+        await api('/orders/' + state.openOrder + '/messages', { method: 'POST', body: { body: fd.get('body') } });
+        loadView();
+      } catch (err) { alert(err.message); }
+    });
+    document.querySelectorAll('[data-proforma-order]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const order = state.orders.find(o => String(o.id) === btn.dataset.proformaOrder);
+        if (!order) return;
+        state.view = 'docs';
+        state.docKind = 'proforma';
+        state.openDoc = null;
+        state.docDraft = {
+          order_id: order.id,
+          partner_id: order.partner_id,
+          client_name: order.client_name,
+          client_phone: order.client_phone || '',
+          client_email: order.client_email || '',
+          lines: [{ title: order.service_title, qty: 1, unit_price: '' }]
+        };
+        renderShell();
+      });
+    });
+    document.querySelectorAll('[data-doc-kind]').forEach(btn => {
+      btn.addEventListener('click', () => { state.docKind = btn.dataset.docKind; state.openDoc = null; loadView(); });
+    });
+    document.querySelectorAll('[data-open-doc]').forEach(row => {
+      row.addEventListener('click', () => { state.openDoc = row.dataset.openDoc; loadView(); });
+    });
+    document.getElementById('closeDoc')?.addEventListener('click', () => { state.openDoc = null; loadView(); });
+    document.getElementById('addDocLine')?.addEventListener('click', () => {
+      const box = document.getElementById('docLines');
+      const row = box?.querySelector('.hub-doc-line');
+      if (!box || !row) return;
+      const copy = row.cloneNode(true);
+      copy.querySelectorAll('input').forEach(input => { input.value = input.name === 'line_qty' ? '1' : ''; });
+      box.appendChild(copy);
+    });
+    document.getElementById('docForm')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      const titles = fd.getAll('line_title');
+      const qtys = fd.getAll('line_qty');
+      const prices = fd.getAll('line_price');
+      const lines = titles.map((title, i) => ({ title, qty: qtys[i], unit_price: prices[i] })).filter(l => String(l.title).trim());
+      try {
+        const r = await api('/documents', { method: 'POST', body: {
+          kind: state.docKind || 'proforma',
+          order_id: fd.get('order_id') || null,
+          partner_id: fd.get('partner_id') || null,
+          client_name: fd.get('client_name'),
+          client_phone: fd.get('client_phone'),
+          client_email: fd.get('client_email'),
+          currency: fd.get('currency') || 'USD',
+          notes: fd.get('notes'),
+          valid_until: fd.get('valid_until'),
+          lines
+        } });
+        state.docDraft = null;
+        state.openDoc = r.id;
+        loadView();
+      } catch (err) { alert(err.message); }
+    });
+    document.querySelectorAll('[data-doc-status]').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        await api('/documents/' + state.openDoc, { method: 'PATCH', body: { status: btn.dataset.docStatus } });
+        loadView();
+      });
+    });
+    document.getElementById('makeInvoice')?.addEventListener('click', async () => {
+      try {
+        const r = await api('/documents/' + state.openDoc + '/invoice', { method: 'POST', body: {} });
+        state.docKind = 'invoice';
+        state.openDoc = r.id;
+        loadView();
+      } catch (err) { alert(err.message); }
+    });
+    document.getElementById('printDoc')?.addEventListener('click', () => printDocument(state.docRecord));
+    document.querySelectorAll('[data-inbox]').forEach(row => {
+      row.addEventListener('click', () => {
+        const kind = row.dataset.inbox;
+        const id = row.dataset.id;
+        if (kind === 'lead') { state.view = 'leads'; renderShell(); setTimeout(() => openLeadModal(+id), 400); }
+        if (kind === 'ticket') { state.view = 'tickets'; state.openTicket = id; renderShell(); }
+        if (kind === 'order') { state.view = 'orders'; state.openOrder = id; renderShell(); }
+      });
+    });
+    document.getElementById('purchaseForm')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      try {
+        await api('/purchases', { method: 'POST', body: {
+          supplier: fd.get('supplier'), title: fd.get('title'), amount: fd.get('amount'),
+          currency: fd.get('currency'), order_id: fd.get('order_id'), notes: fd.get('notes'), status: 'planned'
+        } });
+        loadView();
+      } catch (err) { alert(err.message); }
+    });
+    document.querySelectorAll('[data-buy-status]').forEach(sel => {
+      sel.addEventListener('change', async () => {
+        await api('/purchases/' + sel.dataset.buyStatus, { method: 'PATCH', body: { status: sel.value } });
+      });
+    });
+  }
+
+  const INBOX_LABELS = { lead: 'سرنخ سایت', ticket: 'تیکت بازاریاب', order: 'پیام سفارش' };
+
+  function renderInbox() {
+    return `
+      <div class="hub-topbar"><h2>صندوق پیام</h2></div>
+      <p class="hub-hint">پیام فرم سایت، تیکت بازاریاب و گفتگوی سفارش‌ها اینجاست. چیزی برای پیگیری بیرون از پنل نمی‌ماند.</p>
+      <div class="hub-card"><div class="hub-table-wrap"><table class="hub-table"><thead><tr>
+        <th>نوع</th><th>موضوع</th><th>متن</th><th>زمان</th>
+      </tr></thead><tbody>
+        ${state.inbox.map(item => `<tr data-inbox="${esc(item.kind)}" data-id="${item.id}">
+          <td>${esc(INBOX_LABELS[item.kind] || item.kind)}</td>
+          <td>${esc(item.title)}</td>
+          <td>${esc(item.body)}</td>
+          <td>${fmtDate(item.at)}</td>
+        </tr>`).join('') || '<tr><td colspan="4">پیامی نیست</td></tr>'}
+      </tbody></table></div></div>`;
+  }
+
+  function renderDocs() {
+    const draft = state.docDraft || {};
+    const lines = draft.lines || [{ title: '', qty: 1, unit_price: '' }];
+    const doc = state.docRecord;
+    const paper = doc ? `
+      <div class="hub-card hub-paper" id="paper">
+        <div class="hub-card__head"><h3>${doc.kind === 'invoice' ? 'فاکتور' : 'پیش‌فاکتور'} ${esc(doc.number)}</h3>
+          <div>
+            <button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" id="printDoc">چاپ</button>
+            <button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" id="closeDoc">بازگشت</button>
+          </div>
+        </div>
+        <div class="hub-paper__body">
+          <p><strong>${esc(doc.client_name)}</strong><br><span dir="ltr">${esc(doc.client_phone || '')} ${esc(doc.client_email || '')}</span></p>
+          <p>وضعیت: ${esc(DOC_LABELS[doc.status] || doc.status)}${doc.partner_name ? ' — بازاریاب: ' + esc(doc.partner_name) : ''}${doc.valid_until ? ' — اعتبار تا ' + esc(doc.valid_until) : ''}</p>
+          <table class="hub-table"><thead><tr><th>شرح</th><th>تعداد</th><th>فی</th><th>مبلغ</th></tr></thead><tbody>
+            ${(doc.lines || []).map(l => `<tr><td>${esc(l.title)}</td><td>${esc(l.qty)}</td><td>${money(l.unit_price, doc.currency)}</td><td>${money(l.amount, doc.currency)}</td></tr>`).join('')}
+          </tbody></table>
+          <p class="hub-price__amount">جمع: ${money(doc.total, doc.currency)}</p>
+          ${doc.notes ? `<p>${esc(doc.notes)}</p>` : ''}
+        </div>
+        ${isPartnerUser() ? '' : `<div style="padding:0 16px 16px;display:flex;gap:8px;flex-wrap:wrap">
+          ${(doc.kind === 'invoice' ? ['issued', 'paid', 'void'] : ['draft', 'sent', 'accepted', 'rejected']).map(st =>
+            `<button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" data-doc-status="${st}">${DOC_LABELS[st]}</button>`).join('')}
+          ${doc.kind === 'proforma' && doc.status !== 'rejected' ? '<button type="button" class="hub-btn hub-btn--yellow hub-btn--sm" id="makeInvoice">تبدیل به فاکتور</button>' : ''}
+        </div>`}
+      </div>` : '';
+    const form = !isPartnerUser() && !doc ? `
+      <div class="hub-card" style="margin-bottom:16px">
+        <div class="hub-card__head"><h3>${state.docKind === 'invoice' ? 'فاکتور جدید' : 'پیش‌فاکتور جدید'}</h3></div>
+        <form id="docForm" class="hub-form-grid" style="padding:16px">
+          <input type="hidden" name="order_id" value="${esc(draft.order_id || '')}">
+          <input type="hidden" name="partner_id" value="${esc(draft.partner_id || '')}">
+          <div class="hub-field"><label>مشتری</label><input name="client_name" required value="${esc(draft.client_name || '')}"></div>
+          <div class="hub-field"><label>تلفن</label><input name="client_phone" dir="ltr" value="${esc(draft.client_phone || '')}"></div>
+          <div class="hub-field"><label>ایمیل</label><input name="client_email" dir="ltr" value="${esc(draft.client_email || '')}"></div>
+          <div class="hub-field"><label>ارز</label><input name="currency" dir="ltr" value="USD"></div>
+          <div class="hub-field"><label>اعتبار تا</label><input name="valid_until" type="date"></div>
+          <div class="hub-field hub-field--full" id="docLines">
+            ${lines.map(l => `<div class="hub-doc-line">
+              <input name="line_title" placeholder="شرح" value="${esc(l.title || '')}" required>
+              <input name="line_qty" dir="ltr" value="${esc(l.qty || 1)}" inputmode="decimal">
+              <input name="line_price" dir="ltr" placeholder="فی" value="${esc(l.unit_price ?? '')}" inputmode="decimal">
+            </div>`).join('')}
+          </div>
+          <div class="hub-field hub-field--full"><button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" id="addDocLine">ردیف جدید</button></div>
+          <div class="hub-field hub-field--full"><label>یادداشت</label><textarea name="notes"></textarea></div>
+          <div class="hub-field hub-field--full"><button class="hub-btn hub-btn--yellow" type="submit">صدور</button></div>
+        </form>
+      </div>` : '';
+    return `
+      <div class="hub-topbar"><h2>${isPartnerUser() ? 'اسناد من' : 'پیش‌فاکتور و فاکتور'}</h2>
+        <div>
+          <button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" data-doc-kind="proforma">پیش‌فاکتور</button>
+          <button type="button" class="hub-btn hub-btn--ghost hub-btn--sm" data-doc-kind="invoice">فاکتور</button>
+        </div>
+      </div>
+      <p class="hub-hint">${state.docKind === 'invoice' ? 'فاکتور بعد از قبول پیش‌فاکتور صادر می‌شود. وضعیت پرداخت را همین‌جا عوض کنید.' : 'پیش‌فاکتور را از سفارش بسازید یا دستی بنویسید، بعد برای مشتری چاپ کنید.'}</p>
+      ${paper}${doc ? '' : form}
+      ${doc ? '' : `<div class="hub-card"><div class="hub-table-wrap"><table class="hub-table"><thead><tr>
+        <th>شماره</th><th>مشتری</th>${isPartnerUser() ? '' : '<th>بازاریاب</th>'}<th>وضعیت</th><th>جمع</th><th>تاریخ</th>
+      </tr></thead><tbody>
+        ${state.docs.map(d => `<tr data-open-doc="${d.id}">
+          <td dir="ltr">${esc(d.number)}</td>
+          <td>${esc(d.client_name)}</td>
+          ${isPartnerUser() ? '' : `<td>${esc(d.partner_name || '—')}</td>`}
+          <td>${esc(DOC_LABELS[d.status] || d.status)}</td>
+          <td>${money(d.total, d.currency)}</td>
+          <td>${fmtDate(d.issued_at)}</td>
+        </tr>`).join('') || `<tr><td colspan="${isPartnerUser() ? 5 : 6}">سندی نیست</td></tr>`}
+      </tbody></table></div></div>`}`;
+  }
+
+  function renderPurchases() {
+    return `
+      <div class="hub-topbar"><h2>خریدها</h2></div>
+      <p class="hub-hint">خرید از تأمین‌کننده را اینجا ثبت کنید تا کنار سفارش مشتری بماند. اگر به سفارشی وصل است، شماره همان سفارش را بنویسید.</p>
+      <div class="hub-card" style="margin-bottom:16px">
+        <form id="purchaseForm" class="hub-form-grid" style="padding:16px">
+          <div class="hub-field"><label>تأمین‌کننده</label><input name="supplier" required></div>
+          <div class="hub-field"><label>عنوان خرید</label><input name="title" required></div>
+          <div class="hub-field"><label>مبلغ</label><input name="amount" dir="ltr" inputmode="decimal" required></div>
+          <div class="hub-field"><label>ارز</label><input name="currency" dir="ltr" value="USD"></div>
+          <div class="hub-field"><label>شماره سفارش، اگر هست</label><input name="order_id" dir="ltr"></div>
+          <div class="hub-field hub-field--full"><label>یادداشت</label><textarea name="notes"></textarea></div>
+          <div class="hub-field hub-field--full"><button class="hub-btn hub-btn--yellow" type="submit">ثبت خرید</button></div>
+        </form>
+      </div>
+      <div class="hub-card"><div class="hub-table-wrap"><table class="hub-table"><thead><tr>
+        <th>تأمین‌کننده</th><th>عنوان</th><th>مبلغ</th><th>سفارش</th><th>وضعیت</th><th>تاریخ</th>
+      </tr></thead><tbody>
+        ${state.purchases.map(p => `<tr>
+          <td>${esc(p.supplier)}</td>
+          <td>${esc(p.title)}</td>
+          <td>${money(p.amount, p.currency)}</td>
+          <td>${p.order_id || '—'}</td>
+          <td><select data-buy-status="${p.id}">${Object.entries(BUY_LABELS).map(([k, v]) => `<option value="${k}"${p.status === k ? ' selected' : ''}>${v}</option>`).join('')}</select></td>
+          <td>${fmtDate(p.created_at)}</td>
+        </tr>`).join('') || '<tr><td colspan="6">خریدی ثبت نشده</td></tr>'}
+      </tbody></table></div></div>`;
+  }
+
+  function printDocument(doc) {
+    if (!doc) return;
+    const rows = (doc.lines || []).map(l => `<tr><td>${esc(l.title)}</td><td>${esc(l.qty)}</td><td>${money(l.unit_price, doc.currency)}</td><td>${money(l.amount, doc.currency)}</td></tr>`).join('');
+    const html = `<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><title>${esc(doc.number)}</title>
+      <style>body{font-family:Tahoma,sans-serif;margin:32px;color:#111}table{width:100%;border-collapse:collapse;margin:16px 0}td,th{border:1px solid #ccc;padding:8px;text-align:right}h1{margin:0 0 8px}</style></head><body>
+      <h1>${doc.kind === 'invoice' ? 'فاکتور' : 'پیش‌فاکتور'} ${esc(doc.number)}</h1>
+      <p>Bizdavar Group<br>${esc(doc.client_name)}<br>${esc(doc.client_phone || '')} ${esc(doc.client_email || '')}</p>
+      <table><thead><tr><th>شرح</th><th>تعداد</th><th>فی</th><th>مبلغ</th></tr></thead><tbody>${rows}</tbody></table>
+      <p><strong>جمع: ${money(doc.total, doc.currency)}</strong></p>
+      ${doc.notes ? `<p>${esc(doc.notes)}</p>` : ''}
+      </body></html>`;
+    const w = window.open('', '_blank');
+    if (!w) return;
+    w.document.write(html);
+    w.document.close();
+    w.focus();
+    w.print();
   }
 
   // ─── Boot ───

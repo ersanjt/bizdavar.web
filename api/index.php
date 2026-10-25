@@ -594,5 +594,6 @@ if ($method === 'DELETE' && ($p = route_match($uri, '/faqs/{id}'))) {
 }
 
 require __DIR__ . '/lib/partner-routes.php';
+require __DIR__ . '/lib/commerce-routes.php';
 
 Response::error('Not found', 404);

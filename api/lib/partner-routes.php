@@ -23,6 +23,12 @@ if ($method === 'GET' && $uri === '/partner/home') {
     }
     $openTickets = $pdo->prepare("SELECT COUNT(*) FROM tickets WHERE partner_id = ? AND status <> 'closed'");
     $openTickets->execute([(int) $actor['id']]);
+    $docCounts = $pdo->prepare('SELECT kind, COUNT(*) AS c FROM documents WHERE partner_id = ? GROUP BY kind');
+    $docCounts->execute([(int) $actor['id']]);
+    $docs = ['proforma' => 0, 'invoice' => 0];
+    foreach ($docCounts->fetchAll() as $item) {
+        $docs[(string) $item['kind']] = (int) $item['c'];
+    }
     Response::json([
         'ok' => true,
         'name' => (string) ($actor['name'] ?? ''),
@@ -31,6 +37,7 @@ if ($method === 'GET' && $uri === '/partner/home') {
         'loginUrl' => $origin . '/admin/',
         'orders' => $byStatus,
         'ticketsOpen' => (int) $openTickets->fetchColumn(),
+        'documents' => $docs,
     ]);
 }
 

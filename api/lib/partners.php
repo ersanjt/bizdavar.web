@@ -93,7 +93,99 @@ function bizhub_ensure_partner_tables(PDO $pdo): void
             $seed->execute($row);
         }
     }
+    bizhub_ensure_commerce_tables($pdo);
     $ready = true;
+}
+
+function bizhub_ensure_commerce_tables(PDO $pdo): void
+{
+    $pdo->exec(
+        "CREATE TABLE IF NOT EXISTS documents (
+          id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+          kind ENUM('proforma','invoice') NOT NULL,
+          number VARCHAR(32) NOT NULL,
+          partner_id INT UNSIGNED NULL,
+          order_id INT UNSIGNED NULL,
+          source_id INT UNSIGNED NULL,
+          client_name VARCHAR(160) NOT NULL,
+          client_phone VARCHAR(40) NULL,
+          client_email VARCHAR(190) NULL,
+          status VARCHAR(20) NOT NULL,
+          currency CHAR(3) NOT NULL DEFAULT 'USD',
+          notes TEXT NULL,
+          valid_until DATE NULL,
+          issued_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+          UNIQUE KEY uk_doc_number (number),
+          INDEX idx_docs_partner (partner_id),
+          INDEX idx_docs_order (order_id),
+          INDEX idx_docs_kind (kind, status)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci"
+    );
+    $pdo->exec(
+        "CREATE TABLE IF NOT EXISTS document_lines (
+          id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+          document_id INT UNSIGNED NOT NULL,
+          title VARCHAR(180) NOT NULL,
+          qty DECIMAL(10,2) NOT NULL DEFAULT 1,
+          unit_price DECIMAL(12,2) NOT NULL DEFAULT 0,
+          INDEX idx_doc_lines (document_id)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci"
+    );
+    $pdo->exec(
+        "CREATE TABLE IF NOT EXISTS purchases (
+          id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+          order_id INT UNSIGNED NULL,
+          supplier VARCHAR(160) NOT NULL,
+          title VARCHAR(180) NOT NULL,
+          amount DECIMAL(12,2) NOT NULL DEFAULT 0,
+          currency CHAR(3) NOT NULL DEFAULT 'USD',
+          status ENUM('planned','ordered','received','cancelled') NOT NULL DEFAULT 'planned',
+          notes TEXT NULL,
+          created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+          INDEX idx_purchases_status (status)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci"
+    );
+    $pdo->exec(
+        "CREATE TABLE IF NOT EXISTS order_messages (
+          id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+          order_id INT UNSIGNED NOT NULL,
+          user_id INT UNSIGNED NOT NULL,
+          body TEXT NOT NULL,
+          created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+          INDEX idx_order_messages (order_id)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci"
+    );
+}
+
+function bizhub_next_doc_number(PDO $pdo, string $kind): string
+{
+    $prefix = $kind === 'invoice' ? 'INV' : 'PF';
+    $year = date('Y');
+    $stmt = $pdo->prepare('SELECT number FROM documents WHERE number LIKE ? ORDER BY id DESC LIMIT 1');
+    $stmt->execute([$prefix . '-' . $year . '-%']);
+    $last = (string) $stmt->fetchColumn();
+    $n = 1;
+    if (preg_match('/(\d+)$/', $last, $m)) {
+        $n = (int) $m[1] + 1;
+    }
+    return sprintf('%s-%s-%04d', $prefix, $year, $n);
+}
+
+function bizhub_document_with_lines(PDO $pdo, array $doc): array
+{
+    $lines = $pdo->prepare('SELECT id, title, qty, unit_price FROM document_lines WHERE document_id = ? ORDER BY id ASC');
+    $lines->execute([(int) $doc['id']]);
+    $rows = [];
+    $total = 0.0;
+    foreach ($lines->fetchAll() as $line) {
+        $amount = round((float) $line['qty'] * (float) $line['unit_price'], 2);
+        $total += $amount;
+        $line['amount'] = $amount;
+        $rows[] = $line;
+    }
+    $doc['lines'] = $rows;
+    $doc['total'] = round($total, 2);
+    return $doc;
 }
 
 function bizhub_partner_code(PDO $pdo): string
