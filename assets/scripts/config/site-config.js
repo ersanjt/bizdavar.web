@@ -58,6 +58,7 @@ window.BIZDAVAR_CONFIG = {
     digiSystem: 'pages/digi-system.html',
     teraoka: 'pages/teraoka.html',
     liquiMoly: 'pages/liqui-moly.html',
+    bluePrint: 'pages/blue-print.html',
     autoMoto: 'pages/auto-moto.html',
     motorcycle: 'pages/motorcycle.html',
     carParts: 'pages/car-parts.html',
@@ -168,6 +169,7 @@ window.BIZDAVAR_CONFIG = {
             id: 'auto',
             labelKey: 'nav.brandGroupAuto',
             items: [
+              { route: 'bluePrint', page: 'blue-print', label: 'Blue Print', descKey: 'nav.brandBluePrintDesc' },
               { route: 'autoMoto', page: 'auto-moto', labelKey: 'nav.productAutoMoto', label: 'اتو‌موتو', descKey: 'nav.brandAutoMotoDesc' },
               { route: 'motorcycle', page: 'motorcycle', labelKey: 'nav.autoMotoShop', label: 'موتورسیکلت', descKey: 'nav.autoMotoShopDesc' },
               { route: 'carParts', page: 'car-parts', labelKey: 'nav.autoCarShop', label: 'قطعات خودرو', descKey: 'nav.autoCarShopDesc' }
@@ -849,6 +851,19 @@ window.BIZDAVAR_CONFIG = {
       accent: 'navy',
       tags: ['Octane Plus', 'Top Tec', '5W-30'],
       cta: 'کاتالوگ و قیمت'
+    },
+    {
+      name: 'Blue Print',
+      title: 'قطعات یدکی خودرو',
+      desc: 'فیلتر، ترمز، کلاچ، جلوبندی، تایم و برق برای خودروهای آسیایی — تامین ایران و روسیه',
+      logo: 'assets/images/partners/blue-print.svg',
+      photo: 'assets/images/partners/blue-print.svg',
+      url: 'pages/blue-print',
+      internal: true,
+      badge: 'آلمان',
+      accent: 'blue',
+      tags: ['فیلتر', 'ترمز', 'کلاچ'],
+      cta: 'کاتالوگ Blue Print'
     },
     {
       name: 'Auto-Moto',

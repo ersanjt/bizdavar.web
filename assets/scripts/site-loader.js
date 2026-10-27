@@ -71,7 +71,7 @@
   if (!el) return;
 
   var BASE = '/assets/scripts/';
-  var ASSET_VER = '20261025i';
+  var ASSET_VER = '20261027c';
 
   // Inline page boots run before deferred chain scripts; queue until bootstrap.js.
   window.bizdavarPageInit = window.bizdavarPageInit || function (fn) {
@@ -117,7 +117,8 @@
   var i18nPacks = [
     'i18n/locales-pages.js',
     'i18n/locale-seo.js',
-    'i18n/locales-ru-ar.js'
+    'i18n/locales-ru-ar.js',
+    'i18n/blue-print-i18n.js'
   ];
   if (isArticle) {
     i18nPacks.push('i18n/articles-body-i18n.js');
@@ -129,6 +130,7 @@
   var chain = [
     'config/paths.js',
     'config/site-config.js',
+    'config/blue-print-nav.js',
     'i18n/locale-url.js'
   ].concat(afterConfig, [
     'i18n/locales.js'

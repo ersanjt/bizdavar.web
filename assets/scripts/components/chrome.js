@@ -174,10 +174,30 @@
     'utm-builder', 'tank-volume-calculator', 'unit-converter'
   ]);
 
-  const SUPPLY_PAGES = new Set(['vega', 'prosense', 'teltonika', 'gamak', 'uwt', 'digi-system', 'teraoka', 'liqui-moly']);
+  const SUPPLY_PAGES = new Set(['vega', 'prosense', 'teltonika', 'gamak', 'uwt', 'digi-system', 'teraoka', 'liqui-moly', 'blue-print']);
 
   function getProductNavConfig() {
-    return C.productNav || { overviewRoute: 'products', tabs: [], footer: [] };
+    const cfg = C.productNav || { overviewRoute: 'products', tabs: [], footer: [] };
+    const extra = window.BLUE_PRINT_NAV && window.BLUE_PRINT_NAV.tab;
+    if (extra && !(cfg.tabs || []).some(tab => tab.id === 'blueprint')) {
+      cfg.tabs = (cfg.tabs || []).concat([extra]);
+    }
+    return cfg;
+  }
+
+  function bluePrintFooterLinks() {
+    const tab = window.BLUE_PRINT_NAV && window.BLUE_PRINT_NAV.tab;
+    if (!tab) return [];
+    const links = [];
+    (tab.groups || []).forEach(group => {
+      (group.items || []).forEach(item => {
+        links.push({
+          href: productNavHref(item),
+          label: item.labelKey ? t(item.labelKey, item.label || '') : (item.label || '')
+        });
+      });
+    });
+    return links;
   }
 
   function walkProductNavItems(visitor) {
@@ -486,7 +506,7 @@
             ${tab.cta.descKey ? `<small>${t(tab.cta.descKey, '')}</small>` : ''}
           </a>`
         : '';
-      return `<details class="mobile-drawer__product-tab"${tab.id === activeTab ? ' open' : ''}>
+      return `<details class="mobile-drawer__product-tab" data-product-tab="${tab.id}"${tab.id === activeTab ? ' open' : ''}>
         <summary>${t(tab.labelKey, tab.id)}</summary>
         <div class="mobile-drawer__product-tab-body">
           ${groups}
@@ -833,6 +853,12 @@
           : '');
 
       const footerLinks = getFooterLinkGroups();
+      const bpLinks = bluePrintFooterLinks();
+      const bpFooter = bpLinks.length ? `
+            <nav class="footer__bp" aria-label="${t('footer.bluePrintParts', 'قطعات Blue Print')}">
+              <h2 class="footer__bp-title">${t('footer.bluePrintParts', 'قطعات Blue Print')}</h2>
+              <ul class="footer__bp-list">${bpLinks.map(item => `<li><a href="${item.href}">${item.label}</a></li>`).join('')}</ul>
+            </nav>` : '';
 
       footer.innerHTML = `
         <div class="footer__glow" aria-hidden="true"></div>
@@ -873,6 +899,7 @@
                 </div>
               </div>
             </div>
+            ${bpFooter}
             <div class="footer__bar">
               <p class="footer__copy">© ${year} ${C.siteNameEn} — ${t('common.rights', 'تمامی حقوق محفوظ است')}</p>
               <nav class="footer__legal" aria-label="${t('footer.legal', 'Legal')}">
@@ -910,6 +937,7 @@
           <div class="mobile-footer-accordions">
             ${mobileFooterAccHtml(t('footer.services'), footerLinks.services)}
             ${mobileFooterAccHtml(t('footer.brands', 'برندها'), footerLinks.brands)}
+            ${bpLinks.length ? mobileFooterAccHtml(t('footer.bluePrintParts', 'قطعات Blue Print'), bpLinks) : ''}
             ${mobileFooterAccHtml(t('footer.quickLinks'), footerLinks.quick)}
             <details class="mobile-footer-acc">
               <summary>${t('footer.connectShort', t('footer.connect'))}</summary>

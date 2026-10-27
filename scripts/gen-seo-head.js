@@ -13,6 +13,7 @@ require(path.join(ROOT, 'assets/scripts/i18n/locales.js'));
 require(path.join(ROOT, 'assets/scripts/i18n/locales-pages.js'));
 require(path.join(ROOT, 'assets/scripts/i18n/locale-seo.js'));
 require(path.join(ROOT, 'assets/scripts/i18n/locales-ru-ar.js'));
+require(path.join(ROOT, 'assets/scripts/i18n/blue-print-i18n.js'));
 require(path.join(ROOT, 'assets/scripts/i18n/ostrich-leather-i18n.js'));
 require(path.join(ROOT, 'assets/scripts/i18n/speed-test-i18n.js'));
 ['tools-hub', 'whatsapp-link', 'site-speed', 'my-ip', 'utm-builder', 'tank-volume', 'unit-converter'].forEach((name) => {
@@ -110,6 +111,7 @@ const PAGE_ROUTES = {
   vega: '/pages/vega',
   prosense: '/pages/prosense',
   liquiMoly: '/pages/liqui-moly',
+  bluePrint: '/pages/blue-print',
   autoMoto: '/pages/auto-moto',
   motorcycle: '/pages/motorcycle',
   carParts: '/pages/car-parts',

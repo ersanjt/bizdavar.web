@@ -2073,6 +2073,7 @@
       oneTime: 'Разовый платёж', orderWa: 'Заказ в WhatsApp', orContact: 'или форма',
       compareFeature: 'Возможности', compareBasic: 'Базовый', compareStore: 'Магазин', comparePro: 'Pro',
       viewCase: 'Смотреть', navAria: 'Разделы Fast Web Studio',
+      planSample: 'Пример', planDelivery: 'Срок',
       saveOff: 'скидка {n}% на запуск'
     },
     sections: {
@@ -2714,6 +2715,7 @@
       oneTime: 'دفعة واحدة', orderWa: 'اطلب عبر واتساب', orContact: 'أو النموذج',
       compareFeature: 'المزايا', compareBasic: 'أساسي', compareStore: 'متجر', comparePro: 'احترافي',
       viewCase: 'عرض', navAria: 'أقسام Fast Web Studio',
+      planSample: 'نموذج', planDelivery: 'التسليم',
       saveOff: 'خصم {n}٪ على الإطلاق'
     },
     sections: {

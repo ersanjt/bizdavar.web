@@ -263,6 +263,12 @@ window.createSupplyBrandPage = function (cfg) {
     return item[base + suffix] || item[base] || '';
   }
 
+  function field(item, base) {
+    if (item == null) return '';
+    if (typeof item === 'string') return item;
+    return pickLang(item, base) || item[base] || '';
+  }
+
   function catalogQuery() {
     const input = document.getElementById(elId('CatalogSearch'));
     return ((input && input.value) || '').trim().toLowerCase();
@@ -393,7 +399,7 @@ window.createSupplyBrandPage = function (cfg) {
 
         <div class="${prefix}-hero__stats">
 
-          ${stats.map(s => `<div class="${prefix}-hero__stat"><strong>${s.value}</strong><span>${s.label}</span></div>`).join('')}
+          ${stats.map(s => `<div class="${prefix}-hero__stat"><strong>${s.value}</strong><span>${field(s, 'label')}</span></div>`).join('')}
 
         </div>` : ''}
 
@@ -479,13 +485,13 @@ window.createSupplyBrandPage = function (cfg) {
 
         <div class="${prefix}-quote-box__content">
 
-          <h3>${q.title}</h3>
+          <h3>${field(q, 'title')}</h3>
 
-          <p>${q.desc}</p>
+          <p>${field(q, 'desc')}</p>
 
           <ul class="${prefix}-quote-box__list">
 
-            ${(q.items || []).map(item => `<li>${item}</li>`).join('')}
+            ${(q.items || []).map(item => `<li>${field(item, 'text')}</li>`).join('')}
 
           </ul>
 
@@ -523,7 +529,7 @@ window.createSupplyBrandPage = function (cfg) {
 
             <span class="${prefix}-trust-item__icon">${ic(item.icon, { size: 24 })}</span>
 
-            <div><strong>${item.label}</strong><span>${item.desc}</span></div>
+            <div><strong>${field(item, 'label')}</strong><span>${field(item, 'desc')}</span></div>
 
           </div>
 
@@ -547,9 +553,9 @@ window.createSupplyBrandPage = function (cfg) {
 
         <span class="${prefix}-why-card__icon">${ic(w.icon, { size: 28 })}</span>
 
-        <h3>${w.title}</h3>
+        <h3>${field(w, 'title')}</h3>
 
-        <p>${w.desc}</p>
+        <p>${field(w, 'desc')}</p>
 
       </div>
 
@@ -569,11 +575,11 @@ window.createSupplyBrandPage = function (cfg) {
 
       <div class="${prefix}-step">
 
-        <span class="${prefix}-step__num">${s.num}</span>
+        <span class="${prefix}-step__num">${field(s, 'num') || s.num}</span>
 
-        <h3>${s.title}</h3>
+        <h3>${field(s, 'title')}</h3>
 
-        <p>${s.desc}</p>
+        <p>${field(s, 'desc')}</p>
 
       </div>
 
@@ -922,9 +928,9 @@ window.createSupplyBrandPage = function (cfg) {
 
           <span class="${prefix}-iran-card__icon">${ic(ind.icon, { size: 20 })}</span>
 
-          <h3>${ind.name}</h3>
+          <h3>${field(ind, 'name')}</h3>
 
-          <p>${ind.desc}</p>
+          <p>${field(ind, 'desc')}</p>
 
           ${ind.models ? `<span class="${prefix}-iran-card__models">${ind.models}</span>` : ''}
 
@@ -1015,7 +1021,7 @@ window.createSupplyBrandPage = function (cfg) {
 
     el.innerHTML = catalog().services.map(s => `
 
-      <div class="${prefix}-supply-card"><h4>${s.title}</h4><p>${s.desc}</p></div>
+      <div class="${prefix}-supply-card"><h4>${field(s, 'title')}</h4><p>${field(s, 'desc')}</p></div>
 
     `).join('');
 

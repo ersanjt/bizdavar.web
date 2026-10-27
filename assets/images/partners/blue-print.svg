@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248 48" role="img" aria-label="Blue Print">
+  <rect x="0" y="6" width="8" height="36" rx="2" fill="#003399"/>
+  <rect x="12" y="6" width="4" height="36" rx="1" fill="#00A0E4"/>
+  <text x="24" y="33" fill="#003399" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" letter-spacing="-0.4">Blue Print</text>
+</svg>

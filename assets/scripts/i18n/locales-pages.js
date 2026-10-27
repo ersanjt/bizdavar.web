@@ -191,7 +191,8 @@
       oneTime: 'پرداخت یک‌باره', orderWa: 'سفارش در واتساپ', orContact: 'یا فرم تماس',
       compareFeature: 'امکانات', compareBasic: 'پایه', compareStore: 'فروشگاهی', comparePro: 'حرفه‌ای',
       viewCase: 'مشاهده', navAria: 'بخش‌های Fast Web Studio',
-      saveOff: '٪{n} تخفیف راه‌اندازی'
+      saveOff: '٪{n} تخفیف راه‌اندازی',
+      planSample: 'نمونه', planDelivery: 'تحویل'
     },
     tr: {
       statDays: '5 gün', statDaysLabel: 'Standart teslimat',
@@ -204,7 +205,8 @@
       oneTime: 'Tek seferlik ödeme', orderWa: 'WhatsApp sipariş', orContact: 'veya iletişim formu',
       compareFeature: 'Özellikler', compareBasic: 'Temel', compareStore: 'Mağaza', comparePro: 'Pro',
       viewCase: 'Görüntüle', navAria: 'Fast Web Studio bölümleri',
-      saveOff: '%{n} kurulum indirimi'
+      saveOff: '%{n} kurulum indirimi',
+      planSample: 'Örnek', planDelivery: 'Teslim'
     },
     en: {
       statDays: '5 days', statDaysLabel: 'Standard delivery',
@@ -217,7 +219,8 @@
       oneTime: 'One-time payment', orderWa: 'Order on WhatsApp', orContact: 'or contact form',
       compareFeature: 'Features', compareBasic: 'Basic', compareStore: 'Store', comparePro: 'Pro',
       viewCase: 'View', navAria: 'Fast Web Studio sections',
-      saveOff: '{n}% launch discount'
+      saveOff: '{n}% launch discount',
+      planSample: 'Sample', planDelivery: 'Delivery'
     }
   };
 

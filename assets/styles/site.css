@@ -1032,6 +1032,10 @@ ul { list-style: none; }
   min-width: 0;
   padding: 12px 14px 14px;
 }
+.nav__product-panels:has([data-product-panel="blueprint"].is-active) {
+  max-height: min(62vh, 480px);
+  overflow: auto;
+}
 
 .nav__product-tabs {
   display: flex;
@@ -1335,6 +1339,10 @@ ul { list-style: none; }
 
 .mobile-drawer__product-tab-body {
   padding: 4px 12px 10px;
+}
+.mobile-drawer__product-tab[data-product-tab="blueprint"] .mobile-drawer__product-tab-body {
+  max-height: min(60vh, 480px);
+  overflow: auto;
 }
 
 .mobile-drawer__product-footer {
@@ -7700,6 +7708,12 @@ html[dir='ltr'] .feature-item {
   background: var(--navy-light);
   border-color: var(--yellow);
 }
+
+.footer__bp { padding: 4px 0 28px; }
+.footer__bp-title { margin: 0 0 10px; font-size: .95rem; }
+.footer__bp-list { display: flex; flex-wrap: wrap; gap: 6px 14px; list-style: none; margin: 0; padding: 0; }
+.footer__bp-list a { color: rgba(255,255,255,.82); font-size: .82rem; text-decoration: none; }
+.footer__bp-list a:hover { color: #fff; }
 
 html[dir='ltr'] .footer__links a:hover {
   padding-inline-start: 4px;

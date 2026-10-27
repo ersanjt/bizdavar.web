@@ -1,6 +1,6 @@
 # Bizdavar Group
 
-> English websites and ads for US & EU (invoiced USD or EUR, from $99 / ~€90), owned products, and industrial supply to Iran (VEGA, Prosense, Liqui Moly) since 2013.
+> English websites and ads for US & EU (invoiced USD or EUR, from $99 / ~€90), owned products, and industrial supply to Iran and Russia (VEGA, Prosense, Liqui Moly, Blue Print) since 2013.
 > Persian is the default (x-default). English, Turkish, Russian and Arabic are full locales.
 > US/EU web: [Fast Studio](https://bizdavar.com/en/pages/fast) and [Services](https://bizdavar.com/en/pages/services)
 > Official site: [bizdavar.com](https://bizdavar.com/)
@@ -180,6 +180,13 @@
 - [English](https://bizdavar.com/en/pages/liqui-moly)
 - [Russian](https://bizdavar.com/ru/pages/liqui-moly)
 - [Arabic](https://bizdavar.com/ar/pages/liqui-moly)
+
+### /pages/blue-print
+- [Persian](https://bizdavar.com/pages/blue-print)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print)
+- [English](https://bizdavar.com/en/pages/blue-print)
+- [Russian](https://bizdavar.com/ru/pages/blue-print)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print)
 
 ### /pages/auto-moto
 - [Persian](https://bizdavar.com/pages/auto-moto)
@@ -544,3 +551,437 @@
 - [English](https://bizdavar.com/en/pages/privacy)
 - [Russian](https://bizdavar.com/ru/pages/privacy)
 - [Arabic](https://bizdavar.com/ar/pages/privacy)
+
+### /pages/blue-print/oil-filters
+- [Persian](https://bizdavar.com/pages/blue-print/oil-filters)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/oil-filters)
+- [English](https://bizdavar.com/en/pages/blue-print/oil-filters)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/oil-filters)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/oil-filters)
+
+### /pages/blue-print/air-filters
+- [Persian](https://bizdavar.com/pages/blue-print/air-filters)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/air-filters)
+- [English](https://bizdavar.com/en/pages/blue-print/air-filters)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/air-filters)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/air-filters)
+
+### /pages/blue-print/fuel-filters
+- [Persian](https://bizdavar.com/pages/blue-print/fuel-filters)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/fuel-filters)
+- [English](https://bizdavar.com/en/pages/blue-print/fuel-filters)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/fuel-filters)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/fuel-filters)
+
+### /pages/blue-print/cabin-filters
+- [Persian](https://bizdavar.com/pages/blue-print/cabin-filters)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/cabin-filters)
+- [English](https://bizdavar.com/en/pages/blue-print/cabin-filters)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/cabin-filters)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/cabin-filters)
+
+### /pages/blue-print/transmission-filters
+- [Persian](https://bizdavar.com/pages/blue-print/transmission-filters)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/transmission-filters)
+- [English](https://bizdavar.com/en/pages/blue-print/transmission-filters)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/transmission-filters)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/transmission-filters)
+
+### /pages/blue-print/traction-battery-filters
+- [Persian](https://bizdavar.com/pages/blue-print/traction-battery-filters)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/traction-battery-filters)
+- [English](https://bizdavar.com/en/pages/blue-print/traction-battery-filters)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/traction-battery-filters)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/traction-battery-filters)
+
+### /pages/blue-print/haldex-filters
+- [Persian](https://bizdavar.com/pages/blue-print/haldex-filters)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/haldex-filters)
+- [English](https://bizdavar.com/en/pages/blue-print/haldex-filters)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/haldex-filters)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/haldex-filters)
+
+### /pages/blue-print/brake-pads
+- [Persian](https://bizdavar.com/pages/blue-print/brake-pads)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/brake-pads)
+- [English](https://bizdavar.com/en/pages/blue-print/brake-pads)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/brake-pads)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/brake-pads)
+
+### /pages/blue-print/brake-discs
+- [Persian](https://bizdavar.com/pages/blue-print/brake-discs)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/brake-discs)
+- [English](https://bizdavar.com/en/pages/blue-print/brake-discs)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/brake-discs)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/brake-discs)
+
+### /pages/blue-print/brake-drums
+- [Persian](https://bizdavar.com/pages/blue-print/brake-drums)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/brake-drums)
+- [English](https://bizdavar.com/en/pages/blue-print/brake-drums)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/brake-drums)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/brake-drums)
+
+### /pages/blue-print/brake-shoes
+- [Persian](https://bizdavar.com/pages/blue-print/brake-shoes)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/brake-shoes)
+- [English](https://bizdavar.com/en/pages/blue-print/brake-shoes)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/brake-shoes)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/brake-shoes)
+
+### /pages/blue-print/brake-hoses
+- [Persian](https://bizdavar.com/pages/blue-print/brake-hoses)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/brake-hoses)
+- [English](https://bizdavar.com/en/pages/blue-print/brake-hoses)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/brake-hoses)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/brake-hoses)
+
+### /pages/blue-print/wear-sensors
+- [Persian](https://bizdavar.com/pages/blue-print/wear-sensors)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/wear-sensors)
+- [English](https://bizdavar.com/en/pages/blue-print/wear-sensors)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/wear-sensors)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/wear-sensors)
+
+### /pages/blue-print/clutch-kits
+- [Persian](https://bizdavar.com/pages/blue-print/clutch-kits)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/clutch-kits)
+- [English](https://bizdavar.com/en/pages/blue-print/clutch-kits)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/clutch-kits)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/clutch-kits)
+
+### /pages/blue-print/clutch-covers
+- [Persian](https://bizdavar.com/pages/blue-print/clutch-covers)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/clutch-covers)
+- [English](https://bizdavar.com/en/pages/blue-print/clutch-covers)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/clutch-covers)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/clutch-covers)
+
+### /pages/blue-print/clutch-discs
+- [Persian](https://bizdavar.com/pages/blue-print/clutch-discs)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/clutch-discs)
+- [English](https://bizdavar.com/en/pages/blue-print/clutch-discs)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/clutch-discs)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/clutch-discs)
+
+### /pages/blue-print/release-bearings
+- [Persian](https://bizdavar.com/pages/blue-print/release-bearings)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/release-bearings)
+- [English](https://bizdavar.com/en/pages/blue-print/release-bearings)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/release-bearings)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/release-bearings)
+
+### /pages/blue-print/flywheels
+- [Persian](https://bizdavar.com/pages/blue-print/flywheels)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/flywheels)
+- [English](https://bizdavar.com/en/pages/blue-print/flywheels)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/flywheels)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/flywheels)
+
+### /pages/blue-print/clutch-master-cylinders
+- [Persian](https://bizdavar.com/pages/blue-print/clutch-master-cylinders)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/clutch-master-cylinders)
+- [English](https://bizdavar.com/en/pages/blue-print/clutch-master-cylinders)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/clutch-master-cylinders)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/clutch-master-cylinders)
+
+### /pages/blue-print/clutch-slave-cylinders
+- [Persian](https://bizdavar.com/pages/blue-print/clutch-slave-cylinders)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/clutch-slave-cylinders)
+- [English](https://bizdavar.com/en/pages/blue-print/clutch-slave-cylinders)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/clutch-slave-cylinders)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/clutch-slave-cylinders)
+
+### /pages/blue-print/clutch-release-forks
+- [Persian](https://bizdavar.com/pages/blue-print/clutch-release-forks)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/clutch-release-forks)
+- [English](https://bizdavar.com/en/pages/blue-print/clutch-release-forks)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/clutch-release-forks)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/clutch-release-forks)
+
+### /pages/blue-print/clutch-cables
+- [Persian](https://bizdavar.com/pages/blue-print/clutch-cables)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/clutch-cables)
+- [English](https://bizdavar.com/en/pages/blue-print/clutch-cables)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/clutch-cables)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/clutch-cables)
+
+### /pages/blue-print/track-rod-ends
+- [Persian](https://bizdavar.com/pages/blue-print/track-rod-ends)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/track-rod-ends)
+- [English](https://bizdavar.com/en/pages/blue-print/track-rod-ends)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/track-rod-ends)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/track-rod-ends)
+
+### /pages/blue-print/electric-steering-motors
+- [Persian](https://bizdavar.com/pages/blue-print/electric-steering-motors)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/electric-steering-motors)
+- [English](https://bizdavar.com/en/pages/blue-print/electric-steering-motors)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/electric-steering-motors)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/electric-steering-motors)
+
+### /pages/blue-print/suspension-arms
+- [Persian](https://bizdavar.com/pages/blue-print/suspension-arms)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/suspension-arms)
+- [English](https://bizdavar.com/en/pages/blue-print/suspension-arms)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/suspension-arms)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/suspension-arms)
+
+### /pages/blue-print/suspension-bushes
+- [Persian](https://bizdavar.com/pages/blue-print/suspension-bushes)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/suspension-bushes)
+- [English](https://bizdavar.com/en/pages/blue-print/suspension-bushes)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/suspension-bushes)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/suspension-bushes)
+
+### /pages/blue-print/ball-joints
+- [Persian](https://bizdavar.com/pages/blue-print/ball-joints)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/ball-joints)
+- [English](https://bizdavar.com/en/pages/blue-print/ball-joints)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/ball-joints)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/ball-joints)
+
+### /pages/blue-print/stabiliser-links
+- [Persian](https://bizdavar.com/pages/blue-print/stabiliser-links)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/stabiliser-links)
+- [English](https://bizdavar.com/en/pages/blue-print/stabiliser-links)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/stabiliser-links)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/stabiliser-links)
+
+### /pages/blue-print/springs
+- [Persian](https://bizdavar.com/pages/blue-print/springs)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/springs)
+- [English](https://bizdavar.com/en/pages/blue-print/springs)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/springs)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/springs)
+
+### /pages/blue-print/egr-valves
+- [Persian](https://bizdavar.com/pages/blue-print/egr-valves)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/egr-valves)
+- [English](https://bizdavar.com/en/pages/blue-print/egr-valves)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/egr-valves)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/egr-valves)
+
+### /pages/blue-print/oxygen-sensors
+- [Persian](https://bizdavar.com/pages/blue-print/oxygen-sensors)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/oxygen-sensors)
+- [English](https://bizdavar.com/en/pages/blue-print/oxygen-sensors)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/oxygen-sensors)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/oxygen-sensors)
+
+### /pages/blue-print/ignition-coils
+- [Persian](https://bizdavar.com/pages/blue-print/ignition-coils)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/ignition-coils)
+- [English](https://bizdavar.com/en/pages/blue-print/ignition-coils)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/ignition-coils)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/ignition-coils)
+
+### /pages/blue-print/air-flow-meters
+- [Persian](https://bizdavar.com/pages/blue-print/air-flow-meters)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/air-flow-meters)
+- [English](https://bizdavar.com/en/pages/blue-print/air-flow-meters)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/air-flow-meters)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/air-flow-meters)
+
+### /pages/blue-print/knock-sensors
+- [Persian](https://bizdavar.com/pages/blue-print/knock-sensors)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/knock-sensors)
+- [English](https://bizdavar.com/en/pages/blue-print/knock-sensors)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/knock-sensors)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/knock-sensors)
+
+### /pages/blue-print/camshaft-sensors
+- [Persian](https://bizdavar.com/pages/blue-print/camshaft-sensors)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/camshaft-sensors)
+- [English](https://bizdavar.com/en/pages/blue-print/camshaft-sensors)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/camshaft-sensors)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/camshaft-sensors)
+
+### /pages/blue-print/crankshaft-sensors
+- [Persian](https://bizdavar.com/pages/blue-print/crankshaft-sensors)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/crankshaft-sensors)
+- [English](https://bizdavar.com/en/pages/blue-print/crankshaft-sensors)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/crankshaft-sensors)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/crankshaft-sensors)
+
+### /pages/blue-print/wheel-bearings
+- [Persian](https://bizdavar.com/pages/blue-print/wheel-bearings)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/wheel-bearings)
+- [English](https://bizdavar.com/en/pages/blue-print/wheel-bearings)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/wheel-bearings)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/wheel-bearings)
+
+### /pages/blue-print/cv-joints
+- [Persian](https://bizdavar.com/pages/blue-print/cv-joints)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/cv-joints)
+- [English](https://bizdavar.com/en/pages/blue-print/cv-joints)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/cv-joints)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/cv-joints)
+
+### /pages/blue-print/uj-kits
+- [Persian](https://bizdavar.com/pages/blue-print/uj-kits)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/uj-kits)
+- [English](https://bizdavar.com/en/pages/blue-print/uj-kits)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/uj-kits)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/uj-kits)
+
+### /pages/blue-print/differential-mounts
+- [Persian](https://bizdavar.com/pages/blue-print/differential-mounts)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/differential-mounts)
+- [English](https://bizdavar.com/en/pages/blue-print/differential-mounts)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/differential-mounts)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/differential-mounts)
+
+### /pages/blue-print/driveshafts
+- [Persian](https://bizdavar.com/pages/blue-print/driveshafts)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/driveshafts)
+- [English](https://bizdavar.com/en/pages/blue-print/driveshafts)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/driveshafts)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/driveshafts)
+
+### /pages/blue-print/timing-chain-kits
+- [Persian](https://bizdavar.com/pages/blue-print/timing-chain-kits)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/timing-chain-kits)
+- [English](https://bizdavar.com/en/pages/blue-print/timing-chain-kits)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/timing-chain-kits)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/timing-chain-kits)
+
+### /pages/blue-print/timing-belt-kits
+- [Persian](https://bizdavar.com/pages/blue-print/timing-belt-kits)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/timing-belt-kits)
+- [English](https://bizdavar.com/en/pages/blue-print/timing-belt-kits)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/timing-belt-kits)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/timing-belt-kits)
+
+### /pages/blue-print/timing-belts
+- [Persian](https://bizdavar.com/pages/blue-print/timing-belts)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/timing-belts)
+- [English](https://bizdavar.com/en/pages/blue-print/timing-belts)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/timing-belts)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/timing-belts)
+
+### /pages/blue-print/tensioner-bearings
+- [Persian](https://bizdavar.com/pages/blue-print/tensioner-bearings)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/tensioner-bearings)
+- [English](https://bizdavar.com/en/pages/blue-print/tensioner-bearings)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/tensioner-bearings)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/tensioner-bearings)
+
+### /pages/blue-print/idler-bearings
+- [Persian](https://bizdavar.com/pages/blue-print/idler-bearings)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/idler-bearings)
+- [English](https://bizdavar.com/en/pages/blue-print/idler-bearings)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/idler-bearings)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/idler-bearings)
+
+### /pages/blue-print/water-pumps
+- [Persian](https://bizdavar.com/pages/blue-print/water-pumps)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/water-pumps)
+- [English](https://bizdavar.com/en/pages/blue-print/water-pumps)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/water-pumps)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/water-pumps)
+
+### /pages/blue-print/fan-couplings
+- [Persian](https://bizdavar.com/pages/blue-print/fan-couplings)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/fan-couplings)
+- [English](https://bizdavar.com/en/pages/blue-print/fan-couplings)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/fan-couplings)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/fan-couplings)
+
+### /pages/blue-print/thermostats
+- [Persian](https://bizdavar.com/pages/blue-print/thermostats)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/thermostats)
+- [English](https://bizdavar.com/en/pages/blue-print/thermostats)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/thermostats)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/thermostats)
+
+### /pages/blue-print/expansion-tanks
+- [Persian](https://bizdavar.com/pages/blue-print/expansion-tanks)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/expansion-tanks)
+- [English](https://bizdavar.com/en/pages/blue-print/expansion-tanks)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/expansion-tanks)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/expansion-tanks)
+
+### /pages/blue-print/radiator-caps
+- [Persian](https://bizdavar.com/pages/blue-print/radiator-caps)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/radiator-caps)
+- [English](https://bizdavar.com/en/pages/blue-print/radiator-caps)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/radiator-caps)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/radiator-caps)
+
+### /pages/blue-print/temperature-sensors
+- [Persian](https://bizdavar.com/pages/blue-print/temperature-sensors)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/temperature-sensors)
+- [English](https://bizdavar.com/en/pages/blue-print/temperature-sensors)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/temperature-sensors)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/temperature-sensors)
+
+### /pages/blue-print/starter-motors
+- [Persian](https://bizdavar.com/pages/blue-print/starter-motors)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/starter-motors)
+- [English](https://bizdavar.com/en/pages/blue-print/starter-motors)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/starter-motors)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/starter-motors)
+
+### /pages/blue-print/alternators
+- [Persian](https://bizdavar.com/pages/blue-print/alternators)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/alternators)
+- [English](https://bizdavar.com/en/pages/blue-print/alternators)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/alternators)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/alternators)
+
+### /pages/blue-print/alternator-pulleys
+- [Persian](https://bizdavar.com/pages/blue-print/alternator-pulleys)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/alternator-pulleys)
+- [English](https://bizdavar.com/en/pages/blue-print/alternator-pulleys)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/alternator-pulleys)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/alternator-pulleys)
+
+### /pages/blue-print/ht-leads
+- [Persian](https://bizdavar.com/pages/blue-print/ht-leads)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/ht-leads)
+- [English](https://bizdavar.com/en/pages/blue-print/ht-leads)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/ht-leads)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/ht-leads)
+
+### /pages/blue-print/glow-plugs
+- [Persian](https://bizdavar.com/pages/blue-print/glow-plugs)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/glow-plugs)
+- [English](https://bizdavar.com/en/pages/blue-print/glow-plugs)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/glow-plugs)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/glow-plugs)
+
+### /pages/blue-print/wiper-blades
+- [Persian](https://bizdavar.com/pages/blue-print/wiper-blades)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/wiper-blades)
+- [English](https://bizdavar.com/en/pages/blue-print/wiper-blades)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/wiper-blades)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/wiper-blades)
+
+### /pages/blue-print/washer-pumps
+- [Persian](https://bizdavar.com/pages/blue-print/washer-pumps)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/washer-pumps)
+- [English](https://bizdavar.com/en/pages/blue-print/washer-pumps)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/washer-pumps)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/washer-pumps)
+
+### /pages/blue-print/gas-struts
+- [Persian](https://bizdavar.com/pages/blue-print/gas-struts)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/gas-struts)
+- [English](https://bizdavar.com/en/pages/blue-print/gas-struts)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/gas-struts)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/gas-struts)
+
+### /pages/blue-print/window-regulators
+- [Persian](https://bizdavar.com/pages/blue-print/window-regulators)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/window-regulators)
+- [English](https://bizdavar.com/en/pages/blue-print/window-regulators)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/window-regulators)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/window-regulators)
+
+### /pages/blue-print/specialist-tools
+- [Persian](https://bizdavar.com/pages/blue-print/specialist-tools)
+- [Turkish](https://bizdavar.com/tr/pages/blue-print/specialist-tools)
+- [English](https://bizdavar.com/en/pages/blue-print/specialist-tools)
+- [Russian](https://bizdavar.com/ru/pages/blue-print/specialist-tools)
+- [Arabic](https://bizdavar.com/ar/pages/blue-print/specialist-tools)

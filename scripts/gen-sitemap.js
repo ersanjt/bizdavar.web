@@ -52,6 +52,7 @@ const PAGES = [
   { path: '/pages/uwt', changefreq: 'monthly', priority: 0.9, lastmod: '2026-09-01' },
   { path: '/pages/prosense', changefreq: 'monthly', priority: 0.9, lastmod: '2026-08-12' },
   { path: '/pages/liqui-moly', changefreq: 'weekly', priority: 0.9, lastmod: '2026-08-12' },
+  { path: '/pages/blue-print', changefreq: 'weekly', priority: 0.9, lastmod: '2026-10-27' },
   { path: '/pages/auto-moto', changefreq: 'weekly', priority: 0.85, lastmod: '2026-09-18' },
   { path: '/pages/motorcycle/', changefreq: 'weekly', priority: 0.9, lastmod: '2026-10-25' },
   { path: '/pages/car-parts', changefreq: 'weekly', priority: 0.85, lastmod: '2026-09-18' },
@@ -154,6 +155,16 @@ function urlNodes(entry) {
   }).join('\n');
 }
 
+const bpSitemapFile = path.join(__dirname, '..', 'assets/data/blue-print/sitemap-paths.json');
+if (fs.existsSync(bpSitemapFile)) {
+  JSON.parse(fs.readFileSync(bpSitemapFile, 'utf8')).forEach(p => {
+    if (p === '/pages/blue-print') return;
+    if (!PAGES.some(entry => entry.path === p)) {
+      PAGES.push({ path: p, changefreq: 'monthly', priority: 0.72, lastmod: '2026-10-27' });
+    }
+  });
+}
+
 const allNodes = PAGES.map(urlNodes).join('\n');
 const totalUrls = PAGES.length * LOCALES.length;
 
@@ -171,7 +182,7 @@ const LANG_LABEL = { fa: 'Persian', tr: 'Turkish', en: 'English', ru: 'Russian',
 const llmsLines = [
   '# Bizdavar Group',
   '',
-  '> English websites and ads for US & EU (invoiced USD or EUR, from $99 / ~€90), owned products, and industrial supply to Iran (VEGA, Prosense, Liqui Moly) since 2013.',
+  '> English websites and ads for US & EU (invoiced USD or EUR, from $99 / ~€90), owned products, and industrial supply to Iran and Russia (VEGA, Prosense, Liqui Moly, Blue Print) since 2013.',
   '> Persian is the default (x-default). English, Turkish, Russian and Arabic are full locales.',
   '> US/EU web: [Fast Studio](https://bizdavar.com/en/pages/fast) and [Services](https://bizdavar.com/en/pages/services)',
   '> Official site: [bizdavar.com](https://bizdavar.com/)',

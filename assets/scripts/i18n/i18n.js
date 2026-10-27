@@ -283,6 +283,9 @@
       const rawBase = window.FAST_CATALOG || {};
       const enCat = window.BIZDAVAR_LOCALES?.en?.fastCatalog || {};
       const base = this.locale === 'fa' ? rawBase : { ...rawBase, ...enCat, brand: { ...(rawBase.brand || {}), ...(enCat.brand || {}) } };
+      if (this.locale !== 'fa' && Array.isArray(rawBase.plans) && Array.isArray(enCat.plans)) {
+        base.plans = rawBase.plans.map((plan, i) => ({ ...plan, ...(enCat.plans[i] || {}) }));
+      }
       return {
         ...base,
         brand: { ...(base.brand || {}), ...(this.raw('fastCatalog.brand') || {}) },
@@ -311,6 +314,7 @@
         VEGA_CATALOG: 'vegaCatalog',
         PROSENSE_CATALOG: 'prosenseCatalog',
         LIQUI_MOLY_CATALOG: 'liquiMolyCatalog',
+        BLUE_PRINT_CATALOG: 'bluePrintCatalog',
         AUTO_MOTO_CATALOG: 'autoMotoCatalog',
         CAR_PARTS_CATALOG: 'carPartsCatalog'
       };

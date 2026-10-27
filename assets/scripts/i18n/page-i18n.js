@@ -188,6 +188,7 @@
       teltonika: 'initTeltonikaPage',
       prosense: 'initProsensePage',
       'liqui-moly': 'initLiquiMolyPage',
+      'blue-print': 'initBluePrintPage',
       'auto-moto': 'initAutoMotoPage',
       motorcycle: 'initAutoMotoPage',
       'car-parts': 'initCarPartsPage',
