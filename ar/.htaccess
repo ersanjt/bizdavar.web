@@ -4,6 +4,7 @@
 
   # pages/motorcycle/ is the SKU folder. Serve this locale's shop HTML.
   RewriteRule ^pages/motorcycle/?$ /ar/pages/motorcycle.html [END]
+  RewriteRule ^pages/blue-print/?$ /ar/pages/blue-print.html [END]
 
   RewriteRule ^speed-?test/?$ /ar/pages/speed-test [R=301,L,NC]
   RewriteRule ^tools/?$ /ar/pages/tools [R=301,L,NC]
