@@ -276,19 +276,48 @@
     rail.__sync = sync;
   }
 
+  const PLAN_SAMPLES = {
+    basic: { name: 'Kaya One AG', href: 'pages/kaya-one.html', shot: 'assets/images/content/site-shots/kaya-one.jpg', tone: 'green' },
+    store: { name: 'Marvispace', href: 'pages/marvispace.html', shot: 'assets/images/content/site-shots/marvispace.jpg', tone: 'rose' },
+    pro: { name: 'Marvelous Holding', href: 'https://marvelousholding.com/', shot: 'assets/images/content/site-shots/marvelous-holding.jpg', tone: 'blue' }
+  };
+
   function renderSpeedVisual() {
     const el = document.getElementById('fastSpeedVisual');
     if (!el || !Array.isArray(F.plans)) return;
-    const tones = ['green', 'rose', 'blue'];
-    const layouts = { landing: 'corp', store: 'store', pro: 'panel' };
-    el.innerHTML = `<div class="fp-row">${F.plans.slice(0, 3).map((plan, i) => fpPhone({
-      name: plan.name,
-      caption: plan.name,
-      brandText: `$${plan.price}`,
-      href: '#fast-plans',
-      tone: tones[i] || 'navy',
-      layout: layouts[plan.visual] || 'corp'
-    })).join('')}</div>`;
+    const rows = Array.isArray(F.compareRows) ? F.compareRows : [];
+    const delivery = rows[rows.length - 1] || {};
+    const cards = F.plans.slice(0, 3).map((plan, i) => {
+      const id = plan.id || ['basic', 'store', 'pro'][i];
+      const sample = PLAN_SAMPLES[id] || PLAN_SAMPLES.basic;
+      const external = /^https?:/.test(sample.href);
+      const phone = fpPhone({
+        name: sample.name,
+        href: external ? sample.href : path(sample.href),
+        shot: sample.shot,
+        tone: sample.tone,
+        layout: 'corp'
+      });
+      const features = (plan.features || [])
+        .filter((f) => !/</.test(f))
+        .slice(i === 0 ? 0 : 1, i === 0 ? 3 : 4)
+        .map((f) => `<li>${escFast(f)}</li>`)
+        .join('');
+      const days = delivery[id] ? `<p class="fp-plan__meta">${escFast(ui('planDelivery', 'تحویل'))} · <b>${escFast(delivery[id])}</b></p>` : '';
+      return `<article class="fp-plan fp-plan--${sample.tone}${plan.featured ? ' is-featured' : ''}">
+        ${plan.ribbon ? `<span class="fp-plan__ribbon">${escFast(plan.ribbon)}</span>` : ''}
+        ${phone}
+        <div class="fp-plan__body">
+          <p class="fp-plan__sample">${escFast(ui('planSample', 'نمونه'))}: ${escFast(sample.name)}</p>
+          <h3 class="fp-plan__name">${escFast(plan.name)}</h3>
+          <p class="fp-plan__price">${plan.oldPrice ? `<del>$${plan.oldPrice}</del>` : ''}<strong>$${plan.price}</strong></p>
+          <ul class="fp-plan__list">${features}</ul>
+          ${days}
+          <a href="${whatsappHref(id)}" class="fp-plan__cta fast-plan-order" data-plan="${id}">${escFast(ui('orderWa', 'سفارش در واتساپ'))}</a>
+        </div>
+      </article>`;
+    }).join('');
+    el.innerHTML = `<div class="fp-plans">${cards}</div>`;
   }
 
   function renderSpeed() {
