@@ -76,9 +76,9 @@ fi
 chown "$CPANEL_USER:$CPANEL_USER" "$REPO/.git/index" "$REPO/.git/ORIG_HEAD" 2>/dev/null || true
 
 echo "===== TEST (public) ====="
-curl -sI -L --max-time 20 https://bizdavar.com/ | head -10
+curl -sI -L --max-time 20 https://bizdavar.com/ | head -10 || true
 echo "---"
-curl -sI -L --max-time 20 https://www.bizdavar.com/ | head -10
+curl -sI -L --max-time 20 https://www.bizdavar.com/ | head -10 || true
 echo "---"
 curl -sI --max-time 20 https://bizdavar.com/tr | grep -E 'HTTP|Location' || true
 echo "---"
@@ -154,7 +154,7 @@ done
 echo "===== CLOUDFLARE vs ORIGIN (/tr) ====="
 ORIGIN_TR=$(origin_http_code /tr)
 PUB_TR=$(curl -sI -o /dev/null -w '%{http_code}' --max-redirs 0 --max-time 20 https://bizdavar.com/tr 2>/dev/null || echo 0)
-PUB_TR_LOC=$(curl -sI --max-redirs 0 --max-time 20 https://bizdavar.com/tr 2>/dev/null | awk 'tolower($1)=="location:"{print $2}' | tr -d '\r')
+PUB_TR_LOC=$(curl -sI --max-redirs 0 --max-time 20 https://bizdavar.com/tr 2>/dev/null | awk 'tolower($1)=="location:"{print $2}' | tr -d '\r' || true)
 if [[ "$ORIGIN_TR" == "200" && "$PUB_TR" != "200" ]]; then
   echo "ACTION REQUIRED: Apache serves /tr (HTTP 200) but Cloudflare returns HTTP ${PUB_TR}"
   [[ -n "$PUB_TR_LOC" ]] && echo "  Cloudflare Location: ${PUB_TR_LOC}"
