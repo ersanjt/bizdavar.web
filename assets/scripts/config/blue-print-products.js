@@ -3,7 +3,7 @@
  * Families follow the public Blue Print catalogue. Prices are quote-only.
  */
 (function () {
-  const logo = 'assets/images/partners/blue-print.svg';
+  const logo = 'assets/images/partners/blue-print.svg?v=20261028';
   window.BLUE_PRINT_CATALOG = {
     quoteEmptyPrices: true,
     productBase: 'pages/blue-print',
@@ -115,7 +115,7 @@
         descAr: "يفصل السخام والجزيئات المعدنية عن زيت المحرك. صمام منع الرجوع في الفلتر اللولبي يحافظ على الضغط عند التشغيل البارد.",
         inquiryName: "Blue Print Oil filter",
         quoteOnly: true,
-        image: 'assets/images/partners/blue-print.svg',
+        image: 'assets/images/partners/blue-print.svg?v=20261028',
         imageAlt: "فیلتر روغن Blue Print"
       },
       {
@@ -133,7 +133,7 @@
         descAr: "تتراكب مادة الاحتكاك والطبقة الوسطى واللاصق والظهر الفولاذي وشريحة خفض الضوضاء لفرملة تدريجية وأقل اهتزازاً.",
         inquiryName: "Blue Print Brake pads",
         quoteOnly: true,
-        image: 'assets/images/partners/blue-print.svg',
+        image: 'assets/images/partners/blue-print.svg?v=20261028',
         imageAlt: "لنت ترمز Blue Print"
       },
       {
@@ -151,7 +151,7 @@
         descAr: "يأتي القرص والغطاء ورولمان التحرير معاً حتى يتطابق ارتفاع الدواسة وقوتها.",
         inquiryName: "Blue Print Clutch kit",
         quoteOnly: true,
-        image: 'assets/images/partners/blue-print.svg',
+        image: 'assets/images/partners/blue-print.svg?v=20261028',
         imageAlt: "کیت کلاچ Blue Print"
       },
       {
@@ -169,7 +169,7 @@
         descAr: "يلتقط غبار الطلع والغبار والجسيمات الدقيقة من هواء المقصورة. غالباً يُنسى في الصيانة رغم أثره المباشر على تنفس الركاب.",
         inquiryName: "Blue Print Cabin filter",
         quoteOnly: true,
-        image: 'assets/images/partners/blue-print.svg',
+        image: 'assets/images/partners/blue-print.svg?v=20261028',
         imageAlt: "فیلتر کابین Blue Print"
       },
       {
@@ -187,7 +187,7 @@
         descAr: "يدير العجلة بأقل احتكاك. الطنين الذي يزيد مع السرعة غالباً من رولمان منتهٍ.",
         inquiryName: "Blue Print Wheel bearing kit",
         quoteOnly: true,
-        image: 'assets/images/partners/blue-print.svg',
+        image: 'assets/images/partners/blue-print.svg?v=20261028',
         imageAlt: "کیت بلبرینگ چرخ Blue Print"
       },
       {
@@ -205,7 +205,7 @@
         descAr: "يُبدَّل الجنزير والشداد والموجهات معاً. الجنزير الممطوط يخشخش بارداً وقد يقفز سناً.",
         inquiryName: "Blue Print Timing chain kit",
         quoteOnly: true,
-        image: 'assets/images/partners/blue-print.svg',
+        image: 'assets/images/partners/blue-print.svg?v=20261028',
         imageAlt: "کیت زنجیر تایم Blue Print"
       },
       {
@@ -223,7 +223,7 @@
         descAr: "يدور سائل التبريد في الكتلة والرديتر. التسرب من فتحة التصريف السفلية يعني أن الحشوة انتهت.",
         inquiryName: "Blue Print Water pump",
         quoteOnly: true,
-        image: 'assets/images/partners/blue-print.svg',
+        image: 'assets/images/partners/blue-print.svg?v=20261028',
         imageAlt: "واترپمپ Blue Print"
       },
       {
@@ -241,7 +241,7 @@
         descAr: "يدير عمود المرفق حتى سرعة الإقلاع. الترس المتآكل أو الفحم المنتهي يطقطق مرة ولا يدور.",
         inquiryName: "Blue Print Starter motor",
         quoteOnly: true,
-        image: 'assets/images/partners/blue-print.svg',
+        image: 'assets/images/partners/blue-print.svg?v=20261028',
         imageAlt: "استارت Blue Print"
       }
     ],
@@ -261,7 +261,7 @@
         descTr: "Blue Print filtre ailesi, Asya ve Avrupa binek ve 7,5 tona kadar hafif ticari araçlar için 3250’den fazla parçalık kamuya açık bir yelpazedir. Parçalar orijinal ekipman ölçüsüne göre belirlenir.",
         descAr: "تشمل عائلة فلاتر Blue Print في الكتالوج العام أكثر من 3250 قطعة للسيارات الآسيوية والأوروبية، بما فيها الركوب والتجارية الخفيفة حتى 7.5 طن، بمواصفات مطابقة للقطعة الأصلية.",
         officialUrl: "https://www.blue-print.com/filtration",
-        image: 'assets/images/partners/blue-print.svg',
+        image: 'assets/images/partners/blue-print.svg?v=20261028',
         imageAlt: "فیلتر Blue Print",
         series: [
         {
@@ -519,7 +519,7 @@
         descTr: "Blue Print fren grubu açık katalogda 3550’den fazla sürtünme parçası listeler ve 2000 sonrası araçlarda disk ve balata için geniş kapsama belirtir. Balata, disk, kampana ve hortum aşınma, ses ve sertlik testlerine göre belirlenir.",
         descAr: "تضم مجموعة الفرامل في الكتالوج العام أكثر من 3550 قطعة احتكاك، مع تغطية واسعة للأقراص والتيل لسيارات ما بعد 2000. تُحدد التيل والأقراص والطبول والخراطيم وفق اختبارات التآكل والضوضاء والصلادة.",
         officialUrl: "https://www.blue-print.com/braking",
-        image: 'assets/images/partners/blue-print.svg',
+        image: 'assets/images/partners/blue-print.svg?v=20261028',
         imageAlt: "ترمز Blue Print",
         series: [
         {
@@ -743,7 +743,7 @@
         descTr: "Debriyaj, Blue Print’in uzmanlık grubudur. Açık katalog 1250’den fazla seti on binlerce binek ve hafif ticari uygulamada listeler. bilstein group debriyaj merkezi Durmersheim’de parçaları test standında ve araçta dener. Parçalar yenidir, rektifiye değildir.",
         descAr: "الدبرياج خط تخصص Blue Print. يسرد الكتالوج العام أكثر من 1250 طقماً لعشرات آلاف التطبيقات، ومركز كفاءة الدبرياج لمجموعة bilstein في دورمرسهايم يختبر القطع على المنصة وفي المركبة. القطع جديدة وليست مجددة.",
         officialUrl: "https://www.blue-print.com/clutch",
-        image: 'assets/images/partners/blue-print.svg',
+        image: 'assets/images/partners/blue-print.svg?v=20261028',
         imageAlt: "کلاچ Blue Print",
         series: [
         {
@@ -1069,7 +1069,7 @@
         descTr: "Direksiyon ve süspansiyon, Blue Print’in diğer parçalar grubundadır: rot, salıncak, burç, viraj demiri, yay ve elektrikli direksiyon motoru. Boşluk lastiği yer ve direksiyonu belirsizleştirir.",
         descAr: "التوجيه والتعليق ضمن منتجات Blue Print الإضافية: رؤوس القضبان والأذرع والجلب ووصلات الموازن والنوابض ومحرك التوجيه الكهربائي. الخلوص هنا يأكل الإطار ويجعل المقود مبهماً.",
         officialUrl: "https://www.blue-print.com/further-products",
-        image: 'assets/images/partners/blue-print.svg',
+        image: 'assets/images/partners/blue-print.svg?v=20261028',
         imageAlt: "فرمان و تعلیق Blue Print",
         series: [
         {
@@ -1327,7 +1327,7 @@
         descTr: "Motor yönetim sensör ve aktüatörleri Blue Print’in diğer parçalarındadır: EGR, oksijen, bobin, hava akış, vuruntu, eksantrik ve krank. Arıza genelde arıza lambasıyla birlikte yakıt veya tekleme getirir.",
         descAr: "حساسات ومشغّلات إدارة المحرك ضمن منتجات Blue Print الإضافية: EGR والأكسجين والملف ومقياس الهواء والطرق وعمود الكامات وعمود المرفق. العطل غالباً يضيء لمبة الفحص مع استهلاك أو تقطيع.",
         officialUrl: "https://www.blue-print.com/further-products",
-        image: 'assets/images/partners/blue-print.svg',
+        image: 'assets/images/partners/blue-print.svg?v=20261028',
         imageAlt: "مدیریت موتور Blue Print",
         series: [
         {
@@ -1585,7 +1585,7 @@
         descTr: "Blue Print aktarma; tekerlek rulmanı, aks kafası, istavroz, diferansiyel takozu ve aks milini kapsar. Bu yoldaki boşluk hem ses yapar hem hızda güvenliği düşürür.",
         descAr: "نقل الحركة لدى Blue Print يشمل رولمان العجلة ووصلة CV والوصلة العامة وحامل الدفرنس وعمود الإدارة. الخلوص هنا يُصدر صوتاً ويقلل الأمان على السرعة.",
         officialUrl: "https://www.blue-print.com/further-products",
-        image: 'assets/images/partners/blue-print.svg',
+        image: 'assets/images/partners/blue-print.svg?v=20261028',
         imageAlt: "انتقال قدرت Blue Print",
         series: [
         {
@@ -1775,7 +1775,7 @@
         descTr: "Blue Print triger; zincir seti, kayış seti, kayış, gergi ve avara rulmanı kapsar. Yeni kayışın yanında eski gergiyi bırakmak, aracın servise dönmesinin sık nedenidir.",
         descAr: "توقيت Blue Print يشمل أطقم الجنزير والسير والسير نفسه والشداد والبكرة. ترك الشداد القديم بجانب سير جديد سبب شائع لعودة السيارة إلى الورشة.",
         officialUrl: "https://www.blue-print.com/further-products",
-        image: 'assets/images/partners/blue-print.svg',
+        image: 'assets/images/partners/blue-print.svg?v=20261028',
         imageAlt: "تایمینگ موتور Blue Print",
         series: [
         {
@@ -1965,7 +1965,7 @@
         descTr: "Blue Print soğutma; devirdaim, fan kavraması, termostat, genleşme tankı, radyatör kapağı ve sıcaklık sensörünü kapsar. Bu parçalardaki küçük kaçak motoru habersiz kaynatır.",
         descAr: "تبريد Blue Print يشمل مضخة الماء ووصلة المروحة والثرموستات وخزان التمدد وغطاء الرديتر وحساس الحرارة. تسرب صغير من هذه القطع يغلي المحرك بلا إنذار يذكر.",
         officialUrl: "https://www.blue-print.com/further-products",
-        image: 'assets/images/partners/blue-print.svg',
+        image: 'assets/images/partners/blue-print.svg?v=20261028',
         imageAlt: "خنک‌کاری موتور Blue Print",
         series: [
         {
@@ -2189,7 +2189,7 @@
         descTr: "Blue Print elektrik; marş, alternatör, alternatör kasnağı, buji kablosu ve kızdırma bujisini kapsar. Bu parçalar ya motoru çalıştırır ya rölantide tüketicileri besler.",
         descAr: "كهرباء Blue Print تغطي المارش والدينامو وبكرة الدينامو وأسلاك الجهد العالي وشمعات التسخين. هذه القطع إما تدير المحرك أو تغذي الأحمال في السلان.",
         officialUrl: "https://www.blue-print.com/further-products",
-        image: 'assets/images/partners/blue-print.svg',
+        image: 'assets/images/partners/blue-print.svg?v=20261028',
         imageAlt: "برق خودرو Blue Print",
         series: [
         {
@@ -2379,7 +2379,7 @@
         descTr: "Blue Print gövde ve iç; silecek, cam suyu pompası, gazlı amortisör ve cam krikosunu kapsar. Bu küçük parçalar sürücü görüşünü ve kapının açık kalmasını doğrudan etkiler.",
         descAr: "الهيكل والمقصورة في كتالوج Blue Print تشمل المساحات ومضخة الغسيل ودعامات الغاز ورافع الزجاج. هذه القطع الصغيرة تؤثر مباشرة على رؤية السائق وثبات الباب مفتوحاً.",
         officialUrl: "https://www.blue-print.com/further-products",
-        image: 'assets/images/partners/blue-print.svg',
+        image: 'assets/images/partners/blue-print.svg?v=20261028',
         imageAlt: "بدنه و داخل Blue Print",
         series: [
         {
@@ -2535,7 +2535,7 @@
         descTr: "Blue Print sık onarımlar için özel aletleri de yelpazeye eklemiştir. Doğru alet, yeni parçanın takılırken bozulmasını önler.",
         descAr: "أضاف Blue Print أدوات متخصصة للإصلاحات الشائعة. الأداة الصحيحة تمنع تلف القطعة الجديدة أثناء التركيب.",
         officialUrl: "https://www.blue-print.com/further-products",
-        image: 'assets/images/partners/blue-print.svg',
+        image: 'assets/images/partners/blue-print.svg?v=20261028',
         imageAlt: "ابزار تخصصی Blue Print",
         series: [
         {
@@ -2576,10 +2576,10 @@
       }
     ],
     iranIndustries: [
-      { icon: 'factory', name: "تعمیرگاه ایران", nameRu: "Сервис в Иране", nameEn: "Workshops in Iran", nameTr: "İran atölyesi", nameAr: "ورش إيران", desc: "لنت، فیلتر و کلاچ برای سرویس روزانه. مشاوره فارسی.", descRu: "Колодки, фильтры и сцепление для ежедневного сервиса. Консультация на фарси.", descEn: "Pads, filters and clutch for daily service. Consulting in Farsi.", descTr: "Günlük servis için balata, filtre ve debriyaj. Farsça danışmanlık.", descAr: "تيل وفلاتر ودبرياج للخدمة اليومية. استشارة بالفارسية.", image: 'assets/images/partners/blue-print.svg', imageAlt: "Workshops in Iran" },
-      { icon: 'factory', name: "خریدار روسیه", nameRu: "Покупатель в России", nameEn: "Buyers in Russia", nameTr: "Rusya alıcısı", nameAr: "المشتري في روسيا", desc: "همان کاتالوگ، با هماهنگی حمل به روسیه.", descRu: "Тот же каталог, с организацией перевозки в Россию.", descEn: "The same catalogue, with freight arranged to Russia.", descTr: "Aynı katalog, Rusya’ya taşıma koordinasyonuyla.", descAr: "الكتالوج نفسه مع ترتيب الشحن إلى روسيا.", image: 'assets/images/partners/blue-print.svg', imageAlt: "Buyers in Russia" },
-      { icon: 'factory', name: "ناوگان وانت", nameRu: "Парк LCV", nameEn: "LCV fleets", nameTr: "Hafif ticari filo", nameAr: "أساطيل التجاري الخفيف", desc: "تا ۷٫۵ تن، فیلتر و ترمز و کلاچ پرتکرارترین درخواست است.", descRu: "До 7,5 т чаще всего спрашивают фильтр, тормоз и сцепление.", descEn: "Up to 7.5 tonnes, filters, brakes and clutch are the repeat request.", descTr: "7,5 tona kadar en sık filtre, fren ve debriyaj istenir.", descAr: "حتى 7.5 طن، الفلاتر والفرامل والدبرياج هي الطلب المتكرر.", image: 'assets/images/partners/blue-print.svg', imageAlt: "LCV fleets" },
-      { icon: 'factory', name: "هیبرید و برقی", nameRu: "Гибрид и электро", nameEn: "Hybrid and EV", nameTr: "Hibrit ve elektrikli", nameAr: "الهجين والكهرباء", desc: "فیلتر محفظه باتری کششی برای باتری ولتاژبالا.", descRu: "Фильтр отсека тяговой батареи для высоковольтной батареи.", descEn: "Traction-battery compartment filters for the high-voltage battery.", descTr: "Yüksek voltajlı batarya için çekiş bataryası filtreleri.", descAr: "فلاتر حجرة بطارية الجر للبطارية عالية الجهد.", image: 'assets/images/partners/blue-print.svg', imageAlt: "Hybrid and EV" }
+      { icon: 'factory', name: "تعمیرگاه ایران", nameRu: "Сервис в Иране", nameEn: "Workshops in Iran", nameTr: "İran atölyesi", nameAr: "ورش إيران", desc: "لنت، فیلتر و کلاچ برای سرویس روزانه. مشاوره فارسی.", descRu: "Колодки, фильтры и сцепление для ежедневного сервиса. Консультация на фарси.", descEn: "Pads, filters and clutch for daily service. Consulting in Farsi.", descTr: "Günlük servis için balata, filtre ve debriyaj. Farsça danışmanlık.", descAr: "تيل وفلاتر ودبرياج للخدمة اليومية. استشارة بالفارسية.", image: 'assets/images/partners/blue-print.svg?v=20261028', imageAlt: "Workshops in Iran" },
+      { icon: 'factory', name: "خریدار روسیه", nameRu: "Покупатель в России", nameEn: "Buyers in Russia", nameTr: "Rusya alıcısı", nameAr: "المشتري في روسيا", desc: "همان کاتالوگ، با هماهنگی حمل به روسیه.", descRu: "Тот же каталог, с организацией перевозки в Россию.", descEn: "The same catalogue, with freight arranged to Russia.", descTr: "Aynı katalog, Rusya’ya taşıma koordinasyonuyla.", descAr: "الكتالوج نفسه مع ترتيب الشحن إلى روسيا.", image: 'assets/images/partners/blue-print.svg?v=20261028', imageAlt: "Buyers in Russia" },
+      { icon: 'factory', name: "ناوگان وانت", nameRu: "Парк LCV", nameEn: "LCV fleets", nameTr: "Hafif ticari filo", nameAr: "أساطيل التجاري الخفيف", desc: "تا ۷٫۵ تن، فیلتر و ترمز و کلاچ پرتکرارترین درخواست است.", descRu: "До 7,5 т чаще всего спрашивают фильтр, тормоз и сцепление.", descEn: "Up to 7.5 tonnes, filters, brakes and clutch are the repeat request.", descTr: "7,5 tona kadar en sık filtre, fren ve debriyaj istenir.", descAr: "حتى 7.5 طن، الفلاتر والفرامل والدبرياج هي الطلب المتكرر.", image: 'assets/images/partners/blue-print.svg?v=20261028', imageAlt: "LCV fleets" },
+      { icon: 'factory', name: "هیبرید و برقی", nameRu: "Гибрид и электро", nameEn: "Hybrid and EV", nameTr: "Hibrit ve elektrikli", nameAr: "الهجين والكهرباء", desc: "فیلتر محفظه باتری کششی برای باتری ولتاژبالا.", descRu: "Фильтр отсека тяговой батареи для высоковольтной батареи.", descEn: "Traction-battery compartment filters for the high-voltage battery.", descTr: "Yüksek voltajlı batarya için çekiş bataryası filtreleri.", descAr: "فلاتر حجرة بطارية الجر للبطارية عالية الجهد.", image: 'assets/images/partners/blue-print.svg?v=20261028', imageAlt: "Hybrid and EV" }
     ],
     services: [
       { title: "شناسایی با OE و شاسی", titleRu: "Подбор по OE и VIN", titleEn: "Match by OE and VIN", titleTr: "OE ve şasi ile eşleştirme", titleAr: "مطابقة بـ OE والهيكل", desc: "کاربرد را از کاتالوگ Blue Print درمی‌آوریم.", descRu: "Применение берём из каталога Blue Print.", descEn: "The application comes from the Blue Print catalogue.", descTr: "Uygulamayı Blue Print kataloğundan çıkarırız.", descAr: "نستخرج التطبيق من كتالوج Blue Print." },

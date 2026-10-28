@@ -36,7 +36,12 @@ body[data-page="blue-print"] .bp-hero::before {
   align-items: center;
 }
 
-.bp-hero__logo { height: 48px; width: auto; margin-bottom: 16px; }
+.bp-hero__logo {
+  height: 84px;
+  width: auto;
+  aspect-ratio: 205 / 182;
+  margin-bottom: 16px;
+}
 .bp-hero__eyebrow {
   display: inline-block;
   font-size: var(--text-sm);
@@ -76,12 +81,16 @@ body[data-page="blue-print"] .bp-hero::before {
 .bp-hero__stat strong { display: block; font-size: var(--text-lg); color: var(--brand-accent); }
 .bp-hero__stat span { font-size: var(--text-sm); color: var(--text-muted); }
 .bp-hero__visual img {
-  width: 100%;
-  max-height: 420px;
+  width: min(100%, 280px);
+  height: auto;
+  max-height: 280px;
+  margin-inline: auto;
+  display: block;
   object-fit: contain;
+  padding: 28px;
   border-radius: var(--radius-lg);
-  background: linear-gradient(180deg, #fff 0%, #eef2f9 100%);
-  box-shadow: 0 12px 40px rgba(0, 51, 153, 0.12);
+  background: #fff;
+  box-shadow: 0 12px 40px rgba(0, 75, 147, 0.12);
 }
 
 .bp-trust-bar { background: #003399; color: #fff; padding: 22px 0; }
@@ -375,7 +384,7 @@ body[data-page="blue-print"] .bp-hero::before {
   height: 100%;
   object-fit: contain;
   object-position: center;
-  padding: 12px;
+  padding: 22px;
   box-sizing: border-box;
 }
 

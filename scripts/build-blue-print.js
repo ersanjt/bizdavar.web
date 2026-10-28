@@ -341,7 +341,7 @@ function buildCatalog() {
         }`;
   }).join(',\n');
 
-  const logo = "'assets/images/partners/blue-print.svg'";
+  const logo = "'assets/images/partners/blue-print.svg?v=20261028'";
   const categories = groups.map(g => `      {
         id: ${jsString(g.id)},
         icon: ${jsString(g.icon)},
@@ -477,7 +477,7 @@ ${seriesOf(g)}
  * Families follow the public Blue Print catalogue. Prices are quote-only.
  */
 (function () {
-  const logo = 'assets/images/partners/blue-print.svg';
+  const logo = 'assets/images/partners/blue-print.svg?v=20261028';
   window.BLUE_PRINT_CATALOG = {
     quoteEmptyPrices: true,
     productBase: 'pages/blue-print',
@@ -690,19 +690,19 @@ function head({ lang, title, description, keywords, slug, depthNote }) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <link rel="stylesheet" href="/assets/styles/site.css?v=20261027c">
+  <link rel="stylesheet" href="/assets/styles/site.css?v=20261028a">
   <link rel="preload" href="/assets/fonts/vazirmatn/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/estedad/Estedad-Black.woff2" as="font" type="font/woff2" crossorigin>
   <script src="/assets/scripts/gtm-boot.js?v=20260910c" defer></script>
   <script src="/assets/scripts/i18n/locale-url.js?v=20260910c" defer></script>
-  <script src="/assets/scripts/i18n/seo-head.js?v=20261027c" defer></script>
+  <script src="/assets/scripts/i18n/seo-head.js?v=20261028a" defer></script>
   <script src="/assets/scripts/i18n/locale-preload.js?v=20260910c" defer></script>
   <meta name="view-transition" content="same-origin">
   <title>${esc(title)}</title>
   <link rel="icon" href="/assets/images/brand/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/assets/images/brand/favicon.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/assets/images/brand/apple-touch-icon.png">
-  <link rel="stylesheet" href="/assets/styles/blue-print.css?v=20261027c">
+  <link rel="stylesheet" href="/assets/styles/blue-print.css?v=20261028a">
   <meta name="description" content="${esc(description)}">
   <meta name="keywords" content="${esc(keywords)}">
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -840,8 +840,8 @@ function buildProductPages() {
     <div id="relatedLinks"></div>
   </main>
   <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
-  <script src="/assets/scripts/site-loader.js?v=20261027c"></script>
-  <script src="/assets/scripts/page-boot/blue-print-product.js?v=20261027c"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261028a"></script>
+  <script src="/assets/scripts/page-boot/blue-print-product.js?v=20261028a"></script>
 </body>
 </html>
 `;
@@ -977,8 +977,8 @@ function buildHub() {
     <div id="geoStrip"></div>
     <div id="relatedLinks"></div>
   </main>
-  <script src="/assets/scripts/site-loader.js?v=20261027c" data-after-seo="i18n/supply-catalog-i18n.js" data-after-page-i18n="lib/supply-brand-page.js,config/blue-print-products.js" data-before-main="blue-print-page.js"></script>
-  <script src="/assets/scripts/page-boot/blue-print.js?v=20261027c"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261028a" data-after-seo="i18n/supply-catalog-i18n.js" data-after-page-i18n="lib/supply-brand-page.js,config/blue-print-products.js" data-before-main="blue-print-page.js"></script>
+  <script src="/assets/scripts/page-boot/blue-print.js?v=20261028a"></script>
 </body>
 </html>
 `;
@@ -1042,7 +1042,7 @@ function patchIndexes() {
     if (!html.includes('partners/blue-print.svg')) {
       html = html.replace(
         /(<img src="\/assets\/images\/partners\/liqui-moly\.svg" alt="Liqui Moly")/g,
-        `<img src="/assets/images/partners/blue-print.svg" alt="Blue Print" width="120" height="28">\n            $1`
+        `<img src="/assets/images/partners/blue-print.svg?v=20261028" alt="Blue Print" width="36" height="32">\n            $1`
       );
     }
     fs.writeFileSync(file, html, 'utf8');
