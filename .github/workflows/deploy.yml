@@ -1,0 +1,40 @@
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-main
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Publish public_html
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Run the server deploy script
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
+        run: |
+          set -euo pipefail
+          if [ -z "${DEPLOY_HOST}" ] || [ -z "${DEPLOY_SSH_KEY}" ]; then
+            echo "Add the DEPLOY_HOST secret (server IP or hostname) before this job can publish."
+            exit 1
+          fi
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$DEPLOY_SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          port="${DEPLOY_PORT:-22}"
+          user="${DEPLOY_USER:-root}"
+          ssh -i ~/.ssh/deploy_key \
+            -p "$port" \
+            -o StrictHostKeyChecking=accept-new \
+            -o IdentitiesOnly=yes \
+            "${user}@${DEPLOY_HOST}" \
+            "bash /home/bizdavar/repositories/bizdavar.web/scripts/deploy-sync.sh"
