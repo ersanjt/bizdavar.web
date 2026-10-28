@@ -535,6 +535,20 @@
   margin-bottom: 14px;
 }
 
+.fast-for-card__icon .bd-icon,
+.fast-speed-card__icon .bd-icon,
+.fast-scope-card__icon .bd-icon,
+.fast-deliverable__icon .bd-icon,
+.fast-trust-item__icon .bd-icon,
+.fast-why-card__icon .bd-icon {
+  color: inherit;
+}
+
+.fast-for-card__icon .bd-icon {
+  width: 24px;
+  height: 24px;
+}
+
 .fast-for-card h3 {
   font-size: var(--text-base);
   margin-bottom: 8px;
@@ -1879,4 +1893,23 @@ html[dir="rtl"] .fast-path::before {
   .fp-row { justify-content: flex-start; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; scrollbar-width: none; }
   .fp-phone { scroll-snap-align: center; }
   .fast-speed-visual { margin-inline: 0; border-radius: 20px; }
+}
+
+/* The order bar already has WhatsApp. Keep the chat launcher beside it, not on top of the cards. */
+@media (max-width: 1024px) {
+  body.has-mobile-chrome:has(.fast-sticky-cta.is-visible) .wa-fab,
+  body.has-mobile-chrome:has(.fast-sticky-cta.is-visible) .back-to-top {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  body.has-mobile-chrome:has(.fast-sticky-cta.is-visible) .fast-sticky-cta {
+    right: 96px;
+    border-radius: 14px 0 0 0;
+  }
+
+  body.has-mobile-chrome:has(.fast-sticky-cta.is-visible) #repleo-widget-container {
+    bottom: calc(78px + env(safe-area-inset-bottom, 0px)) !important;
+    right: 10px !important;
+  }
 }
