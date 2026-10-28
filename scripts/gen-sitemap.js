@@ -58,7 +58,7 @@ const PAGES = [
   { path: '/pages/car-parts', changefreq: 'weekly', priority: 0.85, lastmod: '2026-09-18' },
   { path: '/pages/teltonika', changefreq: 'monthly', priority: 0.9, lastmod: SITE_UPDATE },
   { path: '/pages/pneumatic', changefreq: 'monthly', priority: 0.8, lastmod: '2026-10-04' },
-  { path: '/pages/gamak', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
+  { path: '/pages/gamak', changefreq: 'weekly', priority: 0.9, lastmod: '2026-10-28' },
   { path: '/pages/digi-system', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/teraoka', changefreq: 'monthly', priority: 0.8, lastmod: SITE_UPDATE },
   { path: '/pages/bz-diamond', changefreq: 'monthly', priority: 0.75, lastmod: SITE_UPDATE },
@@ -131,7 +131,10 @@ const HREFLANG_LANGUAGE_ONLY = [
 ];
 
 function hreflangBlock(entry) {
-  const pairs = entry.languageOnlyHreflang ? HREFLANG_LANGUAGE_ONLY : HREFLANG;
+  const pairs = entry.languageOnlyHreflang ? HREFLANG_LANGUAGE_ONLY.slice() : HREFLANG.slice();
+  if (entry.path === '/pages/gamak') {
+    ['ar', 'ar-SA', 'ar-IQ', 'ar-LB', 'ar-SY', 'ar-JO'].forEach(tag => pairs.push([tag, 'ar']));
+  }
   return pairs.map(([hl, locCode]) => {
     const loc = LOCALES.find(l => l.code === locCode) || LOCALES[0];
     const href = absoluteUrl(entry, loc);

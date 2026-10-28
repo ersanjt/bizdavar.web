@@ -108,7 +108,7 @@
       },
       gamak: {
         seoTitle: 'خرید الکتروموتور Gamak | IE2/IE3 — بیزدوار گروپ',
-        seoDescription: 'تامین اصل الکتروموتور Gamak از ازمیر برای پروژه‌های صنعتی. سه‌فاز و تک‌فاز، IE2/IE3/IE4، فلنج B3/B5 و Ex-proof. واتساپ و تماس فروش: +90 501 067 6486.',
+        seoDescription: 'الکتروموتور اصل Gamak را از ازمیر برای پروژه‌های صنعتی تامین می‌کنیم. سه‌فاز و تک‌فاز، کلاس IE2 تا IE4، فلنج B3/B5 و مدل ضد انفجار. واتساپ و تماس فروش: +90 501 067 6486.',
         seoKeywords: 'الکتروموتور Gamak, موتور سه فاز, IE3, فلنج B3 B5, موتور ضد انفجار, بیزدوار'
       },
       enpo: {
@@ -704,7 +704,7 @@
       },
       gamak: {
         seoTitle: 'Buy Gamak Electric Motors | Saudi, Iraq & Levant',
-        seoDescription: 'Genuine Gamak three-phase motors from Izmir for Saudi Arabia, Iraq, Lebanon, Syria, the UAE and Jordan. IE2/IE3/IE4, B3/B5 flange and Ex-proof. WhatsApp +90 501 067 6486.',
+        seoDescription: 'Genuine Gamak three-phase motors from Izmir for plants in Saudi Arabia, Iraq, Lebanon, Syria, the UAE and Jordan. IE2, IE3 and IE4, B3/B5 flanges, and explosion-proof options. WhatsApp +90 501 067 6486.',
         seoKeywords: 'Gamak electric motor, buy Gamak motor Saudi Arabia, Gamak motor Iraq, electric motor Lebanon, Gamak Syria, IE3 three phase motor, explosion proof motor, Bizdavar'
       },
       enpo: {

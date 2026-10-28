@@ -764,6 +764,12 @@ function hreflangLinks(route) {
       ['ar-AE', LOCALES[4]],
       ['x-default', LOCALES[0]]
     ];
+  if (route === '/pages/gamak') {
+    const ar = LOCALES[4];
+    ['ar', 'ar-SA', 'ar-IQ', 'ar-LB', 'ar-SY', 'ar-JO'].forEach((tag) => {
+      tags.splice(tags.length - 1, 0, [tag, ar]);
+    });
+  }
   return tags
     .map(([hl, loc]) => `  <link rel="alternate" hreflang="${hl}" href="${escAttr(absoluteUrl(loc, route))}">`)
     .join('\n');

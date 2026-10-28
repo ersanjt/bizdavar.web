@@ -125,7 +125,7 @@
         'x-default': toAbsolute('en', pagePath)
       };
     }
-    return {
+    var alts = {
       'fa-IR': toAbsolute('fa', pagePath),
       'tr-TR': toAbsolute('tr', pagePath),
       'en-US': toAbsolute('en', pagePath),
@@ -133,6 +133,16 @@
       'ar-AE': toAbsolute('ar', pagePath),
       'x-default': toAbsolute('fa', pagePath)
     };
+    if (normalizePagePath(pagePath).split('#')[0] === '/pages/gamak') {
+      var arUrl = toAbsolute('ar', pagePath);
+      alts.ar = arUrl;
+      alts['ar-SA'] = arUrl;
+      alts['ar-IQ'] = arUrl;
+      alts['ar-LB'] = arUrl;
+      alts['ar-SY'] = arUrl;
+      alts['ar-JO'] = arUrl;
+    }
+    return alts;
   }
 
   function currentPagePath() {

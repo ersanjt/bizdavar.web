@@ -22,7 +22,7 @@
 
       since: 'Since 1961 · Izmir',
 
-      description: 'Bizdavar Group supplies genuine Gamak motors from Izmir, Turkey, to plants and contractors in Saudi Arabia, Iraq, Lebanon, Syria, the UAE, Jordan, Kuwait and Qatar. We match kW, rpm, B3/B5/B35 flange and IE class, then issue a proforma. WhatsApp and phone: +90 501 067 6486.',
+      description: 'Bizdavar Group supplies genuine Gamak motors from Izmir, Turkey, to plants and contractors in Saudi Arabia, Iraq, Lebanon, Syria, the UAE, Jordan, Kuwait and Qatar. We match the power, speed, flange (B3, B5 or B35) and efficiency class, then send a proforma. WhatsApp and phone: +90 501 067 6486.',
 
       heroStats: [
 
@@ -38,25 +38,25 @@
 
     trustSignals: [
 
-      { label: 'Genuine Gamak product', desc: 'Sourced from the Turkish manufacturer — valid nameplate and serial number' },
+      { label: 'Genuine Gamak motors', desc: 'Supplied from the Turkish factory, with a valid nameplate and serial number.' },
 
-      { label: 'Technical consulting', desc: 'kW, rpm, flange and IE selection — based on datasheet and real application' },
+      { label: 'Technical consulting', desc: 'We choose power, speed, flange and IE class from the datasheet and the real duty.' },
 
-      { label: 'Built for industry', desc: 'Pumps, compressors, conveyors, HVAC and production lines' },
+      { label: 'Built for industry', desc: 'For pumps, compressors, conveyors, HVAC and production lines.' },
 
-      { label: 'Transparent logistics', desc: 'Proforma, lead time and international shipping to project delivery' }
+      { label: 'Clear shipping', desc: 'You receive a proforma, a lead time and delivery to the project site.' }
 
     ],
 
     whyBuyFromUs: [
 
-      { title: 'Correct power and speed selection', desc: 'Send the load (pump, fan, conveyor or compressor), voltage and destination. We recommend the Gamak frame, pole count and IE class for that duty.' },
+      { title: 'The right power and speed', desc: 'Tell us the load — pump, fan, conveyor or compressor — plus the voltage and where it will run. We recommend the Gamak frame, pole count and IE class.' },
 
-      { title: 'Replacement of worn motors', desc: 'For plant overhauls in Saudi Arabia, Iraq, Lebanon and Syria — we match flange, shaft and power to the motor already on site.' },
+      { title: 'Replacing a worn motor', desc: 'For overhauls in Saudi Arabia, Iraq, Lebanon and Syria, we match the flange, shaft and power to the motor already on site.' },
 
-      { title: 'Proforma before payment', desc: 'Price, order code, lead time and shipping terms are written in one proforma before you pay.' },
+      { title: 'A proforma before you pay', desc: 'Price, order code, lead time and shipping terms are all on one proforma, before any payment.' },
 
-      { title: 'One WhatsApp for the region', desc: 'English and Arabic consulting on +90 501 067 6486. You do not need to write to the factory.' }
+      { title: 'One number for the region', desc: 'Talk to us in English or Arabic on +90 501 067 6486. You do not have to contact the factory yourself.' }
 
     ],
 
@@ -64,79 +64,79 @@
 
       { num: '1', title: 'Inquiry', desc: 'Power kW, speed rpm, flange B3/B5, voltage 380V or 220V, quantity' },
 
-      { num: '2', title: 'Technical consulting', desc: 'GM/GMB series recommendation, IE2 or IE3, and brake option if needed' },
+      { num: '2', title: 'Technical advice', desc: 'We suggest three-phase or single-phase, IE2, IE3 or IE4, and a brake or explosion-proof option if you need one.' },
 
-      { num: '3', title: 'Proforma', desc: 'Gamak price, Manufacturer lead time, payment terms' },
+      { num: '3', title: 'Proforma', desc: 'The Gamak price, the factory lead time and the payment terms.' },
 
-      { num: '4', title: 'Supply & shipping', desc: 'Order from Gamak, industrial packaging — international logistics' },
+      { num: '4', title: 'Supply and shipping', desc: 'We order from Gamak, pack the motor for export and ship it to your country.' },
 
-      { num: '5', title: 'Delivery & support', desc: 'Delivery to the project site in the Gulf or Levant — datasheet, installation notes and technical follow-up' }
+      { num: '5', title: 'Delivery and support', desc: 'Delivery to the project site in the Gulf or the Levant, with the datasheet, installation notes and follow-up.' }
 
     ],
 
     highlights: [
 
-      { title: 'Three-phase asynchronous motors', desc: 'Most widely used Gamak series — aluminium and cast iron, IE2/IE3, 2/4/6 pole', useCase: 'Pumps, fans, conveyors, compressors, mixers', badge: '3-Phase' },
+      { title: 'Three-phase motors', desc: 'The most widely used Gamak range: aluminium or cast iron, IE2 or IE3, in 2, 4 or 6 poles.', useCase: 'Pumps, fans, conveyors, compressors and mixers', badge: '3-Phase' },
 
-      { title: 'Single-phase 220V', desc: 'Capacitor-run motor — workshops, light HVAC and small machinery', useCase: 'Workshop, ventilation, small equipment', badge: '1-Phase' },
+      { title: 'Single-phase, 220 V', desc: 'A capacitor motor for workshops, light HVAC and small machines.', useCase: 'Workshops, ventilation and small equipment', badge: '1-Phase' },
 
-      { title: 'Ex-proof — ATEX', desc: 'Explosion-proof motors for Zone 1/2 — petrochemical and hazardous areas', useCase: 'Petrochemical, refining, solvent and Ex zones', badge: 'Ex-Proof' },
+      { title: 'Explosion-proof, ATEX', desc: 'For Zone 1 and Zone 2 in petrochemical plants and other hazardous areas.', useCase: 'Refineries, petrochemical plants and solvent areas', badge: 'Ex-Proof' },
 
-      { title: 'IE4 high efficiency', desc: 'Gamak IE4 motors — lower energy consumption with the same performance', useCase: 'New projects and energy efficiency requirements', badge: 'IE4' },
+      { title: 'IE4 high efficiency', desc: 'IE4 motors use less energy for the same output. A strong fit when a new project has efficiency rules.', useCase: 'New plants and energy-efficiency projects', badge: 'IE4' },
 
-      { title: 'Medium voltage motors', desc: '315–630 frame · 150–4000 kW — heavy industrial loads', useCase: 'Large fans, HV pumps, industrial compressors', badge: 'MV' },
+      { title: 'Medium-voltage motors', desc: 'Frames 315 to 630, from 150 to 4,000 kW, for heavy industrial loads.', useCase: 'Large fans, pumps and industrial compressors', badge: 'MV' },
 
-      { title: 'Smoke extraction motors', desc: 'Gamak smoke extraction motors — building safety HVAC', useCase: 'Smoke control, parking, tunnels', badge: 'Smoke' }
+      { title: 'Smoke-extraction motors', desc: 'Motors for smoke-control fans in buildings, car parks and tunnels.', useCase: 'Smoke control, car parks and tunnels', badge: 'Smoke' }
 
     ],
 
     categories: [
 
-      { title: 'Three-phase — Three Phase', desc: '380V asynchronous three-phase motor — frame 56 to 630, 0.06 to 3000 kW' },
+      { title: 'Three-phase, 380 V', desc: 'Asynchronous motors from frame 56 to 630, and from 0.06 to 3,000 kW.' },
 
-      { title: 'Single-phase — 220V', desc: 'Capacitor-run single-phase motor — workshop and light HVAC' },
+      { title: 'Single-phase, 220 V', desc: 'Capacitor-run motors for workshops and light HVAC.' },
 
-      { title: 'Special duty — Ex / Smoke / Crusher', desc: 'Ex-proof, smoke extraction, crusher and milking — per Gamak datasheet' },
+      { title: 'Special duty', desc: 'Explosion-proof, smoke-extraction, crusher and milking motors, as listed in the Gamak datasheet.' },
 
-      { title: 'Medium voltage — MV', desc: '315–630 frame · 150–4000 kW — for heavy loads and complex applications' },
+      { title: 'Medium voltage', desc: 'Frames 315 to 630, from 150 to 4,000 kW, for heavy and complex duties.' },
 
-      { title: 'Efficiency — IE4 / Inverter', desc: 'IE4 and inverter-duty motors — energy savings and speed control' }
+      { title: 'IE4 and inverter duty', desc: 'IE4 and inverter-duty motors for lower energy use and speed control.' }
 
     ],
 
     iranIndustries: [
 
-      { name: 'Petrochemical & refining', desc: 'Pumps, fans and compressors for oil, gas and petrochemical plants in Saudi Arabia, Iraq and the Gulf' },
+      { name: 'Petrochemical and refining', desc: 'Pumps, fans and compressors for oil, gas and petrochemical plants in Saudi Arabia, Iraq and the Gulf.' },
 
-      { name: 'Water & wastewater', desc: 'Sludge and water-supply pumps, B3/B5, including desalination and municipal stations' },
+      { name: 'Water and wastewater', desc: 'Sludge and water-supply pumps with B3 or B5 mounting, including desalination and city stations.' },
 
-      { name: 'Food & dairy', desc: 'Conveyors, mixers and hygienic HVAC for food plants' },
+      { name: 'Food and dairy', desc: 'Conveyors, mixers and hygienic ventilation for food plants.' },
 
-      { name: 'Mining & cement', desc: 'Conveyors and crusher fans, IP55, for cement lines and quarries' },
+      { name: 'Mining and cement', desc: 'IP55 conveyors and crusher fans for cement lines and quarries.' },
 
-      { name: 'Agriculture & irrigation', desc: 'Irrigation and milking-pump motors for farms in the Levant and Iraq' },
+      { name: 'Agriculture and irrigation', desc: 'Irrigation and milking pumps for farms in the Levant and Iraq.' },
 
-      { name: 'Building & industrial HVAC', desc: 'Fans, chillers and smoke-extraction motors for buildings, car parks and tunnels' }
+      { name: 'Building HVAC', desc: 'Fans, chillers and smoke-extraction motors for buildings, car parks and tunnels.' }
 
     ],
 
     industries: [
 
-      { name: 'Manufacturing', desc: 'Conveyor, mixer and production line motors' },
+      { name: 'Manufacturing', desc: 'Motors for conveyors, mixers and production lines.' },
 
-      { name: 'Water & Wastewater', desc: 'Pump and blower duty motors' },
+      { name: 'Water and wastewater', desc: 'Motors for pumps and blowers.' },
 
-      { name: 'Food & Beverage', desc: 'Washdown and conveyor applications' },
+      { name: 'Food and beverage', desc: 'Motors for washdown areas and conveyors.' },
 
-      { name: 'Mining & Cement', desc: 'Crusher and heavy-duty conveyor motors' },
+      { name: 'Mining and cement', desc: 'Motors for crushers and heavy conveyors.' },
 
-      { name: 'Oil & Gas', desc: 'Ex-proof motors for hazardous areas' },
+      { name: 'Oil and gas', desc: 'Explosion-proof motors for hazardous areas.' },
 
-      { name: 'Energy', desc: 'Medium voltage for fans and heavy loads' },
+      { name: 'Energy', desc: 'Medium-voltage motors for fans and other heavy loads.' },
 
-      { name: 'Agriculture', desc: 'Milking and irrigation pump motors' },
+      { name: 'Agriculture', desc: 'Motors for milking systems and irrigation pumps.' },
 
-      { name: 'HVAC & Building', desc: 'Smoke extraction and fan motors' }
+      { name: 'HVAC and buildings', desc: 'Motors for smoke extraction and ventilation fans.' }
 
     ],
 
@@ -144,7 +144,7 @@
 
       title: 'Gamak — since 1961, the heart of Turkish industry',
 
-      desc: 'Gamak built Turkey\'s first domestic electric motor in Izmir and is now one of Europe\'s large motor makers, with its own test lab and tooling. Bizdavar is the supply desk for projects in Saudi Arabia, Iraq, Lebanon, Syria and the Gulf: frame selection, proforma and shipping. Call or WhatsApp +90 501 067 6486.',
+      desc: 'Gamak built Turkey\'s first locally made electric motor in Izmir. It is now one of Europe\'s largest motor manufacturers, with its own test laboratory and tooling. For projects in Saudi Arabia, Iraq, Lebanon, Syria and the Gulf, Bizdavar selects the frame, issues the proforma and arranges shipping. Call or message us on WhatsApp: +90 501 067 6486.',
 
       topics: [
 
@@ -164,31 +164,31 @@
 
     services: [
 
-      { title: 'Motor selection consulting', desc: 'Power, speed, flange, IE class — based on Gamak datasheet' },
+      { title: 'Help choosing the motor', desc: 'We select power, speed, flange and IE class from the Gamak datasheet.' },
 
-      { title: 'Old motor replacement', desc: 'Match mounting dimensions and shaft to existing site motor' },
+      { title: 'Replacing an old motor', desc: 'We match the mounting dimensions and shaft to the motor already on site.' },
 
-      { title: 'Official proforma', desc: 'Price, lead time and shipping terms in one document' },
+      { title: 'A formal proforma', desc: 'Price, lead time and shipping terms, in one document.' },
 
-      { title: 'Shipping to the Middle East', desc: 'From Gamak in Izmir to Saudi Arabia, Iraq, Lebanon, Syria, the UAE, Jordan, Kuwait and Qatar' },
+      { title: 'Shipping across the Middle East', desc: 'From the Gamak factory in Izmir to Saudi Arabia, Iraq, Lebanon, Syria, the UAE, Jordan, Kuwait and Qatar.' },
 
-      { title: 'English and Arabic support', desc: 'WhatsApp and phone +90 501 067 6486 — one number for quotes' }
+      { title: 'English and Arabic support', desc: 'Ask for a quote in English or Arabic on WhatsApp or by phone: +90 501 067 6486.' }
 
     ],
 
     faq: [
 
-      { q: 'Is the Gamak motor genuine?', a: 'Yes. We supply genuine Gamak motors with the factory nameplate and serial number. The proforma lists the frame, power, poles and IE class.' },
+      { q: 'Are these genuine Gamak motors?', a: 'Yes. Every motor is genuine Gamak, with the factory nameplate and serial number. The proforma lists the frame, power, poles and IE class.' },
 
-      { q: 'How do I select motor power?', a: 'Send the load (pump, fan, conveyor or compressor), speed, voltage, flange and the country of the site. We reply with a Gamak model on WhatsApp +90 501 067 6486.' },
+      { q: 'How do I choose the power?', a: 'Tell us the load (pump, fan, conveyor or compressor), the speed, voltage, flange and the country where it will be installed. We reply with a Gamak model on WhatsApp +90 501 067 6486.' },
 
-      { q: 'IE2, IE3 or IE4?', a: 'IE4 is the highest efficiency for new projects. IE3 is the usual industrial choice in Saudi Arabia and the Gulf. IE2 is the lower-cost option when you are replacing an existing motor.' },
+      { q: 'Should I choose IE2, IE3 or IE4?', a: 'IE4 is the most efficient choice for a new project. IE3 is the usual industrial standard in Saudi Arabia and the Gulf. IE2 costs less when you are only replacing a motor you already have.' },
 
-      { q: 'How long is delivery to Saudi Arabia, Iraq, Lebanon or Syria?', a: 'Usually 2 to 6 weeks, depending on frame size and stock. The proforma states the lead time for your destination port or site.' },
+      { q: 'How long does delivery take to Saudi Arabia, Iraq, Lebanon or Syria?', a: 'Usually two to six weeks, depending on the frame size and what is in stock. The proforma gives the lead time to your port or site.' },
 
-      { q: 'Do you supply Ex-proof and smoke extraction motors?', a: 'Yes. Explosion-proof, smoke-extraction and crusher motors from the Gamak catalog are available for hazardous areas and building safety.' },
+      { q: 'Do you supply explosion-proof and smoke-extraction motors?', a: 'Yes. Explosion-proof, smoke-extraction and crusher motors from the Gamak catalog are available for hazardous areas and for building safety.' },
 
-      { q: 'Do you supply medium voltage motors?', a: 'Yes. Gamak medium-voltage motors from 150 kW to 4000 kW, frames 315 to 630, for large fans, pumps and compressors.' }
+      { q: 'Do you supply medium-voltage motors?', a: 'Yes. Gamak medium-voltage motors run from 150 kW to 4,000 kW, in frames 315 to 630, for large fans, pumps and compressors.' }
 
     ],
 
@@ -3794,10 +3794,10 @@
     brand: {
       heroEyebrow: 'محركات Gamak للسعودية والعراق ولبنان وسوريا',
       heroHeadline: 'شراء محرك كهربائي صناعي Gamak',
-      heroHeadlineSub: 'ثلاثي الطور وأحادي الطور · IE2 وIE3 وIE4 · من 0.06 إلى 4000 كيلوواط · توريد إلى الخليج والشام',
+      heroHeadlineSub: 'ثلاثي الطور وأحادي الطور · IE2 وIE3 وIE4 · من 0.06 إلى 4000 كيلوواط · توريد إلى الخليج وبلاد الشام',
       tagline: 'Power to Energize Life',
       since: 'منذ ١٩٦١ · إزمير',
-      description: 'تورد مجموعة Bizdavar محركات Gamak الأصلية من إزمير في تركيا إلى المصانع والمقاولين في السعودية والعراق ولبنان وسوريا والإمارات والأردن والكويت وقطر. نطابق القدرة والسرعة وشفة B3/B5/B35 وفئة IE ثم نصدر فاتورة أولية. واتساب واتصال: +90 501 067 6486.',
+      description: 'تورد مجموعة Bizdavar محركات Gamak الأصلية من إزمير في تركيا إلى المصانع والمقاولين في السعودية والعراق ولبنان وسوريا والإمارات والأردن والكويت وقطر. نحدد القدرة والسرعة والشفة (B3 أو B5 أو B35) وفئة الكفاءة، ثم نرسل فاتورة أولية. للطلب عبر واتساب أو الاتصال: +90 501 067 6486.',
       heroStats: [
         { label: 'نطاق القدرة' },
         { label: 'فئة الكفاءة' },
@@ -3805,83 +3805,83 @@
       ]
     },
     trustSignals: [
-      { label: 'محرك Gamak أصلي', desc: 'من المصنع في تركيا — لوحة بيانات ورقمية تسلسلية' },
-      { label: 'استشارة بالعربية', desc: 'اختيار القدرة والسرعة والشفة وفئة IE حسب الحمل الفعلي' },
-      { label: 'للصناعة الثقيلة', desc: 'مضخات وضواغط وسيور ونقل وتهوية وخطوط إنتاج' },
-      { label: 'شحن واضح', desc: 'فاتورة أولية ومدة توريد حتى موقع المشروع' }
+      { label: 'محرك Gamak أصلي', desc: 'يأتي من المصنع في تركيا، مع لوحة المصنع والرقم التسلسلي.' },
+      { label: 'استشارة بالعربية', desc: 'نختار القدرة والسرعة والشفة وفئة الكفاءة حسب الحمل الفعلي.' },
+      { label: 'للصناعة', desc: 'للمضخات والضواغط والسيور الناقلة والتهوية وخطوط الإنتاج.' },
+      { label: 'شحن بموعد واضح', desc: 'فاتورة أولية، ومدة توريد، وتسليم حتى موقع المشروع.' }
     ],
     whyBuyFromUs: [
-      { title: 'اختيار القدرة والسرعة', desc: 'أرسل نوع الحمل (مضخة أو مروحة أو سير) والجهد وبلد الموقع. نقترح الإطار وعدد الأقطاب وفئة IE.' },
-      { title: 'استبدال محرك قديم', desc: 'لمصانع السعودية والعراق ولبنان وسوريا — مطابقة الشفة والعمود والقدرة مع المحرك المركّب.' },
-      { title: 'فاتورة قبل الدفع', desc: 'السعر ورمز الطلب ومدة الشحن في فاتورة واحدة قبل أي دفعة.' },
-      { title: 'رقم واحد للمنطقة', desc: 'استشارة بالإنجليزية والعربية على +90 501 067 6486 دون مراسلة المصنع مباشرة.' }
+      { title: 'القدرة والسرعة المناسبتان', desc: 'أخبرنا بنوع الحمل — مضخة أو مروحة أو سير ناقل أو ضاغط — مع الجهد ومكان التركيب. نقترح الإطار وعدد الأقطاب وفئة الكفاءة.' },
+      { title: 'استبدال محرك قديم', desc: 'في مصانع السعودية والعراق ولبنان وسوريا، نطابق الشفة والعمود والقدرة مع المحرك المركّب حالياً.' },
+      { title: 'فاتورة قبل الدفع', desc: 'السعر ورمز الطلب ومدة الشحن كلها في فاتورة واحدة، قبل أي دفعة.' },
+      { title: 'رقم واحد للمنطقة', desc: 'نتحدّث بالعربية أو الإنجليزية على +90 501 067 6486، من غير أن تراسل المصنع بنفسك.' }
     ],
     purchaseSteps: [
-      { num: '١', title: 'استعلام', desc: 'القدرة بالكيلوواط، السرعة، الشفة B3/B5، الجهد 380 أو 220، الكمية وبلد التسليم' },
-      { num: '٢', title: 'استشارة فنية', desc: 'اقتراح ثلاثي أو أحادي الطور، IE2 أو IE3 أو IE4، وخيار ضد الانفجار أو الفرامل' },
-      { num: '٣', title: 'فاتورة أولية', desc: 'سعر Gamak ومدة المصنع وشروط الدفع' },
-      { num: '٤', title: 'التوريد والشحن', desc: 'طلب من Gamak وتغليف صناعي وشحن إلى الخليج أو الشام' },
-      { num: '٥', title: 'التسليم والدعم', desc: 'تسليم في الموقع مع نشرة البيانات ومتابعة فنية' }
+      { num: '١', title: 'الاستعلام', desc: 'أرسل القدرة بالكيلوواط، والسرعة، والشفة B3 أو B5، والجهد 380 أو 220، والكمية، وبلد التسليم.' },
+      { num: '٢', title: 'الاستشارة الفنية', desc: 'نقترح محركاً ثلاثي الطور أو أحادي الطور، بفئة IE2 أو IE3 أو IE4، مع فرامل أو حماية من الانفجار إذا لزم الأمر.' },
+      { num: '٣', title: 'الفاتورة الأولية', desc: 'سعر Gamak، ومدة التوريد من المصنع، وشروط الدفع.' },
+      { num: '٤', title: 'التوريد والشحن', desc: 'نطلب المحرك من Gamak، ونغلّفه للتصدير، ونشحنه إلى بلدك.' },
+      { num: '٥', title: 'التسليم والمتابعة', desc: 'يصل المحرك إلى موقع المشروع في الخليج أو بلاد الشام، مع نشرة البيانات ومتابعة فنية.' }
     ],
     highlights: [
-      { title: 'محركات ثلاثية الطور', desc: 'السلسلة الأكثر طلباً — ألومنيوم وحديد زهر، IE2/IE3، قطبان أو 4 أو 6', useCase: 'مضخات ومراوح وسيور وضواغط وخلاطات', badge: '3-Phase' },
-      { title: 'أحادي الطور 220 فولت', desc: 'محرك بمكثف للورش والتهوية الخفيفة والآلات الصغيرة', useCase: 'ورشة وتهوية ومعدة صغيرة', badge: '1-Phase' },
-      { title: 'ضد الانفجار — ATEX', desc: 'للمنطقة 1 و2 في البتروكيماويات والأجواء الخطرة', useCase: 'بتروكيماويات وتكرير ومذيبات', badge: 'Ex-Proof' },
-      { title: 'كفاءة IE4', desc: 'استهلاك أقل عند نفس القدرة للمشاريع الجديدة', useCase: 'مشاريع جديدة ومتطلبات كفاءة الطاقة', badge: 'IE4' },
-      { title: 'جهد متوسط', desc: 'إطار 315–630 · من 150 إلى 4000 كيلوواط للأحمال الثقيلة', useCase: 'مراوح كبيرة ومضخات جهد عالٍ وضواغط', badge: 'MV' },
-      { title: 'سحب الدخان', desc: 'محركات تهوية السلامة في المباني والمواقف والأنفاق', useCase: 'أنظمة دخان ومواقف وأنفاق', badge: 'Smoke' }
+      { title: 'محركات ثلاثية الطور', desc: 'السلسلة الأكثر طلباً: هيكل من الألومنيوم أو حديد الزهر، بفئة IE2 أو IE3، وبقطبين أو أربعة أو ستة أقطاب.', useCase: 'مضخات ومراوح وسيور ناقلة وضواغط وخلاطات', badge: '3-Phase' },
+      { title: 'أحادي الطور، 220 فولت', desc: 'محرك بمكثف للورش والتهوية الخفيفة والآلات الصغيرة.', useCase: 'ورش وتهوية ومعدات صغيرة', badge: '1-Phase' },
+      { title: 'مقاوم للانفجار، ATEX', desc: 'للمنطقتين 1 و2 في مصانع البتروكيماويات وغيرها من المناطق الخطرة.', useCase: 'المصافي والبتروكيماويات ومناطق المذيبات', badge: 'Ex-Proof' },
+      { title: 'كفاءة IE4', desc: 'محركات IE4 تستهلك طاقة أقل مع الأداء نفسه. تناسب المشاريع الجديدة التي تشترط كفاءة أعلى.', useCase: 'المصانع الجديدة ومشاريع ترشيد الطاقة', badge: 'IE4' },
+      { title: 'جهد متوسط', desc: 'إطارات من 315 إلى 630، بقدرة من 150 إلى 4000 كيلوواط، للأحمال الصناعية الثقيلة.', useCase: 'المراوح الكبيرة والمضخات والضواغط الصناعية', badge: 'MV' },
+      { title: 'شفط الدخان', desc: 'محركات لمراوح شفط الدخان في المباني ومواقف السيارات والأنفاق.', useCase: 'التحكم في الدخان والمواقف والأنفاق', badge: 'Smoke' }
     ],
     categories: [
-      { title: 'ثلاثي الطور', desc: 'محرك غير متزامن 380 فولت — إطار 56 إلى 630، من 0.06 إلى 3000 كيلوواط' },
-      { title: 'أحادي الطور 220 فولت', desc: 'محرك بمكثف للورش والتهوية الخفيفة' },
-      { title: 'استخدام خاص — انفجار / دخان / كسّارة', desc: 'ضد الانفجار وسحب الدخان والكسّارات وفق نشرة Gamak' },
-      { title: 'جهد متوسط', desc: 'إطار 315–630 · 150–4000 كيلوواط للأحمال الثقيلة' },
-      { title: 'كفاءة IE4 والعاكس', desc: 'IE4 ومحركات مناسبة للإنفرتر — توفير طاقة وتحكم بالسرعة' }
+      { title: 'ثلاثي الطور، 380 فولت', desc: 'محركات غير متزامنة من الإطار 56 إلى 630، وبقدرة من 0.06 إلى 3000 كيلوواط.' },
+      { title: 'أحادي الطور، 220 فولت', desc: 'محركات بمكثف للورش والتهوية الخفيفة.' },
+      { title: 'استخدامات خاصة', desc: 'محركات مقاومة للانفجار، وشفط دخان، وكسارات، وحلب، حسب نشرة Gamak الفنية.' },
+      { title: 'جهد متوسط', desc: 'إطارات من 315 إلى 630، وبقدرة من 150 إلى 4000 كيلوواط، للأحمال الثقيلة والمعقدة.' },
+      { title: 'IE4 ومناسبة للانفرتر', desc: 'محركات IE4 ومحركات تتحمل الانفرتر، لاستهلاك أقل وتحكم في السرعة.' }
     ],
     iranIndustries: [
-      { name: 'بتروكيماويات وتكرير', desc: 'مضخات ومراوح وضواغط لمصانع النفط والغاز في السعودية والعراق والخليج' },
-      { name: 'مياه وصرف', desc: 'مضخات الحمأة والتزويد بالمياه، شفة B3/B5، بما فيها محطات التحلية' },
-      { name: 'أغذية وألبان', desc: 'سيور وخلاطات وتهوية صحية لمصانع الغذاء' },
-      { name: 'تعدين وأسمنت', desc: 'سيور ومراوح الكسّارات بدرجة حماية IP55' },
-      { name: 'زراعة وري', desc: 'محركات مضخات الري والحلب في الشام والعراق' },
-      { name: 'تهوية المباني', desc: 'مراوح ومبرّدات وسحب دخان للمباني والمواقف والأنفاق' }
+      { name: 'البتروكيماويات والتكرير', desc: 'مضخات ومراوح وضواغط لمصانع النفط والغاز في السعودية والعراق والخليج.' },
+      { name: 'المياه والصرف', desc: 'مضخات الحمأة وتغذية المياه بشفة B3 أو B5، بما في ذلك محطات التحلية ومحطات المدن.' },
+      { name: 'الأغذية والألبان', desc: 'سيور ناقلة وخلاطات وتهوية صحية لمصانع الغذاء.' },
+      { name: 'التعدين والأسمنت', desc: 'سيور ناقلة ومراوح كسارات بدرجة حماية IP55 لخطوط الأسمنت والكسارات.' },
+      { name: 'الزراعة والري', desc: 'مضخات ري وحلب للمزارع في بلاد الشام والعراق.' },
+      { name: 'تهوية المباني', desc: 'مراوح ومبردات ومحركات شفط دخان للمباني ومواقف السيارات والأنفاق.' }
     ],
     industries: [
-      { name: 'تصنيع', desc: 'محركات السيور والخلاطات وخطوط الإنتاج' },
-      { name: 'مياه وصرف صحي', desc: 'محركات المضخات والنفّاخات' },
-      { name: 'أغذية ومشروبات', desc: 'سيور وتطبيقات قابلة للغسل' },
-      { name: 'تعدين وأسمنت', desc: 'كسّارات وسيور ثقيلة' },
-      { name: 'نفط وغاز', desc: 'محركات ضد الانفجار للمناطق الخطرة في الخليج' },
-      { name: 'طاقة', desc: 'جهد متوسط للمراوح والأحمال الثقيلة' },
-      { name: 'زراعة', desc: 'ري ومضخات في لبنان وسوريا والعراق' },
-      { name: 'تهوية ومبانٍ', desc: 'سحب دخان ومراوح المباني' }
+      { name: 'التصنيع', desc: 'محركات للسيور الناقلة والخلاطات وخطوط الإنتاج.' },
+      { name: 'المياه والصرف الصحي', desc: 'محركات للمضخات والنفّاخات.' },
+      { name: 'الأغذية والمشروبات', desc: 'محركات للخطوط القابلة للغسل والسيور الناقلة.' },
+      { name: 'التعدين والأسمنت', desc: 'محركات للكسارات والسيور الثقيلة.' },
+      { name: 'النفط والغاز', desc: 'محركات مقاومة للانفجار في المناطق الخطرة.' },
+      { name: 'الطاقة', desc: 'محركات جهد متوسط للمراوح والأحمال الثقيلة.' },
+      { name: 'الزراعة', desc: 'محركات لأنظمة الحلب ومضخات الري في لبنان وسوريا والعراق.' },
+      { name: 'التهوية والمباني', desc: 'محركات لشفط الدخان ومراوح التهوية.' }
     ],
     academy: {
-      title: 'Gamak — منذ ١٩٦١ من إزمير',
-      desc: 'صنعت Gamak أول محرك كهربائي محلي في تركيا، وهي اليوم من كبار منتجي المحركات في أوروبا مع مختبر اختبار خاص. Bizdavar مكتب التوريد لمشاريع السعودية والعراق ولبنان وسوريا والخليج: اختيار الإطار والفاتورة الأولية والشحن. اتصال وواتساب +90 501 067 6486.',
+      title: 'Gamak — من إزمير منذ عام ١٩٦١',
+      desc: 'صنّعت Gamak أول محرك كهربائي محلي في تركيا، في إزمير. وهي اليوم من أكبر منتجي المحركات في أوروبا، ولديها مختبر اختبار خاص. وفي مشاريع السعودية والعراق ولبنان وسوريا والخليج، تختار Bizdavar الإطار، وتصدر الفاتورة الأولية، وترتب الشحن. للاتصال أو للمراسلة على واتساب: +90 501 067 6486.',
       topics: [
-        'اختيار الكيلوواط ومعامل الخدمة — مضخة مقابل مروحة',
-        'IE2 مقابل IE3 مقابل IE4 — كفاءة الطاقة',
-        'B3 مقابل B5 مقابل B35 — تركيب المضخة',
-        'محركات ضد الانفجار وسحب الدخان',
-        'التوافق مع الإنفرتر — فئة العزل',
-        'الجهد المتوسط — إطار 315 إلى 630'
+        'اختيار الكيلوواط ومعامل الخدمة: مضخة أم مروحة؟',
+        'الفرق بين IE2 وIE3 وIE4 في كفاءة الطاقة',
+        'الفرق بين B3 وB5 وB35 عند تركيب المضخة',
+        'المحركات المقاومة للانفجار ومحركات شفط الدخان',
+        'التوافق مع الانفرتر وفئة العزل',
+        'الجهد المتوسط: الإطارات من 315 إلى 630'
       ]
     },
     services: [
-      { title: 'استشارة اختيار المحرك', desc: 'القدرة والسرعة والشفة وفئة IE وفق نشرة Gamak' },
-      { title: 'استبدال محرك قائم', desc: 'مطابقة أبعاد التركيب والعمود مع المحرك في الموقع' },
-      { title: 'فاتورة أولية رسمية', desc: 'السعر ومدة التوريد وشروط الشحن في مستند واحد' },
-      { title: 'شحن إلى الشرق الأوسط', desc: 'من إزمير إلى السعودية والعراق ولبنان وسوريا والإمارات والأردن والكويت وقطر' },
-      { title: 'دعم بالعربية والإنجليزية', desc: 'واتساب واتصال +90 501 067 6486' }
+      { title: 'مساعدة في اختيار المحرك', desc: 'نحدد القدرة والسرعة والشفة وفئة الكفاءة حسب نشرة Gamak الفنية.' },
+      { title: 'استبدال محرك قديم', desc: 'نطابق أبعاد التركيب والعمود مع المحرك الموجود في الموقع.' },
+      { title: 'فاتورة أولية واضحة', desc: 'السعر ومدة التوريد وشروط الشحن في مستند واحد.' },
+      { title: 'شحن إلى الشرق الأوسط', desc: 'من مصنع Gamak في إزمير إلى السعودية والعراق ولبنان وسوريا والإمارات والأردن والكويت وقطر.' },
+      { title: 'دعم بالعربية والإنجليزية', desc: 'اطلب عرض السعر بالعربية أو الإنجليزية عبر واتساب أو الاتصال: +90 501 067 6486.' }
     ],
     faq: [
-      { q: 'هل محرك Gamak أصلي؟', a: 'نعم. نورّد محركات Gamak الأصلية مع لوحة المصنع والرقم التسلسلي. الفاتورة الأولية تذكر الإطار والقدرة والأقطاب وفئة IE.' },
-      { q: 'كيف أختار قدرة المحرك؟', a: 'أرسل نوع الحمل والسرعة والجهد والشفة وبلد الموقع. نرد بموديل Gamak على واتساب +90 501 067 6486.' },
-      { q: 'IE2 أم IE3 أم IE4؟', a: 'IE4 أعلى كفاءة للمشاريع الجديدة. IE3 الخيار الصناعي المعتاد في السعودية والخليج. IE2 أقل تكلفة عند استبدال محرك قائم.' },
-      { q: 'كم مدة التسليم إلى السعودية أو العراق أو لبنان أو سوريا؟', a: 'عادة من أسبوعين إلى ستة أسابيع حسب الإطار والمخزون. الفاتورة الأولية تحدد المدة حتى ميناء أو موقع التسليم.' },
-      { q: 'هل تتوفر محركات ضد الانفجار وسحب الدخان؟', a: 'نعم. محركات ضد الانفجار وسحب الدخان والكسّارات من كتالوج Gamak للمناطق الخطرة وسلامة المباني.' },
-      { q: 'هل يتوفر الجهد المتوسط؟', a: 'نعم. محركات Gamak متوسطة الجهد من 150 إلى 4000 كيلوواط، إطار 315 إلى 630، للمراوح والمضخات والضواغط الكبيرة.' }
+      { q: 'هل هذه محركات Gamak أصلية؟', a: 'نعم. كل محرك أصلي من Gamak، ومعه لوحة المصنع والرقم التسلسلي. وتذكر الفاتورة الأولية الإطار والقدرة وعدد الأقطاب وفئة الكفاءة.' },
+      { q: 'كيف أختار قدرة المحرك؟', a: 'أخبرنا بنوع الحمل (مضخة أو مروحة أو سير ناقل أو ضاغط) والسرعة والجهد والشفة والبلد الذي سيُركَّب فيه المحرك. نرد عليك بموديل Gamak المناسب عبر واتساب +90 501 067 6486.' },
+      { q: 'أختار IE2 أم IE3 أم IE4؟', a: 'فئة IE4 هي الأعلى كفاءة للمشروع الجديد. وفئة IE3 هي المعيار الصناعي المعتاد في السعودية والخليج. أما IE2 فهي أقل تكلفة إذا كنت تستبدل محركاً موجوداً فقط.' },
+      { q: 'كم تستغرق مدة التسليم إلى السعودية أو العراق أو لبنان أو سوريا؟', a: 'عادة من أسبوعين إلى ستة أسابيع، حسب مقاس الإطار وما هو متوفر في المخزون. وتبيّن الفاتورة الأولية المدة حتى الميناء أو موقع التركيب.' },
+      { q: 'هل تتوفر محركات مقاومة للانفجار ومحركات شفط الدخان؟', a: 'نعم. محركات مقاومة للانفجار، ومحركات شفط الدخان، ومحركات الكسارات متوفرة من كتالوج Gamak للمناطق الخطرة ولسلامة المباني.' },
+      { q: 'هل تتوفر محركات الجهد المتوسط؟', a: 'نعم. محركات Gamak متوسطة الجهد تعمل من 150 إلى 4000 كيلوواط، بإطارات من 315 إلى 630، للمراوح والمضخات والضواغط الكبيرة.' }
     ],
     inquiryTemplate: 'مرحباً، أريد عرض سعر لـ {product} من Gamak.\n\nالقدرة kW / السرعة rpm:\nالشفة B3/B5/B35:\nالجهد:\nالكمية:\nبلد التسليم:\n'
   };
