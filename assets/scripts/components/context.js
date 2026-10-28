@@ -114,7 +114,8 @@
   function getWhatsappChannels() {
     const channels = [...(C.contact.channels || [])];
     const locale = window.BIZDAVAR_I18N?.locale || 'fa';
-    const preferId = locale === 'tr' ? 'tr' : 'ir';
+    const page = (typeof document !== 'undefined' && document.body && document.body.dataset.page) || '';
+    const preferId = (locale === 'tr' || locale === 'ar' || page === 'gamak') ? 'tr' : 'ir';
     channels.sort((a, b) => {
       if (a.id === preferId) return -1;
       if (b.id === preferId) return 1;

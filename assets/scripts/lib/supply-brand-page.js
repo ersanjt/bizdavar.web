@@ -325,10 +325,18 @@ window.createSupplyBrandPage = function (cfg) {
 
   function whatsappUrl(message) {
 
+    if (cfg.whatsapp && window.BD_CTX?.buildWaUrl) return window.BD_CTX.buildWaUrl(cfg.whatsapp, message);
+
     if (window.getWhatsappUrl) return window.getWhatsappUrl(message);
 
     return inquiryUrl('');
 
+  }
+
+  function phoneButton() {
+    if (!cfg.phone) return '';
+    const label = cfg.phoneDisplay || cfg.phone;
+    return `<a href="tel:${cfg.phone}" class="btn btn--outline"><span dir="ltr">${label}</span></a>`;
   }
 
 
@@ -406,6 +414,8 @@ window.createSupplyBrandPage = function (cfg) {
         <div class="hero__actions mt-24">
 
           <a href="${whatsappUrl(msg)}" class="btn btn--green" target="_blank" rel="noopener noreferrer">${ic('whatsapp', { size: 18, variant: 'white' })} ${t('whatsappInquiry', 'استعلام در واتساپ')}</a>
+
+          ${phoneButton()}
 
           <a href="${inquiryUrl(brandName)}" class="btn btn--yellow">${t('inquiryCta', 'استعلام قیمت و تامین')}</a>
 
@@ -1087,6 +1097,12 @@ window.createSupplyBrandPage = function (cfg) {
 
 
 
+    if (cfg.phone) {
+      document.querySelectorAll(`#${elId('CtaCall')}, #${elId('StickyCall')}`).forEach(call => {
+        call.href = `tel:${cfg.phone}`;
+      });
+    }
+
     document.querySelectorAll(`#${elId('CtaForm')}, #${elId('StickyCta')} a.btn--yellow`).forEach(form => {
 
       if (form) form.href = formHref;
@@ -1493,7 +1509,7 @@ window.createSupplyBrandPage = function (cfg) {
 
       description: catalog().brand.description || catalog().brand.descriptionFa,
 
-      inLanguage: locale === 'tr' ? 'tr-TR' : locale === 'en' ? 'en-US' : locale === 'ru' ? 'ru-RU' : locale === 'ar' ? 'ar-AE' : 'fa-IR',
+      inLanguage: locale === 'tr' ? 'tr-TR' : locale === 'en' ? 'en-US' : locale === 'ru' ? 'ru-RU' : locale === 'ar' ? (cfg.areaServed ? 'ar' : 'ar-AE') : 'fa-IR',
 
       numberOfItems: totalItems,
 
@@ -1524,6 +1540,55 @@ window.createSupplyBrandPage = function (cfg) {
     }
 
     script.textContent = JSON.stringify(ld);
+
+    const faq = catalog().faq || [];
+    if (cfg.areaServed && faq.length) {
+      const faqLd = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: ld.inLanguage,
+        mainEntity: faq.filter(item => item && (item.q || item.a)).map(item => ({
+          '@type': 'Question',
+          name: pickLang(item, 'q') || item.q || '',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: pickLang(item, 'a') || item.a || ''
+          }
+        }))
+      };
+      let faqScript = document.getElementById(schemaId + '-faq');
+      if (!faqScript) {
+        faqScript = document.createElement('script');
+        faqScript.id = schemaId + '-faq';
+        faqScript.type = 'application/ld+json';
+        document.head.appendChild(faqScript);
+      }
+      faqScript.textContent = JSON.stringify(faqLd);
+
+      const serviceLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: (catalog().brand && (catalog().brand.heroHeadline || catalog().brand.heroHeadlineFa)) || brandName,
+        serviceType: 'Industrial electric motor supply',
+        provider: {
+          '@type': 'Organization',
+          name: 'Bizdavar Group',
+          url: baseUrl + '/',
+          telephone: cfg.phone || undefined
+        },
+        areaServed: cfg.areaServed.map(name => ({ '@type': 'Country', name })),
+        telephone: cfg.phone || undefined,
+        url: (typeof location !== 'undefined' && location.href) || undefined
+      };
+      let serviceScript = document.getElementById(schemaId + '-service');
+      if (!serviceScript) {
+        serviceScript = document.createElement('script');
+        serviceScript.id = schemaId + '-service';
+        serviceScript.type = 'application/ld+json';
+        document.head.appendChild(serviceScript);
+      }
+      serviceScript.textContent = JSON.stringify(serviceLd);
+    }
 
   };
 

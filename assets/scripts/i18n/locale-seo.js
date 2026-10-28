@@ -107,9 +107,9 @@
         seoKeywords: 'خرید Teltonika ایران, قیمت FMB920, ردیاب GPS, FMC650, بیزدوار'
       },
       gamak: {
-        seoTitle: 'خرید الکتروموتور Gamak در ایران | IE2/IE3 — بیزدوار گروپ',
-        seoDescription: 'تامین اصل الکتروموتور Gamak ترکیه برای پروژه‌های صنعتی ایران. GM/GMB، IE2/IE3، فلنج B3/B5 — مشاوره فنی فارسی، پیش‌فاکتور و لجستیک — بیزدوار گروپ.',
-        seoKeywords: 'Gamak ایران, الکتروموتور صنعتی, IE2 IE3, موتور سه فاز, بیزدوار'
+        seoTitle: 'خرید الکتروموتور Gamak | IE2/IE3 — بیزدوار گروپ',
+        seoDescription: 'تامین اصل الکتروموتور Gamak از ازمیر برای پروژه‌های صنعتی. سه‌فاز و تک‌فاز، IE2/IE3/IE4، فلنج B3/B5 و Ex-proof. واتساپ و تماس فروش: +90 501 067 6486.',
+        seoKeywords: 'الکتروموتور Gamak, موتور سه فاز, IE3, فلنج B3 B5, موتور ضد انفجار, بیزدوار'
       },
       enpo: {
         seoTitle: 'خرید سیلندر و شیر پنوماتیک | واحد مراقبت هوا — بیزدوار',
@@ -703,9 +703,9 @@
         seoKeywords: 'Teltonika, GPS tracker, FMB920 price, fleet telematics, Bizdavar'
       },
       gamak: {
-        seoTitle: 'Gamak electric motor supply | IE2/IE3 — Bizdavar Group',
-        seoDescription: 'Genuine Gamak industrial electric motors. GM/GMB, IE2/IE3, B3/B5 flange — English, Persian and Turkish technical consulting, proforma and logistics — Bizdavar Group.',
-        seoKeywords: 'Gamak, electric motor, IE2 IE3, industrial motor, Bizdavar'
+        seoTitle: 'Buy Gamak Electric Motors | Saudi, Iraq & Levant',
+        seoDescription: 'Genuine Gamak three-phase motors from Izmir for Saudi Arabia, Iraq, Lebanon, Syria, the UAE and Jordan. IE2/IE3/IE4, B3/B5 flange and Ex-proof. WhatsApp +90 501 067 6486.',
+        seoKeywords: 'Gamak electric motor, buy Gamak motor Saudi Arabia, Gamak motor Iraq, electric motor Lebanon, Gamak Syria, IE3 three phase motor, explosion proof motor, Bizdavar'
       },
       enpo: {
         seoTitle: 'Industrial pneumatics | Cylinders, valves and air prep — Bizdavar',
