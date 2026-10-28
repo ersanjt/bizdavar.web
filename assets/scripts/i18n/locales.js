@@ -367,6 +367,7 @@ window.BIZDAVAR_LOCALES = {
         { name: 'Pneumatic', title: 'پنوماتیک صنعتی', desc: 'سیلندر، شیر برقی، واحد مراقبت هوا، سنسور مغناطیسی و گریپر برای خطوط تولید ایران', badge: 'ترکیه', tags: ['واحد مراقبت', 'سیلندر', 'شیر برقی'], cta: 'کاتالوگ پنوماتیک' },
         { name: 'Teraoka', title: 'ترازو و تجهیزات فروشگاهی', desc: 'تامین کامل محصولات Teraoka Seiko — ترازو، برچسب‌زن، POS و تجهیزات فروشگاهی و صنعتی', badge: 'ژاپن', tags: ['Scales', 'Labeling', 'POS'], cta: 'مشاهده برند' },
         { name: 'Liqui Moly', title: 'روغن و افزودنی خودرو', desc: 'روغن موتور، Octane Plus، افزودنی دیزل و مراقبت خودرو — قیمت دلاری شفاف', badge: 'آلمان', tags: ['Octane Plus', 'Top Tec', '5W-30'], cta: 'کاتالوگ و قیمت' },
+        { name: 'Blue Print', title: 'قطعات یدکی خودرو', desc: 'فیلتر، ترمز، کلاچ و جلوبندی برای خودروهای آسیایی — تامین همه کشورها', badge: 'آلمان', tags: ['فیلتر', 'ترمز', 'کلاچ'], cta: 'کاتالوگ Blue Print' },
         { name: 'Auto-Moto', title: 'تجهیزات موتورسیکلت', desc: 'کلاه ایمنی، کاپشن، دستکش، شلوار، بوت، اینترکام و محافظ — قیمت دلاری تحویل بین‌المللی', badge: 'جدید', tags: ['کلاه ایمنی', 'کاپشن موتور', 'بوت موتور'], cta: 'کاتالوگ و استعلام' },
         { name: 'Car Parts', title: 'لنت و دیسک ترمز', desc: 'لنت، دیسک و قطعات ترمز با انتخاب برند و مدل — قیمت دلاری تحویل بین‌المللی', badge: 'جدید', tags: ['لنت ترمز', 'دیسک ترمز', 'اصل'], cta: 'فروشگاه ترمز' },
         { name: 'Ostrich', title: 'چرم شترمرغ', desc: 'چرم شترمرغ ایرانی — کراس، رنگ‌شده و ساق. تولید در ایران، از ۶ دلار.', badge: 'ایران', tags: ['کراس', 'رنگ‌شده', 'ساق'], cta: 'کاتالوگ عمده' }
@@ -510,7 +511,7 @@ window.BIZDAVAR_LOCALES = {
         { q: 'بیزدوار چه خدماتی ارائه می‌دهد؟', a: 'شش محور: بازاریابی دیجیتال، طراحی وب و وب‌اپ، اپ و سامانه، مدیریت سرور، SMM و خدمات فنی (دوربین، سیم‌کشی، نورمخفی). محصولات و تامین برندهای صنعتی در صفحه محصولات.' },
         { q: 'طراحی سایت چقدر زمان می‌برد؟', a: 'با Fast Web Studio، تحویل از ۵ روز کاری با پلن‌های $99 تا $299.' },
         { q: 'چگونه اعتبار بیزدوار را بررسی کنم؟', a: 'پروفایل LinkedIn بنیان‌گذار، نمونه‌کارها، گواهینامه‌های Google و تماس از info@bizdavar.com.' },
-        { q: 'تجهیزات صنعتی از چه برندهایی تامین می‌شود؟', a: 'VEGA، UWT، Prosense، Liqui Moly، Gamak، Teltonika، Teraoka، فروشگاه موتورسیکلت، قطعات خودرو و چرم شترمرغ ایرانی.' }
+        { q: 'تجهیزات صنعتی از چه برندهایی تامین می‌شود؟', a: 'VEGA، UWT، Prosense، Liqui Moly، Blue Print، Gamak، Teltonika، Teraoka، فروشگاه موتورسیکلت، قطعات خودرو و چرم شترمرغ ایرانی.' }
       ]
     },
     contactPage: {
@@ -1041,6 +1042,7 @@ window.BIZDAVAR_LOCALES = {
         { name: 'Pneumatic', title: 'Endüstriyel pnömatik', desc: 'Hava hazırlama, silindir, valf ve manyetik sensör', badge: 'Türkiye', tags: ['FRL', 'Silindir', 'Valf'], cta: 'Pnömatik kataloğu' },
         { name: 'Teraoka', title: 'Terazi ve mağaza ekipmanları', desc: 'Teraoka Seiko ürünlerinin tam tedariki — terazi, etiketleme, POS', badge: 'Japonya', tags: ['Scales', 'Labeling', 'POS'], cta: 'Markayı gör' },
         { name: 'Liqui Moly', title: 'Motor yağı ve katkı', desc: 'Motor yağı, Octane Plus, dizel katkı ve oto bakım — şeffaf dolar fiyat', badge: 'Almanya', tags: ['Octane Plus', 'Top Tec', '5W-30'], cta: 'Katalog ve fiyat' },
+        { name: 'Blue Print', title: 'Oto yedek parça', desc: 'Asya araçları için filtre, fren, debriyaj ve süspansiyon — tüm ülkelere tedarik', badge: 'Almanya', tags: ['Filtre', 'Fren', 'Debriyaj'], cta: 'Blue Print kataloğu' },
         { name: 'Auto-Moto', title: 'Motosiklet ekipmanı', desc: 'Kask, mont, eldiven, pantolon, bot, interkom ve koruma — kart fiyatı uluslararası teslim için dolardır', badge: 'Yeni', tags: ['Kask', 'Motosiklet montu', 'Motosiklet botu'], cta: 'Katalog ve teklif' },
         { name: 'Car Parts', title: 'Fren balatası ve diski', desc: 'Balata, disk ve fren parçası — marka ve model seçimi, İran teslim USD', badge: 'Yeni', tags: ['Balata', 'Disk', 'Orijinal'], cta: 'Fren mağazası' },
         { name: 'Ostrich', title: 'Devekuşu derisi', desc: 'İran’da, ham deriden kesime hazır hale kadar üretiyoruz. Krust fit kare 6,50 dolardan, boyalı 8,50, bacak 6 dolardan.', badge: 'İran', tags: ['Krust', 'Boyalı', 'Bacak'], cta: 'Toptan katalog' }
@@ -1184,7 +1186,7 @@ window.BIZDAVAR_LOCALES = {
         { q: 'Bizdavar hangi hizmetleri sunuyor?', a: 'Altı alan: dijital pazarlama, web/web app, uygulama ve sistem, sunucu yönetimi, SMM ve teknik hizmetler (CCTV, tesisat, aydınlatma). Ürünler ve endüstriyel markalar ürünler sayfasında.' },
         { q: 'Web sitesi ne kadar sürede hazır olur?', a: 'Fast Web Studio ile $99–$299 planlarda 5 iş gününden itibaren teslimat.' },
         { q: 'Bizdavar\'ın güvenilirliğini nasıl doğrularım?', a: 'Kurucunun LinkedIn profili, portfolyo, Google sertifikaları ve info@bizdavar.com.' },
-        { q: 'Hangi endüstriyel markalar tedarik ediliyor?', a: 'VEGA, UWT, Prosense, Liqui Moly, Gamak, Teraoka, motosiklet ekipmanı, oto yedek parça ve İran devekuşu derisi.' }
+        { q: 'Hangi endüstriyel markalar tedarik ediliyor?', a: 'VEGA, UWT, Prosense, Liqui Moly, Blue Print, Gamak, Teraoka, motosiklet ekipmanı, oto yedek parça ve İran devekuşu derisi.' }
       ]
     },
     blogPosts: [
@@ -1727,6 +1729,7 @@ window.BIZDAVAR_LOCALES = {
         { name: 'Pneumatic', title: 'Industrial pneumatics', desc: 'Air preparation, cylinders, valves and magnetic sensors', badge: 'Turkey', tags: ['FRL', 'Cylinder', 'Valve'], cta: 'Pneumatic catalog' },
         { name: 'Teraoka', title: 'Scales & store equipment', desc: 'Full Teraoka Seiko supply — scales, labeling, POS and retail/industrial equipment', badge: 'Japan', tags: ['Scales', 'Labeling', 'POS'], cta: 'View brand' },
         { name: 'Liqui Moly', title: 'Oils & fuel additives', desc: 'Engine oils, Octane Plus, diesel additives and car care — transparent USD pricing', badge: 'Germany', tags: ['Octane Plus', 'Top Tec', '5W-30'], cta: 'Catalog & pricing' },
+        { name: 'Blue Print', title: 'Aftermarket parts', desc: 'Filters, brakes, clutch and steering for Asian vehicles — supplied worldwide', badge: 'Germany', tags: ['Filters', 'Brakes', 'Clutch'], cta: 'Blue Print catalog' },
         { name: 'Auto-Moto', title: 'Motorcycle gear', desc: 'Helmets, jackets, gloves, pants, boots, intercoms and armor — card prices are USD for worldwide delivery', badge: 'New', tags: ['Helmets', 'Jackets', 'Boots'], cta: 'Catalog and quote' },
         { name: 'Car Parts', title: 'Brake pads and discs', desc: 'Pads, discs and brake parts by brand and model — Iran-delivery USD', badge: 'New', tags: ['Pads', 'Discs', 'OEM'], cta: 'Brake shop' },
         { name: 'Ostrich', title: 'Ostrich leather', desc: 'Tanned in Iran, from raw skin to leather ready to cut. Crust from $6.50 per square foot, dyed from $8.50, legs from $6.', badge: 'Iran', tags: ['Crust', 'Dyed', 'Leg'], cta: 'Wholesale catalog' }
@@ -1870,7 +1873,7 @@ window.BIZDAVAR_LOCALES = {
         { q: 'What services does Bizdavar offer?', a: 'Six areas: digital marketing, web & web apps, mobile apps & systems, server management, SMM, and technical installs (CCTV, wiring, cove lighting). Products and industrial brands are on the products page.' },
         { q: 'How long does website design take?', a: 'With Fast Web Studio, delivery from 5 business days on plans from $99 to $299.' },
         { q: 'How can I verify Bizdavar\'s credibility?', a: 'Founder LinkedIn, portfolio, Google certifications, and info@bizdavar.com.' },
-        { q: 'Which industrial brands do you supply?', a: 'VEGA, UWT, Prosense, Liqui Moly, Gamak, Teraoka, motorcycle gear, car parts, and Iranian ostrich leather.' }
+        { q: 'Which industrial brands do you supply?', a: 'VEGA, UWT, Prosense, Liqui Moly, Blue Print, Gamak, Teraoka, motorcycle gear, car parts, and Iranian ostrich leather.' }
       ]
     },
     blogPosts: [

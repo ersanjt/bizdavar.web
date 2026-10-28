@@ -857,7 +857,7 @@ window.BIZDAVAR_CONFIG = {
       title: 'قطعات یدکی خودرو',
       desc: 'فیلتر، ترمز، کلاچ، جلوبندی، تایم و برق برای خودروهای آسیایی — تامین همه کشورها',
       logo: 'assets/images/partners/blue-print.svg?v=20261028',
-      photo: 'assets/images/partners/blue-print.svg?v=20261028',
+      photo: 'assets/images/blue-print/oil-filters.jpg?v=20261028f',
       url: 'pages/blue-print',
       internal: true,
       badge: 'آلمان',

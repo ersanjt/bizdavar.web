@@ -11142,6 +11142,17 @@ body[data-page="home"] .industrial-card[data-brand="liqui-moly"] .industrial-car
   padding: 0;
 }
 
+body[data-page="home"] .industrial-card[data-brand="blue-print"] .industrial-card__media {
+  background: #f4f7fb;
+}
+
+body[data-page="home"] .industrial-card[data-brand="blue-print"] .industrial-card__media img {
+  object-fit: cover;
+  object-position: center center;
+  transform: none;
+  padding: 0;
+}
+
 body[data-page="home"] .industrial-card[data-brand="car-parts"] .industrial-card__media {
   background: #111;
 }
