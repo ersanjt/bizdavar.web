@@ -282,7 +282,10 @@
     getFastCatalog() {
       const rawBase = window.FAST_CATALOG || {};
       const enCat = window.BIZDAVAR_LOCALES?.en?.fastCatalog || {};
-      const base = this.locale === 'fa' ? rawBase : { ...rawBase, ...enCat, brand: { ...(rawBase.brand || {}), ...(enCat.brand || {}) } };
+      const listKeys = ['trustSignals', 'plans', 'compareRows', 'timeline', 'audiences', 'whyChoose', 'showcases', 'faq', 'speedHighlights', 'scope', 'deliverables', 'guides'];
+      const enScalars = { ...enCat };
+      listKeys.forEach((key) => { delete enScalars[key]; });
+      const base = this.locale === 'fa' ? rawBase : { ...rawBase, ...enScalars, brand: { ...(rawBase.brand || {}), ...(enCat.brand || {}) } };
       if (this.locale !== 'fa' && Array.isArray(rawBase.plans) && Array.isArray(enCat.plans)) {
         base.plans = rawBase.plans.map((plan, i) => ({ ...plan, ...(enCat.plans[i] || {}) }));
       }

@@ -320,6 +320,17 @@
     el.innerHTML = `<div class="fp-plans">${cards}</div>`;
   }
 
+  function renderAudiences() {
+    const el = document.getElementById('fastForGrid');
+    if (!el || !Array.isArray(F.audiences)) return;
+    el.innerHTML = F.audiences.map((item) => `
+      <article class="fast-for-card">
+        <span class="fast-for-card__icon" aria-hidden="true">${ic(item.icon, { size: 22 })}</span>
+        <h3>${escFast(item.title)}</h3>
+        <p>${escFast(item.desc)}</p>
+      </article>`).join('');
+  }
+
   function renderSpeed() {
     const el = document.getElementById('fastSpeedGrid');
     renderSpeedVisual();
@@ -594,6 +605,7 @@
     renderTrustBar();
     renderHostingBar();
     renderNav();
+    renderAudiences();
     renderSpeed();
     renderScope();
     renderPlans();
