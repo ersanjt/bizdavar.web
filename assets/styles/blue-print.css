@@ -348,13 +348,14 @@ body[data-page="blue-print"] .bp-hero::before {
 .bp-series-card {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0;
   height: 100%;
   min-height: 100%;
   background: #fff;
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
-  padding: 12px;
+  padding: 0;
+  overflow: hidden;
   text-decoration: none;
   color: inherit;
   transition: border-color 0.2s, box-shadow 0.2s;
@@ -370,11 +371,11 @@ body[data-page="blue-print"] .bp-hero::before {
   display: block;
   flex: 0 0 auto;
   width: 100%;
-  aspect-ratio: 1 / 1;
-  background: linear-gradient(180deg, #fff 0%, #f3f5fa 100%);
-  border-radius: var(--radius-sm);
+  aspect-ratio: 4 / 3;
+  background: #eef2f6;
+  border-radius: 0;
   overflow: hidden;
-  border: 1px solid rgba(15, 23, 42, 0.06);
+  border: 0;
 }
 
 .bp-series-card__img {
@@ -382,9 +383,9 @@ body[data-page="blue-print"] .bp-hero::before {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
-  padding: 22px;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -396,17 +397,87 @@ body[data-page="blue-print"] .bp-hero::before {
 .bp-series-card__body {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
   flex: 1;
   min-height: 0;
+  min-width: 0;
+  padding: 12px 14px 14px;
+}
+
+.bp-series-card__badge {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #003399;
+}
+
+.bp-series-card__name {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  color: #1a1a2e;
+}
+
+.bp-series-card__name a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.bp-series-card__desc {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--text-muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.bp-series-card__foot {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 4px;
+}
+
+.bp-series-card__detail {
+  width: 100%;
+  min-height: 36px;
+  padding: 7px 10px;
+  background: #fff;
+  border: 1px solid #d5dbe6;
+  color: #1a1a2e;
+  font-size: 12.5px;
+  line-height: 1.3;
+  white-space: normal;
+}
+
+.bp-series-card__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.bp-series-card__cta.btn,
+.bp-series-card__detail.btn {
+  width: 100%;
+  min-width: 0;
+  min-height: 38px;
+  padding: 8px 6px;
+  font-size: 13px;
+  white-space: nowrap;
 }
 
 .bp-series-card__body strong {
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  min-height: 3.9em;
+  min-height: 0;
   font-size: var(--text-sm);
   line-height: 1.3;
   margin: 0;
@@ -431,8 +502,8 @@ body[data-page="blue-print"] .bp-hero::before {
 
 .bp-series-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 14px;
   align-items: stretch;
 }
 
@@ -760,8 +831,19 @@ body[data-page="blue-print"] .bp-hero::before {
   margin-bottom: 16px;
   align-items: center;
 }
+.bp-category-block__visual {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: #eef2f6;
+}
 .bp-category-block__visual img {
-  width: 100%; border-radius: var(--radius); object-fit: contain; max-height: 120px; background: #f3f5fa;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+  border-radius: var(--radius);
+  background: #eef2f6;
 }
 .bp-series-card--featured { border-color: #f5a3a8; background: #fff8f8; }
 .bp-series-card__body > span:not(.bp-series-card__price):not(.bp-series-card__link) {

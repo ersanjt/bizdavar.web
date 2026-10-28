@@ -115,7 +115,7 @@
         descAr: "يفصل السخام والجزيئات المعدنية عن زيت المحرك. صمام منع الرجوع في الفلتر اللولبي يحافظ على الضغط عند التشغيل البارد.",
         inquiryName: "Blue Print Oil filter",
         quoteOnly: true,
-        image: 'assets/images/partners/blue-print.svg?v=20261028',
+        image: 'assets/images/blue-print/oil-filters.jpg?v=20261028b',
         imageAlt: "فیلتر روغن Blue Print"
       },
       {
@@ -133,7 +133,7 @@
         descAr: "تتراكب مادة الاحتكاك والطبقة الوسطى واللاصق والظهر الفولاذي وشريحة خفض الضوضاء لفرملة تدريجية وأقل اهتزازاً.",
         inquiryName: "Blue Print Brake pads",
         quoteOnly: true,
-        image: 'assets/images/partners/blue-print.svg?v=20261028',
+        image: 'assets/images/blue-print/brake-pads.jpg?v=20261028b',
         imageAlt: "لنت ترمز Blue Print"
       },
       {
@@ -151,7 +151,7 @@
         descAr: "يأتي القرص والغطاء ورولمان التحرير معاً حتى يتطابق ارتفاع الدواسة وقوتها.",
         inquiryName: "Blue Print Clutch kit",
         quoteOnly: true,
-        image: 'assets/images/partners/blue-print.svg?v=20261028',
+        image: 'assets/images/blue-print/clutch-kits.jpg?v=20261028b',
         imageAlt: "کیت کلاچ Blue Print"
       },
       {
@@ -169,7 +169,7 @@
         descAr: "يلتقط غبار الطلع والغبار والجسيمات الدقيقة من هواء المقصورة. غالباً يُنسى في الصيانة رغم أثره المباشر على تنفس الركاب.",
         inquiryName: "Blue Print Cabin filter",
         quoteOnly: true,
-        image: 'assets/images/partners/blue-print.svg?v=20261028',
+        image: 'assets/images/blue-print/cabin-filters.jpg?v=20261028b',
         imageAlt: "فیلتر کابین Blue Print"
       },
       {
@@ -187,7 +187,7 @@
         descAr: "يدير العجلة بأقل احتكاك. الطنين الذي يزيد مع السرعة غالباً من رولمان منتهٍ.",
         inquiryName: "Blue Print Wheel bearing kit",
         quoteOnly: true,
-        image: 'assets/images/partners/blue-print.svg?v=20261028',
+        image: 'assets/images/blue-print/wheel-bearings.jpg?v=20261028b',
         imageAlt: "کیت بلبرینگ چرخ Blue Print"
       },
       {
@@ -205,7 +205,7 @@
         descAr: "يُبدَّل الجنزير والشداد والموجهات معاً. الجنزير الممطوط يخشخش بارداً وقد يقفز سناً.",
         inquiryName: "Blue Print Timing chain kit",
         quoteOnly: true,
-        image: 'assets/images/partners/blue-print.svg?v=20261028',
+        image: 'assets/images/blue-print/timing-chain-kits.jpg?v=20261028b',
         imageAlt: "کیت زنجیر تایم Blue Print"
       },
       {
@@ -223,7 +223,7 @@
         descAr: "يدور سائل التبريد في الكتلة والرديتر. التسرب من فتحة التصريف السفلية يعني أن الحشوة انتهت.",
         inquiryName: "Blue Print Water pump",
         quoteOnly: true,
-        image: 'assets/images/partners/blue-print.svg?v=20261028',
+        image: 'assets/images/blue-print/water-pumps.jpg?v=20261028b',
         imageAlt: "واترپمپ Blue Print"
       },
       {
@@ -241,7 +241,7 @@
         descAr: "يدير عمود المرفق حتى سرعة الإقلاع. الترس المتآكل أو الفحم المنتهي يطقطق مرة ولا يدور.",
         inquiryName: "Blue Print Starter motor",
         quoteOnly: true,
-        image: 'assets/images/partners/blue-print.svg?v=20261028',
+        image: 'assets/images/blue-print/starter-motors.jpg?v=20261028b',
         imageAlt: "استارت Blue Print"
       }
     ],
@@ -261,7 +261,7 @@
         descTr: "Blue Print filtre ailesi, Asya ve Avrupa binek ve 7,5 tona kadar hafif ticari araçlar için 3250’den fazla parçalık kamuya açık bir yelpazedir. Parçalar orijinal ekipman ölçüsüne göre belirlenir.",
         descAr: "تشمل عائلة فلاتر Blue Print في الكتالوج العام أكثر من 3250 قطعة للسيارات الآسيوية والأوروبية، بما فيها الركوب والتجارية الخفيفة حتى 7.5 طن، بمواصفات مطابقة للقطعة الأصلية.",
         officialUrl: "https://www.blue-print.com/filtration",
-        image: 'assets/images/partners/blue-print.svg?v=20261028',
+        image: 'assets/images/blue-print/filtration.jpg?v=20261028b',
         imageAlt: "فیلتر Blue Print",
         series: [
         {
@@ -295,7 +295,7 @@
           inquiryName: "Blue Print Oil filter",
           quoteOnly: true,
           specs: "Oil filter",
-          image: logo,
+          image: 'assets/images/blue-print/oil-filters.jpg?v=20261028b',
           imageAlt: "فیلتر روغن Blue Print"
         },
         {
@@ -329,7 +329,7 @@
           inquiryName: "Blue Print Air filter",
           quoteOnly: true,
           specs: "Air filter",
-          image: logo,
+          image: 'assets/images/blue-print/air-filters.jpg?v=20261028b',
           imageAlt: "فیلتر هوا Blue Print"
         },
         {
@@ -363,7 +363,7 @@
           inquiryName: "Blue Print Fuel filter",
           quoteOnly: true,
           specs: "Fuel filter",
-          image: logo,
+          image: 'assets/images/blue-print/fuel-filters.jpg?v=20261028b',
           imageAlt: "فیلتر سوخت Blue Print"
         },
         {
@@ -397,7 +397,7 @@
           inquiryName: "Blue Print Cabin filter",
           quoteOnly: true,
           specs: "Cabin filter",
-          image: logo,
+          image: 'assets/images/blue-print/cabin-filters.jpg?v=20261028b',
           imageAlt: "فیلتر کابین Blue Print"
         },
         {
@@ -431,7 +431,7 @@
           inquiryName: "Blue Print Transmission filter",
           quoteOnly: true,
           specs: "Transmission filter",
-          image: logo,
+          image: 'assets/images/blue-print/transmission-filters.jpg?v=20261028b',
           imageAlt: "فیلتر گیربکس Blue Print"
         },
         {
@@ -465,7 +465,7 @@
           inquiryName: "Blue Print Traction battery compartment filter",
           quoteOnly: true,
           specs: "Traction battery compartment filter",
-          image: logo,
+          image: 'assets/images/blue-print/traction-battery-filters.jpg?v=20261028b',
           imageAlt: "فیلتر محفظه باتری کششی Blue Print"
         },
         {
@@ -499,7 +499,7 @@
           inquiryName: "Blue Print Haldex hydraulic filter",
           quoteOnly: true,
           specs: "Haldex hydraulic filter",
-          image: logo,
+          image: 'assets/images/blue-print/haldex-filters.jpg?v=20261028b',
           imageAlt: "فیلتر هیدرولیک هالدکس Blue Print"
         }
         ]
@@ -519,7 +519,7 @@
         descTr: "Blue Print fren grubu açık katalogda 3550’den fazla sürtünme parçası listeler ve 2000 sonrası araçlarda disk ve balata için geniş kapsama belirtir. Balata, disk, kampana ve hortum aşınma, ses ve sertlik testlerine göre belirlenir.",
         descAr: "تضم مجموعة الفرامل في الكتالوج العام أكثر من 3550 قطعة احتكاك، مع تغطية واسعة للأقراص والتيل لسيارات ما بعد 2000. تُحدد التيل والأقراص والطبول والخراطيم وفق اختبارات التآكل والضوضاء والصلادة.",
         officialUrl: "https://www.blue-print.com/braking",
-        image: 'assets/images/partners/blue-print.svg?v=20261028',
+        image: 'assets/images/blue-print/braking.jpg?v=20261028b',
         imageAlt: "ترمز Blue Print",
         series: [
         {
@@ -553,7 +553,7 @@
           inquiryName: "Blue Print Brake pads",
           quoteOnly: true,
           specs: "Brake pads",
-          image: logo,
+          image: 'assets/images/blue-print/brake-pads.jpg?v=20261028b',
           imageAlt: "لنت ترمز Blue Print"
         },
         {
@@ -587,7 +587,7 @@
           inquiryName: "Blue Print Brake discs",
           quoteOnly: true,
           specs: "Brake discs",
-          image: logo,
+          image: 'assets/images/blue-print/brake-discs.jpg?v=20261028b',
           imageAlt: "دیسک ترمز Blue Print"
         },
         {
@@ -621,7 +621,7 @@
           inquiryName: "Blue Print Brake drums",
           quoteOnly: true,
           specs: "Brake drums",
-          image: logo,
+          image: 'assets/images/blue-print/brake-drums.jpg?v=20261028b',
           imageAlt: "کاسه ترمز Blue Print"
         },
         {
@@ -655,7 +655,7 @@
           inquiryName: "Blue Print Brake shoes",
           quoteOnly: true,
           specs: "Brake shoes",
-          image: logo,
+          image: 'assets/images/blue-print/brake-shoes.jpg?v=20261028b',
           imageAlt: "کفشک ترمز Blue Print"
         },
         {
@@ -689,7 +689,7 @@
           inquiryName: "Blue Print Brake hoses",
           quoteOnly: true,
           specs: "Brake hoses",
-          image: logo,
+          image: 'assets/images/blue-print/brake-hoses.jpg?v=20261028b',
           imageAlt: "شیلنگ ترمز Blue Print"
         },
         {
@@ -723,7 +723,7 @@
           inquiryName: "Blue Print Brake wear sensor",
           quoteOnly: true,
           specs: "Brake wear sensor",
-          image: logo,
+          image: 'assets/images/blue-print/wear-sensors.jpg?v=20261028b',
           imageAlt: "سنسور سایش لنت Blue Print"
         }
         ]
@@ -743,7 +743,7 @@
         descTr: "Debriyaj, Blue Print’in uzmanlık grubudur. Açık katalog 1250’den fazla seti on binlerce binek ve hafif ticari uygulamada listeler. bilstein group debriyaj merkezi Durmersheim’de parçaları test standında ve araçta dener. Parçalar yenidir, rektifiye değildir.",
         descAr: "الدبرياج خط تخصص Blue Print. يسرد الكتالوج العام أكثر من 1250 طقماً لعشرات آلاف التطبيقات، ومركز كفاءة الدبرياج لمجموعة bilstein في دورمرسهايم يختبر القطع على المنصة وفي المركبة. القطع جديدة وليست مجددة.",
         officialUrl: "https://www.blue-print.com/clutch",
-        image: 'assets/images/partners/blue-print.svg?v=20261028',
+        image: 'assets/images/blue-print/clutch.jpg?v=20261028b',
         imageAlt: "کلاچ Blue Print",
         series: [
         {
@@ -777,7 +777,7 @@
           inquiryName: "Blue Print Clutch kit",
           quoteOnly: true,
           specs: "Clutch kit",
-          image: logo,
+          image: 'assets/images/blue-print/clutch-kits.jpg?v=20261028b',
           imageAlt: "کیت کلاچ Blue Print"
         },
         {
@@ -811,7 +811,7 @@
           inquiryName: "Blue Print Clutch cover",
           quoteOnly: true,
           specs: "Clutch cover",
-          image: logo,
+          image: 'assets/images/blue-print/clutch-covers.jpg?v=20261028b',
           imageAlt: "درپوش کلاچ Blue Print"
         },
         {
@@ -845,7 +845,7 @@
           inquiryName: "Blue Print Clutch disc",
           quoteOnly: true,
           specs: "Clutch disc",
-          image: logo,
+          image: 'assets/images/blue-print/clutch-discs.jpg?v=20261028b',
           imageAlt: "صفحه کلاچ Blue Print"
         },
         {
@@ -879,7 +879,7 @@
           inquiryName: "Blue Print Release bearing",
           quoteOnly: true,
           specs: "Release bearing",
-          image: logo,
+          image: 'assets/images/blue-print/release-bearings.jpg?v=20261028b',
           imageAlt: "بلبرینگ کلاچ Blue Print"
         },
         {
@@ -913,7 +913,7 @@
           inquiryName: "Blue Print Flywheel",
           quoteOnly: true,
           specs: "Flywheel",
-          image: logo,
+          image: 'assets/images/blue-print/flywheels.jpg?v=20261028b',
           imageAlt: "فلایویل Blue Print"
         },
         {
@@ -947,7 +947,7 @@
           inquiryName: "Blue Print Clutch master cylinder",
           quoteOnly: true,
           specs: "Clutch master cylinder",
-          image: logo,
+          image: 'assets/images/blue-print/clutch-master-cylinders.jpg?v=20261028b',
           imageAlt: "پمپ بالا کلاچ Blue Print"
         },
         {
@@ -981,7 +981,7 @@
           inquiryName: "Blue Print Clutch slave cylinder",
           quoteOnly: true,
           specs: "Clutch slave cylinder",
-          image: logo,
+          image: 'assets/images/blue-print/clutch-slave-cylinders.jpg?v=20261028b',
           imageAlt: "پمپ پایین کلاچ Blue Print"
         },
         {
@@ -1015,7 +1015,7 @@
           inquiryName: "Blue Print Clutch release fork",
           quoteOnly: true,
           specs: "Clutch release fork",
-          image: logo,
+          image: 'assets/images/blue-print/clutch-release-forks.jpg?v=20261028b',
           imageAlt: "دوشاخه کلاچ Blue Print"
         },
         {
@@ -1049,7 +1049,7 @@
           inquiryName: "Blue Print Clutch cable",
           quoteOnly: true,
           specs: "Clutch cable",
-          image: logo,
+          image: 'assets/images/blue-print/clutch-cables.jpg?v=20261028b',
           imageAlt: "سیم کلاچ Blue Print"
         }
         ]
@@ -1069,7 +1069,7 @@
         descTr: "Direksiyon ve süspansiyon, Blue Print’in diğer parçalar grubundadır: rot, salıncak, burç, viraj demiri, yay ve elektrikli direksiyon motoru. Boşluk lastiği yer ve direksiyonu belirsizleştirir.",
         descAr: "التوجيه والتعليق ضمن منتجات Blue Print الإضافية: رؤوس القضبان والأذرع والجلب ووصلات الموازن والنوابض ومحرك التوجيه الكهربائي. الخلوص هنا يأكل الإطار ويجعل المقود مبهماً.",
         officialUrl: "https://www.blue-print.com/further-products",
-        image: 'assets/images/partners/blue-print.svg?v=20261028',
+        image: 'assets/images/blue-print/steering.jpg?v=20261028b',
         imageAlt: "فرمان و تعلیق Blue Print",
         series: [
         {
@@ -1103,7 +1103,7 @@
           inquiryName: "Blue Print Track rod end",
           quoteOnly: true,
           specs: "Track rod end",
-          image: logo,
+          image: 'assets/images/blue-print/track-rod-ends.jpg?v=20261028b',
           imageAlt: "سیبک فرمان Blue Print"
         },
         {
@@ -1137,7 +1137,7 @@
           inquiryName: "Blue Print Electric steering motor",
           quoteOnly: true,
           specs: "Electric steering motor",
-          image: logo,
+          image: 'assets/images/blue-print/electric-steering-motors.jpg?v=20261028b',
           imageAlt: "موتور فرمان برقی Blue Print"
         },
         {
@@ -1171,7 +1171,7 @@
           inquiryName: "Blue Print Suspension arm",
           quoteOnly: true,
           specs: "Suspension arm",
-          image: logo,
+          image: 'assets/images/blue-print/suspension-arms.jpg?v=20261028b',
           imageAlt: "طبق Blue Print"
         },
         {
@@ -1205,7 +1205,7 @@
           inquiryName: "Blue Print Suspension arm bush",
           quoteOnly: true,
           specs: "Suspension arm bush",
-          image: logo,
+          image: 'assets/images/blue-print/suspension-bushes.jpg?v=20261028b',
           imageAlt: "بوش طبق Blue Print"
         },
         {
@@ -1239,7 +1239,7 @@
           inquiryName: "Blue Print Ball joint",
           quoteOnly: true,
           specs: "Ball joint",
-          image: logo,
+          image: 'assets/images/blue-print/ball-joints.jpg?v=20261028b',
           imageAlt: "سیبک Blue Print"
         },
         {
@@ -1273,7 +1273,7 @@
           inquiryName: "Blue Print Stabiliser link",
           quoteOnly: true,
           specs: "Stabiliser link",
-          image: logo,
+          image: 'assets/images/blue-print/stabiliser-links.jpg?v=20261028b',
           imageAlt: "میل موجگیر Blue Print"
         },
         {
@@ -1307,7 +1307,7 @@
           inquiryName: "Blue Print Coil and leaf springs",
           quoteOnly: true,
           specs: "Coil and leaf springs",
-          image: logo,
+          image: 'assets/images/blue-print/springs.jpg?v=20261028b',
           imageAlt: "فنر لول و شمش Blue Print"
         }
         ]
@@ -1327,7 +1327,7 @@
         descTr: "Motor yönetim sensör ve aktüatörleri Blue Print’in diğer parçalarındadır: EGR, oksijen, bobin, hava akış, vuruntu, eksantrik ve krank. Arıza genelde arıza lambasıyla birlikte yakıt veya tekleme getirir.",
         descAr: "حساسات ومشغّلات إدارة المحرك ضمن منتجات Blue Print الإضافية: EGR والأكسجين والملف ومقياس الهواء والطرق وعمود الكامات وعمود المرفق. العطل غالباً يضيء لمبة الفحص مع استهلاك أو تقطيع.",
         officialUrl: "https://www.blue-print.com/further-products",
-        image: 'assets/images/partners/blue-print.svg?v=20261028',
+        image: 'assets/images/blue-print/engine-management.jpg?v=20261028b',
         imageAlt: "مدیریت موتور Blue Print",
         series: [
         {
@@ -1361,7 +1361,7 @@
           inquiryName: "Blue Print EGR valve",
           quoteOnly: true,
           specs: "EGR valve",
-          image: logo,
+          image: 'assets/images/blue-print/egr-valves.jpg?v=20261028b',
           imageAlt: "شیر EGR Blue Print"
         },
         {
@@ -1395,7 +1395,7 @@
           inquiryName: "Blue Print Oxygen sensor",
           quoteOnly: true,
           specs: "Oxygen sensor",
-          image: logo,
+          image: 'assets/images/blue-print/oxygen-sensors.jpg?v=20261028b',
           imageAlt: "سنسور اکسیژن Blue Print"
         },
         {
@@ -1429,7 +1429,7 @@
           inquiryName: "Blue Print Ignition coil",
           quoteOnly: true,
           specs: "Ignition coil",
-          image: logo,
+          image: 'assets/images/blue-print/ignition-coils.jpg?v=20261028b',
           imageAlt: "کوئل Blue Print"
         },
         {
@@ -1463,7 +1463,7 @@
           inquiryName: "Blue Print Air flow meter",
           quoteOnly: true,
           specs: "Air flow meter",
-          image: logo,
+          image: 'assets/images/blue-print/air-flow-meters.jpg?v=20261028b',
           imageAlt: "فلومتر هوا Blue Print"
         },
         {
@@ -1497,7 +1497,7 @@
           inquiryName: "Blue Print Knock sensor",
           quoteOnly: true,
           specs: "Knock sensor",
-          image: logo,
+          image: 'assets/images/blue-print/knock-sensors.jpg?v=20261028b',
           imageAlt: "سنسور ناک Blue Print"
         },
         {
@@ -1531,7 +1531,7 @@
           inquiryName: "Blue Print Camshaft sensor",
           quoteOnly: true,
           specs: "Camshaft sensor",
-          image: logo,
+          image: 'assets/images/blue-print/camshaft-sensors.jpg?v=20261028b',
           imageAlt: "سنسور میل‌سوپاپ Blue Print"
         },
         {
@@ -1565,7 +1565,7 @@
           inquiryName: "Blue Print Crankshaft sensor",
           quoteOnly: true,
           specs: "Crankshaft sensor",
-          image: logo,
+          image: 'assets/images/blue-print/crankshaft-sensors.jpg?v=20261028b',
           imageAlt: "سنسور میل‌لنگ Blue Print"
         }
         ]
@@ -1585,7 +1585,7 @@
         descTr: "Blue Print aktarma; tekerlek rulmanı, aks kafası, istavroz, diferansiyel takozu ve aks milini kapsar. Bu yoldaki boşluk hem ses yapar hem hızda güvenliği düşürür.",
         descAr: "نقل الحركة لدى Blue Print يشمل رولمان العجلة ووصلة CV والوصلة العامة وحامل الدفرنس وعمود الإدارة. الخلوص هنا يُصدر صوتاً ويقلل الأمان على السرعة.",
         officialUrl: "https://www.blue-print.com/further-products",
-        image: 'assets/images/partners/blue-print.svg?v=20261028',
+        image: 'assets/images/blue-print/drivetrain.jpg?v=20261028b',
         imageAlt: "انتقال قدرت Blue Print",
         series: [
         {
@@ -1619,7 +1619,7 @@
           inquiryName: "Blue Print Wheel bearing kit",
           quoteOnly: true,
           specs: "Wheel bearing kit",
-          image: logo,
+          image: 'assets/images/blue-print/wheel-bearings.jpg?v=20261028b',
           imageAlt: "کیت بلبرینگ چرخ Blue Print"
         },
         {
@@ -1653,7 +1653,7 @@
           inquiryName: "Blue Print CV joint kit",
           quoteOnly: true,
           specs: "CV joint kit",
-          image: logo,
+          image: 'assets/images/blue-print/cv-joints.jpg?v=20261028b',
           imageAlt: "کیت سرپلوس Blue Print"
         },
         {
@@ -1687,7 +1687,7 @@
           inquiryName: "Blue Print Universal joint kit",
           quoteOnly: true,
           specs: "Universal joint kit",
-          image: logo,
+          image: 'assets/images/blue-print/uj-kits.jpg?v=20261028b',
           imageAlt: "کیت چهارشاخ Blue Print"
         },
         {
@@ -1721,7 +1721,7 @@
           inquiryName: "Blue Print Differential mount",
           quoteOnly: true,
           specs: "Differential mount",
-          image: logo,
+          image: 'assets/images/blue-print/differential-mounts.jpg?v=20261028b',
           imageAlt: "دسته دیفرانسیل Blue Print"
         },
         {
@@ -1755,7 +1755,7 @@
           inquiryName: "Blue Print Driveshaft",
           quoteOnly: true,
           specs: "Driveshaft",
-          image: logo,
+          image: 'assets/images/blue-print/driveshafts.jpg?v=20261028b',
           imageAlt: "پلوس Blue Print"
         }
         ]
@@ -1775,7 +1775,7 @@
         descTr: "Blue Print triger; zincir seti, kayış seti, kayış, gergi ve avara rulmanı kapsar. Yeni kayışın yanında eski gergiyi bırakmak, aracın servise dönmesinin sık nedenidir.",
         descAr: "توقيت Blue Print يشمل أطقم الجنزير والسير والسير نفسه والشداد والبكرة. ترك الشداد القديم بجانب سير جديد سبب شائع لعودة السيارة إلى الورشة.",
         officialUrl: "https://www.blue-print.com/further-products",
-        image: 'assets/images/partners/blue-print.svg?v=20261028',
+        image: 'assets/images/blue-print/timing.jpg?v=20261028b',
         imageAlt: "تایمینگ موتور Blue Print",
         series: [
         {
@@ -1809,7 +1809,7 @@
           inquiryName: "Blue Print Timing chain kit",
           quoteOnly: true,
           specs: "Timing chain kit",
-          image: logo,
+          image: 'assets/images/blue-print/timing-chain-kits.jpg?v=20261028b',
           imageAlt: "کیت زنجیر تایم Blue Print"
         },
         {
@@ -1843,7 +1843,7 @@
           inquiryName: "Blue Print Timing belt kit",
           quoteOnly: true,
           specs: "Timing belt kit",
-          image: logo,
+          image: 'assets/images/blue-print/timing-belt-kits.jpg?v=20261028b',
           imageAlt: "کیت تسمه تایم Blue Print"
         },
         {
@@ -1877,7 +1877,7 @@
           inquiryName: "Blue Print Timing belt",
           quoteOnly: true,
           specs: "Timing belt",
-          image: logo,
+          image: 'assets/images/blue-print/timing-belts.jpg?v=20261028b',
           imageAlt: "تسمه تایم Blue Print"
         },
         {
@@ -1911,7 +1911,7 @@
           inquiryName: "Blue Print Tensioner bearing",
           quoteOnly: true,
           specs: "Tensioner bearing",
-          image: logo,
+          image: 'assets/images/blue-print/tensioner-bearings.jpg?v=20261028b',
           imageAlt: "بلبرینگ سفت‌کن Blue Print"
         },
         {
@@ -1945,7 +1945,7 @@
           inquiryName: "Blue Print Idler bearing",
           quoteOnly: true,
           specs: "Idler bearing",
-          image: logo,
+          image: 'assets/images/blue-print/idler-bearings.jpg?v=20261028b',
           imageAlt: "هرزگرد Blue Print"
         }
         ]
@@ -1965,7 +1965,7 @@
         descTr: "Blue Print soğutma; devirdaim, fan kavraması, termostat, genleşme tankı, radyatör kapağı ve sıcaklık sensörünü kapsar. Bu parçalardaki küçük kaçak motoru habersiz kaynatır.",
         descAr: "تبريد Blue Print يشمل مضخة الماء ووصلة المروحة والثرموستات وخزان التمدد وغطاء الرديتر وحساس الحرارة. تسرب صغير من هذه القطع يغلي المحرك بلا إنذار يذكر.",
         officialUrl: "https://www.blue-print.com/further-products",
-        image: 'assets/images/partners/blue-print.svg?v=20261028',
+        image: 'assets/images/blue-print/thermal.jpg?v=20261028b',
         imageAlt: "خنک‌کاری موتور Blue Print",
         series: [
         {
@@ -1999,7 +1999,7 @@
           inquiryName: "Blue Print Water pump",
           quoteOnly: true,
           specs: "Water pump",
-          image: logo,
+          image: 'assets/images/blue-print/water-pumps.jpg?v=20261028b',
           imageAlt: "واترپمپ Blue Print"
         },
         {
@@ -2033,7 +2033,7 @@
           inquiryName: "Blue Print Fan coupling",
           quoteOnly: true,
           specs: "Fan coupling",
-          image: logo,
+          image: 'assets/images/blue-print/fan-couplings.jpg?v=20261028b',
           imageAlt: "کوپلینگ فن Blue Print"
         },
         {
@@ -2067,7 +2067,7 @@
           inquiryName: "Blue Print Thermostat",
           quoteOnly: true,
           specs: "Thermostat",
-          image: logo,
+          image: 'assets/images/blue-print/thermostats.jpg?v=20261028b',
           imageAlt: "ترموستات Blue Print"
         },
         {
@@ -2101,7 +2101,7 @@
           inquiryName: "Blue Print Expansion tank",
           quoteOnly: true,
           specs: "Expansion tank",
-          image: logo,
+          image: 'assets/images/blue-print/expansion-tanks.jpg?v=20261028b',
           imageAlt: "منبع انبساط Blue Print"
         },
         {
@@ -2135,7 +2135,7 @@
           inquiryName: "Blue Print Radiator cap",
           quoteOnly: true,
           specs: "Radiator cap",
-          image: logo,
+          image: 'assets/images/blue-print/radiator-caps.jpg?v=20261028b',
           imageAlt: "درب رادیاتور Blue Print"
         },
         {
@@ -2169,7 +2169,7 @@
           inquiryName: "Blue Print Temperature sensor",
           quoteOnly: true,
           specs: "Temperature sensor",
-          image: logo,
+          image: 'assets/images/blue-print/temperature-sensors.jpg?v=20261028b',
           imageAlt: "سنسور دما Blue Print"
         }
         ]
@@ -2189,7 +2189,7 @@
         descTr: "Blue Print elektrik; marş, alternatör, alternatör kasnağı, buji kablosu ve kızdırma bujisini kapsar. Bu parçalar ya motoru çalıştırır ya rölantide tüketicileri besler.",
         descAr: "كهرباء Blue Print تغطي المارش والدينامو وبكرة الدينامو وأسلاك الجهد العالي وشمعات التسخين. هذه القطع إما تدير المحرك أو تغذي الأحمال في السلان.",
         officialUrl: "https://www.blue-print.com/further-products",
-        image: 'assets/images/partners/blue-print.svg?v=20261028',
+        image: 'assets/images/blue-print/electrics.jpg?v=20261028b',
         imageAlt: "برق خودرو Blue Print",
         series: [
         {
@@ -2223,7 +2223,7 @@
           inquiryName: "Blue Print Starter motor",
           quoteOnly: true,
           specs: "Starter motor",
-          image: logo,
+          image: 'assets/images/blue-print/starter-motors.jpg?v=20261028b',
           imageAlt: "استارت Blue Print"
         },
         {
@@ -2257,7 +2257,7 @@
           inquiryName: "Blue Print Alternator",
           quoteOnly: true,
           specs: "Alternator",
-          image: logo,
+          image: 'assets/images/blue-print/alternators.jpg?v=20261028b',
           imageAlt: "دینام Blue Print"
         },
         {
@@ -2291,7 +2291,7 @@
           inquiryName: "Blue Print Overrunning alternator pulley",
           quoteOnly: true,
           specs: "Overrunning alternator pulley",
-          image: logo,
+          image: 'assets/images/blue-print/alternator-pulleys.jpg?v=20261028b',
           imageAlt: "پولی هرزگرد دینام Blue Print"
         },
         {
@@ -2325,7 +2325,7 @@
           inquiryName: "Blue Print HT leads",
           quoteOnly: true,
           specs: "HT leads",
-          image: logo,
+          image: 'assets/images/blue-print/ht-leads.jpg?v=20261028b',
           imageAlt: "وایر شمع Blue Print"
         },
         {
@@ -2359,7 +2359,7 @@
           inquiryName: "Blue Print Glow plug",
           quoteOnly: true,
           specs: "Glow plug",
-          image: logo,
+          image: 'assets/images/blue-print/glow-plugs.jpg?v=20261028b',
           imageAlt: "شمع گرمکن Blue Print"
         }
         ]
@@ -2379,7 +2379,7 @@
         descTr: "Blue Print gövde ve iç; silecek, cam suyu pompası, gazlı amortisör ve cam krikosunu kapsar. Bu küçük parçalar sürücü görüşünü ve kapının açık kalmasını doğrudan etkiler.",
         descAr: "الهيكل والمقصورة في كتالوج Blue Print تشمل المساحات ومضخة الغسيل ودعامات الغاز ورافع الزجاج. هذه القطع الصغيرة تؤثر مباشرة على رؤية السائق وثبات الباب مفتوحاً.",
         officialUrl: "https://www.blue-print.com/further-products",
-        image: 'assets/images/partners/blue-print.svg?v=20261028',
+        image: 'assets/images/blue-print/body.jpg?v=20261028b',
         imageAlt: "بدنه و داخل Blue Print",
         series: [
         {
@@ -2413,7 +2413,7 @@
           inquiryName: "Blue Print Wiper blade",
           quoteOnly: true,
           specs: "Wiper blade",
-          image: logo,
+          image: 'assets/images/blue-print/wiper-blades.jpg?v=20261028b',
           imageAlt: "تیغه برف‌پاک‌کن Blue Print"
         },
         {
@@ -2447,7 +2447,7 @@
           inquiryName: "Blue Print Washer pump",
           quoteOnly: true,
           specs: "Washer pump",
-          image: logo,
+          image: 'assets/images/blue-print/washer-pumps.jpg?v=20261028b',
           imageAlt: "پمپ شیشه‌شور Blue Print"
         },
         {
@@ -2481,7 +2481,7 @@
           inquiryName: "Blue Print Gas strut",
           quoteOnly: true,
           specs: "Gas strut",
-          image: logo,
+          image: 'assets/images/blue-print/gas-struts.jpg?v=20261028b',
           imageAlt: "جک گازی Blue Print"
         },
         {
@@ -2515,7 +2515,7 @@
           inquiryName: "Blue Print Window regulator",
           quoteOnly: true,
           specs: "Window regulator",
-          image: logo,
+          image: 'assets/images/blue-print/window-regulators.jpg?v=20261028b',
           imageAlt: "شیشه بالابر Blue Print"
         }
         ]
@@ -2535,7 +2535,7 @@
         descTr: "Blue Print sık onarımlar için özel aletleri de yelpazeye eklemiştir. Doğru alet, yeni parçanın takılırken bozulmasını önler.",
         descAr: "أضاف Blue Print أدوات متخصصة للإصلاحات الشائعة. الأداة الصحيحة تمنع تلف القطعة الجديدة أثناء التركيب.",
         officialUrl: "https://www.blue-print.com/further-products",
-        image: 'assets/images/partners/blue-print.svg?v=20261028',
+        image: 'assets/images/blue-print/tools.jpg?v=20261028b',
         imageAlt: "ابزار تخصصی Blue Print",
         series: [
         {
@@ -2569,17 +2569,17 @@
           inquiryName: "Blue Print Specialist workshop tools",
           quoteOnly: true,
           specs: "Specialist workshop tools",
-          image: logo,
+          image: 'assets/images/blue-print/specialist-tools.jpg?v=20261028b',
           imageAlt: "ابزار تخصصی تعمیر Blue Print"
         }
         ]
       }
     ],
     iranIndustries: [
-      { icon: 'factory', name: "تعمیرگاه ایران", nameRu: "Сервис в Иране", nameEn: "Workshops in Iran", nameTr: "İran atölyesi", nameAr: "ورش إيران", desc: "لنت، فیلتر و کلاچ برای سرویس روزانه. مشاوره فارسی.", descRu: "Колодки, фильтры и сцепление для ежедневного сервиса. Консультация на фарси.", descEn: "Pads, filters and clutch for daily service. Consulting in Farsi.", descTr: "Günlük servis için balata, filtre ve debriyaj. Farsça danışmanlık.", descAr: "تيل وفلاتر ودبرياج للخدمة اليومية. استشارة بالفارسية.", image: 'assets/images/partners/blue-print.svg?v=20261028', imageAlt: "Workshops in Iran" },
-      { icon: 'factory', name: "خریدار روسیه", nameRu: "Покупатель в России", nameEn: "Buyers in Russia", nameTr: "Rusya alıcısı", nameAr: "المشتري في روسيا", desc: "همان کاتالوگ، با هماهنگی حمل به روسیه.", descRu: "Тот же каталог, с организацией перевозки в Россию.", descEn: "The same catalogue, with freight arranged to Russia.", descTr: "Aynı katalog, Rusya’ya taşıma koordinasyonuyla.", descAr: "الكتالوج نفسه مع ترتيب الشحن إلى روسيا.", image: 'assets/images/partners/blue-print.svg?v=20261028', imageAlt: "Buyers in Russia" },
-      { icon: 'factory', name: "ناوگان وانت", nameRu: "Парк LCV", nameEn: "LCV fleets", nameTr: "Hafif ticari filo", nameAr: "أساطيل التجاري الخفيف", desc: "تا ۷٫۵ تن، فیلتر و ترمز و کلاچ پرتکرارترین درخواست است.", descRu: "До 7,5 т чаще всего спрашивают фильтр, тормоз и сцепление.", descEn: "Up to 7.5 tonnes, filters, brakes and clutch are the repeat request.", descTr: "7,5 tona kadar en sık filtre, fren ve debriyaj istenir.", descAr: "حتى 7.5 طن، الفلاتر والفرامل والدبرياج هي الطلب المتكرر.", image: 'assets/images/partners/blue-print.svg?v=20261028', imageAlt: "LCV fleets" },
-      { icon: 'factory', name: "هیبرید و برقی", nameRu: "Гибрид и электро", nameEn: "Hybrid and EV", nameTr: "Hibrit ve elektrikli", nameAr: "الهجين والكهرباء", desc: "فیلتر محفظه باتری کششی برای باتری ولتاژبالا.", descRu: "Фильтр отсека тяговой батареи для высоковольтной батареи.", descEn: "Traction-battery compartment filters for the high-voltage battery.", descTr: "Yüksek voltajlı batarya için çekiş bataryası filtreleri.", descAr: "فلاتر حجرة بطارية الجر للبطارية عالية الجهد.", image: 'assets/images/partners/blue-print.svg?v=20261028', imageAlt: "Hybrid and EV" }
+      { icon: 'factory', name: "تعمیرگاه ایران", nameRu: "Сервис в Иране", nameEn: "Workshops in Iran", nameTr: "İran atölyesi", nameAr: "ورش إيران", desc: "لنت، فیلتر و کلاچ برای سرویس روزانه. مشاوره فارسی.", descRu: "Колодки, фильтры и сцепление для ежедневного сервиса. Консультация на фарси.", descEn: "Pads, filters and clutch for daily service. Consulting in Farsi.", descTr: "Günlük servis için balata, filtre ve debriyaj. Farsça danışmanlık.", descAr: "تيل وفلاتر ودبرياج للخدمة اليومية. استشارة بالفارسية.", image: 'assets/images/blue-print/brake-pads.jpg?v=20261028b', imageAlt: "Workshops in Iran" },
+      { icon: 'factory', name: "خریدار روسیه", nameRu: "Покупатель в России", nameEn: "Buyers in Russia", nameTr: "Rusya alıcısı", nameAr: "المشتري في روسيا", desc: "همان کاتالوگ، با هماهنگی حمل به روسیه.", descRu: "Тот же каталог, с организацией перевозки в Россию.", descEn: "The same catalogue, with freight arranged to Russia.", descTr: "Aynı katalog, Rusya’ya taşıma koordinasyonuyla.", descAr: "الكتالوج نفسه مع ترتيب الشحن إلى روسيا.", image: 'assets/images/blue-print/oil-filters.jpg?v=20261028b', imageAlt: "Buyers in Russia" },
+      { icon: 'factory', name: "ناوگان وانت", nameRu: "Парк LCV", nameEn: "LCV fleets", nameTr: "Hafif ticari filo", nameAr: "أساطيل التجاري الخفيف", desc: "تا ۷٫۵ تن، فیلتر و ترمز و کلاچ پرتکرارترین درخواست است.", descRu: "До 7,5 т чаще всего спрашивают фильтр, тормоз и сцепление.", descEn: "Up to 7.5 tonnes, filters, brakes and clutch are the repeat request.", descTr: "7,5 tona kadar en sık filtre, fren ve debriyaj istenir.", descAr: "حتى 7.5 طن، الفلاتر والفرامل والدبرياج هي الطلب المتكرر.", image: 'assets/images/blue-print/brake-hoses.jpg?v=20261028b', imageAlt: "LCV fleets" },
+      { icon: 'factory', name: "هیبرید و برقی", nameRu: "Гибрид и электро", nameEn: "Hybrid and EV", nameTr: "Hibrit ve elektrikli", nameAr: "الهجين والكهرباء", desc: "فیلتر محفظه باتری کششی برای باتری ولتاژبالا.", descRu: "Фильтр отсека тяговой батареи для высоковольтной батареи.", descEn: "Traction-battery compartment filters for the high-voltage battery.", descTr: "Yüksek voltajlı batarya için çekiş bataryası filtreleri.", descAr: "فلاتر حجرة بطارية الجر للبطارية عالية الجهد.", image: 'assets/images/blue-print/traction-battery-filters.jpg?v=20261028b', imageAlt: "Hybrid and EV" }
     ],
     services: [
       { title: "شناسایی با OE و شاسی", titleRu: "Подбор по OE и VIN", titleEn: "Match by OE and VIN", titleTr: "OE ve şasi ile eşleştirme", titleAr: "مطابقة بـ OE والهيكل", desc: "کاربرد را از کاتالوگ Blue Print درمی‌آوریم.", descRu: "Применение берём из каталога Blue Print.", descEn: "The application comes from the Blue Print catalogue.", descTr: "Uygulamayı Blue Print kataloğundan çıkarırız.", descAr: "نستخرج التطبيق من كتالوج Blue Print." },

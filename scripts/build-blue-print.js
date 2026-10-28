@@ -336,7 +336,7 @@ function buildCatalog() {
           inquiryName: ${jsString('Blue Print ' + en)},
           quoteOnly: true,
           specs: ${jsString(en)},
-          image: logo,
+          image: ${jsString('assets/images/blue-print/' + id + '.jpg?v=20261028b')},
           imageAlt: ${jsString(fa + ' Blue Print')}
         }`;
   }).join(',\n');
@@ -357,7 +357,7 @@ function buildCatalog() {
         descTr: ${jsString(g.intro.tr)},
         descAr: ${jsString(g.intro.ar)},
         officialUrl: ${jsString(g.official)},
-        image: ${logo},
+        image: ${jsString('assets/images/blue-print/' + g.id + '.jpg?v=20261028b')},
         imageAlt: ${jsString(g.names.fa + ' Blue Print')},
         series: [
 ${seriesOf(g)}
@@ -459,7 +459,7 @@ ${seriesOf(g)}
         descAr: ${jsString(p.facts.ar)},
         inquiryName: ${jsString('Blue Print ' + p.names.en)},
         quoteOnly: true,
-        image: ${logo},
+        image: ${jsString('assets/images/blue-print/' + p.id + '.jpg?v=20261028b')},
         imageAlt: ${jsString(p.names.fa + ' Blue Print')}
       }`).join(',\n');
 
@@ -1009,7 +1009,15 @@ function buildCss() {
 .bp-doc__aside { background: #f5f7fb; border-radius: 14px; padding: 16px 18px; }
 .bp-doc__aside ul { margin: 0; padding-inline-start: 1.1rem; }
 .bp-doc__note { margin-top: 16px; }
-.nav__product-panel[data-product-panel="blueprint"] .nav__product-mega__main { max-height: min(70vh, 560px); overflow: auto; }
+.nav__product-panels:has([data-product-panel="blueprint"].is-active) { max-height: min(62vh, 480px); overflow: auto; }
+.bp-series-card--product { padding: 0; overflow: hidden; }
+.bp-series-card__media { aspect-ratio: 4 / 3; background: #eef2f6; border: 0; border-radius: 0; }
+.bp-series-card__img { object-fit: cover; padding: 0; }
+.bp-series-card__body { padding: 12px 14px 14px; }
+.bp-series-card__desc { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.bp-series-card__foot { margin-top: auto; display: flex; flex-direction: column; gap: 8px; }
+.bp-series-card__actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.bp-series-card__cta.btn, .bp-series-card__detail.btn { width: 100%; min-width: 0; padding: 8px 6px; font-size: 13px; }
 .footer__bp { padding: 4px 0 28px; }
 .footer__bp-title { margin: 0 0 10px; font-size: .95rem; }
 .footer__bp-list { display: flex; flex-wrap: wrap; gap: 6px 14px; list-style: none; margin: 0; padding: 0; }
