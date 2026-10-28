@@ -261,8 +261,99 @@ function hreflang(id) {
 function localImage(src) {
   const raw = String(src || '').trim();
   if (!raw.startsWith('/media/catalog/automoto/')) return '';
-  if (!fs.existsSync(path.join(ROOT, raw.slice(1)))) return '';
+  const mediaRoot = path.join(ROOT, 'media/catalog/automoto');
+  if (fs.existsSync(mediaRoot) && !fs.existsSync(path.join(ROOT, raw.slice(1)))) return '';
   return raw;
+}
+
+const GEAR_PHRASES = [
+  ['Protective Motorcycle Boot', { ru: 'защитный мотобот', ar: 'بوت دراجة واقي' }],
+  ['Protective Motorcycle Helmet', { ru: 'защитный мотошлем', ar: 'خوذة دراجة واقية' }],
+  ['Protective Motorcycle Jacket', { ru: 'защитная мотокуртка', ar: 'سترة دراجة واقية' }],
+  ['Motorcycle Helmet', { ru: 'мотошлем', ar: 'خوذة دراجة' }],
+  ['Motorcycle Jacket', { ru: 'мотокуртка', ar: 'سترة دراجة' }],
+  ['Motorcycle Glove', { ru: 'мотоперчатка', ar: 'قفاز دراجة' }],
+  ['Motorcycle Pants', { ru: 'мотоштаны', ar: 'بنطال دراجة' }],
+  ['Motorcycle Boot', { ru: 'мотобот', ar: 'بوت دراجة' }],
+  ['Off-Road', { ru: 'внедорожный', ar: 'أوف رود' }],
+  ['Motocross', { ru: 'мотокросс', ar: 'موتوكروس' }],
+  ['Gore-Tex', { ru: 'Gore-Tex', ar: 'Gore-Tex' }],
+  ['Sweatshirt', { ru: 'свитшот', ar: 'سويت شيرت' }],
+  ['Protection', { ru: 'защита', ar: 'حماية' }],
+  ['Protective', { ru: 'защитный', ar: 'واقي' }],
+  ['Motorcycle', { ru: 'мотоциклетный', ar: 'دراجة' }],
+  ['Helmets', { ru: 'шлемы', ar: 'خوذات' }],
+  ['Helmet', { ru: 'шлем', ar: 'خوذة' }],
+  ['Jackets', { ru: 'куртки', ar: 'سترات' }],
+  ['Jacket', { ru: 'куртка', ar: 'سترة' }],
+  ['Gloves', { ru: 'перчатки', ar: 'قفازات' }],
+  ['Glove', { ru: 'перчатка', ar: 'قفاز' }],
+  ['Pants', { ru: 'штаны', ar: 'بنطال' }],
+  ['Boots', { ru: 'боты', ar: 'بوت' }],
+  ['Boot', { ru: 'бот', ar: 'بوت' }],
+  ['Goggle', { ru: 'очки', ar: 'نظارة' }],
+  ['Hoodie', { ru: 'худи', ar: 'هودي' }],
+  ['Visor', { ru: 'визор', ar: 'واقي وجه' }],
+  ['Leather', { ru: 'кожаный', ar: 'جلد' }],
+  ['Summer', { ru: 'летний', ar: 'صيفي' }],
+  ['Women', { ru: 'женский', ar: 'نسائي' }],
+  ['Youth', { ru: 'подростковый', ar: 'للناشئين' }],
+  ['Kids', { ru: 'детский', ar: 'أطفال' }],
+  ['Black', { ru: 'чёрный', ar: 'أسود' }],
+  ['White', { ru: 'белый', ar: 'أبيض' }],
+  ['Grey', { ru: 'серый', ar: 'رمادي' }],
+  ['Gray', { ru: 'серый', ar: 'رمادي' }],
+  ['Green', { ru: 'зелёный', ar: 'أخضر' }],
+  ['Brown', { ru: 'коричневый', ar: 'بني' }],
+  ['Yellow', { ru: 'жёлтый', ar: 'أصفر' }],
+  ['Orange', { ru: 'оранжевый', ar: 'برتقالي' }],
+  ['Silver', { ru: 'серебристый', ar: 'فضي' }],
+  ['Carbon', { ru: 'карбон', ar: 'كربون' }],
+  ['Matte', { ru: 'матовый', ar: 'مطفي' }],
+  ['Smoke', { ru: 'дымчатый', ar: 'دخاني' }],
+  ['Clear', { ru: 'прозрачный', ar: 'شفاف' }],
+  ['Blue', { ru: 'синий', ar: 'أزرق' }],
+  ['Red', { ru: 'красный', ar: 'أحمر' }]
+];
+
+function localizeGearTitle(title, lang) {
+  let out = String(title || '');
+  for (const [phrase, map] of GEAR_PHRASES) {
+    const re = new RegExp('(?<![A-Za-z0-9])' + phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?![A-Za-z0-9])', 'gi');
+    out = out.replace(re, map[lang]);
+  }
+  return out.replace(/\s+/g, ' ').trim();
+}
+
+function productTitle(loc, item, cat) {
+  if (loc.code === 'fa') return item.titleFa || item.titleEn || '';
+  if (loc.code === 'tr') return item.titleTr || item.titleEn || item.titleFa || '';
+  if (loc.code === 'en') return item.titleEn || item.titleFa || '';
+  const base = localizeGearTitle(item.titleEn || item.titleFa || '', loc.code);
+  const script = loc.code === 'ru' ? /[\u0400-\u04FF]/ : /[\u0600-\u06FF]/;
+  return script.test(base) ? base : `${base} — ${cat}`.trim();
+}
+
+function productDesc(loc, item, title, cat) {
+  if (loc.code === 'fa' && item.descFa) {
+    let text = String(item.descFa).replace(/\s+/g, ' ').trim();
+    if (text.length < 80) text += ' قیمت و ارسال پیش از سفارش تأیید می‌شود.';
+    return text.slice(0, 280);
+  }
+  const brand = item.brand || 'Bizdavar';
+  const priced = item.priceUsd != null && item.priceUsd !== '';
+  const text = priced ? {
+    tr: `${title}. ${brand} ${cat} motosiklet mağazasında, USD fiyat ve İran teslimi. Siparişten önce beden, renk ve üretici özelliğini doğrulayın.`,
+    en: `${title}. ${brand} ${cat} from the motorcycle shop, priced in USD with delivery to Iran. Confirm size, color and the maker specification before you order.`,
+    ru: `${title}. ${cat} ${brand} в магазине мотоэкипировки: цена в USD, доставка в Иран. Размер, цвет и данные производителя уточняются до заказа.`,
+    ar: `${title}. ${cat} من ${brand} في متجر الدراجة، السعر بالدولار مع التسليم في إيران. يُؤكد المقاس واللون ومواصفات المصنّع قبل الطلب.`
+  } : {
+    tr: `${title}. ${brand} ${cat} motosiklet mağazasında. Fiyat teklifle bildirilir ve İran teslimi planlanır. Siparişten önce beden, renk ve üretici özelliğini doğrulayın.`,
+    en: `${title}. ${brand} ${cat} from the motorcycle shop. The price is given on request, with delivery arranged to Iran. Confirm size, color and the maker specification before you order.`,
+    ru: `${title}. ${cat} ${brand} в магазине мотоэкипировки. Цена по запросу, доставка в Иран. Размер, цвет и данные производителя уточняются до заказа.`,
+    ar: `${title}. ${cat} من ${brand} في متجر الدراجة. السعر عند الطلب، والتسليم إلى إيران. يُؤكد المقاس واللون ومواصفات المصنّع قبل الطلب.`
+  };
+  return (text[loc.code] || `${title}. ${cat}. ${brand}`).replace(/\s+/g, ' ').slice(0, 280);
 }
 
 function loadGalleries() {
@@ -309,12 +400,9 @@ function specRows(loc, item, cat) {
 
 function productHtml(loc, item, catId, images) {
   const copy = COPY[loc.code];
-  const title = loc.code === 'fa' ? item.titleFa : loc.code === 'tr' ? (item.titleTr || item.titleEn) : (item.titleEn || item.titleFa);
   const cat = (CAT_NAME[catId] && CAT_NAME[catId][loc.code]) || catId;
-  const descBase = loc.code === 'fa' && item.descFa
-    ? item.descFa
-    : `${title}. ${copy.cat}: ${cat}. ${item.brand || ''}`.trim();
-  const desc = String(descBase).replace(/\s+/g, ' ').slice(0, 280);
+  const title = productTitle(loc, item, cat);
+  const desc = productDesc(loc, item, title, cat);
   const price = item.priceUsd != null && item.priceUsd !== '' ? `$${item.priceUsd} ${copy.price}` : copy.quote;
   const gallery = (images && images.length ? images : [localImage(item.image)]).filter(Boolean);
   const img = gallery[0] || '/assets/icons/categories/motorcycle-helmet.svg';
@@ -360,6 +448,10 @@ ${hreflang(item.id)}
   <meta property="og:description" content="${esc(desc)}">
   <meta property="og:url" content="${url}">
   <meta property="og:image" content="${BASE}${img}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${esc(title)}">
+  <meta name="twitter:description" content="${esc(desc)}">
+  <meta name="twitter:image" content="${BASE}${img}">
   <link rel="stylesheet" href="/assets/styles/site.css?v=20261003a">
   <link rel="stylesheet" href="/assets/styles/auto-moto.css?v=${VER}">
   <script type="application/ld+json">${ld}</script>

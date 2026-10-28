@@ -165,6 +165,37 @@ if (fs.existsSync(bpSitemapFile)) {
   });
 }
 
+function discoverPublicPages() {
+  const norm = (p) => (p.length > 1 && p.endsWith('/') ? p.slice(0, -1) : p);
+  const known = new Set(PAGES.map(entry => norm(entry.path)));
+  const skipFile = new Set(['bizpet.html', '404.html', 'go.html']);
+  const roots = [path.join(__dirname, '..', 'pages')];
+  function walk(dir) {
+    if (!fs.existsSync(dir)) return;
+    for (const name of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, name.name);
+      if (name.isDirectory()) {
+        if (name.name === 'motorcycle') continue;
+        walk(full);
+        continue;
+      }
+      if (!name.name.endsWith('.html') || skipFile.has(name.name)) continue;
+      if (/^bdv-am-/.test(name.name)) continue;
+      const rel = path.relative(path.join(__dirname, '..', 'pages'), full).replace(/\\/g, '/').replace(/\.html$/, '');
+      const urlPath = '/pages/' + rel;
+      if (known.has(norm(urlPath))) continue;
+      if (!fs.existsSync(path.join(__dirname, '..', 'tr', 'pages', rel + '.html'))) continue;
+      const html = fs.readFileSync(full, 'utf8');
+      if (/name="robots"\s+content="[^"]*noindex/i.test(html)) continue;
+      known.add(norm(urlPath));
+      PAGES.push({ path: urlPath, changefreq: 'monthly', priority: rel.startsWith('articles/') ? 0.7 : 0.75, lastmod: '2026-10-28' });
+    }
+  }
+  roots.forEach(walk);
+}
+
+discoverPublicPages();
+
 const allNodes = PAGES.map(urlNodes).join('\n');
 const totalUrls = PAGES.length * LOCALES.length;
 
