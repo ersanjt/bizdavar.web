@@ -213,7 +213,7 @@ const LANG_LABEL = { fa: 'Persian', tr: 'Turkish', en: 'English', ru: 'Russian',
 const llmsLines = [
   '# Bizdavar Group',
   '',
-  '> English websites and ads for US & EU (invoiced USD or EUR, from $99 / ~€90), owned products, and industrial supply to Iran and Russia (VEGA, Prosense, Liqui Moly, Blue Print) since 2013.',
+  '> English websites and ads for US & EU (invoiced USD or EUR, from $99 / ~€90), owned products, and industrial supply to every country (VEGA, Prosense, Liqui Moly, Blue Print) since 2013.',
   '> Persian is the default (x-default). English, Turkish, Russian and Arabic are full locales.',
   '> US/EU web: [Fast Studio](https://bizdavar.com/en/pages/fast) and [Services](https://bizdavar.com/en/pages/services)',
   '> Official site: [bizdavar.com](https://bizdavar.com/)',

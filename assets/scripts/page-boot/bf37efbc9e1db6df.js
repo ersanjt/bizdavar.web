@@ -2,7 +2,7 @@ bizdavarPageInit(function () {
       const crumbs = [
             { page: 'home', url: 'index' },
             { page: 'blog', url: 'blog' },
-            { name: 'Купить весы и POS Digi System в Иране — магазин и касса', url: 'buy-digi-system-iran' }
+            { name: 'Купить весы и POS Digi System по всему миру — магазин и касса', url: 'buy-digi-system-iran' }
           ];
       injectPageSeo('articleBuyDigiIran', {
         canonical: 'https://bizdavar.com/pages/articles/buy-digi-system-iran',
@@ -10,7 +10,7 @@ bizdavarPageInit(function () {
         type: 'article'
       });
       injectArticleSchema({
-        title: 'Купить весы и POS Digi System в Иране — магазин и касса',
+        title: 'Купить весы и POS Digi System по всему миру — магазин и касса',
         description: 'Как купить оригинальные весы и POS Digi для магазинов Ирана: тип магазина и число касс.',
         date: '2026-08-29',
         dateModified: '2026-08-29',

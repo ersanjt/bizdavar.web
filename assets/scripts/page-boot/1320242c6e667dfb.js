@@ -2,7 +2,7 @@ bizdavarPageInit(function () {
       const crumbs = [
             { page: 'home', url: 'index' },
             { page: 'blog', url: 'blog' },
-            { name: 'Купить Teltonika FMB920 в Иране — от $29', url: 'buy-teltonika-iran' }
+            { name: 'Купить Teltonika FMB920 по всему миру — от $29', url: 'buy-teltonika-iran' }
           ];
       injectPageSeo('articleBuyTeltonikaIran', {
         canonical: 'https://bizdavar.com/pages/articles/buy-teltonika-iran',
@@ -10,7 +10,7 @@ bizdavarPageInit(function () {
         type: 'article'
       });
       injectArticleSchema({
-        title: 'Купить Teltonika FMB920 в Иране — от $29',
+        title: 'Купить Teltonika FMB920 по всему миру — от $29',
         description: 'Оригинальный Teltonika GPS для автопарков Ирана: FMB920 от $29, FMC650 и DualCam.',
         date: '2026-08-26',
         dateModified: '2026-08-29',

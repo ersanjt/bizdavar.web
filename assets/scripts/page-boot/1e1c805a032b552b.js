@@ -19,7 +19,7 @@ bizdavarPageInit(function () {
       injectAutoMotoSchema();
       renderGeoStrip('geoStrip', {
         textKey: 'autoMotoPage.geoText',
-        text: "Поставка мотоэкипировки — цена на карточке в долларах США, с доставкой в Иран."
+        text: "Поставка мотоэкипировки — цена на карточке в долларах США, с международной доставкой."
       });
       renderRelatedLinks([
         { title: "Auto-Moto", url: "auto-moto", desc: "Два магазина: экипировка и тормоза", titleKey: 'autoMotoPage.related.0.title', descKey: 'autoMotoPage.related.0.desc' },

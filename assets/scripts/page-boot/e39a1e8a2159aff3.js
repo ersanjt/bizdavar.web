@@ -11,7 +11,7 @@ renderBreadcrumbs(crumbs);
           injectBreadcrumbSchema(crumbs);
           renderGeoStrip('geoStrip', {
             textKey: 'caseStudy.bzDiamond.geoText',
-            text: 'نمونه‌کار طراحی وب برای برندهای ایران و بین‌المللی — WooCommerce، سئو و پشتیبانی از دفاتر ایران، ترکیه، ارمنستان و دبی.'
+            text: 'نمونه‌کار طراحی وب برای برندهای ایران و بین‌المللی — WooCommerce، سئو و پشتیبانی از دفاتر در سراسر جهان.'
           });
           injectCaseStudySchema({
             id: 'bz-diamond',

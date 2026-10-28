@@ -6,11 +6,11 @@ const BASE = 'https://bizdavar.com';
 const VER = '20260919m';
 
 const LOCALES = [
-  { code: 'fa', folder: 'pages', prefix: '', lang: 'fa', dir: 'rtl', title: 'خرید لنت و دیسک ترمز | انتخاب برند و مدل | بیزدوار', desc: 'فروشگاه ترمز بیزدوار: لنت، دیسک، ترمز عملکردی و روغن ترمز با انتخاب برند و مدل. قیمت دلاری تحویل ایران.', loading: 'در حال چیدن کاتالوگ ترمز…', related: [{ title: 'Auto-Moto', url: 'auto-moto', desc: 'موتورسیکلت و قطعات' }, { title: 'Liqui Moly', url: 'liqui-moly', desc: 'روغن و افزودنی' }, { title: 'تماس', url: 'contact', desc: 'استعلام قطعه' }] },
+  { code: 'fa', folder: 'pages', prefix: '', lang: 'fa', dir: 'rtl', title: 'خرید لنت و دیسک ترمز | انتخاب برند و مدل | بیزدوار', desc: 'فروشگاه ترمز بیزدوار: لنت، دیسک، ترمز عملکردی و روغن ترمز با انتخاب برند و مدل. قیمت دلاری تحویل بین‌المللی.', loading: 'در حال چیدن کاتالوگ ترمز…', related: [{ title: 'Auto-Moto', url: 'auto-moto', desc: 'موتورسیکلت و قطعات' }, { title: 'Liqui Moly', url: 'liqui-moly', desc: 'روغن و افزودنی' }, { title: 'تماس', url: 'contact', desc: 'استعلام قطعه' }] },
   { code: 'tr', folder: 'tr/pages', prefix: '/tr', lang: 'tr', dir: 'ltr', title: 'Fren balatası ve diski | marka ve model seç | Bizdavar', desc: 'Bizdavar fren mağazası: balata, disk, performans freni ve fren sıvısı. Kart fiyatı teslim USD.', loading: 'Fren kataloğu hazırlanıyor…', related: [{ title: 'Auto-Moto', url: 'auto-moto', desc: 'Motosiklet ve oto parçası' }, { title: 'Liqui Moly', url: 'liqui-moly', desc: 'Yağ ve katkı' }, { title: 'İletişim', url: 'contact', desc: 'Parça sorun' }] },
   { code: 'en', folder: 'en/pages', prefix: '/en', lang: 'en', dir: 'ltr', title: 'Brake pads and discs | choose brand and model | Bizdavar', desc: 'Bizdavar brake parts: pads, discs, performance brakes and fluid by brand and model. Card price is delivery USD.', loading: 'Loading the brake catalog…', related: [{ title: 'Auto-Moto', url: 'auto-moto', desc: 'Motorcycle gear and parts' }, { title: 'Liqui Moly', url: 'liqui-moly', desc: 'Oils and additives' }, { title: 'Contact', url: 'contact', desc: 'Ask for a part' }] },
-  { code: 'ru', folder: 'ru/pages', prefix: '/ru', lang: 'ru', dir: 'ltr', title: 'Тормозные колодки и диски | марка и модель | Bizdavar', desc: 'Магазин тормозов Bizdavar: колодки, диски, спорт и жидкость. Цена на карточке — USD с доставкой в Иран.', loading: 'Каталог тормозов загружается…', related: [{ title: 'Auto-Moto', url: 'auto-moto', desc: 'Мотоэкипировка и запчасти' }, { title: 'Liqui Moly', url: 'liqui-moly', desc: 'Масла и присадки' }, { title: 'Контакты', url: 'contact', desc: 'Запрос детали' }] },
-  { code: 'ar', folder: 'ar/pages', prefix: '/ar', lang: 'ar', dir: 'rtl', title: 'فحمات وأقراص الفرامل | اختر الماركة | Bizdavar', desc: 'متجر فرامل بيزدوار: فحمات وأقراص وسوائل مع اختيار الماركة والموديل. السعر بالدولار لتسليم إيران.', loading: 'جاري تجهيز كتالوج الفرامل…', related: [{ title: 'Auto-Moto', url: 'auto-moto', desc: 'عتاد الدراجة وقطع الغيار' }, { title: 'Liqui Moly', url: 'liqui-moly', desc: 'زيوت وإضافات' }, { title: 'اتصل', url: 'contact', desc: 'استعلام قطعة' }] }
+  { code: 'ru', folder: 'ru/pages', prefix: '/ru', lang: 'ru', dir: 'ltr', title: 'Тормозные колодки и диски | марка и модель | Bizdavar', desc: 'Магазин тормозов Bizdavar: колодки, диски, спорт и жидкость. Цена на карточке — USD с международной доставкой.', loading: 'Каталог тормозов загружается…', related: [{ title: 'Auto-Moto', url: 'auto-moto', desc: 'Мотоэкипировка и запчасти' }, { title: 'Liqui Moly', url: 'liqui-moly', desc: 'Масла и присадки' }, { title: 'Контакты', url: 'contact', desc: 'Запрос детали' }] },
+  { code: 'ar', folder: 'ar/pages', prefix: '/ar', lang: 'ar', dir: 'rtl', title: 'فحمات وأقراص الفرامل | اختر الماركة | Bizdavar', desc: 'متجر فرامل بيزدوار: فحمات وأقراص وسوائل مع اختيار الماركة والموديل. السعر بالدولار للتسليم الدولي.', loading: 'جاري تجهيز كتالوج الفرامل…', related: [{ title: 'Auto-Moto', url: 'auto-moto', desc: 'عتاد الدراجة وقطع الغيار' }, { title: 'Liqui Moly', url: 'liqui-moly', desc: 'زيوت وإضافات' }, { title: 'اتصل', url: 'contact', desc: 'استعلام قطعة' }] }
 ];
 
 function esc(value) {
@@ -57,7 +57,7 @@ ${alts}
     <div id="geoStrip"></div>
     <div id="relatedLinks"></div>
   </main>
-  <script src="/assets/scripts/site-loader.js?v=${VER}" data-before-main="brakes-page.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261028c" data-before-main="brakes-page.js"></script>
   ${bootTag(`bizdavarPageInit(function () {
       injectPageSeo('carParts', {
         canonical: '${canonical}',

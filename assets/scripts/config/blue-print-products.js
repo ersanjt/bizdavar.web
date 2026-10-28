@@ -14,11 +14,11 @@
       logoAlt: 'Blue Print',
       heroImage: logo,
       heroImageAlt: 'Blue Print',
-      heroEyebrow: 'قطعات یدکی Blue Print برای ایران و روسیه',
-      heroEyebrowRu: 'Запчасти Blue Print для России и Ирана',
-      heroEyebrowEn: 'Blue Print parts for Iran and Russia',
-      heroEyebrowTr: 'İran ve Rusya için Blue Print yedek parça',
-      heroEyebrowAr: 'قطع Blue Print لإيران وروسيا',
+      heroEyebrow: 'قطعات یدکی Blue Print برای همه کشورها',
+      heroEyebrowRu: 'Запчасти Blue Print для всех стран',
+      heroEyebrowEn: 'Blue Print parts for every country',
+      heroEyebrowTr: 'Tüm ülkeler için Blue Print yedek parça',
+      heroEyebrowAr: 'قطع Blue Print لكل الدول',
       heroHeadline: 'فیلتر، ترمز، کلاچ و قطعات خودرو',
       heroHeadlineRu: 'Фильтры, тормоза, сцепление и детали авто',
       heroHeadlineEn: 'Filters, brakes, clutch and vehicle parts',
@@ -41,21 +41,21 @@
       sinceAr: 'قطع جديدة',
       origin: 'برند گروه bilstein',
       officialUrl: 'https://www.blue-print.com/',
-      description: 'بیزدوار قطعات Blue Print را برای تعمیرگاه و ناوگان در ایران و برای خریدار در روسیه تامین می‌کند. هر خانواده صفحه خودش را دارد. قیمت بعد از تطبیق شماره OE در پیش‌فاکتور می‌آید.',
-      descriptionRu: 'Bizdavar поставляет детали Blue Print сервисам и паркам в Иране и покупателям в России. У каждой семьи своя страница. Цена появляется в проформе после сверки номера OE.',
-      descriptionEn: 'Bizdavar supplies Blue Print parts to workshops and fleets in Iran and to buyers in Russia. Each family has its own page. The price is on the proforma after the OE number is matched.',
-      descriptionTr: 'Bizdavar, Blue Print parçalarını İran’daki atölye ve filolara ve Rusya’daki alıcılara tedarik eder. Her ailenin kendi sayfası vardır. Fiyat, OE eşleşmesinden sonra proformadadır.',
-      descriptionAr: 'يورّد Bizdavar قطع Blue Print لورش وأساطيل إيران وللمشتري في روسيا. لكل عائلة صفحتها. السعر في الفاتورة الأولية بعد مطابقة رقم OE.',
+      description: 'بیزدوار قطعات Blue Print را برای مشتریان در همه کشورها تامین می‌کند. هر خانواده صفحه خودش را دارد. قیمت بعد از تطبیق شماره OE در پیش‌فاکتور می‌آید.',
+      descriptionRu: 'Bizdavar поставляет детали Blue Print клиентам во всех странах. У каждой семьи своя страница. Цена появляется в проформе после сверки номера OE.',
+      descriptionEn: 'Bizdavar supplies Blue Print parts to customers in every country. Each family has its own page. The price is on the proforma after the OE number is matched.',
+      descriptionTr: 'Bizdavar, Blue Print parçalarını her ülkedeki müşterilere tedarik eder. Her ailenin kendi sayfası vardır. Fiyat, OE eşleşmesinden sonra proformadadır.',
+      descriptionAr: 'يورّد Bizdavar قطع Blue Print للعملاء في كل الدول. لكل عائلة صفحتها. السعر في الفاتورة الأولية بعد مطابقة رقم OE.',
       heroStats: [
         { value: '62', label: 'خانواده قطعه', labelRu: 'семейств деталей', labelEn: 'part families', labelTr: 'parça ailesi', labelAr: 'عائلة قطعة' },
         { value: 'OE', label: 'تطبیق با شماره', labelRu: 'сверка по номеру', labelEn: 'matched by number', labelTr: 'numarayla eşleştirme', labelAr: 'مطابقة بالرقم' },
-        { value: 'IR · RU', label: 'ایران و روسیه', labelRu: 'Иран и Россия', labelEn: 'Iran and Russia', labelTr: 'İran ve Rusya', labelAr: 'إيران وروسيا' }
+        { value: 'WW', label: 'همه کشورها', labelRu: 'все страны', labelEn: 'every country', labelTr: 'tüm ülkeler', labelAr: 'كل الدول' }
       ]
     },
     trustSignals: [
       { icon: "shield", label: "قطعه نو", labelRu: "Новая деталь", labelEn: "New parts", labelTr: "Yeni parça", labelAr: "قطعة جديدة", desc: "قطعه بازسازی‌شده عرضه نمی‌کنیم. تطبیق با شماره OE انجام می‌شود.", descRu: "Восстановленные детали не предлагаем. Подбор по номеру OE.", descEn: "We do not offer reconditioned parts. Matching is by OE number.", descTr: "Rektifiye parça sunmayız. Eşleştirme OE numarasıyla yapılır.", descAr: "لا نعرض قطعاً مجددة. المطابقة برقم OE." },
       { icon: "target", label: "تطبیق کاتالوگ", labelRu: "Сверка каталога", labelEn: "Catalogue match", labelTr: "Katalog eşleştirme", labelAr: "مطابقة الكتالوج", desc: "شماره شاسی یا OE با کاربرد Blue Print سنجیده می‌شود.", descRu: "VIN или OE сверяется с применением Blue Print.", descEn: "The VIN or OE number is checked against the Blue Print application.", descTr: "Şasi veya OE, Blue Print uygulamasıyla kontrol edilir.", descAr: "يُفحص الهيكل أو رقم OE مقابل تطبيق Blue Print." },
-      { icon: "phone", label: "فارسی و روسی", labelRu: "Фарси и русский", labelEn: "Farsi and Russian", labelTr: "Farsça ve Rusça", labelAr: "فارسية وروسية", desc: "مشاوره برای تعمیرگاه ایران و خریدار روسیه.", descRu: "Консультация для сервиса в Иране и покупателя в России.", descEn: "Consulting for workshops in Iran and buyers in Russia.", descTr: "İran atölyesi ve Rusya alıcısı için danışmanlık.", descAr: "استشارة لورشة إيران والمشتري في روسيا." },
+      { icon: "phone", label: "فارسی و روسی", labelRu: "Фарси и русский", labelEn: "Farsi and Russian", labelTr: "Farsça ve Rusça", labelAr: "فارسية وروسية", desc: "مشاوره به فارسی و روسی برای مشتریان در همه کشورها.", descRu: "Консультация на фарси и русском для клиентов во всех странах.", descEn: "Consulting in Farsi and Russian for customers worldwide.", descTr: "Farsça ve Rusça danışmanlık, her ülkedeki müşteriler için.", descAr: "استشارة بالفارسية والروسية للعملاء في كل الدول." },
       { icon: "ship", label: "پیش‌فاکتور", labelRu: "Проформа", labelEn: "Proforma", labelTr: "Proforma", labelAr: "فاتورة أولية", desc: "قیمت و زمان حمل بعد از موجودی روز نوشته می‌شود.", descRu: "Цена и срок пишутся после проверки наличия.", descEn: "Price and lead time are written after that day’s supply check.", descTr: "Fiyat ve süre, günün stoğu görüldükten sonra yazılır.", descAr: "السعر والمدة يُكتبان بعد التحقق من التوفر." }
     ],
     whyBuyFromUs: [
@@ -69,7 +69,7 @@
       { num: "۲", numRu: "2", numEn: "2", numTr: "2", numAr: "۲", title: "ارسال شماره", titleRu: "Номер", titleEn: "Send the number", titleTr: "Numarayı gönderin", titleAr: "إرسال الرقم", desc: "OE، شماره Blue Print یا شاسی.", descRu: "OE, номер Blue Print или VIN.", descEn: "OE, Blue Print number or VIN.", descTr: "OE, Blue Print numarası veya şasi.", descAr: "OE أو رقم Blue Print أو الهيكل." },
       { num: "۳", numRu: "3", numEn: "3", numTr: "3", numAr: "۳", title: "پیش‌فاکتور", titleRu: "Проформа", titleEn: "Proforma", titleTr: "Proforma", titleAr: "فاتورة أولية", desc: "قیمت و زمان بعد از موجودی.", descRu: "Цена и срок после проверки наличия.", descEn: "Price and time after the supply check.", descTr: "Stok sonrası fiyat ve süre.", descAr: "السعر والمدة بعد التوفر." },
       { num: "۴", numRu: "4", numEn: "4", numTr: "4", numAr: "۴", title: "تامین", titleRu: "Поставка", titleEn: "Supply", titleTr: "Tedarik", titleAr: "التوريد", desc: "قطعه نو هماهنگ می‌شود.", descRu: "Согласуем новую деталь.", descEn: "The new part is arranged.", descTr: "Yeni parça ayarlanır.", descAr: "تُرتَّب القطعة الجديدة." },
-      { num: "۵", numRu: "5", numEn: "5", numTr: "5", numAr: "۵", title: "تحویل", titleRu: "Доставка", titleEn: "Delivery", titleTr: "Teslim", titleAr: "التسليم", desc: "ایران یا روسیه، طبق پیش‌فاکتور.", descRu: "Иран или Россия, как в проформе.", descEn: "Iran or Russia, as written on the proforma.", descTr: "Proformadaki gibi İran veya Rusya.", descAr: "إيران أو روسيا كما في الفاتورة." }
+      { num: "۵", numRu: "5", numEn: "5", numTr: "5", numAr: "۵", title: "تحویل", titleRu: "Доставка", titleEn: "Delivery", titleTr: "Teslim", titleAr: "التسليم", desc: "کشور مقصد، طبق پیش‌فاکتور.", descRu: "Страна назначения, как в проформе.", descEn: "The destination country, as written on the proforma.", descTr: "Proformadaki varış ülkesi.", descAr: "بلد الوجهة كما في الفاتورة." }
     ],
     quoteChecklist: {
       title: "برای پیش‌فاکتور این‌ها را بفرستید",
@@ -77,16 +77,16 @@
       titleEn: "Send this for a proforma",
       titleTr: "Proforma için bunları gönderin",
       titleAr: "أرسلوا هذا للفاتورة الأولية",
-      desc: "برای استعلام، شماره قطعه اصلی (OE)، مدل خودرو، سال ساخت، تعداد و شهر تحویل در ایران یا مقصد در روسیه را به بیزدوار بفرستید. قیمت با موجودی روز در پیش‌فاکتور می‌آید؛ روی این صفحه قیمت ساختگی نمی‌گذاریم.",
-      descRu: "Для запроса пришлите в Bizdavar номер оригинала (OE), модель, год, количество и город в России или в Иране. Цену ставим в проформе по наличию на день запроса — на странице нет выдуманной цены.",
-      descEn: "For a quote, send Bizdavar the OE number, vehicle model, year, quantity and the delivery city in Iran or Russia. The price is confirmed on the proforma from that day’s supply. This page does not invent a price.",
-      descTr: "Teklif için OE numarasını, araç modelini, yılını, adedi ve İran veya Rusya teslim şehrini Bizdavar’a gönderin. Fiyat, günün tedarikine göre proformada netleşir. Bu sayfada uydurma fiyat yoktur.",
-      descAr: "لطلب السعر أرسلوا إلى Bizdavar رقم القطعة الأصلية OE وموديل السيارة والسنة والكمية ومدينة التسليم في إيران أو الوجهة في روسيا. السعر يُثبت في الفاتورة الأولية حسب التوفر. لا نضع سعراً مختلقاً في هذه الصفحة.",
+      desc: "برای استعلام، شماره قطعه اصلی (OE)، مدل خودرو، سال ساخت، تعداد و شهر مقصد را به بیزدوار بفرستید. قیمت با موجودی روز در پیش‌فاکتور می‌آید؛ روی این صفحه قیمت ساختگی نمی‌گذاریم.",
+      descRu: "Для запроса пришлите в Bizdavar номер оригинала (OE), модель, год, количество и город назначения. Цену ставим в проформе по наличию на день запроса — на странице нет выдуманной цены.",
+      descEn: "For a quote, send Bizdavar the OE number, vehicle model, year, quantity and the destination city. The price is confirmed on the proforma from that day’s supply. This page does not invent a price.",
+      descTr: "Teklif için OE numarasını, araç modelini, yılını, adedi ve varış ülkesini ve şehrini Bizdavar’a gönderin. Fiyat, günün tedarikine göre proformada netleşir. Bu sayfada uydurma fiyat yoktur.",
+      descAr: "لطلب السعر أرسلوا إلى Bizdavar رقم القطعة الأصلية OE وموديل السيارة والسنة والكمية ومدينة الوجهة. السعر يُثبت في الفاتورة الأولية حسب التوفر. لا نضع سعراً مختلقاً في هذه الصفحة.",
       items: [
         { text: "شماره OE یا شماره Blue Print، اگر دارید", textRu: "Номер OE или номер Blue Print, если он есть", textEn: "OE number or Blue Print number, if you have it", textTr: "OE veya Blue Print numarası, varsa", textAr: "رقم OE أو رقم Blue Print إن وُجد" },
         { text: "برند، مدل، سال و حجم موتور", textRu: "Марка, модель, год и объём двигателя", textEn: "Make, model, year and engine size", textTr: "Marka, model, yıl ve motor hacmi", textAr: "العلامة والموديل والسنة وسعة المحرك" },
         { text: "تعداد و اینکه برای تعمیرگاه است یا ناوگان", textRu: "Количество и для кого: сервис или парк", textEn: "Quantity, and whether it is a workshop or a fleet", textTr: "Adet ve atölye mi filo mu", textAr: "الكمية وهل الطلب لورشة أم لأسطول" },
-        { text: "شهر تحویل در ایران یا شهر مقصد در روسیه", textRu: "Город в России или город поставки в Иране", textEn: "Delivery city in Iran or destination city in Russia", textTr: "İran teslim şehri veya Rusya varış şehri", textAr: "مدينة التسليم في إيران أو مدينة الوجهة في روسيا" }
+        { text: "شهر مقصد", textRu: "Город назначения", textEn: "Destination city", textTr: "Varış şehri", textAr: "مدينة الوجهة" }
       ]
     },
     quickSeries: [
@@ -2576,8 +2576,8 @@
       }
     ],
     iranIndustries: [
-      { icon: 'factory', name: "تعمیرگاه ایران", nameRu: "Сервис в Иране", nameEn: "Workshops in Iran", nameTr: "İran atölyesi", nameAr: "ورش إيران", desc: "لنت، فیلتر و کلاچ برای سرویس روزانه. مشاوره فارسی.", descRu: "Колодки, фильтры и сцепление для ежедневного сервиса. Консультация на фарси.", descEn: "Pads, filters and clutch for daily service. Consulting in Farsi.", descTr: "Günlük servis için balata, filtre ve debriyaj. Farsça danışmanlık.", descAr: "تيل وفلاتر ودبرياج للخدمة اليومية. استشارة بالفارسية.", image: 'assets/images/blue-print/brake-pads.jpg?v=20261028b', imageAlt: "Workshops in Iran" },
-      { icon: 'factory', name: "خریدار روسیه", nameRu: "Покупатель в России", nameEn: "Buyers in Russia", nameTr: "Rusya alıcısı", nameAr: "المشتري في روسيا", desc: "همان کاتالوگ، با هماهنگی حمل به روسیه.", descRu: "Тот же каталог, с организацией перевозки в Россию.", descEn: "The same catalogue, with freight arranged to Russia.", descTr: "Aynı katalog, Rusya’ya taşıma koordinasyonuyla.", descAr: "الكتالوج نفسه مع ترتيب الشحن إلى روسيا.", image: 'assets/images/blue-print/oil-filters.jpg?v=20261028b', imageAlt: "Buyers in Russia" },
+      { icon: 'factory', name: "تعمیرگاه‌ها", nameRu: "Сервисы", nameEn: "Workshops", nameTr: "Atölyeler", nameAr: "الورش", desc: "لنت، فیلتر و کلاچ برای سرویس روزانه. مشاوره فارسی.", descRu: "Колодки, фильтры и сцепление для ежедневного сервиса. Консультация на фарси.", descEn: "Pads, filters and clutch for daily service. Consulting in Farsi.", descTr: "Günlük servis için balata, filtre ve debriyaj. Farsça danışmanlık.", descAr: "تيل وفلاتر ودبرياج للخدمة اليومية. استشارة بالفارسية.", image: 'assets/images/blue-print/brake-pads.jpg?v=20261028b', imageAlt: "Workshops" },
+      { icon: 'factory', name: "خریداران", nameRu: "Покупатели", nameEn: "Buyers", nameTr: "Alıcılar", nameAr: "المشترون", desc: "همان کاتالوگ، با هماهنگی حمل بین‌المللی.", descRu: "Тот же каталог, с организацией международной перевозки.", descEn: "The same catalogue, with freight arranged worldwide.", descTr: "Aynı katalog, uluslararası taşıma koordinasyonuyla.", descAr: "الكتالوج نفسه مع ترتيب الشحن الدولي.", image: 'assets/images/blue-print/oil-filters.jpg?v=20261028b', imageAlt: "Buyers" },
       { icon: 'factory', name: "ناوگان وانت", nameRu: "Парк LCV", nameEn: "LCV fleets", nameTr: "Hafif ticari filo", nameAr: "أساطيل التجاري الخفيف", desc: "تا ۷٫۵ تن، فیلتر و ترمز و کلاچ پرتکرارترین درخواست است.", descRu: "До 7,5 т чаще всего спрашивают фильтр, тормоз и сцепление.", descEn: "Up to 7.5 tonnes, filters, brakes and clutch are the repeat request.", descTr: "7,5 tona kadar en sık filtre, fren ve debriyaj istenir.", descAr: "حتى 7.5 طن، الفلاتر والفرامل والدبرياج هي الطلب المتكرر.", image: 'assets/images/blue-print/brake-hoses.jpg?v=20261028b', imageAlt: "LCV fleets" },
       { icon: 'factory', name: "هیبرید و برقی", nameRu: "Гибрид и электро", nameEn: "Hybrid and EV", nameTr: "Hibrit ve elektrikli", nameAr: "الهجين والكهرباء", desc: "فیلتر محفظه باتری کششی برای باتری ولتاژبالا.", descRu: "Фильтр отсека тяговой батареи для высоковольтной батареи.", descEn: "Traction-battery compartment filters for the high-voltage battery.", descTr: "Yüksek voltajlı batarya için çekiş bataryası filtreleri.", descAr: "فلاتر حجرة بطارية الجر للبطارية عالية الجهد.", image: 'assets/images/blue-print/traction-battery-filters.jpg?v=20261028b', imageAlt: "Hybrid and EV" }
     ],
@@ -2585,7 +2585,7 @@
       { title: "شناسایی با OE و شاسی", titleRu: "Подбор по OE и VIN", titleEn: "Match by OE and VIN", titleTr: "OE ve şasi ile eşleştirme", titleAr: "مطابقة بـ OE والهيكل", desc: "کاربرد را از کاتالوگ Blue Print درمی‌آوریم.", descRu: "Применение берём из каталога Blue Print.", descEn: "The application comes from the Blue Print catalogue.", descTr: "Uygulamayı Blue Print kataloğundan çıkarırız.", descAr: "نستخرج التطبيق من كتالوج Blue Print." },
       { title: "Fast to Market", titleRu: "Fast to Market", titleEn: "Fast to Market", titleTr: "Fast to Market", titleAr: "Fast to Market", desc: "برای خودروهای تازه‌وارد، قطعه هم‌خانواده را در کاتالوگ جدید بررسی می‌کنیم.", descRu: "Для новых моделей проверяем соседнюю позицию в свежем каталоге.", descEn: "For newly launched vehicles we check the current catalogue for a matching family.", descTr: "Yeni çıkan araçlarda güncel katalogda uygun aileyi bakarız.", descAr: "للسيارات حديثة الإطلاق نراجع الكتالوج الحالي عن العائلة المناسبة." },
       { title: "مشاوره تعمیرگاه", titleRu: "Консультация сервиса", titleEn: "Workshop advice", titleTr: "Atölye danışmanlığı", titleAr: "استشارة الورشة", desc: "اگر لنت با دیسک، یا صفحه با فلایویل باید با هم عوض شود، می‌گوییم.", descRu: "Если колодки надо менять с диском, а диск сцепления с маховиком — скажем.", descEn: "If pads should be changed with the disc, or the clutch disc with the flywheel, we say so.", descTr: "Balata diskle, debriyaj diski volanla değişmeliyse söyleriz.", descAr: "إذا وجب تبديل التيل مع القرص أو قرص الدبرياج مع الحدافة نقول ذلك." },
-      { title: "حمل به ایران و روسیه", titleRu: "Перевозка в Иран и Россию", titleEn: "Freight to Iran and Russia", titleTr: "İran ve Rusya taşıması", titleAr: "شحن إلى إيران وروسيا", desc: "مقصد را در پیش‌فاکتور جدا می‌نویسیم.", descRu: "Назначение отдельно пишем в проформе.", descEn: "The destination is written separately on the proforma.", descTr: "Varış yerini proformada ayrı yazarız.", descAr: "نكتب الوجهة منفصلة في الفاتورة الأولية." }
+      { title: "حمل به همه کشورها", titleRu: "Перевозка во все страны", titleEn: "Freight to any country", titleTr: "Tüm ülkelere taşıma", titleAr: "شحن إلى كل الدول", desc: "مقصد را در پیش‌فاکتور جدا می‌نویسیم.", descRu: "Назначение отдельно пишем в проформе.", descEn: "The destination is written separately on the proforma.", descTr: "Varış yerini proformada ayrı yazarız.", descAr: "نكتب الوجهة منفصلة في الفاتورة الأولية." }
     ],
     faq: [
       { q: "Blue Print چیست؟", qRu: "Что такое Blue Print?", qEn: "What is Blue Print?", qTr: "Blue Print nedir?", qAr: "ما هو Blue Print؟", a: "برند قطعات یدکی گروه bilstein است که سه دهه روی خودروهای آسیایی کار کرده و برای فیلتر، ترمز و کلاچ پوشش خودروهای اروپایی را هم در کاتالوگ عمومی دارد.", aRu: "Это бренд запчастей группы bilstein. Около тридцати лет он специализируется на азиатских авто и в публичном каталоге закрывает европейские машины по фильтрам, тормозам и сцеплению.", aEn: "It is a bilstein group parts brand. For about thirty years it has specialised in Asian vehicles, and its public catalogue also covers European cars in filtration, braking and clutch.", aTr: "bilstein group’un yedek parça markasıdır. Yaklaşık otuz yıldır Asya araçlarına odaklanır; açık katalogda Avrupa araçlarını filtre, fren ve debriyajda da kapsar.", aAr: "علامة قطع لمجموعة bilstein. منذ نحو ثلاثين عاماً تتخصص في السيارات الآسيوية، وكتالوجها العام يغطي الأوروبية أيضاً في الفلاتر والفرامل والدبرياج." },
@@ -2593,11 +2593,11 @@
       { q: "چرا قیمت روی کارت نیست؟", qRu: "Почему на карточке нет цены?", qEn: "Why is there no price on the card?", qTr: "Kartta neden fiyat yok?", qAr: "لماذا لا يوجد سعر على البطاقة؟", a: "موجودی و نرخ حمل روزبه‌روز عوض می‌شود. قیمت ساختگی نمی‌نویسیم. عدد داخل پیش‌فاکتور معتبر است.", aRu: "Наличие и ставка перевозки меняются. Выдуманную цену не ставим. Действительна цифра в проформе.", aEn: "Supply and freight change from day to day. We do not print an invented price. The figure on the proforma is the one that counts.", aTr: "Stok ve navlun her gün değişir. Uydurma fiyat yazmayız. Geçerli olan proformadaki rakamdır.", aAr: "التوفر وأجرة الشحن يتغيران. لا نكتب سعراً مختلقاً. الرقم المعتمد هو ما في الفاتورة الأولية." },
       { q: "کدام خودروها؟", qRu: "Какие автомобили?", qEn: "Which vehicles?", qTr: "Hangi araçlar?", qAr: "أي سيارات؟", a: "تمرکز برند خودروهای آسیایی است. فیلتر، ترمز و کلاچ برای سواری و وانت اروپایی هم در کاتالوگ عمومی آمده است. تطبیق نهایی با شماره OE است.", aRu: "Фокус бренда — азиатские авто. Фильтры, тормоза и сцепление в публичном каталоге есть и для европейских легковых и LCV. Финальная сверка — по OE.", aEn: "The brand focuses on Asian vehicles. Filtration, braking and clutch in the public catalogue also cover European cars and LCVs. The final check is the OE number.", aTr: "Markanın odağı Asya araçlarıdır. Filtre, fren ve debriyaj açık katalogda Avrupa binek ve hafif ticari için de vardır. Son eşleştirme OE numarasıyladır.", aAr: "تركيز العلامة على السيارات الآسيوية. الفلاتر والفرامل والدبرياج في الكتالوج العام تشمل الأوروبية أيضاً. المطابقة النهائية برقم OE." }
     ],
-    inquiryTemplate: 'سلام، درخواست استعلام {product} از Blue Print دارم.\nOE یا شماره قطعه:\nخودرو (برند، مدل، سال):\nتعداد:\nمقصد (ایران / روسیه):\n',
-    inquiryTemplateRu: 'Здравствуйте, нужен {product} Blue Print.\nOE или номер детали:\nАвто (марка, модель, год):\nКоличество:\nКуда (Россия / Иран):\n',
-    inquiryTemplateEn: 'Hello, I need a quote for {product} by Blue Print.\nOE or part number:\nVehicle (make, model, year):\nQuantity:\nDestination (Iran / Russia):\n',
-    inquiryTemplateTr: 'Merhaba, Blue Print {product} için teklif istiyorum.\nOE veya parça no:\nAraç (marka, model, yıl):\nAdet:\nVarış (İran / Rusya):\n',
-    inquiryTemplateAr: 'مرحباً، أريد عرض سعر لـ {product} من Blue Print.\nرقم OE أو رقم القطعة:\nالسيارة (العلامة، الموديل، السنة):\nالكمية:\nالوجهة (إيران / روسيا):\n',
+    inquiryTemplate: 'سلام، درخواست استعلام {product} از Blue Print دارم.\nOE یا شماره قطعه:\nخودرو (برند، مدل، سال):\nتعداد:\nکشور و شهر مقصد:\n',
+    inquiryTemplateRu: 'Здравствуйте, нужен {product} Blue Print.\nOE или номер детали:\nАвто (марка, модель, год):\nКоличество:\nСтрана и город:\n',
+    inquiryTemplateEn: 'Hello, I need a quote for {product} by Blue Print.\nOE or part number:\nVehicle (make, model, year):\nQuantity:\nDestination (country and city):\n',
+    inquiryTemplateTr: 'Merhaba, Blue Print {product} için teklif istiyorum.\nOE veya parça no:\nAraç (marka, model, yıl):\nAdet:\nVarış (ülke ve şehir):\n',
+    inquiryTemplateAr: 'مرحباً، أريد عرض سعر لـ {product} من Blue Print.\nرقم OE أو رقم القطعة:\nالسيارة (العلامة، الموديل، السنة):\nالكمية:\nالوجهة (البلد والمدينة):\n',
     officialUrl: 'https://www.blue-print.com/'
   };
 })();

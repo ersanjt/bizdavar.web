@@ -2,7 +2,7 @@ bizdavarPageInit(function () {
       const crumbs = [
             { page: 'home', url: 'index' },
             { page: 'blog', url: 'blog' },
-            { name: 'Купить VEGAPULS 6X в Иране — цена, код заказа, запрос', url: 'buy-vegapuls-iran' }
+            { name: 'Купить VEGAPULS 6X по всему миру — цена, код заказа, запрос', url: 'buy-vegapuls-iran' }
           ];
       injectPageSeo('articleBuyVegapulsIran', {
         canonical: 'https://bizdavar.com/pages/articles/buy-vegapuls-iran',
@@ -10,8 +10,8 @@ bizdavarPageInit(function () {
         type: 'article'
       });
       injectArticleSchema({
-        title: 'Купить VEGAPULS 6X в Иране — цена, код заказа, запрос',
-        description: 'Как купить оригинальный VEGAPULS 6X для Ирана: код заказа, проформа и логистика на объект.',
+        title: 'Купить VEGAPULS 6X по всему миру — цена, код заказа, запрос',
+        description: 'Как купить оригинальный VEGAPULS 6X по всему миру: код заказа, проформа и логистика на объект.',
         date: '2026-08-29',
         dateModified: '2026-08-29',
         slug: 'pages/articles/buy-vegapuls-iran',

@@ -63,7 +63,7 @@ window.BIZDAVAR_LOCALES = {
       learnMore: 'بیشتر بدانید',
       guidesEyebrow: 'راهنمای خرید',
       guidesTitle: 'قبل از استعلام بخوانید',
-      guidesDesc: 'مقالات فارسی برای خریدار ایران — کد سفارش، چک‌لیست و مسیر واتساپ.',
+      guidesDesc: 'مقالات فارسی برای مشتریان در سراسر جهان — کد سفارش، چک‌لیست و مسیر واتساپ.',
       guideBuyVegapuls: 'خرید VEGAPULS 6X',
       guideBuyVegapulsDesc: 'قیمت، کد سفارش و استعلام',
       guideVegaQuote: 'چک‌لیست استعلام VEGA',
@@ -80,7 +80,7 @@ window.BIZDAVAR_LOCALES = {
       guideBuyDigiDesc: 'POS و صندوق فروشگاه',
       guideBuyTeraoka: 'خرید ترازو Teraoka',
       guideBuyTeraokaDesc: 'deli، POS و برچسب‌زن',
-      guideTrade: 'بازرگانی صنعتی ایران',
+      guideTrade: 'بازرگانی صنعتی بین‌المللی',
       guideTradeDesc: 'VEGA، Prosense و برندهای اصل',
       guideLiquiSupply: 'تامین Liqui Moly',
       guideLiquiSupplyDesc: 'روغن و افزودنی اصل',
@@ -134,7 +134,7 @@ window.BIZDAVAR_LOCALES = {
       catalogCount: '{count} محصول در کاتالوگ',
       catalogBrandAll: 'همه برندها',
       quotePrice: 'استعلام قیمت',
-      priceIranLabel: 'تحویل ایران',
+      priceIranLabel: 'تحویل بین‌المللی',
       priceSellLabel: 'قیمت فروش',
       techConsultCta: 'درخواست مشاوره فنی',
       navTrust: 'چرا بیزدوار',
@@ -286,7 +286,7 @@ window.BIZDAVAR_LOCALES = {
       site: 'سایت'
     },
     footer: {
-      tagline: 'بازرگانی تجهیزات صنعتی برای ایران — VEGA، Prosense، Liqui Moly — به‌همراه طراحی وب و بازاریابی دیجیتال.',
+      tagline: 'بازرگانی تجهیزات صنعتی برای همه کشورها — VEGA، Prosense، Liqui Moly — به‌همراه طراحی وب و بازاریابی دیجیتال.',
       services: 'خدمات',
       quickLinks: 'دسترسی سریع',
       brands: 'برندها',
@@ -345,7 +345,7 @@ window.BIZDAVAR_LOCALES = {
       { num: '۰۴', title: 'پشتیبانی و رشد', desc: 'بهینه‌سازی مستمر، گزارش‌دهی شفاف و همراهی بلندمدت برای رشد پایدار.' }
     ],
     industrial: {
-      eyebrow: 'بازرگانی صنعتی ایران',
+      eyebrow: 'بازرگانی صنعتی بین‌المللی',
       title: 'خرید VEGA، Prosense و برندهای صنعتی',
       desc: 'سنسور سطح، دتکتور گاز، ردیاب ناوگان و روغن صنعتی — انتخاب مدل، پیش‌فاکتور فارسی و لجستیک تا پروژه ایران',
       ctaTitle: 'نیاز به مشاوره تامین دارید؟',
@@ -367,8 +367,8 @@ window.BIZDAVAR_LOCALES = {
         { name: 'Pneumatic', title: 'پنوماتیک صنعتی', desc: 'سیلندر، شیر برقی، واحد مراقبت هوا، سنسور مغناطیسی و گریپر برای خطوط تولید ایران', badge: 'ترکیه', tags: ['واحد مراقبت', 'سیلندر', 'شیر برقی'], cta: 'کاتالوگ پنوماتیک' },
         { name: 'Teraoka', title: 'ترازو و تجهیزات فروشگاهی', desc: 'تامین کامل محصولات Teraoka Seiko — ترازو، برچسب‌زن، POS و تجهیزات فروشگاهی و صنعتی', badge: 'ژاپن', tags: ['Scales', 'Labeling', 'POS'], cta: 'مشاهده برند' },
         { name: 'Liqui Moly', title: 'روغن و افزودنی خودرو', desc: 'روغن موتور، Octane Plus، افزودنی دیزل و مراقبت خودرو — قیمت دلاری شفاف', badge: 'آلمان', tags: ['Octane Plus', 'Top Tec', '5W-30'], cta: 'کاتالوگ و قیمت' },
-        { name: 'Auto-Moto', title: 'تجهیزات موتورسیکلت', desc: 'کلاه ایمنی، کاپشن، دستکش، شلوار، بوت، اینترکام و محافظ — قیمت دلاری تحویل ایران', badge: 'جدید', tags: ['کلاه ایمنی', 'کاپشن موتور', 'بوت موتور'], cta: 'کاتالوگ و استعلام' },
-        { name: 'Car Parts', title: 'لنت و دیسک ترمز', desc: 'لنت، دیسک و قطعات ترمز با انتخاب برند و مدل — قیمت دلاری تحویل ایران', badge: 'جدید', tags: ['لنت ترمز', 'دیسک ترمز', 'اصل'], cta: 'فروشگاه ترمز' },
+        { name: 'Auto-Moto', title: 'تجهیزات موتورسیکلت', desc: 'کلاه ایمنی، کاپشن، دستکش، شلوار، بوت، اینترکام و محافظ — قیمت دلاری تحویل بین‌المللی', badge: 'جدید', tags: ['کلاه ایمنی', 'کاپشن موتور', 'بوت موتور'], cta: 'کاتالوگ و استعلام' },
+        { name: 'Car Parts', title: 'لنت و دیسک ترمز', desc: 'لنت، دیسک و قطعات ترمز با انتخاب برند و مدل — قیمت دلاری تحویل بین‌المللی', badge: 'جدید', tags: ['لنت ترمز', 'دیسک ترمز', 'اصل'], cta: 'فروشگاه ترمز' },
         { name: 'Ostrich', title: 'چرم شترمرغ', desc: 'چرم شترمرغ ایرانی — کراس، رنگ‌شده و ساق. تولید در ایران، از ۶ دلار.', badge: 'ایران', tags: ['کراس', 'رنگ‌شده', 'ساق'], cta: 'کاتالوگ عمده' }
       ]
     },
@@ -399,7 +399,7 @@ window.BIZDAVAR_LOCALES = {
       ]
     },
     geo: {
-      summary: 'خدمات در ایران، ترکیه و ۱۱ کشور — دفاتر در ایران، ترکیه، ارمنستان و دبی · مشاوره فارسی، واتساپ و تحویل بین‌المللی.',
+      summary: 'خدمات در ایران، ترکیه و ۱۱ کشور — دفاتر در در سراسر جهان · مشاوره فارسی، واتساپ و تحویل بین‌المللی.',
       hubs: [
         { city: 'تبریز', country: 'ایران', role: 'دفتر ایران · پروژه‌های صنعتی و دیجیتال' },
         { city: 'استانبول', country: 'ترکیه', role: 'دفتر ترکیه · فین‌تک و عملیات بین‌المللی' },
@@ -412,7 +412,7 @@ window.BIZDAVAR_LOCALES = {
       heroTitle: 'رشد کسب‌وکار شما با',
       heroTitleSpan: 'دیجیتال و تامین',
       heroTitleEnd: 'صنعتی',
-      heroDesc: 'طراحی سایت با Fast Web Studio، بازاریابی دیجیتال و FXGuard؛ کنار آن تامین VEGA، Gamak، Teltonika، فروشگاه موتورسیکلت و قطعات خودرو. دفاتر ایران، ترکیه، ارمنستان و دبی.',
+      heroDesc: 'طراحی سایت با Fast Web Studio، بازاریابی دیجیتال و FXGuard؛ کنار آن تامین VEGA، Gamak، Teltonika، فروشگاه موتورسیکلت و قطعات خودرو. دفاتر در سراسر جهان.',
       viewServices: 'مشاهده خدمات',
       heroFast: 'سایت از $99 — ۵ روز',
       heroIndustrial: 'استعلام صنعتی',
@@ -441,7 +441,7 @@ window.BIZDAVAR_LOCALES = {
       svcServerImgAlt: 'مدیریت سرور و زیرساخت',
       svcFieldImgAlt: 'خدمات فنی دوربین و سیم‌کشی در تبریز',
       fastImgAlt: 'طراحی سایت انگلیسی در پنج روز کاری',
-      intentNavLabel: 'خرید سریع برای ایران',
+      intentNavLabel: 'خرید سریع برای همه کشورها',
       intentVega: 'خرید VEGA',
       intentProsense: 'دتکتور Prosense',
       intentLiqui: 'Liqui Moly',
@@ -547,7 +547,7 @@ window.BIZDAVAR_LOCALES = {
       formSuccess: 'پیام شما با موفقیت ارسال شد. به‌زودی با شما تماس می‌گیریم.',
       formSuccessMailto: 'پیام شما آماده ارسال است. اگر پنجره ایمیل باز نشد، مستقیماً به info@bizdavar.com بنویسید.',
       formSuccessWhatsapp: 'پیام شما برای واتساپ آماده شد. اگر پنجره باز نشد، از دکمه‌های واتساپ همین صفحه استفاده کنید.',
-      geoText: 'مشاوره و پشتیبانی از دفاتر ایران، ترکیه، ارمنستان و دبی — واتساپ فارسی و ترکی.',
+      geoText: 'مشاوره و پشتیبانی از دفاتر در سراسر جهان — واتساپ فارسی و ترکی.',
       formError: 'ارسال ناموفق بود. لطفاً دوباره تلاش کنید یا مستقیماً به info@bizdavar.com ایمیل بزنید.',
       waTr: 'واتساپ فروش',
       waIr: 'واتساپ فارسی',
@@ -609,7 +609,7 @@ window.BIZDAVAR_LOCALES = {
         h1: 'اتوموتو',
         lead: 'این‌ها دو فروشگاه جدا هستند. تجهیزات موتور را از فروشگاه موتورسیکلت بگیرید و لنت و دیسک را از فروشگاه ترمز.',
         motoTitle: 'فروشگاه موتورسیکلت',
-        motoDesc: 'کلاه ایمنی، کاپشن، دستکش، شلوار، بوت، اینترکام و محافظ. قیمت روی کارت به دلار است و برای تحویل در ایران.',
+        motoDesc: 'کلاه ایمنی، کاپشن، دستکش، شلوار، بوت، اینترکام و محافظ. قیمت روی کارت به دلار است و برای تحویل در سراسر جهان.',
         motoHelmet: 'کلاه',
         motoJacket: 'کاپشن',
         motoBoots: 'بوت',
@@ -626,7 +626,7 @@ window.BIZDAVAR_LOCALES = {
       motorcycle: {
         crumb: 'تجهیزات موتورسیکلت',
         h1: 'خرید تجهیزات موتورسیکلت',
-        lead: 'کلاه ایمنی، کاپشن، دستکش، شلوار، بوت و اینترکام. قیمت روی کارت به دلار است و برای تحویل در ایران.',
+        lead: 'کلاه ایمنی، کاپشن، دستکش، شلوار، بوت و اینترکام. قیمت روی کارت به دلار است و برای تحویل در سراسر جهان.',
         helmet: 'کلاه',
         jacket: 'کاپشن',
         boots: 'بوت',
@@ -691,7 +691,7 @@ window.BIZDAVAR_LOCALES = {
     },
     seo: {
       defaultTitle: 'Bizdavar Group | Web tasarım, dijital pazarlama ve endüstriyel tedarik',
-      defaultDescription: 'Bizdavar Group: Fast Web Studio ile web tasarım, dijital pazarlama ve SMM, FXGuard WhatsApp CRM, VEGA, Prosense ve Liqui Moly tedariki. Ofisler: İran, Türkiye, Ermenistan ve Dubai.',
+      defaultDescription: 'Bizdavar Group: Fast Web Studio ile web tasarım, dijital pazarlama ve SMM, FXGuard WhatsApp CRM, VEGA, Prosense ve Liqui Moly tedariki. Ofisler: dünya genelinde.',
       keywords: 'Bizdavar, web tasarım İstanbul, dijital pazarlama, FXGuard, VEGA, Prosense, Liqui Moly, Fast Web Studio',
       schemaServices: 'Bizdavar Group hizmetleri',
       schemaBlog: 'Bizdavar Group blog',
@@ -1041,7 +1041,7 @@ window.BIZDAVAR_LOCALES = {
         { name: 'Pneumatic', title: 'Endüstriyel pnömatik', desc: 'Hava hazırlama, silindir, valf ve manyetik sensör', badge: 'Türkiye', tags: ['FRL', 'Silindir', 'Valf'], cta: 'Pnömatik kataloğu' },
         { name: 'Teraoka', title: 'Terazi ve mağaza ekipmanları', desc: 'Teraoka Seiko ürünlerinin tam tedariki — terazi, etiketleme, POS', badge: 'Japonya', tags: ['Scales', 'Labeling', 'POS'], cta: 'Markayı gör' },
         { name: 'Liqui Moly', title: 'Motor yağı ve katkı', desc: 'Motor yağı, Octane Plus, dizel katkı ve oto bakım — şeffaf dolar fiyat', badge: 'Almanya', tags: ['Octane Plus', 'Top Tec', '5W-30'], cta: 'Katalog ve fiyat' },
-        { name: 'Auto-Moto', title: 'Motosiklet ekipmanı', desc: 'Kask, mont, eldiven, pantolon, bot, interkom ve koruma — kart fiyatı İran teslimi için dolardır', badge: 'Yeni', tags: ['Kask', 'Motosiklet montu', 'Motosiklet botu'], cta: 'Katalog ve teklif' },
+        { name: 'Auto-Moto', title: 'Motosiklet ekipmanı', desc: 'Kask, mont, eldiven, pantolon, bot, interkom ve koruma — kart fiyatı uluslararası teslim için dolardır', badge: 'Yeni', tags: ['Kask', 'Motosiklet montu', 'Motosiklet botu'], cta: 'Katalog ve teklif' },
         { name: 'Car Parts', title: 'Fren balatası ve diski', desc: 'Balata, disk ve fren parçası — marka ve model seçimi, İran teslim USD', badge: 'Yeni', tags: ['Balata', 'Disk', 'Orijinal'], cta: 'Fren mağazası' },
         { name: 'Ostrich', title: 'Devekuşu derisi', desc: 'İran’da, ham deriden kesime hazır hale kadar üretiyoruz. Krust fit kare 6,50 dolardan, boyalı 8,50, bacak 6 dolardan.', badge: 'İran', tags: ['Krust', 'Boyalı', 'Bacak'], cta: 'Toptan katalog' }
       ]
@@ -1073,7 +1073,7 @@ window.BIZDAVAR_LOCALES = {
       ]
     },
     geo: {
-      summary: 'İran, Türkiye ve 11 ülkede hizmet — ofisler İran, Türkiye, Ermenistan ve Dubai\'de · Türkçe danışmanlık, WhatsApp ve uluslararası teslimat.',
+      summary: 'İran, Türkiye ve 11 ülkede hizmet — ofisler dünya genelinde\'de · Türkçe danışmanlık, WhatsApp ve uluslararası teslimat.',
       hubs: [
         { city: 'Tebriz', country: 'İran', role: 'İran ofisi · endüstriyel ve dijital projeler' },
         { city: 'İstanbul', country: 'Türkiye', role: 'Türkiye ofisi · fintech ve uluslararası operasyon' },
@@ -1086,7 +1086,7 @@ window.BIZDAVAR_LOCALES = {
       heroTitle: 'İşinizi',
       heroTitleSpan: 'akıllı dijital çözümlerle',
       heroTitleEnd: 'büyütün',
-      heroDesc: 'Fast Web Studio ile web tasarım, dijital pazarlama, FXGuard; yanında VEGA, Gamak, Teltonika, motosiklet ekipmanı ve oto yedek parça tedariki. Ofisler: İran, Türkiye, Ermenistan ve Dubai.',
+      heroDesc: 'Fast Web Studio ile web tasarım, dijital pazarlama, FXGuard; yanında VEGA, Gamak, Teltonika, motosiklet ekipmanı ve oto yedek parça tedariki. Ofisler: dünya genelinde.',
       viewServices: 'Hizmetleri gör',
       heroFast: 'Site $99\'dan — 5 gün',
       heroIndustrial: 'Endüstriyel teklif',
@@ -1295,7 +1295,7 @@ window.BIZDAVAR_LOCALES = {
         h1: 'Auto-Moto',
         lead: 'Bunlar iki ayrı mağaza. Motosiklet ekipmanını motosiklet mağazasından, balata ve diski fren mağazasından seçin.',
         motoTitle: 'Motosiklet mağazası',
-        motoDesc: 'Kask, mont, eldiven, pantolon, bot, interkom ve koruma. Karttaki fiyat dolardır ve İran teslimi içindir.',
+        motoDesc: 'Kask, mont, eldiven, pantolon, bot, interkom ve koruma. Karttaki fiyat dolardır ve uluslararası teslim içindir.',
         motoHelmet: 'Kask',
         motoJacket: 'Mont',
         motoBoots: 'Bot',
@@ -1312,7 +1312,7 @@ window.BIZDAVAR_LOCALES = {
       motorcycle: {
         crumb: 'Motosiklet ekipmanı',
         h1: 'Motosiklet ekipmanı',
-        lead: 'Kask, mont, eldiven, pantolon, bot ve interkom. Karttaki fiyat ABD dolarıdır ve İran teslimi içindir.',
+        lead: 'Kask, mont, eldiven, pantolon, bot ve interkom. Karttaki fiyat ABD dolarıdır ve uluslararası teslim içindir.',
         helmet: 'Kask',
         jacket: 'Mont',
         boots: 'Bot',
@@ -1377,7 +1377,7 @@ window.BIZDAVAR_LOCALES = {
     },
     seo: {
       defaultTitle: 'Bizdavar Group | Web design, digital marketing & industrial supply',
-      defaultDescription: 'Bizdavar Group: Fast Web Studio websites, digital marketing & SMM, FXGuard WhatsApp CRM, plus VEGA, Prosense and Liqui Moly supply. Offices in Iran, Turkey, Armenia and Dubai.',
+      defaultDescription: 'Bizdavar Group: Fast Web Studio websites, digital marketing & SMM, FXGuard WhatsApp CRM, plus VEGA, Prosense and Liqui Moly supply. Offices in worldwide.',
       keywords: 'Bizdavar, web design Istanbul, digital marketing, FXGuard, VEGA, Prosense, Liqui Moly, Fast Web Studio',
       schemaServices: 'Bizdavar Group services',
       schemaBlog: 'Bizdavar Group blog',
@@ -1727,7 +1727,7 @@ window.BIZDAVAR_LOCALES = {
         { name: 'Pneumatic', title: 'Industrial pneumatics', desc: 'Air preparation, cylinders, valves and magnetic sensors', badge: 'Turkey', tags: ['FRL', 'Cylinder', 'Valve'], cta: 'Pneumatic catalog' },
         { name: 'Teraoka', title: 'Scales & store equipment', desc: 'Full Teraoka Seiko supply — scales, labeling, POS and retail/industrial equipment', badge: 'Japan', tags: ['Scales', 'Labeling', 'POS'], cta: 'View brand' },
         { name: 'Liqui Moly', title: 'Oils & fuel additives', desc: 'Engine oils, Octane Plus, diesel additives and car care — transparent USD pricing', badge: 'Germany', tags: ['Octane Plus', 'Top Tec', '5W-30'], cta: 'Catalog & pricing' },
-        { name: 'Auto-Moto', title: 'Motorcycle gear', desc: 'Helmets, jackets, gloves, pants, boots, intercoms and armor — card prices are USD for delivery in Iran', badge: 'New', tags: ['Helmets', 'Jackets', 'Boots'], cta: 'Catalog and quote' },
+        { name: 'Auto-Moto', title: 'Motorcycle gear', desc: 'Helmets, jackets, gloves, pants, boots, intercoms and armor — card prices are USD for worldwide delivery', badge: 'New', tags: ['Helmets', 'Jackets', 'Boots'], cta: 'Catalog and quote' },
         { name: 'Car Parts', title: 'Brake pads and discs', desc: 'Pads, discs and brake parts by brand and model — Iran-delivery USD', badge: 'New', tags: ['Pads', 'Discs', 'OEM'], cta: 'Brake shop' },
         { name: 'Ostrich', title: 'Ostrich leather', desc: 'Tanned in Iran, from raw skin to leather ready to cut. Crust from $6.50 per square foot, dyed from $8.50, legs from $6.', badge: 'Iran', tags: ['Crust', 'Dyed', 'Leg'], cta: 'Wholesale catalog' }
       ]
@@ -1759,7 +1759,7 @@ window.BIZDAVAR_LOCALES = {
       ]
     },
     geo: {
-      summary: 'Services across Iran, Turkey and 11 countries — offices in Iran, Turkey, Armenia and Dubai — multilingual support, WhatsApp, and international delivery.',
+      summary: 'Services across Iran, Turkey and 11 countries — offices in worldwide — multilingual support, WhatsApp, and international delivery.',
       hubs: [
         { city: 'Tabriz', country: 'Iran', role: 'Industrial and digital projects' },
         { city: 'Istanbul', country: 'Turkey', role: 'Fintech and international operations' },
@@ -1772,7 +1772,7 @@ window.BIZDAVAR_LOCALES = {
       heroTitle: 'Grow your business with',
       heroTitleSpan: 'smart digital',
       heroTitleEnd: 'solutions',
-      heroDesc: 'Fast Web Studio websites, digital marketing, FXGuard, plus VEGA, Gamak, Teltonika, motorcycle gear and car parts. Offices in Iran, Turkey, Armenia and Dubai.',
+      heroDesc: 'Fast Web Studio websites, digital marketing, FXGuard, plus VEGA, Gamak, Teltonika, motorcycle gear and car parts. Offices in worldwide.',
       viewServices: 'View services',
       heroFast: 'Website from $99 — 5 days',
       heroIndustrial: 'Industrial quote',
@@ -1919,7 +1919,7 @@ window.BIZDAVAR_LOCALES = {
       formSuccess: 'Your message was sent successfully. We will contact you soon.',
       formSuccessMailto: 'Your message is ready to send. If the email window does not open, write to info@bizdavar.com directly.',
       formSuccessWhatsapp: 'Your message is ready for WhatsApp. If the window did not open, use the WhatsApp buttons on this page.',
-      geoText: 'English consulting from Istanbul — Zoom/Meet or WhatsApp. Invoice in USD or EUR. Iran supply desk available separately.',
+      geoText: 'English consulting from Istanbul — Zoom/Meet or WhatsApp. Invoice in USD or EUR. worldwide supply desk available separately.',
       formError: 'Sending failed. Please try again or email info@bizdavar.com directly.',
       waTr: 'Sales WhatsApp',
       waIr: 'Iran WhatsApp',
@@ -1981,7 +1981,7 @@ window.BIZDAVAR_LOCALES = {
         h1: 'Auto-Moto',
         lead: 'These are two separate shops. Take riding gear from the motorcycle shop, and pads and discs from the brake shop.',
         motoTitle: 'Motorcycle shop',
-        motoDesc: 'Helmets, jackets, gloves, pants, boots, intercoms and armor. The price on the card is in US dollars for delivery in Iran.',
+        motoDesc: 'Helmets, jackets, gloves, pants, boots, intercoms and armor. The price on the card is in US dollars for worldwide delivery.',
         motoHelmet: 'Helmets',
         motoJacket: 'Jackets',
         motoBoots: 'Boots',
@@ -1998,7 +1998,7 @@ window.BIZDAVAR_LOCALES = {
       motorcycle: {
         crumb: 'Motorcycle gear',
         h1: 'Motorcycle gear',
-        lead: 'Helmets, jackets, gloves, pants, boots and intercoms. The price on the card is in US dollars, for delivery in Iran.',
+        lead: 'Helmets, jackets, gloves, pants, boots and intercoms. The price on the card is in US dollars, for worldwide delivery.',
         helmet: 'Helmets',
         jacket: 'Jackets',
         boots: 'Boots',

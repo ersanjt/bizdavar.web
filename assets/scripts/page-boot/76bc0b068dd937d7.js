@@ -19,7 +19,7 @@ bizdavarPageInit(function () {
       injectAutoMotoSchema();
       renderGeoStrip('geoStrip', {
         textKey: 'autoMotoPage.geoText',
-        text: "توريد معدات الدراجات النارية — السعر على البطاقة بالدولار الأمريكي لتسليم إيران."
+        text: "توريد معدات الدراجات النارية — السعر على البطاقة بالدولار الأمريكي للتسليم الدولي."
       });
       renderRelatedLinks([
         { title: "أوتو-موتو", url: "auto-moto", desc: "متجران منفصلان: المعدات والفرامل", titleKey: 'autoMotoPage.related.0.title', descKey: 'autoMotoPage.related.0.desc' },

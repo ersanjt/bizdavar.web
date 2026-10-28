@@ -516,7 +516,7 @@ function page(entry, isHub) {
   <div id="relatedLinks"></div>
   </main>
 
-  <script src="/assets/scripts/site-loader.js?v=${LOADER_VER}" data-after-seo="i18n/${entry.i18n}-i18n.js"${before}></script>
+  <script src="/assets/scripts/site-loader.js?v=20261028c" data-after-seo="i18n/${entry.i18n}-i18n.js"${before}></script>
 
   ${bootTag(`bizdavarPageInit(function () {
       const toolsLabel = window.BIZDAVAR_I18N ? window.BIZDAVAR_I18N.t('nav.tools', '') : '';

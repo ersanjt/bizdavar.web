@@ -1205,7 +1205,7 @@
         { title: 'مقاله Ads آمریکا و اروپا', url: 'articles/digital-marketing-us-eu', desc: 'Google، Meta، LinkedIn' },
         { title: 'تماس — پیشنهاد وب', url: 'contact?service=web-design', desc: 'فاکتور USD یا EUR' }
       ],
-      geoText: 'خدمات دیجیتال و فنی بیزدوار — دفاتر ایران، ترکیه، ارمنستان و دبی؛ واتساپ تخصصی خدمات فنی.'
+      geoText: 'خدمات دیجیتال و فنی بیزدوار — دفاتر در سراسر جهان؛ واتساپ تخصصی خدمات فنی.'
     },
     tr: {
       hero: {

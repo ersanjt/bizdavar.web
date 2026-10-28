@@ -35,7 +35,7 @@ const LOCALES = [
 const HUB = {
   fa: {
     title: 'اتو‌موتو | فروشگاه موتورسیکلت و قطعات خودرو | بیزدوار',
-    desc: 'اتو‌موتو دو فروشگاه جدا دارد: تجهیزات موتورسیکلت با قیمت دلاری تحویل ایران، و قطعات خودرو فقط با استعلام. هر بخش فقط داده خودش را لود می‌کند.',
+    desc: 'اتو‌موتو دو فروشگاه جدا دارد: تجهیزات موتورسیکلت با قیمت دلاری تحویل بین‌المللی، و قطعات خودرو فقط با استعلام. هر بخش فقط داده خودش را لود می‌کند.',
     h1: 'اتو‌موتو',
     lead: 'موتورسیکلت و قطعات خودرو قاطی نیستند. وارد همان بخشی شوید که لازم دارید.',
     motoTitle: 'فروشگاه موتورسیکلت',
@@ -128,10 +128,10 @@ const CAR_H1 = {
 };
 
 const COPY = {
-  fa: { shop: 'فروشگاه موتورسیکلت', quote: 'استعلام', price: 'دلار · تحویل ایران', back: 'بازگشت به فروشگاه', sku: 'کد کالا', cat: 'دسته', brand: 'برند', type: 'نوع', inStock: 'موجود', outStock: 'ناموجود', ask: 'نیاز به استعلام', note: 'سایز، رنگ و مشخصات فنی سازنده در این صفحه ثبت نشده و قبل از سفارش جدا تأیید می‌شود.' },
+  fa: { shop: 'فروشگاه موتورسیکلت', quote: 'استعلام', price: 'دلار · تحویل بین‌المللی', back: 'بازگشت به فروشگاه', sku: 'کد کالا', cat: 'دسته', brand: 'برند', type: 'نوع', inStock: 'موجود', outStock: 'ناموجود', ask: 'نیاز به استعلام', note: 'سایز، رنگ و مشخصات فنی سازنده در این صفحه ثبت نشده و قبل از سفارش جدا تأیید می‌شود.' },
   tr: { shop: 'Motosiklet mağazası', quote: 'Teklif', price: 'USD · İran teslim', back: 'Mağazaya dön', sku: 'Ürün kodu', cat: 'Kategori', brand: 'Marka', type: 'Tür', inStock: 'Stokta', outStock: 'Stok yok', ask: 'Teklif gerekir', note: 'Beden, renk ve üretici teknik özellikleri bu sayfada yoktur; siparişten önce ayrıca doğrulanır.' },
   en: { shop: 'Motorcycle shop', quote: 'Request a quote', price: 'USD · Iran delivery', back: 'Back to the shop', sku: 'Item code', cat: 'Category', brand: 'Brand', type: 'Type', inStock: 'In stock', outStock: 'Out of stock', ask: 'Quote only', note: 'Size, color and the maker’s technical specifications are not stored on this page and are confirmed before the order.' },
-  ru: { shop: 'Мотоэкипировка', quote: 'Запросить цену', price: 'USD · доставка в Иран', back: 'Назад в магазин', sku: 'Код', cat: 'Категория', brand: 'Бренд', type: 'Тип', inStock: 'В наличии', outStock: 'Нет в наличии', ask: 'Только запрос', note: 'Размер, цвет и технические данные производителя на этой странице не указаны и уточняются до заказа.' },
+  ru: { shop: 'Мотоэкипировка', quote: 'Запросить цену', price: 'USD · международная доставка', back: 'Назад в магазин', sku: 'Код', cat: 'Категория', brand: 'Бренд', type: 'Тип', inStock: 'В наличии', outStock: 'Нет в наличии', ask: 'Только запрос', note: 'Размер, цвет и технические данные производителя на этой странице не указаны и уточняются до заказа.' },
   ar: { shop: 'متجر الدراجة', quote: 'استعلام', price: 'دولار · تسليم إيران', back: 'العودة للمتجر', sku: 'رمز المنتج', cat: 'الفئة', brand: 'العلامة', type: 'النوع', inStock: 'متوفر', outStock: 'غير متوفر', ask: 'استعلام فقط', note: 'المقاس واللون والمواصفات الفنية للمصنّع غير مسجلة هنا وتُؤكد قبل الطلب.' }
 };
 
@@ -208,7 +208,7 @@ ${alts}
       </div>
     </section>
   </main>
-  <script src="/assets/scripts/site-loader.js?v=${VER}"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261028c"></script>
   ${bootTag(`bizdavarPageInit(function () {
       renderBreadcrumbs([
         { page: 'home', url: 'index' },
@@ -343,14 +343,14 @@ function productDesc(loc, item, title, cat) {
   const brand = item.brand || 'Bizdavar';
   const priced = item.priceUsd != null && item.priceUsd !== '';
   const text = priced ? {
-    tr: `${title}. ${brand} ${cat} motosiklet mağazasında, USD fiyat ve İran teslimi. Siparişten önce beden, renk ve üretici özelliğini doğrulayın.`,
+    tr: `${title}. ${brand} ${cat} motosiklet mağazasında, USD fiyat ve uluslararası teslim. Siparişten önce beden, renk ve üretici özelliğini doğrulayın.`,
     en: `${title}. ${brand} ${cat} from the motorcycle shop, priced in USD with delivery to Iran. Confirm size, color and the maker specification before you order.`,
-    ru: `${title}. ${cat} ${brand} в магазине мотоэкипировки: цена в USD, доставка в Иран. Размер, цвет и данные производителя уточняются до заказа.`,
+    ru: `${title}. ${cat} ${brand} в магазине мотоэкипировки: цена в USD, международная доставка. Размер, цвет и данные производителя уточняются до заказа.`,
     ar: `${title}. ${cat} من ${brand} في متجر الدراجة، السعر بالدولار مع التسليم في إيران. يُؤكد المقاس واللون ومواصفات المصنّع قبل الطلب.`
   } : {
-    tr: `${title}. ${brand} ${cat} motosiklet mağazasında. Fiyat teklifle bildirilir ve İran teslimi planlanır. Siparişten önce beden, renk ve üretici özelliğini doğrulayın.`,
+    tr: `${title}. ${brand} ${cat} motosiklet mağazasında. Fiyat teklifle bildirilir ve uluslararası teslim planlanır. Siparişten önce beden, renk ve üretici özelliğini doğrulayın.`,
     en: `${title}. ${brand} ${cat} from the motorcycle shop. The price is given on request, with delivery arranged to Iran. Confirm size, color and the maker specification before you order.`,
-    ru: `${title}. ${cat} ${brand} в магазине мотоэкипировки. Цена по запросу, доставка в Иран. Размер, цвет и данные производителя уточняются до заказа.`,
+    ru: `${title}. ${cat} ${brand} в магазине мотоэкипировки. Цена по запросу, международная доставка. Размер, цвет и данные производителя уточняются до заказа.`,
     ar: `${title}. ${cat} من ${brand} في متجر الدراجة. السعر عند الطلب، والتسليم إلى إيران. يُؤكد المقاس واللون ومواصفات المصنّع قبل الطلب.`
   };
   return (text[loc.code] || `${title}. ${cat}. ${brand}`).replace(/\s+/g, ' ').slice(0, 280);
@@ -478,7 +478,7 @@ ${hreflang(item.id)}
     </article>
   </main>
   ${GALLERY_TAG}
-  <script src="/assets/scripts/site-loader.js?v=${VER}"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261028c"></script>
 </body>
 </html>
 `;

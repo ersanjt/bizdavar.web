@@ -19,7 +19,7 @@ bizdavarPageInit(function () {
       injectAutoMotoSchema();
       renderGeoStrip('geoStrip', {
         textKey: 'autoMotoPage.geoText',
-        text: "تامین تجهیزات موتورسیکلت — قیمت روی کارت به دلار و برای تحویل در ایران."
+        text: "تامین تجهیزات موتورسیکلت — قیمت روی کارت به دلار و برای تحویل در سراسر جهان."
       });
       renderRelatedLinks([
         { title: "اتوموتو", url: "auto-moto", desc: "دو فروشگاه جدا: موتور و ترمز", titleKey: 'autoMotoPage.related.0.title', descKey: 'autoMotoPage.related.0.desc' },

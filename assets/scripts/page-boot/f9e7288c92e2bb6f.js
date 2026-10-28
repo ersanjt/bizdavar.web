@@ -2,7 +2,7 @@ bizdavarPageInit(function () {
       const crumbs = [
             { page: 'home', url: 'index' },
             { page: 'blog', url: 'blog' },
-            { name: 'Запрос цены VEGA в Иране — что прислать', url: 'vega-quote-iran' }
+            { name: 'Запрос цены VEGA по всему миру — что прислать', url: 'vega-quote-iran' }
           ];
       injectPageSeo('articleVegaQuoteIran', {
         canonical: 'https://bizdavar.com/pages/articles/vega-quote-iran',
@@ -10,7 +10,7 @@ bizdavarPageInit(function () {
         type: 'article'
       });
       injectArticleSchema({
-        title: 'Запрос цены VEGA в Иране — что прислать',
+        title: 'Запрос цены VEGA по всему миру — что прислать',
         description: 'Чек-лист запроса VEGA: резервуар, среда, Ex/SIL и фото шильдика.',
         date: '2026-08-29',
         dateModified: '2026-08-29',

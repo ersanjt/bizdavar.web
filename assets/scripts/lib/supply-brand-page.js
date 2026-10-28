@@ -96,7 +96,7 @@ window.createSupplyBrandPage = function (cfg) {
     const label = item.priceFrom
       ? t('priceFrom', 'شروع از')
       : (item.iranDelivery && p.currency === 'USD'
-        ? t('priceIranLabel', 'تحویل ایران')
+        ? t('priceIranLabel', 'تحویل بین‌المللی')
         : (p.currency === 'EUR' ? t('priceSellLabel', 'قیمت فروش') : t('approxPrice', 'تقریبی')));
     if (kind === 'div') {
       return `<div class="${prefix}-price"><span class="${prefix}-price__label">${label}</span><strong dir="ltr">${formatOfferAmount(p)}</strong></div>`;

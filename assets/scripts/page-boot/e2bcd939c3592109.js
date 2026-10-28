@@ -2,7 +2,7 @@ bizdavarPageInit(function () {
       const crumbs = [
             { page: 'home', url: 'index' },
             { page: 'blog', url: 'blog' },
-            { name: 'Промышленная торговля в Иране — VEGA, Prosense и оригинал', url: 'industrial-trade-iran' }
+            { name: 'Промышленная торговля по всему миру — VEGA, Prosense и оригинал', url: 'industrial-trade-iran' }
           ];
       injectPageSeo('articleIndustrialTradeIran', {
         canonical: 'https://bizdavar.com/pages/articles/industrial-trade-iran',
@@ -10,8 +10,8 @@ bizdavarPageInit(function () {
         type: 'article'
       });
       injectArticleSchema({
-        title: 'Промышленная торговля в Иране — VEGA, Prosense и оригинал',
-        description: 'Оригинальные поставки КИП, газовой безопасности, GPS и масел для Ирана — один контакт.',
+        title: 'Промышленная торговля по всему миру — VEGA, Prosense и оригинал',
+        description: 'Оригинальные поставки КИП, газовой безопасности, GPS и масел по всему миру — один контакт.',
         date: '2026-08-27',
         dateModified: '2026-08-29',
         slug: 'pages/articles/industrial-trade-iran',

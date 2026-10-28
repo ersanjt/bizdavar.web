@@ -383,7 +383,7 @@ window.BIZDAVAR_CONFIG = {
 
   geo: {
     headquarters: { city: 'چنددفتری', country: 'ایران · ترکیه · ارمنستان · دبی', countryCode: 'INTL' },
-    summaryFa: 'خدمات در ایران، ترکیه و ۱۱ کشور — دفاتر در ایران، ترکیه، ارمنستان و دبی · مشاوره فارسی، واتساپ و تحویل بین‌المللی.',
+    summaryFa: 'خدمات در ایران، ترکیه و ۱۱ کشور — دفاتر در در سراسر جهان · مشاوره فارسی، واتساپ و تحویل بین‌المللی.',
     hubs: [
       { city: 'تبریز', country: 'ایران', code: 'IR', role: 'دفتر ایران · پروژه‌های صنعتی و دیجیتال' },
       { city: 'استانبول', country: 'ترکیه', code: 'TR', role: 'دفتر ترکیه · فین‌تک و عملیات بین‌المللی' },
@@ -855,7 +855,7 @@ window.BIZDAVAR_CONFIG = {
     {
       name: 'Blue Print',
       title: 'قطعات یدکی خودرو',
-      desc: 'فیلتر، ترمز، کلاچ، جلوبندی، تایم و برق برای خودروهای آسیایی — تامین ایران و روسیه',
+      desc: 'فیلتر، ترمز، کلاچ، جلوبندی، تایم و برق برای خودروهای آسیایی — تامین همه کشورها',
       logo: 'assets/images/partners/blue-print.svg?v=20261028',
       photo: 'assets/images/partners/blue-print.svg?v=20261028',
       url: 'pages/blue-print',
@@ -868,7 +868,7 @@ window.BIZDAVAR_CONFIG = {
     {
       name: 'Auto-Moto',
       title: 'تجهیزات موتورسیکلت',
-      desc: 'کلاه ایمنی، کاپشن، دستکش، شلوار، بوت، اینترکام و محافظ — قیمت دلاری تحویل ایران',
+      desc: 'کلاه ایمنی، کاپشن، دستکش، شلوار، بوت، اینترکام و محافظ — قیمت دلاری تحویل بین‌المللی',
       logo: 'assets/images/auto-moto/logo-moto-shop.svg',
       photo: 'assets/images/content/home-brand-auto-moto.webp',
       url: 'pages/motorcycle',
@@ -881,7 +881,7 @@ window.BIZDAVAR_CONFIG = {
     {
       name: 'Car Parts',
       title: 'لنت و دیسک ترمز',
-      desc: 'لنت، دیسک و قطعات ترمز با انتخاب برند و مدل — قیمت دلاری تحویل ایران',
+      desc: 'لنت، دیسک و قطعات ترمز با انتخاب برند و مدل — قیمت دلاری تحویل بین‌المللی',
       logo: 'assets/images/auto-moto/logo-brake-shop.svg',
       photo: 'assets/images/content/home-brand-car-parts.jpg',
       url: 'pages/car-parts',

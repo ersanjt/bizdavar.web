@@ -2,7 +2,7 @@ bizdavarPageInit(function () {
       const crumbs = [
             { page: 'home', url: 'index' },
             { page: 'blog', url: 'blog' },
-            { name: 'Купить двигатель Gamak в Иране — кВт, фланец, запрос', url: 'buy-gamak-iran' }
+            { name: 'Купить двигатель Gamak по всему миру — кВт, фланец, запрос', url: 'buy-gamak-iran' }
           ];
       injectPageSeo('articleBuyGamakIran', {
         canonical: 'https://bizdavar.com/pages/articles/buy-gamak-iran',
@@ -10,8 +10,8 @@ bizdavarPageInit(function () {
         type: 'article'
       });
       injectArticleSchema({
-        title: 'Купить двигатель Gamak в Иране — кВт, фланец, запрос',
-        description: 'Как купить оригинальный Gamak для насосов и линий в Иране: кВт, об/мин, фланец B3/B5.',
+        title: 'Купить двигатель Gamak по всему миру — кВт, фланец, запрос',
+        description: 'Как купить оригинальный Gamak для насосов и линий по всему миру: кВт, об/мин, фланец B3/B5.',
         date: '2026-08-29',
         dateModified: '2026-08-29',
         slug: 'pages/articles/buy-gamak-iran',

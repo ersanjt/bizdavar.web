@@ -3485,7 +3485,7 @@
       { title: 'Sensor selection consulting', desc: 'Paddle, vibration, capacitive or radar — per UWT datasheet' },
       { title: 'Replace an existing model', desc: 'Match process connection, probe length and signal output' },
       { title: 'Official proforma', desc: 'Price, lead time and shipping terms in one document' },
-      { title: 'Logistics to Iran', desc: 'From the UWT factory to project delivery' },
+      { title: 'Worldwide logistics', desc: 'From the UWT factory to project delivery' },
       { title: 'Multilingual support', desc: 'info@bizdavar.com and WhatsApp — one contact' }
     ],
     faq: [
@@ -3493,7 +3493,7 @@
       { q: 'Rotonivo or Vibranivo?', a: 'Rotonivo is a rotary paddle for bulk solids and high temperature. Vibranivo is a vibrating fork/rod for light powders and food. Send the medium and we recommend a series.' },
       { q: 'How does NivoRadar differ from VEGAPULS?', a: 'Both are non-contact radar. UWT focuses on bulk solids and silos; VEGA is also strong on liquids and pressure. Bizdavar supplies both — send tank conditions.' },
       { q: 'Ex and SIL certificates?', a: 'UWT series are offered with ATEX, IECEx and some with SIL 2. State Zone and SIL in the inquiry.' },
-      { q: 'Lead time to Iran?', a: 'Typically 3–8 weeks depending on model and stock. Exact time on the proforma.' },
+      { q: 'What is the lead time?', a: 'Typically 3–8 weeks depending on model and stock. Exact time on the proforma.' },
       { q: 'Sensors for liquids too?', a: 'Yes — NivoRadar liquid series, NivoGuide TDR, Vibranivo VN 7 liquid fork and capacitive switches.' },
       { q: 'What is the Solido 500-LAA 24V price?', a: 'The selling price for Solido® 500-LAA 24V is €285. Lead time and freight are listed separately on the official proforma.' },
       { q: 'What is the ELS-R1 230 VAC price?', a: 'The selling price for UWT ELS-R1 230 VAC is €180. Lead time and freight are listed separately on the official proforma.' }
@@ -3679,7 +3679,7 @@
       { title: 'Подбор датчика', desc: 'Лопасть, вибрация, ёмкость или радар' },
       { title: 'Замена существующей модели', desc: 'Присоединение, длина зонда и выход сигнала' },
       { title: 'Официальная проформа', desc: 'Цена, срок и условия поставки' },
-      { title: 'Логистика в Иран', desc: 'С завода UWT до объекта' },
+      { title: 'Международная логистика', desc: 'С завода UWT до объекта' },
       { title: 'Многоязычная поддержка', desc: 'info@bizdavar.com и WhatsApp' }
     ],
     faq: [
@@ -3687,7 +3687,7 @@
       { q: 'Rotonivo или Vibranivo?', a: 'Rotonivo — лопастной для сыпучих и высокой температуры. Vibranivo — вилка/стержень для лёгких порошков и пищевых сред.' },
       { q: 'Чем NivoRadar отличается от VEGAPULS?', a: 'Оба — бесконтактный радар. UWT сильнее на сыпучих и силосах; VEGA — также на жидкостях и давлении. Bizdavar поставляет оба бренда.' },
       { q: 'Есть Ex и SIL?', a: 'Серии UWT с ATEX, IECEx и частично SIL 2. Укажите зону и SIL в запросе.' },
-      { q: 'Срок в Иран?', a: 'Обычно 3–8 недель в зависимости от модели. Точный срок в проформе.' },
+      { q: 'Какой срок поставки?', a: 'Обычно 3–8 недель в зависимости от модели. Точный срок в проформе.' },
       { q: 'Есть датчики для жидкостей?', a: 'Да — NivoRadar для жидкостей, NivoGuide TDR, Vibranivo VN 7 и ёмкостные сигнализаторы.' },
       { q: 'Сколько стоит Solido 500-LAA 24V?', a: 'Цена продажи Solido® 500-LAA 24V — €285. Срок поставки и фрахт указываются отдельно в официальной проформе.' },
       { q: 'Сколько стоит ELS-R1 230 VAC?', a: 'Цена продажи UWT ELS-R1 230 VAC — €180. Срок поставки и фрахт указываются отдельно в официальной проформе.' }
@@ -3774,7 +3774,7 @@
       { title: 'استشارة اختيار الحسّاس', desc: 'مجداف أو اهتزاز أو سعوي أو رادار' },
       { title: 'استبدال موديل قائم', desc: 'مطابقة وصلة العملية وطول المسبار ومخرج الإشارة' },
       { title: 'فاتورة مبدئية رسمية', desc: 'السعر ومدة التوريد وشروط الشحن' },
-      { title: 'لوجستيات إلى إيران', desc: 'من مصنع UWT حتى التسليم في الموقع' },
+      { title: 'لوجستيات دولية', desc: 'من مصنع UWT حتى التسليم في الموقع' },
       { title: 'دعم متعدد اللغات', desc: 'info@bizdavar.com وواتساب' }
     ],
     faq: [
@@ -3782,7 +3782,7 @@
       { q: 'Rotonivo أم Vibranivo؟', a: 'Rotonivo مجداف دوار للمواد الصلبة ودرجات الحرارة العالية. Vibranivo شوكة/قضيب اهتزاز للمساحيق الخفيفة والغذاء.' },
       { q: 'ما الفرق بين NivoRadar وVEGAPULS؟', a: 'كلاهما رادار بلا تلامس. UWT يركز على المواد الصلبة والصوامع؛ VEGA قوي أيضاً في السوائل والضغط. Bizdavar يورّد الاثنين.' },
       { q: 'هل توجد شهادات Ex وSIL؟', a: 'سلاسل UWT بـ ATEX وIECEx وبعضها SIL 2. اذكر المنطقة وSIL في الاستعلام.' },
-      { q: 'مدة التسليم إلى إيران؟', a: 'عادة ٣ إلى ٨ أسابيع حسب الموديل والمخزون. المدة الدقيقة في الفاتورة المبدئية.' },
+      { q: 'ما مدة التسليم؟', a: 'عادة ٣ إلى ٨ أسابيع حسب الموديل والمخزون. المدة الدقيقة في الفاتورة المبدئية.' },
       { q: 'هل توجد حساسات للسوائل؟', a: 'نعم — سلسلة NivoRadar للسوائل وNivoGuide TDR وVibranivo VN 7 ومفاتيح سعوية.' },
       { q: 'ما سعر Solido 500-LAA 24V؟', a: 'سعر بيع Solido® 500-LAA 24V هو €285. مدة التوريد والشحن تُذكران منفصلتين في الفاتورة المبدئية.' },
       { q: 'ما سعر ELS-R1 230 VAC؟', a: 'سعر بيع UWT ELS-R1 230 VAC هو €180. مدة التوريد والشحن تُذكران منفصلتين في الفاتورة المبدئية.' }

@@ -2,7 +2,7 @@ bizdavarPageInit(function () {
       const crumbs = [
             { page: 'home', url: 'index' },
             { page: 'blog', url: 'blog' },
-            { name: "VEGA sensor supply to Iran — from inquiry to site", url: "vega-supply-iran" }
+            { name: "VEGA sensor supply worldwide — from inquiry to site", url: "vega-supply-iran" }
           ];
       injectPageSeo('articleVegaSupplyIran', {
         canonical: 'https://bizdavar.com/pages/articles/vega-supply-iran',
@@ -10,7 +10,7 @@ bizdavarPageInit(function () {
         type: 'article'
       });
       injectArticleSchema({
-        title: "VEGA sensor supply to Iran — from inquiry to site",
+        title: "VEGA sensor supply worldwide — from inquiry to site",
         description: "Original VEGA for Iran projects: order code, proforma and logistics to site — not the grey market.",
         date: '2026-07-29',
         dateModified: '2026-08-24',

@@ -6,7 +6,7 @@
   var en = {
     'vega-supply-iran':
       '<img src="/assets/images/vega/slides/value-process-safety.jpg" alt="VEGA sensors and instrumentation in an industrial environment" class="article__img" loading="lazy" width="768" height="400">' +
-      '<p>Oil, petrochemical, water and food projects in Iran need reliable level, pressure and switch sensors. Bizdavar Group supplies genuine <a href="/en/pages/vega">VEGA products</a> with Persian consulting, precise order codes and international logistics — with offices in <strong>Iran, Turkey, Armenia and Dubai</strong>.</p>' +
+      '<p>Oil, petrochemical, water and food projects in Iran need reliable level, pressure and switch sensors. Bizdavar Group supplies genuine <a href="/en/pages/vega">VEGA products</a> with Persian consulting, precise order codes and international logistics — with offices in <strong>worldwide</strong>.</p>' +
       '<h2>1. Why supply through Bizdavar?</h2>' +
       '<p>A transparent supply channel, clear foreign-currency proforma and coordinated shipping to your project — instead of ambiguous grey-market purchases. Our multilingual technical team helps you choose the right model for your process (Ex/SIL and tank conditions).</p>' +
       '<h2>2. From inquiry to delivery</h2>' +
@@ -24,13 +24,13 @@
 
     'multilingual-web-iran-turkey':
       '<img src="/assets/images/brand/bizdavar-logo-square.png" alt="Bizdavar — multilingual website fa / tr / en" class="article__img" loading="lazy" width="768" height="400">' +
-      '<p>Businesses active in both <strong>Iran</strong> and <strong>Turkey</strong> need a site that handles Persian RTL, Turkish/English LTR, local WhatsApp numbers and hreflang SEO correctly. Bizdavar Group implements this pattern in its own projects and for clients — with offices in Iran, Turkey, Armenia and Dubai.</p>' +
+      '<p>Businesses active in both <strong>Iran</strong> and <strong>Turkey</strong> need a site that handles Persian RTL, Turkish/English LTR, local WhatsApp numbers and hreflang SEO correctly. Bizdavar Group implements this pattern in its own projects and for clients — with offices in worldwide.</p>' +
       '<h2>1. URL structure and languages</h2>' +
       '<p>Persian at the domain root, Turkish under <code>/tr/</code> and English under <code>/en/</code> — with separate hreflang and canonical tags per language. This prevents duplicate content and sends clear GEO signals to Google.</p>' +
       '<h2>2. Content and local trust</h2>' +
       '<ul>' +
       '<li>WhatsApp numbers for Iran and Turkey</li>' +
-      '<li>Office presence in Iran, Turkey, Armenia and Dubai</li>' +
+      '<li>Office presence in worldwide</li>' +
       '<li>Case studies and familiar brands for each market</li>' +
       '<li>Service pages targeting local queries (web design Istanbul, industrial supply Iran, …)</li>' +
       '</ul>' +
@@ -199,7 +199,7 @@
   var tr = {
     'vega-supply-iran':
       '<img src="/assets/images/vega/slides/value-process-safety.jpg" alt="Endüstriyel ortamda VEGA sensör ve ölçüm cihazları" class="article__img" loading="lazy" width="768" height="400">' +
-      '<p>İran\'daki petrol, petrokimya, su ve gıda projeleri güvenilir seviye, basınç ve switch sensörlerine ihtiyaç duyar. Bizdavar Group, Farsça danışmanlık, doğru sipariş kodu ve uluslararası lojistik ile orijinal <a href="/tr/pages/vega">VEGA ürünleri</a> tedarik eder — <strong>İran, Türkiye, Ermenistan ve Dubai</strong> ofisleriyle.</p>' +
+      '<p>İran\'daki petrol, petrokimya, su ve gıda projeleri güvenilir seviye, basınç ve switch sensörlerine ihtiyaç duyar. Bizdavar Group, Farsça danışmanlık, doğru sipariş kodu ve uluslararası lojistik ile orijinal <a href="/tr/pages/vega">VEGA ürünleri</a> tedarik eder — <strong>dünya genelinde</strong> ofisleriyle.</p>' +
       '<h2>1. Neden Bizdavar üzerinden tedarik?</h2>' +
       '<p>Şeffaf tedarik kanalı, net döviz proforması ve projeye kadar koordineli nakliye — belirsiz gri pazar alımları yerine. Çok dilli teknik ekibimiz, süreç için doğru modeli (Ex/SIL ve tank koşulları) seçmenize yardımcı olur.</p>' +
       '<h2>2. Talepten teslimata</h2>' +
@@ -217,13 +217,13 @@
 
     'multilingual-web-iran-turkey':
       '<img src="/assets/images/brand/bizdavar-logo-square.png" alt="Bizdavar — çok dilli web sitesi fa / tr / en" class="article__img" loading="lazy" width="768" height="400">' +
-      '<p>Hem <strong>İran</strong> hem <strong>Türkiye</strong> pazarında faaliyet gösteren işletmeler; Farsça RTL, Türkçe/İngilizce LTR, yerel WhatsApp numaraları ve hreflang SEO\'sunu doğru kapsayan bir siteye ihtiyaç duyar. Bizdavar Group bu modeli kendi projelerinde ve müşterilerinde uygular — İran, Türkiye, Ermenistan ve Dubai ofisleriyle.</p>' +
+      '<p>Hem <strong>İran</strong> hem <strong>Türkiye</strong> pazarında faaliyet gösteren işletmeler; Farsça RTL, Türkçe/İngilizce LTR, yerel WhatsApp numaraları ve hreflang SEO\'sunu doğru kapsayan bir siteye ihtiyaç duyar. Bizdavar Group bu modeli kendi projelerinde ve müşterilerinde uygular — dünya genelinde ofisleriyle.</p>' +
       '<h2>1. URL yapısı ve diller</h2>' +
       '<p>Farsça alan adı kökünde, Türkçe <code>/tr/</code> altında, İngilizce <code>/en/</code> altında — her dil için ayrı hreflang ve canonical etiketleriyle. Bu, duplicate content\'i önler ve Google\'a net GEO sinyali gönderir.</p>' +
       '<h2>2. İçerik ve yerel güven</h2>' +
       '<ul>' +
       '<li>İran ve Türkiye WhatsApp numaraları</li>' +
-      '<li>İran, Türkiye, Ermenistan ve Dubai ofis varlığı</li>' +
+      '<li>dünya genelinde ofis varlığı</li>' +
       '<li>Her pazar için referans projeler ve tanıdık markalar</li>' +
       '<li>Yerel sorgulara yönelik hizmet sayfaları (İstanbul web tasarım, İran endüstriyel tedarik, …)</li>' +
       '</ul>' +

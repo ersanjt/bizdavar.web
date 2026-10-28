@@ -33,11 +33,11 @@
     heroEyebrow: 'Motorcycle gear shop',
     heroHeadline: 'Helmets, jackets, boots and riding gear',
     heroHeadlineSub: 'Helmets, intercoms, jackets, gloves, pants, boots and armour',
-    since: 'Priced in US dollars, for delivery in Iran',
+    since: 'Priced in US dollars, for worldwide delivery',
     origin: 'Sourced from Turkey and Europe',
     logoAlt: 'Bizdavar motorcycle shop logo',
     heroImageAlt: 'Motorcycle helmet, jacket and boots in the Bizdavar catalog',
-    description: 'Helmets, jackets, gloves, pants, boots, intercoms and armour for riders. The price on the card is in US dollars, for delivery in Iran. If a product has no price, we quote on request.',
+    description: 'Helmets, jackets, gloves, pants, boots, intercoms and armour for riders. The price on the card is in US dollars, for worldwide delivery. If a product has no price, we quote on request.',
     tagline: 'Motorcycle gear',
     heroStats: [
       { label: 'Products in the catalog' },
@@ -45,7 +45,7 @@
       { label: 'Motorcycle categories' }
     ],
     trustSignals: [
-      { label: 'US dollars, Iran delivery', desc: 'The amount on the card is for delivery in Iran. No price means quote only.' },
+      { label: 'US dollars, Iran delivery', desc: 'The amount on the card is for worldwide delivery. No price means quote only.' },
       { label: 'Postage after the order', desc: 'Shipping is calculated after weight, volume and destination.' },
       { label: 'WhatsApp consulting', desc: 'Send a clothing size or SKU on WhatsApp.' },
       { label: 'Single and bulk orders', desc: 'Personal use, workshops and motorcycle shops.' }
@@ -75,7 +75,7 @@
       tip: 'If there is no card price, goods and postage appear on the proforma after inquiry.'
     },
     faq: [
-      { q: 'Is the card price final?', a: 'The card price is for delivery in Iran. The final amount and postage are confirmed on the proforma. No price means quote only.' },
+      { q: 'Is the card price final?', a: 'The card price is for worldwide delivery. The final amount and postage are confirmed on the proforma. No price means quote only.' },
       { q: 'Is shipping included?', a: 'No. Postage, insurance and clearance are confirmed after weight, volume and destination.' },
       { q: 'What do you need for apparel?', a: 'Send size, height and weight. If you are between sizes, write on WhatsApp.' },
       { q: 'How do I choose size and colour?', a: 'Open the product page. If you are between sizes, send height and weight on WhatsApp.' },
@@ -115,11 +115,11 @@
     heroEyebrow: 'Motosiklet ekipmanı mağazası',
     heroHeadline: 'Kask, mont, bot ve sürüş ekipmanı',
     heroHeadlineSub: 'Kask, interkom, mont, eldiven, pantolon, bot ve koruma',
-    since: 'Karttaki fiyat ABD doları, İran teslimi',
+    since: 'Karttaki fiyat ABD doları, uluslararası teslim',
     origin: 'Türkiye ve Avrupa tedariki',
     logoAlt: 'Bizdavar motosiklet mağazası logosu',
     heroImageAlt: 'Motosiklet kaskı, mont ve bot — Bizdavar kataloğu',
-    description: 'Kask, mont, eldiven, pantolon, bot, interkom ve koruma. Karttaki fiyat ABD dolarıdır ve İran teslimi içindir. Fiyat yoksa ürün yalnızca teklifle satılır.',
+    description: 'Kask, mont, eldiven, pantolon, bot, interkom ve koruma. Karttaki fiyat ABD dolarıdır ve uluslararası teslim içindir. Fiyat yoksa ürün yalnızca teklifle satılır.',
     tagline: 'Motosiklet ekipmanı',
     heroStats: [
       { label: 'Katalogdaki ürün' },
@@ -127,7 +127,7 @@
       { label: 'Motosiklet kategorisi' }
     ],
     trustSignals: [
-      { label: 'ABD doları, İran teslimi', desc: 'Karttaki tutar İran teslimi içindir. Fiyat yoksa yalnızca teklif alınır.' },
+      { label: 'ABD doları, uluslararası teslim', desc: 'Karttaki tutar uluslararası teslim içindir. Fiyat yoksa yalnızca teklif alınır.' },
       { label: 'Kargo siparişten sonra', desc: 'Kargo ağırlık, hacim ve varışa göre hesaplanır.' },
       { label: 'WhatsApp danışmanlığı', desc: 'Bedeninizi veya SKU’yu WhatsApp’tan gönderin.' },
       { label: 'Tekil ve toptan', desc: 'Bireysel kullanım, servis ve motosiklet dükkânı.' }
@@ -157,7 +157,7 @@
       tip: 'Kartta fiyat yoksa ürün ve kargo tutarı, tekliften sonra proformada yazar.'
     },
     faq: [
-      { q: 'Kart fiyatı nihai mi?', a: 'Karttaki fiyat İran teslimi içindir. Nihai tutar ve kargo proformada netleşir. Fiyat yoksa yalnızca teklif alınır.' },
+      { q: 'Kart fiyatı nihai mi?', a: 'Karttaki fiyat uluslararası teslim içindir. Nihai tutar ve kargo proformada netleşir. Fiyat yoksa yalnızca teklif alınır.' },
       { q: 'Kargo fiyata dahil mi?', a: 'Hayır. Kargo, sigorta ve gümrük; ağırlık, hacim ve varış belli olunca netleşir.' },
       { q: 'Giyim için ne gerekir?', a: 'Beden, boy ve kilo gönderin. İki beden arasındaysanız WhatsApp’tan yazın.' },
       { q: 'Beden ve rengi nasıl seçerim?', a: 'Ürün sayfasını açın. İki beden arasındaysanız boy ve kiloyu WhatsApp’tan yazın.' },
@@ -197,19 +197,19 @@
     heroEyebrow: 'Магазин мотоэкипировки',
     heroHeadline: 'Шлемы, куртки, мотоботы и экипировка',
     heroHeadlineSub: 'Шлемы, интерком, куртки, перчатки, брюки, мотоботы и защита',
-    since: 'Цена в долларах США, доставка в Иран',
+    since: 'Цена в долларах США, международная доставка',
     origin: 'Поставка из Турции и Европы',
     logoAlt: 'Логотип мотомагазина Bizdavar',
     heroImageAlt: 'Мотошлем, куртка и мотоботы в каталоге Bizdavar',
-    description: 'Шлемы, куртки, перчатки, брюки, мотоботы, интерком и защита. Цена на карточке — в долларах США, с доставкой в Иран. Если цены нет, товар только по запросу.',
+    description: 'Шлемы, куртки, перчатки, брюки, мотоботы, интерком и защита. Цена на карточке — в долларах США, с международной доставкой. Если цены нет, товар только по запросу.',
     tagline: 'Мотоэкипировка',
     heroStats: [
       { label: 'Товаров в каталоге' },
-      { label: 'Доставка в Иран' },
+      { label: 'Международная доставка' },
       { label: 'Мотокатегории' }
     ],
     trustSignals: [
-      { label: 'Доллары США, доставка в Иран', desc: 'Сумма на карточке — с доставкой в Иран. Нет цены — только запрос.' },
+      { label: 'Доллары США, международная доставка', desc: 'Сумма на карточке — с международной доставкой. Нет цены — только запрос.' },
       { label: 'Почта после заказа', desc: 'Доставка считается после веса, объёма и пункта назначения.' },
       { label: 'Консультация в WhatsApp', desc: 'Пришлите размер одежды или артикул в WhatsApp.' },
       { label: 'Розница и опт', desc: 'Лично, мастерская и мотомагазин.' }
@@ -239,7 +239,7 @@
       tip: 'Если на карточке нет цены, товар и почта появятся в проформе после запроса.'
     },
     faq: [
-      { q: 'Цена на карточке окончательная?', a: 'Цена на карточке — с доставкой в Иран. Итог и почта подтверждаются в проформе. Нет цены — только запрос.' },
+      { q: 'Цена на карточке окончательная?', a: 'Цена на карточке — с международной доставкой. Итог и почта подтверждаются в проформе. Нет цены — только запрос.' },
       { q: 'Доставка входит в цену?', a: 'Нет. Почта, страховка и таможенное оформление подтверждаются после веса, объёма и пункта назначения.' },
       { q: 'Что нужно для одежды?', a: 'Пришлите размер, рост и вес. Если вы между размерами — напишите в WhatsApp.' },
       { q: 'Как выбрать размер и цвет?', a: 'Откройте карточку товара. Если вы между размерами, пришлите рост и вес в WhatsApp.' },
@@ -279,11 +279,11 @@
     heroEyebrow: 'متجر معدات الدراجات النارية',
     heroHeadline: 'خوذات وسترات وبوت ومعدات الركوب',
     heroHeadlineSub: 'خوذات وإنتركم وسترات وقفازات وبناطيل وبوت وحماية',
-    since: 'السعر بالدولار الأمريكي لتسليم إيران',
+    since: 'السعر بالدولار الأمريكي للتسليم الدولي',
     origin: 'توريد من تركيا وأوروبا',
     logoAlt: 'شعار متجر الدراجات النارية في بيزدوار',
     heroImageAlt: 'خوذة وسترة وبوت دراجة نارية في كتالوج بيزدوار',
-    description: 'خوذات وسترات وقفازات وبناطيل وبوت وإنتركم وحماية للراكبين. السعر على البطاقة بالدولار الأمريكي لتسليم إيران. إن لم يوجد سعر فالاستعلام فقط.',
+    description: 'خوذات وسترات وقفازات وبناطيل وبوت وإنتركم وحماية للراكبين. السعر على البطاقة بالدولار الأمريكي للتسليم الدولي. إن لم يوجد سعر فالاستعلام فقط.',
     tagline: 'معدات الدراجات النارية',
     heroStats: [
       { label: 'منتجات في الكتالوج' },
@@ -291,7 +291,7 @@
       { label: 'فئات الدراجة النارية' }
     ],
     trustSignals: [
-      { label: 'دولار أمريكي، تسليم إيران', desc: 'المبلغ على البطاقة لتسليم إيران. بلا سعر يعني استعلام فقط.' },
+      { label: 'دولار أمريكي، تسليم إيران', desc: 'المبلغ على البطاقة للتسليم الدولي. بلا سعر يعني استعلام فقط.' },
       { label: 'الشحن بعد الطلب', desc: 'يُحسب الشحن بعد الوزن والحجم والوجهة.' },
       { label: 'استشارة واتساب', desc: 'أرسلوا المقاس أو رمز SKU عبر واتساب.' },
       { label: 'قطعي وجملة', desc: 'استخدام شخصي وورش ومتاجر دراجات نارية.' }
@@ -321,7 +321,7 @@
       tip: 'إن لم يوجد سعر على البطاقة يظهر مبلغ السلعة والشحن في الفاتورة المبدئية بعد الاستعلام.'
     },
     faq: [
-      { q: 'هل سعر البطاقة نهائي؟', a: 'السعر على البطاقة لتسليم إيران. المبلغ النهائي والشحن يُؤكدان في الفاتورة المبدئية. بلا سعر يعني استعلام فقط.' },
+      { q: 'هل سعر البطاقة نهائي؟', a: 'السعر على البطاقة للتسليم الدولي. المبلغ النهائي والشحن يُؤكدان في الفاتورة المبدئية. بلا سعر يعني استعلام فقط.' },
       { q: 'هل الشحن داخل السعر؟', a: 'لا. الشحن والتأمين والتخليص تُؤكد بعد الوزن والحجم والوجهة.' },
       { q: 'ماذا يلزم للملابس؟', a: 'أرسلوا المقاس والطول والوزن. إن كنتم بين مقاسين فاكتبوا عبر واتساب.' },
       { q: 'كيف نختار المقاس واللون؟', a: 'افتحوا صفحة المنتج. إن كنتم بين مقاسين أرسلوا الطول والوزن عبر واتساب.' },

@@ -19,7 +19,7 @@ bizdavarPageInit(function () {
       injectAutoMotoSchema();
       renderGeoStrip('geoStrip', {
         textKey: 'autoMotoPage.geoText',
-        text: "Motosiklet ekipmanı tedariki — karttaki fiyat ABD doları, İran teslimi."
+        text: "Motosiklet ekipmanı tedariki — karttaki fiyat ABD doları, uluslararası teslim."
       });
       renderRelatedLinks([
         { title: "Auto-Moto", url: "auto-moto", desc: "İki ayrı mağaza: motosiklet ve fren", titleKey: 'autoMotoPage.related.0.title', descKey: 'autoMotoPage.related.0.desc' },

@@ -290,7 +290,7 @@
             teraoka: 'Terazi ve etiketleyici'
           }
         },
-        geoText: 'Sahip olunan ürünler ve endüstriyel marka tedariki — İran, Türkiye, Ermenistan ve Dubai ofislerinden teknik danışmanlık.',
+        geoText: 'Sahip olunan ürünler ve endüstriyel marka tedariki — dünya genelinde ofislerinden teknik danışmanlık.',
         related: [
           { title: 'VEGAPULS satın al', desc: 'İran seviye sensörü' },
           { title: 'Prosense tedariki', desc: 'Gaz ve alev dedektörü' },

@@ -2,7 +2,7 @@ bizdavarPageInit(function () {
       const crumbs = [
             { page: 'home', url: 'index' },
             { page: 'blog', url: 'blog' },
-            { name: 'Купить Prosense в Иране — PQ, SafeVader и SIL', url: 'buy-prosense-iran' }
+            { name: 'Купить Prosense по всему миру — PQ, SafeVader и SIL', url: 'buy-prosense-iran' }
           ];
       injectPageSeo('articleBuyProsenseIran', {
         canonical: 'https://bizdavar.com/pages/articles/buy-prosense-iran',
@@ -10,8 +10,8 @@ bizdavarPageInit(function () {
         type: 'article'
       });
       injectArticleSchema({
-        title: 'Купить Prosense в Иране — PQ, SafeVader и SIL',
-        description: 'Оригинальные газовые детекторы Prosense для Ирана — PQ, SafeVader, SIL и запрос в WhatsApp.',
+        title: 'Купить Prosense по всему миру — PQ, SafeVader и SIL',
+        description: 'Оригинальные газовые детекторы Prosense по всему миру — PQ, SafeVader, SIL и запрос в WhatsApp.',
         date: '2026-08-28',
         dateModified: '2026-08-29',
         slug: 'pages/articles/buy-prosense-iran',

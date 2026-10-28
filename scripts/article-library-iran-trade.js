@@ -28,14 +28,14 @@ module.exports = [
       'خرید VEGAPULS 6X در ایران — قیمت، کد سفارش و استعلام',
       'İran’da VEGAPULS 6X satın al — fiyat, sipariş kodu, teklif',
       'Buy VEGAPULS 6X in Iran — price, order code and quote',
-      'Купить VEGAPULS 6X в Иране — цена, код заказа, запрос',
+      'Купить VEGAPULS 6X по всему миру — цена, код заказа, запрос',
       'شراء VEGAPULS 6X في إيران — السعر ورمز الطلب والاستعلام'
     ),
     description: loc(
       'چطور VEGAPULS 6X اصل برای مخزن و فرآیند ایران بخرید: کد سفارش دقیق، پیش‌فاکتور فارسی و لجستیک تا محل نصب — بدون بازار خاکستری.',
       'Orijinal VEGAPULS 6X İran tank ve prosesi için: sipariş kodu, Farsça proforma ve sahaya lojistik.',
       'How to buy genuine VEGAPULS 6X for Iran tanks and process: exact order code, Persian proforma and logistics to site.',
-      'Как купить оригинальный VEGAPULS 6X для Ирана: код заказа, проформа и логистика на объект.',
+      'Как купить оригинальный VEGAPULS 6X по всему миру: код заказа, проформа и логистика на объект.',
       'كيف تشتري VEGAPULS 6X أصلي لمشاريع إيران: رمز الطلب وفاتورة مبدئية ولوجستيات حتى الموقع.'
     ),
     keywords: loc(
@@ -56,7 +56,7 @@ module.exports = [
       fa: [['ch-who', 'برای چه پروژه‌ای'], ['ch-why', 'چرا ۶X'], ['ch-buy', 'مسیر خرید در ایران'], ['ch-data', 'چه بفرستید'], ['ch-faq', 'سوالات متداول']],
       tr: [['ch-who', 'Hangi proje'], ['ch-why', 'Neden 6X'], ['ch-buy', 'İran’da satın alma'], ['ch-data', 'Ne gönderilmeli'], ['ch-faq', 'SSS']],
       en: [['ch-who', 'Which projects'], ['ch-why', 'Why 6X'], ['ch-buy', 'Buying in Iran'], ['ch-data', 'What to send'], ['ch-faq', 'FAQ']],
-      ru: [['ch-who', 'Какие проекты'], ['ch-why', 'Почему 6X'], ['ch-buy', 'Покупка в Иране'], ['ch-data', 'Что прислать'], ['ch-faq', 'FAQ']],
+      ru: [['ch-who', 'Какие проекты'], ['ch-why', 'Почему 6X'], ['ch-buy', 'Покупка по всему миру'], ['ch-data', 'Что прислать'], ['ch-faq', 'FAQ']],
       ar: [['ch-who', 'لأي مشروع'], ['ch-why', 'لماذا 6X'], ['ch-buy', 'الشراء في إيران'], ['ch-data', 'ماذا ترسلون'], ['ch-faq', 'أسئلة']]
     },
     faq: {
@@ -140,17 +140,17 @@ ${fig('/assets/images/vega/product-vegapuls-6x-photo.webp', 'VEGAPULS 6X radar l
 ${fig('/assets/images/vega/blog-industrial-sensors.jpg', 'VEGA level sensor installed on an industrial tank', 'A nameplate photo locks the order code.')}
 <h2 id="ch-buy">Buying in Iran</h2>
 <ol><li>Tank height, media, temperature, pressure, Ex/SIL</li><li>Model and order code from the <a href="/pages/vega">VEGA page</a></li><li>Persian proforma and lead time</li><li>Order, freight, install support</li></ol>
-<p>Logistics: <a href="/pages/articles/vega-supply-iran">VEGA supply to Iran</a>. Start: <a href="/pages/contact?product=VEGA">VEGAPULS quote</a>.</p>
+<p>Logistics: <a href="/pages/articles/vega-supply-iran">VEGA supply worldwide</a>. Start: <a href="/pages/contact?product=VEGA">VEGAPULS quote</a>.</p>
 <h2 id="ch-data">What to send</h2>
 <p>Partial data is enough — full checklist: <a href="/pages/articles/vega-quote-iran">VEGA quote guide</a>.</p>`,
       ru: `
-<p>Закупщики в Иране ищут <strong>VEGAPULS 6X</strong>. Bizdavar поставляет оригинальный <a href="/pages/vega">VEGA</a> с проформой — не серый рынок.</p>
+<p>Закупщики по всему миру ищут <strong>VEGAPULS 6X</strong>. Bizdavar поставляет оригинальный <a href="/pages/vega">VEGA</a> с проформой — не серый рынок.</p>
 ${fig('/assets/images/vega/product-vegapuls-6x-photo.webp', 'Радарный уровнемер VEGAPULS 6X', 'Пришлите модель и условия резервуара.')}
 <h2 id="ch-who">Какие проекты</h2>
 <p>Бесконтактный радар уровня. Точка — VEGAPOINT, давление — VEGABAR.</p>
 <h2 id="ch-why">Почему 6X</h2>
 <ul><li>Радар 80 ГГц</li><li>Официальный order code</li><li>Ex/SIL в первом сообщении</li></ul>
-<h2 id="ch-buy">Покупка в Иране</h2>
+<h2 id="ch-buy">Покупка по всему миру</h2>
 <ol><li>Резервуар и процесс</li><li>Код заказа</li><li>Проформа</li><li>Поставка</li></ol>
 <p><a href="/pages/articles/vega-supply-iran">Поставка в Иран</a> · <a href="/pages/contact?product=VEGA">Запрос</a>.</p>
 <h2 id="ch-data">Что прислать</h2>
@@ -182,7 +182,7 @@ ${fig('/assets/images/vega/product-vegapuls-6x-photo.webp', 'حساس مستوى
       'استعلام قیمت سنسور VEGA در ایران — چه اطلاعاتی بفرستید',
       'İran’da VEGA fiyat teklifi — ne göndermelisiniz',
       'VEGA sensor quote in Iran — what to send',
-      'Запрос цены VEGA в Иране — что прислать',
+      'Запрос цены VEGA по всему миру — что прислать',
       'استعلام سعر حساس VEGA في إيران — ماذا ترسلون'
     ),
     description: loc(
@@ -292,7 +292,7 @@ ${fig('/assets/images/vega/product-vegapuls-6x-photo.webp', 'VEGAPULS 6X for a t
 <h2 id="ch-next">After the quote</h2>
 <p>Order code → proforma → confirm → freight. Full path: <a href="/pages/articles/vega-supply-iran">VEGA supply Iran</a>. Start: <a href="/pages/contact?product=VEGA">form or WhatsApp</a>.</p>`,
       ru: `
-<p>Неполный запрос = неверный код. Чек-лист для закупки VEGA в Иране.</p>
+<p>Неполный запрос = неверный код. Чек-лист для закупки VEGA по всему миру.</p>
 ${fig('/assets/images/vega/product-vegabar-39.png', 'Датчик давления VEGABAR 39', 'Давление процесса пишите отдельно от уровня.')}
 <h2 id="ch-why">Зачем список</h2>
 <p>«Пришлите VEGA» недостаточно. <a href="/pages/articles/buy-vegapuls-iran">VEGAPULS 6X</a>.</p>
@@ -328,14 +328,14 @@ ${fig('/assets/images/vega/product-vegabar-39.png', 'حساس ضغط VEGABAR 39'
       'خرید دتکتور گاز Prosense در ایران — PQ، SafeVader و SIL',
       'İran’da Prosense gaz dedektörü — PQ, SafeVader ve SIL',
       'Buy Prosense gas detectors in Iran — PQ, SafeVader and SIL',
-      'Купить Prosense в Иране — PQ, SafeVader и SIL',
+      'Купить Prosense по всему миру — PQ, SafeVader и SIL',
       'شراء كاشف غاز Prosense في إيران — PQ وSafeVader وSIL'
     ),
     description: loc(
       'خرید دتکتور گاز صنعتی اصل Prosense برای نفت، پتروشیمی، معدن و HVAC در ایران — سری PQ، SafeVader، گواهی SIL و پیش‌فاکتور واتساپ.',
       'Orijinal Prosense gaz dedektörü İran projeleri için: PQ, SafeVader, SIL ve WhatsApp teklifi.',
       'Genuine Prosense industrial gas detectors for oil, petrochemical, mining and HVAC in Iran — PQ, SafeVader, SIL and WhatsApp quote.',
-      'Оригинальные газовые детекторы Prosense для Ирана — PQ, SafeVader, SIL и запрос в WhatsApp.',
+      'Оригинальные газовые детекторы Prosense по всему миру — PQ, SafeVader, SIL и запрос в WhatsApp.',
       'كواشف غاز Prosense الأصلية للنفط والبتروكيما في إيران — PQ وSafeVader وSIL.'
     ),
     keywords: loc(
@@ -356,7 +356,7 @@ ${fig('/assets/images/vega/product-vegabar-39.png', 'حساس ضغط VEGABAR 39'
       fa: [['ch-who', 'کجا لازم است'], ['ch-series', 'PQ و SafeVader'], ['ch-buy', 'خرید در ایران'], ['ch-data', 'استعلام'], ['ch-faq', 'سوالات متداول']],
       tr: [['ch-who', 'Nerede gerekir'], ['ch-series', 'PQ ve SafeVader'], ['ch-buy', 'İran’da alım'], ['ch-data', 'Teklif'], ['ch-faq', 'SSS']],
       en: [['ch-who', 'Where it is needed'], ['ch-series', 'PQ and SafeVader'], ['ch-buy', 'Buying in Iran'], ['ch-data', 'Quote'], ['ch-faq', 'FAQ']],
-      ru: [['ch-who', 'Где нужно'], ['ch-series', 'PQ и SafeVader'], ['ch-buy', 'Покупка в Иране'], ['ch-data', 'Запрос'], ['ch-faq', 'FAQ']],
+      ru: [['ch-who', 'Где нужно'], ['ch-series', 'PQ и SafeVader'], ['ch-buy', 'Покупка по всему миру'], ['ch-data', 'Запрос'], ['ch-faq', 'FAQ']],
       ar: [['ch-who', 'أين يلزم'], ['ch-series', 'PQ وSafeVader'], ['ch-buy', 'الشراء في إيران'], ['ch-data', 'الاستعلام'], ['ch-faq', 'أسئلة']]
     },
     faq: {
@@ -376,7 +376,7 @@ ${fig('/assets/images/vega/product-vegabar-39.png', 'حساس ضغط VEGABAR 39'
         { q: 'What should I write for a quote?', a: 'Target gas, point count, Ex/SIL and install environment. Guide: <a href="/pages/articles/prosense-gas-detection">Prosense gas detection</a>.' }
       ],
       ru: [
-        { q: 'Доставка в Иран?', a: 'Да. Проформа для объекта в Иране. <a href="/pages/prosense">Prosense</a>.' },
+        { q: 'Международная доставка?', a: 'Да. Проформа для объекта по всему миру. <a href="/pages/prosense">Prosense</a>.' },
         { q: 'Вместе с VEGA?', a: 'Да. Уровень — VEGA, газ — Prosense.' },
         { q: 'Что для запроса?', a: 'Газ, число точек, Ex/SIL.' }
       ],
@@ -443,13 +443,13 @@ ${fig('/assets/images/prosense/hero-pq-sil2.webp', 'Prosense gas detector with S
 <h2 id="ch-data">Quote</h2>
 <p>Even an install-area photo helps. Trade overview: <a href="/pages/articles/industrial-trade-iran">industrial trade in Iran</a>.</p>`,
       ru: `
-<p>Закупщики в Иране ищут <strong>Prosense PQ</strong>. Bizdavar поставляет оригинальный <a href="/pages/prosense">Prosense</a>.</p>
+<p>Закупщики по всему миру ищут <strong>Prosense PQ</strong>. Bizdavar поставляет оригинальный <a href="/pages/prosense">Prosense</a>.</p>
 ${fig('/assets/images/prosense/series-pq.webp', 'Стационарный детектор PQ', 'Укажите газ и класс Ex.')}
 <h2 id="ch-who">Где нужно</h2>
 <p>Нефть, нефтехимия, шахты, паркинг, HVAC.</p>
 <h2 id="ch-series">PQ и SafeVader</h2>
 <ul><li>PQ — стационар</li><li>SafeVader — безопасность</li><li>SIL/Ex в запросе</li></ul>
-<h2 id="ch-buy">Покупка в Иране</h2>
+<h2 id="ch-buy">Покупка по всему миру</h2>
 <p><a href="/pages/contact?product=Prosense">Запрос</a>.</p>
 <h2 id="ch-data">Запрос</h2>
 <p><a href="/pages/articles/industrial-trade-iran">Промторговля</a>.</p>`,
@@ -479,18 +479,18 @@ ${fig('/assets/images/prosense/series-pq.webp', 'كاشف غاز ثابت PQ', '
       'بازرگانی تجهیزات صنعتی در ایران — VEGA، Prosense و برندهای اصل',
       'İran’da endüstriyel ticaret — VEGA, Prosense ve orijinal markalar',
       'Industrial trade in Iran — VEGA, Prosense and genuine brands',
-      'Промышленная торговля в Иране — VEGA, Prosense и оригинал',
+      'Промышленная торговля по всему миру — VEGA, Prosense и оригинал',
       'التجارة الصناعية في إيران — VEGA وProsense وعلامات أصلية'
     ),
     description: loc(
       'مسیر بازرگانی اصل برای ابزار دقیق، ایمنی گاز، ردیاب ناوگان و روغن صنعتی در ایران — یک نقطه تماس فارسی با پیش‌فاکتور شفاف.',
       'Orijinal B2B tedarik: ölçüm, gaz güvenliği, filo GPS ve yağ — İran projeleri için tek iletişim.',
       'Genuine B2B supply of instrumentation, gas safety, fleet GPS and industrial oils for Iran — one Persian contact.',
-      'Оригинальные поставки КИП, газовой безопасности, GPS и масел для Ирана — один контакт.',
+      'Оригинальные поставки КИП, газовой безопасности, GPS и масел по всему миру — один контакт.',
       'توريد أصلي لأجهزة القياس وسلامة الغاز وGPS والزيوت لمشاريع إيران — نقطة اتصال واحدة.'
     ),
     keywords: loc(
-      'بازرگانی صنعتی ایران, تامین تجهیزات ابزار دقیق, واردات تجهیزات صنعتی, بیزدوار',
+      'بازرگانی صنعتی بین‌المللی, تامین تجهیزات ابزار دقیق, واردات تجهیزات صنعتی, بیزدوار',
       'endüstriyel ticaret İran, VEGA Prosense, Bizdavar',
       'industrial trade Iran, instrumentation supply, VEGA Prosense, Bizdavar',
       'промторговля Иран, VEGA Prosense, Bizdavar',
@@ -507,7 +507,7 @@ ${fig('/assets/images/prosense/series-pq.webp', 'كاشف غاز ثابت PQ', '
       fa: [['ch-who', 'خریدار ایران'], ['ch-brands', 'برندها'], ['ch-path', 'از استعلام تا تحویل'], ['ch-why', 'چرا بیزدوار'], ['ch-faq', 'سوالات متداول']],
       tr: [['ch-who', 'İran alıcısı'], ['ch-brands', 'Markalar'], ['ch-path', 'Tekliften teslimata'], ['ch-why', 'Neden Bizdavar'], ['ch-faq', 'SSS']],
       en: [['ch-who', 'The Iran buyer'], ['ch-brands', 'Brands'], ['ch-path', 'Quote to delivery'], ['ch-why', 'Why Bizdavar'], ['ch-faq', 'FAQ']],
-      ru: [['ch-who', 'Покупатель в Иране'], ['ch-brands', 'Бренды'], ['ch-path', 'От запроса до поставки'], ['ch-why', 'Почему Bizdavar'], ['ch-faq', 'FAQ']],
+      ru: [['ch-who', 'Покупатель по всему миру'], ['ch-brands', 'Бренды'], ['ch-path', 'От запроса до поставки'], ['ch-why', 'Почему Bizdavar'], ['ch-faq', 'FAQ']],
       ar: [['ch-who', 'المشتري في إيران'], ['ch-brands', 'العلامات'], ['ch-path', 'من الاستعلام إلى التسليم'], ['ch-why', 'لماذا بيزدوار'], ['ch-faq', 'أسئلة']]
     },
     faq: {
@@ -606,9 +606,9 @@ ${fig('/assets/images/vega/blog-industrial-sensors.jpg', 'VEGA instrumentation o
 <h2 id="ch-why">Why Bizdavar</h2>
 <p>Persian team, on-site catalogues, cluster articles for “buy VEGA Iran”. Full list: <a href="/pages/products#supply">supply brands</a>.</p>`,
       ru: `
-<p>Большинство клиентов в Иране — <strong>закупщики</strong>. Эта страница собирает бренды и WhatsApp.</p>
+<p>Большинство клиентов по всему миру — <strong>закупщики</strong>. Эта страница собирает бренды и WhatsApp.</p>
 ${fig('/assets/images/content/supply-hero.jpg', 'Промышленные поставки Bizdavar', 'Один запрос — несколько брендов.')}
-<h2 id="ch-who">Покупатель в Иране</h2>
+<h2 id="ch-who">Покупатель по всему миру</h2>
 <p>Оригинал, понятная цена, ответ на фарси.</p>
 <h2 id="ch-brands">Бренды</h2>
 <ul><li>VEGA</li><li>Prosense</li><li>Teltonika</li><li>Liqui Moly</li><li>Gamak, Digi, Teraoka</li></ul>
@@ -642,7 +642,7 @@ ${fig('/assets/images/content/supply-hero.jpg', 'التوريد الصناعي �
       'خرید ردیاب Teltonika FMB920 در ایران — از ۲۹ دلار',
       'İran’da Teltonika FMB920 — 29$’dan',
       'Buy Teltonika FMB920 in Iran — from $29',
-      'Купить Teltonika FMB920 в Иране — от $29',
+      'Купить Teltonika FMB920 по всему миру — от $29',
       'شراء Teltonika FMB920 في إيران — من ٢٩ دولاراً'
     ),
     description: loc(
@@ -670,7 +670,7 @@ ${fig('/assets/images/content/supply-hero.jpg', 'التوريد الصناعي �
       fa: [['ch-who', 'برای چه ناوگانی'], ['ch-models', 'FMB920 و مدل‌های بالاتر'], ['ch-buy', 'خرید در ایران'], ['ch-faq', 'سوالات متداول']],
       tr: [['ch-who', 'Hangi filo'], ['ch-models', 'FMB920 ve üstü'], ['ch-buy', 'İran’da alım'], ['ch-faq', 'SSS']],
       en: [['ch-who', 'Which fleets'], ['ch-models', 'FMB920 and above'], ['ch-buy', 'Buying in Iran'], ['ch-faq', 'FAQ']],
-      ru: [['ch-who', 'Какой парк'], ['ch-models', 'FMB920 и выше'], ['ch-buy', 'Покупка в Иране'], ['ch-faq', 'FAQ']],
+      ru: [['ch-who', 'Какой парк'], ['ch-models', 'FMB920 и выше'], ['ch-buy', 'Покупка по всему миру'], ['ch-faq', 'FAQ']],
       ar: [['ch-who', 'أي أسطول'], ['ch-models', 'FMB920 وما فوق'], ['ch-buy', 'الشراء في إيران'], ['ch-faq', 'أسئلة']]
     },
     faq: {
@@ -756,7 +756,7 @@ ${fig('/assets/images/partners/teltonika.png', 'Teltonika Telematics', 'Укаж
 <p>Легковые, фургоны, грузовики. CAN и камера — старшая серия.</p>
 <h2 id="ch-models">FMB920 и выше</h2>
 <ul><li>FMB920 — база</li><li>FMC650 — CAN</li><li>DualCam — видео</li></ul>
-<h2 id="ch-buy">Покупка в Иране</h2>
+<h2 id="ch-buy">Покупка по всему миру</h2>
 <p><a href="/pages/contact?product=Teltonika">Запрос</a>.</p>`,
       ar: `
 <p>أساطيل إيران تبحث عن <strong>FMB920</strong> — من ٢٩$. بيزدوار يورّد <a href="/pages/teltonika">Teltonika</a> الأصلي.</p>
@@ -782,14 +782,14 @@ ${fig('/assets/images/partners/teltonika.png', 'Teltonika Telematics', 'اكتب
       'خرید الکتروموتور Gamak در ایران — توان، فلنج و استعلام',
       'İran’da Gamak motor satın al — kW, flanş, teklif',
       'Buy Gamak motors in Iran — kW, flange and quote',
-      'Купить двигатель Gamak в Иране — кВт, фланец, запрос',
+      'Купить двигатель Gamak по всему миру — кВт, фланец, запрос',
       'شراء محرك Gamak في إيران — القدرة والشفة والاستعلام'
     ),
     description: loc(
       'چطور الکتروموتور اصل Gamak برای پمپ، فن و خط تولید ایران بخرید: توان kW، دور، فلنج B3/B5 و کلاس IE — پیش‌فاکتور فارسی.',
       'Orijinal Gamak motor: kW, rpm, B3/B5 flanş ve IE sınıfı — Farsça proforma.',
       'How to buy a genuine Gamak motor for Iran pumps, fans and lines: kW, rpm, B3/B5 flange and IE class — Persian proforma.',
-      'Как купить оригинальный Gamak для насосов и линий в Иране: кВт, об/мин, фланец B3/B5.',
+      'Как купить оригинальный Gamak для насосов и линий по всему миру: кВт, об/мин, фланец B3/B5.',
       'كيف تشتري محرك Gamak أصلي لمضخات وخطوط إيران: كيلوواط وشفعة B3/B5 وفئة IE.'
     ),
     keywords: loc(
@@ -810,7 +810,7 @@ ${fig('/assets/images/partners/teltonika.png', 'Teltonika Telematics', 'اكتب
       fa: [['ch-who', 'برای چه کاربردی'], ['ch-spec', 'چه مشخصاتی بفرستید'], ['ch-buy', 'خرید در ایران'], ['ch-faq', 'سوالات متداول']],
       tr: [['ch-who', 'Hangi uygulama'], ['ch-spec', 'Ne göndermelisiniz'], ['ch-buy', 'İran’da alım'], ['ch-faq', 'SSS']],
       en: [['ch-who', 'Which duty'], ['ch-spec', 'What to send'], ['ch-buy', 'Buying in Iran'], ['ch-faq', 'FAQ']],
-      ru: [['ch-who', 'Какая нагрузка'], ['ch-spec', 'Что прислать'], ['ch-buy', 'Покупка в Иране'], ['ch-faq', 'FAQ']],
+      ru: [['ch-who', 'Какая нагрузка'], ['ch-spec', 'Что прислать'], ['ch-buy', 'Покупка по всему миру'], ['ch-faq', 'FAQ']],
       ar: [['ch-who', 'أي تطبيق'], ['ch-spec', 'ماذا ترسلون'], ['ch-buy', 'الشراء في إيران'], ['ch-faq', 'أسئلة']]
     },
     faq: {
@@ -896,13 +896,13 @@ ${fig('/assets/images/partners/gamak.svg', 'Gamak logo — industrial electric m
 <ol><li>WhatsApp or the <a href="/pages/contact?product=Gamak">form</a></li><li>Series from the <a href="/pages/gamak">Gamak catalogue</a></li><li>Clear proforma</li><li>Freight to the Iran site</li></ol>
 <p>Same desk as <a href="/pages/articles/industrial-trade-iran">VEGA and Prosense</a>. Quote: <a href="/pages/contact?product=Gamak">Gamak WhatsApp</a>.</p>`,
       ru: `
-<p>Заводам в Иране нужен надёжный мотор. <strong>Gamak</strong> — три фазы, IE2/IE3/IE4. Bizdavar поставляет оригинальный <a href="/pages/gamak">каталог</a>.</p>
+<p>Заводам по всему миру нужен надёжный мотор. <strong>Gamak</strong> — три фазы, IE2/IE3/IE4. Bizdavar поставляет оригинальный <a href="/pages/gamak">каталог</a>.</p>
 ${fig('/assets/images/gamak/category-three-phase.webp', 'Трёхфазный двигатель Gamak', 'Укажите кВт, об/мин и фланец.')}
 <h2 id="ch-who">Какая нагрузка</h2>
 <p>Насос, вентилятор, конвейер, замена старого мотора.</p>
 <h2 id="ch-spec">Что прислать</h2>
 <ul><li>кВт и об/мин</li><li>B3/B5/B35, 380/220 В</li><li>IE2/IE3/IE4</li></ul>
-<h2 id="ch-buy">Покупка в Иране</h2>
+<h2 id="ch-buy">Покупка по всему миру</h2>
 <p><a href="/pages/contact?product=Gamak">Запрос</a>.</p>`,
       ar: `
 <p>مصانع إيران تحتاج محركاً موثوقاً. <strong>Gamak</strong> — ثلاثي الطور وIE2/IE3/IE4. بيزدوار يورّد <a href="/pages/gamak">الكتالوج</a> الأصلي.</p>
@@ -928,7 +928,7 @@ ${fig('/assets/images/gamak/category-three-phase.webp', 'محرك Gamak ثلاث
       'خرید ترازو و POS Digi System در ایران — فروشگاه و صندوق',
       'İran’da Digi System terazi ve POS — mağaza ve kasa',
       'Buy Digi System scales and POS in Iran — store and checkout',
-      'Купить весы и POS Digi System в Иране — магазин и касса',
+      'Купить весы и POS Digi System по всему миру — магазин и касса',
       'شراء موازين وPOS من Digi System في إيران — المتجر والصندوق'
     ),
     description: loc(
@@ -956,7 +956,7 @@ ${fig('/assets/images/gamak/category-three-phase.webp', 'محرك Gamak ثلاث
       fa: [['ch-who', 'برای چه فروشگاهی'], ['ch-spec', 'چه اطلاعاتی بفرستید'], ['ch-buy', 'خرید در ایران'], ['ch-faq', 'سوالات متداول']],
       tr: [['ch-who', 'Hangi mağaza'], ['ch-spec', 'Ne göndermelisiniz'], ['ch-buy', 'İran’da alım'], ['ch-faq', 'SSS']],
       en: [['ch-who', 'Which store'], ['ch-spec', 'What to send'], ['ch-buy', 'Buying in Iran'], ['ch-faq', 'FAQ']],
-      ru: [['ch-who', 'Какой магазин'], ['ch-spec', 'Что прислать'], ['ch-buy', 'Покупка в Иране'], ['ch-faq', 'FAQ']],
+      ru: [['ch-who', 'Какой магазин'], ['ch-spec', 'Что прислать'], ['ch-buy', 'Покупка по всему миру'], ['ch-faq', 'FAQ']],
       ar: [['ch-who', 'أي متجر'], ['ch-spec', 'ماذا ترسلون'], ['ch-buy', 'الشراء في إيران'], ['ch-faq', 'أسئلة']]
     },
     faq: {
@@ -1042,13 +1042,13 @@ ${fig('/assets/images/partners/digi-system.svg', 'Digi System logo — retail sc
 <ol><li>WhatsApp or the <a href="/pages/contact?product=Digi%20System">form</a></li><li>Series from the <a href="/pages/digi-system">Digi catalogue</a></li><li>Clear proforma</li><li>Freight to the Iran store or warehouse</li></ol>
 <p>Japanese scales from the same desk: <a href="/pages/articles/buy-teraoka-iran">buy Teraoka</a>. Quote: <a href="/pages/contact?product=Digi%20System">Digi WhatsApp</a>.</p>`,
       ru: `
-<p>Магазинам в Иране нужны надёжные весы и касса. <strong>Digi System</strong> — розница из Турции. Bizdavar поставляет оригинальный <a href="/pages/digi-system">каталог</a>.</p>
+<p>Магазинам по всему миру нужны надёжные весы и касса. <strong>Digi System</strong> — розница из Турции. Bizdavar поставляет оригинальный <a href="/pages/digi-system">каталог</a>.</p>
 ${fig('/assets/images/digi-system/hero/digi-retail-hero.webp', 'Весы Digi System', 'Укажите тип магазина и число касс.')}
 <h2 id="ch-who">Какой магазин</h2>
 <p>Супермаркет, мясо, овощи, HORECA. SM-6000, SM-5300, W5600SRX.</p>
 <h2 id="ch-spec">Что прислать</h2>
 <ul><li>Тип магазина и число касс</li><li>Торговые весы да/нет</li><li>Грузоподъёмность</li></ul>
-<h2 id="ch-buy">Покупка в Иране</h2>
+<h2 id="ch-buy">Покупка по всему миру</h2>
 <p><a href="/pages/contact?product=Digi%20System">Запрос</a>.</p>`,
       ar: `
 <p>متاجر إيران تحتاج ميزاناً وصندوقاً موثوقين. <strong>Digi System</strong> — تجزئة من تركيا. بيزدوار يورّد <a href="/pages/digi-system">الكتالوج</a> الأصلي.</p>
@@ -1074,7 +1074,7 @@ ${fig('/assets/images/digi-system/hero/digi-retail-hero.webp', 'ميزان Digi 
       'خرید ترازو Teraoka در ایران — deli، POS و برچسب‌زن',
       'İran’da Teraoka terazi — deli, POS, etiketleme',
       'Buy Teraoka scales in Iran — deli, POS and labeling',
-      'Купить весы Teraoka в Иране — deli, POS, этикетка',
+      'Купить весы Teraoka по всему миру — deli, POS, этикетка',
       'شراء موازين Teraoka في إيران — دلّي وPOS وملصقات'
     ),
     description: loc(
@@ -1102,7 +1102,7 @@ ${fig('/assets/images/digi-system/hero/digi-retail-hero.webp', 'ميزان Digi 
       fa: [['ch-who', 'برای چه کاربردی'], ['ch-spec', 'چه اطلاعاتی بفرستید'], ['ch-buy', 'خرید در ایران'], ['ch-faq', 'سوالات متداول']],
       tr: [['ch-who', 'Hangi kullanım'], ['ch-spec', 'Ne göndermelisiniz'], ['ch-buy', 'İran’da alım'], ['ch-faq', 'SSS']],
       en: [['ch-who', 'Which duty'], ['ch-spec', 'What to send'], ['ch-buy', 'Buying in Iran'], ['ch-faq', 'FAQ']],
-      ru: [['ch-who', 'Какая задача'], ['ch-spec', 'Что прислать'], ['ch-buy', 'Покупка в Иране'], ['ch-faq', 'FAQ']],
+      ru: [['ch-who', 'Какая задача'], ['ch-spec', 'Что прислать'], ['ch-buy', 'Покупка по всему миру'], ['ch-faq', 'FAQ']],
       ar: [['ch-who', 'أي استخدام'], ['ch-spec', 'ماذا ترسلون'], ['ch-buy', 'الشراء في إيران'], ['ch-faq', 'أسئلة']]
     },
     faq: {
@@ -1188,13 +1188,13 @@ ${fig('/assets/images/partners/teraoka.svg', 'Teraoka Seiko logo — Japanese sc
 <ol><li>WhatsApp or the <a href="/pages/contact?product=Teraoka">form</a></li><li>Series from the <a href="/pages/teraoka">Teraoka catalogue</a></li><li>Clear proforma</li><li>International freight to Iran</li></ol>
 <p>Turkey line from the same desk: <a href="/pages/articles/buy-digi-system-iran">buy Digi System</a>. Quote: <a href="/pages/contact?product=Teraoka">Teraoka WhatsApp</a>.</p>`,
       ru: `
-<p>Продовольственным магазинам в Иране нужны японские весы и этикетка. <strong>Teraoka Seiko</strong> — deli, POS, этикетка. Bizdavar поставляет оригинальный <a href="/pages/teraoka">каталог</a>.</p>
+<p>Продовольственным магазинам по всему миру нужны японские весы и этикетка. <strong>Teraoka Seiko</strong> — deli, POS, этикетка. Bizdavar поставляет оригинальный <a href="/pages/teraoka">каталог</a>.</p>
 ${fig('/assets/images/teraoka/hero/teraoka-luxeed-hero.webp', 'Весы Teraoka', 'Укажите тип и грузоподъёмность.')}
 <h2 id="ch-who">Какая задача</h2>
 <p>Deli, касса, этикетка. Luxeed L, DS-782, W5600SRX.</p>
 <h2 id="ch-spec">Что прислать</h2>
 <ul><li>Тип весов</li><li>Грузоподъёмность и число касс</li><li>Этикетка / POS</li></ul>
-<h2 id="ch-buy">Покупка в Иране</h2>
+<h2 id="ch-buy">Покупка по всему миру</h2>
 <p><a href="/pages/contact?product=Teraoka">Запрос</a>.</p>`,
       ar: `
 <p>متاجر الغذاء في إيران تحتاج موازين وملصقات يابانية. <strong>Teraoka Seiko</strong> — دلّي وPOS وملصقات. بيزدوار يورّد <a href="/pages/teraoka">الكتالوج</a> الأصلي.</p>

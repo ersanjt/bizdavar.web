@@ -8,17 +8,17 @@
     fa: {
       home: {
         seoTitle: 'بیزدوار گروپ | طراحی سایت، بازاریابی دیجیتال و تامین صنعتی',
-        seoDescription: 'طراحی سایت، بازاریابی دیجیتال و تامین صنعتی. مشاوره رایگان — ایران، ترکیه، ارمنستان و دبی.',
+        seoDescription: 'طراحی سایت، بازاریابی دیجیتال و تامین صنعتی. مشاوره رایگان — در سراسر جهان.',
         seoKeywords: 'بیزدوار, Bizdavar Group, طراحی سایت, بازاریابی دیجیتال, FXGuard, VEGA, UWT, Prosense, Liqui Moly, Fast Web Studio'
       },
       about: {
         seoTitle: 'درباره بیزدوار | خدمات دیجیتال و تامین صنعتی از ۲۰۱۳',
-        seoDescription: 'بیزدوار گروپ از ۲۰۱۳ — طراحی وب، بازاریابی دیجیتال، محصولات FXGuard و تامین تجهیزات صنعتی VEGA، Prosense و Liqui Moly در ۱۱ کشور. دفاتر: ایران، ترکیه، ارمنستان و دبی.',
+        seoDescription: 'بیزدوار گروپ از ۲۰۱۳ — طراحی وب، بازاریابی دیجیتال، محصولات FXGuard و تامین تجهیزات صنعتی VEGA، Prosense و Liqui Moly در ۱۱ کشور. دفاتر: در سراسر جهان.',
         seoKeywords: 'درباره بیزدوار, Bizdavar Group, آژانس دیجیتال بیزدوار, تامین صنعتی'
       },
       services: {
         seoTitle: 'خدمات بیزدوار | بازاریابی دیجیتال، طراحی وب، SMM و خدمات فنی',
-        seoDescription: 'خدمات بیزدوار از دفاتر ایران، ترکیه، ارمنستان و دبی: بازاریابی دیجیتال، طراحی وب و وب‌اپ، اپ اندروید/iOS، مدیریت سرور، SMM، CCTV، سیم‌کشی و نورمخفی — هماهنگی واتساپ تخصصی.',
+        seoDescription: 'خدمات بیزدوار از دفاتر در سراسر جهان: بازاریابی دیجیتال، طراحی وب و وب‌اپ، اپ اندروید/iOS، مدیریت سرور، SMM، CCTV، سیم‌کشی و نورمخفی — هماهنگی واتساپ تخصصی.',
         seoKeywords: 'خدمات بیزدوار, بازاریابی دیجیتال, طراحی وب, SMM, مدیریت سرور, CCTV استانبول, خدمات فنی تبریز'
       },
       fieldTech: {
@@ -58,7 +58,7 @@
       },
       contact: {
         seoTitle: 'تماس با بیزدوار | مشاوره رایگان خدمات و تامین صنعتی',
-        seoDescription: 'مشاوره رایگان بیزدوار: طراحی سایت، بازاریابی دیجیتال، FXGuard و تامین VEGA، Prosense و Liqui Moly. فرم تماس، واتساپ و ایمیل — دفاتر: ایران، ترکیه، ارمنستان و دبی.',
+        seoDescription: 'مشاوره رایگان بیزدوار: طراحی سایت، بازاریابی دیجیتال، FXGuard و تامین VEGA، Prosense و Liqui Moly. فرم تماس، واتساپ و ایمیل — دفاتر: در سراسر جهان.',
         seoKeywords: 'تماس بیزدوار, مشاوره رایگان, طراحی سایت, VEGA, Liqui Moly, FXGuard'
       },
       vega: {
@@ -88,17 +88,17 @@
       },
       autoMoto: {
         seoTitle: 'اتوموتو | فروشگاه موتورسیکلت و فروشگاه ترمز | بیزدوار',
-        seoDescription: 'دو فروشگاه جدا: تجهیزات موتورسیکلت با قیمت دلاری برای تحویل در ایران، و لنت و دیسک ترمز با انتخاب برند و مدل.',
+        seoDescription: 'دو فروشگاه جدا: تجهیزات موتورسیکلت با قیمت دلاری برای تحویل در سراسر جهان، و لنت و دیسک ترمز با انتخاب برند و مدل.',
         seoKeywords: 'اتوموتو, تجهیزات موتورسیکلت, لنت ترمز, دیسک ترمز, بیزدوار'
       },
       motorcycle: {
         seoTitle: 'خرید تجهیزات موتورسیکلت | کلاه، کاپشن و بوت | بیزدوار',
-        seoDescription: 'خرید تجهیزات موتورسیکلت از بیزدوار: کلاه ایمنی، کاپشن، دستکش، شلوار، بوت، اینترکام و محافظ. قیمت روی کارت به دلار است و برای تحویل در ایران. اگر قیمت نباشد، فقط استعلام می‌کنیم.',
+        seoDescription: 'خرید تجهیزات موتورسیکلت از بیزدوار: کلاه ایمنی، کاپشن، دستکش، شلوار، بوت، اینترکام و محافظ. قیمت روی کارت به دلار است و برای تحویل در سراسر جهان. اگر قیمت نباشد، فقط استعلام می‌کنیم.',
         seoKeywords: 'تجهیزات موتورسیکلت, کلاه ایمنی موتور, کاپشن موتور, دستکش موتور, بوت موتور, اینترکام, بیزدوار'
       },
       carParts: {
         seoTitle: 'خرید لنت و دیسک ترمز | انتخاب برند و مدل | بیزدوار',
-        seoDescription: 'فروشگاه ترمز بیزدوار: لنت، دیسک، ترمز عملکردی و روغن ترمز با انتخاب برند و مدل. قیمت دلاری تحویل ایران.',
+        seoDescription: 'فروشگاه ترمز بیزدوار: لنت، دیسک، ترمز عملکردی و روغن ترمز با انتخاب برند و مدل. قیمت دلاری تحویل بین‌المللی.',
         seoKeywords: 'لنت ترمز, دیسک ترمز, لنت BMW, لنت بنز, بیزدوار'
       },
       teltonika: {
@@ -258,11 +258,11 @@
       },
       articleVegaSupplyIran: {
         seoTitle: 'تامین سنسور VEGA برای پروژه‌های ایران | بیزدوار',
-        seoDescription: 'تامین اصل سنسور VEGA برای پروژه‌های ایران — مشاوره فارسی، پیش‌فاکتور شفاف و لجستیک بین‌المللی. دفاتر: ایران، ترکیه، ارمنستان و دبی.',
+        seoDescription: 'تامین اصل سنسور VEGA برای پروژه‌های ایران — مشاوره فارسی، پیش‌فاکتور شفاف و لجستیک بین‌المللی. دفاتر: در سراسر جهان.',
         seoKeywords: 'خرید VEGA ایران, تامین سنسور VEGA, VEGAPULS, بیزدوار'
       },
       articleMultilingualWeb: {
-        seoTitle: 'وبسایت چندزبانه برای ایران و ترکیه | بیزدوار',
+        seoTitle: 'وبسایت چندزبانه برای همه کشورها | بیزدوار',
         seoDescription: 'سایت فارسی–ترکی–انگلیسی با hreflang، اعتماد محلی و تحویل سریع — راهنمای بیزدوار برای کسب‌وکارهای دو بازاری.',
         seoKeywords: 'طراحی سایت چندزبانه, hreflang, سایت فارسی ترکی, بیزدوار'
       }
@@ -270,12 +270,12 @@
     tr: {
       home: {
         seoTitle: 'Bizdavar Group | Web tasarım, dijital pazarlama ve endüstriyel tedarik',
-        seoDescription: 'Web tasarım, dijital pazarlama ve endüstriyel tedarik. Ücretsiz danışmanlık — İran, Türkiye, Ermenistan ve Dubai.',
+        seoDescription: 'Web tasarım, dijital pazarlama ve endüstriyel tedarik. Ücretsiz danışmanlık — dünya genelinde.',
         seoKeywords: 'Bizdavar, web tasarım İstanbul, dijital pazarlama, FXGuard, VEGA, UWT, Prosense, Liqui Moly, Fast Web Studio'
       },
       about: {
         seoTitle: 'Hakkımızda | Bizdavar — dijital hizmetler ve endüstriyel tedarik',
-        seoDescription: 'Bizdavar Group 2013’ten beri: web tasarım, dijital pazarlama, FXGuard ürünleri ve VEGA, Prosense, Liqui Moly tedariki — 11 ülkede. Ofisler: İran, Türkiye, Ermenistan ve Dubai.',
+        seoDescription: 'Bizdavar Group 2013’ten beri: web tasarım, dijital pazarlama, FXGuard ürünleri ve VEGA, Prosense, Liqui Moly tedariki — 11 ülkede. Ofisler: dünya genelinde.',
         seoKeywords: 'Bizdavar hakkımızda, dijital ajans Bizdavar, endüstriyel tedarik'
       },
       services: {
@@ -320,7 +320,7 @@
       },
       contact: {
         seoTitle: 'İletişim | Ücretsiz danışmanlık — hizmet ve endüstriyel tedarik',
-        seoDescription: 'Bizdavar ile ücretsiz danışmanlık: web tasarım, dijital pazarlama, FXGuard ve VEGA, Prosense, Liqui Moly tedariki. Form, WhatsApp ve e-posta — ofisler: İran, Türkiye, Ermenistan ve Dubai.',
+        seoDescription: 'Bizdavar ile ücretsiz danışmanlık: web tasarım, dijital pazarlama, FXGuard ve VEGA, Prosense, Liqui Moly tedariki. Form, WhatsApp ve e-posta — ofisler: dünya genelinde.',
         seoKeywords: 'Bizdavar iletişim, ücretsiz danışmanlık, web tasarım, VEGA, Liqui Moly, FXGuard'
       },
       vega: {
@@ -345,12 +345,12 @@
       },
       autoMoto: {
         seoTitle: 'Auto-Moto | motosiklet ekipmanı ve fren parçaları | Bizdavar',
-        seoDescription: 'İki ayrı mağaza. Motosiklet ekipmanının fiyatı kartta dolar olarak yazar ve İran teslimi içindir. Fren mağazasında balata ve diski araç markasına göre seçersiniz.',
+        seoDescription: 'İki ayrı mağaza. Motosiklet ekipmanının fiyatı kartta dolar olarak yazar ve uluslararası teslim içindir. Fren mağazasında balata ve diski araç markasına göre seçersiniz.',
         seoKeywords: 'Auto-Moto, motosiklet ekipmanı, fren balatası, fren diski, Bizdavar'
       },
       motorcycle: {
         seoTitle: 'Motosiklet ekipmanı | kask, mont ve bot | Bizdavar',
-        seoDescription: 'Bizdavar motosiklet ekipmanı: kask, mont, eldiven, pantolon, bot, interkom ve koruma. Karttaki fiyat ABD dolarıdır ve İran teslimi içindir. Fiyat yoksa yalnızca teklif alınır.',
+        seoDescription: 'Bizdavar motosiklet ekipmanı: kask, mont, eldiven, pantolon, bot, interkom ve koruma. Karttaki fiyat ABD dolarıdır ve uluslararası teslim içindir. Fiyat yoksa yalnızca teklif alınır.',
         seoKeywords: 'motosiklet ekipmanı, motosiklet kask, motosiklet mont, motosiklet bot, interkom, Bizdavar'
       },
       carParts: {
@@ -515,7 +515,7 @@
       },
       articleVegaSupplyIran: {
         seoTitle: 'İran projeleri için VEGA sensör tedariki | Bizdavar',
-        seoDescription: 'İran projeleri için orijinal VEGA — Farsça danışmanlık, şeffaf proforma ve uluslararası lojistik. Ofisler: İran, Türkiye, Ermenistan ve Dubai.',
+        seoDescription: 'İran projeleri için orijinal VEGA — Farsça danışmanlık, şeffaf proforma ve uluslararası lojistik. Ofisler: dünya genelinde.',
         seoKeywords: 'VEGA İran, VEGA tedarik, VEGAPULS, Bizdavar'
       },
       articleMultilingualWeb: {
@@ -604,17 +604,17 @@
     en: {
       home: {
         seoTitle: 'Bizdavar Group | Web design, digital marketing & industrial supply',
-        seoDescription: 'Web design, digital marketing and industrial supply. Free consultation — Iran, Turkey, Armenia and Dubai.',
+        seoDescription: 'Web design, digital marketing and industrial supply. Free consultation — worldwide.',
         seoKeywords: 'Bizdavar, web design Istanbul, digital marketing, FXGuard, VEGA, UWT, Prosense, Liqui Moly, Fast Web Studio'
       },
       about: {
         seoTitle: 'About Bizdavar | Digital services & industrial supply since 2013',
-        seoDescription: 'Bizdavar Group since 2013 — web design, digital marketing, FXGuard products, and VEGA, Prosense & Liqui Moly supply across 11 countries. Offices in Iran, Turkey, Armenia and Dubai.',
+        seoDescription: 'Bizdavar Group since 2013 — web design, digital marketing, FXGuard products, and VEGA, Prosense & Liqui Moly supply across 11 countries. Offices in worldwide.',
         seoKeywords: 'about Bizdavar, digital agency Bizdavar, industrial supply'
       },
       services: {
         seoTitle: 'Services | Digital marketing, web design, SMM & technical installs',
-        seoDescription: 'Bizdavar services from offices in Iran, Turkey, Armenia and Dubai: digital marketing, web/web apps, Android & iOS, servers, SMM, CCTV, wiring and cove lighting — via dedicated technical WhatsApp.',
+        seoDescription: 'Bizdavar services from offices in worldwide: digital marketing, web/web apps, Android & iOS, servers, SMM, CCTV, wiring and cove lighting — via dedicated technical WhatsApp.',
         seoKeywords: 'Bizdavar services, digital marketing, web design, SMM, CCTV Istanbul, technical installs'
       },
       fieldTech: {
@@ -654,12 +654,12 @@
       },
       contact: {
         seoTitle: 'Contact Bizdavar | Free consultation — services & industrial supply',
-        seoDescription: 'Free Bizdavar consultation: web design, digital marketing, FXGuard, and VEGA, Prosense & Liqui Moly supply. Form, WhatsApp and email — offices: Iran, Turkey, Armenia and Dubai.',
+        seoDescription: 'Free Bizdavar consultation: web design, digital marketing, FXGuard, and VEGA, Prosense & Liqui Moly supply. Form, WhatsApp and email — offices: worldwide.',
         seoKeywords: 'Bizdavar contact, free consultation, web design, VEGA, Liqui Moly, FXGuard'
       },
       vega: {
         seoTitle: 'Buy VEGA sensors | VEGAPULS quote',
-        seoDescription: 'Genuine VEGAPULS 6X, VEGAPULS C 11, VEGABAR 39 and VEGAPOINT. Exact order codes, clear proforma and logistics to Iran and beyond — Bizdavar.',
+        seoDescription: 'Genuine VEGAPULS 6X, VEGAPULS C 11, VEGABAR 39 and VEGAPOINT. Exact order codes, clear proforma and worldwide logistics — Bizdavar.',
         seoKeywords: 'buy VEGA, VEGAPULS 6X price, VEGAPULS C 11, VEGAPULS C 23, VEGAPULS 11, VEGAPULS 21, VEGAPULS 31, VEGABAR 39, VEGASWING 51, VEGAPOINT, level sensor, Bizdavar'
       },
       uwt: {
@@ -684,12 +684,12 @@
       },
       autoMoto: {
         seoTitle: 'Auto-Moto | motorcycle gear and brake parts | Bizdavar',
-        seoDescription: 'Two separate shops. Motorcycle gear is priced in US dollars for delivery in Iran. The brake shop lists pads and discs by vehicle brand and model.',
+        seoDescription: 'Two separate shops. Motorcycle gear is priced in US dollars for worldwide delivery. The brake shop lists pads and discs by vehicle brand and model.',
         seoKeywords: 'Auto-Moto, motorcycle gear, brake pads, brake discs, Bizdavar'
       },
       motorcycle: {
         seoTitle: 'Motorcycle gear | helmets, jackets and boots | Bizdavar',
-        seoDescription: 'Motorcycle gear from Bizdavar: helmets, jackets, gloves, pants, boots, intercoms and armour. Card prices are in US dollars, for delivery in Iran. If there is no price, we quote on request.',
+        seoDescription: 'Motorcycle gear from Bizdavar: helmets, jackets, gloves, pants, boots, intercoms and armour. Card prices are in US dollars, for worldwide delivery. If there is no price, we quote on request.',
         seoKeywords: 'motorcycle gear, motorcycle helmet, motorcycle jacket, motorcycle boots, intercom, Bizdavar'
       },
       carParts: {
@@ -854,7 +854,7 @@
       },
       articleVegaSupplyIran: {
         seoTitle: 'VEGA sensor supply for Iran projects | Bizdavar',
-        seoDescription: 'Original VEGA sensors for Iran projects — Persian consulting, transparent proforma and international logistics. Offices in Iran, Turkey, Armenia and Dubai.',
+        seoDescription: 'Original VEGA sensors for Iran projects — Persian consulting, transparent proforma and international logistics. Offices in worldwide.',
         seoKeywords: 'buy VEGA Iran, VEGA supply, VEGAPULS, Bizdavar'
       },
       articleMultilingualWeb: {

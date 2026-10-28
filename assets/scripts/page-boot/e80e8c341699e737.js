@@ -10,7 +10,7 @@ function bootProductsPage() {
       if (typeof initOwnedProductsPage === 'function') initOwnedProductsPage();
       renderGeoStrip('geoStrip', {
         textKey: 'productsPage.geoText',
-        text: 'محصولات مالکیتی و تامین برندهای صنعتی — مشاوره فنی فارسی از دفاتر ایران، ترکیه، ارمنستان و دبی.'
+        text: 'محصولات مالکیتی و تامین برندهای صنعتی — مشاوره فنی فارسی از دفاتر در سراسر جهان.'
       });
       renderRelatedLinks([
         { title: 'خرید VEGAPULS', url: 'articles/buy-vegapuls-iran', desc: 'سنسور سطح ایران', titleKey: 'productsPage.related.0.title', descKey: 'productsPage.related.0.desc' },

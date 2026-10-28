@@ -2,7 +2,7 @@ bizdavarPageInit(function () {
       const crumbs = [
             { page: 'home', url: 'index' },
             { page: 'blog', url: 'blog' },
-            { name: 'Локальное SEO для бизнеса в Иране — Google Maps', url: 'local-seo-iran' }
+            { name: 'Локальное SEO для бизнеса по всему миру — Google Maps', url: 'local-seo-iran' }
           ];
       injectPageSeo('articleLocalSeo', {
         canonical: 'https://bizdavar.com/pages/articles/local-seo-iran',
@@ -10,7 +10,7 @@ bizdavarPageInit(function () {
         type: 'article'
       });
       injectArticleSchema({
-        title: 'Локальное SEO для бизнеса в Иране — Google Maps',
+        title: 'Локальное SEO для бизнеса по всему миру — Google Maps',
         description: 'Google Business Profile, NAP, локальные лендинги — локальное SEO с Bizdavar.',
         date: '2026-04-20',
         dateModified: '2026-08-24',

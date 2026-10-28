@@ -35,7 +35,7 @@ const ARTICLES = [
       fa: 'دیجیتال مارکتینگ چیست: سئو، گوگل ادز، SMM، محتوا و سنجش لید — مسیر عملی بیزدوار برای ایران و ترکیه.',
       tr: 'Dijital pazarlama nedir? SEO, Google Ads, SMM ve lead ölçümü — İran ve Türkiye işletmeleri için adım adım rehber. Ücretsiz danışmanlık.',
       en: 'What digital marketing is: SEO, Google Ads, SMM, content and lead measurement — Bizdavar’s path for Iran and Turkey.',
-      ru: 'Что такое цифровой маркетинг: SEO, Google Ads, SMM, контент и измерение лидов — путь Bizdavar для Ирана и Турции.',
+      ru: 'Что такое цифровой маркетинг: SEO, Google Ads, SMM, контент и измерение лидов — путь Bizdavar по всему миру.',
       ar: 'ما هو التسويق الرقمي: سيو وإعلانات جوجل وSMM والمحتوى وقياس العملاء — مسار بيزدوار لإيران وتركيا.'
     },
     keywords: {
@@ -554,7 +554,7 @@ const ARTICLES = [
     title: {
       fa: 'تامین سنسور VEGA در ایران — از استعلام تا پروژه صنعتی',
       tr: 'İran’da VEGA sensör tedariki — sorgudan sahaya',
-      en: 'VEGA sensor supply to Iran — from inquiry to site',
+      en: 'VEGA sensor supply worldwide — from inquiry to site',
       ru: 'Поставка датчиков VEGA в Иран — от запроса до объекта',
       ar: 'توريد حساسات VEGA إلى إيران — من الاستعلام إلى الموقع'
     },
@@ -562,7 +562,7 @@ const ARTICLES = [
       fa: 'مسیر استعلام تا تحویل VEGA اصل برای پروژه ایران: کد سفارش، پیش‌فاکتور و لجستیک تا محل نصب — بدون ابهام بازار خاکستری.',
       tr: 'İran projesi için orijinal VEGA: sipariş kodu, proforma ve sahaya lojistik — gri pazar yok.',
       en: 'Original VEGA for Iran projects: order code, proforma and logistics to site — not the grey market.',
-      ru: 'Оригинальный VEGA для проектов в Иране: код заказа, проформа и логистика на объект.',
+      ru: 'Оригинальный VEGA для проектов по всему миру: код заказа, проформа и логистика на объект.',
       ar: 'VEGA أصلي لمشاريع إيران: رمز الطلب وفاتورة مبدئية ولوجستيات حتى الموقع.'
     },
     keywords: {
@@ -915,7 +915,7 @@ const ARTICLES = [
       fa: 'سئو محلی برای کسب‌وکار ایران — Google Maps و جستجوی محلی',
       tr: 'Yerel SEO — İran işletmeleri için Google Maps',
       en: 'Local SEO for Iran businesses — Google Maps and local search',
-      ru: 'Локальное SEO для бизнеса в Иране — Google Maps',
+      ru: 'Локальное SEO для бизнеса по всему миру — Google Maps',
       ar: 'SEO محلي للأعمال في إيران — Google Maps'
     },
     description: {
@@ -1380,7 +1380,7 @@ ${fig('/' + a.extraImg, 'Каналы цифрового маркетинга, �
 <h2 id="ch-vs">Отличие от традиционного маркетинга</h2>
 <p>Онлайн вы еженедельно видите CTR, CPA и ответы и двигаете бюджет. Билборды и печатные каталоги этого цикла не дают. Технический старт: <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" rel="noopener noreferrer" target="_blank">Google SEO Starter Guide</a>.</p>
 <h2 id="ch-region">Иран и Турция: WhatsApp, RTL и языки</h2>
-<p>На этих рынках реальный разговор часто закрывается в WhatsApp; английская форма без местного номера не строит доверие. Персидской странице нужен корректный RTL, турецкой — отдельный URL и hreflang. Техническая схема: <a href="/pages/articles/multilingual-web-iran-turkey">многоязычный сайт для Ирана и Турции</a>.</p>
+<p>На этих рынках реальный разговор часто закрывается в WhatsApp; английская форма без местного номера не строит доверие. Персидской странице нужен корректный RTL, турецкой — отдельный URL и hreflang. Техническая схема: <a href="/pages/articles/multilingual-web-iran-turkey">многоязычный сайт по всему миру</a>.</p>
 <h2 id="ch-start">С чего начать</h2>
 <ol>
 <li>Одна понятная страница услуги с WhatsApp/формой и приемлемой скоростью на мобильном.</li>
@@ -1399,7 +1399,7 @@ ${fig('/' + a.extraImg, 'Каналы цифрового маркетинга, �
     .replace(/delivers a company or shop site in 5 working days/g, 'сдаёт корпоративный или магазинный сайт за 5 рабочих дней')
     .replace(/Picking level, pressure or point-level sensors/g, 'Выбор датчиков уровня, давления или предельного уровня')
     .replace(/Bizdavar Group has worked since 2013/g, 'Bizdavar Group работает с 2013 года')
-    .replace(/Oil, petrochemical, water and food projects in Iran/g, 'Нефть, нефтехимия, вода и пищевые проекты в Иране')
+    .replace(/Oil, petrochemical, water and food projects in Iran/g, 'Нефть, нефтехимия, вода и пищевые проекты по всему миру')
     .replace(/A business serving Persian and Turkish customers/g, 'Бизнес с персидскими и турецкими клиентами');
 }
 

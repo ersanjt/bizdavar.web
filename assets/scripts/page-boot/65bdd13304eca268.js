@@ -19,7 +19,7 @@ bizdavarPageInit(function () {
       injectAutoMotoSchema();
       renderGeoStrip('geoStrip', {
         textKey: 'autoMotoPage.geoText',
-        text: "Motorcycle gear supply — prices on the card are in US dollars, for delivery in Iran."
+        text: "Motorcycle gear supply — prices on the card are in US dollars, for worldwide delivery."
       });
       renderRelatedLinks([
         { title: "Auto-Moto", url: "auto-moto", desc: "Two separate shops: gear and brakes", titleKey: 'autoMotoPage.related.0.title', descKey: 'autoMotoPage.related.0.desc' },

@@ -16,7 +16,7 @@ bizdavarPageInit(function () {
         dateModified: '2026-08-29',
         slug: 'pages/articles/industrial-trade-iran',
         image: 'assets/images/content/supply-hero.jpg',
-        keywords: 'بازرگانی صنعتی ایران, تامین تجهیزات ابزار دقیق, واردات تجهیزات صنعتی, بیزدوار'
+        keywords: 'بازرگانی صنعتی بین‌المللی, تامین تجهیزات ابزار دقیق, واردات تجهیزات صنعتی, بیزدوار'
       });
       renderBreadcrumbs(crumbs);
       injectBreadcrumbSchema(crumbs);

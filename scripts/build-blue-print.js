@@ -21,9 +21,9 @@ const WA = '989305880135';
 
 const ui = {
   fa: {
-    order: 'برای استعلام، شماره قطعه اصلی (OE)، مدل خودرو، سال ساخت، تعداد و شهر تحویل در ایران یا مقصد در روسیه را به بیزدوار بفرستید. قیمت با موجودی روز در پیش‌فاکتور می‌آید؛ روی این صفحه قیمت ساختگی نمی‌گذاریم.',
+    order: 'برای استعلام، شماره قطعه اصلی (OE)، مدل خودرو، سال ساخت، تعداد و شهر مقصد را به بیزدوار بفرستید. قیمت با موجودی روز در پیش‌فاکتور می‌آید؛ روی این صفحه قیمت ساختگی نمی‌گذاریم.',
     sendTitle: 'برای پیش‌فاکتور این‌ها را بفرستید',
-    send: ['شماره OE یا شماره Blue Print، اگر دارید', 'برند، مدل، سال و حجم موتور', 'تعداد و اینکه برای تعمیرگاه است یا ناوگان', 'شهر تحویل در ایران یا شهر مقصد در روسیه'],
+    send: ['شماره OE یا شماره Blue Print، اگر دارید', 'برند، مدل، سال و حجم موتور', 'تعداد و اینکه برای تعمیرگاه است یا ناوگان', 'شهر مقصد'],
     related: 'قطعات همین خانواده',
     hub: 'کاتالوگ Blue Print',
     inquiry: 'فرم استعلام',
@@ -31,17 +31,17 @@ const ui = {
     official: 'شرح این خانواده در سایت Blue Print',
     faqQ: 'این قطعه را چطور تطبیق می‌دهید؟',
     faqA: 'شماره OE یا شاسی را با کاتالوگ Blue Print تطبیق می‌کنیم و فقط همان کاربرد را پیش‌فاکتور می‌کنیم.',
-    faqQ2: 'به ایران و روسیه می‌رسد؟',
-    faqA2: 'بله. مسیر تامین برای تعمیرگاه و ناوگان در ایران و برای خریدار در روسیه هماهنگ می‌شود. زمان حمل در پیش‌فاکتور نوشته می‌شود.',
+    faqQ2: 'به همه کشورها می‌رسد؟',
+    faqA2: 'بله. تامین برای مشتریان در همه کشورها هماهنگ می‌شود. زمان حمل در پیش‌فاکتور نوشته می‌شود.',
     crumbHome: 'خانه',
     crumbProducts: 'محصولات',
     indexTitle: 'فهرست همه قطعات',
     indexLead: 'هر نام به صفحه خودش می‌رود. شماره OE را آنجا یا در واتساپ بفرستید.'
   },
   ru: {
-    order: 'Для запроса пришлите в Bizdavar номер оригинала (OE), модель, год, количество и город в России или в Иране. Цену ставим в проформе по наличию на день запроса — на странице нет выдуманной цены.',
+    order: 'Для запроса пришлите в Bizdavar номер оригинала (OE), модель, год, количество и город назначения. Цену ставим в проформе по наличию на день запроса — на странице нет выдуманной цены.',
     sendTitle: 'Что прислать для проформы',
-    send: ['Номер OE или номер Blue Print, если он есть', 'Марка, модель, год и объём двигателя', 'Количество и для кого: сервис или парк', 'Город в России или город поставки в Иране'],
+    send: ['Номер OE или номер Blue Print, если он есть', 'Марка, модель, год и объём двигателя', 'Количество и для кого: сервис или парк', 'Город назначения'],
     related: 'Детали этой группы',
     hub: 'Каталог Blue Print',
     inquiry: 'Форма запроса',
@@ -49,17 +49,17 @@ const ui = {
     official: 'Описание группы на сайте Blue Print',
     faqQ: 'Как вы подбираете деталь?',
     faqA: 'Сверяем номер OE или VIN с каталогом Blue Print и выставляем проформу только на это применение.',
-    faqQ2: 'Поставляете в Россию и в Иран?',
-    faqA2: 'Да. Поставка идёт и сервисам в Иране, и покупателям в России. Срок пишем в проформе.',
+    faqQ2: 'Поставляете по всему миру?',
+    faqA2: 'Да. Поставка идёт клиентам во всех странах. Срок пишем в проформе.',
     crumbHome: 'Главная',
     crumbProducts: 'Продукты',
     indexTitle: 'Все детали',
     indexLead: 'Каждое имя ведёт на свою страницу. Номер OE можно отправить там или в WhatsApp.'
   },
   en: {
-    order: 'For a quote, send Bizdavar the OE number, vehicle model, year, quantity and the delivery city in Iran or Russia. The price is confirmed on the proforma from that day’s supply. This page does not invent a price.',
+    order: 'For a quote, send Bizdavar the OE number, vehicle model, year, quantity and the destination city. The price is confirmed on the proforma from that day’s supply. This page does not invent a price.',
     sendTitle: 'Send this for a proforma',
-    send: ['OE number or Blue Print number, if you have it', 'Make, model, year and engine size', 'Quantity, and whether it is a workshop or a fleet', 'Delivery city in Iran or destination city in Russia'],
+    send: ['OE number or Blue Print number, if you have it', 'Make, model, year and engine size', 'Quantity, and whether it is a workshop or a fleet', 'Destination city'],
     related: 'Parts in this family',
     hub: 'Blue Print catalogue',
     inquiry: 'Quote form',
@@ -67,17 +67,17 @@ const ui = {
     official: 'This family on the Blue Print site',
     faqQ: 'How do you match the part?',
     faqA: 'We match the OE number or VIN to the Blue Print catalogue and quote only that application.',
-    faqQ2: 'Do you supply Iran and Russia?',
-    faqA2: 'Yes. Workshops and fleets in Iran and buyers in Russia are both in scope. Lead time is written on the proforma.',
+    faqQ2: 'Do you supply worldwide?',
+    faqA2: 'Yes. Customers in any country are in scope. Lead time is written on the proforma.',
     crumbHome: 'Home',
     crumbProducts: 'Products',
     indexTitle: 'All parts',
     indexLead: 'Each name opens its own page. Send the OE number there or on WhatsApp.'
   },
   tr: {
-    order: 'Teklif için OE numarasını, araç modelini, yılını, adedi ve İran veya Rusya teslim şehrini Bizdavar’a gönderin. Fiyat, günün tedarikine göre proformada netleşir. Bu sayfada uydurma fiyat yoktur.',
+    order: 'Teklif için OE numarasını, araç modelini, yılını, adedi ve varış ülkesini ve şehrini Bizdavar’a gönderin. Fiyat, günün tedarikine göre proformada netleşir. Bu sayfada uydurma fiyat yoktur.',
     sendTitle: 'Proforma için bunları gönderin',
-    send: ['OE veya Blue Print numarası, varsa', 'Marka, model, yıl ve motor hacmi', 'Adet ve atölye mi filo mu', 'İran teslim şehri veya Rusya varış şehri'],
+    send: ['OE veya Blue Print numarası, varsa', 'Marka, model, yıl ve motor hacmi', 'Adet ve atölye mi filo mu', 'Varış şehri'],
     related: 'Aynı ailedeki parçalar',
     hub: 'Blue Print kataloğu',
     inquiry: 'Teklif formu',
@@ -85,17 +85,17 @@ const ui = {
     official: 'Bu ailenin Blue Print sayfası',
     faqQ: 'Parçayı nasıl eşleştiriyorsunuz?',
     faqA: 'OE numarasını veya şasiyi Blue Print kataloğuyla eşleştirir, yalnızca o uygulamaya proforma çıkarırız.',
-    faqQ2: 'İran ve Rusya’ya gider mi?',
-    faqA2: 'Evet. İran’daki atölye ve filolar ile Rusya’daki alıcılar için tedarik kurulur. Süre proformada yazar.',
+    faqQ2: 'Tüm ülkelere gider mi?',
+    faqA2: 'Evet. Tedarik her ülkedeki müşteriler için kurulur. Süre proformada yazar.',
     crumbHome: 'Ana sayfa',
     crumbProducts: 'Ürünler',
     indexTitle: 'Tüm parçalar',
     indexLead: 'Her ad kendi sayfasına gider. OE numarasını oradan veya WhatsApp’tan gönderin.'
   },
   ar: {
-    order: 'لطلب السعر أرسلوا إلى Bizdavar رقم القطعة الأصلية OE وموديل السيارة والسنة والكمية ومدينة التسليم في إيران أو الوجهة في روسيا. السعر يُثبت في الفاتورة الأولية حسب التوفر. لا نضع سعراً مختلقاً في هذه الصفحة.',
+    order: 'لطلب السعر أرسلوا إلى Bizdavar رقم القطعة الأصلية OE وموديل السيارة والسنة والكمية ومدينة الوجهة. السعر يُثبت في الفاتورة الأولية حسب التوفر. لا نضع سعراً مختلقاً في هذه الصفحة.',
     sendTitle: 'أرسلوا هذا للفاتورة الأولية',
-    send: ['رقم OE أو رقم Blue Print إن وُجد', 'العلامة والموديل والسنة وسعة المحرك', 'الكمية وهل الطلب لورشة أم لأسطول', 'مدينة التسليم في إيران أو مدينة الوجهة في روسيا'],
+    send: ['رقم OE أو رقم Blue Print إن وُجد', 'العلامة والموديل والسنة وسعة المحرك', 'الكمية وهل الطلب لورشة أم لأسطول', 'مدينة الوجهة'],
     related: 'قطع هذه العائلة',
     hub: 'كتالوج Blue Print',
     inquiry: 'نموذج الاستعلام',
@@ -103,8 +103,8 @@ const ui = {
     official: 'وصف هذه العائلة في موقع Blue Print',
     faqQ: 'كيف تطابقون القطعة؟',
     faqA: 'نطابق رقم OE أو رقم الهيكل مع كتالوج Blue Print ونصدر فاتورة أولية لهذا التطبيق فقط.',
-    faqQ2: 'هل يصل إلى إيران وروسيا؟',
-    faqA2: 'نعم. التوريد لورش وأساطيل إيران وللمشتري في روسيا. مدة الشحن تُكتب في الفاتورة الأولية.',
+    faqQ2: 'هل يصل إلى كل الدول؟',
+    faqA2: 'نعم. التوريد للعملاء في كل الدول. مدة الشحن تُكتب في الفاتورة الأولية.',
     crumbHome: 'الرئيسية',
     crumbProducts: 'المنتجات',
     indexTitle: 'كل القطع',
@@ -115,27 +115,27 @@ const ui = {
 const seoHub = {
   fa: {
     title: 'خرید قطعات Blue Print | فیلتر، ترمز و کلاچ | بیزدوار',
-    description: 'تامین قطعات Blue Print برای ایران و روسیه: فیلتر روغن و هوا، لنت و دیسک، کیت کلاچ، جلوبندی، تایم، واترپمپ، استارت و دینام. استعلام با شماره OE و پیش‌فاکتور.',
-    keywords: 'خرید Blue Print, فیلتر روغن, لنت ترمز, کیت کلاچ, دیسک ترمز, قطعات خودرو آسیایی, بیزدوار, تامین قطعه ایران, قطعات یدکی روسیه'
+    description: 'تامین قطعات Blue Print برای همه کشورها: فیلتر روغن و هوا، لنت و دیسک، کیت کلاچ، جلوبندی، تایم، واترپمپ، استارت و دینام. استعلام با شماره OE و پیش‌فاکتور.',
+    keywords: 'خرید Blue Print, فیلتر روغن, لنت ترمز, کیت کلاچ, دیسک ترمز, قطعات خودرو آسیایی, بیزدوار, تامین قطعه, قطعات یدکی'
   },
   ru: {
     title: 'Купить запчасти Blue Print | фильтры, тормоза, сцепление | Bizdavar',
-    description: 'Поставка Blue Print в Россию и Иран: масляные и воздушные фильтры, колодки и диски, комплекты сцепления, подвеска, ГРМ, помпа, стартер и генератор. Запрос по номеру OE и проформа.',
-    keywords: 'Blue Print купить, масляный фильтр, тормозные колодки, комплект сцепления, запчасти азиатских авто, Bizdavar, поставка в Россию, запчасти Иран'
+    description: 'Поставка Blue Print по всему миру: масляные и воздушные фильтры, колодки и диски, комплекты сцепления, подвеска, ГРМ, помпа, стартер и генератор. Запрос по номеру OE и проформа.',
+    keywords: 'Blue Print купить, масляный фильтр, тормозные колодки, комплект сцепления, запчасти азиатских авто, Bizdavar, международная поставка, запчасти'
   },
   en: {
     title: 'Blue Print parts | filters, brakes and clutch | Bizdavar',
-    description: 'Blue Print parts for Iran and Russia: oil and air filters, pads and discs, clutch kits, suspension, timing, water pumps, starters and alternators. Quote by OE number.',
-    keywords: 'Blue Print parts, oil filter, brake pads, clutch kit, Asian car parts, Bizdavar, Iran supply, Russia parts'
+    description: 'Blue Print parts for every country: oil and air filters, pads and discs, clutch kits, suspension, timing, water pumps, starters and alternators. Quote by OE number.',
+    keywords: 'Blue Print parts, oil filter, brake pads, clutch kit, Asian car parts, Bizdavar, worldwide supply, parts'
   },
   tr: {
     title: 'Blue Print yedek parça | filtre, fren ve debriyaj | Bizdavar',
-    description: 'İran ve Rusya için Blue Print: yağ ve hava filtresi, balata ve disk, debriyaj seti, süspansiyon, triger, devirdaim, marş ve alternatör. OE numarasıyla teklif.',
+    description: 'Tüm ülkeler için Blue Print: yağ ve hava filtresi, balata ve disk, debriyaj seti, süspansiyon, triger, devirdaim, marş ve alternatör. OE numarasıyla teklif.',
     keywords: 'Blue Print, yağ filtresi, fren balatası, debriyaj seti, Asya araç yedek parça, Bizdavar'
   },
   ar: {
     title: 'قطع Blue Print | فلاتر وفرامل ودبرياج | Bizdavar',
-    description: 'توريد Blue Print لإيران وروسيا: فلاتر الزيت والهواء، تيل وأقراص، أطقم الدبرياج، التعليق، التوقيت، مضخة الماء، المارش والدينامو. استعلام برقم OE.',
+    description: 'توريد Blue Print إلى كل الدول: فلاتر الزيت والهواء، تيل وأقراص، أطقم الدبرياج، التعليق، التوقيت، مضخة الماء، المارش والدينامو. استعلام برقم OE.',
     keywords: 'Blue Print, فلتر زيت, تيل فرامل, طقم دبرياج, قطع سيارات آسيوية, Bizdavar, إيران, روسيا'
   }
 };
@@ -144,19 +144,19 @@ const pageCopy = {
   fa: {
     crumb: 'Blue Print',
     sections: {
-      trust: { eyebrow: 'چرا بیزدوار', title: 'قطعه Blue Print با تطبیق OE، نه حدس', desc: 'شماره قطعه یا شاسی را می‌گیریم، با کاتالوگ Blue Print تطبیق می‌کنیم و پیش‌فاکتور را برای ایران یا روسیه می‌نویسیم.' },
+      trust: { eyebrow: 'چرا بیزدوار', title: 'قطعه Blue Print با تطبیق OE، نه حدس', desc: 'شماره قطعه یا شاسی را می‌گیریم، با کاتالوگ Blue Print تطبیق می‌کنیم و پیش‌فاکتور را برای کشور مقصد می‌نویسیم.' },
       buy: { eyebrow: 'مسیر خرید', title: 'از شماره OE تا تحویل', desc: 'قیمت وقتی قطعی است که موجودی روز در پیش‌فاکتور آمده باشد.' },
       quote: { eyebrow: 'استعلام', title: 'هرچه شماره دقیق‌تر، جواب سریع‌تر', desc: 'مدل خودرو به‌تنهایی هم شروع خوبی است؛ شماره OE مسیر را کوتاه می‌کند.' },
       highlights: { eyebrow: 'پرتقاضا', title: 'فیلتر، ترمز و کلاچ', desc: 'همین خانواده‌ها هسته کاتالوگ Blue Print برای سواری و وانت آسیایی هستند.' },
       catalog: { eyebrow: 'کاتالوگ', title: 'همه خانواده‌های قطعه Blue Print', desc: 'فیلتر، ترمز، کلاچ، فرمان، مدیریت موتور، انتقال قدرت، تایم، خنک‌کاری، برق، بدنه و ابزار تخصصی.' },
-      iran: { eyebrow: 'بازار هدف', title: 'تعمیرگاه ایران و خریدار روسیه', desc: 'مشاوره فارسی برای ایران و مسیر روسی برای خریدار روسیه. هر دو از همین کاتالوگ تامین می‌شوند.' },
+      iran: { eyebrow: 'بازار هدف', title: 'مشتریان در همه کشورها', desc: 'مشاوره به فارسی، روسی و زبان‌های دیگر. تامین برای مشتریان در همه کشورها، از همین کاتالوگ.' },
       supply: { eyebrow: 'خدمات', title: 'فقط لیست قطعه نیست', desc: 'تطبیق، پیش‌فاکتور و هماهنگی حمل.' },
       faq: { eyebrow: 'پرسش‌ها', title: 'قبل از سفارش', desc: 'اگر جواب این‌جا نیست، شماره OE را در واتساپ بفرستید.' }
     },
     officialNote: 'شرح فنی خانواده‌ها بر اساس <a href="https://www.blue-print.com/" target="_blank" rel="noopener noreferrer">کاتالوگ عمومی Blue Print</a> است. سفارش از بیزدوار است، نه از کارخانه. <a href="contact">تماس</a> · <a href="liqui-moly">Liqui Moly</a> · <a href="car-parts">فروشگاه ترمز</a>',
     cta: { title: 'شماره OE را بفرستید', desc: 'فیلتر، لنت، کیت کلاچ، جلوبندی، تایم یا برق — مدل خودرو را هم بنویسید.', btnForm: 'فرم استعلام', btnServices: 'کاتالوگ محصولات' },
-    sticky: { label: 'استعلام Blue Print', hint: 'ایران و روسیه' },
-    geoText: 'تامین قطعات Blue Print برای تعمیرگاه و ناوگان در ایران و برای خریدار در روسیه.',
+    sticky: { label: 'استعلام Blue Print', hint: 'همه کشورها' },
+    geoText: 'تامین قطعات Blue Print برای مشتریان در همه کشورها.',
     related: [
       { title: 'Liqui Moly', desc: 'روغن و افزودنی' },
       { title: 'فروشگاه ترمز', desc: 'لنت و دیسک با برند و مدل' },
@@ -168,19 +168,19 @@ const pageCopy = {
   ru: {
     crumb: 'Blue Print',
     sections: {
-      trust: { eyebrow: 'Почему Bizdavar', title: 'Деталь Blue Print по номеру OE, без угадывания', desc: 'Берём номер или VIN, сверяем с каталогом Blue Print и пишем проформу для России или Ирана.' },
+      trust: { eyebrow: 'Почему Bizdavar', title: 'Деталь Blue Print по номеру OE, без угадывания', desc: 'Берём номер или VIN, сверяем с каталогом Blue Print и пишем проформу для страны назначения.' },
       buy: { eyebrow: 'Как заказать', title: 'От номера OE до поставки', desc: 'Цена окончательна, когда наличие дня стоит в проформе.' },
       quote: { eyebrow: 'Запрос', title: 'Точнее номер — быстрее ответ', desc: 'Модель авто уже помогает. Номер OE сокращает путь.' },
       highlights: { eyebrow: 'Частый спрос', title: 'Фильтры, тормоза и сцепление', desc: 'Эти группы — ядро каталога Blue Print для азиатских легковых и LCV.' },
       catalog: { eyebrow: 'Каталог', title: 'Все семейства деталей Blue Print', desc: 'Фильтры, тормоза, сцепление, подвеска, управление двигателем, трансмиссия, ГРМ, охлаждение, электрика, кузов и инструмент.' },
-      iran: { eyebrow: 'Рынки', title: 'Сервис в Иране и покупатель в России', desc: 'Персидская консультация для Ирана и русский контур для России. Обе поставки идут из этого каталога.' },
+      iran: { eyebrow: 'Рынки', title: 'Клиенты по всему миру', desc: 'Консультация на фарси, русском и других языках. Поставка клиентам во всех странах идёт из этого каталога.' },
       supply: { eyebrow: 'Услуги', title: 'Не только список деталей', desc: 'Подбор, проформа и организация перевозки.' },
       faq: { eyebrow: 'Вопросы', title: 'До заказа', desc: 'Если ответа нет, пришлите номер OE в WhatsApp.' }
     },
     officialNote: 'Техническое описание семейств основано на <a href="https://www.blue-print.com/" target="_blank" rel="noopener noreferrer">публичном каталоге Blue Print</a>. Заказ идёт через Bizdavar. <a href="contact">Контакты</a> · <a href="liqui-moly">Liqui Moly</a> · <a href="car-parts">тормоза</a>',
     cta: { title: 'Пришлите номер OE', desc: 'Фильтр, колодки, комплект сцепления, подвеска, ГРМ или электрика — добавьте модель авто.', btnForm: 'Форма запроса', btnServices: 'Каталог' },
-    sticky: { label: 'Запрос Blue Print', hint: 'Россия и Иран' },
-    geoText: 'Поставка Blue Print сервисам и паркам в Иране и покупателям в России.',
+    sticky: { label: 'Запрос Blue Print', hint: 'все страны' },
+    geoText: 'Поставка Blue Print клиентам во всех странах.',
     related: [
       { title: 'Liqui Moly', desc: 'Масла и присадки' },
       { title: 'Магазин тормозов', desc: 'Колодки и диски' },
@@ -197,13 +197,13 @@ const pageCopy = {
       quote: { eyebrow: 'Quote', title: 'A precise number gets a faster answer', desc: 'The vehicle model is a good start. The OE number shortens the path.' },
       highlights: { eyebrow: 'In demand', title: 'Filters, brakes and clutch', desc: 'These families are the core of the Blue Print range for Asian cars and vans.' },
       catalog: { eyebrow: 'Catalogue', title: 'Every Blue Print part family', desc: 'Filtration, braking, clutch, steering, engine management, drivetrain, timing, cooling, electrics, body and specialist tools.' },
-      iran: { eyebrow: 'Markets', title: 'Workshops in Iran and buyers in Russia', desc: 'Farsi consulting for Iran and a Russian path for Russia. Both are supplied from this catalogue.' },
+      iran: { eyebrow: 'Markets', title: 'Workshops and buyers in Russia', desc: 'Farsi consulting for Iran and a Russian path for Russia. Both are supplied from this catalogue.' },
       supply: { eyebrow: 'Services', title: 'More than a parts list', desc: 'Matching, proforma and freight coordination.' },
       faq: { eyebrow: 'Questions', title: 'Before you order', desc: 'If the answer is not here, send the OE number on WhatsApp.' }
     },
     officialNote: 'Family descriptions follow the <a href="https://www.blue-print.com/" target="_blank" rel="noopener noreferrer">public Blue Print catalogue</a>. Orders are placed with Bizdavar. <a href="contact">Contact</a> · <a href="liqui-moly">Liqui Moly</a> · <a href="car-parts">brake shop</a>',
     cta: { title: 'Send the OE number', desc: 'Filter, pads, clutch kit, suspension, timing or electrics — add the vehicle.', btnForm: 'Quote form', btnServices: 'Product catalogue' },
-    sticky: { label: 'Blue Print quote', hint: 'Iran and Russia' },
+    sticky: { label: 'Blue Print quote', hint: 'every country' },
     geoText: 'Blue Print parts for workshops and fleets in Iran and for buyers in Russia.',
     related: [
       { title: 'Liqui Moly', desc: 'Oils and additives' },
@@ -221,13 +221,13 @@ const pageCopy = {
       quote: { eyebrow: 'Teklif', title: 'Numara netleştikçe cevap hızlanır', desc: 'Araç modeli iyi bir başlangıçtır. OE numarası yolu kısaltır.' },
       highlights: { eyebrow: 'Sık talep', title: 'Filtre, fren ve debriyaj', desc: 'Bu aileler, Asya binek ve hafif ticari araçlar için Blue Print çekirdeğidir.' },
       catalog: { eyebrow: 'Katalog', title: 'Tüm Blue Print parça aileleri', desc: 'Filtre, fren, debriyaj, direksiyon, motor yönetimi, aktarma, triger, soğutma, elektrik, gövde ve özel alet.' },
-      iran: { eyebrow: 'Pazar', title: 'İran atölyesi ve Rusya alıcısı', desc: 'İran için Farsça danışmanlık, Rusya için Rusça hat. İkisi de bu katalogdan tedarik edilir.' },
+      iran: { eyebrow: 'Pazar', title: 'Atölyeler ve Alıcılar', desc: 'İran için Farsça danışmanlık, Rusya için Rusça hat. İkisi de bu katalogdan tedarik edilir.' },
       supply: { eyebrow: 'Hizmet', title: 'Yalnızca parça listesi değil', desc: 'Eşleştirme, proforma ve taşıma koordinasyonu.' },
       faq: { eyebrow: 'Sorular', title: 'Siparişten önce', desc: 'Yanıt yoksa OE numarasını WhatsApp’tan gönderin.' }
     },
     officialNote: 'Aile açıklamaları <a href="https://www.blue-print.com/" target="_blank" rel="noopener noreferrer">Blue Print açık kataloğuna</a> dayanır. Sipariş Bizdavar üzerinden gelir. <a href="contact">İletişim</a> · <a href="liqui-moly">Liqui Moly</a> · <a href="car-parts">fren</a>',
     cta: { title: 'OE numarasını gönderin', desc: 'Filtre, balata, debriyaj seti, süspansiyon, triger veya elektrik — araç modelini de yazın.', btnForm: 'Teklif formu', btnServices: 'Ürün kataloğu' },
-    sticky: { label: 'Blue Print teklifi', hint: 'İran ve Rusya' },
+    sticky: { label: 'Blue Print teklifi', hint: 'tüm ülkeler' },
     geoText: 'İran’daki atölye ve filolar ile Rusya’daki alıcılar için Blue Print tedariki.',
     related: [
       { title: 'Liqui Moly', desc: 'Yağ ve katkı' },
@@ -245,14 +245,14 @@ const pageCopy = {
       quote: { eyebrow: 'استعلام', title: 'كلما دقّ الرقم سرع الرد', desc: 'موديل السيارة بداية جيدة. رقم OE يختصر الطريق.' },
       highlights: { eyebrow: 'الأكثر طلباً', title: 'الفلاتر والفرامل والدبرياج', desc: 'هذه العائلات نواة كتالوج Blue Print لسيارات الركوب والفان الآسيوية.' },
       catalog: { eyebrow: 'الكتالوج', title: 'كل عائلات قطع Blue Print', desc: 'فلاتر، فرامل، دبرياج، توجيه، إدارة محرك، نقل حركة، توقيت، تبريد، كهرباء، هيكل وأدوات.' },
-      iran: { eyebrow: 'الأسواق', title: 'ورشة إيران والمشتري في روسيا', desc: 'استشارة فارسية لإيران ومسار روسي لروسيا. التوريد من هذا الكتالوج.' },
+      iran: { eyebrow: 'الأسواق', title: 'ورشة إيران والمشترون', desc: 'استشارة فارسية لإيران ومسار روسي لروسيا. التوريد من هذا الكتالوج.' },
       supply: { eyebrow: 'الخدمات', title: 'ليست قائمة قطع فقط', desc: 'مطابقة وفاتورة أولية وتنسيق شحن.' },
       faq: { eyebrow: 'أسئلة', title: 'قبل الطلب', desc: 'إذا لم تجدوا الجواب أرسلوا رقم OE على واتساب.' }
     },
     officialNote: 'وصف العائلات مبني على <a href="https://www.blue-print.com/" target="_blank" rel="noopener noreferrer">الكتالوج العام لـ Blue Print</a>. الطلب عبر Bizdavar. <a href="contact">اتصال</a> · <a href="liqui-moly">Liqui Moly</a> · <a href="car-parts">الفرامل</a>',
     cta: { title: 'أرسلوا رقم OE', desc: 'فلتر أو تيل أو طقم دبرياج أو تعليق أو توقيت أو كهرباء — أضيفوا موديل السيارة.', btnForm: 'نموذج الاستعلام', btnServices: 'كتالوج المنتجات' },
-    sticky: { label: 'استعلام Blue Print', hint: 'إيران وروسيا' },
-    geoText: 'توريد قطع Blue Print لورش وأساطيل إيران وللمشتري في روسيا.',
+    sticky: { label: 'استعلام Blue Print', hint: 'كل الدول' },
+    geoText: 'توريد قطع Blue Print للعملاء في كل الدول.',
     related: [
       { title: 'Liqui Moly', desc: 'زيوت وإضافات' },
       { title: 'متجر الفرامل', desc: 'تيل وأقراص' },
@@ -376,7 +376,7 @@ ${seriesOf(g)}
   const trust = [
     { icon: 'shield', fa: ['قطعه نو', 'قطعه بازسازی‌شده عرضه نمی‌کنیم. تطبیق با شماره OE انجام می‌شود.'], ru: ['Новая деталь', 'Восстановленные детали не предлагаем. Подбор по номеру OE.'], en: ['New parts', 'We do not offer reconditioned parts. Matching is by OE number.'], tr: ['Yeni parça', 'Rektifiye parça sunmayız. Eşleştirme OE numarasıyla yapılır.'], ar: ['قطعة جديدة', 'لا نعرض قطعاً مجددة. المطابقة برقم OE.'] },
     { icon: 'target', fa: ['تطبیق کاتالوگ', 'شماره شاسی یا OE با کاربرد Blue Print سنجیده می‌شود.'], ru: ['Сверка каталога', 'VIN или OE сверяется с применением Blue Print.'], en: ['Catalogue match', 'The VIN or OE number is checked against the Blue Print application.'], tr: ['Katalog eşleştirme', 'Şasi veya OE, Blue Print uygulamasıyla kontrol edilir.'], ar: ['مطابقة الكتالوج', 'يُفحص الهيكل أو رقم OE مقابل تطبيق Blue Print.'] },
-    { icon: 'phone', fa: ['فارسی و روسی', 'مشاوره برای تعمیرگاه ایران و خریدار روسیه.'], ru: ['Фарси и русский', 'Консультация для сервиса в Иране и покупателя в России.'], en: ['Farsi and Russian', 'Consulting for workshops in Iran and buyers in Russia.'], tr: ['Farsça ve Rusça', 'İran atölyesi ve Rusya alıcısı için danışmanlık.'], ar: ['فارسية وروسية', 'استشارة لورشة إيران والمشتري في روسيا.'] },
+    { icon: 'phone', fa: ['فارسی و روسی', 'مشاوره به فارسی و روسی برای مشتریان در همه کشورها.'], ru: ['Фарси и русский', 'Консультация на фарси и русском для клиентов во всех странах.'], en: ['Farsi and Russian', 'Consulting in Farsi and Russian for customers worldwide.'], tr: ['Farsça ve Rusça', 'Farsça ve Rusça danışmanlık, her ülkedeki müşteriler için.'], ar: ['فارسية وروسية', 'استشارة بالفارسية والروسية للعملاء في كل الدول.'] },
     { icon: 'ship', fa: ['پیش‌فاکتور', 'قیمت و زمان حمل بعد از موجودی روز نوشته می‌شود.'], ru: ['Проформа', 'Цена и срок пишутся после проверки наличия.'], en: ['Proforma', 'Price and lead time are written after that day’s supply check.'], tr: ['Proforma', 'Fiyat ve süre, günün stoğu görüldükten sonra yazılır.'], ar: ['فاتورة أولية', 'السعر والمدة يُكتبان بعد التحقق من التوفر.'] }
   ].map(item => `      { icon: ${jsString(item.icon)}, label: ${jsString(item.fa[0])}, labelRu: ${jsString(item.ru[0])}, labelEn: ${jsString(item.en[0])}, labelTr: ${jsString(item.tr[0])}, labelAr: ${jsString(item.ar[0])}, desc: ${jsString(item.fa[1])}, descRu: ${jsString(item.ru[1])}, descEn: ${jsString(item.en[1])}, descTr: ${jsString(item.tr[1])}, descAr: ${jsString(item.ar[1])} }`).join(',\n');
 
@@ -402,14 +402,14 @@ ${seriesOf(g)}
     ['۲', '2', 'ارسال شماره', 'Номер', 'Send the number', 'Numarayı gönderin', 'إرسال الرقم', 'OE، شماره Blue Print یا شاسی.', 'OE, номер Blue Print или VIN.', 'OE, Blue Print number or VIN.', 'OE, Blue Print numarası veya şasi.', 'OE أو رقم Blue Print أو الهيكل.'],
     ['۳', '3', 'پیش‌فاکتور', 'Проформа', 'Proforma', 'Proforma', 'فاتورة أولية', 'قیمت و زمان بعد از موجودی.', 'Цена и срок после проверки наличия.', 'Price and time after the supply check.', 'Stok sonrası fiyat ve süre.', 'السعر والمدة بعد التوفر.'],
     ['۴', '4', 'تامین', 'Поставка', 'Supply', 'Tedarik', 'التوريد', 'قطعه نو هماهنگ می‌شود.', 'Согласуем новую деталь.', 'The new part is arranged.', 'Yeni parça ayarlanır.', 'تُرتَّب القطعة الجديدة.'],
-    ['۵', '5', 'تحویل', 'Доставка', 'Delivery', 'Teslim', 'التسليم', 'ایران یا روسیه، طبق پیش‌فاکتور.', 'Иран или Россия, как в проформе.', 'Iran or Russia, as written on the proforma.', 'Proformadaki gibi İran veya Rusya.', 'إيران أو روسيا كما في الفاتورة.']
+    ['۵', '5', 'تحویل', 'Доставка', 'Delivery', 'Teslim', 'التسليم', 'کشور مقصد، طبق پیش‌فاکتور.', 'Страна назначения, как в проформе.', 'The destination country, as written on the proforma.', 'Proformadaki varış ülkesi.', 'بلد الوجهة كما في الفاتورة.']
   ].map(s => `      { num: ${jsString(s[0])}, numRu: ${jsString(s[1])}, numEn: ${jsString(s[1])}, numTr: ${jsString(s[1])}, numAr: ${jsString(s[0])}, title: ${jsString(s[2])}, titleRu: ${jsString(s[3])}, titleEn: ${jsString(s[4])}, titleTr: ${jsString(s[5])}, titleAr: ${jsString(s[6])}, desc: ${jsString(s[7])}, descRu: ${jsString(s[8])}, descEn: ${jsString(s[9])}, descTr: ${jsString(s[10])}, descAr: ${jsString(s[11])} }`).join(',\n');
 
   const services = [
     ['شناسایی با OE و شاسی', 'Подбор по OE и VIN', 'Match by OE and VIN', 'OE ve şasi ile eşleştirme', 'مطابقة بـ OE والهيكل', 'کاربرد را از کاتالوگ Blue Print درمی‌آوریم.', 'Применение берём из каталога Blue Print.', 'The application comes from the Blue Print catalogue.', 'Uygulamayı Blue Print kataloğundan çıkarırız.', 'نستخرج التطبيق من كتالوج Blue Print.'],
     ['Fast to Market', 'Fast to Market', 'Fast to Market', 'Fast to Market', 'Fast to Market', 'برای خودروهای تازه‌وارد، قطعه هم‌خانواده را در کاتالوگ جدید بررسی می‌کنیم.', 'Для новых моделей проверяем соседнюю позицию в свежем каталоге.', 'For newly launched vehicles we check the current catalogue for a matching family.', 'Yeni çıkan araçlarda güncel katalogda uygun aileyi bakarız.', 'للسيارات حديثة الإطلاق نراجع الكتالوج الحالي عن العائلة المناسبة.'],
     ['مشاوره تعمیرگاه', 'Консультация сервиса', 'Workshop advice', 'Atölye danışmanlığı', 'استشارة الورشة', 'اگر لنت با دیسک، یا صفحه با فلایویل باید با هم عوض شود، می‌گوییم.', 'Если колодки надо менять с диском, а диск сцепления с маховиком — скажем.', 'If pads should be changed with the disc, or the clutch disc with the flywheel, we say so.', 'Balata diskle, debriyaj diski volanla değişmeliyse söyleriz.', 'إذا وجب تبديل التيل مع القرص أو قرص الدبرياج مع الحدافة نقول ذلك.'],
-    ['حمل به ایران و روسیه', 'Перевозка в Иран и Россию', 'Freight to Iran and Russia', 'İran ve Rusya taşıması', 'شحن إلى إيران وروسيا', 'مقصد را در پیش‌فاکتور جدا می‌نویسیم.', 'Назначение отдельно пишем в проформе.', 'The destination is written separately on the proforma.', 'Varış yerini proformada ayrı yazarız.', 'نكتب الوجهة منفصلة في الفاتورة الأولية.']
+    ['حمل به همه کشورها', 'Перевозка во все страны', 'Freight to any country', 'Tüm ülkelere taşıma', 'شحن إلى كل الدول', 'مقصد را در پیش‌فاکتور جدا می‌نویسیم.', 'Назначение отдельно пишем в проформе.', 'The destination is written separately on the proforma.', 'Varış yerini proformada ayrı yazarız.', 'نكتب الوجهة منفصلة في الفاتورة الأولية.']
   ].map(s => `      { title: ${jsString(s[0])}, titleRu: ${jsString(s[1])}, titleEn: ${jsString(s[2])}, titleTr: ${jsString(s[3])}, titleAr: ${jsString(s[4])}, desc: ${jsString(s[5])}, descRu: ${jsString(s[6])}, descEn: ${jsString(s[7])}, descTr: ${jsString(s[8])}, descAr: ${jsString(s[9])} }`).join(',\n');
 
   const faqs = [
@@ -466,8 +466,8 @@ ${seriesOf(g)}
   const quick = groups.slice(0, 8).map(g => `      { id: ${jsString(g.id)}, name: ${jsString(g.names.fa)}, nameRu: ${jsString(g.names.ru)}, nameEn: ${jsString(g.names.en)}, nameTr: ${jsString(g.names.tr)}, nameAr: ${jsString(g.names.ar)}, tag: 'BP', hint: ${jsString(g.names.en)}, hintRu: ${jsString(g.names.ru)}, hintEn: ${jsString(g.names.en)}, hintTr: ${jsString(g.names.tr)}, hintAr: ${jsString(g.names.ar)}, anchor: 'cat' }`).join(',\n');
 
   const markets = [
-    ['تعمیرگاه ایران', 'Сервис в Иране', 'Workshops in Iran', 'İran atölyesi', 'ورش إيران', 'لنت، فیلتر و کلاچ برای سرویس روزانه. مشاوره فارسی.', 'Колодки, фильтры и сцепление для ежедневного сервиса. Консультация на фарси.', 'Pads, filters and clutch for daily service. Consulting in Farsi.', 'Günlük servis için balata, filtre ve debriyaj. Farsça danışmanlık.', 'تيل وفلاتر ودبرياج للخدمة اليومية. استشارة بالفارسية.'],
-    ['خریدار روسیه', 'Покупатель в России', 'Buyers in Russia', 'Rusya alıcısı', 'المشتري في روسيا', 'همان کاتالوگ، با هماهنگی حمل به روسیه.', 'Тот же каталог, с организацией перевозки в Россию.', 'The same catalogue, with freight arranged to Russia.', 'Aynı katalog, Rusya’ya taşıma koordinasyonuyla.', 'الكتالوج نفسه مع ترتيب الشحن إلى روسيا.'],
+    ['تعمیرگاه‌ها', 'Сервисы', 'Workshops', 'Atölyeler', 'الورش', 'لنت، فیلتر و کلاچ برای سرویس روزانه. مشاوره فارسی.', 'Колодки, фильтры и сцепление для ежедневного сервиса. Консультация на фарси.', 'Pads, filters and clutch for daily service. Consulting in Farsi.', 'Günlük servis için balata, filtre ve debriyaj. Farsça danışmanlık.', 'تيل وفلاتر ودبرياج للخدمة اليومية. استشارة بالفارسية.'],
+    ['خریداران', 'Покупатели', 'Buyers', 'Alıcılar', 'المشترون', 'همان کاتالوگ، با هماهنگی حمل بین‌المللی.', 'Тот же каталог, с организацией международной перевозки.', 'The same catalogue, with freight arranged worldwide.', 'Aynı katalog, uluslararası taşıma koordinasyonuyla.', 'الكتالوج نفسه مع ترتيب الشحن الدولي.'],
     ['ناوگان وانت', 'Парк LCV', 'LCV fleets', 'Hafif ticari filo', 'أساطيل التجاري الخفيف', 'تا ۷٫۵ تن، فیلتر و ترمز و کلاچ پرتکرارترین درخواست است.', 'До 7,5 т чаще всего спрашивают фильтр, тормоз и сцепление.', 'Up to 7.5 tonnes, filters, brakes and clutch are the repeat request.', '7,5 tona kadar en sık filtre, fren ve debriyaj istenir.', 'حتى 7.5 طن، الفلاتر والفرامل والدبرياج هي الطلب المتكرر.'],
     ['هیبرید و برقی', 'Гибрид и электро', 'Hybrid and EV', 'Hibrit ve elektrikli', 'الهجين والكهرباء', 'فیلتر محفظه باتری کششی برای باتری ولتاژبالا.', 'Фильтр отсека тяговой батареи для высоковольтной батареи.', 'Traction-battery compartment filters for the high-voltage battery.', 'Yüksek voltajlı batarya için çekiş bataryası filtreleri.', 'فلاتر حجرة بطارية الجر للبطارية عالية الجهد.']
   ].map(m => `      { icon: 'factory', name: ${jsString(m[0])}, nameRu: ${jsString(m[1])}, nameEn: ${jsString(m[2])}, nameTr: ${jsString(m[3])}, nameAr: ${jsString(m[4])}, desc: ${jsString(m[5])}, descRu: ${jsString(m[6])}, descEn: ${jsString(m[7])}, descTr: ${jsString(m[8])}, descAr: ${jsString(m[9])}, image: ${logo}, imageAlt: ${jsString(m[2])} }`).join(',\n');
@@ -488,11 +488,11 @@ ${seriesOf(g)}
       logoAlt: 'Blue Print',
       heroImage: logo,
       heroImageAlt: 'Blue Print',
-      heroEyebrow: 'قطعات یدکی Blue Print برای ایران و روسیه',
-      heroEyebrowRu: 'Запчасти Blue Print для России и Ирана',
-      heroEyebrowEn: 'Blue Print parts for Iran and Russia',
-      heroEyebrowTr: 'İran ve Rusya için Blue Print yedek parça',
-      heroEyebrowAr: 'قطع Blue Print لإيران وروسيا',
+      heroEyebrow: 'قطعات یدکی Blue Print برای همه کشورها',
+      heroEyebrowRu: 'Запчасти Blue Print для всех стран',
+      heroEyebrowEn: 'Blue Print parts for every country',
+      heroEyebrowTr: 'Tüm ülkeler için Blue Print yedek parça',
+      heroEyebrowAr: 'قطع Blue Print لكل الدول',
       heroHeadline: 'فیلتر، ترمز، کلاچ و قطعات خودرو',
       heroHeadlineRu: 'Фильтры, тормоза, сцепление и детали авто',
       heroHeadlineEn: 'Filters, brakes, clutch and vehicle parts',
@@ -515,15 +515,15 @@ ${seriesOf(g)}
       sinceAr: 'قطع جديدة',
       origin: 'برند گروه bilstein',
       officialUrl: 'https://www.blue-print.com/',
-      description: 'بیزدوار قطعات Blue Print را برای تعمیرگاه و ناوگان در ایران و برای خریدار در روسیه تامین می‌کند. هر خانواده صفحه خودش را دارد. قیمت بعد از تطبیق شماره OE در پیش‌فاکتور می‌آید.',
-      descriptionRu: 'Bizdavar поставляет детали Blue Print сервисам и паркам в Иране и покупателям в России. У каждой семьи своя страница. Цена появляется в проформе после сверки номера OE.',
-      descriptionEn: 'Bizdavar supplies Blue Print parts to workshops and fleets in Iran and to buyers in Russia. Each family has its own page. The price is on the proforma after the OE number is matched.',
-      descriptionTr: 'Bizdavar, Blue Print parçalarını İran’daki atölye ve filolara ve Rusya’daki alıcılara tedarik eder. Her ailenin kendi sayfası vardır. Fiyat, OE eşleşmesinden sonra proformadadır.',
-      descriptionAr: 'يورّد Bizdavar قطع Blue Print لورش وأساطيل إيران وللمشتري في روسيا. لكل عائلة صفحتها. السعر في الفاتورة الأولية بعد مطابقة رقم OE.',
+      description: 'بیزدوار قطعات Blue Print را برای مشتریان در همه کشورها تامین می‌کند. هر خانواده صفحه خودش را دارد. قیمت بعد از تطبیق شماره OE در پیش‌فاکتور می‌آید.',
+      descriptionRu: 'Bizdavar поставляет детали Blue Print клиентам во всех странах. У каждой семьи своя страница. Цена появляется в проформе после сверки номера OE.',
+      descriptionEn: 'Bizdavar supplies Blue Print parts to customers in every country. Each family has its own page. The price is on the proforma after the OE number is matched.',
+      descriptionTr: 'Bizdavar, Blue Print parçalarını her ülkedeki müşterilere tedarik eder. Her ailenin kendi sayfası vardır. Fiyat, OE eşleşmesinden sonra proformadadır.',
+      descriptionAr: 'يورّد Bizdavar قطع Blue Print للعملاء في كل الدول. لكل عائلة صفحتها. السعر في الفاتورة الأولية بعد مطابقة رقم OE.',
       heroStats: [
         { value: '${all.length}', label: 'خانواده قطعه', labelRu: 'семейств деталей', labelEn: 'part families', labelTr: 'parça ailesi', labelAr: 'عائلة قطعة' },
         { value: 'OE', label: 'تطبیق با شماره', labelRu: 'сверка по номеру', labelEn: 'matched by number', labelTr: 'numarayla eşleştirme', labelAr: 'مطابقة بالرقم' },
-        { value: 'IR · RU', label: 'ایران و روسیه', labelRu: 'Иран и Россия', labelEn: 'Iran and Russia', labelTr: 'İran ve Rusya', labelAr: 'إيران وروسيا' }
+        { value: 'WW', label: 'همه کشورها', labelRu: 'все страны', labelEn: 'every country', labelTr: 'tüm ülkeler', labelAr: 'كل الدول' }
       ]
     },
     trustSignals: [
@@ -570,11 +570,11 @@ ${services}
     faq: [
 ${faqs}
     ],
-    inquiryTemplate: 'سلام، درخواست استعلام {product} از Blue Print دارم.\\nOE یا شماره قطعه:\\nخودرو (برند، مدل، سال):\\nتعداد:\\nمقصد (ایران / روسیه):\\n',
-    inquiryTemplateRu: 'Здравствуйте, нужен {product} Blue Print.\\nOE или номер детали:\\nАвто (марка, модель, год):\\nКоличество:\\nКуда (Россия / Иран):\\n',
-    inquiryTemplateEn: 'Hello, I need a quote for {product} by Blue Print.\\nOE or part number:\\nVehicle (make, model, year):\\nQuantity:\\nDestination (Iran / Russia):\\n',
-    inquiryTemplateTr: 'Merhaba, Blue Print {product} için teklif istiyorum.\\nOE veya parça no:\\nAraç (marka, model, yıl):\\nAdet:\\nVarış (İran / Rusya):\\n',
-    inquiryTemplateAr: 'مرحباً، أريد عرض سعر لـ {product} من Blue Print.\\nرقم OE أو رقم القطعة:\\nالسيارة (العلامة، الموديل، السنة):\\nالكمية:\\nالوجهة (إيران / روسيا):\\n',
+    inquiryTemplate: 'سلام، درخواست استعلام {product} از Blue Print دارم.\\nOE یا شماره قطعه:\\nخودرو (برند، مدل، سال):\\nتعداد:\\nکشور و شهر مقصد:\\n',
+    inquiryTemplateRu: 'Здравствуйте, нужен {product} Blue Print.\\nOE или номер детали:\\nАвто (марка, модель, год):\\nКоличество:\\nСтрана и город:\\n',
+    inquiryTemplateEn: 'Hello, I need a quote for {product} by Blue Print.\\nOE or part number:\\nVehicle (make, model, year):\\nQuantity:\\nDestination (country and city):\\n',
+    inquiryTemplateTr: 'Merhaba, Blue Print {product} için teklif istiyorum.\\nOE veya parça no:\\nAraç (marka, model, yıl):\\nAdet:\\nVarış (ülke ve şehir):\\n',
+    inquiryTemplateAr: 'مرحباً، أريد عرض سعر لـ {product} من Blue Print.\\nرقم OE أو رقم القطعة:\\nالسيارة (العلامة، الموديل، السنة):\\nالكمية:\\nالوجهة (البلد والمدينة):\\n',
     officialUrl: 'https://www.blue-print.com/'
   };
 })();
@@ -657,11 +657,11 @@ function buildI18n() {
     });
     L.bluePrintPage = pages[lang];
     var templates = {
-      fa: 'سلام، درخواست استعلام {product} از Blue Print دارم.\\nOE یا شماره قطعه:\\nخودرو:\\nتعداد:\\nمقصد (ایران / روسیه):\\n',
-      ru: 'Здравствуйте, нужен {product} Blue Print.\\nOE или номер детали:\\nАвто:\\nКоличество:\\nКуда (Россия / Иран):\\n',
-      en: 'Hello, I need a quote for {product} by Blue Print.\\nOE or part number:\\nVehicle:\\nQuantity:\\nDestination (Iran / Russia):\\n',
-      tr: 'Merhaba, Blue Print {product} için teklif istiyorum.\\nOE veya parça no:\\nAraç:\\nAdet:\\nVarış (İran / Rusya):\\n',
-      ar: 'مرحباً، أريد عرض سعر لـ {product} من Blue Print.\\nرقم OE:\\nالسيارة:\\nالكمية:\\nالوجهة (إيران / روسيا):\\n'
+      fa: 'سلام، درخواست استعلام {product} از Blue Print دارم.\\nOE یا شماره قطعه:\\nخودرو:\\nتعداد:\\nکشور و شهر مقصد:\\n',
+      ru: 'Здравствуйте, нужен {product} Blue Print.\\nOE или номер детали:\\nАвто:\\nКоличество:\\nСтрана и город:\\n',
+      en: 'Hello, I need a quote for {product} by Blue Print.\\nOE or part number:\\nVehicle:\\nQuantity:\\nDestination (country and city):\\n',
+      tr: 'Merhaba, Blue Print {product} için teklif istiyorum.\\nOE veya parça no:\\nAraç:\\nAdet:\\nVarış (ülke ve şehir):\\n',
+      ar: 'مرحباً، أريد عرض سعر لـ {product} من Blue Print.\\nرقم OE:\\nالسيارة:\\nالكمية:\\nالوجهة (البلد والمدينة):\\n'
     };
     L.bluePrintCatalog = { inquiryTemplate: templates[lang] };
     if (L.pages.home && L.pages.home.seoKeywords && L.pages.home.seoKeywords.indexOf('Blue Print') === -1) {
@@ -741,18 +741,18 @@ function buildProductPages() {
       const title = loc.code === 'fa'
         ? `خرید ${name} Blue Print | تامین برای ایران | بیزدوار`
         : loc.code === 'ru'
-          ? `Купить ${name} Blue Print | поставка в Россию | Bizdavar`
+          ? `Купить ${name} Blue Print | международная поставка | Bizdavar`
           : loc.code === 'ar'
             ? `شراء ${name} Blue Print | توريد | Bizdavar`
             : loc.code === 'tr'
               ? `${name} Blue Print | yedek parça | Bizdavar`
               : `${name} by Blue Print | parts supply | Bizdavar`;
       const closer = {
-        fa: 'استعلام با شماره OE از بیزدوار برای ایران و روسیه.',
-        ru: 'Запрос по номеру OE в Bizdavar — Россия и Иран.',
-        en: 'Quote by OE number from Bizdavar for Iran and Russia.',
-        tr: 'OE numarasıyla Bizdavar teklifi — İran ve Rusya.',
-        ar: 'استعلام برقم OE من Bizdavar لإيران وروسيا.'
+        fa: 'استعلام با شماره OE از بیزدوار برای هر کشور.',
+        ru: 'Запрос по номеру OE в Bizdavar, для любой страны.',
+        en: 'Quote by OE number from Bizdavar, for any country.',
+        tr: 'OE numarasıyla Bizdavar teklifi — tüm ülkeler.',
+        ar: 'استعلام برقم OE من Bizdavar لكل الدول.'
       }[loc.code];
       const description = `${fact} ${closer}`;
       const keywords = `Blue Print, ${name}, ${groupName}, ${loc.code === 'fa' ? 'بیزدوار, قطعه یدکی' : loc.code === 'ru' ? 'запчасти, Bizdavar' : 'Bizdavar'}`;
@@ -840,7 +840,7 @@ function buildProductPages() {
     <div id="relatedLinks"></div>
   </main>
   <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
-  <script src="/assets/scripts/site-loader.js?v=20261028a"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261028c"></script>
   <script src="/assets/scripts/page-boot/blue-print-product.js?v=20261028a"></script>
 </body>
 </html>
@@ -977,7 +977,7 @@ function buildHub() {
     <div id="geoStrip"></div>
     <div id="relatedLinks"></div>
   </main>
-  <script src="/assets/scripts/site-loader.js?v=20261028a" data-after-seo="i18n/supply-catalog-i18n.js" data-after-page-i18n="lib/supply-brand-page.js,config/blue-print-products.js" data-before-main="blue-print-page.js"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261028c" data-after-seo="i18n/supply-catalog-i18n.js" data-after-page-i18n="lib/supply-brand-page.js,config/blue-print-products.js" data-before-main="blue-print-page.js"></script>
   <script src="/assets/scripts/page-boot/blue-print.js?v=20261028a"></script>
 </body>
 </html>

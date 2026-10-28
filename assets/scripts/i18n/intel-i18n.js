@@ -32,7 +32,7 @@
       contact: 'تماس',
       email: 'ایمیل',
       hubBadge: 'هاب',
-      mapAlt: 'نقشه حضور جهانی بیزدوار — دفاتر ایران، ترکیه، ارمنستان و دبی',
+      mapAlt: 'نقشه حضور جهانی بیزدوار — دفاتر در سراسر جهان',
       mapLegendActive: 'کشور پروژه',
       mapLegendOffice: 'دفتر عملیاتی',
       mapOffices: { istanbul: 'استانبول — دفتر ترکیه', tabriz: 'تبریز — دفتر ایران', yerevan: 'ایروان — دفتر ارمنستان', dubai: 'دبی — دفتر امارات' },
@@ -66,7 +66,7 @@
       contact: 'Telefon',
       email: 'E-posta',
       hubBadge: 'Merkez',
-      mapAlt: 'Bizdavar küresel varlık haritası — ofisler: İran, Türkiye, Ermenistan ve Dubai',
+      mapAlt: 'Bizdavar küresel varlık haritası — ofisler: dünya genelinde',
       mapLegendActive: 'Proje ülkesi',
       mapLegendOffice: 'Operasyon ofisi',
       mapOffices: { istanbul: 'İstanbul — Türkiye ofisi', tabriz: 'Tebriz — İran ofisi', yerevan: 'Erivan — Ermenistan ofisi', dubai: 'Dubai — BAE ofisi' },
@@ -100,7 +100,7 @@
       contact: 'Phone',
       email: 'Email',
       hubBadge: 'Hub',
-      mapAlt: 'Bizdavar global presence map — offices in Iran, Turkey, Armenia and Dubai',
+      mapAlt: 'Bizdavar global presence map — offices in worldwide',
       mapLegendActive: 'Project country',
       mapLegendOffice: 'Operations office',
       mapOffices: { istanbul: 'Istanbul — Turkey office', tabriz: 'Tabriz — Iran office', yerevan: 'Yerevan — Armenia office', dubai: 'Dubai — UAE office' },
@@ -175,8 +175,8 @@
       { name: 'Karen Leather', type: 'İhracat', note: 'B2B deri pazarlama' }
     ],
     presence: {
-      summary: '11 ülkede tamamlanan projeler — ofisler: İran, Türkiye, Ermenistan ve Dubai.',
-      summaryFa: '11 ülkede tamamlanan projeler — ofisler: İran, Türkiye, Ermenistan ve Dubai.',
+      summary: '11 ülkede tamamlanan projeler — ofisler: dünya genelinde.',
+      summaryFa: '11 ülkede tamamlanan projeler — ofisler: dünya genelinde.',
       stats: [
         { value: '11', label: 'Aktif ülke' },
         { value: '4', label: 'Operasyon ofisi' },
@@ -515,8 +515,8 @@
       { name: 'Karen Leather', type: 'Export', note: 'B2B leather marketing' }
     ],
     presence: {
-      summary: 'Projects delivered in 11 countries — offices in Iran, Turkey, Armenia and Dubai.',
-      summaryFa: 'Projects delivered in 11 countries — offices in Iran, Turkey, Armenia and Dubai.',
+      summary: 'Projects delivered in 11 countries — offices in worldwide.',
+      summaryFa: 'Projects delivered in 11 countries — offices in worldwide.',
       stats: [
         { value: '11', label: 'Active countries' },
         { value: '4', label: 'Operating offices' },
@@ -529,7 +529,7 @@
         address: 'Istanbul, Turkey',
         workingHours: '24/7',
         languages: ['Persian', 'Turkish', 'English'],
-        intro: 'Bizdavar Group’s Turkey office in Istanbul is one of four operating offices (Iran, Turkey, Armenia and Dubai). Multilingual consulting, proforma quotes, international logistics and technical support for digital, fintech and B2B industrial supply.',
+        intro: 'Bizdavar Group’s Turkey office in Istanbul is one of four operating offices (worldwide). Multilingual consulting, proforma quotes, international logistics and technical support for digital, fintech and B2B industrial supply.',
         services: [
           'Fintech and payment platforms (ZedPay ecosystem)',
           'Web design and Fast Web Studio',

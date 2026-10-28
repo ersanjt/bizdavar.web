@@ -11,7 +11,7 @@ bizdavarPageInit(function () {
       });
       injectArticleSchema({
         title: 'Что такое цифровой маркетинг? Полный гид для бизнеса',
-        description: 'Что такое цифровой маркетинг: SEO, Google Ads, SMM, контент и измерение лидов — путь Bizdavar для Ирана и Турции.',
+        description: 'Что такое цифровой маркетинг: SEO, Google Ads, SMM, контент и измерение лидов — путь Bizdavar по всему миру.',
         date: '2025-02-10',
         dateModified: '2026-09-01',
         slug: 'pages/articles/what-is-digital-marketing',

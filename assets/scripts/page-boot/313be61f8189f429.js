@@ -14,6 +14,6 @@ renderBreadcrumbs(crumbs);
       injectContactPageSchema();
       renderGeoStrip('geoStrip', {
         textKey: 'contactPage.geoText',
-        text: 'مشاوره و پشتیبانی از دفاتر ایران، ترکیه، ارمنستان و دبی — واتساپ فارسی و ترکی.'
+        text: 'مشاوره و پشتیبانی از دفاتر در سراسر جهان — واتساپ فارسی و ترکی.'
       });
     });

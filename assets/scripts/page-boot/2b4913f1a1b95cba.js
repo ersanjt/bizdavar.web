@@ -2,7 +2,7 @@ bizdavarPageInit(function () {
       const crumbs = [
             { page: 'home', url: 'index' },
             { page: 'blog', url: 'blog' },
-            { name: 'Купить весы Teraoka в Иране — deli, POS, этикетка', url: 'buy-teraoka-iran' }
+            { name: 'Купить весы Teraoka по всему миру — deli, POS, этикетка', url: 'buy-teraoka-iran' }
           ];
       injectPageSeo('articleBuyTeraokaIran', {
         canonical: 'https://bizdavar.com/pages/articles/buy-teraoka-iran',
@@ -10,7 +10,7 @@ bizdavarPageInit(function () {
         type: 'article'
       });
       injectArticleSchema({
-        title: 'Купить весы Teraoka в Иране — deli, POS, этикетка',
+        title: 'Купить весы Teraoka по всему миру — deli, POS, этикетка',
         description: 'Как купить оригинальные весы Teraoka для магазинов Ирана: тип, грузоподъёмность, число касс.',
         date: '2026-08-29',
         dateModified: '2026-08-29',

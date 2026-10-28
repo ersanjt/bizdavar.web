@@ -17,7 +17,7 @@ bizdavarPageInit(function () {
   injectBluePrintSchema();
   renderGeoStrip('geoStrip', {
     textKey: 'bluePrintPage.geoText',
-    text: 'تامین قطعات Blue Print برای ایران و روسیه — فیلتر، ترمز، کلاچ و قطعات خودروهای آسیایی.'
+    text: 'تامین قطعات Blue Print برای همه کشورها — فیلتر، ترمز، کلاچ و قطعات خودروهای آسیایی.'
   });
   renderRelatedLinks([
     { title: 'Liqui Moly', url: 'liqui-moly', desc: 'روغن و افزودنی', titleKey: 'bluePrintPage.related.0.title', descKey: 'bluePrintPage.related.0.desc' },
