@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollSpy();
 
   initContactForm();
+  retireOwnedHardwarePages();
 
 });
 
@@ -449,6 +450,35 @@ function cssAttrEscape(val) {
   return String(val).replace(/["\\]/g, '\\$&');
 }
 
+function retireOwnedHardwarePages() {
+  const path = location.pathname.replace(/\.html$/, '');
+  if (!/\/(?:biztab|bizpad|bizsanitizer-v5|bizseat)$/.test(path)) return;
+  const prefix = (path.match(/^\/(tr|en|ru|ar)(?=\/)/) || [])[1];
+  const historyHref = (prefix ? '/' + prefix : '') + '/pages/about.html#company-history';
+  const i18n = window.BIZDAVAR_I18N;
+  const badge = (i18n && i18n.t('companyHistory.badge', '')) || 'دیگر عرضه نمی‌شود';
+  const note = (i18n && i18n.t('companyHistory.cardNote', '')) || 'سابقه تولید است، نه کالای قابل فروش.';
+  const hero = document.querySelector('.page-hero .container');
+  if (hero && !hero.querySelector('.retired-product-note')) {
+    const p = document.createElement('p');
+    p.className = 'retired-product-note';
+    p.textContent = badge + '. ' + note;
+    hero.appendChild(p);
+  }
+  document.querySelectorAll('a[href]').forEach((anchor) => {
+    const href = anchor.getAttribute('href') || '';
+    const key = anchor.getAttribute('data-i18n') || '';
+    const isInquiry = /ctaContact|ctaDigikala/.test(key);
+    const isShop = /digikala\.com\/product\//.test(href);
+    const isContact = /\/contact(?:\.html)?(?:$|\?|#)/.test(href);
+    if (!isInquiry && !isShop && !(isContact && isInquiry)) return;
+    if (!isInquiry && !isShop) return;
+    anchor.setAttribute('href', historyHref);
+    anchor.removeAttribute('target');
+    anchor.textContent = badge;
+  });
+}
+
 function prefillContactFromQuery() {
   const form = document.getElementById('contactForm');
   if (!form) return;
@@ -474,9 +504,19 @@ function prefillContactFromQuery() {
     form.message.value = params.get('message');
   } else if (params.get('product')) {
     const product = params.get('product');
-    const tpl = (window.BIZDAVAR_I18N
-      ? window.BIZDAVAR_I18N.t('contactPage.productInquiry', '')
-      : '') || 'درخواست استعلام قیمت و تامین {product}.\n\nشرایط کاربرد:\nتعداد مورد نیاز:\n';
+    const historicalIds = new Set(['biztouch', 'bizroll', 'sealer-home', 'sealer-pneumatic', 'sealer-robotic', 'mask-production', 'heat-pad-production', 'biztab', 'bizpad', 'bizclean', 'bizseat']);
+    if (historicalIds.has(product)) return;
+    const isMoto = params.get('service') === 'auto-moto' || /^BDV-AM-/i.test(product);
+    if (isMoto) {
+      const motoOpt = form.service.querySelector('option[value="auto-moto"]');
+      if (motoOpt) form.service.value = 'auto-moto';
+    }
+    const tpl = isMoto
+      ? ((window.BIZDAVAR_I18N ? window.BIZDAVAR_I18N.t('contactPage.motoInquiry', '') : '')
+        || 'درخواست تجهیزات موتورسیکلت — {product}.\n\nسایز، اگر این کالا سایز دارد:\nقد و وزن:\nتعداد:\n')
+      : ((window.BIZDAVAR_I18N
+        ? window.BIZDAVAR_I18N.t('contactPage.productInquiry', '')
+        : '') || 'درخواست استعلام قیمت و تامین {product}.\n\nشرایط کاربرد:\nتعداد مورد نیاز:\n');
     form.message.value = tpl.replace('{product}', product);
     if (!params.get('service') && /vega|prosense|teltonika|liqui|gamak|uwt|digi|teraoka/i.test(product)) {
       const industrial = form.service.querySelector('option[value="industrial"]');

@@ -231,7 +231,7 @@
       stats: [
         { value: '6', label: 'Направлений услуг' },
         { value: '100+', label: 'Проектов' },
-        { value: '2', label: 'Города выезда' },
+        { value: '1', label: 'Города выезда' },
         { value: '12+', label: 'Лет опыта' }
       ],
       process: {
@@ -291,7 +291,7 @@
       stats: [
         { value: '6', label: 'مجالات الخدمة' },
         { value: '100+', label: 'مشروع' },
-        { value: '2', label: 'مدن ميدانية' },
+        { value: '1', label: 'مدن ميدانية' },
         { value: '12+', label: 'سنوات خبرة' }
       ],
       process: {

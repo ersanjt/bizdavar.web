@@ -1258,6 +1258,7 @@
   };
 
   function ownedProductHref(p) {
+    if (p.historical) return '';
     if (p.page) return path(p.page);
     return `${path('pages/contact.html')}?product=${encodeURIComponent(p.id)}`;
   }
@@ -1280,8 +1281,11 @@
 
   function ownedProductCardHtml(p, opts) {
     const href = ownedProductHref(p);
-    const statusKey = p.status === 'live' ? 'productsPage.statusLive' : 'productsPage.statusCatalog';
-    const statusLabel = t(statusKey, p.status === 'live' ? 'Product page' : 'Quote');
+    const statusKey = p.status === 'live'
+      ? 'productsPage.statusLive'
+      : (p.status === 'waitlist' ? 'productsPage.statusWaitlist' : 'productsPage.statusCatalog');
+    const statusFallback = p.status === 'live' ? 'Product page' : (p.status === 'waitlist' ? 'Waitlist' : 'Quote');
+    const statusLabel = t(statusKey, statusFallback);
     const tags = (p.tags || []).map(tag => {
       const ltr = /[$+]|\d+\s*\/\s*[a-z]/i.test(tag);
       return `<span class="owned-product-card__tag"${ltr ? ' dir="ltr"' : ''}>${tag}</span>`;
@@ -1304,7 +1308,7 @@
           <div class="owned-product-card__body">
             <h3>${p.name}</h3>
             ${line ? `<p class="owned-product-card__home-desc">${line}</p>` : ''}
-            <span class="owned-product-card__cta">${p.status === 'live' ? t('productsPage.statusLive', statusLabel) : t('ownedProducts.contact', 'استعلام')}${linkArrow()}</span>
+            <span class="owned-product-card__cta">${statusLabel}${linkArrow()}</span>
           </div>
         </a>
       </article>`;
@@ -1321,7 +1325,7 @@
           <p class="owned-product-card__desc">${p.desc || ''}</p>
           ${tags ? `<div class="owned-product-card__tags">${tags}</div>` : ''}
           <footer class="owned-product-card__footer">
-            <a href="${href}" class="service-card__link">${p.status === 'live' ? t('productsPage.statusLive', statusLabel) : t('ownedProducts.contact', 'استعلام')}${linkArrow()}</a>
+            <a href="${href}" class="service-card__link">${statusLabel}${linkArrow()}</a>
           </footer>
         </div>
       </article>`;
@@ -1333,7 +1337,7 @@
     const opts = options || {};
     const I18n = window.BIZDAVAR_I18N;
     let items = I18n ? I18n.getOwnedProducts() : (window.BIZDAVAR_OWNED_PRODUCTS?.items || []);
-    items = items.filter(p => p && p.id !== 'bizseat' && !p.hidden);
+    items = items.filter(p => p && p.id !== 'bizseat' && !p.hidden && !p.historical);
     if (opts.featured) items = items.filter(p => p.featured);
     if (opts.status) items = items.filter(p => p.status === opts.status);
     if (opts.category && opts.category !== 'all') items = items.filter(p => p.category === opts.category);
@@ -1384,7 +1388,7 @@
     const catFromQuery = params.get('cat');
     let active = categories.some(c => c.id === catFromQuery) ? catFromQuery : 'all';
 
-    const allItems = (I18n ? I18n.getOwnedProducts() : (window.BIZDAVAR_OWNED_PRODUCTS?.items || [])).filter(p => p && p.id !== 'bizseat' && !p.hidden);
+    const allItems = (I18n ? I18n.getOwnedProducts() : (window.BIZDAVAR_OWNED_PRODUCTS?.items || [])).filter(p => p && p.id !== 'bizseat' && !p.hidden && !p.historical);
     const visibleCats = categories.filter(c => allItems.some(p => p.category === c.id));
     const pillarsEl = document.getElementById('productPillars');
     if (pillarsEl) {
@@ -1460,6 +1464,44 @@
     }
 
     setActive(active, false);
+  };
+
+  function historyText(value) {
+    return String(value || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  window.renderCompanyHistory = function () {
+    const el = document.getElementById('companyHistory');
+    if (!el) return;
+    const page = window.BIZDAVAR_I18N ? (window.BIZDAVAR_I18N.raw('productsPage') || {}) : {};
+    const meta = page.items || {};
+    const items = (window.BIZDAVAR_OWNED_PRODUCTS?.items || [])
+      .filter(item => item && item.historical && !item.hidden)
+      .map(item => ({ ...item, ...(meta[item.id] || {}) }));
+    if (!items.length) {
+      el.innerHTML = '';
+      return;
+    }
+    const badge = t('companyHistory.badge', 'دیگر عرضه نمی‌شود');
+    const note = t('companyHistory.cardNote', 'سابقه تولید است، نه کالای قابل فروش.');
+    el.innerHTML = `<div class="achievements-grid history-grid">${items.map(item => {
+      const img = ownedProductImageSrc(item);
+      return `<article class="achievement-card history-card">
+        <div class="achievement-card__media">
+          <img src="${historyText(img)}" alt="${historyText(item.name || item.title)}" loading="lazy" width="480" height="280"${hideBrokenImg()}>
+        </div>
+        <div class="achievement-card__body">
+          <span class="achievement-card__year">${historyText(badge)}</span>
+          <h3>${historyText(item.name || item.title)}</h3>
+          <p>${historyText(item.title && item.title !== item.name ? item.title + ' — ' : '')}${historyText(item.desc || '')}</p>
+          <p class="history-card__note">${historyText(note)}</p>
+        </div>
+      </article>`;
+    }).join('')}</div>`;
   };
 
 })();

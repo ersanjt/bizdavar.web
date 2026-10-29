@@ -103,7 +103,7 @@ window.BIZDAVAR_INTEL = {
     {
       id: 'products',
       title: 'محصولات خودمان',
-      items: ['FXGuard — WhatsApp CRM و Accounting', 'BizSwap — پیش‌فروش توکن', 'تولید سخت‌افزاری گذشته — در دستاوردها (پد، دماسنج، ضدعفونی)']
+      items: ['FXGuard — WhatsApp CRM از ۴۹ دلار؛ حسابداری در لیست انتظار', 'BizSwap — پیش‌فروش توکن', 'تولید سخت‌افزاری گذشته — در دستاوردها (پد، دماسنج، ضدعفونی)']
     },
     {
       id: 'supply',
@@ -118,12 +118,12 @@ window.BIZDAVAR_INTEL = {
     { name: 'Netinode', type: 'دامنه، هاست و سرور', note: 'ثبت دامنه، هاست، WordPress Hosting، ایمیل تجاری، DNS و سرور' },
     { name: 'BZ Diamond', type: 'نمونه‌کار طراحی وب', note: 'فروشگاه WooCommerce، ایمیل و سئو — پروژه مشتری' },
     { name: 'Biztejarat', type: 'نمونه‌کار SMM (گذشته)', note: 'صفحه اینستاگرام محصولات صنعتی — پروژه غیرفعال، اینستاگرام بسته شده' },
-    { name: 'BizPad', type: 'محصول پد حرارتی', note: 'پد حرارتی پدیده ۱۳۹۹ — خانه و خودرو؛ نام فروشگاهی BizSeat همان این کالاست' },
-    { name: 'BizTab', type: 'محصول IoT / سلامت', note: 'دماسنج دیواری غیرتماسی — اولین نمونه تبریز، توسعه تیم بیزدوار' },
-    { name: 'BizClean V5', type: 'محصول بهداشت', note: 'دستگاه ضدعفونی دست اتوماتیک — سنسور التراسونیک، عرضه دیجی‌کالا' },
+    { name: 'BizPad', type: 'محصول پد حرارتی', note: 'پد حرارتی ۱۳۹۹. تولید این مدل تمام شده و فقط در رزومهٔ شرکت است.' },
+    { name: 'BizTab', type: 'محصول IoT / سلامت', note: 'دماسنج دیواری غیرتماسی تبریز. تولید این مدل تمام شده و فقط در رزومهٔ شرکت است.' },
+    { name: 'BizClean V5', type: 'محصول بهداشت', note: 'دستگاه ضدعفونی دست دوران کرونا. تولید این مدل تمام شده و فقط در رزومهٔ شرکت است.' },
     { name: 'BZBroker', type: 'صرافی P2P', note: 'پلتفرم کریپتو' },
     { name: 'WhatsApp CRM', type: 'FXGuard · WhatsApp CRM', note: 'اینباکس تیمی واتساپ — سوئیت fxguard.io' },
-    { name: 'Accounting', type: 'FXGuard · Accounting', note: 'سامانه حسابداری مالی و صرافی — سوئیت fxguard.io' },
+    { name: 'Accounting', type: 'FXGuard · Accounting', note: 'هنوز نه — در نقشه راه سوئیت FXGuard است و لیست انتظار باز است.' },
     { name: 'Bear Event', type: 'رویداد', note: 'بلیت و رویداد آنلاین' },
     { name: 'Gamak', type: 'الکتروموتور', note: 'تامین موتور صنعتی ترکیه' },
     { name: 'Arian Pumps', type: 'نمونه‌کار طراحی وب', note: 'طراحی وب شرکتی B2B — مشتری خدمات دیجیتال' },

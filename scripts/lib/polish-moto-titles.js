@@ -107,7 +107,7 @@ function finishItem(item, titleFa, categoryFa, leafFa) {
   const brand = item.brand ? 'برند ' + item.brand + '. ' : '';
   const typeLine = leafFa && leafFa !== categoryFa ? 'نوع ' + leafFa + '. ' : '';
   const descFa = squeeze(
-    titleFa + '. در دستهٔ ' + categoryFa + ' کاتالوگ موتورسیکلت بیزداور. ' +
+    titleFa + '. در دستهٔ ' + categoryFa + ' کاتالوگ موتورسیکلت بیزدوار. ' +
     brand + typeLine + 'سازگاری و موجودی قبل از سفارش با اطلاعات سازنده تطبیق داده می‌شود.'
   );
   return Object.assign({}, item, {

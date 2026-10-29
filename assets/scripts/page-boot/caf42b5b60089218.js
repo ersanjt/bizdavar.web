@@ -9,7 +9,7 @@ bizdavarPageInit(function () {
       injectBreadcrumbSchema(crumbs);
       renderGeoStrip('geoStrip', {
         textKey: 'shopPage.geoText',
-        text: 'Bizdavar shop priced in UAE dirhams — industrial goods, instruments and electronics.'
+        text: 'Bizdavar dirham shop — no items listed. A price is shown only for a listed item.'
       });
       renderRelatedLinks([
         { title: 'Products', url: 'products', desc: 'Bizdavar brands and lines' },

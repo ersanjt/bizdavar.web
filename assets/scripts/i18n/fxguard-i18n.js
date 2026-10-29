@@ -20,8 +20,8 @@
   merge('fa', {
     hero: {
       tag: 'صرافی · حواله · مالی',
-      title: 'نرخ را در واتساپ بزنید. دفتر مشتری پیش شما بماند.',
-      desc: 'یک شماره شرکتی. کارکنان از پنل جواب می‌دهند. اگر کسی برود، چت‌ها و نرخ‌های اعلام‌شده پیش شما می‌ماند — نه روی گوشی شخصی.',
+      title: 'اینباکس واتساپ شرکتی. دفتر مشتری پیش شما بماند.',
+      desc: 'یک شماره شرکتی. کارکنان از پنل جواب می‌دهند. Cloud Start از ۴۹ دلار اینباکس است و پک نرخ ندارد. پک نرخ FX از پلن Business، ۲۴۹ دلار، شروع می‌شود.',
       regionItems: [
         { code: 'TR', label: 'ترکیه' },
         { code: 'AE', label: 'دبی' },
@@ -29,14 +29,14 @@
         { code: 'IR', label: 'ایران' }
       ],
       regions: 'ترکیه · دبی · اروپا · ایران',
-      trust: 'از $49/ماه · دموی هدایت‌شده · بازگشت وجه ۷روزه برای ماه اول Cloud Start',
+      trust: 'اینباکس از $49/ماه، بدون پک FX · پک نرخ از $249 · بازگشت وجه ۷روزه ماه اول Start',
       ctaBuy: 'خرید در واتساپ',
       ctaDemo: 'دیدن پنل',
       ctaPricing: 'قیمت‌ها',
       ctaContact: 'خرید در واتساپ',
       ctaStore: 'fxguard.io',
       visualAlt: 'پنل FXGuard — چت واتساپ و نرخ در یک صفحه',
-      visualCaption: 'همان پنلی که صراف واقعاً استفاده می‌کند — چت و نرخ کنار هم.'
+      visualCaption: 'پنل چت تیمی. پک نرخ FX کنار چت از پلن Business است، نه از ۴۹ دلار.',
     },
     stats: {
       businesses: 'ماژول+',
@@ -52,7 +52,7 @@
       desc: 'WhatsApp CRM با پک نرخ FX محصول اصلی است. Accounting و وبسایت صرافی برندشده کنار آن هستند — هر کدام جدا استعلام می‌شود.',
       items: [
         { badge: 'موجود', icon: 'inbox', title: 'WhatsApp CRM', desc: 'واتساپ شرکتی، دفتر مشتری، نقش، شعبه — به‌علاوه نرخ FX، نمودار و سرویس تبادل از پلن Business به بالا.', audience: 'برای میز صرافی، حواله و مالی. تیم‌های دیگر Cloud Start را بدون پک FX می‌گیرند.', cta: 'دموی زنده', href: APP, external: true },
-        { badge: 'موجود', icon: 'chart-line', title: 'Accounting', desc: 'دفتر زنده برای دریافت، پرداخت، نرخ و حواله. دموی عمومی جدا از CRM است و ریست می‌شود.', audience: 'برای دفاتر صرافی و میز حواله.', cta: 'صفحه Accounting', href: '/pages/fxguard-accounting', external: false },
+        { badge: 'به‌زودی', icon: 'chart-line', title: 'Accounting', desc: 'هنوز نه — در نقشه راه سوئیت FXGuard است و لیست انتظار باز است.', audience: 'برای دفاتر صرافی و میز حواله.', cta: 'صفحه Accounting', href: '/pages/fxguard-accounting', external: false },
         { badge: 'موجود', icon: 'globe', title: 'وبسایت صرافی و مالی', desc: 'سایت برندشده با نرخ، سفارش و پیگیری. نمونه زنده: exchange.fxguard.io — جدا از CRM استعلام می‌شود.', audience: 'برای دفاتر صرافی و شرکت‌های مالی.', cta: 'نمونه زنده', href: EXCHANGE, external: true }
       ]
     },
@@ -75,7 +75,7 @@
       items: [
         { num: '01', icon: 'users', title: 'دفتر مشتری پیش شرکت می‌ماند', desc: 'تاریخچه و تگ روی پنل شرکت است — نه روی گوشی فروشنده.' },
         { num: '02', icon: 'document', title: 'قیمتی که به مشتری گفتید ثبت است', desc: 'نقل‌قول یا نرخ در چت زمان‌دار است. نرخ FX فقط اگر لازم دارید.' },
-        { num: '03', icon: 'shield', title: 'نقش و شعبه، نه یک لاگین مشترک', desc: 'از Owner تا Agent. هر نفر دسترسی خودش. ۲FA و لاگ فعالیت.' },
+        { num: '03', icon: 'shield', title: 'نقش و شعبه روی Cloud Business', desc: 'Cloud Start اینباکس، مشتری، تیکت و تسک را پوشش می‌دهد. از Owner تا Agent، ۲FA و لاگ فعالیت روی Business است.' },
         { num: '04', icon: 'coin', title: 'قیمت با اندازه تیم جلو می‌رود', desc: 'Cloud Start $49 برای تیم کوچک. Business از $249. لایسنس از $4,000. Managed از $800/ماه.' }
       ]
     },
@@ -150,7 +150,7 @@
       items: [
         { icon: 'users', title: 'دفتر مشتری پیش شرکت', desc: 'تاریخچه، تگ و یادداشت دنبال مشتری می‌رود — نه گوشی نیرو. مالک بعد از خروج نیرو دفتر را نگه می‌دارد.' },
         { icon: 'chart-line', title: 'نرخ FX، نمودار، سرویس تبادل', desc: 'خرید/فروش زنده، نمودار و سرویس تبادل روی همان صفحه واتساپ. این پک از Cloud Business شروع می‌شود. Cloud Start فقط اینباکس است.' },
-        { icon: 'shield', title: 'نقش، شعبه، ۲FA، لاگ', desc: 'از Owner تا Agent. هر شعبه میز خودش را می‌بیند. Google Authenticator و لاگ روی هر حساب.' },
+        { icon: 'shield', title: 'نقش، شعبه، ۲FA، لاگ', desc: 'روی Cloud Business: از Owner تا Agent. هر شعبه میز خودش را می‌بیند. Google Authenticator و لاگ روی هر حساب.' },
         { icon: 'inbox', title: 'اینباکس واتساپ مشترک', desc: 'یک شماره کسب‌وکار، اختصاص، صف خوانده‌نشده و بی‌پاسخ. شامل پلن است — دلیل انتخاب ما نیست.' },
         { icon: 'list', title: 'تیکت و تسک', desc: 'چت را به کار قابل‌پیگیری با مالک تبدیل کنید. در همه پلن‌ها.' },
         { icon: 'mobile', title: 'دو مسیر واتساپ، صریح', desc: 'QR / WhatsApp Web برای بازار بدون Meta BSP. Cloud API رسمی وقتی قالب و ریسک بن کمتر می‌خواهید.' },
@@ -178,7 +178,7 @@
       items: [
         { icon: 'chart-line', title: 'صرافی و FX', region: 'ترکیه · امارات · اروپا · ایران', desc: 'چند شعبه، نرخ و سرویس تبادل کنار اینباکس تیمی — از Business.', tag: 'پک FX' },
         { icon: 'briefcase', title: 'فروش و پشتیبانی B2B', region: 'همه مناطق', desc: 'تاریخچه مشتری، تیکت و تسک برای بستن معامله با زمینه کامل.', tag: 'عملیات فروش' },
-        { icon: 'building', title: 'هلدینگ و چند شعبه', region: 'ترکیه · دبی', desc: 'نقش، شعبه و نظارت مالک. Cloud Multi-branch از $499/ماه.', tag: 'چند شعبه' },
+        { icon: 'building', title: 'هلدینگ و چند شعبه', region: 'ترکیه · دبی', desc: 'جداسازی شعبه از Cloud Business است: تا ۳ شعبه، از ۲۴۹ دلار. بیش از آن Cloud Multi-branch از $499/ماه.', tag: 'چند شعبه' },
         { icon: 'health', title: 'فروشگاه، خدمات و کلینیک', region: 'ترکیه · اروپا', desc: 'Cloud Start: اینباکس و دفتر مشتری بدون ماژول FX.', tag: 'Cloud Start' }
       ]
     },
@@ -194,7 +194,7 @@
           price: '$49',
           period: '/ماه',
           badge: 'سلف‌سرویس',
-          desc: '۱ شعبه · تا ۳ نفر · بدون ماژول FX',
+          desc: 'تا ۳ نفر · بدون ماژول FX · بدون جداسازی شعبه',
           features: ['اینباکس، مشتری، تیکت، تسک', '۱ شماره واتساپ', 'پشتیبانی ایمیل', 'بازگشت وجه ۷روزه ماه اول'],
           cta: 'خرید Start در واتساپ',
           href: WA,
@@ -248,10 +248,10 @@
       items: [
         { q: 'چرا respond.io، Wati، Kommo، Trengo یا Chatwoot نه؟', a: 'آن‌ها اینباکس گفتگو برای تبلیغات و پشتیبانی‌اند — اینستاگرام، تیک‌تاک، AI Agent، HubSpot. FXGuard پنل عملیات میز صرافی، حواله و مالی است: نرخ FX روی همان صفحه واتساپ، دفتر مشتری متعلق به شرکت، شعبه، ۲FA، و لایسنس اگر داده نباید روی SaaS آمریکایی بنشیند. اینباکس شامل است. اگر تبلیغات به‌علاوه اینستاگرام می‌خواهید، آن‌ها را بردارید.' },
         { q: 'واتساپ API رسمی متا است؟', a: 'دو مسیر: WhatsApp Web غیررسمی (QR) بدون تأیید Business — سریع‌تر، انبوه ریسک بن دارد — و Meta Cloud API رسمی. پنهان نمی‌کنیم روی کدام هستید. براکست جدی Cloud API می‌خواهد.' },
-        { q: 'چرا $49 نامحدود برای همه نیست؟', a: 'Cloud Start ماهانه $49 برای یک شعبه و تا سه نفر، بدون ماژول FX. Business از $249. Multi-branch از $499. لایسنس یک‌باره از $4,000. Managed از $800/ماه. اعداد نهایی قابل مذاکره است؛ کف منتشر شده.' },
+        { q: 'چرا $49 نامحدود برای همه نیست؟', a: 'Cloud Start ماهانه $49 برای اینباکس، مشتری، تیکت و تسک است: تا سه نفر، بدون ماژول FX و بدون جداسازی شعبه. جداسازی شعبه از Business است، تا ۳ شعبه، از $249. بیش از آن Multi-branch از $499. لایسنس یک‌باره از $4,000. Managed از $800/ماه. اعداد نهایی قابل مذاکره است؛ کف منتشر شده.' },
         { q: 'فاکتور / PO به‌جای پرداخت واتساپ؟', a: 'بله. درخواست فاکتور یا پیش‌فاکتور کتبی. Cloud Start از واتساپ است. معامله تجاری و لایسنس با فاکتور می‌رود. برای اروپا DPA با فاکتور ارسال می‌شود.' },
         { q: 'با شماره خودمان چطور امتحان کنیم؟', a: 'رمز دموی مشترک اینجا منتشر نمی‌شود. جلسه ۱۰ دقیقه‌ای رزرو کنید، یا آزمایش زمان‌دار که شماره را وصل می‌کنید و بعد قطع می‌کنید.' },
-        { q: 'چند شعبه پشتیبانی می‌شود؟', a: 'بله. شعبه و دپارتمان داخلی است، با نظارت سطح مالک. کلاد چندشعبه برای ثبت‌نام جدید از $499/ماه شروع می‌شود.' },
+        { q: 'چند شعبه پشتیبانی می‌شود؟', a: 'جداسازی شعبه از Cloud Business است: تا ۳ شعبه، از $249 در ماه. بیش از آن Cloud Multi-branch از $499 در ماه است.' },
         { q: 'اگر راضی نباشم پول برمی‌گردد؟', a: 'برای ماه اول Cloud Start: تا ۷ روز بعد از اولین پرداخت در واتساپ بنویسید، شماره را قطع کنید، همان ماه را برمی‌گردانیم. Business، چندشعبه، لایسنس و Managed طبق فاکتور. ضمانت نامحدود جعلی منتشر نمی‌کنیم. آپ‌تایم ۹۹.۹٪ برچسب نیست — SLA درخواستی مکتوب است.' },
         { q: 'AI جای نیرو میز را می‌گیرد؟', a: 'خیر. پاسخ اول و مسیریابی اختیاری OpenAI — کلید را شما می‌آورید. AI نرخ زنده نمی‌دهد، پرونده پردازش نمی‌کند، و جایگزین نقش یا ۲FA نیست. نیرو معامله را می‌بندد.' },
         { q: 'رابطه با بیزدوار چیست؟', a: 'FXGuard محصول سوئیت دیجیتال تیم بیزدوار است؛ فروش و دمو از fxguard.io و واتساپ +90 501 067 6486. در کاتالوگ محصولات بیزدوار هم معرفی می‌شود.' }
@@ -286,8 +286,8 @@
   merge('tr', {
     hero: {
       tag: 'Döviz · havale · finans',
-      title: 'Kuru WhatsApp’tan gönderin. Müşteri kaydı sizde kalsın.',
-      desc: 'Tek şirket numarası. Personel panelden yanıtlar. Biri ayrılınca sohbetler ve verilen fiyatlar sizde kalır — kişisel telefonda değil.',
+      title: 'Şirket WhatsApp gelen kutusu sizde kalsın.',
+      desc: 'Tek şirket numarası. Personel panelden yanıtlar. Cloud Start ayda 49 dolar ve FX paketi yoktur. FX kur paketi Business planında, 249 dolardan başlar.',
       regionItems: [
         { code: 'TR', label: 'Türkiye' },
         { code: 'AE', label: 'Dubai' },
@@ -295,14 +295,14 @@
         { code: 'IR', label: 'İran' }
       ],
       regions: 'Türkiye · Dubai · Avrupa · İran',
-      trust: '$49/ay’dan · rehberli demo · ilk Cloud Start ayında 7 gün iade',
+      trust: 'Gelen kutusu $49/ay, FX paketi yok · FX paketi $249’dan · ilk Start ayında 7 gün iade',
       ctaBuy: 'WhatsApp’tan satın al',
       ctaDemo: 'Paneli gör',
       ctaPricing: 'Fiyatlar',
       ctaContact: 'WhatsApp’tan satın al',
       ctaStore: 'fxguard.io',
       visualAlt: 'FXGuard paneli — WhatsApp sohbeti ve kurlar aynı ekranda',
-      visualCaption: 'Gişenin gerçekten kullandığı panel — sohbet ve kur birlikte.'
+      visualCaption: 'Ekip sohbet paneli. FX kur paketi Business planındadır, 49 dolarlık planda değil.'
     },
     stats: {
       businesses: 'Modül+',
@@ -318,7 +318,7 @@
       desc: 'FX kur paketiyle WhatsApp CRM ana üründür. Accounting ve markalı döviz siteleri yanındadır — her biri ayrı tekliflenir.',
       items: [
         { badge: 'Yayında', icon: 'inbox', title: 'WhatsApp CRM', desc: 'Şirket WhatsApp’ı, müşteri defteri, roller, şubeler — artı FX kurları, grafikler ve döviz hizmetleri Business ve üzeri.', audience: 'Döviz, havale ve finans gişeleri için. Diğer ekipler FX paketi olmadan Cloud Start kullanır.', cta: 'Canlı demo', href: APP, external: true },
-        { badge: 'Yayında', icon: 'chart-line', title: 'Accounting', desc: 'Tahsilat, ödeme, kur ve havale için canlı defter. Genel demo CRM’den ayrıdır ve sıfırlanır.', audience: 'Döviz ofisleri ve havale gişeleri için.', cta: 'Accounting sayfası', href: '/pages/fxguard-accounting', external: false },
+        { badge: 'Yakında', icon: 'chart-line', title: 'Accounting', desc: 'Henüz değil — FXGuard paketinin yol haritasında ve bekleme listesi açık.', audience: 'Döviz ofisleri ve havale gişeleri için.', cta: 'Accounting sayfası', href: '/pages/fxguard-accounting', external: false },
         { badge: 'Yayında', icon: 'globe', title: 'Döviz ve finans siteleri', desc: 'Kur, sipariş ve takip içeren markalı site. Canlı örnek: exchange.fxguard.io — CRM’den ayrı teklif.', audience: 'Döviz ofisleri ve finans firmaları için.', cta: 'Canlı örnek', href: EXCHANGE, external: true }
       ]
     },
@@ -444,7 +444,7 @@
       items: [
         { icon: 'chart-line', title: 'Döviz & FX', region: 'Türkiye · BAE · Avrupa · İran', desc: 'Çok şube, kur ve döviz hizmetleri ekip gelen kutusu yanında — Business’tan.', tag: 'FX paketi' },
         { icon: 'briefcase', title: 'B2B satış & destek', region: 'Tüm bölgeler', desc: 'Geçmiş, ticket ve görevlerle kapanış.', tag: 'Satış operasyonu' },
-        { icon: 'building', title: 'Holding / çok şube', region: 'Türkiye · Dubai', desc: 'Rol, şube ve sahip denetimi. Cloud Multi-branch $499/ay’dan.', tag: 'Çok şube' },
+        { icon: 'building', title: 'Holding / çok şube', region: 'Türkiye · Dubai', desc: 'Şube ayrımı Cloud Business’ta: 3 şubeye kadar, $249’dan. Daha fazlası Cloud Multi-branch, $499/ay’dan.', tag: 'Çok şube' },
         { icon: 'health', title: 'Dükkân, hizmet & klinik', region: 'Türkiye · Avrupa', desc: 'Cloud Start: FX modülü olmadan gelen kutusu ve müşteri defteri.', tag: 'Cloud Start' }
       ]
     },
@@ -454,7 +454,7 @@
       desc: 'Küçük gişe için self-servis bulut. Çok şubeli FX ekipleri için ticari teklif, fatura ve SLA. Taban fiyatlar yayınlanır; satın alma tahmin etmez.',
       note: 'Cloud Start FX kur modülünü içermez. Business ve üzeri içerir. Lisans ve Managed faturalanır. İlk Cloud Start ayı: 7 gün iade. Nihai rakamlar müzakere edilebilir.',
       plans: [
-        { id: 'start', name: 'Cloud Start', price: '$49', period: '/ay', badge: 'Self-servis', desc: '1 şube · 3 kişiye kadar · FX yok', features: ['Gelen kutusu, müşteriler, ticket, görev', '1 WhatsApp numarası', 'E-posta destek', 'İlk ay 7 gün iade'], cta: 'Start’ı WhatsApp’tan al', href: WA, featured: true },
+        { id: 'start', name: 'Cloud Start', price: '$49', period: '/ay', badge: 'Self-servis', desc: '3 kişiye kadar · FX yok · şube ayrımı yok', features: ['Gelen kutusu, müşteriler, ticket, görev', '1 WhatsApp numarası', 'E-posta destek', 'İlk ay 7 gün iade'], cta: 'Start’ı WhatsApp’tan al', href: WA, featured: true },
         { id: 'business', name: 'Cloud Business', price: '$249', period: '/ay’dan', desc: '3 şubeye · 10 kişi · FX modülü', features: ['FX kur, grafik, döviz hizmetleri', 'Rol ve şube ayrımı', '2FA ve denetim logu'], cta: 'Business teklifi WhatsApp', href: WA },
         { id: 'multi', name: 'Cloud Multi-branch', price: '$499', period: '/ay’dan', desc: 'Daha fazla şube · yazılı destek SLA', features: ['Öncelikli destek / talep üzerine SLA', 'Çok lokasyon onboarding', 'Fatura ve satın alma paketi'], cta: 'Fatura iste', href: STORE },
         { id: 'license', name: 'Kendi sunucuda lisans', price: '$4,000', period: ' · bir kez, itibaren', desc: 'Sizin sunucularınız · veri sizde kalır', features: ['Tam sistem teslimi', 'Kurulum kılavuzu', 'İsteğe bağlı yıllık güncelleme', 'Fatura isteyen şirketler için'], cta: 'Yazılı lisans teklifi', href: STORE },
@@ -467,10 +467,10 @@
       items: [
         { q: 'Neden respond.io, Wati, Kommo, Trengo veya Chatwoot değil?', a: 'Onlar reklam ve destek için sohbet gelen kutularıdır — Instagram, TikTok, AI Agent, HubSpot. FXGuard döviz, havale ve finans gişesi operasyon panelidir: WhatsApp ile aynı ekranda FX kurları, şirkete ait müşteri defteri, şubeler, 2FA ve veri ABD SaaS’ta duramasın diye lisans. Gelen kutusu dahildir. Reklam artı Instagram istiyorsanız onları seçin.' },
         { q: 'WhatsApp resmi Meta API mi?', a: 'İki yol: Business doğrulaması olmadan resmi olmayan WhatsApp Web (QR) — daha hızlı, toplu gönderim yasak riskini artırır — ve resmi Meta Cloud API. Hangisinde olduğunuzu gizlemeyiz. Ciddi yayın Cloud API ister.' },
-        { q: 'Neden herkes için sınırsız $49 değil?', a: 'Cloud Start ayda $49: bir şube, üç kişiye kadar, FX modülü yok. Business $249’dan. Multi-branch $499’dan. Lisans bir kez $4.000’dan. Managed $800/ay’dan. Nihai rakamlar müzakere edilebilir; taban yayınlanır.' },
+        { q: 'Neden herkes için sınırsız $49 değil?', a: 'Cloud Start ayda $49: gelen kutusu, müşteri, ticket ve görev; üç kişiye kadar, FX modülü yok, şube ayrımı yok. Şube ayrımı Business’ta, 3 şubeye kadar, $249’dan. Daha fazlası Multi-branch, $499’dan. Lisans bir kez $4.000’dan. Managed $800/ay’dan. Nihai rakamlar müzakere edilebilir; taban yayınlanır.' },
         { q: 'WhatsApp ödemesi yerine fatura / PO?', a: 'Evet. Fatura isteyin veya yazılı teklif alın. Cloud Start WhatsApp’tandır. Ticari ve lisans anlaşmaları faturadan gider. Avrupa için DPA fatura ile gönderilir.' },
         { q: 'Kendi numaramızla nasıl deneriz?', a: 'Burada paylaşılan demo şifresi yayımlamayız. 10 dakikalık rehberli oturum ayırtın veya numarayı bağlayıp sonra kesebileceğiniz süreli deneme.' },
-        { q: 'Birden fazla şube destekleniyor mu?', a: 'Evet. Şube ve departman yerleşiktir, sahip düzeyinde gözetimle. Yeni kayıtlar için çok şubeli bulut $499/ay’dan başlar.' },
+        { q: 'Birden fazla şube destekleniyor mu?', a: 'Şube ayrımı Cloud Business’ta: 3 şubeye kadar, ayda $249’dan. Daha fazlası Cloud Multi-branch, ayda $499’dan.' },
         { q: 'Memnun kalmazsam paramı geri alır mıyım?', a: 'İlk Cloud Start ayı için: ilk ödemeden 7 gün içinde WhatsApp yazın, numarayı kesin, o ayı iade ederiz. Business, çok şube, lisans ve managed faturaya uyar. Sahte sınırsız garanti yayımlamayız. %99,9 uptime çıkartması yoktur — SLA talep üzerine yazılıdır.' },
         { q: 'AI gişeyi personelin yerine mi çalıştırır?', a: 'Hayır. İsteğe bağlı OpenAI ilk yanıt ve yönlendirme — anahtarı siz getirirsiniz. AI canlı kur vermez, dosya işlemez, rol veya 2FA’nın yerini almaz. Personel anlaşmayı kapatır.' },
         { q: 'Bizdavar ile ilişkisi?', a: 'FXGuard, Bizdavar ekibinin dijital suite ürünüdür; satış fxguard.io ve WhatsApp +90 501 067 6486 üzerinden. Bizdavar ürün kataloğunda da yer alır.' }
@@ -505,8 +505,8 @@
   merge('en', {
     hero: {
       tag: 'Exchange · remittance · finance',
-      title: 'Quote the rate on WhatsApp. Keep the customer book.',
-      desc: 'One company number. Staff reply from the panel. When someone leaves, chats and quoted prices stay with you — not on a personal phone.',
+      title: 'Keep the company WhatsApp inbox. The customer book stays with you.',
+      desc: 'One company number. Staff reply from the panel. Cloud Start at $49 is the inbox and has no FX pack. The FX rate pack starts on Business at $249.',
       regionItems: [
         { code: 'TR', label: 'Turkey' },
         { code: 'AE', label: 'Dubai' },
@@ -514,14 +514,14 @@
         { code: 'IR', label: 'Iran' }
       ],
       regions: 'Turkey · Dubai · Europe · Iran',
-      trust: 'From $49/mo · guided demo · 7-day money-back on first Cloud Start month',
+      trust: 'Inbox from $49/mo, no FX pack · FX pack from $249 · 7-day money-back on the first Start month',
       ctaBuy: 'Buy on WhatsApp',
       ctaDemo: 'See the panel',
       ctaPricing: 'Prices',
       ctaContact: 'Buy on WhatsApp',
       ctaStore: 'fxguard.io',
       visualAlt: 'FXGuard panel — WhatsApp chat and rates on one screen',
-      visualCaption: 'The panel your teller actually uses — chat and rates together.'
+      visualCaption: 'Team chat panel. The FX rate pack is on Business, not the 49-dollar plan.'
     },
     stats: {
       businesses: 'Modules+',
@@ -537,7 +537,7 @@
       desc: 'WhatsApp CRM with an FX rates pack is the lead product. Accounting and branded exchange websites sit beside it — each quoted separately.',
       items: [
         { badge: 'Available now', icon: 'inbox', title: 'WhatsApp CRM', desc: 'Company WhatsApp, customer book, roles, branches — plus FX rates, charts and exchange services on Business and above.', audience: 'For exchange, remittance and finance desks. Other teams use Cloud Start without the FX pack.', cta: 'Live demo', href: APP, external: true },
-        { badge: 'Available now', icon: 'chart-line', title: 'Accounting', desc: 'A live ledger for receipts, payments, rates and remittance. Public demo is separate from the CRM and resets.', audience: 'For exchange offices and remittance desks.', cta: 'Accounting page', href: '/pages/fxguard-accounting', external: false },
+        { badge: 'Waitlist', icon: 'chart-line', title: 'Accounting', desc: 'Not yet — it is on the FXGuard suite roadmap and the waitlist is open.', audience: 'For exchange offices and remittance desks.', cta: 'Accounting page', href: '/pages/fxguard-accounting', external: false },
         { badge: 'Available now', icon: 'globe', title: 'Exchange & finance websites', desc: 'A branded website with rates, orders and tracking. Live example at exchange.fxguard.io — quoted separately from the CRM.', audience: 'For exchange offices and finance firms.', cta: 'See live example', href: EXCHANGE, external: true }
       ]
     },
@@ -663,7 +663,7 @@
       items: [
         { icon: 'chart-line', title: 'Exchange & FX', region: 'Turkey · UAE · Europe · Iran', desc: 'Multi-branch ops, rates and exchange services beside the team inbox — from Business.', tag: 'FX pack' },
         { icon: 'briefcase', title: 'B2B sales & support', region: 'All regions', desc: 'Close with full history, tickets and tasks.', tag: 'Sales ops' },
-        { icon: 'building', title: 'Holdings / multi-site', region: 'Turkey · Dubai', desc: 'Role, branch and owner oversight. Cloud Multi-branch from $499/mo.', tag: 'Multi-branch' },
+        { icon: 'building', title: 'Holdings / multi-site', region: 'Turkey · Dubai', desc: 'Branch split starts on Cloud Business: up to 3 branches, from $249. More than that is Cloud Multi-branch, from $499/mo.', tag: 'Multi-branch' },
         { icon: 'health', title: 'Shops, services & clinics', region: 'Turkey · Europe', desc: 'Cloud Start: inbox and customer book without the FX module.', tag: 'Cloud Start' }
       ]
     },
@@ -673,7 +673,7 @@
       desc: 'Self-serve cloud for a small desk. Commercial quotes, invoices and SLA for multi-branch FX teams. Floors are published so procurement is not guessing.',
       note: 'Cloud Start does not include the FX rates module. Business and above do. License and Managed are invoiced. First Cloud Start month: 7-day money-back. Final commercial numbers can be negotiated.',
       plans: [
-        { id: 'start', name: 'Cloud Start', price: '$49', period: '/mo', badge: 'Self-serve', desc: '1 branch · up to 3 staff · no FX module', features: ['Inbox, customers, tickets, tasks', '1 WhatsApp number', 'Email support', '7-day money-back on first month'], cta: 'Buy Start on WhatsApp', href: WA, featured: true },
+        { id: 'start', name: 'Cloud Start', price: '$49', period: '/mo', badge: 'Self-serve', desc: 'Up to 3 staff · no FX module · no branch split', features: ['Inbox, customers, tickets, tasks', '1 WhatsApp number', 'Email support', '7-day money-back on first month'], cta: 'Buy Start on WhatsApp', href: WA, featured: true },
         { id: 'business', name: 'Cloud Business', price: '$249', period: '/mo from', desc: 'Up to 3 branches · 10 staff · FX module', features: ['FX rates, charts, exchange services', 'Roles and branch separation', '2FA and audit logs'], cta: 'Quote Business on WhatsApp', href: WA },
         { id: 'multi', name: 'Cloud Multi-branch', price: '$499', period: '/mo from', desc: 'More branches · written support SLA', features: ['Priority support / SLA on request', 'Onboarding for multiple locations', 'Invoice and procurement pack'], cta: 'Request invoice', href: STORE },
         { id: 'license', name: 'Self-hosted license', price: '$4,000', period: ' · one-time from', desc: 'Your servers · data stays with you', features: ['Full system handover', 'Install guide', 'Optional yearly updates', 'For companies that need an invoice'], cta: 'Get a written quote', href: STORE },
@@ -686,10 +686,10 @@
       items: [
         { q: 'Why not respond.io, Wati, Kommo, Trengo or Chatwoot?', a: 'Those are conversation inboxes for ads and support — Instagram, TikTok, AI Agents, HubSpot. FXGuard is an operations panel for exchange, remittance and finance desks: FX rates on the same screen as WhatsApp, a company-owned customer book, branches, 2FA, and a license if data cannot sit on a US SaaS. Inbox is included. If you need ads plus Instagram, pick them.' },
         { q: 'Is WhatsApp official Meta API?', a: 'Two paths: unofficial WhatsApp Web (QR) without Business verification — faster, bulk raises ban risk — and official Meta Cloud API. We do not hide which one you are on. Serious broadcast needs Cloud API.' },
-        { q: 'Why not $49 unlimited for everyone?', a: 'Cloud Start is $49/month for one branch and up to three staff, without the FX module. Business from $249. Multi-branch from $499. License from $4,000 one-time. Managed from $800/month. Final numbers can be negotiated; the floor is published.' },
+        { q: 'Why not $49 unlimited for everyone?', a: 'Cloud Start is $49/month for inbox, customers, tickets and tasks: up to three staff, no FX module and no branch split. Branch split starts on Business, up to 3 branches, from $249. Beyond that, Multi-branch is from $499. License from $4,000 one-time. Managed from $800/month. Final numbers can be negotiated; the floor is published.' },
         { q: 'Can we get an invoice / PO instead of WhatsApp checkout?', a: 'Yes. Use Request invoice or Get a written quote. Cloud Start is WhatsApp. Commercial and license deals go through invoice. Buying from Europe? We send a DPA with the invoice.' },
         { q: 'How do we try it with our own number?', a: 'We do not publish a shared demo password here. Book a 10-minute guided session, or a time-limited trial where you connect your number and can disconnect it afterwards.' },
-        { q: 'Can FXGuard handle multiple branches?', a: 'Yes. Branches and departments are built in, with owner-level oversight. Multi-branch cloud starts from $499/month for new signups.' },
+        { q: 'Can FXGuard handle multiple branches?', a: 'Branch split starts on Cloud Business: up to 3 branches, from $249/month. More than that is Cloud Multi-branch, from $499/month.' },
         { q: 'If I am not satisfied, do I get my money back?', a: 'Yes for the first Cloud Start month: message WhatsApp within 7 days of the first payment, disconnect the number, and we refund that month. Business, multi-branch, license and managed refunds follow the invoice. We do not publish a fake unlimited guarantee. SLA is written on request — not a 99.9% sticker.' },
         { q: 'Does AI run the desk instead of staff?', a: 'No. Optional OpenAI first-replies and routing — you bring the key. AI does not quote a live rate, does not process files, and does not replace roles or 2FA. Staff close the deal.' },
         { q: 'How does Bizdavar relate?', a: 'FXGuard is a Bizdavar ecosystem product; sales run through fxguard.io and WhatsApp +90 501 067 6486, and it is listed in the Bizdavar product catalog.' }
@@ -724,8 +724,8 @@
   merge('ru', {
     hero: {
       tag: 'Обмен · переводы · финансы',
-      title: 'Котируйте курс в WhatsApp. Клиентская книга остаётся у вас.',
-      desc: 'Один корпоративный номер. Сотрудники отвечают из панели. Если кто-то уходит, переписки и названные цены остаются у вас — не на личном телефоне.',
+      title: 'Корпоративный WhatsApp-инбокс. Клиентская книга остаётся у вас.',
+      desc: 'Один корпоративный номер. Сотрудники отвечают из панели. Cloud Start за $49 — это инбокс без пакета FX. Пакет курсов начинается с Business за $249.',
       regionItems: [
         { code: 'TR', label: 'Турция' },
         { code: 'AE', label: 'Дубай' },
@@ -733,14 +733,14 @@
         { code: 'IR', label: 'Иран' }
       ],
       regions: 'Турция · Дубай · Европа · Иран',
-      trust: 'От $49/мес · демо с гидом · возврат за 7 дней в первый месяц Cloud Start',
+      trust: 'Инбокс от $49/мес, без пакета FX · пакет курсов от $249 · возврат 7 дней в первый месяц Start',
       ctaBuy: 'Купить в WhatsApp',
       ctaDemo: 'Смотреть панель',
       ctaPricing: 'Цены',
       ctaContact: 'Купить в WhatsApp',
       ctaStore: 'fxguard.io',
       visualAlt: 'Панель FXGuard — чат WhatsApp и курсы на одном экране',
-      visualCaption: 'Панель, которой кассир реально пользуется — чат и курсы вместе.'
+      visualCaption: 'Панель командного чата. Пакет курсов FX есть в Business, не в плане за 49 долларов.'
     },
     stats: {
       businesses: 'Модулей+',
@@ -756,7 +756,7 @@
       desc: 'WhatsApp CRM с пакетом курсов FX — основной продукт. Accounting и брендированные сайты обменников рядом — каждое котируется отдельно.',
       items: [
         { badge: 'Доступно', icon: 'inbox', title: 'WhatsApp CRM', desc: 'Корпоративный WhatsApp, клиентская книга, роли, филиалы — плюс курсы FX, графики и обменные услуги с тарифа Business.', audience: 'Для обменных, переводных и финансовых столов. Другие команды берут Cloud Start без пакета FX.', cta: 'Живое демо', href: APP, external: true },
-        { badge: 'Доступно', icon: 'chart-line', title: 'Accounting', desc: 'Живая книга поступлений, выплат, курсов и переводов. Публичное демо отдельно от CRM и сбрасывается.', audience: 'Для обменных пунктов и переводных столов.', cta: 'Страница Accounting', href: '/pages/fxguard-accounting', external: false },
+        { badge: 'Скоро', icon: 'chart-line', title: 'Accounting', desc: 'Пока нет — в дорожной карте FXGuard, лист ожидания открыт.', audience: 'Для обменных пунктов и переводных столов.', cta: 'Страница Accounting', href: '/pages/fxguard-accounting', external: false },
         { badge: 'Доступно', icon: 'globe', title: 'Сайты обмена и финансов', desc: 'Брендированный сайт с курсами, заказами и трекингом. Живой пример: exchange.fxguard.io — отдельно от CRM.', audience: 'Для обменных пунктов и финансовых компаний.', cta: 'Живой пример', href: EXCHANGE, external: true }
       ]
     },
@@ -882,7 +882,7 @@
       items: [
         { icon: 'chart-line', title: 'Обмен и FX', region: 'Турция · ОАЭ · Европа · Иран', desc: 'Несколько филиалов, курсы и услуги рядом с inbox — с Business.', tag: 'Пакет FX' },
         { icon: 'briefcase', title: 'B2B продажи и поддержка', region: 'Все регионы', desc: 'Закрытие с историей, тикетами и задачами.', tag: 'Sales ops' },
-        { icon: 'building', title: 'Холдинг / несколько площадок', region: 'Турция · Дубай', desc: 'Роли, филиалы и надзор. Cloud Multi-branch от $499/мес.', tag: 'Мультифилиал' },
+        { icon: 'building', title: 'Холдинг / несколько площадок', region: 'Турция · Дубай', desc: 'Разделение филиалов с Cloud Business: до 3 филиалов, от $249. Дальше Cloud Multi-branch, от $499/мес.', tag: 'Мультифилиал' },
         { icon: 'health', title: 'Магазины, услуги и клиники', region: 'Турция · Европа', desc: 'Cloud Start: inbox и книга клиентов без модуля FX.', tag: 'Cloud Start' }
       ]
     },
@@ -892,7 +892,7 @@
       desc: 'Облако самообслуживания для малого стола. Коммерческие котировки, счета и SLA для мультифилиальных FX-команд. Полы цен опубликованы.',
       note: 'Cloud Start не включает модуль курсов FX. Business и выше — да. Лицензия и Managed по счёту. Первый месяц Cloud Start: возврат за 7 дней. Итоговые цифры можно согласовать.',
       plans: [
-        { id: 'start', name: 'Cloud Start', price: '$49', period: '/мес', badge: 'Self-serve', desc: '1 филиал · до 3 человек · без FX', features: ['Inbox, клиенты, тикеты, задачи', '1 номер WhatsApp', 'Поддержка по email', 'Возврат 7 дней в первый месяц'], cta: 'Купить Start в WhatsApp', href: WA, featured: true },
+        { id: 'start', name: 'Cloud Start', price: '$49', period: '/мес', badge: 'Self-serve', desc: 'До 3 человек · без FX · без разделения филиалов', features: ['Inbox, клиенты, тикеты, задачи', '1 номер WhatsApp', 'Поддержка по email', 'Возврат 7 дней в первый месяц'], cta: 'Купить Start в WhatsApp', href: WA, featured: true },
         { id: 'business', name: 'Cloud Business', price: '$249', period: '/мес от', desc: 'До 3 филиалов · 10 человек · модуль FX', features: ['Курсы FX, графики, обменные услуги', 'Роли и разделение филиалов', '2FA и журналы'], cta: 'Котировка Business в WhatsApp', href: WA },
         { id: 'multi', name: 'Cloud Multi-branch', price: '$499', period: '/мес от', desc: 'Больше филиалов · письменный SLA', features: ['Приоритетная поддержка / SLA по запросу', 'Онбординг нескольких площадок', 'Пакет счёта и закупки'], cta: 'Запросить счёт', href: STORE },
         { id: 'license', name: 'Лицензия на своих серверах', price: '$4,000', period: ' · разово от', desc: 'Ваши серверы · данные у вас', features: ['Полная передача системы', 'Гид по установке', 'Опциональные годовые обновления', 'Для компаний, которым нужен счёт'], cta: 'Письменная котировка', href: STORE },
@@ -905,10 +905,10 @@
       items: [
         { q: 'Почему не respond.io, Wati, Kommo, Trengo или Chatwoot?', a: 'Это inbox для рекламы и поддержки — Instagram, TikTok, AI Agent, HubSpot. FXGuard — операционная панель обменных, переводных и финансовых столов: курсы FX на том же экране, что WhatsApp, книга клиентов компании, филиалы, 2FA и лицензия, если данные нельзя держать на US SaaS. Inbox включён. Нужна реклама плюс Instagram — берите их.' },
         { q: 'WhatsApp — официальный Meta API?', a: 'Два пути: неофициальный WhatsApp Web (QR) без Business-верификации — быстрее, массовая рассылка повышает риск бана — и официальный Meta Cloud API. Мы не скрываем, на каком вы. Серьёзный бродкаст требует Cloud API.' },
-        { q: 'Почему не $49 безлимит для всех?', a: 'Cloud Start $49/мес: один филиал, до трёх человек, без модуля FX. Business от $249. Multi-branch от $499. Лицензия разово от $4 000. Managed от $800/мес. Итог можно согласовать; пол опубликован.' },
+        { q: 'Почему не $49 безлимит для всех?', a: 'Cloud Start $49/мес: inbox, клиенты, тикеты и задачи, до трёх человек, без модуля FX и без разделения филиалов. Разделение филиалов — с Business, до 3 филиалов, от $249. Дальше Multi-branch от $499. Лицензия разово от $4 000. Managed от $800/мес. Итог можно согласовать; пол опубликован.' },
         { q: 'Счёт / PO вместо оплаты в WhatsApp?', a: 'Да. Запросите счёт или письменную котировку. Cloud Start — через WhatsApp. Коммерция и лицензия — по счёту. Для Европы DPA отправляем со счётом.' },
         { q: 'Как попробовать на своём номере?', a: 'Общий пароль демо здесь не публикуем. Запишите 10-минутную сессию или ограниченный пробник: подключаете номер и можете отключить.' },
-        { q: 'Несколько филиалов?', a: 'Да. Филиалы и отделы встроены, с надзором владельца. Мультифилиальное облако для новых регистраций от $499/мес.' },
+        { q: 'Несколько филиалов?', a: 'Разделение филиалов начинается с Cloud Business: до 3 филиалов, от $249/мес. Больше — Cloud Multi-branch, от $499/мес.' },
         { q: 'Если не устроит — вернут деньги?', a: 'Да для первого месяца Cloud Start: напишите в WhatsApp в течение 7 дней после первой оплаты, отключите номер — вернём этот месяц. Business, мультифилиал, лицензия и managed — по счёту. Фейковую безлимитную гарантию не публикуем. SLA пишется по запросу — не наклейка 99,9%.' },
         { q: 'AI ведёт стол вместо сотрудников?', a: 'Нет. Опциональные первые ответы и маршрутизация OpenAI — ключ ваш. AI не котирует живой курс, не обрабатывает файлы и не заменяет роли или 2FA. Сделку закрывают люди.' },
         { q: 'Как связан Bizdavar?', a: 'FXGuard — продукт экосистемы Bizdavar; продажи через fxguard.io и WhatsApp +90 501 067 6486, плюс каталог продуктов Bizdavar.' }
@@ -943,8 +943,8 @@
   merge('ar', {
     hero: {
       tag: 'صرافة · حوالات · مالية',
-      title: 'أرسل السعر على واتساب. دفتر العملاء يبقى عندك.',
-      desc: 'رقم شركة واحد. الموظفون يردّون من اللوحة. إذا غادر أحدهم، المحادثات والأسعار المعلنة تبقى عندك — لا على هاتف شخصي.',
+      title: 'صندوق واتساب الشركة. دفتر العملاء يبقى عندك.',
+      desc: 'رقم شركة واحد. الموظفون يردّون من اللوحة. Cloud Start بـ ٤٩$ هو الصندوق بلا حزمة FX. حزمة الأسعار تبدأ من Business بـ ٢٤٩$.',
       regionItems: [
         { code: 'TR', label: 'تركيا' },
         { code: 'AE', label: 'دبي' },
@@ -952,14 +952,14 @@
         { code: 'IR', label: 'إيران' }
       ],
       regions: 'تركيا · دبي · أوروبا · إيران',
-      trust: 'من ٤٩$/شهر · عرض موجَّه · استرداد خلال ٧ أيام لأول شهر Cloud Start',
+      trust: 'الصندوق من ٤٩$/شهر بلا حزمة FX · حزمة الأسعار من ٢٤٩$ · استرداد ٧ أيام لأول شهر Start',
       ctaBuy: 'اشترِ عبر واتساب',
       ctaDemo: 'شاهد اللوحة',
       ctaPricing: 'الأسعار',
       ctaContact: 'اشترِ عبر واتساب',
       ctaStore: 'fxguard.io',
       visualAlt: 'لوحة FXGuard — دردشة واتساب وأسعار في شاشة واحدة',
-      visualCaption: 'اللوحة التي يستخدمها الصرّاف فعلاً — الدردشة والأسعار معاً.'
+      visualCaption: 'لوحة دردشة الفريق. حزمة أسعار FX في Business، لا في خطة ٤٩$.'
     },
     stats: {
       businesses: 'وحدات+',
@@ -975,7 +975,7 @@
       desc: 'WhatsApp CRM مع حزمة أسعار FX هو المنتج الرئيسي. المحاسبة ومواقع الصرافة ذات العلامة بجانبه — يُسعَّر كل منها على حدة.',
       items: [
         { badge: 'متاح الآن', icon: 'inbox', title: 'WhatsApp CRM', desc: 'واتساب الشركة، دفتر العملاء، الأدوار، الفروع — إضافة أسعار FX والرسوم البيانية وخدمات التبادل من Business فما فوق.', audience: 'لمكاتب الصرافة والحوالات والمالية. الفرق الأخرى تستخدم Cloud Start دون حزمة FX.', cta: 'عرض حي', href: APP, external: true },
-        { badge: 'متاح الآن', icon: 'chart-line', title: 'Accounting', desc: 'دفتر حي للإيصالات والمدفوعات والأسعار والحوالات. العرض العام منفصل عن CRM ويُعاد ضبطه.', audience: 'لمكاتب الصرافة ومكاتب الحوالات.', cta: 'صفحة المحاسبة', href: '/pages/fxguard-accounting', external: false },
+        { badge: 'قريباً', icon: 'chart-line', title: 'Accounting', desc: 'ليس بعد — في خارطة مجموعة FXGuard وقائمة الانتظار مفتوحة.', audience: 'لمكاتب الصرافة ومكاتب الحوالات.', cta: 'صفحة المحاسبة', href: '/pages/fxguard-accounting', external: false },
         { badge: 'متاح الآن', icon: 'globe', title: 'مواقع الصرافة والمالية', desc: 'موقع بعلامتك مع أسعار وطلبات وتتبع. مثال حي: exchange.fxguard.io — يُسعَّر منفصلاً عن CRM.', audience: 'لمكاتب الصرافة وشركات المالية.', cta: 'مثال حي', href: EXCHANGE, external: true }
       ]
     },
@@ -1101,7 +1101,7 @@
       items: [
         { icon: 'chart-line', title: 'صرافة وFX', region: 'تركيا · الإمارات · أوروبا · إيران', desc: 'فروع متعددة وأسعار وخدمات تبادل بجانب صندوق الفريق — من Business.', tag: 'حزمة FX' },
         { icon: 'briefcase', title: 'مبيعات ودعم B2B', region: 'كل المناطق', desc: 'إغلاق بتاريخ كامل وتذاكر ومهام.', tag: 'عمليات بيع' },
-        { icon: 'building', title: 'شركات قابضة / مواقع متعددة', region: 'تركيا · دبي', desc: 'أدوار وفروع ورقابة المالك. Cloud Multi-branch من ٤٩٩$/شهر.', tag: 'فروع متعددة' },
+        { icon: 'building', title: 'شركات قابضة / مواقع متعددة', region: 'تركيا · دبي', desc: 'فصل الفروع من Cloud Business: حتى ٣ فروع، من ٢٤٩$. الأكثر Cloud Multi-branch من ٤٩٩$/شهر.', tag: 'فروع متعددة' },
         { icon: 'health', title: 'متاجر وخدمات وعيادات', region: 'تركيا · أوروبا', desc: 'Cloud Start: صندوق ودفتر عملاء دون وحدة FX.', tag: 'Cloud Start' }
       ]
     },
@@ -1111,7 +1111,7 @@
       desc: 'سحابة خدمة ذاتية لمكتب صغير. عروض تجارية وفواتير وSLA لفرق FX متعددة الفروع. الأرضيات منشورة حتى لا يخمن الشراء.',
       note: 'Cloud Start لا يشمل وحدة أسعار FX. Business فما فوق يشملها. الترخيص وManaged بالفاتورة. أول شهر Cloud Start: استرداد ٧ أيام. الأرقام النهائية قابلة للتفاوض.',
       plans: [
-        { id: 'start', name: 'Cloud Start', price: '$49', period: '/شهر', badge: 'خدمة ذاتية', desc: 'فرع واحد · حتى ٣ موظفين · بلا FX', features: ['صندوق وعملاء وتذاكر ومهام', 'رقم واتساب واحد', 'دعم بالبريد', 'استرداد ٧ أيام لأول شهر'], cta: 'اشترِ Start على واتساب', href: WA, featured: true },
+        { id: 'start', name: 'Cloud Start', price: '$49', period: '/شهر', badge: 'خدمة ذاتية', desc: 'حتى ٣ موظفين · بلا FX · بلا فصل فروع', features: ['صندوق وعملاء وتذاكر ومهام', 'رقم واتساب واحد', 'دعم بالبريد', 'استرداد ٧ أيام لأول شهر'], cta: 'اشترِ Start على واتساب', href: WA, featured: true },
         { id: 'business', name: 'Cloud Business', price: '$249', period: '/شهر من', desc: 'حتى ٣ فروع · ١٠ موظفين · وحدة FX', features: ['أسعار FX ورسوم وخدمات تبادل', 'أدوار وفصل الفروع', '2FA وسجلات'], cta: 'عرض Business على واتساب', href: WA },
         { id: 'multi', name: 'Cloud Multi-branch', price: '$499', period: '/شهر من', desc: 'فروع أكثر · SLA دعم مكتوب', features: ['دعم أولوية / SLA عند الطلب', 'تهيئة مواقع متعددة', 'حزمة فاتورة ومشتريات'], cta: 'اطلب فاتورة', href: STORE },
         { id: 'license', name: 'ترخيص على خوادمك', price: '$4,000', period: ' · مرة واحدة من', desc: 'خوادمك · البيانات عندك', features: ['تسليم النظام كاملاً', 'دليل التثبيت', 'تحديثات سنوية اختيارية', 'للشركات التي تحتاج فاتورة'], cta: 'عرض مكتوب', href: STORE },
@@ -1124,10 +1124,10 @@
       items: [
         { q: 'لماذا ليس respond.io أو Wati أو Kommo أو Trengo أو Chatwoot؟', a: 'تلك صناديق دردشة للإعلانات والدعم — إنستغرام وتيك توك ووكلاء ذكاء وHubSpot. FXGuard لوحة تشغيل لمكاتب الصرافة والحوالات والمالية: أسعار FX على نفس شاشة واتساب، دفتر عملاء ملك الشركة، فروع، 2FA، وترخيص إن تعذّر بقاء البيانات على SaaS أمريكي. الصندوق وارد مضمَّن. إن احتجت إعلانات وإنستغرام فاخترهم.' },
         { q: 'هل واتساب واجهة ميتا الرسمية؟', a: 'مساران: WhatsApp Web غير رسمي (QR) بلا تحقق Business — أسرع والبث الجماعي يرفع خطر الحظر — وMeta Cloud API الرسمي. لا نخفي أيهما تستخدم. البث الجاد يحتاج Cloud API.' },
-        { q: 'لماذا ليس ٤٩$ بلا حدود للجميع؟', a: 'Cloud Start ٤٩$/شهر لفرع واحد وحتى ثلاثة موظفين دون وحدة FX. Business من ٢٤٩$. Multi-branch من ٤٩٩$. الترخيص مرة من ٤٬٠٠٠$. Managed من ٨٠٠$/شهر. الأرقام النهائية قابلة للتفاوض؛ الأرضية منشورة.' },
+        { q: 'لماذا ليس ٤٩$ بلا حدود للجميع؟', a: 'Cloud Start ٤٩$/شهر للصندوق والعملاء والتذاكر والمهام: حتى ثلاثة موظفين، بلا وحدة FX وبلا فصل فروع. فصل الفروع من Business، حتى ٣ فروع، من ٢٤٩$. ما زاد على ذلك Multi-branch من ٤٩٩$. الترخيص مرة من ٤٬٠٠٠$. Managed من ٨٠٠$/شهر. الأرقام النهائية قابلة للتفاوض؛ الأرضية منشورة.' },
         { q: 'فاتورة / أمر شراء بدل دفع واتساب؟', a: 'نعم. اطلب فاتورة أو عرضاً مكتوباً. Cloud Start عبر واتساب. الصفقات التجارية والترخيص بالفاتورة. لأوروبا نرسل DPA مع الفاتورة.' },
         { q: 'كيف نجرّب برقمنا؟', a: 'لا ننشر كلمة مرور عرض مشتركة هنا. احجز جلسة ١٠ دقائق موجَّهة، أو تجربة محدودة تربط فيها رقمك ويمكنك قطعه لاحقاً.' },
-        { q: 'هل يدعم عدة فروع؟', a: 'نعم. الفروع والأقسام مدمجة مع رقابة المالك. سحابة متعددة الفروع للتسجيل الجديد من ٤٩٩$/شهر.' },
+        { q: 'هل يدعم عدة فروع؟', a: 'فصل الفروع يبدأ من Cloud Business: حتى ٣ فروع، من ٢٤٩$/شهر. الأكثر من ذلك Cloud Multi-branch، من ٤٩٩$/شهر.' },
         { q: 'إن لم أرضَ هل يُسترد المال؟', a: 'نعم لأول شهر Cloud Start: راسل واتساب خلال ٧ أيام من أول دفع، اقطع الرقم، نرد ذلك الشهر. Business ومتعدد الفروع والترخيص وManaged وفق الفاتورة. لا ننشر ضماناً بلا حدود مزيفاً. SLA يُكتب عند الطلب — ليست ملصقة ٩٩.٩٪.' },
         { q: 'هل يدير الذكاء الاصطناعي المكتب بدل الموظفين؟', a: 'لا. ردود أولى وتوجيه اختياري عبر OpenAI — المفتاح منك. الذكاء الاصطناعي لا يسعّر سعراً حياً ولا يعالج ملفات ولا يستبدل الأدوار أو 2FA. الموظفون يغلقون الصفقة.' },
         { q: 'ما علاقة بيزدوار؟', a: 'FXGuard منتج منظومة بيزدوار الرقمية؛ البيع عبر fxguard.io وواتساب ‎+90 501 067 6486 وفي كتالوج منتجات بيزدوار.' }

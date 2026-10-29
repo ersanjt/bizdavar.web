@@ -49,7 +49,7 @@ foreach ($attempts as $smtp) {
     $try = $cfg;
     $try['mail'] = [
         'from' => 'info@bizdavar.com',
-        'from_name' => 'بیزداور',
+        'from_name' => 'بیزدوار',
         'notify' => 'info@bizdavar.com',
         'smtp' => $smtp,
     ];

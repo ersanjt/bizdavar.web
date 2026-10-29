@@ -817,7 +817,7 @@
         { title: 'Backup', desc: 'بکاپ و تست بازیابی' },
         { title: 'Monitor', desc: 'uptime و هشدار' },
         { title: 'DNS / CDN', desc: 'دامنه و Cloudflare' },
-        { title: 'Migrate', desc: 'انتقال بدون قطعی' }
+        { title: 'Migrate', desc: 'مهاجرت کنترل‌شده تا قطعی سرویس به حداقل برسد' }
       ],
       faqTitle: 'سوالات پرتکرار مدیریت سرور',
       faqEyebrow: 'زیرساخت و Ops',
@@ -934,7 +934,7 @@
         { id: 'wiring', icon: 'bolt', title: 'سیم‌کشی ساختمان', desc: 'واحد مسکونی و تجاری' },
         { id: 'lighting', icon: 'flame', title: 'نورمخفی', desc: 'طراحی و اجرای داخلی' },
         { id: 'survey', icon: 'document', title: 'بازدید فنی', desc: 'طرح و زمان‌بندی اجرا' },
-        { id: 'cities', icon: 'pin', title: 'تبریز', desc: 'پوشش اجرایی دو شهر' },
+        { id: 'cities', icon: 'pin', title: 'تبریز', desc: 'پوشش اجرایی در تبریز' },
         { id: 'support', icon: 'shield', title: 'گارانتی اجرا', desc: 'پشتیبانی پس از نصب' }
       ],
       faq: [
@@ -973,7 +973,7 @@
         { id: 'wiring', icon: 'bolt', title: 'Bina tesisatı', desc: 'Konut ve ticari birimler' },
         { id: 'lighting', icon: 'flame', title: 'Gizli aydınlatma', desc: 'İç mekân uygulama' },
         { id: 'survey', icon: 'document', title: 'Teknik keşif', desc: 'Plan ve kurulum takvimi' },
-        { id: 'cities', icon: 'pin', title: 'Tebriz', desc: 'İki şehirde uygulama' },
+        { id: 'cities', icon: 'pin', title: 'Tebriz', desc: 'Tebriz’de uygulama' },
         { id: 'support', icon: 'shield', title: 'Kurulum garantisi', desc: 'Kurulum sonrası destek' }
       ],
       faq: [
@@ -1151,7 +1151,7 @@
         tag: 'خدمات ما',
         title: 'خدمات دیجیتال و فنی برای کسب‌وکار ایران',
         desc: 'سایت، بازاریابی و نرم‌افزار — به‌همراه خدمات فنی تبریز. اگر بازار آمریکا و اروپا دارید، فاکتور دلار یا یورو هم می‌دهیم. پلن سریع از <a href="fast">۹۹ دلار</a>. محصولات در <a href="products">صفحه محصولات</a>.',
-        ctaPrimary: 'مشاوره طراحی سایت',
+        ctaPrimary: 'درخواست مشاوره',
         ctaWeb: 'پلن‌های سایت از ۹۹ دلار',
         ctaField: 'واتساپ خدمات فنی'
       },
@@ -1179,7 +1179,7 @@
       stats: [
         { value: '۶', label: 'محور خدمات' },
         { value: '۱۰۰+', label: 'پروژه' },
-        { value: '۲', label: 'شهر فنی' },
+        { value: '۱', label: 'شهر فنی' },
         { value: '۱۲+', label: 'سال تجربه' }
       ],
       process: {
@@ -1212,7 +1212,7 @@
         tag: 'Hizmetlerimiz',
         title: 'İstanbul’dan web tasarım, SEO ve dijital pazarlama hizmetleri',
         desc: 'Türkiye’deki işletmeler için <strong>kurumsal web sitesi</strong>, <strong>e-ticaret</strong>, <strong>SEO</strong>, Google Ads ve sosyal medya yönetimi — ayrıca mobil uygulama ve sunucu yönetimi. Yurt dışı projelerde USD/EUR fatura. Hızlı site: <a href="fast">$99’dan</a>. Ürünler <a href="products">ürünler sayfasında</a>.',
-        ctaPrimary: 'Ücretsiz web tasarım danışmanlığı',
+        ctaPrimary: 'Danışmanlık iste',
         ctaWeb: '$99’dan web sitesi',
         ctaField: 'Teknik WhatsApp'
       },
@@ -1241,7 +1241,7 @@
       stats: [
         { value: '6', label: 'Hizmet alanı' },
         { value: '100+', label: 'Proje' },
-        { value: '2', label: 'Teknik şehir' },
+        { value: '1', label: 'Teknik şehir' },
         { value: '12+', label: 'Yıl deneyim' }
       ],
       process: {
@@ -1275,7 +1275,7 @@
         tag: 'Our services',
         title: 'Web design & digital services for US and EU clients',
         desc: 'English websites, web apps and growth campaigns invoiced in <strong>USD or EUR</strong> — plus apps, servers, SMM and field installs in Tabriz. Fast sites from <a href="fast">$99 / ~€90</a>. Products live on the <a href="products">products page</a>.',
-        ctaPrimary: 'Get a website quote',
+        ctaPrimary: 'Request a consultation',
         ctaWeb: '5-day sites from $99',
         ctaField: 'Technical WhatsApp'
       },
@@ -1304,7 +1304,7 @@
       stats: [
         { value: '6', label: 'Service areas' },
         { value: '100+', label: 'Projects' },
-        { value: '2', label: 'Field cities' },
+        { value: '1', label: 'Field cities' },
         { value: '12+', label: 'Years experience' }
       ],
       process: {

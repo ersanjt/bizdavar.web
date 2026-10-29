@@ -51,7 +51,7 @@ function bizhub_send_password_reset(PDO $pdo, array $cfg, int $userId): bool
     bizhub_mail(
         $cfg,
         (string) $user['email'],
-        'بازیابی رمز بیزداور',
+        'بازیابی رمز بیزدوار',
         '',
         [
             'heading' => 'بازیابی رمز',
@@ -118,7 +118,7 @@ function bizhub_mail_send(array $cfg, string $to, string $subject, string $text,
     }
     $fromName = str_replace(["\r", "\n"], '', trim((string) ($mail['from_name'] ?? '')));
     if ($fromName === '' || strcasecmp($fromName, 'BizHub') === 0) {
-        $fromName = 'بیزداور';
+        $fromName = 'بیزدوار';
     }
     $subject = str_replace(["\r", "\n"], ' ', $subject);
     [$plain, $html] = bizhub_mail_render($cfg, $subject, $text, $view);
@@ -335,7 +335,7 @@ function bizhub_mail_render(array $cfg, string $subject, string $text, array $vi
         $plain[] = $note;
         $plain[] = '';
     }
-    $plain[] = 'بیزداور — تکنولوژی پردازان توسعه خاورمیانه';
+    $plain[] = 'بیزدوار — تکنولوژی پردازان توسعه خاورمیانه';
     $plain[] = 'info@bizdavar.com · +98 930 588 0135 · +90 501 067 6486 · +98 936 411 5151';
     $plain[] = 'ایران · ترکیه · ارمنستان · دبی';
     $plain[] = $origin;
@@ -381,13 +381,13 @@ function bizhub_mail_render(array $cfg, string $subject, string $text, array $vi
     $html = '<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
         . '<title>' . bizhub_mail_h($heading) . '</title></head>'
         . '<body style="margin:0;padding:0;background:#f3f3f3;">'
-        . '<div style="display:none;max-height:0;overflow:hidden;opacity:0;">' . bizhub_mail_h($heading) . ' — بیزداور</div>'
+        . '<div style="display:none;max-height:0;overflow:hidden;opacity:0;">' . bizhub_mail_h($heading) . ' — بیزدوار</div>'
         . '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f3f3f3;padding:24px 12px;"><tr><td align="center">'
         . '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#ffffff;border-radius:16px;overflow:hidden;border:1px solid #e8e8e8;">'
         . '<tr><td style="background:#1d1d1b;padding:22px 28px 18px;">'
         . '<table role="presentation" cellpadding="0" cellspacing="0"><tr>'
         . '<td style="padding-left:12px;"><img src="https://bizdavar.com/assets/images/brand/favicon-48.png" width="36" height="36" alt="" style="display:block;border:0;"></td>'
-        . '<td><div style="font-size:20px;font-weight:700;color:#ffffff;line-height:1.2;">بیزداور</div>'
+        . '<td><div style="font-size:20px;font-weight:700;color:#ffffff;line-height:1.2;">بیزدوار</div>'
         . '<div style="font-size:12px;color:#d0d0d0;margin-top:3px;">BizHub · bizdavar.com</div></td>'
         . '</tr></table></td></tr>'
         . '<tr><td style="height:3px;background:#e3191f;font-size:0;line-height:0;">&nbsp;</td></tr>'
@@ -397,7 +397,7 @@ function bizhub_mail_render(array $cfg, string $subject, string $text, array $vi
         . '</td></tr>'
         . '<tr><td style="padding:18px 28px 22px;background:#fafafa;border-top:1px solid #eeeeee;font-family:Tahoma,Arial,sans-serif;">'
         . '<p style="margin:0 0 6px;font-size:13px;font-weight:700;color:#1d1d1b;">تکنولوژی پردازان توسعه خاورمیانه</p>'
-        . '<p style="margin:0 0 8px;font-size:12px;line-height:1.7;color:#4b4b4b;">آژانس دیجیتال مارکتینگ بیزداور</p>'
+        . '<p style="margin:0 0 8px;font-size:12px;line-height:1.7;color:#4b4b4b;">آژانس دیجیتال مارکتینگ بیزدوار</p>'
         . '<p style="margin:0 0 4px;font-size:12px;line-height:1.8;color:#4b4b4b;">'
         . '<a href="mailto:info@bizdavar.com" style="color:#1d1d1b;text-decoration:none;">info@bizdavar.com</a></p>'
         . '<p dir="ltr" style="margin:0 0 4px;font-size:12px;line-height:1.8;color:#4b4b4b;text-align:right;">'
@@ -451,6 +451,6 @@ function bizhub_mail_document_notice(PDO $pdo, array $cfg, int $documentId): voi
     $tellClient = ((string) $full['kind'] === 'proforma' && (string) $full['status'] === 'sent')
         || ((string) $full['kind'] === 'invoice' && in_array((string) $full['status'], ['issued', 'paid'], true));
     if ($tellClient && filter_var($client, FILTER_VALIDATE_EMAIL) && empty($sent[$client])) {
-        bizhub_mail($cfg, $client, $subject . ' — Bizdavar', $summary . "\n\nاین سند از طرف بیزداور صادر شده است.\n" . bizhub_app_origin($cfg));
+        bizhub_mail($cfg, $client, $subject . ' — Bizdavar', $summary . "\n\nاین سند از طرف بیزدوار صادر شده است.\n" . bizhub_app_origin($cfg));
     }
 }

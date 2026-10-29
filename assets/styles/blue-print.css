@@ -909,11 +909,6 @@ body[data-page="blue-print"] .bp-hero::before {
 .bp-doc__aside ul { margin: 0; padding-inline-start: 1.1rem; }
 .bp-doc__note { margin-top: 16px; }
 .nav__product-panels:has([data-product-panel="blueprint"].is-active) { max-height: min(62vh, 480px); overflow: auto; }
-.footer__bp { padding: 4px 0 28px; }
-.footer__bp-title { margin: 0 0 10px; font-size: .95rem; }
-.footer__bp-list { display: flex; flex-wrap: wrap; gap: 6px 14px; list-style: none; margin: 0; padding: 0; }
-.footer__bp-list a { color: rgba(255,255,255,.82); font-size: .82rem; text-decoration: none; }
-.footer__bp-list a:hover { color: #fff; }
 @media (max-width: 800px) {
   .bp-doc__grid { grid-template-columns: 1fr; }
 }

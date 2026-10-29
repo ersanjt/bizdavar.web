@@ -2,6 +2,7 @@
 """Build liqui-moly-products.js from scraped JSON + Persian catalog shell."""
 from __future__ import annotations
 
+import importlib.util
 import json
 import re
 from collections import defaultdict
@@ -11,6 +12,14 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "assets" / "scripts" / "config" / "liqui-moly-products-data.json"
 OUT = ROOT / "assets" / "scripts" / "config" / "liqui-moly-products.js"
 IMG = "assets/images/liqui-moly/"
+
+_fetch_spec = importlib.util.spec_from_file_location(
+    "fetch_liquimoly", ROOT / "scripts" / "fetch-liquimoly.py"
+)
+_fetch = importlib.util.module_from_spec(_fetch_spec)
+_fetch_spec.loader.exec_module(_fetch)
+official_sku = _fetch.official_sku
+translate_name_fa = _fetch.translate_name_fa
 
 CAT_MAP = {
     "ARAÇ BAKIM / TÜKETİCİ ÜRÜNLERİ": "مراقبت و نظافت خودرو",
@@ -47,41 +56,26 @@ CAT_META = {
 
 
 def clean_fa(name: str) -> str:
-    reps = [
-        (r"(?i)Motor Yağı", "روغن موتور"),
-        (r"(?i)Motor Yagi", "روغن موتور"),
-        (r"(?i)Motosiklet", "موتورسیکلت"),
-        (r"(?i)Tam Sentetik", "تمام‌سنتتیک"),
-        (r"(?i)Sentetik", "سنتتیک"),
-        (r"(?i)Mineral", "مینرال"),
-        (r"(?i)\bLitre\b", "لیتر"),
-        (r"(?i)\bLt\b", "لیتر"),
-        (r"(?i)Yakıt Katkısı", "افزودنی سوخت"),
-        (r"(?i)Yakit Katkisi", "افزودنی سوخت"),
-        (r"(?i)Dizel", "دیزل"),
-        (r"(?i)Benzin", "بنزین"),
-        (r"(?i)Temizleyici", "پاک‌کننده"),
-        (r"(?i)Fren Hidroliği", "هیدرولیک ترمز"),
-        (r"(?i)Radyatör Antifrizi", "ضدیخ رادیاتور"),
-        (r"(?i)Antifriz", "ضدیخ"),
-        (r"(?i)Parlatıcı", "براق‌کننده"),
-        (r"(?i)Temizleme", "تمیزکننده"),
-        (r"(?i)Spreyi?", "اسپری"),
-        (r"(?i)Katkısı?", "افزودنی"),
-        (r"(?i)Katki", "افزودنی"),
-        (r"(?i)Gresi", "گریس"),
-        (r"(?i)Yağlayıcı|Kaydirici", "روان‌کننده"),
-        (r"(?i)Pas Sokucu|Pas Sökücü", "ضدزنگ"),
-        (r"(?i)Enjektör", "انژکتور"),
-        (r"(?i)Oto Kokusu", "خوشبوکننده خودرو"),
-        (r"(?i)Bakım Ürünü", "محصول نگهداری"),
-        (r"(?i)Şanzıman Yağı", "روغن گیربکس"),
-        (r"(?i)Octane Plus", "اکتان پلاس"),
-    ]
-    out = name
-    for a, b in reps:
-        out = re.sub(a, b, out)
-    return re.sub(r"\s{2,}", " ", out).strip()
+    return translate_name_fa(name)
+
+
+def local_image(sku: str | None) -> str | None:
+    if not sku:
+        return None
+    for ext in (".jpg", ".jpeg", ".png", ".webp"):
+        cand = ROOT / "assets" / "images" / "liqui-moly" / f"product-{sku}{ext}"
+        if cand.exists():
+            return f"assets/images/liqui-moly/product-{sku}{ext}"
+    return None
+
+
+def _prefer(candidate: dict, current: dict) -> bool:
+    sku = str(candidate.get("sku") or "")
+    def score(p: dict) -> tuple:
+        url = (p.get("url") or "").rstrip("/")
+        ends = url.endswith(sku) or url.endswith(sku + "-")
+        return (1 if ends else 0, len(p.get("name") or ""))
+    return score(candidate) > score(current)
 
 
 def js_str(s: str) -> str:
@@ -90,36 +84,56 @@ def js_str(s: str) -> str:
 
 def main():
     data = json.loads(DATA.read_text(encoding="utf-8"))
-    products = []
+    raw = []
     for p in data.get("products") or []:
         price = float(p.get("priceUsd") or 0)
         if price <= 0:
             continue
-        name = p.get("name") or ""
-        # skip non-product promos
+        name = re.sub(r"\s+", " ", (p.get("name") or "").replace("&#39;", "'")).strip()
         if name.lower() in {"anahtarlik", "liqui moly sticker"}:
             continue
+        sku = official_sku(name, p.get("url") or "")
+        p["sku"] = sku
+        p["name"] = name
+        raw.append(p)
+
+    # Same article number on the Turkey shop is one product. Keep the card whose URL ends with that code.
+    by_sku = {}
+    no_sku = []
+    for p in raw:
+        sku = p.get("sku")
+        if not sku:
+            no_sku.append(p)
+            continue
+        prev = by_sku.get(sku)
+        if prev is None or _prefer(p, prev):
+            by_sku[sku] = p
+    chosen = list(by_sku.values()) + no_sku
+
+    products = []
+    for p in chosen:
+        price = float(p.get("priceUsd") or 0)
+        name = p.get("name") or ""
         cat = CAT_MAP.get(p.get("category") or "", p.get("category") or "سایر محصولات")
         if cat not in CAT_META:
             cat = "سایر محصولات"
         sku = p.get("sku")
-        local = None
-        if sku:
-            for ext in (".jpg", ".jpeg", ".png", ".webp"):
-                cand = ROOT / "assets" / "images" / "liqui-moly" / f"product-{sku}{ext}"
-                if cand.exists():
-                    local = f"assets/images/liqui-moly/product-{sku}{ext}"
-                    break
+        remote = p.get("image") or ""
+        if "default-image" in remote:
+            remote = ""
         products.append(
             {
                 "id": sku or re.sub(r"[^a-z0-9]+", "-", name.lower())[:48],
                 "name": name,
-                "nameFa": clean_fa(p.get("nameFa") or name),
-                "nameTr": p.get("nameTr") or name,
+                "nameFa": clean_fa(name),
+                "nameTr": name,
+                "titleFa": clean_fa(name),
+                "titleTr": name,
+                "titleEn": name,
                 "sku": sku,
                 "priceTry": p.get("priceTry"),
                 "priceUsd": round(price, 2),
-                "image": local or p.get("image"),
+                "image": local_image(sku) or remote,
                 "url": p.get("url"),
                 "category": cat,
             }
@@ -182,6 +196,10 @@ def main():
         series = [
             {
                 "name": it["nameFa"],
+                "titleFa": it["nameFa"],
+                "titleTr": it["nameTr"],
+                "titleEn": it["name"],
+                "inquiryName": it["name"],
                 "note": f"${it['priceUsd']} · SKU {it['sku'] or '—'}",
                 "priceUsd": it["priceUsd"],
                 "priceTry": it["priceTry"],
@@ -209,6 +227,7 @@ def main():
     lines = []
     lines.append("/**")
     lines.append(" * Liqui Moly — catalog with USD prices")
+    lines.append(" * SKU is the article number printed on liquimolyturkey.com, not the pack size.")
     lines.append(f" * Source: liquimolyturkey.com / shop.egemot.com.tr | {data.get('fetchedAt')}")
     lines.append(f" * Products: {len(products_sorted)}")
     lines.append(" */")

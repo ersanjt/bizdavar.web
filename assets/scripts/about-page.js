@@ -141,5 +141,6 @@
     renderStats();
     renderNav();
     initNavSpy();
+    if (typeof window.renderCompanyHistory === 'function') window.renderCompanyHistory();
   };
 })();

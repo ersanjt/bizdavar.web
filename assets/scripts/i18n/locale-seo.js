@@ -19,11 +19,11 @@
       services: {
         seoTitle: 'خدمات بیزدوار | بازاریابی دیجیتال، طراحی وب، SMM و خدمات فنی',
         seoDescription: 'خدمات بیزدوار از دفاتر در سراسر جهان: بازاریابی دیجیتال، طراحی وب و وب‌اپ، اپ اندروید/iOS، مدیریت سرور، SMM، CCTV، سیم‌کشی و نورمخفی — هماهنگی واتساپ تخصصی.',
-        seoKeywords: 'خدمات بیزدوار, بازاریابی دیجیتال, طراحی وب, SMM, مدیریت سرور, CCTV استانبول, خدمات فنی تبریز'
+        seoKeywords: 'خدمات بیزدوار, بازاریابی دیجیتال, طراحی وب, SMM, مدیریت سرور, خدمات فنی تبریز'
       },
       fieldTech: {
         seoTitle: 'خدمات فنی بیزدوار | CCTV، سیم‌کشی و نورمخفی — تبریز',
-        seoDescription: 'نصب دوربین مدار بسته، سیم‌کشی ساختمان و نورمخفی در تبریز — بازدید فنی، پیشنهاد طرح، اجرا و گارانتی توسط تیم فنی بیزدوار. هماهنگی واتساپ +98 936 411 5151.',
+        seoDescription: 'نصب دوربین مدار بسته، سیم‌کشی ساختمان و نورمخفی در تبریز — بازدید فنی، پیشنهاد طرح و پشتیبانی پس از نصب توسط تیم فنی بیزدوار. هماهنگی واتساپ +98 936 411 5151.',
         seoKeywords: 'نصب دوربین مدار بسته تبریز, CCTV تبریز, سیم‌کشی ساختمان, نورمخفی, خدمات فنی بیزدوار'
       },
       products: {
@@ -98,17 +98,17 @@
       },
       carParts: {
         seoTitle: 'خرید لنت و دیسک ترمز | انتخاب برند و مدل | بیزدوار',
-        seoDescription: 'فروشگاه ترمز بیزدوار: لنت، دیسک، ترمز عملکردی و روغن ترمز با انتخاب برند و مدل. قیمت دلاری تحویل بین‌المللی.',
+        seoDescription: 'فروشگاه ترمز بیزدوار: لنت، دیسک، ترمز عملکردی و روغن ترمز با انتخاب برند و مدل. قیمت روی کارت نیست و استعلام می‌شود.',
         seoKeywords: 'لنت ترمز, دیسک ترمز, لنت BMW, لنت بنز, بیزدوار'
       },
       teltonika: {
-        seoTitle: 'خرید ردیاب Teltonika FMB920 | از ۲۹ دلار',
-        seoDescription: 'ردیاب GPS اصل Teltonika برای ناوگان. FMB920 از ۲۹ دلار، FMC650 و DualCam — استعلام فارسی و لجستیک از بیزدوار.',
+        seoTitle: 'خرید ردیاب Teltonika FMB920 | بهای پایه دستگاه ۲۹ دلار',
+        seoDescription: 'ردیاب GPS اصل Teltonika برای ناوگان. ۲۹ دلار بهای پایه خود دستگاه FMB920 است؛ سیم‌کارت، پلتفرم و حمل جداست.',
         seoKeywords: 'خرید Teltonika ایران, قیمت FMB920, ردیاب GPS, FMC650, بیزدوار'
       },
       gamak: {
         seoTitle: 'خرید الکتروموتور Gamak | IE2/IE3 — بیزدوار گروپ',
-        seoDescription: 'الکتروموتور اصل Gamak را از ازمیر برای پروژه‌های صنعتی تامین می‌کنیم. سه‌فاز و تک‌فاز، کلاس IE2 تا IE4، فلنج B3/B5 و مدل ضد انفجار. واتساپ و تماس فروش: +90 501 067 6486.',
+        seoDescription: 'الکتروموتور اصل Gamak را از ازمیر برای پروژه‌های صنعتی تامین می‌کنیم. سه‌فاز و تک‌فاز، کلاس IE2 تا IE4، پایه B3 یا فلنج B5 و مدل ضد انفجار. واتساپ و تماس فروش: +90 501 067 6486.',
         seoKeywords: 'الکتروموتور Gamak, موتور سه فاز, IE3, فلنج B3 B5, موتور ضد انفجار, بیزدوار'
       },
       enpo: {
@@ -152,9 +152,9 @@
         seoKeywords: 'طراحی وبسایت, راه‌اندازی سرور, ایمیل سازمانی, ASIL, خوراک اسب, بیزدوار'
       },
       shop: {
-        seoTitle: 'فروشگاه درهم | کالاهای صنعتی و الکترونیکی — بیزدوار',
-        seoDescription: 'فروشگاه بیزدوار با قیمت درهم امارات. کالاهای صنعتی، ابزار دقیق، الکترونیکی و سایر اقلام — سفارش از واتساپ.',
-        seoKeywords: 'فروشگاه درهم, AED, کالای صنعتی, ابزار دقیق, الکترونیکی, بیزدوار'
+        seoTitle: 'فروشگاه درهم | فهرست فعلاً خالی — بیزدوار',
+        seoDescription: 'فهرست فروشگاه درهم بیزدوار الان خالی است. قیمت درهم فقط برای کالایی نوشته می‌شود که در همین فهرست ثبت شده باشد.',
+        seoKeywords: 'فروشگاه درهم, AED, بیزدوار'
       },
       smmTurk: {
         seoTitle: 'نمونه طراحی پنل SMM | UI و سئو — بیزدوار گروپ',
@@ -177,32 +177,32 @@
         seoKeywords: 'نمونه کار SMM, محتوای B2B صنعتی, مدیریت اینستاگرام, بیزدوار'
       },
       biztab: {
-        seoTitle: 'BizTab | دماسنج دیواری غیرتماسی — محصول بیزدوار',
-        seoDescription: 'BizTab — اولین دماسنج دیواری غیرتماسی تبریز. طراحی تیم بیزدوار، دقت کمتر از ۰.۳ درجه، تأیید دانشگاه تبریز.',
+        seoTitle: 'BizTab | دماسنج دیواری غیرتماسی — دیگر تولید نمی‌شود',
+        seoDescription: 'BizTab دماسنج دیواری غیرتماسی تبریز است. تولید این مدل تمام شده و فقط در رزومهٔ شرکت مانده است.',
         seoKeywords: 'BizTab, دماسنج غیرتماسی, IoT, بیزدوار, تبریز, محصول اختصاصی'
       },
       bizpad: {
-        seoTitle: 'BizPad | پد حرارتی بیز پد — محصول اصلی ۱۳۹۹ تبریز',
-        seoDescription: 'BizPad محصول اصلی پد حرارتی پدیده برای خانه، خودرو و جا خواب حیوانات. طراحی در مرکز رشد دانشگاه تبریز با ایمن سهند پدیده. ۵ تا ۱۲ ولت.',
+        seoTitle: 'BizPad | پد حرارتی بیز پد — دیگر تولید نمی‌شود',
+        seoDescription: 'BizPad پد حرارتی پدیده برای خانه، خودرو و جا خواب حیوانات بود. تولید این مدل تمام شده و فقط در رزومهٔ شرکت مانده است.',
         seoKeywords: 'BizPad, بیز پد, پد حرارتی پدیده, مرکز رشد دانشگاه تبریز, بیزدوار'
       },
       bizsanitizerV5: {
-        seoTitle: 'BizClean V5 | دستگاه ضدعفونی دست بیزدوار — محصول مهندسی‌شده',
-        seoDescription: 'BizClean V5 — دستگاه ضدعفونی دست اتوماتیک بیزدوار با سنسور التراسونیک. ساخته‌شده در دوران کرونا، نمایشگاه مرکز رشد دانشگاه تبریز. موجود در دیجی‌کالا.',
+        seoTitle: 'BizClean V5 | دستگاه ضدعفونی دست — دیگر تولید نمی‌شود',
+        seoDescription: 'BizClean V5 دستگاه ضدعفونی دست دوران کرونا بود. تولید این مدل تمام شده و فقط در رزومهٔ شرکت مانده است.',
         seoKeywords: 'BizClean V5, BizClean, ضدعفونی دست, بیزدوار, کرونا, دیجی‌کالا, محصول اختصاصی'
       },
       bizseat: {
-        seoTitle: 'BizSeat همان BizPad است | پد حرارتی و پشتی خودرو',
-        seoDescription: 'BizSeat نام فروشگاهی جدا نیست — همان پد حرارتی BizPad محصول ۱۳۹۹ مرکز رشد دانشگاه تبریز است. صفحه اصلی محصول BizPad.',
+        seoTitle: 'BizSeat همان BizPad است | دیگر تولید نمی‌شود',
+        seoDescription: 'BizSeat نام فروشگاهی جدا نیست. همان پد حرارتی BizPad است و تولید این مدل تمام شده است.',
         seoKeywords: 'BizSeat, BizPad, پد حرارتی, پشتی صندلی خودرو, بیزدوار, دیجی‌کالا'
       },
       bizpad: {
-        seoTitle: 'BizPad | پد حرارتی بیز پد — محصول اصلی ۱۳۹۹ تبریز',
-        seoDescription: 'BizPad محصول اصلی پد حرارتی پدیده برای خانه، خودرو و جا خواب حیوانات. طراحی در مرکز رشد دانشگاه تبریز با ایمن سهند پدیده. ۵ تا ۱۲ ولت. پشتی خودرو همان این محصول است.',
+        seoTitle: 'BizPad | پد حرارتی بیز پد — دیگر تولید نمی‌شود',
+        seoDescription: 'BizPad پد حرارتی پدیده برای خانه، خودرو و جا خواب حیوانات بود. تولید این مدل تمام شده و فقط در رزومهٔ شرکت مانده است.',
         seoKeywords: 'BizPad, بیز پد, پد حرارتی پدیده, مرکز رشد دانشگاه تبریز, ایمن سهند پدیده, بیزدوار'
       },
       fxguard: {
-        seoTitle: 'FXGuard | نرخ واتساپ برای میز صرافی — از $49/ماه — بیزدوار',
+        seoTitle: 'FXGuard | اینباکس واتساپ از $49 — پک نرخ از $249 — بیزدوار',
         seoDescription: 'FXGuard پنل عملیات صرافی، حواله و مالی روی واتساپ شرکتی است. Cloud Start از $49/ماه، Business از $249 با پک FX، لایسنس از $4,000. دموی هدایت‌شده — بدون رمز عمومی. محصول بیزدوار.',
         seoKeywords: 'FXGuard, WhatsApp CRM, صرافی, نرخ ارز, CRM واتساپ, بیزدوار, fxguard.io'
       },
@@ -409,9 +409,9 @@
         seoKeywords: 'web tasarım, sunucu kurulumu, kurumsal e-posta, ASIL, at yemi, Bizdavar'
       },
       shop: {
-        seoTitle: 'Dirhem mağaza | Endüstriyel ve elektronik ürünler — Bizdavar',
-        seoDescription: 'Bizdavar mağazası, fiyatlar BAE dirhemi. Endüstriyel ürünler, ölçüm cihazları, elektronik ve diğer kalemler — sipariş WhatsApp ile.',
-        seoKeywords: 'dirhem mağaza, AED, endüstriyel, ölçüm cihazı, elektronik, Bizdavar'
+        seoTitle: 'Dirhem mağaza | Liste şu an boş — Bizdavar',
+        seoDescription: 'Bizdavar dirhem mağazasının listesi şu an boş. Dirhem fiyatı yalnızca bu listeye kaydedilmiş bir kalem için yazılır.',
+        seoKeywords: 'dirhem mağaza, AED, Bizdavar'
       },
       smmTurk: {
         seoTitle: 'SMM panel web tasarım örneği | UI ve SEO — Bizdavar',
@@ -459,7 +459,7 @@
         seoKeywords: 'BizPad, ısı pedi, Padideh, Tebriz Üniversitesi, Imen Sahand Padideh, Bizdavar'
       },
       fxguard: {
-        seoTitle: 'FXGuard | WhatsApp kur paneli — $49/ay’dan — Bizdavar',
+        seoTitle: 'FXGuard | WhatsApp gelen kutusu $49/ay — FX paketi $249’dan — Bizdavar',
         seoDescription: 'FXGuard döviz, havale ve finans gişesi için şirket WhatsApp paneli. Cloud Start $49/ay, Business $249’dan FX paketiyle, lisans $4.000’dan. Rehberli demo — paylaşılan şifre yok.',
         seoKeywords: 'FXGuard, WhatsApp CRM, döviz, kur, Bizdavar, fxguard.io'
       },
@@ -748,9 +748,9 @@
         seoKeywords: 'website design, server setup, company email, ASIL, horse feed, Bizdavar'
       },
       shop: {
-        seoTitle: 'Dirham shop | Industrial and electronic goods — Bizdavar',
-        seoDescription: 'Bizdavar shop priced in UAE dirhams. Industrial goods, precision instruments, electronics and other items — order on WhatsApp.',
-        seoKeywords: 'dirham shop, AED, industrial goods, instruments, electronics, Bizdavar'
+        seoTitle: 'Dirham shop | No items listed yet — Bizdavar',
+        seoDescription: 'The Bizdavar dirham shop list is empty. A dirham price is shown only for an item recorded on this list.',
+        seoKeywords: 'dirham shop, AED, Bizdavar'
       },
       smmTurk: {
         seoTitle: 'SMM panel web design case study | UI & SEO — Bizdavar',
@@ -798,7 +798,7 @@
         seoKeywords: 'BizPad, heating pad, Padideh, University of Tabriz, Imen Sahand Padideh, Bizdavar'
       },
       fxguard: {
-        seoTitle: 'FXGuard | Quote rates on WhatsApp — from $49/mo — Bizdavar',
+        seoTitle: 'FXGuard | Team WhatsApp inbox from $49 — FX pack from $249 — Bizdavar',
         seoDescription: 'FXGuard is an operations panel for exchange, remittance and finance desks on a company WhatsApp number. Cloud Start $49/mo inbox, Business from $249 with FX pack, license from $4,000. Guided demo — no public password.',
         seoKeywords: 'FXGuard, WhatsApp CRM, exchange, remittance, FX rates, Bizdavar, fxguard.io'
       },

@@ -129,22 +129,37 @@
       quick: [
         { href: pagePath(R.about), label: t('nav.about') },
         { href: pagePath(R.gallery || 'pages/gallery.html'), label: t('nav.gallery', 'گالری تصاویر') },
-        { href: pagePath(R.services), label: t('nav.services') },
         { href: pagePath(R.products), label: t('nav.products') },
         { href: pagePath(R.portfolio), label: t('nav.portfolio') },
-        { href: pagePath(R.fast), label: t('nav.webDesign') },
         { href: pagePath(R.blog), label: t('nav.blog') },
         { href: pagePath(R.contact), label: t('footer.contactUs') },
         { href: pagePath(R.tools || 'pages/tools.html'), label: t('nav.tools', 'ابزارهای رایگان') },
-        { href: pagePath(R.speedTest || 'pages/speed-test.html'), label: t('footer.speedTest', 'تست سرعت اینترنت') },
-        { href: pagePath(R.privacy), label: t('footer.privacy') },
-        { href: `${pagePath(R.home)}#faq`, label: t('footer.faq') }
+        { href: pagePath(R.speedTest || 'pages/speed-test.html'), label: t('footer.speedTest', 'تست سرعت اینترنت') }
       ]
     };
   }
 
   function footerLinksHtml(items) {
     return items.map(item => `<li><a href="${item.href}">${item.label}</a></li>`).join('');
+  }
+
+  function bluePrintFooterHtml() {
+    const tab = window.BLUE_PRINT_NAV && window.BLUE_PRINT_NAV.tab;
+    const groups = tab && tab.groups;
+    if (!groups || !groups.length) return '';
+    const title = t('footer.bluePrintParts', 'قطعات Blue Print');
+    const chips = groups.map(group => {
+      const first = (group.items || [])[0];
+      const href = first ? productNavHref(first) : productNavHref(tab.cta);
+      const label = t(group.labelKey, group.id || '');
+      return `<a class="footer__bp-chip" href="${href}">${label}</a>`;
+    }).join('');
+    const allHref = tab.cta ? productNavHref(tab.cta) : '#';
+    const allLabel = t('footer.bluePrintAll', 'همه قطعات');
+    return `<nav class="footer__bp" aria-label="${title}">
+      <h2 class="footer__bp-title">${title}</h2>
+      <div class="footer__bp-list">${chips}<a class="footer__bp-chip footer__bp-chip--all" href="${allHref}">${allLabel}</a></div>
+    </nav>`;
   }
 
   function mobileFooterAccHtml(title, items) {
@@ -183,21 +198,6 @@
       cfg.tabs = (cfg.tabs || []).concat([extra]);
     }
     return cfg;
-  }
-
-  function bluePrintFooterLinks() {
-    const tab = window.BLUE_PRINT_NAV && window.BLUE_PRINT_NAV.tab;
-    if (!tab) return [];
-    const links = [];
-    (tab.groups || []).forEach(group => {
-      (group.items || []).forEach(item => {
-        links.push({
-          href: productNavHref(item),
-          label: item.labelKey ? t(item.labelKey, item.label || '') : (item.label || '')
-        });
-      });
-    });
-    return links;
   }
 
   function walkProductNavItems(visitor) {
@@ -827,9 +827,11 @@
       const metrics = (window.BIZDAVAR_I18N && window.BIZDAVAR_I18N.getTrustMetrics)
         ? window.BIZDAVAR_I18N.getTrustMetrics()
         : (C.trustMetrics || []);
-      const trustPills = metrics.slice(0, 3).map((m, i) =>
+      const trustPills = metrics.slice(0, 2).map((m, i) =>
         `<span class="footer__pill${i === 0 ? ' footer__pill--accent' : ''}">${m.value} ${m.label}</span>`
       ).join('');
+      const hqLine = `<p class="footer__hq">${t('footer.hq', 'Multilingual support')}</p>`;
+      const bpFooter = bluePrintFooterHtml();
       const channels = window.BD_CTX?.getWhatsappChannels?.() || C.contact.channels || [];
       const mailChip = `<a href="mailto:${C.contact.email}" class="footer__chip">
         <span class="footer__chip-icon">${ic('mail', { size: 16 })}</span>
@@ -853,12 +855,6 @@
           : '');
 
       const footerLinks = getFooterLinkGroups();
-      const bpLinks = bluePrintFooterLinks();
-      const bpFooter = bpLinks.length ? `
-            <nav class="footer__bp" aria-label="${t('footer.bluePrintParts', 'قطعات Blue Print')}">
-              <h2 class="footer__bp-title">${t('footer.bluePrintParts', 'قطعات Blue Print')}</h2>
-              <ul class="footer__bp-list">${bpLinks.map(item => `<li><a href="${item.href}">${item.label}</a></li>`).join('')}</ul>
-            </nav>` : '';
 
       footer.innerHTML = `
         <div class="footer__glow" aria-hidden="true"></div>
@@ -870,7 +866,8 @@
                   <img src="${path(footerLogo)}" alt="${logoAlt}" class="footer__logo-img" width="120" height="50">
                 </a>
                 <p class="footer__tagline">${t('footer.tagline')}</p>
-                <div class="footer__trust">${trustPills}<span class="footer__pill">${t('footer.hq', 'Multilingual support')}</span></div>
+                <div class="footer__trust">${trustPills}</div>
+                ${hqLine}
                 <p class="footer__social-label">${t('footer.followUs', 'Follow us')}</p>
                 <div class="footer__social">
                   <a href="${C.contact.instagram}" class="footer__social-btn" target="_blank" rel="noopener noreferrer me" aria-label="Instagram">${ic('instagram', { size: 18 })}</a>
@@ -885,7 +882,7 @@
               </nav>
               <nav class="footer__nav-col" aria-label="${t('footer.brands', 'برندها و تامین‌کنندگان')}">
                 <h2 class="footer__title">${t('footer.brands', 'برندها')}</h2>
-                <ul class="footer__links">${footerLinksHtml(footerLinks.brands)}</ul>
+                <ul class="footer__links footer__links--split">${footerLinksHtml(footerLinks.brands)}</ul>
               </nav>
               <nav class="footer__nav-col" aria-label="${t('footer.quickLinks')}">
                 <h2 class="footer__title">${t('footer.quickLinks', 'دسترسی سریع')}</h2>
@@ -915,7 +912,8 @@
           <div class="mobile-footer-hero">
             <a href="${pagePath(R.home)}" class="footer__logo-link"><img src="${path(footerLogo)}" alt="${logoAlt}" class="footer__logo-img footer__logo-img--sm" width="86" height="36"></a>
             <p class="mobile-footer-hero__tagline">${t('footer.tagline')}</p>
-            <div class="footer__trust">${trustPills}<span class="footer__pill">${t('footer.hq', 'Offices: Iran · Turkey · Armenia · Dubai')}</span></div>
+            <div class="footer__trust">${trustPills}</div>
+            ${hqLine}
             <div class="footer__social footer__social--mobile">
               <a href="${C.contact.instagram}" class="footer__social-btn" target="_blank" rel="noopener noreferrer me" aria-label="Instagram">${ic('instagram', { size: 18 })}</a>
               <a href="${C.contact.linkedin}" class="footer__social-btn" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn">${ic('linkedin', { size: 18 })}</a>
@@ -937,7 +935,7 @@
           <div class="mobile-footer-accordions">
             ${mobileFooterAccHtml(t('footer.services'), footerLinks.services)}
             ${mobileFooterAccHtml(t('footer.brands', 'برندها'), footerLinks.brands)}
-            ${bpLinks.length ? mobileFooterAccHtml(t('footer.bluePrintParts', 'قطعات Blue Print'), bpLinks) : ''}
+            ${bpFooter}
             ${mobileFooterAccHtml(t('footer.quickLinks'), footerLinks.quick)}
             <details class="mobile-footer-acc">
               <summary>${t('footer.connectShort', t('footer.connect'))}</summary>

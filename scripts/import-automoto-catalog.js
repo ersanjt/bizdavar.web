@@ -578,7 +578,7 @@ function descFaFor(titleFa, brand, categoryFa, leafFa, row, catId) {
   if (raw && /[\u0600-\u06FF]/.test(raw) && !/[ğıüşöçİĞÜŞÖÇ]/.test(raw)) {
     return extras.length ? raw.replace(/[。.]\s*$/, '') + ' ' + extras.join('، ') + '.' : raw;
   }
-  const intro = CAT_INTRO_FA[catId] || 'محصول موتورسیکلت از کاتالوگ اتو‌موتو بیزداور.';
+  const intro = CAT_INTRO_FA[catId] || 'محصول موتورسیکلت از کاتالوگ اتو‌موتو بیزدوار.';
   return [titleFa ? titleFa + '.' : '', intro, extras.length ? extras.join('، ') + '.' : '', 'سایز، رنگ و موجودی نهایی قبل از سفارش تایید می‌شود.']
     .filter(Boolean)
     .join(' ');

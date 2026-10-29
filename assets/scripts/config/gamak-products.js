@@ -23,7 +23,7 @@
       heroImageAlt: 'Gamak three-phase asynchronous electric motor — low voltage IE2/IE3',
       heroEyebrow: 'تامین رسمی الکتروموتور Gamak بین‌المللی',
       heroHeadline: 'الکتروموتور صنعتی Gamak',
-      heroHeadlineSub: 'سه‌فاز و تک‌فاز · IE2/IE3/IE4 · 0.06 تا 4000 kW — مشاوره انتخاب توان و لجستیک',
+      heroHeadlineSub: 'سه‌فاز تا ۳۰۰۰ کیلووات؛ ولتاژ متوسط از ۱۵۰ تا ۴۰۰۰ کیلووات · IE2/IE3/IE4',
       tagline: 'Power to Energize Life',
       taglineFa: 'موتور الکتریکی صنعتی — ساخت ازمیر، ترکیه',
       since: 'از سال ۱۹۶۱ · Izmir',
@@ -31,7 +31,7 @@
       officialUrl: 'https://www.gamak.com/en',
       descriptionFa: 'بیزدوار گروپ الکتروموتور اصل Gamak را از کارخانه ازمیر تامین می‌کند؛ برای پمپ، تهویه و خط تولید. توان، دور، فلنج و کلاس بهره‌وری را در پیش‌فاکتور شفاف می‌نویسیم. واتساپ و تماس فروش: +90 501 067 6486.',
       heroStats: [
-        { value: '0.06–4000 kW', label: 'محدوده توان' },
+        { value: '0.06–3000 kW', label: 'سه‌فاز استاندارد' },
         { value: 'IE2/IE3/IE4', label: 'کلاس بهره‌وری' },
         { value: '80+', label: 'کشور صادرات' }
       ]
@@ -39,20 +39,20 @@
 
     trustSignals: [
       { icon: 'target', label: 'محصول اصل Gamak', desc: 'تامین از تولیدکننده ترکیه — پلاک فنی، سریال و دیتاشیت معتبر' },
-      { icon: 'globe', label: 'مشاوره فارسی', desc: 'انتخاب kW، rpm، فلنج B3/B5 و IE — بر اساس کاربرد واقعی پروژه' },
+      { icon: 'globe', label: 'مشاوره فارسی', desc: 'انتخاب kW، rpm، نصب B3 (پایه) یا فلنج B5/B35 و کلاس IE — بر اساس کاربرد پروژه' },
       { icon: 'factory', label: 'تولید یکپارچه', desc: 'یکی از معدود کارخانه‌های جهان با تولید کامل موتور تحت یک سقف' },
       { icon: 'mail', label: 'لجستیک شفاف', desc: 'پیش‌فاکتور، lead time و حمل از Gamak/استانبول تا تحویل پروژه' }
     ],
 
     whyBuyFromUs: [
       { icon: 'target', title: 'انتخاب درست توان و دور', desc: 'اگر مشخصات موتور قدیمی را ندارید — نوع بار (پمپ/فن/نوار)، ولتاژ و فلنج را بگویید. سری مناسب Gamak را پیشنهاد می‌دهیم.' },
-      { icon: 'factory', title: 'جایگزینی موتور فرسوده', desc: 'برای تعمیرات اساسی کارخانه‌های ایران — تطبیق فلنج B3/B5/B35، شفت و توان با موتور موجود.' },
+      { icon: 'factory', title: 'جایگزینی موتور فرسوده', desc: 'برای تعمیرات اساسی — تطبیق نصب B3 (پایه) یا فلنج B5/B35، شفت و توان با موتور موجود.' },
       { icon: 'document', title: 'پیش‌فاکتور قبل از پرداخت', desc: 'قیمت، کد سفارش، زمان تحویل و شرایط حمل در پیش‌فاکتور رسمی — بدون هزینه پنهان.' },
       { icon: 'handshake', title: 'یک نقطه تماس', desc: 'موتور + مشاوره نصب و alignment — از یک تیم فارسی‌زبان. نیازی به مکاتبه مستقیم با کارخانه نیست.' }
     ],
 
     purchaseSteps: [
-      { num: '۱', title: 'استعلام', desc: 'توان kW، دور rpm، فلنج B3/B5/B35، ولتاژ 380V یا 220V، تعداد' },
+      { num: '۱', title: 'استعلام', desc: 'توان kW، دور rpm، نصب B3 یا فلنج B5/B35، ولتاژ ۳۸۰ یا ۲۲۰، تعداد' },
       { num: '۲', title: 'مشاوره فنی', desc: 'پیشنهاد سری سه‌فاز/تک‌فاز، IE2/IE3/IE4، Ex-proof یا ترمزدار در صورت نیاز' },
       { num: '۳', title: 'پیش‌فاکتور', desc: 'قیمت Gamak، lead time و موجودی، شرایط پرداخت' },
       { num: '۴', title: 'تامین و حمل', desc: 'سفارش از Gamak، بسته‌بندی صنعتی — لجستیک بین‌المللی' },
@@ -101,7 +101,9 @@
         imageAlt: 'Gamak IE4 high efficiency electric motor'
       },
       {
-        title: 'اوره‌ولتاژ متوسط',
+        title: 'ولتاژ متوسط',
+        titleFa: 'ولتاژ متوسط',
+        titleEn: 'Medium Voltage Motors',
         titleTr: 'Medium Voltage Motors',
         desc: '315–630 frame · 150–4000 kW — بار سنگین صنعتی',
         useCaseFa: 'فن بزرگ، پمپ HV، کمپرسور صنعتی',
@@ -163,7 +165,9 @@
       },
       {
         id: 'medium-voltage',
-        title: 'فشار متوسط — MV',
+        title: 'Medium Voltage — MV',
+        titleFa: 'ولتاژ متوسط — MV',
+        titleEn: 'Medium Voltage — MV',
         titleTr: 'Medium Voltage Electric Motors',
         icon: 'factory',
         image: G + 'category-medium-voltage.webp',
@@ -218,7 +222,7 @@
         'B3 vs B5 vs B35 — نصب صحیح روی پمپ',
         'Ex-proof و smoke extraction — کاربردهای ویژه',
         'سازگاری با inverter — کلاس عایق و VFD',
-        'فشار متوسط — frame 315–630'
+        'ولتاژ متوسط — frame 315–630'
       ]
     },
 
@@ -236,10 +240,10 @@
       { q: 'IE2، IE3 یا IE4؟', a: 'IE4 بالاترین بهره‌وری — برای پروژه‌های جدید. IE3 استاندارد رایج صنعتی. IE2 برای جایگزینی اقتصادی‌تر.' },
       { q: 'زمان تحویل به ایران؟', a: 'معمولاً ۲ تا ۶ هفته بسته به توان و موجودی. زمان دقیق در پیش‌فاکتور.' },
       { q: 'موتور Ex-proof و smoke extraction دارید؟', a: 'بله — سری‌های Ex-proof، smoke extraction و crusher از کاتالوگ رسمی Gamak قابل تامین است.' },
-      { q: 'فشار متوسط (MV) هم تامین می‌شود؟', a: 'بله — موتورهای medium voltage Gamak از 150 kW تا 4000 kW — برای پروژه‌های سنگین صنعتی.' }
+      { q: 'ولتاژ متوسط (MV) هم تامین می‌شود؟', a: 'بله — موتورهای medium voltage Gamak از 150 kW تا 4000 kW — برای پروژه‌های سنگین صنعتی.' }
     ],
 
-    inquiryTemplate: 'سلام، درخواست استعلام {product} از Gamak دارم.\n\nتوان kW / دور rpm:\nفلنج B3/B5:\nولتاژ:\nتعداد:\n',
+    inquiryTemplate: 'سلام، درخواست استعلام {product} از Gamak دارم.\n\nتوان kW / دور rpm:\nنصب B3 (پایه) یا فلنج B5/B35:\nولتاژ:\nتعداد:\n',
 
     officialUrl: 'https://www.gamak.com/en'
   };

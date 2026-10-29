@@ -243,9 +243,9 @@
     },
     shop: {
       crumb: 'Магазин в дирхамах',
-      seoTitle: 'Магазин в дирхамах | Промышленные и электронные товары — Bizdavar',
-      seoDescription: 'Магазин Bizdavar с ценами в дирхамах ОАЭ. Промышленные товары, приборы, электроника и другие позиции — заказ в WhatsApp.',
-      seoKeywords: 'магазин дирхам, AED, промышленные товары, приборы, электроника, Bizdavar'
+      seoTitle: 'Магазин в дирхамах | Каталог пока пуст — Bizdavar',
+      seoDescription: 'Список магазина Bizdavar в дирхамах сейчас пуст. Цена в дирхамах пишется только для позиции, внесённой в этот список.',
+      seoKeywords: 'магазин дирхам, AED, Bizdavar'
     },
     smmTurk: {
       crumb: 'SMM Turk',
@@ -599,9 +599,9 @@
     },
     shop: {
       crumb: 'متجر بالدرهم',
-      seoTitle: 'متجر بالدرهم | منتجات صناعية وإلكترونية — Bizdavar',
-      seoDescription: 'متجر بيزدوار بأسعار درهم الإمارات. سلع صناعية وأجهزة قياس وإلكترونيات وأصناف أخرى — الطلب عبر واتساب.',
-      seoKeywords: 'متجر درهم, AED, صناعي, أدوات دقيقة, إلكترونيات, Bizdavar'
+      seoTitle: 'متجر بالدرهم | القائمة فارغة حالياً — Bizdavar',
+      seoDescription: 'قائمة متجر درهم بيزدوار فارغة الآن. يُكتب سعر الدرهم فقط للصنف المسجّل في هذه القائمة.',
+      seoKeywords: 'متجر درهم, AED, Bizdavar'
     },
     smmTurk: {
       crumb: 'SMM Turk',
@@ -1124,7 +1124,7 @@
       products: [
         { name: 'VEGA', title: 'Датчики и КИП', desc: 'Уровень, давление, расход — нефть, нефтехимия и вода', badge: 'Германия', tags: ['VEGAPULS', 'VEGABAR', 'VEGAPOINT'], cta: 'Смотреть каталог' },
         { name: 'UWT', title: 'Уровень силоса и резервуара', desc: 'Сигнализаторы и радар для сыпучих и жидкостей — Rotonivo, Vibranivo, NivoRadar', badge: 'Германия', tags: ['Rotonivo', 'NivoRadar', 'Vibranivo'], cta: 'Каталог UWT' },
-        { name: 'Prosense', title: 'Газовые и пламенные детекторы', desc: 'Стационарные и портативные системы с сертификацией SIL2/3', badge: 'Турция', tags: ['PQ+', 'SafeVader', 'PPS'], cta: 'Линейки продуктов' },
+        { name: 'Prosense', title: 'Газовые и пламенные детекторы', desc: 'Стационарные и портативные системы с сертификацией SIL2', badge: 'Турция', tags: ['PQ+', 'SafeVader', 'PPS'], cta: 'Линейки продуктов' },
         { name: 'Teltonika', title: 'GPS и Fleet Telematics', desc: 'Трекеры флота, CAN/OBD, BLE, видео и IoT — FMB920 · FMC650 · FTC305', badge: 'Литва', tags: ['FMB920', 'FTC305', 'DualCam'], cta: 'Каталог Teltonika' },
         { name: 'Gamak', title: 'Промышленные электродвигатели', desc: 'Трёхфазные и однофазные моторы — поставка и техподдержка', badge: 'Турция', tags: ['IE2/IE3', 'Фланец', 'Под проект'], cta: 'О Gamak' },
         { name: 'Pneumatic', title: 'Промышленная пневматика', desc: 'Подготовка воздуха, цилиндры, клапаны и магнитные датчики', badge: 'Турция', tags: ['FRL', 'Цилиндр', 'Клапан'], cta: 'Каталог пневматики' },
@@ -1197,7 +1197,7 @@
       products: [
         { name: 'VEGA', title: 'حساسات وأدوات دقيقة', desc: 'مستوى وضغط وتدفق — نفط وبتروكيماويات ومياه', badge: 'ألمانيا', tags: ['VEGAPULS', 'VEGABAR', 'VEGAPOINT'], cta: 'عرض الكتالوج' },
         { name: 'UWT', title: 'قياس مستوى الصوامع والخزانات', desc: 'مفاتيح مستوى ورادار للمواد الصلبة والسوائل — Rotonivo وVibranivo وNivoRadar', badge: 'ألمانيا', tags: ['Rotonivo', 'NivoRadar', 'Vibranivo'], cta: 'كتالوج UWT' },
-        { name: 'Prosense', title: 'كواشف غاز ولهب', desc: 'أنظمة ثابتة ومحمولة بشهادة SIL2/3', badge: 'تركيا', tags: ['PQ+', 'SafeVader', 'PPS'], cta: 'سلاسل المنتجات' },
+        { name: 'Prosense', title: 'كواشف غاز ولهب', desc: 'أنظمة ثابتة ومحمولة بشهادة SIL2', badge: 'تركيا', tags: ['PQ+', 'SafeVader', 'PPS'], cta: 'سلاسل المنتجات' },
         { name: 'Teltonika', title: 'GPS وFleet Telematics', desc: 'متتبعات أساطيل وCAN/OBD وBLE وفيديو وIoT — FMB920 · FMC650 · FTC305', badge: 'ليتوانيا', tags: ['FMB920', 'FTC305', 'DualCam'], cta: 'كتالوج Teltonika' },
         { name: 'Gamak', title: 'محركات كهربائية صناعية', desc: 'محركات ثلاثية وأحادية الطور — توريد ودعم فني', badge: 'تركيا', tags: ['IE2/IE3', 'فلانش', 'حسب المشروع'], cta: 'معلومات Gamak' },
         { name: 'Pneumatic', title: 'معدات هواء مضغوط', desc: 'تجهيز الهواء والأسطوانات والصمامات والحساسات المغناطيسية', badge: 'تركيا', tags: ['FRL', 'أسطوانة', 'صمام'], cta: 'كتالوج الهواء المضغوط' },
@@ -1896,7 +1896,7 @@
     serviceDigital: 'Цифровой маркетинг',
     serviceDigitalDesc: 'Кампании, SEO и CRO',
     serviceWeb: 'Веб и web app',
-    serviceWebDesc: 'Сайты для СНГ от $99 — русский или английский',
+    serviceWebDesc: 'Консультация по сайту и веб-приложению',
     serviceApps: 'Приложения и системы',
     serviceAppsDesc: 'Android, iOS и панели',
     serviceServer: 'Управление серверами',
@@ -1905,10 +1905,10 @@
     serviceSmmDesc: 'Контент, reels и Paid Social',
     serviceField: 'Технические услуги',
     serviceFieldDesc: 'CCTV, проводка и освещение',
-    serviceFieldFeaturedDesc: 'Тебриз и Стамбул — полевые работы',
+    serviceFieldFeaturedDesc: 'Тебриз — техническая команда',
     productsSupplyDesc: 'Консультация, подбор модели и проформа',
     productsSupplyLink: 'Промышленные бренды',
-    productsHardware: 'Достижения и производство',
+    productsHardware: 'Кожа и история компании',
     productsMegaHint: 'ПО и SaaS Bizdavar',
     servicesMegaHint: 'Выездные услуги Bizdavar',
     servicesConsult: 'Консультация по услугам',
@@ -1921,7 +1921,7 @@
     serviceFieldBadge: 'Выезд',
     tabOwned: 'Продукты Bizdavar',
     tabLines: 'Линии и каталог',
-    tabBrands: 'Промышленные бренды',
+    tabBrands: 'Поставка брендов',
     productsLines: 'Производственные линии',
     productsSoftware: 'ПО и SaaS',
     productsQuote: 'Запросить цену',
@@ -1933,7 +1933,7 @@
     brandVegaDesc: 'Датчики уровня и давления',
     brandUwtDesc: 'Датчики уровня силоса',
     brandProsenseDesc: 'Газовые и пламенные детекторы',
-    brandTeltonikaDesc: 'GPS и телематика флота',
+    brandTeltonikaDesc: 'Базовая цена устройства от $29',
     brandTeltonikaBadge: 'От $29',
     brandGamakDesc: 'Промышленные электродвигатели',
     brandPneumaticLabel: 'Пневматика',
@@ -1959,9 +1959,10 @@
     brandDigiDesc: 'POS и торговое оборудование',
     brandTeraokaDesc: 'Весы и этикетки',
     productFxguard: 'WhatsApp CRM',
-    productFxguardDesc: 'Общий inbox · от $49/мес',
+    productFxguardDesc: 'Inbox от $49 · филиалы от $249',
     productFxguardAccounting: 'Бухгалтерия',
-    productFxguardAccountingDesc: 'Финансовый учёт · FXGuard',
+    productFxguardAccountingDesc: 'Лист ожидания · пока не продаётся',
+    productFxguardAccountingBadge: 'Ожидание',
     productBizswap: 'BizSwap',
     productBizswapDesc: 'Пресейл и своп токена',
     productBiztab: 'BizTab',
@@ -1972,14 +1973,16 @@
     productBizcleanDesc: 'Автоматический санитайзер',
     productOstrich: 'Страусиная кожа',
     productOstrichDesc: 'Краст от $6.50 · нога от $6',
+    productHardwareHistory: 'Старое оборудование',
+    productHardwareHistoryDesc: 'BizTab, BizClean и BizPad — только в истории компании',
     productPackaging: 'Упаковка и запайка',
-    productPackagingDesc: 'Запайщики и упаковочные линии',
+    productPackagingDesc: 'Только в истории компании',
     productMedical: 'Медицина и СИЗ',
-    productMedicalDesc: 'Линии масок и грелок',
+    productMedicalDesc: 'Только в истории компании',
     productShop: 'Магазин в дирхамах',
-    productShopDesc: 'Цены в дирхамах ОАЭ',
+    productShopDesc: 'Каталог пока пуст',
     customWebApp: 'Веб и приложения на заказ',
-    fastDesc: 'Сайт с фиксированной ценой за 5 дней',
+    fastDesc: 'Английский от $99 · фарси второй язык',
     customWebAppDesc: 'Web app, панели и заказные приложения',
     portfolioShort: 'Работы',
     site: 'Сайт'
@@ -2106,6 +2109,7 @@
   });
   deepMerge(ru.productsPage || {}, {
     crumb: 'Продукты Bizdavar',
+    statusWaitlist: 'Лист ожидания',
     hero: {
       tag: 'Продукты и промышленные бренды',
       title: 'Продукты Bizdavar и поставки VEGA, Prosense',
@@ -2117,22 +2121,22 @@
     },
     pillars: {
       eyebrow: 'Категории продуктов',
-      title: 'От ПО до производственных линий',
-      desc: 'Пять групп — ПО, гигиена, упаковка, медицина и кожа. Выберите категорию, чтобы открыть эту часть каталога.'
+      title: 'Программы и кожа',
+      desc: 'В продаже: ПО и кожа. BizTab, BizClean, BizPad и старые линии только в истории компании.'
     },
     intro: {
       title: 'Что мы делаем',
-      body: 'Живое ПО — <strong>FXGuard</strong> и BizSwap. Железо из Тебриза — BizTab, BizClean и BizPad — и страусиная кожа имеют свои страницы, рядом промышленные поставки.',
-      statProducts: '14',
-      statProductsLabel: 'продукты и линии',
-      statCats: '5',
+      body: 'Живое ПО — <strong>FXGuard</strong> и BizSwap, плюс страусиная кожа. BizTab, BizClean и BizPad больше не производятся и остаются в истории компании.',
+      statProducts: '3',
+      statProductsLabel: 'продукты в продаже',
+      statCats: '2',
       statCatsLabel: 'основные категории'
     },
     featured: {
-      desc: 'Свои страницы: WhatsApp CRM от $49/мес, BizSwap, BizClean, BizTab, BizPad и страусиная кожа. FXGuard Accounting в листе ожидания.'
+      desc: 'В продаже: WhatsApp CRM от $49/мес, BizSwap и страусиная кожа. FXGuard Accounting в листе ожидания. Оборудование Тебриза — в истории компании.'
     },
     catalog: {
-      desc: '14 продуктов и линий — фильтр по категории или запрос на линию без своей страницы.'
+      desc: 'Только линии, которые мы ещё продаём и у которых есть своя страница.'
     },
     explore: {
       ownedDesc: 'У ПО, тебризского железа и страусиной кожи есть свои страницы. FXGuard Accounting в листе ожидания.'
@@ -2146,17 +2150,17 @@
     items: {
       fxguard: {
         title: 'Общий WhatsApp inbox',
-        desc: 'Командный inbox, тикеты и филиалы — от $49/мес. Демо: app.fxguard.io.',
+        desc: 'Общий inbox, клиент, тикет и задача — от $49/мес. Филиалы и пакет FX — с Cloud Business, $249.',
         homeDesc: 'Командный WhatsApp inbox — от $49'
       },
       bizpad: {
         title: 'Нагревательный мат',
-        desc: 'Мат для дома, авто и лежанки питомца — дизайн команды Bizdavar.',
+        desc: 'Нагревательный мат для дома, авто и лежанки. Эта модель больше не производится.',
         homeDesc: 'Нагревательный мат для дома и автокресла'
       },
       biztab: {
         title: 'Бесконтактный настенный термометр',
-        desc: 'Настенный бесконтактный термометр — погрешность менее 0,3°C, Тебриз.',
+        desc: 'Настенный бесконтактный термометр, сделанный в Тебризе. Эта модель больше не производится.',
         homeDesc: 'Бесконтактный термометр для входа и клиники'
       },
       bizswap: {
@@ -2171,7 +2175,7 @@
       bizclean: {
         name: 'BizClean',
         title: 'Гигиена и дезинфекция',
-        desc: 'Автоматический санитайзер для рук BizClean V5 — производство Bizdavar; RINOTEX 1400 через парк «Imen Sahand Padideh»; пресса ISNA и IRIB.'
+        desc: 'Автоматический санитайзер, сделанный в период пандемии. Эта модель больше не производится.'
       },
       biztouch: {
         name: 'BizTouch',
@@ -2469,6 +2473,8 @@
     optSmm: 'SMM',
     optField: 'Технические услуги (камеры, проводка, скрытый свет)',
     optIndustrial: 'Поставка промышленного оборудования',
+    optAutoMoto: 'Мотоэкипировка',
+    motoInquiry: 'Запрос мотоэкипировки — {product}\n\nРазмер:\nРост и вес:\nКоличество:\n',
     optConsult: 'Бизнес-консалтинг',
     optOther: 'Другое'
   });
@@ -2539,7 +2545,7 @@
     serviceDigital: 'التسويق الرقمي',
     serviceDigitalDesc: 'حملات وSEO وتحسين التحويل',
     serviceWeb: 'ويب وتطبيقات',
-    serviceWebDesc: 'مواقع للخليج من ٩٩$ — عربية أو إنجليزية',
+    serviceWebDesc: 'استشارة الويب وتطبيق الويب',
     serviceApps: 'تطبيقات وأنظمة',
     serviceAppsDesc: 'Android وiOS ولوحات إدارية',
     serviceServer: 'إدارة الخوادم',
@@ -2548,10 +2554,10 @@
     serviceSmmDesc: 'محتوى وريلز وإعلانات مدفوعة',
     serviceField: 'خدمات فنية',
     serviceFieldDesc: 'كاميرات وتمديدات وإضاءة',
-    serviceFieldFeaturedDesc: 'تبريز وإسطنبول — فرق ميدانية',
+    serviceFieldFeaturedDesc: 'تبريز — الفريق الفني',
     productsSupplyDesc: 'استشارة واختيار الموديل وعرض سعر شفاف',
     productsSupplyLink: 'علامات صناعية',
-    productsHardware: 'إنجازات وإنتاج',
+    productsHardware: 'الجلد وسجل الشركة',
     productsMegaHint: 'برمجيات وSaaS بيزدوار',
     servicesMegaHint: 'خدمات ميدانية بيزدوار',
     servicesConsult: 'استشارة خدمات',
@@ -2564,7 +2570,7 @@
     serviceFieldBadge: 'ميداني',
     tabOwned: 'منتجات بيزدوار',
     tabLines: 'خطوط وكتالوج',
-    tabBrands: 'علامات صناعية',
+    tabBrands: 'توريد العلامات',
     productsLines: 'خطوط إنتاج',
     productsSoftware: 'برمجيات وSaaS',
     productsQuote: 'طلب عرض سعر',
@@ -2576,7 +2582,7 @@
     brandVegaDesc: 'حساسات مستوى وضغط',
     brandUwtDesc: 'حساسات مستوى الصوامع',
     brandProsenseDesc: 'كواشف غاز ولهب',
-    brandTeltonikaDesc: 'GPS وتتبع الأسطول',
+    brandTeltonikaDesc: 'السعر الأساسي للجهاز من ٢٩ دولاراً',
     brandTeltonikaBadge: 'من ٢٩$',
     brandGamakDesc: 'محركات كهربائية صناعية',
     brandPneumaticLabel: 'هواء مضغوط',
@@ -2602,9 +2608,10 @@
     brandDigiDesc: 'نقاط بيع ومعدات متجر',
     brandTeraokaDesc: 'موازين وملصقات',
     productFxguard: 'WhatsApp CRM',
-    productFxguardDesc: 'صندوق وارد مشترك · من ٤٩$/شهر',
+    productFxguardDesc: 'الصندوق من ٤٩ دولاراً · الفروع من ٢٤٩',
     productFxguardAccounting: 'محاسبة',
-    productFxguardAccountingDesc: 'نظام محاسبة مالية · FXGuard',
+    productFxguardAccountingDesc: 'قائمة انتظار · لم يُعرض للبيع بعد',
+    productFxguardAccountingBadge: 'انتظار',
     productBizswap: 'BizSwap',
     productBizswapDesc: 'ما قبل البيع وتبادل التوكن',
     productBiztab: 'BizTab',
@@ -2615,14 +2622,16 @@
     productBizcleanDesc: 'معقم يدين تلقائي',
     productOstrich: 'جلد النعام',
     productOstrichDesc: 'كراست من 6.5 دولار · ساق من 6',
+    productHardwareHistory: 'عتاد قديم',
+    productHardwareHistoryDesc: 'BizTab وBizClean وBizPad — في السيرة فقط',
     productPackaging: 'تغليف ولحام',
-    productPackagingDesc: 'لحامات وخطوط تغليف',
+    productPackagingDesc: 'في سجل الشركة فقط',
     productMedical: 'طبي وPPE',
-    productMedicalDesc: 'خطوط كمامات ووسائد حرارية',
+    productMedicalDesc: 'في سجل الشركة فقط',
     productShop: 'متجر بالدرهم',
-    productShopDesc: 'أسعار بالدرهم الإماراتي',
+    productShopDesc: 'القائمة فارغة حالياً',
     customWebApp: 'ويب وتطبيق مخصص',
-    fastDesc: 'موقع بسعر ثابت خلال ٥ أيام',
+    fastDesc: 'إنجليزي من ٩٩ دولاراً · الفارسية لغة ثانية',
     customWebAppDesc: 'ويب أب ولوحات وتطبيقات مخصصة',
     portfolioShort: 'أعمال',
     site: 'الموقع'
@@ -2748,6 +2757,7 @@
   });
   deepMerge(ar.productsPage || {}, {
     crumb: 'منتجات بيزدوار',
+    statusWaitlist: 'قائمة انتظار',
     hero: {
       tag: 'منتجات وعلامات صناعية',
       title: 'منتجات بيزدوار وتوريد VEGA وProsense',
@@ -2759,22 +2769,22 @@
     },
     pillars: {
       eyebrow: 'فئات المنتجات',
-      title: 'من البرمجيات إلى خطوط الإنتاج',
-      desc: 'خمس مجموعات — برمجيات، نظافة، تغليف، طب وجلد. اختر الفئة لفتح ذلك الجزء من الكتالوج.'
+      title: 'برمجيات وجلد',
+      desc: 'ما زلنا نبيع البرمجيات والجلد. BizTab وBizClean وBizPad والخطوط القديمة في سجل الشركة فقط.'
     },
     intro: {
       title: 'ماذا نبني',
-      body: 'البرمجيات الحيّة هي <strong>FXGuard</strong> وBizSwap. عتاد تبريز — BizTab وBizClean وBizPad — وجلد النعام لكل منها صفحة، إلى جانب التوريد الصناعي.',
-      statProducts: '14',
-      statProductsLabel: 'منتج وخط',
-      statCats: '5',
+      body: 'البرمجيات الحيّة هي <strong>FXGuard</strong> وBizSwap، مع جلد النعام. BizTab وBizClean وBizPad لم تعد تُنتج وتبقى في سجل الشركة.',
+      statProducts: '3',
+      statProductsLabel: 'منتجات معروضة',
+      statCats: '2',
       statCatsLabel: 'فئات رئيسية'
     },
     featured: {
-      desc: 'لها صفحات خاصة: WhatsApp CRM من ٤٩ دولاراً شهرياً، وBizSwap وBizClean وBizTab وBizPad وجلد النعام. محاسبة FXGuard في قائمة الانتظار.'
+      desc: 'للبيع: WhatsApp CRM من ٤٩ دولاراً شهرياً، وBizSwap وجلد النعام. محاسبة FXGuard في قائمة الانتظار. عتاد تبريز في سجل الشركة.'
     },
     catalog: {
-      desc: '١٤ منتجاً وخطاً — صفِّ حسب الفئة، أو اطلب عرض سعر لخط بلا صفحة خاصة.'
+      desc: 'فقط الخطوط التي ما زلنا نبيعها ولها صفحة خاصة.'
     },
     explore: {
       ownedDesc: 'البرمجيات وعتاد تبريز وجلد النعام لها صفحات خاصة. محاسبة FXGuard في الانتظار.'
@@ -2788,18 +2798,18 @@
     items: {
       fxguard: {
         title: 'صندوق واتساب مشترك',
-        desc: 'صندوق فريق وتذاكر وفروع — من ٤٩ دولاراً شهرياً. التجربة: app.fxguard.io.',
+        desc: 'صندوق مشترك وعميل وتذكرة ومهمة — من ٤٩ دولاراً شهرياً. الفروع وحزمة FX من Cloud Business، ٢٤٩ دولاراً.',
         homeDesc: 'صندوق واتساب للفريق — من ٤٩ دولاراً'
       },
       bizpad: {
         title: 'وسادة تدفئة',
-        desc: 'وسادة للمنزل والسيارة وسرير الحيوان — تصميم فريق بيزدوار.',
-        homeDesc: 'وسادة تدفئة للمنزل ومقعد السيارة'
+        desc: 'وسادة للمنزل والسيارة وسرير الحيوان. توقف إنتاج هذا الطراز.',
+        homeDesc: 'لم يعد يُنتج'
       },
       biztab: {
         title: 'مقياس حرارة جداري بلا لمس',
-        desc: 'مقياس جداري بلا لمس — خطأ أقل من ٠٫٣°م، صنع تبريز.',
-        homeDesc: 'مقياس بلا لمس للمدخل والعيادة'
+        desc: 'مقياس جداري بلا لمس صُنع في تبريز. توقف إنتاج هذا الطراز.',
+        homeDesc: 'لم يعد يُنتج'
       },
       bizswap: {
         title: 'بيع مسبق ومبادلة توكن',
@@ -2813,7 +2823,7 @@
       bizclean: {
         name: 'BizClean',
         title: 'نظافة وتعقيم',
-        desc: 'معقّم يد أوتوماتيكي BizClean V5 — إنتاج بيزدوار؛ RINOTEX 1400 عبر وحدة «Imen Sahand Padideh»؛ تغطية ISNA والإذاعة.'
+        desc: 'معقّم يد أوتوماتيكي صُنع في فترة الجائحة. توقف إنتاج هذا الطراز.'
       },
       biztouch: {
         name: 'BizTouch',
@@ -3112,6 +3122,8 @@
     optSmm: 'إدارة الشبكات الاجتماعية',
     optField: 'خدمات فنية (كاميرات، تمديدات، إضاءة مخفية)',
     optIndustrial: 'توريد معدات صناعية',
+    optAutoMoto: 'عتاد الدراجات',
+    motoInquiry: 'استعلام عتاد الدراجة — {product}\n\nالمقاس:\nالطول والوزن:\nالكمية:\n',
     optConsult: 'استشارة أعمال',
     optOther: 'أخرى'
   });
@@ -3162,6 +3174,25 @@
       { title: 'تواصل', desc: 'استشارة' }
     ]
   };
+
+  deepMerge(ru, {
+    companyHistory: {
+      eyebrow: 'История производства',
+      title: 'Линии, которые мы больше не продаём',
+      desc: 'Это прошлые работы компании. Они не продаются и по ним не принимают заказ или запрос цены.',
+      badge: 'Больше не продаётся',
+      cardNote: 'История производства, не товар для продажи.'
+    }
+  });
+  deepMerge(ar, {
+    companyHistory: {
+      eyebrow: 'سجل الإنتاج',
+      title: 'خطوط لم نعد نبيعها',
+      desc: 'هذه أعمال سابقة للشركة. ليست للبيع ولا للطلب ولا لعرض السعر.',
+      badge: 'لم نعد نبيعها',
+      cardNote: 'سجل إنتاج، وليس منتجاً للبيع.'
+    }
+  });
 
   window.BIZDAVAR_LOCALES.ru = ru;
   window.BIZDAVAR_LOCALES.ar = ar;

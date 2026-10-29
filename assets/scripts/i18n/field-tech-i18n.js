@@ -9,7 +9,7 @@
       hero: {
         eyebrow: 'خدمات فنی بیزدوار',
         title: 'نصب دوربین مدار بسته، سیم‌کشی و نورمخفی',
-        lead: 'اجرای تخصصی واحدهای مسکونی و تجاری در تبریز — بازدید فنی، پیشنهاد طرح و نصب با گارانتی.',
+        lead: 'اجرای تخصصی واحدهای مسکونی و تجاری در تبریز — بازدید فنی، پیشنهاد طرح و پشتیبانی پس از نصب.',
         chips: ['CCTV', 'سیم‌کشی', 'نورمخفی', 'تبریز'],
         waCta: 'واتساپ خدمات فنی',
         callCta: 'تماس تلفنی',
@@ -24,16 +24,16 @@
           { id: 'wiring', icon: 'bolt', title: 'سیم‌کشی ساختمان', desc: 'واحدهای مسکونی و تجاری' },
           { id: 'lighting', icon: 'flame', title: 'نورمخفی', desc: 'طراحی و اجرای داخلی و فضای تجاری' },
           { id: 'survey', icon: 'document', title: 'بازدید فنی', desc: 'پیشنهاد طرح و زمان‌بندی اجرا' },
-          { id: 'cities', icon: 'pin', title: 'تبریز', desc: 'پوشش اجرایی دو شهر' },
-          { id: 'support', icon: 'shield', title: 'گارانتی اجرا', desc: 'پشتیبانی پس از نصب' }
+          { id: 'cities', icon: 'pin', title: 'تبریز', desc: 'پوشش اجرایی در تبریز' },
+          { id: 'support', icon: 'shield', title: 'پشتیبانی پس از نصب', desc: 'برای نصب‌های انجام‌شده در تبریز' }
         ]
       },
       cities: {
         eyebrow: 'پوشش جغرافیایی',
         title: 'اجرا در تبریز',
-        desc: 'تیم فنی بیزدوار برای پروژه‌های محلی در دو شهر آماده هماهنگی است.',
+        desc: 'تیم فنی بیزدوار برای پروژه‌های محلی در تبریز آماده هماهنگی است.',
         items: [
-          { title: 'تبریز', body: 'نصب دوربین، سیم‌کشی و نورمخفی واحدهای مسکونی و تجاری در تبریز و اطراف.' }
+          { title: 'تبریز', body: 'نصب دوربین، سیم‌کشی و نورمخفی واحدهای مسکونی و تجاری در تبریز.' }
         ]
       },
       process: {
@@ -44,7 +44,7 @@
           { title: 'پیام واتساپ', desc: 'نیاز و آدرس را بفرستید' },
           { title: 'بازدید فنی', desc: 'بررسی محل و پیشنهاد طرح' },
           { title: 'زمان‌بندی', desc: 'توافق تاریخ و برآورد' },
-          { title: 'اجرا و گارانتی', desc: 'نصب و پشتیبانی پس از کار' }
+          { title: 'اجرا و پشتیبانی', desc: 'نصب و پشتیبانی پس از کار' }
         ]
       },
       contact: {
@@ -98,7 +98,7 @@
           { id: 'wiring', icon: 'bolt', title: 'Bina tesisatı', desc: 'Konut ve ticari birimler' },
           { id: 'lighting', icon: 'flame', title: 'Gizli aydınlatma', desc: 'İç mekân ve ticari alan' },
           { id: 'survey', icon: 'document', title: 'Teknik keşif', desc: 'Plan ve kurulum takvimi' },
-          { id: 'cities', icon: 'pin', title: 'Tebriz', desc: 'İki şehirde saha hizmeti' },
+          { id: 'cities', icon: 'pin', title: 'Tebriz', desc: 'Tebriz’de saha hizmeti' },
           { id: 'support', icon: 'shield', title: 'Kurulum garantisi', desc: 'Kurulum sonrası destek' }
         ]
       },
@@ -157,7 +157,7 @@
       hero: {
         eyebrow: 'Bizdavar technical services',
         title: 'CCTV, building wiring and cove lighting',
-        lead: 'Residential and commercial installs in Tabriz — survey, plan and install with warranty.',
+        lead: 'Residential and commercial installs in Tabriz — survey, plan and after-install support.',
         chips: ['CCTV', 'Wiring', 'Cove lighting', 'Tabriz'],
         waCta: 'Technical WhatsApp',
         callCta: 'Call',
@@ -173,7 +173,7 @@
           { id: 'lighting', icon: 'flame', title: 'Cove lighting', desc: 'Indoor and commercial spaces' },
           { id: 'survey', icon: 'document', title: 'Site survey', desc: 'Plan and install schedule' },
           { id: 'cities', icon: 'pin', title: 'Tabriz', desc: 'On-site coverage in Tabriz' },
-          { id: 'support', icon: 'shield', title: 'Install warranty', desc: 'After-install support' }
+          { id: 'support', icon: 'shield', title: 'After-install support', desc: 'For installs done in Tabriz' }
         ]
       },
       cities: {
@@ -192,7 +192,7 @@
           { title: 'WhatsApp', desc: 'Send need and address' },
           { title: 'Survey', desc: 'On-site review and plan' },
           { title: 'Schedule', desc: 'Date and estimate' },
-          { title: 'Install', desc: 'Delivery and warranty' }
+          { title: 'Install', desc: 'Delivery and after-install support' }
         ]
       },
       contact: {

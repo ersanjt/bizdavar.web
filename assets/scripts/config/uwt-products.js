@@ -319,7 +319,7 @@
           [
             { name: 'NivoGuide NG 8100 solids', image: U + 'product-ng8100.jpg', imageAlt: 'UWT NivoGuide NG 8100 solids TDR' },
             { name: 'NivoGuide NG 8200 liquids', image: U + 'product-ng8200.jpg', imageAlt: 'UWT NivoGuide NG 8200 liquid TDR' },
-            { name: 'Interface measurement', image: U + 'product-ng8200.jpg', imageAlt: 'UWT NivoGuide interface measurement' }
+            { name: 'Interface measurement', titleFa: 'اندازه‌گیری اینترفیس', image: U + 'product-ng8200.jpg', imageAlt: 'UWT NivoGuide interface measurement' }
           ],
           'Guided radar / TDR',
           ['NivoGuide NG 8200 liquids', 'NivoGuide NG 8100 solids']
@@ -356,7 +356,7 @@
     ],
 
     industries: [
-      { name: 'سیمان و مصالح', nameTr: 'Building materials', desc: 'Silo high/low and continuous radar', image: U + 'product-rn3001.jpg', imageAlt: 'UWT cement bulk solids', icon: 'factory' },
+      { name: 'سیمان و مصالح', nameTr: 'Building materials', desc: 'Silo high/low and continuous radar', descFa: 'Rotonivo و NivoRadar برای سیلو کلینکر، سیمان و سنگ‌دانه', image: U + 'product-rn3001.jpg', imageAlt: 'UWT cement bulk solids', icon: 'factory' },
       { name: 'غذا و نوشیدنی', nameTr: 'Food & Beverage', desc: 'Hygienic vibration and radar options', image: U + 'product-vn1020.jpg', imageAlt: 'UWT food industry sensors', icon: 'globe' },
       { name: 'شیمیایی', nameTr: 'Chemical', desc: 'Ex-rated switches and guided radar', image: U + 'product-ng8200.jpg', imageAlt: 'UWT chemical process sensors', icon: 'barrel' },
       { name: 'پلاستیک', nameTr: 'Plastics', desc: 'Granule and powder point level', image: U + 'product-els-r1.jpg', imageAlt: 'UWT plastics silo sensors', icon: 'factory' },

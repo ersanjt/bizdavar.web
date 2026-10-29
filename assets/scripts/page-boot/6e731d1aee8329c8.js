@@ -9,7 +9,7 @@ bizdavarPageInit(function () {
       injectBreadcrumbSchema(crumbs);
       renderGeoStrip('geoStrip', {
         textKey: 'shopPage.geoText',
-        text: 'Магазин Bizdavar с ценами в дирхамах ОАЭ — промышленные товары, приборы и электроника.'
+        text: 'Магазин Bizdavar в дирхамах — товаров пока нет. Цена только у внесённой позиции.'
       });
       renderRelatedLinks([
         { title: 'Продукты', url: 'products', desc: 'Бренды Bizdavar' },

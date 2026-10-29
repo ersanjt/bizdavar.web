@@ -238,6 +238,21 @@
   height: 100%;
 }
 
+.history-card {
+  cursor: default;
+}
+
+.history-card:hover {
+  transform: none;
+  box-shadow: var(--shadow-sm);
+}
+
+.history-card__note {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--gray-600, #5c5c5c);
+}
+
 .about-page .presence-istanbul-hub + .presence-istanbul-hub {
   margin-top: var(--space-4);
 }

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248 48" role="img" aria-label="StackPayback">
+  <rect x="0" y="4" width="40" height="40" rx="10" fill="#111111"/>
+  <rect x="9" y="24" width="5.5" height="12" rx="1.2" fill="#7DDEA8"/>
+  <rect x="17.25" y="16" width="5.5" height="20" rx="1.2" fill="#1FA971"/>
+  <rect x="25.5" y="10" width="5.5" height="26" rx="1.2" fill="#F4FFF8"/>
+  <text x="50" y="32" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#111111">StackPayback</text>
+</svg>

@@ -406,7 +406,7 @@ function page(loc) {
   <script src="/assets/scripts/gtm-boot.js?v=20260910c" defer></script>
   <script src="/assets/scripts/i18n/locale-url.js?v=20261025a" defer></script>
   <script src="/assets/scripts/i18n/seo-head.js?v=20260910c" defer></script>
-  <script src="/assets/scripts/i18n/locale-preload.js?v=20260910c" defer></script>
+  <script src="/assets/scripts/i18n/locale-preload.js?v=20261028j" defer></script>
   <meta name="view-transition" content="same-origin">
   <title>${esc(t.title)}</title>
   <link rel="icon" href="/assets/images/brand/favicon.svg" type="image/svg+xml">
@@ -577,7 +577,7 @@ ${alts}
           </a>
         </li>
         <li>
-          <a href="${p}/pages/contact?service=industrial&product=Auto-Moto">
+          <a href="${p}/pages/contact?service=auto-moto&product=Auto-Moto">
             <strong data-i18n="pages.motorcycle.guideQuote">${esc(t.guideQuote)}</strong>
             <span data-i18n="pages.motorcycle.guideQuoteDesc">${esc(t.guideQuoteDesc)}</span>
           </a>
@@ -602,7 +602,7 @@ ${alts}
       <h2 data-i18n="autoMotoPage.cta.title">${esc(t.ctaTitle)}</h2>
       <p data-i18n="autoMotoPage.cta.desc">${esc(t.ctaDesc)}</p>
       <div class="hero__actions hero__actions--center">
-        <a href="${p}/pages/contact?service=industrial&product=Auto-Moto" class="btn btn--primary" id="autoCtaForm" data-i18n="autoMotoPage.cta.btnForm">${esc(t.btnForm)}</a>
+        <a href="${p}/pages/contact?service=auto-moto&product=Auto-Moto" class="btn btn--primary" id="autoCtaForm" data-i18n="autoMotoPage.cta.btnForm">${esc(t.btnForm)}</a>
         <a href="https://wa.me/989305880135" class="btn btn--green" id="autoCtaWhatsapp" data-i18n="common.whatsapp">${esc(t.wa)}</a>
         <a href="${p}/pages/products#supply" class="btn btn--yellow" data-i18n="autoMotoPage.cta.btnServices">${esc(t.btnCatalog)}</a>
       </div>
@@ -616,7 +616,7 @@ ${alts}
     </div>
     <div class="auto-sticky-cta__actions">
       <a href="https://wa.me/989305880135" class="btn btn--green" id="autoStickyWa" data-i18n="common.whatsapp">${esc(t.wa)}</a>
-      <a href="${p}/pages/contact?service=industrial&product=Auto-Moto" class="btn btn--yellow auto-btn-inquiry" data-i18n="common.contact">${esc(t.contact)}</a>
+      <a href="${p}/pages/contact?service=auto-moto&product=Auto-Moto" class="btn btn--yellow auto-btn-inquiry" data-i18n="common.contact">${esc(t.contact)}</a>
     </div>
   </div>
 

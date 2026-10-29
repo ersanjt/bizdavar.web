@@ -107,25 +107,8 @@ window.BIZDAVAR_CONFIG = {
             id: 'hardware',
             labelKey: 'nav.productsHardware',
             items: [
-              { route: 'biztab', page: 'biztab', labelKey: 'nav.productBiztab', label: 'BizTab', descKey: 'nav.productBiztabDesc' },
-              { route: 'bizpad', page: 'bizpad', labelKey: 'nav.productBizpad', label: 'BizPad', descKey: 'nav.productBizpadDesc' },
               { route: 'ostrichLeather', page: 'ostrich-leather', labelKey: 'nav.productOstrich', label: 'Ostrich leather', descKey: 'nav.productOstrichDesc' },
-              { route: 'bizsanitizerV5', page: 'bizsanitizer-v5', labelKey: 'nav.productBizclean', label: 'BizClean', descKey: 'nav.productBizcleanDesc' }
-            ]
-          }
-        ]
-      },
-      {
-        id: 'lines',
-        labelKey: 'nav.tabLines',
-        groups: [
-          {
-            id: 'catalog',
-            labelKey: 'nav.productsLines',
-            items: [
-              { route: 'products', page: 'products', hash: 'catalog', cat: 'packaging', labelKey: 'nav.productPackaging', descKey: 'nav.productPackagingDesc' },
-              { route: 'products', page: 'products', hash: 'catalog', cat: 'medical', labelKey: 'nav.productMedical', descKey: 'nav.productMedicalDesc' },
-              { route: 'shop', page: 'shop', labelKey: 'nav.productShop', descKey: 'nav.productShopDesc' }
+              { route: 'about', page: 'about', hash: 'company-history', labelKey: 'nav.productHardwareHistory', label: 'سخت‌افزار قدیمی', descKey: 'nav.productHardwareHistoryDesc' }
             ]
           }
         ]
@@ -153,7 +136,7 @@ window.BIZDAVAR_CONFIG = {
             id: 'telematics',
             labelKey: 'nav.brandGroupTelematics',
             items: [
-              { route: 'teltonika', page: 'teltonika', label: 'Teltonika', descKey: 'nav.brandTeltonikaDesc', badgeKey: 'nav.brandTeltonikaBadge' }
+              { route: 'teltonika', page: 'teltonika', label: 'Teltonika', descKey: 'nav.brandTeltonikaDesc' }
             ]
           },
           {
@@ -161,14 +144,14 @@ window.BIZDAVAR_CONFIG = {
             labelKey: 'nav.brandGroupPower',
             items: [
               { route: 'gamak', page: 'gamak', label: 'Gamak', descKey: 'nav.brandGamakDesc' },
-              { route: 'enpo', page: 'enpo', labelKey: 'nav.brandPneumaticLabel', label: 'Pneumatics', descKey: 'nav.brandEnpoDesc' },
-              { route: 'liquiMoly', page: 'liqui-moly', label: 'Liqui Moly', descKey: 'nav.brandLiquiDesc' }
+              { route: 'enpo', page: 'enpo', labelKey: 'nav.brandPneumaticLabel', label: 'Pneumatics', descKey: 'nav.brandEnpoDesc' }
             ]
           },
           {
             id: 'auto',
             labelKey: 'nav.brandGroupAuto',
             items: [
+              { route: 'liquiMoly', page: 'liqui-moly', label: 'Liqui Moly', descKey: 'nav.brandLiquiDesc' },
               { route: 'bluePrint', page: 'blue-print', label: 'Blue Print', descKey: 'nav.brandBluePrintDesc' },
               { route: 'autoMoto', page: 'auto-moto', labelKey: 'nav.productAutoMoto', label: 'اتو‌موتو', descKey: 'nav.brandAutoMotoDesc' },
               { route: 'motorcycle', page: 'motorcycle', labelKey: 'nav.autoMotoShop', label: 'موتورسیکلت', descKey: 'nav.autoMotoShopDesc' },
@@ -189,6 +172,7 @@ window.BIZDAVAR_CONFIG = {
     footer: [
       { route: 'products', page: 'products', labelKey: 'nav.productsCatalog' },
       { route: 'products', hash: 'supply', labelKey: 'nav.productsSupplyLink' },
+      { route: 'shop', page: 'shop', labelKey: 'nav.productShop' },
       { route: 'contact', page: 'contact', labelKey: 'nav.productsQuote' }
     ]
   },
@@ -777,7 +761,7 @@ window.BIZDAVAR_CONFIG = {
     {
       name: 'Prosense',
       title: 'دتکتور گاز و شعله',
-      desc: 'سیستم‌های ثابت و پرتابل با گواهی SIL2/3 — مناسب معدن، پتروشیمی و پارکینگ',
+      desc: 'سیستم‌های ثابت و پرتابل با گواهی SIL2 — مناسب معدن، پتروشیمی و پارکینگ',
       logo: 'assets/images/partners/prosense.svg',
       photo: 'assets/images/prosense/industry-mining.webp',
       url: 'pages/prosense',
@@ -881,7 +865,7 @@ window.BIZDAVAR_CONFIG = {
     {
       name: 'Car Parts',
       title: 'لنت و دیسک ترمز',
-      desc: 'لنت، دیسک و قطعات ترمز با انتخاب برند و مدل — قیمت دلاری تحویل بین‌المللی',
+      desc: 'لنت، دیسک و قطعات ترمز با انتخاب برند و مدل — قیمت استعلام می‌شود',
       logo: 'assets/images/auto-moto/logo-brake-shop.svg',
       photo: 'assets/images/content/home-brand-car-parts.jpg',
       url: 'pages/car-parts',
@@ -919,6 +903,8 @@ window.BIZDAVAR_CONFIG = {
     { name: 'ZedGP', domain: 'zedgp.com', category: 'خدمات مالی', role: 'ecosystem', internal: false, hidden: true, archived: true, logo: 'assets/images/partners/zedgp.png', note: 'پروژه غیرفعال' },
     { name: 'ZedX DMCC', domain: 'zedxdmcc.com', category: 'طراحی وب / زیرساخت', role: 'case-study', internal: false, hidden: true, logo: 'assets/images/partners/zedxdmcc.png', note: 'نمونه‌کار — طراحی وبسایت و زیرساخت' },
     { name: 'BZ Diamond', domain: 'bzdiamond.com', category: 'طراحی وب / فروشگاه', role: 'case-study', internal: true, hidden: true, slug: 'pages/bz-diamond.html', logo: 'assets/images/partners/zeddiamond.png', note: 'نمونه‌کار — WooCommerce و مدیریت ایمیل' },
+    { name: 'StackPayback', domain: 'stackpayback.com', url: 'https://stackpayback.com/', category: 'طراحی وب / ماشین‌حساب ROI و SaaS', role: 'case-study', internal: false, logo: 'assets/images/partners/stackpayback.svg', note: 'نمونه‌کار — وبسایت ماشین‌حساب بازگشت سرمایه نرم‌افزار B2B؛ مدل ROI، معیار خرید و کتابخانه نرم‌افزار برای بازار آمریکا، بریتانیا، کانادا و استرالیا' },
+    { name: 'Spareon', domain: 'spereonco.com', url: 'https://spereonco.com/', category: 'طراحی وب / شرکت هنگ‌کنگ', role: 'case-study', internal: false, logo: 'assets/images/partners/spareon.svg', note: 'نمونه‌کار — وبسایت شرکتی Spareon Co., Limited؛ معرفی شرکت ثبت‌شده در هنگ‌کنگ، دفتر ثبت‌شده و راه‌های تماس' },
     { name: 'ASIL', domain: 'asilfeed.com', url: 'https://asilfeed.com/', category: 'طراحی وب / سرور و ایمیل سازمانی', role: 'case-study', internal: true, slug: 'pages/asil-feed.html', logo: 'assets/images/partners/asil-feed.webp', note: 'نمونه‌کار — طراحی وبسایت، راه‌اندازی سرور و ایمیل‌های شرکت برای برند خوراک ASIL در دبی' },
     { name: 'Supplify Trade', domain: 'supplifytrade.com', url: 'https://supplifytrade.com/', category: 'طراحی وب / تجارت بین‌المللی B2B', role: 'case-study', internal: true, slug: 'pages/supplify-trade.html', logo: 'assets/images/partners/supplify-trade.svg', note: 'نمونه‌کار — وبسایت شرکتی تجارت و sourcing با لایسنس RAKEZ امارات' },
     { name: 'Kaya One AG', domain: 'kayaone.ch', url: 'https://kayaone.ch/', category: 'طراحی وب / تجارت سوئیسی B2B', role: 'case-study', internal: true, slug: 'pages/kaya-one.html', logo: 'assets/images/partners/kaya-one.svg', note: 'نمونه‌کار — وبسایت شرکتی تجارت و راهکارهای صنعتی سوئیس (Brunnen)' },

@@ -148,7 +148,7 @@
     var target = LU.toLocalePath(q, pagePath);
     var dest = target.split('#')[0];
     if (window.location.pathname !== dest) {
-      window.location.replace(target + window.location.hash);
+      window.location.replace(target + window.location.search + window.location.hash);
       return;
     }
   }
@@ -168,7 +168,7 @@
     var bounce = LU.toLocalePath(stored, LU.currentPagePath());
     var bouncePath = bounce.split('#')[0];
     if (window.location.pathname !== bouncePath) {
-      window.location.replace(bounce + window.location.hash);
+      window.location.replace(bounce + window.location.search + window.location.hash);
       return;
     }
     var lang = stored;

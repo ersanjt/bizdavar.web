@@ -29,7 +29,7 @@ window.PROSENSE_CATALOG = {
     descriptionFa: 'بیزدوار گروپ تامین‌کننده دتکتورهای گاز و شعله Prosense است. محصول اصل با گواهی SIL/M1/EN، مشاوره انتخاب گاز و مدل به فارسی (واتساپ)، پیش‌فاکتور شفاف و هماهنگی حمل برای پروژه‌های ایران و مشتریان فارسی‌زبان در خارج.',
     heroStats: [
       { value: '1000+', label: 'گاز قابل تشخیص' },
-      { value: 'SIL2/3', label: 'گواهی ایمنی' },
+      { value: 'SIL2', label: 'گواهی ایمنی' },
       { value: '۱۲+', label: 'سال تجربه تامین' }
     ]
   },
@@ -38,7 +38,7 @@ window.PROSENSE_CATALOG = {
     { icon: 'target', label: 'محصول اصل', desc: 'تامین مستقیم از Prosense ترکیه — با گواهینامه و سریال معتبر' },
     { icon: 'mail', label: 'مشاوره فارسی', desc: 'انتخاب نوع گاز، رنج و مدل — در واتساپ فارسی، از هر کجای دنیا' },
     { icon: 'globe', label: 'لجستیک بین‌المللی', desc: 'خرید، حمل و گمرک تا مقصد پروژه شما' },
-    { icon: 'lab', label: 'گواهینامه و کالیبراسیون', desc: 'SIL2/3 · M1 Maden · EN-50545-1 · TÜRKAK' }
+    { icon: 'lab', label: 'گواهینامه و کالیبراسیون', desc: 'SIL2 · M1 Maden · EN-50545-1 · TÜRKAK' }
   ],
 
   whyBuyFromUs: [
@@ -80,21 +80,21 @@ window.PROSENSE_CATALOG = {
       'محیط نصب: Ex Zone 1/2 یا معمولی · دمای محیط',
       'خروجی سیگنال مورد نیاز: ۴–۲۰mA · رله · HART · Modbus',
       'تعداد نقطه اندازه‌گیری و نیاز به پنل کنترل',
-      'گواهی لازم: SIL2/3 · M1 معدن · EN-50545-1 پارکینگ',
+      'گواهی لازم: SIL2 · M1 معدن · EN-50545-1 پارکینگ',
       'شهر / کشور تحویل و زمان تقریبی پروژه'
     ],
     tip: 'اگر مدل دقیق را نمی‌دانید، فقط گاز + محیط را بگویید — واحد فنی پیشنهاد می‌دهد.'
   },
 
   quickSeries: [
-    { id: 'pq', name: 'PQ Series', tag: 'SIL2/3', hint: 'ایمنی فرآیند · H2S / LEL / O2' },
+    { id: 'pq', name: 'PQ Series', tag: 'SIL2', hint: 'ایمنی فرآیند · H2S / LEL / O2' },
     { id: 'safevader', name: 'SafeVader', tag: 'Safe Area', hint: 'آزمایشگاه، HVAC، هیدروژن' },
     { id: 'soma', name: 'SOMA M1', tag: 'معدن', hint: 'تونل و معادن زیرزمینی' },
     { id: 'pps-plus', name: 'PPS+', tag: 'EN-50545-1', hint: 'پارکینگ سرپوشیده CO / NO2' }
   ],
 
   iranIndustries: [
-    { name: 'پتروشیمی و پالایش', desc: 'دتکتور SIL2/3 برای H2S، LEL، O2 و هیدروکربن', image: PROSENSE_IMG + 'industry-petrochemical.webp', icon: 'flask', models: 'PQ · MPS' },
+    { name: 'پتروشیمی و پالایش', desc: 'دتکتور SIL2 برای H2S، LEL، O2 و هیدروکربن', image: PROSENSE_IMG + 'industry-petrochemical.webp', icon: 'flask', models: 'PQ · MPS' },
     { name: 'نفت و گاز', desc: 'سیستم‌های ثابت و Open Path برای محیط‌های خطرناک', image: PROSENSE_IMG + 'industry-oil-gas.webp', icon: 'barrel', models: 'PQ · Open Path · Marine' },
     { name: 'معدن و تونل', desc: 'سری SOMA با گواهی M1 — CH4، CO و O2', image: PROSENSE_IMG + 'industry-mining.webp', icon: 'pickaxe', models: 'SOMA M1' },
     { name: 'پارکینگ سرپوشیده', desc: 'PPS+ مطابق EN-50545-1 — CO و NO2', image: PROSENSE_IMG + 'industry-parking.webp', icon: 'parking', models: 'PPS+ · S-DPX' },
@@ -121,7 +121,7 @@ window.PROSENSE_CATALOG = {
     },
     {
       q: 'گواهی SIL برای پروژه ما لازم است؟',
-      a: 'برای پروژه‌های ایمنی فرآیند (SIS) سری PQ با گواهی SIL2/3 مناسب است. نوع پروژه را بگویید تا مدل و سطح گواهی درست پیشنهاد شود.'
+      a: 'برای پروژه‌های ایمنی فرآیند (SIS) سری PQ با گواهی SIL2 مناسب است. نوع پروژه را بگویید تا مدل و سطح گواهی درست پیشنهاد شود.'
     },
     {
       q: 'SafeVader همان دتکتور SIL یا ضد انفجار است؟',
@@ -160,15 +160,15 @@ window.PROSENSE_CATALOG = {
     },
     {
       id: 'pq',
-      title: 'سری PQ — SIL2 / SIL3',
-      titleEn: 'PQ Series — SIL2 / SIL3',
-      titleTr: 'PQ Serisi — SIL2 / SIL3',
-      desc: 'پرفروش‌ترین دتکتور ثابت — گواهی SIL برای ایمنی فرآیند پتروشیمی و پالایشگاه',
+      title: 'سری PQ — SIL2',
+      titleEn: 'PQ Series — SIL2',
+      titleTr: 'PQ Serisi — SIL2',
+      desc: 'پرفروش‌ترین دتکتور ثابت — گواهی SIL2 برای ایمنی فرآیند پتروشیمی و پالایشگاه',
       useCaseFa: 'H2S، LEL، O2 — محیط Ex و پروژه‌های SIS',
-      badge: 'SIL',
+      badge: 'SIL2',
       inquiryName: 'PQ Series',
       image: PROSENSE_IMG + 'hero-pq-sil2.webp',
-      imageAlt: 'Prosense PQ series SIL2 SIL3 fixed gas detector for process safety'
+      imageAlt: 'Prosense PQ series SIL2 fixed gas detector for process safety'
     },
     {
       id: 'safevader',

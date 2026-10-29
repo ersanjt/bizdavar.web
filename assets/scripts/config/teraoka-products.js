@@ -29,12 +29,16 @@
   };
 
   const series = (names, note, featuredNames) =>
-    names.map(name => ({
-      name,
-      note: note || 'Teraoka Seiko equipment',
-      featured: featuredNames ? featuredNames.includes(name) : false,
-      ...(modelImages[name] ? { image: modelImages[name], imageAlt: `Teraoka Seiko ${name}` } : {})
-    }));
+    names.map(entry => {
+      const row = typeof entry === 'string' ? { name: entry } : entry;
+      const name = row.name;
+      return {
+        note: note || 'Teraoka Seiko equipment',
+        featured: featuredNames ? featuredNames.includes(name) : false,
+        ...(modelImages[name] ? { image: modelImages[name], imageAlt: `Teraoka Seiko ${name}` } : {}),
+        ...row
+      };
+    });
 
   window.TERAOKA_CATALOG = {
     brand: {
@@ -45,11 +49,11 @@
       heroImageAlt: 'Teraoka Seiko retail scales and checkout systems in a supermarket',
       heroEyebrow: 'تامین رسمی Teraoka Seiko (DIGI) از ژاپن',
       heroHeadline: 'ترازو، POS و برچسب‌زن Teraoka Seiko',
-      heroHeadlineSub: 'Luxeed-L · W-5600SRX · LX-5600 · DS-782 — کیفیت و دقت ژاپن برای retail و food service',
+      heroHeadlineSub: 'Luxeed-L و DS-782 ترازو هستند، W-5600SRX صندوق است و LX-5600 پرینتر لیبل جداست',
       tagline: 'Scales, Label Printers & POS',
       taglineFa: 'ترازو، پرینتر لیبل و POS — ساخت ژاپن',
       since: 'از ۱۹۲۳ · Tokyo',
-      descriptionFa: 'بیزدوار گروپ تامین‌کننده ترازو، صندوق فروشگاهی (POS)، پرینتر لیبل و تجهیزات food service برند Teraoka Seiko برای سوپرمارکت، deli، رستوران و انبار در ایران است. انتخاب مدل رسمی (Luxeed-L، W-5600SRX، LX-5600، DS-782)، مشاوره فنی و لجستیک بین‌المللی از ژاپن.',
+      descriptionFa: 'بیزدوار گروپ ترازو، صندوق فروشگاهی و پرینتر لیبل Teraoka Seiko را تامین می‌کند. لیبل را بدنهٔ ترازو چاپ نمی‌کند؛ پرینتر جداگانهٔ LX-5600 به ترازو وصل می‌شود. Luxeed-L و DS-782 ترازو هستند و W-5600SRX صندوق است.',
       heroStats: [
         { value: '100+ yrs', label: 'تاریخچه برند' },
         { value: 'Luxeed / W / LX', label: 'سری‌های شاخص' },
@@ -66,7 +70,7 @@
 
     whyBuyFromUs: [
       { icon: 'target', title: 'کیفیت premium ژاپن', desc: 'برای پروژه‌هایی که دقت، دوام و brand image مهم است — Teraoka Seiko استاندارد صنعت food retail در آسیا و اروپا است.' },
-      { icon: 'factory', title: 'اکوسystem یکپارچه', desc: 'ترازوی service (Luxeed-L / DS-782)، POS (W-5600SRX) و label printer (LX-5600) — یک پیش‌فاکتور هماهنگ.' },
+      { icon: 'factory', title: 'ترازو و پرینتر جدا', desc: 'Luxeed-L و DS-782 ترازو هستند. W-5600SRX صندوق است. لیبل را پرینتر جداگانهٔ LX-5600 چاپ می‌کند و به ترازو وصل می‌شود.' },
       { icon: 'document', title: 'مشخصات دقیق در پیش‌فاکتور', desc: 'مدل، ظرفیت، رزولوشن، پورت و Incoterms — قبل از پرداخت.' },
       { icon: 'handshake', title: 'Digi یا Teraoka؟', desc: 'Digi System بین‌المللی lead time کوتاه‌تر؛ Teraoka Seiko برای food-service حرفه‌ای و پروژه premium — هر دو از بیزدوار.' }
     ],
@@ -83,7 +87,7 @@
       {
         title: 'Luxeed-L — ترازوی service counter',
         titleTr: 'Luxeed-L Service Scale',
-        desc: 'ترازوی premium با طراحی فروشگاهی — PLU، label و اتصال POS',
+        desc: 'ترازوی پیشخوان است. چاپ لیبل با پرینتر جداگانهٔ LX-5600 است که به ترازو وصل می‌شود.',
         useCaseFa: 'deli، fresh corner، butcher counter',
         badge: 'Luxeed-L',
         inquiryName: 'Teraoka Luxeed-L',
@@ -103,8 +107,8 @@
       {
         title: 'LX-5600 — پرینتر لیبل',
         titleTr: 'LX-5600 Label Printer',
-        desc: 'چاپ GS1، nutrition facts و price label — اتصال به ترازو',
-        useCaseFa: 'deli، bakery، prepared food',
+        desc: 'پرینتر لیبل جدا از بدنهٔ ترازو. لیبل GS1 و برچسب قیمت را همین دستگاه چاپ می‌کند و به ترازو وصل می‌شود.',
+        useCaseFa: 'مواد تازه، نانوایی و غذای آماده',
         badge: 'Label',
         inquiryName: 'Teraoka LX-5600',
         image: label,
@@ -126,7 +130,10 @@
       {
         id: 'retail-scales',
         title: 'Retail scales — Luxeed-L / AW-5600',
+        titleFa: 'ترازوی فروشگاهی — Luxeed-L و AW-5600',
+        titleEn: 'Retail scales — Luxeed-L / AW-5600',
         titleTr: 'Retail & Checkout Scales',
+        descFa: 'Luxeed-L و DS-782 ترازوی پیشخوان هستند. AW-5600 ترازوی صندوق است. چاپ لیبل با این مدل‌ها یکی نیست.',
         icon: 'scale',
         image: checkout,
         imageAlt: 'Teraoka Seiko AW-5600 AI retail checkout scale with recognition',
@@ -140,7 +147,10 @@
       {
         id: 'deli',
         title: 'Deli & fresh food — DS-782 / DS-502HD',
+        titleFa: 'مواد تازه — DS-782 و DS-502HD',
+        titleEn: 'Deli & fresh food — DS-782 / DS-502HD',
         titleTr: 'Deli & Fresh Food',
+        descFa: 'ترازوی پیشخوان DS-782 و ترازوی قابل‌حمل DS-502HD. لیبل را پرینتر جداگانهٔ LX-5600 چاپ می‌کند.',
         icon: 'utensils',
         image: ds782,
         imageAlt: 'Teraoka Seiko DS-782 deli and fresh food service counter scale',
@@ -154,38 +164,51 @@
       {
         id: 'label',
         title: 'Label printers — LX-5600',
+        titleFa: 'پرینتر لیبل جدا — LX-5600',
+        titleEn: 'Label printers — LX-5600',
         titleTr: 'Label Printers',
+        descFa: 'LX-5600 دستگاه جدا از ترازو است و لیبل GS1 را چاپ می‌کند.',
         icon: 'tag',
         image: label,
         imageAlt: 'Teraoka Seiko LX-5600 label printer integrated with retail scales',
         desc: 'LX-5600 — GS1، nutrition labeling و scale integration',
-        series: series(['LX-5600', 'Scale-linked printer', 'Label design software'], 'Label / LX series', ['LX-5600'])
+        series: series([
+          'LX-5600',
+          { name: 'Scale-linked printer', titleFa: 'پرینتر متصل به ترازو' },
+          { name: 'Label design software', titleFa: 'نرم‌افزار طراحی لیبل' }
+        ], 'Label / LX series', ['LX-5600'])
       },
       {
         id: 'pos',
         title: 'POS — W-5600SRX',
+        titleFa: 'صندوق فروشگاهی — W-5600SRX',
+        titleEn: 'POS — W-5600SRX',
         titleTr: 'W-Series POS',
         icon: 'monitor',
         image: pos,
         imageAlt: 'Teraoka Seiko W-5600SRX supermarket POS register system',
         desc: 'W-5600SRX — hypermarket POS، EFT، self-checkout integration',
+        descFa: 'W-5600SRX صندوق فروشگاه است. لیبل را چاپ نمی‌کند.',
         series: series(['W-5600SRX', 'HappySelf (G3)', 'IPT2000', 'Payoss', 'EFT integration'], 'POS / W series', ['W-5600SRX'])
       },
       {
         id: 'industrial',
         title: 'Industrial weighing — TCS-205 / DSX',
+        titleFa: 'توزین صنعتی — TCS-205 و DSX',
+        titleEn: 'Industrial weighing — TCS-205 / DSX',
         titleTr: 'Industrial Scales',
         icon: 'scale',
         image: industrial,
         imageAlt: 'Teraoka Seiko TCS-205 industrial portioning and checkweigh scale',
         desc: 'TCS-205 portioning، platform و counting — انبار و food production',
+        descFa: 'توزین انبار و تولید. این دسته پرینتر لیبل فروشگاهی نیست.',
         series: series(['TCS-205', 'DSX-1000', 'Platform scale', 'Counting scale', 'Checkweigher'], 'Industrial / Production', ['TCS-205', 'DSX-1000'])
       }
     ],
 
     iranIndustries: [
-      { name: 'Hypermarket و supermarket', desc: 'Luxeed-L + W-5600SRX + LX-5600 یکپارچه', image: indSuper, imageAlt: 'Teraoka Seiko scales and POS for Iranian hypermarkets', icon: 'cart' },
-      { name: 'Deli و fresh food', desc: 'DS-782 service counter + label printer', image: ds782, imageAlt: 'Teraoka DS-782 deli counter scale for fresh food in Iran', icon: 'utensils' },
+      { name: 'فروشگاه زنجیره‌ای', desc: 'ترازوی Luxeed-L، صندوق W-5600SRX و پرینتر لیبل جدا LX-5600', image: indSuper, imageAlt: 'Teraoka Seiko scales and POS for Iranian hypermarkets', icon: 'cart' },
+      { name: 'مواد تازه و پیشخوان', desc: 'ترازوی DS-782 و پرینتر لیبل جدا LX-5600', image: ds782, imageAlt: 'Teraoka DS-782 deli counter scale for fresh food in Iran', icon: 'utensils' },
       { name: 'رستوران و catering', desc: 'portion control، kitchen scale و DS-502HD portable', image: indFood, imageAlt: 'Teraoka Seiko food service weighing for restaurants', icon: 'utensils' },
       { name: 'انبار و logistics', desc: 'TCS-205 و platform scale برای warehouse', image: indLogistics, imageAlt: 'Teraoka industrial scales for warehouse and logistics', icon: 'truck' },
       { name: 'Franchise premium', desc: 'استاندارد تجهیز یکسان ژاپن در شعب', image: luxeed, imageAlt: 'Teraoka Luxeed-L premium franchise retail equipment', icon: 'store' },
@@ -201,7 +224,7 @@
 
     academy: {
       title: 'Teraoka Seiko — بیش از ۱۰۰ سال نوآوری در توکیو',
-      descFa: 'Teraoka Seiko (DIGI) از پیشگامان ترازو، POS و label printer در ژاپن است — حضور global در food retail. بیزدوار گروپ برای پروژه‌های premium ایران تامین، پیش‌فاکتور و لجستیک را مدیریت می‌کند.',
+      descFa: 'Teraoka Seiko (DIGI) در ژاپن ترازو، صندوق و پرینتر لیبل می‌سازد. لیبل را پرینتر جداگانهٔ LX-5600 چاپ می‌کند. بیزدوار گروپ تامین، پیش‌فاکتور و لجستیک را هماهنگ می‌کند.',
       image: luxeed,
       imageAlt: 'Teraoka Seiko Luxeed-L retail scale — official supply by Bizdavar Group',
       imageSecondary: logo,
@@ -209,7 +232,7 @@
       topics: [
         'Luxeed-L vs DS-782 — انتخاب ترازوی service counter',
         'W-5600SRX POS — یکپارچگی با scale و EFT',
-        'LX-5600 — GS1 و nutrition labeling',
+        'LX-5600 پرینتر لیبل جداست و به ترازو وصل می‌شود',
         'Lead time ژاپن و گزینه transship از امارات/ترکیه',
         'Teraoka premium vs Digi System Turkey — مقایسه lead time'
       ]
@@ -226,9 +249,10 @@
     faq: [
       { q: 'Teraoka Seiko اصل ژاپن است؟', a: 'بله — تجهیزات اصل Teraoka Seiko (DIGI) با مشخصات کارخانه و مدل رسمی در پیش‌فاکتور.' },
       { q: 'Teraoka یا Digi System؟', a: 'Teraoka Seiko: premium ژاپن، food-service عمیق، lead time ۶–۱۲ هفته. Digi System: ترکیه، lead time کوتاه‌تر، retail عمومی.' },
-      { q: 'مدل‌های شاخص کدام‌اند؟', a: 'Luxeed-L (service scale)، W-5600SRX (POS)، LX-5600 (label printer)، DS-782 (counter)، AW-5600 (checkout AI).' },
+      { q: 'لیبل روی خود ترازو چاپ می‌شود؟', a: 'نه. Luxeed-L و DS-782 ترازو هستند. چاپ لیبل با پرینتر جداگانهٔ LX-5600 است که به ترازو وصل می‌شود.' },
+      { q: 'مدل‌های شاخص کدام‌اند؟', a: 'Luxeed-L و DS-782 ترازوی پیشخوان هستند. W-5600SRX صندوق است. LX-5600 پرینتر لیبل جداست. AW-5600 ترازوی صندوق با تشخیص است.' },
       { q: 'زمان تحویل به ایران؟', a: 'معمولاً ۶ تا ۱۲ هفته — بسته به مدل و مسیر حمل از ژاپن.' },
-      { q: 'label roll و قطعه مصرفی؟', a: 'LX-5600 consumables و label roll در پیش‌فاکتور دوره‌ای قابل تامین است.' }
+      { q: 'رول لیبل و قطعه مصرفی؟', a: 'رول لیبل و قطعات مصرفی پرینتر LX-5600 در پیش‌فاکتور دوره‌ای قابل تامین است.' }
     ],
 
     inquiryTemplate: 'سلام، درخواست استعلام {product} از Teraoka Seiko دارم.\n\nنوع فروشگاه:\nمدل (Luxeed-L / W-5600SRX / LX-5600 / DS-782):\nتعداد:\n',

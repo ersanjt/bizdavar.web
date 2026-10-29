@@ -33,7 +33,7 @@ function page(loc) {
   <script src="/assets/scripts/gtm-boot.js?v=20260910c" defer></script>
   <script src="/assets/scripts/i18n/locale-url.js?v=20260910c" defer></script>
   <script src="/assets/scripts/i18n/seo-head.js?v=20260910c" defer></script>
-  <script src="/assets/scripts/i18n/locale-preload.js?v=20260910c" defer></script>
+  <script src="/assets/scripts/i18n/locale-preload.js?v=20261028j" defer></script>
   <title>${esc(loc.title)}</title>
   <meta name="description" content="${esc(loc.desc)}">
   <link rel="canonical" href="${canonical}">

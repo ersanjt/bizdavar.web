@@ -385,7 +385,7 @@ if ($method === 'POST' && $uri === '/tickets') {
         if ($email !== '') {
             bizhub_mail($cfg, $email, 'تیکت: ' . $subject, $text, [
                 'heading' => $subject,
-                'intro' => 'یک تیکت تازه از بیزداور برای شما ثبت شد.',
+                'intro' => 'یک تیکت تازه از بیزدوار برای شما ثبت شد.',
                 'button_label' => 'دیدن تیکت',
                 'button_url' => $origin . '/admin/',
             ]);
@@ -503,7 +503,7 @@ if ($method === 'POST' && ($p = route_match($uri, '/tickets/{id}/messages'))) {
     } else {
         $email = bizhub_user_email($pdo, (int) $ticket['partner_id']);
         if ($email !== '') {
-            bizhub_mail($cfg, $email, 'پاسخ تیکت: ' . (string) $ticket['subject'], "پاسخ بیزداور:\n\n{$preview}\n\n{$panel}");
+            bizhub_mail($cfg, $email, 'پاسخ تیکت: ' . (string) $ticket['subject'], "پاسخ بیزدوار:\n\n{$preview}\n\n{$panel}");
         }
     }
     Response::json(['ok' => true]);

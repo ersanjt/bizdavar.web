@@ -117,6 +117,8 @@
       {
         id: 'scales',
         title: 'Retail scales — SM-6000 / SM-5300',
+        titleFa: 'ترازوی فروشگاهی — SM-6000 و SM-5300',
+        titleEn: 'Retail scales — SM-6000 / SM-5300',
         titleTr: 'Retail PC Scales',
         icon: 'scale',
         image: sm6000,
@@ -131,6 +133,8 @@
       {
         id: 'pos',
         title: 'POS — W-5600SRX / WebSpeezaSL',
+        titleFa: 'صندوق فروشگاهی — W-5600SRX و WebSpeezaSL',
+        titleEn: 'POS — W-5600SRX / WebSpeezaSL',
         titleTr: 'POS Systems',
         icon: 'monitor',
         image: pos,
@@ -159,6 +163,8 @@
       {
         id: 'software',
         title: 'نرم‌افزار — Retail management',
+        titleFa: 'نرم‌افزار فروشگاهی',
+        titleEn: 'Retail management software',
         titleTr: 'Retail Software',
         icon: 'monitor',
         image: checkout,
@@ -169,6 +175,8 @@
       {
         id: 'horeca',
         title: 'HORECA — Delious WIZ',
+        titleFa: 'رستوران و هتل — Delious WIZ',
+        titleEn: 'HORECA — Delious WIZ',
         titleTr: 'HORECA POS',
         icon: 'utensils',
         image: delious,

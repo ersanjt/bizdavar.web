@@ -472,7 +472,7 @@ ${hreflang(item.id)}
           <dl class="am-pdp__specs">${specs}</dl>
           ${factHtml}
           <p class="am-pdp__note">${esc(copy.note)}</p>
-          <p><a class="btn btn--yellow" href="${loc.prefix}/pages/contact?service=industrial&amp;product=${esc(item.sku || item.id)}">${esc(copy.quote)}</a></p>
+          <p><a class="btn btn--yellow" href="${loc.prefix}/pages/contact?service=auto-moto&amp;product=${esc(item.sku || item.id)}">${esc(copy.quote)}</a></p>
         </div>
       </div>
     </article>

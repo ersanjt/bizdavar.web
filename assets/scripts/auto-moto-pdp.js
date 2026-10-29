@@ -7,35 +7,40 @@
       wa: 'پرسش در واتساپ',
       original: 'کالای تامین‌شده با کد سازنده',
       assureTitle: 'ضمانت تامین فروشگاه موتور',
-      assure: 'قیمت دلاری تحویل بین‌المللی است. سایز، رنگ و موجودی قبل از ارسال تأیید می‌شود.',
+      assure: 'اگر روی کارت مبلغ هست، قیمت دلاری برای تحویل بین‌المللی است. اگر نیست، کالا استعلام می‌شود. سایز قبل از سفارش تأیید می‌شود.',
+      assureQuote: 'این کالا قیمت منتشرشده ندارد و استعلام می‌شود. سایز قبل از سفارش تأیید می‌شود.',
       stock: 'موجودی را بپرسید'
     },
     tr: {
       wa: 'WhatsApp ile sor',
       original: 'Üretici kodlu tedarik ürünü',
       assureTitle: 'Motosiklet tedarik güvencesi',
-      assure: 'Kart fiyatı İran teslim USD. Beden, renk ve stok siparişten önce doğrulanır.',
+      assure: 'Kart fiyatı varsa uluslararası teslim USD’dir. Yoksa teklif istenir. Beden siparişten önce doğrulanır.',
+      assureQuote: 'Bu üründe yayımlanmış fiyat yok, teklif istenir. Beden siparişten önce doğrulanır.',
       stock: 'Stoku sorun'
     },
     en: {
       wa: 'Ask on WhatsApp',
       original: 'Supplied item with maker code',
       assureTitle: 'Motorcycle supply guarantee',
-      assure: 'Card price is Iran-delivery USD. Size, colour and stock are confirmed before dispatch.',
+      assure: 'If the card shows an amount, that dollar price is for international delivery. If it does not, ask for a quote. Size is confirmed before the order.',
+      assureQuote: 'This item has no published price; ask for a quote. Size is confirmed before the order.',
       stock: 'Ask about stock'
     },
     ru: {
       wa: 'Спросить в WhatsApp',
       original: 'Поставка с кодом производителя',
       assureTitle: 'Гарантия поставки',
-      assure: 'Цена в долларах с международной доставкой. Размер, цвет и наличие уточняются до отправки.',
+      assure: 'Если на карточке есть сумма, это долларовая цена международной доставки. Если нет — запрос. Размер подтверждается до заказа.',
+      assureQuote: 'У этого товара нет опубликованной цены, нужен запрос. Размер подтверждается до заказа.',
       stock: 'Уточните наличие'
     },
     ar: {
       wa: 'اسأل عبر واتساب',
       original: 'صنف توريد برمز المصنع',
       assureTitle: 'ضمان توريد متجر الدراجة',
-      assure: 'السعر بالدولار للتسليم الدولي. المقاس واللون والتوفر تُؤكد قبل الإرسال.',
+      assure: 'إذا ظهر مبلغ على البطاقة فهو سعر دولاري للتسليم الدولي. وإلا يُطلب عرض. المقاس يُؤكد قبل الطلب.',
+      assureQuote: 'لا سعر منشوراً لهذا الصنف ويُطلب عرض. المقاس يُؤكد قبل الطلب.',
       stock: 'اسأل عن التوفر'
     }
   };
@@ -103,9 +108,11 @@
       badge.textContent = c.original;
       wa.after(badge);
 
+      const priceText = priceEl ? priceEl.textContent.trim() : '';
+      const priced = /\d/.test(priceText);
       const assure = document.createElement('div');
       assure.className = 'shop-pdp__assure';
-      assure.innerHTML = '<h2>' + esc(c.assureTitle) + '</h2><p>' + esc(c.assure) + '</p>';
+      assure.innerHTML = '<h2>' + esc(c.assureTitle) + '</h2><p>' + esc(priced ? c.assure : (c.assureQuote || c.assure)) + '</p>';
       buy.appendChild(assure);
     }
 

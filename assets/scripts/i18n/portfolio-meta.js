@@ -8,6 +8,8 @@
     'ZedGP': { category: 'Financial services', note: 'Inactive project' },
     'ZedX DMCC': { category: 'Web design / infrastructure', note: 'Case study — website and infrastructure design' },
     'BZ Diamond': { category: 'Web design / e-commerce', note: 'Case study — WooCommerce and email management' },
+    'StackPayback': { category: 'Web design / SaaS ROI calculators', note: 'Case study — B2B software payback calculator site; editable ROI models, buying criteria and a software library for the US, UK, Canada and Australia' },
+    'Spareon': { category: 'Web design / Hong Kong company', note: 'Case study — corporate site for Spareon Co., Limited; Hong Kong incorporation details, registered office and contact' },
     'ASIL': { category: 'Web design / server and company email', note: 'Case study — website design, server setup and company email for the ASIL feed brand in Dubai' },
     'Supplify Trade': { category: 'Web design / international B2B trade', note: 'Case study — corporate trade & sourcing website for RAKEZ-licensed UAE company' },
     'Kaya One AG': { category: 'Web design / Swiss B2B trade', note: 'Case study — corporate trade & industrial solutions website for Swiss AG (Brunnen)' },
@@ -65,6 +67,8 @@
     'ZedGP': { category: 'Finansal hizmetler', note: 'Pasif proje' },
     'ZedX DMCC': { category: 'Web tasarım / altyapı', note: 'Örnek iş — web sitesi ve altyapı tasarımı' },
     'BZ Diamond': { category: 'Web tasarım / e-ticaret', note: 'Örnek iş — WooCommerce ve e-posta yönetimi' },
+    'StackPayback': { category: 'Web tasarım / SaaS ROI hesaplayıcıları', note: 'Örnek iş — B2B yazılım geri ödeme hesaplayıcı sitesi; düzenlenebilir ROI modeli, satın alma kriterleri ve ABD, İngiltere, Kanada ile Avustralya için yazılım kütüphanesi' },
+    'Spareon': { category: 'Web tasarım / Hong Kong şirketi', note: 'Örnek iş — Spareon Co., Limited kurumsal sitesi; Hong Kong şirket kaydı, kayıtlı ofis ve iletişim' },
     'ASIL': { category: 'Web tasarım / sunucu ve kurumsal e-posta', note: 'Örnek iş — Dubai’deki ASIL yem markası için web sitesi, sunucu kurulumu ve kurumsal e-posta' },
     'Supplify Trade': { category: 'Web tasarım / uluslararası B2B ticaret', note: 'Örnek iş — RAKEZ lisanslı BAE ticaret ve sourcing şirketinin kurumsal web sitesi' },
     'Kaya One AG': { category: 'Web tasarım / İsviçre B2B ticaret', note: 'Örnek iş — İsviçre AG ticaret ve endüstriyel çözümler kurumsal web sitesi (Brunnen)' },
@@ -133,5 +137,19 @@
     if (window.BIZDAVAR_LOCALES.tr) window.BIZDAVAR_LOCALES.tr.portfolioMeta = tr;
     putPortfolioMeta('ru', ruAsil);
     putPortfolioMeta('ar', arAsil);
+    const ruNew = {
+      'StackPayback': { category: 'Веб-дизайн / калькуляторы ROI для SaaS', note: 'Кейс — сайт калькуляторов окупаемости B2B-софта; модель ROI, критерии покупки и библиотека ПО для США, Великобритании, Канады и Австралии' },
+      'Spareon': { category: 'Веб-дизайн / компания в Гонконге', note: 'Кейс — корпоративный сайт Spareon Co., Limited; данные о регистрации в Гонконге, юридический адрес и контакты' }
+    };
+    const arNew = {
+      'StackPayback': { category: 'تصميم ويب / حاسبات عائد الاستثمار لبرمجيات SaaS', note: 'نموذج عمل — موقع حاسبات استرداد تكلفة برمجيات B2B؛ نموذج ROI ومعايير الشراء ومكتبة برمجيات لأسواق أمريكا وبريطانيا وكندا وأستراليا' },
+      'Spareon': { category: 'تصميم ويب / شركة هونغ كونغ', note: 'نموذج عمل — الموقع التعريفي لشركة Spareon Co., Limited؛ بيانات التأسيس في هونغ كونغ والمكتب المسجل ووسائل التواصل' }
+    };
+    if (window.BIZDAVAR_LOCALES.ru && window.BIZDAVAR_LOCALES.ru.portfolioMeta) {
+      Object.assign(window.BIZDAVAR_LOCALES.ru.portfolioMeta, ruNew);
+    }
+    if (window.BIZDAVAR_LOCALES.ar && window.BIZDAVAR_LOCALES.ar.portfolioMeta) {
+      Object.assign(window.BIZDAVAR_LOCALES.ar.portfolioMeta, arNew);
+    }
   }
 })();

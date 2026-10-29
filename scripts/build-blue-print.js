@@ -648,6 +648,7 @@ function buildI18n() {
     L.home.intentBluePrint = (pages[lang] && pages[lang].intent) || 'Blue Print';
     L.footer = L.footer || {};
     L.footer.bluePrintParts = lang === 'fa' ? 'قطعات Blue Print' : lang === 'ru' ? 'Детали Blue Print' : lang === 'tr' ? 'Blue Print parçaları' : lang === 'ar' ? 'قطع Blue Print' : 'Blue Print parts';
+    L.footer.bluePrintAll = lang === 'fa' ? 'همه قطعات' : lang === 'ru' ? 'Все детали' : lang === 'tr' ? 'Tüm parçalar' : lang === 'ar' ? 'كل القطع' : 'All parts';
     L.pages = L.pages || {};
     L.pages.bluePrint = Object.assign({ crumb: 'Blue Print' }, seo[lang] || {}, {
       seoTitle: seo[lang].title,
@@ -696,7 +697,7 @@ function head({ lang, title, description, keywords, slug, depthNote }) {
   <script src="/assets/scripts/gtm-boot.js?v=20260910c" defer></script>
   <script src="/assets/scripts/i18n/locale-url.js?v=20260910c" defer></script>
   <script src="/assets/scripts/i18n/seo-head.js?v=20261028a" defer></script>
-  <script src="/assets/scripts/i18n/locale-preload.js?v=20260910c" defer></script>
+  <script src="/assets/scripts/i18n/locale-preload.js?v=20261028j" defer></script>
   <meta name="view-transition" content="same-origin">
   <title>${esc(title)}</title>
   <link rel="icon" href="/assets/images/brand/favicon.svg" type="image/svg+xml">
@@ -1018,11 +1019,6 @@ function buildCss() {
 .bp-series-card__foot { margin-top: auto; display: flex; flex-direction: column; gap: 8px; }
 .bp-series-card__actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .bp-series-card__cta.btn, .bp-series-card__detail.btn { width: 100%; min-width: 0; padding: 8px 6px; font-size: 13px; }
-.footer__bp { padding: 4px 0 28px; }
-.footer__bp-title { margin: 0 0 10px; font-size: .95rem; }
-.footer__bp-list { display: flex; flex-wrap: wrap; gap: 6px 14px; list-style: none; margin: 0; padding: 0; }
-.footer__bp-list a { color: rgba(255,255,255,.82); font-size: .82rem; text-decoration: none; }
-.footer__bp-list a:hover { color: #fff; }
 @media (max-width: 800px) {
   .bp-doc__grid { grid-template-columns: 1fr; }
 }

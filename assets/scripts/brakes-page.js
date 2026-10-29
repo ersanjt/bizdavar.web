@@ -39,7 +39,7 @@
       results: 'نتیجه جستجو',
       desk: 'لنت و دیسک ترمز',
       assureTitle: 'ضمانت تامین فروشگاه ترمز',
-      assure: 'دیسک و لنت با کد سازنده. قیمت دلاری تحویل بین‌المللی است و موجودی نهایی قبل از ارسال تأیید می‌شود.'
+      assure: 'دیسک و لنت با کد سازنده. روی کارت قیمت منتشرشده نیست و استعلام می‌شود. موجودی نهایی قبل از ارسال تأیید می‌شود.'
     },
     tr: {
       search: 'Marka, model, OEM veya parça kodu ara',
@@ -73,7 +73,7 @@
       results: 'Arama sonucu',
       desk: 'Fren balatası ve diski',
       assureTitle: 'Fren tedarik güvencesi',
-      assure: 'Disk ve balata üretici koduyla. Kart fiyatı İran teslim USD; stok sevkiyattan önce doğrulanır.'
+      assure: 'Disk ve balata üretici koduyla. Kartta yayımlanmış fiyat yok, teklif istenir. Stok sevkiyattan önce doğrulanır.'
     },
     en: {
       search: 'Search brand, model, OEM or part code',
@@ -107,7 +107,7 @@
       results: 'Search results',
       desk: 'Brake pads and discs',
       assureTitle: 'Brake shop supply guarantee',
-      assure: 'Discs and pads with the maker code. Card price is Iran-delivery USD; stock is confirmed before dispatch.'
+      assure: 'Discs and pads with the maker code. The card has no published price; ask for a quote. Stock is confirmed before dispatch.'
     },
     ru: {
       search: 'Марка, модель, OEM или код детали',
@@ -141,7 +141,7 @@
       results: 'Результаты',
       desk: 'Колодки и диски',
       assureTitle: 'Гарантия поставки тормозов',
-      assure: 'Диски и колодки с кодом производителя. Цена в долларах с международной доставкой; наличие уточняется до отправки.'
+      assure: 'Диски и колодки с кодом производителя. На карточке нет опубликованной цены, запрос отдельный. Наличие уточняется до отправки.'
     },
     ar: {
       search: 'ابحث بالماركة أو الموديل أو رمز القطعة',
@@ -175,7 +175,7 @@
       results: 'نتائج البحث',
       desk: 'فحمات وأقراص الفرامل',
       assureTitle: 'ضمان توريد متجر الفرامل',
-      assure: 'أقراص وفحمات برمز المصنع. السعر بالدولار للتسليم الدولي، والتوفر يُؤكد قبل الإرسال.'
+      assure: 'أقراص وفحمات برمز المصنع. لا سعر منشوراً على البطاقة ويُطلب عرض. التوفر يُؤكد قبل الإرسال.'
     }
   };
 
@@ -412,10 +412,8 @@
     return '$' + Number(amount).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   }
 
-  function priceText(item) {
-    const amount = Number(item && item.priceUsd);
-    if (!Number.isFinite(amount) || amount <= 0) return t().askPrice;
-    return money(amount);
+  function priceText() {
+    return t().askPrice;
   }
 
   function imgUrl(rel) {
@@ -1060,9 +1058,7 @@
         inLanguage: inLanguage,
         offers: {
           '@type': 'Offer',
-          priceCurrency: 'USD',
-          price: String(item.priceUsd),
-          availability: 'https://schema.org/InStock'
+          availability: 'https://schema.org/PreOrder'
         }
       };
       if (images.length) product.image = images;

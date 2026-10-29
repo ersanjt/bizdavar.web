@@ -85,8 +85,6 @@ window.createSupplyBrandPage = function (cfg) {
   function priceHtml(item, kind) {
     const p = offerPrice(item);
     if (!p) {
-      if (catalog().hideQuotePrice) return '';
-      if (!(item.quoteOnly || catalog().quoteEmptyPrices)) return '';
       const quote = t('quotePrice', 'استعلام قیمت');
       if (kind === 'div') {
         return `<div class="${prefix}-price ${prefix}-price--quote"><span class="${prefix}-price__label">${quote}</span></div>`;
@@ -311,13 +309,18 @@ window.createSupplyBrandPage = function (cfg) {
   }
 
 
+  function inquiryService() {
+    if (catalogKey === 'AUTO_MOTO_CATALOG') return 'auto-moto';
+    return catalog().inquiryService || 'industrial';
+  }
+
   function inquiryUrl(productName) {
 
     const base = pagePath(R.contact || 'pages/contact.html');
 
     const tpl = t('inquiryTemplate', catalog().inquiryTemplate || 'استعلام {product}').replace('{product}', productName);
 
-    return `${base}?service=industrial&product=${encodeURIComponent(productName)}&message=${encodeURIComponent(tpl)}`;
+    return `${base}?service=${encodeURIComponent(inquiryService())}&product=${encodeURIComponent(productName)}&message=${encodeURIComponent(tpl)}`;
 
   }
 

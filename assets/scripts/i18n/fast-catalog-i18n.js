@@ -106,7 +106,7 @@
     ],
     speedHighlights: [
       { title: 'Measurable speed', desc: 'Clear daily milestones — not “we will update you later”.' },
-      { title: 'Professional design', desc: 'Mobile-first, clean RTL, Vazirmatn typography and clear CTAs.' },
+      { title: 'Professional design', desc: 'Mobile-first and clear CTAs. Persian pages are RTL with Vazirmatn; English plans are LTR.' },
       { title: 'Technical craft', desc: 'Forms, WhatsApp, basic SEO, analytics and management training.' },
       { title: 'Continue the path', desc: 'From Fast to store, multilingual, panel or app — same team.' }
     ],
@@ -241,7 +241,7 @@
     ],
     speedHighlights: [
       { title: 'Ölçülebilir hız', desc: 'Net günlük kilometre taşları — “sonra haber veririz” değil.' },
-      { title: 'Profesyonel tasarım', desc: 'Mobil öncelikli, temiz RTL, Vazirmatn ve net CTA.' },
+      { title: 'Profesyonel tasarım', desc: 'Mobil öncelikli ve net CTA. Farsça sayfalar RTL ve Vazirmatn; İngilizce planlar LTR.' },
       { title: 'Teknik uzmanlık', desc: 'Form, WhatsApp, temel SEO, analitik ve yönetim eğitimi.' },
       { title: 'Yola devam', desc: 'Fast’ten mağaza, çok dil, panel veya uygulamaya — aynı ekip.' }
     ],

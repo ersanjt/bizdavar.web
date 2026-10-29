@@ -5,7 +5,7 @@
 window.BIZDAVAR_OWNED_PRODUCTS = {
   imgVersion: '8',
   homeOrder: ['fxguard', 'bizswap'],
-  liveOrder: ['fxguard', 'bizswap', 'bizclean', 'biztab', 'bizpad', 'ostrich-leather'],
+  liveOrder: ['fxguard', 'bizswap', 'ostrich-leather'],
   categories: [
     { id: 'software', label: 'نرم‌افزار و SaaS', icon: 'code' },
     { id: 'iot-health', label: 'IoT و بهداشت', icon: 'chip' },
@@ -35,7 +35,7 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       categoryLabel: 'نرم‌افزار و SaaS',
       name: 'WhatsApp CRM',
       title: 'FXGuard WhatsApp CRM',
-      desc: 'اینباکس تیمی واتساپ برای شعب و فروش — از ۴۹ دلار در ماه.',
+      desc: 'اینباکس، مشتری، تیکت و وظیفه از ۴۹ دلار. شعبه و پک نرخ از Cloud Business، ۲۴۹ دلار.',
       homeDesc: 'اینباکس تیمی واتساپ — از ۴۹ دلار',
       tags: ['FXGuard', 'WhatsApp CRM', 'از ۴۹ دلار'],
       image: 'assets/images/content/home-owned-fxguard.webp',
@@ -64,14 +64,14 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       categoryLabel: 'IoT و بهداشت',
       name: 'BizTab',
       title: 'دماسنج دیواری غیرتماسی',
-      desc: 'دماسنج دیواری غیرتماسی — دقت زیر ۰.۳ درجه، ساخته‌شده در تبریز.',
-      homeDesc: 'دماسنج دیواری غیرتماسی برای ورودی و کلینیک',
+      desc: 'دماسنج دیواری غیرتماسی، ساخته‌شده در تبریز. تولید این مدل تمام شده است.',
+      homeDesc: 'دماسنج دیواری غیرتماسی — دیگر تولید نمی‌شود',
       tags: ['IoT', 'غیرتماسی', 'تبریز'],
-      image: 'assets/images/gallery/expo-tabrizu-incubator.jpg',
+      image: 'assets/images/products/biztab/biztab-front.jpg',
       logo: 'assets/images/products/biztab/biztab-logo.svg',
-      page: 'pages/biztab.html',
       featured: false,
-      status: 'live'
+      historical: true,
+      status: 'archive'
     },
     {
       id: 'bizpad',
@@ -79,14 +79,14 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       categoryLabel: 'IoT و بهداشت',
       name: 'BizPad',
       title: 'پد حرارتی بیز پد',
-      desc: 'پد حرارتی برای خانه، خودرو و جای خواب حیوان — طراحی تیم بیزدوار.',
-      homeDesc: 'پد حرارتی خانه و صندلی خودرو',
+      desc: 'پد حرارتی برای خانه، خودرو و جای خواب حیوان. تولید این مدل تمام شده است.',
+      homeDesc: 'پد حرارتی — دیگر تولید نمی‌شود',
       tags: ['پد حرارتی', 'خودرو', 'تبریز'],
       image: 'assets/images/products/bizpet/bizpet-grey.jpg',
       logo: 'assets/images/products/bizpet/bizpet-grey.jpg',
-      page: 'pages/bizpad.html',
       featured: false,
-      status: 'live'
+      historical: true,
+      status: 'archive'
     },
     {
       id: 'bizclean',
@@ -94,13 +94,13 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       categoryLabel: 'IoT و بهداشت',
       name: 'BizClean',
       title: 'خط بهداشت و ضدعفونی',
-      desc: 'دستگاه ضدعفونی دست اتوماتیک BizClean V5 — تولید تیم بیزدوار؛ RINOTEX 1400، ISNA و صدا و سیما.',
+      desc: 'دستگاه ضدعفونی دست اتوماتیک، ساخته‌شده در دوران کرونا. تولید این مدل تمام شده است.',
       tags: ['بهداشت', 'اتوماتیک', 'کرونا'],
-      image: 'assets/images/gallery/expo-imen-booth.jpg',
+      image: 'assets/images/products/bizsanitizer/bizclean-v5.png',
       logo: 'assets/images/products/bizsanitizer/bizsanitizer-logo.svg',
-      page: 'pages/bizsanitizer-v5.html',
-      featured: true,
-      status: 'live'
+      featured: false,
+      historical: true,
+      status: 'archive'
     },
     {
       id: 'bizpad',
@@ -126,8 +126,8 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       desc: 'دستگاه‌ها و رابط‌های بدون تماس برای ورودی، بهداشت و فضاهای عمومی.',
       tags: ['تماس‌LESS', 'IoT', 'ورودی'],
       image: 'assets/images/products/product-default.svg',
-      featured: true,
-      status: 'catalog'
+      historical: true,
+      status: 'archive'
     },
     {
       id: 'bizroll',
@@ -138,8 +138,8 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       desc: 'ماشین‌آلات رول و بسته‌بندی مهندسی‌شده برای تولید و بسته‌بندی صنعتی.',
       tags: ['بسته‌بندی', 'رول', 'صنعتی'],
       image: 'assets/images/products/product-default.svg',
-      featured: true,
-      status: 'catalog'
+      historical: true,
+      status: 'archive'
     },
     {
       id: 'sealer-home',
@@ -150,7 +150,8 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       desc: 'دستگاه کش‌زن (vacuum sealer) برای مصرف خانگی و کارگاه‌های کوچک.',
       tags: ['کش‌زن', 'خانگی', 'وکیوم'],
       image: 'assets/images/products/product-default.svg',
-      status: 'catalog'
+      historical: true,
+      status: 'archive'
     },
     {
       id: 'sealer-pneumatic',
@@ -161,7 +162,8 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       desc: 'دستگاه کش‌زن پنوماتیک — مناسب تولید نیمه‌صنعتی و خطوط بسته‌بندی.',
       tags: ['پنوماتیک', 'کش‌زن', 'B2B'],
       image: 'assets/images/products/product-default.svg',
-      status: 'catalog'
+      historical: true,
+      status: 'archive'
     },
     {
       id: 'sealer-robotic',
@@ -172,7 +174,8 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       desc: 'خط کش‌زن رباتیک برای تولید انبوه — اتوماسیون بسته‌بندی.',
       tags: ['رباتیک', 'اتوماسیون', 'تولید'],
       image: 'assets/images/products/product-default.svg',
-      status: 'catalog'
+      historical: true,
+      status: 'archive'
     },
     {
       id: 'mask-production',
@@ -183,7 +186,8 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       desc: 'دستگاه تولید ماسک سه‌لایه — توسعه‌یافته در دوران کرونا.',
       tags: ['PPE', 'ماسک', 'خط تولید'],
       image: 'assets/images/products/product-default.svg',
-      status: 'catalog'
+      historical: true,
+      status: 'archive'
     },
     {
       id: 'heat-pad-production',
@@ -191,10 +195,11 @@ window.BIZDAVAR_OWNED_PRODUCTS = {
       categoryLabel: 'پزشکی و PPE',
       name: 'خط تولید پد حرارتی',
       title: 'ماشین پد گرمایی',
-      desc: 'دستگاه تولید پد حرارتی (heat pad) — مصارف درمانی و گرمایشی.',
+      desc: 'دستگاه تولید پد حرارتی. تولید این خط تمام شده و فقط در رزومهٔ شرکت است.',
       tags: ['پد حرارتی', 'پزشکی', 'تولید'],
       image: 'assets/images/products/bizpet/bizpet-production.jpg',
-      status: 'catalog'
+      historical: true,
+      status: 'archive'
     },
     {
       id: 'ostrich-leather',

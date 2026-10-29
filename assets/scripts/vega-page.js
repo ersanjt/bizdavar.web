@@ -194,7 +194,7 @@
             ${p.series ? `<span class="vega-product-card__series">${p.series}</span>` : ''}
           </div>
           <h2 class="vega-product-card__name">${p.name}</h2>
-          ${p.priceEur != null ? `<p class="vega-product-card__price" dir="ltr"><span class="vega-product-card__price-value">€${Number(p.priceEur).toLocaleString('en-US')}</span><span class="vega-product-card__price-note">${t('priceSellLabel', 'قیمت فروش')}</span></p>` : ''}
+          ${p.priceEur != null ? `<p class="vega-product-card__price" dir="ltr"><span class="vega-product-card__price-value">€${Number(p.priceEur).toLocaleString('en-US')}</span><span class="vega-product-card__price-note">${t('priceSellLabel', 'قیمت فروش')}</span></p>` : `<p class="vega-product-card__price"><span class="vega-product-card__price-note">${t('quotePrice', 'استعلام قیمت')}</span></p>`}
           <p class="vega-product-card__summary">${p.summary || p.summaryFa}</p>
           ${(p.useCase || p.useCaseFa) ? `<p class="vega-product-card__usecase"><strong>${t('useCaseLabel', 'کاربرد:')}</strong> ${p.useCase || p.useCaseFa}</p>` : ''}
           <ul class="vega-product-card__features">

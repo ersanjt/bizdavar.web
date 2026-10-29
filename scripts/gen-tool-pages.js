@@ -474,7 +474,7 @@ function page(entry, isHub) {
   <!-- End Google Tag Manager -->
   <script src="/assets/scripts/i18n/locale-url.js?v=${LOADER_VER}" defer></script>
   <script src="/assets/scripts/i18n/seo-head.js?v=${LOADER_VER}" defer></script>
-  <script src="/assets/scripts/i18n/locale-preload.js?v=20260910c" defer></script>
+  <script src="/assets/scripts/i18n/locale-preload.js?v=20261028j" defer></script>
   <meta name="view-transition" content="same-origin">
   <title>${esc(seo.seoTitle)}</title>
   <link rel="icon" href="/assets/images/brand/favicon.svg" type="image/svg+xml">

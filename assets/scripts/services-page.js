@@ -112,7 +112,7 @@
     const stats = rawList('servicesPage.stats', [
       { value: '۶', label: 'محور خدمات' },
       { value: '۱۰۰+', label: 'پروژه' },
-      { value: '۲', label: 'شهر فنی' },
+      { value: '۱', label: 'شهر فنی' },
       { value: '۱۲+', label: 'سال تجربه' }
     ]);
     el.innerHTML = stats.map(s => `
@@ -711,7 +711,7 @@
       { title: 'Backup', desc: 'بکاپ و تست بازیابی' },
       { title: 'Monitor', desc: 'uptime و هشدار' },
       { title: 'DNS / CDN', desc: 'دامنه و Cloudflare' },
-      { title: 'Migrate', desc: 'انتقال بدون قطعی' }
+      { title: 'Migrate', desc: 'مهاجرت کنترل‌شده تا قطعی سرویس به حداقل برسد' }
     ]);
     el.innerHTML = panels.map(p => `
       <div class="service-panel-card">
@@ -903,8 +903,7 @@
       telephone: ft.tel || '+989364115151',
       availableLanguage: ['fa', 'tr', 'en', 'ru', 'ar'],
       areaServed: [
-        { '@type': 'City', name: 'Tabriz' },
-        { '@type': 'City', name: 'Istanbul' }
+        { '@type': 'City', name: 'Tabriz' }
       ]
     };
     if (typeof window.injectJsonLd === 'function') {

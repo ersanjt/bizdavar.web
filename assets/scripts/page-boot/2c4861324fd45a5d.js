@@ -9,7 +9,7 @@ bizdavarPageInit(function () {
       injectBreadcrumbSchema(crumbs);
       renderGeoStrip('geoStrip', {
         textKey: 'shopPage.geoText',
-        text: 'Bizdavar mağazası, fiyatlar BAE dirhemi — endüstriyel, ölçüm ve elektronik ürünler.'
+        text: 'Bizdavar dirhem mağazası — şu an ürün yok. Fiyat yalnızca kayıtlı kalem için yazılır.'
       });
       renderRelatedLinks([
         { title: 'Ürünler', url: 'products', desc: 'Bizdavar markaları' },

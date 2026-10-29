@@ -190,7 +190,7 @@
           .map(c => [c.id, { label: c.label }])
       );
       return base
-        .filter(item => item && item.id !== 'bizseat' && !item.hidden)
+        .filter(item => item && item.id !== 'bizseat' && !item.hidden && !item.historical)
         .map(item => {
         const m = meta[item.id] || {};
         const cat = cats[item.category] || baseCats[item.category] || {};
@@ -627,6 +627,7 @@
           smm: p.optSmm,
           'field-tech': p.optField,
           industrial: p.optIndustrial,
+          'auto-moto': p.optAutoMoto,
           consulting: p.optConsult,
           other: p.optOther
         };
@@ -796,7 +797,7 @@
         const target = LU.toLocalePath(loc, LU.currentPagePath());
         const destPath = target.split('#')[0];
         if (window.location.pathname !== destPath) {
-          window.location.replace(target + window.location.hash);
+          window.location.replace(target + window.location.search + window.location.hash);
           return loc;
         }
       }
@@ -822,7 +823,7 @@
           window.BIZDAVAR_LOCALE_URL.currentPagePath()
         );
         if (window.location.pathname !== target.split('#')[0]) {
-          window.location.href = target + window.location.hash;
+          window.location.href = target + window.location.search + window.location.hash;
           return;
         }
       } else if (!window.BIZDAVAR_LOCALES[lang]) {

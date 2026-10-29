@@ -72,15 +72,22 @@
     var cat = activeCategory();
     var visible = cat === 'all' ? items : items.filter(function (item) { return item.category === cat; });
 
-    var chips = ['all'].concat(CATS).map(function (id) {
-      var pressed = id === cat ? 'true' : 'false';
-      var current = id === cat ? ' aria-current="true"' : '';
-      return '<button type="button" class="shop-filters__btn' + (id === cat ? ' is-active' : '') + '" data-shop-cat="' + id + '" aria-pressed="' + pressed + '"' + current + '>' + esc(t('shopPage.filters.' + id, id)) + '</button>';
-    }).join('');
-    filters.innerHTML = chips;
+    if (!items.length) {
+      filters.innerHTML = '';
+      filters.hidden = true;
+    } else {
+      filters.hidden = false;
+      var chips = ['all'].concat(CATS).map(function (id) {
+        var pressed = id === cat ? 'true' : 'false';
+        var current = id === cat ? ' aria-current="true"' : '';
+        return '<button type="button" class="shop-filters__btn' + (id === cat ? ' is-active' : '') + '" data-shop-cat="' + id + '" aria-pressed="' + pressed + '"' + current + '>' + esc(t('shopPage.filters.' + id, id)) + '</button>';
+      }).join('');
+      filters.innerHTML = chips;
+    }
 
     if (countEl) {
-      countEl.textContent = t('shopPage.count', '{n} کالا').replace('{n}', String(visible.length));
+      countEl.hidden = !items.length;
+      countEl.textContent = items.length ? t('shopPage.count', '{n} کالا').replace('{n}', String(visible.length)) : '';
     }
 
     if (!visible.length) {

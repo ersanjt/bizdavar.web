@@ -22,12 +22,6 @@
     return window.resolvePagePath ? window.resolvePagePath(cleaned) : href;
   }
 
-  function pageHref(slug) {
-    return window.resolvePagePath
-      ? window.resolvePagePath(`pages/${slug}.html`)
-      : `/pages/${slug}`;
-  }
-
   function esc(s) {
     if (s == null) return '';
     return String(s)
@@ -94,17 +88,18 @@
 
   function renderSuite(cs) {
     const el = document.getElementById('fxguardSuite');
-    if (!el || !Array.isArray(cs.suite?.products)) return;
-    el.innerHTML = cs.suite.products.map(p => {
-      const href = p.internal ? pageHref(p.internal) : (p.href || 'https://fxguard.io/');
+    const products = Array.isArray(cs.suite?.products) ? cs.suite.products : cs.suite?.items;
+    if (!el || !Array.isArray(products) || !products.length) return;
+    el.innerHTML = products.map(p => {
+      const href = pageHref(p.internal || p.href || 'https://fxguard.io/');
       const external = /^https?:/.test(href);
       return `
-        <article class="fxguard-suite-card${p.featured ? ' fxguard-suite-card--live' : ' fxguard-suite-card--soon'}">
+        <article class="fxguard-suite-card fxguard-suite-card--live">
           <span class="fxguard-suite-card__badge">${esc(p.badge || '')}</span>
           <h3>${esc(p.title)}</h3>
           <p>${esc(p.desc)}</p>
           <div class="fxguard-suite-card__actions">
-            <a href="${esc(href)}" class="btn ${p.featured ? 'btn--green' : 'btn--outline'}"${external ? ' target="_blank" rel="noopener noreferrer"' : ''}>${esc(p.cta)}</a>
+            <a href="${esc(href)}" class="btn btn--green"${external ? ' target="_blank" rel="noopener noreferrer"' : ''}>${esc(p.cta)}</a>
             ${p.ctaSecondary && p.secondaryHref ? `<a href="${esc(p.secondaryHref.startsWith('http') || p.secondaryHref.startsWith('/') ? p.secondaryHref : pageHref(p.secondaryHref))}" class="btn btn--outline"${/^https?:/.test(p.secondaryHref) ? ' target="_blank" rel="noopener noreferrer"' : ''}>${esc(p.ctaSecondary)}</a>` : ''}
           </div>
         </article>`;

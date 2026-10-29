@@ -29,7 +29,7 @@ return [
    */
   'mail' => [
     'from' => 'info@bizdavar.com',
-    'from_name' => 'بیزداور',
+    'from_name' => 'بیزدوار',
     'notify' => 'info@bizdavar.com',
     'smtp' => [
       'host' => '',

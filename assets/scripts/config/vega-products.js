@@ -161,6 +161,7 @@ window.VEGA_CATALOG = {
         'خروجی ۴…۲۰ mA/HART · SIL2 · Bluetooth'
       ],
       applications: ['پتروشیمی', 'غذایی و دارویی', 'مواد فله', 'آب و فاضلاب'],
+      quoteOnly: true,
       officialRef: 'https://www.vega.com/tr-tr/urunler/urun-kataloglari/seviye/radar/vegapuls-6x'
     },
     {

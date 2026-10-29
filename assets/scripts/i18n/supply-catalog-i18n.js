@@ -16,13 +16,13 @@
 
       heroHeadline: 'Buy Gamak industrial electric motors',
 
-      heroHeadlineSub: 'Three-phase and single-phase · IE2, IE3 and IE4 · 0.06 to 4000 kW · shipped across the Middle East',
+      heroHeadlineSub: 'Low-voltage three-phase up to 3000 kW; medium voltage 150–4000 kW · IE2, IE3 and IE4',
 
       tagline: 'Power to Energize Life',
 
       since: 'Since 1961 · Izmir',
 
-      description: 'Bizdavar Group supplies genuine Gamak motors from Izmir, Turkey, to plants and contractors in Saudi Arabia, Iraq, Lebanon, Syria, the UAE, Jordan, Kuwait and Qatar. We match the power, speed, flange (B3, B5 or B35) and efficiency class, then send a proforma. WhatsApp and phone: +90 501 067 6486.',
+      description: 'Bizdavar Group supplies genuine Gamak motors from Izmir, Turkey, to plants and contractors in Saudi Arabia, Iraq, Lebanon, Syria, the UAE, Jordan, Kuwait and Qatar. We match the power, speed, mount (B3 foot, or flange B5 / B35) and efficiency class, then send a proforma. WhatsApp and phone: +90 501 067 6486.',
 
       heroStats: [
 
@@ -62,7 +62,7 @@
 
     purchaseSteps: [
 
-      { num: '1', title: 'Inquiry', desc: 'Power kW, speed rpm, flange B3/B5, voltage 380V or 220V, quantity' },
+      { num: '1', title: 'Inquiry', desc: 'Power kW, speed rpm, mount B3 (foot) or flange B5/B35, voltage 380V or 220V, quantity' },
 
       { num: '2', title: 'Technical advice', desc: 'We suggest three-phase or single-phase, IE2, IE3 or IE4, and a brake or explosion-proof option if you need one.' },
 
@@ -192,7 +192,7 @@
 
     ],
 
-    inquiryTemplate: 'Hello, I need a quote for {product}.\n\nPower kW / speed rpm:\nFlange B3/B5/B35:\nVoltage:\nQuantity:\nDestination country:\n'
+    inquiryTemplate: 'Hello, I need a quote for {product}.\n\nPower kW / speed rpm:\nMount B3 (foot) or flange B5/B35:\nVoltage:\nQuantity:\nDestination country:\n'
 
   };
 
@@ -206,7 +206,7 @@
 
       heroHeadline: 'Gamak endüstriyel elektrik motorları',
 
-      heroHeadlineSub: 'Üç fazlı ve tek fazlı · IE2/IE3/IE4 · 0,06–4000 kW — güç seçimi ve lojistik',
+      heroHeadlineSub: 'Alçak gerilim üç fazlı 3000 kW’a kadar; orta gerilim 150–4000 kW · IE2/IE3/IE4',
 
       tagline: 'Power to Energize Life',
 
@@ -252,7 +252,7 @@
 
     purchaseSteps: [
 
-      { num: '1', title: 'Talep', desc: 'Güç kW, devir rpm, flanş B3/B5, voltaj 380V veya 220V, adet' },
+      { num: '1', title: 'Talep', desc: 'Güç kW, devir rpm, B3 ayak veya flanş B5/B35, voltaj 380V veya 220V, adet' },
 
       { num: '2', title: 'Teknik danışmanlık', desc: 'GM/GMB serisi, IE2 veya IE3 ve gerekirse frenli seçenek önerisi' },
 
@@ -382,7 +382,7 @@
 
     ],
 
-    inquiryTemplate: 'Merhaba, Gamak {product} için fiyat teklifi istiyorum.\n\nGüç kW / devir rpm:\nFlanş B3/B5:\nVoltaj:\nAdet:\n'
+    inquiryTemplate: 'Merhaba, Gamak {product} için fiyat teklifi istiyorum.\n\nGüç kW / devir rpm:\nB3 ayak veya flanş B5/B35:\nVoltaj:\nAdet:\n'
 
   };
 
@@ -1196,7 +1196,7 @@
 
     categories: [
 
-      { title: 'Basic — entry-level trackers', desc: 'Simple, cost-effective tracking — FMB920 is the world\'s bestselling model, base price from $29' },
+      { title: 'Basic — entry-level trackers', desc: 'Simple tracking — FMB920 from $29 is the device base only; SIM, platform and shipping are separate on the proforma' },
 
       { title: 'Fast & Easy — quick install', desc: 'Install in minutes — no special tools required' },
 
@@ -1300,7 +1300,7 @@
 
       { q: 'Is the Teltonika product genuine?', a: 'Yes — only genuine Teltonika Telematics products with valid IMEI and official documentation are supplied. Order code is listed on the proforma.' },
 
-      { q: 'Which series is enough for a standard fleet?', a: 'For basic tracking, FMB920 (Basic) is the bestselling model — base price from $29. For CAN, tachograph or IP67 — Advanced or Professional series (FMC650, FMB225) are more suitable.' },
+      { q: 'Which series is enough for a standard fleet?', a: 'For basic tracking, FMB920 is the bestselling model. $29 is the device base only; SIM, platform and shipping are separate on the proforma. For CAN, tachograph or IP67, Advanced or Professional (FMC650, FMB225) fit better.' },
 
       { q: 'What is Fleet Telematics Platform (FTC/FTM)?', a: 'Teltonika\'s next-generation fleet management platform — including FTC305, FTM305, FTC164 and FTM164. For large fleet projects with advanced capabilities.' },
 
@@ -1410,7 +1410,7 @@
 
     categories: [
 
-      { title: 'Basic — giriş seviyesi tracker\'lar', desc: 'Basit ve ekonomik takip — FMB920 dünyanın en çok satan modeli, başlangıç fiyatı 29$' },
+      { title: 'Basic — giriş seviyesi tracker\'lar', desc: 'Basit takip — FMB920 için 29$ yalnızca cihazın taban fiyatıdır; SIM, platform ve nakliye proformada ayrıdır' },
 
       { title: 'Fast & Easy — hızlı kurulum', desc: 'Dakikalar içinde kurulum — özel alet gerekmez' },
 
@@ -1514,7 +1514,7 @@
 
       { q: 'Teltonika ürünü orijinal mi?', a: 'Evet — yalnızca geçerli IMEI ve resmi belgeli orijinal Teltonika Telematics ürünleri tedarik edilir. Order code proformada belirtilir.' },
 
-      { q: 'Standart filo için hangi seri yeterli?', a: 'Temel takip için FMB920 (Basic) en çok satan modeldir — başlangıç fiyatı 29$. CAN, takograf veya IP67 için — Advanced veya Professional serisi (FMC650, FMB225) daha uygundur.' },
+      { q: 'Standart filo için hangi seri yeterli?', a: 'Temel takip için FMB920 en çok satan modeldir. 29$ yalnızca cihazın taban fiyatıdır; SIM, platform ve nakliye proformada ayrıdır. CAN, takograf veya IP67 için Advanced veya Professional (FMC650, FMB225) daha uygundur.' },
 
       { q: 'Fleet Telematics Platform (FTC/FTM) nedir?', a: 'Teltonika\'nın yeni nesil filo yönetim platformu — FTC305, FTM305, FTC164 ve FTM164 dahil. Gelişmiş özellikli büyük filo projeleri için.' },
 
@@ -1556,7 +1556,7 @@
 
         { value: '1000+', label: 'Detectable gases' },
 
-        { value: 'SIL2/3', label: 'Safety certification' },
+        { value: 'SIL2', label: 'Safety certification' },
 
         { value: '12+', label: 'Years of supply experience' }
 
@@ -1572,7 +1572,7 @@
 
       { label: 'International logistics', desc: 'Purchase, shipping and customs to your project destination destination' },
 
-      { label: 'Certification & calibration', desc: 'SIL2/3 · M1 Mining · EN-50545-1 · TÜRKAK accredited calibration' }
+      { label: 'Certification & calibration', desc: 'SIL2 · M1 Mining · EN-50545-1 · TÜRKAK accredited calibration' }
 
     ],
 
@@ -1618,7 +1618,7 @@
 
         'Number of measuring points and whether a control panel is needed',
 
-        'Required certification: SIL2/3 · M1 mining · EN-50545-1 parking',
+        'Required certification: SIL2 · M1 mining · EN-50545-1 parking',
 
         'Delivery city / country and approximate project timing'
 
@@ -1630,7 +1630,7 @@
 
     quickSeries: [
 
-      { name: 'PQ Series', tag: 'SIL2/3', hint: 'Process safety · H2S / LEL / O2' },
+      { name: 'PQ Series', tag: 'SIL2', hint: 'Process safety · H2S / LEL / O2' },
 
       { name: 'SafeVader', tag: 'Safe Area', hint: 'Labs, HVAC, hydrogen rooms' },
 
@@ -1644,7 +1644,7 @@
 
       { title: 'PQD-7035 T1 C1 — Hydrocarbon', desc: 'PQ Series hydrocarbon gas detector — pellistor 0–100% LEL, OLED display, aluminium housing approx. 2.6 kg', useCase: 'Oil, gas and petrochemical — Ex Zone 1/2 · 1-year sensor and 2-year electronics warranty', badge: '0–100% LEL' },
 
-      { title: 'PQ Series — SIL2 / SIL3', desc: 'Best-selling fixed detector — SIL certificate for petrochemical and refinery process safety', useCase: 'H2S, LEL, O2 — Ex environment and SIS projects', badge: 'SIL' },
+      { title: 'PQ Series — SIL2', desc: 'Best-selling fixed detector — SIL certificate for petrochemical and refinery process safety', useCase: 'H2S, LEL, O2 — Ex environment and SIS projects', badge: 'SIL' },
 
       { title: 'SafeVader Series', desc: 'Indoor / safe-area detector — LCD, 4–20 mA + RS485 Modbus and onboard relays. For labs, hospitals, HVAC, refrigerant and hydrogen rooms — not an Ex/SIL process detector.', useCase: 'Non-Ex indoor areas · laboratories, HVAC, hospitals, battery rooms', badge: 'Safe Area' },
 
@@ -1684,7 +1684,7 @@
 
     iranIndustries: [
 
-      { name: 'Petrochemical & refining', desc: 'SIL2/3 detectors for H2S, LEL, O2 and hydrocarbons' },
+      { name: 'Petrochemical & refining', desc: 'SIL2 detectors for H2S, LEL, O2 and hydrocarbons' },
 
       { name: 'Oil & gas', desc: 'Fixed and Open Path systems for hazardous environments' },
 
@@ -1776,7 +1776,7 @@
 
       { q: 'What is the delivery time?', a: 'Typically 3 to 6 weeks depending on model, stock and destination. Exact lead time is stated on the proforma. For urgent projects, available alternatives are proposed.' },
 
-      { q: 'Do I need SIL certification for my project?', a: 'For process safety (SIS) projects, the PQ series with SIL2/3 certification is suitable. Describe your project type so we recommend the correct model and certification level.' },
+      { q: 'Do I need SIL certification for my project?', a: 'For process safety (SIS) projects, the PQ series with SIL2 certification is suitable. Describe your project type so we recommend the correct model and certification level.' },
 
       { q: 'Is SafeVader a SIL or explosion-proof detector?', a: 'No. SafeVader is for indoor safe areas (labs, hospitals, HVAC, refrigerant and hydrogen rooms) with LCD, 4–20 mA, Modbus and onboard relays. Use the PQ series for Ex Zone 1/2 and SIS/SIL projects.' },
 
@@ -1832,7 +1832,7 @@
 
       { label: 'Uluslararası lojistik', desc: 'proje destinasyonuna satın alma, nakliye ve gümrük' },
 
-      { label: 'Sertifikasyon ve kalibrasyon', desc: 'SIL2/3 · M1 Maden · EN-50545-1 · TÜRKAK akredite kalibrasyon' }
+      { label: 'Sertifikasyon ve kalibrasyon', desc: 'SIL2 · M1 Maden · EN-50545-1 · TÜRKAK akredite kalibrasyon' }
 
     ],
 
@@ -1878,7 +1878,7 @@
 
         'Ölçüm noktası sayısı ve kontrol paneli ihtiyacı',
 
-        'Gerekli sertifika: SIL2/3 · M1 maden · EN-50545-1 otopark',
+        'Gerekli sertifika: SIL2 · M1 maden · EN-50545-1 otopark',
 
         'Teslimat şehri / ülkesi ve yaklaşık proje zamanı'
 
@@ -1890,7 +1890,7 @@
 
     quickSeries: [
 
-      { name: 'PQ Serisi', tag: 'SIL2/3', hint: 'Proses güvenliği · H2S / LEL / O2' },
+      { name: 'PQ Serisi', tag: 'SIL2', hint: 'Proses güvenliği · H2S / LEL / O2' },
 
       { name: 'SafeVader', tag: 'Emniyetli Alan', hint: 'Laboratuvar, HVAC, hidrojen odaları' },
 
@@ -1904,7 +1904,7 @@
 
       { title: 'PQD-7035 T1 C1 — Hidrokarbon', desc: 'PQ Serisi hidrokarbon gaz dedektörü — pellistor 0–100% LEL, OLED ekran, alüminyum gövde yaklaşık 2,6 kg', useCase: 'Petrol, gaz ve petrokimya — Ex Zone 1/2 · sensör 1 yıl, elektronik 2 yıl garanti', badge: '0–100% LEL' },
 
-      { title: 'PQ Serisi — SIL2 / SIL3', desc: 'En çok satan sabit dedektör — petrokimya ve rafineri proses güvenliği için SIL sertifikası', useCase: 'H2S, LEL, O2 — Ex ortam ve SIS projeleri', badge: 'SIL' },
+      { title: 'PQ Serisi — SIL2', desc: 'En çok satan sabit dedektör — petrokimya ve rafineri proses güvenliği için SIL sertifikası', useCase: 'H2S, LEL, O2 — Ex ortam ve SIS projeleri', badge: 'SIL' },
 
       { title: 'SafeVader Serisi', desc: 'İç mekân / emniyetli alan dedektörü — LCD, 4–20 mA + RS485 Modbus ve röle. Laboratuvar, hastane, HVAC, soğutucu gaz ve hidrojen odaları — Ex/SIL proses dedektörü değildir.', useCase: 'Ex olmayan iç mekân · laboratuvar, HVAC, hastane, akü odası', badge: 'Emniyetli Alan' },
 
@@ -1944,7 +1944,7 @@
 
     iranIndustries: [
 
-      { name: 'Petrokimya ve rafineri', desc: 'H2S, LEL, O2 ve hidrokarbon için SIL2/3 dedektörler' },
+      { name: 'Petrokimya ve rafineri', desc: 'H2S, LEL, O2 ve hidrokarbon için SIL2 dedektörler' },
 
       { name: 'Petrol ve gaz', desc: 'Tehlikeli ortamlar için sabit ve Open Path sistemler' },
 
@@ -2036,7 +2036,7 @@
 
       { q: 'Teslimat süresi ne kadar?', a: 'Genellikle modele, stoka ve destinasyona bağlı 3 ila 6 hafta. Kesin lead time proformada belirtilir. Acil projeler için mevcut alternatifler önerilir.' },
 
-      { q: 'Projem için SIL sertifikası gerekli mi?', a: 'Proses güvenliği (SIS) projeleri için SIL2/3 sertifikalı PQ serisi uygundur. Proje tipinizi belirtin; doğru model ve sertifikasyon seviyesini öneririz.' },
+      { q: 'Projem için SIL sertifikası gerekli mi?', a: 'Proses güvenliği (SIS) projeleri için SIL2 sertifikalı PQ serisi uygundur. Proje tipinizi belirtin; doğru model ve sertifikasyon seviyesini öneririz.' },
 
       { q: 'SafeVader SIL veya Ex-proof dedektör mü?', a: 'Hayır. SafeVader iç mekân emniyetli alan içindir (laboratuvar, hastane, HVAC, soğutucu gaz ve hidrojen odaları) — LCD, 4–20 mA, Modbus ve röle. Ex Zone 1/2 ve SIS/SIL için PQ serisini kullanın.' },
 
@@ -2070,7 +2070,7 @@
       { label: 'Оригинальный Prosense', desc: 'Прямые поставки из Prosense Turkey — действующий сертификат и серийный номер' },
       { label: 'Техконсультация', desc: 'Тип газа, диапазон и выбор модели — через WhatsApp из любой точки' },
       { label: 'Международная логистика', desc: 'Закупка, перевозка и таможня международно до объекта' },
-      { label: 'Сертификация и калибровка', desc: 'SIL2/3 · M1 Mining · EN-50545-1 · калибровка TÜRKAK' }
+      { label: 'Сертификация и калибровка', desc: 'SIL2 · M1 Mining · EN-50545-1 · калибровка TÜRKAK' }
     ],
     whyBuyFromUs: [
       { title: 'Правильный газ и модель', desc: '1000+ обнаруживаемых газов — если тип или диапазон неизвестны, опишите среду. Рекомендуем PQ, SafeVader, SOMA или PPS+.' },
@@ -2093,20 +2093,20 @@
         'Среда монтажа: Ex Zone 1/2 или безопасная зона · температура',
         'Требуемый выход: 4–20 мА · реле · HART · Modbus',
         'Число точек измерения и нужна ли панель управления',
-        'Сертификация: SIL2/3 · M1 mining · EN-50545-1 паркинг',
+        'Сертификация: SIL2 · M1 mining · EN-50545-1 паркинг',
         'Город / страна доставки и ориентировочные сроки проекта'
       ],
       tip: 'Если точная модель неизвестна — пришлите газ + среду, команда предложит вариант.'
     },
     quickSeries: [
-      { name: 'PQ Series', tag: 'SIL2/3', hint: 'Процессная безопасность · H2S / LEL / O2' },
+      { name: 'PQ Series', tag: 'SIL2', hint: 'Процессная безопасность · H2S / LEL / O2' },
       { name: 'SafeVader', tag: 'Safe Area', hint: 'Лаборатории, HVAC, водородные помещения' },
       { name: 'SOMA M1', tag: 'Mining', hint: 'Туннели и подземные рудники' },
       { name: 'PPS+', tag: 'EN-50545-1', hint: 'Закрытый паркинг CO / NO2' }
     ],
     highlights: [
       { title: 'PQD-7035 T1 C1 — углеводород', desc: 'Стационарный детектор углеводородов серии PQ — pellistor 0–100% LEL, OLED, алюминий ≈ 2,6 кг', useCase: 'Нефть, газ и нефтехимия — Ex Zone 1/2 · гарантия сенсора 1 год, электроники 2 года', badge: '0–100% LEL' },
-      { title: 'PQ Series — SIL2 / SIL3', desc: 'Бестселлер среди стационарных детекторов — SIL для нефтехимии и НПЗ', useCase: 'H2S, LEL, O2 — Ex-среда и проекты SIS', badge: 'SIL' },
+      { title: 'PQ Series — SIL2', desc: 'Бестселлер среди стационарных детекторов — SIL для нефтехимии и НПЗ', useCase: 'H2S, LEL, O2 — Ex-среда и проекты SIS', badge: 'SIL' },
       { title: 'SafeVader Series', desc: 'Детектор для безопасной зоны / помещений — LCD, 4–20 мА + RS485 Modbus и реле. Лаборатории, больницы, HVAC, хладагенты и водородные комнаты — это не Ex/SIL процессный детектор.', useCase: 'Не-Ex внутри помещений · лаборатории, HVAC, больницы, зарядные', badge: 'Safe Area' },
       { title: 'Marine & Offshore', desc: 'Морская сертификация — системы H2S и CH4 для судов и оффшора', useCase: 'Судостроение, оффшорные платформы, порты', badge: 'Marine' },
       { title: 'MPS™ Hydrocarbon', desc: 'Датчик MPS — высокая точность детектирования углеводородов', useCase: 'НПЗ, трубопроводы, резервуары', badge: 'MPS' },
@@ -2126,7 +2126,7 @@
       { title: 'Прочее оборудование', desc: 'Аксессуары, сирены, БП и Ex-оборудование' }
     ],
     iranIndustries: [
-      { name: 'Нефтехимия и НПЗ', desc: 'Детекторы SIL2/3 для H2S, LEL, O2 и углеводородов' },
+      { name: 'Нефтехимия и НПЗ', desc: 'Детекторы SIL2 для H2S, LEL, O2 и углеводородов' },
       { name: 'Нефть и газ', desc: 'Стационарные и Open Path системы для опасных сред' },
       { name: 'Добыча и туннели', desc: 'Серия SOMA с сертификатом M1 — CH4, CO и O2' },
       { name: 'Закрытый паркинг', desc: 'PPS+ по EN-50545-1 — CO и NO2' },
@@ -2172,7 +2172,7 @@
       { q: 'Как выбрать тип газа и модель?', a: 'Пришлите тип газа (H2S, CH4, CO, LEL и т.д.), среду монтажа (Ex Zone 1/2), диапазон и выход сигнала (4–20 мА, реле, HART) в WhatsApp. Команда рекомендует подходящую модель.' },
       { q: 'Можно запросить из-за рубежа?', a: 'Да — консультация и WhatsApp доступны инженерам и покупателям по всему миру. Пункт доставки и условия перевозки указываются в проформе.' },
       { q: 'Какой срок поставки?', a: 'Обычно 3–6 недель в зависимости от модели, склада и пункта назначения. Точный срок — в проформе. Для срочных проектов предлагаем доступные альтернативы.' },
-      { q: 'Нужна ли сертификация SIL?', a: 'Для проектов процессной безопасности (SIS) подходит серия PQ с SIL2/3. Опишите тип проекта — подберём модель и уровень сертификации.' },
+      { q: 'Нужна ли сертификация SIL?', a: 'Для проектов процессной безопасности (SIS) подходит серия PQ с SIL2. Опишите тип проекта — подберём модель и уровень сертификации.' },
       { q: 'SafeVader — это SIL или Ex-детектор?', a: 'Нет. SafeVader для безопасных помещений (лаборатории, больницы, HVAC, хладагенты и водородные комнаты) — LCD, 4–20 мА, Modbus и реле. Для Zone 1/2 и SIS/SIL используйте серию PQ.' },
       { q: 'Можно заказать калибровочные баллоны и test gas?', a: 'Да — баллоны Prosense Span/Test, смешанные газы и регуляторы. Также координируем калибровку TÜRKAK в Турции.' },
       { q: 'Поставляете панели и ПО?', a: 'Да — панели S-DP4–S-DPX128, ПО S-MCX и полные системы PPS+ для паркингов — как интегрированный пакет.' }
@@ -2200,7 +2200,7 @@
       { label: 'منتج Prosense أصلي', desc: 'توريد مباشر من Prosense تركيا — شهادة سارية ورقم تسلسلي' },
       { label: 'استشارة فنية', desc: 'نوع الغاز والمدى واختيار الموديل — عبر واتساب من أي مكان' },
       { label: 'لوجستيات دولية', desc: 'شراء وشحن وجمارك دوليًا إلى موقع مشروعك' },
-      { label: 'شهادة ومعايرة', desc: 'SIL2/3 · M1 Mining · EN-50545-1 · معايرة TÜRKAK' }
+      { label: 'شهادة ومعايرة', desc: 'SIL2 · M1 Mining · EN-50545-1 · معايرة TÜRKAK' }
     ],
     whyBuyFromUs: [
       { title: 'اختيار الغاز والموديل الصحيح', desc: 'أكثر من 1000 غاز قابل للكشف — إن لم تعرف النوع أو المدى، صف البيئة. نقترح PQ أو SafeVader أو SOMA أو PPS+.' },
@@ -2223,20 +2223,20 @@
         'بيئة التركيب: Ex Zone 1/2 أو منطقة آمنة · درجة الحرارة',
         'مخرج الإشارة المطلوب: 4–20 mA · ريليه · HART · Modbus',
         'عدد نقاط القياس وهل تحتاج لوحة تحكم',
-        'الشهادة المطلوبة: SIL2/3 · M1 تعدين · EN-50545-1 مواقف',
+        'الشهادة المطلوبة: SIL2 · M1 تعدين · EN-50545-1 مواقف',
         'مدينة / بلد التسليم والتوقيت التقريبي للمشروع'
       ],
       tip: 'إذا لم تعرف الموديل الدقيق، أرسل الغاز + البيئة — فريقنا الفني يقترح.'
     },
     quickSeries: [
-      { name: 'PQ Series', tag: 'SIL2/3', hint: 'سلامة العملية · H2S / LEL / O2' },
+      { name: 'PQ Series', tag: 'SIL2', hint: 'سلامة العملية · H2S / LEL / O2' },
       { name: 'SafeVader', tag: 'منطقة آمنة', hint: 'مختبرات وHVAC وغرف هيدروجين' },
       { name: 'SOMA M1', tag: 'Mining', hint: 'أنفاق ومناجم تحت الأرض' },
       { name: 'PPS+', tag: 'EN-50545-1', hint: 'مواقف مغلقة CO / NO2' }
     ],
     highlights: [
       { title: 'PQD-7035 T1 C1 — هيدروكربون', desc: 'كاشف هيدروكربون ثابت من سلسلة PQ — pellistor 0–100% LEL وشاشة OLED وهيكل ألومنيوم نحو 2.6 كغ', useCase: 'نفط وغاز وبتروكيماويات — Ex Zone 1/2 · ضمان الحساس سنة والإلكترونيات سنتان', badge: '0–100% LEL' },
-      { title: 'PQ Series — SIL2 / SIL3', desc: 'الأكثر مبيعاً بين الكواشف الثابتة — شهادة SIL للبتروكيماويات والمصافي', useCase: 'H2S، LEL، O2 — بيئة Ex ومشاريع SIS', badge: 'SIL' },
+      { title: 'PQ Series — SIL2', desc: 'الأكثر مبيعاً بين الكواشف الثابتة — شهادة SIL للبتروكيماويات والمصافي', useCase: 'H2S، LEL، O2 — بيئة Ex ومشاريع SIS', badge: 'SIL' },
       { title: 'SafeVader Series', desc: 'كاشف للمنطقة الآمنة الداخلية — LCD ومخرج 4–20 mA وModbus وريليه. للمختبرات والمستشفيات وHVAC وغازات التبريد وغرف الهيدروجين — ليس كاشف Ex/SIL للعملية.', useCase: 'مناطق داخلية غير Ex · مختبرات وHVAC ومستشفيات وشحن بطاريات', badge: 'منطقة آمنة' },
       { title: 'Marine & Offshore', desc: 'شهادة بحرية — أنظمة H2S وCH4 للسفن والمنصات', useCase: 'بناء سفن ومنصات بحرية وموانئ', badge: 'Marine' },
       { title: 'MPS™ Hydrocarbon', desc: 'حساس MPS — دقة عالية في كشف الهيدروكربونات', useCase: 'مصفاة وأنابيب وخزانات', badge: 'MPS' },
@@ -2256,7 +2256,7 @@
       { title: 'معدات أخرى', desc: 'ملحقات وصفارات وتغذية ومعدات Ex' }
     ],
     iranIndustries: [
-      { name: 'بتروكيماويات وتكرير', desc: 'كواشف SIL2/3 لـ H2S وLEL وO2 والهيدروكربونات' },
+      { name: 'بتروكيماويات وتكرير', desc: 'كواشف SIL2 لـ H2S وLEL وO2 والهيدروكربونات' },
       { name: 'نفط وغاز', desc: 'أنظمة ثابتة وOpen Path للبيئات الخطرة' },
       { name: 'تعدين وأنفاق', desc: 'سلسلة SOMA بشهادة M1 — CH4 وCO وO2' },
       { name: 'مواقف مغلقة', desc: 'PPS+ وفق EN-50545-1 — CO وNO2' },
@@ -2302,7 +2302,7 @@
       { q: 'كيف أختار نوع الغاز والموديل؟', a: 'أرسل نوع الغاز الخطِر (H2S، CH4، CO، LEL…) وبيئة التركيب (Ex Zone 1/2) ومدى القياس ومخرج الإشارة (4–20 mA، ريليه، HART) عبر واتساب. فريقنا الفني يقترح الموديل المناسب.' },
       { q: 'هل يمكن الاستعلام من خارج إيران؟', a: 'نعم — الاستشارة وواتساب متاحان للمهندسين والمشترين حول العالم. وجهة التسليم وشروط الشحن تُضبط في الفاتورة المبدئية.' },
       { q: 'ما مدة التسليم؟', a: 'عادة 3 إلى 6 أسابيع حسب الموديل والمخزون والوجهة. المدة الدقيقة تُذكر في الفاتورة. للمشاريع العاجلة نقترح بدائل متاحة.' },
-      { q: 'هل أحتاج شهادة SIL لمشروعي؟', a: 'لمشاريع سلامة العملية (SIS) تناسب سلسلة PQ بشهادة SIL2/3. صف نوع مشروعك لنوصي بالموديل ومستوى الشهادة الصحيح.' },
+      { q: 'هل أحتاج شهادة SIL لمشروعي؟', a: 'لمشاريع سلامة العملية (SIS) تناسب سلسلة PQ بشهادة SIL2. صف نوع مشروعك لنوصي بالموديل ومستوى الشهادة الصحيح.' },
       { q: 'هل SafeVader كاشف SIL أو مقاوم للانفجار؟', a: 'لا. SafeVader للمناطق الآمنة الداخلية (مختبرات ومستشفيات وHVAC وغازات تبريد وغرف هيدروجين) مع LCD و4–20 mA وModbus وريليه. لمناطق Ex Zone 1/2 ومشاريع SIS استخدم سلسلة PQ.' },
       { q: 'هل يمكن توريد أسطوانات معايرة وغاز اختبار؟', a: 'نعم — أسطوانات Prosense Span/Test وغاز مختلط ومنظمات معايرة متاحة. ويمكن تنسيق خدمات معايرة TÜRKAK في تركيا.' },
       { q: 'هل تورّدون لوحات تحكم وبرمجيات؟', a: 'نعم — لوحات S-DP4 إلى S-DPX128 وبرمجيات S-MCX وأنظمة PPS+ كاملة للمواقف كحزمة متكاملة.' }
@@ -3794,7 +3794,7 @@
     brand: {
       heroEyebrow: 'محركات Gamak للسعودية والعراق ولبنان وسوريا',
       heroHeadline: 'شراء محرك كهربائي صناعي Gamak',
-      heroHeadlineSub: 'ثلاثي الطور وأحادي الطور · IE2 وIE3 وIE4 · من 0.06 إلى 4000 كيلوواط · توريد إلى الخليج وبلاد الشام',
+      heroHeadlineSub: 'الجهد المنخفض ثلاثي الطور حتى 3000 كيلوواط؛ الجهد المتوسط من 150 إلى 4000 · IE2 وIE3 وIE4',
       tagline: 'Power to Energize Life',
       since: 'منذ ١٩٦١ · إزمير',
       description: 'تورد مجموعة Bizdavar محركات Gamak الأصلية من إزمير في تركيا إلى المصانع والمقاولين في السعودية والعراق ولبنان وسوريا والإمارات والأردن والكويت وقطر. نحدد القدرة والسرعة والشفة (B3 أو B5 أو B35) وفئة الكفاءة، ثم نرسل فاتورة أولية. للطلب عبر واتساب أو الاتصال: +90 501 067 6486.',
@@ -3883,7 +3883,7 @@
       { q: 'هل تتوفر محركات مقاومة للانفجار ومحركات شفط الدخان؟', a: 'نعم. محركات مقاومة للانفجار، ومحركات شفط الدخان، ومحركات الكسارات متوفرة من كتالوج Gamak للمناطق الخطرة ولسلامة المباني.' },
       { q: 'هل تتوفر محركات الجهد المتوسط؟', a: 'نعم. محركات Gamak متوسطة الجهد تعمل من 150 إلى 4000 كيلوواط، بإطارات من 315 إلى 630، للمراوح والمضخات والضواغط الكبيرة.' }
     ],
-    inquiryTemplate: 'مرحباً، أريد عرض سعر لـ {product} من Gamak.\n\nالقدرة kW / السرعة rpm:\nالشفة B3/B5/B35:\nالجهد:\nالكمية:\nبلد التسليم:\n'
+    inquiryTemplate: 'مرحباً، أريد عرض سعر لـ {product} من Gamak.\n\nالقدرة kW / السرعة rpm:\nتثبيت B3 (قاعدة) أو شفة B5/B35:\nالجهد:\nالكمية:\nبلد التسليم:\n'
   };
 
   if (window.BIZDAVAR_LOCALES) {

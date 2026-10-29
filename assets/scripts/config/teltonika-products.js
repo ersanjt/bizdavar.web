@@ -96,7 +96,7 @@
       },
       {
         q: 'کدام سری برای ناوگان معمولی کافی است؟',
-        a: 'برای ردیابی پایه FMB920 (Basic) پرفروش‌ترین مدل است — قیمت پایه از ۲۹ دلار. برای CAN، tachograph یا IP67 — سری Advanced یا Professional (FMC650، FMB225) مناسب‌تر است.'
+        a: 'برای ردیابی پایه FMB920 پرفروش‌ترین مدل است. ۲۹ دلار بهای پایه خود دستگاه است؛ سیم‌کارت، پلتفرم و حمل تا ایران جدا در پیش‌فاکتور می‌آید. برای CAN، tachograph یا IP67 سری Advanced یا Professional مناسب‌تر است.'
       },
       {
         q: 'Fleet Telematics Platform (FTC/FTM) چیست؟',
@@ -122,7 +122,7 @@
       {
         title: 'FMB920 — پرفروش‌ترین ردیاب 2G',
         titleTr: 'FMB920 Basic Tracker',
-        desc: 'بیش از ۳ میلیون واحد فروش — ردیابی پایه، ضد سرقت و Green Driving',
+        desc: 'بیش از ۳ میلیون واحد فروش — ردیابی پایه. ۲۹ دلار بهای پایه خود دستگاه است؛ سیم‌کارت، پلتفرم و حمل تا ایران جدا در پیش‌فاکتور می‌آید.',
         useCaseFa: 'ناوگان سبک، ضد سرقت، ردیابی پایه',
         badge: 'پرفروش',
         inquiryName: 'FMB920',
@@ -214,7 +214,7 @@
         icon: 'globe',
         image: `${cat}/basic.png`,
         imageAlt: 'Teltonika Basic GPS trackers — FMB920 series',
-        desc: 'ردیابی ساده و مقرون‌به‌صرفه — FMB920 پرفروش‌ترین مدل جهان، قیمت پایه از ۲۹ دلار',
+        desc: 'ردیابی ساده — FMB920 از ۲۹ دلار بهای پایه دستگاه، بدون سیم‌کارت و حمل',
         series: series(
           ['FMB900', 'FMB910', 'FMB920', 'FMC920', 'FMM920', 'FMB930', 'FMB965', 'FTC920', 'FTC921', 'FTC924', 'FTC927', 'FTC961', 'FTC965'],
           'Basic / Fleet Telematics',

@@ -9,7 +9,7 @@ bizdavarPageInit(function () {
       injectBreadcrumbSchema(crumbs);
       renderGeoStrip('geoStrip', {
         textKey: 'shopPage.geoText',
-        text: 'متجر بيزدوار بأسعار درهم الإمارات — سلع صناعية وأدوات قياس وإلكترونيات.'
+        text: 'متجر درهم بيزدوار — لا أصناف حالياً. السعر يُكتب فقط للصنف المسجّل.'
       });
       renderRelatedLinks([
         { title: 'المنتجات', url: 'products', desc: 'علامات بيزدوار' },

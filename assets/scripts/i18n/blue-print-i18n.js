@@ -12,6 +12,7 @@
     L.home.intentBluePrint = (pages[lang] && pages[lang].intent) || 'Blue Print';
     L.footer = L.footer || {};
     L.footer.bluePrintParts = lang === 'fa' ? 'قطعات Blue Print' : lang === 'ru' ? 'Детали Blue Print' : lang === 'tr' ? 'Blue Print parçaları' : lang === 'ar' ? 'قطع Blue Print' : 'Blue Print parts';
+    L.footer.bluePrintAll = lang === 'fa' ? 'همه قطعات' : lang === 'ru' ? 'Все детали' : lang === 'tr' ? 'Tüm parçalar' : lang === 'ar' ? 'كل القطع' : 'All parts';
     L.pages = L.pages || {};
     L.pages.bluePrint = Object.assign({ crumb: 'Blue Print' }, seo[lang] || {}, {
       seoTitle: seo[lang].title,

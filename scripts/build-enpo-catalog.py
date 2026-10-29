@@ -908,7 +908,7 @@ def page_html(loc, hero_src, jumps, faq_ld):
   <script src="/assets/scripts/gtm-boot.js?v=20260910c" defer></script>
 <script src="/assets/scripts/i18n/locale-url.js?v=20260910c" defer></script>
   <script src="/assets/scripts/i18n/seo-head.js?v=20260910c" defer></script>
-<script src="/assets/scripts/i18n/locale-preload.js?v=20260910c" defer></script>
+<script src="/assets/scripts/i18n/locale-preload.js?v=20261028j" defer></script>
 <meta name="view-transition" content="same-origin">
   <title>{html.escape(loc['title'])}</title>
   <link rel="icon" href="/assets/images/brand/favicon.svg" type="image/svg+xml">
