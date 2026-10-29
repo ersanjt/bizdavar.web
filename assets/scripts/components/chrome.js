@@ -143,7 +143,14 @@
     return items.map(item => `<li><a href="${item.href}">${item.label}</a></li>`).join('');
   }
 
+  function isBluePrintPage() {
+    if (document.body.classList.contains('bp-page')) return true;
+    if (currentPage === 'blue-print') return true;
+    return /\/blue-print(\/|$)/.test(location.pathname);
+  }
+
   function bluePrintFooterHtml() {
+    if (!isBluePrintPage()) return '';
     const tab = window.BLUE_PRINT_NAV && window.BLUE_PRINT_NAV.tab;
     const groups = tab && tab.groups;
     if (!groups || !groups.length) return '';
@@ -194,10 +201,22 @@
   function getProductNavConfig() {
     const cfg = C.productNav || { overviewRoute: 'products', tabs: [], footer: [] };
     const extra = window.BLUE_PRINT_NAV && window.BLUE_PRINT_NAV.tab;
-    if (extra && !(cfg.tabs || []).some(tab => tab.id === 'blueprint')) {
-      cfg.tabs = (cfg.tabs || []).concat([extra]);
+    const brands = (cfg.tabs || []).find(tab => tab.id === 'brands');
+    if (extra && brands) {
+      (brands.groups || []).forEach(group => {
+        (group.items || []).forEach(item => {
+          if (item.page === 'blue-print' && !item.submenu) item.submenu = extra.groups || [];
+        });
+      });
     }
     return cfg;
+  }
+
+  function visitNavItem(item, visitor) {
+    visitor(item);
+    (item.submenu || []).forEach(group => {
+      (group.items || []).forEach(child => visitor(child));
+    });
   }
 
   function walkProductNavItems(visitor) {
@@ -205,7 +224,7 @@
     if (cfg.featured) visitor(cfg.featured);
     (cfg.tabs || []).forEach(tab => {
       (tab.groups || []).forEach(group => {
-        (group.items || []).forEach(visitor);
+        (group.items || []).forEach(item => visitNavItem(item, visitor));
       });
     });
     (cfg.footer || []).forEach(visitor);
@@ -231,6 +250,11 @@
       for (const group of tab.groups || []) {
         for (const item of group.items || []) {
           if (item.page && item.page === currentPage && !item.cat) return tab.id;
+          for (const sub of item.submenu || []) {
+            for (const child of sub.items || []) {
+              if (child.page && child.page === currentPage) return tab.id;
+            }
+          }
         }
       }
     }
@@ -291,14 +315,44 @@
     </a>`;
   }
 
+  function productNavItemHtml(item) {
+    const link = productNavLinkHtml(item);
+    if (!item.submenu || !item.submenu.length) return link;
+    const open = isBluePrintPage();
+    return `<div class="nav__product-branch">
+      ${link}
+      <button type="button" class="nav__product-branch__toggle" data-submenu-open aria-expanded="${open ? 'true' : 'false'}" aria-label="${t('nav.bpCategories', 'دسته‌ها')}">
+        <span>${t('nav.bpCategories', 'دسته‌ها')}</span>
+        <span class="nav__chev" aria-hidden="true"></span>
+      </button>
+    </div>`;
+  }
+
   function productNavGroupsHtml(groups, dense) {
     const gridClass = dense ? 'nav__product-mega__groups nav__product-mega__groups--dense' : 'nav__product-mega__groups';
     return `<div class="${gridClass}">${(groups || []).map(group => `
       <div class="nav__product-group">
         <p class="nav__product-group-title">${t(group.labelKey, group.id)}</p>
-        ${(group.items || []).map(productNavLinkHtml).join('')}
+        ${(group.items || []).map(productNavItemHtml).join('')}
       </div>
     `).join('')}</div>`;
+  }
+
+  function productNavSubmenuHtml(tab) {
+    let source = null;
+    (tab.groups || []).forEach(group => {
+      (group.items || []).forEach(item => {
+        if (!source && item.submenu && item.submenu.length) source = item;
+      });
+    });
+    if (!source) return '';
+    const open = isBluePrintPage();
+    const label = source.labelKey ? t(source.labelKey, source.label || '') : (source.label || '');
+    return `<div class="nav__product-submenu" data-product-submenu${open ? '' : ' hidden'}>
+      <button type="button" class="nav__product-submenu__back" data-submenu-back>${t('nav.tabBrands', 'تامین برند')}</button>
+      <p class="nav__product-submenu__title">${label}</p>
+      ${productNavGroupsHtml(source.submenu, true)}
+    </div>`;
   }
 
   function productNavTabPanelHtml(tab, isActive) {
@@ -308,8 +362,11 @@
           ${tab.cta.descKey ? `<span class="nav__product-tab-cta__desc">${t(tab.cta.descKey, '')}</span>` : ''}
         </a>`
       : '';
+    const submenu = productNavSubmenuHtml(tab);
+    const hostHidden = submenu && isBluePrintPage() ? ' hidden' : '';
     return `<div class="nav__product-panel${isActive ? ' is-active' : ''}" data-product-panel="${tab.id}" role="tabpanel"${isActive ? '' : ' hidden'}>
-      ${productNavGroupsHtml(tab.groups, tab.id === 'brands')}
+      <div class="nav__product-branch-host"${hostHidden}>${productNavGroupsHtml(tab.groups, tab.id === 'brands')}</div>
+      ${submenu}
       ${cta}
     </div>`;
   }
@@ -493,10 +550,25 @@
             const itemActive = currentPage === item.page && !item.cat ? ' active' : '';
             const itemLabel = item.labelKey ? t(item.labelKey, item.label || '') : (item.label || '');
             const desc = item.descKey ? t(item.descKey, '') : '';
-            return `<a href="${href}" class="mobile-drawer__product-link${itemActive}"${productNavLinkAttrs(item, href)}>
+            const link = `<a href="${href}" class="mobile-drawer__product-link${itemActive}"${productNavLinkAttrs(item, href)}>
               <span>${itemLabel}</span>
               ${desc ? `<small>${desc}</small>` : ''}
             </a>`;
+            if (!item.submenu || !item.submenu.length) return link;
+            const nested = item.submenu.map(sub => `
+              <div class="mobile-drawer__product-group">
+                <p class="mobile-drawer__product-heading">${t(sub.labelKey, sub.id)}</p>
+                ${(sub.items || []).map(child => {
+                  const childHref = productNavHref(child);
+                  const childLabel = child.labelKey ? t(child.labelKey, child.label || '') : (child.label || '');
+                  const childActive = currentPage === child.page ? ' active' : '';
+                  return `<a href="${childHref}" class="mobile-drawer__product-link${childActive}">${childLabel}</a>`;
+                }).join('')}
+              </div>`).join('');
+            return `${link}<details class="mobile-drawer__product-sub"${isBluePrintPage() ? ' open' : ''}>
+              <summary>${t('nav.bpCategories', 'دسته‌ها')}</summary>
+              ${nested}
+            </details>`;
           }).join('')}
         </div>
       `).join('');
@@ -537,6 +609,34 @@
     root.querySelectorAll('[data-product-mega]').forEach(mega => {
       const tabs = mega.querySelectorAll('[data-product-tab]');
       const panels = mega.querySelectorAll('[data-product-panel]');
+      mega.querySelectorAll('[data-submenu-open]').forEach(btn => {
+        btn.addEventListener('click', e => {
+          e.preventDefault();
+          e.stopPropagation();
+          const panel = btn.closest('[data-product-panel]');
+          if (!panel) return;
+          const host = panel.querySelector('.nav__product-branch-host');
+          const sub = panel.querySelector('[data-product-submenu]');
+          if (host) host.hidden = true;
+          if (sub) sub.hidden = false;
+          btn.setAttribute('aria-expanded', 'true');
+        });
+      });
+      mega.querySelectorAll('[data-submenu-back]').forEach(btn => {
+        btn.addEventListener('click', e => {
+          e.preventDefault();
+          e.stopPropagation();
+          const panel = btn.closest('[data-product-panel]');
+          if (!panel) return;
+          const host = panel.querySelector('.nav__product-branch-host');
+          const sub = panel.querySelector('[data-product-submenu]');
+          if (host) host.hidden = false;
+          if (sub) sub.hidden = true;
+          panel.querySelectorAll('[data-submenu-open]').forEach(toggle => {
+            toggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      });
       tabs.forEach(btn => {
         btn.addEventListener('click', e => {
           e.preventDefault();
@@ -571,6 +671,21 @@
       });
     });
     bindProductMegaTabs(root);
+    if (bindNavDropdowns.outsideBound) return;
+    bindNavDropdowns.outsideBound = true;
+    document.addEventListener('pointerdown', event => {
+      const target = event.target;
+      if (!(target instanceof Node)) return;
+      document.querySelectorAll('[data-nav-dropdown][open]').forEach(dropdown => {
+        if (!dropdown.contains(target)) dropdown.open = false;
+      });
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key !== 'Escape') return;
+      document.querySelectorAll('[data-nav-dropdown][open]').forEach(dropdown => {
+        dropdown.open = false;
+      });
+    });
   }
 
 

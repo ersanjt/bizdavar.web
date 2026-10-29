@@ -8,6 +8,7 @@
     var L = window.BIZDAVAR_LOCALES[lang];
     if (!L) return;
     L.nav = Object.assign(L.nav || {}, nav[lang] || {});
+    L.nav.bpCategories = lang === 'fa' ? 'دسته‌ها' : lang === 'ru' ? 'Категории' : lang === 'tr' ? 'Kategoriler' : lang === 'ar' ? 'الفئات' : 'Categories';
     L.home = L.home || {};
     L.home.intentBluePrint = (pages[lang] && pages[lang].intent) || 'Blue Print';
     L.footer = L.footer || {};
