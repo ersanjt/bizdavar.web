@@ -38,6 +38,9 @@
     if (/^(https?:|mailto:|tel:|#)/.test(relativeFromRoot)) return relativeFromRoot;
     const clean = relativeFromRoot.replace(/^\//, '');
     if (clean.startsWith('assets/') || clean.startsWith('media/')) return window.resolveAssetPath(clean);
+    if (clean.includes('?') && typeof window.resolvePagePath === 'function') {
+      return window.resolvePagePath(relativeFromRoot);
+    }
     const joined = root + clean;
     return prettifyInternalPath(joined);
   };
@@ -51,9 +54,12 @@
     const hashIdx = href.indexOf('#');
     const hash = hashIdx >= 0 ? href.slice(hashIdx) : '';
     let pathPart = (hashIdx >= 0 ? href.slice(0, hashIdx) : href).replace(/^\//, '').replace(/^(?:\.\.?\/)+/, '');
+    const queryIdx = pathPart.indexOf('?');
+    const query = queryIdx >= 0 ? pathPart.slice(queryIdx) : '';
+    if (queryIdx >= 0) pathPart = pathPart.slice(0, queryIdx);
 
     // Strip existing locale prefix so we never double-prefix (/ru/pages/x → pages/x)
-    const locMatch = pathPart.match(/^(tr|en|ru|ar)(?:\/(.*))?$/);
+    const locMatch = pathPart.match(/^(tr|en|ru|ar|de)(?:\/(.*))?$/);
     if (locMatch) {
       pathPart = locMatch[2] || '';
     }
@@ -86,7 +92,7 @@
         : (hash ? '/' + hash : '/');
     }
 
-    const base = '/' + pathPart + hash;
+    const base = '/' + pathPart + query + hash;
     const locale = window.BIZDAVAR_LOCALE_URL?.currentLocale?.() || 'fa';
     return window.BIZDAVAR_LOCALE_URL
       ? window.BIZDAVAR_LOCALE_URL.toLocalePath(locale, base)
@@ -100,7 +106,7 @@
       // Absolute site pages (/pages/contact) — apply locale prefix
       if (href.startsWith('/')) {
         if (/^\/assets\//.test(href)) return;
-        if (/^\/(pages\/|tr\/|en\/|ru\/|ar\/|$)/.test(href) || href === '/') {
+        if (/^\/(pages\/|tr\/|en\/|ru\/|ar\/|de\/|$)/.test(href) || href === '/') {
           el.setAttribute('href', window.resolvePagePath(href));
         }
         return;

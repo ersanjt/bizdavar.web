@@ -19,7 +19,14 @@
   ];
 
   function getLangOptions() {
-    return LANG_OPTIONS.map(l => ({
+    const options = [];
+    LANG_OPTIONS.forEach(function (l) {
+      options.push(l);
+      if (l.id === 'en' && document.body?.dataset?.page === 'fast') {
+        options.push({ id: 'de', labelKey: 'common.langDe', fallback: 'Deutsch', badge: 'DE' });
+      }
+    });
+    return options.map(l => ({
       id: l.id,
       label: t(l.labelKey, l.fallback),
       badge: l.badge

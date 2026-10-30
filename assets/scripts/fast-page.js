@@ -30,7 +30,20 @@
   }
 
   function planMessage(planId) {
-    return (C.fast && C.fast.planMessages && C.fast.planMessages[planId]) || `سلام، می‌خوام پلن ${planId} Fast Web Studio سفارش بدم`;
+    const loc = document.documentElement.lang || 'fa';
+    if (loc === 'fa') {
+      return (C.fast && C.fast.planMessages && C.fast.planMessages[planId]) || `سلام، می‌خوام پلن ${planId} Fast Web Studio سفارش بدم`;
+    }
+    const names = { basic: 'Basic', store: 'Store', pro: 'Pro' };
+    const name = names[planId] || planId;
+    const messages = {
+      en: `Hello, I want to order the Fast Web Studio ${name} plan.`,
+      tr: `Merhaba, Fast Web Studio ${name} planını sipariş etmek istiyorum.`,
+      ru: `Здравствуйте, хочу заказать план ${name} Fast Web Studio.`,
+      ar: `مرحبا، أريد طلب خطة ${name} من Fast Web Studio.`,
+      de: `Guten Tag, ich möchte eine Website auf Deutsch bestellen. Plan: ${name}. Bitte mit Rechnung in Euro.`
+    };
+    return messages[loc] || messages.en;
   }
 
   function contactUrl(planId) {
@@ -114,7 +127,7 @@
     const heroSrc = path(b.heroImage || 'assets/images/content/fast-hero.svg?v=20260901d');
     el.innerHTML = `
       <div class="fast-hero__content">
-        <a href="${path('pages/fast.html')}" class="fast-hero__brand">
+        <a href="${window.resolvePagePath ? window.resolvePagePath('pages/fast.html') : path('pages/fast.html')}" class="fast-hero__brand">
           <span class="fast-hero__logo-icon" aria-hidden="true">&lt;/&gt;</span>
           <span>${b.name}</span>
         </a>
@@ -652,8 +665,8 @@
       name: 'Fast Web Studio',
       description: data.description || fb.description,
       url: 'pages/fast',
-      areaServed: ['IR', 'TR', 'AM', 'AE', 'DE'],
-      offers: (data.offers || fb.offers).map((o) => ({ ...o, currency: 'USD' }))
+      areaServed: data.areaServed || ['IR', 'TR', 'AM', 'AE', 'DE'],
+      offers: (data.offers || fb.offers).map((o) => ({ ...o, currency: o.currency || data.currency || 'USD' }))
     });
   };
 })();

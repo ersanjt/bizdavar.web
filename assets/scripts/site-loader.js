@@ -71,7 +71,7 @@
   if (!el) return;
 
   var BASE = '/assets/scripts/';
-  var ASSET_VER = '20261030a';
+  var ASSET_VER = '20261030d';
 
   // Inline page boots run before deferred chain scripts; queue until bootstrap.js.
   window.bizdavarPageInit = window.bizdavarPageInit || function (fn) {
@@ -104,7 +104,7 @@
     var path = '';
     try { path = String(location.pathname || ''); } catch (_) {}
     var first = path.replace(/^\/+/, '').split('/')[0];
-    if (first === 'tr' || first === 'en' || first === 'ru' || first === 'ar') return first;
+    if (first === 'tr' || first === 'en' || first === 'ru' || first === 'ar' || first === 'de') return first;
     return '';
   }
   var loc = (window.BIZDAVAR_LOCALE_URL && window.BIZDAVAR_LOCALE_URL.currentLocale)

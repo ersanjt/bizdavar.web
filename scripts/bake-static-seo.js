@@ -764,6 +764,12 @@ function hreflangLinks(route) {
       ['ar-AE', LOCALES[4]],
       ['x-default', LOCALES[0]]
     ];
+  if (route === '/pages/fast') {
+    const de = { prefix: '/de', code: 'de' };
+    ['de-DE', 'de-AT', 'de-CH'].forEach((tag) => {
+      tags.splice(tags.length - 1, 0, [tag, de]);
+    });
+  }
   if (route === '/pages/gamak') {
     const ar = LOCALES[4];
     ['ar', 'ar-SA', 'ar-IQ', 'ar-LB', 'ar-SY', 'ar-JO'].forEach((tag) => {

@@ -6,8 +6,8 @@
   var VALID = { fa: 1, tr: 1, en: 1, ru: 1, ar: 1 };
   var valid = function (l) { return !!VALID[l]; };
   var LU = window.BIZDAVAR_LOCALE_URL;
-  var OG_LOCALE = { fa: 'fa_IR', tr: 'tr_TR', en: 'en_US', ru: 'ru_RU', ar: 'ar_AE' };
-  var SCHEMA_LANG = { fa: 'fa-IR', tr: 'tr-TR', en: 'en-US', ru: 'ru-RU', ar: 'ar-AE' };
+  var OG_LOCALE = { fa: 'fa_IR', tr: 'tr_TR', en: 'en_US', ru: 'ru_RU', ar: 'ar_AE', de: 'de_DE' };
+  var SCHEMA_LANG = { fa: 'fa-IR', tr: 'tr-TR', en: 'en-US', ru: 'ru-RU', ar: 'ar-AE', de: 'de-DE' };
   var OG_ALTERNATES = ['fa_IR', 'tr_TR', 'en_US', 'ru_RU', 'ar_AE'];
 
   function hintFromNavigator() {
@@ -42,12 +42,14 @@
     el.setAttribute('content', content);
   }
 
-  function setOgLocaleAlternates(lang) {
+  function setOgLocaleAlternates(lang, pagePath) {
     document.querySelectorAll('meta[property="og:locale:alternate"]').forEach(function (el) {
       el.parentNode.removeChild(el);
     });
     var current = OG_LOCALE[lang] || OG_LOCALE.fa;
-    OG_ALTERNATES.forEach(function (tag) {
+    var tags = OG_ALTERNATES.slice();
+    if (pagePath === '/pages/fast') tags.push('de_DE');
+    tags.forEach(function (tag) {
       if (tag === current) return;
       var el = document.createElement('meta');
       el.setAttribute('property', 'og:locale:alternate');
@@ -104,7 +106,7 @@
     setOg('og:image:alt', meta.title || site.siteName);
     setOg('og:site_name', site.siteName);
     setOg('og:locale', OG_LOCALE[lang] || OG_LOCALE.fa);
-    setOgLocaleAlternates(lang);
+    setOgLocaleAlternates(lang, pagePath);
 
     setMeta('twitter:card', site.twitterCard);
     setMeta('twitter:title', meta.title);

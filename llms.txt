@@ -2,6 +2,7 @@
 
 > English websites and ads for US & EU (invoiced USD or EUR, from $99 / ~€90), owned products, and industrial supply to Iran and Russia (VEGA, Prosense, Liqui Moly, Blue Print) since 2013.
 > Persian is the default (x-default). English, Turkish, Russian and Arabic are full locales.
+> German Fast page: [Website erstellen lassen](https://bizdavar.com/de/pages/fast)
 > US/EU web: [Fast Studio](https://bizdavar.com/en/pages/fast) and [Services](https://bizdavar.com/en/pages/services)
 > Official site: [bizdavar.com](https://bizdavar.com/)
 
@@ -89,6 +90,7 @@
 - [English](https://bizdavar.com/en/pages/fast)
 - [Russian](https://bizdavar.com/ru/pages/fast)
 - [Arabic](https://bizdavar.com/ar/pages/fast)
+- [German](https://bizdavar.com/de/pages/fast)
 
 ### /pages/speed-test
 - [Persian](https://bizdavar.com/pages/speed-test)

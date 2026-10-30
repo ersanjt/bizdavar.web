@@ -1,12 +1,13 @@
 /**
  * Locale URL helpers — fa at root; tr/en/ru/ar under /tr/ /en/ /ru/ /ar/
- * Primary: fa (Persian) · Secondary: tr · Then: en, ru, ar
+ * German exists only for /pages/fast (/de/pages/fast). Other German links fall back to English.
+ * Primary: fa (Persian) · Secondary: tr · Then: en, ru, ar, de (fast only)
  */
 (function () {
   var BASE = 'https://bizdavar.com';
   var DEFAULT = 'fa';
-  var PREFIXED = { tr: true, en: true, ru: true, ar: true };
-  var LOCALES = ['fa', 'tr', 'en', 'ru', 'ar'];
+  var PREFIXED = { tr: true, en: true, ru: true, ar: true, de: true };
+  var LOCALES = ['fa', 'tr', 'en', 'ru', 'ar', 'de'];
 
   function splitPath(pathname) {
     var p = pathname || '/';
@@ -55,7 +56,18 @@
     return '/' + part + hash;
   }
 
+  /** German HTML exists only for the Fast sales page. */
+  function pageHasGerman(pagePath) {
+    var norm = normalizePagePath(pagePath || '/');
+    var cut = norm.indexOf('#');
+    if (cut >= 0) norm = norm.slice(0, cut);
+    cut = norm.indexOf('?');
+    if (cut >= 0) norm = norm.slice(0, cut);
+    return norm === '/pages/fast';
+  }
+
   function prettyLocalePath(locale, pagePath) {
+    if (locale === 'de' && !pageHasGerman(pagePath)) locale = 'en';
     var norm = normalizePagePath(pagePath);
     var hashIdx = norm.indexOf('#');
     var hash = hashIdx >= 0 ? norm.slice(hashIdx) : '';
@@ -133,6 +145,12 @@
       'ar-AE': toAbsolute('ar', pagePath),
       'x-default': toAbsolute('fa', pagePath)
     };
+    if (pageHasGerman(pagePath)) {
+      var deUrl = toAbsolute('de', pagePath);
+      alts['de-DE'] = deUrl;
+      alts['de-AT'] = deUrl;
+      alts['de-CH'] = deUrl;
+    }
     if (normalizePagePath(pagePath).split('#')[0] === '/pages/gamak') {
       var arUrl = toAbsolute('ar', pagePath);
       alts.ar = arUrl;

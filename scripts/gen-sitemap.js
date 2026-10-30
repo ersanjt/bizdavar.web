@@ -114,6 +114,8 @@ function localePath(entry, locale) {
   return `${locale.prefix}${entry.path}`;
 }
 
+const DE_LOCALE = { code: 'de', prefix: '/de' };
+
 function absoluteUrl(entry, locale) {
   const p = localePath(entry, locale);
   if (p === '/') return `${BASE}/`;
@@ -132,18 +134,25 @@ const HREFLANG_LANGUAGE_ONLY = [
 
 function hreflangBlock(entry) {
   const pairs = entry.languageOnlyHreflang ? HREFLANG_LANGUAGE_ONLY.slice() : HREFLANG.slice();
+  if (entry.path === '/pages/fast') {
+    const xDefault = pairs.pop();
+    ['de-DE', 'de-AT', 'de-CH'].forEach(tag => pairs.push([tag, 'de']));
+    if (xDefault) pairs.push(xDefault);
+  }
   if (entry.path === '/pages/gamak') {
     ['ar', 'ar-SA', 'ar-IQ', 'ar-LB', 'ar-SY', 'ar-JO'].forEach(tag => pairs.push([tag, 'ar']));
   }
   return pairs.map(([hl, locCode]) => {
-    const loc = LOCALES.find(l => l.code === locCode) || LOCALES[0];
+    const loc = locCode === 'de' ? DE_LOCALE : (LOCALES.find(l => l.code === locCode) || LOCALES[0]);
     const href = absoluteUrl(entry, loc);
     return `    <xhtml:link rel="alternate" hreflang="${hl}" href="${href}"/>`;
   }).join('\n');
 }
 
 function urlNodes(entry) {
-  return LOCALES.map(locale => {
+  const locales = LOCALES.slice();
+  if (entry.path === '/pages/fast') locales.push(DE_LOCALE);
+  return locales.map(locale => {
     const loc = absoluteUrl(entry, locale);
     const lines = [
       '  <url>',

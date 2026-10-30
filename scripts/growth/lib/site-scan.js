@@ -7,7 +7,7 @@ const path = require('path');
 
 const ROOT = path.join(__dirname, '..', '..', '..');
 const BASE = 'https://bizdavar.com';
-const LOCALES = ['tr', 'en', 'ru', 'ar'];
+const LOCALES = ['tr', 'en', 'ru', 'ar', 'de'];
 const PUBLIC_DIRS = ['pages', ...LOCALES];
 const SKIP_DIRS = new Set(['node_modules', '.git', 'scripts', 'docs', 'promo-video', 'storage', 'database', 'admin', 'api', 'media']);
 const NON_PAGES = new Set(['404.html', 'go.html']);

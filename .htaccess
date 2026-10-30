@@ -145,6 +145,11 @@ AddType 'text/html; charset=UTF-8' .html
   RewriteCond %{HTTP:CF-IPCountry} ^(AE|SA|QA|KW|BH|OM|EG|IQ|JO|LB|SY|YE|LY|MA|DZ|TN|PS|SD)$ [NC]
   RewriteRule ^(pages/[^.]*(\.html)?)?$ /ar/$1 [R=302,L,E=BD_GEO_REDIR:1]
 
+  # Germany, Austria and Switzerland only have a German Fast page.
+  RewriteCond %{ENV:BD_GEO} =1
+  RewriteCond %{HTTP:CF-IPCountry} ^(DE|AT|CH)$ [NC]
+  RewriteRule ^pages/fast(\.html)?/?$ /de/pages/fast [R=302,L,E=BD_GEO_REDIR:1]
+
   RewriteCond %{ENV:BD_GEO} =1
   RewriteCond %{HTTP:CF-IPCountry} ^[A-Z]{2}$ [NC]
   RewriteCond %{HTTP:CF-IPCountry} !^(IR|XX|T1)$ [NC]

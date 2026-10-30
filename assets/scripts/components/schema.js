@@ -68,7 +68,7 @@
         const raw = canonicalUrl || C.baseUrl;
         const url = new URL(raw.startsWith('http') ? raw : `${C.baseUrl.replace(/\/$/, '')}/${String(raw).replace(/^\//, '')}`);
         origin = url.origin;
-        pagePath = url.pathname.replace(/^\/(tr|en|ru|ar)(?=\/|$)/, '') || '/';
+        pagePath = url.pathname.replace(/^\/(tr|en|ru|ar|de)(?=\/|$)/, '') || '/';
         if (pagePath.length > 1) pagePath = pagePath.replace(/\/$/, '');
       } catch (_) {
         origin = C.baseUrl.replace(/\/$/, '');
@@ -98,15 +98,17 @@
     const lang = window.BIZDAVAR_I18N?.locale
       || document.documentElement.getAttribute('lang')
       || 'fa';
-    const map = { fa: 'fa_IR', tr: 'tr_TR', en: 'en_US', ru: 'ru_RU', ar: 'ar_AE' };
+    const map = { fa: 'fa_IR', tr: 'tr_TR', en: 'en_US', ru: 'ru_RU', ar: 'ar_AE', de: 'de_DE' };
     return map[lang] || C.locale || 'fa_IR';
   }
 
   function injectOgLocaleAlternates() {
     document.querySelectorAll('meta[property="og:locale:alternate"]').forEach(el => el.remove());
     const current = activeOgLocale();
-    const alternates = ['fa_IR', 'tr_TR', 'en_US', 'ru_RU', 'ar_AE'].filter(tag => tag !== current);
-    alternates.forEach(tag => {
+    const alternates = ['fa_IR', 'tr_TR', 'en_US', 'ru_RU', 'ar_AE'];
+    const path = window.BIZDAVAR_LOCALE_URL?.currentPagePath?.() || '';
+    if (path.split('#')[0] === '/pages/fast') alternates.push('de_DE');
+    alternates.filter(tag => tag !== current).forEach(tag => {
       let el = document.querySelector(`meta[property="og:locale:alternate"][content="${tag}"]`);
       if (!el) {
         el = document.createElement('meta');
@@ -215,7 +217,7 @@
     const lang = window.BIZDAVAR_I18N?.locale
       || document.documentElement.getAttribute('lang')
       || 'fa';
-    const map = { fa: 'fa-IR', tr: 'tr-TR', en: 'en-US', ru: 'ru-RU', ar: 'ar-AE' };
+    const map = { fa: 'fa-IR', tr: 'tr-TR', en: 'en-US', ru: 'ru-RU', ar: 'ar-AE', de: 'de-DE' };
     return map[lang] || 'fa-IR';
   }
 
