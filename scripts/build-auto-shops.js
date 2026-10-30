@@ -6,6 +6,7 @@
 const fs = require('fs');
 const path = require('path');
 const { bootTag } = require('./lib/page-boot-tag');
+const { withoutSizeCharts, shotName, IMAGE_GEO } = require('./lib/moto-gallery');
 
 const GALLERY_TAG = bootTag(`document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
       var main = root.querySelector('.am-pdp__main');
@@ -420,7 +421,7 @@ function loadGalleries() {
       seen.add(full);
       images.push(full);
     });
-    if (images.length) map.set(sku, images);
+    if (images.length) map.set(sku, withoutSizeCharts(images));
   });
   return map;
 }
@@ -456,13 +457,20 @@ function productHtml(loc, item, catId, images) {
   const url = `${BASE}${loc.prefix}/pages/motorcycle/${item.id}`;
   const shop = `${loc.prefix}/pages/motorcycle#auto-cat-${catId}`;
   const availability = item.availability === 'in_stock' ? 'https://schema.org/InStock' : 'https://schema.org/PreOrder';
-  const imageUrls = (gallery.length ? gallery : [img]).map((src) => BASE + src);
+  const shots = gallery.length ? gallery : [img];
+  const imageObjects = shots.map((src, i) => ({
+    '@type': 'ImageObject',
+    contentUrl: BASE + src,
+    name: shotName(loc.code, title, i),
+    caption: desc,
+    representativeOfPage: i === 0
+  }));
   const ld = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: title,
     sku: item.sku || item.id,
-    image: imageUrls,
+    image: imageObjects,
     description: desc,
     brand: { '@type': 'Brand', name: item.brand || 'Bizdavar' },
     offers: {
@@ -470,11 +478,20 @@ function productHtml(loc, item, catId, images) {
       url: url,
       priceCurrency: 'USD',
       ...(item.priceUsd != null && item.priceUsd !== '' ? { price: String(item.priceUsd) } : {}),
-      availability: availability
+      availability: availability,
+      areaServed: { '@type': 'Country', name: 'Iran' },
+      seller: {
+        '@type': 'Organization',
+        name: 'Bizdavar',
+        address: { '@type': 'PostalAddress', addressLocality: 'Tabriz', addressCountry: 'IR' }
+      }
     }
   }).replace(/</g, '\\u003c');
   const thumbs = gallery.length > 1
-    ? `<div class="am-pdp__thumbs" role="list">${gallery.map((src, i) => `<button type="button" data-src="${esc(src)}" data-alt="${esc(title)} — ${i + 1}" class="${i === 0 ? 'is-active' : ''}" aria-label="${esc(title)} — ${i + 1}"><img src="${esc(src)}" alt="" width="72" height="72" loading="lazy" decoding="async"></button>`).join('')}</div>`
+    ? `<div class="am-pdp__thumbs" role="list">${gallery.map((src, i) => {
+      const name = shotName(loc.code, title, i);
+      return `<button type="button" data-src="${esc(src)}" data-alt="${esc(name)}" class="${i === 0 ? 'is-active' : ''}" aria-label="${esc(name)}"><img src="${esc(src)}" alt="${esc(name)}" width="72" height="72" loading="lazy" decoding="async"></button>`;
+    }).join('')}</div>`
     : '';
   const specs = specRows(loc, item, cat).map((row) => `<div><dt>${esc(row[0])}</dt><dd>${esc(row[1])}</dd></div>`).join('');
   const facts = loc.code === 'fa' && Array.isArray(item.featuresFa) ? item.featuresFa.filter(Boolean) : [];
@@ -518,6 +535,7 @@ ${hreflang(item.id)}
   <meta name="twitter:title" content="${esc(title)}">
   <meta name="twitter:description" content="${esc(desc)}">
   <meta name="twitter:image" content="${BASE}${img}">
+  <meta name="twitter:image:alt" content="${esc(title)}">
   <link rel="stylesheet" href="/assets/styles/site.css?v=20261030a">
   <link rel="stylesheet" href="/assets/styles/auto-moto.css?v=20261030b">
   <script type="application/ld+json">${ld}</script>
@@ -546,7 +564,7 @@ ${hreflang(item.id)}
     </article>
   </main>
   ${GALLERY_TAG}
-  <script src="/assets/scripts/site-loader.js?v=20261030b"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261030k"></script>
 </body>
 </html>
 `;
@@ -583,14 +601,28 @@ function writeProducts() {
     const images = galleries.get(String(row.item.sku || '').toUpperCase()) || [];
     for (const loc of LOCALES) {
       const file = path.join(ROOT, loc.folder, 'motorcycle', id + '.html');
-      fs.writeFileSync(file, productHtml(loc, row.item, row.catId, images));
+      const html = productHtml(loc, row.item, row.catId, images);
+      let attempt = 0;
+      for (;;) {
+        try {
+          fs.writeFileSync(file, html);
+          break;
+        } catch (err) {
+          attempt += 1;
+          if (attempt >= 6) throw err;
+          const wait = Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 200 * attempt);
+          void wait;
+        }
+      }
     }
     const links = LOCALES.map(l => {
       const hl = { fa: 'fa-IR', tr: 'tr-TR', en: 'en-US', ru: 'ru-RU', ar: 'ar-AE' }[l.code];
       return `    <xhtml:link rel="alternate" hreflang="${hl}" href="${BASE}${l.prefix}/pages/motorcycle/${id}"/>`;
     }).concat(`    <xhtml:link rel="alternate" hreflang="x-default" href="${BASE}/pages/motorcycle/${id}"/>`).join('\n');
-    const faTitle = String(row.item.titleFa || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-    const imageXml = images.slice(0, 4).map((src) => `    <image:image><image:loc>${BASE}${src}</image:loc><image:title>${faTitle}</image:title></image:image>`).join('\n');
+    const xml = (value) => String(value || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const faTitle = String(row.item.titleFa || '');
+    const faDesc = String(row.item.descFa || faTitle).replace(/\s+/g, ' ').trim().slice(0, 220);
+    const imageXml = images.slice(0, 4).map((src, i) => `    <image:image><image:loc>${BASE}${src}</image:loc><image:title>${xml(shotName('fa', faTitle, i))}</image:title><image:caption>${xml(faDesc)}</image:caption><image:geo_location>${IMAGE_GEO}</image:geo_location></image:image>`).join('\n');
     const blocks = LOCALES.map(l => {
       const pics = l.code === 'fa' && imageXml ? `\n${imageXml}` : '';
       return `  <url>\n    <loc>${BASE}${l.prefix}/pages/motorcycle/${id}</loc>\n    <lastmod>2026-10-30</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.6</priority>\n${links}${pics}\n  </url>`;

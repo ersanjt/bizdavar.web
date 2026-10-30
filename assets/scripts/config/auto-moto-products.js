@@ -916,7 +916,7 @@
     window.AUTO_MOTO_CATALOG._rev = (window.AUTO_MOTO_CATALOG._rev || 0) + 1;
   }
 
-  window.AUTO_MOTO_CATALOG_READY = fetch('/assets/data/auto-moto/catalog.json?v=20261030b')
+  window.AUTO_MOTO_CATALOG_READY = fetch('/assets/data/auto-moto/catalog.json?v=20261030k')
     .then(function (res) {
       if (!res.ok) throw new Error('catalog ' + res.status);
       return res.json();

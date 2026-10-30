@@ -360,6 +360,18 @@ window.createSupplyBrandPage = function (cfg) {
     }).join('')}</dl>`;
   }
 
+  function attrText(value) {
+    return String(value || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+  }
+
+  function galleryAlt(item, shot, index, total) {
+    const own = shot && shot.imageAlt && shot.imageAlt !== item.imageAlt ? shot.imageAlt : '';
+    const base = own || localizedTitle(item) || (shot && shot.imageAlt) || item.imageAlt || item.name || '';
+    if (!(total > 1) || !index) return base;
+    const word = { fa: 'تصویر', tr: 'görsel', en: 'image', ru: 'изображение', ar: 'الصورة' }[locale()] || 'image';
+    return base + ' — ' + word + ' ' + (index + 1);
+  }
+
   function uniqueGallery(item) {
     const raw = (item.gallery && item.gallery.length ? item.gallery : [{ image: item.image, imageAlt: item.imageAlt }]);
     const seen = {};
@@ -882,8 +894,8 @@ window.createSupplyBrandPage = function (cfg) {
               <div class="${prefix}-series-card__thumbs" role="list">
                 ${gallery.map((g, i) => {
                   const src = path(localMedia(g.image, s.image));
-                  const alt = (prefix === 'liqui' ? localizedTitle(s) : '') || g.imageAlt || s.imageAlt || s.name;
-                  return `<button type="button" class="${prefix}-series-card__thumb${i === 0 ? ' is-active' : ''}" data-gallery-src="${src}" data-gallery-alt="${alt}" aria-label="${alt}" role="listitem"><img src="${src}" alt="" width="72" height="72" loading="lazy" decoding="async"></button>`;
+                  const alt = attrText(galleryAlt(s, g, i, gallery.length));
+                  return `<button type="button" class="${prefix}-series-card__thumb${i === 0 ? ' is-active' : ''}" data-gallery-src="${src}" data-gallery-alt="${alt}" aria-label="${alt}" role="listitem"><img src="${src}" alt="${alt}" width="72" height="72" loading="lazy" decoding="async"></button>`;
                 }).join('')}
               </div>` : '';
     const feats = ((locale() === 'fa' || locale() === 'ar') ? (s.features || []) : []).map(f => `<li>${f}</li>`).join('');
@@ -1430,14 +1442,14 @@ window.createSupplyBrandPage = function (cfg) {
       const descEl = document.getElementById(elId('DrawerDesc'));
       if (descEl) descEl.textContent = localizedDesc(s);
       document.getElementById(elId('DrawerPrice')).innerHTML = priceHtml(s, 'div');
-      setMainImage((s.colors && s.colors[0] && s.colors[0].image) || s.image, s.imageAlt || s.name);
+      setMainImage((s.colors && s.colors[0] && s.colors[0].image) || s.image, localizedTitle(s) || s.imageAlt || s.name);
 
       const thumbs = document.getElementById(elId('DrawerThumbs'));
       const gallery = uniqueGallery(s);
       thumbs.innerHTML = gallery.length > 1 ? gallery.map((g, i) => {
         const src = path(localMedia(g.image, s.image));
-        const alt = (prefix === 'liqui' ? localizedTitle(s) : '') || g.imageAlt || s.name;
-        return `<button type="button" class="${prefix}-drawer__thumb${i === 0 ? ' is-active' : ''}" data-src="${g.image}" data-alt="${alt}"><img src="${src}" alt="" width="72" height="72"></button>`;
+        const alt = attrText(galleryAlt(s, g, i, gallery.length));
+        return `<button type="button" class="${prefix}-drawer__thumb${i === 0 ? ' is-active' : ''}" data-src="${g.image}" data-alt="${alt}"><img src="${src}" alt="${alt}" width="72" height="72"></button>`;
       }).join('') : '';
 
       const colorsEl = document.getElementById(elId('DrawerColors'));
