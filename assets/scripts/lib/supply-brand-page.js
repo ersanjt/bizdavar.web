@@ -119,22 +119,150 @@ window.createSupplyBrandPage = function (cfg) {
     return { primary, fallback: fb };
   }
 
+  const LIQUI_NAME_PHRASES = [
+    ['Motor İçi', 'In-Engine', 'внутри двигателя', 'داخل المحرك'],
+    ['Supap İteceği', 'Valve Lifter', 'толкатель клапана', 'رافعة صمام'],
+    ['Turbo Şarj', 'Turbocharger', 'турбонаддув', 'شاحن توربو'],
+    ['kristalleşme', 'crystallization', 'кристаллизация', 'تبلور'],
+    ['Durulayıcı', 'Flush', 'промывка', 'شطف'],
+    ['Koruması', 'Protection', 'защита', 'حماية'],
+    ['Aşınma', 'Wear', 'износ', 'تآكل'],
+    ['Araçlar', 'Vehicles', 'автомобили', 'مركبات'],
+    ['Özel', 'Special', 'специальный', 'خاص'],
+    ['Oktan', 'Octane', 'октан', 'أوكتان'],
+    ['Supap', 'Valve', 'клапан', 'صمام'],
+    ['ŞANZIMAN YAĞI', 'Gear Oil', 'трансмиссионное масло', 'زيت ناقل حركة'],
+    ['Şanzıman Yağı', 'Gear Oil', 'трансмиссионное масло', 'زيت ناقل حركة'],
+    ['Tam Sentetik', 'Fully Synthetic', 'полностью синтетическое', 'تخليقي كامل'],
+    ['Kısmi Sentetik', 'Semi-Synthetic', 'полусинтетическое', 'نصف تخليقي'],
+    ['Yarı Sentetik', 'Semi-Synthetic', 'полусинтетическое', 'نصف تخليقي'],
+    ['Motor Yağı', 'Engine Oil', 'моторное масло', 'زيت محرك'],
+    ['Yakıt Katkısı', 'Fuel Additive', 'топливная присадка', 'إضافة وقود'],
+    ['Yanma Odası', 'Combustion Chamber', 'камера сгорания', 'غرفة الاحتراق'],
+    ['Dizel Partikül Filtre', 'Diesel Particulate Filter', 'сажевый фильтр', 'فلتر جسيمات الديزل'],
+    ['Fren Hidroliği', 'Brake Fluid', 'тормозная жидкость', 'زيت فرامل'],
+    ['Çok Amaçlı', 'Multi-Purpose', 'многоцелевой', 'متعدد الاستخدام'],
+    ['Cam Suyu', 'Screen Wash', 'омыватель стекла', 'سائل مساحات'],
+    ['Otomatik Şanzıman', 'Automatic Transmission', 'АКПП', 'ناقل حركة أوتوماتيك'],
+    ['Direksiyon Hidroliği', 'Power Steering Fluid', 'жидкость ГУР', 'سائل مقود'],
+    ['Şanzıman Yağı', 'Gear Oil', 'трансмиссионное масло', 'زيت ناقل حركة'],
+    ['Antifrizli Konsantre', 'Antifreeze Concentrate', 'концентрат антифриза', 'مركز مضاد تجمد'],
+    ['Partikül Filtre', 'Particulate Filter', 'сажевый фильтр', 'فلتر جسيمات'],
+    ['Amortisör', 'Shock Absorber', 'амортизатор', 'مساعد'],
+    ['Bakımı', 'Care', 'уход', 'عناية'],
+    ['Dumanı', 'Smoke', 'дым', 'دخان'],
+    ['İyileştirici', 'Improver', 'улучшитель', 'محسن'],
+    ['Ayarlayıcı', 'Adjuster', 'регулятор', 'منظم'],
+    ['Temizleyici', 'Cleaner', 'очиститель', 'منظف'],
+    ['Temizleme', 'Cleaning', 'очистка', 'تنظيف'],
+    ['Motosiklet', 'Motorcycle', 'мотоцикл', 'دراجة نارية'],
+    ['Katkısı', 'Additive', 'присадка', 'إضافة'],
+    ['katkı', 'additive', 'присадка', 'إضافة'],
+    ['Katkı', 'Additive', 'присадка', 'إضافة'],
+    ['Spreyi', 'Spray', 'спрей', 'بخاخ'],
+    ['Sprey', 'Spray', 'спрей', 'بخاخ'],
+    ['Şanzıman', 'Gearbox', 'КПП', 'ناقل حركة'],
+    ['Hidroliği', 'Hydraulic Fluid', 'гидравлическая жидкость', 'سائل هيدروليك'],
+    ['Hidrolik', 'Hydraulic', 'гидравлика', 'هيدروليك'],
+    ['Antifrizi', 'Antifreeze', 'антифриз', 'مضاد تجمد'],
+    ['Antifrizli', 'Antifreeze', 'антифриз', 'مضاد تجمد'],
+    ['Antifriz', 'Antifreeze', 'антифриз', 'مضاد تجمد'],
+    ['Radyatör', 'Radiator', 'радиатор', 'رديتر'],
+    ['Enjektör', 'Injector', 'инжектор', 'حاقن'],
+    ['Konsantre', 'Concentrate', 'концентрат', 'مركز'],
+    ['Sentetik', 'Synthetic', 'синтетическое', 'تخليقي'],
+    ['Dizel', 'Diesel', 'дизель', 'ديزل'],
+    ['Benzin', 'Petrol', 'бензин', 'بنزين'],
+    ['Yakıt', 'Fuel', 'топливо', 'وقود'],
+    ['Fren', 'Brake', 'тормоз', 'فرامل'],
+    ['Kurşun', 'Lead', 'свинец', 'رصاص'],
+    ['Buji', 'Spark Plug', 'свеча', 'شمعة'],
+    ['Sökme', 'Release', 'снятие', 'فك'],
+    ['Önleyici', 'Preventive', 'профилактика', 'مانع'],
+    ['önleyici', 'preventive', 'профилактика', 'مانع'],
+    ['Koruyucu', 'Protector', 'защита', 'حماية'],
+    ['Sistemi', 'System', 'система', 'نظام'],
+    ['Sistem', 'System', 'система', 'نظام'],
+    ['Dişli', 'Gear', 'шестерня', 'ترس'],
+    ['Sıvısı', 'Fluid', 'жидкость', 'سائل'],
+    ['Sıvı', 'Fluid', 'жидкость', 'سائل'],
+    ['Bakım', 'Care', 'уход', 'عناية'],
+    ['Otomatik', 'Automatic', 'автоматический', 'أوتوماتيك'],
+    ['Kokusu', 'Fragrance', 'аромат', 'رائحة'],
+    ['Klima', 'A/C', 'кондиционер', 'مكيف'],
+    ['Sızıntı', 'Leak', 'утечка', 'تسرب'],
+    ['Arttırıcı', 'Booster', 'усилитель', 'معزز'],
+    ['Gresi', 'Grease', 'смазка', 'شحم'],
+    ['Partikül', 'Particulate', 'сажевый', 'جسيمات'],
+    ['Filtre', 'Filter', 'фильтр', 'فلتر'],
+    ['Direksiyon', 'Steering', 'руль', 'مقود'],
+    ['Macunu', 'Paste', 'паста', 'معجون'],
+    ['Kırmızı', 'Red', 'красный', 'أحمر'],
+    ['Lastik', 'Tire', 'шина', 'إطار'],
+    ['Zincir', 'Chain', 'цепь', 'سلسلة'],
+    ['Conta', 'Gasket', 'прокладка', 'حشية'],
+    ['Sabitleyici', 'Threadlocker', 'фиксатор резьбы', 'مثبت براغي'],
+    ['Silikon', 'Silicone', 'силикон', 'سيليكون'],
+    ['Civata', 'Bolt', 'болт', 'برغي'],
+    ['Kremi', 'Cream', 'крем', 'كريم'],
+    ['Hızlı', 'Rapid', 'быстрый', 'سريع'],
+    ['Sert', 'Hard', 'твёрдый', 'صلب'],
+    ['Adet', 'pcs', 'шт.', 'قطعة'],
+    ['Mineral', 'Mineral', 'минеральное', 'معدني'],
+    ['Süper', 'Super', 'супер', 'سوبر'],
+    ['Litre', 'L', 'л', 'لتر'],
+    ['litre', 'L', 'л', 'لتر'],
+    ['YAĞI', 'Oil', 'масло', 'زيت'],
+    ['Yağı', 'Oil', 'масло', 'زيت'],
+    ['Yağ', 'Oil', 'масло', 'زيت']
+  ];
+
+  function looksTurkish(value) {
+    return /[çğıöşüÇĞİÖŞÜ]/.test(value) || /\b(Yağı|Yağ|Litre|Sentetik|Katkı|Şanzıman|Motosiklet|Temizleyici|Sprey|Dizel|Benzin|Antifriz|Hidrolik|Radyatör|Enjektör|Konsantre|Fren|Yakıt|Bakım)\b/.test(value);
+  }
+
+  function translateLiquiName(value, lang) {
+    const col = lang === 'ru' ? 2 : lang === 'ar' ? 3 : 1;
+    let out = String(value || '');
+    LIQUI_NAME_PHRASES.forEach((row) => {
+      if (!row[0] || out.indexOf(row[0]) < 0) return;
+      out = out.split(row[0]).join(row[col]);
+    });
+    const joiner = lang === 'ru' ? ' и ' : lang === 'ar' ? ' و ' : ' and ';
+    out = out.replace(/ ve /g, joiner);
+    return out.replace(/\s{2,}/g, ' ').trim();
+  }
+
+  function liquiAlt(alt) {
+    const lang = locale();
+    const text = alt || brandName;
+    if (prefix !== 'liqui' || lang === 'fa' || lang === 'tr' || !looksTurkish(text)) return text;
+    return translateLiquiName(text, lang);
+  }
+
   function imgTag(src, alt, attrs) {
     const a = attrs || {};
     const { primary, fallback } = mediaSrc(src, a.fallback);
     const w = a.width || 280;
     const h = a.height || 160;
     const cls = a.className ? ` class="${a.className}"` : '';
-    return `<img src="${primary}" alt="${alt || 'Bizdavar'}" width="${w}" height="${h}" loading="lazy" decoding="async"${cls} data-fallback="${fallback}" data-fallback-broken>`;
+    const safeAlt = String(liquiAlt(alt) || 'Bizdavar').replace(/"/g, '&quot;');
+    return `<img src="${primary}" alt="${safeAlt}" width="${w}" height="${h}" loading="lazy" decoding="async"${cls} data-fallback="${fallback}" data-fallback-broken>`;
   }
 
   function localizedTitle(item) {
     const lang = locale();
-    if (lang === 'tr') return item.titleTr || item.titleEn || item.title || item.name || '';
-    if (lang === 'en') return item.titleEn || item.title || item.name || '';
-    if (lang === 'ru') return item.titleRu || item.titleEn || item.title || item.name || '';
-    if (lang === 'ar') return item.titleAr || item.titleEn || item.title || item.name || '';
-    return item.titleFa || item.title || item.name || '';
+    let value;
+    if (lang === 'tr') value = item.titleTr || item.titleEn || item.title || item.name || '';
+    else if (lang === 'en') value = item.titleEn || item.title || item.name || '';
+    else if (lang === 'ru') value = item.titleRu || item.titleEn || item.title || item.name || '';
+    else if (lang === 'ar') value = item.titleAr || item.titleEn || item.title || item.name || '';
+    else value = item.titleFa || item.title || item.name || '';
+    if (prefix === 'liqui' && (lang === 'en' || lang === 'ru' || lang === 'ar') && looksTurkish(value)) {
+      const src = item.titleTr || item.inquiryName || value;
+      return translateLiquiName(src, lang);
+    }
+    return value;
   }
 
   function isFaScript(value) {
@@ -624,7 +752,7 @@ window.createSupplyBrandPage = function (cfg) {
 
           <${mediaTag} class="${prefix}-highlight-card__media${h.id === 'safevader' ? ` ${prefix}-highlight-card__media--product` : ''}"${mediaAttr}>
 
-            ${imgTag(h.image, h.imageAlt || title, { width: 280, height: 158, fallback: catalog().brand?.logo })}
+            ${imgTag(h.image, title || h.imageAlt, { width: 280, height: 158, fallback: catalog().brand?.logo })}
 
           </${mediaTag}>
 
@@ -728,7 +856,8 @@ window.createSupplyBrandPage = function (cfg) {
     const badge = localizedBadge(s);
     const featured = s.featured ? ` ${prefix}-series-card--featured` : '';
     const rich = (s.features && s.features.length) || s.officialPath || s.officialUrl || s.specs || (s.sizes && s.sizes.length) || (s.colors && s.colors.length) || (s.specList && s.specList.length) || (s.gallery && s.gallery.length);
-    const img = imgTag(s.image, s.imageAlt || `${s.name} — ${brandName}`, {
+    const label = localizedTitle(s);
+    const img = imgTag(s.image, label ? `${label} — ${brandName}` : (s.imageAlt || `${s.name} — ${brandName}`), {
       width: rich ? 480 : 200,
       height: rich ? 360 : 200,
       className: `${prefix}-series-card__img${/\.(jpe?g|png|webp)(\?|$)/i.test(s.image || '') ? ` ${prefix}-series-card__img--photo` : ''}`,
@@ -753,7 +882,7 @@ window.createSupplyBrandPage = function (cfg) {
               <div class="${prefix}-series-card__thumbs" role="list">
                 ${gallery.map((g, i) => {
                   const src = path(localMedia(g.image, s.image));
-                  const alt = g.imageAlt || s.imageAlt || s.name;
+                  const alt = (prefix === 'liqui' ? localizedTitle(s) : '') || g.imageAlt || s.imageAlt || s.name;
                   return `<button type="button" class="${prefix}-series-card__thumb${i === 0 ? ' is-active' : ''}" data-gallery-src="${src}" data-gallery-alt="${alt}" aria-label="${alt}" role="listitem"><img src="${src}" alt="" width="72" height="72" loading="lazy" decoding="async"></button>`;
                 }).join('')}
               </div>` : '';
@@ -1307,7 +1436,7 @@ window.createSupplyBrandPage = function (cfg) {
       const gallery = uniqueGallery(s);
       thumbs.innerHTML = gallery.length > 1 ? gallery.map((g, i) => {
         const src = path(localMedia(g.image, s.image));
-        const alt = g.imageAlt || s.name;
+        const alt = (prefix === 'liqui' ? localizedTitle(s) : '') || g.imageAlt || s.name;
         return `<button type="button" class="${prefix}-drawer__thumb${i === 0 ? ' is-active' : ''}" data-src="${g.image}" data-alt="${alt}"><img src="${src}" alt="" width="72" height="72"></button>`;
       }).join('') : '';
 
@@ -1471,15 +1600,23 @@ window.createSupplyBrandPage = function (cfg) {
       totalItems += series.length;
       for (let si = 0; si < series.length && items.length < 50; si++) {
         const s = series[si];
+        const href = productHref(s);
+        const pageUrl = href
+          ? `${baseUrl}${String(href).startsWith('/') ? href : '/' + href}`
+          : '';
+        const galleryImages = (Array.isArray(s.gallery) ? s.gallery : [])
+          .slice(0, 4)
+          .map((shot) => absImg(typeof shot === 'string' ? shot : shot && shot.image))
+          .filter(Boolean);
         const product = {
           '@type': 'Product',
-          name: `${localizedTitle(s)} — ${brandName}`,
+          name: localizedTitle(s),
           description: localizedDesc(s) || s.desc || s.note,
           sku: s.sku || undefined,
-          brand: { '@type': 'Brand', name: brandName },
-          category: cat.title || cat.titleEn || cat.titleTr,
-          image: absImg(s.image || cat.image),
-          url: officialSeriesUrl(s) || undefined
+          brand: { '@type': 'Brand', name: s.brand || brandName },
+          category: localizedTitle(cat) || cat.title || cat.titleEn || cat.titleTr,
+          image: galleryImages.length ? galleryImages : absImg(s.image || cat.image),
+          url: pageUrl || officialSeriesUrl(s) || undefined
         };
         const offer = offerPrice(s);
         if (offer) {
@@ -1545,7 +1682,7 @@ window.createSupplyBrandPage = function (cfg) {
     script.textContent = JSON.stringify(ld);
 
     const faq = catalog().faq || [];
-    if (cfg.areaServed && faq.length) {
+    if (faq.length) {
       const faqLd = {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
@@ -1567,7 +1704,9 @@ window.createSupplyBrandPage = function (cfg) {
         document.head.appendChild(faqScript);
       }
       faqScript.textContent = JSON.stringify(faqLd);
+    }
 
+    if (cfg.areaServed && cfg.areaServed.length) {
       const serviceLd = {
         '@context': 'https://schema.org',
         '@type': 'Service',

@@ -1,7 +1,7 @@
 bizdavarPageInit(function () {
       injectPageSeo('liquiMoly', {
         canonical: 'https://bizdavar.com/pages/liqui-moly',
-        ogImage: 'assets/images/liqui-moly/octane-plus.jpg'
+        ogImage: 'assets/images/liqui-moly/og-liqui-moly.jpg'
       });
       renderBreadcrumbs([
         { page: 'home', url: 'index' },
@@ -17,7 +17,7 @@ bizdavarPageInit(function () {
       injectLiquiMolySchema();
       renderGeoStrip('geoStrip', {
         textKey: 'liquiMolyPage.geoText',
-        text: 'تامین اصل Liqui Moly — قیمت دلاری شفاف، مشاوره فارسی و لجستیک بین‌المللی.'
+        text: 'تامین اصل Liqui Moly — قیمت نمایشی دلاری، مشاوره فارسی و لجستیک بین‌المللی.'
       });
       renderRelatedLinks([
         { title: 'تامین Liqui Moly در ایران', url: 'articles/liqui-moly-supply-iran', desc: 'روغن و افزودنی اصل', titleKey: 'liquiMolyPage.related.0.title', descKey: 'liquiMolyPage.related.0.desc' },

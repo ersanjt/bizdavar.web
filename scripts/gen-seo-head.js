@@ -39,7 +39,7 @@ const PAGE_OG = {
   vega: 'assets/images/vega/product-vegapuls-6x-photo.webp',
   uwt: 'assets/images/uwt/og-uwt-logo.jpg',
   prosense: 'assets/images/prosense/hero-pq-sil2.webp',
-  liquiMoly: 'assets/images/liqui-moly/octane-plus.jpg',
+  liquiMoly: 'assets/images/liqui-moly/og-liqui-moly.jpg',
   autoMoto: 'assets/images/brand/bizdavar-logo-square.png',
   teltonika: 'assets/images/teltonika/hero/fleet-telematics.webp',
   gamak: 'assets/images/gamak/hero/gamak-motor.webp',

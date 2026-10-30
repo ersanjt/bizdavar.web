@@ -20,7 +20,7 @@
       heroImageAlt: 'افزودنی بنزین Liqui Moly Octane Plus — ساخت آلمان',
       heroEyebrow: 'تامین اصل Liqui Moly برای فارسی‌زبانان',
       heroHeadline: 'روغن و افزودنی Liqui Moly',
-      heroHeadlineSub: 'روغن موتور، افزودنی سوخت، ضدیخ و مراقبت خودرو — قیمت دلاری شفاف + مشاوره فارسی',
+      heroHeadlineSub: 'روغن موتور، افزودنی سوخت، ضدیخ و مراقبت خودرو — قیمت نمایشی دلاری + مشاوره فارسی',
       tagline: 'Made in Germany',
       taglineFa: 'روغن و افزودنی خودرو — ساخت آلمان',
       since: 'برند آلمانی · محصول اصل',
@@ -35,7 +35,7 @@
     },
     trustSignals: [
       { icon: 'shield', label: 'محصول اصل', desc: 'محصول اصل Liqui Moly با کد محصول و مشخصات فنی' },
-      { icon: 'coin', label: 'قیمت دلاری شفاف', desc: 'قیمت نمایشی دلاری — پیش‌فاکتور قبل از پرداخت' },
+      { icon: 'coin', label: 'قیمت نمایشی دلاری', desc: 'قیمت نمایشی دلاری — پیش‌فاکتور قبل از پرداخت' },
       { icon: 'phone', label: 'مشاوره فارسی', desc: 'انتخاب روغن، ویسکوزیته و افزودنی مناسب خودرو — واتساپ فارسی' },
       { icon: 'ship', label: 'لجستیک بین‌المللی', desc: 'هماهنگی تامین و حمل تا مقصد پروژه شما' }
     ],
@@ -88,7 +88,7 @@
             "useCaseFa": "روغن موتور",
             "badge": "روغن",
             "inquiryName": "LIQUI MOLY 5W30 Motor Yağı Top Tec 4410 1 Litre (21402)",
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-top-tec-4410-1-litre-21402-1502.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-top-tec-4410-1-litre-21402-1502.webp",
             "imageAlt": "LIQUI MOLY 5W30 Motor Yağı Top Tec 4410 1 Litre (21402)",
             "priceUsd": 20.11
       },
@@ -99,7 +99,7 @@
             "useCaseFa": "افزودنی سوخت دیزل",
             "badge": "دیزل",
             "inquiryName": "LIQUI MOLY Dizel Enjektör ve Yanma Odası Temizleyici Yakıt Katkısı 250 ml (5120)",
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-dizel-enjektor-ve-yanma-odasi-temizleyici-250-ml-5120-3521.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-dizel-enjektor-ve-yanma-odasi-temizleyici-250-ml-5120-3521.webp",
             "imageAlt": "LIQUI MOLY Dizel Enjektör ve Yanma Odası Temizleyici Yakıt Katkısı 250 ml (5120)",
             "priceUsd": 12.74
       },
@@ -121,7 +121,7 @@
             "useCaseFa": "مراقبت و نظافت خودرو",
             "badge": "مراقبت",
             "inquiryName": "LIQUI MOLY LM 40 Çok Amaçlı Sprey 400 ml (3391)",
-            "image": "https://www.liquimolyturkey.com/admin/resimler/lm-40-cok-amacli-sprey-400-ml-3391-8474.jpg",
+            "image": "assets/images/liqui-moly/catalog/lm-40-cok-amacli-sprey-400-ml-3391-8474.webp",
             "imageAlt": "LIQUI MOLY LM 40 Çok Amaçlı Sprey 400 ml (3391)",
             "priceUsd": 9.48
       },
@@ -132,7 +132,7 @@
             "useCaseFa": "روغن ترمز",
             "badge": "ترمز",
             "inquiryName": "LIQUI MOLY Fren Hidroliği DOT 5.1 250 ml (3092)",
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-fren-hidroligi-dot-51-3092-9286.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-fren-hidroligi-dot-51-3092-9286.webp",
             "imageAlt": "LIQUI MOLY Fren Hidroliği DOT 5.1 250 ml (3092)",
             "priceUsd": 8.93
       },
@@ -143,7 +143,7 @@
             "useCaseFa": "ضدیخ و رادیاتور",
             "badge": "ضدیخ",
             "inquiryName": "LIQUI MOLY Antifrizli Konsantre Cam Suyu -50°C 1 l (21678)",
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-antifrizli-konsantre-cam-suyu-52c-1-l-21678-1535.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-antifrizli-konsantre-cam-suyu-52c-1-l-21678-1535.webp",
             "imageAlt": "LIQUI MOLY Antifrizli Konsantre Cam Suyu -50°C 1 l (21678)",
             "priceUsd": 8.96
       }
@@ -180,7 +180,7 @@
                         "priceUsd": 62.66,
                         "priceTry": 2944.84,
                         "sku": "21327",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w16-motor-yagi-special-tec-aa-4-litre-21327-1131.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-0w16-motor-yagi-special-tec-aa-4-litre-21327-1131.webp",
                         "featured": true
                   },
                   {
@@ -193,7 +193,7 @@
                         "priceUsd": 77.26,
                         "priceTry": 3631.01,
                         "sku": "21328",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w16-motor-yagi-special-tec-aa-5-litre-21328-6638.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-0w16-motor-yagi-special-tec-aa-5-litre-21328-6638.webp",
                         "featured": true
                   },
                   {
@@ -206,7 +206,7 @@
                         "priceUsd": 17.35,
                         "priceTry": 815.59,
                         "sku": "6738",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w20-motor-yagi-special-tec-aa-1-litre-6738-4511.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-0w20-motor-yagi-special-tec-aa-1-litre-6738-4511.webp",
                         "featured": false
                   },
                   {
@@ -219,7 +219,7 @@
                         "priceUsd": 62.28,
                         "priceTry": 2927.36,
                         "sku": "9705",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w20-motor-yagi-special-tec-aa-4-litre-9705-7694.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-0w20-motor-yagi-special-tec-aa-4-litre-9705-7694.webp",
                         "featured": true
                   },
                   {
@@ -232,7 +232,7 @@
                         "priceUsd": 77.65,
                         "priceTry": 3649.69,
                         "sku": "6739",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w20-motor-yagi-special-tec-aa-5-litre-6739-6893.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-0w20-motor-yagi-special-tec-aa-5-litre-6739-6893.webp",
                         "featured": true
                   },
                   {
@@ -245,7 +245,7 @@
                         "priceUsd": 19.79,
                         "priceTry": 930.32,
                         "sku": "20631",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w20-motor-yagi-special-tec-v-1-litre-20631-volvo-5128.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-0w20-motor-yagi-special-tec-v-1-litre-20631-volvo-5128.webp",
                         "featured": false
                   },
                   {
@@ -258,7 +258,7 @@
                         "priceUsd": 88.23,
                         "priceTry": 4146.84,
                         "sku": "20632",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w20-motor-yagi-special-tec-v-5-litre-20632-2188.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-0w20-motor-yagi-special-tec-v-5-litre-20632-2188.webp",
                         "featured": true
                   },
                   {
@@ -271,7 +271,7 @@
                         "priceUsd": 20.62,
                         "priceTry": 969.01,
                         "sku": "20787",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w20-motor-yagi-top-tec-6200-1-litre-20787-2909.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-0w20-motor-yagi-top-tec-6200-1-litre-20787-2909.webp",
                         "featured": false
                   },
                   {
@@ -284,7 +284,7 @@
                         "priceUsd": 74.05,
                         "priceTry": 3480.31,
                         "sku": "20788",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w20-motor-yagi-top-tec-6200-4-litre-20788-5913.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-0w20-motor-yagi-top-tec-6200-4-litre-20788-5913.webp",
                         "featured": true
                   },
                   {
@@ -297,7 +297,7 @@
                         "priceUsd": 91.18,
                         "priceTry": 4285.43,
                         "sku": "20789",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w20-motor-yagi-top-tec-6200-5-litre-20789-6867.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-0w20-motor-yagi-top-tec-6200-5-litre-20789-6867.webp",
                         "featured": true
                   },
                   {
@@ -310,7 +310,7 @@
                         "priceUsd": 94.12,
                         "priceTry": 4423.48,
                         "sku": "21585",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w20-motor-yagi-top-tec-6400-5-litre-21585-8936.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-0w20-motor-yagi-top-tec-6400-5-litre-21585-8936.webp",
                         "featured": true
                   },
                   {
@@ -323,7 +323,7 @@
                         "priceUsd": 90.96,
                         "priceTry": 4275.1,
                         "sku": "21411",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w20-motor-yagi-top-tec-6600-5-litre-21411-1313.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-0w20-motor-yagi-top-tec-6600-5-litre-21411-1313.webp",
                         "featured": true
                   },
                   {
@@ -336,7 +336,7 @@
                         "priceUsd": 20.96,
                         "priceTry": 985.02,
                         "sku": "21660",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w20-motor-yagi-top-tec-6610-1-litre-21660-7175.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-0w20-motor-yagi-top-tec-6610-1-litre-21660-7175.webp",
                         "featured": false
                   },
                   {
@@ -349,7 +349,7 @@
                         "priceUsd": 93.21,
                         "priceTry": 4380.67,
                         "sku": "21662",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w20-motor-yagi-top-tec-6610-5-litre-21662-4832.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-0w20-motor-yagi-top-tec-6610-5-litre-21662-4832.webp",
                         "featured": true
                   },
                   {
@@ -362,7 +362,7 @@
                         "priceUsd": 97.49,
                         "priceTry": 4582.22,
                         "sku": "21605",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w30-motor-yagi-tam-sentetik-top-tec-4210-5-litre-21605-8629.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-0w30-motor-yagi-tam-sentetik-top-tec-4210-5-litre-21605-8629.webp",
                         "featured": true
                   },
                   {
@@ -375,7 +375,7 @@
                         "priceUsd": 94.06,
                         "priceTry": 4421.03,
                         "sku": "8903",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w30-motor-yagi-special-tec-f-5-litre-8903-4097.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-0w30-motor-yagi-special-tec-f-5-litre-8903-4097.webp",
                         "featured": true
                   },
                   {
@@ -388,7 +388,7 @@
                         "priceUsd": 86.88,
                         "priceTry": 4083.26,
                         "sku": "2853",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w30-motor-yagi-special-tec-v-5-litre-2853-9289.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-0w30-motor-yagi-special-tec-v-5-litre-2853-9289.webp",
                         "featured": true
                   },
                   {
@@ -401,7 +401,7 @@
                         "priceUsd": 80.32,
                         "priceTry": 3774.81,
                         "sku": "8977",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w30-motor-yagi-synthoil-longtime-5-litre-8977-3459.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-0w30-motor-yagi-synthoil-longtime-5-litre-8977-3459.webp",
                         "featured": true
                   },
                   {
@@ -414,7 +414,7 @@
                         "priceUsd": 96.88,
                         "priceTry": 4553.31,
                         "sku": "20779",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w30-motor-yagi-top-tec-6100-5-litre-20779-2820.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-0w30-motor-yagi-top-tec-6100-5-litre-20779-2820.webp",
                         "featured": true
                   },
                   {
@@ -427,7 +427,7 @@
                         "priceUsd": 101.65,
                         "priceTry": 4777.51,
                         "sku": "2362",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w30-motor-yagi-tam-sentetik-top-tec-4310-5-litre-2362-4495.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-0w30-motor-yagi-tam-sentetik-top-tec-4310-5-litre-2362-4495.webp",
                         "featured": true
                   },
                   {
@@ -440,7 +440,7 @@
                         "priceUsd": 83.24,
                         "priceTry": 3912.18,
                         "sku": "9515",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w40-synthoil-energy-tam-sentetik-motor-yagi-5-litre-9515-6467.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-0w40-synthoil-energy-tam-sentetik-motor-yagi-5-litre-9515-6467.webp",
                         "featured": true
                   },
                   {
@@ -453,7 +453,7 @@
                         "priceUsd": 65.58,
                         "priceTry": 3082.42,
                         "sku": "21768",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w8-motor-yagi-special-tec-aa-4-litre-21768-6019.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-0w8-motor-yagi-special-tec-aa-4-litre-21768-6019.webp",
                         "featured": true
                   },
                   {
@@ -466,7 +466,7 @@
                         "priceUsd": 12.03,
                         "priceTry": 565.25,
                         "sku": "1506",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w-medium-fork-oil-10w-sentetik-orta-amortisor-yagi-500ml-1506-9639.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-10w-medium-fork-oil-10w-sentetik-orta-amortisor-yagi-500ml-1506-9639.webp",
                         "featured": false
                   },
                   {
@@ -479,7 +479,7 @@
                         "priceUsd": 16.72,
                         "priceTry": 785.75,
                         "sku": "25022",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w30-4t-marine-motor-yagi-1-litre-25022-1904.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-10w30-4t-marine-motor-yagi-1-litre-25022-1904.webp",
                         "featured": false
                   },
                   {
@@ -492,7 +492,7 @@
                         "priceUsd": 72.66,
                         "priceTry": 3415.1,
                         "sku": "25023",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w30-4t-marine-motor-yagi-5-litre-25023-5121.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-10w30-4t-marine-motor-yagi-5-litre-25023-5121.webp",
                         "featured": true
                   },
                   {
@@ -505,7 +505,7 @@
                         "priceUsd": 13.74,
                         "priceTry": 646.0,
                         "sku": "2526",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w30-4t-street-motosiklet-motor-yagi-1-litre-2526-4011.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-10w30-4t-street-motosiklet-motor-yagi-1-litre-2526-4011.webp",
                         "featured": false
                   },
                   {
@@ -531,7 +531,7 @@
                         "priceUsd": 16.78,
                         "priceTry": 788.5,
                         "sku": "3013",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w40-4t-atv-motor-yagi-1-litre-3013-8213.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-10w40-4t-atv-motor-yagi-1-litre-3013-8213.webp",
                         "featured": false
                   },
                   {
@@ -544,7 +544,7 @@
                         "priceUsd": 12.23,
                         "priceTry": 574.75,
                         "sku": "1618",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w40-4t-basic-scooter-motosiklet-motor-yagi-1-litre-1618-2382.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-10w40-4t-basic-scooter-motosiklet-motor-yagi-1-litre-1618-2382.webp",
                         "featured": false
                   },
                   {
@@ -557,7 +557,7 @@
                         "priceUsd": 11.7,
                         "priceTry": 550.0,
                         "sku": "3044",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w40-4t-basic-street-motosiklet-motor-yagi-1-litre-3044-1013.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-10w40-4t-basic-street-motosiklet-motor-yagi-1-litre-3044-1013.webp",
                         "featured": false
                   },
                   {
@@ -570,7 +570,7 @@
                         "priceUsd": 15.16,
                         "priceTry": 712.5,
                         "sku": "3055",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w40-4t-off-road-motosiklet-tam-sentetik-motor-yagi-1litre-3055-2428.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-10w40-4t-off-road-motosiklet-tam-sentetik-motor-yagi-1litre-3055-2428.webp",
                         "featured": false
                   },
                   {
@@ -583,7 +583,7 @@
                         "priceUsd": 24.26,
                         "priceTry": 1140.0,
                         "sku": "20753",
-                        "image": "assets/images/liqui-moly/product-20753.png",
+                        "image": "assets/images/liqui-moly/product-20753.webp",
                         "featured": false
                   },
                   {
@@ -596,7 +596,7 @@
                         "priceUsd": 93.99,
                         "priceTry": 4417.5,
                         "sku": "20754",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w40-4t-race-motosiklet-motor-yagi-4-litre-20754-8892.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-10w40-4t-race-motosiklet-motor-yagi-4-litre-20754-8892.webp",
                         "featured": true
                   },
                   {
@@ -622,7 +622,7 @@
                         "priceUsd": 13.74,
                         "priceTry": 646.0,
                         "sku": "1521",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w40-4t-street-motosiklet-motor-yagi-1-litre-1521-2085.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-10w40-4t-street-motosiklet-motor-yagi-1-litre-1521-2085.webp",
                         "featured": false
                   },
                   {
@@ -635,7 +635,7 @@
                         "priceUsd": 53.56,
                         "priceTry": 2517.5,
                         "sku": "1243",
-                        "image": "assets/images/liqui-moly/product-1243.png",
+                        "image": "assets/images/liqui-moly/product-1243.webp",
                         "featured": true
                   },
                   {
@@ -648,7 +648,7 @@
                         "priceUsd": 284.84,
                         "priceTry": 13387.52,
                         "sku": "3794",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-top-tec-truck-4050-motor-yagi-20-litre-3794-4689.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-top-tec-truck-4050-motor-yagi-20-litre-3794-4689.webp",
                         "featured": true
                   },
                   {
@@ -674,7 +674,7 @@
                         "priceUsd": 15.72,
                         "priceTry": 738.72,
                         "sku": "2626",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/10w40-motor-yagi-mos2li-kismi-sentetik-leichtlauf-1-litre-2626-2025.jpg",
+                        "image": "assets/images/liqui-moly/catalog/10w40-motor-yagi-mos2li-kismi-sentetik-leichtlauf-1-litre-2626-2025.webp",
                         "featured": false
                   },
                   {
@@ -687,7 +687,7 @@
                         "priceUsd": 14.98,
                         "priceTry": 704.2,
                         "sku": "9955",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w-40-motor-yagi-molygen-new-generation-1-litre-9955-8189.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-10w-40-motor-yagi-molygen-new-generation-1-litre-9955-8189.webp",
                         "featured": false
                   },
                   {
@@ -700,7 +700,7 @@
                         "priceUsd": 53.57,
                         "priceTry": 2517.94,
                         "sku": "8538",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w-40-motor-yagi-molygen-new-generation-4-litre-8538-8206.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-10w-40-motor-yagi-molygen-new-generation-4-litre-8538-8206.webp",
                         "featured": true
                   },
                   {
@@ -713,7 +713,7 @@
                         "priceUsd": 64.72,
                         "priceTry": 3041.67,
                         "sku": "9951",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w-40-motor-yagi-molygen-new-generation-5-litre-9951-7529.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-10w-40-motor-yagi-molygen-new-generation-5-litre-9951-7529.webp",
                         "featured": true
                   },
                   {
@@ -726,7 +726,7 @@
                         "priceUsd": 14.11,
                         "priceTry": 663.01,
                         "sku": "9503",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/10w40-motor-yagi-super-sentetik-super-leichtlauf-1-litre-9503-7444.png",
+                        "image": "assets/images/liqui-moly/catalog/10w40-motor-yagi-super-sentetik-super-leichtlauf-1-litre-9503-7444.webp",
                         "featured": false
                   },
                   {
@@ -739,7 +739,7 @@
                         "priceUsd": 235.66,
                         "priceTry": 11076.2,
                         "sku": "1304",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w40-motor-yagi-super-sentetik-super-leichtlauf-20-litre-1304-9885.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-10w40-motor-yagi-super-sentetik-super-leichtlauf-20-litre-1304-9885.webp",
                         "featured": true
                   },
                   {
@@ -765,7 +765,7 @@
                         "priceUsd": 60.16,
                         "priceTry": 2827.7,
                         "sku": "9505",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w40-motor-yagi-super-sentetik-super-leichtlauf-5-litre-9505-7628.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-10w40-motor-yagi-super-sentetik-super-leichtlauf-5-litre-9505-7628.webp",
                         "featured": true
                   },
                   {
@@ -778,7 +778,7 @@
                         "priceUsd": 55.11,
                         "priceTry": 2590.02,
                         "sku": "6948",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w40-motor-yagi-kismi-sentetik-mos2li-leichtlauf-4-litre-6948-1474.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-10w40-motor-yagi-kismi-sentetik-mos2li-leichtlauf-4-litre-6948-1474.webp",
                         "featured": true
                   },
                   {
@@ -791,7 +791,7 @@
                         "priceUsd": 67.95,
                         "priceTry": 3193.68,
                         "sku": "2184",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/10w40-motor-yagi-mos2li-leichtlauf-5-litre-2184-2330.jpg",
+                        "image": "assets/images/liqui-moly/catalog/10w40-motor-yagi-mos2li-leichtlauf-5-litre-2184-2330.webp",
                         "featured": true
                   },
                   {
@@ -817,7 +817,7 @@
                         "priceUsd": 24.26,
                         "priceTry": 1140.0,
                         "sku": "1502",
-                        "image": "assets/images/liqui-moly/product-1502.jpg",
+                        "image": "assets/images/liqui-moly/product-1502.webp",
                         "featured": false
                   },
                   {
@@ -830,7 +830,7 @@
                         "priceUsd": 93.99,
                         "priceTry": 4417.5,
                         "sku": "1686",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w50-4t-race-motosiklet-tam-sentetik-motor-yagi-4-litre-1686-9791.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-10w50-4t-race-motosiklet-tam-sentetik-motor-yagi-4-litre-1686-9791.webp",
                         "featured": true
                   },
                   {
@@ -843,7 +843,7 @@
                         "priceUsd": 19.23,
                         "priceTry": 903.98,
                         "sku": "8908",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w60-motor-yagi-synthoil-race-tech-gt1-1-litre-8908-2243.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-10w60-motor-yagi-synthoil-race-tech-gt1-1-litre-8908-2243.webp",
                         "featured": false
                   },
                   {
@@ -856,7 +856,7 @@
                         "priceUsd": 69.59,
                         "priceTry": 3270.9,
                         "sku": "7535",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w60-motor-yagi-synthoil-race-tech-gt1-4-litre-7535-2-6052.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-10w60-motor-yagi-synthoil-race-tech-gt1-4-litre-7535-2-6052.webp",
                         "featured": true
                   },
                   {
@@ -869,7 +869,7 @@
                         "priceUsd": 82.08,
                         "priceTry": 3857.96,
                         "sku": "8909",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w60-motor-yagi-synthoil-race-tech-gt1-5-litre-8909-9096.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-10w60-motor-yagi-synthoil-race-tech-gt1-5-litre-8909-9096.webp",
                         "featured": true
                   },
                   {
@@ -908,7 +908,7 @@
                         "priceUsd": 13.74,
                         "priceTry": 646.0,
                         "sku": "2555",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-15w50-4t-street-motosiklet-motor-yagi-1-litre-2555-3992.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-15w50-4t-street-motosiklet-motor-yagi-1-litre-2555-3992.webp",
                         "featured": false
                   },
                   {
@@ -921,7 +921,7 @@
                         "priceUsd": 53.56,
                         "priceTry": 2517.5,
                         "sku": "1689",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-15w50-4t-street-motosiklet-motor-yagi-4-litre-1689-4463.jpeg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-15w50-4t-street-motosiklet-motor-yagi-4-litre-1689-4463.webp",
                         "featured": true
                   },
                   {
@@ -947,7 +947,7 @@
                         "priceUsd": 12.13,
                         "priceTry": 570.0,
                         "sku": "1500",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-20w50-4t-basic-street-motosiklet-motor-yagi-1-litre-1500-7373.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-20w50-4t-basic-street-motosiklet-motor-yagi-1-litre-1500-7373.webp",
                         "featured": false
                   },
                   {
@@ -960,7 +960,7 @@
                         "priceUsd": 55.52,
                         "priceTry": 2609.34,
                         "sku": "21358",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-20w50-motor-yagi-kismi-sentetik-mos2li-leichtlauf-4-litre-21358-7337.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-20w50-motor-yagi-kismi-sentetik-mos2li-leichtlauf-4-litre-21358-7337.webp",
                         "featured": true
                   },
                   {
@@ -973,7 +973,7 @@
                         "priceUsd": 16.41,
                         "priceTry": 771.24,
                         "sku": "25026",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-25w40-4t-marine-motor-yagi-1-litre-25026-7280.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-25w40-4t-marine-motor-yagi-1-litre-25026-7280.webp",
                         "featured": false
                   },
                   {
@@ -986,7 +986,7 @@
                         "priceUsd": 71.6,
                         "priceTry": 3365.24,
                         "sku": "25027",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-25w40-4t-marine-motor-yagi-25027-8358.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-25w40-4t-marine-motor-yagi-25027-8358.webp",
                         "featured": true
                   },
                   {
@@ -999,7 +999,7 @@
                         "priceUsd": 19.61,
                         "priceTry": 921.5,
                         "sku": "3065",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-2t-off-road-motosiklet-yari-sentetik-motor-yagi-1-litre-3065-2673.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-2t-off-road-motosiklet-yari-sentetik-motor-yagi-1-litre-3065-2673.webp",
                         "featured": false
                   },
                   {
@@ -1012,7 +1012,7 @@
                         "priceUsd": 86.1,
                         "priceTry": 4046.9,
                         "sku": "3841",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w20-motor-yagi-special-tec-ford-eco-5-litre-3841-8876.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w20-motor-yagi-special-tec-ford-eco-5-litre-3841-8876.webp",
                         "featured": true
                   },
                   {
@@ -1025,7 +1025,7 @@
                         "priceUsd": 17.84,
                         "priceTry": 838.61,
                         "sku": "21224",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-dpf-motor-yagi-molygen-new-generation-1-litre-21224-4526.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-dpf-motor-yagi-molygen-new-generation-1-litre-21224-4526.webp",
                         "featured": false
                   },
                   {
@@ -1038,7 +1038,7 @@
                         "priceUsd": 68.08,
                         "priceTry": 3199.66,
                         "sku": "21225",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-dpf-motor-yagi-molygen-new-generation-4-litre-21225-4979.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-dpf-motor-yagi-molygen-new-generation-4-litre-21225-4979.webp",
                         "featured": true
                   },
                   {
@@ -1051,7 +1051,7 @@
                         "priceUsd": 83.21,
                         "priceTry": 3910.88,
                         "sku": null,
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-synthoil-high-tech-tam-sentetik-motor-yagi-7090.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-synthoil-high-tech-tam-sentetik-motor-yagi-7090.webp",
                         "featured": true
                   },
                   {
@@ -1064,7 +1064,7 @@
                         "priceUsd": 62.99,
                         "priceTry": 2960.34,
                         "sku": "1144",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-dpfli-sentetik-longtime-high-tech-4-litre-1144-9605.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-dpfli-sentetik-longtime-high-tech-4-litre-1144-9605.webp",
                         "featured": true
                   },
                   {
@@ -1077,7 +1077,7 @@
                         "priceUsd": 72.44,
                         "priceTry": 3404.82,
                         "sku": "9507",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/5w30-motor-yagi-dpfli-sentetik-5-litre-9507-7272.jpg",
+                        "image": "assets/images/liqui-moly/catalog/5w30-motor-yagi-dpfli-sentetik-5-litre-9507-7272.webp",
                         "featured": true
                   },
                   {
@@ -1090,7 +1090,7 @@
                         "priceUsd": 17.78,
                         "priceTry": 835.74,
                         "sku": "9506",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-longtime-high-tech-1litre-9506-9661.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-longtime-high-tech-1litre-9506-9661.webp",
                         "featured": false
                   },
                   {
@@ -1103,7 +1103,7 @@
                         "priceUsd": 17.3,
                         "priceTry": 813.09,
                         "sku": "8541",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-leichtlauf-hc7-1-litre-8541-5778.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-leichtlauf-hc7-1-litre-8541-5778.webp",
                         "featured": false
                   },
                   {
@@ -1116,7 +1116,7 @@
                         "priceUsd": 61.16,
                         "priceTry": 2874.49,
                         "sku": "8461",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-leichtlauf-hc7-4-litre-8641-9944.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-leichtlauf-hc7-4-litre-8641-9944.webp",
                         "featured": true
                   },
                   {
@@ -1129,7 +1129,7 @@
                         "priceUsd": 76.04,
                         "priceTry": 3573.95,
                         "sku": "8542",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-leichtlauf-hc7-5litre-8542-5648.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-leichtlauf-hc7-5litre-8542-5648.webp",
                         "featured": true
                   },
                   {
@@ -1142,7 +1142,7 @@
                         "priceUsd": 16.65,
                         "priceTry": 782.4,
                         "sku": "9047",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-molygen-new-generation-1-litre-9047-6999.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-molygen-new-generation-1-litre-9047-6999.webp",
                         "featured": false
                   },
                   {
@@ -1155,7 +1155,7 @@
                         "priceUsd": 63.29,
                         "priceTry": 2974.86,
                         "sku": "9089",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-molygen-new-generation-5-litre-9089-7788.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-molygen-new-generation-5-litre-9089-7788.webp",
                         "featured": true
                   },
                   {
@@ -1168,7 +1168,7 @@
                         "priceUsd": 78.69,
                         "priceTry": 3698.56,
                         "sku": "9952",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-molygen-new-generation-5-litre-9952-7961.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-molygen-new-generation-5-litre-9952-7961.webp",
                         "featured": true
                   },
                   {
@@ -1181,7 +1181,7 @@
                         "priceUsd": 18.21,
                         "priceTry": 855.95,
                         "sku": "2325",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-special-tec-f-1-litre-2325-8970.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-special-tec-f-1-litre-2325-8970.webp",
                         "featured": false
                   },
                   {
@@ -1194,7 +1194,7 @@
                         "priceUsd": 81.11,
                         "priceTry": 3812.17,
                         "sku": "2326",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-special-tec-f-5-litre-2326-3558.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-special-tec-f-5-litre-2326-3558.webp",
                         "featured": true
                   },
                   {
@@ -1207,7 +1207,7 @@
                         "priceUsd": 20.96,
                         "priceTry": 985.19,
                         "sku": "2319",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-top-tec-4400-1-litre-2319-4760.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-top-tec-4400-1-litre-2319-4760.webp",
                         "featured": false
                   },
                   {
@@ -1220,7 +1220,7 @@
                         "priceUsd": 93.31,
                         "priceTry": 4385.4,
                         "sku": "2322",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-top-tec-4400-5-litre-2322-2274.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-top-tec-4400-5-litre-2322-2274.webp",
                         "featured": true
                   },
                   {
@@ -1233,7 +1233,7 @@
                         "priceUsd": 20.11,
                         "priceTry": 945.17,
                         "sku": "21402",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-top-tec-4410-1-litre-21402-1502.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-top-tec-4410-1-litre-21402-1502.webp",
                         "featured": false
                   },
                   {
@@ -1246,7 +1246,7 @@
                         "priceUsd": 91.3,
                         "priceTry": 4290.91,
                         "sku": "21404",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-top-tec-4410-5-litre-21404-3791.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-top-tec-4410-5-litre-21404-3791.webp",
                         "featured": true
                   },
                   {
@@ -1259,7 +1259,7 @@
                         "priceUsd": 20.79,
                         "priceTry": 977.02,
                         "sku": "21584",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w20-motor-yagi-top-tec-6400-1-litre-21584-3499.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-0w20-motor-yagi-top-tec-6400-1-litre-21584-3499.webp",
                         "featured": false
                   },
                   {
@@ -1272,7 +1272,7 @@
                         "priceUsd": 20.78,
                         "priceTry": 976.54,
                         "sku": "8972",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4200-1-litre-8972-9636.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4200-1-litre-8972-9636.webp",
                         "featured": false
                   },
                   {
@@ -1285,7 +1285,7 @@
                         "priceUsd": 74.58,
                         "priceTry": 3505.03,
                         "sku": "3715",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4200-4litre-3715-5002.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4200-4litre-3715-5002.webp",
                         "featured": true
                   },
                   {
@@ -1298,7 +1298,7 @@
                         "priceUsd": 91.78,
                         "priceTry": 4313.74,
                         "sku": "8973",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/5w30-motor-yagi-tam-sentetik-top-tec-4200-5-litre-8973-7325.jpg",
+                        "image": "assets/images/liqui-moly/catalog/5w30-motor-yagi-tam-sentetik-top-tec-4200-5-litre-8973-7325.webp",
                         "featured": true
                   },
                   {
@@ -1311,7 +1311,7 @@
                         "priceUsd": 79.99,
                         "priceTry": 3759.65,
                         "sku": "2324",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4300-5-litre-2324-2819.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4300-5-litre-2324-2819.webp",
                         "featured": true
                   },
                   {
@@ -1324,7 +1324,7 @@
                         "priceUsd": 20.62,
                         "priceTry": 969.18,
                         "sku": "2317",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4500-1-litre-2317-6160.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4500-1-litre-2317-6160.webp",
                         "featured": false
                   },
                   {
@@ -1337,7 +1337,7 @@
                         "priceUsd": 91.06,
                         "priceTry": 4279.77,
                         "sku": "2318",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4500-5-litre-2318-1159.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4500-5-litre-2318-1159.webp",
                         "featured": true
                   },
                   {
@@ -1350,7 +1350,7 @@
                         "priceUsd": 18.07,
                         "priceTry": 849.11,
                         "sku": "2315",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4600-1-litre-2315-4550.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4600-1-litre-2315-4550.webp",
                         "featured": false
                   },
                   {
@@ -1363,7 +1363,7 @@
                         "priceUsd": 64.03,
                         "priceTry": 3009.59,
                         "sku": "3763",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4600-4-litre-3763-3016.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4600-4-litre-3763-3016.webp",
                         "featured": true
                   },
                   {
@@ -1376,7 +1376,7 @@
                         "priceUsd": 79.08,
                         "priceTry": 3716.84,
                         "sku": "2316",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4600-5-litre-2316-7013.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4600-5-litre-2316-7013.webp",
                         "featured": true
                   },
                   {
@@ -1389,7 +1389,7 @@
                         "priceUsd": 24.26,
                         "priceTry": 1140.0,
                         "sku": "2592",
-                        "image": "assets/images/liqui-moly/product-2592.jpg",
+                        "image": "assets/images/liqui-moly/product-2592.webp",
                         "featured": false
                   },
                   {
@@ -1402,7 +1402,7 @@
                         "priceUsd": 93.99,
                         "priceTry": 4417.5,
                         "sku": "1685",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w40-4t-motosiklet-tam-sentetik-motor-yagi-bmw-gs-4-litre-1685-5564.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w40-4t-motosiklet-tam-sentetik-motor-yagi-bmw-gs-4-litre-1685-5564.webp",
                         "featured": true
                   },
                   {
@@ -1415,7 +1415,7 @@
                         "priceUsd": 18.52,
                         "priceTry": 870.46,
                         "sku": "1855",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w40-synthoil-high-tech-tam-sentetik-motor-yagi-1-litre-1855-4759.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w40-synthoil-high-tech-tam-sentetik-motor-yagi-1-litre-1855-4759.webp",
                         "featured": false
                   },
                   {
@@ -1454,7 +1454,7 @@
                         "priceUsd": 18.09,
                         "priceTry": 850.44,
                         "sku": "8576",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w40-motor-yagi-molygen-new-generation-1-litre-8576-6915.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w40-motor-yagi-molygen-new-generation-1-litre-8576-6915.webp",
                         "featured": false
                   },
                   {
@@ -1467,7 +1467,7 @@
                         "priceUsd": 81.02,
                         "priceTry": 3807.96,
                         "sku": "8536",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w40-motor-yagi-molygen-new-generation-5-litre-8536-2383.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w40-motor-yagi-molygen-new-generation-5-litre-8536-2383.webp",
                         "featured": true
                   },
                   {
@@ -1480,7 +1480,7 @@
                         "priceUsd": 19.21,
                         "priceTry": 902.64,
                         "sku": "9510",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w40-motor-yagi-top-tec-4100-tam-sentetik-1-litre-9510-1674.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w40-motor-yagi-top-tec-4100-tam-sentetik-1-litre-9510-1674.webp",
                         "featured": false
                   },
                   {
@@ -1493,7 +1493,7 @@
                         "priceUsd": 69.12,
                         "priceTry": 3248.64,
                         "sku": "2195",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w40-motor-yagi-top-tec-4100-tam-sentetik-4-litre-2195-4358.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w40-motor-yagi-top-tec-4100-tam-sentetik-4-litre-2195-4358.webp",
                         "featured": true
                   },
                   {
@@ -1506,7 +1506,7 @@
                         "priceUsd": 84.43,
                         "priceTry": 3968.37,
                         "sku": "9511",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/5w40-motor-yagi-top-tec-4100-tam-sentetik-5-litre-9511-4984.jpg",
+                        "image": "assets/images/liqui-moly/catalog/5w40-motor-yagi-top-tec-4100-tam-sentetik-5-litre-9511-4984.webp",
                         "featured": true
                   },
                   {
@@ -1519,7 +1519,7 @@
                         "priceUsd": 88.92,
                         "priceTry": 4179.08,
                         "sku": "21479",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w40-motor-yagi-top-tec-4110-tam-sentetik-5-litre-21479-8108.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w40-motor-yagi-top-tec-4110-tam-sentetik-5-litre-21479-8108.webp",
                         "featured": true
                   },
                   {
@@ -1532,7 +1532,7 @@
                         "priceUsd": 17.13,
                         "priceTry": 805.25,
                         "sku": "1346",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w40-motor-yagi-sentetik-leichtlauf-hc7-1-litre-1346-2-5785.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w40-motor-yagi-sentetik-leichtlauf-hc7-1-litre-1346-2-5785.webp",
                         "featured": false
                   },
                   {
@@ -1545,7 +1545,7 @@
                         "priceUsd": 62.65,
                         "priceTry": 2944.55,
                         "sku": "1382",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/5w40-motor-yagi-sentetik-leichtlauf-hc7-4-litre-1382-4194.jpg",
+                        "image": "assets/images/liqui-moly/catalog/5w40-motor-yagi-sentetik-leichtlauf-hc7-4-litre-1382-4194.webp",
                         "featured": true
                   },
                   {
@@ -1558,7 +1558,7 @@
                         "priceUsd": 19.03,
                         "priceTry": 894.47,
                         "sku": "2542",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w50-motor-yagi-molygen-new-generation-1-litre-2542-1257.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w50-motor-yagi-molygen-new-generation-1-litre-2542-1257.webp",
                         "featured": false
                   },
                   {
@@ -1571,7 +1571,7 @@
                         "priceUsd": 69.51,
                         "priceTry": 3267.03,
                         "sku": "2543",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w50-motor-yagi-molygen-new-generation-4-litre-2543-3754.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5w50-motor-yagi-molygen-new-generation-4-litre-2543-3754.webp",
                         "featured": true
                   },
                   {
@@ -1584,7 +1584,7 @@
                         "priceUsd": 19.0,
                         "priceTry": 893.0,
                         "sku": "3821",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-80w90-motosiklet-sanziman-yagi-1-litre-3821-3059.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-80w90-motosiklet-sanziman-yagi-1-litre-3821-3059.webp",
                         "featured": false
                   },
                   {
@@ -1597,7 +1597,7 @@
                         "priceUsd": 39.87,
                         "priceTry": 1874.05,
                         "sku": "7181",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/cera-tec-300-ml-7181-1896.jpg",
+                        "image": "assets/images/liqui-moly/catalog/cera-tec-300-ml-7181-1896.webp",
                         "featured": false
                   },
                   {
@@ -1610,7 +1610,7 @@
                         "priceUsd": 11.95,
                         "priceTry": 561.76,
                         "sku": "2657",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/engine-flush-motor-ici-temizleyici-300-ml-2657-1371.jpg",
+                        "image": "assets/images/liqui-moly/catalog/engine-flush-motor-ici-temizleyici-300-ml-2657-1371.webp",
                         "featured": false
                   },
                   {
@@ -1623,7 +1623,7 @@
                         "priceUsd": 28.01,
                         "priceTry": 1316.59,
                         "sku": "4434",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/gl4-disli-yagi-sae-75w90-4434-7711428122-dc4-7390.jpg",
+                        "image": "assets/images/liqui-moly/catalog/gl4-disli-yagi-sae-75w90-4434-7711428122-dc4-7390.webp",
                         "featured": false
                   },
                   {
@@ -1636,7 +1636,7 @@
                         "priceUsd": 18.87,
                         "priceTry": 886.82,
                         "sku": "1410",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-hypoid-disli-yagi-gl5-sae-85w-90-ls-1410-7720.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-hypoid-disli-yagi-gl5-sae-85w-90-ls-1410-7720.webp",
                         "featured": false
                   },
                   {
@@ -1649,7 +1649,7 @@
                         "priceUsd": 71.23,
                         "priceTry": 3347.93,
                         "sku": "21364",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-leichtlauf-performance-5w30-5-litre-21364-8053.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-leichtlauf-performance-5w30-5-litre-21364-8053.webp",
                         "featured": true
                   },
                   {
@@ -1662,7 +1662,7 @@
                         "priceUsd": 11.94,
                         "priceTry": 561.03,
                         "sku": "1009",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/lifter-supap-itecegikatkisi-1009-1455.jpg",
+                        "image": "assets/images/liqui-moly/catalog/lifter-supap-itecegikatkisi-1009-1455.webp",
                         "featured": false
                   },
                   {
@@ -1675,7 +1675,7 @@
                         "priceUsd": 20.21,
                         "priceTry": 949.84,
                         "sku": "25019",
-                        "image": "assets/images/liqui-moly/product-25019.jpg",
+                        "image": "assets/images/liqui-moly/product-25019.webp",
                         "featured": false
                   },
                   {
@@ -1688,7 +1688,7 @@
                         "priceUsd": 90.18,
                         "priceTry": 4238.25,
                         "sku": "25020",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marine-2t-motor-yagi-5-l-25020-2586.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-marine-2t-motor-yagi-5-l-25020-2586.webp",
                         "featured": true
                   },
                   {
@@ -1701,7 +1701,7 @@
                         "priceUsd": 15.98,
                         "priceTry": 750.89,
                         "sku": "25012",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marine-4t-motor-yagi-10w-40-1-l-25012-6123.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-marine-4t-motor-yagi-10w-40-1-l-25012-6123.webp",
                         "featured": false
                   },
                   {
@@ -1714,7 +1714,7 @@
                         "priceUsd": 69.12,
                         "priceTry": 3248.82,
                         "sku": "25013",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marine-4t-motor-yagi-10w-40-5-l-25013-7642.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-marine-4t-motor-yagi-10w-40-5-l-25013-7642.webp",
                         "featured": true
                   },
                   {
@@ -1727,7 +1727,7 @@
                         "priceUsd": 37.91,
                         "priceTry": 1781.81,
                         "sku": "25071",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marine-tam-sentetik-disli-yagi-gl4gl5-75w-90-1l-25071-5739.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-marine-tam-sentetik-disli-yagi-gl4gl5-75w-90-1l-25071-5739.webp",
                         "featured": false
                   },
                   {
@@ -1740,7 +1740,7 @@
                         "priceUsd": 17.77,
                         "priceTry": 835.14,
                         "sku": "25036",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marine-tam-sentetik-disli-yagi-gl4gl5-75w90-25036-9886.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-marine-tam-sentetik-disli-yagi-gl4gl5-75w90-25036-9886.webp",
                         "featured": false
                   },
                   {
@@ -1753,7 +1753,7 @@
                         "priceUsd": 19.21,
                         "priceTry": 902.82,
                         "sku": "25069",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marine-disli-yagi-gl4gl5-80w90-25069-6725.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-marine-disli-yagi-gl4gl5-80w90-25069-6725.webp",
                         "featured": false
                   },
                   {
@@ -1766,7 +1766,7 @@
                         "priceUsd": 12.44,
                         "priceTry": 584.46,
                         "sku": "25030",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marine-disli-yagi-gl4gl5-80w-90-250ml-25031-5068.jpeg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-marine-disli-yagi-gl4gl5-80w-90-250ml-25031-5068.webp",
                         "featured": false
                   },
                   {
@@ -1779,7 +1779,7 @@
                         "priceUsd": 45.43,
                         "priceTry": 2135.18,
                         "sku": "1015",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-motor-protect-sentetik-yag-katkisi-500-ml-1015-3732.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-motor-protect-sentetik-yag-katkisi-500-ml-1015-3732.webp",
                         "featured": false
                   },
                   {
@@ -1792,7 +1792,7 @@
                         "priceUsd": 36.68,
                         "priceTry": 1724.14,
                         "sku": "1018",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/motor-protect-sentetik-yag-katkisi-500-ml-1018-4883.jpg",
+                        "image": "assets/images/liqui-moly/catalog/motor-protect-sentetik-yag-katkisi-500-ml-1018-4883.webp",
                         "featured": false
                   },
                   {
@@ -1818,7 +1818,7 @@
                         "priceUsd": 14.51,
                         "priceTry": 681.76,
                         "sku": "1012",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/oil-additiv-mos2li-yag-katkisi-200-ml-1012-3489.jpg",
+                        "image": "assets/images/liqui-moly/catalog/oil-additiv-mos2li-yag-katkisi-200-ml-1012-3489.webp",
                         "featured": false
                   },
                   {
@@ -1831,7 +1831,7 @@
                         "priceUsd": 78.13,
                         "priceTry": 3671.88,
                         "sku": "7530",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-special-tec-aa-5w-30-5-litre-7530-6909.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-special-tec-aa-5w-30-5-litre-7530-6909.webp",
                         "featured": true
                   },
                   {
@@ -1844,7 +1844,7 @@
                         "priceUsd": 63.49,
                         "priceTry": 2984.2,
                         "sku": "20968",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/special-tec-dx1-5w30-motor-yagi-4-litre-20968-6238.png",
+                        "image": "assets/images/liqui-moly/catalog/special-tec-dx1-5w30-motor-yagi-4-litre-20968-6238.webp",
                         "featured": true
                   },
                   {
@@ -1857,7 +1857,7 @@
                         "priceUsd": 78.35,
                         "priceTry": 3682.55,
                         "sku": "20969",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-special-tec-dx1-5w30-motor-yagi-5-litre-20969-5360.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-special-tec-dx1-5w30-motor-yagi-5-litre-20969-5360.webp",
                         "featured": true
                   },
                   {
@@ -1870,7 +1870,7 @@
                         "priceUsd": 23.81,
                         "priceTry": 1118.92,
                         "sku": "20842",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-top-tec-5100-75w-20842-sanziman-yagi-20842-6431.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-top-tec-5100-75w-20842-sanziman-yagi-20842-6431.webp",
                         "featured": false
                   },
                   {
@@ -1896,7 +1896,7 @@
                         "priceUsd": 26.23,
                         "priceTry": 1232.61,
                         "sku": "21359",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-top-tec-mtf-5300-70w-75-21359-sanziman-yagi-7252.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-top-tec-mtf-5300-70w-75-21359-sanziman-yagi-7252.webp",
                         "featured": false
                   },
                   {
@@ -1909,7 +1909,7 @@
                         "priceUsd": 69.45,
                         "priceTry": 3264.19,
                         "sku": "21366",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-top-tec-6320-5w30-motor-yagi-4-litre-23166-6722.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-top-tec-6320-5w30-motor-yagi-4-litre-23166-6722.webp",
                         "featured": true
                   },
                   {
@@ -1922,7 +1922,7 @@
                         "priceUsd": 86.54,
                         "priceTry": 4067.58,
                         "sku": "23167",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-top-tec-6320-5w30-motor-yagi-5-litre-23167-1561.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-top-tec-6320-5w30-motor-yagi-5-litre-23167-1561.webp",
                         "featured": true
                   },
                   {
@@ -1935,7 +1935,7 @@
                         "priceUsd": 19.48,
                         "priceTry": 915.65,
                         "sku": "3651",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-top-tec-atf-1100-3651-1305.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-top-tec-atf-1100-3651-1305.webp",
                         "featured": false
                   },
                   {
@@ -1948,7 +1948,7 @@
                         "priceUsd": 20.48,
                         "priceTry": 962.34,
                         "sku": "3648",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-top-tec-atf-1900-1-litre-3648-8258.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-top-tec-atf-1900-1-litre-3648-8258.webp",
                         "featured": false
                   },
                   {
@@ -1961,7 +1961,7 @@
                         "priceUsd": 20.96,
                         "priceTry": 985.19,
                         "sku": "3681",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/otomatik-sanziman-yagi-top-tec-atf-1200-3681-8089.jpg",
+                        "image": "assets/images/liqui-moly/catalog/otomatik-sanziman-yagi-top-tec-atf-1200-3681-8089.webp",
                         "featured": false
                   },
                   {
@@ -1974,7 +1974,7 @@
                         "priceUsd": 21.05,
                         "priceTry": 989.19,
                         "sku": "9703",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-otomatik-sanziman-yagi-top-tec-atf-1200-g-9703-8794.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-otomatik-sanziman-yagi-top-tec-atf-1200-g-9703-8794.webp",
                         "featured": false
                   },
                   {
@@ -1987,7 +1987,7 @@
                         "priceUsd": 22.67,
                         "priceTry": 1065.64,
                         "sku": "3662",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/top-tec-atf-1400-3662-7298.jpg",
+                        "image": "assets/images/liqui-moly/catalog/top-tec-atf-1400-3662-7298.webp",
                         "featured": false
                   },
                   {
@@ -2000,7 +2000,7 @@
                         "priceUsd": 27.86,
                         "priceTry": 1309.46,
                         "sku": "3659",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-otomatik-sanziman-yagi-top-tec-atf-1600-3659-5745.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-otomatik-sanziman-yagi-top-tec-atf-1600-3659-5745.webp",
                         "featured": false
                   },
                   {
@@ -2013,7 +2013,7 @@
                         "priceUsd": 19.61,
                         "priceTry": 921.45,
                         "sku": "3687",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/otomatik-sanziman-yagi-top-tec-atf-1800-3687-3164.jpg",
+                        "image": "assets/images/liqui-moly/catalog/otomatik-sanziman-yagi-top-tec-atf-1800-3687-3164.webp",
                         "featured": false
                   },
                   {
@@ -2026,7 +2026,7 @@
                         "priceUsd": 19.12,
                         "priceTry": 898.83,
                         "sku": "20625",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-otomatik-sanziman-yagi-top-tec-atf-1800r-20625-9983.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-otomatik-sanziman-yagi-top-tec-atf-1800r-20625-9983.webp",
                         "featured": false
                   },
                   {
@@ -2039,7 +2039,7 @@
                         "priceUsd": 20.06,
                         "priceTry": 942.96,
                         "sku": "21738",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-otomatik-sanziman-yagi-top-tec-atf-1850-21738-2562.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-otomatik-sanziman-yagi-top-tec-atf-1850-21738-2562.webp",
                         "featured": false
                   },
                   {
@@ -2052,7 +2052,7 @@
                         "priceUsd": 50.82,
                         "priceTry": 2388.64,
                         "sku": "4421",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-tam-sentetik-hypoid-disli-yagi-gl5-ls-sae-75w140-4421-8483.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-tam-sentetik-hypoid-disli-yagi-gl5-ls-sae-75w140-4421-8483.webp",
                         "featured": true
                   },
                   {
@@ -2065,7 +2065,7 @@
                         "priceUsd": 13.52,
                         "priceTry": 635.48,
                         "sku": "2122",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/yag-siyah-duman-onleyici-300-ml-2122-8238.jpg",
+                        "image": "assets/images/liqui-moly/catalog/yag-siyah-duman-onleyici-300-ml-2122-8238.webp",
                         "featured": false
                   },
                   {
@@ -2078,7 +2078,7 @@
                         "priceUsd": 15.16,
                         "priceTry": 712.57,
                         "sku": "1005",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/motor-yagi-sizinti-onleyici-300-ml-1005-4909.jpg",
+                        "image": "assets/images/liqui-moly/catalog/motor-yagi-sizinti-onleyici-300-ml-1005-4909.webp",
                         "featured": false
                   },
                   {
@@ -2091,7 +2091,7 @@
                         "priceUsd": 19.95,
                         "priceTry": 937.84,
                         "sku": "3658",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-sanziman-yagi-gl5-75w80-3658-3756.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-sanziman-yagi-gl5-75w80-3658-3756.webp",
                         "featured": false
                   },
                   {
@@ -2104,7 +2104,7 @@
                         "priceUsd": 14.59,
                         "priceTry": 685.52,
                         "sku": "2180",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/motor-yag-bakimi-katkisi-300-ml-2180-6102.jpg",
+                        "image": "assets/images/liqui-moly/catalog/motor-yag-bakimi-katkisi-300-ml-2180-6102.webp",
                         "featured": false
                   },
                   {
@@ -2117,7 +2117,7 @@
                         "priceUsd": 12.23,
                         "priceTry": 574.75,
                         "sku": "20832",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-4t-10w-40-mb-scooter-sentetik-motor-yagi-1l-20832--7799.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-4t-10w-40-mb-scooter-sentetik-motor-yagi-1l-20832-7799.webp",
                         "featured": false
                   },
                   {
@@ -2130,7 +2130,7 @@
                         "priceUsd": 12.23,
                         "priceTry": 574.75,
                         "sku": "21862",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-4t-10w-40-motorbike-optimal-mineral-motor-yagi-1-lt-21862--6618.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-4t-10w-40-motorbike-optimal-mineral-motor-yagi-1-lt-21862-6618.webp",
                         "featured": false
                   },
                   {
@@ -2156,7 +2156,7 @@
                         "priceUsd": 79.7,
                         "priceTry": 3746.1,
                         "sku": "2328",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-leichtlauf-high-tech-5w-40-5-lt-2328-4934.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-leichtlauf-high-tech-5w-40-5-lt-2328-4934.webp",
                         "featured": true
                   }
             ]
@@ -2166,7 +2166,7 @@
             "title": "افزودنی سوخت بنزین",
             "titleTr": "Benzin Katkıları",
             "icon": "gas-station",
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-hibrit-yakit-katkisi-hybrit-additive-250-ml-1001-7586.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-hibrit-yakit-katkisi-hybrit-additive-250-ml-1001-7586.webp",
             "desc": "15 محصول",
             "series": [
                   {
@@ -2179,7 +2179,7 @@
                                     "priceUsd": 13.62,
                                     "priceTry": 640.26,
                                     "sku": "1001",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-hibrit-yakit-katkisi-hybrit-additive-250-ml-1001-7586.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/liqui-moly-hibrit-yakit-katkisi-hybrit-additive-250-ml-1001-7586.webp",
                                     "featured": false
                   },
                   {
@@ -2192,7 +2192,7 @@
                                     "priceUsd": 26.33,
                                     "priceTry": 1237.36,
                                     "sku": "21281",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-pro-line-enjektor-temizleyici-benzin-120-ml-21281-2991.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/liqui-moly-pro-line-enjektor-temizleyici-benzin-120-ml-21281-2991.webp",
                                     "featured": false
                   },
                   {
@@ -2205,7 +2205,7 @@
                                     "priceUsd": 18.36,
                                     "priceTry": 862.93,
                                     "sku": "5153",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-benzin-sistemi-temizleyicisi-5153-1777.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/liqui-moly-benzin-sistemi-temizleyicisi-5153-1777.webp",
                                     "featured": false
                   },
                   {
@@ -2218,7 +2218,7 @@
                                     "priceUsd": 13.8,
                                     "priceTry": 648.7,
                                     "sku": "3720",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/speed-tec-benzin-katkisi-250-ml-3720-1186.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/speed-tec-benzin-katkisi-250-ml-3720-1186.webp",
                                     "featured": false
                   },
                   {
@@ -2231,7 +2231,7 @@
                                     "priceUsd": 9.61,
                                     "priceTry": 451.52,
                                     "sku": "1014",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-valve-clean-150-ml-1014-2252.png",
+                                    "image": "assets/images/liqui-moly/catalog/liqui-moly-valve-clean-150-ml-1014-2252.webp",
                                     "featured": false
                   },
                   {
@@ -2244,7 +2244,7 @@
                                     "priceUsd": 16.29,
                                     "priceTry": 765.61,
                                     "sku": "21492",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-yeni-benzin-sistem-temizleyici-yakit-katkisi-300-ml-21492-2075.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/liqui-moly-yeni-benzin-sistem-temizleyici-yakit-katkisi-300-ml-21492-2075.webp",
                                     "featured": false
                   },
                   {
@@ -2270,7 +2270,7 @@
                                     "priceUsd": 13.9,
                                     "priceTry": 653.12,
                                     "sku": "1010",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-oktan-yukselticii-250-ml-1010-2416.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/liqui-moly-oktan-yukselticii-250-ml-1010-2416.webp",
                                     "featured": false
                   },
                   {
@@ -2283,7 +2283,7 @@
                                     "priceUsd": 6.15,
                                     "priceTry": 288.92,
                                     "sku": "3381",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/enjektor-buji-gresi-20-g-3381-2658.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/enjektor-buji-gresi-20-g-3381-2658.webp",
                                     "featured": false
                   },
                   {
@@ -2296,7 +2296,7 @@
                                     "priceUsd": 12.6,
                                     "priceTry": 592.17,
                                     "sku": "5110",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/enjektor-temizleyici-benzin-300-ml-5110-2070.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/enjektor-temizleyici-benzin-300-ml-5110-2070.webp",
                                     "featured": false
                   },
                   {
@@ -2309,7 +2309,7 @@
                                     "priceUsd": 14.41,
                                     "priceTry": 677.04,
                                     "sku": "3379",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/enjektor-kizdirma-buji-sokucu-spreyi-400-ml-3379-5660.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/enjektor-kizdirma-buji-sokucu-spreyi-400-ml-3379-5660.webp",
                                     "featured": false
                   },
                   {
@@ -2322,7 +2322,7 @@
                                     "priceUsd": 11.79,
                                     "priceTry": 553.99,
                                     "sku": "7110",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-emisyon-ayarlayici-katalitik-sistem-temizleyici-300-ml-7110-2468.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/liqui-moly-emisyon-ayarlayici-katalitik-sistem-temizleyici-300-ml-7110-2468.webp",
                                     "featured": false
                   },
                   {
@@ -2335,7 +2335,7 @@
                                     "priceUsd": 11.24,
                                     "priceTry": 528.34,
                                     "sku": "8931",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/emisyon-ayarlayici-katalitik-sistem-temizleyici-300-ml-8931-3498.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/emisyon-ayarlayici-katalitik-sistem-temizleyici-300-ml-8931-3498.webp",
                                     "featured": false
                   },
                   {
@@ -2348,7 +2348,7 @@
                                     "priceUsd": 32.61,
                                     "priceTry": 1532.44,
                                     "sku": "4012",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/subap-koruyucu-lpgli-araclar-1-l-4012-2791.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/subap-koruyucu-lpgli-araclar-1-l-4012-2791.webp",
                                     "featured": false
                   },
                   {
@@ -2384,7 +2384,7 @@
                                     "priceUsd": 35.61,
                                     "priceTry": 1673.6,
                                     "sku": "5176",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-pro-line-dizel-enjektor-ve-yanma-odasi-temizleyici-yakit-katkisi-1litre-2902.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/liqui-moly-pro-line-dizel-enjektor-ve-yanma-odasi-temizleyici-yakit-katkisi-1litre-2902.webp",
                                     "featured": false
                   },
                   {
@@ -2397,7 +2397,7 @@
                                     "priceUsd": 14.47,
                                     "priceTry": 680.16,
                                     "sku": "3722",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/speed-tec-dizel-yakit-katkisi-250-ml-3722-1644.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/speed-tec-dizel-yakit-katkisi-250-ml-3722-1644.webp",
                                     "featured": false
                   },
                   {
@@ -2410,7 +2410,7 @@
                                     "priceUsd": 16.41,
                                     "priceTry": 771.35,
                                     "sku": "5170",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/dizel-enjektor-ve-yanma-odasi-temizleyici-500-ml-5170-1734.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/dizel-enjektor-ve-yanma-odasi-temizleyici-500-ml-5170-1734.webp",
                                     "featured": false
                   },
                   {
@@ -2423,7 +2423,7 @@
                                     "priceUsd": 12.74,
                                     "priceTry": 598.77,
                                     "sku": "5120",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-dizel-enjektor-ve-yanma-odasi-temizleyici-250-ml-5120-3521.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/liqui-moly-dizel-enjektor-ve-yanma-odasi-temizleyici-250-ml-5120-3521.webp",
                                     "featured": false
                   },
                   {
@@ -2462,7 +2462,7 @@
                                     "priceUsd": 52.25,
                                     "priceTry": 2455.76,
                                     "sku": "2368",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-antibakteriyel-dizel-yakit-katkisi-2368-3518.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/liqui-moly-antibakteriyel-dizel-yakit-katkisi-2368-3518.webp",
                                     "featured": true
                   },
                   {
@@ -2475,7 +2475,7 @@
                                     "priceUsd": 26.25,
                                     "priceTry": 1233.56,
                                     "sku": "21942",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-dpf-temizleyici-400ml-21942-9187.png",
+                                    "image": "assets/images/liqui-moly/catalog/liqui-moly-dpf-temizleyici-400ml-21942-9187.webp",
                                     "featured": false
                   },
                   {
@@ -2488,7 +2488,7 @@
                                     "priceUsd": 20.82,
                                     "priceTry": 978.59,
                                     "sku": "20997",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-kamyon-serisi-dizel-sistem-ve-performans-koruyucu-500-ml-20997-4716.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/liqui-moly-kamyon-serisi-dizel-sistem-ve-performans-koruyucu-500-ml-20997-4716.webp",
                                     "featured": false
                   },
                   {
@@ -2501,7 +2501,7 @@
                                     "priceUsd": 39.03,
                                     "priceTry": 1834.63,
                                     "sku": "25000",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marine-diesel-protect-500-ml-250001-1075.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/liqui-moly-marine-diesel-protect-500-ml-250001-1075.webp",
                                     "featured": false
                   },
                   {
@@ -2514,7 +2514,7 @@
                                     "priceUsd": 38.24,
                                     "priceTry": 1797.07,
                                     "sku": "25007",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marine-super-diesel-additive-dizel-yakit-katkisi-1l-25007-4670.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/liqui-moly-marine-super-diesel-additive-dizel-yakit-katkisi-1l-25007-4670.webp",
                                     "featured": false
                   },
                   {
@@ -2527,7 +2527,7 @@
                                     "priceUsd": 24.59,
                                     "priceTry": 1155.66,
                                     "sku": "25005",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marine-super-diesel-additive-dizel-yakit-katkisi-500-ml-25005-6646.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/liqui-moly-marine-super-diesel-additive-dizel-yakit-katkisi-500-ml-25005-6646.webp",
                                     "featured": false
                   },
                   {
@@ -2553,7 +2553,7 @@
                                     "priceUsd": 18.44,
                                     "priceTry": 866.51,
                                     "sku": "21491",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-yeni-dizel-sistem-temizleyici-yakit-katkisi-300-ml-21491-9110.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/liqui-moly-yeni-dizel-sistem-temizleyici-yakit-katkisi-300-ml-21491-9110.webp",
                                     "featured": false
                   },
                   {
@@ -2566,7 +2566,7 @@
                                     "priceUsd": 9.67,
                                     "priceTry": 454.63,
                                     "sku": "5180",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/dizel-duman-onleyici-yakit-katkisi-150-ml-5180-9678.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/dizel-duman-onleyici-yakit-katkisi-150-ml-5180-9678.webp",
                                     "featured": false
                   },
                   {
@@ -2579,7 +2579,7 @@
                                     "priceUsd": 16.92,
                                     "priceTry": 795.18,
                                     "sku": "5168",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/dizel-emme-manifold-temizleyici-400-ml-5168-4000.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/dizel-emme-manifold-temizleyici-400-ml-5168-4000.webp",
                                     "featured": false
                   },
                   {
@@ -2592,7 +2592,7 @@
                                     "priceUsd": 24.79,
                                     "priceTry": 1165.17,
                                     "sku": "5156",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-dizel-sistem-temizleyici-pro-line-seri-500-ml-5156-9216.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/liqui-moly-dizel-sistem-temizleyici-pro-line-seri-500-ml-5156-9216.webp",
                                     "featured": false
                   },
                   {
@@ -2605,7 +2605,7 @@
                                     "priceUsd": 12.5,
                                     "priceTry": 587.29,
                                     "sku": "5139",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/dizel-sistem-temizleyici-yakit-katkisi-250-ml-5139-4964.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/dizel-sistem-temizleyici-yakit-katkisi-250-ml-5139-4964.webp",
                                     "featured": false
                   },
                   {
@@ -2618,7 +2618,7 @@
                                     "priceUsd": 39.07,
                                     "priceTry": 1836.31,
                                     "sku": "5131",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-dizel-yakit-donma-onleyici-1-litre-5131-3483.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/liqui-moly-dizel-yakit-donma-onleyici-1-litre-5131-3483.webp",
                                     "featured": false
                   },
                   {
@@ -2631,7 +2631,7 @@
                                     "priceUsd": 32.67,
                                     "priceTry": 1535.71,
                                     "sku": "5171",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/dizel-partikul-filtre-dpf-durulayici-500-ml-5171-2317.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/dizel-partikul-filtre-dpf-durulayici-500-ml-5171-2317.webp",
                                     "featured": false
                   },
                   {
@@ -2644,7 +2644,7 @@
                                     "priceUsd": 57.67,
                                     "priceTry": 2710.35,
                                     "sku": "5169",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/dizel-partikul-filtre-dpf-temizleyici-1-lt-5169-8095.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/dizel-partikul-filtre-dpf-temizleyici-1-lt-5169-8095.webp",
                                     "featured": true
                   },
                   {
@@ -2657,7 +2657,7 @@
                                     "priceUsd": 11.5,
                                     "priceTry": 540.39,
                                     "sku": "5148",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/dizel-partikul-filtre-dpf-koruyucu-250-ml-5148-4054.jpg",
+                                    "image": "assets/images/liqui-moly/catalog/dizel-partikul-filtre-dpf-koruyucu-250-ml-5148-4054.webp",
                                     "featured": false
                   },
                   {
@@ -2670,7 +2670,7 @@
                                     "priceUsd": 39.03,
                                     "priceTry": 1834.63,
                                     "sku": "25001",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marine-dizel-koruyucu-500ml-25001-2633.png",
+                                    "image": "assets/images/liqui-moly/catalog/liqui-moly-marine-dizel-koruyucu-500ml-25001-2633.webp",
                                     "featured": false
                   },
                   {
@@ -2683,7 +2683,7 @@
                                     "priceUsd": 41.27,
                                     "priceTry": 1939.59,
                                     "sku": "25002",
-                                    "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marine-dizel-koruyucu-1l-25002-4593.jpeg",
+                                    "image": "assets/images/liqui-moly/catalog/liqui-moly-marine-dizel-koruyucu-1l-25002-4593.webp",
                                     "featured": false
                   }
 ]
@@ -2693,7 +2693,7 @@
             "title": "افزودنی روغن موتور",
             "titleTr": "Yağ Katkıları",
             "icon": "flask",
-            "image": "https://www.liquimolyturkey.com/admin/resimler/atf-otomatik-sanziman-katkisi-250-ml-5135-1002.jpg",
+            "image": "assets/images/liqui-moly/catalog/atf-otomatik-sanziman-katkisi-250-ml-5135-1002.webp",
             "desc": "7 محصول",
             "series": [
                   {
@@ -2706,7 +2706,7 @@
                         "priceUsd": 25.17,
                         "priceTry": 1182.84,
                         "sku": "5135",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/atf-otomatik-sanziman-katkisi-250-ml-5135-1002.jpg",
+                        "image": "assets/images/liqui-moly/catalog/atf-otomatik-sanziman-katkisi-250-ml-5135-1002.webp",
                         "featured": false
                   },
                   {
@@ -2745,7 +2745,7 @@
                         "priceUsd": 19.85,
                         "priceTry": 932.78,
                         "sku": "1019",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-motor-clean-500-ml-1019-4374.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-motor-clean-500-ml-1019-4374.webp",
                         "featured": false
                   },
                   {
@@ -2758,7 +2758,7 @@
                         "priceUsd": 13.26,
                         "priceTry": 623.23,
                         "sku": "20766",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-pro-line-turbo-sarj-katkisi-20-gr-20766-8474.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-pro-line-turbo-sarj-katkisi-20-gr-20766-8474.webp",
                         "featured": false
                   },
                   {
@@ -2784,7 +2784,7 @@
                         "priceUsd": 7.38,
                         "priceTry": 346.63,
                         "sku": "1614",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-mos2li-kaydirici-ve-pas-sokucu-300-ml-1614-3547.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-mos2li-kaydirici-ve-pas-sokucu-300-ml-1614-3547.webp",
                         "featured": false
                   }
             ]
@@ -2794,7 +2794,7 @@
             "title": "گیربکس و هیدرولیک",
             "titleTr": "Şanzıman / Hidrolik",
             "icon": "cog",
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-atf-iii-direksiyon-hidroligi-1043-8782.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-atf-iii-direksiyon-hidroligi-1043-8782.webp",
             "desc": "22 محصول",
             "series": [
                   {
@@ -2807,7 +2807,7 @@
                         "priceUsd": 19.48,
                         "priceTry": 915.65,
                         "sku": "1043",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-atf-iii-direksiyon-hidroligi-1043-8782.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-atf-iii-direksiyon-hidroligi-1043-8782.webp",
                         "featured": false
                   },
                   {
@@ -2820,7 +2820,7 @@
                         "priceUsd": 84.28,
                         "priceTry": 3961.02,
                         "sku": "21158",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-dot-4-fren-hidroligi-5-litre-21158-3545.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-dot-4-fren-hidroligi-5-litre-21158-3545.webp",
                         "featured": true
                   },
                   {
@@ -2833,7 +2833,7 @@
                         "priceUsd": 21.34,
                         "priceTry": 1002.9,
                         "sku": "3640",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/dual-clutch-transmission-oil-8100-3640-6697.jpg",
+                        "image": "assets/images/liqui-moly/catalog/dual-clutch-transmission-oil-8100-3640-6697.webp",
                         "featured": false
                   },
                   {
@@ -2846,7 +2846,7 @@
                         "priceUsd": 48.22,
                         "priceTry": 2266.23,
                         "sku": "1007",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/motor-protect-sanziman-koruyucu-80-ml-1007-6497.jpg",
+                        "image": "assets/images/liqui-moly/catalog/motor-protect-sanziman-koruyucu-80-ml-1007-6497.webp",
                         "featured": false
                   },
                   {
@@ -2859,7 +2859,7 @@
                         "priceUsd": 29.65,
                         "priceTry": 1393.6,
                         "sku": "21419",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-haldex-yagi-21419-2-2-6627.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-haldex-yagi-21419-2-2-6627.webp",
                         "featured": false
                   },
                   {
@@ -2872,7 +2872,7 @@
                         "priceUsd": 15.53,
                         "priceTry": 730.05,
                         "sku": "2512",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/otomatik-sanziman-temizleyici-300-ml-2512-5541.jpg",
+                        "image": "assets/images/liqui-moly/catalog/otomatik-sanziman-temizleyici-300-ml-2512-5541.webp",
                         "featured": false
                   },
                   {
@@ -2885,7 +2885,7 @@
                         "priceUsd": 5.64,
                         "priceTry": 265.0,
                         "sku": "21126",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-fren-bakim-seti-21126-6804.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-fren-bakim-seti-21126-6804.webp",
                         "featured": false
                   },
                   {
@@ -2911,7 +2911,7 @@
                         "priceUsd": 31.8,
                         "priceTry": 1494.53,
                         "sku": "3074",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/fren-sesi-onleyici-3074-4106.jpg",
+                        "image": "assets/images/liqui-moly/catalog/fren-sesi-onleyici-3074-4106.webp",
                         "featured": false
                   },
                   {
@@ -2924,7 +2924,7 @@
                         "priceUsd": 2.26,
                         "priceTry": 106.45,
                         "sku": "21121",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-fren-gicirti-sesi-onleyici-10-g-21121-7253.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-fren-gicirti-sesi-onleyici-10-g-21121-7253.webp",
                         "featured": false
                   },
                   {
@@ -2937,7 +2937,7 @@
                         "priceUsd": 13.81,
                         "priceTry": 649.19,
                         "sku": "3079",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-fren-gicirti-sesi-onleyici-sprey-3079-2868.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-fren-gicirti-sesi-onleyici-sprey-3079-2868.webp",
                         "featured": false
                   },
                   {
@@ -2950,7 +2950,7 @@
                         "priceUsd": 5.91,
                         "priceTry": 277.89,
                         "sku": "3368",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/fren-balata-spreyi-500-ml-3368-8606.jpg",
+                        "image": "assets/images/liqui-moly/catalog/fren-balata-spreyi-500-ml-3368-8606.webp",
                         "featured": false
                   },
                   {
@@ -2963,7 +2963,7 @@
                         "priceUsd": 2.34,
                         "priceTry": 110.0,
                         "sku": "21119",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-fren-pimleri-yaglayici-5-g-21119-2295.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-fren-pimleri-yaglayici-5-g-21119-2295.webp",
                         "featured": false
                   },
                   {
@@ -2976,7 +2976,7 @@
                         "priceUsd": 11.13,
                         "priceTry": 523.14,
                         "sku": "3093",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-fren-hidroligi-dot-4-500-ml-3093-3682.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-fren-hidroligi-dot-4-500-ml-3093-3682.webp",
                         "featured": false
                   },
                   {
@@ -2989,7 +2989,7 @@
                         "priceUsd": 8.93,
                         "priceTry": 419.89,
                         "sku": "3092",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-fren-hidroligi-dot-51-3092-9286.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-fren-hidroligi-dot-51-3092-9286.webp",
                         "featured": false
                   },
                   {
@@ -3002,7 +3002,7 @@
                         "priceUsd": 12.07,
                         "priceTry": 567.44,
                         "sku": "21167",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-fren-hidroligi-sl6-dot-4-500-ml-21167-9768.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-fren-hidroligi-sl6-dot-4-500-ml-21167-9768.webp",
                         "featured": false
                   },
                   {
@@ -3015,7 +3015,7 @@
                         "priceUsd": 2.34,
                         "priceTry": 110.0,
                         "sku": "21120",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-jant-gobegi-sabitleme-macunu-10-g-21120-6375.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-jant-gobegi-sabitleme-macunu-10-g-21120-6375.webp",
                         "featured": false
                   },
                   {
@@ -3028,7 +3028,7 @@
                         "priceUsd": 7.44,
                         "priceTry": 349.61,
                         "sku": "1099",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-direksiyon-hidrolik-sistemi-sizinti-onleyici-50-ml-1099-9636.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-direksiyon-hidrolik-sistemi-sizinti-onleyici-50-ml-1099-9636.webp",
                         "featured": false
                   },
                   {
@@ -3041,7 +3041,7 @@
                         "priceUsd": 21.27,
                         "priceTry": 999.58,
                         "sku": "20468",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/direksiyon-ve-merkezi-sistem-hidrolik-yagi-9723.jpg",
+                        "image": "assets/images/liqui-moly/catalog/direksiyon-ve-merkezi-sistem-hidrolik-yagi-9723.webp",
                         "featured": false
                   },
                   {
@@ -3054,7 +3054,7 @@
                         "priceUsd": 21.51,
                         "priceTry": 1011.03,
                         "sku": "3667",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-direksiyon-ve-merkezi-sistem-hidrolik-yagi--5370.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-direksiyon-ve-merkezi-sistem-hidrolik-yagi-5370.webp",
                         "featured": false
                   },
                   {
@@ -3067,7 +3067,7 @@
                         "priceUsd": 29.51,
                         "priceTry": 1386.76,
                         "sku": "21172",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-yaris-tipi-fren-hidroligi-500-ml-21172-8926.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-yaris-tipi-fren-hidroligi-500-ml-21172-8926.webp",
                         "featured": false
                   },
                   {
@@ -3080,7 +3080,7 @@
                         "priceUsd": 10.52,
                         "priceTry": 494.35,
                         "sku": "1042",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/sanziman-yag-sizinti-onleyici-50-ml-1042-6614.jpg",
+                        "image": "assets/images/liqui-moly/catalog/sanziman-yag-sizinti-onleyici-50-ml-1042-6614.webp",
                         "featured": false
                   }
             ]
@@ -3090,7 +3090,7 @@
             "title": "ضدیخ و رادیاتور",
             "titleTr": "Antifriz",
             "icon": "snowflake",
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-antifrizli-konsantre-cam-suyu-52c-1-l-21678-1535.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-antifrizli-konsantre-cam-suyu-52c-1-l-21678-1535.webp",
             "desc": "14 محصول",
             "series": [
                   {
@@ -3103,7 +3103,7 @@
                         "priceUsd": 8.96,
                         "priceTry": 421.15,
                         "sku": "21678",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-antifrizli-konsantre-cam-suyu-52c-1-l-21678-1535.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-antifrizli-konsantre-cam-suyu-52c-1-l-21678-1535.webp",
                         "featured": false
                   },
                   {
@@ -3116,7 +3116,7 @@
                         "priceUsd": 8.61,
                         "priceTry": 404.45,
                         "sku": "6923",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-cam-suyu-antifirizi-1-l-6923-7350.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-cam-suyu-antifirizi-1-l-6923-7350.webp",
                         "featured": false
                   },
                   {
@@ -3129,7 +3129,7 @@
                         "priceUsd": 16.95,
                         "priceTry": 796.63,
                         "sku": "5189",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-radyator-temizleyici-1-litre-5189-5770.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-radyator-temizleyici-1-litre-5189-5770.webp",
                         "featured": false
                   },
                   {
@@ -3142,7 +3142,7 @@
                         "priceUsd": 11.28,
                         "priceTry": 529.93,
                         "sku": "5178",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-pro-line-radyator-sizinti-onleyici-250-ml-5178-1650.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-pro-line-radyator-sizinti-onleyici-250-ml-5178-1650.webp",
                         "featured": false
                   },
                   {
@@ -3155,7 +3155,7 @@
                         "priceUsd": 6.61,
                         "priceTry": 310.9,
                         "sku": "3330",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/radyator-sizinti-onleyici-150-ml-3330-3435.jpg",
+                        "image": "assets/images/liqui-moly/catalog/radyator-sizinti-onleyici-150-ml-3330-3435.webp",
                         "featured": false
                   },
                   {
@@ -3168,7 +3168,7 @@
                         "priceUsd": 8.9,
                         "priceTry": 418.07,
                         "sku": "3320",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/radyator-temizleyici-300-ml-3320-6638.jpg",
+                        "image": "assets/images/liqui-moly/catalog/radyator-temizleyici-300-ml-3320-6638.webp",
                         "featured": false
                   },
                   {
@@ -3181,7 +3181,7 @@
                         "priceUsd": 10.93,
                         "priceTry": 513.71,
                         "sku": "21145",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-radyator-antifrizi-g12-kfs12-kirmizi-5-l-21145-6573.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-radyator-antifrizi-g12-kfs12-kirmizi-5-l-21145-6573.webp",
                         "featured": false
                   },
                   {
@@ -3194,7 +3194,7 @@
                         "priceUsd": 10.71,
                         "priceTry": 503.43,
                         "sku": "21149",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-radyator-antifrizi-kfs-11-mavi-1-l-21149-5178.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-radyator-antifrizi-kfs-11-mavi-1-l-21149-5178.webp",
                         "featured": false
                   },
                   {
@@ -3207,7 +3207,7 @@
                         "priceUsd": 10.97,
                         "priceTry": 515.47,
                         "sku": "21139",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-radyator-antifrizi-kfs-13-g13-tl774j-kirmizi-1-l-21139-3538.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-radyator-antifrizi-kfs-13-g13-tl774j-kirmizi-1-l-21139-3538.webp",
                         "featured": false
                   },
                   {
@@ -3220,7 +3220,7 @@
                         "priceUsd": 10.65,
                         "priceTry": 500.58,
                         "sku": "21740",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-radyator-antifrizi-kfs12-evo-1-l-21740-1210.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-radyator-antifrizi-kfs12-evo-1-l-21740-1210.webp",
                         "featured": false
                   },
                   {
@@ -3233,7 +3233,7 @@
                         "priceUsd": 10.7,
                         "priceTry": 502.98,
                         "sku": "21134",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-radyator-antifrizi-kfs12-1-l-21134-8321.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-radyator-antifrizi-kfs12-1-l-21134-8321.webp",
                         "featured": false
                   },
                   {
@@ -3246,7 +3246,7 @@
                         "priceUsd": 22.34,
                         "priceTry": 1049.79,
                         "sku": "8809",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-radyator-antifrizi-g11-kfs11-mavi-5-l-8809-5653.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-radyator-antifrizi-g11-kfs11-mavi-5-l-8809-5653.webp",
                         "featured": false
                   },
                   {
@@ -3259,7 +3259,7 @@
                         "priceUsd": 22.43,
                         "priceTry": 1054.11,
                         "sku": "8810",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-radyator-antifrizi-g12-kfs12-kirmizi-5-l-8810-9763.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-radyator-antifrizi-g12-kfs12-kirmizi-5-l-8810-9763.webp",
                         "featured": false
                   },
                   {
@@ -3272,7 +3272,7 @@
                         "priceUsd": 8.16,
                         "priceTry": 383.49,
                         "sku": "6902",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-cam-buz-ve-bugu-cozucu-spreyi-500-ml-6902-4032.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-cam-buz-ve-bugu-cozucu-spreyi-500-ml-6902-4032.webp",
                         "featured": false
                   }
             ]
@@ -3282,7 +3282,7 @@
             "title": "مراقبت و نظافت خودرو",
             "titleTr": "Car Care",
             "icon": "sparkles",
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-boya-parlatma-kremi-300-g-1532-8990.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-boya-parlatma-kremi-300-g-1532-8990.webp",
             "desc": "58 محصول",
             "series": [
                   {
@@ -3295,7 +3295,7 @@
                         "priceUsd": 19.07,
                         "priceTry": 896.19,
                         "sku": "1532",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-boya-parlatma-kremi-300-g-1532-8990.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-boya-parlatma-kremi-300-g-1532-8990.webp",
                         "featured": false
                   },
                   {
@@ -3308,7 +3308,7 @@
                         "priceUsd": 11.15,
                         "priceTry": 524.1,
                         "sku": "21634",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-ekran-temizleyici-100-ml-21634-4293.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-ekran-temizleyici-100-ml-21634-4293.webp",
                         "featured": false
                   },
                   {
@@ -3334,7 +3334,7 @@
                         "priceUsd": 9.26,
                         "priceTry": 435.39,
                         "sku": "1515",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/kemirgen-koruyucu-sprey-200-ml-1515-8125.jpg",
+                        "image": "assets/images/liqui-moly/catalog/kemirgen-koruyucu-sprey-200-ml-1515-8125.webp",
                         "featured": false
                   },
                   {
@@ -3347,7 +3347,7 @@
                         "priceUsd": 10.58,
                         "priceTry": 497.15,
                         "sku": "1610",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-kokpit-parlaticisi-600-ml-1610-6409.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-kokpit-parlaticisi-600-ml-1610-6409.webp",
                         "featured": false
                   },
                   {
@@ -3360,7 +3360,7 @@
                         "priceUsd": 18.91,
                         "priceTry": 888.79,
                         "sku": "6103",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-korozyon-onleyici-mum-sprey-500-ml-6103-5697.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-korozyon-onleyici-mum-sprey-500-ml-6103-5697.webp",
                         "featured": false
                   },
                   {
@@ -3373,7 +3373,7 @@
                         "priceUsd": 13.29,
                         "priceTry": 624.7,
                         "sku": "1529",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-krom-parlatici-krem-500-ml-1529-5981.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-krom-parlatici-krem-500-ml-1529-5981.webp",
                         "featured": false
                   },
                   {
@@ -3386,7 +3386,7 @@
                         "priceUsd": 7.54,
                         "priceTry": 354.61,
                         "sku": "3390",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/lm-40-cok-amacli-sprey-200-ml-3390-1581.jpg",
+                        "image": "assets/images/liqui-moly/catalog/lm-40-cok-amacli-sprey-200-ml-3390-1581.webp",
                         "featured": false
                   },
                   {
@@ -3399,7 +3399,7 @@
                         "priceUsd": 9.48,
                         "priceTry": 445.55,
                         "sku": "3391",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/lm-40-cok-amacli-sprey-400-ml-3391-8474.jpg",
+                        "image": "assets/images/liqui-moly/catalog/lm-40-cok-amacli-sprey-400-ml-3391-8474.webp",
                         "featured": false
                   },
                   {
@@ -3412,7 +3412,7 @@
                         "priceUsd": 19.81,
                         "priceTry": 930.94,
                         "sku": "3343",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-lastik-tamir-spreyi-500-ml-3343-7267.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-lastik-tamir-spreyi-500-ml-3343-7267.webp",
                         "featured": false
                   },
                   {
@@ -3425,7 +3425,7 @@
                         "priceUsd": 18.08,
                         "priceTry": 849.76,
                         "sku": "23061",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-lastik-parlatici-400-ml-23061-1717.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-lastik-parlatici-400-ml-23061-1717.webp",
                         "featured": false
                   },
                   {
@@ -3438,7 +3438,7 @@
                         "priceUsd": 13.39,
                         "priceTry": 629.29,
                         "sku": "3327",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-motor-ust-temizleyici-parlatici-400-ml-3327-8854.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-motor-ust-temizleyici-parlatici-400-ml-3327-8854.webp",
                         "featured": false
                   },
                   {
@@ -3451,7 +3451,7 @@
                         "priceUsd": 7.16,
                         "priceTry": 336.47,
                         "sku": "1650",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-one-for-all-bakim-urunu-250-ml-1650-4555.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-one-for-all-bakim-urunu-250-ml-1650-4555.webp",
                         "featured": false
                   },
                   {
@@ -3464,7 +3464,7 @@
                         "priceUsd": 3.04,
                         "priceTry": 142.95,
                         "sku": "6925",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-oto-cam-temizleme-tableti-1-adet-6925-3948.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-oto-cam-temizleme-tableti-1-adet-6925-3948.webp",
                         "featured": false
                   },
                   {
@@ -3477,7 +3477,7 @@
                         "priceUsd": 2.02,
                         "priceTry": 95.11,
                         "sku": "22033",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-oto-cam-temizleme-konsantre-sivisi-22033-3214.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-oto-cam-temizleme-konsantre-sivisi-22033-3214.webp",
                         "featured": false
                   },
                   {
@@ -3490,7 +3490,7 @@
                         "priceUsd": 16.05,
                         "priceTry": 754.34,
                         "sku": "1536",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-plastik-yuzey-temizleyici-sprey-500-ml-1536-8268.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-plastik-yuzey-temizleyici-sprey-500-ml-1536-8268.webp",
                         "featured": false
                   },
                   {
@@ -3503,7 +3503,7 @@
                         "priceUsd": 10.26,
                         "priceTry": 482.36,
                         "sku": "1641",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/seramikli-pas-sokucu-300-ml-1641-2375.jpg",
+                        "image": "assets/images/liqui-moly/catalog/seramikli-pas-sokucu-300-ml-1641-2375.webp",
                         "featured": false
                   },
                   {
@@ -3516,7 +3516,7 @@
                         "priceUsd": 18.73,
                         "priceTry": 880.51,
                         "sku": "24395",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-susturucu-temizleyici-24395-3040.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-susturucu-temizleyici-24395-3040.webp",
                         "featured": false
                   },
                   {
@@ -3529,7 +3529,7 @@
                         "priceUsd": 18.33,
                         "priceTry": 861.53,
                         "sku": "1640",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-zinc-aluminyum-sprey-400-ml-1640-1666.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-zinc-aluminyum-sprey-400-ml-1640-1666.webp",
                         "featured": false
                   },
                   {
@@ -3542,7 +3542,7 @@
                         "priceUsd": 13.91,
                         "priceTry": 653.55,
                         "sku": "21611",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-hizli-parlaklik-cilasi-500-ml-21611-6571.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-hizli-parlaklik-cilasi-500-ml-21611-6571.webp",
                         "featured": false
                   },
                   {
@@ -3555,7 +3555,7 @@
                         "priceUsd": 8.47,
                         "priceTry": 398.09,
                         "sku": "1547",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-aracici-temizleyicisi-500-ml-1547-7619.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-aracici-temizleyicisi-500-ml-1547-7619.webp",
                         "featured": false
                   },
                   {
@@ -3568,7 +3568,7 @@
                         "priceUsd": 9.43,
                         "priceTry": 443.14,
                         "sku": "21832",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-oto-kokusu-cherry-21832-5975.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-oto-kokusu-cherry-21832-5975.webp",
                         "featured": false
                   },
                   {
@@ -3581,7 +3581,7 @@
                         "priceUsd": 3.51,
                         "priceTry": 165.1,
                         "sku": "1661",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-oto-kokusu-limon-1661-5241.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-oto-kokusu-limon-1661-5241.webp",
                         "featured": false
                   },
                   {
@@ -3594,7 +3594,7 @@
                         "priceUsd": 9.43,
                         "priceTry": 443.14,
                         "sku": "21831",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-oto-kokusu-new-car-21831-7836.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-oto-kokusu-new-car-21831-7836.webp",
                         "featured": false
                   },
                   {
@@ -3607,7 +3607,7 @@
                         "priceUsd": 9.43,
                         "priceTry": 443.14,
                         "sku": "21833",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-oto-kokusu-ocean-21833-6549.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-oto-kokusu-ocean-21833-6549.webp",
                         "featured": false
                   },
                   {
@@ -3620,7 +3620,7 @@
                         "priceUsd": 2.9,
                         "priceTry": 136.16,
                         "sku": "1664",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-oto-kokusu-sport-fresh-5-g-1664-1111.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-oto-kokusu-sport-fresh-5-g-1664-1111.webp",
                         "featured": false
                   },
                   {
@@ -3633,7 +3633,7 @@
                         "priceUsd": 9.43,
                         "priceTry": 443.14,
                         "sku": "21830",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-oto-kokusu-vanilya-21830-9911.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-oto-kokusu-vanilya-21830-9911.webp",
                         "featured": false
                   },
                   {
@@ -3646,7 +3646,7 @@
                         "priceUsd": 12.57,
                         "priceTry": 590.58,
                         "sku": "1538",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-kapi-fitil-kaucuk-lastik-spreyi-500-ml-1538-2361.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-kapi-fitil-kaucuk-lastik-spreyi-500-ml-1538-2361.webp",
                         "featured": false
                   },
                   {
@@ -3659,7 +3659,7 @@
                         "priceUsd": 16.71,
                         "priceTry": 785.41,
                         "sku": "5111",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/bogaz-kelebegi-temizleyici-spreyi-400-ml-5111-8164.jpg",
+                        "image": "assets/images/liqui-moly/catalog/bogaz-kelebegi-temizleyici-spreyi-400-ml-5111-8164.webp",
                         "featured": false
                   },
                   {
@@ -3672,7 +3672,7 @@
                         "priceUsd": 35.62,
                         "priceTry": 1673.92,
                         "sku": "3365",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/el-temizleme-kremi-3-litre-3365-endustriyel-1787.jpg",
+                        "image": "assets/images/liqui-moly/catalog/el-temizleme-kremi-3-litre-3365-endustriyel-1787.webp",
                         "featured": false
                   },
                   {
@@ -3698,7 +3698,7 @@
                         "priceUsd": 21.08,
                         "priceTry": 990.55,
                         "sku": "5200",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-yag-camuru-temizligi-300-ml-5200-7983.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-yag-camuru-temizligi-300-ml-5200-7983.webp",
                         "featured": false
                   },
                   {
@@ -3724,7 +3724,7 @@
                         "priceUsd": 13.23,
                         "priceTry": 621.95,
                         "sku": "23046",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-doseme-temizleme-kopugu-300-ml-23046-9155.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-doseme-temizleme-kopugu-300-ml-23046-9155.webp",
                         "featured": false
                   },
                   {
@@ -3737,7 +3737,7 @@
                         "priceUsd": 22.53,
                         "priceTry": 1058.72,
                         "sku": "1597",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-jant-temizleme-spreyi-1-l-1597-8972.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-jant-temizleme-spreyi-1-l-1597-8972.webp",
                         "featured": false
                   },
                   {
@@ -3750,7 +3750,7 @@
                         "priceUsd": 12.37,
                         "priceTry": 581.22,
                         "sku": "3579",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-zincir-spreyi-400-ml-3579-7423.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-zincir-spreyi-400-ml-3579-7423.webp",
                         "featured": false
                   },
                   {
@@ -3763,7 +3763,7 @@
                         "priceUsd": 7.54,
                         "priceTry": 354.22,
                         "sku": "1612",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/hizli-pas-sokucu-300-ml-1612-1554.jpg",
+                        "image": "assets/images/liqui-moly/catalog/hizli-pas-sokucu-300-ml-1612-1554.webp",
                         "featured": false
                   },
                   {
@@ -3776,7 +3776,7 @@
                         "priceUsd": 4.54,
                         "priceTry": 213.28,
                         "sku": "1682",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-super-k-icdis-temizleyici-250-ml-1682-1784.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-super-k-icdis-temizleyici-250-ml-1682-1784.webp",
                         "featured": false
                   },
                   {
@@ -3789,7 +3789,7 @@
                         "priceUsd": 8.48,
                         "priceTry": 398.33,
                         "sku": "1590",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/cam-yagmur-suyu-kaydirici-125-ml-1590-3540.jpg",
+                        "image": "assets/images/liqui-moly/catalog/cam-yagmur-suyu-kaydirici-125-ml-1590-3540.webp",
                         "featured": false
                   },
                   {
@@ -3802,7 +3802,7 @@
                         "priceUsd": 63.14,
                         "priceTry": 2967.57,
                         "sku": "3335",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-sivi-el-temizleyici-dispanseri-1-adet-3335-3328.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-sivi-el-temizleyici-dispanseri-1-adet-3335-3328.webp",
                         "featured": true
                   },
                   {
@@ -3815,7 +3815,7 @@
                         "priceUsd": 33.4,
                         "priceTry": 1569.96,
                         "sku": "3332",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-el-temizleyici-braketi-1-adet-3332-6254.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-el-temizleyici-braketi-1-adet-3332-6254.webp",
                         "featured": false
                   },
                   {
@@ -3828,7 +3828,7 @@
                         "priceUsd": 12.5,
                         "priceTry": 587.31,
                         "sku": "3326",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-motor-ust-temizleyici-400-ml-3326-2771.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-motor-ust-temizleyici-400-ml-3326-2771.webp",
                         "featured": false
                   },
                   {
@@ -3854,7 +3854,7 @@
                         "priceUsd": 10.32,
                         "priceTry": 485.24,
                         "sku": "4066",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/hava-akismetre-temizleyici-200-ml-4066-5629.jpg",
+                        "image": "assets/images/liqui-moly/catalog/hava-akismetre-temizleyici-200-ml-4066-5629.webp",
                         "featured": false
                   },
                   {
@@ -3867,7 +3867,7 @@
                         "priceUsd": 13.33,
                         "priceTry": 626.33,
                         "sku": "3623",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-conta-sokucu-cikaricisi-3623-8545.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-conta-sokucu-cikaricisi-3623-8545.webp",
                         "featured": false
                   },
                   {
@@ -3893,7 +3893,7 @@
                         "priceUsd": 13.63,
                         "priceTry": 640.63,
                         "sku": "1424",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-metalik-cila-500-ml-1424-3916.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-metalik-cila-500-ml-1424-3916.webp",
                         "featured": false
                   },
                   {
@@ -3919,7 +3919,7 @@
                         "priceUsd": 8.69,
                         "priceTry": 408.5,
                         "sku": "1603",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-kaskici-temizleyici-1603-1086.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-kaskici-temizleyici-1603-1086.webp",
                         "featured": false
                   },
                   {
@@ -3932,7 +3932,7 @@
                         "priceUsd": 7.88,
                         "priceTry": 370.5,
                         "sku": "1571",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-kask-ve-vizor-su-kaydirici-temizleyici-1571-4214.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-kask-ve-vizor-su-kaydirici-temizleyici-1571-4214.webp",
                         "featured": false
                   },
                   {
@@ -3945,7 +3945,7 @@
                         "priceUsd": 2.98,
                         "priceTry": 140.15,
                         "sku": "1517",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/konsantre-cam-temizleyici-50-ml-1517-4718.jpg",
+                        "image": "assets/images/liqui-moly/catalog/konsantre-cam-temizleyici-50-ml-1517-4718.webp",
                         "featured": false
                   },
                   {
@@ -3958,7 +3958,7 @@
                         "priceUsd": 10.17,
                         "priceTry": 477.82,
                         "sku": "21465",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-klima-fresh-plus-75-ml-21465-8835.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-klima-fresh-plus-75-ml-21465-8835.webp",
                         "featured": false
                   },
                   {
@@ -3971,7 +3971,7 @@
                         "priceUsd": 185.81,
                         "priceTry": 8732.87,
                         "sku": "4090",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-klima-sistemi-temizlik-tabancasi-1-adet-4090-1894.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-klima-sistemi-temizlik-tabancasi-1-adet-4090-1894.webp",
                         "featured": true
                   },
                   {
@@ -3997,7 +3997,7 @@
                         "priceUsd": 13.55,
                         "priceTry": 636.96,
                         "sku": "4091",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-klima-sistemi-temizleme-sivisi-1-litre-21921-6024.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-klima-sistemi-temizleme-sivisi-1-litre-21921-6024.webp",
                         "featured": false
                   },
                   {
@@ -4010,7 +4010,7 @@
                         "priceUsd": 13.84,
                         "priceTry": 650.35,
                         "sku": "4087",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/klima-sistem-temizleyici-sprey-250-ml-4087-2778.jpg",
+                        "image": "assets/images/liqui-moly/catalog/klima-sistem-temizleyici-sprey-250-ml-4087-2778.webp",
                         "featured": false
                   },
                   {
@@ -4023,7 +4023,7 @@
                         "priceUsd": 8.99,
                         "priceTry": 422.75,
                         "sku": null,
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-zincir-ve-balata-temizleme-spreyi-500ml-8961.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-zincir-ve-balata-temizleme-spreyi-500ml-8961.webp",
                         "featured": false
                   },
                   {
@@ -4036,7 +4036,7 @@
                         "priceUsd": 10.96,
                         "priceTry": 515.18,
                         "sku": "3305",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/multisprey-7-cok-amacli-sprey-500-ml-3305-5906.jpg",
+                        "image": "assets/images/liqui-moly/catalog/multisprey-7-cok-amacli-sprey-500-ml-3305-5906.webp",
                         "featured": false
                   }
             ]
@@ -4046,7 +4046,7 @@
             "title": "موتور سیکلت",
             "titleTr": "Motosiklet",
             "icon": "bike",
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-motosiklet-benzin-katkisi-yakit-sistemi-temizleyici-80-ml-7824-6220.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-motosiklet-benzin-katkisi-yakit-sistemi-temizleyici-80-ml-7824-6220.webp",
             "desc": "8 محصول",
             "series": [
                   {
@@ -4059,7 +4059,7 @@
                         "priceUsd": 5.05,
                         "priceTry": 237.5,
                         "sku": "7824",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-motosiklet-benzin-katkisi-yakit-sistemi-temizleyici-80-ml-7824-6220.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-motosiklet-benzin-katkisi-yakit-sistemi-temizleyici-80-ml-7824-6220.webp",
                         "featured": false
                   },
                   {
@@ -4072,7 +4072,7 @@
                         "priceUsd": 13.41,
                         "priceTry": 630.32,
                         "sku": "1554",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-deri-bakim-kremi-250-ml-1554-4823.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-deri-bakim-kremi-250-ml-1554-4823.webp",
                         "featured": false
                   },
                   {
@@ -4085,7 +4085,7 @@
                         "priceUsd": 8.39,
                         "priceTry": 394.25,
                         "sku": "1508",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-sentetik-zincir-yaglama-spreyi-1508-9612.jpeg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-sentetik-zincir-yaglama-spreyi-1508-9612.webp",
                         "featured": false
                   },
                   {
@@ -4098,7 +4098,7 @@
                         "priceUsd": 14.15,
                         "priceTry": 665.0,
                         "sku": "1591",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-sentetik-zincir-yaglama-spreyi-beyaz-3865.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-sentetik-zincir-yaglama-spreyi-beyaz-3865.webp",
                         "featured": false
                   },
                   {
@@ -4111,7 +4111,7 @@
                         "priceUsd": 10.61,
                         "priceTry": 498.75,
                         "sku": "1657",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-motosiklet-engine-flush-motor-ici-temizleyici-2022.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-motosiklet-engine-flush-motor-ici-temizleyici-2022.webp",
                         "featured": false
                   },
                   {
@@ -4124,7 +4124,7 @@
                         "priceUsd": 9.6,
                         "priceTry": 451.25,
                         "sku": "1579",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-motosiklet-lastik-tamir-spreyi-300-ml-1579-5363.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-motosiklet-lastik-tamir-spreyi-300-ml-1579-5363.webp",
                         "featured": false
                   },
                   {
@@ -4137,7 +4137,7 @@
                         "priceUsd": 5.19,
                         "priceTry": 244.15,
                         "sku": "7823",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-motorbike-speed-shooter-80-ml-7823-4096.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-motorbike-speed-shooter-80-ml-7823-4096.webp",
                         "featured": false
                   },
                   {
@@ -4150,7 +4150,7 @@
                         "priceUsd": 13.14,
                         "priceTry": 617.5,
                         "sku": "1604",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-motosiklet-hava-filtresi-yaglama-spreyi-1604-2215.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-motosiklet-hava-filtresi-yaglama-spreyi-1604-2215.webp",
                         "featured": false
                   }
             ]
@@ -4160,7 +4160,7 @@
             "title": "مارین",
             "titleTr": "Marine",
             "icon": "ship",
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marin-gresi-250-g-25042-2945.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-marin-gresi-250-g-25042-2945.webp",
             "desc": "3 محصول",
             "series": [
                   {
@@ -4173,7 +4173,7 @@
                         "priceUsd": 16.56,
                         "priceTry": 778.25,
                         "sku": "25042",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marin-gresi-250-g-25042-2945.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-marin-gresi-250-g-25042-2945.webp",
                         "featured": false
                   },
                   {
@@ -4186,7 +4186,7 @@
                         "priceUsd": 14.4,
                         "priceTry": 676.82,
                         "sku": "25043",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marin-gresi-400-g-25043-5219.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-marin-gresi-400-g-25043-5219.webp",
                         "featured": false
                   },
                   {
@@ -4199,7 +4199,7 @@
                         "priceUsd": 10.36,
                         "priceTry": 487.01,
                         "sku": "25033",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marine-motor-koruyucu-sprey-marine-storage-fogging-oil-300-ml-25033-4313.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-marine-motor-koruyucu-sprey-marine-storage-fogging-oil-300-ml-25033-4313.webp",
                         "featured": false
                   }
             ]
@@ -4209,7 +4209,7 @@
             "title": "سرویس و مواد مصرفی",
             "titleTr": "Servis",
             "icon": "wrench",
-            "image": "https://www.liquimolyturkey.com/admin/resimler/civata-sabitleyici-orta-sert-10-gr-3801-4208.jpg",
+            "image": "assets/images/liqui-moly/catalog/civata-sabitleyici-orta-sert-10-gr-3801-4208.webp",
             "desc": "11 محصول",
             "series": [
                   {
@@ -4222,7 +4222,7 @@
                         "priceUsd": 6.33,
                         "priceTry": 297.57,
                         "sku": "3801",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/civata-sabitleyici-orta-sert-10-gr-3801-4208.jpg",
+                        "image": "assets/images/liqui-moly/catalog/civata-sabitleyici-orta-sert-10-gr-3801-4208.webp",
                         "featured": false
                   },
                   {
@@ -4235,7 +4235,7 @@
                         "priceUsd": 18.39,
                         "priceTry": 864.37,
                         "sku": "3802",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/civata-sabitleyici-orta-sert-50-gr-3802-1217.jpg",
+                        "image": "assets/images/liqui-moly/catalog/civata-sabitleyici-orta-sert-50-gr-3802-1217.webp",
                         "featured": false
                   },
                   {
@@ -4248,7 +4248,7 @@
                         "priceUsd": 6.33,
                         "priceTry": 297.57,
                         "sku": "3803",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/civata-sabitleyici-sert-10-gr-3803-3347.jpg",
+                        "image": "assets/images/liqui-moly/catalog/civata-sabitleyici-sert-10-gr-3803-3347.webp",
                         "featured": false
                   },
                   {
@@ -4261,7 +4261,7 @@
                         "priceUsd": 18.39,
                         "priceTry": 864.37,
                         "sku": "3804",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-civata-sabitleyici-sert-50-gr-3804-3670.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-civata-sabitleyici-sert-50-gr-3804-3670.webp",
                         "featured": false
                   },
                   {
@@ -4274,7 +4274,7 @@
                         "priceUsd": 9.27,
                         "priceTry": 435.6,
                         "sku": "21700",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/elektronik-kontak-spreyi-200-ml-21700-9665.jpg",
+                        "image": "assets/images/liqui-moly/catalog/elektronik-kontak-spreyi-200-ml-21700-9665.webp",
                         "featured": false
                   },
                   {
@@ -4287,7 +4287,7 @@
                         "priceUsd": 8.67,
                         "priceTry": 407.3,
                         "sku": "3811",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-civata-sokme-maddesi-hasarli-civata-sokme-7045.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-civata-sokme-maddesi-hasarli-civata-sokme-7045.webp",
                         "featured": false
                   },
                   {
@@ -4300,7 +4300,7 @@
                         "priceUsd": 6.86,
                         "priceTry": 322.51,
                         "sku": "3342",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/egzoz-montaj-pastasi-3342-1246.jpg",
+                        "image": "assets/images/liqui-moly/catalog/egzoz-montaj-pastasi-3342-1246.webp",
                         "featured": false
                   },
                   {
@@ -4313,7 +4313,7 @@
                         "priceUsd": 8.01,
                         "priceTry": 376.5,
                         "sku": "3310",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/silikon-sprey-300-ml-3310-8097.jpg",
+                        "image": "assets/images/liqui-moly/catalog/silikon-sprey-300-ml-3310-8097.webp",
                         "featured": false
                   },
                   {
@@ -4326,7 +4326,7 @@
                         "priceUsd": 32.01,
                         "priceTry": 1504.47,
                         "sku": "6218",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/cam-kesme-teli-50-mt-6218-4978.jpg",
+                        "image": "assets/images/liqui-moly/catalog/cam-kesme-teli-50-mt-6218-4978.webp",
                         "featured": false
                   },
                   {
@@ -4339,7 +4339,7 @@
                         "priceUsd": 13.54,
                         "priceTry": 636.33,
                         "sku": "1540",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/galvaniz-koruyucu-zinc-spray-400-ml-1540-5014.jpg",
+                        "image": "assets/images/liqui-moly/catalog/galvaniz-koruyucu-zinc-spray-400-ml-1540-5014.webp",
                         "featured": false
                   },
                   {
@@ -4352,7 +4352,7 @@
                         "priceUsd": 8.33,
                         "priceTry": 391.67,
                         "sku": "3350",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-kacak-tespit-spreyi-400-ml-3350-2132.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-kacak-tespit-spreyi-400-ml-3350-2132.webp",
                         "featured": false
                   }
             ]
@@ -4362,7 +4362,7 @@
             "title": "سایر محصولات",
             "titleTr": "Diğer",
             "icon": "box",
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-lm48-montaj-macunu-3010-5295.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-lm48-montaj-macunu-3010-5295.webp",
             "desc": "20 محصول",
             "series": [
                   {
@@ -4375,7 +4375,7 @@
                         "priceUsd": 7.25,
                         "priceTry": 340.66,
                         "sku": "3010",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-lm48-montaj-macunu-3010-5295.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-lm48-montaj-macunu-3010-5295.webp",
                         "featured": false
                   },
                   {
@@ -4388,7 +4388,7 @@
                         "priceUsd": 10.92,
                         "priceTry": 513.31,
                         "sku": "1420",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-motor-koruyucu-sprey-300-ml-1420-6062.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-motor-koruyucu-sprey-300-ml-1420-6062.webp",
                         "featured": false
                   },
                   {
@@ -4401,7 +4401,7 @@
                         "priceUsd": 7.29,
                         "priceTry": 342.41,
                         "sku": "3351",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-motor-kacak-tespit-spreyi-200-ml-3351-6239.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-motor-kacak-tespit-spreyi-200-ml-3351-6239.webp",
                         "featured": false
                   },
                   {
@@ -4414,7 +4414,7 @@
                         "priceUsd": 12.23,
                         "priceTry": 574.7,
                         "sku": "4390",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-silah-bakim-spreyi-4390-6884.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-silah-bakim-spreyi-4390-6884.webp",
                         "featured": false
                   },
                   {
@@ -4427,7 +4427,7 @@
                         "priceUsd": 11.8,
                         "priceTry": 554.6,
                         "sku": "24391",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-silah-bakim-yagi-gresi-24391-3745.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-silah-bakim-yagi-gresi-24391-3745.webp",
                         "featured": false
                   },
                   {
@@ -4440,7 +4440,7 @@
                         "priceUsd": 18.39,
                         "priceTry": 864.37,
                         "sku": "3810",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/sizdirmaz-yuzey-sivi-conta-50-g-3810-3727.jpeg",
+                        "image": "assets/images/liqui-moly/catalog/sizdirmaz-yuzey-sivi-conta-50-g-3810-3727.webp",
                         "featured": false
                   },
                   {
@@ -4453,7 +4453,7 @@
                         "priceUsd": 11.05,
                         "priceTry": 519.28,
                         "sku": "3141",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/aku-gresi-300-ml-3141-1004.jpg",
+                        "image": "assets/images/liqui-moly/catalog/aku-gresi-300-ml-3141-1004.webp",
                         "featured": false
                   },
                   {
@@ -4466,7 +4466,7 @@
                         "priceUsd": 21.64,
                         "priceTry": 1017.2,
                         "sku": "6192",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-kaporta-yapistirma-spreyi-400-ml-6192-7242.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-kaporta-yapistirma-spreyi-400-ml-6192-7242.webp",
                         "featured": false
                   },
                   {
@@ -4479,7 +4479,7 @@
                         "priceUsd": 5.74,
                         "priceTry": 269.98,
                         "sku": "1080",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-rulman-mentese-macunu-50-gr-1080-8358.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-rulman-mentese-macunu-50-gr-1080-8358.webp",
                         "featured": false
                   },
                   {
@@ -4492,7 +4492,7 @@
                         "priceUsd": 6.16,
                         "priceTry": 289.6,
                         "sku": "1528",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-kapi-kilit-yaglayicisi-50-ml-1528-1823.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-kapi-kilit-yaglayicisi-50-ml-1528-1823.webp",
                         "featured": false
                   },
                   {
@@ -4505,7 +4505,7 @@
                         "priceUsd": 31.19,
                         "priceTry": 1465.9,
                         "sku": "7250",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/yag-toplayici-granul-25-litre-7250-3935.jpg",
+                        "image": "assets/images/liqui-moly/catalog/yag-toplayici-granul-25-litre-7250-3935.webp",
                         "featured": false
                   },
                   {
@@ -4518,7 +4518,7 @@
                         "priceUsd": 4.58,
                         "priceTry": 215.33,
                         "sku": "3805",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-hizli-yapistirici-10-g-3805-3645.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-hizli-yapistirici-10-g-3805-3645.webp",
                         "featured": false
                   },
                   {
@@ -4531,7 +4531,7 @@
                         "priceUsd": 12.4,
                         "priceTry": 583.03,
                         "sku": "3312",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-silikon-yaglayici-100-ml-3312-5574.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-silikon-yaglayici-100-ml-3312-5574.webp",
                         "featured": false
                   },
                   {
@@ -4544,7 +4544,7 @@
                         "priceUsd": 26.83,
                         "priceTry": 1260.92,
                         "sku": "6185",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/silikon-sivi-conta-6185-2790.png",
+                        "image": "assets/images/liqui-moly/catalog/silikon-sivi-conta-6185-2790.webp",
                         "featured": false
                   },
                   {
@@ -4570,7 +4570,7 @@
                         "priceUsd": 10.88,
                         "priceTry": 511.56,
                         "sku": "3075",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-kapi-kilit-spreyi-250-ml-3075-6824.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-kapi-kilit-spreyi-250-ml-3075-6824.webp",
                         "featured": false
                   },
                   {
@@ -4583,7 +4583,7 @@
                         "priceUsd": 9.83,
                         "priceTry": 462.21,
                         "sku": "4084",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/sivi-gres-tutunma-spreyi-400-ml-4084-5113.jpg",
+                        "image": "assets/images/liqui-moly/catalog/sivi-gres-tutunma-spreyi-400-ml-4084-5113.webp",
                         "featured": false
                   },
                   {
@@ -4596,7 +4596,7 @@
                         "priceUsd": 16.18,
                         "priceTry": 760.61,
                         "sku": "6193",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-sivi-metal-yapistirici-25-ml-6193-2354.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-sivi-metal-yapistirici-25-ml-6193-2354.webp",
                         "featured": false
                   },
                   {
@@ -4609,7 +4609,7 @@
                         "priceUsd": 64.4,
                         "priceTry": 3026.8,
                         "sku": "4061",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-bakir-macunu-1-kg-4061-3551.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-bakir-macunu-1-kg-4061-3551.webp",
                         "featured": true
                   },
                   {
@@ -4622,7 +4622,7 @@
                         "priceUsd": 21.97,
                         "priceTry": 1032.74,
                         "sku": "4083",
-                        "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-klima-sistemi-yagi-pag-46-4083-7031.jpg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-klima-sistemi-yagi-pag-46-4083-7031.webp",
                         "featured": false
                   }
             ]
@@ -4640,7 +4640,7 @@
             "sku": "5135",
             "priceTry": 1182.84,
             "priceUsd": 25.17,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/atf-otomatik-sanziman-katkisi-250-ml-5135-1002.jpg",
+            "image": "assets/images/liqui-moly/catalog/atf-otomatik-sanziman-katkisi-250-ml-5135-1002.webp",
             "url": "https://shop.egemot.com.tr/atf-otomatik-sanziman-katkisi-250-ml-5135",
             "category": "افزودنی روغن موتور"
       },
@@ -4685,7 +4685,7 @@
             "sku": "1019",
             "priceTry": 932.78,
             "priceUsd": 19.85,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-motor-clean-500-ml-1019-4374.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-motor-clean-500-ml-1019-4374.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-motor-clean-500-ml-1019",
             "category": "افزودنی روغن موتور"
       },
@@ -4700,7 +4700,7 @@
             "sku": "20766",
             "priceTry": 623.23,
             "priceUsd": 13.26,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-pro-line-turbo-sarj-katkisi-20-gr-20766-8474.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-pro-line-turbo-sarj-katkisi-20-gr-20766-8474.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-pro-line-turbo-sarj-katkisi-20-gr-20766",
             "category": "افزودنی روغن موتور"
       },
@@ -4730,7 +4730,7 @@
             "sku": "1614",
             "priceTry": 346.63,
             "priceUsd": 7.38,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-mos2li-kaydirici-ve-pas-sokucu-300-ml-1614-3547.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-mos2li-kaydirici-ve-pas-sokucu-300-ml-1614-3547.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-mos2li-kaydirici-ve-pas-sokucu-300-ml-1614",
             "category": "افزودنی روغن موتور"
       },
@@ -4745,7 +4745,7 @@
             "sku": "1001",
             "priceTry": 640.26,
             "priceUsd": 13.62,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-hibrit-yakit-katkisi-hybrit-additive-250-ml-1001-7586.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-hibrit-yakit-katkisi-hybrit-additive-250-ml-1001-7586.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-hibrit-yakit-katkisi-hybrit-additive-250-ml-1001",
             "category": "افزودنی سوخت بنزین"
       },
@@ -4760,7 +4760,7 @@
             "sku": "5176",
             "priceTry": 1673.6,
             "priceUsd": 35.61,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-pro-line-dizel-enjektor-ve-yanma-odasi-temizleyici-yakit-katkisi-1litre-2902.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-pro-line-dizel-enjektor-ve-yanma-odasi-temizleyici-yakit-katkisi-1litre-2902.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-pro-line-dizel-enjektor-ve-yanma-odasi-temizleyici-yakit-katkisi-1litre",
             "category": "افزودنی سوخت بنزین"
       },
@@ -4775,7 +4775,7 @@
             "sku": "21281",
             "priceTry": 1237.36,
             "priceUsd": 26.33,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-pro-line-enjektor-temizleyici-benzin-120-ml-21281-2991.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-pro-line-enjektor-temizleyici-benzin-120-ml-21281-2991.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-pro-line-enjektor-temizleyici-benzin-120-ml-21281",
             "category": "افزودنی سوخت بنزین"
       },
@@ -4790,7 +4790,7 @@
             "sku": "5153",
             "priceTry": 862.93,
             "priceUsd": 18.36,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-benzin-sistemi-temizleyicisi-5153-1777.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-benzin-sistemi-temizleyicisi-5153-1777.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-benzin-sistemi-temizleyicisi-5153",
             "category": "افزودنی سوخت بنزین"
       },
@@ -4805,7 +4805,7 @@
             "sku": "3720",
             "priceTry": 648.7,
             "priceUsd": 13.8,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/speed-tec-benzin-katkisi-250-ml-3720-1186.jpg",
+            "image": "assets/images/liqui-moly/catalog/speed-tec-benzin-katkisi-250-ml-3720-1186.webp",
             "url": "https://shop.egemot.com.tr/speed-tec-benzin-katkisi-250-ml-3720",
             "category": "افزودنی سوخت بنزین"
       },
@@ -4820,7 +4820,7 @@
             "sku": "3722",
             "priceTry": 680.16,
             "priceUsd": 14.47,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/speed-tec-dizel-yakit-katkisi-250-ml-3722-1644.jpg",
+            "image": "assets/images/liqui-moly/catalog/speed-tec-dizel-yakit-katkisi-250-ml-3722-1644.webp",
             "url": "https://shop.egemot.com.tr/speed-tec-dizel-yakit-katkisi-250-ml-3722",
             "category": "افزودنی سوخت بنزین"
       },
@@ -4835,7 +4835,7 @@
             "sku": "1014",
             "priceTry": 451.52,
             "priceUsd": 9.61,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-valve-clean-150-ml-1014-2252.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-valve-clean-150-ml-1014-2252.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-valve-clean-150-ml-1014",
             "category": "افزودنی سوخت بنزین"
       },
@@ -4850,7 +4850,7 @@
             "sku": "21492",
             "priceTry": 765.61,
             "priceUsd": 16.29,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-yeni-benzin-sistem-temizleyici-yakit-katkisi-300-ml-21492-2075.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-yeni-benzin-sistem-temizleyici-yakit-katkisi-300-ml-21492-2075.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-yeni-benzin-sistem-temizleyici-yakit-katkisi-300-ml-21492",
             "category": "افزودنی سوخت بنزین"
       },
@@ -4880,7 +4880,7 @@
             "sku": "1010",
             "priceTry": 653.12,
             "priceUsd": 13.9,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-oktan-yukselticii-250-ml-1010-2416.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-oktan-yukselticii-250-ml-1010-2416.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-oktan-yukselticii-250-ml-1010",
             "category": "افزودنی سوخت بنزین"
       },
@@ -4895,7 +4895,7 @@
             "sku": "3381",
             "priceTry": 288.92,
             "priceUsd": 6.15,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/enjektor-buji-gresi-20-g-3381-2658.jpg",
+            "image": "assets/images/liqui-moly/catalog/enjektor-buji-gresi-20-g-3381-2658.webp",
             "url": "https://shop.egemot.com.tr/enjektor-buji-gresi-20-g-3381",
             "category": "افزودنی سوخت بنزین"
       },
@@ -4910,7 +4910,7 @@
             "sku": "5110",
             "priceTry": 592.17,
             "priceUsd": 12.6,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/enjektor-temizleyici-benzin-300-ml-5110-2070.jpg",
+            "image": "assets/images/liqui-moly/catalog/enjektor-temizleyici-benzin-300-ml-5110-2070.webp",
             "url": "https://shop.egemot.com.tr/enjektor-temizleyici-benzin-300-ml-5110",
             "category": "افزودنی سوخت بنزین"
       },
@@ -4925,7 +4925,7 @@
             "sku": "3379",
             "priceTry": 677.04,
             "priceUsd": 14.41,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/enjektor-kizdirma-buji-sokucu-spreyi-400-ml-3379-5660.jpg",
+            "image": "assets/images/liqui-moly/catalog/enjektor-kizdirma-buji-sokucu-spreyi-400-ml-3379-5660.webp",
             "url": "https://shop.egemot.com.tr/enjektor-kizdirma-buji-sokucu-spreyi-400-ml-3379",
             "category": "افزودنی سوخت بنزین"
       },
@@ -4940,7 +4940,7 @@
             "sku": "7110",
             "priceTry": 553.99,
             "priceUsd": 11.79,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-emisyon-ayarlayici-katalitik-sistem-temizleyici-300-ml-7110-2468.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-emisyon-ayarlayici-katalitik-sistem-temizleyici-300-ml-7110-2468.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-emisyon-ayarlayici-katalitik-sistem-temizleyici-300-ml-7110",
             "category": "افزودنی سوخت بنزین"
       },
@@ -4955,7 +4955,7 @@
             "sku": "8931",
             "priceTry": 528.34,
             "priceUsd": 11.24,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/emisyon-ayarlayici-katalitik-sistem-temizleyici-300-ml-8931-3498.jpg",
+            "image": "assets/images/liqui-moly/catalog/emisyon-ayarlayici-katalitik-sistem-temizleyici-300-ml-8931-3498.webp",
             "url": "https://shop.egemot.com.tr/emisyon-ayarlayici-katalitik-sistem-temizleyici-300-ml-8931",
             "category": "افزودنی سوخت بنزین"
       },
@@ -4970,7 +4970,7 @@
             "sku": "5170",
             "priceTry": 771.35,
             "priceUsd": 16.41,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/dizel-enjektor-ve-yanma-odasi-temizleyici-500-ml-5170-1734.jpg",
+            "image": "assets/images/liqui-moly/catalog/dizel-enjektor-ve-yanma-odasi-temizleyici-500-ml-5170-1734.webp",
             "url": "https://shop.egemot.com.tr/dizel-enjektor-ve-yanma-odasi-temizleyici-500-ml-5170",
             "category": "افزودنی سوخت بنزین"
       },
@@ -4985,7 +4985,7 @@
             "sku": "5120",
             "priceTry": 598.77,
             "priceUsd": 12.74,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-dizel-enjektor-ve-yanma-odasi-temizleyici-250-ml-5120-3521.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-dizel-enjektor-ve-yanma-odasi-temizleyici-250-ml-5120-3521.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-dizel-enjektor-ve-yanma-odasi-temizleyici-250-ml-5120",
             "category": "افزودنی سوخت بنزین"
       },
@@ -5000,7 +5000,7 @@
             "sku": "4012",
             "priceTry": 1532.44,
             "priceUsd": 32.61,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/subap-koruyucu-lpgli-araclar-1-l-4012-2791.jpg",
+            "image": "assets/images/liqui-moly/catalog/subap-koruyucu-lpgli-araclar-1-l-4012-2791.webp",
             "url": "https://shop.egemot.com.tr/subap-koruyucu-lpgli-araclar-1-l-4012",
             "category": "افزودنی سوخت بنزین"
       },
@@ -5060,7 +5060,7 @@
             "sku": "2368",
             "priceTry": 2455.76,
             "priceUsd": 52.25,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-antibakteriyel-dizel-yakit-katkisi-2368-3518.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-antibakteriyel-dizel-yakit-katkisi-2368-3518.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-antibakteriyel-dizel-yakit-katkisi-2368",
             "category": "افزودنی سوخت دیزل"
       },
@@ -5075,7 +5075,7 @@
             "sku": "21942",
             "priceTry": 1233.56,
             "priceUsd": 26.25,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-dpf-temizleyici-400ml-21942-9187.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-dpf-temizleyici-400ml-21942-9187.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-dpf-temizleyici-400ml-21942",
             "category": "افزودنی سوخت دیزل"
       },
@@ -5090,7 +5090,7 @@
             "sku": "20997",
             "priceTry": 978.59,
             "priceUsd": 20.82,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-kamyon-serisi-dizel-sistem-ve-performans-koruyucu-500-ml-20997-4716.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-kamyon-serisi-dizel-sistem-ve-performans-koruyucu-500-ml-20997-4716.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-kamyon-serisi-dizel-sistem-ve-performans-koruyucu-500-ml-20997",
             "category": "افزودنی سوخت دیزل"
       },
@@ -5105,7 +5105,7 @@
             "sku": "25000",
             "priceTry": 1834.63,
             "priceUsd": 39.03,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marine-diesel-protect-500-ml-250001-1075.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-marine-diesel-protect-500-ml-250001-1075.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-marine-diesel-protect-500-ml-250001",
             "category": "افزودنی سوخت دیزل"
       },
@@ -5120,7 +5120,7 @@
             "sku": "25007",
             "priceTry": 1797.07,
             "priceUsd": 38.24,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marine-super-diesel-additive-dizel-yakit-katkisi-1l-25007-4670.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-marine-super-diesel-additive-dizel-yakit-katkisi-1l-25007-4670.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-marine-super-diesel-additive-dizel-yakit-katkisi-1l-25007",
             "category": "افزودنی سوخت دیزل"
       },
@@ -5135,7 +5135,7 @@
             "sku": "25005",
             "priceTry": 1155.66,
             "priceUsd": 24.59,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marine-super-diesel-additive-dizel-yakit-katkisi-500-ml-25005-6646.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-marine-super-diesel-additive-dizel-yakit-katkisi-500-ml-25005-6646.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-marine-super-diesel-additive-dizel-yakit-katkisi-500-ml-25005",
             "category": "افزودنی سوخت دیزل"
       },
@@ -5165,7 +5165,7 @@
             "sku": "21491",
             "priceTry": 866.51,
             "priceUsd": 18.44,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-yeni-dizel-sistem-temizleyici-yakit-katkisi-300-ml-21491-9110.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-yeni-dizel-sistem-temizleyici-yakit-katkisi-300-ml-21491-9110.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-yeni-dizel-sistem-temizleyici-yakit-katkisi-300-ml-21491",
             "category": "افزودنی سوخت دیزل"
       },
@@ -5180,7 +5180,7 @@
             "sku": "5180",
             "priceTry": 454.63,
             "priceUsd": 9.67,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/dizel-duman-onleyici-yakit-katkisi-150-ml-5180-9678.jpg",
+            "image": "assets/images/liqui-moly/catalog/dizel-duman-onleyici-yakit-katkisi-150-ml-5180-9678.webp",
             "url": "https://shop.egemot.com.tr/dizel-duman-onleyici-yakit-katkisi-150-ml-5180",
             "category": "افزودنی سوخت دیزل"
       },
@@ -5195,7 +5195,7 @@
             "sku": "5168",
             "priceTry": 795.18,
             "priceUsd": 16.92,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/dizel-emme-manifold-temizleyici-400-ml-5168-4000.jpg",
+            "image": "assets/images/liqui-moly/catalog/dizel-emme-manifold-temizleyici-400-ml-5168-4000.webp",
             "url": "https://shop.egemot.com.tr/dizel-emme-manifold-temizleyici-400-ml-5168",
             "category": "افزودنی سوخت دیزل"
       },
@@ -5210,7 +5210,7 @@
             "sku": "5156",
             "priceTry": 1165.17,
             "priceUsd": 24.79,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-dizel-sistem-temizleyici-pro-line-seri-500-ml-5156-9216.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-dizel-sistem-temizleyici-pro-line-seri-500-ml-5156-9216.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-dizel-sistem-temizleyici-pro-line-seri-500-ml-5156",
             "category": "افزودنی سوخت دیزل"
       },
@@ -5225,7 +5225,7 @@
             "sku": "5139",
             "priceTry": 587.29,
             "priceUsd": 12.5,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/dizel-sistem-temizleyici-yakit-katkisi-250-ml-5139-4964.jpg",
+            "image": "assets/images/liqui-moly/catalog/dizel-sistem-temizleyici-yakit-katkisi-250-ml-5139-4964.webp",
             "url": "https://shop.egemot.com.tr/dizel-sistem-temizleyici-yakit-katkisi-250-ml-5139",
             "category": "افزودنی سوخت دیزل"
       },
@@ -5240,7 +5240,7 @@
             "sku": "5131",
             "priceTry": 1836.31,
             "priceUsd": 39.07,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-dizel-yakit-donma-onleyici-1-litre-5131-3483.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-dizel-yakit-donma-onleyici-1-litre-5131-3483.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-dizel-yakit-donma-onleyici-1-litre-5131",
             "category": "افزودنی سوخت دیزل"
       },
@@ -5255,7 +5255,7 @@
             "sku": "5171",
             "priceTry": 1535.71,
             "priceUsd": 32.67,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/dizel-partikul-filtre-dpf-durulayici-500-ml-5171-2317.jpg",
+            "image": "assets/images/liqui-moly/catalog/dizel-partikul-filtre-dpf-durulayici-500-ml-5171-2317.webp",
             "url": "https://shop.egemot.com.tr/dizel-partikul-filtre-dpf-durulayici-500-ml-5171",
             "category": "افزودنی سوخت دیزل"
       },
@@ -5270,7 +5270,7 @@
             "sku": "5169",
             "priceTry": 2710.35,
             "priceUsd": 57.67,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/dizel-partikul-filtre-dpf-temizleyici-1-lt-5169-8095.jpg",
+            "image": "assets/images/liqui-moly/catalog/dizel-partikul-filtre-dpf-temizleyici-1-lt-5169-8095.webp",
             "url": "https://shop.egemot.com.tr/dizel-partikul-filtre-dpf-temizleyici-1-lt-5169",
             "category": "افزودنی سوخت دیزل"
       },
@@ -5285,7 +5285,7 @@
             "sku": "5148",
             "priceTry": 540.39,
             "priceUsd": 11.5,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/dizel-partikul-filtre-dpf-koruyucu-250-ml-5148-4054.jpg",
+            "image": "assets/images/liqui-moly/catalog/dizel-partikul-filtre-dpf-koruyucu-250-ml-5148-4054.webp",
             "url": "https://shop.egemot.com.tr/dizel-partikul-filtre-dpf-koruyucu-250-ml-5148",
             "category": "افزودنی سوخت دیزل"
       },
@@ -5300,7 +5300,7 @@
             "sku": "25001",
             "priceTry": 1834.63,
             "priceUsd": 39.03,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marine-dizel-koruyucu-500ml-25001-2633.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-marine-dizel-koruyucu-500ml-25001-2633.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-marine-dizel-koruyucu-500ml-25001",
             "category": "افزودنی سوخت دیزل"
       },
@@ -5315,7 +5315,7 @@
             "sku": "25002",
             "priceTry": 1939.59,
             "priceUsd": 41.27,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marine-dizel-koruyucu-1l-25002-4593.jpeg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-marine-dizel-koruyucu-1l-25002-4593.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-marine-dizel-koruyucu-1l-25002",
             "category": "افزودنی سوخت دیزل"
       },
@@ -5345,7 +5345,7 @@
             "sku": "21327",
             "priceTry": 2944.84,
             "priceUsd": 62.66,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w16-motor-yagi-special-tec-aa-4-litre-21327-1131.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-0w16-motor-yagi-special-tec-aa-4-litre-21327-1131.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-0w16-motor-yagi-special-tec-aa-4-litre-21327",
             "category": "روغن موتور"
       },
@@ -5360,7 +5360,7 @@
             "sku": "21328",
             "priceTry": 3631.01,
             "priceUsd": 77.26,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w16-motor-yagi-special-tec-aa-5-litre-21328-6638.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-0w16-motor-yagi-special-tec-aa-5-litre-21328-6638.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-0w16-motor-yagi-special-tec-aa-5-litre-21328",
             "category": "روغن موتور"
       },
@@ -5375,7 +5375,7 @@
             "sku": "6738",
             "priceTry": 815.59,
             "priceUsd": 17.35,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w20-motor-yagi-special-tec-aa-1-litre-6738-4511.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-0w20-motor-yagi-special-tec-aa-1-litre-6738-4511.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-0w20-motor-yagi-special-tec-aa-1-litre-6738",
             "category": "روغن موتور"
       },
@@ -5390,7 +5390,7 @@
             "sku": "9705",
             "priceTry": 2927.36,
             "priceUsd": 62.28,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w20-motor-yagi-special-tec-aa-4-litre-9705-7694.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-0w20-motor-yagi-special-tec-aa-4-litre-9705-7694.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-0w20-motor-yagi-special-tec-aa-4-litre-9705",
             "category": "روغن موتور"
       },
@@ -5405,7 +5405,7 @@
             "sku": "6739",
             "priceTry": 3649.69,
             "priceUsd": 77.65,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w20-motor-yagi-special-tec-aa-5-litre-6739-6893.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-0w20-motor-yagi-special-tec-aa-5-litre-6739-6893.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-0w20-motor-yagi-special-tec-aa-5-litre-6739",
             "category": "روغن موتور"
       },
@@ -5420,7 +5420,7 @@
             "sku": "20631",
             "priceTry": 930.32,
             "priceUsd": 19.79,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w20-motor-yagi-special-tec-v-1-litre-20631-volvo-5128.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-0w20-motor-yagi-special-tec-v-1-litre-20631-volvo-5128.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-0w20-motor-yagi-special-tec-v-1-litre-20631-volvo",
             "category": "روغن موتور"
       },
@@ -5435,7 +5435,7 @@
             "sku": "20632",
             "priceTry": 4146.84,
             "priceUsd": 88.23,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w20-motor-yagi-special-tec-v-5-litre-20632-2188.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-0w20-motor-yagi-special-tec-v-5-litre-20632-2188.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-0w20-motor-yagi-special-tec-v-5-litre-20632",
             "category": "روغن موتور"
       },
@@ -5450,7 +5450,7 @@
             "sku": "20787",
             "priceTry": 969.01,
             "priceUsd": 20.62,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w20-motor-yagi-top-tec-6200-1-litre-20787-2909.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-0w20-motor-yagi-top-tec-6200-1-litre-20787-2909.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-0w20-motor-yagi-top-tec-6200-1-litre-20787",
             "category": "روغن موتور"
       },
@@ -5465,7 +5465,7 @@
             "sku": "20788",
             "priceTry": 3480.31,
             "priceUsd": 74.05,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w20-motor-yagi-top-tec-6200-4-litre-20788-5913.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-0w20-motor-yagi-top-tec-6200-4-litre-20788-5913.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-0w20-motor-yagi-top-tec-6200-4-litre-20788",
             "category": "روغن موتور"
       },
@@ -5480,7 +5480,7 @@
             "sku": "20789",
             "priceTry": 4285.43,
             "priceUsd": 91.18,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w20-motor-yagi-top-tec-6200-5-litre-20789-6867.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-0w20-motor-yagi-top-tec-6200-5-litre-20789-6867.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-0w20-motor-yagi-top-tec-6200-5-litre-20789",
             "category": "روغن موتور"
       },
@@ -5495,7 +5495,7 @@
             "sku": "21585",
             "priceTry": 4423.48,
             "priceUsd": 94.12,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w20-motor-yagi-top-tec-6400-5-litre-21585-8936.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-0w20-motor-yagi-top-tec-6400-5-litre-21585-8936.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-0w20-motor-yagi-top-tec-6400-5-litre-21585",
             "category": "روغن موتور"
       },
@@ -5510,7 +5510,7 @@
             "sku": "21411",
             "priceTry": 4275.1,
             "priceUsd": 90.96,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w20-motor-yagi-top-tec-6600-5-litre-21411-1313.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-0w20-motor-yagi-top-tec-6600-5-litre-21411-1313.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-0w20-motor-yagi-top-tec-6600-5-litre-21411",
             "category": "روغن موتور"
       },
@@ -5525,7 +5525,7 @@
             "sku": "21660",
             "priceTry": 985.02,
             "priceUsd": 20.96,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w20-motor-yagi-top-tec-6610-1-litre-21660-7175.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-0w20-motor-yagi-top-tec-6610-1-litre-21660-7175.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-0w20-motor-yagi-top-tec-6610-1-litre-21660",
             "category": "روغن موتور"
       },
@@ -5540,7 +5540,7 @@
             "sku": "21662",
             "priceTry": 4380.67,
             "priceUsd": 93.21,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w20-motor-yagi-top-tec-6610-5-litre-21662-4832.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-0w20-motor-yagi-top-tec-6610-5-litre-21662-4832.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-0w20-motor-yagi-top-tec-6610-5-litre-21662",
             "category": "روغن موتور"
       },
@@ -5555,7 +5555,7 @@
             "sku": "21605",
             "priceTry": 4582.22,
             "priceUsd": 97.49,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w30-motor-yagi-tam-sentetik-top-tec-4210-5-litre-21605-8629.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-0w30-motor-yagi-tam-sentetik-top-tec-4210-5-litre-21605-8629.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-0w30-motor-yagi-tam-sentetik-top-tec-4210-5-litre-21605",
             "category": "روغن موتور"
       },
@@ -5570,7 +5570,7 @@
             "sku": "8903",
             "priceTry": 4421.03,
             "priceUsd": 94.06,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w30-motor-yagi-special-tec-f-5-litre-8903-4097.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-0w30-motor-yagi-special-tec-f-5-litre-8903-4097.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-0w30-motor-yagi-special-tec-f-5-litre-8903",
             "category": "روغن موتور"
       },
@@ -5585,7 +5585,7 @@
             "sku": "2853",
             "priceTry": 4083.26,
             "priceUsd": 86.88,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w30-motor-yagi-special-tec-v-5-litre-2853-9289.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-0w30-motor-yagi-special-tec-v-5-litre-2853-9289.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-0w30-motor-yagi-special-tec-v-5-litre-2853",
             "category": "روغن موتور"
       },
@@ -5600,7 +5600,7 @@
             "sku": "8977",
             "priceTry": 3774.81,
             "priceUsd": 80.32,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w30-motor-yagi-synthoil-longtime-5-litre-8977-3459.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-0w30-motor-yagi-synthoil-longtime-5-litre-8977-3459.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-0w30-motor-yagi-synthoil-longtime-5-litre-8977",
             "category": "روغن موتور"
       },
@@ -5615,7 +5615,7 @@
             "sku": "20779",
             "priceTry": 4553.31,
             "priceUsd": 96.88,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w30-motor-yagi-top-tec-6100-5-litre-20779-2820.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-0w30-motor-yagi-top-tec-6100-5-litre-20779-2820.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-0w30-motor-yagi-top-tec-6100-5-litre-20779",
             "category": "روغن موتور"
       },
@@ -5630,7 +5630,7 @@
             "sku": "2362",
             "priceTry": 4777.51,
             "priceUsd": 101.65,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w30-motor-yagi-tam-sentetik-top-tec-4310-5-litre-2362-4495.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-0w30-motor-yagi-tam-sentetik-top-tec-4310-5-litre-2362-4495.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-0w30-motor-yagi-tam-sentetik-top-tec-4310-5-litre-2362",
             "category": "روغن موتور"
       },
@@ -5645,7 +5645,7 @@
             "sku": "9515",
             "priceTry": 3912.18,
             "priceUsd": 83.24,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w40-synthoil-energy-tam-sentetik-motor-yagi-5-litre-9515-6467.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-0w40-synthoil-energy-tam-sentetik-motor-yagi-5-litre-9515-6467.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-0w40-synthoil-energy-tam-sentetik-motor-yagi-5-litre-9515",
             "category": "روغن موتور"
       },
@@ -5660,7 +5660,7 @@
             "sku": "21768",
             "priceTry": 3082.42,
             "priceUsd": 65.58,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w8-motor-yagi-special-tec-aa-4-litre-21768-6019.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-0w8-motor-yagi-special-tec-aa-4-litre-21768-6019.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-0w8-motor-yagi-special-tec-aa-4-litre-21768",
             "category": "روغن موتور"
       },
@@ -5675,7 +5675,7 @@
             "sku": "1506",
             "priceTry": 565.25,
             "priceUsd": 12.03,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w-medium-fork-oil-10w-sentetik-orta-amortisor-yagi-500ml-1506-9639.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-10w-medium-fork-oil-10w-sentetik-orta-amortisor-yagi-500ml-1506-9639.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-10w-medium-fork-oil-10w-sentetik-orta-amortisor-yagi-500ml-1506",
             "category": "روغن موتور"
       },
@@ -5690,7 +5690,7 @@
             "sku": "25022",
             "priceTry": 785.75,
             "priceUsd": 16.72,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w30-4t-marine-motor-yagi-1-litre-25022-1904.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-10w30-4t-marine-motor-yagi-1-litre-25022-1904.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-10w30-4t-marine-motor-yagi-1-litre-25022",
             "category": "روغن موتور"
       },
@@ -5705,7 +5705,7 @@
             "sku": "25023",
             "priceTry": 3415.1,
             "priceUsd": 72.66,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w30-4t-marine-motor-yagi-5-litre-25023-5121.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-10w30-4t-marine-motor-yagi-5-litre-25023-5121.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-10w30-4t-marine-motor-yagi-5-litre-25023",
             "category": "روغن موتور"
       },
@@ -5720,7 +5720,7 @@
             "sku": "2526",
             "priceTry": 646.0,
             "priceUsd": 13.74,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w30-4t-street-motosiklet-motor-yagi-1-litre-2526-4011.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-10w30-4t-street-motosiklet-motor-yagi-1-litre-2526-4011.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-10w30-4t-street-motosiklet-motor-yagi-1-litre-2526",
             "category": "روغن موتور"
       },
@@ -5750,7 +5750,7 @@
             "sku": "3013",
             "priceTry": 788.5,
             "priceUsd": 16.78,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w40-4t-atv-motor-yagi-1-litre-3013-8213.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-10w40-4t-atv-motor-yagi-1-litre-3013-8213.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-10w40-4t-atv-motor-yagi-1-litre-3013",
             "category": "روغن موتور"
       },
@@ -5765,7 +5765,7 @@
             "sku": "1618",
             "priceTry": 574.75,
             "priceUsd": 12.23,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w40-4t-basic-scooter-motosiklet-motor-yagi-1-litre-1618-2382.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-10w40-4t-basic-scooter-motosiklet-motor-yagi-1-litre-1618-2382.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-10w40-4t-basic-scooter-motosiklet-motor-yagi-1-litre-1618",
             "category": "روغن موتور"
       },
@@ -5780,7 +5780,7 @@
             "sku": "3044",
             "priceTry": 550.0,
             "priceUsd": 11.7,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w40-4t-basic-street-motosiklet-motor-yagi-1-litre-3044-1013.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-10w40-4t-basic-street-motosiklet-motor-yagi-1-litre-3044-1013.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-10w40-4t-basic-street-motosiklet-motor-yagi-1-litre-3044",
             "category": "روغن موتور"
       },
@@ -5795,7 +5795,7 @@
             "sku": "3055",
             "priceTry": 712.5,
             "priceUsd": 15.16,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w40-4t-off-road-motosiklet-tam-sentetik-motor-yagi-1litre-3055-2428.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-10w40-4t-off-road-motosiklet-tam-sentetik-motor-yagi-1litre-3055-2428.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-10w40-4t-off-road-motosiklet-tam-sentetik-motor-yagi-1litre-3055",
             "category": "روغن موتور"
       },
@@ -5810,7 +5810,7 @@
             "sku": "20753",
             "priceTry": 1140.0,
             "priceUsd": 24.26,
-            "image": "assets/images/liqui-moly/product-20753.png",
+            "image": "assets/images/liqui-moly/product-20753.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-10w40-4t-race-motosiklet-tam-sentetik-motor-yagi-1-litre-20753",
             "category": "روغن موتور"
       },
@@ -5825,7 +5825,7 @@
             "sku": "20754",
             "priceTry": 4417.5,
             "priceUsd": 93.99,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w40-4t-race-motosiklet-motor-yagi-4-litre-20754-8892.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-10w40-4t-race-motosiklet-motor-yagi-4-litre-20754-8892.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-10w40-4t-race-motosiklet-motor-yagi-4-litre-20754",
             "category": "روغن موتور"
       },
@@ -5855,7 +5855,7 @@
             "sku": "1521",
             "priceTry": 646.0,
             "priceUsd": 13.74,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w40-4t-street-motosiklet-motor-yagi-1-litre-1521-2085.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-10w40-4t-street-motosiklet-motor-yagi-1-litre-1521-2085.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-10w40-4t-street-motosiklet-motor-yagi-1-litre-1521",
             "category": "روغن موتور"
       },
@@ -5870,7 +5870,7 @@
             "sku": "1243",
             "priceTry": 2517.5,
             "priceUsd": 53.56,
-            "image": "assets/images/liqui-moly/product-1243.png",
+            "image": "assets/images/liqui-moly/product-1243.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-10w40-4t-street-motosiklet-motor-yagi-4-litre-1243",
             "category": "روغن موتور"
       },
@@ -5885,7 +5885,7 @@
             "sku": "3794",
             "priceTry": 13387.52,
             "priceUsd": 284.84,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-top-tec-truck-4050-motor-yagi-20-litre-3794-4689.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-top-tec-truck-4050-motor-yagi-20-litre-3794-4689.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-top-tec-truck-4050-motor-yagi-20-litre-3794",
             "category": "روغن موتور"
       },
@@ -5915,7 +5915,7 @@
             "sku": "2626",
             "priceTry": 738.72,
             "priceUsd": 15.72,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/10w40-motor-yagi-mos2li-kismi-sentetik-leichtlauf-1-litre-2626-2025.jpg",
+            "image": "assets/images/liqui-moly/catalog/10w40-motor-yagi-mos2li-kismi-sentetik-leichtlauf-1-litre-2626-2025.webp",
             "url": "https://shop.egemot.com.tr/10w40-motor-yagi-mos2li-kismi-sentetik-leichtlauf-1-litre-2626",
             "category": "روغن موتور"
       },
@@ -5930,7 +5930,7 @@
             "sku": "9955",
             "priceTry": 704.2,
             "priceUsd": 14.98,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w-40-motor-yagi-molygen-new-generation-1-litre-9955-8189.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-10w-40-motor-yagi-molygen-new-generation-1-litre-9955-8189.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-10w-40-motor-yagi-molygen-new-generation-1-litre-9955",
             "category": "روغن موتور"
       },
@@ -5945,7 +5945,7 @@
             "sku": "8538",
             "priceTry": 2517.94,
             "priceUsd": 53.57,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w-40-motor-yagi-molygen-new-generation-4-litre-8538-8206.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-10w-40-motor-yagi-molygen-new-generation-4-litre-8538-8206.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-10w-40-motor-yagi-molygen-new-generation-4-litre-8538",
             "category": "روغن موتور"
       },
@@ -5960,7 +5960,7 @@
             "sku": "9951",
             "priceTry": 3041.67,
             "priceUsd": 64.72,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w-40-motor-yagi-molygen-new-generation-5-litre-9951-7529.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-10w-40-motor-yagi-molygen-new-generation-5-litre-9951-7529.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-10w-40-motor-yagi-molygen-new-generation-5-litre-9951",
             "category": "روغن موتور"
       },
@@ -5975,7 +5975,7 @@
             "sku": "9503",
             "priceTry": 663.01,
             "priceUsd": 14.11,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/10w40-motor-yagi-super-sentetik-super-leichtlauf-1-litre-9503-7444.png",
+            "image": "assets/images/liqui-moly/catalog/10w40-motor-yagi-super-sentetik-super-leichtlauf-1-litre-9503-7444.webp",
             "url": "https://shop.egemot.com.tr/10w40-motor-yagi-super-sentetik-super-leichtlauf-1-litre-9503",
             "category": "روغن موتور"
       },
@@ -5990,7 +5990,7 @@
             "sku": "1304",
             "priceTry": 11076.2,
             "priceUsd": 235.66,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w40-motor-yagi-super-sentetik-super-leichtlauf-20-litre-1304-9885.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-10w40-motor-yagi-super-sentetik-super-leichtlauf-20-litre-1304-9885.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-10w40-motor-yagi-super-sentetik-super-leichtlauf-20-litre-1304",
             "category": "روغن موتور"
       },
@@ -6020,7 +6020,7 @@
             "sku": "9505",
             "priceTry": 2827.7,
             "priceUsd": 60.16,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w40-motor-yagi-super-sentetik-super-leichtlauf-5-litre-9505-7628.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-10w40-motor-yagi-super-sentetik-super-leichtlauf-5-litre-9505-7628.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-10w40-motor-yagi-super-sentetik-super-leichtlauf-5-litre-9505",
             "category": "روغن موتور"
       },
@@ -6035,7 +6035,7 @@
             "sku": "6948",
             "priceTry": 2590.02,
             "priceUsd": 55.11,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w40-motor-yagi-kismi-sentetik-mos2li-leichtlauf-4-litre-6948-1474.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-10w40-motor-yagi-kismi-sentetik-mos2li-leichtlauf-4-litre-6948-1474.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-10w40-motor-yagi-kismi-sentetik-mos2li-leichtlauf-4-litre-6948",
             "category": "روغن موتور"
       },
@@ -6050,7 +6050,7 @@
             "sku": "2184",
             "priceTry": 3193.68,
             "priceUsd": 67.95,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/10w40-motor-yagi-mos2li-leichtlauf-5-litre-2184-2330.jpg",
+            "image": "assets/images/liqui-moly/catalog/10w40-motor-yagi-mos2li-leichtlauf-5-litre-2184-2330.webp",
             "url": "https://shop.egemot.com.tr/10w40-motor-yagi-mos2li-leichtlauf-5-litre-2184",
             "category": "روغن موتور"
       },
@@ -6080,7 +6080,7 @@
             "sku": "1502",
             "priceTry": 1140.0,
             "priceUsd": 24.26,
-            "image": "assets/images/liqui-moly/product-1502.jpg",
+            "image": "assets/images/liqui-moly/product-1502.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-10w50-4t-race-motosiklet-tam-sentetik-motor-yagi-1-litre-1502",
             "category": "روغن موتور"
       },
@@ -6095,7 +6095,7 @@
             "sku": "1686",
             "priceTry": 4417.5,
             "priceUsd": 93.99,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w50-4t-race-motosiklet-tam-sentetik-motor-yagi-4-litre-1686-9791.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-10w50-4t-race-motosiklet-tam-sentetik-motor-yagi-4-litre-1686-9791.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-10w50-4t-race-motosiklet-tam-sentetik-motor-yagi-4-litre-1686",
             "category": "روغن موتور"
       },
@@ -6110,7 +6110,7 @@
             "sku": "8908",
             "priceTry": 903.98,
             "priceUsd": 19.23,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w60-motor-yagi-synthoil-race-tech-gt1-1-litre-8908-2243.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-10w60-motor-yagi-synthoil-race-tech-gt1-1-litre-8908-2243.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-10w60-motor-yagi-synthoil-race-tech-gt1-1-litre-8908",
             "category": "روغن موتور"
       },
@@ -6125,7 +6125,7 @@
             "sku": "7535",
             "priceTry": 3270.9,
             "priceUsd": 69.59,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w60-motor-yagi-synthoil-race-tech-gt1-4-litre-7535-2-6052.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-10w60-motor-yagi-synthoil-race-tech-gt1-4-litre-7535-2-6052.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-10w60-motor-yagi-synthoil-race-tech-gt1-4-litre-7535-2",
             "category": "روغن موتور"
       },
@@ -6140,7 +6140,7 @@
             "sku": "8909",
             "priceTry": 3857.96,
             "priceUsd": 82.08,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-10w60-motor-yagi-synthoil-race-tech-gt1-5-litre-8909-9096.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-10w60-motor-yagi-synthoil-race-tech-gt1-5-litre-8909-9096.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-10w60-motor-yagi-synthoil-race-tech-gt1-5-litre-8909",
             "category": "روغن موتور"
       },
@@ -6185,7 +6185,7 @@
             "sku": "2555",
             "priceTry": 646.0,
             "priceUsd": 13.74,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-15w50-4t-street-motosiklet-motor-yagi-1-litre-2555-3992.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-15w50-4t-street-motosiklet-motor-yagi-1-litre-2555-3992.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-15w50-4t-street-motosiklet-motor-yagi-1-litre-2555",
             "category": "روغن موتور"
       },
@@ -6200,7 +6200,7 @@
             "sku": "1689",
             "priceTry": 2517.5,
             "priceUsd": 53.56,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-15w50-4t-street-motosiklet-motor-yagi-4-litre-1689-4463.jpeg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-15w50-4t-street-motosiklet-motor-yagi-4-litre-1689-4463.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-15w50-4t-street-motosiklet-motor-yagi-4-litre-1689",
             "category": "روغن موتور"
       },
@@ -6230,7 +6230,7 @@
             "sku": "1500",
             "priceTry": 570.0,
             "priceUsd": 12.13,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-20w50-4t-basic-street-motosiklet-motor-yagi-1-litre-1500-7373.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-20w50-4t-basic-street-motosiklet-motor-yagi-1-litre-1500-7373.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-20w50-4t-basic-street-motosiklet-motor-yagi-1-litre-1500",
             "category": "روغن موتور"
       },
@@ -6245,7 +6245,7 @@
             "sku": "21358",
             "priceTry": 2609.34,
             "priceUsd": 55.52,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-20w50-motor-yagi-kismi-sentetik-mos2li-leichtlauf-4-litre-21358-7337.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-20w50-motor-yagi-kismi-sentetik-mos2li-leichtlauf-4-litre-21358-7337.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-20w50-motor-yagi-kismi-sentetik-mos2li-leichtlauf-4-litre-21358",
             "category": "روغن موتور"
       },
@@ -6260,7 +6260,7 @@
             "sku": "25026",
             "priceTry": 771.24,
             "priceUsd": 16.41,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-25w40-4t-marine-motor-yagi-1-litre-25026-7280.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-25w40-4t-marine-motor-yagi-1-litre-25026-7280.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-25w40-4t-marine-motor-yagi-1-litre-25026",
             "category": "روغن موتور"
       },
@@ -6275,7 +6275,7 @@
             "sku": "25027",
             "priceTry": 3365.24,
             "priceUsd": 71.6,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-25w40-4t-marine-motor-yagi-25027-8358.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-25w40-4t-marine-motor-yagi-25027-8358.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-25w40-4t-marine-motor-yagi-25027",
             "category": "روغن موتور"
       },
@@ -6290,7 +6290,7 @@
             "sku": "3065",
             "priceTry": 921.5,
             "priceUsd": 19.61,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-2t-off-road-motosiklet-yari-sentetik-motor-yagi-1-litre-3065-2673.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-2t-off-road-motosiklet-yari-sentetik-motor-yagi-1-litre-3065-2673.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-2t-off-road-motosiklet-yari-sentetik-motor-yagi-1-litre-3065",
             "category": "روغن موتور"
       },
@@ -6305,7 +6305,7 @@
             "sku": "3841",
             "priceTry": 4046.9,
             "priceUsd": 86.1,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w20-motor-yagi-special-tec-ford-eco-5-litre-3841-8876.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w20-motor-yagi-special-tec-ford-eco-5-litre-3841-8876.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w20-motor-yagi-special-tec-ford-eco-5-litre-3841",
             "category": "روغن موتور"
       },
@@ -6320,7 +6320,7 @@
             "sku": "21224",
             "priceTry": 838.61,
             "priceUsd": 17.84,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-dpf-motor-yagi-molygen-new-generation-1-litre-21224-4526.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-dpf-motor-yagi-molygen-new-generation-1-litre-21224-4526.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w30-dpf-motor-yagi-molygen-new-generation-1-litre-21224",
             "category": "روغن موتور"
       },
@@ -6335,7 +6335,7 @@
             "sku": "21225",
             "priceTry": 3199.66,
             "priceUsd": 68.08,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-dpf-motor-yagi-molygen-new-generation-4-litre-21225-4979.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-dpf-motor-yagi-molygen-new-generation-4-litre-21225-4979.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w30-dpf-motor-yagi-molygen-new-generation-4-litre-21225",
             "category": "روغن موتور"
       },
@@ -6350,7 +6350,7 @@
             "sku": null,
             "priceTry": 3910.88,
             "priceUsd": 83.21,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-synthoil-high-tech-tam-sentetik-motor-yagi-7090.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-synthoil-high-tech-tam-sentetik-motor-yagi-7090.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w30-synthoil-high-tech-tam-sentetik-motor-yagi",
             "category": "روغن موتور"
       },
@@ -6365,7 +6365,7 @@
             "sku": "1144",
             "priceTry": 2960.34,
             "priceUsd": 62.99,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-dpfli-sentetik-longtime-high-tech-4-litre-1144-9605.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-dpfli-sentetik-longtime-high-tech-4-litre-1144-9605.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w30-motor-yagi-dpfli-sentetik-longtime-high-tech-4-litre-1144",
             "category": "روغن موتور"
       },
@@ -6380,7 +6380,7 @@
             "sku": "9507",
             "priceTry": 3404.82,
             "priceUsd": 72.44,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/5w30-motor-yagi-dpfli-sentetik-5-litre-9507-7272.jpg",
+            "image": "assets/images/liqui-moly/catalog/5w30-motor-yagi-dpfli-sentetik-5-litre-9507-7272.webp",
             "url": "https://shop.egemot.com.tr/5w30-motor-yagi-dpfli-sentetik-5-litre-9507",
             "category": "روغن موتور"
       },
@@ -6395,7 +6395,7 @@
             "sku": "9506",
             "priceTry": 835.74,
             "priceUsd": 17.78,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-longtime-high-tech-1litre-9506-9661.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-longtime-high-tech-1litre-9506-9661.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w30-motor-yagi-longtime-high-tech-1litre-9506",
             "category": "روغن موتور"
       },
@@ -6410,7 +6410,7 @@
             "sku": "8541",
             "priceTry": 813.09,
             "priceUsd": 17.3,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-leichtlauf-hc7-1-litre-8541-5778.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-leichtlauf-hc7-1-litre-8541-5778.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w30-motor-yagi-leichtlauf-hc7-1-litre-8541",
             "category": "روغن موتور"
       },
@@ -6425,7 +6425,7 @@
             "sku": "8461",
             "priceTry": 2874.49,
             "priceUsd": 61.16,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-leichtlauf-hc7-4-litre-8641-9944.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-leichtlauf-hc7-4-litre-8641-9944.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w30-motor-yagi-leichtlauf-hc7-4-litre-8641",
             "category": "روغن موتور"
       },
@@ -6440,7 +6440,7 @@
             "sku": "8542",
             "priceTry": 3573.95,
             "priceUsd": 76.04,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-leichtlauf-hc7-5litre-8542-5648.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-leichtlauf-hc7-5litre-8542-5648.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w30-motor-yagi-leichtlauf-hc7-5litre-8542",
             "category": "روغن موتور"
       },
@@ -6455,7 +6455,7 @@
             "sku": "9047",
             "priceTry": 782.4,
             "priceUsd": 16.65,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-molygen-new-generation-1-litre-9047-6999.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-molygen-new-generation-1-litre-9047-6999.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w30-motor-yagi-molygen-new-generation-1-litre-9047",
             "category": "روغن موتور"
       },
@@ -6470,7 +6470,7 @@
             "sku": "9089",
             "priceTry": 2974.86,
             "priceUsd": 63.29,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-molygen-new-generation-5-litre-9089-7788.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-molygen-new-generation-5-litre-9089-7788.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w30-motor-yagi-molygen-new-generation-5-litre-9089",
             "category": "روغن موتور"
       },
@@ -6485,7 +6485,7 @@
             "sku": "9952",
             "priceTry": 3698.56,
             "priceUsd": 78.69,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-molygen-new-generation-5-litre-9952-7961.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-molygen-new-generation-5-litre-9952-7961.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w30-motor-yagi-molygen-new-generation-5-litre-9952",
             "category": "روغن موتور"
       },
@@ -6500,7 +6500,7 @@
             "sku": "2325",
             "priceTry": 855.95,
             "priceUsd": 18.21,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-special-tec-f-1-litre-2325-8970.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-special-tec-f-1-litre-2325-8970.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w30-motor-yagi-special-tec-f-1-litre-2325",
             "category": "روغن موتور"
       },
@@ -6515,7 +6515,7 @@
             "sku": "2326",
             "priceTry": 3812.17,
             "priceUsd": 81.11,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-special-tec-f-5-litre-2326-3558.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-special-tec-f-5-litre-2326-3558.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w30-motor-yagi-special-tec-f-5-litre-2326",
             "category": "روغن موتور"
       },
@@ -6530,7 +6530,7 @@
             "sku": "2319",
             "priceTry": 985.19,
             "priceUsd": 20.96,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-top-tec-4400-1-litre-2319-4760.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-top-tec-4400-1-litre-2319-4760.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w30-motor-yagi-top-tec-4400-1-litre-2319",
             "category": "روغن موتور"
       },
@@ -6545,7 +6545,7 @@
             "sku": "2322",
             "priceTry": 4385.4,
             "priceUsd": 93.31,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-top-tec-4400-5-litre-2322-2274.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-top-tec-4400-5-litre-2322-2274.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w30-motor-yagi-top-tec-4400-5-litre-2322",
             "category": "روغن موتور"
       },
@@ -6560,7 +6560,7 @@
             "sku": "21402",
             "priceTry": 945.17,
             "priceUsd": 20.11,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-top-tec-4410-1-litre-21402-1502.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-top-tec-4410-1-litre-21402-1502.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w30-motor-yagi-top-tec-4410-1-litre-21402",
             "category": "روغن موتور"
       },
@@ -6575,7 +6575,7 @@
             "sku": "21404",
             "priceTry": 4290.91,
             "priceUsd": 91.3,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-top-tec-4410-5-litre-21404-3791.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-top-tec-4410-5-litre-21404-3791.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w30-motor-yagi-top-tec-4410-5-litre-21404",
             "category": "روغن موتور"
       },
@@ -6590,7 +6590,7 @@
             "sku": "21584",
             "priceTry": 977.02,
             "priceUsd": 20.79,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-0w20-motor-yagi-top-tec-6400-1-litre-21584-3499.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-0w20-motor-yagi-top-tec-6400-1-litre-21584-3499.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-0w20-motor-yagi-top-tec-6400-1-litre-21584",
             "category": "روغن موتور"
       },
@@ -6605,7 +6605,7 @@
             "sku": "8972",
             "priceTry": 976.54,
             "priceUsd": 20.78,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4200-1-litre-8972-9636.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4200-1-litre-8972-9636.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4200-1-litre-8972",
             "category": "روغن موتور"
       },
@@ -6620,7 +6620,7 @@
             "sku": "3715",
             "priceTry": 3505.03,
             "priceUsd": 74.58,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4200-4litre-3715-5002.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4200-4litre-3715-5002.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4200-4litre-3715",
             "category": "روغن موتور"
       },
@@ -6635,7 +6635,7 @@
             "sku": "8973",
             "priceTry": 4313.74,
             "priceUsd": 91.78,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/5w30-motor-yagi-tam-sentetik-top-tec-4200-5-litre-8973-7325.jpg",
+            "image": "assets/images/liqui-moly/catalog/5w30-motor-yagi-tam-sentetik-top-tec-4200-5-litre-8973-7325.webp",
             "url": "https://shop.egemot.com.tr/5w30-motor-yagi-tam-sentetik-top-tec-4200-5-litre-8973",
             "category": "روغن موتور"
       },
@@ -6650,7 +6650,7 @@
             "sku": "2324",
             "priceTry": 3759.65,
             "priceUsd": 79.99,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4300-5-litre-2324-2819.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4300-5-litre-2324-2819.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4300-5-litre-2324",
             "category": "روغن موتور"
       },
@@ -6665,7 +6665,7 @@
             "sku": "2317",
             "priceTry": 969.18,
             "priceUsd": 20.62,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4500-1-litre-2317-6160.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4500-1-litre-2317-6160.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4500-1-litre-2317",
             "category": "روغن موتور"
       },
@@ -6680,7 +6680,7 @@
             "sku": "2318",
             "priceTry": 4279.77,
             "priceUsd": 91.06,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4500-5-litre-2318-1159.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4500-5-litre-2318-1159.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4500-5-litre-2318",
             "category": "روغن موتور"
       },
@@ -6695,7 +6695,7 @@
             "sku": "2315",
             "priceTry": 849.11,
             "priceUsd": 18.07,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4600-1-litre-2315-4550.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4600-1-litre-2315-4550.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4600-1-litre-2315",
             "category": "روغن موتور"
       },
@@ -6710,7 +6710,7 @@
             "sku": "3763",
             "priceTry": 3009.59,
             "priceUsd": 64.03,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4600-4-litre-3763-3016.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4600-4-litre-3763-3016.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4600-4-litre-3763",
             "category": "روغن موتور"
       },
@@ -6725,7 +6725,7 @@
             "sku": "2316",
             "priceTry": 3716.84,
             "priceUsd": 79.08,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4600-5-litre-2316-7013.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4600-5-litre-2316-7013.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w30-motor-yagi-tam-sentetik-top-tec-4600-5-litre-2316",
             "category": "روغن موتور"
       },
@@ -6740,7 +6740,7 @@
             "sku": "2592",
             "priceTry": 1140.0,
             "priceUsd": 24.26,
-            "image": "assets/images/liqui-moly/product-2592.jpg",
+            "image": "assets/images/liqui-moly/product-2592.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w40-4t-race-motosiklet-tam-sentetik-motor-yagi-1-litre-2592",
             "category": "روغن موتور"
       },
@@ -6755,7 +6755,7 @@
             "sku": "1685",
             "priceTry": 4417.5,
             "priceUsd": 93.99,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w40-4t-motosiklet-tam-sentetik-motor-yagi-bmw-gs-4-litre-1685-5564.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w40-4t-motosiklet-tam-sentetik-motor-yagi-bmw-gs-4-litre-1685-5564.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w40-4t-motosiklet-tam-sentetik-motor-yagi-bmw-gs-4-litre-1685",
             "category": "روغن موتور"
       },
@@ -6770,7 +6770,7 @@
             "sku": "1855",
             "priceTry": 870.46,
             "priceUsd": 18.52,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w40-synthoil-high-tech-tam-sentetik-motor-yagi-1-litre-1855-4759.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w40-synthoil-high-tech-tam-sentetik-motor-yagi-1-litre-1855-4759.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w40-synthoil-high-tech-tam-sentetik-motor-yagi-1-litre-1855",
             "category": "روغن موتور"
       },
@@ -6815,7 +6815,7 @@
             "sku": "8576",
             "priceTry": 850.44,
             "priceUsd": 18.09,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w40-motor-yagi-molygen-new-generation-1-litre-8576-6915.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w40-motor-yagi-molygen-new-generation-1-litre-8576-6915.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w40-motor-yagi-molygen-new-generation-1-litre-8576",
             "category": "روغن موتور"
       },
@@ -6830,7 +6830,7 @@
             "sku": "8536",
             "priceTry": 3807.96,
             "priceUsd": 81.02,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w40-motor-yagi-molygen-new-generation-5-litre-8536-2383.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w40-motor-yagi-molygen-new-generation-5-litre-8536-2383.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w40-motor-yagi-molygen-new-generation-5-litre-8536",
             "category": "روغن موتور"
       },
@@ -6845,7 +6845,7 @@
             "sku": "9510",
             "priceTry": 902.64,
             "priceUsd": 19.21,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w40-motor-yagi-top-tec-4100-tam-sentetik-1-litre-9510-1674.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w40-motor-yagi-top-tec-4100-tam-sentetik-1-litre-9510-1674.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w40-motor-yagi-top-tec-4100-tam-sentetik-1-litre-9510",
             "category": "روغن موتور"
       },
@@ -6860,7 +6860,7 @@
             "sku": "2195",
             "priceTry": 3248.64,
             "priceUsd": 69.12,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w40-motor-yagi-top-tec-4100-tam-sentetik-4-litre-2195-4358.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w40-motor-yagi-top-tec-4100-tam-sentetik-4-litre-2195-4358.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w40-motor-yagi-top-tec-4100-tam-sentetik-4-litre-2195",
             "category": "روغن موتور"
       },
@@ -6875,7 +6875,7 @@
             "sku": "9511",
             "priceTry": 3968.37,
             "priceUsd": 84.43,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/5w40-motor-yagi-top-tec-4100-tam-sentetik-5-litre-9511-4984.jpg",
+            "image": "assets/images/liqui-moly/catalog/5w40-motor-yagi-top-tec-4100-tam-sentetik-5-litre-9511-4984.webp",
             "url": "https://shop.egemot.com.tr/5w40-motor-yagi-top-tec-4100-tam-sentetik-5-litre-9511",
             "category": "روغن موتور"
       },
@@ -6890,7 +6890,7 @@
             "sku": "21479",
             "priceTry": 4179.08,
             "priceUsd": 88.92,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w40-motor-yagi-top-tec-4110-tam-sentetik-5-litre-21479-8108.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w40-motor-yagi-top-tec-4110-tam-sentetik-5-litre-21479-8108.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w40-motor-yagi-top-tec-4110-tam-sentetik-5-litre-21479",
             "category": "روغن موتور"
       },
@@ -6905,7 +6905,7 @@
             "sku": "1346",
             "priceTry": 805.25,
             "priceUsd": 17.13,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w40-motor-yagi-sentetik-leichtlauf-hc7-1-litre-1346-2-5785.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w40-motor-yagi-sentetik-leichtlauf-hc7-1-litre-1346-2-5785.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w40-motor-yagi-sentetik-leichtlauf-hc7-1-litre-1346-2",
             "category": "روغن موتور"
       },
@@ -6920,7 +6920,7 @@
             "sku": "1382",
             "priceTry": 2944.55,
             "priceUsd": 62.65,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/5w40-motor-yagi-sentetik-leichtlauf-hc7-4-litre-1382-4194.jpg",
+            "image": "assets/images/liqui-moly/catalog/5w40-motor-yagi-sentetik-leichtlauf-hc7-4-litre-1382-4194.webp",
             "url": "https://shop.egemot.com.tr/5w40-motor-yagi-sentetik-leichtlauf-hc7-4-litre-1382",
             "category": "روغن موتور"
       },
@@ -6935,7 +6935,7 @@
             "sku": "2542",
             "priceTry": 894.47,
             "priceUsd": 19.03,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w50-motor-yagi-molygen-new-generation-1-litre-2542-1257.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w50-motor-yagi-molygen-new-generation-1-litre-2542-1257.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w50-motor-yagi-molygen-new-generation-1-litre-2542",
             "category": "روغن موتور"
       },
@@ -6950,7 +6950,7 @@
             "sku": "2543",
             "priceTry": 3267.03,
             "priceUsd": 69.51,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-5w50-motor-yagi-molygen-new-generation-4-litre-2543-3754.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5w50-motor-yagi-molygen-new-generation-4-litre-2543-3754.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-5w50-motor-yagi-molygen-new-generation-4-litre-2543",
             "category": "روغن موتور"
       },
@@ -6965,7 +6965,7 @@
             "sku": "3821",
             "priceTry": 893.0,
             "priceUsd": 19.0,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-80w90-motosiklet-sanziman-yagi-1-litre-3821-3059.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-80w90-motosiklet-sanziman-yagi-1-litre-3821-3059.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-80w90-motosiklet-sanziman-yagi-1-litre-3821",
             "category": "روغن موتور"
       },
@@ -6980,7 +6980,7 @@
             "sku": "7181",
             "priceTry": 1874.05,
             "priceUsd": 39.87,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/cera-tec-300-ml-7181-1896.jpg",
+            "image": "assets/images/liqui-moly/catalog/cera-tec-300-ml-7181-1896.webp",
             "url": "https://shop.egemot.com.tr/cera-tec-300-ml-7181",
             "category": "روغن موتور"
       },
@@ -6995,7 +6995,7 @@
             "sku": "2657",
             "priceTry": 561.76,
             "priceUsd": 11.95,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/engine-flush-motor-ici-temizleyici-300-ml-2657-1371.jpg",
+            "image": "assets/images/liqui-moly/catalog/engine-flush-motor-ici-temizleyici-300-ml-2657-1371.webp",
             "url": "https://shop.egemot.com.tr/engine-flush-motor-ici-temizleyici-300-ml-2657",
             "category": "روغن موتور"
       },
@@ -7010,7 +7010,7 @@
             "sku": "4434",
             "priceTry": 1316.59,
             "priceUsd": 28.01,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/gl4-disli-yagi-sae-75w90-4434-7711428122-dc4-7390.jpg",
+            "image": "assets/images/liqui-moly/catalog/gl4-disli-yagi-sae-75w90-4434-7711428122-dc4-7390.webp",
             "url": "https://shop.egemot.com.tr/gl4-disli-yagi-sae-75w90-4434-7711428122-dc4",
             "category": "روغن موتور"
       },
@@ -7025,7 +7025,7 @@
             "sku": "1410",
             "priceTry": 886.82,
             "priceUsd": 18.87,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-hypoid-disli-yagi-gl5-sae-85w-90-ls-1410-7720.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-hypoid-disli-yagi-gl5-sae-85w-90-ls-1410-7720.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-hypoid-disli-yagi-gl5-sae-85w-90-ls-1410",
             "category": "روغن موتور"
       },
@@ -7040,7 +7040,7 @@
             "sku": "21364",
             "priceTry": 3347.93,
             "priceUsd": 71.23,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-leichtlauf-performance-5w30-5-litre-21364-8053.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-leichtlauf-performance-5w30-5-litre-21364-8053.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-leichtlauf-performance-5w30-5-litre-21364",
             "category": "روغن موتور"
       },
@@ -7055,7 +7055,7 @@
             "sku": "1009",
             "priceTry": 561.03,
             "priceUsd": 11.94,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/lifter-supap-itecegikatkisi-1009-1455.jpg",
+            "image": "assets/images/liqui-moly/catalog/lifter-supap-itecegikatkisi-1009-1455.webp",
             "url": "https://shop.egemot.com.tr/lifter-supap-itecegikatkisi-1009",
             "category": "روغن موتور"
       },
@@ -7070,7 +7070,7 @@
             "sku": "25019",
             "priceTry": 949.84,
             "priceUsd": 20.21,
-            "image": "assets/images/liqui-moly/product-25019.jpg",
+            "image": "assets/images/liqui-moly/product-25019.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-marine-2t-motor-yagi-1-l-25019",
             "category": "روغن موتور"
       },
@@ -7085,7 +7085,7 @@
             "sku": "25020",
             "priceTry": 4238.25,
             "priceUsd": 90.18,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marine-2t-motor-yagi-5-l-25020-2586.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-marine-2t-motor-yagi-5-l-25020-2586.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-marine-2t-motor-yagi-5-l-25020",
             "category": "روغن موتور"
       },
@@ -7100,7 +7100,7 @@
             "sku": "25012",
             "priceTry": 750.89,
             "priceUsd": 15.98,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marine-4t-motor-yagi-10w-40-1-l-25012-6123.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-marine-4t-motor-yagi-10w-40-1-l-25012-6123.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-marine-4t-motor-yagi-10w-40-1-l-25012",
             "category": "روغن موتور"
       },
@@ -7115,7 +7115,7 @@
             "sku": "25013",
             "priceTry": 3248.82,
             "priceUsd": 69.12,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marine-4t-motor-yagi-10w-40-5-l-25013-7642.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-marine-4t-motor-yagi-10w-40-5-l-25013-7642.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-marine-4t-motor-yagi-10w-40-5-l-25013",
             "category": "روغن موتور"
       },
@@ -7130,7 +7130,7 @@
             "sku": "25071",
             "priceTry": 1781.81,
             "priceUsd": 37.91,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marine-tam-sentetik-disli-yagi-gl4gl5-75w-90-1l-25071-5739.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-marine-tam-sentetik-disli-yagi-gl4gl5-75w-90-1l-25071-5739.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-marine-tam-sentetik-disli-yagi-gl4gl5-75w-90-1l-25071",
             "category": "روغن موتور"
       },
@@ -7145,7 +7145,7 @@
             "sku": "25036",
             "priceTry": 835.14,
             "priceUsd": 17.77,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marine-tam-sentetik-disli-yagi-gl4gl5-75w90-25036-9886.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-marine-tam-sentetik-disli-yagi-gl4gl5-75w90-25036-9886.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-marine-tam-sentetik-disli-yagi-gl4gl5-75w90-25036",
             "category": "روغن موتور"
       },
@@ -7160,7 +7160,7 @@
             "sku": "25069",
             "priceTry": 902.82,
             "priceUsd": 19.21,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marine-disli-yagi-gl4gl5-80w90-25069-6725.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-marine-disli-yagi-gl4gl5-80w90-25069-6725.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-marine-disli-yagi-gl4gl5-80w90-25069",
             "category": "روغن موتور"
       },
@@ -7175,7 +7175,7 @@
             "sku": "25030",
             "priceTry": 584.46,
             "priceUsd": 12.44,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marine-disli-yagi-gl4gl5-80w-90-250ml-25031-5068.jpeg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-marine-disli-yagi-gl4gl5-80w-90-250ml-25031-5068.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-marine-disli-yagi-gl4gl5-80w-90-250ml-25031",
             "category": "روغن موتور"
       },
@@ -7190,7 +7190,7 @@
             "sku": "1015",
             "priceTry": 2135.18,
             "priceUsd": 45.43,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-motor-protect-sentetik-yag-katkisi-500-ml-1015-3732.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-motor-protect-sentetik-yag-katkisi-500-ml-1015-3732.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-motor-protect-sentetik-yag-katkisi-500-ml-1015",
             "category": "روغن موتور"
       },
@@ -7205,7 +7205,7 @@
             "sku": "1018",
             "priceTry": 1724.14,
             "priceUsd": 36.68,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/motor-protect-sentetik-yag-katkisi-500-ml-1018-4883.jpg",
+            "image": "assets/images/liqui-moly/catalog/motor-protect-sentetik-yag-katkisi-500-ml-1018-4883.webp",
             "url": "https://shop.egemot.com.tr/motor-protect-sentetik-yag-katkisi-500-ml-1018",
             "category": "روغن موتور"
       },
@@ -7235,7 +7235,7 @@
             "sku": "1012",
             "priceTry": 681.76,
             "priceUsd": 14.51,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/oil-additiv-mos2li-yag-katkisi-200-ml-1012-3489.jpg",
+            "image": "assets/images/liqui-moly/catalog/oil-additiv-mos2li-yag-katkisi-200-ml-1012-3489.webp",
             "url": "https://shop.egemot.com.tr/oil-additiv-mos2li-yag-katkisi-200-ml-1012",
             "category": "روغن موتور"
       },
@@ -7250,7 +7250,7 @@
             "sku": "7530",
             "priceTry": 3671.88,
             "priceUsd": 78.13,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-special-tec-aa-5w-30-5-litre-7530-6909.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-special-tec-aa-5w-30-5-litre-7530-6909.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-special-tec-aa-5w-30-5-litre-7530",
             "category": "روغن موتور"
       },
@@ -7265,7 +7265,7 @@
             "sku": "20968",
             "priceTry": 2984.2,
             "priceUsd": 63.49,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/special-tec-dx1-5w30-motor-yagi-4-litre-20968-6238.png",
+            "image": "assets/images/liqui-moly/catalog/special-tec-dx1-5w30-motor-yagi-4-litre-20968-6238.webp",
             "url": "https://shop.egemot.com.tr/special-tec-dx1-5w30-motor-yagi-4-litre-20968",
             "category": "روغن موتور"
       },
@@ -7280,7 +7280,7 @@
             "sku": "20969",
             "priceTry": 3682.55,
             "priceUsd": 78.35,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-special-tec-dx1-5w30-motor-yagi-5-litre-20969-5360.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-special-tec-dx1-5w30-motor-yagi-5-litre-20969-5360.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-special-tec-dx1-5w30-motor-yagi-5-litre-20969",
             "category": "روغن موتور"
       },
@@ -7295,7 +7295,7 @@
             "sku": "20842",
             "priceTry": 1118.92,
             "priceUsd": 23.81,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-top-tec-5100-75w-20842-sanziman-yagi-20842-6431.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-top-tec-5100-75w-20842-sanziman-yagi-20842-6431.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-top-tec-5100-75w-20842-sanziman-yagi-20842",
             "category": "روغن موتور"
       },
@@ -7325,7 +7325,7 @@
             "sku": "21359",
             "priceTry": 1232.61,
             "priceUsd": 26.23,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-top-tec-mtf-5300-70w-75-21359-sanziman-yagi-7252.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-top-tec-mtf-5300-70w-75-21359-sanziman-yagi-7252.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-top-tec-mtf-5300-70w-75-21359-sanziman-yagi",
             "category": "روغن موتور"
       },
@@ -7340,7 +7340,7 @@
             "sku": "21366",
             "priceTry": 3264.19,
             "priceUsd": 69.45,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-top-tec-6320-5w30-motor-yagi-4-litre-23166-6722.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-top-tec-6320-5w30-motor-yagi-4-litre-23166-6722.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-top-tec-6320-5w30-motor-yagi-4-litre-23166",
             "category": "روغن موتور"
       },
@@ -7355,7 +7355,7 @@
             "sku": "23167",
             "priceTry": 4067.58,
             "priceUsd": 86.54,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-top-tec-6320-5w30-motor-yagi-5-litre-23167-1561.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-top-tec-6320-5w30-motor-yagi-5-litre-23167-1561.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-top-tec-6320-5w30-motor-yagi-5-litre-23167",
             "category": "روغن موتور"
       },
@@ -7370,7 +7370,7 @@
             "sku": "3651",
             "priceTry": 915.65,
             "priceUsd": 19.48,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-top-tec-atf-1100-3651-1305.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-top-tec-atf-1100-3651-1305.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-top-tec-atf-1100-3651",
             "category": "روغن موتور"
       },
@@ -7385,7 +7385,7 @@
             "sku": "3648",
             "priceTry": 962.34,
             "priceUsd": 20.48,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-top-tec-atf-1900-1-litre-3648-8258.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-top-tec-atf-1900-1-litre-3648-8258.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-top-tec-atf-1900-1-litre-3648",
             "category": "روغن موتور"
       },
@@ -7400,7 +7400,7 @@
             "sku": "3681",
             "priceTry": 985.19,
             "priceUsd": 20.96,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/otomatik-sanziman-yagi-top-tec-atf-1200-3681-8089.jpg",
+            "image": "assets/images/liqui-moly/catalog/otomatik-sanziman-yagi-top-tec-atf-1200-3681-8089.webp",
             "url": "https://shop.egemot.com.tr/otomatik-sanziman-yagi-top-tec-atf-1200-3681",
             "category": "روغن موتور"
       },
@@ -7415,7 +7415,7 @@
             "sku": "9703",
             "priceTry": 989.19,
             "priceUsd": 21.05,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-otomatik-sanziman-yagi-top-tec-atf-1200-g-9703-8794.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-otomatik-sanziman-yagi-top-tec-atf-1200-g-9703-8794.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-otomatik-sanziman-yagi-top-tec-atf-1200-g-9703",
             "category": "روغن موتور"
       },
@@ -7430,7 +7430,7 @@
             "sku": "3662",
             "priceTry": 1065.64,
             "priceUsd": 22.67,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/top-tec-atf-1400-3662-7298.jpg",
+            "image": "assets/images/liqui-moly/catalog/top-tec-atf-1400-3662-7298.webp",
             "url": "https://shop.egemot.com.tr/top-tec-atf-1400-3662",
             "category": "روغن موتور"
       },
@@ -7445,7 +7445,7 @@
             "sku": "3659",
             "priceTry": 1309.46,
             "priceUsd": 27.86,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-otomatik-sanziman-yagi-top-tec-atf-1600-3659-5745.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-otomatik-sanziman-yagi-top-tec-atf-1600-3659-5745.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-otomatik-sanziman-yagi-top-tec-atf-1600-3659",
             "category": "روغن موتور"
       },
@@ -7460,7 +7460,7 @@
             "sku": "3687",
             "priceTry": 921.45,
             "priceUsd": 19.61,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/otomatik-sanziman-yagi-top-tec-atf-1800-3687-3164.jpg",
+            "image": "assets/images/liqui-moly/catalog/otomatik-sanziman-yagi-top-tec-atf-1800-3687-3164.webp",
             "url": "https://shop.egemot.com.tr/otomatik-sanziman-yagi-top-tec-atf-1800-3687",
             "category": "روغن موتور"
       },
@@ -7475,7 +7475,7 @@
             "sku": "20625",
             "priceTry": 898.83,
             "priceUsd": 19.12,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-otomatik-sanziman-yagi-top-tec-atf-1800r-20625-9983.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-otomatik-sanziman-yagi-top-tec-atf-1800r-20625-9983.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-otomatik-sanziman-yagi-top-tec-atf-1800r-20625",
             "category": "روغن موتور"
       },
@@ -7490,7 +7490,7 @@
             "sku": "21738",
             "priceTry": 942.96,
             "priceUsd": 20.06,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-otomatik-sanziman-yagi-top-tec-atf-1850-21738-2562.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-otomatik-sanziman-yagi-top-tec-atf-1850-21738-2562.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-otomatik-sanziman-yagi-top-tec-atf-1850-21738",
             "category": "روغن موتور"
       },
@@ -7505,7 +7505,7 @@
             "sku": "4421",
             "priceTry": 2388.64,
             "priceUsd": 50.82,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-tam-sentetik-hypoid-disli-yagi-gl5-ls-sae-75w140-4421-8483.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-tam-sentetik-hypoid-disli-yagi-gl5-ls-sae-75w140-4421-8483.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-tam-sentetik-hypoid-disli-yagi-gl5-ls-sae-75w140-4421",
             "category": "روغن موتور"
       },
@@ -7520,7 +7520,7 @@
             "sku": "2122",
             "priceTry": 635.48,
             "priceUsd": 13.52,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/yag-siyah-duman-onleyici-300-ml-2122-8238.jpg",
+            "image": "assets/images/liqui-moly/catalog/yag-siyah-duman-onleyici-300-ml-2122-8238.webp",
             "url": "https://shop.egemot.com.tr/yag-siyah-duman-onleyici-300-ml-2122",
             "category": "روغن موتور"
       },
@@ -7535,7 +7535,7 @@
             "sku": "1005",
             "priceTry": 712.57,
             "priceUsd": 15.16,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/motor-yagi-sizinti-onleyici-300-ml-1005-4909.jpg",
+            "image": "assets/images/liqui-moly/catalog/motor-yagi-sizinti-onleyici-300-ml-1005-4909.webp",
             "url": "https://shop.egemot.com.tr/motor-yagi-sizinti-onleyici-300-ml-1005",
             "category": "روغن موتور"
       },
@@ -7550,7 +7550,7 @@
             "sku": "3658",
             "priceTry": 937.84,
             "priceUsd": 19.95,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-sanziman-yagi-gl5-75w80-3658-3756.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-sanziman-yagi-gl5-75w80-3658-3756.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-sanziman-yagi-gl5-75w80-3658",
             "category": "روغن موتور"
       },
@@ -7565,7 +7565,7 @@
             "sku": "2180",
             "priceTry": 685.52,
             "priceUsd": 14.59,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/motor-yag-bakimi-katkisi-300-ml-2180-6102.jpg",
+            "image": "assets/images/liqui-moly/catalog/motor-yag-bakimi-katkisi-300-ml-2180-6102.webp",
             "url": "https://shop.egemot.com.tr/motor-yag-bakimi-katkisi-300-ml-2180",
             "category": "روغن موتور"
       },
@@ -7580,7 +7580,7 @@
             "sku": "20832",
             "priceTry": 574.75,
             "priceUsd": 12.23,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-4t-10w-40-mb-scooter-sentetik-motor-yagi-1l-20832--7799.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-4t-10w-40-mb-scooter-sentetik-motor-yagi-1l-20832-7799.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-4t-10w-40-mb-scooter-sentetik-motor-yagi-1l-20832-",
             "category": "روغن موتور"
       },
@@ -7595,7 +7595,7 @@
             "sku": "21862",
             "priceTry": 574.75,
             "priceUsd": 12.23,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-4t-10w-40-motorbike-optimal-mineral-motor-yagi-1-lt-21862--6618.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-4t-10w-40-motorbike-optimal-mineral-motor-yagi-1-lt-21862-6618.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-4t-10w-40-motorbike-optimal-mineral-motor-yagi-1-lt-21862-",
             "category": "روغن موتور"
       },
@@ -7625,7 +7625,7 @@
             "sku": "2328",
             "priceTry": 3746.1,
             "priceUsd": 79.7,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-leichtlauf-high-tech-5w-40-5-lt-2328-4934.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-leichtlauf-high-tech-5w-40-5-lt-2328-4934.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-leichtlauf-high-tech-5w-40-5-lt-2328",
             "category": "روغن موتور"
       },
@@ -7640,7 +7640,7 @@
             "sku": "3010",
             "priceTry": 340.66,
             "priceUsd": 7.25,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-lm48-montaj-macunu-3010-5295.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-lm48-montaj-macunu-3010-5295.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-lm48-montaj-macunu-3010",
             "category": "سایر محصولات"
       },
@@ -7655,7 +7655,7 @@
             "sku": "1420",
             "priceTry": 513.31,
             "priceUsd": 10.92,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-motor-koruyucu-sprey-300-ml-1420-6062.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-motor-koruyucu-sprey-300-ml-1420-6062.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-motor-koruyucu-sprey-300-ml-1420",
             "category": "سایر محصولات"
       },
@@ -7670,7 +7670,7 @@
             "sku": "3351",
             "priceTry": 342.41,
             "priceUsd": 7.29,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-motor-kacak-tespit-spreyi-200-ml-3351-6239.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-motor-kacak-tespit-spreyi-200-ml-3351-6239.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-motor-kacak-tespit-spreyi-200-ml-3351",
             "category": "سایر محصولات"
       },
@@ -7685,7 +7685,7 @@
             "sku": "4390",
             "priceTry": 574.7,
             "priceUsd": 12.23,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-silah-bakim-spreyi-4390-6884.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-silah-bakim-spreyi-4390-6884.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-silah-bakim-spreyi-4390",
             "category": "سایر محصولات"
       },
@@ -7700,7 +7700,7 @@
             "sku": "24391",
             "priceTry": 554.6,
             "priceUsd": 11.8,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-silah-bakim-yagi-gresi-24391-3745.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-silah-bakim-yagi-gresi-24391-3745.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-silah-bakim-yagi-gresi-24391",
             "category": "سایر محصولات"
       },
@@ -7715,7 +7715,7 @@
             "sku": "3810",
             "priceTry": 864.37,
             "priceUsd": 18.39,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/sizdirmaz-yuzey-sivi-conta-50-g-3810-3727.jpeg",
+            "image": "assets/images/liqui-moly/catalog/sizdirmaz-yuzey-sivi-conta-50-g-3810-3727.webp",
             "url": "https://shop.egemot.com.tr/sizdirmaz-yuzey-sivi-conta-50-g-3810",
             "category": "سایر محصولات"
       },
@@ -7730,7 +7730,7 @@
             "sku": "3141",
             "priceTry": 519.28,
             "priceUsd": 11.05,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/aku-gresi-300-ml-3141-1004.jpg",
+            "image": "assets/images/liqui-moly/catalog/aku-gresi-300-ml-3141-1004.webp",
             "url": "https://shop.egemot.com.tr/aku-gresi-300-ml-3141",
             "category": "سایر محصولات"
       },
@@ -7745,7 +7745,7 @@
             "sku": "6192",
             "priceTry": 1017.2,
             "priceUsd": 21.64,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-kaporta-yapistirma-spreyi-400-ml-6192-7242.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-kaporta-yapistirma-spreyi-400-ml-6192-7242.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-kaporta-yapistirma-spreyi-400-ml-6192",
             "category": "سایر محصولات"
       },
@@ -7760,7 +7760,7 @@
             "sku": "1080",
             "priceTry": 269.98,
             "priceUsd": 5.74,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-rulman-mentese-macunu-50-gr-1080-8358.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-rulman-mentese-macunu-50-gr-1080-8358.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-rulman-mentese-macunu-50-gr-1080",
             "category": "سایر محصولات"
       },
@@ -7775,7 +7775,7 @@
             "sku": "1528",
             "priceTry": 289.6,
             "priceUsd": 6.16,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-kapi-kilit-yaglayicisi-50-ml-1528-1823.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-kapi-kilit-yaglayicisi-50-ml-1528-1823.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-kapi-kilit-yaglayicisi-50-ml-1528",
             "category": "سایر محصولات"
       },
@@ -7790,7 +7790,7 @@
             "sku": "7250",
             "priceTry": 1465.9,
             "priceUsd": 31.19,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/yag-toplayici-granul-25-litre-7250-3935.jpg",
+            "image": "assets/images/liqui-moly/catalog/yag-toplayici-granul-25-litre-7250-3935.webp",
             "url": "https://shop.egemot.com.tr/yag-toplayici-granul-25-litre-7250",
             "category": "سایر محصولات"
       },
@@ -7805,7 +7805,7 @@
             "sku": "3805",
             "priceTry": 215.33,
             "priceUsd": 4.58,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-hizli-yapistirici-10-g-3805-3645.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-hizli-yapistirici-10-g-3805-3645.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-hizli-yapistirici-10-g-3805",
             "category": "سایر محصولات"
       },
@@ -7820,7 +7820,7 @@
             "sku": "3312",
             "priceTry": 583.03,
             "priceUsd": 12.4,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-silikon-yaglayici-100-ml-3312-5574.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-silikon-yaglayici-100-ml-3312-5574.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-silikon-yaglayici-100-ml-3312",
             "category": "سایر محصولات"
       },
@@ -7835,7 +7835,7 @@
             "sku": "6185",
             "priceTry": 1260.92,
             "priceUsd": 26.83,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/silikon-sivi-conta-6185-2790.png",
+            "image": "assets/images/liqui-moly/catalog/silikon-sivi-conta-6185-2790.webp",
             "url": "https://shop.egemot.com.tr/silikon-sivi-conta-6185",
             "category": "سایر محصولات"
       },
@@ -7865,7 +7865,7 @@
             "sku": "3075",
             "priceTry": 511.56,
             "priceUsd": 10.88,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-kapi-kilit-spreyi-250-ml-3075-6824.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-kapi-kilit-spreyi-250-ml-3075-6824.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-kapi-kilit-spreyi-250-ml-3075",
             "category": "سایر محصولات"
       },
@@ -7880,7 +7880,7 @@
             "sku": "4084",
             "priceTry": 462.21,
             "priceUsd": 9.83,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/sivi-gres-tutunma-spreyi-400-ml-4084-5113.jpg",
+            "image": "assets/images/liqui-moly/catalog/sivi-gres-tutunma-spreyi-400-ml-4084-5113.webp",
             "url": "https://shop.egemot.com.tr/sivi-gres-tutunma-spreyi-400-ml-4084",
             "category": "سایر محصولات"
       },
@@ -7895,7 +7895,7 @@
             "sku": "6193",
             "priceTry": 760.61,
             "priceUsd": 16.18,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-sivi-metal-yapistirici-25-ml-6193-2354.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-sivi-metal-yapistirici-25-ml-6193-2354.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-sivi-metal-yapistirici-25-ml-6193",
             "category": "سایر محصولات"
       },
@@ -7910,7 +7910,7 @@
             "sku": "4061",
             "priceTry": 3026.8,
             "priceUsd": 64.4,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-bakir-macunu-1-kg-4061-3551.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-bakir-macunu-1-kg-4061-3551.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-bakir-macunu-1-kg-4061",
             "category": "سایر محصولات"
       },
@@ -7925,7 +7925,7 @@
             "sku": "4083",
             "priceTry": 1032.74,
             "priceUsd": 21.97,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-klima-sistemi-yagi-pag-46-4083-7031.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-klima-sistemi-yagi-pag-46-4083-7031.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-klima-sistemi-yagi-pag-46-4083",
             "category": "سایر محصولات"
       },
@@ -7940,7 +7940,7 @@
             "sku": "3801",
             "priceTry": 297.57,
             "priceUsd": 6.33,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/civata-sabitleyici-orta-sert-10-gr-3801-4208.jpg",
+            "image": "assets/images/liqui-moly/catalog/civata-sabitleyici-orta-sert-10-gr-3801-4208.webp",
             "url": "https://shop.egemot.com.tr/civata-sabitleyici-orta-sert-10-gr-3801",
             "category": "سرویس و مواد مصرفی"
       },
@@ -7955,7 +7955,7 @@
             "sku": "3802",
             "priceTry": 864.37,
             "priceUsd": 18.39,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/civata-sabitleyici-orta-sert-50-gr-3802-1217.jpg",
+            "image": "assets/images/liqui-moly/catalog/civata-sabitleyici-orta-sert-50-gr-3802-1217.webp",
             "url": "https://shop.egemot.com.tr/civata-sabitleyici-orta-sert-50-gr-3802",
             "category": "سرویس و مواد مصرفی"
       },
@@ -7970,7 +7970,7 @@
             "sku": "3803",
             "priceTry": 297.57,
             "priceUsd": 6.33,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/civata-sabitleyici-sert-10-gr-3803-3347.jpg",
+            "image": "assets/images/liqui-moly/catalog/civata-sabitleyici-sert-10-gr-3803-3347.webp",
             "url": "https://shop.egemot.com.tr/civata-sabitleyici-sert-10-gr-3803",
             "category": "سرویس و مواد مصرفی"
       },
@@ -7985,7 +7985,7 @@
             "sku": "3804",
             "priceTry": 864.37,
             "priceUsd": 18.39,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-civata-sabitleyici-sert-50-gr-3804-3670.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-civata-sabitleyici-sert-50-gr-3804-3670.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-civata-sabitleyici-sert-50-gr-3804",
             "category": "سرویس و مواد مصرفی"
       },
@@ -8000,7 +8000,7 @@
             "sku": "21700",
             "priceTry": 435.6,
             "priceUsd": 9.27,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/elektronik-kontak-spreyi-200-ml-21700-9665.jpg",
+            "image": "assets/images/liqui-moly/catalog/elektronik-kontak-spreyi-200-ml-21700-9665.webp",
             "url": "https://shop.egemot.com.tr/elektronik-kontak-spreyi-200-ml-21700",
             "category": "سرویس و مواد مصرفی"
       },
@@ -8015,7 +8015,7 @@
             "sku": "3811",
             "priceTry": 407.3,
             "priceUsd": 8.67,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-civata-sokme-maddesi-hasarli-civata-sokme-7045.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-civata-sokme-maddesi-hasarli-civata-sokme-7045.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-civata-sokme-maddesi-hasarli-civata-sokme",
             "category": "سرویس و مواد مصرفی"
       },
@@ -8030,7 +8030,7 @@
             "sku": "3342",
             "priceTry": 322.51,
             "priceUsd": 6.86,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/egzoz-montaj-pastasi-3342-1246.jpg",
+            "image": "assets/images/liqui-moly/catalog/egzoz-montaj-pastasi-3342-1246.webp",
             "url": "https://shop.egemot.com.tr/egzoz-montaj-pastasi-3342",
             "category": "سرویس و مواد مصرفی"
       },
@@ -8045,7 +8045,7 @@
             "sku": "3310",
             "priceTry": 376.5,
             "priceUsd": 8.01,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/silikon-sprey-300-ml-3310-8097.jpg",
+            "image": "assets/images/liqui-moly/catalog/silikon-sprey-300-ml-3310-8097.webp",
             "url": "https://shop.egemot.com.tr/silikon-sprey-300-ml-3310",
             "category": "سرویس و مواد مصرفی"
       },
@@ -8060,7 +8060,7 @@
             "sku": "6218",
             "priceTry": 1504.47,
             "priceUsd": 32.01,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/cam-kesme-teli-50-mt-6218-4978.jpg",
+            "image": "assets/images/liqui-moly/catalog/cam-kesme-teli-50-mt-6218-4978.webp",
             "url": "https://shop.egemot.com.tr/cam-kesme-teli-50-mt-6218",
             "category": "سرویس و مواد مصرفی"
       },
@@ -8075,7 +8075,7 @@
             "sku": "1540",
             "priceTry": 636.33,
             "priceUsd": 13.54,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/galvaniz-koruyucu-zinc-spray-400-ml-1540-5014.jpg",
+            "image": "assets/images/liqui-moly/catalog/galvaniz-koruyucu-zinc-spray-400-ml-1540-5014.webp",
             "url": "https://shop.egemot.com.tr/galvaniz-koruyucu-zinc-spray-400-ml-1540",
             "category": "سرویس و مواد مصرفی"
       },
@@ -8090,7 +8090,7 @@
             "sku": "3350",
             "priceTry": 391.67,
             "priceUsd": 8.33,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-kacak-tespit-spreyi-400-ml-3350-2132.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-kacak-tespit-spreyi-400-ml-3350-2132.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-kacak-tespit-spreyi-400-ml-3350",
             "category": "سرویس و مواد مصرفی"
       },
@@ -8105,7 +8105,7 @@
             "sku": "21678",
             "priceTry": 421.15,
             "priceUsd": 8.96,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-antifrizli-konsantre-cam-suyu-52c-1-l-21678-1535.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-antifrizli-konsantre-cam-suyu-52c-1-l-21678-1535.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-antifrizli-konsantre-cam-suyu-52c-1-l-21678",
             "category": "ضدیخ و رادیاتور"
       },
@@ -8120,7 +8120,7 @@
             "sku": "6923",
             "priceTry": 404.45,
             "priceUsd": 8.61,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-cam-suyu-antifirizi-1-l-6923-7350.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-cam-suyu-antifirizi-1-l-6923-7350.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-cam-suyu-antifirizi-1-l-6923",
             "category": "ضدیخ و رادیاتور"
       },
@@ -8135,7 +8135,7 @@
             "sku": "5189",
             "priceTry": 796.63,
             "priceUsd": 16.95,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-radyator-temizleyici-1-litre-5189-5770.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-radyator-temizleyici-1-litre-5189-5770.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-radyator-temizleyici-1-litre-5189",
             "category": "ضدیخ و رادیاتور"
       },
@@ -8150,7 +8150,7 @@
             "sku": "5178",
             "priceTry": 529.93,
             "priceUsd": 11.28,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-pro-line-radyator-sizinti-onleyici-250-ml-5178-1650.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-pro-line-radyator-sizinti-onleyici-250-ml-5178-1650.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-pro-line-radyator-sizinti-onleyici-250-ml-5178",
             "category": "ضدیخ و رادیاتور"
       },
@@ -8165,7 +8165,7 @@
             "sku": "3330",
             "priceTry": 310.9,
             "priceUsd": 6.61,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/radyator-sizinti-onleyici-150-ml-3330-3435.jpg",
+            "image": "assets/images/liqui-moly/catalog/radyator-sizinti-onleyici-150-ml-3330-3435.webp",
             "url": "https://shop.egemot.com.tr/radyator-sizinti-onleyici-150-ml-3330",
             "category": "ضدیخ و رادیاتور"
       },
@@ -8180,7 +8180,7 @@
             "sku": "3320",
             "priceTry": 418.07,
             "priceUsd": 8.9,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/radyator-temizleyici-300-ml-3320-6638.jpg",
+            "image": "assets/images/liqui-moly/catalog/radyator-temizleyici-300-ml-3320-6638.webp",
             "url": "https://shop.egemot.com.tr/radyator-temizleyici-300-ml-3320",
             "category": "ضدیخ و رادیاتور"
       },
@@ -8195,7 +8195,7 @@
             "sku": "21145",
             "priceTry": 513.71,
             "priceUsd": 10.93,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-radyator-antifrizi-g12-kfs12-kirmizi-5-l-21145-6573.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-radyator-antifrizi-g12-kfs12-kirmizi-5-l-21145-6573.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-radyator-antifrizi-g12-kfs12-kirmizi-5-l-21145",
             "category": "ضدیخ و رادیاتور"
       },
@@ -8210,7 +8210,7 @@
             "sku": "21149",
             "priceTry": 503.43,
             "priceUsd": 10.71,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-radyator-antifrizi-kfs-11-mavi-1-l-21149-5178.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-radyator-antifrizi-kfs-11-mavi-1-l-21149-5178.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-radyator-antifrizi-kfs-11-mavi-1-l-21149",
             "category": "ضدیخ و رادیاتور"
       },
@@ -8225,7 +8225,7 @@
             "sku": "21139",
             "priceTry": 515.47,
             "priceUsd": 10.97,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-radyator-antifrizi-kfs-13-g13-tl774j-kirmizi-1-l-21139-3538.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-radyator-antifrizi-kfs-13-g13-tl774j-kirmizi-1-l-21139-3538.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-radyator-antifrizi-kfs-13-g13-tl774j-kirmizi-1-l-21139",
             "category": "ضدیخ و رادیاتور"
       },
@@ -8240,7 +8240,7 @@
             "sku": "21740",
             "priceTry": 500.58,
             "priceUsd": 10.65,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-radyator-antifrizi-kfs12-evo-1-l-21740-1210.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-radyator-antifrizi-kfs12-evo-1-l-21740-1210.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-radyator-antifrizi-kfs12-evo-1-l-21740",
             "category": "ضدیخ و رادیاتور"
       },
@@ -8255,7 +8255,7 @@
             "sku": "21134",
             "priceTry": 502.98,
             "priceUsd": 10.7,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-radyator-antifrizi-kfs12-1-l-21134-8321.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-radyator-antifrizi-kfs12-1-l-21134-8321.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-radyator-antifrizi-kfs12-1-l-21134",
             "category": "ضدیخ و رادیاتور"
       },
@@ -8270,7 +8270,7 @@
             "sku": "8809",
             "priceTry": 1049.79,
             "priceUsd": 22.34,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-radyator-antifrizi-g11-kfs11-mavi-5-l-8809-5653.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-radyator-antifrizi-g11-kfs11-mavi-5-l-8809-5653.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-radyator-antifrizi-g11-kfs11-mavi-5-l-8809",
             "category": "ضدیخ و رادیاتور"
       },
@@ -8285,7 +8285,7 @@
             "sku": "8810",
             "priceTry": 1054.11,
             "priceUsd": 22.43,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-radyator-antifrizi-g12-kfs12-kirmizi-5-l-8810-9763.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-radyator-antifrizi-g12-kfs12-kirmizi-5-l-8810-9763.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-radyator-antifrizi-g12-kfs12-kirmizi-5-l-8810",
             "category": "ضدیخ و رادیاتور"
       },
@@ -8300,7 +8300,7 @@
             "sku": "6902",
             "priceTry": 383.49,
             "priceUsd": 8.16,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-cam-buz-ve-bugu-cozucu-spreyi-500-ml-6902-4032.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-cam-buz-ve-bugu-cozucu-spreyi-500-ml-6902-4032.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-cam-buz-ve-bugu-cozucu-spreyi-500-ml-6902",
             "category": "ضدیخ و رادیاتور"
       },
@@ -8315,7 +8315,7 @@
             "sku": "25042",
             "priceTry": 778.25,
             "priceUsd": 16.56,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marin-gresi-250-g-25042-2945.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-marin-gresi-250-g-25042-2945.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-marin-gresi-250-g-25042",
             "category": "مارین"
       },
@@ -8330,7 +8330,7 @@
             "sku": "25043",
             "priceTry": 676.82,
             "priceUsd": 14.4,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marin-gresi-400-g-25043-5219.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-marin-gresi-400-g-25043-5219.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-marin-gresi-400-g-25043",
             "category": "مارین"
       },
@@ -8345,7 +8345,7 @@
             "sku": "25033",
             "priceTry": 487.01,
             "priceUsd": 10.36,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-marine-motor-koruyucu-sprey-marine-storage-fogging-oil-300-ml-25033-4313.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-marine-motor-koruyucu-sprey-marine-storage-fogging-oil-300-ml-25033-4313.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-marine-motor-koruyucu-sprey-marine-storage-fogging-oil-300-ml-25033",
             "category": "مارین"
       },
@@ -8360,7 +8360,7 @@
             "sku": "1532",
             "priceTry": 896.19,
             "priceUsd": 19.07,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-boya-parlatma-kremi-300-g-1532-8990.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-boya-parlatma-kremi-300-g-1532-8990.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-boya-parlatma-kremi-300-g-1532",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8375,7 +8375,7 @@
             "sku": "21634",
             "priceTry": 524.1,
             "priceUsd": 11.15,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-ekran-temizleyici-100-ml-21634-4293.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-ekran-temizleyici-100-ml-21634-4293.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-ekran-temizleyici-100-ml-21634",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8405,7 +8405,7 @@
             "sku": "1515",
             "priceTry": 435.39,
             "priceUsd": 9.26,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/kemirgen-koruyucu-sprey-200-ml-1515-8125.jpg",
+            "image": "assets/images/liqui-moly/catalog/kemirgen-koruyucu-sprey-200-ml-1515-8125.webp",
             "url": "https://shop.egemot.com.tr/kemirgen-koruyucu-sprey-200-ml-1515",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8420,7 +8420,7 @@
             "sku": "1610",
             "priceTry": 497.15,
             "priceUsd": 10.58,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-kokpit-parlaticisi-600-ml-1610-6409.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-kokpit-parlaticisi-600-ml-1610-6409.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-kokpit-parlaticisi-600-ml-1610",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8435,7 +8435,7 @@
             "sku": "6103",
             "priceTry": 888.79,
             "priceUsd": 18.91,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-korozyon-onleyici-mum-sprey-500-ml-6103-5697.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-korozyon-onleyici-mum-sprey-500-ml-6103-5697.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-korozyon-onleyici-mum-sprey-500-ml-6103",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8450,7 +8450,7 @@
             "sku": "1529",
             "priceTry": 624.7,
             "priceUsd": 13.29,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-krom-parlatici-krem-500-ml-1529-5981.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-krom-parlatici-krem-500-ml-1529-5981.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-krom-parlatici-krem-500-ml-1529",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8465,7 +8465,7 @@
             "sku": "3390",
             "priceTry": 354.61,
             "priceUsd": 7.54,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/lm-40-cok-amacli-sprey-200-ml-3390-1581.jpg",
+            "image": "assets/images/liqui-moly/catalog/lm-40-cok-amacli-sprey-200-ml-3390-1581.webp",
             "url": "https://shop.egemot.com.tr/lm-40-cok-amacli-sprey-200-ml-3390",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8480,7 +8480,7 @@
             "sku": "3391",
             "priceTry": 445.55,
             "priceUsd": 9.48,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/lm-40-cok-amacli-sprey-400-ml-3391-8474.jpg",
+            "image": "assets/images/liqui-moly/catalog/lm-40-cok-amacli-sprey-400-ml-3391-8474.webp",
             "url": "https://shop.egemot.com.tr/lm-40-cok-amacli-sprey-400-ml-3391",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8495,7 +8495,7 @@
             "sku": "3343",
             "priceTry": 930.94,
             "priceUsd": 19.81,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-lastik-tamir-spreyi-500-ml-3343-7267.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-lastik-tamir-spreyi-500-ml-3343-7267.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-lastik-tamir-spreyi-500-ml-3343",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8510,7 +8510,7 @@
             "sku": "23061",
             "priceTry": 849.76,
             "priceUsd": 18.08,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-lastik-parlatici-400-ml-23061-1717.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-lastik-parlatici-400-ml-23061-1717.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-lastik-parlatici-400-ml-23061",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8525,7 +8525,7 @@
             "sku": "3327",
             "priceTry": 629.29,
             "priceUsd": 13.39,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-motor-ust-temizleyici-parlatici-400-ml-3327-8854.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-motor-ust-temizleyici-parlatici-400-ml-3327-8854.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-motor-ust-temizleyici-parlatici-400-ml-3327",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8540,7 +8540,7 @@
             "sku": "1650",
             "priceTry": 336.47,
             "priceUsd": 7.16,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-one-for-all-bakim-urunu-250-ml-1650-4555.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-one-for-all-bakim-urunu-250-ml-1650-4555.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-one-for-all-bakim-urunu-250-ml-1650",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8555,7 +8555,7 @@
             "sku": "6925",
             "priceTry": 142.95,
             "priceUsd": 3.04,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-oto-cam-temizleme-tableti-1-adet-6925-3948.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-oto-cam-temizleme-tableti-1-adet-6925-3948.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-oto-cam-temizleme-tableti-1-adet-6925",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8570,7 +8570,7 @@
             "sku": "22033",
             "priceTry": 95.11,
             "priceUsd": 2.02,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-oto-cam-temizleme-konsantre-sivisi-22033-3214.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-oto-cam-temizleme-konsantre-sivisi-22033-3214.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-oto-cam-temizleme-konsantre-sivisi-22033",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8585,7 +8585,7 @@
             "sku": "1536",
             "priceTry": 754.34,
             "priceUsd": 16.05,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-plastik-yuzey-temizleyici-sprey-500-ml-1536-8268.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-plastik-yuzey-temizleyici-sprey-500-ml-1536-8268.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-plastik-yuzey-temizleyici-sprey-500-ml-1536",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8600,7 +8600,7 @@
             "sku": "1641",
             "priceTry": 482.36,
             "priceUsd": 10.26,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/seramikli-pas-sokucu-300-ml-1641-2375.jpg",
+            "image": "assets/images/liqui-moly/catalog/seramikli-pas-sokucu-300-ml-1641-2375.webp",
             "url": "https://shop.egemot.com.tr/seramikli-pas-sokucu-300-ml-1641",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8615,7 +8615,7 @@
             "sku": "24395",
             "priceTry": 880.51,
             "priceUsd": 18.73,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-susturucu-temizleyici-24395-3040.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-susturucu-temizleyici-24395-3040.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-susturucu-temizleyici-24395",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8630,7 +8630,7 @@
             "sku": "1640",
             "priceTry": 861.53,
             "priceUsd": 18.33,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-zinc-aluminyum-sprey-400-ml-1640-1666.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-zinc-aluminyum-sprey-400-ml-1640-1666.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-zinc-aluminyum-sprey-400-ml-1640",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8645,7 +8645,7 @@
             "sku": "21611",
             "priceTry": 653.55,
             "priceUsd": 13.91,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-hizli-parlaklik-cilasi-500-ml-21611-6571.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-hizli-parlaklik-cilasi-500-ml-21611-6571.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-hizli-parlaklik-cilasi-500-ml-21611",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8660,7 +8660,7 @@
             "sku": "1547",
             "priceTry": 398.09,
             "priceUsd": 8.47,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-aracici-temizleyicisi-500-ml-1547-7619.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-aracici-temizleyicisi-500-ml-1547-7619.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-aracici-temizleyicisi-500-ml-1547",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8675,7 +8675,7 @@
             "sku": "21832",
             "priceTry": 443.14,
             "priceUsd": 9.43,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-oto-kokusu-cherry-21832-5975.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-oto-kokusu-cherry-21832-5975.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-oto-kokusu-cherry-21832",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8690,7 +8690,7 @@
             "sku": "1661",
             "priceTry": 165.1,
             "priceUsd": 3.51,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-oto-kokusu-limon-1661-5241.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-oto-kokusu-limon-1661-5241.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-oto-kokusu-limon-1661",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8705,7 +8705,7 @@
             "sku": "21831",
             "priceTry": 443.14,
             "priceUsd": 9.43,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-oto-kokusu-new-car-21831-7836.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-oto-kokusu-new-car-21831-7836.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-oto-kokusu-new-car-21831",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8720,7 +8720,7 @@
             "sku": "21833",
             "priceTry": 443.14,
             "priceUsd": 9.43,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-oto-kokusu-ocean-21833-6549.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-oto-kokusu-ocean-21833-6549.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-oto-kokusu-ocean-21833",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8735,7 +8735,7 @@
             "sku": "1664",
             "priceTry": 136.16,
             "priceUsd": 2.9,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-oto-kokusu-sport-fresh-5-g-1664-1111.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-oto-kokusu-sport-fresh-5-g-1664-1111.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-oto-kokusu-sport-fresh-5-g-1664",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8750,7 +8750,7 @@
             "sku": "21830",
             "priceTry": 443.14,
             "priceUsd": 9.43,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-oto-kokusu-vanilya-21830-9911.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-oto-kokusu-vanilya-21830-9911.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-oto-kokusu-vanilya-21830",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8765,7 +8765,7 @@
             "sku": "1538",
             "priceTry": 590.58,
             "priceUsd": 12.57,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-kapi-fitil-kaucuk-lastik-spreyi-500-ml-1538-2361.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-kapi-fitil-kaucuk-lastik-spreyi-500-ml-1538-2361.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-kapi-fitil-kaucuk-lastik-spreyi-500-ml-1538",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8780,7 +8780,7 @@
             "sku": "5111",
             "priceTry": 785.41,
             "priceUsd": 16.71,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/bogaz-kelebegi-temizleyici-spreyi-400-ml-5111-8164.jpg",
+            "image": "assets/images/liqui-moly/catalog/bogaz-kelebegi-temizleyici-spreyi-400-ml-5111-8164.webp",
             "url": "https://shop.egemot.com.tr/bogaz-kelebegi-temizleyici-spreyi-400-ml-5111",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8795,7 +8795,7 @@
             "sku": "3365",
             "priceTry": 1673.92,
             "priceUsd": 35.62,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/el-temizleme-kremi-3-litre-3365-endustriyel-1787.jpg",
+            "image": "assets/images/liqui-moly/catalog/el-temizleme-kremi-3-litre-3365-endustriyel-1787.webp",
             "url": "https://shop.egemot.com.tr/el-temizleme-kremi-3-litre-3365-endustriyel",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8825,7 +8825,7 @@
             "sku": "5200",
             "priceTry": 990.55,
             "priceUsd": 21.08,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-yag-camuru-temizligi-300-ml-5200-7983.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-yag-camuru-temizligi-300-ml-5200-7983.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-yag-camuru-temizligi-300-ml-5200",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8855,7 +8855,7 @@
             "sku": "23046",
             "priceTry": 621.95,
             "priceUsd": 13.23,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-doseme-temizleme-kopugu-300-ml-23046-9155.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-doseme-temizleme-kopugu-300-ml-23046-9155.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-doseme-temizleme-kopugu-300-ml-23046",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8870,7 +8870,7 @@
             "sku": "1597",
             "priceTry": 1058.72,
             "priceUsd": 22.53,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-jant-temizleme-spreyi-1-l-1597-8972.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-jant-temizleme-spreyi-1-l-1597-8972.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-jant-temizleme-spreyi-1-l-1597",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8885,7 +8885,7 @@
             "sku": "3579",
             "priceTry": 581.22,
             "priceUsd": 12.37,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-zincir-spreyi-400-ml-3579-7423.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-zincir-spreyi-400-ml-3579-7423.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-zincir-spreyi-400-ml-3579",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8900,7 +8900,7 @@
             "sku": "1612",
             "priceTry": 354.22,
             "priceUsd": 7.54,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/hizli-pas-sokucu-300-ml-1612-1554.jpg",
+            "image": "assets/images/liqui-moly/catalog/hizli-pas-sokucu-300-ml-1612-1554.webp",
             "url": "https://shop.egemot.com.tr/hizli-pas-sokucu-300-ml-1612",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8915,7 +8915,7 @@
             "sku": "1682",
             "priceTry": 213.28,
             "priceUsd": 4.54,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-super-k-icdis-temizleyici-250-ml-1682-1784.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-super-k-icdis-temizleyici-250-ml-1682-1784.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-super-k-icdis-temizleyici-250-ml-1682",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8930,7 +8930,7 @@
             "sku": "1590",
             "priceTry": 398.33,
             "priceUsd": 8.48,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/cam-yagmur-suyu-kaydirici-125-ml-1590-3540.jpg",
+            "image": "assets/images/liqui-moly/catalog/cam-yagmur-suyu-kaydirici-125-ml-1590-3540.webp",
             "url": "https://shop.egemot.com.tr/cam-yagmur-suyu-kaydirici-125-ml-1590",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8945,7 +8945,7 @@
             "sku": "3335",
             "priceTry": 2967.57,
             "priceUsd": 63.14,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-sivi-el-temizleyici-dispanseri-1-adet-3335-3328.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-sivi-el-temizleyici-dispanseri-1-adet-3335-3328.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-sivi-el-temizleyici-dispanseri-1-adet-3335",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8960,7 +8960,7 @@
             "sku": "3332",
             "priceTry": 1569.96,
             "priceUsd": 33.4,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-el-temizleyici-braketi-1-adet-3332-6254.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-el-temizleyici-braketi-1-adet-3332-6254.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-el-temizleyici-braketi-1-adet-3332",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -8975,7 +8975,7 @@
             "sku": "3326",
             "priceTry": 587.31,
             "priceUsd": 12.5,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-motor-ust-temizleyici-400-ml-3326-2771.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-motor-ust-temizleyici-400-ml-3326-2771.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-motor-ust-temizleyici-400-ml-3326",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -9005,7 +9005,7 @@
             "sku": "4066",
             "priceTry": 485.24,
             "priceUsd": 10.32,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/hava-akismetre-temizleyici-200-ml-4066-5629.jpg",
+            "image": "assets/images/liqui-moly/catalog/hava-akismetre-temizleyici-200-ml-4066-5629.webp",
             "url": "https://shop.egemot.com.tr/hava-akismetre-temizleyici-200-ml-4066",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -9020,7 +9020,7 @@
             "sku": "3623",
             "priceTry": 626.33,
             "priceUsd": 13.33,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-conta-sokucu-cikaricisi-3623-8545.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-conta-sokucu-cikaricisi-3623-8545.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-conta-sokucu-cikaricisi-3623",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -9050,7 +9050,7 @@
             "sku": "1424",
             "priceTry": 640.63,
             "priceUsd": 13.63,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-metalik-cila-500-ml-1424-3916.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-metalik-cila-500-ml-1424-3916.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-metalik-cila-500-ml-1424",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -9080,7 +9080,7 @@
             "sku": "1603",
             "priceTry": 408.5,
             "priceUsd": 8.69,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-kaskici-temizleyici-1603-1086.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-kaskici-temizleyici-1603-1086.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-kaskici-temizleyici-1603",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -9095,7 +9095,7 @@
             "sku": "1571",
             "priceTry": 370.5,
             "priceUsd": 7.88,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-kask-ve-vizor-su-kaydirici-temizleyici-1571-4214.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-kask-ve-vizor-su-kaydirici-temizleyici-1571-4214.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-kask-ve-vizor-su-kaydirici-temizleyici-1571",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -9110,7 +9110,7 @@
             "sku": "1517",
             "priceTry": 140.15,
             "priceUsd": 2.98,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/konsantre-cam-temizleyici-50-ml-1517-4718.jpg",
+            "image": "assets/images/liqui-moly/catalog/konsantre-cam-temizleyici-50-ml-1517-4718.webp",
             "url": "https://shop.egemot.com.tr/konsantre-cam-temizleyici-50-ml-1517",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -9125,7 +9125,7 @@
             "sku": "21465",
             "priceTry": 477.82,
             "priceUsd": 10.17,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-klima-fresh-plus-75-ml-21465-8835.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-klima-fresh-plus-75-ml-21465-8835.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-klima-fresh-plus-75-ml-21465",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -9140,7 +9140,7 @@
             "sku": "4090",
             "priceTry": 8732.87,
             "priceUsd": 185.81,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-klima-sistemi-temizlik-tabancasi-1-adet-4090-1894.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-klima-sistemi-temizlik-tabancasi-1-adet-4090-1894.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-klima-sistemi-temizlik-tabancasi-1-adet-4090",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -9170,7 +9170,7 @@
             "sku": "4091",
             "priceTry": 636.96,
             "priceUsd": 13.55,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-klima-sistemi-temizleme-sivisi-1-litre-21921-6024.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-klima-sistemi-temizleme-sivisi-1-litre-21921-6024.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-klima-sistemi-temizleme-sivisi-1-litre-21921",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -9185,7 +9185,7 @@
             "sku": "4087",
             "priceTry": 650.35,
             "priceUsd": 13.84,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/klima-sistem-temizleyici-sprey-250-ml-4087-2778.jpg",
+            "image": "assets/images/liqui-moly/catalog/klima-sistem-temizleyici-sprey-250-ml-4087-2778.webp",
             "url": "https://shop.egemot.com.tr/klima-sistem-temizleyici-sprey-250-ml-4087",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -9200,7 +9200,7 @@
             "sku": null,
             "priceTry": 422.75,
             "priceUsd": 8.99,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-zincir-ve-balata-temizleme-spreyi-500ml-8961.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-zincir-ve-balata-temizleme-spreyi-500ml-8961.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-zincir-ve-balata-temizleme-spreyi-500ml",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -9215,7 +9215,7 @@
             "sku": "3305",
             "priceTry": 515.18,
             "priceUsd": 10.96,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/multisprey-7-cok-amacli-sprey-500-ml-3305-5906.jpg",
+            "image": "assets/images/liqui-moly/catalog/multisprey-7-cok-amacli-sprey-500-ml-3305-5906.webp",
             "url": "https://shop.egemot.com.tr/multisprey-7-cok-amacli-sprey-500-ml-3305",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -9230,7 +9230,7 @@
             "sku": "7824",
             "priceTry": 237.5,
             "priceUsd": 5.05,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-motosiklet-benzin-katkisi-yakit-sistemi-temizleyici-80-ml-7824-6220.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-motosiklet-benzin-katkisi-yakit-sistemi-temizleyici-80-ml-7824-6220.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-motosiklet-benzin-katkisi-yakit-sistemi-temizleyici-80-ml-7824",
             "category": "موتور سیکلت"
       },
@@ -9245,7 +9245,7 @@
             "sku": "1554",
             "priceTry": 630.32,
             "priceUsd": 13.41,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-deri-bakim-kremi-250-ml-1554-4823.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-deri-bakim-kremi-250-ml-1554-4823.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-deri-bakim-kremi-250-ml-1554",
             "category": "موتور سیکلت"
       },
@@ -9260,7 +9260,7 @@
             "sku": "1508",
             "priceTry": 394.25,
             "priceUsd": 8.39,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-sentetik-zincir-yaglama-spreyi-1508-9612.jpeg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-sentetik-zincir-yaglama-spreyi-1508-9612.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-sentetik-zincir-yaglama-spreyi-1508",
             "category": "موتور سیکلت"
       },
@@ -9275,7 +9275,7 @@
             "sku": "1591",
             "priceTry": 665.0,
             "priceUsd": 14.15,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-sentetik-zincir-yaglama-spreyi-beyaz-3865.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-sentetik-zincir-yaglama-spreyi-beyaz-3865.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-sentetik-zincir-yaglama-spreyi-beyaz",
             "category": "موتور سیکلت"
       },
@@ -9290,7 +9290,7 @@
             "sku": "1657",
             "priceTry": 498.75,
             "priceUsd": 10.61,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-motosiklet-engine-flush-motor-ici-temizleyici-2022.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-motosiklet-engine-flush-motor-ici-temizleyici-2022.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-motosiklet-engine-flush-motor-ici-temizleyici",
             "category": "موتور سیکلت"
       },
@@ -9305,7 +9305,7 @@
             "sku": "1579",
             "priceTry": 451.25,
             "priceUsd": 9.6,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-motosiklet-lastik-tamir-spreyi-300-ml-1579-5363.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-motosiklet-lastik-tamir-spreyi-300-ml-1579-5363.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-motosiklet-lastik-tamir-spreyi-300-ml-1579",
             "category": "موتور سیکلت"
       },
@@ -9320,7 +9320,7 @@
             "sku": "7823",
             "priceTry": 244.15,
             "priceUsd": 5.19,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-motorbike-speed-shooter-80-ml-7823-4096.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-motorbike-speed-shooter-80-ml-7823-4096.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-motorbike-speed-shooter-80-ml-7823",
             "category": "موتور سیکلت"
       },
@@ -9335,7 +9335,7 @@
             "sku": "1604",
             "priceTry": 617.5,
             "priceUsd": 13.14,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-motosiklet-hava-filtresi-yaglama-spreyi-1604-2215.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-motosiklet-hava-filtresi-yaglama-spreyi-1604-2215.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-motosiklet-hava-filtresi-yaglama-spreyi-1604",
             "category": "موتور سیکلت"
       },
@@ -9350,7 +9350,7 @@
             "sku": "1043",
             "priceTry": 915.65,
             "priceUsd": 19.48,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-atf-iii-direksiyon-hidroligi-1043-8782.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-atf-iii-direksiyon-hidroligi-1043-8782.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-atf-iii-direksiyon-hidroligi-1043",
             "category": "گیربکس و هیدرولیک"
       },
@@ -9365,7 +9365,7 @@
             "sku": "21158",
             "priceTry": 3961.02,
             "priceUsd": 84.28,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-dot-4-fren-hidroligi-5-litre-21158-3545.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-dot-4-fren-hidroligi-5-litre-21158-3545.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-dot-4-fren-hidroligi-5-litre-21158",
             "category": "گیربکس و هیدرولیک"
       },
@@ -9380,7 +9380,7 @@
             "sku": "3640",
             "priceTry": 1002.9,
             "priceUsd": 21.34,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/dual-clutch-transmission-oil-8100-3640-6697.jpg",
+            "image": "assets/images/liqui-moly/catalog/dual-clutch-transmission-oil-8100-3640-6697.webp",
             "url": "https://shop.egemot.com.tr/dual-clutch-transmission-oil-8100-3640",
             "category": "گیربکس و هیدرولیک"
       },
@@ -9395,7 +9395,7 @@
             "sku": "1007",
             "priceTry": 2266.23,
             "priceUsd": 48.22,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/motor-protect-sanziman-koruyucu-80-ml-1007-6497.jpg",
+            "image": "assets/images/liqui-moly/catalog/motor-protect-sanziman-koruyucu-80-ml-1007-6497.webp",
             "url": "https://shop.egemot.com.tr/motor-protect-sanziman-koruyucu-80-ml-1007",
             "category": "گیربکس و هیدرولیک"
       },
@@ -9410,7 +9410,7 @@
             "sku": "21419",
             "priceTry": 1393.6,
             "priceUsd": 29.65,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-haldex-yagi-21419-2-2-6627.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-haldex-yagi-21419-2-2-6627.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-haldex-yagi-21419-2-2",
             "category": "گیربکس و هیدرولیک"
       },
@@ -9425,7 +9425,7 @@
             "sku": "2512",
             "priceTry": 730.05,
             "priceUsd": 15.53,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/otomatik-sanziman-temizleyici-300-ml-2512-5541.jpg",
+            "image": "assets/images/liqui-moly/catalog/otomatik-sanziman-temizleyici-300-ml-2512-5541.webp",
             "url": "https://shop.egemot.com.tr/otomatik-sanziman-temizleyici-300-ml-2512",
             "category": "گیربکس و هیدرولیک"
       },
@@ -9440,7 +9440,7 @@
             "sku": "21126",
             "priceTry": 265.0,
             "priceUsd": 5.64,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-fren-bakim-seti-21126-6804.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-fren-bakim-seti-21126-6804.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-fren-bakim-seti-21126",
             "category": "گیربکس و هیدرولیک"
       },
@@ -9470,7 +9470,7 @@
             "sku": "3074",
             "priceTry": 1494.53,
             "priceUsd": 31.8,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/fren-sesi-onleyici-3074-4106.jpg",
+            "image": "assets/images/liqui-moly/catalog/fren-sesi-onleyici-3074-4106.webp",
             "url": "https://shop.egemot.com.tr/fren-sesi-onleyici-3074",
             "category": "گیربکس و هیدرولیک"
       },
@@ -9485,7 +9485,7 @@
             "sku": "21121",
             "priceTry": 106.45,
             "priceUsd": 2.26,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-fren-gicirti-sesi-onleyici-10-g-21121-7253.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-fren-gicirti-sesi-onleyici-10-g-21121-7253.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-fren-gicirti-sesi-onleyici-10-g-21121",
             "category": "گیربکس و هیدرولیک"
       },
@@ -9500,7 +9500,7 @@
             "sku": "3079",
             "priceTry": 649.19,
             "priceUsd": 13.81,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-fren-gicirti-sesi-onleyici-sprey-3079-2868.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-fren-gicirti-sesi-onleyici-sprey-3079-2868.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-fren-gicirti-sesi-onleyici-sprey-3079",
             "category": "گیربکس و هیدرولیک"
       },
@@ -9515,7 +9515,7 @@
             "sku": "3368",
             "priceTry": 277.89,
             "priceUsd": 5.91,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/fren-balata-spreyi-500-ml-3368-8606.jpg",
+            "image": "assets/images/liqui-moly/catalog/fren-balata-spreyi-500-ml-3368-8606.webp",
             "url": "https://shop.egemot.com.tr/fren-balata-spreyi-500-ml-3368",
             "category": "گیربکس و هیدرولیک"
       },
@@ -9530,7 +9530,7 @@
             "sku": "21119",
             "priceTry": 110.0,
             "priceUsd": 2.34,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-fren-pimleri-yaglayici-5-g-21119-2295.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-fren-pimleri-yaglayici-5-g-21119-2295.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-fren-pimleri-yaglayici-5-g-21119",
             "category": "گیربکس و هیدرولیک"
       },
@@ -9545,7 +9545,7 @@
             "sku": "3093",
             "priceTry": 523.14,
             "priceUsd": 11.13,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-fren-hidroligi-dot-4-500-ml-3093-3682.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-fren-hidroligi-dot-4-500-ml-3093-3682.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-fren-hidroligi-dot-4-500-ml-3093",
             "category": "گیربکس و هیدرولیک"
       },
@@ -9560,7 +9560,7 @@
             "sku": "3092",
             "priceTry": 419.89,
             "priceUsd": 8.93,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-fren-hidroligi-dot-51-3092-9286.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-fren-hidroligi-dot-51-3092-9286.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-fren-hidroligi-dot-51-3092",
             "category": "گیربکس و هیدرولیک"
       },
@@ -9575,7 +9575,7 @@
             "sku": "21167",
             "priceTry": 567.44,
             "priceUsd": 12.07,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-fren-hidroligi-sl6-dot-4-500-ml-21167-9768.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-fren-hidroligi-sl6-dot-4-500-ml-21167-9768.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-fren-hidroligi-sl6-dot-4-500-ml-21167",
             "category": "گیربکس و هیدرولیک"
       },
@@ -9590,7 +9590,7 @@
             "sku": "21120",
             "priceTry": 110.0,
             "priceUsd": 2.34,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-jant-gobegi-sabitleme-macunu-10-g-21120-6375.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-jant-gobegi-sabitleme-macunu-10-g-21120-6375.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-jant-gobegi-sabitleme-macunu-10-g-21120",
             "category": "گیربکس و هیدرولیک"
       },
@@ -9605,7 +9605,7 @@
             "sku": "1099",
             "priceTry": 349.61,
             "priceUsd": 7.44,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-direksiyon-hidrolik-sistemi-sizinti-onleyici-50-ml-1099-9636.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-direksiyon-hidrolik-sistemi-sizinti-onleyici-50-ml-1099-9636.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-direksiyon-hidrolik-sistemi-sizinti-onleyici-50-ml-1099",
             "category": "گیربکس و هیدرولیک"
       },
@@ -9620,7 +9620,7 @@
             "sku": "20468",
             "priceTry": 999.58,
             "priceUsd": 21.27,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/direksiyon-ve-merkezi-sistem-hidrolik-yagi-9723.jpg",
+            "image": "assets/images/liqui-moly/catalog/direksiyon-ve-merkezi-sistem-hidrolik-yagi-9723.webp",
             "url": "https://shop.egemot.com.tr/direksiyon-ve-merkezi-sistem-hidrolik-yagi",
             "category": "گیربکس و هیدرولیک"
       },
@@ -9635,7 +9635,7 @@
             "sku": "3667",
             "priceTry": 1011.03,
             "priceUsd": 21.51,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-direksiyon-ve-merkezi-sistem-hidrolik-yagi--5370.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-direksiyon-ve-merkezi-sistem-hidrolik-yagi-5370.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-direksiyon-ve-merkezi-sistem-hidrolik-yagi-",
             "category": "گیربکس و هیدرولیک"
       },
@@ -9650,7 +9650,7 @@
             "sku": "21172",
             "priceTry": 1386.76,
             "priceUsd": 29.51,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/liqui-moly-yaris-tipi-fren-hidroligi-500-ml-21172-8926.jpg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-yaris-tipi-fren-hidroligi-500-ml-21172-8926.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-yaris-tipi-fren-hidroligi-500-ml-21172",
             "category": "گیربکس و هیدرولیک"
       },
@@ -9665,7 +9665,7 @@
             "sku": "1042",
             "priceTry": 494.35,
             "priceUsd": 10.52,
-            "image": "https://www.liquimolyturkey.com/admin/resimler/sanziman-yag-sizinti-onleyici-50-ml-1042-6614.jpg",
+            "image": "assets/images/liqui-moly/catalog/sanziman-yag-sizinti-onleyici-50-ml-1042-6614.webp",
             "url": "https://shop.egemot.com.tr/sanziman-yag-sizinti-onleyici-50-ml-1042",
             "category": "گیربکس و هیدرولیک"
       }

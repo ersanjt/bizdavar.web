@@ -450,7 +450,11 @@
             ? (c.imageAltFa || c.imageAlt)
             : lang === 'tr'
               ? (c.imageAltTr || c.imageAlt)
-              : (c.imageAltEn || c.imageAlt),
+              : lang === 'ru'
+                ? (c.imageAltRu || c.imageAltEn || c.imageAlt)
+                : lang === 'ar'
+                  ? (c.imageAltAr || c.imageAltEn || c.imageAlt)
+                  : (c.imageAltEn || c.imageAlt),
           series: cat.lazyCatalog
             ? (c.series || [])
             : (c.series || []).map(s => {
@@ -470,7 +474,11 @@
                 ? (s.imageAltFa || s.imageAlt)
                 : lang === 'tr'
                   ? (s.imageAltTr || s.imageAlt)
-                  : (s.imageAltEn || s.imageAlt),
+                  : lang === 'ru'
+                    ? (s.imageAltRu || s.imageAltEn || s.imageAlt)
+                    : lang === 'ar'
+                      ? (s.imageAltAr || s.imageAltEn || s.imageAlt)
+                      : (s.imageAltEn || s.imageAlt),
               features: Array.isArray(features) && features.length ? features : (s.features || [])
             };
           })
@@ -788,7 +796,10 @@
       if (params.get('lang') && window.BIZDAVAR_LOCALES[params.get('lang')]) return currentLang;
 
       const country = await detectCountryCode();
-      const loc = localeFromCountry(country);
+      const pagePath = (LU?.currentPagePath?.() || '').split('#')[0].split('?')[0];
+      const loc = (country === 'DE' || country === 'AT' || country === 'CH') && pagePath === '/pages/fast'
+        ? 'de'
+        : localeFromCountry(country);
       sessionStorage.setItem(GEO_CACHE_KEY, loc);
 
       const pathLocale = LU?.currentLocale?.() || 'fa';

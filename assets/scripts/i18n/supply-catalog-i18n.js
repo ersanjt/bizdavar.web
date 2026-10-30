@@ -2530,7 +2530,14 @@
 
       title: 'Precise order code — no guesswork',
 
-      desc: 'Every VEGA sensor has hundreds of configuration options. We extract the exact order code from the official catalog based on your process conditions and quote the official price — you see only the final model and proforma.'
+      desc: 'Every VEGA sensor has hundreds of configuration options. We extract the exact order code from the official catalog based on your process conditions and quote the official price — you see only the final model and proforma.',
+      features: [
+        'Choose the model from your real process conditions',
+        'Extract the order code from the official VEGA catalog',
+        'Datasheet and dimension drawing in English',
+        'Compare options before the final order',
+        'Follow the order through delivery'
+      ]
 
     },
 
@@ -2798,7 +2805,14 @@
 
       title: 'Hassas order code — tahmin yok',
 
-      desc: 'Her VEGA sensörünün yüzlerce yapılandırma seçeneği vardır. Proses koşullarınıza göre resmi katalogdan tam order code\'u çıkarır ve resmi fiyatı teklif ederiz — yalnızca nihai model ve proformayı görürsünüz.'
+      desc: 'Her VEGA sensörünün yüzlerce yapılandırma seçeneği vardır. Proses koşullarınıza göre resmi katalogdan tam order code\'u çıkarır ve resmi fiyatı teklif ederiz — yalnızca nihai model ve proformayı görürsünüz.',
+      features: [
+        'Modeli gerçek proses koşullarına göre seçin',
+        'Order code’u resmi VEGA kataloğundan çıkarın',
+        'Datasheet ve ölçü çizimi',
+        'Siparişten önce seçenekleri karşılaştırın',
+        'Teslimata kadar siparişi izleyin'
+      ]
 
     },
 
@@ -2954,7 +2968,14 @@
     ],
     digitalServices: {
       title: 'Точный order code — без догадок',
-      desc: 'У каждого датчика VEGA сотни вариантов конфигурации. Мы извлекаем точный order code из официального каталога по вашим условиям и даём официальную цену — вы видите только финальную модель и проформу.'
+      desc: 'У каждого датчика VEGA сотни вариантов конфигурации. Мы извлекаем точный order code из официального каталога по вашим условиям и даём официальную цену — вы видите только финальную модель и проформу.',
+      features: [
+        'Выбор модели по реальным условиям процесса',
+        'Order code из официального каталога VEGA',
+        'Datasheet и чертёж габаритов',
+        'Сравнение вариантов до заказа',
+        'Сопровождение заказа до поставки'
+      ]
     },
     bizdavarServices: [
       { title: 'Бесплатная техконсультация', desc: 'Подбор модели по условиям процесса — без обязательства покупки' },
@@ -3097,7 +3118,14 @@
     ],
     digitalServices: {
       title: 'رمز طلب دقيق — بلا تخمين',
-      desc: 'لكل حساس VEGA مئات خيارات التكوين. نستخرج رمز الطلب الدقيق من الكتالوج الرسمي وفق ظروف عمليتك ونسعّر السعر الرسمي — ترى فقط الموديل النهائي والفاتورة المبدئية.'
+      desc: 'لكل حساس VEGA مئات خيارات التكوين. نستخرج رمز الطلب الدقيق من الكتالوج الرسمي وفق ظروف عمليتك ونسعّر السعر الرسمي — ترى فقط الموديل النهائي والفاتورة المبدئية.',
+      features: [
+        'اختيار الموديل وفق ظروف العملية الفعلية',
+        'استخراج رمز الطلب من كتالوج VEGA الرسمي',
+        'ورقة البيانات ومخطط الأبعاد',
+        'مقارنة الخيارات قبل الطلب النهائي',
+        'متابعة الطلب حتى التسليم'
+      ]
     },
     bizdavarServices: [
       { title: 'استشارة فنية مجانية', desc: 'اختيار الموديل وفق ظروف العملية — دون التزام بالشراء' },
@@ -3137,6 +3165,8 @@
       heroHeadlineSub: 'Engine oil, fuel additives, antifreeze and car care — transparent USD pricing + multilingual consulting',
       tagline: 'Made in Germany',
       since: 'German brand · genuine products',
+      logoAlt: 'Liqui Moly logo — German engine oils and fuel additives',
+      heroImageAlt: 'Liqui Moly Octane Plus petrol additive, made in Germany',
       description: 'Bizdavar Group supplies genuine Liqui Moly products: engine oils, petrol and diesel additives, antifreeze, gearbox fluids and car care. Prices are shown in USD — inquire and order via WhatsApp.',
       heroStats: [
         { label: 'Products in catalog' },
@@ -3190,22 +3220,53 @@
       { title: '10W-40 4T Street — motorcycle', desc: '4-stroke motorcycle oil — wet clutch and shared gearbox', useCase: 'Motorcycle · 4L', badge: 'Motorcycle' }
     ],
     iranIndustries: [
-      { name: 'Workshops & car service', desc: 'Engine oils, fuel additives and car care for periodic service — carton or bulk orders with USD proforma.' },
-      { name: 'Fleets & taxis', desc: 'Petrol/diesel oils and additives for taxi, delivery and corporate fleets — ongoing supply and bulk quotes.' },
-      { name: 'Motorcycles', desc: '4T oils and motorbike care for street and off-road — wet clutch and shared gearbox ready.' },
-      { name: 'Personal use', desc: 'Octane Plus, antifreeze, cleaners and car care — WhatsApp help choosing the right product.' }
+      { name: 'Workshops & car service', desc: 'Engine oils, fuel additives and car care for periodic service — carton or bulk orders with USD proforma.', imageAlt: 'Car workshop — Liqui Moly supply' },
+      { name: 'Fleets & taxis', desc: 'Petrol/diesel oils and additives for taxi, delivery and corporate fleets — ongoing supply and bulk quotes.', imageAlt: 'Fleet and taxi — Liqui Moly oils' },
+      { name: 'Motorcycles', desc: '4T oils and motorbike care for street and off-road — wet clutch and shared gearbox ready.', imageAlt: 'Motorcycle — Liqui Moly 4T oil' },
+      { name: 'Personal use', desc: 'Octane Plus, antifreeze, cleaners and car care — WhatsApp help choosing the right product.', imageAlt: 'Personal use — Octane Plus and car care' }
+    ],
+    categories: [
+      { titleEn: 'Engine oils', descEn: '154 products', imageAltEn: 'Liqui Moly engine oil' },
+      { titleEn: 'Petrol additives', descEn: '15 products', imageAltEn: 'Liqui Moly petrol additive' },
+      { titleEn: 'Diesel additives', descEn: '24 products', imageAltEn: 'Liqui Moly diesel additive' },
+      { titleEn: 'Oil additives', descEn: '7 products', imageAltEn: 'Liqui Moly oil additive' },
+      { titleEn: 'Gearbox and hydraulics', descEn: '22 products', imageAltEn: 'Liqui Moly gearbox oil' },
+      { titleEn: 'Antifreeze and radiator', descEn: '14 products', imageAltEn: 'Liqui Moly antifreeze' },
+      { titleEn: 'Car care', descEn: '58 products', imageAltEn: 'Liqui Moly car care' },
+      { titleEn: 'Motorcycle', descEn: '8 products', imageAltEn: 'Liqui Moly motorcycle oil' },
+      { titleEn: 'Marine', descEn: '3 products', imageAltEn: 'Liqui Moly marine oil' },
+      { titleEn: 'Service fluids', descEn: '11 products', imageAltEn: 'Liqui Moly service products' },
+      { titleEn: 'Other products', descEn: '20 products', imageAltEn: 'Liqui Moly automotive products' }
+    ],
+    faq: [
+      { q: 'How are prices shown?', a: 'The card price is in US dollars. The order total is confirmed on the proforma.' },
+      { q: 'Is it genuine Liqui Moly?', a: 'Yes. We supply genuine Liqui Moly. The SKU is printed on every item.' },
+      { q: 'What is Octane Plus?', a: 'A German petrol additive that raises octane. Add it to the tank as directed on the can.' },
+      { q: 'Do you ship internationally?', a: 'Yes. The delivery country is written on the proforma. WhatsApp quotes are available in several languages.' },
+      { q: 'Is there a minimum order?', a: 'Single units and bulk both work. For a workshop or fleet, send the quantity for a clearer price.' },
+      { q: 'How long does delivery take?', a: 'From a few days to a few weeks, depending on stock and destination. The proforma states the lead time.' }
+    ],
+    services: [
+      { title: 'Oil selection', desc: 'Viscosity and spec matched to the vehicle' },
+      { title: 'Genuine supply', desc: 'Genuine Liqui Moly products' },
+      { title: 'USD proforma', desc: 'A clear price before payment' },
+      { title: 'Bulk orders', desc: 'Workshops, fleets and shops' },
+      { title: 'Logistics', desc: 'International shipping to the destination' },
+      { title: 'Multilingual support', desc: 'WhatsApp and the quote form' }
     ],
     inquiryTemplate: 'Hello, I would like a quote for Liqui Moly {product}.\n\nQuantity:\nVehicle / use:\nDelivery city:\n'
   };
 
   const liquiTr = {
     brand: {
-      heroEyebrow: 'Farsça konuşanlar için orijinal Liqui Moly tedariki',
+      heroEyebrow: 'Orijinal Liqui Moly tedariki',
       heroHeadline: 'Liqui Moly yağ ve katkılar',
-      heroHeadlineSub: 'Motor yağı, yakıt katkısı, antifriz ve oto bakım — şeffaf dolar fiyat + Farsça danışmanlık',
+      heroHeadlineSub: 'Motor yağı, yakıt katkısı, antifriz ve oto bakım — şeffaf dolar fiyat + Türkçe danışmanlık',
       tagline: 'Made in Germany',
       since: 'Alman marka · orijinal ürün',
-      description: 'Bizdavar Group orijinal Liqui Moly ürünleri tedarik eder: motor yağları, benzin ve dizel katkıları, antifriz, şanzıman ve oto bakım. Fiyatlar USD olarak gösterilir — Farsça WhatsApp ile teklif ve sipariş.',
+      logoAlt: 'Liqui Moly logosu — Alman motor yağı ve yakıt katkısı',
+      heroImageAlt: 'Liqui Moly Octane Plus benzin katkısı, Almanya üretimi',
+      description: 'Bizdavar Group orijinal Liqui Moly ürünleri tedarik eder: motor yağları, benzin ve dizel katkıları, antifriz, şanzıman ve oto bakım. Fiyatlar USD olarak gösterilir — WhatsApp ile teklif ve sipariş.',
       heroStats: [
         { label: 'Katalogdaki ürün' },
         { label: 'Dolar fiyat' },
@@ -3215,13 +3276,13 @@
     trustSignals: [
       { label: 'Orijinal ürün', desc: 'Orijinal Liqui Moly — ürün kodu ve teknik özellik' },
       { label: 'Şeffaf dolar fiyat', desc: 'Gösterim USD fiyat — ödeme öncesi proforma' },
-      { label: 'Farsça danışmanlık', desc: 'Yağ sınıfı, viskozite ve katkı seçimi — Farsça WhatsApp' },
+      { label: 'Türkçe danışmanlık', desc: 'Yağ sınıfı, viskozite ve katkı seçimi — Türkçe WhatsApp' },
       { label: 'Uluslararası lojistik', desc: 'Tedarik ve sevkiyat koordinasyonu' }
     ],
     whyBuyFromUs: [
       { title: 'Doğru yağ ve katkı', desc: '5W-30 mü 5W-40 mü, Octane Plus uygun mu bilmiyorsanız — araç modeli ve yakıt tipini söyleyin.' },
       { title: 'Karşılaştırılabilir fiyat', desc: 'Her üründe yaklaşık USD. Nihai tutar günlük stokla proformada onaylanır.' },
-      { title: 'Perakende veya toptan', desc: 'Bireysel, servis veya filo — tek Farsça iletişim noktası.' },
+      { title: 'Perakende veya toptan', desc: 'Bireysel, servis veya filo — tek iletişim noktası.' },
       { title: 'Küresel Alman marka', desc: 'Liqui Moly motor yağı, yakıt katkısı ve oto bakımda bilinen bir markadır — Almanya üretimi.' }
     ],
     purchaseSteps: [
@@ -3229,7 +3290,7 @@
       { num: '2', title: 'Fiyat onayı', desc: 'Gösterim USD’sini günlük stokla kontrol edip proforma veririz' },
       { num: '3', title: 'Proforma', desc: 'Tutar, adet, termin ve ödeme koşulları — net' },
       { num: '4', title: 'Tedarik ve sevkiyat', desc: 'Orijinal ürün tedariki ve uluslararası lojistik' },
-      { num: '5', title: 'Teslimat', desc: 'Varış noktasına teslim — satış sonrası Farsça destek' }
+      { num: '5', title: 'Teslimat', desc: 'Varış noktasına teslim — satış sonrası destek' }
     ],
     quoteChecklist: {
       title: 'Net teklif için bunları gönderin',
@@ -3258,10 +3319,39 @@
       { title: '10W-40 4T Street — motosiklet', desc: '4 zamanlı motosiklet yağı — ıslak debriyaj ve ortak şanzıman', useCase: 'Motosiklet · 4L', badge: 'Motosiklet' }
     ],
     iranIndustries: [
-      { name: 'Servis ve oto bakım', desc: 'Periyodik servis için motor yağı, yakıt katkısı ve car care — koli veya toptan USD proforma.' },
-      { name: 'Filo ve taksi', desc: 'Taksi, dağıtım ve kurumsal filolar için benzin/dizel yağ ve katkı — sürekli tedarik ve toptan teklif.' },
-      { name: 'Motosiklet', desc: 'Şehir ve off-road için 4T yağ ve bakım — ıslak debriyaj ve ortak şanzıman.' },
-      { name: 'Bireysel kullanım', desc: 'Octane Plus, antifriz, temizleyiciler ve car care — doğru ürün için Farsça WhatsApp desteği.' }
+      { name: 'Servis ve oto bakım', desc: 'Periyodik servis için motor yağı, yakıt katkısı ve car care — koli veya toptan USD proforma.', imageAlt: 'Oto servisi — Liqui Moly tedariki' },
+      { name: 'Filo ve taksi', desc: 'Taksi, dağıtım ve kurumsal filolar için benzin/dizel yağ ve katkı — sürekli tedarik ve toptan teklif.', imageAlt: 'Filo ve taksi — Liqui Moly' },
+      { name: 'Motosiklet', desc: 'Şehir ve off-road için 4T yağ ve bakım — ıslak debriyaj ve ortak şanzıman.', imageAlt: 'Motosiklet — Liqui Moly 4T' },
+      { name: 'Bireysel kullanım', desc: 'Octane Plus, antifriz, temizleyiciler ve car care — doğru ürün için Türkçe WhatsApp desteği.', imageAlt: 'Bireysel kullanım — Octane Plus' }
+    ],
+    categories: [
+      { descTr: '154 ürün', imageAltTr: 'Liqui Moly motor yağı' },
+      { descTr: '15 ürün', imageAltTr: 'Liqui Moly benzin katkısı' },
+      { descTr: '24 ürün', imageAltTr: 'Liqui Moly dizel katkısı' },
+      { descTr: '7 ürün', imageAltTr: 'Liqui Moly yağ katkısı' },
+      { descTr: '22 ürün', imageAltTr: 'Liqui Moly şanzıman yağı' },
+      { descTr: '14 ürün', imageAltTr: 'Liqui Moly antifriz' },
+      { descTr: '58 ürün', imageAltTr: 'Liqui Moly oto bakım' },
+      { descTr: '8 ürün', imageAltTr: 'Liqui Moly motosiklet yağı' },
+      { descTr: '3 ürün', imageAltTr: 'Liqui Moly marine yağı' },
+      { descTr: '11 ürün', imageAltTr: 'Liqui Moly servis ürünleri' },
+      { descTr: '20 ürün', imageAltTr: 'Liqui Moly diğer ürünler' }
+    ],
+    faq: [
+      { q: 'Fiyatlar nasıl açıklanır?', a: 'Karttaki fiyat ABD dolarıdır. Sipariş tutarı proformada onaylanır.' },
+      { q: 'Ürün orijinal Liqui Moly mi?', a: 'Evet. Orijinal Liqui Moly tedarik edilir. SKU her kalemde yazar.' },
+      { q: 'Octane Plus nedir?', a: 'Oktanı yükselten Alman benzin katkısıdır. Kutudaki tarife göre depoya eklenir.' },
+      { q: 'Türkiye dışına da gönderiyor musunuz?', a: 'Evet. Teslimat ülkesi proformada netleşir. Türkçe WhatsApp danışmanlığı açıktır.' },
+      { q: 'Minimum sipariş var mı?', a: 'Tek ürün de toptan da olur. Servis ve filo adedini yazın, daha net fiyat verelim.' },
+      { q: 'Teslimat ne kadar sürer?', a: 'Stok ve ülkeye göre birkaç günden birkaç haftaya. Kesin süre proformadadır.' }
+    ],
+    services: [
+      { title: 'Yağ seçimi', desc: 'Aracınıza uygun viskozite ve standart' },
+      { title: 'Orijinal tedarik', desc: 'Orijinal Liqui Moly ürünleri' },
+      { title: 'USD proforma', desc: 'Ödemeden önce net fiyat' },
+      { title: 'Toptan sipariş', desc: 'Servis, filo ve mağaza' },
+      { title: 'Lojistik', desc: 'Varış ülkesine uluslararası sevkiyat' },
+      { title: 'Türkçe destek', desc: 'WhatsApp ve teklif formu' }
     ],
     inquiryTemplate: 'Merhaba, Liqui Moly {product} için fiyat teklifi istiyorum.\n\nAdet:\nAraç / kullanım:\nTeslimat şehri:\n'
   };
@@ -3273,6 +3363,8 @@
       heroHeadlineSub: 'Моторные масла, топливные присадки, антифриз и автохимия — прозрачные цены в USD + многоязычная консультация',
       tagline: 'Made in Germany',
       since: 'Немецкий бренд · оригинальная продукция',
+      logoAlt: 'Логотип Liqui Moly — немецкие моторные масла и присадки',
+      heroImageAlt: 'Присадка Liqui Moly Octane Plus, сделано в Германии',
       description: 'Bizdavar Group поставляет оригинальную продукцию Liqui Moly: моторные масла, бензиновые и дизельные присадки, антифриз, трансмиссионные жидкости и автохимию. Цены указаны в USD — запрос и заказ через WhatsApp.',
       heroStats: [
         { label: 'Товаров в каталоге' },
@@ -3326,10 +3418,39 @@
       { title: '10W-40 4T Street — мотоцикл', desc: 'Масло для 4-тактных мотоциклов — мокрое сцепление и общий картер', useCase: 'Мотоцикл · 4L', badge: 'Мото' }
     ],
     iranIndustries: [
-      { name: 'СТО и автосервис', desc: 'Масла, присадки и автохимия для ТО — коробка или опт с проформой в USD.' },
-      { name: 'Автопарки и такси', desc: 'Бензин/дизель для такси, доставки и корпоративных парков — регулярные поставки и опт.' },
-      { name: 'Мотоциклы', desc: '4T масла и уход для города и оффроуд — мокрое сцепление и общий картер.' },
-      { name: 'Личное использование', desc: 'Octane Plus, антифриз, очистители и автохимия — помощь в выборе через WhatsApp.' }
+      { name: 'СТО и автосервис', desc: 'Масла, присадки и автохимия для ТО — коробка или опт с проформой в USD.', imageAlt: 'Автосервис — поставка Liqui Moly' },
+      { name: 'Автопарки и такси', desc: 'Бензин/дизель для такси, доставки и корпоративных парков — регулярные поставки и опт.', imageAlt: 'Автопарк — масла Liqui Moly' },
+      { name: 'Мотоциклы', desc: '4T масла и уход для города и оффроуд — мокрое сцепление и общий картер.', imageAlt: 'Мотоцикл — масло Liqui Moly 4T' },
+      { name: 'Личное использование', desc: 'Octane Plus, антифриз, очистители и автохимия — помощь в выборе через WhatsApp.', imageAlt: 'Личное использование — Octane Plus' }
+    ],
+    categories: [
+      { titleRu: 'Моторные масла', descRu: '154 товара', imageAltRu: 'Моторное масло Liqui Moly' },
+      { titleRu: 'Бензиновые присадки', descRu: '15 товаров', imageAltRu: 'Бензиновая присадка Liqui Moly' },
+      { titleRu: 'Дизельные присадки', descRu: '24 товара', imageAltRu: 'Дизельная присадка Liqui Moly' },
+      { titleRu: 'Присадки в масло', descRu: '7 товаров', imageAltRu: 'Присадка в масло Liqui Moly' },
+      { titleRu: 'КПП и гидравлика', descRu: '22 товара', imageAltRu: 'Трансмиссионное масло Liqui Moly' },
+      { titleRu: 'Антифриз и радиатор', descRu: '14 товаров', imageAltRu: 'Антифриз Liqui Moly' },
+      { titleRu: 'Автохимия', descRu: '58 товаров', imageAltRu: 'Автохимия Liqui Moly' },
+      { titleRu: 'Мотоциклы', descRu: '8 товаров', imageAltRu: 'Мотоциклетное масло Liqui Moly' },
+      { titleRu: 'Лодочные масла', descRu: '3 товара', imageAltRu: 'Лодочное масло Liqui Moly' },
+      { titleRu: 'Сервисные жидкости', descRu: '11 товаров', imageAltRu: 'Сервисные продукты Liqui Moly' },
+      { titleRu: 'Прочие продукты', descRu: '20 товаров', imageAltRu: 'Автотовары Liqui Moly' }
+    ],
+    faq: [
+      { q: 'Как указываются цены?', a: 'Цена на карточке в долларах США. Итог заказа подтверждается в проформе.' },
+      { q: 'Это оригинальная Liqui Moly?', a: 'Да. Поставляем оригинальную Liqui Moly. SKU указан на каждой позиции.' },
+      { q: 'Что такое Octane Plus?', a: 'Немецкая присадка в бензин, которая повышает октановое число. Добавляется в бак по инструкции на банке.' },
+      { q: 'Доставляете ли вы в другие страны?', a: 'Да. Страна доставки указана в проформе. Консультация в WhatsApp на нескольких языках.' },
+      { q: 'Есть ли минимальный заказ?', a: 'Можно заказать одну единицу или опт. Для СТО и автопарка укажите количество — цена будет точнее.' },
+      { q: 'Сколько ждать доставку?', a: 'От нескольких дней до нескольких недель, в зависимости от склада и страны. Срок указан в проформе.' }
+    ],
+    services: [
+      { title: 'Подбор масла', desc: 'Вязкость и допуск под ваш автомобиль' },
+      { title: 'Оригинальная поставка', desc: 'Оригинальная продукция Liqui Moly' },
+      { title: 'Проформа в USD', desc: 'Понятная цена до оплаты' },
+      { title: 'Оптовые заказы', desc: 'СТО, автопарки и магазины' },
+      { title: 'Логистика', desc: 'Международная доставка до страны назначения' },
+      { title: 'Консультация', desc: 'WhatsApp и форма запроса' }
     ],
     inquiryTemplate: 'Здравствуйте, нужна цена на Liqui Moly {product}.\n\nКоличество:\nАвто / применение:\nГород доставки:\n'
   };
@@ -3341,6 +3462,8 @@
       heroHeadlineSub: 'زيت محرك، إضافات وقود، مضاد تجمد وعناية بالسيارة — أسعار دولار شفافة + استشارة متعددة اللغات',
       tagline: 'Made in Germany',
       since: 'علامة ألمانية · منتجات أصلية',
+      logoAlt: 'شعار Liqui Moly — زيوت محرك وإضافات وقود ألمانية',
+      heroImageAlt: 'إضافة بنزين Liqui Moly Octane Plus، صنع في ألمانيا',
       description: 'مجموعة Bizdavar تورّد منتجات Liqui Moly الأصلية: زيوت المحرك، إضافات البنزين والديزل، مضاد التجمد، سوائل ناقل الحركة والعناية بالسيارة. الأسعار بالدولار — الاستعلام والطلب عبر واتساب.',
       heroStats: [
         { label: 'منتجات في الكتالوج' },
@@ -3394,10 +3517,39 @@
       { title: '10W-40 4T Street — دراجة', desc: 'زيت دراجات رباعية الأشواط — قابض رطب وعلبة مشتركة', useCase: 'دراجة نارية · 4L', badge: 'دراجة' }
     ],
     iranIndustries: [
-      { name: 'الورش وخدمة السيارات', desc: 'زيوت وإضافات وعناية للصيانة الدورية — كرتون أو جملة بفاتورة دولار.' },
-      { name: 'الأساطيل والتاكسي', desc: 'زيوت وإضافات بنزين/ديزل للتاكسي والتوصيل والأساطيل — توريد مستمر وعروض جملة.' },
-      { name: 'الدراجات النارية', desc: 'زيوت 4T وعناية للمدينة والطرق الوعرة — قابض رطب وعلبة مشتركة.' },
-      { name: 'الاستخدام الشخصي', desc: 'Octane Plus ومضاد تجمد ومنظفات وعناية — مساعدة عبر واتساب لاختيار المنتج.' }
+      { name: 'الورش وخدمة السيارات', desc: 'زيوت وإضافات وعناية للصيانة الدورية — كرتون أو جملة بفاتورة دولار.', imageAlt: 'ورشة سيارات — توريد Liqui Moly' },
+      { name: 'الأساطيل والتاكسي', desc: 'زيوت وإضافات بنزين/ديزل للتاكسي والتوصيل والأساطيل — توريد مستمر وعروض جملة.', imageAlt: 'أسطول — زيوت Liqui Moly' },
+      { name: 'الدراجات النارية', desc: 'زيوت 4T وعناية للمدينة والطرق الوعرة — قابض رطب وعلبة مشتركة.', imageAlt: 'دراجة نارية — زيت Liqui Moly 4T' },
+      { name: 'الاستخدام الشخصي', desc: 'Octane Plus ومضاد تجمد ومنظفات وعناية — مساعدة عبر واتساب لاختيار المنتج.', imageAlt: 'استخدام شخصي — Octane Plus' }
+    ],
+    categories: [
+      { titleAr: 'زيوت المحرك', descAr: '154 منتجاً', imageAltAr: 'زيت محرك Liqui Moly' },
+      { titleAr: 'إضافات البنزين', descAr: '15 منتجاً', imageAltAr: 'إضافة بنزين Liqui Moly' },
+      { titleAr: 'إضافات الديزل', descAr: '24 منتجاً', imageAltAr: 'إضافة ديزل Liqui Moly' },
+      { titleAr: 'إضافات الزيت', descAr: '7 منتجات', imageAltAr: 'إضافة زيت Liqui Moly' },
+      { titleAr: 'ناقل الحركة والهيدروليك', descAr: '22 منتجاً', imageAltAr: 'زيت ناقل حركة Liqui Moly' },
+      { titleAr: 'مضاد التجمد والرديتر', descAr: '14 منتجاً', imageAltAr: 'مضاد تجمد Liqui Moly' },
+      { titleAr: 'العناية بالسيارة', descAr: '58 منتجاً', imageAltAr: 'عناية السيارة Liqui Moly' },
+      { titleAr: 'الدراجات النارية', descAr: '8 منتجات', imageAltAr: 'زيت دراجات Liqui Moly' },
+      { titleAr: 'الزيوت البحرية', descAr: '3 منتجات', imageAltAr: 'زيت بحري Liqui Moly' },
+      { titleAr: 'سوائل الخدمة', descAr: '11 منتجاً', imageAltAr: 'منتجات خدمة Liqui Moly' },
+      { titleAr: 'منتجات أخرى', descAr: '20 منتجاً', imageAltAr: 'منتجات سيارات Liqui Moly' }
+    ],
+    faq: [
+      { q: 'كيف تُعرض الأسعار؟', a: 'السعر على البطاقة بالدولار الأمريكي. إجمالي الطلب يُعتمد في الفاتورة المبدئية.' },
+      { q: 'هل المنتج Liqui Moly أصلي؟', a: 'نعم. نورّد Liqui Moly الأصلي. رمز SKU ظاهر على كل صنف.' },
+      { q: 'ما هو Octane Plus؟', a: 'إضافة بنزين ألمانية ترفع رقم الأوكتان. تُضاف إلى الخزان حسب تعليمات العبوة.' },
+      { q: 'هل تشحنون خارج بلد واحد؟', a: 'نعم. بلد التسليم يُكتب في الفاتورة المبدئية. الاستشارة عبر واتساب بعدة لغات.' },
+      { q: 'هل يوجد حد أدنى للطلب؟', a: 'الطلب قطعة واحدة أو جملة. للورشة أو الأسطول أرسلوا الكمية لنوضح السعر.' },
+      { q: 'كم تستغرق مدة التسليم؟', a: 'من أيام إلى بضعة أسابيع حسب المخزون والوجهة. المدة الدقيقة في الفاتورة المبدئية.' }
+    ],
+    services: [
+      { title: 'اختيار الزيت', desc: 'اللزوجة والمواصفة المناسبتان للسيارة' },
+      { title: 'توريد أصلي', desc: 'منتجات Liqui Moly الأصلية' },
+      { title: 'فاتورة بالدولار', desc: 'سعر واضح قبل الدفع' },
+      { title: 'طلبات الجملة', desc: 'الورش والأساطيل والمتاجر' },
+      { title: 'لوجستيات', desc: 'شحن دولي إلى بلد التسليم' },
+      { title: 'دعم بعدة لغات', desc: 'واتساب ونموذج الاستعلام' }
     ],
     inquiryTemplate: 'مرحباً، أريد عرض سعر لـ Liqui Moly {product}.\n\nالكمية:\nالمركبة / الاستخدام:\nمدينة التسليم:\n'
   };

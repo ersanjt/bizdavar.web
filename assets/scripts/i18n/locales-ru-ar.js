@@ -105,7 +105,10 @@
       lead: 'Шлемы, куртки, перчатки, брюки, мотоботы и интерком. Цена на карточке — в долларах США, с международной доставкой.',
       helmet: 'Шлемы',
       jacket: 'Куртки',
+      gloves: 'Перчатки',
+      pants: 'Брюки',
       boots: 'Мотоботы',
+      intercom: 'Интерком',
       hub: 'Auto-Moto',
       brakes: 'Магазин тормозов',
       searchPh: 'Поиск: шлем, куртка, мотоботы…',
@@ -123,15 +126,15 @@
     },
     carParts: {
       crumb: 'Тормоза',
-      seoTitle: 'Тормозные колодки и диски | марка и модель | Bizdavar',
-      seoDescription: 'Магазин тормозов Bizdavar: колодки, диски, спорт и жидкость. Цена на карточке — USD с международной доставкой.',
-      seoKeywords: 'тормозные колодки, тормозные диски, BMW, Mercedes, Bizdavar'
+      seoTitle: 'Тормозные колодки и диски | запрос в WhatsApp | Bizdavar',
+      seoDescription: 'Колодки и диски для иномарок. Цены на сайте нет: сначала WhatsApp +98 930 588 0135, почта info@bizdavar.com тоже открыта. Затем проформа.',
+      seoKeywords: 'тормозные колодки, тормозные диски, купить колодки, BMW, Mercedes, Bizdavar'
     },
     liquiMoly: {
       crumb: 'Продукция Liqui Moly',
-      seoTitle: 'Купить Liqui Moly | моторные масла и присадки | Bizdavar',
-      seoDescription: 'Bizdavar Group поставляет оригинальную Liqui Moly: моторные масла, Octane Plus, дизельные присадки, антифриз и автохимию. Прозрачные цены в USD и многоязычная консультация.',
-      seoKeywords: 'Liqui Moly купить, моторное масло Liqui Moly, Octane Plus, Top Tec, Molygen, присадка в бензин, антифриз, Bizdavar'
+      seoTitle: 'Купить масло Liqui Moly | Octane Plus и Top Tec | Bizdavar',
+      seoDescription: 'Оригинальный каталог Liqui Moly: масла Top Tec и Molygen, Octane Plus, дизельные присадки, антифриз, тормозная жидкость и автохимия. Цены в USD, проформа и консультация.',
+      seoKeywords: 'купить Liqui Moly, моторное масло Liqui Moly, Octane Plus, Top Tec 5W-30, Molygen, присадка в бензин, присадка в дизель, антифриз, тормозная жидкость, Bizdavar'
     },
     vega: {
       crumb: 'Продукция VEGA',
@@ -461,7 +464,10 @@
       lead: 'خوذات وسترات وقفازات وبناطيل وبوت وإنتركم. السعر على البطاقة بالدولار الأمريكي للتسليم الدولي.',
       helmet: 'خوذات',
       jacket: 'سترات',
+      gloves: 'قفازات',
+      pants: 'بناطيل',
       boots: 'بوت',
+      intercom: 'إنتركم',
       hub: 'أوتو-موتو',
       brakes: 'متجر الفرامل',
       searchPh: 'بحث: خوذة، سترة، بوت…',
@@ -479,15 +485,15 @@
     },
     carParts: {
       crumb: 'فرامل',
-      seoTitle: 'فحمات وأقراص الفرامل | اختر الماركة | Bizdavar',
-      seoDescription: 'متجر فرامل بيزدوار: فحمات وأقراص وسوائل مع اختيار الماركة والموديل. السعر بالدولار للتسليم الدولي.',
-      seoKeywords: 'فحمات فرامل, أقراص فرامل, BMW, Mercedes, Bizdavar'
+      seoTitle: 'شراء فحمات وأقراص الفرامل | استعلام واتساب | Bizdavar',
+      seoDescription: 'فحمات وأقراص فرامل للسيارات الأجنبية من بيزدوار. السعر غير منشور. الاستعلام أولاً عبر واتساب +98 930 588 0135 أو البريد info@bizdavar.com ثم فاتورة مبدئية.',
+      seoKeywords: 'فحمات فرامل, أقراص فرامل, شراء فحمات, BMW, Mercedes, بيزدوار'
     },
     liquiMoly: {
       crumb: 'منتجات Liqui Moly',
-      seoTitle: 'شراء Liqui Moly | زيوت المحرك وإضافات الوقود | Bizdavar',
-      seoDescription: 'مجموعة Bizdavar تورّد منتجات Liqui Moly الأصلية: زيوت المحرك، Octane Plus، إضافات الديزل، مضاد التجمد والعناية بالسيارة. أسعار شفافة بالدولار واستشارة متعددة اللغات.',
-      seoKeywords: 'شراء Liqui Moly, زيت محرك Liqui Moly, Octane Plus, Top Tec, Molygen, إضافات بنزين, مضاد تجمد, بيزدوار, Bizdavar'
+      seoTitle: 'شراء زيت Liqui Moly | Octane Plus و Top Tec | Bizdavar',
+      seoDescription: 'كتالوج Liqui Moly الأصلي: زيوت Top Tec وMolygen، Octane Plus، إضافات الديزل، مضاد التجمد، زيت الفرامل والعناية بالسيارة. أسعار بالدولار وفاتورة مبدئية واستشارة.',
+      seoKeywords: 'شراء Liqui Moly, زيت محرك Liqui Moly, Octane Plus, Top Tec 5W-30, Molygen, إضافة بنزين, إضافة ديزل, مضاد تجمد, زيت فرامل, Bizdavar'
     },
     vega: {
       crumb: 'منتجات VEGA',
@@ -1257,7 +1263,7 @@
         }
       },
       rateNote: { strong: '', body: '' },
-      officialNote: 'Технические данные основаны на <a href="https://www.liqui-moly.com/" target="_blank" rel="noopener noreferrer">официальном сайте Liqui Moly</a>. Для заказа — <a href="contact">связаться с Bizdavar</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>',
+      officialNote: 'Технические данные основаны на <a href="https://www.liqui-moly.com/" target="_blank" rel="noopener noreferrer">официальном сайте Liqui Moly</a>. Для заказа — <a href="contact">связаться с Bizdavar</a> · <a href="articles/liqui-moly-supply-iran">гид Liqui Moly</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>',
       cta: {
         title: 'Готовы заказать Liqui Moly?',
         desc: 'Пришлите название продукта или SKU — Octane Plus · Top Tec · Molygen · дизельные присадки',
@@ -1318,7 +1324,7 @@
         }
       },
       rateNote: { strong: '', body: '' },
-      officialNote: 'المعلومات الفنية مستندة إلى <a href="https://www.liqui-moly.com/" target="_blank" rel="noopener noreferrer">الموقع الرسمي لـ Liqui Moly</a>. للطلب — <a href="contact">تواصل مع Bizdavar</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>',
+      officialNote: 'المعلومات الفنية مستندة إلى <a href="https://www.liqui-moly.com/" target="_blank" rel="noopener noreferrer">الموقع الرسمي لـ Liqui Moly</a>. للطلب — <a href="contact">تواصل مع Bizdavar</a> · <a href="articles/liqui-moly-supply-iran">دليل Liqui Moly</a> · <a href="vega">VEGA</a> · <a href="prosense">Prosense</a>',
       cta: {
         title: 'هل أنت مستعد لطلب Liqui Moly؟',
         desc: 'أرسل اسم المنتج أو رمز SKU — Octane Plus · Top Tec · Molygen · إضافات الديزل',
@@ -1747,7 +1753,7 @@
     catalogBrandAll: 'Все бренды',
     quotePrice: 'Запросить цену',
     priceIranLabel: 'Международная доставка',
-    priceSellLabel: 'Цена продажи',
+    priceSellLabel: 'Цена по каталогу',
     techConsultCta: 'Запросить техконсультацию',
     navTrust: 'Почему Bizdavar',
     navBuy: 'Путь покупки',
@@ -1802,7 +1808,7 @@
     catalogBrandAll: 'كل العلامات',
     quotePrice: 'طلب السعر',
     priceIranLabel: 'تسليم إيران',
-    priceSellLabel: 'سعر البيع',
+    priceSellLabel: 'سعر الكتالوج',
     techConsultCta: 'طلب استشارة فنية',
     navTrust: 'لماذا Bizdavar',
     navBuy: 'مسار الشراء',
@@ -1875,9 +1881,20 @@
     guideBuyProsense: 'Купить детектор Prosense',
     guideBuyProsenseDesc: 'PQ, SafeVader и SIL',
     offerMap: {
-      servicesDesc: 'Сайты от $99, маркетинг, приложения и техуслуги — консультация на русском',
+      aria: 'Три пути Bizdavar',
+      lead: 'С чего начать?',
+      servicesNum: '01',
+      servicesTitle: 'Услуги',
+      servicesDesc: 'Сайт Fast от $99. Маркетинг, приложения и выезд — отдельный запрос.',
+      servicesGo: 'К услугам',
+      productsNum: '02',
+      productsTitle: 'Продукты Bizdavar',
       productsDesc: 'WhatsApp CRM, FXGuard Accounting и BizSwap',
-      supplyDesc: 'VEGA, Prosense, Liqui Moly и Teltonika — проформа в USD/EUR из Стамбула'
+      productsGo: 'К продуктам',
+      supplyNum: '03',
+      supplyTitle: 'Промышленные поставки',
+      supplyDesc: 'VEGA, Prosense, Liqui Moly и Teltonika — проформа в USD/EUR из Стамбула',
+      supplyGo: 'Открыть каталог'
     }
   }));
   deepMerge(ru.nav, {
@@ -1979,7 +1996,7 @@
     productPackagingDesc: 'Только в истории компании',
     productMedical: 'Медицина и СИЗ',
     productMedicalDesc: 'Только в истории компании',
-    productShop: 'Магазин в дирхамах',
+    productShop: 'Магазин в дирхамах — пусто',
     productShopDesc: 'Каталог пока пуст',
     customWebApp: 'Веб и приложения на заказ',
     fastDesc: 'Английский от $99 · фарси второй язык',
@@ -2476,6 +2493,10 @@
     optAutoMoto: 'Мотоэкипировка',
     motoInquiry: 'Запрос мотоэкипировки — {product}\n\nРазмер:\nРост и вес:\nКоличество:\n',
     optConsult: 'Бизнес-консалтинг',
+    optFxguard: 'FXGuard — inbox от $49',
+    optAccounting: 'FXGuard Accounting — лист ожидания',
+    optBizswap: 'BizSwap',
+    optOstrich: 'Кожа страуса',
     optOther: 'Другое'
   });
   if (ru.geo) {
@@ -2524,9 +2545,20 @@
     guideBuyProsense: 'شراء كاشف Prosense',
     guideBuyProsenseDesc: 'PQ وSafeVader وSIL',
     offerMap: {
-      servicesDesc: 'مواقع من ٩٩$ وتسويق وتطبيقات وخدمات فنية — استشارة بالعربية',
+      aria: 'مسارات Bizdavar الثلاثة',
+      lead: 'من أين تبدأ؟',
+      servicesNum: '٠١',
+      servicesTitle: 'الخدمات',
+      servicesDesc: 'موقع Fast من ٩٩$. التسويق والتطبيقات والعمل الميداني بعرض سعر منفصل.',
+      servicesGo: 'إلى الخدمات',
+      productsNum: '٠٢',
+      productsTitle: 'منتجات Bizdavar',
       productsDesc: 'WhatsApp CRM ومحاسبة FXGuard وBizSwap',
-      supplyDesc: 'VEGA وProsense وLiqui Moly وTeltonika — فاتورة بالدولار من دبي وإسطنبول'
+      productsGo: 'إلى المنتجات',
+      supplyNum: '٠٣',
+      supplyTitle: 'التوريد الصناعي',
+      supplyDesc: 'VEGA وProsense وLiqui Moly وTeltonika — فاتورة بالدولار من دبي وإسطنبول',
+      supplyGo: 'افتح الكتالوج'
     }
   }));
   deepMerge(ar.nav, {
@@ -2628,7 +2660,7 @@
     productPackagingDesc: 'في سجل الشركة فقط',
     productMedical: 'طبي وPPE',
     productMedicalDesc: 'في سجل الشركة فقط',
-    productShop: 'متجر بالدرهم',
+    productShop: 'متجر بالدرهم — بلا أصناف',
     productShopDesc: 'القائمة فارغة حالياً',
     customWebApp: 'ويب وتطبيق مخصص',
     fastDesc: 'إنجليزي من ٩٩ دولاراً · الفارسية لغة ثانية',
@@ -3125,6 +3157,10 @@
     optAutoMoto: 'عتاد الدراجات',
     motoInquiry: 'استعلام عتاد الدراجة — {product}\n\nالمقاس:\nالطول والوزن:\nالكمية:\n',
     optConsult: 'استشارة أعمال',
+    optFxguard: 'FXGuard — الصندوق من ٤٩ دولاراً',
+    optAccounting: 'FXGuard Accounting — قائمة انتظار',
+    optBizswap: 'BizSwap',
+    optOstrich: 'جلد النعام',
     optOther: 'أخرى'
   });
   if (ar.geo) {

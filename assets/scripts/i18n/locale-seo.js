@@ -82,9 +82,9 @@
         seoKeywords: 'خرید Prosense ایران, دتکتور گاز, PQ Serisi, SafeVader, PPS+, بیزدوار'
       },
       liquiMoly: {
-        seoTitle: 'خرید Liqui Moly | روغن موتور و افزودنی خودرو | بیزدوار',
-        seoDescription: 'بیزدوار گروپ تامین‌کننده محصولات اصل Liqui Moly: روغن موتور، Octane Plus، افزودنی دیزل، ضدیخ و مراقبت خودرو. قیمت دلاری شفاف و مشاوره فارسی.',
-        seoKeywords: 'Liqui Moly, Octane Plus, Top Tec, Molygen, روغن موتور, افزودنی بنزین, بیزدوار'
+        seoTitle: 'خرید روغن موتور Liqui Moly | Octane Plus و Top Tec | بیزدوار',
+        seoDescription: 'کاتالوگ اصل Liqui Moly: روغن موتور Top Tec و Molygen، افزودنی بنزین Octane Plus، افزودنی دیزل، ضدیخ، روغن ترمز و مراقبت خودرو. قیمت دلاری، پیش‌فاکتور و مشاوره فارسی.',
+        seoKeywords: 'خرید Liqui Moly, روغن موتور Liqui Moly, Octane Plus, Top Tec 5W30, Molygen, افزودنی بنزین, افزودنی دیزل, ضدیخ, روغن ترمز, بیزدوار'
       },
       autoMoto: {
         seoTitle: 'اتوموتو | فروشگاه موتورسیکلت و فروشگاه ترمز | بیزدوار',
@@ -339,9 +339,9 @@
         seoKeywords: 'Prosense satın al, gaz dedektörü, PQ Serisi, SafeVader, PPS+, Bizdavar'
       },
       liquiMoly: {
-        seoTitle: 'Liqui Moly tedariki | Motor yağı ve katkı ürünleri | Bizdavar',
-        seoDescription: 'Bizdavar Group orijinal Liqui Moly tedarik eder: motor yağı, Octane Plus, dizel katkı, antifriz ve oto bakım. Şeffaf dolar fiyat ve Farsça danışmanlık.',
-        seoKeywords: 'Liqui Moly, Octane Plus, motor yağı, Bizdavar'
+        seoTitle: 'Liqui Moly motor yağı | Octane Plus ve Top Tec | Bizdavar',
+        seoDescription: 'Orijinal Liqui Moly kataloğu: Top Tec ve Molygen motor yağları, Octane Plus, dizel katkı, antifriz, fren hidroliği ve oto bakım. USD fiyat, proforma ve Türkçe danışmanlık.',
+        seoKeywords: 'Liqui Moly motor yağı, Octane Plus, Top Tec 5W-30, Molygen, benzin katkısı, dizel katkısı, antifriz, fren hidroliği, Bizdavar'
       },
       autoMoto: {
         seoTitle: 'Auto-Moto | motosiklet ekipmanı ve fren parçaları | Bizdavar',
@@ -609,7 +609,7 @@
       },
       about: {
         seoTitle: 'About Bizdavar | Digital services & industrial supply since 2013',
-        seoDescription: 'Bizdavar Group since 2013 — web design, digital marketing, FXGuard products, and VEGA, Prosense & Liqui Moly supply across 11 countries. Offices in worldwide.',
+        seoDescription: 'Bizdavar Group since 2013 — web design, digital marketing, FXGuard products, and VEGA, Prosense & Liqui Moly supply across 11 countries. Offices worldwide.',
         seoKeywords: 'about Bizdavar, digital agency Bizdavar, industrial supply'
       },
       services: {
@@ -678,9 +678,9 @@
         seoKeywords: 'buy Prosense, gas detector, PQ Series, SafeVader, PPS+, Bizdavar'
       },
       liquiMoly: {
-        seoTitle: 'Liqui Moly supply | Motor oil & fuel additives | Bizdavar',
-        seoDescription: 'Bizdavar Group supplies genuine Liqui Moly: engine oil, Octane Plus, diesel additives, antifreeze and car care. Transparent USD pricing and multilingual consulting.',
-        seoKeywords: 'Liqui Moly, Octane Plus, engine oil, Bizdavar'
+        seoTitle: 'Buy Liqui Moly oil | Octane Plus & Top Tec | Bizdavar',
+        seoDescription: 'Genuine Liqui Moly catalog: Top Tec and Molygen engine oils, Octane Plus, diesel additives, antifreeze, brake fluid and car care. USD prices, proforma and multilingual quotes.',
+        seoKeywords: 'buy Liqui Moly, Liqui Moly engine oil, Octane Plus, Top Tec 5W-30, Molygen, petrol additive, diesel additive, antifreeze, brake fluid, Bizdavar'
       },
       autoMoto: {
         seoTitle: 'Auto-Moto | motorcycle gear and brake parts | Bizdavar',
@@ -854,7 +854,7 @@
       },
       articleVegaSupplyIran: {
         seoTitle: 'VEGA sensor supply for Iran projects | Bizdavar',
-        seoDescription: 'Original VEGA sensors for Iran projects — Persian consulting, transparent proforma and international logistics. Offices in worldwide.',
+        seoDescription: 'Original VEGA sensors for Iran projects — Persian consulting, transparent proforma and international logistics. Offices worldwide.',
         seoKeywords: 'buy VEGA Iran, VEGA supply, VEGAPULS, Bizdavar'
       },
       articleMultilingualWeb: {
