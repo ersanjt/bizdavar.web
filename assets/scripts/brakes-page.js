@@ -4,6 +4,7 @@
  */
 (function () {
   const WA = 'https://wa.me/989305880135';
+  const MAIL = 'info@bizdavar.com';
   const PAGE_SIZE = 12;
 
   const COPY = {
@@ -19,7 +20,7 @@
       brandFind: 'جستجوی برند',
       modelFind: 'جستجوی مدل',
       products: 'قطعه',
-      empty: 'برای این انتخاب، قطعه‌ای با قیمت ثبت‌شده پیدا نشد. کد قطعه را جستجو کنید یا در واتساپ بفرستید.',
+      empty: 'برای این انتخاب قطعه‌ای پیدا نشد. کد قطعه را جستجو کنید، یا در واتساپ و ایمیل بفرستید.',
       askPrice: 'استعلام قیمت',
       in: 'موجود',
       out: 'ناموجود — استعلام',
@@ -38,8 +39,22 @@
       sort: 'مرتب‌سازی: موجودها اول',
       results: 'نتیجه جستجو',
       desk: 'لنت و دیسک ترمز',
-      assureTitle: 'ضمانت تامین فروشگاه ترمز',
-      assure: 'دیسک و لنت با کد سازنده. روی کارت قیمت منتشرشده نیست و استعلام می‌شود. موجودی نهایی قبل از ارسال تأیید می‌شود.'
+      heroTitle: 'خرید لنت و دیسک ترمز',
+      heroLead: 'برند و مدل خودرو را انتخاب کنید. قیمت روی سایت نیست؛ اول در واتساپ استعلام کنید، بعد پیش‌فاکتور می‌آید.',
+      listTitle: 'فهرست قطعات ترمز',
+      trustAria: 'راه‌های استعلام',
+      trustWa: 'استعلام در واتساپ',
+      trustWaNum: '۰۹۳۰۵۸۸۰۱۳۵',
+      trustMail: 'ارسال ایمیل',
+      trust1: 'قطعه نو با کد سازنده',
+      trust2: 'پیش‌فاکتور قبل از پرداخت',
+      trust3: 'موجودی قبل از ارسال چک می‌شود',
+      waHello: 'سلام، برای این قطعه ترمز استعلام قیمت می‌خواهم.',
+      mailSubject: 'استعلام قطعه ترمز — بیزدوار',
+      mailBody: 'سلام، مشخصات خودرو و کد قطعه:',
+      mail: 'ایمیل',
+      assureTitle: 'خرید با استعلام، نه با قیمت حدسی',
+      assure: 'دیسک و لنت با کد سازنده عرضه می‌شود. قیمت روی کارت نیست. واتساپ ۰۹۳۰۵۸۸۰۱۳۵ اولویت است و ایمیل info@bizdavar.com هم باز است. موجودی قبل از ارسال دوباره چک می‌شود.'
     },
     tr: {
       search: 'Marka, model, OEM veya parça kodu ara',
@@ -53,7 +68,7 @@
       brandFind: 'Marka ara',
       modelFind: 'Model ara',
       products: 'ürün',
-      empty: 'Bu seçim için fiyatlı parça yok. Kodu arayın veya WhatsApp’tan yazın.',
+      empty: 'Bu seçim için parça yok. Kodu arayın veya WhatsApp ve e-posta ile yazın.',
       askPrice: 'Fiyat sorun',
       in: 'Stokta',
       out: 'Stokta yok — teklif',
@@ -72,8 +87,22 @@
       sort: 'Sırala: stoktakiler',
       results: 'Arama sonucu',
       desk: 'Fren balatası ve diski',
-      assureTitle: 'Fren tedarik güvencesi',
-      assure: 'Disk ve balata üretici koduyla. Kartta yayımlanmış fiyat yok, teklif istenir. Stok sevkiyattan önce doğrulanır.'
+      heroTitle: 'Fren balatası ve diski',
+      heroLead: 'Araç markasını ve modelini seçin. Fiyat sitede yok; önce WhatsApp, sonra proforma.',
+      listTitle: 'Fren parçaları',
+      trustAria: 'Teklif kanalları',
+      trustWa: 'WhatsApp teklif',
+      trustWaNum: '+98 930 588 0135',
+      trustMail: 'E-posta gönder',
+      trust1: 'Üretici kodlu yeni parça',
+      trust2: 'Ödemeden önce proforma',
+      trust3: 'Stok sevkiyattan önce doğrulanır',
+      waHello: 'Merhaba, bu fren parçası için fiyat istiyorum.',
+      mailSubject: 'Fren parçası teklifi — Bizdavar',
+      mailBody: 'Merhaba, araç ve parça kodu:',
+      mail: 'E-posta',
+      assureTitle: 'Teklifli tedarik',
+      assure: 'Disk ve balata üretici koduyla. Kartta fiyat yok. Önce WhatsApp +98 930 588 0135, e-posta info@bizdavar.com de açık. Stok sevkiyattan önce doğrulanır.'
     },
     en: {
       search: 'Search brand, model, OEM or part code',
@@ -87,7 +116,7 @@
       brandFind: 'Find a brand',
       modelFind: 'Find a model',
       products: 'parts',
-      empty: 'No priced part for this filter. Search a code or ask on WhatsApp.',
+      empty: 'No part for this filter. Search a code, or ask on WhatsApp or email.',
       askPrice: 'Ask for price',
       in: 'In stock',
       out: 'Out of stock — ask',
@@ -106,8 +135,22 @@
       sort: 'Sort: in stock first',
       results: 'Search results',
       desk: 'Brake pads and discs',
-      assureTitle: 'Brake shop supply guarantee',
-      assure: 'Discs and pads with the maker code. The card has no published price; ask for a quote. Stock is confirmed before dispatch.'
+      heroTitle: 'Brake pads and discs',
+      heroLead: 'Choose the vehicle brand and model. Prices are not listed; ask on WhatsApp first, then you get a proforma.',
+      listTitle: 'Brake parts',
+      trustAria: 'How to request a quote',
+      trustWa: 'WhatsApp quote',
+      trustWaNum: '+98 930 588 0135',
+      trustMail: 'Send email',
+      trust1: 'New part with maker code',
+      trust2: 'Proforma before payment',
+      trust3: 'Stock checked before dispatch',
+      waHello: 'Hello, I want a quote for this brake part.',
+      mailSubject: 'Brake part quote — Bizdavar',
+      mailBody: 'Hello, vehicle and part code:',
+      mail: 'Email',
+      assureTitle: 'Quote first, then supply',
+      assure: 'Discs and pads with the maker code. No price on the card. WhatsApp +98 930 588 0135 comes first; email info@bizdavar.com is open too. Stock is confirmed before dispatch.'
     },
     ru: {
       search: 'Марка, модель, OEM или код детали',
@@ -121,7 +164,7 @@
       brandFind: 'Найти марку',
       modelFind: 'Найти модель',
       products: 'деталей',
-      empty: 'Для этого фильтра нет детали с ценой. Напишите код в WhatsApp.',
+      empty: 'Для этого фильтра детали нет. Ищите код или напишите в WhatsApp и на почту.',
       askPrice: 'Цена по запросу',
       in: 'В наличии',
       out: 'Нет в наличии',
@@ -140,8 +183,22 @@
       sort: 'Сначала в наличии',
       results: 'Результаты',
       desk: 'Колодки и диски',
-      assureTitle: 'Гарантия поставки тормозов',
-      assure: 'Диски и колодки с кодом производителя. На карточке нет опубликованной цены, запрос отдельный. Наличие уточняется до отправки.'
+      heroTitle: 'Тормозные колодки и диски',
+      heroLead: 'Выберите марку и модель. Цены на сайте нет: сначала WhatsApp, затем проформа.',
+      listTitle: 'Список тормозных деталей',
+      trustAria: 'Как запросить цену',
+      trustWa: 'Запрос в WhatsApp',
+      trustWaNum: '+98 930 588 0135',
+      trustMail: 'Написать на почту',
+      trust1: 'Новая деталь с кодом производителя',
+      trust2: 'Проформа до оплаты',
+      trust3: 'Наличие проверяется до отправки',
+      waHello: 'Здравствуйте, нужна цена на эту тормозную деталь.',
+      mailSubject: 'Запрос тормозной детали — Bizdavar',
+      mailBody: 'Здравствуйте, автомобиль и код детали:',
+      mail: 'Почта',
+      assureTitle: 'Сначала запрос, потом поставка',
+      assure: 'Диски и колодки с кодом производителя. Цены на карточке нет. Сначала WhatsApp +98 930 588 0135, почта info@bizdavar.com тоже открыта. Наличие проверяется до отправки.'
     },
     ar: {
       search: 'ابحث بالماركة أو الموديل أو رمز القطعة',
@@ -155,7 +212,7 @@
       brandFind: 'ابحث عن الماركة',
       modelFind: 'ابحث عن الموديل',
       products: 'قطعة',
-      empty: 'لا توجد قطعة مسعّرة لهذا الاختيار. أرسل الرمز على واتساب.',
+      empty: 'لا توجد قطعة لهذا الاختيار. ابحث بالرمز أو أرسل واتساب أو بريداً.',
       askPrice: 'السعر عند الطلب',
       in: 'متوفر',
       out: 'غير متوفر — استعلام',
@@ -174,8 +231,22 @@
       sort: 'المتوفر أولاً',
       results: 'نتائج البحث',
       desk: 'فحمات وأقراص الفرامل',
-      assureTitle: 'ضمان توريد متجر الفرامل',
-      assure: 'أقراص وفحمات برمز المصنع. لا سعر منشوراً على البطاقة ويُطلب عرض. التوفر يُؤكد قبل الإرسال.'
+      heroTitle: 'شراء فحمات وأقراص الفرامل',
+      heroLead: 'اختر ماركة السيارة وموديلها. السعر غير منشور؛ الاستعلام أولاً عبر واتساب ثم فاتورة مبدئية.',
+      listTitle: 'قائمة قطع الفرامل',
+      trustAria: 'طرق الاستعلام',
+      trustWa: 'استعلام واتساب',
+      trustWaNum: '+98 930 588 0135',
+      trustMail: 'إرسال بريد',
+      trust1: 'قطعة جديدة برمز المصنع',
+      trust2: 'فاتورة مبدئية قبل الدفع',
+      trust3: 'التوفر يُراجع قبل الإرسال',
+      waHello: 'السلام عليكم، أريد سعر قطعة الفرامل هذه.',
+      mailSubject: 'استعلام قطعة فرامل — Bizdavar',
+      mailBody: 'السلام عليكم، مواصفات السيارة ورمز القطعة:',
+      mail: 'بريد',
+      assureTitle: 'استعلام ثم توريد',
+      assure: 'أقراص وفحمات برمز المصنع. لا سعر على البطاقة. واتساب +98 930 588 0135 هو الأول، والبريد info@bizdavar.com مفتوح أيضاً. التوفر يُؤكد قبل الإرسال.'
     }
   };
 
@@ -371,10 +442,40 @@
     return out.replace(/[ \t]+/g, ' ').replace(/\s+([.,])/g, '$1').trim();
   }
 
-  function itemTitle(item) {
+  function cleanRawTitle(text) {
+    return String(text || '')
+      .replace(/\(\s*\)/g, ' ')
+      .replace(/^\s*\.+\s*/g, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  function presentTitle(item) {
     const lang = loc();
-    const raw = (lang === 'fa' && item && item.titleFa) ? item.titleFa : ((item && item.title) || '');
-    return translateBrakeText(raw, lang);
+    const raw = cleanRawTitle((lang === 'fa' && item && item.titleFa) ? item.titleFa : ((item && item.title) || ''));
+    const translated = translateBrakeText(raw, lang);
+    if (lang !== 'fa' && lang !== 'ar' && lang !== 'ru') return { kind: '', spec: translated };
+    const phrases = BRAKE_PHRASES
+      .filter((row) => !row.word && row[lang] && row[lang].length >= 6)
+      .map((row) => row[lang])
+      .sort((a, b) => b.length - a.length);
+    for (let i = 0; i < phrases.length; i++) {
+      const phrase = phrases[i];
+      const idx = translated.lastIndexOf(phrase);
+      if (idx < 0) continue;
+      if (idx !== 0 && idx < Math.floor(translated.length * 0.35)) continue;
+      let spec = (translated.slice(0, idx) + ' ' + translated.slice(idx + phrase.length)).replace(/\s+/g, ' ').trim();
+      spec = spec.replace(/^[\s.>‹›←→\-–]+|[\s.>‹›←→\-–]+$/g, '').replace(/\s*>\s*/g, ' · ');
+      spec = spec.replace(/^\(([^)]+)\)\s*/, '$1 · ').replace(/\s+·\s+·\s+/g, ' · ').trim();
+      return { kind: phrase, spec: spec };
+    }
+    return { kind: '', spec: translated.replace(/^[\s.>]+/, '') };
+  }
+
+  function itemTitle(item) {
+    const view = presentTitle(item);
+    if (!view.kind) return view.spec;
+    return view.spec ? (view.kind + ' — ' + view.spec) : view.kind;
   }
 
   function modelName(model) {
@@ -606,8 +707,15 @@
   }
 
   function waLink(item) {
-    const text = t().wa + '\n' + itemTitle(item) + '\n' + (item.mpn || item.sku || '') + '\n' + priceText(item);
-    return WA + '?text=' + encodeURIComponent(text);
+    const lines = [t().waHello];
+    if (item) lines.push(itemTitle(item), item.mpn || item.sku || '');
+    return WA + '?text=' + encodeURIComponent(lines.filter(Boolean).join('\n'));
+  }
+
+  function mailLink(item) {
+    const lines = [t().mailBody];
+    if (item) lines.push(itemTitle(item), item.mpn || item.sku || '');
+    return 'mailto:' + MAIL + '?subject=' + encodeURIComponent(t().mailSubject) + '&body=' + encodeURIComponent(lines.filter(Boolean).join('\n'));
   }
 
   function mediaHtml(item, alt, eager) {
@@ -671,7 +779,8 @@
     const slice = items.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
     const open = (catalog.products || []).find((item) => item.id === state.product) || null;
     const parts = PARTS[loc()];
-    const heading = open ? itemTitle(open) : (state.q ? c.results : (brand ? brand.name + ' — ' + (PART_NAME[loc()][state.part] || c.desk) : c.desk));
+    const partLabel = (PART_NAME[loc()] && state.part && state.part !== 'all') ? PART_NAME[loc()][state.part] : '';
+    const heading = open ? itemTitle(open) : (state.q ? c.results : (brand ? brand.name + (partLabel ? ' — ' + partLabel : '') : (partLabel || c.listTitle)));
 
     const pills = (catalog.brands || []).map((b) =>
       '<button type="button" class="brake-pill' + (state.brand === b.id ? ' is-on' : '') + '" data-brand="' + esc(b.id) + '">' + (brandLogo(b.id) || '<span class="brake-pill__mark" aria-hidden="true">' + esc(b.name.slice(0, 1)) + '</span>') + '<span>' + esc(b.name) + '</span></button>'
@@ -735,13 +844,16 @@
         '<section class="brake-hero">' +
           '<video autoplay muted loop playsinline preload="metadata"><source src="' + esc(catalog.video || '/assets/video/porsche-997-gt3rs.mp4') + '" type="video/mp4"></video>' +
           '<div class="brake-hero__shade"></div>' +
+          '<div class="brake-hero__copy">' +
+            '<h1>' + esc(c.heroTitle) + '</h1>' +
+            '<p>' + esc(c.heroLead) + '</p>' +
+          '</div>' +
           '<form class="brake-search" role="search">' +
             icon('search', 18) +
             '<label class="visually-hidden" for="brakeQ">' + esc(c.search) + '</label>' +
             '<input id="brakeQ" name="q" type="search" autocomplete="off" placeholder="' + esc(c.search) + '" value="' + esc(state.q) + '">' +
             '<button type="submit" aria-label="' + esc(c.search) + '">' + icon('search', 18) + '</button>' +
           '</form>' +
-          '<div class="brake-dots" aria-hidden="true"><span></span><span></span><span></span></div>' +
         '</section>' +
         '<nav class="brake-brands" aria-label="' + esc(c.vehicleBrand) + '">' +
           '<button type="button" class="brake-pill brake-pill--menu' + (menuOpen ? ' is-on' : '') + '" data-mega-toggle="1">' + esc(menu.open) + '</button>' +
@@ -750,8 +862,25 @@
         finder +
       '</div>';
 
+    const hiddenTitle = document.querySelector('main > h1.visually-hidden');
+    if (hiddenTitle) hiddenTitle.remove();
+
+    const trust = open ? '' :
+      '<section class="brake-trust" aria-label="' + esc(c.trustAria) + '">' +
+        '<a class="brake-trust__wa" href="' + waLink(null) + '" target="_blank" rel="noopener noreferrer">' +
+          '<strong>' + esc(c.trustWa) + '</strong><span dir="ltr">' + esc(c.trustWaNum) + '</span></a>' +
+        '<a class="brake-trust__mail" href="' + mailLink(null) + '">' +
+          '<strong>' + esc(c.trustMail) + '</strong><span dir="ltr">' + MAIL + '</span></a>' +
+        '<ul>' +
+          '<li>' + esc(c.trust1) + '</li>' +
+          '<li>' + esc(c.trust2) + '</li>' +
+          '<li>' + esc(c.trust3) + '</li>' +
+        '</ul>' +
+      '</section>';
+
     root.innerHTML =
       stage +
+      trust +
       '<section class="brake-desk' + (open ? ' brake-desk--pdp' : '') + '" id="brakeDesk">' +
         (open ? detailHtml(open, related, c) :
           '<div class="brake-desk__bar"><div><h2 dir="auto">' + esc(heading) + '</h2><p>' + items.length + ' ' + esc(c.products) + '</p></div><span class="brake-sort">' + esc(c.sort) + '</span></div>' +
@@ -778,27 +907,42 @@
     }
   }
 
+  function titleHtml(item) {
+    const view = presentTitle(item);
+    if (!view.kind) return '<h3 dir="ltr">' + esc(view.spec) + '</h3>';
+    return '<h3><span class="brake-card__kind">' + esc(view.kind) + '</span>' +
+      (view.spec ? '<span class="brake-card__spec" dir="ltr">' + esc(view.spec) + '</span>' : '') +
+      '</h3>';
+  }
+
   function cardHtml(item) {
     const c = t();
     const brand = brandById(item.brand);
     const logo = brand ? brandLogo(item.brand) : '';
-    return '<button type="button" class="brake-card" data-product="' + esc(item.id) + '">' +
-      '<div class="brake-card__art">' + mediaHtml(item, itemTitle(item), false) + '</div>' +
-      '<div class="brake-card__body">' +
-        '<div class="brake-card__brand">' +
-          '<span class="brake-card__mark" aria-hidden="true">' + esc(makerMark(item.maker || (brand && brand.name))) + '</span>' +
-          '<strong>' + esc(item.maker || (brand ? brand.name : '')) + '</strong>' +
-          logo +
+    const title = itemTitle(item);
+    return '<article class="brake-card">' +
+      '<button type="button" class="brake-card__open" data-product="' + esc(item.id) + '">' +
+        '<div class="brake-card__art">' + mediaHtml(item, title, false) + '</div>' +
+        '<div class="brake-card__body">' +
+          '<div class="brake-card__brand">' +
+            '<span class="brake-card__mark" aria-hidden="true">' + esc(makerMark(item.maker || (brand && brand.name))) + '</span>' +
+            '<strong>' + esc(item.maker || (brand ? brand.name : '')) + '</strong>' +
+            logo +
+          '</div>' +
+          titleHtml(item) +
+          '<p class="brake-card__fit">' + esc(c.fit) + '</p>' +
+          '<div class="brake-card__meta">' +
+            '<p class="brake-card__stock' + (item.stock ? ' is-in' : '') + '">' + esc(item.stock ? c.in : c.out) + '</p>' +
+            '<p class="brake-card__price" dir="ltr">' + esc(priceText(item)) + '</p>' +
+          '</div>' +
+          '<span class="brake-card__go">' + esc(c.view) + '</span>' +
         '</div>' +
-        '<h3 dir="auto">' + esc(itemTitle(item)) + '</h3>' +
-        '<p class="brake-card__fit">' + esc(c.fit) + '</p>' +
-        '<div class="brake-card__meta">' +
-          '<p class="brake-card__stock' + (item.stock ? ' is-in' : '') + '">' + esc(item.stock ? c.in : c.out) + '</p>' +
-          '<p class="brake-card__price" dir="ltr">' + esc(priceText(item)) + '</p>' +
-        '</div>' +
-        '<span class="brake-card__go">' + esc(c.view) + '</span>' +
+      '</button>' +
+      '<div class="brake-card__actions">' +
+        '<a class="brake-card__wa" href="' + waLink(item) + '" target="_blank" rel="noopener noreferrer">' + esc(c.trustWa) + '</a>' +
+        '<a class="brake-card__mail" href="' + mailLink(item) + '">' + esc(c.mail) + '</a>' +
       '</div>' +
-    '</button>';
+    '</article>';
   }
 
   function detailHtml(item, related, c) {
@@ -807,19 +951,24 @@
     const cards = related.map((row) => cardHtml(row)).join('');
     const stock = item.stock ? c.in : c.out;
     const title = itemTitle(item);
+    const view = presentTitle(item);
     const figure = shotsOf(item).length ? mediaHtml(item, title, true) : art(item.part);
     return '<article class="shop-pdp brake-pdp">' +
       '<nav class="shop-pdp__crumb">' +
         '<button type="button" class="brake-back" data-close-product="1">' + esc(c.back) + '</button>' +
         (brand ? '<span>' + esc(brand.name) + '</span>' : '') +
         '<span>' + esc(part) + '</span>' +
-        '<span dir="auto">' + esc(title) + '</span>' +
+        '<span>' + esc(view.kind || title) + '</span>' +
+        (view.kind && view.spec ? '<span dir="ltr">' + esc(view.spec) + '</span>' : '') +
       '</nav>' +
       '<div class="shop-pdp__gallery">' + galleryHtml(item) + '</div>' +
       '<div class="shop-pdp__buy">' +
-        '<h1 dir="auto">' + esc(title) + '</h1>' +
+        '<h1><span class="brake-card__kind">' + esc(view.kind || title) + '</span>' +
+          (view.kind && view.spec ? '<span class="brake-card__spec" dir="ltr">' + esc(view.spec) + '</span>' : '') +
+        '</h1>' +
         '<p class="shop-pdp__price" dir="ltr">' + esc(priceText(item)) + '</p>' +
-        '<a class="shop-pdp__wa" href="' + waLink(item) + '" target="_blank" rel="noopener noreferrer">' + esc(c.wa) + '</a>' +
+        '<a class="shop-pdp__wa" href="' + waLink(item) + '" target="_blank" rel="noopener noreferrer">' + esc(c.trustWa) + ' · ' + esc(c.trustWaNum) + '</a>' +
+        '<a class="shop-pdp__mail" href="' + mailLink(item) + '">' + esc(c.trustMail) + '</a>' +
         '<div class="shop-pdp__badge">' + esc(c.original) + '</div>' +
         '<ul class="brake-specs">' +
           '<li>SKU: ' + esc(item.sku || '—') + '</li>' +
@@ -833,7 +982,7 @@
       '</div>' +
       '<div class="shop-pdp__dock">' +
         '<div class="shop-pdp__dock-art">' + figure + '</div>' +
-        '<div><strong dir="auto">' + esc(title) + '</strong><small>' + esc(part) + '</small></div>' +
+        '<div><strong>' + esc(view.kind || title) + '</strong><small' + (view.kind ? ' dir="ltr"' : '') + '>' + esc((view.kind && view.spec) ? view.spec : part) + '</small></div>' +
         '<p class="shop-pdp__dock-price" dir="ltr">' + esc(priceText(item)) + '</p>' +
         '<span class="shop-pdp__stock' + (item.stock ? ' is-in' : ' is-out') + '">' + esc(stock) + '</span>' +
       '</div>' +
