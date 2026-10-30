@@ -518,14 +518,14 @@
     {
       id: 'accessories',
       family: 'moto',
-      title: 'اکسسوری موتور',
+      title: 'لوازم جانبی موتور',
       titleEn: 'Rider accessories',
       titleTr: 'Sürücü aksesuarı',
       titleRu: 'Аксессуары райдера',
       titleAr: 'إكسسوارات الراكب',
       icon: 'bag',
       image: CAT + 'motorcycle-accessory.svg',
-      imageAlt: 'کوله، گردن‌پوش، بارانی و اکسسوری موتورسوار',
+      imageAlt: 'کوله، گردن‌پوش، بارانی و لوازم موتورسوار',
       desc: 'کوله، گردن‌پوش، بالاکلاوا، کاور باران و کیف باک.',
       descTr: 'Yelek, yağmurluk, boyunluk, balaklava, hediyelik ve sürücü çantası.',
       descEn: 'Vests, rainwear, neck tubes, balaclava, gifts and rider bags.',
@@ -841,6 +841,7 @@
       leafFa: item.leafFa || item.leaf || '',
       image: item.image,
       imageAlt: name,
+      gallery: Array.isArray(item.gallery) ? item.gallery.slice(0, 6) : undefined,
       quoteOnly: !hasUsd,
       priceUsd: hasUsd ? usdPrice : undefined,
       currency: hasUsd ? 'USD' : undefined,
@@ -915,7 +916,7 @@
     window.AUTO_MOTO_CATALOG._rev = (window.AUTO_MOTO_CATALOG._rev || 0) + 1;
   }
 
-  window.AUTO_MOTO_CATALOG_READY = fetch('/assets/data/auto-moto/catalog.json?v=20261028k')
+  window.AUTO_MOTO_CATALOG_READY = fetch('/assets/data/auto-moto/catalog.json?v=20261030b')
     .then(function (res) {
       if (!res.ok) throw new Error('catalog ' + res.status);
       return res.json();

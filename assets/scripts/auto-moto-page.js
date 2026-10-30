@@ -3,7 +3,7 @@ createSupplyBrandPage({
   catalogKey: 'AUTO_MOTO_CATALOG',
   brandName: 'Bizdavar Auto-Moto',
   schemaId: 'jsonld-auto-moto',
-  schemaListName: 'تامین لوازم خودرو خارجی و موتورسیکلت — بیزدوار گروپ',
+  schemaListName: 'خرید تجهیزات موتورسیکلت — کلاه ایمنی، کاپشن، بوت و لوازم | بیزدوار',
   initFn: 'initAutoMotoPage',
   schemaFn: 'injectAutoMotoSchema'
 });
@@ -15,7 +15,7 @@ createSupplyBrandPage({
   const ORDER = ['intercom', 'helmets', 'jackets', 'gloves', 'boots', 'pants', 'protection', 'offroad', 'casual', 'moto-parts', 'accessories'];
 
   const SHORT = {
-    fa: { intercom: 'اینترکام', helmets: 'کلاه', jackets: 'کاپشن', gloves: 'دستکش', boots: 'بوت', pants: 'شلوار', protection: 'محافظ', offroad: 'آفرود', casual: 'روزمره', 'moto-parts': 'قطعات', accessories: 'اکسسوری' },
+    fa: { intercom: 'اینترکام', helmets: 'کلاه ایمنی', jackets: 'کاپشن', gloves: 'دستکش', boots: 'بوت', pants: 'شلوار', protection: 'محافظ بدن', offroad: 'آفرود', casual: 'لباس روزمره', 'moto-parts': 'قطعات موتور', accessories: 'لوازم جانبی' },
     tr: { intercom: 'Interkom', helmets: 'Kask', jackets: 'Mont', gloves: 'Eldiven', boots: 'Bot', pants: 'Pantolon', protection: 'Koruma', offroad: 'MX / off-road', casual: 'Günlük', 'moto-parts': 'Motor üzeri', accessories: 'Aksesuar' },
     en: { intercom: 'Intercom', helmets: 'Helmets', jackets: 'Jackets', gloves: 'Gloves', boots: 'Boots', pants: 'Pants', protection: 'Protection', offroad: 'MX / off-road', casual: 'Casual', 'moto-parts': 'On the bike', accessories: 'Accessories' },
     ru: { intercom: 'Интерком', helmets: 'Шлемы', jackets: 'Куртки', gloves: 'Перчатки', boots: 'Мотоботы', pants: 'Брюки', protection: 'Защита', offroad: 'MX', casual: 'Повседневное', 'moto-parts': 'На мото', accessories: 'Аксессуары' },

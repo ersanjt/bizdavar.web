@@ -9,13 +9,60 @@ const { bootTag } = require('./lib/page-boot-tag');
 
 const GALLERY_TAG = bootTag(`document.querySelectorAll('[data-am-gallery]').forEach(function (root) {
       var main = root.querySelector('.am-pdp__main');
+      var buttons = Array.prototype.slice.call(root.querySelectorAll('button[data-src]'));
+      function show(index) {
+        if (!buttons.length || !main) return 0;
+        var i = (index + buttons.length) % buttons.length;
+        var btn = buttons[i];
+        main.src = btn.getAttribute('data-src');
+        var alt = btn.getAttribute('data-alt');
+        if (alt) main.alt = alt;
+        buttons.forEach(function (node, n) { node.classList.toggle('is-active', n === i); });
+        var box = document.getElementById('amGalleryLight');
+        if (box && box.open) {
+          var shot = box.querySelector('img');
+          shot.src = main.src;
+          shot.alt = main.alt;
+        }
+        return i;
+      }
       root.addEventListener('click', function (event) {
         var btn = event.target.closest('button[data-src]');
-        if (!btn || !main) return;
-        main.src = btn.getAttribute('data-src');
-        root.querySelectorAll('button[data-src]').forEach(function (node) {
-          node.classList.toggle('is-active', node === btn);
-        });
+        if (!btn) return;
+        show(buttons.indexOf(btn));
+      });
+      if (!main) return;
+      main.addEventListener('click', function () {
+        var box = document.getElementById('amGalleryLight');
+        if (!box) {
+          box = document.createElement('dialog');
+          box.id = 'amGalleryLight';
+          box.className = 'am-gallery-light';
+          var lang = (document.documentElement.lang || 'fa').slice(0, 2);
+          var labels = {
+            fa: ['بستن گالری', 'تصویر قبلی', 'تصویر بعدی'],
+            tr: ['Kapat', 'Önceki', 'Sonraki'],
+            en: ['Close gallery', 'Previous image', 'Next image'],
+            ru: ['Закрыть', 'Назад', 'Дальше'],
+            ar: ['إغلاق', 'السابق', 'التالي']
+          }[lang] || ['Close', 'Previous', 'Next'];
+          box.innerHTML = '<button type="button" class="am-gallery-light__close" data-close aria-label="' + labels[0] + '">×</button><button type="button" class="am-gallery-light__nav am-gallery-light__nav--prev" data-prev aria-label="' + labels[1] + '">‹</button><img alt=""><button type="button" class="am-gallery-light__nav am-gallery-light__nav--next" data-next aria-label="' + labels[2] + '">›</button>';
+          document.body.appendChild(box);
+          box.querySelector('[data-close]').addEventListener('click', function () { box.close(); });
+          box.addEventListener('click', function (event) { if (event.target === box) box.close(); });
+          box.querySelector('[data-prev]').addEventListener('click', function () {
+            var i = buttons.findIndex(function (node) { return node.classList.contains('is-active'); });
+            show(i - 1);
+          });
+          box.querySelector('[data-next]').addEventListener('click', function () {
+            var i = buttons.findIndex(function (node) { return node.classList.contains('is-active'); });
+            show(i + 1);
+          });
+        }
+        var shot = box.querySelector('img');
+        shot.src = main.src;
+        shot.alt = main.alt;
+        if (typeof box.showModal === 'function') box.showModal();
       });
     });`);
 
@@ -128,7 +175,7 @@ const CAR_H1 = {
 };
 
 const COPY = {
-  fa: { shop: 'فروشگاه موتورسیکلت', quote: 'استعلام', price: 'دلار · تحویل بین‌المللی', back: 'بازگشت به فروشگاه', sku: 'کد کالا', cat: 'دسته', brand: 'برند', type: 'نوع', inStock: 'موجود', outStock: 'ناموجود', ask: 'نیاز به استعلام', note: 'سایز، رنگ و مشخصات فنی سازنده در این صفحه ثبت نشده و قبل از سفارش جدا تأیید می‌شود.' },
+  fa: { shop: 'فروشگاه موتورسیکلت', quote: 'استعلام قیمت', price: 'دلار · تحویل بین‌المللی', back: 'بازگشت به فروشگاه موتور', sku: 'کد کالا', cat: 'دسته', brand: 'برند', type: 'نوع کالا', inStock: 'موجود', outStock: 'ناموجود', ask: 'نیاز به استعلام', note: 'سایز، رنگ و موجودی پیش از سفارش تأیید می‌شود.', home: 'خانه', gallery: 'گالری تصاویر', facts: 'مشخصات' },
   tr: { shop: 'Motosiklet mağazası', quote: 'Teklif', price: 'USD · İran teslim', back: 'Mağazaya dön', sku: 'Ürün kodu', cat: 'Kategori', brand: 'Marka', type: 'Tür', inStock: 'Stokta', outStock: 'Stok yok', ask: 'Teklif gerekir', note: 'Beden, renk ve üretici teknik özellikleri bu sayfada yoktur; siparişten önce ayrıca doğrulanır.' },
   en: { shop: 'Motorcycle shop', quote: 'Request a quote', price: 'USD · Iran delivery', back: 'Back to the shop', sku: 'Item code', cat: 'Category', brand: 'Brand', type: 'Type', inStock: 'In stock', outStock: 'Out of stock', ask: 'Quote only', note: 'Size, color and the maker’s technical specifications are not stored on this page and are confirmed before the order.' },
   ru: { shop: 'Мотоэкипировка', quote: 'Запросить цену', price: 'USD · международная доставка', back: 'Назад в магазин', sku: 'Код', cat: 'Категория', brand: 'Бренд', type: 'Тип', inStock: 'В наличии', outStock: 'Нет в наличии', ask: 'Только запрос', note: 'Размер, цвет и технические данные производителя на этой странице не указаны и уточняются до заказа.' },
@@ -141,9 +188,9 @@ const CAT_NAME = {
   pants: { fa: 'شلوار', tr: 'Pantolon', en: 'Pants', ru: 'Штаны', ar: 'بناطيل' },
   gloves: { fa: 'دستکش', tr: 'Eldiven', en: 'Gloves', ru: 'Перчатки', ar: 'قفازات' },
   boots: { fa: 'بوت', tr: 'Bot', en: 'Boots', ru: 'Боты', ar: 'بوت' },
-  protection: { fa: 'محافظ', tr: 'Koruma', en: 'Protection', ru: 'Защита', ar: 'حماية' },
-  offroad: { fa: 'آفرود', tr: 'Off-road', en: 'Off-road', ru: 'Оффроуд', ar: 'أوف رود' },
-  accessories: { fa: 'اکسسوری', tr: 'Aksesuar', en: 'Accessories', ru: 'Аксессуары', ar: 'إكسسوار' },
+  protection: { fa: 'محافظ بدن', tr: 'Koruma', en: 'Protection', ru: 'Защита', ar: 'حماية' },
+  offroad: { fa: 'آفرود', tr: 'Off-road', en: 'Off-road', ru: 'Оفфроуд', ar: 'أوف رود' },
+  accessories: { fa: 'لوازم جانبی', tr: 'Aksesuar', en: 'Accessories', ru: 'Аксессуары', ar: 'إكسسوار' },
   'moto-parts': { fa: 'قطعات موتور', tr: 'Motosiklet parçası', en: 'Motorcycle parts', ru: 'Запчасти', ar: 'قطع الدراجة' },
   intercom: { fa: 'اینترکام', tr: 'Interkom', en: 'Intercom', ru: 'Интерком', ar: 'إنتركم' },
   casual: { fa: 'لباس روزمره', tr: 'Günlük giyim', en: 'Casual wear', ru: 'Повседневное', ar: 'ملابس يومية' }
@@ -427,34 +474,54 @@ function productHtml(loc, item, catId, images) {
     }
   }).replace(/</g, '\\u003c');
   const thumbs = gallery.length > 1
-    ? `<div class="am-pdp__thumbs" role="list">${gallery.map((src, i) => `<button type="button" data-src="${esc(src)}" class="${i === 0 ? 'is-active' : ''}" aria-label="${esc(title)} ${i + 1}"><img src="${esc(src)}" alt="" width="72" height="72" loading="lazy" decoding="async"></button>`).join('')}</div>`
+    ? `<div class="am-pdp__thumbs" role="list">${gallery.map((src, i) => `<button type="button" data-src="${esc(src)}" data-alt="${esc(title)} — ${i + 1}" class="${i === 0 ? 'is-active' : ''}" aria-label="${esc(title)} — ${i + 1}"><img src="${esc(src)}" alt="" width="72" height="72" loading="lazy" decoding="async"></button>`).join('')}</div>`
     : '';
   const specs = specRows(loc, item, cat).map((row) => `<div><dt>${esc(row[0])}</dt><dd>${esc(row[1])}</dd></div>`).join('');
   const facts = loc.code === 'fa' && Array.isArray(item.featuresFa) ? item.featuresFa.filter(Boolean) : [];
   const factHtml = facts.length
-    ? `<h2 class="am-pdp__facts-title">مشخصات</h2><ul class="am-pdp__facts">${facts.map((line) => `<li>${esc(line)}</li>`).join('')}</ul>`
+    ? `<h2 class="am-pdp__facts-title">${esc(copy.facts || 'Specs')}</h2><ul class="am-pdp__facts">${facts.map((line) => `<li>${esc(line)}</li>`).join('')}</ul><p>${esc(desc)}</p>`
     : `<p>${esc(desc)}</p>`;
+  const ogLocale = { fa: 'fa_IR', tr: 'tr_TR', en: 'en_US', ru: 'ru_RU', ar: 'ar_AE' }[loc.code];
+  const keywords = loc.code === 'fa'
+    ? [cat, item.leafFa, item.brand, item.leafFa ? 'خرید ' + item.leafFa : '', 'تجهیزات موتورسیکلت', 'بیزدوار'].filter(Boolean).join('، ')
+    : [cat, item.leafFa, item.brand, title, 'motorcycle', 'Bizdavar'].filter(Boolean).join(', ');
+  const crumbLd = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: { fa: 'خانه', tr: 'Ana sayfa', en: 'Home', ru: 'Главная', ar: 'الرئيسية' }[loc.code], item: `${BASE}${loc.prefix}/` },
+      { '@type': 'ListItem', position: 2, name: copy.shop, item: `${BASE}${loc.prefix}/pages/motorcycle` },
+      { '@type': 'ListItem', position: 3, name: cat, item: `${BASE}${shop}` },
+      { '@type': 'ListItem', position: 4, name: title, item: url }
+    ]
+  }).replace(/</g, '\\u003c');
   return `<!DOCTYPE html>
 <html lang="${loc.lang}" dir="${loc.dir}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${esc(title)} | ${esc(copy.shop)} | Bizdavar</title>
+  <title>${esc(title)} | ${esc(cat)} | Bizdavar</title>
   <meta name="description" content="${esc(desc)}">
+  <meta name="keywords" content="${esc(keywords)}">
+  <meta name="robots" content="index,follow">
   <link rel="canonical" href="${url}">
 ${hreflang(item.id)}
   <meta property="og:type" content="product">
+  <meta property="og:locale" content="${ogLocale}">
+  <meta property="og:site_name" content="Bizdavar Group">
   <meta property="og:title" content="${esc(title)}">
   <meta property="og:description" content="${esc(desc)}">
   <meta property="og:url" content="${url}">
   <meta property="og:image" content="${BASE}${img}">
+  <meta property="og:image:alt" content="${esc(title)}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${esc(title)}">
   <meta name="twitter:description" content="${esc(desc)}">
   <meta name="twitter:image" content="${BASE}${img}">
-  <link rel="stylesheet" href="/assets/styles/site.css?v=20261003a">
-  <link rel="stylesheet" href="/assets/styles/auto-moto.css?v=${VER}">
+  <link rel="stylesheet" href="/assets/styles/site.css?v=20261030a">
+  <link rel="stylesheet" href="/assets/styles/auto-moto.css?v=20261030b">
   <script type="application/ld+json">${ld}</script>
+  <script type="application/ld+json">${crumbLd}</script>
 </head>
 <body data-page="motorcycle" data-depth="2" class="auto-page">
   <script src="/assets/scripts/components/page-shell.js?v=20260910c" defer></script>
@@ -462,6 +529,7 @@ ${hreflang(item.id)}
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
+          <p class="am-pdp__gallery-label">${esc(copy.gallery || 'Gallery')}</p>
           <img class="am-pdp__main" src="${esc(img)}" alt="${esc(title)}" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           ${thumbs}
         </div>
@@ -478,7 +546,7 @@ ${hreflang(item.id)}
     </article>
   </main>
   ${GALLERY_TAG}
-  <script src="/assets/scripts/site-loader.js?v=20261028c"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261030b"></script>
 </body>
 </html>
 `;
@@ -507,7 +575,7 @@ function writeProducts() {
   }
   const sm = fs.createWriteStream(path.join(ROOT, 'sitemap-motorcycle.xml'), { encoding: 'utf8' });
   sm.write('<?xml version="1.0" encoding="UTF-8"?>\n');
-  sm.write('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n');
+  sm.write('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n');
   let n = 0;
   for (const row of items) {
     const id = row.item.id;
@@ -521,7 +589,12 @@ function writeProducts() {
       const hl = { fa: 'fa-IR', tr: 'tr-TR', en: 'en-US', ru: 'ru-RU', ar: 'ar-AE' }[l.code];
       return `    <xhtml:link rel="alternate" hreflang="${hl}" href="${BASE}${l.prefix}/pages/motorcycle/${id}"/>`;
     }).concat(`    <xhtml:link rel="alternate" hreflang="x-default" href="${BASE}/pages/motorcycle/${id}"/>`).join('\n');
-    const blocks = LOCALES.map(l => `  <url>\n    <loc>${BASE}${l.prefix}/pages/motorcycle/${id}</loc>\n    <lastmod>2026-09-18</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.6</priority>\n${links}\n  </url>`).join('\n');
+    const faTitle = String(row.item.titleFa || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const imageXml = images.slice(0, 4).map((src) => `    <image:image><image:loc>${BASE}${src}</image:loc><image:title>${faTitle}</image:title></image:image>`).join('\n');
+    const blocks = LOCALES.map(l => {
+      const pics = l.code === 'fa' && imageXml ? `\n${imageXml}` : '';
+      return `  <url>\n    <loc>${BASE}${l.prefix}/pages/motorcycle/${id}</loc>\n    <lastmod>2026-10-30</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.6</priority>\n${links}${pics}\n  </url>`;
+    }).join('\n');
     sm.write(blocks + '\n');
     n++;
     if (n % 500 === 0) console.log('products', n);
