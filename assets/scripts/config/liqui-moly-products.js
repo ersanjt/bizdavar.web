@@ -110,7 +110,7 @@
             "useCaseFa": "افزودنی سوخت دیزل",
             "badge": "افزودنی",
             "inquiryName": "LIQUI MOLY Pro-Line Dizel Partikül Filtre (DPF) Koruması 1 litre (5123)",
-            "image": "https://www.liquimolyturkey.com/content/images/thumbs/0000486_liqui-moly-pro-line-dizel-partikul-filtre-dpf-korumasi-1-litre-5123_550.jpeg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5123.webp",
             "imageAlt": "LIQUI MOLY Pro-Line Dizel Partikül Filtre (DPF) Koruması 1 litre (5123)",
             "priceUsd": 19.64
       },
@@ -518,7 +518,7 @@
                         "priceUsd": 50.0,
                         "priceTry": 2350.0,
                         "sku": "1688",
-                        "image": "https://www.liquimolyturkey.com/content/images/thumbs/0000586_liqui-moly-10w30-4t-street-motosiklet-motor-yagi-4-litre-1688_550.jpeg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-1688.webp",
                         "featured": true
                   },
                   {
@@ -609,7 +609,7 @@
                         "priceUsd": 10.68,
                         "priceTry": 501.84,
                         "sku": "20826",
-                        "image": "https://www.liquimolyturkey.com/content/images/thumbs/0000885_liqui-moly-10w40-4t-scooter-race-motosiklet-motor-yagi-1-litre-20826_550.jpeg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-20826.webp",
                         "featured": false
                   },
                   {
@@ -895,7 +895,7 @@
                         "priceUsd": 41.99,
                         "priceTry": 1973.45,
                         "sku": "25016",
-                        "image": "https://www.liquimolyturkey.com/content/images/thumbs/0000883_liqui-moly-15w40-4t-marine-motor-yagi-5-litre-25016_550.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-25016.webp",
                         "featured": false
                   },
                   {
@@ -1653,8 +1653,8 @@
                         "featured": true
                   },
                   {
-                        "name": "LIQUI MOLY Lifter- سوپاپ İteceği افزودنی 300 میلی‌لیتر (1009)",
-                        "titleFa": "LIQUI MOLY Lifter- سوپاپ İteceği افزودنی 300 میلی‌لیتر (1009)",
+                        "name": "LIQUI MOLY افزودنی بالابر سوپاپ 300 میلی‌لیتر (1009)",
+                        "titleFa": "LIQUI MOLY افزودنی بالابر سوپاپ 300 میلی‌لیتر (1009)",
                         "titleTr": "LIQUI MOLY Lifter- Supap İteceği Katkısı 300 ml (1009)",
                         "titleEn": "LIQUI MOLY Lifter- Supap İteceği Katkısı 300 ml (1009)",
                         "inquiryName": "LIQUI MOLY Lifter- Supap İteceği Katkısı 300 ml (1009)",
@@ -1883,7 +1883,7 @@
                         "priceUsd": 19.7,
                         "priceTry": 925.69,
                         "sku": "20845",
-                        "image": "https://www.liquimolyturkey.com/content/images/thumbs/0000695_liqui-moly-top-tec-mtf-5200-75w-80-21688-sanziman-yagi_550.jpeg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-20845.webp",
                         "featured": false
                   },
                   {
@@ -2371,7 +2371,7 @@
             "title": "افزودنی سوخت دیزل",
             "titleTr": "Dizel Katkıları",
             "icon": "gas-station",
-            "image": "https://www.liquimolyturkey.com/content/images/thumbs/0000887_liqui-moly-adblue-kristallesme-onleyici-konsantre-katki-100-ml-21801_550.jpeg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-21801.webp",
             "desc": "24 محصول",
             "series": [
                   {
@@ -2436,7 +2436,7 @@
                                     "priceUsd": 10.61,
                                     "priceTry": 498.6,
                                     "sku": "21801",
-                                    "image": "https://www.liquimolyturkey.com/content/images/thumbs/0000887_liqui-moly-adblue-kristallesme-onleyici-konsantre-katki-100-ml-21801_550.jpeg",
+                                    "image": "assets/images/liqui-moly/catalog/liqui-moly-21801.webp",
                                     "featured": false
                   },
                   {
@@ -2540,7 +2540,7 @@
                                     "priceUsd": 19.64,
                                     "priceTry": 923.25,
                                     "sku": "5123",
-                                    "image": "https://www.liquimolyturkey.com/content/images/thumbs/0000486_liqui-moly-pro-line-dizel-partikul-filtre-dpf-korumasi-1-litre-5123_550.jpeg",
+                                    "image": "assets/images/liqui-moly/catalog/liqui-moly-5123.webp",
                                     "featured": false
                   },
                   {
@@ -2771,7 +2771,7 @@
                         "priceUsd": 22.4,
                         "priceTry": 1052.68,
                         "sku": "5116",
-                        "image": "https://www.liquimolyturkey.com/content/images/thumbs/0000457_liqui-moly-hidrolik-sistem-katkisi-1-litre-5116_550.jpeg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-5116.webp",
                         "featured": false
                   },
                   {
@@ -3312,8 +3312,8 @@
                         "featured": false
                   },
                   {
-                        "name": "LIQUI MOLY Far پاک‌کننده Pasta 200 میلی‌لیتر. (2320)",
-                        "titleFa": "LIQUI MOLY Far پاک‌کننده Pasta 200 میلی‌لیتر. (2320)",
+                        "name": "LIQUI MOLY خمیر پاک‌کننده چراغ 200 میلی‌لیتر (2320)",
+                        "titleFa": "LIQUI MOLY خمیر پاک‌کننده چراغ 200 میلی‌لیتر (2320)",
                         "titleTr": "LIQUI MOLY Far Temizleyici Pasta 200 Ml. (2320)",
                         "titleEn": "LIQUI MOLY Far Temizleyici Pasta 200 Ml. (2320)",
                         "inquiryName": "LIQUI MOLY Far Temizleyici Pasta 200 Ml. (2320)",
@@ -3711,7 +3711,7 @@
                         "priceUsd": 10.75,
                         "priceTry": 505.39,
                         "sku": "1539",
-                        "image": "https://www.liquimolyturkey.com/content/images/thumbs/0000490_liqui-moly-doseme-temizleme-kopugu-300-ml-1539_550.jpeg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-1539.webp",
                         "featured": false
                   },
                   {
@@ -3880,7 +3880,7 @@
                         "priceUsd": 9.64,
                         "priceTry": 452.91,
                         "sku": "1594",
-                        "image": "https://www.liquimolyturkey.com/content/images/thumbs/0000492_liqui-moly-kumas-bakim-su-itici-spreyi-400-ml-1594_550.jpeg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-1594.webp",
                         "featured": false
                   },
                   {
@@ -3906,7 +3906,7 @@
                         "priceUsd": 10.66,
                         "priceTry": 500.84,
                         "sku": "3325",
-                        "image": "https://www.liquimolyturkey.com/content/images/thumbs/0000568_liqui-moly-karburator-temizleyici-400ml-3325_550.jpeg",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-3325.webp",
                         "featured": false
                   },
                   {
@@ -3984,7 +3984,7 @@
                         "priceUsd": 11.06,
                         "priceTry": 519.61,
                         "sku": "21921",
-                        "image": "https://www.liquimolyturkey.com/content/images/thumbs/0000937_liqui-moly-klima-sistemi-temizleme-sivisi-1-litre-21921_550.png",
+                        "image": "assets/images/liqui-moly/catalog/liqui-moly-21921.webp",
                         "featured": false
                   },
                   {
@@ -4027,8 +4027,8 @@
                         "featured": false
                   },
                   {
-                        "name": "MULTİ اسپری 7 -چندمنظوره اسپری 500 میلی‌لیتر (3305)",
-                        "titleFa": "MULTİ اسپری 7 -چندمنظوره اسپری 500 میلی‌لیتر (3305)",
+                        "name": "MULTI اسپری 7 -چندمنظوره اسپری 500 میلی‌لیتر (3305)",
+                        "titleFa": "MULTI اسپری 7 -چندمنظوره اسپری 500 میلی‌لیتر (3305)",
                         "titleTr": "MULTİ SPREY 7 -Çok Amaçlı Sprey 500 ml (3305)",
                         "titleEn": "MULTİ SPREY 7 -Çok Amaçlı Sprey 500 ml (3305)",
                         "inquiryName": "MULTİ SPREY 7 -Çok Amaçlı Sprey 500 ml (3305)",
@@ -4715,7 +4715,7 @@
             "sku": "5116",
             "priceTry": 1052.68,
             "priceUsd": 22.4,
-            "image": "https://www.liquimolyturkey.com/content/images/thumbs/0000457_liqui-moly-hidrolik-sistem-katkisi-1-litre-5116_550.jpeg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5116.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-hidrolik-sistem-katkisi-1-litre-5116-2",
             "category": "افزودنی روغن موتور"
       },
@@ -5030,7 +5030,7 @@
             "sku": "21801",
             "priceTry": 498.6,
             "priceUsd": 10.61,
-            "image": "https://www.liquimolyturkey.com/content/images/thumbs/0000887_liqui-moly-adblue-kristallesme-onleyici-konsantre-katki-100-ml-21801_550.jpeg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-21801.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-adblue-kristallesme-onleyici-konsantre-katki-100-ml-21801",
             "category": "افزودنی سوخت دیزل"
       },
@@ -5150,7 +5150,7 @@
             "sku": "5123",
             "priceTry": 923.25,
             "priceUsd": 19.64,
-            "image": "https://www.liquimolyturkey.com/content/images/thumbs/0000486_liqui-moly-pro-line-dizel-partikul-filtre-dpf-korumasi-1-litre-5123_550.jpeg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-5123.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-pro-line-dizel-partikul-filtre-korumasi-1-kg-5123",
             "category": "افزودنی سوخت دیزل"
       },
@@ -5735,7 +5735,7 @@
             "sku": "1688",
             "priceTry": 2350.0,
             "priceUsd": 50.0,
-            "image": "https://www.liquimolyturkey.com/content/images/thumbs/0000586_liqui-moly-10w30-4t-street-motosiklet-motor-yagi-4-litre-1688_550.jpeg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-1688.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-10w30-4t-street-motosiklet-motor-yagi-4-litre-1688",
             "category": "روغن موتور"
       },
@@ -5840,7 +5840,7 @@
             "sku": "20826",
             "priceTry": 501.84,
             "priceUsd": 10.68,
-            "image": "https://www.liquimolyturkey.com/content/images/thumbs/0000885_liqui-moly-10w40-4t-scooter-race-motosiklet-motor-yagi-1-litre-20826_550.jpeg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-20826.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-10w40-4t-scooter-race-motosiklet-motor-yagi-1-litre-20826",
             "category": "روغن موتور"
       },
@@ -6170,7 +6170,7 @@
             "sku": "25016",
             "priceTry": 1973.45,
             "priceUsd": 41.99,
-            "image": "https://www.liquimolyturkey.com/content/images/thumbs/0000883_liqui-moly-15w40-4t-marine-motor-yagi-5-litre-25016_550.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-25016.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-15w40-4t-marine-motor-yagi-5-litre-25016",
             "category": "روغن موتور"
       },
@@ -7047,9 +7047,9 @@
       {
             "id": "1009",
             "name": "LIQUI MOLY Lifter- Supap İteceği Katkısı 300 ml (1009)",
-            "nameFa": "LIQUI MOLY Lifter- سوپاپ İteceği افزودنی 300 میلی‌لیتر (1009)",
+            "nameFa": "LIQUI MOLY افزودنی بالابر سوپاپ 300 میلی‌لیتر (1009)",
             "nameTr": "LIQUI MOLY Lifter- Supap İteceği Katkısı 300 ml (1009)",
-            "titleFa": "LIQUI MOLY Lifter- سوپاپ İteceği افزودنی 300 میلی‌لیتر (1009)",
+            "titleFa": "LIQUI MOLY افزودنی بالابر سوپاپ 300 میلی‌لیتر (1009)",
             "titleTr": "LIQUI MOLY Lifter- Supap İteceği Katkısı 300 ml (1009)",
             "titleEn": "LIQUI MOLY Lifter- Supap İteceği Katkısı 300 ml (1009)",
             "sku": "1009",
@@ -7310,7 +7310,7 @@
             "sku": "20845",
             "priceTry": 925.69,
             "priceUsd": 19.7,
-            "image": "https://www.liquimolyturkey.com/content/images/thumbs/0000695_liqui-moly-top-tec-mtf-5200-75w-80-21688-sanziman-yagi_550.jpeg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-20845.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-top-tec-5200-75w-80-20845-sanziman-yagi",
             "category": "روغن موتور"
       },
@@ -8382,9 +8382,9 @@
       {
             "id": "2320",
             "name": "LIQUI MOLY Far Temizleyici Pasta 200 Ml. (2320)",
-            "nameFa": "LIQUI MOLY Far پاک‌کننده Pasta 200 میلی‌لیتر. (2320)",
+            "nameFa": "LIQUI MOLY خمیر پاک‌کننده چراغ 200 میلی‌لیتر (2320)",
             "nameTr": "LIQUI MOLY Far Temizleyici Pasta 200 Ml. (2320)",
-            "titleFa": "LIQUI MOLY Far پاک‌کننده Pasta 200 میلی‌لیتر. (2320)",
+            "titleFa": "LIQUI MOLY خمیر پاک‌کننده چراغ 200 میلی‌لیتر (2320)",
             "titleTr": "LIQUI MOLY Far Temizleyici Pasta 200 Ml. (2320)",
             "titleEn": "LIQUI MOLY Far Temizleyici Pasta 200 Ml. (2320)",
             "sku": "2320",
@@ -8840,7 +8840,7 @@
             "sku": "1539",
             "priceTry": 505.39,
             "priceUsd": 10.75,
-            "image": "https://www.liquimolyturkey.com/content/images/thumbs/0000490_liqui-moly-doseme-temizleme-kopugu-300-ml-1539_550.jpeg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-1539.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-doseme-temizleme-kopugu-300-ml-1539",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -9035,7 +9035,7 @@
             "sku": "1594",
             "priceTry": 452.91,
             "priceUsd": 9.64,
-            "image": "https://www.liquimolyturkey.com/content/images/thumbs/0000492_liqui-moly-kumas-bakim-su-itici-spreyi-400-ml-1594_550.jpeg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-1594.webp",
             "url": "https://shop.egemot.com.tr/liqui-moly-kumas-bakim-spreyi-400-ml-1594",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -9065,7 +9065,7 @@
             "sku": "3325",
             "priceTry": 500.84,
             "priceUsd": 10.66,
-            "image": "https://www.liquimolyturkey.com/content/images/thumbs/0000568_liqui-moly-karburator-temizleyici-400ml-3325_550.jpeg",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-3325.webp",
             "url": "https://shop.egemot.com.tr/iqui-moly-karburator-temizleyici-400-ml-3325",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -9155,7 +9155,7 @@
             "sku": "21921",
             "priceTry": 519.61,
             "priceUsd": 11.06,
-            "image": "https://www.liquimolyturkey.com/content/images/thumbs/0000937_liqui-moly-klima-sistemi-temizleme-sivisi-1-litre-21921_550.png",
+            "image": "assets/images/liqui-moly/catalog/liqui-moly-21921.webp",
             "url": "https://shop.egemot.com.tr/klima-sistemi-temizleme-sivisi-1-litre-4091",
             "category": "مراقبت و نظافت خودرو"
       },
@@ -9207,9 +9207,9 @@
       {
             "id": "3305",
             "name": "MULTİ SPREY 7 -Çok Amaçlı Sprey 500 ml (3305)",
-            "nameFa": "MULTİ اسپری 7 -چندمنظوره اسپری 500 میلی‌لیتر (3305)",
+            "nameFa": "MULTI اسپری 7 -چندمنظوره اسپری 500 میلی‌لیتر (3305)",
             "nameTr": "MULTİ SPREY 7 -Çok Amaçlı Sprey 500 ml (3305)",
-            "titleFa": "MULTİ اسپری 7 -چندمنظوره اسپری 500 میلی‌لیتر (3305)",
+            "titleFa": "MULTI اسپری 7 -چندمنظوره اسپری 500 میلی‌لیتر (3305)",
             "titleTr": "MULTİ SPREY 7 -Çok Amaçlı Sprey 500 ml (3305)",
             "titleEn": "MULTİ SPREY 7 -Çok Amaçlı Sprey 500 ml (3305)",
             "sku": "3305",
