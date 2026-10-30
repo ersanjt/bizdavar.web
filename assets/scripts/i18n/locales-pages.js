@@ -3217,6 +3217,7 @@
       relatedContact: 'مشاوره و استعلام',
       relatedGamak: 'تامین الکتروموتور صنعتی',
       geoText: 'تصاویر واقعی از نمایشگاه، تولید و تحقیق تیم بیزدوار در تبریز.',
+      lightboxAlt: 'گالری تصاویر بیزدوار',
       ctaFromAbout: 'گالری تصاویر نمایشگاه و تولید',
       items: {
         'expo-imen-booth': { caption: 'غرفه ایمن سهند پدیده — پدهای حرارتی روی میز نمایشگاه', alt: 'غرفه نمایشگاهی ایمن سهند پدیده با پدهای حرارتی سیاه روی میز' },
@@ -3270,6 +3271,7 @@
       relatedContact: 'Danışmanlık ve teklif',
       relatedGamak: 'Türkiye’den endüstriyel motor tedariki',
       geoText: 'Bizdavar ekibinin Tebriz’deki fuar, üretim ve Ar-Ge fotoğrafları.',
+      lightboxAlt: 'Bizdavar galerisi',
       ctaFromAbout: 'Fuar ve üretim galerisi',
       items: {
         'expo-imen-booth': { caption: 'Imen Sahand Padideh standı — ısı pedleri masada', alt: 'Fuar standında siyah ısı pedleri' },
@@ -3323,6 +3325,7 @@
       relatedContact: 'Consulting and quotes',
       relatedGamak: 'Industrial motor supply from Turkey',
       geoText: 'Real photos of Bizdavar exhibitions, production and R&D in Tabriz.',
+      lightboxAlt: 'Bizdavar gallery',
       ctaFromAbout: 'Exhibition and production gallery',
       items: {
         'expo-imen-booth': { caption: 'Imen Sahand Padideh booth — heating pads on display', alt: 'Exhibition booth with black heating pads on the table' },

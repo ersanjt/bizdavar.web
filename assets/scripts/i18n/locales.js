@@ -595,7 +595,12 @@ window.BIZDAVAR_LOCALES = {
     },
     pages: {
       about: { crumb: 'درباره ما' },
-      gallery: { crumb: 'گالری تصاویر' },
+      gallery: {
+        crumb: 'گالری تصاویر',
+        seoTitle: 'گالری تصاویر بیزدوار | نمایشگاه، تولید و تحقیق',
+        seoDescription: 'تصاویر واقعی بیزدوار: غرفه ایمن سهند پدیده، مرکز رشد دانشگاه تبریز، خط تولید و تحقیق پد حرارتی BizPad.',
+        seoKeywords: 'گالری بیزدوار, نمایشگاه ایمن سهند پدیده, مرکز رشد دانشگاه تبریز, BizPad'
+      },
       services: { crumb: 'خدمات' },
       fieldTech: { crumb: 'خدمات فنی' },
       portfolio: { crumb: 'نمونه‌کارها' },
@@ -1293,7 +1298,12 @@ window.BIZDAVAR_LOCALES = {
     },
     pages: {
       about: { crumb: 'Hakkımızda' },
-      gallery: { crumb: 'Galeri' },
+      gallery: {
+        crumb: 'Galeri',
+        seoTitle: 'Bizdavar fotoğraf galerisi | fuar, üretim ve Ar-Ge',
+        seoDescription: 'Bizdavar’ın gerçek görselleri: Imen Sahand Padideh standı, Tebriz Üniversitesi kuluçka merkezi, üretim hattı ve BizPad ısı pedi Ar-Ge.',
+        seoKeywords: 'Bizdavar galeri, Imen Sahand Padideh fuar, Tebriz kuluçka, BizPad'
+      },
       services: { crumb: 'Hizmetler' },
       fieldTech: { crumb: 'Teknik hizmetler' },
       portfolio: { crumb: 'Portfolyo' },
@@ -1991,7 +2001,12 @@ window.BIZDAVAR_LOCALES = {
     },
     pages: {
       about: { crumb: 'About' },
-      gallery: { crumb: 'Gallery' },
+      gallery: {
+        crumb: 'Gallery',
+        seoTitle: 'Bizdavar photo gallery | exhibitions, production and R&D',
+        seoDescription: 'Real Bizdavar photos: Imen Sahand Padideh booth, University of Tabriz incubator, production line and BizPad heating-pad R&D.',
+        seoKeywords: 'Bizdavar gallery, Imen Sahand Padideh exhibition, Tabriz incubator, BizPad'
+      },
       services: { crumb: 'Services' },
       fieldTech: { crumb: 'Technical services' },
       portfolio: { crumb: 'Portfolio' },

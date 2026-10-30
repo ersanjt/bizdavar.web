@@ -12,6 +12,6 @@ bizdavarPageInit(function () {
       injectBreadcrumbSchema(crumbs);
       renderGeoStrip('geoStrip', {
         textKey: 'galleryPage.geoText',
-        text: 'تصاویر واقعی از نمایشگاه، تولید و تحقیق تیم بیزدوار در تبریز و استانبول.'
+        text: 'تصاویر واقعی از نمایشگاه، تولید و تحقیق تیم بیزدوار در تبریز.'
       });
     });

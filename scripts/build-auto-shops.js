@@ -463,7 +463,12 @@ function productHtml(loc, item, catId, images) {
     contentUrl: BASE + src,
     name: shotName(loc.code, title, i),
     caption: desc,
-    representativeOfPage: i === 0
+    representativeOfPage: i === 0,
+    contentLocation: {
+      '@type': 'Place',
+      name: IMAGE_GEO,
+      address: { '@type': 'PostalAddress', addressLocality: 'Tabriz', addressCountry: 'IR' }
+    }
   }));
   const ld = JSON.stringify({
     '@context': 'https://schema.org',
