@@ -529,7 +529,7 @@ ${hreflang(item.id)}
     <article class="section">
       <div class="container am-pdp">
         <div class="am-pdp__gallery" data-am-gallery>
-          <p class="am-pdp__gallery-label">${esc(copy.gallery || 'Gallery')}</p>
+          <p class="am-pdp__gallery-label">${esc({ fa: 'گالری تصاویر', tr: 'Galeri', en: 'Gallery', ru: 'Галерея', ar: 'معرض الصور' }[loc.code])}</p>
           <img class="am-pdp__main" src="${esc(img)}" alt="${esc(title)}" width="640" height="640" data-fallback="/assets/icons/categories/motorcycle-helmet.svg">
           ${thumbs}
         </div>
