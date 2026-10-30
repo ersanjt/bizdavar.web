@@ -190,6 +190,7 @@ window.FAST_CATALOG = {
   ],
 
   showcases: [
+    { name: 'Havana Heppenheim', category: 'رستوران · هپنهایم', domain: 'havana-heppenheim.de', internal: false, thumb: 'assets/images/partners/havana.png' },
     { name: 'BZ Diamond', category: 'فروشگاه جواهرات', slug: 'pages/bz-diamond', internal: true, hidden: true, thumb: 'assets/images/partners/zeddiamond.png' },
     { name: 'Supplify Trade', category: 'تجارت بین‌المللی B2B', slug: 'pages/supplify-trade', internal: true, thumb: 'assets/images/partners/supplify-trade.svg', shot: 'assets/images/content/site-shots/supplify.jpg' },
     { name: 'Kaya One AG', category: 'تجارت سوئیسی B2B', slug: 'pages/kaya-one', internal: true, thumb: 'assets/images/partners/kaya-one.svg', shot: 'assets/images/content/site-shots/kaya-one.jpg' },

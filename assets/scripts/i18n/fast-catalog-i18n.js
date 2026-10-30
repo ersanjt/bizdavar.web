@@ -131,6 +131,7 @@
       { title: 'Multilingual Iran–Turkey sites', desc: 'hreflang, local trust and fa / tr / en pattern.' }
     ],
     showcases: [
+      { category: 'Restaurant · Heppenheim' },
       { category: 'Jewelry store' },
       { category: 'International B2B trade' },
       { category: 'Swiss B2B trade' },
@@ -266,6 +267,7 @@
       { title: 'İran–Türkiye çok dilli', desc: 'hreflang, yerel güven, fa / tr / en.' }
     ],
     showcases: [
+      { category: 'Restoran · Heppenheim' },
       { category: 'Mücevher mağazası' },
       { category: 'Uluslararası B2B ticaret' },
       { category: 'İsviçre B2B ticaret' },
@@ -311,6 +313,7 @@
           { title: 'Счёт USD или EUR', desc: 'Карта, PayPal или перевод — валюта до старта.' }
         ],
         showcases: [
+          { category: 'Ресторан · Хеппенхайм' },
           { category: 'Ювелирный магазин' },
           { category: 'Магазин кожаных изделий' },
           { category: 'Международная B2B-торговля' },
@@ -363,6 +366,7 @@
           { title: 'فاتورة USD أو EUR', desc: 'بطاقة أو PayPal أو تحويل — العملة قبل الانطلاق.' }
         ],
         showcases: [
+          { category: 'مطعم · هبنهايم' },
           { category: 'متجر مجوهرات' },
           { category: 'متجر منتجات جلدية' },
           { category: 'تجارة B2B دولية' },

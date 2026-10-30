@@ -159,6 +159,7 @@
       { title: 'Mehrsprachige Website', desc: 'Deutsch als Hauptsprache, weitere Sprache später.' }
     ],
     showcases: [
+      { category: 'Restaurant · Heppenheim' },
       { category: 'Schmuckshop' },
       { category: 'Internationaler B2B-Handel' },
       { category: 'Schweizer B2B-Handel' },
@@ -209,7 +210,9 @@
       navAria: 'Abschnitte von Fast Web Studio',
       saveOff: '{n} % günstiger zum Start',
       planSample: 'Beispiel',
-      planDelivery: 'Lieferzeit'
+      planDelivery: 'Lieferzeit',
+      prevSample: 'Vorheriges Beispiel',
+      nextSample: 'Nächstes Beispiel'
     },
     sections: {
       for: {
@@ -258,9 +261,9 @@
         desc: 'Ein Produkt der <a href="about">Bizdavar Group</a> — Festpreis und ein benannter Termin, keine vage Agenturofferte.'
       },
       showcase: {
-        eyebrow: 'Beispiele',
-        title: 'Websites, die Bizdavar gebaut hat',
-        desc: 'Ein Ausschnitt — <a href="portfolio">alle Referenzen</a>'
+        eyebrow: 'Beispiel aus Deutschland',
+        title: 'Havana in Heppenheim',
+        desc: 'Restaurant in Heppenheim: Website, Grafik und Meta-Anzeigen — <a href="https://havana-heppenheim.de/">havana-heppenheim.de</a>. Weitere Arbeiten: <a href="portfolio">alle Referenzen</a>.'
       },
       faq: {
         eyebrow: 'Fragen',
