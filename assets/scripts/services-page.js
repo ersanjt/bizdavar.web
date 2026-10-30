@@ -1123,7 +1123,8 @@
   }
 
   function stageHref(href) {
-    if (/^(https?:|tel:|mailto:)/.test(href)) return href;
+    if (/^(https?:|tel:|mailto:|#)/.test(href)) return href;
+    if (window.resolvePagePath) return window.resolvePagePath(href);
     return path(href);
   }
 

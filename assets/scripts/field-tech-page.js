@@ -173,6 +173,29 @@
       chips.innerHTML = p.hero.chips.map(c => `<li>${c}</li>`).join('');
     }
 
+    const tilePack = {
+      fa: { tiles: [{ title: 'CCTV', desc: 'دوربین و NVR' }, { title: 'سیم‌کشی', desc: 'ساختمان و تجهیزات' }, { title: 'نورمخفی', desc: 'LED و پوشش' }], city: 'تبریز' },
+      tr: { tiles: [{ title: 'CCTV', desc: 'Kamera ve NVR' }, { title: 'Tesisat', desc: 'Bina ve ekipman' }, { title: 'Aydınlatma', desc: 'LED ve kaplama' }], city: 'Tebriz' },
+      en: { tiles: [{ title: 'CCTV', desc: 'Cameras and NVR' }, { title: 'Wiring', desc: 'Building and equipment' }, { title: 'Cove light', desc: 'LED and finish' }], city: 'Tabriz' },
+      ru: { tiles: [{ title: 'CCTV', desc: 'Камеры и NVR' }, { title: 'Проводка', desc: 'Здание и оборудование' }, { title: 'Скрытый свет', desc: 'LED и отделка' }], city: 'Тебриз' },
+      ar: { tiles: [{ title: 'CCTV', desc: 'كاميرات وNVR' }, { title: 'تمديدات', desc: 'المبنى والمعدات' }, { title: 'إضاءة مخفية', desc: 'LED وتشطيب' }], city: 'تبريز' }
+    };
+    const tileLang = document.documentElement.lang || 'fa';
+    const tiles = Array.isArray(p.hero?.tiles) ? p.hero.tiles : (tilePack[tileLang] || tilePack.en).tiles;
+    const cityLabel = p.hero?.cityLabel || (tilePack[tileLang] || tilePack.en).city;
+    document.querySelectorAll('.ft-hero-tile').forEach((tile, i) => {
+      const spec = tiles[i];
+      if (!spec) return;
+      const strong = tile.querySelector('strong');
+      const sub = tile.querySelector('span:last-of-type');
+      if (strong && spec.title) strong.textContent = spec.title;
+      if (sub && spec.desc) sub.textContent = spec.desc;
+    });
+    const cityEl = document.querySelector('.ft-hero-visual__cities');
+    if (cityEl && cityLabel) cityEl.textContent = cityLabel;
+    const heroImg = document.getElementById('ftHeroImg');
+    if (heroImg && p.hero?.imgAlt) heroImg.setAttribute('aria-label', p.hero.imgAlt);
+
     document.querySelectorAll('[data-ft="wa-cta"]').forEach(el => {
       if (p.contact?.waCta || p.hero?.waCta) el.textContent = p.contact?.waCta || p.hero.waCta;
     });

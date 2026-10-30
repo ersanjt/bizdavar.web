@@ -564,7 +564,7 @@ ${hreflang(item.id)}
     </article>
   </main>
   ${GALLERY_TAG}
-  <script src="/assets/scripts/site-loader.js?v=20261030k"></script>
+  <script src="/assets/scripts/site-loader.js?v=20261030l"></script>
 </body>
 </html>
 `;

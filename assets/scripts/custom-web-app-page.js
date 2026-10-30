@@ -19,9 +19,17 @@
   }
 
   function waHref() {
-    const msg = 'سلام، برای طراحی وب / اپلیکیشن اختصاصی مشاوره می‌خوام';
+    const loc = document.documentElement.lang || 'fa';
+    const messages = {
+      fa: 'سلام، برای طراحی وب / اپلیکیشن اختصاصی مشاوره می‌خوام',
+      en: 'Hello, I want a quote for custom web and app development.',
+      tr: 'Merhaba, özel web ve uygulama geliştirme için teklif istiyorum.',
+      ru: 'Здравствуйте, нужен расчёт на разработку веб-приложения.',
+      ar: 'مرحبا، أريد عرض سعر لتطوير ويب أو تطبيق مخصص.'
+    };
+    const msg = messages[loc] || messages.en;
     if (window.getWhatsappUrl) return window.getWhatsappUrl(msg);
-    return (window.resolvePath ? window.resolvePath('pages/contact.html') : '/pages/contact') + '?service=custom-dev';
+    return (window.resolvePath ? window.resolvePath('pages/contact.html') : '/pages/contact') + '?service=software-apps';
   }
 
   window.initCustomWebAppPage = function () {

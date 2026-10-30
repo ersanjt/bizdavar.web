@@ -92,7 +92,7 @@
       services: {
         eyebrow: 'Hizmetler',
         title: 'Ne sunuyoruz?',
-        desc: 'Tek net liste — tekrar yok.',
+        desc: 'Keşif, kurulum ve kurulum sonrası destek.',
         items: [
           { id: 'cctv', icon: 'cctv', title: 'Güvenlik kamerası', desc: 'Konut ve işyeri CCTV kurulumu' },
           { id: 'wiring', icon: 'bolt', title: 'Bina tesisatı', desc: 'Konut ve ticari birimler' },

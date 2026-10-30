@@ -826,7 +826,7 @@ window.BIZDAVAR_CONFIG = {
     {
       name: 'Liqui Moly',
       title: 'روغن و افزودنی خودرو',
-      desc: 'روغن موتور، Octane Plus، افزودنی دیزل و مراقبت خودرو — قیمت دلاری شفاف',
+      desc: 'روغن موتور، Octane Plus، افزودنی دیزل و مراقبت خودرو — قیمت نمایشی دلاری',
       logo: 'assets/images/partners/liqui-moly.svg',
       photo: 'assets/images/content/home-brand-liqui-moly.webp',
       url: 'pages/liqui-moly',

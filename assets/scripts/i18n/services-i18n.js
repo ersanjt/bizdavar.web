@@ -277,7 +277,7 @@
   const cards = {
     fa: [
       { title: 'بازاریابی دیجیتال', desc: 'Google Ads، Meta و LinkedIn برای رشد فروش دلاری و یورویی.' },
-      { title: 'وب و وب‌اپلیکیشن', desc: 'سایت انگلیسی برای اروپا و آمریکا — از ۹۹ دلار، فاکتور USD/EUR.' },
+      { title: 'وب و وب‌اپلیکیشن', desc: 'سایت انگلیسی برای اروپا و آمریکا. پلن Fast از ۹۹ دلار؛ کار سفارشی جدا استعلام می‌شود.' },
       { title: 'اپ و سامانه', desc: 'اندروید، iOS و وب‌اپ — App Store / Play و Stripe.' },
       { title: 'مدیریت سرور', desc: 'VPS، امنیت، بکاپ، مانیتورینگ، DNS و مهاجرت.' },
       { title: 'مدیریت SMM', desc: 'محتوا، گرافیک، ریلز، تبلیغات و گزارش رشد.' },
@@ -293,7 +293,7 @@
     ],
     en: [
       { title: 'Digital marketing', desc: 'Google Ads, Meta and LinkedIn that grow USD/EUR revenue.' },
-      { title: 'Web & web apps', desc: 'English sites for US & EU — from $99, billed in USD or EUR.' },
+      { title: 'Web & web apps', desc: 'English sites for US and EU. Fast plans from $99; custom work is quoted separately.' },
       { title: 'Apps & systems', desc: 'Android, iOS and web apps — App Store / Play and Stripe.' },
       { title: 'Server management', desc: 'VPS, security, backups, monitoring, DNS and migration.' },
       { title: 'SMM management', desc: 'Content, design, reels, ads and growth reporting.' },

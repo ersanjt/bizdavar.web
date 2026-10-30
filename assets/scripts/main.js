@@ -506,6 +506,16 @@ function prefillContactFromQuery() {
     const product = params.get('product');
     const historicalIds = new Set(['biztouch', 'bizroll', 'sealer-home', 'sealer-pneumatic', 'sealer-robotic', 'mask-production', 'heat-pad-production', 'biztab', 'bizpad', 'bizclean', 'bizseat']);
     if (historicalIds.has(product)) return;
+    const ownedService = {
+      fxguard: 'fxguard',
+      'fxguard-accounting': 'fxguard-accounting',
+      bizswap: 'bizswap',
+      'ostrich-leather': 'ostrich'
+    };
+    if (ownedService[product]) {
+      const ownedOpt = form.service.querySelector(`option[value="${cssAttrEscape(ownedService[product])}"]`);
+      if (ownedOpt) form.service.value = ownedService[product];
+    }
     const isMoto = params.get('service') === 'auto-moto' || /^BDV-AM-/i.test(product);
     if (isMoto) {
       const motoOpt = form.service.querySelector('option[value="auto-moto"]');
@@ -532,6 +542,16 @@ function initContactForm() {
   if (!form) return;
 
   prefillContactFromQuery();
+
+  const phonePlaceholders = {
+    fa: '+98 930 ...',
+    tr: '+90 501 ...',
+    en: '+1 ...',
+    ru: '+7 ...',
+    ar: '+971 ...'
+  };
+  const phoneLocale = document.documentElement.lang || 'fa';
+  if (form.phone) form.phone.placeholder = phonePlaceholders[phoneLocale] || phonePlaceholders.en;
 
   form.addEventListener('submit', async e => {
 

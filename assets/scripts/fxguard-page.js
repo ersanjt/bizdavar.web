@@ -314,7 +314,11 @@
       const pricingEl = document.getElementById('fxguardPricing');
       if (pricingEl && Array.isArray(cs.pricing?.plans)) {
         pricingEl.innerHTML = cs.pricing.plans.map(plan => {
-          const href = pageHref(plan.href);
+          let href = pageHref(plan.href);
+          if (/wa\.me\//.test(href) && !/[?&]text=/.test(href)) {
+            const msg = [plan.name, plan.price, plan.cta].filter(Boolean).join(' — ');
+            href = href.split('?')[0] + '?text=' + encodeURIComponent(msg);
+          }
           return `
           <article class="fxguard-plan${plan.featured ? ' fxguard-plan--featured' : ''}">
             ${plan.badge ? `<span class="fxguard-plan__badge">${esc(plan.badge)}</span>` : ''}
