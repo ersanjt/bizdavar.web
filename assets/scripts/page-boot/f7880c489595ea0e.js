@@ -1,7 +1,8 @@
 bizdavarPageInit(function () {
       injectPageSeo('carParts', {
         canonical: 'https://bizdavar.com/pages/car-parts',
-        ogImage: 'assets/images/brand/bizdavar-logo-square.png'
+        ogImage: 'assets/images/brand/bizdavar-logo-square.png',
+        ogImageAlt: 'لوگوی بیزدوار — خرید لنت و دیسک ترمز'
       });
       renderBreadcrumbs([
         { page: 'home', url: 'index' },

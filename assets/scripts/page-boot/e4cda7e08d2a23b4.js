@@ -1,7 +1,8 @@
 bizdavarPageInit(function () {
       injectPageSeo('carParts', {
         canonical: 'https://bizdavar.com/ru/pages/car-parts',
-        ogImage: 'assets/images/brand/bizdavar-logo-square.png'
+        ogImage: 'assets/images/brand/bizdavar-logo-square.png',
+        ogImageAlt: 'Логотип Bizdavar — тормозные колодки и диски'
       });
       renderBreadcrumbs([
         { page: 'home', url: 'index' },

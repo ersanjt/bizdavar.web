@@ -1,7 +1,8 @@
 bizdavarPageInit(function () {
       injectPageSeo('carParts', {
         canonical: 'https://bizdavar.com/en/pages/car-parts',
-        ogImage: 'assets/images/brand/bizdavar-logo-square.png'
+        ogImage: 'assets/images/brand/bizdavar-logo-square.png',
+        ogImageAlt: 'Bizdavar logo — brake pads and discs'
       });
       renderBreadcrumbs([
         { page: 'home', url: 'index' },

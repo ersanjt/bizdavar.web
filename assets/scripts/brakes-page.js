@@ -40,6 +40,8 @@
       results: 'نتیجه جستجو',
       desk: 'لنت و دیسک ترمز',
       heroTitle: 'خرید لنت و دیسک ترمز',
+      shot: 'تصویر',
+      geo: 'لنت و دیسک ترمز خودروهای خارجی برای خرید از ایران. استعلام فارسی با واتساپ ۰۹۳۰۵۸۸۰۱۳۵ یا ایمیل info@bizdavar.com، بعد پیش‌فاکتور.',
       heroLead: 'برند و مدل خودرو را انتخاب کنید. قیمت روی سایت نیست؛ اول در واتساپ استعلام کنید، بعد پیش‌فاکتور می‌آید.',
       listTitle: 'فهرست قطعات ترمز',
       trustAria: 'راه‌های استعلام',
@@ -88,6 +90,8 @@
       results: 'Arama sonucu',
       desk: 'Fren balatası ve diski',
       heroTitle: 'Fren balatası ve diski',
+      shot: 'görsel',
+      geo: 'Yabancı araçlar için fren balatası ve diski. Fiyat sitede yok; önce WhatsApp +98 930 588 0135, e-posta info@bizdavar.com, sonra proforma.',
       heroLead: 'Araç markasını ve modelini seçin. Fiyat sitede yok; önce WhatsApp, sonra proforma.',
       listTitle: 'Fren parçaları',
       trustAria: 'Teklif kanalları',
@@ -136,6 +140,8 @@
       results: 'Search results',
       desk: 'Brake pads and discs',
       heroTitle: 'Brake pads and discs',
+      shot: 'photo',
+      geo: 'Brake pads and discs for foreign cars. Prices are not listed. Ask on WhatsApp +98 930 588 0135 or email info@bizdavar.com, then you receive a proforma.',
       heroLead: 'Choose the vehicle brand and model. Prices are not listed; ask on WhatsApp first, then you get a proforma.',
       listTitle: 'Brake parts',
       trustAria: 'How to request a quote',
@@ -184,6 +190,8 @@
       results: 'Результаты',
       desk: 'Колодки и диски',
       heroTitle: 'Тормозные колодки и диски',
+      shot: 'фото',
+      geo: 'Колодки и диски для иномарок. Цены на сайте нет: сначала WhatsApp +98 930 588 0135 или почта info@bizdavar.com, затем проформа.',
       heroLead: 'Выберите марку и модель. Цены на сайте нет: сначала WhatsApp, затем проформа.',
       listTitle: 'Список тормозных деталей',
       trustAria: 'Как запросить цену',
@@ -232,6 +240,8 @@
       results: 'نتائج البحث',
       desk: 'فحمات وأقراص الفرامل',
       heroTitle: 'شراء فحمات وأقراص الفرامل',
+      shot: 'صورة',
+      geo: 'فحمات وأقراص فرامل للسيارات الأجنبية. السعر غير منشور. الاستعلام أولاً عبر واتساب +98 930 588 0135 أو info@bizdavar.com ثم فاتورة مبدئية.',
       heroLead: 'اختر ماركة السيارة وموديلها. السعر غير منشور؛ الاستعلام أولاً عبر واتساب ثم فاتورة مبدئية.',
       listTitle: 'قائمة قطع الفرامل',
       trustAria: 'طرق الاستعلام',
@@ -527,6 +537,18 @@
     return root + String(rel).replace(/^\.\//, '');
   }
 
+  function absMedia(url) {
+    const path = String(url || '');
+    if (!path) return '';
+    if (/^https?:\/\//i.test(path)) return path;
+    return 'https://bizdavar.com' + (path.charAt(0) === '/' ? path : '/' + path);
+  }
+
+  function shotName(title, index, total) {
+    if (!total || total < 2) return title;
+    return title + ' — ' + t().shot + ' ' + (index + 1);
+  }
+
   function shotsOf(item) {
     if (item && item.gallery && item.gallery.length) return item.gallery;
     if (item && item.img) return [item.img];
@@ -725,22 +747,24 @@
     const shots = shotsOf(item);
     if (!shots.length) return art(item.part);
     return '<img src="' + esc(imgUrl(shots[0])) + '" alt="' + esc(alt || '') + '"' +
-      (eager ? '' : ' loading="lazy"') +
-      ' decoding="async" data-fallback="' + esc(item.part || 'discs') + '">';
+      (eager ? ' fetchpriority="high"' : ' loading="lazy"') +
+      ' decoding="async" data-brake-art="' + esc(item.part || 'discs') + '">';
   }
 
   function galleryHtml(item) {
     const shots = shotsOf(item);
     if (!shots.length) return '<div class="shop-pdp__stage">' + art(item.part) + '</div>';
     const title = itemTitle(item);
+    const total = shots.length;
     const thumbs = shots.map((rel, index) => {
       const src = imgUrl(rel);
-      return '<button type="button" class="' + (index === 0 ? 'is-active' : '') + '" data-shot="' + esc(src) + '" aria-label="' + esc(title) + ' ' + (index + 1) + '">' +
-        '<img src="' + esc(src) + '" alt="" width="72" height="72" loading="lazy" decoding="async" data-fallback="' + esc(item.part || 'discs') + '">' +
+      const name = shotName(title, index, total);
+      return '<button type="button" class="' + (index === 0 ? 'is-active' : '') + '" data-shot="' + esc(src) + '" data-alt="' + esc(name) + '" aria-label="' + esc(name) + '">' +
+        '<img src="' + esc(src) + '" alt="" width="72" height="72" loading="lazy" decoding="async" data-brake-art="' + esc(item.part || 'discs') + '">' +
       '</button>';
     }).join('');
     return '<div class="shop-pdp__thumbs">' + thumbs + '</div>' +
-      '<div class="shop-pdp__stage"><img class="brake-stage" src="' + esc(imgUrl(shots[0])) + '" alt="' + esc(title) + '" decoding="async" data-fallback="' + esc(item.part || 'discs') + '"></div>';
+      '<div class="shop-pdp__stage"><img class="brake-stage" src="' + esc(imgUrl(shots[0])) + '" alt="' + esc(shotName(title, 0, total)) + '" fetchpriority="high" decoding="async" data-brake-art="' + esc(item.part || 'discs') + '"></div>';
   }
 
   function pagerHtml(page, pages) {
@@ -819,7 +843,7 @@
       return '<button type="button" class="brake-model' + (state.model === m.id ? ' is-on' : '') + (row.n ? '' : ' is-empty') + '" data-model="' + esc(m.id) + '">' + carIcon() + '<span dir="auto">' + esc(modelName(m)) + '</span><small>' + row.n + ' ' + esc(c.products) + '</small></button>';
     }).join('');
 
-    const cards = slice.map((item) => cardHtml(item)).join('');
+    const cards = slice.map((item, index) => cardHtml(item, index === 0)).join('');
     const pager = pagerHtml(page, pages);
 
     const related = open
@@ -915,14 +939,14 @@
       '</h3>';
   }
 
-  function cardHtml(item) {
+  function cardHtml(item, eager) {
     const c = t();
     const brand = brandById(item.brand);
     const logo = brand ? brandLogo(item.brand) : '';
     const title = itemTitle(item);
     return '<article class="brake-card">' +
       '<button type="button" class="brake-card__open" data-product="' + esc(item.id) + '">' +
-        '<div class="brake-card__art">' + mediaHtml(item, title, false) + '</div>' +
+        '<div class="brake-card__art">' + mediaHtml(item, title, !!eager) + '</div>' +
         '<div class="brake-card__body">' +
           '<div class="brake-card__brand">' +
             '<span class="brake-card__mark" aria-hidden="true">' + esc(makerMark(item.maker || (brand && brand.name))) + '</span>' +
@@ -952,7 +976,7 @@
     const stock = item.stock ? c.in : c.out;
     const title = itemTitle(item);
     const view = presentTitle(item);
-    const figure = shotsOf(item).length ? mediaHtml(item, title, true) : art(item.part);
+    const figure = shotsOf(item).length ? mediaHtml(item, title, false) : art(item.part);
     return '<article class="shop-pdp brake-pdp">' +
       '<nav class="shop-pdp__crumb">' +
         '<button type="button" class="brake-back" data-close-product="1">' + esc(c.back) + '</button>' +
@@ -995,15 +1019,19 @@
       btn.addEventListener('click', () => {
         const stage = root.querySelector('.brake-stage');
         const src = btn.getAttribute('data-shot');
-        if (stage && src) stage.src = src;
+        const label = btn.getAttribute('data-alt') || '';
+        if (stage && src) {
+          stage.src = src;
+          if (label) stage.alt = label;
+        }
         root.querySelectorAll('[data-shot]').forEach((other) => {
           other.classList.toggle('is-active', other === btn);
         });
       });
     });
-    root.querySelectorAll('img[data-fallback]').forEach((img) => {
+    root.querySelectorAll('img[data-brake-art]').forEach((img) => {
       img.addEventListener('error', () => {
-        const part = img.getAttribute('data-fallback') || 'discs';
+        const part = img.getAttribute('data-brake-art') || 'discs';
         const shot = img.closest('[data-shot]');
         if (img.classList.contains('brake-stage')) {
           if (img.parentElement) img.parentElement.innerHTML = art(part);
@@ -1266,8 +1294,14 @@
       .finally(() => { loading = false; });
   }
 
+  function paintGeo() {
+    if (typeof window.renderGeoStrip !== 'function') return;
+    window.renderGeoStrip('geoStrip', { text: t().geo });
+  }
+
   window.initCarPartsPage = function () {
     if (!document.getElementById('frenDesk')) return;
+    paintGeo();
     if (!booted) {
       booted = true;
       window.addEventListener('hashchange', paint);
@@ -1282,10 +1316,18 @@
     const lang = loc();
     const inLanguage = { fa: 'fa-IR', tr: 'tr-TR', en: 'en-US', ru: 'ru-RU', ar: 'ar-AE' }[lang] || 'fa-IR';
     const top = (catalog.products || []).filter((item) => item.stock && item.priceUsd).slice(0, 12).map((item, index) => {
-      const images = shotsOf(item).slice(0, 4).map(imgUrl);
+      const name = itemTitle(item);
+      const images = shotsOf(item).slice(0, 4).map(imgUrl).filter(Boolean).map((url) => ({
+        '@type': 'ImageObject',
+        contentUrl: absMedia(url),
+        url: absMedia(url),
+        name: name,
+        caption: name,
+        inLanguage: inLanguage
+      }));
       const product = {
         '@type': 'Product',
-        name: itemTitle(item),
+        name: name,
         sku: item.sku || item.mpn || item.id,
         brand: item.maker || 'Bizdavar',
         inLanguage: inLanguage,

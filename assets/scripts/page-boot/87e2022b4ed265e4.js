@@ -1,7 +1,8 @@
 bizdavarPageInit(function () {
       injectPageSeo('carParts', {
         canonical: 'https://bizdavar.com/ar/pages/car-parts',
-        ogImage: 'assets/images/brand/bizdavar-logo-square.png'
+        ogImage: 'assets/images/brand/bizdavar-logo-square.png',
+        ogImageAlt: 'شعار بيزدوار — فحمات وأقراص الفرامل'
       });
       renderBreadcrumbs([
         { page: 'home', url: 'index' },

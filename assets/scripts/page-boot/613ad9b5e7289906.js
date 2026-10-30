@@ -1,7 +1,8 @@
 bizdavarPageInit(function () {
       injectPageSeo('carParts', {
         canonical: 'https://bizdavar.com/tr/pages/car-parts',
-        ogImage: 'assets/images/brand/bizdavar-logo-square.png'
+        ogImage: 'assets/images/brand/bizdavar-logo-square.png',
+        ogImageAlt: 'Bizdavar logosu — fren balatası ve diski'
       });
       renderBreadcrumbs([
         { page: 'home', url: 'index' },
