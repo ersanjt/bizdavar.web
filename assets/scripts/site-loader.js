@@ -12,10 +12,54 @@
 (function () {
   if (!window.__bizdavarImgFallback) {
     window.__bizdavarImgFallback = true;
+    function isLocalPreview() {
+      var host = location.hostname;
+      return host === 'localhost' || host === '127.0.0.1' || host === '[::1]';
+    }
+
+    function liveMediaUrl(src) {
+      var value = String(src || '');
+      var mediaPath = value;
+      if (/^https?:\/\//i.test(value)) {
+        try {
+          var url = new URL(value);
+          if (url.hostname !== 'localhost' && url.hostname !== '127.0.0.1' && url.hostname !== '[::1]') return '';
+          mediaPath = url.pathname;
+        } catch (err) {
+          return '';
+        }
+      }
+      if (mediaPath.indexOf('/media/') !== 0) return '';
+      return 'https://bizdavar.com' + mediaPath;
+    }
+
+    function pointLocalMedia(node, attr) {
+      if (!node || !node.getAttribute) return;
+      var next = liveMediaUrl(node.getAttribute(attr));
+      if (next) node.setAttribute(attr, next);
+    }
+
+    if (isLocalPreview()) {
+      var mediaNodes = document.querySelectorAll('img[src*="/media/"], [data-src*="/media/"], [data-gallery-src*="/media/"]');
+      for (var m = 0; m < mediaNodes.length; m++) {
+        pointLocalMedia(mediaNodes[m], 'src');
+        pointLocalMedia(mediaNodes[m], 'data-src');
+        pointLocalMedia(mediaNodes[m], 'data-gallery-src');
+      }
+    }
+
     function onImgError(event) {
       var el = event.target;
       if (!el || el.tagName !== 'IMG') return;
       if (el.getAttribute('data-fallback-handled') === '1') return;
+      if (isLocalPreview() && el.getAttribute('data-live-media') !== '1') {
+        var live = liveMediaUrl(el.getAttribute('src') || el.src);
+        if (live) {
+          el.setAttribute('data-live-media', '1');
+          el.src = live;
+          return;
+        }
+      }
       var fb = el.getAttribute('data-fallback');
       function finish() {
         var emptySel = el.getAttribute('data-fallback-empty');
@@ -71,7 +115,7 @@
   if (!el) return;
 
   var BASE = '/assets/scripts/';
-  var ASSET_VER = '20261030p';
+  var ASSET_VER = '20261030q';
 
   // Inline page boots run before deferred chain scripts; queue until bootstrap.js.
   window.bizdavarPageInit = window.bizdavarPageInit || function (fn) {

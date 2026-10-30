@@ -532,9 +532,14 @@
 
   function imgUrl(rel) {
     if (!rel) return '';
-    if (String(rel).charAt(0) === '/') return rel;
-    const root = (catalog && catalog.imageRoot) || '/media/catalog/brakeshop/';
-    return root + String(rel).replace(/^\.\//, '');
+    const raw = String(rel);
+    if (/^https?:\/\//i.test(raw)) return raw;
+    const path = raw.charAt(0) === '/'
+      ? raw
+      : ((catalog && catalog.imageRoot) || '/media/catalog/brakeshop/') + raw.replace(/^\.\//, '');
+    const host = location.hostname;
+    if (host === 'localhost' || host === '127.0.0.1') return 'https://bizdavar.com' + path;
+    return path;
   }
 
   function absMedia(url) {
