@@ -357,6 +357,8 @@
     ['Ön Fren Balatası|On Fren Balatası', { fa: 'لنت ترمز جلو', en: 'front brake pads', ru: 'передние колодки', ar: 'فحمات فرامل أمامية' }],
     ['Arka Fren Diski', { fa: 'دیسک ترمز عقب', en: 'rear brake disc', ru: 'задний диск', ar: 'قرص فرامل خلفي' }],
     ['Ön Fren Diski|On Fren Diski', { fa: 'دیسک ترمز جلو', en: 'front brake disc', ru: 'передний диск', ar: 'قرص فرامل أمامي' }],
+    ['El Fren Balatası|El Fren Balata', { fa: 'لنت ترمز دستی', en: 'handbrake pads', ru: 'колодки ручника', ar: 'فحمات فرامل اليد' }],
+    ['El Freni|El Fren', { fa: 'ترمز دستی', en: 'handbrake', ru: 'ручник', ar: 'فرامل اليد' }],
     ['Fren Balatası', { fa: 'لنت ترمز', en: 'brake pads', ru: 'тормозные колодки', ar: 'فحمات فرامل' }],
     ['Fren Diski', { fa: 'دیسک ترمز', en: 'brake disc', ru: 'тормозной диск', ar: 'قرص فرامل' }],
     ['Fren Balata', { fa: 'لنت ترمز', en: 'brake pad', ru: 'колодка', ar: 'فحمة فرامل' }],
@@ -463,7 +465,8 @@
       const phrase = phrases[i];
       const idx = translated.lastIndexOf(phrase);
       if (idx < 0) continue;
-      if (idx !== 0 && idx < Math.floor(translated.length * 0.35)) continue;
+      const end = idx + phrase.length;
+      if (idx !== 0 && end < Math.ceil(translated.length * 0.65)) continue;
       let spec = (translated.slice(0, idx) + ' ' + translated.slice(idx + phrase.length)).replace(/\s+/g, ' ').trim();
       spec = spec.replace(/^[\s.>‹›←→\-–]+|[\s.>‹›←→\-–]+$/g, '').replace(/\s*>\s*/g, ' · ');
       spec = spec.replace(/^\(([^)]+)\)\s*/, '$1 · ').replace(/\s+·\s+·\s+/g, ' · ').trim();
@@ -842,7 +845,7 @@
     const stage = open ? '' :
       '<div class="fren-stage">' +
         '<section class="brake-hero">' +
-          '<video autoplay muted loop playsinline preload="metadata"><source src="' + esc(catalog.video || '/assets/video/porsche-997-gt3rs.mp4') + '" type="video/mp4"></video>' +
+          '<video autoplay muted playsinline preload="metadata"><source src="' + esc(catalog.video || '/assets/video/porsche-997-gt3rs.mp4') + '" type="video/mp4"></video>' +
           '<div class="brake-hero__shade"></div>' +
           '<div class="brake-hero__copy">' +
             '<h1>' + esc(c.heroTitle) + '</h1>' +
@@ -901,10 +904,7 @@
       focusField = '';
     }
     const video = root.querySelector('video');
-    if (video && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      video.pause();
-      video.removeAttribute('autoplay');
-    }
+    if (video) holdHero(video);
   }
 
   function titleHtml(item) {
@@ -1161,12 +1161,96 @@
     });
   }
 
+  const HERO_FROM = 1.05;
+  const HERO_TO = 2.3;
+
+  function holdHero(video) {
+    if (!video || video.getAttribute('data-held') === '1') return;
+    video.setAttribute('data-held', '1');
+    video.loop = false;
+    video.removeAttribute('loop');
+    let busy = false;
+    const still = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const clamp = () => {
+      if (busy) return;
+      const now = video.currentTime || 0;
+      if (now >= HERO_FROM && now < HERO_TO) {
+        if (still()) video.pause();
+        return;
+      }
+      busy = true;
+      const release = () => { busy = false; };
+      video.addEventListener('seeked', release, { once: true });
+      try { video.currentTime = HERO_FROM; } catch (err) { busy = false; }
+      if (still()) {
+        video.pause();
+        video.removeAttribute('autoplay');
+      }
+    };
+    const arm = () => {
+      clamp();
+      video.addEventListener('timeupdate', clamp);
+      if (still()) return;
+      const play = video.play();
+      if (play && play.catch) play.catch(() => {});
+    };
+    video.addEventListener('ended', () => {
+      try { video.currentTime = HERO_FROM; } catch (err) { /* ignore */ }
+      if (still()) return;
+      const play = video.play();
+      if (play && play.catch) play.catch(() => {});
+    });
+    if (video.readyState >= 1) arm();
+    else video.addEventListener('loadedmetadata', arm, { once: true });
+  }
+
+  function heroMarkup(c) {
+    return '<div class="fren-stage"><section class="brake-hero">' +
+      '<video autoplay muted playsinline preload="metadata"><source src="/assets/video/porsche-997-gt3rs.mp4" type="video/mp4"></video>' +
+      '<div class="brake-hero__shade"></div>' +
+      '<div class="brake-hero__copy"><h1>' + esc(c.heroTitle) + '</h1><p>' + esc(c.heroLead) + '</p></div>' +
+      '<form class="brake-search" role="search">' +
+        icon('search', 18) +
+        '<label class="visually-hidden" for="brakeQ">' + esc(c.search) + '</label>' +
+        '<input id="brakeQ" name="q" type="search" autocomplete="off" placeholder="' + esc(c.search) + '" value="">' +
+        '<button type="submit" aria-label="' + esc(c.search) + '">' + icon('search', 18) + '</button>' +
+      '</form>' +
+    '</section></div>' +
+    '<section class="brake-trust" aria-label="' + esc(c.trustAria) + '">' +
+      '<a class="brake-trust__wa" href="' + waLink(null) + '" target="_blank" rel="noopener noreferrer">' +
+        '<strong>' + esc(c.trustWa) + '</strong><span dir="ltr">' + esc(c.trustWaNum) + '</span></a>' +
+      '<a class="brake-trust__mail" href="' + mailLink(null) + '">' +
+        '<strong>' + esc(c.trustMail) + '</strong><span dir="ltr">' + MAIL + '</span></a>' +
+      '<ul>' +
+        '<li>' + esc(c.trust1) + '</li>' +
+        '<li>' + esc(c.trust2) + '</li>' +
+        '<li>' + esc(c.trust3) + '</li>' +
+      '</ul>' +
+    '</section>' +
+    '<p class="brake-loading">' + esc(c.loading) + '</p>';
+  }
+
+  function paintShell() {
+    const root = document.getElementById('frenDesk');
+    if (!root) return;
+    const hiddenTitle = document.querySelector('main > h1.visually-hidden');
+    if (hiddenTitle) hiddenTitle.remove();
+    if (root.querySelector('.brake-hero')) {
+      bind(root);
+      holdHero(root.querySelector('video'));
+      return;
+    }
+    root.innerHTML = heroMarkup(t());
+    bind(root);
+    holdHero(root.querySelector('video'));
+  }
+
   function boot() {
     const root = document.getElementById('frenDesk');
     if (!root || loading) return;
     if (catalog) { paint(); return; }
     loading = true;
-    root.innerHTML = '<p class="brake-loading">' + esc(t().loading) + '</p>';
+    paintShell();
     fetch('/assets/data/brakes/catalog.json?v=20260919ac')
       .then((res) => {
         if (!res.ok) throw new Error('catalog');
