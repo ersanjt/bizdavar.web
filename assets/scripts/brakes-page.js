@@ -40,6 +40,7 @@
       results: 'نتیجه جستجو',
       desk: 'لنت و دیسک ترمز',
       heroTitle: 'خرید لنت و دیسک ترمز',
+      heroAlts: ['تعویض چرخ ماشین مسابقه در پیت‌استاپ', 'پورشه ۹۱۱ جی‌تی۳ آر‌اس سفید در گاراژ', 'فراری اف۴۰'],
       shot: 'تصویر',
       geo: 'لنت و دیسک ترمز خودروهای خارجی برای خرید از ایران. استعلام فارسی با واتساپ ۰۹۳۰۵۸۸۰۱۳۵ یا ایمیل info@bizdavar.com، بعد پیش‌فاکتور.',
       heroLead: 'برند و مدل خودرو را انتخاب کنید. قیمت روی سایت نیست؛ اول در واتساپ استعلام کنید، بعد پیش‌فاکتور می‌آید.',
@@ -90,6 +91,7 @@
       results: 'Arama sonucu',
       desk: 'Fren balatası ve diski',
       heroTitle: 'Fren balatası ve diski',
+      heroAlts: ['Pit stopta yarış otomobilinin lastik değişimi', 'Garajda beyaz Porsche 911 GT3 RS', 'Ferrari F40'],
       shot: 'görsel',
       geo: 'Yabancı araçlar için fren balatası ve diski. Fiyat sitede yok; önce WhatsApp +98 930 588 0135, e-posta info@bizdavar.com, sonra proforma.',
       heroLead: 'Araç markasını ve modelini seçin. Fiyat sitede yok; önce WhatsApp, sonra proforma.',
@@ -140,6 +142,7 @@
       results: 'Search results',
       desk: 'Brake pads and discs',
       heroTitle: 'Brake pads and discs',
+      heroAlts: ['Pit crew changing a race car wheel', 'White Porsche 911 GT3 RS in a garage', 'Ferrari F40'],
       shot: 'photo',
       geo: 'Brake pads and discs for foreign cars. Prices are not listed. Ask on WhatsApp +98 930 588 0135 or email info@bizdavar.com, then you receive a proforma.',
       heroLead: 'Choose the vehicle brand and model. Prices are not listed; ask on WhatsApp first, then you get a proforma.',
@@ -190,6 +193,7 @@
       results: 'Результаты',
       desk: 'Колодки и диски',
       heroTitle: 'Тормозные колодки и диски',
+      heroAlts: ['Замена колеса гоночного автомобиля на пит-стопе', 'Белый Porsche 911 GT3 RS в гараже', 'Ferrari F40'],
       shot: 'фото',
       geo: 'Колодки и диски для иномарок. Цены на сайте нет: сначала WhatsApp +98 930 588 0135 или почта info@bizdavar.com, затем проформа.',
       heroLead: 'Выберите марку и модель. Цены на сайте нет: сначала WhatsApp, затем проформа.',
@@ -240,6 +244,7 @@
       results: 'نتائج البحث',
       desk: 'فحمات وأقراص الفرامل',
       heroTitle: 'شراء فحمات وأقراص الفرامل',
+      heroAlts: ['تبديل إطار سيارة سباق في منطقة الصيانة', 'بورشه 911 جي تي 3 آر إس بيضاء في المرآب', 'فيراري إف 40'],
       shot: 'صورة',
       geo: 'فحمات وأقراص فرامل للسيارات الأجنبية. السعر غير منشور. الاستعلام أولاً عبر واتساب +98 930 588 0135 أو info@bizdavar.com ثم فاتورة مبدئية.',
       heroLead: 'اختر ماركة السيارة وموديلها. السعر غير منشور؛ الاستعلام أولاً عبر واتساب ثم فاتورة مبدئية.',
@@ -510,6 +515,23 @@
       .replace(/"/g, '&quot;');
   }
 
+  const HERO_VIDEOS = [
+    '/assets/video/road-america-motorsport.mp4',
+    '/assets/video/porsche-997-gt3rs.mp4',
+    '/assets/video/ferrari-f40.mp4'
+  ];
+
+  function heroSlides() {
+    const alts = (t().heroAlts || []);
+    const sources = catalog && Array.isArray(catalog.videos) && catalog.videos.length ? catalog.videos : HERO_VIDEOS;
+    return sources.map((src, index) => ({ src: src, alt: alts[index] || alts[0] || t().heroTitle }));
+  }
+
+  function heroVideoTag() {
+    const slide = heroSlides()[0];
+    return '<video data-hero-video aria-label="' + esc(slide.alt) + '" autoplay muted loop playsinline preload="metadata"><source src="' + esc(slide.src) + '" type="video/mp4"></video>';
+  }
+
   const BRAND_LOGO = new Set(['bmw', 'mercedes', 'opel', 'volkswagen', 'audi', 'peugeot', 'renault', 'ford', 'citroen', 'toyota', 'land-rover', 'hyundai', 'kia', 'honda', 'chevrolet', 'fiat', 'skoda', 'seat', 'nissan', 'porsche', 'mazda', 'mini', 'dacia', 'jeep', 'mitsubishi', 'subaru', 'suzuki', 'alfa-romeo', 'jaguar', 'infiniti', 'ds', 'smart', 'tesla', 'volvo', 'aston-martin', 'maserati', 'ferrari']);
 
   function brandLogo(id) {
@@ -765,7 +787,7 @@
       const src = imgUrl(rel);
       const name = shotName(title, index, total);
       return '<button type="button" class="' + (index === 0 ? 'is-active' : '') + '" data-shot="' + esc(src) + '" data-alt="' + esc(name) + '" aria-label="' + esc(name) + '">' +
-        '<img src="' + esc(src) + '" alt="" width="72" height="72" loading="lazy" decoding="async" data-brake-art="' + esc(item.part || 'discs') + '">' +
+        '<img src="' + esc(src) + '" alt="' + esc(name) + '" width="72" height="72" loading="lazy" decoding="async" data-brake-art="' + esc(item.part || 'discs') + '">' +
       '</button>';
     }).join('');
     return '<div class="shop-pdp__thumbs">' + thumbs + '</div>' +
@@ -874,7 +896,7 @@
     const stage = open ? '' :
       '<div class="fren-stage">' +
         '<section class="brake-hero">' +
-          '<video autoplay muted playsinline preload="metadata"><source src="' + esc(catalog.video || '/assets/video/porsche-997-gt3rs.mp4') + '" type="video/mp4"></video>' +
+          heroVideoTag() +
           '<div class="brake-hero__shade"></div>' +
           '<div class="brake-hero__copy">' +
             '<h1>' + esc(c.heroTitle) + '</h1>' +
@@ -933,7 +955,34 @@
       focusField = '';
     }
     const video = root.querySelector('video');
-    if (video) holdHero(video);
+    if (video) playHeroSlides(video);
+  }
+
+  function playHeroSlides(video) {
+    if (!video || video.getAttribute('data-slides') === '1') return;
+    video.setAttribute('data-slides', '1');
+    video.loop = false;
+    video.removeAttribute('loop');
+    const slides = heroSlides();
+    let index = 0;
+    const apply = (next) => {
+      if (!slides.length) return;
+      index = (next + slides.length) % slides.length;
+      const slide = slides[index];
+      const source = video.querySelector('source');
+      if (source && source.getAttribute('src') !== slide.src) {
+        source.setAttribute('src', slide.src);
+        video.load();
+      }
+      video.setAttribute('aria-label', slide.alt);
+      const play = video.play();
+      if (play && play.catch) play.catch(function () {});
+    };
+    video.addEventListener('ended', () => apply(index + 1));
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      video.pause();
+      video.removeAttribute('autoplay');
+    }
   }
 
   function titleHtml(item) {
@@ -1198,7 +1247,7 @@
   const HERO_TO = 2.3;
 
   function holdHero(video) {
-    if (!video || video.getAttribute('data-held') === '1') return;
+    if (!video || video.getAttribute('data-hero-video') === '' || video.hasAttribute('data-hero-video') || video.getAttribute('data-held') === '1') return;
     video.setAttribute('data-held', '1');
     video.loop = false;
     video.removeAttribute('loop');
@@ -1239,7 +1288,7 @@
 
   function heroMarkup(c) {
     return '<div class="fren-stage"><section class="brake-hero">' +
-      '<video autoplay muted playsinline preload="metadata"><source src="/assets/video/porsche-997-gt3rs.mp4" type="video/mp4"></video>' +
+      heroVideoTag() +
       '<div class="brake-hero__shade"></div>' +
       '<div class="brake-hero__copy"><h1>' + esc(c.heroTitle) + '</h1><p>' + esc(c.heroLead) + '</p></div>' +
       '<form class="brake-search" role="search">' +
@@ -1270,12 +1319,12 @@
     if (hiddenTitle) hiddenTitle.remove();
     if (root.querySelector('.brake-hero')) {
       bind(root);
-      holdHero(root.querySelector('video'));
+      playHeroSlides(root.querySelector('video'));
       return;
     }
     root.innerHTML = heroMarkup(t());
     bind(root);
-    holdHero(root.querySelector('video'));
+    playHeroSlides(root.querySelector('video'));
   }
 
   function boot() {
