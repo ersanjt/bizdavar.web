@@ -1333,7 +1333,7 @@
     if (catalog) { paint(); return; }
     loading = true;
     paintShell();
-    fetch('/assets/data/brakes/catalog.json?v=20260919ac')
+    fetch('/assets/data/brakes/catalog.json?v=20261112c')
       .then((res) => {
         if (!res.ok) throw new Error('catalog');
         return res.json();
