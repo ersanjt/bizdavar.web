@@ -648,6 +648,7 @@ body {
   padding: 12px;
   margin-bottom: 8px;
   font-size: 0.875rem;
+  white-space: pre-wrap;
 }
 
 .hub-note__meta {

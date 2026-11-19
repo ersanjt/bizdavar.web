@@ -565,6 +565,54 @@ if ($method === 'POST' && ($p = route_match($uri, '/leads/{id}/notes'))) {
     Response::json(['ok' => true], 201);
 }
 
+if ($method === 'POST' && ($p = route_match($uri, '/leads/{id}/reply'))) {
+    $id = (int) $p['id'];
+    $stmt = $pdo->prepare('SELECT id, first_name, last_name, email, status FROM leads WHERE id = ? LIMIT 1');
+    $stmt->execute([$id]);
+    $lead = $stmt->fetch();
+    if (!$lead) {
+        Response::error('سرنخ پیدا نشد', 404);
+    }
+    $to = strtolower(trim((string) ($lead['email'] ?? '')));
+    if (!filter_var($to, FILTER_VALIDATE_EMAIL)) {
+        Response::error('این سرنخ ایمیل قابل ارسال ندارد', 422);
+    }
+    $text = bizhub_clip(trim((string) (bizhub_json_body()['body'] ?? '')), 4000);
+    if ($text === '') {
+        Response::error('متن پاسخ لازم است', 422);
+    }
+    $user = Auth::user();
+    $actor = (int) ($user['id'] ?? 0);
+    if (!RateLimit::check($pdo, 'user:' . $actor, 'lead_reply', 20, 3600)
+        || !RateLimit::check($pdo, 'lead:' . $id, 'lead_reply', 8, 3600)) {
+        Response::error('تعداد پاسخ زیاد است. کمی بعد دوباره تلاش کنید.', 429);
+    }
+    $name = trim((string) $lead['first_name'] . ' ' . (string) $lead['last_name']);
+    try {
+        bizhub_mail_send($cfg, $to, 'پاسخ بیزدوار', $text, [
+            'heading' => 'پاسخ بیزدوار',
+            'intro' => $name !== ''
+                ? $name . '، در پاسخ به پیامی که از سایت فرستادید:'
+                : 'در پاسخ به پیامی که از سایت بیزدوار فرستادید:',
+            'note' => 'برای ادامهٔ گفتگو به همین ایمیل جواب بدهید.',
+        ]);
+    } catch (Throwable $e) {
+        $msg = $e->getMessage();
+        $secret = (string) ($cfg['mail']['smtp']['password'] ?? '');
+        if ($secret !== '') {
+            $msg = str_replace($secret, '***', $msg);
+        }
+        Response::error(bizhub_clip($msg, 300), 502);
+    }
+    $pdo->prepare('INSERT INTO lead_notes (lead_id, user_id, body) VALUES (?, ?, ?)')
+        ->execute([$id, $actor > 0 ? $actor : null, bizhub_clip("پاسخ ایمیل به {$to}:\n\n" . $text, 8000)]);
+    if ((string) ($lead['status'] ?? '') === 'new') {
+        $pdo->prepare("UPDATE leads SET status = 'contacted' WHERE id = ? AND status = 'new'")
+            ->execute([$id]);
+    }
+    Response::json(['ok' => true, 'message' => 'پاسخ به ' . $to . ' ارسال شد']);
+}
+
 if ($method === 'DELETE' && ($p = route_match($uri, '/leads/{id}'))) {
     $user = Auth::user();
     if ($user['role'] !== 'admin') {

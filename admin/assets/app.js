@@ -1080,6 +1080,15 @@
           <p><strong>تلفن:</strong> <span dir="ltr">${esc(l.phone || '—')}</span></p>
           <p><strong>خدمات:</strong> ${esc(l.service)}</p>
           <p><strong>پیام:</strong><br>${esc(l.message)}</p>
+          <div class="hub-notes">
+            <h4 style="margin-bottom:8px">پاسخ به ایمیل</h4>
+            ${/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(l.email || '').trim()) ? `
+            <p class="hub-hint">از info@bizdavar.com به <span dir="ltr">${esc(l.email)}</span> می‌رود. جواب مشتری به همان صندوق برمی‌گردد و متن اینجا در یادداشت‌ها می‌ماند.</p>
+            <div id="leadReplyError" class="hub-error" hidden></div>
+            <div class="hub-field"><textarea id="leadReply" placeholder="متن پاسخ برای مشتری…"></textarea></div>
+            <button type="button" class="hub-btn hub-btn--yellow hub-btn--sm" id="sendLeadReply">ارسال پاسخ</button>
+            ` : '<p class="hub-hint">این سرنخ ایمیل ندارد. پاسخ را فقط می‌توان یادداشت کرد.</p>'}
+          </div>
           <div class="hub-field" style="margin-top:16px">
             <label>وضعیت CRM</label>
             <select id="leadStatus">${Object.entries(STATUS_LABELS).map(([k, v]) =>
@@ -1099,6 +1108,29 @@
     document.body.appendChild(backdrop);
     backdrop.addEventListener('click', e => { if (e.target === backdrop) backdrop.remove(); });
     backdrop.querySelector('#closeModal').addEventListener('click', () => backdrop.remove());
+    backdrop.querySelector('#sendLeadReply')?.addEventListener('click', async () => {
+      const box = backdrop.querySelector('#leadReply');
+      const btn = backdrop.querySelector('#sendLeadReply');
+      const err = backdrop.querySelector('#leadReplyError');
+      const text = box.value.trim();
+      if (!text) {
+        err.hidden = false;
+        err.textContent = 'متن پاسخ لازم است';
+        return;
+      }
+      btn.disabled = true;
+      err.hidden = true;
+      try {
+        await api('/leads/' + id + '/reply', { method: 'POST', body: { body: text } });
+        backdrop.remove();
+        openLeadModal(id);
+        if (state.view === 'leads') loadView();
+      } catch (e) {
+        err.hidden = false;
+        err.textContent = e.message || 'ارسال نشد';
+        btn.disabled = false;
+      }
+    });
     backdrop.querySelector('#saveLeadBtn').addEventListener('click', async () => {
       await api('/leads/' + id, { method: 'PATCH', body: { status: backdrop.querySelector('#leadStatus').value } });
       backdrop.remove();
