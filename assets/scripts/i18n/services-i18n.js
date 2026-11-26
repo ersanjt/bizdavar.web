@@ -365,6 +365,18 @@
       faqTitle: 'Dijital pazarlama SSS',
       faq: [
         {
+          q: 'İstanbul’da web sitesi tasarımı yapıyor musunuz?',
+          a: 'Evet. İstanbul ekibi Türkçe kurumsal site, e-ticaret ve landing tasarlar. Hazır paket 5 günde $99’dan başlar. Özel proje teklifi WhatsApp +90 501 067 6486 veya info@bizdavar.com üzerinden istenir.'
+        },
+        {
+          q: 'İstanbul’da dijital pazarlama ve içerik üretimi yapıyor musunuz?',
+          a: 'Evet. SEO, Google Ads, Meta, sosyal medya ve Türkçe içerik üretimi aynı ekiptedir. İçerik takvimi, metin ve görsel SMM hizmetinin parçasıdır. Sonuç aylık GA4 raporuyla paylaşılır.'
+        },
+        {
+          q: 'Yapay zeka tabanlı sistem kuruyor musunuz?',
+          a: 'Evet. İşletmenin kendi işine bağlı sistem kuruyoruz: web sitesi, içerik üretimi ve dijital pazarlama akışı. Genel bir yapay zeka modeli eğitmiyoruz. Kapsam ve fiyat, ihtiyacı dinledikten sonra teklifte yazılır.'
+        },
+        {
           q: 'Türkiye’deki işletmeler için SEO ve Google Ads yönetiyor musunuz?',
           a: 'Evet. İstanbul ekibimiz Türkçe anahtar kelime araştırması, teknik SEO, içerik ve Google Ads / Meta kampanyalarını yönetir; sonuçları aylık GA4 raporuyla paylaşırız.'
         },
@@ -618,6 +630,10 @@
       faqEyebrow: 'Uygulama ve sistem',
       faqTitle: 'Uygulama ve sistem SSS',
       faq: [
+        {
+          q: 'İstanbul’da yapay zeka destekli iş sistemi kuruyor musunuz?',
+          a: 'Evet. Sistem, web sitesi, içerik üretimi ve dijital pazarlama akışına bağlanır. Hazır bir genel model eğitmeyiz. Teklif için WhatsApp +90 501 067 6486 veya info@bizdavar.com.'
+        },
         {
           q: 'Ne tür yazılımlar geliştiriyorsunuz?',
           a: 'Android ve iOS uygulamaları, kurumsal sistemler, B2B paneller ve özel yazılım — işletme ihtiyacınıza göre.'
@@ -1211,7 +1227,7 @@
       hero: {
         tag: 'Hizmetlerimiz',
         title: 'İstanbul’dan web tasarım, SEO ve dijital pazarlama hizmetleri',
-        desc: 'Türkiye’deki işletmeler için <strong>kurumsal web sitesi</strong>, <strong>e-ticaret</strong>, <strong>SEO</strong>, Google Ads ve sosyal medya yönetimi — ayrıca mobil uygulama ve sunucu yönetimi. Yurt dışı projelerde USD/EUR fatura. Hızlı site: <a href="fast">$99’dan</a>. Ürünler <a href="products">ürünler sayfasında</a>.',
+        desc: 'İstanbul’daki işletmeler için <strong>Türkçe web sitesi</strong>, <strong>içerik üretimi</strong>, <strong>dijital pazarlama</strong> ve işletmeye bağlı <strong>yapay zeka destekli sistem</strong>. Ayrıca SEO, Google Ads ve sosyal medya. Hazır site: <a href="fast">$99’dan</a>. Teklif: WhatsApp +90 501 067 6486.',
         ctaPrimary: 'Danışmanlık iste',
         ctaWeb: '$99’dan web sitesi',
         ctaField: 'Teknik WhatsApp'
@@ -1219,8 +1235,8 @@
       paths: {
         digital: {
           eyebrow: 'Dijital yol',
-          title: 'Web, SEO, reklam, uygulama, sunucu ve SMM',
-          desc: 'Kurumsal siteden SEO ve reklam kampanyasına, mobil uygulamadan sunucu yönetimine — online işiniz için tek ekip.',
+          title: 'Web, içerik, dijital pazarlama ve yapay zeka sistemi',
+          desc: 'İstanbul ekibinden kurumsal site, içerik üretimi, SEO, reklam ve işletmeye bağlı yapay zeka destekli sistem — online işiniz için tek ekip.',
           cta: 'Web tasarımla başla'
         },
         field: {
@@ -1233,9 +1249,9 @@
       overview: {
         eyebrow: 'Genel bakış',
         title: 'Altı hizmet alanı, tek ekip',
-        desc: 'Web tasarım, SEO, reklam, mobil uygulama, sunucu ve sosyal medya — dijital işleriniz tek ekipte. CCTV ve tesisat hizmetleri Tebriz’de.'
+        desc: 'Web tasarım, içerik, dijital pazarlama ve yapay zeka destekli sistem — İstanbul ekibi. CCTV ve tesisat hizmetleri Tebriz’de.'
       },
-      geoText: 'İstanbul ekibinden Türkçe danışmanlık — web tasarım, SEO, reklam ve sosyal medya. CCTV ve tesisat hizmetleri Tebriz’de.',
+      geoText: 'İstanbul ekibinden Türkçe web tasarım, içerik üretimi, dijital pazarlama ve yapay zeka destekli sistem. CCTV ve tesisat Tebriz’de. Teklif: +90 501 067 6486.',
       navAria: 'Hizmet listesi',
       viewDetails: 'Detayları gör',
       stats: [

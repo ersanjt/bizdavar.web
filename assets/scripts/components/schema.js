@@ -273,7 +273,7 @@
     return {
       '@type': 'OfferCatalog',
       name: t('home.svcTitle', 'Bizdavar Group offers'),
-      itemListElement: [
+      itemListElement: istanbulDigitalOffers().concat([
         {
           '@type': 'Offer',
           itemOffered: { '@type': 'Service', name: 'VEGA industrial sensor supply', url: absUrl(R.vega) }
@@ -294,8 +294,32 @@
           '@type': 'Offer',
           itemOffered: { '@type': 'Service', name: t('common.freeConsult', 'Consultation'), url: absUrl(R.contact) }
         }
-      ]
+      ])
     };
+  }
+
+  function istanbulDigitalOffers() {
+    if ((document.documentElement.lang || '') !== 'tr') return [];
+    const page = absUrl(R.services) + '#istanbul-dijital';
+    const city = { '@type': 'City', name: 'İstanbul' };
+    const offer = (name, type) => ({
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name,
+        serviceType: type,
+        url: page,
+        areaServed: city,
+        availableLanguage: 'tr',
+        provider: { '@id': `${C.baseUrl}/#organization` }
+      }
+    });
+    return [
+      offer('İstanbul web tasarım', 'Web tasarım'),
+      offer('İstanbul dijital pazarlama', 'Dijital pazarlama'),
+      offer('İçerik üretimi', 'İçerik üretimi'),
+      offer('Yapay zeka destekli sistem kurulumu', 'Yapay zeka sistemi')
+    ];
   }
 
   function buildSiteGraph() {
@@ -345,7 +369,12 @@
             'Liqui Moly',
             'SEO',
             'SMM'
-          ],
+          ].concat((document.documentElement.lang || '') === 'tr' ? [
+            'İstanbul web tasarım',
+            'İçerik üretimi',
+            'Dijital pazarlama',
+            'Yapay zeka destekli iş sistemleri'
+          ] : []),
           address: orgAddress(),
           sameAs,
           contactPoint: buildContactPoints(),

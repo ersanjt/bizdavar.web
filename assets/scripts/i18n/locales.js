@@ -707,9 +707,9 @@ window.BIZDAVAR_LOCALES = {
       channelField: 'Teknik hizmetler'
     },
     seo: {
-      defaultTitle: 'Bizdavar Group | Web tasarım, dijital pazarlama ve endüstriyel tedarik',
-      defaultDescription: 'Bizdavar Group: Fast Web Studio ile web tasarım, dijital pazarlama ve SMM, FXGuard WhatsApp CRM, VEGA, Prosense ve Liqui Moly tedariki. Ofisler: dünya genelinde.',
-      keywords: 'Bizdavar, web tasarım İstanbul, dijital pazarlama, FXGuard, VEGA, Prosense, Liqui Moly, Fast Web Studio',
+      defaultTitle: 'İstanbul’da web tasarım, içerik ve yapay zeka | Bizdavar',
+      defaultDescription: 'İstanbul ekibinden Türkçe web tasarım, içerik üretimi, dijital pazarlama ve yapay zeka destekli sistem. Ücretsiz danışmanlık: +90 501 067 6486.',
+      keywords: 'web tasarım İstanbul, dijital pazarlama ajansı İstanbul, içerik üretimi İstanbul, yapay zeka sistemi İstanbul, SEO İstanbul, Bizdavar',
       schemaServices: 'Bizdavar Group hizmetleri',
       schemaBlog: 'Bizdavar Group blog',
       schemaPortfolio: 'Bizdavar Group portfolyo'
@@ -1096,7 +1096,7 @@ window.BIZDAVAR_LOCALES = {
       summary: 'İran, Türkiye ve 11 ülkede hizmet — ofisler dünya genelinde · Türkçe danışmanlık, WhatsApp ve uluslararası teslimat.',
       hubs: [
         { city: 'Tebriz', country: 'İran', role: 'İran ofisi · endüstriyel ve dijital projeler' },
-        { city: 'İstanbul', country: 'Türkiye', role: 'Türkiye ofisi · fintech ve uluslararası operasyon' },
+        { city: 'İstanbul', country: 'Türkiye', role: 'Türkiye ofisi · web tasarım, içerik, dijital pazarlama ve yapay zeka sistemleri' },
         { city: 'Erivan', country: 'Ermenistan', role: 'Ermenistan ofisi · Bizdavar Group LLC' },
         { city: 'Dubai', country: 'BAE', role: 'Dubai ofisi · bölgesel operasyon' }
       ]
@@ -1106,7 +1106,7 @@ window.BIZDAVAR_LOCALES = {
       heroTitle: 'İşinizi',
       heroTitleSpan: 'akıllı dijital çözümlerle',
       heroTitleEnd: 'büyütün',
-      heroDesc: 'Fast Web Studio ile web tasarım, dijital pazarlama, FXGuard; yanında VEGA, Gamak, Teltonika, motosiklet ekipmanı ve oto yedek parça tedariki. Ofisler: dünya genelinde.',
+      heroDesc: 'İstanbul ekibinden Türkçe web tasarım, içerik üretimi, dijital pazarlama ve yapay zeka destekli sistem. Yanında FXGuard ve endüstriyel tedarik. Ücretsiz danışmanlık: WhatsApp +90 501 067 6486.',
       viewServices: 'Hizmetleri gör',
       heroFast: 'Site $99\'dan — 5 gün',
       heroIndustrial: 'Endüstriyel teklif',
@@ -1151,7 +1151,7 @@ window.BIZDAVAR_LOCALES = {
       leadPathsTitle: 'Bizimle nasıl çalışmak istersiniz?',
       leadPathsDesc: 'Doğru yolu seçin — genelde 24 saat içinde yanıt',
       leadPaths: [
-        { icon: 'desktop', title: 'Web ve online satış', desc: 'Fast Web Studio — $99\'dan, 5 günde teslim, WhatsApp ve lead formu', cta: 'Planları gör', url: '/tr/pages/fast' },
+        { icon: 'desktop', title: 'İstanbul web tasarım', desc: 'Türkçe site, içerik, dijital pazarlama ve yapay zeka destekli sistem — İstanbul ekibi', cta: 'Hizmetleri gör', url: '/tr/pages/services#istanbul-dijital' },
         { icon: 'factory', title: 'Endüstriyel tedarik', desc: 'VEGA, Gamak, Teltonika, motosiklet ekipmanı ve oto yedek parça — teknik danışmanlıkla teklif', cta: 'Endüstriyel teklif', url: '/tr/pages/contact?service=industrial' },
         { icon: 'phone', title: 'Ücretsiz danışmanlık', desc: 'Web, pazarlama, FXGuard CRM veya özel proje — taahhütsüz', cta: 'İletişim', url: '/tr/pages/contact' }
       ],
@@ -1202,6 +1202,7 @@ window.BIZDAVAR_LOCALES = {
       faqs: [
         { q: 'Bizdavar Group ne zamandan beri faaliyet gösteriyor?', a: '2013\'ten beri Ersan Jahed Tabrizi tarafından — 11 ülkede 100+ proje.' },
         { q: 'Bizdavar hangi hizmetleri sunuyor?', a: 'Altı alan: dijital pazarlama, web/web app, uygulama ve sistem, sunucu yönetimi, SMM ve teknik hizmetler (CCTV, tesisat, aydınlatma). Ürünler ve endüstriyel markalar ürünler sayfasında.' },
+        { q: 'İstanbul’da web tasarım, içerik ve yapay zeka sistemi kuruyor musunuz?', a: 'Evet. İstanbul ekibi Türkçe web sitesi, içerik üretimi, dijital pazarlama ve işletmeye bağlı yapay zeka destekli sistem kurar. Hazır bir genel model eğitmeyiz. Teklif WhatsApp +90 501 067 6486 veya info@bizdavar.com üzerinden istenir. CCTV ve tesisat Tebriz’dedir.' },
         { q: 'Web sitesi ne kadar sürede hazır olur?', a: 'Fast Web Studio ile $99–$299 planlarda 5 iş gününden itibaren teslimat.' },
         { q: 'Bizdavar\'ın güvenilirliğini nasıl doğrularım?', a: 'Kurucunun LinkedIn profili, portfolyo, Google sertifikaları ve info@bizdavar.com.' },
         { q: 'Hangi endüstriyel markalar tedarik ediliyor?', a: 'VEGA, UWT, Prosense, Liqui Moly, Blue Print, Gamak, Teraoka, motosiklet ekipmanı, oto yedek parça ve İran devekuşu derisi.' }
@@ -1225,7 +1226,7 @@ window.BIZDAVAR_LOCALES = {
       title: 'İletişim',
       mapImgAlt: 'Uluslararası iş birliği — Bizdavar Group',
       heroTitle: 'Teklif alın — web, CRM veya endüstriyel tedarik',
-      heroDesc: 'İstanbul ve Türkiye için web, WhatsApp CRM veya VEGA/Prosense tedariki. Formu doldurun ya da WhatsApp yazın. ABD/AB siteleri için fatura USD veya EUR.',
+      heroDesc: 'İstanbul için Türkçe web tasarım, içerik, dijital pazarlama veya yapay zeka destekli sistem. Formu doldurun ya da WhatsApp +90 501 067 6486 yazın. Endüstriyel tedarik ayrı kanaldadır.',
       formTitle: 'İletişim talep formu',
       formDesc: 'Ad ve telefon/WhatsApp zorunlu. ABD/AB web işi için Zoom/Meet e-posta ekleyin.',
       subtitle: 'Web ve reklam: form + Zoom/Meet. İran tedariki: WhatsApp. Mesai saatlerinde yanıt.',
@@ -1253,7 +1254,7 @@ window.BIZDAVAR_LOCALES = {
       formSuccess: 'Mesajınız başarıyla gönderildi. En kısa sürede sizinle iletişime geçeceğiz.',
       formSuccessMailto: 'Mesajınız gönderilmeye hazır. E-posta penceresi açılmazsa info@bizdavar.com adresine yazın.',
       formSuccessWhatsapp: 'Mesajınız WhatsApp için hazır. Pencere açılmazsa bu sayfadaki WhatsApp düğmelerini kullanın.',
-      geoText: 'İstanbul ofisinden Türkçe danışmanlık — web, CRM ve endüstriyel tedarik. İran projeleri için ayrı Farsça WhatsApp.',
+      geoText: 'İstanbul ofisinden Türkçe danışmanlık — web tasarım, içerik, dijital pazarlama ve yapay zeka destekli sistem. İran tedariki için ayrı Farsça WhatsApp.',
       formError: 'Gönderim başarısız. Lütfen tekrar deneyin veya doğrudan info@bizdavar.com adresine yazın.',
       waTr: 'Türkiye WhatsApp',
       waIr: 'İran WhatsApp',
@@ -1279,8 +1280,11 @@ window.BIZDAVAR_LOCALES = {
       iranOffice: 'İran — Tebriz',
       jooyeshgar: 'Jooyeshgar',
       quickContact: 'Hızlı iletişim',
-      optDm: 'Dijital pazarlama',
+      optDm: 'Dijital pazarlama ve içerik',
       optWeb: 'İngilizce web sitesi (USD / EUR)',
+      optIstanbulWeb: 'İstanbul — Türkçe web sitesi',
+      optContent: 'İçerik üretimi',
+      optAi: 'Yapay zeka destekli sistem',
       optFast: 'Fast Web Studio — site $99’dan',
       optApps: 'Uygulama ve sistem',
       optServer: 'Sunucu ve altyapı yönetimi',

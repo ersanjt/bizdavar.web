@@ -269,9 +269,9 @@
     },
     tr: {
       home: {
-        seoTitle: 'Bizdavar Group | Web tasarım, dijital pazarlama ve endüstriyel tedarik',
-        seoDescription: 'Web tasarım, dijital pazarlama ve endüstriyel tedarik. Ücretsiz danışmanlık — dünya genelinde.',
-        seoKeywords: 'Bizdavar, web tasarım İstanbul, dijital pazarlama, FXGuard, VEGA, UWT, Prosense, Liqui Moly, Fast Web Studio'
+        seoTitle: 'İstanbul’da web tasarım, içerik ve yapay zeka | Bizdavar',
+        seoDescription: 'İstanbul ekibinden Türkçe web tasarım, içerik üretimi, dijital pazarlama ve yapay zeka destekli sistem. Ücretsiz danışmanlık: +90 501 067 6486.',
+        seoKeywords: 'web tasarım İstanbul, dijital pazarlama ajansı İstanbul, içerik üretimi İstanbul, yapay zeka sistemi İstanbul, SEO İstanbul, Bizdavar'
       },
       about: {
         seoTitle: 'Hakkımızda | Bizdavar — dijital hizmetler ve endüstriyel tedarik',
@@ -279,9 +279,9 @@
         seoKeywords: 'Bizdavar hakkımızda, dijital ajans Bizdavar, endüstriyel tedarik'
       },
       services: {
-        seoTitle: 'Web Tasarım, SEO ve Dijital Pazarlama Ajansı | Bizdavar İstanbul',
-        seoDescription: 'Kurumsal web sitesi, e-ticaret, SEO, Google Ads, sosyal medya yönetimi, mobil uygulama ve sunucu yönetimi — İstanbul ekibi, ücretsiz danışmanlık, $99’dan site.',
-        seoKeywords: 'web tasarım İstanbul, kurumsal web sitesi, e-ticaret sitesi, SEO hizmeti, dijital pazarlama ajansı, Google Ads yönetimi, sosyal medya yönetimi, mobil uygulama geliştirme, sunucu yönetimi, Bizdavar'
+        seoTitle: 'İstanbul Web Tasarım, İçerik ve Dijital Pazarlama | Bizdavar',
+        seoDescription: 'İstanbul’da Türkçe web tasarım, SEO, dijital pazarlama, içerik üretimi ve yapay zeka destekli sistem. Ücretsiz danışmanlık: WhatsApp +90 501 067 6486. Site $99’dan.',
+        seoKeywords: 'web tasarım İstanbul, kurumsal web sitesi, içerik üretimi İstanbul, yapay zeka sistemi İstanbul, dijital pazarlama ajansı İstanbul, SEO hizmeti, Google Ads yönetimi, sosyal medya yönetimi, Bizdavar'
       },
       fieldTech: {
         seoTitle: 'Teknik hizmetler | CCTV, tesisat ve gizli aydınlatma — Tebriz',
@@ -309,9 +309,9 @@
         seoKeywords: 'Fast Web Studio, web tasarım, WooCommerce, Bizdavar, bizdavar.com'
       },
       customWebApp: {
-        seoTitle: 'Özel web ve uygulama geliştirme | Bizdavar',
-        seoDescription: 'Web app, mobil uygulama, yönetim paneli ve özel B2B sistemler — Fast yetmezse. Ücretsiz danışmanlık, şeffaf teklif ve Bizdavar uzman geliştirmesi.',
-        seoKeywords: 'uygulama geliştirme, web app, özel yazılım, yönetim paneli, Bizdavar'
+        seoTitle: 'İstanbul’da özel web ve yapay zeka sistemi | Bizdavar',
+        seoDescription: 'İstanbul ekibi web uygulaması, panel ve işletmeye bağlı yapay zeka destekli sistem kurar. Hazır model eğitmeyiz. Teklif: +90 501 067 6486.',
+        seoKeywords: 'özel yazılım İstanbul, web app, yapay zeka sistemi İstanbul, yönetim paneli, Bizdavar'
       },
       privacy: {
         seoTitle: 'Gizlilik Politikası | Bizdavar Group',
@@ -319,9 +319,9 @@
         seoKeywords: 'gizlilik politikası, privacy, Bizdavar'
       },
       contact: {
-        seoTitle: 'İletişim | Ücretsiz danışmanlık — hizmet ve endüstriyel tedarik',
-        seoDescription: 'Bizdavar ile ücretsiz danışmanlık: web tasarım, dijital pazarlama, FXGuard ve VEGA, Prosense, Liqui Moly tedariki. Form, WhatsApp ve e-posta — ofisler: dünya genelinde.',
-        seoKeywords: 'Bizdavar iletişim, ücretsiz danışmanlık, web tasarım, VEGA, Liqui Moly, FXGuard'
+        seoTitle: 'İstanbul dijital teklif | Web, içerik, pazarlama, yapay zeka',
+        seoDescription: 'İstanbul ekibinden ücretsiz Türkçe danışmanlık: web tasarım, içerik, dijital pazarlama ve yapay zeka destekli sistem. WhatsApp +90 501 067 6486 veya form.',
+        seoKeywords: 'Bizdavar iletişim, İstanbul web tasarım teklif, içerik üretimi, yapay zeka sistemi, dijital pazarlama'
       },
       vega: {
         seoTitle: 'VEGA sensör tedariki | VEGAPULS 6X, VEGABAR 39, VEGAPOINT — Bizdavar',

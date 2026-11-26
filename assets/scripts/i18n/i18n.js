@@ -629,6 +629,9 @@
         const opts = {
           'digital-marketing': p.optDm,
           'web-design': p.optWeb,
+          'istanbul-web': p.optIstanbulWeb,
+          content: p.optContent,
+          'ai-systems': p.optAi,
           'fast-studio': p.optFast,
           'software-apps': p.optApps,
           'server-ops': p.optServer,
@@ -640,6 +643,7 @@
           other: p.optOther
         };
         Object.entries(opts).forEach(([val, label]) => {
+          if (!label) return;
           const o = sel && sel.querySelector(`option[value="${window.CSS && CSS.escape ? CSS.escape(val) : val}"]`);
           if (o) o.textContent = label;
         });
