@@ -101,6 +101,19 @@
     });
   }
 
+  function webkern24Referral() {
+    const locale = window.BIZDAVAR_I18N?.locale || 'en';
+    const links = {
+      fa: { href: 'https://webkern24.de/tarahi-site-alman.html', label: 'WebKern24 · وب‌سایت برای کسب‌وکارهای آلمان' },
+      tr: { href: 'https://webkern24.de/web-tasarim-almanya.html', label: 'WebKern24 · Almanya için web siteleri' },
+      de: { href: 'https://webkern24.de/', label: 'WebKern24 · Websites für Unternehmen in Deutschland' },
+      en: { href: 'https://webkern24.de/', label: 'WebKern24 · Websites for businesses in Germany' },
+      ar: { href: 'https://webkern24.de/', label: 'WebKern24 · مواقع للشركات في ألمانيا' },
+      ru: { href: 'https://webkern24.de/', label: 'WebKern24 · Сайты для бизнеса в Германии' }
+    };
+    return links[locale] || links.en;
+  }
+
   function getFooterLinkGroups() {
     const brandLinks = (C.industrialProducts || []).map(p => ({
       href: siteLink(p.url),
@@ -138,6 +151,7 @@
         { href: pagePath(R.gallery || 'pages/gallery.html'), label: t('nav.gallery', 'گالری تصاویر') },
         { href: pagePath(R.products), label: t('nav.products') },
         { href: pagePath(R.portfolio), label: t('nav.portfolio') },
+        webkern24Referral(),
         { href: pagePath(R.blog), label: t('nav.blog') },
         { href: pagePath(R.contact), label: t('footer.contactUs') },
         { href: pagePath(R.tools || 'pages/tools.html'), label: t('nav.tools', 'ابزارهای رایگان') },
